@@ -3,7 +3,7 @@ import React from "react"; export default function ExpensiveComponent($1) { cons
 const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -12,7 +12,7 @@ const [data, setData] = useState([]);
     // Simulate expensive computation
     const timer = setTimeout(() => {
       const expensiveData = Array.from()
-        { length: 10000 };,
+        { "length": 10000 };,
         (_, i) => Math.sqrt(i) * Math.PI * Math.random()
       );
       setData(expensiveData);
@@ -49,7 +49,7 @@ const timer = setTimeout(() => {}
 
       const expensiveData = Array.from()
 }
-        {length: 10000}, (_, i) => Math.sqrt(i) * Math.PI * Math.random()
+        {"length": 10000}, (_, i) => Math.sqrt(i) * Math.PI * Math.random()
 }
       )
 }
@@ -75,8 +75,7 @@ export {ExpensiveComponent}
 ;
 export {ExpensiveComponent}
 ;
-export {ExpensiveComponent}";
-;";
+export {ExpensiveComponent}";";
 export {ExpensiveComponent}
 ;
 export {ExpensiveComponent}
@@ -85,7 +84,5 @@ export {ExpensiveComponent}
 ;
 export {ExpensiveComponent}
 ;
-export {ExpensiveComponent};";
-;";
-";
-;';';
+export {ExpensiveComponent};";";
+";';';

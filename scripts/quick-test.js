@@ -8,15 +8,14 @@ console.log('✅ Node.js is working');
 console.log('✅ File system access is working');
 
 // Test if our new scripts exist
-const scripts = [
-  'enhanced-automation-orchestrator.js',
+const scripts = ['enhanced-automation-orchestrator.js',
   'enhanced-test-automation.js',
   'enhanced-deployment-automation.js',
   'enhanced-monitoring-system.js',
   'master-automation-orchestrator.js'
 ];
 
-console.log('\n📁 Checking for new automation scripts:');
+console.log('\n📁 Checking for new automation "scripts": ');
 scripts.forEach(script => {
   const scriptPath = path.join(__dirname, script);
   if (fs.existsSync(scriptPath)) {

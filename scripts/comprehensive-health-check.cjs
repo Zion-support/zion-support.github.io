@@ -3,26 +3,25 @@ const path = require('path');
 
 console.log('🔍 Comprehensive Health Check Starting...');
 
-const checks = [
-    {
-        name: 'Package.json exists',
-        check: () => fs.existsSync('package.json')
+const checks = [{
+        "name": 'Package.json exists',
+        "check": () => fs.existsSync('package.json')
     },
     {
-        name: 'Node modules installed',
-        check: () => fs.existsSync('node_modules')
+        "name": 'Node modules installed',
+        "check": () => fs.existsSync('node_modules')
     },
     {
-        name: 'Next.js config exists',
-        check: () => fs.existsSync('next.config.js')
+        "name": 'Next.js config exists',
+        "check": () => fs.existsSync('next.config.js')
     },
     {
-        name: 'TypeScript config exists',
-        check: () => fs.existsSync('tsconfig.json')
+        "name": 'TypeScript config exists',
+        "check": () => fs.existsSync('tsconfig.json')
     },
     {
-        name: 'ESLint config exists',
-        check: () => fs.existsSync('eslint.config.js')
+        "name": 'ESLint config exists',
+        "check": () => fs.existsSync('eslint.config.js')
     }
 ];
 
@@ -37,11 +36,11 @@ checks.forEach(check => {
             console.log(`❌ ${check.name}`);
             failed++}
     } catch (error) {
-        console.log(`❌ ${check.name} - Error: ${error.message}`);
+        console.log(`❌ ${check.name} - "Error": ${error.message}`);
         failed++}
 });
 
-console.log(`\n📊 Health Check Results: ${passed} passed, ${failed} failed`);
+console.log(`\n📊 Health Check "Results": ${passed} passed, ${failed} failed`);
 
 if (failed === 0) {
     console.log('🎉 All health checks passed!');

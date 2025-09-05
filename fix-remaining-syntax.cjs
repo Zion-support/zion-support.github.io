@@ -20,7 +20,7 @@ function fixRemainingSyntax(filePath) {
     content = content.replace(/,\s*';/g, ',');
     
     // Fix function parameters with TypeScript types
-    content = content.replace(/\(props: any\) => \{/g, '(props) => {');
+    content = content.replace(/\("props": any\) => \{/g, '(props) => {');
     content = content.replace(/\([^)]*: any\)/g, '($1)');
     
     // Fix supabase method calls
@@ -75,7 +75,7 @@ function fixRemainingSyntax(filePath) {
     // Write the fixed content back
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed remaining syntax errors in: ${filePath}`);
+      console.log(`Fixed remaining syntax errors "in": ${filePath}`);
       return true;
     }
     

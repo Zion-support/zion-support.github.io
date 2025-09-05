@@ -22,45 +22,45 @@ export function NewsletterSection($1) {
     setEmail(");
   };
 
-  const benefits = [{icon: <Star className="w-6 h-6"  />,
-      title: 'Exclusive Content',
-      description: 'Access to premium tech insights and industry reports'};,
+  const benefits = [{"icon": <Star className="w-6 h-6"  />,
+      "title": 'Exclusive Content',
+      "description": 'Access to premium tech insights and industry reports'};,
     {";
-      icon: <Zap className="w-6 h-6"  />,
-      title: 'Early Access',
-      description: 'Be the first to know about new services and features'},
+      "icon": <Zap className="w-6 h-6"  />,
+      "title": 'Early Access',
+      "description": 'Be the first to know about new services and features'},
     {";
-      icon: <Shield className="w-6 h-6"  />,
-      title: 'Expert Tips',
-      description: 'Weekly tips from our technology experts'},
+      "icon": <Shield className="w-6 h-6"  />,
+      "title": 'Expert Tips',
+      "description": 'Weekly tips from our technology experts'},
     {";
-      icon: <Users className="w-6 h-6"  />,
-      title: 'Community Access',
-      description: 'Join our exclusive tech community'},
+      "icon": <Users className="w-6 h-6"  />,
+      "title": 'Community Access',
+      "description": 'Join our exclusive tech community'},
   ];';
 
   const stats = ['
-    {value: '50K+', label: 'Subscribers'},
-    {value: '95%', label: 'Satisfaction'},
-    {value: '24/7', label: 'Support'},
-    {value: '100%', label: 'Free'};,
+    {"value": '50K+', "label": 'Subscribers'},
+    {"value": '95%', "label": 'Satisfaction'},
+    {"value": '24/7', "label": 'Support'},
+    {"value": '100%', "label": 'Free'};,
   ];
 
   const containerVariants = {
 
-    hidden: { opacity: 0 },
-    visible: {
+    "hidden": { opacity: 0 },
+    "visible": {
 
       opacity: 1,
-      transition: {
+      "transition": {
 
         staggerChildren: 0.2,
-        delayChildren: 0.1}}};;
+        "delayChildren": 0.1}}};
 
   const itemVariants = {
 
-    hidden: { opacity: 0, y: 20 },
-    visible: {opacity: 1, y: 0}};;
+    "hidden": { opacity: 0, "y": 20 },
+    "visible": {opacity: 1, "y": 0}};
 
   if(isSubscribed) {
 
@@ -81,7 +81,7 @@ export function NewsletterSection($1) {
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-500/20 mb-6">"
               <CheckCircle className="w-10 h-10 text-green-400"  />
             </div>"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl "md": text-5xl font-bold text-white mb-4">
               Welcome to the Family!
             </h2>";
             <pclassName="text-xl text-zion-slate-light max-w-2xl mx-auto">';
@@ -90,7 +90,7 @@ export function NewsletterSection($1) {
           </motion.div>
 "
           <motion.div variants={itemVariants} className="mb-8">"
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 "md": grid-cols-4 gap-6 max-w-4xl mx-auto">
               {stats.map((stat, index) => ("
                 <div key={index} className="text-center">"
                   <div className="text-3xl font-bold text-zion-cyan mb-2">
@@ -105,7 +105,7 @@ export function NewsletterSection($1) {
           <motion.button
             variants={itemVariants}
             onClick={() => setIsSubscribed(false)}"
-            className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg border border-white/20 transition-all duration-300"
+            className="bg-white/10 "hover": bg-white/20 text-white px-8 py-3 rounded-lg border border-white/20 transition-all duration-300"
           >
             Subscribe Another Email
           </motion.button>
@@ -125,9 +125,9 @@ export function NewsletterSection($1) {
         variants={containerVariants}"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ "once": true }}
       >"
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 "lg": grid-cols-2 gap-16 items-center">
           {/* Left content */}"
           <motion.div variants={itemVariants} className="text-white">"
             <div className="flex items-center gap-3 mb-6">"
@@ -139,7 +139,7 @@ export function NewsletterSection($1) {
               </span>
             </div>
 "
-            <h2 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
+            <h2 className="text-4xl "md": text-5xl lg:text-6xl leading-tight mb-6">
               Stay Ahead with";
               <spanclassName="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-blue">';
                 {' '}
@@ -147,7 +147,7 @@ export function NewsletterSection($1) {
               </span>
             </h2>
 "
-            <p className="text-lg md:text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">
+            <p className="text-lg "md": text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">
               Get the latest AI trends, tech updates, and exclusive insights
               delivered straight to your inbox.</p>
 
@@ -207,7 +207,7 @@ export function NewsletterSection($1) {
                     value={email}
                     onChange={e => setEmail(e.target.value)}"
                     placeholder="Enter your email address"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-zion-slate-light "focus": outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
                     required
                   />
                 </div>
@@ -215,7 +215,7 @@ export function NewsletterSection($1) {
                 <button"
                   type="submit"
                   disabled={isLoading || !email.trim()}"
-                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2"
+                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue "hover": from-zion-cyan-dark hover:to-zion-blue-dark text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2"
                 >
                   {isLoading ? (
                     <>"
@@ -234,7 +234,7 @@ export function NewsletterSection($1) {
               <div className="text-center mt-6">";
                 <pclassName="text-xs text-zion-slate-light">';
                   By subscribing, you agree to our{' '}"
-                  <a href="/privacy" className="text-zion-cyan hover:underline">
+                  <a href="/privacy" className="text-zion-cyan "hover": underline">
                     Privacy Policy
                   </a>
                 </p>

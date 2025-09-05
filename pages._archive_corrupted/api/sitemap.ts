@@ -1,10 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler("req": NextApiRequest, "res": NextApiResponse) {
   const baseUrl = 'https://ziontechgroup.com';
   
-  const staticPages = [
-    '', '/about',
+  const staticPages = ['', '/about',
     '/contact', '/services',
     '/products', '/talent',
     '/blog', '/blockchain-solutions',
@@ -14,8 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/auth/verify'
   ];
 
-  const blogPages = [
-    '/blog/5g-technology-and-its-impact-on-iot-chat',
+  const blogPages = ['/blog/5g-technology-and-its-impact-on-iot-chat',
     '/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat',
     '/blog/api-first-development-building-scalable-systems-chat',
     '/blog/augmented-reality-in-enterprise-applications-chat',
@@ -32,8 +30,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/blog/the-rise-of-edge-computing-in-iot-applications-chat'
   ];
 
-  const servicePages = [
-    '/services/ai-model-development-chat',
+  const servicePages = ['/services/ai-model-development-chat',
     '/services/api-development-chat',
     '/services/business-intelligence-chat',
     '/services/cloud-migration-services-chat',
@@ -53,7 +50,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const allPages = [...staticPages, ...blogPages, ...servicePages];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
   ${allPages
     .map((page) => {
       return `
@@ -62,9 +59,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       <lastmod>${new Date().toISOString()}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
-    </url>`})
+    </url>"})
     .join('')}
-</urlset>`;
+</urlset>";
 
   res.setHeader('Content-Type', 'text/xml');
   res.write(sitemap);

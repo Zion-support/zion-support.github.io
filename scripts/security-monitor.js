@@ -11,7 +11,7 @@ class SecurityMonitor {
     this.projectRoot = process.cwd();
     this.logsDir = path.join(this.projectRoot, 'logs');
     this.errorReportsDir = path.join(this.projectRoot, 'error-reports');
-    this.securityStats = {vulnerabilities: 0,criticalIssues: 0,highIssues: 0;
+    this.securityStats = {"vulnerabilities": 0,"criticalIssues": 0,"highIssues": 0;
       mediumIssues: 0;
       lowIssues: 0;
       outdatedPackages: 0;
@@ -21,7 +21,7 @@ class SecurityMonitor {
   setupDirectories() {
     [this.logsDir, this.errorReportsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true })}
+        fs.mkdirSync(dir, { "recursive": true })}
     })}
   setupLogging() {this.logFile = path.join(this.logsDir, 'security-monitor.log'),this.log('Security Monitor started', 'INFO')}
   log(message, level = 'INFO') {
@@ -43,10 +43,10 @@ class SecurityMonitor {
       this.securityStats.mediumIssues = auditResult.medium;
       this.securityStats.lowIssues = auditResult.low;
       this.securityStats.outdatedPackages = outdatedResult.length;
-      this.log(`Security audit: ${auditResult.vulnerabilities} vulnerabilities found`, 'INFO');
-      this.log(`Outdated packages: ${outdatedResult.length} found`, 'INFO');
-      return {audit: auditResult,outdated: outdatedResult}} catch (error) {
-      this.log(`Error checking dependency security: ${error.message}`, 'ERROR');
+      this.log(`Security "audit": ${auditResult.vulnerabilities} vulnerabilities found`, 'INFO');
+      this.log(`Outdated "packages": ${outdatedResult.length} found`, 'INFO');
+      return {"audit": auditResult,"outdated": outdatedResult}} catch (error) {
+      this.log(`Error checking dependency "security": ${error.message}`, 'ERROR');
       return null}
   }
   async checkFileSecurity() {
@@ -70,15 +70,15 @@ class SecurityMonitor {
         patterns.forEach(pattern => {
           if (pattern.test(fileName) || pattern.test(relativePath)) {
             suspiciousFiles.push({
-              file: relativePath;
+              "file": relativePath;
               reason: `Matches pattern: ${pattern.source}`;
-              risk: this.assessFileRisk(file)
+              "risk": this.assessFileRisk(file)
             })}
         })});
       this.securityStats.suspiciousFiles = suspiciousFiles.length;
       this.log(`Found ${suspiciousFiles.length} suspicious files`, 'INFO');
       return suspiciousFiles} catch (error) {
-      this.log(`Error checking file security: ${error.message}`, 'ERROR');
+      this.log(`Error checking file "security": ${error.message}`, 'ERROR');
       return []}
   }
   async checkCodeSecurity() {
@@ -93,7 +93,7 @@ class SecurityMonitor {
       });
       this.log(`Found ${securityIssues.length} code security issues`, 'INFO');
       return securityIssues} catch (error) {
-      this.log(`Error checking code security: ${error.message}`, 'ERROR');
+      this.log(`Error checking code "security": ${error.message}`, 'ERROR');
       return []}
   }
   async checkNetworkSecurity() {
@@ -107,22 +107,22 @@ class SecurityMonitor {
       // Check firewall status
       const firewallStatus = this.checkFirewallStatus();
       if (openPorts.length > 0) {
-        networkIssues.push({type: 'open_ports',details: openPorts;
+        networkIssues.push({"type": 'open_ports',"details": openPorts;
           risk: 'medium'})}
       if (exposedServices.length > 0) {
-        networkIssues.push({type: 'exposed_services',details: exposedServices;
+        networkIssues.push({"type": 'exposed_services',"details": exposedServices;
           risk: 'high'})}
       if (!firewallStatus.active) {
-        networkIssues.push({type: 'firewall_inactive',details: 'Firewall is not active';
+        networkIssues.push({"type": 'firewall_inactive',"details": 'Firewall is not active';
           risk: 'high'})}
       this.log(`Found ${networkIssues.length} network security issues`, 'INFO');
       return networkIssues} catch (error) {
-      this.log(`Error checking network security: ${error.message}`, 'ERROR');
+      this.log(`Error checking network "security": ${error.message}`, 'ERROR');
       return []}
   }
   async runSecurityAudit() {
     try {
-      const result = execSync('npm audit --json', {cwd: this.projectRoot,encoding: 'utf8';
+      const result = execSync('npm audit --json', {"cwd": this.projectRoot,"encoding": 'utf8';
         stdio: 'pipe'});
       const audit = JSON.parse(result);
       const vulnerabilities = audit.vulnerabilities || {};
@@ -139,18 +139,18 @@ class SecurityMonitor {
             low++;
             break}
       });
-      return {vulnerabilities: Object.keys(vulnerabilities).length,critical,high;
+      return {"vulnerabilities": Object.keys(vulnerabilities).length,critical,high;
         medium;
         low;
-        details: vulnerabilities}} catch (error) {
+        "details": vulnerabilities}} catch (error) {
       if (error.status === 1) {
         // npm audit returns 1 when vulnerabilities are found
-        return { vulnerabilities: 0, critical: 0, high: 0, medium: 0, low: 0, details: {} }}
+        return { "vulnerabilities": 0, "critical": 0, "high": 0, "medium": 0, "low": 0, "details": {} }}
       throw error}
   }
   async checkOutdatedPackages() {
     try {
-      const result = execSync('npm outdated --json', {cwd: this.projectRoot,encoding: 'utf8';
+      const result = execSync('npm outdated --json', {"cwd": this.projectRoot,"encoding": 'utf8';
         stdio: 'pipe'});
       const outdated = JSON.parse(result);
       return Object.keys(outdated)} catch (error) {
@@ -203,9 +203,8 @@ class SecurityMonitor {
   scanCodeForVulnerabilities(content, filePath) {
     const issues = [];
     // SQL Injection patterns
-    const sqlPatterns = [
-      /query\s*\(\s*['"`].*\+\s*\w+/i;
-      /execute\s*\(\s*['"`].*\+\s*\w+/i;
+    const sqlPatterns = [/query\s*\(\s*['""].*\+\s*\w+/i;
+      /execute\s*\(\s*['""].*\+\s*\w+/i;
       /sql\s*\+\s*\w+/i
     ];
     // XSS patterns
@@ -213,19 +212,18 @@ class SecurityMonitor {
     // Command injection patterns
     const cmdPatterns = [/exec\s*\(\s*\w+/i,/spawn\s*\(\s*\w+/i,/child_process/i];
     // Hardcoded secrets
-    const secretPatterns = [
-      /password\s*[:=]\s*['"`][^'"`]+['"`]/i;
-      /secret\s*[:=]\s*['"`][^'"`]+['"`]/i;
-      /token\s*[:=]\s*['"`][^'"`]+['"`]/i;
-      /api_key\s*[:=]\s*['"`][^'"`]+['"`]/i
+    const secretPatterns = [/password\s*[:=]\s*['""][^'""]+['""]/i;
+      /secret\s*[:=]\s*['""][^'""]+['""]/i;
+      /token\s*[:=]\s*['""][^'""]+['""]/i;
+      /api_key\s*[:=]\s*['""][^'""]+['""]/i
     ];
-    const patterns = [{ name: 'SQL Injection', patterns: sqlPatterns, risk: 'high' },{ name: 'XSS', patterns: xssPatterns, risk: 'medium' },{ name: 'Command Injection', patterns: cmdPatterns, risk: 'critical' };
-      { name: 'Hardcoded Secrets', patterns: secretPatterns, risk: 'high' }];
+    const patterns = [{ "name": 'SQL Injection', "patterns": sqlPatterns, "risk": 'high' },{ "name": 'XSS', "patterns": xssPatterns, "risk": 'medium' },{ "name": 'Command Injection', "patterns": cmdPatterns, "risk": 'critical' };
+      { "name": 'Hardcoded Secrets', "patterns": secretPatterns, "risk": 'high' }];
     patterns.forEach(({ name, patterns, risk }) => {
       patterns.forEach(pattern => {
         const matches = content.match(pattern);
         if (matches) {
-          issues.push({type: name,file: path.relative(this.projectRoot, filePath),pattern: pattern.source;
+          issues.push({"type": name,"file": path.relative(this.projectRoot, filePath),"pattern": pattern.source;
             risk;
             line: this.findLineNumber(content, matches[0])})}
       })});
@@ -239,7 +237,7 @@ class SecurityMonitor {
     return 0}
   checkOpenPorts() {
     try {
-      const result = execSync('netstat -tuln 2>/dev/null || ss -tuln 2>/dev/null', {encoding: 'utf8',stdio: 'pipe'});
+      const result = execSync('netstat -tuln 2>/dev/null || ss -tuln 2>/dev/null', {"encoding": 'utf8',"stdio": 'pipe'});
       const lines = result.trim().split('\n');
       const openPorts = [];
       lines.forEach(line => {
@@ -252,7 +250,7 @@ class SecurityMonitor {
       });
       return [...new Set(openPorts)]; // Remove duplicates
     } catch (error) {
-      this.log(`Error checking open ports: ${error.message}`, 'WARN');
+      this.log(`Error checking open "ports": ${error.message}`, 'WARN');
       return []}
   }
   checkExposedServices() {
@@ -262,7 +260,7 @@ class SecurityMonitor {
       const webServers = ['nginx', 'apache2', 'httpd', 'lighttpd'];
       webServers.forEach(server => {
         try {
-          execSync(`systemctl is-active ${server}`, { stdio: 'pipe' });
+          execSync(`systemctl is-active ${server}`, { "stdio": 'pipe' });
           services.push(server)} catch (error) {
           // Service not running
         }
@@ -271,36 +269,36 @@ class SecurityMonitor {
       const dbServers = ['mysql', 'postgresql', 'mongod', 'redis-server'];
       dbServers.forEach(server => {
         try {
-          execSync(`systemctl is-active ${server}`, { stdio: 'pipe' });
+          execSync(`systemctl is-active ${server}`, { "stdio": 'pipe' });
           services.push(server)} catch (error) {
           // Service not running
         }
       });
       return services} catch (error) {
-      this.log(`Error checking exposed services: ${error.message}`, 'WARN');
+      this.log(`Error checking exposed "services": ${error.message}`, 'WARN');
       return []}
   }
   checkFirewallStatus() {
     try {
       // Check UFW status
       try {
-        const ufwStatus = execSync('ufw status', { encoding: 'utf8', stdio: 'pipe' });
-        if (ufwStatus.includes('Status: active')) {
-          return { active: true, type: 'ufw' }}
+        const ufwStatus = execSync('ufw status', { "encoding": 'utf8', "stdio": 'pipe' });
+        if (ufwStatus.includes('"Status": active')) {
+          return { active: true, "type": 'ufw' }}
       } catch (error) {
         // UFW not available
       }
       // Check iptables
       try {
-        const iptablesStatus = execSync('iptables -L', { encoding: 'utf8', stdio: 'pipe' });
+        const iptablesStatus = execSync('iptables -L', { "encoding": 'utf8', "stdio": 'pipe' });
         if (iptablesStatus.includes('Chain INPUT') && iptablesStatus.includes('Chain OUTPUT')) {
-          return { active: true, type: 'iptables' }}
+          return { "active": true, "type": 'iptables' }}
       } catch (error) {
         // iptables not available
       }
-      return { active: false, type: 'none' }} catch (error) {
-      this.log(`Error checking firewall status: ${error.message}`, 'WARN');
-      return { active: false, type: 'unknown' }}
+      return { "active": false, "type": 'none' }} catch (error) {
+      this.log(`Error checking firewall "status": ${error.message}`, 'WARN');
+      return { "active": false, "type": 'unknown' }}
   }
   async fixSecurityIssues() {
     this.log('Attempting to fix security issues...', 'INFO');
@@ -309,14 +307,14 @@ class SecurityMonitor {
       // Fix dependency vulnerabilities
       if (this.securityStats.vulnerabilities > 0) {
         try {
-          execSync('npm audit fix', {cwd: this.projectRoot,stdio: 'pipe'});
+          execSync('npm audit fix', {"cwd": this.projectRoot,"stdio": 'pipe'});
           fixes.push('Dependency vulnerabilities fixed')} catch (error) {
           this.log('Some vulnerabilities could not be automatically fixed', 'WARN')}
       }
       // Update outdated packages
       if (this.securityStats.outdatedPackages > 0) {
         try {
-          execSync('npm update', {cwd: this.projectRoot,stdio: 'pipe'});
+          execSync('npm update', {"cwd": this.projectRoot,"stdio": 'pipe'});
           fixes.push('Outdated packages updated')} catch (error) {
           this.log('Failed to update some packages', 'WARN')}
       }
@@ -333,15 +331,15 @@ class SecurityMonitor {
       });
       this.log(`Applied ${fixes.length} security fixes`, 'INFO');
       return fixes} catch (error) {
-      this.log(`Error during security fixes: ${error.message}`, 'ERROR');
+      this.log(`Error during security "fixes": ${error.message}`, 'ERROR');
       return []}
   }
   generateReport() {
-    const report = {timestamp: new Date().toISOString(),securityStats: this.securityStats;
+    const report = {"timestamp": new Date().toISOString(),"securityStats": this.securityStats;
       recommendations: this.generateRecommendations()};
     const reportFile = path.join(this.errorReportsDir, `security-monitor-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`Report generated: ${reportFile}`, 'INFO');
+    this.log(`Report "generated": ${reportFile}`, 'INFO');
     return report}
   generateRecommendations() {
     const recommendations = [];
@@ -373,9 +371,9 @@ class SecurityMonitor {
       await this.fixSecurityIssues();
       const report = this.generateReport();
       this.log('Security monitoring automation completed', 'INFO');
-      this.log(`Summary: ${this.securityStats.vulnerabilities} vulnerabilities, ${this.securityStats.suspiciousFiles} suspicious files`, 'INFO');
+      this.log(`"Summary": ${this.securityStats.vulnerabilities} vulnerabilities, ${this.securityStats.suspiciousFiles} suspicious files`, 'INFO');
       return report} catch (error) {
-      this.log(`Fatal error in security monitor: ${error.message}`, 'ERROR');
+      this.log(`Fatal error in security "monitor": ${error.message}`, 'ERROR');
       throw error}
   }
 }
@@ -385,5 +383,5 @@ if (require.main === module) {
   monitor.run()
     .then(() => {
       process.exit(0)})
-    .catch((error) => {console.error('Security monitor failed:', error),process.exit(1)})}
+    .catch((error) => {console.error('Security monitor "failed": ', error),process.exit(1)})}
 module.exports = SecurityMonitor;

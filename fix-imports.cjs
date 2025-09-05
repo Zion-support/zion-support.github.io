@@ -33,22 +33,22 @@ function fixImportsInFile(filePath) {
 
     // Fix specific syntax errors in cva calls
     content = content.replace(/cva\(;/g, 'cva(');
-    content = content.replace(/variants:\s*{;/g, 'variants: {');
-    content = content.replace(/variant:\s*{;/g, 'variant: {');
-    content = content.replace(/defaultVariants:\s*{;/g, 'defaultVariants: {');
+    content = content.replace(/"variants": \s*{;/g, '"variants": {');
+    content = content.replace(/variant:\s*{;/g, '"variant": {');
+    content = content.replace(/defaultVariants:\s*{;/g, '"defaultVariants": {');
 
     // Fix missing quotes and commas
     content = content.replace(
       /(\w+):\s*'([^']*)'(\w+):/g,
-      "$1: '$2',\n        $3:"
+      "$"1": '$2',\n        $"3": "
     );
     content = content.replace(
       /(\w+):\s*'([^']*)'(\s*})/g,
-      "$1: '$2'\n      $3"
+      "$"1": '$2'\n      $3"
     );
 
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`)} catch (error) {
+    console.log(`"Fixed": ${filePath}`)} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)}
 }
 

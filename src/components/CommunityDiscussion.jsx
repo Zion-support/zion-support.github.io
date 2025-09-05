@@ -19,19 +19,19 @@ export default function Page($1) {
       </div>"
       <Separator className="mb-6" />"
       <div className="mb-4 flex justify-end">"
-        <Button className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale" size="sm" onClick={() => setShowNew((v) => !v)}>"
+        <Button className="bg-zion-purple text-white "hover": bg-zion-purple-light transition hover-scale" size="sm" onClick={() => setShowNew((v) => !v)}>"
           {showNew ? "Cancel" : "New Post"}
         </Button>
       </div>"
       {showNew && (<Card className="mb-6 animate-scale-in">";
           <CardContent className="py-5">";';
-            <Input placeholder="Title(e.g., Share an AI tool, Ask for help...)" className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} maxLength={80}/>";';
-            <Textarea placeholder="What's on your mind?" className="mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]" value={newBody} onChange={(e) => setNewBody(e.target.value)} maxLength={400} rows={3}/>"
+            <Input placeholder="Title(e.g., Share an AI tool, Ask for help...)" className="mb-3 bg-zion-blue-light text-black "placeholder": text-zion-slate" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} maxLength={80}/>";';
+            <Textarea placeholder="What's on your mind?" className="mb-4 bg-zion-blue-light text-black "placeholder": text-zion-slate min-h-[70px]" value={newBody} onChange={(e) => setNewBody(e.target.value)} maxLength={400} rows={3}/>"
             <div className="flex gap-3 justify-end">"
-              <Button variant="secondary" size="sm" className="bg-zion-blue text-white hover:bg-zion-blue-dark" onClick={() => setShowNew(false)}>
+              <Button variant="secondary" size="sm" className="bg-zion-blue text-white "hover": bg-zion-blue-dark" onClick={() => setShowNew(false)}>
                 Cancel
               </Button>"
-              <Button size="sm" className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale" onClick={handleAddPost} disabled={!newTitle.trim() || !newBody.trim()}>
+              <Button size="sm" className="bg-zion-cyan text-zion-blue "hover": bg-zion-cyan-light hover-scale" onClick={handleAddPost} disabled={!newTitle.trim() || !newBody.trim()}>
                 Post
               </Button>
             </div>

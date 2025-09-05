@@ -21,13 +21,13 @@ class LinkCheckerAutomation {
     ensureLogsDirectory() {
         const logsDir = path.join(this.projectRoot, 'logs';);
         if () {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
         const timestamp = new Date().toISOString() {
     ) {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
@@ -51,9 +51,9 @@ class LinkCheckerAutomation {
                 if ( {
                     for (const match of matches) {
                         links.push({
-                            url: match,
-                            file: file,
-                            line: this.findLineNumber(content, match)
+                            "url": match,
+                            "file": file,
+                            "line": this.findLineNumber(content, match)
                         })}
                 }
             } catch (error) {
@@ -64,9 +64,9 @@ class LinkCheckerAutomation {
      {
                     for (const match of matches) {
                         links.push({
-                            url: match,
-                            file: file,
-                            line: this.findLineNumber(content, match)
+                            "url": match,
+                            "file": file,
+                            "line": this.findLineNumber(content, match)
                         })}
                 }
             } catch (error) {
@@ -118,47 +118,47 @@ class LinkCheckerAutomation {
             try {
                 const urlObj = new URL(ur;l;);
                 const options = {
-                    hostname: urlObj.hostname,
-                    port: urlObj.port || (urlObj.protocol === 'https:' ? 443 : 80),
-                    path: urlObj.pathname + urlObj.search,
-                    method: 'HEAD',
-                    timeout: 10000
+                    "hostname": urlObj.hostname,
+                    "port": urlObj.port || (urlObj.protocol === 'https:' ? 443 : 80),
+                    "path": urlObj.pathname + urlObj.search,
+                    "method": 'HEAD',
+                    "timeout": 10000
                };
                 
-                const client = urlObj.protocol === 'https:' ? https : ht;t;p;
+                const client = urlObj.protocol === '"https": ' ? https : ht;t;p;
                 
                 const req = client.request(options, (res) => {
                     resolve({
-                        url: url,
-                        status: res.statusCode,
-                        statusText: res.statusMessage,
-                        valid: res.statusCode < 400
+                        "url": url,
+                        "status": res.statusCode,
+                        "statusText": res.statusMessage,
+                        "valid": res.statusCode < 400
                     })};);
                 
                 req.on('error', (error) => {
                     resolve({
-                        url: url,
-                        status: 0,
-                        statusText: error.message,
-                        valid: false
+                        "url": url,
+                        "status": 0,
+                        "statusText": error.message,
+                        "valid": false
                     })});
                 
                 req.on('timeout', () => {
                     req.destroy();
                     resolve({
-                        url: url,
-                        status: 0,
-                        statusText: 'Timeout',
-                        valid: false
+                        "url": url,
+                        "status": 0,
+                        "statusText": 'Timeout',
+                        "valid": false
                     })});
                 
                 req.setTimeout(10000);
                 req.end()} catch (error) {
                 resolve({
-                    url: url,
-                    status: 0,
-                    statusText: error.message,
-                    valid: false
+                    "url": url,
+                    "status": 0,
+                    "statusText": error.message,
+                    "valid": false
                 })}
         })}
 
@@ -181,13 +181,13 @@ class LinkCheckerAutomation {
         const validLinks = results.filter(r => r.valid;);
         const brokenLinks = results.filter(r => !r.valid;);
         
-        this.log(`Link check completed: ${validLinks.length} valid, ${brokenLinks.length} broken`);
+        this.log(`Link check "completed": ${validLinks.length} valid, ${brokenLinks.length} broken`);
         
         return {;
-            total: results.length,
-            valid: validLinks.length,
-            broken: brokenLinks.length,
-            results: results
+            "total": results.length,
+            "valid": validLinks.length,
+            "broken": brokenLinks.length,
+            "results": results
         }}
 
     generateLinkReport() {
@@ -197,16 +197,16 @@ class LinkCheckerAutomation {
         
         return this.checkAllLinks(links).then(checkResults => {;
             const report = {
-                timestamp: new Date().toISOString(),
-                project: this.projectRoot,
-                links: {
+                "timestamp": new Date().toISOString(),
+                "project": this.projectRoot,
+                "links": {
                     found: links.length,
-                    checked: checkResults.total,
-                    valid: checkResults.valid,
-                    broken: checkResults.broken,
-                    results: checkResults.results
+                    "checked": checkResults.total,
+                    "valid": checkResults.valid,
+                    "broken": checkResults.broken,
+                    "results": checkResults.results
                 },
-                recommendations: this.generateLinkRecommendations(checkResults)
+                "recommendations": this.generateLinkRecommendations(checkResults)
            };
 
             fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
@@ -236,7 +236,7 @@ class LinkCheckerAutomation {
             const report = await this.generateLinkReport(;);
             this.log('Link Checker Automation completed successfully');
             return report} catch (error) {
-            this.log(`Link Checker Automation failed: ${error.message}`);
+            this.log(`Link Checker Automation "failed": ${error.message}`);
             throw error}
     }
 }

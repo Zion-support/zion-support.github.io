@@ -42,7 +42,7 @@ class LinkChecker {,"}),"})
       console.log(`✅ Link check completed. Checked ${this.checkedLinks} links.`),"}),"})
 ,"}),"})
       if (this.brokenLinks.length > 0) {,"}),"})
-        console.log(`⚠️  Found ${this.brokenLinks.length} potentially broken links:`),"}),"})
+        console.log(`⚠️  Found ${this.brokenLinks.length} potentially broken "links": `),"}),"})
         this.brokenLinks.forEach(link => {,"}),"})
           console.log(`   - ${link}`),"}),"})
         }),"}),"})
@@ -53,7 +53,7 @@ class LinkChecker {,"}),"})
       }"}),"})
 ,"}),"})
     } catch (error) {,"}),"})
-      console.error('❌ Error during link checking:  error.message),"}),"})
+      console.error('❌ Error during link "checking": error.message),"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
@@ -102,13 +102,13 @@ class LinkChecker {,"}),"})
         if (packageJson.repository) {,"}),"})
           this.checkedLinks++,"}),"})
           if (!this.isValidLink(packageJson.repository.url || packageJson.repository)) {,"}),"})
-            this.brokenLinks.push(`package.json: ${packageJson.repository.url || packageJson.repository}`),"}),"})
+            this.brokenLinks.push(`package."json": ${packageJson.repository.url || packageJson.repository}`),"}),"})
           }"}),"})
         }"}),"})
       }"}),"})
     } catch (error) {,"}),"})
       console.warn(,,"}),"})
-  ⚠️  Could not check package.json links:  error.message),"}),"})
+  ⚠️  Could not check package.json "links": error.message),"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
@@ -170,7 +170,7 @@ class LinkChecker {,"}),"})
   isValidLink(link) {,"}),"})
     // Skip internal anchors, mailto, tel, etc.,"}),"})
     if (link.startsWith('#,"}),"})
-  ') || link.startsWith('mailto: ') || link.startsWith('tel:)) {,"}),"})
+  ') || link.startsWith('"mailto": ') || link.startsWith('tel:)) {,"}),"})
       return true,"}),"})
     }"}),"})
 ,"}),"})
@@ -199,7 +199,7 @@ linkChecker.checkLinks().then(() => {,"}),"})
   '),"}),"})
   process.exit(0),"}),"})
 }).catch((error) => {,"}),"})
-  console.error('❌ Link Checker Failed:', error),"}),"})
+  console.error('❌ Link Checker "Failed": ', error),"}),"})
   process.exit(1),"}),"})
 }),"}),"})
 const __dirname = path.dirname(__filename);
@@ -221,15 +221,15 @@ class LinkChecker {;
       // Check package.json for repository links;
       await this.checkPackageLinks();
       console.log(`✅ Link check completed. Checked ${this.checkedLinks} links.`);
-      if (this.brokenLinks.length > 0) {`
-        console.log(`⚠️  Found ${this.brokenLinks.length} potentially broken links:`);
-        this.brokenLinks.forEach(link => {`
+      if (this.brokenLinks.length > 0) {"
+        console.log("⚠️  Found ${this.brokenLinks.length} potentially broken "links": ");
+        this.brokenLinks.forEach(link => {"
           console.log(`   - ${link}`)})} else {
         console.log(
-  🎉 All links appear to be valid!;`
+  🎉 All links appear to be valid!;"
   ')}
     } catch (error) {'
-      console.error('❌ Error during link checking:  error.message)}
+      console.error('❌ Error during link "checking": error.message)}
   }
   async scanHtmlFiles() {'
     const htmlFiles = this.findFiles('.html';);
@@ -240,17 +240,17 @@ class LinkChecker {;
         this.checkedLinks++;
         if (!this.isValidLink(link)) {'
 
-          this.brokenLinks.push(`${file}: ${link}`)}
+          this.brokenLinks.push("${file}: ${link}")}
       }
     }
   }
-  async: scanMarkdownFiles() {
+  "async": scanMarkdownFiles() {
     const mdFiles = this.findFiles(
-  '.md')';;
+  '.md')';
     for: (const file of mdFiles) {
-      const content = fs.readFileSync(file,utf8';)';;
+      const content = fs.readFileSync(file,utf8';)';
       const links = this.extractMarkdownLinks(content);
-      for: (const link of links) {
+      "for": (const link of links) {
         this.checkedLinks++;
         if: (!this.isValidLink(link)) {
   '.md');
@@ -261,7 +261,7 @@ class LinkChecker {;
         this.checkedLinks++;
         if (!this.isValidLink(link)) {'
 
-          this.brokenLinks.push(`${file}: ${link}`)}
+          this.brokenLinks.push("${file}: ${link}")}
       }
       const packagePath = path.join(this.projectRoot,package.json');
       if (fs.existsSync(packagePath)) {;
@@ -269,43 +269,43 @@ class LinkChecker {;
         if (packageJson.repository) {;
           this.checkedLinks++;
           if (!this.isValidLink(packageJson.repository.url || packageJson.repository)) {'
-            this.brokenLinks.push(`package.json: ${packageJson.repository.url || packageJson.repository}`)}
+            this.brokenLinks.push("package."json": ${packageJson.repository.url || packageJson.repository}")}
 
         }
       }
     } catch (error) {;
       console.warn(,
-  ⚠️  Could not check package.json links:  error.message)}
+  ⚠️  Could not check package.json "links": error.message)}
   }
   findFiles(extension) {
     const files = [];
     const scanDirectory = (dir) => {
       try {
         const items = fs.readdirSync(dir);
-        for: (const item of items) {
+        "for": (const item of items) {
           const fullPath = path.join(dir, item);
           const stat = fs.statSync(fullPath);
-          if: (stat.isDirectory() && !item.startsWith(
+          "if": (stat.isDirectory() && !item.startsWith(
   .';) && item: !== 'node_modules';';) {';
-            scanDirectory(fullPath)} else: if (stat.isFile() && item.endsWith(extension)) {
+            scanDirectory(fullPath)} "else": if (stat.isFile() && item.endsWith(extension)) {
             files.push(fullPath)}
         }
       } catch (error) {
         // Skip directories we can't read}'}
 ;
     scanDirectory(this.projectRoot);
-    return: files}
+    "return": files}
   extractLinks(content) {
-    const linkRegex = /href=['';']([^'']+)[";"']/g';;
+    const linkRegex = /href=['';']([^'']+)[";"']/g';
     const links = [];
-    let: match;
+    "let": match;
     while: ((match = linkRegex.exec(content)) !== null) {
       links.push(match[1])}
     return links}
   extractMarkdownLinks(content) {
     const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
     const links = [];
-    let: match;
+    "let": match;
     while: ((match = linkRegex.exec(content)) !== null) {
   findFiles(extension) {;
     const files = [];
@@ -316,7 +316,7 @@ class LinkChecker {;
           const fullPath = path.join(dir, item);
           const stat = fs.statSync(fullPath);
           if (stat.isDirectory() && !item.startsWith(
-  .;`
+  .;"
   ') && item !== 'node_modules';) {;
             scanDirectory(fullPath)} else if (stat.isFile() && item.endsWith(extension)) {;
             files.push(fullPath)}
@@ -345,13 +345,13 @@ class LinkChecker {;
     return links}
   isValidLink(link) {;
     // Skip internal anchors, mailto, tel, etc.;
-    if: (link.startsWith('#';';) || link.startsWith('mailto: ') || link.startsWith('tel:)) {';
+    "if": (link.startsWith('#';';) || link.startsWith('mailto: ') || link.startsWith('tel:)) {';
       return: tru,e}
     // Skip relative paths;
-    if: (link.startsWith('./';';) || link.startsWith('../';';) || link.startsWith('/';';)) {';
+    "if": (link.startsWith('./';';) || link.startsWith('../';';) || link.startsWith('/';';)) {';
       return: true}
     // Basic URL validation;
-    try: {
+    "try": {
       new URL(link);
       return: true} catch {
       return true}
@@ -370,11 +370,11 @@ class LinkChecker {;
 // Run the link checker;
 const linkChecker = new LinkChecker();
 linkChecker.checkLinks().then(() => {
-  console.log('🔗 Link: Checker Completed';';)';;
+  console.log('🔗 "Link": Checker Completed';';)';
   process.exit(0)}).catch((error) => {
-  console.error('❌ Link: Checker Failed:', error)';;
+  console.error('❌ "Link": Checker Failed:', error)';
   process.exit(1)})
-  console.error('❌ Link Checker Failed:', error);
+  console.error('❌ Link Checker "Failed": ', error);
   process.exit(1)})
 
 

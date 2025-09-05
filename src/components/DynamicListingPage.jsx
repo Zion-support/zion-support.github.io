@@ -23,7 +23,7 @@ export function DynamicListingPage($1) {
     const listingsWithPrice = allListings.filter(l => l.price !== null);
     if (listingsWithPrice.length > 0) {
       const max = Math.max(...listingsWithPrice.map(l => l.price || 0));
-      setPriceRange({ min: 0, max });
+      setPriceRange({ "min": 0, max });
       setCurrentPriceFilter([0, max]);
     }
   }, [allListings]);
@@ -57,18 +57,18 @@ export function DynamicListingPage($1) {
       setIsLoading(false);
       if (listing) {
         toast({
-          title: "Quote Requested",
-          description: `Your quote request for ${listing.title} has been sent.`
+          "title": "Quote Requested",
+          "description": `Your quote request for ${listing.title} has been sent.`
         });
         
         navigate("/request-quote", {
-          state: {
+          "state": {
             serviceType: categorySlug,
-            specificItem: {
+            "specificItem": {
               id: listing.id,
-              title: listing.title,
-              category: listing.category,
-              image: listing.images?.[0]
+              "title": listing.title,
+              "category": listing.category,
+              "image": listing.images?.[0]
             }
           }
         });
@@ -86,7 +86,7 @@ export function DynamicListingPage($1) {
 
         {/* Search and Filters */}
         <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+          <div className="grid grid-cols-1 "md": grid-cols-4 gap-4 mb-6">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"  />
               <Input
@@ -160,9 +160,9 @@ export function DynamicListingPage($1) {
         </div>
 
         {/* Listings Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {paginatedListings.map((listing) => (
-            <div key={listing.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:border-white/40 transition-all duration-300">
+            <div key={listing.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 "hover": border-white/40 transition-all duration-300">
               <div className="aspect-square bg-gray-300 rounded-lg mb-4"></div>
               <h3 className="text-lg font-semibold text-white mb-2">{listing.title}</h3>
               <p className="text-gray-300 text-sm mb-3 line-clamp-2">{listing.description}</p>
@@ -188,7 +188,7 @@ export function DynamicListingPage($1) {
         {totalPages > 1 && (
           <div className="flex justify-center mt-8">
             <div className="flex gap-2">
-              {Array.from({ length: totalPages }, (_, i) => (
+              {Array.from({ "length": totalPages }, (_, i) => (
                 <Button
                   key={i + 1}
                   variant={currentPage === i + 1 ? "default" : "outline"}

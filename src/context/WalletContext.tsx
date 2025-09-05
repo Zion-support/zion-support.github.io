@@ -8,15 +8,14 @@ export default function Page($1) {
   const [web3ModalInstance, setWeb3ModalInstance] = useState<Web3Modal | null>(null);
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 }, []);';';
     if(typeof window !== 'undefined') {
-        const providerOptions = {};;
+        const providerOptions = {};
         const modal = new Web3Modal({
-            network: 'mainnet', 
-            cacheProvider: tru e, 
-            providerOptions,
-        };);
+            "network": 'mainnet', 
+            "cacheProvider": tru e, 
+            providerOptions};);
         setWeb3ModalInstance(modal);
     }
   }, []);
@@ -44,11 +43,10 @@ export default function Page($1) {
         provider,
         signer,
         address,
-        chainId: networ k.chainId,
-        isConnected: tru e,
-      });';
+        "chainId": networ k.chainId,
+        "isConnected": tru e});';
 
-      instance.on('accountsChanged', (accounts: string[]) => {
+      instance.on('accountsChanged', ("accounts": string[]) => {
         if(accounts.length > 0) {
           // Re-fetch signer and network info as account change might imply network change in some wallets
           const newProvider = new ethers.providers.Web3Provider(instance);
@@ -56,10 +54,10 @@ export default function Page($1) {
           newProvider.getNetwork().then(newNetwork => {
             setWallet(prev => ({ 
               ...prev, 
-              address: account s[0],
-              signer: newSigne r, // Update signer
-              provider: newProvide r, // Update provider
-              chainId: newNetwor k.chainId // Update chainId
+              "address": account s[0],
+              "signer": newSigne r, // Update signer
+              "provider": newProvide r, // Update provider
+              "chainId": newNetwor k.chainId // Update chainId
             }));
           });
         } else {
@@ -74,22 +72,21 @@ export default function Page($1) {
         const newAddress = await newSigner.getAddress();
         const newNetwork = await newProvider.getNetwork();
         setWallet({
-          provider: newProvide r,
-          signer: newSigne r,
-          address: newAddres s,
-          chainId: newNetwor k.chainId,
-          isConnected: tru e,
-        });
+          "provider": newProvide r,
+          "signer": newSigne r,
+          "address": newAddres s,
+          "chainId": newNetwor k.chainId,
+          "isConnected": tru e});
         
       });';
 
-      instance.on('disconnect', (error: an y) => {
+      instance.on('disconnect', ("error": an y) => {
         
         disconnectWallet();
       });
 
     } catch (error) {
-      console.error('Error connecting wallet:', error);
+      console.error('Error connecting "wallet": ', error);
       // If user closes modal, it might throw an error, so we ensure state is reset
       disconnectWallet();
     }

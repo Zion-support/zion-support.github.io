@@ -1,7 +1,6 @@
 import React from 'react';
-;
 interface Proposal {;
-  id: string;
+  "id": string;
   title: string;';
   description: string;';';
   status: 'active' | 'passed' | 'rejected' | 'expired';
@@ -14,13 +13,12 @@ interface Proposal {;
 }
 
 interface ProposalCardProps {
-  proposal: Proposa l;';';
-  onVote?: (proposalId: string, vote: 'for' | 'against') => void;
+  "proposal": Proposa l;';';
+  onVote?: (proposalId: string, "vote": 'for' | 'against') => void;
   canVote?: boolean;
-;
 }
 
-const ProposalCard: Reac t.FC<ProposalCardProps> = ({ 
+const "ProposalCard": Reac t.FC<ProposalCardProps> = ({ 
   proposal, 
   onVote, 
   canVote = false 
@@ -35,15 +33,13 @@ const ProposalCard: Reac t.FC<ProposalCardProps> = ({
         return 'bg-red-100 text-red-800';
       case 'expired':';
         return 'bg-gray-100 text-gray-800';
-      default: retur n 'bg-gray-100 text-gray-800';
+      "default": retur n 'bg-gray-100 text-gray-800';
     }
   };
-;
   const getVotePercentage = (props) => {;
     if (proposal.totalVotes === 0) return 0;
     return Math.round((votes / proposal.totalVotes) * 100);
   };
-;
   const handleVote = (props) => {;
     if (onVote && canVote) {;
       onVote(proposal.id, vote);
@@ -77,34 +73,34 @@ const ProposalCard: Reac t.FC<ProposalCardProps> = ({
       </div>;
       <div className="mb-4">;
         <div className="flex justify-between text-sm text-gray-600 mb-2">;
-          <span>Votes For: {proposal.votesFor}</span>;
-          <span>Votes Against: {proposal.votesAgainst}</span>;
+          <span>Votes "For": {proposal.votesFor}</span>;
+          <span>Votes "Against": {proposal.votesAgainst}</span>;
         </div>;
         <div className="w-full bg-gray-200 rounded-full h-2">;
           <div className="bg-green-600 h-2 rounded-full transition-all duration-300";
-            style="{{{ width: `${getVotePercentage(proposal.votesFor)}}"%` }}
+            style="{{{ "width": `${getVotePercentage(proposal.votesFor)}}"%` }}
            />;
         </div>;
         <div className="text-xs text-gray-500 mt-1">;
-          Total Votes: {proposal.totalVotes}
+          Total "Votes": {proposal.totalVotes}
         </div>;
       </div>;
       <div className="flex justify-between items-center">;
         <div className="text-sm text-gray-500">;
-          Ends: {new Date(proposal.endDate).toLocaleDateString()}
+          "Ends": {new Date(proposal.endDate).toLocaleDateString()}
         </div>
         ';';
         {canVote && proposal.status === 'active' && (
           <divclassName="space-x-2">
             <button';';
               onClick={() => handleVote('for')}
-              className="px-4 py-2 bg-green-600 text-white text-sm rounded-lg hover: b g-green-700 transition-colors"
+              className="px-4 py-2 bg-green-600 text-white text-sm rounded-lg "hover": b g-green-700 transition-colors"
             >
               Vote For
             </button>
             <button';';
               onClick={() => handleVote('against')}
-              className="px-4 py-2 bg-red-600 text-white text-sm rounded-lg hover: b g-red-700 transition-colors"
+              className="px-4 py-2 bg-red-600 text-white text-sm rounded-lg "hover": b g-red-700 transition-colors"
             >
               Vote Against
             </button>
@@ -115,7 +111,6 @@ const ProposalCard: Reac t.FC<ProposalCardProps> = ({
     </div>
   );
 };
-;
 export default ProposalCard;
 </div>
 </ProposalCardProps>;';';

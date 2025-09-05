@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About: React.FC = () => {
+const "About": React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-20">
@@ -11,7 +11,7 @@ const About: React.FC = () => {
           <p className="text-xl text-gray-600 mb-8">
             We are a leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
           </p>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid "md": grid-cols-2 gap-8">
             <div>
               <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
               <p className="text-gray-600">

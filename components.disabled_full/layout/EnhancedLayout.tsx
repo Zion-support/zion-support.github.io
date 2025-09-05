@@ -7,7 +7,7 @@ import EnhancedFooter from "./EnhancedFooter";
 >>>>>>> origin/merge-pr-11208
 
 interface EnhancedLayoutProps {
-  children: ReactNode;
+  "children": ReactNode;
 }
 
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {

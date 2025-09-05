@@ -1,7 +1,7 @@
 // performance utility,
 export const performance = {
   // Placeholder utility functions,
-init: function() {
+"init": function() {
     
   }
 };

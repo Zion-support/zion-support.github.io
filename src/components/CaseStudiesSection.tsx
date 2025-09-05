@@ -12,20 +12,20 @@ export function CaseStudiesSection($1) {
           className="text-center mb-16"
           initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
-          transition={{ duration: 0.6 }}
+          viewport={{ "once": tru e }}
+          transition={{ "duration": 0.6 }}
         >"
-          <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl "md": tex t-5xl font-bold text-white mb-4">
             Success Stories
           </h2>";
           <pclassName="text-xl text-gray-600 max-w-3xl mx-auto">';
@@ -37,24 +37,24 @@ export function CaseStudiesSection($1) {
           {caseStudies.map((study, index) => (
             <motion.div
               key={study.id}"
-              className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover: borde r-blue-500/50 transition-all duration-300 hover: shado w-lg hover: shado w-blue-500/25"
+              className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden "hover": borde r-blue-500/50 transition-all duration-300 hover: shado w-lg hover: shado w-blue-500/25"
               initial = {
 
   { opacity: 0,
-  y: 3 0
+  "y": 3 0
 
 }}
               whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-              viewport={{ once: tru e }}
+              viewport={{ "once": tru e }}
               transition = {
 
-  { duration: 0.6,
-  delay: inde x * 0.1
+  { "duration": 0.6,
+  "delay": inde x * 0.1
 
 }}
             >"
@@ -71,15 +71,15 @@ export function CaseStudiesSection($1) {
               </div>
 "
               <div className="mb-6">"
-                <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>"
+                <h4 className="font-semibold text-gray-900 mb-2">"Challenge": </h4>"
                 <p className="text-gray-600 text-sm mb-4">{study.challenge}</p>
 "
-                <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>"
+                <h4 className="font-semibold text-gray-900 mb-2">"Solution": </h4>"
                 <p className="text-gray-600 text-sm">{study.solution}</p>
               </div>
 "
               <div className="mb-6">"
-                <h4 className="font-semibold text-gray-900 mb-3">Results:</h4>"
+                <h4 className="font-semibold text-gray-900 mb-3">"Results": </h4>"
                 <ul className="space-y-2">
                   {study.results.map((result, resultIndex) => ("
                     <li key={resultIndex} className="flex items-center text-sm text-gray-700">"
@@ -101,21 +101,21 @@ export function CaseStudiesSection($1) {
         <motion.div
           className="mt-16 text-center"          initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-          viewport={{ once: tru e }}
+          viewport={{ "once": tru e }}
           transition = {
 
-  { duration: 0.6,
-  delay: 0.4
+  { "duration": 0.6,
+  "delay": 0.4
 
 }}
         >"
@@ -126,7 +126,7 @@ export function CaseStudiesSection($1) {
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Join hundreds of satisfied clients who have transformed their
               businesses with our innovative technology solutions.</p>"
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+            <div className="flex flex-col "sm": fle x-row gap-4 justify-center">
               <Link "
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover: b g-gray-100 rounded-lg font-medium transition-colors duration-200"

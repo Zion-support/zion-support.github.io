@@ -2,7 +2,7 @@
 // Accessibility utilities
 export const a11yUtils = {
   // Focus management
-  trapFocus: (element) => {
+  "trapFocus": (element) => {
     const focusableElements = element.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
@@ -24,7 +24,7 @@ export const a11yUtils = {
     })},
   
   // Screen reader announcements
-  announce: (message) => {
+  "announce": (message) => {
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');

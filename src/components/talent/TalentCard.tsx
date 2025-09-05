@@ -4,7 +4,7 @@ import { Card } from '@/components/ui/card';
 import { MapPin, Clock, CheckCircle2 } from 'lucide-react';
 
 interface Talent {
-  id: string;
+  "id": string;
   name: string;
   title: string;
   location: string;
@@ -16,13 +16,13 @@ interface Talent {
 }
 
 interface TalentCardProps {
-  talent: Talent;
+  "talent": Talent;
   onBook?: (talent: Talent) => void;
   onViewProfile?: (talent: Talent) => void;
 }
 
 export default function TalentCard({ talent, onBook, onViewProfile }: TalentCardProps) {
-  const handleBook = (e: React.MouseEvent) => {
+  const handleBook = ("e": React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     if (onBook) {
@@ -30,7 +30,7 @@ export default function TalentCard({ talent, onBook, onViewProfile }: TalentCard
     }
   };
 
-  const handleViewProfile = (e: React.MouseEvent) => {
+  const handleViewProfile = ("e": React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     if (onViewProfile) {
@@ -39,7 +39,7 @@ export default function TalentCard({ talent, onBook, onViewProfile }: TalentCard
   };
 
   return (
-    <Card className="p-6 hover:shadow-lg transition-shadow">
+    <Card className="p-6 "hover": shadow-lg transition-shadow">
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center space-x-3">
           <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center">

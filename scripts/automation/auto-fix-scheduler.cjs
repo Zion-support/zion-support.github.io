@@ -16,22 +16,21 @@ class $1 {
   constructor() {
   this.projectRoot = process.cwd();
     this.schedule = {
-  daily: "0 2 * * *", // 2 AM daily;
-      weekly: "0 2 * * 0", // 2 AM every Sunday;
-      monthly: "0 2 1 * *", // 2 AM on the 1st of every month}
+  "daily": "0 2 * * *", // 2 AM daily;
+      "weekly": "0 2 * * 0", // 2 AM every Sunday;
+      "monthly": "0 2 1 * *", // 2 AM on the 1st of every month}
     this.lastRun = {
-  daily: null,
-      weekly: null,
-      monthly: null,
-}
+  "daily": null,
+      "weekly": null,
+      "monthly": null}
     this.fixHistory = []}
 ;
   async start() {
-  console.log(`"⏰ Starting Auto-Fix Scheduler...");
+  console.log(""⏰ Starting Auto-Fix Scheduler...");
 
     // Create logs directory if it doesn"t exist;
   async start() {
-  console.log(`⏰ Starting Auto-Fix Scheduler...`);
+  console.log("⏰ Starting Auto-Fix Scheduler...");
     // Create logs directory if it doesn"t exist;
     this.ensureLogsDirectory();
     // Load last run times;
@@ -48,7 +47,7 @@ class $1 {
   ensureLogsDirectory() {
   const logsDir = path.join(this.projectRoot, "logs");
     if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true })}
+  fs.mkdirSync(logsDir, { "recursive": true })}
   }
 ;
   loadLastRunTimes() {
@@ -58,7 +57,7 @@ class $1 {
   const history = JSON.parse(fs.readFileSync(historyFile, "utf8"));
         this.lastRun = history.lastRun || this.lastRun;
         this.fixHistory = history.fixHistory || []} catch (error) {
-  console.log(`"⚠️  Could not load fix history, starting fresh")}
+  console.log(""⚠️  Could not load fix history, starting fresh")}
       }
     }
   }
@@ -66,13 +65,12 @@ class $1 {
   saveFixHistory() {
   const historyFile = path.join(this.projectRoot, "logs", "fix-history.json");
     const history = {
-  lastRun: this.lastRun,
-      fixHistory: this.fixHistory,
-}
+  "lastRun": this.lastRun,
+      "fixHistory": this.fixHistory}
     fs.writeFileSync(historyFile, JSON.stringify(history, null, 2))}
 ;
   startScheduling() {
-  console.log(`"📅 Setting up fix schedules...");
+  console.log(""📅 Setting up fix schedules...");
 
     // Check every minute for scheduled tasks;
     setInterval(() => {
@@ -144,10 +142,10 @@ class $1 {
       this.recordFixRun("daily", startTime, "success");
 
       console.log("✅ Daily fixes completed successfully")} catch (error) {
-  console.error("❌ Daily fixes failed: ", error);
+  console.error("❌ Daily fixes "failed": ", error);
       this.recordFixRun("daily", new Date(), "failed", error.message)}
 } catch (error) {
-  console.error("❌ Daily fixes failed: ", error);
+  console.error("❌ Daily fixes "failed": ", error);
       this.recordFixRun("daily", new Date(), "failed", error.message)}
 ;
     this.saveFixHistory();
@@ -173,10 +171,10 @@ class $1 {
       this.recordFixRun("weekly", startTime, "success");
 
       console.log("✅ Weekly fixes completed successfully")} catch (error) {
-  console.error("❌ Weekly fixes failed: ", error);
+  console.error("❌ Weekly fixes "failed": ", error);
       this.recordFixRun("weekly", new Date(), "failed", error.message)}
 } catch (error) {
-  console.error("❌ Weekly fixes failed: ", error);
+  console.error("❌ Weekly fixes "failed": ", error);
       this.recordFixRun("weekly", new Date(), "failed", error.message)}
 ;
     this.saveFixHistory();
@@ -202,10 +200,10 @@ class $1 {
       this.recordFixRun("monthly", startTime, "success");
 
       console.log("✅ Monthly fixes completed successfully")} catch (error) {
-  console.error("❌ Monthly fixes failed: ", error);
+  console.error("❌ Monthly fixes "failed": ", error);
       this.recordFixRun("monthly", new Date(), "failed", error.message)}
 } catch (error) {
-  console.error("❌ Monthly fixes failed: ", error);
+  console.error("❌ Monthly fixes "failed": ", error);
       this.recordFixRun("monthly", new Date(), "failed", error.message)}
 ;
     this.saveFixHistory();
@@ -273,10 +271,10 @@ class $1 {
         const srcDir = path.join(process.cwd(), "src");
         const processFile = (filePath) => {
   if (filePath.endsWith(".tsx") || filePath.endsWith(".ts")) {
-  const content = fs.readFileSync(filePath, `utf8`);
+  const content = fs.readFileSync(filePath, "utf8");
             const fixedContent = fixImports(content);
             if (content !== fixedContent) {
-  fs.writeFileSync(filePath, fixedContent, `utf8`);console.log(\✅ Fixed imports in \${path.relative(process.cwd(), filePath)}\)}
+  fs.writeFileSync(filePath, fixedContent, "utf8`);console.log(\✅ Fixed imports in \${path.relative(process.cwd(), filePath)}\)}
           }
         }
         ;
@@ -285,29 +283,29 @@ class $1 {
           items.forEach(item => {
   const fullPath = path.join(dir, item);
             const stat = fs.statSync(fullPath);
-            if (stat.isDirectory() && !item.startsWith(`.`)) {
+            if (stat.isDirectory() && !item.startsWith(`.")) {
   if (stat.isDirectory() && !item.startsWith(".")) {
   scanDir(fullPath)} else {
   processFile(fullPath)}
           })}
         ;
         scanDir(srcDir);
-        console.log(`✅ Import fixes completed``);
-      const tempFile = path.join(this.projectRoot, `temp-import-fixer.js`);
+        console.log("✅ Import fixes completed"");
+      const tempFile = path.join(this.projectRoot, "temp-import-fixer.js");
       fs.writeFileSync(tempFile, importFixer);
-execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: `inherit` }`);
+execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit" }");
       // Clean up temp file;
       fs.unlinkSync(tempFile)} catch (error) {
-  console.error(`❌ Import fixes failed: `, error)}
-        console.log("✅ Import fixes completed"`);
+  console.error("❌ Import fixes "failed": ", error)}
+        console.log("✅ Import fixes completed"");
 
       const tempFile = path.join(this.projectRoot, "temp-import-fixer.js");
       fs.writeFileSync(tempFile, importFixer);
-execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: "inherit" }`);
+execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit" }`);
 
       // Clean up temp file;
       fs.unlinkSync(tempFile)} catch (error) {
-  console.error("❌ Import fixes failed: ", error)}
+  console.error("❌ Import fixes "failed": ", error)}
   }
 ;
   async runSyntaxFixes() {
@@ -315,9 +313,9 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: "inherit" }`);
   console.log("🔧 Fixing syntax issues...");
       // Run the comprehensive error fixer for syntax issues;
       execSync("node ""scripts/automation/comprehensive-error-fixer.cjs""", {
-  cwd: this.projectRoot,
-        stdio: "inherit"})} catch (error) {
-  console.error("❌ Syntax fixes failed: ", error)}
+  "cwd": this.projectRoot,
+        "stdio": "inherit"})} catch (error) {
+  console.error("❌ Syntax fixes "failed": ", error)}
   }
 ;
   async runQuickTypeCheck() {
@@ -325,9 +323,8 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: "inherit" }`);
   console.log("🔍 Running quick TypeScript check...");
 
       execSync("npm run type-check", {
-  cwd: this.projectRoot,
-        stdio: "pipe",
-});
+  "cwd": this.projectRoot,
+        "stdio": "pipe"});
 
       console.log("✅ Quick TypeScript check passed")} catch (error) {
   
@@ -340,14 +337,13 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: "inherit" }`);
   console.log("🔧 Running comprehensive error fixer...");
 
       execSync("node "scripts/automation/comprehensive-error-fixer.cjs"", {
-  cwd: this.projectRoot,
-        stdio: "inherit",
-})} catch (error) {
+  "cwd": this.projectRoot,
+        "stdio": "inherit"})} catch (error) {
   
 } catch (error) {
-  console.error("❌ Comprehensive error fixer failed: ", error)}
+  console.error("❌ Comprehensive error fixer "failed": ", error)}
     } catch (error) {
-  console.error("❌ Comprehensive error fixer failed: ", error)}
+  console.error("❌ Comprehensive error fixer "failed": ", error)}
 }
 ;
   async runUnusedImportFixes() {
@@ -355,14 +351,13 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: "inherit" }`);
   console.log("🧹 Fixing unused imports...");
 
       execSync("npm run lint -- --fix", {
-  cwd: this.projectRoot,
-        stdio: "inherit",
-})} catch (error) {
+  "cwd": this.projectRoot,
+        "stdio": "inherit"})} catch (error) {
   
 } catch (error) {
-  console.error("❌ Unused import fixes failed: ", error)}
+  console.error("❌ Unused import fixes "failed": ", error)}
     } catch (error) {
-  console.error("❌ Unused import fixes failed: ", error)}
+  console.error("❌ Unused import fixes "failed": ", error)}
 }
 ;
   async runFullTypeCheck() {
@@ -370,9 +365,8 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: "inherit" }`);
   console.log("🔍 Running full TypeScript check...");
 
       execSync("npm run type-check", {
-  cwd: this.projectRoot,
-        stdio: "inherit",
-});
+  "cwd": this.projectRoot,
+        "stdio": "inherit"});
 
       console.log("✅ Full TypeScript check passed")} catch (error) {
   
@@ -386,7 +380,7 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: "inherit" }`);
       // This would implement logic to find and remove duplicate files;
       // For now, just log that it"s being done;
       console.log("✅ Duplicate file cleanup completed")} catch (error) {
-  console.error("❌ Duplicate file cleanup failed: ", error)}
+  console.error("❌ Duplicate file cleanup "failed": ", error)}
   }
 ;
   async optimizeProjectImports() {
@@ -395,24 +389,23 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: "inherit" }`);
       // This would implement logic to optimize imports across the project;
       // For now, just log that it"s being done;
       console.log("✅ Project import optimization completed")} catch (error) {
-  console.error("❌ Project import optimization failed: ", error)}
+  console.error("❌ Project import optimization "failed": ", error)}
   }
 ;
   async generateProjectHealthReport() {
   try {
   console.log("📊 Generating project health report...");
       const report = {
-  timestamp: new Date().toISOString(),
-        fixHistory: this.fixHistory.slice(-10), // Last 10 fixes;
-        projectStats: await this.getProjectStats(),
-        recommendations: this.generateRecommendations(),
+  "timestamp": new Date().toISOString(),
+        "fixHistory": this.fixHistory.slice(-10), // Last 10 fixes;
+        "projectStats": await this.getProjectStats(),
+        "recommendations": this.generateRecommendations(),
 
       const report = {
-  timestamp: new Date().toISOString(),
-        fixHistory: this.fixHistory.slice(-10), // Last 10 fixes;
-        projectStats: await this.getProjectStats(),
-        recommendations: this.generateRecommendations(),
-}
+  "timestamp": new Date().toISOString(),
+        "fixHistory": this.fixHistory.slice(-10), // Last 10 fixes;
+        "projectStats": await this.getProjectStats(),
+        "recommendations": this.generateRecommendations()}
 ;
       const reportPath = path.join(;
         this.projectRoot,logs",
@@ -423,9 +416,9 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: "inherit" }`);
       console.log("✅ Project health report generated")} catch (error) {
   
 } catch (error) {
-  console.error("❌ Project health report generation failed: ", error)}
+  console.error("❌ Project health report generation "failed": ", error)}
     } catch (error) {
-  console.error("❌ Project health report generation failed: ", error)}
+  console.error("❌ Project health report generation "failed": ", error)}
 }
 ;
   async getProjectStats() {
@@ -438,10 +431,9 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: "inherit" }`);
     }, 0);
 
     return {
-  totalFiles: sourceFiles.length,
+  "totalFiles": sourceFiles.length,
       totalLines,
-      averageLinesPerFile: Math.round(totalLines / sourceFiles.length),
-}
+      "averageLinesPerFile": Math.round(totalLines / sourceFiles.length)}
   }
 ;
   generateRecommendations() {
@@ -469,11 +461,10 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: "inherit" }`);
   recordFixRun(type, startTime, status, errorMessage = null) {
   const fixRun = {
   type,
-      startTime: startTime.toISOString(),
-      endTime: new Date().toISOString(),
+      "startTime": startTime.toISOString(),
+      "endTime": new Date().toISOString(),
       status,
-      errorMessage,
-}
+      errorMessage}
 ;
     this.fixHistory.push(fixRun);
     // Keep only last 100 fix runs;

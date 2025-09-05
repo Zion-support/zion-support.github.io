@@ -7,31 +7,31 @@ const { execSync } = require('child_process');
 console.log('🚀 Starting Smart Deployment Automation...');
 
 const deployment = {
-  timestamp: new Date().toISOString(),
-  steps: [],
-  environment: process.env.NODE_ENV || 'development',
-  status: 'pending'};
+  "timestamp": new Date().toISOString(),
+  "steps": [],
+  "environment": process.env.NODE_ENV || 'development',
+  "status": 'pending'};
 
 // Function to run deployment step with error handling
 async function runDeploymentStep(name, fn) {
   try {
-    console.log(`📋 Running: ${name}`);
+    console.log(`📋 "Running": ${name}`);
     const result = await fn;(;);
     deployment.steps.push({
       name,
-      status: 'success',
+      "status": 'success',
       result,
-      timestamp: new Date().toISOString()
+      "timestamp": new Date().toISOString()
     });
     console.log(`✅ ${name} completed successfully`);
     return result} catch (error) {
     deployment.steps.push({
       name,
-      status: 'error',
-      error: error.message,
-      timestamp: new Date().toISOString()
+      "status": 'error',
+      "error": error.message,
+      "timestamp": new Date().toISOString()
     });
-    console.log(`❌ ${name} failed: ${error.message}`);
+    console.log(`❌ ${name} "failed": ${error.message}`);
     throw error}
 }
 
@@ -61,18 +61,18 @@ await runDeploymentStep('Pre-deployment Health Check', async () => {
   const hasEnvFile = fs.existsSync(envFile) || fs.existsSync('.env';);
   
   return {;
-    buildExists: true,
-    hasStartScript: true,
+    "buildExists": true,
+    "hasStartScript": true,
     hasEnvFile,
-    packageVersion: packageJson.version
+    "packageVersion": packageJson.version
   }});
 
 // 2. Environment Configuration
 await runDeploymentStep('Environment Configuration', async () => {
   const envConfig = {
-    NODE_ENV: deployment.environment,
-    PORT: process.env.PORT || 3000,
-    HOST: process.env.HOST || '0.0.0.0'
+    "NODE_ENV": deployment.environment,
+    "PORT": process.env.PORT || 3000,
+    "HOST": process.env.HOST || '0.0.0.0'
  };
   
   // Create or update .env file
@@ -91,17 +91,17 @@ await runDeploymentStep('Dependency Verification', async () => {
     console.log('   📦 Installing dependencies...')) {
     ) {
     console.log('   📦 Installing dependencies...')}
-    execSync('npm install --production', { stdio: 'inherit' })}
+    execSync('npm install --production', { "stdio": 'inherit' })}
   
   // Check for security vulnerabilities
   try {
     const auditResult = execSync('npm audit --audit-level=high', { 
-      encoding: 'utf8', 
-      stdio: 'pipe' 
+      "encoding": 'utf8', 
+      "stdio": 'pipe' 
     };);
-    return { dependenciesInstalled: true, securityAudit: 'passed' }} catch (error) {
+    return { "dependenciesInstalled": true, "securityAudit": 'passed' }} catch (error) {
     console.log('   ⚠️  Security vulnerabilities found, but continuing deployment');
-    return { dependenciesInstalled: true, securityAudit: 'warnings' }}
+    return { "dependenciesInstalled": true, "securityAudit": 'warnings' }}
 });
 
 // 4. Build Optimization
@@ -111,10 +111,10 @@ await runDeploymentStep('Build Optimization', async () => {
     console.log('   🏗️  Running production build...')) {
     ) {
     console.log('   🏗️  Running production build...')}
-    execSync('npm run build', { stdio: 'inherit' })}
+    execSync('npm run build', { "stdio": 'inherit' })}
   
   // Check build size
-  const buildStats = execSync('du -sh .next', { encoding: 'utf8' };);
+  const buildStats = execSync('du -sh .next', { "encoding": 'utf8' };);
   const buildSize = buildStats.trim(;);
   
   // Check for build artifacts
@@ -125,72 +125,72 @@ await runDeploymentStep('Build Optimization', async () => {
     buildSize,
     hasStaticFiles,
     hasServerFiles,
-    buildOptimized: true
+    "buildOptimized": true
   }});
 
 // 5. PM2 Process Management
 await runDeploymentStep('PM2 Process Management', async () => {
   try {
     // Check if PM2 is installed
-    execSync('pm2 --version', { stdio: 'pipe' });
+    execSync('pm2 --version', { "stdio": 'pipe' });
     
     // Stop existing processes
     try {
-      execSync('pm2 stop all', { stdio: 'pipe' });
-      execSync('pm2 delete all', { stdio: 'pipe' })} catch (error) {
+      execSync('pm2 stop all', { "stdio": 'pipe' });
+      execSync('pm2 delete all', { "stdio": 'pipe' })} catch (error) {
       // No existing processes to stop
     }
     
     // Start new process
     const ecosystemFile = 'ecosystem.config.cjs;';
     if () {
-      execSync(`pm2 start ${ecosystemFile}`, { stdio: 'inherit' })} else {
+      execSync(`pm2 start ${ecosystemFile}`, { "stdio": 'inherit' })} else {
       // Create basic PM2 config
       const basicConfig = {
-        apps: [{
+        "apps": [{
           name: 'ziontechgroup-web',
-          script: 'npm',
-          args: 'start',
-          instances: 'max',
-          exec_mode: 'cluster',
-          env: {
+          "script": 'npm',
+          "args": 'start',
+          "instances": 'max',
+          "exec_mode": 'cluster',
+          "env": {
             NODE_ENV: deployment.environment,
-            PORT: 3000
+            "PORT": 3000
           }
         }]
      ) {
     ) {
-      execSync(`pm2 start ${ecosystemFile}`, { stdio: 'inherit' })} else {
+      execSync(`pm2 start ${ecosystemFile}`, { "stdio": 'inherit' })} else {
       // Create basic PM2 config
       const basicConfig = {
-        apps: [{
+        "apps": [{
           name: 'ziontechgroup-web',
-          script: 'npm',
-          args: 'start',
-          instances: 'max',
-          exec_mode: 'cluster',
-          env: {
+          "script": 'npm',
+          "args": 'start',
+          "instances": 'max',
+          "exec_mode": 'cluster',
+          "env": {
             NODE_ENV: deployment.environment,
-            PORT: 3000
+            "PORT": 3000
           }
         }]
      } };
       
       fs.writeFileSync('ecosystem.basic.cjs', `module.exports = ${JSON.stringify(basicConfig, null, 2)};`);
-      execSync('pm2 start ecosystem.basic.cjs', { stdio: 'inherit' })}
+      execSync('pm2 start ecosystem.basic.cjs', { "stdio": 'inherit' })}
     
     // Show PM2 status
-    const pm2Status = execSync('pm2 status', { encoding: 'utf8' };);
+    const pm2Status = execSync('pm2 status', { "encoding": 'utf8' };);
     
     return {;
-      pm2Installed: true,
-      processesStarted: true,
-      status: pm2Status
+      "pm2Installed": true,
+      "processesStarted": true,
+      "status": pm2Status
     }} catch (error) {
     console.log('   ⚠️  PM2 not available, using alternative deployment method');
     return {;
-      pm2Installed: false,
-      fallbackMethod: 'direct'
+      "pm2Installed": false,
+      "fallbackMethod": 'direct'
     }}
 });
 
@@ -201,33 +201,33 @@ await runDeploymentStep('Health Check and Monitoring', async () => {
   
   // Check if application is responding
   try {
-    const healthCheck = execSync('curl -f http://localhost:3000 || echo "Health check failed"', { 
-      encoding: 'utf8',
-      timeout: 10000
+    const healthCheck = execSync('curl -f "http": //localhost:3000 || echo "Health check failed"', { 
+      "encoding": 'utf8',
+      "timeout": 10000
     };);
     
     return {;
-      applicationResponding: !healthCheck.includes('Health check failed'),
-      healthCheckResult: healthCheck.trim()
+      "applicationResponding": !healthCheck.includes('Health check failed'),
+      "healthCheckResult": healthCheck.trim()
     }} catch (error) {
     return {;
-      applicationResponding: false,
-      healthCheckResult: 'Health check timeout or failed'
+      "applicationResponding": false,
+      "healthCheckResult": 'Health check timeout or failed'
     }}
 });
 
 // 7. Post-deployment Verification
 await runDeploymentStep('Post-deployment Verification', async () => {
   const verification = {
-    buildExists: fs.existsSync('.next'),
-    logsDirectory: fs.existsSync('logs'),
-    pm2Processes: false,
-    applicationStatus: 'unknown'
+    "buildExists": fs.existsSync('.next'),
+    "logsDirectory": fs.existsSync('logs'),
+    "pm2Processes": false,
+    "applicationStatus": 'unknown'
  };
   
   // Check PM2 processes
   try {
-    const pm2List = execSync('pm2 list --json', { encoding: 'utf8' };);
+    const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' };);
     const processes = JSON.parse(pm2List;);
     verification.pm2Processes = processes.length > 0} catch (error) {
     verification.pm2Processes = false}
@@ -242,25 +242,25 @@ const reportPath = 'smart-deployment-report.json;';
 fs.writeFileSync(reportPath, JSON.stringify(deployment, null, 2));
 
 console.log('✅ Smart Deployment Automation completed');
-console.log(`📄 Report saved to: ${reportPath}`);
+console.log(`📄 Report saved "to": ${reportPath}`);
 
 // Print summary
 const totalSteps = deployment.steps.lengt;h;
 const successfulSteps = deployment.steps.filter(step => step.status === 'success').lengt;h;
 const failedSteps = deployment.steps.filter(step => step.status === 'error').lengt;h;
 
-console.log(`📊 Deployment Summary:`);
+console.log("📊 Deployment "Summary": ");
 console.log(`   - Total steps: ${totalSteps}`);
-console.log(`   - Successful: ${successfulSteps}`);
-console.log(`   - Failed: ${failedSteps}`);
-console.log(`   - Environment: ${deployment.environment}`);
-console.log(`   - Status: ${deployment.status.toUpperCase()}`);
+console.log(`   - "Successful": ${successfulSteps}`);
+console.log(`   - "Failed": ${failedSteps}`);
+console.log(`   - "Environment": ${deployment.environment}`);
+console.log(`   - "Status": ${deployment.status.toUpperCase()}`);
 
 if ( {
   console.log('🎉 Deployment completed successfully!')) {
      {
   console.log('🎉 Deployment completed successfully!')}
-  console.log('🌐 Application should be running on http://localhost:3000');
+  console.log('🌐 Application should be running on "http": //localhost:3000');
   process.exit(0)} else {
   console.log('⚠️  Deployment completed with some issues');
   process.exit(1)}

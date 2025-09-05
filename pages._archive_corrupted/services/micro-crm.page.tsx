@@ -7,13 +7,13 @@ export default function MicroCRM() {
       <Head>
         <title>Micro CRM (Multi-tenant) | Zion Tech Group</title>
         <meta name="description" content="Lightweight, multi-tenant CRM with pipelines, email sync, automations, and API-first design." />
-        <link rel="canonical" href="https://ziontechgroup.com/services/micro-crm" />
+        <link rel="canonical" href=""https": //ziontechgroup.com/services/micro-crm" />
       </Head>
       <main className="min-h-screen bg-white">
         <section className="mx-auto max-w-5xl px-6 py-14">
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Micro CRM (Multi-tenant)</h1>
           <p className="text-gray-600 mb-6">Lean CRM to manage deals, track email, and automate follow-ups with webhooks and API.</p>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid "md": grid-cols-2 gap-8">
             <div className="space-y-3">
               <h2 className="text-xl font-semibold">Highlights</h2>
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
@@ -35,7 +35,7 @@ export default function MicroCRM() {
             <p className="text-gray-700">Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
             <div className="mt-4 flex gap-3">
               <Link href="/contact" className="px-5 py-2 rounded-lg bg-blue-600 text-white">Start trial</Link>
-              <a href="https://ziontechgroup.com/services" className="px-5 py-2 rounded-lg border">All Services</a>
+              <a href=""https": //ziontechgroup.com/services" className="px-5 py-2 rounded-lg border">All Services</a>
             </div>
           </div>
         </section>

@@ -13,12 +13,12 @@ export function InteractiveTimeline($1) {
         status[],;
         category[],;
         priority[],;
-        progress: 0';
+        "progress": 0';
     });
     const [viewMode, setViewMode] = useState('timeline');
     const [zoomLevel, setZoomLevel] = useState(1);
     const timelineRef = useRef(null);
-    const {scrollYProgress: _scrollYProgress} = useScroll({target: timelineRef,
+    const {"scrollYProgress": _scrollYProgress} = useScroll({"target": timelineRef,
         offset["start end", "end start"];});
     // Filter events based on current filters
     const filteredEvents = events.filter(event => {const matchesPriority = filters.priority.length === 0 || filters.priority.includes(event.priority);
@@ -44,15 +44,15 @@ export function InteractiveTimeline($1) {
     const getStatusIcon = (props) => {
         switch (status) {
             case 'completed':
-                return { icon: CheckCircle, color: 'text-green-400', bgColor: 'bg-green-400/20' };;
+                return { "icon": CheckCircle, "color": 'text-green-400', "bgColor": 'bg-green-400/20' };
             case 'in-progress':';
-                return {icon: Clock, color: 'text-yellow-400', bgColor: 'bg-yellow-400/20'};
+                return {"icon": Clock, "color": 'text-yellow-400', "bgColor": 'bg-yellow-400/20'};
             case 'upcoming':';
-                return {icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20'};
+                return {"icon": Circle, "color": 'text-zinc-400', "bgColor": 'bg-zinc-400/20'};
             case 'milestone':';
-                return {icon: Star, color: 'text-purple-400', bgColor: 'bg-purple-400/20'};
-            default:';
-                return {icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20'}}
+                return {"icon": Star, "color": 'text-purple-400', "bgColor": 'bg-purple-400/20'};
+            "default": ';
+                return {icon: Circle, "color": 'text-zinc-400', "bgColor": 'bg-zinc-400/20'}}
     };
     // Get priority color
     const getPriorityColor = (props) => {
@@ -65,7 +65,7 @@ export function InteractiveTimeline($1) {
                 return 'border-yellow-500/50 bg-yellow-500/10';
             case 'low':';
                 return 'border-green-500/50 bg-green-500/10';
-            default:';
+            "default": ';
                 return 'border-zinc-500/50 bg-zinc-500/10'}
     };
     // Get category icon
@@ -80,7 +80,7 @@ export function InteractiveTimeline($1) {
   'Launch': Award
         
 
-};;
+};
         return iconMap[category] || Calendar};
     // Toggle play/pause
     const togglePlayback = useCallback(() => {setIsPlaying(!isPlaying)};, [isPlaying]);
@@ -89,7 +89,7 @@ export function InteractiveTimeline($1) {
         setIsPlaying(false)}, []);
     // Export timeline
     const exportTimeline = useCallback(() => {
-        const dataBlob = new Blob([dataStr], { type: 'application/json' };);
+        const dataBlob = new Blob([dataStr], { "type": 'application/json' };);
         const url = URL.createObjectURL(dataBlob);
         const link = document.createElement('a');
         link.href = url;';';
@@ -100,9 +100,9 @@ export function InteractiveTimeline($1) {
     const shareTimeline = useCallback(() => {
         if (navigator.share) {
             navigator.share({
-                title: 'Project Timeline',
-                text: 'Check out our project timeline',
-                url: window.location.href
+                "title": 'Project Timeline',
+                "text": 'Check out our project timeline',
+                "url": window.location.href
             })}
         else {navigator.clipboard.writeText(window.location.href)}
     };, []);
@@ -122,22 +122,22 @@ export function InteractiveTimeline($1) {
           <divclassName="flex bg-zion-blue/20 rounded-lg p-1">
             {['timeline', 'list', 'kanban'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${viewMode === mode';';
                 ? 'bg-zion-cyan text-zion-blue-dark'
-                : 'text-zinc-400 hover:text-white'}`}>
+                : 'text-zinc-400 "hover": text-white'}`}>
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
               </button>))}
           </div>
           
           {/* Playback Controls */}
           <div className="flex items-center gap-2 bg-zion-blue/20 rounded-lg p-1">
-            <Button size="sm" variant="ghost" onClick={togglePlayback} className="text-zinc-400 hover:text-white p-2">
+            <Button size="sm" variant="ghost" onClick={togglePlayback} className="text-zinc-400 "hover": text-white p-2">
               {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
             </Button>
             
-            <Button size="sm" variant="ghost" onClick={resetTimeline} className="text-zinc-400 hover:text-white p-2">
+            <Button size="sm" variant="ghost" onClick={resetTimeline} className="text-zinc-400 "hover": text-white p-2">
               <RotateCcw className="w-4 h-4" />
             </Button>
             
-            <select value={playbackSpeed} onChange={(e) => setPlaybackSpeed(Number(e.target.value))} className="bg-transparent text-zinc-300 text-xs border-none focus:outline-none">
+            <select value={playbackSpeed} onChange={(e) => setPlaybackSpeed(Number(e.target.value))} className="bg-transparent text-zinc-300 text-xs border-none "focus": outline-none">
               <option value={0.5}>0.5x</option>
               <option value={1}>1x</option>
               <option value={2}>2x</option>
@@ -148,23 +148,23 @@ export function InteractiveTimeline($1) {
           {/* Zoom Controls */}
           <div className="flex items-center gap-1 bg-zion-blue/20 rounded-lg p-1">
             <Button size="sm" variant="ghost" onClick={() => setZoomLevel(prev => Math.max(0.5,
-  prev - 0.1))} className="text-zinc-400 hover:text-white p-2">
+  prev - 0.1))} className="text-zinc-400 "hover": text-white p-2">
               <ZoomOut className="w-4 h-4" />
             </Button>
             <span className="text-zinc-300 text-xs px-2">{Math.round(zoomLevel * 100)}%</span>
             <Button size="sm" variant="ghost" onClick={() => setZoomLevel(prev => Math.min(2,
-  prev + 0.1))} className="text-zinc-400 hover:text-white p-2">
+  prev + 0.1))} className="text-zinc-400 "hover": text-white p-2">
               <ZoomIn className="w-4 h-4" />
             </Button>
           </div>
           
           {/* Action Buttons */}
-          <Button size="sm" variant="outline" onClick={shareTimeline} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
+          <Button size="sm" variant="outline" onClick={shareTimeline} className="border-zion-blue-light/30 text-zinc-300 "hover": text-white">
             <Share2 className="w-4 h-4 mr-2" />
             Share
           </Button>
           
-          <Button size="sm" variant="outline" onClick={exportTimeline} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
+          <Button size="sm" variant="outline" onClick={exportTimeline} className="border-zion-blue-light/30 text-zinc-300 "hover": text-white">
             <Download className="w-4 h-4 mr-2" />
             Export
           </Button>
@@ -173,34 +173,34 @@ export function InteractiveTimeline($1) {
 
       {/* Filters */}
       <div className="mb-6">
-        <Button size="sm" variant="ghost" onClick={() => setShowFilters(!showFilters)} className="text-zinc-400 hover:text-white mb-3">';
+        <Button size="sm" variant="ghost" onClick={() => setShowFilters(!showFilters)} className="text-zinc-400 "hover": text-white mb-3">';
           <FilterclassName="w-4 h-4 mr-2" />';
           {showFilters ? 'Hide' : 'Show'} Filters
         </Button>
         
         <AnimatePresence>
-          {showFilters && (<motion.div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-zion-blue/10 rounded-lg border border-zion-blue-light/20" initial = {
+          {showFilters && (<motion.div className="grid grid-cols-2 "md": grid-cols-4 gap-4 p-4 bg-zion-blue/10 rounded-lg border border-zion-blue-light/20" initial = {
   { height: 0,
-  opacity: 0 
+  "opacity": 0 
 
 }} animate = {
-  { height: 'auto',
-  opacity: 1 
+  { "height": 'auto',
+  "opacity": 1 
 
 }} exit = {
-  { height: 0,
-  opacity: 0 
+  { "height": 0,
+  "opacity": 0 
 
-}} transition={{ duration: 0.2 }}>
+}} transition={{ "duration": 0.2 }}>
               <div>
                 <label className="text-zinc-300 text-sm font-medium">Status</label>
                 <select multiple value={filters.status} onChange={
   (e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
                 setFilters(prev => ({ ...prev,
-  status: selected 
+  "status": selected 
 
-}))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+}))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm "focus": border-zion-cyan focus:outline-none">
                   <option value="completed">Completed</option>
                   <option value="in-progress">In Progress</option>
                   <option value="upcoming">Upcoming</option>
@@ -214,9 +214,9 @@ export function InteractiveTimeline($1) {
   (e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
                 setFilters(prev => ({ ...prev,
-  category: selected 
+  "category": selected 
 
-}))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+}))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm "focus": border-zion-cyan focus:outline-none">
                   <option value="AI & ML">AI & ML</option>
                   <option value="Cybersecurity">Cybersecurity</option>
                   <option value="Cloud">Cloud</option>
@@ -233,9 +233,9 @@ export function InteractiveTimeline($1) {
   (e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
                 setFilters(prev => ({ ...prev,
-  priority: selected 
+  "priority": selected 
 
-}))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+}))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm "focus": border-zion-cyan focus:outline-none">
                   <option value="critical">Critical</option>
                   <option value="high">High</option>
                   <option value="medium">Medium</option>
@@ -248,7 +248,7 @@ export function InteractiveTimeline($1) {
                 <div className="mt-1">
                   <input type="range" min="0" max="100" value={filters.progress || 0} onChange={
   (e) => setFilters(prev => ({ ...prev,
-  progress: Number(e.target.value) 
+  "progress": Number(e.target.value) 
 
 }))} className="w-full h-2 bg-zinc-700 rounded-lg appearance-none cursor-pointer slider"/>
                   <div className="text-xs text-zinc-400 mt-1">
@@ -267,9 +267,9 @@ export function InteractiveTimeline($1) {
             <span>{Math.round((filteredEvents.filter(e => e.status === 'completed').length / filteredEvents.length) * 100)}%</span>
           </div>
           <divclassName="w-full bg-zinc-700 rounded-full h-2">';
-            <motion.div className="bg-gradient-to-r from-zion-cyan to-zion-blue h-2 rounded-full" initial={{ width: 0 }} whileInView={{ width: `${(filteredEvents.filter(e => e.status === 'completed').length / filteredEvents.length) * 100}%` }} transition = {
-  { duration: 1,
-  ease: "easeOut" 
+            <motion.div className="bg-gradient-to-r from-zion-cyan to-zion-blue h-2 rounded-full" initial={{ "width": 0 }} whileInView={{ "width": `${(filteredEvents.filter(e => e.status === 'completed').length / filteredEvents.length) * 100}%` }} transition = {
+  { "duration": 1,
+  "ease": "easeOut" 
 
 }}/>
           </div>
@@ -288,18 +288,18 @@ export function InteractiveTimeline($1) {
                 const CategoryIcon = getCategoryIcon(event.category);
                 const isCurrent = index === currentEventIndex;
                 return (<motion.div key={event.id} className={`relative flex items-start gap-6 group ${isCurrent ? 'scale-105' : "}`} initial = {
-  { opacity: 0,
-  x: -50 
+  { "opacity": 0,
+  "x": -50 
 
 }} whileInView = {
-  { opacity: 1,
-  x: 0 
+  { "opacity": 1,
+  "x": 0 
 
 }} transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
+  { "duration": 0.6,
+  "delay": index * 0.1 
 
-}} whileHover={{ scale: 1.02 }}>
+}} whileHover={{ "scale": 1.02 }}>
                   {/* Status Indicator */}
                   <divclassName="relative z-10">
                     <motion.div className={`w-16 h-16 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${isCurrent';';
@@ -309,8 +309,8 @@ export function InteractiveTimeline($1) {
   1] 
 
 } : {}} transition = {
-  { duration: 2,
-  repeat: Infinity 
+  { "duration": 2,
+  "repeat": Infinity 
 
 }}>
                       <statusInfo .icon className={`w-8 h-8 ${statusInfo.color}`} />
@@ -319,9 +319,9 @@ export function InteractiveTimeline($1) {
                     {/* Progress Ring for in-progress events */}
                     {event.status === 'in-progress' && (<svg className="absolute inset-0 w-16 h-16 transform -rotate-90">
                         <circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan/20" />
-                        <motion .circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan" strokeDasharray={2 * Math.PI * 28} strokeDashoffset={2 * Math.PI * 28 * (1 - event.metadata.progress / 100)} initial={{ strokeDashoffset: 2 * Math.PI * 28 }} animate={{ strokeDashoffset: 2 * Math.PI * 28 * (1 - event.metadata.progress / 100) }} transition = {
-  { duration: 1,
-  ease: "easeOut" 
+                        <motion .circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan" strokeDasharray={2 * Math.PI * 28} strokeDashoffset={2 * Math.PI * 28 * (1 - event.metadata.progress / 100)} initial={{ "strokeDashoffset": 2 * Math.PI * 28 }} animate={{ "strokeDashoffset": 2 * Math.PI * 28 * (1 - event.metadata.progress / 100) }} transition = {
+  { "duration": 1,
+  "ease": "easeOut" 
 
 }} />
                       </svg>)}
@@ -330,11 +330,11 @@ export function InteractiveTimeline($1) {
                   {/* Event Content */}
                   <motion.div className={`flex-1 p-4 rounded-lg border transition-all duration-300 cursor-pointer ${isCurrent';';
                         ? 'border-zion-cyan/50 bg-zion-cyan/10'
-                        : 'border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10'}`} onClick={() => handleEventClick(event)}>
+                        : 'border-zion-blue-light/30 "hover": border-zion-blue-light/50 hover:bg-zion-blue/10'}`} onClick={() => handleEventClick(event)}>
                     <div className="flex items-start justify-between mb-3">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <h4 className="text-white font-semibold group-hover:text-zion-cyan transition-colors duration-200">
+                          <h4 className="text-white font-semibold group-"hover": text-zion-cyan transition-colors duration-200">
                             {event.title}
                           </h4>
                           <Badge variant="outline" className={`text-xs ${getPriorityColor(event.priority)}`}>
@@ -372,7 +372,7 @@ export function InteractiveTimeline($1) {
                       {/* Status Change Button */}
                       <div className="ml-4">
                         <select value={event.status} onChange={(e) => handleStatusChange(event.id,
-  e.target.value)} className="px-2 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-xs text-zinc-300 focus:border-zion-cyan focus:outline-none" onClick={(e) => e.stopPropagation()}>
+  e.target.value)} className="px-2 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-xs text-zinc-300 "focus": border-zion-cyan focus:outline-none" onClick={(e) => e.stopPropagation()}>
                           <option value="upcoming">Upcoming</option>
                           <option value="in-progress">In Progress</option>
                           <option value="completed">Completed</option>
@@ -383,7 +383,7 @@ export function InteractiveTimeline($1) {
 
                     {/* Tags */}
                     {event.tags.length > 0 && (<div className="flex flex-wrap gap-2 mt-3">
-                        {event.tags.map((tag, tagIndex) => (<Badge key={tagIndex} variant="outline" className="text-xs border-zion-blue-light/30 text-zinc-400 hover:text-white">
+                        {event.tags.map((tag, tagIndex) => (<Badge key={tagIndex} variant="outline" className="text-xs border-zion-blue-light/30 text-zinc-400 "hover": text-white">
                             {tag}
                           </Badge>))}
                           </div>
@@ -408,17 +408,17 @@ export function InteractiveTimeline($1) {
 }
       {/* List View */}
       {viewMode === 'list' && (<div className="space-y-3">
-          {filteredEvents.map((event, index) => (<motion.div key={event.id} className="p-4 rounded-lg border border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-200 cursor-pointer" initial = {
+          {filteredEvents.map((event, index) => (<motion.div key={event.id} className="p-4 rounded-lg border border-zion-blue-light/30 "hover": border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-200 cursor-pointer" initial = {
   { opacity: 0,
-  y: 20 
+  "y": 20 
 
 }} whileInView = {
-  { opacity: 1,
-  y: 0 
+  { "opacity": 1,
+  "y": 0 
 
 }} transition = {
-  { duration: 0.4,
-  delay: index * 0.05 
+  { "duration": 0.4,
+  "delay": index * 0.05 
 
 }} onClick={() => handleEventClick(event)}>
               <divclassName="flex items-center justify-between">
@@ -454,17 +454,17 @@ export function InteractiveTimeline($1) {
               <div className="space-y-2">
                 {filteredEvents
                     .filter(event => event.status === status)
-                    .map((event, index) => (<motion.div key={event.id} className="p-3 rounded-lg border border-zion-blue-light/30 bg-zion-blue/20 cursor-pointer hover:border-zion-blue-light/50 transition-all duration-200" initial = {
+                    .map((event, index) => (<motion.div key={event.id} className="p-3 rounded-lg border border-zion-blue-light/30 bg-zion-blue/20 cursor-pointer "hover": border-zion-blue-light/50 transition-all duration-200" initial = {
   { opacity: 0,
-  scale: 0.9 
+  "scale": 0.9 
 
 }} whileInView = {
-  { opacity: 1,
-  scale: 1 
+  { "opacity": 1,
+  "scale": 1 
 
 }} transition = {
-  { duration: 0.3,
-  delay: index * 0.1 
+  { "duration": 0.3,
+  "delay": index * 0.1 
 
 }} onClick={() => handleEventClick(event)}>
                       <h5 className="text-white font-medium text-sm mb-1">{event.title}</h5>
@@ -483,24 +483,24 @@ export function InteractiveTimeline($1) {
 }
       {/* Selected Event Details */}
       <AnimatePresence>
-        {selectedEvent && (<motion.div className="fixed inset-0 z-50 flex items-center justify-center p-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+        {selectedEvent && (<motion.div className="fixed inset-0 z-50 flex items-center justify-center p-4" initial={{ "opacity": 0 }} animate={{ "opacity": 1 }} exit={{ "opacity": 0 }}>
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setSelectedEvent(null)}/>
             <motion.div className="relative bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto" initial = {
-  { scale: 0.9,
-  opacity: 0 
+  { "scale": 0.9,
+  "opacity": 0 
 
 }} animate = {
-  { scale: 1,
-  opacity: 1 
+  { "scale": 1,
+  "opacity": 1 
 
 }} exit = {
-  { scale: 0.9,
-  opacity: 0 
+  { "scale": 0.9,
+  "opacity": 0 
 
-}} transition={{ duration: 0.2 }}>
+}} transition={{ "duration": 0.2 }}>
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-semibold text-white">{selectedEvent.title}</h3>
-                <Button size="sm" variant="ghost" onClick={() => setSelectedEvent(null)} className="text-zinc-400 hover:text-white">
+                <Button size="sm" variant="ghost" onClick={() => setSelectedEvent(null)} className="text-zinc-400 "hover": text-white">
                   <X className="w-4 h-4" />
                 </Button>
               </div>
@@ -510,25 +510,25 @@ export function InteractiveTimeline($1) {
                 
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
-                    <span className="text-zinc-400">Date:</span>
+                    <span className="text-zinc-400">"Date": </span>
                     <span className="text-white ml-2">{selectedEvent.date}</span>
                   </div>
                   <div>
-                    <span className="text-zinc-400">Duration:</span>
+                    <span className="text-zinc-400">"Duration": </span>
                     <span className="text-white ml-2">{selectedEvent.duration}</span>
                   </div>
                   <div>
-                    <span className="text-zinc-400">Category:</span>
+                    <span className="text-zinc-400">"Category": </span>
                     <span className="text-white ml-2">{selectedEvent.category}</span>
                   </div>
                   <div>
-                    <span className="text-zinc-400">Priority:</span>
+                    <span className="text-zinc-400">"Priority": </span>
                     <span className="text-white ml-2 capitalize">{selectedEvent.priority}</span>
                   </div>
                 </div>
                 
                 {selectedEvent.participants.length > 0 && (<div>
-                    <span className="text-zinc-400 text-sm">Participants:</span>
+                    <span className="text-zinc-400 text-sm">"Participants": </span>
                     <div className="flex flex-wrap gap-2 mt-2">
                       {selectedEvent.participants.map((participant, index) => (<Badge key={index} variant="outline" className="text-xs">
                           {participant}
@@ -538,7 +538,7 @@ export function InteractiveTimeline($1) {
   );
 }
                 {selectedEvent.metadata.dependencies.length > 0 && (<div>
-                    <span className="text-zinc-400 text-sm">Dependencies:</span>
+                    <span className="text-zinc-400 text-sm">"Dependencies": </span>
                     <div className="flex flex-wrap gap-2 mt-2">
                       {selectedEvent.metadata.dependencies.map((dependency, index) => (<Badge key={index} variant="outline" className="text-xs border-orange-500/30 text-orange-400">
                           {dependency}

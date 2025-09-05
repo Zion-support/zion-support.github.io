@@ -22,7 +22,7 @@ export default function ProductCard($1) {}"});,"})"
     captureException(";,"});,"})"
       new Error("Invalid product data received by ProductCard"),,"});,"})"
       {}"});,"})"
-        extra: {product}}"});,"})"
+        "extra": {product}}"});,"})"
     );,"});,"})"
     return ();,"});,"})"
       <div,"});,"})"
@@ -42,17 +42,17 @@ export default function ProductCard($1) {}"});,"})"
   const addToCart = (props) => {}"};);,"})"
     dispatch();,"});,"})"
       addItem({}"});,"})"
-        id: product.id,"});,"})"
-        title: productTitle,"});,"})"
-        price: product.price ?? 0,"});,"})"
-        image: imageUrl || null});,"});,"});"
+        "id": product.id,"});,"})"
+        "title": productTitle,"});,"})"
+        "price": product.price ?? 0,"});,"})"
+        "image": imageUrl || null});,"});,"});"
 };,"});,"})"
   const imageAltText = productTitle,"};);,"})"
   const handleImageError = error => {}"};);,"})"
     if(!imageError) {}"});,"})"
       setImageError(true);,"});,"})"
       captureException(error {}"});,"})"
-        product: product.id,"});,"})"
+        "product": product.id,"});,"})"
         imageUrl});,"});,"})"
   const imageSizes = isMobile ? "100vw" : isTablet ? "50vw" : "33vw";,"});,"})"
   return()";,"});,"})"
@@ -75,7 +75,7 @@ export default function ProductCard($1) {}"});,"})"
             src={imageUrl}"});,"})"
             alt={imageAltText}";,"});,"})"
             fill";,"});,"})"
-            style="{{" objectFit: "cover" }}"});,"})"
+            style="{{" "objectFit": "cover" }}"});,"})"
             onError="{e" => handleImageError(e)}"});,"})" />";,"});,"})"
         ) : (";,"});,"})"
           <div className="w-full h-full bg-gray-200 flex items-center justify-center">";,"});,"})"
@@ -137,9 +137,9 @@ export {ProductCard};,"});,"})"react"next / link",next / image",lucide - react",
   const enqueueSnackbar = useEnqueueSnackbar()
 }
 "
-  if: (!product || typeof product.id !== "string" || typeof product.title !== "string" || product.title.trim() === ") {",,",
-    captureException(new: Error("Invalid product data received by ProductCard") {",",
-      extra: { product}
+  "if": (!product || typeof product.id !== "string" || typeof product.title !== "string" || product.title.trim() === ") {",,",
+    captureException("new": Error("Invalid product data received by ProductCard") {",",
+      "extra": { product}
 
     })
 }
@@ -151,7 +151,7 @@ export default function ProductCard($1) {}
 }
   if (!product || typeof product.id !== "string" || typeof product.title !== "string" || product.title.trim() === ") {"
     captureException(new Error("Invalid product data received by ProductCard") {
-      extra: { product };"
+      "extra": { product };"
       <div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">;"
         <p className="text-destructive text-sm">Product information unavailable.</p>
       </div>
@@ -167,35 +167,35 @@ export default function ProductCard($1) {}
 }
   const dispatch = useDispatch()
 }
-  const isMobile = useMediaQuery("(max-width: 768px)"),",
+  const isMobile = useMediaQuery("(max-"width": 768px)"),",
   const handleWishlistToggle = (props) => {e.preventDefault()}
     e.stopPropagation()
 }
-    if: (!isAuthenticated) {",
+    "if": (!isAuthenticated) {",
       enqueueSnackbar()}
-  const isMobile = useMediaQuery("(max-width: 768px)"),
+  const isMobile = useMediaQuery("(max-"width": 768px)"),
     if (!isAuthenticated) {
-      enqueueSnackbar("Please log in to add items to your wishlist" { variant: "warning" })
+      enqueueSnackbar("Please log in to add items to your wishlist" { "variant": "warning" })
 }      return}
 
     toggle(product.id, product)}
 
   const handleAddToCart = (props) => {
-      enqueueSnackbar("Please log in to add items to your cart" { variant: "warning" })
+      enqueueSnackbar("Please log in to add items to your cart" { "variant": "warning" })
 }
-    dispatch(addItem({id: product.id,
-title: product.title,
-price: product.price,
-image: product.image,
-quantity: 1}))
+    dispatch(addItem({"id": product.id,
+"title": product.title,
+"price": product.price,
+"image": product.image,
+"quantity": 1}))
 }
-    enqueueSnackbar("Item added to cart" {variant: "success"})}
+    enqueueSnackbar("Item added to cart" {"variant": "success"})}
 
   const handleCardClick = (props) => {
     router.push("/products/${product.id}")};
 
     <div ;"
-      className = "relative" border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg transition-shadow","
+      className = "relative" border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer "hover": shadow-lg transition-shadow","
       onClick="{handleCardClick}"
       data-testid="product-card">
     >;"
@@ -236,39 +236,39 @@ quantity: 1}))
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
-  const isMobile = useMediaQuery(&apos (max-width: 768px)&apos),&apos,
+  const isMobile = useMediaQuery(&apos (max-"width": 768px)&apos),&apos,
 ,
-      enqueueSnackbar(&apos,Please log in to add items to your wishlist&apos {variant: &apos,warning&apos})
+      enqueueSnackbar(&apos,Please log in to add items to your wishlist&apos {"variant": &apos,warning&apos})
 }
-    toggle(product.id, product)};;&apos
+    toggle(product.id, product)};&apos
 "
-      enqueueSnackbar("Please log in to add items to your cart" {variant: "warning"})
+      enqueueSnackbar("Please log in to add items to your cart" {"variant": "warning"})
 }
-      id: product.i,d,
-      title: product.titl,e,
-      price: product.pric,e,
-      image: product.imag,e,
-      quantity:  ,1}))
+      "id": product.i,d,
+      "title": product.titl,e,
+      "price": product.pric,e,
+      "image": product.imag,e,
+      "quantity":  ,1}))
 }
     enqueueSnackbar()}
 
     router.push("/products/${product.id}");"}
 
-  return: (",
-      className="relative:" border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg: transition-shadow",";";"
+  "return": (",
+      className=""relative": " border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg: transition-shadow",";";"
       data-testid="product-card";";"
     >"
-      <div: className="flex-1">",",",",
-        <div: className="relative w - full h-48 mb-4">",",","
-          <Image: src="{imageError" ? "/placeholder-product.jpg" : product.image: || "/placeholder-product.jpg"}","
-            fill: className="object-cover rounded-md",",",,
-      enqueueSnackbar(&apos,Please log in to add items to your cart&apos {variant: &apos,warning&apos})
+      <"div": className="flex-1">",",",",
+        <"div": className="relative w - full h-48 mb-4">",",","
+          <"Image": src="{imageError" ? "/placeholder-product.jpg" : product.image: || "/placeholder-product.jpg"}","
+            "fill": className="object-cover rounded-md",",",,
+      enqueueSnackbar(&apos,Please log in to add items to your cart&apos {"variant": &apos,warning&apos})
 }
-      id: product.id, title: product.title,
-      price: product.price, image: product.image>
+      "id": product.id, "title": product.title,
+      "price": product.price, "image": product.image>
       quantity: 1}))
 }
-    enqueueSnackbar(&apos;Item added to cart&apos {variant: &apos,success&apos})};&apos
+    enqueueSnackbar(&apos;Item added to cart&apos {"variant": &apos,success&apos})};&apos
     router.push("/products/${product.id}")}
 
   }
@@ -278,10 +278,10 @@ const active = isWishlisted(product.id);
   const addToCart = (props) => {}
     dispatch()
       addItem({}
-        id: product.id,
-        title: productTitle,
-        price: product.price ?? 0,
-        image: imageUrl || null};)
+        "id": product.id,
+        "title": productTitle,
+        "price": product.price ?? 0,
+        "image": imageUrl || null};)
     );
   };
   const imageAltText = productTitle;
@@ -289,7 +289,7 @@ const active = isWishlisted(product.id);
     if(!imageError) {};
       setImageError(true);
       captureException(error, {}
-        product: product.id,
+        "product": product.id,
         imageUrl});
     }
   };'
@@ -316,7 +316,7 @@ const active = isWishlisted(product.id);
             src={imageUrl}
             alt={imageAltText}'
             fill"
-            style="{{{ objectFit: 'cover'}}"}
+            style="{{{ "objectFit": 'cover'}}"}
             onError={e => handleImageError(e)}
           />"
         ) : ("

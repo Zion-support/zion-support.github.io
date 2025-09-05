@@ -25,7 +25,7 @@ export function AdminHeader($1) {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 "md": grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Subscription Plan</div>
           <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>
@@ -48,7 +48,7 @@ export function AdminHeader($1) {
           <div>
             <h2 className="font-medium">{company?.name || "Comp Name"}</h2>
             <p className="text-sm text-muted-foreground">
-              Workspace URL: {company?.workspaceUrl || "loading..."}
+              Workspace "URL": {company?.workspaceUrl || "loading..."}
             </p>
           </div>
         </div>

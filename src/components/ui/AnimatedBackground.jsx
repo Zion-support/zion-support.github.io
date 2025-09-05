@@ -18,13 +18,12 @@ export function AnimatedBackground($1) {
             const particleCount = variant === 'particles' ? 100 : 50;
             for (let i = 0; i < particleCount; i++) {
                 particles.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    vx: (Math.random() - 0.5) * 0.5,
-                    vy: (Math.random() - 0.5) * 0.5,
-                    size: Math.random() * 2 + 1,
-                    opacity: Math.random() * 0.5 + 0.1,
-                })}
+                    "x": Math.random() * canvas.width,
+                    "y": Math.random() * canvas.height,
+                    "vx": (Math.random() - 0.5) * 0.5,
+                    "vy": (Math.random() - 0.5) * 0.5,
+                    "size": Math.random() * 2 + 1,
+                    "opacity": Math.random() * 0.5 + 0.1})}
         };
         const drawGrid = (props) => {
             const gridSize = 40;
@@ -128,7 +127,7 @@ export function AnimatedBackground($1) {
             cancelAnimationFrame(animationFrameId);};
     }, [variant]);';
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style="{{{
-            background: 'linear-gradient(135deg}}"} />);
+            "background": 'linear-gradient(135deg}}"} />);
 }
 // Neon glow effect component
 export function NeonGlow($1) {
@@ -142,12 +141,11 @@ export function NeonGlow($1) {
 export function FloatingParticles($1) {
     return (
     <div className="min-h-screen bg-white">
-      {Array.from({ length: count }).map((_, i) => (<div key={i} className="absolute w-1 h-1 bg-zion-cyan rounded-full animate-pulse" style="{{{
-                left: `${Math.random() * 100}}"%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 2}s`,
-                animationDuration: `${2 + Math.random() * 2}s`,
-            }} />))}
+      {Array.from({ "length": count }).map((_, i) => (<div key={i} className="absolute w-1 h-1 bg-zion-cyan rounded-full animate-pulse" style="{{{
+                "left": `${Math.random() * 100}}"%`,
+                "top": `${Math.random() * 100}%`,
+                "animationDelay": `${Math.random() * 2}s`,
+                "animationDuration": `${2 + Math.random() * 2}s`}} />))}
         </div>
   );
 }

@@ -1,36 +1,36 @@
 import React from 'react';
 
 interface CacheItem<T> {
-  data: T;
+  "data": T;
   timestamp: number;
   ttl: number;'
 }
 
 interface CacheConfig {
-  defaultTTL: number;
+  "defaultTTL": number;
   maxSize: number;
   cleanupInterval: number;'
 }
 
 class AdvancedCache<T = any> {
   private cache = new Map<string, CacheItem<T>>();
-  private config: CacheConfig;
+  private "config": CacheConfig;
 
   constructor(config: Partial<CacheConfig> = {}) {
     this.config = {
-      defaultTTL: '5 * 60 * 1000', // 5 minutes
-      maxSize: 100,
-      cleanupInterval: '60 * 1000', // 1 minute
+      "defaultTTL": '5 * 60 * 1000', // 5 minutes
+      "maxSize": 100,
+      "cleanupInterval": '60 * 1000', // 1 minute
       ...config
     }
     // Start cleanup interval
     setInterval(() => this.cleanup(), this.config.cleanupInterval)}
 
-  set(key: string, data: T, ttl?: number): void {
-    const item: CacheItem<T> = {
+  set("key": string, "data": T, ttl?: number): void {
+    const "item": CacheItem<T> = {
       data,
-      timestamp: Date.now(),
-      ttl: ttl || this.config.defaultTTL
+      "timestamp": Date.now(),
+      "ttl": ttl || this.config.defaultTTL
     }
     // Remove oldest items if cache is full
     if (this.cache.size >= this.config.maxSize) {
@@ -39,7 +39,7 @@ class AdvancedCache<T = any> {
 
     this.cache.set(key, item)}
 
-  get(key: string): T | null {
+  get("key": string): T | null {
     const item = this.cache.get(key);
     
     if (!item) {
@@ -52,10 +52,10 @@ class AdvancedCache<T = any> {
 
     return item.data}
 
-  has(key: string): boolean {
+  has("key": string): boolean {
     return this.get(key) !== null}
 
-  delete(key: string): boolean {
+  delete("key": string): boolean {
     return this.cache.delete(key)}
 
   clear(): void {
@@ -82,16 +82,16 @@ class AdvancedCache<T = any> {
         expired++} else {
         active++}
     return {
-      total: 'this.cache.size',
+      "total": 'this.cache.size',
       active,
       expired,
-      hitRate: 0 // Would need to track hits/misses for accurate rate
+      "hitRate": 0 // Would need to track hits/misses for accurate rate
     }
 // Global cache instance
 export const globalCache = new AdvancedCache();
 
 // React hook for caching
-export const useCache = <T>(key: string, fetcher: () => Promise<T>, ttl?: number) => {
+export const useCache = <T>("key": string, "fetcher": () => Promise<T>, ttl?: number) => {
   const [data, setDat,
   a
 ] = React.useState<T | null>(() => globalCache.get(key));
@@ -123,4 +123,4 @@ export const useCache = <T>(key: string, fetcher: () => Promise<T>, ttl?: number
   a
 ]);
 
-  return { data, loading, error, refetch: fetchData }
+  return { data, loading, error, "refetch": fetchData }

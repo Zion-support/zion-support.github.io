@@ -33,72 +33,61 @@ class $1 {
     this.ensureLogsDirectory();
     // Test generation patterns;
     this.testPatterns = {
-  react: [
-  {
+  "react": [{
   pattern: /export\s+(?:default\s+)?function\s+([A-Z][a-zA-Z0-9]*)/g,
-          testType: "component"},
+          "testType": "component"},
         {
-  pattern: /export\s+(?:default\s+)?const\s+([A-Z][a-zA-Z0-9]*)\s*=/g,
-          testType: "component"},
+  "pattern": /export\s+(?:default\s+)?const\s+([A-Z][a-zA-Z0-9]*)\s*=/g,
+          "testType": "component"},
         {
-  pattern: /export\s+function\s+([a-z][a-zA-Z0-9]*)/g,
-          testType: "utility"},
+  "pattern": /export\s+function\s+([a-z][a-zA-Z0-9]*)/g,
+          "testType": "utility"},
         {
-  pattern: /export\s+const\s+([a-z]["a-zA-Z0-9]*)\s*=/g", "testType: "utility"", "}", ""],
-      hooks: [
-  {
-  pattern: /export\s+(?:default\s+)?function\s+use([A-Z]["a-zA-Z0-9]*)/g", "testType: "hook"", "}", ""],
-      utils: [
-  {
+  "pattern": /export\s+const\s+([a-z]["a-zA-Z0-9]*)\s*=/g", ""testType": "utility"", "}", ""],
+      "hooks": [{
+  pattern: /export\s+(?:default\s+)?function\s+use([A-Z]["a-zA-Z0-9]*)/g", ""testType": "hook"", "}", ""],
+      "utils": [{
   pattern: /export\s+(?:default\s+)?function\s+([a-z][a-zA-Z0-9]*)/g,
-          testType: "utility"},
+          "testType": "utility"},
         {
-  pattern: /export\s+(?:default\s+)?const\s+([a-z]["a-zA-Z0-9]*)\s*=/g", "testType: "utility"", "}", ``],
+  "pattern": /export\s+(?:default\s+)?const\s+([a-z]["a-zA-Z0-9]*)\s*=/g", ""testType": "utility"", "}", ""],
 
     // Test generation patterns;
     this.testPatterns = {
-  react: [
-  {
+  "react": [{
   pattern: /export\s+(?:default\s+)?function\s+([A-Z][a-zA-Z0-9]*)/g,
-          testType: "component",
-},
+          "testType": "component"},
         {
-  pattern: /export\s+(?:default\s+)?const\s+([A-Z][a-zA-Z0-9]*)\s*=/g,
-          testType: "component",
-},
+  "pattern": /export\s+(?:default\s+)?const\s+([A-Z][a-zA-Z0-9]*)\s*=/g,
+          "testType": "component"},
         {
-  pattern: /export\s+function\s+([a-z][a-zA-Z0-9]*)/g,
-          testType: "utility",
-},
+  "pattern": /export\s+function\s+([a-z][a-zA-Z0-9]*)/g,
+          "testType": "utility"},
         {
-  pattern: /export\s+const\s+([a-z]["a-zA-Z0-9]*)\s*=/g", "testType: "utility", "}", "],
-      hooks: [
-  {
-  pattern: /export\s+(?:default\s+)?function\s+use([A-Z]["a-zA-Z0-9]*)/g", "testType: "hook", "}", "],
-      utils: [
-  {
+  "pattern": /export\s+const\s+([a-z]["a-zA-Z0-9]*)\s*=/g", ""testType": "utility", "}", "],
+      "hooks": [{
+  pattern: /export\s+(?:default\s+)?function\s+use([A-Z]["a-zA-Z0-9]*)/g", ""testType": "hook", "}", "],
+      "utils": [{
   pattern: /export\s+(?:default\s+)?function\s+([a-z][a-zA-Z0-9]*)/g,
-          testType: "utility",
-},
+          "testType": "utility"},
         {
-  pattern: /export\s+(?:default\s+)?const\s+([a-z]["a-zA-Z0-9]*)\s*=/g", "testType: "utility", "}", "],
-}
+  "pattern": /export\s+(?:default\s+)?const\s+([a-z]["a-zA-Z0-9]*)\s*=/g", ""testType": "utility", "}", "]}
   }
 ;
   ensureLogsDirectory() {
   const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true })}
+  fs.mkdirSync(logsDir, { "recursive": true })}
   }
 ;
-  log(message, level = `INFO`) {
+  log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)}
 ;
   async runSmartTesting() {
-  this.log(`🧪 Starting smart testing automation...`);
+  this.log("🧪 Starting smart testing automation...");
     const testResults = {}
     const coverageData = {}
     const generatedTests = [];
@@ -172,47 +161,46 @@ class $1 {
       // 8. Commit test improvements;
       if (generatedTests.length > 0 || fixedTests.length > 0) {
   await this.commitTestImprovements(generatedTests, fixedTests)}
-    } catch (error) {  this.log(`Smart testing automation failed: ${error.message  }`, `ERROR`)}
+    } catch (error) {  this.log(`Smart testing automation "failed": ${error.message  }`, "ERROR")}
 ;
     return { testResults, coverageData, generatedTests }
   }
 ;
   async analyzeTestCoverage() {
   const coverage = {
-  total: 0,
-      covered: 0,
-      uncovered: 0,
-      percentage: 0,
-      files: {},
-      components: {},
-      utilities: {},
-      hooks: {},
-}
+  "total": 0,
+      "covered": 0,
+      "uncovered": 0,
+      "percentage": 0,
+      "files": {},
+      "components": {},
+      "utilities": {},
+      "hooks": {}}
     try {
   // Check if Jest is configured;
       if (this.hasJestConfig()) {
-  this.log(`📊 Running Jest coverage analysis...`);
+  this.log("📊 Running Jest coverage analysis...");
         try {
   const coverageOutput = execSync(npm run test -- --coverage --watchAll=false",
             {
-  cwd: this.projectRoot,
-              stdio: `pipe`,
-              encoding: `utf8`}
+  "cwd": this.projectRoot,
+              "stdio": "pipe",
+              "encoding": "utf8"}
           );
           // Parse coverage output;
           const coverageData = this.parseCoverageOutput(coverageOutput);
-          Object.assign(coverage, coverageData)} catch (error) {  this.log(`Coverage analysis failed: ${error.message  }`, `WARN`)}
+          Object.assign(coverage, coverageData)} catch (error) {  this.log(`Coverage analysis "failed": ${error.message  }`, "WARN")}
       }
 ;
 
       // Analyze test files structure;
       const testStructure = this.analyzeTestStructure();
-      Object.assign(coverage, testStructure)} catch (error) {  this.log(`Coverage analysis failed: ${error.message  }`, `ERROR`)}
+      Object.assign(coverage, testStructure)} catch (error) {  this.log(`Coverage analysis "failed": ${error.message  }`, "ERROR")}
 ;
     return coverage}
 ;
   hasJestConfig() {
-  const jestConfigs = [`jest.config.js`, "jest.config.ts", "jest.config.cjs"];
+  const jestConfigs = ["jest.config.js", "jest.config.ts", "jest.config.cjs"];
     return jestConfigs.some(config =>;
       fs.existsSync(path.join(this.projectRoot, config));
     )}
@@ -220,10 +208,10 @@ class $1 {
   parseCoverageOutput(output) {
   // This is a simplified parser - in production you"d use Jest"s JSON reporter;
     const coverage = {
-  total: 0,
-      covered: 0,
-      uncovered: 0,
-      percentage: 0}
+  "total": 0,
+      "covered": 0,
+      "uncovered": 0,
+      "percentage": 0}
     // Look for coverage summary in output;
     const coverageMatch = output.match(;
       /All files\s+\|\s+(\d+)\s+\|\s+(\d+)\s+\|\s+(\d+)\s+\|\s+(\d+)%/;
@@ -238,13 +226,12 @@ class $1 {
 ;
   analyzeTestStructure() {
   const structure = {
-  testFiles: 0,
-      testSuites: 0,
-      testCases: 0,
-      components: {},
-      utilities: {},
-      hooks: {},
-}
+  "testFiles": 0,
+      "testSuites": 0,
+      "testCases": 0,
+      "components": {},
+      "utilities": {},
+      "hooks": {}}
 ;
     const testsDir = path.join(this.projectRoot, "tests");
     const srcDir = path.join(this.projectRoot, "src");
@@ -270,12 +257,11 @@ class $1 {
 ;
   analyzeTestFile(content, filePath) {
   const analysis = {
-  suites: 0,
-      cases: 0,
-      components: {},
-      utilities: {},
-      hooks: {},
-}
+  "suites": 0,
+      "cases": 0,
+      "components": {},
+      "utilities": {},
+      "hooks": {}}
 ;
     // Count test suites (describe blocks);
     const describeMatches = content.match(/describe\(/g);
@@ -299,11 +285,10 @@ class $1 {
 ;
   async identifyUntestedItems() {
   const untested = {
-  components: [],
-      utilities: [],
-      hooks: [],
-      total: 0,
-}
+  "components": [],
+      "utilities": [],
+      "hooks": [],
+      "total": 0}
 ;
     const srcDir = path.join(this.projectRoot, "src");
     if (!fs.existsSync(srcDir)) {
@@ -316,37 +301,36 @@ class $1 {
   const content = fs.readFileSync(file, "utf8");
         const fileAnalysis = this.analyzeSourceFile(content, file);
         // Check if each exported item has tests;
-        for (const [`category`, `items`] of Object.entries(fileAnalysis)) {
+        for (const ["category", "items"] of Object.entries(fileAnalysis)) {
   for (const item of items) {
   if (!this.hasTestForItem(item, category)) {
   untested[category].push({
-  name: item.name,
-                file: file,
-                type: item.type,
-                line: item.line,
-                exportType: item.exportType,
+  "name": item.name,
+                "file": file,
+                "type": item.type,
+                "line": item.line,
+                "exportType": item.exportType,
 
         // Check if each exported item has tests;
         for (const ["category", "items"] of Object.entries(fileAnalysis)) {
   for (const item of items) {
   if (!this.hasTestForItem(item, category)) {
   untested[category].push({
-  name: item.name,
-                file: file,
-                type: item.type,
-                line: item.line,
-                exportType: item.exportType,
-});
+  "name": item.name,
+                "file": file,
+                "type": item.type,
+                "line": item.line,
+                "exportType": item.exportType});
               untested.total++}
           }
         }
       } catch (error) {
-  this.log(Error analyzing source file ${file  }: ${error.message}`,
-          `WARN`} catch (error) {
+  this.log(Error analyzing source file ${file  }: ${error.message}",
+          "WARN`} catch (error) {
   this.log(Error analyzing source file ${file}: ${error.message}",
           "WARN";
         );
-          `WARN`;
+          `WARN";
         )}
     }
 ;
@@ -354,12 +338,11 @@ class $1 {
 ;
   analyzeSourceFile(content, filePath) {
   const analysis = {
-  components: [],
-      utilities: [],
-      hooks: [],
-}
+  "components": [],
+      "utilities": [],
+      "hooks": []}
     // Analyze each test pattern category;
-    for (const [`category", "patterns"] of Object.entries(this.testPatterns)) {
+    for (const ["category", "patterns"] of Object.entries(this.testPatterns)) {
   for (const pattern of patterns) {
   // Analyze each test pattern category;
     for (const ["category", "patterns"] of Object.entries(this.testPatterns)) {
@@ -370,14 +353,13 @@ class $1 {
           const lineNumber = this.findLineNumber(content, match.index);
 
           analysis[category].push({
-  name: itemName,
-            file: filePath,
-            type: pattern.testType,
-            line: lineNumber,
-            exportType: pattern.pattern.source.includes("default");
+  "name": itemName,
+            "file": filePath,
+            "type": pattern.testType,
+            "line": lineNumber,
+            "exportType": pattern.pattern.source.includes("default");
               ? "default";
-              : "named",
-})}
+              : "named"})}
       }
     }
 ;
@@ -406,8 +388,8 @@ class $1 {
 ;
   async generateMissingTests(untestedItems) {
   const generatedTests = [];
-    for (const ["category", `items`] of Object.entries(untestedItems)) {
-  if (category === `total`) continue;
+    for (const ["category", "items"] of Object.entries(untestedItems)) {
+  if (category === "total") continue;
       for (const item of items) {
   try {
   const testContent = this.generateTestContent(item, category);
@@ -426,15 +408,14 @@ class $1 {
 
           generatedTests.push({
   item,
-            testFile: testFilePath,
+            "testFile": testFilePath,
             category,
-            timestamp: new Date().toISOString(),
-});
-          this.log(Generated test for ${item.name} in ${testFilePath}`,
-            `INFO`;
+            "timestamp": new Date().toISOString()});
+          this.log(Generated test for ${item.name} in ${testFilePath}",
+            "INFO`;
           )} catch (error) {
   this.log(Failed to generate test for ${item.name  }: ${error.message}`,
-            `ERROR`;
+            "ERROR";
           )}
       }
     }
@@ -443,26 +424,25 @@ class $1 {
 ;
   generateTestContent(item, category) {
   const testTemplates = {
-  component: this.getComponentTestTemplate(item),
-      utility: this.getUtilityTestTemplate(item),
-      hook: this.getHookTestTemplate(item),
-}
+  "component": this.getComponentTestTemplate(item),
+      "utility": this.getUtilityTestTemplate(item),
+      "hook": this.getHookTestTemplate(item)}
 ;
     return testTemplates[item.type] || testTemplates.utility}
 ;
-  getComponentTestTemplate(item) {return `import React from "react";
-import { render, screen  } from "@testing-";`library/react```;
-import { ${item.name} } from `${this.getRelativeImportPath(item.file)}`;
-describe(`${item.name}`, () => {
-  it(`renders without crashing`, () => {
+  getComponentTestTemplate(item) {return "import React from "react";
+import { render, screen  } from "@testing-";"library/react""`;
+import { ${item.name} } from `${this.getRelativeImportPath(item.file)}";
+describe("${item.name}", () => {
+  it("renders without crashing`, () => {
   import { render, screen  } from "@testing-";library/react"";
 import { ${item.name} } from "${this.getRelativeImportPath(item.file)}";
 
 describe("${item.name}", () => {
   it("renders without crashing", () => {
   render(<${item.name} />);
-    expect(screen.getByTestId(`${item.name.toLowerCase()}`)).toBeInTheDocument()});
-  it(`displays correct content`, () => {
+    expect(screen.getByTestId(`${item.name.toLowerCase()}")).toBeInTheDocument()});
+  it("displays correct content`, () => {
   render(<${item.name} />);
     // Add specific content checks based on component implementation});
   it(`handles user interactions correctly`, () => {
@@ -472,10 +452,10 @@ describe("${item.name}", () => {
   getUtilityTestTemplate(item) {
   return `import { ${item.name} } from `${this.getRelativeImportPath(item.file)}`;
 describe(`${item.name}`, () => {
-  it(`should work correctly with valid input`, () => {
+  it("should work correctly with valid input", () => {
   // Add test cases based on function implementation;
     expect(${item.name}()).toBeDefined()});
-  it(`should handle edge cases`, () => {
+  it("should handle edge cases", () => {
   // Add edge case tests});
   it(`should handle invalid input gracefully", () => {
   getUtilityTestTemplate(item) {
@@ -493,10 +473,10 @@ describe("${item.name}", () => {
   // Add error handling tests})})}
 ;
   getHookTestTemplate(item) {
-  return "import { renderHook, act  } from "@testing-";`library/react```;
-import { ${item.name} } from `${this.getRelativeImportPath(item.file)}`;
-describe(`${item.name}`, () => {
-  it(`should return initial state`, () => {
+  return "import { renderHook, act  } from "@testing-";`library/react""`;
+import { ${item.name} } from `${this.getRelativeImportPath(item.file)}";
+describe("${item.name}", () => {
+  it("should return initial state`, () => {
   const { result } = renderHook(() => ${item.name}());
     expect(result.current).toBeDefined()});
   it(`should update state correctly`, () => {
@@ -506,15 +486,14 @@ describe(`${item.name}`, () => {
     // Verify state changes});
   it(`should handle cleanup correctly`, () => {
   const { unmount } = renderHook(() => ${item.name}());
-    ;
     unmount();
     // Verify cleanup logic})})}
 ;
   getRelativeImportPath(filePath) {
   const relativePath = path.relative(this.projectRoot, filePath);
     const importPath = relativePath;
-      .replace(/\\/g, `/`);
-      .replace(/\.(tsx?|jsx?)$/, ``);
+      .replace(/\\/g, `/");
+      .replace(/\.(tsx?|jsx?)$/, "");
     // Handle index files;
     if (importPath.endsWith("/index")) {
   return importPath.replace("/index", "");
@@ -541,29 +520,27 @@ describe(`${item.name}`, () => {
     // Ensure test directory exists;
     const testDirPath = path.dirname(testFilePath);
     if (!fs.existsSync(testDirPath)) {
-  fs.mkdirSync(testDirPath, { recursive: true })}
+  fs.mkdirSync(testDirPath, { "recursive": true })}
 ;
     return testFilePath}
 ;
   async runExistingTests() {
   const results = {
-  success: false,
-      totalTests: 0,
-      passed: 0,
-      failed: 0,
-      errors: [],
-      duration: 0,
-}
+  "success": false,
+      "totalTests": 0,
+      "passed": 0,
+      "failed": 0,
+      "errors": [],
+      "duration": 0}
 ;
     try {
   this.log("🧪 Running existing tests...");
 
       const startTime = Date.now();
       const testOutput = execSync("npm test -- --watchAll=false", {
-  cwd: this.projectRoot,
-        stdio: `pipe`,
-        encoding: `utf8`,
-});
+  "cwd": this.projectRoot,
+        "stdio": "pipe",
+        "encoding": "utf8`});
       const duration = Date.now() - startTime;
 
       results.duration = duration;
@@ -571,22 +548,22 @@ describe(`${item.name}`, () => {
       // Parse test results;
       const parsedResults = this.parseTestOutput(testOutput);
       Object.assign(results, parsedResults);
-      this.log(Tests completed: ${results.passed} passed, ${results.failed} failed`;
+      this.log(Tests "completed": ${results.passed} passed, ${results.failed} failed`;
       )} catch (error) {
   results.success = false;
       results.errors.push(error.message);
       // Try to parse error output;
       try {
-  const errorOutput = error.stdout || error.stderr || ``;
+  const errorOutput = error.stdout || error.stderr || "";
         const parsedResults = this.parseTestOutput(errorOutput);
         Object.assign(results, parsedResults)} catch (parseError) {
-  this.log(`Failed to parse test output: ${parseError.message}`, `WARN`);
+  this.log(`Failed to parse test "output": ${parseError.message}`, "WARN");
 
       // Parse test results;
       const parsedResults = this.parseTestOutput(testOutput);
       Object.assign(results, parsedResults);
 
-      this.log(Tests completed: ${results.passed} passed, ${results.failed} failed";
+      this.log(Tests "completed": ${results.passed} passed, ${results.failed} failed";
       )} catch (error) {
   results.success = false;
       results.errors.push(error.message);
@@ -596,32 +573,30 @@ describe(`${item.name}`, () => {
   const errorOutput = error.stdout || error.stderr || ";
         const parsedResults = this.parseTestOutput(errorOutput);
         Object.assign(results, parsedResults)} catch (parseError) {
-  this.log(`Failed to parse test output: ${parseError.message}`, "WARN")}
-this.log(`Tests failed: ${error.message}`, `ERROR`)}
+  this.log(`Failed to parse test "output": ${parseError.message}`, "WARN")}
+this.log(`Tests "failed": ${error.message}`, "ERROR")}
 ;
     return results}
 ;
   async runNewTests(newTests) {
   const results = {
-  success: false,
-      totalTests: 0,
-      passed: 0,
-      failed: 0,
-      errors: [],
-      duration: 0,
-}
+  "success": false,
+      "totalTests": 0,
+      "passed": 0,
+      "failed": 0,
+      "errors": [],
+      "duration": 0}
 ;
     if (newTests.length === 0) {
   return results}
 ;
     try {
-  this.log(`🧪 Running newly generated tests...");
+  this.log("🧪 Running newly generated tests...");
       const startTime = Date.now();
       const testOutput = execSync("npm test -- --watchAll=false", {
-  cwd: this.projectRoot,
-        stdio: `pipe`,
-        encoding: `utf8`,
-});
+  "cwd": this.projectRoot,
+        "stdio": "pipe",
+        "encoding": "utf8`});
       const duration = Date.now() - startTime;
 
       results.duration = duration;
@@ -629,28 +604,27 @@ this.log(`Tests failed: ${error.message}`, `ERROR`)}
       // Parse test results;
       const parsedResults = this.parseTestOutput(testOutput);
       Object.assign(results, parsedResults);
-      this.log(New tests completed: ${results.passed} passed, ${results.failed} failed`;
+      this.log(New tests "completed": ${results.passed} passed, ${results.failed} failed`;
       )} catch (error) {
   // Parse test results;
       const parsedResults = this.parseTestOutput(testOutput);
       Object.assign(results, parsedResults);
 
-      this.log(New tests completed: ${results.passed} passed, ${results.failed} failed";
+      this.log(New tests "completed": ${results.passed} passed, ${results.failed} failed";
       )} catch (error) {
   results.success = false;
-      results.errors.push(error.message);this.log(`New tests failed: ${error.message  }`, `ERROR`)}
+      results.errors.push(error.message);this.log(`New tests "failed": ${error.message  }`, "ERROR")}
 ;
     return results}
 ;
   parseTestOutput(output) {
   const results = {
-  totalTests: 0,
-      passed: 0,
-      failed: 0,
-}
+  "totalTests": 0,
+      "passed": 0,
+      "failed": 0}
     // Look for test summary in output;
     const summaryMatch = output.match(;
-      /Tests: \s+(\d+)\s+passed,\s+(\d+)\s+failed/    );
+      /"Tests": \s+(\d+)\s+passed,\s+(\d+)\s+failed/    );
     if (summaryMatch) {
   results.passed = parseInt(summaryMatch[1]);
       results.failed = parseInt(summaryMatch[2]);
@@ -664,7 +638,7 @@ this.log(`Tests failed: ${error.message}`, `ERROR`)}
     if (testResults.success || testResults.failed === 0) {
   return fixedTests}
 ;
-    this.log(`🔧 Attempting to auto-fix failing tests...`);
+    this.log("🔧 Attempting to auto-fix failing tests...");
     try {
   this.log("🔧 Attempting to auto-fix failing tests...");
 
@@ -678,26 +652,26 @@ this.log(`Tests failed: ${error.message}`, `ERROR`)}
           if (fixed) {
   fixedTests.push(failure)}
         } catch (error) {
-  this.log(Failed to fix test failure in ${failure.testFile  }: ${error.message}`,
-            `ERROR`} catch (error) {
+  this.log(Failed to fix test failure in ${failure.testFile  }: ${error.message}",
+            "ERROR`} catch (error) {
   this.log(Failed to fix test failure in ${failure.testFile}: ${error.message}",
             "ERROR";
           );
-            `ERROR`;
+            `ERROR";
           )}
       }
-    } catch (error) {  this.log(`Auto-fix process failed: ${error.message  }`, `ERROR`)}
+    } catch (error) {  this.log("Auto-fix process "failed": ${error.message  }", "ERROR")}
 ;
     return fixedTests}
 ;
   async getTestFailureDetails() {
-  // This would typically involve parsing Jest`s detailed output;
-    // For now, we`ll return a simplified structure;
+  // This would typically involve parsing Jest"s detailed output;
+    // For now, we"ll return a simplified structure;
     return []}
 ;
   async fixTestFailure(failure) {
   // This would involve intelligent test fixing based on failure patterns;
-    // For now, we`ll return false to indicate no fixes were applied;
+    // For now, we"ll return false to indicate no fixes were applied;
     return false}
 ;
   async generateTestReport(;
@@ -707,13 +681,13 @@ this.log(`Tests failed: ${error.message}`, `ERROR`)}
     fixedTests;
   ) {
   const report = {
-  timestamp: new Date().toISOString(),
-      summary: {
+  "timestamp": new Date().toISOString(),
+      "summary": {
   testResults,
-        coverage: coverageData,
-        generatedTests: generatedTests.length,
-        fixedTests: fixedTests.length},
-      details: {
+        "coverage": coverageData,
+        "generatedTests": generatedTests.length,
+        "fixedTests": fixedTests.length},
+      "details": {
   testResults,
         coverageData,
         generatedTests,
@@ -722,7 +696,7 @@ this.log(`Tests failed: ${error.message}`, `ERROR`)}
     fs.writeFileSync(this.testResultsLog, JSON.stringify(report, null, 2));
     // Save coverage data;
     fs.writeFileSync(this.coverageLog, JSON.stringify(coverageData, null, 2));
-    this.log(Test report generated: ${generatedTests.length} tests generated, ${fixedTests.length} tests fixed`;
+    this.log(Test report "generated": ${generatedTests.length} tests generated, ${fixedTests.length} tests fixed`;
 
   async getTestFailureDetails() {
   // This would typically involve parsing Jest"s detailed output;
@@ -741,20 +715,17 @@ this.log(`Tests failed: ${error.message}`, `ERROR`)}
     fixedTests;
   ) {
   const report = {
-  timestamp: new Date().toISOString(),
-      summary: {
+  "timestamp": new Date().toISOString(),
+      "summary": {
   testResults,
-        coverage: coverageData,
-        generatedTests: generatedTests.length,
-        fixedTests: fixedTests.length,
-},
-      details: {
+        "coverage": coverageData,
+        "generatedTests": generatedTests.length,
+        "fixedTests": fixedTests.length},
+      "details": {
   testResults,
         coverageData,
         generatedTests,
-        fixedTests,
-},
-}
+        fixedTests}}
 ;
     // Save detailed report;
     fs.writeFileSync(this.testResultsLog, JSON.stringify(report, null, 2));
@@ -762,20 +733,20 @@ this.log(`Tests failed: ${error.message}`, `ERROR`)}
     // Save coverage data;
     fs.writeFileSync(this.coverageLog, JSON.stringify(coverageData, null, 2));
 
-    this.log(Test report generated: ${generatedTests.length} tests generated, ${fixedTests.length} tests fixed";
+    this.log(Test report "generated": ${generatedTests.length} tests generated, ${fixedTests.length} tests fixed";
     )}
 ;
   async commitTestImprovements(generatedTests, fixedTests) {
   if (generatedTests.length === 0 && fixedTests.length === 0) return;
     try {
   // Stage all changes;
-      execSync(`git add .`, { cwd: this.projectRoot, stdio: `pipe` });
-      // Commit with descriptive messageconst commitMessage = `🧪 Test Improvements: ${generatedTests.length} tests generated, ${fixedTests.length} tests fixed`;execSync(`git commit -m "${commitMessage}"`, {
-  cwd: this.projectRoot,
-        stdio: `pipe`});
-      this.log(Committed test improvements: ${generatedTests.length} generated, ${fixedTests.length} fixed`,
-        `INFO`;
-      )} catch (error) {  this.log(`Failed to commit test improvements: ${error.message  }`, `ERROR")}
+      execSync(`git add .", { "cwd": this.projectRoot, "stdio": "pipe" });
+      // Commit with descriptive messageconst commitMessage = "🧪 Test "Improvements": ${generatedTests.length} tests generated, ${fixedTests.length} tests fixed";execSync("git commit -m "${commitMessage}"", {
+  "cwd": this.projectRoot,
+        "stdio": "pipe`});
+      this.log(Committed test "improvements": ${generatedTests.length} generated, ${fixedTests.length} fixed`,
+        "INFO";
+      )} catch (error) {  this.log(`Failed to commit test "improvements": ${error.message  }`, "ERROR")}
   }
 ;
   getAllFiles(dir, extensions) {
@@ -802,7 +773,7 @@ this.log(`Tests failed: ${error.message}`, `ERROR`)}
   async run() {
   try {
   await this.runSmartTesting();
-      this.log(`🧪 Smart Testing Automation completed successfully`)} catch (error) {  this.log(`Smart Testing Automation failed: ${error.message  }`, `ERROR`)}
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", "ERROR`)}
   }
 }
 ;

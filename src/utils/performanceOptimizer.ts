@@ -1,8 +1,7 @@
 // performanceOptimizer utility,
 export const performanceOptimizer = {
   // Placeholder utility functions,
-init: () => {
-    ,
-  }
+"init": () => {
+    }
 };
 export default performanceOptimizer;

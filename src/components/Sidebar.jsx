@@ -105,64 +105,59 @@ export function Sidebar({ isOpen, onClose }) {
     );
   };
 
-  const navigationSections = [
-    {
-      title: 'Main',
-      items: [
-        { name: 'Home', href: '/', icon: Home },
-        { name: 'About', href: '/about', icon: Building },
-        { name: 'Services', href: '/services', icon: Briefcase },
-        { name: 'Solutions', href: '/solutions', icon: Target },
-        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'Research', href: '/research-development', icon: TestTube },
-        { name: 'Events', href: '/events', icon: Video },
-        { name: 'News', href: '/news', icon: Newspaper },
-        { name: 'Contact', href: '/contact', icon: Mail },
-        { name: 'Blog', href: '/blog', icon: FileText }
+  const navigationSections = [{
+      "title": 'Main',
+      "items": [
+        { name: 'Home', "href": '/', "icon": Home },
+        { "name": 'About', "href": '/about', "icon": Building },
+        { "name": 'Services', "href": '/services', "icon": Briefcase },
+        { "name": 'Solutions', "href": '/solutions', "icon": Target },
+        { "name": 'AI Solutions', "href": '/ai-solutions', "icon": Brain },
+        { "name": 'Case Studies', "href": '/case-studies', "icon": FileText },
+        { "name": 'Research', "href": '/research-development', "icon": TestTube },
+        { "name": 'Events', "href": '/events', "icon": Video },
+        { "name": 'News', "href": '/news', "icon": Newspaper },
+        { "name": 'Contact', "href": '/contact', "icon": Mail },
+        { "name": 'Blog', "href": '/blog', "icon": FileText }
       ]
     },
     {
-      title: 'Core Services',
-      items: [
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
-        { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe, description: 'Simulation & Monitoring' },
-        { name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, description: 'Intelligent Solutions' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Protection & Compliance' },
-        { name: 'IT Infrastructure', href: '/services/infrastructure', icon: Server, description: 'Hardware & Networks' },
-        { name: 'Digital Transformation', href: '/services/transformation', icon: Rocket, description: 'Business Evolution' }
+      "title": 'Core Services',
+      "items": [{ name: 'Cloud & DevOps', "href": '/services/cloud-devops', "icon": Cloud, "description": 'Infrastructure & Automation' },
+        { "name": 'Digital Twin', "href": '/services/digital-twin', "icon": Globe, "description": 'Simulation & Monitoring' },
+        { "name": 'AI & Machine Learning', "href": '/services/ai-ml', "icon": Brain, "description": 'Intelligent Solutions' },
+        { "name": 'Cybersecurity', "href": '/services/cybersecurity', "icon": Shield, "description": 'Protection & Compliance' },
+        { "name": 'IT Infrastructure', "href": '/services/infrastructure', "icon": Server, "description": 'Hardware & Networks' },
+        { "name": 'Digital Transformation', "href": '/services/transformation', "icon": Rocket, "description": 'Business Evolution' }
       ]
     },
     {
-      title: 'Industry Solutions',
-      items: [
-        { name: 'Manufacturing', href: '/solutions/manufacturing', icon: Cpu, description: 'Smart Factory Solutions' },
-        { name: 'Financial Services', href: '/solutions/financial', icon: DollarSign, description: 'FinTech & Banking' },
-        { name: 'Healthcare', href: '/solutions/healthcare', icon: Heart, description: 'Digital Health' },
-        { name: 'Retail', href: '/solutions/retail', icon: ShoppingCart, description: 'E-commerce & Omnichannel' },
-        { name: 'Education', href: '/solutions/education', icon: BookOpen, description: 'EdTech & Learning' },
-        { name: 'Energy', href: '/solutions/energy', icon: Zap, description: 'Renewable & Smart Grid' }
+      "title": 'Industry Solutions',
+      "items": [{ name: 'Manufacturing', "href": '/solutions/manufacturing', "icon": Cpu, "description": 'Smart Factory Solutions' },
+        { "name": 'Financial Services', "href": '/solutions/financial', "icon": DollarSign, "description": 'FinTech & Banking' },
+        { "name": 'Healthcare', "href": '/solutions/healthcare', "icon": Heart, "description": 'Digital Health' },
+        { "name": 'Retail', "href": '/solutions/retail', "icon": ShoppingCart, "description": 'E-commerce & Omnichannel' },
+        { "name": 'Education', "href": '/solutions/education', "icon": BookOpen, "description": 'EdTech & Learning' },
+        { "name": 'Energy', "href": '/solutions/energy', "icon": Zap, "description": 'Renewable & Smart Grid' }
       ]
     },
     {
-      title: 'Resources',
-      items: [
-        { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'Industry Insights' },
-        { name: 'Webinars', href: '/webinars', icon: Video, description: 'Expert Knowledge' },
-        { name: 'Training', href: '/training', icon: Award, description: 'Skill Development' },
-        { name: 'Documentation', href: '/docs', icon: BookOpen, description: 'Technical Guides' },
-        { name: 'API Reference', href: '/api', icon: Code, description: 'Developer Resources' },
-        { name: 'Status Page', href: '/status', icon: BarChart3, description: 'System Health' }
+      "title": 'Resources',
+      "items": [{ name: 'White Papers', "href": '/white-papers', "icon": FileText, "description": 'Industry Insights' },
+        { "name": 'Webinars', "href": '/webinars', "icon": Video, "description": 'Expert Knowledge' },
+        { "name": 'Training', "href": '/training', "icon": Award, "description": 'Skill Development' },
+        { "name": 'Documentation', "href": '/docs', "icon": BookOpen, "description": 'Technical Guides' },
+        { "name": 'API Reference', "href": '/api', "icon": Code, "description": 'Developer Resources' },
+        { "name": 'Status Page', "href": '/status', "icon": BarChart3, "description": 'System Health' }
       ]
     },
     {
-      title: 'Support',
-      items: [
-        { name: 'Help Center', href: '/support', icon: HelpCircle, description: 'Self-Service Support' },
-        { name: 'Contact Us', href: '/contact', icon: MessageCircle, description: 'Get in Touch' },
-        { name: 'Request Quote', href: '/request-quote', icon: DollarSign, description: 'Custom Pricing' },
-        { name: 'Partnership', href: '/partners', icon: Users, description: 'Become a Partner' },
-        { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join Our Team' }
+      "title": 'Support',
+      "items": [{ name: 'Help Center', "href": '/support', "icon": HelpCircle, "description": 'Self-Service Support' },
+        { "name": 'Contact Us', "href": '/contact', "icon": MessageCircle, "description": 'Get in Touch' },
+        { "name": 'Request Quote', "href": '/request-quote', "icon": DollarSign, "description": 'Custom Pricing' },
+        { "name": 'Partnership', "href": '/partners', "icon": Users, "description": 'Become a Partner' },
+        { "name": 'Careers', "href": '/careers', "icon": Briefcase, "description": 'Join Our Team' }
       ]
     };
   ];
@@ -179,7 +174,7 @@ export function Sidebar({ isOpen, onClose }) {
       {/* Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black/50 z-40 "lg": hidden"
           onClick={onClose}
         />
       )}
@@ -188,8 +183,8 @@ export function Sidebar({ isOpen, onClose }) {
       <div className={`
         fixed top-0 left-0 h-full w-64 bg-zion-blue-dark border-r border-zion-purple/20
         transform transition-transform duration-300 ease-in-out z-50
-        ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-        lg:relative lg:inset-0
+        ${isOpen ? 'translate-x-0' : '-translate-x-full "lg": translate-x-0'}
+        "lg": relative lg:inset-0
       `}>
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">
@@ -201,7 +196,7 @@ export function Sidebar({ isOpen, onClose }) {
           </div>
           <button
             onClick={onClose}
-            className="lg:hidden p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded"
+            className=""lg": hidden p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded"
           >
             <X className="h-5 w-5" />
           </button>
@@ -220,94 +215,93 @@ export function Sidebar($1) {';';
         ? prev.filter(s => s !== sectionName);';';
         : [...prev, sectionName]
     );};';';';';
-  const navigationSections = [
-    {",';
+  const navigationSections = [{",';
     ';';';';';
-      title: 'Main', items: [",';
+      "title": 'Main', "items": [",';
     ';';';';';
-        { name: 'Home', href: '/', icon: Home },",';
+        { "name": 'Home', "href": '/', "icon": Home },",';
     ';';';';';
-        {name: 'About', href: '/about', icon: Building}, ",';
+        {"name": 'About', "href": '/about', "icon": Building}, ",';
     ';';';';';
-        {name: 'Services', href: '/services', icon: Briefcase},",';
+        {"name": 'Services', "href": '/services', "icon": Briefcase},",';
     ';';';';';
-        {name: 'Solutions', href: '/solutions', icon: Target}, ",';
+        {"name": 'Solutions', "href": '/solutions', "icon": Target}, ",';
     ';';';';';
-        {name: 'AI Solutions', href: '/ai-solutions', icon: Brain},",';
+        {"name": 'AI Solutions', "href": '/ai-solutions', "icon": Brain},",';
     ';';';';';
-        {name: 'Case Studies', href: '/case-studies', icon: FileText}, ",';
+        {"name": 'Case Studies', "href": '/case-studies', "icon": FileText}, ",';
     ';';';';';
-        {name: 'Research', href: '/research-development', icon: TestTube},",';
+        {"name": 'Research', "href": '/research-development', "icon": TestTube},",';
     ';';';';';
-        {name: 'Events', href: '/events', icon: Video}, ",';
+        {"name": 'Events', "href": '/events', "icon": Video}, ",';
     ';';';';';
-        {name: 'News', href: '/news', icon: Newspaper},",';
+        {"name": 'News', "href": '/news', "icon": Newspaper},",';
     ';';';';';
-        {name: 'Contact', href: '/contact', icon: Mail}, ",';
+        {"name": 'Contact', "href": '/contact', "icon": Mail}, ",';
     ';';';';';
-        {name: 'Blog', href: '/blog', icon: FileText}';
+        {"name": 'Blog', "href": '/blog', "icon": FileText}';
       ]},';';
     {",';
     ';';';';';
-      title: 'Core Services', items: [",';
+      "title": 'Core Services', "items": [",';
     ';';';';';
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' }, ",';
+        { "name": 'Cloud & DevOps', "href": '/services/cloud-devops', "icon": Cloud, "description": 'Infrastructure & Automation' }, ",';
     ';';';';';
-        {name: 'Digital Twin', href: '/services/digital-twin', icon: Globe, description: 'Simulation & Monitoring'}, ",';
+        {"name": 'Digital Twin', "href": '/services/digital-twin', "icon": Globe, "description": 'Simulation & Monitoring'}, ",';
     ';';';';';
-        {name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, description: 'Intelligent Solutions'}, ",';
+        {"name": 'AI & Machine Learning', "href": '/services/ai-ml', "icon": Brain, "description": 'Intelligent Solutions'}, ",';
     ';';';';';
-        {name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Protection & Compliance'}, ",';
+        {"name": 'Cybersecurity', "href": '/services/cybersecurity', "icon": Shield, "description": 'Protection & Compliance'}, ",';
     ';';';';';
-        {name: 'IT Infrastructure', href: '/services/infrastructure', icon: Server, description: 'Hardware & Networks'}, ",';
+        {"name": 'IT Infrastructure', "href": '/services/infrastructure', "icon": Server, "description": 'Hardware & Networks'}, ",';
     ';';';';';
-        {name: 'Digital Transformation', href: '/services/transformation', icon: Rocket, description: 'Business Evolution'}';
+        {"name": 'Digital Transformation', "href": '/services/transformation', "icon": Rocket, "description": 'Business Evolution'}';
       ]},';';
     {",';
     ';';';';';
-      title: 'Industry Solutions', items: [",';
+      "title": 'Industry Solutions', "items": [",';
     ';';';';';
-        { name: 'Manufacturing', href: '/solutions/manufacturing', icon: Cpu, description: 'Smart Factory Solutions' }, ",';
+        { "name": 'Manufacturing', "href": '/solutions/manufacturing', "icon": Cpu, "description": 'Smart Factory Solutions' }, ",';
     ';';';';';
-        {name: 'Financial Services', href: '/solutions/financial', icon: DollarSign, description: 'FinTech & Banking'}, ",';
+        {"name": 'Financial Services', "href": '/solutions/financial', "icon": DollarSign, "description": 'FinTech & Banking'}, ",';
     ';';';';';
-        {name: 'Healthcare', href: '/solutions/healthcare', icon: Heart, description: 'Digital Health'}, ",';
+        {"name": 'Healthcare', "href": '/solutions/healthcare', "icon": Heart, "description": 'Digital Health'}, ",';
     ';';';';';
-        {name: 'Retail', href: '/solutions/retail', icon: ShoppingCart, description: 'E-commerce & Omnichannel'}, ",';
+        {"name": 'Retail', "href": '/solutions/retail', "icon": ShoppingCart, "description": 'E-commerce & Omnichannel'}, ",';
     ';';';';';
-        {name: 'Education', href: '/solutions/education', icon: BookOpen, description: 'EdTech & Learning'}, ",';
+        {"name": 'Education', "href": '/solutions/education', "icon": BookOpen, "description": 'EdTech & Learning'}, ",';
     ';';';';';
-        {name: 'Energy', href: '/solutions/energy', icon: Zap, description: 'Renewable & Smart Grid'}';
+        {"name": 'Energy', "href": '/solutions/energy', "icon": Zap, "description": 'Renewable & Smart Grid'}';
       ]},';';
     {",';
     ';';';';';
-      title: 'Resources', items: [",';
+      "title": 'Resources', "items": [",';
     ';';';';';
-        { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'Industry Insights' }, ",';
+        { "name": 'White Papers', "href": '/white-papers', "icon": FileText, "description": 'Industry Insights' }, ",';
     ';';';';';
-        {name: 'Webinars', href: '/webinars', icon: Video, description: 'Expert Knowledge'}, ",';
+        {"name": 'Webinars', "href": '/webinars', "icon": Video, "description": 'Expert Knowledge'}, ",';
     ';';';';';
-        {name: 'Training', href: '/training', icon: Award, description: 'Skill Development'}, ",';
+        {"name": 'Training', "href": '/training', "icon": Award, "description": 'Skill Development'}, ",';
     ';';';';';
-        {name: 'Documentation', href: '/docs', icon: BookOpen, description: 'Technical Guides'}, ",';
+        {"name": 'Documentation', "href": '/docs', "icon": BookOpen, "description": 'Technical Guides'}, ",';
     ';';';';';
-        {name: 'API Reference', href: '/api', icon: Code, description: 'Developer Resources'}, ",';
+        {"name": 'API Reference', "href": '/api', "icon": Code, "description": 'Developer Resources'}, ",';
     ';';';';';
-        {name: 'Status Page', href: '/status', icon: BarChart3, description: 'System Health'}';
+        {"name": 'Status Page', "href": '/status', "icon": BarChart3, "description": 'System Health'}';
       ]},';';
     {",';
     ';';';';';
-      title: 'Support', items: [",';
+      "title": 'Support', "items": [",';
     ';';';';';
-        { name: 'Help Center', href: '/support', icon: HelpCircle, description: 'Self-Service Support' }, ",';
+        { "name": 'Help Center', "href": '/support', "icon": HelpCircle, "description": 'Self-Service Support' }, ",';
     ';';';';';
-        {name: 'Contact Us', href: '/contact', icon: MessageCircle, description: 'Get in Touch'}, ",';
+        {"name": 'Contact Us', "href": '/contact', "icon": MessageCircle, "description": 'Get in Touch'}, ",';
     ';';';';';
-        {name: 'Request Quote', href: '/request-quote', icon: DollarSign, description: 'Custom Pricing'}, ",';
+        {"name": 'Request Quote', "href": '/request-quote', "icon": DollarSign, "description": 'Custom Pricing'}, ",';
     ';';';';';
-        {name: 'Partnership', href: '/partners', icon: Users, description: 'Become a Partner'}, ",';
+        {"name": 'Partnership', "href": '/partners', "icon": Users, "description": 'Become a Partner'}, ",';
     ';';';';';
-        {name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join Our Team'}
+        {"name": 'Careers', "href": '/careers', "icon": Briefcase, "description": 'Join Our Team'}
       ]}';
   ]';';
   const isActive = (props) => {",
@@ -321,229 +315,229 @@ export function Sidebar($1) {';';
   const navigationSections = [',
     ';';';';';
     {";';';
-      title: 'Main',',';
+      "title": 'Main',',';
     ';';';';';
-      items: [";';
+      "items": [";';
         { nam,',';
     ';';';';';
-    e: 'Home', href: '/', icon: Home },',';
+    "e": 'Home', "href": '/', "icon": Home },',';
     ';';';';';
-  const navigationSections = [{title: 'Main',
-      items: [',';
+  const navigationSections = [{"title": 'Main',
+      "items": [',';
     ';';';';';
-        { name: 'Home', href: '/', icon: Home },',';
+        { "name": 'Home', "href": '/', "icon": Home },',';
     ';';';';';
-        {name: 'About', href: '/about', icon: Building},',';
+        {"name": 'About', "href": '/about', "icon": Building},',';
     ';';';';';
-        {name: 'Services', href: '/services', icon: Briefcase},',';
+        {"name": 'Services', "href": '/services', "icon": Briefcase},',';
     ';';';';';
-        {name: 'Solutions', href: '/solutions', icon: Target},',';
+        {"name": 'Solutions', "href": '/solutions', "icon": Target},',';
     ';';';';';
-        {name: 'AI Solutions', href: '/ai-solutions', icon: Brain},',';
+        {"name": 'AI Solutions', "href": '/ai-solutions', "icon": Brain},',';
     ';';';';';
-        {name: 'Case Studies', href: '/case-studies', icon: FileText},',';
+        {"name": 'Case Studies', "href": '/case-studies', "icon": FileText},',';
     ';';';';';
-        {name: 'Research', href: '/research-development', icon: TestTube},',';
+        {"name": 'Research', "href": '/research-development', "icon": TestTube},',';
     ';';';';';
-        {name: 'Events', href: '/events', icon: Video},',';
+        {"name": 'Events', "href": '/events', "icon": Video},',';
     ';';';';';
-        {name: 'News', href: '/news', icon: Newspaper},',';
+        {"name": 'News', "href": '/news', "icon": Newspaper},',';
     ';';';';';
-        {name: 'Contact', href: '/contact', icon: Mail},',';
+        {"name": 'Contact', "href": '/contact', "icon": Mail},',';
     ';';';';';
-        {name: 'Blog', href: '/blog', icon: FileText}';
+        {"name": 'Blog', "href": '/blog', "icon": FileText}';
       ]';';
 },',';
     ';';';';';
-    {title: 'Core Services',',';
+    {"title": 'Core Services',',';
     ';';';';';
-      items: [{ name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },',';
+      "items": [{ name: 'Cloud & DevOps', "href": '/services/cloud-devops', "icon": Cloud, "description": 'Infrastructure & Automation' },',';
     ';';';';';
-        {name: 'Digital Twin', href: '/services/digital-twin', icon: Globe, description: 'Simulation & Monitoring'},',';
+        {"name": 'Digital Twin', "href": '/services/digital-twin', "icon": Globe, "description": 'Simulation & Monitoring'},',';
     ';';';';';
-        {name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, description: 'Intelligent Solutions'},',';
+        {"name": 'AI & Machine Learning', "href": '/services/ai-ml', "icon": Brain, "description": 'Intelligent Solutions'},',';
     ';';';';';
-        {name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Protection & Compliance'},',';
+        {"name": 'Cybersecurity', "href": '/services/cybersecurity', "icon": Shield, "description": 'Protection & Compliance'},',';
     ';';';';';
-        {name: 'IT Infrastructure', href: '/services/infrastructure', icon: Server, description: 'Hardware & Networks'},',';
+        {"name": 'IT Infrastructure', "href": '/services/infrastructure', "icon": Server, "description": 'Hardware & Networks'},',';
     ';';';';';
-        {name: 'Digital Transformation', href: '/services/transformation', icon: Rocket, description: 'Business Evolution'}';
+        {"name": 'Digital Transformation', "href": '/services/transformation', "icon": Rocket, "description": 'Business Evolution'}';
       ]';';
 },',';
     ';';';';';
-    {title: 'Industry Solutions',',';
+    {"title": 'Industry Solutions',',';
     ';';';';';
-      items: [{ name: 'Manufacturing', href: '/solutions/manufacturing', icon: Cpu, description: 'Smart Factory Solutions' },',';
+      "items": [{ name: 'Manufacturing', "href": '/solutions/manufacturing', "icon": Cpu, "description": 'Smart Factory Solutions' },',';
     ';';';';';
-        {name: 'Financial Services', href: '/solutions/financial', icon: DollarSign, description: 'FinTech & Banking'},',';
+        {"name": 'Financial Services', "href": '/solutions/financial', "icon": DollarSign, "description": 'FinTech & Banking'},',';
     ';';';';';
-        {name: 'Healthcare', href: '/solutions/healthcare', icon: Heart, description: 'Digital Health'},',';
+        {"name": 'Healthcare', "href": '/solutions/healthcare', "icon": Heart, "description": 'Digital Health'},',';
     ';';';';';
-        {name: 'Retail', href: '/solutions/retail', icon: ShoppingCart, description: 'E-commerce & Omnichannel'},',';
+        {"name": 'Retail', "href": '/solutions/retail', "icon": ShoppingCart, "description": 'E-commerce & Omnichannel'},',';
     ';';';';';
-        {name: 'Education', href: '/solutions/education', icon: BookOpen, description: 'EdTech & Learning'},',';
+        {"name": 'Education', "href": '/solutions/education', "icon": BookOpen, "description": 'EdTech & Learning'},',';
     ';';';';';
-        {name: 'Energy', href: '/solutions/energy', icon: Zap, description: 'Renewable & Smart Grid'}';
+        {"name": 'Energy', "href": '/solutions/energy', "icon": Zap, "description": 'Renewable & Smart Grid'}';
       ]';';
 },',';
     ';';';';';
-    {title: 'Resources',',';
+    {"title": 'Resources',',';
     ';';';';';
-      items: [{ name: 'White Papers', href: '/white-papers', icon: FileText, description: 'Industry Insights' },',';
+      "items": [{ name: 'White Papers', "href": '/white-papers', "icon": FileText, "description": 'Industry Insights' },',';
     ';';';';';
-        {name: 'Webinars', href: '/webinars', icon: Video, description: 'Expert Knowledge'},',';
+        {"name": 'Webinars', "href": '/webinars', "icon": Video, "description": 'Expert Knowledge'},',';
     ';';';';';
-        {name: 'Training', href: '/training', icon: Award, description: 'Skill Development'},',';
+        {"name": 'Training', "href": '/training', "icon": Award, "description": 'Skill Development'},',';
     ';';';';';
-        {name: 'Documentation', href: '/docs', icon: BookOpen, description: 'Technical Guides'},',';
+        {"name": 'Documentation', "href": '/docs', "icon": BookOpen, "description": 'Technical Guides'},',';
     ';';';';';
-        {name: 'API Reference', href: '/api', icon: Code, description: 'Developer Resources'},',';
+        {"name": 'API Reference', "href": '/api', "icon": Code, "description": 'Developer Resources'},',';
     ';';';';';
-        {name: 'Status Page', href: '/status', icon: BarChart3, description: 'System Health'}';
+        {"name": 'Status Page', "href": '/status', "icon": BarChart3, "description": 'System Health'}';
       ]';';
 },',';
     ';';';';';
-    {title: 'Support',',';
+    {"title": 'Support',',';
     ';';';';';
-      items: [{ name: 'Help Center', href: '/support', icon: HelpCircle, description: 'Self-Service Support' },',';
+      "items": [{ name: 'Help Center', "href": '/support', "icon": HelpCircle, "description": 'Self-Service Support' },',';
     ';';';';';
-        {name: 'Contact Us', href: '/contact', icon: MessageCircle, description: 'Get in Touch'},',';
+        {"name": 'Contact Us', "href": '/contact', "icon": MessageCircle, "description": 'Get in Touch'},',';
     ';';';';';
-        {name: 'Request Quote', href: '/request-quote', icon: DollarSign, description: 'Custom Pricing'},',';
+        {"name": 'Request Quote', "href": '/request-quote', "icon": DollarSign, "description": 'Custom Pricing'},',';
     ';';';';';
-        {name: 'Partnership', href: '/partners', icon: Users, description: 'Become a Partner'},',';
+        {"name": 'Partnership', "href": '/partners', "icon": Users, "description": 'Become a Partner'},',';
     ';';';';';
-        {name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join Our Team'}',';
+        {"name": 'Careers', "href": '/careers', "icon": Briefcase, "description": 'Join Our Team'}',';
     ';';';';';
-        {name: 'About', href: '/about', icon: Building},',';
+        {"name": 'About', "href": '/about', "icon": Building},',';
     ';';';';';
-        {name: 'Services', href: '/services', icon: Briefcase},',';
+        {"name": 'Services', "href": '/services', "icon": Briefcase},',';
     ';';';';';
-        {name: 'Solutions', href: '/solutions', icon: Target},',';
+        {"name": 'Solutions', "href": '/solutions', "icon": Target},',';
     ';';';';';
-        {name: 'AI Services', href: '/ai-services', icon: Brain},',';
+        {"name": 'AI Services', "href": '/ai-services', "icon": Brain},',';
     ';';';';';
-        {name: 'Case Studies', href: '/case-studies', icon: FileText},',';
+        {"name": 'Case Studies', "href": '/case-studies', "icon": FileText},',';
     ';';';';';
-        {name: 'Contact', href: '/contact', icon: Mail},',';
+        {"name": 'Contact', "href": '/contact', "icon": Mail},',';
     ';';';';';
-        {name: 'Blog', href: '/blog', icon: FileText}';
+        {"name": 'Blog', "href": '/blog', "icon": FileText}';
       ]';';
 },',';
     ';';';';';
     {";';';
-      title: 'Core Services',',';
+      "title": 'Core Services',',';
     ';';';';';
-      items: [";';
+      "items": [";';
         { nam,',';
     ';';';';';
-    e: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },',';
+    "e": 'Cloud & DevOps', "href": '/services/cloud-devops', "icon": Cloud, "description": 'Infrastructure & Automation' },',';
     ';';';';';
-        {name: 'Digital Twin', href: '/services/digital-twin', icon: Globe, description: 'Simulation & Monitoring'},',';
+        {"name": 'Digital Twin', "href": '/services/digital-twin', "icon": Globe, "description": 'Simulation & Monitoring'},',';
     ';';';';';
-        {name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, description: 'Intelligent Solutions'},',';
+        {"name": 'AI & Machine Learning', "href": '/services/ai-ml', "icon": Brain, "description": 'Intelligent Solutions'},',';
     ';';';';';
-        {name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Protection & Compliance'},',';
+        {"name": 'Cybersecurity', "href": '/services/cybersecurity', "icon": Shield, "description": 'Protection & Compliance'},',';
     ';';';';';
-        {name: 'IT Infrastructure', href: '/services/infrastructure', icon: Server, description: 'Hardware & Networks'},',';
+        {"name": 'IT Infrastructure', "href": '/services/infrastructure', "icon": Server, "description": 'Hardware & Networks'},',';
     ';';';';';
-        {name: 'Digital Transformation', href: '/services/transformation', icon: Rocket, description: 'Business Evolution'}';
+        {"name": 'Digital Transformation', "href": '/services/transformation', "icon": Rocket, "description": 'Business Evolution'}';
       ]';';
 },',';
     ';';';';';
     {";';';
-      title: 'Industry Solutions',',';
+      "title": 'Industry Solutions',',';
     ';';';';';
-      items: [";';
+      "items": [";';
         { nam,',';
     ';';';';';
-    e: 'Manufacturing', href: '/solutions/manufacturing', icon: Cpu, description: 'Smart Factory Solutions' },',';
+    "e": 'Manufacturing', "href": '/solutions/manufacturing', "icon": Cpu, "description": 'Smart Factory Solutions' },',';
     ';';';';';
-        {name: 'Financial Services', href: '/solutions/financial', icon: DollarSign, description: 'FinTech & Banking'},',';
+        {"name": 'Financial Services', "href": '/solutions/financial', "icon": DollarSign, "description": 'FinTech & Banking'},',';
     ';';';';';
-        {name: 'Healthcare', href: '/solutions/healthcare', icon: Heart, description: 'Digital Health'},',';
+        {"name": 'Healthcare', "href": '/solutions/healthcare', "icon": Heart, "description": 'Digital Health'},',';
     ';';';';';
-        {name: 'Retail', href: '/solutions/retail', icon: ShoppingCart, description: 'E-commerce & Omnichannel'},',';
+        {"name": 'Retail', "href": '/solutions/retail', "icon": ShoppingCart, "description": 'E-commerce & Omnichannel'},',';
     ';';';';';
-        {name: 'Education', href: '/solutions/education', icon: BookOpen, description: 'EdTech & Learning'},',';
+        {"name": 'Education', "href": '/solutions/education', "icon": BookOpen, "description": 'EdTech & Learning'},',';
     ';';';';';
-        {name: 'Energy', href: '/solutions/energy', icon: Zap, description: 'Renewable & Smart Grid'}';';
-      items: [',';
+        {"name": 'Energy', "href": '/solutions/energy', "icon": Zap, "description": 'Renewable & Smart Grid'}';';
+      "items": [',';
     ';';';';';
-        {name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Intelligent Solutions'},',';
+        {"name": 'AI Services', "href": '/ai-services', "icon": Brain, "description": 'Intelligent Solutions'},',';
     ';';';';';
-        {name: 'IT Services', href: '/it-services', icon: Network, description: 'Comprehensive IT Solutions'},',';
+        {"name": 'IT Services', "href": '/it-services', "icon": Network, "description": 'Comprehensive IT Solutions'},',';
     ';';';';';
-        {name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS Solutions'},',';
+        {"name": 'Micro SaaS', "href": '/micro-saas', "icon": Cloud, "description": 'Scalable SaaS Solutions'},',';
     ';';';';';
-        {name: 'Web Development', href: '/services/web-development', icon: Code, description: 'Custom Web Applications'},',';
+        {"name": 'Web Development', "href": '/services/web-development', "icon": Code, "description": 'Custom Web Applications'},',';
     ';';';';';
-        {name: 'Cloud Services', href: '/services/cloud-services', icon: Cloud, description: 'Cloud Infrastructure'},',';
+        {"name": 'Cloud Services', "href": '/services/cloud-services', "icon": Cloud, "description": 'Cloud Infrastructure'},',';
     ';';';';';
-        {name: 'AI Development', href: '/services/ai-development', icon: Brain, description: 'AI Development Services'}
+        {"name": 'AI Development', "href": '/services/ai-development', "icon": Brain, "description": 'AI Development Services'}
       ]';
 },';';
     {',';
     ';';';';';
-      title: 'Solutions',';';
-      items: [',';
+      "title": 'Solutions',';';
+      "items": [',';
     ';';';';';
-        { name: 'AI Content Creation', href: '/solutions/ai-content-creation', icon: Brain, description: 'AI-Powered Content' },',';
+        { "name": 'AI Content Creation', "href": '/solutions/ai-content-creation', "icon": Brain, "description": 'AI-Powered Content' },',';
     ';';';';';
-        {name: 'Customer Support', href: '/solutions/customer-support', icon: MessageCircle, description: 'Support Automation'},',';
+        {"name": 'Customer Support', "href": '/solutions/customer-support', "icon": MessageCircle, "description": 'Support Automation'},',';
     ';';';';';
-        {name: 'Email Automation', href: '/solutions/email-automation', icon: Mail, description: 'Email Marketing'},',';
+        {"name": 'Email Automation', "href": '/solutions/email-automation', "icon": Mail, "description": 'Email Marketing'},',';
     ';';';';';
-        {name: 'Event Management', href: '/solutions/event-management', icon: Calendar, description: 'Event Planning'},',';
+        {"name": 'Event Management', "href": '/solutions/event-management', "icon": Calendar, "description": 'Event Planning'},',';
     ';';';';';
-        {name: 'Project Management', href: '/solutions/project-management', icon: Briefcase, description: 'Project Tracking'},',';
+        {"name": 'Project Management', "href": '/solutions/project-management', "icon": Briefcase, "description": 'Project Tracking'},',';
     ';';';';';
-        {name: 'Workflow Automation', href: '/solutions/workflow-automation', icon: Zap, description: 'Process Automation'}';
+        {"name": 'Workflow Automation', "href": '/solutions/workflow-automation', "icon": Zap, "description": 'Process Automation'}';
       ]';';
 },',';
     ';';';';';
     {";';';
-      title: 'Resources',',';
+      "title": 'Resources',',';
     ';';';';';
-      items: [";';
+      "items": [";';
         { nam,',';
     ';';';';';
-    e: 'White Papers', href: '/white-papers', icon: FileText, description: 'Industry Insights' },',';
+    "e": 'White Papers', "href": '/white-papers', "icon": FileText, "description": 'Industry Insights' },',';
     ';';';';';
-        {name: 'Webinars', href: '/webinars', icon: Video, description: 'Expert Knowledge'},',';
+        {"name": 'Webinars', "href": '/webinars', "icon": Video, "description": 'Expert Knowledge'},',';
     ';';';';';
-        {name: 'Training', href: '/training', icon: Award, description: 'Skill Development'},';';
-      items: [',';
+        {"name": 'Training', "href": '/training', "icon": Award, "description": 'Skill Development'},';';
+      "items": [',';
     ';';';';';
-        {name: 'Documentation', href: '/docs', icon: BookOpen, description: 'Technical Guides'},',';
+        {"name": 'Documentation', "href": '/docs', "icon": BookOpen, "description": 'Technical Guides'},',';
     ';';';';';
-        {name: 'API Reference', href: '/api', icon: Code, description: 'Developer Resources'},',';
+        {"name": 'API Reference', "href": '/api', "icon": Code, "description": 'Developer Resources'},',';
     ';';';';';
-        {name: 'Training', href: '/training', icon: Award, description: 'Skill Development'},',';
+        {"name": 'Training', "href": '/training', "icon": Award, "description": 'Skill Development'},',';
     ';';';';';
-        {name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Support Resources'},',';
+        {"name": 'Help Center', "href": '/help', "icon": HelpCircle, "description": 'Support Resources'},',';
     ';';';';';
-        {name: 'Search', href: '/search', icon: Search, description: 'Find Content'},',';
+        {"name": 'Search', "href": '/search', "icon": Search, "description": 'Find Content'},',';
     ';';';';';
-        {name: 'Press', href: '/press', icon: Newspaper, description: 'News & Updates'}';
+        {"name": 'Press', "href": '/press', "icon": Newspaper, "description": 'News & Updates'}';
       ]';';
 },',';
     ';';';';';
     {";';';
-      title: 'Support',',';
+      "title": 'Support',',';
     ';';';';';
-      items: [";';
+      "items": [";';
         { nam,',';
     ';';';';';
-    e: 'Help Center', href: '/support', icon: HelpCircle, description: 'Self-Service Support' },',';
+    "e": 'Help Center', "href": '/support', "icon": HelpCircle, "description": 'Self-Service Support' },',';
     ';';';';';
-        {name: 'Contact Us', href: '/contact', icon: MessageCircle, description: 'Get in Touch'},',';
+        {"name": 'Contact Us', "href": '/contact', "icon": MessageCircle, "description": 'Get in Touch'},',';
     ';';';';';
-        {name: 'Partners', href: '/partners', icon: Users, description: 'Become a Partner'},',';
+        {"name": 'Partners', "href": '/partners', "icon": Users, "description": 'Become a Partner'},',';
     ';';';';';
-        {name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join Our Team'},',';
+        {"name": 'Careers', "href": '/careers', "icon": Briefcase, "description": 'Join Our Team'},',';
     ';';';';';
-        {name: 'Team', href: '/team', icon: Users, description: 'Meet Our Team'}
+        {"name": 'Team', "href": '/team', "icon": Users, "description": 'Meet Our Team'}
       ]';
 }';';
   ]',';
@@ -567,19 +561,19 @@ export function Sidebar($1) {';';
   return (';
     <>';';';
       {/* Overlay */}, {isOpen && (';';';';
-        <divclassName={`fixed inset-0 bg-black/50 z-40 lg: hidden` onClick={onClose}  />';';';';
+        <divclassName={"fixed inset-0 bg-black/50 z-40 "lg": hidden" onClick={onClose}  />';';';';
       )}, {/* Sidebar */}',';
     ';';';';';
-      <divclassName={` fixed top-0 left-0 h-full w-64 bg-zion-blue-dark border-r border-zion-purple/20 transform transition-transform duration-300 ease-in-out z-50 ${isOpen ? 'translate-x-0' : '-translate-x-full lg: translate-x-0'} lg: relative lg:inset-0 `}>';';';
+      <divclassName={` fixed top-0 left-0 h-full w-64 bg-zion-blue-dark border-r border-zion-purple/20 transform transition-transform duration-300 ease-in-out z-50 ${isOpen ? 'translate-x-0' : '-translate-x-full "lg": translate-x-0'} "lg": relative lg:inset-0 `}>';';';
       {/* Overlay */}';';
       {isOpen && (',';
     ';';';';';
         <div '
-        <div ``}
-          className="fixed inset-0 bg-black/50 z-40 lg: hidden"
+        <div ""}
+          className="fixed inset-0 bg-black/50 z-40 "lg": hidden"
           onClick={onClose}
         /" >"
-        <div className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+        <div className="fixed inset-0 bg-black/50 z-40 "lg": hidden"
           onClick={onClose}
          />
       )
@@ -587,25 +581,25 @@ export function Sidebar($1) {';';
     </div>
   );';
 }
-      {/* Sidebar */}`
-      <divclassName={`';
+      {/* Sidebar */}"
+      <divclassName={"';
         fixed top-0 left-0 h-full w-64 bg-zion-blue-dark border-r border-zion-purple/20';';';';';
         transform transition-transform duration-300 ease-in-out z-50`',';
     ';';';';';
-        ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}';';
-        lg:relative l,',';
+        ${isOpen ? 'translate-x-0' : '-translate-x-full "lg": translate-x-0'}';';
+        "lg": relative l,',';
     ';';';';';
-    g:inset-0'
+    "g": inset-0'
       `}>
-        {/* Header */}`
-        <div className=`flex items-center justify-between p-4 border-b border-zion-purple/20">";';';
+        {/* Header */}"
+        <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">";';';
           <div className="flex items-center space-x-2">";';';';
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center">";';';';';
         transform transition-transform duration-300 ease-in-out z-50"`',';
     ';';';';';
-        ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-        lg:relative lg:inset-0`
-      `}` >"
+        ${isOpen ? 'translate-x-0' : '-translate-x-full "lg": translate-x-0'}
+        "lg": relative lg:inset-0`
+      "}" >"
         {/* Header */}"
         <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">"
           <div className="flex items-center space-x-2">"
@@ -615,7 +609,7 @@ export function Sidebar($1) {';';
             <span className="text-white font-semibold">Zion Tech</span>
           </div>
           <button onClick={onClose}"
-            className="lg:hidden p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded" >"
+            className=""lg": hidden p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded" >"
             <X className="h-5 w-5" /" >"
           </button>
         </div>
@@ -633,10 +627,10 @@ export function Sidebar($1) {';';
         fixed top-0 left-0 h-full w-64 bg-gray-900 border-r border-gray-700';';';';';
         transform transition-transform duration-300 ease-in-out z-50',';
     ';';';';';
-        ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-        lg: relative lg:inset-0`}>
+        ${isOpen ? 'translate-x-0' : '-translate-x-full "lg": translate-x-0'}
+        "lg": relative lg:inset-0`}>
         {/* Header */}
-        <div className=`flex items-center justify-between p-4 border-b border-gray-700">
+        <div className="flex items-center justify-between p-4 border-b border-gray-700">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
               <span className="text-white font-bold text-lg">Z</span>
@@ -645,13 +639,13 @@ export function Sidebar($1) {';';
           </div>
           <button
             onClick={onClose}"
-            className="lg: hidden p-1 text-zion-slate-light hove
+            className=""lg": hidden p-1 text-zion-slate-light hove
     r:text-white hove
     r:bg-zion-purple/10 rounded"
           >"
-          <button onClick={onClose} className="lg: hidden p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded" >
+          <button onClick={onClose} className=""lg": hidden p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded" >
           <button onClick={onClose}
-            className="lg:hidden p-1 text-gray-400 hover:text-white hover:bg-gray-800 rounded">
+            className=""lg": hidden p-1 text-gray-400 hover:text-white hover:bg-gray-800 rounded">
             <X className="h-5 w-5"  />
           </button>
         </div>
@@ -676,19 +670,19 @@ export function Sidebar($1) {';';
                     {item.href ? (
                       <Link
                         to={item.href}
-                        className={`
+                        className={"
                           flex items-center px-4 py-2 text-sm transition-colors group
                           ${isActive(item.href)
                             ? 'text-zion-cyan bg-zion-purple/10 border-r-2 border-zion-cyan'
-                            : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
+                            : 'text-zion-slate-light "hover": text-white hover:bg-zion-purple/10'
                           }
-                        `}
+                        "}
                         onClick={onClose}
                       >
                         <item.icon className="h-4 w-4 mr-3 flex-shrink-0" />
                         <span className="flex-1">{item.name}</span>
                         {item.description && (
-                          <span className="text-xs text-zion-slate-light opacity-0 group-hover:opacity-100 transition-opacity">
+                          <span className="text-xs text-zion-slate-light opacity-0 group-"hover": opacity-100 transition-opacity">
                             {item.description}
                           </span>
                         )}
@@ -696,7 +690,7 @@ export function Sidebar($1) {';';
                     ) : (
                       <button
                         onClick={() => toggleSection(item.name.toLowerCase())}
-                        className="w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
+                        className="w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light "hover": text-white hover:bg-zion-purple/10 transition-colors"
                       >
                         <div className="flex items-center">
                           <item.icon className="h-4 w-4 mr-3 flex-shrink-0" />
@@ -724,60 +718,60 @@ export function Sidebar($1) {';';
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center text-xs text-zion-cyan hover:text-white transition-colors"
+              className="inline-flex items-center text-xs text-zion-cyan "hover": text-white transition-colors"
               onClick={onClose}
             >
               <MessageCircle className="h-3 w-3 mr-1" />
 =======
                   <divkey={item.name}>
                     {item.href ? (';';
-                      <Link to={item.href}`
+                      <Link to={item.href}"
                         className={`';
                           flex items-center px-4 py-2 text-sm transition-colors group';';';';';
                           ${isActive(item.href)`',';
     ';';';';';
                             ? 'text-zion-cyan bg-zion-purple/10 border-r-2 border-zion-cyan",';
     ';';';';';
-                            : 'text-zion-slate-light hover:text-white hove,';';';
-    r: bg-zion-purple/10'}
-                        `}
+                            : 'text-zion-slate-light "hover": text-white hove,';';';
+    "r": bg-zion-purple/10'}
+                        "}
                         onClick={onClose}
-                      >`
-                        <item .icon className=`h-4 w-4 mr-3 flex-shrink-0"  />";';';
+                      >"
+                        <item .icon className="h-4 w-4 mr-3 flex-shrink-0"  />";';';
                         <span className="flex-1">{item.name}</span>';';';
                         {item.description && (";';';';';
-                          <span className={`text-xs text-zion-slate-light opacity-0 group-hover:opacity-100 transition-opacity`>',';
+                          <span className={"text-xs text-zion-slate-light opacity-0 group-"hover": opacity-100 transition-opacity">',';
     ';';';';';
-                      <Link to={item.href} className={` flex items-center px-4 py-2 text-sm transition-colors group ${isActive(item.href) ? 'text-zion-cyan bg-zion-purple/10 border-r-2 border-zion-cyan' : 'text-zion-slate-light hover: text-white hover:bg-zion-purple/10' } `} onClick={onClose} >
-                        <item .icon className=`h-4 w-4 mr-3 flex-shrink-0`}  />
+                      <Link to={item.href} className={" flex items-center px-4 py-2 text-sm transition-colors group ${isActive(item.href) ? 'text-zion-cyan bg-zion-purple/10 border-r-2 border-zion-cyan' : 'text-zion-slate-light "hover": text-white hover:bg-zion-purple/10' } "} onClick={onClose} >
+                        <item .icon className="h-4 w-4 mr-3 flex-shrink-0"}  />
                         <span className="flex-1">{item.name}</span>
                         {item.description && (';
-                          <spanclassName={`text-xs text-zion-slate-light opacity-0 group-hover: opacity-100 transition-opacity`>';
+                          <spanclassName={"text-xs text-zion-slate-light opacity-0 group-"hover": opacity-100 transition-opacity">';
                       <Link href={item.href}
-                        className={`';
+                        className={"';
                           flex items-center px-4 py-2 text-sm transition-colors group';';';';';
                           ${isActive(item.href)",';
     ';';';';';
                             ? 'text-zion-cyan bg-zion-purple/10 border-r-2 border-zion-cyan",';
     ';';';';';
-                            : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'}`
-                        `}
-                        onClick={onClose}` >`}
+                            : 'text-zion-slate-light "hover": text-white hover:bg-zion-purple/10'}"
+                        "}
+                        onClick={onClose}" >"}
                         <item .icon className="h-4 w-4 mr-3 flex-shrink-0" /" >";';
                         <span className="flex-1">{item.name}</span>';';
                         {item.description && (";';';';
-                          <spanclassName={`text-xs text-zion-slate-light opacity-0 group-hover: opacity-100 transition-opacity`>';';';';
+                          <spanclassName={"text-xs text-zion-slate-light opacity-0 group-"hover": opacity-100 transition-opacity">';';';';
                           ${isActive(item.href)',';
     ';';';';';
                             ? 'text-blue-400 bg-blue-900/20 border-r-2 border-blue-400",';
     ';';';';';
-                            : 'text-gray-300 hover:text-white hover:bg-gray-800'}`;
+                            : 'text-gray-300 "hover": text-white hover:bg-gray-800'}";
 }
                         onClick={onClose}>
-                        <item .icon className=`h-4 w-4 mr-3 flex-shrink-0`}  />
+                        <item .icon className="h-4 w-4 mr-3 flex-shrink-0"}  />
                         <span className="flex-1">{item.name}</span>
                         {item.description && (
-                          <span className="text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                          <span className="text-xs text-gray-400 opacity-0 group-"hover": opacity-100 transition-opacity">
                             {item.description}
                           </span>
                         )
@@ -789,7 +783,7 @@ export function Sidebar($1) {';';
                     ) : (
                       <button
                         onClick={() => toggleSection(item.name.toLowerCase());"
-                        className="w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light hover:text-white hove
+                        className="w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light "hover": text-white hove
     r:bg-zion-purple/10 transition-colors"
                       >"
                         <div className="flex items-center">"
@@ -798,9 +792,9 @@ export function Sidebar($1) {';';
     </div>
   );
 }
-                        className="w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors"
+                        className="w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light "hover": text-white hover:bg-zion-purple/10 transition-colors"
                       <button onClick={() =" > toggleSection(item.name.toLowerCase())}"
-                        className="w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors"
+                        className="w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light "hover": text-white hover:bg-zion-purple/10 transition-colors"
                       >"
                         <div className="flex items-center">"
                           <item .icon className="h-4 w-4 mr-3 flex-shrink-0" /" >"
@@ -815,7 +809,7 @@ export function Sidebar($1) {';';
     </div>
   );
 }
-                        className="w-full flex items-center justify-between px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800 transition-colors"
+                        className="w-full flex items-center justify-between px-4 py-2 text-sm text-gray-300 "hover": text-white hover:bg-gray-800 transition-colors"
                       >
                         <div className="flex items-center">
                           <item .icon className="h-4 w-4 mr-3 flex-shrink-0"  />
@@ -858,7 +852,7 @@ export function Sidebar($1) {';';
             </p>
             <Link"
               to="/contact"
-              className="inline-flex items-center text-xs text-zion-cyan hover:text-white transition-colors"
+              className="inline-flex items-center text-xs text-zion-cyan "hover": text-white transition-colors"
               onClick={onClose}
             >"
         {/* Footer */}"
@@ -867,10 +861,10 @@ export function Sidebar($1) {';';
             <p className="text-xs text-zion-slate-light mb-2">
               Need help? Contact our support team
             </p>
-            <Link to="/contact" className="inline-flex items-center text-xs text-zion-cyan hover: text-white transition-colors" onClick={onClose} >
+            <Link to="/contact" className="inline-flex items-center text-xs text-zion-cyan "hover": text-white transition-colors" onClick={onClose} >
             <Link "
               to="/contact"
-              className="inline-flex items-center text-xs text-zion-cyan hover: text-white transition-colors"
+              className="inline-flex items-center text-xs text-zion-cyan "hover": text-white transition-colors"
               onClick={onClose}" >"
               <MessageCircle className="h-3 w-3 mr-1" /" >"
         {/* Footer */}
@@ -881,7 +875,7 @@ export function Sidebar($1) {';';
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center text-xs text-blue-400 hover:text-white transition-colors"
+              className="inline-flex items-center text-xs text-blue-400 "hover": text-white transition-colors"
               onClick={onClose}>
               <MessageCircle className="h-3 w-3 mr-1"  />
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -896,7 +890,7 @@ export function Sidebar($1) {';';
 }
 =======
 </>
-  );}"`";
+  );}""";
     </>';';
   );';';';
 }";';';';';

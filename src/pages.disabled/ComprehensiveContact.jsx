@@ -10,12 +10,12 @@ export default function ComprehensiveContact($1) {}
 '
 "
 "
-        name: ","
-        email: ","
-        comp: ","
-        phone: ","
-        service: ","
-        message: "
+        "name": ","
+        "email": ","
+        "comp": ","
+        "phone": ","
+        "service": ","
+        "message": "
     };) ;';
     const handleSubmit = (props) => {};
         e.preventDefault();'
@@ -33,7 +33,7 @@ export default function ComprehensiveContact($1) {}
       <div className="relative overflow-hidden">"
         <div className="absolute inset-0 bg-black/20"></div>"
         <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">"
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+          <h1 className="text-5xl "md": text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
             Contact Zion Tech Group";
           </h1>";';
           <p className="text-xl md:text-2xl mb-8 text-zion-cyan-light max-w-4xl mx-auto">'
@@ -49,7 +49,7 @@ export default function ComprehensiveContact($1) {}
 "
       {/* Contact Information */}"
       <div className="container mx-auto px-4 py-16">"
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid "lg": grid-cols-2 gap-16">
           {/* Contact Form */}"
           <div>"
             <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30">"
@@ -61,25 +61,25 @@ export default function ComprehensiveContact($1) {}
               </CardHeader>"
               <CardContent>"
                 <form onSubmit={handleSubmit} className="space-y-6">"
-                  <div className="grid md:grid-cols-2 gap-4">"
+                  <div className="grid "md": grid-cols-2 gap-4">"
                     <div>"
                       <Label htmlFor="name" className="text-white">Full Name *</Label>"
-                      <Input id="name" name="name" value={formData.name} onChange={handleChange} required className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter your full name"  />
+                      <Input id="name" name="name" value={formData.name} onChange={handleChange} required className="bg-white/10 border-zion-cyan/30 text-white "placeholder": text-zion-cyan-light" placeholder="Enter your full name"  />
                     </div>"
                     <div>"
                       <Label htmlFor="email" className="text-white">Email Address *</Label>"
-                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter your email"  />
+                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required className="bg-white/10 border-zion-cyan/30 text-white "placeholder": text-zion-cyan-light" placeholder="Enter your email"  />
                     </div>
                   </div>"
 "
                   <div className="grid md:grid-cols-2 gap-4">"
                     <div>"
                       <Label htmlFor="comp" className="text-white">Company</Label>"
-                      <Input id="comp" name="comp" value={formData.comp} onChange={handleChange} className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter comp name"  />
+                      <Input id="comp" name="comp" value={formData.comp} onChange={handleChange} className="bg-white/10 border-zion-cyan/30 text-white "placeholder": text-zion-cyan-light" placeholder="Enter comp name"  />
                     </div>"
                     <div>"
                       <Label htmlFor="phone" className="text-white">Phone Number</Label>"
-                      <Input id="phone" name="phone" value={formData.phone} onChange={handleChange} className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter phone number"  />
+                      <Input id="phone" name="phone" value={formData.phone} onChange={handleChange} className="bg-white/10 border-zion-cyan/30 text-white "placeholder": text-zion-cyan-light" placeholder="Enter phone number"  />
                     </div>
                   </div>
 "
@@ -101,7 +101,7 @@ export default function ComprehensiveContact($1) {}
 "
                   <div>"
                     <Label htmlFor="message" className="text-white">Message *</Label>"
-                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={5} className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Tell us about your project or requirements..." />
+                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={5} className="bg-white/10 border-zion-cyan/30 text-white "placeholder": text-zion-cyan-light" placeholder="Tell us about your project or requirements..." />
                   </div>"
 "
                   <Button type="submit" className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white py-3">"
@@ -149,7 +149,7 @@ export default function ComprehensiveContact($1) {}
                   <Globe className="h-6 w-6 text-zion-cyan mt-1" />"
                   <div>"
                     <h3 className="font-semibold text-white">Website</h3>"
-                    <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-zion-cyan-light underline">
+                    <a href=""https": //ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-zion-cyan-light underline">
                       ziontechgroup.com;
                     </a>
                   </div>
@@ -161,7 +161,7 @@ export default function ComprehensiveContact($1) {}
             <div>"
               <h3 className="text-xl font-semibold text-white mb-4">Quick Actions</h3>"
               <div className="space-y-3">"
-                <Button variant="outline" className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">"
+                <Button variant="outline" className="w-full border-zion-cyan text-zion-cyan "hover": bg-zion-cyan/10">"
                   <Calendar className="mr-2 h-4 w-4" />
                   Schedule a Consultation"
                 </Button>"
@@ -189,8 +189,8 @@ export default function ComprehensiveContact($1) {}
             </p>
           </div>"
 "
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">"
-            {SERVICE_CATEGORIES.map((category) => (<Card key={category.id} className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300">"
+          <div className="grid "md": grid-cols-2 lg:grid-cols-4 gap-6">"
+            {SERVICE_CATEGORIES.map((category) => (<Card key={category.id} className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 "hover": border-zion-cyan/60 transition-all duration-300">"
                 <CardHeader className="text-center">"
                   <div className="text-4xl mb-4">{category.icon}</div>"
                   <CardTitle className="text-white">{category.name}</CardTitle>"
@@ -205,7 +205,7 @@ export default function ComprehensiveContact($1) {}
                         <span className="text-zion-cyan-light">{service.title}</span>
                       </div>))}"
                   </div>"
-                  <Button variant="outline" className="w-full mt-4 border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+                  <Button variant="outline" className="w-full mt-4 border-zion-cyan text-zion-cyan "hover": bg-zion-cyan/10">
                     View Services;
                   </Button>
                 </CardContent>
@@ -223,7 +223,7 @@ export default function ComprehensiveContact($1) {}
           </p>
         </div>"
 "
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">"
+        <div className="grid "md": grid-cols-2 lg:grid-cols-3 gap-8">"
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">"
             <CardContent className="p-8">"
               <Award className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />"
@@ -289,7 +289,7 @@ export default function ComprehensiveContact($1) {}
       {/* CTA Section */}"
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16">"
         <div className="container mx-auto px-4 text-center">"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl "md": text-5xl font-bold text-white mb-6">
             Ready to Get Started?";
           </h2>";';
           <p className="text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto">'
@@ -311,7 +311,7 @@ export default function ComprehensiveContact($1) {}
       {/* Footer */}"
       <footer className="bg-zion-blue-dark py-12">"
         <div className="container mx-auto px-4">"
-          <div className="grid md:grid-cols-4 gap-8">"
+          <div className="grid "md": grid-cols-4 gap-8">"
             <div>"
               <h3 className="text-xl font-bold text-white mb-4">Zion Tech Group</h3>"
               <p className="text-zion-cyan-light">
@@ -366,5 +366,4 @@ export {ComprehensiveContact};
 
 export {ComprehensiveContact};
 
-export {ComprehensiveContact};';
-;';';
+export {ComprehensiveContact};';';';

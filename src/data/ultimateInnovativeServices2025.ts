@@ -1,5 +1,5 @@
 export interface UltimateInnovativeService {
-  id: string;
+  "id": string;
   title: string;
   description: string;
   category: string;
@@ -25,7 +25,7 @@ contactInfo: {
 };
   technicalSpecs?: {
 
-    technology: string[];
+    "technology": string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
@@ -49,5 +49,4 @@ export
   'Robotics & Automation','
   'Biotechnology','
   'Space Technology','  'Green Technology'];
-;
 export const SERVICE_SUBCATEGORIES = {

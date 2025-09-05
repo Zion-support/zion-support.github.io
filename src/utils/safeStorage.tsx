@@ -1,7 +1,7 @@
 export const safeStorage = {
 export default safeStorage;
 
-// In - memory storage for fallback with optimizationsconst inMemoryStore = {};;
+// In - memory storage for fallback with optimizationsconst inMemoryStore = {};
 let localStorageAvailable = null; // Cache the availability check
 let lastAvailabilityCheck = 0;
 const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
@@ -52,7 +52,7 @@ function safeConsoleError($1) {
 
 export const safeStorage = {
 
-  getItem: ke y => {
+  "getItem": ke y => {
 
     try {
       return localStorage.getItem(key);
@@ -63,7 +63,7 @@ export const safeStorage = {
     }
   },
 
-  setItem: (key, value) => {
+  "setItem": (key, value) => {
 
     try {
       localStorage.setItem(key, value);
@@ -75,7 +75,7 @@ export const safeStorage = {
     }
   },
 
-  removeItem: ke y => {
+  "removeItem": ke y => {
 
     try {
       localStorage.removeItem(key);
@@ -87,7 +87,7 @@ export const safeStorage = {
     }
   },
 
-  clear: () => {
+  "clear": () => {
     try {
       localStorage.clear();
       return true;
@@ -98,7 +98,7 @@ export const safeStorage = {
     }
   },
 
-  key: inde x => {
+  "key": inde x => {
 
     try {
       return localStorage.key(index);

@@ -28,8 +28,8 @@ class BuildMonitor {
       console.log('Running build check...');
       
       const child = spawn('npm', ['run', 'build'], {
-        stdio: ['pipe', 'pipe', 'pipe'],
-        cwd: process.cwd()
+        "stdio": ['pipe', 'pipe', 'pipe'],
+        "cwd": process.cwd()
       };);
 
       let output = ;';';
@@ -48,13 +48,13 @@ class BuildMonitor {
           console.log('Build check passed ✓')}
           this.lastBuildTime = new Date()} else {
           console.log('Build check failed ✗');
-          console.log('Output:', output);
-          console.log('Errors:', errorOutput);
+          console.log('"Output": ', output);
+          console.log('"Errors": ', errorOutput);
           
           // Attempt to fix common build issues
           this.attemptBuildFix()}
       })} catch (error) {
-      console.error('Error running build check:', error.message)}
+      console.error('Error running build "check": ', error.message)}
   }
 
   async attemptBuildFix() {
@@ -63,8 +63,8 @@ class BuildMonitor {
       
       // Clean build directory
       const cleanChild = spawn('npm', ['run', 'clean'], {
-        stdio: 'inherit',
-        cwd: process.cwd()
+        "stdio": 'inherit',
+        "cwd": process.cwd()
       };);
 
       cleanChild.on('close', (code) => {
@@ -75,7 +75,7 @@ class BuildMonitor {
           this.runBuildCheck()} else {
           console.log('Clean failed')}
       })} catch (error) {
-      console.error('Error running build fix:', error.message)}
+      console.error('Error running build "fix": ', error.message)}
   }
 
   stop() {

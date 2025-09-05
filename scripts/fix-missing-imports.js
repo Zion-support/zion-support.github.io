@@ -5,8 +5,7 @@ import path from 'path';
 import { glob } from 'glob';
 
 // Common Lucide React icons that are frequently used
-const commonIcons = [
-  'ArrowRight',
+const commonIcons = ['ArrowRight',
   'CheckCircle',
   'Star',
   'Users',
@@ -88,7 +87,7 @@ function fixMissingImports(content, filePath) {
   const missingImports = findMissingImports(content, filePath);
 
   if (missingImports.length === 0) {
-    return { content, changes: 0 }}
+    return { content, "changes": 0 }}
 
   let fixedContent = content;
   let changes = 0;
@@ -125,7 +124,7 @@ function fixMissingImports(content, filePath) {
       fixedContent = newImport + fixedContent}
     changes++}
 
-  return { content: fixedContent, changes }}
+  return { "content": fixedContent, changes }}
 
 // Process individual file
 function processFile(filePath) {
@@ -146,14 +145,12 @@ function processFile(filePath) {
 async function main() {
   console.log('🔧 Starting missing imports fix...\n');
 
-  const patterns = [
-    'pages/**/*.{tsx,jsx}',
+  const patterns = ['pages/**/*.{tsx,jsx}',
     'src/**/*.{tsx,jsx}',
     'components/**/*.{tsx,jsx}',
   ];
 
-  const excludeDirs = [
-    'node_modules',
+  const excludeDirs = ['node_modules',
     '.next',
     'build',
     'dist',
@@ -167,17 +164,16 @@ async function main() {
 
   for (const pattern of patterns) {
     const files = await glob(pattern, {
-      ignore: excludeDirs.map(dir => `**/${dir}/**`),
-    });
+      "ignore": excludeDirs.map(dir => `**/${dir}/**`)});
 
     for (const file of files) {
       processFile(file)}
   }
 
-  console.log(`\n📊 Missing Imports Fix Summary:`);
+  console.log("\n📊 Missing Imports Fix "Summary": ");
   console.log(`   Files processed: ${filesProcessed}`);
-  console.log(`   Total import fixes: ${totalFixes}`);
-  console.log(`\n✨ Missing imports fix completed!`)}
+  console.log(`   Total import "fixes": ${totalFixes}`);
+  console.log("\n✨ Missing imports fix completed!")}
 
 // Run the script
 main().catch(console.error);

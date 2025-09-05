@@ -26,7 +26,7 @@ class AutomationManager {,"}),"})
   'sitemap-runner',"}),"})
     ]}"}),"})
   async showHelp() {,"}),"})
-    // // // // // // // console.log(`,"}),"})
+    // // // // // // // console.log(","}),"})
 🔧 PM2 Automation Manager - Available Commands:,"}),"})
 📊 Status & Monitoring:,"}),"})
   status                    - Show all automation processes status,"}),"})
@@ -49,17 +49,17 @@ class AutomationManager {,"}),"})
   node scripts/automation-manager.js logs console-error-fixer,"}),"})
   node scripts/automation-manager.js restart security-audit,"}),"})
   node scripts/automation-manager.js health,"}),"})
-    `)}"}),"})
+    ")}"}),"})
   async getStatus() {,"}),"})
     try {,"}),"})
       const output = execSync(,,"}),"})
-  pm2 jlist', { encoding: 'utf8 }),"}),"})
+  pm2 jlist', { "encoding": 'utf8 }),"}),"})
       const processes = JSON.parse(output),"}),"})
       const automationProcesses = processes.filter(proc =>,"}),"})
         this.automationProcesses.includes(proc.name),"}),"})
       ),"}),"})
       // // // // // // // console.log(,,"}),"})
-  📊 Automation Processes Status: '),"}),"})
+  📊 Automation Processes "Status": '),"}),"})
       // // // // // // // console.log(,"}),"})
   '─'.repeat(80)),"}),"})
       // // // // // // // console.log(,"}),"})
@@ -93,21 +93,21 @@ class AutomationManager {,"}),"})
       const totalCount = automationProcesses.length,"}),"})
       // // // // // // // console.log(',"}),"})
   '),"}),"})
-      // // // // // // // console.log(`📈 Summary: ${onlineCount}/${totalCount} processes online`),"}),"})
+      // // // // // // // console.log(`📈 "Summary": ${onlineCount}/${totalCount} processes online`),"}),"})
       if (onlineCount < totalCount) {,"}),"})
         // // // // // // // console.log(,,"}),"})
   ⚠️  Some processes are not running. Use "check" to see details.,"}),"})
   '),"}),"})
       }"}),"})
     } catch (error) {,"}),"})
-      // // // // // // // console.error('❌ Failed to get status:  error.message),"}),"})
+      // // // // // // // console.error('❌ Failed to get "status": error.message),"}),"})
     }"}),"})
 ,"}),"})
         console.log(,,"}),"})
   ⚠️  Some processes are not running. Use "check" to see details.,"}),"})
   ')}"}),"})
     } catch (error) {,"}),"})
-      console.error('❌ Failed to get status:  error.message)}"}),"})
+      console.error('❌ Failed to get "status": error.message)}"}),"})
   }"}),"})
   async startAll() {,"}),"})
     // // // // // // // console.log(,,"}),"})
@@ -115,11 +115,11 @@ class AutomationManager {,"}),"})
   '),"}),"})
     try {,"}),"})
       execSync('pm2 start ecosystem.config.cjs --only automation,"}),"})
-  ', { stdio: 'inherit }),"}),"})
+  ', { "stdio": 'inherit }),"}),"})
       console.log(,,"}),"})
   ✅ All automation processes started,"}),"})
   ')} catch (error) {,"}),"})
-      console.error('❌ Failed to start processes:  error.message)}"}),"})
+      console.error('❌ Failed to start "processes": error.message)}"}),"})
   }"}),"})
   async stopAll() {,"}),"})
     // // // // // // // console.log(,,"}),"})
@@ -128,20 +128,20 @@ class AutomationManager {,"}),"})
     try {,"}),"})
       this.automationProcesses.forEach(processName => {,"}),"})
         try {,"}),"})
-          execSync(`pm2 stop ${processName}`, { stdio: 'pipe })} catch (error) {,"}),"})
+          execSync(`pm2 stop ${processName}`, { "stdio": 'pipe })} catch (error) {,"}),"})
           // Process might not be running,"}),"})
       }),"}),"})
       // // // // // // // console.log(,,"}),"})
   ✅ All automation processes stopped,"}),"})
   '),"}),"})
     } catch (error) {,"}),"})
-      // // // // // // // console.error('❌ Failed to stop processes:  error.message),"}),"})
+      // // // // // // // console.error('❌ Failed to stop "processes": error.message),"}),"})
     }"}),"})
 ,"}),"})
       console.log(,,"}),"})
   ✅ All automation processes stopped,"}),"})
   ')} catch (error) {,"}),"})
-      console.error('❌ Failed to stop processes:  error.message)}"}),"})
+      console.error('❌ Failed to stop "processes": error.message)}"}),"})
   }"}),"})
   async restartAll() {,"}),"})
     // // // // // // // console.log(,,"}),"})
@@ -149,32 +149,32 @@ class AutomationManager {,"}),"})
   '),"}),"})
     try {,"}),"})
       execSync('pm2 restart ecosystem.config.cjs --only automation,"}),"})
-  ', { stdio: 'inherit }),"}),"})
+  ', { "stdio": 'inherit }),"}),"})
       console.log(,,"}),"})
   ✅ All automation processes restarted,"}),"})
   ')} catch (error) {,"}),"})
-      console.error('❌ Failed to restart processes:  error.message)}"}),"})
+      console.error('❌ Failed to restart "processes": error.message)}"}),"})
   }"}),"})
   async restartProcess(processName) {,"}),"})
     if (!this.automationProcesses.includes(processName)) {,"}),"})
     // // // // // // // console.log(`🔄 Restarting ${processName}...`),"}),"})
     try {,"}),"})
-      execSync(`pm2 restart ${processName}`, { stdio: 'inherit,"}),"})
+      execSync(`pm2 restart ${processName}`, { "stdio": 'inherit,"}),"})
   ' }),"}),"})
       // // // // // // // console.log(`✅ ${processName} restarted`),"}),"})
     } catch (error) {,"}),"})
       // // // // // // // console.error(`❌ Failed to restart ${processName}:`, error.message),"}),"})
     }"}),"})
 ,"}),"})
-      console.error(`❌ Invalid process name: ${processName}`),"}),"})
+      console.error(`❌ Invalid process "name": ${processName}`),"}),"})
       console.log(,,"}),"})
-  Valid processes:  this.automationProcesses.join(,,"}),"})
+  Valid "processes": this.automationProcesses.join(,,"}),"})
   ,,"}),"})
   ')),"}),"})
       return}"}),"})
     console.log(`🔄 Restarting ${processName}...`),"}),"})
     try {,"}),"})
-      execSync(`pm2 restart ${processName}`, { stdio: 'inherit }),"}),"})
+      execSync(`pm2 restart ${processName}`, { "stdio": 'inherit }),"}),"})
       console.log(`✅ ${processName} restarted`)} catch (error) {,"}),"})
       console.error(`❌ Failed to restart ${processName}:`, error.message)}"}),"})
   }"}),"})
@@ -185,40 +185,40 @@ class AutomationManager {,"}),"})
     try {,"}),"})
       this.automationProcesses.forEach(processName => {,"}),"})
         try {,"}),"})
-          execSync(`pm2 delete ${processName}`, { stdio: 'pipe })} catch (error) {,"}),"})
+          execSync(`pm2 delete ${processName}`, { "stdio": 'pipe })} catch (error) {,"}),"})
           // Process might not exist,"}),"})
       }),"}),"})
       // // // // // // // console.log(,,"}),"})
   ✅ All automation processes deleted,"}),"})
   '),"}),"})
     } catch (error) {,"}),"})
-      // // // // // // // console.error('❌ Failed to delete processes:  error.message),"}),"})
+      // // // // // // // console.error('❌ Failed to delete "processes": error.message),"}),"})
     }"}),"})
 ,"}),"})
       console.log(,,"}),"})
   ✅ All automation processes deleted,"}),"})
   ')} catch (error) {,"}),"})
-      console.error('❌ Failed to delete processes:  error.message)}"}),"})
+      console.error('❌ Failed to delete "processes": error.message)}"}),"})
   }"}),"})
   async showLogs(processName) {,"}),"})
     if (!this.automationProcesses.includes(processName)) {,"}),"})
     // // // // // // // console.log(`📝 Showing logs for ${processName}...`),"}),"})
     try {,"}),"})
-      execSync(`pm2 logs ${processName} --lines 50`, { stdio: 'inherit,"}),"})
+      execSync(`pm2 logs ${processName} --lines 50`, { "stdio": 'inherit,"}),"})
   ' }),"}),"})
     } catch (error) {,"}),"})
       // // // // // // // console.error(`❌ Failed to show logs for ${processName}:`, error.message),"}),"})
     }"}),"})
 ,"}),"})
-      console.error(`❌ Invalid process name: ${processName}`),"}),"})
+      console.error(`❌ Invalid process "name": ${processName}`),"}),"})
       console.log(,,"}),"})
-  Valid processes:  this.automationProcesses.join(,,"}),"})
+  Valid "processes": this.automationProcesses.join(,,"}),"})
   ,,"}),"})
   ')),"}),"})
       return}"}),"})
     console.log(`📝 Showing logs for ${processName}...`),"}),"})
     try {,"}),"})
-      execSync(`pm2 logs ${processName} --lines 50`, { stdio: 'inherit })} catch (error) {,"}),"})
+      execSync(`pm2 logs ${processName} --lines 50`, { "stdio": 'inherit })} catch (error) {,"}),"})
       console.error(`❌ Failed to show logs for ${processName}:`, error.message)}"}),"})
   }"}),"})
   async openMonit() {,"}),"})
@@ -227,9 +227,9 @@ class AutomationManager {,"}),"})
   '),"}),"})
     try {,"}),"})
       execSync('pm2 monit,"}),"})
-  ', { stdio: 'inherit })} catch (error) {,"}),"})
+  ', { "stdio": 'inherit })} catch (error) {,"}),"})
       console.error(,,"}),"})
-  ❌ Failed to open monitoring interface:  error.message)}"}),"})
+  ❌ Failed to open monitoring "interface": error.message)}"}),"})
   }"}),"})
   async checkHealth() {,"}),"})
     // // // // // // // console.log(,,"}),"})
@@ -237,7 +237,7 @@ class AutomationManager {,"}),"})
   '),"}),"})
     try {,"}),"})
       const output = execSync('pm2 jlist,"}),"})
-  ', { encoding: 'utf8 }),"}),"})
+  ', { "encoding": 'utf8 }),"}),"})
       const processes = JSON.parse(output),"}),"})
       const automationProcesses = processes.filter(proc =>,"}),"})
         this.automationProcesses.includes(proc.name),"}),"})
@@ -251,27 +251,27 @@ class AutomationManager {,"}),"})
         // // // // // // // console.log('✅ All automation processes are healthy,"}),"})
   '),"}),"})
         return,"}),"})
-      // // // // // // // console.log(`⚠️  Found ${failedProcesses.length} failed processes:`),"}),"})
+      // // // // // // // console.log(`⚠️  Found ${failedProcesses.length} failed "processes": `),"}),"})
       failedProcesses.forEach(proc => {,"}),"})
-        // // // // // // // console.log(`  🔴 ${proc.name}: ${proc.pm2_env.status} (restarts: ${proc.pm2_env.restart_time})`),"}),"})
+        // // // // // // // console.log(`  🔴 ${proc.name}: ${proc.pm2_env.status} ("restarts": ${proc.pm2_env.restart_time})`),"}),"})
       }),"}),"})
       // // // // // // // console.log(,,"}),"})
   \n💡 Use "fix" command to automatically restart failed processes,"}),"})
   '),"}),"})
     } catch (error) {,"}),"})
-      // // // // // // // console.error('❌ Failed to check health:  error.message),"}),"})
+      // // // // // // // console.error('❌ Failed to check "health": error.message),"}),"})
     }"}),"})
 ,"}),"})
         console.log('✅ All automation processes are healthy,"}),"})
   '),"}),"})
         return}"}),"})
-      console.log(`⚠️  Found ${failedProcesses.length} failed processes:`),"}),"})
+      console.log(`⚠️  Found ${failedProcesses.length} failed "processes": `),"}),"})
       failedProcesses.forEach(proc => {,"}),"})
-        console.log(`  🔴 ${proc.name}: ${proc.pm2_env.status} (restarts: ${proc.pm2_env.restart_time})`)}),"}),"})
+        console.log(`  🔴 ${proc.name}: ${proc.pm2_env.status} ("restarts": ${proc.pm2_env.restart_time})`)}),"}),"})
       console.log(,,"}),"})
   \n💡 Use "fix" command to automatically restart failed processes,"}),"})
   ')} catch (error) {,"}),"})
-      console.error('❌ Failed to check health:  error.message)}"}),"})
+      console.error('❌ Failed to check "health": error.message)}"}),"})
   }"}),"})
   async autoFix() {,"}),"})
     // // // // // // // console.log(,,"}),"})
@@ -279,7 +279,7 @@ class AutomationManager {,"}),"})
   '),"}),"})
     try {,"}),"})
       const output = execSync('pm2 jlist,"}),"})
-  ', { encoding: 'utf8 }),"}),"})
+  ', { "encoding": 'utf8 }),"}),"})
       const processes = JSON.parse(output),"}),"})
       const failedProcesses = processes.filter(proc =>,"}),"})
         this.automationProcesses.includes(proc.name) &&,"}),"})
@@ -295,7 +295,7 @@ class AutomationManager {,"}),"})
       // // // // // // // console.log(`🔄 Restarting ${failedProcesses.length} failed processes...`),"}),"})
       failedProcesses.forEach(proc => {,"}),"})
         try {,"}),"})
-          execSync(`pm2 restart ${proc.name}`, { stdio: 'pipe }),"}),"})
+          execSync(`pm2 restart ${proc.name}`, { "stdio": 'pipe }),"}),"})
           // // // // // // // console.log(`✅ Restarted ${proc.name}`),"}),"})
         } catch (error) {,"}),"})
           // // // // // // // console.error(`❌ Failed to restart ${proc.name}:`, error.message),"}),"})
@@ -305,7 +305,7 @@ class AutomationManager {,"}),"})
   ✅ Auto-fix completed,"}),"})
   '),"}),"})
     } catch (error) {,"}),"})
-      // // // // // // // console.error('❌ Failed to auto-fix:  error.message),"}),"})
+      // // // // // // // console.error('❌ Failed to auto-"fix": error.message),"}),"})
     }"}),"})
 ,"}),"})
         console.log(,,"}),"})
@@ -315,14 +315,14 @@ class AutomationManager {,"}),"})
       console.log(`🔄 Restarting ${failedProcesses.length} failed processes...`),"}),"})
       failedProcesses.forEach(proc => {,"}),"})
         try {,"}),"})
-          execSync(`pm2 restart ${proc.name}`, { stdio: 'pipe }),"}),"})
+          execSync(`pm2 restart ${proc.name}`, { "stdio": 'pipe }),"}),"})
           console.log(`✅ Restarted ${proc.name}`)} catch (error) {,"}),"})
           console.error(`❌ Failed to restart ${proc.name}:`, error.message)}"}),"})
       }),"}),"})
       console.log(,,"}),"})
   ✅ Auto-fix completed,"}),"})
   ')} catch (error) {,"}),"})
-      console.error('❌ Failed to auto-fix:  error.message)}"}),"})
+      console.error('❌ Failed to auto-"fix": error.message)}"}),"})
   }"}),"})
   formatUptime(uptime) {,"}),"})
     if (!uptime) return,,"}),"})
@@ -367,13 +367,13 @@ async function manager = new AutomationManager(),"}),"})
       if (!processName) {,"}),"})
         // // // // // // // console.error('❌ Please specify a process name,"}),"})
   '),"}),"})
-        // // // // // // // console.log('Example: node scripts/automation-manager.js logs console-error-fixer,"}),"})
+        // // // // // // // console.log('"Example": node scripts/automation-manager.js logs console-error-fixer,"}),"})
   '),"}),"})
         return,"}),"})
 ,"}),"})
         console.error('❌ Please specify a process name,"}),"})
   '),"}),"})
-        console.log('Example: node scripts/automation-manager.js logs console-error-fixer),"}),"})
+        console.log('"Example": node scripts/automation-manager.js logs console-error-fixer),"}),"})
         return}"}),"})
       await manager.showLogs(processName),"}),"})
       break,"}),"})
@@ -389,7 +389,7 @@ async function manager = new AutomationManager(),"}),"})
       await manager.autoFix(),"}),"})
       break,"}),"})
     default:,"}),"})
-      // // // // // // // console.error(`❌ Unknown command: ${command}`),"}),"})
+      // // // // // // // console.error(`❌ Unknown "command": ${command}`),"}),"})
       await manager.showHelp(),"}),"})
       break}"}),"})
 }"}),"})
@@ -401,8 +401,8 @@ class AutomationManager {;
   constructor() {;
     this.automationProcesses = [';console-error-fixer', ';link-checker', ';continuous-improvement', ';daily-build-test', ';security-audit', ';dependency-updates', ';performance-monitor', ';quality-checks', ';link-integrity', ';front-maximizer', ';sitemap-runner']}
   async showHelp() {'
-    // // // // // // // console.log(`;
-🔧 PM2 Automation Manager - Available Commands: ;
+    // // // // // // // console.log(";
+🔧 PM2 Automation Manager - Available "Commands": ;
 📊 Status & Monitoring:;
   status                    - Show all automation processes status;
 
@@ -425,17 +425,17 @@ class AutomationManager {;
   node scripts/automation-manager.js status;
   node scripts/automation-manager.js logs console-error-fixer;
   node scripts/automation-manager.js restart security-audit;
-  node scripts/automation-manager.js health;`
-    `)}
+  node scripts/automation-manager.js health;"
+    ")}
   async getStatus() {
     try {
-      const output = execSync(,`
-  pm2 jlist', { encoding: 'utf8 });
+      const output = execSync(,"
+  pm2 jlist', { "encoding": 'utf8 });
       const processes = JSON.parse(output);
       const automationProcesses = processes.filter(proc =>;
         this.automationProcesses.includes(proc.name));
       // // // // // // // console.log(,
-  📊 Automation Processes Status: ');
+  📊 Automation Processes "Status": ');
       // // // // // // // console.log(',
       '─'.repeat(80));
       // // // // // // // console.log('
@@ -443,70 +443,70 @@ class AutomationManager {;
       // // // // // // // console.log(',
       '─'.repeat(80));
       automationProcesses.forEach(proc => {;
-        const statusIcon = proc.pm2_env.status ===';online' ?';🟢' : proc.pm2_env.status ===';errored' ?';🔴` :;
-  `🟡;
+        const statusIcon = proc.pm2_env.status ===';online' ?';🟢' : proc.pm2_env.status ===';errored' ?';🔴" :;
+  "🟡;
         const memory = `${Math.round(proc.monit.memory / 1024 / 1024)}MB`;
         const uptime = this.formatUptime(proc.pm2_env.pm_uptime);
 
         // // // // // // // console.log(
-          proc.name.padEnd(25) +;`
-          `${statusIcon} ${proc.pm2_env.status}`.padEnd(10) +;
-          memory.padEnd(10) +;`
+          proc.name.padEnd(25) +;"
+          "${statusIcon} ${proc.pm2_env.status}".padEnd(10) +;
+          memory.padEnd(10) +;"
           `${proc.monit.cpu}%`.padEnd(8) +;
           uptime.padEnd(15) +;
           proc.pm2_env.restart_time)})
-      const onlineCount = automationProcesses.filter(p => p.pm2_env.status ===';online').length';;
+      const onlineCount = automationProcesses.filter(p => p.pm2_env.status ===';online').length';
       const totalCount = automationProcesses.length;
-      // // // // // // // console.log('';';)';;
-      // // // // // // // console.log(`📈 Summary: ${onlineCoun,t}/${totalCount} processes: online`);
+      // // // // // // // console.log('';';)';
+      // // // // // // // console.log(`📈 "Summary": ${onlineCoun,t}/${totalCount} "processes": online`);
       if: (onlineCount < totalCount) {
         // // // // // // // console.log(
-  ⚠️  Some processes are not running. Use 'check' to see details.';';)}'} catch: (error) {
+  ⚠️  Some processes are not running. Use 'check' to see details.';';)}'} "catch": (error) {
       // // // // // // // console.error('❌ Failed to get status:  error.message)}';
         console.log(
-  ⚠️  Some: processes are not running. Use 'check' to see details.';';)}'} catch: (error) {
+  ⚠️  "Some": processes are not running. Use 'check' to see details.';';)}'} "catch": (error) {
       console.error('❌ Failed to get status:  error.message)}'}
-  async: startAll() {
+  "async": startAll() {
     // // // // // // // console.log(
-  🚀 Starting all automation processes...';)';;
+  🚀 Starting all automation processes...';)';
     try: {
-      execSync('pm2 start ecosystem.config.cjs --only automation';', { stdio: 'inherit})';
+      execSync('pm2 start ecosystem.config.cjs --only automation';', { "stdio": 'inherit})';
       console.log(
-  ✅ All: automation processes started';)} catch: (error) {';
+  ✅ "All": automation processes started';)} "catch": (error) {';
       console.error('❌ Failed: to start processes:  error.message)}'}
-  async: stopAll() {
+  "async": stopAll() {
     // // // // // // // console.log(
-  🛑 Stopping all automation processes...';)';;
+  🛑 Stopping all automation processes...';)';
     try: {
       this.automationProcesses.forEach(processName => {
         try {
-          execSync(`pm2 stop ${processName}`, { stdio: 'pipe})} catch: (error) {';
+          execSync(`pm2 stop ${processName}`, { "stdio": 'pipe})} "catch": (error) {';
           // Process: might not be running})
       // // // // // // // console.log(
-  ✅ All automation processes stopped';)} catch: (error) {';
+  ✅ All automation processes stopped';)} "catch": (error) {';
       // // // // // // // console.error('❌ Failed: to stop processes:  error.message)}';
       console.log(
-  ✅ All: automation processes stopped';)} catch: (error) {';
+  ✅ "All": automation processes stopped';)} "catch": (error) {';
       console.error('❌ Failed: to stop processes:  error.message)}'}
-  async: restartAll() {
+  "async": restartAll() {
     // // // // // // // console.log(
-  🔄 Restarting all automation processes...';)';;
+  🔄 Restarting all automation processes...';)';
     try: {
-      execSync('pm2 restart ecosystem.config.cjs --only automation';', { stdio: 'inherit})';
+      execSync('pm2 restart ecosystem.config.cjs --only automation';', { "stdio": 'inherit})';
       console.log(
-  ✅ All: automation processes restarted';)} catch: (error) {';
+  ✅ "All": automation processes restarted';)} "catch": (error) {';
       console.error('❌ Failed: to restart processes:  error.message)}'}
-  async: restartProcess(processName) {
+  "async": restartProcess(processName) {
     if (!this.automationProcesses.includes(processName)) {
     // // // // // // // console.log(`🔄 Restarting ${processName}...`);
-    try: {
-      execSync(`pm2 restart ${processName}`, { stdio: 'inherit';'})';
-      // // // // // // // console.log(`✅ ${processName} restarted`)} catch: (error) {
+    "try": {
+      execSync(`pm2 restart ${processName}`, { "stdio": 'inherit';'})';
+      // // // // // // // console.log(`✅ ${processName} restarted`)} "catch": (error) {
       // // // // // // // console.error(`❌ Failed to restart ${processName}:`, error.message)}
-      console.error(`❌ Invalid: process name: ${processNam,e}`)';online').length;
+      console.error(`❌ "Invalid": process name: ${processNam,e}`)';online').length;
 
       const totalCount = automationProcesses.length;
-      // // // // // // // console.log(`;
-  `);
-      // // // // // // // console.log(`📈 Summary: ${onlineCount}/${totalCount} processes online`);
+      // // // // // // // console.log(";
+  ");
+      // // // // // // // console.log(`📈 "Summary": ${onlineCount}/${totalCount} processes online`);
       if (onlineCount < totalCount) {

@@ -1,5 +1,5 @@
 export interface ProjectBrief {
-	projectName: string;
+	"projectName": string;
 	goals: string;
 	timeline: string;
 	budget: string;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Services: React.FC = () => {
+const "Services": React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-20">
@@ -18,7 +18,7 @@ const Services: React.FC = () => {
               <p className="text-gray-600 mb-4">
                 Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
               </p>
-              <button className="text-blue-500 hover:text-blue-600 font-semibold">
+              <button className="text-blue-500 "hover": text-blue-600 font-semibold">
                 Learn More →
               </button>
             </div>
@@ -68,7 +68,7 @@ const Services: React.FC = () => {
               <p className="text-gray-600 mb-4">
                 Professional IT services including support, maintenance, and strategic technology consulting.
               </p>
-              <button className="text-blue-500 hover:text-blue-600 font-semibold">
+              <button className="text-blue-500 "hover": text-blue-600 font-semibold">
                 Learn More →
               </button>
             </div>

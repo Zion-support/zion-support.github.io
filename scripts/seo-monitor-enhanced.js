@@ -1,17 +1,17 @@
 console.log('🔍 Enhanced SEO Monitor Starting...');
 
 const seoChecks = {
-  metaTags: () => {
+  "metaTags": () => {
     console.log('🏷️ Checking meta tags...');
     return true;
   },
   
-  sitemap: () => {
+  "sitemap": () => {
     console.log('🗺️ Checking sitemap...');
     return true;
   },
   
-  robots: () => {
+  "robots": () => {
     console.log('🤖 Checking robots.txt...');
     return true;
   }

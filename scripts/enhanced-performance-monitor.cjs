@@ -10,49 +10,49 @@ console.log('====================================');
 
 // Enhanced performance monitoring configuration
 const config = {
-  monitoringInterval: 5000, // 5 seconds
-  maxSamples: 100,
-  alertThresholds: {
+  "monitoringInterval": 5000, // 5 seconds
+  "maxSamples": 100,
+  "alertThresholds": {
     cpu: 80,
-    memory: 85,
-    disk: 90,
-    responseTime: 5000
+    "memory": 85,
+    "disk": 90,
+    "responseTime": 5000
   },
-  enableRealTime: true,
-  enableAlerts: true,
-  enableReporting: true
+  "enableRealTime": true,
+  "enableAlerts": true,
+  "enableReporting": true
 };
 
 // Performance metrics structure
 const performanceMetrics = {
-  timestamp: new Date().toISOString(),
-  sessionId: Date.now().toString(),
-  systemInfo: {
+  "timestamp": new Date().toISOString(),
+  "sessionId": Date.now().toString(),
+  "systemInfo": {
     platform: os.platform(),
-    arch: os.arch(),
-    nodeVersion: process.version,
-    totalMemory: os.totalmem(),
-    freeMemory: os.freemem(),
-    cpus: os.cpus().length,
-    uptime: os.uptime()
+    "arch": os.arch(),
+    "nodeVersion": process.version,
+    "totalMemory": os.totalmem(),
+    "freeMemory": os.freemem(),
+    "cpus": os.cpus().length,
+    "uptime": os.uptime()
   },
-  metrics: {
+  "metrics": {
     cpu: [],
-    memory: [],
-    disk: [],
-    network: [],
-    build: {},
-    runtime: {}
+    "memory": [],
+    "disk": [],
+    "network": [],
+    "build": {},
+    "runtime": {}
   },
-  alerts: [],
-  recommendations: [],
-  summary: {
+  "alerts": [],
+  "recommendations": [],
+  "summary": {
     averageCpu: 0,
-    averageMemory: 0,
-    peakCpu: 0,
-    peakMemory: 0,
-    totalAlerts: 0,
-    performanceScore: 0
+    "averageMemory": 0,
+    "peakCpu": 0,
+    "peakMemory": 0,
+    "totalAlerts": 0,
+    "performanceScore": 0
   }
 };
 
@@ -89,36 +89,36 @@ function getSystemMetrics() {
   const memoryUsage = Math.round((usedMemory / totalMemory) * 100);
   
   return {
-    cpu: cpuUsage,
-    memory: memoryUsage,
-    memoryUsed: usedMemory,
-    memoryTotal: totalMemory,
-    memoryFree: freeMemory,
-    timestamp: Date.now()
+    "cpu": cpuUsage,
+    "memory": memoryUsage,
+    "memoryUsed": usedMemory,
+    "memoryTotal": totalMemory,
+    "memoryFree": freeMemory,
+    "timestamp": Date.now()
   }}
 
 // Get disk usage
 function getDiskUsage() {
   try {
-    const output = execSync('df -h /', { encoding: 'utf8' });
+    const output = execSync('df -h /', { "encoding": 'utf8' });
     const lines = output.trim().split('\n');
     const data = lines[1].split(/\s+/);
     
     return {
-      total: data[1],
-      used: data[2],
-      available: data[3],
-      percentage: parseInt(data[4].replace('%', '')),
-      timestamp: Date.now()
+      "total": data[1],
+      "used": data[2],
+      "available": data[3],
+      "percentage": parseInt(data[4].replace('%', '')),
+      "timestamp": Date.now()
     }} catch (error) {
     log('warn', 'Failed to get disk usage', error.message);
-    return { percentage: 0, timestamp: Date.now() }}
+    return { "percentage": 0, "timestamp": Date.now() }}
 }
 
 // Get network metrics
 function getNetworkMetrics() {
   try {
-    const output = execSync('cat /proc/net/dev', { encoding: 'utf8' });
+    const output = execSync('cat /proc/net/dev', { "encoding": 'utf8' });
     const lines = output.trim().split('\n');
     
     let totalBytes = 0;
@@ -136,10 +136,10 @@ function getNetworkMetrics() {
     return {
       totalBytes,
       totalPackets,
-      timestamp: Date.now()
+      "timestamp": Date.now()
     }} catch (error) {
     log('warn', 'Failed to get network metrics', error.message);
-    return { totalBytes: 0, totalPackets: 0, timestamp: Date.now() }}
+    return { "totalBytes": 0, "totalPackets": 0, "timestamp": Date.now() }}
 }
 
 // Monitor build performance
@@ -151,8 +151,8 @@ function monitorBuildPerformance() {
     
     // Run build command
     const buildOutput = execSync('npm run build', { 
-      encoding: 'utf8',
-      stdio: 'pipe'
+      "encoding": 'utf8',
+      "stdio": 'pipe'
     });
     
     const endTime = Date.now();
@@ -161,9 +161,9 @@ function monitorBuildPerformance() {
     // Analyze build output for performance insights
     const buildMetrics = {
       duration,
-      success: true,
-      outputSize: buildOutput.length,
-      timestamp: new Date().toISOString()
+      "success": true,
+      "outputSize": buildOutput.length,
+      "timestamp": new Date().toISOString()
     };
     
     // Check for performance warnings in build output
@@ -183,9 +183,9 @@ function monitorBuildPerformance() {
     
     const buildMetrics = {
       duration,
-      success: false,
-      error: error.message,
-      timestamp: new Date().toISOString()
+      "success": false,
+      "error": error.message,
+      "timestamp": new Date().toISOString()
     };
     
     performanceMetrics.metrics.build = buildMetrics;
@@ -204,8 +204,8 @@ async function monitorRuntimePerformance() {
     
     // Start development server
     const child = require('child_process').spawn('npm', ['run', 'dev'], {
-      stdio: 'pipe',
-      detached: false
+      "stdio": 'pipe',
+      "detached": false
     });
     
     let output = '';
@@ -235,22 +235,22 @@ async function monitorRuntimePerformance() {
     // Test server response time
     const responseStart = Date.now();
     try {
-      const response = execSync('curl -s -o /dev/null -w "%{time_total}" http://localhost:3000', { 
-        encoding: 'utf8',
-        timeout: 10000
+      const response = execSync('curl -s -o /dev/null -w "%{time_total}" "http": //localhost:3000', { 
+        "encoding": 'utf8',
+        "timeout": 10000
       });
       const responseTime = parseFloat(response) * 1000;
       
       const runtimeMetrics = {
         startupTime,
         responseTime,
-        success: true,
-        timestamp: new Date().toISOString()
+        "success": true,
+        "timestamp": new Date().toISOString()
       };
       
       performanceMetrics.metrics.runtime = runtimeMetrics;
       
-      log('info', `Server started in ${startupTime}ms, response time: ${responseTime}ms`);
+      log('info', `Server started in ${startupTime}ms, response "time": ${responseTime}ms`);
       
       // Clean up
       child.kill();
@@ -261,14 +261,14 @@ async function monitorRuntimePerformance() {
       const runtimeMetrics = {
         startupTime,
         responseTime,
-        success: false,
-        error: error.message,
-        timestamp: new Date().toISOString()
+        "success": false,
+        "error": error.message,
+        "timestamp": new Date().toISOString()
       };
       
       performanceMetrics.metrics.runtime = runtimeMetrics;
       
-      log('error', `Runtime monitoring failed`, error.message);
+      log('error', "Runtime monitoring failed", error.message);
       
       // Clean up
       child.kill();
@@ -280,10 +280,10 @@ async function monitorRuntimePerformance() {
     const duration = endTime - startTime;
     
     const runtimeMetrics = {
-      startupTime: duration,
-      success: false,
-      error: error.message,
-      timestamp: new Date().toISOString()
+      "startupTime": duration,
+      "success": false,
+      "error": error.message,
+      "timestamp": new Date().toISOString()
     };
     
     performanceMetrics.metrics.runtime = runtimeMetrics;
@@ -299,32 +299,32 @@ function checkAlerts(metrics) {
   
   if (metrics.cpu > config.alertThresholds.cpu) {
     alerts.push({
-      type: 'cpu',
-      level: 'warning',
-      message: `High CPU usage: ${metrics.cpu}%`,
-      threshold: config.alertThresholds.cpu,
-      value: metrics.cpu,
-      timestamp: new Date().toISOString()
+      "type": 'cpu',
+      "level": 'warning',
+      "message": `High CPU usage: ${metrics.cpu}%`,
+      "threshold": config.alertThresholds.cpu,
+      "value": metrics.cpu,
+      "timestamp": new Date().toISOString()
     })}
   
   if (metrics.memory > config.alertThresholds.memory) {
     alerts.push({
-      type: 'memory',
-      level: 'warning',
-      message: `High memory usage: ${metrics.memory}%`,
-      threshold: config.alertThresholds.memory,
-      value: metrics.memory,
-      timestamp: new Date().toISOString()
+      "type": 'memory',
+      "level": 'warning',
+      "message": `High memory usage: ${metrics.memory}%`,
+      "threshold": config.alertThresholds.memory,
+      "value": metrics.memory,
+      "timestamp": new Date().toISOString()
     })}
   
   if (metrics.disk && metrics.disk.percentage > config.alertThresholds.disk) {
     alerts.push({
-      type: 'disk',
-      level: 'warning',
-      message: `High disk usage: ${metrics.disk.percentage}%`,
-      threshold: config.alertThresholds.disk,
-      value: metrics.disk.percentage,
-      timestamp: new Date().toISOString()
+      "type": 'disk',
+      "level": 'warning',
+      "message": `High disk usage: ${metrics.disk.percentage}%`,
+      "threshold": config.alertThresholds.disk,
+      "value": metrics.disk.percentage,
+      "timestamp": new Date().toISOString()
     })}
   
   return alerts}
@@ -337,61 +337,61 @@ function generateRecommendations() {
   // CPU recommendations
   if (averageCpu > 70) {
     recommendations.push({
-      type: 'cpu',
-      priority: 'high',
-      message: 'High average CPU usage detected',
-      action: 'Consider optimizing CPU-intensive operations or upgrading hardware'
+      "type": 'cpu',
+      "priority": 'high',
+      "message": 'High average CPU usage detected',
+      "action": 'Consider optimizing CPU-intensive operations or upgrading hardware'
     })}
   
   if (peakCpu > 90) {
     recommendations.push({
-      type: 'cpu',
-      priority: 'critical',
-      message: 'Peak CPU usage exceeded 90%',
-      action: 'Immediate optimization required - check for infinite loops or inefficient algorithms'
+      "type": 'cpu',
+      "priority": 'critical',
+      "message": 'Peak CPU usage exceeded 90%',
+      "action": 'Immediate optimization required - check for infinite loops or inefficient algorithms'
     })}
   
   // Memory recommendations
   if (averageMemory > 80) {
     recommendations.push({
-      type: 'memory',
-      priority: 'high',
-      message: 'High average memory usage detected',
-      action: 'Consider implementing memory optimization techniques or increasing available memory'
+      "type": 'memory',
+      "priority": 'high',
+      "message": 'High average memory usage detected',
+      "action": 'Consider implementing memory optimization techniques or increasing available memory'
     })}
   
   if (peakMemory > 95) {
     recommendations.push({
-      type: 'memory',
-      priority: 'critical',
-      message: 'Peak memory usage exceeded 95%',
-      action: 'Immediate memory optimization required - check for memory leaks'
+      "type": 'memory',
+      "priority": 'critical',
+      "message": 'Peak memory usage exceeded 95%',
+      "action": 'Immediate memory optimization required - check for memory leaks'
     })}
   
   // Build performance recommendations
   if (performanceMetrics.metrics.build.duration > 60000) { // More than 1 minute
     recommendations.push({
-      type: 'build',
-      priority: 'medium',
-      message: 'Build time is longer than 1 minute',
-      action: 'Consider optimizing build process, using build caching, or parallel builds'
+      "type": 'build',
+      "priority": 'medium',
+      "message": 'Build time is longer than 1 minute',
+      "action": 'Consider optimizing build process, using build caching, or parallel builds'
     })}
   
   // Runtime performance recommendations
   if (performanceMetrics.metrics.runtime.startupTime > 10000) { // More than 10 seconds
     recommendations.push({
-      type: 'runtime',
-      priority: 'medium',
-      message: 'Server startup time is longer than 10 seconds',
-      action: 'Consider optimizing server startup process or using faster development server'
+      "type": 'runtime',
+      "priority": 'medium',
+      "message": 'Server startup time is longer than 10 seconds',
+      "action": 'Consider optimizing server startup process or using faster development server'
     })}
   
   if (performanceMetrics.metrics.runtime.responseTime > 1000) { // More than 1 second
     recommendations.push({
-      type: 'runtime',
-      priority: 'high',
-      message: 'Server response time is longer than 1 second',
-      action: 'Consider optimizing server performance, database queries, or network requests'
+      "type": 'runtime',
+      "priority": 'high',
+      "message": 'Server response time is longer than 1 second',
+      "action": 'Consider optimizing server performance, database queries, or network requests'
     })}
   
   return recommendations}
@@ -445,9 +445,9 @@ async function main() {
     
     // Check for alerts
     const alerts = checkAlerts({
-      cpu: systemMetrics.cpu,
-      memory: systemMetrics.memory,
-      disk: diskMetrics
+      "cpu": systemMetrics.cpu,
+      "memory": systemMetrics.memory,
+      "disk": diskMetrics
     });
     
     performanceMetrics.alerts.push(...alerts);
@@ -475,32 +475,32 @@ async function main() {
     // Display summary
     log('info', 'Enhanced Performance Monitor Summary');
     log('info', '====================================');
-    log('info', `Average CPU usage: ${performanceMetrics.summary.averageCpu}%`);
-    log('info', `Peak CPU usage: ${performanceMetrics.summary.peakCpu}%`);
-    log('info', `Average memory usage: ${performanceMetrics.summary.averageMemory}%`);
-    log('info', `Peak memory usage: ${performanceMetrics.summary.peakMemory}%`);
-    log('info', `Build duration: ${performanceMetrics.metrics.build.duration}ms`);
-    log('info', `Server startup time: ${performanceMetrics.metrics.runtime.startupTime}ms`);
-    log('info', `Server response time: ${performanceMetrics.metrics.runtime.responseTime}ms`);
-    log('info', `Total alerts: ${performanceMetrics.summary.totalAlerts}`);
-    log('info', `Performance score: ${performanceMetrics.summary.performanceScore}/100`);
+    log('info', `Average CPU "usage": ${performanceMetrics.summary.averageCpu}%`);
+    log('info', `Peak CPU "usage": ${performanceMetrics.summary.peakCpu}%`);
+    log('info', `Average memory "usage": ${performanceMetrics.summary.averageMemory}%`);
+    log('info', `Peak memory "usage": ${performanceMetrics.summary.peakMemory}%`);
+    log('info', `Build "duration": ${performanceMetrics.metrics.build.duration}ms`);
+    log('info', `Server startup "time": ${performanceMetrics.metrics.runtime.startupTime}ms`);
+    log('info', `Server response "time": ${performanceMetrics.metrics.runtime.responseTime}ms`);
+    log('info', `Total "alerts": ${performanceMetrics.summary.totalAlerts}`);
+    log('info', `Performance "score": ${performanceMetrics.summary.performanceScore}/100`);
     
     if (performanceMetrics.alerts.length > 0) {
-      log('warn', 'Performance Alerts:');
+      log('warn', 'Performance "Alerts": ');
       performanceMetrics.alerts.forEach(alert => {
         log('warn', `- [${alert.level.toUpperCase()}] ${alert.message}`)})}
     
     if (performanceMetrics.recommendations.length > 0) {
-      log('info', 'Performance Recommendations:');
+      log('info', 'Performance "Recommendations": ');
       performanceMetrics.recommendations.forEach(rec => {
         log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
-        log('info', `  Action: ${rec.action}`)})}
+        log('info', `  "Action": ${rec.action}`)})}
     
     // Save performance report
     const reportPath = path.join(process.cwd(), `enhanced-performance-report-${performanceMetrics.sessionId}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(performanceMetrics, null, 2));
     
-    log('info', `Enhanced performance report saved to: enhanced-performance-report-${performanceMetrics.sessionId}.json`);
+    log('info', `Enhanced performance report saved "to": enhanced-performance-report-${performanceMetrics.sessionId}.json`);
     
     // Exit with appropriate status
     if (performanceMetrics.summary.performanceScore < 50) {

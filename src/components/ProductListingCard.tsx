@@ -5,14 +5,14 @@ import { Star, MapPin, Clock, User } from 'lucide-react';
 import { ProductListing } from '@/data/enhancedServices';
 
 interface ProductListingCardProps {
-  listing: ProductListing;
+  "listing": ProductListing;
   onBook: (listing: ProductListing) => void;
   onViewProfile: (listing: ProductListing) => void;
 }
 
 export function ProductListingCard({ listing, onBook, onViewProfile }: ProductListingCardProps) {
   return (
-    <Card className="hover:shadow-lg transition-shadow">
+    <Card className=""hover": shadow-lg transition-shadow">
       <CardHeader>
         <div className="flex items-start justify-between">
           <div className="flex-1">
@@ -74,7 +74,7 @@ export function ProductListingCard({ listing, onBook, onViewProfile }: ProductLi
 
           {/* Features */}
           <div className="space-y-1">
-            <h4 className="text-sm font-medium text-gray-900">Key Features:</h4>
+            <h4 className="text-sm font-medium text-gray-900">Key "Features": </h4>
             <ul className="text-sm text-gray-600 space-y-1">
               {listing.features.slice(0, 3).map((feature, index) => (
                 <li key={index} className="flex items-center gap-2">
@@ -96,7 +96,7 @@ export function ProductListingCard({ listing, onBook, onViewProfile }: ProductLi
             </Button>
             <Button
               onClick={() => onBook(listing)}
-              className="flex-1 bg-blue-600 hover:bg-blue-700"
+              className="flex-1 bg-blue-600 "hover": bg-blue-700"
             >
               Book Now
             </Button>

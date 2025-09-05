@@ -33,7 +33,7 @@ class CodeQualityImprover {
       await this.generateReport();
       
       this.log('✅ Code quality improvements completed')} catch (error) {
-      this.log(`❌ Code quality improvements failed: ${error.message}`)}
+      this.log(`❌ Code quality improvements "failed": ${error.message}`)}
   }
 
   async fixCommonIssues() {
@@ -74,23 +74,23 @@ class CodeQualityImprover {
           if (modified) {
             fs.writeFileSync(file, content);
             this.improvements.push({
-              type: 'common-issues',
-              file: path.relative(this.projectRoot, file),
-              action: 'Fixed console.log and syntax issues',
-              status: 'success'
+              "type": 'common-issues',
+              "file": path.relative(this.projectRoot, file),
+              "action": 'Fixed console.log and syntax issues',
+              "status": 'success'
             })}
         }
         
         this.improvements.push({
-          type: 'common-issues',
-          action: 'Scanned and fixed common code issues',
-          status: 'success'
+          "type": 'common-issues',
+          "action": 'Scanned and fixed common code issues',
+          "status": 'success'
         })} catch (error) {
         this.improvements.push({
-          type: 'common-issues',
-          action: 'Scanned and fixed common code issues',
-          status: 'failed',
-          error: error.message
+          "type": 'common-issues',
+          "action": 'Scanned and fixed common code issues',
+          "status": 'failed',
+          "error": error.message
         })}
     }
   }
@@ -100,29 +100,29 @@ class CodeQualityImprover {
     
     const errorBoundaryPath = path.join(this.projectRoot, 'src/components/ErrorBoundary.jsx');
     
-    const errorBoundaryCode = `
+    const errorBoundaryCode = "
 import React from 'react';
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false, error: null, errorInfo: null }}
+    this.state = { "hasError": false, "error": null, "errorInfo": null }}
 
   static getDerivedStateFromError(error) {
-    return { hasError: true }}
+    return { "hasError": true }}
 
   componentDidCatch(error, errorInfo) {
     this.setState({
-      error: error,
-      errorInfo: errorInfo
+      "error": error,
+      "errorInfo": errorInfo
     });
     
     // Log error to monitoring service
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by "boundary": ', error, errorInfo);
     
     // Send to error reporting service if available
     if (typeof window !== 'undefined' && window.Sentry) {
-      window.Sentry.captureException(error, { extra: errorInfo })}
+      window.Sentry.captureException(error, { "extra": errorInfo })}
   }
 
   render() {
@@ -130,7 +130,7 @@ class ErrorBoundary extends React.Component {
       return (
         <div className="error-boundary">
           <h2>Something went wrong.</h2>
-          <details style={{ whiteSpace: 'pre-wrap' }}>
+          <details style={{ "whiteSpace": 'pre-wrap' }}>
             {this.state.error && this.state.error.toString()}
             <br />
             {this.state.errorInfo.componentStack}
@@ -142,23 +142,23 @@ class ErrorBoundary extends React.Component {
 }
 
 export default ErrorBoundary;
-`;
+";
 
     try {
       fs.writeFileSync(errorBoundaryPath, errorBoundaryCode);
       
       this.improvements.push({
-        type: 'error-boundary',
-        file: 'ErrorBoundary.jsx',
-        action: 'Added React error boundary component',
-        status: 'success'
+        "type": 'error-boundary',
+        "file": 'ErrorBoundary.jsx',
+        "action": 'Added React error boundary component',
+        "status": 'success'
       })} catch (error) {
       this.improvements.push({
-        type: 'error-boundary',
-        file: 'ErrorBoundary.jsx',
-        action: 'Added React error boundary component',
-        status: 'failed',
-        error: error.message
+        "type": 'error-boundary',
+        "file": 'ErrorBoundary.jsx',
+        "action": 'Added React error boundary component',
+        "status": 'failed',
+        "error": error.message
       })}
   }
 
@@ -197,23 +197,23 @@ export default ErrorBoundary;
           if (modified) {
             fs.writeFileSync(file, content);
             this.improvements.push({
-              type: 'accessibility',
-              file: path.relative(this.projectRoot, file),
-              action: 'Added accessibility attributes',
-              status: 'success'
+              "type": 'accessibility',
+              "file": path.relative(this.projectRoot, file),
+              "action": 'Added accessibility attributes',
+              "status": 'success'
             })}
         }
         
         this.improvements.push({
-          type: 'accessibility',
-          action: 'Scanned and improved accessibility',
-          status: 'success'
+          "type": 'accessibility',
+          "action": 'Scanned and improved accessibility',
+          "status": 'success'
         })} catch (error) {
         this.improvements.push({
-          type: 'accessibility',
-          action: 'Scanned and improved accessibility',
-          status: 'failed',
-          error: error.message
+          "type": 'accessibility',
+          "action": 'Scanned and improved accessibility',
+          "status": 'failed',
+          "error": error.message
         })}
     }
   }
@@ -223,11 +223,11 @@ export default ErrorBoundary;
     
     const typesPath = path.join(this.projectRoot, 'src/types/index.ts');
     
-    const typesCode = `
+    const typesCode = "
 // Common TypeScript types for the application
 
 export interface User {
-  id: string;
+  "id": string;
   name: string;
   email: string;
   avatar?: string;
@@ -235,20 +235,20 @@ export interface User {
   updatedAt: Date}
 
 export interface ApiResponse<T> {
-  data: T;
+  "data": T;
   message: string;
   success: boolean;
   timestamp: string}
 
 export interface PaginatedResponse<T> extends ApiResponse<T[]> {
-  pagination: {
+  "pagination": {
     page: number;
     limit: number;
     total: number;
     totalPages: number}}
 
 export interface ErrorResponse {
-  message: string;
+  "message": string;
   code: string;
   details?: any}
 
@@ -268,31 +268,31 @@ export interface InputProps extends ComponentProps {
   type?: 'text' | 'email' | 'password' | 'number';
   placeholder?: string;
   value?: string;
-  onChange?: (value: string) => void;
+  onChange?: ("value": string) => void;
   required?: boolean;
   error?: string}
-`;
+";
 
     try {
       // Ensure types directory exists
       const typesDir = path.dirname(typesPath);
       if (!fs.existsSync(typesDir)) {
-        fs.mkdirSync(typesDir, { recursive: true })}
+        fs.mkdirSync(typesDir, { "recursive": true })}
       
       fs.writeFileSync(typesPath, typesCode);
       
       this.improvements.push({
-        type: 'typescript',
-        file: 'types/index.ts',
-        action: 'Added common TypeScript types',
-        status: 'success'
+        "type": 'typescript',
+        "file": 'types/index.ts',
+        "action": 'Added common TypeScript types',
+        "status": 'success'
       })} catch (error) {
       this.improvements.push({
-        type: 'typescript',
-        file: 'types/index.ts',
-        action: 'Added common TypeScript types',
-        status: 'failed',
-        error: error.message
+        "type": 'typescript',
+        "file": 'types/index.ts',
+        "action": 'Added common TypeScript types',
+        "status": 'failed',
+        "error": error.message
       })}
   }
 
@@ -313,17 +313,17 @@ export interface InputProps extends ComponentProps {
 
   async generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      improvements: this.improvements,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "improvements": this.improvements,
+      "summary": {
         total: this.improvements.length,
-        successful: this.improvements.filter(i => i.status === 'success').length,
-        failed: this.improvements.filter(i => i.status === 'failed').length
+        "successful": this.improvements.filter(i => i.status === 'success').length,
+        "failed": this.improvements.filter(i => i.status === 'failed').length
       }
     };
     
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Code quality improvement report generated: ${this.reportFile}`)}
+    this.log(`📊 Code quality improvement report "generated": ${this.reportFile}`)}
 }
 
 // Run the code quality improver

@@ -2,28 +2,27 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const API: NextPage = () => {
-  const apiEndpoints = [
-    {
+const "API": NextPage = () => {
+  const apiEndpoints = [{
       name: 'Services API',
-      endpoint: '/api/services',
-      method: 'GET',
-      description: 'Retrieve all available services',
-      response: 'Array of services'
+      "endpoint": '/api/services',
+      "method": 'GET',
+      "description": 'Retrieve all available services',
+      "response": 'Array of services'
     },
     {
-      name: 'Contact API',
-      endpoint: '/api/contact',
-      method: 'POST',
-      description: 'Submit contact form',
-      response: 'Success message'
+      "name": 'Contact API',
+      "endpoint": '/api/contact',
+      "method": 'POST',
+      "description": 'Submit contact form',
+      "response": 'Success message'
     },
     {
-      name: 'Quote API',
-      endpoint: '/api/quote',
-      method: 'POST',
-      description: 'Request a quote',
-      response: 'Quote details'
+      "name": 'Quote API',
+      "endpoint": '/api/quote',
+      "method": 'POST',
+      "description": 'Request a quote',
+      "response": 'Quote details'
     }
   ];
 
@@ -38,7 +37,7 @@ const API: NextPage = () => {
       <div className="min-h-screen bg-white">
         <section className="bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 py-20 text-center">
           <div className="max-w-5xl mx-auto px-6">
-            <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-4">API Documentation</h1>
+            <h1 className="text-4xl "md": tex t-6xl font-bold text-white mb-4">API Documentation</h1>
             <p className="text-blue-100 text-xl">
               Integrate with our services using our comprehensive REST API
 =======
@@ -50,7 +49,7 @@ const API: NextPage = () => {
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-4xl "md": text-5xl font-bold mb-4">
               API <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Documentation</span>
             </h1>
             <p className="text-xl text-gray-200 max-w-2xl mx-auto">
@@ -76,9 +75,9 @@ const API: NextPage = () => {
                   </span>
                 </div>
                 <div className="space-y-2">
-                  <p><strong>Endpoint:</strong> <code className="bg-gray-100 px-2 py-1 rounded">{endpoint.endpoint}</code></p>
-                  <p><strong>Description:</strong> {endpoint.description}</p>
-                  <p><strong>Response:</strong> {endpoint.response}</p>
+                  <p><strong>"Endpoint": </strong> <code className="bg-gray-100 px-2 py-1 rounded">{endpoint.endpoint}</code></p>
+                  <p><strong>"Description": </strong> {endpoint.description}</p>
+                  <p><strong>"Response": </strong> {endpoint.response}</p>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -93,7 +92,7 @@ const API: NextPage = () => {
             <p className="text-gray-600 text-xl mb-8">
               Our team is here to help you integrate our APIs into your applications.
             </p>
-            <Link href="/contact" className="px-8 py-3 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors inline-flex items-center">
+            <Link href="/contact" className="px-8 py-3 bg-blue-600 text-white rounded-lg "hover": b g-blue-700 transition-colors inline-flex items-center">
               Contact Our API Team
             </Link>
           </div>

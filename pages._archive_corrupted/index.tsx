@@ -18,11 +18,11 @@ const Home = memo(() => {
   }, []);
 
   const structuredData = {
-    "@context": "https://schema.org",
+    "@context": ""https": //schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
+    "url": ""https": //ziontechgroup.com",
+    "logo": ""https": //ziontechgroup.com/logo.png",
     "description": "Leading provider of revolutionary AI services, IT solutions, and micro SaaS development",
     "address": {
       "@type": "PostalAddress",
@@ -38,14 +38,12 @@ const Home = memo(() => {
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
     },
-    "sameAs": [
-      "https://ziontechgroup.com"
+    "sameAs": [""https": //ziontechgroup.com"
     ],
     "foundingDate": "2020",
     "numberOfEmployees": "10-50",
     "industry": "Technology Services",
-    "services": [
-      "AI Services",
+    "services": ["AI Services",
       "IT Solutions", 
       "Micro SaaS Development",
       "Cloud Infrastructure",
@@ -53,61 +51,54 @@ const Home = memo(() => {
       "Digital Transformation"
     ]
   };
-  const stats = [
-  { number: '500+', label: 'Projects Completed' }
-    { number: '50+', label: 'Happy Clients' }
-    { number: '99.9%', label: 'Uptime Guarantee' }
-    { number: '24/7', label: 'Support Available' }
+  const stats = [{ "number": '500+', "label": 'Projects Completed' }
+    { "number": '50+', "label": 'Happy Clients' }
+    { "number": '99.9%', "label": 'Uptime Guarantee' }
+    { "number": '24/7', "label": 'Support Available' }
   ];
 
-  const services = [
-  {
-      title: 'AI Services',
-      description: 'Cutting-edge artificial intelligence solutions',
-      icon: Brai n,
-      href: '/ai-services'
+  const services = [{
+      "title": 'AI Services',
+      "description": 'Cutting-edge artificial intelligence solutions',
+      "icon": Brai n,
+      "href": '/ai-services'
     },
     {
-      title: 'IT Services',
-      description: 'Comprehensive IT infrastructure and cloud solutions',
-      icon: Serve r,
-      href: '/it-services'
+      "title": 'IT Services',
+      "description": 'Comprehensive IT infrastructure and cloud solutions',
+      "icon": Serve r,
+      "href": '/it-services'
     },
     {
-      title: 'Micro SaaS',
-      description: 'Custom software-as-a-service applications',
-      icon: Smartphon e,
-      href: '/micro-saas'
+      "title": 'Micro SaaS',
+      "description": 'Custom software-as-a-service applications',
+      "icon": Smartphon e,
+      "href": '/micro-saas'
     },
     {
-      title: 'All Services',
-      description: 'Complete technology solutions overview',
-      icon: Glob e,
-      href: '/comprehensive-services'
+      "title": 'All Services',
+      "description": 'Complete technology solutions overview',
+      "icon": Glob e,
+      "href": '/comprehensive-services'
     }
   ];
 
-  const features = [
-  {
-      icon: Za p,
-      title: 'Fast Delivery',
-      description: 'Quick turnaround times without compromising quality',
-    },
+  const features = [{
+      "icon": Za p,
+      "title": 'Fast Delivery',
+      "description": 'Quick turnaround times without compromising quality'},
     {
-      icon: Shiel d,
-      title: 'Enterprise Security',
-      description: 'Bank-level security and compliance standards',
-    },
+      "icon": Shiel d,
+      "title": 'Enterprise Security',
+      "description": 'Bank-level security and compliance standards'},
     {
-      icon: User s,
-      title: 'Expert Team',
-      description: 'Dedicated professionals with years of experience',
-    },
+      "icon": User s,
+      "title": 'Expert Team',
+      "description": 'Dedicated professionals with years of experience'},
     {
-      icon: Glob e,
-      title: 'Global Reach',
-      description: 'Serving clients worldwide with local expertise',
-    },
+      "icon": Glob e,
+      "title": 'Global Reach',
+      "description": 'Serving clients worldwide with local expertise'},
   ];
 
   return (
@@ -124,7 +115,7 @@ const Home = memo(() => {
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20" role="banner" aria-labelledby="hero-heading">
-          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+          <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">
             <div className="text-center">
               <h1 className="text-4xl md: tex t-6xl font-bold text-gray-900 mb-6">
                 Transform Your Business with
@@ -135,7 +126,7 @@ const Home = memo(() => {
                 micro SaaS development. We help businesses innovate, scale, and
                 succeed in the digital age.
               </p>
-              <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+              <div className="flex flex-col "sm": fle x-row gap-4 justify-center">
                 <Link
                   href="/contact"
                   className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: b g-blue-700 transition-colors"
@@ -150,7 +141,7 @@ const Home = memo(() => {
                 </Link>
                 <button 
                   onClick={handleSidebarToggle}
-                  className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover: b g-gray-50 transition-colors flex items-center justify-center"
+                  className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold "hover": b g-gray-50 transition-colors flex items-center justify-center"
                   aria-label="Open navigation menu"
                   aria-expanded={sidebarOpen}
                 >
@@ -160,7 +151,7 @@ const Home = memo(() => {
               <div>
                 <h4 className="text-white font-semibold mb-4">Services</h4>
                 <ul className="space-y-2">
-                  <li><Link href="/services/ai-machine-learning" className="text-gray-400 hover: tex t-white transition-colors text-sm">AI & Machine Learning</Link></li>
+                  <li><Link href="/services/ai-machine-learning" className="text-gray-400 "hover": tex t-white transition-colors text-sm">AI & Machine Learning</Link></li>
                   <li><Link href="/services/micro-saas" className="text-gray-400 hover: tex t-white transition-colors text-sm">Micro SaaS Solutions</Link></li>
                   <li><Link href="/services/ai-content-creation" className="text-gray-400 hover: tex t-white transition-colors text-sm">AI Content Creation</Link></li>
                   <li><Link href="/services/email-automation" className="text-gray-400 hover: tex t-white transition-colors text-sm">Email Automation</Link></li>
@@ -180,7 +171,7 @@ const Home = memo(() => {
 
         {/* Stats Section */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+          <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">
             <div className="grid grid-cols-2 md: gri d-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -196,7 +187,7 @@ const Home = memo(() => {
 
         {/* Services Section */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+          <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Our Services
@@ -211,7 +202,7 @@ const Home = memo(() => {
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-lg p-8 shadow-sm hover: shado w-md transition-shadow"
+                  className="bg-white rounded-lg p-8 shadow-sm "hover": shado w-md transition-shadow"
                 >
                   <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6">
                     <service.icon className="w-8 h-8 text-white" />
@@ -223,18 +214,18 @@ const Home = memo(() => {
                   {/* Pricing and Delivery */}
                   <div className="mb-6 p-4 bg-gray-50 rounded-lg">
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm font-medium text-gray-700">Starting Price:</span>
+                      <span className="text-sm font-medium text-gray-700">Starting "Price": </span>
                       <span className="text-lg font-bold text-blue-600">{service.pricing}</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-gray-700">Delivery Time:</span>
+                      <span className="text-sm font-medium text-gray-700">Delivery "Time": </span>
                       <span className="text-sm text-gray-600">{service.delivery}</span>
                     </div>
                   </div>
 
                   {/* Key Benefits */}
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Benefits:</h4>
+                    <h4 className="text-sm font-semibold text-gray-900 mb-3">Key "Benefits": </h4>
                     <ul className="space-y-2">
                       {service.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
@@ -254,7 +245,7 @@ const Home = memo(() => {
                   </p>
 >>>>>>> main
                   <Link href={service.href} className="block">
-                    <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover: b g-blue-700 transition-colors text-center flex items-center justify-center">
+                    <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold "hover": b g-blue-700 transition-colors text-center flex items-center justify-center">
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2"  />
                     </div>
@@ -267,7 +258,7 @@ const Home = memo(() => {
 
         {/* Features Section */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+          <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Why Choose Zion Tech Group?
@@ -278,7 +269,7 @@ const Home = memo(() => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+            <div className="grid grid-cols-1 "md": gri d-cols-2 lg: gri d-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
                   <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
@@ -296,7 +287,7 @@ const Home = memo(() => {
 
         {/* Contact Information Section */}
         <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+          <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
               <p className="text-lg text-gray-600">Ready to start your next project? Contact us today.</p>
@@ -355,7 +346,7 @@ const Home = memo(() => {
                 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center text-sm font-medium text-blue-600 hover: tex t-blue-500"
+                  className="inline-flex items-center text-sm font-medium text-blue-600 "hover": tex t-blue-500"
                 >
                   Learn More
                   <ArrowRight className="ml-1 h-4 w-4"  />
@@ -367,7 +358,7 @@ const Home = memo(() => {
 
         {/* Testimonials Section */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
               <p className="text-xl text-gray-600">
@@ -441,7 +432,7 @@ const Home = memo(() => {
 
         {/* Contact Information Section */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Get in Touch</h2>
               <p className="text-xl text-gray-600">
@@ -489,7 +480,7 @@ const Home = memo(() => {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>

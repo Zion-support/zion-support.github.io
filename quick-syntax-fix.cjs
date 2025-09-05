@@ -61,7 +61,7 @@ class QuickSyntaxFixer {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.fixedCount++;
-        this.log(`✅ Fixed: ${path.relative(this.projectRoot, filePath)}`);
+        this.log(`✅ "Fixed": ${path.relative(this.projectRoot, filePath)}`);
         return true}
       
       return false} catch (error) {

@@ -19,11 +19,10 @@ class UXOptimizer {
 
     async generateReport() {
         const report = {
-            timestamp: new Date().toISOString(),
-            improvements: this.improvements,
-            ux_score: 95,
-            recommendations: [
-                'Implement lazy loading',
+            "timestamp": new Date().toISOString(),
+            "improvements": this.improvements,
+            "ux_score": 95,
+            "recommendations": ['Implement lazy loading',
                 'Add keyboard navigation',
                 'Optimize touch targets'
             ]

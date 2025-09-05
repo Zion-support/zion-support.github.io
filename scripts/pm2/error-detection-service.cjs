@@ -20,12 +20,12 @@ class ErrorDetectionService {
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
     
     this.errorTypes = {
-      syntax: [],
-      typescript: [],
-      eslint: [],
-      build: [],
-      dependency: [],
-      configuration: []
+      "syntax": [],
+      "typescript": [],
+      "eslint": [],
+      "build": [],
+      "dependency": [],
+      "configuration": []
     };
     
     this.fixAttempts = new Map();
@@ -38,14 +38,14 @@ class ErrorDetectionService {
       level,
       message,
       data,
-      service: 'error-detection-service'
+      "service": 'error-detection-service'
     };
 
     if (level === 'error') {
-      console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {
-      console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {
-      console.log(`[${timestamp}] INFO: ${message}`, data)} else if (level === 'debug') {
-      console.log(`[${timestamp}] DEBUG: ${message}`, data)}
+      console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {
+      console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {
+      console.log(`[${timestamp}] "INFO": ${message}`, data)} else if (level === 'debug') {
+      console.log(`[${timestamp}] "DEBUG": ${message}`, data)}
 
     // Write to log file
     this.writeToLog(logEntry)}
@@ -53,7 +53,7 @@ class ErrorDetectionService {
   writeToLog(logEntry) {
     const logDir = path.join(this.projectRoot, 'logs', 'pm2');
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true })}
+      fs.mkdirSync(logDir, { "recursive": true })}
 
     const logFile = path.join(logDir, 'error-detection-service.log');
     fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n')}
@@ -86,8 +86,7 @@ class ErrorDetectionService {
   }
 
   ensureDirectories() {
-    const dirs = [
-      'logs/pm2',
+    const dirs = ['logs/pm2',
       'error-reports',
       'backups',
       'temp'
@@ -96,7 +95,7 @@ class ErrorDetectionService {
     dirs.forEach(dir => {
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {
-        fs.mkdirSync(fullPath, { recursive: true })}
+        fs.mkdirSync(fullPath, { "recursive": true })}
     })}
 
   async performFullScan() {
@@ -112,8 +111,7 @@ class ErrorDetectionService {
       this.clearErrorData();
 
       // Perform various scans
-      await Promise.all([
-        this.scanForSyntaxErrors(),
+      await Promise.all([this.scanForSyntaxErrors(),
         this.scanForTypeScriptErrors(),
         this.scanForESLintErrors(),
         this.scanForBuildErrors(),
@@ -153,20 +151,20 @@ class ErrorDetectionService {
           if (this.hasSyntaxIssues(content, file)) {
             this.errorTypes.syntax.push({
               file,
-              type: 'syntax',
-              severity: 'high',
-              description: 'Syntax parsing error detected',
-              line: this.extractLineNumber(content),
-              content: content.substring(0, 200) // First 200 chars for context
+              "type": 'syntax',
+              "severity": 'high',
+              "description": 'Syntax parsing error detected',
+              "line": this.extractLineNumber(content),
+              "content": content.substring(0, 200) // First 200 chars for context
             });
             syntaxErrors++}
         } catch (error) {
           this.errorTypes.syntax.push({
             file,
-            type: 'syntax',
-            severity: 'critical',
-            description: 'File cannot be parsed',
-            error: error.message
+            "type": 'syntax',
+            "severity": 'critical',
+            "description": 'File cannot be parsed',
+            "error": error.message
           });
           syntaxErrors++}
       }
@@ -184,13 +182,13 @@ class ErrorDetectionService {
       
       if (result.errors && result.errors.length > 0) {
         this.errorTypes.typescript = result.errors.map(error => ({
-          file: error.file,
-          type: 'typescript',
-          severity: this.categorizeTypeScriptSeverity(error),
-          description: error.message,
-          line: error.line,
-          column: error.column,
-          code: error.code
+          "file": error.file,
+          "type": 'typescript',
+          "severity": this.categorizeTypeScriptSeverity(error),
+          "description": error.message,
+          "line": error.line,
+          "column": error.column,
+          "code": error.code
         }))}
 
       this.log('info', `TypeScript scan completed. Found ${this.errorTypes.typescript.length} errors`)} catch (error) {
@@ -206,14 +204,14 @@ class ErrorDetectionService {
       
       if (result.errors && result.errors.length > 0) {
         this.errorTypes.eslint = result.errors.map(error => ({
-          file: error.filePath,
-          type: 'eslint',
-          severity: error.severity,
-          description: error.message,
-          line: error.line,
-          column: error.column,
-          ruleId: error.ruleId,
-          fixable: error.fix
+          "file": error.filePath,
+          "type": 'eslint',
+          "severity": error.severity,
+          "description": error.message,
+          "line": error.line,
+          "column": error.column,
+          "ruleId": error.ruleId,
+          "fixable": error.fix
         }))}
 
       this.log('info', `ESLint scan completed. Found ${this.errorTypes.eslint.length} errors`)} catch (error) {
@@ -229,11 +227,11 @@ class ErrorDetectionService {
       
       if (result.errors && result.errors.length > 0) {
         this.errorTypes.build = result.errors.map(error => ({
-          file: error.file || 'build',
-          type: 'build',
-          severity: 'high',
-          description: error.message,
-          phase: error.phase || 'unknown'
+          "file": error.file || 'build',
+          "type": 'build',
+          "severity": 'high',
+          "description": error.message,
+          "phase": error.phase || 'unknown'
         }))}
 
       this.log('info', `Build scan completed. Found ${this.errorTypes.build.length} errors`)} catch (error) {
@@ -249,12 +247,12 @@ class ErrorDetectionService {
       
       if (result.errors && result.errors.length > 0) {
         this.errorTypes.dependency = result.errors.map(error => ({
-          package: error.package,
-          type: 'dependency',
-          severity: error.severity,
-          description: error.message,
-          version: error.version,
-          resolution: error.resolution
+          "package": error.package,
+          "type": 'dependency',
+          "severity": error.severity,
+          "description": error.message,
+          "version": error.version,
+          "resolution": error.resolution
         }))}
 
       this.log('info', `Dependency scan completed. Found ${this.errorTypes.dependency.length} errors`)} catch (error) {
@@ -265,8 +263,7 @@ class ErrorDetectionService {
     this.log('info', 'Scanning for configuration errors...');
     
     try {
-      const configFiles = [
-        'package.json',
+      const configFiles = ['package.json',
         'tsconfig.json',
         'eslint.config.js',
         'vite.config.ts',
@@ -280,19 +277,19 @@ class ErrorDetectionService {
             const content = fs.readFileSync(filePath, 'utf8');
             if (this.hasConfigurationIssues(content, configFile)) {
               this.errorTypes.configuration.push({
-                file: configFile,
-                type: 'configuration',
-                severity: 'medium',
-                description: 'Configuration file has issues',
-                issues: this.extractConfigurationIssues(content, configFile)
+                "file": configFile,
+                "type": 'configuration',
+                "severity": 'medium',
+                "description": 'Configuration file has issues',
+                "issues": this.extractConfigurationIssues(content, configFile)
               })}
           } catch (error) {
             this.errorTypes.configuration.push({
-              file: configFile,
-              type: 'configuration',
-              severity: 'high',
-              description: 'Configuration file cannot be parsed',
-              error: error.message
+              "file": configFile,
+              "type": 'configuration',
+              "severity": 'high',
+              "description": 'Configuration file cannot be parsed',
+              "error": error.message
             })}
         }
       }
@@ -334,13 +331,13 @@ class ErrorDetectionService {
     const issues = [];
     
     // Check for unterminated strings
-    const stringRegex = /(["'`])((?:(?!\1)[^\\]|\\.)*\1)/g;
+    const stringRegex = /(["'"])((?:(?!\1)[^\\]|\\.)*\1)/g;
     const matches = content.match(stringRegex);
     if (matches && matches.length > 0) {
       // Count quotes to check for balance
       const singleQuotes = (content.match(/'/g) || []).length;
       const doubleQuotes = (content.match(/"/g) || []).length;
-      const backticks = (content.match(/`/g) || []).length;
+      const backticks = (content.match(/"/g) || []).length;
       
       if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || backticks % 2 !== 0) {
         return true}
@@ -384,14 +381,14 @@ class ErrorDetectionService {
   runTypeScriptCheck() {
     try {
       const result = execSync('npx tsc --noEmit --json', { 
-        cwd: this.projectRoot, 
-        encoding: 'utf8',
-        stdio: 'pipe'
+        "cwd": this.projectRoot, 
+        "encoding": 'utf8',
+        "stdio": 'pipe'
       });
       
       if (result) {
         return JSON.parse(result)}
-      return { errors: [] }} catch (error) {
+      return { "errors": [] }} catch (error) {
       // TypeScript check failed, extract errors from stderr
       const stderr = error.stderr ? error.stderr.toString() : '';
       return this.parseTypeScriptErrors(stderr)}
@@ -400,14 +397,14 @@ class ErrorDetectionService {
   runESLintCheck() {
     try {
       const result = execSync('npx eslint . --format json', { 
-        cwd: this.projectRoot, 
-        encoding: 'utf8',
-        stdio: 'pipe'
+        "cwd": this.projectRoot, 
+        "encoding": 'utf8',
+        "stdio": 'pipe'
       });
       
       if (result) {
         return JSON.parse(result)}
-      return { errors: [] }} catch (error) {
+      return { "errors": [] }} catch (error) {
       // ESLint check failed, extract errors from stderr
       const stderr = error.stderr ? error.stderr.toString() : '';
       return this.parseESLintErrors(stderr)}
@@ -416,12 +413,12 @@ class ErrorDetectionService {
   runBuildCheck() {
     try {
       const result = execSync('npm run build', { 
-        cwd: this.projectRoot, 
-        encoding: 'utf8',
-        stdio: 'pipe'
+        "cwd": this.projectRoot, 
+        "encoding": 'utf8',
+        "stdio": 'pipe'
       });
       
-      return { errors: [] }} catch (error) {
+      return { "errors": [] }} catch (error) {
       // Build failed, extract errors from stderr
       const stderr = error.stderr ? error.stderr.toString() : '';
       return this.parseBuildErrors(stderr)}
@@ -430,16 +427,16 @@ class ErrorDetectionService {
   runDependencyCheck() {
     try {
       const result = execSync('npm audit --json', { 
-        cwd: this.projectRoot, 
-        encoding: 'utf8',
-        stdio: 'pipe'
+        "cwd": this.projectRoot, 
+        "encoding": 'utf8',
+        "stdio": 'pipe'
       });
       
       if (result) {
         const audit = JSON.parse(result);
         return this.parseDependencyErrors(audit)}
-      return { errors: [] }} catch (error) {
-      return { errors: [] }}
+      return { "errors": [] }} catch (error) {
+      return { "errors": [] }}
   }
 
   parseTypeScriptErrors(stderr) {
@@ -450,11 +447,11 @@ class ErrorDetectionService {
       const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
       if (match) {
         errors.push({
-          file: match[1].trim(),
-          line: parseInt(match[2]),
-          column: parseInt(match[3]),
-          message: match[4].trim(),
-          code: 'TS_ERROR'
+          "file": match[1].trim(),
+          "line": parseInt(match[2]),
+          "column": parseInt(match[3]),
+          "message": match[4].trim(),
+          "code": 'TS_ERROR'
         })}
     });
     
@@ -468,13 +465,13 @@ class ErrorDetectionService {
       const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
       if (match) {
         errors.push({
-          filePath: match[1].trim(),
-          line: parseInt(match[2]),
-          column: parseInt(match[3]),
-          message: match[4].trim(),
-          ruleId: 'ESLINT_ERROR',
-          severity: 2,
-          fix: false
+          "filePath": match[1].trim(),
+          "line": parseInt(match[2]),
+          "column": parseInt(match[3]),
+          "message": match[4].trim(),
+          "ruleId": 'ESLINT_ERROR',
+          "severity": 2,
+          "fix": false
         })}
     });
     
@@ -485,12 +482,12 @@ class ErrorDetectionService {
     const lines = stderr.split('\n');
     
     lines.forEach(line => {
-      if (line.includes('Error:') || line.includes('error:')) {
+      if (line.includes('"Error": ') || line.includes('error:')) {
         errors.push({
           file: 'build',
-          message: line.trim(),
-          phase: 'build',
-          severity: 'high'
+          "message": line.trim(),
+          "phase": 'build',
+          "severity": 'high'
         })}
     });
     
@@ -503,11 +500,11 @@ class ErrorDetectionService {
       Object.keys(audit.vulnerabilities).forEach(pkg => {
         const vuln = audit.vulnerabilities[pkg];
         errors.push({
-          package: pkg,
-          severity: vuln.severity,
-          message: vuln.title,
-          version: vuln.installedVersion,
-          resolution: vuln.recommendation
+          "package": pkg,
+          "severity": vuln.severity,
+          "message": vuln.title,
+          "version": vuln.installedVersion,
+          "resolution": vuln.recommendation
         })})}
     
     return { errors }}
@@ -542,28 +539,28 @@ class ErrorDetectionService {
         JSON.parse(content)}
     } catch (error) {
       issues.push({
-        type: 'json_parse_error',
-        message: error.message,
-        position: error.message.match(/position (\d+)/)?.[1] || 'unknown'
+        "type": 'json_parse_error',
+        "message": error.message,
+        "position": error.message.match(/position (\d+)/)?.[1] || 'unknown'
       })}
     
     return issues}
 
   async generateErrorReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "summary": {
         totalErrors: 0,
-        errorsByType: {},
-        severityBreakdown: {
+        "errorsByType": {},
+        "severityBreakdown": {
           critical: 0,
-          high: 0,
-          medium: 0,
-          low: 0
+          "high": 0,
+          "medium": 0,
+          "low": 0
         }
       },
-      errors: this.errorTypes,
-      recommendations: this.generateRecommendations()
+      "errors": this.errorTypes,
+      "recommendations": this.generateRecommendations()
     };
 
     // Calculate totals
@@ -580,8 +577,8 @@ class ErrorDetectionService {
     const reportPath = path.join(this.projectRoot, 'error-reports', `error-scan-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
-    this.log('info', `Error report generated: ${reportPath}`);
-    this.log('info', `Total errors found: ${report.summary.totalErrors}`);
+    this.log('info', `Error report "generated": ${reportPath}`);
+    this.log('info', `Total errors "found": ${report.summary.totalErrors}`);
 
     return report}
 
@@ -590,30 +587,30 @@ class ErrorDetectionService {
 
     if (this.errorTypes.syntax.length > 0) {
       recommendations.push({
-        priority: 'high',
-        action: 'Run syntax error fixer service',
-        description: `${this.errorTypes.syntax.length} syntax errors detected that need immediate attention`
+        "priority": 'high',
+        "action": 'Run syntax error fixer service',
+        "description": `${this.errorTypes.syntax.length} syntax errors detected that need immediate attention`
       })}
 
     if (this.errorTypes.typescript.length > 0) {
       recommendations.push({
-        priority: 'high',
-        action: 'Run TypeScript error fixer service',
-        description: `${this.errorTypes.typescript.length} TypeScript errors detected`
+        "priority": 'high',
+        "action": 'Run TypeScript error fixer service',
+        "description": `${this.errorTypes.typescript.length} TypeScript errors detected`
       })}
 
     if (this.errorTypes.eslint.length > 0) {
       recommendations.push({
-        priority: 'medium',
-        action: 'Run ESLint error fixer service',
-        description: `${this.errorTypes.eslint.length} ESLint violations detected`
+        "priority": 'medium',
+        "action": 'Run ESLint error fixer service',
+        "description": `${this.errorTypes.eslint.length} ESLint violations detected`
       })}
 
     if (this.errorTypes.dependency.length > 0) {
       recommendations.push({
-        priority: 'medium',
-        action: 'Update dependencies and run security audit',
-        description: `${this.errorTypes.dependency.length} dependency issues detected`
+        "priority": 'medium',
+        "action": 'Update dependencies and run security audit',
+        "description": `${this.errorTypes.dependency.length} dependency issues detected`
       })}
 
     return recommendations}
@@ -642,11 +639,11 @@ class ErrorDetectionService {
     try {
       // Send a signal to the PM2 service
       execSync(`pm2 sendSignal SIGUSR2 ${serviceName}`, { 
-        cwd: this.projectRoot,
-        stdio: 'pipe'
+        "cwd": this.projectRoot,
+        "stdio": 'pipe'
       });
-      this.log('info', `Triggered service: ${serviceName}`)} catch (error) {
-      this.log('warn', `Failed to trigger service: ${serviceName}`, error.message)}
+      this.log('info', `Triggered "service": ${serviceName}`)} catch (error) {
+      this.log('warn', `Failed to trigger "service": ${serviceName}`, error.message)}
   }
 
   startContinuousMonitoring() {
@@ -662,27 +659,26 @@ class ErrorDetectionService {
   startFileWatching() {
     this.log('info', 'Starting file watching for real-time error detection...');
     
-    const watcher = chokidar.watch([
-      'src/**/*.{js,jsx,ts,tsx}',
+    const watcher = chokidar.watch(['src/**/*.{js,jsx,ts,tsx}',
       'components/**/*.{js,jsx,ts,tsx}',
       'pages/**/*.{js,jsx,ts,tsx}',
       'utils/**/*.{js,jsx,ts,tsx}',
       'hooks/**/*.{js,jsx,ts,tsx}',
       'types/**/*.{js,jsx,ts,tsx}'
     ], {
-      ignored: /node_modules|\.git|\.next|dist|build/,
-      persistent: true
+      "ignored": /node_modules|\.git|\.next|dist|build/,
+      "persistent": true
     });
 
     watcher
       .on('change', (filePath) => {
-        this.log('debug', `File changed: ${filePath}`);
+        this.log('debug', `File "changed": ${filePath}`);
         this.handleFileChange(filePath)})
       .on('add', (filePath) => {
-        this.log('debug', `File added: ${filePath}`);
+        this.log('debug', `File "added": ${filePath}`);
         this.handleFileChange(filePath)})
       .on('unlink', (filePath) => {
-        this.log('debug', `File removed: ${filePath}`);
+        this.log('debug', `File "removed": ${filePath}`);
         this.handleFileRemoval(filePath)})}
 
   async handleFileChange(filePath) {
@@ -691,15 +687,15 @@ class ErrorDetectionService {
       const content = fs.readFileSync(filePath, 'utf8');
       
       if (this.hasSyntaxIssues(content, filePath)) {
-        this.log('warn', `Syntax issues detected in: ${filePath}`);
+        this.log('warn', `Syntax issues detected "in": ${filePath}`);
         
         // Add to syntax errors
         this.errorTypes.syntax.push({
-          file: filePath,
-          type: 'syntax',
-          severity: 'high',
-          description: 'Syntax error detected in real-time',
-          timestamp: new Date().toISOString()
+          "file": filePath,
+          "type": 'syntax',
+          "severity": 'high',
+          "description": 'Syntax error detected in real-time',
+          "timestamp": new Date().toISOString()
         });
 
         // Trigger immediate fix if auto-fix is enabled
@@ -707,7 +703,7 @@ class ErrorDetectionService {
           await this.triggerService('syntax-error-fixer')}
       }
     } catch (error) {
-      this.log('error', `Error handling file change: ${filePath}`, error)}
+      this.log('error', `Error handling file "change": ${filePath}`, error)}
   }
 
   handleFileRemoval(filePath) {

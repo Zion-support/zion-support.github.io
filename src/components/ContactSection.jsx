@@ -5,5 +5,4 @@ import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, U
 "
 
   );
-export default Component';
-;';';
+export default Component';';';

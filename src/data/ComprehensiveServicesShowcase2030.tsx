@@ -1,11 +1,10 @@
 import React from 'react';
-const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
+const "ComprehensiveServicesShowcase2030": Reac t.FC = () => {;
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
   const [searchTerm, setSearchTerm] = useState<any>(");
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
-;
   const getFilteredServices = (props) => {;
-    let services: an y[] = [];
+    let "services": an y[] = [];
     switch(activeTab) {
 
       case 'microsaas':
@@ -22,16 +21,14 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
       services = services.filter(service => ;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-        service.tags.some(tag: string tag.toLowerCase().includes(searchTerm.toLowerCase()));
+        service.tags.some("tag": string tag.toLowerCase().includes(searchTerm.toLowerCase()));
       )}
 
     if(selectedCategory !== 'all') {
       services = services.filter(service => service.category === selectedCategory)};
-;
     return services};
-;
   const getCategories = (props) => {;
-    let services: an y[] = [];
+    let "services": an y[] = [];
     switch(activeTab) {
 
       case 'microsaas':
@@ -51,7 +48,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
     if(activeTab === 'microsaas') {
 
       return ("
-        <div key={service.id} className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-all duration-300 border border-gray-100 overflow-hidden">"
+        <div key={service.id} className="bg-white rounded-xl shadow-lg "hover": shado w-xl transition-all duration-300 border border-gray-100 overflow-hidden">"
           <div className="p-6">"
             <div className="flex items-start justify-between mb-4">"
               <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>"
@@ -68,17 +65,17 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
                 <span className="text-sm text-gray-500">{service.pricingModel}</span>;
               </div>";
               <div className="text-sm text-gray-600 mb-2">;
-                <strong>Market Price:</strong> {service.marketPrice}
+                <strong>Market "Price": </strong> {service.marketPrice}
               </div>";
               <div className="text-sm text-gray-600 mb-2">;
-                <strong>ROI:</strong> {service.roi}
+                <strong>"ROI": </strong> {service.roi}
               </div>;
             </div>;
 ";
             <div className="mb-4">";
-              <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>";
+              <h4 className="font-semibold text-gray-900 mb-2">Key "Features": </h4>";
               <div className="grid grid-cols-2 gap-2">;
-                {service.features.slice(0, 6).map((feature: string, index: number)  => (";
+                {service.features.slice(0, 6).map(("feature": string, "index": number)  => (";
                   <div key={index} className="flex items-center text-sm text-gray-600">";
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>;
                     {feature}
@@ -88,9 +85,9 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
             </div>;
 ";
             <div className="mb-4">";
-              <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>";
+              <h4 className="font-semibold text-gray-900 mb-2">"Benefits": </h4>";
               <div className="space-y-1">;
-                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (";
+                {service.benefits.slice(0, 4).map(("benefit": string, "index": number)  => (";
                   <div key={index} className="flex items-center text-sm text-gray-600">";
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>;
                     {benefit}
@@ -100,9 +97,9 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
             </div>;
 ";
             <div className="mb-4">";
-              <h4 className="font-semibold text-gray-900 mb-2">Target Audience:</h4>";
+              <h4 className="font-semibold text-gray-900 mb-2">Target "Audience": </h4>";
               <div className="flex flex-wrap gap-2">;
-                {service.targetAudience.slice(0, 3).map((audience: string, index: number)  => (";
+                {service.targetAudience.slice(0, 3).map(("audience": string, "index": number)  => (";
                   <span key={index} className="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded-full">;
                     {audience}
                   </span>;
@@ -111,9 +108,9 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
             </div>;
 ";
             <div className="mb-4">";
-              <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>";
+              <h4 className="font-semibold text-gray-900 mb-2">"Technologies": </h4>";
               <div className="flex flex-wrap gap-2">;
-                {service.technologies.slice(0, 5).map((tech: string, index: number)  => (";
+                {service.technologies.slice(0, 5).map(("tech": string, "index": number)  => (";
                   <span key={index} className="px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">;
                     {tech}
                   </span>;
@@ -123,21 +120,21 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
 ";
             <div className="border-t pt-4">";
               <div className="flex items-center justify-between text-sm text-gray-600 mb-2">;
-                <span><strong>Setup Time:</strong> {service.setupTime}</span>;
-                <span><strong>Innovation Level:</strong> {service.innovationLevel}</span>;
+                <span><strong>Setup "Time": </strong> {service.setupTime}</span>;
+                <span><strong>Innovation "Level": </strong> {service.innovationLevel}</span>;
               </div>";
               <div className="flex items-center justify-between text-sm text-gray-600 mb-4">;
-                <span><strong>Market Size:</strong> {service.marketSize}</span>;
-                <span><strong>Growth Rate:</strong> {service.growthRate}</span>;
+                <span><strong>Market "Size": </strong> {service.marketSize}</span>;
+                <span><strong>Growth "Rate": </strong> {service.growthRate}</span>;
               </div>;
 ";
               <div className="flex items-center justify-between">";
                 <div className="text-sm text-gray-600">;
-                  <strong>Contact:</strong><br  />";
-                  <a href={`tel:${service.contactInfo.phone}`} className="text-blue-600 hover: underlin e">;
+                  <strong>"Contact": </strong><br  />";
+                  <a href={`tel:${service.contactInfo.phone}`} className="text-blue-600 "hover": underlin e">;
                     {service.contactInfo.phone}
-                  </a><br  />"`;
-                  <a href={`mailto:${service.contactInfo.email}`} className="text-blue-600 hover: underlin e">;
+                  </a><br  />"";
+                  <a href={""mailto": ${service.contactInfo.email}`} className="text-blue-600 "hover": underlin e">;
                     {service.contactInfo.email}
                   </a>;
                 </div>;
@@ -145,7 +142,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
                   href={service.contactInfo.website}";
                   target="_blank";
                   rel="noopener noreferrer";
-                  className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover: fro m-blue-700 hover: t o-purple-700 transition-all duration-300";
+                  className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg "hover": fro m-blue-700 hover: t o-purple-700 transition-all duration-300";
                   Learn More;
                 </a>;              </div>;
             </div>;
@@ -154,7 +151,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
       )} else if(activeTab = == 'it') {
 
       return ("
-        <div key={service.id} className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-all duration-300 border border-gray-100 overflow-hidden">"
+        <div key={service.id} className="bg-white rounded-xl shadow-lg "hover": shado w-xl transition-all duration-300 border border-gray-100 overflow-hidden">"
           <div className="p-6">"
             <div className="flex items-start justify-between mb-4">"
               <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>"              <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-green-600 to-blue-600 rounded-full">
@@ -176,17 +173,17 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
                 </div>;
               </div>";
               <div className="text-sm text-gray-600 mb-2">;
-                <strong>Market Price:</strong> {service.marketPrice}
+                <strong>Market "Price": </strong> {service.marketPrice}
               </div>";
               <div className="text-sm text-gray-600 mb-2">;
-                <strong>ROI:</strong> {service.roi}
+                <strong>"ROI": </strong> {service.roi}
               </div>;
             </div>;
 ";
             <div className="mb-4">";
-              <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>";
+              <h4 className="font-semibold text-gray-900 mb-2">Key "Features": </h4>";
               <div className="grid grid-cols-2 gap-2">;
-                {service.features.slice(0, 6).map((feature: string, index: number)  => (";
+                {service.features.slice(0, 6).map(("feature": string, "index": number)  => (";
                   <div key={index} className="flex items-center text-sm text-gray-600">";
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>;
                     {feature}
@@ -196,9 +193,9 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
             </div>;
 ";
             <div className="mb-4">";
-              <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>";
+              <h4 className="font-semibold text-gray-900 mb-2">"Benefits": </h4>";
               <div className="space-y-1">;
-                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (";
+                {service.benefits.slice(0, 4).map(("benefit": string, "index": number)  => (";
                   <div key={index} className="flex items-center text-sm text-gray-600">";
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>;
                     {benefit}
@@ -208,9 +205,9 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
             </div>;
 ";
             <div className="mb-4">";
-              <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>";
+              <h4 className="font-semibold text-gray-900 mb-2">"Technologies": </h4>";
               <div className="flex flex-wrap gap-2">;
-                {service.technologies.slice(0, 5).map((tech: string, index: number)  => (";
+                {service.technologies.slice(0, 5).map(("tech": string, "index": number)  => (";
                   <span key={index} className="px-2 py-1 text-xs bg-green-100 text-green-700 rounded-full">;
                     {tech}
                   </span>;
@@ -221,22 +218,22 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
             <div className="border-t pt-4">";
               <div className="grid grid-cols-2 gap-4 text-sm text-gray-600 mb-4">;
                 <div>;
-                  <strong>Response Time:</strong> {service.responseTime}<br  />;
-                  <strong>SLA:</strong> {service.sla}
+                  <strong>Response "Time": </strong> {service.responseTime}<br  />;
+                  <strong>"SLA": </strong> {service.sla}
                 </div>;
                 <div>;
-                  <strong>Delivery Time:</strong> {service.deliveryTime}<br  />;
-                  <strong>Support:</strong> {service.support}
+                  <strong>Delivery "Time": </strong> {service.deliveryTime}<br  />;
+                  <strong>"Support": </strong> {service.support}
                 </div>;
               </div>;
 ";
               <div className="flex items-center justify-between">";
                 <div className="text-sm text-gray-600">;
-                  <strong>Contact:</strong><br  />"`;
-                  <a href={`tel:${service.contactInfo.phone}`} className="text-blue-600 hover: underlin e">;
+                  <strong>"Contact": </strong><br  />"`;
+                  <a href={`tel:${service.contactInfo.phone}`} className="text-blue-600 "hover": underlin e">;
                     {service.contactInfo.phone}
-                  </a><br  />"`;
-                  <a href={`mailto:${service.contactInfo.email}`} className="text-blue-600 hover: underlin e">;
+                  </a><br  />"";
+                  <a href={""mailto": ${service.contactInfo.email}`} className="text-blue-600 "hover": underlin e">;
                     {service.contactInfo.email}
                   </a>;
                 </div>;
@@ -244,7 +241,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
                   href={service.contactInfo.website}";
                   target="_blank";
                   rel="noopener noreferrer";
-                  className="px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg hover: fro m-green-700 hover: t o-blue-700 transition-all duration-300";
+                  className="px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg "hover": fro m-green-700 hover: t o-blue-700 transition-all duration-300";
                   Learn More;
                 </a>;
               </div>;
@@ -253,7 +250,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
         </div>;
       )} else {;
       return (";
-        <div key = {service.id} className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-all duration-300 border border-gray-100 overflow-hidden">";
+        <div key = {service.id} className="bg-white rounded-xl shadow-lg "hover": shado w-xl transition-all duration-300 border border-gray-100 overflow-hidden">";
           <div className="p-6">";
             <div className="flex items-start justify-between mb-4">";
               <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}";
@@ -261,7 +258,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
                   {service.category}
                 </span>";
                 <div className="text-sm text-gray-600">";
-                  AI Score: <span className="font-bold text-purple-600">{service.aiScore}/100</span>;
+                  AI "Score": <span className="font-bold text-purple-600">{service.aiScore}/100</span>;
                 </div>;
               </div>;
             </div>;
@@ -274,20 +271,20 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
                 <span className="text-sm text-gray-500">{service.pricingModel}</span>;
               </div>";
               <div className="text-sm text-gray-600 mb-2">;
-                <strong>Market Price:</strong> {service.marketPrice}
+                <strong>Market "Price": </strong> {service.marketPrice}
               </div>";
               <div className="text-sm text-gray-600 mb-2">;
-                <strong>Accuracy:</strong> {service.accuracy}
+                <strong>"Accuracy": </strong> {service.accuracy}
               </div>";
               <div className="text-sm text-gray-600 mb-2">;
-                <strong>ROI:</strong> {service.roi}
+                <strong>"ROI": </strong> {service.roi}
               </div>;
             </div>;
 ";
             <div className="mb-4">";
-              <h4 className="font-semibold text-gray-900 mb-2">AI Models:</h4>";
+              <h4 className="font-semibold text-gray-900 mb-2">AI "Models": </h4>";
               <div className="flex flex-wrap gap-2 mb-3">;
-                {service.aiModels.slice(0, 4).map((model: string, index: number)  => (";
+                {service.aiModels.slice(0, 4).map(("model": string, "index": number)  => (";
                   <span key={index} className="px-2 py-1 text-xs bg-purple-100 text-purple-700 rounded-full">;
                     {model}
                   </span>;
@@ -296,9 +293,9 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
             </div>;
 ";
             <div className="mb-4">";
-              <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>";
+              <h4 className="font-semibold text-gray-900 mb-2">Key "Features": </h4>";
               <div className="grid grid-cols-2 gap-2">;
-                {service.features.slice(0, 6).map((feature: string, index: number)  => (";
+                {service.features.slice(0, 6).map(("feature": string, "index": number)  => (";
                   <div key={index} className="flex items-center text-sm text-gray-600">";
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>;
                     {feature}
@@ -308,9 +305,9 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
             </div>;
 ";
             <div className="mb-4">";
-              <h4 className="font-semibold text-gray-900 mb-2">Use Cases:</h4>";
+              <h4 className="font-semibold text-gray-900 mb-2">Use "Cases": </h4>";
               <div className="flex flex-wrap gap-2">;
-                {service.useCases.slice(0, 4).map((useCase: string, index: number)  => (";
+                {service.useCases.slice(0, 4).map(("useCase": string, "index": number)  => (";
                   <span key={index} className="px-2 py-1 text-xs bg-pink-100 text-pink-700 rounded-full">;
                     {useCase}
                   </span>;
@@ -319,9 +316,9 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
             </div>;
 ";
             <div className="mb-4">";
-              <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>";
+              <h4 className="font-semibold text-gray-900 mb-2">"Technologies": </h4>";
               <div className="flex flex-wrap gap-2">;
-                {service.technologies.slice(0, 5).map((tech: string, index: number)  => (";
+                {service.technologies.slice(0, 5).map(("tech": string, "index": number)  => (";
                   <span key={index} className="px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">;
                     {tech}
                   </span>;
@@ -332,22 +329,22 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
             <div className="border-t pt-4">";
               <div className="grid grid-cols-2 gap-4 text-sm text-gray-600 mb-4">;
                 <div>;
-                  <strong>Setup Time:</strong> {service.setupTime}<br  />;
-                  <strong>Innovation Level:</strong> {service.innovationLevel}
+                  <strong>Setup "Time": </strong> {service.setupTime}<br  />;
+                  <strong>Innovation "Level": </strong> {service.innovationLevel}
                 </div>;
                 <div>;
-                  <strong>Market Size:</strong> {service.marketSize}<br  />;
-                  <strong>Training Data:</strong> {service.trainingData}
+                  <strong>Market "Size": </strong> {service.marketSize}<br  />;
+                  <strong>Training "Data": </strong> {service.trainingData}
                 </div>;
               </div>;
 ";
               <div className="flex items-center justify-between">";
                 <div className="text-sm text-gray-600">;
-                  <strong>Contact:</strong><br  />"`;
-                  <a href={`tel:${service.contactInfo.phone}`} className="text-blue-600 hover: underlin e">;
+                  <strong>"Contact": </strong><br  />"`;
+                  <a href={`tel:${service.contactInfo.phone}`} className="text-blue-600 "hover": underlin e">;
                     {service.contactInfo.phone}
-                  </a><br  />"`;
-                  <a href={`mailto:${service.contactInfo.email}`} className="text-blue-600 hover: underlin e">;
+                  </a><br  />"";
+                  <a href={""mailto": ${service.contactInfo.email}"} className="text-blue-600 "hover": underlin e">;
                     {service.contactInfo.email}
                   </a>;
                 </div>;
@@ -355,7 +352,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
                   href={service.contactInfo.website}";
                   target="_blank";
                   rel="noopener noreferrer";
-                  className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover: fro m-purple-700 hover: t o-pink-700 transition-all duration-300";
+                  className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg "hover": fro m-purple-700 hover: t o-pink-700 transition-all duration-300";
                   Learn More;
                 </a>;
               </div>;
@@ -371,7 +368,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
         title = "Comprehensive Services Showcase 2030 - Zion Tech Group"
         description="Explore our cutting-edge micro SAAS, IT infrastructure, and AI services.Discover innovative solutions with real market data, competitive pricing, and proven ROI."
         keywords="micro SAAS, IT services, AI services, technology solutions, Zion Tech Group, 2030 services"
-        ogImage="https://ziontechgroup.com/images/services-showcase-2030.jpg"
+        ogImage=""https": //ziontechgroup.com/images/services-showcase-2030.jpg"
         ogUrl="https://ziontechgroup.com/comprehensive-services-showcase-2030"
       />
 "      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
@@ -379,7 +376,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
         <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">"
           <div className="container mx-auto px-4 py-20">"
             <div className="text-center max-w-4xl mx-auto">"
-              <h1 className="text-5xl md: tex t-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <h1 className="text-5xl "md": tex t-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Comprehensive Services Showcase 2030
               </h1>";
               <pclassName="text-xl md: tex t-2xl text-gray-200 mb-8">';
@@ -405,7 +402,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
         {/* Contact Banner */}"
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6">"
           <div className="container mx-auto px-4 text-center">"
-            <div className="flex flex-col md: fle x-row items-center justify-center gap-6">"
+            <div className="flex flex-col "md": fle x-row items-center justify-center gap-6">"
               <div className="flex items-center gap-2">"
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">"
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"  />"
@@ -433,20 +430,20 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
         <div className="container mx-auto px-4 py-12">
           {/* Search and Filter */}"
           <div className="mb-8">"
-            <div className="flex flex-col md: fle x-row gap-4 mb-6">"
+            <div className="flex flex-col "md": fle x-row gap-4 mb-6">"
               <div className="flex-1">
                 <input"
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}";
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent";
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": rin g-2 focus: rin g-blue-500 focus: borde r-transparent";
                 />;
               </div>;
               <select;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}";
-                className="px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent";
+                className="px-4 py-3 border border-gray-300 rounded-lg "focus": rin g-2 focus: rin g-blue-500 focus: borde r-transparent";
 ";
                 <option value="all">All Categories</option>;
                 {getCategories().map(category: unknow n (;
@@ -460,36 +457,36 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
           <div className="mb-8">";
             <divclassName="flex flex-wrap gap-2 justify-center">';
               <button'
-                onClick={() => setActiveTab('microsaas')}`
+                onClick={() => setActiveTab('microsaas')}"
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'microsaas"
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
-                    : 'bg-white text-gray-700 hover: b g-gray-50 border border-gray-200'`
-                }`}
+                    : 'bg-white text-gray-700 "hover": b g-gray-50 border border-gray-200'`
+                }"}
 
                 Micro SAAS Services({innovativeMicroSaasServices2030.length})';
               </button>';
               <button'
-                onClick={() => setActiveTab('it')}`
+                onClick={() => setActiveTab('it')}"
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'it"
                     ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-lg"
-                    : 'bg-white text-gray-700 hover: b g-gray-50 border border-gray-200'`
-                }`}
+                    : 'bg-white text-gray-700 "hover": b g-gray-50 border border-gray-200'`
+                }"}
 
                 IT Services({comprehensiveITServices2030.length})';
               </button>';
               <button'
-                onClick={() => setActiveTab('ai')}`
+                onClick={() => setActiveTab('ai')}"
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'ai"
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg"
-                    : 'bg-white text-gray-700 hover: b g-gray-50 border border-gray-200'`
-                }`}
+                    : 'bg-white text-gray-700 "hover": b g-gray-50 border border-gray-200'`
+                }"}
 ;
                 AI Services({comprehensiveAIServices2030.length});
               </button>;
             </div>;
           </div>;
           {/* Services Grid */}";
-          <div className="grid grid-cols-1 lg: gri d-cols-2 xl: gri d-cols-3 gap-8"> {getFilteredServices().map(renderServiceCard)}
+          <div className="grid grid-cols-1 "lg": gri d-cols-2 xl: gri d-cols-3 gap-8"> {getFilteredServices().map(renderServiceCard)}
           </div>;
  {/* No Results */} {getFilteredServices().length === 0 && (;";
             <div className="text-center py-12">;";
@@ -497,7 +494,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
               <button;';
                 onClick={() => {;';';
                   setSearchTerm(");';';
-                  setSelectedCategory('all')}}"                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors"
+                  setSelectedCategory('all')}}"                className="px-6 py-3 bg-blue-600 text-white rounded-lg "hover": b g-blue-700 transition-colors"
               >
                 Clear Filters
               </button>
@@ -509,7 +506,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>"
             <p className="text-xl text-blue-100 mb-6">
               Get in touch with our experts to discuss your specific needs and discover how our services can drive your success.</p>"
-            <div className="flex flex-col md: fle x-row gap-4 justify-center">
+            <div className="flex flex-col "md": fle x-row gap-4 justify-center">
               <a"
                 href="tel:+13024640950"
                 className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover: b g-gray-100 transition-colors"
@@ -529,7 +526,7 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
     </>
   )};';
 
-export default ComprehensiveServicesShowcase2030}}}}}"`
+export default ComprehensiveServicesShowcase2030}}}}}""
 
 </SEO>
 </any>

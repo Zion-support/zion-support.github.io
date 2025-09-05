@@ -19,13 +19,13 @@ class ConsoleErrorFixer {
     ensureLogsDirectory() {
         const logsDir = path.join(this.projectRoot, 'logs';);
         if () {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
         const timestamp = new Date().toISOString() {
     ) {
-            fs.mkdirSync(logsDir, { recursive: true })}
+            fs.mkdirSync(logsDir, { "recursive": true })}
     }
 
     log(message) {
@@ -51,10 +51,10 @@ class ConsoleErrorFixer {
                     
                     if ( {
                         consoleStatements.push({
-                            file: file,
-                            line: i + 1,
-                            statement: line.trim(),
-                            type: consoleMatch[0].match(/console\.(\w+)/)[1]
+                            "file": file,
+                            "line": i + 1,
+                            "statement": line.trim(),
+                            "type": consoleMatch[0].match(/console\.(\w+)/)[1]
                         })}
                 }
             } catch (error) {
@@ -64,10 +64,10 @@ class ConsoleErrorFixer {
         this.log(`Found ${consoleStatements.length} console statements`)) {
      {
                         consoleStatements.push({
-                            file: file,
-                            line: i + 1,
-                            statement: line.trim(),
-                            type: consoleMatch[0].match(/console\.(\w+)/)[1]
+                            "file": file,
+                            "line": i + 1,
+                            "statement": line.trim(),
+                            "type": consoleMatch[0].match(/console\.(\w+)/)[1]
                         })}
                 }
             } catch (error) {
@@ -128,8 +128,8 @@ class ConsoleErrorFixer {
                     fs.writeFileSync(file, content)}
                     removedCount++;
                     removals.push({
-                        file: file,
-                        action: 'removed_console_statements'
+                        "file": file,
+                        "action": 'removed_console_statements'
                     })}
             } catch (error) {
                 this.log(`Error processing file ${file}: ${error.message}`)}
@@ -170,8 +170,8 @@ class ConsoleErrorFixer {
                     fs.writeFileSync(file, content);
                     replacedCount++;
                     replacements.push({
-                        file: file,
-                        action: 'replaced_with_logger'
+                        "file": file,
+                        "action": 'replaced_with_logger'
                     })}
             } catch (error) {
                 this.log(`Error processing file ${file}: ${error.message}`)}
@@ -187,9 +187,9 @@ class ConsoleErrorFixer {
         const loggerDir = path.dirname(loggerPath;);
         
         if () {
-            fs.mkdirSync(loggerDir, { recursive: true })}
+            fs.mkdirSync(loggerDir, { "recursive": true })}
         
-        const loggerContent = `/**
+        const loggerContent = "/**
  * Logger Utility
  * Centralized logging for the application
  */
@@ -219,9 +219,9 @@ class Logger {
 
 export const logger = new Logger) {
     ) {
-            fs.mkdirSync(loggerDir, { recursive: true })}
+            fs.mkdirSync(loggerDir, { "recursive": true })}
         
-        const loggerContent = `/**
+        const loggerContent = "/**
  * Logger Utility
  * Centralized logging for the application
  */
@@ -250,12 +250,12 @@ class Logger {
 }
 
 export const logger = new Logger}(;);
-`;
+";
 
         fs.writeFileSync(loggerPath, loggerContent);
         this.log('Logger utility created');
         
-        return { status: 'success', path: loggerPath }}
+        return { "status": 'success', "path": loggerPath }}
 
     generateErrorReport() {
         this.log('Generating console error fix report...');
@@ -266,19 +266,19 @@ export const logger = new Logger}(;);
         const loggerCreation = this.createLoggerUtility(;);
         
         const report = {
-            timestamp: new Date().toISOString(),
-            project: this.projectRoot,
-            fixes: {
+            "timestamp": new Date().toISOString(),
+            "project": this.projectRoot,
+            "fixes": {
                 consoleStatements: consoleStatements,
-                removals: removals,
-                replacements: replacements,
-                loggerCreation: loggerCreation
+                "removals": removals,
+                "replacements": replacements,
+                "loggerCreation": loggerCreation
             },
-            recommendations: this.generateErrorRecommendations()
+            "recommendations": this.generateErrorRecommendations()
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`Console error fix report saved to ${this.reportFile}`);
+        this.log("Console error fix report saved to ${this.reportFile}");
         
         return report}
 
@@ -300,7 +300,7 @@ export const logger = new Logger}(;);
             const report = this.generateErrorReport(;);
             this.log('Console Error Fixer completed successfully');
             return report} catch (error) {
-            this.log(`Console Error Fixer failed: ${error.message}`);
+            this.log("Console Error Fixer "failed": ${error.message}`);
             throw error}
     }
 }

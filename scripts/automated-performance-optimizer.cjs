@@ -9,7 +9,7 @@ class PerformanceOptimizer {
     this.ensureDirectories()}
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true })}
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
   log(message) {
     const timestamp = new Date().toISOString()
@@ -17,23 +17,23 @@ class PerformanceOptimizer {
   analyzeBundleSize() {
     this.log("🔍 Analyzing bundle size...")
     const buildDir = path.join(this.projectRoot, ".next")
-    const analysis = {buildExists: fs.existsSync(buildDir),totalSize: 0,staticSize: 0;
+    const analysis = {"buildExists": fs.existsSync(buildDir),"totalSize": 0,"staticSize": 0;
       serverSize: 0;
       chunks: []}
     if (analysis.buildExists) {
       try {
         // Get total build size
-        const totalSizeOutput = execSync(`du -sh ${buildDir}`, { encoding: "utf8" })
+        const totalSizeOutput = execSync(`du -sh ${buildDir}`, { "encoding": "utf8" })
         analysis.totalSize = totalSizeOutput.split("\t")[0]
         // Get static assets size
         const staticDir = path.join(buildDir, "static")
         if (fs.existsSync(staticDir)) {
-          const staticSizeOutput = execSync(`du -sh ${staticDir}`, { encoding: "utf8" })
+          const staticSizeOutput = execSync(`du -sh ${staticDir}`, { "encoding": "utf8" })
           analysis.staticSize = staticSizeOutput.split("\t")[0]}
         // Get server files size
         const serverDir = path.join(buildDir, "server")
         if (fs.existsSync(serverDir)) {
-          const serverSizeOutput = execSync(`du -sh ${serverDir}`, { encoding: "utf8" })
+          const serverSizeOutput = execSync(`du -sh ${serverDir}`, { "encoding": "utf8" })
           analysis.serverSize = serverSizeOutput.split("\t")[0]}
         // Analyze chunks
         analysis.chunks = this.analyzeChunks(buildDir)} catch (error) {
@@ -49,7 +49,7 @@ class PerformanceOptimizer {
         if (file.endsWith(".js")) {
           const filePath = path.join(staticDir, file)
           const stats = fs.statSync(filePath)
-          chunks.push({name: file,size: this.formatBytes(stats.size);
+          chunks.push({"name": file,"size": this.formatBytes(stats.size);
             sizeBytes: stats.size})}
       })
       // Sort by size
@@ -65,7 +65,7 @@ class PerformanceOptimizer {
     this.log("🔍 Analyzing image optimization...")
     const publicDir = path.join(this.projectRoot, "public")
     const analysis = {
-      totalImages: 0;
+      "totalImages": 0;
       unoptimizedImages: [];
       largeImages: [];
       imageFormats: {}
@@ -74,7 +74,7 @@ class PerformanceOptimizer {
       this.analyzeDirectoryForImages(publicDir, analysis)}
     return analysis}
   analyzeDirectoryForImages(dir, analysis) {
-    const files = fs.readdirSync(dir, { withFileTypes: true })
+    const files = fs.readdirSync(dir, { "withFileTypes": true })
     files.forEach(file => {
       const filePath = path.join(dir, file.name)
       if (file.isDirectory()) {
@@ -94,10 +94,10 @@ class PerformanceOptimizer {
       analysis.imageFormats[ext] = (analysis.imageFormats[ext] || 0) + 1
       // Check for large images (>500KB)
       if (size > 500 * 1024) {
-        analysis.largeImages.push({file: path.relative(this.projectRoot, filePath),size: this.formatBytes(size)})}
+        analysis.largeImages.push({"file": path.relative(this.projectRoot, filePath),"size": this.formatBytes(size)})}
       // Check for unoptimized formats
       if ([".jpg", ".jpeg", ".png"].includes(ext)) {
-        analysis.unoptimizedImages.push({file: path.relative(this.projectRoot, filePath),format: ext;
+        analysis.unoptimizedImages.push({"file": path.relative(this.projectRoot, filePath),"format": ext;
           size: this.formatBytes(size)})}
     } catch (error) {
       this.log(`❌ Error analyzing image ${filePath}: ${error.message}`)}
@@ -106,14 +106,14 @@ class PerformanceOptimizer {
     this.log("🔍 Analyzing code splitting...")
     const srcDir = path.join(this.projectRoot, "src")
     const pagesDir = path.join(this.projectRoot, "pages")
-    const analysis = {dynamicImports: 0,lazyComponents: 0,largeComponents: [];
+    const analysis = {"dynamicImports": 0,"lazyComponents": 0,"largeComponents": [];
       potentialSplits: []}
     const directories = [srcDir, pagesDir].filter(dir => fs.existsSync(dir))
     directories.forEach(dir => {
       this.analyzeDirectoryForSplitting(dir, analysis)})
     return analysis}
   analyzeDirectoryForSplitting(dir, analysis) {
-    const files = fs.readdirSync(dir, { withFileTypes: true })
+    const files = fs.readdirSync(dir, { "withFileTypes": true })
     files.forEach(file => {
       const filePath = path.join(dir, file.name)
       if (file.isDirectory()) {
@@ -137,12 +137,12 @@ class PerformanceOptimizer {
         analysis.lazyComponents += lazyMatches.length}
       // Identify large components that could be split
       if (lines > 150 && content.includes("export default") && content.includes("function") || content.includes("const") && content.includes("=")) {
-        analysis.largeComponents.push({file: path.relative(this.projectRoot, filePath),lines: lines})}
+        analysis.largeComponents.push({"file": path.relative(this.projectRoot, filePath),"lines": lines})}
       // Identify potential split opportunities
       if (content.includes("import") && content.includes("from") && !content.includes("import(")) {
         const importMatches = content.match(/import\s+.*\s+from\s+[""][^""]+[""]/g)
         if (importMatches && importMatches.length > 5) {
-          analysis.potentialSplits.push({file: path.relative(this.projectRoot, filePath),imports: importMatches.length})}
+          analysis.potentialSplits.push({"file": path.relative(this.projectRoot, filePath),"imports": importMatches.length})}
       }
     } catch (error) {
       this.log(`❌ Error analyzing file ${filePath}: ${error.message}`)}
@@ -154,35 +154,35 @@ class PerformanceOptimizer {
     if (bundleAnalysis.chunks.length > 0) {
       const largestChunks = bundleAnalysis.chunks.slice(0, 3)
       if (largestChunks.some(chunk => chunk.sizeBytes > 500 * 1024)) {
-        recommendations.push({type: "bundle-size",priority: "high",message: "Large JavaScript chunks detected. Consider code splitting and lazy loading.";
+        recommendations.push({"type": "bundle-size","priority": "high","message": "Large JavaScript chunks detected. Consider code splitting and lazy loading.";
           details: largestChunks})}
     }
     // Image optimization recommendations
     if (imageAnalysis.largeImages.length > 0) {
       recommendations.push({
-        type: "image-optimization";
+        "type": "image-optimization";
         priority: "high";
         message: `Found ${imageAnalysis.largeImages.length} large images. Consider compressing or converting to WebP format.`;
-        details: imageAnalysis.largeImages.slice(0, 5)})}
+        "details": imageAnalysis.largeImages.slice(0, 5)})}
     if (imageAnalysis.unoptimizedImages.length > 0) {
       recommendations.push({
-        type: "image-optimization";
+        "type": "image-optimization";
         priority: "medium";
         message: `Found ${imageAnalysis.unoptimizedImages.length} images in unoptimized formats. Consider using WebP or AVIF.`;
-        details: imageAnalysis.unoptimizedImages.slice(0, 5)})}
+        "details": imageAnalysis.unoptimizedImages.slice(0, 5)})}
     // Code splitting recommendations
     if (splittingAnalysis.largeComponents.length > 0) {
       recommendations.push({
-        type: "code-splitting";
+        "type": "code-splitting";
         priority: "medium";
         message: `Found ${splittingAnalysis.largeComponents.length} large components. Consider splitting them into smaller components.`;
-        details: splittingAnalysis.largeComponents.slice(0, 5)})}
+        "details": splittingAnalysis.largeComponents.slice(0, 5)})}
     if (splittingAnalysis.potentialSplits.length > 0) {
       recommendations.push({
-        type: "code-splitting";
+        "type": "code-splitting";
         priority: "low";
         message: `Found ${splittingAnalysis.potentialSplits.length} files with many imports. Consider dynamic imports for better code splitting.`;
-        details: splittingAnalysis.potentialSplits.slice(0, 5)})}
+        "details": splittingAnalysis.potentialSplits.slice(0, 5)})}
     return recommendations}
   async run() {
     this.log("🚀 Starting Performance Optimizer")
@@ -190,24 +190,24 @@ class PerformanceOptimizer {
     const imageAnalysis = this.analyzeImageOptimization()
     const splittingAnalysis = this.analyzeCodeSplitting()
     const recommendations = this.generateOptimizationRecommendations(bundleAnalysis, imageAnalysis, splittingAnalysis)
-    const results = {timestamp: new Date().toISOString(),bundleAnalysis,imageAnalysis;
+    const results = {"timestamp": new Date().toISOString(),bundleAnalysis,imageAnalysis;
       splittingAnalysis;
       recommendations}
     // Generate report
     const reportFile = path.join(this.reportsDir, "performance-optimization-report.json")
     fs.writeFileSync(reportFile, JSON.stringify(results, null, 2))
-    this.log(`📊 Performance optimization report generated: ${reportFile}`)
+    this.log(`📊 Performance optimization report "generated": ${reportFile}`)
     // Print summary
-    console.log("\n📋 Performance Analysis Summary:")
+    console.log("\n📋 Performance Analysis "Summary": ")
     console.log(`📦 Total build size: ${bundleAnalysis.totalSize}`)
-    console.log(`🖼️  Total images: ${imageAnalysis.totalImages}`)
-    console.log(`🔀 Dynamic imports: ${splittingAnalysis.dynamicImports}`)
-    console.log(`⚡ Lazy components: ${splittingAnalysis.lazyComponents}`)
-    console.log(`💡 Optimization recommendations: ${recommendations.length}`)
+    console.log(`🖼️  Total "images": ${imageAnalysis.totalImages}`)
+    console.log(`🔀 Dynamic "imports": ${splittingAnalysis.dynamicImports}`)
+    console.log(`⚡ Lazy "components": ${splittingAnalysis.lazyComponents}`)
+    console.log(`💡 Optimization "recommendations": ${recommendations.length}`)
     // Print high priority recommendations
     const highPriority = recommendations.filter(r => r.priority === "high")
     if (highPriority.length > 0) {
-      console.log("\n🚨 High Priority Optimizations:')
+      console.log("\n🚨 High Priority "Optimizations": ')
       highPriority.forEach(rec => {
         console.log(`  • ${rec.message}`)})}
     return results}

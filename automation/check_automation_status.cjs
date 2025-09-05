@@ -7,18 +7,17 @@ const { execSync } = require('child_process');
 async function checkAutomationStatus() {
   console.log('🔍 Checking Automation Status...');
   const statusReport = {
-    timestamp: new Date().toISOString(),
-    pm2Processes: [],
-    automationScripts: [],
-    systemHealth: {},
-    overallStatus: 'unknown',
-  };
+    "timestamp": new Date().toISOString(),
+    "pm2Processes": [],
+    "automationScripts": [],
+    "systemHealth": {},
+    "overallStatus": 'unknown'};
 
   try {
     // Check PM2 processes
     console.log('📋 Checking PM2 processes...');
     try {
-      const pm2List = execSync('pm2 jlist', { encoding: 'utf8' });
+      const pm2List = execSync('pm2 jlist', { "encoding": 'utf8' });
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;
 
@@ -33,8 +32,7 @@ async function checkAutomationStatus() {
 
     // Check automation scripts
     console.log('📋 Checking automation scripts...');
-    const automationScripts = [
-      'scripts/comprehensive-automation-suite.cjs',
+    const automationScripts = ['scripts/comprehensive-automation-suite.cjs',
       'scripts/automation-orchestrator.cjs',
       'scripts/start-all-automations.sh',
       'automation/security-scanner.cjs',
@@ -47,25 +45,23 @@ async function checkAutomationStatus() {
         ? fs.statSync(script).mode & parseInt('111', 8)
         : false;
       statusReport.automationScripts.push({
-        name: script,
+        "name": script,
         exists,
         isExecutable,
-        status: exists
+        "status": exists
           ? isExecutable
             ? 'ready'
             : 'not_executable'
-          : 'missing',
-      });
+          : 'missing'});
     }
 
     // Check system health
     console.log('📋 Checking system health...');
     const systemHealth = {
-      memoryUsage: process.memoryUsage(),
-      uptime: process.uptime(),
-      nodeVersion: process.version,
-      platform: process.platform,
-    };
+      "memoryUsage": process.memoryUsage(),
+      "uptime": process.uptime(),
+      "nodeVersion": process.version,
+      "platform": process.platform};
     statusReport.systemHealth = systemHealth;
 
     // Determine overall status
@@ -91,17 +87,17 @@ async function checkAutomationStatus() {
     );
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
 
-    console.log('📊 Status Report:');
+    console.log('📊 Status "Report": ');
     console.log(`   Overall Status: ${statusReport.overallStatus}`);
-    console.log(`   PM2 Processes: ${runningProcesses.length} running`);
+    console.log(`   PM2 "Processes": ${runningProcesses.length} running`);
     console.log(
-      `   Available Scripts: ${availableScripts.length}/${automationScripts.length}`
+      `   Available "Scripts": ${availableScripts.length}/${automationScripts.length}`
     );
-    console.log(`   Report saved to: ${reportPath}`);
+    console.log(`   Report saved "to": ${reportPath}`);
 
     return statusReport;
   } catch (error) {
-    console.error('❌ Error checking automation status:', error.message);
+    console.error('❌ Error checking automation "status": ', error.message);
     statusReport.overallStatus = 'error';
     statusReport.error = error.message;
     return statusReport;
@@ -115,7 +111,7 @@ if (require.main === module) {
       process.exit(0);
     })
     .catch(error => {
-      console.error('Fatal error:', error);
+      console.error('Fatal "error": ', error);
       process.exit(1);
     });
 }

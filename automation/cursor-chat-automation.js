@@ -4,8 +4,7 @@
  * Cursor Chat Automation System
  * Continuously sends "proceed" commands to keep Cursor chat sessions active
  *
- * Features:
- * - Automated chat session management
+ * "Features": * - Automated chat session management
  * - Configurable intervals and patterns
  * - Session health monitoring
  * - Logging and error handling
@@ -22,24 +21,22 @@ const execAsync = promisify(exec);
 class CursorChatAutomation {
   constructor(config = {}) {
     this.config = {
-      interval: config.interval || 30000, // 30 seconds default
-      maxSessions: config.maxSessions || 5,
-      logFile: config.logFile || 'cursor-chat-automation.log',
-      enableLogging: config.enableLogging !== false,
-      autoRestart: config.autoRestart !== false,
-      ...config,
-    };
+      "interval": config.interval || 30000, // 30 seconds default
+      "maxSessions": config.maxSessions || 5,
+      "logFile": config.logFile || 'cursor-chat-automation.log',
+      "enableLogging": config.enableLogging !== false,
+      "autoRestart": config.autoRestart !== false,
+      ...config};
 
     this.sessions = new Map();
     this.isRunning = false;
     this.stats = {
-      totalCommands: 0,
-      successfulCommands: 0,
-      failedCommands: 0,
-      sessionsCreated: 0,
-      sessionsTerminated: 0,
-      startTime: null,
-    };
+      "totalCommands": 0,
+      "successfulCommands": 0,
+      "failedCommands": 0,
+      "sessionsCreated": 0,
+      "sessionsTerminated": 0,
+      "startTime": null};
 
     this.log('Cursor Chat Automation initialized');
   }
@@ -58,7 +55,7 @@ class CursorChatAutomation {
     try {
       fs.appendFileSync(this.config.logFile, logEntry + '\n');
     } catch (error) {
-      console.error('Failed to write to log file:', error.message);
+      console.error('Failed to write to log "file": ', error.message);
     }
   }
 
@@ -68,27 +65,25 @@ class CursorChatAutomation {
   async createSession(sessionId, options = {}) {
     try {
       const sessionConfig = {
-        name: options.name || `Session-${sessionId}`,
-        interval: options.interval || this.config.interval,
-        autoProceed: options.autoProceed !== false,
-        ...options,
-      };
+        "name": options.name || `Session-${sessionId}`,
+        "interval": options.interval || this.config.interval,
+        "autoProceed": options.autoProceed !== false,
+        ...options};
 
       const session = {
-        id: sessionId,
-        config: sessionConfig,
-        status: 'active',
-        lastCommand: null,
-        commandCount: 0,
-        errors: 0,
-        createdAt: new Date(),
-        process: null,
-      };
+        "id": sessionId,
+        "config": sessionConfig,
+        "status": 'active',
+        "lastCommand": null,
+        "commandCount": 0,
+        "errors": 0,
+        "createdAt": new Date(),
+        "process": null};
 
       this.sessions.set(sessionId, session);
       this.stats.sessionsCreated++;
 
-      this.log(`Session ${sessionId} created: ${sessionConfig.name}`);
+      this.log(`Session ${sessionId} "created": ${sessionConfig.name}`);
 
       if (sessionConfig.autoProceed) {
         this.startSessionAutomation(sessionId);
@@ -129,7 +124,7 @@ class CursorChatAutomation {
         setTimeout(() => runSession(), session.config.interval);
       } catch (error) {
         this.log(
-          `Session ${sessionId} automation error: ${error.message}`,
+          `Session ${sessionId} automation "error": ${error.message}`,
           'ERROR'
         );
         session.errors++;
@@ -187,8 +182,7 @@ class CursorChatAutomation {
    */
   async executeCursorCommand(sessionId, command) {
     // This is a placeholder for actual Cursor integration
-    // In a real implementation, this would:
-    // 1. Connect to Cursor's API or CLI
+    // In a real implementation, this "would": // 1. Connect to Cursor's API or CLI
     // 2. Send the command to the specific chat session
     // 3. Handle the response
 
@@ -203,7 +197,7 @@ class CursorChatAutomation {
           // 5% failure rate
           reject(new Error('Simulated command failure'));
         } else {
-          resolve({ success: true, sessionId, command });
+          resolve({ "success": true, sessionId, command });
         }
       }, delay);
     });
@@ -248,7 +242,7 @@ class CursorChatAutomation {
     const healthCheck = () => {
       if (!this.isRunning) return;
 
-      this.log(`Health check: ${this.sessions.size} active sessions`);
+      this.log(`Health "check": ${this.sessions.size} active sessions`);
 
       // Check for stuck sessions
       for (const [sessionId, session] of this.sessions) {
@@ -285,12 +279,11 @@ class CursorChatAutomation {
     return {
       ...this.stats,
       uptime,
-      uptimeFormatted: this.formatUptime(uptime),
-      activeSessions: Array.from(this.sessions.values()).filter(
+      "uptimeFormatted": this.formatUptime(uptime),
+      "activeSessions": Array.from(this.sessions.values()).filter(
         s => s.status === 'active'
       ).length,
-      totalSessions: this.sessions.size,
-    };
+      "totalSessions": this.sessions.size};
   }
 
   /**
@@ -338,38 +331,33 @@ class CursorChatAutomation {
   listSessions() {
     return Array.from(this.sessions.entries()).map(([id, session]) => ({
       id,
-      name: session.config.name,
-      status: session.status,
-      commandCount: session.commandCount,
-      errors: session.errors,
-      createdAt: session.createdAt,
-      lastCommand: session.lastCommand,
-    }));
+      "name": session.config.name,
+      "status": session.status,
+      "commandCount": session.commandCount,
+      "errors": session.errors,
+      "createdAt": session.createdAt,
+      "lastCommand": session.lastCommand}));
   }
 }
 
 // CLI interface
 if (require.main === module) {
   const automation = new CursorChatAutomation({
-    interval: 30000, // 30 seconds
-    maxSessions: 3,
-    enableLogging: true,
-    autoRestart: true,
-  });
+    "interval": 30000, // 30 seconds
+    "maxSessions": 3,
+    "enableLogging": true,
+    "autoRestart": true});
 
   // Create some sample sessions
   automation.createSession('main-chat', {
-    name: 'Main Development Chat',
-    interval: 25000,
-  });
+    "name": 'Main Development Chat',
+    "interval": 25000});
   automation.createSession('code-review', {
-    name: 'Code Review Assistant',
-    interval: 35000,
-  });
+    "name": 'Code Review Assistant',
+    "interval": 35000});
   automation.createSession('bug-fixes', {
-    name: 'Bug Fixes Helper',
-    interval: 40000,
-  });
+    "name": 'Bug Fixes Helper',
+    "interval": 40000});
 
   // Start the automation
   automation.start();
@@ -380,7 +368,7 @@ if (require.main === module) {
     automation.stop();
 
     const stats = automation.getStats();
-    console.log('\nFinal Statistics:');
+    console.log('\nFinal "Statistics": ');
     console.log(JSON.stringify(stats, null, 2));
 
     process.exit(0);
@@ -390,7 +378,7 @@ if (require.main === module) {
   setInterval(() => {
     const stats = automation.getStats();
     console.log(
-      `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions, ${stats.totalCommands} commands sent`
+      `\n[${new Date().toISOString()}] "Status": ${stats.activeSessions} active sessions, ${stats.totalCommands} commands sent`
     );
   }, 60000); // Status update every minute
 }

@@ -5,60 +5,60 @@ export default function Page($1) {
 
   const navigationSections = [{
 
-      title: "Main Navigation",
-      icon: Hom e,
+      "title": "Main Navigation",
+      "icon": Hom e,
       items[;"
-        { name: "Home", href: "/", icon: Hom e },"
-        { name: "Solutions", href: "/solutions", icon: Targe t },"
-        { name: "Services", href: "/services", icon: Za p },"
-        { name: "Case Studies", href: "/case-studies", icon: FileTex t },"
-        { name: "Blog", href: "/blog", icon: FileTex t },"
-        { name: "Partners", href: "/partners", icon: Handshak e },"
-        { name: "About", href: "/about", icon: User s },"
-        { name: "Contact", href: "/contact", icon: MessageCircl e },"
-        { name: "Careers", href: "/careers", icon: Briefcas e },"
-        { name: "Partners", href: "/partners", icon: Handshak e }              </button>
+        { "name": "Home", "href": "/", "icon": Hom e },"
+        { "name": "Solutions", "href": "/solutions", "icon": Targe t },"
+        { "name": "Services", "href": "/services", "icon": Za p },"
+        { "name": "Case Studies", "href": "/case-studies", "icon": FileTex t },"
+        { "name": "Blog", "href": "/blog", "icon": FileTex t },"
+        { "name": "Partners", "href": "/partners", "icon": Handshak e },"
+        { "name": "About", "href": "/about", "icon": User s },"
+        { "name": "Contact", "href": "/contact", "icon": MessageCircl e },"
+        { "name": "Careers", "href": "/careers", "icon": Briefcas e },"
+        { "name": "Partners", "href": "/partners", "icon": Handshak e }              </button>
 
               <AnimatePresence>
                 {expandedSections.has(section.title) && (<motion.div
                     initial = {
 
-  { opacity: 0,
-  height: 0
+  { "opacity": 0,
+  "height": 0
 
 }}
                     animate = {
-  { opacity: 1,
-  height: 'auto'
+  { "opacity": 1,
+  "height": 'auto'
 
 }}
                     exit = {
 
-  { opacity: 0,
-  height: 0
+  { "opacity": 0,
+  "height": 0
 
 }}
-                    transition={{ duration: 0.3 }}"
+                    transition={{ "duration": 0.3 }}"
                     className="ml-7 mt-2 space-y-1"
                   >
                     {section.items.map((item) => (<Link
                         key={item.name}
                         initial = {
 
-  { opacity: 0,
-  x: -20
+  { "opacity": 0,
+  "x": -20
 
 }}
                         animate = {
 
-  { opacity: 1,
-  x: 0
+  { "opacity": 1,
+  "x": 0
 
 }}
                         transition = {
 
-  { duration: 0.2,
-  delay: itemInde x * 0.05
+  { "duration": 0.2,
+  "delay": itemInde x * 0.05
 
 }}
                       >"
@@ -81,20 +81,20 @@ export default function Page($1) {
           className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg"
           initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           animate = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
           transition = {
 
-  { duration: 0.5,
-  delay: 0.5
+  { "duration": 0.5,
+  "delay": 0.5
 
 }}
         >"

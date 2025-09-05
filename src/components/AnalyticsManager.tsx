@@ -19,30 +19,30 @@ function AnalyticsManager($1) {
 
 interface AnalyticsData {
 
-  pageViews: number;
+  "pageViews": number;
   uniqueVisitors: number;
   sessionDuration: number;
   bounceRate: number;
   conversionRate: number;
   topPages: { path: string; views: number 
 }[];
-  userAgents: { device: string; count: number }[];
-  performance: {
+  "userAgents": { device: string; count: number }[];
+  "performance": {
 
     fcp: number;
     lcp: number;
     fid: number;
     cls: number};
-  events: { name: string; count: number; timestamp: string }[]}
+  "events": { name: string; count: number; timestamp: string }[]}
 interface UserSession {
 
-  id: string;
+  "id": string;
   startTime: number;
   lastActivity: number;
   pageViews: string[];
   events: { name: string; timestamp: number; data?: unknown 
 }[];
-  userAgent: string;
+  "userAgent": string;
   referrer: string}
 
 export function AnalyticsManager($1) {
@@ -57,7 +57,7 @@ export function AnalyticsManager($1) {
 
   // Initialize analytics tracking
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -71,15 +71,15 @@ export function AnalyticsManager($1) {
     localStorage.setItem('zion_session_id', sessionId);';';
       localStorage.getItem('zion_session_id') || generateSessionId();'    localStorage.setItem('zion_session_id', sessionId);
 
-    const session: UserSessio n = {
+    const "session": UserSessio n = {
 
       id: sessionI d,
-      startTime: Dat e.now () ,
-      lastActivity: Dat e.now () ,
-      pageViews: [window.location.pathname],
-      events: [],
-      userAgent: navigato r.userAgent,
-      referrer: documen t.referrer};;
+      "startTime": Dat e.now () ,
+      "lastActivity": Dat e.now () ,
+      "pageViews": [window.location.pathname],
+      "events": [],
+      "userAgent": navigato r.userAgent,
+      "referrer": documen t.referrer};
 
     setCurrentSession(session);
 
@@ -116,7 +116,7 @@ export function AnalyticsManager($1) {
   }, [currentSession]) };';
 
     // Scroll tracking'
-    document.addEventListener('scroll', handleScroll, { passive: tru e });';
+    document.addEventListener('scroll', handleScroll, { "passive": tru e });';
 
     // Page unload tracking'
     window.addEventListener('beforeunload', handleBeforeUnload)}, []);';
@@ -125,9 +125,9 @@ export function AnalyticsManager($1) {
     if(target.tagName === 'BUTTON' || target.closest('button')) {
       trackEvent('button_click', {
 
-        text: targe t.textContent || target.innerText,
-        className: targe t.className,
-        id: targe t.id})}
+        "text": targe t.textContent || target.innerText,
+        "className": targe t.className,
+        "id": targe t.id})}
 
     // Track link clicks'
     if(target.tagName === 'A' || target.closest('a')) {
@@ -135,8 +135,8 @@ export function AnalyticsManager($1) {
       trackEvent('link_click', {
           : (target.closest('a') as HTMLAnchorElement);'      trackEvent('link_click', {
 
-        href: lin k.href,
-        text: lin k.textContent || link.innerText})}
+        "href": lin k.href,
+        "text": lin k.textContent || link.innerText})}
     // Track form interactions
     if('
       target.tagName === 'INPUT' ||'
@@ -146,15 +146,15 @@ export function AnalyticsManager($1) {
 
       trackEvent('form_interaction', {
 
-        type: targe t.tagName.toLowerCase(),
-        name: (target as HTMLInputElement).name,
-        id: targe t.id})}
+        "type": targe t.tagName.toLowerCase(),
+        "name": (target as HTMLInputElement).name,
+        "id": targe t.id})}
   }, []) ;
 
     if(scrollDepth % 25 === 0) {
 
       // Track at 25%, 50%, 75%, 100%'
-      trackEvent('scroll_depth', { depth: scrollDept h })}
+      trackEvent('scroll_depth', { "depth": scrollDept h })}
   }, []) }
   }, [currentSession]) ;
 
@@ -162,7 +162,7 @@ export function AnalyticsManager($1) {
 
           trackPerformance('fcp', fcp.startTime)}
       });';';
-      fcpObserver.observe({ entryTypes: ['paint'] });
+      fcpObserver.observe({ "entryTypes": ['paint'] });
 
       // Largest Contentful Paint
 
@@ -170,7 +170,7 @@ export function AnalyticsManager($1) {
 
           trackPerformance('lcp', lcp.startTime)}
       });';';
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      lcpObserver.observe({ "entryTypes": ['largest-contentful-paint'] });
 
       // First Input Delay
 
@@ -178,7 +178,7 @@ export function AnalyticsManager($1) {
 
           trackPerformance('fid', fid.processingStart - fid.startTime)}
       });';';
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fidObserver.observe({ "entryTypes": ['first-input'] });
 
       // Cumulative Layout Shift
       const clsObserver = new PerformanceObserver(list => {
@@ -190,7 +190,7 @@ export function AnalyticsManager($1) {
             clsValue += (entry as any).value}
         }
         trackPerformance('cls', clsValue)};);';';
-      clsObserver.observe({ entryTypes: ['layout-shift'] })}
+      clsObserver.observe({ "entryTypes": ['layout-shift'] })}
   }, []) }
     }, 30000) ;
 
@@ -199,7 +199,7 @@ export function AnalyticsManager($1) {
         trackEvent('page_view', { path });';
 
         // Send to analytics endpoint'
-        sendAnalyticsData('page_view', { path, timestamp: Dat e.now() })}
+        sendAnalyticsData('page_view', { path, "timestamp": Dat e.now() })}
     },
     [currentSession]
   );
@@ -209,8 +209,8 @@ export function AnalyticsManager($1) {
             ? {
 
                 ...prev,
-                events: [...prev.events, event],
-                lastActivity: Dat e.now()}
+                "events": [...prev.events, event],
+                "lastActivity": Dat e.now()}
             : null
         );';
 
@@ -223,7 +223,7 @@ export function AnalyticsManager($1) {
         // For now, just log to console'
         // } catch (error) {
 
-        // console.error('Failed to send analytics data:', error)}
+        // console.error('Failed to send analytics "data": ', error)}
     },
     [currentSession]
   );';
@@ -231,7 +231,7 @@ export function AnalyticsManager($1) {
         // Send to analytics endpoint'
         await sendAnalyticsData('session_end', session)} catch (error) {
 
-        // console.error('Failed to save session data:', error)}
+        // console.error('Failed to save session "data": ', error)}
     },
     [sendAnalyticsData]
   );
@@ -243,25 +243,25 @@ export function AnalyticsManager($1) {
     return {
 
       pageViews,
-      uniqueVisitors: 1, // Single session
-      sessionDuration: Mat h.round(sessionDuration / 1000) , // in seconds
+      "uniqueVisitors": 1, // Single session
+      "sessionDuration": Mat h.round(sessionDuration / 1000) , // in seconds
       bounceRate,
-      conversionRate: Mat h.round(conversionRate),
-      topPages: currentSessio n.pageViews.reduce()
+      "conversionRate": Mat h.round(conversionRate),
+      "topPages": currentSessio n.pageViews.reduce()
         (acc, path) => {
 
           acc[path] = (acc[path] || 0) + 1;
           return acc},
         {} as Record<string, number>
       ),
-      userAgents: [{ device: getDeviceTyp e(currentSession.userAgent), count: 1 },
+      "userAgents": [{ device: getDeviceTyp e(currentSession.userAgent), "count": 1 },
       ],
-      performance: { fcp: 0, lcp: 0, fid: 0, cls: 0 }, // Would be populated from performance tracking
-      events: currentSessio n.events.map(e => ({
+      "performance": { fcp: 0, "lcp": 0, "fid": 0, "cls": 0 }, // Would be populated from performance tracking
+      "events": currentSessio n.events.map(e => ({
 
         name: e.name,
-        count: 1,
-        timestamp: new Date(e.timestamp).toISOString()}))}}, [currentSession])} else if(/Tablet|iPad/.test(userAgent)) {
+        "count": 1,
+        "timestamp": new Date(e.timestamp).toISOString()}))}}, [currentSession])} else if(/Tablet|iPad/.test(userAgent)) {
 
       return 'Tablet'} else {
 
@@ -269,7 +269,7 @@ export function AnalyticsManager($1) {
 
   // Update analytics data when session changes
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -283,10 +283,10 @@ export function AnalyticsManager($1) {
 
     return ()
       <motion.button
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ "opacity": 0, "scale": 0.8 }}
+        animate={{ "opacity": 1, "scale": 1 }}
         onClick={() => setShowAnalytics(true)}
-        className="fixed bottom-4 left-4 bg-cyan-500 hover: b g-cyan-600 text-white p-3 rounded-full shadow-lg transition-all duration-200 z-50"
+        className="fixed bottom-4 left-4 bg-cyan-500 "hover": b g-cyan-600 text-white p-3 rounded-full shadow-lg transition-all duration-200 z-50"
         title="Show Analytics"
       >"
         <BarChart3 className="w-6 h-6"  />
@@ -295,8 +295,8 @@ export function AnalyticsManager($1) {
 
   return ()
     <motion.div
-      initial={{ opacity: 0, y: 2 0 }}
-      animate={{ opacity: 1, y: 0 }}"
+      initial={{ "opacity": 0, "y": 2 0 }}
+      animate={{ "opacity": 1, "y": 0 }}"
       className="fixed bottom-4 left-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 rounded-lg p-4 text-white text-sm z-50 max-w-sm"
     >"
       <div className="flex items-center justify-between mb-4">"
@@ -306,7 +306,7 @@ export function AnalyticsManager($1) {
         </div>
         <button
           onClick={() => setShowAnalytics(false)}"
-          className="text-gray-400 hover: tex t-white"
+          className="text-gray-400 "hover": tex t-white"
         >
           ×
         </button>
@@ -317,31 +317,31 @@ export function AnalyticsManager($1) {
           {/* Session Info */}"
           <div className="flex items-center space-x-2">"
             <Activity className="w-4 h-4 text-green-400"   />
-            <span>Session: {currentSession?.id.slice(-8)}</span>
+            <span>"Session": {currentSession?.id.slice(-8)}</span>
           </div>
 
           {/* Page Views */}"
           <div className="flex items-center space-x-2">"
             <Eye className="w-4 h-4 text-blue-400"   />
-            <span>Views: {analyticsData.pageViews}</span>
+            <span>"Views": {analyticsData.pageViews}</span>
           </div>
 
           {/* Session Duration */}"
           <div className="flex items-center space-x-2">"
             <Clock className="w-4 h-4 text-yellow-400"   />
-            <span>Duration: {analyticsData.sessionDuration}s</span>
+            <span>"Duration": {analyticsData.sessionDuration}s</span>
           </div>
 
           {/* Bounce Rate */}"
           <div className="flex items-center space-x-2">"
             <Target className="w-4 h-4 text-red-400"   />
-            <span>Bounce: {analyticsData.bounceRate}%</span>
+            <span>"Bounce": {analyticsData.bounceRate}%</span>
           </div>
 
           {/* Conversion Rate */}"
           <div className="flex items-center space-x-2">"
             <TrendingUp className="w-4 h-4 text-green-400"   />
-            <span>Conversion: {analyticsData.conversionRate}%</span>
+            <span>"Conversion": {analyticsData.conversionRate}%</span>
           </div>
 
           {/* Device Type */}";
@@ -350,13 +350,13 @@ export function AnalyticsManager($1) {
               <Smartphone className="w-4 h-4 text-purple-400"   />
             ) : ("
               <Monitor className="w-4 h-4 text-cyan-400"   />            )}
-            <span>Device: {analyticsData.userAgents[0]?.device}</span>
+            <span>"Device": {analyticsData.userAgents[0]?.device}</span>
           </div>
 
           {/* Tracking Status */}"
           <div className="flex items-center space-x-2">";
             <ZapclassName="w-4 h-4 text-orange-400"   />';
-            <span>Tracking: {isTracking ? 'Active' : 'Inactive'}</span>          </div>
+            <span>"Tracking": {isTracking ? 'Active' : 'Inactive'}</span>          </div>
             </div>
   );
 }
@@ -367,7 +367,7 @@ export function AnalyticsManager($1) {
             if(currentSession) {
 
               saveSessionData(currentSession)}
-          }}"          className="w-full px-3 py-2 bg-cyan-600 hover: b g-cyan-700 text-white text-xs rounded transition-colors duration-200"
+          }}"          className="w-full px-3 py-2 bg-cyan-600 "hover": b g-cyan-700 text-white text-xs rounded transition-colors duration-200"
         >
           Save Session Data
         </button>

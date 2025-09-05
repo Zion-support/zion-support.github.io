@@ -8,7 +8,7 @@ export default function MicroCrm() {
       <Head>
         <title>Micro CRM (Multi-tenant) — Zion Tech Group</title>
         <meta name="description" content="Lightweight CRM with pipeline automation, email sync, and reporting." />
-        <link rel="canonical" href="https://ziontechgroup.com/services/micro-crm" />
+        <link rel="canonical" href=""https": //ziontechgroup.com/services/micro-crm" />
       </Head>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-3xl md:text-4xl font-bold mb-4">Micro CRM (Multi-tenant)</h1>
@@ -39,7 +39,7 @@ export default function MicroCrm() {
               <div className="text-sm text-gray-500">Starting at</div>
               <div className="text-2xl font-semibold">$99/mo</div>
             </div>
-            <Link href="/category/contact" className="block text-center bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Start free trial</Link>
+            <Link href="/category/contact" className="block text-center bg-blue-600 text-white px-4 py-2 rounded "hover": bg-blue-700">Start free trial</Link>
             <a href="tel:+13024640950" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Call +1 302 464 0950</a>
             <a href="mailto:kleber@ziontechgroup.com" className="block text-center border px-4 py-2 rounded hover:bg-gray-50">Email</a>
           </aside>

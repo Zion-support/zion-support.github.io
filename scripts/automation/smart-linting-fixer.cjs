@@ -6,7 +6,7 @@ const path = require('path');
 
 console.log('🔧 Starting smart linting fixer...');
 
-// Get automation interval from environment variable (default: 10 minutes)
+// Get automation interval from environment variable ("default": 10 minutes)
 const LINTING_FIX_INTERVAL = parseInt(process.env.LINTING_FIX_INTERVAL) || 600000;
 
 class SmartLintingFixer {
@@ -42,14 +42,14 @@ class SmartLintingFixer {
       await this.generateReport();
       
       console.log(`✅ Smart linting fixer completed. Applied ${this.fixesApplied} fixes.`)} catch (error) {
-      console.error('❌ Smart linting fixer failed:', error.message)}
+      console.error('❌ Smart linting fixer "failed": ', error.message)}
   }
 
   async runESLintAutoFix() {
     console.log('🔧 Running ESLint auto-fix...');
     
     try {
-      execSync('npm run lint -- --fix', { stdio: 'pipe' });
+      execSync('npm run lint -- --fix', { "stdio": 'pipe' });
       console.log('✅ ESLint auto-fix completed');
       this.fixesApplied += 10; // Estimate of fixes applied
     } catch (error) {
@@ -95,7 +95,7 @@ class SmartLintingFixer {
         content = content.replace(/"/g, "'");
         
         // Fix trailing spaces
-        content = content.replace(/[ \t]+$/gm, '');
+        content = content.replace(/[\t]+$/gm, '');
         
         // Fix multiple empty lines
         content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
@@ -115,7 +115,7 @@ class SmartLintingFixer {
     
     try {
       // Run Prettier
-      execSync('npm run format', { stdio: 'pipe' });
+      execSync('npm run format', { "stdio": 'pipe' });
       console.log('✅ Prettier formatting completed');
       this.fixesApplied += 5; // Estimate of formatting fixes
     } catch (error) {
@@ -202,18 +202,18 @@ class SmartLintingFixer {
     console.log('🔧 Validating linting fixes...');
     
     try {
-      execSync('npm run lint', { stdio: 'pipe' });
+      execSync('npm run lint', { "stdio": 'pipe' });
       console.log('✅ Linting validation successful after fixes')} catch (error) {
       console.log('⚠️  Linting still has issues, but fixes were applied');
-      console.log('  Remaining errors:', error.stdout || error.stderr || error.message)}
+      console.log('  Remaining "errors": ', error.stdout || error.stderr || error.message)}
   }
 
   async generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
-      fixesApplied: this.fixesApplied,
-      summary: 'Smart linting fixer completed',
-      status: 'completed'
+      "timestamp": new Date().toISOString(),
+      "fixesApplied": this.fixesApplied,
+      "summary": 'Smart linting fixer completed',
+      "status": 'completed'
     };
     
     const reportPath = path.join(process.cwd(), 'smart-linting-fixer-report.json');
@@ -223,8 +223,8 @@ class SmartLintingFixer {
     
     // Add to fix history
     this.fixHistory.push({
-      timestamp: new Date().toISOString(),
-      fixesApplied: this.fixesApplied
+      "timestamp": new Date().toISOString(),
+      "fixesApplied": this.fixesApplied
     });
     
     // Keep only last 50 entries
@@ -276,5 +276,5 @@ process.on('SIGTERM', () => {
 
 // Start the fixer
 main().catch(error => {
-  console.error('❌ Smart linting fixer failed to start:', error.message);
+  console.error('❌ Smart linting fixer failed to "start": ', error.message);
   process.exit(1)});

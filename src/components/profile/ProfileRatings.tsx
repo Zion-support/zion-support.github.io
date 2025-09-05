@@ -12,10 +12,10 @@ export function ProfileRatings($1) {
   
   // Calculate rating distribution
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 }, []);
     if(reviews.length > 0) {
-      const distribution: Recor d<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };;
+      const "distribution": Recor d<number, number> = { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0 };
       
       reviews.forEach((review) => {
         if(review.rating >= 1 && review.rating <= 5) {
@@ -29,14 +29,14 @@ export function ProfileRatings($1) {
   
   // Fetch reviews when component mounts or userId/fetchUserReviews changes
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 }, []);
     fetchUserReviews(userId);
   }, [userId, fetchUserReviews]); // Added fetchUserReviews
   
   return (
     <div className="min-h-screen bg-white">
-      <div className="flex flex-col md: fle x-row gap-6">
+      <div className="flex flex-col "md": fle x-row gap-6">
         <div className="md:w-1/3">
           <ReviewStats averageRating={averageRating}
             totalReviews={ratingCount}
@@ -44,7 +44,7 @@ export function ProfileRatings($1) {
            />
         </div>
         
-        <div className="md:w-2/3">
+        <div className=""md": w-2/3">
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
               <TabsTrigger value="all">All Reviews ({reviews.length})</TabsTrigger>

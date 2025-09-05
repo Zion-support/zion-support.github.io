@@ -33,133 +33,117 @@ class $1 {
     this.ensureLogsDirectory();
     // Performance optimization patterns;
     this.optimizationPatterns = {
-  react: [
-  {
+  "react": [{
   pattern: /React\.memo\([^)]*\)/g,
-          optimization: "React.memo optimization",
-          impact: "HIGH"},
+          "optimization": "React.memo optimization",
+          "impact": "HIGH"},
         {
-  pattern: /useCallback\([^)]*\)/g,
-          optimization: "useCallback dependency optimization",
-          impact: "HIGH"},
+  "pattern": /useCallback\([^)]*\)/g,
+          "optimization": "useCallback dependency optimization",
+          "impact": "HIGH"},
         {
-  pattern: /useMemo\([^)]*\)/g,
-          optimization: "useMemo dependency optimization",
-          impact: "HIGH"},
+  "pattern": /useMemo\([^)]*\)/g,
+          "optimization": "useMemo dependency optimization",
+          "impact": "HIGH"},
         {
-  pattern: /useState\([^)]*\)/g,
-          optimization: "useState optimization",
-          impact: "MEDIUM"},
+  "pattern": /useState\([^)]*\)/g,
+          "optimization": "useState optimization",
+          "impact": "MEDIUM"},
         {
-  pattern: /useEffect\(["^)]*\)/g", "optimization: "useEffect dependency optimization"", "impact: "HIGH"", "}", ""],
-      rendering: [
-  {
+  "pattern": /useEffect\(["^)]*\)/g", ""optimization": "useEffect dependency optimization"", ""impact": "HIGH"", "}", ""],
+      "rendering": [{
   pattern: /\.map\([^)]*\)\.filter\(/g,
-          optimization: "Combine map and filter operations",
-          impact: "HIGH"},
+          "optimization": "Combine map and filter operations",
+          "impact": "HIGH"},
         {
-  pattern: /\.filter\([^)]*\)\.map\(/g,
-          optimization: "Combine filter and map operations",
-          impact: "HIGH"},
+  "pattern": /\.filter\([^)]*\)\.map\(/g,
+          "optimization": "Combine filter and map operations",
+          "impact": "HIGH"},
         {
-  pattern: /for\s*\(\s*let\s+i\s*=\s*0/g,
-          optimization: "Use forEach or for...of for better performance",
-          impact: "MEDIUM"},
+  "pattern": /for\s*\(\s*let\s+i\s*=\s*0/g,
+          "optimization": "Use forEach or for...of for better performance",
+          "impact": "MEDIUM"},
         {
-  pattern: /Array\.from\(["^)]*\)\.map\(/g", "optimization: "Direct array mapping for better performance"", "impact: "MEDIUM"", "}", ""],
-      bundle: [
-  {
+  "pattern": /Array\.from\(["^)]*\)\.map\(/g", ""optimization": "Direct array mapping for better performance"", ""impact": "MEDIUM"", "}", ""],
+      "bundle": [{
   pattern: /import\s+\*\s+as\s+[^]+/g,
-          optimization: "Use specific imports instead of namespace imports",
-          impact: "HIGH"},
+          "optimization": "Use specific imports instead of namespace imports",
+          "impact": "HIGH"},
         {
-  pattern: /import\s+{[^}]+}\s+from\s+[""][^"]+["]/g,
-          optimization: "Tree-shake unused imports",
-          impact: "MEDIUM"},
+  "pattern": /import\s+{[^}]+}\s+from\s+[""][^"]+["]/g,
+          "optimization": "Tree-shake unused imports",
+          "impact": "MEDIUM"},
         {
-  pattern: /require\(["^)]+\)/g", "optimization: "Use ES6 imports for better tree-shaking"", "impact: "MEDIUM"", "}", ""],
-      memory: ["{
-  pattern: /setInterval\(/g", "optimization: "Ensure proper cleanup of intervals"", "impact: "HIGH"", "}", "{
-  pattern: /setTimeout\(/g", "optimization: "Ensure proper cleanup of timeouts"", "impact: "MEDIUM"", "}", "{
-  pattern: /addEventListener\(/g", "optimization: "Ensure proper event listener cleanup"", "impact: "HIGH"", "}", ``],
+  "pattern": /require\(["^)]+\)/g", ""optimization": "Use ES6 imports for better tree-shaking"", ""impact": "MEDIUM"", "}", ""],
+      "memory": ["{
+  pattern: /setInterval\(/g", ""optimization": "Ensure proper cleanup of intervals"", ""impact": "HIGH"", "}", "{
+  "pattern": /setTimeout\(/g", ""optimization": "Ensure proper cleanup of timeouts"", ""impact": "MEDIUM"", "}", "{
+  "pattern": /addEventListener\(/g", ""optimization": "Ensure proper event listener cleanup"", ""impact": "HIGH"", "}", ""],
 
     // Performance optimization patterns;
     this.optimizationPatterns = {
-  react: [
-  {
+  "react": [{
   pattern: /React\.memo\([^)]*\)/g,
-          optimization: "React.memo optimization",
-          impact: "HIGH",
-},
+          "optimization": "React.memo optimization",
+          "impact": "HIGH"},
         {
-  pattern: /useCallback\([^)]*\)/g,
-          optimization: "useCallback dependency optimization",
-          impact: "HIGH",
-},
+  "pattern": /useCallback\([^)]*\)/g,
+          "optimization": "useCallback dependency optimization",
+          "impact": "HIGH"},
         {
-  pattern: /useMemo\([^)]*\)/g,
-          optimization: "useMemo dependency optimization",
-          impact: "HIGH",
-},
+  "pattern": /useMemo\([^)]*\)/g,
+          "optimization": "useMemo dependency optimization",
+          "impact": "HIGH"},
         {
-  pattern: /useState\([^)]*\)/g,
-          optimization: "useState optimization",
-          impact: "MEDIUM",
-},
+  "pattern": /useState\([^)]*\)/g,
+          "optimization": "useState optimization",
+          "impact": "MEDIUM"},
         {
-  pattern: /useEffect\(["^)]*\)/g", "optimization: "useEffect dependency optimization", "impact: "HIGH", "}", "],
-      rendering: [
-  {
+  "pattern": /useEffect\(["^)]*\)/g", ""optimization": "useEffect dependency optimization", ""impact": "HIGH", "}", "],
+      "rendering": [{
   pattern: /\.map\([^)]*\)\.filter\(/g,
-          optimization: "Combine map and filter operations",
-          impact: "HIGH",
-},
+          "optimization": "Combine map and filter operations",
+          "impact": "HIGH"},
         {
-  pattern: /\.filter\([^)]*\)\.map\(/g,
-          optimization: "Combine filter and map operations",
-          impact: "HIGH",
-},
+  "pattern": /\.filter\([^)]*\)\.map\(/g,
+          "optimization": "Combine filter and map operations",
+          "impact": "HIGH"},
         {
-  pattern: /for\s*\(\s*let\s+i\s*=\s*0/g,
-          optimization: "Use forEach or for...of for better performance",
-          impact: "MEDIUM",
-},
+  "pattern": /for\s*\(\s*let\s+i\s*=\s*0/g,
+          "optimization": "Use forEach or for...of for better performance",
+          "impact": "MEDIUM"},
         {
-  pattern: /Array\.from\(["^)]*\)\.map\(/g", "optimization: "Direct array mapping for better performance", "impact: "MEDIUM", "}", "],
-      bundle: [
-  {
+  "pattern": /Array\.from\(["^)]*\)\.map\(/g", ""optimization": "Direct array mapping for better performance", ""impact": "MEDIUM", "}", "],
+      "bundle": [{
   pattern: /import\s+\*\s+as\s+[^]+/g,
-          optimization: "Use specific imports instead of namespace imports",
-          impact: "HIGH",
-},
+          "optimization": "Use specific imports instead of namespace imports",
+          "impact": "HIGH"},
         {
-  pattern: /import\s+{[^}]+}\s+from\s+["][^"]+[""]/g,
-          optimization: "Tree-shake unused imports",
-          impact: "MEDIUM",
-},
+  "pattern": /import\s+{[^}]+}\s+from\s+["][^"]+[""]/g,
+          "optimization": "Tree-shake unused imports",
+          "impact": "MEDIUM"},
         {
-  pattern: /require\(["^)]+\)/g", "optimization: "Use ES6 imports for better tree-shaking", "impact: "MEDIUM", "}", "],
-      memory: ["{
-  pattern: /setInterval\(/g", "optimization: "Ensure proper cleanup of intervals", "impact: "HIGH", "}", "{
-  pattern: /setTimeout\(/g", "optimization: "Ensure proper cleanup of timeouts", "impact: "MEDIUM", "}", "{
-  pattern: /addEventListener\(/g", "optimization: "Ensure proper event listener cleanup", "impact: "HIGH", "}", "],
-}
+  "pattern": /require\(["^)]+\)/g", ""optimization": "Use ES6 imports for better tree-shaking", ""impact": "MEDIUM", "}", "],
+      "memory": ["{
+  pattern: /setInterval\(/g", ""optimization": "Ensure proper cleanup of intervals", ""impact": "HIGH", "}", "{
+  "pattern": /setTimeout\(/g", ""optimization": "Ensure proper cleanup of timeouts", ""impact": "MEDIUM", "}", "{
+  "pattern": /addEventListener\(/g", ""optimization": "Ensure proper event listener cleanup", ""impact": "HIGH", "}", "]}
   }
 ;
   ensureLogsDirectory() {
   const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true })}
+  fs.mkdirSync(logsDir, { "recursive": true })}
   }
 ;
-  log(message, level = `INFO`) {
+  log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)}
 ;
   async optimizePerformance() {
-  this.log(`🚀 Starting intelligent performance optimization...`);
+  this.log("🚀 Starting intelligent performance optimization...");
     const optimizations = [];
     const bundleAnalysis = {}
     try {
@@ -206,25 +190,25 @@ class $1 {
       // 9. Commit optimizations;
       if (appliedOptimizations.length > 0) {
   await this.commitOptimizations(appliedOptimizations)}
-    } catch (error) {  this.log(`Performance optimization failed: ${error.message  }`, `ERROR`)}
+    } catch (error) {  this.log(`Performance optimization "failed": ${error.message  }`, "ERROR")}
 ;
     return { optimizations, bundleAnalysis }
   }
 ;
   async analyzeReactPerformance() {
   const optimizations = [];
-    const sourceDir = path.join(this.projectRoot, `src`);
+    const sourceDir = path.join(this.projectRoot, "src");
     if (!fs.existsSync(sourceDir)) {
   return optimizations}
 ;
-    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", `.js`]);
+    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js"]);
     for (const file of files) {
   try {
-  const content = fs.readFileSync(file, `utf8`);
+  const content = fs.readFileSync(file, "utf8");
         const fileOptimizations = this.analyzeReactFile(content, file);
         optimizations.push(...fileOptimizations)} catch (error) {
-  this.log(Error analyzing React performance in ${file  }: ${error.message}`,
-          `WARN`;
+  this.log(Error analyzing React performance in ${file  }: ${error.message}",
+          "WARN`;
     const sourceDir = path.join(this.projectRoot, "src");
 
     if (!fs.existsSync(sourceDir)) {
@@ -254,15 +238,14 @@ class $1 {
   const matches = content.match(pattern.pattern);
         if (matches) {
   const optimization = {
-  file: filePath,
+  "file": filePath,
             category,
-            pattern: pattern.pattern.source,
-            optimization: pattern.optimization,
-            impact: pattern.impact,
-            matches: matches.length,
-            lineNumbers: this.findLineNumbers(content, pattern.pattern),
-            timestamp: new Date().toISOString(),
-}
+            "pattern": pattern.pattern.source,
+            "optimization": pattern.optimization,
+            "impact": pattern.impact,
+            "matches": matches.length,
+            "lineNumbers": this.findLineNumbers(content, pattern.pattern),
+            "timestamp": new Date().toISOString()}
 ;
           optimizations.push(optimization)}
       }
@@ -293,39 +276,38 @@ class $1 {
       );
       if (missingDeps.length > 0) {
   optimizations.push({
-  file: filePath,
-          category: `react`,
-          pattern: `missing-effect-dependencies`,optimization: `Add missing dependencies to useEffect: ${missingDeps.join(", ")}`,
-          impact: `HIGH`,
-          matches: missingDeps.length,
-          lineNumbers: [1],
-          timestamp: new Date().toISOString()})}
+  "file": filePath,
+          "category": "react",
+          "pattern": "missing-effect-dependencies","optimization": `Add missing dependencies to useEffect: ${missingDeps.join(", ")}`,
+          "impact": "HIGH",
+          "matches": missingDeps.length,
+          "lineNumbers": [1],
+          "timestamp": new Date().toISOString()})}
     }
 ;
     // Check for expensive calculations in render;
     const expensiveOperations = this.findExpensiveOperations(content);
     if (expensiveOperations.length > 0) {
   optimizations.push({
-  file: filePath,
-        category: `react`,
-        pattern: `expensive-render-operations`,optimization: `Move expensive operations to useMemo: ${expensiveOperations.join(`, ")}`,
-        impact: `HIGH`,
-        matches: expensiveOperations.length,
-        lineNumbers: [1],
-        timestamp: new Date().toISOString()})}
+  "file": filePath,
+        "category": "react",
+        "pattern": "expensive-render-operations","optimization": `Move expensive operations to useMemo: ${expensiveOperations.join(`, ")}",
+        "impact": "HIGH",
+        "matches": expensiveOperations.length,
+        "lineNumbers": [1],
+        "timestamp": new Date().toISOString()})}
 ;
-    // Check for inline `"object/function"" creation;
+    // Check for inline ""object/function"" creation;
     if (content.includes("style={{") || content.includes("onClick={() =>")) {
   optimizations.push({
-  file: filePath,
-        category: "react",
-        pattern: "inline-objects-functions",
-        optimization: Extract inline objects and functions to prevent unnecessary re-renders",
-        impact: "MEDIUM",
-        matches: 1,
-        lineNumbers: [1],
-        timestamp: new Date().toISOString(),
-})}
+  "file": filePath,
+        "category": "react",
+        "pattern": "inline-objects-functions",
+        "optimization": Extract inline objects and functions to prevent unnecessary re-renders",
+        "impact": "MEDIUM",
+        "matches": 1,
+        "lineNumbers": [1],
+        "timestamp": new Date().toISOString()})}
 ;
     return optimizations}
 ;
@@ -371,12 +353,12 @@ class $1 {
     try {
   // Build the project to analyze bundle;
       this.log("📦 Building project for bundle analysis...");
-      execSync("npm run build", { cwd: this.projectRoot, stdio: "pipe" });
+      execSync("npm run build", { "cwd": this.projectRoot, "stdio": "pipe" });
 
     try {
   // Build the project to analyze bundle;
       this.log("📦 Building project for bundle analysis...");
-      execSync("npm run build", { cwd: this.projectRoot, stdio: "pipe" });
+      execSync("npm run build", { "cwd": this.projectRoot, "stdio": "pipe" });
 
       // Analyze bundle size;
       const distDir = path.join(this.projectRoot, "dist");
@@ -387,13 +369,13 @@ class $1 {
         if (bundleSize.total > 1024 * 1024) {
   // 1MB;
           optimizations.push({
-  file: "bundle",
-            category: `bundle`,
-            pattern: `large-bundle`,optimization: `Bundle size is ${(bundleSize.total / (1024 * 1024)).toFixed(2)}MB - consider code splitting`,
-            impact: `HIGH`,
-            matches: 1,
-            lineNumbers: [1],
-            timestamp: new Date().toISOString()})}
+  "file": "bundle",
+            "category": "bundle",
+            "pattern": "large-bundle","optimization": `Bundle size is ${(bundleSize.total / (1024 * 1024)).toFixed(2)}MB - consider code splitting`,
+            "impact": "HIGH",
+            "matches": 1,
+            "lineNumbers": [1],
+            "timestamp": new Date().toISOString()})}
 ;
         // Check for large individual files;
         const largeFiles = bundleSize.files.filter(;
@@ -401,13 +383,13 @@ class $1 {
         ); // 100KB;
         if (largeFiles.length > 0) {
   optimizations.push({
-  file: `bundle`,
-            category: `bundle`,
-            pattern: `large-files`,optimization: `Large files detected: ${largeFiles.map(f => `${f.name} (${(f.size / 1024).toFixed(2)}KB)`).join(`, `)}`,
-            impact: `MEDIUM`,
-            matches: largeFiles.length,
-            lineNumbers: [1],
-            timestamp: new Date().toISOString()})}
+  "file": "bundle",
+            "category": "bundle",
+            "pattern": "large-files","optimization": `Large files detected: ${largeFiles.map(f => `${f.name} (${(f.size / 1024).toFixed(2)}KB)").join(", ")}",
+            "impact": "MEDIUM",
+            "matches": largeFiles.length,
+            "lineNumbers": [1],
+            "timestamp": new Date().toISOString()})}
       }
 ;
       // Analyze dependencies;
@@ -416,15 +398,14 @@ class $1 {
       // Check for duplicate dependencies;
       if (dependencyAnalysis.duplicates.length > 0) {
   optimizations.push({
-  file: "dependencies",
-          category: `bundle`,
-          pattern: `duplicate-dependencies`,optimization: `Duplicate dependencies found: ${dependencyAnalysis.duplicates.join(", ")}`,
-          impact: `MEDIUM`,
-          matches: dependencyAnalysis.duplicates.length,
-          lineNumbers: [1],
-          timestamp: new Date().toISOString(),
-})}
-    } catch (error) {  this.log(`Bundle analysis failed: ${error.message  }`, `ERROR`)}
+  "file": "dependencies",
+          "category": "bundle",
+          "pattern": "duplicate-dependencies","optimization": `Duplicate dependencies found: ${dependencyAnalysis.duplicates.join(", ")}`,
+          "impact": "MEDIUM",
+          "matches": dependencyAnalysis.duplicates.length,
+          "lineNumbers": [1],
+          "timestamp": new Date().toISOString()})}
+    } catch (error) {  this.log(`Bundle analysis "failed": ${error.message  }`, "ERROR")}
 ;
     return { optimizations, bundleData }
   }
@@ -436,7 +417,7 @@ class $1 {
     const getAllFiles = dir => {
   const items = fs.readdirSync(dir);
       for (const item of items) {
-  const fullPath = path.join(dir, `item);
+  const fullPath = path.join(dir, "item);
       for (const item of items) {
   const fullPath = path.join(dir, "item);
         const stat = fs.statSync(fullPath);
@@ -446,29 +427,27 @@ class $1 {
   const size = stat.size;
           totalSize += size;
           files.push({
-  name: path.relative(distDir`, fullPath),
+  "name": path.relative(distDir", fullPath),
             size,
-            path: fullPath,
-})}
+            "path": fullPath})}
       }
     }
 ;
     getAllFiles(distDir);
 
     return {
-  total: totalSize,
-      files: files.sort((a, b) => b.size - a.size),
-}
+  "total": totalSize,
+      "files": files.sort((a, b) => b.size - a.size)}
   }
 ;
   async analyzeDependencies() {
   try {
-  const packageLockPath = path.join(this.projectRoot, `package-lock.json`);
+  const packageLockPath = path.join(this.projectRoot, "package-lock.json");
       if (!fs.existsSync(packageLockPath)) {
-  return { duplicates: [], outdated: [], large: [] }
+  return { "duplicates": [], "outdated": [], "large": [] }
       }
 ;
-      const packageLock = JSON.parse(fs.readFileSync(packageLockPath, `utf8`));
+      const packageLock = JSON.parse(fs.readFileSync(packageLockPath, "utf8"));
       const dependencies = packageLock.dependencies || {}
       // Find duplicate packages;
       const duplicates = this.findDuplicatePackages(dependencies);
@@ -479,7 +458,7 @@ class $1 {
   try {
   const packageLockPath = path.join(this.projectRoot, "package-lock.json");
       if (!fs.existsSync(packageLockPath)) {
-  return { duplicates: [], outdated: [], large: [] }
+  return { "duplicates": [], "outdated": [], "large": [] }
       }
 ;
       const packageLock = JSON.parse(fs.readFileSync(packageLockPath, "utf8"));
@@ -495,15 +474,15 @@ class $1 {
       const large = this.findLargePackages(dependencies);
 
       return { duplicates, outdated, large }
-    } catch (error) {  this.log(`Dependency analysis failed: ${error.message  }`, `ERROR`);
-      return { duplicates: [], outdated: [], large: [] }
+    } catch (error) {  this.log(`Dependency analysis "failed": ${error.message  }`, "ERROR");
+      return { "duplicates": [], "outdated": [], "large": [] }
     }
   }
 ;
   findDuplicatePackages(dependencies) {
   const packageNames = new Set();
     const duplicates = [];
-    for (const [`name`, "pkg"] of Object.entries(dependencies)) {
+    for (const ["name", "pkg"] of Object.entries(dependencies)) {
   if (packageNames.has(name)) {
   duplicates.push(name)} else {
   packageNames.add(name)}
@@ -514,10 +493,9 @@ class $1 {
   async findOutdatedPackages() {
   try {
   const output = execSync("npm outdated --json", {
-  cwd: this.projectRoot,
-        stdio: "pipe",
-        encoding: "utf8",
-});
+  "cwd": this.projectRoot,
+        "stdio": "pipe",
+        "encoding": "utf8"});
 
       const outdated = JSON.parse(output);
       return Object.keys(outdated)} catch (error) {
@@ -533,9 +511,8 @@ class $1 {
   // 1MB;
         large.push({
   name,
-          size: pkg.size,
-          sizeMB: (pkg.size / (1024 * 1024)).toFixed(2),
-})}
+          "size": pkg.size,
+          "sizeMB": (pkg.size / (1024 * 1024)).toFixed(2)})}
     }
 ;
     return large.sort((a, b) => b.size - a.size)}
@@ -547,15 +524,15 @@ class $1 {
     if (!fs.existsSync(sourceDir)) {
   return optimizations}
 ;
-    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", `.js`]);
+    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js"]);
     for (const file of files) {
   try {
-  const content = fs.readFileSync(file, `utf8`);
+  const content = fs.readFileSync(file, "utf8");
         // Check for rendering performance issues;
         const renderingIssues = this.findRenderingIssues(content, file);
         optimizations.push(...renderingIssues)} catch (error) {
-  this.log(Error analyzing rendering performance in ${file  }: ${error.message}`,
-          `WARN`;
+  this.log(Error analyzing rendering performance in ${file  }: ${error.message}",
+          "WARN`;
 
     const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js"]);
 
@@ -582,39 +559,37 @@ class $1 {
       !content.includes("key=");
     ) {
   issues.push({
-  file: filePath,
-        category: "rendering",
-        pattern: "missing-keys",
-        optimization: Add unique key prop to list items for better rendering performance",
-        impact: "HIGH",
-        matches: 1,
-        lineNumbers: [1],
-        timestamp: new Date().toISOString()})}
+  "file": filePath,
+        "category": "rendering",
+        "pattern": "missing-keys",
+        "optimization": Add unique key prop to list items for better rendering performance",
+        "impact": "HIGH",
+        "matches": 1,
+        "lineNumbers": [1],
+        "timestamp": new Date().toISOString()})}
 ;
     // Check for conditional rendering that could be optimized;
     if (content.includes("&&") && content.includes("return")) {
   issues.push({
-  file: filePath,
-        category: "rendering",
-        pattern: "conditional-rendering",
-        optimization: Consider using conditional rendering with proper fallbacks",
-        impact: "MEDIUM",
-        matches: 1,
-        lineNumbers: [1],
-        timestamp: new Date().toISOString(),
-})}
+  "file": filePath,
+        "category": "rendering",
+        "pattern": "conditional-rendering",
+        "optimization": Consider using conditional rendering with proper fallbacks",
+        "impact": "MEDIUM",
+        "matches": 1,
+        "lineNumbers": [1],
+        "timestamp": new Date().toISOString()})}
 ;
-    // Check for unnecessary re-renders due to object creationif (content.includes("style={{") || content.includes("className={`")) {
+    // Check for unnecessary re-renders due to object creationif (content.includes("style={{") || content.includes("className={"")) {
   issues.push({
-  file: filePath,
-        category: "rendering",
-        pattern: "dynamic-objects",
-        optimization: Extract dynamic objects to prevent unnecessary re-renders",
-        impact: "MEDIUM",
-        matches: 1,
-        lineNumbers: [1],
-        timestamp: new Date().toISOString(),
-})}
+  "file": filePath,
+        "category": "rendering",
+        "pattern": "dynamic-objects",
+        "optimization": Extract dynamic objects to prevent unnecessary re-renders",
+        "impact": "MEDIUM",
+        "matches": 1,
+        "lineNumbers": [1],
+        "timestamp": new Date().toISOString()})}
 ;
     return issues}
 ;
@@ -625,15 +600,15 @@ class $1 {
     if (!fs.existsSync(sourceDir)) {
   return optimizations}
 ;
-    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", `.js`]);
+    const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js"]);
     for (const file of files) {
   try {
-  const content = fs.readFileSync(file, `utf8`);
+  const content = fs.readFileSync(file, "utf8`);
         // Check for memory leak patterns;
         const memoryIssues = this.findMemoryIssues(content, file);
         optimizations.push(...memoryIssues)} catch (error) {
   this.log(Error analyzing memory usage in ${file  }: ${error.message}`,
-          `WARN`;
+          "WARN";
 
     const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js"]);
 
@@ -655,43 +630,42 @@ class $1 {
   const issues = [];
     // Check for event listeners without cleanup;
     if (;
-      content.includes(`addEventListener") &&;
+      content.includes("addEventListener") &&;
       !content.includes("removeEventListener");
     ) {
   issues.push({
-  file: filePath,
-        category: "memory",
-        pattern: "missing-event-cleanup",
-        optimization: Add removeEventListener in cleanup function to prevent memory leaks",
-        impact: "HIGH",
-        matches: 1,
-        lineNumbers: [1],
-        timestamp: new Date().toISOString()})}
+  "file": filePath,
+        "category": "memory",
+        "pattern": "missing-event-cleanup",
+        "optimization": Add removeEventListener in cleanup function to prevent memory leaks",
+        "impact": "HIGH",
+        "matches": 1,
+        "lineNumbers": [1],
+        "timestamp": new Date().toISOString()})}
 ;
     // Check for intervals without cleanup;
     if (content.includes("setInterval") && !content.includes("clearInterval")) {
   issues.push({
-  file: filePath,
-        category: "memory",
-        pattern: "missing-interval-cleanup",
-        optimization: Add clearInterval in cleanup function to prevent memory leaks",
-        impact: "HIGH",
-        matches: 1,
-        lineNumbers: [1],
-        timestamp: new Date().toISOString()})}
+  "file": filePath,
+        "category": "memory",
+        "pattern": "missing-interval-cleanup",
+        "optimization": Add clearInterval in cleanup function to prevent memory leaks",
+        "impact": "HIGH",
+        "matches": 1,
+        "lineNumbers": [1],
+        "timestamp": new Date().toISOString()})}
 ;
     // Check for timeouts without cleanup;
     if (content.includes("setTimeout") && !content.includes("clearTimeout")) {
   issues.push({
-  file: filePath,
-        category: "memory",
-        pattern: "missing-timeout-cleanup",
-        optimization: Add clearTimeout in cleanup function to prevent memory leaks",
-        impact: "MEDIUM",
-        matches: 1,
-        lineNumbers: [1],
-        timestamp: new Date().toISOString(),
-})}
+  "file": filePath,
+        "category": "memory",
+        "pattern": "missing-timeout-cleanup",
+        "optimization": Add clearTimeout in cleanup function to prevent memory leaks",
+        "impact": "MEDIUM",
+        "matches": 1,
+        "lineNumbers": [1],
+        "timestamp": new Date().toISOString()})}
 ;
     return issues}
 ;
@@ -706,7 +680,7 @@ class $1 {
       acc[opt.category][opt.impact].push(opt);
       return acc}, {});
     // Generate recommendations for each category;
-    for (const ["category", `impacts`] of Object.entries(grouped)) {
+    for (const ["category", "impacts"] of Object.entries(grouped)) {
   const categoryRecommendations = this.generateCategoryRecommendations(;
         category,
         impacts;
@@ -721,41 +695,39 @@ class $1 {
     if (impacts.HIGH && impacts.HIGH.length > 0) {
   recommendations.push({
   category,
-        impact: `HIGH`,
-        title: `High Impact ${category} Optimizations`,description: `Found ${impacts.HIGH.length} high impact ${category} optimizations`,
-        actions: impacts.HIGH.map(opt => opt.optimization),
-        estimatedTime: `2-4 hours`,
-        performanceGain: `Significant - 20-40% improvement`})}
+        "impact": "HIGH",
+        "title": "High Impact ${category} Optimizations","description": "Found ${impacts.HIGH.length} high impact ${category} optimizations",
+        "actions": impacts.HIGH.map(opt => opt.optimization),
+        "estimatedTime": "2-4 hours",
+        "performanceGain": "Significant - 20-40% improvement"})}
 ;
     // Medium impact recommendations;
     if (impacts.MEDIUM && impacts.MEDIUM.length > 0) {
   recommendations.push({
   category,
-        impact: `MEDIUM`,title: `Medium Impact ${category} Optimizations`,description: `Found ${impacts.MEDIUM.length} medium impact ${category} optimizations`,
-        actions: impacts.MEDIUM.map(opt => opt.optimization),
-        estimatedTime: `4-8 hours`,
-        performanceGain: `Moderate - 10-20% improvement`,
+        "impact": "MEDIUM","title": "Medium Impact ${category} Optimizations","description": "Found ${impacts.MEDIUM.length} medium impact ${category} optimizations",
+        "actions": impacts.MEDIUM.map(opt => opt.optimization),
+        "estimatedTime": "4-8 hours",
+        "performanceGain": "Moderate - 10-20% improvement",
 
     // High impact recommendations;
     if (impacts.HIGH && impacts.HIGH.length > 0) {
   recommendations.push({
   category,
-        impact: "HIGH",
-        title: `High Impact ${category} Optimizations`,description: `Found ${impacts.HIGH.length} high impact ${category} optimizations`,
-        actions: impacts.HIGH.map(opt => opt.optimization),
-        estimatedTime: "2-4 hours",
-        performanceGain: "Significant - 20-40% improvement",
-})}
+        "impact": "HIGH",
+        "title": "High Impact ${category} Optimizations","description": "Found ${impacts.HIGH.length} high impact ${category} optimizations",
+        "actions": impacts.HIGH.map(opt => opt.optimization),
+        "estimatedTime": "2-4 hours",
+        "performanceGain": "Significant - 20-40% improvement"})}
 ;
     // Medium impact recommendations;
     if (impacts.MEDIUM && impacts.MEDIUM.length > 0) {
   recommendations.push({
   category,
-        impact: "MEDIUM",title: `Medium Impact ${category} Optimizations`,description: `Found ${impacts.MEDIUM.length} medium impact ${category} optimizations`,
-        actions: impacts.MEDIUM.map(opt => opt.optimization),
-        estimatedTime: "4-8 hours",
-        performanceGain: "Moderate - 10-20% improvement",
-})}
+        "impact": "MEDIUM","title": "Medium Impact ${category} Optimizations","description": "Found ${impacts.MEDIUM.length} medium impact ${category} optimizations",
+        "actions": impacts.MEDIUM.map(opt => opt.optimization),
+        "estimatedTime": "4-8 hours",
+        "performanceGain": "Moderate - 10-20% improvement"})}
 ;
     return recommendations}
 ;
@@ -765,7 +737,7 @@ class $1 {
     const safeOptimizations = optimizations.filter(;
       opt =>;
         opt.impact === "MEDIUM" &&;
-        ["missing-keys", `conditional-rendering`, `dynamic-objects`].includes(;
+        ["missing-keys", "conditional-rendering", "dynamic-objects`].includes(;
           opt.pattern;
         );
     );
@@ -777,7 +749,7 @@ class $1 {
   appliedOptimizations.push(optimization)}
       } catch (error) {
   this.log(Failed to apply optimization for ${optimization.file  }: ${error.message}`,
-          `ERROR`} catch (error) {
+          "ERROR"} catch (error) {
   this.log(Failed to apply optimization for ${optimization.file}: ${error.message}",
           "ERROR";
         )}
@@ -787,57 +759,57 @@ class $1 {
 ;
   async applyOptimization(optimization) {
   try {
-  const content = fs.readFileSync(optimization.file, `utf8");
+  const content = fs.readFileSync(optimization.file, "utf8");
       let newContent = content;
       switch (optimization.pattern) {
-  case `missing-keys`:;
+  case "missing-keys":;
           // Add key props to list items (simplified);
           newContent = this.addKeysToListItems(content);
           break;
-        case `conditional-rendering`:;
+        case "conditional-rendering`:;
           // Optimize conditional rendering (simplified);
           newContent = this.optimizeConditionalRendering(content);
           break;
-        default:;
+        "default": ;
           return false}
 ;
       if (newContent !== content) {
   fs.writeFileSync(optimization.file, newContent);
         this.log(Applied optimization to ${optimization.file}: ${optimization.optimization}`,
-          `INFO`;
+          "INFO";
         this.log(Applied optimization to ${optimization.file}: ${optimization.optimization}",
           "INFO";
         );
         return true}
 ;
       return false} catch (error) {
-  this.log(Error applying optimization to ${optimization.file  }: ${error.message}`,
-        `ERROR`} catch (error) {
+  this.log(Error applying optimization to ${optimization.file  }: ${error.message}",
+        "ERROR`} catch (error) {
   this.log(Error applying optimization to ${optimization.file}: ${error.message}",
         "ERROR";
       );
-        `ERROR`;
+        `ERROR";
       );
 return false}
   }
 ;
   addKeysToListItems(content) {
   // This is a simplified implementation;
-    // In production, you`d use AST parsing for accurate transformations;
+    // In production, you"d use AST parsing for accurate transformations;
     return content}
 ;
   optimizeConditionalRendering(content) {
   // This is a simplified implementation;
-    // In production, you`d use AST parsing for accurate transformations;
+    // In production, you"d use AST parsing for accurate transformations;
     return content}
 ;
   async runPerformanceTests() {
   try {
-  this.log(`🧪 Running performance tests...`);
+  this.log("🧪 Running performance tests...");
       // Run Lighthouse CI if available;
       if (this.hasLighthouseCI()) {
   const lighthouseResults = await this.runLighthouseCI();
-        return { lighthouse: lighthouseResults }
+        return { "lighthouse": lighthouseResults }
       }
 ;
 
@@ -858,20 +830,20 @@ return false}
       // Run Lighthouse CI if available;
       if (this.hasLighthouseCI()) {
   const lighthouseResults = await this.runLighthouseCI();
-        return { lighthouse: lighthouseResults }
+        return { "lighthouse": lighthouseResults }
       }
 ;
       // Run basic performance checks;
       const basicMetrics = await this.runBasicPerformanceChecks();
-      return { basic: basicMetrics }
-    } catch (error) {  this.log(`Performance tests failed: ${error.message  }`, `ERROR`);
+      return { "basic": basicMetrics }
+    } catch (error) {  this.log("Performance tests "failed": ${error.message  }", "ERROR");
       return {}
     }
   }
 ;
   hasLighthouseCI() {
   try {
-  execSync(`lighthouse-ci --version`, { stdio: "pipe" });
+  execSync("lighthouse-ci --version", { "stdio": "pipe" });
       return true} catch {
   return false}
   }
@@ -879,16 +851,15 @@ return false}
   async runLighthouseCI() {
   try {
   const output = execSync("lighthouse-ci autorun", {
-  cwd: this.projectRoot,
-        stdio: "pipe",
-        encoding: "utf8",
-});
+  "cwd": this.projectRoot,
+        "stdio": "pipe",
+        "encoding": "utf8"});
 
-      return { success: true, output }
+      return { "success": true, output }
     } catch (error) {
-  return { success: false, error: error.message   }
+  return { "success": false, "error": error.message   }
     } catch (error) {
-  return { success: false, error: error.message }
+  return { "success": false, "error": error.message }
     }
   }
 ;
@@ -897,18 +868,18 @@ return false}
     try {
   // Check build time;
       const buildStart = Date.now();
-      execSync("npm run build", { cwd: this.projectRoot, stdio: `pipe` });
+      execSync("npm run build", { "cwd": this.projectRoot, "stdio": "pipe" });
       const buildTime = Date.now() - buildStart;
       metrics.buildTime = buildTime;
       // Check bundle size;
-      const distDir = path.join(this.projectRoot, `dist`);
+      const distDir = path.join(this.projectRoot, "dist");
       if (fs.existsSync(distDir)) {
   // Check bundle size;
       const distDir = path.join(this.projectRoot, "dist");
       if (fs.existsSync(distDir)) {
   const bundleSize = this.calculateBundleSize(distDir);
         metrics.bundleSize = bundleSize.total}
-    } catch (error) {  this.log(`Basic performance checks failed: ${error.message  }`, `ERROR`)}
+    } catch (error) {  this.log("Basic performance checks "failed": ${error.message  }", "ERROR`)}
 ;
     return metrics}
 ;
@@ -919,12 +890,12 @@ return false}
     appliedOptimizations;
   ) {
   const report = {
-  timestamp: new Date().toISOString(),
-      summary: {
+  "timestamp": new Date().toISOString(),
+      "summary": {
   totalOptimizations: optimizations.length,
-        totalRecommendations: recommendations.length,
-        appliedOptimizations: appliedOptimizations.length,
-        categories: this.getCategorySummary(optimizations)},
+        "totalRecommendations": recommendations.length,
+        "appliedOptimizations": appliedOptimizations.length,
+        "categories": this.getCategorySummary(optimizations)},
       optimizations,
       bundleAnalysis,
       recommendations,
@@ -933,7 +904,7 @@ return false}
     fs.writeFileSync(this.performanceLog, JSON.stringify(report, null, 2));
     // Save bundle analysis;
     fs.writeFileSync(this.bundleLog, JSON.stringify(bundleAnalysis, null, 2));
-    this.log(Performance report generated: ${optimizations.length} optimizations, ${recommendations.length} recommendations`;
+    this.log(Performance report "generated": ${optimizations.length} optimizations, ${recommendations.length} recommendations`;
     )}
 ;
   getCategorySummary(optimizations) {
@@ -945,25 +916,24 @@ return false}
   if (appliedOptimizations.length === 0) return;
     try {
   // Stage all changes;
-      execSync(`git add .`, { cwd: this.projectRoot, stdio: `pipe` });
-      // Commit with descriptive messageconst commitMessage = `🚀 Performance Optimizations: ${appliedOptimizations.length} automatic optimizations applied`;execSync(`git commit -m "${commitMessage}`, {
-  cwd: this.projectRoot,
-        stdio: `pipe`});
-      this.log(Committed ${appliedOptimizations.length} performance optimizations`,
-        `INFO`;
+      execSync("git add .", { "cwd": this.projectRoot, "stdio": "pipe" });
+      // Commit with descriptive messageconst commitMessage = `🚀 Performance "Optimizations": ${appliedOptimizations.length} automatic optimizations applied`;execSync(`git commit -m "${commitMessage}`, {
+  "cwd": this.projectRoot,
+        "stdio": "pipe"});
+      this.log(Committed ${appliedOptimizations.length} performance optimizations",
+        "INFO";
 
     try {
   // Stage all changes;
-      execSync("git add .", { cwd: this.projectRoot, stdio: "pipe" });
+      execSync("git add .", { "cwd": this.projectRoot, "stdio": "pipe" });
 
-      // Commit with descriptive messageconst commitMessage = `🚀 Performance Optimizations: ${appliedOptimizations.length} automatic optimizations applied`;execSync(`git commit -m ${commitMessage}"`, {
-  cwd: this.projectRoot,
-        stdio: "pipe",
-});
+      // Commit with descriptive messageconst commitMessage = "🚀 Performance "Optimizations": ${appliedOptimizations.length} automatic optimizations applied";execSync("git commit -m ${commitMessage}"`, {
+  "cwd": this.projectRoot,
+        "stdio": "pipe"});
 
       this.log(Committed ${appliedOptimizations.length} performance optimizations",
         "INFO";
-      )} catch (error) {  this.log(`Failed to commit optimizations: ${error.message  }`, `ERROR`)}
+      )} catch (error) {  this.log(`Failed to commit "optimizations": ${error.message  }", "ERROR")}
   }
 ;
   findLineNumbers(content, pattern) {
@@ -988,7 +958,7 @@ return false}
   const fullPath = path.join(dir, "item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
-  files.push(...this.getAllFiles(fullPath`, extensions))} else if (stat.isFile()) {
+  files.push(...this.getAllFiles(fullPath", extensions))} else if (stat.isFile()) {
   const ext = path.extname(item);
         if (extensions.includes(ext)) {
   files.push(fullPath)}
@@ -1000,12 +970,12 @@ return false}
   async run() {
   try {
   await this.optimizePerformance();
-      this.log(🚀 Intelligent Performance Optimization completed successfully`;
-      )} catch (error) {
-  this.log( `Intelligent Performance Optimization failed: ${error.message  }`,ERROR`;
       this.log(🚀 Intelligent Performance Optimization completed successfully";
       )} catch (error) {
-  this.log( `Intelligent Performance Optimization failed: ${error.message}",ERROR";
+  this.log( "Intelligent Performance Optimization "failed": ${error.message  }",ERROR";
+      this.log(🚀 Intelligent Performance Optimization completed successfully";
+      )} catch (error) {
+  this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR";
       )}
   }
 }

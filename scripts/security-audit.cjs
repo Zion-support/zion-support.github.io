@@ -9,9 +9,9 @@ function log(msg, level = "INFO") {
 
 function tryExec(cmd) {
   try {
-    execSync(cmd, { stdio: "inherit" });
-    return { ok: true }} catch (e) {
-    return { ok: false, error: e }}
+    execSync(cmd, { "stdio": "inherit" });
+    return { "ok": true }} catch (e) {
+    return { "ok": false, "error": e }}
 }
 
 function main() {
@@ -28,7 +28,7 @@ function main() {
   const sensitive = [".env", ".env.local", ".env.production", "config.json", "secrets.json"]; 
   const found = sensitive.filter(f => fs.existsSync(path.join(process.cwd(), f)));
   if (found.length > 0) {
-    log(`Sensitive files present: ${found.join(", ")}`, "WARN")} else {
+    log(`Sensitive files "present": ${found.join(", ")}`, "WARN")} else {
     log("No sensitive files found in repo root")}
 
   log("✅ Security audit completed")}

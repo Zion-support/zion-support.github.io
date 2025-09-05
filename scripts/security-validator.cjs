@@ -6,31 +6,30 @@ const path = require('path')
 console.log('🔍 Starting Security Validation...');
 
 // Security patterns to check for
-const securityPatterns = [
-  {
-    pattern: /innerHTML\s*=/g,
-    issue: 'XSS Risk: innerHTML usage',
-    severity: 'high'
+const securityPatterns = [{
+    "pattern": /innerHTML\s*=/g,
+    "issue": 'XSS Risk: innerHTML usage',
+    "severity": 'high'
   },
   {
-    pattern: /dangerouslySetInnerHTML/g,
-    issue: 'XSS Risk: dangerouslySetInnerHTML usage',
-    severity: 'high'
+    "pattern": /dangerouslySetInnerHTML/g,
+    "issue": 'XSS Risk: dangerouslySetInnerHTML usage',
+    "severity": 'high'
   },
   {
-    pattern: /eval\s*\(/g,
-    issue: 'Code Injection Risk: eval usage',
-    severity: 'critical'
+    "pattern": /eval\s*\(/g,
+    "issue": 'Code Injection Risk: eval usage',
+    "severity": 'critical'
   },
   {
-    pattern: /document\.write/g,
-    issue: 'XSS Risk: document.write usage',
-    severity: 'high'
+    "pattern": /document\.write/g,
+    "issue": 'XSS Risk: document.write usage',
+    "severity": 'high'
   },
   {
-    pattern: /window\.location/g,
-    issue: 'Potential redirect vulnerability',
-    severity: 'medium'
+    "pattern": /window\.location/g,
+    "issue": 'Potential redirect vulnerability',
+    "severity": 'medium'
   }
 ];
 
@@ -47,18 +46,18 @@ function scanFile(filePath) {
     const matches = content.match(pattern;);
     if ( {
       issues.push({
-        file: filePath,
+        "file": filePath,
         issue,
         severity,
-        count: matches.length
+        "count": matches.length
       })}
   })) {
      {
       issues.push({
-        file: filePath,
+        "file": filePath,
         issue,
         severity,
-        count: matches.length
+        "count": matches.length
       })}
   })}
 
@@ -102,20 +101,20 @@ if ( {
   console.log('✅ No security issues found!')) {
      {
   console.log('✅ No security issues found!')}} else {
-  console.log(`⚠️  Found ${issues.length} security issues:`);
+  console.log(`⚠️  Found ${issues.length} security "issues": `);
   issues.forEach(issue => {
     console.log(`   ${issue.severity.toUpperCase()}: ${issue.file} - ${issue.issue} (${issue.count} occurrences)`)})}
 
 // Generate report
 const report = {
-  timestamp: new Date().toISOString(),
-  totalIssues: issues.length,
-  issues: issues,
-  summary: {
+  "timestamp": new Date().toISOString(),
+  "totalIssues": issues.length,
+  "issues": issues,
+  "summary": {
     critical: issues.filter(i => i.severity === 'critical').length,
-    high: issues.filter(i => i.severity === 'high').length,
-    medium: issues.filter(i => i.severity === 'medium').length,
-    low: issues.filter(i => i.severity === 'low').length
+    "high": issues.filter(i => i.severity === 'high').length,
+    "medium": issues.filter(i => i.severity === 'medium').length,
+    "low": issues.filter(i => i.severity === 'low').length
   }
 };
 

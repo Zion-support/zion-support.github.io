@@ -1,32 +1,26 @@
-module.exports = [
-  {
-    files: [
+module.exports = [{
+    "files": [
       "automation/**/*.{js,jsx,ts,tsx}",
     ],
-    languageOptions: {
+    "languageOptions": {
       ecmaVersion: "latest",
-      sourceType: "module",
-      globals: {
+      "sourceType": "module",
+      "globals": {
         window: "readonly",
-        document: "readonly",
-        console: "readonly",
-        process: "readonly",
-        React: "readonly",
-      },
-    },
-    rules: {
+        "document": "readonly",
+        "console": "readonly",
+        "process": "readonly",
+        "React": "readonly"}},
+    "rules": {
       // Loosen rules for automation scripts to avoid CI noise
       "no-unused-vars": "off",
       "no-console": "off",
       "prefer-const": "warn",
       "no-var": "warn",
-      "no-undef": "off",
-    },
-  },
+      "no-undef": "off"}},
   {
     // Ignore build artifacts and vendor folders only
-    ignores: [
-      "node_modules/**",
+    "ignores": ["node_modules/**",
       "dist/**",
       "out/**",
       ".next/**",
@@ -51,6 +45,5 @@ module.exports = [
       "automation/error-monitor.js",
       "automation/error-prevention-automation.js",
       "automation/file-integrity-monitor.js",
-    ],
-  },
+    ]},
 ];

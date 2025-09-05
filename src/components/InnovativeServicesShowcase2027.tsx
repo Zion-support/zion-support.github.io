@@ -2,13 +2,11 @@ import {  import { innovativeServices2027, serviceCategories2027, getServicesByC
 
 export default function Page($1) {
       },
-      { threshold: 0.1 }
+      { "threshold": 0.1 }
     );
 
-    if(element) {  ;
-  ;';
-  ;';';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
+    if(element) {  ;';';';
+  "address": '364 E Main St STE 1008 Middletown DE 19709';
   };
   return ("
     <section id = "innovative-services-2027" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
@@ -24,24 +22,24 @@ export default function Page($1) {
         <motion.div
           initial = {
 
-  { opacity: 0,
-  y: 3 0
+  { "opacity": 0,
+  "y": 3 0
 
 }}
           animate = {
 
-  isVisible ? { opacity: 1,
-  y: 0
+  isVisible ? { "opacity": 1,
+  "y": 0
 
-} : { opacity: 0, y: 3 0 }}
-          transition={{ duration: 0.8 }}"
+} : { "opacity": 0, "y": 3 0 }}
+          transition={{ "duration": 0.8 }}"
           className="text-center mb-16"
 "
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full border border-zion-cyan/30 mb-6">"
             <Star className="w-5 h-5 text-zion-cyan mr-2"   />"            <span className="text-zion-cyan font-semibold">2027 Innovation Showcase</span>
           </div>
 "
-          <h2 className="text-4xl md: tex t-6xl font-bold text-white mb-6">"
+          <h2 className="text-4xl "md": tex t-6xl font-bold text-white mb-6">"
             <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
               Revolutionary
             </span>
@@ -58,20 +56,20 @@ export default function Page($1) {
         <motion.div
           initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           animate = {
 
-  isVisible ? { opacity: 1,
-  y: 0
+  isVisible ? { "opacity": 1,
+  "y": 0
 
-} : { opacity: 0, y: 2 0 }}
+} : { "opacity": 0, "y": 2 0 }}
           transition = {
 
-  { duration: 0.8,
-  delay: 0.2
+  { "duration": 0.8,
+  "delay": 0.2
 
 }}"
           className="mb-12"
@@ -81,19 +79,19 @@ export default function Page($1) {
               onClick={() => setSelectedCategory('All')}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === 'All"
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25"
-                  : 'bg-zion-slate-light/50 text-gray-300 hover: b g-zion-slate-light/70 hover: tex t-white';`
-              }`};
+                  : 'bg-zion-slate-light/50 text-gray-300 "hover": b g-zion-slate-light/70 hover: tex t-white';`
+              }"};
             >;
               All Categories;
             </button> {serviceCategories2027.map((category) => {;
               
               return ()                <button
                   key = {category}
-                  onClick={() => setSelectedCategory(category)}`
+                  onClick={() => setSelectedCategory(category)}"
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${selectedCategory === category'
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25"
-                      : 'bg-zion-slate-light/50 text-gray-300 hover: b g-zion-slate-light/70 hover: tex t-white'`
-                  }`};
+                      : 'bg-zion-slate-light/50 text-gray-300 "hover": b g-zion-slate-light/70 hover: tex t-white'`
+                  }"};
                 >;"
                   {Icon && <Icon className="w-4 h-4"   />} {category};
                 </button>;) }) }          </div>
@@ -103,43 +101,43 @@ export default function Page($1) {
         <motion.div
           initial = {
 
-  { opacity: 0,
-  y: 3 0 }}          animate = {
+  { "opacity": 0,
+  "y": 3 0 }}          animate = {
 
-  isVisible ? { opacity: 1,;
-  y: 0 } : { opacity: 0, y: 3 0 }}          transition = {
+  isVisible ? { "opacity": 1,;
+  "y": 0 } : { "opacity": 0, "y": 3 0 }}          transition = {
 
-  { duration: 0.8,
-  delay: 0.4 }}"          className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8 mb-16"
+  { "duration": 0.8,
+  "delay": 0.4 }}"          className="grid grid-cols-1 "md": gri d-cols-2 lg: gri d-cols-3 gap-8 mb-16"
         >
           {filteredServices.map((service, index) => (;
             <motion.div
               key={service.id}
               initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
               animate = {
 
-  isVisible ? { opacity: 1,
-  y: 0
+  isVisible ? { "opacity": 1,
+  "y": 0
 
-} : { opacity: 0, y: 2 0 }}
+} : { "opacity": 0, "y": 2 0 }}
               transition = {
 
-  { duration: 0.6,
-  delay: inde x * 0.1
+  { "duration": 0.6,
+  "delay": inde x * 0.1
 
 }}"
               className="group relative"
 "
-              <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 hover: scal e-105 hover: borde r-zion-cyan/40 hover: shado w-2xl hover: shado w-zion-cyan/25">
+              <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 "hover": scal e-105 hover: borde r-zion-cyan/40 hover: shado w-2xl hover: shado w-zion-cyan/25">
                 {/* Service Header */}"
                 <div className="flex items-start justify-between mb-4">"
                   <div className="flex-1">"
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover: tex t-zion-cyan transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-white mb-2 group-"hover": tex t-zion-cyan transition-colors duration-300">
                       {service.title}
                     </h3>"
                     <p className="text-gray-300 text-sm leading-relaxed">
@@ -179,7 +177,7 @@ export default function Page($1) {
                   <div className="text-2xl font-bold text-white">{service.price}</div>
                   <button
                     onClick={() => toggleServiceExpansion(service.id)}"
-                    className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center gap-2";
+                    className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold "hover": shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center gap-2";
 
                     {expandedService === service.id ? 'Less' : 'Learn More'}"
                     {expandedService === service.id ? <ChevronUp className="w-4 h-4"   /> : <ChevronDown className="w-4 h-4"   />}                  </button>
@@ -191,22 +189,22 @@ export default function Page($1) {
                     <motion.div
                       initial = {
 
-  { opacity: 0,
-  height: 0
+  { "opacity": 0,
+  "height": 0
 
 }}
                       animate = {
-  { opacity: 1,
-  height: 'auto'
+  { "opacity": 1,
+  "height": 'auto'
 
 }}
                       exit = {
 
-  { opacity: 0,
-  height: 0
+  { "opacity": 0,
+  "height": 0
 
 }}
-                      transition={{ duration: 0.3 }}"
+                      transition={{ "duration": 0.3 }}"
                       className="overflow-hidden"
 "
                       <div className="border-t border-zion-cyan/20 pt-4 space-y-4">
@@ -250,10 +248,10 @@ export default function Page($1) {
                         <a href={service.href}"
                           target={service.external ? "_blank" : "_self"}"
                           rel={service.external ? "noopener noreferrer" : "}"
-                          className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group"
+                          className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold "hover": shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group"
 
                           {service.ctaLabel}"
-                          <ArrowRight className="w-4 h-4 group-hover: translat e-x-1 transition-transform duration-300"   />"
+                          <ArrowRight className="w-4 h-4 group-"hover": translat e-x-1 transition-transform duration-300"   />"
                           {service.external && <ExternalLink className="w-4 h-4"   />}                        </a>
                       </div>;
                     </motion.div>) }
@@ -266,14 +264,14 @@ export default function Page($1) {
         <motion.div
           initial = {
 
-  { opacity: 0,
-  y: 3 0 }}          animate = {
+  { "opacity": 0,
+  "y": 3 0 }}          animate = {
 
-  isVisible ? { opacity: 1,;
-  y: 0 } : { opacity: 0, y: 3 0 }}          transition = {
+  isVisible ? { "opacity": 1,;
+  "y": 0 } : { "opacity": 0, "y": 3 0 }}          transition = {
 
-  { duration: 0.8,
-  delay: 0.6 }}"          className="text-center"
+  { "duration": 0.8,
+  "delay": 0.6 }}"          className="text-center"
 "
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;"
             <h3 className="text-3xl font-bold text-white mb-6">
@@ -282,7 +280,7 @@ export default function Page($1) {
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Our expert team is ready to help you implement these cutting-edge solutions.Get in touch to discuss your specific needs and discover how we can drive innovation in your organization.</p>
 "
-            <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 mb-8">"
+            <div className="grid grid-cols-1 "md": gri d-cols-3 gap-6 mb-8">"
               <div className="flex items-center justify-center gap-3 text-zion-cyan">"
                 <Phone className="w-5 h-5"   />"
                 <span className="font-semibold">{contactInfo.phone}</span>
@@ -296,7 +294,7 @@ export default function Page($1) {
               </div>
             </div>
 "
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+            <div className="flex flex-col "sm": fle x-row gap-4 justify-center">
               <a"
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover: shado w-lg hover: shado w-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
@@ -316,7 +314,7 @@ export default function Page($1) {
         </motion.div>;
       </div>;';
     </section>;) };';';
-"`
+""
 
 </motion>
 </motion>

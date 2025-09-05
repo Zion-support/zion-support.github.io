@@ -18,7 +18,7 @@ export default function ProductCard($1) {
       typeof product.title !== "string" || 
       product.title.trim() === ") {
     captureException(new Error("Invalid product data received by ProductCard"), { 
-      extra: { product } 
+      "extra": { product } 
     });
     return (
     <div className="min-h-screen bg-white">
@@ -30,5 +30,4 @@ export default function ProductCard($1) {
   }
   
   const active = isWishlisted(product.id);
-  const dispatch = useDispatch();
-;';';
+  const dispatch = useDispatch();';';

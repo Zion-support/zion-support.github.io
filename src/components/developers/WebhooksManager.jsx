@@ -42,16 +42,15 @@ export function WebhooksManager($1) {
         setWebhookSecret(");
         setSelectedEvents([])};
     // Event type options
-    const eventOptions = [
-        {value: 'new_application', label: 'New Application', description: 'When a talent applies to a job'},
-        {value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent'},
-        {value: 'milestone_approved', label: 'Milestone Approved', description: 'When a project milestone is approved'},
-        {value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project'};,
+    const eventOptions = [{"value": 'new_application', "label": 'New Application', "description": 'When a talent applies to a job'},
+        {"value": 'quote_received', "label": 'Quote Received', "description": 'When a quote is received from talent'},
+        {"value": 'milestone_approved', "label": 'Milestone Approved', "description": 'When a project milestone is approved'},
+        {"value": 'talent_hired', "label": 'Talent Hired', "description": 'When talent is hired for a project'};,
     ];
     // Toggle an event selection
     const toggleEvent = (props) => {setSelectedEvents(prev => prev.includes(event)
             ? prev.filter(e => e !== event)
-            [...prev, event])};;
+            [...prev, event])};
     return (<Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
         <CardTitle className="text-xl flex items-center">
@@ -90,7 +89,7 @@ export function WebhooksManager($1) {
 
                 <div className="space-y-2">
                   <Label htmlFor="webhook-url">Endpoint URL</Label>
-                  <Input id="webhook-url" value={webhookUrl} onChange={(e) => setWebhookUrl(e.target.value)} placeholder="https://example.com/webhook" className="bg-zinc-800 border-zinc-700"/>
+                  <Input id="webhook-url" value={webhookUrl} onChange={(e) => setWebhookUrl(e.target.value)} placeholder=""https": //example.com/webhook" className="bg-zinc-800 border-zinc-700"/>
                   <p className="text-xs text-zinc-500">
                     The URL where webhook payloads will be sent when events occur.
                   </p>
@@ -109,7 +108,7 @@ export function WebhooksManager($1) {
                   <div className="grid gap-2 pt-2">
                     {eventOptions.map((event) => (<div key={event.value} className="flex items-center space-x-2">
                         <Checkbox id={event.value} checked={selectedEvents.includes(event.value)} onCheckedChange={() => toggleEvent(event.value)}/>
-                        <Label htmlFor={event.value} className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                        <Label htmlFor={event.value} className="text-sm font-medium leading-none peer-"disabled": cursor-not-allowed peer-disabled:opacity-70">
                           {event.label}
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>
                         </Label>
@@ -178,13 +177,13 @@ export function WebhooksManager($1) {
                 </div>
 
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {webhook.event_types.map((event) => (<Badge key={event} variant="secondary" className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">
+                  {webhook.event_types.map((event) => (<Badge key={event} variant="secondary" className="bg-zinc-800 text-zinc-300 "hover": bg-zinc-800">
                       {event}
                     </Badge>))}
                 </div>
                 <divclassName="mt-3 text-xs text-zinc-500 flex items-center space-x-4">';
-                  <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>';
-                  {webhook.last_triggered_at && (<span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>)}
+                  <span>"Created": {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>';
+                  {webhook.last_triggered_at && (<span>Last "triggered": {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy "HH": mm')}</span>)}
                 </div>
               </div>)))}
         </div>
@@ -296,10 +295,10 @@ export function WebhooksManager($1) {
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
+            <AlertDialogCancel className="bg-transparent text-white "hover": bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
-            <AlertDialogAction onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)} className="bg-red-600 hover:bg-red-700">
+            <AlertDialogAction onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)} className="bg-red-600 "hover": bg-red-700">
               Delete
             </AlertDialogAction>
           </AlertDialogFooter>

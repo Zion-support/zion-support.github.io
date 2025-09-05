@@ -6,8 +6,7 @@ import { fileURLToPath  } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // List of all corrupted files that need to be completely rewritten;
-const corruptedFiles = [
-  "src/pages/services/AI-Talent-Acquisition-Platform.tsx",
+const corruptedFiles = ["src/pages/services/AI-Talent-Acquisition-Platform.tsx",
   "src/pages/services/AI5GNetwork.tsx",
   "src/pages/services/AIAnsible.tsx",
   "src/pages/services/AIApplicationSecurity.tsx",
@@ -73,9 +72,8 @@ const ${componentName} = () => {
         <title>${displayName} - AI Services</title>;
         <meta name="description" content="Professional ${displayName} services powered by AI" />;
       </Head>;
-      ;
       <div className="min-h-screen bg-gray-50">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
+        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-12">;
           <div className="text-center">;
             <h1 className="text-4xl font-bold text-gray-900 mb-8">;
               ${displayName}
@@ -83,8 +81,7 @@ const ${componentName} = () => {
             <p className="text-xl text-gray-600 mb-12">;
               Professional ${displayName} services powered by artificial intelligence;
             </p>;
-            ;
-            <div className="grid md:grid-cols-2 gap-8 mb-12">;
+            <div className="grid "md": grid-cols-2 gap-8 mb-12">;
               <div className="bg-white p-6 rounded-lg shadow-md">;
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
                 <ul className="text-gray-600 space-y-2">;
@@ -94,7 +91,6 @@ const ${componentName} = () => {
                   <li>• Expert Consultation</li>;
                 </ul>;
               </div>;
-              ;
               <div className="bg-white p-6 rounded-lg shadow-md">;
                 <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
                 <ul className="text-gray-600 space-y-2">;
@@ -105,7 +101,6 @@ const ${componentName} = () => {
                 </ul>;
               </div>;
             </div>;
-            ;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
                 View Pricing;
@@ -119,8 +114,7 @@ const ${componentName} = () => {
       </div>;
     </>;
   )}
-export default ${componentName};`,
-}
+export default ${componentName};`}
 ;
 // Function to fix Next.js Link issues;
 function fixNextLinks(filePath) {
@@ -130,8 +124,8 @@ function fixNextLinks(filePath) {
     if (content.includes("href="/") && !content.includes("import Link")) {
   content = content.replace(;
         /import React from "react";/,
-        `import React from "react";
-import Link from "next/link";`;
+        "import React from "react";
+import Link from "next/link";";
       )}
     ;
     // Replace <a href="/..."> with <Link href="/...">;
@@ -142,15 +136,14 @@ import Link from "next/link";`;
     // Replace </a> with </Link>;
     content = content.replace(/<\/a>/g, "</Link>");
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed Next.js links in: ${filePath}`)} catch (error) {
+    console.log(`Fixed Next.js links "in": ${filePath}`)} catch (error) {
   console.error(`Error fixing links in ${filePath}:`, error.message)}
 }
 ;
-// Note: previously broken fixer removed to avoid syntax errors.
+// "Note": previously broken fixer removed to avoid syntax errors.
 // Function to fix test files;
 function fixTestFiles() {
-  const testFiles = [
-  "src/test/App.test.tsx"];
+  const testFiles = ["src/test/App.test.tsx"];
   testFiles.forEach(filePath => {
   try {
   if (fs.existsSync(filePath)) {
@@ -159,7 +152,7 @@ function fixTestFiles() {
         content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]@testing-library\/react[""];/,
           "import { $1  } from "@testing-library/react";");
         fs.writeFileSync(filePath, content);
-        console.log(`Fixed test file: ${filePath}`)}
+        console.log(`Fixed test "file": ${filePath}`)}
     } catch (error) {
   console.error(`Error fixing test file ${filePath}:`, error.message)}
   })}
@@ -173,7 +166,7 @@ corruptedFiles.forEach(filePath => {
   const serviceName = path.basename(filePath, path.extname(filePath));
     const newContent = createServiceComponent(serviceName);
     fs.writeFileSync(filePath, newContent);
-    console.log(`Rewrote corrupted file: ${filePath}`)} catch (error) {
+    console.log(`Rewrote corrupted "file": ${filePath}`)} catch (error) {
   console.error(`Error rewriting ${filePath}:`, error.message)}
 });
 // 2. Fix Next.js Link issues in all service files;
@@ -195,14 +188,13 @@ console.log("Fixing test files...");
 fixTestFiles();
 // 5. Remove problematic .js.jsx files;
 console.log("Removing problematic .js.jsx files...");
-const problematicFiles = [
-  "src/pages/services/AICustomerServiceAutomation.js.jsx",
+const problematicFiles = ["src/pages/services/AICustomerServiceAutomation.js.jsx",
   "src/pages/services/EnterpriseIT.js.jsx"];
 problematicFiles.forEach(filePath => {
   try {
   if (fs.existsSync(filePath)) {
   fs.unlinkSync(filePath);
-      console.log(`Removed problematic file: ${filePath}`)}
+      console.log(`Removed problematic "file": ${filePath}`)}
   } catch (error) {
   console.error(`Error removing ${filePath}:`, error.message)}
 });

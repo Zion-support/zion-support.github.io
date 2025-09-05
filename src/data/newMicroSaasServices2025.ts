@@ -1,5 +1,5 @@
 export interface NewMicroSaasService {
-  id: string;
+  "id": string;
   title: string;
   description: string;
   category: string;
@@ -25,17 +25,16 @@ export interface NewMicroSaasService {
   };
 }
 
-export const NEW_MICRO_SAAS_SERVICES_2025: NewMicroSaasService[] = [
-  {
+export const "NEW_MICRO_SAAS_SERVICES_2025": NewMicroSaasService[] = [{
     id: "social-media-scheduler",
-    title: "AI-Powered Social Media Scheduler",
-    description: "Intelligent social media management platform that automatically schedules posts, optimizes posting times, and provides AI-driven content suggestions for maximum engagement.",
-    category: "Social Media",
-    subcategory: "Management & Automation",
-    price: 29,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
+    "title": "AI-Powered Social Media Scheduler",
+    "description": "Intelligent social media management platform that automatically schedules posts, optimizes posting times, and provides AI-driven content suggestions for maximum engagement.",
+    "category": "Social Media",
+    "subcategory": "Management & Automation",
+    "price": 29,
+    "currency": "$",
+    "pricingModel": "monthly",
+    "features": [
       "Multi-platform posting",
       "AI-optimized scheduling",
       "Content calendar",
@@ -47,51 +46,47 @@ export const NEW_MICRO_SAAS_SERVICES_2025: NewMicroSaasService[] = [
       "Mobile app",
       "Custom posting times"
     ],
-    benefits: [
-      "Increase engagement by 50%",
+    "benefits": ["Increase engagement by 50%",
       "Save 10+ hours per week",
       "Optimize posting times",
       "Improve content strategy",
       "Streamline social media management"
     ],
-    useCases: [
-      "Small business social media",
+    "useCases": ["Small business social media",
       "Content creator management",
       "Agency client management",
       "Personal brand building",
       "Multi-account management"
     ],
-    targetAudience: [
-      "Small business owners",
+    "targetAudience": ["Small business owners",
       "Social media managers",
       "Content creators",
       "Digital agencies",
       "Marketing professionals"
     ],
-    tags: ["Social Media", "Scheduling", "AI", "Automation", "Analytics"],
-    estimatedDelivery: "1-2 weeks",
-    supportLevel: "standard",
-    marketPrice: "$29 - $99/month",
-    roi: "200-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
+    "tags": ["Social Media", "Scheduling", "AI", "Automation", "Analytics"],
+    "estimatedDelivery": "1-2 weeks",
+    "supportLevel": "standard",
+    "marketPrice": "$29 - $99/month",
+    "roi": "200-400%",
+    "innovationLevel": "Advanced",
+    "contactInfo": {
       phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008, Middletown, DE 19709"
+      "email": "kleber@ziontechgroup.com",
+      "website": "https://ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
     }
   },
   {
-    id: "local-seo-optimizer",
-    title: "Local SEO Optimizer",
-    description: "Comprehensive local SEO tool that helps businesses improve their local search rankings, manage Google My Business listings, and track local search performance.",
-    category: "SEO & Marketing",
-    subcategory: "Local Optimization",
-    price: 49,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Google My Business optimization",
+    "id": "local-seo-optimizer",
+    "title": "Local SEO Optimizer",
+    "description": "Comprehensive local SEO tool that helps businesses improve their local search rankings, manage Google My Business listings, and track local search performance.",
+    "category": "SEO & Marketing",
+    "subcategory": "Local Optimization",
+    "price": 49,
+    "currency": "$",
+    "pricingModel": "monthly",
+    "features": ["Google My Business optimization",
       "Local keyword research",
       "Citation management",
       "Review monitoring",
@@ -102,51 +97,47 @@ export const NEW_MICRO_SAAS_SERVICES_2025: NewMicroSaasService[] = [
       "Reporting dashboard",
       "Mobile optimization"
     ],
-    benefits: [
-      "Improve local search visibility",
+    "benefits": ["Improve local search visibility",
       "Increase foot traffic by 40%",
       "Generate more local leads",
       "Manage online reputation",
       "Beat local competitors"
     ],
-    useCases: [
-      "Restaurant local marketing",
+    "useCases": ["Restaurant local marketing",
       "Service area businesses",
       "Retail store optimization",
       "Professional services",
       "Multi-location businesses"
     ],
-    targetAudience: [
-      "Local business owners",
+    "targetAudience": ["Local business owners",
       "Restaurant owners",
       "Service providers",
       "Retail stores",
       "Professional services"
     ],
-    tags: ["Local SEO", "Google My Business", "Citations", "Reviews", "Local Marketing"],
-    estimatedDelivery: "1-2 weeks",
-    supportLevel: "standard",
-    marketPrice: "$49 - $149/month",
-    roi: "300-600%",
-    innovationLevel: "Standard",
-    contactInfo: {
+    "tags": ["Local SEO", "Google My Business", "Citations", "Reviews", "Local Marketing"],
+    "estimatedDelivery": "1-2 weeks",
+    "supportLevel": "standard",
+    "marketPrice": "$49 - $149/month",
+    "roi": "300-600%",
+    "innovationLevel": "Standard",
+    "contactInfo": {
       phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008, Middletown, DE 19709"
+      "email": "kleber@ziontechgroup.com",
+      "website": "https://ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
     }
   },
   {
-    id: "customer-feedback-hub",
-    title: "Customer Feedback Hub",
-    description: "All-in-one customer feedback collection and analysis platform that helps businesses gather, analyze, and act on customer feedback to improve products and services.",
-    category: "Customer Experience",
-    subcategory: "Feedback Management",
-    price: 39,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Custom survey creation",
+    "id": "customer-feedback-hub",
+    "title": "Customer Feedback Hub",
+    "description": "All-in-one customer feedback collection and analysis platform that helps businesses gather, analyze, and act on customer feedback to improve products and services.",
+    "category": "Customer Experience",
+    "subcategory": "Feedback Management",
+    "price": 39,
+    "currency": "$",
+    "pricingModel": "monthly",
+    "features": ["Custom survey creation",
       "Multi-channel feedback collection",
       "Sentiment analysis",
       "Feedback analytics dashboard",
@@ -157,51 +148,47 @@ export const NEW_MICRO_SAAS_SERVICES_2025: NewMicroSaasService[] = [
       "Action item tracking",
       "Team collaboration tools"
     ],
-    benefits: [
-      "Increase customer satisfaction",
+    "benefits": ["Increase customer satisfaction",
       "Identify improvement opportunities",
       "Reduce customer churn",
       "Make data-driven decisions",
       "Improve customer retention"
     ],
-    useCases: [
-      "Product feedback collection",
+    "useCases": ["Product feedback collection",
       "Service quality monitoring",
       "Customer satisfaction surveys",
       "NPS measurement",
       "Post-purchase feedback"
     ],
-    targetAudience: [
-      "E-commerce businesses",
+    "targetAudience": ["E-commerce businesses",
       "SaaS companies",
       "Service providers",
       "Product companies",
       "Customer success teams"
     ],
-    tags: ["Feedback", "Customer Experience", "Surveys", "Analytics", "NPS"],
-    estimatedDelivery: "1-2 weeks",
-    supportLevel: "standard",
-    marketPrice: "$39 - $129/month",
-    roi: "250-500%",
-    innovationLevel: "Standard",
-    contactInfo: {
+    "tags": ["Feedback", "Customer Experience", "Surveys", "Analytics", "NPS"],
+    "estimatedDelivery": "1-2 weeks",
+    "supportLevel": "standard",
+    "marketPrice": "$39 - $129/month",
+    "roi": "250-500%",
+    "innovationLevel": "Standard",
+    "contactInfo": {
       phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008, Middletown, DE 19709"
+      "email": "kleber@ziontechgroup.com",
+      "website": "https://ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
     }
   },
   {
-    id: "website-analytics-dashboard",
-    title: "Website Analytics Dashboard",
-    description: "User-friendly website analytics platform designed for small business owners to track website performance, visitor behavior, and marketing ROI without technical expertise.",
-    category: "Analytics",
-    subcategory: "Website Performance",
-    price: 19,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Easy-to-understand metrics",
+    "id": "website-analytics-dashboard",
+    "title": "Website Analytics Dashboard",
+    "description": "User-friendly website analytics platform designed for small business owners to track website performance, visitor behavior, and marketing ROI without technical expertise.",
+    "category": "Analytics",
+    "subcategory": "Website Performance",
+    "price": 19,
+    "currency": "$",
+    "pricingModel": "monthly",
+    "features": ["Easy-to-understand metrics",
       "Visitor behavior tracking",
       "Conversion tracking",
       "Traffic source analysis",
@@ -212,51 +199,47 @@ export const NEW_MICRO_SAAS_SERVICES_2025: NewMicroSaasService[] = [
       "Integration with Google Analytics",
       "Real-time data"
     ],
-    benefits: [
-      "Understand website performance",
+    "benefits": ["Understand website performance",
       "Identify improvement opportunities",
       "Track marketing ROI",
       "Make data-driven decisions",
       "Improve conversion rates"
     ],
-    useCases: [
-      "Small business websites",
+    "useCases": ["Small business websites",
       "E-commerce stores",
       "Lead generation sites",
       "Blog performance tracking",
       "Marketing campaign analysis"
     ],
-    targetAudience: [
-      "Small business owners",
+    "targetAudience": ["Small business owners",
       "E-commerce store owners",
       "Marketing professionals",
       "Website administrators",
       "Non-technical users"
     ],
-    tags: ["Analytics", "Website Performance", "Conversion Tracking", "Marketing ROI", "User-Friendly"],
-    estimatedDelivery: "1 week",
-    supportLevel: "standard",
-    marketPrice: "$19 - $79/month",
-    roi: "200-400%",
-    innovationLevel: "Standard",
-    contactInfo: {
+    "tags": ["Analytics", "Website Performance", "Conversion Tracking", "Marketing ROI", "User-Friendly"],
+    "estimatedDelivery": "1 week",
+    "supportLevel": "standard",
+    "marketPrice": "$19 - $79/month",
+    "roi": "200-400%",
+    "innovationLevel": "Standard",
+    "contactInfo": {
       phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008, Middletown, DE 19709"
+      "email": "kleber@ziontechgroup.com",
+      "website": "https://ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
     }
   },
   {
-    id: "email-sequencer",
-    title: "AI Email Sequencer",
-    description: "Intelligent email marketing automation platform that creates personalized email sequences, optimizes send times, and provides AI-driven content suggestions for maximum engagement.",
-    category: "Email Marketing",
-    subcategory: "Automation & Personalization",
-    price: 59,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered email sequences",
+    "id": "email-sequencer",
+    "title": "AI Email Sequencer",
+    "description": "Intelligent email marketing automation platform that creates personalized email sequences, optimizes send times, and provides AI-driven content suggestions for maximum engagement.",
+    "category": "Email Marketing",
+    "subcategory": "Automation & Personalization",
+    "price": 59,
+    "currency": "$",
+    "pricingModel": "monthly",
+    "features": ["AI-powered email sequences",
       "Personalization engine",
       "Send time optimization",
       "A/B testing",
@@ -267,51 +250,47 @@ export const NEW_MICRO_SAAS_SERVICES_2025: NewMicroSaasService[] = [
       "Integration with CRM",
       "Performance analytics"
     ],
-    benefits: [
-      "Increase email open rates by 40%",
+    "benefits": ["Increase email open rates by 40%",
       "Improve click-through rates",
       "Automate email marketing",
       "Personalize customer experience",
       "Save time on email campaigns"
     ],
-    useCases: [
-      "Welcome email sequences",
+    "useCases": ["Welcome email sequences",
       "Lead nurturing campaigns",
       "Product launch emails",
       "Customer onboarding",
       "Re-engagement campaigns"
     ],
-    targetAudience: [
-      "E-commerce businesses",
+    "targetAudience": ["E-commerce businesses",
       "SaaS companies",
       "Digital marketers",
       "Small business owners",
       "Marketing agencies"
     ],
-    tags: ["Email Marketing", "Automation", "AI", "Personalization", "Sequences"],
-    estimatedDelivery: "1-2 weeks",
-    supportLevel: "standard",
-    marketPrice: "$59 - $199/month",
-    roi: "250-500%",
-    innovationLevel: "Advanced",
-    contactInfo: {
+    "tags": ["Email Marketing", "Automation", "AI", "Personalization", "Sequences"],
+    "estimatedDelivery": "1-2 weeks",
+    "supportLevel": "standard",
+    "marketPrice": "$59 - $199/month",
+    "roi": "250-500%",
+    "innovationLevel": "Advanced",
+    "contactInfo": {
       phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008, Middletown, DE 19709"
+      "email": "kleber@ziontechgroup.com",
+      "website": "https://ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
     }
   },
   {
-    id: "micro-crm",
-    title: "Micro CRM for Small Business",
-    description: "Lightweight CRM solution designed specifically for small businesses to manage customer relationships, track sales, and automate follow-ups without the complexity of enterprise CRMs.",
-    category: "CRM",
-    subcategory: "Small Business",
-    price: 25,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Contact management",
+    "id": "micro-crm",
+    "title": "Micro CRM for Small Business",
+    "description": "Lightweight CRM solution designed specifically for small businesses to manage customer relationships, track sales, and automate follow-ups without the complexity of enterprise CRMs.",
+    "category": "CRM",
+    "subcategory": "Small Business",
+    "price": 25,
+    "currency": "$",
+    "pricingModel": "monthly",
+    "features": ["Contact management",
       "Sales pipeline tracking",
       "Task automation",
       "Email integration",
@@ -322,38 +301,35 @@ export const NEW_MICRO_SAAS_SERVICES_2025: NewMicroSaasService[] = [
       "Custom fields",
       "Team collaboration"
     ],
-    benefits: [
-      "Organize customer data",
+    "benefits": ["Organize customer data",
       "Track sales progress",
       "Automate follow-ups",
       "Improve customer relationships",
       "Increase sales efficiency"
     ],
-    useCases: [
-      "Small business sales",
+    "useCases": ["Small business sales",
       "Service provider management",
       "Freelancer client tracking",
       "Real estate agents",
       "Consultants"
     ],
-    targetAudience: [
-      "Small business owners",
+    "targetAudience": ["Small business owners",
       "Freelancers",
       "Service providers",
       "Sales professionals",
       "Consultants"
     ],
-    tags: ["CRM", "Sales Management", "Customer Relationships", "Small Business", "Automation"],
-    estimatedDelivery: "1 week",
-    supportLevel: "standard",
-    marketPrice: "$25 - $99/month",
-    roi: "200-400%",
-    innovationLevel: "Standard",
-    contactInfo: {
+    "tags": ["CRM", "Sales Management", "Customer Relationships", "Small Business", "Automation"],
+    "estimatedDelivery": "1 week",
+    "supportLevel": "standard",
+    "marketPrice": "$25 - $99/month",
+    "roi": "200-400%",
+    "innovationLevel": "Standard",
+    "contactInfo": {
       phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008, Middletown, DE 19709"
+      "email": "kleber@ziontechgroup.com",
+      "website": "https://ziontechgroup.com",
+      "address": "364 E Main St STE 1008, Middletown, DE 19709"
     }
   };
 ];

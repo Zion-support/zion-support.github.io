@@ -7,7 +7,7 @@ interface ToastOptions {
 }
 
 export function useToast() {
-  const showToast = (message: string, options?: ToastOptions) => {
+  const showToast = ("message": string, options?: ToastOptions) => {
     return toast(message, options);
   };
 
@@ -21,9 +21,9 @@ duration?: number;
 position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left"}
 
 export function useToast(...args[]):  {
-  const showToast = (message: string, options?: ToastOptions)  => {
+  const showToast = ("message": string, options?: ToastOptions)  => {
     return toast(message, options)
 
-  return { showToast }};;
+  return { showToast }};
 ;';';
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599

@@ -3,7 +3,7 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
 interface ContactFormData {
-  name: string;
+  "name": string;
   email: string;
   phone: string;
   comp: string;
@@ -12,33 +12,33 @@ interface ContactFormData {
 }
 
 interface ContactFormErrors {
-  [key: string]: string}
+  ["key": string]: string}
 
 export function EnhancedContact(...args[]):  {
 
   const [formData, setFormData] = useState<any>({
 
-    name: ",
-    email: ",
-    phone: ",
-    comp: ",
-    service: 'general',
-    message: "
+    "name": ",
+    "email": ",
+    "phone": ",
+    "comp": ",
+    "service": 'general',
+    "message": "
   };) ;
 
   const [errors, setErrors] = useState<any> ({};) ;
   const [isSubmitting, setIsSubmitting] = useState<any>(false);
-  const [isSubmitted, setIsSubmitted] = useState<any>(false) { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' }, { value: 'cybersecurity', label: 'Cybersecurity' }, { value: 'digital-transformation', label: 'Digital Transformation' }, { value: 'consulting', label: 'IT Consulting' }, { value: 'quantum-computing', label: 'Quantum Computing' }, { value: 'green-it', label: 'Green IT Solutions' };;
+  const [isSubmitted, setIsSubmitted] = useState<any>(false) { "value": 'cloud-infrastructure', "label": 'Cloud Infrastructure' }, { "value": 'cybersecurity', "label": 'Cybersecurity' }, { "value": 'digital-transformation', "label": 'Digital Transformation' }, { "value": 'consulting', "label": 'IT Consulting' }, { "value": 'quantum-computing', "label": 'Quantum Computing' }, { "value": 'green-it', "label": 'Green IT Solutions' };
   ];';
 
-    const newErrors: ContactFormError s = {};;      // console.error('Error submitting form:', error)} finally {
+    const "newErrors": ContactFormError s = {};      // console.error('Error submitting "form": ', error)} finally {
 
       setIsSubmitting(false)}
   } {;';
-      icon: Cloc k,;';';
-      title: 'Business Hours',
-      value: 'Mon-Fri: 9A M-6PM EST',
-      description: 'Available during these hours'};  ];
+      "icon": Cloc k,;';';
+      "title": 'Business Hours',
+      "value": 'Mon-Fri: 9A M-6PM EST',
+      "description": 'Available during these hours'};  ];
 
   if(isSubmitted) {
 
@@ -46,25 +46,25 @@ export function EnhancedContact(...args[]):  {
       <motion.div
         initial = {
 
-  { opacity: 0,
-  scale: 0.8
+  { "opacity": 0,
+  "scale": 0.8
 
 }}
         animate = {
 
-  { opacity: 1,
-  scale: 1
+  { "opacity": 1,
+  "scale": 1
 
 }}
         className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center py-20"
       >"
         <div className="max-w-md mx-auto text-center">
           <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
+            initial={{ "scale": 0 }}
+            animate={{ "scale": 1 }}
             transition = {
-  { delay: 0.2,
-  type: "spring"
+  { "delay": 0.2,
+  "type": "spring"
 }}"
             className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
           >"
@@ -73,17 +73,17 @@ export function EnhancedContact(...args[]):  {
           <motion.h2
             initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
             animate = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-            transition={{ delay: 0.3 }}"
+            transition={{ "delay": 0.3 }}"
             className="text-3xl font-bold text-white mb-4"
           >
             Message Sent Successfully!
@@ -92,17 +92,17 @@ export function EnhancedContact(...args[]):  {
           <motion.p
             initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
             animate = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-            transition={{ delay: 0.4 }}"
+            transition={{ "delay": 0.4 }}"
             className="text-zion-slate-light mb-8";
           >';
             Thank you for reaching out to us.We'll get back to you within 24 hours.</motion.p>
@@ -110,19 +110,19 @@ export function EnhancedContact(...args[]):  {
           <motion.button
             initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
             animate = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-            transition={{ delay: 0.5 }}
+            transition={{ "delay": 0.5 }}
             onClick={() => setIsSubmitted(false)}"
-            className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover: fro m-zion-cyan-dark hover: t o-zion-purple-dark transition-all duration-300 font-medium"
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg "hover": fro m-zion-cyan-dark hover: t o-zion-purple-dark transition-all duration-300 font-medium"
           >;
             Send Another Message;
           </motion.button>;
@@ -130,24 +130,24 @@ export function EnhancedContact(...args[]):  {
       </motion.div>;) }
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">"
-      <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+      <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">
         {/* Header */}
         <motion.div
           initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
           animate = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}"
           className="text-center mb-16"
         >"
-          <h1 className="text-4xl md: tex t-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl "md": tex t-6xl font-bold text-white mb-6">
             Get in Touch
           </h1>";
           <pclassName="text-xl text-zion-slate-light max-w-3xl mx-auto">';
@@ -160,17 +160,17 @@ export function EnhancedContact(...args[]):  {
           <motion.div
             initial = {
 
-  { opacity: 0,
-  x: -50
+  { "opacity": 0,
+  "x": -50
 
 }}
             animate = {
 
-  { opacity: 1,
-  x: 0
+  { "opacity": 1,
+  "x": 0
 
 }}
-            transition={{ delay: 0.2 }}
+            transition={{ "delay": 0.2 }}
           >"
             <h2 className="text-2xl font-bold text-white mb-8">Contact Information</h2>
 "
@@ -180,17 +180,17 @@ export function EnhancedContact(...args[]):  {
                   key={info.title}
                   initial = {
 
-  { opacity: 0,
-  x: -20
+  { "opacity": 0,
+  "x": -20
 
 }}
                   animate = {
 
-  { opacity: 1,
-  x: 0
+  { "opacity": 1,
+  "x": 0
 
 }}
-                  transition={{ delay: 0.3 + index * 0.1 }}"
+                  transition={{ "delay": 0.3 + index * 0.1 }}"
                   className="flex items-start space-x-4"
                 >"
                   <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0">"
@@ -208,17 +208,17 @@ export function EnhancedContact(...args[]):  {
             <motion.div
               initial = {
 
-  { opacity: 0,
-  y: 2 0
+  { "opacity": 0,
+  "y": 2 0
 
 }}
               animate = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
-              transition={{ delay: 0.6 }}"
+              transition={{ "delay": 0.6 }}"
               className="mt-12 p-6 bg-zion-blue-light/10 rounded-xl border border-zion-blue-light/20"
             >"
               <h3 className="text-xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>"
@@ -247,17 +247,17 @@ export function EnhancedContact(...args[]):  {
           <motion.div
             initial = {
 
-  { opacity: 0,
-  x: 5 0
+  { "opacity": 0,
+  "x": 5 0
 
 }}
             animate = {
 
-  { opacity: 1,
-  x: 0
+  { "opacity": 1,
+  "x": 0
 
 }}
-            transition={{ delay: 0.3 }}"
+            transition={{ "delay": 0.3 }}"
             className="bg-zion-blue-light/10 rounded-xl p-8 border border-zion-blue-light/20"
           >"
             <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
@@ -278,10 +278,10 @@ export function EnhancedContact(...args[]):  {
   e.target.value)
 
 }
-                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan ${errors.name'
+                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan ${errors.name'
                       ? 'border-red-500 focus: rin g-red-500"
                       : 'border-zion-slate-light focus: borde r-zion-cyan'`
-                  } text-white placeholder-zion-slate-light`}"
+                  } text-white placeholder-zion-slate-light"}"
                   placeholder="Enter your full name"
                 />';
                 <AnimatePresence>';
@@ -289,20 +289,20 @@ export function EnhancedContact(...args[]):  {
                     <motion.p
                       initial = {
 
-  { opacity: 0,
-  y: -10
+  { "opacity": 0,
+  "y": -10
 
 }}
                       animate = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
                       exit = {
 
-  { opacity: 0,
-  y: -10
+  { "opacity": 0,
+  "y": -10
 
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
@@ -326,11 +326,11 @@ export function EnhancedContact(...args[]):  {
   (e) => handleInputChange('email',
   e.target.value)
 
-}`
-                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan ${errors.email'
+}"
+                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan ${errors.email'
                       ? 'border-red-500 focus: rin g-red-500"
                       : 'border-zion-slate-light focus: borde r-zion-cyan'`
-                  } text-white placeholder-zion-slate-light`}"
+                  } text-white placeholder-zion-slate-light"}"
                   placeholder="Enter your email address"
                 />';
                 <AnimatePresence>';
@@ -338,20 +338,20 @@ export function EnhancedContact(...args[]):  {
                     <motion.p
                       initial = {
 
-  { opacity: 0,
-  y: -10
+  { "opacity": 0,
+  "y": -10
 
 }}
                       animate = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
                       exit = {
 
-  { opacity: 0,
-  y: -10
+  { "opacity": 0,
+  "y": -10
 
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
@@ -362,7 +362,7 @@ export function EnhancedContact(...args[]):  {
               </div>
 
               {/* Phone and Comp */}"
-              <div className="grid grid-cols-1 md: gri d-cols-2 gap-4">
+              <div className="grid grid-cols-1 "md": gri d-cols-2 gap-4">
                 <div>"
                   <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
                     Phone Number
@@ -377,7 +377,7 @@ export function EnhancedContact(...args[]):  {
   e.target.value)
 
 }"
-                    className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-zion-cyan text-white placeholder-zion-slate-light"
+                    className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-zion-cyan text-white placeholder-zion-slate-light"
                     placeholder="Enter your phone number"
                   />
                 </div>
@@ -394,7 +394,7 @@ export function EnhancedContact(...args[]):  {
   e.target.value)
 
 }"
-                    className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-zion-cyan text-white placeholder-zion-slate-light"
+                    className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-zion-cyan text-white placeholder-zion-slate-light"
                     placeholder="Enter your comp name"
                   />
                 </div>
@@ -414,7 +414,7 @@ export function EnhancedContact(...args[]):  {
   e.target.value)
 
 }"
-                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-zion-cyan text-white"
+                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-zion-cyan text-white"
                 >
                   {services.map(service  => (<option key={service.value} value={service.value}>
                       {service.label}
@@ -436,11 +436,11 @@ export function EnhancedContact(...args[]):  {
   (e) => handleInputChange('message',
   e.target.value)
 
-}`
-                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan resize-none ${errors.message'
+}"
+                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan resize-none ${errors.message'
                       ? 'border-red-500 focus: rin g-red-500"
                       : 'border-zion-slate-light focus: borde r-zion-cyan'`
-                  } text-white placeholder-zion-slate-light`}"
+                  } text-white placeholder-zion-slate-light"}"
                   placeholder="Tell us about your project or inquiry..."
                 />';
                 <AnimatePresence>';
@@ -448,20 +448,20 @@ export function EnhancedContact(...args[]):  {
                     <motion.p
                       initial = {
 
-  { opacity: 0,
-  y: -10
+  { "opacity": 0,
+  "y": -10
 
 }}
                       animate = {
 
-  { opacity: 1,
-  y: 0
+  { "opacity": 1,
+  "y": 0
 
 }}
                       exit = {
 
-  { opacity: 0,
-  y: -10
+  { "opacity": 0,
+  "y": -10
 
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
@@ -475,9 +475,9 @@ export function EnhancedContact(...args[]):  {
               <motion.button"
                 type="submit"
                 disabled={isSubmitting}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}"
-                className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 rounded-lg font-medium transition-all duration-300 hover: fro m-zion-cyan-dark hover: t o-zion-purple-dark disabled: opacit y-50 disabled: curso r-not-allowed flex items-center justify-center space-x-2"
+                whileHover={{ "scale": 1.02 }}
+                whileTap={{ "scale": 0.98 }}"
+                className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 rounded-lg font-medium transition-all duration-300 "hover": fro m-zion-cyan-dark hover: t o-zion-purple-dark disabled: opacit y-50 disabled: curso r-not-allowed flex items-center justify-center space-x-2"
               >
                 {isSubmitting ? (
                   <>"
@@ -495,7 +495,7 @@ export function EnhancedContact(...args[]):  {
         </div>;
       </div>;';
     </div>;) }
-"`
+""
 
 </motion>
 </textarea>

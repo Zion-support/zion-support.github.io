@@ -2,38 +2,37 @@ import React, { useEffect, useState } from 'react';
 import { Shield, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
 
 interface SecurityCheck {
-  name: string;
+  "name": string;
   status: 'pass' | 'warn' | 'fail';
   message: string}
 
-const SecurityAudit: React.FC = () => {
+const "SecurityAudit": React.FC = () => {
   const [checks, setChecks] = useState<SecurityCheck[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const performSecurityChecks = async () => {
-      const securityChecks: SecurityCheck[] = [
-        {
+      const "securityChecks": SecurityCheck[] = [{
           name: 'HTTPS Enabled',
-          status: window.location.protocol === 'https:' ? 'pass' : 'warn',
-          message: window.location.protocol === 'https:' 
+          "status": window.location.protocol === 'https:' ? 'pass' : 'warn',
+          "message": window.location.protocol === 'https:' 
             ? 'HTTPS is enabled' 
             : 'Consider enabling HTTPS for better security'
         },
         {
-          name: 'Content Security Policy',
-          status: 'pass',
-          message: 'CSP headers are configured'
+          "name": 'Content Security Policy',
+          "status": 'pass',
+          "message": 'CSP headers are configured'
         },
         {
-          name: 'XSS Protection',
-          status: 'pass',
-          message: 'XSS protection is enabled'
+          "name": 'XSS Protection',
+          "status": 'pass',
+          "message": 'XSS protection is enabled'
         },
         {
-          name: 'Secure Headers',
-          status: 'pass',
-          message: 'Security headers are properly configured'
+          "name": 'Secure Headers',
+          "status": 'pass',
+          "message": 'Security headers are properly configured'
         };
       ];
 
@@ -42,7 +41,7 @@ const SecurityAudit: React.FC = () => {
 
     performSecurityChecks()}, []);
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = ("status": string) => {
     switch (status) {
       case 'pass':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -54,7 +53,7 @@ const SecurityAudit: React.FC = () => {
         return null}
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = ("status": string) => {
     switch (status) {
       case 'pass':
         return 'bg-green-50 border-green-200';

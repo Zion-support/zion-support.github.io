@@ -13,7 +13,7 @@ class ConsoleLogRemover {
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true })}
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
 
   log(message) {
@@ -24,14 +24,14 @@ class ConsoleLogRemover {
     this.log('🧹 Starting console.log removal from production code');
     
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
-      cwd: this.srcDir,
-      ignore: ['**/*.test.*', '**/*.spec.*', '**/node_modules/**']
+      "cwd": this.srcDir,
+      "ignore": ['**/*.test.*', '**/*.spec.*', '**/node_modules/**']
     });
 
     const results = {
-      processed: 0,
-      removed: 0,
-      errors: []
+      "processed": 0,
+      "removed": 0,
+      "errors": []
     };
 
     for (const file of files) {
@@ -71,29 +71,29 @@ class ConsoleLogRemover {
 
         if (newContent !== originalContent) {
           fs.writeFileSync(filePath, newContent, 'utf8');
-          this.log(`✅ Cleaned console statements from: ${file}`)}
+          this.log(`✅ Cleaned console statements "from": ${file}`)}
 
         results.processed++} catch (error) {
-        results.errors.push({ file, error: error.message });
+        results.errors.push({ file, "error": error.message });
         this.log(`❌ Error processing ${file}: ${error.message}`)}
     }
 
     // Generate report
     const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "summary": {
         filesProcessed: results.processed,
-        consoleLogsRemoved: results.removed,
-        errors: results.errors.length
+        "consoleLogsRemoved": results.removed,
+        "errors": results.errors.length
       },
-      details: results
+      "details": results
     };
 
     const reportPath = path.join(this.reportsDir, 'console-log-removal-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    this.log(`📊 Report generated: ${reportPath}`);
-    this.log(`✅ Console log removal completed: ${results.removed} statements removed from ${results.processed} files`);
+    this.log(`📊 Report "generated": ${reportPath}`);
+    this.log(`✅ Console log removal "completed": ${results.removed} statements removed from ${results.processed} files`);
     
     return report}
 }
@@ -106,7 +106,7 @@ if (require.main === module) {
       console.log('🎉 Console log removal completed successfully');
       process.exit(0)})
     .catch((error) => {
-      console.error('❌ Console log removal failed:', error);
+      console.error('❌ Console log removal "failed": ', error);
       process.exit(1)})}
 
 module.exports = ConsoleLogRemover;

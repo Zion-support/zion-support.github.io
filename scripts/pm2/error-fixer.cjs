@@ -12,7 +12,7 @@ class ErrorFixer {
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { "recursive": true });
     }
   }
 
@@ -25,7 +25,7 @@ class ErrorFixer {
 
   error(message) {
     const timestamp = new Date().toISOString();
-    const errorMessage = `[${timestamp}] ERROR: ${message}\n`;
+    const errorMessage = `[${timestamp}] "ERROR": ${message}\n`;
     fs.appendFileSync(this.errorFile, errorMessage);
     console.error(message);
   }
@@ -34,26 +34,25 @@ class ErrorFixer {
     this.log('Starting syntax error fixing...');
     
     try {
-      const fixes = [
-        {
-          pattern: /;;/g,
-          replacement: ';',
-          description: 'Fix double semicolons'
+      const fixes = [{
+          "pattern": /;/g,
+          "replacement": ';',
+          "description": 'Fix double semicolons'
         },
         {
-          pattern: /import\s+([^;]+);;\s*import/g,
-          replacement: 'import $1;\nimport',
-          description: 'Fix malformed imports'
+          "pattern": /import\s+([^;]+);\s*import/g,
+          "replacement": 'import $1;\nimport',
+          "description": 'Fix malformed imports'
         },
         {
-          pattern: /return\s*\(;/g,
-          replacement: 'return (',
-          description: 'Fix malformed return statements'
+          "pattern": /return\s*\(;/g,
+          "replacement": 'return (',
+          "description": 'Fix malformed return statements'
         },
         {
-          pattern: /className=`([^`]+)`/g,
-          replacement: 'className="$1"',
-          description: 'Fix template literal className attributes'
+          "pattern": /className="([^"]+)"/g,
+          "replacement": 'className="$1"',
+          "description": 'Fix template literal className attributes'
         }
       ];
 
@@ -70,7 +69,7 @@ class ErrorFixer {
             content = content.replace(fix.pattern, fix.replacement);
             if (content !== before) {
               fileFixed = true;
-              this.log(`Applied fix "${fix.description}" to ${file}`);
+              this.log("Applied fix "${fix.description}" to ${file}");
             }
           }
           
@@ -79,14 +78,14 @@ class ErrorFixer {
             totalFixed++;
           }
         } catch (err) {
-          this.error(`Error processing ${file}: ${err.message}`);
+          this.error("Error processing ${file}: ${err.message}");
         }
       }
       
-      this.log(`Fixed syntax errors in ${totalFixed} files`);
+      this.log("Fixed syntax errors in ${totalFixed} files");
       return totalFixed;
     } catch (err) {
-      this.error(`Error in fixSyntaxErrors: ${err.message}`);
+      this.error("Error in "fixSyntaxErrors": ${err.message}");
       return 0;
     }
   }
@@ -95,14 +94,14 @@ class ErrorFixer {
     this.log('Starting linting error fixing...');
     
     try {
-      execSync('npm run lint:fix', { 
-        stdio: 'pipe',
-        cwd: process.cwd()
+      execSync('npm run "lint": fix', { 
+        "stdio": 'pipe',
+        "cwd": process.cwd()
       });
       this.log('ESLint auto-fix completed');
       return true;
     } catch (err) {
-      this.error(`ESLint fix failed: ${err.message}`);
+      this.error("ESLint fix "failed": ${err.message}");
       return false;
     }
   }
@@ -143,18 +142,17 @@ class ErrorFixer {
       const syntaxFixed = await this.fixSyntaxErrors();
       const lintingFixed = await this.fixLintingErrors();
       
-      this.log(`Error fixing completed:
-        - Syntax errors fixed: ${syntaxFixed} files
-        - Linting errors fixed: ${lintingFixed ? 'Yes' : 'No'}`);
+      this.log("Error fixing "completed": - Syntax errors fixed: ${syntaxFixed} files
+        - Linting errors "fixed": ${lintingFixed ? 'Yes' : 'No'}");
       
       return {
         syntaxFixed,
         lintingFixed,
-        success: true
+        "success": true
       };
     } catch (err) {
-      this.error(`Error in run: ${err.message}`);
-      return { success: false, error: err.message };
+      this.error("Error in "run": ${err.message}`);
+      return { "success": false, "error": err.message };
     }
   }
 }

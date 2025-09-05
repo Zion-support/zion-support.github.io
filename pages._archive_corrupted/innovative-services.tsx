@@ -36,18 +36,17 @@ import {
   MapPin
 } from "lucide-react"
 
-const PageTransition = ({ children }: { children: React.ReactNode }) => <div>{children}</div>
+const PageTransition = ({ children }: { "children": React.ReactNode }) => <div>{children}</div>
 
 export default function InnovativeServices() {
   const title = "Innovative Services — Zion Tech Group"
   const description = "Cutting-edge micro SaaS, IT, and AI services that transform businesses with intelligent automation and innovative solutions."
 
-  const innovativeServices = [
-    {
-      title: "AI-Powered Email Automation Suite",
-      description: "Intelligent email marketing platform with AI-driven personalization and automated follow-up sequences",
-      icon: Mai l,
-      features: [
+  const innovativeServices = [{
+      "title": "AI-Powered Email Automation Suite",
+      "description": "Intelligent email marketing platform with AI-driven personalization and automated follow-up sequences",
+      "icon": Mai l,
+      "features": [
         "AI-powered email content generation",
         "Behavioral trigger automation",
         "Advanced segmentation and personalization",
@@ -55,173 +54,164 @@ export default function InnovativeServices() {
         "Deliverability optimization and monitoring",
         "ROI tracking and analytics dashboard"
       ],
-      pricing: "$299 - $1,999/month",
-      delivery: "2-3 weeks",
-      category: "Email Marketing SaaS",
-      benefits: "Increase email engagement by 40% and reduce manual work by 60%",
-      marketPrice: "Average market price: $500-2,500/month"
+      "pricing": "$299 - $1,999/month",
+      "delivery": "2-3 weeks",
+      "category": "Email Marketing SaaS",
+      "benefits": "Increase email engagement by 40% and reduce manual work by 60%",
+      "marketPrice": "Average market price: $500-2,500/month"
     },
     {
-      title: "Smart Inventory Management System",
-      description: "AI-driven inventory optimization with predictive analytics and automated reordering",
-      icon: Databas e,
-      features: [
-        "Predictive demand forecasting",
+      "title": "Smart Inventory Management System",
+      "description": "AI-driven inventory optimization with predictive analytics and automated reordering",
+      "icon": Databas e,
+      "features": ["Predictive demand forecasting",
         "Automated reorder point calculations",
         "Multi-location inventory tracking",
         "Supplier performance analytics",
         "Cost optimization recommendations",
         "Integration with major e-commerce platforms"
       ],
-      pricing: "$199 - $1,299/month",
-      delivery: "3-4 weeks",
-      category: "Inventory SaaS",
-      benefits: "Reduce inventory costs by 25% and prevent stockouts by 90%",
-      marketPrice: "Average market price: $300-1,500/month"
+      "pricing": "$199 - $1,299/month",
+      "delivery": "3-4 weeks",
+      "category": "Inventory SaaS",
+      "benefits": "Reduce inventory costs by 25% and prevent stockouts by 90%",
+      "marketPrice": "Average market price: $300-1,500/month"
     },
     {
-      title: "AI Customer Support Chatbot",
-      description: "Advanced conversational AI that handles customer inquiries with human-like responses",
-      icon: Bo t,
-      features: [
-        "Natural language processing and understanding",
+      "title": "AI Customer Support Chatbot",
+      "description": "Advanced conversational AI that handles customer inquiries with human-like responses",
+      "icon": Bo t,
+      "features": ["Natural language processing and understanding",
         "Multi-language support and translation",
         "Integration with CRM and helpdesk systems",
         "Sentiment analysis and escalation triggers",
         "Knowledge base learning and updates",
         "Performance analytics and optimization"
       ],
-      pricing: "$149 - $899/month",
-      delivery: "2-3 weeks",
-      category: "Customer Support AI",
-      benefits: "Handle 80% of customer inquiries automatically, 24/7 availability",
-      marketPrice: "Average market price: $200-1,200/month"
+      "pricing": "$149 - $899/month",
+      "delivery": "2-3 weeks",
+      "category": "Customer Support AI",
+      "benefits": "Handle 80% of customer inquiries automatically, 24/7 availability",
+      "marketPrice": "Average market price: $200-1,200/month"
     },
     {
-      title: "Blockchain Document Verification",
-      description: "Secure document authentication and verification using blockchain technology",
-      icon: Shiel d,
-      features: [
-        "Immutable document verification",
+      "title": "Blockchain Document Verification",
+      "description": "Secure document authentication and verification using blockchain technology",
+      "icon": Shiel d,
+      "features": ["Immutable document verification",
         "Digital signature validation",
         "Cross-platform document sharing",
         "Audit trail and compliance reporting",
         "API integration for existing systems",
         "Multi-signature approval workflows"
       ],
-      pricing: "$399 - $2,499/month",
-      delivery: "4-6 weeks",
-      category: "Blockchain SaaS",
-      benefits: "Eliminate document fraud and reduce verification time by 70%",
-      marketPrice: "Average market price: $500-3,000/month"
+      "pricing": "$399 - $2,499/month",
+      "delivery": "4-6 weeks",
+      "category": "Blockchain SaaS",
+      "benefits": "Eliminate document fraud and reduce verification time by 70%",
+      "marketPrice": "Average market price: $500-3,000/month"
     },
     {
-      title: "IoT Device Management Platform",
-      description: "Comprehensive IoT device monitoring, management, and analytics platform",
-      icon: Wif i,
-      features: [
-        "Real-time device monitoring and alerts",
+      "title": "IoT Device Management Platform",
+      "description": "Comprehensive IoT device monitoring, management, and analytics platform",
+      "icon": Wif i,
+      "features": ["Real-time device monitoring and alerts",
         "Remote device configuration and updates",
         "Data collection and analytics dashboard",
         "Predictive maintenance scheduling",
         "Security monitoring and threat detection",
         "Integration with cloud platforms"
       ],
-      pricing: "$299 - $1,999/month",
-      delivery: "5-7 weeks",
-      category: "IoT Management",
-      benefits: "Reduce device downtime by 50% and improve operational efficiency",
-      marketPrice: "Average market price: $400-2,500/month"
+      "pricing": "$299 - $1,999/month",
+      "delivery": "5-7 weeks",
+      "category": "IoT Management",
+      "benefits": "Reduce device downtime by 50% and improve operational efficiency",
+      "marketPrice": "Average market price: $400-2,500/month"
     },
     {
-      title: "AI-Powered Social Media Manager",
-      description: "Intelligent social media content creation, scheduling, and engagement automation",
-      icon: Glob e,
-      features: [
-        "AI-generated content for multiple platforms",
+      "title": "AI-Powered Social Media Manager",
+      "description": "Intelligent social media content creation, scheduling, and engagement automation",
+      "icon": Glob e,
+      "features": ["AI-generated content for multiple platforms",
         "Optimal posting time recommendations",
         "Hashtag research and optimization",
         "Engagement tracking and analytics",
         "Competitor analysis and insights",
         "Multi-account management dashboard"
       ],
-      pricing: "$199 - $1,299/month",
-      delivery: "2-3 weeks",
-      category: "Social Media SaaS",
-      benefits: "Increase social media engagement by 60% and save 10+ hours weekly",
-      marketPrice: "Average market price: $300-1,800/month"
+      "pricing": "$199 - $1,299/month",
+      "delivery": "2-3 weeks",
+      "category": "Social Media SaaS",
+      "benefits": "Increase social media engagement by 60% and save 10+ hours weekly",
+      "marketPrice": "Average market price: $300-1,800/month"
     },
     {
-      title: "Smart Contract Development Platform",
-      description: "No-code smart contract creation and deployment platform for blockchain applications",
-      icon: Cod e,
-      features: [
-        "Visual smart contract builder",
+      "title": "Smart Contract Development Platform",
+      "description": "No-code smart contract creation and deployment platform for blockchain applications",
+      "icon": Cod e,
+      "features": ["Visual smart contract builder",
         "Pre-built contract templates",
         "Automated testing and deployment",
         "Gas optimization recommendations",
         "Multi-blockchain support",
         "Security audit integration"
       ],
-      pricing: "$499 - $3,999/month",
-      delivery: "6-8 weeks",
-      category: "Blockchain Development",
-      benefits: "Reduce smart contract development time by 80% and costs by 60%",
-      marketPrice: "Average market price: $800-5,000/month"
+      "pricing": "$499 - $3,999/month",
+      "delivery": "6-8 weeks",
+      "category": "Blockchain Development",
+      "benefits": "Reduce smart contract development time by 80% and costs by 60%",
+      "marketPrice": "Average market price: $800-5,000/month"
     },
     {
-      title: "AI-Powered Lead Scoring System",
-      description: "Intelligent lead qualification and scoring using machine learning algorithms",
-      icon: Targe t,
-      features: [
-        "Behavioral pattern analysis",
+      "title": "AI-Powered Lead Scoring System",
+      "description": "Intelligent lead qualification and scoring using machine learning algorithms",
+      "icon": Targe t,
+      "features": ["Behavioral pattern analysis",
         "Predictive lead scoring models",
         "Real-time lead qualification",
         "CRM integration and automation",
         "Custom scoring criteria setup",
         "Performance analytics and optimization"
       ],
-      pricing: "$249 - $1,499/month",
-      delivery: "3-4 weeks",
-      category: "Sales Automation AI",
-      benefits: "Increase lead conversion rates by 35% and sales efficiency by 45%",
-      marketPrice: "Average market price: $400-2,000/month"
+      "pricing": "$249 - $1,499/month",
+      "delivery": "3-4 weeks",
+      "category": "Sales Automation AI",
+      "benefits": "Increase lead conversion rates by 35% and sales efficiency by 45%",
+      "marketPrice": "Average market price: $400-2,000/month"
     },
     {
-      title: "Quantum-Safe Encryption Service",
-      description: "Future-proof encryption solutions resistant to quantum computing attacks",
-      icon: Loc k,
-      features: [
-        "Post-quantum cryptographic algorithms",
+      "title": "Quantum-Safe Encryption Service",
+      "description": "Future-proof encryption solutions resistant to quantum computing attacks",
+      "icon": Loc k,
+      "features": ["Post-quantum cryptographic algorithms",
         "Hybrid classical-quantum encryption",
         "API integration for existing systems",
         "Compliance with NIST standards",
         "Performance optimization",
         "Migration tools and support"
       ],
-      pricing: "$999 - $7,999/month",
-      delivery: "8-12 weeks",
-      category: "Cybersecurity",
-      benefits: "Future-proof your data security against quantum computing threats",
-      marketPrice: "Average market price: $1,500-10,000/month"
+      "pricing": "$999 - $7,999/month",
+      "delivery": "8-12 weeks",
+      "category": "Cybersecurity",
+      "benefits": "Future-proof your data security against quantum computing threats",
+      "marketPrice": "Average market price: $1,500-10,000/month"
     },
     {
-      title: "AI-Powered Code Review Assistant",
-      description: "Automated code analysis, review, and optimization using advanced AI",
-      icon: Cp u,
-      features: [
-        "Automated code quality analysis",
+      "title": "AI-Powered Code Review Assistant",
+      "description": "Automated code analysis, review, and optimization using advanced AI",
+      "icon": Cp u,
+      "features": ["Automated code quality analysis",
         "Security vulnerability detection",
         "Performance optimization suggestions",
         "Best practice recommendations",
         "Integration with popular IDEs",
         "Team collaboration and reporting"
       ],
-      pricing: "$199 - $1,299/month",
-      delivery: "3-4 weeks",
-      category: "Development Tools",
-      benefits: "Improve code quality by 40% and reduce bugs by 60%",
-      marketPrice: "Average market price: $300-1,800/month"
+      "pricing": "$199 - $1,299/month",
+      "delivery": "3-4 weeks",
+      "category": "Development Tools",
+      "benefits": "Improve code quality by 40% and reduce bugs by 60%",
+      "marketPrice": "Average market price: $300-1,800/month"
     }
   ]
 
@@ -232,12 +222,12 @@ export default function InnovativeServices() {
         <meta name="description" content={description}  />
         <meta name="keywords" content="innovative services, micro SaaS, AI services, IT solutions, blockchain, IoT, automation"  />
         <meta name="viewport" content="width=device-width, initial-scale=1"  />
-        <link rel="canonical" href="https://ziontechgroup.com/innovative-services"  />
+        <link rel="canonical" href=""https": //ziontechgroup.com/innovative-services"  />
       </Head>
       
       <PageTransition>
         {/* Header Section */}
-        <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: p y-32">
+        <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 "sm": p y-32">
           <div className="mx-auto max-w-7xl px-6 lg: p x-8">
             <div className="mx-auto max-w-2xl text-center">
               <div className="flex items-center justify-center mb-4">
@@ -258,13 +248,13 @@ export default function InnovativeServices() {
         </section>
 
         {/* Services Grid */}
-        <section className="py-24 sm: p y-32">
+        <section className="py-24 "sm": p y-32">
           <div className="mx-auto max-w-7xl px-6 lg: p x-8">
             <div className="grid gap-8 lg: gri d-cols-2">
               {innovativeServices.map((service, index) => (
                 <div
                   key={index}
-                  className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shado w-lg transition-all duration-300 hover: borde r-blue-300"
+                  className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm "hover": shado w-lg transition-all duration-300 hover: borde r-blue-300"
                 >
                   <div className="flex items-center gap-x-3 mb-6">
                     <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover: b g-blue-700 transition-colors">
@@ -305,19 +295,19 @@ export default function InnovativeServices() {
                   </div>
                   
                   <div className="bg-green-50 p-4 rounded-lg mb-4">
-                    <p className="text-sm text-green-800 font-medium mb-1">Key Benefits:</p>
+                    <p className="text-sm text-green-800 font-medium mb-1">Key "Benefits": </p>
                     <p className="text-sm text-green-700">{service.benefits}</p>
                   </div>
                   
                   <div className="bg-blue-50 p-4 rounded-lg mb-6">
-                    <p className="text-sm text-blue-800 font-medium mb-1">Market Pricing:</p>
+                    <p className="text-sm text-blue-800 font-medium mb-1">Market "Pricing": </p>
                     <p className="text-sm text-blue-700">{service.marketPrice}</p>
                   </div>
                   
                   <div className="flex items-center justify-between">
                     <Link
                       href="/contact"
-                      className="inline-flex items-center text-sm font-medium text-blue-600 hover: tex t-blue-500"
+                      className="inline-flex items-center text-sm font-medium text-blue-600 "hover": tex t-blue-500"
                     >
                       Get Started
                       <ArrowRight className="ml-1 h-4 w-4"  />
@@ -337,7 +327,7 @@ export default function InnovativeServices() {
 
         {/* Contact Section */}
         <section className="bg-gray-50 py-16">
-          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
+          <div className="mx-auto max-w-7xl px-6 "lg": p x-8">
             <div className="text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Ready to Transform Your Business?

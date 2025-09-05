@@ -6,7 +6,7 @@ const Dialog({children, open, onOpenChange}) {
         if (!isControlled) {
             setInternalOpen(newOpen)}
         if (onOpenChange) {onOpenChange(newOpen)}
-    };;
+    };
     return (<DialogContext.Provider value = {
   { isOpen,
   setIsOpen 

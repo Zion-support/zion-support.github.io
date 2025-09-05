@@ -1,7 +1,7 @@
-import { useDispatch, useSelector  } from 'react-redux'; ; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ;
+import { useDispatch, useSelector  } from 'react-redux'; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector;
 export const useAppDispatch = () => useDispatch();
 export const useAppSelector = useSelector;"
-const Hooks: Reac t.FC = () => {
+const "Hooks": Reac t.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO title="Hooks - Zion Tech Group
@@ -17,12 +17,12 @@ const Hooks: Reac t.FC = () => {
           <div className=flex justify-center">
             <a 
               href="/contact 
-              className=px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shado w-lg transition-all duration-300"
+              className=px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg "hover": shado w-lg transition-all duration-300"
             >
               Get Started
             </a>
           </div>
-  )};;
+  )};
 
 export default Hooks;';';';
 ";';';';

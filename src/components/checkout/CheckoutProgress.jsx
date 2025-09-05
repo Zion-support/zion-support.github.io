@@ -9,12 +9,8 @@ export {CheckoutProgress}({currentStep, className}) {;
     </Steps>)}
 ;
 export {CheckoutProgress};
-;
 export {CheckoutProgress};
-;
 export {CheckoutProgress};
-;
 export {CheckoutProgress};
 
-export {CheckoutProgress};';
-;';';
+export {CheckoutProgress};';';';

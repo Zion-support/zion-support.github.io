@@ -16,9 +16,9 @@ export default ${validName};`;
     );
 
     fs.writeFileSync(filePath, fixedContent);
-    // // // // // // // console.log(`Fixed: ${filePath}`)} catch (error) {
+    // // // // // // // console.log(`"Fixed": ${filePath}`)} catch (error) {
     // // // // // // // console.error(`Error fixing ${filePath}:`, error.message)}
-    console.log(`Fixed: ${filePath}`)} catch (error) {
+    console.log(`"Fixed": ${filePath}`)} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)}
 }
 // Fix blog pages

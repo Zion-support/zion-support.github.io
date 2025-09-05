@@ -1,20 +1,20 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 interface RateLimitConfig {
-  windowMs: number;
+  "windowMs": number;
   maxRequests: number;
   message?: string;'
 }
 
 interface RateLimitStore {
-  [key: 'strin,
+  ["key": 'strin,
   g
 ]: {
-    count: number;
+    "count": number;
     resetTime: number}
 class RateLimiter {
-  private store: RateLimitStore = {}
-  private config: RateLimitConfig;
+  private "store": RateLimitStore = {}
+  private "config": RateLimitConfig;
 
   constructor(config: RateLimitConfig) {
     this.config = config;
@@ -34,11 +34,11 @@ class RateLimiter {
 ]}
     })}
 
-  private getKey(req: NextApiRequest): string {
+  private getKey("req": NextApiRequest): string {
     const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || 'unknown';
     return `rate_limit:${ip}`}
 
-  isAllowed(req: NextApiRequest): { allowed: boolean; remaining: number; resetTime: number } {
+  isAllowed("req": NextApiRequest): { allowed: boolean; remaining: number; resetTime: number } {
     const key = this.getKey(req);
     const now = Date.now();
     const windowStart = now - this.config.windowMs;
@@ -51,41 +51,41 @@ class RateLimiter {
       this.store[ke,
   y
 ] = {
-        count: 1,
-        resetTime: now + this.config.windowMs
+        "count": 1,
+        "resetTime": now + this.config.windowMs
       }
       return {
-        allowed: true,
-        remaining: this.config.maxRequests - 1,
-        resetTime: this.store[key].resetTime
+        "allowed": true,
+        "remaining": this.config.maxRequests - 1,
+        "resetTime": this.store[key].resetTime
       }
     if (this.store[key].count >= this.config.maxRequests) {
       return {
-        allowed: false,
-        remaining: 0,
-        resetTime: this.store[key].resetTime
+        "allowed": false,
+        "remaining": 0,
+        "resetTime": this.store[key].resetTime
       }
     this.store[key].count++;
     return {
-      allowed: true,
-      remaining: this.config.maxRequests - this.store[key].count,
-      resetTime: this.store[key].resetTime
+      "allowed": true,
+      "remaining": this.config.maxRequests - this.store[key].count,
+      "resetTime": this.store[key].resetTime
     }
 // Create rate limiter instances
 export const apiRateLimiter = new RateLimiter({
-  windowMs: '15 * 60 * 1000', // 15 minutes
-  maxRequests: 100,
-  message: 'Too many requests from this IP, please try again later.'
+  "windowMs": '15 * 60 * 1000', // 15 minutes
+  "maxRequests": 100,
+  "message": 'Too many requests from this IP, please try again later.'
 });
 
 export const authRateLimiter = new RateLimiter({
-  windowMs: '15 * 60 * 1000', // 15 minutes
-  maxRequests: 5,
-  message: 'Too many authentication attempts, please try again later.'
+  "windowMs": '15 * 60 * 1000', // 15 minutes
+  "maxRequests": 5,
+  "message": 'Too many authentication attempts, please try again later.'
 });
 
-export const rateLimitMiddleware = (limiter: RateLimiter) => 
-  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
+export const rateLimitMiddleware = ("limiter": RateLimiter) => 
+  (req: NextApiRequest, "res": NextApiResponse, "next": Function) => {
     const result = limiter.isAllowed(req);
     
     res.setHeader('X-RateLimit-Limit', limiter['config'].maxRequests);
@@ -94,9 +94,9 @@ export const rateLimitMiddleware = (limiter: RateLimiter) =>
     
     if (!result.allowed) {
       res.status(429).json({
-        error: {
+        "error": {
           message: limiter['config'].message || 'Rate limit exceeded',
-          retryAfter: Math.ceil((result.resetTime - Date.now()) / 1000)
+          "retryAfter": Math.ceil((result.resetTime - Date.now()) / 1000)
         }
       });
       return}

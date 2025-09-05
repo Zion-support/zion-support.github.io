@@ -1,6 +1,6 @@
 
 // In-memory storage for fallback with optimizations
-const inMemoryStore = {};;
+const inMemoryStore = {};
 let localStorageAvailable = null; // Cache the availability check
 let lastAvailabilityCheck = 0;
 const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
@@ -38,7 +38,7 @@ function safeConsoleError(message, error) {
 }
 
 export const safeStorage = {
-  getItem: (key) => {
+  "getItem": (key) => {
     try {
       return localStorage.getItem(key)} catch (error) {
 
@@ -47,7 +47,7 @@ export const safeStorage = {
       return null}
   };,
 
-  setItem: (key, value) => {
+  "setItem": (key, value) => {
     try {
       localStorage.setItem(key, value);
       return true} catch (error) {
@@ -57,7 +57,7 @@ export const safeStorage = {
       return false}
   },
 
-  removeItem: (key) => {
+  "removeItem": (key) => {
     try {
       localStorage.removeItem(key);
       return true} catch (error) {
@@ -67,7 +67,7 @@ export const safeStorage = {
       return false}
   },
 
-  clear: () => {
+  "clear": () => {
     try {
       localStorage.clear();
       return true} catch (error) {
@@ -77,7 +77,7 @@ export const safeStorage = {
       return false}
   },
 
-  key: (index) => {
+  "key": (index) => {
     try {
       return localStorage.key(index)} catch (error) {
       // // // // // 

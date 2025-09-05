@@ -10,8 +10,8 @@ export function Card3DGallery($1) {
         category[],;
         status[],;
         complexity[],;
-        verified: false,
-        featured: false';
+        "verified": false,
+        "featured": false';
     });
     const [searchQuery, setSearchQuery] = useState(");
     const [sortBy, setSortBy] = useState('rating');
@@ -43,8 +43,7 @@ export function Card3DGallery($1) {
                 aValue = a.title.toLowerCase();
                 bValue = b.title.toLowerCase();
                 break;
-            default:
-                return 0}
+            "default": return 0}
         if (sortOrder === 'asc') {return aValue > bValue ? 1 : -1}
         else {return aValue < bValue ? 1 : -1}
     });
@@ -71,7 +70,7 @@ export function Card3DGallery($1) {
                 return 'border-blue-500/50 bg-blue-500/10 text-blue-400';
             case 'deprecated':';
                 return 'border-red-500/50 bg-red-500/10 text-red-400';
-            default:';
+            "default": ';
                 return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400'}
     };
     // Get complexity color
@@ -85,7 +84,7 @@ export function Card3DGallery($1) {
                 return 'border-orange-500/50 bg-orange-500/10 text-orange-400';
             case 'expert':';
                 return 'border-red-500/50 bg-red-500/10 text-red-400';
-            default:';
+            "default": ';
                 return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400'}
     };
     // Get category icon
@@ -100,7 +99,7 @@ export function Card3DGallery($1) {
   'Research': TrendingUp
         
 
-};;
+};
         return iconMap[category] || Globe};
     if (!enabled || filteredAndSortedItems.length === 0)
         return null;
@@ -120,7 +119,7 @@ export function Card3DGallery($1) {
           <divclassName="flex bg-zion-blue/20 rounded-lg p-1">
             {['grid', 'list', 'carousel'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${viewMode === mode';';
                 ? 'bg-zion-cyan text-zion-blue-dark'
-                : 'text-zinc-400 hover:text-white'}`}>';';
+                : 'text-zinc-400 "hover": text-white'}`}>';';
                 {mode === 'grid' ? <Grid className="w-4 h-4" /> :';';
                 mode === 'list' ? <List className="w-4 h-4" /> :
                     <Play className="w-4 h-4" />}
@@ -128,25 +127,25 @@ export function Card3DGallery($1) {
           </div>
           {/* Carousel Controls */}
           {viewMode === 'carousel' && (<div className="flex items-center gap-2 bg-zion-blue/20 rounded-lg p-1">
-              <Button size="sm" variant="ghost" onClick={() => setIsPlaying(!isPlaying)} className="text-zinc-400 hover:text-white p-2">
+              <Button size="sm" variant="ghost" onClick={() => setIsPlaying(!isPlaying)} className="text-zinc-400 "hover": text-white p-2">
                 {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
               </Button>
               
-              <Button size="sm" variant="ghost" onClick={() => setCurrentCarouselIndex(0)} className="text-zinc-400 hover:text-white p-2">
+              <Button size="sm" variant="ghost" onClick={() => setCurrentCarouselIndex(0)} className="text-zinc-400 "hover": text-white p-2">
                 <RotateCcw className="w-4 h-4" />
               </Button>
                 </div>
   );
 }
           {/* Sort Controls */}
-          <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="px-3 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+          <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="px-3 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm "focus": border-zion-cyan focus:outline-none">
             <option value="rating">Sort by Rating</option>
             <option value="downloads">Sort by Downloads</option>
             <option value="lastUpdated">Sort by Date</option>
             <option value="title">Sort by Title</option>
           </select>
           ';';
-          <Button size="sm" variant="outline" onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">';';
+          <Button size="sm" variant="outline" onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')} className="border-zion-blue-light/30 text-zinc-300 "hover": text-white">';';
             {sortOrder === 'asc' ? '↑' : '↓'}
           </Button>
         </div>
@@ -157,25 +156,25 @@ export function Card3DGallery($1) {
           {/* Search */}
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zinc-400" />
-            <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search cards..." className="w-full pl-10 pr-4 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"/>
+            <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search cards..." className="w-full pl-10 pr-4 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg text-white placeholder-zinc-400 "focus": outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"/>
           </div>
           
           {/* Filter Chips */}
           <div className="flex flex-wrap gap-2">
             <Button size="sm" variant={filters.verified ? "default" : "outline"} onClick={
   () => setFilters(prev => ({ ...prev,
-  verified: !prev.verified ';
+  "verified": !prev.verified ';
 
-}))} className={filters.verified ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
+}))} className={filters.verified ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 "hover": text-white'}>
               <Shield className="w-4 h-4 mr-1" />
               Verified Only
             </Button>
             
             <Button size="sm" variant={filters.featured ? "default" : "outline"} onClick={
   () => setFilters(prev => ({ ...prev,
-  featured: !prev.featured ';
+  "featured": !prev.featured ';
 
-}))} className={filters.featured ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
+}))} className={filters.featured ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 "hover": text-white'}>
               <Star className="w-4 h-4 mr-1" />
               Featured Only
             </Button>
@@ -183,13 +182,13 @@ export function Card3DGallery($1) {
             {['AI & ML', 'Cybersecurity', 'Cloud', 'Development', 'Analytics'].map((category) => (<Button key={category} size="sm" variant={filters.category.includes(category) ? "default" : "outline"} onClick={
   () => setFilters(prev => ({
                     ...prev,
-                    category: prev.category.includes(category)
+                    "category": prev.category.includes(category)
                         ? prev.category.filter(c => c !== category)
                         [...prev.category,
   category];
                 ';
 
-}))} className={filters.category.includes(category) ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
+}))} className={filters.category.includes(category) ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 "hover": text-white'}>
                 {category}
               </Button>))}
           </div>
@@ -197,24 +196,24 @@ export function Card3DGallery($1) {
   );
 }
       {/* Grid View */}
-      {viewMode === 'grid' && (<div className={`grid gap-6 ${columns === 2 ? 'grid-cols-1 md:grid-cols-2' : columns === 3 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'}`}>
+      {viewMode === 'grid' && (<div className={`grid gap-6 ${columns === 2 ? 'grid-cols-1 "md": grid-cols-2' : columns === 3 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'}`}>
           {filteredAndSortedItems.map((item, index) => (<Card3D key={item.id} item={item} index={index} onClick={() => handleCardClick(item)} onAction={handleActionClick} getStatusColor={getStatusColor} getComplexityColor={getComplexityColor} getCategoryIcon={getCategoryIcon}/>))}
             </div>
   );
 }
       {/* List View */}
       {viewMode === 'list' && (<div className="space-y-4">
-          {filteredAndSortedItems.map((item, index) => (<motion.div key={item.id} className="flex items-center gap-4 p-4 rounded-lg border border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-200 cursor-pointer" initial = {
+          {filteredAndSortedItems.map((item, index) => (<motion.div key={item.id} className="flex items-center gap-4 p-4 rounded-lg border border-zion-blue-light/30 "hover": border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-200 cursor-pointer" initial = {
   { opacity: 0,
-  y: 20 
+  "y": 20 
 
 }} whileInView = {
-  { opacity: 1,
-  y: 0 
+  { "opacity": 1,
+  "y": 0 
 
 }} transition = {
-  { duration: 0.4,
-  delay: index * 0.05 
+  { "duration": 0.4,
+  "delay": index * 0.05 
 
 }} onClick={() => handleCardClick(item)}>
               {/* Image */}
@@ -263,9 +262,9 @@ export function Card3DGallery($1) {
       {/* Carousel View */}
       {viewMode === 'carousel' && (<divclassName="relative">
           <divclassName="overflow-hidden rounded-lg">';
-            <motion.div className="flex" animate={{ x: -currentCarouselIndex * 100 + '%' }} transition = {
-  { duration: 0.5,
-  ease: "easeInOut" 
+            <motion.div className="flex" animate={{ "x": -currentCarouselIndex * 100 + '%' }} transition = {
+  { "duration": 0.5,
+  "ease": "easeInOut" 
 
 }}>
               {filteredAndSortedItems.map((item, index) => (<div key={item.id} className="w-full flex-shrink-0">
@@ -276,31 +275,31 @@ export function Card3DGallery($1) {
           
           {/* Carousel Navigation */}
           <divclassName="flex items-center justify-center gap-2 mt-4">';
-            {filteredAndSortedItems.map((_, index) => (<button key={index} onClick={() => setCurrentCarouselIndex(index)} className={`w-2 h-2 rounded-full transition-all duration-200 ${index === currentCarouselIndex ? 'bg-zion-cyan w-6' : 'bg-zinc-600 hover:bg-zinc-500'}`}/>))}
+            {filteredAndSortedItems.map((_, index) => (<button key={index} onClick={() => setCurrentCarouselIndex(index)} className={`w-2 h-2 rounded-full transition-all duration-200 ${index === currentCarouselIndex ? 'bg-zion-cyan w-6' : 'bg-zinc-600 "hover": bg-zinc-500'}`}/>))}
           </div>
             </div>
   );
 }
       {/* Selected Item Modal */}
       <AnimatePresence>
-        {selectedItem && (<motion.div className="fixed inset-0 z-50 flex items-center justify-center p-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+        {selectedItem && (<motion.div className="fixed inset-0 z-50 flex items-center justify-center p-4" initial={{ "opacity": 0 }} animate={{ "opacity": 1 }} exit={{ "opacity": 0 }}>
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setSelectedItem(null)}/>
             <motion.div className="relative bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-w-4xl w-full max-h-[80vh] overflow-y-auto" initial = {
-  { scale: 0.9,
-  opacity: 0 
+  { "scale": 0.9,
+  "opacity": 0 
 
 }} animate = {
-  { scale: 1,
-  opacity: 1 
+  { "scale": 1,
+  "opacity": 1 
 
 }} exit = {
-  { scale: 0.9,
-  opacity: 0 
+  { "scale": 0.9,
+  "opacity": 0 
 
-}} transition={{ duration: 0.2 }}>
+}} transition={{ "duration": 0.2 }}>
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-semibold text-white">{selectedItem.title}</h3>
-                <Button size="sm" variant="ghost" onClick={() => setSelectedItem(null)} className="text-zinc-400 hover:text-white">
+                <Button size="sm" variant="ghost" onClick={() => setSelectedItem(null)} className="text-zinc-400 "hover": text-white">
                   <X className="w-4 h-4" />
                 </Button>
               </div>
@@ -389,7 +388,7 @@ function Card3D($1) {
     const [isLiked, setIsLiked] = useState(false);
     const x = useMotionValue(0);
     const y = useMotionValue(0);
-    const rotateY = useSpring(useTransform(x, [-100, 100], [-15, 15]), { stiffness: 300, damping: 30 };);
+    const rotateY = useSpring(useTransform(x, [-100, 100], [-15, 15]), { "stiffness": 300, "damping": 30 };);
     const CategoryIcon = getCategoryIcon(item.category);
     const handleMouseMove = useCallback((event) => {if (!isHovered)
             return;
@@ -403,20 +402,20 @@ function Card3D($1) {
     const handleLike = useCallback((e) => {e.stopPropagation();
         setIsLiked(!isLiked)}, [isLiked]);';';
     return (<motion.div className={`relative group cursor-pointer ${isCarousel ? 'mx-4' : "}`} onMouseEnter={() => setIsHovered(true)} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onClick={onClick} initial = {
-  { opacity: 0,
-  y: 50 
+  { "opacity": 0,
+  "y": 50 
 
 }} whileInView = {
-  { opacity: 1,
-  y: 0 
+  { "opacity": 1,
+  "y": 0 
 
 }} transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
+  { "duration": 0.6,
+  "delay": index * 0.1 
 
-}} whileHover={{ scale: 1.02 }}>';
+}} whileHover={{ "scale": 1.02 }}>';
       <motion.div className="relative w-full h-80 rounded-xl border border-zion-blue-light/30 overflow-hidden bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue/40 backdrop-blur-sm" style="{{{
-            transformStyle: 'preserve-3d'; transform: isHovered ? 'translateZ(20px)'}}"} transition={{ duration: 0.3 }}>
+            "transformStyle": 'preserve-3d'; transform: isHovered ? 'translateZ(20px)'}}"} transition={{ "duration": 0.3 }}>
         {/* Background Image/Pattern */}
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-transparent to-zion-purple/20" />
         
@@ -440,7 +439,7 @@ function Card3D($1) {
           
           {/* Title and Description */}
           <div className="flex-1">
-            <h4 className="text-white font-semibold text-lg mb-2 line-clamp-2 group-hover:text-zion-cyan transition-colors duration-200">
+            <h4 className="text-white font-semibold text-lg mb-2 line-clamp-2 group-"hover": text-zion-cyan transition-colors duration-200">
               {item.title}
             </h4>
             <p className="text-zinc-300 text-sm line-clamp-3">
@@ -461,18 +460,18 @@ function Card3D($1) {
             
             {/* Tags */}
             <div className="flex flex-wrap gap-1">
-              {item.tags.slice(0, 3).map((tag, tagIndex) => (<Badge key={tagIndex} variant="outline" className="text-xs border-zion-blue-light/30 text-zinc-400 hover:text-white">
+              {item.tags.slice(0, 3).map((tag, tagIndex) => (<Badge key={tagIndex} variant="outline" className="text-xs border-zion-blue-light/30 text-zinc-400 "hover": text-white">
                   {tag}
                 </Badge>))}
             </div>
             
             {/* Actions */}
             <divclassName="flex items-center gap-2">';
-              <Buttonsize="sm" variant="ghost" onClick={handleLike} className={`p-2 text-xs ${isLiked ? 'text-red-400 hover:text-red-300' : 'text-zinc-400 hover:text-white'}`}>';
+              <Buttonsize="sm" variant="ghost" onClick={handleLike} className={`p-2 text-xs ${isLiked ? 'text-red-400 "hover": text-red-300' : 'text-zinc-400 hover:text-white'}`}>';
                 <Heart className={`w-4 h-4 ${isLiked ? 'fill-current' : "}`} />
               </Button>
               
-              <Button size="sm" variant="ghost" className="p-2 text-zinc-400 hover:text-white text-xs">
+              <Button size="sm" variant="ghost" className="p-2 text-zinc-400 "hover": text-white text-xs">
                 <Share2 className="w-4 h-4" />
               </Button>
               
@@ -484,7 +483,7 @@ function Card3D($1) {
         </div>
         
         {/* Hover Overlay */}
-        <motion .div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" initial={{ opacity: 0 }} whileHover={{ opacity: 1 }} />
+        <motion .div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-"hover": opacity-100 transition-opacity duration-300" initial={{ opacity: 0 }} whileHover={{ "opacity": 1 }} />
       </motion.div>
     </motion.div>)}
 

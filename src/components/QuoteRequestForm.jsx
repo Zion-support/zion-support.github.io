@@ -9,19 +9,19 @@ const;const;const [formData, setFormData] = useState({};"
 
 &apos
 &apos;&apos
-    firstName: &apos,&apos,&apos;&apos
-    lastName: &apos,&apos,&apos;&apos
-    email: &apos,&apos,&apos;&apos
-    phone: &apos,&apos,&apos;&apos
-    company: &apos,&apos,&apos;&apos
-    serviceType: &apos,&apos,&apos;&apos
-    projectDescription: &apos,&apos,&apos;&apos
-    timeline: &apos,&apos,&apos;&apos
-    budget: &apos,&apos,&apos;&apos,
-    urgency: &apos,medium&apos,"&apos
-    contactMethod: &apos,email&apos,
-    agreeToTerms: false,
-    agreeToMarketing: false})&apos;&apos
+    "firstName": &apos,&apos,&apos;&apos
+    "lastName": &apos,&apos,&apos;&apos
+    "email": &apos,&apos,&apos;&apos
+    "phone": &apos,&apos,&apos;&apos
+    "company": &apos,&apos,&apos;&apos
+    "serviceType": &apos,&apos,&apos;&apos
+    "projectDescription": &apos,&apos,&apos;&apos
+    "timeline": &apos,&apos,&apos;&apos
+    "budget": &apos,&apos,&apos;&apos,
+    "urgency": &apos,medium&apos,"&apos
+    "contactMethod": &apos,email&apos,
+    "agreeToTerms": false,
+    "agreeToMarketing": false})&apos;&apos
   const [isSubmitting, setIsSubmitting] = useState (false)
 }
   const [isSubmitted, setIsSubmitted] = useState (false)
@@ -43,19 +43,19 @@ export const QuoteRequestForm = (props) => {}
   const [formData, setFormData] = useState({}"
 "
 "
-    firstName: ","
-    lastName: ","
-    email: ","
-    phone: ","
-    company: ","
-    serviceType: ","
-    projectDescription: ","
-    timeline: ","
-    budget: ","
-    urgency: "medium","
-    contactMethod: "email",
-agreeToTerms: false,
-agreeToMarketing: false})
+    "firstName": ","
+    "lastName": ","
+    "email": ","
+    "phone": ","
+    "company": ","
+    "serviceType": ","
+    "projectDescription": ","
+    "timeline": ","
+    "budget": ","
+    "urgency": "medium","
+    "contactMethod": "email",
+"agreeToTerms": false,
+"agreeToMarketing": false})
 }
   const [isSubmitting, setIsSubmitting] = useState (false)
 }
@@ -150,54 +150,54 @@ agreeToMarketing: false})
 
 &apos
 &apos;&apos
-        firstName: &apos,&apos,&apos;&apos
-        lastName: &apos,&apos,&apos;&apos
-        email: &apos,&apos,&apos;&apos
-        phone: &apos,&apos,&apos;&apos
-        company: &apos,&apos,&apos;&apos
-        serviceType: &apos,&apos,&apos;&apos
-        projectDescription: &apos,&apos,&apos;&apos
-        timeline: &apos,&apos,&apos;&apos
-        budget: &apos,&apos,&apos;&apos,
-        urgency: &apos,medium&apos,"&apos
-        contactMethod: &apos,email&apos,
-        agreeToTerms: false,
-        agreeToMarketing: false})} catch (error) {}"
+        "firstName": &apos,&apos,&apos;&apos
+        "lastName": &apos,&apos,&apos;&apos
+        "email": &apos,&apos,&apos;&apos
+        "phone": &apos,&apos,&apos;&apos
+        "company": &apos,&apos,&apos;&apos
+        "serviceType": &apos,&apos,&apos;&apos
+        "projectDescription": &apos,&apos,&apos;&apos
+        "timeline": &apos,&apos,&apos;&apos
+        "budget": &apos,&apos,&apos;&apos,
+        "urgency": &apos,medium&apos,"&apos
+        "contactMethod": &apos,email&apos,
+        "agreeToTerms": false,
+        "agreeToMarketing": false})} catch (error) {}"
 
 &apos
 &apos;&apos
       // comment
 ";"
 "
-        firstName: ","
-        lastName: ","
-        email: ","
-        phone: ","
-        company: ","
-        serviceType: ","
-        projectDescription: ","
-        timeline: ","
-        budget: ","
-        urgency: "medium","
-        contactMethod: "email",
-agreeToTerms: false,
-agreeToMarketing: false})} catch (error) {}"
+        "firstName": ","
+        "lastName": ","
+        "email": ","
+        "phone": ","
+        "company": ","
+        "serviceType": ","
+        "projectDescription": ","
+        "timeline": ","
+        "budget": ","
+        "urgency": "medium","
+        "contactMethod": "email",
+"agreeToTerms": false,
+"agreeToMarketing": false})} catch (error) {}"
 "
 "
       // comment
 ";"
-        firstName: ", ";"
-        lastName: ", ";"
-        email: ", ";"
-        phone: ", ";"
-        company: ", ";"
-        serviceType: ", ";"
-        projectDescription: ", ";"
-        timeline: ", ";"
-        budget: ", ";"
-        urgency: "medium", ";"
-        contactMethod: "email", agreeToTerms: false,
-        agreeToMarketing: false})} catch (error) {}"
+        "firstName": ", ";"
+        "lastName": ", ";"
+        "email": ", ";"
+        "phone": ", ";"
+        "company": ", ";"
+        "serviceType": ", ";"
+        "projectDescription": ", ";"
+        "timeline": ", ";"
+        "budget": ", ";"
+        "urgency": "medium", ";"
+        "contactMethod": "email", "agreeToTerms": false,
+        "agreeToMarketing": false})} catch (error) {}"
 ";"
 "
 ";"
@@ -235,7 +235,7 @@ agreeToMarketing: false})} catch (error) {}"
       </CardHeader>";"
       <CardContent className="p-6">";"
         <form onSubmit="{handleSubmit}" className="space-y-6">"{/* comment */}";"
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">",
+          <div className="grid grid-cols-1 "md": grid-cols-2 gap-4">",
             <div>";"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 First Name *,,
@@ -267,7 +267,7 @@ agreeToMarketing: false})} catch (error) {}"
 
             </div>
 "{/* comment */}";"
-          <div className="grid grid - cols-1 md: grid-cols-2 gap-4">",
+          <div className="grid grid - cols-1 "md": grid-cols-2 gap-4">",
             <div>";"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email *,
@@ -311,7 +311,7 @@ agreeToMarketing: false})} catch (error) {}"
 
           </div>
 "{/* comment */}";"
-          <div className="grid grid - cols-1 md: grid-cols-2 gap-4">",
+          <div className="grid grid - cols-1 "md": grid-cols-2 gap-4">",
             <div>";"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Service Type *
@@ -352,7 +352,7 @@ get back to you within 24 hours.&apos,</p>"
       </CardHeader>&apos;&apos,&apos;&apos,"
       <CardContent className="&apos;p-6&apos">"&apos;&apos,&apos;&apos;"
         <form onSubmit="{handleSubmit}" className="&apos;space-y-6&apos">"&apos;&apos;{/* comment */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,"
+          <div className="&apos;grid" grid-cols-1 "md": grid-cols-2 gap-4&apos,>"&apos,&apos,"
             <div>&apos;&apos,&apos;&apos,"
               <label className="&apos;block" text-sm font-medium text-gray-700 mb-2&apos,>,
                 First Name *&apos,
@@ -381,7 +381,7 @@ get back to you within 24 hours.&apos,</p>"
             </div>
           </div>"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,"
+          <div className="&apos;grid" grid-cols-1 "md": grid-cols-2 gap-4&apos,>"&apos,&apos,"
             <div>&apos;&apos,&apos;&apos,"
               <label className="&apos;block" text-sm font-medium text-gray-700 mb-2&apos;>
                 Email *&apos,
@@ -413,7 +413,7 @@ get back to you within 24 hours.&apos,</p>"
       </CardHeader>"
       <CardContent className = "p-6">"
         <form onSubmit="{handleSubmit}" className="space-y-6">"{/* comment */}"
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"
+          <div className="grid grid-cols-1 "md": grid-cols-2 gap-4">"
             <div>"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 First Name *
@@ -442,7 +442,7 @@ get back to you within 24 hours.&apos,</p>"
             </div>
           </div>"
 "{/* comment */}"
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"
+          <div className="grid grid-cols-1 "md": grid-cols-2 gap-4">"
             <div>"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email *"
@@ -487,7 +487,7 @@ get back to you within 24 hours.&apos,</p>"
 
           </div>"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,"
+          <div className="&apos;grid" grid-cols-1 "md": grid-cols-2 gap-4&apos,>"&apos,&apos,"
             <div>&apos;&apos,&apos;&apos,"
               <label className="&apos;block" text-sm font-medium text-gray-700 mb-2&apos,>,
                 Service Type *&apos,
@@ -513,7 +513,7 @@ get back to you within 24 hours.&apos,</p>"
 
           </div>"
 "{/* comment */}"
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"
+          <div className="grid grid-cols-1 "md": grid-cols-2 gap-4">"
             <div>"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Service Type *
@@ -603,7 +603,7 @@ get back to you within 24 hours.&apos,</p>"
             </div>
           </div>"
 ";"
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">",
+          <div className="grid grid-cols-1 "md": grid-cols-2 gap-4">",
             <div>";"
               <label className="block text-sm font-medium text-gray-700 mb-2">,,
                 Budget Range,
@@ -624,7 +624,7 @@ get back to you within 24 hours.&apos,</p>"
           </div>"
           </div>&apos;&apos,
 &apos;&apos,&apos;&apos,"
-          <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,"
+          <div className="&apos;grid" grid-cols-1 "md": grid-cols-2 gap-4&apos,>"&apos,&apos,"
             <div>&apos;&apos,&apos;&apos,"
               <label className="&apos;block" text-sm font-medium text-gray-700 mb-2&apos,>,
                 Budget Range&apos,
@@ -636,7 +636,7 @@ get back to you within 24 hours.&apos,</p>"
                   <SelectValue placeholder="&apos;Select" budget range&apos;        />&apos,
           </div>";"
 "
-          <div className = "grid grid-cols-1 md: grid-cols-2 gap-4">"
+          <div className = "grid grid-cols-1 "md": grid-cols-2 gap-4">"
             <div>"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Budget Range,
@@ -752,7 +752,7 @@ get back to you within 24 hours.&apos,</p>"
 
           </div>"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-4&apos,>"&apos,&apos,"
+          <div className="&apos;grid" grid-cols-1 "md": grid-cols-2 gap-4&apos,>"&apos,&apos,"
             <div>&apos;&apos,&apos;&apos,"
               <label className="&apos;block" text-sm font-medium text-gray-700 mb-2&apos,>,
                 Preferred Contact Method&apos,
@@ -787,14 +787,14 @@ get back to you within 24 hours.&apos,</p>"
 
           </div>
 "{/* comment */}";"
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">",
+          <div className="grid grid-cols-1 "md": grid-cols-2 gap-4">",
             <div>";"
               <label className="block text-sm font-medium text-gray-700 mb-2">,,
                 Preferred Contact Method,
               </label>,
           </div>"
 "{/* comment */}"
-          <div className = "grid grid-cols-1 md: grid-cols-2 gap-4">"
+          <div className = "grid grid-cols-1 "md": grid-cols-2 gap-4">"
             <div>"
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Preferred Contact Method,
@@ -823,15 +823,14 @@ get back to you within 24 hours.&apos,</p>"
                   handleChange("agreeToTerms", checked)}" />";"
               <label htmlFor="terms" className="text - sm text-gray-700">",
                 I agree to the{" "}";"
-                <a href = "/terms" className="text-blue-600 hover: underline">","
+                <a href = "/terms" className="text-blue-600 "hover": underline">","
                   Terms and Conditions","
                 </a>{" "}
 
                 *
               </label>
             </div>"{errors.agreeToTerms && (";"
-              <p className = "text - red-500 text-sm">{errors.agreeToTerms}</p>,
-            )}",
+              <p className = "text - red-500 text-sm">{errors.agreeToTerms}</p>)}",
 ";"
             <div className = "flex items - center space-x-2">",
               <Checkbox">
@@ -887,7 +886,7 @@ get back to you within 24 hours.&apos,</p>"
                   handleChange(&apos;agreeToTerms&apos, checked)}&apos;&apos,/>&apos;&apos,&apos;&apos,"
               <label htmlFor="&apos;terms&apos;" className="&apos;text-sm" text-gray-700&apos;>"&apos;&apos,
                 I agree to the{&apos; &apos}&apos;&apos,&apos;&apos,"
-                <a href="&apos;/terms&apos;" className="&apos;text-blue-600" hover: underline&apos,>",",
+                <a href="&apos;/terms&apos;" className="&apos;text-blue-600" "hover": underline&apos,>",",
                   Terms and Conditions&apos;&apos,"
                 </a>{&apos, &apos}
 
@@ -933,7 +932,7 @@ get back to you within 24 hours.&apos,</p>"
                   handleChange("agreeToTerms", checked)}" />"
               <label htmlFor="terms" className="text-sm text-gray-700">"
                 I agree to the{" "}"
-                <a href="/terms" className="text-blue-600 hover: underline">"
+                <a href="/terms" className="text-blue-600 "hover": underline">"
                   Terms and Conditions",
                 </a>{" "}
 

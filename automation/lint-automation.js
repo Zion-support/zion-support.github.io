@@ -17,7 +17,7 @@ class LintAutomation {
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { "recursive": true });
     }
   }
 
@@ -42,33 +42,33 @@ class LintAutomation {
       
       // Run ESLint
       this.log('Running ESLint...');
-      execSync('npm run lint', { stdio: 'pipe' });
+      execSync('npm run lint', { "stdio": 'pipe' });
       this.log('ESLint completed successfully');
       
       // Run type checking
       this.log('Running TypeScript type check...');
-      execSync('npm run type-check', { stdio: 'pipe' });
+      execSync('npm run type-check', { "stdio": 'pipe' });
 <<<<<<< HEAD
       this.log('Type check completed successfully');
       
       // Run smoke tests
       this.log('Running smoke tests...');
-      execSync('npm run test:smoke', { stdio: 'pipe' });
+      execSync('npm run "test": smoke', { "stdio": 'pipe' });
       this.log('Smoke tests completed successfully');
       
       this.log('Lint automation completed successfully');
       return true;
     } catch (error) {
-      this.log(`Lint automation failed: ${error.message}`);
+      this.log(`Lint automation "failed": ${error.message}`);
       
       // Try to fix linting issues
       try {
         this.log('Attempting to fix linting issues...');
-        execSync('npm run lint:fix', { stdio: 'pipe' });
+        execSync('npm run "lint": fix', { "stdio": 'pipe' });
         this.log('Lint fixes applied successfully');
         return true;
       } catch (fixError) {
-        this.log(`Failed to fix linting issues: ${fixError.message}`);
+        this.log(`Failed to fix linting "issues": ${fixError.message}`);
         return false;
       }
     }
@@ -94,7 +94,7 @@ if (require.main === module) {
   const automation = new LintAutomation();
 <<<<<<< HEAD
   automation.run().catch(error => {
-    console.error('Fatal error:', error);
+    console.error('Fatal "error": ', error);
     process.exit(1);
   });
 =======
@@ -105,7 +105,7 @@ if (require.main === module) {
       this.log('Lint automation completed successfully');
       return true;
     } catch (error) {
-      this.log(`Lint automation failed: ${error.message}`);
+      this.log(`Lint automation "failed": ${error.message}`);
       return false;
     }
   }
@@ -116,13 +116,13 @@ if (require.main === module) {
       
       // Run ESLint with fix
       this.log('Running ESLint with auto-fix...');
-      execSync('npm run lint:fix', { stdio: 'pipe' });
+      execSync('npm run "lint": fix', { "stdio": 'pipe' });
       this.log('ESLint auto-fix completed');
       
       this.log('Lint fix automation completed successfully');
       return true;
     } catch (error) {
-      this.log(`Lint fix automation failed: ${error.message}`);
+      this.log(`Lint fix automation "failed": ${error.message}`);
       return false;
     }
   }

@@ -15,7 +15,7 @@ class BuildErrorAutoFixer {
     // Ensure directories exist
     [this.reportsDir, this.logsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true })}
+        fs.mkdirSync(dir, { "recursive": true })}
     });
     
     this.fixesApplied = 0;
@@ -28,17 +28,17 @@ class BuildErrorAutoFixer {
   async runBuildCheck() {
     try {
       this.log('Running build check...');
-      execSync('npm run build', { stdio: 'pipe' });
-      return { success: true, errors: [], count: 0 }} catch (error) {
+      execSync('npm run build', { "stdio": 'pipe' });
+      return { "success": true, "errors": [], "count": 0 }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
       const errors = this.parseBuildErrors(output);
       this.log(`Build check failed with ${errors.length} errors`, 'ERROR');
-      return { success: false, errors, count: errors.length }}
+      return { "success": false, errors, "count": errors.length }}
   }
 
   parseBuildErrors(output) {
     const errorLines = output.split('\n').filter(line => 
-      line.includes('error') || line.includes('Error:') || line.includes('Failed') || line.includes('Build failed')
+      line.includes('error') || line.includes('"Error": ') || line.includes('Failed') || line.includes('Build failed')
     );
     
     const errors = [];
@@ -51,21 +51,21 @@ class BuildErrorAutoFixer {
           if (currentError) {
             errors.push(currentError)}
           currentError = {
-            file: match[1].trim(),
-            line: parseInt(match[2]),
-            column: parseInt(match[3]),
-            message: line.split(' - ')[1] || line,
-            type: 'build'
+            "file": match[1].trim(),
+            "line": parseInt(match[2]),
+            "column": parseInt(match[3]),
+            "message": line.split(' - ')[1] || line,
+            "type": 'build'
           }} else {
           // Handle errors without line numbers
           if (currentError) {
             errors.push(currentError)}
           currentError = {
-            file: 'unknown',
-            line: 0,
-            column: 0,
-            message: line.trim(),
-            type: 'build'
+            "file": 'unknown',
+            "line": 0,
+            "column": 0,
+            "message": line.trim(),
+            "type": 'build'
           }}
       } else if (currentError && line.trim()) {
         currentError.message += ' ' + line.trim()}
@@ -88,7 +88,7 @@ class BuildErrorAutoFixer {
         if (await this.fixSingleBuildError(error)) {
           fixesApplied++}
       } catch (error) {
-        this.log(`Failed to fix build error: ${error.message}`, 'ERROR')}
+        this.log(`Failed to fix build "error": ${error.message}`, 'ERROR')}
     }
     
     return fixesApplied}
@@ -122,17 +122,17 @@ class BuildErrorAutoFixer {
       const moduleMatch = error.message.match(/Cannot find module ['"]([^'"]+)['"]/);
       if (moduleMatch) {
         const moduleName = moduleMatch[1];
-        this.log(`Installing missing module: ${moduleName}`, 'INFO');
-        execSync(`npm install ${moduleName}`, { stdio: 'pipe' });
+        this.log(`Installing missing "module": ${moduleName}`, 'INFO');
+        execSync(`npm install ${moduleName}`, { "stdio": 'pipe' });
         return true}
       
       // Try to clear cache and reinstall
       this.log('Clearing npm cache and reinstalling dependencies...', 'INFO');
-      execSync('npm cache clean --force', { stdio: 'pipe' });
-      execSync('rm -rf node_modules package-lock.json', { stdio: 'pipe' });
-      execSync('npm install --legacy-peer-deps', { stdio: 'pipe' });
+      execSync('npm cache clean --force', { "stdio": 'pipe' });
+      execSync('rm -rf node_modules package-lock.json', { "stdio": 'pipe' });
+      execSync('npm install --legacy-peer-deps', { "stdio": 'pipe' });
       return true} catch (fixError) {
-      this.log(`Failed to fix module not found error: ${fixError.message}`, 'ERROR');
+      this.log(`Failed to fix module not found "error": ${fixError.message}`, 'ERROR');
       return false}
   }
 
@@ -145,8 +145,7 @@ class BuildErrorAutoFixer {
         const lines = content.split('\n');
         
         // Basic syntax fixes
-        const fixes = [
-          this.fixMissingSemicolons.bind(this),
+        const fixes = [this.fixMissingSemicolons.bind(this),
           this.fixUnclosedBrackets.bind(this),
           this.fixUnclosedQuotes.bind(this),
           this.fixTrailingCommas.bind(this)
@@ -171,7 +170,7 @@ class BuildErrorAutoFixer {
       }
       
       return false} catch (fixError) {
-      this.log(`Failed to fix syntax error: ${fixError.message}`, 'ERROR');
+      this.log(`Failed to fix syntax "error": ${fixError.message}`, 'ERROR');
       return false}
   }
 
@@ -180,7 +179,7 @@ class BuildErrorAutoFixer {
     
     try {
       // Clean build artifacts
-      execSync('rm -rf .next out dist build', { stdio: 'pipe' });
+      execSync('rm -rf .next out dist build', { "stdio": 'pipe' });
       
       // Increase Node.js memory limit for build
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
@@ -191,7 +190,7 @@ class BuildErrorAutoFixer {
         return true}
       
       return false} catch (fixError) {
-      this.log(`Failed to fix memory error: ${fixError.message}`, 'ERROR');
+      this.log(`Failed to fix memory "error": ${fixError.message}`, 'ERROR');
       return false}
   }
 
@@ -200,11 +199,11 @@ class BuildErrorAutoFixer {
     
     try {
       // Fix file permissions
-      execSync('chmod -R 755 .', { stdio: 'pipe' });
-      execSync('chmod -R 644 src/**/*.{js,jsx,ts,tsx}', { stdio: 'pipe' });
+      execSync('chmod -R 755 .', { "stdio": 'pipe' });
+      execSync('chmod -R 644 src/**/*.{js,jsx,ts,tsx}', { "stdio": 'pipe' });
       this.log('Fixed file permissions', 'INFO');
       return true} catch (fixError) {
-      this.log(`Failed to fix permission error: ${fixError.message}`, 'ERROR');
+      this.log(`Failed to fix permission "error": ${fixError.message}`, 'ERROR');
       return false}
   }
 
@@ -213,14 +212,14 @@ class BuildErrorAutoFixer {
     
     try {
       // Try to fix peer dependency issues
-      execSync('npm install --legacy-peer-deps', { stdio: 'pipe' });
+      execSync('npm install --legacy-peer-deps', { "stdio": 'pipe' });
       
       // If that doesn't work, try to update dependencies
-      execSync('npm update', { stdio: 'pipe' });
+      execSync('npm update', { "stdio": 'pipe' });
       
       this.log('Fixed dependency issues', 'INFO');
       return true} catch (fixError) {
-      this.log(`Failed to fix dependency error: ${fixError.message}`, 'ERROR');
+      this.log(`Failed to fix dependency "error": ${fixError.message}`, 'ERROR');
       return false}
   }
 
@@ -231,12 +230,12 @@ class BuildErrorAutoFixer {
       if (!line.trim().endsWith(';') && !line.trim().endsWith('{') && !line.trim().endsWith('}')) {
         lines[lineIndex] = line + ';';
         return {
-          modified: true,
-          content: lines.join('\n'),
-          description: 'Added missing semicolon'
+          "modified": true,
+          "content": lines.join('\n'),
+          "description": 'Added missing semicolon'
         }}
     }
-    return { modified: false, content: lines.join('\n') }}
+    return { "modified": false, "content": lines.join('\n') }}
 
   fixUnclosedBrackets(lines, error) {
     const lineIndex = error.line - 1;
@@ -250,12 +249,12 @@ class BuildErrorAutoFixer {
         const closingBrackets = ')}]'.slice(0, missingBrackets);
         lines[lineIndex] = line + closingBrackets;
         return {
-          modified: true,
-          content: lines.join('\n'),
-          description: 'Added missing closing brackets'
+          "modified": true,
+          "content": lines.join('\n'),
+          "description": 'Added missing closing brackets'
         }}
     }
-    return { modified: false, content: lines.join('\n') }}
+    return { "modified": false, "content": lines.join('\n') }}
 
   fixUnclosedQuotes(lines, error) {
     const lineIndex = error.line - 1;
@@ -267,20 +266,20 @@ class BuildErrorAutoFixer {
       if (singleQuotes % 2 !== 0) {
         lines[lineIndex] = line + "'";
         return {
-          modified: true,
-          content: lines.join('\n'),
-          description: 'Added missing single quote'
+          "modified": true,
+          "content": lines.join('\n'),
+          "description": 'Added missing single quote'
         }}
       
       if (doubleQuotes % 2 !== 0) {
         lines[lineIndex] = line + '"';
         return {
-          modified: true,
-          content: lines.join('\n'),
-          description: 'Added missing double quote'
+          "modified": true,
+          "content": lines.join('\n'),
+          "description": 'Added missing double quote'
         }}
     }
-    return { modified: false, content: lines.join('\n') }}
+    return { "modified": false, "content": lines.join('\n') }}
 
   fixTrailingCommas(lines, error) {
     const lineIndex = error.line - 1;
@@ -289,12 +288,12 @@ class BuildErrorAutoFixer {
       if (line.includes(',') && line.trim().endsWith(',')) {
         lines[lineIndex] = line.trim().slice(0, -1);
         return {
-          modified: true,
-          content: lines.join('\n'),
-          description: 'Removed trailing comma'
+          "modified": true,
+          "content": lines.join('\n'),
+          "description": 'Removed trailing comma'
         }}
     }
-    return { modified: false, content: lines.join('\n') }}
+    return { "modified": false, "content": lines.join('\n') }}
 
   async runAutoFix() {
     this.log('Starting build error auto-fix...');
@@ -318,11 +317,11 @@ class BuildErrorAutoFixer {
       const postCheckResult = await this.runBuildCheck();
       
       const report = {
-        timestamp: new Date().toISOString(),
-        initialErrors: checkResult.errors.length,
+        "timestamp": new Date().toISOString(),
+        "initialErrors": checkResult.errors.length,
         fixesApplied,
-        remainingErrors: postCheckResult.errors.length,
-        success: postCheckResult.success
+        "remainingErrors": postCheckResult.errors.length,
+        "success": postCheckResult.success
       };
       
       // Save report
@@ -335,7 +334,7 @@ class BuildErrorAutoFixer {
         this.buildHistory = this.buildHistory.slice(-50)}
       
       this.log(`Build auto-fix completed. Report saved to ${reportPath}`, 'INFO')} catch (error) {
-      this.log(`Build auto-fix failed: ${error.message}`, 'ERROR')}
+      this.log(`Build auto-fix "failed": ${error.message}`, 'ERROR')}
   }
 
   async startAutoFixer() {
@@ -348,17 +347,17 @@ class BuildErrorAutoFixer {
     setInterval(async () => {
       try {
         await this.runAutoFix()} catch (error) {
-        this.log(`Error in periodic fix: ${error.message}`, 'ERROR')}
+        this.log(`Error in periodic "fix": ${error.message}`, 'ERROR')}
     }, this.fixInterval);
 
     this.log(`Build error auto-fixer started. Running every ${this.fixInterval / 1000} seconds.`)}
 
   getStatus() {
     return {
-      running: true,
-      buildHistory: this.buildHistory.length,
-      fixInterval: this.fixInterval,
-      autoFixEnabled: this.autoFixEnabled
+      "running": true,
+      "buildHistory": this.buildHistory.length,
+      "fixInterval": this.fixInterval,
+      "autoFixEnabled": this.autoFixEnabled
     }}
 }
 
@@ -377,7 +376,7 @@ if (require.main === module) {
 
   // Start auto-fixer
   fixer.startAutoFixer().catch(error => {
-    fixer.log(`Failed to start auto-fixer: ${error.message}`, 'ERROR');
+    fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
     process.exit(1)})}
 
 module.exports = BuildErrorAutoFixer;

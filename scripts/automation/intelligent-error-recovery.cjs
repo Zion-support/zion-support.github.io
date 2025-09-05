@@ -19,7 +19,7 @@ class IntelligentErrorRecovery {
     ensureLogsDirectory() {
         const logsDir = path.join(this.projectRoot, 'logs');
         if (!fs.existsSync(logsDir)) {
-            fs.mkdirSync(logsDir, { recursive: true });
+            fs.mkdirSync(logsDir, { "recursive": true });
         }
     }
 
@@ -37,34 +37,34 @@ class IntelligentErrorRecovery {
         
         try {
             // Check for syntax errors
-            const syntaxCheck = execSync('npm run type-check', { cwd: this.projectRoot, encoding: 'utf8' });
+            const syntaxCheck = execSync('npm run type-check', { "cwd": this.projectRoot, "encoding": 'utf8' });
         } catch (error) {
             errors.push({
-                type: 'syntax',
-                message: error.message,
-                severity: 'high'
+                "type": 'syntax',
+                "message": error.message,
+                "severity": 'high'
             });
         }
 
         try {
             // Check for linting errors
-            const lintCheck = execSync('npm run lint', { cwd: this.projectRoot, encoding: 'utf8' });
+            const lintCheck = execSync('npm run lint', { "cwd": this.projectRoot, "encoding": 'utf8' });
         } catch (error) {
             errors.push({
-                type: 'linting',
-                message: error.message,
-                severity: 'medium'
+                "type": 'linting',
+                "message": error.message,
+                "severity": 'medium'
             });
         }
 
         try {
             // Check for build errors
-            const buildCheck = execSync('npm run build', { cwd: this.projectRoot, encoding: 'utf8' });
+            const buildCheck = execSync('npm run build', { "cwd": this.projectRoot, "encoding": 'utf8' });
         } catch (error) {
             errors.push({
-                type: 'build',
-                message: error.message,
-                severity: 'high'
+                "type": 'build',
+                "message": error.message,
+                "severity": 'high'
             });
         }
 
@@ -92,20 +92,20 @@ class IntelligentErrorRecovery {
     async fixSyntaxErrors() {
         this.log('🔧 Fixing syntax errors...');
         try {
-            execSync('npm run lint:fix', { cwd: this.projectRoot });
+            execSync('npm run "lint": fix', { "cwd": this.projectRoot });
             this.log('✅ Syntax errors fixed');
         } catch (error) {
-            this.log(`❌ Failed to fix syntax errors: ${error.message}`);
+            this.log(`❌ Failed to fix syntax "errors": ${error.message}`);
         }
     }
 
     async fixLintingErrors() {
         this.log('🔧 Fixing linting errors...');
         try {
-            execSync('npm run lint:fix', { cwd: this.projectRoot });
+            execSync('npm run "lint": fix', { "cwd": this.projectRoot });
             this.log('✅ Linting errors fixed');
         } catch (error) {
-            this.log(`❌ Failed to fix linting errors: ${error.message}`);
+            this.log(`❌ Failed to fix linting "errors": ${error.message}`);
         }
     }
 
@@ -113,11 +113,11 @@ class IntelligentErrorRecovery {
         this.log('🔧 Fixing build errors...');
         try {
             // Clean and rebuild
-            execSync('rm -rf dist', { cwd: this.projectRoot });
-            execSync('npm run build', { cwd: this.projectRoot });
+            execSync('rm -rf dist', { "cwd": this.projectRoot });
+            execSync('npm run build', { "cwd": this.projectRoot });
             this.log('✅ Build errors fixed');
         } catch (error) {
-            this.log(`❌ Failed to fix build errors: ${error.message}`);
+            this.log(`❌ Failed to fix build "errors": ${error.message}`);
         }
     }
 

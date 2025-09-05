@@ -48,7 +48,7 @@ const EnhancedServicesOverview = (props) => {};
         return <Leaf className="w-6 h-6"  />;";';
       case 'FinTech & Digital Banking':"
         return <DollarSign className="w-6 h-6"  />;"
-      default:"
+      "default": "
         return <Zap className="w-6 h-6"  />;
     }
   };
@@ -61,7 +61,7 @@ const EnhancedServicesOverview = (props) => {};
         return 'text-yellow-400';'
       case 'within-month':"
         return 'text-orange-400';'
-      default:"
+      "default": "
         return 'text-gray-400';
     }
   };";
@@ -70,7 +70,7 @@ const EnhancedServicesOverview = (props) => {};
       <div className="container mx-auto px-4">";
         {/* Header */}";
         <div className="text-center mb-16">";
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">";
+          <h2 className="text-4xl "md": text-5xl font-bold text-white mb-6">";
             Cutting-Edge";
             <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
               Technology Services;
@@ -86,7 +86,7 @@ const EnhancedServicesOverview = (props) => {};
             <Link to="/enhanced-services">";
               <Button";
                 size="lg";
-                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark "hover": from-zion-purple-light hover:to-zion-purple text-white";
               >";
                 Explore All Services";
                 <ArrowRight className="ml-2 w-4 h-4"  />;
@@ -103,11 +103,11 @@ const EnhancedServicesOverview = (props) => {};
         </div>;
 ";
         {/* Featured Services Grid */}";
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
+        <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
           {featuredServices.map(service => (;
             <Card";
               key={service.id}";
-              className="bg-zion-blue-dark/50 border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 hover:-translate-y-2";
+              className="bg-zion-blue-dark/50 border-zion-blue-light "hover": border-zion-purple/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 hover:-translate-y-2";
             >";
               <CardHeader className="pb-4">";
                 <div className="flex items-start justify-between mb-3">";
@@ -203,7 +203,7 @@ const EnhancedServicesOverview = (props) => {};
                 </div>;
 ";
                 {/* Action Button */}";
-                <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+                <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark "hover": from-zion-purple-light hover:to-zion-purple text-white">;
                   Get Started;
                 </Button>;
               </CardContent>;
@@ -222,21 +222,21 @@ const EnhancedServicesOverview = (props) => {};
             </p>;
           </div>";
 ";
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">;
+          <div className="grid grid-cols-2 "md": grid-cols-5 gap-4">;
             {ENHANCED_SERVICES.reduce((acc, service) => {}
               if(!acc.find(cat => cat.category === service.category)) {}
                 acc.push({}
-                  category: service.category,;
-                  count: ENHANCED_SERVICES.filter();
+                  "category": service.category,;
+                  "count": ENHANCED_SERVICES.filter();
                     s => s.category === service.category;
                   ).length,;
-                  icon: getCategoryIcon(service.category)});
+                  "icon": getCategoryIcon(service.category)});
               }
               return acc;
             }, []).map((cat, index) => (;
               <div";
                 key={index}";
-                className="text-center p-4 rounded-lg bg-zion-blue-dark/50 border border-zion-blue-light hover:border-zion-purple/50 transition-colors";
+                className="text-center p-4 rounded-lg bg-zion-blue-dark/50 border border-zion-blue-light "hover": border-zion-purple/50 transition-colors";
               >";
                 <div className="text-zion-cyan mb-2 flex justify-center">;
                   {cat.icon}";
@@ -266,7 +266,7 @@ const EnhancedServicesOverview = (props) => {};
             <div className="flex flex-wrap justify-center gap-4">";
               <Button";
                 size="lg";
-                className="bg-white text-zion-purple hover:bg-zion-slate-light";
+                className="bg-white text-zion-purple "hover": bg-zion-slate-light";
               >;
                 Schedule Free Consultation;
               </Button>";
@@ -299,14 +299,9 @@ const EnhancedServicesOverview = (props) => {};
       </div>;
     </section>)};
 export default EnhancedServicesOverview;
-;
 export {EnhancedServicesOverview};
-;
 export {EnhancedServicesOverview};
-;
 export {EnhancedServicesOverview};
-;
 export {EnhancedServicesOverview};
 
-export {EnhancedServicesOverview};';
-;';';
+export {EnhancedServicesOverview};';';';

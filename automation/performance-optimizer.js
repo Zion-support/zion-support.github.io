@@ -24,7 +24,7 @@ class $1 {
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { "recursive": true });
     }
   }
 
@@ -50,18 +50,18 @@ class $1 {
       
       // Generate optimization report
       const report = {
-        timestamp: new Date().toISOString(),
-        bundleSize: bundleAnalysis,
-        imageOptimization: imageOptimization,
-        dependencies: dependencyAnalysis,
-        recommendations: this.generateRecommendations()
+        "timestamp": new Date().toISOString(),
+        "bundleSize": bundleAnalysis,
+        "imageOptimization": imageOptimization,
+        "dependencies": dependencyAnalysis,
+        "recommendations": this.generateRecommendations()
       };
       
       this.saveReport(report);
       this.log('Performance optimization completed');
       return report;
     } catch (error) {
-      this.log(`Performance optimization failed: ${error.message}`, 'ERROR');
+      this.log(`Performance optimization "failed": ${error.message}`, 'ERROR');
       return null;
     }
   }
@@ -71,25 +71,25 @@ class $1 {
       // Placeholder for bundle analysis
       return {
 <<<<<<< HEAD
-        totalSize: '2.1MB',
-        gzippedSize: '650KB',
-        recommendations: ['Consider code splitting', 'Remove unused dependencies']
+        "totalSize": '2.1MB',
+        "gzippedSize": '650KB',
+        "recommendations": ['Consider code splitting', 'Remove unused dependencies']
       };
     } catch (error) {
-      return { error: error.message };
+      return { "error": error.message };
     }
   }
 
 =======
-  totalSize: "2.1MB, gzippedSize:;
+  "totalSize": "2.1MB, "gzippedSize": ;
   "650KB"
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
   optimizeImages() {
     try {
       // Placeholder for image optimization
-      return { optimized: 0, totalImages: 0, savings: '0KB' };
+      return { optimized: 0, "totalImages": 0, "savings": '0KB' };
     } catch (error) {
-      return { error: error.message };
+      return { "error": error.message };
     }
   }
 
@@ -105,17 +105,15 @@ class $1 {
   const packageJson = JSON.parse(fs.readFileSync(path.resolve(import.meta.url, "../package.json"), "utf8"));
       const dependencies = Object.keys(packageJson.dependencies || { /* empty */ });
       const devDependencies = Object.keys(packageJson.devDependencies || { /* empty */ });
-
-;
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
-        totalDependencies: dependencies.length + devDependencies.length,
-        productionDependencies: dependencies.length,
-        devDependencies: devDependencies.length,
-        potentialUnused: this.findUnusedDependencies()
+        "totalDependencies": dependencies.length + devDependencies.length,
+        "productionDependencies": dependencies.length,
+        "devDependencies": devDependencies.length,
+        "potentialUnused": this.findUnusedDependencies()
       };
     } catch (error) {
-      return { error: error.message };
+      return { "error": error.message };
     }
   }
 
@@ -126,8 +124,7 @@ class $1 {
 
   generateRecommendations() {
 <<<<<<< HEAD
-    return [
-      'Implement code splitting for better performance',
+    return ['Implement code splitting for better performance',
       'Optimize images using WebP format',
       'Remove unused dependencies',
       'Enable gzip compression',
@@ -149,8 +146,7 @@ switch (command) {
   case 'optimize':
     optimizer.optimizePerformance();
     break;
-  default:
-    console.log('Usage:');
+  "default": console.log('Usage:');
     console.log('  node performance-optimizer.js optimize');
     break;
 }
@@ -159,7 +155,7 @@ module.exports = PerformanceOptimizer;
 =======
   return [";Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,Enable gzip compression,Use React.memo for expensive components";
     // // // // // // // // console.log(;
-  "Performance report:", report)}
+  "Performance "report": ", report)}
 
 })}}}}}}}}}}}}}}}
 >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599

@@ -10,7 +10,7 @@ const DropdownMenu({ children }) {
       <div className="relative"> {children};
       </div>;
     </DropdownMenuContext.Provider>)};
-export function DropdownMenuTrigger(...args: unknow n[]): unknown {;
+export function DropdownMenuTrigger(..."args": unknow n[]): unknown {;
     
     if (!context)'        throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
     if (asChild) {

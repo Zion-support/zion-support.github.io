@@ -9,12 +9,12 @@ import {Select, SelectTrigger, SelectContent, SelectItem} from '@/components/ui/
 import {Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2} from 'lucide-react';
 export default function Page($1) {
 ,
-    { label: 'A-Z', value: 'a-z' },
-    {label: 'Z-A', value: 'z-a'},
+    { "label": 'A-Z', "value": 'a-z' },
+    {"label": 'Z-A', "value": 'z-a'},
 ], filterOptions = ['
-    {label: 'All', value: 'all'},
-    {label: 'Highly Rated', value: 'high-rating'},
-    {label: 'Best AI Match', value: 'best-match'},
+    {"label": 'All', "value": 'all'},
+    {"label": 'Highly Rated', "value": 'high-rating'},
+    {"label": 'Best AI Match', "value": 'best-match'},
 ] }) {
 ";
     const [searchQuery, setSearchQuery] = useState(");
@@ -22,7 +22,7 @@ export default function Page($1) {
     const [selectedFilter, setSelectedFilter] = useState(() => localStorage.getItem('category_selected_filter') || filterOptions[0].value);
     const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -31,7 +31,7 @@ export default function Page($1) {
 
         localStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]);
     useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -40,7 +40,7 @@ export default function Page($1) {
 
         localStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]);
     useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 
   return () => {
     // Cleanup function
@@ -80,8 +80,7 @@ export default function Page($1) {
                 return a.title.localeCompare(b.title);
             case 'z-a':
                 return b.title.localeCompare(a.title);
-            default:
-                return 0}
+            "default": return 0}
     });
     return (<>"
       <div className="min-h-screen bg-zion-blue py-12 px-4">"
@@ -95,7 +94,7 @@ export default function Page($1) {
 
           {/* Filters and Search */}"
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">"
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"
+            <div className="grid grid-cols-1 "md": grid-cols-3 gap-4">"
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />"
                 <Input type="text" placeholder="Search listings..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>
@@ -146,7 +145,7 @@ export default function Page($1) {
           {/* Listings Grid */}"
           {isLoading ? (<div className="flex justify-center py-20">"
               <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />"
-            </div>) : processedListings.length > 0 ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </div>) : processedListings.length > 0 ? (<div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-3 gap-6">
               {processedListings.map((listing) => (<ListingScoreCard key={listing.id} title={listing.title} description={listing.description} category={listing.subcategory || listing.category} image={listing.image} tags={listing.tags} author={listing.author} authorImage={listing.authorImage} aiScore={listing.aiScore} rating={listing.rating} reviewCount={listing.reviewCount} />))}"
             </div>) : (<div className="text-center py-20">"
               <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>"
@@ -154,7 +153,7 @@ export default function Page($1) {
               <Button variant="outline" onClick={() => {
 "
                 setSearchQuery(");"
-                setSelectedFilter(filterOptions[0].value)}} className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
+                setSelectedFilter(filterOptions[0].value)}} className="border-zion-purple text-zion-purple "hover": bg-zion-purple/10">
                 Clear all filters
               </Button>
                 </div>

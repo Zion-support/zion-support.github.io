@@ -1,6 +1,6 @@
 interface LoginErrorFallbackProps extends React.PropsWithChildren<{}> {
 
-  error: Erro r;
+  "error": Erro r;
   resetErrorBoundary: : unknown void};
 export { function };
 export default function LoginErrorFallback(...args[]):  {
@@ -28,7 +28,7 @@ export default function LoginErrorFallback(...args[]):  {
         )}
         <button
           onClick={resetErrorBoundary}"
-          className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-purple hover: fro m-zion-cyan-dark hover: t o-zion-purple-dark text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover: scal e-105"
+          className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-purple "hover": fro m-zion-cyan-dark hover: t o-zion-purple-dark text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover: scal e-105"
         >"
           <RefreshCw className="w-4 h-4"   />;          Try Again;
         </button>;

@@ -11,72 +11,67 @@ export default function MainNavigation() {
   const location = useLocation();
   const [activeDropdown, setActiveDropdown] = useState(null);
 
-  const navigationItems = [
-    {
-      name: 'Home',
-      href: '/',
-      current: location.pathname === '/',
-      icon: Home
+  const navigationItems = [{
+      "name": 'Home',
+      "href": '/',
+      "current": location.pathname === '/',
+      "icon": Home
     },
     {
-      name: 'Services',
-      href: '/services',
-      current: location.pathname.startsWith('/services'),
-      children: [
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: 'Cloud Solutions', href: '/services/cloud' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'IT Infrastructure', href: '/services/infrastructure' }
+      "name": 'Services',
+      "href": '/services',
+      "current": location.pathname.startsWith('/services'),
+      "children": [
+        { name: 'AI Services', "href": '/ai-services' },
+        { "name": 'IT Services', "href": '/it-services' },
+        { "name": 'Micro SaaS', "href": '/micro-saas' },
+        { "name": 'Cloud Solutions', "href": '/services/cloud' },
+        { "name": 'Cybersecurity', "href": '/services/cybersecurity' },
+        { "name": 'IT Infrastructure', "href": '/services/infrastructure' }
       ]
     },
     {
-      name: 'Solutions',
-      href: '/solutions',
-      current: location.pathname.startsWith('/solutions'),
-      children: [
-        { name: 'Industry Solutions', href: '/solutions/industry' },
-        { name: 'Manufacturing', href: '/solutions/manufacturing' },
-        { name: 'Financial Services', href: '/solutions/financial' },
-        { name: 'Healthcare', href: '/solutions/healthcare' },
-        { name: 'Retail', href: '/solutions/retail' }
+      "name": 'Solutions',
+      "href": '/solutions',
+      "current": location.pathname.startsWith('/solutions'),
+      "children": [{ name: 'Industry Solutions', "href": '/solutions/industry' },
+        { "name": 'Manufacturing', "href": '/solutions/manufacturing' },
+        { "name": 'Financial Services', "href": '/solutions/financial' },
+        { "name": 'Healthcare', "href": '/solutions/healthcare' },
+        { "name": 'Retail', "href": '/solutions/retail' }
       ]
     },
     {
-      name: 'About',
-      href: '/about',
-      current: location.pathname.startsWith('/about'),
-      children: [
-        { name: 'Company', href: '/about' },
-        { name: 'Team', href: '/about/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' }
+      "name": 'About',
+      "href": '/about',
+      "current": location.pathname.startsWith('/about'),
+      "children": [{ name: 'Company', "href": '/about' },
+        { "name": 'Team', "href": '/about/team' },
+        { "name": 'Careers', "href": '/careers' },
+        { "name": 'Partners', "href": '/partners' }
       ]
     },
     {
-      name: 'Resources',
-      href: '/resources',
-      current: false,
-      children: [
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Research & Development', href: '/research-development' },
-        { name: 'Events', href: '/events' },
-        { name: 'News', href: '/news' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Webinars', href: '/webinars' }
+      "name": 'Resources',
+      "href": '/resources',
+      "current": false,
+      "children": [{ name: 'Case Studies', "href": '/case-studies' },
+        { "name": 'Research & Development', "href": '/research-development' },
+        { "name": 'Events', "href": '/events' },
+        { "name": 'News', "href": '/news' },
+        { "name": 'Blog', "href": '/blog' },
+        { "name": 'White Papers', "href": '/white-papers' },
+        { "name": 'Webinars', "href": '/webinars' }
       ]
     },
     {
-      name: 'Support',
-      href: '/support',
-      current: location.pathname.startsWith('/support'),
-      children: [
-        { name: 'Help Center', href: '/support' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'Training', href: '/training' },
-        { name: 'Contact', href: '/contact' }
+      "name": 'Support',
+      "href": '/support',
+      "current": location.pathname.startsWith('/support'),
+      "children": [{ name: 'Help Center', "href": '/support' },
+        { "name": 'Documentation', "href": '/docs' },
+        { "name": 'Training', "href": '/training' },
+        { "name": 'Contact', "href": '/contact' }
       ]
     };
   ];
@@ -97,7 +92,7 @@ export default function MainNavigation() {
                 className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   item.current
                     ? 'text-zion-cyan bg-zion-purple/10'
-                    : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
+                    : 'text-zion-slate-light "hover": text-white hover:bg-zion-purple/10'
                 }`}
               >
                 <span>{item.name}</span>
@@ -115,7 +110,7 @@ export default function MainNavigation() {
                       <Link
                         key={child.name}
                         to={child.href}
-                        className="block px-4 py-3 text-sm text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
+                        className="block px-4 py-3 text-sm text-zion-slate-light "hover": text-white hover:bg-zion-purple/10 transition-colors"
                         onClick={() => setActiveDropdown(null)}
                       >
                         {child.name}
@@ -131,7 +126,7 @@ export default function MainNavigation() {
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 item.current
                   ? 'text-zion-cyan bg-zion-purple/10'
-                  : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
+                  : 'text-zion-slate-light "hover": text-white hover:bg-zion-purple/10'
               }`}
             >
               {item.name}
@@ -141,82 +136,82 @@ export default function MainNavigation() {
       ))}
     </nav>
 =======
-  const handleDropdownToggle = (props) => {setActiveDropdown(activeDropdown === index ? null : index)};;"
+  const handleDropdownToggle = (props) => {setActiveDropdown(activeDropdown === index ? null : index)};"
     {"
-      name: "Home", "
-      href: "/","
-      current: location.pathname = == "/"} {"
-      name: "Services", "
-      href: "/services","
-      current: location.pathname.startsWith("/services"), children: [",
-        { name: "AI Services", href: "/services/ai" }, "
-        {name: "Cloud Solutions", href: "/services/cloud"}, "
-        {name: "Cybersecurity", href: "/services/cybersecurity"}, "
-        {name: "IT Infrastructure", href: "/services/infrastructure"}, "
-        {name: "Digital Transformation", href: "/services/transformation"}, "
-        {name: "Consulting", href: "/services/consulting"}"
+      "name": "Home", "
+      "href": "/","
+      "current": location.pathname = == "/"} {"
+      "name": "Services", "
+      "href": "/services","
+      "current": location.pathname.startsWith("/services"), "children": [",
+        { "name": "AI Services", "href": "/services/ai" }, "
+        {"name": "Cloud Solutions", "href": "/services/cloud"}, "
+        {"name": "Cybersecurity", "href": "/services/cybersecurity"}, "
+        {"name": "IT Infrastructure", "href": "/services/infrastructure"}, "
+        {"name": "Digital Transformation", "href": "/services/transformation"}, "
+        {"name": "Consulting", "href": "/services/consulting"}"
       ]} {"
-      name: "Solutions", "
-      href: "/solutions","
-      current: location.pathname.startsWith("/solutions"), children: [",
-        { name: "Industry Solutions", href: "/solutions/industry" }, "
-        {name: "Manufacturing", href: "/solutions/manufacturing"}, "
-        {name: "Financial Services", href: "/solutions/financial"}, "
-        {name: "Healthcare", href: "/solutions/healthcare"}, "
-        {name: "Retail", href: "/solutions/retail"}"
-      name: "About", "
-      href: "/about","
-      current: location.pathname.startsWith("/about"), children: [",
-        {name: "Company", href: "/about"}, "
-        {name: "Team", href: "/about/team"}, "
-        {name: "Careers", href: "/careers"}, "
-        {name: "Partners", href: "/partners"}"
-      name: "Resources", "
+      "name": "Solutions", "
+      "href": "/solutions","
+      "current": location.pathname.startsWith("/solutions"), "children": [",
+        { "name": "Industry Solutions", "href": "/solutions/industry" }, "
+        {"name": "Manufacturing", "href": "/solutions/manufacturing"}, "
+        {"name": "Financial Services", "href": "/solutions/financial"}, "
+        {"name": "Healthcare", "href": "/solutions/healthcare"}, "
+        {"name": "Retail", "href": "/solutions/retail"}"
+      "name": "About", "
+      "href": "/about","
+      "current": location.pathname.startsWith("/about"), "children": [",
+        {"name": "Company", "href": "/about"}, "
+        {"name": "Team", "href": "/about/team"}, "
+        {"name": "Careers", "href": "/careers"}, "
+        {"name": "Partners", "href": "/partners"}"
+      "name": "Resources", "
   {"
-      name: "Home,"
-      href: "/,"
-      current: location.pathname === "/"} {"
-      name: "Services,"
-      href: "/services,"
-      children: [",
-        { name: "AI Services", href: "/services/ai" },"
-        {name: "Cloud Solutions", href: "/services/cloud"},"
-        {name: "Cybersecurity", href: "/services/cybersecurity"},"
-        {name: "IT Infrastructure", href: "/services/infrastructure"},"
-        {name: "Digital Transformation", href: "/services/transformation"},"
+      "name": "Home,"
+      "href": "/,"
+      "current": location.pathname === "/"} {"
+      "name": "Services,"
+      "href": "/services,"
+      "children": [",
+        { "name": "AI Services", "href": "/services/ai" },"
+        {"name": "Cloud Solutions", "href": "/services/cloud"},"
+        {"name": "Cybersecurity", "href": "/services/cybersecurity"},"
+        {"name": "IT Infrastructure", "href": "/services/infrastructure"},"
+        {"name": "Digital Transformation", "href": "/services/transformation"},"
       ]} {"
-      name: "Solutions,"
-      href: "/solutions,"
-        { name: "Industry Solutions", href: "/solutions/industry" },"
-        {name: "Manufacturing", href: "/solutions/manufacturing"},"
-        {name: "Financial Services", href: "/solutions/financial"},"
-        {name: "Healthcare", href: "/solutions/healthcare"},"
-      name: "About,"
-      href: "/about,"
-        {name: "Company", href: "/about"},"
-        {name: "Team", href: "/about/team"},"
-        {name: "Careers", href: "/careers"},"
-      name: "Resources,"
-      current: false, children: [",
-        {name: "Case Studies", href: "/case-studies"}, "
-        {name: "Research & Development", href: "/research-development"}, "
-        {name: "Events", href: "/events"}, "
-        {name: "News", href: "/news"}, "
-        {name: "Blog", href: "/blog"}, "
-        {name: "White Papers", href: "/white-papers"}, "
-        {name: "Webinars", href: "/webinars"}"
-      name: "Support", "
-      href: "/support","
-      current: location.pathname.startsWith("/support"), children: [",
-        {name: "Help Center", href: "/support"}, "
-        {name: "Documentation", href: "/docs"}, "
-        {name: "Training", href: "/training"}, "
-      name: "Support,"
-      href: "/support,"
-        {name: "Help Center", href: "/support"},"
-        {name: "Documentation", href: "/docs"},"
-        {name: "Training", href: "/training"},"
-        {name: "Contact", href: "/contact"}
+      "name": "Solutions,"
+      "href": "/solutions,"
+        { "name": "Industry Solutions", "href": "/solutions/industry" },"
+        {"name": "Manufacturing", "href": "/solutions/manufacturing"},"
+        {"name": "Financial Services", "href": "/solutions/financial"},"
+        {"name": "Healthcare", "href": "/solutions/healthcare"},"
+      "name": "About,"
+      "href": "/about,"
+        {"name": "Company", "href": "/about"},"
+        {"name": "Team", "href": "/about/team"},"
+        {"name": "Careers", "href": "/careers"},"
+      "name": "Resources,"
+      "current": false, "children": [",
+        {"name": "Case Studies", "href": "/case-studies"}, "
+        {"name": "Research & Development", "href": "/research-development"}, "
+        {"name": "Events", "href": "/events"}, "
+        {"name": "News", "href": "/news"}, "
+        {"name": "Blog", "href": "/blog"}, "
+        {"name": "White Papers", "href": "/white-papers"}, "
+        {"name": "Webinars", "href": "/webinars"}"
+      "name": "Support", "
+      "href": "/support","
+      "current": location.pathname.startsWith("/support"), "children": [",
+        {"name": "Help Center", "href": "/support"}, "
+        {"name": "Documentation", "href": "/docs"}, "
+        {"name": "Training", "href": "/training"}, "
+      "name": "Support,"
+      "href": "/support,"
+        {"name": "Help Center", "href": "/support"},"
+        {"name": "Documentation", "href": "/docs"},"
+        {"name": "Training", "href": "/training"},"
+        {"name": "Contact", "href": "/contact"}
 
       ]}
 
@@ -231,8 +226,8 @@ export default function MainNavigation() {
                 className="{"flex" items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   item.current"
                     ? "text-zion-cyan bg-zion-purple/10"
-                    : "text-zion-slate-light hover:text-white hove,"
-    r: bg-zion-purple/10"}"}
+                    : "text-zion-slate-light "hover": text-white hove,"
+    "r": bg-zion-purple/10"}"}
 
               >
                 <span>{item.name}</span>
@@ -248,8 +243,8 @@ export default function MainNavigation() {
                     {item.children.map((child) => ("
                       <Link key="{child.name}"
                         to={child.href}"
-                        className="block px-4 py-3 text-sm text-zion-slate-light hover:text-white hove,"
-    r: bg-zion-purple/10 transition-colors">
+                        className="block px-4 py-3 text-sm text-zion-slate-light "hover": text-white hove,"
+    "r": bg-zion-purple/10 transition-colors">
                         onClick="{()" => setActiveDropdown(null)}
 
   const handleDropdownToggle = (props) => {setActiveDropdown(activeDropdown === index ? null : index)}
@@ -262,13 +257,13 @@ export default function MainNavigation() {
               <button onClick="{()" =" > handleDropdownToggle(index)}"
                   item.current"
                     ? "text-zion-cyan bg-zion-purple/10"
-                    : "text-zion-slate-light hover: text-white hover:bg-zion-purple/10",
+                    : "text-zion-slate-light "hover": text-white hover:bg-zion-purple/10",
                 <ChevronDown className="{"h-4" w-4 transition-transform ${ activeDropdown === index ? "rotate-180" : " }"}        />
               
               {/* comment */} {activeDropdown === index && ("
                 <div className="absolute" top-full left-0 mt-2 w-64 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">"
-                      <Link key="{child.name}" to="{child.href}" className="{"block" px-4 py-3 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors" onClick="{()" => setActiveDropdown(null)}"
-                    : "text-zion-slate-light hover:text-white hover:bg-zion-purple/10", "
+                      <Link key="{child.name}" to="{child.href}" className="{"block" px-4 py-3 text-sm text-zion-slate-light "hover": text-white hover:bg-zion-purple/10 transition-colors" onClick="{()" => setActiveDropdown(null)}"
+                    : "text-zion-slate-light "hover": text-white hover:bg-zion-purple/10", "
                 <span>{item.name}</span>"
                 <ChevronDown className="{"h-4" w-4 transition-transform ${"
                     activeDropdown === index ? "rotate-180" : ","
@@ -281,7 +276,7 @@ export default function MainNavigation() {
                 <div className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">"
                       <Link key="{child.name}"
                         to="{child.href}"}"
-                        className="block px-4 py-3 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors">
+                        className="block px-4 py-3 text-sm text-zion-slate-light "hover": text-white hover:bg-zion-purple/10 transition-colors">
                         onClick="{()" =" > setActiveDropdown(null)}"
                         {child.name}
 
@@ -295,7 +290,7 @@ export default function MainNavigation() {
           ) : ("
               to="{item.href}"
               className="{"px-3" py-2 rounded-md text-sm font-medium transition-colors ${"
-            <Link to="{item.href}" className="{"px-3" py-2 rounded-md text-sm font-medium transition-colors ${ item.current ? "text-zion-cyan bg-zion-purple/10" : "text-zion-slate-light hover: text-white hover:bg-zion-purple/10" }"} >"
+            <Link to="{item.href}" className="{"px-3" py-2 rounded-md text-sm font-medium transition-colors ${ item.current ? "text-zion-cyan bg-zion-purple/10" : "text-zion-slate-light "hover": text-white hover:bg-zion-purple/10" }"} >"
             <Link to="{item.href}";"
 }"}" >"
               {item.name}

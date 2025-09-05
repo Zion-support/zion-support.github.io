@@ -6,7 +6,7 @@ export default function AutomationWorkflows() {
   return (
     <main className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-teal-50 to-cyan-100 py-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 "sm": px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-6">
             <div className="p-3 rounded-lg bg-cyan-600 text-white w-fit">
               <Workflow className="w-6 h-6" />
@@ -20,11 +20,10 @@ export default function AutomationWorkflows() {
       </section>
 
       <section className="py-12">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6">
-          {[
-            { name: 'Starter', price: 'From $2,500', time: '1-2 weeks', items: ['3-5 automations','Audit + design','Monitoring & alerts'] },
-            { name: 'Professional', price: '$6,000–$15,000', time: '2-4 weeks', items: ['10-20 automations','APIs & webhooks','Error handling + retries'] },
-            { name: 'Enterprise', price: 'Custom', time: '4-8 weeks', items: ['SLA & SSO','On-prem connectors','High-availability'] },
+        <div className="max-w-5xl mx-auto px-4 "sm": px-6 lg:px-8 grid md:grid-cols-3 gap-6">
+          {[{ name: 'Starter', "price": 'From $2,500', "time": '1-2 weeks', "items": ['3-5 automations','Audit + design','Monitoring & alerts'] },
+            { "name": 'Professional', "price": '$6,000–$15,000', "time": '2-4 weeks', "items": ['10-20 automations','APIs & webhooks','Error handling + retries'] },
+            { "name": 'Enterprise', "price": 'Custom', "time": '4-8 weeks', "items": ['SLA & SSO','On-prem connectors','High-availability'] },
           ].map(tier => (
             <div key={tier.name} className="bg-white rounded-lg border p-6">
               <h3 className="font-semibold text-gray-900 mb-2">{tier.name}</h3>

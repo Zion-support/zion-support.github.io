@@ -6,10 +6,10 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = (props) =>
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl "md": text-5xl font-bold text-gray-900 mb-6">
             Global Service Coverage
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -27,7 +27,7 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = (props) =>
               className={`flex items-center space-x-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                 activeCountry === country.id';
                   ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                  : 'bg-white text-gray-700 "hover": bg-gray-100 border border-gray-200'
               }`}
 
               <span className="text-2xl">{country.flag}</span>
@@ -62,7 +62,7 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = (props) =>
 
             {/* Regions Grid */}
             <div className="p-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 "lg": grid-cols-2 gap-8">
                 {currentCountry.regions.map((region, index) => (
                   <div key={index} className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
                     <h4 className="text-xl font-bold text-gray-900 mb-4">{region.name}</h4>
@@ -119,7 +119,7 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = (props) =>
 
                     {/* CTA Button */}
                     <div className="mt-6">
-                      <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                      <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold "hover": from-blue-700 hover:to-purple-700 transition-all duration-300">
                         Contact {region.name} Team
                       </button>
                     </div>
@@ -133,7 +133,7 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = (props) =>
               <h4 className="text-2xl font-bold text-gray-900 mb-6 text-center">
                 Global Service Benefits
               </h4>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 "md": grid-cols-3 gap-6">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Globe className="w-8 h-8 text-blue-600"  />
@@ -175,7 +175,7 @@ import { MapPin, Phone, Mail, Clock, Globe export const CountryTabs = (props) =>
             <p className="text-blue-100 mb-6">
               Contact our global team to discuss your IT service needs in  location.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col "sm": flex-row gap-4 justify-center">
               <a
                 href="#contact"
                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"

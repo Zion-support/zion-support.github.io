@@ -3,8 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const {
-  execSync,
-} = // // require('child_process');
+  execSync} = // // require('child_process');
   /**
    * Intelligent Error Fixer - Automatically detects and fixes common project errors
    * Designed to run as a PM2 automation process
@@ -21,8 +20,8 @@ const {
       this.errorPatterns = this.initializeErrorPatterns();
 
       // Ensure directories exist
-      fs.mkdirSync(path.dirname(this.logFile), { recursive: true });
-      fs.mkdirSync(path.dirname(this.reportFile), { recursive: true });
+      fs.mkdirSync(path.dirname(this.logFile), { "recursive": true });
+      fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true });
     }
 
     log(message, level = 'INFO') {
@@ -35,61 +34,53 @@ const {
     initializeErrorPatterns() {
       return {
         // Syntax errors
-        missingBraces: {
+        "missingBraces": {
           pattern: /return\(\s*$/m,
-          fix: content => content.replace(/return\(\s*$/gm, 'return ('),
-        },
-        extraSemicolons: {
+          "fix": content => content.replace(/return\(\s*$/gm, 'return (')},
+        "extraSemicolons": {
           pattern: /}\s*;\s*$/m,
-          fix: content => content.replace(/}\s*;\s*$/gm, '}'),
-        },
-        unterminatedStrings: {
+          "fix": content => content.replace(/}\s*;\s*$/gm, '}')},
+        "unterminatedStrings": {
           pattern: /["'][\w\s]*$/m,
-          fix: (content, match) => {
+          "fix": (content, match) => {
             // Simple fix for unterminated strings - add closing quote
             return content.replace(match[0], match[0] + match[0].charAt(0));
-          },
-        },
-        mergeConflicts: {
+          }},
+        "mergeConflicts": {
           pattern: /<<<<<<< HEAD|=======|>>>>>>> [a-f0-9]+/g,
-          fix: content => {
+          "fix": content => {
             // Remove merge conflict markers
             return content
               .replace(/<<<<<<< HEAD\n?/g, '')
               .replace(/=======\n?/g, '')
               .replace(/>>>>>>> [a-f0-9]+\n?/g, '');
-          },
-        },
-        invalidJSX: {
+          }},
+        "invalidJSX": {
           pattern: /return\(\)\s*</gm,
-          fix: content =>
-            content.replace(/return\(\)\s*</gm, 'return (\n    <'),
-        },
-        missingImports: {
+          "fix": content =>
+            content.replace(/return\(\)\s*</gm, 'return (\n    <')},
+        "missingImports": {
           pattern: /React\./g,
-          fix: content => {
+          "fix": content => {
             if (!content.includes('import React')) {
               return `import React from 'react';\n${content}`;
             }
             return content;
-          },
-        },
-      };
+          }}};
     }
 
     async runBuildCheck() {
       try {
         this.log('Running build check...');
         const result = execSync('yarn build', {
-          encoding: 'utf8',
-          stdio: 'pipe',
-          cwd: process.cwd(),
-        });
+          "encoding": 'utf8',
+          "stdio": 'pipe',
+          "cwd": process.cwd()});
         this.log('Build successful');
-        return { success: true, output: result };
+        return { "success": true, "output": result };
       } catch (error) {
-        this.log('Build failed: ' + error.message, 'ERROR');
-        return { success: false, output: error.stdout || error.message };
+        this.log('Build "failed": ' + error.message, 'ERROR');
+        return { "success": false, "output": error.stdout || error.message };
       }
     }
 
@@ -97,15 +88,14 @@ const {
       try {
         this.log('Running lint check...');
         const result = execSync('yarn lint --format=json', {
-          encoding: 'utf8',
-          stdio: 'pipe',
-          cwd: process.cwd(),
-        });
+          "encoding": 'utf8',
+          "stdio": 'pipe',
+          "cwd": process.cwd()});
         this.log('Lint check completed');
-        return { success: true, output: result };
+        return { "success": true, "output": result };
       } catch (error) {
-        this.log('Lint check found issues: ' + error.message, 'WARN');
-        return { success: false, output: error.stdout || error.message };
+        this.log('Lint check found "issues": ' + error.message, 'WARN');
+        return { "success": false, "output": error.stdout || error.message };
       }
     }
 
@@ -113,15 +103,14 @@ const {
       try {
         this.log('Running TypeScript check...');
         const result = execSync('npx tsc --noEmit --skipLibCheck', {
-          encoding: 'utf8',
-          stdio: 'pipe',
-          cwd: process.cwd(),
-        });
+          "encoding": 'utf8',
+          "stdio": 'pipe',
+          "cwd": process.cwd()});
         this.log('TypeScript check passed');
-        return { success: true, output: result };
+        return { "success": true, "output": result };
       } catch (error) {
-        this.log('TypeScript check found errors: ' + error.message, 'WARN');
-        return { success: false, output: error.stdout || error.message };
+        this.log('TypeScript check found "errors": ' + error.message, 'WARN');
+        return { "success": false, "output": error.stdout || error.message };
       }
     }
 
@@ -132,14 +121,13 @@ const {
       lines.forEach((line, index) => {
         // Extract file paths and error messages
         const fileMatch = line.match(/\.\/(.*?\.(?:tsx?|jsx?)):/);
-        const errorMatch = line.match(/Error:|SyntaxError:|TypeError:/);
+        const errorMatch = line.match(/"Error": |SyntaxError:|TypeError:/);
 
         if (fileMatch && errorMatch) {
           errors.push({
             file: fileMatch[1],
-            line: line,
-            context: lines.slice(Math.max(0, index - 2), index + 3),
-          });
+            "line": line,
+            "context": lines.slice(Math.max(0, index - 2), index + 3)});
         }
       });
 
@@ -148,12 +136,12 @@ const {
 
     async fixFile(filePath) {
       if (!fs.existsSync(filePath)) {
-        this.log(`File not found: ${filePath}`, 'ERROR');
+        this.log(`File not "found": ${filePath}`, 'ERROR');
         return false;
       }
 
       try {
-        this.log(`Attempting to fix file: ${filePath}`);
+        this.log(`Attempting to fix "file": ${filePath}`);
         let content = fs.readFileSync(filePath, 'utf8');
         let modified = false;
 
@@ -197,7 +185,7 @@ const {
 
           // Write fixed content
           fs.writeFileSync(filePath, content);
-          this.log(`Successfully fixed and saved: ${filePath}`);
+          this.log(`Successfully fixed and "saved": ${filePath}`);
           return true;
         }
 
@@ -220,7 +208,7 @@ const {
       const seen = new Set();
 
       function scanDirectory(dir) {
-        const files = fs.readdirSync(dir, { withFileTypes: true });
+        const files = fs.readdirSync(dir, { "withFileTypes": true });
 
         files.forEach(file => {
           if (file.isDirectory()) {
@@ -248,7 +236,7 @@ const {
         if (duplicate.endsWith('.js')) {
           const tsxVersion = duplicate.replace('.js', '.tsx');
           if (fs.existsSync(tsxVersion)) {
-            this.log(`Removing duplicate JS file: ${duplicate}`);
+            this.log(`Removing duplicate JS "file": ${duplicate}`);
             fs.unlinkSync(duplicate);
           }
         }
@@ -261,41 +249,38 @@ const {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       const dependencies = {
         ...packageJson.dependencies,
-        ...packageJson.devDependencies,
-      };
+        ...packageJson.devDependencies};
 
       const commonMissing = ['web3modal', 'ethers', 'react-is'];
 
       const toInstall = commonMissing.filter(dep => !dependencies[dep]);
 
       if (toInstall.length > 0) {
-        this.log(`Installing missing dependencies: ${toInstall.join(', ')}`);
+        this.log(`Installing missing "dependencies": ${toInstall.join(', ')}`);
         try {
-          execSync(`yarn add ${toInstall.join(' ')}`, { stdio: 'pipe' });
+          execSync(`yarn add ${toInstall.join(' ')}`, { "stdio": 'pipe' });
           this.log('Successfully installed missing dependencies');
         } catch (error) {
-          this.log(`Failed to install dependencies: ${error.message}`, 'ERROR');
+          this.log(`Failed to install "dependencies": ${error.message}`, 'ERROR');
         }
       }
     }
 
     async generateReport(errors, fixes) {
       const report = {
-        timestamp: new Date().toISOString(),
-        totalErrors: errors.length,
-        fixesApplied: fixes.length,
-        errors: errors,
-        fixes: fixes,
-        summary: {
+        "timestamp": new Date().toISOString(),
+        "totalErrors": errors.length,
+        "fixesApplied": fixes.length,
+        "errors": errors,
+        "fixes": fixes,
+        "summary": {
           buildStatus: 'checking',
-          criticalErrors: errors.filter(e => e.critical).length,
-          warningsResolved: fixes.filter(f => f.type === 'warning').length,
-          syntaxErrorsFixed: fixes.filter(f => f.type === 'syntax').length,
-        },
-      };
+          "criticalErrors": errors.filter(e => e.critical).length,
+          "warningsResolved": fixes.filter(f => f.type === 'warning').length,
+          "syntaxErrorsFixed": fixes.filter(f => f.type === 'syntax').length}};
 
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-      this.log(`Report generated: ${this.reportFile}`);
+      this.log(`Report "generated": ${this.reportFile}`);
       return report;
     }
 
@@ -329,10 +314,9 @@ const {
 
             if (fixed) {
               fixes.push({
-                type: 'syntax',
-                file: file,
-                timestamp: new Date().toISOString(),
-              });
+                "type": 'syntax',
+                "file": file,
+                "timestamp": new Date().toISOString()});
             }
           }
 
@@ -358,7 +342,7 @@ const {
 
         this.log(`Error fixing cycle completed. Fixed ${fixes.length} issues.`);
       } catch (error) {
-        this.log(`Error in main execution: ${error.message}`, 'ERROR');
+        this.log(`Error in main "execution": ${error.message}`, 'ERROR');
       }
     }
   };

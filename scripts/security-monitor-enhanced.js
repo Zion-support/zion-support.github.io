@@ -1,17 +1,17 @@
 console.log('🔒 Enhanced Security Monitor Starting...');
 
 const securityChecks = {
-  dependencies: () => {
+  "dependencies": () => {
     console.log('📦 Checking dependencies for vulnerabilities...');
     return true;
   },
   
-  codeScan: () => {
+  "codeScan": () => {
     console.log('🔍 Scanning code for security issues...');
     return true;
   },
   
-  headers: () => {
+  "headers": () => {
     console.log('🛡️ Checking security headers...');
     return true;
   }

@@ -7,8 +7,7 @@ const { execSync } = require('child_process');
 console.log('🧪 Starting Test Build...');
 
 // Temporarily move problematic files
-const problematicFiles = [
-  'components/ContactForm.tsx',
+const problematicFiles = ['components/ContactForm.tsx',
   'components/PerformanceMonitor.tsx',
 ];
 
@@ -20,16 +19,16 @@ try {
     if (fs.existsSync(file)) {
       const backupPath = `${file}.backup`;
       fs.renameSync(file, backupPath);
-      movedFiles.push({ original: file, backup: backupPath });
+      movedFiles.push({ "original": file, "backup": backupPath });
       console.log(`📦 Moved ${file} to ${backupPath}`)}
   });
 
   // Try to build
   console.log('🔨 Attempting build without problematic files...');
   try {
-    execSync('npm run build', { stdio: 'inherit' });
+    execSync('npm run build', { "stdio": 'inherit' });
     console.log('✅ Build successful!')} catch (error) {
-    console.log('❌ Build failed:', error.message)}
+    console.log('❌ Build "failed": ', error.message)}
 } finally {
   // Restore files
   movedFiles.forEach(({ original, backup }) => {

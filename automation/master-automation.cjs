@@ -8,8 +8,7 @@ const execAsync = promisify(exec);
 class MasterAutomation {
   constructor() {
     this.logFile = path.join(__dirname, 'logs', 'master-automation.log');
-    this.pm2Processes = [
-      'error-monitor',
+    this.pm2Processes = ['error-monitor',
       'lint-fixer',
       'build-monitor',
       'git-automation',
@@ -26,19 +25,17 @@ class MasterAutomation {
   async runCommand(command, options = {}) {
     try {
       const { stdout, stderr } = await execAsync(command, {
-        cwd: process.cwd(),
-        timeout: 30000,
-        ...options,
-      });
+        "cwd": process.cwd(),
+        "timeout": 30000,
+        ...options});
 
-      return { success: true, stdout, stderr };
+      return { "success": true, stdout, stderr };
     } catch (error) {
-      this.log(`Command failed: ${command} - ${error.message}`);
+      this.log(`Command "failed": ${command} - ${error.message}`);
       return {
-        success: false,
-        stdout: error.stdout || '',
-        stderr: error.stderr || error.message,
-      };
+        "success": false,
+        "stdout": error.stdout || '',
+        "stderr": error.stderr || error.message};
     }
   }
 
@@ -95,7 +92,7 @@ class MasterAutomation {
   }
 
   async getPM2Logs(processName = null, lines = 50) {
-    this.log(`Getting PM2 logs${processName ? ` for ${processName}` : ''}...`);
+    this.log(`Getting PM2 logs${processName ? ` for ${processName}" : ''}...");
 
     const command = processName
       ? `pm2 logs ${processName} --lines ${lines}`
@@ -128,13 +125,13 @@ class MasterAutomation {
 
         for (const process of runningProcesses) {
           this.log(
-            `Process: ${process.name} - Status: ${process.pm2_env.status} - Uptime: ${process.pm2_env.pm_uptime}`
+            `"Process": ${process.name} - "Status": ${process.pm2_env.status} - "Uptime": ${process.pm2_env.pm_uptime}`
           );
         }
 
         return runningProcesses;
       } catch (error) {
-        this.log(`Error parsing PM2 process list: ${error.message}`);
+        this.log(`Error parsing PM2 process "list": ${error.message}`);
         return [];
       }
     } else {
@@ -173,15 +170,13 @@ class MasterAutomation {
     this.log('Generating automation report...');
 
     const report = {
-      timestamp: new Date().toISOString(),
-      processes: await this.monitorProcesses(),
-      logs: {
+      "timestamp": new Date().toISOString(),
+      "processes": await this.monitorProcesses(),
+      "logs": {
         errorMonitor: await this.getPM2Logs('error-monitor', 20),
-        lintFixer: await this.getPM2Logs('lint-fixer', 20),
-        buildMonitor: await this.getPM2Logs('build-monitor', 20),
-        gitAutomation: await this.getPM2Logs('git-automation', 20),
-      },
-    };
+        "lintFixer": await this.getPM2Logs('lint-fixer', 20),
+        "buildMonitor": await this.getPM2Logs('build-monitor', 20),
+        "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
 
     const reportFile = path.join(__dirname, 'logs', 'automation-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -196,7 +191,7 @@ class MasterAutomation {
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, 'logs');
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
+      fs.mkdirSync(logsDir, { "recursive": true });
     }
 
     // Start PM2 processes
@@ -238,36 +233,35 @@ if (require.main === module) {
   switch (command) {
     case 'start':
       automation.start().catch(error => {
-        console.error('Master Automation failed:', error);
+        console.error('Master Automation "failed": ', error);
         process.exit(1);
       });
       break;
     case 'stop':
       automation.stop().catch(error => {
-        console.error('Failed to stop Master Automation:', error);
+        console.error('Failed to stop Master "Automation": ', error);
         process.exit(1);
       });
       break;
     case 'restart':
       automation.restartPM2Processes().catch(error => {
-        console.error('Failed to restart processes:', error);
+        console.error('Failed to restart "processes": ', error);
         process.exit(1);
       });
       break;
     case 'status':
       automation.monitorProcesses().catch(error => {
-        console.error('Failed to get status:', error);
+        console.error('Failed to get "status": ', error);
         process.exit(1);
       });
       break;
     case 'report':
       automation.generateReport().catch(error => {
-        console.error('Failed to generate report:', error);
+        console.error('Failed to generate "report": ', error);
         process.exit(1);
       });
       break;
-    default:
-      console.log(
+    "default": console.log(
         'Usage: node master-automation.js [start|stop|restart|status|report]'
       );
       process.exit(1);

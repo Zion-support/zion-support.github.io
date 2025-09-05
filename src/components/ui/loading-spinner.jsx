@@ -12,18 +12,18 @@ export function LoadingSpinner(props) {
   }; = props;
 
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-    xl: 'w-12 h-12'
-  };;
+    "sm": 'w-4 h-4',
+    "md": 'w-6 h-6',
+    "lg": 'w-8 h-8',
+    "xl": 'w-12 h-12'
+  };
 
   const variantClasses = {
-    default: 'text-zion-cyan',
-    primary: 'text-zion-blue',
-    secondary: 'text-zion-purple',
-    white: 'text-white'
-  };;
+    "default": 'text-zion-cyan',
+    "primary": 'text-zion-blue',
+    "secondary": 'text-zion-purple',
+    "white": 'text-white'
+  };
 
   return (
     <div className={cn('flex flex-col items-center gap-3', className)}>
@@ -39,9 +39,9 @@ export function LoadingSpinner(props) {
       </motion.div>
       {text && (
         <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+          initial={{ "opacity": 0, "y": 10 }}
+          animate={{ "opacity": 1, "y": 0 }}
+          transition={{ "delay": 0.2 }}
           className="text-zion-slate-light font-medium text-sm"
         >
           {text}

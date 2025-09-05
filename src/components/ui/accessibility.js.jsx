@@ -5,12 +5,12 @@ import {Button} from "button.tsx";
 export function AccessibilityPanel($1) {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
-        highContrast: false,
-        largeText: false,
-        reducedMotion: false,
-        screenReader: false,
-        fontSize: 16,
-        colorBlindMode: 'normal'
+        "highContrast": false,
+        "largeText": false,
+        "reducedMotion": false,
+        "screenReader": false,
+        "fontSize": 16,
+        "colorBlindMode": 'normal'
     };);
     // Apply accessibility settings to document
     useEffect(() => {
@@ -53,20 +53,20 @@ export function AccessibilityPanel($1) {
   [key]: value !== null ? value : !settings[key]
         
 
-};;
+};
         saveSettings(newSettings)}, [settings, saveSettings]);
     // Reset to defaults
     const resetSettings = useCallback(() => {
         const defaults = {
-  highContrast: false,
-            largeText: false,
-            reducedMotion: false,
-            screenReader: false,
-            fontSize: 16,
-  colorBlindMode: 'normal'
+  "highContrast": false,
+            "largeText": false,
+            "reducedMotion": false,
+            "screenReader": false,
+            "fontSize": 16,
+  "colorBlindMode": 'normal'
         
 
-};;
+};
         saveSettings(defaults)}, [saveSettings]);';
     // Font size controls
     const increaseFontSize = useCallback(() => {toggleSetting('fontSize', Math.min(settings.fontSize + 2, 24))};, [settings.fontSize, toggleSetting]);
@@ -84,38 +84,38 @@ export function AccessibilityPanel($1) {
         return null;
     return (<>
       {/* Accessibility Toggle Button */}
-      <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed top-4 right-4 z-50 p-3 bg-zion-purple hover:bg-zion-purple-dark text-white rounded-full shadow-lg transition-all duration-300 ${className}`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Accessibility settings">
+      <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed top-4 right-4 z-50 p-3 bg-zion-purple "hover": bg-zion-purple-dark text-white rounded-full shadow-lg transition-all duration-300 ${className}`} whileHover={{ "scale": 1.1 }} whileTap={{ "scale": 0.9 }} aria-label="Accessibility settings">
         <Accessibility className="w-6 h-6" />
       </motion.button>
 
       {/* Accessibility Panel */}
       <AnimatePresence>
-        {isOpen && (<motion.div className="fixed inset-0 z-40" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}>
+        {isOpen && (<motion.div className="fixed inset-0 z-40" initial={{ "opacity": 0 }} animate={{ "opacity": 1 }} exit={{ "opacity": 0 }} transition={{ "duration": 0.2 }}>
             {/* Backdrop */}
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsOpen(false)}/>
             
             {/* Panel */}
             <motion.div className="absolute top-4 right-4 w-80 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-h-[calc(100vh-2rem)] overflow-y-auto" initial = {
-  { opacity: 0, x: 300,
-  scale: 0.95 
+  { "opacity": 0, "x": 300,
+  "scale": 0.95 
 
 }} animate = {
-  { opacity: 1, x: 0,
-  scale: 1 
+  { "opacity": 1, "x": 0,
+  "scale": 1 
 
 }} exit = {
-  { opacity: 0, x: 300,
-  scale: 0.95 
+  { "opacity": 0, "x": 300,
+  "scale": 0.95 
 
 }} transition = {
-  { duration: 0.3,
-  ease: "easeOut" 
+  { "duration": 0.3,
+  "ease": "easeOut" 
 
 }}>
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl font-bold text-white">Accessibility</h2>
-                <button onClick={() => setIsOpen(false)} className="p-2 rounded-lg hover:bg-zion-blue-light/20 transition-colors duration-200" aria-label="Close accessibility panel">
+                <button onClick={() => setIsOpen(false)} className="p-2 rounded-lg "hover": bg-zion-blue-light/20 transition-colors duration-200" aria-label="Close accessibility panel">
                   <X className="w-5 h-5 text-zinc-400" />
                 </button>
               </div>
@@ -150,7 +150,7 @@ export function AccessibilityPanel($1) {
                 <div className="space-y-2">
                   <div className="flex items-center gap-3">
                     <Type className="w-5 h-5 text-zion-cyan" />
-                    <span className="text-zinc-300">Font Size: {settings.fontSize}px</span>
+                    <span className="text-zinc-300">Font "Size": {settings.fontSize}px</span>
                   </div>
                   <div className="flex items-center gap-2 ml-8">
                     <Button size="sm" variant="outline" onClick={decreaseFontSize} disabled={settings.fontSize <= 12} className="p-1">
@@ -169,7 +169,7 @@ export function AccessibilityPanel($1) {
                     <span className="text-zinc-300">Color Blind Mode</span>
                   </div>';
                   <select value={settings.colorBlindMode} onChange={(e) => toggleSetting('colorBlindMode',
-  e.target.value)} className="ml-8 px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+  e.target.value)} className="ml-8 px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm "focus": border-zion-cyan focus:outline-none">
                     <option value="normal">Normal</option>
                     <option value="protanopia">Protanopia (Red-Blind)</option>
                     <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
@@ -210,8 +210,8 @@ export function AccessibilityPanel($1) {
 
               {/* Test Announcement */}
               {settings.screenReader && (<divclassName="mt-4 p-3 bg-zion-blue/20 rounded-lg">
-                  <p className="text-zinc-300 text-sm mb-2">Test screen reader announcement:</p>';
-                  <Button size="sm" onClick={() => announceToScreenReader('This is a test announcement for screen readers')} className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark">
+                  <p className="text-zinc-300 text-sm mb-2">Test screen reader "announcement": </p>';
+                  <Button size="sm" onClick={() => announceToScreenReader('This is a test announcement for screen readers')} className="bg-zion-cyan "hover": bg-zion-cyan-light text-zion-blue-dark">
                     Test Announcement
                   </Button>
                     </div>
@@ -219,7 +219,7 @@ export function AccessibilityPanel($1) {
 }
               {/* Reset Button */}
               <div className="mt-6 pt-6 border-t border-zion-blue-light/20">
-                <Button onClick={resetSettings} variant="outline" className="w-full border-zinc-500 text-zinc-300 hover:bg-zinc-500/20">
+                <Button onClick={resetSettings} variant="outline" className="w-full border-zinc-500 text-zinc-300 "hover": bg-zinc-500/20">
                   Reset to Defaults
                 </Button>
               </div>
@@ -236,7 +236,7 @@ export function AccessibilityPanel($1) {
       {/* Screen Reader Only Class */}
       <styledangerouslySetInnerHTML = {
   {
-            __html: `
+            "__html": "
           .sr-only {
             position: absolute;
             width: 1px;
@@ -246,12 +246,12 @@ export function AccessibilityPanel($1) {
             overflow: hidden;
             clip: rect(0, 0, 0,
   0);
-            white-space: nowrap;
+            white-"space": nowrap;
             border: 0
 
 }
 
-          .high-contrast {--zion-cyan: #00ffff;
+          .high-contrast {--zion-"cyan": #00ffff;
             --zion-blue: #0066ff;
             --zion-purple: #9900ff;
             --zion-blue-dark: #000033;
@@ -260,31 +260,31 @@ export function AccessibilityPanel($1) {
             --zion-purple-dark: #6600cc;
             --zion-purple-light: #cc33ff}
 
-          [data-color-blind="protanopia"] {filter: url('#protanopia-filter')}
+          [data-color-blind="protanopia"] {"filter": url('#protanopia-filter')}
 
-          [data-color-blind="deuteranopia"] {filter: url('#deuteranopia-filter')}
+          [data-color-blind="deuteranopia"] {"filter": url('#deuteranopia-filter')}
 
-          [data-color-blind="tritanopia"] {filter: url('#tritanopia-filter')}
+          [data-color-blind="tritanopia"] {"filter": url('#tritanopia-filter')}
 
-          :root {--font-size: 16px;
+          :root {--font-"size": 16px;
             --reduced-motion: no-preference}
 
-          * {font-size: var(--font-size)}
+          * {font-"size": var(--font-size)}
 
-          @media (prefers-reduced-motion: reduce) {
+          @media (prefers-reduced-"motion": reduce) {
             * {
               animation-duration: 0.01ms !important;
               animation-iteration-count: 1 !important;
               transition-duration: 0.01ms !important}
           }
 
-          [style*="--reduced-motion: reduce"] * {animation-duration: 0.01ms !important;
+          [style*="--reduced-"motion": reduce"] * {animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
             transition-duration: 0.01ms !important}
-        `
+        "
         }} />
       {/* SVG Filters for Color Blind Modes */}
-      <svg style="{{{ position: 'absolute'; width: 0; height: 0}}"}>
+      <svg style="{{{ "position": 'absolute'; width: 0; height: 0}}"}>
         <defs>
           <filter id="protanopia-filter">
             <feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0" />

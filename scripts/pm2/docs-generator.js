@@ -25,7 +25,7 @@ class DocsGenerator {
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { "recursive": true });
     }
   }
 
@@ -38,16 +38,16 @@ class DocsGenerator {
     try {
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {
-      console.error('Failed to write to log file:', error.message);
+      console.error('Failed to write to log "file": ', error.message);
     }
   }
 
   error(message) {
     this.log(message, 'ERROR');
     try {
-      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);
+      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] "ERROR": ${message}\n`);
     } catch (err) {
-      console.error('Failed to write to error file:', err.message);
+      console.error('Failed to write to error "file": ', err.message);
     }
   }
 
@@ -61,75 +61,75 @@ class DocsGenerator {
       readmeContent += `${packageJson.description || 'A modern web application'}\n\n`;
       
       // Add version and status badges
-      readmeContent += `![Version](https://img.shields.io/badge/version-${packageJson.version || '1.0.0'}-blue.svg)\n`;
-      readmeContent += `![Node](https://img.shields.io/badge/node-${process.version}-green.svg)\n`;
-      readmeContent += `![License](https://img.shields.io/badge/license-${packageJson.license || 'MIT'}-yellow.svg)\n\n`;
+      readmeContent += `![Version]("https": //img.shields.io/badge/version-${packageJson.version || '1.0.0'}-blue.svg)\n`;
+      readmeContent += `![Node]("https": //img.shields.io/badge/node-${process.version}-green.svg)\n`;
+      readmeContent += `![License]("https": //img.shields.io/badge/license-${packageJson.license || 'MIT'}-yellow.svg)\n\n`;
       
       // Add table of contents
-      readmeContent += `## Table of Contents\n\n`;
-      readmeContent += `- [Installation](#installation)\n`;
-      readmeContent += `- [Usage](#usage)\n`;
-      readmeContent += `- [Scripts](#scripts)\n`;
-      readmeContent += `- [API Documentation](#api-documentation)\n`;
-      readmeContent += `- [Contributing](#contributing)\n`;
-      readmeContent += `- [License](#license)\n\n`;
+      readmeContent += "## Table of Contents\n\n";
+      readmeContent += "- [Installation](#installation)\n";
+      readmeContent += "- [Usage](#usage)\n";
+      readmeContent += "- [Scripts](#scripts)\n";
+      readmeContent += "- [API Documentation](#api-documentation)\n";
+      readmeContent += "- [Contributing](#contributing)\n";
+      readmeContent += "- [License](#license)\n\n";
       
       // Add installation section
-      readmeContent += `## Installation\n\n`;
-      readmeContent += `\`\`\`bash\n`;
-      readmeContent += `npm install\n`;
-      readmeContent += `\`\`\`\n\n`;
+      readmeContent += "## Installation\n\n";
+      readmeContent += "\"\"\"bash\n";
+      readmeContent += "npm install\n";
+      readmeContent += "\"\"\"\n\n";
       
       // Add usage section
-      readmeContent += `## Usage\n\n`;
-      readmeContent += `\`\`\`bash\n`;
-      readmeContent += `# Development\n`;
-      readmeContent += `npm run dev\n\n`;
-      readmeContent += `# Production build\n`;
-      readmeContent += `npm run build\n`;
-      readmeContent += `npm run start\n`;
-      readmeContent += `\`\`\`\n\n`;
+      readmeContent += "## Usage\n\n";
+      readmeContent += "\"\"\"bash\n";
+      readmeContent += "# Development\n";
+      readmeContent += "npm run dev\n\n";
+      readmeContent += "# Production build\n";
+      readmeContent += "npm run build\n";
+      readmeContent += "npm run start\n";
+      readmeContent += "\"\"\"\n\n";
       
       // Add scripts section
       if (packageJson.scripts) {
-        readmeContent += `## Scripts\n\n`;
-        readmeContent += `| Script | Description |\n`;
-        readmeContent += `|--------|-------------|\n`;
+        readmeContent += "## Scripts\n\n";
+        readmeContent += "| Script | Description |\n";
+        readmeContent += "|--------|-------------|\n";
         
         for (const [script, description] of Object.entries(packageJson.scripts)) {
           const desc = this.getScriptDescription(script, description);
-          readmeContent += `| \`${script}\` | ${desc} |\n`;
+          readmeContent += "| \"${script}\` | ${desc} |\n`;
         }
-        readmeContent += `\n`;
+        readmeContent += "\n";
       }
       
       // Add API documentation section
       if (this.apiDocs) {
-        readmeContent += `## API Documentation\n\n`;
-        readmeContent += `API documentation is automatically generated and available at \`/api/docs\`.\n\n`;
+        readmeContent += "## API Documentation\n\n";
+        readmeContent += "API documentation is automatically generated and available at \"/api/docs\".\n\n";
       }
       
       // Add contributing section
-      readmeContent += `## Contributing\n\n`;
-      readmeContent += `1. Fork the repository\n`;
-      readmeContent += `2. Create your feature branch (\`git checkout -b feature/amazing-feature\`)\n`;
-      readmeContent += `3. Commit your changes (\`git commit -m 'Add some amazing feature'\`)\n`;
-      readmeContent += `4. Push to the branch (\`git push origin feature/amazing-feature\`)\n`;
-      readmeContent += `5. Open a Pull Request\n\n`;
+      readmeContent += "## Contributing\n\n";
+      readmeContent += "1. Fork the repository\n";
+      readmeContent += "2. Create your feature branch (\"git checkout -b feature/amazing-feature\")\n";
+      readmeContent += "3. Commit your changes (\"git commit -m 'Add some amazing feature'\")\n";
+      readmeContent += "4. Push to the branch (\"git push origin feature/amazing-feature\")\n";
+      readmeContent += "5. Open a Pull Request\n\n";
       
       // Add license section
-      readmeContent += `## License\n\n`;
+      readmeContent += "## License\n\n";
       readmeContent += `This project is licensed under the ${packageJson.license || 'MIT'} License.\n\n`;
       
       // Write README file
       fs.writeFileSync('README.md', readmeContent);
       this.log('README.md generated successfully');
       
-      return { success: true, file: 'README.md' };
+      return { "success": true, "file": 'README.md' };
       
     } catch (error) {
-      this.error(`Failed to generate README: ${error.message}`);
-      return { success: false, error: error.message };
+      this.error(`Failed to generate "README": ${error.message}`);
+      return { "success": false, "error": error.message };
     }
   }
 
@@ -140,7 +140,7 @@ class DocsGenerator {
       'start': 'Start production server',
       'test': 'Run tests',
       'lint': 'Run linter',
-      'lint:fix': 'Fix linting issues',
+      '"lint": fix': 'Fix linting issues',
       'type-check': 'Run TypeScript type checking',
       'clean': 'Clean build artifacts',
       'check': 'Run all checks (lint, type-check, test)',
@@ -156,8 +156,8 @@ class DocsGenerator {
     
     try {
       const apiFiles = this.findApiFiles();
-      let apiDocs = `# API Documentation\n\n`;
-      apiDocs += `Generated on: ${new Date().toISOString()}\n\n`;
+      let apiDocs = "# API Documentation\n\n";
+      apiDocs += `Generated "on": ${new Date().toISOString()}\n\n`;
       
       for (const file of apiFiles) {
         const fileDocs = this.extractApiDocumentation(file);
@@ -168,17 +168,17 @@ class DocsGenerator {
       
       const docsDir = 'docs';
       if (!fs.existsSync(docsDir)) {
-        fs.mkdirSync(docsDir, { recursive: true });
+        fs.mkdirSync(docsDir, { "recursive": true });
       }
       
       fs.writeFileSync(path.join(docsDir, 'API.md'), apiDocs);
       this.log('API documentation generated successfully');
       
-      return { success: true, file: 'docs/API.md' };
+      return { "success": true, "file": 'docs/API.md' };
       
     } catch (error) {
-      this.error(`Failed to generate API docs: ${error.message}`);
-      return { success: false, error: error.message };
+      this.error(`Failed to generate API "docs": ${error.message}`);
+      return { "success": false, "error": error.message };
     }
   }
 
@@ -265,9 +265,9 @@ class DocsGenerator {
   }
 
   formatApiComment(comment) {
-    let formatted = '```\n';
+    let formatted = '"""\n';
     formatted += comment.replace(/@\w+/g, '').trim();
-    formatted += '\n```\n\n';
+    formatted += '\n"""\n\n';
     return formatted;
   }
 
@@ -276,8 +276,8 @@ class DocsGenerator {
     
     try {
       const componentFiles = this.findComponentFiles();
-      let componentDocs = `# Component Documentation\n\n`;
-      componentDocs += `Generated on: ${new Date().toISOString()}\n\n`;
+      let componentDocs = "# Component Documentation\n\n";
+      componentDocs += `Generated "on": ${new Date().toISOString()}\n\n`;
       
       for (const file of componentFiles) {
         const componentDoc = this.extractComponentDocumentation(file);
@@ -288,17 +288,17 @@ class DocsGenerator {
       
       const docsDir = 'docs';
       if (!fs.existsSync(docsDir)) {
-        fs.mkdirSync(docsDir, { recursive: true });
+        fs.mkdirSync(docsDir, { "recursive": true });
       }
       
       fs.writeFileSync(path.join(docsDir, 'COMPONENTS.md'), componentDocs);
       this.log('Component documentation generated successfully');
       
-      return { success: true, file: 'docs/COMPONENTS.md' };
+      return { "success": true, "file": 'docs/COMPONENTS.md' };
       
     } catch (error) {
-      this.error(`Failed to generate component docs: ${error.message}`);
-      return { success: false, error: error.message };
+      this.error(`Failed to generate component "docs": ${error.message}`);
+      return { "success": false, "error": error.message };
     }
   }
 
@@ -385,9 +385,9 @@ class DocsGenerator {
   }
 
   formatComponentComment(comment) {
-    let formatted = '```\n';
+    let formatted = '"""\n';
     formatted += comment.replace(/@\w+/g, '').trim();
-    formatted += '\n```\n\n';
+    formatted += '\n"""\n\n';
     return formatted;
   }
 
@@ -396,15 +396,15 @@ class DocsGenerator {
     
     try {
       const report = {
-        timestamp: new Date().toISOString(),
-        processName: this.processName,
-        readmeGenerated: this.updateReadme ? await this.generateReadme() : null,
-        apiDocsGenerated: this.apiDocs ? await this.generateApiDocs() : null,
-        componentDocsGenerated: this.componentDocs ? await this.generateComponentDocs() : null,
-        environment: {
+        "timestamp": new Date().toISOString(),
+        "processName": this.processName,
+        "readmeGenerated": this.updateReadme ? await this.generateReadme() : null,
+        "apiDocsGenerated": this.apiDocs ? await this.generateApiDocs() : null,
+        "componentDocsGenerated": this.componentDocs ? await this.generateComponentDocs() : null,
+        "environment": {
           nodeVersion: process.version,
-          platform: process.platform,
-          cwd: process.cwd()
+          "platform": process.platform,
+          "cwd": process.cwd()
         }
       };
       
@@ -412,16 +412,16 @@ class DocsGenerator {
       const reportDir = path.dirname(reportFile);
       
       if (!fs.existsSync(reportDir)) {
-        fs.mkdirSync(reportDir, { recursive: true });
+        fs.mkdirSync(reportDir, { "recursive": true });
       }
       
       fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-      this.log(`Documentation report saved to: ${reportFile}`);
+      this.log(`Documentation report saved "to": ${reportFile}`);
       
       return report;
       
     } catch (error) {
-      this.error(`Failed to generate documentation report: ${error.message}`);
+      this.error(`Failed to generate documentation "report": ${error.message}`);
       return null;
     }
   }
@@ -448,7 +448,7 @@ class DocsGenerator {
 if (require.main === module) {
   const generator = new DocsGenerator();
   generator.start().catch(error => {
-    console.error('Documentation generator failed to start:', error);
+    console.error('Documentation generator failed to "start": ', error);
     process.exit(1);
   });
 }

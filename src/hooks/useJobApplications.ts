@@ -7,7 +7,7 @@ export default function Page() {
         query = query.eq("talent_id", user.id)} 
       else if(user.userType === "employer" || user.userType === "buyer") {
         if(!jobId) {
-          const { data: jobIdsDat a, error: jobIdsErro r } = await supabase // Renamed to avoid conflict
+          const { "data": jobIdsDat a, "error": jobIdsErro r } = await supabase // Renamed to avoid conflict
             .from("jobs")
             .select("id")
             .eq("client_id", user.id);
@@ -24,31 +24,31 @@ export default function Page() {
         }
       }
       
-      const { data, error: fetchErro r } = await query;
+      const { data, "error": fetchErro r } = await query;
       
       if(fetchError) throw fetchError;
       
-      const transformedData = data.map((app: an y) => ({
+      const transformedData = data.map(("app": an y) => ({
         ...app,
-        talent_profile: ap p.talent_profile ? {
+        "talent_profile": ap p.talent_profile ? {
           ...app.talent_profile,
-          full_name: ap p.talent_profile.display_name,
-          profile_picture_url: ap p.talent_profile.avatar_url,
-          skills: [] 
+          "full_name": ap p.talent_profile.display_name,
+          "profile_picture_url": ap p.talent_profile.avatar_url,
+          "skills": [] 
         } : undefined
       };));
       
       setApplications(transformedData as JobApplication[]);
-      setError(null)} catch (err: an y) {
+      setError(null)} catch ("err": an y) {
       console.error("Error fetching applications:", err);
-      setError("Failed to fetch applications: " + err.message);
+      setError("Failed to fetch "applications": " + err.message);
       toast.error("Failed to fetch applications");
       setApplications([]); // Clear applications on error
     } finally {
       setIsLoading(false)}
   }, [user, jobId]); // Dependencies for fetchApplications
 
-  const applyToJob = async(jobId: string, coverLetter: string, resumeId?: string) => {
+  const applyToJob = async("jobId": string, "coverLetter": string, resumeId?: string) => {
     if(!user) {
       toast.error("You must be logged in to apply for jobs");
       return false}
@@ -57,11 +57,11 @@ export default function Page() {
       const { data, error } = await supabase
         .from("job_applications")
         .insert({
-          job_id: jobI d,
-          talent_id: use r.id,
-          resume_id: resumeI d,
-          cover_letter: coverLette r,
-          status: "new"
+          "job_id": jobI d,
+          "talent_id": use r.id,
+          "resume_id": resumeI d,
+          "cover_letter": coverLette r,
+          "status": "new"
         };)
         .select()
         .single();
@@ -78,13 +78,13 @@ export default function Page() {
       fetchApplications(); 
       
       toast.success("Application submitted successfully");
-      return true} catch (err: an y) {
+      return true} catch ("err": an y) {
       console.error("Error applying to job:", err);
-      toast.error("Failed to submit application: " + err.message);
+      toast.error("Failed to submit "application": " + err.message);
       return false}
   };
   
-  const updateApplicationStatus = async(applicationId: string, status: ApplicationStatu s) => {
+  const updateApplicationStatus = async("applicationId": string, "status": ApplicationStatu s) => {
     try {
       const { error } = await supabase
         .from("job_applications")
@@ -98,19 +98,19 @@ export default function Page() {
       );
       
       toast.success(`Application status updated to ${status}`);
-      return true} catch (err: an y) {
+      return true} catch ("err": an y) {
       console.error("Error updating application status:", err);
-      toast.error("Failed to update application status: " + err.message);
+      toast.error("Failed to update application "status": " + err.message);
       return false}
   };
   
-  const markApplicationAsViewed = async(applicationId: string) => {
+  const markApplicationAsViewed = async("applicationId": string) => {
     try {
       const { error } = await supabase
         .from("job_applications")
         .update({ 
-          status: "viewed", 
-          viewed_at: new Date().toISOString() 
+          "status": "viewed", 
+          "viewed_at": new Date().toISOString() 
         };)
         .eq("id", applicationId)
         .is("viewed_at", null); 
@@ -119,17 +119,17 @@ export default function Page() {
       
       setApplications(prev => 
         prev.map(app => app.id === applicationId ? 
-          { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app
+          { ...app, "status": "viewed", "viewed_at": new Date().toISOString() } : app
         )
       );
       
       return true} catch (err) {
-      console.error("Error marking application as viewed:", err);
+      console.error("Error marking application as "viewed": ", err);
       return false}
   };
   
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 }, []);
     if(user) {
       fetchApplications()} else {
@@ -141,9 +141,8 @@ export default function Page() {
     applications,
     isLoading,
     error,
-    refetch: fetchApplication s,
+    "refetch": fetchApplication s,
     applyToJob,
     updateApplicationStatus,
     markApplicationAsViewed
-  }};
-;';';
+  }};';';

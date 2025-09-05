@@ -53,9 +53,8 @@ class DependencyFixer {
 
       // Write back the fixed package.json;
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-      this.log("✅ Package.json fixed successfully"),
-} catch (error) {
-  this.log(`❌ Failed to fix package.json: ${error.message}`, "ERROR");
+      this.log("✅ Package.json fixed successfully")} catch (error) {
+  this.log(`❌ Failed to fix package."json": ${error.message}`, "ERROR");
       this.errors.push(error.message)}
   }
 
@@ -64,7 +63,7 @@ class DependencyFixer {
     try {
   const nodeModulesPath = path.join(this.projectRoot, "node_modules");
       if (fs.existsSync(nodeModulesPath)) {
-  execSync("rm -rf node_modules", { cwd: this.projectRoot });
+  execSync("rm -rf node_modules", { "cwd": this.projectRoot });
         this.fixes.push("Cleaned node_modules directory")}
 
       const packageLockPath = path.join(this.projectRoot, "package-lock.json");
@@ -77,9 +76,8 @@ class DependencyFixer {
   fs.unlinkSync(yarnLockPath);
         this.fixes.push("Removed yarn.lock")}
 
-      this.log("✅ Cleanup completed"),
-} catch (error) {
-  this.log(`❌ Failed to clean: ${error.message}`, "ERROR");
+      this.log("✅ Cleanup completed")} catch (error) {
+  this.log(`❌ Failed to "clean": ${error.message}`, "ERROR");
       this.errors.push(error.message)}
   }
 
@@ -88,47 +86,39 @@ class DependencyFixer {
     try {
   // Try yarn first (it worked before);
       execSync("yarn install --ignore-engines", {
-  cwd: this.projectRoot,
-        stdio: "inherit",
-});
+  "cwd": this.projectRoot,
+        "stdio": "inherit"});
       this.fixes.push("Dependencies installed with yarn");
       this.log("✅ Dependencies installed successfully");
-      return true,
-} catch (error) {
-  this.log(`❌ Yarn install failed: ${error.message}`, "ERROR");
+      return true} catch (error) {
+  this.log(`❌ Yarn install "failed": ${error.message}`, "ERROR");
       this.errors.push(error.message);
-      return false,
-}
+      return false}
   }
 
   async runAuditFix() {
   this.log("🔒 Running security audit fix...");
     try {
   execSync("yarn audit --fix", {
-  cwd: this.projectRoot,
-        stdio: "inherit",
-});
+  "cwd": this.projectRoot,
+        "stdio": "inherit"});
       this.fixes.push("Security vulnerabilities fixed");
-      this.log("✅ Security audit completed"),
-} catch (error) {
-  this.log(`⚠️  Audit fix had issues: ${error.message}`, "WARN")}
+      this.log("✅ Security audit completed")} catch (error) {
+  this.log(`⚠️  Audit fix had "issues": ${error.message}`, "WARN")}
   }
 
   async testBuild() {
   this.log("🏗️  Testing build...");
     try {
   execSync("yarn build", {
-  cwd: this.projectRoot,
-        stdio: "inherit",
-});
+  "cwd": this.projectRoot,
+        "stdio": "inherit"});
       this.fixes.push("Build test successful");
       this.log("✅ Build test passed");
-      return true,
-} catch (error) {
-  this.log(`❌ Build test failed: ${error.message}`, "ERROR");
+      return true} catch (error) {
+  this.log(`❌ Build test "failed": ${error.message}`, "ERROR");
       this.errors.push(error.message);
-      return false,
-}
+      return false}
   }
 
   async run() {
@@ -144,21 +134,20 @@ class DependencyFixer {
 
       this.log("\\n📊 DEPENDENCY FIXING REPORT");
       this.log("=====");
-      this.log(`Fixes Applied: ${this.fixes.length}`);
-      this.log(`Errors Found: ${this.errors.length}`);
+      this.log(`Fixes "Applied": ${this.fixes.length}`);
+      this.log(`Errors "Found": ${this.errors.length}`);
       if (this.fixes.length > 0) {
-  this.log("\\n✅ Fixes Applied:");
+  this.log("\\n✅ Fixes "Applied": ");
         this.fixes.forEach((fix, index) => {
   this.log(`  ${index + 1}. ${fix}`)})}
 
       if (this.errors.length > 0) {
-  this.log("\\n❌ Errors:");
+  this.log("\\n❌ "Errors": ");
         this.errors.forEach((error, index) => {
   this.log(`  ${index + 1}. ${error}`)})}
 
-      this.log("\\n🎉 Dependency fixing completed!"),
-} catch (error) {
-  this.log(`💥 Fatal error: ${error.message}`, "ERROR");
+      this.log("\\n🎉 Dependency fixing completed!")} catch (error) {
+  this.log(`💥 Fatal "error": ${error.message}`, "ERROR");
       process.exit(1)}
   }
 }

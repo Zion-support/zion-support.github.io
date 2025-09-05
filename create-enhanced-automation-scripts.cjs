@@ -13,7 +13,7 @@ class EnhancedAutomationScriptCreator {
     console.log(`[${new Date().toISOString()}] ${message}`)}
 
   createPerformanceMonitor() {
-    const content = `#!/usr/bin/env node
+    const content = "#!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
@@ -25,7 +25,7 @@ class PerformanceMonitor {
     this.reportFile = path.join(this.projectRoot, 'performance-monitor-report.json')}
 
   log(message) {
-    console.log(\`[\${new Date().toISOString()}] \${message}\`)}
+    console.log(\"[\${new Date().toISOString()}] \${message}\")}
 
   async checkBuildPerformance() {
     this.log('🔍 Checking build performance');
@@ -33,21 +33,21 @@ class PerformanceMonitor {
     const startTime = Date.now();
     try {
       execSync('npm run build', { 
-        cwd: this.projectRoot, 
-        stdio: 'pipe',
-        timeout: 300000 
+        "cwd": this.projectRoot, 
+        "stdio": 'pipe',
+        "timeout": 300000 
       });
       const buildTime = Date.now() - startTime;
       
       return {
-        success: true,
-        buildTime: buildTime,
-        status: buildTime < 60000 ? 'excellent' : buildTime < 120000 ? 'good' : 'needs_optimization'
+        "success": true,
+        "buildTime": buildTime,
+        "status": buildTime < 60000 ? 'excellent' : buildTime < 120000 ? 'good' : 'needs_optimization'
       }} catch (error) {
       return {
-        success: false,
-        error: error.message,
-        buildTime: Date.now() - startTime
+        "success": false,
+        "error": error.message,
+        "buildTime": Date.now() - startTime
       }}
   }
 
@@ -57,7 +57,7 @@ class PerformanceMonitor {
     try {
       const buildDir = path.join(this.projectRoot, '.next');
       if (!fs.existsSync(buildDir)) {
-        return { error: 'Build directory not found' }}
+        return { "error": 'Build directory not found' }}
 
       const getDirSize = (dir) => {
         let size = 0;
@@ -78,11 +78,11 @@ class PerformanceMonitor {
       const sizeInMB = (bundleSize / 1024 / 1024).toFixed(2);
       
       return {
-        size: bundleSize,
-        sizeInMB: sizeInMB,
-        status: sizeInMB < 5 ? 'excellent' : sizeInMB < 10 ? 'good' : 'needs_optimization'
+        "size": bundleSize,
+        "sizeInMB": sizeInMB,
+        "status": sizeInMB < 5 ? 'excellent' : sizeInMB < 10 ? 'good' : 'needs_optimization'
       }} catch (error) {
-      return { error: error.message }}
+      return { "error": error.message }}
   }
 
   async checkDependencies() {
@@ -99,38 +99,37 @@ class PerformanceMonitor {
       const knownIssues = {
         'react': '18.2.0',
         'next': '15.5.2',
-        'typescript': '5.9.2',
-      };
+        'typescript': '5.9.2'};
       
       for (const [dep, version] of Object.entries(knownIssues)) {
         if (dependencies[dep] && dependencies[dep] !== version) {
-          outdatedDeps.push({ dep, current: dependencies[dep], recommended: version })}
+          outdatedDeps.push({ dep, "current": dependencies[dep], "recommended": version })}
       }
       
       return {
-        totalDeps: Object.keys(dependencies).length,
+        "totalDeps": Object.keys(dependencies).length,
         outdatedDeps,
         securityIssues
       }} catch (error) {
-      return { error: error.message }}
+      return { "error": error.message }}
   }
 
   generateReport(results) {
     const report = {
-      timestamp: new Date().toISOString(),
-      performance: results.build,
-      bundle: results.bundle,
-      dependencies: results.dependencies,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "performance": results.build,
+      "bundle": results.bundle,
+      "dependencies": results.dependencies,
+      "summary": {
         buildStatus: results.build?.status || 'unknown',
-        bundleStatus: results.bundle?.status || 'unknown',
-        totalDependencies: results.dependencies?.totalDeps || 0,
-        outdatedDependencies: results.dependencies?.outdatedDeps?.length || 0
+        "bundleStatus": results.bundle?.status || 'unknown',
+        "totalDependencies": results.dependencies?.totalDeps || 0,
+        "outdatedDependencies": results.dependencies?.outdatedDeps?.length || 0
       }
     };
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(\`📊 Performance report generated: \${this.reportFile}\`);
+    this.log(\"📊 Performance report "generated": \${this.reportFile}\");
     
     return report}
 
@@ -143,14 +142,14 @@ class PerformanceMonitor {
       const depResults = await this.checkDependencies();
       
       const report = this.generateReport({
-        build: buildResults,
-        bundle: bundleResults,
-        dependencies: depResults
+        "build": buildResults,
+        "bundle": bundleResults,
+        "dependencies": depResults
       });
       
       this.log('✅ Performance monitoring completed');
       return report} catch (error) {
-      this.log(\`❌ Performance monitoring failed: \${error.message}\`);
+      this.log(\"❌ Performance monitoring "failed": \${error.message}\");
       throw error}
   }
 }
@@ -162,9 +161,9 @@ monitor.run()
     console.log('✅ Performance monitoring completed successfully');
     process.exit(0)})
   .catch(error => {
-    console.error('❌ Performance monitoring failed:', error.message);
+    console.error('❌ Performance monitoring "failed": ', error.message);
     process.exit(1)});
-`;
+";
 
     fs.writeFileSync(
       path.join(this.scriptsDir, 'enhanced-performance-monitor.js'),
@@ -174,7 +173,7 @@ monitor.run()
     this.log('✅ Created enhanced performance monitor')}
 
   createHealthChecker() {
-    const content = `#!/usr/bin/env node
+    const content = "#!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
@@ -186,7 +185,7 @@ class HealthChecker {
     this.reportFile = path.join(this.projectRoot, 'health-check-report.json')}
 
   log(message) {
-    console.log(\`[\${new Date().toISOString()}] \${message}\`)}
+    console.log(\"[\${new Date().toISOString()}] \${message}\")}
 
   async checkFileStructure() {
     this.log('📁 Checking file structure');
@@ -195,23 +194,23 @@ class HealthChecker {
     const requiredFiles = ['package.json', 'next.config.js', 'tsconfig.json'];
     
     const results = {
-      directories: {},
-      files: {},
-      issues: []
+      "directories": {},
+      "files": {},
+      "issues": []
     };
     
     for (const dir of requiredDirs) {
       const dirPath = path.join(this.projectRoot, dir);
       results.directories[dir] = fs.existsSync(dirPath);
       if (!results.directories[dir]) {
-        results.issues.push(\`Missing directory: \${dir}\`)}
+        results.issues.push(\"Missing "directory": \${dir}\")}
     }
     
     for (const file of requiredFiles) {
       const filePath = path.join(this.projectRoot, file);
       results.files[file] = fs.existsSync(filePath);
       if (!results.files[file]) {
-        results.issues.push(\`Missing file: \${file}\`)}
+        results.issues.push(\"Missing "file": \${file}\")}
     }
     
     return results}
@@ -220,9 +219,9 @@ class HealthChecker {
     this.log('⚙️ Checking configuration files');
     
     const results = {
-      packageJson: { valid: false, issues: [] },
-      nextConfig: { valid: false, issues: [] },
-      tsConfig: { valid: false, issues: [] }
+      "packageJson": { valid: false, "issues": [] },
+      "nextConfig": { valid: false, "issues": [] },
+      "tsConfig": { valid: false, "issues": [] }
     };
     
     // Check package.json
@@ -235,7 +234,7 @@ class HealthChecker {
       if (!packageJson.scripts?.dev) {
         results.packageJson.issues.push('Missing dev script')}
     } catch (error) {
-      results.packageJson.issues.push(\`Invalid JSON: \${error.message}\`)}
+      results.packageJson.issues.push(\"Invalid "JSON": \${error.message}\")}
     
     // Check next.config.js
     try {
@@ -248,7 +247,7 @@ class HealthChecker {
       } else {
         results.nextConfig.issues.push('File not found')}
     } catch (error) {
-      results.nextConfig.issues.push(\`Error reading file: \${error.message}\`)}
+      results.nextConfig.issues.push(\"Error reading "file": \${error.message}\")}
     
     // Check tsconfig.json
     try {
@@ -262,7 +261,7 @@ class HealthChecker {
       } else {
         results.tsConfig.issues.push('File not found')}
     } catch (error) {
-      results.tsConfig.issues.push(\`Invalid JSON: \${error.message}\`)}
+      results.tsConfig.issues.push(\"Invalid "JSON": \${error.message}\")}
     
     return results}
 
@@ -274,9 +273,9 @@ class HealthChecker {
       const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
       
       const results = {
-        total: Object.keys(dependencies).length,
-        missing: [],
-        outdated: []
+        "total": Object.keys(dependencies).length,
+        "missing": [],
+        "outdated": []
       };
       
       // Check for critical dependencies
@@ -287,19 +286,18 @@ class HealthChecker {
       }
       
       return results} catch (error) {
-      return { error: error.message }}
+      return { "error": error.message }}
   }
 
   generateReport(results) {
     const report = {
-      timestamp: new Date().toISOString(),
-      fileStructure: results.fileStructure,
-      configuration: results.configuration,
-      dependencies: results.dependencies,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "fileStructure": results.fileStructure,
+      "configuration": results.configuration,
+      "dependencies": results.dependencies,
+      "summary": {
         overall: 'healthy',
-        issues: [
-          ...results.fileStructure.issues,
+        "issues": [...results.fileStructure.issues,
           ...results.configuration.packageJson.issues,
           ...results.configuration.nextConfig.issues,
           ...results.configuration.tsConfig.issues
@@ -311,7 +309,7 @@ class HealthChecker {
       report.summary.overall = 'needs_attention'}
     
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(\`📊 Health check report generated: \${this.reportFile}\`);
+    this.log(\"📊 Health check report "generated": \${this.reportFile}\");
     
     return report}
 
@@ -331,7 +329,7 @@ class HealthChecker {
       
       this.log('✅ Health check completed');
       return report} catch (error) {
-      this.log(\`❌ Health check failed: \${error.message}\`);
+      this.log(\"❌ Health check "failed": \${error.message}\");
       throw error}
   }
 }
@@ -343,9 +341,9 @@ checker.run()
     console.log('✅ Health check completed successfully');
     process.exit(0)})
   .catch(error => {
-    console.error('❌ Health check failed:', error.message);
+    console.error('❌ Health check "failed": ', error.message);
     process.exit(1)});
-`;
+";
 
     fs.writeFileSync(
       path.join(this.scriptsDir, 'enhanced-health-checker.js'),
@@ -355,7 +353,7 @@ checker.run()
     this.log('✅ Created enhanced health checker')}
 
   createSEOOptimizer() {
-    const content = `#!/usr/bin/env node
+    const content = "#!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
@@ -366,14 +364,14 @@ class SEOOptimizer {
     this.reportFile = path.join(this.projectRoot, 'seo-optimization-report.json')}
 
   log(message) {
-    console.log(\`[\${new Date().toISOString()}] \${message}\`)}
+    console.log(\"[\${new Date().toISOString()}] \${message}\")}
 
   async checkMetaTags() {
     this.log('🏷️ Checking meta tags');
     
     const results = {
-      pages: [],
-      issues: []
+      "pages": [],
+      "issues": []
     };
     
     const pagesDir = path.join(this.projectRoot, 'src', 'pages');
@@ -389,24 +387,24 @@ class SEOOptimizer {
         const pageName = path.basename(file);
         
         const pageAnalysis = {
-          file: pageName,
-          hasTitle: content.includes('<title>') || content.includes('title:'),
-          hasDescription: content.includes('description') || content.includes('meta name="description"'),
-          hasKeywords: content.includes('keywords') || content.includes('meta name="keywords"'),
-          hasOpenGraph: content.includes('og:') || content.includes('property="og:'),
-          hasTwitterCard: content.includes('twitter:') || content.includes('name="twitter:')
+          "file": pageName,
+          "hasTitle": content.includes('<title>') || content.includes('title:'),
+          "hasDescription": content.includes('description') || content.includes('meta name="description"'),
+          "hasKeywords": content.includes('keywords') || content.includes('meta name="keywords"'),
+          "hasOpenGraph": content.includes('og:') || content.includes('property="og:'),
+          "hasTwitterCard": content.includes('twitter:') || content.includes('name="twitter:')
         };
         
         results.pages.push(pageAnalysis);
         
         if (!pageAnalysis.hasTitle) {
-          results.issues.push(\`\${pageName}: Missing title tag\`)}
+          results.issues.push(\"\${pageName}: Missing title tag\")}
         if (!pageAnalysis.hasDescription) {
-          results.issues.push(\`\${pageName}: Missing meta description\`)}
+          results.issues.push(\"\${pageName}: Missing meta description\")}
         if (!pageAnalysis.hasOpenGraph) {
-          results.issues.push(\`\${pageName}: Missing Open Graph tags\`)}
+          results.issues.push(\"\${pageName}: Missing Open Graph tags\")}
       } catch (error) {
-        results.issues.push(\`Error reading \${file}: \${error.message}\`)}
+        results.issues.push(\"Error reading \${file}: \${error.message}\")}
     }
     
     return results}
@@ -415,9 +413,9 @@ class SEOOptimizer {
     this.log('🗺️ Checking sitemap');
     
     const results = {
-      exists: false,
-      valid: false,
-      issues: []
+      "exists": false,
+      "valid": false,
+      "issues": []
     };
     
     const sitemapPath = path.join(this.projectRoot, 'public', 'sitemap.xml');
@@ -431,7 +429,7 @@ class SEOOptimizer {
         if (!results.valid) {
           results.issues.push('Invalid sitemap format')}
       } catch (error) {
-        results.issues.push(\`Error reading sitemap: \${error.message}\`)}
+        results.issues.push(\"Error reading "sitemap": \${error.message}\")}
     } else {
       results.issues.push('Sitemap not found')}
     
@@ -441,9 +439,9 @@ class SEOOptimizer {
     this.log('🤖 Checking robots.txt');
     
     const results = {
-      exists: false,
-      valid: false,
-      issues: []
+      "exists": false,
+      "valid": false,
+      "issues": []
     };
     
     const robotsPath = path.join(this.projectRoot, 'public', 'robots.txt');
@@ -452,12 +450,12 @@ class SEOOptimizer {
     if (results.exists) {
       try {
         const content = fs.readFileSync(robotsPath, 'utf8');
-        results.valid = content.includes('User-agent:') || content.includes('Sitemap:');
+        results.valid = content.includes('User-"agent": ') || content.includes('Sitemap:');
         
         if (!results.valid) {
           results.issues.push('Invalid robots.txt format')}
       } catch (error) {
-        results.issues.push(\`Error reading robots.txt: \${error.message}\`)}
+        results.issues.push(\"Error reading robots."txt": \${error.message}\")}
     } else {
       results.issues.push('robots.txt not found')}
     
@@ -480,14 +478,14 @@ class SEOOptimizer {
 
   generateReport(results) {
     const report = {
-      timestamp: new Date().toISOString(),
-      metaTags: results.metaTags,
-      sitemap: results.sitemap,
-      robotsTxt: results.robotsTxt,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "metaTags": results.metaTags,
+      "sitemap": results.sitemap,
+      "robotsTxt": results.robotsTxt,
+      "summary": {
         overall: 'good',
-        totalIssues: results.metaTags.issues.length + results.sitemap.issues.length + results.robotsTxt.issues.length,
-        recommendations: []
+        "totalIssues": results.metaTags.issues.length + results.sitemap.issues.length + results.robotsTxt.issues.length,
+        "recommendations": []
       }
     };
     
@@ -498,7 +496,7 @@ class SEOOptimizer {
       report.summary.overall = 'poor'}
     
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(\`📊 SEO optimization report generated: \${this.reportFile}\`);
+    this.log(\"📊 SEO optimization report "generated": \${this.reportFile}\");
     
     return report}
 
@@ -518,7 +516,7 @@ class SEOOptimizer {
       
       this.log('✅ SEO optimization check completed');
       return report} catch (error) {
-      this.log(\`❌ SEO optimization check failed: \${error.message}\`);
+      this.log(\"❌ SEO optimization check "failed": \${error.message}\");
       throw error}
   }
 }
@@ -530,9 +528,9 @@ optimizer.run()
     console.log('✅ SEO optimization check completed successfully');
     process.exit(0)})
   .catch(error => {
-    console.error('❌ SEO optimization check failed:', error.message);
+    console.error('❌ SEO optimization check "failed": ', error.message);
     process.exit(1)});
-`;
+";
 
     fs.writeFileSync(
       path.join(this.scriptsDir, 'enhanced-seo-optimizer.js'),
@@ -542,7 +540,7 @@ optimizer.run()
     this.log('✅ Created enhanced SEO optimizer')}
 
   createSecurityAuditor() {
-    const content = `#!/usr/bin/env node
+    const content = "#!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
@@ -553,14 +551,14 @@ class SecurityAuditor {
     this.reportFile = path.join(this.projectRoot, 'security-audit-report.json')}
 
   log(message) {
-    console.log(\`[\${new Date().toISOString()}] \${message}\`)}
+    console.log(\"[\${new Date().toISOString()}] \${message}\")}
 
   async checkEnvironmentVariables() {
     this.log('🔐 Checking environment variables');
     
     const results = {
-      issues: [],
-      recommendations: []
+      "issues": [],
+      "recommendations": []
     };
     
     const envFiles = ['.env', '.env.local', '.env.production', '.env.development'];
@@ -578,15 +576,15 @@ class SecurityAuditor {
               
               if (key.toLowerCase().includes('secret') || key.toLowerCase().includes('key')) {
                 if (value.length < 10) {
-                  results.issues.push(\`Weak \${key} in \${envFile}\`)}
+                  results.issues.push(\"Weak \${key} in \${envFile}\")}
               }
               
               if (value === '' || value === 'undefined') {
-                results.issues.push(\`Empty \${key} in \${envFile}\`)}
+                results.issues.push(\"Empty \${key} in \${envFile}\")}
             }
           }
         } catch (error) {
-          results.issues.push(\`Error reading \${envFile}: \${error.message}\`)}
+          results.issues.push(\"Error reading \${envFile}: \${error.message}\")}
       }
     }
     
@@ -596,8 +594,8 @@ class SecurityAuditor {
     this.log('🛡️ Checking code security');
     
     const results = {
-      issues: [],
-      recommendations: []
+      "issues": [],
+      "recommendations": []
     };
     
     const srcDir = path.join(this.projectRoot, 'src');
@@ -613,19 +611,19 @@ class SecurityAuditor {
         
         // Check for dangerous patterns
         if (content.includes('eval(') || content.includes('Function(')) {
-          results.issues.push(\`Use of eval() in \${file}\`)}
+          results.issues.push(\"Use of eval() in \${file}\")}
         
         if (content.includes('dangerouslySetInnerHTML') && !content.includes('sanitize')) {
-          results.issues.push(\`Unsanitized dangerouslySetInnerHTML in \${file}\`)}
+          results.issues.push(\"Unsanitized dangerouslySetInnerHTML in \${file}\")}
         
         if (content.includes('process.env') && !content.includes('NEXT_PUBLIC_')) {
-          results.issues.push(\`Server-side env var in client code: \${file}\`)}
+          results.issues.push(\"Server-side env var in client "code": \${file}\")}
         
         if (content.includes('innerHTML') && !content.includes('sanitize')) {
-          results.issues.push(\`Unsanitized innerHTML in \${file}\`)}
+          results.issues.push(\"Unsanitized innerHTML in \${file}\")}
         
       } catch (error) {
-        results.issues.push(\`Error reading \${file}: \${error.message}\`)}
+        results.issues.push(\"Error reading \${file}: \${error.message}\")}
     }
     
     return results}
@@ -634,8 +632,8 @@ class SecurityAuditor {
     this.log('📦 Checking dependency security');
     
     const results = {
-      issues: [],
-      recommendations: []
+      "issues": [],
+      "recommendations": []
     };
     
     try {
@@ -651,12 +649,12 @@ class SecurityAuditor {
       
       for (const [pkg, minVersion] of Object.entries(vulnerablePackages)) {
         if (dependencies[pkg]) {
-          results.issues.push(\`Potentially vulnerable package: \${pkg}\`);
-          results.recommendations.push(\`Update \${pkg} to version \${minVersion} or higher\`)}
+          results.issues.push(\"Potentially vulnerable "package": \${pkg}\");
+          results.recommendations.push(\"Update \${pkg} to version \${minVersion} or higher\")}
       }
       
     } catch (error) {
-      results.issues.push(\`Error reading package.json: \${error.message}\`)}
+      results.issues.push(\"Error reading package."json": \${error.message}\")}
     
     return results}
 
@@ -677,14 +675,14 @@ class SecurityAuditor {
 
   generateReport(results) {
     const report = {
-      timestamp: new Date().toISOString(),
-      environment: results.environment,
-      code: results.code,
-      dependencies: results.dependencies,
-      summary: {
+      "timestamp": new Date().toISOString(),
+      "environment": results.environment,
+      "code": results.code,
+      "dependencies": results.dependencies,
+      "summary": {
         overall: 'secure',
-        totalIssues: results.environment.issues.length + results.code.issues.length + results.dependencies.issues.length,
-        riskLevel: 'low'
+        "totalIssues": results.environment.issues.length + results.code.issues.length + results.dependencies.issues.length,
+        "riskLevel": 'low'
       }
     };
     
@@ -697,7 +695,7 @@ class SecurityAuditor {
       report.summary.riskLevel = 'high'}
     
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(\`📊 Security audit report generated: \${this.reportFile}\`);
+    this.log(\"📊 Security audit report "generated": \${this.reportFile}\");
     
     return report}
 
@@ -717,7 +715,7 @@ class SecurityAuditor {
       
       this.log('✅ Security audit completed');
       return report} catch (error) {
-      this.log(\`❌ Security audit failed: \${error.message}\`);
+      this.log(\"❌ Security audit "failed": \${error.message}\");
       throw error}
   }
 }
@@ -729,9 +727,9 @@ auditor.run()
     console.log('✅ Security audit completed successfully');
     process.exit(0)})
   .catch(error => {
-    console.error('❌ Security audit failed:', error.message);
+    console.error('❌ Security audit "failed": ', error.message);
     process.exit(1)});
-`;
+";
 
     fs.writeFileSync(
       path.join(this.scriptsDir, 'enhanced-security-auditor.js'),
@@ -749,14 +747,14 @@ auditor.run()
       this.createSEOOptimizer();
       this.createSecurityAuditor();
 
-      this.log(`🎉 Enhanced Automation Script Creator Completed`);
+      this.log("🎉 Enhanced Automation Script Creator Completed");
       this.log(
-        `📊 Summary: Created ${this.createdCount} enhanced automation scripts`
+        `📊 "Summary": Created ${this.createdCount} enhanced automation scripts`
       );
 
-      return { createdCount: this.createdCount }} catch (error) {
+      return { "createdCount": this.createdCount }} catch (error) {
       this.log(
-        `💥 Enhanced Automation Script Creator Failed: ${error.message}`
+        `💥 Enhanced Automation Script Creator "Failed": ${error.message}`
       );
       throw error}
   }
@@ -771,7 +769,7 @@ creator
     process.exit(0)})
   .catch(error => {
     console.error(
-      '❌ Enhanced automation script creation failed:',
+      '❌ Enhanced automation script creation "failed": ',
       error.message
     );
     process.exit(1)});

@@ -15,17 +15,17 @@ class AIIntelligentOrchestrator {
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, 'logs', 'ai-orchestrator.log');
     this.decisionEngine = {
-      learningEnabled: process.env.LEARNING_ENABLED === 'true',
-      decisionHistory: [],
-      performanceMetrics: {},
-      optimizationSuggestions: []
+      "learningEnabled": process.env.LEARNING_ENABLED === 'true',
+      "decisionHistory": [],
+      "performanceMetrics": {},
+      "optimizationSuggestions": []
     };
     this.ensureLogsDirectory();
   }
 
   async ensureLogsDirectory() {
     try {
-      await fs.mkdir(path.join(this.projectRoot, 'logs'), { recursive: true });
+      await fs.mkdir(path.join(this.projectRoot, 'logs'), { "recursive": true });
     } catch (error) {
       console.log('Logs directory already exists');
     }
@@ -46,7 +46,7 @@ class AIIntelligentOrchestrator {
     return new Promise((resolve, reject) => {
       pm2.connect((err) => {
         if (err) {
-          this.log(`❌ Failed to connect to PM2: ${err.message}`, 'ERROR');
+          this.log(`❌ Failed to connect to "PM2": ${err.message}`, 'ERROR');
           reject(err);
           return;
         }
@@ -80,7 +80,7 @@ class AIIntelligentOrchestrator {
       const processes = await this.getProcessList();
       const healthMetrics = await this.calculateHealthMetrics(processes);
       
-      this.log(`📊 System Health Score: ${healthMetrics.overallScore}/100`);
+      this.log(`📊 System Health "Score": ${healthMetrics.overallScore}/100`);
       
       // Store metrics for learning
       this.decisionEngine.performanceMetrics = {
@@ -90,7 +90,7 @@ class AIIntelligentOrchestrator {
       
       return healthMetrics;
     } catch (error) {
-      this.log(`❌ Health analysis failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Health analysis "failed": ${error.message}`, 'ERROR');
     }
   }
 
@@ -108,13 +108,13 @@ class AIIntelligentOrchestrator {
 
   async calculateHealthMetrics(processes) {
     const metrics = {
-      totalProcesses: processes.length,
-      runningProcesses: processes.filter(p => p.pm2_env.status === 'online').length,
-      memoryUsage: 0,
-      cpuUsage: 0,
-      errorRate: 0,
-      restartCount: 0,
-      overallScore: 0
+      "totalProcesses": processes.length,
+      "runningProcesses": processes.filter(p => p.pm2_env.status === 'online').length,
+      "memoryUsage": 0,
+      "cpuUsage": 0,
+      "errorRate": 0,
+      "restartCount": 0,
+      "overallScore": 0
     };
 
     processes.forEach(process => {
@@ -167,22 +167,22 @@ class AIIntelligentOrchestrator {
     const processes = await this.getProcessList();
     const healthMetrics = await this.calculateHealthMetrics(processes);
     
-    // Decision 1: Memory optimization
+    // Decision "1": Memory optimization
     if (healthMetrics.memoryUsage > 1024 * 1024 * 1024) { // 1GB
       await this.optimizeMemoryUsage();
     }
     
-    // Decision 2: CPU optimization
+    // Decision "2": CPU optimization
     if (healthMetrics.cpuUsage > 80) {
       await this.optimizeCPUUsage();
     }
     
-    // Decision 3: Error handling
+    // Decision "3": Error handling
     if (healthMetrics.errorRate > 5) {
       await this.handleHighErrorRate();
     }
     
-    // Decision 4: Process restart decisions
+    // Decision "4": Process restart decisions
     await this.makeRestartDecisions(processes);
   }
 
@@ -202,7 +202,7 @@ class AIIntelligentOrchestrator {
         await this.restartProcess(process.name);
       }
     } catch (error) {
-      this.log(`❌ Memory optimization failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Memory optimization "failed": ${error.message}`, 'ERROR');
     }
   }
 
@@ -224,7 +224,7 @@ class AIIntelligentOrchestrator {
         }
       }
     } catch (error) {
-      this.log(`❌ CPU optimization failed: ${error.message}`, 'ERROR');
+      this.log(`❌ CPU optimization "failed": ${error.message}`, 'ERROR');
     }
   }
 
@@ -241,7 +241,7 @@ class AIIntelligentOrchestrator {
         await this.restartProcess(process.name);
       }
     } catch (error) {
-      this.log(`❌ Error handling failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Error handling "failed": ${error.message}`, 'ERROR');
     }
   }
 
@@ -253,7 +253,7 @@ class AIIntelligentOrchestrator {
         
         // Restart if uptime > 24 hours and restart count < 5
         if (uptime > 24 * 60 * 60 * 1000 && restartCount < 5) {
-          this.log(`🔄 Scheduling restart for ${process.name} (uptime: ${Math.round(uptime / 1000 / 60 / 60)}h)`);
+          this.log(`🔄 Scheduling restart for ${process.name} ("uptime": ${Math.round(uptime / 1000 / 60 / 60)}h)`);
           await this.scheduleRestart(process.name);
         }
       }
@@ -296,8 +296,7 @@ class AIIntelligentOrchestrator {
   }
 
   isNonCriticalProcess(processName) {
-    const nonCriticalProcesses = [
-      'docs-generator',
+    const nonCriticalProcesses = ['docs-generator',
       'seo-accessibility',
       'link-checker-automation',
       'continuous-improvement'
@@ -320,7 +319,7 @@ class AIIntelligentOrchestrator {
         await this.updateLearningModel();
       }
     } catch (error) {
-      this.log(`❌ Performance optimization failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Performance optimization "failed": ${error.message}`, 'ERROR');
     }
   }
 
@@ -337,21 +336,21 @@ class AIIntelligentOrchestrator {
         
         if (now - stats.mtime.getTime() > maxAge) {
           await fs.unlink(filePath);
-          this.log(`🗑️ Cleaned up old log file: ${file}`);
+          this.log(`🗑️ Cleaned up old log "file": ${file}`);
         }
       }
     } catch (error) {
-      this.log(`❌ Log cleanup failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Log cleanup "failed": ${error.message}`, 'ERROR');
     }
   }
 
   async optimizePM2Config() {
     try {
       // Save current PM2 configuration
-      execSync('pm2 save', { stdio: 'pipe' });
+      execSync('pm2 save', { "stdio": 'pipe' });
       this.log('💾 PM2 configuration saved');
     } catch (error) {
-      this.log(`❌ PM2 config save failed: ${error.message}`, 'ERROR');
+      this.log(`❌ PM2 config save "failed": ${error.message}`, 'ERROR');
     }
   }
 
@@ -360,10 +359,10 @@ class AIIntelligentOrchestrator {
     
     try {
       const analysis = {
-        timestamp: new Date().toISOString(),
-        systemHealth: await this.analyzeSystemHealth(),
-        recommendations: await this.generateRecommendations(),
-        optimizationOpportunities: await this.findOptimizationOpportunities()
+        "timestamp": new Date().toISOString(),
+        "systemHealth": await this.analyzeSystemHealth(),
+        "recommendations": await this.generateRecommendations(),
+        "optimizationOpportunities": await this.findOptimizationOpportunities()
       };
       
       // Save analysis report
@@ -372,7 +371,7 @@ class AIIntelligentOrchestrator {
       
       this.log('📊 Deep analysis completed and saved');
     } catch (error) {
-      this.log(`❌ Deep analysis failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Deep analysis "failed": ${error.message}`, 'ERROR');
     }
   }
 
@@ -381,18 +380,18 @@ class AIIntelligentOrchestrator {
     
     // Memory recommendations
     recommendations.push({
-      type: 'memory',
-      priority: 'high',
-      message: 'Consider implementing memory pooling for better resource management',
-      action: 'Implement memory optimization strategies'
+      "type": 'memory',
+      "priority": 'high',
+      "message": 'Consider implementing memory pooling for better resource management',
+      "action": 'Implement memory optimization strategies'
     });
     
     // Performance recommendations
     recommendations.push({
-      type: 'performance',
-      priority: 'medium',
-      message: 'Enable clustering for CPU-intensive processes',
-      action: 'Configure PM2 clustering for better performance'
+      "type": 'performance',
+      "priority": 'medium',
+      "message": 'Enable clustering for CPU-intensive processes',
+      "action": 'Configure PM2 clustering for better performance'
     });
     
     return recommendations;
@@ -411,9 +410,9 @@ class AIIntelligentOrchestrator {
     
     if (idleProcesses.length > 0) {
       opportunities.push({
-        type: 'resource',
-        message: `Found ${idleProcesses.length} idle processes that could be optimized`,
-        processes: idleProcesses.map(p => p.name)
+        "type": 'resource',
+        "message": `Found ${idleProcesses.length} idle processes that could be optimized`,
+        "processes": idleProcesses.map(p => p.name)
       });
     }
     
@@ -442,7 +441,7 @@ class AIIntelligentOrchestrator {
       
       this.log('✅ Learning model updated successfully');
     } catch (error) {
-      this.log(`❌ Learning model update failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Learning model update "failed": ${error.message}`, 'ERROR');
     }
   }
 
@@ -459,7 +458,7 @@ class AIIntelligentOrchestrator {
       });
       
     } catch (error) {
-      this.log(`❌ Fatal error: ${error.message}`, 'ERROR');
+      this.log(`❌ Fatal "error": ${error.message}`, 'ERROR');
       process.exit(1);
     }
   }

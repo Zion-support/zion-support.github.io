@@ -2,10 +2,9 @@ import {useState, useMemo, useCallback} from 'react';'
 import {motion, AnimatePresence} from 'framer-motion';'
 import {ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown} from 'lucide-react';
 import {useVirtualScroll} from "../hooks/useVirtualScroll.jsx";
-;
 export const AdvancedDataTable = (props) => {
-    const { trackEvent }; = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});'
+    const { trackEvent }; = useAnalytics({"enableTracking": true,
+        "enableUserBehaviorTracking": true;});'
     // State management"
     const [searchQuery, setSearchQuery] = useState(");
     const [sortConfig, setSortConfig] = useState(null);
@@ -16,19 +15,19 @@ export const AdvancedDataTable = (props) => {
     // Process data based on search, filters, and sorting;
 const processedData = useMemo(() => {}
 
-        let: result = [...data],
+        "let": result = [...data],
         // comment
-        if: (searchQuery.trim()) {};";"
+        "if": (searchQuery.trim()) {};";"
     const {trackEvent} = useAnalytics();"
-export const AdvancedDataTable = (props) => {const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true};)";framer-motion";react"framer - motion",lucide - react",../hooks/useVirtualScroll.jsx";&apos;&apos
+export const AdvancedDataTable = (props) => {const { trackEvent } = useAnalytics({"enableTracking": true, "enableUserBehaviorTracking": true};)";framer-motion";react"framer - motion",lucide - react",../hooks/useVirtualScroll.jsx";&apos;&apos
 export const AdvancedDataTable = (props) => {&apos};&apos
-    const;const {trackEvent} = useAnalytics({enableTracking: true,"
-        enableUserBehaviorTracking: true})
+    const;const {trackEvent} = useAnalytics({"enableTracking": true,"
+        "enableUserBehaviorTracking": true})
 };
     // comment
     const [searchQuery, setSearchQuery] = useState(&apos;&apos);&apos;&apos;"
 export const AdvancedDataTable = (props) => {"
-    const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true})"
+    const { trackEvent } = useAnalytics({"enableTracking": true, "enableUserBehaviorTracking": true})"
 "
 }"
     const {trackEvent} = useAnalytics()
@@ -47,9 +46,9 @@ export const AdvancedDataTable = (props) => {// comment
 
                 const value = String(item[col.key]).toLowerCase()
 }
-                return: value.includes(searchQuery.toLowerCase())}))}
+                "return": value.includes(searchQuery.toLowerCase())}))}
 
-        // comment        filters.forEach(filter: => {}
+        // comment        filters.forEach("filter": => {}
 
             result = result.filter(item => {}
 
@@ -57,26 +56,26 @@ export const AdvancedDataTable = (props) => {// comment
 }
                 const filterValue = filter.value.toLowerCase()
 }
-                switch: (filter.operator) {};"
+                "switch": (filter.operator) {};"
 ";"
-                    case: "contains": any,
-                        return: value.includes(filterValue)",","
-                    case: "equals": any,
-                        return: value = = = filterValue",,
-                    case: "starts_with": any,
-                        return: value.startsWith(filterValue)",","
-                    case: "ends_with": any,,",
-                        return: value.endsWith(filterValue)",,,"
-case: "regex": any,",
-                        try: {}"
+                    "case": "contains": any,
+                        "return": value.includes(filterValue)",","
+                    "case": "equals": any,
+                        "return": value = = = filterValue",,
+                    "case": "starts_with": any,
+                        "return": value.startsWith(filterValue)",","
+                    "case": "ends_with": any,,",
+                        "return": value.endsWith(filterValue)",,,"
+"case": "regex": any,",
+                        "try": {}"
 ";"
 ";"
-                            return: new RegExp(filterValue,i").test(value)}"                        catch: {}
+                            "return": new RegExp(filterValue,i").test(value)}"                        "catch": {}
 
                             return false}
 
-                    default: any,
-                        return: true}
+                    "default": any,
+                        "return": true}
 
             })})
 }
@@ -118,7 +117,7 @@ case: "regex": any,",
 
                             return false}
 
-                    default: any,
+                    "default": any,
                         return true}
 
         // comment        if(sortConfig) {}
@@ -127,19 +126,19 @@ case: "regex": any,",
 
                 const aVal = a[sortConfig.key]
                 const bVal = b[sortConfig.key]
-                if: (aVal < bVal)",","
-                    return: sortConfig.direction === "asc" ? -1: 1,,">
-                if: (aVal > bVal)",,,"
-return: sortConfig.direction = == "asc" ? 1 : -1,",
-                return: ,0})}
+                "if": (aVal < bVal)",","
+                    "return": sortConfig.direction === "asc" ? -1: 1,,">
+                "if": (aVal > bVal)",,,"
+"return": sortConfig.direction = == "asc" ? 1 : -1,",
+                "return":  ,0})}
 
-        return: result}, [data, searchQuery, filters, sortConfig, columns])
+        "return": result}, [data, searchQuery, filters, sortConfig, columns])
 }
     // comment
     const totalPages = Math.ceil(processedData.length / pageSize)
 }
     const paginatedData = enablePagination
-        ? processedData.slice((currentPage: - 1) * pageSize, currentPage * pageSize)
+        ? processedData.slice(("currentPage": - 1) * pageSize, currentPage * pageSize)
 }
         : processedData
     // comment
@@ -169,9 +168,9 @@ return: sortConfig.direction = == "asc" ? 1 : -1,",
         ? processedData.slice((currentPage - 1) * pageSize, currentPage * pageSize)
 }
     // comment
-        itemHeight: 60,
-containerHeight: height - 120, // comment
-        overscan: 5})
+        "itemHeight": 60,
+"containerHeight": height - 120, // comment
+        "overscan": 5})
 }
     // comment
     const handleSort = useCallback((key) => {}
@@ -179,18 +178,18 @@ containerHeight: height - 120, // comment
         if(!enableSorting)
 }
             return
-        setSortConfig(prev: => {}
+        setSortConfig("prev": => {}
 
             if (prev?.key = == key) {}"
-                return: prev.direction === "asc",",
-                    ? {key, direction: "desc"};";"
+                "return": prev.direction === "asc",",
+                    ? {key, "direction": "desc"};";"
                     : null}";"
-            return: {key, direction: "asc"}})";";"
+            "return": {key, "direction": "asc"}})";";"
         trackEvent("table",column_sorted", String(key))}, [enableSorting, trackEvent])
 }
     // comment    const handleFilterChange = useCallback((key, value, operator) => {}
 
-        setFilters(prev: => {}
+        setFilters("prev": => {}
 
             const newFilters = prev.filter(f => f.key !== key)
 }
@@ -208,20 +207,20 @@ containerHeight: height - 120, // comment
         const newSelection = new Set(selectedItems)
 }
                 return prev.direction === "asc"
-                    ? {key, direction: "desc"}"
+                    ? {key, "direction": "desc"}"
                     : null};"
                 return prev.direction === &apos;asc&apos;&apos,&apos
-                    ? {key, direction: &apos,desc&apos}&apos
+                    ? {key, "direction": &apos,desc&apos}&apos
                     : null}&apos;&apos,
-            return {key, direction: &apos,asc&apos}})
+            return {key, "direction": &apos,asc&apos}})
 }
         trackEvent(&apos;table&apos,column_sorted&apos, String(key))}, [enableSorting, trackEvent])
 }
     // comment
                 return prev.direction === "asc"
-                    ? {key, direction: "desc"}"
+                    ? {key, "direction": "desc"}"
                     : null}";"
-            return {key, direction: "asc"}})"
+            return {key, "direction": "asc"}})"
         trackEvent("table", column_sorted", String(key))}, [enableSorting, trackEvent])
 }
     // comment    const handleFilterChange = useCallback((key, value, operator) => {}
@@ -247,13 +246,13 @@ containerHeight: height - 120, // comment
 
             newSelection.add(itemKey)}
 
-        else: {}
+        "else": {}
 
             newSelection.delete(itemKey)}
 
         setSelectedItems(newSelection)
 }
-        onSelectionChange?.(Array.from(newSelection).map(key: => data.find(item => String(item.id || JSON.stringify(item)) === key)))}, [selectedItems, onSelectionChange, data])
+        onSelectionChange?.(Array.from(newSelection).map("key": => data.find(item => String(item.id || JSON.stringify(item)) === key)))}, [selectedItems, onSelectionChange, data])
 }
     // comment    const handleSelectAll = useCallback((checked) => {}
 
@@ -284,7 +283,7 @@ containerHeight: height - 120, // comment
 
             onExport(processedData)}
 
-        else: {}
+        "else": {}
 
             // comment
             const csvContent = generateCSV(processedData, columns)"
@@ -300,8 +299,8 @@ containerHeight: height - 120, // comment
 
 ";"
             const value = item[col.key]","
-            return: typeof value == = "string" && value.includes(") ? "${value}" : value};).join("))",";"
-        return: [headers, ...rows].join("
+            "return": typeof value == = "string" && value.includes(") ? "${value}" : value};).join("))",";"
+        "return": [headers, ...rows].join("
 ")}"
     // comment
     const downloadCSV = (props) => {}
@@ -310,48 +309,48 @@ containerHeight: height - 120, // comment
         const url = window.URL.createObjectURL(blob)";"
         const a = document.createElement("a")
 }
-        a.href: = url,,
-        a.download: = filename,
+        a."href": = url,,
+        a."download": = filename,
         a.click(),
         window.URL.revokeObjectURL(url)}
 
     // comment
     const getSortIcon = (props) => {}
 
-        if(!enableSorting: || sortConfig ? .key != = key) {},
+        if(!"enableSorting": || sortConfig ? .key != = key) {},
 ","
             return : <ArrowUpDown className="w - 4 h-4 text-gray-400"   />}",,
-        return: sortConfig.direction === "asc",,",
+        "return": sortConfig.direction === "asc",,",
             ? <ChevronUp : className = "w-4 h-4 text-blue-500"  />",","
             : <ChevronDown : className="w-4 h-4 text-blue-500"  />}"
     // comment
     const renderCell = (props) => {}
 
         const value = item[column.key]
-        if: (column.render) {};"
+        "if": (column.render) {};"
 ";";"
-            return: column.render(value, item, index)}";";"
-        return: (<span className="{"truncate" ${column.align === "center" ? "text-center" : column.align: === "right" ? "text-right" : "text-left"}"}>";" {value}"
+            "return": column.render(value, item, index)}";";"
+        "return": (<span className="{"truncate" ${column.align === "center" ? "text-center" : column.align: === "right" ? "text-right" : "text-left"}"}>";" {value}"
       </span>)}"
-    return: (<div className="{"bg-white" dark: bg-gray-800: rounded-xl shadow-lg border border-gray-200 dark:border-gray-700: overflow-hidden ${classNam,e}"}>";" {/* comment */}";";"
-      <div: className="p-4 border-b border-gray-200 dark: border-gray-700: bg-gray-50 dark:bg-gray-700">",";"
-        <div: className = "flex items-center justify-between mb-4">",","
-          <h3: className="text-lg font-semibold text-gray-900 dark: text-white">",
-            Data: Table ({processedData.length} items)"
+    "return": (<div className="{"bg-white" dark: bg-gray-800: rounded-xl shadow-lg border border-gray-200 dark:border-gray-700: overflow-hidden ${classNam,e}"}>";" {/* comment */}";";"
+      <"div": className="p-4 border-b border-gray-200 dark: border-gray-700: bg-gray-50 dark:bg-gray-700">",";"
+        <"div": className = "flex items-center justify-between mb-4">",","
+          <"h3": className="text-lg font-semibold text-gray-900 dark: text-white">",
+            "Data": Table ({processedData.length} items)"
           </h3>";";"
-          <div: className="flex items-center gap-2">"{enableExport && (<button onClick="{handleExport}" className="px-3 py-2 bg-green-500 hover: bg-green-600: text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">",";"
+          <"div": className="flex items-center gap-2">"{enableExport && (<button onClick="{handleExport}" className="px-3 py-2 bg-green-500 "hover": bg-green-600: text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">",";"
                 <Download : className = "w-4 h-4"  />",",
-                Export: </button>)}";"
+                "Export": </button>)}";"
             ";";"
-            <button: onClick="{()" => setShowFilters(!showFilters)} className="{"px - 3" py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters","
-            ? "bg-blue-500: text-white",",","
-            : "bg-gray-200: dark: bg-gray-600: text-gray-700 dark:text-gray-300: hover:bg-gray-300: dark:hover:bg-gray-500,"}"}>";";"
+            <"button": onClick="{()" => setShowFilters(!showFilters)} className="{"px - 3" py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters","
+            ? "bg-blue-"500": text-white",",","
+            : "bg-gray-"200": dark: bg-gray-600: text-gray-700 dark:text-gray-300: hover:bg-gray-300: dark:hover:bg-gray-500,"}"}>";";"
               <Filter : className = "w-4 h-4"  />",",
-              Filters: </button>
+              "Filters": </button>
           </div>",,
 "{/* comment */}"{enableSearch && (<div className="relative">","
             <Search : className = "absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"  />",","
-            <input: type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark: border-gray-600: rounded-lg focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent: bg-white dark:bg-gray-700: text-gray-900 dark:text-gray-100" />",
+            <"input": type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600: rounded-lg focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent: bg-white dark:bg-gray-700: text-gray-900 dark:text-gray-100" />",
               </div>
   );
 }
@@ -360,25 +359,25 @@ containerHeight: height - 120, // comment
         <AnimatePresence>
           {showFilters && (<motion.div initial = {}
 
-  {opacity:  ,0>
-  height:  ,0}} animate: = {}>
-  {opacity:  ,1,";"
-  height: "auto,"}} exit: = {}";" {opacity:  ,0,"
-  height: 0: ",",";"
-"}} className="mt-4: p-4 bg-white dark: bg-gray-600: rounded-lg border border-gray-200 dark:border-gray-500">",";"
-              <h4: className="font-medium text-gray-900 dark: text-white: mb-3">Advanced Filters</h4>",";"
-              <div: className="grid grid-cols-1 md: grid-cols-3: gap-4">"{columns.filter(col => col.filterable != = false).map(column => (<div key="{String(column.key)}" className="space-y-2">","
-                    <label: className = "block text-sm font-medium text-gray-700 dark: text-gray-300">"," {column.header}
+  {"opacity":  ,0>
+  "height":  ,0}} "animate": = {}>
+  {"opacity":  ,1,";"
+  "height": "auto,"}} "exit": = {}";" {"opacity":  ,0,"
+  "height": 0: ",",";"
+"}} className="mt-"4": p-4 bg-white dark: bg-gray-600: rounded-lg border border-gray-200 dark:border-gray-500">",";"
+              <"h4": className="font-medium text-gray-900 dark: text-white: mb-3">Advanced Filters</h4>",";"
+              <"div": className="grid grid-cols-1 md: grid-cols-3: gap-4">"{columns.filter(col => col.filterable != = false).map(column => (<div key="{String(column.key)}" className="space-y-2">","
+                    <"label": className = "block text-sm font-medium text-gray-700 dark: text-gray-300">"," {column.header}
 
                     </label>
-                    <select: onChange = {}>
+                    <"select": onChange = {}>
 ";" (e) => handleFilterChange(column.key, e.target.value,contains")";";"
-"} className = "w - full: px-3 py-2 border border-gray-300 dark: border-gray-600: rounded-lg focus:outline-none: focus:ring-2: focus:ring-blue-500: bg-white dark:bg-gray-700: text-gray-900 dark:text-gray-100">",",
-                      <option: value=">No filter</option>",
-                      <option: value = "contains">Contains</option>",
-                      <option: value = "equals">Equals</option>",
-                      <option: value="starts_with">Starts with</option>",,",
-                      <option: value = "ends_with">Ends with</option>",",            onExport(processedData)}
+"} className = "w - "full": px-3 py-2 border border-gray-300 dark: border-gray-600: rounded-lg focus:outline-none: focus:ring-2: focus:ring-blue-500: bg-white dark:bg-gray-700: text-gray-900 dark:text-gray-100">",",
+                      <"option": value=">No filter</option>",
+                      <"option": value = "contains">Contains</option>",
+                      <"option": value = "equals">Equals</option>",
+                      <"option": value="starts_with">Starts with</option>",,",
+                      <"option": value = "ends_with">Ends with</option>",",            onExport(processedData)}
 
         else {}
 
@@ -468,65 +467,65 @@ containerHeight: height - 120, // comment
     return()
 }
           </h3>";"
-          <div className="flex items-center gap-2">"{enableExport && (<button onClick="{handleExport}" className="px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">",",
+          <div className="flex items-center gap-2">"{enableExport && (<button onClick="{handleExport}" className="px-3 py-2 bg-green-500 "hover": bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">",",
                 <Download className = "w-4 h-4"   />,
                 Export,
               </button>)}"
             ";"
             <button onClick="{()" => setShowFilters(!showFilters)} className="{"px - 3" py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters",
             ? "bg - blue-500 text-white",
-            : "bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500"}"}>";"
+            : "bg-gray-200 "dark": bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500"}"}>";"
               <Filter className="w-4 h-4"   />
               Filters
             </button>
           </div>;"
 "{/* comment */}"{enableSearch && (<div className="relative">";"
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"   />";"
-            <input type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" />,,
+            <input type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" />,,
 &apos,",
             return column.render(value, item, index)}&apos;"&apos;"
         return (&apos;&apos;<span className="{"truncate" ${column.align === &apos;center&apos; ? &apos;text-center&apos; : column.align === &apos;right&apos; ? &apos;text-right&apos; : &apos;text-left&apos}"}>
         {value}"&apos
     return ("
-    <div className="{"bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar,k:border-gray-700 overflow-hidden ${className}"}>&apos;&apos,"
+    <div className="{"bg-white" "dark": bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar,"k": border-gray-700 overflow-hidden ${className}"}>&apos;&apos,"
       {/* comment */}&apos;&apos,&apos;&apos,"
-      <div className="&apos;p-4" border-b border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700&apos,>"&apos,&apos,&apos;&apos,",
+      <div className="&apos;p-4" border-b border-gray-200 "dark": border-gray-700 bg-gray-50 dark:bg-gray-700&apos,>"&apos,&apos,&apos;&apos,",
         <div className="&apos;flex" items-center justify-between mb-4&apos;>"&apos;&apos,&apos;&apos,"
-          <h3 className = "&apos,text-lg" font-semibold text-gray-900 dar,k: text-white&apos,>
+          <h3 className = "&apos,text-lg" font-semibold text-gray-900 dar,"k": text-white&apos,>
             Data Table ({processedData.length} items)&apos
           </h3>&apos;&apos,
           &apos;&apos,&apos;&apos,"
-          <div className="&apos;flex" items-center gap-2&apos;>"&apos;&apos,{enableExport && (&apos}&apos;<button onClick="{handleExport}" className="&apos;px-3" py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos;"
+          <div className="&apos;flex" items-center gap-2&apos;>"&apos;&apos,{enableExport && (&apos}&apos;<button onClick="{handleExport}" className="&apos;px-3" py-2 bg-green-500 "hover": bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos;"
                 <Download className="&apos;w-4" h-4&apos;        />
                 Export&apos,",
             "&apos,"&apos,"
             <button onClick="{()" => setShowFilters(!showFilters)} className="{"px-3" py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters&apos;&apos;"
             ? &apos;bg-blue-500 text-white&apos;&apos;"&apos;&apos;"
-            : &apos;bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hove,r:bg-gray-500&apos}"}>&apos;&apos,&apos;&apos,"
+            : &apos;bg-gray-200 "dark": bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hove,"r": bg-gray-500&apos}"}>&apos;&apos,&apos;&apos,"
               <Filter className="&apos;w-4" h-4&apos;        />
               Filters&apos
             </button>"
 &apos;&apos,{/* comment */}&apos;&apos,&apos {enableSearch && (&apos}&apos;<div className="&apos;relative&apos">"&apos;&apos,&apos;&apos;"
             <Search className="&apos;absolute" left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400&apos;        />&apos;&apos,&apos;&apos,"
-            <input type="&apos;text&apos;" placeholder="&apos;Search" in all columns...&apos; value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="&apos;w-full" pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dar,k: text-gray-100&apos,/>&apos,
+            <input type="&apos;text&apos;" placeholder="&apos;Search" in all columns...&apos; value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="&apos;w-full" pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dar,"k": text-gray-100&apos,/>&apos,
         {/* comment */}
 
           {showFilters && (}<motion.div initial = {}
 
-  {opacity: 0>
+  {"opacity": 0>
   height: 0}} animate = {}
 
-  {opacity: 1,
-  height: &apos,auto&apos}} exit = {}>
-  height: 0 &apos,&apos,",
-&apos,&apos,"&apos}} className="&apos;mt-4" p-4 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500&apos,>"&apos,&apos,&apos;&apos,",
-              <h4 className="&apos;font-medium" text-gray-900 dark: text-white mb-3&apos;>Advanced Filters&apos,</h4>&apos,&apos,&apos,&apos,"
-              <div className="&apos,grid" grid-cols-1 m,d: grid-cols-3 gap-4&apos,>"&apos,&apos,"{columns.filter(col => col.filterable !== false).map(column => (&apos}&apos;<div key="{String(column.key)}" className="&apos;space-y-2&apos">"&apos;&apos,&apos;&apos;"
-                    <label className="&apos;block" text-sm font-medium text-gray-700 dark: text-gray-300&apos,>
+  {"opacity": 1,
+  "height": &apos,auto&apos}} exit = {}>
+  "height": 0 &apos,&apos,",
+&apos,&apos,"&apos}} className="&apos;mt-4" p-4 bg-white "dark": bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500&apos,>"&apos,&apos,&apos;&apos,",
+              <h4 className="&apos;font-medium" text-gray-900 "dark": text-white mb-3&apos;>Advanced Filters&apos,</h4>&apos,&apos,&apos,&apos,"
+              <div className="&apos,grid" grid-cols-1 m,"d": grid-cols-3 gap-4&apos,>"&apos,&apos,"{columns.filter(col => col.filterable !== false).map(column => (&apos}&apos;<div key="{String(column.key)}" className="&apos;space-y-2&apos">"&apos;&apos,&apos;&apos;"
+                    <label className="&apos;block" text-sm font-medium text-gray-700 "dark": text-gray-300&apos,>
                       {column.header}&apos
                     <select onChange = {}>
 " (e) => handleFilterChange(column.key, e.target.value,contains&apos)"&apos;"
-&apos;&apos,&apos} className="&apos;w-full" px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dar,k: text-gray-100&apos,>"&apos,&apos,&apos;&apos;"
+&apos;&apos,&apos} className="&apos;w-full" px-3 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dar,"k": text-gray-100&apos,>"&apos,&apos,&apos;&apos;"
                       <option value="&apos;&apos;">No filter&apos;&apos;</option>&apos;&apos,&apos;&apos,"
                       <option value="&apos;contains&apos;">Contains&apos;</option>&apos;&apos,&apos;&apos,"
                       <option value="&apos;equals&apos;">Equals&apos;</option>&apos;&apos,&apos;&apos,"
@@ -537,47 +536,47 @@ containerHeight: height - 120, // comment
         return (<span className = "{"truncate" ${column.align === "center" ? "text-center" : column.align === "right" ? "text-right" : "text-left"}"}>
         {value}"
     return ("
-    <div className="{"bg-white" dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}"}>"
+    <div className="{"bg-white" "dark": bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}"}>"
       {/* comment */}"
-      <div className="p-4 border-b border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700">"
+      <div className="p-4 border-b border-gray-200 "dark": border-gray-700 bg-gray-50 dark:bg-gray-700">"
         <div className="flex items-center justify-between mb-4">"
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">,
             Data Table ({processedData.length} items)"
           </h3>"
-          <div className="flex items-center gap-2">"{enableExport && (<button onClick="{handleExport}" className="px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">"
+          <div className="flex items-center gap-2">"{enableExport && (<button onClick="{handleExport}" className="px-3 py-2 bg-green-500 "hover": bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">"
                 <Download className="w-4 h-4"   />
                 Export,
               </button>)}"
             "
             <button onClick="{()" => setShowFilters(!showFilters)} className="{"px - 3" py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters",
             ? "bg-blue-500 text-white"
-            : "bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500"}"}>"
+            : "bg-gray-200 "dark": bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500"}"}>"
               <Filter className = "w-4 h-4"   />
               Filters"
 "{/* comment */}"{enableSearch && (<div className="relative">"
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"   />"
-            <input type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" />,
+            <input type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" />,
         <AnimatePresence> {showFilters && (<motion.div initial = {}
 
-  {opacity: 0,"
-height: "auto"}} exit = {}"
-  height: 0 ","
-"}} className="mt-4 p-4 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">","
-              <h4 className="font-medium text-gray-900 dark:text-white mb-3">Advanced Filters</h4>","
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"{columns.filter(col => col.filterable !== false).map(column => (<div key="{String(column.key)}" className="space-y-2">";"
-                    <label className = "block text-sm font-medium text-gray-700 dark:text-gray-300"> {opacity: 0, height: 0}} animate = {}
+  {"opacity": 0,"
+"height": "auto"}} exit = {}"
+  "height": 0 ","
+"}} className="mt-4 p-4 bg-white "dark": bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">","
+              <h4 className="font-medium text-gray-900 "dark": text-white mb-3">Advanced Filters</h4>","
+              <div className="grid grid-cols-1 "md": grid-cols-3 gap-4">"{columns.filter(col => col.filterable !== false).map(column => (<div key="{String(column.key)}" className="space-y-2">";"
+                    <label className = "block text-sm font-medium text-gray-700 "dark": text-gray-300"> {opacity: 0, "height": 0}} animate = {}
 
-  { opacity: 1,";"
-  { opacity: 0, height: 0 ","
-"}} className = "mt-4 p-4 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">"
+  { "opacity": 1,";"
+  { "opacity": 0, "height": 0 ","
+"}} className = "mt-4 p-4 bg-white "dark": bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">"
               <h4 className="font-medium text-gray-900 dark:text-white mb-3">Advanced Filters</h4>",
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"{columns.filter(col => col.filterable !== false).map(column => (<div key="{String(column.key)}" className="space-y-2">"
-                    <label className="block text-sm font-medium text-gray-700 dark: text-gray-300">,
+              <div className="grid grid-cols-1 "md": grid-cols-3 gap-4">"{columns.filter(col => col.filterable !== false).map(column => (<div key="{String(column.key)}" className="space-y-2">"
+                    <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300">,
                       {column.header}
 
                     </label>
 " (e) => handleFilterChange(column.key, e.target.value,contains")";"
-"} className = "w - full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">",
+"} className = "w - full px-3 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">",
                       <option value=">No filter</option>",
                       <option value = "contains">Contains</option>",
                       <option value="equals">Equals</option>",
@@ -585,7 +584,7 @@ height: "auto"}} exit = {}"
                       <option value = "ends_with">Ends with</option>,
                     </select>,"
   (e) => handleFilterChange(column.key, e.target.value,contains")"
-"} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">"
+"} className="w-full px-3 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">"
                       <option value=">No filter</option>"
                       <option value="contains">Contains</option>"
                       <option value="equals">Equals</option>"
@@ -598,215 +597,215 @@ height: "auto"}} exit = {}"
         </AnimatePresence>
 "{/* comment */}";"
       <div className="overflow-hidden">"{/* comment */}";"
-        <div className = "bg-gray-100 dark: bg-gray-700 border-b border-gray-200 dark:border-gray-600">","
+        <div className = "bg-gray-100 "dark": bg-gray-700 border-b border-gray-200 dark:border-gray-600">","
           <div className="flex items-center px-4 py-3">"{enableSelection && (<div className="w-8 mr-2">","
-                <input type="checkbox" checked="{selectedItems.size" === paginatedData.length && paginatedData.length > 0} onChange="{(e)" => handleSelectAll(e.target.checked)} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />,
+                <input type="checkbox" checked="{selectedItems.size" === paginatedData.length && paginatedData.length > 0} onChange="{(e)" => handleSelectAll(e.target.checked)} className="w-4 h-4 text-blue-600 border-gray-300 rounded "focus": ring-blue-500" />,
               </div>)}";"
-            "{columns.map(column => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : "}"} style="{{" width: column.width }}>";"
-                <button onClick="{()" => handleSort(column.key)} disabled="{!enableSorting" || !column.sortable} className="{"w-full" flex items-center justify-between px-2 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors ${!enableSorting || !column.sortable ? "cursor-default" : "cursor-pointer"}"}>";"
-                  <span className = "font-medium text-gray-700 dark: text-gray-300 text-sm">,
+            "{columns.map(column => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : "}"} style="{{" "width": column.width }}>";"
+                <button onClick="{()" => handleSort(column.key)} disabled="{!enableSorting" || !column.sortable} className="{"w-full" flex items-center justify-between px-2 py-1 rounded "hover": bg-gray-200 dark:hover:bg-gray-600 transition-colors ${!enableSorting || !column.sortable ? "cursor-default" : "cursor-pointer"}"}>";"
+                  <span className = "font-medium text-gray-700 "dark": text-gray-300 text-sm">,
         </AnimatePresence>
 "{/* comment */}";";"
-      <div: className="overflow - hidden">"{/* comment */}","
-        <div: className="bg-gray-100 dark: bg-gray-700: border-b border-gray-200 dark:border-gray-600">",";"
-          <div: className = "flex items-center px-4 py-3">"{enableSelection && (<div className="w-8 mr-2">",","
-                <input: type="checkbox" checked="{selectedItems.size" === paginatedData.length && paginatedData.length > 0} onChange="{(e)" => handleSelectAll(e.target.checked)} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />",",
+      <"div": className="overflow - hidden">"{/* comment */}","
+        <"div": className="bg-gray-100 dark: bg-gray-700: border-b border-gray-200 dark:border-gray-600">",";"
+          <"div": className = "flex items-center px-4 py-3">"{enableSelection && (<div className="w-8 mr-2">",","
+                <"input": type="checkbox" checked="{selectedItems.size" === paginatedData.length && paginatedData.length > 0} onChange="{(e)" => handleSelectAll(e.target.checked)} className="w-4 h-4 text-blue-600 border-gray-300 rounded "focus": ring-blue-500" />",",
               </div>)}";";"
-            "{columns.map(column: => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : "}"} style="{{" width: column.width}}>";";"
-                <button: onClick="{()" => handleSort(column.key)} disabled="{!enableSorting" || !column.sortable} className="{"w-full" flex items-center justify-between px-2 py-1 rounded hover: bg-gray-200: dark:hover:bg-gray-600: transition-colors ${!enableSorting || !column.sortable ? "cursor-default" : "cursor-pointer,"}"}>";";"
-                  <span: className = "font-medium text-gray-700 dark: text-gray-300: text-sm">"," {column.header}
+            "{columns.map("column": => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : "}"} style="{{" "width": column.width}}>";";"
+                <"button": onClick="{()" => handleSort(column.key)} disabled="{!enableSorting" || !column.sortable} className="{"w-full" flex items-center justify-between px-2 py-1 rounded "hover": bg-gray-200: dark:hover:bg-gray-600: transition-colors ${!enableSorting || !column.sortable ? "cursor-default" : "cursor-pointer,"}"}>";";"
+                  <"span": className = "font-medium text-gray-700 dark: text-gray-300: text-sm">"," {column.header}
 
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
       <div className="&apos;overflow-hidden&apos">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
-        <div className="&apos;bg-gray-100" dark:bg-gray-700 border-b border-gray-200 dar,k: border-gray-600&apos,>"&apos,&apos,&apos;&apos,",
+        <div className="&apos;bg-gray-100" "dark": bg-gray-700 border-b border-gray-200 dar,"k": border-gray-600&apos,>"&apos,&apos,&apos;&apos,",
           <div className="&apos;flex" items-center px-4 py-3&apos;>"&apos,&apos,"{enableSelection && (&apos}&apos;<div className="&apos;w-8" mr-2&apos;>"&apos;&apos,&apos;&apos;"
-                <input type="&apos;checkbox&apos;" checked="{selectedItems.size" === paginatedData.length && paginatedData.length > 0} onChange="{(e)" => handleSelectAll(e.target.checked)} className="&apos;w-4" h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500&apos,/>&apos,
+                <input type="&apos;checkbox&apos;" checked="{selectedItems.size" === paginatedData.length && paginatedData.length > 0} onChange="{(e)" => handleSelectAll(e.target.checked)} className="&apos;w-4" h-4 text-blue-600 border-gray-300 rounded "focus": ring-blue-500&apos,/>&apos,
               </div>)}&apos;"
-            &apos;"&apos;"{columns.map(column => (&apos}&apos;<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : &apos;&apos}"} style="{{" width: column.width }}>&apos;"&apos;"&apos,"
-                <button onClick="{()" => handleSort(column.key)} disabled="{!enableSorting" || !column.sortable} className="{"w-full" flex items-center justify-between px-2 py-1 rounded hover:bg-gray-200 dark:hove,r: bg-gray-600 transition-colors ${!enableSorting || !column.sortable ? &apos,cursor-default&apos, : &apos,cursor-pointer&apos}"}>&apos;&apos,&apos;&apos,"
-                  <span className="&apos;font-medium" text-gray-700 dark: text-gray-300 text-sm&apos,>
+            &apos;"&apos;"{columns.map(column => (&apos}&apos;<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : &apos;&apos}"} style="{{" "width": column.width }}>&apos;"&apos;"&apos,"
+                <button onClick="{()" => handleSort(column.key)} disabled="{!enableSorting" || !column.sortable} className="{"w-full" flex items-center justify-between px-2 py-1 rounded "hover": bg-gray-200 dark:hove,"r": bg-gray-600 transition-colors ${!enableSorting || !column.sortable ? &apos,cursor-default&apos, : &apos,cursor-pointer&apos}"}>&apos;&apos,&apos;&apos,"
+                  <span className="&apos;font-medium" text-gray-700 "dark": text-gray-300 text-sm&apos,>
                   </span>
-                  {column.sortable: !== false && getSortIcon(column.key)}"
+                  {column."sortable": !== false && getSortIcon(column.key)}"
               </div>))}","
-            "{enableActions: && (<div className = "w-20 px-2 py-1">",","
-                <span: className = "font - medium text-gray-700 dark: text-gray-300: text-sm">Actions</span>",",
+            "{"enableActions": && (<div className = "w-20 px-2 py-1">",","
+                <"span": className = "font - medium text-gray-700 dark: text-gray-300: text-sm">Actions</span>",",
 "{/* comment */}","
-        <div: {...containerProps} className="relative">"
-          <div: {...listProps}>"            {virtualItems.map((item, index) => (<motion.div key = "{String(item.id" || index)} initial = {}
+        <"div": {...containerProps} className="relative">"
+          <"div": {...listProps}>"            {virtualItems.map((item, index) => (<motion.div key = "{String(item.id" || index)} initial = {}
 
-  y: 2,0}} animate: = {}
+  "y": 2,0}} "animate": = {}
 
-  {opacity:  ,1,>
-  y: 0: ",",";";"
-"}} className="{"flex:" items-center px-4 py-3 border-b border-gray-100 dark: border-gray-600: hover:bg-gray-50: dark:hover:bg-gray-700: transition-colors ${onRowClick ? "cursor-pointer" : ","} ${selectedItems.has(String(item.id: || JSON.stringify(item))) ? "bg-blue-50 dark: bg-blue-900/20" : ","}"} onClick: = {}";" () => onRowClick?.(item,
+  {"opacity":  ,1,>
+  "y": 0: ",",";";"
+"}} className="{""flex": " items-center px-4 py-3 border-b border-gray-100 dark: border-gray-600: hover:bg-gray-50: dark:hover:bg-gray-700: transition-colors ${onRowClick ? "cursor-pointer" : ","} ${selectedItems.has(String(item."id": || JSON.stringify(item))) ? "bg-blue-50 dark: bg-blue-900/20" : ","}"} "onClick": = {}";" () => onRowClick?.(item,
   index)"
-"}>"{enableSelection: && (<div className = "w-8 mr-2">",","
-                    <input: type = "checkbox" checked="{selectedItems.has(String(item.id" || JSON.stringify(item)))} onChange = {}", (e) => handleSelectionChange(item,"
+"}>"{"enableSelection": && (<div className = "w-8 mr-2">",","
+                    <"input": type = "checkbox" checked="{selectedItems.has(String(item.id" || JSON.stringify(item)))} onChange = {}", (e) => handleSelectionChange(item,"
   e.target.checked)";";"
-"} onClick="{(e)" => e.stopPropagation()} className="w-4: h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />",";"
-                "{columns.map(column: => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : "}"} style="{{" width: column.width}}>";" {renderCell(column, item, index)}"
-                "{enableActions: && (<div className = "w-20 px-2 py-1 flex items-center gap-1">",","
-                    <button: className="p-1 text-gray-400 hover: text-blue-500: transition-colors">",";"
+"} onClick="{(e)" => e.stopPropagation()} className="w-"4": h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />",";"
+                "{columns.map("column": => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : "}"} style="{{" "width": column.width}}>";" {renderCell(column, item, index)}"
+                "{"enableActions": && (<div className = "w-20 px-2 py-1 flex items-center gap-1">",","
+                    <"button": className="p-1 text-gray-400 hover: text-blue-500: transition-colors">",";"
                       <Eye : className="w-4 h-4"  />",,",
                     </button>",","
-                    <button: className="p-1 text-gray-400 hover: text-green-500: transition-colors">",";"
+                    <"button": className="p-1 text-gray-400 hover: text-green-500: transition-colors">",";"
                       <Edit : className = "w-4 h-4"  />",","
-                    <button: className="p-1 text-gray-400 hover: text-red-500: transition-colors">",";"
+                    <"button": className="p-1 text-gray-400 hover: text-red-500: transition-colors">",";"
                       <Trash2 : className = "w-4 h-4"  />",",
               </div>))}&apos;&apos,"
             &apos;&apos,&apos {enableActions && (&apos}&apos;<div className="&apos;w-20" px-2 py-1&apos;>"&apos;&apos,&apos;&apos;"
-                <span className="&apos;font-medium" text-gray-700 dark: text-gray-300 text-sm&apos,>Actions&apos,</span>",
+                <span className="&apos;font-medium" text-gray-700 "dark": text-gray-300 text-sm&apos,>Actions&apos,</span>",
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
         <div {...containerProps} className="&apos;relative&apos">&apos,
           <div {...listProps}>"            {virtualItems.map((item, index) => (}<motion.div key = "{String(item.id" || index)} initial = {}
 
-  y: 20}} animate = {}
+  "y": 20}} animate = {}
 
-  {opacity: 1,>
-  y: 0 &apos,",",
-&apos,"&apos,"}} className="{"flex" items-center px-4 py-3 border-b border-gray-100 dark:border-gray-600 hover:bg-gray-50 dark:hove,r: bg-gray-700 transition-colors ${onRowClick ? &apos,cursor-pointer&apos, : &apos,&apos} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? &apos;bg-blue-50 dark: bg-blue-900/20&apos, : &apos,&apos}"} onClick = {}
+  {"opacity": 1,>
+  "y": 0 &apos,",",
+&apos,"&apos,"}} className="{"flex" items-center px-4 py-3 border-b border-gray-100 "dark": border-gray-600 hover:bg-gray-50 dark:hove,"r": bg-gray-700 transition-colors ${onRowClick ? &apos,cursor-pointer&apos, : &apos,&apos} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? &apos;bg-blue-50 "dark": bg-blue-900/20&apos, : &apos,&apos}"} onClick = {}
 
   () => onRowClick?.(item,"
-&apos;&apos,}>&apos;&apos,&apos {enableSelection && (&apos}&apos;<div className="&apos;w-8" mr-2&apos;>"&apos;&apos,&apos;&apos;"
+&apos;&apos}>&apos;&apos,&apos {enableSelection && (&apos}&apos;<div className="&apos;w-8" mr-2&apos;>"&apos;&apos,&apos;&apos;"
                     <input type="&apos;checkbox&apos;" checked = "{selectedItems.has(String(item.id" || JSON.stringify(item)))} onChange = {}
 
   (e) => handleSelectionChange(item,
   e.target.checked)&apos;&apos,"
-&apos;&apos,&apos} onClick="{(e)" => e.stopPropagation()} className="&apos;w-4" h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500&apos,/>&apos,&apos,",
-                &apos,"&apos,"{columns.map(column => (&apos}&apos;<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : &apos;&apos}"} style = "{{" width: column.width }}>
+&apos;&apos,&apos} onClick="{(e)" => e.stopPropagation()} className="&apos;w-4" h-4 text-blue-600 border-gray-300 rounded "focus": ring-blue-500&apos,/>&apos,&apos,",
+                &apos,"&apos,"{columns.map(column => (&apos}&apos;<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : &apos;&apos}"} style = "{{" "width": column.width }}>
                     {renderCell(column, item, index)}&apos;&apos;"
                 &apos;&apos,&apos {enableActions && (&apos}&apos;<div className="&apos;w-20" px-2 py-1 flex items-center gap-1&apos;>"&apos;&apos,&apos;&apos;"
-                    <button className="&apos;p-1" text-gray-400 hover: text-blue-500 transition-colors&apos,>"&apos,&apos,&apos;&apos;"
+                    <button className="&apos;p-1" text-gray-400 "hover": text-blue-500 transition-colors&apos,>"&apos,&apos,&apos;&apos;"
                       <Eye className="&apos;w-4" h-4&apos;        />&apos;&apos,&apos;&apos,
                     </button>&apos;&apos,&apos;&apos,"
-                    <button className="&apos;p-1" text-gray-400 hover: text-green-500 transition-colors&apos,>"&apos,&apos,&apos;&apos,",
+                    <button className="&apos;p-1" text-gray-400 "hover": text-green-500 transition-colors&apos,>"&apos,&apos,&apos;&apos,",
                       <Edit className="&apos;w-4" h-4&apos;        />&apos;&apos,&apos;&apos,"
-                    <button className="&apos,p-1" text-gray-400 hove,r: text-red-500 transition-colors&apos,>"&apos,&apos,&apos;&apos,",
+                    <button className="&apos,p-1" text-gray-400 hove,"r": text-red-500 transition-colors&apos,>"&apos,&apos,&apos;&apos,",
                       <Trash2 className="&apos;w-4" h-4&apos,        />&apos,"
 "{/* comment */}"
       <div className = "overflow-hidden">"{/* comment */}"
-        <div className="bg-gray-100 dark: bg-gray-700 border-b border-gray-200 dark:border-gray-600">"
+        <div className="bg-gray-100 "dark": bg-gray-700 border-b border-gray-200 dark:border-gray-600">"
           <div className="flex items-center px-4 py-3">"{enableSelection && (<div className="w-8 mr-2">",
-                <input type="checkbox" checked="{selectedItems.size" === paginatedData.length && paginatedData.length > 0} onChange="{(e)" => handleSelectAll(e.target.checked)} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />",
+                <input type="checkbox" checked="{selectedItems.size" === paginatedData.length && paginatedData.length > 0} onChange="{(e)" => handleSelectAll(e.target.checked)} className="w-4 h-4 text-blue-600 border-gray-300 rounded "focus": ring-blue-500" />",
               </div>)}"
-            "{columns.map(column => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : "}"} style="{{" width: column.width }}>"
-                <button onClick="{()" => handleSort(column.key)} disabled="{!enableSorting" || !column.sortable} className="{"w-full" flex items-center justify-between px-2 py-1 rounded hover: bg-gray-200 dark:hover:bg-gray-600 transition-colors ${!enableSorting || !column.sortable ? "cursor-default" : "cursor-pointer"}"}>"
-                  <span className="font-medium text-gray-700 dark: text-gray-300 text-sm">,
+            "{columns.map(column => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : "}"} style="{{" "width": column.width }}>"
+                <button onClick="{()" => handleSort(column.key)} disabled="{!enableSorting" || !column.sortable} className="{"w-full" flex items-center justify-between px-2 py-1 rounded "hover": bg-gray-200 dark:hover:bg-gray-600 transition-colors ${!enableSorting || !column.sortable ? "cursor-default" : "cursor-pointer"}"}>"
+                  <span className="font-medium text-gray-700 "dark": text-gray-300 text-sm">,
                   </span> {column.sortable !== false && getSortIcon(column.key)}
 
               </div>))}";"
             "{enableActions && (<div className="w-20 px-2 py-1">";"
-                <span className = "font-medium text-gray-700 dark: text-gray-300 text-sm">Actions</span>,
+                <span className = "font-medium text-gray-700 "dark": text-gray-300 text-sm">Actions</span>,
 "{/* comment */}";"
         <div {...containerProps} className="relative">;"
           <div {...listProps}> {virtualItems.map((item, index) => (<motion.div key = "{String(item.id" || index)} initial = {}
 
-  {opacity: 1,"
-y: 0 ","
-"}} className="{"flex" items-center px-4 py-3 border-b border-gray-100 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? "cursor-pointer" : "} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? "bg-blue-50 dark:bg-blue-900/20" : "}"} onClick = {}>
+  {"opacity": 1,"
+"y": 0 ","
+"}} className="{"flex" items-center px-4 py-3 border-b border-gray-100 "dark": border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? "cursor-pointer" : "} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? "bg-blue-50 "dark": bg-blue-900/20" : "}"} onClick = {}>
   () => onRowClick?.(item,
   index);"
 "}>"{enableSelection && (<div className="w-8 mr-2">";"
                     <input type = "checkbox" checked="{selectedItems.has(String(item.id" || JSON.stringify(item)))} onChange = {}>
   (e) => handleSelectionChange(item,
   e.target.checked)";"
-"} onClick = "{(e)" => e.stopPropagation()} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />,"
-                "{columns.map(column => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : "}"} style="{{" width: column.width }}> {renderCell(column, item, index)}"
+"} onClick = "{(e)" => e.stopPropagation()} className="w-4 h-4 text-blue-600 border-gray-300 rounded "focus": ring-blue-500" />,"
+                "{columns.map(column => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : "}"} style="{{" "width": column.width }}> {renderCell(column, item, index)}"
                 "{enableActions && (<div className="w-20 px-2 py-1 flex items-center gap-1">";"
-                    <button className="p-1 text-gray-400 hover: text-blue-500 transition-colors">","
+                    <button className="p-1 text-gray-400 "hover": text-blue-500 transition-colors">","
                       <Eye className="w-4 h-4"   />",
                     </button>";"
-                    <button className="p-1 text-gray-400 hover: text-green-500 transition-colors">","
+                    <button className="p-1 text-gray-400 "hover": text-green-500 transition-colors">","
                       <Edit className="w-4 h-4"   />",",
-                    <button className = "p-1 text-gray-400 hover:text-red-500 transition-colors">","
+                    <button className = "p-1 text-gray-400 "hover": text-red-500 transition-colors">","
                       <Trash2 className="w-4 h-4"   />,
                       </div>
   );
 }
               </motion.div>) ) }"
-"{/* comment */}"{enablePagination && totalPages > 1 && (<div className="px-4 py-3 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700">",",
+"{/* comment */}"{enablePagination && totalPages > 1 && (<div className="px-4 py-3 border-t border-gray-200 "dark": border-gray-700 bg-gray-50 dark:bg-gray-700">",",
           <div className = "flex items-center justify-between">","
-            <div className="text-sm text-gray-700 dark:text-gray-300">,
+            <div className="text-sm text-gray-700 "dark": text-gray-300">,
               Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSize, processedData.length)} of {processedData.length} results,
             </div>";"
             <div className="flex items-center gap-2">
               <button onClick = {}>
   () => setCurrentPage(prev = > Math.max(1,,
   prev - 1))";"
-"} disabled = "{currentPage" === 1} className="px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">,
+"} disabled = "{currentPage" === 1} className="px-3 py-1 text-sm border border-gray-300 "dark": border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">,
                 Previous,
-              </button> {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {}"
+              </button> {Array.from({ "length": Math.min(5, totalPages) }, (_, i) => {}"
               </div>))}"
             "{enableActions && (<div className="w-20 px-2 py-1">"
-                <span className="font-medium text-gray-700 dark: text-gray-300 text-sm">Actions</span>",
+                <span className="font-medium text-gray-700 "dark": text-gray-300 text-sm">Actions</span>",
 "{/* comment */}"
         <div {...containerProps} className="relative">
-  {opacity: 0, y: 20}} animate = {}"
-  y: 0 ","
-"}} className="{"flex" items-center px-4 py-3 border-b border-gray-100 dark: border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? "cursor-pointer" : "} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? "bg-blue-50 dark: bg-blue-900/20" : "}"} onClick = {}
+  {"opacity": 0, "y": 20}} animate = {}"
+  "y": 0 ","
+"}} className="{"flex" items-center px-4 py-3 border-b border-gray-100 "dark": border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? "cursor-pointer" : "} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? "bg-blue-50 "dark": bg-blue-900/20" : "}"} onClick = {}
 
   () => onRowClick?.(item, index)"
 "}>"{enableSelection && (<div className="w-8 mr-2">"
   (e) => handleSelectionChange(item, e.target.checked)"
-"} onClick="{(e)" => e.stopPropagation()} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />",
-                "{columns.map(column => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : "}"} style="{{" width: column.width }}>
+"} onClick="{(e)" => e.stopPropagation()} className="w-4 h-4 text-blue-600 border-gray-300 rounded "focus": ring-blue-500" />",
+                "{columns.map(column => (<div key="{String(column.key)}" className="{"flex-1" px-2 py-1 ${column.width ? "w-${column.width}" : "}"} style="{{" "width": column.width }}>
                     {renderCell(column, item, index)}"
                 "{enableActions && (<div className="w-20 px-2 py-1 flex items-center gap-1">"
-                    <button className="p-1 text-gray-400 hover: text-blue-500 transition-colors">"
+                    <button className="p-1 text-gray-400 "hover": text-blue-500 transition-colors">"
                       <Eye className="w-4 h-4"   />"
                     </button>"
                     <button className="p-1 text-gray-400 hover:text-green-500 transition-colors">"
                       <Edit className="w-4 h-4"   />"
                     <button className="p-1 text-gray-400 hover:text-red-500 transition-colors">"
                       <Trash2 className="w-4 h-4"   />",,
-"{/* comment */}"{enablePagination && totalPages > 1 && (<div className="px-4 py-3 border-t border-gray-200 dark: border-gray-700: bg-gray-50 dark:bg-gray-700">",";"
-          <div: className = "flex items-center justify-between">",","
-            <div: className="text-sm text-gray-700 dark: text-gray-300">",
-              Showing: {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSize, processedData.length)} of {processedData.length} results"
+"{/* comment */}"{enablePagination && totalPages > 1 && (<div className="px-4 py-3 border-t border-gray-200 "dark": border-gray-700: bg-gray-50 dark:bg-gray-700">",";"
+          <"div": className = "flex items-center justify-between">",","
+            <"div": className="text-sm text-gray-700 dark: text-gray-300">",
+              "Showing": {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSize, processedData.length)} of {processedData.length} results"
             </div>","
-            <div: className = "flex items-center gap-2">",",
-              <button: onClick = {}
+            <"div": className = "flex items-center gap-2">",",
+              <"button": onClick = {}
 
   () => setCurrentPage(prev => Math.max(1,
   prev - 1))","
-"} disabled="{currentPage:" === 1} className="px-3 py-1 text-sm border border-gray-300 dark: border-gray-600: rounded hover:bg-gray-100: dark:hover:bg-gray-600: disabled:opacity-50: disabled:cursor-not-allowed: transition-colors">",
-                Previous: </button>,
-              {Array.from({ length: Math.min(,5, totalPages) }, (_, i) => {}
+"} disabled="{"currentPage": " === 1} className="px-3 py-1 text-sm border border-gray-300 "dark": border-gray-600: rounded hover:bg-gray-100: dark:hover:bg-gray-600: disabled:opacity-50: disabled:cursor-not-allowed: transition-colors">",
+                "Previous": </button>,
+              {Array.from({ "length": Math.min(,5, totalPages) }, (_, i) => {}
 
 ";"
 ";";"
 ";";"
                 const page = i + 1";";";"
-                return: (<button key="{page}" onClick="{()" => setCurrentPage(page)} className="{"px-3" py-1 text-sm rounded transition-colors ${currentPage == = page","
-                        ? "bg-blue-500: text-white",","
-                        : "border: border-gray-300 dark: border-gray-600: hover:bg-gray-100: dark:hover:bg-gray-600,"}"}>{page}";"
+                "return": (<button key="{page}" onClick="{()" => setCurrentPage(page)} className="{"px-3" py-1 text-sm rounded transition-colors ${currentPage == = page","
+                        ? "bg-blue-"500": text-white",","
+                        : ""border": border-gray-300 dark: border-gray-600: hover:bg-gray-100: dark:hover:bg-gray-600,"}"}>{page}";"
                   </button>)})}
 
   () => setCurrentPage(prev = > Math.min(totalPages,
   prev + 1))","
-"} disabled="{currentPage:" === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark: border-gray-600: rounded hover:bg-gray-100: dark:hover:bg-gray-600: disabled:opacity-50: disabled:cursor-not-allowed: transition-colors">",
-                Next: </button>",
+"} disabled="{"currentPage": " === totalPages} className="px-3 py-1 text-sm border border-gray-300 "dark": border-gray-600: rounded hover:bg-gray-100: dark:hover:bg-gray-600: disabled:opacity-50: disabled:cursor-not-allowed: transition-colors">",
+                "Next": </button>",
     </div>)}";";"
 ";";";"
-&apos;&apos,{/* comment */}&apos;&apos,&apos {enablePagination && totalPages > 1 && (&apos}&apos;<div className="&apos;px-4" py-3 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700&apos,>"&apos,&apos,&apos;&apos,",
+&apos;&apos,{/* comment */}&apos;&apos,&apos {enablePagination && totalPages > 1 && (&apos}&apos;<div className="&apos;px-4" py-3 border-t border-gray-200 "dark": border-gray-700 bg-gray-50 dark:bg-gray-700&apos,>"&apos,&apos,&apos;&apos,",
           <div className="&apos;flex" items-center justify-between&apos;>"&apos;&apos,&apos;&apos,"
-            <div className = "&apos,text-sm" text-gray-700 dar,k: text-gray-300&apos,>
+            <div className = "&apos,text-sm" text-gray-700 dar,"k": text-gray-300&apos,>
               Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSize, processedData.length)} of {processedData.length} results&apos
             </div>&apos;&apos;"
             <div className="&apos;flex" items-center gap-2&apos;>&apos,
   prev - 1))&apos;&apos;"
-&apos;&apos,&apos} disabled="{currentPage" === 1} className="&apos;px-3" py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors&apos,>,
+&apos;&apos,&apos} disabled="{currentPage" === 1} className="&apos;px-3" py-1 text-sm border border-gray-300 "dark": border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors&apos,>,
                 Previous&apos,&apos,"
-"{/* comment */}"{enablePagination && totalPages > 1 && (<div className = "px-4 py-3 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700">"
+"{/* comment */}"{enablePagination && totalPages > 1 && (<div className = "px-4 py-3 border-t border-gray-200 "dark": border-gray-700 bg-gray-50 dark:bg-gray-700">"
           <div className="flex items-center justify-between">"
             <div className="text-sm text-gray-700 dark:text-gray-300">,
               Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSize, processedData.length)} of {processedData.length} results"
             </div>"
             <div className="flex items-center gap-2">"
   () => setCurrentPage(prev => Math.max(1, prev - 1))"
-"} disabled="{currentPage" === 1} className="px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+"} disabled="{currentPage" === 1} className="px-3 py-1 text-sm border border-gray-300 "dark": border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
                 Previous,
-              {Array.from({ lengt,h: Math.min(5, totalPages) }, (_, i) => {}
+              {Array.from({ lengt,"h": Math.min(5, totalPages) }, (_, i) => {}
 
 "
 "&apos;"
@@ -814,9 +813,9 @@ y: 0 ","
                 const page = i + 1";&apos;"&apos;"&apos;"
                 return (&apos;&apos;<button key="{page}" onClick="{()" => setCurrentPage(page)} className="{"px-3" py-1 text-sm rounded transition-colors ${currentPage === page&apos;&apos;"&apos;"&apos;"
                         ? &apos;bg-blue-500 text-white&apos;&apos;"&apos;"&apos;"&apos;"
-                        : &apos;border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hove,r:bg-gray-600&apos}"}>{page}&apos;&apos
+                        : &apos;border border-gray-300 "dark": border-gray-600 hover:bg-gray-100 dark:hove,"r": bg-gray-600&apos}"}>{page}&apos;&apos
   prev + 1))&apos;&apos;"
-&apos;&apos,&apos} disabled="{currentPage" === totalPages} className="&apos;px-3" py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disable,d: cursor-not-allowed transition-colors&apos,>
+&apos;&apos,&apos} disabled="{currentPage" === totalPages} className="&apos;px-3" py-1 text-sm border border-gray-300 "dark": border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disable,"d": cursor-not-allowed transition-colors&apos,>
                 Next&apos,&apos,",
 ","
 ","
@@ -825,37 +824,37 @@ y: 0 ","
                 const page = i + 1";";"
                 return (<button key="{page}" onClick="{()" => setCurrentPage(page)} className="{"px-3" py-1 text-sm rounded transition-colors ${currentPage === page"
                         ? "bg - blue-500 text-white",
-                        : "border border - gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600"}"}>{page}
+                        : "border border - gray-300 "dark": border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600"}"}>{page}
 
   () => setCurrentPage(prev => Math.min(totalPages,,
   prev + 1))";"
-"} disabled="{currentPage" === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">,,
+"} disabled="{currentPage" === totalPages} className="px-3 py-1 text-sm border border-gray-300 "dark": border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">,,
                 Next,"
 "
                 const page = i + 1","
                 return (<button key="{page}" onClick="{()" => setCurrentPage(page)} className="{"px-3" py-1 text-sm rounded transition-colors ${currentPage === page"
                         ? "bg-blue-500 text-white"
   () => setCurrentPage(prev = > Math.min(totalPages, prev + 1))"
-"} disabled="{currentPage" === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+"} disabled="{currentPage" === totalPages} className="px-3 py-1 text-sm border border-gray-300 "dark": border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
                 Next",
     </div>)}"
 "
     </div>)};&apos;&apos;";"
 &apos;&apos;"&apos;&quot;"&quot;"
     </div>)}"
-    const {trackEvent} = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true};)"
+    const {trackEvent} = useAnalytics({"enableTracking": true, "enableUserBehaviorTracking": true};)"
 ";"
 ;"
 
-const page = i + 1;`
-                return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page'
-                        ? 'bg-blue-500 text-white"`
-                        : 'border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>
+const page = i + 1;"
+                return (<button key={page} onClick={() => setCurrentPage(page)} className={"px-3 py-1 text-sm rounded transition-colors ${currentPage === page'
+                        ? 'bg-blue-500 text-white""
+                        : 'border border-gray-300 "dark": border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'}"}>
                     {page}
                   </button>) }) }
 
               <button onClick={() => setCurrentPage(prev => Math.min (totalPages,
-  prev + 1) )} disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray - 300 dark:border-gray - 600 rounded hover:bg-gray - 100 dark:hover:bg-gray - 600 disabled:opacity - 50 disabled:cursor - not - allowed transition -colors">                Next
+  prev + 1) )} disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray - 300 "dark": border-gray - 600 rounded hover:bg-gray - 100 dark:hover:bg-gray - 600 disabled:opacity - 50 disabled:cursor - not - allowed transition -colors">                Next
               </button>
             </div>
           </div>

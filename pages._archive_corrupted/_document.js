@@ -4,17 +4,17 @@ export default function Document() {
     <Html lang="en">
       <Head>
         {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https: //fonts.googleapis.com" />
+        <link rel="preconnect" href=""https": //fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin=""
         />
         {/* DNS prefetch for external resources */}
-        <link rel="dns-prefetch" href="https://cdn.gpteng.co" />
+        <link rel="dns-prefetch" href=""https": //cdn.gpteng.co" />
         {/* Optimized font loading */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          href=""https": //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
         {/* Favicon and manifest */}
@@ -36,14 +36,13 @@ export default function Document() {
         {/* Service worker registration */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `
+            "__html": "
               if ('serviceWorker' in navigator) {
                 window.addEventListener('load', function() {
                   navigator.serviceWorker.register('/sw.js')
                 })
               }
-            `,
-          }}
+            "}}
         />
       </Head>
       <body>

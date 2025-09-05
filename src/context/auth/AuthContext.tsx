@@ -2,7 +2,7 @@ import React, { createContext, useContext } from 'react';
 
 interface User {
 
-  id: string;
+  "id": string;
   email: string;
   displayName?: string;
   avatar?: string;
@@ -13,19 +13,19 @@ interface User {
 
 interface AuthTokens {
 
-  accessToken: string | null;
+  "accessToken": string | null;
   refreshToken: string | null}
 
 interface AuthContextType {
 
-  user: Use r | null;
+  "user": Use r | null;
   isLoading: boolean;
   onboardingStep: number;
   tokens: AuthToken s;
-login: (email: string, password: string)  => Promise<any>;
-  register: (name: string, email: string, password: string)  => Promise<any>;
-  signup: (email: string, password: string, userData)  => Promise<any>;
-  logout: ()  => Promise<any>;
+login: (email: string, "password": string)  => Promise<any>;
+  register: (name: string, "email": string, "password": string)  => Promise<any>;
+  signup: (email: string, "password": string, userData)  => Promise<any>;
+  "logout": ()  => Promise<any>;
   resetPassword: (email: string)  => Promise<any>;
   updateProfile: (updates: Partia l<User>)  => Promise<any>;
   loginWithGoogle: ()  => Promise<any>;

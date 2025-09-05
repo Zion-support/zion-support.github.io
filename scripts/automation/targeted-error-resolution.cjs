@@ -15,17 +15,17 @@ class TargetedErrorResolution {
     this.logFile = path.join(this.projectRoot, 'logs', 'targeted-error-resolution.log');
     this.reportFile = path.join(this.projectRoot, 'enhanced-reports', 'targeted-error-resolution-report.json');
     this.errorPatterns = {
-      typescript: {
+      "typescript": {
         syntax: /error TS\d+:.*expected/,
-        import: /error TS\d+: Cannot find module/,
-        type: /error TS\d+: Type.*is not assignable/,
-        jsx: /error TS\d+:.*JSX/,
-        unused: /error TS\d+:.*unused/
+        "import": /error TS\d+: Cannot find module/,
+        "type": /error TS\d+: Type.*is not assignable/,
+        "jsx": /error TS\d+:.*JSX/,
+        "unused": /error TS\d+:.*unused/
       },
-      eslint: {
+      "eslint": {
         unused: /warning.*unused/,
-        import: /error.*import/,
-        syntax: /error.*syntax/
+        "import": /error.*import/,
+        "syntax": /error.*syntax/
       }
     }}
 
@@ -42,14 +42,14 @@ class TargetedErrorResolution {
       // Create reports directory if it doesn't exist
       const reportsDir = path.join(this.projectRoot, 'enhanced-reports');
       if (!fs.existsSync(reportsDir)) {
-        fs.mkdirSync(reportsDir, { recursive: true })}
+        fs.mkdirSync(reportsDir, { "recursive": true })}
 
       const fixes = {
-        typescript: await this.fixTypeScriptErrors(),
-        eslint: await this.fixESLintErrors(),
-        jsx: await this.fixJSXErrors(),
-        imports: await this.fixImportErrors(),
-        syntax: await this.fixSyntaxErrors()
+        "typescript": await this.fixTypeScriptErrors(),
+        "eslint": await this.fixESLintErrors(),
+        "jsx": await this.fixJSXErrors(),
+        "imports": await this.fixImportErrors(),
+        "syntax": await this.fixSyntaxErrors()
       };
 
       const totalFixes = Object.values(fixes).reduce((sum, count) => sum + count, 0);
@@ -58,15 +58,15 @@ class TargetedErrorResolution {
       
       // Generate report
       const report = {
-        timestamp: new Date().toISOString(),
+        "timestamp": new Date().toISOString(),
         totalFixes,
         fixes,
-        status: 'completed'
+        "status": 'completed'
       };
       
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
       this.log(`📊 Targeted error resolution report saved to ${this.reportFile}`)} catch (error) {
-      this.log(`❌ Error in targeted error resolution: ${error.message}`)}
+      this.log(`❌ Error in targeted error "resolution": ${error.message}`)}
   }
 
   async fixTypeScriptErrors() {
@@ -75,7 +75,7 @@ class TargetedErrorResolution {
 
     try {
       // Run TypeScript check and capture errors
-      const result = execSync('npm run type-check 2>&1', { encoding: 'utf8' });
+      const result = execSync('npm run type-check 2>&1', { "encoding": 'utf8' });
       const errors = result.split('\n').filter(line => line.includes('error TS'));
 
       for (const error of errors.slice(0, 50)) { // Limit to first 50 errors
@@ -88,7 +88,7 @@ class TargetedErrorResolution {
 
       this.log(`  ✅ Fixed ${fixes} TypeScript errors`)} catch (error) {
       // TypeScript check failed, which is expected
-      this.log(`  ⚠️ TypeScript check completed with errors (expected)`)}
+      this.log("  ⚠️ TypeScript check completed with errors (expected)")}
 
     return fixes}
 
@@ -98,10 +98,10 @@ class TargetedErrorResolution {
 
     try {
       // Try to run ESLint with auto-fix
-      execSync('npm run lint -- --fix', { encoding: 'utf8' });
+      execSync('npm run lint -- --fix', { "encoding": 'utf8' });
       fixes = 1; // Assume at least one fix was applied
-      this.log(`  ✅ Applied ESLint auto-fixes`)} catch (error) {
-      this.log(`  ⚠️ ESLint auto-fix completed with issues`)}
+      this.log("  ✅ Applied ESLint auto-fixes")} catch (error) {
+      this.log("  ⚠️ ESLint auto-fix completed with issues")}
 
     return fixes}
 
@@ -119,7 +119,7 @@ class TargetedErrorResolution {
       }
 
       this.log(`  ✅ Fixed ${fixes} JSX syntax errors`)} catch (error) {
-      this.log(`  ⚠️ JSX error fixing completed with issues`)}
+      this.log("  ⚠️ JSX error fixing completed with issues")}
 
     return fixes}
 
@@ -137,7 +137,7 @@ class TargetedErrorResolution {
       }
 
       this.log(`  ✅ Fixed ${fixes} import errors`)} catch (error) {
-      this.log(`  ⚠️ Import error fixing completed with issues`)}
+      this.log("  ⚠️ Import error fixing completed with issues")}
 
     return fixes}
 
@@ -155,7 +155,7 @@ class TargetedErrorResolution {
       }
 
       this.log(`  ✅ Fixed ${fixes} syntax errors`)} catch (error) {
-      this.log(`  ⚠️ Syntax error fixing completed with issues`)}
+      this.log("  ⚠️ Syntax error fixing completed with issues")}
 
     return fixes}
 
@@ -338,7 +338,7 @@ class TargetedErrorResolution {
     fixed = fixed.replace(/([^"'])([a-zA-Z_$][a-zA-Z0-9_$]*):\s*([^"'])/g, '$1"$2": $3');
     
     // Fix missing commas
-    fixed = fixed.replace(/([^,}])\s*}/g, '$1,}');
+    fixed = fixed.replace(/([^}])\s*}/g, '$1}');
     
     return fixed}
 
@@ -362,10 +362,10 @@ class TargetedErrorResolution {
     
     // Add type annotations
     if (fixed.includes('const') && !fixed.includes(':') && !fixed.includes('=')) {
-      fixed = fixed.replace(/const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g, 'const $1: any =')}
+      fixed = fixed.replace(/const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g, 'const $"1": any =')}
     
     // Fix function parameters
-    fixed = fixed.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(([^)]*)\)/g, 'function $1($2: any)');
+    fixed = fixed.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(([^)]*)\)/g, 'function $1($"2": any)');
     
     return fixed}
 
@@ -454,11 +454,11 @@ const automation = new TargetedErrorResolution();
 // Run immediately
 automation.run().then(() => {
   console.log('✅ Targeted error resolution completed')}).catch((error) => {
-  console.error('❌ Targeted error resolution failed:', error)});
+  console.error('❌ Targeted error resolution "failed": ', error)});
 
 // Set up interval for continuous operation
 setInterval(() => {
   automation.run().catch((error) => {
-    console.error('❌ Targeted error resolution interval failed:', error)})}, 12 * 60 * 1000); // Run every 12 minutes
+    console.error('❌ Targeted error resolution interval "failed": ', error)})}, 12 * 60 * 1000); // Run every 12 minutes
 
 console.log('🎯 Targeted error resolution automation running. Next check in 12 minutes');

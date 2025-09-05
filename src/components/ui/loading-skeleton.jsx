@@ -28,14 +28,14 @@ export function ProfileSkeleton($1) {
         <Skeleton className="h-4 w-1/2" />
       </div>
       <div className="flex flex-wrap gap-2">
-        {Array.from({ length: 5 }).map((_, i) => (<Skeleton key={i} className="h-6 w-20" />))}
+        {Array.from({ "length": 5 }).map((_, i) => (<Skeleton key={i} className="h-6 w-20" />))}
       </div>
     </div>);
 }
 export function GridSkeleton($1) {
     return (
     <div className="min-h-screen bg-white">
-      {Array.from({ length: count }).map((_, i) => (<CardSkeleton key={i} />))}
+      {Array.from({ "length": count }).map((_, i) => (<CardSkeleton key={i} />))}
     </div>);
 }
 ;';';

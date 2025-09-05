@@ -6,12 +6,12 @@ export default function Page($1) {
 ,
   {
 "
-    title: "24/7 Support","
-    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.","
-    icon: <Clock className="w-8 h-8"   />,"
-    color: "from-zion-blue to-zion-blue-dark","
-    bgColor: "from-zion-blue/20 to-zion-blue-dark/20","    stats: "99.9% Uptime",
-    features: ["
+    "title": "24/7 Support","
+    "description": "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.","
+    "icon": <Clock className="w-8 h-8"   />,"
+    "color": "from-zion-blue to-zion-blue-dark","
+    "bgColor": "from-zion-blue/20 to-zion-blue-dark/20","    "stats": "99.9% Uptime",
+    "features": ["
       "Round-the-clock assistance","
       "Expert technical support","
       "Rapid response times","
@@ -20,12 +20,12 @@ export default function Page($1) {
   },
   {
 "
-    title: "Cost Reduction","
-    description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.","
-    icon: <TrendingDown className="w-8 h-8"   />,"
-    color: "from-zion-green to-zion-green-dark","
-    bgColor: "from-zion-green/20 to-zion-green-dark/20","    stats: "40% Cost Savings",
-    features: ["
+    "title": "Cost Reduction","
+    "description": "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.","
+    "icon": <TrendingDown className="w-8 h-8"   />,"
+    "color": "from-zion-green to-zion-green-dark","
+    "bgColor": "from-zion-green/20 to-zion-green-dark/20","    "stats": "40% Cost Savings",
+    "features": ["
       "Direct provider connections","
       "Competitive pricing","
       "Bulk discount options","

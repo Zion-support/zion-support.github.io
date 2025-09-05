@@ -3,14 +3,14 @@ import {motion} from 'framer-motion';
 
 export function AdvancedAnalytics($1) {
     const [analyticsData, setAnalyticsData] = useState({
-        visitors: 0,
-        conversions: 0,
-        revenue: 0,
-        bounceRate: 0,
-        avgSessionDuration: 0,
-        topPages: [],
-        trafficSources: [],
-        deviceTypes: []
+        "visitors": 0,
+        "conversions": 0,
+        "revenue": 0,
+        "bounceRate": 0,
+        "avgSessionDuration": 0,
+        "topPages": [],
+        "trafficSources": [],
+        "deviceTypes": []
     };);
     const [timeRange, setTimeRange] = useState('7d');
     const [isLoading, setIsLoading] = useState(true);
@@ -21,28 +21,25 @@ export function AdvancedAnalytics($1) {
             setIsLoading(true);
             await new Promise(resolve => setTimeout(resolve, 1500));
             setAnalyticsData({
-                visitors: Math.floor(Math.random() * 10000) + 5000,
-                conversions: Math.floor(Math.random() * 500) + 100,
-                revenue: Math.floor(Math.random() * 50000) + 10000,
-                bounceRate: Math.random() * 30 + 20,
-                avgSessionDuration: Math.floor(Math.random() * 300) + 120,
-                topPages: [
-                    { page: '/', views: Math.floor(Math.random() * 5000) + 2000 },
-                    {page: '/services', views: Math.floor(Math.random() * 3000) + 1500},
-                    {page: '/contact', views: Math.floor(Math.random() * 2000) + 1000},
-                    {page: '/about', views: Math.floor(Math.random() * 1500) + 800},
-                    {page: '/pricing', views: Math.floor(Math.random() * 1000) + 500}
+                "visitors": Math.floor(Math.random() * 10000) + 5000,
+                "conversions": Math.floor(Math.random() * 500) + 100,
+                "revenue": Math.floor(Math.random() * 50000) + 10000,
+                "bounceRate": Math.random() * 30 + 20,
+                "avgSessionDuration": Math.floor(Math.random() * 300) + 120,
+                "topPages": [{ page: '/', "views": Math.floor(Math.random() * 5000) + 2000 },
+                    {"page": '/services', "views": Math.floor(Math.random() * 3000) + 1500},
+                    {"page": '/contact', "views": Math.floor(Math.random() * 2000) + 1000},
+                    {"page": '/about', "views": Math.floor(Math.random() * 1500) + 800},
+                    {"page": '/pricing', "views": Math.floor(Math.random() * 1000) + 500}
                 ],
-                trafficSources: [
-                    {source: 'Organic Search', percentage: 45},
-                    {source: 'Direct', percentage: 25},
-                    {source: 'Social Media', percentage: 20},
-                    {source: 'Referral', percentage: 10}
+                "trafficSources": [{source: 'Organic Search', "percentage": 45},
+                    {"source": 'Direct', "percentage": 25},
+                    {"source": 'Social Media', "percentage": 20},
+                    {"source": 'Referral', "percentage": 10}
                 ],
-                deviceTypes: [
-                    {device: 'Desktop', percentage: 60},
-                    {device: 'Mobile', percentage: 35},
-                    {device: 'Tablet', percentage: 5}
+                "deviceTypes": [{device: 'Desktop', "percentage": 60},
+                    {"device": 'Mobile', "percentage": 35},
+                    {"device": 'Tablet', "percentage": 5}
                 ]
             });
             setIsLoading(false);
@@ -58,8 +55,8 @@ export function AdvancedAnalytics($1) {
 
     const formatCurrency = (props) => {
         return new Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency: 'USD'
+            "style": 'currency',
+            "currency": 'USD'
         };).format(num);
     };
 
@@ -88,7 +85,7 @@ export function AdvancedAnalytics($1) {
                             className={`px-4 py-2 rounded-lg transition-colors ${
                                 timeRange === range';';
                                     ? 'bg-blue-500 text-white'
-                                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                                    : 'bg-gray-100 text-gray-600 "hover": bg-gray-200'
                             }`}
                         >
                             {range}
@@ -98,11 +95,11 @@ export function AdvancedAnalytics($1) {
             </div>
 
             {/* Key Metrics */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-4 gap-6">
                 <motion.div 
-                    initial={{ opacity: 0, y: 20 }} 
-                    animate={{ opacity: 1, y: 0 }} 
-                    transition={{ delay: 0.1 }} 
+                    initial={{ opacity: 0, "y": 20 }} 
+                    animate={{ "opacity": 1, "y": 0 }} 
+                    transition={{ "delay": 0.1 }} 
                     className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200 rounded-xl"
                 >
                     <div className="text-2xl font-bold text-blue-600">
@@ -113,9 +110,9 @@ export function AdvancedAnalytics($1) {
                 </motion.div>
 
                 <motion.div 
-                    initial={{ opacity: 0, y: 20 }} 
-                    animate={{ opacity: 1, y: 0 }} 
-                    transition={{ delay: 0.2 }} 
+                    initial={{ "opacity": 0, "y": 20 }} 
+                    animate={{ "opacity": 1, "y": 0 }} 
+                    transition={{ "delay": 0.2 }} 
                     className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-xl"
                 >
                     <div className="text-2xl font-bold text-purple-600">
@@ -126,9 +123,9 @@ export function AdvancedAnalytics($1) {
                 </motion.div>
 
                 <motion.div 
-                    initial={{ opacity: 0, y: 20 }} 
-                    animate={{ opacity: 1, y: 0 }} 
-                    transition={{ delay: 0.3 }} 
+                    initial={{ "opacity": 0, "y": 20 }} 
+                    animate={{ "opacity": 1, "y": 0 }} 
+                    transition={{ "delay": 0.3 }} 
                     className="p-6 bg-gradient-to-br from-green-50 to-blue-50 border border-green-200 rounded-xl"
                 >
                     <div className="text-2xl font-bold text-green-600">
@@ -139,9 +136,9 @@ export function AdvancedAnalytics($1) {
                 </motion.div>
 
                 <motion.div 
-                    initial={{ opacity: 0, y: 20 }} 
-                    animate={{ opacity: 1, y: 0 }} 
-                    transition={{ delay: 0.4 }} 
+                    initial={{ "opacity": 0, "y": 20 }} 
+                    animate={{ "opacity": 1, "y": 0 }} 
+                    transition={{ "delay": 0.4 }} 
                     className="p-6 bg-gradient-to-br from-gray-50 to-blue-50 border border-gray-200 rounded-xl"
                 >
                     <div className="text-2xl font-bold text-gray-700">
@@ -153,12 +150,12 @@ export function AdvancedAnalytics($1) {
             </div>
 
             {/* Detailed Analytics */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 "lg": grid-cols-2 gap-6">
                 {/* Top Pages */}
                 <motion.div 
-                    initial={{ opacity: 0, x: -20 }} 
-                    animate={{ opacity: 1, x: 0 }} 
-                    transition={{ delay: 0.5 }} 
+                    initial={{ "opacity": 0, "x": -20 }} 
+                    animate={{ "opacity": 1, "x": 0 }} 
+                    transition={{ "delay": 0.5 }} 
                     className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm"
                 >
                     <h3 className="text-xl font-semibold text-gray-800 mb-4">
@@ -185,9 +182,9 @@ export function AdvancedAnalytics($1) {
 
                 {/* Traffic Sources */}
                 <motion.div 
-                    initial={{ opacity: 0, x: 20 }} 
-                    animate={{ opacity: 1, x: 0 }} 
-                    transition={{ delay: 0.6 }} 
+                    initial={{ "opacity": 0, "x": 20 }} 
+                    animate={{ "opacity": 1, "x": 0 }} 
+                    transition={{ "delay": 0.6 }} 
                     className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm"
                 >
                     <h3 className="text-xl font-semibold text-gray-800 mb-4">
@@ -201,7 +198,7 @@ export function AdvancedAnalytics($1) {
                                     <div className="w-20 bg-gray-200 rounded-full h-2">
                                         <div 
                                             className="bg-blue-500 h-2 rounded-full" 
-                                            style="{{{ width: `${source.percentage}}"%` }}
+                                            style="{{{ "width": `${source.percentage}}"%` }}
                                         ></div>
                                     </div>
                                     <span className="text-gray-600 font-medium w-8">{source.percentage}%</span>

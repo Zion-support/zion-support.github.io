@@ -22,77 +22,73 @@ import {
 
 const services = {
   'AI Solutions': [
-    { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
-    { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
-    { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
-    { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
-    { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
-    { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' },
-    { name: 'AI Fraud Detection', href: '/ai-services#ai-fraud-detection' },
-    { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' }
+    { "name": 'AI-Powered Email Responder', "href": '/ai-services#ai-email-responder' },
+    { "name": 'Predictive Analytics Platform', "href": '/ai-services#predictive-analytics' },
+    { "name": 'Intelligent Chatbot System', "href": '/ai-services#intelligent-chatbot' },
+    { "name": 'Computer Vision Solutions', "href": '/ai-services#computer-vision' },
+    { "name": 'AI Drug Discovery', "href": '/ai-services#ai-drug-discovery' },
+    { "name": 'AI Autonomous Vehicles', "href": '/ai-services#ai-autonomous-vehicles' },
+    { "name": 'AI Climate Modeling', "href": '/ai-services#ai-climate-modeling' },
+    { "name": 'AI Cybersecurity', "href": '/ai-services#ai-cybersecurity' }
   ],
   'IT Services': [
-    { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
-    { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
-    { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
-    { name: 'Database Management', href: '/it-services#database-management' },
-    { name: 'DevOps & CI/CD', href: '/it-services#devops-cicd' },
-    { name: 'Data Center Migration', href: '/it-services#data-center-migration' },
-    { name: 'IT Asset Management', href: '/it-services#it-asset-management' },
-    { name: 'Backup & Disaster Recovery', href: '/it-services#backup-disaster-recovery' }
+    { "name": 'Cloud Infrastructure Management', "href": '/it-services#cloud-infrastructure' },
+    { "name": 'Zero Trust Security', "href": '/it-services#zero-trust-security' },
+    { "name": 'Edge Computing', "href": '/it-services#edge-computing' },
+    { "name": '5G Network Implementation', "href": '/it-services#5g-networks' },
+    { "name": 'Blockchain Infrastructure', "href": '/it-services#blockchain-infrastructure' },
+    { "name": 'IoT Platform Management', "href": '/it-services#iot-platform' },
+    { "name": 'Digital Twin Technology', "href": '/it-services#digital-twins' },
+    { "name": 'Green IT Solutions', "href": '/it-services#green-it' }
   ],
   'Micro SaaS': [
-    { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
-    { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
-    { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
-    { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
-    { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
-    { name: 'Workflow Automation', href: '/micro-saas#workflow-automation' },
-    { name: 'AI Lead Scoring', href: '/micro-saas#ai-lead-scoring' },
-    { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' }
+    { "name": 'Cloud Cost Guard', "href": '/micro-saas#cloud-cost-guard' },
+    { "name": 'AI Email Responder', "href": '/micro-saas#ai-email-responder' },
+    { "name": 'Voice Meeting Assistant', "href": '/micro-saas#voice-meeting-assistant' },
+    { "name": 'Smart Contract Analyzer', "href": '/micro-saas#smart-contract-analyzer' },
+    { "name": 'Predictive Maintenance AI', "href": '/micro-saas#predictive-maintenance' },
+    { "name": 'Blockchain Analytics', "href": '/micro-saas#blockchain-analytics' },
+    { "name": 'AI SEO Optimizer', "href": '/micro-saas#ai-seo-optimizer' },
+    { "name": 'Smart Energy Management', "href": '/micro-saas#smart-energy' }
   ]
 };
 
-const company = [
-  { name: 'About Us', href: '/about' },
-  { name: 'Our Team', href: '/about#team' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'News', href: '/news' }
+const company = [{ "name": 'About Us', "href": '/about' },
+  { "name": 'Our Team', "href": '/about#team' },
+  { "name": 'Careers', "href": '/careers' },
+  { "name": 'Case Studies', "href": '/case-studies' },
+  { "name": 'Blog', "href": '/blog' },
+  { "name": 'News', "href": '/news' }
 ];
 
-const resources = [
-  { name: 'Documentation', href: '/docs' },
-  { name: 'API Reference', href: '/api-docs' },
-  { name: 'Tutorials', href: '/tutorials' },
-  { name: 'Guides', href: '/guides' },
-  { name: 'FAQ', href: '/faq' },
-  { name: 'Support', href: '/support' }
+const resources = [{ "name": 'Documentation', "href": '/docs' },
+  { "name": 'API Reference', "href": '/api-docs' },
+  { "name": 'Tutorials', "href": '/tutorials' },
+  { "name": 'Guides', "href": '/guides' },
+  { "name": 'FAQ', "href": '/faq' },
+  { "name": 'Support', "href": '/support' }
 ];
 
-const legal = [
-  { name: 'Privacy Policy', href: '/privacy' },
-  { name: 'Terms of Service', href: '/terms' },
-  { name: 'Cookie Policy', href: '/cookies' },
-  { name: 'Security', href: '/security' },
-  { name: 'Compliance', href: '/compliance' },
-  { name: 'Sitemap', href: '/sitemap' }
+const legal = [{ "name": 'Privacy Policy', "href": '/privacy' },
+  { "name": 'Terms of Service', "href": '/terms' },
+  { "name": 'Cookie Policy', "href": '/cookies' },
+  { "name": 'Security', "href": '/security' },
+  { "name": 'Compliance', "href": '/compliance' },
+  { "name": 'Sitemap', "href": '/sitemap' }
 ];
 
-const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
-  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }
+const socialLinks = [{ "name": 'LinkedIn', "href": 'https://linkedin.com/company/ziontechgroup', "icon": Linkedin },
+  { "name": 'Twitter', "href": 'https://twitter.com/ziontechgroup', "icon": Twitter },
+  { "name": 'GitHub', "href": 'https://github.com/ziontechgroup', "icon": Github },
+  { "name": 'YouTube', "href": 'https://youtube.com/@ziontechgroup', "icon": Youtube },
+  { "name": 'Facebook', "href": 'https://facebook.com/ziontechgroup', "icon": Facebook }
 ];
 
 const contactInfo = {
-  phone: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008, Middletown, DE 19709',
-  hours: '24/7 Support Available'
+  "phone": '+1 302 464 0950',
+  "email": 'kleber@ziontechgroup.com',
+  "address": '364 E Main St STE 1008, Middletown, DE 19709',
+  "hours": '24/7 Support Available'
 };
 
 export default function Footer() {
@@ -177,7 +173,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -198,7 +194,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -219,7 +215,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
+                    className="text-gray-400 hover: text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -240,10 +236,10 @@ export default function Footer() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors group"
+                      className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover: bg-blue-600 transition-colors group"
                       aria-label={social.name}
                     >
-                      <IconComponent className="w-5 h-5 text-gray-400 group-hover:text-white" />
+                      <IconComponent className="w-5 h-5 text-gray-400 group-hover: text-white" />
                     </a>
                   );
                 })}
@@ -256,7 +252,7 @@ export default function Footer() {
       {/* Newsletter Signup */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="flex flex-col md: flex-row items-center justify-between">
             <div className="mb-4 md:mb-0">
               <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
               <p className="text-gray-400 text-sm">
@@ -280,7 +276,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="flex flex-col md: flex-row items-center justify-between">
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © 2024 Zion Tech Group. All rights reserved. | 
               <span className="ml-2">Delaware, United States</span>

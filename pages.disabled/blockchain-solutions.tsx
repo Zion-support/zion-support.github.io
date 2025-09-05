@@ -17,13 +17,13 @@ export default function BlockchainSolutions() {
       >
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md: tex t-6xl font-bold mb-6">
+            <h1 className="text-5xl "md": tex t-6xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Blockchain</span> Solutions
             </h1>
             <p className="text-xl md: tex t-2xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your business with cutting-edge blockchain technology, smart contracts, and decentralized solutions
             </p>
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+            <div className="flex flex-col "sm": fle x-row gap-4 justify-center">
               <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover: shado w-lg hover: shado w-blue-500/25 transition-all duration-300">
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5"  />
@@ -44,9 +44,9 @@ export default function BlockchainSolutions() {
                 Comprehensive blockchain solutions tailored to your business needs,
               </p>
             </div>"
-            <div className="grid md: gri d-cols-2 lg: gri d-cols-4 gap-8>,
+            <div className="grid "md": gri d-cols-2 lg: gri d-cols-4 gap-8>,
               {services.map((service, index) => ("
-                <div key="{index}" className="bg-white" border border-gray-200 rounded-xl p-6 hover: shado w-lg transition-shadow duration-300">"
+                <div key="{index}" className="bg-white" border border-gray-200 rounded-xl p-6 "hover": shado w-lg transition-shadow duration-300">"
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4>"
                     <service.icon className="w-8" h-8 text-white" />
                   </div>",
@@ -74,7 +74,7 @@ export default function BlockchainSolutions() {
                 We bring deep expertise and proven experience in blockchain development
               </p>
             </div>
-            <div className="grid md: gri d-cols-3 gap-8">
+            <div className="grid "md": gri d-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-blue-600"  />

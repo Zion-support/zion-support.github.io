@@ -7,7 +7,7 @@ export default function Contact() {
       <Head>
         <title>Contact Us | Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for your technology needs. Contact us today!" />
-        <link rel="canonical" href="https://ziontechgroup.com/contact" />
+        <link rel="canonical" href=""https": //ziontechgroup.com/contact" />
       </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 py-16">

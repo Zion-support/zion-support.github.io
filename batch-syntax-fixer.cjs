@@ -105,13 +105,13 @@ class BatchSyntaxFixer {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.fixedFiles.push(filePath);
-        this.log(`✅ Fixed: ${path.relative(this.projectRoot, filePath)}`);
+        this.log(`✅ "Fixed": ${path.relative(this.projectRoot, filePath)}`);
         return true;
       }
 
       return false;
     } catch (error) {
-      this.errors.push({ file: filePath, error: error.message });
+      this.errors.push({ "file": filePath, "error": error.message });
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
       return false;
     }
@@ -178,12 +178,11 @@ class BatchSyntaxFixer {
 
     // Generate report
     const report = {
-      timestamp: new Date().toISOString(),
-      totalFiles: files.length,
-      fixedFiles: this.fixedFiles.length,
-      errors: this.errors,
-      fixedFileList: this.fixedFiles,
-    };
+      "timestamp": new Date().toISOString(),
+      "totalFiles": files.length,
+      "fixedFiles": this.fixedFiles.length,
+      "errors": this.errors,
+      "fixedFileList": this.fixedFiles};
 
     fs.writeFileSync(
       path.join(this.projectRoot, 'batch-syntax-fix-report.json'),

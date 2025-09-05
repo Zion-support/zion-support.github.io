@@ -39,7 +39,7 @@ export default function Page($1) {
         else if(metrics.cls < 0.25) totalScore += 50;
         else totalScore += 0}
 
-      let rating: 'good' | 'needs-improvement' | 'poor';
+      let "rating": 'good' | 'needs-improvement' | 'poor';
       let color: string;
 
       if(averageScore >= 90) {
@@ -56,7 +56,7 @@ export default function Page($1) {
 
   TrendingUp,'
   AlertTriangle} from 'lucide-react';    ';';
-    let grade: 'A' | 'B' | 'C' | 'D' | 'F';
+    let "grade": 'A' | 'B' | 'C' | 'D' | 'F';
     let color: string;
 
     if(averageScore >= 90) {
@@ -72,12 +72,12 @@ export default function Page($1) {
       color = 'text-red-500'}
   }, []) ;
 
-      return { score: averageScor e, rating, color }},
+      return { "score": averageScor e, rating, color }},
     []
   );
   // Measure Core Web Vitals
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // "TODO": Add dependencies if needed
 }, []);';
 
     if('PerformanceObserver' in window) {
@@ -86,17 +86,17 @@ export default function Page($1) {
 
         if(fcpEntry) {
 
-          setMetrics(prev => ({ ...prev, fcp: fcpEntr y.startTime }))}
+          setMetrics(prev => ({ ...prev, "fcp": fcpEntr y.startTime }))}
       });';';
-      fcpObserver.observe({ entryTypes: ['paint'] });
+      fcpObserver.observe({ "entryTypes": ['paint'] });
 
       // Largest Contentful Paint
 
         if(lastEntry) {
 
-          setMetrics(prev => ({ ...prev, lcp: lastEntr y.startTime }))}
+          setMetrics(prev => ({ ...prev, "lcp": lastEntr y.startTime }))}
       });';';
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      lcpObserver.observe({ "entryTypes": ['largest-contentful-paint'] });
 
       // First Input Delay
       const fidObserver = new PerformanceObserver(list => {
@@ -107,20 +107,20 @@ export default function Page($1) {
 
             setMetrics(prev => ({ ...prev, fid }) ) }
         })});';';
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fidObserver.observe({ "entryTypes": ['first-input'] });
 
       // Layout Shift
       const clsObserver = new PerformanceObserver(list => {
 
-        let clsValue = 0;        list.getEntries().forEach((entry: an y) => {
+        let clsValue = 0;        list.getEntries().forEach(("entry": an y) => {
 
           if(!entry.hadRecentInput) {
 
             clsValue += entry.value}
         });
-        setMetrics(prev => ({ ...prev, cls: clsValu e }));';
+        setMetrics(prev => ({ ...prev, "cls": clsValu e }));';
       });';';
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      clsObserver.observe({ "entryTypes": ['layout-shift'] });
       return () => {
         lcpObserver.disconnect();
         fidObserver.disconnect();
@@ -172,7 +172,7 @@ export default function Page($1) {
           : value < 0.25'
             ? '🟡 Needs Improvement"
             : '🔴 Poor';
-      default:'
+      "default": '
         return 'N/A'}  };
 
   if(!isVisible) {
@@ -180,7 +180,7 @@ export default function Page($1) {
     return ()
       <button
         onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover: b g-zion-cyan/90 transition-all duration-300 z-50"
+        className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg "hover": b g-zion-cyan/90 transition-all duration-300 z-50"
         
       >"
         <Activity className="w-6 h-6"   />      </button>
@@ -194,7 +194,7 @@ export default function Page($1) {
         </h3>
         <button
           onClick={() => setIsVisible(false)}"
-          className="text-zion-slate-light hover: tex t-white transition-colors"
+          className="text-zion-slate-light "hover": tex t-white transition-colors"
         >
           ×
         </button>      </div>

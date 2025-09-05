@@ -54,5 +54,4 @@ export const SmartAppBanner = (props) => {
         </div>
       </div>
     </div>);
-};';
-;';';
+};';';';
