@@ -19,7 +19,10 @@ import {
   ShoppingCart,
   GraduationCap,
   Globe,
-  Mail
+  Mail,
+  Cpu,
+  Network,
+  Monitor
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -58,6 +61,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
         { label: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
         { label: 'Data Analytics', href: '/services/data-analytics', icon: Brain },
+        { label: 'Quantum Computing', href: '/services/quantum-computing', icon: Cpu },
+        { label: 'Blockchain Services', href: '/services/blockchain', icon: Network },
+        { label: 'Edge Computing', href: '/services/edge-computing', icon: Monitor },
       ]
     },
     {

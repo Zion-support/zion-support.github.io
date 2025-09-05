@@ -19,21 +19,30 @@ const services = {
     { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
     { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
     { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
-    { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' }
+    { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
+    { name: 'Quantum AI Optimization', href: '/ai-services#quantum-ai' },
+    { name: 'Edge AI Vision System', href: '/ai-services#edge-ai' },
+    { name: 'Medical AI Diagnosis', href: '/ai-services#medical-ai' }
   ],
   'IT Services': [
     { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
     { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
     { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
     { name: 'Database Management', href: '/it-services#database-management' },
-    { name: 'System Administration', href: '/it-services#system-administration' }
+    { name: 'System Administration', href: '/it-services#system-administration' },
+    { name: 'Quantum Computing Infrastructure', href: '/it-services#quantum-computing' },
+    { name: 'Blockchain Infrastructure', href: '/it-services#blockchain' },
+    { name: 'Edge Computing Solutions', href: '/it-services#edge-computing' }
   ],
   'Micro SaaS': [
     { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
     { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
     { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
     { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
-    { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' }
+    { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
+    { name: 'AI Code Review Assistant', href: '/micro-saas#ai-code-review' },
+    { name: 'Smart Contract Audit Platform', href: '/micro-saas#smart-contract-audit' },
+    { name: 'AI Trading Bot', href: '/micro-saas#ai-trading-bot' }
   ]
 };
 

@@ -148,6 +148,543 @@ const aiServices = [
   },
   {
     title: 'AI-Powered Climate Modeling',
+    description: 'Advanced climate prediction and environmental impact analysis using machine learning.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Environmental Analysis', 'Risk Assessment', 'Policy Optimization'],
+    pricing: '$5,000 - $20,000/month',
+    category: 'Environmental AI',
+    link: 'https://climatemodeling.ziontechgroup.com'
+  },
+  {
+    title: 'Neural Architecture Search (NAS)',
+    description: 'Automated neural network design and optimization for specific tasks and datasets.',
+    icon: Network,
+    features: ['Auto Architecture Design', 'Performance Optimization', 'Hardware-Aware Design', 'Transfer Learning'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Deep Learning',
+    popular: true,
+    link: 'https://nas.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Fraud Detection',
+    description: 'Real-time fraud detection and prevention using advanced machine learning algorithms.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'False Positive Reduction'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Security AI',
+    link: 'https://frauddetection.ziontechgroup.com'
+  },
+  {
+    title: 'Generative AI Content Platform',
+    description: 'Advanced content generation using GPT and other large language models for various use cases.',
+    icon: FileText,
+    features: ['Text Generation', 'Code Generation', 'Creative Writing', 'Multi-modal Output'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Generative AI',
+    popular: true,
+    link: 'https://generativeai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimization',
+    description: 'Intelligent supply chain management with demand forecasting and logistics optimization.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Route Optimization', 'Inventory Management', 'Risk Analysis'],
+    pricing: '$4,000 - $20,000/month',
+    category: 'Supply Chain AI',
+    link: 'https://supplychainai.ziontechgroup.com'
+  },
+  {
+    title: 'Reinforcement Learning Platform',
+    description: 'Custom reinforcement learning solutions for complex decision-making problems.',
+    icon: Target,
+    features: ['Custom RL Algorithms', 'Environment Simulation', 'Policy Optimization', 'Multi-agent Systems'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Reinforcement Learning',
+    link: 'https://rlplatform.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Medical Diagnosis',
+    description: 'Advanced medical image analysis and diagnostic assistance using deep learning.',
+    icon: Heart,
+    features: ['Medical Image Analysis', 'Diagnostic Assistance', 'Treatment Recommendations', 'Clinical Decision Support'],
+    pricing: '$8,000 - $40,000/month',
+    category: 'Medical AI',
+    popular: true,
+    link: 'https://medicalai.ziontechgroup.com'
+  },
+  {
+    title: 'Natural Language Understanding (NLU)',
+    description: 'Advanced natural language understanding for complex text analysis and processing.',
+    icon: MessageSquare,
+    features: ['Intent Recognition', 'Entity Extraction', 'Sentiment Analysis', 'Context Understanding'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'NLP',
+    link: 'https://nlu.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Recommendation Engine',
+    description: 'Personalized recommendation systems for e-commerce, content, and services.',
+    icon: TrendingUp,
+    features: ['Personalization', 'Real-time Recommendations', 'A/B Testing', 'Performance Analytics'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Recommendation Systems',
+    link: 'https://recommendations.ziontechgroup.com'
+  },
+  {
+    title: 'Computer Vision for Manufacturing',
+    description: 'Quality control and defect detection using computer vision in manufacturing processes.',
+    icon: Eye,
+    features: ['Defect Detection', 'Quality Control', 'Process Monitoring', 'Predictive Maintenance'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Industrial AI',
+    link: 'https://manufacturingai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Financial Trading',
+    description: 'Algorithmic trading systems using machine learning for financial markets.',
+    icon: DollarSign,
+    features: ['Algorithmic Trading', 'Risk Management', 'Market Analysis', 'Portfolio Optimization'],
+    pricing: '$5,000 - $30,000/month',
+    category: 'FinTech AI',
+    popular: true,
+    link: 'https://tradingai.ziontechgroup.com'
+  },
+  {
+    title: 'Conversational AI Platform',
+    description: 'Advanced conversational AI for virtual assistants and customer service automation.',
+    icon: Bot,
+    features: ['Multi-turn Conversations', 'Context Awareness', 'Emotion Recognition', 'Voice Integration'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Conversational AI',
+    link: 'https://conversationalai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Cybersecurity',
+    description: 'Advanced threat detection and response using machine learning and behavioral analysis.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Incident Response', 'Security Automation'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Cybersecurity AI',
+    link: 'https://cybersecurityai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Energy Optimization',
+    description: 'Smart energy management and optimization for buildings and industrial facilities.',
+    icon: Zap,
+    features: ['Energy Forecasting', 'Load Optimization', 'Renewable Integration', 'Cost Reduction'],
+    pricing: '$2,500 - $12,000/month',
+    category: 'Energy AI',
+    link: 'https://energyai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Legal Document Analysis',
+    description: 'Automated legal document review and analysis using natural language processing.',
+    icon: FileText,
+    features: ['Document Review', 'Contract Analysis', 'Risk Assessment', 'Compliance Checking'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Legal AI',
+    link: 'https://legalai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Agricultural Monitoring',
+    description: 'Precision agriculture using computer vision and IoT for crop monitoring and optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Disease Detection', 'Yield Prediction', 'Resource Optimization'],
+    pricing: '$1,500 - $8,000/month',
+    category: 'AgTech AI',
+    link: 'https://agricultureai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Automated content moderation for social media, forums, and user-generated content.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Real-time Processing', 'Custom Rules', 'Scalable API'],
+    pricing: '$500 - $3,000/month',
+    category: 'Content AI',
+    link: 'https://contentmoderation.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Personalization Engine',
+    description: 'Dynamic personalization for websites, apps, and digital experiences.',
+    icon: Users,
+    features: ['Real-time Personalization', 'A/B Testing', 'Behavioral Analysis', 'Conversion Optimization'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Personalization AI',
+    link: 'https://personalization.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Code Generation',
+    description: 'Automated code generation and assistance for developers using large language models.',
+    icon: Code,
+    features: ['Code Generation', 'Bug Fixing', 'Code Review', 'Documentation Generation'],
+    pricing: '$500 - $2,500/month',
+    category: 'Developer AI',
+    popular: true,
+    link: 'https://codegeneration.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Video Analytics',
+    description: 'Advanced video analysis for security, retail analytics, and content understanding.',
+    icon: Video,
+    features: ['Object Tracking', 'Behavior Analysis', 'Facial Recognition', 'Scene Understanding'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Video AI',
+    link: 'https://videoanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Language Translation',
+    description: 'Real-time language translation with context awareness and cultural adaptation.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Awareness', 'Cultural Adaptation', 'Multi-language Support'],
+    pricing: '$300 - $1,500/month',
+    category: 'Translation AI',
+    link: 'https://translationai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Sentiment Analysis',
+    description: 'Advanced sentiment analysis for social media, reviews, and customer feedback.',
+    icon: MessageSquare,
+    features: ['Multi-language Sentiment', 'Emotion Detection', 'Trend Analysis', 'Real-time Processing'],
+    pricing: '$200 - $1,000/month',
+    category: 'Sentiment AI',
+    link: 'https://sentimentai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Predictive Maintenance',
+    description: 'Predictive maintenance for industrial equipment using IoT and machine learning.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Industrial AI',
+    link: 'https://predictivemaintenance.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Customer Segmentation',
+    description: 'Advanced customer segmentation and targeting using machine learning algorithms.',
+    icon: Users,
+    features: ['Behavioral Segmentation', 'Predictive Modeling', 'Campaign Optimization', 'ROI Analysis'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Marketing AI',
+    link: 'https://customersegmentation.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Image Generation',
+    description: 'High-quality image generation using advanced generative AI models.',
+    icon: Image,
+    features: ['Text-to-Image', 'Style Transfer', 'Image Editing', 'High Resolution Output'],
+    pricing: '$500 - $2,500/month',
+    category: 'Generative AI',
+    link: 'https://imagegeneration.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Voice Cloning',
+    description: 'High-quality voice synthesis and cloning for various applications.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Emotion Control', 'Multi-language Support', 'Real-time Synthesis'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Speech AI',
+    link: 'https://voicecloning.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Anomaly Detection',
+    description: 'Advanced anomaly detection for various data types and use cases.',
+    icon: AlertTriangle,
+    features: ['Multi-dimensional Analysis', 'Real-time Detection', 'False Positive Reduction', 'Custom Models'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Anomaly Detection',
+    link: 'https://anomalydetection.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Time Series Forecasting',
+    description: 'Advanced time series analysis and forecasting for business and scientific applications.',
+    icon: TrendingUp,
+    features: ['Multi-variate Forecasting', 'Seasonality Detection', 'Confidence Intervals', 'Custom Models'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Time Series AI',
+    link: 'https://timeseriesai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Knowledge Graph',
+    description: 'Intelligent knowledge graph construction and querying for complex data relationships.',
+    icon: Network,
+    features: ['Graph Construction', 'Semantic Search', 'Relationship Mining', 'Query Optimization'],
+    pricing: '$2,500 - $12,000/month',
+    category: 'Knowledge AI',
+    link: 'https://knowledgegraph.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Multi-modal Learning',
+    description: 'Advanced multi-modal AI that can process text, images, audio, and video together.',
+    icon: Monitor,
+    features: ['Multi-modal Fusion', 'Cross-modal Retrieval', 'Unified Representations', 'Real-time Processing'],
+    pricing: '$4,000 - $20,000/month',
+    category: 'Multi-modal AI',
+    popular: true,
+    link: 'https://multimodalai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Graph Neural Networks',
+    description: 'Advanced graph neural networks for complex relationship analysis and prediction.',
+    icon: Network,
+    features: ['Graph Learning', 'Node Classification', 'Link Prediction', 'Graph Generation'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Graph AI',
+    link: 'https://graphai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Federated Learning',
+    description: 'Privacy-preserving machine learning that trains models across decentralized data.',
+    icon: Lock,
+    features: ['Privacy Preservation', 'Decentralized Training', 'Model Aggregation', 'Differential Privacy'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Federated Learning',
+    link: 'https://federatedlearning.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Explainable AI (XAI)',
+    description: 'Explainable AI solutions that provide interpretable and transparent AI decisions.',
+    icon: Eye,
+    features: ['Model Interpretability', 'Decision Explanation', 'Bias Detection', 'Transparency Reports'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Explainable AI',
+    link: 'https://explainableai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered AutoML Platform',
+    description: 'Automated machine learning platform for non-technical users to build ML models.',
+    icon: Settings,
+    features: ['Auto Feature Engineering', 'Model Selection', 'Hyperparameter Tuning', 'Model Deployment'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'AutoML',
+    link: 'https://automl.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Synthetic Data Generation',
+    description: 'High-quality synthetic data generation for training and testing AI models.',
+    icon: Database,
+    features: ['Privacy-preserving Data', 'High Fidelity', 'Custom Schemas', 'Validation Tools'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Synthetic Data',
+    link: 'https://syntheticdata.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Model Monitoring',
+    description: 'Continuous monitoring and maintenance of AI models in production.',
+    icon: Monitor,
+    features: ['Performance Monitoring', 'Drift Detection', 'Model Retraining', 'Alerting System'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'MLOps',
+    link: 'https://modelmonitoring.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Feature Store',
+    description: 'Centralized feature management and serving platform for machine learning.',
+    icon: Database,
+    features: ['Feature Management', 'Version Control', 'Real-time Serving', 'Feature Discovery'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'MLOps',
+    link: 'https://featurestore.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered A/B Testing Platform',
+    description: 'Intelligent A/B testing with statistical significance and automated optimization.',
+    icon: BarChart3,
+    features: ['Statistical Analysis', 'Automated Testing', 'Multi-variate Testing', 'Conversion Optimization'],
+    pricing: '$500 - $2,500/month',
+    category: 'Testing AI',
+    link: 'https://abtesting.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Data Labeling',
+    description: 'Automated data labeling and annotation for machine learning datasets.',
+    icon: Target,
+    features: ['Automated Labeling', 'Quality Assurance', 'Human-in-the-loop', 'Multi-modal Support'],
+    pricing: '$0.10 - $1.00 per label',
+    category: 'Data Labeling',
+    link: 'https://datalabeling.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Model Compression',
+    description: 'Model compression and optimization for deployment on edge devices.',
+    icon: Cpu,
+    features: ['Model Pruning', 'Quantization', 'Knowledge Distillation', 'Hardware Optimization'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Model Optimization',
+    link: 'https://modelcompression.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Hyperparameter Optimization',
+    description: 'Automated hyperparameter tuning using advanced optimization algorithms.',
+    icon: Settings,
+    features: ['Bayesian Optimization', 'Multi-objective Optimization', 'Early Stopping', 'Resource Management'],
+    pricing: '$500 - $2,500/month',
+    category: 'Hyperparameter Tuning',
+    link: 'https://hyperopt.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Data Augmentation',
+    description: 'Intelligent data augmentation techniques to improve model performance.',
+    icon: Image,
+    features: ['Smart Augmentation', 'Domain Adaptation', 'Quality Preservation', 'Custom Techniques'],
+    pricing: '$300 - $1,500/month',
+    category: 'Data Augmentation',
+    link: 'https://dataaugmentation.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Model Ensemble',
+    description: 'Advanced model ensemble techniques for improved accuracy and robustness.',
+    icon: Network,
+    features: ['Ensemble Methods', 'Model Diversity', 'Weighted Voting', 'Stacking'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Ensemble Learning',
+    link: 'https://modelensemble.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Transfer Learning',
+    description: 'Pre-trained model adaptation for specific domains and tasks.',
+    icon: Share2,
+    features: ['Pre-trained Models', 'Domain Adaptation', 'Fine-tuning', 'Task-specific Optimization'],
+    pricing: '$500 - $2,500/month',
+    category: 'Transfer Learning',
+    link: 'https://transferlearning.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Active Learning',
+    description: 'Intelligent sample selection for efficient model training with minimal data.',
+    icon: Target,
+    features: ['Smart Sampling', 'Uncertainty Estimation', 'Query Strategy', 'Human Feedback'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Active Learning',
+    link: 'https://activelearning.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Few-shot Learning',
+    description: 'Learning from limited examples using advanced few-shot learning techniques.',
+    icon: BookOpen,
+    features: ['Meta-learning', 'Prototype Networks', 'Matching Networks', 'Rapid Adaptation'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Few-shot Learning',
+    link: 'https://fewshotlearning.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Self-supervised Learning',
+    description: 'Learning representations from unlabeled data using self-supervised techniques.',
+    icon: Brain,
+    features: ['Contrastive Learning', 'Masked Language Modeling', 'Representation Learning', 'Downstream Tasks'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Self-supervised Learning',
+    link: 'https://selfsupervised.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Adversarial Training',
+    description: 'Robust model training against adversarial attacks and perturbations.',
+    icon: Shield,
+    features: ['Adversarial Examples', 'Robust Training', 'Attack Detection', 'Defense Mechanisms'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Adversarial AI',
+    link: 'https://adversarial.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Continual Learning',
+    description: 'Learning new tasks without forgetting previous knowledge using continual learning.',
+    icon: BookOpen,
+    features: ['Catastrophic Forgetting Prevention', 'Task Incremental Learning', 'Memory Replay', 'Knowledge Distillation'],
+    pricing: '$2,500 - $12,000/month',
+    category: 'Continual Learning',
+    link: 'https://continuallearning.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Meta-learning',
+    description: 'Learning to learn efficiently across different tasks and domains.',
+    icon: Brain,
+    features: ['Model-agnostic Meta-learning', 'Gradient-based Meta-learning', 'Metric Learning', 'Rapid Adaptation'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Meta-learning',
+    link: 'https://metalearning.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Neural Architecture Search',
+    description: 'Automated neural network architecture design and optimization.',
+    icon: Network,
+    features: ['Architecture Search', 'Performance Optimization', 'Hardware-aware Design', 'Efficient Search'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Neural Architecture Search',
+    link: 'https://neuralarchitecture.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Evolutionary Algorithms',
+    description: 'Evolutionary computation for optimization and machine learning problems.',
+    icon: Sprout,
+    features: ['Genetic Algorithms', 'Evolution Strategies', 'Particle Swarm Optimization', 'Custom Operators'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Evolutionary Computing',
+    link: 'https://evolutionary.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Swarm Intelligence',
+    description: 'Distributed intelligence systems inspired by natural swarm behavior.',
+    icon: Users,
+    features: ['Particle Swarm Optimization', 'Ant Colony Optimization', 'Bee Algorithm', 'Distributed Systems'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Swarm Intelligence',
+    link: 'https://swarmintelligence.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Fuzzy Logic Systems',
+    description: 'Fuzzy logic-based AI systems for handling uncertainty and imprecision.',
+    icon: Brain,
+    features: ['Fuzzy Inference', 'Membership Functions', 'Rule-based Systems', 'Uncertainty Handling'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Fuzzy Logic',
+    link: 'https://fuzzylogic.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Expert Systems',
+    description: 'Rule-based expert systems for domain-specific problem solving.',
+    icon: Users,
+    features: ['Knowledge Representation', 'Inference Engine', 'Rule Management', 'Explanation Generation'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Expert Systems',
+    link: 'https://expertsystems.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Case-based Reasoning',
+    description: 'Problem solving based on similar past cases and experiences.',
+    icon: FileText,
+    features: ['Case Retrieval', 'Similarity Matching', 'Case Adaptation', 'Learning from Experience'],
+    pricing: '$1,500 - $7,500/month',
+    category: 'Case-based Reasoning',
+    link: 'https://casebased.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Inductive Logic Programming',
+    description: 'Learning logical rules from examples using inductive logic programming.',
+    icon: Code,
+    features: ['Rule Learning', 'Logic Programming', 'Inductive Inference', 'Knowledge Discovery'],
+    pricing: '$2,500 - $12,000/month',
+    category: 'Inductive Logic Programming',
+    link: 'https://inductivelogic.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Probabilistic Programming',
+    description: 'Probabilistic models and inference using programming languages.',
+    icon: BarChart3,
+    features: ['Probabilistic Models', 'Bayesian Inference', 'Uncertainty Quantification', 'Model Specification'],
+    pricing: '$3,000 - $15,000/month',
+    category: 'Probabilistic Programming',
+    link: 'https://probabilistic.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Causal Inference',
+    description: 'Causal relationship discovery and inference from observational data.',
+    icon: Network,
+    features: ['Causal Discovery', 'Causal Effect Estimation', 'Confounding Control', 'Intervention Analysis'],
+    pricing: '$4,000 - $20,000/month',
+    category: 'Causal Inference',
+    link: 'https://causalinference.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Climate Prediction',
     description: 'Advanced climate prediction and environmental impact analysis using AI.',
     icon: Globe,
     features: ['Climate Prediction', 'Environmental Analysis', 'Risk Assessment', 'Policy Optimization'],

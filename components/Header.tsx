@@ -26,7 +26,10 @@ const navigation = [
       { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable SaaS solutions' },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops', description: 'Cloud infrastructure solutions' },
       { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security solutions' },
-      { name: 'Data Analytics', href: '/services/data-analytics', description: 'Data insights and analytics' }
+      { name: 'Data Analytics', href: '/services/data-analytics', description: 'Data insights and analytics' },
+      { name: 'Quantum Computing', href: '/services/quantum-computing', description: 'Quantum computing solutions' },
+      { name: 'Blockchain Services', href: '/services/blockchain', description: 'Blockchain infrastructure' },
+      { name: 'Edge Computing', href: '/services/edge-computing', description: 'Edge computing solutions' }
     ]
   },
   {

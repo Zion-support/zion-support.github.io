@@ -148,6 +148,35 @@ const itServices = [
     category: 'Support'
   },
   {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing setup and integration for advanced computational problems.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Algorithm Development', 'Hybrid Classical-Quantum', 'Performance Optimization'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Quantum Computing',
+    popular: true,
+    link: 'https://quantum.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Edge computing infrastructure for real-time processing and low-latency applications.',
+    icon: Monitor,
+    features: ['Edge Hardware', 'Real-time Processing', 'Low Latency', 'IoT Integration'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Edge Computing',
+    link: 'https://edge.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Complete blockchain infrastructure setup and management for enterprise applications.',
+    icon: Network,
+    features: ['Blockchain Setup', 'Smart Contract Development', 'Node Management', 'Security Hardening'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Blockchain',
+    popular: true,
+    link: 'https://blockchain.ziontechgroup.com'
+  },
+  {
     title: 'Software Development Services',
     description: 'Custom software development and application modernization services.',
     icon: Code,

@@ -51,12 +51,9 @@ export default function LoginPage() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }},
-  {
-            animate={{ opacity: 1, y: 0 }},
-  {
-            transition={{ duration: 0.6, delay: 0.2 }},
-  {
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-white/10 backdrop-blur-md rounded-lg shadow-xl p-8"
           >
             <form className="space-y-6" onSubmit={handleSubmit}>
@@ -73,11 +70,9 @@ export default function LoginPage() {
                     name="email"
                     type="email"
                     autoComplete="email"
-                    required;
-                    value={formData.email},
-  {
-                    onChange={handleChange},
-  {
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
                     className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your email"
                   />
@@ -95,29 +90,24 @@ export default function LoginPage() {
                   <input
                     id="password"
                     name="password"
-                    type={showPassword ? 'text' : 'password'},
-  {
+                    type={showPassword ? 'text' : 'password'}
                     autoComplete="current-password"
-                    required;
-                    value={formData.password},
-  {
-                    onChange={handleChange},
-  {
+                    required
+                    value={formData.password}
+                    onChange={handleChange}
                     className="block w-full pl-10 pr-12 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your password"
                   />
                   <button
                     type="button"
                     className="absolute inset-y-0 right-0 pr-3 flex items-center"
-                    onClick={() => setShowPassword(!showPassword)},
-  {
+                    onClick={() => setShowPassword(!showPassword)}
                   >
-                    {showPassword ? (})
+                    {showPassword ? (
                       <EyeOff className="h-5 w-5 text-gray-400 hover:text-gray-300" />
-                    ) : ()
+                    ) : (
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-300" />
-                    )},
-  {
+                    )}
                   </button>
                 </div>
               </div>
@@ -128,14 +118,12 @@ export default function LoginPage() {
                     id="remember"
                     name="remember"
                     type="checkbox"
-                    checked={formData.remember},
-  {
-                    onChange={handleChange},
-  {
+                    checked={formData.remember}
+                    onChange={handleChange}
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-600 rounded bg-white/10"
                   />
                   <label htmlFor="remember" className="ml-2 block text-sm text-gray-300">
-                    Remember me;
+                    Remember me
                   </label>
                 </div>
 
@@ -169,7 +157,7 @@ export default function LoginPage() {
                     href="/register"
                     className="font-medium text-blue-400 hover:text-blue-300 transition-colors"
                   >
-                    Sign up here;
+                    Sign up here
                   </Link>
                 </p>
               </div>

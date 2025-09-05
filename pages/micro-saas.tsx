@@ -198,6 +198,181 @@ const microSaaSProducts = [{
     category: 'Education'
   },
   {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review with security analysis, performance optimization, and best practices suggestions.',
+    icon: Code,
+    features: ['Security Scanning', 'Performance Analysis', 'Code Quality Metrics', 'Git Integration'],
+    pricing: '$199 - $1,299/month',
+    category: 'Development',
+    popular: true,
+    link: 'https://codereview.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Audit Platform',
+    description: 'Automated smart contract security auditing and vulnerability detection for blockchain projects.',
+    icon: Shield,
+    features: ['Vulnerability Detection', 'Gas Optimization', 'Compliance Checking', 'Audit Reports'],
+    pricing: '$499 - $2,999/month',
+    category: 'Blockchain',
+    popular: true,
+    link: 'https://contractaudit.ziontechgroup.com'
+  },
+  {
+    title: 'Real-time Collaboration Whiteboard',
+    description: 'Advanced digital whiteboard with AI-powered insights and team collaboration features.',
+    icon: Monitor,
+    features: ['Real-time Collaboration', 'AI Insights', 'Template Library', 'Export Options'],
+    pricing: '$29 - $199/month',
+    category: 'Collaboration',
+    link: 'https://whiteboard.ziontechgroup.com'
+  },
+  {
+    title: 'Voice-to-Text Meeting Transcriber',
+    description: 'AI-powered meeting transcription with speaker identification and action item extraction.',
+    icon: Mic,
+    features: ['Real-time Transcription', 'Speaker Identification', 'Action Items', 'Meeting Summaries'],
+    pricing: '$39 - $299/month',
+    category: 'Productivity',
+    link: 'https://meetingtranscriber.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Logo Generator',
+    description: 'Professional logo creation using advanced AI with brand guidelines and multiple formats.',
+    icon: Image,
+    features: ['AI Logo Generation', 'Brand Guidelines', 'Multiple Formats', 'Unlimited Revisions'],
+    pricing: '$49 - $299/month',
+    category: 'Design',
+    link: 'https://logogenerator.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Password Manager',
+    description: 'Enterprise-grade password management with AI-powered security recommendations.',
+    icon: Lock,
+    features: ['Password Generation', 'Security Analysis', 'Team Sharing', 'Dark Web Monitoring'],
+    pricing: '$9 - $99/month',
+    category: 'Security',
+    link: 'https://passwordmanager.ziontechgroup.com'
+  },
+  {
+    title: 'AI Content Moderation API',
+    description: 'Real-time content moderation for text, images, and videos with custom rule configuration.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time API', '99.9% Uptime'],
+    pricing: '$0.01 - $0.10 per request',
+    category: 'API',
+    popular: true,
+    link: 'https://contentmoderation.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Analytics Dashboard',
+    description: 'Comprehensive blockchain transaction analysis and monitoring for crypto businesses.',
+    icon: BarChart3,
+    features: ['Transaction Tracking', 'Risk Analysis', 'Compliance Reporting', 'Real-time Alerts'],
+    pricing: '$299 - $1,999/month',
+    category: 'Blockchain',
+    link: 'https://blockchainanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Resume Builder',
+    description: 'Professional resume creation with ATS optimization and industry-specific templates.',
+    icon: FileText,
+    features: ['ATS Optimization', 'Industry Templates', 'Skills Analysis', 'Cover Letter Generator'],
+    pricing: '$19 - $99/month',
+    category: 'Career',
+    link: 'https://resumebuilder.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Home Automation Hub',
+    description: 'Centralized smart home control with AI-powered automation and energy optimization.',
+    icon: Home,
+    features: ['Device Control', 'Energy Optimization', 'Voice Integration', 'Security Monitoring'],
+    pricing: '$29 - $199/month',
+    category: 'IoT',
+    link: 'https://smarthome.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Stock Trading Bot',
+    description: 'Automated stock trading with machine learning algorithms and risk management.',
+    icon: TrendingUp,
+    features: ['ML Algorithms', 'Risk Management', 'Backtesting', 'Real-time Trading'],
+    pricing: '$199 - $1,999/month',
+    category: 'Finance',
+    popular: true,
+    link: 'https://tradingbot.ziontechgroup.com'
+  },
+  {
+    title: 'Video Content Analyzer',
+    description: 'AI-powered video analysis for content optimization, SEO, and engagement insights.',
+    icon: Video,
+    features: ['Content Analysis', 'SEO Optimization', 'Engagement Metrics', 'Thumbnail Generation'],
+    pricing: '$49 - $399/month',
+    category: 'Video',
+    link: 'https://videoanalyzer.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Email Signature Generator',
+    description: 'Professional email signature creation with brand consistency and compliance features.',
+    icon: Mail,
+    features: ['Brand Templates', 'Compliance Checking', 'Bulk Generation', 'Analytics'],
+    pricing: '$9 - $49/month',
+    category: 'Communication',
+    link: 'https://emailsignature.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Deployment Platform',
+    description: 'One-click smart contract deployment with testing, verification, and monitoring.',
+    icon: Rocket,
+    features: ['One-click Deploy', 'Testing Suite', 'Verification', 'Monitoring'],
+    pricing: '$99 - $999/month',
+    category: 'Blockchain',
+    link: 'https://contractdeploy.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Data Visualization',
+    description: 'Intelligent data visualization with automatic chart selection and insights generation.',
+    icon: BarChart3,
+    features: ['Auto Chart Selection', 'Insights Generation', 'Interactive Dashboards', 'Export Options'],
+    pricing: '$79 - $599/month',
+    category: 'Analytics',
+    link: 'https://dataviz.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Testing Suite',
+    description: 'Comprehensive testing framework for smart contracts with automated test generation.',
+    icon: Code,
+    features: ['Automated Testing', 'Security Tests', 'Gas Optimization', 'CI/CD Integration'],
+    pricing: '$199 - $1,299/month',
+    category: 'Development',
+    link: 'https://contracttesting.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Meeting Scheduler',
+    description: 'Intelligent meeting scheduling with calendar optimization and conflict resolution.',
+    icon: Calendar,
+    features: ['Smart Scheduling', 'Conflict Resolution', 'Time Zone Handling', 'Integration'],
+    pricing: '$19 - $99/month',
+    category: 'Productivity',
+    link: 'https://meetingscheduler.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Wallet Analytics',
+    description: 'Comprehensive wallet analysis and transaction tracking for cryptocurrency businesses.',
+    icon: HardDrive,
+    features: ['Wallet Analysis', 'Transaction Tracking', 'Risk Assessment', 'Compliance'],
+    pricing: '$149 - $999/month',
+    category: 'Blockchain',
+    link: 'https://walletanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Code Documentation Generator',
+    description: 'Automated code documentation generation with intelligent comment suggestions.',
+    icon: FileText,
+    features: ['Auto Documentation', 'Comment Generation', 'API Docs', 'Integration'],
+    pricing: '$49 - $299/month',
+    category: 'Development',
+    link: 'https://codedocs.ziontechgroup.com'
+  },
+  {
     title: 'Real Estate CRM',
     description: 'Specialized CRM for real estate agents and property management.',
     icon: Building,

@@ -1,3 +1,5 @@
+import React from 'react';
+import { 
   Eye,
   Lock,
   Globe,
@@ -15,22 +17,32 @@ const cookieDetails = [
   {
     duration: "Session",
     provider: "Zion Tech Group"
-  },
-  {
+  }
+];
+
+export default function CookiesPage() {
   return (
     <MainLayout 
       title="Cookie Policy - Zion Tech Group"
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="#cookie-types"
-                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
+    >
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-center max-w-4xl mx-auto"
+      >
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Cookie Policy
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8">
+              Learn about how we use cookies to improve your experience
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="#cookie-types"
+                className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
                 >
                   Learn About Cookies
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -42,30 +54,10 @@ const cookieDetails = [
                   Privacy Policy
                 </Link>
               </div>
-            </motion.div>
-          </div>
-        </section>
-
             </div>
           </div>
-        </section>
-
-            </div>
-          </div>
-        </section>
-
-          </div>
-        </section>
-
-        {/* Last Updated */}
-        <section className="py-8 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center text-gray-600">
-              <p>Last updated: January 15, 2024</p>
-            </div>
-          </div>
-        </section>
-      </div>
+        </div>
+      </motion.div>
     </MainLayout>
   );
 }
