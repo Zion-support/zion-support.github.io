@@ -15,7 +15,7 @@ import {
   Settings,
   BarChart3
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const categories = [
   {
@@ -128,7 +128,7 @@ const resources = [
 
 export default function DocumentationPage() {
   return (
-    <MainLayout 
+    <Layout 
       title="Documentation - Zion Tech Group"
       description="Comprehensive documentation, tutorials, and guides for Zion Tech Group's APIs, SDKs, and development tools."
       keywords="documentation, API docs, tutorials, guides, developer resources, SDKs"
@@ -394,6 +394,6 @@ export default function DocumentationPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

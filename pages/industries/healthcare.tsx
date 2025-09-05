@@ -26,7 +26,7 @@ import {
   Video,
   DollarSign
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const solutions = [
   {
@@ -136,7 +136,7 @@ const caseStudies = [
 
 export default function Healthcare() {
   return (
-    <MainLayout
+    <Layout
       title="Healthcare Technology Solutions - Zion Tech Group"
       description="Transform healthcare with AI-powered solutions, telemedicine platforms, and advanced analytics for better patient outcomes."
       keywords="healthcare technology, medical AI, telemedicine, patient data analytics, healthcare software, medical imaging"
@@ -419,6 +419,6 @@ export default function Healthcare() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

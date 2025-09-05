@@ -26,7 +26,7 @@ import {
   Smartphone,
   DollarSign
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const solutions = [
   {
@@ -88,7 +88,7 @@ const benefits = [
 
 export default function Retail() {
   return (
-    <MainLayout
+    <Layout
       title="Retail Technology Solutions - Zion Tech Group"
       description="Transform retail with e-commerce platforms, customer analytics, inventory management, and omnichannel solutions."
       keywords="retail technology, e-commerce, customer analytics, inventory management, omnichannel, retail automation"
@@ -268,6 +268,6 @@ export default function Retail() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }
