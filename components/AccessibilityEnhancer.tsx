@@ -1,168 +1,142 @@
-'use client';
+import React, { useEffect, useState } from 'react';
 
-import { useEffect } from 'react';
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+}
 
-export default function AccessibilityEnhancer() {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState(16);
+
   useEffect(() => {
-    // Skip focus outline for mouse users
-    const handleMouseDown = () => {
-      document.body.classList.add('using-mouse');
-    };
+    // Check for user preferences
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+    
+    setIsReducedMotion(prefersReducedMotion);
+    setIsHighContrast(prefersHighContrast);
 
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
-        document.body.classList.remove('using-mouse');
-      }
-    };
+    // Listen for changes in user preferences
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const contrastQuery = window.matchMedia('(prefers-contrast: high)');
 
-    // Add event listeners
-    document.addEventListener('mousedown', handleMouseDown);
-    document.addEventListener('keydown', handleKeyDown);
+    const handleMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
+    const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
 
-    // Add skip to main content link
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-md focus:shadow-lg';
-    skipLink.style.cssText = `
-      position: absolute;
-      top: -40px;
-      left: 6px;
-      background: #2563eb;
-      color: white;
-      padding: 8px 16px;
-      text-decoration: none;
-      border-radius: 4px;
-      z-index: 1000;
-      transition: top 0.3s;
-    `;
+    motionQuery.addEventListener('change', handleMotionChange);
+    contrastQuery.addEventListener('change', handleContrastChange);
 
-    skipLink.addEventListener('focus', () => {
-      skipLink.style.top = '6px';
-    });
-
-    skipLink.addEventListener('blur', () => {
-      skipLink.style.top = '-40px';
-    });
-
-    document.body.insertBefore(skipLink, document.body.firstChild);
-
-    // Enhance keyboard navigation
-    const enhanceKeyboardNavigation = () => {
-      // Add keyboard navigation for custom elements
-      const interactiveElements = document.querySelectorAll('[role="button"], [role="tab"], [role="menuitem"]');
-
-      interactiveElements.forEach((element) => {
-        if (!element.getAttribute('tabindex')) {
-          element.setAttribute('tabindex0');
-        }
-        // Add keyboard event handlers
-        element.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            (element as HTMLElement).click();
-          }
-        });
-      });
-    };
-
-    // Run enhancement after DOM is loaded
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', enhanceKeyboardNavigation);
-    } else {
-      enhanceKeyboardNavigation();
+    // Load saved font size preference
+    const savedFontSize = localStorage.getItem('fontSize');
+    if (savedFontSize) {
+      setFontSize(parseInt(savedFontSize, 10));
     }
 
-    // Add ARIA live region for announcements
-    const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-livepolite');
-    liveRegion.setAttribute('aria-atomictrue');
-    liveRegion.className = 'sr-only';
-    liveRegion.id = 'live-region';
-    document.body.appendChild(liveRegion);
-
-    // Announce page changes
-    const announcePageChange = (message: string) => {
-      const liveRegion = document.getElementById('live-region');
-      if (liveRegion) {
-        liveRegion.textContent = message;
-      }
-    };
-
-    // Listen for route changes (Next.js specific)
-    const handleRouteChange = () => {
-      announcePageChange('Page loaded');
-    };
-
-    // Add route change listener if available
-    if (typeof window !== 'undefined' && window.history) {
-      const originalPushState = window.history.pushState;
-      const originalReplaceState = window.history.replaceState;
-
-      window.history.pushState = function(...args) {
-        originalPushState.apply(this, args);
-        setTimeout(handleRouteChange, 100);
-      };
-
-      window.history.replaceState = function(...args) {
-        originalReplaceState.apply(this, args);
-        setTimeout(handleRouteChange, 100);
-      };
-
-      window.addEventListener('popstate', handleRouteChange);
-    }
-
-    // Cleanup
     return () => {
-      document.removeEventListener('mousedown', handleMouseDown);
-      document.removeEventListener('keydown', handleKeyDown);
-      if (skipLink.parentNode) {
-        skipLink.parentNode.removeChild(skipLink);
-      }
-      if (liveRegion.parentNode) {
-        liveRegion.parentNode.removeChild(liveRegion);
-      }
+      motionQuery.removeEventListener('change', handleMotionChange);
+      contrastQuery.removeEventListener('change', handleContrastChange);
     };
   }, []);
 
-  return null;
-}
+  useEffect(() => {
+    // Apply font size to document
+    document.documentElement.style.fontSize = `${fontSize}px`;
+    localStorage.setItem('fontSize', fontSize.toString());
+  }, [fontSize]);
 
-// Add CSS for focus management
-const focusStyles = `
-  .using-mouse *:focus {
-    outline: none !important;
-  }
-  .focus-visible:focus {
-    outline: 2px solid #2563eb !important;
-    outline-offset: 2px !important;
-  }
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-  .sr-only.focus:not-sr-only:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    padding: inherit;
-    margin: inherit;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-  }
-`;
+  useEffect(() => {
+    // Apply high contrast mode
+    if (isHighContrast) {
+      document.documentElement.classList.add('high-contrast');
+    } else {
+      document.documentElement.classList.remove('high-contrast');
+    }
+  }, [isHighContrast]);
 
-// Inject styles
-if (typeof document !== 'undefined') {
-  const styleSheet = document.createElement('style');
-  styleSheet.textContent = focusStyles;
-  document.head.appendChild(styleSheet);
-}
+  useEffect(() => {
+    // Apply reduced motion
+    if (isReducedMotion) {
+      document.documentElement.classList.add('reduced-motion');
+    } else {
+      document.documentElement.classList.remove('reduced-motion');
+    }
+  }, [isReducedMotion]);
+
+  const increaseFontSize = () => {
+    setFontSize(prev => Math.min(prev + 2, 24));
+  };
+
+  const decreaseFontSize = () => {
+    setFontSize(prev => Math.max(prev - 2, 12));
+  };
+
+  const resetFontSize = () => {
+    setFontSize(16);
+  };
+
+  return (
+    <>
+      {children}
+      
+      {/* Accessibility Controls */}
+      <div className="fixed top-4 left-4 z-50 bg-slate-900/90 backdrop-blur-sm border border-slate-700 rounded-lg p-3 text-sm">
+        <div className="text-blue-400 font-semibold mb-2">Accessibility</div>
+        <div className="space-y-2">
+          <div className="flex items-center gap-2">
+            <button
+              onClick={decreaseFontSize}
+              className="px-2 py-1 bg-slate-700 hover:bg-slate-600 rounded text-xs"
+              aria-label="Decrease font size"
+            >
+              A-
+            </button>
+            <span className="text-xs text-slate-300">{fontSize}px</span>
+            <button
+              onClick={increaseFontSize}
+              className="px-2 py-1 bg-slate-700 hover:bg-slate-600 rounded text-xs"
+              aria-label="Increase font size"
+            >
+              A+
+            </button>
+            <button
+              onClick={resetFontSize}
+              className="px-2 py-1 bg-slate-700 hover:bg-slate-600 rounded text-xs"
+              aria-label="Reset font size"
+            >
+              Reset
+            </button>
+          </div>
+          
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setIsHighContrast(!isHighContrast)}
+              className={`px-2 py-1 rounded text-xs ${
+                isHighContrast 
+                  ? 'bg-blue-600 text-white' 
+                  : 'bg-slate-700 hover:bg-slate-600 text-slate-300'
+              }`}
+              aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
+            >
+              High Contrast
+            </button>
+          </div>
+          
+          <div className="text-xs text-slate-400">
+            {isReducedMotion && 'Reduced motion enabled'}
+          </div>
+        </div>
+      </div>
+
+      {/* Skip to main content link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-1/2 focus:transform focus:-translate-x-1/2 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded focus:font-semibold"
+      >
+        Skip to main content
+      </a>
+    </>
+  );
+};
+
+export default AccessibilityEnhancer;
