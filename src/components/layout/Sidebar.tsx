@@ -52,7 +52,7 @@ export default function Sidebar({ className = '', isOpen = false, onClose }: Sid
         { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },
         { name: 'IT Services', href: '/it-services', icon: Code, description: 'Comprehensive IT solutions' },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS applications' },
-        { name: 'Cybersecurity', href: '/security', icon: Shield, description: 'Advanced security solutions' },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Advanced security solutions' },
         { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud, description: 'Cloud infrastructure & services' },
         { name: 'Database Solutions', href: '/database-solutions', icon: Database, description: 'Database management & optimization' }
       ]
