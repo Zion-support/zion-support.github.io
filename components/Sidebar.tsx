@@ -1,13 +1,13 @@
-import _React, { useState } from 'react';,
-import Link from 'next/link';';
-import { useRouter } from 'next/router';,
-import { }
-  Home, 
-  Briefcase, 
-  Target, 
-  Building2, 
-  FileText, 
-  HelpCircle, 
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import {
+  Home,
+  Briefcase,
+  Target,
+  Building2,
+  FileText,
+  HelpCircle,
   Search,
   X,
   ChevronRight,
@@ -18,247 +18,163 @@ import { }
   DollarSign,
   ShoppingCart,
   GraduationCap,
-  Globe;
-} from 'lucide-react';,
+  Globe
+} from 'lucide-react';
 
-interface SidebarProps {}
-  isOpen: boolean;,
+interface SidebarProps {
+  isOpen: boolean;
   onClose: () => void;
 }
 
-export function Sidebar({ isOpen, onClose }: SidebarProps) {}
-  const router = useRouter();,
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);,
+export function Sidebar({ isOpen, onClose }: SidebarProps) {
+  const router = useRouter();
 
-  const toggleSection = (section: string) => {}
-    setExpandedSections(prev => ),
-      prev.includes(section) 
-        ? prev.filter(s => s !== section);
-        : [...prev, section];,
-;    );,
-  };,
+  const navigation = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Building2 },
+    { name: 'Services', href: '/services', icon: Briefcase },
+    { name: 'Solutions', href: '/solutions', icon: Target },
+    { name: 'Contact', href: '/contact', icon: Heart }
+  ];
 
-  const navigationItems = [;
-    {}
-      label: 'Home,',
-      href: '/,',
-      icon: Home;,
-    },
-    {}
-      label: 'Services,',
-      href: '/services,',
-      icon: Briefcase,
-      hasSubmenu: true,
-      submenu: [;,
-        { label: 'All Services, href: '/services' },',
-        { label: 'AI Services, href: '/ai-services, icon: Brain },',
-        { label: 'IT Services, href: '/it-services, icon: Shield },',
-        { label: 'Micro SaaS, href: '/micro-saas, icon: Cloud },',
-        { label: 'Cloud & DevOps, href: '/services/cloud-devops, icon: Cloud },',
-        { label: 'Cybersecurity, href: '/services/cybersecurity, icon: Shield },',
-        { label: 'Data Analytics, href: '/services/data-analytics, icon: Brain },',
-      ];,
-    },
-    {}
-      label: 'Solutions,',
-      href: '/solutions,',
-      icon: Target,
-      hasSubmenu: true,
-      submenu: [;,
-        { label: 'All Solutions, href: '/solutions' },',
-        { label: 'Enterprise, href: '/solutions/enterprise, icon: Building2 },',
-        { label: 'Healthcare, href: '/solutions/healthcare, icon: Heart },',
-        { label: 'Finance, href: '/solutions/finance, icon: DollarSign },',
-        { label: 'Retail, href: '/solutions/retail, icon: ShoppingCart },',
-        { label: 'Education, href: '/solutions/education, icon: GraduationCap },',
-        { label: 'Government, href: '/solutions/government, icon: Globe },',
-      ];,
-    },
-    {}
-      label: 'Industries,',
-      href: '/industries,',
-      icon: Building2,
-      hasSubmenu: true,
-      submenu: [;,
-        { label: 'All Industries, href: '/industries' },',
-        { label: 'Healthcare, href: '/industries/healthcare, icon: Heart },',
-        { label: 'Finance, href: '/industries/finance, icon: DollarSign },',
-        { label: 'Education, href: '/industries/education, icon: GraduationCap },',
-        { label: 'Government, href: '/industries/government, icon: Globe },',
-        { label: 'Manufacturing, href: '/industries/manufacturing, icon: Building2 },',
-        { label: 'Retail, href: '/industries/retail, icon: ShoppingCart },',
-      ];,
-    },
-    {}
-      label: 'Resources,',
-      href: '/resources,',
-      icon: FileText,
-      hasSubmenu: true,
-      submenu: [;,
-        { label: 'Blog, href: '/blog' },',
-        { label: 'White Papers, href: '/white-papers' },',
-        { label: 'Case Studies, href: '/case-studies' },',
-        { label: 'Webinars, href: '/webinars' },',
-        { label: 'Help Center, href: '/help' },',
-        { label: 'FAQ, href: '/faq' },',
-      ];,
-    },
-    {}
-      label: 'Company,',
-      href: '/about,',
-      icon: Building2,
-      hasSubmenu: true,
-      submenu: [;,
-        { label: 'About Us, href: '/about' },',
-        { label: 'Our Team, href: '/team' },',
-        { label: 'Careers, href: '/careers' },',
-        { label: 'News, href: '/news' },',
-        { label: 'Contact, href: '/contact' },',
-      ];,
-    }
-;  ];,
+  const services = [
+    { name: 'AI Services', href: '/ai-services', icon: Brain },
+    { name: 'IT Services', href: '/it-services', icon: Shield },
+    { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
+    { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
+    { name: 'Consulting', href: '/consulting', icon: GraduationCap }
+  ];
 
-  const quickLinks = [;
-    { label: 'Get Started, href: '/contact, icon: ChevronRight },',
-    { label: 'Pricing, href: '/pricing, icon: DollarSign },',
-    { label: 'Support, href: '/support, icon: HelpCircle },',
-    { label: 'Documentation, href: '/docs, icon: FileText },',
-;  ];,
+  const resources = [
+    { name: 'Blog', href: '/blog', icon: FileText },
+    { name: 'Documentation', href: '/docs', icon: FileText },
+    { name: 'API Reference', href: '/api', icon: Globe },
+    { name: 'Support', href: '/support', icon: HelpCircle },
+    { name: 'FAQ', href: '/faq', icon: HelpCircle }
+  ];
 
-  const isActive = (href: string) => {
-;    return router.pathname === href;
-  };,
+  const isActive = (href: string) => router.pathname === href;
 
-  return (;
-    <>;
+  return (
+    <>
       {/* Overlay */}
-      {isOpen && (,
-        <div }),
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"";,
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
           onClick={onClose}
-        />,
+        />
       )}
 
       {/* Sidebar */}
-      <div className={`}
-        fixed top-0 left-0 h-full w-80 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out;,
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'}',
-        lg:translate-x-0 lg:static lg:block;,
-      `}>,
-        {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-gray-700">",
-          <Link href="/" className="flex items-center space-x-2">";,
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">";
-              <Brain className="w-5 h-5 text-white" />";
-            </div>;
-            <span className="text-xl font-bold">Zion Tech Group</span>";
-          </Link>;
-          <button;
-            onClick={onClose}
-            className="lg:hidden p-2 hover:bg-gray-800 rounded-lg"",
-          >;,
-            <X className="w-6 h-6" />";
-          </button>;
-        </div>;
+      <div className={`fixed top-0 left-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 ${
+        isOpen ? 'translate-x-0' : '-translate-x-full'
+      } lg:translate-x-0 lg:static lg:shadow-none`}>
+        <div className="flex flex-col h-full">
+          {/* Header */}
+          <div className="flex items-center justify-between p-4 border-b border-gray-200">
+            <div className="flex items-center space-x-2">
+              <Brain className="w-8 h-8 text-blue-600" />
+              <span className="text-xl font-bold text-gray-900">Zion Tech</span>
+            </div>
+            <button
+              onClick={onClose}
+              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
 
-        {/* Search */}
-        <div className="p-6 border-b border-gray-700">",
-          <div className="relative">";,
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />";
-            <input;
-              type="text"";
-              placeholder="Search..."";
-              className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"";
-            />;
-          </div>;
-        </div>;
-
-        {/* Navigation */}
-        <nav className="flex-1 overflow-y-auto">",
-          <div className="p-6">";,
-            {navigationItems.map((item, index) => (,
-              <div key={index} className="mb-2">",
-                <div className="flex items-center justify-between">";,
-                  <Link);
+          {/* Navigation */}
+          <nav className="flex-1 overflow-y-auto py-4">
+            <div className="px-4 space-y-2">
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                Main Navigation
+              </div>
+              {navigation.map((item) => {
+                const IconComponent = item.icon;
+                return (
+                  <Link
+                    key={item.name}
                     href={item.href}
-                    className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${}
-                      isActive(item.href),
-                        ? 'bg-blue-600 text-white'';,
-                        : 'text-gray-300 hover:bg-gray-800 hover:text-white'';
+                    className={`flex items-center px-3 py-2 rounded-lg transition-colors ${
+                      isActive(item.href)
+                        ? 'bg-blue-50 text-blue-700 border-r-2 border-blue-700'
+                        : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
                     }`}
-                    onClick={() => !item.hasSubmenu && onClose()}
-                  >,
-                    <item.icon className="w-5 h-5" />";,
-                    <span className="font-medium">{item.label}</span>",
-                  </Link>;,
-                  
-                  {item.hasSubmenu && (;
-                    <button}),
-                      onClick={() => toggleSection(item.label)}
-                      className="p-2 hover:bg-gray-800 rounded-lg"",
-                    >;,
-                      <ChevronRight;
-                        className={`w-4 h-4 transition-transform ${}
-                          expandedSections.includes(item.label) ? 'rotate-90' : '',
-                        }`} 
-                      />;
-                    </button>;
-                  )}
-                </div>,
+                    onClick={onClose}
+                  >
+                    <IconComponent className="w-5 h-5 mr-3" />
+                    {item.name}
+                  </Link>
+                );
+              })}
+            </div>
 
-                {item.hasSubmenu && expandedSections.includes(item.label) && (;
-                  <div className="ml-8 mt-2 space-y-1">";
-                    {item.submenu?.map((subItem, subIndex) => (,
-                      <Link}),
-                        key={subIndex}
-                        href={subItem.href}
-                        className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-colors ${}
-                          isActive(subItem.href),
-                            ? 'bg-blue-600 text-white'';,
-                            : 'text-gray-400 hover:bg-gray-800 hover:text-white'';
-                        }`}
-                        onClick={onClose}
-                      >,
-                        {subItem.icon && <subItem.icon className="w-4 h-4" />}",
-                        <span>{subItem.label}</span>,
-                      </Link>;,
-                    ))}
-                  </div>,
-                )}
-              </div>,
-            ))}
-          </div>,
-        </nav>;,
+            <div className="px-4 mt-6 space-y-2">
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                Services
+              </div>
+              {services.map((service) => {
+                const IconComponent = service.icon;
+                return (
+                  <Link
+                    key={service.name}
+                    href={service.href}
+                    className={`flex items-center px-3 py-2 rounded-lg transition-colors ${
+                      isActive(service.href)
+                        ? 'bg-blue-50 text-blue-700 border-r-2 border-blue-700'
+                        : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+                    }`}
+                    onClick={onClose}
+                  >
+                    <IconComponent className="w-5 h-5 mr-3" />
+                    {service.name}
+                  </Link>
+                );
+              })}
+            </div>
 
-        {/* Quick Links */}
-        <div className="p-6 border-t border-gray-700">",
-          <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">";,
-            Quick Links;
-          </h3>;
-          <div className="space-y-2">";
-            {quickLinks.map((link, index) => (,
-              <Link}),
-                key={index}
-                href={link.href}
-                className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:bg-gray-800 hover:text-white rounded-lg transition-colors"",
-                onClick={onClose}
-              >,
-                <link.icon className="w-4 h-4" />";,
-                <span>{link.label}</span>,
-              </Link>;,
-            ))}
-          </div>,
-        </div>;,
+            <div className="px-4 mt-6 space-y-2">
+              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                Resources
+              </div>
+              {resources.map((resource) => {
+                const IconComponent = resource.icon;
+                return (
+                  <Link
+                    key={resource.name}
+                    href={resource.href}
+                    className={`flex items-center px-3 py-2 rounded-lg transition-colors ${
+                      isActive(resource.href)
+                        ? 'bg-blue-50 text-blue-700 border-r-2 border-blue-700'
+                        : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+                    }`}
+                    onClick={onClose}
+                  >
+                    <IconComponent className="w-5 h-5 mr-3" />
+                    {resource.name}
+                  </Link>
+                );
+              })}
+            </div>
+          </nav>
 
-        {/* Contact Info */}
-        <div className="p-6 border-t border-gray-700">",
-          <div className="text-sm text-gray-400">";,
-            <p className="mb-2">Need help?</p>";
-            <p className="text-blue-400">contact@ziontechgroup.com</p>";
-            <p className="text-blue-400">+1 (555) 123-4567</p>";
-          </div>;
-        </div>;
-      </div>;
-    </>;
+          {/* Footer */}
+          <div className="p-4 border-t border-gray-200">
+            <div className="text-center">
+              <p className="text-sm text-gray-500 mb-2">
+                Need help? Contact us
+              </p>
+              <a
+                href="tel:+13024640950"
+                className="text-blue-600 hover:text-blue-700 font-medium text-sm"
+              >
+                +1 302 464 0950
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

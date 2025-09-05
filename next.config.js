@@ -1,24 +1,26 @@
-/** @type {import('next').NextConfig} */',
-const nextConfig = {}
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
-  images: {,}
+  images: {
     domains: ['localhost'],
   },
-  env: {,}
+  env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
-  eslint: {,}
+  eslint: {
     ignoreDuringBuilds: true,
   },
-  typescript: {,}
+  typescript: {
     ignoreBuildErrors: true,
   },
-  async rewrites() {}
-    return [{}
-      source: '/api/:path*,',
-      destination: '/api/:path*'';,
-;    }];,
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: '/api/:path*',
+      },
+    ];
   }
-};,
+};
 
 export default nextConfig;
