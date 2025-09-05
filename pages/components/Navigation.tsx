@@ -28,6 +28,7 @@ import {
   MessageSquare,
   Calendar,
   ShoppingCart,
+  Rocket,
   BookOpen,
   Camera,
   Music,
@@ -99,6 +100,27 @@ const navigationItems = [
         icon: Cloud,
         description: '40+ innovative micro SaaS solutions',
         popular: true
+      },
+      {
+        title: 'Cybersecurity',
+        href: '/cybersecurity',
+        icon: Shield,
+        description: 'Enterprise security solutions',
+        popular: false
+      },
+      {
+        title: 'Cloud Solutions',
+        href: '/cloud-solutions',
+        icon: Cloud,
+        description: 'Scalable cloud infrastructure',
+        popular: false
+      },
+      {
+        title: 'Data Analytics',
+        href: '/data-analytics',
+        icon: BarChart3,
+        description: 'Advanced analytics platform',
+        popular: false
       }
     ]
   },
@@ -108,28 +130,28 @@ const navigationItems = [
     icon: Target,
     submenu: [
       {
-        title: 'Cloud Solutions',
-        href: '/cloud-solutions',
-        icon: Cloud,
-        description: 'Scalable cloud infrastructure'
+        title: 'Enterprise Solutions',
+        href: '/solutions/enterprise',
+        icon: Building,
+        description: 'Comprehensive enterprise solutions'
       },
       {
-        title: 'Cybersecurity',
-        href: '/cybersecurity',
-        icon: Shield,
-        description: 'Enterprise security solutions'
+        title: 'Startup Solutions',
+        href: '/solutions/startup',
+        icon: Rocket,
+        description: 'Rapid deployment for startups'
       },
       {
-        title: 'Data Analytics',
-        href: '/data-analytics',
+        title: 'Industry Solutions',
+        href: '/solutions/industry',
         icon: BarChart3,
-        description: 'Advanced analytics platform'
+        description: 'Industry-specific solutions'
       },
       {
-        title: 'Automation',
-        href: '/automation',
-        icon: Zap,
-        description: 'Intelligent process automation'
+        title: 'Custom Solutions',
+        href: '/solutions/custom',
+        icon: Settings,
+        description: 'Tailored custom solutions'
       }
     ]
   },
@@ -262,7 +284,9 @@ const quickLinks = [
   { title: 'Pricing', href: '/pricing', icon: DollarSign },
   { title: 'Contact', href: '/contact', icon: Phone },
   { title: 'Support', href: '/support', icon: MessageSquare },
-  { title: 'Status', href: '/status', icon: BarChart3 }
+  { title: 'Status', href: '/status', icon: BarChart3 },
+  { title: 'Quote', href: '/quote', icon: FileText },
+  { title: 'API Docs', href: '/api-docs', icon: Code }
 ];
 
 export default function Navigation() {
