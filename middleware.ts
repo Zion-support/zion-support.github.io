@@ -1,75 +1,39 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-=======
-import { NextResponse } from "next/server";",
-import type { NextRequest } from "next/server";",
->>>>>>> main
 
-const publicRoutes = [;
-  "/",",
-  "/about",",
-  "/contact",",
-  "/blog",",
-  "/services",",
-  "/solutions",",
-  "/industries",",
-  "/resources",",
-  "/talent",",
-  "/team",",
-  "/partners",",
-  "/news",",
-  "/careers",",
-  "/privacy",",
-  "/terms",",
-  "/cookies",",
-  "/sitemap",",
-  "/auth/login",",
-  "/auth/register",",
-  "/auth/forgot-password",",
-  "/auth/reset-password",",
-  "/auth/verify",",
-;];,
+const publicRoutes = [
+  "/",
+  "/about",
+  "/contact",
+  "/services",
+  "/products",
+  "/quote",
+  "/ai-services",
+  "/it-services",
+  "/micro-saas"
+];
 
-<<<<<<< HEAD
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
+  // Allow public routes
   if (publicRoutes.includes(pathname)) {
     return NextResponse.next();
   }
   
-  const authCookie = request.cookies.get("auth-token");
-  if (!authCookie) {
-    return NextResponse.redirect(new URL("/auth/login", request.url));
-=======
-export function middleware(request: NextRequest) {}
-  const { pathname } = request.nextUrl;,
-
-  if (publicRoutes.includes(pathname)) {}
-    return NextResponse.next();,
-  }
-
-  const authCookie = request.cookies.get("auth-token");";
+  // Add security headers
+  const response = NextResponse.next();
   
-  if (!authCookie) {}
-    return NextResponse.redirect(new URL("/auth/login", request.url));",
->>>>>>> main
-  }
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
   
-  return NextResponse.next();
+  return response;
 }
 
-export const config = {}
-  matcher: [;,
-    "/((?!api|_next/static|_next/image|favicon.ico).*)",",
+export const config = {
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
-<<<<<<< HEAD
 };
-=======
-import { NextResponse } from "next/server"; import type { NextRequest } from "next/server"; const publicRoutes = [ "/","/about","/contact","/blog","/services","/products","/talent","/test","/auth/login","/auth/register","/auth/forgot-password","/auth/reset-password","/auth/verify",]; export function middleware(request: NextRequest) { const { pathname } = request.nextUrl; if (publicRoutes.includes(pathname)) { return NextResponse.next()} const authCookie = request.cookies.get("auth-token"); if (!authCookie) { return NextResponse.redirect(new URL("/auth/login",request.url))} return NextResponse.next()} export const config = { matcher: [ "/((?!api|_next/static|_next/image|favicon.ico).*)",],};
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-;};
->>>>>>> main
