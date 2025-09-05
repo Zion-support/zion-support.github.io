@@ -319,8 +319,8 @@ export default function CareersPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {culture.map((value, index) => {}
-                const IconComponent = value.icon;}
+              {culture.map((value, index) => {
+                const IconComponent = value.icon;
                 return (
                   <motion.div
                     key={index}
@@ -368,7 +368,7 @@ export default function CareersPage() {
             </motion.div>
 
             <div className="space-y-6">
-              {openPositions.map((position, index) => (}
+              {openPositions.map((position, index) => (
                 <motion.div
                   key={index}
                   className={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ${
