@@ -1,165 +1,378 @@
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+<<<<<<< HEAD
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { 
   Cloud, Zap, Shield, Users, BarChart3, CheckCircle, ArrowRight, Clock, Star, 
-  DollarSign, Award, Globe, Lock, Cpu, Bot, FileText, Video, Mic, Code, 
-  Settings, Monitor, Smartphone, Server, Network, Car, Rocket, Heart, Building, 
-  Sprout, Mail, MessageSquare, Search, Eye, Target, TrendingUp, Package, 
-  Calendar, BookOpen, ShoppingCart, Home, Trash2, Camera, HardDrive, Database,
-  Phone, MapPin, Brain, Droplets, Gamepad2, Music, Palette, Camera as CameraIcon
+  DollarSign, Award, Globe, Lock, Cpu, Bot, FileText, Video, Mic, Code, Settings, 
+  Monitor, Smartphone, Server, Network, Car, Rocket, Heart, Building, Sprout, 
+  Mail, MessageSquare, Search, Eye, Target, Brain, TrendingUp, Package, Calendar, 
+  BookOpen, ShoppingCart, Home, Trash2, Camera, HardDrive, Database, Droplets, 
+  Phone, MapPin, Gamepad2, Music, Palette, Wrench, Lightbulb, PieChart, 
+  Activity, TrendingDown, RefreshCw, Layers, Compass, Zap as Lightning, 
+  Wifi, Bluetooth, Headphones, Printer, Keyboard, Mouse, 
+  CreditCard, Wallet, Receipt, Calculator, Clock3, Timer,
+  AlertTriangle, Info, HelpCircle, ThumbsUp, ThumbsDown, MessageCircle,
+  Share2, Download, Upload, Copy, Edit, Trash, Save, Plus, Minus,
+  X, Check, ChevronDown, ChevronUp, ChevronLeft, ChevronRight,
+  Play, Pause, SkipForward, SkipBack, Volume2, VolumeX, Maximize,
+  Minimize, RotateCcw, RotateCw, ZoomIn, ZoomOut, Move, Grip,
+  Filter, SortAsc, SortDesc, Grid, List, Layout, Sidebar, Menu,
+  Bell, BellOff, Star as StarIcon, Bookmark, Flag, Tag, Hash,
+  AtSign, Percent, Hash as HashIcon, DollarSign as Dollar,
+  Euro, PoundSterling, Bitcoin, 
+  Database as DB, Server as ServerIcon, HardDrive as HD,
+  Cpu as CPU, MemoryStick, HardDrive as Storage, Wifi as WiFi,
+  Bluetooth as BT, Headphones as Headset, Printer as Print,
+  Keyboard as KB, Mouse as MouseIcon
 } from 'lucide-react';
-import Layout from '../components/Layout';
+
+const contactInfo = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709"
+};
 
 const microSaasProducts = [
+  // AI & Machine Learning Services
+=======
+import { motion } from 'framer-motion';
+=======
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
+import { 
+  Cloud, 
+  Zap, 
+  BarChart3, 
+<<<<<<< HEAD
+  Code, 
+  Settings, 
+  CheckCircle, 
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Users,
+  Shield,
+  Globe,
+  Package,
+  DollarSign,
+  GraduationCap,
+  Calendar,
+  FileText,
+  ShoppingCart,
+  Network,
+  Wifi,
+  Brain,
+  Video,
+  Smartphone,
+  Calculator,
+  Receipt,
+  Heart,
+  Target,
+  Lock,
+  MessageSquare,
+  Home,
+  Leaf,
+  Truck
+} from 'lucide-react';
+import Layout from './components/Layout';
+
+const microSaasSolutions = [
+>>>>>>> main
   {
-    title: 'Cloud Cost Guard (FinOps Assistant)',
-    description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
-    icon: DollarSign,
-    features: ['Cost Anomaly Detection', 'Auto Rightsizing', 'Budget Forecasting', 'Multi-cloud Support'],
-    pricing: '$299 - $1,499/month',
-    category: 'FinOps',
-    popular: true,
-    benefits: ['Cost Savings', 'Automated Optimization', 'Budget Control', 'Multi-cloud Support'],
-    marketPrice: '$500 - $2,000/month',
-    link: 'https://ziontechgroup.com/cloud-cost-guard'
-  },
-  {
+<<<<<<< HEAD
+    id: 1,
     title: 'AI Content Marketing Suite',
-    description: 'Automated content creation, SEO optimization, and social media management platform.',
+<<<<<<< HEAD
+    description: 'Automated content creation, SEO optimization, and social media management platform with advanced AI algorithms.',
     icon: FileText,
-    features: ['AI Content Generation', 'SEO Optimization', 'Social Media Scheduling', 'Analytics Dashboard'],
+    features: ['AI Content Generation', 'SEO Optimization', 'Social Media Scheduling', 'Analytics Dashboard', 'Multi-language Support'],
     pricing: '$29 - $199/month',
-    category: 'Marketing',
+    category: 'AI & Marketing',
+=======
+    description: 'Automated content creation, SEO optimization, and social media management platform with advanced AI capabilities.',
+    icon: FileText,
+    features: ['AI Content Generation', 'SEO Optimization', 'Social Media Scheduling', 'Analytics Dashboard', 'Multi-language Support', 'Brand Voice Training'],
+    pricing: '$29 - $199/month',
+    category: 'AI Marketing',
+>>>>>>> main
     popular: true,
-    benefits: ['10x Content Output', 'SEO Boost', 'Time Savings', 'Better Engagement'],
+    benefits: ['10x Content Output', 'SEO Boost', 'Time Savings', 'Better Engagement', 'Cost Reduction'],
     marketPrice: '$50 - $300/month',
-    link: 'https://ziontechgroup.com/ai-content-marketing-suite'
+    link: 'https://ziontechgroup.com/ai-content-marketing-suite',
+    contact: '+1 302 464 0950'
   },
   {
+    id: 2,
     title: 'Smart Lead Management System',
-    description: 'AI-powered lead scoring, nurturing, and conversion optimization platform.',
+    description: 'AI-powered lead scoring, nurturing, and conversion optimization platform with predictive analytics.',
     icon: Target,
-    features: ['Lead Scoring', 'Automated Nurturing', 'CRM Integration', 'Conversion Tracking'],
+<<<<<<< HEAD
+    features: ['Lead Scoring', 'Automated Nurturing', 'CRM Integration', 'Conversion Tracking', 'Predictive Analytics'],
     pricing: '$49 - $299/month',
-    category: 'Sales',
+    category: 'AI & Sales',
+=======
+    features: ['Lead Scoring', 'Automated Nurturing', 'CRM Integration', 'Conversion Tracking', 'Predictive Analytics', 'A/B Testing'],
+    pricing: '$49 - $299/month',
+    category: 'AI Sales',
+>>>>>>> main
     popular: true,
-    benefits: ['Higher Conversion', 'Automated Workflows', 'Better ROI', 'Data Insights'],
+    benefits: ['Higher Conversion', 'Automated Workflows', 'Better ROI', 'Data Insights', 'Reduced Manual Work'],
     marketPrice: '$75 - $500/month',
-    link: 'https://ziontechgroup.com/smart-lead-management'
+    link: 'https://ziontechgroup.com/smart-lead-management',
+    contact: '+1 302 464 0950'
   },
   {
+    id: 3,
     title: 'AI-Powered Analytics Dashboard',
-    description: 'Real-time business intelligence with predictive analytics and custom reporting.',
+    description: 'Real-time business intelligence with predictive analytics, custom reporting, and automated insights.',
     icon: BarChart3,
-    features: ['Real-time Analytics', 'Predictive Insights', 'Custom Reports', 'Data Visualization'],
+<<<<<<< HEAD
+    features: ['Real-time Analytics', 'Predictive Insights', 'Custom Reports', 'Data Visualization', 'Automated Alerts'],
     pricing: '$39 - $249/month',
-    category: 'Analytics',
+    category: 'AI & Analytics',
+=======
+    features: ['Real-time Analytics', 'Predictive Insights', 'Custom Reports', 'Data Visualization', 'Automated Alerts', 'ROI Tracking'],
+    pricing: '$39 - $249/month',
+    category: 'AI Analytics',
+>>>>>>> main
     popular: true,
-    benefits: ['Data-Driven Decisions', 'Predictive Insights', 'Custom Dashboards', 'ROI Tracking'],
+    benefits: ['Data-Driven Decisions', 'Predictive Insights', 'Custom Dashboards', 'ROI Tracking', 'Automated Reporting'],
     marketPrice: '$60 - $400/month',
-    link: 'https://ziontechgroup.com/ai-analytics-dashboard'
+    link: 'https://ziontechgroup.com/ai-analytics-dashboard',
+    contact: '+1 302 464 0950'
   },
   {
-    title: 'Automated Workflow Builder',
-    description: 'No-code automation platform for business processes and integrations.',
-    icon: Zap,
-    features: ['Drag & Drop Builder', '500+ Integrations', 'Conditional Logic', 'API Access'],
-    pricing: '$19 - $149/month',
-    category: 'Automation',
-    popular: true,
-    benefits: ['Process Automation', 'Time Savings', 'Error Reduction', 'Scalability'],
-    marketPrice: '$30 - $250/month',
-    link: 'https://ziontechgroup.com/workflow-builder'
-  },
-  {
+<<<<<<< HEAD
     title: 'AI Customer Support Bot',
-    description: 'Intelligent chatbot with natural language processing and multi-channel support.',
+    description: 'Intelligent chatbot with natural language processing, multi-channel support, and seamless human handoff.',
     icon: MessageSquare,
-    features: ['NLP Processing', 'Multi-channel Support', 'Knowledge Base', 'Human Handoff'],
+    features: ['NLP Processing', 'Multi-channel Support', 'Knowledge Base', 'Human Handoff', 'Sentiment Analysis'],
     pricing: '$25 - $199/month',
-    category: 'Customer Service',
+    category: 'AI & Customer Service',
     benefits: ['24/7 Support', 'Instant Responses', 'Cost Reduction', 'Customer Satisfaction'],
     marketPrice: '$40 - $300/month',
     link: 'https://ziontechgroup.com/ai-support-bot'
   },
   {
-    title: 'Smart Inventory Management',
-    description: 'AI-powered inventory optimization with demand forecasting and automated reordering.',
-    icon: Package,
-    features: ['Demand Forecasting', 'Automated Reordering', 'Multi-location Support', 'Analytics'],
-    pricing: '$59 - $399/month',
-    category: 'Inventory',
-    benefits: ['Reduced Stockouts', 'Lower Costs', 'Better Planning', 'Automated Management'],
-    marketPrice: '$80 - $600/month',
-    link: 'https://ziontechgroup.com/smart-inventory'
-  },
-  {
     title: 'AI Email Marketing Platform',
-    description: 'Intelligent email campaigns with personalization, A/B testing, and automation.',
+    description: 'Intelligent email campaigns with personalization, A/B testing, automation, and advanced analytics.',
     icon: Mail,
-    features: ['AI Personalization', 'A/B Testing', 'Automation', 'Advanced Analytics'],
+    features: ['AI Personalization', 'A/B Testing', 'Automation', 'Advanced Analytics', 'Deliverability Optimization'],
     pricing: '$29 - $199/month',
-    category: 'Email Marketing',
+    category: 'AI & Email Marketing',
     benefits: ['Higher Open Rates', 'Better Engagement', 'Automated Campaigns', 'ROI Tracking'],
     marketPrice: '$50 - $300/month',
     link: 'https://ziontechgroup.com/ai-email-marketing'
   },
   {
+    title: 'AI-Powered Voice Analytics',
+    description: 'Advanced voice analysis for customer service, sales optimization, and training insights.',
+    icon: Mic,
+    features: ['Sentiment Analysis', 'Call Quality Scoring', 'Training Insights', 'Performance Metrics', 'Real-time Monitoring'],
+    pricing: '$199 - $999/month',
+    category: 'AI & Voice Analytics',
+    benefits: ['Better Customer Service', 'Sales Optimization', 'Training Insights', 'Quality Improvement'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/voice-analytics'
+  },
+
+  // Business Automation & Workflow
+  {
+    title: 'Automated Workflow Builder',
+    description: 'No-code automation platform for business processes, integrations, and complex workflows.',
+    icon: Zap,
+    features: ['Drag & Drop Builder', '500+ Integrations', 'Conditional Logic', 'API Access', 'Custom Triggers'],
+=======
+    id: 4,
+    title: 'Smart Document Processing',
+    description: 'Automated document extraction, classification, and data entry using advanced AI and OCR technology.',
+    icon: FileText,
+    features: ['OCR Technology', 'Smart Classification', 'Data Extraction', 'Workflow Automation', 'Multi-format Support', 'API Integration'],
+>>>>>>> main
+    pricing: '$19 - $149/month',
+    category: 'AI Productivity',
+    popular: false,
+    benefits: ['99% Accuracy', 'Time Savings', 'Cost Reduction', 'Error Elimination', 'Scalable Processing'],
+    marketPrice: '$35 - $250/month',
+    link: 'https://ziontechgroup.com/smart-document-processing',
+    contact: '+1 302 464 0950'
+  },
+  {
+<<<<<<< HEAD
     title: 'Smart Project Management',
-    description: 'AI-enhanced project management with resource optimization and risk prediction.',
+    description: 'AI-enhanced project management with resource optimization, risk prediction, and team collaboration.',
     icon: Calendar,
-    features: ['AI Resource Planning', 'Risk Prediction', 'Time Tracking', 'Collaboration Tools'],
+    features: ['AI Resource Planning', 'Risk Prediction', 'Time Tracking', 'Collaboration Tools', 'Gantt Charts'],
     pricing: '$39 - $299/month',
-    category: 'Event Management'
-  },
-  {
-    title: 'AI-Powered Social Proof Widgets',
-    description: 'Real-time social proof widgets with AI optimization for increased conversions.',
-    icon: Globe,
-    features: ['Real-time Activity', 'Customizable Display', 'E-commerce Integration', 'Conversion Analytics'],
-    pricing: '$19 - $99/month',
-    category: 'Marketing'
-  },
-  {
-    title: 'AI-Powered Customer Loyalty Tracker',
-    description: 'Intelligent loyalty program management with AI-driven engagement strategies.',
-    icon: Heart,
-    features: ['Points System', 'Engagement Tracking', 'Reward Management', 'AI Personalization'],
+    category: 'Project Management',
+    benefits: ['Better Planning', 'Risk Mitigation', 'Team Collaboration', 'Resource Optimization'],
+    marketPrice: '$60 - $400/month',
+    link: 'https://ziontechgroup.com/smart-project-management'
+=======
+    id: 5,
+    title: 'AI Customer Support Bot',
+    description: 'Intelligent chatbot platform with natural language processing and seamless human handoff capabilities.',
+    icon: Bot,
+    features: ['Natural Language Processing', 'Multi-channel Support', 'Human Handoff', 'Knowledge Base Integration', 'Sentiment Analysis', 'Custom Training'],
     pricing: '$39 - $199/month',
-    category: 'Customer Retention'
+    category: 'AI Customer Service',
+    popular: true,
+    benefits: ['24/7 Support', 'Instant Responses', 'Cost Reduction', 'Customer Satisfaction', 'Scalable Support'],
+    marketPrice: '$65 - $350/month',
+    link: 'https://ziontechgroup.com/ai-customer-support-bot',
+    contact: '+1 302 464 0950'
+>>>>>>> main
   },
   {
-    title: 'AI-Powered Personalized E-Learning',
-    description: 'Adaptive learning platform with AI-powered personalization and skill assessment.',
-    icon: BookOpen,
-    features: ['Adaptive Learning', 'Skill Assessment', 'Progress Tracking', 'AI Tutoring'],
-    pricing: '$49 - $299/month',
-    category: 'Education'
-  },
-  {
-    title: 'AI-Powered Local SEO Optimizer',
-    description: 'Comprehensive local SEO optimization with AI-powered keyword research and competitor analysis.',
-    icon: Search,
-    features: ['Keyword Research', 'Listing Optimization', 'Competitor Analysis', 'Performance Tracking'],
-    pricing: '$79 - $399/month',
-    category: 'SEO'
+    id: 6,
+    title: 'Smart Inventory Management',
+<<<<<<< HEAD
+    description: 'AI-powered inventory optimization with demand forecasting, automated reordering, and multi-location support.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Automated Reordering', 'Multi-location Support', 'Analytics', 'Supplier Integration'],
+    pricing: '$59 - $399/month',
+    category: 'Inventory Management',
+    benefits: ['Reduced Stockouts', 'Lower Costs', 'Better Planning', 'Automated Management'],
+    marketPrice: '$80 - $600/month',
+    link: 'https://ziontechgroup.com/smart-inventory'
   },
   {
     title: 'AI-Powered Online Booking System',
-    description: 'Intelligent appointment scheduling with AI optimization and automated reminders.',
+    description: 'Intelligent appointment scheduling with AI optimization, automated reminders, and client management.',
     icon: Calendar,
-    features: ['Smart Scheduling', 'Calendar Integration', 'Automated Reminders', 'Client Management'],
+    features: ['Smart Scheduling', 'Calendar Integration', 'Automated Reminders', 'Client Management', 'Payment Processing'],
     pricing: '$29 - $149/month',
-    category: 'Scheduling'
+    category: 'Scheduling & Booking',
+    benefits: ['Reduced No-shows', 'Better Scheduling', 'Automated Reminders', 'Client Satisfaction'],
+    marketPrice: '$40 - $200/month',
+    link: 'https://ziontechgroup.com/online-booking'
+=======
+    description: 'AI-powered inventory tracking with demand forecasting, automated reordering, and optimization algorithms.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Automated Reordering', 'Multi-location Tracking', 'Cost Optimization', 'Supplier Management', 'Analytics Dashboard'],
+    pricing: '$49 - $299/month',
+    category: 'AI Operations',
+    popular: false,
+    benefits: ['Reduce Stockouts', 'Lower Inventory Costs', 'Optimize Reordering', 'Improve Cash Flow', 'Data-Driven Decisions'],
+    marketPrice: '$80 - $500/month',
+    link: 'https://ziontechgroup.com/smart-inventory-management',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 7,
+    title: 'AI Email Marketing Platform',
+    description: 'Intelligent email marketing with AI-driven personalization, send time optimization, and advanced segmentation.',
+    icon: Mail,
+    features: ['AI Personalization', 'Send Time Optimization', 'Advanced Segmentation', 'A/B Testing', 'Automation Workflows', 'Analytics & Reporting'],
+    pricing: '$29 - $199/month',
+    category: 'AI Marketing',
+    popular: true,
+    benefits: ['Higher Open Rates', 'Better Engagement', 'Automated Campaigns', 'Personalized Content', 'ROI Optimization'],
+    marketPrice: '$50 - $350/month',
+    link: 'https://ziontechgroup.com/ai-email-marketing',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 8,
+    title: 'Smart Project Management',
+    description: 'AI-enhanced project management with intelligent task assignment, deadline prediction, and resource optimization.',
+    icon: Calendar,
+<<<<<<< HEAD
+    features: ['AI Resource Planning', 'Risk Prediction', 'Time Tracking', 'Collaboration Tools'],
+    pricing: '$39 - $299/month',
+    category: 'Event Management'
+>>>>>>> main
+  },
+
+  // E-commerce & Sales
+  {
+    title: 'AI-Powered Social Proof Widgets',
+    description: 'Real-time social proof widgets with AI optimization for increased conversions and customer trust.',
+    icon: Globe,
+    features: ['Real-time Activity', 'Customizable Display', 'E-commerce Integration', 'Conversion Analytics', 'A/B Testing'],
+    pricing: '$19 - $99/month',
+    category: 'E-commerce & Marketing',
+    benefits: ['Higher Conversions', 'Increased Trust', 'Real-time Updates', 'Better Engagement'],
+    marketPrice: '$30 - $150/month',
+    link: 'https://ziontechgroup.com/social-proof-widgets'
+  },
+  {
+    title: 'AI-Powered Customer Loyalty Tracker',
+    description: 'Intelligent loyalty program management with AI-driven engagement strategies and fraud detection.',
+    icon: Heart,
+    features: ['Points System', 'Engagement Tracking', 'Reward Management', 'AI Personalization', 'Fraud Detection'],
+    pricing: '$39 - $199/month',
+    category: 'Customer Retention',
+    benefits: ['Higher Retention', 'Better Engagement', 'Automated Rewards', 'Fraud Prevention'],
+    marketPrice: '$60 - $300/month',
+    link: 'https://ziontechgroup.com/customer-loyalty'
   },
   {
     title: 'AI-Powered Referral Program Manager',
-    description: 'Automated referral program management with AI-driven optimization and fraud detection.',
+    description: 'Automated referral program management with AI-driven optimization, fraud detection, and analytics.',
     icon: Users,
-    features: ['Referral Tracking', 'Reward Management', 'Fraud Detection', 'Performance Analytics'],
+    features: ['Referral Tracking', 'Reward Management', 'Fraud Detection', 'Performance Analytics', 'Automated Payouts'],
     pricing: '$39 - $199/month',
+<<<<<<< HEAD
+    category: 'Referral Marketing',
+    benefits: ['Higher Referrals', 'Automated Management', 'Fraud Prevention', 'Better Analytics'],
+    marketPrice: '$60 - $300/month',
+    link: 'https://ziontechgroup.com/referral-program'
+  },
+  {
+    title: 'Smart E-commerce Analytics',
+    description: 'Advanced e-commerce analytics with customer behavior insights, conversion optimization, and predictive analytics.',
+    icon: ShoppingCart,
+    features: ['Customer Behavior Analysis', 'Conversion Funnels', 'Predictive Analytics', 'A/B Testing', 'Revenue Optimization'],
+    pricing: '$49 - $299/month',
+    category: 'E-commerce Analytics',
+    benefits: ['Better Conversions', 'Customer Insights', 'Revenue Growth', 'Data-Driven Decisions'],
+    marketPrice: '$75 - $450/month',
+    link: 'https://ziontechgroup.com/ecommerce-analytics'
+  },
+
+  // SEO & Digital Marketing
+  {
+    title: 'AI-Powered Local SEO Optimizer',
+    description: 'Comprehensive local SEO optimization with AI-powered keyword research, competitor analysis, and performance tracking.',
+    icon: Search,
+    features: ['Keyword Research', 'Listing Optimization', 'Competitor Analysis', 'Performance Tracking', 'Review Management'],
+    pricing: '$79 - $399/month',
+    category: 'SEO & Local Marketing',
+    benefits: ['Better Local Rankings', 'Increased Visibility', 'Competitive Advantage', 'ROI Tracking'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/local-seo-optimizer'
+  },
+  {
+    title: 'AI Social Media Manager',
+    description: 'Intelligent social media management with content creation, scheduling, engagement tracking, and performance analytics.',
+    icon: Share2,
+    features: ['Content Creation', 'Auto Scheduling', 'Engagement Tracking', 'Performance Analytics', 'Hashtag Optimization'],
+    pricing: '$29 - $199/month',
+    category: 'Social Media Marketing',
+    benefits: ['Better Engagement', 'Time Savings', 'Content Optimization', 'Growth Tracking'],
+    marketPrice: '$50 - $300/month',
+    link: 'https://ziontechgroup.com/social-media-manager'
+  },
+  {
+    title: 'AI-Powered PPC Optimizer',
+    description: 'Automated PPC campaign optimization with AI bidding, keyword research, and performance tracking across platforms.',
+    icon: Target,
+    features: ['AI Bidding', 'Keyword Research', 'Ad Optimization', 'Performance Tracking', 'Budget Management'],
+    pricing: '$99 - $599/month',
+    category: 'PPC & Advertising',
+    benefits: ['Lower Costs', 'Higher ROI', 'Automated Optimization', 'Better Performance'],
+    marketPrice: '$150 - $900/month',
+    link: 'https://ziontechgroup.com/ppc-optimizer'
+  },
+
+  // Education & Training
+=======
     category: 'Marketing'
   },
   {
@@ -395,234 +608,6 @@ const microSaasProducts = [
     features: ['Resume Screening', 'Skill Matching', 'Interview Scheduling', 'Candidate Scoring'],
     pricing: '$199 - $999/month',
     category: 'HR'
-  },
-  // NEW INNOVATIVE MICRO SAAS SERVICES
-  {
-    title: 'AI-Powered Quantum Computing Simulator',
-    description: 'Cloud-based quantum computing simulation platform for researchers and developers.',
-    icon: Cpu,
-    features: ['Quantum Circuit Design', 'Simulation Engine', 'Algorithm Library', 'Performance Analytics'],
-    pricing: '$499 - $2,999/month',
-    category: 'Quantum Computing',
-    popular: true,
-    benefits: ['Cutting-edge Technology', 'Research Acceleration', 'Cost-effective Access', 'Expert Support'],
-    marketPrice: '$800 - $5,000/month',
-    link: 'https://ziontechgroup.com/quantum-simulator'
-  },
-  {
-    title: 'Blockchain Smart Contract Factory',
-    description: 'No-code smart contract creation and deployment platform for Web3 applications.',
-    icon: Code,
-    features: ['Visual Contract Builder', 'Multi-chain Deployment', 'Template Library', 'Security Auditing'],
-    pricing: '$199 - $1,499/month',
-    category: 'Blockchain',
-    popular: true,
-    benefits: ['No Coding Required', 'Rapid Deployment', 'Security Built-in', 'Multi-chain Support'],
-    marketPrice: '$300 - $2,000/month',
-    link: 'https://ziontechgroup.com/smart-contract-factory'
-  },
-  {
-    title: 'AI-Powered Metaverse Builder',
-    description: 'Create immersive 3D virtual worlds and experiences with AI assistance.',
-    icon: Globe,
-    features: ['3D World Creation', 'AI Asset Generation', 'VR/AR Support', 'Multi-user Collaboration'],
-    pricing: '$299 - $1,999/month',
-    category: 'Metaverse',
-    popular: true,
-    benefits: ['Immersive Experiences', 'AI-powered Creation', 'Cross-platform', 'Real-time Collaboration'],
-    marketPrice: '$500 - $3,000/month',
-    link: 'https://ziontechgroup.com/metaverse-builder'
-  },
-  {
-    title: 'Neural Network Model Marketplace',
-    description: 'Buy, sell, and deploy pre-trained AI models with one-click integration.',
-    icon: Brain,
-    features: ['Model Marketplace', 'One-click Deploy', 'Performance Metrics', 'Custom Training'],
-    pricing: '$99 - $999/month',
-    category: 'AI Marketplace',
-    popular: true,
-    benefits: ['Ready-to-use Models', 'Easy Integration', 'Performance Guaranteed', 'Continuous Updates'],
-    marketPrice: '$150 - $1,500/month',
-    link: 'https://ziontechgroup.com/ai-model-marketplace'
-  },
-  {
-    title: 'Edge AI Computing Platform',
-    description: 'Deploy AI models at the edge for real-time processing and reduced latency.',
-    icon: Network,
-    features: ['Edge Deployment', 'Real-time Processing', 'Model Optimization', 'Device Management'],
-    pricing: '$199 - $1,299/month',
-    category: 'Edge Computing',
-    benefits: ['Ultra-low Latency', 'Offline Capability', 'Cost Efficiency', 'Scalable Architecture'],
-    marketPrice: '$300 - $2,000/month',
-    link: 'https://ziontechgroup.com/edge-ai-platform'
-  },
-  {
-    title: 'AI-Powered Digital Twin Creator',
-    description: 'Create digital twins of physical assets with real-time monitoring and simulation.',
-    icon: Monitor,
-    features: ['3D Modeling', 'Real-time Data', 'Predictive Analytics', 'Simulation Engine'],
-    pricing: '$399 - $2,499/month',
-    category: 'Digital Twin',
-    popular: true,
-    benefits: ['Real-time Monitoring', 'Predictive Maintenance', 'Cost Optimization', 'Risk Reduction'],
-    marketPrice: '$600 - $4,000/month',
-    link: 'https://ziontechgroup.com/digital-twin-creator'
-  },
-  {
-    title: 'Autonomous Drone Fleet Manager',
-    description: 'AI-powered drone fleet management for delivery, surveillance, and inspection.',
-    icon: Rocket,
-    features: ['Fleet Coordination', 'Route Optimization', 'Autonomous Flight', 'Real-time Monitoring'],
-    pricing: '$599 - $3,999/month',
-    category: 'Drone Management',
-    benefits: ['Fully Autonomous', 'Cost Reduction', 'Safety First', 'Scalable Operations'],
-    marketPrice: '$900 - $6,000/month',
-    link: 'https://ziontechgroup.com/drone-fleet-manager'
-  },
-  {
-    title: 'AI-Powered Synthetic Data Generator',
-    description: 'Generate high-quality synthetic data for training AI models while preserving privacy.',
-    icon: Database,
-    features: ['Privacy-preserving', 'High-quality Data', 'Custom Datasets', 'API Integration'],
-    pricing: '$149 - $999/month',
-    category: 'Data Generation',
-    benefits: ['Privacy Compliant', 'Unlimited Data', 'High Quality', 'Easy Integration'],
-    marketPrice: '$250 - $1,500/month',
-    link: 'https://ziontechgroup.com/synthetic-data-generator'
-  },
-  {
-    title: 'Quantum-Safe Cryptography Manager',
-    description: 'Post-quantum cryptography solutions to protect against quantum computing threats.',
-    icon: Shield,
-    features: ['Quantum-safe Algorithms', 'Migration Tools', 'Compliance Checking', 'Performance Monitoring'],
-    pricing: '$299 - $1,999/month',
-    category: 'Quantum Security',
-    popular: true,
-    benefits: ['Future-proof Security', 'Easy Migration', 'Compliance Ready', 'Expert Support'],
-    marketPrice: '$500 - $3,000/month',
-    link: 'https://ziontechgroup.com/quantum-safe-crypto'
-  },
-  {
-    title: 'AI-Powered Space Mission Planner',
-    description: 'Optimize space missions and satellite operations with AI-powered planning tools.',
-    icon: Rocket,
-    features: ['Mission Planning', 'Orbit Optimization', 'Resource Management', 'Risk Assessment'],
-    pricing: '$999 - $9,999/month',
-    category: 'Space Technology',
-    benefits: ['Mission Success', 'Cost Optimization', 'Risk Reduction', 'Expert Algorithms'],
-    marketPrice: '$1,500 - $15,000/month',
-    link: 'https://ziontechgroup.com/space-mission-planner'
-  },
-  {
-    title: 'Biometric Authentication Platform',
-    description: 'Multi-modal biometric authentication with AI-powered fraud detection.',
-    icon: Eye,
-    features: ['Face Recognition', 'Fingerprint Scanning', 'Voice Authentication', 'Liveness Detection'],
-    pricing: '$0.10 - $0.50 per authentication',
-    category: 'Biometrics',
-    benefits: ['High Security', 'User-friendly', 'Fraud Prevention', 'Scalable'],
-    marketPrice: '$0.15 - $0.75 per authentication',
-    link: 'https://ziontechgroup.com/biometric-auth'
-  },
-  {
-    title: 'AI-Powered Climate Prediction Engine',
-    description: 'Advanced climate modeling and weather prediction using machine learning.',
-    icon: Droplets,
-    features: ['Weather Forecasting', 'Climate Modeling', 'Risk Assessment', 'API Integration'],
-    pricing: '$199 - $1,499/month',
-    category: 'Climate Tech',
-    benefits: ['Accurate Predictions', 'Risk Mitigation', 'Cost Savings', 'Environmental Impact'],
-    marketPrice: '$300 - $2,500/month',
-    link: 'https://ziontechgroup.com/climate-prediction'
-  },
-  {
-    title: 'Autonomous Vehicle Fleet Manager',
-    description: 'AI-powered management system for autonomous vehicle fleets and logistics.',
-    icon: Car,
-    features: ['Fleet Coordination', 'Route Optimization', 'Safety Monitoring', 'Maintenance Scheduling'],
-    pricing: '$499 - $3,999/month',
-    category: 'Autonomous Vehicles',
-    popular: true,
-    benefits: ['Fully Autonomous', 'Safety First', 'Cost Efficient', 'Scalable'],
-    marketPrice: '$800 - $6,000/month',
-    link: 'https://ziontechgroup.com/autonomous-fleet-manager'
-  },
-  {
-    title: 'AI-Powered Drug Discovery Platform',
-    description: 'Accelerate drug discovery with AI-powered molecular design and testing.',
-    icon: Heart,
-    features: ['Molecular Design', 'Drug Testing', 'Side Effect Prediction', 'Clinical Trial Optimization'],
-    pricing: '$999 - $9,999/month',
-    category: 'Healthcare AI',
-    benefits: ['Faster Discovery', 'Cost Reduction', 'Higher Success Rate', 'Life-saving Impact'],
-    marketPrice: '$1,500 - $15,000/month',
-    link: 'https://ziontechgroup.com/drug-discovery-platform'
-  },
-  {
-    title: 'Smart City IoT Management Platform',
-    description: 'Comprehensive IoT platform for smart city infrastructure and citizen services.',
-    icon: Building,
-    features: ['Infrastructure Monitoring', 'Citizen Services', 'Traffic Management', 'Energy Optimization'],
-    pricing: '$1,999 - $19,999/month',
-    category: 'Smart Cities',
-    benefits: ['City-wide Impact', 'Cost Savings', 'Citizen Satisfaction', 'Sustainability'],
-    marketPrice: '$3,000 - $30,000/month',
-    link: 'https://ziontechgroup.com/smart-city-platform'
-  },
-  {
-    title: 'AI-Powered Gaming Engine',
-    description: 'Next-generation game development platform with AI-powered content generation.',
-    icon: Gamepad2,
-    features: ['AI Content Generation', 'Procedural Worlds', 'Smart NPCs', 'Real-time Adaptation'],
-    pricing: '$199 - $1,999/month',
-    category: 'Gaming',
-    benefits: ['Infinite Content', 'Engaging Experiences', 'Reduced Development Time', 'Player Retention'],
-    marketPrice: '$300 - $3,000/month',
-    link: 'https://ziontechgroup.com/ai-gaming-engine'
-  },
-  {
-    title: 'AI-Powered Music Composition Studio',
-    description: 'AI-assisted music creation and production platform for artists and producers.',
-    icon: Music,
-    features: ['AI Composition', 'Style Transfer', 'Collaborative Tools', 'Mastering Suite'],
-    pricing: '$49 - $499/month',
-    category: 'Creative AI',
-    benefits: ['Unlimited Creativity', 'Professional Quality', 'Time Saving', 'Royalty-free'],
-    marketPrice: '$75 - $750/month',
-    link: 'https://ziontechgroup.com/ai-music-studio'
-  },
-  {
-    title: 'AI-Powered Art Generator',
-    description: 'Create stunning digital art and NFTs with AI-powered generation tools.',
-    icon: Palette,
-    features: ['Style Transfer', 'NFT Creation', 'Custom Training', 'Marketplace Integration'],
-    pricing: '$29 - $299/month',
-    category: 'Digital Art',
-    benefits: ['Unique Artworks', 'NFT Ready', 'Multiple Styles', 'Commercial Use'],
-    marketPrice: '$50 - $500/month',
-    link: 'https://ziontechgroup.com/ai-art-generator'
-  },
-  {
-    title: 'AI-Powered Video Production Suite',
-    description: 'Automated video creation, editing, and optimization for content creators.',
-    icon: Video,
-    features: ['Auto Editing', 'Voice Synthesis', 'Scene Generation', 'Multi-format Export'],
-    pricing: '$99 - $999/month',
-    category: 'Video Production',
-    benefits: ['Professional Quality', 'Time Saving', 'Cost Effective', 'Scalable'],
-    marketPrice: '$150 - $1,500/month',
-    link: 'https://ziontechgroup.com/ai-video-suite'
-  },
-  {
-    title: 'AI-Powered Photography Assistant',
-    description: 'Intelligent photo editing, enhancement, and organization platform.',
-    icon: CameraIcon,
-    features: ['Auto Enhancement', 'Object Recognition', 'Smart Organization', 'Batch Processing'],
-    pricing: '$19 - $199/month',
-    category: 'Photography',
-    benefits: ['Professional Results', 'Time Saving', 'Smart Organization', 'Easy to Use'],
-    marketPrice: '$30 - $300/month',
-    link: 'https://ziontechgroup.com/ai-photography-assistant'
   },
   {
     title: 'Automated Backup & Recovery',
@@ -1027,2480 +1012,552 @@ const microSaasProducts = [
     category: 'RPA',
     popular: true,
     link: 'https://rpaplatform.ziontechgroup.com'
-  }
-];
-    icon: CreditCard,
-    features: ['Receipt OCR', 'Policy Compliance', 'Automated Approval', 'Analytics'],
-    pricing: '$19 - $149/month',
-    category: 'Finance',
-    benefits: ['Time Savings', 'Policy Compliance', 'Cost Control', 'Automation'],
-    marketPrice: '$30 - $250/month',
-    link: 'https://ziontechgroup.com/smart-expense-management'
   },
   {
-    title: 'AI-Powered Time Tracking',
-    description: 'Intelligent time tracking with automatic project detection and productivity insights.',
-    icon: Clock,
-    features: ['Auto Time Tracking', 'Project Detection', 'Productivity Analytics', 'Team Management'],
-    pricing: '$15 - $99/month',
-    category: 'Productivity',
-    benefits: ['Accurate Tracking', 'Productivity Insights', 'Team Visibility', 'Billing Accuracy'],
-    marketPrice: '$25 - $150/month',
-    link: 'https://ziontechgroup.com/ai-time-tracking'
-  },
-  {
-    title: 'Smart Meeting Scheduler',
-    description: 'AI-powered meeting scheduling with calendar optimization and conflict resolution.',
-    icon: Calendar,
-    features: ['Smart Scheduling', 'Conflict Resolution', 'Time Zone Handling', 'Meeting Analytics'],
-    pricing: '$9 - $79/month',
-    category: 'Productivity',
-    benefits: ['Time Savings', 'Fewer Conflicts', 'Better Scheduling', 'Analytics'],
-    marketPrice: '$15 - $120/month',
-    link: 'https://ziontechgroup.com/smart-meeting-scheduler'
-  },
-  {
-    title: 'AI-Powered Password Manager',
-    description: 'Advanced password management with AI security analysis and breach monitoring.',
-    icon: Lock,
-    features: ['Password Generation', 'Security Analysis', 'Breach Monitoring', 'Team Sharing'],
-    pricing: '$5 - $39/month',
-    category: 'Security',
-    benefits: ['Enhanced Security', 'Convenience', 'Team Collaboration', 'Breach Protection'],
-    marketPrice: '$8 - $60/month',
-    link: 'https://ziontechgroup.com/ai-password-manager'
-  },
-  {
-    title: 'Smart Invoice Generator',
-    description: 'AI-powered invoice creation with automated data extraction and payment tracking.',
-    icon: FileText,
-    features: ['Auto Data Extraction', 'Template Customization', 'Payment Tracking', 'Tax Calculation'],
-    pricing: '$19 - $149/month',
-    category: 'Finance',
-    benefits: ['Time Savings', 'Accuracy', 'Professional Invoices', 'Payment Tracking'],
-    marketPrice: '$30 - $250/month',
-    link: 'https://ziontechgroup.com/smart-invoice-generator'
-  },
-  {
-    title: 'AI-Powered Customer Feedback Analysis',
-    description: 'Intelligent analysis of customer feedback with sentiment analysis and actionable insights.',
-    icon: MessageSquare,
-    features: ['Sentiment Analysis', 'Topic Extraction', 'Trend Analysis', 'Actionable Insights'],
-    pricing: '$29 - $199/month',
-    category: 'Customer Experience',
-    benefits: ['Better Understanding', 'Actionable Insights', 'Customer Satisfaction', 'Competitive Edge'],
-    marketPrice: '$50 - $300/month',
-    link: 'https://ziontechgroup.com/ai-customer-feedback'
-  },
-  {
-    title: 'Smart Inventory Forecasting',
-    description: 'AI-powered inventory prediction with demand forecasting and optimization recommendations.',
-    icon: Package,
-    features: ['Demand Forecasting', 'Stock Optimization', 'Seasonal Analysis', 'Reorder Alerts'],
-    pricing: '$39 - $299/month',
-    category: 'Inventory',
-    benefits: ['Reduced Stockouts', 'Lower Costs', 'Better Planning', 'Optimized Inventory'],
-    marketPrice: '$60 - $500/month',
-    link: 'https://ziontechgroup.com/smart-inventory-forecasting'
-  },
-  {
-    title: 'AI-Powered Social Media Scheduler',
-    description: 'Intelligent social media management with optimal posting times and content suggestions.',
-    icon: Globe,
-    features: ['Optimal Timing', 'Content Suggestions', 'Multi-platform Posting', 'Engagement Analytics'],
-    pricing: '$19 - $149/month',
-    category: 'Social Media',
-    benefits: ['Better Engagement', 'Time Savings', 'Consistent Posting', 'Growth Tracking'],
-    marketPrice: '$30 - $250/month',
-    link: 'https://ziontechgroup.com/ai-social-scheduler'
-  },
-  {
-    title: 'Smart Document Scanner',
-    description: 'AI-powered document scanning with OCR, classification, and intelligent filing.',
-    icon: FileText,
-    features: ['OCR Processing', 'Auto Classification', 'Smart Filing', 'Search & Retrieval'],
-    pricing: '$15 - $99/month',
-    category: 'Document Management',
-    benefits: ['Easy Organization', 'Quick Search', 'Paperless Office', 'Time Savings'],
-    marketPrice: '$25 - $150/month',
-    link: 'https://ziontechgroup.com/smart-document-scanner'
-  },
-  {
-    title: 'AI-Powered Lead Scoring',
-    description: 'Intelligent lead qualification and scoring with automated follow-up recommendations.',
-    icon: Target,
-    features: ['Lead Scoring', 'Behavioral Analysis', 'Follow-up Automation', 'Conversion Prediction'],
-    pricing: '$29 - $199/month',
-    category: 'Sales',
-    benefits: ['Higher Conversion', 'Better Prioritization', 'Automated Workflows', 'ROI Improvement'],
-    marketPrice: '$50 - $300/month',
-    link: 'https://ziontechgroup.com/ai-lead-scoring'
-  },
-  {
-    title: 'Smart Email Signature Manager',
-    description: 'AI-powered email signature management with dynamic content and compliance tracking.',
-    icon: Mail,
-    features: ['Dynamic Signatures', 'Compliance Tracking', 'Brand Consistency', 'Analytics'],
-    pricing: '$9 - $59/month',
-    category: 'Email Marketing',
-    benefits: ['Brand Consistency', 'Compliance', 'Professional Image', 'Easy Management'],
-    marketPrice: '$15 - $90/month',
-    link: 'https://ziontechgroup.com/smart-email-signatures'
-  },
-  {
-    title: 'AI-Powered Website Heatmap',
-    description: 'Intelligent website analytics with user behavior tracking and optimization recommendations.',
-    icon: Eye,
-    features: ['Heatmap Analysis', 'User Behavior Tracking', 'Conversion Optimization', 'A/B Testing'],
-    pricing: '$19 - $149/month',
-    category: 'Web Analytics',
-    benefits: ['Better UX', 'Higher Conversions', 'Data-Driven Decisions', 'Optimization'],
-    marketPrice: '$30 - $250/month',
-    link: 'https://ziontechgroup.com/ai-website-heatmap'
-  },
-  {
-    title: 'Smart Appointment Booking',
-    description: 'AI-powered appointment scheduling with automated reminders and conflict resolution.',
-    icon: Calendar,
-    features: ['Auto Scheduling', 'Reminder Automation', 'Conflict Resolution', 'Calendar Sync'],
-    pricing: '$15 - $99/month',
-    category: 'Scheduling',
-    benefits: ['Reduced No-shows', 'Time Savings', 'Better Scheduling', 'Customer Satisfaction'],
-    marketPrice: '$25 - $150/month',
-    link: 'https://ziontechgroup.com/smart-appointment-booking'
-  },
-  {
-    title: 'AI-Powered Content Moderation',
-    description: 'Automated content moderation with AI-powered detection of inappropriate content.',
-    icon: Shield,
-    features: ['Content Detection', 'Automated Moderation', 'Custom Rules', 'Real-time Processing'],
-    pricing: '$39 - $299/month',
-    category: 'Content Management',
-    benefits: ['Safer Platform', 'Reduced Manual Work', 'Consistent Moderation', 'Scalability'],
-    marketPrice: '$60 - $500/month',
-    link: 'https://ziontechgroup.com/ai-content-moderation'
-  },
-  {
-    title: 'Smart Backup Manager',
-    description: 'AI-powered backup solution with intelligent scheduling and data deduplication.',
-    icon: Database,
-    features: ['Auto Scheduling', 'Data Deduplication', 'Cloud Storage', 'Recovery Testing'],
-    pricing: '$19 - $149/month',
-    category: 'Data Management',
-    benefits: ['Data Protection', 'Cost Savings', 'Automation', 'Peace of Mind'],
-    marketPrice: '$30 - $250/month',
-    link: 'https://ziontechgroup.com/smart-backup-manager'
-  },
-  {
-    title: 'AI-Powered Form Builder',
-    description: 'Intelligent form creation with conditional logic and automated data processing.',
-    icon: FileText,
-    features: ['Drag & Drop Builder', 'Conditional Logic', 'Auto Processing', 'Analytics'],
-    pricing: '$15 - $99/month',
-    category: 'Form Management',
-    benefits: ['Easy Creation', 'Better UX', 'Data Processing', 'Analytics'],
-    marketPrice: '$25 - $150/month',
-    link: 'https://ziontechgroup.com/ai-form-builder'
-  }
-];
-
-const categories = [
-  'All Products',
-  'Marketing',
-  'Sales',
-  'Analytics',
-  'Automation',
-  'Customer Service',
-  'Inventory',
-  'Email Marketing',
-  'Project Management',
-  'Finance',
-  'HR',
-  'Social Media',
-  'Document Management',
-  'Web Optimization',
-  'E-commerce',
-  'Development',
-  'Energy',
-  'Translation',
-  'Compliance',
-  'Video Analytics',
-  'Legal Tech',
-  'SEO',
-  'Productivity',
-  'Security',
-  'Customer Experience',
-  'Web Analytics',
-  'Scheduling',
-  'Content Management',
-  'Data Management',
-  'Form Management'
-];
-
-const microSaasServices = [
-  {
-    title: "Custom Web Applications",
-    description: "Tailored web applications designed to solve specific business problems with modern technology stacks",
-    icon: Globe,
-    features: [
-      "Responsive Design",
-      "Cross-browser Compatibility",
-      "Progressive Web App (PWA)",
-      "Real-time Updates",
-      "User Authentication",
-      "API Integration"
-    ],
-    color: "from-blue-500 to-cyan-500",
-    benefits: [
-      "Improved efficiency",
-      "Better user experience",
-      "Scalable architecture",
-      "Cost-effective solution"
-    ]
-  },
-  {
-    title: "Mobile Applications",
-    description: "Native and cross-platform mobile apps that deliver exceptional user experiences",
-    icon: Smartphone,
-    features: [
-      "iOS & Android Development",
-      "React Native Solutions",
-      "Flutter Applications",
-      "App Store Optimization",
-      "Push Notifications",
-      "Offline Functionality"
-    ],
-    color: "from-green-500 to-emerald-500",
-    benefits: [
-      "Increased accessibility",
-      "Better engagement",
-      "Mobile-first design",
-      "App store presence"
-    ]
-  },
-  {
-    title: "API Development & Integration",
-    description: "Robust APIs and seamless integrations to connect your systems and data",
-    icon: Code,
-    features: [
-      "RESTful API Design",
-      "GraphQL Implementation",
-      "Third-party Integrations",
-      "API Documentation",
-      "Rate Limiting & Security",
-      "Webhook Support"
-    ],
-    color: "from-purple-500 to-pink-500",
-    benefits: [
-      "System connectivity",
-      "Data synchronization",
-      "Automated workflows",
-      "Reduced manual work"
-    ]
-  },
-  {
-    title: "Data Management Solutions",
-    description: "Comprehensive data handling, processing, and analytics platforms",
-    icon: Database,
-    features: [
-      "Data Collection & Storage",
-      "ETL Processes",
-      "Data Visualization",
-      "Real-time Analytics",
-      "Data Security & Privacy",
-      "Automated Reporting"
-    ],
-    color: "from-orange-500 to-red-500",
-    benefits: [
-      "Better insights",
-      "Data-driven decisions",
-      "Automated reporting",
-      "Compliance assurance"
-    ]
-  },
-  {
-    title: "Workflow Automation",
-    description: "Intelligent automation solutions that streamline business processes",
-    icon: Zap,
-    features: [
-      "Process Automation",
-      "Task Scheduling",
-      "Email Automation",
-      "Document Processing",
-      "Approval Workflows",
-      "Integration Automation"
-    ],
-    color: "from-yellow-500 to-orange-500",
-    benefits: [
-      "Reduced manual work",
-      "Faster processing",
-      "Fewer errors",
-      "Improved efficiency"
-    ]
-  },
-  {
-    title: "E-commerce Solutions",
-    description: "Complete e-commerce platforms with payment processing and inventory management",
-    icon: Layers,
-    features: [
-      "Online Store Setup",
-      "Payment Gateway Integration",
-      "Inventory Management",
-      "Order Processing",
-      "Customer Management",
-      "Analytics & Reporting"
-    ],
-    color: "from-indigo-500 to-purple-500",
-    benefits: [
-      "Online presence",
-      "Revenue generation",
-      "Customer management",
-      "Business growth"
-    ]
-  }
-];
-
-const platforms = [
-  {
-    name: "Web Development",
-    icon: Globe,
-    technologies: ["React", "Next.js", "Vue.js", "Angular", "Node.js", "Python", "PHP"],
-    description: "Modern web applications with responsive design and optimal performance"
-  },
-  {
-    name: "Mobile Development",
-    icon: Smartphone,
-    technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Ionic", "Xamarin"],
-    description: "Cross-platform and native mobile applications for iOS and Android"
-  },
-  {
-    name: "Backend Services",
-    icon: Server,
-    technologies: ["Node.js", "Python", "Java", "C#", "Go", "Ruby", "PHP"],
-    description: "Scalable backend services and APIs for robust application architecture"
-  },
-  {
-    name: "Cloud Platforms",
-    icon: Cloud,
-    technologies: ["AWS", "Azure", "Google Cloud", "Heroku", "Vercel", "Netlify"],
-    description: "Cloud-native applications with auto-scaling and global deployment"
-  },
-  {
-    name: "Databases",
-    icon: Database,
-    technologies: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "Firebase", "Supabase"],
-    description: "Reliable data storage and management solutions for all application types"
-  },
-  {
-    name: "DevOps & Deployment",
-    icon: Settings,
-    technologies: ["Docker", "Kubernetes", "CI/CD", "GitHub Actions", "Jenkins", "Terraform"],
-    description: "Automated deployment and infrastructure management for seamless operations"
-  }
-];
-
-const developmentProcess = [
-  {
-    step: "01",
-    title: "Discovery & Planning",
-    description: "We analyze your requirements, define project scope, and create a detailed development plan."
-  },
-  {
-    step: "02",
-    title: "Design & Prototyping",
-    description: "Create wireframes, mockups, and interactive prototypes to visualize the final product."
-  },
-  {
-    step: "03",
-    title: "Development & Testing",
-    description: "Build your application using agile methodology with continuous testing and feedback."
-  },
-  {
-    step: "04",
-    title: "Deployment & Launch",
-    description: "Deploy your application to production with monitoring and performance optimization."
-  },
-  {
-    step: "05",
-    title: "Maintenance & Support",
-    description: "Ongoing maintenance, updates, and support to ensure optimal performance and security."
-  }
-];
-
-const pricingTiers = [
-  {
-    name: "Starter",
-    price: "$19-49",
-    description: "Perfect for small businesses",
-    features: ["Basic Features", "Email Support", "5 Users", "1GB Storage"],
-    popular: false
-  },
-  {
-    name: "Professional",
-    price: "$49-199",
-    description: "Ideal for growing businesses",
-    features: ["Advanced Features", "Priority Support", "25 Users", "10GB Storage"],
-    popular: true,
-    benefits: ['Advanced Features', 'Priority Support', 'Scalable', 'Professional'],
-    marketPrice: '$99 - $299/month',
-    link: 'https://ziontechgroup.com/professional-plan'
-  },
-  {
-    title: 'Cloud Cost Guard (FinOps Assistant)',
-    description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
-    icon: DollarSign,
-    features: ['Cost Anomaly Detection', 'Auto Rightsizing', 'Budget Forecasting', 'Multi-cloud Support'],
-    pricing: '$299 - $1,499/month',
-    category: 'FinOps',
-    popular: true
-  },
-  {
-    title: 'LLM Evaluation & Safety Suite',
-    description: 'Prompt evaluation, bias/toxicity checks, jailbreak tests and guardrail policies.',
-    icon: Shield,
-    features: ['Prompt Testing', 'Bias Detection', 'Safety Checks', 'Guardrail Policies'],
-    pricing: '$799 - $3,500/month',
-    category: 'AI Safety',
-    popular: true
-  },
-  {
-    title: 'Customer Feedback & NPS Micro-App',
-    description: 'Embed surveys, analyze sentiment and route issues to the right team automatically.',
-    icon: MessageSquare,
-    features: ['Survey Builder', 'Sentiment Analysis', 'Auto Routing', 'NPS Tracking'],
-    pricing: '$149 - $799/month',
-    category: 'Customer Success'
-  },
-  {
-    title: 'API Rate Limiting & Analytics',
-    description: 'Intelligent rate limiting with detailed analytics and usage insights.',
-    icon: BarChart3,
-    features: ['Smart Rate Limiting', 'Usage Analytics', 'Real-time Monitoring', 'Custom Rules'],
-    pricing: '$199 - $999/month',
-    category: 'API Management'
-  },
-  {
-    title: 'Content Moderation AI',
-    description: 'Automated content moderation using advanced AI for text, images, and videos.',
-    icon: Eye,
-    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
-    pricing: '$399 - $1,999/month',
-    category: 'Content Safety'
-  },
-  {
-    title: 'Workflow Automation Engine',
-    description: 'No-code workflow automation with integrations to popular business tools.',
-    icon: Settings,
-    features: ['Visual Builder', '100+ Integrations', 'Conditional Logic', 'Scheduled Tasks'],
-    pricing: '$99 - $599/month',
-    category: 'Automation',
-    popular: true
-  },
-  {
-    title: 'AI Lead Scoring & Enrichment',
-    description: 'Intelligent lead scoring and data enrichment for sales teams.',
-    icon: Target,
-    features: ['Lead Scoring', 'Data Enrichment', 'Behavioral Tracking', 'CRM Integration'],
-    pricing: '$199 - $999/month',
-    category: 'Sales'
-  },
-  {
-    title: 'Social Media Scheduler Pro',
-    description: 'Advanced social media management with AI-powered content optimization.',
-    icon: Globe,
-    features: ['Multi-platform Posting', 'Optimal Timing', 'Content Suggestions', 'Analytics Dashboard'],
-    pricing: '$49 - $299/month',
-    category: 'Social Media'
-  },
-  {
-    title: 'Invoice & Payment Processor',
-    description: 'Streamlined invoicing and payment processing for small businesses.',
-    icon: DollarSign,
-    features: ['Invoice Generation', 'Payment Processing', 'Recurring Billing', 'Financial Reports'],
-    pricing: '$29 - $199/month',
-    category: 'Finance'
-  },
-  {
-    title: 'Project Time Tracker',
-    description: 'Comprehensive time tracking and project management for teams.',
-    icon: Clock,
-    features: ['Time Tracking', 'Project Management', 'Team Collaboration', 'Reporting'],
-    pricing: '$9 - $49/month',
-    category: 'Productivity'
-  },
-  {
-    title: 'Email Marketing Automation',
-    description: 'Advanced email marketing with AI-powered personalization and automation.',
-    icon: Mail,
-    features: ['Email Templates', 'Automation Workflows', 'A/B Testing', 'Analytics'],
-    pricing: '$39 - $299/month',
-    category: 'Marketing'
-  },
-  {
-    title: 'Inventory Management System',
-    description: 'Smart inventory tracking and management for e-commerce businesses.',
-    icon: Package,
-    features: ['Stock Tracking', 'Low Stock Alerts', 'Supplier Management', 'Analytics'],
-    pricing: '$79 - $399/month',
-    category: 'E-commerce'
-  },
-  {
-    title: 'AI-Powered Code Generator',
-    description: 'Intelligent code generation and completion for developers using advanced AI.',
-    icon: Code,
-    features: ['Code Generation', 'Auto-completion', 'Bug Detection', 'Documentation Generation'],
-    pricing: '$99 - $499/month',
-    category: 'Developer Tools',
-    popular: true
-  },
-  {
-    title: 'Blockchain Analytics Platform',
-    description: 'Comprehensive blockchain transaction analysis and cryptocurrency intelligence.',
-    icon: Network,
-    features: ['Transaction Analysis', 'Wallet Tracking', 'DeFi Analytics', 'Compliance Monitoring'],
-    pricing: '$199 - $999/month',
-    category: 'Blockchain'
-  },
-  {
-    title: 'Quantum Computing Simulator',
-    description: 'Cloud-based quantum computing simulation and algorithm development platform.',
-    icon: Cpu,
-    features: ['Quantum Circuits', 'Algorithm Testing', 'Performance Analysis', 'Educational Tools'],
-    pricing: '$299 - $1,499/month',
-    category: 'Quantum Computing'
-  },
-  {
-    title: 'AI Voice Cloning Studio',
-    description: 'High-fidelity voice synthesis and cloning technology for content creators.',
+    title: 'AI-Powered Voice Analytics Platform',
+    description: 'Advanced voice analysis for customer service, sales calls, and team meetings with sentiment analysis and insights.',
     icon: Mic,
-    features: ['Voice Cloning', 'Emotion Synthesis', 'Multi-language Support', 'Real-time Processing'],
-    pricing: '$149 - $799/month',
-    category: 'Voice AI'
-  },
-  {
-    title: 'Metaverse Development Platform',
-    description: 'Complete platform for building and managing virtual worlds and experiences.',
-    icon: Globe,
-    features: ['3D World Builder', 'Avatar Creation', 'Physics Engine', 'Multi-user Support'],
-    pricing: '$399 - $1,999/month',
-    category: 'Metaverse'
-  },
-  {
-    title: 'AI Medical Diagnosis Assistant',
-    description: 'AI-powered medical image analysis and diagnostic support for healthcare professionals.',
-    icon: Heart,
-    features: ['Medical Imaging Analysis', 'Symptom Analysis', 'Treatment Recommendations', 'HIPAA Compliance'],
-    pricing: '$499 - $2,499/month',
-    category: 'Healthcare AI'
-  },
-  {
-    title: 'Autonomous Vehicle Fleet Management',
-    description: 'Complete fleet management system for autonomous vehicles and drones.',
-    icon: Car,
-    features: ['Fleet Tracking', 'Route Optimization', 'Maintenance Scheduling', 'Safety Monitoring'],
-    pricing: '$299 - $1,499/month',
-    category: 'Autonomous Systems'
-  },
-  {
-    title: 'AI Climate Change Predictor',
-    description: 'Advanced climate modeling and environmental impact prediction platform.',
-    icon: Sprout,
-    features: ['Climate Forecasting', 'Carbon Footprint Analysis', 'Environmental Risk Assessment', 'Sustainability Planning'],
+    features: ['Call Analytics', 'Sentiment Analysis', 'Performance Metrics', 'Real-time Insights'],
     pricing: '$199 - $999/month',
-    category: 'Climate Tech'
-  },
-  {
-    title: 'AI-Powered Learning Management System',
-    description: 'Intelligent educational platform with personalized learning paths and AI tutoring.',
-    icon: BookOpen,
-    features: ['Personalized Learning', 'AI Tutoring', 'Progress Tracking', 'Assessment Generation'],
-    pricing: '$49 - $299/month',
-    category: 'EdTech'
-  },
-  {
-    title: 'Smart Home Automation Hub',
-    description: 'AI-powered home automation and energy management system.',
-    icon: Home,
-    features: ['Device Integration', 'Energy Optimization', 'Predictive Control', 'Voice Commands'],
-    pricing: '$29 - $199/month',
-    category: 'Smart Home'
-  },
-  {
-    title: 'AI Sports Analytics Platform',
-    description: 'Advanced sports performance analysis and prediction system for teams and athletes.',
-    icon: Target,
-    features: ['Performance Analysis', 'Injury Prediction', 'Tactical Analysis', 'Player Scouting'],
-    pricing: '$99 - $599/month',
-    category: 'Sports Tech'
-  },
-  {
-    title: 'AI Retail Optimization Suite',
-    description: 'Comprehensive retail analytics and customer experience optimization platform.',
-    icon: ShoppingCart,
-    features: ['Customer Behavior Analysis', 'Inventory Optimization', 'Price Optimization', 'Personalization'],
-    pricing: '$149 - $799/month',
-    category: 'Retail AI'
-  },
-  {
-    title: 'AI Agricultural Intelligence Platform',
-    description: 'Smart farming solutions with AI-powered crop and livestock management.',
-    icon: Sprout,
-    features: ['Crop Monitoring', 'Yield Prediction', 'Disease Detection', 'Resource Optimization'],
-    pricing: '$199 - $999/month',
-    category: 'AgTech'
-  },
-  {
-    title: 'AI Mental Health Assistant',
-    description: 'AI-powered mental health monitoring and support system for individuals and organizations.',
-    icon: Heart,
-    features: ['Mood Tracking', 'Crisis Detection', 'Therapeutic Conversations', 'Progress Monitoring'],
-    pricing: '$39 - $199/month',
-    category: 'HealthTech'
-  },
-  {
-    title: 'AI Real Estate Analytics Platform',
-    description: 'Intelligent property valuation and market analysis platform for real estate professionals.',
-    icon: Building,
-    features: ['Property Valuation', 'Market Analysis', 'Investment Recommendations', 'Risk Assessment'],
-    pricing: '$99 - $499/month',
-    category: 'PropTech'
-  },
-  {
-    title: 'AI Gaming Intelligence Suite',
-    description: 'AI-powered game development and player behavior analysis platform.',
-    icon: Target,
-    features: ['Procedural Content Generation', 'Player Behavior Analysis', 'Balancing Algorithms', 'Anti-cheat Systems'],
-    pricing: '$149 - $799/month',
-    category: 'Game AI'
-  },
-  {
-    title: 'AI Supply Chain Intelligence',
-    description: 'End-to-end supply chain optimization with AI-powered insights and automation.',
-    icon: Network,
-    features: ['Demand Forecasting', 'Supplier Risk Analysis', 'Route Optimization', 'Inventory Management'],
-    pricing: '$299 - $1,499/month',
-    category: 'Supply Chain AI'
-  },
-  {
-    title: 'AI Environmental Monitoring System',
-    description: 'AI-powered environmental data collection and analysis system for organizations.',
-    icon: Sprout,
-    features: ['Air Quality Monitoring', 'Water Quality Analysis', 'Pollution Detection', 'Environmental Reporting'],
-    pricing: '$199 - $999/month',
-    category: 'Environmental AI'
-  },
-  {
-    title: 'AI Digital Twin Platform',
-    description: 'AI-powered digital twin creation and simulation platform for various industries.',
-    icon: Monitor,
-    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analysis', 'Virtual Testing'],
-    pricing: '$399 - $1,999/month',
-    category: 'Digital Twin'
-  },
-  {
-    title: 'AI Edge Computing Platform',
-    description: 'AI processing at the edge for real-time decision making and low-latency applications.',
-    icon: Cpu,
-    features: ['Real-time Processing', 'Low Latency', 'Offline Capability', 'Resource Optimization'],
-    pricing: '$149 - $799/month',
-    category: 'Edge AI'
-  },
-  {
-    title: 'AI Robotic Process Automation Suite',
-    description: 'Intelligent automation of complex business processes with AI-powered decision making.',
-    icon: Settings,
-    features: ['Process Discovery', 'Workflow Automation', 'Exception Handling', 'Performance Monitoring'],
-    pricing: '$99 - $599/month',
-    category: 'RPA'
-  },
-  {
-    title: 'AI Augmented Reality Platform',
-    description: 'AI-enhanced AR applications and experiences for various industries.',
-    icon: Eye,
-    features: ['Object Recognition', 'Spatial Mapping', 'Gesture Control', 'Real-time Rendering'],
-    pricing: '$199 - $999/month',
-    category: 'AR AI'
-  },
-  {
-    title: 'AI Virtual Reality Experiences',
-    description: 'Immersive VR experiences powered by artificial intelligence and machine learning.',
-    icon: Monitor,
-    features: ['Virtual World Generation', 'AI Avatars', 'Behavioral Simulation', 'Haptic Feedback'],
-    pricing: '$299 - $1,499/month',
-    category: 'VR AI'
-  },
-  {
-    title: 'AI Internet of Things Platform',
-    description: 'AI-powered IoT device management and data analytics platform.',
-    icon: Network,
-    features: ['Device Management', 'Data Analytics', 'Predictive Maintenance', 'Security Monitoring'],
-    pricing: '$149 - $799/month',
-    category: 'IoT AI'
-  },
-  {
-    title: 'AI 5G Network Optimization',
-    description: 'AI-powered 5G network management and optimization platform.',
-    icon: Network,
-    features: ['Network Slicing', 'Traffic Optimization', 'Quality of Service', 'Resource Allocation'],
-    pricing: '$399 - $1,999/month',
-    category: '5G AI'
-  },
-  {
-    title: 'AI Blockchain Smart Contracts',
-    description: 'AI-enhanced smart contract development and auditing platform.',
-    icon: Code,
-    features: ['Smart Contract Generation', 'Security Auditing', 'Gas Optimization', 'Automated Testing'],
-    pricing: '$199 - $999/month',
-    category: 'Blockchain AI'
-  },
-  {
-    title: 'AI Quantum Machine Learning Platform',
-    description: 'Quantum-enhanced machine learning algorithms and models for complex problems.',
-    icon: Cpu,
-    features: ['Quantum Algorithms', 'Optimization Problems', 'Pattern Recognition', 'Quantum Simulation'],
-    pricing: '$499 - $2,499/month',
-    category: 'Quantum ML'
-  },
-  {
-    title: 'AI Synthetic Data Generation',
-    description: 'AI-powered synthetic data creation for training and testing machine learning models.',
-    icon: Database,
-    features: ['Data Synthesis', 'Privacy Preservation', 'Bias Reduction', 'Quality Validation'],
-    pricing: '$99 - $499/month',
-    category: 'Data AI'
-  },
-  {
-    title: 'AI Explainable AI Platform',
-    description: 'Platform for creating and managing explainable AI models with transparency.',
-    icon: Brain,
-    features: ['Model Interpretability', 'Bias Detection', 'Fairness Metrics', 'Transparency Reports'],
-    pricing: '$149 - $799/month',
-    category: 'XAI'
-  },
-  {
-    title: 'AI Federated Learning Platform',
-    description: 'Distributed machine learning while preserving data privacy and security.',
-    icon: Network,
-    features: ['Privacy-Preserving ML', 'Distributed Training', 'Model Aggregation', 'Secure Communication'],
-    pricing: '$299 - $1,499/month',
-    category: 'Federated Learning'
-  },
-  {
-    title: 'AI AutoML Platform',
-    description: 'Automated machine learning model development and deployment platform.',
-    icon: Settings,
-    features: ['Automated Feature Engineering', 'Model Selection', 'Hyperparameter Tuning', 'Auto Deployment'],
-    pricing: '$49 - $299/month',
-    category: 'AutoML'
-  },
-  {
-    title: 'AI Cybersecurity Threat Hunter',
-    description: 'AI-powered threat detection and response system for enterprise security.',
-    icon: Shield,
-    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Incident Forensics'],
-    pricing: '$399 - $1,999/month',
-    category: 'Cybersecurity AI',
-    popular: true
-  },
-  {
-    title: 'AI Personal Finance Optimizer',
-    description: 'Intelligent personal finance management with AI-powered investment recommendations.',
-    icon: DollarSign,
-    features: ['Budget Optimization', 'Investment Analysis', 'Risk Assessment', 'Goal Tracking'],
-    pricing: '$19 - $99/month',
-    category: 'FinTech AI'
-  },
-  {
-    title: 'AI Legal Document Analyzer',
-    description: 'AI-powered legal document review and contract analysis platform.',
-    icon: FileText,
-    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
-    pricing: '$199 - $999/month',
-    category: 'LegalTech AI'
-  },
-  {
-    title: 'AI Energy Management System',
-    description: 'Smart energy consumption optimization and renewable energy integration platform.',
-    icon: Zap,
-    features: ['Energy Optimization', 'Renewable Integration', 'Cost Analysis', 'Carbon Tracking'],
-    pricing: '$99 - $499/month',
-    category: 'CleanTech AI'
-  },
-  {
-    title: 'AI Language Translation Hub',
-    description: 'Real-time multilingual translation with context-aware AI understanding.',
-    icon: Globe,
-    features: ['Real-time Translation', 'Context Awareness', 'Voice Translation', 'Document Translation'],
-    pricing: '$29 - $199/month',
-    category: 'Language AI'
-  },
-  {
-    title: 'AI Content Moderation Suite',
-    description: 'Advanced AI content moderation for social platforms and communities.',
-    icon: Eye,
-    features: ['Multi-modal Detection', 'Context Analysis', 'Bias Detection', 'Automated Actions'],
-    pricing: '$149 - $799/month',
-    category: 'Content AI'
-  },
-  {
-    title: 'AI Predictive Maintenance Platform',
-    description: 'AI-powered equipment maintenance prediction and optimization system.',
-    icon: Settings,
-    features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Performance Monitoring'],
-    pricing: '$199 - $999/month',
-    category: 'Industrial AI'
-  },
-  {
-    title: 'AI Customer Sentiment Analyzer',
-    description: 'Real-time customer sentiment analysis across multiple channels and touchpoints.',
-    icon: MessageSquare,
-    features: ['Sentiment Analysis', 'Emotion Detection', 'Trend Analysis', 'Alert System'],
-    pricing: '$79 - $399/month',
-    category: 'Customer AI'
-  },
-  {
-    title: 'AI Fraud Detection System',
-    description: 'Advanced fraud detection and prevention using machine learning algorithms.',
-    icon: Shield,
-    features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'Automated Blocking'],
-    pricing: '$299 - $1,499/month',
-    category: 'Fraud AI'
-  },
-  {
-    title: 'AI MLOps Platform',
-    description: 'Complete machine learning operations and model lifecycle management platform.',
-    icon: Settings,
-    features: ['Model Versioning', 'Experiment Tracking', 'Model Monitoring', 'Automated Deployment'],
-    pricing: '$99 - $599/month',
-    category: 'MLOps'
-  },
-  {
-    title: 'AI Data Pipeline Automation',
-    description: 'Intelligent data pipeline creation and management platform.',
-    icon: Database,
-    features: ['Pipeline Generation', 'Data Quality Monitoring', 'Error Handling', 'Performance Optimization'],
-    pricing: '$149 - $799/month',
-    category: 'Data Engineering'
-  },
-  {
-    title: 'AI Model Monitoring & Observability',
-    description: 'Comprehensive AI model performance monitoring and alerting platform.',
-    icon: Monitor,
-    features: ['Performance Tracking', 'Drift Detection', 'Alert Management', 'Root Cause Analysis'],
-    pricing: '$79 - $399/month',
-    category: 'Model Ops'
-  },
-  {
-    title: 'AI Bias Detection & Mitigation',
-    description: 'AI system bias detection and fairness optimization tools.',
-    icon: Shield,
-    features: ['Bias Detection', 'Fairness Metrics', 'Mitigation Strategies', 'Compliance Reporting'],
-    pricing: '$99 - $499/month',
-    category: 'AI Ethics'
-  },
-  {
-    title: 'AI Model Compression & Optimization',
-    description: 'AI model size reduction and performance optimization platform.',
-    icon: Cpu,
-    features: ['Model Pruning', 'Quantization', 'Knowledge Distillation', 'Hardware Optimization'],
-    pricing: '$149 - $799/month',
-    category: 'Model Optimization'
-  },
-  {
-    title: 'AI Edge AI Model Deployment',
-    description: 'Deployment of AI models on edge devices and embedded systems.',
-    icon: Smartphone,
-    features: ['Model Conversion', 'Hardware Optimization', 'Performance Tuning', 'Deployment Automation'],
-    pricing: '$199 - $999/month',
-    category: 'Edge Deployment'
-  },
-  {
-    title: 'AI Multi-Modal Learning Platform',
-    description: 'AI systems that process multiple data types simultaneously.',
-    icon: Eye,
-    features: ['Text-Image Processing', 'Audio-Visual Analysis', 'Cross-Modal Learning', 'Fusion Techniques'],
-    pricing: '$299 - $1,499/month',
-    category: 'Multi-Modal AI'
-  },
-  {
-    title: 'AI Transfer Learning Platform',
-    description: 'Platform for transferring knowledge between AI models and domains.',
-    icon: Network,
-    features: ['Pre-trained Models', 'Domain Adaptation', 'Fine-tuning Tools', 'Knowledge Transfer'],
-    pricing: '$99 - $499/month',
-    category: 'Transfer Learning'
-  },
-  {
-    title: 'AI Reinforcement Learning Platform',
-    description: 'Platform for developing and training reinforcement learning agents.',
-    icon: Target,
-    features: ['Environment Simulation', 'Agent Training', 'Policy Optimization', 'Reward Engineering'],
-    pricing: '$199 - $999/month',
-    category: 'Reinforcement Learning'
-  },
-  {
-    title: 'AI Generative Adversarial Networks',
-    description: 'GAN-based solutions for data generation and augmentation.',
-    icon: Image,
-    features: ['Image Generation', 'Data Augmentation', 'Style Transfer', 'Anomaly Generation'],
-    pricing: '$149 - $799/month',
-    category: 'GANs'
-  },
-  {
-    title: 'AI Transformer Models Platform',
-    description: 'Advanced transformer-based AI models for various applications.',
-    icon: Brain,
-    features: ['Language Models', 'Vision Transformers', 'Multimodal Transformers', 'Custom Architectures'],
-    pricing: '$199 - $999/month',
-    category: 'Transformers'
-  },
-  {
-    title: 'AI Graph Neural Networks Platform',
-    description: 'Graph-based AI solutions for complex relationship modeling.',
-    icon: Network,
-    features: ['Graph Analysis', 'Node Classification', 'Link Prediction', 'Graph Generation'],
-    pricing: '$149 - $799/month',
-    category: 'Graph AI'
-  },
-  {
-    title: 'AI Time Series Forecasting Platform',
-    description: 'Advanced time series analysis and forecasting solutions.',
-    icon: TrendingUp,
-    features: ['Seasonal Analysis', 'Trend Detection', 'Anomaly Detection', 'Multi-step Forecasting'],
-    pricing: '$99 - $499/month',
-    category: 'Time Series'
-  },
-  {
-    title: 'AI Natural Language Processing Platform',
-    description: 'Advanced NLP solutions for text understanding and generation.',
-    icon: FileText,
-    features: ['Text Analysis', 'Sentiment Analysis', 'Named Entity Recognition', 'Text Generation'],
-    pricing: '$79 - $399/month',
-    category: 'NLP'
-  },
-  {
-    title: 'AI Computer Vision Solutions Platform',
-    description: 'Advanced computer vision and image processing solutions.',
-    icon: Eye,
-    features: ['Object Detection', 'Image Classification', 'Segmentation', '3D Vision'],
-    pricing: '$149 - $799/month',
-    category: 'Computer Vision'
-  },
-  {
-    title: 'AI Speech Recognition & Synthesis Platform',
-    description: 'Advanced speech processing and voice synthesis solutions.',
-    icon: Mic,
-    features: ['Speech Recognition', 'Text-to-Speech', 'Voice Cloning', 'Emotion Recognition'],
-    pricing: '$99 - $499/month',
-    category: 'Speech AI'
-  },
-  {
-    title: 'AI Recommendation Systems Platform',
-    description: 'Advanced recommendation and personalization engines.',
-    icon: Target,
-    features: ['Collaborative Filtering', 'Content-Based Filtering', 'Hybrid Approaches', 'Real-time Updates'],
-    pricing: '$49 - $299/month',
-    category: 'Recommendation Systems'
-  },
-  {
-    title: 'AI Search & Retrieval Systems Platform',
-    description: 'Intelligent search and information retrieval solutions.',
-    icon: Search,
-    features: ['Semantic Search', 'Vector Search', 'Query Understanding', 'Result Ranking'],
-    pricing: '$99 - $499/month',
-    category: 'Search AI'
-  },
-  {
-    title: 'AI Knowledge Graphs Platform',
-    description: 'AI-powered knowledge representation and reasoning systems.',
-    icon: Network,
-    features: ['Entity Extraction', 'Relationship Modeling', 'Query Answering', 'Knowledge Inference'],
-    pricing: '$199 - $999/month',
-    category: 'Knowledge AI'
-  },
-  {
-    title: 'AI Causal Inference Platform',
-    description: 'AI systems for understanding cause-and-effect relationships.',
-    icon: Target,
-    features: ['Causal Discovery', 'Treatment Effect Estimation', 'Counterfactual Analysis', 'Causal Graphs'],
-    pricing: '$299 - $1,499/month',
-    category: 'Causal AI'
-  },
-  {
-    title: 'AI Uncertainty Quantification Platform',
-    description: 'AI systems that provide uncertainty estimates and confidence intervals.',
-    icon: Shield,
-    features: ['Uncertainty Estimation', 'Confidence Intervals', 'Risk Assessment', 'Robust Predictions'],
-    pricing: '$149 - $799/month',
-    category: 'Uncertainty AI'
-  },
-  {
-    title: 'AI Adversarial Robustness Platform',
-    description: 'AI systems resistant to adversarial attacks and perturbations.',
-    icon: Shield,
-    features: ['Attack Detection', 'Robust Training', 'Defense Mechanisms', 'Security Testing'],
-    pricing: '$199 - $999/month',
-    category: 'Robust AI'
-  },
-  {
-    title: 'AI Continual Learning Platform',
-    description: 'AI systems that learn continuously without forgetting previous knowledge.',
-    icon: Brain,
-    features: ['Catastrophic Forgetting Prevention', 'Incremental Learning', 'Memory Consolidation', 'Adaptive Learning'],
-    pricing: '$249 - $1,249/month',
-    category: 'Continual Learning'
-  },
-  {
-    title: 'AI Meta-Learning Platform',
-    description: 'AI systems that learn how to learn and adapt quickly to new tasks.',
-    icon: Brain,
-    features: ['Few-shot Learning', 'Rapid Adaptation', 'Learning to Learn', 'Task Generalization'],
-    pricing: '$299 - $1,499/month',
-    category: 'Meta-Learning'
-  },
-  {
-    title: 'AI Neural Architecture Search Platform',
-    description: 'Automated neural network architecture design and optimization.',
-    icon: Settings,
-    features: ['Architecture Search', 'Performance Optimization', 'Hardware-aware Design', 'Automated Design'],
-    pricing: '$399 - $1,999/month',
-    category: 'NAS'
-  },
-  {
-    title: 'AI Hyperparameter Optimization Platform',
-    description: 'Automated hyperparameter tuning and optimization for AI models.',
-    icon: Settings,
-    features: ['Bayesian Optimization', 'Multi-objective Optimization', 'Early Stopping', 'Resource Management'],
-    pricing: '$99 - $499/month',
-    category: 'HPO'
-  },
-  {
-    title: 'AI Model Ensemble Methods Platform',
-    description: 'Advanced ensemble learning and model combination techniques.',
-    icon: Network,
-    features: ['Model Stacking', 'Bagging', 'Boosting', 'Voting Methods'],
-    pricing: '$149 - $799/month',
-    category: 'Ensemble Learning'
-  },
-  {
-    title: 'AI Active Learning Platform',
-    description: 'AI systems that intelligently select data for labeling and training.',
-    icon: Target,
-    features: ['Query Strategy', 'Uncertainty Sampling', 'Diversity Sampling', 'Human-in-the-loop'],
-    pricing: '$99 - $499/month',
-    category: 'Active Learning'
-  },
-  {
-    title: 'AI Semi-Supervised Learning Platform',
-    description: 'AI systems that learn from both labeled and unlabeled data.',
-    icon: Database,
-    features: ['Pseudo-labeling', 'Consistency Regularization', 'Graph-based Methods', 'Self-training'],
-    pricing: '$124 - $624/month',
-    category: 'Semi-Supervised Learning'
-  },
-  {
-    title: 'AI Unsupervised Learning Platform',
-    description: 'AI systems that discover patterns in data without labels.',
-    icon: Eye,
-    features: ['Clustering', 'Dimensionality Reduction', 'Anomaly Detection', 'Density Estimation'],
-    pricing: '$79 - $399/month',
-    category: 'Unsupervised Learning'
-  },
-  {
-    title: 'AI Supervised Learning Platform',
-    description: 'AI systems that learn from labeled training data.',
-    icon: Target,
-    features: ['Classification', 'Regression', 'Feature Selection', 'Model Validation'],
-    pricing: '$49 - $299/month',
-    category: 'Supervised Learning'
-  },
-  {
-    title: 'AI Deep Learning Platform',
-    description: 'Advanced deep neural network solutions for complex problems.',
-    icon: Brain,
-    features: ['Neural Networks', 'Deep Architectures', 'Gradient Descent', 'Backpropagation'],
-    pricing: '$99 - $499/month',
-    category: 'Deep Learning'
-  },
-  {
-    title: 'AI Machine Learning Platform',
-    description: 'Comprehensive machine learning solutions for various applications.',
-    icon: Cpu,
-    features: ['Algorithm Selection', 'Feature Engineering', 'Model Training', 'Performance Evaluation'],
-    pricing: '$79 - $399/month',
-    category: 'Machine Learning'
-  },
-  {
-    title: 'AI Artificial Intelligence Platform',
-    description: 'Complete AI solutions covering all aspects of artificial intelligence.',
-    icon: Brain,
-    features: ['Problem Solving', 'Learning', 'Reasoning', 'Perception'],
-    pricing: '$249 - $1,249/month',
-    category: 'General AI'
-  },
-  {
-    title: 'HR & Payroll Management',
-    description: 'Complete HR and payroll solution for small to medium businesses.',
-    icon: Users,
-    features: ['Employee Management', 'Payroll Processing', 'Time Off Tracking', 'Compliance'],
-    pricing: '$99 - $499/month',
-    category: 'HR'
-  },
-  {
-    title: 'Website Analytics & Heatmaps',
-    description: 'Advanced website analytics with heatmaps and user behavior tracking.',
-    icon: BarChart3,
-    features: ['User Behavior Tracking', 'Heatmaps', 'Conversion Funnels', 'A/B Testing'],
-    pricing: '$29 - $199/month',
-    category: 'Analytics'
-  },
-  {
-    title: 'Document Management System',
-    description: 'Secure document storage, sharing, and collaboration platform.',
-    icon: FileText,
-    features: ['Document Storage', 'Version Control', 'Collaboration Tools', 'Security'],
-    pricing: '$19 - $99/month',
-    category: 'Document Management'
-  },
-  {
-    title: 'Event Management Platform',
-    description: 'Complete event planning and management solution for organizers.',
-    icon: Calendar,
-    features: ['Event Planning', 'Registration Management', 'Payment Processing', 'Analytics'],
-    pricing: '$49 - $299/month',
-    category: 'Events'
-  },
-  {
-    title: 'Learning Management System',
-    description: 'Online learning platform for courses, training, and certifications.',
-    icon: BookOpen,
-    features: ['Course Creation', 'Student Management', 'Progress Tracking', 'Certificates'],
-    pricing: '$79 - $399/month',
-    category: 'Education'
-  },
-  {
-    title: 'AI-Powered Code Review Assistant',
-    description: 'Automated code review with security analysis, performance optimization, and best practices suggestions.',
-    icon: Code,
-    features: ['Security Scanning', 'Performance Analysis', 'Code Quality Metrics', 'Git Integration'],
-    pricing: '$199 - $1,299/month',
-    category: 'Development',
+    category: 'Voice Analytics',
     popular: true,
-    link: 'https://codereview.ziontechgroup.com'
+    link: 'https://voiceanalytics.ziontechgroup.com'
   },
   {
-    title: 'Smart Contract Audit Platform',
-    description: 'Automated smart contract security auditing and vulnerability detection for blockchain projects.',
+    title: 'Smart Contract Security Auditor',
+    description: 'Automated smart contract security analysis with vulnerability detection and gas optimization recommendations.',
     icon: Shield,
-    features: ['Vulnerability Detection', 'Gas Optimization', 'Compliance Checking', 'Audit Reports'],
-    pricing: '$499 - $2,999/month',
+    features: ['Security Auditing', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checking'],
+    pricing: '$299 - $1,999/month',
+    category: 'Blockchain Security',
+    link: 'https://contractauditor.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Carbon Footprint Tracker',
+    description: 'Environmental impact tracking and sustainability optimization for businesses with actionable insights.',
+    icon: Sprout,
+    features: ['Carbon Tracking', 'Sustainability Metrics', 'Optimization Recommendations', 'ESG Reporting'],
+    pricing: '$99 - $499/month',
+    category: 'Sustainability',
+    link: 'https://carbonfootprint.ziontechgroup.com'
+  },
+  {
+    title: 'Mental Health & Wellness Assistant',
+    description: 'AI-powered mental health support and wellness tracking for employees and individuals with privacy protection.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Wellness Insights', 'Resource Recommendations', 'Privacy Protection'],
+    pricing: '$19 - $99/month',
+    category: 'Health & Wellness',
+    link: 'https://wellnessai.ziontechgroup.com'
+  },
+  {
+    title: 'Cryptocurrency Tax Calculator Pro',
+    description: 'Automated cryptocurrency tax calculation and reporting with AI-powered optimization and compliance checking.',
+    icon: DollarSign,
+    features: ['Tax Calculation', 'Transaction Tracking', 'Report Generation', 'Compliance Checking'],
+    pricing: '$49 - $299/month',
+    category: 'Crypto Finance',
+    link: 'https://cryptotax.ziontechgroup.com'
+  },
+  {
+    title: 'Remote Work Analytics Dashboard',
+    description: 'Productivity and engagement analytics for remote teams with AI insights and team optimization recommendations.',
+    icon: Monitor,
+    features: ['Productivity Metrics', 'Engagement Tracking', 'Wellness Monitoring', 'Team Insights'],
+    pricing: '$79 - $399/month',
+    category: 'Remote Work',
+    link: 'https://remotework.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Subscription Management',
+    description: 'Intelligent subscription lifecycle management with churn prediction, pricing optimization, and customer insights.',
+    icon: Settings,
+    features: ['Churn Prediction', 'Lifecycle Management', 'Pricing Optimization', 'Customer Insights'],
+    pricing: '$99 - $599/month',
+    category: 'Subscription Management',
+    link: 'https://subscriptionai.ziontechgroup.com'
+  },
+  {
+    title: 'Code Documentation Generator AI',
+    description: 'Automatically generate comprehensive documentation from code with AI analysis and interactive examples.',
+    icon: FileText,
+    features: ['Auto Documentation', 'API Documentation', 'Code Comments', 'Interactive Examples'],
+    pricing: '$79 - $399/month',
+    category: 'Development Tools',
+    popular: true,
+    link: 'https://codedocs.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Testing Suite',
+    description: 'Comprehensive testing framework for smart contracts with automated vulnerability detection and gas optimization.',
+    icon: Shield,
+    features: ['Unit Testing', 'Integration Testing', 'Security Auditing', 'Gas Optimization'],
+    pricing: '$199 - $999/month',
     category: 'Blockchain',
-    popular: true,
-    link: 'https://contractaudit.ziontechgroup.com'
+    link: 'https://contracttesting.ziontechgroup.com'
+  },
+  {
+    title: 'Database Query Optimizer AI',
+    description: 'Intelligent database query optimization and performance monitoring with automated recommendations.',
+    icon: Database,
+    features: ['Query Analysis', 'Performance Monitoring', 'Index Recommendations', 'Cost Optimization'],
+    pricing: '$149 - $799/month',
+    category: 'Database',
+    link: 'https://dboptimizer.ziontechgroup.com'
   },
   {
     title: 'Real-time Collaboration Whiteboard',
-    description: 'Advanced digital whiteboard with AI-powered insights and team collaboration features.',
-    icon: Monitor,
-    features: ['Real-time Collaboration', 'AI Insights', 'Template Library', 'Export Options'],
-    pricing: '$29 - $199/month',
+    description: 'AI-enhanced collaborative whiteboard with smart drawing assistance and idea organization capabilities.',
+    icon: Target,
+    features: ['Real-time Collaboration', 'AI Drawing Assistant', 'Idea Organization', 'Export Options'],
+    pricing: '$29 - $149/month',
     category: 'Collaboration',
-    link: 'https://whiteboard.ziontechgroup.com'
+    link: 'https://collabwhiteboard.ziontechgroup.com'
   },
   {
-    title: 'Voice-to-Text Meeting Transcriber',
-    description: 'AI-powered meeting transcription with speaker identification and action item extraction.',
-    icon: Mic,
-    features: ['Real-time Transcription', 'Speaker Identification', 'Action Items', 'Meeting Summaries'],
-    pricing: '$39 - $299/month',
-    category: 'Productivity',
-    link: 'https://meetingtranscriber.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Logo Generator',
-    description: 'Professional logo creation using advanced AI with brand guidelines and multiple formats.',
-    icon: Image,
-    features: ['AI Logo Generation', 'Brand Guidelines', 'Multiple Formats', 'Unlimited Revisions'],
+    title: 'API Documentation Generator Pro',
+    description: 'Automatically generate interactive API documentation from OpenAPI specs with testing interface and version management.',
+    icon: Code,
+    features: ['Auto Generation', 'Interactive Docs', 'Testing Interface', 'Version Management'],
     pricing: '$49 - $299/month',
-    category: 'Design',
-    link: 'https://logogenerator.ziontechgroup.com'
+    category: 'API Tools',
+    link: 'https://apidocs.ziontechgroup.com'
   },
   {
-    title: 'Smart Password Manager',
-    description: 'Enterprise-grade password management with AI-powered security recommendations.',
-    icon: Lock,
-    features: ['Password Generation', 'Security Analysis', 'Team Sharing', 'Dark Web Monitoring'],
-    pricing: '$9 - $99/month',
-    category: 'Security',
-    link: 'https://passwordmanager.ziontechgroup.com'
-  },
-  {
-    title: 'AI Content Moderation API',
-    description: 'Real-time content moderation for text, images, and videos with custom rule configuration.',
-    icon: Eye,
-    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time API', '99.9% Uptime'],
-    pricing: '$0.01 - $0.10 per request',
-    category: 'API',
-    popular: true,
-    link: 'https://contentmoderation.ziontechgroup.com'
-  },
-  {
-    title: 'Blockchain Analytics Dashboard',
-    description: 'Comprehensive blockchain transaction analysis and monitoring for crypto businesses.',
-    icon: BarChart3,
-    features: ['Transaction Tracking', 'Risk Analysis', 'Compliance Reporting', 'Real-time Alerts'],
-    pricing: '$299 - $1,999/month',
-    category: 'Blockchain',
-    link: 'https://blockchainanalytics.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Resume Builder',
-    description: 'Professional resume creation with ATS optimization and industry-specific templates.',
-    icon: FileText,
-    features: ['ATS Optimization', 'Industry Templates', 'Skills Analysis', 'Cover Letter Generator'],
-    pricing: '$19 - $99/month',
-    category: 'Career',
-    link: 'https://resumebuilder.ziontechgroup.com'
-  },
-  {
-    title: 'Smart Home Automation Hub',
-    description: 'Centralized smart home control with AI-powered automation and energy optimization.',
-    icon: Home,
-    features: ['Device Control', 'Energy Optimization', 'Voice Integration', 'Security Monitoring'],
-    pricing: '$29 - $199/month',
-    category: 'IoT',
-    link: 'https://smarthome.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Stock Trading Bot',
-    description: 'Automated stock trading with machine learning algorithms and risk management.',
-    icon: TrendingUp,
-    features: ['ML Algorithms', 'Risk Management', 'Backtesting', 'Real-time Trading'],
-    pricing: '$199 - $1,999/month',
-    category: 'Finance',
-    popular: true,
-    link: 'https://tradingbot.ziontechgroup.com'
-  },
-  {
-    title: 'Video Content Analyzer',
-    description: 'AI-powered video analysis for content optimization, SEO, and engagement insights.',
-    icon: Video,
-    features: ['Content Analysis', 'SEO Optimization', 'Engagement Metrics', 'Thumbnail Generation'],
-    pricing: '$49 - $399/month',
-    category: 'Video',
-    link: 'https://videoanalyzer.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Email Signature Generator',
-    description: 'Professional email signature creation with brand consistency and compliance features.',
-    icon: Mail,
-    features: ['Brand Templates', 'Compliance Checking', 'Bulk Generation', 'Analytics'],
-    pricing: '$9 - $49/month',
-    category: 'Communication',
-    link: 'https://emailsignature.ziontechgroup.com'
-  },
-  {
-    title: 'Smart Contract Deployment Platform',
-    description: 'One-click smart contract deployment with testing, verification, and monitoring.',
+    title: 'Smart Contract Deployment Manager',
+    description: 'Automated smart contract deployment and management across multiple blockchains with monitoring and version control.',
     icon: Rocket,
-    features: ['One-click Deploy', 'Testing Suite', 'Verification', 'Monitoring'],
-    pricing: '$99 - $999/month',
+    features: ['Multi-chain Deployment', 'Version Control', 'Automated Testing', 'Monitoring'],
+    pricing: '$99 - $499/month',
     category: 'Blockchain',
     link: 'https://contractdeploy.ziontechgroup.com'
   },
   {
-    title: 'AI-Powered Data Visualization',
-    description: 'Intelligent data visualization with automatic chart selection and insights generation.',
-    icon: BarChart3,
-    features: ['Auto Chart Selection', 'Insights Generation', 'Interactive Dashboards', 'Export Options'],
-    pricing: '$79 - $599/month',
-    category: 'Analytics',
-    link: 'https://dataviz.ziontechgroup.com'
-  },
-  {
-    title: 'Smart Contract Testing Suite',
-    description: 'Comprehensive testing framework for smart contracts with automated test generation.',
-    icon: Code,
-    features: ['Automated Testing', 'Security Tests', 'Gas Optimization', 'CI/CD Integration'],
-    pricing: '$199 - $1,299/month',
-    category: 'Development',
-    link: 'https://contracttesting.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Meeting Scheduler',
-    description: 'Intelligent meeting scheduling with calendar optimization and conflict resolution.',
-    icon: Calendar,
-    features: ['Smart Scheduling', 'Conflict Resolution', 'Time Zone Handling', 'Integration'],
-    pricing: '$19 - $99/month',
-    category: 'Productivity',
-    link: 'https://meetingscheduler.ziontechgroup.com'
-  },
-  {
-    title: 'Blockchain Wallet Analytics',
-    description: 'Comprehensive wallet analysis and transaction tracking for cryptocurrency businesses.',
-    icon: HardDrive,
-    features: ['Wallet Analysis', 'Transaction Tracking', 'Risk Assessment', 'Compliance'],
-    pricing: '$149 - $999/month',
-    category: 'Blockchain',
-    link: 'https://walletanalytics.ziontechgroup.com'
-  },
-  {
-    title: 'AI-Powered Code Documentation Generator',
-    description: 'Automated code documentation generation with intelligent comment suggestions.',
-    icon: FileText,
-    features: ['Auto Documentation', 'Comment Generation', 'API Docs', 'Integration'],
-    pricing: '$49 - $299/month',
-    category: 'Development',
-    link: 'https://codedocs.ziontechgroup.com'
-  },
-  {
-    title: 'Real Estate CRM',
-    description: 'Specialized CRM for real estate agents and property management.',
-    icon: Building,
-    features: ['Lead Management', 'Property Listings', 'Client Communication', 'Deal Tracking'],
-    pricing: '$39 - $199/month',
-    category: 'Real Estate'
-  },
-  {
-    title: 'Restaurant POS & Management',
-    description: 'Point of sale and restaurant management system with inventory tracking.',
-    icon: ShoppingCart,
-    features: ['POS System', 'Menu Management', 'Inventory Tracking', 'Staff Scheduling'],
-    pricing: '$99 - $499/month',
-    category: 'Restaurant'
-  },
-  {
-    title: 'Fitness & Wellness Tracker',
-    description: 'Comprehensive fitness tracking and wellness management platform.',
-    icon: Heart,
-    features: ['Workout Tracking', 'Nutrition Logging', 'Progress Monitoring', 'Community Features'],
-    pricing: '$9 - $49/month',
-    category: 'Health & Fitness'
-  },
-  {
-    title: 'Cryptocurrency Portfolio Tracker',
-    description: 'Advanced cryptocurrency portfolio tracking and trading analytics.',
-    icon: TrendingUp,
-    features: ['Portfolio Tracking', 'Price Alerts', 'Trading Analytics', 'Tax Reporting'],
-    pricing: '$19 - $99/month',
-    category: 'Crypto'
-  },
-  {
-    title: 'Fleet Management System',
-    description: 'GPS tracking and fleet management solution for transportation companies.',
-    icon: Car,
-    features: ['GPS Tracking', 'Route Optimization', 'Driver Management', 'Maintenance Scheduling'],
-    pricing: '$199 - $999/month',
-    category: 'Transportation'
-  },
-  {
-    title: 'Property Maintenance Tracker',
-    description: 'Property maintenance and facility management solution.',
-    icon: Settings,
-    features: ['Maintenance Scheduling', 'Work Order Management', 'Vendor Management', 'Reporting'],
-    pricing: '$49 - $299/month',
-    category: 'Property Management'
-  },
-  {
-    title: 'AI-Powered Code Review Assistant',
-    description: 'Automated code review and quality assurance using advanced AI analysis.',
-    icon: Code,
-    features: ['Automated Code Review', 'Security Vulnerability Detection', 'Performance Analysis', 'Best Practice Suggestions'],
-    pricing: '$199 - $999/month',
-    category: 'Development Tools',
-    description: 'Automated code review with security scanning, performance optimization, and best practices enforcement.',
-    icon: Code,
-    features: ['Automated Reviews', 'Security Scanning', 'Performance Analysis', 'Best Practices Check'],
-    pricing: '$299 - $1,999/month',
-    category: 'Developer Tools',
-    popular: true,
-    benefits: ['Code Quality', 'Security', 'Performance', 'Best Practices'],
-    marketPrice: '$500 - $3,000/month',
-    link: 'https://ziontechgroup.com/ai-code-review'
-  },
-  {
-    title: 'Smart Contract Security Auditor',
-    description: 'Automated smart contract security analysis and vulnerability detection for blockchain projects.',
-    icon: Lock,
-    features: ['Vulnerability Detection', 'Gas Optimization', 'Compliance Checking', 'Audit Reports'],
-    pricing: '$499 - $2,999/month',
-    category: 'Blockchain Security',
-    popular: true
-  },
-  {
-    title: 'AI-Powered SEO Content Optimizer',
-    description: 'Intelligent content optimization for search engines with real-time ranking improvements.',
-    icon: Search,
-    features: ['Keyword Research', 'Content Analysis', 'Ranking Tracking', 'Competitor Analysis'],
-    pricing: '$199 - $1,299/month',
-    category: 'SEO & Marketing',
-    popular: true
-  },
-  {
-    title: 'Multi-Channel Customer Data Platform',
-    description: 'Unified customer data platform with real-time synchronization across all touchpoints.',
-    icon: Database,
-    features: ['Data Unification', 'Real-time Sync', 'Customer 360 View', 'Privacy Compliance'],
-    pricing: '$399 - $2,499/month',
-    category: 'Customer Data',
-    popular: true
-  },
-  {
-    title: 'AI Video Content Generator',
-    description: 'Automated video creation from text prompts with AI-generated visuals and voiceovers.',
-    icon: Video,
-    features: ['Text-to-Video', 'AI Voice Synthesis', 'Template Library', 'Brand Customization'],
-    pricing: '$199 - $999/month',
-    title: 'AI-Powered Video Content Generator',
-    description: 'Automated video creation from text, images, and audio with professional editing capabilities.',
-    icon: Video,
-    features: ['Text-to-Video', 'Auto Editing', 'Voice Synthesis', 'Template Library'],
-    pricing: '$199 - $1,499/month',
-    category: 'Content Creation',
-    popular: true,
-    benefits: ['Video Creation', 'Auto Editing', 'Voice Synthesis', 'Templates'],
-    marketPrice: '$300 - $2,000/month',
-    link: 'https://ziontechgroup.com/ai-video-production'
-  },
-  {
-    title: 'Smart Contract Generator',
-    description: 'AI-powered smart contract creation and deployment for blockchain applications.',
-    icon: Code,
-    features: ['Contract Templates', 'Security Auditing', 'Gas Optimization', 'Multi-chain Support'],
-    pricing: '$299 - $1,499/month',
-    category: 'Blockchain',
-    popular: true,
-    benefits: ['Contract Creation', 'Security', 'Gas Optimization', 'Multi-chain'],
-    marketPrice: '$500 - $2,500/month',
-    link: 'https://ziontechgroup.com/smart-contract-generator'
-  },
-  {
-    title: 'AI-Powered Email Signature Generator',
-    description: 'Professional email signature creation with branding and compliance features.',
-    icon: Mail,
-    features: ['Template Library', 'Brand Integration', 'Compliance Checking', 'Analytics'],
-    pricing: '$9 - $49/month',
-    category: 'Productivity'
-  },
-  {
-    title: 'Intelligent Password Manager',
-    description: 'AI-enhanced password management with breach monitoring and security recommendations.',
-    icon: Lock,
-    features: ['Password Generation', 'Breach Monitoring', 'Security Scoring', 'Team Sharing'],
-    pricing: '$19 - $99/month',
-    category: 'Security'
-  },
-  {
-    title: 'AI-Powered Resume Builder',
-    description: 'Intelligent resume creation with ATS optimization and industry-specific templates.',
-    icon: FileText,
-    features: ['ATS Optimization', 'Industry Templates', 'Skills Matching', 'Cover Letter Generator'],
-    pricing: '$29 - $149/month',
-    category: 'Career Tools'
-  },
-  {
-    title: 'Smart Meeting Transcription',
-    description: 'AI-powered meeting transcription with action item extraction and follow-up automation.',
-    icon: Mic,
-    features: ['Real-time Transcription', 'Action Item Extraction', 'Speaker Identification', 'Integration APIs'],
-    pricing: '$49 - $299/month',
-    category: 'Productivity'
-  },
-  {
-    title: 'AI-Powered Logo Generator',
-    description: 'Professional logo creation using AI with brand guidelines and multiple formats.',
-    icon: Image,
-    features: ['AI Design', 'Brand Guidelines', 'Multiple Formats', 'Trademark Checking'],
-    pricing: '$39 - $199/month',
-    category: 'Design'
-  },
-  {
-    title: 'Intelligent Expense Tracker',
-    description: 'AI-powered expense management with receipt scanning and categorization.',
-    icon: DollarSign,
-    features: ['Receipt Scanning', 'Auto Categorization', 'Tax Preparation', 'Team Management'],
-    pricing: '$19 - $99/month',
-    category: 'Finance'
-  },
-  {
-    title: 'AI-Powered Social Media Content Calendar',
-    description: 'Intelligent social media planning with content suggestions and optimal posting times.',
-    icon: Calendar,
-    features: ['Content Planning', 'Optimal Timing', 'Hashtag Suggestions', 'Performance Analytics'],
-    pricing: '$29 - $149/month',
-    category: 'Social Media'
-  },
-  {
-    title: 'Smart Contract Testing Platform',
-    description: 'Automated testing and simulation environment for smart contracts across multiple blockchains.',
-    icon: Code,
-    features: ['Automated Testing', 'Gas Analysis', 'Security Auditing', 'Multi-chain Support'],
-    pricing: '$199 - $999/month',
-    category: 'Blockchain'
-  },
-  {
-    title: 'AI-Powered Voice Cloning',
-    description: 'High-quality voice cloning and text-to-speech synthesis for content creators.',
-    icon: Mic,
-    features: ['Voice Cloning', 'Multi-language Support', 'Emotion Control', 'API Integration'],
-    pricing: '$99 - $499/month',
-    category: 'Voice Technology',
-    popular: true
-  },
-  {
-    title: 'Intelligent Document Parser',
-    description: 'AI-powered document extraction and data parsing from PDFs, images, and forms.',
-    icon: FileText,
-    features: ['OCR Technology', 'Data Extraction', 'Form Processing', 'API Integration'],
-    pricing: '$49 - $299/month',
-    category: 'Document Processing',
-    popular: true,
-    benefits: ['Document Processing', 'Data Extraction', 'Form Processing', 'API Integration'],
-    marketPrice: '$100 - $500/month',
-    link: 'https://ziontechgroup.com/document-parser'
-  },
-  {
-    title: 'Intelligent Supply Chain Optimizer',
-    description: 'AI-driven supply chain optimization with demand forecasting and inventory management.',
-    icon: Package,
-    features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Analytics', 'Risk Assessment'],
-    pricing: '$599 - $3,999/month',
-    category: 'Supply Chain',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Metaverse Builder',
-    description: 'No-code platform for creating immersive 3D virtual worlds and metaverse experiences.',
-    icon: Globe,
-    features: ['3D World Builder', 'Avatar Creation', 'Virtual Events', 'NFT Integration'],
-    pricing: '$299 - $2,999/month',
-    category: 'Metaverse',
-    popular: true
-  },
-  {
-    title: 'Quantum Computing Simulator',
-    description: 'Cloud-based quantum computing simulation and algorithm development platform.',
-    icon: Cpu,
-    features: ['Quantum Circuit Designer', 'Algorithm Testing', 'Performance Analysis', 'Educational Tools'],
-    pricing: '$199 - $1,999/month',
-    category: 'Quantum Computing',
-    popular: true
-  },
-  {
-    title: 'Digital Twin Platform',
-    description: 'Create and manage digital twins of physical assets, processes, and systems.',
+    title: 'AI-Powered Error Monitoring',
+    description: 'Intelligent error tracking and debugging assistance for applications with performance monitoring and alert management.',
     icon: Monitor,
-    features: ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'IoT Integration'],
-    pricing: '$399 - $3,999/month',
-    category: 'Digital Twin',
-    popular: true
-  },
-  {
-    title: 'Autonomous Drone Fleet Management',
-    description: 'Complete drone fleet management with autonomous flight planning and monitoring.',
-    icon: Rocket,
-    features: ['Flight Planning', 'Autonomous Operations', 'Payload Management', 'Regulatory Compliance'],
-    pricing: '$499 - $4,999/month',
-    category: 'Drone Management',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Carbon Footprint Tracker',
-    description: 'Real-time carbon footprint monitoring and sustainability optimization for businesses.',
-    icon: Sprout,
-    features: ['Carbon Tracking', 'Sustainability Goals', 'Offset Management', 'Reporting Dashboard'],
-    pricing: '$99 - $999/month',
-    category: 'Sustainability',
-    popular: true
-  },
-  {
-    title: 'Blockchain Analytics & Compliance',
-    description: 'Advanced blockchain transaction analysis and regulatory compliance monitoring.',
-    icon: Shield,
-    features: ['Transaction Tracking', 'Compliance Monitoring', 'Risk Assessment', 'Regulatory Reporting'],
-    pricing: '$299 - $2,999/month',
-    category: 'Blockchain Analytics',
-    popular: true,
-    benefits: ['Blockchain Analytics', 'Smart Contracts', 'DeFi Integration', 'Security'],
-    marketPrice: '$500 - $4,000/month',
-    link: 'https://ziontechgroup.com/blockchain-analytics'
-  },
-  {
-    title: 'AI-Powered Website Builder',
-    description: 'Intelligent website creation with AI-generated content and design optimization.',
-    icon: Globe,
-    features: ['AI Design', 'Content Generation', 'SEO Optimization', 'Mobile Responsive'],
-    pricing: '$79 - $399/month',
-    category: 'Web Development'
-  },
-  {
-    title: 'Smart Inventory Photography',
-    description: 'AI-powered product photography and image optimization for e-commerce.',
-    icon: Camera,
-    features: ['Auto Photography', 'Background Removal', 'Image Enhancement', 'Batch Processing'],
-    pricing: '$29 - $149/month',
-    category: 'E-commerce'
-  },
-  {
-    title: 'AI-Powered Translation Service',
-    description: 'Real-time translation with context awareness and industry-specific terminology.',
-    icon: Globe,
-    features: ['Real-time Translation', 'Context Awareness', 'Industry Terms', 'API Integration'],
-    pricing: '$19 - $99/month',
-    category: 'Language Services'
-  },
-  {
-    title: 'Intelligent Email Warm-up',
-    description: 'AI-powered email deliverability optimization and sender reputation management.',
-    icon: Mail,
-    features: ['Deliverability Optimization', 'Reputation Management', 'A/B Testing', 'Analytics'],
+    features: ['Error Tracking', 'AI Debugging', 'Performance Monitoring', 'Alert Management'],
     pricing: '$39 - $199/month',
-    category: 'Email Marketing'
+    category: 'Monitoring',
+    link: 'https://errormonitor.ziontechgroup.com'
   },
   {
-    title: 'AI-Powered Code Documentation',
-    description: 'Automated code documentation generation with intelligent comments and API docs.',
-    icon: Code,
-    features: ['Auto Documentation', 'API Generation', 'Code Comments', 'Integration Guides'],
-    pricing: '$49 - $249/month',
-    category: 'Development Tools'
-  },
-  {
-    title: 'Smart Contract Analytics',
-    description: 'Comprehensive analytics and monitoring for smart contract performance and security.',
+    title: 'Smart Contract Analytics Dashboard',
+    description: 'Comprehensive analytics for smart contract performance and usage with cost analysis and user behavior insights.',
     icon: BarChart3,
-    features: ['Performance Analytics', 'Security Monitoring', 'Gas Optimization', 'Alert System'],
-    pricing: '$99 - $499/month',
-    category: 'Blockchain'
-  },
-  {
-    title: 'AI-Powered Lead Qualification',
-    description: 'Intelligent lead scoring and qualification using behavioral analysis and intent signals.',
-    icon: Target,
-    features: ['Behavioral Analysis', 'Intent Scoring', 'Lead Prioritization', 'CRM Integration'],
+    features: ['Usage Analytics', 'Performance Metrics', 'Cost Analysis', 'User Behavior'],
     pricing: '$79 - $399/month',
-    category: 'Sales'
+    category: 'Analytics',
+    link: 'https://contractanalytics.ziontechgroup.com'
   },
   {
-    title: 'Intelligent Data Backup',
-    description: 'AI-powered automated backup with intelligent scheduling and recovery optimization.',
-    icon: HardDrive,
-    features: ['Automated Backup', 'Smart Scheduling', 'Recovery Optimization', 'Version Control'],
+    title: 'AI-Powered Code Refactoring Assistant',
+    description: 'Intelligent code refactoring suggestions and automated improvements with best practices and quality analysis.',
+    icon: Code,
+    features: ['Refactoring Suggestions', 'Code Quality Analysis', 'Automated Fixes', 'Best Practices'],
+    pricing: '$99 - $499/month',
+    category: 'Development Tools',
+    link: 'https://coderefactor.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Email Responder Pro',
+    description: 'Advanced email automation with natural language processing, sentiment analysis, and smart routing capabilities.',
+    icon: Mail,
+    features: ['Natural Language Processing', 'Sentiment Analysis', 'Auto-categorization', 'Smart Routing'],
+    pricing: '$2,000 - $8,000 setup',
+    category: 'Email Automation',
+    popular: true,
+    link: 'https://emailresponder.ziontechgroup.com'
+  },
+  {
+    title: 'Predictive Analytics Platform Pro',
+    description: 'Advanced forecasting and predictive modeling for business intelligence with real-time predictions and custom dashboards.',
+    icon: BarChart3,
+    features: ['Time Series Analysis', 'Machine Learning Models', 'Real-time Predictions', 'Custom Dashboards'],
+    pricing: '$4,000 - $20,000 project',
+    category: 'Analytics',
+    popular: true,
+    link: 'https://predictiveanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'Intelligent Chatbot System Pro',
+    description: 'AI-powered customer support with natural conversation capabilities, context awareness, and multi-language support.',
+    icon: MessageSquare,
+    features: ['Natural Language Understanding', 'Context Awareness', 'Multi-language Support', 'Integration APIs'],
+    pricing: '$1,000 - $6,000/month',
+    category: 'Customer Service',
+    popular: true,
+    link: 'https://intelligentchatbot.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Social Proof Widgets',
+    description: 'Real-time social proof widgets with AI optimization for increased conversions and customizable display options.',
+    icon: Globe,
+    features: ['Real-time Activity', 'Customizable Display', 'E-commerce Integration', 'Conversion Analytics'],
     pricing: '$19 - $99/month',
-    category: 'Data Management'
+    category: 'Marketing',
+    link: 'https://socialproof.ziontechgroup.com'
   },
   {
-    title: 'AI-Powered Carbon Footprint Tracker',
-    description: 'Real-time carbon footprint monitoring and sustainability optimization for businesses.',
-    icon: Sprout,
-    features: ['Carbon Tracking', 'Sustainability Metrics', 'Emission Reduction', 'Compliance Reporting'],
-    pricing: '$199 - $1,299/month',
-    category: 'Sustainability',
-    popular: true
+    title: 'AI-Powered Customer Loyalty Tracker',
+    description: 'Intelligent loyalty program management with AI-driven engagement strategies and reward optimization.',
+    icon: Heart,
+    features: ['Points System', 'Engagement Tracking', 'Reward Management', 'AI Personalization'],
+    pricing: '$39 - $199/month',
+    category: 'Customer Retention',
+    link: 'https://loyaltytracker.ziontechgroup.com'
   },
+>>>>>>> main
   {
-    title: 'Smart Contract Security Scanner',
-    description: 'Automated smart contract vulnerability detection and security analysis for DeFi projects.',
-    icon: Shield,
-    features: ['Vulnerability Detection', 'Gas Optimization', 'Audit Reports', 'Real-time Monitoring'],
-    pricing: '$299 - $1,999/month',
-    category: 'Blockchain Security',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Voice Cloning Platform',
-    description: 'High-quality voice cloning and synthesis for content creators and businesses.',
-    icon: Mic,
-    features: ['Voice Cloning', 'Emotion Control', 'Multi-language Support', 'API Integration'],
-    pricing: '$199 - $1,499/month',
-    category: 'Voice Technology',
-    popular: true
-  },
-  {
-    title: 'Intelligent Meeting Transcription & Analysis',
-    description: 'AI-powered meeting transcription with sentiment analysis and action item extraction.',
-    icon: MessageSquare,
-    features: ['Real-time Transcription', 'Sentiment Analysis', 'Action Items', 'Meeting Insights'],
+    title: 'AI-Powered Personalized E-Learning',
+    description: 'Adaptive learning platform with AI-powered personalization, skill assessment, and progress tracking.',
+    icon: BookOpen,
+<<<<<<< HEAD
+    features: ['Adaptive Learning', 'Skill Assessment', 'Progress Tracking', 'AI Tutoring', 'Certification Management'],
     pricing: '$49 - $299/month',
-    category: 'Productivity',
-    popular: true
+    category: 'Education & Training',
+    benefits: ['Personalized Learning', 'Better Outcomes', 'Progress Tracking', 'Skill Development'],
+    marketPrice: '$75 - $450/month',
+    link: 'https://ziontechgroup.com/personalized-elearning'
   },
   {
-    title: 'AI-Powered Code Documentation Generator',
-    description: 'Automated code documentation generation with intelligent explanations and examples.',
-    icon: FileText,
-    features: ['Auto Documentation', 'Code Examples', 'API Documentation', 'Version Control'],
-    pricing: '$99 - $599/month',
-    category: 'Developer Tools',
-    popular: true,
-    benefits: ['Documentation', 'Code Examples', 'API Docs', 'Version Control'],
-    marketPrice: '$200 - $1,000/month',
-    link: 'https://ziontechgroup.com/auto-documentation'
-  },
-  {
-    title: 'Smart Contract Security Auditor',
-    description: 'Automated smart contract security analysis and vulnerability detection for blockchain projects.',
-    icon: Lock,
-    features: ['Vulnerability Detection', 'Gas Optimization', 'Compliance Checking', 'Audit Reports'],
-    pricing: '$499 - $2,999/month',
-    category: 'Blockchain Security',
-    popular: true
-  },
-  {
-    title: 'AI-Powered SEO Content Optimizer',
-    description: 'Intelligent content optimization for search engines with real-time ranking improvements.',
-    icon: Search,
-    features: ['Keyword Research', 'Content Analysis', 'Ranking Tracking', 'Competitor Analysis'],
-    pricing: '$199 - $1,299/month',
-    category: 'SEO & Marketing',
-    popular: true
-  },
-  {
-    title: 'Multi-Channel Customer Data Platform',
-    description: 'Unified customer data platform with real-time synchronization across all touchpoints.',
-    icon: Database,
-    features: ['Data Unification', 'Real-time Sync', 'Customer 360 View', 'Privacy Compliance'],
-    pricing: '$399 - $2,499/month',
-    category: 'Customer Data',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Video Content Generator',
-    description: 'Automated video creation from text, images, and audio with professional editing capabilities.',
-    icon: Video,
-    features: ['Text-to-Video', 'Auto Editing', 'Voice Synthesis', 'Template Library'],
-    pricing: '$199 - $1,499/month',
-    category: 'Content Creation',
-    popular: true
-  },
-  {
-    title: 'Intelligent Supply Chain Optimizer',
-    description: 'AI-driven supply chain optimization with demand forecasting and inventory management.',
-    icon: Package,
-    features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Analytics', 'Risk Assessment'],
-    pricing: '$599 - $3,999/month',
-    category: 'Supply Chain',
-    popular: true
-  },
-  {
-    title: 'Real-Time Language Translation API',
-    description: 'Advanced translation service with context awareness and industry-specific terminology.',
-    icon: Globe,
-    features: ['100+ Languages', 'Context Awareness', 'Industry Terms', 'Real-time Processing'],
-    pricing: '$0.01 - $0.10 per 1K characters',
-    category: 'Language Services',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Legal Document Analyzer',
-    description: 'Automated legal document analysis with contract review and compliance checking.',
-    icon: FileText,
-    features: ['Contract Analysis', 'Compliance Checking', 'Risk Assessment', 'Clause Extraction'],
-    pricing: '$299 - $1,999/month',
-    category: 'Legal Tech',
-    popular: true
-  },
-  {
-    title: 'Smart Energy Management System',
-    description: 'IoT-based energy monitoring and optimization for buildings and facilities.',
-    icon: Zap,
-    features: ['Energy Monitoring', 'Usage Analytics', 'Cost Optimization', 'Predictive Maintenance'],
-    pricing: '$199 - $1,299/month',
-    category: 'IoT & Energy',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Recruitment Platform',
-    description: 'Intelligent candidate screening and matching with bias detection and diversity analytics.',
+    title: 'AI Corporate Training Platform',
+    description: 'Comprehensive corporate training solution with AI-powered content creation, assessment, and progress tracking.',
     icon: Users,
-    features: ['Resume Screening', 'Skill Matching', 'Bias Detection', 'Diversity Analytics'],
-    pricing: '$199 - $1,499/month',
-    category: 'HR & Recruitment',
-    popular: true
-  },
-  {
-    title: 'Blockchain Analytics & Compliance',
-    description: 'Comprehensive blockchain transaction analysis with AML and compliance reporting.',
-    icon: TrendingUp,
-    features: ['Transaction Analysis', 'AML Detection', 'Compliance Reporting', 'Risk Scoring'],
-    pricing: '$399 - $2,999/month',
-    category: 'Blockchain Analytics',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Medical Image Analysis',
-    description: 'Advanced medical image analysis with AI-powered diagnosis assistance and reporting.',
-    icon: Eye,
-    features: ['Image Analysis', 'Diagnosis Assistance', 'Report Generation', 'Integration APIs'],
-    pricing: '$999 - $4,999/month',
-    category: 'Healthcare AI',
-    popular: true
-  },
-  {
-    title: 'Smart Home Automation Platform',
-    description: 'Comprehensive smart home control with AI-powered automation and energy management.',
-    icon: Home,
-    features: ['Device Control', 'Automation Rules', 'Energy Management', 'Voice Integration'],
-    pricing: '$29 - $199/month',
-    category: 'Smart Home',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Financial Risk Assessment',
-    description: 'Real-time financial risk analysis with credit scoring and fraud detection.',
-    icon: Shield,
-    features: ['Credit Scoring', 'Fraud Detection', 'Risk Modeling', 'Real-time Alerts'],
-    pricing: '$499 - $2,999/month',
-    category: 'FinTech',
-    popular: true
-  },
-  {
-    title: 'Intelligent Document Processing',
-    description: 'Automated document extraction and processing with OCR and data validation.',
-    icon: FileText,
-    features: ['OCR Processing', 'Data Extraction', 'Validation Rules', 'Workflow Automation'],
-    pricing: '$0.10 - $0.50 per document',
-    category: 'Document Processing',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Social Media Monitoring',
-    description: 'Comprehensive social media monitoring with sentiment analysis and brand protection.',
-    icon: MessageSquare,
-    features: ['Brand Monitoring', 'Sentiment Analysis', 'Crisis Detection', 'Competitor Analysis'],
-    pricing: '$199 - $1,299/month',
-    category: 'Social Media',
-    popular: true
-  },
-  {
-    title: 'Smart Agriculture IoT Platform',
-    description: 'IoT-based agricultural monitoring with crop analysis and yield optimization.',
-    icon: Sprout,
-    features: ['Crop Monitoring', 'Weather Integration', 'Yield Prediction', 'Resource Optimization'],
-    pricing: '$299 - $1,999/month',
-    category: 'AgTech',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Personalization Engine',
-    description: 'Real-time personalization engine for e-commerce and content platforms.',
-    icon: Target,
-    features: ['Real-time Personalization', 'A/B Testing', 'Behavioral Analysis', 'Recommendation Engine'],
-    pricing: '$399 - $2,499/month',
-    category: 'Personalization',
-    popular: true
-  },
-  {
-    title: 'Blockchain Identity Verification',
-    description: 'Decentralized identity verification with KYC/AML compliance and privacy protection.',
-    icon: Lock,
-    features: ['Identity Verification', 'KYC/AML Compliance', 'Privacy Protection', 'Blockchain Integration'],
-    pricing: '$0.50 - $2.00 per verification',
-    category: 'Identity & Security',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Voice Analytics',
-    description: 'Advanced voice analysis for call centers with emotion detection and quality scoring.',
-    icon: Mic,
-    features: ['Emotion Detection', 'Quality Scoring', 'Sentiment Analysis', 'Performance Metrics'],
-    pricing: '$199 - $1,299/month',
-    category: 'Voice Analytics',
-    popular: true,
-    benefits: ['Voice Analytics', 'Emotion Detection', 'Quality Scoring', 'Performance'],
-    marketPrice: '$400 - $2,000/month',
-    link: 'https://ziontechgroup.com/voice-analytics'
-  },
-  {
-    title: 'AI-Powered Carbon Footprint Tracker',
-    description: 'Real-time carbon footprint monitoring and reduction recommendations for businesses and individuals.',
-    icon: Sprout,
-    features: ['Carbon Tracking', 'Reduction Strategies', 'Sustainability Reporting', 'Green Certification'],
-    pricing: '$99 - $599/month',
-    category: 'Sustainability',
-    popular: true
-  },
-  {
-    title: 'Smart Contract Audit Platform',
-    description: 'Automated smart contract security auditing and vulnerability detection for blockchain projects.',
-    icon: Shield,
-    features: ['Security Auditing', 'Vulnerability Detection', 'Code Analysis', 'Compliance Checking'],
-    pricing: '$499 - $2,999/month',
-    category: 'Blockchain Security'
-  },
-  {
-    title: 'AI-Powered Voice Cloning Platform',
-    description: 'High-quality voice cloning and synthesis for content creation and accessibility.',
-    icon: Mic,
-    features: ['Voice Cloning', 'Text-to-Speech', 'Voice Conversion', 'Multi-language Support'],
-    pricing: '$299 - $1,499/month',
-    category: 'Voice Technology'
-  },
-  {
-    title: 'Smart Grid Energy Management',
-    description: 'AI-powered smart grid optimization for utilities and energy providers.',
-    icon: Zap,
-    features: ['Grid Optimization', 'Demand Response', 'Renewable Integration', 'Load Balancing'],
-    pricing: '$999 - $4,999/month',
-    category: 'Energy Tech'
-  },
-  {
-    title: 'AI-Powered Drug Discovery Platform',
-    description: 'Machine learning platform for pharmaceutical drug discovery and development.',
-    icon: Heart,
-    features: ['Molecular Analysis', 'Drug Design', 'Toxicity Prediction', 'Clinical Trial Optimization'],
-    pricing: '$2,999 - $14,999/month',
-    category: 'PharmaTech'
-  },
-  {
-    title: 'Smart City Traffic Optimization',
-    description: 'AI-powered traffic management and optimization for smart cities.',
-    icon: Car,
-    features: ['Traffic Analysis', 'Route Optimization', 'Signal Control', 'Congestion Reduction'],
-    pricing: '$1,999 - $9,999/month',
-    category: 'Smart Cities'
-  },
-  {
-    title: 'AI-Powered Fraud Detection System',
-    description: 'Advanced fraud detection and prevention for financial institutions and e-commerce.',
-    icon: Shield,
-    features: ['Real-time Detection', 'Behavioral Analysis', 'Risk Scoring', 'Automated Blocking'],
-    pricing: '$799 - $3,999/month',
-    category: 'FinTech Security'
-  },
-  {
-    title: 'Smart Home Security AI',
-    description: 'AI-powered home security system with facial recognition and behavioral analysis.',
-    icon: Home,
-    features: ['Facial Recognition', 'Behavioral Analysis', 'Intrusion Detection', 'Mobile Alerts'],
+    features: ['Content Creation', 'Skill Assessment', 'Progress Tracking', 'Team Management', 'Certification'],
     pricing: '$199 - $999/month',
-    category: 'Home Security'
+    category: 'Corporate Training',
+    benefits: ['Scalable Training', 'Better Engagement', 'Progress Tracking', 'Cost Effective'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/corporate-training'
   },
+
+  // Blockchain & Crypto
   {
-    title: 'AI-Powered Content Creation Suite',
-    description: 'Comprehensive AI content creation platform for blogs, social media, and marketing.',
-    icon: FileText,
-    features: ['Blog Writing', 'Social Media Posts', 'Video Scripts', 'SEO Optimization'],
-    pricing: '$149 - $799/month',
-    category: 'Content Creation'
-  },
-  {
-    title: 'Smart Manufacturing Execution System',
-    description: 'AI-powered manufacturing execution and quality control for production lines.',
-    icon: Settings,
-    features: ['Production Planning', 'Quality Control', 'Equipment Monitoring', 'Efficiency Optimization'],
-    pricing: '$1,499 - $7,499/month',
-    category: 'Manufacturing'
-  },
-  {
-    title: 'AI-Powered Personal Finance Coach',
-    description: 'Personalized financial coaching and investment advice using AI analysis.',
-    icon: DollarSign,
-    features: ['Financial Analysis', 'Investment Advice', 'Budget Planning', 'Goal Tracking'],
-    pricing: '$29 - $199/month',
-    category: 'Personal Finance'
-  },
-  {
-    title: 'Smart Water Quality Monitoring',
-    description: 'IoT-based water quality monitoring and contamination detection system.',
-    icon: Droplets,
-    features: ['Real-time Monitoring', 'Contamination Detection', 'Quality Alerts', 'Compliance Reporting'],
+    title: 'AI-Powered Smart Contract Auditor',
+    description: 'Automated smart contract security analysis and vulnerability detection using advanced AI algorithms.',
+    icon: Shield,
+    features: ['Security Analysis', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checking', 'Audit Reports'],
     pricing: '$299 - $1,499/month',
-    category: 'Water Management'
+    category: 'Blockchain Security',
+    benefits: ['Enhanced Security', 'Cost Savings', 'Risk Mitigation', 'Compliance Assurance'],
+    marketPrice: '$500 - $2,500/month',
+    link: 'https://ziontechgroup.com/smart-contract-auditor'
   },
   {
-    title: 'AI-Powered Language Translation API',
-    description: 'Real-time language translation service with context awareness and cultural adaptation.',
-    icon: Globe,
-    features: ['Real-time Translation', 'Context Awareness', 'Cultural Adaptation', 'API Integration'],
-    pricing: '$99 - $599/month',
-    category: 'Language Services'
-  },
-  {
-    title: 'Smart Retail Inventory Optimization',
-    description: 'AI-powered inventory optimization for retail with demand forecasting and automated ordering.',
-    icon: ShoppingCart,
-    features: ['Demand Forecasting', 'Automated Ordering', 'Price Optimization', 'Waste Reduction'],
-    pricing: '$399 - $1,999/month',
-    category: 'Retail Tech'
-  },
-  {
-    title: 'AI-Powered Mental Health Monitoring',
-    description: 'Continuous mental health monitoring and early intervention system.',
-    icon: Heart,
-    features: ['Mood Tracking', 'Stress Detection', 'Early Intervention', 'Professional Alerts'],
+    title: 'AI-Powered Cryptocurrency Tax Calculator',
+    description: 'Automated cryptocurrency tax calculation and reporting with AI-powered optimization and compliance checking.',
+    icon: Bitcoin,
+    features: ['Tax Calculation', 'Transaction Tracking', 'Report Generation', 'Compliance Checking', 'Multi-exchange Support'],
     pricing: '$49 - $299/month',
-    category: 'Mental Health'
+    category: 'Crypto Finance',
+    benefits: ['Accurate Calculations', 'Time Savings', 'Compliance Assurance', 'Multi-platform Support'],
+    marketPrice: '$75 - $450/month',
+    link: 'https://ziontechgroup.com/crypto-tax-calculator'
   },
   {
-    title: 'Smart Building Occupancy Analytics',
-    description: 'AI-powered building occupancy analysis and space utilization optimization.',
-    icon: Building,
-    features: ['Occupancy Tracking', 'Space Utilization', 'Energy Optimization', 'Capacity Planning'],
-    pricing: '$199 - $999/month',
-    category: 'PropTech'
-  },
-  {
-    title: 'AI-Powered Code Generation Platform',
-    description: 'Automated code generation and development assistance for software engineers.',
-    icon: Code,
-    features: ['Code Generation', 'Bug Fixing', 'Code Review', 'Documentation'],
-    pricing: '$199 - $999/month',
-    category: 'Development Tools'
-  },
-  {
-    title: 'Smart Agriculture Drone Management',
-    description: 'AI-powered drone fleet management for precision agriculture and crop monitoring.',
-    icon: Sprout,
-    features: ['Drone Fleet Management', 'Crop Monitoring', 'Precision Spraying', 'Yield Analysis'],
-    pricing: '$599 - $2,999/month',
-    category: 'AgTech'
-  },
-  {
-    title: 'AI-Powered Cybersecurity Training',
-    description: 'Personalized cybersecurity training and simulation platform for organizations.',
-    icon: Shield,
-    features: ['Personalized Training', 'Simulation Exercises', 'Progress Tracking', 'Certification'],
-    pricing: '$99 - $599/month',
-    category: 'Cybersecurity Training',
-    popular: true,
-    benefits: ['Training', 'Simulation', 'Progress Tracking', 'Certification'],
-    marketPrice: '$200 - $1,000/month',
-    link: 'https://ziontechgroup.com/cybersecurity-training'
-  },
-  {
-    title: 'Smart Energy Storage Management',
-    description: 'AI-powered energy storage optimization for renewable energy systems.',
-    icon: Battery,
-    features: ['Storage Optimization', 'Load Balancing', 'Cost Optimization', 'Grid Integration'],
-    pricing: '$399 - $1,999/month',
-    category: 'Energy Storage',
-    popular: true,
-    benefits: ['Energy Storage', 'Load Balancing', 'Cost Optimization', 'Grid Integration'],
-    marketPrice: '$600 - $3,000/month',
-    link: 'https://ziontechgroup.com/energy-storage'
-  },
-  {
-    title: 'AI-Powered Voice Cloning',
-    description: 'High-quality voice cloning and synthesis for personalized audio content.',
-    icon: Mic,
-    features: ['Voice Cloning', 'Text-to-Speech', 'Emotion Control', 'Multi-language Support'],
-    pricing: '$199 - $1,999/month',
-    category: 'Voice Technology',
-    popular: true
-  },
-  {
-    title: 'Smart Contract Development Suite',
-    description: 'Complete platform for developing, testing, and deploying smart contracts.',
-    icon: Code,
-    features: ['Visual Builder', 'Testing Framework', 'Deployment Tools', 'Security Auditing'],
-    pricing: '$149 - $1,499/month',
+    title: 'Smart Contract Deployment Manager',
+    description: 'Automated smart contract deployment and management across multiple blockchains with version control.',
+    icon: Rocket,
+    features: ['Multi-chain Deployment', 'Version Control', 'Automated Testing', 'Monitoring', 'Gas Optimization'],
+    pricing: '$99 - $499/month',
     category: 'Blockchain Development',
-    popular: true
+    benefits: ['Simplified Deployment', 'Version Control', 'Cost Optimization', 'Multi-chain Support'],
+    marketPrice: '$150 - $750/month',
+    link: 'https://ziontechgroup.com/smart-contract-manager'
   },
-  {
-    title: 'AI-Powered Personal Finance Manager',
-    description: 'Intelligent personal finance tracking with investment recommendations and budgeting.',
-    icon: DollarSign,
-    features: ['Expense Tracking', 'Investment Analysis', 'Budget Optimization', 'Financial Planning'],
-    pricing: '$9 - $99/month',
-    category: 'Personal Finance',
-    popular: true
-  },
-  {
-    title: 'Virtual Reality Meeting Platform',
-    description: 'Immersive VR meeting and collaboration platform for remote teams.',
-    icon: Users,
-    features: ['VR Meetings', '3D Collaboration', 'Spatial Audio', 'Avatar Customization'],
-    pricing: '$49 - $499/month',
-    category: 'VR Collaboration',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Legal Document Generator',
-    description: 'Automated legal document creation with contract templates and compliance checking.',
-    icon: FileText,
-    features: ['Document Templates', 'Compliance Checking', 'Version Control', 'E-signature Integration'],
-    pricing: '$199 - $1,999/month',
-    category: 'Legal Tech',
-    popular: true
-  },
-  {
-    title: 'Smart Home IoT Management',
-    description: 'Centralized management platform for smart home devices and automation.',
-    icon: Home,
-    features: ['Device Control', 'Automation Rules', 'Energy Monitoring', 'Security Management'],
-    pricing: '$19 - $199/month',
-    category: 'Smart Home',
-    popular: true
-  },
+
+  // Health & Wellness
   {
     title: 'AI-Powered Mental Health Assistant',
-    description: 'Intelligent mental health monitoring and support with mood tracking and therapy tools.',
+    description: 'AI-powered mental health support and wellness tracking for employees and individuals with privacy protection.',
     icon: Heart,
-    features: ['Mood Tracking', 'Therapy Sessions', 'Crisis Detection', 'Progress Monitoring'],
-    pricing: '$29 - $299/month',
-    category: 'Mental Health',
-    popular: true
+    features: ['Mood Tracking', 'Wellness Insights', 'Resource Recommendations', 'Privacy Protection', 'Crisis Support'],
+    pricing: '$19 - $99/month',
+    category: 'Health & Wellness',
+    benefits: ['Better Mental Health', 'Privacy Protection', '24/7 Support', 'Wellness Insights'],
+    marketPrice: '$30 - $150/month',
+    link: 'https://ziontechgroup.com/mental-health-assistant'
   },
   {
-    title: 'Autonomous Vehicle Fleet Management',
-    description: 'Complete management system for autonomous vehicle fleets and logistics.',
-    icon: Car,
-    features: ['Fleet Monitoring', 'Route Optimization', 'Maintenance Scheduling', 'Safety Analytics'],
-    pricing: '$999 - $9,999/month',
-    category: 'Autonomous Vehicles',
-    popular: true
+    title: 'AI Fitness Coach Platform',
+    description: 'Personalized fitness coaching with AI-powered workout plans, nutrition tracking, and progress monitoring.',
+    icon: Activity,
+    features: ['Personalized Workouts', 'Nutrition Tracking', 'Progress Monitoring', 'Goal Setting', 'Community Features'],
+    pricing: '$29 - $149/month',
+    category: 'Fitness & Health',
+    benefits: ['Personalized Training', 'Better Results', 'Progress Tracking', 'Motivation'],
+    marketPrice: '$45 - $225/month',
+    link: 'https://ziontechgroup.com/ai-fitness-coach'
   },
+
+  // Sustainability & Environment
   {
-    title: 'AI-Powered Language Learning Platform',
-    description: 'Personalized language learning with AI tutors and immersive experiences.',
-    icon: BookOpen,
-    features: ['AI Tutoring', 'Speech Recognition', 'Cultural Context', 'Progress Tracking'],
-    pricing: '$19 - $199/month',
-    category: 'Education',
-    popular: true
-  },
-  {
-    title: 'Blockchain Identity Management',
-    description: 'Decentralized identity verification and management using blockchain technology.',
-    icon: Lock,
-    features: ['Identity Verification', 'Privacy Protection', 'Cross-platform Access', 'Compliance Tools'],
-    pricing: '$99 - $999/month',
-    category: 'Identity Management',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Real Estate Valuation',
-    description: 'Automated property valuation using AI and machine learning algorithms.',
-    icon: Building,
-    features: ['Property Analysis', 'Market Trends', 'Investment Insights', 'Risk Assessment'],
-    pricing: '$49 - $499/month',
-    category: 'Real Estate',
-    popular: true
-  },
-  {
-    title: 'Smart Agriculture Monitoring',
-    description: 'IoT-based farm monitoring with AI-powered crop and livestock management.',
+    title: 'AI-Powered Carbon Footprint Tracker',
+    description: 'Environmental impact tracking and sustainability optimization for businesses with detailed reporting.',
     icon: Sprout,
-    features: ['Crop Monitoring', 'Livestock Tracking', 'Weather Integration', 'Yield Prediction'],
-    pricing: '$199 - $1,999/month',
-    category: 'Agriculture',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Cybersecurity Scanner',
-    description: 'Automated vulnerability scanning and security assessment for web applications.',
-    icon: Shield,
-    features: ['Vulnerability Detection', 'Penetration Testing', 'Compliance Checking', 'Security Reports'],
-    pricing: '$99 - $999/month',
-    category: 'Cybersecurity',
-    popular: true
-  },
-  {
-    title: 'Virtual Event Management Platform',
-    description: 'Complete platform for hosting and managing virtual events and conferences.',
-    icon: Calendar,
-    features: ['Event Creation', 'Attendee Management', 'Live Streaming', 'Networking Tools'],
-    pricing: '$149 - $1,499/month',
-    category: 'Event Management',
-    popular: true
-  },
-  {
-    title: 'Real-Time Language Translation API',
-    description: 'Advanced translation service with context awareness and industry-specific terminology.',
-    icon: Globe,
-    features: ['100+ Languages', 'Context Awareness', 'Industry Terms', 'Real-time Processing'],
-    pricing: '$0.01 - $0.10 per 1K characters',
-    category: 'Language Services',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Legal Document Analyzer',
-    description: 'Automated legal document analysis with contract review and compliance checking.',
-    icon: FileText,
-    features: ['Contract Analysis', 'Compliance Checking', 'Risk Assessment', 'Clause Extraction'],
-    pricing: '$299 - $1,999/month',
-    category: 'Legal Tech',
-    popular: true
+    features: ['Carbon Tracking', 'Sustainability Metrics', 'Optimization Recommendations', 'Reporting', 'Certification Support'],
+    pricing: '$99 - $499/month',
+    category: 'Sustainability',
+    benefits: ['Environmental Impact', 'Cost Savings', 'Compliance', 'Brand Reputation'],
+    marketPrice: '$150 - $750/month',
+    link: 'https://ziontechgroup.com/carbon-footprint-tracker'
   },
   {
     title: 'Smart Energy Management System',
-    description: 'IoT-based energy monitoring and optimization for buildings and facilities.',
+    description: 'AI-powered energy optimization for buildings and facilities with real-time monitoring and cost reduction.',
     icon: Zap,
-    features: ['Energy Monitoring', 'Usage Analytics', 'Cost Optimization', 'Predictive Maintenance'],
-    pricing: '$199 - $1,299/month',
-    category: 'IoT & Energy',
-    popular: true
+    features: ['Energy Monitoring', 'Cost Optimization', 'Predictive Maintenance', 'Real-time Alerts', 'Reporting'],
+    pricing: '$199 - $999/month',
+    category: 'Energy Management',
+    benefits: ['Cost Reduction', 'Energy Efficiency', 'Predictive Maintenance', 'Sustainability'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/energy-management'
+  },
+
+  // Remote Work & Productivity
+  {
+    title: 'AI-Powered Remote Work Analytics',
+    description: 'Productivity and engagement analytics for remote teams with AI insights and wellness monitoring.',
+    icon: Monitor,
+    features: ['Productivity Metrics', 'Engagement Tracking', 'Wellness Monitoring', 'Team Insights', 'Performance Analytics'],
+    pricing: '$79 - $399/month',
+    category: 'Remote Work',
+    benefits: ['Better Productivity', 'Team Insights', 'Wellness Monitoring', 'Performance Tracking'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/remote-work-analytics'
   },
   {
-    title: 'AI-Powered Recruitment Platform',
-    description: 'Intelligent candidate screening and matching with bias detection and diversity analytics.',
-    icon: Users,
-    features: ['Resume Screening', 'Skill Matching', 'Bias Detection', 'Diversity Analytics'],
-    pricing: '$199 - $1,499/month',
-    category: 'HR & Recruitment',
-    popular: true
+    title: 'AI Meeting Assistant',
+    description: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
+    icon: Video,
+    features: ['Live Transcription', 'Action Items', 'Meeting Summaries', 'Follow-up Automation', 'Integration'],
+    pricing: '$39 - $199/month',
+    category: 'Meeting Management',
+    benefits: ['Better Meetings', 'Time Savings', 'Action Tracking', 'Improved Productivity'],
+    marketPrice: '$60 - $300/month',
+    link: 'https://ziontechgroup.com/meeting-assistant'
   },
+
+  // Development & DevOps
   {
-    title: 'Blockchain Analytics & Compliance',
-    description: 'Comprehensive blockchain transaction analysis with AML and compliance reporting.',
-    icon: TrendingUp,
-    features: ['Transaction Analysis', 'AML Detection', 'Compliance Reporting', 'Risk Scoring'],
-    pricing: '$399 - $2,999/month',
-    category: 'Blockchain Analytics',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Medical Image Analysis',
-    description: 'Advanced medical image analysis with AI-powered diagnosis assistance and reporting.',
-    icon: Eye,
-    features: ['Image Analysis', 'Diagnosis Assistance', 'Report Generation', 'Integration APIs'],
-    pricing: '$999 - $4,999/month',
-    category: 'Healthcare AI',
-    popular: true
-  },
-  {
-    title: 'Smart Home Automation Platform',
-    description: 'Comprehensive smart home control with AI-powered automation and energy management.',
-    icon: Home,
-    features: ['Device Control', 'Automation Rules', 'Energy Management', 'Voice Integration'],
-    pricing: '$29 - $199/month',
-    category: 'Smart Home',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Financial Risk Assessment',
-    description: 'Real-time financial risk analysis with credit scoring and fraud detection.',
-    icon: Shield,
-    features: ['Credit Scoring', 'Fraud Detection', 'Risk Modeling', 'Real-time Alerts'],
-    pricing: '$499 - $2,999/month',
-    category: 'FinTech',
-    popular: true
-  },
-  {
-    title: 'Intelligent Document Processing',
-    description: 'Automated document extraction and processing with OCR and data validation.',
+    title: 'AI-Powered Code Documentation Generator',
+    description: 'Automatically generate comprehensive documentation from code with AI analysis and interactive examples.',
     icon: FileText,
-    features: ['OCR Processing', 'Data Extraction', 'Validation Rules', 'Workflow Automation'],
-    pricing: '$0.10 - $0.50 per document',
-    category: 'Document Processing',
-    popular: true
+    features: ['Auto Documentation', 'API Documentation', 'Code Comments', 'Interactive Examples', 'Version Control'],
+    pricing: '$79 - $399/month',
+    category: 'Development Tools',
+    popular: true,
+    benefits: ['Time Savings', 'Better Documentation', 'Code Quality', 'Team Collaboration'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/code-documentation'
   },
   {
-    title: 'AI-Powered Social Media Monitoring',
-    description: 'Comprehensive social media monitoring with sentiment analysis and brand protection.',
-    icon: MessageSquare,
-    features: ['Brand Monitoring', 'Sentiment Analysis', 'Crisis Detection', 'Competitor Analysis'],
-    pricing: '$199 - $1,299/month',
-    category: 'Social Media',
-    popular: true
+    title: 'AI-Powered Error Monitoring',
+    description: 'Intelligent error tracking and debugging assistance for applications with automated fixes.',
+    icon: AlertTriangle,
+    features: ['Error Tracking', 'AI Debugging', 'Performance Monitoring', 'Alert Management', 'Automated Fixes'],
+    pricing: '$39 - $199/month',
+    category: 'Monitoring & Debugging',
+    benefits: ['Faster Debugging', 'Better Reliability', 'Automated Fixes', 'Performance Insights'],
+    marketPrice: '$60 - $300/month',
+    link: 'https://ziontechgroup.com/error-monitoring'
   },
   {
-    title: 'Smart Agriculture IoT Platform',
-    description: 'IoT-based agricultural monitoring with crop analysis and yield optimization.',
-    icon: Sprout,
-    features: ['Crop Monitoring', 'Weather Integration', 'Yield Prediction', 'Resource Optimization'],
-    pricing: '$299 - $1,999/month',
-    category: 'AgTech',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Personalization Engine',
-    description: 'Real-time personalization engine for e-commerce and content platforms.',
-    icon: Target,
-    features: ['Real-time Personalization', 'A/B Testing', 'Behavioral Analysis', 'Recommendation Engine'],
-    pricing: '$399 - $2,499/month',
-    category: 'Personalization',
-    popular: true
-  },
-  {
-    title: 'Blockchain Identity Verification',
-    description: 'Decentralized identity verification with KYC/AML compliance and privacy protection.',
-    icon: Lock,
-    features: ['Identity Verification', 'KYC/AML Compliance', 'Privacy Protection', 'Blockchain Integration'],
-    pricing: '$0.50 - $2.00 per verification',
-    category: 'Identity & Security',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Voice Analytics',
-    description: 'Advanced voice analysis for call centers with emotion detection and quality scoring.',
-    icon: Mic,
-    features: ['Emotion Detection', 'Quality Scoring', 'Sentiment Analysis', 'Performance Metrics'],
-    pricing: '$199 - $1,299/month',
-    category: 'Voice Analytics',
-    popular: true
-  },
-  {
-    title: 'AI Code Security Scanner',
-    description: 'Automated security vulnerability detection and code quality analysis for development teams.',
-    icon: Shield,
-    features: ['Vulnerability Detection', 'Code Quality Analysis', 'Dependency Scanning', 'Compliance Checking'],
-    pricing: '$149 - $799/month',
-    category: 'DevSecOps',
-    popular: true
-  },
-  {
-    title: 'Smart Contract Audit Platform',
-    description: 'Automated smart contract security analysis and vulnerability detection for blockchain projects.',
-    icon: Lock,
-    features: ['Automated Auditing', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checking'],
-    pricing: '$299 - $1,999/month',
-    category: 'Blockchain Security'
-  },
-  {
-    title: 'AI-Powered API Testing Suite',
-    description: 'Intelligent API testing with automated test generation and performance optimization.',
+    title: 'AI-Powered Code Refactoring Assistant',
+    description: 'Intelligent code refactoring suggestions and automated improvements with best practices enforcement.',
     icon: Code,
-    features: ['Auto Test Generation', 'Performance Testing', 'Security Testing', 'Load Testing'],
-    pricing: '$99 - $599/month',
-    category: 'API Testing'
+    features: ['Refactoring Suggestions', 'Code Quality Analysis', 'Automated Fixes', 'Best Practices', 'Security Checks'],
+    pricing: '$99 - $499/month',
+    category: 'Development Tools',
+    benefits: ['Better Code Quality', 'Time Savings', 'Automated Improvements', 'Best Practices'],
+    marketPrice: '$150 - $750/month',
+    link: 'https://ziontechgroup.com/code-refactoring'
   },
+
+  // Database & Infrastructure
+  {
+    title: 'AI-Powered Database Query Optimizer',
+    description: 'Intelligent database query optimization and performance monitoring with automated recommendations.',
+    icon: Database,
+    features: ['Query Analysis', 'Performance Monitoring', 'Index Recommendations', 'Cost Optimization', 'Automated Tuning'],
+    pricing: '$149 - $799/month',
+    category: 'Database Management',
+    benefits: ['Better Performance', 'Cost Optimization', 'Automated Tuning', 'Monitoring'],
+    marketPrice: '$225 - $1,200/month',
+    link: 'https://ziontechgroup.com/database-optimizer'
+  },
+  {
+    title: 'Smart Cloud Cost Optimizer',
+    description: 'AI-powered cloud cost optimization with anomaly detection, rightsizing, and budget forecasting.',
+    icon: Cloud,
+    features: ['Cost Anomaly Detection', 'Auto Rightsizing', 'Budget Forecasting', 'Multi-cloud Support', 'Savings Reports'],
+    pricing: '$299 - $1,499/month',
+    category: 'Cloud Management',
+    popular: true,
+    benefits: ['Cost Reduction', 'Better Planning', 'Anomaly Detection', 'Multi-cloud Support'],
+    marketPrice: '$450 - $2,250/month',
+    link: 'https://ziontechgroup.com/cloud-cost-optimizer'
+  },
+
+  // Security & Compliance
+  {
+    title: 'AI-Powered Security Monitoring',
+    description: 'Advanced security monitoring with threat detection, incident response, and compliance reporting.',
+    icon: Shield,
+    features: ['Threat Detection', 'Incident Response', 'Compliance Reporting', 'Vulnerability Scanning', 'Real-time Alerts'],
+    pricing: '$199 - $999/month',
+    category: 'Security & Compliance',
+    benefits: ['Enhanced Security', 'Faster Response', 'Compliance Assurance', 'Threat Prevention'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/security-monitoring'
+  },
+  {
+    title: 'AI Compliance Manager',
+    description: 'Automated compliance management with AI-powered monitoring, reporting, and audit preparation.',
+    icon: CheckCircle,
+    features: ['Compliance Monitoring', 'Automated Reporting', 'Audit Preparation', 'Risk Assessment', 'Policy Management'],
+    pricing: '$299 - $1,499/month',
+    category: 'Compliance Management',
+    benefits: ['Automated Compliance', 'Risk Reduction', 'Audit Readiness', 'Cost Savings'],
+    marketPrice: '$450 - $2,250/month',
+    link: 'https://ziontechgroup.com/compliance-manager'
+  },
+
+  // Subscription & Revenue Management
+  {
+    title: 'AI-Powered Subscription Management',
+    description: 'Intelligent subscription lifecycle management with churn prediction, pricing optimization, and customer insights.',
+    icon: Settings,
+    features: ['Churn Prediction', 'Lifecycle Management', 'Pricing Optimization', 'Customer Insights', 'Automated Billing'],
+    pricing: '$99 - $599/month',
+    category: 'Subscription Management',
+    benefits: ['Reduced Churn', 'Revenue Optimization', 'Better Insights', 'Automated Management'],
+    marketPrice: '$150 - $900/month',
+    link: 'https://ziontechgroup.com/subscription-management'
+  },
+  {
+    title: 'AI Revenue Optimization Platform',
+    description: 'Advanced revenue optimization with pricing intelligence, demand forecasting, and customer lifetime value prediction.',
+    icon: TrendingUp,
+    features: ['Pricing Intelligence', 'Demand Forecasting', 'CLV Prediction', 'Revenue Analytics', 'Optimization Recommendations'],
+    pricing: '$199 - $999/month',
+    category: 'Revenue Management',
+    benefits: ['Revenue Growth', 'Better Pricing', 'Customer Insights', 'Predictive Analytics'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/revenue-optimization'
+  },
+
+  // Collaboration & Communication
   {
     title: 'Real-time Collaboration Whiteboard',
-    description: 'AI-enhanced collaborative whiteboard with smart drawing recognition and team features.',
-    icon: Monitor,
-    features: ['Real-time Collaboration', 'AI Drawing Recognition', 'Voice Notes', 'Template Library'],
-    pricing: '$19 - $99/month',
-    category: 'Collaboration'
-  },
-  {
-    title: 'AI Customer Churn Predictor',
-    description: 'Predictive analytics platform to identify and prevent customer churn with actionable insights.',
-    icon: TrendingUp,
-    features: ['Churn Prediction', 'Risk Scoring', 'Intervention Strategies', 'ROI Tracking'],
-    pricing: '$199 - $999/month',
-    category: 'Customer Analytics'
-  },
-  {
-    title: 'Smart Document Workflow Engine',
-    description: 'AI-powered document processing and workflow automation for business processes.',
-    icon: FileText,
-    features: ['Document Classification', 'Data Extraction', 'Workflow Automation', 'Approval Routing'],
-    pricing: '$79 - $399/month',
-    category: 'Document Management'
-  },
-  {
-    title: 'AI-Powered A/B Testing Platform',
-    description: 'Intelligent experimentation platform with statistical significance and conversion optimization.',
+    description: 'AI-enhanced collaborative whiteboard with smart drawing, idea organization, and real-time collaboration.',
     icon: Target,
-    features: ['Statistical Analysis', 'Auto-optimization', 'Multi-variate Testing', 'Conversion Tracking'],
-    pricing: '$49 - $299/month',
-    category: 'Conversion Optimization'
-  },
-  {
-    title: 'Voice-to-Action Automation',
-    description: 'Convert voice commands into automated actions across your business applications.',
-    icon: Mic,
-    features: ['Voice Commands', 'Action Automation', 'Multi-app Integration', 'Custom Workflows'],
-    pricing: '$29 - $199/month',
-    category: 'Voice Automation'
-  },
-  {
-    title: 'AI-Powered Lead Qualification',
-    description: 'Automated lead scoring and qualification using advanced AI and behavioral analysis.',
-    icon: Target,
-    features: ['Lead Scoring', 'Behavioral Analysis', 'Qualification Rules', 'CRM Integration'],
-    pricing: '$99 - $499/month',
-    category: 'Sales Automation'
-  },
-  {
-    title: 'Smart Inventory Forecasting',
-    description: 'AI-driven inventory prediction and optimization for retail and e-commerce businesses.',
-    icon: Package,
-    features: ['Demand Forecasting', 'Stock Optimization', 'Seasonal Analysis', 'Supplier Integration'],
-    pricing: '$149 - $799/month',
-    category: 'Inventory Management'
-  },
-  {
-    title: 'AI Content Personalization Engine',
-    description: 'Dynamic content personalization based on user behavior and preferences.',
-    icon: Eye,
-    features: ['Behavioral Analysis', 'Content Optimization', 'Real-time Personalization', 'A/B Testing'],
-    pricing: '$199 - $999/month',
-    category: 'Personalization'
-  },
-  {
-    title: 'Automated Compliance Monitor',
-    description: 'AI-powered compliance monitoring and reporting for various industry regulations.',
-    icon: Shield,
-    features: ['Regulatory Monitoring', 'Automated Reporting', 'Risk Assessment', 'Audit Trail'],
-    pricing: '$299 - $1,499/month',
-    category: 'Compliance'
-  },
-  {
-    title: 'AI-Powered Price Optimization',
-    description: 'Dynamic pricing optimization using AI and market analysis for maximum revenue.',
-    icon: DollarSign,
-    features: ['Dynamic Pricing', 'Market Analysis', 'Competitor Tracking', 'Revenue Optimization'],
-    pricing: '$199 - $999/month',
-    category: 'Pricing Intelligence'
-  },
-  {
-    title: 'Smart Meeting Scheduler Pro',
-    description: 'AI-powered meeting scheduling with conflict resolution and optimal time suggestions.',
-    icon: Calendar,
-    features: ['Smart Scheduling', 'Conflict Resolution', 'Time Zone Handling', 'Calendar Integration'],
-    pricing: '$9 - $49/month',
-    category: 'Productivity'
-  },
-  {
-    title: 'AI-Powered Data Quality Manager',
-    description: 'Automated data quality assessment, cleaning, and validation for business data.',
-    icon: Database,
-    features: ['Data Quality Scoring', 'Automated Cleaning', 'Duplicate Detection', 'Validation Rules'],
-    pricing: '$99 - $599/month',
-    category: 'Data Management'
-  },
-  {
-    title: 'Voice-Controlled Business Intelligence',
-    description: 'Natural language query interface for business intelligence and data visualization.',
-    icon: BarChart3,
-    features: ['Voice Queries', 'Natural Language Processing', 'Data Visualization', 'Report Generation'],
-    pricing: '$149 - $799/month',
-    category: 'Business Intelligence'
-  },
-  {
-    title: 'AI-Powered Email Signature Generator',
-    description: 'Professional email signature generation with branding and contact management.',
-    icon: Mail,
-    features: ['Template Library', 'Brand Integration', 'Contact Management', 'Social Media Links'],
-    pricing: '$5 - $29/month',
-    category: 'Email Marketing'
-  },
-  {
-    title: 'Smart Password Manager for Teams',
-    description: 'AI-enhanced password management with security monitoring and team collaboration.',
-    icon: Lock,
-    features: ['Password Generation', 'Security Monitoring', 'Team Sharing', 'Breach Detection'],
-    pricing: '$19 - $99/month',
-    category: 'Security'
-  },
-  {
-    title: 'AI-Powered Meeting Transcription',
-    description: 'Real-time meeting transcription with speaker identification and action item extraction.',
-    icon: Mic,
-    features: ['Real-time Transcription', 'Speaker Identification', 'Action Item Extraction', 'Search & Archive'],
+    features: ['Real-time Collaboration', 'AI Drawing Assistant', 'Idea Organization', 'Export Options', 'Version Control'],
     pricing: '$29 - $149/month',
-    category: 'Meeting Management'
+    category: 'Collaboration',
+    benefits: ['Better Collaboration', 'Idea Organization', 'Real-time Updates', 'Creative Tools'],
+    marketPrice: '$45 - $225/month',
+    link: 'https://ziontechgroup.com/collaboration-whiteboard'
   },
   {
-    title: 'Automated Social Media Content Calendar',
-    description: 'AI-generated social media content calendar with optimal posting times and engagement prediction.',
-    icon: Globe,
-    features: ['Content Generation', 'Optimal Timing', 'Engagement Prediction', 'Multi-platform Support'],
-    pricing: '$39 - $199/month',
-    category: 'Social Media Management',
-    popular: true,
-    benefits: ['Content Generation', 'Optimal Timing', 'Engagement', 'Multi-platform'],
-    marketPrice: '$100 - $400/month',
-    link: 'https://ziontechgroup.com/social-media-management'
+    title: 'AI-Powered Team Communication Hub',
+    description: 'Intelligent team communication platform with AI-powered insights, sentiment analysis, and productivity tracking.',
+    icon: MessageCircle,
+    features: ['Team Messaging', 'Sentiment Analysis', 'Productivity Insights', 'Integration', 'Analytics'],
+    pricing: '$19 - $99/month',
+    category: 'Team Communication',
+    benefits: ['Better Communication', 'Team Insights', 'Productivity Tracking', 'Sentiment Analysis'],
+    marketPrice: '$30 - $150/month',
+    link: 'https://ziontechgroup.com/team-communication'
   }
 ];
 
-const features = [
+const categories = [
+  'All',
+  'AI & Marketing',
+  'AI & Sales',
+  'AI & Analytics',
+  'AI & Customer Service',
+  'AI & Email Marketing',
+  'AI & Voice Analytics',
+  'Automation',
+  'Project Management',
+  'Inventory Management',
+  'Scheduling & Booking',
+  'E-commerce & Marketing',
+  'Customer Retention',
+  'Referral Marketing',
+  'E-commerce Analytics',
+  'SEO & Local Marketing',
+  'Social Media Marketing',
+  'PPC & Advertising',
+  'Education & Training',
+  'Corporate Training',
+  'Blockchain Security',
+  'Crypto Finance',
+  'Blockchain Development',
+  'Health & Wellness',
+  'Fitness & Health',
+  'Sustainability',
+  'Energy Management',
+  'Remote Work',
+  'Meeting Management',
+  'Development Tools',
+  'Monitoring & Debugging',
+  'Database Management',
+  'Cloud Management',
+  'Security & Compliance',
+  'Compliance Management',
+  'Subscription Management',
+  'Revenue Management',
+  'Collaboration',
+  'Team Communication'
+=======
+    features: ['Adaptive Learning', 'Skill Assessment', 'Progress Tracking', 'AI Tutoring'],
+    pricing: '$49 - $299/month',
+    category: 'Education',
+    link: 'https://elearningai.ziontechgroup.com'
+  },
   {
+    title: 'AI-Powered Local SEO Optimizer',
+    description: 'Comprehensive local SEO optimization with AI-powered keyword research, competitor analysis, and performance tracking.',
+    icon: Search,
+    features: ['Keyword Research', 'Listing Optimization', 'Competitor Analysis', 'Performance Tracking'],
+    pricing: '$79 - $399/month',
+    category: 'SEO',
+    link: 'https://localseo.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Online Booking System',
+    description: 'Intelligent appointment scheduling with AI optimization, automated reminders, and client management capabilities.',
+    icon: Calendar,
+    features: ['Smart Scheduling', 'Calendar Integration', 'Automated Reminders', 'Client Management'],
+    pricing: '$29 - $149/month',
+    category: 'Scheduling',
+    link: 'https://bookingai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Referral Program Manager',
+    description: 'Automated referral program management with AI-driven optimization, fraud detection, and performance analytics.',
+    icon: Users,
+    features: ['Referral Tracking', 'Reward Management', 'Fraud Detection', 'Performance Analytics'],
+    pricing: '$39 - $199/month',
+    category: 'Marketing',
+    link: 'https://referralmanager.ziontechgroup.com'
+  }
+];
+
+const benefits = [
+  {
+    icon: Rocket,
+    features: ['Resource Optimization', 'Conflict Resolution', 'Availability Tracking', 'Analytics'],
+    pricing: '$149 - $899/month',
+    category: 'Scheduling'
+  }
+];
+
+const features = [{
     icon: Zap,
     title: 'Rapid Deployment',
     description: 'Get up and running in days, not months'
@@ -3532,8 +1589,7 @@ const features = [
   }
 ];
 
-const benefits = [
-  {
+const benefits = [{
     icon: Clock,
     title: 'Fast Time to Market',
     description: 'Launch your SaaS in weeks, not months',
@@ -3546,313 +1602,2684 @@ const benefits = [
     stat: '60%'
   },
   {
-    icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Built-in security and compliance features',
+    icon: Star,
+    title: 'High Quality',
+    description: 'Production-ready code and infrastructure',
     stat: '99.9%'
+=======
+    features: ['AI Task Assignment', 'Deadline Prediction', 'Resource Optimization', 'Risk Assessment', 'Progress Tracking', 'Team Collaboration'],
+    pricing: '$39 - $249/month',
+    category: 'AI Project Management',
+    popular: false,
+    benefits: ['Better Planning', 'Reduced Delays', 'Optimal Resource Use', 'Risk Mitigation', 'Improved Delivery'],
+    marketPrice: '$65 - $400/month',
+    link: 'https://ziontechgroup.com/smart-project-management',
+    contact: '+1 302 464 0950'
+>>>>>>> main
   },
   {
+    id: 9,
+    title: 'AI Financial Analytics',
+    description: 'Advanced financial analysis platform with predictive modeling, risk assessment, and automated reporting.',
+    icon: DollarSign,
+    features: ['Predictive Modeling', 'Risk Assessment', 'Automated Reporting', 'Cash Flow Analysis', 'Investment Insights', 'Compliance Monitoring'],
+    pricing: '$59 - $399/month',
+    category: 'AI Finance',
+    popular: true,
+    benefits: ['Better Financial Planning', 'Risk Mitigation', 'Automated Reporting', 'Investment Optimization', 'Compliance Assurance'],
+    marketPrice: '$100 - $600/month',
+    link: 'https://ziontechgroup.com/ai-financial-analytics',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 10,
+    title: 'Smart HR Management',
+    description: 'AI-powered HR platform with resume screening, candidate matching, and employee performance analytics.',
+    icon: Users,
+    features: ['Resume Screening', 'Candidate Matching', 'Performance Analytics', 'Employee Engagement', 'Talent Acquisition', 'Workforce Planning'],
+    pricing: '$49 - $299/month',
+    category: 'AI HR',
+    popular: false,
+    benefits: ['Faster Hiring', 'Better Matches', 'Reduced Bias', 'Performance Insights', 'Cost Savings'],
+    marketPrice: '$80 - $500/month',
+    link: 'https://ziontechgroup.com/smart-hr-management',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 11,
+    title: 'AI Social Media Manager',
+    description: 'Automated social media management with content creation, scheduling, and performance optimization.',
+    icon: MessageSquare,
+    features: ['Content Creation', 'Auto Scheduling', 'Performance Analytics', 'Hashtag Optimization', 'Engagement Tracking', 'Multi-platform Support'],
+    pricing: '$29 - $199/month',
+    category: 'AI Social Media',
+    popular: true,
+    benefits: ['Consistent Posting', 'Better Engagement', 'Time Savings', 'Content Optimization', 'Growth Acceleration'],
+    marketPrice: '$50 - $350/month',
+    link: 'https://ziontechgroup.com/ai-social-media-manager',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 12,
+    title: 'Smart E-commerce Analytics',
+    description: 'AI-driven e-commerce analytics with customer behavior insights, conversion optimization, and sales forecasting.',
+    icon: ShoppingCart,
+    features: ['Customer Behavior Analysis', 'Conversion Optimization', 'Sales Forecasting', 'Product Recommendations', 'Price Optimization', 'Market Trends'],
+    pricing: '$39 - $249/month',
+    category: 'AI E-commerce',
+    popular: false,
+    benefits: ['Higher Conversions', 'Better Customer Insights', 'Optimized Pricing', 'Increased Sales', 'Data-Driven Decisions'],
+    marketPrice: '$65 - $400/month',
+    link: 'https://ziontechgroup.com/smart-ecommerce-analytics',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 13,
+    title: 'AI Video Content Creator',
+    description: 'Automated video creation platform with AI-generated scripts, voice synthesis, and video editing capabilities.',
+    icon: Video,
+    features: ['AI Script Generation', 'Voice Synthesis', 'Auto Video Editing', 'Template Library', 'Multi-language Support', 'Brand Customization'],
+    pricing: '$49 - $299/month',
+    category: 'AI Video',
+    popular: true,
+    benefits: ['Faster Video Creation', 'Consistent Quality', 'Cost Reduction', 'Scalable Production', 'Professional Results'],
+    marketPrice: '$80 - $500/month',
+    link: 'https://ziontechgroup.com/ai-video-content-creator',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 14,
+    title: 'Smart Data Visualization',
+    description: 'AI-powered data visualization platform that automatically creates charts, graphs, and interactive dashboards.',
+    icon: PieChart,
+    features: ['Auto Chart Generation', 'Interactive Dashboards', 'Data Storytelling', 'Custom Templates', 'Real-time Updates', 'Export Options'],
+    pricing: '$29 - $199/month',
+    category: 'AI Data Visualization',
+    popular: false,
+    benefits: ['Faster Insights', 'Better Presentations', 'Automated Reporting', 'Professional Charts', 'Data Storytelling'],
+    marketPrice: '$50 - $350/month',
+    link: 'https://ziontechgroup.com/smart-data-visualization',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 15,
+    title: 'AI Code Review Assistant',
+    description: 'Automated code review platform with bug detection, security analysis, and performance optimization suggestions.',
+    icon: Code,
+    features: ['Bug Detection', 'Security Analysis', 'Performance Optimization', 'Code Quality Metrics', 'Best Practices', 'Automated Testing'],
+    pricing: '$39 - $249/month',
+    category: 'AI Development',
+    popular: true,
+    benefits: ['Faster Reviews', 'Better Code Quality', 'Security Assurance', 'Performance Optimization', 'Learning Opportunities'],
+    marketPrice: '$65 - $400/month',
+    link: 'https://ziontechgroup.com/ai-code-review-assistant',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 16,
+    title: 'Smart Meeting Assistant',
+    description: 'AI-powered meeting platform with transcription, action item extraction, and intelligent scheduling.',
+    icon: Mic,
+    features: ['Live Transcription', 'Action Item Extraction', 'Meeting Summaries', 'Smart Scheduling', 'Follow-up Reminders', 'Integration Support'],
+    pricing: '$19 - $149/month',
+    category: 'AI Productivity',
+    popular: false,
+    benefits: ['Better Meeting Notes', 'Action Tracking', 'Time Savings', 'Improved Follow-up', 'Meeting Optimization'],
+    marketPrice: '$35 - $250/month',
+    link: 'https://ziontechgroup.com/smart-meeting-assistant',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 17,
+    title: 'AI Website Optimizer',
+    description: 'Automated website optimization platform with A/B testing, performance monitoring, and conversion rate optimization.',
+    icon: Monitor,
+    features: ['A/B Testing', 'Performance Monitoring', 'Conversion Optimization', 'SEO Analysis', 'User Experience Tracking', 'Automated Recommendations'],
+    pricing: '$49 - $299/month',
+    category: 'AI Web Optimization',
+    popular: true,
+    benefits: ['Higher Conversions', 'Better Performance', 'SEO Improvement', 'User Experience', 'Automated Optimization'],
+    marketPrice: '$80 - $500/month',
+    link: 'https://ziontechgroup.com/ai-website-optimizer',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 18,
+    title: 'Smart Expense Tracker',
+    description: 'AI-powered expense management with receipt scanning, categorization, and automated reporting for businesses.',
+    icon: CreditCard,
+    features: ['Receipt Scanning', 'Auto Categorization', 'Expense Approval', 'Budget Tracking', 'Tax Preparation', 'Reporting Dashboard'],
+    pricing: '$19 - $149/month',
+    category: 'AI Finance',
+    popular: false,
+    benefits: ['Time Savings', 'Better Accuracy', 'Tax Preparation', 'Budget Control', 'Compliance Assurance'],
+    marketPrice: '$35 - $250/month',
+    link: 'https://ziontechgroup.com/smart-expense-tracker',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 19,
+    title: 'AI Customer Feedback Analyzer',
+    description: 'Intelligent feedback analysis platform that processes customer reviews, surveys, and support tickets for actionable insights.',
+    icon: MessageSquare,
+    features: ['Sentiment Analysis', 'Topic Extraction', 'Trend Identification', 'Actionable Insights', 'Multi-source Integration', 'Real-time Monitoring'],
+    pricing: '$29 - $199/month',
+    category: 'AI Customer Analytics',
+    popular: true,
+    benefits: ['Better Customer Understanding', 'Actionable Insights', 'Trend Identification', 'Improved Products', 'Customer Satisfaction'],
+    marketPrice: '$50 - $350/month',
+    link: 'https://ziontechgroup.com/ai-customer-feedback-analyzer',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 20,
+    title: 'Smart Supply Chain Optimizer',
+    description: 'AI-powered supply chain management with demand forecasting, route optimization, and supplier risk assessment.',
+    icon: Truck,
+    features: ['Demand Forecasting', 'Route Optimization', 'Supplier Risk Assessment', 'Inventory Management', 'Cost Optimization', 'Performance Analytics'],
+    pricing: '$59 - $399/month',
+    category: 'AI Supply Chain',
+    popular: false,
+    benefits: ['Cost Reduction', 'Better Planning', 'Risk Mitigation', 'Efficiency Gains', 'Optimized Operations'],
+    marketPrice: '$100 - $600/month',
+    link: 'https://ziontechgroup.com/smart-supply-chain-optimizer',
+    contact: '+1 302 464 0950'
+  },
+
+  // Additional AI & Machine Learning Solutions
+  {
+    title: 'AI Voice Assistant Platform',
+    description: 'Custom voice assistant development platform with natural language processing and multi-language support.',
+    icon: Mic,
+    features: ['Voice Recognition', 'Natural Language Processing', 'Multi-language Support', 'Custom Commands', 'Integration APIs', 'Analytics'],
+    pricing: '$39 - $199/month',
+    category: 'AI Voice',
+    popular: true,
+    benefits: ['Hands-free Operations', 'Better Accessibility', 'Custom Voice Commands', 'Multi-language Support', 'Easy Integration'],
+    marketPrice: '$60 - $300/month',
+    link: 'https://ziontechgroup.com/ai-voice-assistant-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Image Recognition API',
+    description: 'Advanced image recognition and analysis API with object detection, facial recognition, and content moderation.',
+    icon: Eye,
+    features: ['Object Detection', 'Facial Recognition', 'Content Moderation', 'OCR Processing', 'Image Classification', 'API Integration'],
+    pricing: '$29 - $149/month',
+    category: 'AI Vision',
+    popular: true,
+    benefits: ['Automated Image Processing', 'Content Safety', 'OCR Capabilities', 'Easy API Integration', 'High Accuracy'],
+    marketPrice: '$50 - $250/month',
+    link: 'https://ziontechgroup.com/ai-image-recognition-api',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Document Intelligence',
+    description: 'Intelligent document processing with OCR, data extraction, and automated classification for various document types.',
+    icon: FileText,
+    features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Form Processing', 'Batch Processing', 'API Integration'],
+    pricing: '$49 - $249/month',
+    category: 'AI Documents',
+    popular: true,
+    benefits: ['Automated Processing', 'Data Extraction', 'Document Classification', 'Batch Operations', 'API Integration'],
+    marketPrice: '$80 - $400/month',
+    link: 'https://ziontechgroup.com/ai-document-intelligence',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 21,
+    title: 'AI Predictive Maintenance',
+    description: 'AI-powered predictive maintenance platform for equipment monitoring, failure prediction, and maintenance scheduling.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'IoT Integration', 'Alert System', 'Analytics'],
+    pricing: '$79 - $399/month',
+    category: 'AI Maintenance',
+    popular: true,
+    benefits: ['Reduced Downtime', 'Cost Savings', 'Preventive Maintenance', 'Equipment Longevity', 'Data-Driven Decisions'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/ai-predictive-maintenance',
+    contact: '+1 302 464 0950'
+  },
+
+  // Quantum Computing & Advanced Technologies
+  {
+    id: 22,
+    title: 'Quantum Security Suite',
+    description: 'Quantum-resistant encryption and security solutions for future-proof data protection against quantum attacks.',
+    icon: Shield,
+    features: ['Quantum-Resistant Encryption', 'Post-Quantum Cryptography', 'Key Management', 'Security Audits', 'Compliance Tools', 'Migration Support'],
+    pricing: '$199 - $999/month',
+    category: 'Quantum Security',
+    popular: true,
+    benefits: ['Future-Proof Security', 'Quantum Resistance', 'Advanced Encryption', 'Compliance Ready', 'Migration Support'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/quantum-security-suite',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 23,
+    title: 'Blockchain Analytics Platform',
+    description: 'Advanced blockchain analysis and monitoring platform with transaction tracking, risk assessment, and compliance reporting.',
+    icon: Network,
+    features: ['Transaction Tracking', 'Risk Assessment', 'Compliance Reporting', 'Address Analysis', 'Flow Visualization', 'Alert System'],
+    pricing: '$99 - $499/month',
+    category: 'Blockchain Analytics',
+    popular: true,
+    benefits: ['Enhanced Security', 'Compliance Assurance', 'Risk Mitigation', 'Transaction Insights', 'Regulatory Compliance'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/blockchain-analytics-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 24,
+    title: 'IoT Device Management',
+    description: 'Comprehensive IoT device management platform with remote monitoring, firmware updates, and security management.',
+    icon: Wifi,
+    features: ['Device Monitoring', 'Remote Management', 'Firmware Updates', 'Security Management', 'Data Collection', 'Analytics Dashboard'],
+    pricing: '$49 - $299/month',
+    category: 'IoT Management',
+    popular: true,
+    benefits: ['Centralized Management', 'Remote Control', 'Security Updates', 'Data Insights', 'Scalable Operations'],
+    marketPrice: '$80 - $500/month',
+    link: 'https://ziontechgroup.com/iot-device-management',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 25,
+    title: 'AR/VR Business Platform',
+    description: 'Augmented and virtual reality platform for business applications including training, presentations, and customer experiences.',
+    icon: Eye,
+    features: ['AR/VR Development', '3D Content Creation', 'Interactive Experiences', 'Multi-platform Support', 'Analytics', 'Custom Solutions'],
+    pricing: '$199 - $999/month',
+    category: 'AR/VR Solutions',
+    popular: true,
+    benefits: ['Immersive Experiences', 'Better Training', 'Enhanced Presentations', 'Customer Engagement', 'Innovative Solutions'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/ar-vr-business-platform',
+    contact: '+1 302 464 0950'
+  },
+
+  // Advanced AI & Machine Learning
+  {
+    id: 26,
+    title: 'AI Drug Discovery Platform',
+    description: 'AI-powered drug discovery and development platform with molecular analysis, compound screening, and clinical trial optimization.',
+    icon: Heart,
+    features: ['Molecular Analysis', 'Compound Screening', 'Clinical Trial Optimization', 'Drug Interaction Analysis', 'Patent Research', 'Regulatory Compliance'],
+    pricing: '$499 - $2,999/month',
+    category: 'AI Healthcare',
+    popular: true,
+    benefits: ['Faster Discovery', 'Cost Reduction', 'Better Success Rates', 'Regulatory Compliance', 'Innovation Acceleration'],
+    marketPrice: '$800 - $5,000/month',
+    link: 'https://ziontechgroup.com/ai-drug-discovery-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 27,
+    title: 'AI Climate Analytics',
+    description: 'Advanced climate data analysis platform with weather prediction, environmental monitoring, and sustainability insights.',
+    icon: TreePine,
+    features: ['Weather Prediction', 'Environmental Monitoring', 'Sustainability Analytics', 'Carbon Footprint Tracking', 'Climate Risk Assessment', 'Reporting Tools'],
+    pricing: '$79 - $399/month',
+    category: 'AI Climate',
+    popular: true,
+    benefits: ['Climate Insights', 'Risk Mitigation', 'Sustainability Goals', 'Environmental Monitoring', 'Data-Driven Decisions'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/ai-climate-analytics',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 28,
+    title: 'AI Space Technology Platform',
+    description: 'Space technology solutions including satellite data analysis, space mission planning, and astronomical research tools.',
+    icon: Rocket,
+    features: ['Satellite Data Analysis', 'Mission Planning', 'Orbital Mechanics', 'Space Weather Monitoring', 'Research Tools', 'Data Visualization'],
+    pricing: '$299 - $1,999/month',
+    category: 'Space Technology',
+    popular: true,
+    benefits: ['Space Insights', 'Mission Optimization', 'Data Analysis', 'Research Acceleration', 'Innovation Support'],
+    marketPrice: '$500 - $3,000/month',
+    link: 'https://ziontechgroup.com/ai-space-technology-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 29,
+    title: 'AI Autonomous Vehicle Platform',
+    description: 'AI platform for autonomous vehicle development including perception, decision-making, and safety systems.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Obstacle Detection', 'Safety Systems', 'Simulation Environment', 'Real-time Processing'],
+    pricing: '$999 - $4,999/month',
+    category: 'AI Automotive',
+    popular: true,
+    benefits: ['Advanced Safety', 'Autonomous Capabilities', 'Real-time Processing', 'Simulation Testing', 'Innovation Support'],
+    marketPrice: '$1,500 - $8,000/month',
+    link: 'https://ziontechgroup.com/ai-autonomous-vehicle-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 30,
+    title: 'AI Gaming Intelligence',
+    description: 'AI-powered gaming platform with intelligent NPCs, procedural content generation, and player behavior analysis.',
+    icon: Gamepad2,
+    features: ['Intelligent NPCs', 'Procedural Generation', 'Player Analytics', 'Dynamic Difficulty', 'Content Creation', 'Multiplayer AI'],
+    pricing: '$99 - $499/month',
+    category: 'AI Gaming',
+    popular: true,
+    benefits: ['Enhanced Gameplay', 'Dynamic Content', 'Player Insights', 'Automated Development', 'Innovative Features'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/ai-gaming-intelligence',
+    contact: '+1 302 464 0950'
+  },
+
+  // Advanced Business Solutions
+  {
+    id: 31,
+    title: 'AI Legal Research Assistant',
+    description: 'AI-powered legal research platform with case law analysis, document review, and legal precedent identification.',
+    icon: BookOpen,
+    features: ['Case Law Analysis', 'Document Review', 'Legal Research', 'Precedent Identification', 'Contract Analysis', 'Compliance Checking'],
+    pricing: '$199 - $999/month',
+    category: 'AI Legal',
+    popular: true,
+    benefits: ['Faster Research', 'Better Accuracy', 'Cost Reduction', 'Comprehensive Analysis', 'Time Savings'],
+    marketPrice: '$300 - $1,500/month',
+    link: 'https://ziontechgroup.com/ai-legal-research-assistant',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 32,
+    title: 'AI Real Estate Analytics',
+    description: 'Comprehensive real estate analysis platform with market trends, property valuation, and investment insights.',
+    icon: Home,
+    features: ['Market Analysis', 'Property Valuation', 'Investment Insights', 'Trend Prediction', 'Location Analysis', 'ROI Calculator'],
+    pricing: '$79 - $399/month',
+    category: 'AI Real Estate',
+    popular: true,
+    benefits: ['Better Investment Decisions', 'Market Insights', 'Accurate Valuations', 'Trend Analysis', 'ROI Optimization'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/ai-real-estate-analytics',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 33,
+    title: 'AI Agriculture Platform',
+    description: 'Smart agriculture solution with crop monitoring, yield prediction, and automated farming recommendations.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Weather Analysis', 'Soil Analysis', 'Pest Detection', 'Automated Recommendations'],
+    pricing: '$99 - $499/month',
+    category: 'AI Agriculture',
+    popular: true,
+    benefits: ['Higher Yields', 'Cost Reduction', 'Better Planning', 'Risk Mitigation', 'Sustainable Farming'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/ai-agriculture-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 34,
+    title: 'AI Energy Management',
+    description: 'Intelligent energy management platform with consumption optimization, renewable energy integration, and cost analysis.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Consumption Optimization', 'Renewable Integration', 'Cost Analysis', 'Predictive Maintenance', 'Sustainability Tracking'],
+    pricing: '$149 - $799/month',
+    category: 'AI Energy',
+    popular: true,
+    benefits: ['Energy Savings', 'Cost Reduction', 'Sustainability', 'Optimized Consumption', 'Renewable Integration'],
+    marketPrice: '$200 - $1,200/month',
+    link: 'https://ziontechgroup.com/ai-energy-management',
+    contact: '+1 302 464 0950'
+  },
+  {
+    id: 35,
+    title: 'AI Education Platform',
+    description: 'Personalized learning platform with adaptive content, progress tracking, and intelligent tutoring systems.',
+    icon: GraduationCap,
+    features: ['Adaptive Learning', 'Progress Tracking', 'Personalized Content', 'Assessment Tools', 'Learning Analytics', 'Multi-language Support'],
+    pricing: '$49 - $299/month',
+    category: 'AI Education',
+    popular: true,
+    benefits: ['Personalized Learning', 'Better Outcomes', 'Progress Tracking', 'Adaptive Content', 'Improved Engagement'],
+    marketPrice: '$80 - $500/month',
+    link: 'https://ziontechgroup.com/ai-education-platform',
+    contact: '+1 302 464 0950'
+  },
+
+  // Cloud & Infrastructure Solutions
+  {
+    title: 'Multi-Cloud Management',
+    description: 'Unified multi-cloud management platform with cost optimization, security monitoring, and resource orchestration.',
+    icon: Cloud,
+    features: ['Multi-cloud Support', 'Cost Optimization', 'Security Monitoring', 'Resource Orchestration', 'Compliance Management', 'Analytics'],
+    pricing: '$99 - $499/month',
+    category: 'Cloud Management',
+    popular: true,
+    benefits: ['Unified Management', 'Cost Optimization', 'Security Enhancement', 'Compliance', 'Resource Efficiency'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/multi-cloud-management',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Container Orchestration Platform',
+    description: 'Kubernetes-based container orchestration with automated scaling, monitoring, and deployment management.',
+    icon: Server,
+    features: ['Kubernetes Management', 'Auto Scaling', 'Container Monitoring', 'Deployment Automation', 'Service Mesh', 'Security'],
+    pricing: '$59 - $299/month',
+    category: 'DevOps',
+    popular: true,
+    benefits: ['Automated Scaling', 'Container Management', 'Deployment Automation', 'Service Mesh', 'Security'],
+    marketPrice: '$100 - $500/month',
+    link: 'https://ziontechgroup.com/container-orchestration-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Database Performance Optimizer',
+    description: 'AI-powered database optimization with query analysis, index recommendations, and performance monitoring.',
+    icon: Database,
+    features: ['Query Analysis', 'Index Optimization', 'Performance Monitoring', 'Automated Tuning', 'Capacity Planning', 'Alerting'],
+    pricing: '$49 - $249/month',
+    category: 'Database',
+    popular: true,
+    benefits: ['Performance Optimization', 'Automated Tuning', 'Query Optimization', 'Capacity Planning', 'Cost Reduction'],
+    marketPrice: '$80 - $400/month',
+    link: 'https://ziontechgroup.com/database-performance-optimizer',
+    contact: '+1 302 464 0950'
+  },
+
+  // E-commerce & Business Solutions
+  {
+    title: 'AI Product Recommendation Engine',
+    description: 'Advanced product recommendation system with machine learning algorithms and real-time personalization.',
+    icon: Target,
+    features: ['ML Algorithms', 'Real-time Personalization', 'A/B Testing', 'Analytics Dashboard', 'API Integration', 'Customization'],
+    pricing: '$39 - $199/month',
+    category: 'E-commerce AI',
+    popular: true,
+    benefits: ['Higher Conversion', 'Personalized Experience', 'A/B Testing', 'Analytics', 'Easy Integration'],
+    marketPrice: '$60 - $300/month',
+    link: 'https://ziontechgroup.com/ai-product-recommendation-engine',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Dynamic Pricing Platform',
+    description: 'AI-powered dynamic pricing platform with competitor analysis, demand forecasting, and automated price optimization.',
+    icon: DollarSign,
+    features: ['Competitor Analysis', 'Demand Forecasting', 'Price Optimization', 'A/B Testing', 'Analytics', 'API Integration'],
+    pricing: '$79 - $399/month',
+    category: 'E-commerce',
+    popular: true,
+    benefits: ['Revenue Optimization', 'Competitive Pricing', 'Demand-based Pricing', 'A/B Testing', 'Analytics'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/dynamic-pricing-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Customer Journey Analytics',
+    description: 'Comprehensive customer journey tracking with behavioral analysis, conversion optimization, and personalized experiences.',
     icon: TrendingUp,
-    title: 'Scalable',
-    description: 'Handles growth from startup to enterprise',
-    stat: '10x'
+    features: ['Journey Tracking', 'Behavioral Analysis', 'Conversion Optimization', 'Personalization', 'A/B Testing', 'Analytics'],
+    pricing: '$49 - $249/month',
+    category: 'E-commerce Analytics',
+    popular: true,
+    benefits: ['Journey Insights', 'Conversion Optimization', 'Personalization', 'Behavioral Analysis', 'A/B Testing'],
+    marketPrice: '$80 - $400/month',
+    link: 'https://ziontechgroup.com/customer-journey-analytics',
+    contact: '+1 302 464 0950'
+  },
+
+  // Security & Compliance Solutions
+  {
+    title: 'AI Security Monitoring',
+    description: 'Advanced AI-powered security monitoring with threat detection, anomaly analysis, and automated response.',
+    icon: Shield,
+    features: ['Threat Detection', 'Anomaly Analysis', 'Automated Response', 'Real-time Monitoring', 'Incident Management', 'Compliance'],
+    pricing: '$99 - $499/month',
+    category: 'Security AI',
+    popular: true,
+    benefits: ['Threat Prevention', 'Automated Response', 'Real-time Monitoring', 'Compliance', 'Incident Management'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/ai-security-monitoring',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Data Privacy Management',
+    description: 'Comprehensive data privacy platform with GDPR compliance, consent management, and data protection automation.',
+    icon: Lock,
+    features: ['GDPR Compliance', 'Consent Management', 'Data Protection', 'Privacy Impact Assessment', 'Audit Trails', 'Automation'],
+    pricing: '$79 - $399/month',
+    category: 'Privacy',
+    popular: true,
+    benefits: ['GDPR Compliance', 'Consent Management', 'Data Protection', 'Audit Trails', 'Automation'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/data-privacy-management',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Vulnerability Assessment Platform',
+    description: 'Automated vulnerability scanning and assessment with AI-powered risk analysis and remediation recommendations.',
+    icon: Shield,
+    features: ['Vulnerability Scanning', 'Risk Analysis', 'Remediation Recommendations', 'Compliance Checking', 'Reporting', 'Automation'],
+    pricing: '$59 - $299/month',
+    category: 'Security',
+    popular: true,
+    benefits: ['Vulnerability Detection', 'Risk Assessment', 'Remediation Guidance', 'Compliance', 'Automation'],
+    marketPrice: '$100 - $500/month',
+    link: 'https://ziontechgroup.com/vulnerability-assessment-platform',
+    contact: '+1 302 464 0950'
+  },
+
+  // Industry-Specific Solutions
+  {
+    title: 'Real Estate Analytics Platform',
+    description: 'AI-powered real estate analytics with market analysis, property valuation, and investment insights.',
+    icon: Building,
+    features: ['Market Analysis', 'Property Valuation', 'Investment Insights', 'Trend Analysis', 'Predictive Modeling', 'Reporting'],
+    pricing: '$99 - $499/month',
+    category: 'Real Estate',
+    popular: true,
+    benefits: ['Market Insights', 'Property Valuation', 'Investment Analysis', 'Trend Analysis', 'Predictive Modeling'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/real-estate-analytics-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Manufacturing Quality Control',
+    description: 'AI-powered quality control system with defect detection, process optimization, and predictive quality analytics.',
+    icon: CheckCircle,
+    features: ['Defect Detection', 'Process Optimization', 'Quality Analytics', 'Predictive Modeling', 'Real-time Monitoring', 'Reporting'],
+    pricing: '$149 - $599/month',
+    category: 'Manufacturing',
+    popular: true,
+    benefits: ['Quality Improvement', 'Defect Reduction', 'Process Optimization', 'Predictive Analytics', 'Cost Savings'],
+    marketPrice: '$250 - $900/month',
+    link: 'https://ziontechgroup.com/manufacturing-quality-control',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Retail Analytics Suite',
+    description: 'Comprehensive retail analytics with customer behavior analysis, inventory optimization, and sales forecasting.',
+    icon: ShoppingCart,
+    features: ['Customer Analytics', 'Inventory Optimization', 'Sales Forecasting', 'Behavioral Analysis', 'Trend Analysis', 'Reporting'],
+    pricing: '$79 - $399/month',
+    category: 'Retail',
+    popular: true,
+    benefits: ['Customer Insights', 'Inventory Optimization', 'Sales Forecasting', 'Behavioral Analysis', 'Trend Analysis'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/retail-analytics-suite',
+    contact: '+1 302 464 0950'
+  },
+
+  // Communication & Collaboration Solutions
+  {
+    title: 'AI Meeting Assistant',
+    description: 'Intelligent meeting assistant with transcription, action item extraction, and meeting insights.',
+    icon: Video,
+    features: ['Meeting Transcription', 'Action Item Extraction', 'Meeting Insights', 'Note Taking', 'Follow-up Automation', 'Analytics'],
+    pricing: '$19 - $99/month',
+    category: 'AI Meetings',
+    popular: true,
+    benefits: ['Meeting Efficiency', 'Action Item Tracking', 'Meeting Insights', 'Automation', 'Productivity'],
+    marketPrice: '$30 - $150/month',
+    link: 'https://ziontechgroup.com/ai-meeting-assistant',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Smart Calendar Management',
+    description: 'AI-powered calendar optimization with scheduling intelligence, conflict resolution, and productivity insights.',
+    icon: Calendar,
+    features: ['Smart Scheduling', 'Conflict Resolution', 'Productivity Insights', 'Meeting Optimization', 'Time Blocking', 'Analytics'],
+    pricing: '$29 - $149/month',
+    category: 'Productivity',
+    popular: true,
+    benefits: ['Smart Scheduling', 'Conflict Resolution', 'Productivity Insights', 'Time Optimization', 'Analytics'],
+    marketPrice: '$50 - $250/month',
+    link: 'https://ziontechgroup.com/smart-calendar-management',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AI Email Management',
+    description: 'Intelligent email management with smart categorization, priority detection, and automated responses.',
+    icon: Mail,
+    features: ['Smart Categorization', 'Priority Detection', 'Automated Responses', 'Email Analytics', 'Spam Filtering', 'Scheduling'],
+    pricing: '$19 - $99/month',
+    category: 'AI Email',
+    popular: true,
+    benefits: ['Email Organization', 'Priority Management', 'Automation', 'Analytics', 'Productivity'],
+    marketPrice: '$30 - $150/month',
+    link: 'https://ziontechgroup.com/ai-email-management',
+    contact: '+1 302 464 0950'
+  },
+
+  // Data & Analytics Solutions
+  {
+    title: 'Real-time Data Streaming',
+    description: 'High-performance real-time data streaming platform with event processing and analytics capabilities.',
+=======
+    title: "Workflow Automation",
+    description: "Streamline business processes with intelligent automation tools",
+>>>>>>> main
+    icon: Zap,
+    features: [
+      "Process Automation",
+      "Task Scheduling",
+      "Data Integration",
+      "Custom Workflows",
+      "API Integrations",
+      "Real-time Notifications"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,000/month",
+    benefits: ["Reduce manual work by 80%", "Increase efficiency by 60%", "Save 20+ hours/week"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Data Processing Tools",
+    description: "Powerful data analysis and processing solutions",
+    icon: BarChart3,
+    features: [
+      "Data Visualization",
+      "ETL Processes",
+      "Real-time Analytics",
+      "Custom Dashboards",
+      "Report Generation",
+      "Data Export/Import"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-7,000/month",
+    benefits: ["Process 10x more data", "Real-time insights", "50% faster reporting"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "API Integration Services",
+    description: "Connect your systems with seamless API solutions",
+    icon: Code,
+    features: [
+      "REST API Development",
+      "Third-party Integrations",
+      "Webhook Management",
+      "API Documentation",
+      "Rate Limiting",
+      "Authentication & Security"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-6,000/month",
+    benefits: ["Connect 50+ services", "99.9% uptime", "Reduce integration time by 70%"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Custom Dashboard Solutions",
+    description: "Tailored dashboards for your business needs",
+    icon: Settings,
+    features: [
+      "Real-time Monitoring",
+      "Custom Widgets",
+      "User Management",
+      "Role-based Access",
+      "Mobile Responsive",
+      "Export Capabilities"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-4,500/month",
+    benefits: ["Centralized data view", "Mobile access", "Custom branding"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "SaaS Platform Development",
+    description: "Complete SaaS solutions from concept to deployment",
+    icon: Cloud,
+    features: [
+      "Multi-tenant Architecture",
+      "Subscription Management",
+      "Payment Integration",
+      "User Onboarding",
+      "Analytics & Reporting",
+      "Scalable Infrastructure"
+    ],
+    price: "Starting at $3,500/month",
+    marketPrice: "$5,000-15,000/month",
+    benefits: ["Full SaaS solution", "Scalable architecture", "Revenue generation"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "Business Intelligence Tools",
+    description: "Advanced BI solutions for data-driven decisions",
+    icon: BarChart3,
+    features: [
+      "Interactive Dashboards",
+      "Predictive Analytics",
+      "Data Mining",
+      "Custom Reports",
+      "Machine Learning Integration",
+      "Real-time Insights"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-8,000/month",
+    benefits: ["Data-driven decisions", "Predictive insights", "ROI tracking"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "Customer Relationship Management",
+    description: "Comprehensive CRM solution for managing customer relationships",
+    icon: Users,
+    features: [
+      "Contact Management",
+      "Lead Tracking",
+      "Sales Pipeline",
+      "Email Marketing",
+      "Customer Support",
+      "Analytics & Reporting"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$2,500-6,000/month",
+    benefits: ["Increase sales by 30%", "Better customer retention", "Automated follow-ups"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Project Management Platform",
+    description: "Complete project management solution for teams",
+    icon: CheckCircle,
+    features: [
+      "Task Management",
+      "Team Collaboration",
+      "Time Tracking",
+      "Resource Planning",
+      "Progress Monitoring",
+      "Document Sharing"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,000-5,000/month",
+    benefits: ["Improve productivity by 40%", "Better project visibility", "Team coordination"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Inventory Management System",
+    description: "Smart inventory tracking and management solution",
+    icon: Package,
+    features: [
+      "Real-time Inventory Tracking",
+      "Automated Reordering",
+      "Barcode Scanning",
+      "Multi-location Support",
+      "Analytics & Forecasting",
+      "Integration with POS/ERP"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-4,500/month",
+    benefits: ["Reduce stockouts by 90%", "Lower inventory costs", "Automated reordering"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "Email Marketing Automation",
+    description: "Advanced email marketing and automation platform",
+    icon: Mail,
+    features: [
+      "Email Campaign Builder",
+      "Automation Workflows",
+      "A/B Testing",
+      "List Segmentation",
+      "Analytics & Reporting",
+      "Integration with CRM"
+    ],
+    price: "Starting at $1,000/month",
+    marketPrice: "$1,500-4,000/month",
+    benefits: ["Increase open rates by 25%", "Automated nurturing", "Better targeting"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Social Media Management",
+    description: "Comprehensive social media scheduling and analytics platform",
+    icon: Globe,
+    features: [
+      "Multi-platform Posting",
+      "Content Calendar",
+      "Analytics & Insights",
+      "Team Collaboration",
+      "Hashtag Research",
+      "Competitor Analysis"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,000/month",
+    benefits: ["Save 10+ hours/week", "Increase engagement by 35%", "Better content planning"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "HR Management System",
+    description: "Complete human resources management solution",
+    icon: Users,
+    features: [
+      "Employee Database",
+      "Time & Attendance",
+      "Payroll Integration",
+      "Performance Reviews",
+      "Recruitment Tools",
+      "Benefits Management"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,000-7,000/month",
+    benefits: ["Streamline HR processes", "Reduce paperwork by 80%", "Better employee experience"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "Financial Management Platform",
+    description: "Comprehensive financial tracking and management solution",
+    icon: DollarSign,
+    features: [
+      "Expense Tracking",
+      "Invoice Management",
+      "Budget Planning",
+      "Financial Reporting",
+      "Tax Preparation",
+      "Bank Integration"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$2,500-6,000/month",
+    benefits: ["Better financial visibility", "Automated bookkeeping", "Tax compliance"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Learning Management System",
+    description: "Complete e-learning platform for training and education",
+    icon: GraduationCap,
+    features: [
+      "Course Creation",
+      "Student Management",
+      "Progress Tracking",
+      "Certification System",
+      "Video Streaming",
+      "Assessment Tools"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Scalable training", "Better engagement", "Progress tracking"],
+    setupTime: "3-5 weeks"
+  },
+  {
+    title: "Event Management Platform",
+    description: "Complete solution for managing events and conferences",
+    icon: Calendar,
+    features: [
+      "Event Registration",
+      "Ticketing System",
+      "Attendee Management",
+      "Payment Processing",
+      "Event Analytics",
+      "Mobile App"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,500/month",
+    benefits: ["Streamline event planning", "Better attendee experience", "Revenue optimization"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "Content Management System",
+    description: "Advanced CMS for managing digital content",
+    icon: FileText,
+    features: [
+      "Content Editor",
+      "Media Library",
+      "SEO Optimization",
+      "Multi-language Support",
+      "Version Control",
+      "Publishing Workflow"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-4,500/month",
+    benefits: ["Easy content updates", "Better SEO", "Team collaboration"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Analytics & Reporting Platform",
+    description: "Advanced analytics and business intelligence solution",
+    icon: BarChart3,
+    features: [
+      "Custom Dashboards",
+      "Data Visualization",
+      "Real-time Analytics",
+      "Automated Reports",
+      "Data Export",
+      "API Integration"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-7,000/month",
+    benefits: ["Data-driven insights", "Real-time monitoring", "Better decision making"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "Customer Support Platform",
+    description: "Comprehensive customer support and helpdesk solution",
+    icon: Shield,
+    features: [
+      "Ticket Management",
+      "Live Chat",
+      "Knowledge Base",
+      "Automation Rules",
+      "Performance Analytics",
+      "Multi-channel Support"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,000/month",
+    benefits: ["Faster response times", "Better customer satisfaction", "Reduced support costs"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "E-commerce Platform",
+    description: "Complete online store solution with advanced features",
+    icon: ShoppingCart,
+    features: [
+      "Product Catalog",
+      "Shopping Cart",
+      "Payment Processing",
+      "Order Management",
+      "Inventory Tracking",
+      "Marketing Tools"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-10,000/month",
+    benefits: ["Complete e-commerce solution", "Mobile optimized", "SEO friendly"],
+    setupTime: "4-6 weeks"
+  },
+  {
+    title: "Document Management System",
+    description: "Secure document storage and collaboration platform",
+    icon: FileText,
+    features: [
+      "Document Storage",
+      "Version Control",
+      "Collaboration Tools",
+      "Access Control",
+      "Search & Indexing",
+      "Compliance Management"
+    ],
+    price: "Starting at $1,000/month",
+    marketPrice: "$1,800-4,000/month",
+    benefits: ["Secure document storage", "Better collaboration", "Compliance ready"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "API Gateway & Management",
+    description: "Comprehensive API management and gateway solution",
+    icon: Network,
+    features: [
+      "API Gateway",
+      "Rate Limiting",
+      "Authentication",
+      "Monitoring & Analytics",
+      "Developer Portal",
+      "API Documentation"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Secure API management", "Better performance", "Developer friendly"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "IoT Device Management",
+    description: "Complete IoT device monitoring and management platform",
+    icon: Wifi,
+    features: [
+      "Device Registration",
+      "Real-time Monitoring",
+      "Remote Control",
+      "Data Collection",
+      "Alert System",
+      "Analytics Dashboard"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-10,000/month",
+    benefits: ["Centralized device management", "Real-time insights", "Predictive maintenance"],
+    setupTime: "3-5 weeks"
+  },
+  {
+    title: "Blockchain Integration Platform",
+    description: "Blockchain integration and smart contract management",
+    icon: Shield,
+    features: [
+      "Smart Contract Deployment",
+      "Blockchain Integration",
+      "Wallet Management",
+      "Transaction Monitoring",
+      "Security Auditing",
+      "API Development"
+    ],
+    price: "Starting at $3,500/month",
+    marketPrice: "$5,000-15,000/month",
+    benefits: ["Blockchain integration", "Enhanced security", "Transparent transactions"],
+    setupTime: "4-6 weeks"
+  },
+  {
+    title: "Machine Learning Platform",
+    description: "End-to-end ML platform for model development and deployment",
+    icon: Brain,
+    features: [
+      "Model Training",
+      "Data Preprocessing",
+      "Model Deployment",
+      "A/B Testing",
+      "Monitoring & Alerts",
+      "AutoML Capabilities"
+    ],
+    price: "Starting at $4,000/month",
+    marketPrice: "$6,000-20,000/month",
+    benefits: ["Faster ML development", "Automated model training", "Production ready"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "Video Conferencing Platform",
+    description: "Custom video conferencing and collaboration solution",
+    icon: Video,
+    features: [
+      "HD Video Calls",
+      "Screen Sharing",
+      "Recording & Playback",
+      "Chat & Messaging",
+      "Meeting Scheduling",
+      "Integration APIs"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Custom branding", "Better security", "Integration ready"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "Mobile App Backend",
+    description: "Complete backend infrastructure for mobile applications",
+    icon: Smartphone,
+    features: [
+      "User Authentication",
+      "Database Management",
+      "Push Notifications",
+      "File Storage",
+      "API Development",
+      "Analytics Integration"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-10,000/month",
+    benefits: ["Scalable backend", "Real-time features", "Cross-platform support"],
+    setupTime: "3-5 weeks"
+  },
+  {
+    title: "AI-Powered Social Media Scheduler",
+    description: "Intelligent social media management with AI content optimization",
+    icon: Globe,
+    features: [
+      "AI Content Generation",
+      "Optimal Post Timing",
+      "Hashtag Optimization",
+      "Engagement Analytics",
+      "Multi-platform Publishing",
+      "Brand Voice Training"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-6,000/month",
+    benefits: ["40% increase in engagement", "Save 15+ hours/week", "AI-driven optimization"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Subscription Cancellation Service",
+    description: "Automated subscription management and cancellation platform",
+    icon: DollarSign,
+    features: [
+      "Subscription Discovery",
+      "One-click Cancellation",
+      "Spending Analytics",
+      "Renewal Alerts",
+      "Cost Optimization",
+      "Multi-provider Support"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-4,500/month",
+    benefits: ["Save $200+/month per user", "Automated management", "Spending insights"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "AI Meeting Cost Calculator",
+    description: "Real-time meeting cost analysis and optimization tool",
+    icon: Calculator,
+    features: [
+      "Real-time Cost Tracking",
+      "ROI Analysis",
+      "Meeting Optimization",
+      "Productivity Metrics",
+      "Cost Alerts",
+      "Team Analytics"
+    ],
+    price: "Starting at $800/month",
+    marketPrice: "$1,500-3,500/month",
+    benefits: ["Reduce meeting costs by 30%", "Better time management", "ROI visibility"],
+    setupTime: "1 week"
+  },
+  {
+    title: "AI-Powered Expense Tracker",
+    description: "Smart expense tracking with receipt scanning and categorization",
+    icon: Receipt,
+    features: [
+      "Receipt OCR Scanning",
+      "AI Categorization",
+      "Tax Preparation",
+      "Spending Insights",
+      "Multi-currency Support",
+      "Integration with Accounting"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,000/month",
+    benefits: ["90% faster expense entry", "Automated categorization", "Tax-ready reports"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Mental Health Support App",
+    description: "AI-powered mental wellness and support platform",
+    icon: Heart,
+    features: [
+      "AI Chat Support",
+      "Mood Tracking",
+      "Meditation Guides",
+      "Crisis Intervention",
+      "Progress Analytics",
+      "Professional Referrals"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["24/7 support availability", "Personalized care", "Privacy-focused"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "AI Content Repurposing Tool",
+    description: "Transform content across multiple formats using AI",
+    icon: FileText,
+    features: [
+      "Blog to Video Conversion",
+      "Podcast Transcription",
+      "Social Media Adaptation",
+      "Multi-language Translation",
+      "SEO Optimization",
+      "Brand Consistency"
+    ],
+    price: "Starting at $1,600/month",
+    marketPrice: "$2,800-6,000/month",
+    benefits: ["10x content output", "Consistent branding", "Multi-format reach"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Lead Scoring",
+    description: "Intelligent lead qualification and prioritization system",
+    icon: Target,
+    features: [
+      "Behavioral Analysis",
+      "Predictive Scoring",
+      "Lead Nurturing",
+      "CRM Integration",
+      "Performance Analytics",
+      "Custom Scoring Models"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-7,000/month",
+    benefits: ["35% higher conversion", "Better lead quality", "Automated prioritization"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Cloud Cost Optimization Tool",
+    description: "AI-driven cloud infrastructure cost analysis and optimization",
+    icon: Cloud,
+    features: [
+      "Cost Analysis",
+      "Resource Optimization",
+      "Waste Detection",
+      "Right-sizing Recommendations",
+      "Budget Alerts",
+      "Multi-cloud Support"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-6,500/month",
+    benefits: ["Save 25-40% on cloud costs", "Automated optimization", "Real-time monitoring"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Email Follow-up",
+    description: "Intelligent email automation and follow-up system",
+    icon: Mail,
+    features: [
+      "Smart Follow-up Timing",
+      "Personalized Templates",
+      "A/B Testing",
+      "Response Prediction",
+      "CRM Integration",
+      "Performance Analytics"
+    ],
+    price: "Starting at $1,400/month",
+    marketPrice: "$2,500-5,500/month",
+    benefits: ["60% higher response rates", "Automated nurturing", "Personalized outreach"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "AI Meeting Summarizer",
+    description: "Automatic meeting transcription and intelligent summarization",
+    icon: Video,
+    features: [
+      "Real-time Transcription",
+      "AI Summarization",
+      "Action Item Extraction",
+      "Multi-language Support",
+      "Integration with Calendars",
+      "Searchable Archive"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-4,500/month",
+    benefits: ["Save 2+ hours per meeting", "Never miss key points", "Searchable history"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "AI-Powered Password Manager",
+    description: "Advanced password security with AI-powered breach detection",
+    icon: Lock,
+    features: [
+      "Secure Password Generation",
+      "Breach Monitoring",
+      "Dark Web Scanning",
+      "Family Sharing",
+      "2FA Integration",
+      "Security Analytics"
+    ],
+    price: "Starting at $1,000/month",
+    marketPrice: "$1,800-3,500/month",
+    benefits: ["Enhanced security", "Proactive breach alerts", "Family protection"],
+    setupTime: "1 week"
+  },
+  {
+    title: "AI Local SEO Optimizer",
+    description: "Automated local search optimization and reputation management",
+    icon: MapPin,
+    features: [
+      "Google My Business Optimization",
+      "Review Management",
+      "Local Keyword Tracking",
+      "Competitor Analysis",
+      "Citation Building",
+      "Performance Reporting"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,000/month",
+    benefits: ["50% more local visibility", "Automated optimization", "Better local rankings"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Invoice Processing",
+    description: "Intelligent invoice automation and payment processing",
+    icon: FileText,
+    features: [
+      "OCR Invoice Reading",
+      "Automated Data Extraction",
+      "Approval Workflows",
+      "Payment Processing",
+      "Compliance Checking",
+      "Analytics Dashboard"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-7,500/month",
+    benefits: ["90% faster processing", "Reduced errors", "Automated workflows"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "AI Customer Sentiment Analyzer",
+    description: "Real-time customer feedback analysis and sentiment tracking",
+    icon: MessageSquare,
+    features: [
+      "Multi-channel Monitoring",
+      "Sentiment Analysis",
+      "Trend Detection",
+      "Alert System",
+      "Custom Dashboards",
+      "Integration APIs"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-6,000/month",
+    benefits: ["Real-time insights", "Proactive issue detection", "Better customer experience"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Code Review Assistant",
+    description: "Automated code quality analysis, security scanning, and performance optimization recommendations",
+    icon: Code,
+    features: [
+      "Automated Code Review",
+      "Security Vulnerability Detection",
+      "Performance Analysis",
+      "Code Quality Metrics",
+      "Best Practice Suggestions",
+      "Integration with Git",
+      "Team Collaboration Tools",
+      "Custom Rule Configuration"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-8,000/month",
+    benefits: ["Reduce bugs by 60%", "Improve code quality by 40%", "Save 15+ hours/week"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Smart Contract Management Platform",
+    description: "Blockchain-based contract creation, execution, and monitoring for businesses",
+    icon: FileText,
+    features: [
+      "Contract Templates",
+      "Digital Signatures",
+      "Automated Execution",
+      "Compliance Monitoring",
+      "Payment Integration",
+      "Dispute Resolution",
+      "Audit Trails",
+      "Multi-party Collaboration"
+    ],
+    price: "Starting at $3,000/month",
+    marketPrice: "$5,000-12,000/month",
+    benefits: ["Reduce contract disputes by 80%", "Automate 90% of processes", "Ensure compliance"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "AI-Powered Meeting Intelligence",
+    description: "Advanced meeting analytics, transcription, and action item tracking",
+    icon: Video,
+    features: [
+      "Real-time Transcription",
+      "Action Item Extraction",
+      "Meeting Analytics",
+      "Follow-up Automation",
+      "Integration with Calendars",
+      "Voice Recognition",
+      "Multi-language Support",
+      "Custom Reporting"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-4,500/month",
+    benefits: ["Increase meeting productivity by 50%", "Never miss action items", "Save 5+ hours/week"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Quantum-Safe Security Platform",
+    description: "Next-generation cybersecurity solutions preparing for quantum computing threats",
+    icon: Shield,
+    features: [
+      "Quantum Key Distribution",
+      "Post-Quantum Cryptography",
+      "Threat Assessment",
+      "Migration Planning",
+      "Compliance Monitoring",
+      "Risk Analysis",
+      "Security Audits",
+      "Future-Proofing"
+    ],
+    price: "Starting at $4,500/month",
+    marketPrice: "$8,000-20,000/month",
+    benefits: ["Future-proof security", "Quantum-ready encryption", "Compliance assurance"],
+    setupTime: "4-6 weeks"
+  },
+  {
+    title: "AI-Powered Personal Finance Manager",
+    description: "Intelligent personal finance tracking, budgeting, and investment recommendations",
+    icon: DollarSign,
+    features: [
+      "Expense Categorization",
+      "Budget Planning",
+      "Investment Analysis",
+      "Bill Reminders",
+      "Financial Goals",
+      "Tax Optimization",
+      "Credit Score Monitoring",
+      "Retirement Planning"
+    ],
+    price: "Starting at $800/month",
+    marketPrice: "$1,500-3,500/month",
+    benefits: ["Save 20% on expenses", "Optimize investments", "Achieve financial goals"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Smart Home Automation Platform",
+    description: "Comprehensive IoT platform for smart home management and automation",
+    icon: Home,
+    features: [
+      "Device Integration",
+      "Automation Rules",
+      "Energy Monitoring",
+      "Security Systems",
+      "Voice Control",
+      "Mobile App",
+      "Scheduling",
+      "Remote Access"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-6,000/month",
+    benefits: ["Reduce energy costs by 30%", "Enhance security", "Convenience automation"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Legal Document Analyzer",
+    description: "Intelligent legal document review, contract analysis, and compliance checking",
+    icon: FileText,
+    features: [
+      "Contract Analysis",
+      "Risk Assessment",
+      "Compliance Checking",
+      "Clause Extraction",
+      "Legal Research",
+      "Document Comparison",
+      "Deadline Tracking",
+      "Case Law Integration"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-10,000/month",
+    benefits: ["Reduce review time by 70%", "Improve accuracy by 90%", "Lower legal costs"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "Sustainable Business Analytics",
+    description: "Environmental impact tracking and sustainability reporting for businesses",
+    icon: Leaf,
+    features: [
+      "Carbon Footprint Tracking",
+      "Sustainability Metrics",
+      "ESG Reporting",
+      "Waste Management",
+      "Energy Optimization",
+      "Supply Chain Analysis",
+      "Compliance Monitoring",
+      "Goal Setting"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Meet sustainability goals", "Reduce environmental impact", "Improve brand reputation"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Talent Matching",
+    description: "Intelligent recruitment platform matching candidates with job opportunities",
+    icon: Users,
+    features: [
+      "Skill Assessment",
+      "Cultural Fit Analysis",
+      "Job Matching",
+      "Interview Scheduling",
+      "Background Checks",
+      "Onboarding Automation",
+      "Performance Tracking",
+      "Retention Analytics"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-7,500/month",
+    benefits: ["Reduce hiring time by 50%", "Improve match quality by 60%", "Lower recruitment costs"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Smart Inventory Optimization",
+    description: "AI-driven inventory management with demand forecasting and automated reordering",
+    icon: Package,
+    features: [
+      "Demand Forecasting",
+      "Automated Reordering",
+      "Stock Level Optimization",
+      "Supplier Management",
+      "Quality Control",
+      "Cost Analysis",
+      "Multi-location Support",
+      "Integration APIs"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-6,500/month",
+    benefits: ["Reduce stockouts by 90%", "Lower inventory costs by 25%", "Improve cash flow"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "AI-Powered Content Creation Suite",
+    description: "Comprehensive content creation platform with AI writing, design, and video tools",
+    icon: FileText,
+    features: [
+      "AI Writing Assistant",
+      "Image Generation",
+      "Video Creation",
+      "SEO Optimization",
+      "Brand Consistency",
+      "Multi-language Support",
+      "Content Calendar",
+      "Performance Analytics"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,500/month",
+    benefits: ["Create content 10x faster", "Improve engagement by 40%", "Reduce creative costs"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Blockchain Supply Chain Tracker",
+    description: "Transparent supply chain monitoring using blockchain technology",
+    icon: Network,
+    features: [
+      "Product Tracking",
+      "Authenticity Verification",
+      "Quality Assurance",
+      "Supplier Verification",
+      "Compliance Monitoring",
+      "Transparency Reports",
+      "Smart Contracts",
+      "Integration APIs"
+    ],
+    price: "Starting at $3,500/month",
+    marketPrice: "$6,000-15,000/month",
+    benefits: ["Ensure product authenticity", "Improve transparency", "Reduce fraud by 95%"],
+    setupTime: "3-5 weeks"
+  },
+  {
+    title: "AI-Powered Health Monitoring",
+    description: "Personal health tracking and wellness recommendations using AI",
+    icon: Heart,
+    features: [
+      "Health Metrics Tracking",
+      "Symptom Analysis",
+      "Medication Reminders",
+      "Wellness Recommendations",
+      "Doctor Integration",
+      "Emergency Alerts",
+      "Health Reports",
+      "Privacy Protection"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-4,000/month",
+    benefits: ["Improve health outcomes", "Early disease detection", "Reduce healthcare costs"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Smart Energy Management System",
+    description: "AI-powered energy optimization for homes and businesses",
+    icon: Zap,
+    features: [
+      "Energy Monitoring",
+      "Usage Optimization",
+      "Renewable Integration",
+      "Cost Analysis",
+      "Predictive Maintenance",
+      "Automated Controls",
+      "Reporting Dashboard",
+      "Mobile Access"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-7,000/month",
+    benefits: ["Reduce energy costs by 35%", "Optimize renewable usage", "Improve efficiency"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Customer Onboarding",
+    description: "Automated customer onboarding with personalized experiences",
+    icon: Users,
+    features: [
+      "Personalized Onboarding",
+      "Progress Tracking",
+      "Automated Communications",
+      "Document Collection",
+      "Verification Processes",
+      "Integration APIs",
+      "Analytics Dashboard",
+      "Custom Workflows"
+    ],
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,500-5,500/month",
+    benefits: ["Improve conversion by 40%", "Reduce onboarding time by 60%", "Enhance user experience"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Smart Fleet Management Platform",
+    description: "Comprehensive fleet tracking, optimization, and maintenance management",
+    icon: Truck,
+    features: [
+      "Real-time Tracking",
+      "Route Optimization",
+      "Fuel Management",
+      "Maintenance Scheduling",
+      "Driver Management",
+      "Performance Analytics",
+      "Compliance Monitoring",
+      "Mobile App"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-10,000/month",
+    benefits: ["Reduce fuel costs by 20%", "Improve efficiency by 30%", "Lower maintenance costs"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "AI-Powered Market Research Platform",
+    description: "Intelligent market analysis and competitive intelligence gathering",
+    icon: BarChart3,
+    features: [
+      "Market Analysis",
+      "Competitor Tracking",
+      "Trend Identification",
+      "Consumer Insights",
+      "Data Visualization",
+      "Report Generation",
+      "Alert System",
+      "Custom Dashboards"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Make data-driven decisions", "Identify opportunities", "Stay competitive"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Smart Event Management System",
+    description: "Comprehensive event planning and management with AI-powered insights",
+    icon: Calendar,
+    features: [
+      "Event Planning",
+      "Attendee Management",
+      "Venue Selection",
+      "Budget Tracking",
+      "Marketing Automation",
+      "Analytics Dashboard",
+      "Mobile App",
+      "Integration APIs"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-6,500/month",
+    benefits: ["Streamline event planning", "Improve attendee experience", "Increase ROI"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "AI-Powered Translation Platform",
+    description: "Real-time translation and localization services for global businesses",
+    icon: Globe,
+    features: [
+      "Real-time Translation",
+      "Document Translation",
+      "Website Localization",
+      "Voice Translation",
+      "Quality Assurance",
+      "Cultural Adaptation",
+      "API Integration",
+      "Custom Dictionaries"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-5,000/month",
+    benefits: ["Expand globally", "Improve communication", "Reduce translation costs"],
+    setupTime: "1-2 weeks"
+  },
+  {
+    title: "Smart Compliance Management",
+    description: "Automated compliance monitoring and reporting for various industries",
+    icon: Shield,
+    features: [
+      "Regulatory Monitoring",
+      "Compliance Tracking",
+      "Automated Reporting",
+      "Risk Assessment",
+      "Document Management",
+      "Audit Preparation",
+      "Alert System",
+      "Integration APIs"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-12,000/month",
+    benefits: ["Ensure compliance", "Reduce audit time by 70%", "Lower risk exposure"],
+    setupTime: "3-4 weeks"
   }
 ];
 
-const pricingPlans = [
+const industries = [
   {
-    name: 'Starter',
-    description: 'Perfect for small teams and MVPs',
-    price: '$299',
-    period: '/month',
-    features: [
-      'Up to 1,000 users',
-      'Basic analytics',
-      'Email support',
-      'Standard integrations'
-    ],
-    popular: false
+    title: "Healthcare",
+    description: "Patient management, telemedicine, and medical data processing",
+    icon: "🏥"
   },
   {
-    name: 'Professional',
-    description: 'Ideal for growing businesses',
-    price: '$799',
-    period: '/month',
-    features: [
-      'Up to 10,000 users',
-      'Advanced analytics',
-      'Priority support',
-      'Enhanced security',
-      '5 custom integrations',
-      'API access'
-    ],
-    popular: true
+    title: "Finance",
+    description: "Payment processing, risk analysis, and financial reporting",
+    icon: "💰"
   },
   {
-    name: 'Enterprise',
-    description: 'For large organizations',
-    price: 'Custom',
-    period: '',
-    features: [
-      'Unlimited users',
-      'Custom analytics',
-      'Dedicated support',
-      'Enterprise security',
-      'Unlimited integrations',
-      'Custom development'
-    ],
-    popular: false
+    title: "E-commerce",
+    description: "Inventory management, order processing, and customer analytics",
+    icon: "🛒"
+  },
+  {
+    title: "Education",
+    description: "Learning management, student tracking, and assessment tools",
+    icon: "🎓"
+  },
+  {
+    title: "Manufacturing",
+    description: "Production monitoring, quality control, and supply chain management",
+    icon: "🏭"
+  },
+  {
+    title: "Real Estate",
+    description: "Property management, lead tracking, and market analysis",
+    icon: "🏠"
   }
 ];
 
-export default function MicroSaaSPage() {
+const whyChooseUs = [
+  {
+    title: "Rapid Development",
+    description: "Fast delivery with agile methodologies and modern tech stack",
+    icon: "⚡"
+  },
+  {
+    title: "Scalable Solutions",
+    description: "Built to grow with your business from startup to enterprise",
+    icon: "📈"
+  },
+  {
+    title: "Cost-Effective",
+    description: "Affordable pricing with transparent costs and no hidden fees",
+    icon: "💰"
+  },
+  {
+    title: "24/7 Support",
+    description: "Round-the-clock support and maintenance for your solutions",
+    icon: "🛡️"
+  }
+>>>>>>> main
+];
+
+export default function MicroSaasPage() {
   return (
-    <Layout
-      title="Micro SaaS Solutions - Zion Tech Group"
-      description="Innovative micro SaaS solutions for specialized business needs. Rapid deployment, enterprise security, and built-in analytics."
-      keywords="micro SaaS, software as a service, business solutions, automation, productivity tools"
-    >
-      <div className="min-h-screen">
+<<<<<<< HEAD
+    <>
+      <Head>
+        <title>Micro SaaS Solutions - Zion Tech Group | 85+ Innovative Services</title>
+        <meta name="description" content="Discover 85+ cutting-edge micro SaaS solutions from Zion Tech Group. AI-powered tools, automation platforms, and innovative services for modern businesses. Real pricing, proven results." />
+        <meta name="keywords" content="micro SaaS, SaaS solutions, AI tools, business automation, software as a service, digital transformation" />
+        <meta property="og:title" content="Micro SaaS Solutions - Zion Tech Group" />
+        <meta property="og:description" content="85+ innovative micro SaaS solutions for modern businesses. AI-powered tools, automation, and digital transformation services." />
+        <meta property="og:url" content="https://ziontechgroup.com/micro-saas" />
+        <meta property="og:type" content="website" />
+      </Head>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-20">
-          <div className="container mx-auto px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-6xl font-bold text-white mb-6"
+            >
+              Micro SaaS Solutions
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
+            >
+              85+ innovative micro SaaS solutions designed to accelerate your business growth, 
+              automate processes, and drive digital transformation across all industries.
+            </motion.p>
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
+            >
+              <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                Get Started Today
+              </Link>
+              <Link href="/pricing" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                View Pricing
+              </Link>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-16 bg-blue-900/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+              >
+                <div className="text-4xl font-bold text-blue-400 mb-2">85+</div>
+                <div className="text-gray-300">Micro SaaS Solutions</div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <div className="text-4xl font-bold text-blue-400 mb-2">24/7</div>
+                <div className="text-gray-300">Support Available</div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                <div className="text-4xl font-bold text-blue-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Uptime Guarantee</div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <div className="text-4xl font-bold text-blue-400 mb-2">500+</div>
+                <div className="text-gray-300">Happy Clients</div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Our Micro SaaS Solutions
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive suite of micro SaaS solutions designed to solve real business challenges 
+                with cutting-edge technology and proven results.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {microSaasProducts.map((product, index) => (
+                <motion.div
+                  key={product.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20"
+                >
+                  <div className="flex items-center mb-4">
+                    <product.icon className="w-8 h-8 text-blue-400 mr-3" />
+                    <h3 className="text-xl font-bold text-white">{product.title}</h3>
+                    {product.popular && (
+                      <span className="ml-auto bg-blue-600 text-white text-xs px-2 py-1 rounded-full">
+=======
+  CheckCircle, 
+  ArrowRight, 
+  Clock, 
+  Star, 
+  DollarSign, 
+  Award, 
+  Globe, 
+  Lock, 
+  Cpu, 
+  Bot, 
+  FileText, 
+  Video, 
+  Mic, 
+  Code, 
+  Settings, 
+  Monitor, 
+  Smartphone, 
+  Server, 
+  Network, 
+  Car, 
+  Rocket, 
+  Heart, 
+  Building, 
+  Sprout, 
+  Mail, 
+  MessageSquare, 
+  Search, 
+  Eye, 
+  Target, 
+  TrendingUp, 
+  Package, 
+  Calendar, 
+  BookOpen, 
+  ShoppingCart, 
+  Home, 
+  Trash2, 
+  Camera, 
+  HardDrive,
+  Database
+} from 'lucide-react';
+
+const microSaasServices = [
+  {
+    title: 'AI Content Generator',
+    description: 'Generate high-quality content for blogs, social media, and marketing materials using AI',
+    icon: FileText,
+    features: ['AI-powered content creation', 'Multiple content types', 'SEO optimization', 'Brand voice consistency'],
+    pricing: '$29 - $99/month',
+    category: 'Content & Marketing',
+    popular: true,
+    benefits: ['Save time on content creation', 'Improve content quality', 'Scale content production', 'Maintain brand consistency'],
+    marketPrice: '$49/month',
+    link: '/contact'
+  },
+  {
+    title: 'Social Media Scheduler',
+    description: 'Schedule and manage your social media posts across multiple platforms',
+    icon: Calendar,
+    features: ['Multi-platform posting', 'Content calendar', 'Analytics dashboard', 'Team collaboration'],
+    pricing: '$19 - $79/month',
+    category: 'Social Media',
+    popular: true,
+    benefits: ['Save time on posting', 'Improve engagement', 'Better content planning', 'Team coordination'],
+    marketPrice: '$39/month',
+    link: '/contact'
+  },
+  {
+    title: 'Email Marketing Automation',
+    description: 'Automate your email marketing campaigns with personalized messages',
+    icon: Mail,
+    features: ['Email templates', 'Automation workflows', 'A/B testing', 'Analytics'],
+    pricing: '$39 - $149/month',
+    category: 'Email Marketing',
+    popular: true,
+    benefits: ['Increase email engagement', 'Save time on campaigns', 'Improve conversion rates', 'Better customer segmentation'],
+    marketPrice: '$79/month',
+    link: '/contact'
+  },
+  {
+    title: 'Project Management Tool',
+    description: 'Streamline your project management with task tracking and team collaboration',
+    icon: Target,
+    features: ['Task management', 'Team collaboration', 'Progress tracking', 'File sharing'],
+    pricing: '$9 - $29/user/month',
+    category: 'Productivity',
+    popular: false,
+    benefits: ['Improve team productivity', 'Better project visibility', 'Streamlined workflows', 'Enhanced collaboration'],
+    marketPrice: '$19/user/month',
+    link: '/contact'
+  },
+  {
+    title: 'Analytics Dashboard',
+    description: 'Comprehensive analytics and reporting for your business metrics',
+    icon: BarChart3,
+    features: ['Real-time analytics', 'Custom reports', 'Data visualization', 'Export capabilities'],
+    pricing: '$49 - $199/month',
+    category: 'Analytics',
+    popular: true,
+    benefits: ['Better business insights', 'Data-driven decisions', 'Improved performance tracking', 'Custom reporting'],
+    marketPrice: '$99/month',
+    link: '/contact'
+  },
+  {
+    title: 'Customer Support Chat',
+    description: 'Live chat widget for customer support with AI-powered responses',
+    icon: MessageSquare,
+    features: ['Live chat widget', 'AI responses', 'Ticket management', 'Multi-language support'],
+    pricing: '$29 - $99/month',
+    category: 'Customer Support',
+    popular: false,
+    benefits: ['Improve customer satisfaction', 'Reduce support workload', 'Faster response times', 'Better customer experience'],
+    marketPrice: '$59/month',
+    link: '/contact'
+  },
+  {
+    title: 'Invoice Generator',
+    description: 'Create and manage professional invoices for your business',
+    icon: FileText,
+    features: ['Invoice templates', 'Payment tracking', 'Automated reminders', 'Tax calculations'],
+    pricing: '$19 - $59/month',
+    category: 'Finance',
+    popular: false,
+    benefits: ['Professional invoicing', 'Faster payment processing', 'Better financial tracking', 'Reduced admin work'],
+    marketPrice: '$39/month',
+    link: '/contact'
+  },
+  {
+    title: 'Password Manager',
+    description: 'Secure password management for individuals and teams',
+    icon: Lock,
+    features: ['Secure storage', 'Password generation', 'Team sharing', 'Two-factor authentication'],
+    pricing: '$3 - $12/user/month',
+    category: 'Security',
+    popular: true,
+    benefits: ['Enhanced security', 'Convenient access', 'Team collaboration', 'Reduced password fatigue'],
+    marketPrice: '$6/user/month',
+    link: '/contact'
+  },
+  {
+    title: 'Time Tracking Tool',
+    description: 'Track time spent on projects and tasks for better productivity',
+    icon: Clock,
+    features: ['Time tracking', 'Project categorization', 'Reporting', 'Team management'],
+    pricing: '$7 - $25/user/month',
+    category: 'Productivity',
+    popular: false,
+    benefits: ['Better time management', 'Accurate billing', 'Productivity insights', 'Project optimization'],
+    marketPrice: '$15/user/month',
+    link: '/contact'
+  },
+  {
+    title: 'Form Builder',
+    description: 'Create custom forms and surveys with advanced features',
+    icon: Settings,
+    features: ['Drag-and-drop builder', 'Custom fields', 'Conditional logic', 'Data export'],
+    pricing: '$29 - $99/month',
+    category: 'Forms & Surveys',
+    popular: false,
+    benefits: ['Easy form creation', 'Better data collection', 'Customized workflows', 'Improved user experience'],
+    marketPrice: '$59/month',
+    link: '/contact'
+  },
+  {
+    title: 'Video Conferencing',
+    description: 'High-quality video conferencing with screen sharing and recording',
+    icon: Video,
+    features: ['HD video calls', 'Screen sharing', 'Recording', 'Virtual backgrounds'],
+    pricing: '$14 - $49/user/month',
+    category: 'Communication',
+    popular: true,
+    benefits: ['Better remote collaboration', 'Professional meetings', 'Easy screen sharing', 'Meeting recordings'],
+    marketPrice: '$29/user/month',
+    link: '/contact'
+  },
+  {
+    title: 'File Storage & Sharing',
+    description: 'Secure cloud storage with advanced sharing and collaboration features',
+    icon: Cloud,
+    features: ['Cloud storage', 'File sharing', 'Version control', 'Team collaboration'],
+    pricing: '$5 - $20/user/month',
+    category: 'Storage',
+    popular: true,
+    benefits: ['Secure file storage', 'Easy sharing', 'Version control', 'Team collaboration'],
+    marketPrice: '$12/user/month',
+    link: '/contact'
+  },
+  {
+    title: 'CRM System',
+    description: 'Customer relationship management with sales pipeline and contact management',
+    icon: Users,
+    features: ['Contact management', 'Sales pipeline', 'Email integration', 'Reporting'],
+    pricing: '$25 - $100/user/month',
+    category: 'CRM',
+    popular: true,
+    benefits: ['Better customer relationships', 'Improved sales tracking', 'Enhanced communication', 'Data organization'],
+    marketPrice: '$50/user/month',
+    link: '/contact'
+  },
+  {
+    title: 'Website Builder',
+    description: 'Drag-and-drop website builder with templates and hosting',
+    icon: Globe,
+    features: ['Drag-and-drop builder', 'Templates', 'Hosting included', 'SEO tools'],
+    pricing: '$12 - $49/month',
+    category: 'Web Development',
+    popular: false,
+    benefits: ['Easy website creation', 'Professional templates', 'No coding required', 'Built-in hosting'],
+    marketPrice: '$29/month',
+    link: '/contact'
+  },
+  {
+    title: 'E-commerce Platform',
+    description: 'Complete e-commerce solution with payment processing and inventory management',
+    icon: ShoppingCart,
+    features: ['Product management', 'Payment processing', 'Inventory tracking', 'Order management'],
+    pricing: '$29 - $299/month',
+    category: 'E-commerce',
+    popular: true,
+    benefits: ['Easy online selling', 'Payment processing', 'Inventory management', 'Order tracking'],
+    marketPrice: '$79/month',
+    link: '/contact'
+  },
+  {
+    title: 'Learning Management System',
+    description: 'Create and manage online courses with student tracking and assessments',
+    icon: BookOpen,
+    features: ['Course creation', 'Student management', 'Assessments', 'Progress tracking'],
+    pricing: '$39 - $199/month',
+    category: 'Education',
+    popular: false,
+    benefits: ['Easy course creation', 'Student engagement', 'Progress tracking', 'Assessment tools'],
+    marketPrice: '$99/month',
+    link: '/contact'
+  },
+  {
+    title: 'Appointment Scheduler',
+    description: 'Online booking system for appointments with calendar integration',
+    icon: Calendar,
+    features: ['Online booking', 'Calendar sync', 'Automated reminders', 'Payment processing'],
+    pricing: '$19 - $79/month',
+    category: 'Scheduling',
+    popular: false,
+    benefits: ['Reduce no-shows', 'Automated scheduling', 'Payment integration', 'Better customer experience'],
+    marketPrice: '$39/month',
+    link: '/contact'
+  },
+  {
+    title: 'Survey & Feedback Tool',
+    description: 'Create surveys and collect feedback with advanced analytics',
+    icon: Target,
+    features: ['Survey builder', 'Response analytics', 'Custom branding', 'Data export'],
+    pricing: '$25 - $99/month',
+    category: 'Feedback',
+    popular: false,
+    benefits: ['Better customer insights', 'Easy survey creation', 'Advanced analytics', 'Custom branding'],
+    marketPrice: '$59/month',
+    link: '/contact'
+  },
+  {
+    title: 'Team Communication',
+    description: 'Internal communication platform with channels and file sharing',
+    icon: MessageSquare,
+    features: ['Team channels', 'File sharing', 'Video calls', 'Integration'],
+    pricing: '$6 - $15/user/month',
+    category: 'Communication',
+    popular: true,
+    benefits: ['Better team communication', 'Centralized information', 'Easy file sharing', 'Integration options'],
+    marketPrice: '$10/user/month',
+    link: '/contact'
+  },
+  {
+    title: 'API Management',
+    description: 'Manage and monitor your APIs with rate limiting and analytics',
+    icon: Code,
+    features: ['API monitoring', 'Rate limiting', 'Analytics', 'Documentation'],
+    pricing: '$99 - $499/month',
+    category: 'Development',
+    popular: false,
+    benefits: ['Better API performance', 'Usage monitoring', 'Rate limiting', 'Developer experience'],
+    marketPrice: '$299/month',
+    link: '/contact'
+  },
+  {
+    title: 'Database Management',
+    description: 'Cloud database service with automatic backups and scaling',
+    icon: Database,
+    features: ['Cloud database', 'Automatic backups', 'Auto-scaling', 'Monitoring'],
+    pricing: '$25 - $200/month',
+    category: 'Database',
+    popular: false,
+    benefits: ['Reliable data storage', 'Automatic backups', 'Easy scaling', 'Performance monitoring'],
+    marketPrice: '$99/month',
+    link: '/contact'
+  }
+];
+
+const categories = [
+  { name: 'Content & Marketing', icon: FileText, count: 3 },
+  { name: 'Productivity', icon: Target, count: 4 },
+  { name: 'Communication', icon: MessageSquare, count: 3 },
+  { name: 'Analytics', icon: BarChart3, count: 2 },
+  { name: 'E-commerce', icon: ShoppingCart, count: 2 },
+  { name: 'Security', icon: Lock, count: 1 }
+];
+
+export default function MicroSaas() {
+  return (
+    <>
+      <Head>
+        <title>Micro SaaS Services - Zion Tech Group</title>
+        <meta name="description" content="Discover our innovative micro SaaS solutions designed to solve specific business problems. From content generation to project management, we have the tools you need." />
+      </Head>
+
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <div className="flex items-center justify-center mb-6">
-                <Cloud className="h-16 w-16 text-purple-400 mr-4" />
-                <h1 className="text-4xl md:text-6xl font-bold">
-                  Micro{' '}
-                  <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-                    SaaS
-                  </span>
-                </h1>
-              </div>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Scalable software solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics.
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Micro <span className="text-blue-600">SaaS</span> Solutions
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Powerful, focused tools that solve specific business problems. 
+                Our micro SaaS solutions are designed to be simple, effective, and affordable.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
                   Get Started
+                  <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
-                <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  View All Services
+                <Link
+                  href="/it-services"
+                  className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
+                >
+                  View IT Services
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Products Grid */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
+        {/* Categories Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
             <motion.div
-              className="text-center mb-16"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Micro SaaS Products
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Choose from our comprehensive suite of micro SaaS solutions designed to solve specific business challenges
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Service Categories</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Explore our micro SaaS solutions organized by category.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasProducts.map((product, index) => {
-                const IconComponent = product.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                  >
-                    <div className="flex items-center mb-4">
-                      <IconComponent className="h-8 w-8 text-purple-600 mr-3" />
-                      <div>
-                        <h3 className="text-lg font-bold text-gray-900">{product.title}</h3>
-                        <span className="text-sm text-purple-600 font-semibold">{product.category}</span>
-                      </div>
-                    </div>
-                    <p className="text-gray-600 mb-4">{product.description}</p>
-                    <div className="mb-4">
-                      <span className="text-lg font-semibold text-purple-600">{product.pricing}</span>
-                    </div>
-                    <div className="mb-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
-                      <ul className="text-sm text-gray-600 space-y-1">
-                        {product.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center">
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <a
-                        href={product.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-purple-600 hover:text-purple-800 font-semibold inline-flex items-center"
-                      >
-                        Learn More
-                        <ArrowRight className="w-4 h-4 ml-1" />
-                      </a>
-                      {product.popular && (
-                        <span className="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">
-                          Popular
-                        </span>
-                      )}
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Micro SaaS?
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Micro SaaS solutions offer unique advantages for modern businesses
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => {
-                const IconComponent = benefit.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="text-center"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                  >
-                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <IconComponent className="h-8 w-8 text-purple-600" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
-                    <p className="text-gray-600 mb-2">{benefit.description}</p>
-                    <div className="text-2xl font-bold text-purple-600">{benefit.stat}</div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Flexible Pricing Plans
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Choose the plan that fits your business needs
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+              {categories.map((category, index) => (
                 <motion.div
                   key={index}
-                  className={`bg-white rounded-lg shadow-lg p-8 ${
-                    plan.popular ? 'ring-2 ring-purple-500 relative' : ''
-                  }`}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors"
                 >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <div className="text-center">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                    <p className="text-gray-600 mb-6">{plan.description}</p>
-                    <div className="mb-6">
-                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                      <span className="text-gray-600">{plan.period}</span>
-                    </div>
-                    <ul className="space-y-3 mb-8">
-                      {plan.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-gray-600">
-                          <CheckCircle className="text-green-500 mr-3" size={20} />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
-                      Get Started
-                    </button>
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <category.icon className="w-6 h-6 text-blue-600" />
                   </div>
+                  <h3 className="text-xl font-semibold mb-2">{category.name}</h3>
+                  <p className="text-gray-600">{category.count} services available</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+        {/* Services Grid */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {microSaasServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <service.icon className="w-6 h-6 text-blue-600" />
+                    </div>
+                    {service.popular && (
+                      <span className="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
+                        Popular
+                      </span>
+                    )}
+                  </div>
+<<<<<<< HEAD
+                  
+                  <p className="text-gray-300 mb-4 text-sm">{product.description}</p>
+                  
+                  <div className="mb-4">
+                    <div className="text-2xl font-bold text-blue-400 mb-1">{product.pricing}</div>
+                    <div className="text-sm text-gray-400">Market Price: {product.marketPrice}</div>
+                  </div>
+                  
+                  <div className="mb-4">
+                    <span className="inline-block bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded-full mb-2">
+                      {product.category}
+                    </span>
+                  </div>
+                  
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                    <ul className="text-xs text-gray-300 space-y-1">
+                      {product.features.slice(0, 3).map((feature, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+=======
+    <Layout
+      title="Micro SaaS Solutions - Zion Tech Group"
+      description="Innovative micro SaaS solutions for modern businesses. Custom automation tools, data processing, and API integrations to accelerate your growth."
+      keywords="micro SaaS, SaaS development, automation tools, API integration, business intelligence, custom software"
+      canonical="https://ziontechgroup.com/micro-saas"
+    >
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <motion.h1 
+              className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              Innovative 
+              <span className="text-purple-400"> Micro SaaS Solutions</span>
+            </motion.h1>
+            <motion.p 
+              className="text-xl mb-8 text-blue-100"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Transform your business with our cutting-edge micro SaaS platforms. 
+              From workflow automation to data processing, we create powerful tools 
+              that drive efficiency and growth.
+            </motion.p>
+            <motion.div 
+              className="flex flex-col sm:flex-row justify-center gap-4"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <Link href="/contact" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                Get Free Consultation
+              </Link>
+              <Link href="/quote" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                Request Quote
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Overview */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Micro SaaS Solutions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Powerful, focused solutions designed to solve specific business challenges and drive operational efficiency.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {microSaasSolutions.map((solution, index) => (
+              <motion.div 
+                key={index}
+                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+              >
+                <div className="text-3xl mb-4">
+                  <solution.icon className="w-12 h-12 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">{solution.title}</h3>
+                <p className="text-gray-600 mb-4">{solution.description}</p>
+                
+                {/* Features */}
+                <ul className="text-sm text-gray-500 space-y-2 mb-4">
+                  {solution.features.slice(0, 4).map((feature, idx) => (
+                    <li key={idx} className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                  {solution.features.length > 4 && (
+                    <li className="text-purple-600 font-medium">
+                      +{solution.features.length - 4} more features
+                    </li>
+                  )}
+                </ul>
+
+                {/* Benefits */}
+                {solution.benefits && (
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Benefits:</h4>
+                    <ul className="text-xs text-gray-600 space-y-1">
+                      {solution.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <ArrowRight className="w-3 h-3 text-purple-500 mr-1" />
+                          {benefit}
+>>>>>>> main
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+<<<<<<< HEAD
+                  
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
+                    <div className="flex flex-wrap gap-1">
+                      {product.benefits?.slice(0, 2).map((benefit, idx) => (
+                        <span key={idx} className="text-xs bg-green-900/50 text-green-300 px-2 py-1 rounded">
+                          {benefit}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-2">
+                    <Link 
+                      href={product.link}
+                      className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg text-sm font-semibold transition-colors"
+                    >
+                      Learn More
+                    </Link>
+                    <Link 
+                      href="/contact"
+                      className="flex-1 bg-transparent border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white text-center py-2 px-4 rounded-lg text-sm font-semibold transition-colors"
+                    >
+                      Contact
+                    </Link>
+                  </div>
+=======
+                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <div className="space-y-2 mb-4">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="border-t pt-4">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-sm text-gray-500">Starting at</span>
+                      <span className="text-lg font-semibold text-blue-600">{service.pricing}</span>
+                    </div>
+                    <div className="flex justify-between items-center mb-4">
+                      <span className="text-sm text-gray-500">Market Price</span>
+                      <span className="text-sm text-gray-600">{service.marketPrice}</span>
+                    </div>
+                    <Link
+                      href={service.link}
+                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                    >
+                      Get Started
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+<<<<<<< HEAD
         {/* Contact Section */}
-        <section className="py-20 px-4 bg-white/5 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className="py-20 bg-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Get in touch with our experts to discuss your specific needs and find the perfect 
+              micro SaaS solution for your business.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="text-center">
+                <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
+                <p className="text-gray-300">{contactInfo.phone}</p>
+              </div>
+              <div className="text-center">
+                <Mail className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
+                <p className="text-gray-300">{contactInfo.email}</p>
+              </div>
+              <div className="text-center">
+                <MapPin className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
+                <p className="text-gray-300">{contactInfo.address}</p>
+              </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link 
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg inline-flex items-center"
+              >
+                Contact Us Today <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link 
+                href="/pricing"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg"
+              >
+                View All Pricing
+              </Link>
+            </div>
+=======
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your Micro SaaS?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Let's discuss your requirements and create a custom solution that fits your business needs.
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Choose the micro SaaS solution that fits your needs and start transforming your business today.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link 
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
                   href="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg inline-flex items-center justify-center"
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
                 >
-                  Get Free Consultation
-                  <ArrowRight className="ml-2" size={20} />
+                  Contact Us
+                  <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
-                <Link 
+                <Link
                   href="/ai-services"
-                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
                   View AI Services
                 </Link>
               </div>
             </motion.div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
           </div>
         </section>
       </div>
+    </>
+<<<<<<< HEAD
+=======
+                )}
+
+                {/* Pricing */}
+                <div className="border-t pt-4">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-lg font-bold text-purple-600">{solution.price}</span>
+                    {solution.setupTime && (
+                      <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                        {solution.setupTime}
+                      </span>
+                    )}
+                  </div>
+                  {solution.marketPrice && (
+                    <p className="text-xs text-gray-500">
+                      Market rate: {solution.marketPrice}
+                    </p>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our micro SaaS solutions are tailored to meet the unique needs of various industries.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {industries.map((industry, index) => (
+              <motion.div 
+                key={index}
+                className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+              >
+                <div className="text-4xl mb-4">{industry.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{industry.title}</h3>
+                <p className="text-gray-600">{industry.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Micro SaaS Solutions?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {whyChooseUs.map((item, index) => (
+              <motion.div 
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+              >
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">{item.icon}</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA Section */}
+      <section className="py-20 bg-purple-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Build Your Micro SaaS Solution?</h2>
+          <p className="text-xl mb-8 text-purple-100 max-w-3xl mx-auto">
+            Join hundreds of companies that trust Zion Tech Group for their micro SaaS needs. 
+            Let's discuss how we can help accelerate your digital transformation.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+            <Link href="/contact" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+              Get Free Consultation
+            </Link>
+          </div>
+          
+          {/* Contact Information */}
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+            <div className="flex items-center justify-center">
+              <Phone className="w-6 h-6 mr-2" />
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center justify-center">
+              <Mail className="w-6 h-6 mr-2" />
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center justify-center">
+              <MapPin className="w-6 h-6 mr-2" />
+              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
+>>>>>>> main
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
   );
 }
