@@ -1,4 +1,5 @@
       };
+<<<<<<< HEAD
 ;
       if (this.monitorProcesses) {;
         await this.checkProcessHealth();
@@ -190,6 +191,8 @@
 // Start the service;
 const healthMonitor = new HealthMonitor();
 healthMonitor.start().catch(console.error);
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
 ,
       if (this.monitorProcesses) {,
         await this.checkProcessHealth(),
@@ -380,4 +383,8 @@ healthMonitor.start().catch(console.error);
 ,
 // Start the service,
 const healthMonitor = new HealthMonitor(),
+<<<<<<< HEAD
 healthMonitor.start().catch(console.error),
+=======
+healthMonitor.start().catch(console.error),
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439

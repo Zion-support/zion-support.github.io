@@ -1,33 +1,27 @@
 import { PerformanceMetrics } from '../types';
-
 export const measurePerformance = (): PerformanceMetrics | null => {
   if (typeof window === 'undefined' || !('performance' in window)) {
     return null;
   }
-
   try {
     const navigation = performance.getEntriesByType(
       'navigation'
     )[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
-
     const fcp = paintEntries.find(
       entry => entry.name === 'first-contentful-paint'
     );
     const lcp = performance.getEntriesByType(
       'largest-contentful-paint'
     )[0] as PerformanceEntry;
-
     const cls = performance
       .getEntriesByType('layout-shift')
       .reduce((acc, entry) => {
         return acc + (entry as any).value;
       }, 0);
-
     const fid = performance.getEntriesByType(
       'first-input'
     )[0] as PerformanceEventTiming;
-
     return {
       loadTime: navigation.loadEventEnd - navigation.loadEventStart,
       firstContentfulPaint: fcp ? fcp.startTime : 0,
@@ -40,7 +34,6 @@ export const measurePerformance = (): PerformanceMetrics | null => {
     return null;
   }
 };
-
 export const getPerformanceScore = (
   metrics: PerformanceMetrics
 ): {
@@ -60,7 +53,6 @@ export const getPerformanceScore = (
     cumulativeLayoutShift: { good: 0.05, needsImprovement: 0.1 },
     firstInputDelay: { good: 50, needsImprovement: 100 },
   };
-
   const getScore = (
     value: number,
     threshold: { good: number; needsImprovement: number },
@@ -79,7 +71,6 @@ export const getPerformanceScore = (
       return 'needs-improvement';
     return 'poor';
   };
-
   const scores = {
     loadTime: getScore(metrics.loadTime, thresholds.loadTime),
     firstContentfulPaint: getScore(
@@ -100,14 +91,12 @@ export const getPerformanceScore = (
       thresholds.firstInputDelay
     ),
   };
-
   const poorCount = Object.values(scores).filter(
     score => score === 'poor'
   ).length;
   const needsImprovementCount = Object.values(scores).filter(
     score => score === 'needs-improvement'
   ).length;
-
   let overall: 'good' | 'needs-improvement' | 'poor';
   if (poorCount > 0) {
     overall = 'poor';
@@ -116,10 +105,8 @@ export const getPerformanceScore = (
   } else {
     overall = 'good';
   }
-
   return { overall, scores };
 };
-
 export const logPerformanceMetrics = (
   metrics: PerformanceMetrics,
   label = 'Performance Metrics'
@@ -140,4 +127,8 @@ export const logPerformanceMetrics = (
   );
   console.log('First Input Delay:', `${metrics.firstInputDelay.toFixed(2)}ms`);
   console.groupEnd();
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439

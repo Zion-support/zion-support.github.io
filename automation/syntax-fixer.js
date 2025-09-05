@@ -1,4 +1,5 @@
       };
+<<<<<<< HEAD
     });
 };
 ;
@@ -100,6 +101,8 @@ if (import.meta.url === `file: //${process.argv[1]}`) {;
 };
 ;
 export default SyntaxFixer;
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
     }),
   };
 ,
@@ -200,4 +203,8 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
   fixer.run().catch(console.error),
 };
 ,
+<<<<<<< HEAD
 export default SyntaxFixer,
+=======
+export default SyntaxFixer,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439

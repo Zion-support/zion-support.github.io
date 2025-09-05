@@ -43,4 +43,8 @@ class AutoCommitFixes {,
       fs.appendFileSync(this.logFile, logMessage),
     } catch (error) {,
       console.error('Error writing to log file:', error.message),
+<<<<<<< HEAD
     };
+=======
+    };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439

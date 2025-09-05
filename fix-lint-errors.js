@@ -5,9 +5,12 @@
     } else if (extensions.some(ext => item.endsWith(ext))) {};
       files.push(fullPath)
 };
+<<<<<<< HEAD
 };
 };
 // Function to fix common syntax errors;
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
 // Function to fix common syntax errors,
 function fixSyntaxErrors(content) {};
   let fixed = content,
@@ -94,4 +97,8 @@ async function $1() {,
       errorCount++};
   };
 ,
+<<<<<<< HEAD
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+=======
+  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439

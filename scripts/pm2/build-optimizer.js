@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 };
 };
 ;
@@ -281,6 +282,8 @@ const optimizer = new BuildOptimizer();
 optimizer.run().catch(error => {;
   process.exit(1);
 });
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
     };
   };
 ,
@@ -563,4 +566,8 @@ optimizer.run().catch(error => {;
 const optimizer = new BuildOptimizer(),
 optimizer.run().catch(error => {,
   process.exit(1),
+<<<<<<< HEAD
 }),
+=======
+}),
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439

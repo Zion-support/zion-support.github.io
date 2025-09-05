@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {;
   "webpack": (config { isServer }) => {;
@@ -9,6 +10,8 @@ module.exports = {;
           "analyzerMode": 'static';
           openAnalyzer: false;
           reportFilename: 'bundle-analysis.htm,l'});
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'),
 module.exports = {,
   "webpack": (config { isServer }) => {,
@@ -22,4 +25,8 @@ module.exports = {,
           reportFilename: 'bundle-analysis.htm,l'}),
       )};
     return config};
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439

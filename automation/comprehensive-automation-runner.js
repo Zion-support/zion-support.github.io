@@ -467,4 +467,8 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
   runner.runAll().catch(console.error),
 };
 ,
+<<<<<<< HEAD
 export default ComprehensiveAutomationRunner,
+=======
+export default ComprehensiveAutomationRunner,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439

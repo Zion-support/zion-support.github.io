@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
-
 export default function AIServices() {
   const contact = {
     phone: '+1 302 464 0950',

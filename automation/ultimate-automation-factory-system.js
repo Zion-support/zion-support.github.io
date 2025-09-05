@@ -225,4 +225,8 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
   }),
 };
 ,
+<<<<<<< HEAD
 export default UltimateAutomationFactory,
+=======
+export default UltimateAutomationFactory,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439

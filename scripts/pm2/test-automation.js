@@ -425,4 +425,8 @@ class TestAutomation {,
 const testAutomation = new TestAutomation(),
 testAutomation.run().catch(error => {,
   process.exit(1),
+<<<<<<< HEAD
 }),
+=======
+}),
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439

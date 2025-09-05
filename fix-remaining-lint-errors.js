@@ -8,7 +8,10 @@
       } else if (extensions.some(ext => item.endsWith(ext))) {};
         files.push(fullPath)
       };
+<<<<<<< HEAD
     } catch (error) {;
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
     } catch (error) {,
       // Skip files that can't be accessed'};
       continue
@@ -52,4 +55,8 @@ function main() {};
       errorCount++};
   };
 ,
+<<<<<<< HEAD
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+=======
+  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439

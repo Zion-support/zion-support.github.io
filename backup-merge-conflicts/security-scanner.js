@@ -86,4 +86,8 @@ class SecurityScanner {,
         }),
 ,
         const auditData = JSON.parse(auditOutput),
+<<<<<<< HEAD
         const vulnerabilities = auditData.vulnerabilities || {};
+=======
+        const vulnerabilities = auditData.vulnerabilities || {};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439

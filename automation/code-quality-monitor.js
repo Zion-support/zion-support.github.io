@@ -79,4 +79,8 @@ class CodeQualityMonitor {,
     } catch (error) {,
       this.log(`Code quality analysis failed: ${error.message}`, "ERROR"),
       return null,
+<<<<<<< HEAD
     };
+=======
+    };
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439

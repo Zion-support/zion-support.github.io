@@ -1,6 +1,5 @@
 import { createWriteStream } from 'fs';
 import { join } from 'path';
-
 const generateSitemap = () => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -29,15 +28,17 @@ const generateSitemap = () => {
     <priority>0.6</priority>
   </url>
 </urlset>`;
-
   const sitemapPath = join(process.cwd(), 'public', 'sitemap.xml');
   const writeStream = createWriteStream(sitemapPath);
   writeStream.write(sitemap);
   writeStream.end();
-
   console.log('Sitemap generated successfully at:', sitemapPath);
 };
+<<<<<<< HEAD
 ;
 generateSitemap();
 
 generateSitemap();
+=======
+generateSitemap();
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439

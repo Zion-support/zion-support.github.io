@@ -1,4 +1,5 @@
     { "to": "/services/ai-seo-optimizer", "label": "AI SEO Optimizer" };
+<<<<<<< HEAD
   ];
   return (;
     <div className="min-h-screen bg-gray-50 py-12">;
@@ -37,6 +38,8 @@ try {;
   fixVitestConfig();
   console.log("All critical files have been fixed!")} catch (error) {;
   console.error("Error fixing "files": ", error);
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
   ],
   return (,
     <div className="min-h-screen bg-gray-50 py-12">,

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 };
 };
 ;
@@ -127,6 +128,8 @@ if (import.meta.url === `file: //${process.argv[1]}`) {;
 };
 ;
 export default SecurityScanner;
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
     };
   };
 ,
@@ -255,4 +258,8 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
   scanner.run().catch(console.error),
 };
 ,
+<<<<<<< HEAD
 export default SecurityScanner,
+=======
+export default SecurityScanner,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439

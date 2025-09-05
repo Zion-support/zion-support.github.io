@@ -525,4 +525,8 @@ class SecurityScanner {,
 const scanner = new SecurityScanner(),
 scanner.run().catch(error => {,
   process.exit(1),
+<<<<<<< HEAD
 }),);
+=======
+}),);
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439

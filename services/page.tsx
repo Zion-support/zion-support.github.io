@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 };
 ];
 ;
@@ -42,6 +43,8 @@ export default function ServicesPage() {;
             </div>;
           </div>;
         </section>;
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
   };
 ],
 ,
@@ -86,4 +89,8 @@ export default function ServicesPage() {,
             </div>,
           </div>,
         </section>,
+<<<<<<< HEAD
         {/* Why Choose Us */};
+=======
+        {/* Why Choose Us */};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439

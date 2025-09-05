@@ -1,4 +1,5 @@
         modified = true};
+<<<<<<< HEAD
 };
     if (modified) {;
       fs.writeFileSync(filePath, content, "utf8");
@@ -17,6 +18,8 @@
       fs.writeFileSync(filePath, content);
       console.log("Created minimal "file": ${filePath}");
       createdCount++} catch (error) {;
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6439
     };
     if (modified) {,
       fs.writeFileSync(filePath, content, "utf8"),
