@@ -16,7 +16,7 @@ import {
   Award, 
   Globe, 
   Lock, 
-  Cpu as CpuIcon, 
+  Cpu, 
   Bot, 
   FileText, 
   Image, 
@@ -27,8 +27,7 @@ import {
   Monitor, 
   Smartphone, 
   Server, 
-  Network,
-  Database, 
+  Network, 
   Car, 
   Rocket, 
   Heart, 
@@ -45,9 +44,7 @@ import {
   BookOpen,
   ShoppingCart,
   Home,
-  Trash2,
-  Camera,
-  HardDrive
+  Database
 } from 'lucide-react';
 
 const microSaaSProducts = [{
@@ -167,11 +164,11 @@ const microSaaSProducts = [{
   },
   {
     title: 'Website Analytics & Heatmaps',
-    description: 'Advanced website analytics with heatmaps and user behavior tracking.'
-    icon: BarChart3}
-    features: ['User Behavior Tracking', 'Heatmaps', 'Conversion Funnels', 'A/B Testing'],}
-    pricing: '$29 - $199/month'
-    category: 'Analytics'}
+    description: 'Advanced website analytics with heatmaps and user behavior tracking.',
+    icon: BarChart3,
+    features: ['User Behavior Tracking', 'Heatmaps', 'Conversion Funnels', 'A/B Testing'],
+    pricing: '$29 - $199/month',
+    category: 'Analytics'
   },
   {
     title: 'Document Management System',
@@ -247,7 +244,7 @@ const microSaaSProducts = [{
   },
   {
     title: 'AI-Powered Code Review Assistant',
-description: 'Automated code review with security scanning, performance optimization, and best practices enforcement.',
+    description: 'Automated code review with security scanning, performance optimization, and best practices enforcement.',
     icon: Code,
     features: ['Automated Reviews', 'Security Scanning', 'Performance Analysis', 'Best Practices Check'],
     pricing: '$299 - $1,999/month',
@@ -424,6 +421,132 @@ description: 'Automated code review with security scanning, performance optimiza
     pricing: '$199 - $1,299/month',
     category: 'Voice Analytics',
     popular: true
+  },
+  {
+    title: 'AI-Powered Mental Health Companion',
+    description: 'Intelligent mental health tracking and support with AI-powered insights and interventions.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Crisis Detection', 'Personalized Support', 'Professional Integration'],
+    pricing: '$29 - $199/month',
+    category: 'Mental Health',
+    popular: true
+  },
+  {
+    title: 'Smart Home Energy Optimizer',
+    description: 'AI-driven energy optimization for smart homes with predictive analytics and cost savings.',
+    icon: Zap,
+    features: ['Energy Prediction', 'Cost Optimization', 'Device Scheduling', 'Usage Analytics'],
+    pricing: '$19 - $99/month',
+    category: 'Smart Home',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personal Stylist',
+    description: 'Virtual personal styling assistant with AI-powered fashion recommendations and wardrobe optimization.',
+    icon: ShoppingCart,
+    features: ['Style Analysis', 'Outfit Recommendations', 'Wardrobe Management', 'Shopping Integration'],
+    pricing: '$9 - $49/month',
+    category: 'Fashion Tech',
+    popular: true
+  },
+  {
+    title: 'Intelligent Learning Management System',
+    description: 'AI-powered learning platform with personalized content and adaptive assessments.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'Content Personalization', 'Progress Tracking', 'Skill Assessment'],
+    pricing: '$39 - $299/month',
+    category: 'EdTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Pet Care Assistant',
+    description: 'Comprehensive pet care management with health tracking and behavioral insights.',
+    icon: Heart,
+    features: ['Health Tracking', 'Behavior Analysis', 'Vet Integration', 'Care Reminders'],
+    pricing: '$14 - $79/month',
+    category: 'Pet Tech',
+    popular: true
+  },
+  {
+    title: 'Smart Travel Planning Platform',
+    description: 'AI-powered travel planning with personalized itineraries and real-time optimization.',
+    icon: Globe,
+    features: ['Itinerary Planning', 'Real-time Updates', 'Budget Optimization', 'Local Insights'],
+    pricing: '$19 - $99/month',
+    category: 'Travel Tech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Home Security System',
+    description: 'Intelligent home security with facial recognition and behavioral analysis.',
+    icon: Shield,
+    features: ['Facial Recognition', 'Behavioral Analysis', 'Smart Alerts', 'Mobile Integration'],
+    pricing: '$49 - $299/month',
+    category: 'Security',
+    popular: true
+  },
+  {
+    title: 'Intelligent Expense Management',
+    description: 'AI-powered expense tracking and categorization with automated receipt processing.',
+    icon: DollarSign,
+    features: ['Receipt OCR', 'Auto Categorization', 'Tax Preparation', 'Budget Tracking'],
+    pricing: '$9 - $49/month',
+    category: 'Finance',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Language Learning',
+    description: 'Personalized language learning with AI-driven conversation practice and pronunciation coaching.',
+    icon: Globe,
+    features: ['Conversation Practice', 'Pronunciation Coaching', 'Adaptive Curriculum', 'Progress Tracking'],
+    pricing: '$19 - $99/month',
+    category: 'Language Learning',
+    popular: true
+  },
+  {
+    title: 'Smart Fitness Coach Platform',
+    description: 'AI-powered personal fitness coaching with form analysis and workout optimization.',
+    icon: Heart,
+    features: ['Form Analysis', 'Workout Optimization', 'Injury Prevention', 'Progress Tracking'],
+    pricing: '$29 - $149/month',
+    category: 'Fitness Tech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Recipe Generator',
+    description: 'Intelligent recipe creation based on available ingredients and dietary preferences.',
+    icon: ShoppingCart,
+    features: ['Ingredient Analysis', 'Dietary Adaptation', 'Nutritional Optimization', 'Meal Planning'],
+    pricing: '$9 - $49/month',
+    category: 'Food Tech',
+    popular: true
+  },
+  {
+    title: 'Intelligent Sleep Optimization',
+    description: 'AI-powered sleep tracking and optimization with personalized recommendations.',
+    icon: Clock,
+    features: ['Sleep Analysis', 'Optimization Tips', 'Environmental Control', 'Progress Tracking'],
+    pricing: '$14 - $79/month',
+    category: 'Health Tech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Plant Care Assistant',
+    description: 'Smart plant care management with species identification and care recommendations.',
+    icon: Sprout,
+    features: ['Plant Identification', 'Care Reminders', 'Problem Diagnosis', 'Growth Tracking'],
+    pricing: '$9 - $49/month',
+    category: 'Garden Tech',
+    popular: true
+  },
+  {
+    title: 'Smart Water Quality Monitor',
+    description: 'IoT-based water quality monitoring with AI-powered analysis and alerts.',
+    icon: Shield,
+    features: ['Real-time Monitoring', 'Quality Analysis', 'Contamination Alerts', 'Health Insights'],
+    pricing: '$199 - $999/month',
+    category: 'Environmental Tech',
+    popular: true
   }
 ];
 
@@ -504,7 +627,7 @@ const pricingTiers = [{
     description: 'Ideal for growing businesses',
     price: '$799',
     period: '/month',
-features: ['Up to 10,000 users',
+    features: ['Up to 10,000 users',
       'Advanced analytics',
       'Priority support',
       'Enhanced security',
@@ -518,7 +641,7 @@ features: ['Up to 10,000 users',
     description: 'For large organizations',
     price: 'Custom',
     period: '',
-features: ['Unlimited users',
+    features: ['Unlimited users',
       'Custom analytics',
       'Dedicated support',
       'Enterprise security',
@@ -540,7 +663,7 @@ export default function MicroSaaSPage() {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">
-<div className="absolute inset-0">
+                  <div className="absolute inset-0">
                   <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
                   </div>
                   <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
@@ -553,7 +676,7 @@ export default function MicroSaaSPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-<div className="flex items-center justify-center mb-6">
+                  <div className="flex items-center justify-center mb-6">
                   <Cloud className="h-16 w-16 text-purple-400 mr-4" />
                   <h1 className="text-4xl md:text-6xl font-bold">
                 Micro{' '} <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
@@ -584,20 +707,20 @@ export default function MicroSaaSPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Micro SaaS Products</h2>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Micro SaaS Products</h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Ready-to-deploy SaaS solutions that solve specific business problems with minimal setup time.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaaSProducts.map((product, index) => {}
-              const IconComponent = product.icon;}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+            {microSaaSProducts.map((product, index) => {
+              const IconComponent = product.icon;
               return (
                 <motion.div
                   key={index}
-className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
-                    product.popular ? "ring-2 ring-purple-200" : ''
-                  }}
+                  className={`bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
+                    product.popular ? 'ring-2 ring-purple-200' : ''
+                  }`}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -613,7 +736,7 @@ className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all dur
                   )}
                   
                   <div className="flex items-center justify-between mb-4">
-<div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
+                  <div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
                   <IconComponent className="w-10 h-10" />
                   </div>
                   <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">
@@ -627,9 +750,9 @@ className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all dur
                     {product.description}
                   </p>
                   <div className="mb-4">
-<h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
+                  <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
                   <ul className="space-y-1">
-                      {product.features.map((feature, featureIndex) => (}
+                      {product.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
                   <CheckCircle className="w-3 h-3 text-purple-500 mr-2 flex-shrink-0" />
                           {feature}
@@ -642,13 +765,13 @@ className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all dur
                   </div>
                   <Link
                     href="/contact"
-                    className="w-full bg-purple-600 hover: bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
                   >
                     <span>Get Started</span>
                   <ArrowRight className="w-3 h-3 ml-1" />
                   </Link>
                   </motion.div>
-              ),
+              );
             })}
           </div>
                   </div>
@@ -664,18 +787,18 @@ className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all dur
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Micro SaaS?</h2>
+                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Micro SaaS?</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Built for modern businesses that need fast, reliable, and scalable solutions.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {features.map((feature, index) => {}
-              const IconComponent = feature.icon;}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+                    {features.map((feature, index) => {
+              const IconComponent = feature.icon;
               return (
                 <motion.div
                   key={index}
-className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
+                  className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -707,14 +830,14 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Proven Results</h2>
+                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Proven Results</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Our Micro SaaS solutions deliver measurable business impact.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => {}
-              const IconComponent = benefit.icon;}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {benefits.map((benefit, index) => {
+              const IconComponent = benefit.icon;
               return (
                 <motion.div
                   key={index}
@@ -753,18 +876,18 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose the plan that fits your business needs. No hidden fees, no surprises.`
+              Choose the plan that fits your business needs. No hidden fees, no surprises.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {pricingTiers.map((tier, index) => (`}
-              <motion.div`}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    {pricingTiers.map((tier, index) => (
+              <motion.div
                 key={index}
                 className={`p-8 rounded-xl shadow-lg ${
-                  tier.popular ? "bg-purple-50 border-2 border-purple-200" : 'bg-white'
-                }}
+                  tier.popular ? 'bg-purple-50 border-2 border-purple-200' : 'bg-white'
+                }`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -789,7 +912,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   <span className="text-gray-600">{tier.period}</span>
                   </div>
                   <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, featureIndex) => (}
+                  {tier.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" />
                       {feature}
@@ -800,8 +923,9 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     tier.popular
-? "bg-purple-600 hover:bg-purple-700 text-white" : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }}
+                      ? 'bg-purple-600 hover: bg-purple-700 text-white'
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                  }`}
                 >
                   <span>Choose Plan</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -812,133 +936,30 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   </div>
                   </section>
 
-      {/* Contact Information Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Get Started Today
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-              Ready to transform your business with cutting-edge micro SaaS solutions? Our expert team is here to help you build, deploy, and scale your next-generation software products. Contact us for a free consultation and discover how we can accelerate your digital transformation.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MessageSquare className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Free Consultation</h3>
-              <p className="text-gray-600 mb-4">Get expert advice on your micro SaaS project with our complimentary 30-minute consultation.</p>
-              <a href="tel:+13024640950" className="text-purple-600 font-semibold hover:text-purple-700">
-                Call Now: +1 302 464 0950
-              </a>
-            </motion.div>
-
-            <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
-              <p className="text-gray-600 mb-4">Send us your project details and we'll respond within 24 hours with a detailed proposal.</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-600 font-semibold hover:text-purple-700">
-                kleber@ziontechgroup.com
-              </a>
-            </motion.div>
-
-            <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Building className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our Office</h3>
-              <p className="text-gray-600 mb-4">Schedule an in-person meeting at our headquarters in Middletown, Delaware.</p>
-              <address className="text-purple-600 font-semibold not-italic">
-                364 E Main St STE 1008<br />
-                Middletown, DE 19709
-              </address>
-            </motion.div>
-          </div>
-
-          <motion.div
-            className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Why Choose Zion Tech Group?
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-300 mb-2">500+</div>
-                <div className="text-sm">Projects Delivered</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-300 mb-2">99.9%</div>
-                <div className="text-sm">Uptime Guarantee</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-300 mb-2">24/7</div>
-                <div className="text-sm">Support Available</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-300 mb-2">5★</div>
-                <div className="text-sm">Client Rating</div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-<div className="container mx-auto px-4 text-center">
+                  <div className="container mx-auto px-4 text-center">
                   <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl md: text-4xl font-bold mb-6">Ready to Launch Your Micro SaaS?</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Launch Your Micro SaaS?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Join 500+ successful businesses that trust Zion Tech Group for their micro SaaS development needs. Let&apos,s build the perfect solution for your business.
+              Let&apos;s build the perfect SaaS solution for your business needs. Fast, secure, and scalable.
             </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Start Building
               </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
-</div>
+                  </div>
                   </motion.div>
                   </div>
                   </section>
                   </div>
+  );
 }
