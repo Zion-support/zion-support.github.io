@@ -1,134 +1,129 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Cloud, 
-  Server, 
-  Database, 
-  Shield, 
+  Atom, 
+  Cpu, 
   Zap, 
+  Brain, 
   CheckCircle,
   ArrowRight,
-  Code,
-  GitBranch,
-  Container,
-  Monitor,
-  Settings
+  CircuitBoard,
+  Target,
+  Lock,
+  TrendingUp,
+  Lightbulb,
+  Shield
 } from 'lucide-react';
 import Layout from '../../components/Layout';
 
 const services = [
   {
-    icon: Cloud,
-    title: 'Cloud Migration',
-    description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',
-    features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Cost Optimization']
+    icon: Atom,
+    title: 'Quantum Algorithm Development',
+    description: 'Design and implement quantum algorithms for complex optimization and simulation problems.',
+    features: ['Quantum Optimization', 'Quantum Simulation', 'Algorithm Design', 'Performance Analysis']
   },
   {
-    icon: Server,
-    title: 'Infrastructure as Code',
-    description: 'Automate infrastructure provisioning and management using Terraform, CloudFormation, and Ansible.',
-    features: ['Terraform Implementation', 'CloudFormation Templates', 'Ansible Automation', 'GitOps Workflows']
+    icon: Cpu,
+    title: 'Quantum Computing Infrastructure',
+    description: 'Set up and manage quantum computing environments and hybrid classical-quantum systems.',
+    features: ['Quantum Hardware Setup', 'Hybrid Systems', 'Cloud Quantum Access', 'Performance Monitoring']
   },
   {
-    icon: Container,
-    title: 'Container Orchestration',
-    description: 'Deploy and manage containerized applications with Kubernetes and Docker.',
-    features: ['Kubernetes Setup', 'Docker Implementation', 'Service Mesh', 'Auto-scaling']
+    icon: Brain,
+    title: 'Quantum Machine Learning',
+    description: 'Leverage quantum computing for advanced machine learning and AI applications.',
+    features: ['Quantum Neural Networks', 'Quantum Feature Maps', 'Quantum Optimization', 'Hybrid ML Models']
   },
   {
-    icon: GitBranch,
-    title: 'CI/CD Pipelines',
-    description: 'Build robust continuous integration and deployment pipelines for faster, reliable releases.',
-    features: ['Jenkins Setup', 'GitLab CI/CD', 'GitHub Actions', 'Automated Testing']
+    icon: CircuitBoard,
+    title: 'Quantum Software Development',
+    description: 'Build quantum software applications using Qiskit, Cirq, and other quantum frameworks.',
+    features: ['Qiskit Development', 'Cirq Programming', 'Quantum Circuits', 'Error Correction']
   },
   {
-    icon: Monitor,
-    title: 'Monitoring & Observability',
-    description: 'Implement comprehensive monitoring, logging, and alerting for your applications.',
-    features: ['Prometheus & Grafana', 'ELK Stack', 'APM Tools', 'Custom Dashboards']
+    icon: Lock,
+    title: 'Quantum Cryptography',
+    description: 'Implement quantum-safe cryptographic solutions for enhanced security.',
+    features: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Quantum Random Numbers', 'Security Analysis']
   },
   {
-    icon: Shield,
-    title: 'DevSecOps',
-    description: 'Integrate security practices into your development and operations workflows.',
-    features: ['Security Scanning', 'Compliance Automation', 'Secrets Management', 'Vulnerability Assessment']
+    icon: Target,
+    title: 'Quantum Consulting',
+    description: 'Strategic guidance on quantum computing adoption and implementation.',
+    features: ['Technology Assessment', 'Use Case Analysis', 'ROI Evaluation', 'Implementation Planning']
   }
 ];
 
-const benefits = [
+const applications = [
   {
-    icon: Zap,
-    title: 'Faster Deployments',
-    description: 'Reduce deployment time from hours to minutes with automated CI/CD pipelines.'
+    icon: TrendingUp,
+    title: 'Financial Modeling',
+    description: 'Quantum algorithms for portfolio optimization and risk analysis.'
+  },
+  {
+    icon: Lightbulb,
+    title: 'Drug Discovery',
+    description: 'Molecular simulation and drug design using quantum computing.'
   },
   {
     icon: Shield,
-    title: 'Enhanced Security',
-    description: 'Implement security best practices throughout your development lifecycle.'
+    title: 'Cybersecurity',
+    description: 'Quantum-resistant encryption and secure communications.'
   },
   {
-    icon: Monitor,
-    title: 'Better Monitoring',
-    description: 'Gain real-time insights into your application performance and infrastructure health.'
-  },
-  {
-    icon: Settings,
-    title: 'Cost Optimization',
-    description: 'Optimize cloud costs through right-sizing, auto-scaling, and resource management.'
+    icon: Brain,
+    title: 'AI & Machine Learning',
+    description: 'Quantum machine learning for complex pattern recognition.'
   }
 ];
 
 const technologies = [
-  { name: 'AWS', category: 'Cloud Platforms' },
-  { name: 'Azure', category: 'Cloud Platforms' },
-  { name: 'Google Cloud', category: 'Cloud Platforms' },
-  { name: 'Kubernetes', category: 'Container Orchestration' },
-  { name: 'Docker', category: 'Containerization' },
-  { name: 'Terraform', category: 'Infrastructure as Code' },
-  { name: 'Ansible', category: 'Configuration Management' },
-  { name: 'Jenkins', category: 'CI/CD' },
-  { name: 'GitLab CI', category: 'CI/CD' },
-  { name: 'GitHub Actions', category: 'CI/CD' },
-  { name: 'Prometheus', category: 'Monitoring' },
-  { name: 'Grafana', category: 'Monitoring' },
-  { name: 'ELK Stack', category: 'Logging' },
-  { name: 'Helm', category: 'Package Management' },
-  { name: 'Istio', category: 'Service Mesh' }
+  { name: 'IBM Qiskit', category: 'Quantum Software' },
+  { name: 'Google Cirq', category: 'Quantum Software' },
+  { name: 'Microsoft Q#', category: 'Quantum Programming' },
+  { name: 'Rigetti Forest', category: 'Quantum Platform' },
+  { name: 'D-Wave Ocean', category: 'Quantum Annealing' },
+  { name: 'IonQ', category: 'Quantum Hardware' },
+  { name: 'Honeywell Quantum', category: 'Quantum Hardware' },
+  { name: 'IBM Quantum', category: 'Cloud Quantum' },
+  { name: 'Amazon Braket', category: 'Quantum Cloud' },
+  { name: 'Azure Quantum', category: 'Quantum Cloud' }
 ];
 
 const processSteps = [
   {
     step: '01',
     title: 'Assessment',
-    description: 'Analyze your current infrastructure and identify migration opportunities.'
+    description: 'Evaluate your quantum computing readiness and identify opportunities.'
   },
   {
     step: '02',
-    title: 'Planning',
-    description: 'Create a detailed migration plan with timelines and resource requirements.'
+    title: 'Strategy',
+    description: 'Develop a quantum computing strategy aligned with your business goals.'
   },
   {
     step: '03',
     title: 'Implementation',
-    description: 'Execute the migration with minimal downtime and maximum efficiency.'
+    description: 'Build and deploy quantum solutions using appropriate technologies.'
   },
   {
     step: '04',
     title: 'Optimization',
-    description: 'Fine-tune your cloud infrastructure for performance and cost efficiency.'
+    description: 'Continuously optimize quantum algorithms and improve performance.'
   }
 ];
 
-export default function CloudDevOpsPage() {
+export default function QuantumComputingPage() {
   return (
     <Layout
-      title="Cloud & DevOps Services - Zion Tech Group"
-      description="Transform your infrastructure with our comprehensive cloud migration and DevOps services. AWS, Azure, Kubernetes, and CI/CD expertise."
-      keywords="cloud migration, DevOps, AWS, Azure, Kubernetes, CI/CD, infrastructure as code, cloud consulting"
+      title="Quantum Computing Services - Zion Tech Group"
+      description="Explore the future of computing with our quantum computing services. Quantum algorithms, machine learning, and cryptography solutions."
+      keywords="quantum computing, quantum algorithms, quantum machine learning, quantum cryptography, Qiskit, quantum software"
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -137,24 +132,24 @@ export default function CloudDevOpsPage() {
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl font-bold mb-6">
-                Cloud & DevOps Excellence
+                Quantum Computing Solutions
               </h1>
-              <p className="text-xl text-blue-100 mb-8">
-                Accelerate your digital transformation with our comprehensive cloud migration 
-                and DevOps services. From infrastructure automation to continuous deployment.
+              <p className="text-xl text-purple-100 mb-8">
+                Harness the power of quantum computing to solve complex problems 
+                and unlock new possibilities for your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a
                   href="#services"
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Explore Services
                 </a>
                 <a
                   href="/contact"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  Get Started
+                  Start Quantum Project
                 </a>
               </div>
             </motion.div>
@@ -171,11 +166,11 @@ export default function CloudDevOpsPage() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Our Cloud & DevOps Services
+                Our Quantum Computing Services
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From cloud migration to DevOps automation, we provide end-to-end solutions 
-                to modernize your infrastructure and accelerate your development cycles.
+                From quantum algorithm development to infrastructure setup, we provide 
+                comprehensive quantum computing solutions.
               </p>
             </motion.div>
 
@@ -188,8 +183,8 @@ export default function CloudDevOpsPage() {
                   transition={{ duration: 0.6, delay: 0.1 * index }}
                   className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
-                  <div className="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                    <service.icon className="w-8 h-8 text-blue-600" />
+                  <div className="bg-purple-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                    <service.icon className="w-8 h-8 text-purple-600" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     {service.title}
@@ -211,7 +206,7 @@ export default function CloudDevOpsPage() {
           </div>
         </section>
 
-        {/* Benefits */}
+        {/* Applications */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
@@ -221,16 +216,16 @@ export default function CloudDevOpsPage() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Our Cloud & DevOps Services?
+                Quantum Computing Applications
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our expertise in cloud technologies and DevOps practices delivers measurable 
-                results for your business.
+                Discover how quantum computing can revolutionize your industry 
+                and solve previously intractable problems.
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {applications.map((app, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -238,14 +233,14 @@ export default function CloudDevOpsPage() {
                   transition={{ duration: 0.6, delay: 0.1 * index }}
                   className="text-center"
                 >
-                  <div className="bg-gradient-to-br from-blue-500 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-white" />
+                  <div className="bg-gradient-to-br from-purple-500 to-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <app.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    {benefit.title}
+                    {app.title}
                   </h3>
                   <p className="text-gray-600">
-                    {benefit.description}
+                    {app.description}
                   </p>
                 </motion.div>
               ))}
@@ -263,11 +258,11 @@ export default function CloudDevOpsPage() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Technologies We Work With
+                Quantum Technologies
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We leverage the latest cloud and DevOps technologies to deliver 
-                robust, scalable solutions.
+                We work with leading quantum computing platforms and frameworks 
+                to deliver cutting-edge solutions.
               </p>
             </motion.div>
 
@@ -302,11 +297,11 @@ export default function CloudDevOpsPage() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Our Cloud & DevOps Process
+                Our Quantum Process
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We follow a proven methodology to ensure successful cloud migration 
-                and DevOps implementation.
+                We follow a systematic approach to ensure successful quantum 
+                computing implementation and maximum value.
               </p>
             </motion.div>
 
@@ -319,7 +314,7 @@ export default function CloudDevOpsPage() {
                   transition={{ duration: 0.6, delay: 0.1 * index }}
                   className="text-center"
                 >
-                  <div className="bg-gradient-to-br from-blue-500 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="bg-gradient-to-br from-purple-500 to-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl font-bold text-white">{step.step}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -335,7 +330,7 @@ export default function CloudDevOpsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -343,25 +338,25 @@ export default function CloudDevOpsPage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold mb-4">
-                Ready to Transform Your Infrastructure?
+                Explore the Quantum Future
               </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Let our cloud and DevOps experts help you build a scalable, 
-                secure, and efficient infrastructure.
+              <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+                Be at the forefront of quantum computing innovation. Let our experts 
+                help you harness quantum power for your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a
                   href="/contact"
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center space-x-2"
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center space-x-2"
                 >
-                  <span>Start Your Cloud Journey</span>
+                  <span>Start Quantum Project</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
                 <a
                   href="/case-studies"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  View Case Studies
+                  View Quantum Cases
                 </a>
               </div>
             </motion.div>
