@@ -26,7 +26,6 @@ const services = [;
     popular: true;,
   },
   {
-<<<<<<< HEAD
     title: "Micro SaaS",
     description: "Innovative software as a service solutions including AI-powered tools, blockchain applications, smart energy management, and specialized business automation platforms.",
     icon: Cloud,
@@ -70,42 +69,6 @@ const benefits = [;
 <<<<<<< HEAD
     title: "24/7 Support",
     description: "Round-the-clock technical support"
-=======
-    title: "24/7 Support",",
-    description: "Round-the-clock technical support"";,
-=======;
-    "title": "Micro SaaS",",
-    "description": "Innovative software as a service solutions including AI-powered tools, blockchain applications, smart energy management, and specialized business automation platforms.",",
-    "icon": Cloud,",
-    "href": "/micro-saas",",
-    "features": ["AI-Powered Tools", "Blockchain Analytics", "Smart Energy Management", "Voice AI Assistants", "Predictive Maintenance", "Smart Contracts", "Green Technology", "Advanced Automation"],",
-    "pricing": "Starting at $29/month",",
-    "count": "45+ Products",",
-    "popular": true";,
-  }
-;];,
-
-const benefits = [{
-    "icon": CheckCircle,",
-    "title": "Expert Team",",
-    "description": "50+ certified professionals with years of experience"";,
-  },
-  {
-    "icon": Star,",
-    "title": "Proven Results",",
-    "description": "500+ successful projects delivered"";,
-  },
-  {
-    "icon": Zap,",
-    "title": "Fast Delivery",",
-    "description": "Agile development with rapid deployment"";,
-  },
-  {
-    "icon": Shield,",
-    "title": "24/7 Support",",
-    "description": "Round-the-clock technical support"";,
->>>>>>> cursor/add-new-services-and-deploy-updates-469e;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2966
   }
 ;];,
 
@@ -169,58 +132,35 @@ export default function ServicesPage() {}
               return (;,
                 <motion.div);
                   key={index}
-<<<<<<< HEAD
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative"
-=======
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative"",
-<<<<<<< HEAD;,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2966
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -5 }}
-<<<<<<< HEAD
                 >
-                  <div className="flex items-center mb-4">
-                    <service.icon className="h-12 w-12 text-blue-600 mr-4" />
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
-                      <p className="text-sm text-blue-600 font-semibold">{service.count}</p>
+                  {service.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
                     </div>
-=======
-=======,
-                  initial={{ opacity: 0, "y": 30 }}",
-                  whileInView={{ "opacity": 1, "y": 0 }}",
-                  transition={{ "duration": 0.8, "delay": index * 0.1 }}",
-                  viewport={{ "once": true }}",
-                  whileHover={{ "y": -5 }}",
->>>>>>> cursor/add-new-services-and-deploy-updates-469e;,
-                >;
-                  {service.popular && (;
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">";
-                      <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">"}),
-                        Most Popular;,
-                      </span>;
-                    </div>;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2966
                   )}
-                  <div className="text-blue-600 mb-6 group-hover:text-purple-600 transition-colors">",
-                    <IconComponent className="w-12 h-12" />";,
-                  </div>;
-                  <div className="flex items-center justify-between mb-4">";
-                    <h3 className="text-2xl font-bold text-gray-900">";
+                  <div className="text-blue-600 mb-6 group-hover:text-purple-600 transition-colors">
+                    <IconComponent className="w-12 h-12" />
+                  </div>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-2xl font-bold text-gray-900">
                       {service.title}
-                    </h3>,
-                    <span className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">";,
+                    </h3>
+                    <span className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">
                       {service.count}
-                    </span>,
-                  </div>;,
-                  <p className="text-gray-600 mb-6 leading-relaxed">";
+                    </span>
+                  </div>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
                     {service.description}
-                  </p>,
+                  </p>
                   
-<<<<<<< HEAD
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
@@ -287,17 +227,11 @@ export default function ServicesPage() {}
               return (;,
                 <motion.div);
                   key={index}
-<<<<<<< HEAD
                   className="text-center"
-=======
-                  className="text-center"",
-<<<<<<< HEAD;,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2966
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="h-8 w-8 text-blue-600" />

@@ -3,38 +3,33 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
-=======
-import _React from 'react';,
-import Link from 'next/link';';
-import { motion } from 'framer-motion';,
-import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';,
-import Layout from '../components/Layout';';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2966
+import Layout from '../components/layout/Layout';
 
-const stats = [;
-  { number: '99.9%, label: 'Uptime Guarantee' },',
-  { number: '24/7, label: 'Support Available' },',
-  { number: '500+, label: 'Projects Completed' },',
-  { number: '50+, label: 'Expert Team Members' }',
-;];,
+const stats = [
+  { number: '99.9%', label: 'Uptime Guarantee' },
+  { number: '24/7', label: 'Support Available' },
+  { number: '750+', label: 'Projects Completed' },
+  { number: '175+', label: 'Services & Solutions' },
+  { number: '75+', label: 'Expert Team Members' },
+  { number: '15+', label: 'Years Experience' }
+];
 
-const services = [;
-  {}
-    title: "AI Services",",
-    description: "Cutting-edge artificial intelligence solutions",",
+const services = [
+  {
+    title: "AI Services",
+    description: "60+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, and quantum AI",
     icon: Brain,
     href: "/ai-services",",
   },
-  {}
-    title: "IT Services", ",
-    description: "Comprehensive information technology services",",
+  {
+    title: "IT Services", 
+    description: "50+ comprehensive IT services from cloud infrastructure to cybersecurity and quantum computing",
     icon: Network,
     href: "/it-services",",
   },
-  {}
-    title: "Micro SaaS",",
-    description: "Scalable software as a service solutions",",
+  {
+    title: "Micro SaaS",
+    description: "65+ innovative micro SaaS solutions for modern businesses across all industries",
     icon: Cloud,
     href: "/micro-saas",",
   }
@@ -43,19 +38,8 @@ const services = [;
 <<<<<<< HEAD
 export default function HomePage() {
   return (
-    <MainLayout>
+    <Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-=======
-export default function HomePage() {}
-  return (;,
-<<<<<<< HEAD;
-    <Layout>;
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-=======;
-    <MainLayout>;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
->>>>>>> cursor/add-new-services-and-deploy-updates-469e;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2966
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">",
@@ -71,28 +55,28 @@ export default function HomePage() {}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"",
-          >;,
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">";
-              Transform Your Business with{' '}',
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">";,
-                AI & Technology;
-              </span>;
-            </h1>;
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
-              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.,
-            </p>;,
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">";
-                Get Started Today;
-              </Link>;
-              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">";
-                Explore Services;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Transform Your Business with{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                AI & Technology
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, quantum computing, blockchain, IoT, and digital transformation services. We deliver 175+ innovative solutions to transform your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Get Started Today
+              </Link>
+              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Services Section */}
       <section className="py-20 bg-gray-50">",
@@ -103,14 +87,14 @@ export default function HomePage() {}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >,
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">";,
-              Our Core Services;
-            </h2>;
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">";
-              We provide comprehensive technology solutions to help your business thrive in the digital age. From innovative micro SaaS applications to cutting-edge AI services and enterprise IT solutions.;
-            </p>;
-          </motion.div>;
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Our Core Services
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              We provide comprehensive technology solutions to help your business thrive in the digital age. From innovative micro SaaS applications to cutting-edge AI services, quantum computing, blockchain solutions, and enterprise IT infrastructure. Our 175+ services cover every aspect of modern technology needs.
+            </p>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">";
             {services.map((service, index) => {}
@@ -149,11 +133,11 @@ export default function HomePage() {}
       </section>;
 
       {/* Stats Section */}
-      <section className="py-20 bg-white">",
-        <div className="container mx-auto px-4">";,
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
-            {stats.map((stat, index) => (,
-              <motion.div}),
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
                 key={index}
                 className="text-center"",
                 initial={{ opacity: 0, y: 30 }}
@@ -171,13 +155,6 @@ export default function HomePage() {}
           </div>
         </div>
       </section>
-=======
-          </div>,
-        </div>;,
-      </section>;
-<<<<<<< HEAD;
-=======;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2966
 
       {/* Contact Information Section */}
       <section className="py-20 bg-white">",
@@ -248,31 +225,6 @@ export default function HomePage() {}
           </motion.div>
         </div>
       </section>
-=======
-              <div className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors">";
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">";
-                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">";
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />",
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />",
-                  </svg>;,
-                </div>;
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>";
-                <p className="text-gray-600 mb-2">";
-                  <a href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" ";
-                     target="_blank" ";
-                     rel="noopener noreferrer"";
-                     className="text-purple-600 hover:text-purple-800">";
-                    364 E Main St STE 1008<br />;
-                    Middletown, DE 19709,
-                  </a>;,
-                </p>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
->>>>>>> cursor/add-new-services-and-deploy-updates-469e;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2966
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">",
@@ -302,33 +254,6 @@ export default function HomePage() {}
         </div>
       </section>
       </div>
-    </MainLayout>
-=======
-          >,
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">";,
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className="text-xl mb-8 max-w-2xl mx-auto">";
-              Let our expert team help you leverage cutting-edge technology to drive growth and innovation.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
-                Get Free Consultation;
-              </Link>;
-              <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
-                Learn About Us;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-<<<<<<< HEAD;
-    </div>;
-    </Layout>;
-=======;
-      </div>;
-    </MainLayout>;
->>>>>>> cursor/add-new-services-and-deploy-updates-469e;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2966
+    </Layout>
   );
 };
