@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -18,324 +17,303 @@ import {
   Globe, 
   Lock, 
   Cpu, 
-  Bot, 
-  FileText, 
-  Video, 
-  Mic, 
-  Code, 
-  Settings, 
-  Monitor, 
-  Smartphone, 
-  Server, 
-  Network, 
-  Car, 
-  Rocket, 
-  Heart, 
-  Building, 
-  Sprout, 
-  Mail, 
-  MessageSquare, 
-  Search, 
-  Eye, 
-  Target, 
-  TrendingUp, 
-  Package, 
-  Calendar, 
-  BookOpen, 
-  ShoppingCart, 
-  Home, 
-  Trash2, 
-  Camera, 
-  HardDrive, 
-  Database 
+  Database,
+  Smartphone,
+  Monitor,
+  Server,
+  Code,
+  Settings,
+  TrendingUp,
+  Target,
+  Lightbulb,
+  Rocket,
+  Heart,
+  Eye,
+  MousePointer,
+  Wifi,
+  Smartphone as Mobile,
+  Laptop,
+  Tablet,
+  Headphones,
+  Camera,
+  Mic,
+  Video,
+  Image,
+  FileText,
+  Download,
+  Upload,
+  Share2,
+  MessageSquare,
+  Bell,
+  Calendar,
+  Clock as Time,
+  MapPin,
+  Phone,
+  Mail,
+  ExternalLink
 } from 'lucide-react';
-
-const microSAASServices = [
-  {
-    name: "AI Invoice Generator Pro",
-    description: "Intelligent invoice creation and payment tracking platform with AI-powered templates, automated follow-ups, and multi-currency support.",
-    price: "$29/month",
-    features: [
-      "AI-powered invoice generation",
-      "Automated payment reminders",
-      "Multi-currency support",
-      "Client management system",
-      "Payment tracking dashboard",
-      "Custom branding options",
-      "Tax calculation automation",
-      "Integration with accounting software"
-    ],
-    category: "Finance",
-    popular: true
-  },
-  {
-    name: "Smart Project Management Hub",
-    description: "AI-enhanced project management with automated task assignment, progress tracking, and team collaboration tools.",
-    price: "$49/month",
-    features: [
-      "AI task assignment",
-      "Progress tracking",
-      "Team collaboration",
-      "Resource planning",
-      "Time tracking",
-      "Budget management",
-      "Risk assessment",
-      "Reporting dashboard"
-    ],
-    category: "Productivity",
-    popular: true
-  }
-];
-
-export default function MicroSAAS() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Head>
-        <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover our innovative micro SaaS solutions designed to streamline your business operations and boost productivity." />
-        <meta name="keywords" content="micro saas, software as a service, business automation, productivity tools" />
-      </Head>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Micro SaaS Solutions
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our innovative micro SaaS solutions designed to streamline your business operations and boost productivity.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {microSAASServices.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-semibold text-white">{service.name}</h3>
-                {service.popular && (
-                  <span className="bg-blue-500 text-white px-2 py-1 rounded-full text-sm">Popular</span>
-                )}
-              </div>
-              
-              <p className="text-gray-300 mb-4">{service.description}</p>
-              
-              <div className="text-2xl font-bold text-green-400 mb-4">{service.price}</div>
-              
-              <div className="mb-4">
-                <span className="text-sm text-gray-400 bg-gray-700 px-2 py-1 rounded">{service.category}</span>
-              </div>
-              
-              <ul className="space-y-2 mb-6">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-200">
-                Get Started
-              </button>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </div>
-=======
-import { Star } from 'lucide-react';
-import Head from 'next/head';
-import Link from 'next/link';
 import Layout from '../components/Layout';
 
 export default function MicroSAAS() {
-  const microSAASServices = [
+  const microSaasServices = [
     {
-      name: "AI Invoice Generator Pro",
-      description: "Intelligent invoice creation and payment tracking platform with AI-powered templates, automated follow-ups, and multi-currency support.",
-      price: "$29/month",
+      title: "AI Content Marketing Suite",
+      description: "Automated content creation, SEO optimization, and social media management powered by AI",
       features: [
-        "AI-powered invoice generation",
-        "Automated payment reminders",
-        "Multi-currency support",
-        "Client management system",
-        "Payment tracking dashboard",
-        "Custom branding options",
-        "Tax calculation automation",
-        "Integration with accounting software"
+        "AI-powered content generation",
+        "SEO optimization tools",
+        "Social media automation",
+        "Analytics and reporting",
+        "Multi-platform publishing"
       ],
+      pricing: "$99/month",
+      marketPrice: "$150-300/month",
+      setupTime: "2-3 days",
+      targetUsers: "Marketing agencies, content creators, small businesses",
       benefits: [
-        "Save 80% time on invoicing",
-        "Reduce payment delays by 60%",
-        "Professional invoice templates",
-        "Automated follow-up system"
+        "10x faster content creation",
+        "Improved SEO rankings",
+        "Consistent brand voice",
+        "Reduced marketing costs",
+        "Better engagement rates"
       ],
-      marketPrice: "$49-79/month",
-      savings: "Save up to $50/month",
-      category: "Financial Tools"
+      link: "https://ziontechgroup.com/ai-content-marketing"
     },
     {
-      name: "Smart Meeting Scheduler AI",
-      description: "AI-powered meeting scheduling that automatically finds optimal times, sends reminders, and handles rescheduling conflicts.",
-      price: "$19/month",
+      title: "Smart Lead Management System",
+      description: "AI-powered lead scoring, automated follow-ups, and CRM integration for better sales conversion",
       features: [
-        "AI-powered time optimization",
-        "Calendar integration",
-        "Automated reminders",
-        "Conflict resolution",
-        "Multi-timezone support",
-        "Custom meeting templates",
-        "Follow-up automation",
-        "Analytics dashboard"
+        "AI lead scoring",
+        "Automated email sequences",
+        "CRM integration",
+        "Lead tracking and analytics",
+        "Customizable workflows"
       ],
+      pricing: "$79/month",
+      marketPrice: "$120-250/month",
+      setupTime: "1-2 days",
+      targetUsers: "Sales teams, real estate agents, insurance brokers",
       benefits: [
-        "Save 90% scheduling time",
-        "Reduce no-shows by 70%",
-        "Optimize meeting efficiency",
-        "Professional scheduling"
+        "40% higher conversion rates",
+        "Automated follow-ups",
+        "Better lead qualification",
+        "Time savings",
+        "Improved ROI"
       ],
-      marketPrice: "$39-59/month",
-      savings: "Save up to $40/month",
-      category: "Productivity"
+      link: "https://ziontechgroup.com/smart-lead-management"
+    },
+    {
+      title: "Cloud Cost Optimizer",
+      description: "Automated cloud resource optimization to reduce costs by up to 60% while maintaining performance",
+      features: [
+        "Real-time cost monitoring",
+        "Automated scaling",
+        "Resource optimization",
+        "Cost forecasting",
+        "Multi-cloud support"
+      ],
+      pricing: "$149/month",
+      marketPrice: "$200-500/month",
+      setupTime: "3-5 days",
+      targetUsers: "DevOps teams, cloud architects, CTOs",
+      benefits: [
+        "Up to 60% cost reduction",
+        "Automated optimization",
+        "Performance monitoring",
+        "Predictive analytics",
+        "ROI tracking"
+      ],
+      link: "https://ziontechgroup.com/cloud-cost-optimizer"
+    },
+    {
+      title: "Smart Inventory Management",
+      description: "AI-powered inventory optimization with demand forecasting and automated reordering",
+      features: [
+        "Demand forecasting",
+        "Automated reordering",
+        "Stock level optimization",
+        "Supplier management",
+        "Real-time analytics"
+      ],
+      pricing: "$199/month",
+      marketPrice: "$300-600/month",
+      setupTime: "5-7 days",
+      targetUsers: "Retailers, manufacturers, distributors",
+      benefits: [
+        "Reduced stockouts",
+        "Lower inventory costs",
+        "Improved cash flow",
+        "Better supplier relationships",
+        "Data-driven decisions"
+      ],
+      link: "https://ziontechgroup.com/smart-inventory"
+    },
+    {
+      title: "Security Compliance Manager",
+      description: "Automated compliance monitoring and reporting for GDPR, HIPAA, SOC2, and other regulations",
+      features: [
+        "Compliance monitoring",
+        "Automated reporting",
+        "Risk assessment",
+        "Audit trails",
+        "Regulatory updates"
+      ],
+      pricing: "$299/month",
+      marketPrice: "$500-1000/month",
+      setupTime: "7-10 days",
+      targetUsers: "Compliance officers, legal teams, healthcare organizations",
+      benefits: [
+        "Reduced compliance costs",
+        "Automated reporting",
+        "Risk mitigation",
+        "Audit readiness",
+        "Regulatory updates"
+      ],
+      link: "https://ziontechgroup.com/security-compliance"
     }
   ];
 
   return (
-    <Layout 
-      title="Micro SaaS Solutions - Zion Tech Group" 
-      description="Discover our innovative micro SaaS solutions designed to solve specific business problems with powerful, easy-to-use tools. From AI-powered invoicing to smart scheduling, we have the perfect solution for your needs."
-      keywords="micro SaaS, business tools, AI solutions, productivity software, automation tools, business software"
-    >
+    <Layout>
+      <Head>
+        <title>Micro SaaS Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive Micro SaaS solutions for modern businesses. AI-powered tools, automation, and scalable platforms." />
+        <meta name="keywords" content="micro saas, software as a service, business automation, AI tools, cloud solutions" />
+      </Head>
+
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Micro SaaS Solutions
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Powerful, focused tools that solve specific business problems. 
-              No bloat, just results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                Get Started Today
-              </Link>
-              <Link href="/pricing" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                View Pricing
-              </Link>
-            </div>
+        <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Micro SaaS Solutions
+              </h1>
+              <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Powerful, focused software solutions that solve specific business problems with maximum efficiency
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
+                >
+                  Get Started <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+                <Link
+                  href="/demo"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
+                >
+                  View Demo
+                </Link>
+              </div>
+            </motion.div>
           </div>
         </section>
 
         {/* Services Grid */}
         <section className="py-20">
-          <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Micro SaaS Solutions
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Each solution is designed to solve a specific business problem with maximum efficiency and minimum complexity.
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Specialized software solutions designed to address specific business challenges with precision and efficiency
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSAASServices.map((service, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                  <div className="mb-4">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-                  </div>
-
-                  <div className="mb-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                      <span className="text-sm text-gray-500">vs {service.marketPrice}</span>
+              {microSaasServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                      <Cloud className="w-6 h-6 text-blue-600" />
                     </div>
-                    <p className="text-sm text-green-600 font-semibold">{service.savings}</p>
+                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
                   </div>
-
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      {service.features.slice(0, 4).map((feature, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+                  
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  
+                  <div className="space-y-3 mb-6">
+                    <h4 className="font-semibold text-gray-900">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      {service.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <span className="w-2 h-2 bg-green-600 rounded-full mr-2"></span>
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="border-t pt-4 space-y-2">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-gray-500">Our Price:</span>
+                      <span className="font-semibold text-green-600">{service.pricing}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-gray-500">Market Price:</span>
+                      <span className="text-sm text-gray-600 line-through">{service.marketPrice}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-gray-500">Setup Time:</span>
+                      <span className="text-sm text-gray-600">{service.setupTime}</span>
+                    </div>
                   </div>
 
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
-                      {service.category}
-                    </span>
-                    <Link
-                      href="/contact"
-                      className="text-blue-600 hover:text-blue-800 font-semibold text-sm"
+                  <div className="mt-4">
+                    <a
+                      href={service.link}
+                      className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center block"
                     >
-                      Learn More →
-                    </Link>
+                      Learn More
+                    </a>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        {/* Contact Section */}
+        <section className="bg-blue-900 text-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let our expert team help you leverage cutting-edge micro SaaS solutions to drive growth and innovation.
-              <br className="hidden md:block" />
-              <span className="text-blue-200 font-semibold">Get your free consultation today!</span>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Contact us today to discuss your Micro SaaS needs and get a customized solution
             </p>
-            <div className="mb-8">
-              <p className="text-lg text-blue-100 mb-2">
-                📞 <strong>Call us:</strong> +1 302 464 0950
-              </p>
-              <p className="text-lg text-blue-100 mb-2">
-                📧 <strong>Email us:</strong> kleber@ziontechgroup.com
-              </p>
-              <p className="text-lg text-blue-100">
-                📍 <strong>Visit us:</strong> 364 E Main St STE 1008, Middletown DE 19709
-              </p>
-            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                Get Free Consultation
-              </Link>
-              <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                Learn About Us
-              </Link>
+              <a
+                href="tel:+13024640950"
+                className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
+              >
+                <Phone className="mr-2 w-5 h-5" />
+                +1 302 464 0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors inline-flex items-center justify-center"
+              >
+                <Mail className="mr-2 w-5 h-5" />
+                kleber@ziontechgroup.com
+              </a>
             </div>
           </div>
         </section>
       </div>
     </Layout>
->>>>>>> main
   );
 }
