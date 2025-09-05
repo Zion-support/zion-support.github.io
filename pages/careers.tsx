@@ -1,341 +1,241 @@
 import React from 'react';
-<<<<<<< HEAD
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
-import {
-  Users,
-  MapPin,
-  Clock,
-  DollarSign,
-  ArrowRight,
-  Heart,
-  Star,
-  Award,
-  Coffee,
-  Zap,
-  Shield,
-  Briefcase,
-  GraduationCap,
-  Globe,
-  CheckCircle
-=======
-import { motion } from 'framer-motion';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import { 
-  Heart,
-  Laptop,
-  Users,
-  Globe,
+  Users, 
+  MapPin, 
+  Clock, 
+  Briefcase, 
+  GraduationCap, 
+  Globe, 
   CheckCircle,
-  ArrowRight
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
+  ArrowRight,
+  Star,
+  Heart,
+  Zap
 } from 'lucide-react';
 
 const jobOpenings = [
   {
-<<<<<<< HEAD
     id: 1,
-    title: "Senior AI Engineer",
-    department: "AI & Machine Learning",
-    location: "Remote",
-    type: "Full-time",
-    experience: "5+ years",
-    description: "Lead the development of cutting-edge AI solutions and machine learning models for our clients.",
+    title: 'Senior AI Engineer',
+    department: 'AI & Machine Learning',
+    location: 'Remote / Middletown, DE',
+    type: 'Full-time',
+    experience: '5+ years',
+    description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
     requirements: [
-      "Master's degree in Computer Science or related field",
-      "5+ years experience in AI/ML development",
-      "Proficiency in Python, TensorFlow, PyTorch",
-      "Experience with cloud platforms (AWS, Azure, GCP)",
-      "Strong problem-solving and communication skills"
+      'Master\'s degree in Computer Science or related field',
+      '5+ years experience in machine learning',
+      'Proficiency in Python, TensorFlow, PyTorch',
+      'Experience with cloud platforms (AWS, Azure, GCP)',
+      'Strong problem-solving and communication skills'
     ],
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
+    benefits: [
+      'Competitive salary and equity',
+      'Health, dental, and vision insurance',
+      'Flexible work arrangements',
+      'Professional development budget',
+      'Unlimited PTO'
+    ]
   },
   {
     id: 2,
-    title: "Full-Stack Developer",
-    department: "Micro SaaS",
-    location: "New York, NY",
-    type: "Full-time",
-    experience: "3+ years",
-    description: "Build scalable web applications and microservices for our SaaS solutions.",
+    title: 'Full-Stack Developer',
+    department: 'Engineering',
+    location: 'Remote / Middletown, DE',
+    type: 'Full-time',
+    experience: '3+ years',
+    description: 'Build scalable web applications and APIs using modern technologies.',
     requirements: [
-      "3+ years experience in full-stack development",
-      "Proficiency in React, Node.js, TypeScript",
-      "Experience with databases (PostgreSQL, MongoDB)",
-      "Knowledge of cloud deployment and DevOps"
+      'Bachelor\'s degree in Computer Science or related field',
+      '3+ years experience in full-stack development',
+      'Proficiency in React, Node.js, TypeScript',
+      'Experience with databases (PostgreSQL, MongoDB)',
+      'Knowledge of cloud services and DevOps'
     ],
-    benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
+    benefits: [
+      'Competitive salary and equity',
+      'Health, dental, and vision insurance',
+      'Flexible work arrangements',
+      'Professional development budget',
+      'Unlimited PTO'
+    ]
   },
   {
     id: 3,
-    title: "Cloud Solutions Architect",
-    department: "IT Services",
-    location: "Remote",
-    type: "Full-time",
-    experience: "7+ years",
-    description: "Design and implement cloud infrastructure solutions for enterprise clients.",
-    requirements: [
-      "7+ years experience in cloud architecture",
-      "Certifications in AWS, Azure, or GCP",
-      "Experience with containerization (Docker, Kubernetes)",
-      "Strong understanding of security best practices"
-    ],
-    benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
-=======
-    title: 'Senior AI Engineer',
-    location: 'Remote',
-    type: 'Full-time',
-    department: 'AI & Machine Learning',
-    description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
-    requirements: [
-      '5+ years experience in AI/ML',
-      'Strong Python and TensorFlow skills',
-      'Experience with cloud platforms',
-      'PhD in Computer Science preferred'
-    ]
-  },
-  {
-    title: 'Full Stack Developer',
-    location: 'San Francisco, CA',
-    type: 'Full-time',
-    department: 'Engineering',
-    description: 'Build scalable web applications using modern technologies.',
-    requirements: [
-      '3+ years full-stack experience',
-      'React, Node.js, and TypeScript',
-      'Database design and optimization',
-      'Agile development experience'
-    ]
-  },
-  {
     title: 'DevOps Engineer',
-    location: 'Remote',
-    type: 'Full-time',
     department: 'Infrastructure',
-    description: 'Manage cloud infrastructure and deployment pipelines.',
+    location: 'Remote / Middletown, DE',
+    type: 'Full-time',
+    experience: '4+ years',
+    description: 'Manage and scale our cloud infrastructure and deployment pipelines.',
     requirements: [
-      '4+ years DevOps experience',
-      'AWS, Azure, or GCP expertise',
-      'Docker and Kubernetes knowledge',
-      'CI/CD pipeline experience'
+      'Bachelor\'s degree in Computer Science or related field',
+      '4+ years experience in DevOps/Infrastructure',
+      'Proficiency in AWS, Docker, Kubernetes',
+      'Experience with CI/CD pipelines',
+      'Knowledge of monitoring and logging tools'
+    ],
+    benefits: [
+      'Competitive salary and equity',
+      'Health, dental, and vision insurance',
+      'Flexible work arrangements',
+      'Professional development budget',
+      'Unlimited PTO'
     ]
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
+  }
+];
+
+const companyValues = [
+  {
+    icon: Heart,
+    title: 'Passion',
+    description: 'We love what we do and are passionate about technology and innovation.'
+  },
+  {
+    icon: Users,
+    title: 'Collaboration',
+    description: 'We work together as a team to achieve common goals and support each other.'
+  },
+  {
+    icon: Zap,
+    title: 'Innovation',
+    description: 'We constantly push boundaries and embrace new technologies and ideas.'
+  },
+  {
+    icon: Star,
+    title: 'Excellence',
+    description: 'We strive for the highest quality in everything we do.'
   }
 ];
 
 const benefits = [
-  {
-    icon: Heart,
-    title: 'Health & Wellness',
-    description: 'Comprehensive health insurance, mental health support, and wellness programs.'
-  },
-  {
-    icon: Laptop,
-    title: 'Flexible Work',
-    description: 'Remote work options, flexible hours, and modern equipment for productivity.'
-  },
-  {
-    icon: Users,
-    title: 'Team Culture',
-    description: 'Collaborative environment with regular team events and professional development.'
-  },
-  {
-    icon: Globe,
-    title: 'Global Impact',
-    description: 'Work on projects that make a real difference in the world.'
-  }
+  'Competitive salary and equity package',
+  'Comprehensive health, dental, and vision insurance',
+  'Flexible work arrangements and remote options',
+  'Professional development and learning budget',
+  'Unlimited paid time off',
+  '401(k) with company matching',
+  'Stock options for all employees',
+  'Modern equipment and tools',
+  'Team building events and activities',
+  'Mentorship and career growth opportunities'
 ];
 
 export default function Careers() {
   return (
-    <Layout
+    <Layout 
       title="Careers - Zion Tech Group"
-      description="Join our team of innovators and help shape the future of technology. Explore career opportunities at Zion Tech Group."
-      keywords="careers, jobs, employment, AI engineer, developer, tech jobs, remote work"
+      description="Join our team of talented professionals building the future of AI and technology. Explore career opportunities at Zion Tech Group."
+      keywords="careers, jobs, AI engineer, developer, remote work, technology careers, Zion Tech Group jobs"
     >
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <Head>
+        <title>Careers - Zion Tech Group</title>
+        <meta name="description" content="Join our team of talented professionals building the future of AI and technology. Explore career opportunities at Zion Tech Group." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+              className="text-center max-w-4xl mx-auto"
             >
-<<<<<<< HEAD
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Join Our{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Amazing Team
-                </span>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                Join Our Team
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Be part of a team that's building the future of technology. 
+              <p className="text-xl md:text-2xl mb-8 text-blue-100">
+                Be part of a team that's building the future of AI and technology. 
                 We're looking for passionate individuals who want to make a difference.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#open-positions" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                <a href="#openings" className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
                   View Open Positions
                 </a>
-                <a href="#benefits" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  See Benefits
+                <a href="#culture" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
+                  Learn About Our Culture
                 </a>
-=======
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Join Our
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                  {" "}Team
-                </span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Be part of a team that's building the future of technology. We're looking for passionate 
-                individuals who want to make a real impact.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Apply Now
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                <Link
-                  href="/about"
-                  className="inline-flex items-center px-8 py-4 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors"
-                >
-                  Learn About Us
-                </Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
               </div>
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Why Join Us */}
-        <section className="py-20 bg-white">
+        {/* Company Values */}
+        <section id="culture" className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Why Join Zion Tech Group?
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We're not just a company - we're a community of innovators, creators, and problem-solvers 
-                working together to build amazing technology solutions.
-              </p>
-            </motion.div>
-
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {benefits.map((benefit, index) => (
-                  <motion.div
-                    key={benefit.title}
-                    className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="text-blue-600 mb-4">
-                      <benefit.icon className="w-12 h-12" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-gray-600">
-                      {benefit.description}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-=======
-        {/* Benefits Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Work With Us
+                Our Culture & Values
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We offer competitive benefits and a supportive environment for professional growth.
+              <p className="text-lg text-gray-600">
+                We believe in creating an environment where everyone can thrive and grow
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {companyValues.map((value, index) => (
                 <motion.div
-                  key={index}
+                  key={value.title}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                   className="text-center"
                 >
-                  <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                    <benefit.icon className="h-8 w-8 text-blue-600" />
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <value.icon className="w-8 h-8 text-blue-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {benefit.description}
-                  </p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
+                  <p className="text-gray-600">{value.description}</p>
                 </motion.div>
               ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Our Values */}
-        <section className="py-20 bg-gray-50">
+        {/* Benefits */}
+        <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Values
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Benefits & Perks
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                These core values guide everything we do and shape our company culture.
+              <p className="text-lg text-gray-600">
+                We offer comprehensive benefits to support our team members
               </p>
             </motion.div>
 
             <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {values.map((value, index) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {benefits.map((benefit, index) => (
                   <motion.div
-                    key={value.title}
-                    className="bg-white p-6 rounded-lg shadow-lg"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    key={benefit}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.05 }}
                     viewport={{ once: true }}
+                    className="flex items-center space-x-3"
                   >
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                      {value.title}
-                    </h3>
-                    <p className="text-gray-600">
-                      {value.description}
-                    </p>
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700">{benefit}</span>
                   </motion.div>
                 ))}
               </div>
@@ -343,234 +243,111 @@ export default function Careers() {
           </div>
         </section>
 
-        {/* Open Positions */}
-        <section id="open-positions" className="py-20 bg-white">
+        {/* Job Openings */}
+        <section id="openings" className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Open Positions
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-=======
-        {/* Job Openings */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Open Positions
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
-                Explore our current job openings and find the perfect role for you.
+              <p className="text-lg text-gray-600">
+                Find your next opportunity with us
               </p>
             </motion.div>
 
-<<<<<<< HEAD
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {jobOpenings.map((job, index) => (
-                  <motion.div
-                    key={job.id}
-                    className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
-                        {job.department}
-                      </span>
-                      <span className="text-gray-500 text-sm">{job.type}</span>
-                    </div>
-
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      {job.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      {job.description}
-                    </p>
-
-                    <div className="space-y-2 mb-6">
-                      <div className="flex items-center text-sm text-gray-600">
-                        <MapPin className="w-4 h-4 mr-2" />
-                        {job.location}
-                      </div>
-                      <div className="flex items-center text-sm text-gray-600">
-                        <Clock className="w-4 h-4 mr-2" />
-                        {job.experience}
+            <div className="max-w-6xl mx-auto space-y-8">
+              {jobOpenings.map((job, index) => (
+                <motion.div
+                  key={job.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+                >
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{job.title}</h3>
+                      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+                        <div className="flex items-center">
+                          <Briefcase className="w-4 h-4 mr-1" />
+                          {job.department}
+                        </div>
+                        <div className="flex items-center">
+                          <MapPin className="w-4 h-4 mr-1" />
+                          {job.location}
+                        </div>
+                        <div className="flex items-center">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {job.type}
+                        </div>
+                        <div className="flex items-center">
+                          <GraduationCap className="w-4 h-4 mr-1" />
+                          {job.experience}
+                        </div>
                       </div>
                     </div>
+                    <button className="mt-4 lg:mt-0 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center">
+                      Apply Now <ArrowRight className="w-4 h-4 ml-2" />
+                    </button>
+                  </div>
 
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Key Requirements:</h4>
-                      <ul className="space-y-1">
-                        {job.requirements.slice(0, 3).map((requirement, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-600">
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2" />
-                            {requirement}
+                  <p className="text-gray-600 mb-6">{job.description}</p>
+
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-3">Requirements</h4>
+                      <ul className="space-y-2">
+                        {job.requirements.map((req, idx) => (
+                          <li key={idx} className="flex items-start">
+                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600 text-sm">{req}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
-
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {job.benefits.map((benefit, idx) => (
-                          <span key={idx} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
-                            {benefit}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <a
-                      href={`/careers/${job.id}`}
-                      className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold flex items-center justify-center"
-                    >
-                      Apply Now
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </a>
-                  </motion.div>
-                ))}
-              </div>
-=======
-            <div className="space-y-8">
-              {jobOpenings.map((job, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8"
-                >
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{job.title}</h3>
-                      <div className="flex flex-wrap gap-4 text-sm text-gray-600">
-                        <span className="flex items-center">
-                          <Users className="h-4 w-4 mr-1" />
-                          {job.department}
-                        </span>
-                        <span className="flex items-center">
-                          <Globe className="h-4 w-4 mr-1" />
-                          {job.location}
-                        </span>
-                        <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full">
-                          {job.type}
-                        </span>
-                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-3">Benefits</h4>
+                      <ul className="space-y-2">
+                        {job.benefits.map((benefit, idx) => (
+                          <li key={idx} className="flex items-start">
+                            <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600 text-sm">{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <Link
-                      href="/contact"
-                      className="mt-4 md:mt-0 inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-                    >
-                      Apply Now
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </div>
-                  
-                  <p className="text-gray-600 mb-6">{job.description}</p>
-                  
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">Requirements:</h4>
-                    <ul className="space-y-2">
-                      {job.requirements.map((requirement, reqIndex) => (
-                        <li key={reqIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                          {requirement}
-                        </li>
-                      ))}
-                    </ul>
                   </div>
                 </motion.div>
               ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Don't See Your Dream Job?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                We're always looking for talented individuals. Send us your resume and let us know 
-                how you'd like to contribute to our team.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-                >
-                  Send Resume
-                </a>
-                <a
-                  href="/about"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-                >
-                  Learn More About Us
-                </a>
-=======
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Don't See Your Role?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                We're always looking for talented individuals. Send us your resume and let us know how you can contribute.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
-                >
-                  Send Resume
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                <Link
-                  href="/about"
-                  className="inline-flex items-center px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
-                >
-                  Learn About Us
-                </Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
-              </div>
-            </motion.div>
+        <section className="py-16 bg-blue-900 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-4">Don't See the Right Role?</h2>
+            <p className="text-xl mb-8 text-blue-100">
+              We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                Send Your Resume
+              </Link>
+              <a href="mailto:careers@ziontechgroup.com" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
+                Email Us
+              </a>
+            </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </MainLayout>
-=======
     </Layout>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
   );
 }

@@ -1,123 +1,149 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Home, ArrowLeft, Search } from 'lucide-react';
-import MainLayout from '../src/components/layout/MainLayout';
-
-export default function Custom404() {
-  return (
-    <MainLayout
-      title="404 - Page Not Found | Zion Tech Group"
-      description="The page you're looking for doesn't exist. Return to our homepage or explore our services."
-      noindex={true}
-    >
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 flex items-center justify-center px-4">
-        <div className="text-center max-w-2xl mx-auto">
-=======
 import Layout from '../components/Layout';
-import { Home, ArrowLeft } from 'lucide-react';
+import { 
+  Home, 
+  ArrowLeft, 
+  Search, 
+  HelpCircle, 
+  Mail,
+  Phone,
+  MapPin
+} from 'lucide-react';
 
 export default function Custom404() {
   return (
-    <Layout title="404 - Page Not Found">
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
+    <Layout 
+      title="Page Not Found - Zion Tech Group"
+      description="The page you're looking for doesn't exist. Return to our homepage or contact us for assistance."
+      keywords="404, page not found, error, Zion Tech Group"
+      noIndex={true}
+    >
+      <Head>
+        <title>Page Not Found - Zion Tech Group</title>
+        <meta name="description" content="The page you're looking for doesn't exist. Return to our homepage or contact us for assistance." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+        <div className="max-w-2xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
           >
-<<<<<<< HEAD
-            {/* 404 Animation */}
-            <motion.div
-              className="text-9xl font-bold text-blue-600 mb-8"
-              animate={{
-                scale: [1, 1.1, 1],
-                rotate: [0, 5, -5, 0]
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                repeatType: "reverse"
-              }}
-            >
-              404
-            </motion.div>
-            
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Oops! Page Not Found
+            {/* 404 Illustration */}
+            <div className="mb-8">
+              <div className="text-9xl font-bold text-blue-600 mb-4">404</div>
+              <div className="w-32 h-32 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                <Search className="w-16 h-16 text-blue-600" />
+              </div>
+            </div>
+
+            {/* Error Message */}
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Page Not Found
             </h1>
-            
             <p className="text-xl text-gray-600 mb-8">
-              The page you're looking for doesn't exist or has been moved. 
-              Let's get you back on track.
+              Sorry, we couldn't find the page you're looking for. 
+              It might have been moved, deleted, or you entered the wrong URL.
             </p>
-            
+
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
+              <Link 
                 href="/"
-                className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center"
               >
-                <Home className="w-5 h-5" />
-                Go Home
-              </Link>
-              
-              <button
-                onClick={() => window.history.back()}
-                className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors"
-              >
-                <ArrowLeft className="w-5 h-5" />
-                Go Back
-              </button>
-              
-              <Link
-                href="/services"
-                className="inline-flex items-center gap-2 border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
-              >
-                <Search className="w-5 h-5" />
-                Explore Services
-              </Link>
-            </div>
-            
-            {/* Help Section */}
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h2 className="text-lg font-semibold text-gray-900 mb-4">
-                Need Help?
-              </h2>
-              <p className="text-gray-600 mb-4">
-                If you believe this is an error, please contact our support team.
-              </p>
-              <Link
-                href="/contact"
-                className="text-blue-600 hover:text-blue-700 font-semibold"
-              >
-                Contact Support →
-              </Link>
-=======
-            <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
-            <h2 className="text-2xl font-semibold text-gray-700 mb-6">Page Not Found</h2>
-            <p className="text-gray-600 mb-8">The page you're looking for doesn't exist.</p>
-            <div className="flex justify-center space-x-4">
-              <Link href="/" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center">
                 <Home className="w-5 h-5 mr-2" />
                 Go Home
               </Link>
-              <button onClick={() => window.history.back()} className="border border-gray-300 hover:bg-gray-50 text-gray-700 px-6 py-3 rounded-lg font-semibold transition-colors flex items-center">
+              <button 
+                onClick={() => window.history.back()}
+                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors flex items-center justify-center"
+              >
                 <ArrowLeft className="w-5 h-5 mr-2" />
                 Go Back
               </button>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
+            </div>
+
+            {/* Help Section */}
+            <div className="bg-white rounded-xl p-8 shadow-lg">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                Need Help?
+              </h2>
+              <p className="text-gray-600 mb-6">
+                If you're still having trouble finding what you're looking for, 
+                our team is here to help.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <HelpCircle className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Support Center</h3>
+                  <p className="text-sm text-gray-600 mb-3">
+                    Browse our help articles and FAQs
+                  </p>
+                  <Link 
+                    href="/support"
+                    className="text-blue-600 hover:text-blue-700 font-medium text-sm"
+                  >
+                    Visit Support →
+                  </Link>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Mail className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Email Us</h3>
+                  <p className="text-sm text-gray-600 mb-3">
+                    Send us a message anytime
+                  </p>
+                  <a 
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="text-blue-600 hover:text-blue-700 font-medium text-sm"
+                  >
+                    kleber@ziontechgroup.com
+                  </a>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Phone className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-2">Call Us</h3>
+                  <p className="text-sm text-gray-600 mb-3">
+                    Speak with our team directly
+                  </p>
+                  <a 
+                    href="tel:+13024640950"
+                    className="text-blue-600 hover:text-blue-700 font-medium text-sm"
+                  >
+                    +1 302 464 0950
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Info */}
+            <div className="mt-8 text-center">
+              <p className="text-gray-600 mb-2">
+                <strong>Zion Tech Group</strong>
+              </p>
+              <p className="text-gray-600 mb-2">
+                364 E Main St STE 1008, Middletown DE 19709
+              </p>
+              <p className="text-gray-600">
+                We're here to help you succeed with technology.
+              </p>
             </div>
           </motion.div>
         </div>
       </div>
-<<<<<<< HEAD
-    </MainLayout>
-=======
     </Layout>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
   );
 }

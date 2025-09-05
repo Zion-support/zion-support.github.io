@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import { motion } from 'framer-motion';
 import Head from 'next/head';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import { 
@@ -12,11 +9,6 @@ import {
   Eye, 
   MessageSquare, 
   BarChart3, 
-<<<<<<< HEAD
-  Shield, 
-  CheckCircle, 
-  TrendingUp,
-=======
   Zap, 
   Shield, 
   ArrowRight, 
@@ -30,7 +22,6 @@ import {
   Cpu,
   Network,
   Target,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
   Rocket
 } from 'lucide-react';
 

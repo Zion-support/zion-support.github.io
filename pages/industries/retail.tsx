@@ -1,65 +1,47 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  ShoppingCart,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  BarChart3,
-  Clock,
-  Award,
-  Brain,
-  Shield,
-  Target,
-  TrendingUp,
-  Globe,
-  Building,
-  Rocket,
-  Lock,
-  Activity,
-  CreditCard,
-  FileText,
-  Database,
-  Smartphone,
-  DollarSign
-} from 'lucide-react';
+import Link from 'next/link';
 import Layout from '../../components/Layout';
-<<<<<<< HEAD
-=======
-import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users, CreditCard, Smartphone, Globe, Database, TrendingUp } from 'lucide-react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
+import { 
+  ShoppingCart, 
+  Brain, 
+  BarChart3, 
+  CheckCircle, 
+  ArrowRight, 
+  Package, 
+  Users, 
+  CreditCard, 
+  Smartphone, 
+  Globe, 
+  Database, 
+  TrendingUp 
+} from 'lucide-react';
 
 const solutions = [
   {
-    title: 'E-commerce Platform',
-    description: 'Modern e-commerce solutions with AI-powered recommendations and seamless checkout.',
     icon: ShoppingCart,
-    features: ['AI Recommendations', 'Mobile Optimization', 'Payment Integration', 'Inventory Management'],
-    benefits: ['40% conversion increase', '60% mobile traffic', '25% average order value', '99.9% uptime']
+    title: 'E-commerce Platforms',
+    description: 'Build scalable online stores with advanced features and seamless user experience',
+    features: ['Custom Store Design', 'Payment Integration', 'Inventory Management', 'Order Processing']
   },
   {
-    title: 'Customer Analytics',
-    description: 'Advanced customer behavior analytics and personalization engine.',
+    icon: Brain,
+    title: 'AI-Powered Personalization',
+    description: 'Deliver personalized shopping experiences with machine learning and data analytics',
+    features: ['Product Recommendations', 'Dynamic Pricing', 'Customer Segmentation', 'Behavioral Analysis']
+  },
+  {
     icon: BarChart3,
-    features: ['Customer Segmentation', 'Behavior Tracking', 'Personalization', 'Predictive Analytics'],
-    benefits: ['35% engagement boost', '50% better targeting', '20% retention increase', 'Real-time insights']
+    title: 'Analytics & Insights',
+    description: 'Comprehensive analytics to understand customer behavior and optimize performance',
+    features: ['Sales Analytics', 'Customer Insights', 'Performance Metrics', 'Predictive Analytics']
   },
   {
-    title: 'Inventory Management',
-    description: 'AI-powered inventory optimization and demand forecasting.',
-    icon: Database,
-    features: ['Demand Forecasting', 'Stock Optimization', 'Supplier Management', 'Automated Reordering'],
-    benefits: ['30% inventory reduction', '40% stockout reduction', '25% cost savings', 'Better margins']
-  },
-  {
-    title: 'Omnichannel Experience',
-    description: 'Seamless integration across online and offline channels.',
-    icon: Globe,
-    features: ['Unified Customer Data', 'Cross-channel Analytics', 'Consistent Experience', 'Real-time Sync'],
-    benefits: ['50% customer satisfaction', '35% cross-channel sales', '25% operational efficiency', 'Better loyalty']
+    icon: Smartphone,
+    title: 'Mobile Commerce',
+    description: 'Native mobile apps and responsive web solutions for seamless mobile shopping',
+    features: ['Mobile Apps', 'Progressive Web Apps', 'Mobile Payments', 'Push Notifications']
   }
 ];
 
@@ -67,68 +49,74 @@ const benefits = [
   {
     icon: TrendingUp,
     title: 'Increased Sales',
-<<<<<<< HEAD
-    description: 'Boost sales with AI-powered recommendations and personalized experiences.',
+    description: 'AI-powered personalization and optimization drive higher conversion rates',
     metric: '40%'
-=======
-    description: 'AI-powered personalization and optimization drive higher conversion rates'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
   },
   {
     icon: Users,
-    title: 'Customer Engagement',
-    description: 'Enhance customer engagement with personalized content and offers.',
+    title: 'Better Customer Experience',
+    description: 'Personalized shopping experiences and seamless omnichannel interactions',
+    metric: '95%'
+  },
+  {
+    icon: BarChart3,
+    title: 'Improved Analytics',
+    description: 'Real-time insights and data-driven decision making capabilities',
     metric: '60%'
   },
   {
-    icon: DollarSign,
-    title: 'Cost Reduction',
-    description: 'Reduce operational costs through automation and optimization.',
-    metric: '25%'
-  },
-  {
-    icon: Smartphone,
-    title: 'Mobile Experience',
-    description: 'Optimize mobile shopping experience for better conversions.',
-    metric: '80%'
+    icon: Globe,
+    title: 'Global Reach',
+    description: 'Multi-language and multi-currency support for international expansion',
+    metric: '200%'
   }
+];
+
+const technologies = [
+  'React & Next.js',
+  'Node.js & Express',
+  'AI & Machine Learning',
+  'Cloud Computing',
+  'Payment Gateways',
+  'Mobile Development',
+  'Data Analytics',
+  'API Integration'
 ];
 
 export default function Retail() {
   return (
-    <Layout
-      title="Retail Technology Solutions - Zion Tech Group"
-      description="Transform retail with e-commerce platforms, customer analytics, inventory management, and omnichannel solutions."
-      keywords="retail technology, e-commerce, customer analytics, inventory management, omnichannel, retail automation"
+    <Layout 
+      title="Retail Technology - Zion Tech Group"
+      description="Transform your retail business with cutting-edge e-commerce solutions, AI-powered personalization, and omnichannel experiences."
+      keywords="retail technology, e-commerce, online shopping, AI personalization, retail analytics, omnichannel, mobile commerce"
     >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>Retail Technology - Zion Tech Group</title>
+        <meta name="description" content="Transform your retail business with cutting-edge e-commerce solutions, AI-powered personalization, and omnichannel experiences." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-purple-900 via-pink-900 to-rose-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-violet-900 text-white py-20">
+          <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
+              className="text-center max-w-4xl mx-auto"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Retail{' '}
-                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Technology
-                </span>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                Retail Technology Solutions
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Transform retail with e-commerce platforms, customer analytics, and omnichannel solutions.
+              <p className="text-xl md:text-2xl mb-8 text-purple-100">
+                Transform your retail business with AI-powered e-commerce platforms, 
+                personalized shopping experiences, and omnichannel solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Get Retail Solution
+                <Link href="/contact" className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+                  Get Started
                 </Link>
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                <Link href="/case-studies" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors">
                   View Case Studies
                 </Link>
               </div>
@@ -137,142 +125,144 @@ export default function Retail() {
         </section>
 
         {/* Solutions Section */}
-        <section className="py-20 bg-white">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Retail Solutions
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Retail Technology Solutions
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed for modern retail operations.
+              <p className="text-lg text-gray-600">
+                Comprehensive technology solutions for modern retail businesses
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {solutions.map((solution, index) => {
-                const IconComponent = solution.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-gray-50 rounded-lg p-6"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="flex items-start space-x-4">
-                      <div className="text-purple-600">
-                        <IconComponent className="w-8 h-8" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">{solution.title}</h3>
-                        <p className="text-gray-600 mb-4">{solution.description}</p>
-                        <div className="grid grid-cols-2 gap-4">
-                          <div>
-                            <h4 className="font-semibold text-gray-800 mb-2">Features:</h4>
-                            <ul className="text-sm text-gray-600 space-y-1">
-                              {solution.features.map((feature, idx) => (
-                                <li key={idx} className="flex items-center">
-                                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                                  {feature}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-gray-800 mb-2">Benefits:</h4>
-                            <ul className="text-sm text-gray-600 space-y-1">
-                              {solution.benefits.map((benefit, idx) => (
-                                <li key={idx} className="flex items-center">
-                                  <Star className="w-4 h-4 text-yellow-500 mr-2" />
-                                  {benefit}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {solutions.map((solution, index) => (
+                <motion.div
+                  key={solution.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                    <solution.icon className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{solution.title}</h3>
+                  <p className="text-gray-600 mb-4">{solution.description}</p>
+                  <ul className="space-y-2">
+                    {solution.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-purple-500 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Retail Benefits
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Choose Our Retail Solutions?
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Measurable improvements in sales, customer engagement, and operational efficiency.
+              <p className="text-lg text-gray-600">
+                Proven results and industry-leading expertise
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => {
-                const IconComponent = benefit.icon;
-                return (
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={benefit.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <div className="text-3xl font-bold text-purple-600 mb-2">{benefit.metric}</div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
+                  <p className="text-gray-600 text-sm">{benefit.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Technologies Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Technologies We Use
+              </h2>
+              <p className="text-lg text-gray-600">
+                Cutting-edge technologies for modern retail solutions
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {technologies.map((tech, index) => (
                   <motion.div
-                    key={index}
-                    className="bg-white rounded-lg p-6 shadow-lg text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    key={tech}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
+                    className="bg-gray-100 rounded-lg p-4 text-center hover:bg-purple-100 transition-colors"
                   >
-                    <div className="text-purple-600 mb-4">
-                      <IconComponent className="w-12 h-12 mx-auto" />
-                    </div>
-                    <div className="text-3xl font-bold text-purple-600 mb-2">{benefit.metric}</div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
-                    <p className="text-gray-600">{benefit.description}</p>
+                    <span className="text-gray-700 font-medium">{tech}</span>
                   </motion.div>
-                );
-              })}
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+        <section className="py-16 bg-purple-900 text-white">
           <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Transform Your Retail Business
-              </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Join leading retailers in revolutionizing their operations with cutting-edge technology.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Get Retail Consultation
-                </Link>
-                <Link href="/industries" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
-                  View All Industries
-                </Link>
-              </div>
-            </motion.div>
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Retail Business?</h2>
+            <p className="text-xl mb-8 text-purple-100">
+              Let's discuss how our technology solutions can help your retail business thrive in the digital age.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+                Get Free Consultation
+              </Link>
+              <a href="tel:+13024640950" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors">
+                Call +1 302 464 0950
+              </a>
+            </div>
           </div>
         </section>
       </div>
