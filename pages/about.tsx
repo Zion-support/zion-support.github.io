@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import {
   Users,
@@ -37,30 +37,6 @@ import {
   MapPin
 } from 'lucide-react'
 import Layout from '../components/Layout'
-=======
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Users, 
-  Award, 
-  Target, 
-  Heart, 
-  Globe, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Building, 
-  Rocket, 
-  Lightbulb, 
-  Handshake 
-} from 'lucide-react';
-import Layout from '../components/Layout';
->>>>>>> 1dab9786c49abc5641bed69cf666f521fa51a67c
 
 const values = [
   {
@@ -85,37 +61,6 @@ const values = [
   }
 ];
 
-const team = [
-  {
-    name: 'Dr. Sarah Chen',
-    role: 'Chief Technology Officer',
-    expertise: 'AI & Machine Learning',
-    experience: '15+ years',
-    image: '/team/sarah-chen.jpg'
-  },
-  {
-    name: 'Michael Rodriguez',
-    role: 'Head of Engineering',
-    expertise: 'Cloud Infrastructure',
-    experience: '12+ years',
-    image: '/team/michael-rodriguez.jpg'
-  },
-  {
-    name: 'Emily Watson',
-    role: 'Lead Data Scientist',
-    expertise: 'Data Analytics & AI',
-    experience: '10+ years',
-    image: '/team/emily-watson.jpg'
-  },
-  {
-    name: 'David Kim',
-    role: 'Security Architect',
-    expertise: 'Cybersecurity',
-    experience: '14+ years',
-    image: '/team/david-kim.jpg'
-  }
-];
-
 const achievements = [
   {
     icon: Award,
@@ -124,7 +69,6 @@ const achievements = [
     stat: '2024'
   },
   {
-<<<<<<< HEAD
     icon: Handshake,
     title: 'Client Success',
     description: 'Our success is measured by our clients\' success. We are committed to being true partners in their growth journey.'
@@ -169,57 +113,6 @@ const stats = [
   { number: '10+', label: 'Years Experience' }
 ];
 
-export default function AboutPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-=======
-    icon: Heart,
-    title: 'Client Success',
-    description: 'Your success is our success. We are deeply committed to helping you achieve your business goals.'
-  }]
-const team = [{
-    name: 'Kleber Santos',
-    role: 'CEO & Founder',
-    bio: 'Technology leader with over 10 years of experience in AI, cloud computing, and digital transformation.',
-    image: '/team/kleber-santos.jpg',
-    linkedin: 'https://linkedin.com/in/kleber-santos',
-    twitter: 'https://twitter.com/kleber_santos'
-  }]
-const stats = [
-  { number: '150+', label: 'Projects Completed' },
-  { number: '98%', label: 'Client Satisfaction' },
-  { number: '5+', label: 'Years Experience' },
-  { number: '24/7', label: 'Support Available' }]
-export default function AboutPage() {
-  return (
-    <Layout>
->>>>>>> main
-      <Head>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering innovative AI and technology solutions." />
-        <meta name="keywords" content="about us, team, mission, values, AI company, technology solutions" />
-      </Head>
-      <div className="min-h-screen bg-white">
-=======
-    icon: Users,
-    title: 'Client Satisfaction',
-    description: '98% client retention rate with 500+ successful projects',
-    stat: '98%'
-  },
-  {
-    icon: Globe,
-    title: 'Global Reach',
-    description: 'Serving clients across 25+ countries worldwide',
-    stat: '25+'
-  },
-  {
-    icon: TrendingUp,
-    title: 'Growth',
-    description: '300% year-over-year growth in AI services',
-    stat: '300%'
-  }
-];
-
 const timeline = [
   {
     year: '2018',
@@ -245,12 +138,8 @@ const timeline = [
 
 export default function AboutPage() {
   return (
-    <Layout 
-      title="About Us - Zion Tech Group" 
-      description="Learn about Zion Tech Group's mission to provide cutting-edge technology solutions and our team of expert professionals."
-    >
+    <Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
->>>>>>> 1dab9786c49abc5641bed69cf666f521fa51a67c
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
