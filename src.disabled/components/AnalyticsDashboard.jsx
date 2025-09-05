@@ -1,1 +1,14 @@
-"export": const AnalyticsDashboard = ({ className = ',showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ "enableTracking": 'tru',e,"enablePerformanceTracking": 'tru',e,"enableUserBehaviorTracking": 'tru',e,"enableHeatmapTracking": 'fals',e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState ('24h') const [analyticsSummary,setAnalyticsSummary] = useState (null) '';"";""
+import React from 'react';
+
+interface AnalyticsDashboard.jsProps {
+  // Add props here as needed
+}
+
+export default function AnalyticsDashboard.js({ }: AnalyticsDashboard.jsProps) {
+  return (
+    <div>
+      <h1>AnalyticsDashboard.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -1,1 +1,14 @@
-"HEAD": src.pages.disabled/ServicesOverview.jsx import React from 'react'; export default function ServicesOverview () { const stats = [{ label: "Services Offered","value": "50+","icon": 'Target' },{ "label": "Industries Served","value": "15+","icon": 'Users' },{ "label": "Technologies","value": "100+","icon": 'Server' },{ "label": "Client Satisfaction","value": "98%","icon": 'Check' } ]; const containerVariants = { "hidden": { opacity: 0 },"visible": { opacity: 1,"transition": { staggerChildren: 0.1 }; const itemVariants = { "hidden": { y: 20,"opacity": '0' },"visible": { y: 0,"opacity"""}
+import React from 'react';
+
+interface ServicesOverviewProps {
+  // Add props here as needed
+}
+
+export default function ServicesOverview({ }: ServicesOverviewProps) {
+  return (
+    <div>
+      <h1>ServicesOverview</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
