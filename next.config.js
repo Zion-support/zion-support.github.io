@@ -3,9 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'export',
   trailingSlash: true,
+  distDir: '.next',
   images: {
-    unoptimized: true,
-    domains: ['localhost']
+    domains: ['localhost'],
+    unoptimized: true
   },
   env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY
