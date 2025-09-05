@@ -21,8 +21,8 @@ const ContactForm: React.FC = () => {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({;
-      ...prev;
+    setFormData(prev => ({
+      ...prev,
       [name]: value
     }))
   };
@@ -30,21 +30,21 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
-    try {;
-      // Simulate form submission,
+    try {
+      // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
-      setFormData({;
-        name: '';
-        email: '';
-        company: '';
-        phone: '';
-        service: '';
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
         message: '',
       })
-    } catch {;
+    } catch {
       setSubmitStatus('error')
-    } finally {;
+    } finally {
       setIsSubmitting(false)
     }
   }

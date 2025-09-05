@@ -10,12 +10,21 @@ export default function Home() {
     isLoaded: false,
     hasError: false
   });
+  
+  const contact: ContactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  };
+  
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimationState(prev => ({ ...prev, isLoaded: true }))
     }, 100);
     return () => clearTimeout(timer)
   }, []);
+  
   if (animationState.hasError) {
     return (
       <div className="min-h-screen bg-slate-950 flex items-center justify-center">
@@ -29,14 +38,8 @@ export default function Home() {
           </button>
         </div>
       </div>
-    ),
+    );
   }
-  const contact: ContactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  };
   return (
     <>
       <Head>
