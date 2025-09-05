@@ -2,6 +2,10 @@ import { FileText, BarChart3, MessageSquare, Settings, BookOpen, Video, Download
 import Head from 'next/head';
 import Link from 'next/link';
 
+import React from 'react';
+import { FileText, BarChart3, MessageSquare, Settings, BookOpen, Video, Download } from 'lucide-react';
+import Layout from '../components/Layout';
+
 const resources = [
   {
     title: "Documentation",
@@ -33,49 +37,61 @@ const resources = [
     icon: Settings,
     href: "/api-docs",
     color: "from-orange-500 to-orange-600",
-    items: ["REST API", "GraphQL", "Webhooks", "SDKs"]
-  },
-  {
-    title: "Tutorials",
-    description: "Step-by-step guides and hands-on tutorials",
-    icon: BookOpen,
-    href: "/tutorials",
-    color: "from-indigo-500 to-indigo-600",
-    items: ["Getting Started", "Advanced Topics", "Code Examples", "Video Tutorials"]
-  },
-  {
-    title: "Webinars",
-    description: "Live and recorded educational sessions",
-    icon: Video,
-    href: "/webinars",
-    color: "from-pink-500 to-pink-600",
-    items: ["Live Sessions", "Recorded Videos", "Q&A Sessions", "Expert Talks"]
+    items: ["REST API", "GraphQL", "SDKs", "Code Examples"]
   }
 ];
 
-export default function Resources() {
+const quickLinks = [
+  { title: "Getting Started", href: "/docs/getting-started", icon: BookOpen },
+  { title: "Video Tutorials", href: "/tutorials", icon: Video },
+  { title: "Download SDKs", href: "/downloads", icon: Download },
+  { title: "Support Center", href: "/support", icon: MessageSquare }
+];
+
+export default function ResourcesPage() {
   return (
-    <>
-      <Head>
-        <title>Resources - Zion Tech Group</title>
-        <meta name="description" content="Access our comprehensive resources including documentation, case studies, tutorials, and more." />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        {/* Header */}
-        <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Resources
-              </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Access our comprehensive collection of documentation, tutorials, case studies, and more to help you succeed with our solutions.
-              </p>
-            </div>
-          </div>
-        </div>
+    <Layout
+      title="Resources - Zion Tech Group"
+      description="Comprehensive resources including documentation, case studies, blog posts, and API references for developers and businesses."
+      keywords="documentation, case studies, blog, API reference, resources, tutorials, guides"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">"
+          <div className="absolute inset-0">";
+            <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";
+          </div>;
+
+          <div className="container mx-auto px-4 relative z-10">";
+            <motion.div;
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center""
+            >;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
+                Resources &{' '}',
+                <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">";
+                  Documentation;
+                </span>;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
+                Everything you need to succeed with our technology solutions. 
+                Documentation, guides, case studies, and more.,
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link href="/docs" className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">";
+                  Browse Documentation;
+                </Link>;
+                <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">";
+                  Get Support;
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
 
         {/* Resources Grid */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

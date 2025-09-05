@@ -1,8 +1,18 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Brain, CheckCircle, ArrowRight, Star } from 'lucide-react';
+import Layout from '../components/Layout';
+import { 
+  Brain, 
+  Cpu, 
+  Eye, 
+  MessageSquare, 
+  BarChart3, 
+  Shield, 
+  CheckCircle, 
+  TrendingUp,
+  Rocket
+} from 'lucide-react';
 
 const aiServices = [
   {
