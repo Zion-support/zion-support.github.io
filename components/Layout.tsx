@@ -1,36 +1,15 @@
-import Head from 'next/head'
-import Header from './Header'
-import Footer from './Footer'
+import React, { ReactNode } from "react";
 
 interface LayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  ogImage?: string;
+  children: ReactNode;
 }
 
-const Layout = ({ 
-  children, 
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',
-  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
-  keywords = 'technology solutions, AI development, cloud services, blockchain, data analytics, web development, mobile development, IoT platforms, cybersecurity',
-  ogImage = '/images/og-image.jpg'
-}: LayoutProps) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description}  />
-        <meta name="viewport" content="width=device-width, initial-scale=1"  />
-        <link rel="icon" href="/favicon.ico"  />
-      </Head>
-
-      <Header  />
+    <main className="min-h-screen">
       {children}
-      <Footer  />
-    </>
-  )
-}
+    </main>
+  );
+};
 
-export default Layout
+export default Layout;

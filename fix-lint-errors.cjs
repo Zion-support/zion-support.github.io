@@ -1,17 +1,4 @@
-#!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-
-console.log("🔧 Starting lint error fixes...");
-
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, "utf8");
-    
-    // Remove merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, "");
+<<<<<<< HEAD
     content = content.replace(/<<<<<<< [^\n]*[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, "");
     
     // Clean up any remaining conflict markers
@@ -23,7 +10,7 @@ function resolveMergeConflicts(filePath) {
     content = content.replace(/\n\s*\n\s*\n/g, "\n\n");
     
     fs.writeFileSync(filePath, content);
-    console.log(`✅ Resolved conflicts in: ${filePath}`);
+    
     return true} catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
     return false}
@@ -73,7 +60,7 @@ function removeUnusedImports(filePath) {
       newLines.push(line)}
     
     fs.writeFileSync(filePath, newLines.join('\n'));
-    console.log(`✅ Cleaned unused imports in: ${filePath}`);
+    
     return true} catch (error) {
     console.error(`❌ Error cleaning imports in ${filePath}:`, error.message);
     return false}
@@ -119,9 +106,9 @@ try {
   const conflictedFiles = findFilesWithIssues(".");
   
   if (conflictedFiles.length === 0) {
-    console.log("✅ No merge conflicts found!")} else {
-    console.log(`🔍 Found ${conflictedFiles.length} files with merge conflicts:`);
-    conflictedFiles.forEach(file => console.log(`  - ${file}`));
+    } else {
+    
+    conflictedFiles.forEach(file => );
     
     let resolvedCount = 0;
     for (const file of conflictedFiles) {
@@ -129,15 +116,39 @@ try {
         resolvedCount++}
     }
     
-    console.log(`\n🎉 Successfully resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`)}
+    }
   
   // Try to run lint fix
-  console.log(`\n🔨 Running lint fix...`);
+  
   try {
-    execSync("npm run lint:fix", { stdio: "inherit" });
-    console.log("✅ Lint fix completed!")} catch (error) {
-    console.log("⚠️  Lint fix had some issues, but continuing...")}
+    execSync("npm run "lint": fix", { "stdio": "inherit" });
+    } catch (error) {
+    }
   
 } catch (error) {
-  console.error("❌ Error during lint error fixing:", error.message);
+  console.error("❌ Error during lint error "fixing": ", error.message);
   process.exit(1)}
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+#!/usr/bin/env node;
+const fs = require("fs")
+const path = require("path")
+const { execSync } = require("child_process")
+console.log(" Starting lint error fixes...")
+    let content = fs.readFileSync(filePath, "utf8")
+    content = content.replace(/[\s\S]*?[\s\S]*?[^\n]*/g, "")
+    content = content.replace(/[^\n]*[\s\S]*?[\s\S]*?[^\n]*/g, "")
+    content = content.replace(/^.*$/gm, "")
+    content = content.replace(/^.*$/gm, "")
+    content = content.replace(/^.*$/gm, "")
+    content = content.replace(/\n\s*\n\s*\n/g, "\n\n")
+    console.log(` Resolved conflicts "in"`)
+    let content = fs.readFileSync(filePath, "utf8")
+      if (line.includes('from "lucide-react"') || line.includes(')
+        const importMatch = line.match(/import\s*{([^}]+)}\s*from\s*["']lucide-react[']
+cursor/fix-lint-push-and-merge-to-main-f3c1;

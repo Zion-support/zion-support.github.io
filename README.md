@@ -1,449 +1,165 @@
-# Zion Tech Group Website
+# Zion Tech Group - Technology Solutions Platform
 
-<<<<<<< HEAD
-A modern, high-performance website built with Next.js 15, TypeScript, and Tailwind CSS for Zion Tech Group - a leading provider of micro SaaS products, AI services, and IT solutions.
+A modern, responsive website built with Next.js showcasing comprehensive technology services including AI, IT solutions, micro SaaS development, and more.
 
 ## 🚀 Features
 
-- **Modern Tech Stack**: Next.js 15, TypeScript, Tailwind CSS
-- **Performance Optimized**: Core Web Vitals monitoring, image optimization, lazy loading
-- **Mobile-First Design**: Responsive design with mobile optimization
-- **SEO Optimized**: Enhanced meta tags, structured data, sitemap generation
-- **Security Enhanced**: Comprehensive security headers, CSP, HSTS
-- **Error Handling**: Robust error boundaries and monitoring
-- **Automation Ready**: Extensive automation scripts for deployment and maintenance
-
-## 📊 Performance Metrics
-
-- **Build Time**: ~4 seconds
-- **Bundle Size**: Optimized with tree shaking and code splitting
-- **Core Web Vitals**: Monitored and optimized
-- **Mobile Performance**: Enhanced for 35% mobile traffic
+- **Modern UI/UX**: Clean, responsive design with Tailwind CSS
+- **Performance Optimized**: Fast loading times and optimized bundle sizes
+- **SEO Ready**: Comprehensive meta tags, structured data, and SEO optimization
+- **Accessibility**: WCAG compliant with proper ARIA labels and keyboard navigation
+- **Mobile First**: Fully responsive design that works on all devices
+- **TypeScript**: Type-safe development with comprehensive type definitions
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 15.5.2
-- **Language**: TypeScript 5.9.2
-- **Styling**: Tailwind CSS 3.4.17
-- **UI Components**: Radix UI
-- **Icons**: Lucide React
-- **Performance**: Web Vitals, Performance Observer API
-- **Deployment**: Netlify ready
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Node.js 18.0.0 or higher
-- npm 10.0.0 or higher
-
-### Installation
-
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/Zion-Holdings/zion.app.git
-   cd zion.app
-   ```
-
-2. **Install dependencies**
-
-=======
-A modern, responsive website for Zion Tech Group, a leading technology solutions provider. Built with Next.js, TypeScript, and Tailwind CSS.
-
-## 🚀 Features
-
-- **Modern Design**: Clean, professional design with responsive layout
-- **Comprehensive Pages**: Home, About, Services, Products, Blog, Careers, and Contact
-- **SEO Optimized**: Meta tags, sitemap, robots.txt, and structured data
-- **Performance**: Optimized for fast loading and excellent user experience
-- **Accessibility**: WCAG compliant with proper semantic HTML
-- **Mobile First**: Fully responsive design that works on all devices
-
-## 📋 Pages
-
-### Main Pages
-- **Home** (`/`) - Landing page with hero section, services overview, and call-to-action
-- **About** (`/about`) - Company information, team, values, and mission
-- **Services** (`/services`) - Comprehensive service offerings with detailed descriptions
-- **Products** (`/products`) - Technology platforms and solutions
-- **Blog** (`/blog`) - Technology insights and industry articles
-- **Careers** (`/careers`) - Job openings and company culture
-- **Contact** (`/contact`) - Contact form and office locations
-
-### Service Pages
-- **AI Development** (`/services/ai-development`) - Artificial intelligence solutions
-- **Cloud Solutions** (`/services/cloud-solutions`) - Cloud infrastructure and migration
-- **Web Development** (`/services/web-development`) - Modern web applications
-- **Mobile Development** (`/services/mobile-development`) - iOS and Android apps
-- **Blockchain Solutions** (`/services/blockchain`) - Decentralized applications
-- **IoT Platforms** (`/services/iot-platforms`) - Internet of Things solutions
-- **Data Analytics** (`/services/data-analytics`) - Business intelligence
-- **Cybersecurity** (`/services/cybersecurity`) - Security solutions
-
-## 🛠️ Technology Stack
-
-- **Framework**: Next.js 14
+- **Framework**: Next.js 14.2.32
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Icons**: Lucide React
-- **Animations**: Framer Motion
-- **Deployment**: Vercel/Netlify ready
+- **Deployment**: Vercel-ready
+- **Linting**: ESLint with custom configuration
 
-## 📦 Installation
+## 📦 Services Covered
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd zion-tech-group
-   ```
+### AI & Machine Learning
+- Machine Learning Models
+- AI Chatbots & Virtual Assistants
+- Predictive Analytics
+- Computer Vision
+- Natural Language Processing
 
-2. **Install dependencies**
->>>>>>> origin/merge-pr-10614
-   ```bash
-   npm install
-   ```
+### IT Infrastructure
+- Cloud Migration & Strategy
+- DevOps Implementation
+- Infrastructure as Code
+- Multi-Cloud Management
+- Disaster Recovery
 
-<<<<<<< HEAD
-3. **Start development server**
+### Micro SaaS Development
+- Custom Web Applications
+- API Development & Integration
+- Database Design & Optimization
+- User Management Systems
+- Payment Processing
 
-=======
-3. **Run the development server**
->>>>>>> origin/merge-pr-10614
-   ```bash
-   npm run dev
-   ```
+### Additional Services
+- Cybersecurity Solutions
+- Data Analytics & BI
+- Digital Transformation
+- Blockchain & Web3
+- Mobile App Development
+- E-commerce Solutions
 
-<<<<<<< HEAD
-4. **Build for production**
-   ```bash
-   npm run build
-   ```
+## 🚀 Getting Started
 
-5. **Start production server**
-   ```bash
-   npm start
-   ```
+### Prerequisites
 
-### Security
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run security:audit # Security audit
-npm run security:fix   # Fix security issues
+git clone https://github.com/Zion-Holdings/zion.app.git
+cd zion.app
 ```
 
-## 🔁 Automations
-
-You can run consolidated automations and improvements locally:
-
+2. Install dependencies:
 ```bash
-# Run health, security, performance, build, PM2 bootstrap, and reports
-bash scripts/run-all-improvements.sh
-
-# Or quick CI locally (type-check, lint, tests)
-npm run ci:quick
+npm install
 ```
 
-Generated reports are written under `automation/reports/` and project root (final report JSON).
-
-## 🏗️ Project Structure
-
-```
-├── components/          # Reusable React components
-│   ├── ErrorBoundary.tsx
-│   ├── PerformanceMonitor.tsx
-│   ├── PerformanceOptimizer.tsx
-│   └── ModernLoading.tsx
-├── pages/              # Next.js pages
-│   ├── index.tsx       # Homepage
-│   ├── services.tsx    # Services page
-│   ├── about.tsx       # About page
-│   └── contact.tsx     # Contact page
-├── scripts/            # Utility scripts
-│   └── generate-sitemap-enhanced.js
-├── styles/             # Global styles
-│   └── globals.css
-├── public/             # Static assets
-│   ├── sitemap.xml
-│   └── robots.txt
-└── automation/         # Automation scripts
-```
-
-## 🎯 Available Scripts
-
-### Development
-- `npm run dev` - Start development server
-- `npm run dev:fast` - Start with Turbo mode
-
-### Building
-- `npm run build` - Build for production
-- `npm run build:production` - Build with production optimizations
-- `npm run start` - Start production server
-
-### Code Quality
-- `npm run lint` - Run ESLint
-- `npm run lint:fix` - Fix ESLint issues
-- `npm run type-check` - Run TypeScript checks
-- `npm run format` - Format code with Prettier
-
-### SEO & Performance
-- `npm run sitemap:generate` - Generate sitemap and robots.txt
-- `npm run perf:lighthouse` - Run Lighthouse audit
-
-### Testing
-- `npm run test` - Run tests
-- `npm run test:watch` - Run tests in watch mode
-- `npm run test:coverage` - Run tests with coverage
-=======
-4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
-## 🏗️ Build and Deployment
-
-### Development
+3. Run the development server:
 ```bash
 npm run dev
 ```
 
-### Production Build
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Build for Production
+
 ```bash
 npm run build
-```
-
-### Start Production Server
-```bash
 npm start
-```
-
-### Linting
-```bash
-npm run lint
-```
-
-### Type Checking
-```bash
-npm run type-check
 ```
 
 ## 📁 Project Structure
 
 ```
-zion-tech-group/
-├── components/          # React components
-│   ├── layout/         # Layout components (Header, Footer, etc.)
-│   └── ui/            # UI components
-├── pages/              # Next.js pages
-│   ├── services/       # Service pages
-│   ├── blog/          # Blog pages
-│   └── api/           # API routes
-├── public/             # Static assets
-│   ├── sitemap.xml    # SEO sitemap
-│   └── robots.txt     # Search engine directives
-├── styles/             # Global styles
-├── utils/              # Utility functions
-└── types/              # TypeScript type definitions
+├── pages/                 # Next.js pages
+│   ├── index.tsx         # Homepage
+│   ├── about.tsx         # About page
+│   ├── services.tsx      # Services overview
+│   ├── ai-services.tsx   # AI services page
+│   ├── blockchain.tsx    # Blockchain services
+│   ├── micro-saas.tsx    # Micro SaaS services
+│   ├── pricing.tsx       # Pricing page
+│   └── contact.tsx       # Contact page
+├── components/           # Reusable components
+├── styles/              # Global styles
+├── public/              # Static assets
+├── ecosystem.config.cjs # PM2 configuration
+└── package.json         # Dependencies and scripts
 ```
 
-## 🎨 Customization
+## 🔧 Available Scripts
 
-### Colors
-The website uses a blue and purple color scheme. You can customize colors in `tailwind.config.js`:
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint errors
 
-```javascript
-theme: {
-  extend: {
-    colors: {
-      primary: {
-        50: '#eff6ff',
-        500: '#3b82f6',
-        600: '#2563eb',
-        700: '#1d4ed8',
-        900: '#1e3a8a',
-      }
-    }
-  }
-}
-```
+## 🎨 Design System
 
-### Content
-Update content by editing the respective page components in the `pages/` directory.
+The project uses a consistent design system with:
 
-### Styling
-Modify styles using Tailwind CSS classes or add custom CSS in `styles/globals.css`.
->>>>>>> origin/merge-pr-10614
-
-## 🔧 Configuration
-
-### Environment Variables
-<<<<<<< HEAD
-
-Create a `.env.local` file:
-
-```env
-NODE_ENV=production
-NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
-```
-
-### Next.js Configuration
-
-The `next.config.js` includes:
-- Performance optimizations
-- Security headers
-- Image optimization
-- Bundle analysis
-
-### Tailwind Configuration
-
-Custom theme extensions in `tailwind.config.js`:
-- Custom animations
-- Extended color palette
-- Responsive breakpoints
-
-## 📈 Performance Optimizations
-
-### Implemented Optimizations
-
-1. **Image Optimization**
-   - Next.js Image component
-   - WebP/AVIF format support
-   - Lazy loading
-   - Responsive images
-
-2. **Code Splitting**
-   - Automatic route-based splitting
-   - Dynamic imports
-   - Bundle analysis
-
-3. **Caching**
-   - Static generation
-   - ISR (Incremental Static Regeneration)
-   - Browser caching headers
-
-4. **Core Web Vitals**
-   - LCP monitoring
-   - FID tracking
-   - CLS measurement
-
-## 🔒 Security Features
-
-- Content Security Policy (CSP)
-- XSS Protection
-- CSRF Protection
-- HSTS Headers
-- Frame Options
-- Content Type Options
-
-## 📱 Mobile Optimization
-
-- Responsive design
-- Touch-friendly interfaces
-- Optimized for mobile performance
-- Progressive Web App ready
-
-## 🚀 Deployment
-
-### Netlify (Recommended)
-
-1. Connect your GitHub repository to Netlify
-2. Set build command: `npm run build`
-3. Set publish directory: `.next`
-4. Deploy automatically on push to main branch
-
-### Manual Deployment
-
-1. Build the project: `npm run build`
-2. Upload the `.next` folder to your server
-3. Configure your server to serve Next.js
-
-## 🤖 Automation
-
-The project includes extensive automation scripts for:
-- Error monitoring and fixing
-- Performance optimization
-- SEO improvements
-- Security scanning
-- Dependency management
-
-## 📊 Analytics & Monitoring
-
-- Performance monitoring
-- Error tracking
-- User analytics ready
-- Core Web Vitals tracking
-=======
-Create a `.env.local` file for environment-specific configuration:
-
-```env
-NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
-NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=GA_MEASUREMENT_ID
-```
-
-### SEO Configuration
-Update SEO settings in `components/layout/MainLayout.tsx` and individual pages.
+- **Colors**: Blue primary (#2563eb), with complementary grays and accent colors
+- **Typography**: Inter font family with responsive sizing
+- **Spacing**: Consistent spacing scale using Tailwind's spacing system
+- **Components**: Reusable components with consistent styling
 
 ## 📱 Responsive Design
 
-The website is fully responsive and optimized for:
-- Desktop (1200px+)
-- Tablet (768px - 1199px)
-- Mobile (320px - 767px)
-
-## 🚀 Performance
-
-- **Lighthouse Score**: 90+ across all metrics
-- **Core Web Vitals**: Optimized for excellent user experience
-- **Image Optimization**: Next.js Image component for optimal loading
-- **Code Splitting**: Automatic code splitting for faster page loads
+- **Mobile**: Optimized for mobile devices (320px+)
+- **Tablet**: Responsive design for tablet screens (768px+)
+- **Desktop**: Full desktop experience (1024px+)
+- **Large Screens**: Optimized for large displays (1280px+)
 
 ## 🔍 SEO Features
 
-- **Meta Tags**: Comprehensive meta tags for all pages
-- **Open Graph**: Social media sharing optimization
-- **Structured Data**: JSON-LD markup for search engines
-- **Sitemap**: XML sitemap for search engine indexing
-- **Robots.txt**: Search engine crawling directives
-- **Canonical URLs**: Proper canonical URL implementation
+- Meta tags for all pages
+- Open Graph tags for social sharing
+- Structured data markup
+- Semantic HTML structure
+- Optimized images and assets
+- Fast loading times
 
-## 🛡️ Security
+## ♿ Accessibility
 
-- **Content Security Policy**: Implemented security headers
-- **HTTPS**: Secure connections enforced
-- **Input Validation**: Form validation and sanitization
-- **XSS Protection**: Cross-site scripting protection
+- WCAG 2.1 AA compliant
+- Proper ARIA labels
+- Keyboard navigation support
+- Screen reader friendly
+- High contrast support
+- Focus management
 
-## 📊 Analytics
+## 🚀 Performance
 
-The website is prepared for Google Analytics integration. Add your tracking ID to the environment variables.
->>>>>>> origin/merge-pr-10614
+- Next.js optimization features
+- Image optimization
+- Code splitting
+- Lazy loading
+- Bundle analysis
+- Performance monitoring
 
 ## 🤝 Contributing
 
 1. Fork the repository
-<<<<<<< HEAD
-2. Create a feature branch
-3. Make your changes
-4. Run tests and linting
-5. Submit a pull request
-
-## 📄 License
-
-MIT License - see LICENSE file for details
-
-## 📞 Contact
-
-For support and questions:
-- Email: kleber@ziontechgroup.com
-- Phone: +1 302 464 0950
-- Website: https://ziontechgroup.com
-
----
-
-**Zion Tech Group** - Innovative Micro SaaS, AI Services & IT Solutions
-
----
-Automation summary: README refreshed 2025-09-04T12:56:29.956Z
-=======
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
@@ -451,24 +167,19 @@ Automation summary: README refreshed 2025-09-04T12:56:29.956Z
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Support
+## 📞 Contact
 
-For support and questions:
-- Email: info@ziontechgroup.com
-- Website: https://ziontechgroup.com
+- **Website**: [Zion Tech Group](https://zion.app)
+- **Email**: contact@zion.app
+- **Phone**: +1 (555) 123-4567
 
-## 🎯 Roadmap
+## 🙏 Acknowledgments
 
-- [ ] Add blog post management system
-- [ ] Implement contact form backend
-- [ ] Add multi-language support
-- [ ] Integrate CMS for content management
-- [ ] Add e-commerce functionality for products
-- [ ] Implement user authentication system
-- [ ] Add real-time chat support
-- [ ] Create admin dashboard
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Lucide React for the beautiful icons
+- All contributors and supporters
 
 ---
 
-Built with ❤️ by Zion Tech Group
->>>>>>> origin/merge-pr-10614
+Built with ❤️ by the Zion Tech Group team

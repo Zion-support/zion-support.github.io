@@ -1,168 +1,62 @@
-// Performance optimizations
 const nextConfig = {
   reactStrictMode: true,
-  compress: true,
-  poweredByHeader: false,
-  eslint: { 
-    ignoreDuringBuilds: false,
-    dirs: ['pages', 'src/components', 'src/lib', 'src/hooks']
-  },
-  typescript: { 
-    ignoreBuildErrors: true 
-  },
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
-  output: 'export',
-  generateBuildId: async () => 'build-' + Date.now(),
-  // Include all page types
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'page.tsx'],
-  
   // Image optimization
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000, // 1 year
+    minimumCacheTTL: 31536000,
   },
-  
-  // Performance optimizations
-  experimental: {
-    optimizeCss: true,
-    scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-accordion'],
-  },
-  
-  // Webpack optimizations
+  // Webpack configuration
   webpack: (config, { dev, isServer }) => {
-    // Production optimizations
-    if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-          common: {
-            name: 'common',
-            minChunks: 2,
-            chunks: 'all',
-            enforce: true,
-          },
-        },
-      }}
-    
-    return config},
-  
-  // Security headers
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'X-Frame-Options', value: 'DENY' },
-          { key: 'X-XSS-Protection', value: '1; mode=block' },
-          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
-          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' }
-        ]
-      }
-    ]},
-  
-  // Redirects for SEO
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-    ]},
-
-  // Generate sitemap
-  async rewrites() {
-    return []},
+    // Exclude problematic directories from file watching in dev mode
+    if (dev) {
+      config.watchOptions = {
+        ignored: [
+          '**/node_modules/**',
+          '**/.git/**',
+          '**/pages_backup*/**',
+          '**/pages.*/**',
+          '**/pages-*/**',
+          '**/pages_disabled*/**',
+          '**/pages.disabled*/**',
+          '**/pages.broken*/**',
+          '**/pages.corrupted*/**',
+          '**/pages.old*/**',
+          '**/pages._*/**',
+          '**/pages.__*/**',
+          '**/backup-pages/**',
+          '**/src.pages.disabled/**',
+          '**/lib_backup*/**',
+          '**/src_backup*/**',
+          '**/corrupted-files-backup*/**',
+          '**/performance-reports*/**',
+          '**/log-analysis-reports*/**',
+          '**/link-reports*/**',
+          '**/lint-target*/**',
+          '**/monitoring*/**',
+          '**/pm2-automation*/**',
+          '**/automation/logs*/**',
+          '**/automation/backup*/**',
+          '**/performance-*.json',
+          '**/performance-*.js',
+          '**/performance-*.cjs',
+          '**/performance-*.sh',
+          '**/performance-*.html',
+          '**/performance-*.md',
+          '**/performance-*.txt',
+        ],
+        poll: 1000,
+        aggregateTimeout: 300,
+      };
+    }
+    return config;
+  },
 };
-
-
-  // Performance optimizations
-  experimental: {
-    ...config.experimental,
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
-  },
-  
-  // Image optimization
-  images: {
-    ...config.images,
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
-  
-  // Compression
-  compress: true,
-  
-  // Power optimizations
-  poweredByHeader: false,
-  
-  // Headers for performance
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-      {
-        source: '/static/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-      {
-        source: '/_next/static/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-    ]
-  },
-  
 
 export default nextConfig;

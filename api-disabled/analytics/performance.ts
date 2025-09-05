@@ -1,2 +1,0 @@
-// Analytics performance module
-export {};

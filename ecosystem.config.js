@@ -5,9 +5,9 @@ export default {
       script: 'npm',
       args: 'run preview',
       cwd: './',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
@@ -21,10 +21,12 @@ export default {
       script: 'node',
       args: 'scripts/pm2/auto-fix.js',
       cron_restart: '0 */6 * * *',
-      autorestart: true,
-      watch: false,
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '512M',
-      env: { NODE_ENV: 'production' },
+      env: {
+        NODE_ENV: 'production'
+      },
       log_file: 'logs/pm2/auto-fix.log',
       error_file: 'logs/pm2/auto-fix-error.log',
       out_file: 'logs/pm2/auto-fix-out.log',
@@ -34,10 +36,12 @@ export default {
       script: 'node',
       args: 'scripts/pm2/healthcheck.js',
       cron_restart: '*/5 * * * *',
-      autorestart: true,
-      watch: false,
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '128M',
-      env: { NODE_ENV: 'production' },
+      env: {
+        NODE_ENV: 'production'
+      },
       log_file: 'logs/pm2/health.log',
       error_file: 'logs/pm2/health-error.log',
       out_file: 'logs/pm2/health-out.log',
@@ -45,9 +49,9 @@ export default {
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -55,7 +59,7 @@ export default {
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
       },
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      cron_restart: '0 */6 * * *',
       log_file: 'logs/pm2/code-quality-monitor.log',
       error_file: 'logs/pm2/code-quality-monitor-error.log',
       out_file: 'logs/pm2/code-quality-monitor-out.log',
@@ -63,9 +67,9 @@ export default {
     {
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -73,7 +77,7 @@ export default {
         COMMIT_FREQUENCY: 'hourly',
         AUTO_PUSH: 'false',
       },
-      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      cron_restart: '0 */2 * * *',
       log_file: 'logs/pm2/auto-commit-fixes.log',
       error_file: 'logs/pm2/auto-commit-fixes-error.log',
       out_file: 'logs/pm2/auto-commit-fixes-out.log',
@@ -81,9 +85,9 @@ export default {
     {
       name: 'dependency-monitor',
       script: 'scripts/pm2/dependency-monitor.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -91,7 +95,7 @@ export default {
         AUTO_UPDATE_DEV: 'true',
         SECURITY_ALERTS: 'true',
       },
-      cron_restart: '0 0 * * 0', // Restart weekly on Sunday
+      cron_restart: '0 0 * * 0',
       log_file: 'logs/pm2/dependency-monitor.log',
       error_file: 'logs/pm2/dependency-monitor-error.log',
       out_file: 'logs/pm2/dependency-monitor-out.log',
@@ -99,9 +103,9 @@ export default {
     {
       name: 'performance-monitor',
       script: 'scripts/pm2/performance-monitor.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -109,18 +113,17 @@ export default {
         PERFORMANCE_THRESHOLD: '3000',
         BUNDLE_SIZE_LIMIT: '2MB',
       },
-      cron_restart: '0 */8 * * *', // Restart every 8 hours
+      cron_restart: '0 */8 * * *',
       log_file: 'logs/pm2/performance-monitor.log',
       error_file: 'logs/pm2/performance-monitor-error.log',
       out_file: 'logs/pm2/performance-monitor-out.log',
     },
-    // NEW: Intelligent Test Automation
     {
       name: 'test-automation',
       script: 'scripts/pm2/test-automation.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -129,18 +132,17 @@ export default {
         AUTO_RETRY_FAILED: 'true',
         PARALLEL_TESTS: 'true',
       },
-      cron_restart: '0 */3 * * *', // Restart every 3 hours
+      cron_restart: '0 */3 * * *',
       log_file: 'logs/pm2/test-automation.log',
       error_file: 'logs/pm2/test-automation-error.log',
       out_file: 'logs/pm2/test-automation-out.log',
     },
-    // NEW: Security Scanner
     {
       name: 'security-scanner',
       script: 'scripts/pm2/security-scanner.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -150,18 +152,17 @@ export default {
         SCAN_CONFIGS: 'true',
         ALERT_ON_CRITICAL: 'true',
       },
-      cron_restart: '0 */12 * * *', // Restart every 12 hours
+      cron_restart: '0 */12 * * *',
       log_file: 'logs/pm2/security-scanner.log',
       error_file: 'logs/pm2/security-scanner-error.log',
       out_file: 'logs/pm2/security-scanner-out.log',
     },
-    // NEW: Build Optimization Monitor
     {
       name: 'build-optimizer',
       script: 'scripts/pm2/build-optimizer.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -171,18 +172,17 @@ export default {
         CODE_SPLITTING: 'true',
         MINIFICATION: 'true',
       },
-      cron_restart: '0 0 * * *', // Restart daily at midnight
+      cron_restart: '0 0 * * *',
       log_file: 'logs/pm2/build-optimizer.log',
       error_file: 'logs/pm2/build-optimizer-error.log',
       out_file: 'logs/pm2/build-optimizer-out.log',
     },
-    // NEW: Git Workflow Automation
     {
       name: 'git-workflow',
       script: 'scripts/pm2/git-workflow.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -192,18 +192,17 @@ export default {
         CONFLICT_RESOLUTION: 'true',
         BRANCH_STRATEGY: 'gitflow',
       },
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      cron_restart: '0 */6 * * *',
       log_file: 'logs/pm2/git-workflow.log',
       error_file: 'logs/pm2/git-workflow-error.log',
       out_file: 'logs/pm2/git-workflow-out.log',
     },
-    // NEW: Environment Health Monitor
     {
       name: 'health-monitor',
       script: 'scripts/pm2/health-monitor.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -213,18 +212,17 @@ export default {
         MONITOR_RESOURCES: 'true',
         ALERT_THRESHOLD: '80',
       },
-      cron_restart: '0 */1 * * *', // Restart every hour
+      cron_restart: '0 */1 * * *',
       log_file: 'logs/pm2/health-monitor.log',
       error_file: 'logs/pm2/health-monitor-error.log',
       out_file: 'logs/pm2/health-monitor-out.log',
     },
-    // NEW: Documentation Generator
     {
       name: 'docs-generator',
       script: 'scripts/pm2/docs-generator.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -234,18 +232,17 @@ export default {
         API_DOCS: 'true',
         COMPONENT_DOCS: 'true',
       },
-      cron_restart: '0 2 * * *', // Restart daily at 2 AM
+      cron_restart: '0 2 * * *',
       log_file: 'logs/pm2/docs-generator.log',
       error_file: 'logs/pm2/docs-generator-error.log',
       out_file: 'logs/pm2/docs-generator-out.log',
     },
-    // NEW: SEO and Accessibility Monitor
     {
       name: 'seo-accessibility',
       script: 'scripts/pm2/seo-accessibility.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      instances: '1',
+      autorestart: 'true',
+      watch: 'false',
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
@@ -255,7 +252,7 @@ export default {
         CHECK_PERFORMANCE: 'true',
         LIGHTHOUSE_AUDIT: 'true',
       },
-      cron_restart: '0 */4 * * *', // Restart every 4 hours
+      cron_restart: '0 */4 * * *',
       log_file: 'logs/pm2/seo-accessibility.log',
       error_file: 'logs/pm2/seo-accessibility-error.log',
       out_file: 'logs/pm2/seo-accessibility-out.log',
