@@ -6,6 +6,8 @@ const { promisify } = require('util');
 const execAsync = promisify(exec);
 class BuildMonitor {
   constructor() {
+<<<<<<< HEAD
+=======
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'build-status.json');
     this.alertThreshold = 3; // Alert after 3 consecutive failures
@@ -143,6 +145,7 @@ class BuildMonitor {
       } catch (error) {
         this.log('Could not read previous report', 'WARN');
       }
+>>>>>>> main
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
@@ -161,6 +164,9 @@ class BuildMonitor {
       console.log(logMessage);
     }
   }
+<<<<<<< HEAD
+
+=======
     const report = {
       ...results,
       trends: {
@@ -213,6 +219,7 @@ class BuildMonitor {
   }
   async run() {
     this.log('Starting build health check...');
+>>>>>>> main
   async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
@@ -232,12 +239,16 @@ class BuildMonitor {
         this.log('warn', 'No build found, triggering build...');
         await this.triggerBuild();
       }
+<<<<<<< HEAD
+      
+=======
       if (report.healthScore < 70) {
         this.log('Build health is below threshold. Consider immediate action.', 'WARN');
       }
     } catch (error) {
       this.log(`Error in build monitor: ${error.message}`, 'ERROR');
     }
+>>>>>>> main
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
@@ -437,8 +448,11 @@ class BuildMonitor {
 // Handle command line arguments
 const monitor = new BuildMonitor();
 if (require.main === module) {
+<<<<<<< HEAD
+=======
   const monitor = new BuildMonitor();
   monitor.run().catch(console.error);
+>>>>>>> main
   const command = process.argv[2];
   switch (command) {
     case 'start':

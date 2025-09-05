@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
 export function sanitizeHtml(html: string): string { let sanitized = html.replace(/<script\b[^<]*(?: (?!<\/script>)<[^<]*)*<\/script>/gi,&apos;'); sanitized = sanitized.replace(/\s*on\w+\s*=\s*[&apos;&quot;][^&apos;&quot;]*[&apos;&quot;]/g,&apos;'); sanitized = sanitized.replace(/javascript:/gi,&apos;'); sanitized = sanitized.replace(/data:text\/html/gi,&apos;'); return sanitized} export function sanitizeUrl(url: string): string { return url.replace(/javascript:/gi,&apos;')} export function sanitizeCss(css: string): string { return css.replace(/expression\s*\(/gi,&apos;')}
 // HTML sanitization utility to prevent CSP violations
 export function sanitizeHtml("html": string): string {
@@ -16,4 +21,13 @@ export function sanitizeUrl("url": string): string {
 export function sanitizeCss("css": string): string {
   // Remove potentially dangerous CSS
   return css.replace(/expression\s*\(/gi, '')}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
 export function sanitizeHtml(html: string): string { let sanitized = html.replace(/<script\b[^<]*(?: (?!<\/script>)<[^<]*)*<\/script>/gi,''); sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g,''); sanitized = sanitized.replace(/javascript:/gi,''); sanitized = sanitized.replace(/data:text\/html/gi,''); return sanitized} export function sanitizeUrl(url: string): string { return url.replace(/javascript:/gi,'')} export function sanitizeCss(css: string): string { return css.replace(/expression\s*\(/gi,'')}
+>>>>>>> main
+>>>>>>> main

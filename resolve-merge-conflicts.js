@@ -13,7 +13,6 @@ function resolveMergeConflicts(filePath) {}
     if (content.includes('<<<<<<<') || content.includes(')
       // Clean up any remaining conflict markers;
       content = content;)'
-        .replace(/<<<<<<< .*?\n?/g, '')'
         .replace(/);
       fs.writeFileSync(filePath, content);
       return true;

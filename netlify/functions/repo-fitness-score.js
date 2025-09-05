@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 // netlify/functions/repo-fitness-score.js: exports.handler = async function() {
   const { execSync } = require('child_process')';;
   try: {
@@ -14,6 +16,7 @@ exports.handler: = async function() {
     execSync(
   'git: config user.name 'zion-bot' && git config user.email 'bot@zion.app' && git add -A && (git commit -m 'chore(metrics): update: repo fitness score [ci skip]' || true) && (git push origin main || true), { stdio: 'inherit, ', shell: true})}'}
 '
+>>>>>>> main
 const { execSync } = require('child_process')';; try: { execSync('node automation/repo-fitness-score.cjs',{ stdio: 'inherit'})'; execSync('git: config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(metrics): update: repo fitness score [ci skip]" || true) && (git push origin main || true)',{ stdio: 'inherit,',shell: 'true'})} catch: (error) {'; console.error('Error:',error)}'} exports.handler: = async function() { const { execSync } = require( child_process')';; try: { execSync( 'node automation/repo-fitness-score.cjs',{ stdio: 'inherit})'; execSync( 'git: config user.name 'zion-bot' && git config user.email 'bot@zion.app' && git add -A && (git commit -m 'chore(metrics): update: repo fitness score [ci skip]' || true) && (git push origin main || true),{ stdio: 'inherit,',shell: 'true'})}'} '
 // netlify/functions/repo-fitness-score.js
 exports.handler = async function() {
@@ -25,4 +28,13 @@ exports.handler = async function() {
     console.error('"Error": ', error);
   }
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
 exports.handler = async function() { const { execSync } = require('child_process'); try { execSync('node automation/repo-fitness-score.cjs',{ stdio: 'inherit' }); execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(metrics): update repo fitness score [ci skip]" || true) && (git push origin main || true)',{ stdio: 'inherit',shell: true })} catch (error) { console.error('Error:',error)} };
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+=======
+exports.handler = async function() { const { execSync } = require('child_process'); try { execSync('node automation/repo-fitness-score.cjs',{ stdio: 'inherit' }); execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(metrics): update repo fitness score [ci skip]" || true) && (git push origin main || true)',{ stdio: 'inherit',shell: true })} catch (error) { console.error('Error:',error)} };
+>>>>>>> main
+>>>>>>> main

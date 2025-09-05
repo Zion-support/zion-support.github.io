@@ -13,9 +13,6 @@ module.exports = {
         lg: "1024px",
         xl: "1280px",
         "2xl": "1536px",
-        "3xl": "1920px"
-      },
-      spacing: {
         "3xl": "1920px"},
       "spacing": {
         18: "4.5rem",
@@ -23,15 +20,6 @@ module.exports = {
         128: "32rem",
         "8xl": "88rem",
         "9xl": "96rem",
-      },
-      responsive: {
-        DEFAULT: "1rem",
-        sm: "2rem",
-        lg: "4rem",
-        xl: "5rem",
-        "2xl": "6rem",
-      },
-      animation: {
         "responsive": {
           DEFAULT: "1rem",
           "sm": "2rem",

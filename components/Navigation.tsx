@@ -5,12 +5,15 @@ import {
   Menu, 
   X, 
   ChevronDown, 
+  ChevronRight,
   Phone, 
   Mail, 
+  MapPin, 
   Facebook, 
   Twitter, 
   Linkedin, 
   Instagram,
+  Github,
   ArrowRight,
   Building,
   Users,
@@ -30,7 +33,7 @@ export default function Navigation() {
 
   const services = [
     { name: 'AI Services', href: '/ai-services', description: 'Machine Learning, NLP, Computer Vision', icon: BarChart3 },
-    { name: 'IT Services', href: '/it-services', description: 'Cloud, DevOps, Cybersecurity', icon: Shield },
+    { name: 'IT Services', href: '/services', description: 'Cloud, DevOps, Cybersecurity', icon: Shield },
     { name: 'Micro SaaS', href: '/micro-saas', description: 'Custom SaaS Solutions', icon: Zap },
     { name: 'Blockchain', href: '/blockchain', description: 'Smart Contracts, DeFi, NFTs', icon: Building },
     { name: 'IoT Solutions', href: '/iot', description: 'Connected Devices, Edge Computing', icon: Globe },
@@ -66,6 +69,14 @@ export default function Navigation() {
     { name: 'News', href: '/news', description: 'Industry news and updates' }
   ];
 
+  const quickLinks = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Support', href: '/support' },
+    { name: 'Status', href: '/status' }
+  ];
 
   return (
     <>
