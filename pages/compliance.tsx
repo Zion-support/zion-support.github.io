@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, CheckCircle, FileText, Users, Lock, Eye, Database, AlertCircle } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from "../components/Layout";
 
 const complianceFrameworks = [
   {
@@ -145,7 +145,7 @@ const certifications = [
 
 export default function CompliancePage() {
   return (
-    <MainLayout
+    <Layout
       title="Compliance - Zion Tech Group"
       description="Learn about our compliance with industry standards including SOC 2, HIPAA, GDPR, and ISO 27001. Your data protection and regulatory compliance is our priority."
       keywords="compliance, SOC 2, HIPAA, GDPR, ISO 27001, data protection, regulatory compliance, security standards"
@@ -440,6 +440,6 @@ export default function CompliancePage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

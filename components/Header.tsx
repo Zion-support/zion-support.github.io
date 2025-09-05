@@ -84,6 +84,24 @@ export function Header({ className }: HeaderProps) {
         { label: 'Healthcare', href: '/solutions/healthcare' },
         { label: 'Finance', href: '/solutions/finance' },
         { label: 'Retail', href: '/solutions/retail' },
+        { label: 'Education', href: '/solutions/education' },
+        { label: 'Government', href: '/solutions/government' },
+        { label: 'Startups', href: '/solutions/startup' },
+        { label: 'SMB', href: '/solutions/smb' },
+      ]
+    },
+    {
+      label: 'Industries',
+      href: '/industries',
+      hasDropdown: true,
+      dropdownItems: [
+        { label: 'All Industries', href: '/industries' },
+        { label: 'Healthcare', href: '/industries/healthcare' },
+        { label: 'Finance', href: '/industries/finance' },
+        { label: 'Retail', href: '/industries/retail' },
+        { label: 'Education', href: '/industries/education' },
+        { label: 'Government', href: '/industries/government' },
+        { label: 'Manufacturing', href: '/industries/manufacturing' },
       ]
     },
     {
@@ -95,6 +113,7 @@ export function Header({ className }: HeaderProps) {
         { label: 'Our Team', href: '/team' },
         { label: 'Careers', href: '/careers' },
         { label: 'News', href: '/news' },
+        { label: 'Partners', href: '/partners' },
         { label: 'Contact', href: '/contact' },
       ]
     },
@@ -107,8 +126,10 @@ export function Header({ className }: HeaderProps) {
         { label: 'White Papers', href: '/white-papers' },
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'Webinars', href: '/webinars' },
+        { label: 'Tutorials', href: '/tutorials' },
         { label: 'Help Center', href: '/help' },
         { label: 'FAQ', href: '/faq' },
+        { label: 'Documentation', href: '/docs' },
       ]
     },
   ];

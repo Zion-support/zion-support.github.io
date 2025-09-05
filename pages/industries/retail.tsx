@@ -14,7 +14,7 @@ import {
   Globe,
   Database
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from "../components/Layout";
 
 const services = [
   {
@@ -110,7 +110,7 @@ const benefits = [
 
 export default function RetailPage() {
   return (
-    <MainLayout 
+    <Layout 
       title="Retail Technology Solutions - Zion Tech Group"
       description="Transform retail with e-commerce platforms, inventory management AI, customer analytics, and omnichannel solutions."
       keywords="retail technology, e-commerce, inventory management, customer analytics, omnichannel retail, retail AI"
@@ -269,6 +269,6 @@ export default function RetailPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

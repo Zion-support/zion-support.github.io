@@ -15,7 +15,7 @@ import {
   FileText,
   Users
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from "../components/Layout";
 
 const services = [
   {
@@ -111,7 +111,7 @@ const benefits = [
 
 export default function ManufacturingPage() {
   return (
-    <MainLayout 
+    <Layout 
       title="Manufacturing Technology Solutions - Zion Tech Group"
       description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."
       keywords="manufacturing technology, smart factory, IoT manufacturing, predictive maintenance, digital twin, Industry 4.0"
@@ -270,6 +270,6 @@ export default function ManufacturingPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

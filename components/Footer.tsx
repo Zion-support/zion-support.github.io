@@ -38,6 +38,19 @@ export default function Footer() {
         { label: 'Retail', href: '/solutions/retail' },
         { label: 'Education', href: '/solutions/education' },
         { label: 'Government', href: '/solutions/government' },
+        { label: 'Startups', href: '/solutions/startup' },
+        { label: 'SMB', href: '/solutions/smb' },
+      ]
+    },
+    {
+      title: 'Industries',
+      links: [
+        { label: 'Healthcare', href: '/industries/healthcare' },
+        { label: 'Finance', href: '/industries/finance' },
+        { label: 'Retail', href: '/industries/retail' },
+        { label: 'Education', href: '/industries/education' },
+        { label: 'Government', href: '/industries/government' },
+        { label: 'Manufacturing', href: '/industries/manufacturing' },
       ]
     },
     {
@@ -47,8 +60,8 @@ export default function Footer() {
         { label: 'Our Team', href: '/team' },
         { label: 'Careers', href: '/careers' },
         { label: 'News', href: '/news' },
-        { label: 'Contact', href: '/contact' },
         { label: 'Partners', href: '/partners' },
+        { label: 'Contact', href: '/contact' },
       ]
     },
     {
@@ -58,19 +71,21 @@ export default function Footer() {
         { label: 'White Papers', href: '/white-papers' },
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'Webinars', href: '/webinars' },
+        { label: 'Tutorials', href: '/tutorials' },
         { label: 'Help Center', href: '/help' },
+        { label: 'FAQ', href: '/faq' },
         { label: 'Documentation', href: '/docs' },
       ]
     },
     {
       title: 'Support',
       links: [
-        { label: 'FAQ', href: '/faq' },
         { label: 'Contact Support', href: '/support' },
         { label: 'System Status', href: '/status' },
-        { label: 'API Reference', href: '/docs/api' },
+        { label: 'API Reference', href: '/api' },
         { label: 'Community', href: '/community' },
-        { label: 'Training', href: '/training' },
+        { label: 'Training', href: '/tutorials' },
+        { label: 'Search', href: '/search' },
       ]
     }
   ];

@@ -9,7 +9,7 @@ import {
   Play,
   Download
 } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from "../components/Layout";
 
 const endpoints = [
   {
@@ -74,7 +74,7 @@ const sdks = [
 
 export default function ApiDocsPage() {
   return (
-    <MainLayout
+    <Layout
       title="API Documentation - Zion Tech Group"
       description="Complete API reference with endpoints, authentication, examples, and SDKs for developers."
       keywords="API documentation, REST API, GraphQL, SDKs, developer resources, API reference"
@@ -337,6 +337,6 @@ export default function ApiDocsPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

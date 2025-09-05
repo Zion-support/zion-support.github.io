@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from "../components/Layout";
 
 const industries = [
   {
@@ -67,7 +67,7 @@ const stats = [
 
 export default function IndustrySolutionsPage() {
   return (
-    <MainLayout
+    <Layout
       title="Industry Solutions - Zion Tech Group"
       description="Specialized technology solutions tailored to specific industries including healthcare, finance, e-commerce, education, manufacturing, and real estate."
       keywords="industry solutions, healthcare technology, fintech, e-commerce, education technology, manufacturing IoT, real estate tech"
@@ -252,6 +252,6 @@ export default function IndustrySolutionsPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }
