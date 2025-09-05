@@ -80,8 +80,8 @@ export default function APIPage() {
     responses: [
       { code: 201, description: 'Quote created', example: '{ "quote_id": "456", "estimated_cost": "$10,000 - $15,000" }' },
       { code: 400, description: 'Bad Request', example: '{ "error": "Invalid project type" }' }]
-  }]
-  
+  }];
+
   const apiFeaturesDetailed = [{
     title: 'RESTful API Design',
     description: 'Clean, intuitive REST API endpoints following industry best practices',
@@ -117,15 +117,16 @@ export default function APIPage() {
     description: 'Built for high performance and scalability',
     icon: Server,
     features: ['Load balancing', 'Caching', 'CDN integration', 'Auto-scaling']
-  }]
-  
+  }];
+
   const sdkLanguages = [
     { name: 'JavaScript', icon: 'JS', color: 'bg-yellow-500' },
     { name: 'Python', icon: 'PY', color: 'bg-blue-500' },
     { name: 'Java', icon: 'J', color: 'bg-red-500' },
     { name: 'C#', icon: 'C#', color: 'bg-purple-500' },
     { name: 'PHP', icon: 'PHP', color: 'bg-indigo-500' },
-    { name: 'Go', icon: 'GO', color: 'bg-cyan-500' }]
+    { name: 'Go', icon: 'GO', color: 'bg-cyan-500' }
+  ];
   const [selectedEndpoint, setSelectedEndpoint] = useState(0)
   const [copiedCode, setCopiedCode] = useState<number | null>(null)
   const copyToClipboard = (text: string, index: number) => {

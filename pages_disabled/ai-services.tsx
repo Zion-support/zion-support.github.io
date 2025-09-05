@@ -92,15 +92,11 @@ export default function AIServicesPage() {
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => {
-<<<<<<< HEAD
 <<<<<<<< HEAD:pages-disabled/ai-services.tsx.disabled
               const IconComponent = (service as any).icon || CheckCircle;
 ========
               const IconComponent = service.icon;
 >>>>>>>> cursor/expand-services-advertise-and-build-project-59da:pages_disabled/ai-services.tsx
-=======
-              const IconComponent = (service as any).icon || CheckCircle;
->>>>>>> a19edd82339f030d1486cb753755512ca6e7d150
               return (
                 <motion.div
                   key={index}
@@ -109,17 +105,12 @@ export default function AIServicesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
 <<<<<<<< HEAD:pages-disabled/ai-services.tsx.disabled
                   whileHover={{ y: -5 }}
                 >
 ========
                   whileHover={{ y: -5 }} >
 >>>>>>>> cursor/expand-services-advertise-and-build-project-59da:pages_disabled/ai-services.tsx
-=======
-                  whileHover={{ y: -5 }}
-                >
->>>>>>> a19edd82339f030d1486cb753755512ca6e7d150
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-blue-600 group-hover:text-purple-600 transition-colors">
                       <IconComponent className="w-10 h-10" />
@@ -137,15 +128,11 @@ export default function AIServicesPage() {
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
                   <ul className="space-y-1">
-<<<<<<< HEAD
 <<<<<<<< HEAD:pages-disabled/ai-services.tsx.disabled
                       {(service.features || []).map((feature, featureIndex) => (
 ========
                       {service.features.map((feature, featureIndex) => (
 >>>>>>>> cursor/expand-services-advertise-and-build-project-59da:pages_disabled/ai-services.tsx
-=======
-                      {(service.features || []).map((feature, featureIndex) => (
->>>>>>> a19edd82339f030d1486cb753755512ca6e7d150
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
                   <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
@@ -164,16 +151,12 @@ export default function AIServicesPage() {
                   <ArrowRight className="w-3 h-3 ml-1" />
                   </Link>
                   </motion.div>
-<<<<<<< HEAD
 <<<<<<<< HEAD:pages-disabled/ai-services.tsx.disabled
               )})}
 ========
               );
             })}
 >>>>>>>> cursor/expand-services-advertise-and-build-project-59da:pages_disabled/ai-services.tsx
-=======
-              )})}
->>>>>>> a19edd82339f030d1486cb753755512ca6e7d150
           </div>
                   </div>
                   </section>
@@ -289,15 +272,11 @@ export default function AIServicesPage() {
               </Link>
                   </div>
                   </motion.div>
-<<<<<<< HEAD
 <<<<<<<< HEAD:pages-disabled/ai-services.tsx.disabled
-=======
->>>>>>> a19edd82339f030d1486cb753755512ca6e7d150
                   </div>
                   </section>
                   </div>
 )
-<<<<<<< HEAD
 }
 ========
                 </div>
@@ -306,6 +285,3 @@ export default function AIServicesPage() {
           </Layout>
         );
 >>>>>>>> cursor/expand-services-advertise-and-build-project-59da:pages_disabled/ai-services.tsx
-=======
-}
->>>>>>> a19edd82339f030d1486cb753755512ca6e7d150

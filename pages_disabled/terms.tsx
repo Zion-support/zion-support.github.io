@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FileText, Scale, Shield, AlertTriangle, Mail, Phone } from 'lucide-react';
@@ -212,13 +211,4 @@ export default function TermsPage() {
         </section>
       </div>
     </Layout>
-=======
-export default function TermsPage() {
-  return (
-    <div className="min-h-screen bg-gray-50 p-8">
-      <h1 className="text-3xl font-bold mb-4">Terms of Service</h1>
-      <p className="text-gray-600">This page is temporarily simplified to restore build stability.</p>
-    </div>
-  );
->>>>>>> a19edd82339f030d1486cb753755512ca6e7d150
 }
