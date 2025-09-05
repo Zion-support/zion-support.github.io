@@ -8,11 +8,7 @@ interface MainLayoutProps {
   keywords?: string;
 }
 
-<<<<<<< HEAD
-const MainLayout: React.FC<MainLayoutProps> = ({ 
-=======
-export default function MainLayout({ 
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+export default function MainLayout({
   children, 
   title = "Zion Tech Group", 
   description = "Leading technology solutions provider",
