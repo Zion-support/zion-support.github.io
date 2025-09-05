@@ -5,6 +5,7 @@ const publicRoutes = [
   "/",
   "/about",
   "/contact",
+<<<<<<< HEAD
   "/blog",
   "/services",
   "/solutions",
@@ -24,6 +25,15 @@ const publicRoutes = [
   "/auth/forgot-password",
   "/auth/reset-password",
   "/auth/verify",
+=======
+  "/services",
+  "/ai-services",
+  "/blog",
+  "/docs",
+  "/careers",
+  "/privacy",
+  "/terms"
+>>>>>>> fff1a961f4ef4a979058d66e8db4fd365994ab84
 ];
 
 export function middleware(request: NextRequest) {
