@@ -1,5 +1,24 @@
+<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
+=======
+import * as React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  GraduationCap, 
+  BookOpen, 
+  Play, 
+  Clock, 
+  Star, 
+  Users, 
+  Award, 
+  ArrowRight,
+  CheckCircle,
+  Target,
+  Zap
+} from 'lucide-react';
+import Layout from '../components/Layout';
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
 
 const Page = () => {
   return (

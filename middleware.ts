@@ -11,6 +11,9 @@ const publicRoutes = [
   "/about",
   "/contact",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
   "/services",
   "/ai-services",
   "/it-services",
@@ -18,6 +21,7 @@ const publicRoutes = [
   "/api",
   "/api-docs",
   "/careers",
+<<<<<<< HEAD
   "/guides",
   "/case-studies",
   "/cookies",
@@ -134,6 +138,9 @@ const adminRoutes = [
   "/admin/content",
   "/admin/security"
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+  "/case-studies"
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
 ];
 
 export function middleware(request: NextRequest) {
@@ -141,11 +148,15 @@ export function middleware(request: NextRequest) {
   
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
   // Allow public routes
   if (publicRoutes.includes(pathname)) {
     return NextResponse.next();
   }
   
+<<<<<<< HEAD
   // For all other routes, continue normally
   return NextResponse.next();
 =======
@@ -242,10 +253,22 @@ export function middleware(request: NextRequest) {
 
   return response;
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+  // Add security headers
+  const response = NextResponse.next();
+  
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+  
+  return response;
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
 }
 
 export const config = {
   matcher: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -263,5 +286,8 @@ export const config = {
 =======
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
+=======
+    '/((?!_next/static|_next/image|favicon.ico).*)',
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
   ],
 };

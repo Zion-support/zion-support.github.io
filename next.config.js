@@ -8,6 +8,7 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  trailingSlash: true,
   
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -115,6 +116,7 @@ const nextConfig = {
 <<<<<<< HEAD
   },
   
+<<<<<<< HEAD
   // Headers for security and performance
   async headers() {
     return [
@@ -192,6 +194,9 @@ const nextConfig = {
 =======
   }
 >>>>>>> main
+=======
+  // Note: Headers, redirects, and rewrites are not supported with static export
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
 };
 
 export default nextConfig;

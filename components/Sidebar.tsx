@@ -2,12 +2,19 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 =======
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 import { 
   X, 
   ChevronDown, 
   ChevronRight,
+=======
+import { useRouter } from 'next/router';
+import {
+  X,
+  ChevronDown,
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
   Home,
   Briefcase,
   Users,
@@ -269,8 +276,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     </AnimatePresence>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
 >>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+}
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -153,10 +154,43 @@ const values = [
     description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions'
 >>>>>>> main
 >>>>>>> main
+=======
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Link from 'next/link';
+import { 
+  TrendingUp,
+  Building,
+  Rocket,
+  Lightbulb,
+  Handshake,
+  Brain, 
+  Users, 
+  Award, 
+  Target, 
+  Heart, 
+  Globe, 
+  Shield, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight, 
+  Star, 
+  DollarSign, 
+  Clock, 
+  BarChart3
+} from 'lucide-react';
+
+const values = [
+  {
+    icon: Brain,
+    title: 'Innovation',
+    description: 'We push the boundaries of technology to create cutting-edge solutions that transform businesses.'
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
   },
   {
     icon: Users,
     title: 'Collaboration',
+<<<<<<< HEAD
 <<<<<<< HEAD
     description: 'We work closely with our clients as partners, ensuring every solution is tailored to their unique needs.'
 =======
@@ -166,10 +200,14 @@ const values = [
     description: 'We work closely with our clients as partners in their digital transformation journey'
 >>>>>>> main
 >>>>>>> main
+=======
+    description: 'We work closely with our clients as partners, ensuring their success is our success.'
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
   },
   {
     icon: Award,
     title: 'Excellence',
+<<<<<<< HEAD
 <<<<<<< HEAD
     description: 'We maintain the highest standards in everything we do, from code quality to customer service.'
 =======
@@ -179,37 +217,56 @@ const values = [
     description: 'We maintain the highest standards of quality in everything we deliver'
 >>>>>>> main
 >>>>>>> main
+=======
+    description: 'We maintain the highest standards in everything we do, delivering quality that exceeds expectations.'
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
   },
   {
     icon: Target,
     title: 'Results',
 <<<<<<< HEAD
+<<<<<<< HEAD
     description: 'We focus on delivering measurable outcomes that directly impact your bottom line.'
+=======
+    description: 'We focus on measurable outcomes that drive real business value and growth.'
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
   },
   {
     icon: Heart,
     title: 'Integrity',
+<<<<<<< HEAD
     description: 'We believe in doing the right thing, even when no one is watching.'
+=======
+    description: 'We conduct business with honesty, transparency, and ethical practices.'
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
   },
   {
     icon: Globe,
     title: 'Global Impact',
+<<<<<<< HEAD
     description: 'We build solutions that can scale globally while respecting local needs and cultures.'
 =======
 <<<<<<< HEAD
     description: 'We focus on delivering measurable outcomes that directly impact our clients\' bottom line and business growth.'
 >>>>>>> main
+=======
+    description: 'We build solutions that make a positive difference in the world.'
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
   }
 ];
 
 const stats = [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
   { number: '500+', label: 'Projects Completed' },
   { number: '50+', label: 'Happy Clients' },
   { number: '99%', label: 'Client Satisfaction' },
   { number: '24/7', label: 'Support Available' }
 ];
 
+<<<<<<< HEAD
 =======
   { number: '18+', label: 'Years Experience' },
   { number: '2,500+', label: 'Projects Completed' },
@@ -261,10 +318,19 @@ const team = [
     role: 'CEO & Founder',
     description: '20+ years in AI and technology leadership',
     image: '/team/kleber.jpg'
+=======
+const team = [
+  {
+    name: 'John Smith',
+    role: 'CEO & Founder',
+    image: '/images/team/john-smith.jpg',
+    bio: 'Visionary leader with 15+ years in tech innovation.'
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
   },
   {
     name: 'Sarah Johnson',
     role: 'CTO',
+<<<<<<< HEAD
     description: 'Expert in AI architecture and cloud solutions',
     image: '/team/sarah.jpg'
   },
@@ -666,12 +732,49 @@ const AboutPage = () => {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
 <<<<<<< HEAD
+=======
+    image: '/images/team/sarah-johnson.jpg',
+    bio: 'Technical expert specializing in AI and cloud architecture.'
+  },
+  {
+    name: 'Mike Chen',
+    role: 'Head of Engineering',
+    image: '/images/team/mike-chen.jpg',
+    bio: 'Full-stack developer passionate about scalable solutions.'
+  },
+  {
+    name: 'Emily Davis',
+    role: 'Head of Design',
+    image: '/images/team/emily-davis.jpg',
+    bio: 'Creative director focused on user experience excellence.'
+  }
+];
+
+export default function About() {
+  return (
+    <>
+      <Head>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team of experts dedicated to delivering innovative technology solutions." />
+      </Head>
+
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        {/* Hero Section */}
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+<<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                 About
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
@@ -682,12 +785,39 @@ const AboutPage = () => {
                 We are a leading technology company dedicated to transforming businesses through innovative AI solutions, 
                 cutting-edge development, and exceptional service delivery.
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
+=======
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                About{' '}
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                We are a leading technology company dedicated to transforming businesses through innovative solutions, 
+                cutting-edge AI services, and comprehensive IT infrastructure.
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
               </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Get In Touch
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+                <Link
+                  href="/services"
+                  className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
+                >
+                  Our Services
+                </Link>
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Values */}
       <section className="py-20 bg-gray-50">
@@ -857,11 +987,34 @@ const AboutPage = () => {
                 </div>
 >>>>>>> 380d5be269a380502c5b88f5cbeaaaacd40bbf12
               </motion.div>
+=======
+        {/* Stats Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-600 font-medium">
+                    {stat.label}
+                  </div>
+                </motion.div>
+              ))}
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
             </div>
           </div>
         </section>
 
         {/* Values Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20">
@@ -872,10 +1025,17 @@ const AboutPage = () => {
 >>>>>>> main
             <motion.div
               initial={{ opacity: 0, y: 20 }}
+=======
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
                 Our Values
@@ -902,10 +1062,13 @@ const AboutPage = () => {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
+=======
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
                 The principles that guide everything we do and shape our company culture.
               </p>
             </motion.div>
@@ -913,10 +1076,18 @@ const AboutPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 >>>>>>> 380d5be269a380502c5b88f5cbeaaaacd40bbf12
 >>>>>>> main
+=======
+                These core values guide everything we do and shape our company culture.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
               {values.map((value, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   animate={{ opacity: 1, y: 0 }}
 =======
@@ -965,12 +1136,30 @@ const AboutPage = () => {
 >>>>>>> main
 =======
 >>>>>>> 380d5be269a380502c5b88f5cbeaaaacd40bbf12
+=======
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="p-3 bg-blue-100 rounded-lg mr-4">
+                      <value.icon className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      {value.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-600">
+                    {value.description}
+                  </p>
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* Services Section */}
@@ -983,10 +1172,18 @@ const AboutPage = () => {
 >>>>>>> main
             <motion.div
               initial={{ opacity: 0, y: 20 }}
+=======
+        {/* Team Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
                 Our Services
@@ -1044,19 +1241,31 @@ const AboutPage = () => {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
+=======
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Meet Our Team
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
                 The brilliant minds behind our innovative solutions and exceptional service delivery.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+=======
+                Our diverse team of experts brings together decades of experience in technology, 
+                design, and business strategy.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
               {team.map((member, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 text-center"
@@ -1065,10 +1274,23 @@ const AboutPage = () => {
                     <span className="text-2xl font-bold text-white">
                       {member.name.split(' ').map(n => n[0]).join('')}
                     </span>
+=======
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {member.name}
                   </h3>
+<<<<<<< HEAD
                   <p className="text-blue-600 font-medium mb-3">
                     {member.role}
                   </p>
@@ -1370,6 +1592,14 @@ const AboutPage = () => {
                     {value.description}
                   </p>
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+                  <p className="text-blue-600 font-medium mb-2">
+                    {member.role}
+                  </p>
+                  <p className="text-gray-600 text-sm">
+                    {member.bio}
+                  </p>
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
                 </motion.div>
               ))}
             </div>
@@ -1377,6 +1607,7 @@ const AboutPage = () => {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -1470,10 +1701,32 @@ const AboutPage = () => {
                 >
                   Get In Touch
 >>>>>>> 380d5be269a380502c5b88f5cbeaaaacd40bbf12
+=======
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Let's work together to create innovative solutions that drive your success.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Start Your Project
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <Link
                   href="/services"
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
 >>>>>>> main
@@ -1536,10 +1789,17 @@ const AboutPage = () => {
                   Join Our Team
                 </Link>
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                >
+                  Explore Services
+                </Link>
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
       </div>
 <<<<<<< HEAD
     </Layout>
@@ -1549,6 +1809,10 @@ const AboutPage = () => {
     </Layout>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
 >>>>>>> 380d5be269a380502c5b88f5cbeaaaacd40bbf12
+=======
+      </div>
+    </>
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
   );
 }
 =======

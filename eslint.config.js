@@ -1,13 +1,17 @@
 import js from '@eslint/js';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       },
 =======
 >>>>>>> main
+=======
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default [{
@@ -30,6 +34,9 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 =======
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
 
 export default [
   {
@@ -49,12 +56,18 @@ export default [
       '*.config.mjs',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
       '.prettierrc.js',
       '.eslintrc.*',
       '*.min.js',
       '*.bundle.js',
+<<<<<<< HEAD
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
       'scripts/',
       'automation/',
       'automation_backup/',
@@ -68,6 +81,7 @@ export default [
       'pages.blog.disabled/',
       'pages._archive_corrupted/',
       'pages._quarantine/',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       'fix-critical-files.js',
@@ -122,10 +136,13 @@ export default [
 >>>>>>> main
 =======
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
       'pages-disabled/',
       'pages-quarantine/',
       'pages.__backup/',
       'pages-backup/',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -346,6 +363,8 @@ export default [
       'cypress_backup/',
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
       'src_backup_temp/',
       'src.pages.disabled/',
       'src.disabled/',
@@ -441,6 +460,7 @@ export default [
       '*.cjs',
       '*.js',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
       'cypress_backup/**/*',
@@ -453,12 +473,15 @@ export default [
 >>>>>>> main
 =======
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
       '*.test.js',
       '*.test.ts',
       '*.test.tsx',
       '*.spec.js',
       '*.spec.ts',
       '*.spec.tsx',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       '*.report.json',
@@ -728,6 +751,8 @@ export default [
       '*.swo.ts',
       '*.swo.tsx',
 =======
+=======
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
       '*.backup.*',
       '*.broken.*',
       '*.corrupted.*',
@@ -740,7 +765,10 @@ export default [
       '*.rej.*',
       '*.swp.*',
       '*.swo.*',
+<<<<<<< HEAD
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
       '*.log',
       '*.pid',
       '*.seed',
@@ -752,9 +780,13 @@ export default [
       'fix_*.js',
       'health-endpoint.js',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       'improve-app.js',
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+      'improve-app.js',
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
       'maintenance-scheduler.js',
       'merge-*.js',
       'monitoring-system.js',
@@ -766,6 +798,7 @@ export default [
       'services-broken.tsx',
       'simple-*.js',
       'test-*.js',
+<<<<<<< HEAD
 <<<<<<< HEAD
       '*.tgz',
       '*.tar.gz',
@@ -870,6 +903,16 @@ export default [
       'react-hooks/exhaustive-deps': 'warn',
       'no-undef': 'off',
     },
+=======
+      'ultimate-*.js',
+      'ultimate-*.cjs',
+      'targeted-*.cjs',
+      'test-suite.cjs',
+      'ux-enhancer.cjs',
+      'vite.config-backup.ts',
+      'types/empty.ts'
+    ]
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
   },
 >>>>>>> main
 =======
@@ -1005,6 +1048,7 @@ export default [
     },
     plugins: {
 <<<<<<< HEAD
+<<<<<<< HEAD
       '@typescript-eslint': tseslint,
 <<<<<<< HEAD
       'react-hooks': reactHooks,
@@ -1016,6 +1060,9 @@ export default [
 =======
       '@typescript-eslint': typescript,
       react: react,
+=======
+      react,
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
       'jsx-a11y': jsxA11y,
 >>>>>>> main
 =======
@@ -1025,6 +1072,7 @@ export default [
     rules: {
       'no-console': 'warn',
       'no-unused-vars': 'warn',
+<<<<<<< HEAD
       '@typescript-eslint/no-unused-vars': 'warn',
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1048,6 +1096,9 @@ export default [
       },
     },
 >>>>>>> main
+=======
+    }
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
   },
   {
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
@@ -1071,10 +1122,13 @@ export default [
       'no-console': 'off',
       'no-unused-vars': 'warn',
 <<<<<<< HEAD
+<<<<<<< HEAD
       '@typescript-eslint/no-unused-vars': 'warn'
     }
 =======
       '@typescript-eslint/no-unused-vars': 'warn',
+=======
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
     },
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1094,6 +1148,7 @@ export default [
 =======
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
 =======
@@ -1104,3 +1159,6 @@ export default [
 =======
 ];
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+];
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5

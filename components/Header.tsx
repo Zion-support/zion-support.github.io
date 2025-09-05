@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Menu, X, Search } from 'lucide-react';
@@ -973,6 +977,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
     </header>
   );
 }
+<<<<<<< HEAD
 =======
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -1081,3 +1086,5 @@ export default Header;
 
 export default Header;
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5

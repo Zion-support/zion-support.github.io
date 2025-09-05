@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import {
@@ -283,6 +284,8 @@ const Footer: React.FC = () => {
                       <link.icon className="h-4 w-4 group-hover:scale-110 transition-transform" />
                       <span className="text-sm">{link.name}</span>
 =======
+=======
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
 import { 
   MapPin, 
   Phone, 
@@ -734,6 +737,7 @@ export default function Footer() {
               <Clock className="w-4 h-4 mr-2 text-gray-400" />
               <span className="text-gray-400 text-sm">24/7 Support Available</span>
             </div>
+<<<<<<< HEAD
 >>>>>>> main
           </div>
         </div>
@@ -862,11 +866,14 @@ export default function Footer() {
               <span className="ml-2">companies worldwide</span>
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
             </div>
+=======
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
           </div>
         </div>
       </div>
     </footer>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -888,3 +895,6 @@ export default Footer;
 
 export default Footer;
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+}
+>>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
