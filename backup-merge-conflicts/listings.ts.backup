@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export: interface Listing {
-=======
-=======
 "export": interface Listing {
->>>>>>> main
    id: string;
    title: string;
    description: string;
@@ -19,13 +11,9 @@ export: interface Listing {
    seller: { id: string;
    name: string;
    rating: number;
-<<<<<<< HEAD
-   reviews: numbe,r} location: string ,
-=======
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number} reviews: 'numbe',r} location: 'string' ,;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
    reviews: numbe,r} "location": string ,
+<<<<<<< HEAD:backup-merge-conflicts/listings.ts.backup
 <<<<<<< HEAD:backup-merge-conflicts/listings.ts.backup
 >>>>>>> main
 >>>>>>> main
@@ -34,3 +22,6 @@ export: interface Listing { id: string; title: string; description: string; pric
 =======
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/types/listings.ts
+=======
+export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/types/listings.ts

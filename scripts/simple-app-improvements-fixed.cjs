@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     this.log(`Total improvements: ${this.improvements.length}`);
     this.log(`Total errors: ${this.errors.length}`);
     this.log(`Duration: ${duration}ms`);
@@ -25,6 +26,8 @@ const improvements = new SimpleAppImprovements();
 improvements.runAllImprovements().catch(console.error);
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

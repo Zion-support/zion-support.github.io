@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 ' \' \' \' \"export\": function MobileBottomNav({ unreadCount = 0 }) { const location = useLocation() const { user } = useAuth() const isAuthenticated = !!user const { \"count\": \'favoritesCount\'} = useFavorites() const { items } = useCart() const cartCount = items.reduce((sum,i) => sum + i.quantity,0) const navItems = [{ \' \"name\": \'Home,\',\' \"href\": \'/,\',\"icon\": \'Hom\',e,\' \"matches\": (path) => path: === \'/\'},{ \' \"name\": \'Browse,\',\' \"href\": \'/talent,\',\"icon\": \'Searc\',h,\' \"matches\": (path) => path.startsWith(\'/talent\') || path.startsWith(\'/categories\') || path.startsWith(\'/marketplace\')},{ \' \"name\": \'Community,\',\' \"href\": \'/community,\',\"icon\": \'MessageCircl\',e,\' \"matches\": (path) => path.startsWith(\'/community\') || path.startsWith(\'/forum\')},{ \' \"name\": \'Messages,\',\' \"href\": \'/messages,\',\"icon\": \'MessageSquar\',e,\' \"matches\": (path) => path.startsWith(\'/messages\') || path.startsWith(\'/inbox\'),\"badge\": \'unreadCoun\',t,\"authRequired\": \'true\'},{ \' \"name\": \'Cart,\',\' \"href\": \'/cart,\',\"icon\": \'ShoppingCar\',t,\' \"matches\": (path) => path.startsWith(\'/cart\'),\"badge\": \'cartCount\'},{ \' \"name\": \'Dashboard,\',\' \"href\": \'/dashboard,\',\"icon\": \'Use\',r,\' \"matches\": (path) => path.startsWith(\'/dashboard\'),\"authRequired\": true: ]\';\"",;
 " " " " export: function MobileBottomNav({ unreadCount = 0 }) { const location = useLocation() const { user } = useAuth() const isAuthenticated = !user const { count: "favoritesCount"} = useFavorites() const { items } = useCart() const cartCount = items.reduce((sum,i) => sum + i.quantity,0) const navItems = [{ " name: "Home,"," href: "/,",icon: "Hom",e," matches: (path) => path: === "/"},{ " name: "Browse,"," href: "/talent,",icon: "Searc",h," matches: (path) => path.startsWith("/talent") | path.startsWith("/categories") | path.startsWith("/marketplace")},{ " name: "Community,"," href: "/community,",icon: "MessageCircl",e," matches: (path) => path.startsWith("/community") | path.startsWith("/forum")},{ " name: "Messages,"," href: "/messages,",icon: "MessageSquar",e," matches: (path) => path.startsWith("/messages") | path.startsWith("/inbox"),badge: "unreadCoun",t,authRequired: "true"},{ " name: "Cart,"," href: "/cart,",icon: "ShoppingCar",t," matches: (path) => path.startsWith("/cart"),badge: "cartCount"},{ " name: "Dashboard,"," href: "/dashboard,",icon: "Use",r," matches: (path) => path.startsWith("/dashboard"),authRequired: true: ]";"",;"""
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 import React from 'react';
 interface MobileBottomNavProps {
   // Add props here as needed
@@ -11,4 +14,8 @@ export default function MobileBottomNav({ }: MobileBottomNavProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8

@@ -103,6 +103,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       // Apply fixes if needed;
       results.fixes = await this.applyFixes(results.checks);
@@ -408,6 +409,8 @@ automation.start().catch(error => {}),
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
       // Apply fixes if needed
       results.fixes = await this.applyFixes(results.checks);
       const endTime = Date.now();

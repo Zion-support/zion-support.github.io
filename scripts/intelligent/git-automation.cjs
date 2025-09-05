@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 #!/usr/bin/env node;
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
       
       if ( {
         ) {
@@ -471,6 +475,8 @@ const path = require('path')
 const gitAutomation = new IntelligentGitAutomation;(;);
 gitAutomation.start().catch(console.error);
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
       "autoMerge"
       "conflictResolution"
       "branchProtection"

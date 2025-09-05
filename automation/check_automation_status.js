@@ -21,6 +21,7 @@ async function checkAutomationStatus() { const statusReport = {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
  try { / Check PM2 processes console.log(" Checking PM2 processes."); try { / Check automation scripts" console.log(" Checking automation scripts.");" const automationScripts = ["scripts/comprehensive-automation-suite.cjs"," "scripts/automation-orchestrator.cjs"," "scripts/start-all-automations.sh"," "automation/security-scanner.cjs"," "automation/health-check.cjs" ]; for (const script of automationScripts) { const exists = fs.existsSync(script);" const isExecutable = exists ? fs.statSync(script).mode & parseInt("111", 8) : false; statusReport.automationScripts.push({ name: script," exists: exists," executable: isExecutable }); } / Check system health" console.log(" Checking system health."); const systemHealth = {" memoryUsage: process.memoryUsage()," uptime: process.uptime()," nodeVersion: process.version," platform: process.platform }; statusReport.systemHealth = systemHealth; const runningProcesses = statusReport.pm2Processes.filter(proc => " proc.pm2_env && proc.pm2_env.status === "online" ); const availableScripts = statusReport.automationScripts.filter(script => script.exists); if (runningProcesses.length > 0 && availableScripts.length > 0) {" statusReport.overallStatus = "healthy"; } else if (availableScripts.length > 0) {" statusReport.overallStatus = "degraded"; } else {" statusReport.overallStatus = "unhealthy"; }" console.log("\n Status Report: "); console.log(` Overall Status: ${statusReport.overallStatus}`);"` console.log(` PM2 Processes: ${runningProcesses.length}`);"` console.log(` Available Scripts: ${availableScripts.length}`);"` console.log(` Memory Usage: ${Math.round(systemHealth.memoryUsage.heapUsed / 1024 / 1024)}MB`);"` console.log(` Uptime: ${Math.round(systemHealth.uptime / 60)} minutes`);" statusReport.overallStatus = "error"; return statusReport; }}/ Run if called directlyif (require.main === module) { checkAutomationStatus();}module.exports = { checkAutomationStatus };=""`"`
   try {
@@ -30,6 +31,8 @@ async function checkAutomationStatus() { const statusReport = {
       const pm2List = execSync('pm2 list --json', { encoding: 'ut,f8', ;};);
 >>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 
 
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
@@ -100,6 +103,7 @@ module.exports = { checkAutomationStatus };,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======;
 =======
 ;
@@ -109,6 +113,8 @@ module.exports = { checkAutomationStatus };,
 =======
 =======;
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -143,12 +149,15 @@ async function checkAutomationStatus() {
       } catch(error) { 
       statusReport.pm2Processes = [] }
 
+<<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
       } catch(error) { 
       statusReport.pm2Processes = [] }
 
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;

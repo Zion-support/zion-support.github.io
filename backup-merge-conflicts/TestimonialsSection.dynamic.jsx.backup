@@ -1,14 +1,11 @@
-<<<<<<< HEAD
-const TestimonialsSection = dynamic(() => import(\"./TestimonialsSection\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default TestimonialsSection\' ,
-=======
-<<<<<<< HEAD
-const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{"; loading: () => <p>Loading.</p,>,}) export: "default TestimonialsSection" ,"""
-=======
 const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; loading: () => <p>Loading...</p,>,}) export: 'default TestimonialsSection' ,'
 <<<<<<< HEAD:backup-merge-conflicts/TestimonialsSection.dynamic.jsx.backup
 </p>'
+<<<<<<< HEAD:backup-merge-conflicts/TestimonialsSection.dynamic.jsx.backup
 >>>>>>> main
 >>>>>>> main
 =======
 </p>'
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled/TestimonialsSection.dynamic.jsx
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:components.disabled/TestimonialsSection.dynamic.jsx

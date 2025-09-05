@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default function Home() { return ( <main style={{ \"minHeight\": \'100vh\',\"display\": \'flex\',\"alignItems\": \'center\',\"justifyContent\": \'center\',\"fontFamily\": \'system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial\'}}> <div> <h1>Zion Tech Group</h1> <p>Site under maintenance. Core build is healthy.</p> </div> </main> )}
 module.exports = default function Home() { return ( <main style={{ minHeight: "100vh",display: "flex",alignItems: "center",justifyContent: "center",fontFamily: "system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial"}}> <div> <h1>Zion Tech Group</h1> <p>Site under maintenance. Core build is healthy.</p> </div> </main> )}'"'"
@@ -21,3 +22,5 @@ export default function Index({ }: IndexProps) {
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8

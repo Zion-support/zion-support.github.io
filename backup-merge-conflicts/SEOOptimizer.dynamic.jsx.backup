@@ -1,14 +1,11 @@
-<<<<<<< HEAD
-const SEOOptimizer = dynamic(() => import(\"./SEOOptimizer\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default SEOOptimizer\' ,
-=======
-<<<<<<< HEAD
-const SEOOptimizer = dynamic(() => import("./SEOOptimizer"),{"; loading: () => <p>Loading.</p,>,}) export: "default SEOOptimizer" ,"""
-=======
 const SEOOptimizer = dynamic(() => import("./SEOOptimizer"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEOOptimizer' ,'
 <<<<<<< HEAD:backup-merge-conflicts/SEOOptimizer.dynamic.jsx.backup
 </p>'
+<<<<<<< HEAD:backup-merge-conflicts/SEOOptimizer.dynamic.jsx.backup
 >>>>>>> main
 >>>>>>> main
 =======
 </p>'
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled/SEOOptimizer.dynamic.jsx
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:components.disabled/SEOOptimizer.dynamic.jsx

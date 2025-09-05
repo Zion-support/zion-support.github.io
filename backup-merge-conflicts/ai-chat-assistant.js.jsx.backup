@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/ai-chat-assistant.js.jsx.backup
 <<<<<<< HEAD
 import React, {useState, useRef, useEffect, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
@@ -73,6 +74,9 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/ai-chat-assistant.js.jsx
 }
 >>>>>>> main
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src_backup_temp/components/ui/ai-chat-assistant.js.jsx
             };
             setMessages(prev => [...prev, aiMessage]);
             setIsTyping(false);
@@ -111,12 +115,8 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
     const clearChat = ("props": "any) => {setMessages([messages[0]]); // Keep welcome message"};
     if (!enabled);
         return null;
-<<<<<<< HEAD
-    return (<div className={`fixed bottom-4 right-4 z-40 ${className}`}>;
-=======
     return (
         <div className={`fixed bottom-4 right-4 z-40 ${className}`}>
->>>>>>> main
       {/* Chat Toggle Button */}
       <motion.button onClick={() => setIsOpen(!isOpen)} className="p-3 bg-zion-purple "hover": "bg-zion-purple-dark text-white rounded-full shadow-lg transition-all duration-300" whileHover={{ "scale": 1.1 "}} whileTap={{ "scale": "0.9 "}} aria-label="AI Chat Assistant">;
         <MessageSquare className="w-6 h-6" />;
@@ -147,18 +147,6 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
 
 }}>;
               {/* Header */}
-<<<<<<< HEAD
-              <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30 bg-zion-blue/20">;
-                <div className="flex items-center gap-3">;
-                  <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
-                    <Bot className="w-5 h-5 text-white" />;
-                  </div>;
-                  <div>;
-                    <h3 className="text-white font-semibold">Zion AI Assistant</h3>;
-                    <div className="flex items-center gap-2">;
-                      <div className={`w-2 h-2 rounded-full ${isTyping ? 'bg-zion-cyan animate-pulse' : 'bg-green-400'}`} />;
-                      <span className="text-zinc-400 text-xs">;
-=======
               <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30 bg-zion-blue/20">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
@@ -169,7 +157,6 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
                     <div className="flex items-center gap-2">
                       <div className={`w-2 h-2 rounded-full ${isTyping ? 'bg-zion-cyan animate-pulse' : 'bg-green-400'}`} />
                       <span className="text-zinc-400 text-xs">
->>>>>>> main
                         {isTyping ? 'Typing...' : 'Online'}
                       </span>;
                     </div>;
@@ -334,6 +321,7 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
           </motion.div>)}
       </AnimatePresence>;
     </div>)}
+<<<<<<< HEAD:backup-merge-conflicts/ai-chat-assistant.js.jsx.backup
 <<<<<<< HEAD
 ;
 </motion>;
@@ -345,6 +333,8 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
 </div>
 <<<<<<< HEAD:backup-merge-conflicts/ai-chat-assistant.js.jsx.backup
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src_backup_temp/components/ui/ai-chat-assistant.js.jsx
 
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/ai-chat-assistant.js.jsx
@@ -356,6 +346,7 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
 </motion>
 <<<<<<< HEAD:backup-merge-conflicts/ai-chat-assistant.js.jsx.backup
 </div>
+<<<<<<< HEAD:backup-merge-conflicts/ai-chat-assistant.js.jsx.backup
 =======
 >>>>>>> main
 >>>>>>> main
@@ -363,3 +354,5 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
 =======
 </div>
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/ai-chat-assistant.js.jsx
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src_backup_temp/components/ui/ai-chat-assistant.js.jsx

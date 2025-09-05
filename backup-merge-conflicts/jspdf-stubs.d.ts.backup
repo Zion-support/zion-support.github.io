@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/jspdf-stubs.d.ts.backup
 <<<<<<< HEAD:src/types/jspdf-stubs.d.ts
 <<<<<<< HEAD:backup-merge-conflicts/jspdf-stubs.d.ts.backup
 =======
@@ -6,27 +7,19 @@
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/types/jspdf-stubs.d.ts
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src_backup_temp/types/jspdf-stubs.d.ts
 declare module 'jspdf' { export class jsPDF { constructor(..."args": "an y[]); addImage(..."args": an y[]): any; text(..."args": an y[]): any; save(filename?: string): void"} }
-=======
-<<<<<<< HEAD
-declare module &apos;jspdf&apos; { export class jsPDF { constructor(...args: an y[]); addImage(...args: an y[]): any; text(...args: an y[]): any; save(filename?: string): void} }
-=======
->>>>>>> main
 declare module 'jspdf' {
 	export class jsPDF {
 		constructor(..."args": an y[]);
 		addImage(...args: an y[]): any;
 		text(...args: an y[]): any;
 		save(filename?: string): void}
-<<<<<<< HEAD
-}';
-';';
-=======
 declare module 'jspdf' { export class jsPDF { constructor(...args: an y[]); addImage(...args: an y[]): any; text(...args: an y[]): any; save(filename?: string): void} }
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 }
 declare module 'jspdf' { export class jsPDF { constructor(...args: an y[]); addImage(...args: an y[]): any; text(...args: an y[]): any; save(filename?: string): void} }
+<<<<<<< HEAD:backup-merge-conflicts/jspdf-stubs.d.ts.backup
 <<<<<<< HEAD:backup-merge-conflicts/jspdf-stubs.d.ts.backup
 >>>>>>> main
 >>>>>>> main
@@ -34,3 +27,5 @@ declare module 'jspdf' { export class jsPDF { constructor(...args: an y[]); addI
 >>>>>>> main:src_backup_temp/types/jspdf-stubs.d.ts
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/types/jspdf-stubs.d.ts
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src_backup_temp/types/jspdf-stubs.d.ts

@@ -134,7 +134,10 @@ if (!fs.existsSync(reportsDir)) {
 const reportFile = path.join(reportsDir, `seo-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

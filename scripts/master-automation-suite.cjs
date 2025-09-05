@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 #!/usr/bin/env node;
 /**
  * Master Automation Suite;
  * Orchestrates all automation scripts in a comprehensive workflow;
  */
 
+<<<<<<< HEAD
 
     const phases = [{
         "name": 'enhanced-orchestrator',
@@ -111,6 +115,8 @@ if (require.main === module) {
 
 module.exports = MasterAutomationSuite;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')

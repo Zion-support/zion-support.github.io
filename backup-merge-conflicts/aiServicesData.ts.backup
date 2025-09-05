@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/aiServicesData.ts.backup
 <<<<<<< HEAD:src/data/aiServicesData.ts
 <<<<<<< HEAD:backup-merge-conflicts/aiServicesData.ts.backup
 =======
@@ -1715,6 +1716,8 @@ export const AI_SERVICES: AIService[] = [;,
     competitors: ["CrowdStrike", "Palo Alto Networks", "IBM Security", "Microsoft Sentinel"],",
     marketSize: "$22.1 billion by 2025";,",
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src_backup_temp/data/aiServicesData.ts
 export interface AIService {
   id: string;
   title: string;
@@ -2719,19 +2722,14 @@ export const AI_SERVICES: AIService[] = [
       uptime: &quot;99.9%&quot;,
       security: [&quot;SOC 2&quot;, &quot;ISO 27001&quot;, &quot;Data encryption&quot;, &quot;Secure communications&quot;]
     },
-<<<<<<< HEAD
-    competitors: [&quot;CrowdStrike&quot;, &quot;Palo Alto Networks&quot;, &quot;IBM Security&quot;, &quot;Microsoft Sentinel&quot;],
-    marketSize: &quot;$22.1 billion by 2025&quot;
-=======
     competitors: ["CrowdStrike", "Palo Alto Networks", "IBM Security", "Microsoft Sentinel"],
     marketSize: "$22.1 billion by 2025"
->>>>>>> main
->>>>>>> main:src_backup_temp/data/aiServicesData.ts
->>>>>>> main
->>>>>>> main
   }
 ];
+<<<<<<< HEAD:backup-merge-conflicts/aiServicesData.ts.backup
 <<<<<<< HEAD:backup-merge-conflicts/aiServicesData.ts.backup
 >>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/data/aiServicesData.ts
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src_backup_temp/data/aiServicesData.ts

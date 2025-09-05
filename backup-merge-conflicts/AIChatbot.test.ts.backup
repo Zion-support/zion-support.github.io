@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
 import AIChatbot from './AIChatbot;
 describe('AIChatbot', () => {;
   it('renders without crashing', () => {;
@@ -15,15 +8,9 @@ describe('AIChatbot', () => {;
     // Add specific content checks based on component functionality});
   it('handles user interactions', () => {;
     render(<AIChatbot />);
-<<<<<<< HEAD
-// Add interaction tests based on component functionality,
-}),
-});
-=======
 import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />); }); ; it('handles user interactions',() => {; render(<AIChatbot />)});,});
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 // Add interaction tests based on component functionality})});
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbot.test.ts.backup
 <<<<<<< HEAD:backup-merge-conflicts/AIChatbot.test.ts.backup
 >>>>>>> main
 >>>>>>> main
@@ -32,3 +19,6 @@ import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders 
 =======
 import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled_full/AIChatbot.test.ts
+=======
+import AIChatbot from './AIChatbot; ; describe('AIChatbot',() => {; it('renders without crashing',() => {; render(<AIChatbot />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbot />)}); ; it('handles user interactions',() => {; render(<AIChatbot />)}),});
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:components.disabled_full/AIChatbot.test.ts

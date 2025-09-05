@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/useOrders.jsx.backup
 <<<<<<< HEAD
 import React from \"react\"; import { useQuery } from \"@tanstack/react-query\" export function useGetOrdersQuery(userId) { return useQuery({ queryKey[\"orders\",userId],\"queryFn\": async () => { if (!userId) return [] const res = await fetch(\"/api/orders?user_id=\"me\")\" if (!res.ok) { throw new Error(\"Failed to fetch orders\")} return (await res.json())},enabled !!userI,d,initialData[]})}\";\';\"; \"; ); export default Component;
 =======
@@ -11,3 +12,6 @@ import _React from "react"; import { useQuery } from "@tanstack/react-query" exp
 =======
 import _React from "react"; import { useQuery } from "@tanstack/react-query" export function useGetOrdersQuery(userId) { return useQuery({ queryKey["orders",userId],"queryFn": async () => { if (!userId) return [] const res = await fetch("/api/orders?user_id="me")" if (!res.ok) { throw new Error("Failed to fetch orders")} return (await res.json())},enabled !!userI,d,initialData[]})}";';"; "; ); export default Component;
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/hooks/useOrders.jsx
+=======
+import _React from "react"; import { useQuery } from "@tanstack/react-query" export function useGetOrdersQuery(userId) { return useQuery({ queryKey["orders",userId],"queryFn": async () => { if (!userId) return [] const res = await fetch("/api/orders?user_id="me")" if (!res.ok) { throw new Error("Failed to fetch orders")} return (await res.json())},enabled !!userI,d,initialData[]})}";';"; "; ); export default Component;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/src/hooks/useOrders.jsx

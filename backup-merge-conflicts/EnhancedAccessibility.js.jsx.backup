@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/EnhancedAccessibility.js.jsx.backup
 <<<<<<< HEAD
 import React,{ useState,useEffect } from \'react\'; import { motion,AnimatePresence } from \'framer-motion\'; import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from \'@heroicons/react/24/outline\'; const EnhancedAccessibility = () => {; const [isOpen,setIsOpen] = useState(false); const [settings,setSettings] = useState({; \"highContrast\": \'false\',; \"fontSize\": \'16\',; \"reducedMotion\": \'false\',; \"screenReader\": \'false\',; \"keyboardNavigation\": \'false\',; \"focusIndicator\": \'true\',; \"colorBlindness\": \'none\'}); useEffect(() => {}}}})
 =======
@@ -11,3 +12,6 @@ import _React,{ useState,useEffect } from 'react'; import { motion,AnimatePresen
 =======
 import _React,{ useState,useEffect } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from '@heroicons/react/24/outline'; const EnhancedAccessibility = () => {; const [isOpen,setIsOpen] = useState(false); const [settings,setSettings] = useState({; "highContrast": 'false',; "fontSize": '16',; "reducedMotion": 'false',; "screenReader": 'false',; "keyboardNavigation": 'false',; "focusIndicator": 'true',; "colorBlindness": 'none'}); useEffect(() => {}}}})
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/components/unused/EnhancedAccessibility.js.jsx
+=======
+import _React,{ useState,useEffect } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from '@heroicons/react/24/outline'; const EnhancedAccessibility = () => {; const [isOpen,setIsOpen] = useState(false); const [settings,setSettings] = useState({; "highContrast": 'false',; "fontSize": '16',; "reducedMotion": 'false',; "screenReader": 'false',; "keyboardNavigation": 'false',; "focusIndicator": 'true',; "colorBlindness": 'none'}); useEffect(() => {}}}})
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/src/components/unused/EnhancedAccessibility.js.jsx

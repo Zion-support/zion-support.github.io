@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
@@ -9,6 +10,11 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 import { 
   TrendingUp,
   Building,
@@ -49,13 +55,17 @@ import {
   DollarSign, 
   Clock, 
   BarChart3
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 } from 'lucide-react';
 
 const values = [
   {
     icon: Brain,
     title: 'Innovation',
+<<<<<<< HEAD
 <<<<<<< HEAD
     description: 'We constantly push the boundaries of technology to create cutting-edge solutions that drive real business value.'
   },
@@ -177,11 +187,40 @@ const team = [
 =======
     description: 'We build solutions that make a positive difference in the world.'
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+    description: 'We push the boundaries of technology to create cutting-edge solutions that transform businesses.'
+  },
+  {
+    icon: Users,
+    title: 'Collaboration',
+    description: 'We work closely with our clients as partners, ensuring their success is our success.'
+  },
+  {
+    icon: Award,
+    title: 'Excellence',
+    description: 'We maintain the highest standards in everything we do, delivering quality that exceeds expectations.'
+  },
+  {
+    icon: Heart,
+    title: 'Integrity',
+    description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
+  },
+  {
+    icon: Globe,
+    title: 'Global Impact',
+    description: 'We create solutions that make a positive difference in communities worldwide.'
+  },
+  {
+    icon: Shield,
+    title: 'Security',
+    description: 'We prioritize the security and privacy of our clients\' data and systems.'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
   }
 ];
 
 const stats = [
   { number: '500+', label: 'Projects Completed' },
+<<<<<<< HEAD
 <<<<<<< HEAD
   { number: '99.9%', label: 'Client Satisfaction' },
   { number: '24/7', label: 'Support Available' },
@@ -193,6 +232,11 @@ const stats = [
   { number: '50+', label: 'Happy Clients' },
   { number: '99%', label: 'Client Satisfaction' },
   { number: '24/7', label: 'Support Available' }
+=======
+  { number: '50+', label: 'Happy Clients' },
+  { number: '5+', label: 'Years Experience' },
+  { number: '99%', label: 'Client Satisfaction' }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 ];
 
 const team = [
@@ -228,6 +272,7 @@ export default function About() {
     <>
       <Head>
         <title>About Us - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <meta name="description" content="Learn about Zion Tech Group - a leading technology company with 18+ years of experience delivering innovative AI, cloud, and digital transformation solutions." />
@@ -270,6 +315,18 @@ export default function About() {
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
             <motion.div
+=======
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        {/* Hero Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -288,6 +345,7 @@ export default function About() {
                   Zion Tech Group
                 </span>
               </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -319,6 +377,11 @@ export default function About() {
                 </Link>
               </div>
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                We are a leading technology solutions provider dedicated to transforming businesses through innovative AI, cloud architecture, and cutting-edge development services.
+              </p>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
             </motion.div>
           </div>
         </section>
@@ -326,7 +389,11 @@ export default function About() {
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* Stats Section */}
+<<<<<<< HEAD
         <section className="py-20 bg-white">
+=======
+        <section className="py-16 bg-white">
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
@@ -334,6 +401,7 @@ export default function About() {
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="text-center"
                 >
@@ -379,6 +447,11 @@ export default function About() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
                 >
+=======
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
                   <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
@@ -392,6 +465,7 @@ export default function About() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Values Section */}
 <<<<<<< HEAD
         <section className="py-20 bg-white">
@@ -441,10 +515,95 @@ export default function About() {
                 Our Values
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+=======
+        {/* Mission, Vision, Values */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                Our Foundation
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Built on strong values and a clear vision for the future of technology.
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                className="bg-white p-8 rounded-xl shadow-lg text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Target className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  To empower businesses with cutting-edge technology solutions that drive growth, efficiency, and innovation in the digital age.
+                </p>
+              </motion.div>
+
+              <motion.div
+                className="bg-white p-8 rounded-xl shadow-lg text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Rocket className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  To be the global leader in AI-powered technology solutions, setting the standard for innovation and excellence.
+                </p>
+              </motion.div>
+
+              <motion.div
+                className="bg-white p-8 rounded-xl shadow-lg text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Heart className="w-8 h-8 text-pink-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Values</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Integrity, innovation, and excellence guide everything we do, creating lasting partnerships and exceptional results.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Values Grid */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Values</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
                 These core values guide everything we do and shape our company culture.
               </p>
             </motion.div>
 
+<<<<<<< HEAD
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               {values.map((value, index) => (
@@ -495,10 +654,30 @@ export default function About() {
                       <IconComponent className="h-8 w-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold mb-4">{value.title}</h3>
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {values.map((value, index) => {
+                const IconComponent = value.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-8 text-center"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="text-blue-600 mb-4">
+                      <IconComponent className="w-12 h-12 mx-auto" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
                     <p className="text-gray-600">{value.description}</p>
                   </motion.div>
                 );
               })}
+<<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
             </div>
           </div>
@@ -569,10 +748,13 @@ export default function About() {
                   <p className="text-gray-600">{member.description}</p>
                 </motion.div>
               ))}
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="container mx-auto px-6">
@@ -596,10 +778,23 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
 =======
+=======
+        {/* Team Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Meet Our Team
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
                 Our diverse team of experts brings together decades of experience in technology, 
                 design, and business strategy.
               </p>
@@ -644,11 +839,66 @@ export default function About() {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                 </motion.div>
               ))}
+=======
+                Our diverse team of experts brings together decades of experience in technology, innovation, and business transformation.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <motion.div
+                className="bg-white p-8 rounded-xl shadow-lg text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <Users className="w-12 h-12 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Leadership Team</h3>
+                <p className="text-gray-600">
+                  Experienced leaders with proven track records in technology and business innovation.
+                </p>
+              </motion.div>
+
+              <motion.div
+                className="bg-white p-8 rounded-xl shadow-lg text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <Zap className="w-12 h-12 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Development Team</h3>
+                <p className="text-gray-600">
+                  Skilled developers and engineers passionate about creating innovative solutions.
+                </p>
+              </motion.div>
+
+              <motion.div
+                className="bg-white p-8 rounded-xl shadow-lg text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <Shield className="w-12 h-12 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Support Team</h3>
+                <p className="text-gray-600">
+                  Dedicated professionals committed to ensuring your success and satisfaction.
+                </p>
+              </motion.div>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -660,11 +910,17 @@ export default function About() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6 text-center">
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <h2 className="text-4xl font-bold mb-6">Ready to Work With Us?</h2>
@@ -685,18 +941,33 @@ export default function About() {
                 Let's work together to create innovative solutions that drive your success.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
+=======
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Let's work together to create innovative solutions that drive your business forward.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
                 <Link
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
                 >
+<<<<<<< HEAD
                   Start Your Project
                   <ArrowRight className="ml-2 h-5 w-5" />
+=======
+                  Get Started
+                  <ArrowRight className="ml-2 w-5 h-5" />
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
                 </Link>
                 <Link
                   href="/services"
                   className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
                   Explore Services
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                 </Link>
 =======
@@ -722,15 +993,21 @@ export default function About() {
                   Learn More
                 </motion.button>
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+                </Link>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
               </div>
             </motion.div>
           </div>
         </section>
 <<<<<<< HEAD
       </div>
+<<<<<<< HEAD
 =======
       </Layout>
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
     </>
   );
 }

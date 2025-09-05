@@ -29,8 +29,11 @@ const securityEnhancements = { addCSP: () => { const meta = document.createEleme
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 const securityEnhancements = { addCSP: () => { const meta = document.createElement("meta"); meta.httpEquiv = "Content-Security-Policy"; meta.content = "default-src "self"; script-src "self" "unsafe-inline"; style-src "self" "unsafe-inline"; img-src "self" data: https:;"; document.head.appendChild(meta)},sanitizeInput: (input) => { const div = document.createElement("div"); div.textContent = input; return div.innerHTML,},addSecurityHeaders: () => { console.log("Security headers should be configured on the server")},init: () => { this.addCSP(); console.log("Security enhancements initialized")} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",securityEnhancements.init)} else { securityEnhancements.init()}
 >>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 =======

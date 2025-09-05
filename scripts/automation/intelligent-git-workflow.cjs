@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 #!/usr/bin/env node;
 /**
  * Intelligent Git Workflow Automation;
@@ -21,6 +24,7 @@ const path = require('path')
       autoCommit: process.env.AUTO_COMMIT === 'true'
       commitMessageTemplate: process.env.COMMIT_MESSAGE_TEMPLATE || 'feat: {type} - {description}'
       mergeStrategy: process.env.MERGE_STRATEGY || 'recursive'
+<<<<<<< HEAD
           conflictType = 'separator';
           continue;
         } else if (line.startsWith('>>>>>>')) {
@@ -379,6 +383,8 @@ if (require.main === module) {
 
 module.exports = IntelligentGitWorkflow;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
       await fs.mkdir(path.join(this.projectRoot, 'logs')
       console.log('Logs directory already exists')
   log(message, level = 'INFO')

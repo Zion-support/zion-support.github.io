@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/microSaasServicesData.ts.backup
 <<<<<<< HEAD:src/data/microSaasServicesData.ts
 <<<<<<< HEAD:backup-merge-conflicts/microSaasServicesData.ts.backup
 =======
@@ -1847,6 +1848,8 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [;,
     competitors: ["BambooHR", "Workday", "ADP", "Zenefits", "Gusto"],",
     marketSize: "$5.9 billion by 2025";,",
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src_backup_temp/data/microSaasServicesData.ts
 export interface MicroSaasService {
   id: string;
   title: string;
@@ -2981,19 +2984,14 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       uptime: &quot;99.9%&quot;,
       security: [&quot;Data encryption&quot;, &quot;Access control&quot;, &quot;Audit logging&quot;, &quot;Privacy protection&quot;]
     },
-<<<<<<< HEAD
-    competitors: [&quot;BambooHR&quot;, &quot;Workday&quot;, &quot;ADP&quot;, &quot;Zenefits&quot;, &quot;Gusto&quot;],
-    marketSize: &quot;$5.9 billion by 2025&quot;
-=======
     competitors: ["BambooHR", "Workday", "ADP", "Zenefits", "Gusto"],
     marketSize: "$5.9 billion by 2025"
->>>>>>> main
->>>>>>> main:src_backup_temp/data/microSaasServicesData.ts
->>>>>>> main
->>>>>>> main
   }
 ];
+<<<<<<< HEAD:backup-merge-conflicts/microSaasServicesData.ts.backup
 <<<<<<< HEAD:backup-merge-conflicts/microSaasServicesData.ts.backup
 >>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/data/microSaasServicesData.ts
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src_backup_temp/data/microSaasServicesData.ts

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 import React from\';react\' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\')\'';\';
 const React from";react" const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState("all") const [searchTerm,setSearchTerm] = useState(")"";";''"
 import _React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';
+=======
+import _React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8

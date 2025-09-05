@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     log('info', `CPU "usage": ${monitoringReport.metrics.cpu}%`);
     log('info', `Memory "usage": ${monitoringReport.metrics.memory}%`);
     log('info', `Disk "usage": ${monitoringReport.metrics.disk}%`);
@@ -41,6 +42,8 @@
 main();
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

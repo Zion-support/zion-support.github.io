@@ -78,7 +78,6 @@ function fixSyntaxErrors(content, filePath) {
         </div>
     );`;
     });
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 
     // Fix malformed CSS in JSX
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
@@ -91,7 +90,6 @@ function fixSyntaxErrors(content, filePath) {
 
     // Fix missing semicolons
     content = content.replace(/([^;}])\s*$/gm, '$1;');
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 
     // Fix malformed object destructuring
     content = content.replace(/const\s+\{\s*([^}]+)\s*\}\s*=\s*useAuth\(\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(\[\]\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(true\);\s*const\s+navigate\s*=\s*useNavigate\(\);\s*useEffect\(\(\)\s*=>\s*\{[^}]*\},\s*\[user\]\);\s*const\s+handleRequestHire\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*\};\s*return\s*\(<div[^>]*>([^<]*)<\/div>\);\s*}/g, (match, user, savedTalents, isLoading, content) => {
@@ -167,8 +165,11 @@ fixFile('components/ErrorBoundary.tsx', 'ErrorBoundary class syntax', (content) 
     });
 
     return { content, fixes };
+<<<<<<< HEAD
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 }
 
 // Function to process a single file
@@ -226,7 +227,6 @@ async function main() {
         
     } else {
         
-=======
     fixed = fixed.replace(
         /return\s*this\.props\.children;\s*\}\s*export\s*default/g,
         'return this.props.children;\n  }\n}\n\nexport default'
@@ -319,4 +319,7 @@ if (fixes.length > 0) {
 }
 
 console.log('\n🎯 Syntax error fixing completed!');
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8

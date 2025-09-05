@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from \'react\';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,3 +13,6 @@ import _React from 'react';
 =======
 import _React from 'react';
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+import _React from 'react';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8

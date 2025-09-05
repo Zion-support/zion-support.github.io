@@ -145,7 +145,6 @@ if (require.main === module) {}
 });
 };
 module.exports = SecurityScanner;
-=======
 #!/usr/bin/env node
 
 /**
@@ -258,7 +257,6 @@ runSecurityCheck('Sensitive Data Scan', () => {
 });
 
 
-=======
 // Check for outdated dependencies
 runSecurityCheck('Dependency Security', () => {
     try {
@@ -494,4 +492,7 @@ if (securityReport.status === 'vulnerable') {
 } else {
     process.exit(0);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8

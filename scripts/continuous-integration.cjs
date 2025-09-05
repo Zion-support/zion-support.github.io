@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 #!/usr/bin/env node;
 /**
  * Continuous Integration Automation;
  * Comprehensive CI pipeline with build, test, and quality checks;
  */
 
+<<<<<<< HEAD
 
     const stages = [{
         "name": 'install-dependencies',
@@ -104,6 +108,8 @@ if (require.main === module) {
 
 module.exports = ContinuousIntegration;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')

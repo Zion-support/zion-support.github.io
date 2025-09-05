@@ -24,6 +24,7 @@ import {
 
 const resources = [
   {
+<<<<<<< HEAD
     title: 'AI Implementation Guide',
     description: 'Complete guide to implementing AI solutions in your business, from strategy to deployment.',
     type: 'Guide',
@@ -35,6 +36,14 @@ const resources = [
     rating: 4.8,
     link: 'https://ziontechgroup.com/resources/ai-implementation-guide.pdf',
     popular: true
+=======
+    title: "Documentation",
+    description: "Comprehensive guides and technical documentation",
+    icon: FileText,
+    href: "/docs",
+    color: "from-blue-500 to-blue-600",
+    items: ["API Documentation", "Integration Guides", "Best Practices", "Troubleshooting"]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
   },
   {
     title: 'Cloud Migration Checklist',

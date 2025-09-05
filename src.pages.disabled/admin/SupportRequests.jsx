@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React,{ useState } from \'react\''\';\' import { Card,CardContent,CardDescription,CardHeader,CardTitle } from \'@/components/ui/card\''\';\' import { Input } from \'@/components/ui/input\''\';\' import { Button } from \'@/components/ui/button\''\';\' import { Tabs,TabsContent,TabsList,TabsTrigger } from \'@/components/ui/tabs\''\';\' import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue } from \'@/components/ui/select\''\';\' import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow } from \'@/components/ui/table\''\';\' import { Badge } from \'@/components/ui/badge\''\';\' import { Search,Filter } from \'lucide-react\''\';\' import SEO from \'@/components/SEO\'';\";\";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,3 +13,6 @@ import _React,{ useState } from 'react''';' import { Card,CardContent,CardDescri
 =======
 import _React,{ useState } from 'react''';' import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card''';' import { Input } from '@/components/ui/input''';' import { Button } from '@/components/ui/button''';' import { Tabs,TabsContent,TabsList,TabsTrigger } from '@/components/ui/tabs''';' import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue } from '@/components/ui/select''';' import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow } from '@/components/ui/table''';' import { Badge } from '@/components/ui/badge''';' import { Search,Filter } from 'lucide-react''';' import SEO from '@/components/SEO'';";";
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+import _React,{ useState } from 'react''';' import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card''';' import { Input } from '@/components/ui/input''';' import { Button } from '@/components/ui/button''';' import { Tabs,TabsContent,TabsList,TabsTrigger } from '@/components/ui/tabs''';' import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue } from '@/components/ui/select''';' import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow } from '@/components/ui/table''';' import { Badge } from '@/components/ui/badge''';' import { Search,Filter } from 'lucide-react''';' import SEO from '@/components/SEO'';";";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8

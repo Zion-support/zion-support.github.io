@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -196,6 +197,11 @@ deployment.runAll().catch(error => {
   console.error('🚨 Deployment automation "failed": ', error.message);
   process.exit(1)});
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 const { execSync } = require('child_process')
 console.log(' Starting Enhanced Deployment Automation...')
           setTimeout(() => reject(new Error('Step timeout')
@@ -219,6 +225,9 @@ console.log(' Starting Enhanced Deployment Automation...')
     execSync(`tar -czf ${packageName} .next pages components public package.json package-lock.json next.config.js`, { "stdio"`})
 <<<<<<< HEAD
   console.error('� Deployment automation "failed")
+<<<<<<< HEAD
 =======
   console.error('� Deployment automation "failed")
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8

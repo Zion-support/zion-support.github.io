@@ -1,3 +1,4 @@
+<<<<<<< HEAD
             // Simple conflict resolution - take the incoming change
             const resolved = content.replace(/\n<<<<<<<[\s\S]*?=======[\s\S]*?>>>>>>>\n/g, '\n');
             fs.writeFileSync(file, resolved);
@@ -115,6 +116,8 @@ if (require.main === module) {
 
 module.exports = GitWorkflowAutomator;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 '
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"

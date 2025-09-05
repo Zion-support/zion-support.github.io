@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -8,6 +9,8 @@ const path = require('path');
 =======
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 // Final targeted fixes for remaining syntax errors
 const fixes = [// Fix missing semicolons in import statements
   {
@@ -81,9 +84,12 @@ const fixes = [// Fix missing semicolons in import statements
     "replacement": '    </div>\n  );\n}'
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 console.log('🔧 Fixing final syntax errors...');
 
 // Fix specific files with known issues
@@ -93,8 +99,11 @@ const filesToFix = [
     'src/components/ui/card.tsx',
     'src/components/ui/textarea.tsx',
     'src/components/ui/use-toast.ts'
+<<<<<<< HEAD
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 ];
 
 function fixFile(filePath) {
@@ -110,9 +119,12 @@ function fixFile(filePath) {
 
     let content = fs.readFileSync(filePath, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
     let fixes = 0;
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
     let modified = false;
     fixes.forEach(fix => {
       const newContent = content.replace(fix.pattern, fix.replacement);
@@ -143,6 +155,7 @@ function walkDirectory(dir) {
     console.error(`Error reading directory ${dir}:`, error.message)}
   return fixedCount}
     let fixes = 0;
+<<<<<<< HEAD
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     // Fix textarea.tsx
     if (filePath.includes('textarea.tsx')) {
@@ -192,12 +205,19 @@ filesToFix.forEach(file => {
     totalFixes += fixFile(file);
 });
 <<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
+<<<<<<< HEAD
 
 if (totalFixes > 0) {
     console.log('\n✅ Final syntax error fixing completed!');
@@ -253,13 +273,18 @@ function walkDirectory(dir) {
 
 
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 
 if (totalFixes > 0) {
     
 } else {
     
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -276,7 +301,10 @@ const path = require('path')
     "replacement"
 <<<<<<< HEAD
     "replacement"
+<<<<<<< HEAD
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
     "replacement"
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8

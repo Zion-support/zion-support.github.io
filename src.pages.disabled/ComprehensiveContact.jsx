@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< \"HEAD\": src.pages.disabled/ComprehensiveContact.jsx import React from \'react\'; export default function ComprehensiveContact () { const [formData,setFormData] = useState ({ \"name\": \",\"email\": \",\"comp\": \",\"phone\": \",\"service\": \",\"message\": \" }) ; const handleSubmit = (e) => { e.preventDefault () ; import React from \'react\'; export default function ComprehensiveContact () { const [formData,setFormData] = useState ({ \"name\": \",\"email\": \",\"comp\": \",\"phone\": \",\"service\": \",\"message\": \" }) ; const handleSubmit = (e) => { e.preventDefault () ;\";
 <<<<<<< "HEAD": src.pages.disabled/ComprehensiveContact.jsx import _React from 'react'; export default function ComprehensiveContact () { const [formData,setFormData] = useState ({ "name": ","email": ","comp": ","phone": ","service": ","message": " }) ; const handleSubmit = (e) => { e.preventDefault () ; import _React from 'react'; export default function ComprehensiveContact () { const [formData,setFormData] = useState ({ "name": ","email": ","comp": ","phone": ","service": ","message": " }) ; const handleSubmit = (e) => { e.preventDefault () ;";
 =======
@@ -9,3 +10,5 @@
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8

@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
+=======
+import Layout from '../../components/Layout';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';
 
 const industries = [

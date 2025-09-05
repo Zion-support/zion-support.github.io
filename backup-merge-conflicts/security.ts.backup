@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/security.ts.backup
 <<<<<<< HEAD:src/config/security.ts
 <<<<<<< HEAD:backup-merge-conflicts/security.ts.backup
 =======
@@ -12,6 +13,8 @@ export const securityConfig = { &quot;csp&quot;: { &apos;default-src&apos;: [&qu
 <<<<<<< HEAD
 module.exports = const securityConfig = { csp: { "default-src": ["self"],"script-src": ["self","unsafe-inline","unsafe-eval"],"style-src": ["self","unsafe-inline"],"img-src": ["self","data: ","https: "],"connect-src": ["self"],"font-src": ["self"],"object-src": ["none"],"media-src": ["self"],"frame-src": ["none"] };,headers: { "X-Content-Type-Options": "nosniff","X-Frame-Options": "DENY","X-XSS-Protection": "1; mode=block","Referrer-Policy": "strict-origin-when-cross-origin","Permissions-Policy": "camera=(),microphone=(),geolocation=()" },rateLimit: { windowMs: 15 * 60 * 1000,max: "100 },validation: { maxLength: 1000,allowedTags: ["p","br","strong","em","u"],sanitize: "true" } }; export default securityConfig;"""
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src_backup_temp/config/security.ts
 import React from 'react';
 
 interface SecurityProps {
@@ -27,9 +30,12 @@ export default function Security({ }: SecurityProps) {
   );
 }
 <<<<<<< HEAD:backup-merge-conflicts/security.ts.backup
+<<<<<<< HEAD:backup-merge-conflicts/security.ts.backup
 >>>>>>> main
 >>>>>>> main:src_backup_temp/config/security.ts
 >>>>>>> main
 >>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/config/security.ts
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src_backup_temp/config/security.ts

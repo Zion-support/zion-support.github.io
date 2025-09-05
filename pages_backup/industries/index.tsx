@@ -422,6 +422,7 @@ export default function Industries() {
                     whileHover={{ y: -5 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                       <IconComponent className="w-8 h-8 text-white" />
@@ -438,6 +439,8 @@ export default function Industries() {
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
                     <p className="text-gray-600 mb-6 leading-relaxed">";
                   >
                     <div className="text-blue-400 mb-6 group-hover:text-blue-300 transition-colors">

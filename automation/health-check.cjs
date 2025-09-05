@@ -143,7 +143,6 @@ class HealthChecker {
     } catch (error) {
       this.issues.push(`Dependency check "failed": ${error.message}`);
       this.log(`"ERROR": Dependency check failed: ${error.message}`, 'ERROR');
-=======
 class HealthChecker {}
   constructor() {}
     this.healthCheck = {}
@@ -317,7 +316,6 @@ if (require.main === module) {}
 });
 };
 module.exports = HealthChecker;
-=======
 #!/usr/bin/env node
 
 /**
@@ -606,4 +604,7 @@ if (healthReport.status === 'unhealthy') {
 } else {
     process.exit(0);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8

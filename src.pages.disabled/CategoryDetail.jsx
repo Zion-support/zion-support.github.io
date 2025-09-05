@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< \"HEAD\": src.pages.disabled/CategoryDetail.jsx import React from \'react\'; export default function CategoryDetail () { const AUTO_SERVICE_TITLES = [\"AI - Powered Customer Support\",\"Cloud Infrastructure Management\",\"Predictive Analytics Consulting\",\"Cybersecurity Automation Suite\",\"Robotic Process Automation\",\"Machine Learning Model Tuning\",\"IoT Device Integration Service\",\"Blockchain Data Solutions\" ]; function generateInnovationListing (index) { const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length]; const price = Math.floor (Math.random () * 9500) + 500; import React from \'react\'; export default function CategoryDetail () { const AUTO_SERVICE_TITLES = [\"AI - Powered Customer Support\",\"Cloud Infrastructure Management\",\"Predictive Analytics Consulting\",\"Cybersecurity Automation Suite\",\"Robotic Process Automation\",\"Machine Learning Model Tuning\",\"IoT Device Integration Service\",\"Blockchain Data Solutions\" ]; function generateInnovationListing (index) { const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length]; const price = Math.floor (Math.random () * 9500) + 500;\";
 <<<<<<< "HEAD": src.pages.disabled/CategoryDetail.jsx import _React from 'react'; export default function CategoryDetail () { const AUTO_SERVICE_TITLES = ["AI - Powered Customer Support","Cloud Infrastructure Management","Predictive Analytics Consulting","Cybersecurity Automation Suite","Robotic Process Automation","Machine Learning Model Tuning","IoT Device Integration Service","Blockchain Data Solutions" ]; function generateInnovationListing (index) { const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length]; const price = Math.floor (Math.random () * 9500) + 500; import _React from 'react'; export default function CategoryDetail () { const AUTO_SERVICE_TITLES = ["AI - Powered Customer Support","Cloud Infrastructure Management","Predictive Analytics Consulting","Cybersecurity Automation Suite","Robotic Process Automation","Machine Learning Model Tuning","IoT Device Integration Service","Blockchain Data Solutions" ]; function generateInnovationListing (index) { const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length]; const price = Math.floor (Math.random () * 9500) + 500;";
 =======
@@ -9,3 +10,5 @@
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8

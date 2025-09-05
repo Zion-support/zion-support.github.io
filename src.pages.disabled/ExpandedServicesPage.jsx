@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< \"HEAD\": src.pages.disabled/ExpandedServicesPage.jsx import React from \'react\'; export default function ExpandedServicesPage () { const [searchQuery,setSearchQuery] = useState (\") ; const [selectedCategory,setSelectedCategory] = useState (\"all\") ; const [filteredServices,setFilteredServices] = useState (EXPANDED_SERVICES) ; const [sortBy,setSortBy] = useState (\"rating\") ; useEffect ( () => { let filtered = EXPANDED_SERVICES; import React from \'react\'; export default function ExpandedServicesPage () { const [searchQuery,setSearchQuery] = useState (\") ; const [selectedCategory,setSelectedCategory] = useState (\"all\") ; const [filteredServices,setFilteredServices] = useState (EXPANDED_SERVICES) ; const [sortBy,setSortBy] = useState (\"rating\") ; useEffect ( () => { let filtered = EXPANDED_SERVICES;\"";
 <<<<<<< "HEAD": src.pages.disabled/ExpandedServicesPage.jsx import _React from 'react'; export default function ExpandedServicesPage () { const [searchQuery,setSearchQuery] = useState (") ; const [selectedCategory,setSelectedCategory] = useState ("all") ; const [filteredServices,setFilteredServices] = useState (EXPANDED_SERVICES) ; const [sortBy,setSortBy] = useState ("rating") ; useEffect ( () => { let filtered = EXPANDED_SERVICES; import _React from 'react'; export default function ExpandedServicesPage () { const [searchQuery,setSearchQuery] = useState (") ; const [selectedCategory,setSelectedCategory] = useState ("all") ; const [filteredServices,setFilteredServices] = useState (EXPANDED_SERVICES) ; const [sortBy,setSortBy] = useState ("rating") ; useEffect ( () => { let filtered = EXPANDED_SERVICES;"";
 =======
@@ -9,3 +10,5 @@
 >>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8

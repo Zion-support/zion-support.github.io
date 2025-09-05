@@ -143,7 +143,6 @@ class PerformanceMonitor {
         'Optimize bundle size with tree shaking',
         'Use dynamic imports for heavy components'
       ]
-=======
     this.logFile = path.join(this.reportsDir, 'automation-improvement.log');
     
     // Ensure reports directory exists;

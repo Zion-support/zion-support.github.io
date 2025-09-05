@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export {};
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,3 +13,6 @@ module.exports = {};
 =======
 module.exports = {};
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+module.exports = {};
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/itServicesData.ts.backup
 <<<<<<< HEAD:src/data/itServicesData.ts
 <<<<<<< HEAD:backup-merge-conflicts/itServicesData.ts.backup
 =======
@@ -1715,6 +1716,8 @@ export const IT_SERVICES: ITService[] = [;,
     competitors: ["Cisco", "HPE", "Dell Technologies", "Juniper", "Fortinet"],",
     marketSize: "$25.6 billion by 2025";,",
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src_backup_temp/data/itServicesData.ts
 export interface ITService {
   id: string;
   title: string;
@@ -2719,19 +2722,14 @@ export const IT_SERVICES: ITService[] = [
       uptime: &quot;99.9%&quot;,
       security: [&quot;Firewall rules&quot;, &quot;VPN encryption&quot;, &quot;Access control&quot;, &quot;Network segmentation&quot;]
     },
-<<<<<<< HEAD
-    competitors: [&quot;Cisco&quot;, &quot;HPE&quot;, &quot;Dell Technologies&quot;, &quot;Juniper&quot;, &quot;Fortinet&quot;],
-    marketSize: &quot;$25.6 billion by 2025&quot;
-=======
     competitors: ["Cisco", "HPE", "Dell Technologies", "Juniper", "Fortinet"],
     marketSize: "$25.6 billion by 2025"
->>>>>>> main
->>>>>>> main:src_backup_temp/data/itServicesData.ts
->>>>>>> main
->>>>>>> main
   }
 ];
+<<<<<<< HEAD:backup-merge-conflicts/itServicesData.ts.backup
 <<<<<<< HEAD:backup-merge-conflicts/itServicesData.ts.backup
 >>>>>>> main
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/data/itServicesData.ts
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src_backup_temp/data/itServicesData.ts

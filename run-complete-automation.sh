@@ -54,8 +54,13 @@ echo ""
 echo "🔒 Phase 3: Security & Performance"
 echo "====="
 # Security scan
+<<<<<<< HEAD
 run_with_log "Security Scanner" "node scripts/security-audit.cjs"
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
+=======
+run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 # Security audit
 run_optional "Security Audit" "node scripts/security-audit.cjs"
 # Performance monitoring

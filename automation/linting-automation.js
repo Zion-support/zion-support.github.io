@@ -326,6 +326,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
     
+<<<<<<< HEAD
 =======
 >>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 =======
@@ -334,6 +335,8 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 =======
     
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 const configPath = path.join(this.projectRoot, 'eslint.config.js');
       if (!fs.existsSync(configPath)) {
         return {
@@ -446,6 +449,7 @@ const cutoffTime = Date.now() - 60000; // 1 minute ago
     return recentFiles;}
     return recentFiles}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   getFilesInDirectory(dir, fileList = []) {}
     try {}
@@ -460,6 +464,8 @@ const cutoffTime = Date.now() - 60000; // 1 minute ago
 =======
     return recentFiles}
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 return recentFiles;
   }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   getFilesInDirectory(dir, fileList = []) {
@@ -503,6 +509,9 @@ if (stat.isDirectory()) {
     this.log('Linting Automation started');
     return fileList}}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
     
 =======
   async start() {}
@@ -550,6 +559,7 @@ automation.start().catch(error => {}),
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======;
 =======
 ;
@@ -559,6 +569,8 @@ automation.start().catch(error => {}),
 =======
 =======;
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 return fileList;
   }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   async start() {

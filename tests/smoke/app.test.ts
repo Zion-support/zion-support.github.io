@@ -3,6 +3,7 @@ describe('smoke',() => { it('runs',() => { expect(true).toBe(true)})}
 <<<<<<< HEAD
 <<<<<<< HEAD
 });''
+<<<<<<< HEAD
 =======
 });''
 >>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
@@ -12,3 +13,5 @@ describe('smoke',() => { it('runs',() => { expect(true).toBe(true)})}
 =======
 });''
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
