@@ -385,6 +385,230 @@ const itServices = [
     marketPrice: '$150,000 - $1,200,000/project',
     link: 'https://ziontechgroup.com/manufacturing-it-solutions',
     contact: '+1 302 464 0950'
+  },
+
+  // Quantum Computing Services
+  {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing infrastructure setup with quantum algorithm development, optimization, and hybrid classical-quantum systems.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Algorithm Development', 'Hybrid Systems', 'Quantum Simulation', 'Performance Optimization', 'Security Implementation'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Quantum Computing',
+    popular: true,
+    benefits: ['Exponential Speedup', 'Advanced Cryptography', 'Optimization Solutions', 'Future-Proof Technology', 'Competitive Advantage'],
+    marketPrice: '$750,000 - $8,000,000/project',
+    link: 'https://ziontechgroup.com/quantum-computing-infrastructure',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Quantum-Safe Cryptography',
+    description: 'Post-quantum cryptography implementation to protect against quantum computing threats with advanced encryption algorithms.',
+    icon: Lock,
+    features: ['Post-Quantum Algorithms', 'Quantum Key Distribution', 'Hybrid Cryptography', 'Migration Services', 'Security Assessment', 'Compliance'],
+    pricing: '$200,000 - $1,500,000/project',
+    category: 'Quantum Security',
+    popular: true,
+    benefits: ['Future-Proof Security', 'Quantum Resistance', 'Compliance Ready', 'Advanced Protection', 'Risk Mitigation'],
+    marketPrice: '$300,000 - $2,500,000/project',
+    link: 'https://ziontechgroup.com/quantum-safe-cryptography',
+    contact: '+1 302 464 0950'
+  },
+
+  // Advanced Blockchain Services
+  {
+    title: 'Enterprise Blockchain Solutions',
+    description: 'Custom blockchain development with smart contracts, DeFi protocols, and enterprise-grade security for various industries.',
+    icon: Database,
+    features: ['Custom Blockchain', 'Smart Contracts', 'DeFi Protocols', 'Enterprise Security', 'Integration Services', 'Maintenance'],
+    pricing: '$300,000 - $3,000,000/project',
+    category: 'Blockchain Development',
+    popular: true,
+    benefits: ['Decentralized Solutions', 'Enhanced Security', 'Transparency', 'Cost Reduction', 'Innovation'],
+    marketPrice: '$500,000 - $5,000,000/project',
+    link: 'https://ziontechgroup.com/enterprise-blockchain-solutions',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Central Bank Digital Currency (CBDC)',
+    description: 'CBDC development and implementation with regulatory compliance, security, and integration with existing financial systems.',
+    icon: CreditCard,
+    features: ['CBDC Development', 'Regulatory Compliance', 'Security Implementation', 'Integration Services', 'Testing', 'Deployment'],
+    pricing: '$1,000,000 - $10,000,000/project',
+    category: 'Digital Currency',
+    popular: true,
+    benefits: ['Digital Innovation', 'Regulatory Compliance', 'Enhanced Security', 'Financial Inclusion', 'Economic Efficiency'],
+    marketPrice: '$1,500,000 - $15,000,000/project',
+    link: 'https://ziontechgroup.com/central-bank-digital-currency',
+    contact: '+1 302 464 0950'
+  },
+
+  // Advanced IoT & Edge Computing
+  {
+    title: 'Industrial IoT Platform',
+    description: 'Comprehensive industrial IoT platform with real-time monitoring, predictive analytics, and automated control systems.',
+    icon: Wifi,
+    features: ['IoT Sensors', 'Real-time Monitoring', 'Predictive Analytics', 'Automated Controls', 'Data Analytics', 'Integration'],
+    pricing: '$150,000 - $1,200,000/project',
+    category: 'Industrial IoT',
+    popular: true,
+    benefits: ['Operational Efficiency', 'Predictive Maintenance', 'Cost Reduction', 'Quality Improvement', 'Automation'],
+    marketPrice: '$250,000 - $2,000,000/project',
+    link: 'https://ziontechgroup.com/industrial-iot-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Edge AI Computing Infrastructure',
+    description: 'Edge computing infrastructure with AI processing capabilities for real-time decision making and low-latency applications.',
+    icon: Cpu,
+    features: ['Edge Servers', 'AI Processing', 'Real-time Analysis', 'Low Latency', 'Offline Capability', 'Scalable Deployment'],
+    pricing: '$200,000 - $1,500,000/project',
+    category: 'Edge AI',
+    popular: true,
+    benefits: ['Ultra-low Latency', 'Real-time Processing', 'Offline Operation', 'Cost Efficiency', 'Scalable Architecture'],
+    marketPrice: '$300,000 - $2,500,000/project',
+    link: 'https://ziontechgroup.com/edge-ai-computing-infrastructure',
+    contact: '+1 302 464 0950'
+  },
+
+  // Space Technology Services
+  {
+    title: 'Satellite Communication Systems',
+    description: 'Satellite communication infrastructure with ground stations, data processing, and global connectivity solutions.',
+    icon: Globe,
+    features: ['Ground Stations', 'Satellite Integration', 'Data Processing', 'Global Connectivity', 'Monitoring', 'Maintenance'],
+    pricing: '$2,000,000 - $20,000,000/project',
+    category: 'Space Technology',
+    popular: true,
+    benefits: ['Global Coverage', 'Reliable Communication', 'Remote Access', 'Disaster Recovery', 'Future-Proof Technology'],
+    marketPrice: '$3,000,000 - $30,000,000/project',
+    link: 'https://ziontechgroup.com/satellite-communication-systems',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Space Data Analytics Platform',
+    description: 'Advanced space data processing and analytics platform for satellite imagery, weather data, and space monitoring.',
+    icon: BarChart3,
+    features: ['Data Processing', 'Image Analysis', 'Weather Monitoring', 'Space Tracking', 'Analytics', 'Reporting'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Space Analytics',
+    popular: true,
+    benefits: ['Space Insights', 'Weather Prediction', 'Environmental Monitoring', 'Research Support', 'Commercial Applications'],
+    marketPrice: '$750,000 - $8,000,000/project',
+    link: 'https://ziontechgroup.com/space-data-analytics-platform',
+    contact: '+1 302 464 0950'
+  },
+
+  // Advanced Cybersecurity Services
+  {
+    title: 'AI-Powered Threat Detection',
+    description: 'Advanced AI-driven cybersecurity platform with real-time threat detection, behavioral analysis, and automated response.',
+    icon: Shield,
+    features: ['AI Threat Detection', 'Behavioral Analysis', 'Real-time Monitoring', 'Automated Response', 'Machine Learning', 'Integration'],
+    pricing: '$100,000 - $800,000/project',
+    category: 'AI Cybersecurity',
+    popular: true,
+    benefits: ['Advanced Protection', 'Real-time Detection', 'Automated Response', 'Reduced False Positives', 'Cost Efficiency'],
+    marketPrice: '$150,000 - $1,200,000/project',
+    link: 'https://ziontechgroup.com/ai-powered-threat-detection',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Quantum Cryptography Implementation',
+    description: 'Quantum cryptography solutions with quantum key distribution and quantum-safe encryption for ultra-secure communications.',
+    icon: Lock,
+    features: ['Quantum Key Distribution', 'Quantum Encryption', 'Secure Communication', 'Implementation', 'Testing', 'Maintenance'],
+    pricing: '$300,000 - $2,500,000/project',
+    category: 'Quantum Security',
+    popular: true,
+    benefits: ['Ultimate Security', 'Quantum Resistance', 'Future-Proof', 'Unbreakable Encryption', 'Advanced Protection'],
+    marketPrice: '$500,000 - $4,000,000/project',
+    link: 'https://ziontechgroup.com/quantum-cryptography-implementation',
+    contact: '+1 302 464 0950'
+  },
+
+  // Metaverse & AR/VR Services
+  {
+    title: 'Metaverse Infrastructure',
+    description: 'Complete metaverse infrastructure with virtual worlds, avatars, digital assets, and immersive experiences.',
+    icon: Monitor,
+    features: ['Virtual Worlds', 'Avatar Systems', 'Digital Assets', 'Immersive Experiences', 'Social Features', 'Integration'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Metaverse',
+    popular: true,
+    benefits: ['Immersive Experiences', 'New Revenue Streams', 'Customer Engagement', 'Innovation', 'Future-Proof Technology'],
+    marketPrice: '$750,000 - $8,000,000/project',
+    link: 'https://ziontechgroup.com/metaverse-infrastructure',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'AR/VR Enterprise Solutions',
+    description: 'Enterprise AR/VR solutions for training, remote collaboration, and immersive business applications.',
+    icon: Monitor,
+    features: ['AR/VR Development', 'Training Solutions', 'Remote Collaboration', 'Immersive Apps', 'Integration', 'Support'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'AR/VR',
+    popular: true,
+    benefits: ['Enhanced Training', 'Remote Collaboration', 'Immersive Experiences', 'Cost Savings', 'Innovation'],
+    marketPrice: '$300,000 - $3,000,000/project',
+    link: 'https://ziontechgroup.com/ar-vr-enterprise-solutions',
+    contact: '+1 302 464 0950'
+  },
+
+  // Advanced Data Services
+  {
+    title: 'Real-time Data Streaming Platform',
+    description: 'High-performance data streaming platform with real-time processing, analytics, and integration capabilities.',
+    icon: Network,
+    features: ['Real-time Streaming', 'Data Processing', 'Analytics', 'Integration', 'Scalability', 'Monitoring'],
+    pricing: '$150,000 - $1,200,000/project',
+    category: 'Data Streaming',
+    popular: true,
+    benefits: ['Real-time Insights', 'Scalable Processing', 'Better Performance', 'Cost Efficiency', 'Integration'],
+    marketPrice: '$250,000 - $2,000,000/project',
+    link: 'https://ziontechgroup.com/real-time-data-streaming-platform',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Advanced Data Lake Architecture',
+    description: 'Enterprise data lake with advanced analytics, machine learning, and AI capabilities for big data processing.',
+    icon: Database,
+    features: ['Data Lake Design', 'Advanced Analytics', 'ML Integration', 'AI Capabilities', 'Security', 'Scalability'],
+    pricing: '$300,000 - $2,500,000/project',
+    category: 'Data Architecture',
+    popular: true,
+    benefits: ['Unified Data', 'Advanced Analytics', 'AI Integration', 'Scalable Architecture', 'Cost Efficiency'],
+    marketPrice: '$500,000 - $4,000,000/project',
+    link: 'https://ziontechgroup.com/advanced-data-lake-architecture',
+    contact: '+1 302 464 0950'
+  },
+
+  // Autonomous Systems
+  {
+    title: 'Autonomous Vehicle Infrastructure',
+    description: 'Complete infrastructure for autonomous vehicles including sensors, AI processing, and communication systems.',
+    icon: Car,
+    features: ['Sensor Integration', 'AI Processing', 'Communication Systems', 'Safety Systems', 'Testing', 'Deployment'],
+    pricing: '$1,000,000 - $10,000,000/project',
+    category: 'Autonomous Systems',
+    popular: true,
+    benefits: ['Safety Enhancement', 'Efficiency Improvement', 'Cost Reduction', 'Innovation', 'Future Mobility'],
+    marketPrice: '$1,500,000 - $15,000,000/project',
+    link: 'https://ziontechgroup.com/autonomous-vehicle-infrastructure',
+    contact: '+1 302 464 0950'
+  },
+  {
+    title: 'Robotic Process Automation (RPA)',
+    description: 'Advanced RPA solutions with AI integration for complex business process automation and optimization.',
+    icon: Bot,
+    features: ['Process Automation', 'AI Integration', 'Workflow Optimization', 'Integration', 'Monitoring', 'Maintenance'],
+    pricing: '$100,000 - $800,000/project',
+    category: 'Process Automation',
+    popular: true,
+    benefits: ['Process Efficiency', 'Cost Reduction', 'Error Reduction', 'Scalability', 'ROI Improvement'],
+    marketPrice: '$150,000 - $1,200,000/project',
+    link: 'https://ziontechgroup.com/robotic-process-automation',
+    contact: '+1 302 464 0950'
   }
 ];
 
