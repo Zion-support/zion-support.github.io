@@ -1,66 +1,84 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Starting syntax error fixes...');
-
-// Fix common syntax errors
-function fixSyntaxErrors(content) {
-  // Fix trailing commas in object properties
-  content = content.replace(/,(\s*[}\]])/g, '$1');
-  
-  // Fix semicolons after commas
-  content = content.replace(/,;/g, ',');
-  
-  // Fix double commas
-  content = content.replace(/,+/g, ',');
-  
-  // Fix malformed import statements
-  content = content.replace(/import\s+([^,]+),\s*$/gm, 'import $1;');
-  
-  // Fix object property syntax
-  content = content.replace(/"([^"]+)":\s*([^,}]+),;/g, '"$1": $2,');
-  
-  // Fix array syntax
-  content = content.replace(/\[([^\]]+),\]/g, '[$1]');
-  
-  // Fix function parameters
-  content = content.replace(/\(\s*([^)]+),\s*\)/g, '($1)');
-  
-  return content;
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Fix common syntax errors
+    content = content
+      // Remove trailing commas before semicolons
+      .replace(/,;/g, ';')
+      // Fix JSX attributes with trailing commas
+      .replace(/,(\s*[}>])/g, '$1')
+      // Fix object properties with trailing commas
+      .replace(/,(\s*[}])/g, '$1')
+      // Fix array elements with trailing commas
+      .replace(/,(\s*\])/g, '$1')
+      // Fix function parameters with trailing commas
+      .replace(/,(\s*\))/g, '$1')
+      // Fix JSX closing tags with trailing commas
+      .replace(/,(\s*\/>)/g, '$1')
+      // Fix JSX children with trailing commas
+      .replace(/,(\s*<\/[^>]+>)/g, '$1')
+      // Remove standalone commas
+      .replace(/^,;$/gm, '')
+      .replace(/^,$/gm, '')
+      // Fix multiple semicolons
+      .replace(/;+/g, ';')
+      // Fix spaces around colons in CSS
+      .replace(/:\s*;/g, ': ')
+      // Fix malformed JSX attributes
+      .replace(/(\w+)\s*=\s*{([^}]+)}\s*,/g, '$1={$2}')
+      // Fix malformed object properties
+      .replace(/(\w+):\s*([^,}]+)\s*,/g, '$1: $2,')
+      // Clean up extra whitespace
+      .replace(/\s+/g, ' ')
+      .replace(/\n\s*\n/g, '\n');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
 }
 
-// Process files
-const filesToFix = [
-  'vite.config.ts',
+// Get all TypeScript and JSX files
+const files = [
+  'components/AccessibilityEnhancer.tsx',
+  'components/AccessibilityProvider.tsx',
+  'components/Analytics.tsx',
+  'components/ContactForm.tsx',
   'components/Header.tsx',
+  'components/Layout.tsx',
+  'components/LoadingSpinner.tsx',
   'components/OptimizedImage.tsx',
+  'components/PerformanceMonitor.tsx',
+  'components/SEOHead.tsx',
+  'components/SearchBar.tsx',
   'components/Sidebar.tsx',
   'components/SimpleLayout.tsx',
-  'components/SkeletonLoader.tsx'
+  'components/layout/Footer.tsx',
+  'components/layout/Layout.tsx',
+  'components/layout/MainLayout.tsx',
+  'components/performance/LazyComponent.tsx',
+  'components/performance/OptimizedImage.tsx',
+  'components/ui/EnhancedMarketplaceCard.tsx',
+  'components/ui/InteractiveNavigation.tsx',
+  'components/ui/NotificationSystem.tsx',
+  'hooks/useApi.ts',
+  'hooks/useLocalStorage.ts',
+  'hooks/usePerformanceMonitor.ts',
+  'hooks/useResponsive.ts'
 ];
 
-filesToFix.forEach(file => {
-  const filePath = path.join(__dirname, file);
-  if (fs.existsSync(filePath)) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      const originalContent = content;
-      content = fixSyntaxErrors(content);
-      
-      if (content !== originalContent) {
-        fs.writeFileSync(filePath, content);
-        console.log(`✅ Fixed: ${file}`);
-      } else {
-        console.log(`ℹ️ No changes needed: ${file}`);
-      }
-    } catch (error) {
-      console.log(`❌ Error fixing ${file}: ${error.message}`);
-    }
-  } else {
-    console.log(`⚠️ File not found: ${file}`);
+let fixedCount = 0;
+files.forEach(file => {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
   }
 });
 
-console.log('🎉 Syntax fixes completed!');
+console.log(`Fixed ${fixedCount} files`);
