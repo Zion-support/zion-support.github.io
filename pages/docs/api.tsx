@@ -132,9 +132,11 @@ export default function APIDocumentationPage() {
   const [selectedMethod, setSelectedMethod] = useState('all')
   const copyToClipboard = async (code: string, id: string) => {
     try {
-      await navigator.clipboard.writeText(code)
-      setCopiedCode(id)
-      setTimeout(() => setCopiedCode(null), 2000)
+      if (typeof window !== 'undefined' && window.navigator?.clipboard) {
+        await window.navigator.clipboard.writeText(code)
+        setCopiedCode(id)
+        setTimeout(() => setCopiedCode(null), 2000)
+      }
     } catch (err) {
       console.error('Failed to copy: ', err)
     }

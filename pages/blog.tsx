@@ -89,13 +89,16 @@ export default function BlogPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}>
-              <h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
                 Tech Insights & Innovation
               </h1>
-              <p>
+              <p className="text-xl text-blue-100">
                 Stay ahead with the latest insights on AI, technology trends, and business innovation
               </p>
             </motion.div>
+          </div>
+        </section>
+
         {/* Blog Posts Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -155,6 +158,6 @@ export default function BlogPage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   )
 }
