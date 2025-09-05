@@ -32,7 +32,9 @@ import {
   Users,
   Globe,
   Phone,
-  Shield
+  Shield,
+  Mail,
+  Menu
 } from 'lucide-react';
 
 const navigationItems = [
