@@ -4,44 +4,33 @@ import { MainNavigation } from './header/MainNavigation';
 import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
 
 interface HeaderProps {
-
   className?: string;
-
 }
-export function Header($1) {const router = useRouter()
-};
-export function Header($1) {
 
-export function Header($1) {
-  const [isScrolled, setIsScrolled] = useState<any>(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<any>(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState<any>(false);
-  const [isSearchOpen, setIsSearchOpen] = useState<any>(false);
+export function Header({ className }: HeaderProps) {
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState<boolean>(false);
+  const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-  const [searchQuery, setSearchQuery] = useState<any>(");
+  const [searchQuery, setSearchQuery] = useState<string>('');
   const location = useLocation();
 
   useEffect(() => {
-// "TODO": Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-const handleScroll = (props) => {
+    const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
-    };';
+    };
 
-    window.addEventListener('scroll', handleScroll);';';
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleTheme = (props) => {
+  const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
     // You can add theme switching logic here
   };
 
-  const handleSearch = (props) => {
+  const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Add search logic here
@@ -49,26 +38,24 @@ const handleScroll = (props) => {
     }
   };
 
-<<<<<<< HEAD
-  const navigationItems = [{ "name": 'Home', "href": '/' },
+  const navigationItems = [
+    { name: 'Home', href: '/' },
     { 
-      "name": 'Services', 
-      "href": '/services',
-      "submenu": [
-        { name: 'All Services', "href": '/services' },
-        { "name": 'New Services 2025', "href": '/new-services-2025' },
-        { "name": 'AI Services', "href": '/ai-services' },
-        { "name": 'IT Services', "href": '/it-services' },
-        { "name": 'Micro SaaS', "href": '/micro-saas' }
+      name: 'Services', 
+      href: '/services',
+      submenu: [
+        { name: 'All Services', href: '/services' },
+        { name: 'New Services 2025', href: '/new-services-2025' },
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' }
       ]
     },
-    { "name": 'Solutions', "href": '/solutions' },
-    { "name": 'About', "href": '/about' },
-    { "name": 'Contact', "href": '/contact' };
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' }
   ];
 
-=======
->>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -77,372 +64,141 @@ const handleScroll = (props) => {
           : "bg-transparent"
       } ${className}`}
     >
-      <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 "lg": w-12 lg:h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-hover: scal e-110 transition-transform duration-300">
-              <Zap className="w-6 h-6 lg:w-7 lg:h-7 text-white"  />
+            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <Zap className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
             </div>
-            <div className="hidden sm: bloc k">
-              <h1 className="text-xl lg: tex t-2xl font-bold text-white group-hover: tex t-blue-400 transition-colors">
+            <div className="hidden sm:block">
+              <h1 className="text-xl lg:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
                 Zion Tech Group
               </h1>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <MainNavigation className="hidden "md": fle x"  />
+          <MainNavigation className="hidden md:flex" />
 
-          {/* Contact Info - Hidden on small screens */}
-          <div className="hidden "xl": flex items-center space-x-4 text-sm text-gray-400">
-            <div className="flex items-center space-x-2">
-              <Phone className="w-4 h-4" />
-              <span>+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Mail className="w-4 h-4" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-          </div>
-
-          {/* Right side actions */}
-          <div className="flex items-center space-x-2 "lg": space-x-4">
+          {/* Right Side Actions */}
+          <div className="flex items-center space-x-4">
+            
             {/* Search */}
+            <div className="relative">
+              <button
+                onClick={() => setIsSearchOpen(!isSearchOpen)}
+                className="p-2 text-gray-400 hover:text-white transition-colors"
+              >
+                <Search className="w-5 h-5" />
+              </button>
+              
+              {isSearchOpen && (
+                <div className="absolute right-0 top-full mt-2 w-80 bg-white rounded-lg shadow-lg p-4">
+                  <form onSubmit={handleSearch} className="flex space-x-2">
+                    <input
+                      type="text"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      placeholder="Search..."
+                      className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+                    />
+                    <button
+                      type="submit"
+                      className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                    >
+                      Search
+                    </button>
+                  </form>
+                </div>
+              )}
+            </div>
+
+            {/* Theme Toggle */}
             <button
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-2 text-gray-300 "hover": tex t-blue-400 transition-colors"
+              onClick={toggleTheme}
+              className="p-2 text-gray-400 hover:text-white transition-colors"
             >
-              <Search className="w-5 h-5"  />
+              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
 
-            {/* Theme toggle */}
-            <buttononClick={toggleTheme}
-              className="p-2 text-gray-300 "hover": tex t-blue-400 transition-colors";
-            >';
-              {theme === 'dark' ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}
-            </button>
-
-            {/* User menu */}
+            {/* User Menu */}
             <div className="relative">
               <button
                 onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-                className="flex items-center space-x-2 p-2 text-gray-400 "hover": tex t-cyan-400 hover: b g-gray-800/50 rounded-md transition-colors duration-200"
+                className="p-2 text-gray-400 hover:text-white transition-colors"
               >
-                <User className="w-5 h-5"  />
-                <span className="hidden sm: bloc k">Account</span>
+                <User className="w-5 h-5" />
               </button>
               
               {isUserMenuOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">
+                <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg py-2">
                   <Link
-                    to="/login"
-                    className="block px-4 py-2 text-sm text-gray-300 hover: b g-gray-700 hover: tex t-white"
+                    to="/profile"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                     onClick={() => setIsUserMenuOpen(false)}
                   >
-                    Sign In
+                    Profile
                   </Link>
                   <Link
-                    to="/register"
-                    className="block px-4 py-2 text-sm text-gray-300 "hover": b g-gray-700 hover: tex t-white"
+                    to="/settings"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                     onClick={() => setIsUserMenuOpen(false)}
                   >
-                    Sign Up
+                    Settings
                   </Link>
-                    </div>
-  );
-}
+                  <hr className="my-2" />
+                  <button className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    Sign Out
+                  </button>
+                </div>
+              )}
             </div>
 
-            {/* Mobile menu button */}
+            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className=""md": hidden p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
+              className="md:hidden p-2 text-gray-400 hover:text-white transition-colors"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
 
-        {/* Search Bar */}
-        {isSearchOpen && (
-          <div className="pb-4">
-            <form onSubmit={handleSearch} className="relative">
-              <input
-                type="text"
-                placeholder="Search services, solutions, or resources..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 "focus": outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
-              />
-              <button
-                type="submit"
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: tex t-blue-400"
-              >
-                <Search className="w-5 h-5"  />
-              </button>
-            </form>
-          </div>
-        )
-      )}
-    </div>
-  );
-}
-      </div>
-
-      {/* Mobile Navigation Overlay */}
-      {isMobileMenuOpen && (
-        <div className=""md": hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-gray-800/50">
-          <div className="px-4 py-6">
-            <MainNavigation  />
-          </div>
-            </div>
-  );
-}
-    </header>
-  );
-}
-const router = useRouter()
-}
-  const [mobileMenuOpen, setMobileMenuOpen] = useState()"
-  const [searchQuery, setSearchQuery] = useState<any>(")
-}
-  const [searchQuery, setSearchQuery] = useState()
-}
-  const [scrolled, setScrolled] = useState<any>(false)
-}
-  useEffect(() => {
-    const handleScroll = (props) => {
-      setScrolled(window.scrollY > 50)
-}
-    },
-    window.addEventListener()
-}
-    return () => window.removeEventListener("scroll", handleScroll)
-}
-  }, [])
-}
-  const handleSearch = async ("e": Reac t.FormEvent) => {,
-    e.preventDefault(),
-    if (searchQuery.trim()) {"
-      router.push("/search?q="${encodeURIComponent(searchQuery.trim()),")}"
-  }
-
-  const navigation = []
-  ]
-
-  return ("
-    <header className="{"fixed" w-full z-50 transition-all duration-300 ${"
-      scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm">
-}"}>"
-      <div className = "max-w-7xl" mx-auto px-4 "sm": p x-6 l,"
-    "g": p x-8">"
-  return (",
-    <header className="{"fixed" w-full z-50 transition-all duration-300 ${ scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm" }"}>"
-      <div className="max-w-7xl" mx-auto px-4 "sm": p x-6 lg: p x-8">"
-    <header className="{"fixed" w-full z-50 transition-all duration-300 ${"
-  return (<header className="{"fixed" w-full z-50 transition-all duration-300 ${">
-      scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm"}"}>"
-      <div className="max-w-7xl" mx-auto px-4 "sm": p x-6 lg: p x-8">"
-        <div className="flex justify-between items-center py-4">",
-          {/* comment */}"
-          <div className="flex items-center">"
-            <Link href="/" className="flex items-center space-x-2">"
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">"
-                <span className="text-white font-bold text-sm">Z</span>"
-              </div>"
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
-            </Link>
-          </div>
-"
-          {/* comment */}"
-          <nav className="hidden "md": flex items-center space-x-8">,
-          {/* comment */}"
-          <nav className="{"hidden" "md": flex items-center space-x-8">
-            {navigation.map((item) => (",
-              <Link key="{item.name}" href="{item.href}" className="{"text-sm" font-medium transition-colors ${ router.pathname === item.href ? "text-blue-600" : "text-gray-700 "hover": tex t-blue-600" }"} >"
-              <Link key="{item.name}"
-                href="{item.href}"
-                href="{item.href}"
-                className="}text-gray-700" "hover": tex t-blue-600 transition-colors font-medium"
-                className="{"text-sm" font-medium transition-colors ${
-                  router.pathname === item.href"
-                    ? "text-blue-600">
-                    : "text-gray-700 hover: tex t-blue-600"}"}
-
-              >
-                {item.name}
-
-              </Link>
-            ))}
-
-          </nav>
-          {/* comment */}"
-          <div className="hidden" "md": flex items-center space-x-4">",
-            <form onSubmit="{handleSearch}" className="relative">"
-              <input"
-                type="text"
-                placeholder="Search..."
-                value="{searchQuery}"
-                onChange="{(e)" => setSearchQuery(e.target.value)}"
-                className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg "focus": outlin e-none focus: rin g-2 focu,
-    "s": rin g-blue-500 focu,"
-    "s": borde r-transparent" />",
-              <input type="text" placeholder="Search..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)}"
-              <input type="text"
-                placeholder="Search..."
-                value="{searchQuery}"
-                onChange="{(e)" => setSearchQuery(e.target.value)}"
-                className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg "focus": outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
-                className="w-64 px-4 py-2 pl-10 pr-4 text-sm border border-gray-300 rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent" />"
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"   />
-            </form>"
-            <a href="tel:+15551234567" className="flex items-center space-x-1 text-gray-700 hover: tex t-blue-600 transition-colors">"
-              <Phone className="w-4 h-4"   />"
-              <span className="text-sm">Call</span>
-            </a>"
-            <a href="mailto: inf o@ziontechgroup.com" className="flex items-center space-x-1 text-gray-700 hover: tex t-blue-600 transition-colors">"
-              <Mail className="w-4 h-4"   />"
-              <span className="text-sm">Email</span>
-            </a>"
-                className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent" />"
-              <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"   />"
-            </form>"
-            <div className="flex items-center space-x-2 text-sm text-gray-600">"
-              <Phone className="h-4 w-4"   />
-              <span>+1 (555) 123-4567</span>
-            </div>
-,
-          {/* comment */}"
-          <button onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}"
-          <button onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}"
-            className=""md": hidden p-2 rounded-md text-gray-600 hove,
-    "r": tex t-gray-900 hove,"
-    "r": b g-gray-100"
-          >"
-            className="md: hidden p-2 rounded-md text-gray-700 hover: tex t-blue-600 hover: b g-gray-100 transition-colors",
-            onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}
-
-          >"
-            {mobileMenuOpen ? <X className="w-6 h-6"   /> : <Menu className="w-6 h-6"   />}"
-            onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}"
-            className=""md": hidden p-2 rounded-md text-gray-600 hover: tex t-gray-900 hover: b g-gray-100"
-          >",
-            {mobileMenuOpen ? <X className="h-6 w-6"   /> : <Menu className="h-6 w-6"   />}
-
-          </button>
-        </div>
-        {/* comment */}"
-        {mobileMenuOpen && ("
-          <div className=""md": hidde n">",
-        {/* comment */}, {mobileMenuOpen && ("
-          <div className=""md": hidde n">"
-            <div className="{"px-2" pt-2 pb-3 space-y-1 bg-white border-t">
-              {navigation.map((item) => (",
-                <Link key="{item.name}" href="{item.href}" className="{"block" px-3 py-2 text-base font-medium rounded-md ${ router.pathname === item.href ? "text-blue-600 bg-blue-50" : "text-gray-700 "hover": tex t-blue-600 hover: b g-gray-50" }"} onClick="{()" => setMobileMenuOpen(false)}
-
-        {/* comment */}
-
-        {mobileMenuOpen && ("
-          <div className=""md": hidde n" py-4 border-t border-gray-200"}>"
-            <nav className="flex flex-col space-y-4">
-              {navigation.map((item) => ("
-                <Link key="{item.name}"
-                  href="{item.href}"
-                  className="{"block" px-3 py-2 text-base font-medium rounded-md ${
-                    router.pathname === item.href"
-                      ? "text-blue-600 bg-blue-50"
-                      : "text-gray-700 "hover": tex t-blue-600 hove,"
-    "r": b g-gray-50"}"}"
-                  onClick="{()" => setMobileMenuOpen(false)}
-
-                >
-                  {item.name}
-
-                </Link>
-              ))}"
-              <div className="px-3" py-2">"
-                <form onSubmit="{handleSearch}" className="relative">"
-                  <input"
-                    type="text"
-                    placeholder="Search..."
-                    value="{searchQuery}"
-                    onChange="{(e)" => setSearchQuery(e.target.value)}"
-                    className="w-full px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg "focus": outlin e-none focus: rin g-2 focu,
-    "s": rin g-blue-500 focu,"
-    "s": borde r-transparent" />",
-                  href="{item.href}"
-                  className="text-gray-700 "hover": tex t-blue-600 transition-colors font-medium py-2",
-                  onClick="{()" => setMobileMenuOpen(false)}"
-        {mobileMenuOpen && (<div className=""md": hidde n">",
-            <div className="{"px-2" pt-2 pb-3 space-y-1 bg-white border-t">, {navigation.map((item) => (<Link key="{item.name}"
-                  href="{item.href}"
-                  className="{"block" px-3 py-2 text-base font-medium rounded-md ${
-                    router.pathname === item.href"
-                      ? "text-blue-600 bg-blue-50"
-                      : "text-gray-700 "hover": tex t-blue-600 hover: b g-gray-50"}"} onClick="{()" => setMobileMenuOpen(false)}
-
-                >
-                  {item.name}
-
-                </Link>
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-black/95 backdrop-blur-md border-t border-gray-800/50">
+            <div className="px-4 py-6 space-y-4">
+              {navigationItems.map((item) => (
+                <div key={item.name}>
+                  <Link
+                    to={item.href}
+                    className="block text-white hover:text-blue-400 transition-colors py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                  {item.submenu && (
+                    <div className="ml-4 space-y-2">
+                      {item.submenu.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.href}
+                          className="block text-gray-400 hover:text-blue-400 transition-colors py-1"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
-
-            </nav>"
-            <div className="mt-4" pt-4 border-t border-gray-200`}>"
-              <form onSubmit="{handleSearch}" className="relative mb-4">"
-                <input type="text"
-                  placeholder="Search..."
-                  value="{searchQuery}"
-                  onChange="{(e)" => setSearchQuery(e.target.value)}"
-                  className="w-full px-4 py-2 pl-10 pr-4 text-sm border border-gray-300 rounded-lg "focus": outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent" />"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"   />
-              </form>"
-              <div className="flex space-x-4">"
-                <a href="tel:+15551234567" className="flex items-center space-x-1 text-gray-700 hover: tex t-blue-600 transition-colors">"
-                  <Phone className="w-4 h-4"   />"
-                  <span className="text-sm">Call</span>
-                </a>"
-                <a href="mailto: inf o@ziontechgroup.com" className="flex items-center space-x-1 text-gray-700 hover: tex t-blue-600 transition-colors">"
-                  <Mail className="w-4 h-4"   />"
-                  <span className="text-sm">Email</span>
-                </a>"
-              <div className="px-3 py-2">",
-                <form onSubmit="{handleSearch}" className="relative">"
-                  <input type="text" placeholder="Search..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)}"
-                    className="w-full px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg "focus": outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent" />"
-                  <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"   />
-                </form>"
-              </div>"
-              <div className="px-3 py-2 flex items-center space-x-2 text-sm text-gray-600">"
-                <Phone className="h-4 w-4"   />
-                <span>+1 (555) 123-4567</span>
-              </div>
-          </div>)}
-
+            </div>
+          </div>
+        )}
       </div>
     </header>
-  )
-};
-  );"
-}"
-"
-
-export default Component
-
-</div>
-</form>
-</div>
-</div>
-</button>
-</nav>
-</div>
-</header>
-</div>
-</header>
-</div>
-</header>
-</any>
-</any>
-</any>;';';
+  );
+}

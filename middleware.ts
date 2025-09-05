@@ -17,12 +17,13 @@ const publicRoutes = ["/",
   "/auth/verify",
 ];
 
-export function middleware("request": NextRequest) {
+export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Allow public routes
   if (publicRoutes.includes(pathname)) {
-    return NextResponse.next()}
+    return NextResponse.next();
+  }
 
   // Check for authentication cookie
   const authCookie = request.cookies.get("auth-token");
