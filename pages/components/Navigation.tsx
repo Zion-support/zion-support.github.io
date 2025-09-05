@@ -83,21 +83,21 @@ const navigationItems = [
         title: 'AI Services',
         href: '/ai-services',
         icon: Brain,
-        description: '80+ cutting-edge AI solutions',
+        description: '30+ cutting-edge AI solutions',
         popular: true
       },
       {
         title: 'IT Services',
         href: '/it-services',
         icon: Network,
-        description: '70+ comprehensive IT services',
+        description: '25+ comprehensive IT services',
         popular: true
       },
       {
         title: 'Micro SaaS',
         href: '/micro-saas',
         icon: Cloud,
-        description: '85+ innovative micro SaaS solutions',
+        description: '40+ innovative micro SaaS solutions',
         popular: true
       }
     ]
@@ -200,16 +200,16 @@ const navigationItems = [
         description: 'In-depth research reports'
       },
       {
-        title: 'Webinars',
-        href: '/webinars',
-        icon: Calendar,
-        description: 'Educational sessions'
-      },
-      {
         title: 'Tutorials',
         href: '/tutorials',
         icon: BookOpen,
         description: 'Step-by-step guides'
+      },
+      {
+        title: 'Documentation',
+        href: '/docs',
+        icon: FileText,
+        description: 'Technical documentation'
       }
     ]
   },
@@ -247,6 +247,12 @@ const navigationItems = [
         href: '/news',
         icon: FileText,
         description: 'Company updates'
+      },
+      {
+        title: 'Press',
+        href: '/press',
+        icon: FileText,
+        description: 'Press releases and media'
       }
     ]
   }
@@ -256,7 +262,9 @@ const quickLinks = [
   { title: 'Pricing', href: '/pricing', icon: DollarSign },
   { title: 'Contact', href: '/contact', icon: Phone },
   { title: 'Support', href: '/support', icon: MessageSquare },
-  { title: 'Status', href: '/status', icon: BarChart3 }
+  { title: 'Status', href: '/status', icon: BarChart3 },
+  { title: 'Quote', href: '/quote', icon: FileText },
+  { title: 'API Docs', href: '/api-docs', icon: Code }
 ];
 
 export default function Navigation() {
