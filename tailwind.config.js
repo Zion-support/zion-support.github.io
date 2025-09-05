@@ -35,17 +35,9 @@ export default {
       }
     }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
-  ],
-=======
-  plugins: [forms, typography, aspectRatio],
->>>>>>> pr-11914
-=======
-  plugins: [forms, typography, aspectRatio]
->>>>>>> pr-11913
+  ]
 };

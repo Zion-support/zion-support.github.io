@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-// Extend jest-dom matchers;
-require('@testing-library/jest-dom');
-
-=======
-/ Extend jest-dom matchersrequire("@testing-library/jest-dom");''"
->>>>>>> pr-11913
