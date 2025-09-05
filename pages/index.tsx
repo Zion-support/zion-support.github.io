@@ -238,34 +238,9 @@ export default function HomePage() {
               })}
             </div>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (
-              <motion.div 
-                key={index}
-                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="text-3xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <ul className="text-sm text-gray-500 space-y-2 mb-4">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx}>• {feature}</li>
-                  ))}
-                </ul>
-                <div className="mt-4">
-                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Stats Section */}
+        {/* Stats Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
@@ -304,21 +279,8 @@ export default function HomePage() {
                 Our comprehensive service portfolio covers everything from micro SaaS development to enterprise AI solutions.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                <div className="text-gray-600">{stat.label}</div>
-              </motion.div>
-            ))}
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
@@ -352,7 +314,8 @@ export default function HomePage() {
               </motion.div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Contact CTA Section */}
       <section className="py-20 bg-blue-600 text-white">
@@ -385,6 +348,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </div>
     </Layout>
   );
 }
