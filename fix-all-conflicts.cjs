@@ -15,7 +15,7 @@ class ConflictResolver {
   fixMergeConflicts(filePath) {
     try {
       let content = fs.readFileSync(filePath, 'utf8');
-      let originalContent = content;
+      const originalContent = content;
 
       // Remove merge conflict markers
       content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
