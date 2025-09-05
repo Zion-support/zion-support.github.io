@@ -1,0 +1,1 @@
+interface RoleCardProps extends React.PropsWithChildren<{}> {}; "onInviteTalent": (talentId: string,"roleTitle": &apos;string) => void&apos;} export ; ></div> )}; '"`;

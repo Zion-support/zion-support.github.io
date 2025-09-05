@@ -1,0 +1,14 @@
+import React from 'react';
+
+interface BlogSectionProps {
+  // Add props here as needed
+}
+
+export default function BlogSection({ }: BlogSectionProps) {
+  return (
+    <div>
+      <h1>BlogSection</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

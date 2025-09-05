@@ -1,0 +1,2 @@
+import React,{ useState,useEffect,useRef } from 'react'; import { Link, useNavigate, Search, X, ArrowRight, Zap, Brain, Server, Target } from 'lucide-react'; import { motion,AnimatePresence } from 'framer-motion'; interface SearchResult { "id": string; title: string; description: string; url: string; category: 'service' | 'solution' | 'page' | 'resource'; icon: React.ComponentType<any>; relevance: number}; export function GlobalSearch() {}; return null} }'
+</any>'
