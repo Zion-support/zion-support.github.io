@@ -4,8 +4,22 @@ module.exports = {
     'eslint:recommended',
     '@typescript-eslint/recommended',
   ],
+  ignorePatterns: [
+    '__tests__/**/*',
+    '**/*.test.js',
+    '**/*.test.jsx',
+    '**/*.test.ts',
+    '**/*.test.tsx'
+  ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  plugins: ['@typescript-eslint', 'react'],
   rules: {
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
@@ -16,6 +30,20 @@ module.exports = {
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
+      rules: {
+        'no-undef': 'off'
+      }
+    },
+    {
+      files: ['*.js', '*.jsx'],
+      parser: 'espree',
+      parserOptions: {
+        ecmaVersion: 2020,
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        }
+      },
       rules: {
         'no-undef': 'off'
       }

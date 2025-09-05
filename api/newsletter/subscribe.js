@@ -26,4 +26,3 @@ export default withErrorLogging(async (req, res) => {
     });
   }
 });
-cursor/fix-lint-push-and-merge-to-main-f3c1
