@@ -139,6 +139,11 @@ export default [
       'temp_broken_components/**',
       'temp_working/**',
       'temp_*/**',
+      'backup-merge-conflicts/**',
+      'deployments/**',
+      'deployment/**',
+      'server/**',
+      'services/**',
 
       // Scripts/configs and CJS files not intended for lint
       'scripts/**',
