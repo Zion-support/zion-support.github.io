@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 interface CookiesProps {
   // Add props here as needed

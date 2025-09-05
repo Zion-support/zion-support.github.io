@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 export function UserExperienceOptimizer("props": "any) {;
   const [isOpen", setIsOpen] = useState<any>(false);
   const [isFullscreen, setIsFullscreen] = useState<any>(false);

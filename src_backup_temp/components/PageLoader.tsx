@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 export const "PageLoader": React.FC = (props) => {
   return (
     <div className="min-h-screen bg-white">

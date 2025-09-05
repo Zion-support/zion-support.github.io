@@ -1,2 +1,2 @@
-import React from 'react'; interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {; className?: string}; };
+import * as React from 'react'; interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {; className?: string}; };
 
