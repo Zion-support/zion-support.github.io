@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-4">
@@ -19,6 +19,9 @@ const Footer: React.FC = () => {
               <li><Link href="/ai-services" className="text-gray-300 hover:text-white transition-colors">AI Services</Link></li>
               <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">IT Services</Link></li>
               <li><Link href="/micro-saas" className="text-gray-300 hover:text-white transition-colors">Micro SaaS</Link></li>
+              <li><Link href="/blockchain" className="text-gray-300 hover:text-white transition-colors">Blockchain</Link></li>
+              <li><Link href="/iot" className="text-gray-300 hover:text-white transition-colors">IoT Solutions</Link></li>
+              <li><Link href="/cybersecurity" className="text-gray-300 hover:text-white transition-colors">Cybersecurity</Link></li>
             </ul>
           </div>
           
@@ -26,8 +29,10 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
               <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/team" className="text-gray-300 hover:text-white transition-colors">Our Team</Link></li>
               <li><Link href="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
               <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link href="/support" className="text-gray-300 hover:text-white transition-colors">Support</Link></li>
             </ul>
           </div>
           
@@ -35,8 +40,23 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Resources</h4>
             <ul className="space-y-2">
               <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
-              <li><Link href="/docs" className="text-gray-300 hover:text-white transition-colors">Documentation</Link></li>
               <li><Link href="/case-studies" className="text-gray-300 hover:text-white transition-colors">Case Studies</Link></li>
+              <li><Link href="/white-papers" className="text-gray-300 hover:text-white transition-colors">White Papers</Link></li>
+              <li><Link href="/tutorials" className="text-gray-300 hover:text-white transition-colors">Tutorials</Link></li>
+              <li><Link href="/training" className="text-gray-300 hover:text-white transition-colors">Training</Link></li>
+              <li><Link href="/news" className="text-gray-300 hover:text-white transition-colors">News</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Industries</h4>
+            <ul className="space-y-2">
+              <li><Link href="/industries/healthcare" className="text-gray-300 hover:text-white transition-colors">Healthcare</Link></li>
+              <li><Link href="/industries/finance" className="text-gray-300 hover:text-white transition-colors">Finance</Link></li>
+              <li><Link href="/industries/education" className="text-gray-300 hover:text-white transition-colors">Education</Link></li>
+              <li><Link href="/industries/government" className="text-gray-300 hover:text-white transition-colors">Government</Link></li>
+              <li><Link href="/industries/manufacturing" className="text-gray-300 hover:text-white transition-colors">Manufacturing</Link></li>
+              <li><Link href="/industries/retail" className="text-gray-300 hover:text-white transition-colors">Retail</Link></li>
             </ul>
           </div>
         </div>
