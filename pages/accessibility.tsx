@@ -37,7 +37,7 @@ const accessibilityFeatures = [
       "Visual indicators for audio cues",
       "Text-based communication options",
       "Volume controls and audio descriptions",
-      "Sign language support where applicable"]
+      "Sign language support where applicable"
     ]
   },
   {
@@ -49,7 +49,7 @@ const accessibilityFeatures = [
       "Voice control compatibility",
       "Large click targets",
       "Customizable interaction timing",
-      "Switch control support"]
+      "Switch control support"
     ]
   },
   {
@@ -61,7 +61,7 @@ const accessibilityFeatures = [
       "Consistent navigation patterns",
       "Error prevention and recovery",
       "Progress indicators",
-      "Customizable interface complexity"]
+      "Customizable interface complexity"
     ]
   }
 ];
@@ -72,29 +72,29 @@ const standardsCompliance = [
     description: "Web Content Accessibility Guidelines 2.1 Level AA compliance",
     status: "Compliant",
     coverage: "95%",
-    icon: Shield;
+    icon: Shield
   },
   {
     standard: "Section 508",
     description: "U.S. federal accessibility requirements",
     status: "Compliant",
     coverage: "100%",
-    icon: FileText;
+    icon: FileText
   },
   {
     standard: "ADA",
     description: "Americans with Disabilities Act compliance",
     status: "Compliant",
     coverage: "100%",
-    icon: Users;
+    icon: Users
   },
   {
     standard: "EN 301 549",
     description: "European accessibility standard for ICT products",
     status: "Compliant",
     coverage: "90%",
-    icon: Globe;
-  }]
+    icon: Globe
+  }
 ];
 
 const accessibilityTools = [
@@ -117,7 +117,7 @@ const accessibilityTools = [
     name: "User Testing",
     description: "Regular testing with users who have disabilities to identify barriers",
     frequency: "Quarterly"
-  }]
+  }
 ];
 
 const accessibilityGuidelines = [
@@ -128,7 +128,7 @@ const accessibilityGuidelines = [
       "Provide alternative text for images",
       "Use proper heading structure",
       "Ensure sufficient color contrast",
-      "Provide captions for videos"]
+      "Provide captions for videos"
     ]
   },
   {
@@ -138,7 +138,7 @@ const accessibilityGuidelines = [
       "Skip links for main content",
       "Consistent navigation patterns",
       "Breadcrumb navigation",
-      "Search functionality"]
+      "Search functionality"
     ]
   },
   {
@@ -148,7 +148,7 @@ const accessibilityGuidelines = [
       "Error messages and validation",
       "Required field indicators",
       "Logical grouping of related fields",
-      "Multiple input methods"]
+      "Multiple input methods"
     ]
   },
   {
@@ -158,25 +158,21 @@ const accessibilityGuidelines = [
       "Focus indicators",
       "Adequate target sizes",
       "No seizure-inducing content",
-      "Customizable timing"]
+      "Customizable timing"
     ]
   }
 ];
 
 export default function AccessibilityPage() {
   return (
-    <MainLayout;"
+    <MainLayout
       title="Accessibility - Zion Tech Group"
       description="Learn about Zion Tech Group's commitment to web accessibility and our compliance with WCAG 2.1, Section 508, and ADA standards."
     >
-</MainLayout>"
-      <div className="min-h-screen bg-gray-50">"
-</div>"
-        <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">"
-</section>"
-          <div className="container mx-auto px-4">"
-</div>
-            <motion.div;
+      <div className="min-h-screen bg-gray-50">
+        <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -199,7 +195,7 @@ export default function AccessibilityPage() {
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;"
+            <motion.div"
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -217,7 +213,7 @@ export default function AccessibilityPage() {
 "
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
 </div>
-                  <motion.div;
+                  <motion.div
                     key={index}
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                     initial={{ opacity: 0, y: 30 }}
@@ -261,7 +257,7 @@ export default function AccessibilityPage() {
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;"
+            <motion.div"
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -279,7 +275,7 @@ export default function AccessibilityPage() {
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
-                  <motion.div;
+                  <motion.div
                     key={index}
                     className="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300"
                     initial={{ opacity: 0, y: 30 }}
@@ -321,7 +317,7 @@ export default function AccessibilityPage() {
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;"
+            <motion.div"
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -339,7 +335,7 @@ export default function AccessibilityPage() {
 "
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
 </div>
-                <motion.div;
+                <motion.div
                   key={index}
                   className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
@@ -380,7 +376,7 @@ export default function AccessibilityPage() {
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;"
+            <motion.div"
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -398,7 +394,7 @@ export default function AccessibilityPage() {
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
-                <motion.div;
+                <motion.div
                   key={index}
                   className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
@@ -429,7 +425,7 @@ export default function AccessibilityPage() {
 </div>"
             <div className="max-w-4xl mx-auto">"
 </div>
-              <motion.div;"
+              <motion.div"
                 className="bg-white p-8 rounded-xl shadow-lg"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -460,7 +456,7 @@ export default function AccessibilityPage() {
 </section>"
           <div className="container mx-auto px-4 text-center">"
 </div>
-            <motion.div;
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
