@@ -1,9 +1,9 @@
       setLoading(false)};
-  }, [apiFunction, options]),;
-  useEffect(() => {,;
-    if (options.immediate) {,;
+  }, [apiFunction, options]);
+  useEffect(() => {;
+    if (options.immediate) {;
       execute()};
-  }, [execute, options.immediate]),;
+  }, [execute, options.immediate]);
   return { data, loading, error, execute }};
 };
 };

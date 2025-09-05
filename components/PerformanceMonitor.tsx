@@ -1,19 +1,14 @@
       };
-    };
-,;
-    // Measure performance after page load,;
-    if (document.readyState === 'complete') {,;
-      measurePerformance(),;
-    } else {,;
-      window.addEventListener('load', measurePerformance),;
-    };
-,;
-    return () => {,;
-      window.removeEventListener('load', measurePerformance),;
-    };
-  }, [onPerformanceData]),;
-,;
-  return null,;
+    };// Measure performance after page load;
+    if (document.readyState === 'complete') {
+  ;,
+  measurePerformance();,,
+} else {
+  ;,
+  window.addEventListener('load', measurePerformance);,,
+};return () => {
+  ;,
+  window.removeEventListener('load', measurePerformance);,,
 };
-,;
-export default PerformanceMonitor,;
+  }, [onPerformanceData]);return null;
+export default PerformanceMonitor;
