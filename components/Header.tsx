@@ -10,7 +10,7 @@ import {
   ChevronDown, 
   Brain, 
   Cloud, 
-  Cpu, 
+  Cpu as CpuIcon, 
   Globe,
   Mail,
   MapPin,
@@ -63,7 +63,7 @@ const navigation = [
       {
         name: 'IT Services',
         href: '/it-services',
-        icon: Cpu,
+        icon: CpuIcon,
         description: 'Comprehensive IT infrastructure and support',
         children: [
           { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
@@ -113,7 +113,7 @@ const navigation = [
       {
         name: 'Quantum Computing',
         href: '/services/quantum-computing',
-        icon: Cpu,
+        icon: CpuIcon,
         description: 'Next-generation quantum computing solutions'
       }
     ]
@@ -199,7 +199,7 @@ const navigation = [
       {
         name: 'Manufacturing',
         href: '/industries/manufacturing',
-        icon: Cpu,
+        icon: CpuIcon,
         description: 'Manufacturing and industrial'
       },
       {

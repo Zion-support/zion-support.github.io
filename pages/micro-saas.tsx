@@ -16,7 +16,7 @@ import {
   Award, 
   Globe, 
   Lock, 
-  Cpu, 
+  Cpu as CpuIcon, 
   Bot, 
   FileText, 
   Image, 

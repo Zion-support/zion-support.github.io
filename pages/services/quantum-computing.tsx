@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   Atom, 
-  Cpu, 
+  Cpu as CpuIcon, 
   Zap, 
   Shield, 
   Cloud, 
@@ -28,7 +28,7 @@ const quantumServices = [
   {
     title: "Quantum Computing Infrastructure",
     description: "Setup and management of quantum computing environments",
-    icon: Cpu,
+    icon: CpuIcon,
     features: ["IBM Qiskit", "Google Cirq", "Rigetti Forest", "D-Wave Ocean"]
   },
   {

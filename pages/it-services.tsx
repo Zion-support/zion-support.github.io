@@ -20,7 +20,7 @@ import {
   Users, 
   Lock, 
   Globe,
-  Cpu,
+  Cpu as CpuIcon,
   HardDrive,
   Wifi,
   Smartphone,
@@ -213,7 +213,7 @@ const itServices = [{
   {
 title: 'AI-Powered IT Operations (AIOps)',
     description: 'Intelligent IT operations using AI and machine learning for predictive maintenance and automation.',
-    icon: Cpu,
+    icon: CpuIcon,
     features: ['Predictive Analytics', 'Automated Incident Response', 'Anomaly Detection', 'Self-healing Systems'],
     pricing: '$15,000 - $75,000/setup',
     category: 'AIOps',

@@ -18,7 +18,11 @@ import {
   DollarSign,
   ShoppingCart,
   GraduationCap,
-  Globe
+  Globe,
+  Cpu as CpuIcon,
+  Lock,
+  Network,
+  Monitor
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -57,7 +61,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         { label: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
         { label: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
         { label: 'Data Analytics', href: '/services/data-analytics', icon: Brain },
-        { label: 'Quantum Computing', href: '/services/quantum-computing', icon: Cpu },
+        { label: 'Quantum Computing', href: '/services/quantum-computing', icon: CpuIcon },
         { label: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock },
         { label: 'IoT & Smart Cities', href: '/services/iot-smart-cities', icon: Globe },
         { label: 'Edge Computing', href: '/services/edge-computing', icon: Network },

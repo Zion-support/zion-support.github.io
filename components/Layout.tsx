@@ -1,6 +1,6 @@
 import React, { useState, ReactNode } from 'react';
 import Head from 'next/head';
-import { Header } from './Header';
+import Header from './Header';
 import { Sidebar } from './Sidebar';
 import Footer from './Footer';
 
