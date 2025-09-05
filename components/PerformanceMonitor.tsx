@@ -15,7 +15,7 @@ interface PerformanceData {
 }
 
 interface PerformanceMonitorProps {
-  onPerformanceData?: (performanceData: PerformanceData) => void;
+  onPerformanceData?: (data: PerformanceData) => void;
 }
 
 // Extend Window interface to include performance
@@ -48,6 +48,15 @@ declare global {
   }
 }
 
+// Type for performance with memory
+type PerformanceWithMemory = Performance & {
+  memory?: {
+    usedJSHeapSize: number;
+    totalJSHeapSize: number;
+    jsHeapSizeLimit: number;
+  };
+};
+
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
     // Only run on client side
@@ -57,7 +66,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = window.performance.getEntriesByType('paint');
       
-      const performanceData: PerformanceData = {
+      const data: PerformanceData = {
         // Navigation timing
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
@@ -71,21 +80,21 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         resourceCount: window.performance.getEntriesByType('resource').length,
         
         // Memory usage (if available)
-        memory: (window.performance as any).memory ? {
-          used: (window.performance as any).memory.usedJSHeapSize,
-          total: (window.performance as any).memory.totalJSHeapSize,
-          limit: (window.performance as any).memory.jsHeapSizeLimit
+        memory: (window.performance as PerformanceWithMemory).memory ? {
+          used: (window.performance as PerformanceWithMemory).memory!.usedJSHeapSize,
+          total: (window.performance as PerformanceWithMemory).memory!.totalJSHeapSize,
+          limit: (window.performance as PerformanceWithMemory).memory!.jsHeapSizeLimit
         } : null
       };
 
       if (onPerformanceData) {
-        onPerformanceData(performanceData);
+        onPerformanceData(data);
       }
 
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
-        console.log('Performance Metrics:', performanceData);
+        console.log('Performance Metrics:', data);
       }
     };
 
