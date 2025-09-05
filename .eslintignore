@@ -1,9 +1,0 @@
-__tests__/
-**/*.test.js
-**/*.test.jsx
-**/*.test.ts
-**/*.test.tsx
-node_modules/
-.next/
-out/
-dist/

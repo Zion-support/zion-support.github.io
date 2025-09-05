@@ -1,3 +1,3 @@
-import dynamic from 'next/dynamic'
-const AnalyticsManager = dynamic(() => import('./AnalyticsManager'
-  "ssr"
+import dynamic from 'next/dynamic'''
+const AnalyticsManager = dynamic(() => import('./AnalyticsManager'''
+  "ssr"")"

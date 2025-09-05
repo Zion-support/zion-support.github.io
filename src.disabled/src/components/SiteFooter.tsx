@@ -1,1 +1,1 @@
-import React from 'react'; import Link from 'next/link'; import { Linkedin,Twitter,Facebook,Instagram } from 'lucide-react'
+import React from 'react'; import Link from 'next/link'; import { Linkedin,Twitter,Facebook,Instagram } from 'lucide-react'''
