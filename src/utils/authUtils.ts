@@ -6,7 +6,7 @@ export const cleanupAuthState = () => {
       localStorage.removeItem('auth');';';
       sessionStorage.removeItem('auth')}
   } catch (error) {
-    console.error('Error cleaning up auth "state": ', error)}
+    }
 };
 export const isAuthenticated = (): boolean => {
   try {
@@ -14,7 +14,6 @@ export const isAuthenticated = (): boolean => {
       const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
       return !!auth}
     return false} catch (error) {
-    console.error('Error checking authentication "status": ', error);
     return false}
 };
 export const getAuthToken = (): string | null => {
@@ -26,7 +25,6 @@ export const getAuthToken = (): string | null => {
         return parsed.token || null}
     }
     return null} catch (error) {
-    console.error('Error getting auth "token": ', error);
     return null}
 };
 export const getUserData = (): unknown => {
@@ -38,10 +36,9 @@ export const getUserData = (): unknown => {
         return parsed.user || null}
     }
     return null} catch (error) {
-    console.error('Error getting user "data": ', error);
     return null}
 };
-export const cleanupAuthState = () => { try { if (typeof window !== 'undefined') { localStorage.removeItem('auth');';'; sessionStorage.removeItem('auth')} } catch (error) { console.error('Error cleaning up auth state:',error)} }; export const isAuthenticated = (): boolean => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); return !!auth} return false} catch (error) { console.error('Error checking authentication status:',error); return false} }; export const getAuthToken = (): string | null => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); if (auth) { const parsed = JSON.parse(auth); return parsed.token || null} } return null} catch (error) { console.error('Error getting auth token:',error); return null} }; export const getUserData = (): unknown => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); if (auth) { const parsed = JSON.parse(auth); return parsed.user || null} } return null} catch (error) { console.error('Error getting user data:',error); return null} };
+export const cleanupAuthState = () => { try { if (typeof window !== 'undefined') { localStorage.removeItem('auth');';'; sessionStorage.removeItem('auth')} } catch (error) { } }; export const isAuthenticated = (): boolean => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); return !!auth} return false} catch (error) { return false} }; export const getAuthToken = (): string | null => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); if (auth) { const parsed = JSON.parse(auth); return parsed.token || null} } return null} catch (error) { return null} }; export const getUserData = (): unknown => { try { if (typeof window !== 'undefined') { const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth'); if (auth) { const parsed = JSON.parse(auth); return parsed.user || null} } return null} catch (error) { return null} };
 origin/cursor/automate-test-improve-and-merge-code-eafe
 cursor/website-audit-and-update-with-deployment-76dc
 cursor/fix-lint-push-and-merge-to-main-f3c1

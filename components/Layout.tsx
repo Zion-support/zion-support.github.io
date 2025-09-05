@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import { Header } from './Header';
 import { Sidebar } from './Sidebar';
@@ -10,6 +10,7 @@ interface LayoutProps {
   description?: string;
   keywords?: string;
   ogImage?: string;
+  canonical?: string;
   noIndex?: boolean;
 }
 
@@ -19,6 +20,7 @@ export default function Layout({
   description = 'Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results.',
   keywords = 'AI solutions, cloud services, technology consulting, digital transformation, IT services, machine learning, cybersecurity',
   ogImage = '/og-image.jpg',
+  canonical,
   noIndex = false
 }: LayoutProps) {
   return (
@@ -28,7 +30,7 @@ export default function Layout({
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
+<meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
         <link rel="canonical" href={canonical || 'https: //ziontechgroup.com'} />
         
         {/* Open Graph */}
@@ -90,11 +92,11 @@ telephone: "+1-302-464-0950",
       </Head>
       
       <div className="min-h-screen bg-slate-50">
-        <AppHeader />
+        <Header />
         <main className="flex-1">
           {children}
         </main>
-        <FuturisticFooter />
+        <Footer />
       </div>
     </>
   );

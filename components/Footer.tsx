@@ -92,7 +92,7 @@ const company = [
   { name: 'News', href: '/news' }
 ];
 
-const resources = [
+const resourcesList = [
   { name: 'Documentation', href: '/docs' },
   { name: 'API Reference', href: '/api-docs' },
   { name: 'Tutorials', href: '/tutorials' },
@@ -217,7 +217,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2 mb-6">
-              {resources.map((item) => (
+              {resourcesList.map((item) => (
                 <li key={item.name}>
                   <Link 
                     href={item.href} 
