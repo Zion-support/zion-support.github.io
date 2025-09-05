@@ -13,7 +13,8 @@ import {
   Zap,
   Globe,
   Shield,
-  Brain
+  Brain,
+  BookOpen
 } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -337,7 +338,7 @@ export default function CareersPage() {
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Required Skills:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {position.skills.map((skill, skillIndex) => (
+                      {position.skills && position.skills.map((skill, skillIndex) => (
                         <span
                           key={skillIndex}
                           className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"

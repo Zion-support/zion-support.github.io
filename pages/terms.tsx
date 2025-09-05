@@ -2,10 +2,12 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { FileText, Scale, AlertTriangle, Shield, Users, Mail, Phone } from 'lucide-react';
+import MainLayout from '../components/Layout';
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <MainLayout>
+      <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Terms of Service - Zion Tech Group</title>
         <meta name="description" content="Read Zion Tech Group's terms of service and user agreement." />
@@ -34,9 +36,11 @@ export default function TermsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg p-8">
-                  </p>
-                </div>
-
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
                   Acceptance of Terms
                 </h2>
@@ -222,6 +226,7 @@ export default function TermsPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </MainLayout>
   );
 }

@@ -251,7 +251,7 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-          </div>
+          ))}
           {/* Company */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>

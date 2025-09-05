@@ -516,6 +516,159 @@ const aiServices = [
     features: ['Personalized Learning', 'Adaptive Assessment', 'Progress Tracking', 'Skill Development'],
     pricing: '$2,000 - $10,000/month',
     category: 'EdTech'
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicle Systems',
+    description: 'Advanced AI systems for autonomous vehicle navigation, safety, and decision-making.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Obstacle Detection', 'Real-time Decision Making'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Autonomous Systems',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Climate Change Modeling',
+    description: 'Advanced climate modeling and environmental impact prediction using AI and machine learning.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Environmental Impact Analysis', 'Carbon Footprint Tracking', 'Sustainability Optimization'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'Climate Tech'
+  },
+  {
+    title: 'AI-Powered Space Exploration',
+    description: 'AI systems for space mission planning, satellite operations, and planetary exploration.',
+    icon: Rocket,
+    features: ['Mission Planning', 'Satellite Management', 'Planetary Analysis', 'Autonomous Navigation'],
+    pricing: '$200,000 - $1,000,000/project',
+    category: 'Space Tech'
+  },
+  {
+    title: 'AI-Powered Mental Health Assistant',
+    description: 'Intelligent mental health monitoring and support using natural language processing and sentiment analysis.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Crisis Detection', 'Therapeutic Conversations', 'Progress Monitoring'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Mental Health'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Intelligence',
+    description: 'Advanced threat intelligence and automated response using AI and machine learning.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Threat Hunting'],
+    pricing: '$10,000 - $50,000/month',
+    category: 'Cybersecurity'
+  },
+  {
+    title: 'AI-Powered Quantum Computing Optimization',
+    description: 'AI algorithms for quantum computing optimization and quantum machine learning applications.',
+    icon: Cpu,
+    features: ['Quantum Algorithm Optimization', 'Quantum Machine Learning', 'Error Correction', 'Performance Tuning'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Quantum Computing'
+  },
+  {
+    title: 'AI-Powered Personalized Medicine',
+    description: 'AI-driven personalized treatment recommendations and drug discovery for individual patients.',
+    icon: Heart,
+    features: ['Genomic Analysis', 'Treatment Optimization', 'Drug Interaction Analysis', 'Outcome Prediction'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Personalized Medicine'
+  },
+  {
+    title: 'AI-Powered Smart City Management',
+    description: 'Intelligent city management systems for traffic, energy, waste, and public services optimization.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Energy Management', 'Waste Reduction', 'Public Service Efficiency'],
+    pricing: '$500,000 - $2,000,000/project',
+    category: 'Smart Cities'
+  },
+  {
+    title: 'AI-Powered Agricultural Intelligence',
+    description: 'Precision agriculture using AI for crop monitoring, yield optimization, and sustainable farming.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'AgTech'
+  },
+  {
+    title: 'AI-Powered Financial Risk Management',
+    description: 'Advanced financial risk assessment and portfolio optimization using AI and machine learning.',
+    icon: TrendingUp,
+    features: ['Risk Assessment', 'Portfolio Optimization', 'Market Prediction', 'Regulatory Compliance'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'FinTech'
+  },
+  {
+    title: 'AI-Powered Content Creation Studio',
+    description: 'Complete AI-powered content creation platform for videos, articles, and multimedia content.',
+    icon: Video,
+    features: ['Video Generation', 'Article Writing', 'Image Creation', 'Voice Synthesis'],
+    pricing: '$1,000 - $5,000/month',
+    category: 'Content Creation'
+  },
+  {
+    title: 'AI-Powered Language Translation & Localization',
+    description: 'Advanced AI translation services with cultural context and real-time interpretation.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Cultural Context', 'Voice Translation', 'Document Processing'],
+    pricing: '$0.10 - $0.50 per word',
+    category: 'Language Services'
+  },
+  {
+    title: 'AI-Powered Predictive Maintenance',
+    description: 'Intelligent predictive maintenance for industrial equipment and machinery using IoT and AI.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Industrial AI'
+  },
+  {
+    title: 'AI-Powered Virtual Reality Training',
+    description: 'Immersive VR training simulations powered by AI for various industries and professions.',
+    icon: Gamepad2,
+    features: ['Immersive Simulations', 'Adaptive Learning', 'Performance Assessment', 'Realistic Scenarios'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'VR Training'
+  },
+  {
+    title: 'AI-Powered Digital Twin Technology',
+    description: 'Digital twin creation and management for physical assets using AI and IoT data.',
+    icon: Monitor,
+    features: ['Asset Modeling', 'Real-time Simulation', 'Predictive Analysis', 'Performance Optimization'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Digital Twins'
+  },
+  {
+    title: 'AI-Powered Ethical Decision Making',
+    description: 'AI systems for ethical decision support and bias detection in automated processes.',
+    icon: CheckCircle,
+    features: ['Bias Detection', 'Ethical Analysis', 'Fairness Metrics', 'Decision Transparency'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'AI Ethics'
+  },
+  {
+    title: 'AI-Powered Augmented Reality Applications',
+    description: 'AR applications powered by AI for enhanced user experiences and industrial applications.',
+    icon: Eye,
+    features: ['Object Recognition', 'Spatial Mapping', 'Real-time Processing', 'Interactive Overlays'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Augmented Reality'
+  },
+  {
+    title: 'AI-Powered Blockchain Analytics',
+    description: 'Advanced blockchain analysis and cryptocurrency intelligence using AI and machine learning.',
+    icon: BarChart3,
+    features: ['Transaction Analysis', 'Anomaly Detection', 'Compliance Monitoring', 'Market Intelligence'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Blockchain AI'
+  },
+  {
+    title: 'AI-Powered Human Resources Intelligence',
+    description: 'AI-powered HR analytics for recruitment, performance management, and employee engagement.',
+    icon: Users,
+    features: ['Talent Acquisition', 'Performance Analysis', 'Engagement Monitoring', 'Retention Prediction'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'HR Tech'
   }
 ];
 
@@ -793,9 +946,12 @@ export default function AIServicesPage() {
               <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Start Your AI Journey
               </Link>
-              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                View All Services
-              </Link>
+              <a href="tel:+13024640950" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+                Call: (302) 464-0950
+              </a>
+            </div>
+            <div className="mt-8 text-sm">
+              <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
             </div>
           </motion.div>
         </div>

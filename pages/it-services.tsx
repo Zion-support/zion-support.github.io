@@ -477,6 +477,143 @@ const itServices = [
     features: ['API Development', 'System Integration', 'Data Synchronization', 'Workflow Automation'],
     pricing: '$15,000 - $75,000/project',
     category: 'Integration'
+  },
+  {
+    title: 'Zero Trust Security Implementation',
+    description: 'Complete zero trust security architecture implementation and migration services.',
+    icon: Shield,
+    features: ['Identity Verification', 'Device Trust', 'Network Segmentation', 'Continuous Monitoring'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Security',
+    popular: true
+  },
+  {
+    title: 'AI-Powered IT Operations (AIOps)',
+    description: 'Intelligent IT operations using AI for monitoring, incident response, and automation.',
+    icon: Brain,
+    features: ['Predictive Analytics', 'Automated Incident Response', 'Root Cause Analysis', 'Performance Optimization'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'AIOps'
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Edge computing solutions for low-latency applications and IoT deployments.',
+    icon: Cpu,
+    features: ['Edge Node Deployment', 'Data Processing', 'Latency Optimization', 'IoT Integration'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Edge Computing'
+  },
+  {
+    title: 'Quantum-Safe Cryptography Migration',
+    description: 'Migration to quantum-resistant cryptographic algorithms and security protocols.',
+    icon: Lock,
+    features: ['Algorithm Assessment', 'Migration Planning', 'Implementation', 'Testing & Validation'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Quantum Security'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, implementation, and optimization for enterprise environments.',
+    icon: Wifi,
+    features: ['Network Planning', 'Infrastructure Setup', 'Performance Optimization', 'Security Implementation'],
+    pricing: '$100,000 - $500,000/project',
+    category: '5G Networks'
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Enterprise blockchain implementation and management services.',
+    icon: Network,
+    features: ['Blockchain Design', 'Smart Contract Development', 'Node Management', 'Consensus Implementation'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Blockchain'
+  },
+  {
+    title: 'IoT Security & Management',
+    description: 'Comprehensive IoT security and device management solutions.',
+    icon: Smartphone,
+    features: ['Device Authentication', 'Secure Communication', 'Firmware Updates', 'Threat Detection'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'IoT Security'
+  },
+  {
+    title: 'Hybrid Cloud Architecture',
+    description: 'Design and implementation of hybrid cloud solutions for seamless data and application portability.',
+    icon: Cloud,
+    features: ['Multi-cloud Strategy', 'Data Synchronization', 'Workload Optimization', 'Cost Management'],
+    pricing: '$40,000 - $200,000/project',
+    category: 'Hybrid Cloud'
+  },
+  {
+    title: 'IT Disaster Recovery as a Service (DRaaS)',
+    description: 'Comprehensive disaster recovery solutions with automated failover and testing.',
+    icon: Shield,
+    features: ['Automated Failover', 'Regular Testing', 'RTO/RPO Optimization', 'Compliance Reporting'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Disaster Recovery'
+  },
+  {
+    title: 'Green IT & Sustainability Solutions',
+    description: 'IT infrastructure optimization for energy efficiency and carbon footprint reduction.',
+    icon: Sprout,
+    features: ['Energy Auditing', 'Efficiency Optimization', 'Carbon Tracking', 'Sustainability Reporting'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Sustainability'
+  },
+  {
+    title: 'IT Compliance & Governance',
+    description: 'Comprehensive IT governance and compliance management for various industry standards.',
+    icon: CheckCircle,
+    features: ['Policy Development', 'Compliance Monitoring', 'Audit Support', 'Risk Management'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Governance'
+  },
+  {
+    title: 'Advanced Threat Hunting',
+    description: 'Proactive threat hunting and advanced persistent threat (APT) detection services.',
+    icon: Search,
+    features: ['Threat Intelligence', 'Behavioral Analysis', 'Incident Investigation', 'Forensic Analysis'],
+    pricing: '$200 - $500/hour',
+    category: 'Threat Hunting'
+  },
+  {
+    title: 'IT Performance Optimization',
+    description: 'Comprehensive IT infrastructure performance analysis and optimization services.',
+    icon: TrendingUp,
+    features: ['Performance Analysis', 'Bottleneck Identification', 'Optimization Implementation', 'Monitoring Setup'],
+    pricing: '$5,000 - $30,000/project',
+    category: 'Performance'
+  },
+  {
+    title: 'Digital Transformation Consulting',
+    description: 'Strategic digital transformation consulting and implementation services.',
+    icon: Rocket,
+    features: ['Strategy Development', 'Technology Assessment', 'Change Management', 'Implementation Support'],
+    pricing: '$150 - $400/hour',
+    category: 'Digital Transformation'
+  },
+  {
+    title: 'IT Vendor Management & Procurement',
+    description: 'Strategic IT vendor management and procurement optimization services.',
+    icon: ShoppingCart,
+    features: ['Vendor Evaluation', 'Contract Negotiation', 'Performance Monitoring', 'Cost Optimization'],
+    pricing: '$100 - $300/hour',
+    category: 'Vendor Management'
+  },
+  {
+    title: 'IT Training & Certification Programs',
+    description: 'Comprehensive IT training and certification programs for teams and individuals.',
+    icon: BookOpen,
+    features: ['Custom Training', 'Certification Prep', 'Hands-on Labs', 'Progress Tracking'],
+    pricing: '$200 - $800/person/day',
+    category: 'Training'
+  },
+  {
+    title: 'IT Health Monitoring & Analytics',
+    description: 'Advanced IT infrastructure health monitoring with predictive analytics and reporting.',
+    icon: BarChart3,
+    features: ['Health Dashboards', 'Predictive Analytics', 'Automated Alerts', 'Performance Reports'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Monitoring'
   }
 ];
 
@@ -838,9 +975,12 @@ export default function ITServicesPage() {
               <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Get IT Assessment
               </Link>
-              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
-                View All Services
-              </Link>
+              <a href="tel:+13024640950" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                Call: (302) 464-0950
+              </a>
+            </div>
+            <div className="mt-8 text-sm">
+              <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
             </div>
           </motion.div>
         </div>

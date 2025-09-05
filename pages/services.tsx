@@ -64,7 +64,7 @@ import {
   RefreshCw,
   Play,
   Pause,
-  Stop,
+  Square,
   SkipForward,
   SkipBack,
   Volume2,
@@ -100,10 +100,6 @@ const serviceCategories = [
       'Drug Discovery'
     ],
     href: "/ai-services",
-    features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI Fraud Detection", "Voice AI", "Content Generation"],
-    pricing: "Starting at $1,000/month",
-    count: "20+ Services",
-
     popular: true
   },
   {
@@ -125,10 +121,6 @@ const serviceCategories = [
       'IT Consulting'
     ],
     href: "/it-services",
-    features: ["Cloud Infrastructure", "Cybersecurity", "System Administration", "Network Management", "DevOps & CI/CD", "Data Center Migration"],
-    pricing: "Starting at $120/hour",
-    count: "20+ Services",
-
     popular: true
   },
   {
@@ -150,10 +142,6 @@ const serviceCategories = [
       'Project Management'
     ],
     href: "/micro-saas",
-    features: ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management"],
-    pricing: "Starting at $29/month",
-    count: "25+ Products",
-
     popular: true
   }
 ];
@@ -719,6 +707,7 @@ export default function ServicesPage() {
                   </motion.div>
               );
             })}
+            </div>
           </div>
         </section>
 
@@ -1006,6 +995,112 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-800 to-slate-900 text-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Get in Touch with Our Experts
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Ready to transform your business with cutting-edge technology? Our team of experts is here to help you choose the perfect solution for your needs.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-center p-6 bg-slate-700 rounded-lg"
+            >
+              <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Call Us</h3>
+              <p className="text-gray-300 mb-4">Speak directly with our technical experts</p>
+              <a 
+                href="tel:+13024640950" 
+                className="text-blue-400 hover:text-blue-300 text-lg font-semibold"
+              >
+                +1 (302) 464-0950
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center p-6 bg-slate-700 rounded-lg"
+            >
+              <Mail className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Email Us</h3>
+              <p className="text-gray-300 mb-4">Send us your project details</p>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="text-blue-400 hover:text-blue-300 text-lg font-semibold"
+              >
+                kleber@ziontechgroup.com
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center p-6 bg-slate-700 rounded-lg"
+            >
+              <MapPin className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
+              <p className="text-gray-300 mb-4">Our headquarters location</p>
+              <address className="text-blue-400 text-lg font-semibold not-italic">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </address>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h3 className="text-2xl font-bold mb-6">Why Choose Zion Tech Group?</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="p-4">
+                <Award className="w-8 h-8 text-yellow-400 mx-auto mb-2" />
+                <h4 className="font-semibold mb-2">Expert Team</h4>
+                <p className="text-sm text-gray-300">Certified professionals with 10+ years experience</p>
+              </div>
+              <div className="p-4">
+                <Clock className="w-8 h-8 text-green-400 mx-auto mb-2" />
+                <h4 className="font-semibold mb-2">24/7 Support</h4>
+                <p className="text-sm text-gray-300">Round-the-clock technical support and monitoring</p>
+              </div>
+              <div className="p-4">
+                <Shield className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                <h4 className="font-semibold mb-2">Enterprise Security</h4>
+                <p className="text-sm text-gray-300">Bank-level security and compliance standards</p>
+              </div>
+              <div className="p-4">
+                <TrendingUp className="w-8 h-8 text-purple-400 mx-auto mb-2" />
+                <h4 className="font-semibold mb-2">Proven Results</h4>
+                <p className="text-sm text-gray-300">500+ successful projects and 99.9% uptime</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -1019,7 +1114,7 @@ export default function ServicesPage() {
               Ready to Get Started?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let's discuss your project and find the perfect solution for your business needs.
+              Let's discuss your project and find the perfect solution for your business needs. Get a free consultation and custom quote today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -1028,12 +1123,15 @@ export default function ServicesPage() {
               >
                 Get Free Consultation
               </Link>
-              <Link 
-                href="/about" 
+              <a 
+                href="tel:+13024640950" 
                 className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
               >
-                Learn About Us
-              </Link>
+                Call Now: (302) 464-0950
+              </a>
+            </div>
+            <div className="mt-8 text-sm">
+              <p>📧 Email: kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
             </div>
           </motion.div>
         </div>

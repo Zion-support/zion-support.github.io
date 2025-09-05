@@ -470,6 +470,159 @@ const microSaaSProducts = [
     features: ['Real-time Detection', 'Machine Learning Models', 'Risk Scoring', 'API Integration'],
     pricing: '$0.10 - $0.50 per transaction',
     category: 'Fraud Prevention'
+  },
+  {
+    title: 'AI-Powered Video Content Generator',
+    description: 'Automated video creation with AI for marketing, training, and social media content.',
+    icon: Video,
+    features: ['Auto Video Generation', 'Voice Synthesis', 'Scene Transitions', 'Brand Customization'],
+    pricing: '$199 - $1,999/month',
+    category: 'Content Creation',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Development Platform',
+    description: 'No-code smart contract creation and deployment for blockchain applications.',
+    icon: Code,
+    features: ['Visual Builder', 'Template Library', 'Auto Testing', 'Deployment Tools'],
+    pricing: '$299 - $1,499/month',
+    category: 'Blockchain'
+  },
+  {
+    title: 'AI-Powered Email Security',
+    description: 'Advanced email security with AI-powered threat detection and phishing prevention.',
+    icon: Mail,
+    features: ['Phishing Detection', 'Malware Scanning', 'Spoofing Prevention', 'Real-time Alerts'],
+    pricing: '$2.50 - $8.00 per user/month',
+    category: 'Email Security'
+  },
+  {
+    title: 'Intelligent Document Workflow',
+    description: 'AI-powered document processing and workflow automation for businesses.',
+    icon: FileText,
+    features: ['Document OCR', 'Data Extraction', 'Workflow Automation', 'Approval Chains'],
+    pricing: '$99 - $599/month',
+    category: 'Document Management'
+  },
+  {
+    title: 'AI-Powered Customer Churn Prediction',
+    description: 'Predict and prevent customer churn using machine learning and behavioral analysis.',
+    icon: TrendingUp,
+    features: ['Churn Prediction', 'Risk Scoring', 'Retention Campaigns', 'Customer Insights'],
+    pricing: '$199 - $999/month',
+    category: 'Customer Analytics'
+  },
+  {
+    title: 'Smart Inventory Optimization',
+    description: 'AI-driven inventory management with demand forecasting and automated reordering.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Auto Reordering', 'Stock Optimization', 'Supplier Integration'],
+    pricing: '$149 - $799/month',
+    category: 'Inventory Management'
+  },
+  {
+    title: 'AI-Powered Social Media Analytics',
+    description: 'Advanced social media analytics with sentiment analysis and competitor tracking.',
+    icon: Globe,
+    features: ['Sentiment Analysis', 'Competitor Tracking', 'Influencer Identification', 'ROI Measurement'],
+    pricing: '$79 - $399/month',
+    category: 'Social Media Analytics'
+  },
+  {
+    title: 'Intelligent Meeting Transcription',
+    description: 'AI-powered meeting transcription with action items and key insights extraction.',
+    icon: Mic,
+    features: ['Real-time Transcription', 'Action Item Extraction', 'Speaker Identification', 'Search & Archive'],
+    pricing: '$29 - $199/month',
+    category: 'Productivity'
+  },
+  {
+    title: 'AI-Powered Price Optimization',
+    description: 'Dynamic pricing optimization using AI for e-commerce and retail businesses.',
+    icon: DollarSign,
+    features: ['Dynamic Pricing', 'Competitor Analysis', 'Demand Elasticity', 'A/B Testing'],
+    pricing: '$199 - $999/month',
+    category: 'Pricing Strategy'
+  },
+  {
+    title: 'Smart Contract Analytics',
+    description: 'Blockchain analytics and monitoring for smart contract performance and security.',
+    icon: BarChart3,
+    features: ['Performance Monitoring', 'Security Analysis', 'Gas Optimization', 'Transaction Tracking'],
+    pricing: '$99 - $499/month',
+    category: 'Blockchain Analytics'
+  },
+  {
+    title: 'AI-Powered Lead Qualification',
+    description: 'Automated lead scoring and qualification using AI and behavioral data.',
+    icon: Target,
+    features: ['Lead Scoring', 'Behavioral Analysis', 'Intent Detection', 'CRM Integration'],
+    pricing: '$149 - $799/month',
+    category: 'Sales Automation'
+  },
+  {
+    title: 'Intelligent API Gateway',
+    description: 'AI-powered API management with intelligent routing, caching, and security.',
+    icon: Network,
+    features: ['Smart Routing', 'Intelligent Caching', 'Rate Limiting', 'Security Policies'],
+    pricing: '$199 - $999/month',
+    category: 'API Management'
+  },
+  {
+    title: 'AI-Powered Content Personalization',
+    description: 'Dynamic content personalization engine for websites and applications.',
+    icon: Eye,
+    features: ['Real-time Personalization', 'A/B Testing', 'Behavioral Tracking', 'Content Optimization'],
+    pricing: '$299 - $1,499/month',
+    category: 'Content Management'
+  },
+  {
+    title: 'Smart Contract Insurance',
+    description: 'Decentralized insurance platform for smart contract risks and vulnerabilities.',
+    icon: Shield,
+    features: ['Risk Assessment', 'Automated Claims', 'Smart Payouts', 'Coverage Options'],
+    pricing: '1-5% of contract value',
+    category: 'DeFi Insurance'
+  },
+  {
+    title: 'AI-Powered Voice Analytics',
+    description: 'Advanced voice analysis for customer service, sales, and quality assurance.',
+    icon: Mic,
+    features: ['Emotion Detection', 'Sentiment Analysis', 'Call Quality Scoring', 'Performance Insights'],
+    pricing: '$0.05 - $0.25 per minute',
+    category: 'Voice Analytics'
+  },
+  {
+    title: 'Intelligent Data Pipeline',
+    description: 'AI-powered data processing and ETL pipeline with automated data quality checks.',
+    icon: Database,
+    features: ['Auto Data Validation', 'Quality Scoring', 'Error Detection', 'Pipeline Optimization'],
+    pricing: '$199 - $999/month',
+    category: 'Data Engineering'
+  },
+  {
+    title: 'AI-Powered Compliance Monitor',
+    description: 'Automated compliance monitoring and reporting for various industry regulations.',
+    icon: CheckCircle,
+    features: ['Regulation Tracking', 'Automated Reporting', 'Risk Assessment', 'Audit Trails'],
+    pricing: '$299 - $1,499/month',
+    category: 'Compliance'
+  },
+  {
+    title: 'Smart Contract Testing Suite',
+    description: 'Comprehensive testing framework for smart contracts with automated vulnerability detection.',
+    icon: Code,
+    features: ['Automated Testing', 'Vulnerability Detection', 'Gas Optimization', 'Coverage Analysis'],
+    pricing: '$99 - $499/month',
+    category: 'Blockchain Testing'
+  },
+  {
+    title: 'AI-Powered Market Research',
+    description: 'Automated market research and competitive intelligence using AI and web scraping.',
+    icon: Search,
+    features: ['Competitor Analysis', 'Trend Detection', 'Market Sizing', 'Report Generation'],
+    pricing: '$199 - $999/month',
+    category: 'Market Intelligence'
   }
 ];
 
@@ -898,9 +1051,12 @@ export default function MicroSaaSPage() {
               <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Start Building
               </Link>
-              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
-                View All Services
-              </Link>
+              <a href="tel:+13024640950" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
+                Call: (302) 464-0950
+              </a>
+            </div>
+            <div className="mt-8 text-sm">
+              <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
             </div>
           </motion.div>
         </div>
