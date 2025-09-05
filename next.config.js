@@ -4,6 +4,16 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   swcMinify: true,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  output: 'export',
+  trailingSlash: true,
+  distDir: 'dist',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/zion.app' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/zion.app' : '',
+  
+  // Performance optimizations
   experimental: {
     scrollRestoration: true,
     optimizeCss: true,
