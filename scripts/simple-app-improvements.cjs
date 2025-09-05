@@ -6,10 +6,11 @@ const path = require('path');
 console.log('🚀 Simple App Improvements System');
 console.log('=================================');
 
-class SimpleAppImprovements {;
-  constructor() {;
+class SimpleAppImprovements {
+  constructor() {
     this.improvements = [];
     this.errors = [];
+<<<<<<< HEAD
     this.startTime = Date.now()}
 ;
   log(message, type = 'info') {;
@@ -28,12 +29,38 @@ class SimpleAppImprovements {;
       return result} catch (error) {;
       this.log(`❌ ${description} "failed": ${error.message}`, 'error');
       throw error}
+=======
+    this.startTime = Date.now();
   }
-;
-  async createPerformanceOptimizations() {;
-    try {;
+
+  log(message, type = 'info') {
+    const timestamp = new Date().toISOString();
+    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
+    console.log(logEntry);
+  }
+
+  async runCommand(command, description) {
+    try {
+      this.log(`Running: ${description}`);
+      const result = execSync(command, {
+        encoding: 'utf8',
+        stdio: 'pipe',
+        cwd: process.cwd()
+      });
+      this.log(`✅ ${description} completed successfully`, 'success');
+      return result;
+    } catch (error) {
+      this.log(`❌ ${description} failed: ${error.message}`, 'error');
+      throw error;
+    }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+  }
+
+  async createPerformanceOptimizations() {
+    try {
       this.log('Creating performance optimization improvements...');
 
+<<<<<<< HEAD
       // Create performance monitoring component;
       const performanceComponent = ";
 import React, { useState, useEffect } from 'react';
@@ -43,6 +70,18 @@ export default function PerformanceMonitor() {;
     "loadTime": 0,
     "memoryUsage": 0,
     "cpuUsage": 0});
+=======
+      // Create performance monitoring component
+      const performanceComponent = `
+import React, { useState, useEffect } from 'react';
+
+export default function PerformanceMonitor() {
+  const [metrics, setMetrics] = useState({
+    loadTime: 0,
+    memoryUsage: 0,
+    cpuUsage: 0,
+});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
 
   useEffect(() => {;
     const interval = setInterval(() => {;
