@@ -390,6 +390,133 @@ const aiServices = [
     pricing: '$2,500 - $15,000/month',
     category: 'Performance AI',
     link: 'https://aiperformance.ziontechgroup.com'
+  },
+  {
+    title: 'Large Language Model (LLM) Integration',
+    description: 'Custom LLM integration and fine-tuning services for enterprise applications.',
+    icon: Brain,
+    features: ['Custom Model Training', 'API Integration', 'Fine-tuning', 'Performance Optimization'],
+    pricing: '$5,000 - $50,000/project',
+    category: 'LLM Services',
+    popular: true,
+    link: 'https://llmintegration.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Sentiment Analysis',
+    description: 'Advanced sentiment analysis for social media, reviews, and customer feedback.',
+    icon: MessageSquare,
+    features: ['Multi-language Support', 'Real-time Analysis', 'Emotion Detection', 'Trend Analysis'],
+    pricing: '$1,500 - $8,000/month',
+    category: 'NLP',
+    link: 'https://sentimentai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Video Analytics Platform',
+    description: 'Intelligent video analysis with object tracking, behavior recognition, and anomaly detection.',
+    icon: Video,
+    features: ['Object Tracking', 'Behavior Recognition', 'Anomaly Detection', 'Real-time Processing'],
+    pricing: '$3,000 - $20,000/project',
+    category: 'Computer Vision',
+    link: 'https://videoanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Search Engine',
+    description: 'Intelligent search with semantic understanding and personalized results.',
+    icon: Search,
+    features: ['Semantic Search', 'Personalization', 'Natural Language Queries', 'Auto-completion'],
+    pricing: '$2,000 - $12,000/month',
+    category: 'Search AI',
+    link: 'https://searchai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Data Labeling Service',
+    description: 'Automated data labeling and annotation for machine learning model training.',
+    icon: Target,
+    features: ['Automated Labeling', 'Quality Assurance', 'Multi-modal Support', 'Scalable Processing'],
+    pricing: '$0.10 - $2.00 per label',
+    category: 'Data Services',
+    link: 'https://datalabeling.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered A/B Testing',
+    description: 'Intelligent A/B testing with automated optimization and statistical analysis.',
+    icon: BarChart3,
+    features: ['Automated Testing', 'Statistical Analysis', 'Multi-variate Testing', 'Real-time Results'],
+    pricing: '$1,000 - $6,000/month',
+    category: 'Testing AI',
+    link: 'https://abtesting.ziontechgroup.com'
+  },
+  {
+    title: 'AI Voice Cloning Service',
+    description: 'High-quality voice cloning and synthesis for personalized audio content.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Emotion Control', 'Multi-language Support', 'Real-time Synthesis'],
+    pricing: '$2,500 - $15,000/project',
+    category: 'Voice AI',
+    link: 'https://voicecloning.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Email Marketing',
+    description: 'Intelligent email marketing with personalization and optimization algorithms.',
+    icon: Mail,
+    features: ['Personalization', 'Send Time Optimization', 'Subject Line AI', 'Content Optimization'],
+    pricing: '$500 - $3,000/month',
+    category: 'Marketing AI',
+    link: 'https://emailai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Customer Churn Prediction',
+    description: 'Predictive analytics to identify customers at risk of churning.',
+    icon: TrendingUp,
+    features: ['Churn Prediction', 'Risk Scoring', 'Intervention Recommendations', 'Real-time Alerts'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Predictive Analytics',
+    link: 'https://churnai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Inventory Optimization',
+    description: 'Intelligent inventory management with demand forecasting and optimization.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Stock Optimization', 'Reorder Automation', 'Cost Analysis'],
+    pricing: '$1,500 - $8,000/month',
+    category: 'Supply Chain AI',
+    link: 'https://inventoryai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Legal Document Analysis',
+    description: 'Automated legal document review and contract analysis using NLP.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Risk Assessment', 'Clause Extraction', 'Compliance Checking'],
+    pricing: '$3,000 - $20,000/project',
+    category: 'Legal AI',
+    link: 'https://legalai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered HR Screening',
+    description: 'Automated resume screening and candidate matching using AI algorithms.',
+    icon: Users,
+    features: ['Resume Screening', 'Skill Matching', 'Bias Detection', 'Interview Scheduling'],
+    pricing: '$1,000 - $6,000/month',
+    category: 'HR AI',
+    link: 'https://hrai.ziontechgroup.com'
+  },
+  {
+    title: 'AI Image Generation Service',
+    description: 'Custom image generation using advanced generative AI models.',
+    icon: Image,
+    features: ['Custom Generation', 'Style Transfer', 'High Resolution', 'Batch Processing'],
+    pricing: '$0.50 - $5.00 per image',
+    category: 'Generative AI',
+    link: 'https://imageai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Quality Assurance',
+    description: 'Automated quality testing and assurance using computer vision and ML.',
+    icon: CheckCircle,
+    features: ['Visual Inspection', 'Defect Detection', 'Quality Scoring', 'Automated Reporting'],
+    pricing: '$2,000 - $15,000/project',
+    category: 'Quality AI',
+    link: 'https://qualityai.ziontechgroup.com'
   }
 ];
 

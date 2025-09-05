@@ -416,6 +416,133 @@ const itServices = [
     pricing: '$12,000 - $80,000/project',
     category: 'Monitoring Solutions',
     link: 'https://enterprisemonitoring.ziontechgroup.com'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implementation of zero trust security model with identity verification and micro-segmentation.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Security',
+    popular: true,
+    link: 'https://zerotrust.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Edge computing infrastructure and deployment for low-latency applications.',
+    icon: Network,
+    features: ['Edge Infrastructure', 'CDN Integration', 'IoT Connectivity', 'Real-time Processing'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum-Safe Cryptography',
+    description: 'Implementation of quantum-resistant encryption and security protocols.',
+    icon: Lock,
+    features: ['Quantum-resistant Algorithms', 'Key Management', 'Migration Planning', 'Compliance Support'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Quantum Security',
+    link: 'https://quantumsafe.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, deployment, and optimization for enterprise applications.',
+    icon: Wifi,
+    features: ['5G Infrastructure', 'Network Slicing', 'Performance Optimization', 'IoT Integration'],
+    pricing: '$50,000 - $500,000/project',
+    category: '5G Networks',
+    link: 'https://5gnetworks.ziontechgroup.com'
+  },
+  {
+    title: 'AI Infrastructure Setup',
+    description: 'Complete AI/ML infrastructure setup with GPU clusters and model deployment platforms.',
+    icon: Cpu,
+    features: ['GPU Clusters', 'MLOps Pipeline', 'Model Deployment', 'Auto-scaling'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'AI Infrastructure',
+    link: 'https://aiinfrastructure.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Blockchain network setup, smart contract development, and decentralized application hosting.',
+    icon: Network,
+    features: ['Blockchain Networks', 'Smart Contracts', 'DApp Hosting', 'Consensus Mechanisms'],
+    pricing: '$15,000 - $150,000/project',
+    category: 'Blockchain',
+    link: 'https://blockchaininfra.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Platform Management',
+    description: 'Complete IoT platform setup with device management, data processing, and analytics.',
+    icon: Smartphone,
+    features: ['Device Management', 'Data Processing', 'Real-time Analytics', 'Security Integration'],
+    pricing: '$10,000 - $100,000/project',
+    category: 'IoT',
+    link: 'https://iotplatform.ziontechgroup.com'
+  },
+  {
+    title: 'Hybrid Cloud Management',
+    description: 'Seamless hybrid cloud management across multiple cloud providers and on-premises infrastructure.',
+    icon: Cloud,
+    features: ['Multi-cloud Management', 'Workload Migration', 'Cost Optimization', 'Unified Monitoring'],
+    pricing: '$8,000 - $60,000/project',
+    category: 'Hybrid Cloud',
+    link: 'https://hybridcloud.ziontechgroup.com'
+  },
+  {
+    title: 'API Gateway & Management',
+    description: 'Enterprise API gateway setup with security, monitoring, and developer portal.',
+    icon: Network,
+    features: ['API Security', 'Rate Limiting', 'Developer Portal', 'Analytics Dashboard'],
+    pricing: '$5,000 - $40,000/project',
+    category: 'API Management',
+    link: 'https://apigateway.ziontechgroup.com'
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Microservices architecture design and implementation with container orchestration.',
+    icon: Server,
+    features: ['Service Design', 'Container Orchestration', 'Service Mesh', 'Monitoring'],
+    pricing: '$15,000 - $120,000/project',
+    category: 'Microservices',
+    link: 'https://microservices.ziontechgroup.com'
+  },
+  {
+    title: 'Data Lake & Warehouse Setup',
+    description: 'Modern data lake and warehouse implementation with real-time analytics capabilities.',
+    icon: Database,
+    features: ['Data Lake Design', 'ETL Pipelines', 'Real-time Analytics', 'Data Governance'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Data Analytics',
+    link: 'https://datalake.ziontechgroup.com'
+  },
+  {
+    title: 'Identity & Access Management',
+    description: 'Enterprise IAM solution with single sign-on, multi-factor authentication, and privileged access management.',
+    icon: Users,
+    features: ['Single Sign-On', 'MFA', 'Privileged Access', 'Compliance Reporting'],
+    pricing: '$10,000 - $80,000/project',
+    category: 'Identity Management',
+    link: 'https://iam.ziontechgroup.com'
+  },
+  {
+    title: 'Compliance & Governance',
+    description: 'IT compliance management with automated reporting and audit trail maintenance.',
+    icon: Shield,
+    features: ['Compliance Monitoring', 'Audit Trails', 'Risk Assessment', 'Automated Reporting'],
+    pricing: '$8,000 - $60,000/project',
+    category: 'Compliance',
+    link: 'https://compliance.ziontechgroup.com'
+  },
+  {
+    title: 'IT Automation & Orchestration',
+    description: 'Complete IT process automation with workflow orchestration and self-healing systems.',
+    icon: Settings,
+    features: ['Process Automation', 'Workflow Orchestration', 'Self-healing Systems', 'Integration APIs'],
+    pricing: '$12,000 - $100,000/project',
+    category: 'Automation',
+    link: 'https://itautomation.ziontechgroup.com'
   }
 ];
 

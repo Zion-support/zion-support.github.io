@@ -199,6 +199,169 @@ const microSaaSProducts = [
     link: 'https://meetingscheduler.ziontechgroup.com'
   },
   {
+    title: 'AI Content Generator Pro',
+    description: 'Advanced AI-powered content creation with SEO optimization and brand voice consistency.',
+    icon: FileText,
+    features: ['SEO Optimization', 'Brand Voice Training', 'Multi-format Output', 'Plagiarism Detection'],
+    pricing: '$79 - $399/month',
+    category: 'Content Creation',
+    popular: true,
+    link: 'https://aicontentpro.ziontechgroup.com'
+  },
+  {
+    title: 'Local SEO Optimizer',
+    description: 'Comprehensive local search optimization with Google My Business management and review monitoring.',
+    icon: Search,
+    features: ['Google My Business Management', 'Review Monitoring', 'Local Keyword Tracking', 'Competitor Analysis'],
+    pricing: '$49 - $249/month',
+    category: 'SEO',
+    link: 'https://localseo.ziontechgroup.com'
+  },
+  {
+    title: 'Referral Program Manager',
+    description: 'Complete referral program management with automated rewards and tracking analytics.',
+    icon: Users,
+    features: ['Automated Rewards', 'Referral Tracking', 'Custom Campaigns', 'Analytics Dashboard'],
+    pricing: '$39 - $199/month',
+    category: 'Marketing',
+    link: 'https://referralpro.ziontechgroup.com'
+  },
+  {
+    title: 'Social Proof Widgets',
+    description: 'Real-time social proof widgets to boost conversion rates with customer activity displays.',
+    icon: TrendingUp,
+    features: ['Real-time Activity', 'Customizable Widgets', 'A/B Testing', 'Conversion Tracking'],
+    pricing: '$29 - $149/month',
+    category: 'Conversion',
+    link: 'https://socialproof.ziontechgroup.com'
+  },
+  {
+    title: 'Customer Loyalty Tracker',
+    description: 'Advanced loyalty program management with points, rewards, and customer engagement analytics.',
+    icon: Heart,
+    features: ['Points System', 'Reward Management', 'Customer Segmentation', 'Engagement Analytics'],
+    pricing: '$59 - $299/month',
+    category: 'Customer Retention',
+    link: 'https://loyaltytracker.ziontechgroup.com'
+  },
+  {
+    title: 'Affiliate Marketing Tracker',
+    description: 'Comprehensive affiliate marketing platform with fraud protection and automated payments.',
+    icon: Share2,
+    features: ['Fraud Protection', 'Automated Payments', 'Attribution Tracking', 'Performance Analytics'],
+    pricing: '$99 - $499/month',
+    category: 'Affiliate Marketing',
+    link: 'https://affiliatetracker.ziontechgroup.com'
+  },
+  {
+    title: 'Website Analytics Pro',
+    description: 'Advanced website analytics dashboard designed for small businesses without technical expertise.',
+    icon: BarChart3,
+    features: ['User-friendly Dashboard', 'Conversion Tracking', 'Traffic Analysis', 'Custom Reports'],
+    pricing: '$19 - $99/month',
+    category: 'Analytics',
+    link: 'https://webanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'Online Booking System',
+    description: 'Complete appointment booking solution with payment processing and automated reminders.',
+    icon: Calendar,
+    features: ['Payment Processing', 'Automated Reminders', 'Calendar Integration', 'Client Management'],
+    pricing: '$39 - $199/month',
+    category: 'Booking',
+    link: 'https://bookingpro.ziontechgroup.com'
+  },
+  {
+    title: 'Compliance Management Suite',
+    description: 'Automated compliance tracking with regulatory updates and audit trail management.',
+    icon: Shield,
+    features: ['Regulatory Updates', 'Audit Trails', 'Risk Assessment', 'Documentation Management'],
+    pricing: '$199 - $999/month',
+    category: 'Compliance',
+    link: 'https://compliancepro.ziontechgroup.com'
+  },
+  {
+    title: 'Employee Wellness Platform',
+    description: 'Comprehensive employee wellness tracking with productivity insights and team building tools.',
+    icon: Heart,
+    features: ['Wellness Tracking', 'Productivity Insights', 'Team Building', 'Health Analytics'],
+    pricing: '$49 - $249/month',
+    category: 'HR & Wellness',
+    link: 'https://wellnesspro.ziontechgroup.com'
+  },
+  {
+    title: 'Supply Chain Optimizer',
+    description: 'AI-powered supply chain optimization with blockchain tracking and predictive analytics.',
+    icon: Package,
+    features: ['Blockchain Tracking', 'Predictive Analytics', 'IoT Integration', 'Risk Management'],
+    pricing: '$299 - $1,499/month',
+    category: 'Supply Chain',
+    link: 'https://supplychainpro.ziontechgroup.com'
+  },
+  {
+    title: 'Sustainability Tracker',
+    description: 'Environmental impact measurement and sustainability reporting for businesses.',
+    icon: Sprout,
+    features: ['Carbon Footprint Calculator', 'Waste Management', 'Sustainability Reporting', 'Goal Tracking'],
+    pricing: '$79 - $399/month',
+    category: 'Sustainability',
+    link: 'https://sustainabilitypro.ziontechgroup.com'
+  },
+  {
+    title: 'Cybersecurity Training Platform',
+    description: 'Interactive cybersecurity training with simulated attacks and threat intelligence updates.',
+    icon: Shield,
+    features: ['Interactive Training', 'Simulated Attacks', 'Threat Intelligence', 'Progress Tracking'],
+    pricing: '$99 - $499/month',
+    category: 'Cybersecurity',
+    link: 'https://cybertraining.ziontechgroup.com'
+  },
+  {
+    title: 'Personalized E-Learning Hub',
+    description: 'Adaptive learning platform with AI-powered course recommendations and skill assessments.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'AI Recommendations', 'Skill Assessments', 'Progress Analytics'],
+    pricing: '$59 - $299/month',
+    category: 'Education',
+    link: 'https://elearningpro.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Helpdesk',
+    description: 'Intelligent IT helpdesk software with automated ticket routing and knowledge base management.',
+    icon: Headphones,
+    features: ['Automated Routing', 'Knowledge Base', 'SLA Tracking', 'Client Portal'],
+    pricing: '$149 - $799/month',
+    category: 'IT Support',
+    link: 'https://helpdeskpro.ziontechgroup.com'
+  },
+  {
+    title: 'Project Management AI',
+    description: 'AI-enhanced project management with predictive analytics and resource optimization.',
+    icon: Kanban,
+    features: ['Predictive Analytics', 'Resource Optimization', 'Risk Assessment', 'Team Collaboration'],
+    pricing: '$79 - $399/month',
+    category: 'Project Management',
+    link: 'https://projectai.ziontechgroup.com'
+  },
+  {
+    title: 'Data Backup & Recovery Pro',
+    description: 'Automated data backup with instant recovery and disaster recovery planning.',
+    icon: HardDrive,
+    features: ['Automated Backups', 'Instant Recovery', 'Disaster Recovery', 'Compliance Support'],
+    pricing: '$49 - $249/month',
+    category: 'Data Protection',
+    link: 'https://backuppro.ziontechgroup.com'
+  },
+  {
+    title: 'Notification Management System',
+    description: 'Intelligent notification system with multi-channel delivery and user preference management.',
+    icon: Bell,
+    features: ['Multi-channel Delivery', 'User Preferences', 'A/B Testing', 'Delivery Analytics'],
+    pricing: '$29 - $149/month',
+    category: 'Communication',
+    link: 'https://notificationpro.ziontechgroup.com'
+  },
+  {
     title: 'Code Review Assistant',
     description: 'AI-powered code review with automated suggestions and security vulnerability detection.',
     icon: Code,
