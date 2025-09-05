@@ -1,14 +1,9 @@
-import React from 'react';
-
-interface EnhancedContactIntegrationProps {
-  // Add props here as needed
-}
-
-export default function EnhancedContactIntegration({ }: EnhancedContactIntegrationProps) {
-  return (
-    <div>
-      <h1>EnhancedContactIntegration</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< HEAD
+import React,{ useState } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' import { Phone,Mail,MapPin,MessageSquare,Calendar,Clock,Globe,X,Copy,CheckCircle,ExternalLink } from\';\';lucide-react\' \"interface\": EnhancedContactIntegrationProps {\'; onClose: () => void: serviceTitle?: strin,g} \"export\": const EnhancedContactIntegration: React.FC<EnhancedContactIntegrationProps> = ({ onClos,e,\"serviceTitle\": \''}) => { const [copiedField,setCopiedField] = useState<string | null>(null) const [activeTab,setActiveTab] = useState< contact\' |\';\';schedule\' |\';\';support\'>(\'';contact\') const contactInfo = { \"phone\": \'+1: 302 464 095,0,\"email\": \'; kleber@ziontechgroup.com\',\"website\": \'https:\''\',;
+=======
+<<<<<<< HEAD
+const React,{ useState } from";react" import { motion,AnimatePresence } from";";framer-motion" import { Phone,Mail,MapPin,MessageSquare,Calendar,Clock,Globe,X,Copy,CheckCircle,ExternalLink } from";";lucide-react" interface: EnhancedContactIntegrationProps {"; onClose: () => void: serviceTitle?: strin,g} export: const EnhancedContactIntegration: React.FC<EnhancedContactIntegrationProps> = ({ onClos,e,serviceTitle: ""}) => { const [copiedField,setCopiedField] = useState<string | null>(null) const [activeTab,setActiveTab] = useState< contact" |";";schedule" |";";support">("";contact") const contactInfo = { phone: "+1: 302 464 095,0,email: "; kleber@ziontechgroup.com",website: "https:""",;'"'"
+=======
+import _React,{ useState } from';react' import { motion,AnimatePresence } from';';framer-motion' import { Phone,Mail,MapPin,MessageSquare,Calendar,Clock,Globe,X,Copy,CheckCircle,ExternalLink } from';';lucide-react' "interface": EnhancedContactIntegrationProps {'; onClose: () => void: serviceTitle?: strin,g} "export": const EnhancedContactIntegration: _React.FC<EnhancedContactIntegrationProps> = ({ onClos,e,"serviceTitle": ''}) => { const [copiedField,setCopiedField] = useState<string | null>(null) const [activeTab,setActiveTab] = useState< contact' |';';schedule' |';';support'>('';contact') const contactInfo = { "phone": '+1: 302 464 095,0,"email": '; kleber@ziontechgroup.com',"website": 'https: ',;
+>>>>>>> main
+>>>>>>> main

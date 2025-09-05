@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import { useEffect } from \'react\';\''\'; import { useNavigate } from \'react-router-dom\';\''\'; import { useSelector } from \'react-redux\'; function withAuth(Component) {} return null} const Wrapped = (props) => {} const router = useNavigate(); const isLoggedIn = useSelector((state) => state.auth.isLoggedIn); useEffect(() => {} if (!isLoggedIn) {} \'; \''; \''\'; navigate(\'/login?next=/community/new\');} },[isLoggedIn,router]); if (!isLoggedIn) {} return null; return <Component {...props}/>;}; return Wrapped; export { withAuth };\'; export default withAuth;\'';}}}\''\'; router(\'/login?next=/community/new\');} },[isLoggedIn,router]); if(!isLoggedIn) {} return null} return <Component {...props}/>}; return Wrapped}; export default withAuth; export default withAuth; export default withAuth; export default withAuth; export default withAuth; export default withAuth; export default withAuth; export default withAuth; export { Wrapped }; export { Wrapped }; export { Wrapped }; export { Wrapped }; export { Wrapped };
+=======
+<<<<<<< HEAD
+const { useEffect } from "react";"""; import { useNavigate } from "react-router-dom";"""; import { useSelector } from "react-redux"; function withAuth(Component) {} return null} const Wrapped = (props) => {} const router = useNavigate(); const isLoggedIn = useSelector((state) => state.auth.isLoggedIn); useEffect(() => {} if (!isLoggedIn) {} "; ""; """; navigate("/login?next=/community/new");} },[isLoggedIn,router]); if (!isLoggedIn) {} return null; return <Component {.props}/>;}; return Wrapped; export { withAuth };"; export default withAuth;"";}}}"""; router("/login?next=/community/new");} },[isLoggedIn,router]); if(!isLoggedIn) {} return null} return <Component {.props}/>}; return Wrapped}; export default withAuth; export default withAuth; export default withAuth; export default withAuth; export default withAuth; export default withAuth; export default withAuth; export default withAuth; export { Wrapped }; export { Wrapped }; export { Wrapped }; export { Wrapped }; export { Wrapped };''"
+=======
 import React from 'react';
 
 interface WithAuthProps {
@@ -12,3 +18,5 @@ export default function WithAuth({ }: WithAuthProps) {
     </div>
   );
 }
+>>>>>>> main
+>>>>>>> main

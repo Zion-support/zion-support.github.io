@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 
 interface ServiceTypeStep.testProps {
@@ -12,3 +14,4 @@ export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
     </div>
   );
 }
+>>>>>>> main

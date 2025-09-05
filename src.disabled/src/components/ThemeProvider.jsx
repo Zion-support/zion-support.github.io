@@ -1,14 +1,9 @@
-import React from 'react';
-
-interface ThemeProviderProps {
-  // Add props here as needed
-}
-
-export default function ThemeProvider({ }: ThemeProviderProps) {
-  return (
-    <div>
-      <h1>ThemeProvider</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< HEAD
+import React,{ useState } from \'react\';import * as React from \'react\'; const ThemeContext = React.createContext({; \"theme\": \'dark\',; \"setTheme\": () => null}); export const ThemeProvider = ({ children }) => {; const [theme,setTheme] = React.useState(\'dark\'); React.useEffect(() => {; return () => {};},[]);,[]); const root = window.document.documentElement; root.classList.remove(\'light\',dark\'); root.classList.add(theme);},[theme]); const value = {; theme,; setTheme}; return (); <ThemeContext.Provider value={value}>{children}></div> );}; const value = {; theme,; setTheme,;}; return (<ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>) ;}; const context = React.useContext(ThemeContext) ; if(context === null) {}} return context;};
+=======
+<<<<<<< HEAD
+const React,{ useState } from "react";import * as React from "react"; const ThemeContext = React.createContext({; theme: "dark",; setTheme: () => null}); export const ThemeProvider = ({ children }) => {; const [theme,setTheme] = React.useState("dark"); React.useEffect(() => {; return () => {};},[]);,[]); const root = window.document.documentElement; root.classList.remove("light",dark"); root.classList.add(theme);},[theme]); const value = {; theme,; setTheme}; return (); <ThemeContext.Provider value={value}>{children}></div> );}; const value = {; theme,; setTheme,;}; return (<ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>) ;}; const context = React.useContext(ThemeContext) ; if(context === null) {}} return context;};"""
+=======
+import _React,{ useState } from 'react';import * as _React from 'react'; const ThemeContext = _React.createContext({; "theme": 'dark',; "setTheme": () => null}); export const ThemeProvider = ({ children }) => {; const [theme,setTheme] = _React.useState('dark'); _React.useEffect(() => {; return () => {};},[]);,[]); const root = window.document.documentElement; root.classList.remove('light',dark'); root.classList.add(theme);},[theme]); const value = {; theme,; setTheme}; return (); <ThemeContext.Provider value={value}>{children}></div> );}; const value = {; theme,; setTheme,;}; return (<ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>) ;}; const context = _React.useContext(ThemeContext) ; if(context === null) {}} return context;};
+>>>>>>> main
+>>>>>>> main

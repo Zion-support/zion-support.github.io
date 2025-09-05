@@ -1,14 +1,11 @@
-import React from 'react';
-
-interface EmergingTechnologyServices2027Props {
-  // Add props here as needed
-}
-
-export default function EmergingTechnologyServices2027({ }: EmergingTechnologyServices2027Props) {
-  return (
-    <div>
-      <h1>EmergingTechnologyServices2027</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+<<<<<<< HEAD
+=======
+import { ProductListing } from '@/types/listings'; export const "EMERGING_TECHNOLOGY_SERVICES_2027": ProductListin g[] = [;","}),"})';';';';
+import { ProductListing } from '@/types/listings'  export const "EMERGING_TECHNOLOGY_SERVICES_2027": ProductListin g[] = [";
+import { ProductListing } from '@/types/listings'  export const "EMERGING_TECHNOLOGY_SERVICES_2027": ProductListin g[] = [;";';';';
+import {ProductListing } from '@/types/listings'  export const "EMERGING_TECHNOLOGY_SERVICES_2027": ProductListin g[] = [;";';';';
+import { ProductListing } from &apos;@/types/listings&apos;&apos;'  export const "EMERGING_TECHNOLOGY_SERVICES_2027": ProductListin g[] = [;';
+import { ProductListing }  from '@/types/listings';export const "EMERGING_TECHNOLOGY_SERVICES_2027": ProductListin g[] = [;";';';
+";';';';
+import { ProductListing } from '@/types/listings'; ; export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListin g[] = [;","}),"})';';';'; import { ProductListing } from '@/types/listings' export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListin g[] = ["; import { ProductListing } from '@/types/listings' export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListin g[] = [;";';';'; import {ProductListing } from '@/types/listings' export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListin g[] = [;";';';'; import { ProductListing } from &apos;@/types/listings&apos;&apos;' export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListin g[] = [;'; import { ProductListing } from '@/types/listings';export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListin g[] = [;";';'; ";';';';
+>>>>>>> main
