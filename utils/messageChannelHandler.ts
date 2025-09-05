@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 type MessageHandler = {,
   sendMessage: (message: unknown) => void,
   receiveMessage: (callback: (message: unknown) => void) => void
@@ -9,8 +10,21 @@ export const messageChannelHandler: MessageHandler = {,
   receiveMessage: (_callback) => {,
     // No-op: placeholder for message listener registration
   };
+=======
+type MessageHandler = {,;
+  sendMessage: (message: unknown) => void,;
+  receiveMessage: (callback: (message: unknown) => void) => void,;
+,};
+export const messageChannelHandler: MessageHandler = {,;
+  sendMessage: (_message) => {,;
+    // No-op: placeholder for message channel integration,;
+  ,},;
+  receiveMessage: (_callback) => {,;
+    // No-op: placeholder for message listener registration,;
+  ,};
+>>>>>>> cursor/automate-test-improve-and-merge-code-ceec
 };
 };
 };
 };
-,
+,;

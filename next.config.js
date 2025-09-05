@@ -4,7 +4,6 @@ const nextConfig = {
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsxtsjsxjs'],
   trailingSlash: true,
-  // Image optimization
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
@@ -12,9 +11,7 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000
   },
-  // Webpack configuration
   webpack: (config, { dev, isServer }) => {
-    // Exclude problematic directories from file watching in dev mode
     if (dev) {
       config.watchOptions = {
         ignored: [
