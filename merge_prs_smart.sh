@@ -5,7 +5,7 @@
 
 echo "Starting smart PR merging process..."
 echo "This script will merge PRs and resolve conflicts by accepting main branch changes"
-echo "=========================================="
+echo ""
 
 # Use the existing pr_numbers.txt file
 # (pr_numbers.txt should already exist with PR numbers)
@@ -17,7 +17,7 @@ FAILED_COUNT=0
 SKIPPED_COUNT=0
 
 echo "Total PRs to process: $TOTAL_PRS"
-echo "=========================================="
+echo ""
 
 while IFS= read -r pr_number; do
     PROCESSED_COUNT=$((PROCESSED_COUNT + 1))
@@ -109,13 +109,13 @@ while IFS= read -r pr_number; do
     
 done < pr_numbers.txt
 
-echo "=========================================="
+echo ""
 echo "Smart PR merging completed!"
 echo "Total processed: $PROCESSED_COUNT"
 echo "Successfully merged: $SUCCESS_COUNT"
 echo "Failed: $FAILED_COUNT"
 echo "Skipped (already merged/deleted): $SKIPPED_COUNT"
-echo "=========================================="
+echo ""
 
 # Clean up
 rm -f pr_numbers.txt

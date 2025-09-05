@@ -6,7 +6,7 @@
 set -e
 
 echo "🚀 Starting Enhanced Error Fixing Automation System..."
-echo "======================================================"
+echo "====="
 
 # Check if PM2 is installed
 if ! command -v pm2 &> /dev/null; then
@@ -45,7 +45,7 @@ pm2 status
 
 echo ""
 echo "🎉 Enhanced Error Fixing Automation System Started!"
-echo "======================================================"
+echo "====="
 echo "📋 Available Enhanced PM2 Applications:"
 echo "  • enhanced-comprehensive-error-fixer"
 echo "  • advanced-typescript-error-fixer"

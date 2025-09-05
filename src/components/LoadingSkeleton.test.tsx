@@ -9,6 +9,6 @@ export default function LoadingSkeleton.test() {return (
           Professional LoadingSkeleton.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>
