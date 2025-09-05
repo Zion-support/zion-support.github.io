@@ -1,6 +1,8 @@
 #!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 // Final targeted fixes for remaining syntax errors
 const fixes = [// Fix missing semicolons in import statements
   {
@@ -62,7 +64,11 @@ const fixes = [// Fix missing semicolons in import statements
     "pattern": /<\/div>\s*\)\s*}\s*$/gm,
     "replacement": '    </div>\n  );\n}'
   }
+=======
+
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
 console.log('🔧 Fixing final syntax errors...');
+
 // Fix specific files with known issues
 const filesToFix = [
     'src/components/SEO.tsx',
@@ -71,11 +77,19 @@ const filesToFix = [
     'src/components/ui/textarea.tsx',
     'src/components/ui/use-toast.ts'
 ];
+
 function fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
+<<<<<<< HEAD
         return;
+=======
+        console.log(`File not found: ${filePath}`);
+        return 0;
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
     }
+
     let content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
     let modified = false;
     fixes.forEach(fix => {
       const newContent = content.replace(fix.pattern, fix.replacement);
@@ -106,18 +120,25 @@ function walkDirectory(dir) {
     console.error(`Error reading directory ${dir}:`, error.message)}
   return fixedCount}
     let fixes = 0;
+=======
+    let fixes = 0;
+
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
     // Fix textarea.tsx
     if (filePath.includes('textarea.tsx')) {
         // Fix malformed className
         content = content.replace(/className=\{`flex min-h-\[80px\] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder: tex t-muted-foreground focus-visible: outlin e-none focus-visible: rin g-2 focus-visible: rin g-ring focus-visible: rin g-offset-2 disabled: curso r-not-allowed disabled: opacit y-50 \$\{className\}`\}/g, 'className={`flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}');
     }
+
     // Fix use-toast.ts
     if (filePath.includes('use-toast.ts')) {
         // Fix malformed interface
         content = content.replace(/position\?\: "top-right" \| "top-center" \| "top-left" \| "bottom-right" \| "bottom-center" \| "bottom-left"\}\s*$/g, 'position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left";\n}');
+        
         // Fix malformed function
         content = content.replace(/const showToast = \(message: string, options\?\: ToastOptions\)\s*=> \{\s*return toast\(message, options\)\s*return \{ showToast \};\s*\};\s*$/g, 'const showToast = (message: string, options?: ToastOptions) => {\n    return toast(message, options);\n  };\n\n  return { showToast };\n}');
     }
+
     // General fixes
     content = content.replace(/"""/g, '');
     content = content.replace(/""""/g, '');
@@ -125,6 +146,7 @@ function walkDirectory(dir) {
     content = content.replace(/`"/g, '');
     content = content.replace(/`\s*$/gm, '');
     content = content.replace(/^\s*`\s*$/gm, '');
+
     // Count fixes
     const originalContent = fs.readFileSync(filePath, 'utf8');
     if (content !== originalContent) {
@@ -133,19 +155,23 @@ function walkDirectory(dir) {
                 (originalContent.match(/'"`/g) || []).length +
                 (originalContent.match(/`"/g) || []).length;
     }
+
     if (fixes > 0) {
         fs.writeFileSync(filePath, content, 'utf8');
         console.log(`✅ Fixed ${fixes} issues in ${filePath}`);
     } else {
         console.log(`✨ No issues found in ${filePath}`);
     }
+
     return fixes;
 }
+
 // Process all files
 let totalFixes = 0;
 filesToFix.forEach(file => {
     totalFixes += fixFile(file);
 });
+<<<<<<< HEAD
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
@@ -168,3 +194,15 @@ const path = require('path')
     "replacement"
     "replacement"
     "replacement"
+=======
+
+console.log(`\n📊 Summary:`);
+console.log(`   Files processed: ${filesToFix.length}`);
+console.log(`   Total fixes applied: ${totalFixes}`);
+
+if (totalFixes > 0) {
+    console.log('\n✅ Final syntax error fixing completed!');
+} else {
+    console.log('\n✨ No syntax errors found to fix.');
+}
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14

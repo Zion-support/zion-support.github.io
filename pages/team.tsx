@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Brain, Cloud, Shield, Users } from 'lucide-react';
@@ -8,11 +13,19 @@ const teamMembers = [
     name: 'Dr. Sarah Johnson',
     role: 'Chief Technology Officer',
     expertise: 'AI & Machine Learning',
+<<<<<<< HEAD
     icon: Brain,
     description: 'Leading our AI initiatives with 15+ years of experience in machine learning and data science.'
   },
   {
     name: 'Michael Chen',
+=======
+>>>>>>> main
+    icon: Brain
+  },
+  {
+    name: 'Michael Rodriguez',
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
     role: 'Cloud Solutions Architect',
     expertise: 'Cloud Infrastructure',
     icon: Cloud,
@@ -88,5 +101,9 @@ export default function TeamPage() {
         </section>
       </div>
     </>
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
   );
 }

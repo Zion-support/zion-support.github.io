@@ -1,9 +1,8 @@
+module.exports = default function APIPage() { return null}
 import React from 'react';
-
 interface ApiProps {
   // Add props here as needed
 }
-
 export default function Api({ }: ApiProps) {
   return (
     <div>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -144,3 +145,5 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
+=======
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14

@@ -2,8 +2,13 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+=======
+import { Shield, Lock, Eye, Database, Mail, Phone, MapPin } from 'lucide-react';
+import MainLayout from '../components/layout/MainLayout';
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
 
 export default function PrivacyPage() {
   return (
@@ -82,9 +87,14 @@ export default function PrivacyPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
       </main>
 
       <Footer />
     </>
+=======
+      </div>
+    </MainLayout>
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
   );
 }

@@ -1,5 +1,8 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Home, ArrowLeft } from 'lucide-react';
@@ -37,6 +40,7 @@ export default function Custom404() {
         </motion.div>
       </div>
     </div>
+<<<<<<< HEAD
 =======
 import Head from 'next/head';
 import Link from 'next/link';
@@ -175,5 +179,7 @@ export default function Custom404() {
       </div>
     </>
 >>>>>>> 957bdd045b2f6b572bc67ae198e0b79701b01c6c
+=======
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
   );
 }

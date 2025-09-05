@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -162,3 +163,5 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
     </header>
   );
 }
+=======
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14

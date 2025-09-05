@@ -1,78 +1,85 @@
 import React from 'react';
 import Link from 'next/link';
 import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  ArrowRight,
-  Brain,
-  Network,
-  Cloud,
-  Shield,
-  BarChart3,
-  Users,
-  Settings,
-  FileText,
-  MessageSquare,
-  Calendar,
-  ShoppingCart,
-  BookOpen,
-  Building,
-  Heart,
-  DollarSign,
-  Target,
-  Zap,
-  Award,
-  Star,
-  CheckCircle,
-  Clock,
-  TrendingUp,
-  Eye,
-  Lock,
-  Code,
-  Home,
-  Camera,
-  Music,
-  Gamepad2,
-  Truck,
-  Calculator,
-  CreditCard,
-  Paintbrush,
-  HardDrive,
   Activity,
-  Lightbulb,
-  Wrench,
-  PieChart,
+  ArrowRight,
+  Award,
+  BarChart3,
+  BookOpen,
+  Brain,
+  Building,
+  Calculator,
+  Calendar,
+  Camera,
+  CheckCircle,
   ClipboardList,
-  Layers
+  Clock,
+  Cloud,
+  Code,
+  Cpu,
+  CreditCard,
+  DollarSign,
+  Eye,
+  FileText,
+  Gamepad2,
+  Globe,
+  HardDrive,
+  Heart,
+  HelpCircle,
+  Home,
+  Layers,
+  Lightbulb,
+  Lock,
+  Mail,
+  MapPin,
+  MessageSquare,
+  Music,
+  Network,
+  Paintbrush,
+  Phone,
+  PieChart,
+  Server,
+  Settings,
+  Shield,
+  ShoppingCart,
+  Sprout,
+  Star,
+  Target,
+  TreePine,
+  TrendingUp,
+  Truck,
+  Users,
+  Video,
+  Wifi,
+  Wrench,
+  Zap
 } from 'lucide-react';
 
 const footerSections = [
   {
     title: 'Services',
     links: [
-      { title: 'AI Services', href: '/ai-services', icon: Brain },
-      { title: 'IT Services', href: '/it-services', icon: Network },
-      { title: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
-      { title: 'Quantum Computing', href: '/quantum-computing', icon: Code },
-      { title: 'Blockchain', href: '/blockchain', icon: Lock },
-      { title: 'IoT Solutions', href: '/iot', icon: Globe },
-      { title: 'AR/VR Solutions', href: '/ar-vr', icon: Eye },
-      { title: 'Space Technology', href: '/space-tech', icon: Settings }
+      { title: 'AI Services (100+)', href: '/ai-services', icon: Brain },
+      { title: 'IT Services (85+)', href: '/it-services', icon: Network },
+      { title: 'Micro SaaS (120+)', href: '/micro-saas', icon: Cloud },
+      { title: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
+      { title: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
+      { title: 'Data Analytics', href: '/data-analytics', icon: BarChart3 },
+      { title: 'Automation', href: '/automation', icon: Zap },
+      { title: 'Quantum Computing', href: '/quantum-computing', icon: Code }
     ]
   },
   {
     title: 'Solutions',
     links: [
-      { title: 'Enterprise Solutions', href: '/enterprise', icon: Building },
-      { title: 'Startup Solutions', href: '/startup', icon: Settings },
-      { title: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
-      { title: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-      { title: 'Data Analytics', href: '/data-analytics', icon: BarChart3 },
-      { title: 'Automation', href: '/automation', icon: Zap },
-      { title: 'Digital Transformation', href: '/digital-transformation', icon: TrendingUp },
-      { title: 'Custom Development', href: '/custom-development', icon: Code }
+      { title: 'Digital Transformation', href: '/digital-transformation', icon: Settings },
+      { title: 'AI Development', href: '/ai-development', icon: Brain },
+      { title: 'Blockchain Solutions', href: '/blockchain', icon: Lock },
+      { title: 'IoT Solutions', href: '/iot-solutions', icon: Globe },
+      { title: 'Edge Computing', href: '/edge-computing', icon: Server },
+      { title: 'MLOps & AIOps', href: '/mlops', icon: Code },
+      { title: 'Green IT', href: '/green-it', icon: Sprout },
+      { title: 'API Management', href: '/api-management', icon: Settings }
     ]
   },
   {
@@ -84,7 +91,7 @@ const footerSections = [
       { title: 'Retail', href: '/industries/retail', icon: ShoppingCart },
       { title: 'Education', href: '/industries/education', icon: BookOpen },
       { title: 'Real Estate', href: '/industries/real-estate', icon: Home },
-      { title: 'Agriculture', href: '/industries/agriculture', icon: Target },
+      { title: 'Government', href: '/industries/government', icon: Building },
       { title: 'Energy', href: '/industries/energy', icon: Zap }
     ]
   },
@@ -94,11 +101,17 @@ const footerSections = [
       { title: 'Blog', href: '/blog', icon: FileText },
       { title: 'Case Studies', href: '/case-studies', icon: BarChart3 },
       { title: 'White Papers', href: '/white-papers', icon: FileText },
-      { title: 'Webinars', href: '/webinars', icon: Calendar },
       { title: 'Tutorials', href: '/tutorials', icon: BookOpen },
+<<<<<<< HEAD
       { title: 'API Documentation', href: '/api-docs', icon: Code },
       { title: 'Training', href: '/training', icon: BookOpen },
       { title: 'FAQ', href: '/faq', icon: MessageSquare }
+=======
+      { title: 'Webinars', href: '/webinars', icon: Video },
+      { title: 'Events', href: '/events', icon: Calendar },
+      { title: 'API Documentation', href: '/api-docs', icon: Code },
+      { title: 'Documentation', href: '/docs', icon: FileText }
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
     ]
   },
   {
@@ -109,9 +122,15 @@ const footerSections = [
       { title: 'Careers', href: '/careers', icon: Users },
       { title: 'Partners', href: '/partners', icon: Globe },
       { title: 'News', href: '/news', icon: FileText },
+<<<<<<< HEAD
       { title: 'Contact', href: '/contact', icon: MessageSquare },
       { title: 'Privacy Policy', href: '/privacy', icon: Lock },
       { title: 'Terms of Service', href: '/terms', icon: FileText }
+=======
+      { title: 'Contact', href: '/contact', icon: Phone },
+      { title: 'Pricing', href: '/pricing', icon: DollarSign },
+      { title: 'Support', href: '/support', icon: MessageSquare }
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
     ]
   },
   {
@@ -123,8 +142,13 @@ const footerSections = [
       { title: 'Status Page', href: '/status', icon: BarChart3 },
       { title: 'Community', href: '/community', icon: Users },
       { title: 'Training', href: '/training', icon: BookOpen },
+<<<<<<< HEAD
       { title: 'Free Consultation', href: '/consultation', icon: Calendar },
       { title: 'Get Quote', href: '/quote', icon: FileText }
+=======
+      { title: 'FAQ', href: '/faq', icon: HelpCircle },
+      { title: 'Contact Support', href: '/contact', icon: Phone }
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
     ]
   }
 ];
@@ -308,15 +332,15 @@ export default function Footer() {
               <div className="text-gray-400">Services & Solutions</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-green-400 mb-2">1,200+</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">3,200+</div>
               <div className="text-gray-400">Projects Completed</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-purple-400 mb-2">95+</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">180+</div>
               <div className="text-gray-400">Expert Team Members</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-yellow-400 mb-2">15+</div>
+              <div className="text-3xl font-bold text-yellow-400 mb-2">18+</div>
               <div className="text-gray-400">Years Experience</div>
             </div>
           </div>

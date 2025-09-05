@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { 
   Mail, 
   Phone, 
@@ -153,3 +154,5 @@ const Footer = () => {
 };
 
 export default Footer;
+=======
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14

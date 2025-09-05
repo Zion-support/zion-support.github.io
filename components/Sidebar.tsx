@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import {
   X,
@@ -115,3 +116,5 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     </AnimatePresence>
   );
 }
+=======
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14

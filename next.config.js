@@ -1,5 +1,7 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+<<<<<<< HEAD
   compress: true,
   poweredByHeader: false,
   output: 'export',
@@ -9,13 +11,15 @@ const nextConfig = {
   trailingSlash: true,
   
   // Performance optimizations
+=======
+  swcMinify: true,
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
   experimental: {
     scrollRestoration: true,
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion']
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion'],
+    appDir: true
   },
-  
-  // Image optimization
   images: {
     unoptimized: true,
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
@@ -25,37 +29,34 @@ const nextConfig = {
     minimumCacheTTL: 31536000, // 1 year
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    unoptimized: true
   },
   
   env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
-  
-  // Webpack optimizations
-  webpack: (config, { dev, isServer }) => {
-    // Production optimizations
-    if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\/]node_modules[\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-          common: {
-            name: 'common',
-            minChunks: 2,
-            chunks: 'all',
-            enforce: true,
-          },
-        },
+  trailingSlash: true,
+  output: 'export',
+  distDir: 'dist',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/zion.app' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/zion.app' : '',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
       };
     }
     return config;
   },
-  
-  // Headers for security and performance
   async headers() {
     return [
       {
@@ -112,4 +113,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

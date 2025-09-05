@@ -8,6 +8,7 @@ const publicRoutes = [
   "/blog",
   "/services",
   "/ai-services",
+<<<<<<< HEAD
   "/it-services",
   "/micro-saas",
   "/careers",
@@ -20,6 +21,13 @@ const publicRoutes = [
   "/auth/forgot-password",
   "/auth/reset-password",
   "/auth/verify",
+=======
+  "/blog",
+  "/docs",
+  "/careers",
+  "/privacy",
+  "/terms"
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
 ];
 
 export function middleware(request: NextRequest) {
@@ -43,6 +51,10 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
+<<<<<<< HEAD
     '/((?!_next/static|_next/image|favicon.ico).*)',
+=======
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+>>>>>>> b4d898fba518bac526c850fb09a7d1e502e98a14
   ],
 };
