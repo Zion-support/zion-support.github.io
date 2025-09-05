@@ -13,62 +13,48 @@ import {
   ExternalLink
 } from 'lucide-react';
 
-const footerSections = {
-  'Services': [
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: 'Cloud Solutions', href: '/cloud-solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Quantum Computing', href: '/quantum-computing' },
-    { name: 'Blockchain', href: '/blockchain' },
-    { name: 'IoT Solutions', href: '/iot-solutions' }
+const services = {
+  'AI Solutions': [
+    { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
+    { name: 'Predictive Analytics Platform', href: '/ai-services#predictive-analytics' },
+    { name: 'Intelligent Chatbot System', href: '/ai-services#intelligent-chatbot' },
+    { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
+    { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
+    { name: 'Voice AI Assistant', href: '/ai-services#voice-ai-assistant' },
+    { name: 'AI Fraud Detection', href: '/ai-services#ai-fraud-detection' },
+    { name: 'AI Drug Discovery', href: '/ai-services#ai-drug-discovery' },
+    { name: 'AI Climate Change Mitigation', href: '/ai-services#ai-climate-mitigation' },
+    { name: 'AI Space Colonization', href: '/ai-services#ai-space-colonization' },
+    { name: 'AI Universal Problem Solver', href: '/ai-services#ai-universal-problem-solver' },
+    { name: 'AI Consciousness Transfer', href: '/ai-services#ai-consciousness-transfer' }
   ],
-  'Solutions': [
-    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-    { name: 'Startup Solutions', href: '/solutions/startup' },
-    { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
-    { name: 'Custom Development', href: '/solutions/custom' },
-    { name: 'Industry Solutions', href: '/solutions/industry' },
-    { name: 'Cloud Migration', href: '/solutions/cloud-migration' }
+  'IT Services': [
+    { name: 'Cloud Infrastructure Management', href: '/it-services#cloud-infrastructure' },
+    { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
+    { name: 'Network Infrastructure', href: '/it-services#network-infrastructure' },
+    { name: 'Database Management', href: '/it-services#database-management' },
+    { name: 'DevOps & CI/CD', href: '/it-services#devops-cicd' },
+    { name: 'Edge Computing Infrastructure', href: '/it-services#edge-computing' },
+    { name: '5G Network Implementation', href: '/it-services#5g-networks' },
+    { name: 'Blockchain Infrastructure', href: '/it-services#blockchain' },
+    { name: 'IoT Platform Development', href: '/it-services#iot' },
+    { name: 'Microservices Architecture', href: '/it-services#microservices' },
+    { name: 'Digital Transformation', href: '/it-services#digital-transformation' },
+    { name: 'Legacy System Modernization', href: '/it-services#legacy-modernization' }
   ],
-  'Industries': [
-    { name: 'Healthcare', href: '/industries/healthcare' },
-    { name: 'Finance', href: '/industries/finance' },
-    { name: 'Education', href: '/industries/education' },
-    { name: 'Government', href: '/industries/government' },
-    { name: 'Manufacturing', href: '/industries/manufacturing' },
-    { name: 'Retail', href: '/industries/retail' },
-    { name: 'Agriculture', href: '/industries/agriculture' },
-    { name: 'Energy', href: '/industries/energy' }
-  ],
-  'Resources': [
-    { name: 'Blog', href: '/blog' },
-    { name: 'Documentation', href: '/docs' },
-    { name: 'API Documentation', href: '/docs/api' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'White Papers', href: '/white-papers' },
-    { name: 'Webinars', href: '/webinars' },
-    { name: 'Training', href: '/training' },
-    { name: 'FAQ', href: '/faq' }
-  ],
-  'Company': [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'News', href: '/news' },
-    { name: 'Partners', href: '/partners' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Privacy Policy', href: '/privacy' }
-  ],
-  'Support': [
-    { name: 'Help Center', href: '/help' },
-    { name: 'Contact Support', href: '/contact' },
-    { name: 'Status Page', href: '/status' },
-    { name: 'Free Consultation', href: '/consultation' },
-    { name: 'Get Quote', href: '/quote' },
-    { name: 'Terms of Service', href: '/terms' }
+  'Micro SaaS': [
+    { name: 'Cloud Cost Guard', href: '/micro-saas#cloud-cost-guard' },
+    { name: 'LLM Evaluation Suite', href: '/micro-saas#llm-evaluation' },
+    { name: 'Customer Feedback App', href: '/micro-saas#customer-feedback' },
+    { name: 'API Rate Limiting', href: '/micro-saas#api-rate-limiting' },
+    { name: 'Content Moderation AI', href: '/micro-saas#content-moderation' },
+    { name: 'Workflow Automation', href: '/micro-saas#workflow-automation' },
+    { name: 'AI Lead Scoring', href: '/micro-saas#ai-lead-scoring' },
+    { name: 'Social Media Scheduler', href: '/micro-saas#social-media-scheduler' },
+    { name: 'AI Mental Health Assistant', href: '/micro-saas#ai-mental-health' },
+    { name: 'Smart Waste Management', href: '/micro-saas#smart-waste-management' },
+    { name: 'Blockchain Voting Platform', href: '/micro-saas#blockchain-voting' },
+    { name: 'AI Sleep Optimization', href: '/micro-saas#ai-sleep-optimization' }
   ]
 };
 
@@ -85,6 +71,13 @@ const socialLinks = [
   { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
 ];
+
+const contactInfo = {
+  phone: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008, Middletown, DE 19709',
+  hours: '24/7 Support Available'
+};
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -125,63 +118,156 @@ export default function Footer() {
                 <span>{contactInfo.address}</span>
               </div>
             </div>
+          </div>
 
-            {/* Social Links */}
-            <div className="flex space-x-4 mt-6">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gray-800 p-2 rounded-lg hover:bg-gray-700 transition-colors"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Settings className="w-5 h-5 mr-2 text-blue-400" />
+              Services
+            </h3>
+            <div className="space-y-4">
+              {Object.entries(services).map(([category, links]) => (
+                <div key={category}>
+                  <h4 className="text-sm font-medium text-gray-300 mb-2">{category}</h4>
+                  <ul className="space-y-2">
+                    {links.slice(0, 3).map((link) => (
+                      <li key={link.name}>
+                        <Link 
+                          href={link.href}
+                          className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
+                        >
+                          <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          {link.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
             </div>
           </div>
 
-          {/* Footer Sections */}
-          {Object.entries(footerSections).map(([title, links]) => (
-            <div key={title}>
-              <h4 className="text-lg font-semibold mb-6">{title}</h4>
-              <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-gray-300 hover:text-white transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+          {/* Company */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Users className="w-5 h-5 mr-2 text-blue-400" />
+              Company
+            </h3>
+            <ul className="space-y-3">
+              {company.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href}
+                  >
+                    <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Bottom Footer */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
-              <p className="text-gray-400 text-sm">
-                © {currentYear} Zion Tech Group. All rights reserved.
-              </p>
-              <div className="flex space-x-6">
-                <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Privacy Policy
-                </Link>
-                <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Terms of Service
-                </Link>
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Globe className="w-5 h-5 mr-2 text-blue-400" />
+              Resources
+            </h3>
+            <ul className="space-y-3">
+              {resources.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href}
+                  >
+                    <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal & Social */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Shield className="w-5 h-5 mr-2 text-blue-400" />
+              Legal
+            </h3>
+            <ul className="space-y-3 mb-8">
+              {legal.map((link) => (
+                <li key={link.name}>
+                  <Link 
+                    href={link.href}
+                  >
+                    <ArrowRight className="w-3 h-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            {/* Social Links */}
+            <div>
+              <h4 className="text-sm font-medium text-gray-300 mb-4">Follow Us</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => {
+                  const IconComponent = social.icon;
+                  return (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-gray-800 p-2 rounded-lg hover:bg-gray-700 transition-colors"
+                      aria-label={social.name}
+                    >
+                      <IconComponent className="w-5 h-5" />
+                    </a>
+                  );
+                })}
               </div>
             </div>
-            <div className="flex items-center mt-4 md:mt-0">
-              <Clock className="w-4 h-4 mr-2 text-gray-400" />
-              <span className="text-gray-400 text-sm">24/7 Support Available</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Newsletter Signup */}
+      <div className="border-t border-gray-800">
+        <div className="container mx-auto px-4 py-8">
+            <div className="mb-4 md:mb-0">
+              <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
+              <p className="text-gray-400 text-sm">
+                Get the latest technology insights and company updates delivered to your inbox.
+              </p>
+            </div>
+            <div className="flex w-full md:w-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 md:w-64 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
+              />
+              <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-r-lg transition-colors font-medium">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-800">
+        <div className="container mx-auto px-4 py-6">
+            <div className="text-sm text-gray-400 mb-4 md:mb-0">
+              © 2024 Zion Tech Group. All rights reserved. | 
+              <span className="ml-2">Delaware, United States</span>
+            </div>
+            <div className="flex items-center space-x-6 text-sm text-gray-400">
+              <span>Certified & Compliant</span>
+              <span>•</span>
+              <span>SOC 2 Type II</span>
+              <span>•</span>
+              <span>ISO 27001</span>
             </div>
           </div>
         </div>

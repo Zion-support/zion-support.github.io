@@ -1,8 +1,36 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Head from 'next/head';
-import Link from 'next/link';
-import { Server, Shield, Cloud, Database, Network, Monitor, Settings, CheckCircle, ArrowRight, Clock, Award, Star, Zap, TrendingUp, Users, Lock, Globe, Cpu, HardDrive, Wifi, Smartphone, Laptop, Building, BarChart3, Code, Search, ShoppingCart, BookOpen, Brain, DollarSign, Rocket, Phone, Mail } from 'lucide-react';
+import { 
+  Server, 
+  Cloud, 
+  Shield, 
+  Database, 
+  Cpu, 
+  Network, 
+  Smartphone, 
+  Monitor, 
+  HardDrive, 
+  Wifi, 
+  Lock, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight, 
+  Star, 
+  Phone, 
+  MapPin,
+  ShoppingCart,
+  Globe,
+  Users,
+  Settings,
+  Heart,
+  DollarSign,
+  Building,
+  BookOpen,
+  Rocket,
+  Target,
+  Clock,
+  Mail
+} from 'lucide-react';
 import Layout from '../components/Layout';
 
 const itServices = [
@@ -245,6 +273,285 @@ const itServices = [
     marketPrice: '$6,000 - $20,000/month',
     link: 'https://ziontechgroup.com/itsm',
     popular: false
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Distributed edge computing solutions for low-latency applications and IoT.',
+    icon: Cpu,
+    features: ['Edge Data Centers', 'Latency Optimization', 'IoT Integration', 'Distributed Processing'],
+    pricing: '$20,000 - $150,000/setup',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: '5G Network Implementation',
+    description: 'Complete 5G network deployment and optimization for businesses and organizations.',
+    icon: Network,
+    features: ['5G Infrastructure', 'Network Optimization', 'IoT Connectivity', 'Performance Monitoring'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: '5G Networks',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Enterprise blockchain solutions with smart contracts and decentralized applications.',
+    icon: Lock,
+    features: ['Blockchain Development', 'Smart Contracts', 'DApp Creation', 'Consensus Mechanisms'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Blockchain',
+    popular: true
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'Comprehensive IoT platform for device management, data collection, and analytics.',
+    icon: Wifi,
+    features: ['Device Management', 'Data Collection', 'Real-time Analytics', 'Integration APIs'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'IoT',
+    popular: true
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Modern microservices architecture design and implementation for scalable applications.',
+    icon: Server,
+    features: ['Service Design', 'API Gateway', 'Container Orchestration', 'Service Mesh'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'Architecture',
+    popular: true
+  },
+  {
+    title: 'DevOps & CI/CD Pipeline',
+    description: 'Complete DevOps implementation with automated CI/CD pipelines and infrastructure as code.',
+    icon: Settings,
+    features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Automated Testing', 'Deployment Automation'],
+    pricing: '$15,000 - $100,000/setup',
+    category: 'DevOps',
+    popular: true
+  },
+  {
+    title: 'Data Lake & Analytics Platform',
+    description: 'Enterprise data lake with advanced analytics and machine learning capabilities.',
+    icon: Database,
+    features: ['Data Lake Design', 'ETL Pipelines', 'Analytics Dashboard', 'ML Integration'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Data Analytics',
+    popular: true
+  },
+  {
+    title: 'API Gateway & Management',
+    description: 'Comprehensive API gateway solution with security, monitoring, and rate limiting.',
+    icon: Network,
+    features: ['API Gateway', 'Rate Limiting', 'Authentication', 'Analytics & Monitoring'],
+    pricing: '$10,000 - $80,000/setup',
+    category: 'API Management',
+    popular: true
+  },
+  {
+    title: 'Content Delivery Network (CDN)',
+    description: 'Global CDN implementation for fast content delivery and improved user experience.',
+    icon: Globe,
+    features: ['Global CDN', 'Edge Caching', 'DDoS Protection', 'Performance Optimization'],
+    pricing: '$5,000 - $50,000/setup',
+    category: 'CDN',
+    popular: true
+  },
+  {
+    title: 'Disaster Recovery & Backup',
+    description: 'Comprehensive disaster recovery and backup solutions for business continuity.',
+    icon: Shield,
+    features: ['Backup Solutions', 'Disaster Recovery', 'Business Continuity', 'Data Replication'],
+    pricing: '$20,000 - $200,000/setup',
+    category: 'Disaster Recovery',
+    popular: true
+  },
+  {
+    title: 'Identity & Access Management',
+    description: 'Enterprise identity and access management with single sign-on and multi-factor authentication.',
+    icon: Lock,
+    features: ['Single Sign-On', 'Multi-Factor Auth', 'Identity Federation', 'Access Control'],
+    pricing: '$15,000 - $150,000/setup',
+    category: 'IAM',
+    popular: true
+  },
+  {
+    title: 'Enterprise Resource Planning (ERP)',
+    description: 'Custom ERP system development and integration for business process automation.',
+    icon: Settings,
+    features: ['Process Automation', 'Integration', 'Custom Development', 'User Training'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'ERP',
+    popular: true
+  },
+  {
+    title: 'Customer Relationship Management (CRM)',
+    description: 'Custom CRM solution development and integration with existing business systems.',
+    icon: Users,
+    features: ['Lead Management', 'Sales Automation', 'Customer Analytics', 'Integration'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'CRM',
+    popular: true
+  },
+  {
+    title: 'E-commerce Platform Development',
+    description: 'Custom e-commerce platform development with payment integration and inventory management.',
+    icon: ShoppingCart,
+    features: ['Custom Development', 'Payment Integration', 'Inventory Management', 'Analytics'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'E-commerce',
+    popular: true
+  },
+  {
+    title: 'Learning Management System (LMS)',
+    description: 'Custom LMS development for online education and corporate training.',
+    icon: BookOpen,
+    features: ['Course Management', 'User Management', 'Progress Tracking', 'Assessment Tools'],
+    pricing: '$25,000 - $250,000/project',
+    category: 'LMS',
+    popular: true
+  },
+  {
+    title: 'Healthcare IT Solutions',
+    description: 'HIPAA-compliant healthcare IT solutions including EHR and telemedicine platforms.',
+    icon: Heart,
+    features: ['EHR Systems', 'Telemedicine', 'HIPAA Compliance', 'Integration'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Healthcare IT',
+    popular: true
+  },
+  {
+    title: 'Financial Technology (FinTech)',
+    description: 'Secure financial technology solutions including payment processing and banking systems.',
+    icon: DollarSign,
+    features: ['Payment Processing', 'Banking Systems', 'Security Compliance', 'API Integration'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'FinTech',
+    popular: true
+  },
+  {
+    title: 'Real Estate Technology',
+    description: 'Property management and real estate technology solutions.',
+    icon: Building,
+    features: ['Property Management', 'Listing Systems', 'CRM Integration', 'Analytics'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'PropTech',
+    popular: true
+  },
+  {
+    title: 'Manufacturing IT Solutions',
+    description: 'Industrial IT solutions for manufacturing including MES and SCADA systems.',
+    icon: Settings,
+    features: ['MES Systems', 'SCADA Integration', 'IoT Sensors', 'Analytics'],
+    pricing: '$60,000 - $600,000/project',
+    category: 'Manufacturing IT',
+    popular: true
+  },
+  {
+    title: 'Retail Technology Solutions',
+    description: 'Point-of-sale and retail management systems with inventory and customer analytics.',
+    icon: ShoppingCart,
+    features: ['POS Systems', 'Inventory Management', 'Customer Analytics', 'Integration'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Retail Tech',
+    popular: true
+  },
+  {
+    title: 'Education Technology (EdTech)',
+    description: 'Educational technology solutions including virtual classrooms and student management.',
+    icon: BookOpen,
+    features: ['Virtual Classrooms', 'Student Management', 'Assessment Tools', 'Parent Portal'],
+    pricing: '$35,000 - $350,000/project',
+    category: 'EdTech',
+    popular: true
+  },
+  {
+    title: 'Government IT Solutions',
+    description: 'Secure government IT solutions with compliance and citizen services.',
+    icon: Building,
+    features: ['Citizen Services', 'Compliance', 'Security', 'Integration'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'GovTech',
+    popular: true
+  },
+  {
+    title: 'Non-Profit IT Solutions',
+    description: 'Cost-effective IT solutions for non-profit organizations and charities.',
+    icon: Heart,
+    features: ['Donor Management', 'Volunteer Coordination', 'Event Management', 'Fundraising Tools'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Non-Profit IT',
+    popular: true
+  },
+  {
+    title: 'Startup IT Infrastructure',
+    description: 'Scalable IT infrastructure solutions for startups and growing businesses.',
+    icon: Rocket,
+    features: ['Scalable Infrastructure', 'Cost Optimization', 'Rapid Deployment', 'Growth Support'],
+    pricing: '$10,000 - $100,000/setup',
+    category: 'Startup IT',
+    popular: true
+  },
+  {
+    title: 'Enterprise Integration',
+    description: 'Integration of disparate systems and applications across the enterprise.',
+    icon: Network,
+    features: ['System Integration', 'Data Synchronization', 'API Development', 'Legacy Modernization'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Integration',
+    popular: true
+  },
+  {
+    title: 'Digital Transformation',
+    description: 'Complete digital transformation strategy and implementation for traditional businesses.',
+    icon: Zap,
+    features: ['Strategy Development', 'Process Automation', 'Technology Adoption', 'Change Management'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Digital Transformation',
+    popular: true
+  },
+  {
+    title: 'Cloud Migration Services',
+    description: 'Complete cloud migration strategy and implementation for on-premise systems.',
+    icon: Cloud,
+    features: ['Migration Strategy', 'Data Migration', 'Application Migration', 'Optimization'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Cloud Migration',
+    popular: true
+  },
+  {
+    title: 'Legacy System Modernization',
+    description: 'Modernization of legacy systems with modern technologies and architectures.',
+    icon: Settings,
+    features: ['Legacy Analysis', 'Modernization Strategy', 'Data Migration', 'System Replacement'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Legacy Modernization',
+    popular: true
+  },
+  {
+    title: 'IT Consulting & Strategy',
+    description: 'Strategic IT consulting and technology roadmap development.',
+    icon: Target,
+    features: ['Technology Assessment', 'Strategic Planning', 'Vendor Selection', 'Implementation Guidance'],
+    pricing: '$150 - $500/hour',
+    category: 'IT Consulting',
+    popular: true
+  },
+  {
+    title: '24/7 IT Support & Monitoring',
+    description: 'Round-the-clock IT support and system monitoring services.',
+    icon: Clock,
+    features: ['24/7 Support', 'System Monitoring', 'Incident Response', 'Preventive Maintenance'],
+    pricing: '$2,000 - $20,000/month',
+    category: 'IT Support',
+    popular: true
+  },
+  {
+    title: 'IT Training & Certification',
+    description: 'Comprehensive IT training programs and certification preparation.',
+    icon: BookOpen,
+    features: ['Technical Training', 'Certification Prep', 'Hands-on Labs', 'Custom Curriculum'],
+    pricing: '$500 - $5,000/person',
+    category: 'IT Training',
+    popular: true
   }
 ];
       pricing: '$120 – $220/hour',
@@ -1863,8 +2170,187 @@ export default function ITServicesPage() {
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Technologies We Work With
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
+              We work with the latest and most reliable technologies to deliver exceptional results.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {technologies.map((tech, index) => (
+              <motion.div
+                key={index}
+                className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <tech.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{tech.name}</h3>
+                <p className="text-gray-600">{tech.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Industries We Serve
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
+              We have experience working with organizations across various industries.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {industries.map((industry, index) => (
+              <motion.div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mb-6">
+                  <industry.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{industry.name}</h3>
+                <p className="text-gray-600">{industry.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+              Ready to Transform Your IT Infrastructure?
+            </h2>
+            <p className="text-lg sm:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Let our expert team help you build a robust, secure, and scalable IT infrastructure 
+              that grows with your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105"
+              >
+                Get Started Today
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-200"
+              >
+                View All Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+              Ready to Modernize Your IT Infrastructure?
+            </h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Partner with our IT experts to build a robust, scalable, and secure technology foundation 
+              that grows with your business. Get a free IT assessment and customized solution roadmap.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Call Us</h3>
+                <p className="text-lg">+1 302 464 0950</p>
+                <p className="text-sm opacity-90">Available 24/7</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Email Us</h3>
+                <p className="text-lg">kleber@ziontechgroup.com</p>
+                <p className="text-sm opacity-90">Quick response guaranteed</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
+                <p className="text-lg">364 E Main St STE 1008</p>
+                <p className="text-sm opacity-90">Middletown, DE 19709</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105"
+              >
+                Get Free IT Assessment
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-200"
+              >
+                View All Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </Layout>
   );
 }
