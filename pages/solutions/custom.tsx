@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from "../../components/Layout";
 
 const features = [
   {
@@ -57,7 +57,7 @@ const stats = [
 
 export default function CustomDevelopmentPage() {
   return (
-    <MainLayout
+    <Layout
       title="Custom Development - Zion Tech Group"
       description="Bespoke software solutions designed for your unique needs. Full stack development, API integration, and ongoing support for custom applications."
       keywords="custom development, bespoke software, full stack development, API integration, custom applications"
@@ -290,6 +290,6 @@ export default function CustomDevelopmentPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

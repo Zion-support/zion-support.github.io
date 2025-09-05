@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import { Header } from './Header';
+import { Sidebar } from './Sidebar';
 import Footer from './Footer';
 
 interface LayoutProps {
@@ -20,6 +21,8 @@ export default function Layout({
   ogImage = '/og-image.jpg',
   noIndex = false
 }: LayoutProps) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
     <>
       <Head>
@@ -83,12 +86,15 @@ export default function Layout({
         />
       </Head>
       
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1 pt-16">
-          {children}
-        </main>
-        <Footer />
+      <div className="min-h-screen flex">
+        <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+        <div className="flex-1 flex flex-col lg:ml-80">
+          <Header onMenuClick={() => setIsSidebarOpen(true)} />
+          <main className="flex-1 pt-16">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </div>
     </>
   );

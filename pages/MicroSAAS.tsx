@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Layout from '../components/Layout';
 
 export default function MicroSAAS() {
   const microSAASServices = [
@@ -680,12 +681,11 @@ export default function MicroSAAS() {
   const categories = [...new Set(microSAASServices.map(service => service.category))];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <Head>
-        <title>Micro SAAS Services - Zion Tech Group</title>
-        <meta name="description" content="Innovative micro SAAS solutions designed to boost productivity and streamline business operations with AI-powered tools." />
-        <meta name="keywords" content="micro saas, productivity tools, AI automation, business software, small business solutions" />
-      </Head>
+    <Layout 
+      title="Micro SAAS Services - Zion Tech Group"
+      description="Innovative micro SAAS solutions designed to boost productivity and streamline business operations with AI-powered tools."
+    >
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
 
       {/* Header */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -873,6 +873,7 @@ export default function MicroSAAS() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </Layout>
   );
 }

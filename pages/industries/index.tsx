@@ -15,7 +15,7 @@ import {
   Cloud,
   Brain
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from '../../components/Layout';
 
 const industries = [
   {
@@ -77,7 +77,7 @@ const stats = [
 
 export default function IndustriesPage() {
   return (
-    <MainLayout
+    <Layout
       title="Industry Solutions - Zion Tech Group"
       description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."
       keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services"
@@ -315,6 +315,6 @@ export default function IndustriesPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

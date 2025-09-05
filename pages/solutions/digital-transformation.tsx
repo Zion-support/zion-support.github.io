@@ -1,5 +1,5 @@
 import React from 'react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from "../../components/Layout";
 import { motion } from 'framer-motion';
 import { Rocket, RefreshCw, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 
@@ -32,7 +32,7 @@ export default function DigitalTransformationPage() {
   ];
 
   return (
-    <MainLayout 
+    <Layout 
       title="Digital Transformation - Zion Tech Group"
       description="Complete digital transformation solutions to modernize your business and drive innovation."
     >
@@ -116,6 +116,6 @@ export default function DigitalTransformationPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

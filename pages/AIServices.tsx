@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Layout from '../components/Layout';
 
 export default function AIServices() {
   const aiServices = [
@@ -834,7 +835,11 @@ export default function AIServices() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+    <Layout 
+      title="AI Services - Zion Tech Group"
+      description="Cutting-edge AI services including content creation, automation, machine learning, and intelligent solutions."
+    >
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Header */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -968,6 +973,7 @@ export default function AIServices() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </Layout>
   );
 }

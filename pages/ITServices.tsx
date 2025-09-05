@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Layout from '../components/Layout';
 
 export default function ITServices() {
   const itServices = [
@@ -880,7 +881,11 @@ export default function ITServices() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+    <Layout 
+      title="IT Services - Zion Tech Group"
+      description="Comprehensive IT services including cloud migration, cybersecurity, data analytics, and infrastructure management."
+    >
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Header */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -1018,6 +1023,7 @@ export default function ITServices() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </Layout>
   );
 }
