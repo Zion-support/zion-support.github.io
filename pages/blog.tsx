@@ -86,9 +86,9 @@ export default function BlogPage() {
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ "opacity": 0, "y": 30 }}
+              animate={{ "opacity": 1, "y": 0 }}
+              transition={{ "duration": 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -112,10 +112,10 @@ export default function BlogPage() {
                     <motion.article
                       key={post.id}
                       className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay:index * 0.1 }}
-                      viewport={{ once:true }}
+                      initial={{ opacity: 0, "y": 30 }}
+                      whileInView={{ "opacity": 1, "y": 0 }}
+                      transition={{ "duration": 0.8, "delay": index * 0.1 }}
+                      viewport={{ "once": true }}
                     >
                       <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600"></div>
                       <div className="p-6">

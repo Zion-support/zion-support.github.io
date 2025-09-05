@@ -12,7 +12,7 @@ const services = [{
     "features": ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI Fraud Detection", "Voice AI", "Content Generation"],
     "pricing": "Starting at $1,000/month",
     "count": "20+ Services",
-    popular:true
+    "popular": true
   },
   {
     "title": "IT Services", 
@@ -22,7 +22,7 @@ const services = [{
     "features": ["Cloud Infrastructure", "Cybersecurity", "System Administration", "Network Management", "DevOps & CI/CD", "Data Center Migration"],
     "pricing": "Starting at $120/hour",
     "count": "20+ Services",
-    popular:true
+    "popular": true
   },
   {
     "title": "Micro SaaS",
@@ -32,7 +32,7 @@ const services = [{
     "features": ["Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management"],
     "pricing": "Starting at $29/month",
     "count": "25+ Products",
-    popular:true
+    "popular": true
   }
 ];
 
@@ -76,9 +76,9 @@ export default function ServicesPage() {
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ "opacity": 0, "y": 30 }}
+            animate={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.8 }}
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -99,10 +99,10 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-12 md:mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once:true }}
+            initial={{ opacity: 0, "y": 30 }}
+            whileInView={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.8 }}
+            viewport={{ "once": true }}
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               What We Offer
@@ -119,11 +119,11 @@ export default function ServicesPage() {
                 <motion.div
                   key={index}
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay:index * 0.1 }}
-                  viewport={{ once:true }}
-                  whileHover={{ y:-5 }}
+                  initial={{ opacity: 0, "y": 30 }}
+                  whileInView={{ "opacity": 1, "y": 0 }}
+                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
+                  viewport={{ "once": true }}
+                  whileHover={{ "y": -5 }}
                 >
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -182,10 +182,10 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once:true }}
+            initial={{ "opacity": 0, "y": 30 }}
+            whileInView={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.8 }}
+            viewport={{ "once": true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Us?
@@ -202,10 +202,10 @@ export default function ServicesPage() {
                 <motion.div
                   key={index}
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={{ "opacity": 0, "y": 30 }}
+                  whileInView={{ "opacity": 1, "y": 0 }}
+                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
+                  viewport={{ "once": true }}
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-blue-600" />
@@ -227,10 +227,10 @@ export default function ServicesPage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once:true }}
+            initial={{ "opacity": 0, "y": 30 }}
+            whileInView={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.8 }}
+            viewport={{ "once": true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Get Started?

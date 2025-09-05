@@ -21,62 +21,46 @@ import {
   Rocket
 } from 'lucide-react';
 
-const navigation = [
-  {
-    name: 'Services',
-    href: '/services',
-    icon: Settings,
-    children: [
-      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '20+' },
-      { name: 'IT Services', href: '/it-services', icon: Network, count: '20+' },
-      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '25+' },
-      { name: 'All Services', href: '/services', icon: Globe, count: '65+' }
+const navigation = [{
+    "name": 'Services',
+    "href": '/services',
+    "icon": Settings,
+    "children": [
+      { name: 'AI Solutions', "href": '/ai-services', "icon": Brain, "count": '20+' },
+      { "name": 'IT Services', "href": '/it-services', "icon": Network, "count": '20+' },
+      { "name": 'Micro SaaS', "href": '/micro-saas', "icon": Cloud, "count": '25+' },
+      { "name": 'All Services', "href": '/services', "icon": Globe, "count": '65+' }
     ]
   },
   {
-    name: 'Solutions',
-    href: '/solutions',
-    icon: Shield,
-    children: [
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Shield },
-      { name: 'Startup Solutions', href: '/solutions/startup', icon: Rocket },
-      { name: 'Industry Solutions', href: '/solutions/industry', icon: BarChart3 },
-      { name: 'Custom Development', href: '/solutions/custom', icon: Settings }
+    "name": 'Solutions',
+    "href": '/solutions',
+    "icon": Shield,
+    "children": [{ name: 'Enterprise Solutions', "href": '/solutions/enterprise', "icon": Shield },
+      { "name": 'Startup Solutions', "href": '/solutions/startup', "icon": Rocket },
+      { "name": 'Industry Solutions', "href": '/solutions/industry', "icon": BarChart3 },
+      { "name": 'Custom Development', "href": '/solutions/custom', "icon": Settings }
     ]
   },
   {
-    name: 'Resources',
-    href: '/docs',
-    icon: FileText,
-    children: [
-      { name: 'Documentation', href: '/docs', icon: FileText },
-      { name: 'Tutorials', href: '/tutorials', icon: FileText },
-      { name: 'Guides', href: '/guides', icon: FileText },
-      { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-      { name: 'Blog', href: '/blog', icon: MessageSquare },
-      { name: 'FAQ', href: '/faq', icon: MessageSquare }
+    "name": 'Resources',
+    "href": '/resources',
+    "icon": FileText,
+    "children": [{ name: 'Documentation', "href": '/docs', "icon": FileText },
+      { "name": 'Case Studies', "href": '/case-studies', "icon": BarChart3 },
+      { "name": 'Blog', "href": '/blog', "icon": MessageSquare },
+      { "name": 'API Reference', "href": '/api-docs', "icon": Settings }
     ]
   },
   {
-    name: 'Company',
-    href: '/about',
-    icon: Users,
-    children: [
-      { name: 'About Us', href: '/about', icon: Users },
-      { name: 'Careers', href: '/careers', icon: Users },
-      { name: 'News', href: '/news', icon: MessageSquare },
-      { name: 'Talent', href: '/talent', icon: Users }
-    ]
+    "name": 'About',
+    "href": '/about',
+    "icon": Users
   },
   {
-    name: 'Support',
-    href: '/support',
-    icon: Phone
-  },
-  {
-    name: 'Contact',
-    href: '/contact',
-    icon: Phone
+    "name": 'Contact',
+    "href": '/contact',
+    "icon": Phone
   }
 ];
 
@@ -151,9 +135,9 @@ export default function Header() {
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
+                        initial={{ "opacity": 0, "y": 10 }}
+                        animate={{ "opacity": 1, "y": 0 }}
+                        exit={{ "opacity": 0, "y": 10 }}
                         className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
                         onMouseEnter={() => setActiveDropdown(item.name)}
                         onMouseLeave={() => setActiveDropdown(null)}
@@ -212,9 +196,9 @@ export default function Header() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, "height": 0 }}
-              animate={{ opacity: 1, "height": 'auto' }}
-              exit={{ opacity: 0, "height": 0 }}
+              initial={{ "opacity": 0, "height": 0 }}
+              animate={{ "opacity": 1, "height": 'auto' }}
+              exit={{ "opacity": 0, "height": 0 }}
               className="lg:hidden border-t border-gray-200 bg-white"
             >
               <div className="py-4 space-y-2">

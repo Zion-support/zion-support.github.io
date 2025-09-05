@@ -51,7 +51,7 @@ const aiServices = [{
     "features": ['Natural Language Processing', 'Sentiment Analysis', 'Auto-categorization', 'Smart Routing'],
     "pricing": '$2,000 - $8,000 setup',
     "category": 'Automation',
-    popular:true
+    "popular": true
   },
   {
     "title": 'Predictive Analytics Platform',
@@ -60,7 +60,7 @@ const aiServices = [{
     "features": ['Time Series Analysis', 'Machine Learning Models', 'Real-time Predictions', 'Custom Dashboards'],
     "pricing": '$4,000 - $20,000 project',
     "category": 'Analytics',
-    popular:true
+    "popular": true
   },
   {
     "title": 'Intelligent Chatbot System',
@@ -69,7 +69,7 @@ const aiServices = [{
     "features": ['Natural Language Understanding', 'Context Awareness', 'Multi-language Support', 'Integration APIs'],
     "pricing": '$1,000 - $6,000/month',
     "category": 'Customer Service',
-    popular:true
+    "popular": true
   },
   {
     "title": 'Computer Vision Solutions',
@@ -102,7 +102,7 @@ const aiServices = [{
     "features": ['Real-time Analysis', 'Behavioral Patterns', 'Risk Scoring', 'Automated Alerts'],
     "pricing": '$5,000 - $25,000 setup',
     "category": 'Security',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI Drug Discovery Platform',
@@ -215,7 +215,7 @@ const aiServices = [{
     "features": ['Computer Vision', 'Sensor Fusion', 'Path Planning', 'Real-time Decision Making'],
     "pricing": '$100,000 - $500,000/project',
     "category": 'Autonomous Systems',
-    popular:true
+    "popular": true
   },
   {
     "title": 'Generative AI Content Creation Suite',
@@ -224,7 +224,7 @@ const aiServices = [{
     "features": ['Text Generation', 'Image Creation', 'Video Production', 'Voice Synthesis'],
     "pricing": '$2,000 - $15,000/month',
     "category": 'Content Generation',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI-Powered Cybersecurity Platform',
@@ -233,7 +233,7 @@ const aiServices = [{
     "features": ['Threat Hunting', 'Behavioral Analysis', 'Automated Response', 'Zero-day Detection'],
     "pricing": '$15,000 - $100,000/setup',
     "category": 'Cybersecurity',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI Climate Change Modeling',
@@ -242,7 +242,7 @@ const aiServices = [{
     "features": ['Climate Prediction', 'Carbon Footprint Analysis', 'Environmental Monitoring', 'Policy Impact Assessment'],
     "pricing": '$25,000 - $150,000/project',
     "category": 'Environmental AI',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI-Powered Space Exploration',
@@ -251,7 +251,7 @@ const aiServices = [{
     "features": ['Mission Planning', 'Satellite Management', 'Planetary Analysis', 'Autonomous Navigation'],
     "pricing": '$50,000 - $500,000/project',
     "category": 'Space Technology',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI Quantum Computing Optimization',
@@ -260,7 +260,7 @@ const aiServices = [{
     "features": ['Quantum Algorithm Design', 'Quantum ML Models', 'Optimization Problems', 'Quantum Simulation'],
     "pricing": '$30,000 - $200,000/project',
     "category": 'Quantum AI',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI-Powered Brain-Computer Interface',
@@ -269,7 +269,7 @@ const aiServices = [{
     "features": ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Diagnostics'],
     "pricing": '$40,000 - $300,000/project',
     "category": 'Neurotechnology',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI Digital Twin for Smart Cities',
@@ -278,7 +278,7 @@ const aiServices = [{
     "features": ['Real-time Simulation', 'Traffic Optimization', 'Resource Management', 'Predictive Analytics'],
     "pricing": '$100,000 - $1,000,000/project',
     "category": 'Smart Cities',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI-Powered Precision Medicine',
@@ -287,7 +287,7 @@ const aiServices = [{
     "features": ['Genomic Analysis', 'Treatment Optimization', 'Drug Discovery', 'Clinical Decision Support'],
     "pricing": '$25,000 - $200,000/project',
     "category": 'Precision Medicine',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI Agricultural Intelligence',
@@ -296,7 +296,7 @@ const aiServices = [{
     "features": ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
     "pricing": '$10,000 - $75,000/project',
     "category": 'AgTech',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI-Powered Financial Trading',
@@ -305,7 +305,7 @@ const aiServices = [{
     "features": ['Market Analysis', 'Algorithmic Trading', 'Risk Management', 'Portfolio Optimization'],
     "pricing": '$20,000 - $150,000/setup',
     "category": 'FinTech',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI Metaverse Development Platform',
@@ -314,7 +314,7 @@ const aiServices = [{
     "features": ['Virtual World Creation', 'Avatar AI', 'Behavioral Simulation', 'Content Generation'],
     "pricing": '$50,000 - $500,000/project',
     "category": 'Metaverse',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI-Powered Language Translation',
@@ -323,7 +323,7 @@ const aiServices = [{
     "features": ['100+ Languages', 'Cultural Context', 'Real-time Processing', 'Voice Translation'],
     "pricing": '$0.01 - $0.10 per 1K characters',
     "category": 'Language AI',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI Emotional Intelligence Platform',
@@ -332,7 +332,7 @@ const aiServices = [{
     "features": ['Emotion Recognition', 'Empathy Modeling', 'Social Interaction', 'Mental Health Support'],
     "pricing": '$15,000 - $100,000/setup',
     "category": 'Emotional AI',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI-Powered Scientific Discovery',
@@ -341,7 +341,7 @@ const aiServices = [{
     "features": ['Hypothesis Generation', 'Literature Analysis', 'Experiment Design', 'Data Interpretation'],
     "pricing": '$30,000 - $250,000/project',
     "category": 'Scientific AI',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI Edge Computing Intelligence',
@@ -350,7 +350,7 @@ const aiServices = [{
     "features": ['Edge AI Processing', 'Real-time Inference', 'Resource Optimization', 'Distributed Learning'],
     "pricing": '$20,000 - $150,000/setup',
     "category": 'Edge AI',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI-Powered Personal Assistant',
@@ -359,7 +359,7 @@ const aiServices = [{
     "features": ['Voice Interaction', 'Task Automation', 'Learning & Adaptation', 'Privacy Protection'],
     "pricing": '$5,000 - $30,000/setup',
     "category": 'Personal AI',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI Creative Design Studio',
@@ -368,7 +368,7 @@ const aiServices = [{
     "features": ['Graphic Design', 'Music Composition', 'Video Editing', '3D Modeling'],
     "pricing": '$1,000 - $10,000/month',
     "category": 'Creative AI',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI-Powered Predictive Maintenance',
@@ -377,7 +377,7 @@ const aiServices = [{
     "features": ['Failure Prediction', 'Maintenance Scheduling', 'Performance Optimization', 'Cost Reduction'],
     "pricing": '$15,000 - $100,000/setup',
     "category": 'Industrial AI',
-    popular:true
+    "popular": true
   }
 ];
 
@@ -433,9 +433,9 @@ export default function AIServicesPage() {
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ "opacity": 0, "y": 30 }}
+            animate={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.8 }}
             className="text-center"
           >
             <div className="flex items-center justify-center mb-6">
@@ -467,10 +467,10 @@ export default function AIServicesPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once:true }}
+            initial={{ "opacity": 0, "y": 30 }}
+            whileInView={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.8 }}
+            viewport={{ "once": true }}
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our AI Solutions
@@ -487,11 +487,11 @@ export default function AIServicesPage() {
                 <motion.div
                   key={index}
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay:index * 0.1 }}
-                  viewport={{ once:true }}
-                  whileHover={{ y:-5 }}
+                  initial={{ opacity: 0, "y": 30 }}
+                  whileInView={{ "opacity": 1, "y": 0 }}
+                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
+                  viewport={{ "once": true }}
+                  whileHover={{ "y": -5 }}
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-blue-600 group-hover:text-purple-600 transition-colors">
@@ -544,10 +544,10 @@ export default function AIServicesPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once:true }}
+            initial={{ "opacity": 0, "y": 30 }}
+            whileInView={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.8 }}
+            viewport={{ "once": true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Industries We Serve
@@ -564,10 +564,10 @@ export default function AIServicesPage() {
                 <motion.div
                   key={index}
                   className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={{ opacity: 0, "y": 30 }}
+                  whileInView={{ "opacity": 1, "y": 0 }}
+                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
+                  viewport={{ "once": true }}
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-blue-600" />
@@ -590,10 +590,10 @@ export default function AIServicesPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once:true }}
+            initial={{ "opacity": 0, "y": 30 }}
+            whileInView={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.8 }}
+            viewport={{ "once": true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our AI Services?
@@ -610,10 +610,10 @@ export default function AIServicesPage() {
                 <motion.div
                   key={index}
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={{ "opacity": 0, "y": 30 }}
+                  whileInView={{ "opacity": 1, "y": 0 }}
+                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
+                  viewport={{ "once": true }}
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-blue-600" />
@@ -638,10 +638,10 @@ export default function AIServicesPage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once:true }}
+            initial={{ "opacity": 0, "y": 30 }}
+            whileInView={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.8 }}
+            viewport={{ "once": true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Business with AI?

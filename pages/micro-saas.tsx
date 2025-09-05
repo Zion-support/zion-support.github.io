@@ -54,7 +54,7 @@ const microSaaSProducts = [{
     "features": ['Cost Anomaly Detection', 'Auto Rightsizing', 'Budget Forecasting', 'Multi-cloud Support'],
     "pricing": '$299 - $1,499/month',
     "category": 'FinOps',
-    popular:true
+    "popular": true
   },
   {
     "title": 'LLM Evaluation & Safety Suite',
@@ -63,7 +63,7 @@ const microSaaSProducts = [{
     "features": ['Prompt Testing', 'Bias Detection', 'Safety Checks', 'Guardrail Policies'],
     "pricing": '$799 - $3,500/month',
     "category": 'AI Safety',
-    popular:true
+    "popular": true
   },
   {
     "title": 'Customer Feedback & NPS Micro-App',
@@ -96,7 +96,7 @@ const microSaaSProducts = [{
     "features": ['Visual Builder', '100+ Integrations', 'Conditional Logic', 'Scheduled Tasks'],
     "pricing": '$99 - $599/month',
     "category": 'Automation',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI Lead Scoring & Enrichment',
@@ -249,7 +249,7 @@ const microSaaSProducts = [{
     "features": ['Automated Reviews', 'Security Scanning', 'Performance Analysis', 'Best Practices Check'],
     "pricing": '$299 - $1,999/month',
     "category": 'Developer Tools',
-    popular:true
+    "popular": true
   },
   {
     "title": 'Smart Contract Security Auditor',
@@ -258,7 +258,7 @@ const microSaaSProducts = [{
     "features": ['Vulnerability Detection', 'Gas Optimization', 'Compliance Checking', 'Audit Reports'],
     "pricing": '$499 - $2,999/month',
     "category": 'Blockchain Security',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI-Powered SEO Content Optimizer',
@@ -267,7 +267,7 @@ const microSaaSProducts = [{
     "features": ['Keyword Research', 'Content Analysis', 'Ranking Tracking', 'Competitor Analysis'],
     "pricing": '$199 - $1,299/month',
     "category": 'SEO & Marketing',
-    popular:true
+    "popular": true
   },
   {
     "title": 'Multi-Channel Customer Data Platform',
@@ -276,7 +276,7 @@ const microSaaSProducts = [{
     "features": ['Data Unification', 'Real-time Sync', 'Customer 360 View', 'Privacy Compliance'],
     "pricing": '$399 - $2,499/month',
     "category": 'Customer Data',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI-Powered Video Content Generator',
@@ -285,7 +285,7 @@ const microSaaSProducts = [{
     "features": ['Text-to-Video', 'Auto Editing', 'Voice Synthesis', 'Template Library'],
     "pricing": '$199 - $1,499/month',
     "category": 'Content Creation',
-    popular:true
+    "popular": true
   },
   {
     "title": 'Intelligent Supply Chain Optimizer',
@@ -294,7 +294,7 @@ const microSaaSProducts = [{
     "features": ['Demand Forecasting', 'Inventory Optimization', 'Supplier Analytics', 'Risk Assessment'],
     "pricing": '$599 - $3,999/month',
     "category": 'Supply Chain',
-    popular:true
+    "popular": true
   },
   {
     "title": 'Real-Time Language Translation API',
@@ -303,7 +303,7 @@ const microSaaSProducts = [{
     "features": ['100+ Languages', 'Context Awareness', 'Industry Terms', 'Real-time Processing'],
     "pricing": '$0.01 - $0.10 per 1K characters',
     "category": 'Language Services',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI-Powered Legal Document Analyzer',
@@ -312,7 +312,7 @@ const microSaaSProducts = [{
     "features": ['Contract Analysis', 'Compliance Checking', 'Risk Assessment', 'Clause Extraction'],
     "pricing": '$299 - $1,999/month',
     "category": 'Legal Tech',
-    popular:true
+    "popular": true
   },
   {
     "title": 'Smart Energy Management System',
@@ -321,7 +321,7 @@ const microSaaSProducts = [{
     "features": ['Energy Monitoring', 'Usage Analytics', 'Cost Optimization', 'Predictive Maintenance'],
     "pricing": '$199 - $1,299/month',
     "category": 'IoT & Energy',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI-Powered Recruitment Platform',
@@ -330,7 +330,7 @@ const microSaaSProducts = [{
     "features": ['Resume Screening', 'Skill Matching', 'Bias Detection', 'Diversity Analytics'],
     "pricing": '$199 - $1,499/month',
     "category": 'HR & Recruitment',
-    popular:true
+    "popular": true
   },
   {
     "title": 'Blockchain Analytics & Compliance',
@@ -339,7 +339,7 @@ const microSaaSProducts = [{
     "features": ['Transaction Analysis', 'AML Detection', 'Compliance Reporting', 'Risk Scoring'],
     "pricing": '$399 - $2,999/month',
     "category": 'Blockchain Analytics',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI-Powered Medical Image Analysis',
@@ -348,7 +348,7 @@ const microSaaSProducts = [{
     "features": ['Image Analysis', 'Diagnosis Assistance', 'Report Generation', 'Integration APIs'],
     "pricing": '$999 - $4,999/month',
     "category": 'Healthcare AI',
-    popular:true
+    "popular": true
   },
   {
     "title": 'Smart Home Automation Platform',
@@ -357,7 +357,7 @@ const microSaaSProducts = [{
     "features": ['Device Control', 'Automation Rules', 'Energy Management', 'Voice Integration'],
     "pricing": '$29 - $199/month',
     "category": 'Smart Home',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI-Powered Financial Risk Assessment',
@@ -366,7 +366,7 @@ const microSaaSProducts = [{
     "features": ['Credit Scoring', 'Fraud Detection', 'Risk Modeling', 'Real-time Alerts'],
     "pricing": '$499 - $2,999/month',
     "category": 'FinTech',
-    popular:true
+    "popular": true
   },
   {
     "title": 'Intelligent Document Processing',
@@ -375,7 +375,7 @@ const microSaaSProducts = [{
     "features": ['OCR Processing', 'Data Extraction', 'Validation Rules', 'Workflow Automation'],
     "pricing": '$0.10 - $0.50 per document',
     "category": 'Document Processing',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI-Powered Social Media Monitoring',
@@ -384,7 +384,7 @@ const microSaaSProducts = [{
     "features": ['Brand Monitoring', 'Sentiment Analysis', 'Crisis Detection', 'Competitor Analysis'],
     "pricing": '$199 - $1,299/month',
     "category": 'Social Media',
-    popular:true
+    "popular": true
   },
   {
     "title": 'Smart Agriculture IoT Platform',
@@ -393,7 +393,7 @@ const microSaaSProducts = [{
     "features": ['Crop Monitoring', 'Weather Integration', 'Yield Prediction', 'Resource Optimization'],
     "pricing": '$299 - $1,999/month',
     "category": 'AgTech',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI-Powered Personalization Engine',
@@ -402,7 +402,7 @@ const microSaaSProducts = [{
     "features": ['Real-time Personalization', 'A/B Testing', 'Behavioral Analysis', 'Recommendation Engine'],
     "pricing": '$399 - $2,499/month',
     "category": 'Personalization',
-    popular:true
+    "popular": true
   },
   {
     "title": 'Blockchain Identity Verification',
@@ -411,7 +411,7 @@ const microSaaSProducts = [{
     "features": ['Identity Verification', 'KYC/AML Compliance', 'Privacy Protection', 'Blockchain Integration'],
     "pricing": '$0.50 - $2.00 per verification',
     "category": 'Identity & Security',
-    popular:true
+    "popular": true
   },
   {
     "title": 'AI-Powered Voice Analytics',
@@ -420,7 +420,7 @@ const microSaaSProducts = [{
     "features": ['Emotion Detection', 'Quality Scoring', 'Sentiment Analysis', 'Performance Metrics'],
     "pricing": '$199 - $1,299/month',
     "category": 'Voice Analytics',
-    popular:true
+    "popular": true
   }
 ];
 
@@ -494,7 +494,7 @@ const pricingTiers = [{
       'Standard security',
       '1 custom integration'
     ],
-    popular:false
+    "popular": false
   },
   {
     "name": 'Professional',
@@ -508,7 +508,7 @@ const pricingTiers = [{
       '5 custom integrations',
       'API access'
     ],
-    popular:true
+    "popular": true
   },
   {
     "name": 'Enterprise',
@@ -522,7 +522,7 @@ const pricingTiers = [{
       'Unlimited integrations',
       'Custom development'
     ],
-    popular:false
+    "popular": false
   }
 ];
 
@@ -544,9 +544,9 @@ export default function MicroSaaSPage() {
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ "opacity": 0, "y": 30 }}
+            animate={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.8 }}
             className="text-center"
           >
             <div className="flex items-center justify-center mb-6">
@@ -578,10 +578,10 @@ export default function MicroSaaSPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once:true }}
+            initial={{ "opacity": 0, "y": 30 }}
+            whileInView={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.8 }}
+            viewport={{ "once": true }}
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our Micro SaaS Products
@@ -597,14 +597,14 @@ export default function MicroSaaSPage() {
               return (
                 <motion.div
                   key={index}
-                  className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
+                  className={`bg-white p-8 rounded-xl shadow-lg "hover": shadow-xl transition-all duration-300 group relative ${
                     product.popular ? 'ring-2 ring-purple-200' : ''
                   }`}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay:index * 0.1 }}
-                  viewport={{ once:true }}
-                  whileHover={{ y:-5 }}
+                  initial={{ "opacity": 0, "y": 30 }}
+                  whileInView={{ "opacity": 1, "y": 0 }}
+                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
+                  viewport={{ "once": true }}
+                  whileHover={{ "y": -5 }}
                 >
                   {product.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -665,10 +665,10 @@ export default function MicroSaaSPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once:true }}
+            initial={{ "opacity": 0, "y": 30 }}
+            whileInView={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.8 }}
+            viewport={{ "once": true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Micro SaaS?
@@ -685,10 +685,10 @@ export default function MicroSaaSPage() {
                 <motion.div
                   key={index}
                   className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={{ opacity: 0, "y": 30 }}
+                  whileInView={{ "opacity": 1, "y": 0 }}
+                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
+                  viewport={{ "once": true }}
                 >
                   <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-purple-600" />
@@ -711,10 +711,10 @@ export default function MicroSaaSPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once:true }}
+            initial={{ "opacity": 0, "y": 30 }}
+            whileInView={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.8 }}
+            viewport={{ "once": true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Proven Results
@@ -731,10 +731,10 @@ export default function MicroSaaSPage() {
                 <motion.div
                   key={index}
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={{ "opacity": 0, "y": 30 }}
+                  whileInView={{ "opacity": 1, "y": 0 }}
+                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
+                  viewport={{ "once": true }}
                 >
                   <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-purple-600" />
@@ -760,10 +760,10 @@ export default function MicroSaaSPage() {
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once:true }}
+            initial={{ "opacity": 0, "y": 30 }}
+            whileInView={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.8 }}
+            viewport={{ "once": true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Simple, Transparent Pricing
@@ -780,10 +780,10 @@ export default function MicroSaaSPage() {
                 className={`p-8 rounded-xl shadow-lg ${
                   tier.popular ? 'bg-purple-50 border-2 border-purple-200' : 'bg-white'
                 }`}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay:index * 0.1 }}
-                viewport={{ once:true }}
+                initial={{ "opacity": 0, "y": 30 }}
+                whileInView={{ "opacity": 1, "y": 0 }}
+                transition={{ "duration": 0.8, "delay": index * 0.1 }}
+                viewport={{ "once": true }}
               >
                 {tier.popular && (
                   <div className="text-center mb-4">
@@ -815,7 +815,7 @@ export default function MicroSaaSPage() {
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     tier.popular
-                      ? 'bg-purple-600 hover:bg-purple-700 text-white'
+                      ? 'bg-purple-600 "hover": bg-purple-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
                 >
@@ -832,10 +832,10 @@ export default function MicroSaaSPage() {
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once:true }}
+            initial={{ "opacity": 0, "y": 30 }}
+            whileInView={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0.8 }}
+            viewport={{ "once": true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Launch Your Micro SaaS?
