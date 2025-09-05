@@ -1,40 +1,20 @@
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import MainLayout from '../src/components/layout/MainLayout';
 
-export default function TestPage() {
+const Page = () => {
   return (
-    <MainLayout title="Test Page">
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
       </div>
     </MainLayout>
-=======
-import Layout from './components/Layout';
-=======
-import * as React from 'react';
-import Layout from '../components/Layout';
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
-
-export default function TestPage() {
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <Layout title="Test Page">
-=======
-    <Layout title="Test Page" description="Test page">
->>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
-=======
-    <Layout title="Test Page">
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>
-      </div>
-    </Layout>
-<<<<<<< HEAD
->>>>>>> c340d36958b587ef531069bf6cf45d0bd8633ada
-=======
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
   );
-}
+};
+
+export default Page;
