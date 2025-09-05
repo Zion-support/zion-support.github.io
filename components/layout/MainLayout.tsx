@@ -8,12 +8,21 @@ interface MainLayoutProps {
   keywords?: string;
 }
 
+<<<<<<< HEAD
+export default function MainLayout({
+  children, 
+  title = "Zion Tech Group",
+  description = "Leading technology solutions provider",
+  keywords = "technology, AI, cloud, micro SaaS"
+}: MainLayoutProps) {
+=======
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,
   title = "Zion Tech Group",
   description = "Leading technology solutions provider",
   keywords = "technology, AI, cloud, micro SaaS"
-}) => {
+}: MainLayoutProps) => {
+>>>>>>> main
   return (
     <>
       <Head>
@@ -26,6 +35,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       {children}
     </>
   );
-}
+};
 
 export default MainLayout;

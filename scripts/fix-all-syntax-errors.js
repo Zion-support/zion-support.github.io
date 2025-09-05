@@ -1,14 +1,1 @@
-import React from 'react';
-
-interface FixallsyntaxerrorsProps {
-  // Add props here as needed
-}
-
-export default function Fixallsyntaxerrors({ }: FixallsyntaxerrorsProps) {
-  return (
-    <div>
-      <h1>Fixallsyntaxerrors</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+#!/usr/bin/env node \s*\n\s*\)/g,"\n)") content = content.replace(/(\w+)\s*}\s*$/gm,"$1;\n}") content = content.replace(/(\w+)\s*\)\s*$/gm,"$1;\n)") return content} fixStringConcatenation(content) { content = content.replace(/["]\s*,\s*\n\s*["""]/g,") content = content.replace(/["""]\s*,\s*\n\s*["]/g,""") content = content.replace(/["]\s*,\s*["""]/g,") content = content.replace(/["""]\s*,\s*[`]/g,""") return content} fixObjectSyntax(content) { content = content.replace(/(\w+):\s*([^}]+)\s*;\s*}/g,"$"1": '$2\n'}") content = content.replace(/(\w+):\s*([^}]+)\s*;\s*\)/g,"$"1": $2\n)") content = content.replace(/(\w+):\s*([^}]+)\s*;\s*]/g,"$"1": $2\n]") return content} fixFunctionSyntax(content) { content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*{\s*$/gm,"function $1() {\n") content = content.replace(/(\w+)\s*\(\s*\)\s*{\s*$/gm,"$1() {\n") return content} fixConditionalSyntax(content) { content = content.replace(/\?\s*([^:]+)\s*,\s*$/gm,"? $1 :") content = content.replace(/\?\s*([^:]+)\s*,\s*\n/gm,"? $1 :\n") return content} } const fixer = new SyntaxErrorFixer() fixer.fixAllScripts().catch(_console.error))

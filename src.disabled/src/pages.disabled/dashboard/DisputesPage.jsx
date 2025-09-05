@@ -1,14 +1,1 @@
-import React from 'react';
-
-interface DisputesPageProps {
-  // Add props here as needed
-}
-
-export default function DisputesPage({ }: DisputesPageProps) {
-  return (
-    <div>
-      <h1>DisputesPage</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { DisputeDashboard } from '@/components/disputes';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; function DisputesPage() {} return null} return (<ProtectedRoute> <> <SEO title="Dispute Resolution Center | Zion AI Marketplace" description="View and manage disputes between clients and talents"/> <DisputeDashboard /> ></div> </ProtectedRoute>)}; export { DisputesPage }; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export default DisputesPage; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage }; export { DisputesPage };

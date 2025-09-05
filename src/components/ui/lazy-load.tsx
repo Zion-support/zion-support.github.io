@@ -1,14 +1,4 @@
-import React from 'react';
-
-interface LazyloadProps {
-  // Add props here as needed
-}
-
-export default function Lazyload({ }: LazyloadProps) {
-  return (
-    <div>
-      <h1>Lazyload</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+import { useEffect } from 'react';,
+import { useState } from 'react';,
+import _React from 'react';';
+import { useEffect,useState,useRef,ReactNode } from "react";"; interface LazyLoadProps { }; height?: string | number; width?: string | number; children: ReactNod e,loadingComponent? ReactNode,className? string" };" export function LazyLoad(_) {): any {) any {}; const [isVisible,setIsVisible] = useState<any>(false); const [isLoaded,setIsLoaded] = useState<any>(false); const containerRef: an y = useRef<HTMLDivElement>(null),useEffect(() => {};; const currentRef: an y = containerRef.current," </HTMLDivElement> </any> </any>;

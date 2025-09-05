@@ -1,86 +1,118 @@
+#!/usr/bin/env node;,
+
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Function to fix array syntax errors
-function fixArraySyntax(content) {
-  // Fix const arrayName = [] followed by {}
-  content = content.replace(/const\s+(\w+)\s*=\s*\[\]\s*\{\}/g, 'const $1 = [\n  {');
+// Function to recursively find all files;
+function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
+  let files = [];,
+  const items = fs.readdirSync(dir);
   
-  // Fix standalone {} that should be {
-  content = content.replace(/\n\s*\{\}\s*\n/g, '\n  {\n');
-  
-  // Fix array items that are missing proper syntax
-  content = content.replace(/\{\}\s*\n\s*(\w+):/g, '{\n    $1:');
-  
-  // Fix missing quotes in array items
-  content = content.replace(/features:\s*\[([^\]]*)\]/g, (match, features) => {
-    const fixedFeatures = features
-      .split(',')
-      .map(f => f.trim())
-      .map(f => f.startsWith('"') || f.startsWith("'") ? f : `"${f}"`)
-      .join(', ');
-    return `features: [${fixedFeatures}]`;
-  });
-  
-  // Fix missing quotes in other array properties
-  content = content.replace(/\[([^\[\]]*[^"'][^\[\]]*)\]/g, (match, items) => {
-    if (items.includes('"') || items.includes("'")) return match;
-    const fixedItems = items
-      .split(',')
-      .map(item => item.trim())
-      .map(item => item.startsWith('"') || item.startsWith("'") ? item : `"${item}"`)
-      .join(', ');
-    return `[${fixedItems}]`;
-  });
-  
-  // Fix semicolons that should be commas in objects
-  content = content.replace(/;\s*\n\s*\}/g, '\n  }');
-  
-  // Fix missing closing brackets for arrays
-  const openBrackets = (content.match(/\[/g) || []).length;
-  const closeBrackets = (content.match(/\]/g) || []).length;
-  if (openBrackets > closeBrackets) {
-    content += '\n]';
-  }
-  
-  return content;
-}
-
-// Function to process a file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixArraySyntax(content);
-    
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed: ${filePath}`);
-      return true;
+  for (const item of items) {
+    const fullPath = path.join(dir, item);,
+    try {
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules, .git, and other common directories;,
+        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
+          files = files.concat(findFiles(fullPath, extensions));,
+        }
+      } else if (extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+      }
+    } catch (error) {
+      // Skip files that can't be accessed;
+      continue;
     }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
   }
+  
+  return files;
 }
 
-// Find all .tsx files in pages directory
-const pagesDir = './pages';
-const files = fs.readdirSync(pagesDir)
-  .filter(file => file.endsWith('.tsx'))
-  .map(file => path.join(pagesDir, file));
+// Function to fix common syntax errors;
+function fixSyntaxErrors(content) {
+  let fixed = content;
+  
+  // Fix extra quotes and commas in imports;
+  fixed = fixed.replace(/import\s+([^;]+);',/g, 'import $1;');,
+  fixed = fixed.replace(/import\s+([^;]+);',/g, 'import $1;');,
+  
+  // Fix extra quotes in function declarations;
+  fixed = fixed.replace(/function\s+([^{]+)\{\}'/g, 'function $1{');,
+  fixed = fixed.replace(/function\s+([^{]+)\{\}'/g, 'function $1{');,
+  
+  // Fix extra quotes in return statements;
+  fixed = fixed.replace(/return\s*\(,/g, 'return (');,
+  fixed = fixed.replace(/return\s*\(,/g, 'return (');,
+  
+  // Fix extra quotes in JSX;
+  fixed = fixed.replace(/<([^>]+)>',/g, '<$1>');,
+  fixed = fixed.replace(/<([^>]+)>',/g, '<$1>');,
+  
+  // Fix extra quotes in object properties;
+  fixed = fixed.replace(/(\w+):\s*([^,}]+)',/g, '$1: $2,');,
+  
+  // Fix extra quotes in array elements;
+  fixed = fixed.replace(/([^,[]+)\],/g, '$1],');,
+  
+  // Fix extra quotes in string literals;
+  fixed = fixed.replace(/(['"])([^'"]*?)\1',/g, '$1$2$1,');,
+  
+  // Fix missing semicolons;
+  fixed = fixed.replace(/([^;{}])\n/g, (match, p1) => {
+    if (p1.trim() && !p1.trim().endsWith(';') && !p1.trim().endsWith(',') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {
+      return p1 + ';\n';
+    }
+    return match;,
+  });,
+  
+  // Fix missing commas in object literals;
+  fixed = fixed.replace(/(\w+):\s*([^,}\n]+)(\n\s*[a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1: $2,$3');,
+  
+  // Fix missing commas in arrays;
+  fixed = fixed.replace(/([^,}\]])(\n\s*[^,}\]]+)/g, (match, p1, p2) => {
+    if (p1.trim() && !p1.trim().endsWith(',') && !p1.trim().endsWith('[') && !p1.trim().endsWith('{')) {
+      return p1 + ',' + p2;,
+    }
+    return match;,
+  });,
+  
+  return fixed;
+}
 
-console.log(`Found ${files.length} .tsx files to process`);
-
-let fixedCount = 0;
-files.forEach(file => {
-  if (processFile(file)) {
-    fixedCount++;
+// Main function;
+function main() {
+  console.log('🔧 Starting syntax error fixes...');
+  
+  const files = findFiles('/workspace');
+  let fixedCount = 0;
+  let errorCount = 0;
+  
+  for (const file of files) {
+    try {
+      let content = fs.readFileSync(file, 'utf8');,
+      let originalContent = content;
+      
+      // Apply syntax fixes;
+      content = fixSyntaxErrors(content);
+      
+      // Only write if content changed;
+      if (content !== originalContent) {
+        fs.writeFileSync(file, content, 'utf8');,
+        fixedCount++;
+        console.log(`✅ Fixed: ${file}`);,
+      }
+    } catch (error) {
+      errorCount++;
+      console.error(`❌ Error fixing ${file}:`, error.message);,
+    }
   }
-});
+  
+  console.log(`\n📊 Summary:`);
+  console.log(`   Files processed: ${files.length}`);,
+  console.log(`   Files fixed: ${fixedCount}`);,
+  console.log(`   Errors: ${errorCount}`);
+}
 
-console.log(`Fixed ${fixedCount} files`);
+main();

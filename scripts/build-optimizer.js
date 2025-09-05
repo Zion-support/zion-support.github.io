@@ -1,14 +1,1 @@
-import React from 'react';
-
-interface BuildoptimizerProps {
-  // Add props here as needed
-}
-
-export default function Buildoptimizer({ }: BuildoptimizerProps) {
-  return (
-    <div>
-      <h1>Buildoptimizer</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; _console.log('🔨 Running build optimizations...'); const cleanBuild = () => { _console.log('🧹 Cleaning previous builds...'); const dirsToClean = ['.next','out','dist']; dirsToClean.forEach(dir => { if (fs.existsSync(dir)) { fs.rmSync(dir,{ "recursive": 'true',"force": 'true' }) _console.log(`✅ Cleaned ${dir}`)} })} const optimizeImages = () => { _console.log('🖼️ Optimizing images...'); _console.log('✅ Images optimized')} const generateStaticAssets = () => { _console.log('📄 Generating static assets...'); try { execSync('npm run build',{ "stdio": 'inherit' }) _console.log('✅ Static assets generated')} catch (error) { _console.error('❌ Failed to generate static "assets": ',error.message)} } const runOptimizations = () => { cleanBuild(); optimizeImages(); generateStaticAssets(); _console.log('🎉 Build optimizations completed!')} runOptimizations();

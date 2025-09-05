@@ -1,2 +1,1 @@
-import React from';react.ts' "interface": InputProps extends React.InputHTMLAttributes<HTMLInputElement> { className?: string} }'';'
-</HTMLInputElement>'
+import _React from';react.ts' "interface": InputProps extends _React.InputHTMLAttributes<HTMLInputElement> { className?: string} }'';
