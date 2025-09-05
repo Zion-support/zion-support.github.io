@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram, Zap, Brain, Server, Shield, Users, Building2, FileText, Rocket, Target, Atom, Network, Cloud, Lock, TrendingUp, Workflow, MessageCircle, DollarSign, Briefcase, ArrowUp, Sparkles, Home, Truck, Factory, Heart, BookOpen, BarChart3, Cpu, Leaf, Satellite, HelpCircle } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -354,10 +353,6 @@ export default function Footer() {
       </button>
     </footer>
   );
-<<<<<<< HEAD
 };
 
 export default Footer;
-=======
-}
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a

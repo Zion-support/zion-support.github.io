@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -360,10 +359,6 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
       </AnimatePresence>
     </header>
   );
-<<<<<<< HEAD
 };
 
 export default Header;
-=======
-}
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
