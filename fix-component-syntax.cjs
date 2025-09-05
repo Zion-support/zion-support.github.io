@@ -6,7 +6,7 @@ const path = require('path');
 function fixComponentSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const originalContent = content;
     
     // Fix corrupted property names with colons
     content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
