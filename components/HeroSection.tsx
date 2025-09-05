@@ -17,15 +17,15 @@ const HeroSection: React.FC = () => {
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Transform Your Business with
+            Revolutionize Your Business with
             <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              AI-Powered Solutions
+              Next-Gen AI & Micro SAAS
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover our comprehensive suite of micro SAAS services, AI solutions, and IT services designed to accelerate your digital transformation and drive unprecedented growth.
+            From autonomous business management to quantum cybersecurity, our cutting-edge micro SAAS services and AI solutions deliver unprecedented ROI and competitive advantage. Join 500+ companies already transforming their operations.
           </p>
 
           {/* CTA Buttons */}
