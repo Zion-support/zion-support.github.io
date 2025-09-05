@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
@@ -53,56 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     existing.milestones = payload.milestones || [],
     existing.updatedAt = new Date().toISOString(),
     writeGrant(existing),
-    return res.status(200).json({ record: existing })
-=======
-import type {_NextApiRequest, _NextApiResponse} from 'next';
-import fs from 'fs';
-import path from 'path';
-import type {_GrantApplication, _MilestonesUpdatePayload} from '../../../../types/grants';
-
-const _GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
-
-function grantPath(_id: string) {_return path.join(GRANTS_DIR, _`${id}.json`);
-}
-
-function readGrant(_id: string): GrantApplication | null {_if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, _{ recursive: true});
-  const _p = grantPath(id);
-  if (!fs.existsSync(p)) return null;
-  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
-}
-
-function writeGrant(_record: GrantApplication) {_if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, _{ recursive: true});
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8');
-}
-
-function isAuthorized(_req: NextApiRequest) {_const _header = req.headers.authorization || '';
-  const _token = header.replace('Bearer ', _'');
-  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN;}
-
-export default function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (!isAuthorized(req)) {
-    res.status(401).json({ error: 'Unauthorized'});
-    return;
-  }
-
-  const {_id} = req.query as {_id: string};
-  if (!id) {_res.status(400).json({ error: 'Missing id'});
-    return;
-  }
-
-  if (req.method === 'GET') {_const _existing = readGrant(id);
-    if (!existing) return res.status(404).json({ error: 'Not found'});
-    return res.status(200).json({_milestones: existing.milestones || []});
-  }
-
-  if (req.method === 'POST') {_const _existing = readGrant(id);
-    if (!existing) return res.status(404).json({ error: 'Not found'});
-    const _payload = req.body as MilestonesUpdatePayload;
-    existing.milestones = payload.milestones || [];
-    existing.updatedAt = new Date().toISOString();
-    writeGrant(existing);
-    return res.status(200).json({_record: existing});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  }
+    return res.status(200).json({ record: existing })  }
 
   res.setHeader('AllowGET, POST'),
   res.status(405).end('Method Not Allowed')

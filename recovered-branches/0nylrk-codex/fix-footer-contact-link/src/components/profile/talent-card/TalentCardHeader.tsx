@@ -1,18 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { BadgeCheck } from "lucide-react",
 import { TalentCardAvatar } from "./TalentCardAvatar",
-import { TalentCardAvailability } from "./TalentCardAvailability",
-=======
-import React from &quot;react&quot;;
-import { BadgeCheck } from &quot;lucide-react&quot;;
-import { TalentCardAvatar } from &quot;./TalentCardAvatar&quot;;
-import { TalentCardAvailability } from &quot;./TalentCardAvailability&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface TalentCardHeaderProps {
+import { TalentCardAvailability } from "./TalentCardAvailability",interface TalentCardHeaderProps {
   fullName: string,
   professionalTitle: string,
   profilePicture?: string,
@@ -38,7 +28,6 @@ export function TalentCardHeader({
             {/* AI score could be used for verification badge */}
             {yearsExperience > 5 && (
               <BadgeCheck className=&quot;h-4 w-4 text-zion-cyan&quot; aria-label=&quot;Verified Expert&quot; />
-=======
 import React from "react";
 
 interface TalentCardHeaderProps {_fullName: string;
@@ -58,19 +47,13 @@ export function TalentCardHeader(_{_fullName, _professionalTitle, _profilePictur
             {_/* AI score could be used for verification badge */}
             {_yearsExperience > 5 && (
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             )}
           </h3>
           
           <TalentCardAvailability availabilityType={_availabilityType} />
         </div>
         
-<<<<<<< HEAD
-        <p className=&quot;text-zion-cyan text-sm&quot;>{professionalTitle}</p>
-=======
-        <p className="text-zion-cyan text-sm">{_professionalTitle}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      </div>
+        <p className=&quot;text-zion-cyan text-sm&quot;>{professionalTitle}</p>      </div>
     </div>
   )
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
@@ -20,18 +19,10 @@ async function saveRequests(requests: any[]) {
 
 async function summarizeWithOpenAI(description: string) {
   try {
-<<<<<<< HEAD
     if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, 280), type: 'unknown' },
     const { OpenAI } = await import('openai'),
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
-    const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`,
-=======
-    if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, 280), type: 'unknown' };
-    const { OpenAI } = await import('openai');
-    const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-    const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n&quot;"&quot;${description}&quot;"&quot;`;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    const response = await client.chat.completions.create({
+    const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`,    const response = await client.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: 'You are a helpful assistant.' },
@@ -76,7 +67,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // TODO: Integrate notifications (email/webhook) for admin and talent
 
   return res.status(200).json({ id, status: 'ok' })
-=======
 import type {_NextApiRequest, _NextApiResponse} from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -126,5 +116,4 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   // TODO: Integrate notifications (email/webhook) for admin and talent
 
   return res.status(200).json({_id, _status: 'ok'});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

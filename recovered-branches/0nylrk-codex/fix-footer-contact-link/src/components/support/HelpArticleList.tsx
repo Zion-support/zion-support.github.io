@@ -1,16 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { HELP_CATEGORIES } from "./help-content",
-=======
-import React from &quot;react&quot;;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { HELP_CATEGORIES } from &quot;./help-content&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface HelpArticleListProps {
+import { HELP_CATEGORIES } from "./help-content",interface HelpArticleListProps {
   categoryId: string,
   onArticleSelect: (articleId: string) => void,
   searchQuery: string
@@ -22,7 +13,6 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
   if (!category) {
     return <div>Category not found</div>
   }
-=======
 import React from "react";
 
 interface HelpArticleListProps {_categoryId: string;
@@ -33,7 +23,6 @@ export function HelpArticleList(_{_categoryId, _onArticleSelect, _searchQuery}: 
   
   if (!category) {
     return <div>Category not found</div>;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   // Filter articles based on search query
   const _filteredArticles = searchQuery
@@ -46,7 +35,6 @@ export function HelpArticleList(_{_categoryId, _onArticleSelect, _searchQuery}: 
   
   return (
     <div>
-<<<<<<< HEAD
       <div className=&quot;mb-6&quot;>
         <h2 className=&quot;text-2xl font-bold mb-2&quot;>{category.name}</h2>
         <p className=&quot;text-zion-slate-light&quot;>{category.description}</p>
@@ -75,38 +63,7 @@ export function HelpArticleList(_{_categoryId, _onArticleSelect, _searchQuery}: 
               </CardHeader>
               <CardContent>
                 <p className=&quot;text-sm text-zion-slate-light truncate&quot;>
-                  {article.content.substring(0, 120)}...
-=======
-      <div className="mb-6">
-        <h2 className="text-2xl font-bold mb-2">{_category.name}</h2>
-        <p className="text-zion-slate-light">{_category.description}</p>
-      </div>
-      
-      {_filteredArticles.length === 0 ? (
-        <div className="text-center py-8">
-          <h3 className="text-lg font-medium mb-2">No articles found</h3>
-          <p className="text-zion-slate-light">
-            Try adjusting your search query or browse another category.
-          </p>
-        </div>
-      ) : (_<div className="space-y-4">
-          {filteredArticles.map(article => (
-            <Card
-              key={article.id}
-              className="cursor-pointer hover:border-zion-purple/50 transition-colors"
-              onClick={_() => onArticleSelect(article.id)}
-            >
-              <CardHeader className="pb-2">
-                <CardTitle className="text-lg">{_article.title}</CardTitle>
-                <CardDescription className="text-zion-slate-light text-sm">
-                  Last updated: {_formatDate(article.lastUpdated)}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-zion-slate-light truncate">
-                  {_article.content.substring(0, _120)}...
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </p>
+                  {article.content.substring(0, 120)}...                </p>
               </CardContent>
             </Card>
           ))}
@@ -116,23 +73,11 @@ export function HelpArticleList(_{_categoryId, _onArticleSelect, _searchQuery}: 
   )
 }
 
-<<<<<<< HEAD
 function formatDate(date: string): string {
-<<<<<<< HEAD
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric"
-  })
-=======
-  return new Date(date).toLocaleDateString(&quot;en-US&quot;, {
-    year: &quot;numeric&quot;,
-    month: &quot;long&quot;,
-    day: &quot;numeric&quot;
-  });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-function formatDate(_date: string): string {_return new Date(date).toLocaleDateString("en-US", _{
+  })function formatDate(_date: string): string {_return new Date(date).toLocaleDateString("en-US", _{
     year: "numeric", _month: "long", _day: "numeric"});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

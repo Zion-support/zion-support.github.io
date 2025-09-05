@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-};
-;
-;
-=======
 /* eslint-env node */
 /* eslint-disable no-undef */
 module.exports = {
   env: {
     node: true,
-    es2021: true
+    es2021: true,
+    commonjs: true
   },
   globals: {
     module: 'readonly',
@@ -21,24 +17,24 @@ module.exports = {
     console: 'readonly'
   },
   extends: ['next/core-web-vitals'],
-  env: {
-    node: true,
-    commonjs: true
-  },
   rules: {
-    'react-hooks/rules-of-hooks': 'errorreact-hooks/exhaustive-deps': 'warn@typescript-eslint/no-unused-vars': [
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    '@typescript-eslint/no-unused-vars': [
       'warn',
       { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
     ],
-    '@typescript-eslint/no-explicit-any': 'warn@typescript-eslint/no-empty-object-type': 'warn@next/next/no-html-link-for-pages': 'warn'
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-empty-object-type': 'warn',
+    '@next/next/no-html-link-for-pages': 'warn'
   },
   ignorePatterns: [
     'node_modules/.next/',
     'out/build/',
     'dist/*.config.js',
-    '*.config.tsscripts/',
+    '*.config.ts',
+    'scripts/',
     'automation/netlify/',
     'src/apps/'
   ]
 };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

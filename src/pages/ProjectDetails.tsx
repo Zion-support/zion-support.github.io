@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import Link from 'next/link',
 import { useRouter } from 'next/router',
@@ -10,41 +8,17 @@ import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { Project, ProjectStatus } from "@/types/projects",
 import { Button } from "@/components/ui/button",
-import {logErrorToProduction} from '@/utils/productionLogger',
-=======
-import React, { useState, useEffect } from &quot;react&quot;;
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { format } from &quot;date-fns&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { useProjects } from &quot;@/hooks/useProjects&quot;;
-import { SEO } from &quot;@/components/SEO&quot;;
-import { ProtectedRoute } from &quot;@/components/ProtectedRoute&quot;;
-import { Project, ProjectStatus } from &quot;@/types/projects&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import {
+import {logErrorToProduction} from '@/utils/productionLogger',import {
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-<<<<<<< HEAD
-  CardTitle} from "@/components/ui/card",
-=======
-  CardTitle} from &quot;@/components/ui/card&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import {
+  CardTitle} from "@/components/ui/card",import {
   Tabs,
   TabsContent,
   TabsList,
-<<<<<<< HEAD
-  TabsTrigger} from "@/components/ui/tabs",
-=======
-  TabsTrigger} from &quot;@/components/ui/tabs&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import {
+  TabsTrigger} from "@/components/ui/tabs",import {
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -53,24 +27,13 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-<<<<<<< HEAD
   AlertDialogTrigger} from "@/components/ui/alert-dialog",
 import { Avatar } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
 import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
-import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",
-=======
-  AlertDialogTrigger} from &quot;@/components/ui/alert-dialog&quot;;
-import { Avatar } from &quot;@/components/ui/avatar&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { Textarea } from &quot;@/components/ui/textarea&quot;;
-import { toast } from &quot;@/hooks/use-toast&quot;;
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import { ProjectReviewSection } from &quot;@/components/projects/reviews/ProjectReviewSection&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
+import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
 
 function ProjectDetailsContent() {
   const router = useRouter(),
@@ -78,7 +41,6 @@ function ProjectDetailsContent() {
   const { projectId } = router.query as { projectId?: string },
   const { user } = useAuth(),
   const { getProjectById, updateProjectStatus } = useProjects(),
-=======
 import React, {_useState, _useEffect} from "react";
 import Link from 'next/link';
 import {_Card, _CardContent, _CardDescription, _CardFooter, _CardHeader, _CardTitle} from "@/components/ui/card";
@@ -90,64 +52,33 @@ function ProjectDetailsContent() {_const _router = useRouter();
   const { projectId} = router.query as {_projectId?: string};
   const {_user} = useAuth();
   const {_getProjectById, _updateProjectStatus} = useProjects();
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-<<<<<<< HEAD
   const [project, setProject] = useState<Project | null>(null),
   const [isLoading, setIsLoading] = useState(true),
   const [notes, setNotes] = useState<any[]>([]),
   const [newNote, setNewNote] = useState(""),
   const [isSubmittingNote, setIsSubmittingNote] = useState(false),
-  const [activeTab, setActiveTab] = useState("details"),
-=======
-  const [project, setProject] = useState<Project | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [notes, setNotes] = useState<any[]>([]);
-  const [newNote, setNewNote] = useState("&quot;);
-  const [isSubmittingNote, setIsSubmittingNote] = useState(false);
-  const [activeTab, setActiveTab] = useState(&quot;details&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  
+  const [activeTab, setActiveTab] = useState("details"),  
   // Load project data
-<<<<<<< HEAD
   useEffect(() => {
     async function loadProject() {
       if (!projectId) return,
       
       setIsLoading(true),
-      const projectData = await getProjectById(projectId),
-=======
-  useEffect__(() => {_async function loadProject() {
-      if (!projectId) return;
-      
-      setIsLoading(true);
-      const _projectData = await getProjectById(projectId);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      
+      const projectData = await getProjectById(projectId),      
       if (projectData) {
         setProject(projectData),
         
         // Now fetch notes
-<<<<<<< HEAD
         fetchProjectNotes(projectId)
       } else {
         toast({
-<<<<<<< HEAD
           title: "Project not found",
           description: "The requested project could not be found.",
           variant: "destructive"}),
-        router.push("/dashboard")
-=======
-          title: &quot;Project not found&quot;,
-          description: &quot;The requested project could not be found.&quot;,
-          variant: &quot;destructive&quot;});
-        router.push(&quot;/dashboard&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-        fetchProjectNotes(projectId);} else {_toast({
+        router.push("/dashboard")        fetchProjectNotes(projectId);} else {_toast({
           title: "Project not found", _description: "The requested project could not be found.", _variant: "destructive"});
         router.push("/dashboard");
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       }
       
       setIsLoading(false)
@@ -156,113 +87,56 @@ function ProjectDetailsContent() {_const _router = useRouter();
     loadProject()
   }, [projectId]),
   
-<<<<<<< HEAD
   const fetchProjectNotes = async (projectId: string) => {
     try {
       const { data, error } = await supabase
-        .from(&quot;project_notes&quot;)
-=======
-  const _fetchProjectNotes = async (_projectId: string) => {_try {
-      const { data, _error} = await supabase
-        .from("project_notes")
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        .select(`
+        .from(&quot;project_notes&quot;)        .select(`
           *,
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
-<<<<<<< HEAD
         .eq("project_id", projectId)
-<<<<<<< HEAD
-        .order("created_at", { ascending: false }),
-=======
-        .eq(&quot;project_id&quot;, projectId)
-        .order(&quot;created_at&quot;, { ascending: false });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-        .order("created_at", {_ascending: false});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+        .order("created_at", { ascending: false }),        .order("created_at", {_ascending: false});
       
       if (error) throw error,
       
-<<<<<<< HEAD
       setNotes(data || [])
     } catch (err: any) {
       logErrorToProduction('Error fetching project notes:', { data: err }),
       toast({
-<<<<<<< HEAD
         title: "Failed to load notes",
         description: err.message || "An error occurred while loading project notes.",
-        variant: "destructive"})
-=======
-        title: &quot;Failed to load notes&quot;,
-        description: err.message || &quot;An error occurred while loading project notes.&quot;,
-        variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-      setNotes(data || []);
+        variant: "destructive"})      setNotes(data || []);
     } catch (err: unknown) {_logErrorToProduction('Error fetching project notes:', _{ data: err});
       toast({_title: "Failed to load notes", _description: err.message || "An error occurred while loading project notes.", _variant: "destructive"});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
   },
   
-<<<<<<< HEAD
   const handleSubmitNote = async () => {
-    if (!newNote.trim() || !project || !user) return,
-=======
-  const _handleSubmitNote = async () => {_if (!newNote.trim() || !project || !user) return;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    
+    if (!newNote.trim() || !project || !user) return,    
     setIsSubmittingNote(true),
     
     try {
-<<<<<<< HEAD
       const { data, error } = await supabase
         .from(&quot;project_notes&quot;)
         .insert({
           project_id: project.id,
           user_id: user.id,
           content: newNote})
-        .select(),
-=======
-      const { data, _error} = await supabase
-        .from("project_notes")
-        .insert({_project_id: project.id, _user_id: user.id, _content: newNote})
-        .select();
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      
+        .select(),      
       if (error) throw error,
       
       // Refresh notes
-<<<<<<< HEAD
       fetchProjectNotes(project.id),
       setNewNote(""),
       
-<<<<<<< HEAD
       toast({
         title: "Note added",
-        description: "Your note has been added to the project."})
-=======
-      fetchProjectNotes(project.id);
-      setNewNote("&quot;);
-      
-      toast({
-        title: &quot;Note added&quot;,
-        description: &quot;Your note has been added to the project.&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } catch (err: any) {
+        description: "Your note has been added to the project."})    } catch (err: any) {
       logErrorToProduction('Error adding note:', { data: err }),
       toast({
-<<<<<<< HEAD
         title: "Failed to add note",
         description: err.message || "An error occurred while adding note.",
-        variant: "destructive"})
-=======
-        title: &quot;Failed to add note&quot;,
-        description: err.message || &quot;An error occurred while adding note.&quot;,
-        variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+        variant: "destructive"})    } finally {
       setIsSubmittingNote(false)
     }
   },
@@ -280,15 +154,8 @@ function ProjectDetailsContent() {_const _router = useRouter();
       // If offer was accepted, show a special toast
       if (newStatus === &quot;offer_accepted&quot;) {
         toast({
-<<<<<<< HEAD
           title: "Offer Accepted! 🎉",
-          description: "The project is now in progress. Congratulations!"})
-=======
-          title: &quot;Offer Accepted! 🎉&quot;,
-          description: &quot;The project is now in progress. Congratulations!&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-      toast({_title: "Note added", _description: "Your note has been added to the project."});
+          description: "The project is now in progress. Congratulations!"})      toast({_title: "Note added", _description: "Your note has been added to the project."});
     } catch (err: unknown) {_logErrorToProduction('Error adding note:', _{ data: err});
       toast({_title: "Failed to add note", _description: err.message || "An error occurred while adding note.", _variant: "destructive"});
     } finally {_setIsSubmittingNote(false);}
@@ -305,22 +172,13 @@ function ProjectDetailsContent() {_const _router = useRouter();
       // If offer was accepted, show a special toast
       if (newStatus === "offer_accepted") {_toast({
           title: "Offer Accepted! 🎉", _description: "The project is now in progress. Congratulations!"});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       }
     }
   },
   
-<<<<<<< HEAD
   const getStatusBadge = (status: ProjectStatus) => {
     switch (status) {
-<<<<<<< HEAD
-      case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,
-=======
-  const _getStatusBadge = (_status: ProjectStatus) => {_switch (status) {
-      case "offer_sent":
-        return <Badge variant="outline">Offer Sent</Badge>;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      case "offer_accepted":
+      case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,      case "offer_accepted":
         return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>,
       case "changes_requested":
         return <Badge variant="secondary">Changes Requested</Badge>,
@@ -332,7 +190,6 @@ function ProjectDetailsContent() {_const _router = useRouter();
         return <Badge variant="destructive">Canceled</Badge>,
       default:
         return <Badge variant="outline">{status}</Badge>
-=======
       case &quot;offer_sent&quot;:
         return <Badge variant=&quot;outline&quot;>Offer Sent</Badge>;
       case &quot;offer_accepted&quot;:
@@ -347,41 +204,24 @@ function ProjectDetailsContent() {_const _router = useRouter();
         return <Badge variant=&quot;destructive&quot;>Canceled</Badge>;
       default:
         return <Badge variant=&quot;outline&quot;>{status}</Badge>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
   
-<<<<<<< HEAD
   if (isLoading) {
     return (
       <div className=&quot;container mx-auto py-8&quot;>
         <div className=&quot;flex justify-center items-center h-64&quot;>
           <div className=&quot;text-center&quot;>
-            <div className=&quot;animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4&quot;></div>
-=======
-  if (isLoading) {_return (
-      <div className="container mx-auto py-8">
-        <div className="flex justify-center items-center h-64">
-          <div className="text-center">
-            <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4"></div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            <p>Loading project details...</p>
+            <div className=&quot;animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4&quot;></div>            <p>Loading project details...</p>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     )
   }
   
   if (!project) {
     return (
-      <div className=&quot;container mx-auto py-8&quot;>
-=======
-    );}
-  
-  if (!project) {_return (_<div className="container mx-auto py-8">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        <Card>
+      <div className=&quot;container mx-auto py-8&quot;>        <Card>
           <CardContent className=&quot;flex flex-col items-center justify-center py-10&quot;>
             <AlertCircle className=&quot;h-10 w-10 text-muted-foreground mb-4&quot; />
             <h2 className=&quot;text-xl font-bold mb-2&quot;>Project Not Found</h2>
@@ -398,30 +238,17 @@ function ProjectDetailsContent() {_const _router = useRouter();
   }
   
   // Check if user is either the client or the talent
-<<<<<<< HEAD
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
   
   if (!isClient && !isTalent) {
-<<<<<<< HEAD
     router.push("/unauthorized"),
     return null
   }
   
   const isOfferPending = project.status === "offer_sent",
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
-  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
-=======
-    router.push(&quot;/unauthorized&quot;);
-    return null;
-  }
-  
-  const isOfferPending = project.status === &quot;offer_sent&quot;;
-  const isOfferAccepted = [&quot;offer_accepted&quot;, &quot;in_progress&quot;, &quot;completed&quot;].includes(project.status);
-  const isActiveProject = [&quot;offer_accepted&quot;, &quot;in_progress&quot;].includes(project.status);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-  const _isClient = user?.id === project.client_id;
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),  const _isClient = user?.id === project.client_id;
   const _isTalent = user?.id === project.talent_id;
   
   if (!isClient && !isTalent) {_router.push("/unauthorized");
@@ -430,51 +257,28 @@ function ProjectDetailsContent() {_const _router = useRouter();
   const _isOfferPending = project.status === "offer_sent";
   const _isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
   const _isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <>
       <SEO 
-<<<<<<< HEAD
         title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
-        description=&quot;View and manage your project details and collaboration.&quot;
-=======
-        title={_`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
-        description="View and manage your project details and collaboration."
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      />
+        description=&quot;View and manage your project details and collaboration.&quot;      />
       <main className=&quot;container mx-auto px-4 py-8&quot;>
         <div className=&quot;mb-6&quot;>
           <div className=&quot;flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2&quot;>
             <div>
-<<<<<<< HEAD
               <h1 className=&quot;text-3xl font-bold&quot;>{project.job?.title || &quot;Project&quot;}</h1>
               <div className=&quot;flex items-center gap-2 mt-1&quot;>
                 {getStatusBadge(project.status)}
                 <span className=&quot;text-muted-foreground&quot;>
-                  Started on {format(new Date(project.start_date), &quot;PPP&quot;)}
-=======
-              <h1 className="text-3xl font-bold">{_project.job?.title || "Project"}</h1>
-              <div className="flex items-center gap-2 mt-1">
-                {_getStatusBadge(project.status)}
-                <span className="text-muted-foreground">
-                  Started on {_format(new Date(project.start_date), _"PPP")}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </span>
+                  Started on {format(new Date(project.start_date), &quot;PPP&quot;)}                </span>
               </div>
             </div>
             
-<<<<<<< HEAD
             {/* Action Buttons Based on Role and Status */}
             <div className=&quot;space-x-2&quot;>
               {isTalent && isOfferPending && (
-                <>
-=======
-            {_/* Action Buttons Based on Role and Status */}
-            <div className="space-x-2">
-              {_isTalent && isOfferPending && (_<>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <AlertDialog>
+                <>                  <AlertDialog>
                     <AlertDialogTrigger asChild>
                       <Button variant=&quot;default&quot;>
                         <CheckCircle2 className=&quot;mr-2 h-4 w-4&quot; /> Accept Offer
@@ -497,24 +301,13 @@ function ProjectDetailsContent() {_const _router = useRouter();
                     </AlertDialogContent>
                   </AlertDialog>
                   
-<<<<<<< HEAD
                   <Button variant=&quot;outline&quot; onClick={() => handleStatusChange(&quot;changes_requested&quot;)}>
-                    <MessageSquare className=&quot;mr-2 h-4 w-4&quot; /> Request Changes
-=======
-                  <Button variant="outline" onClick={_() => handleStatusChange("changes_requested")}>
-                    <MessageSquare className="mr-2 h-4 w-4" /> Request Changes
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </Button>
+                    <MessageSquare className=&quot;mr-2 h-4 w-4&quot; /> Request Changes                  </Button>
                 </>
               )}
               
-<<<<<<< HEAD
               {(isClient || isTalent) && project.status === &quot;in_progress&quot; && (
-                <AlertDialog>
-=======
-              {_(isClient || isTalent) && project.status === "in_progress" && (_<AlertDialog>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <AlertDialogTrigger asChild>
+                <AlertDialog>                  <AlertDialogTrigger asChild>
                     <Button variant=&quot;default&quot;>
                       <CheckCircle2 className=&quot;mr-2 h-4 w-4&quot; /> Mark as Completed
                     </Button>
@@ -537,43 +330,24 @@ function ProjectDetailsContent() {_const _router = useRouter();
                 </AlertDialog>
               )}
               
-<<<<<<< HEAD
               {isActiveProject && (
-                <Button variant=&quot;default&quot; asChild>
-=======
-              {_isActiveProject && (
-                <Button variant="default" asChild>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <Link href={`/project/[id]/milestones`}>
+                <Button variant=&quot;default&quot; asChild>                  <Link href={`/project/[id]/milestones`}>
                     <Layers className=&quot;mr-2 h-4 w-4&quot; /> Milestones
                   </Link>
                 </Button>
               )}
 
-<<<<<<< HEAD
               {isActiveProject && (
-                <Button variant=&quot;outline&quot; asChild>
-=======
-              {_isActiveProject && (
-                <Button variant="outline" asChild>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <Link href={`/project/[id]/room`}>
+                <Button variant=&quot;outline&quot; asChild>                  <Link href={`/project/[id]/room`}>
                     <Video className=&quot;mr-2 h-4 w-4&quot; /> Project Room
                   </Link>
                 </Button>
               )}
               
-<<<<<<< HEAD
               {(isClient || isTalent) && [&quot;offer_sent&quot;, &quot;offer_accepted&quot;, &quot;in_progress&quot;].includes(project.status) && (
                 <Button 
                   variant=&quot;outline&quot; 
-                  onClick={() => router.push(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}
-=======
-              {_(isClient || isTalent) && ["offer_sent", _"offer_accepted", _"in_progress"].includes(project.status) && (_<Button 
-                  variant="outline" 
-                  onClick={() => router.push(`/messages?talentId=${project.talent_id}&clientId=${_project.client_id}`)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  onClick={() => router.push(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}                >
                   <MessageSquare className=&quot;mr-2 h-4 w-4&quot; /> Message
                 </Button>
               )}
@@ -581,7 +355,6 @@ function ProjectDetailsContent() {_const _router = useRouter();
           </div>
         </div>
         
-<<<<<<< HEAD
         <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-8&quot;>
           <div className=&quot;order-2 lg:order-1 lg:col-span-2&quot;>
             <Tabs defaultValue=&quot;details&quot; value={activeTab} onValueChange={setActiveTab}>
@@ -591,20 +364,7 @@ function ProjectDetailsContent() {_const _router = useRouter();
                 <TabsTrigger value=&quot;documents&quot;>Documents</TabsTrigger>
                 <TabsTrigger value=&quot;notes&quot;>Shared Notes</TabsTrigger>
                 {project.status === &quot;completed&quot; && (
-                  <TabsTrigger value=&quot;reviews&quot;>Reviews</TabsTrigger>
-=======
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="order-2 lg:order-1 lg:col-span-2">
-            <Tabs defaultValue="details" value={_activeTab} onValueChange={_setActiveTab}>
-              <TabsList className="mb-6">
-                <TabsTrigger value="details">Project Details</TabsTrigger>
-                <TabsTrigger value="timeline">Timeline</TabsTrigger>
-                <TabsTrigger value="documents">Documents</TabsTrigger>
-                <TabsTrigger value="notes">Shared Notes</TabsTrigger>
-                {_project.status === "completed" && (
-                  <TabsTrigger value="reviews">Reviews</TabsTrigger>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                )}
+                  <TabsTrigger value=&quot;reviews&quot;>Reviews</TabsTrigger>                )}
               </TabsList>
               
               <TabsContent value=&quot;details&quot;>
@@ -618,42 +378,21 @@ function ProjectDetailsContent() {_const _router = useRouter();
                   <CardContent>
                     <div className=&quot;space-y-4&quot;>
                       <div>
-<<<<<<< HEAD
                         <h3 className=&quot;font-semibold mb-2&quot;>Project Description</h3>
                         <div className=&quot;bg-muted/30 p-4 rounded-md&quot;>
-                          <p className=&quot;whitespace-pre-wrap&quot;>{project.scope_summary}</p>
-=======
-                        <h3 className="font-semibold mb-2">Project Description</h3>
-                        <div className="bg-muted/30 p-4 rounded-md">
-                          <p className="whitespace-pre-wrap">{_project.scope_summary}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        </div>
+                          <p className=&quot;whitespace-pre-wrap&quot;>{project.scope_summary}</p>                        </div>
                       </div>
                       
                       <div>
-<<<<<<< HEAD
                         <h3 className=&quot;font-semibold mb-2&quot;>Payment Terms</h3>
                         <Badge variant=&quot;outline&quot; className=&quot;capitalize&quot;>
-                          {project.payment_terms} Payment
-=======
-                        <h3 className="font-semibold mb-2">Payment Terms</h3>
-                        <Badge variant="outline" className="capitalize">
-                          {_project.payment_terms} Payment
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        </Badge>
+                          {project.payment_terms} Payment                        </Badge>
                       </div>
                       
                       <div>
-<<<<<<< HEAD
                         <h3 className=&quot;font-semibold mb-2&quot;>Job Details</h3>
                         <div className=&quot;bg-muted/30 p-4 rounded-md&quot;>
-                          <p className=&quot;whitespace-pre-wrap&quot;>{project.job?.description}</p>
-=======
-                        <h3 className="font-semibold mb-2">Job Details</h3>
-                        <div className="bg-muted/30 p-4 rounded-md">
-                          <p className="whitespace-pre-wrap">{_project.job?.description}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        </div>
+                          <p className=&quot;whitespace-pre-wrap&quot;>{project.job?.description}</p>                        </div>
                       </div>
                     </div>
                   </CardContent>
@@ -673,29 +412,16 @@ function ProjectDetailsContent() {_const _router = useRouter();
                       <div className=&quot;flex items-start gap-3 p-3 bg-muted/30 rounded-md&quot;>
                         <Calendar className=&quot;h-5 w-5 text-primary mt-0.5&quot; />
                         <div>
-<<<<<<< HEAD
                           <h3 className=&quot;font-semibold&quot;>Start Date</h3>
-                          <p>{format(new Date(project.start_date), &quot;PPP&quot;)}</p>
-=======
-                          <h3 className="font-semibold">Start Date</h3>
-                          <p>{_format(new Date(project.start_date), _"PPP")}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        </div>
+                          <p>{format(new Date(project.start_date), &quot;PPP&quot;)}</p>                        </div>
                       </div>
                       
                       <div className=&quot;flex items-start gap-3 p-3 bg-muted/30 rounded-md&quot;>
                         <Clock className=&quot;h-5 w-5 text-primary mt-0.5&quot; />
                         <div>
-<<<<<<< HEAD
                           <h3 className=&quot;font-semibold&quot;>Project Status</h3>
                           <div className=&quot;mt-1&quot;>
-                            {getStatusBadge(project.status)}
-=======
-                          <h3 className="font-semibold">Project Status</h3>
-                          <div className="mt-1">
-                            {_getStatusBadge(project.status)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                          </div>
+                            {getStatusBadge(project.status)}                          </div>
                         </div>
                       </div>
                     </div>
@@ -712,18 +438,10 @@ function ProjectDetailsContent() {_const _router = useRouter();
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-<<<<<<< HEAD
                     {project.agreement_url ? (
                       <div className=&quot;flex items-center justify-between bg-muted/30 p-4 rounded-md&quot;>
                         <div className=&quot;flex items-center gap-3&quot;>
-                          <FileText className=&quot;h-5 w-5 text-primary&quot; />
-=======
-                    {_project.agreement_url ? (
-                      <div className="flex items-center justify-between bg-muted/30 p-4 rounded-md">
-                        <div className="flex items-center gap-3">
-                          <FileText className="h-5 w-5 text-primary" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                          <div>
+                          <FileText className=&quot;h-5 w-5 text-primary&quot; />                          <div>
                             <h3 className=&quot;font-semibold&quot;>Project Agreement</h3>
                             <p className=&quot;text-sm text-muted-foreground&quot;>
                               Uploaded when project was created
@@ -758,7 +476,6 @@ function ProjectDetailsContent() {_const _router = useRouter();
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-<<<<<<< HEAD
                     <div className=&quot;space-y-4&quot;>
                       <div className=&quot;space-y-4 max-h-[400px] overflow-y-auto mb-4&quot;>
                         {notes.length > 0 ? (
@@ -770,26 +487,11 @@ function ProjectDetailsContent() {_const _router = useRouter();
                                     <img
                                       src={note.created_by_profile.avatar_url}
                                       alt={note.created_by_profile.display_name}
-                                      loading=&quot;lazy&quot;
-=======
-                    <div className="space-y-4">
-                      <div className="space-y-4 max-h-[400px] overflow-y-auto mb-4">
-                        {_notes.length > 0 ? (_notes.map((note) => (
-                            <div key={note.id} className="bg-muted/30 p-3 rounded-md">
-                              <div className="flex items-center gap-2 mb-2">
-                                <Avatar className="h-6 w-6">
-                                  {_note.created_by_profile?.avatar_url ? (
-                                    <img
-                                      src={note.created_by_profile.avatar_url}
-                                      alt={_note.created_by_profile.display_name}
-                                      loading="lazy"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                                    />
+                                      loading=&quot;lazy&quot;                                    />
                                   ) : (
                                     <User className=&quot;h-4 w-4&quot; />
                                   )}
                                 </Avatar>
-<<<<<<< HEAD
                                 <span className=&quot;font-medium text-sm&quot;>
                                   {note.created_by_profile?.display_name || &quot;User&quot;}
                                 </span>
@@ -797,18 +499,7 @@ function ProjectDetailsContent() {_const _router = useRouter();
                                   {format(new Date(note.created_at), &quot;PPp&quot;)}
                                 </span>
                               </div>
-                              <p className=&quot;text-sm whitespace-pre-wrap&quot;>{note.content}</p>
-=======
-                                <span className="font-medium text-sm">
-                                  {_note.created_by_profile?.display_name || "User"}
-                                </span>
-                                <span className="text-xs text-muted-foreground">
-                                  {_format(new Date(note.created_at), _"PPp")}
-                                </span>
-                              </div>
-                              <p className="text-sm whitespace-pre-wrap">{_note.content}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                            </div>
+                              <p className=&quot;text-sm whitespace-pre-wrap&quot;>{note.content}</p>                            </div>
                           ))
                         ) : (
                           <div className=&quot;text-center py-8&quot;>
@@ -824,24 +515,13 @@ function ProjectDetailsContent() {_const _router = useRouter();
                           <Textarea
                             placeholder=&quot;Add a note or update to the project...&quot;
                             value={newNote}
-<<<<<<< HEAD
                             onChange={(e) => setNewNote(e.target.value)}
-                            className=&quot;min-h-[100px] mb-2&quot;
-=======
-                            onChange={_(e) => setNewNote(e.target.value)}
-                            className="min-h-[100px] mb-2"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                          />
+                            className=&quot;min-h-[100px] mb-2&quot;                          />
                           <Button
                             onClick={_handleSubmitNote}
                             disabled={_!newNote.trim() || isSubmittingNote}
                           >
-<<<<<<< HEAD
-                            {isSubmittingNote ? &quot;Posting...&quot; : &quot;Post Note&quot;}
-=======
-                            {_isSubmittingNote ? "Posting..." : "Post Note"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                          </Button>
+                            {isSubmittingNote ? &quot;Posting...&quot; : &quot;Post Note&quot;}                          </Button>
                         </div>
                       )}
                     </div>
@@ -849,14 +529,8 @@ function ProjectDetailsContent() {_const _router = useRouter();
                 </Card>
               </TabsContent>
               
-<<<<<<< HEAD
               <TabsContent value=&quot;reviews&quot;>
-                <ProjectReviewSection project={project} />
-=======
-              <TabsContent value="reviews">
-                <ProjectReviewSection project={_project} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </TabsContent>
+                <ProjectReviewSection project={project} />              </TabsContent>
             </Tabs>
           </div>
           
@@ -866,7 +540,6 @@ function ProjectDetailsContent() {_const _router = useRouter();
                 <CardTitle>Project Participants</CardTitle>
               </CardHeader>
               <CardContent>
-<<<<<<< HEAD
                 <div className=&quot;space-y-6&quot;>
                   <div className=&quot;flex items-start gap-4&quot;>
                     <Avatar className=&quot;h-10 w-10&quot;>
@@ -874,24 +547,12 @@ function ProjectDetailsContent() {_const _router = useRouter();
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
-                          loading=&quot;lazy&quot;
-=======
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <Avatar className="h-10 w-10">
-                      {_project.talent_profile?.profile_picture_url ? (
-                        <img
-                          src={project.talent_profile.profile_picture_url}
-                          alt={_project.talent_profile.full_name}
-                          loading="lazy"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        />
+                          loading=&quot;lazy&quot;                        />
                       ) : (
                         <User className=&quot;h-6 w-6&quot; />
                       )}
                     </Avatar>
                     <div>
-<<<<<<< HEAD
                       <h3 className=&quot;font-semibold&quot;>
                         {project.talent_profile?.full_name || &quot;Talent&quot;}
                       </h3>
@@ -902,20 +563,7 @@ function ProjectDetailsContent() {_const _router = useRouter();
                         <Button
                           variant=&quot;outline&quot;
                           size=&quot;sm&quot;
-                          className=&quot;mt-2&quot;
-=======
-                      <h3 className="font-semibold">
-                        {_project.talent_profile?.full_name || "Talent"}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {_project.talent_profile?.professional_title || "Professional"}
-                      </p>
-                      {_isClient && (_<Button
-                          variant="outline"
-                          size="sm"
-                          className="mt-2"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                          onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
+                          className=&quot;mt-2&quot;                          onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
                         >
                           <MessageSquare className=&quot;mr-1 h-3 w-3&quot; /> Message
                         </Button>
@@ -923,30 +571,18 @@ function ProjectDetailsContent() {_const _router = useRouter();
                     </div>
                   </div>
                   
-<<<<<<< HEAD
                   <div className=&quot;flex items-start gap-4&quot;>
                     <Avatar className=&quot;h-10 w-10&quot;>
                       {project.talent_profile?.profile_picture_url ? (
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
-                          loading=&quot;lazy&quot;
-=======
-                  <div className="flex items-start gap-4">
-                    <Avatar className="h-10 w-10">
-                      {_project.talent_profile?.profile_picture_url ? (
-                        <img
-                          src={project.talent_profile.profile_picture_url}
-                          alt={_project.talent_profile.full_name}
-                          loading="lazy"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        />
+                          loading=&quot;lazy&quot;                        />
                       ) : (
                         <User className=&quot;h-6 w-6&quot; />
                       )}
                     </Avatar>
                     <div>
-<<<<<<< HEAD
                       <h3 className=&quot;font-semibold&quot;>
                         {project.talent_profile?.full_name || &quot;Client&quot;}
                       </h3>
@@ -955,18 +591,7 @@ function ProjectDetailsContent() {_const _router = useRouter();
                         <Button
                           variant=&quot;outline&quot;
                           size=&quot;sm&quot;
-                          className=&quot;mt-2&quot;
-=======
-                      <h3 className="font-semibold">
-                        {_project.talent_profile?.full_name || "Client"}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">Project Owner</p>
-                      {_isTalent && (_<Button
-                          variant="outline"
-                          size="sm"
-                          className="mt-2"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                          onClick={() => router.push(`/messages?clientId=${project.client_id}`)}
+                          className=&quot;mt-2&quot;                          onClick={() => router.push(`/messages?clientId=${project.client_id}`)}
                         >
                           <MessageSquare className=&quot;mr-1 h-3 w-3&quot; /> Message
                         </Button>
@@ -977,18 +602,11 @@ function ProjectDetailsContent() {_const _router = useRouter();
               </CardContent>
             </Card>
             
-<<<<<<< HEAD
             {/* Project Status Card */}
-            <Card className=&quot;mt-6&quot;>
-=======
-            {_/* Project Status Card */}
-            <Card className="mt-6">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <CardHeader>
+            <Card className=&quot;mt-6&quot;>              <CardHeader>
                 <CardTitle>Project Status</CardTitle>
               </CardHeader>
               <CardContent>
-<<<<<<< HEAD
                 <div className=&quot;space-y-2&quot;>
                   <div className=&quot;flex justify-between items-center&quot;>
                     <span className=&quot;text-sm font-medium&quot;>Current Status:</span>
@@ -1005,44 +623,16 @@ function ProjectDetailsContent() {_const _router = useRouter();
                   <div className=&quot;flex justify-between items-center&quot;>
                     <span className=&quot;text-sm font-medium&quot;>Start Date:</span>
                     <span className=&quot;text-sm&quot;>
-                      {format(new Date(project.start_date), &quot;PPP&quot;)}
-=======
-                <div className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">Current Status:</span>
-                    <div>{_getStatusBadge(project.status)}</div>
-                  </div>
-                  
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">Creation Date:</span>
-                    <span className="text-sm">
-                      {_format(new Date(project.created_at), _"PPP")}
-                    </span>
-                  </div>
-                  
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">Start Date:</span>
-                    <span className="text-sm">
-                      {_format(new Date(project.start_date), _"PPP")}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </span>
+                      {format(new Date(project.start_date), &quot;PPP&quot;)}                    </span>
                   </div>
                 </div>
               </CardContent>
               
-<<<<<<< HEAD
               {/* Conditional Footer Based on Status */}
               {project.status === &quot;changes_requested&quot; && isClient && (
                 <CardFooter className=&quot;flex-col items-start gap-2 border-t pt-6&quot;>
                   <p className=&quot;text-sm text-amber-600 flex items-center gap-1&quot;>
-                    <AlertCircle className=&quot;h-4 w-4&quot; /> The talent has requested changes to this offer.
-=======
-              {_/* Conditional Footer Based on Status */}
-              {_project.status === "changes_requested" && isClient && (_<CardFooter className="flex-col items-start gap-2 border-t pt-6">
-                  <p className="text-sm text-amber-600 flex items-center gap-1">
-                    <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </p>
+                    <AlertCircle className=&quot;h-4 w-4&quot; /> The talent has requested changes to this offer.                  </p>
                   <Button 
                     variant=&quot;outline&quot;
                     onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
@@ -1053,47 +643,24 @@ function ProjectDetailsContent() {_const _router = useRouter();
                 </CardFooter>
               )}
               
-<<<<<<< HEAD
               {project.status === &quot;offer_sent&quot; && isClient && (
                 <CardFooter className=&quot;flex-col items-start gap-2 border-t pt-6&quot;>
-                  <p className=&quot;text-sm text-muted-foreground&quot;>
-=======
-              {_project.status === "offer_sent" && isClient && (
-                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
-                  <p className="text-sm text-muted-foreground">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    Waiting for the talent to accept your offer.
+                  <p className=&quot;text-sm text-muted-foreground&quot;>                    Waiting for the talent to accept your offer.
                   </p>
                 </CardFooter>
               )}
               
-<<<<<<< HEAD
               {project.status === &quot;completed&quot; && (
                 <CardFooter className=&quot;flex-col items-start gap-2 border-t pt-6&quot;>
                   <p className=&quot;text-sm text-green-600 flex items-center gap-1&quot;>
-                    <CheckCircle2 className=&quot;h-4 w-4&quot; /> This project has been completed.
-=======
-              {_project.status === "completed" && (
-                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
-                  <p className="text-sm text-green-600 flex items-center gap-1">
-                    <CheckCircle2 className="h-4 w-4" /> This project has been completed.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </p>
+                    <CheckCircle2 className=&quot;h-4 w-4&quot; /> This project has been completed.                  </p>
                 </CardFooter>
               )}
               
-<<<<<<< HEAD
               {project.status === &quot;canceled&quot; && (
                 <CardFooter className=&quot;flex-col items-start gap-2 border-t pt-6&quot;>
                   <p className=&quot;text-sm text-red-600 flex items-center gap-1&quot;>
-                    <XCircle className=&quot;h-4 w-4&quot; /> This project has been canceled.
-=======
-              {_project.status === "canceled" && (
-                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
-                  <p className="text-sm text-red-600 flex items-center gap-1">
-                    <XCircle className="h-4 w-4" /> This project has been canceled.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </p>
+                    <XCircle className=&quot;h-4 w-4&quot; /> This project has been canceled.                  </p>
                 </CardFooter>
               )}
             </Card>
@@ -1108,9 +675,5 @@ export default function ProjectDetails() {_return (
     <ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

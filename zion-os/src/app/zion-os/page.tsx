@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import Link from "next/link",
 export const metadata = {
   title: "Zion OS - Sovereign AI-Powered Digital Economies Platform | Zion Tech Group",
   description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.",
   keywords: "Zion OS, digital economy, blockchain, governance, marketplace, deployment, sovereign, AI-powered, Zion Tech Group"},
-=======
-import Link from "next/link";
-
-export const _metadata = {_title: "Zion OS - Sovereign AI-Powered Digital Economies Platform | Zion Tech Group", _description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, _governance, _identity, _and more.", _keywords: "Zion OS, _digital economy, _blockchain, _governance, _marketplace, _deployment, _sovereign, _AI-powered, _Zion Tech Group"};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function ZionOSPage() {_return (
     <div className="min-h-screen">
       {/* Hero Section */}

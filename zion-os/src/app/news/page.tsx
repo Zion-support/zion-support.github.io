@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import Link from "next/link",
 export const metadata = {
   title: "News & Insights - Zion Tech Group | Latest Technology Updates",
   description: "Stay updated with the latest news, insights, and thought leadership from Zion Tech Group. Discover industry trends, company updates, and technology innovations.",
   keywords: "news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group"},
-=======
-import Link from "next/link";
-
-export const _metadata = {_title: "News & Insights - Zion Tech Group | Latest Technology Updates", _description: "Stay updated with the latest news, _insights, _and thought leadership from Zion Tech Group. Discover industry trends, _company updates, _and technology innovations.", _keywords: "news, _insights, _technology updates, _AI news, _quantum computing, _cybersecurity, _Zion Tech Group"};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function NewsPage() {_return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -315,14 +308,8 @@ export default function NewsPage() {_return (
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
-=======
-      {_/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">        <div className="max-w-4xl mx-auto text-center">
           <div className="card">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Want to Share Your Story?

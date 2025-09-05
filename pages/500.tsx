@@ -1,29 +1,13 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 export default function Custom500() {
-  return (
-=======
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
-export default function Custom500() {_return (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    <>
+  return (    <>
       <Head>
         <title>500 - Server Error | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Something went wrong on our end. We're working to fix it." />
         <meta property="og: title" content="500 - Server Error" />
-        <meta property="og:description" content="Something went wrong on our end. We're working to fix it." />
-=======
-        <meta name=&quot;description&quot; content=&quot;Something went wrong on our end. We're working to fix it.&quot; />
-        <meta property=&quot;og:title&quot; content=&quot;500 - Server Error&quot; />
-        <meta property=&quot;og:description&quot; content=&quot;Something went wrong on our end. We're working to fix it.&quot; />
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      </Head>
+        <meta property="og:description" content="Something went wrong on our end. We're working to fix it." />      </Head>
       
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center px-4&quot;>
         <div className=&quot;text-center&quot;>
@@ -34,12 +18,7 @@ export default function Custom500() {_return (
             <h2 className=&quot;text-3xl font-semibold text-white mb-4&quot;>
               Server Error
             </h2>
-<<<<<<< HEAD
-            <p className="text-white/70 text-lg max-w-md mx-auto mb-8">
-=======
-            <p className=&quot;text-white/70 text-lg max-w-md mx-auto mb-8&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-              Something went wrong on our end. We're working to fix it. 
+            <p className="text-white/70 text-lg max-w-md mx-auto mb-8">              Something went wrong on our end. We're working to fix it. 
               Please try again in a few moments.
             </p>
           </div>
@@ -76,9 +55,5 @@ export default function Custom500() {_return (
         </div>
       </div>
     </>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

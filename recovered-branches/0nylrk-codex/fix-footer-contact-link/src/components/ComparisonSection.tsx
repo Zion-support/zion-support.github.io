@@ -1,28 +1,17 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",
 import { Button } from "./ui/button",
 import { CheckCircle2 } from "lucide-react",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",
-=======
-import { GradientHeading } from &quot;./GradientHeading&quot;;
-import { Button } from &quot;./ui/button&quot;;
-import { CheckCircle2 } from &quot;lucide-react&quot;;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from &quot;./ui/table&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 export function ComparisonSection() {
   return (
     <section className=&quot;py-20 bg-zion-blue-dark&quot;>
       <div className=&quot;container mx-auto px-4 sm:px-6 lg:px-8&quot;>
         <div className=&quot;text-center mb-12&quot;>
-=======
 
 export function ComparisonSection() {_return (_<section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <GradientHeading>Compare & Save</GradientHeading>
           <p className=&quot;mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto&quot;>
             See how Zion can drastically reduce your IT costs compared to traditional providers
@@ -42,7 +31,6 @@ export function ComparisonSection() {_return (_<section className="py-20 bg-zion
               </TableHeader>
               <TableBody>
                 {[
-<<<<<<< HEAD
                   { service: &quot;Server Hosting&quot;, traditional: &quot;$1,200/mo&quot;, zion: &quot;$650/mo&quot;, savings: &quot;45%&quot; },
                   { service: &quot;IT Equipment&quot;, traditional: &quot;Full Purchase&quot;, zion: &quot;Flexible Rental&quot;, savings: &quot;60%&quot; },
                   { service: &quot;24/7 Support&quot;, traditional: &quot;$2,500/mo&quot;, zion: &quot;$950/mo&quot;, savings: &quot;62%&quot; },
@@ -52,16 +40,7 @@ export function ComparisonSection() {_return (_<section className="py-20 bg-zion
                     <TableCell className=&quot;font-medium text-white&quot;>{item.service}</TableCell>
                     <TableCell className=&quot;text-center text-zion-slate-light&quot;>{item.traditional}</TableCell>
                     <TableCell className=&quot;text-center text-zion-cyan font-semibold&quot;>{item.zion}</TableCell>
-                    <TableCell className=&quot;text-center text-green-400 font-bold&quot;>{item.savings}</TableCell>
-=======
-                  { service: "Server Hosting", _traditional: "$1, _200/mo", _zion: "$650/mo", _savings: "45%"}, _{_service: "IT Equipment", _traditional: "Full Purchase", _zion: "Flexible Rental", _savings: "60%"}, _{_service: "24/7 Support", _traditional: "$2, _500/mo", _zion: "$950/mo", _savings: "62%"}, _{_service: "Storage Solutions", _traditional: "$800/mo", _zion: "$350/mo", _savings: "56%"}, _{_service: "Marketplace Listings", _traditional: "$99/mo", _zion: "Free", _savings: "100%"}].map((item, _index) => (
-                  <TableRow key={_index} className="border-b border-zion-blue">
-                    <TableCell className="font-medium text-white">{_item.service}</TableCell>
-                    <TableCell className="text-center text-zion-slate-light">{_item.traditional}</TableCell>
-                    <TableCell className="text-center text-zion-cyan font-semibold">{_item.zion}</TableCell>
-                    <TableCell className="text-center text-green-400 font-bold">{_item.savings}</TableCell>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </TableRow>
+                    <TableCell className=&quot;text-center text-green-400 font-bold&quot;>{item.savings}</TableCell>                  </TableRow>
                 ))}
               </TableBody>
             </Table>

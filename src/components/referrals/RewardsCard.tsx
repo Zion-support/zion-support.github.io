@@ -1,25 +1,15 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralReward } from "@/types/referrals",
-import { formatDate } from "@/utils/referralUtils",
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { ReferralReward } from &quot;@/types/referrals&quot;;
-import { formatDate } from &quot;@/utils/referralUtils&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import { BadgeDollarSign, Badge } from 'lucide-react'
+import { formatDate } from "@/utils/referralUtils",import { BadgeDollarSign, Badge } from 'lucide-react'
 
 interface RewardsCardProps {
   rewards: ReferralReward[],
   isLoading: boolean
 }
-=======
 
 interface RewardsCardProps {_rewards: ReferralReward[];
   isLoading: boolean;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 export function RewardsCard(_{_rewards, _isLoading}: RewardsCardProps) {_if (isLoading) {
     return (
@@ -37,13 +27,8 @@ export function RewardsCard(_{_rewards, _isLoading}: RewardsCardProps) {_if (isL
           </div>
         </CardContent>
       </Card>
-<<<<<<< HEAD
     )
   }
-=======
-    );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   if (rewards.length === 0) {_return (
       <Card>
         <CardHeader>
@@ -62,13 +47,8 @@ export function RewardsCard(_{_rewards, _isLoading}: RewardsCardProps) {_if (isL
           </div>
         </CardContent>
       </Card>
-<<<<<<< HEAD
     )
   }
-=======
-    );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (_<Card>
       <CardHeader>
         <CardTitle className=&quot;flex items-center gap-2&quot;>
@@ -78,23 +58,13 @@ export function RewardsCard(_{_rewards, _isLoading}: RewardsCardProps) {_if (isL
         <CardDescription>Rewards earned from successful referrals</CardDescription>
       </CardHeader>
       <CardContent>
-<<<<<<< HEAD
         <div className=&quot;space-y-4&quot;>
           {rewards.map((reward, index) => (
             <div 
               key={reward.id}
               className={`flex justify-between items-start ${
                 index !== rewards.length - 1 ? &quot;border-b pb-3&quot; : ""
-              }`}
-=======
-        <div className="space-y-4">
-          {_rewards.map((reward, _index) => (
-            <div 
-              key={reward.id}
-              className={_`flex justify-between items-start ${
-                index !== rewards.length - 1 ? "border-b pb-3" : ""}`}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              }`}            >
               <div>
                 <div className="flex items-center gap-2">
                   {_reward.reward_type === 'credit' ? (

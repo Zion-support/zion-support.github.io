@@ -1,27 +1,13 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { SEO } from "@/components/SEO",
 import { ApplicationsTracker } from "@/components/jobs/applications",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Briefcase, Inbox } from 'lucide-react'
 import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { useIsMobile } from "@/hooks/use-mobile",
-=======
-import { SEO } from &quot;@/components/SEO&quot;;
-import { ApplicationsTracker } from &quot;@/components/jobs/applications&quot;;
-import { Card, CardHeader, CardTitle, CardContent } from &quot;@/components/ui/card&quot;;
-import { Briefcase, Inbox } from 'lucide-react'
-import { ProtectedRoute } from &quot;@/components/ProtectedRoute&quot;;
-import { useIsMobile } from &quot;@/hooks/use-mobile&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-function ApplicationStatusTrackerContent() {
+import { useIsMobile } from "@/hooks/use-mobile",function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
-=======
 
 function ApplicationStatusTrackerContent() {_const _isMobile = useIsMobile();
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <>
@@ -59,9 +45,5 @@ export default function ApplicationStatusTracker() {_return (
     <ProtectedRoute>
       <ApplicationStatusTrackerContent />
     </ProtectedRoute>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

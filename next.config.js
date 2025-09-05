@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
@@ -7,7 +6,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true
   },
-<<<<<<< HEAD
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
   images: {
@@ -17,21 +15,7 @@ const nextConfig = {
       'images.unsplash.com',
       'via.placeholder.com'
     ],
-    formats: ['image/webp', 'image/avif'],
-=======
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  pageExtensions: [&apos;tsx&apos;, &apos;ts&apos;, &apos;jsx&apos;, &apos;js&apos;],
-  trailingSlash: true,
-  images: {
-    domains: [
-      &apos;localhost&apos;,
-      &apos;ziontechgroup.com&apos;,
-      &apos;images.unsplash.com&apos;,
-      &apos;via.placeholder.com&apos;],
-    formats: [&apos;image/webp&apos;, &apos;image/avif&apos;],
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    formats: ['image/webp', 'image/avif'],    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000
   },
@@ -75,7 +59,6 @@ const nextConfig = {
         poll: 1000,
         aggregateTimeout: 300
       }
-=======
 const nextConfig = {_reactStrictMode: true, _eslint: {
     ignoreDuringBuilds: true, },
   typescript: {_ignoreBuildErrors: true, },
@@ -87,7 +70,6 @@ const nextConfig = {_reactStrictMode: true, _eslint: {
       config.watchOptions = {
         ignored: [
           '**/node_modules/**', _'**/.git/**', _'**/pages_backup*/**', _'**/pages.*/**', _'**/pages-*/**', _'**/pages_disabled*/**', _'**/pages.disabled*/**', _'**/pages.broken*/**', _'**/pages.corrupted*/**', _'**/pages.old*/**', _'**/pages._*/**', _'**/pages.__*/**', _'**/backup-pages/**', _'**/src.pages.disabled/**', _'**/lib_backup*/**', _'**/src_backup*/**', _'**/corrupted-files-backup*/**', _'**/performance-reports*/**', _'**/log-analysis-reports*/**', _'**/link-reports*/**', _'**/lint-target*/**', _'**/monitoring*/**', _'**/pm2-automation*/**', _'**/automation/logs*/**', _'**/automation/backup*/**', _'**/performance-*.json', _'**/performance-*.js', _'**/performance-*.cjs', _'**/performance-*.sh', _'**/performance-*.html', _'**/performance-*.md', _'**/performance-*.txt', _], _poll: 1000, _aggregateTimeout: 300, };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
     return config
   }

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
@@ -11,25 +9,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge",
 import { Search, Filter } from 'lucide-react'
 import { SEO } from "@/components/SEO",
-=======
-import React, { useState } from &quot;react&quot;;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from &quot;@/components/ui/select&quot;;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from &quot;@/components/ui/table&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { Search, Filter } from 'lucide-react'
-import { SEO } from &quot;@/components/SEO&quot;;
-=======
-import React, {_useState} from "react";
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-// Mock data for support requests
-<<<<<<< HEAD
-const MOCK_SUPPORT_REQUESTS = [
+// Mock data for support requests,
+const MOCKSUPPORT_REQUESTS = [
   {
     id: &quot;SR-1001&quot;,
     user: &quot;john.doe@example.com&quot;,
@@ -39,7 +20,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: &quot;high&quot;,
     createdAt: &quot;2023-12-15T14:30:00Z&quot;,
     lastUpdated: &quot;2023-12-15T15:45:00Z&quot;,
-    category: &quot;authentication&quot;
+    category: &quot;authentication&quot
   },
   {
     id: &quot;SR-1002&quot;,
@@ -50,7 +31,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: &quot;high&quot;,
     createdAt: &quot;2023-12-14T09:15:00Z&quot;,
     lastUpdated: &quot;2023-12-15T13:20:00Z&quot;,
-    category: &quot;billing&quot;
+    category: &quot;billing&quot
   },
   {
     id: &quot;SR-1003&quot;,
@@ -61,7 +42,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: &quot;medium&quot;,
     createdAt: &quot;2023-12-15T11:00:00Z&quot;,
     lastUpdated: &quot;2023-12-15T11:00:00Z&quot;,
-    category: &quot;billing&quot;
+    category: &quot;billing&quot
   },
   {
     id: &quot;SR-1004&quot;,
@@ -72,7 +53,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: &quot;low&quot;,
     createdAt: &quot;2023-12-13T16:45:00Z&quot;, 
     lastUpdated: &quot;2023-12-13T16:45:00Z&quot;,
-    category: &quot;api&quot;
+    category: &quot;api&quot
   },
   {
     id: &quot;SR-1005&quot;,
@@ -83,7 +64,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: &quot;high&quot;,
     createdAt: &quot;2023-12-12T10:30:00Z&quot;,
     lastUpdated: &quot;2023-12-15T09:15:00Z&quot;,
-    category: &quot;disputes&quot;
+    category: &quot;disputes&quot
   },
   {
     id: &quot;SR-1006&quot;,
@@ -94,7 +75,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: &quot;medium&quot;,
     createdAt: &quot;2023-12-08T13:20:00Z&quot;,
     lastUpdated: &quot;2023-12-15T08:30:00Z&quot;,
-    category: &quot;verification&quot;
+    category: &quot;verification&quot
   },
   {
     id: &quot;SR-1007&quot;,
@@ -105,116 +86,80 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: &quot;medium&quot;,
     createdAt: &quot;2023-12-10T15:10:00Z&quot;,
     lastUpdated: &quot;2023-12-13T11:25:00Z&quot;,
-    category: &quot;profile&quot;
+    category: &quot;profile&quot
   }
 ],
 
 export default function SupportRequests() {
-<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState(""),
   const [statusFilter, setStatusFilter] = useState<string | null>(null),
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null),
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
-=======
-  const [searchQuery, setSearchQuery] = useState("&quot;);
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null),const MOCK_SUPPORT_REQUESTS = [
+  {id: "SR-1001", user: "john.doe@example.com", userId: "user-123", issue: "Cannot access account after password reset", status: "open", priority: "high", createdAt: "2023-12-15T14:30:00Z", lastUpdated: "2023-12-15T15:45:00Z", category: "authentication"},
+  {id: "SR-1002", user: "sarah.smith@company.co", userId: "user-456", issue: "Payment failed but funds were deducted", status: "in-progress", priority: "high", createdAt: "2023-12-14T09:15:00Z", lastUpdated: "2023-12-15T13:20:00Z", category: "billing"},
+  {id: "SR-1003", user: "tech.guru@startup.io", userId: "user-789", issue: "Unable to download invoice PDF", status: "open", priority: "medium", createdAt: "2023-12-15T11:00:00Z", lastUpdated: "2023-12-15T11:00:00Z", category: "billing"},
+  {id: "SR-1004", user: "developer@codelab.dev", userId: "user-235", issue: "API integration documentation is outdated", status: "open", priority: "low", createdAt: "2023-12-13T16:45:00Z", lastUpdated: "2023-12-13T16:45:00Z", category: "api"},
+  {id: "SR-1005", user: "maria.rodriguez@design.co", userId: "user-567", issue: "Dispute with freelancer over delivered work quality", status: "in-progress", priority: "high", createdAt: "2023-12-12T10:30:00Z", lastUpdated: "2023-12-15T09:15:00Z", category: "disputes"},
+  {id: "SR-1006", user: "alex.wong@datacompany.com", userId: "user-890", issue: "Profile verification pending for over 7 days", status: "resolved", priority: "medium", createdAt: "2023-12-08T13:20:00Z", lastUpdated: "2023-12-15T08:30:00Z", category: "verification"},
+  {id: "SR-1007", user: "jamie.taylor@tech.org", userId: "user-345", issue: "Cannot upload portfolio images", status: "resolved", priority: "medium", createdAt: "2023-12-10T15:10:00Z", lastUpdated: "2023-12-13T11:25:00Z", category: "profile"}
+];
+
+export default function SupportRequests() {const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState<string | null>(null);
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-const _MOCK_SUPPORT_REQUESTS = [
-  {_id: "SR-1001", _user: "john.doe@example.com", _userId: "user-123", _issue: "Cannot access account after password reset", _status: "open", _priority: "high", _createdAt: "2023-12-15T14:30:00Z", _lastUpdated: "2023-12-15T15:45:00Z", _category: "authentication"},
-  {_id: "SR-1002", _user: "sarah.smith@company.co", _userId: "user-456", _issue: "Payment failed but funds were deducted", _status: "in-progress", _priority: "high", _createdAt: "2023-12-14T09:15:00Z", _lastUpdated: "2023-12-15T13:20:00Z", _category: "billing"},
-  {_id: "SR-1003", _user: "tech.guru@startup.io", _userId: "user-789", _issue: "Unable to download invoice PDF", _status: "open", _priority: "medium", _createdAt: "2023-12-15T11:00:00Z", _lastUpdated: "2023-12-15T11:00:00Z", _category: "billing"},
-  {_id: "SR-1004", _user: "developer@codelab.dev", _userId: "user-235", _issue: "API integration documentation is outdated", _status: "open", _priority: "low", _createdAt: "2023-12-13T16:45:00Z", _lastUpdated: "2023-12-13T16:45:00Z", _category: "api"},
-  {_id: "SR-1005", _user: "maria.rodriguez@design.co", _userId: "user-567", _issue: "Dispute with freelancer over delivered work quality", _status: "in-progress", _priority: "high", _createdAt: "2023-12-12T10:30:00Z", _lastUpdated: "2023-12-15T09:15:00Z", _category: "disputes"},
-  {_id: "SR-1006", _user: "alex.wong@datacompany.com", _userId: "user-890", _issue: "Profile verification pending for over 7 days", _status: "resolved", _priority: "medium", _createdAt: "2023-12-08T13:20:00Z", _lastUpdated: "2023-12-15T08:30:00Z", _category: "verification"},
-  {_id: "SR-1007", _user: "jamie.taylor@tech.org", _userId: "user-345", _issue: "Cannot upload portfolio images", _status: "resolved", _priority: "medium", _createdAt: "2023-12-10T15:10:00Z", _lastUpdated: "2023-12-13T11:25:00Z", _category: "profile"}
-];
-
-export default function SupportRequests() {_const [searchQuery, _setSearchQuery] = useState("");
-  const [statusFilter, _setStatusFilter] = useState<string | null>(null);
-  const [priorityFilter, _setPriorityFilter] = useState<string | null>(null);
-  const [categoryFilter, _setCategoryFilter] = useState<string | null>(null);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  // Apply filters to the request data
-  const _filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
-    // Apply search query filter
-    if (searchQuery && 
+  // Apply filters to the request data,
+const filteredRequests = MOCKSUPPORT_REQUESTS.filter(request => {
+    // Apply search query filter,
+if (searchQuery && 
         !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
-<<<<<<< HEAD
       return false
     }
     
-    // Apply status filter
-    if (statusFilter && request.status !== statusFilter) {
+    // Apply status filter,
+if (statusFilter && request.status !== statusFilter) {
       return false
     }
     
-    // Apply priority filter
-    if (priorityFilter && request.priority !== priorityFilter) {
+    // Apply priority filter,
+if (priorityFilter && request.priority !== priorityFilter) {
       return false
     }
     
-    // Apply category filter
-    if (categoryFilter && request.category !== categoryFilter) {
+    // Apply category filter,
+if (categoryFilter && request.category !== categoryFilter) {
       return false
-    }
-=======
-      return false;}
-    
-    // Apply status filter
-    if (statusFilter && request.status !== statusFilter) {_return false;}
-    
-    // Apply priority filter
-    if (priorityFilter && request.priority !== priorityFilter) {_return false;}
-    
-    // Apply category filter
-    if (categoryFilter && request.category !== categoryFilter) {_return false;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    
+    }    
     return true
   }),
   
-  // Count by status for the summary dashboard
-<<<<<<< HEAD
-  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length,
-  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length,
-  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length,
-  const totalCount = MOCK_SUPPORT_REQUESTS.length,
+  // Count by status for the summary dashboard,
+const openCount = MOCKSUPPORT_REQUESTS.filter(r => r.status === 'open').length,
+  const inProgressCount = MOCKSUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length,
+  const resolvedCount = MOCKSUPPORT_REQUESTS.filter(r => r.status === 'resolved').length,
+  const totalCount = MOCKSUPPORT_REQUESTS.length,
   
   const resetFilters = () => {
-<<<<<<< HEAD
     setSearchQuery(""),
     setStatusFilter(null),
     setPriorityFilter(null),
     setCategoryFilter(null)
-  },
-=======
-    setSearchQuery("&quot;);
-    setStatusFilter(null);
-    setPriorityFilter(null);
-    setCategoryFilter(null);
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-  const _openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
-  const _inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
-  const _resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
-  const _totalCount = MOCK_SUPPORT_REQUESTS.length;
+  },  const openCount = MOCKSUPPORT_REQUESTS.filter(r => r.status === 'open').length;
+  const inProgressCount = MOCKSUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
+  const resolvedCount = MOCKSUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
+  const totalCount = MOCKSUPPORT_REQUESTS.length;
   
-  const _resetFilters = () => {_setSearchQuery("");
+  const resetFilters = () => {setSearchQuery("");
     setStatusFilter(null);
     setPriorityFilter(null);
-    setCategoryFilter(null);};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+    setCategoryFilter(null)};
   
   return (_<>
-      <SEO 
-        title=&quot;Support Requests | Admin Dashboard&quot;
+      <SEO,
+title=&quot;Support Requests | Admin Dashboard&quot;
         description=&quot;Manage and track user support requests and issues&quot;
       />
       <div className=&quot;container mx-auto px-4 py-8&quot;>
@@ -235,56 +180,29 @@ export default function SupportRequests() {_const [searchQuery, _setSearchQuery]
           </div>
         </div>
         
-<<<<<<< HEAD
         {/* Status Cards */}
         <div className=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8&quot;>
           <Card>
             <CardHeader className=&quot;pb-2&quot;>
-              <CardTitle className=&quot;text-2xl font-bold&quot;>{openCount}</CardTitle>
-=======
-        {_/* Status Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-2xl font-bold">{_openCount}</CardTitle>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <CardDescription>Open Requests</CardDescription>
+              <CardTitle className=&quot;text-2xl font-bold&quot;>{openCount}</CardTitle>              <CardDescription>Open Requests</CardDescription>
             </CardHeader>
           </Card>
           
           <Card>
-<<<<<<< HEAD
             <CardHeader className=&quot;pb-2&quot;>
-              <CardTitle className=&quot;text-2xl font-bold&quot;>{inProgressCount}</CardTitle>
-=======
-            <CardHeader className="pb-2">
-              <CardTitle className="text-2xl font-bold">{_inProgressCount}</CardTitle>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <CardDescription>In Progress</CardDescription>
+              <CardTitle className=&quot;text-2xl font-bold&quot;>{inProgressCount}</CardTitle>              <CardDescription>In Progress</CardDescription>
             </CardHeader>
           </Card>
           
           <Card>
-<<<<<<< HEAD
             <CardHeader className=&quot;pb-2&quot;>
-              <CardTitle className=&quot;text-2xl font-bold&quot;>{resolvedCount}</CardTitle>
-=======
-            <CardHeader className="pb-2">
-              <CardTitle className="text-2xl font-bold">{_resolvedCount}</CardTitle>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <CardDescription>Resolved</CardDescription>
+              <CardTitle className=&quot;text-2xl font-bold&quot;>{resolvedCount}</CardTitle>              <CardDescription>Resolved</CardDescription>
             </CardHeader>
           </Card>
           
           <Card>
-<<<<<<< HEAD
             <CardHeader className=&quot;pb-2&quot;>
-              <CardTitle className=&quot;text-2xl font-bold&quot;>{totalCount}</CardTitle>
-=======
-            <CardHeader className="pb-2">
-              <CardTitle className="text-2xl font-bold">{_totalCount}</CardTitle>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <CardDescription>Total Requests</CardDescription>
+              <CardTitle className=&quot;text-2xl font-bold&quot;>{totalCount}</CardTitle>              <CardDescription>Total Requests</CardDescription>
             </CardHeader>
           </Card>
         </div>
@@ -297,14 +215,13 @@ export default function SupportRequests() {_const [searchQuery, _setSearchQuery]
             <TabsTrigger value=&quot;need-response&quot;>Need Response</TabsTrigger>
           </TabsList>
           
-<<<<<<< HEAD
           <TabsContent value=&quot;all&quot; className=&quot;mt-6&quot;>
             {/* Search and Filters */}
             <div className=&quot;flex flex-col md:flex-row gap-4 mb-6&quot;>
               <div className=&quot;relative flex-1&quot;>
                 <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400&quot; />
-                <Input
-                  placeholder=&quot;Search by ID, user or issue...&quot;
+                <Input,
+placeholder=&quot;Search by ID, user or issue...&quot;
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className=&quot;pl-10&quot;
@@ -313,26 +230,7 @@ export default function SupportRequests() {_const [searchQuery, _setSearchQuery]
               
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]&quot;>
-                  <SelectValue placeholder=&quot;Status&quot; />
-=======
-          <TabsContent value="all" className="mt-6">
-            {_/* Search and Filters */}
-            <div className="flex flex-col md:flex-row gap-4 mb-6">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                <Input
-                  placeholder="Search by ID, _user or issue..."
-                  value={_searchQuery}
-                  onChange={_(e) => setSearchQuery(e.target.value)}
-                  className="pl-10"
-                />
-              </div>
-              
-              <Select value={_statusFilter || ""} onValueChange={_value => setStatusFilter(value || null)}>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Status" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </SelectTrigger>
+                  <SelectValue placeholder=&quot;Status&quot; />                </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="&quot;>All Statuses</SelectItem>
                   <SelectItem value=&quot;open&quot;>Open</SelectItem>
@@ -341,16 +239,9 @@ export default function SupportRequests() {_const [searchQuery, _setSearchQuery]
                 </SelectContent>
               </Select>
               
-<<<<<<< HEAD
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]&quot;>
-                  <SelectValue placeholder=&quot;Priority&quot; />
-=======
-              <Select value={_priorityFilter || ""} onValueChange={_value => setPriorityFilter(value || null)}>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Priority" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </SelectTrigger>
+                  <SelectValue placeholder=&quot;Priority&quot; />                </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="&quot;>All Priorities</SelectItem>
                   <SelectItem value=&quot;high&quot;>High</SelectItem>
@@ -359,16 +250,9 @@ export default function SupportRequests() {_const [searchQuery, _setSearchQuery]
                 </SelectContent>
               </Select>
               
-<<<<<<< HEAD
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]&quot;>
-                  <SelectValue placeholder=&quot;Category&quot; />
-=======
-              <Select value={_categoryFilter || ""} onValueChange={_value => setCategoryFilter(value || null)}>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Category" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </SelectTrigger>
+                  <SelectValue placeholder=&quot;Category&quot; />                </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="&quot;>All Categories</SelectItem>
                   <SelectItem value=&quot;authentication&quot;>Authentication</SelectItem>
@@ -380,14 +264,8 @@ export default function SupportRequests() {_const [searchQuery, _setSearchQuery]
                 </SelectContent>
               </Select>
               
-<<<<<<< HEAD
               <Button variant=&quot;outline&quot; onClick={resetFilters} className=&quot;md:w-auto&quot;>
-                <Filter className=&quot;h-4 w-4 mr-2&quot; /> Reset Filters
-=======
-              <Button variant="outline" onClick={_resetFilters} className="md:w-auto">
-                <Filter className="h-4 w-4 mr-2" /> Reset Filters
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </Button>
+                <Filter className=&quot;h-4 w-4 mr-2&quot; /> Reset Filters              </Button>
             </div>
             
             {_/* Support Requests Table */}
@@ -408,38 +286,31 @@ export default function SupportRequests() {_const [searchQuery, _setSearchQuery]
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {_filteredRequests.map(_(request) => (
+                    {filteredRequests.map(_(request) => (
                       <TableRow key={request.id}>
-<<<<<<< HEAD
                         <TableCell className=&quot;font-medium&quot;>{request.id}</TableCell>
                         <TableCell>{request.user}</TableCell>
-                        <TableCell className=&quot;max-w-xs truncate&quot;>{request.issue}</TableCell>
-=======
-                        <TableCell className="font-medium">{_request.id}</TableCell>
-                        <TableCell>{_request.user}</TableCell>
-                        <TableCell className="max-w-xs truncate">{_request.issue}</TableCell>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        <TableCell>
-                          <Badge variant={_request.status === 'open' 
+                        <TableCell className=&quot;max-w-xs truncate&quot;>{request.issue}</TableCell>                        <TableCell>
+                          <Badge variant={request.status === 'open' 
                               ? 'default' 
                               : request.status === 'in-progress' 
                               ? 'secondary' 
                               : 'outline'}>
-                            {_request.status}
+                            {request.status}
                           </Badge>
                         </TableCell>
                         <TableCell>
-                          <Badge variant={_request.priority === 'high' 
+                          <Badge variant={request.priority === 'high' 
                               ? 'destructive' 
                               : request.priority === 'medium' 
                               ? 'default' 
                               : 'outline'}>
-                            {_request.priority}
+                            {request.priority}
                           </Badge>
                         </TableCell>
-                        <TableCell>{_request.category}</TableCell>
-                        <TableCell>{_new Date(request.createdAt).toLocaleDateString()}</TableCell>
-                        <TableCell>{_new Date(request.lastUpdated).toLocaleDateString()}</TableCell>
+                        <TableCell>{request.category}</TableCell>
+                        <TableCell>{new Date(request.createdAt).toLocaleDateString()}</TableCell>
+                        <TableCell>{new Date(request.lastUpdated).toLocaleDateString()}</TableCell>
                         <TableCell>
                           <Button variant=&quot;ghost&quot; size=&quot;sm&quot;>View</Button>
                           <Button variant=&quot;ghost&quot; size=&quot;sm&quot;>Assign</Button>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import ReactDOM from 'react-dom/client',
 import App from './App.tsx',
@@ -14,22 +13,7 @@ import { WhitelabelProvider } from '@/context/WhitelabelContext',
 import { AuthProvider } from '@/context/auth/AuthProvider',
 import { NotificationProvider } from './context',
 // Import analytics provider
-import { AnalyticsProvider } from './context/AnalyticsContext',
-=======
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
-import './index.css';
-
-// Import i18n configuration
-import './i18n';
-
-// Import auth and notification providers
-
-// Import analytics provider
-
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-// Render the app with proper provider structure
+import { AnalyticsProvider } from './context/AnalyticsContext',// Render the app with proper provider structure
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HelmetProvider>

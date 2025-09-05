@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -11,26 +9,9 @@ import { Badge } from "@/components/ui/badge",
 import { WebhookManager } from "./WebhookManager",
 import { IntegrationsSyncLog } from "./IntegrationsSyncLog",
 export function IntegrationsHub() {
-  const [activeTab, setActiveTab] = useState("marketplace"),
-=======
-import React, { useState } from &quot;react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
-import { IntegrationCards } from &quot;./IntegrationCards&quot;;
-import { ZapierIntegration } from &quot;./ZapierIntegration&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { WebhookManager } from &quot;./WebhookManager&quot;;
-import { IntegrationsSyncLog } from &quot;./IntegrationsSyncLog&quot;;
-
-export function IntegrationsHub() {
-  const [activeTab, setActiveTab] = useState(&quot;marketplace&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React, {_useState} from "react";
+  const [activeTab, setActiveTab] = useState("marketplace"),import React, {_useState} from "react";
 
 export function IntegrationsHub() {_const [activeTab, _setActiveTab] = useState("marketplace");
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <div className=&quot;space-y-6&quot;>
@@ -109,24 +90,15 @@ export function IntegrationsHub() {_const [activeTab, _setActiveTab] = useState(
         </Card>
       </div>
       
-<<<<<<< HEAD
-<<<<<<< HEAD
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="grid grid-cols-3 md: w-[400px]">
-=======
-      <Tabs value={activeTab} onValueChange={_setActiveTab} className="w-full">
-        <TabsList className="grid grid-cols-3 md:w-[400px]">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
+        <TabsList className="grid grid-cols-3 md: w-[400px]">          <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
           <TabsTrigger value="zapier">Zapier</TabsTrigger>
           <TabsTrigger value="webhooks">Webhooks</TabsTrigger>
-=======
       <Tabs value={activeTab} onValueChange={setActiveTab} className=&quot;w-full&quot;>
         <TabsList className=&quot;grid grid-cols-3 md:w-[400px]&quot;>
           <TabsTrigger value=&quot;marketplace&quot;>Marketplace</TabsTrigger>
           <TabsTrigger value=&quot;zapier&quot;>Zapier</TabsTrigger>
           <TabsTrigger value=&quot;webhooks&quot;>Webhooks</TabsTrigger>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         </TabsList>
         
         <div className=&quot;mt-6&quot;>

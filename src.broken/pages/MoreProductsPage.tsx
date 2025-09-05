@@ -1,30 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
-import { MORE_PRODUCTS } from "@/data/moreProductsData",
-=======
-import { useState } from &quot;react&quot;;
-import { DynamicListingPage } from &quot;@/components/DynamicListingPage&quot;;
-import { ProductListing } from &quot;@/types/listings&quot;;
-import { MORE_PRODUCTS } from &quot;@/data/moreProductsData&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-const CATEGORY_FILTERS = Array.from(
+import { MORE_PRODUCTS } from "@/data/moreProductsData",const CATEGORY_FILTERS = Array.from(
   new Set(MORE_PRODUCTS.map(p => p.category))
 ).map(c => ({ label: c, value: c })),
 
 export default function MoreProductsPage() {
   const [listings] = useState<ProductListing[]>([...MORE_PRODUCTS]),
-=======
 
 const _CATEGORY_FILTERS = Array.from(
   new Set(MORE_PRODUCTS.map(p => p.category))
 ).map(c => ({_label: c, _value: c}));
 
 export default function MoreProductsPage() {_const [listings] = useState<ProductListing[]>([...MORE_PRODUCTS]);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <DynamicListingPage

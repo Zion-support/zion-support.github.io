@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 import { defineConfig, devices } from @playwright/test',
 default defineConfig({
   testDir: tests/e2e',  use: {
-    baseURL: process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'},
-=======
-default defineConfig({_testDir: tests/e2e', _use: {
-    baseURL: process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000', _trace: on-first-retry'},
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  projects: [
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'},  projects: [
     {_name: Desktop Chrome', _use: {
         browserName: chromium', _channel: window.chrome'}
     },
@@ -25,10 +19,5 @@ default defineConfig({_testDir: tests/e2e', _use: {
     }
   ],
   reporter: [
-<<<<<<< HEAD
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
 }),
-=======
-    ['list'],    ['html', {_outputFolder: playwright-logs/html-report', _open: never'}]]
-});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

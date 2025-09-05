@@ -1,22 +1,11 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Progress } from "@/components/ui/progress",
-=======
-import React from &quot;react&quot;;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Progress } from &quot;@/components/ui/progress&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export function TeamStats() {
+import { Progress } from "@/components/ui/progress",export function TeamStats() {
   return (
-=======
 import React from "react";
 
 export function TeamStats() {_return (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <Card>
       <CardHeader>
         <CardTitle>Team Stats</CardTitle>
@@ -53,14 +42,8 @@ export function TeamStats() {_return (
           </div>
         </div>
         
-<<<<<<< HEAD
         <div className="pt-4 text-center border-t border-border mt-4">
-          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
-=======
-        <div className=&quot;pt-4 text-center border-t border-border mt-4&quot;>
-          <button className=&quot;text-sm text-blue-500 font-medium hover:text-blue-700&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-            View Full Analytics
+          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">            View Full Analytics
           </button>
         </div>
       </CardContent>

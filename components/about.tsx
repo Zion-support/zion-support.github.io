@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
@@ -15,63 +14,25 @@ export default function AboutPage() {
 	},
 
 	const pillars = [
-<<<<<<< HEAD
 		{ title: 'AI-first Engineering', icon: <Brain className="w-6 h-6" />, desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.' },
 		{ title: 'Platform and SRE', icon: <ShieldCheck className="w-6 h-6" />, desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.' },
 		{ title: 'Quantum R&D', icon: <Cpu className="w-6 h-6" />, desc: 'Exploratory quantum workloads with pragmatic business outcomes.' },
 		{ title: 'Global Delivery', icon: <Globe className="w-6 h-6" />, desc: 'Secure, reliable delivery with 24/7 support and 99.99% uptime.' }
-	],
-=======
-		{ title: 'AI-first Engineering', icon: <Brain className=&quot;w-6 h-6&quot; />, desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.' },
-		{ title: 'Platform and SRE', icon: <ShieldCheck className=&quot;w-6 h-6&quot; />, desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.' },
-		{ title: 'Quantum R&D', icon: <Cpu className=&quot;w-6 h-6&quot; />, desc: 'Exploratory quantum workloads with pragmatic business outcomes.' },
-		{ title: 'Global Delivery', icon: <Globe className=&quot;w-6 h-6&quot; />, desc: 'Secure, reliable delivery with 24/7 support and 99.99% uptime.' }
-=======
-import React from 'react';
-import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
+	],	];
 
-export default function AboutPage() {_const _contactInfo = {
-		mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
-
-	const _pillars = [
-		{_title: 'AI-first Engineering', _icon: <Brain className="w-6 h-6" />, _desc: 'LLM apps, _RAG, _guardrails, _evals and AI observability from day one.'},
-		{_title: 'Platform and SRE', _icon: <ShieldCheck className="w-6 h-6" />, _desc: 'GitOps, _IaC, _SLOs, _incident automation, _cost and compliance by default.'},
-		{_title: 'Quantum R&D', _icon: <Cpu className="w-6 h-6" />, _desc: 'Exploratory quantum workloads with pragmatic business outcomes.'},
-		{_title: 'Global Delivery', _icon: <Globe className="w-6 h-6" />, _desc: 'Secure, _reliable delivery with 24/7 support and 99.99% uptime.'}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-	];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
-<<<<<<< HEAD
 	return (
 		<UltraFuturisticBackground variant=&quot;holographic&quot; intensity=&quot;high&quot;>
 			<Head>
 				<title>About Us - Zion Tech Group</title>
-				<meta name=&quot;description&quot; content=&quot;Zion Tech Group builds outcome-driven AI, micro SaaS, and platform engineering solutions with transparent pricing and 24/7 support.&quot; />
-=======
-	return (_<UltraFuturisticBackground variant="holographic" intensity="high">
-			<Head>
-				<title>About Us - Zion Tech Group</title>
-				<meta name="description" content="Zion Tech Group builds outcome-driven AI, _micro SaaS, _and platform engineering solutions with transparent pricing and 24/7 support." />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-			</Head>
+				<meta name=&quot;description&quot; content=&quot;Zion Tech Group builds outcome-driven AI, micro SaaS, and platform engineering solutions with transparent pricing and 24/7 support.&quot; />			</Head>
 			<section className=&quot;relative py-24 px-4&quot;>
 				<div className=&quot;max-w-6xl mx-auto&quot;>
 					<div className=&quot;text-center mb-14&quot;>
 						<h1 className=&quot;text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-400 bg-clip-text text-transparent&quot;>
 							We build practical AI and platform solutions
 						</h1>
-<<<<<<< HEAD
 						<p className=&quot;mt-4 text-gray-300 max-w-3xl mx-auto&quot;>
-							From micro SaaS accelerators to enterprise AI services, we focus on measurable outcomes: faster delivery, higher reliability, and lower cost.
-=======
-						<p className="mt-4 text-gray-300 max-w-3xl mx-auto">
-							From micro SaaS accelerators to enterprise AI services, _we focus on measurable outcomes: faster delivery, _higher reliability, _and lower cost.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-						</p>
+							From micro SaaS accelerators to enterprise AI services, we focus on measurable outcomes: faster delivery, higher reliability, and lower cost.						</p>
 					</div>
 
 					<div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8 mb-12&quot;>
@@ -98,24 +59,14 @@ export default function AboutPage() {_const _contactInfo = {
 						</Card>
 					</div>
 
-<<<<<<< HEAD
 					<div className=&quot;grid grid-cols-1 md:grid-cols-4 gap-6 mb-16&quot;>
 						{pillars.map((p) => (
 							<Card key={p.title} className=&quot;bg-gradient-to-br from-gray-900/70 to-black/80 border border-gray-700/40 p-6&quot;>
 								<div className=&quot;flex items-center gap-3 mb-3 text-white&quot;>{p.icon}<span className=&quot;font-semibold&quot;>{p.title}</span></div>
-								<p className=&quot;text-gray-300 text-sm&quot;>{p.desc}</p>
-=======
-					<div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-						{_pillars.map((p) => (
-							<Card key={p.title} className="bg-gradient-to-br from-gray-900/70 to-black/80 border border-gray-700/40 p-6">
-								<div className="flex items-center gap-3 mb-3 text-white">{_p.icon}<span className="font-semibold">{_p.title}</span></div>
-								<p className="text-gray-300 text-sm">{_p.desc}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-							</Card>
+								<p className=&quot;text-gray-300 text-sm&quot;>{p.desc}</p>							</Card>
 						))}
 					</div>
 
-<<<<<<< HEAD
 					<Card className=&quot;bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8&quot;>
 						<div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
 							<div className=&quot;flex items-center gap-3 text-cyan-400&quot;>
@@ -129,24 +80,7 @@ export default function AboutPage() {_const _contactInfo = {
 							<div className=&quot;flex items-center gap-3 text-green-400&quot;>
 								<MapPin className=&quot;w-5 h-5&quot; />
 								<a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; className=&quot;hover:text-white&quot;>
-									{contactInfo.address}
-=======
-					<Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8">
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-							<div className="flex items-center gap-3 text-cyan-400">
-								<Phone className="w-5 h-5" />
-								<a href={_`tel:${contactInfo.mobile.replace(/[^+\d]/g, _'')}`} className="hover:text-white">{_contactInfo.mobile}</a>
-							</div>
-							<div className="flex items-center gap-3 text-purple-400">
-								<Mail className="w-5 h-5" />
-								<a href={_`mailto:${contactInfo.email}`} className="hover:text-white">{_contactInfo.email}</a>
-							</div>
-							<div className="flex items-center gap-3 text-green-400">
-								<MapPin className="w-5 h-5" />
-								<a href={_`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="hover:text-white">
-									{_contactInfo.address}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-								</a>
+									{contactInfo.address}								</a>
 							</div>
 						</div>
 						<div className=&quot;mt-6 flex justify-center&quot;>
@@ -159,7 +93,6 @@ export default function AboutPage() {_const _contactInfo = {
 	)
 }
 
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -211,31 +144,6 @@ export default function AboutPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
-=======
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-
-export default function AboutPage() {_const _values = [
-    {
-      icon: '🚀', _title: 'Innovation', _description: 'Constantly pushing boundaries and exploring new frontiers in technology', _color: 'text-cyan-400', _gradient: 'from-cyan-400 to-blue-500'},
-    {_icon: '🤖', _title: 'Autonomy', _description: 'Building systems that can operate independently and make intelligent decisions', _color: 'text-fuchsia-400', _gradient: 'from-fuchsia-400 to-purple-500'},
-    {_icon: '🌍', _title: 'Impact', _description: 'Creating technology that makes a positive difference in the world', _color: 'text-green-400', _gradient: 'from-green-400 to-emerald-500'}];
-
-  const _services = [
-    {_title: 'AI Development', _description: 'Advanced machine learning models, _natural language processing, _computer vision systems, _and autonomous decision making.', _icon: '🧠', _color: 'text-cyan-400', _gradient: 'from-cyan-400 to-blue-500'},
-    {_title: 'Automation Systems', _description: 'Cloud infrastructure automation, _CI/CD pipeline optimization, _self-healing applications, _and performance monitoring.', _icon: '⚙️', _color: 'text-fuchsia-400', _gradient: 'from-fuchsia-400 to-purple-500'}];
-
-  const _achievements = [
-    {_number: '600+', _label: 'Services', _color: 'text-cyan-400'},
-    {_number: '1000%', _label: 'ROI', _color: 'text-fuchsia-400'},
-    {_number: '24/7', _label: 'Support', _color: 'text-green-400'},
-    {_number: '99.9%', _label: 'SLA', _color: 'text-blue-400'}];
-
-  const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (
       {_/* Mission & Vision */}
     <>
@@ -299,7 +207,6 @@ export default function AboutPage() {_const _values = [
               The principles that guide our innovation and shape our future
             </p>
           </div>
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
             {values.map((value, index) => (
               <Card key={index} className=&quot;card-hover text-center group border-gradient-blue&quot; style={{ animationDelay: `${index * 0.1}s` }}>
@@ -309,20 +216,7 @@ export default function AboutPage() {_const _values = [
                   </div>
                 </div>
                 <h3 className={`text-2xl font-bold mb-4 ${value.color}`}>{value.title}</h3>
-                <p className=&quot;text-gray-400 leading-relaxed&quot;>{value.description}</p>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {_values.map(_(value, _index) => (
-              <Card key={index} className="card-hover text-center group border-gradient-blue" style={_{ animationDelay: `${index * 0.1}s` }}>
-                <div className="relative">
-                  <div className={_`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${value.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    {_value.icon}
-                  </div>
-                </div>
-                <h3 className={_`text-2xl font-bold mb-4 ${value.color}`}>{_value.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{_value.description}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </Card>
+                <p className=&quot;text-gray-400 leading-relaxed&quot;>{value.description}</p>              </Card>
             ))}
           </div>
         </div>
@@ -336,7 +230,6 @@ export default function AboutPage() {_const _values = [
               Comprehensive solutions that drive innovation and transformation
             </p>
           </div>
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12&quot;>
             {services.map((service, index) => (
               <Card key={index} className=&quot;card-hover group border-gradient-blue&quot; style={{ animationDelay: `${index * 0.1}s` }}>
@@ -348,22 +241,7 @@ export default function AboutPage() {_const _values = [
                   </div>
                   <div className=&quot;flex-1&quot;>
                     <h3 className={`text-2xl font-bold mb-4 ${service.color}`}>{service.title}</h3>
-                    <p className=&quot;text-gray-400 leading-relaxed&quot;>{service.description}</p>
-=======
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {_services.map(_(service, _index) => (
-              <Card key={index} className="card-hover group border-gradient-blue" style={_{ animationDelay: `${index * 0.1}s` }}>
-                <div className="flex items-start space-x-6">
-                  <div className="relative">
-                    <div className={_`w-16 h-16 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${service.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      {_service.icon}
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className={_`text-2xl font-bold mb-4 ${service.color}`}>{_service.title}</h3>
-                    <p className="text-gray-400 leading-relaxed">{_service.description}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </div>
+                    <p className=&quot;text-gray-400 leading-relaxed&quot;>{service.description}</p>                  </div>
                 </div>
               </Card>
             ))}
@@ -371,43 +249,23 @@ export default function AboutPage() {_const _values = [
         </div>
       </section>
 
-<<<<<<< HEAD
       <section className=&quot;section-padding bg-gradient-cursor&quot;>
         <div className=&quot;container-cursor&quot;>
           <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8&quot;>
             {achievements.map((achievement, index) => (
               <div key={index} className=&quot;text-center group&quot;>
                 <div className={`text-4xl md:text-5xl font-bold mb-3 ${achievement.color} group-hover:scale-110 transition-transform duration-300`}>{achievement.number}</div>
-                <div className=&quot;text-gray-400 text-sm md:text-base font-medium&quot;>{achievement.label}</div>
-=======
-      <section className="section-padding bg-gradient-cursor">
-        <div className="container-cursor">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {_achievements.map(_(achievement, _index) => (
-              <div key={index} className="text-center group">
-                <div className={_`text-4xl md:text-5xl font-bold mb-3 ${achievement.color} group-hover:scale-110 transition-transform duration-300`}>{_achievement.number}</div>
-                <div className="text-gray-400 text-sm md:text-base font-medium">{_achievement.label}</div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </div>
+                <div className=&quot;text-gray-400 text-sm md:text-base font-medium&quot;>{achievement.label}</div>              </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       <section className="section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-dots opacity-10" />
         <div className="container-cursor text-center relative z-10">
           <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">Ready to Join the Future?</h2>
-          <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-=======
-      <section className=&quot;section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden&quot;>
-        <div className=&quot;absolute inset-0 bg-dots opacity-10&quot; />
-        <div className=&quot;container-cursor text-center relative z-10&quot;>
-          <h2 className=&quot;text-responsive-lg font-bold text-white mb-8 text-shadow-lg&quot;>Ready to Join the Future?</h2>
-          <p className=&quot;text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-            Let's work together to build the next generation of autonomous technology and shape the future of innovation.
+          <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">            Let's work together to build the next generation of autonomous technology and shape the future of innovation.
           </p>
           <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center&quot;>
             <Button href=&quot;/contact&quot; size=&quot;lg&quot; className=&quot;bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow&quot;>Get in Touch</Button>
@@ -415,26 +273,15 @@ export default function AboutPage() {_const _values = [
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Contact Section */}
         <section className=&quot;section-padding bg-gradient-cursor-accent&quot;>
           <div className=&quot;container-cursor&quot;>
             <div className=&quot;text-center mb-16&quot;>
               <h2 className=&quot;text-4xl font-bold mb-6 text-white&quot;>Ready to Transform Your Business?</h2>
-              <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
-=======
-        {_/* Contact Section */}
-        <section className="section-padding bg-gradient-cursor-accent">
-          <div className="container-cursor">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-6 text-white">Ready to Transform Your Business?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                Get in touch with our experts today for a free consultation and discover how our 500+ revolutionary micro SaaS services can drive unprecedented growth
+              <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>                Get in touch with our experts today for a free consultation and discover how our 500+ revolutionary micro SaaS services can drive unprecedented growth
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 mb-12&quot;>
               <Card className=&quot;text-center p-8 bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-500/30&quot;>
                 <div className=&quot;text-4xl mb-4&quot;>📞</div>
@@ -460,36 +307,7 @@ export default function AboutPage() {_const _values = [
 
             <div className=&quot;text-center&quot;>
               <div className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-semibold text-lg mb-6&quot;>
-                🌐 Visit our website: {contactInfo.website}
-=======
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <Card className="text-center p-8 bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-500/30">
-                <div className="text-4xl mb-4">📞</div>
-                <h3 className="text-2xl font-bold text-white mb-2">Call Us</h3>
-                <p className="text-blue-400 font-semibold text-lg">{_contactInfo.mobile}</p>
-                <p className="text-gray-400 text-sm mt-2">Available 24/7 for urgent inquiries</p>
-              </Card>
-              
-              <Card className="text-center p-8 bg-gradient-to-br from-green-500/20 to-green-600/20 border border-green-500/30">
-                <div className="text-4xl mb-4">✉️</div>
-                <h3 className="text-2xl font-bold text-white mb-2">Email Us</h3>
-                <p className="text-green-400 font-semibold text-lg">{_contactInfo.email}</p>
-                <p className="text-gray-400 text-sm mt-2">Response within 2 hours guaranteed</p>
-              </Card>
-              
-              <Card className="text-center p-8 bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/30">
-                <div className="text-4xl mb-4">📍</div>
-                <h3 className="text-2xl font-bold text-white mb-2">Visit Us</h3>
-                <p className="text-purple-400 font-semibold text-sm">{_contactInfo.address}</p>
-                <p className="text-gray-400 text-sm mt-2">Global headquarters and innovation center</p>
-              </Card>
-            </div>
-
-            <div className="text-center">
-              <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-semibold text-lg mb-6">
-                🌐 Visit our website: {_contactInfo.website}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </div>
+                🌐 Visit our website: {contactInfo.website}              </div>
               <p className=&quot;text-gray-400 text-lg&quot;>
                 Start your 21-day free trial today and experience the future of technology
               </p>

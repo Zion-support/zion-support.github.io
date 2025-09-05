@@ -6,11 +6,6 @@ export class TestingSystem {_static async testUserInteraction(element: HTMLEleme
       case 'type': // Handle typing
         break,
       case 'hover': // Handle hover
-<<<<<<< HEAD
         break
-    }
-=======
-        break;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  }
+    }  }
 }

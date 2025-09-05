@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import Link from "next/link",
 export const metadata = {
   title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection",
   description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.",
   keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"},
-=======
-import Link from "next/link";
-
-export const _metadata = {_title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection", _description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, _we secure your digital assets.", _keywords: "cybersecurity, _threat protection, _security services, _compliance, _Zion Tech Group, _security solutions, _threat detection"};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function CybersecurityPage() {_return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -442,14 +435,8 @@ export default function CybersecurityPage() {_return (
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
-=======
-      {_/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">        <div className="max-w-4xl mx-auto text-center">
           <div className="card bg-gradient-to-r from-green-600/20 to-blue-600/20 border-green-500/30">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Secure Your Organization?

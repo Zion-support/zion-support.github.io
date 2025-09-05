@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -24,43 +22,9 @@ import {
 import { useAuth } from "@/hooks/useAuth",
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
-=======
-import React, { useState } from &quot;react&quot;;
-import { useForm, useFieldArray } from &quot;react-hook-form&quot;;
-import { zodResolver } from &quot;@hookform/resolvers/zod&quot;;
-import { z } from &quot;zod&quot;;
-import { useNavigate } from &quot;react-router-dom&quot;;
-import { 
-  Form, FormControl, FormField, FormItem, FormLabel, FormMessage 
-} from &quot;@/components/ui/form&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Textarea } from &quot;@/components/ui/textarea&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { 
-  Select, SelectContent, SelectItem, SelectTrigger, SelectValue 
-} from &quot;@/components/ui/select&quot;;
-import { AspectRatio } from &quot;@/components/ui/aspect-ratio&quot;;
-import { Separator } from &quot;@/components/ui/separator&quot;;
-import { toast } from &quot;@/components/ui/use-toast&quot;;
-import { 
-  User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, 
-  Trash2, Plus, CheckCircle2
-} from &quot;lucide-react&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { useTalentProfileEnhancer } from &quot;@/hooks/useTalentProfileEnhancer&quot;;
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-=======
-import React, {_useState} from "react";
-import {_Form, _FormControl, _FormField, _FormItem, _FormLabel, _FormMessage} from "@/components/ui/form";
-import {_Select, _SelectContent, _SelectItem, _SelectTrigger, _SelectValue} from "@/components/ui/select";
-import {_User, _Briefcase, _Star, _Calendar, _Globe, _DollarSign, _FileText, _Link, _Upload, _ArrowRight, _ArrowLeft, _Trash2, _Plus, _CheckCircle2} from "lucide-react";
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 // Define the form schema with validation
 const _talentSchema = z.object({_// Step 1: Basic Info
   basicInfo: z.object({
-<<<<<<< HEAD
     fullName: z.string().min(2, &quot;Name must be at least 2 characters&quot;),
     professionalTitle: z.string().min(2, &quot;Professional title is required&quot;),
     profilePicture: z.any().optional()}),
@@ -85,31 +49,11 @@ const _talentSchema = z.object({_// Step 1: Basic Info
     hourlyRate: z.string().optional(),
     portfolioLinks: z.array(
       z.object({
-        url: z.string().url(&quot;Must be a valid URL&quot;).min(5, &quot;URL is required&quot;)})
-=======
-    fullName: z.string().min(2, _"Name must be at least 2 characters"), _professionalTitle: z.string().min(2, _"Professional title is required"), _profilePicture: z.any().optional()}),
-  
-  // Step 2: Experience
-  experience: z.object({_bio: z.string().min(50, _"Bio must be at least 50 characters"), _keyProjects: z.array(
-      z.object({
-        title: z.string().min(2, _"Project title is required"), _description: z.string().min(10, _"Project description is required")})
-    ).min(1, "Add at least one key project"),
-    yearsOfExperience: z.string().min(1, "Years of experience is required")}),
-  
-  // Step 3: Skills & Tech Stack
-  skills: z.object({_skillsList: z.string().min(2, _"Add at least one skill"), _toolsUsed: z.string().optional()}),
-  
-  // Step 4: Availability & Preferences
-  availability: z.object({_availabilityType: z.string().min(1, _"Select your availability"), _timezone: z.string().min(1, _"Timezone is required"), _hourlyRate: z.string().optional(), _portfolioLinks: z.array(
-      z.object({
-        url: z.string().url("Must be a valid window.URL").min(5, _"window.URL is required")})
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    ).optional().default([]),
+        url: z.string().url(&quot;Must be a valid URL&quot;).min(5, &quot;URL is required&quot;)})    ).optional().default([]),
     cv: z.any().optional()})}),
 
 type TalentFormValues = z.infer<typeof talentSchema>,
 
-<<<<<<< HEAD
 export function TalentOnboardingForm() {
   const { user } = useAuth(),
   const navigate = useNavigate(),
@@ -121,24 +65,9 @@ export function TalentOnboardingForm() {
   
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),
   
-  const totalSteps = 4,
-=======
-export function TalentOnboardingForm() {_const { user} = useAuth();
-  const _navigate = useNavigate();
-  const [currentStep, setCurrentStep] = useState(1);
-  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null);
-  const [cvFileName, setCvFileName] = useState<string | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showSuccessScreen, setShowSuccessScreen] = useState(false);
-  
-  const {_enhanceProfile, _isGenerating} = useTalentProfileEnhancer();
-  
-  const _totalSteps = 4;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  
+  const totalSteps = 4,  
   const _form = useForm<TalentFormValues>({_resolver: zodResolver(talentSchema), _defaultValues: {
       basicInfo: {
-<<<<<<< HEAD
         fullName: user?.displayName || "&quot;,
         professionalTitle: "&quot;,
         profilePicture: undefined},
@@ -153,19 +82,9 @@ export function TalentOnboardingForm() {_const { user} = useAuth();
         availabilityType: "&quot;,
         timezone: "&quot;,
         hourlyRate: "&quot;,
-        portfolioLinks: [{ url: "&quot; }],
-=======
-        fullName: user?.displayName || "", _professionalTitle: "", _profilePicture: undefined},
-      experience: {_bio: "", _keyProjects: [{ title: "", _description: ""}],
-        yearsOfExperience: ""},
-      skills: {_skillsList: "", _toolsUsed: ""},
-      availability: {_availabilityType: "", _timezone: "", _hourlyRate: "", _portfolioLinks: [{ url: ""}],
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        cv: undefined}},
-<<<<<<< HEAD
+        portfolioLinks: [{ url: "&quot; }],        cv: undefined}},
     mode: "onChange"}),
   
-<<<<<<< HEAD
   const { fields: projectFields, append: appendProject, remove: removeProject } = 
     useFieldArray({
       name: "experience.keyProjects",
@@ -175,20 +94,6 @@ export function TalentOnboardingForm() {_const { user} = useAuth();
     useFieldArray({
       name: "availability.portfolioLinks",
       control: form.control}),
-=======
-    mode: &quot;onChange&quot;});
-  
-  const { fields: projectFields, append: appendProject, remove: removeProject } = 
-    useFieldArray({
-      name: &quot;experience.keyProjects&quot;,
-      control: form.control});
-    
-  const { fields: linkFields, append: appendLink, remove: removeLink } = 
-    useFieldArray({
-      name: &quot;availability.portfolioLinks&quot;,
-      control: form.control});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
   // Handle profile picture upload
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0],
@@ -200,7 +105,6 @@ export function TalentOnboardingForm() {_const { user} = useAuth();
       setProfilePictureUrl(reader.result as string)
     },
     reader.readAsDataURL(file),
-=======
   const {_fields: projectFields, _append: appendProject, _remove: removeProject} = 
     useFieldArray({_name: "experience.keyProjects", _control: form.control});
     
@@ -216,42 +120,20 @@ export function TalentOnboardingForm() {_const { user} = useAuth();
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string);};
     reader.readAsDataURL(file);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     // Store the file in the form data
-<<<<<<< HEAD
     form.setValue("basicInfo.profilePicture", file)
   },
-=======
-    form.setValue(&quot;basicInfo.profilePicture&quot;, file);
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
   // Handle CV upload
-<<<<<<< HEAD
   const handleCvUpload = async (file: File) => {
     const fileName = `cv-${user?.id}-${Date.now()}`,
-    const { error: cvError } = await supabase.storage
-=======
-  const _handleCvUpload = async (_file: File) => {_const _fileName = `cv-${user?.id}-${_Date.now()}`;
-    const {_error: cvError} = await supabase.storage
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      .from('resumes')
+    const { error: cvError } = await supabase.storage      .from('resumes')
       .upload(fileName, file),
       
-<<<<<<< HEAD
     if (cvError) {
-<<<<<<< HEAD
       console.error("Error uploading CV:", cvError),
-      throw new Error("Failed to upload CV")
-=======
-      console.error(&quot;Error uploading CV:&quot;, cvError);
-      throw new Error(&quot;Failed to upload CV&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
-=======
+      throw new Error("Failed to upload CV")    }
     if (cvError) {_throw new Error("Failed to upload CV");}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     // Get the public window.URL
     const {_data: { publicUrl} } = supabase.storage

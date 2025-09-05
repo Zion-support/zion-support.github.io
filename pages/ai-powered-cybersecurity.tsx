@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
@@ -25,15 +24,8 @@ export default function AIPoweredCybersecurityPage() {
 					&quot;Ransomware early detection and isolation&quot;,
 					&quot;Compliance evidence and audit-ready reports&quot;
 				]}
-<<<<<<< HEAD
 				industries={["Financial Services", "Healthcare", "SaaS", "Public Sector", "Critical Infrastructure"]}
-				canonical="https: //ziontechgroup.com/ai-powered-cybersecurity"
-=======
-				industries={[&quot;Financial Services&quot;, &quot;Healthcare&quot;, &quot;SaaS&quot;, &quot;Public Sector&quot;, &quot;Critical Infrastructure&quot;]}
-				canonical=&quot;https://ziontechgroup.com/ai-powered-cybersecurity&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+				canonical="https: //ziontechgroup.com/ai-powered-cybersecurity"import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
@@ -56,7 +48,6 @@ export default function AIPoweredCybersecurityPage() {_return (
 				]}
 				industries={_["Financial Services", _"Healthcare", _"SaaS", _"Public Sector", _"Critical Infrastructure"]}
 				canonical="https://ziontechgroup.com/ai-powered-cybersecurity"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 			/>
 		</>
 	)

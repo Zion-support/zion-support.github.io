@@ -1,23 +1,9 @@
-<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO',
 const ext = (url: string) => (
-<<<<<<< HEAD
 	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>
-),
-=======
-	<a className=&quot;text-cyan-400 underline&quot; href={`/out?u=${encodeURIComponent(url)}`} target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;>{url.replace('https://', '')}</Link>
-=======
-import React from 'react';
-import SEO from '../components/SEO';
+),);
 
-const _ext = (_url: string) => (
-	<a className="text-cyan-400 underline" href={_`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{_url.replace('https://', _'')}</a>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
-<<<<<<< HEAD
 export default function ServicesAdvertisingPage() {
 	return (
 		<div className=&quot;min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8&quot;>
@@ -29,32 +15,14 @@ export default function ServicesAdvertisingPage() {
     '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling',
     'Flexible deployment: SaaS or self-hosted options'
   ],
-=======
-export default function ServicesAdvertisingPage() {_return (
-		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-			<SEO title="Services Advertising | Zion Tech Group" description="Features, _benefits, _and market references for Zion Tech Group services" url="https://ziontechgroup.com/services-advertising/" />
-			<div className="max-w-6xl mx-auto space-y-10">
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services Advertising</h1>
-
-  const _benefits = [
-    '1000% ROI target with measurable KPIs', _'Transparent pricing with market references', _'Fast onboarding with templates and playbooks', _'Enterprise-grade security and compliance', _'24/7 support with SLAs', _'Proven architectures and reference implementations', _'No long-term lock-in; cancel anytime', _'SOC 2-aligned processes and data handling', _'Flexible deployment: SaaS or self-hosted options'
-  ];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 				{/* New: Core micro SaaS and AI additions */}
 				<section className=&quot;space-y-6&quot;>
 					<h2 className=&quot;text-2xl font-semibold text-white&quot;>AI Social Media Manager</h2>
 					<p className=&quot;text-slate-300&quot;>Generate, schedule, and optimize multi-platform posts with best-time recommendations and analytics.</p>
 					<ul className=&quot;list-disc list-inside text-slate-300 space-y-1&quot;>
 						<li>Typical SMB budget: $20–$80/mo</li>
-<<<<<<< HEAD
 						<li>References: {ext('https://buffer.com/pricing')}, {ext('https://www.hootsuite.com/plans')}</li>
-						<li>Try: <a href=&quot;/services/ai-social-media-manager&quot; className=&quot;text-cyan-400 underline&quot;>ziontechgroup.com/services/ai-social-media-manager</Link></li>
-=======
-						<li>References: {_ext('https://buffer.com/pricing')}, {_ext('https://www.hootsuite.com/plans')}</li>
-						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</a></li>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-					</ul>
+						<li>Try: <a href=&quot;/services/ai-social-media-manager&quot; className=&quot;text-cyan-400 underline&quot;>ziontechgroup.com/services/ai-social-media-manager</Link></li>					</ul>
 				</section>
 
   const _pricingRefs = [
@@ -135,14 +103,8 @@ export default function ServicesAdvertisingPage() {_return (
 					<p className=&quot;text-slate-300&quot;>Concise summaries with citations for PDFs, docs, and URLs with export options.</p>
 					<ul className=&quot;list-disc list-inside text-slate-300 space-y-1&quot;>
 						<li>Typical budget: $10–$30/mo + usage</li>
-<<<<<<< HEAD
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.pinecone.io/pricing/')}</li>
-						<li>Try: <a href=&quot;/services/ai-document-summarizer&quot; className=&quot;text-cyan-400 underline&quot;>ziontechgroup.com/services/ai-document-summarizer</Link></li>
-=======
-						<li>References: {_ext('https://openai.com/api/pricing')}, {_ext('https://www.pinecone.io/pricing/')}</li>
-						<li>Try: <a href="/services/ai-document-summarizer" className="text-cyan-400 underline">ziontechgroup.com/services/ai-document-summarizer</a></li>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-					</ul>
+						<li>Try: <a href=&quot;/services/ai-document-summarizer&quot; className=&quot;text-cyan-400 underline&quot;>ziontechgroup.com/services/ai-document-summarizer</Link></li>					</ul>
 				</section>
 
       <div className=&quot;min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8&quot;>
@@ -163,7 +125,6 @@ export default function ServicesAdvertisingPage() {_return (
           </header>
 
           <section>
-<<<<<<< HEAD
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6 text-center&quot;>New Real Micro SaaS</h2>
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
               {[ 
@@ -178,48 +139,20 @@ export default function ServicesAdvertisingPage() {_return (
                   <div className=&quot;text-2xl font-bold text-white&quot;>{o.price}</div>
                   <div className=&quot;text-gray-200 mt-2 mb-3&quot;>{o.name}</div>
                   <ul className=&quot;text-sm text-gray-300 space-y-1 list-disc list-inside&quot;>
-                    {o.points.map((p) => (<li key={p}>{p}</li>))}
-=======
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New Real Micro SaaS</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {_[ 
-                { name: 'API Security Scanner', _price: '$299/mo', _href: '/services/api-security-scanner', _points: ['OWASP Top 10', _'CI/CD checks', _'PII detection']},
-                {_name: 'Email DMARC Analyzer', _price: '$99/mo', _href: '/services/email-dmarc-analyzer', _points: ['DMARC/SPF/DKIM', _'BIMI readiness', _'Weekly reports']},
-                {_name: 'Browser Performance Monitor', _price: '$149/mo', _href: '/services/browser-performance-monitor', _points: ['RUM + Synthetic', _'Core Web Vitals', _'Alerts']},
-                {_name: 'Cloud Cost Optimizer', _price: '$399/mo', _href: '/services/cloud-cost-optimizer', _points: ['Anomalies', _'Rightsizing', _'Budgets']},
-                {_name: 'API Observability Starter', _price: '$149/mo', _href: '/services/api-observability-starter', _points: ['Traces', _'SLOs', _'Deps map']}
-              ].map(_(o) => (_<a key={_o.name} href={_o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
-                  <div className="text-sm text-gray-400 mb-1">From</div>
-                  <div className="text-2xl font-bold text-white">{_o.price}</div>
-                  <div className="text-gray-200 mt-2 mb-3">{_o.name}</div>
-                  <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
-                    {_o.points.map((p) => (<li key={p}>{_p}</li>))}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </ul>
+                    {o.points.map((p) => (<li key={p}>{p}</li>))}                  </ul>
                 </Link>
               ))}
             </div>
           </section>
 
           <section>
-<<<<<<< HEAD
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6 text-center&quot;>Why Zion Tech Group</h2>
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
               {benefits.map((b) => (
                 <div key={b} className=&quot;p-6 rounded-2xl bg-black/40 border border-gray-700/60&quot;>
                   <div className=&quot;flex items-start gap-3&quot;>
                     <CheckCircle className=&quot;w-5 h-5 text-emerald-400 mt-1&quot; />
-                    <p className=&quot;text-gray-200&quot;>{b}</p>
-=======
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Why Zion Tech Group</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {_benefits.map(_(b) => (
-                <div key={b} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-emerald-400 mt-1" />
-                    <p className="text-gray-200">{_b}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </div>
+                    <p className=&quot;text-gray-200&quot;>{b}</p>                  </div>
                 </div>
               ))}
             </div>
@@ -230,14 +163,8 @@ export default function ServicesAdvertisingPage() {_return (
 					<p className=&quot;text-slate-300&quot;>Scale Playwright/Puppeteer jobs with proxy pools, recorder-to-code and webhooks.</p>
 					<ul className=&quot;list-disc list-inside text-slate-300 space-y-1&quot;>
 						<li>Typical budget: $40–$200/mo</li>
-<<<<<<< HEAD
 						<li>References: {ext('https://apify.com/pricing')}, {ext('https://www.browserless.io/pricing')}</li>
-						<li>Try: <a href=&quot;/services/browser-automation-cloud&quot; className=&quot;text-cyan-400 underline&quot;>ziontechgroup.com/services/browser-automation-cloud</Link></li>
-=======
-						<li>References: {_ext('https://apify.com/pricing')}, {_ext('https://www.browserless.io/pricing')}</li>
-						<li>Try: <a href="/services/browser-automation-cloud" className="text-cyan-400 underline">ziontechgroup.com/services/browser-automation-cloud</a></li>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-					</ul>
+						<li>Try: <a href=&quot;/services/browser-automation-cloud&quot; className=&quot;text-cyan-400 underline&quot;>ziontechgroup.com/services/browser-automation-cloud</Link></li>					</ul>
 				</section>
 
 				<section className=&quot;space-y-6&quot;>
@@ -245,14 +172,8 @@ export default function ServicesAdvertisingPage() {_return (
 					<p className=&quot;text-slate-300&quot;>Load, latency and regression testing with CI gates and dashboards.</p>
 					<ul className=&quot;list-disc list-inside text-slate-300 space-y-1&quot;>
 						<li>Typical budget: $30–$150/mo</li>
-<<<<<<< HEAD
 						<li>References: {ext('https://k6.io/pricing')}, {ext('https://jmeter.apache.org/')}</li>
-						<li>Try: <a href=&quot;/services/api-performance-testing&quot; className=&quot;text-cyan-400 underline&quot;>ziontechgroup.com/services/api-performance-testing</Link></li>
-=======
-						<li>References: {_ext('https://k6.io/pricing')}, {_ext('https://jmeter.apache.org/')}</li>
-						<li>Try: <a href="/services/api-performance-testing" className="text-cyan-400 underline">ziontechgroup.com/services/api-performance-testing</a></li>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-					</ul>
+						<li>Try: <a href=&quot;/services/api-performance-testing&quot; className=&quot;text-cyan-400 underline&quot;>ziontechgroup.com/services/api-performance-testing</Link></li>					</ul>
 				</section>
 
 				<section className=&quot;space-y-6&quot;>
@@ -260,14 +181,8 @@ export default function ServicesAdvertisingPage() {_return (
 					<p className=&quot;text-slate-300&quot;>DMARC/SPF/DKIM health, blocklists, and inbox placement with alerts.</p>
 					<ul className=&quot;list-disc list-inside text-slate-300 space-y-1&quot;>
 						<li>Typical budget: $15–$60/mo</li>
-<<<<<<< HEAD
 						<li>References: {ext('https://dmarc.org/overview/')}, {ext('https://postmarkapp.com/support/category/dmarc')}</li>
-						<li>Try: <a href=&quot;/services/email-deliverability-monitor&quot; className=&quot;text-cyan-400 underline&quot;>ziontechgroup.com/services/email-deliverability-monitor</Link></li>
-=======
-						<li>References: {_ext('https://dmarc.org/overview/')}, {_ext('https://postmarkapp.com/support/category/dmarc')}</li>
-						<li>Try: <a href="/services/email-deliverability-monitor" className="text-cyan-400 underline">ziontechgroup.com/services/email-deliverability-monitor</a></li>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-					</ul>
+						<li>Try: <a href=&quot;/services/email-deliverability-monitor&quot; className=&quot;text-cyan-400 underline&quot;>ziontechgroup.com/services/email-deliverability-monitor</Link></li>					</ul>
 				</section>
 
 				<section className=&quot;space-y-6&quot;>
@@ -275,14 +190,8 @@ export default function ServicesAdvertisingPage() {_return (
 					<p className=&quot;text-slate-300&quot;>Transcripts, chapters, show notes, and SEO-ready blog pages.</p>
 					<ul className=&quot;list-disc list-inside text-slate-300 space-y-1&quot;>
 						<li>Typical budget: $10–$60/mo + usage</li>
-<<<<<<< HEAD
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.descript.com/pricing')}</li>
-						<li>Try: <a href=&quot;/services/podcast-transcription-insights&quot; className=&quot;text-cyan-400 underline&quot;>ziontechgroup.com/services/podcast-transcription-insights</Link></li>
-=======
-						<li>References: {_ext('https://openai.com/api/pricing')}, {_ext('https://www.descript.com/pricing')}</li>
-						<li>Try: <a href="/services/podcast-transcription-insights" className="text-cyan-400 underline">ziontechgroup.com/services/podcast-transcription-insights</a></li>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-					</ul>
+						<li>Try: <a href=&quot;/services/podcast-transcription-insights&quot; className=&quot;text-cyan-400 underline&quot;>ziontechgroup.com/services/podcast-transcription-insights</Link></li>					</ul>
 				</section>
 
 				<section id=&quot;ai-evaluation-orchestrator&quot; className=&quot;space-y-6&quot;>
@@ -340,7 +249,6 @@ export default function ServicesAdvertisingPage() {_return (
 				</section>
 
           <section>
-<<<<<<< HEAD
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6 text-center&quot;>New Micro SaaS & IT Solutions</h2>
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
               {[
@@ -367,36 +275,7 @@ export default function ServicesAdvertisingPage() {_return (
                     {o.refs.map((r) => (
                       <a key={r.n} href={r.u} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; className=&quot;inline-flex items-center gap-1 text-gray-300 hover:text-white&quot;>
                         <ExternalLink className=&quot;w-4 h-4&quot; /> {r.n}
-                      </Link>
-=======
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New Micro SaaS & IT Solutions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {_[
-                { name: 'Affiliate Marketing Tracker Pro', _price: '$99/mo', _href: '/affiliate-marketing-tracker-pro', _refs: [{ n: 'Refersion', _u: 'https://www.refersion.com/pricing'}] },
-                {_name: 'SMB Privacy Web Analytics', _price: '$12/mo', _href: '/smb-privacy-web-analytics', _refs: [{ n: 'Plausible', _u: 'https://plausible.io/#pricing'}] },
-                {_name: 'MSP Helpdesk & ITSM', _price: '$149/mo', _href: '/msp-helpdesk-itsm', _refs: [{ n: 'Freshdesk', _u: 'https://freshdesk.com/pricing'}] },
-                {_name: 'AI Content Creation Studio', _price: '$39/mo', _href: '/ai-content-creation-studio', _refs: [{ n: 'Jasper', _u: 'https://www.jasper.ai/pricing'}] },
-                {_name: 'E-commerce Returns Manager', _price: '$59/mo', _href: '/ecommerce-returns-manager', _refs: [{ n: 'Loop Returns', _u: 'https://www.loopreturns.com/pricing'}] },
-                {_name: 'Automated Email Follow-ups', _price: '$29/mo', _href: '/automated-email-followups', _refs: [{ n: 'Reply.io', _u: 'https://reply.io/pricing'}] },
-                {_name: 'Podcast Transcription Pro', _price: '$15/mo', _href: '/podcast-transcription-pro', _refs: [{ n: 'Rev', _u: 'https://www.rev.com/pricing'}] },
-                {_name: 'Freelancer Portfolio Builder', _price: '$9/mo', _href: '/freelancer-portfolio-builder', _refs: [{ n: 'Webflow', _u: 'https://webflow.com/pricing'}] },
-                {_name: 'Micro CRM for Local Business', _price: '$19/mo', _href: '/micro-crm-local-business', _refs: [{ n: 'Zoho Bigin', _u: 'https://www.zoho.com/bigin/pricing/'}] },
-                {_name: 'AI SEO Content Optimizer', _price: '$59/mo', _href: '/ai-seo-content-optimizer', _refs: [{ n: 'Surfer SEO', _u: 'https://surferseo.com/pricing/'}] }
-              ].map(_(o) => (_<div key={_o.name} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
-                  <a href={_o.href} className="block group">
-                    <div className="text-sm text-gray-400 mb-1">From</div>
-                    <div className="flex items-center justify-between">
-                      <div className="text-white font-semibold text-lg group-hover:text-cyan-300">{_o.name}</div>
-                      <div className="text-cyan-300 font-medium">{_o.price}</div>
-                    </div>
-                  </a>
-                  <div className="mt-3 text-sm text-gray-400 flex flex-wrap gap-3">
-                    {_o.refs.map((r) => (
-                      <a key={r.n} href={_r.u} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-gray-300 hover:text-white">
-                        <ExternalLink className="w-4 h-4" /> {_r.n}
-                      </a>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    ))}
+                      </Link>                    ))}
                   </div>
                 </div>
               ))}
@@ -404,24 +283,13 @@ export default function ServicesAdvertisingPage() {_return (
           </section>
 
           <section>
-<<<<<<< HEAD
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6 text-center&quot;>Average Market Price Ranges</h2>
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
               {[ 
                 { title: 'AI Evaluations & Prompting', range: '$50–$800/mo', links: [
                   { name: 'Weights & Biases', href: 'https://wandb.ai/site/pricing' },
                   { name: 'Humanloop', href: 'https://humanloop.com/pricing' },
-                  { name: 'Promptfoo', href: 'https://www.promptfoo.dev/pricing' }
-=======
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Average Market Price Ranges</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {_[ 
-                { title: 'AI Evaluations & Prompting', _range: '$50–$800/mo', _links: [
-                  { name: 'Weights & Biases', _href: 'https://wandb.ai/site/pricing'},
-                  {_name: 'Humanloop', _href: 'https://humanloop.com/pricing'},
-                  {_name: 'Promptfoo', _href: 'https://www.promptfoo.dev/pricing'}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                ]},
+                  { name: 'Promptfoo', href: 'https://www.promptfoo.dev/pricing' }                ]},
                 {_title: 'LLM Platforms', _range: '$100–$2, _000/mo', _links: [
                   { name: 'OpenAI', _href: 'https://openai.com/api/pricing'},
                   {_name: 'Anthropic', _href: 'https://www.anthropic.com/pricing'},
@@ -447,7 +315,6 @@ export default function ServicesAdvertisingPage() {_return (
                   {_name: 'SendGrid', _href: 'https://sendgrid.com/pricing/'},
                   {_name: 'Postmark', _href: 'https://postmarkapp.com/pricing'}
                 ]}
-<<<<<<< HEAD
               ].map((group) => (
                 <div key={group.title} className=&quot;p-6 rounded-2xl bg-black/40 border border-gray-700/60&quot;>
                   <div className=&quot;flex items-center justify-between mb-2&quot;>
@@ -456,18 +323,7 @@ export default function ServicesAdvertisingPage() {_return (
                   </div>
                   <ul className=&quot;text-slate-300 space-y-1&quot;>
                     {group.links.map((l) => (
-                      <li key={l.href}><a className=&quot;text-cyan-400 underline&quot; href={l.href} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>{l.name}</Link></li>
-=======
-              ].map(_(group) => (_<div key={_group.title} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-xl font-semibold text-white">{_group.title}</h3>
-                    <span className="text-sm text-gray-300">{_group.range}</span>
-                  </div>
-                  <ul className="text-slate-300 space-y-1">
-                    {_group.links.map((l) => (
-                      <li key={l.href}><a className="text-cyan-400 underline" href={_l.href} target="_blank" rel="noopener noreferrer">{_l.name}</a></li>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    ))}
+                      <li key={l.href}><a className=&quot;text-cyan-400 underline&quot; href={l.href} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>{l.name}</Link></li>                    ))}
                   </ul>
                 </div>
               ))}
@@ -478,27 +334,16 @@ export default function ServicesAdvertisingPage() {_return (
           </section>
 
           <section>
-<<<<<<< HEAD
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6 text-center&quot;>Explore by Category</h2>
             <div className=&quot;flex flex-wrap items-center justify-center gap-3&quot;>
               {anchors.map((a) => (
                 <a key={a.title} href={a.href} className=&quot;px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200&quot;>
                   {a.title}
-                </Link>
-=======
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Explore by Category</h2>
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              {_anchors.map(_(a) => (
-                <a key={a.title} href={_a.href} className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200">
-                  {_a.title}
-                </a>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              ))}
+                </Link>              ))}
             </div>
           </section>
 
           <section>
-<<<<<<< HEAD
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6 text-center&quot;>Contact Us</h2>
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
               <a href={`tel:${contact.mobile.replace(/[^+\d]/g, '')}`} className=&quot;p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 flex items-center gap-3&quot;>
@@ -512,28 +357,10 @@ export default function ServicesAdvertisingPage() {_return (
               <a href={`https://maps.google.com/?q=${encodeURIComponent(contact.address)}`} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; className=&quot;p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-emerald-500/40 flex items-center gap-3&quot;>
                 <MapPin className=&quot;w-5 h-5 text-emerald-400&quot; />
                 <span className=&quot;text-gray-200 text-sm&quot;>{contact.address}</span>
-              </Link>
-=======
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Contact Us</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <a href={_`tel:${contact.mobile.replace(/[^+\d]/g, _'')}`} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 flex items-center gap-3">
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <span className="text-gray-200">{_contact.mobile}</span>
-              </a>
-              <a href={_`mailto:${contact.email}`} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-purple-500/40 flex items-center gap-3">
-                <Mail className="w-5 h-5 text-purple-400" />
-                <span className="text-gray-200">{_contact.email}</span>
-              </a>
-              <a href={_`https://maps.google.com/?q=${encodeURIComponent(contact.address)}`} target="_blank" rel="noopener noreferrer" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-emerald-500/40 flex items-center gap-3">
-                <MapPin className="w-5 h-5 text-emerald-400" />
-                <span className="text-gray-200 text-sm">{_contact.address}</span>
-              </a>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </div>
+              </Link>            </div>
           </section>
 
           <section>
-<<<<<<< HEAD
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6 text-center&quot;>More Featured Solutions</h2>
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
               {[
@@ -548,25 +375,7 @@ export default function ServicesAdvertisingPage() {_return (
                   <div className=&quot;text-sm text-gray-400 mb-1&quot;>From</div>
                   <div className=&quot;text-2xl font-bold text-white&quot;>{o.price}</div>
                   <div className=&quot;text-gray-200 mt-2&quot;>{o.name}</div>
-                </Link>
-=======
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">More Featured Solutions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {_[
-                { name: 'Email Deliverability Monitor', _price: '$149/mo', _href: '/email-deliverability-monitor'},
-                {_name: 'API Security Scanner', _price: '$799/mo', _href: '/api-security-scanner'},
-                {_name: 'Domain & DNS Monitor', _price: '$89/mo', _href: '/domain-dns-monitor'},
-                {_name: 'Uptime & SLO Monitor', _price: '$99/mo', _href: '/uptime-slo-monitor'},
-                {_name: 'PDF Render API', _price: '$49/mo', _href: '/pdf-render-api'},
-                {_name: 'Database Performance Monitor', _price: '$299/mo', _href: '/database-performance-monitor'}
-              ].map(_(o) => (
-                <a key={_o.name} href={_o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
-                  <div className="text-sm text-gray-400 mb-1">From</div>
-                  <div className="text-2xl font-bold text-white">{_o.price}</div>
-                  <div className="text-gray-200 mt-2">{_o.name}</div>
-                </a>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              ))}
+                </Link>              ))}
             </div>
           </section>
         </div>

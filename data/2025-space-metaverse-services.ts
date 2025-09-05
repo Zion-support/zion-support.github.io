@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface SpaceMetaverseService {
   id: string,
   name: string,
@@ -33,43 +32,7 @@ export interface SpaceMetaverseService {
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number
-=======
-export interface SpaceMetaverseService {_id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number;
-    setupTime: string;
-    enterprise: string;};
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  marketPosition: string;
-  competitors: string[];
-  techStack: string[];
-  realImplementation: boolean;
-  implementationDetails: string;
-  roi: string;
-  useCases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-}
+  reviews: number}
 
 export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
   {_id: 'ai-powered-space-resource-intelligence', _name: 'AI-Powered Space Resource Intelligence Platform', _tagline: 'Discover and optimize space resources with AI-driven analytics', _description: 'Revolutionary platform that uses AI to analyze space data, _identify valuable resources, _and optimize space exploration and mining operations for maximum efficiency.', _category: 'Space Technology & Resource Intelligence', _price: {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const _fs = require('fs');
 const _path = require('path');
@@ -51,99 +50,8 @@ class GitWorkflow {_; constructor() {; this.projectRoot = process.cwd(); this.lo
 } catch (error) {_; this.log(`❌ Error running git workflow monitor: ${error.message}`); process.exit(1)}}};
 ;
 // Run the git workflow monitor;
-<<<<<<< HEAD
 const gitWorkflow = new GitWorkflow();
-gitWorkflow.run().catch(error = > {; process.exit(1)});
-=======
-
-
-#!/usr/bin/env node,
-const fs = require('fs'),
-const path = require('path'),
-const { execSync } = require('child_process'),
-,
-class GitWorkflow {,
-  constructor() {,
-    this.projectRoot = process.cwd(),
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow.log'),
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json'),
-    this.startTime = Date.now()
-  },
-,
-  log(message) {,
-    const timestamp = new Date().toISOString(),
-    const logMessage = `[${timestamp}] ${message}\n`,
-,
-    try {,
-      fs.appendFileSync(this.logFile, logMessage)
-    } catch (error) {,
-      console.error('Error writing to log: file:', error.message)
-    }
-  },
-,
-  async checkGitStatus() {,
-    try {,
-      this.log('📋 Checking git status...'),
-,
-      const status = execSync('git status --porcelain', {,
-        cw: d: this.projectRoot,
-        encodin: g: 'utf8'
-      }),
-,
-      const branches = execSync('git branch -a', {,
-        cw: d: this.projectRoot,
-        encodin: g: 'utf8'
-      }),
-,
-      const currentBranch = execSync('git branch --show-current', {,
-        cw: d: this.projectRoot,
-        encodin: g: 'utf8'
-      }).trim(),
-,
-      return {,
-        succes: s: true,
-        hasChange: s: status.trim().length > 0,
-        change: s: status.trim().split('\n').filter(line => line.trim()),
-        branche: s: branches.trim().split('\n'),
-        currentBranc: h: currentBranch
-      }
-    } catch (error) {,
-      return {,
-        succes: s: false,
-        erro: r: error.message,
-        hasChange: s: false,
-        change: s: [],
-        branche: s: [],
-        currentBranc: h: null
-      }
-    }
-  },
-,
-  async checkBranchHealth() {,
-    try {,
-      this.log('🌿 Checking branch health...'),
-,
-      const branches = execSync('git branch -r', {,
-        cw: d: this.projectRoot,
-        encodin: g: 'utf8'
-      }).trim().split('\n'),
-,
-      const branchInfo = [],
-,
-      for (const branch of branches) {,
-        const branchName = branch.replace('origin/', '').trim(),
-        if (branchName && !branchName.includes('HEAD')) {,
-          try {,
-<<<<<<< HEAD
-            const lastCommit = execSync(`git log -1 --format="%H %s %an %ad" origin/${branchName}`, {,
-              cw: d: this.projectRoot,
-              encodin: g: 'utf8'
-=======
-            const lastCommit = execSync(`git log -1 --format=&quot;%H %s %an %ad&quot; origin/${branchName}`, {,
-              cwd: this.projectRoot,
-              encoding: 'utf8'
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-            }).trim(),
+gitWorkflow.run().catch(error = > {; process.exit(1)});            }).trim(),
 ,
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,
               cw: d: this.projectRoot,
@@ -220,16 +128,9 @@ class GitWorkflow {,
         const branchName = branch.replace('origin/', '').trim(),
         if (branchName && !branchName.includes('HEAD') && branchName !== mainBranch) {,
           try {,
-<<<<<<< HEAD
             const lastCommit = execSync(`git log -1 --format="%ad" origin/${branchName}`, {,
               cw: d: this.projectRoot,
-              encodin: g: 'utf8'
-=======
-            const lastCommit = execSync(`git log -1 --format=&quot;%ad&quot; origin/${branchName}`, {,
-              cwd: this.projectRoot,
-              encoding: 'utf8'
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-            }).trim(),
+              encodin: g: 'utf8'            }).trim(),
 ,
             const lastCommitDate = new Date(lastCommit),
             const daysSinceLastCommit = (Date.now() - lastCommitDate.getTime()) / (1000 * 60 * 60 * 24),
@@ -398,8 +299,5 @@ gitWorkflow.run().catch(error => {,
   process.exit(1)
 }),
 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
 const _gitWorkflow = new GitWorkflow();
 gitWorkflow.run().catch(error = > {_; process.exit(1)});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

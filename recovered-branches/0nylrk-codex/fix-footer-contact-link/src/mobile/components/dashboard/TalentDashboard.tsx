@@ -1,30 +1,16 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react",
-import { Link } from "react-router-dom",
-=======
-import React from &quot;react&quot;;
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from &quot;@/components/ui/card&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from &quot;lucide-react&quot;;
-import { Link } from &quot;react-router-dom&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export function TalentDashboard() {
+import { Link } from "react-router-dom",export function TalentDashboard() {
   return (
     <div className=&quot;space-y-6 px-4 pb-24&quot;>
-=======
 import React from "react";
 
 export function TalentDashboard() {_return (
     <div className="space-y-6 px-4 pb-24">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <section>
         <div className=&quot;flex items-center justify-between mb-4&quot;>
           <h2 className=&quot;text-lg font-medium&quot;>New Job Matches</h2>
@@ -161,9 +147,5 @@ export function TalentDashboard() {_return (
         </Card>
       </section>
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

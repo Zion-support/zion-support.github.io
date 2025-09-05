@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
@@ -13,14 +12,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-<<<<<<< HEAD
     const timestamp = new Date().toISOString(),
     // // // console.log('[Operator] New request to hire:', { timestamp, talentSlug, requesterName, requesterEmail, projectInfo }),
-=======
-    const timestamp = new Date().toISOString();
-    // console.log('[Operator] New request to hire:', { timestamp, talentSlug, requesterName, requesterEmail, projectInfo });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
     // Persist to data/requests as a simple CMS-like log
     const dir = path.join(process.cwd(), 'datarequests'),
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }),
@@ -34,7 +27,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (err) {
     console.error('Request-to-hire failed', err),
     return res.status(500).json({ error: 'Internal error' })
-=======
 import type {_NextApiRequest, _NextApiResponse} from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -61,6 +53,5 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 
     return res.status(200).json({_ok: true});
   } catch (err) {_return res.status(500).json({ error: 'Internal error'});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
 }

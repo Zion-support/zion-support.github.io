@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -47,43 +46,7 @@ export default function UltimateServicesShowcase2029() {
     { id: 'high', name: '$15K - $30K', range: '$15,000 - $30,000' },
     { id: 'premium', name: 'Over $30K', range: 'Over $30,000' }
   ],
-=======
-import React, {_useState} from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import {_Rocket, _Brain, _Atom, _Globe, _Zap, _Sparkles, _Shield, _Target, _Crown, _Star, _TrendingUp, _ArrowRight, _CheckCircle, _DollarSign, _Users, _Clock, _Award, _Zap as ZapIcon, _Search, _Phone, _Mail, _MapPin, _Heart, _Leaf, _Car, _GraduationCap, _Scale, _Building, _Factory, _Camera, _Video, _Music, _Gamepad2, _Eye, _Globe2, _Satellite, _Dna, _Battery, _Gamepad, _Cpu as CpuIcon} from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-
-export default function UltimateServicesShowcase2029() {_const [selectedCategory, _setSelectedCategory] = useState('all');
-  const [searchTerm, _setSearchTerm] = useState('');
-  const [selectedPriceRange, _setSelectedPriceRange] = useState('all');
-
-  const _allServices = [
-    ...cuttingEdge2028MicroSaas, _...practicalBusinessSolutions2028, _...advancedAIAutonomousServices2028, _...quantumSpaceInnovations2028
-  ];
-
-  const _categories = [
-    { id: 'all', _name: '🚀 All Services', _icon: Rocket, _count: allServices.length, _color: 'from-violet-600 to-purple-600'},
-    {_id: 'cutting-edge', _name: '⚡ Cutting-Edge', _icon: Zap, _count: cuttingEdge2028MicroSaas.length, _color: 'from-cyan-600 to-blue-600'},
-    {_id: 'business', _name: '🎯 Business Solutions', _icon: Target, _count: practicalBusinessSolutions2028.length, _color: 'from-green-600 to-emerald-600'},
-    {_id: 'ai-autonomous', _name: '🤖 AI & Autonomous', _icon: Brain, _count: advancedAIAutonomousServices2028.length, _color: 'from-emerald-600 to-teal-600'},
-    {_id: 'quantum-space', _name: '⚛️ Quantum & Space', _icon: Atom, _count: quantumSpaceInnovations2028.length, _color: 'from-indigo-600 to-blue-600'},
-    {_id: 'ai', _name: '🧠 AI & ML', _icon: Brain, _count: allServices.filter(s => s.category.some(c => c.includes('AI') || c.includes('Machine Learning'))).length, _color: 'from-pink-600 to-rose-600'},
-    {_id: 'quantum', _name: '🔮 Quantum Tech', _icon: Atom, _count: allServices.filter(s => s.category.some(c => c.includes('Quantum'))).length, _color: 'from-purple-600 to-violet-600'},
-    {_id: 'enterprise', _name: '🏢 Enterprise', _icon: Shield, _count: allServices.filter(s => s.category.some(c => c.includes('Enterprise'))).length, _color: 'from-blue-600 to-cyan-600'}
-  ];
-
-  const _priceRanges = [
-    {_id: 'all', _name: 'All Prices', _range: 'All'},
-    {_id: 'low', _name: 'Under $5K', _range: 'Under $5, _000'},
-    {_id: 'medium', _name: '$5K - $15K', _range: '$5, _000 - $15, _000'},
-    {_id: 'high', _name: '$15K - $30K', _range: '$15, _000 - $30, _000'},
-    {_id: 'premium', _name: 'Over $30K', _range: 'Over $30, _000'}
-  ];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-  const _filteredServices = allServices.filter(service => {_const _matchesCategory = selectedCategory === 'all' || 
+  const filteredServices = allServices.filter(service => {const matchesCategory = selectedCategory === 'all' || 
       (selectedCategory === 'cutting-edge' && cuttingEdge2028MicroSaas.includes(service)) ||
       (selectedCategory === 'business' && practicalBusinessSolutions2028.includes(service)) ||
       (selectedCategory === 'ai-autonomous' && advancedAIAutonomousServices2028.includes(service)) ||
@@ -92,11 +55,10 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
       (selectedCategory === 'quantum' && service.category.some(c => c.includes('Quantum'))) ||
       (selectedCategory === 'enterprise' && service.category.some(c => c.includes('Enterprise'))),
     
-    const _matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.some(c => c.toLowerCase().includes(searchTerm.toLowerCase())),
     
-<<<<<<< HEAD
     const matchesPrice = selectedPriceRange === 'all' ||
       (selectedPriceRange === 'low' && parseFloat(service.price.replace(/[$]/g, '')) < 5000) ||
       (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service.price.replace(/[$]/g, '')) < 15000) ||
@@ -105,39 +67,24 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
     
     return matchesCategory && matchesSearch && matchesPrice
   }),
-=======
-    const _matchesPrice = selectedPriceRange === 'all' ||
-      (selectedPriceRange === 'low' && parseFloat(service.price.replace(/[$]/g, _'')) < 5000) ||
-      (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g, _'')) >= 5000 && parseFloat(service.price.replace(/[$]/g, _'')) < 15000) ||
-      (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g, _'')) >= 15000 && parseFloat(service.price.replace(/[$]/g, _'')) < 30000) ||
-      (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, _'')) >= 30000);
-    
-    return matchesCategory && matchesSearch && matchesPrice;});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-  const _containerVariants = {_hidden: { opacity: 0},
-    visible: {_opacity: 1, _transition: {
+  const containerVariants = {hidden: { opacity: 0},
+    visible: {opacity: 1, transition: {
         staggerChildren: 0.1}
     }
   },
 
-  const _itemVariants = {_hidden: { opacity: 0, _y: 20},
-    visible: {_opacity: 1, _y: 0, _transition: {
+  const itemVariants = {hidden: { opacity: 0, y: 20},
+    visible: {opacity: 1, y: 0, transition: {
         duration: 0.5}
     }
   },
 
-<<<<<<< HEAD
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
-=======
-  const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (
     <>
       <Head>
@@ -154,7 +101,7 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
         <meta property="og:type" content="website" />
         
         {_/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summarylarge_image" />
         <meta name="twitter:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />
         <meta name="twitter:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />
       </Head>
@@ -166,14 +113,14 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
         {_/* Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0.15),transparent_50%)] animate-spin-slow" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circleat_30%20%,rgba(0,255,255,0.15),transparent50%)] animate-spin-slow" />
+          <div className="absolute inset-0 bg-[radial-gradient(circleat_70%80%,rgba(147,51,234,0.1),transparent50%)] animate-pulse" />
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={_{ opacity: 0, _y: 30}}
-            animate={_{ opacity: 1, _y: 0}}
+          <motion.div,
+initial={_{ opacity: 0, y: 30}}
+            animate={_{ opacity: 1, y: 0}}
             transition={_{ duration: 0.8}}
             className="max-w-4xl mx-auto"
           >
@@ -205,14 +152,14 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <Link
-                href="/contact"
+              <Link,
+href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg"
               >
                 Get Started Today
               </a>
-              <Link
-                href="/pricing"
+              <Link,
+href="/pricing"
                 className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg"
               >
                 View Pricing
@@ -222,7 +169,7 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
             {_/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{_allServices.length}+</div>
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
                 <div className="text-gray-400">Revolutionary Services</div>
               </div>
               <div className="text-center">
@@ -249,19 +196,19 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
             {_/* Search */}
             <div className="relative w-full lg:w-96">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-              <input
-                type="text"
+              <input,
+type="text"
                 placeholder="Search services..."
-                value={_searchTerm}
-                onChange={_(_e) => setSearchTerm(e.target.value)}
+                value={searchTerm}
+                onChange={_(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
               />
             </div>
 
             {_/* Category Filter */}
             <div className="flex flex-wrap items-center space-x-2">
-              {_categories.map(_(category) => (_<button
-                  key={category.id}
+              {categories.map(_(category) => (_<button,
+key={category.id}
                   onClick={_() => setSelectedCategory(category.id)}
                   className={_`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                     selectedCategory === category.id
@@ -271,8 +218,8 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
                 >
                   <div className="flex items-center space-x-2">
                     <category.icon className="h-4 w-4" />
-                    <span>{_category.name}</span>
-                    <span className="text-xs opacity-75">({_category.count})</span>
+                    <span>{category.name}</span>
+                    <span className="text-xs opacity-75">({category.count})</span>
                   </div>
                 </button>
               ))}
@@ -280,15 +227,15 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
 
             {_/* Price Filter */}
             <div className="flex items-center space-x-2">
-              {_priceRanges.map(_(range) => (_<button
-                  key={range.id}
+              {priceRanges.map(_(range) => (_<button,
+key={range.id}
                   onClick={_() => setSelectedPriceRange(range.id)}
                   className={_`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                     selectedPriceRange === range.id
                       ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg'
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'}`}
                 >
-                  {_range.name}
+                  {range.name}
                 </button>
               ))}
             </div>
@@ -299,16 +246,16 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
       {_/* Services Grid */}
       <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            variants={_containerVariants}
+          <motion.div,
+variants={containerVariants}
             initial="hidden"
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
           >
-            {_filteredServices.map(_(service, _index) => (
-              <motion.div
-                key={service.id}
-                variants={_itemVariants}
+            {filteredServices.map(_(service, index) => (
+              <motion.div,
+key={service.id}
+                variants={itemVariants}
                 className="group relative"
               >
                 <div className="relative p-6 rounded-2xl border border-gray-700/50 bg-gray-800/20 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 h-full">
@@ -319,32 +266,32 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
                         <Rocket className="w-6 h-6 text-white" />
                       </div>
                       <div className="text-right">
-                        <div className="text-lg font-bold text-cyan-400">{_service.price}</div>
+                        <div className="text-lg font-bold text-cyan-400">{service.price}</div>
                         <div className="text-xs text-gray-400">per month</div>
                       </div>
                     </div>
                     
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
-                      {_service.name}
+                      {service.name}
                     </h3>
                     
                     <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                      {_service.description}
+                      {service.description}
                     </p>
                   </div>
 
                   {_/* Categories */}
                   <div className="mb-4">
                     <div className="flex flex-wrap gap-2">
-                      {_service.category.slice(0, _3).map(_(cat) => (
-                        <span
-                          key={cat}
+                      {service.category.slice(0, 3).map(_(cat) => (
+                        <span,
+key={cat}
                           className="px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20"
                         >
-                          {_cat}
+                          {cat}
                         </span>
                       ))}
-                      {_service.category.length > 3 && (
+                      {service.category.length > 3 && (
                         <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg">
                           +{service.category.length - 3}
                         </span>
@@ -356,13 +303,13 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                     <ul className="space-y-1">
-                      {_service.features.slice(0, _3).map(_(feature, _idx) => (
+                      {service.features.slice(0, 3).map(_(feature, idx) => (
                         <li key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
                           <CheckCircle className="h-3 w-3 text-cyan-400 flex-shrink-0" />
-                          <span>{_feature}</span>
+                          <span>{feature}</span>
                         </li>
                       ))}
-                      {_service.features.length > 3 && (
+                      {service.features.length > 3 && (
                         <li className="text-xs text-gray-500">
                           +{service.features.length - 3} more features
                         </li>
@@ -374,18 +321,18 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
                   <div className="mb-6 space-y-2">
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-400">Market Size:</span>
-                      <span className="text-emerald-400 font-medium">{_service.marketSize}</span>
+                      <span className="text-emerald-400 font-medium">{service.marketSize}</span>
                     </div>
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-400">ROI:</span>
-                      <span className="text-cyan-400 font-medium">{_service.roi}</span>
+                      <span className="text-cyan-400 font-medium">{service.roi}</span>
                     </div>
                   </div>
 
                   {_/* Action Button */}
                   <div className="mt-auto">
-                    <Link
-                      href={_`/services/${service.id}`}
+                    <Link,
+href={_`/services/${service.id}`}
                       className="w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 text-center block group-hover:scale-105 transform transition-transform duration-200"
                     >
                       Learn More
@@ -401,25 +348,18 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
           </motion.div>
 
           {_/* No Results */}
-          {_filteredServices.length === 0 && (_<div className="text-center py-20">
+          {filteredServices.length === 0 && (_<div className="text-center py-20">
               <div className="w-24 h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Search className="w-12 h-12 text-gray-400" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
               <p className="text-gray-400 mb-8">Try adjusting your search criteria or browse all services</p>
-              <button
-                onClick={() => {
-<<<<<<< HEAD
+              <button,
+onClick={() => {
                   setSelectedCategory('all'),
                   setSearchTerm(''),
                   setSelectedPriceRange('all')
-                }}
-=======
-                  setSelectedCategory('all');
-                  setSearchTerm('');
-                  setSelectedPriceRange('all');}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+                }}                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >
                 Reset Filters
               </button>
@@ -431,9 +371,9 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
       {_/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={_{ opacity: 0, _y: 30}}
-            whileInView={_{ opacity: 1, _y: 0}}
+          <motion.div,
+initial={_{ opacity: 0, y: 30}}
+            whileInView={_{ opacity: 1, y: 0}}
             transition={_{ duration: 0.8}}
             viewport={_{ once: true}}
           >
@@ -446,8 +386,8 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <Link
-                href="/contact"
+              <Link,
+href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg"
               >
                 Get Started Today
@@ -455,11 +395,11 @@ export default function UltimateServicesShowcase2029() {_const [selectedCategory
               <div className="flex items-center space-x-4 text-gray-300">
                 <div className="flex items-center space-x-2">
                   <Phone className="h-5 w-5 text-cyan-400" />
-                  <span>{_contactInfo.mobile}</span>
+                  <span>{contactInfo.mobile}</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="h-5 w-5 text-cyan-400" />
-                  <span>{_contactInfo.email}</span>
+                  <span>{contactInfo.email}</span>
                 </div>
               </div>
             </div>

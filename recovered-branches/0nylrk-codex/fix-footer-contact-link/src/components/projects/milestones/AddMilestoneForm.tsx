@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from '@hookform/resolvers/zod',
@@ -28,18 +27,8 @@ const formSchema = z.object({
   description: z.string().optional(),
   due_date: z.date().optional(),
   amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')}),
-=======
-import React from 'react';
-
-import {_Form, _FormControl, _FormField, _FormItem, _FormLabel, _FormMessage} from '@/components/ui/form';
-import {_Popover, _PopoverContent, _PopoverTrigger} from '@/components/ui/popover';
-
-const _formSchema = z.object({_title: z.string().min(1, _'Title is required'), _description: z.string().optional(), _due_date: z.date().optional(), _amount: z.coerce.number().min(0, _'Amount must be greater than or equal to 0')});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 type MilestoneFormValues = z.infer<typeof formSchema>,
 
-<<<<<<< HEAD
 interface AddMilestoneFormProps {
   onSubmit: (data: MilestoneFormValues) => void,
   isSubmitting: boolean,
@@ -70,26 +59,8 @@ export function AddMilestoneForm({
     onSubmit(values),
     form.reset()
   },
-=======
-interface AddMilestoneFormProps {_onSubmit: (_data: MilestoneFormValues) => void;
-  isSubmitting: boolean;
-  onCancel?: () => void;
-  projectScope?: string;
-  projectStartDate?: string;
-  projectEndDate?: string;
-  projectType?: string;}
-
-export function AddMilestoneForm(_{_onSubmit, _isSubmitting, _onCancel, _projectScope = '', _projectStartDate = '', _projectEndDate = null, _projectType = 'Other'}: AddMilestoneFormProps) {_const _form = useForm<MilestoneFormValues>({
-    resolver: zodResolver(formSchema), _defaultValues: {
-      title: '', _description: '', _amount: 0}});
-
-  const _handleSubmit = (_values: MilestoneFormValues) => {_onSubmit(values);
-    form.reset();};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   const _handleAddMilestones = (_milestones: GeneratedMilestone[]) => {_// If there's only one milestone, _submit it directly
     if (milestones.length === 1) {
-<<<<<<< HEAD
       const milestone = milestones[0],
       onSubmit({
         title: milestone.title,
@@ -123,30 +94,7 @@ export function AddMilestoneForm(_{_onSubmit, _isSubmitting, _onCancel, _project
   return (
     <div className=&quot;space-y-6&quot;>
       {/* AI Milestone Generator */}
-      {projectScope && projectStartDate && (
-=======
-      const _milestone = milestones[0];
-      onSubmit({
-        title: milestone.title, _description: milestone.description, _due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined, _amount: milestone.estimatedHours * 10, _// Convert hours to a default payment amount});
-      return;
-    }
-
-    // If there are multiple milestones, submit them one by one
-    milestones.forEach(milestone => {_onSubmit({
-        title: milestone.title, _description: milestone.description, _due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined, _amount: milestone.estimatedHours * 10, _// Convert hours to a default payment amount});
-    });
-  };
-
-  const _handleAddMilestone = (_milestone: GeneratedMilestone) => {_onSubmit({
-      title: milestone.title, _description: milestone.description, _due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined, _amount: milestone.estimatedHours * 10, _// Convert hours to a default payment amount});
-  };
-
-  return (
-    <div className="space-y-6">
-      {_/* AI Milestone Generator */}
-      {_projectScope && projectStartDate && (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        <AIMilestoneGenerator
+      {projectScope && projectStartDate && (        <AIMilestoneGenerator
           scope={projectScope}
           startDate={_projectStartDate}
           endDate={_projectEndDate}
@@ -156,7 +104,6 @@ export function AddMilestoneForm(_{_onSubmit, _isSubmitting, _onCancel, _project
         />
       )}
 
-<<<<<<< HEAD
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className=&quot;space-y-4&quot;>
           <FormField
@@ -166,49 +113,22 @@ export function AddMilestoneForm(_{_onSubmit, _isSubmitting, _onCancel, _project
               <FormItem>
                 <FormLabel>Title</FormLabel>
                 <FormControl>
-                  <Input placeholder=&quot;Milestone title&quot; {...field} />
-=======
-      <Form {_...form}>
-        <form onSubmit={_form.handleSubmit(handleSubmit)} className="space-y-4">
-          <FormField
-            control={_form.control}
-            name="title"
-            render={_(_{ field}) => (
-              <FormItem>
-                <FormLabel>Title</FormLabel>
-                <FormControl>
-                  <Input placeholder="Milestone title" {_...field} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </FormControl>
+                  <Input placeholder=&quot;Milestone title&quot; {...field} />                </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
 
           <FormField
-<<<<<<< HEAD
             control={form.control}
             name=&quot;description&quot;
-            render={({ field }) => (
-=======
-            control={_form.control}
-            name="description"
-            render={_(_{ field}) => (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <FormItem>
+            render={({ field }) => (              <FormItem>
                 <FormLabel>Description (optional)</FormLabel>
                 <FormControl>
                   <Textarea
-<<<<<<< HEAD
                     placeholder=&quot;Describe what needs to be delivered&quot;
                     className=&quot;min-h-[100px]&quot;
-                    {...field}
-=======
-                    placeholder="Describe what needs to be delivered"
-                    className="min-h-[100px]"
-                    {_...field}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  />
+                    {...field}                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -217,18 +137,10 @@ export function AddMilestoneForm(_{_onSubmit, _isSubmitting, _onCancel, _project
 
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
             <FormField
-<<<<<<< HEAD
               control={form.control}
               name=&quot;due_date&quot;
               render={({ field }) => (
-                <FormItem className=&quot;flex flex-col&quot;>
-=======
-              control={_form.control}
-              name="due_date"
-              render={_(_{ field}) => (
-                <FormItem className="flex flex-col">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <FormLabel>Due Date (optional)</FormLabel>
+                <FormItem className=&quot;flex flex-col&quot;>                  <FormLabel>Due Date (optional)</FormLabel>
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
@@ -236,14 +148,8 @@ export function AddMilestoneForm(_{_onSubmit, _isSubmitting, _onCancel, _project
                           variant=&quot;outline&quot;
                           className=&quot;w-full pl-3 text-left font-normal&quot;
                         >
-<<<<<<< HEAD
                           {field.value ? (
-                            format(field.value, &quot;PPP&quot;)
-=======
-                          {_field.value ? (
-                            format(field.value, _"PPP")
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                          ) : (
+                            format(field.value, &quot;PPP&quot;)                          ) : (
                             <span className=&quot;text-muted-foreground&quot;>
                               Pick a date
                             </span>
@@ -254,18 +160,10 @@ export function AddMilestoneForm(_{_onSubmit, _isSubmitting, _onCancel, _project
                     </PopoverTrigger>
                     <PopoverContent className=&quot;w-auto p-0&quot; align=&quot;start&quot;>
                       <Calendar
-<<<<<<< HEAD
                         mode=&quot;single&quot;
                         selected={field.value}
                         onSelect={field.onChange}
-                        disabled={(date) => date < new Date()}
-=======
-                        mode="single"
-                        selected={_field.value}
-                        onSelect={_field.onChange}
-                        disabled={_(_date) => date < new Date()}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        initialFocus
+                        disabled={(date) => date < new Date()}                        initialFocus
                       />
                     </PopoverContent>
                   </Popover>
@@ -275,33 +173,17 @@ export function AddMilestoneForm(_{_onSubmit, _isSubmitting, _onCancel, _project
             />
 
             <FormField
-<<<<<<< HEAD
               control={form.control}
               name=&quot;amount&quot;
-              render={({ field }) => (
-=======
-              control={_form.control}
-              name="amount"
-              render={_(_{ field}) => (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                <FormItem>
+              render={({ field }) => (                <FormItem>
                   <FormLabel>Amount ($)</FormLabel>
                   <FormControl>
                     <Input
-<<<<<<< HEAD
                       type=&quot;number&quot;
                       min=&quot;0&quot;
                       step=&quot;0.01&quot;
                       placeholder=&quot;0.00&quot;
-                      {...field}
-=======
-                      type="number"
-                      min="0"
-                      step="0.01"
-                      placeholder="0.00"
-                      {_...field}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    />
+                      {...field}                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -309,14 +191,8 @@ export function AddMilestoneForm(_{_onSubmit, _isSubmitting, _onCancel, _project
             />
           </div>
 
-<<<<<<< HEAD
           <div className=&quot;flex justify-end space-x-2 pt-4&quot;>
-            {onCancel && (
-=======
-          <div className="flex justify-end space-x-2 pt-4">
-            {_onCancel && (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <Button
+            {onCancel && (              <Button
                 type=&quot;button&quot;
                 variant=&quot;outline&quot;
                 onClick={onCancel}
@@ -325,14 +201,8 @@ export function AddMilestoneForm(_{_onSubmit, _isSubmitting, _onCancel, _project
                 Cancel
               </Button>
             )}
-<<<<<<< HEAD
             <Button type=&quot;submit&quot; disabled={isSubmitting}>
-              {isSubmitting ? (
-=======
-            <Button type="submit" disabled={_isSubmitting}>
-              {_isSubmitting ? (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                <>
+              {isSubmitting ? (                <>
                   <Loader2 className=&quot;mr-2 h-4 w-4 animate-spin&quot; />
                   Saving...
                 </>

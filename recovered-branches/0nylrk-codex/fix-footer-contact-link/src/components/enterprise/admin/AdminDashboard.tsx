@@ -1,44 +1,22 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { AdminHeader } from "./AdminHeader",
 import { TeamManagement } from "./TeamManagement",
 import { UsageStats } from "./UsageStats",
 import { RoleManagement } from "./RoleManagement",
-import { TeamActivity } from "./TeamActivity",
-=======
-import React from &quot;react&quot;;
-import { AdminHeader } from &quot;./AdminHeader&quot;;
-import { TeamManagement } from &quot;./TeamManagement&quot;;
-import { UsageStats } from &quot;./UsageStats&quot;;
-import { RoleManagement } from &quot;./RoleManagement&quot;;
-import { TeamActivity } from &quot;./TeamActivity&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import {
+import { TeamActivity } from "./TeamActivity",import {
   Tabs,
   TabsContent,
   TabsList,
-<<<<<<< HEAD
   TabsTrigger} from "@/components/ui/tabs",
 
 export function AdminDashboard() {
   return (
-    <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">
-=======
-  TabsTrigger} from &quot;@/components/ui/tabs&quot;;
-
-export function AdminDashboard() {
-  return (
-    <div className=&quot;container mx-auto max-w-7xl py-8 px-4 md:px-6&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from "react";
+    <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">import React from "react";
 import {_Tabs, _TabsContent, _TabsList, _TabsTrigger} from "@/components/ui/tabs";
 
 export function AdminDashboard() {_return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <AdminHeader />
       
       <Tabs defaultValue=&quot;team&quot; className=&quot;mt-8&quot;>
@@ -66,9 +44,5 @@ export function AdminDashboard() {_return (
         </TabsContent>
       </Tabs>
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIAutonomousBusinessOperations() {
@@ -19,15 +18,8 @@ export default function AIAutonomousBusinessOperations() {
 				&quot;Compliance logging and role-based access&quot;,
 				&quot;Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe&quot;
 			]}
-<<<<<<< HEAD
 			industries={["SaaS", "Healthcare", "Finance", "Retail"]}
-			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
-=======
-			industries={[&quot;SaaS&quot;, &quot;Healthcare&quot;, &quot;Finance&quot;, &quot;Retail&quot;]}
-			canonical=&quot;https://ziontechgroup.com/ai-autonomous-business-operations&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIAutonomousBusinessOperations() {_return (
@@ -44,7 +36,6 @@ export default function AIAutonomousBusinessOperations() {_return (
 			]}
 			industries={_["SaaS", _"Healthcare", _"Finance", _"Retail"]}
 			canonical="https://ziontechgroup.com/ai-autonomous-business-operations"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		/>
 	)
 }

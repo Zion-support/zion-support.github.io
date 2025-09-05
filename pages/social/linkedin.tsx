@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react',
 import Head from 'next/head',
 export default function LinkedInRedirect() {
@@ -7,36 +6,16 @@ export default function LinkedInRedirect() {
 			window.location.replace('https: //www.linkedin.com/company/zion-tech-group')
 		}
 	}, []),
-=======
-import React, {_useEffect} from 'react';
-import Head from 'next/head';
-
-export default function LinkedInRedirect() {_useEffect__(() => {
-		if (typeof window !== 'undefined') {
-			window.location.replace('https://www.linkedin.com/company/zion-tech-group');}
-	}, []);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 	return (
 		<>
 			<Head>
 				<title>LinkedIn | Zion Tech Group</title>
-<<<<<<< HEAD
 				<link rel="canonical" href="https: //www.linkedin.com/company/zion-tech-group" />
 				<meta httpEquiv="refresh" content="0,url=https://www.linkedin.com/company/zion-tech-group" />
 				<meta name="robots" content="noindex, nofollow" />
 			</Head>
 			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
-				<a href="https: //www.linkedin.com/company/zion-tech-group" className="text-cyan-400 underline">
-=======
-				<link rel=&quot;canonical&quot; href=&quot;https://www.linkedin.com/company/zion-tech-group&quot; />
-				<meta httpEquiv=&quot;refresh&quot; content=&quot;0;url=https://www.linkedin.com/company/zion-tech-group&quot; />
-				<meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot; />
-			</Head>
-			<div className=&quot;min-h-screen bg-black text-white flex items-center justify-center p-8&quot;>
-				<a href=&quot;https://www.linkedin.com/company/zion-tech-group&quot; className=&quot;text-cyan-400 underline&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-					Continue to LinkedIn
+				<a href="https: //www.linkedin.com/company/zion-tech-group" className="text-cyan-400 underline">					Continue to LinkedIn
 				</Link>
 			</div>
 		</>

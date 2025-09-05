@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -8,19 +6,7 @@ import { ServiceDescriptionForm } from "@/components/services/ServiceDescription
 import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",
 import { SEO } from "@/components/SEO",
 import { useAuth } from "@/hooks/useAuth",
-import { Navigate } from "react-router-dom",
-=======
-import React, { useState } from &quot;react&quot;;
-import { Header } from &quot;@/components/Header&quot;;
-import { Footer } from &quot;@/components/Footer&quot;;
-import { ServiceDescriptionForm } from &quot;@/components/services/ServiceDescriptionForm&quot;;
-import { GeneratedDescriptionDisplay } from &quot;@/components/services/GeneratedDescriptionDisplay&quot;;
-import { SEO } from &quot;@/components/SEO&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { Navigate } from &quot;react-router-dom&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export default function ServiceDescriptionGenerator() {
+import { Navigate } from "react-router-dom",export default function ServiceDescriptionGenerator() {
   const { isAuthenticated, isLoading } = useAuth(),
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),
   
@@ -37,18 +23,12 @@ export default function ServiceDescriptionGenerator() {
   
   // Redirect to login if not authenticated
   if (!isAuthenticated) {
-<<<<<<< HEAD
-    return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />
-=======
-    return <Navigate to=&quot;/login&quot; state={{ from: '/service-description-generator' }} replace />;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  }
+    return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />  }
 
   const handleDescriptionSave = (editedDescription: string) => {
     setGeneratedDescription(editedDescription),
     // Here you could also save to database if needed
   },
-=======
 import React, {_useState} from "react";
 
 export default function ServiceDescriptionGenerator() {_const { isAuthenticated, _isLoading} = useAuth();
@@ -69,7 +49,6 @@ export default function ServiceDescriptionGenerator() {_const { isAuthenticated,
 
   const _handleDescriptionSave = (_editedDescription: string) => {_setGeneratedDescription(editedDescription);
     // Here you could also save to database if needed};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <div className=&quot;min-h-screen flex flex-col bg-zion-blue&quot;>
@@ -86,14 +65,8 @@ export default function ServiceDescriptionGenerator() {_const { isAuthenticated,
             Create professional service descriptions with the help of AI. Just provide basic details about your service.
           </p>
           
-<<<<<<< HEAD
           <div className=&quot;space-y-8&quot;>
-            <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
-=======
-          <div className="space-y-8">
-            <ServiceDescriptionForm onDescriptionGenerated={_setGeneratedDescription} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            
+            <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />            
             {_generatedDescription && (
               <GeneratedDescriptionDisplay 
                 description={generatedDescription}

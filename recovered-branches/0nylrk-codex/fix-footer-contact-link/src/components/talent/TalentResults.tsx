@@ -1,20 +1,9 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { TalentProfile } from "@/types/talent",
 import { ActiveFilters } from "@/components/talent/ActiveFilters",
 import { ResultsHeader } from "@/components/talent/ResultsHeader",
-import { TalentGrid } from "@/components/talent/TalentGrid",
-=======
-import React from &quot;react&quot;;
-import { TalentProfile } from &quot;@/types/talent&quot;;
-import { ActiveFilters } from &quot;@/components/talent/ActiveFilters&quot;;
-import { ResultsHeader } from &quot;@/components/talent/ResultsHeader&quot;;
-import { TalentGrid } from &quot;@/components/talent/TalentGrid&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface TalentResultsProps {
+import { TalentGrid } from "@/components/talent/TalentGrid",interface TalentResultsProps {
   filteredTalents: TalentProfile[],
   isLoading: boolean,
   viewProfile: (id: string) => void,
@@ -49,7 +38,6 @@ export function TalentResults({
 }: TalentResultsProps) {
   return (
     <div className=&quot;flex-1&quot;>
-=======
 import React from "react";
 
 interface TalentResultsProps {_filteredTalents: TalentProfile[];
@@ -75,7 +63,6 @@ interface TalentResultsProps {_filteredTalents: TalentProfile[];
 
 export function TalentResults(_{_filteredTalents, _isLoading, _viewProfile, _handleRequestHire, _savedTalents, _handleToggleSave, _isAuthenticated, _activeFiltersProps}: TalentResultsProps) {_return (
     <div className="flex-1">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       {/* Active filters */}
       <ActiveFilters {_...activeFiltersProps} />
       

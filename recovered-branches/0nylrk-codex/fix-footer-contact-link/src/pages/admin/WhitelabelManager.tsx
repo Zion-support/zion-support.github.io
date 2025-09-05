@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -18,30 +16,7 @@ export default function WhitelabelManager() {
   const isAdmin = user?.role === "admin",
   
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" />
-=======
-import React, { useState } from 'react';
-import { Header } from &quot;@/components/Header&quot;;
-import { Footer } from &quot;@/components/Footer&quot;;
-import { SEO } from &quot;@/components/SEO&quot;;
-import { WhitelabelRequestForm } from &quot;@/components/admin/whitelabel/WhitelabelRequestForm&quot;;
-import { TenantsList } from &quot;@/components/admin/whitelabel/TenantsList&quot;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { Navigate } from &quot;react-router-dom&quot;;
-
-export default function WhitelabelManager() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState(&quot;tenants&quot;);
-  
-  // Check if user has admin role
-  const isAdmin = user?.role === &quot;admin&quot;;
-  
-  if (!isAdmin) {
-    return <Navigate to=&quot;/unauthorized&quot; />;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  }
-=======
+    return <Navigate to="/unauthorized" />  }
 import React, {_useState} from 'react';
 
 export default function WhitelabelManager() {_const { user} = useAuth();
@@ -51,7 +26,6 @@ export default function WhitelabelManager() {_const { user} = useAuth();
   const _isAdmin = user?.role === "admin";
   
   if (!isAdmin) {_return <Navigate to="/unauthorized" />;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -69,20 +43,11 @@ export default function WhitelabelManager() {_const { user} = useAuth();
             </p>
           </div>
 
-<<<<<<< HEAD
           <Tabs value={activeTab} onValueChange={setActiveTab} className=&quot;w-full&quot;>
             <TabsList className=&quot;mb-8&quot;>
               <TabsTrigger value=&quot;tenants&quot;>Tenants</TabsTrigger>
               <TabsTrigger value=&quot;create&quot;>Create New</TabsTrigger>
-              <TabsTrigger value=&quot;docs&quot;>Documentation</TabsTrigger>
-=======
-          <Tabs value={_activeTab} onValueChange={_setActiveTab} className="w-full">
-            <TabsList className="mb-8">
-              <TabsTrigger value="tenants">Tenants</TabsTrigger>
-              <TabsTrigger value="create">Create New</TabsTrigger>
-              <TabsTrigger value="docs">Documentation</TabsTrigger>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </TabsList>
+              <TabsTrigger value=&quot;docs&quot;>Documentation</TabsTrigger>            </TabsList>
             
             <TabsContent value=&quot;tenants&quot; className=&quot;space-y-6&quot;>
               <TenantsList />

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
 import { Badge } from '@/components/ui/badge',
@@ -82,18 +81,10 @@ const PerformanceDashboard: React.FC = () => {
 
   const getStatusIcon = (status: string) => {
     switch (status) {
-<<<<<<< HEAD
       case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />,
       case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />,
       case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />,
-      default: return <AlertCircle className="h-4 w-4 text-gray-500" />
-=======
-      case 'completed': return <CheckCircle className=&quot;h-4 w-4 text-green-500&quot; />;
-      case 'in-progress': return <AlertCircle className=&quot;h-4 w-4 text-yellow-500&quot; />;
-      case 'planned': return <TrendingUp className=&quot;h-4 w-4 text-blue-500&quot; />;
-      default: return <AlertCircle className=&quot;h-4 w-4 text-gray-500&quot; />;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
+      default: return <AlertCircle className="h-4 w-4 text-gray-500" />    }
   },
 
   const getImpactColor = (impact: string) => {
@@ -107,20 +98,11 @@ const PerformanceDashboard: React.FC = () => {
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-<<<<<<< HEAD
       case 'performance': return <Zap className="h-4 w-4" />,
       case 'security': return <Shield className="h-4 w-4" />,
       case 'ux': return <Search className="h-4 w-4" />,
       case 'build': return <TrendingUp className="h-4 w-4" />,
-      default: return <CheckCircle className="h-4 w-4" />
-=======
-      case 'performance': return <Zap className=&quot;h-4 w-4&quot; />;
-      case 'security': return <Shield className=&quot;h-4 w-4&quot; />;
-      case 'ux': return <Search className=&quot;h-4 w-4&quot; />;
-      case 'build': return <TrendingUp className=&quot;h-4 w-4&quot; />;
-      default: return <CheckCircle className=&quot;h-4 w-4&quot; />;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
+      default: return <CheckCircle className="h-4 w-4" />    }
   },
 
   const completedImprovements = improvements.filter(imp => imp.status === 'completed'),
@@ -136,7 +118,6 @@ const PerformanceDashboard: React.FC = () => {
 
       {/* Metrics Overview */}
       <div className=&quot;grid grid-cols-1 md:grid-cols-4 gap-4 mb-6&quot;>
-=======
 import React, {_useState} from 'react';
 
 interface PerformanceMetrics {_buildSize: string;
@@ -197,20 +178,13 @@ const PerformanceDashboard: React.FC = () => {_const [metrics] = useState<Perfor
 
       {_/* Metrics Overview */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         <Card>
           <CardHeader className=&quot;pb-2&quot;>
             <CardTitle className=&quot;text-sm font-medium text-gray-600&quot;>Build Size</CardTitle>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
             <div className=&quot;text-2xl font-bold&quot;>{metrics.buildSize}</div>
-            <p className=&quot;text-xs text-gray-500&quot;>Total build output</p>
-=======
-            <div className="text-2xl font-bold">{_metrics.buildSize}</div>
-            <p className="text-xs text-gray-500">Total build output</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </CardContent>
+            <p className=&quot;text-xs text-gray-500&quot;>Total build output</p>          </CardContent>
         </Card>
         
         <Card>
@@ -218,14 +192,8 @@ const PerformanceDashboard: React.FC = () => {_const [metrics] = useState<Perfor
             <CardTitle className=&quot;text-sm font-medium text-gray-600&quot;>Page Count</CardTitle>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
             <div className=&quot;text-2xl font-bold&quot;>{metrics.pageCount}</div>
-            <p className=&quot;text-xs text-gray-500&quot;>Generated pages</p>
-=======
-            <div className="text-2xl font-bold">{_metrics.pageCount}</div>
-            <p className="text-xs text-gray-500">Generated pages</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </CardContent>
+            <p className=&quot;text-xs text-gray-500&quot;>Generated pages</p>          </CardContent>
         </Card>
         
         <Card>
@@ -233,14 +201,8 @@ const PerformanceDashboard: React.FC = () => {_const [metrics] = useState<Perfor
             <CardTitle className=&quot;text-sm font-medium text-gray-600&quot;>Load Time</CardTitle>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
             <div className=&quot;text-2xl font-bold&quot;>{metrics.loadTime}s</div>
-            <p className=&quot;text-xs text-gray-500&quot;>Average page load</p>
-=======
-            <div className="text-2xl font-bold">{_metrics.loadTime}s</div>
-            <p className="text-xs text-gray-500">Average page load</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </CardContent>
+            <p className=&quot;text-xs text-gray-500&quot;>Average page load</p>          </CardContent>
         </Card>
         
         <Card>
@@ -268,7 +230,6 @@ const PerformanceDashboard: React.FC = () => {_const [metrics] = useState<Perfor
           </CardDescription>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
           <div className=&quot;space-y-4&quot;>
             {completedImprovements.map((improvement) => (
               <div key={improvement.id} className=&quot;flex items-start space-x-3 p-3 border rounded-lg&quot;>
@@ -282,35 +243,12 @@ const PerformanceDashboard: React.FC = () => {_const [metrics] = useState<Perfor
                     </h3>
                     <div className=&quot;flex items-center space-x-2&quot;>
                       <Badge className={getImpactColor(improvement.impact)}>
-                        {improvement.impact} impact
-=======
-          <div className="space-y-4">
-            {_completedImprovements.map((improvement) => (
-              <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
-                <div className="flex-shrink-0 mt-1">
-                  {_getCategoryIcon(improvement.category)}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-sm font-medium text-gray-900">
-                      {_improvement.title}
-                    </h3>
-                    <div className="flex items-center space-x-2">
-                      <Badge className={_getImpactColor(improvement.impact)}>
-                        {_improvement.impact} impact
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      </Badge>
+                        {improvement.impact} impact                      </Badge>
                       {_getStatusIcon(improvement.status)}
                     </div>
                   </div>
-<<<<<<< HEAD
                   <p className=&quot;text-sm text-gray-600 mt-1&quot;>
-                    {improvement.description}
-=======
-                  <p className="text-sm text-gray-600 mt-1">
-                    {_improvement.description}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </p>
+                    {improvement.description}                  </p>
                 </div>
               </div>
             ))}
@@ -318,32 +256,16 @@ const PerformanceDashboard: React.FC = () => {_const [metrics] = useState<Perfor
         </CardContent>
       </Card>
 
-<<<<<<< HEAD
       {/* Action Buttons */}
-<<<<<<< HEAD
       <div className="flex space-x-4">
-        <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">
-=======
-      {_/* Action Buttons */}
-      <div className="flex space-x-4">
-        <Button onClick={_() => window.open('/api/health/environment', _'_blank')} variant="outline">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          <Shield className="h-4 w-4 mr-2" />
-=======
+        <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">          <Shield className="h-4 w-4 mr-2" />
       <div className=&quot;flex space-x-4&quot;>
         <Button onClick={() => window.open('/api/health/environment', '_blank')} variant=&quot;outline&quot;>
           <Shield className=&quot;h-4 w-4 mr-2&quot; />
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           Check Health Status
         </Button>
-<<<<<<< HEAD
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant=&quot;outline&quot;>
-          <TrendingUp className=&quot;h-4 w-4 mr-2&quot; />
-=======
-        <Button onClick={_() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
-          <TrendingUp className="h-4 w-4 mr-2" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          Bundle Analysis
+          <TrendingUp className=&quot;h-4 w-4 mr-2&quot; />          Bundle Analysis
         </Button>
       </div>
     </div>

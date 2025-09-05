@@ -1,33 +1,15 @@
 
-<<<<<<< HEAD
 import { createNotification } from './createNotification',
-import { HireRequestNotificationParams } from './types',
-=======
-
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-/**
+import { HireRequestNotificationParams } from './types',/**
  * Creates a hire request notification for admin and talent
  */
 export async function createHireRequestNotifications(_{_talentId, _adminId, _requesterName, _requesterEmail, _projectType, _projectSummary, _hireRequestId}: HireRequestNotificationParams) {_const _projectInfo = projectType 
     ? `${projectType} project` 
-<<<<<<< HEAD
     : "project",
   
-<<<<<<< HEAD
   const summaryText = projectSummary 
     ? `: "${projectSummary}"` 
-    : "",
-=======
-    : &quot;project&quot;;
-  
-  const summaryText = projectSummary 
-    ? `: &quot;${projectSummary}&quot;` 
-=======
-  const _summaryText = projectSummary 
-    ? `: "${_projectSummary}"` 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    : "";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+    : "",    : "";
   
   // Create notification for talent
   const _talentNotification = await createNotification({_userId: talentId, _title: `New Hire Request from ${requesterName}`,
@@ -49,7 +31,6 @@ export async function createHireRequestNotifications(_{_talentId, _adminId, _req
       actionText: 'Review Request'
     }),
     
-<<<<<<< HEAD
     return {
       success: talentNotification.success && adminNotification.success,
       talentNotification,
@@ -60,11 +41,4 @@ export async function createHireRequestNotifications(_{_talentId, _adminId, _req
   return {
     success: talentNotification.success,
     talentNotification
-  }
-=======
-    return {_success: talentNotification.success && adminNotification.success, _talentNotification, _adminNotification};
-  }
-  
-  return {_success: talentNotification.success, _talentNotification};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-}
+  }}

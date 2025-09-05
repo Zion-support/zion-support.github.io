@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -15,14 +14,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-=======
-import React, {_useState, _useEffect} from 'react';
-import Link from 'next/link';
-import {_Menu, _X, _ChevronDown, _Search, _Phone, _Mail, _MapPin, _Rocket, _Brain, _Atom, _Globe, _Zap, _Sparkles, _Shield, _Microscope, _DollarSign, _Home, _Users, _Briefcase, _BookOpen, _MessageCircle} from 'lucide-react';
-
-const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 const _serviceCategories = [
   {_title: 'AI & Machine Learning 2026', _icon: Brain, _color: 'from-purple-600 to-pink-600', _description: 'Next-generation AI solutions', _services: [
       { name: 'AI Consciousness Simulation', _href: '/ai-consciousness-simulation-platform', _description: 'Simulate human consciousness', _price: '$4, _999/month'},
@@ -68,7 +59,6 @@ const _serviceCategories = [
   }
 ],
 
-<<<<<<< HEAD
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'About Us', href: '/about', icon: Users },
@@ -94,32 +84,6 @@ const UltraAdvancedNavigation2026 = () => {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
-=======
-const _companyLinks = [
-  {_name: 'Home', _href: '/', _icon: Home},
-  {_name: 'About Us', _href: '/about', _icon: Users},
-  {_name: '2026 Services', _href: '/2026-services-showcase', _icon: Rocket},
-  {_name: 'Innovative 2026', _href: '/2026-innovative-services-showcase', _icon: Zap},
-  {_name: 'Ultimate 2026', _href: '/ultimate-2026-services-showcase', _icon: Sparkles},
-  {_name: '2026 Pricing', _href: '/revolutionary-2026-pricing', _icon: DollarSign},
-  {_name: 'Case Studies', _href: '/case-studies', _icon: Briefcase},
-  {_name: 'Blog & Resources', _href: '/blog', _icon: BookOpen},
-  {_name: 'Careers', _href: '/careers', _icon: Users},
-  {_name: 'Contact', _href: '/contact', _icon: MessageCircle}
-];
-
-const _UltraAdvancedNavigation2026 = () => {_const [isOpen, _setIsOpen] = useState(false);
-  const [isScrolled, _setIsScrolled] = useState(false);
-  const [activeDropdown, _setActiveDropdown] = useState<string | null>(null);
-
-  useEffect__(() => {
-    const _handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);};
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   const _navigationItems = [
     {_name: 'AI Services', _href: '/services?category=ai', _icon: Brain, _color: 'from-blue-500 to-cyan-500', _description: 'Autonomous AI systems and consciousness interfaces', _subItems: [
         { name: 'AI Autonomous Agents', _href: '/services?category=ai-autonomous', _description: 'Fully autonomous AI systems'},
@@ -153,22 +117,16 @@ const _UltraAdvancedNavigation2026 = () => {_const [isOpen, _setIsOpen] = useSta
     }
   ],
 
-<<<<<<< HEAD
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   },
-=======
-  const _contactInfo = {_phone: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (_<>
       {_/* Enhanced Navigation Bar */}
       <nav className={_`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl' 
-<<<<<<< HEAD
           : 'bg-transparent'
       }`}>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -177,18 +135,7 @@ const _UltraAdvancedNavigation2026 = () => {_const [isOpen, _setIsOpen] = useSta
             <Link href=&quot;/&quot; className=&quot;flex items-center space-x-3 group&quot;>
               <div className=&quot;relative&quot;>
                 <div className=&quot;w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300&quot;>
-                  <Rocket className=&quot;w-6 h-6 text-white&quot; />
-=======
-          : 'bg-transparent'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            {_/* Logo */}
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Rocket className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </div>
+                  <Rocket className=&quot;w-6 h-6 text-white&quot; />                </div>
                 <div className=&quot;absolute inset-0 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300&quot;></div>
               </div>
               <div className=&quot;hidden sm:block&quot;>
@@ -199,7 +146,6 @@ const _UltraAdvancedNavigation2026 = () => {_const [isOpen, _setIsOpen] = useSta
               </div>
             </a>
 
-<<<<<<< HEAD
             {/* Desktop Navigation */}
             <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
               {navigationItems.map((item) => (
@@ -212,25 +158,10 @@ const _UltraAdvancedNavigation2026 = () => {_const [isOpen, _setIsOpen] = useSta
                     <span className=&quot;font-medium&quot;>{item.name}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
-=======
-            {_/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              {_navigationItems.map((item) => (_<div key={item.name} className="relative group">
-                  <button
-                    onClick={_() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
-                  >
-                    <item.icon className="w-5 h-5" />
-                    <span className="font-medium">{_item.name}</span>
-                    <ChevronDown className={_`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''}`} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </button>
+                    }`} />                  </button>
 
                   {_/* Dropdown Menu */}
                   <AnimatePresence>
-<<<<<<< HEAD
                     {activeDropdown === item.name && (
                       <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
@@ -262,77 +193,27 @@ const _UltraAdvancedNavigation2026 = () => {_const [isOpen, _setIsOpen] = useSta
                                   {subItem.name}
                                 </div>
                                 <div className=&quot;text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200&quot;>
-                                  {subItem.description}
-=======
-                    {_activeDropdown === item.name && (_<motion.div
-                        initial={{ opacity: 0, _y: 10, _scale: 0.95}}
-                        animate={_{ opacity: 1, _y: 0, _scale: 1}}
-                        exit={_{ opacity: 0, _y: 10, _scale: 0.95}}
-                        transition={_{ duration: 0.2}}
-                        className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl overflow-hidden"
-                      >
-                        <div className="p-4">
-                          <div className="flex items-center space-x-3 mb-4">
-                            <div className={_`w-10 h-10 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
-                              <item.icon className="w-5 h-5 text-white" />
-                            </div>
-                            <div>
-                              <h3 className="text-white font-semibold">{_item.name}</h3>
-                              <p className="text-gray-400 text-sm">{_item.description}</p>
-                            </div>
-                          </div>
-                          
-                          <div className="space-y-2">
-                            {_item.subItems.map((subItem) => (_<Link
-                                key={subItem.name}
-                                href={_subItem.href}
-                                className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group"
-                                onClick={_() => setActiveDropdown(null)}
-                              >
-                                <div className="text-white font-medium group-hover:text-purple-300 transition-colors duration-200">
-                                  {_subItem.name}
-                                </div>
-                                <div className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200">
-                                  {_subItem.description}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                                </div>
+                                  {subItem.description}                                </div>
                               </a>
                             ))}
                           </div>
                           
                           <Link
-<<<<<<< HEAD
                             href={item.href}
                             className=&quot;block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200&quot;
                             onClick={() => setActiveDropdown(null)}
                           >
                             View All {item.name}
-                          </a>
-=======
-                            href={_item.href}
-                            className="block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
-                            onClick={_() => setActiveDropdown(null)}
-                          >
-                            View All {_item.name}
-                          </Link>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        </div>
+                          </a>                        </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
                 </div>
               ))}
 
-<<<<<<< HEAD
               {/* Quick Links */}
               <div className=&quot;flex items-center space-x-6&quot;>
-                <Link href=&quot;/services&quot; className=&quot;text-gray-300 hover:text-white transition-colors duration-200 font-medium&quot;>
-=======
-              {_/* Quick Links */}
-              <div className="flex items-center space-x-6">
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  All Services
+                <Link href=&quot;/services&quot; className=&quot;text-gray-300 hover:text-white transition-colors duration-200 font-medium&quot;>                  All Services
                 </a>
                 <Link href=&quot;/pricing&quot; className=&quot;text-gray-300 hover:text-white transition-colors duration-200 font-medium&quot;>
                   Pricing
@@ -343,20 +224,11 @@ const _UltraAdvancedNavigation2026 = () => {_const [isOpen, _setIsOpen] = useSta
               </div>
             </div>
 
-<<<<<<< HEAD
             {/* Contact Info - Desktop */}
             <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
               <div className=&quot;flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200&quot;>
                 <Phone className=&quot;w-4 h-4&quot; />
-                <span className=&quot;text-sm font-medium&quot;>{contactInfo.phone}</span>
-=======
-            {_/* Contact Info - Desktop */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <div className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
-                <Phone className="w-4 h-4" />
-                <span className="text-sm font-medium">{_contactInfo.phone}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </div>
+                <span className=&quot;text-sm font-medium&quot;>{contactInfo.phone}</span>              </div>
               <Link
                 href=&quot;/contact&quot;
                 className=&quot;px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105&quot;
@@ -367,25 +239,16 @@ const _UltraAdvancedNavigation2026 = () => {_const [isOpen, _setIsOpen] = useSta
 
             {_/* Mobile Menu Button */}
             <button
-<<<<<<< HEAD
               onClick={() => setIsOpen(!isOpen)}
               className=&quot;lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200&quot;
             >
-              {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}
-=======
-              onClick={_() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
-            >
-              {_isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </button>
+              {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}            </button>
           </div>
         </div>
       </nav>
 
       {_/* Mobile Navigation Overlay */}
       <AnimatePresence>
-<<<<<<< HEAD
         {isOpen && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -407,47 +270,16 @@ const _UltraAdvancedNavigation2026 = () => {_const [isOpen, _setIsOpen] = useSta
               <div className=&quot;flex items-center justify-between mb-8&quot;>
                 <div className=&quot;flex items-center space-x-3&quot;>
                   <div className=&quot;w-10 h-10 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center&quot;>
-                    <Rocket className=&quot;w-5 h-5 text-white&quot; />
-=======
-        {_isOpen && (_<motion.div
-            initial={{ opacity: 0}}
-            animate={_{ opacity: 1}}
-            exit={_{ opacity: 0}}
-            transition={_{ duration: 0.2}}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
-            onClick={_() => setIsOpen(false)}
-          >
-            <motion.div
-              initial={_{ x: '100%'}}
-              animate={_{ x: 0}}
-              exit={_{ x: '100%'}}
-              transition={_{ duration: 0.3, _ease: 'easeOut'}}
-              className="absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-purple-500/20 p-6 overflow-y-auto"
-              onClick={_(_e) => e.stopPropagation()}
-            >
-              {_/* Mobile Menu Header */}
-              <div className="flex items-center justify-between mb-8">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                    <Rocket className="w-5 h-5 text-white" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </div>
+                    <Rocket className=&quot;w-5 h-5 text-white&quot; />                  </div>
                   <span className=&quot;text-white font-bold text-lg&quot;>Menu</span>
                 </div>
                 <button
-<<<<<<< HEAD
                   onClick={() => setIsOpen(false)}
-                  className=&quot;p-2 text-gray-300 hover:text-white transition-colors duration-200&quot;
-=======
-                  onClick={_() => setIsOpen(false)}
-                  className="p-2 text-gray-300 hover:text-white transition-colors duration-200"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  className=&quot;p-2 text-gray-300 hover:text-white transition-colors duration-200&quot;                >
                   <X className=&quot;w-6 h-6&quot; />
                 </button>
               </div>
 
-<<<<<<< HEAD
               {/* Mobile Navigation Items */}
               <div className=&quot;space-y-4&quot;>
                 {navigationItems.map((item) => (
@@ -473,85 +305,33 @@ const _UltraAdvancedNavigation2026 = () => {_const [isOpen, _setIsOpen] = useSta
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.name}
-                        </a>
-=======
-              {_/* Mobile Navigation Items */}
-              <div className="space-y-4">
-                {_navigationItems.map(_(item) => (_<div key={item.name} className="border-b border-gray-700/50 pb-4">
-                    <Link
-                      href={_item.href}
-                      className="flex items-center space-x-3 text-white hover:text-purple-300 transition-colors duration-200 py-2"
-                      onClick={_() => setIsOpen(false)}
-                    >
-                      <div className={_`w-8 h-8 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center`}>
-                        <item.icon className="w-4 h-4 text-white" />
-                      </div>
-                      <span className="font-medium">{_item.name}</span>
-                    </Link>
-                    
-                    {_/* Mobile Sub-items */}
-                    <div className="mt-3 ml-11 space-y-2">
-                      {_item.subItems.slice(0, _3).map(_(subItem) => (_<Link
-                          key={subItem.name}
-                          href={_subItem.href}
-                          className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1"
-                          onClick={_() => setIsOpen(false)}
-                        >
-                          {_subItem.name}
-                        </Link>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      ))}
+                        </a>                      ))}
                     </div>
                   </div>
                 ))}
 
-<<<<<<< HEAD
                 {/* Quick Links */}
                 <div className=&quot;space-y-3 pt-4&quot;>
                   <Link
                     href=&quot;/services&quot;
                     className=&quot;block text-gray-300 hover:text-white transition-colors duration-200 font-medium&quot;
-                    onClick={() => setIsOpen(false)}
-=======
-                {_/* Quick Links */}
-                <div className="space-y-3 pt-4">
-                  <Link
-                    href="/services"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-                    onClick={_() => setIsOpen(false)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  >
+                    onClick={() => setIsOpen(false)}                  >
                     All Services
                   </a>
                   <Link
-<<<<<<< HEAD
                     href=&quot;/pricing&quot;
                     className=&quot;block text-gray-300 hover:text-white transition-colors duration-200 font-medium&quot;
-                    onClick={() => setIsOpen(false)}
-=======
-                    href="/pricing"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-                    onClick={_() => setIsOpen(false)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  >
+                    onClick={() => setIsOpen(false)}                  >
                     Pricing
                   </a>
                   <Link
-<<<<<<< HEAD
                     href=&quot;/contact&quot;
                     className=&quot;block text-gray-300 hover:text-white transition-colors duration-200 font-medium&quot;
-                    onClick={() => setIsOpen(false)}
-=======
-                    href="/contact"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-                    onClick={_() => setIsOpen(false)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  >
+                    onClick={() => setIsOpen(false)}                  >
                     Contact
                   </a>
                 </div>
 
-<<<<<<< HEAD
                 {/* Contact Info - Mobile */}
                 <div className=&quot;pt-6 border-t border-gray-700/50 space-y-3&quot;>
                   <div className=&quot;flex items-center space-x-3 text-gray-300&quot;>
@@ -573,32 +353,7 @@ const _UltraAdvancedNavigation2026 = () => {_const [isOpen, _setIsOpen] = useSta
                   <Link
                     href=&quot;/contact&quot;
                     className=&quot;block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200&quot;
-                    onClick={() => setIsOpen(false)}
-=======
-                {_/* Contact Info - Mobile */}
-                <div className="pt-6 border-t border-gray-700/50 space-y-3">
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Phone className="w-4 h-4" />
-                    <span className="text-sm">{_contactInfo.phone}</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <Mail className="w-4 h-4" />
-                    <span className="text-sm">{_contactInfo.email}</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <MapPin className="w-4 h-4" />
-                    <span className="text-sm">{_contactInfo.address}</span>
-                  </div>
-                </div>
-
-                {_/* Get Started Button - Mobile */}
-                <div className="pt-4">
-                  <Link
-                    href="/contact"
-                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
-                    onClick={_() => setIsOpen(false)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  >
+                    onClick={() => setIsOpen(false)}                  >
                     Get Started Today
                   </a>
                 </div>
@@ -608,14 +363,8 @@ const _UltraAdvancedNavigation2026 = () => {_const [isOpen, _setIsOpen] = useSta
         )}
       </AnimatePresence>
 
-<<<<<<< HEAD
       {/* Spacer for fixed navigation */}
-      <div className=&quot;h-20&quot;></div>
-=======
-      {_/* Spacer for fixed navigation */}
-      <div className="h-20"></div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    </>
+      <div className=&quot;h-20&quot;></div>    </>
   )
 }
 

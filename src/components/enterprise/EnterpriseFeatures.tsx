@@ -1,11 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react",
-=======
-import React from &quot;react&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
+import React from "react",import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
 
 const features = [
   {
@@ -29,23 +23,15 @@ const features = [
     description: &quot;Powerful analytics and management tools for team leaders and administrators.&quot;,
     icon: Settings},
   {
-<<<<<<< HEAD
     title: "Global Access",
     description: "Connect with talent across multiple regions with localized interfaces.",
     icon: Globe}],
-=======
-    title: &quot;Global Access&quot;,
-    description: &quot;Connect with talent across multiple regions with localized interfaces.&quot;,
-    icon: Globe}];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 export function EnterpriseFeatures() {
   return (
     <section id=&quot;features&quot; className=&quot;py-20 px-4 md:px-6 bg-muted/50&quot;>
       <div className=&quot;container mx-auto max-w-6xl&quot;>
         <div className=&quot;text-center mb-16&quot;>
           <h2 className=&quot;text-3xl md:text-4xl font-bold mb-4&quot;>
-=======
 import React from "react";
 
 const _features = [
@@ -60,7 +46,6 @@ export function EnterpriseFeatures() {_return (_<section id="features" className
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             Built for Enterprise Needs
           </h2>
           <p className=&quot;text-xl text-muted-foreground max-w-2xl mx-auto&quot;>
@@ -77,14 +62,8 @@ export function EnterpriseFeatures() {_return (_<section id="features" className
               <div className=&quot;h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5&quot;>
                 <feature.icon className=&quot;h-6 w-6 text-primary&quot; />
               </div>
-<<<<<<< HEAD
               <h3 className=&quot;font-bold text-xl mb-3&quot;>{feature.title}</h3>
-              <p className=&quot;text-muted-foreground&quot;>{feature.description}</p>
-=======
-              <h3 className="font-bold text-xl mb-3">{_feature.title}</h3>
-              <p className="text-muted-foreground">{_feature.description}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </div>
+              <p className=&quot;text-muted-foreground&quot;>{feature.description}</p>            </div>
           ))}
         </div>
       </div>

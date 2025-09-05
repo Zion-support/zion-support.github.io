@@ -1,52 +1,47 @@
 
-<<<<<<< HEAD
-// Type definitions for performance APIs
-declare global {_interface PerformanceEntry {
-    name: string;
-    entryType: string;
-    startTime: number;
-    duration: number;}
+// Type definitions for performance APIs,
+declare global {interface PerformanceEntry {
+    name: string,
+    entryType: string,
+    startTime: number,
+    duration: number}
 
-  interface PerformanceNavigationTiming extends PerformanceEntry {_loadEventEnd: number;
-    loadEventStart: number;}
+  interface PerformanceNavigationTiming extends PerformanceEntry {loadEventEnd: number,
+    loadEventStart: number}
 
-  interface PerformancePaintTiming extends PerformanceEntry {_name: string;}
+  interface PerformancePaintTiming extends PerformanceEntry {name: string}
 
-  interface PerformanceEventTiming extends PerformanceEntry {_processingStart: number;}
+  interface PerformanceEventTiming extends PerformanceEntry {processingStart: number}
 }
 
-interface PerformanceMetrics {_loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;}
+interface PerformanceMetrics {loadTime: number,
+  renderTime: number,
+  memoryUsage: number,
+  fps: number}
 
-export function usePerformanceMonitor(): PerformanceMetrics | null {_const [metrics, _setMetrics] = useState<PerformanceMetrics | null>(null);
+export function usePerformanceMonitor(): PerformanceMetrics | null {const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
-  useEffect__(() => {
+  useEffect_(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {
-      return;}
+      return}
 
-    const _updateMetrics = () => {_const _navigation = window.performance.getEntriesByType(
+    const updateMetrics = () => {const navigation = window.performance.getEntriesByType(
         'navigation'
       )[0] as PerformanceNavigationTiming;
-      const _memory = (window.performance as any).memory;
+      const memory = (window.performance as any).memory;
 
       if (navigation) {
         setMetrics({
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart, _renderTime:
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart, renderTime:
             navigation.domContentLoadedEventEnd -
-            navigation.domContentLoadedEventStart, _memoryUsage: memory?.usedJSHeapSize || 0, _fps: 60, });
+            navigation.domContentLoadedEventStart, memoryUsage: memory?.usedJSHeapSize || 0, fps: 60 })
       }
     };
 
-    if (document.readyState === 'complete') {_updateMetrics();} else {_window.addEventListener('load', _updateMetrics);}
+    if (document.readyState === 'complete') {updateMetrics()} else {window.addEventListener('load', updateMetrics)}
 
-    return () => {_window.removeEventListener('load', _updateMetrics);};
+    return () => {window.removeEventListener('load', updateMetrics)}
   }, []);
 
-  return metrics;
+  return metrics
 }
-=======
-},
-export default usePerformanceMonitor,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

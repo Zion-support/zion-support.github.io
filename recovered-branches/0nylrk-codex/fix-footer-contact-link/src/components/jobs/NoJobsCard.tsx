@@ -1,14 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-=======
-import { Card, CardContent } from &quot;@/components/ui/card&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface NoJobsCardProps {
+import { Button } from "@/components/ui/button",interface NoJobsCardProps {
   onUpdateProfile?: () => void
 }
 
@@ -17,7 +9,6 @@ export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
     <Card className=&quot;bg-muted/30 border border-dashed&quot;>
       <CardContent className=&quot;p-6 text-center&quot;>
         <p className=&quot;text-muted-foreground&quot;>
-=======
 
 interface NoJobsCardProps {_onUpdateProfile?: () => void;}
 
@@ -25,7 +16,6 @@ export function NoJobsCard(_{_onUpdateProfile}: NoJobsCardProps) {_return (
     <Card className="bg-muted/30 border border-dashed">
       <CardContent className="p-6 text-center">
         <p className="text-muted-foreground">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           No job suggestions available yet. Complete your profile to get AI-matched jobs.
         </p>
         {onUpdateProfile && (

@@ -1,23 +1,11 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
-import { GradientHeading } from "@/components/GradientHeading",
-=======
-import { Header } from &quot;@/components/Header&quot;;
-import { Footer } from &quot;@/components/Footer&quot;;
-import { FeaturedListingsSection } from &quot;@/components/FeaturedListingsSection&quot;;
-import { GradientHeading } from &quot;@/components/GradientHeading&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export default function Featured() {
+import { GradientHeading } from "@/components/GradientHeading",export default function Featured() {
   return (
-=======
 
-export default function Featured() {_return (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+export default function Featured() {return (
     <>
       <Header />
       <div className=&quot;min-h-screen bg-zion-blue&quot;>
@@ -33,7 +21,7 @@ export default function Featured() {_return (
           </div>
           
           {/* Reuse the FeaturedListings component */}
-          <FeaturedListingsSection showTitle={_false} />
+          <FeaturedListingsSection showTitle={false} />
         </div>
       </div>
       <Footer />

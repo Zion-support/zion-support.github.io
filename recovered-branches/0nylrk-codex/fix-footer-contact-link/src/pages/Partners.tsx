@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -17,26 +15,6 @@ export default function Partners() {
   const [activeTab, setActiveTab] = useState("overview"),
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
-=======
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
-import { CheckCircle, FileDown, FileText, PieChart, Users } from &quot;lucide-react&quot;;
-import { useState } from &quot;react&quot;;
-import { PartnerRegistrationForm } from &quot;@/components/partners/PartnerRegistrationForm&quot;;
-import { PartnerReferralLinks } from &quot;@/components/partners/PartnerReferralLinks&quot;;
-import { PartnerDashboard } from &quot;@/components/partners/PartnerDashboard&quot;;
-import { PartnerLeaderboard } from &quot;@/components/partners/PartnerLeaderboard&quot;;
-import { PartnerResources } from &quot;@/components/partners/PartnerResources&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { useNavigate } from &quot;react-router-dom&quot;;
-
-export default function Partners() {
-  const [activeTab, setActiveTab] = useState(&quot;overview&quot;);
-  const { user, isAuthenticated } = useAuth();
-  const navigate = useNavigate();
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
     return (
@@ -44,7 +22,6 @@ export default function Partners() {
         <div className=&quot;text-center mb-8&quot;>
           <h1 className=&quot;text-4xl font-bold tracking-tight text-white mb-2&quot;>Zion AI Partner Program</h1>
           <p className=&quot;text-xl text-zion-slate-light&quot;>Earn rewards by referring AI talent and clients to our marketplace</p>
-=======
 
 export default function Partners() {_const [activeTab, _setActiveTab] = useState("overview");
   const { user, _isAuthenticated} = useAuth();
@@ -55,7 +32,6 @@ export default function Partners() {_const [activeTab, _setActiveTab] = useState
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold tracking-tight text-white mb-2">Zion AI Partner Program</h1>
           <p className="text-xl text-zion-slate-light">Earn rewards by referring AI talent and clients to our marketplace</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </div>
 
         <div className=&quot;grid md:grid-cols-2 gap-8 mb-12&quot;>
@@ -170,18 +146,10 @@ export default function Partners() {_const [activeTab, _setActiveTab] = useState
             Apply to Join
           </Button>
           <Button 
-<<<<<<< HEAD
             size=&quot;lg&quot; 
             variant=&quot;outline&quot; 
             className=&quot;text-zion-cyan border-zion-cyan&quot;
-            onClick={() => navigate('/login')}
-=======
-            size="lg" 
-            variant="outline" 
-            className="text-zion-cyan border-zion-cyan"
-            onClick={_() => navigate('/login')}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            onClick={() => navigate('/login')}          >
             Partner Login
           </Button>
         </div>
@@ -190,50 +158,26 @@ export default function Partners() {_const [activeTab, _setActiveTab] = useState
   }
 
   // Authenticated user view - Partner Dashboard
-<<<<<<< HEAD
   return (
     <div className=&quot;container max-w-7xl py-10&quot;>
-      <div className=&quot;flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8&quot;>
-=======
-  return (_<div className="container max-w-7xl py-10">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        <div>
+      <div className=&quot;flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8&quot;>        <div>
           <h1 className=&quot;text-3xl font-bold tracking-tight text-white&quot;>Partner Dashboard</h1>
           <p className=&quot;text-zion-slate-light&quot;>Manage your referral links and track your performance</p>
         </div>
-<<<<<<< HEAD
         <div className=&quot;flex gap-2&quot;>
           <Button variant=&quot;outline&quot; className=&quot;flex items-center gap-2&quot; onClick={() => window.print()}>
-            <FileDown className=&quot;h-4 w-4&quot; />
-=======
-        <div className="flex gap-2">
-          <Button variant="outline" className="flex items-center gap-2" onClick={_() => window.print()}>
-            <FileDown className="h-4 w-4" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            Export CSV
+            <FileDown className=&quot;h-4 w-4&quot; />            Export CSV
           </Button>
         </div>
       </div>
 
-<<<<<<< HEAD
       <Tabs value={activeTab} onValueChange={setActiveTab} className=&quot;space-y-4&quot;>
         <TabsList className=&quot;grid grid-cols-2 md:grid-cols-5 mb-4&quot;>
           <TabsTrigger value=&quot;overview&quot;>Overview</TabsTrigger>
           <TabsTrigger value=&quot;referrals&quot;>Referral Links</TabsTrigger>
           <TabsTrigger value=&quot;earnings&quot;>Earnings</TabsTrigger>
           <TabsTrigger value=&quot;leaderboard&quot;>Leaderboard</TabsTrigger>
-          <TabsTrigger value=&quot;resources&quot;>Resources</TabsTrigger>
-=======
-      <Tabs value={_activeTab} onValueChange={_setActiveTab} className="space-y-4">
-        <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-4">
-          <TabsTrigger value="overview">Overview</TabsTrigger>
-          <TabsTrigger value="referrals">Referral Links</TabsTrigger>
-          <TabsTrigger value="earnings">Earnings</TabsTrigger>
-          <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
-          <TabsTrigger value="resources">Resources</TabsTrigger>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        </TabsList>
+          <TabsTrigger value=&quot;resources&quot;>Resources</TabsTrigger>        </TabsList>
         
         <TabsContent value=&quot;overview&quot; className=&quot;space-y-4&quot;>
           <PartnerDashboard />
@@ -250,14 +194,8 @@ export default function Partners() {_const [activeTab, _setActiveTab] = useState
               <CardDescription>Track your earnings and manage payouts</CardDescription>
             </CardHeader>
             <CardContent>
-<<<<<<< HEAD
               {/* This will be implemented later */}
-              <p className=&quot;text-zion-slate-light&quot;>Earnings tracking and payout requests will be available soon.</p>
-=======
-              {_/* This will be implemented later */}
-              <p className="text-zion-slate-light">Earnings tracking and payout requests will be available soon.</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </CardContent>
+              <p className=&quot;text-zion-slate-light&quot;>Earnings tracking and payout requests will be available soon.</p>            </CardContent>
           </Card>
         </TabsContent>
         

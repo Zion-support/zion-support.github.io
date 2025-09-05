@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
 import { Switch } from '@/components/ui/switch',
@@ -10,19 +9,10 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-<<<<<<< HEAD
   AccordionTrigger} from "@/components/ui/accordion",
 import { toast } from '@/hooks/use-toast',
 import { supabase } from '@/integrations/supabase/client',
-import { useAuth } from '@/hooks/useAuth',
-=======
-  AccordionTrigger} from &quot;@/components/ui/accordion&quot;;
-import { toast } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export function FraudDetectionSettings() {
+import { useAuth } from '@/hooks/useAuth',export function FraudDetectionSettings() {
   const { user } = useAuth(),
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true),
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true),
@@ -31,7 +21,6 @@ export function FraudDetectionSettings() {
   
   const handleSavePreferences = async () => {
     if (!user?.id) return,
-=======
 import React, {_useState} from 'react';
 import {_Accordion, _AccordionContent, _AccordionItem, _AccordionTrigger} from "@/components/ui/accordion";
 
@@ -42,40 +31,24 @@ export function FraudDetectionSettings() {_const { user} = useAuth();
   const [isSaving, setIsSaving] = useState(false);
   
   const _handleSavePreferences = async () => {_if (!user?.id) return;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     setIsSaving(true),
     try {
-<<<<<<< HEAD
       // In a real implementation, we would save these preferences to the database
       // For now, we'll just simulate a successful save
       await new Promise(resolve => setTimeout(resolve, 1000)),
       
       toast({
-<<<<<<< HEAD
         title: "Settings saved",
-        description: "Your fraud detection preferences have been updated."})
-=======
-        title: &quot;Settings saved&quot;,
-        description: &quot;Your fraud detection preferences have been updated.&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } catch (error) {
+        description: "Your fraud detection preferences have been updated."})    } catch (error) {
       console.error('Error saving preferences:', error),
       toast({
-<<<<<<< HEAD
         title: "Error",
         description: "Failed to save your preferences. Please try again.",
-        variant: "destructive"})
-=======
-        title: &quot;Error&quot;,
-        description: &quot;Failed to save your preferences. Please try again.&quot;,
-        variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+        variant: "destructive"})    } finally {
       setIsSaving(false)
     }
   },
-=======
       // In a real implementation, _we would save these preferences to the database
       // For now, _we'll just simulate a successful save
       await new Promise(resolve => setTimeout(resolve, _1000));
@@ -86,7 +59,6 @@ export function FraudDetectionSettings() {_const { user} = useAuth();
         title: "Error", _description: "Failed to save your preferences. Please try again.", _variant: "destructive"});
     } finally {_setIsSaving(false);}
   };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <Card className=&quot;mb-8&quot;>
@@ -112,16 +84,9 @@ export function FraudDetectionSettings() {_const { user} = useAuth();
                 </p>
               </div>
               <Switch
-<<<<<<< HEAD
                 id=&quot;message-scanning&quot;
                 checked={messageScanningEnabled}
-                onCheckedChange={setMessageScanningEnabled}
-=======
-                id="message-scanning"
-                checked={_messageScanningEnabled}
-                onCheckedChange={_setMessageScanningEnabled}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              />
+                onCheckedChange={setMessageScanningEnabled}              />
             </div>
             
             <div className=&quot;flex items-center justify-between&quot;>
@@ -134,16 +99,9 @@ export function FraudDetectionSettings() {_const { user} = useAuth();
                 </p>
               </div>
               <Switch
-<<<<<<< HEAD
                 id=&quot;activity-monitoring&quot;
                 checked={activityMonitoringEnabled}
-                onCheckedChange={setActivityMonitoringEnabled}
-=======
-                id="activity-monitoring"
-                checked={_activityMonitoringEnabled}
-                onCheckedChange={_setActivityMonitoringEnabled}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              />
+                onCheckedChange={setActivityMonitoringEnabled}              />
             </div>
             
             <div className=&quot;flex items-center justify-between&quot;>
@@ -156,16 +114,9 @@ export function FraudDetectionSettings() {_const { user} = useAuth();
                 </p>
               </div>
               <Switch
-<<<<<<< HEAD
                 id=&quot;ai-analysis&quot;
                 checked={aiAnalysisEnabled}
-                onCheckedChange={setAiAnalysisEnabled}
-=======
-                id="ai-analysis"
-                checked={_aiAnalysisEnabled}
-                onCheckedChange={_setAiAnalysisEnabled}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              />
+                onCheckedChange={setAiAnalysisEnabled}              />
             </div>
           </div>
           
@@ -196,20 +147,11 @@ export function FraudDetectionSettings() {_const { user} = useAuth();
           
           <div className=&quot;pt-2&quot;>
             <Button 
-<<<<<<< HEAD
               onClick={handleSavePreferences}
               disabled={isSaving}
               className=&quot;bg-zion-purple hover:bg-zion-purple-light&quot;
             >
-              {isSaving ? &quot;Saving...&quot; : &quot;Save Preferences&quot;}
-=======
-              onClick={_handleSavePreferences}
-              disabled={_isSaving}
-              className="bg-zion-purple hover:bg-zion-purple-light"
-            >
-              {_isSaving ? "Saving..." : "Save Preferences"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </Button>
+              {isSaving ? &quot;Saving...&quot; : &quot;Save Preferences&quot;}            </Button>
           </div>
         </div>
       </CardContent>

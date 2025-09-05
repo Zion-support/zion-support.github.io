@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AiFinancialPlanningPlatform() {
@@ -20,15 +19,8 @@ export default function AiFinancialPlanningPlatform() {
 				&quot;Executive dashboards and board-ready reports&quot;,
 				&quot;Headcount planning and hiring plans&quot;
 			]}
-<<<<<<< HEAD
 			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}
-			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"
-=======
-			industries={[&quot;SaaS&quot;, &quot;Ecommerce&quot;, &quot;Fintech&quot;, &quot;Professional Services&quot;]}
-			canonical=&quot;https://ziontechgroup.com/ai-financial-planning-platform&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AiFinancialPlanningPlatform() {_return (
@@ -44,7 +36,6 @@ export default function AiFinancialPlanningPlatform() {_return (
 			]}
 			industries={_["SaaS", _"Ecommerce", _"Fintech", _"Professional Services"]}
 			canonical="https://ziontechgroup.com/ai-financial-planning-platform"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		/>
 	)
 }

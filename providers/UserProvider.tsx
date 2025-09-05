@@ -1,42 +1,42 @@
-import React, {_createContext, _useContext, _useEffect, _useMemo, _useState} from 'react'
+import React, {createContext, useContext, useEffect, useMemo, useState} from 'react'
 
 export type UserRole = 'client' | 'talent'
 
-export type User = {_id: string
-  name: string
-  role: UserRole
-  avatarUrl?: string
-  onboardingCompleted: boolean}
+export type User = {id: string,
+name: string,
+role: UserRole,
+avatarUrl?: string,
+onboardingCompleted: boolean}
 
-export type UserContextValue = {_user: User | null
-  setUser: (_user: User | null) => void
-  logout: () => void
-  completeOnboarding: () => void}
+export type UserContextValue = {user: User | null,
+setUser: (user: User | null) => void,
+logout: () => void,
+completeOnboarding: () => void}
 
-const _UserContext = createContext<UserContextValue | undefined>(undefined)
+const UserContext = createContext<UserContextValue | undefined>(undefined)
 
-const DEFAULT_USER: User = {_id: 'u_001', _name: 'Jordan Lee', _role: 'client', _onboardingCompleted: false}
+const DEFAULTUSER: User = {id: 'u001', name: 'Jordan Lee', role: 'client', onboardingCompleted: false}
 
-export function UserProvider(_{_children}: {_children: React.ReactNode}) {_const [user, _setUser] = useState<User | null>(null)
+export function UserProvider(_{children}: {children: React.ReactNode}) {const [user, setUser] = useState<User | null>(null)
 
-  useEffect__(() => {
+  useEffect_(() => {
     try {
-      const _raw = localStorage.getItem('zion.user')
+      const raw = localStorage.getItem('zion.user')
       if (raw) {
-        setUser(JSON.parse(raw))} else {_setUser(DEFAULT_USER)}
-    } catch {_setUser(DEFAULT_USER)}
+        setUser(JSON.parse(raw))} else {setUser(DEFAULTUSER)}
+    } catch {setUser(DEFAULTUSER)}
   }, [])
 
-  useEffect__(() => {_try {
-      if (user) localStorage.setItem('zion.user', _JSON.stringify(user))
+  useEffect_(() => {try {
+      if (user) localStorage.setItem('zion.user', JSON.stringify(user))
       else localStorage.removeItem('zion.user')} catch {}
   }, [user])
 
-  const _value = useMemo<UserContextValue>__(() => (_{_user, _setUser, _logout: () => setUser(null), _completeOnboarding: () => setUser(prev => prev ? { ...prev, _onboardingCompleted: true} : prev)}), [user])
+  const value = useMemo<UserContextValue>_(() => (_{user, setUser, logout: () => setUser(null), completeOnboarding: () => setUser(prev => prev ? { ...prev, onboardingCompleted: true} : prev)}), [user])
 
-  return <UserContext.Provider value={_value}>{_children}</UserContext.Provider>
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }
 
-export function useUser() {_const _ctx = useContext(UserContext)
+export function useUser() {const ctx = useContext(UserContext)
   if (!ctx) throw new Error('useUser must be used within UserProvider')
   return ctx}

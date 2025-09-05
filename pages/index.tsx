@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link',
 import Head from 'next/head',
 import { useState, useEffect, Suspense } from 'react',
@@ -24,32 +23,7 @@ export default function Home() {
           <h1 className=&quot;text-2xl font-bold mb-4&quot;>Something went wrong</h1>
           <button 
             onClick={() => window.location.reload()} 
-            className=&quot;px-4 py-2 bg-blue-600 rounded-lg hover: bg-blue-700&quot;
-=======
-import Link from 'next/link';
-import Head from 'next/head';
-import ErrorBoundary from '../components/ErrorBoundary';
-import LoadingSpinner from '../components/LoadingSpinner';
-import PerformanceMonitor from '../components/PerformanceMonitor';
-export default function Home() {_const [animationState, _setAnimationState] = useState<AnimationState>({
-    isLoaded: false, _hasError: false, });
-
-  const contact: ContactInfo = {_phone: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _site: 'https://ziontechgroup.com', };
-
-  useEffect__(() => {_const _timer = setTimeout__(() => {
-      setAnimationState(prev => ({ ...prev, _isLoaded: true}));
-    }, 100);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (animationState.hasError) {_return (_<div className="min-h-screen bg-slate-950 flex items-center justify-center">
-        <div className="text-center text-white">
-          <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
-          <button
-            onClick={() => window.location.reload()}
-            className="px-4 py-2 bg-blue-600 rounded-lg hover: bg-blue-700"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            className=&quot;px-4 py-2 bg-blue-600 rounded-lg hover: bg-blue-700&quot;          >
             Reload Page
           </button>
         </div>
@@ -66,7 +40,6 @@ export default function Home() {_const [animationState, _setAnimationState] = us
   return (
     <>
       <Head>
-<<<<<<< HEAD
         <title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>
         <meta name=&quot;description&quot; content=&quot;Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions&quot; />
@@ -92,7 +65,6 @@ export default function Home() {_const [animationState, _setAnimationState] = us
           type=&quot;application/ld+json&quot;
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-<<<<<<< HEAD
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Zion Tech Group",
@@ -113,31 +85,7 @@ export default function Home() {_const [animationState, _setAnimationState] = us
                 contactType: "customer service",
                 email: contact.email
               },
-              sameAs: [contact.site]
-=======
-              &quot;@context&quot;: &quot;https://schema.org&quot;,
-              &quot;@type&quot;: &quot;Organization&quot;,
-              &quot;name&quot;: &quot;Zion Tech Group&quot;,
-              &quot;url&quot;: contact.site,
-              &quot;logo&quot;: `${contact.site}/favicon.svg`,
-              &quot;description&quot;: &quot;Leading provider of micro SaaS products, AI services, and IT solutions&quot;,
-              &quot;address&quot;: {
-                &quot;@type&quot;: &quot;PostalAddress&quot;,
-                &quot;streetAddress&quot;: &quot;364 E Main St STE 1008&quot;,
-                &quot;addressLocality&quot;: &quot;Middletown&quot;,
-                &quot;addressRegion&quot;: &quot;DE&quot;,
-                &quot;postalCode&quot;: &quot;19709&quot;,
-                &quot;addressCountry&quot;: &quot;US&quot;
-              },
-              &quot;contactPoint&quot;: {
-                &quot;@type&quot;: &quot;ContactPoint&quot;,
-                &quot;telephone&quot;: contact.phone,
-                &quot;contactType&quot;: &quot;customer service&quot;,
-                &quot;email&quot;: contact.email
-              },
-              &quot;sameAs&quot;: [contact.site]
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-            })
+              sameAs: [contact.site]            })
           }}
         />
       </Head>
@@ -227,7 +175,6 @@ export default function Home() {_const [animationState, _setAnimationState] = us
                 <Link href=&quot;/micro-saas&quot; className=&quot;text-blue-400 hover:text-blue-300 font-semibold&quot;>
                   View All Micro SaaS →
                 </Link>
-=======
         <title>
           Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions
         </title>
@@ -504,7 +451,6 @@ export default function Home() {_const [animationState, _setAnimationState] = us
                     </a>
                   </p>
                 </div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </div>
               <div className=&quot;p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors&quot;>
                 <h3 className=&quot;text-2xl font-bold mb-4 text-purple-400&quot;>AI Services</h3>
@@ -572,22 +518,13 @@ export default function Home() {_const [animationState, _setAnimationState] = us
         </section>
           </main>
         </Suspense>
-<<<<<<< HEAD
         {/* <PerformanceMonitor 
           showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
           onThresholdExceeded={(metrics) => {
             console.warn('Performance thresholds exceeded:', metrics)
           }}
-        /> */}
-=======
-        <PerformanceMonitor
-          showMetrics={_process.env.NODE_ENV === 'development'}
-          logMetrics={_true}
-          onThresholdExceeded={_metrics => {}}
-        />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      </ErrorBoundary>
+        /> */}      </ErrorBoundary>
     </>
   )
 }

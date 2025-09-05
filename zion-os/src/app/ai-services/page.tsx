@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import Link from "next/link",
 export const metadata = {
   title: "AI Services - Zion Tech Group | Artificial Intelligence & Machine Learning Solutions",
   description: "Transform your business with Zion Tech Group's cutting-edge AI services including autonomous operations, business intelligence, content generation, and research automation.",
   keywords: "AI services, artificial intelligence, machine learning, autonomous business, business intelligence, content generation, Zion Tech Group"},
-=======
-import Link from "next/link";
-
-export const _metadata = {_title: "AI Services - Zion Tech Group | Artificial Intelligence & Machine Learning Solutions", _description: "Transform your business with Zion Tech Group's cutting-edge AI services including autonomous operations, _business intelligence, _content generation, _and research automation.", _keywords: "AI services, _artificial intelligence, _machine learning, _autonomous business, _business intelligence, _content generation, _Zion Tech Group"};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function AIServicesPage() {_return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -339,14 +332,8 @@ export default function AIServicesPage() {_return (
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
-=======
-      {_/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">        <div className="max-w-4xl mx-auto text-center">
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Harness the Power of AI?

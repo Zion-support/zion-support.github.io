@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -10,29 +8,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button",
 import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from "lucide-react",
 import { useAuth } from "@/hooks/useAuth",
-import { Link } from "react-router-dom",
-=======
-import React from &quot;react&quot;;
-import { Header } from &quot;@/components/Header&quot;;
-import { Footer } from &quot;@/components/Footer&quot;;
-import { SEO } from &quot;@/components/SEO&quot;;
-import { useWhitelabel } from &quot;@/context/WhitelabelContext&quot;;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from &quot;lucide-react&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { Link } from &quot;react-router-dom&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export default function ZionHireAI() {
+import { Link } from "react-router-dom",export default function ZionHireAI() {
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
   const { isAuthenticated } = useAuth(),
-=======
 import React from "react";
 
 export default function ZionHireAI() {_const { isWhitelabel, _brandName, _primaryColor} = useWhitelabel();
   const {_isAuthenticated} = useAuth();
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <>
@@ -41,7 +23,6 @@ export default function ZionHireAI() {_const { isWhitelabel, _brandName, _primar
         description=&quot;Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience.&quot;
       />
       <Header />
-<<<<<<< HEAD
       <main className=&quot;flex-1&quot;>
         {/* Hero Section */}
         <section 
@@ -52,21 +33,7 @@ export default function ZionHireAI() {_const { isWhitelabel, _brandName, _primar
             <div className=&quot;grid gap-6 md:grid-cols-2 items-center&quot;>
               <div className=&quot;space-y-4&quot;>
                 <h1 className=&quot;text-3xl md:text-5xl font-bold tracking-tighter text-white&quot;>
-                  {isWhitelabel ? `${brandName} Recruiting Assistant` : &quot;Zion Hire AI&quot;}
-=======
-      <main className="flex-1">
-        {_/* Hero Section */}
-        <section 
-          className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24"
-          style={_primaryColor ? { backgroundImage: `linear-gradient(to bottom right, _${primaryColor}, rgba(25, 33, 52, 1))` } : {}}
-        >
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="grid gap-6 md:grid-cols-2 items-center">
-              <div className="space-y-4">
-                <h1 className="text-3xl md:text-5xl font-bold tracking-tighter text-white">
-                  {_isWhitelabel ? `${brandName} Recruiting Assistant` : "Zion Hire AI"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </h1>
+                  {isWhitelabel ? `${brandName} Recruiting Assistant` : &quot;Zion Hire AI&quot;}                </h1>
                 <p className=&quot;text-lg text-zion-slate-light max-w-[600px]&quot;>
                   Empower your team with AI-driven talent acquisition. Streamline your hiring process, 
                   improve candidate matches, and enhance the applicant experience.
@@ -77,14 +44,8 @@ export default function ZionHireAI() {_const { isWhitelabel, _brandName, _primar
                     className=&quot;bg-zion-purple hover:bg-zion-purple-light text-white&quot;
                     asChild
                   >
-<<<<<<< HEAD
                     <Link to={isAuthenticated ? &quot;/enterprise/admin&quot; : &quot;/login&quot;}>
-                      Get Started <ArrowRight className=&quot;ml-2 h-4 w-4&quot; />
-=======
-                    <Link to={_isAuthenticated ? "/enterprise/admin" : "/login"}>
-                      Get Started <ArrowRight className="ml-2 h-4 w-4" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </Link>
+                      Get Started <ArrowRight className=&quot;ml-2 h-4 w-4&quot; />                    </Link>
                   </Button>
                   <Button 
                     variant=&quot;outline&quot; 
@@ -110,22 +71,12 @@ export default function ZionHireAI() {_const { isWhitelabel, _brandName, _primar
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className=&quot;py-16 bg-background&quot;>
           <div className=&quot;container mx-auto px-4 md:px-6&quot;>
             <div className=&quot;text-center mb-12&quot;>
               <h2 className=&quot;text-3xl font-bold tracking-tight&quot;>Powerful AI Hiring Tools</h2>
-              <p className=&quot;text-muted-foreground mt-4 max-w-3xl mx-auto&quot;>
-=======
-        {_/* Features Section */}
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4 md: px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold tracking-tight">Powerful AI Hiring Tools</h2>
-              <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                Our comprehensive suite of AI-powered hiring tools help you streamline your recruiting process,
+              <p className=&quot;text-muted-foreground mt-4 max-w-3xl mx-auto&quot;>                Our comprehensive suite of AI-powered hiring tools help you streamline your recruiting process,
                 find better candidates, and make data-driven decisions.
               </p>
             </div>
@@ -290,31 +241,16 @@ export default function ZionHireAI() {_const { isWhitelabel, _brandName, _primar
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className=&quot;bg-zion-blue-dark py-16&quot;>
           <div className=&quot;container mx-auto px-4 md:px-6 text-center&quot;>
             <h2 className=&quot;text-3xl font-bold text-white mb-4&quot;>Ready to transform your hiring process?</h2>
-            <p className=&quot;text-zion-slate-light max-w-2xl mx-auto mb-8&quot;>
-=======
-        {_/* CTA Section */}
-        <section className="bg-zion-blue-dark py-16">
-          <div className="container mx-auto px-4 md: px-6 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your hiring process?</h2>
-            <p className="text-zion-slate-light max-w-2xl mx-auto mb-8">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              Join leading companies using Zion Hire AI to find better talent faster, 
+            <p className=&quot;text-zion-slate-light max-w-2xl mx-auto mb-8&quot;>              Join leading companies using Zion Hire AI to find better talent faster, 
               reduce time-to-hire, and improve candidate experience.
             </p>
             <Button 
-<<<<<<< HEAD
               size="lg" 
-              className="bg-zion-purple hover: bg-zion-purple-light text-white"
-=======
-              size=&quot;lg&quot; 
-              className=&quot;bg-zion-purple hover:bg-zion-purple-light text-white&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-              asChild
+              className="bg-zion-purple hover: bg-zion-purple-light text-white"              asChild
             >
               <Link to=&quot;/enterprise/demo&quot;>
                 Schedule a Demo

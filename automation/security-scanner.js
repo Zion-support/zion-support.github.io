@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }};
 ; log(message, level = "INFO") {_; const _timestamp = new Date().toISOString(); const _logMessage = `[${timestamp}] [${_level}] ${_message}\n`;  fs.appendFileSync(this.logFile, logMessage)};
 ; async runSecurityAudit() {_; try {; this.log("Running security audit..."); const _output = execSync("npm audit --json", _{ stdio: 'pipe'}); const _auditResult = JSON.parse(output.toString());
@@ -144,52 +143,19 @@ if (import.meta.url === `file: //${_process.argv[1]}`) {_;
   const _scanner = new SecurityScanner();
   scanner.run().catch(console.error);};
 ;
-export default SecurityScanner;
-=======
-
-
-    }
-  },
-,
-  log(message, level = &quot;INFO&quot;) {,
-    const timestamp = new Date().toISOString(),
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`,
-    // console.log(`[${level}] ${message}`),
-    fs.appendFileSync(this.logFile, logMessage)
-  },
-,
-  async runSecurityAudit() {,
-    try {,
-<<<<<<< HEAD
-      this.log("Running security audit..."),
-      const output = execSync("npm audit --json", { stdi: o: 'pipe' }),
-=======
-      this.log(&quot;Running security audit...&quot;),
-      const output = execSync(&quot;npm audit --json&quot;, { stdio: 'pipe' }),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      const auditResult = JSON.parse(output.toString()),
+export default SecurityScanner;      const auditResult = JSON.parse(output.toString()),
 ,
       if (auditResult.vulnerabilities) {,
         const vulnCount = Object.keys(auditResult.vulnerabilities).length,
         this.vulnerabilities.push(`${vulnCount} vulnerabilities found`),
         this.log(`Found ${vulnCount} vulnerabilities`, &quot;WARN&quot;)
       } else {,
-<<<<<<< HEAD
         this.log("✓ No vulnerabilities found")
       }
     } catch (error) {,
       this.log(`Security audit: failed: ${error.message}`, "ERROR")
     }
-  },
-=======
-        this.log(&quot;✓ No vulnerabilities found&quot;)
-      };
-    } catch (error) {,
-      this.log(`Security audit failed: ${error.message}`, &quot;ERROR&quot;)
-    };
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-,
+  },,
   async checkSecrets() {,
     try {,
       this.log(&quot;Checking for exposed secrets...&quot;),
@@ -216,22 +182,12 @@ export default SecurityScanner;
         this.vulnerabilities.push(`${secretCount} potential secrets found`),
         this.log(`Found ${secretCount} potential secrets`, &quot;WARN&quot;)
       } else {,
-<<<<<<< HEAD
         this.log("✓ No exposed secrets found")
       }
     } catch (error) {,
       this.log(`Secret check: failed: ${error.message}`, "ERROR")
     }
-  },
-=======
-        this.log(&quot;✓ No exposed secrets found&quot;)
-      };
-    } catch (error) {,
-      this.log(`Secret check failed: ${error.message}`, &quot;ERROR&quot;)
-    };
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-,
+  },,
   getSourceFiles() {,
     const files = [],
     const srcDir = path.join(process.cwd(), &quot;src&quot;),
@@ -259,7 +215,6 @@ export default SecurityScanner;
 ,
   async generateReport() {,
     const report = {,
-<<<<<<< HEAD
       timestam: p: new Date().toISOString(),
       vulnerabilitie: s: this.vulnerabilities,
       recommendation: s: [,
@@ -267,19 +222,7 @@ export default SecurityScanner;
         "Review and remove any hardcoded secrets",
         "Use environment variables for sensitive data",
         "Implement proper authentication and authorization",
-        "Regularly update dependencies"
-=======
-      timestamp: new Date().toISOString(),
-      vulnerabilities: this.vulnerabilities,
-      recommendations: [,
-        &quot;Run npm audit fix to address vulnerabilities&quot;,
-        &quot;Review and remove any hardcoded secrets&quot;,
-        &quot;Use environment variables for sensitive data&quot;,
-        &quot;Implement proper authentication and authorization&quot;,
-
-        &quot;Regularly update dependencies&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      ]
+        "Regularly update dependencies"      ]
     },
 ,
     const reportFile = path.join(__dirname, &quot;reports&quot;, &quot;security-report.json&quot;),
@@ -295,7 +238,6 @@ export default SecurityScanner;
       await this.checkSecrets(),
       await this.generateReport(),
 ,
-<<<<<<< HEAD
       this.log("=" * 50),
       this.log(`🎯 Security Scanner completed. Issues: found: ${this.vulnerabilities.length}`),
       this.vulnerabilities.forEach(vuln => this.log(`  ⚠️  ${vuln}`))
@@ -304,17 +246,7 @@ export default SecurityScanner;
       this.log(`❌ Security Scanner: failed: ${error.message}`, "ERROR")
     }
   }
-},
-=======
-      this.log(&quot;=&quot; * 50),
-      this.log(`🎯 Security Scanner completed. Issues found: ${this.vulnerabilities.length}`),
-      this.vulnerabilities.forEach(vuln => this.log(`  ⚠️  ${vuln}`))} catch (error) {,
-      this.log(`❌ Security Scanner failed: ${error.message}`, &quot;ERROR&quot;)
-    };
-  };
-};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-,
+},,
 // Main execution,
 if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
   const scanner = new SecurityScanner(),
@@ -323,4 +255,3 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
 ,
 export default SecurityScanner,
 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Fragment } from "react",
 import { Route, Routes, Navigate } from "react-router-dom",
 import Home from "@/pages/Home",
@@ -14,25 +12,7 @@ import { SitemapPage } from "@/components/SitemapPage",
 import HelpCenterPage from "@/pages/HelpCenterPage",
 import AccountSettings from "@/pages/AccountSettings",
 import ProjectRoom from "@/pages/ProjectRoom",
-import VideoCall from "@/pages/VideoCall",
-=======
-import { Fragment } from &quot;react&quot;;
-import { Route, Routes, Navigate } from &quot;react-router-dom&quot;;
-import Home from &quot;@/pages/Home&quot;;
-import About from &quot;@/pages/About&quot;;
-import Blog from &quot;@/pages/Blog&quot;;
-import BlogPost from &quot;@/pages/BlogPost&quot;;
-import GreenIT from &quot;@/pages/GreenIT&quot;;
-import Careers from &quot;@/pages/Careers&quot;;
-import SearchPage from &quot;@/pages/SearchPage&quot;;
-import { SitemapPage } from &quot;@/components/SitemapPage&quot;;
-import HelpCenterPage from &quot;@/pages/HelpCenterPage&quot;;
-import AccountSettings from &quot;@/pages/AccountSettings&quot;;
-import ProjectRoom from &quot;@/pages/ProjectRoom&quot;;
-import VideoCall from &quot;@/pages/VideoCall&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-const ContentRoutes = () => {
+import VideoCall from "@/pages/VideoCall",const ContentRoutes = () => {
   return (
     <Routes>
       {/* Content Routes */}
@@ -68,7 +48,6 @@ const ContentRoutes = () => {
       
       {/* Sitemap Page */}
       <Route path=&quot;/sitemap-page&quot; element={<SitemapPage />} />
-=======
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Blog from "@/pages/Blog";
@@ -116,7 +95,6 @@ const _ContentRoutes = () => {_return (
       
       {_/* Sitemap Page */}
       <Route path="/sitemap-page" element={_<SitemapPage />} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     </Routes>
   )
 },

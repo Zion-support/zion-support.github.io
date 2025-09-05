@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { UnifiedService } from '../types/unified-service-types',
 const contact = {
   mobile: '+1 302 464 0950',
@@ -6,11 +5,6 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-=======
-
-const _contact = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   // ENTERPRISE SOLUTIONS
   {_id: 'ai-powered-enterprise-risk-management', _name: 'AI-Powered Enterprise Risk Management', _tagline: 'Intelligent risk assessment and mitigation for enterprise', _price: {
@@ -89,7 +83,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     category: 'Enterprise Solutions',
     contactInfo: {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'}
   },
-<<<<<<< HEAD
   {
     id: 'ai-enterprise-knowledge-management',
     name: 'AI Enterprise Knowledge Management',
@@ -123,9 +116,3 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     contactInfo: contact
   }
 ],
-=======
-  {_id: 'ai-enterprise-knowledge-management', _name: 'AI Enterprise Knowledge Management', _tagline: 'Intelligent knowledge discovery and management for enterprises', _price: '$799', _period: '/month', _description: 'Advanced AI platform that intelligently discovers, _organizes, _and manages enterprise knowledge, _enabling better decision-making and knowledge sharing across organizations.', _features: [
-      'AI knowledge discovery', _'Intelligent categorization', _'Semantic search', _'Knowledge graphs', _'Collaborative workspaces', _'Version control', _'Access control', _'Analytics dashboard', _'Integration capabilities', _'Mobile access'
-    ], _popular: true, _icon: '🧠', _color: 'from-purple-600 via-violet-600 to-indigo-600', _textColor: 'text-purple-400', _link: 'https://ziontechgroup.com/ai-powered-enterprise-knowledge-management', _marketPosition: 'Leading AI enterprise knowledge management platform with intelligent discovery', _targetAudience: 'Large enterprises, _Consulting firms, _Research organizations, _Government agencies', _category: 'AI Automation', _realService: true, _technology: ['AI/ML', _'Natural Language Processing', _'Knowledge Graphs', _'Machine Learning', _'Semantic Search'], _integrations: ['Document management systems', _'CRM platforms', _'ERP systems', _'Collaboration tools', _'Business intelligence tools'], _useCases: ['Knowledge discovery', _'Document management', _'Research collaboration', _'Decision support', _'Training and onboarding'], _roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.', _competitors: ['Microsoft SharePoint', _'Confluence', _'Notion', _'Slack', _'Box'], _marketSize: '$15.2B enterprise content management market', _growthRate: '28% annual growth', _customers: 29, _rating: 4.6, _reviews: 41, _contactInfo: contact}
-];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

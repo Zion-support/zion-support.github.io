@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceCategory, ITService, AIService, MicroSAAS } from '@/types/services',
 
 export const SERVICE_CATEGORIES: ServiceCategory[] = [
@@ -81,27 +80,7 @@ export const AI_SERVICES: AIService[] = [
         currency: '$',
         period: 'month',
         features: ['Unlimited conversationsCustom AI trainingDedicated supportAPI accessWhite-label solution']
-      }
-=======
-
-export const SERVICE_CATEGORIES: ServiceCategory[] = [
-  {_id: 'ai-services', _name: 'AI & Machine Learning', _description: 'Cutting-edge artificial intelligence solutions for business automation and insights', _icon: '🤖', _color: 'bg-gradient-to-r from-purple-500 to-pink-500'},
-  {_id: 'it-services', _name: 'IT Infrastructure & Support', _description: 'Comprehensive IT services for modern business operations', _icon: '🖥️', _color: 'bg-gradient-to-r from-blue-500 to-cyan-500'},
-  {_id: 'micro-saas', _name: 'Micro SAAS Solutions', _description: 'Specialized software-as-a-service tools for specific business needs', _icon: '☁️', _color: 'bg-gradient-to-r from-green-500 to-emerald-500'},
-  {_id: 'cybersecurity', _name: 'Cybersecurity & Compliance', _description: 'Advanced security solutions to protect your digital assets', _icon: '🔒', _color: 'bg-gradient-to-r from-red-500 to-orange-500'},
-  {_id: 'data-analytics', _name: 'Data Analytics & BI', _description: 'Transform data into actionable business intelligence', _icon: '📊', _color: 'bg-gradient-to-r from-indigo-500 to-purple-500'},
-  {_id: 'cloud-solutions', _name: 'Cloud & DevOps', _description: 'Scalable cloud infrastructure and development operations', _icon: '☁️', _color: 'bg-gradient-to-r from-sky-500 to-blue-500'}
-];
-
-export const AI_SERVICES: AIService[] = [
-  {_id: 'ai-customer-service', _title: 'AI Customer Service Automation', _description: 'Intelligent chatbot system with natural language processing for 24/7 customer support', _category: 'AI & Machine Learning', _provider: {
-      id: 'zion-ai', _name: 'Zion AI Solutions', _logo: 'https://ziontechgroup.com/assets/logo.png', _rating: 4.8, _reviewCount: 156, _location: 'Middletown, _DE', _verified: true, _specialties: ['AI', _'Customer Service', _'Automation']},
-    pricing: {_basic: {
-        price: 299, _currency: '$', _period: 'month', _features: ['Up to 1, _000 conversations/month', _'Basic NLP', _'Email support', _'Standard templates']},
-      professional: {_price: 799, _currency: '$', _period: 'month', _features: ['Up to 10, _000 conversations/month', _'Advanced NLP', _'Phone support', _'Custom branding', _'Analytics dashboard'], _popular: true},
-      enterprise: {_price: 2499, _currency: '$', _period: 'month', _features: ['Unlimited conversations', _'Custom AI training', _'Dedicated support', _'API access', _'White-label solution']}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    },
+      }    },
     features: ['Natural Language ProcessingMulti-language supportIntegration with CRM systemsSentiment analysisAutomated ticket routing'],
     benefits: ['24/7 customer supportReduced response timeCost savingsImproved customer satisfactionScalable solution'],
     useCases: ['E-commerce supportHelp desk automationLead qualificationFAQ handlingAppointment booking'],
@@ -127,7 +106,6 @@ export const AI_SERVICES: AIService[] = [
     apiAccess: true,
     realTimeProcessing: true
   },
-<<<<<<< HEAD
   {
     id: 'ai-content-generation',
     title: 'AI Content Generation Suite',
@@ -162,16 +140,7 @@ export const AI_SERVICES: AIService[] = [
         currency: '$',
         period: 'month',
         features: ['Unlimited contentCustom AI trainingDedicated writerAPI accessWhite-label']
-      }
-=======
-  {_id: 'ai-content-generation', _title: 'AI Content Generation Suite', _description: 'Advanced AI-powered content creation for blogs, _marketing materials, _and social media', _category: 'AI & Machine Learning', _provider: {
-      id: 'zion-content', _name: 'Zion Content AI', _logo: 'https://ziontechgroup.com/assets/logo.png', _rating: 4.7, _reviewCount: 89, _location: 'Middletown, _DE', _verified: true, _specialties: ['Content Creation', _'AI Writing', _'Marketing']},
-    pricing: {_basic: {
-        price: 199, _currency: '$', _period: 'month', _features: ['Up to 50 articles/month', _'Basic templates', _'SEO optimization', _'Email support']},
-      professional: {_price: 499, _currency: '$', _period: 'month', _features: ['Up to 200 articles/month', _'Custom templates', _'Advanced SEO', _'Priority support', _'Analytics'], _popular: true},
-      enterprise: {_price: 1499, _currency: '$', _period: 'month', _features: ['Unlimited content', _'Custom AI training', _'Dedicated writer', _'API access', _'White-label']}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    },
+      }    },
     features: ['Multi-format content generationSEO optimizationBrand voice customizationPlagiarism detectionContent scheduling'],
     benefits: ['10x faster content creationImproved SEO rankingsConsistent brand voiceCost-effective contentScalable production'],
     useCases: ['Blog writingSocial media postsEmail campaignsProduct descriptionsTechnical documentation'],
@@ -197,7 +166,6 @@ export const AI_SERVICES: AIService[] = [
     apiAccess: true,
     realTimeProcessing: true
   },
-<<<<<<< HEAD
   {
     id: 'ai-data-analytics',
     title: 'AI-Powered Business Intelligence',
@@ -232,16 +200,7 @@ export const AI_SERVICES: AIService[] = [
         currency: '$',
         period: 'month',
         features: ['Unlimited dataCustom AI modelsDedicated analystAPI accessWhite-label solution']
-      }
-=======
-  {_id: 'ai-data-analytics', _title: 'AI-Powered Business Intelligence', _description: 'Intelligent data analysis and predictive insights for data-driven decision making', _category: 'AI & Machine Learning', _provider: {
-      id: 'zion-analytics', _name: 'Zion Analytics', _logo: 'https://ziontechgroup.com/assets/logo.png', _rating: 4.9, _reviewCount: 234, _location: 'Middletown, _DE', _verified: true, _specialties: ['Data Analytics', _'Business Intelligence', _'Predictive Analytics']},
-    pricing: {_basic: {
-        price: 399, _currency: '$', _period: 'month', _features: ['Up to 10GB data', _'Basic dashboards', _'Standard reports', _'Email support']},
-      professional: {_price: 999, _currency: '$', _period: 'month', _features: ['Up to 100GB data', _'Advanced dashboards', _'Predictive analytics', _'Priority support', _'Custom reports'], _popular: true},
-      enterprise: {_price: 2999, _currency: '$', _period: 'month', _features: ['Unlimited data', _'Custom AI models', _'Dedicated analyst', _'API access', _'White-label solution']}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    },
+      }    },
     features: ['Predictive analyticsNatural language queriesAutomated insightsReal-time dashboardsCustom ML models'],
     benefits: ['Faster decision makingPredictive insightsAutomated reportingCost reductionCompetitive advantage'],
     useCases: ['Sales forecastingCustomer segmentationRisk assessmentPerformance optimizationMarket analysis'],
@@ -270,7 +229,6 @@ export const AI_SERVICES: AIService[] = [
 ],
 
 export const IT_SERVICES: ITService[] = [
-<<<<<<< HEAD
   {
     id: 'onsite-it-support',
     title: 'Onsite IT Support & Infrastructure',
@@ -305,16 +263,7 @@ export const IT_SERVICES: ITService[] = [
         currency: '$',
         period: 'hour',
         features: ['Full IT management24/7 monitoringDedicated technicianEmergency responseSLA guarantee']
-      }
-=======
-  {_id: 'onsite-it-support', _title: 'Onsite IT Support & Infrastructure', _description: 'Comprehensive onsite IT services including network setup, _hardware maintenance, _and technical support', _category: 'IT Infrastructure & Support', _provider: {
-      id: 'zion-it', _name: 'Zion IT Services', _logo: 'https://ziontechgroup.com/assets/logo.png', _rating: 4.8, _reviewCount: 178, _location: 'Middletown, _DE', _verified: true, _specialties: ['IT Support', _'Infrastructure', _'Network Security']},
-    pricing: {_basic: {
-        price: 150, _currency: '$', _period: 'hour', _features: ['Basic troubleshooting', _'Hardware installation', _'Software setup', _'Email support']},
-      professional: {_price: 125, _currency: '$', _period: 'hour', _features: ['Advanced troubleshooting', _'Network configuration', _'Security setup', _'Phone support', _'Remote assistance'], _popular: true},
-      enterprise: {_price: 100, _currency: '$', _period: 'hour', _features: ['Full IT management', _'24/7 monitoring', _'Dedicated technician', _'Emergency response', _'SLA guarantee']}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    },
+      }    },
     features: ['Network setup & configurationHardware installation & maintenanceSoftware deploymentSecurity implementationBackup solutions'],
     benefits: ['Reduced downtimeImproved securityCost-effective IT managementExpert technical supportScalable solutions'],
     useCases: ['Office setupNetwork expansionSecurity upgradesHardware upgradesDisaster recovery'],
@@ -339,7 +288,6 @@ export const IT_SERVICES: ITService[] = [
     emergencySupport: true,
     sla: '99.9% uptime guarantee'
   },
-<<<<<<< HEAD
   {
     id: 'cloud-migration',
     title: 'Cloud Migration & Optimization',
@@ -374,16 +322,7 @@ export const IT_SERVICES: ITService[] = [
         currency: '$',
         period: 'project',
         features: ['Full enterprise migrationCustom optimizationDedicated team24/7 supportSLA guarantee']
-      }
-=======
-  {_id: 'cloud-migration', _title: 'Cloud Migration & Optimization', _description: 'Seamless migration to cloud platforms with optimization for performance and cost efficiency', _category: 'IT Infrastructure & Support', _provider: {
-      id: 'zion-cloud', _name: 'Zion Cloud Solutions', _logo: 'https://ziontechgroup.com/assets/logo.png', _rating: 4.9, _reviewCount: 145, _location: 'Middletown, _DE', _verified: true, _specialties: ['Cloud Migration', _'AWS', _'Azure', _'Google Cloud']},
-    pricing: {_basic: {
-        price: 5000, _currency: '$', _period: 'project', _features: ['Basic migration planning', _'Single application migration', _'Basic testing', _'Email support']},
-      professional: {_price: 15000, _currency: '$', _period: 'project', _features: ['Comprehensive migration', _'Multiple applications', _'Performance optimization', _'Phone support', _'Training'], _popular: true},
-      enterprise: {_price: 50000, _currency: '$', _period: 'project', _features: ['Full enterprise migration', _'Custom optimization', _'Dedicated team', _'24/7 support', _'SLA guarantee']}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    },
+      }    },
     features: ['Migration planning & strategyApplication assessmentPerformance optimizationCost optimizationSecurity implementation'],
     benefits: ['Reduced infrastructure costsImproved scalabilityEnhanced securityBetter performanceDisaster recovery'],
     useCases: ['Legacy system migrationData center consolidationApplication modernizationDisaster recovery setupCost optimization'],
@@ -411,7 +350,6 @@ export const IT_SERVICES: ITService[] = [
 ],
 
 export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
-<<<<<<< HEAD
   {
     id: 'project-management-saas',
     title: 'Smart Project Management Platform',
@@ -446,16 +384,7 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
         currency: '$',
         period: 'month',
         features: ['Unlimited usersCustom automationDedicated supportAPI accessWhite-label']
-      }
-=======
-  {_id: 'project-management-saas', _title: 'Smart Project Management Platform', _description: 'Intelligent project management with AI-powered task automation, _team collaboration, _and progress tracking', _category: 'Micro SAAS Solutions', _provider: {
-      id: 'zion-projects', _name: 'Zion Project Solutions', _logo: 'https://ziontechgroup.com/assets/logo.png', _rating: 4.7, _reviewCount: 267, _location: 'Middletown, _DE', _verified: true, _specialties: ['Project Management', _'Team Collaboration', _'AI Automation']},
-    pricing: {_basic: {
-        price: 29, _currency: '$', _period: 'month', _features: ['Up to 10 users', _'Basic project templates', _'Task management', _'Email support']},
-      professional: {_price: 79, _currency: '$', _period: 'month', _features: ['Up to 50 users', _'Advanced templates', _'AI automation', _'Priority support', _'Analytics'], _popular: true},
-      enterprise: {_price: 199, _currency: '$', _period: 'month', _features: ['Unlimited users', _'Custom automation', _'Dedicated support', _'API access', _'White-label']}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    },
+      }    },
     features: ['AI-powered task automationReal-time collaborationProgress trackingResource managementTime tracking'],
     benefits: ['Improved productivityBetter team coordinationReduced project delaysCost savingsData-driven insights'],
     useCases: ['Software developmentMarketing campaignsEvent planningProduct launchesClient projects'],
@@ -481,7 +410,6 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
     backupFrequency: 'Daily',
     uptime: 99.9
   },
-<<<<<<< HEAD
   {
     id: 'crm-saas',
     title: 'AI-Powered CRM System',
@@ -516,16 +444,7 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
         currency: '$',
         period: 'month',
         features: ['Unlimited usersCustom AI modelsDedicated supportAPI accessWhite-label']
-      }
-=======
-  {_id: 'crm-saas', _title: 'AI-Powered CRM System', _description: 'Intelligent customer relationship management with AI-driven insights, _automation, _and predictive analytics', _category: 'Micro SAAS Solutions', _provider: {
-      id: 'zion-crm', _name: 'Zion CRM Solutions', _logo: 'https://ziontechgroup.com/assets/logo.png', _rating: 4.8, _reviewCount: 189, _location: 'Middletown, _DE', _verified: true, _specialties: ['CRM', _'Sales Automation', _'AI Analytics']},
-    pricing: {_basic: {
-        price: 49, _currency: '$', _period: 'month', _features: ['Up to 5 users', _'Basic contact management', _'Email integration', _'Email support']},
-      professional: {_price: 99, _currency: '$', _period: 'month', _features: ['Up to 25 users', _'Advanced automation', _'AI insights', _'Priority support', _'Analytics'], _popular: true},
-      enterprise: {_price: 249, _currency: '$', _period: 'month', _features: ['Unlimited users', _'Custom AI models', _'Dedicated support', _'API access', _'White-label']}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    },
+      }    },
     features: ['AI-powered lead scoringAutomated follow-upsSales forecastingPipeline managementCustomer insights'],
     benefits: ['Increased salesBetter customer relationshipsAutomated workflowsData-driven decisionsImproved efficiency'],
     useCases: ['Sales managementCustomer supportLead generationAccount managementSales forecasting'],
@@ -551,7 +470,6 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
     backupFrequency: 'Real-time',
     uptime: 99.95
   },
-<<<<<<< HEAD
   {
     id: 'hr-management-saas',
     title: 'HR Management & Talent Platform',
@@ -586,16 +504,7 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
         currency: '$',
         period: 'month',
         features: ['Unlimited employeesCustom AI modelsDedicated supportAPI accessWhite-label']
-      }
-=======
-  {_id: 'hr-management-saas', _title: 'HR Management & Talent Platform', _description: 'Comprehensive HR solution with AI-powered recruitment, _employee management, _and performance analytics', _category: 'Micro SAAS Solutions', _provider: {
-      id: 'zion-hr', _name: 'Zion HR Solutions', _logo: 'https://ziontechgroup.com/assets/logo.png', _rating: 4.6, _reviewCount: 134, _location: 'Middletown, _DE', _verified: true, _specialties: ['HR Management', _'Recruitment', _'Performance Analytics']},
-    pricing: {_basic: {
-        price: 39, _currency: '$', _period: 'month', _features: ['Up to 25 employees', _'Basic HR functions', _'Employee portal', _'Email support']},
-      professional: {_price: 89, _currency: '$', _period: 'month', _features: ['Up to 100 employees', _'AI recruitment', _'Performance tracking', _'Priority support', _'Analytics'], _popular: true},
-      enterprise: {_price: 199, _currency: '$', _period: 'month', _features: ['Unlimited employees', _'Custom AI models', _'Dedicated support', _'API access', _'White-label']}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    },
+      }    },
     features: ['AI-powered recruitmentEmployee onboardingPerformance managementTime trackingBenefits administration'],
     benefits: ['Faster hiringBetter employee retentionImproved performanceCompliance automationCost savings'],
     useCases: ['RecruitmentEmployee managementPerformance reviewsTime trackingBenefits management'],
@@ -624,7 +533,6 @@ export const MICRO_SAAS_SERVICES: MicroSAAS[] = [
 ],
 
 export const CYBERSECURITY_SERVICES: ITService[] = [
-<<<<<<< HEAD
   {
     id: 'security-audit',
     title: 'Comprehensive Security Audit & Penetration Testing',
@@ -659,16 +567,7 @@ export const CYBERSECURITY_SERVICES: ITService[] = [
         currency: '$',
         period: 'audit',
         features: ['Comprehensive security auditCustom testing scenariosDedicated team24/7 supportOngoing monitoring']
-      }
-=======
-  {_id: 'security-audit', _title: 'Comprehensive Security Audit & Penetration Testing', _description: 'In-depth security assessment including vulnerability scanning, _penetration testing, _and compliance verification', _category: 'Cybersecurity & Compliance', _provider: {
-      id: 'zion-security', _name: 'Zion Security Solutions', _logo: 'https://ziontechgroup.com/assets/logo.png', _rating: 4.9, _reviewCount: 98, _location: 'Middletown, _DE', _verified: true, _specialties: ['Cybersecurity', _'Penetration Testing', _'Compliance']},
-    pricing: {_basic: {
-        price: 2500, _currency: '$', _period: 'audit', _features: ['Basic vulnerability scan', _'Security report', _'Remediation guidance', _'Email support']},
-      professional: {_price: 7500, _currency: '$', _period: 'audit', _features: ['Full penetration testing', _'Compliance assessment', _'Detailed report', _'Phone support', _'Follow-up consultation'], _popular: true},
-      enterprise: {_price: 25000, _currency: '$', _period: 'audit', _features: ['Comprehensive security audit', _'Custom testing scenarios', _'Dedicated team', _'24/7 support', _'Ongoing monitoring']}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    },
+      }    },
     features: ['Vulnerability assessmentPenetration testingCompliance verificationSecurity reportingRemediation guidance'],
     benefits: ['Identify security gapsMeet compliance requirementsReduce security risksImprove security postureProtect customer data'],
     useCases: ['Security complianceRisk assessmentIncident responseSecurity trainingCompliance audits'],
@@ -696,7 +595,6 @@ export const CYBERSECURITY_SERVICES: ITService[] = [
 ],
 
 export const DATA_ANALYTICS_SERVICES: AIService[] = [
-<<<<<<< HEAD
   {
     id: 'business-intelligence',
     title: 'Advanced Business Intelligence Platform',
@@ -731,16 +629,7 @@ export const DATA_ANALYTICS_SERVICES: AIService[] = [
         currency: '$',
         period: 'month',
         features: ['Unlimited dataCustom AI modelsDedicated analystAPI accessWhite-label solution']
-      }
-=======
-  {_id: 'business-intelligence', _title: 'Advanced Business Intelligence Platform', _description: 'Comprehensive BI solution with real-time dashboards, _predictive analytics, _and automated reporting', _category: 'Data Analytics & BI', _provider: {
-      id: 'zion-bi', _name: 'Zion Business Intelligence', _logo: 'https://ziontechgroup.com/assets/logo.png', _rating: 4.8, _reviewCount: 156, _location: 'Middletown, _DE', _verified: true, _specialties: ['Business Intelligence', _'Data Analytics', _'Predictive Analytics']},
-    pricing: {_basic: {
-        price: 599, _currency: '$', _period: 'month', _features: ['Up to 50GB data', _'Basic dashboards', _'Standard reports', _'Email support']},
-      professional: {_price: 1299, _currency: '$', _period: 'month', _features: ['Up to 500GB data', _'Advanced dashboards', _'Predictive analytics', _'Priority support', _'Custom reports'], _popular: true},
-      enterprise: {_price: 3999, _currency: '$', _period: 'month', _features: ['Unlimited data', _'Custom AI models', _'Dedicated analyst', _'API access', _'White-label solution']}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    },
+      }    },
     features: ['Real-time dashboardsPredictive analyticsAutomated reportingData visualizationCustom AI models'],
     benefits: ['Faster insightsPredictive capabilitiesAutomated reportingBetter decisionsCompetitive advantage'],
     useCases: ['Sales analyticsCustomer insightsOperational efficiencyFinancial analysisMarket research'],
@@ -769,7 +658,6 @@ export const DATA_ANALYTICS_SERVICES: AIService[] = [
 ],
 
 export const CLOUD_SOLUTIONS: ITService[] = [
-<<<<<<< HEAD
   {
     id: 'devops-automation',
     title: 'DevOps Automation & CI/CD Pipeline',
@@ -804,16 +692,7 @@ export const CLOUD_SOLUTIONS: ITService[] = [
         currency: '$',
         period: 'month',
         features: ['Custom automationDedicated team24/7 monitoringAPI accessWhite-label solution']
-      }
-=======
-  {_id: 'devops-automation', _title: 'DevOps Automation & CI/CD Pipeline', _description: 'Complete DevOps solution with automated deployment, _monitoring, _and infrastructure management', _category: 'Cloud & DevOps', _provider: {
-      id: 'zion-devops', _name: 'Zion DevOps Solutions', _logo: 'https://ziontechgroup.com/assets/logo.png', _rating: 4.7, _reviewCount: 123, _location: 'Middletown, _DE', _verified: true, _specialties: ['DevOps', _'CI/CD', _'Cloud Infrastructure']},
-    pricing: {_basic: {
-        price: 299, _currency: '$', _period: 'month', _features: ['Basic CI/CD pipeline', _'Git integration', _'Basic monitoring', _'Email support']},
-      professional: {_price: 799, _currency: '$', _period: 'month', _features: ['Advanced automation', _'Full monitoring', _'Infrastructure as code', _'Priority support', _'Training'], _popular: true},
-      enterprise: {_price: 2499, _currency: '$', _period: 'month', _features: ['Custom automation', _'Dedicated team', _'24/7 monitoring', _'API access', _'White-label solution']}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    },
+      }    },
     features: ['CI/CD pipeline automationInfrastructure as codeMonitoring & alertingAuto-scalingSecurity scanning'],
     benefits: ['Faster deploymentsReduced errorsBetter scalabilityCost optimizationImproved security'],
     useCases: ['Software deploymentInfrastructure managementApplication monitoringSecurity automationPerformance optimization'],

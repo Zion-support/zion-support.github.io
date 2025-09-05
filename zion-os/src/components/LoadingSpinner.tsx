@@ -1,6 +1,5 @@
 "use client",
 
-<<<<<<< HEAD
 interface LoadingSpinnerProps {
   size?: "small" | "medium" | "large",
   className?: string
@@ -12,14 +11,6 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
     medium: "w-8 h-8",
     large: "w-12 h-12"
   },
-=======
-interface LoadingSpinnerProps {_size?: "small" | "medium" | "large";
-  className?: string;}
-
-export function LoadingSpinner(_{_size = "medium", _className = ""}: LoadingSpinnerProps) {_const _sizeClasses = {
-    small: "w-4 h-4", _medium: "w-8 h-8", _large: "w-12 h-12"};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (
     <div className={_`${sizeClasses[size]} ${_className}`} role="status" aria-label="Loading">
       <svg

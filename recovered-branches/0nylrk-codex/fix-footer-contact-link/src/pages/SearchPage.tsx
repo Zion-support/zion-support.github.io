@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useState } from "react",
 import { useNavigate, useSearchParams } from "react-router-dom",
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
@@ -14,34 +12,8 @@ export default function SearchPage() {
   const initial = params.get("q") || "",
   const [query, setQuery] = useState(initial),
   const { results, loading, search } = useAISearch(),
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
-=======
-import { useEffect, useState } from &quot;react&quot;;
-import { useNavigate, useSearchParams } from &quot;react-router-dom&quot;;
-import { EnhancedSearchInput } from &quot;@/components/search/EnhancedSearchInput&quot;;
-import { generateSearchSuggestions } from &quot;@/data/marketplaceData&quot;;
-import { SearchSuggestion } from &quot;@/types/search&quot;;
-import { useAISearch } from &quot;@/hooks/useAISearch&quot;;
-import { AppLayout } from &quot;@/layout/AppLayout&quot;;
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),  const suggestions: SearchSuggestion[] = generateSearchSuggestions();
 
-export default function SearchPage() {
-  const [params] = useSearchParams();
-  const navigate = useNavigate();
-  const initial = params.get(&quot;q&quot;) || "";
-  const [query, setQuery] = useState(initial);
-  const { results, loading, search } = useAISearch();
-=======
-
-export default function SearchPage() {_const [params] = useSearchParams();
-  const _navigate = useNavigate();
-  const _initial = params.get("q") || "";
-  const [query, _setQuery] = useState(initial);
-  const { results, _loading, _search} = useAISearch();
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions();
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
-<<<<<<< HEAD
   useEffect(() => {
     if (initial) {
       search(initial)
@@ -53,36 +25,15 @@ export default function SearchPage() {_const [params] = useSearchParams();
     navigate(`/search?q=${encodeURIComponent(query)}`),
     search(query)
   },
-=======
-  useEffect__(() => {_if (initial) {
-      search(initial);}
-  }, [initial]);
-
-  const _handleSubmit = (_e: React.FormEvent) => {_e.preventDefault();
-    navigate(`/search?q=${encodeURIComponent(query)}`);
-    search(query);
-  };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (
     <AppLayout>
       <main className="container mx-auto px-4 py-8">
-<<<<<<< HEAD
         <form onSubmit={handleSubmit} className="mb-6&quot;>
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
             searchSuggestions={suggestions}
-            placeholder=&quot;Search talent, jobs, and projects..."
-=======
-        <form onSubmit={_handleSubmit} className="mb-6">
-          <EnhancedSearchInput
-            value={_query}
-            onChange={_setQuery}
-            searchSuggestions={_suggestions}
-            placeholder="Search talent, jobs, and projects..."
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          />
+            placeholder=&quot;Search talent, jobs, and projects..."          />
         </form>
 
         {_loading && <p className="text-zion-slate-light">Searching...</p>}

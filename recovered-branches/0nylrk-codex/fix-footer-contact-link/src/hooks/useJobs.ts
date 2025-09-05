@@ -1,21 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { Job, JobStatus } from "@/types/jobs",
 import { toast } from "sonner",
 import { useAuth } from "./useAuth",
 import { createJob, updateJob, getJobById } from "@/services/jobService",
-=======
-import { useState, useEffect } from &quot;react&quot;;
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import { Job, JobStatus } from &quot;@/types/jobs&quot;;
-import { toast } from &quot;sonner&quot;;
-import { useAuth } from &quot;./useAuth&quot;;
-import { createJob, updateJob, getJobById } from &quot;@/services/jobService&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 export const useJobs = (userId?: string, status?: JobStatus) => {
   const { user } = useAuth(),
   const [jobs, setJobs] = useState<Job[]>([]),
@@ -34,68 +23,47 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       setIsLoading(true),
       
       let query = supabase
-<<<<<<< HEAD
         .from("jobs")
         .select("*")
-        .eq("client_id", clientId)
-        .order("created_at", { ascending: false }),
+        .eq("clientid", clientId)
+        .order("createdat", { ascending: false }),
       
       if (status) {
-        query = query.eq("status", status)
-=======
-        .from(&quot;jobs&quot;)
-        .select(&quot;*&quot;)
-        .eq(&quot;client_id&quot;, clientId)
-        .order(&quot;created_at&quot;, { ascending: false });
-      
-      if (status) {
-        query = query.eq(&quot;status&quot;, status);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      }
+        query = query.eq("status", status)      }
       
       const { data, error: fetchError } = await query,
-=======
 
-export const _useJobs = (_userId?: string, _status?: JobStatus) => {_const { user} = useAuth();
+export const useJobs = (userId?: string, status?: JobStatus) => {const { user} = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   
-  const _clientId = userId || user?.id;
+  const clientId = userId || user?.id;
 
-  const _fetchJobs = async () => {_if (!clientId) {
+  const fetchJobs = async () => {if (!clientId) {
       setIsLoading(false);
-      return;}
+      return}
 
-    try {_setIsLoading(true);
+    try {setIsLoading(true);
       
-      let _query = supabase
+      let query = supabase
         .from("jobs")
         .select("*")
-        .eq("client_id", _clientId)
-        .order("created_at", _{ ascending: false});
+        .eq("clientid", clientId)
+        .order("createdat", _{ ascending: false});
       
-      if (status) {_query = query.eq("status", _status);}
+      if (status) {query = query.eq("status", status)}
       
-      const {_data, _error: fetchError} = await query;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+      const {data, error: fetchError} = await query;
       
       if (fetchError) throw fetchError,
       
-<<<<<<< HEAD
       setJobs(data as Job[]),
       setError(null)
     } catch (err: any) {
-<<<<<<< HEAD
       console.error("Error fetching jobs:", err),
       setError("Failed to fetch jobs. Please try again."),
-      toast.error("Failed to fetch jobs")
-=======
-      console.error(&quot;Error fetching jobs:&quot;, err);
-      setError(&quot;Failed to fetch jobs. Please try again.&quot;);
-      toast.error(&quot;Failed to fetch jobs&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+      toast.error("Failed to fetch jobs")    } finally {
       setIsLoading(false)
     }
   },
@@ -105,101 +73,61 @@ export const _useJobs = (_userId?: string, _status?: JobStatus) => {_const { use
       const { error: updateError } = await supabase
         .from(&quot;jobs&quot;)
         .update({ status: newStatus })
-<<<<<<< HEAD
-=======
       setJobs(data as Job[]);
-      setError(null);
-    } catch (err: unknown) {_setError("Failed to fetch jobs. Please try again.");
-      toast.error("Failed to fetch jobs");} finally {_setIsLoading(false);}
+      setError(null)
+    } catch (err: unknown) {setError("Failed to fetch jobs. Please try again.");
+      toast.error("Failed to fetch jobs")} finally {setIsLoading(false)}
   };
   
-  const _updateJobStatus = async (_jobId: string, _newStatus: JobStatus) => {_try {
+  const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {try {
       const { error: updateError} = await supabase
         .from("jobs")
-        .update({_status: newStatus})
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+        .update({status: newStatus})
         .eq("id", jobId)
-        .eq("client_id", clientId), // Ensure user can only update their own jobs
-=======
-        .eq(&quot;id&quot;, jobId)
-        .eq(&quot;client_id&quot;, clientId); // Ensure user can only update their own jobs
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+        .eq("clientid", clientId), // Ensure user can only update their own jobs,
+if (updateError) throw updateError,
       
-      if (updateError) throw updateError,
-      
-      // Update local state
-<<<<<<< HEAD
-<<<<<<< HEAD
-      setJobs(jobs.map(job => job.id === jobId ? {...job, status: newStatus} : job)),
+      // Update local state,
+setJobs(jobs.map(job => job.id === jobId ? {...job, status: newStatus} : job)),
       toast.success("Job status updated successfully"),
       return true
     } catch (err: any) {
       console.error("Error updating job status:", err),
       toast.error("Failed to update job status"),
-      return false
-=======
-      setJobs(jobs.map(job => job.id === jobId ? {...job, status: newStatus} : job));
-      toast.success(&quot;Job status updated successfully&quot;);
-      return true;
-    } catch (err: any) {
-      console.error(&quot;Error updating job status:&quot;, err);
-      toast.error(&quot;Failed to update job status&quot;);
-      return false;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
+      return false    }
   },
   
   const deleteJob = async (jobId: string) => {
     try {
       const { error: deleteError } = await supabase
         .from(&quot;jobs&quot;)
-=======
-      setJobs(jobs.map(job => job.id === jobId ? {_...job, _status: newStatus} : job));
+      setJobs(jobs.map(job => job.id === jobId ? {_...job, status: newStatus} : job));
       toast.success("Job status updated successfully");
-      return true;
-    } catch (err: unknown) {_toast.error("Failed to update job status");
-      return false;}
+      return true
+    } catch (err: unknown) {toast.error("Failed to update job status");
+      return false}
   };
   
-  const _deleteJob = async (_jobId: string) => {_try {
+  const deleteJob = async (jobId: string) => {try {
       const { error: deleteError} = await supabase
         .from("jobs")
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         .delete()
-<<<<<<< HEAD
         .eq("id", jobId)
-        .eq("client_id", clientId), // Ensure user can only delete their own jobs
-=======
-        .eq(&quot;id&quot;, jobId)
-        .eq(&quot;client_id&quot;, clientId); // Ensure user can only delete their own jobs
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-        
-      if (deleteError) throw deleteError,
+        .eq("clientid", clientId), // Ensure user can only delete their own jobs,
+if (deleteError) throw deleteError,
       
-      // Update local state
-<<<<<<< HEAD
-      setJobs(jobs.filter(job => job.id !== jobId)),
+      // Update local state,
+setJobs(jobs.filter(job => job.id !== jobId)),
       toast.success("Job deleted successfully"),
       return true
     } catch (err: any) {
       console.error("Error deleting job:", err),
       toast.error("Failed to delete job"),
-      return false
-=======
-      setJobs(jobs.filter(job => job.id !== jobId));
-      toast.success(&quot;Job deleted successfully&quot;);
-      return true;
-<<<<<<< HEAD
-    } catch (err: any) {
-      console.error(&quot;Error deleting job:&quot;, err);
-      toast.error(&quot;Failed to delete job&quot;);
-      return false;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
+      return false    }
   },
   
-  // Fetch jobs when component mounts or dependencies change
-  useEffect(() => {
+  // Fetch jobs when component mounts or dependencies change,
+useEffect(() => {
     fetchJobs()
   }, [clientId, status]),
   
@@ -214,15 +142,13 @@ export const _useJobs = (_userId?: string, _status?: JobStatus) => {_const { use
     updateJob,
     getJobById
   }
-},
-=======
-    } catch (err: unknown) {_toast.error("Failed to delete job");
-      return false;}
+}
+    } catch (err: unknown) {toast.error("Failed to delete job");
+      return false}
   };
   
-  // Fetch jobs when component mounts or dependencies change
-  useEffect__(() => {_fetchJobs();}, [clientId, status]);
+  // Fetch jobs when component mounts or dependencies change,
+useEffect_(() => {fetchJobs()}, [clientId, status]);
   
-  return {_jobs, _isLoading, _error, _refetch: fetchJobs, _updateJobStatus, _deleteJob, _createJob, _updateJob, _getJobById};
+  return {jobs, isLoading, error, refetch: fetchJobs, updateJobStatus, deleteJob, createJob, updateJob, getJobById}
 };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

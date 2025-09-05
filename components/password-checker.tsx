@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -37,43 +36,35 @@ export default function PasswordCheckerPage() {
       uppercase: /[A-Z]/.test(pass),
       lowercase: /[a-z]/.test(pass),
       numbers: /\d/.test(pass),
-<<<<<<< HEAD
-      symbols: /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test(pass),
-=======
-      symbols: /[!@#$%^&*()_+\-=\[\]{};':&quot;\\|,.<>\/?]/.test(pass),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React, {_useState, _useEffect} from 'react';
+      symbols: /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test(pass),import React, {useState, useEffect} from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
-export default function PasswordCheckerPage() {_const [password, _setPassword] = useState('');
-  const [showPassword, _setShowPassword] = useState(false);
-  const [strength, _setStrength] = useState(0);
-  const [strengthText, _setStrengthText] = useState('');
-  const [strengthColor, _setStrengthColor] = useState('');
-  const [checks, _setChecks] = useState({
-    length: false, _uppercase: false, _lowercase: false, _numbers: false, _symbols: false, _noCommon: false, _noSequential: false});
+export default function PasswordCheckerPage() {const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [strength, setStrength] = useState(0);
+  const [strengthText, setStrengthText] = useState('');
+  const [strengthColor, setStrengthColor] = useState('');
+  const [checks, setChecks] = useState({
+    length: false, uppercase: false, lowercase: false, numbers: false, symbols: false, noCommon: false, noSequential: false});
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [generatedPassword, setGeneratedPassword] = useState('');
 
-  useEffect__(() => {_if (password) {
-      analyzePassword(password);} else {_resetAnalysis();}
+  useEffect_(() => {if (password) {
+      analyzePassword(password)} else {resetAnalysis()}
   }, [password]);
 
-  const _analyzePassword = (_pass: string) => {_const _newChecks = {
-      length: pass.length >= 8, _uppercase: /[A-Z]/.test(pass), _lowercase: /[a-z]/.test(pass), _numbers: /\d/.test(pass), _symbols: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(pass),
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+  const analyzePassword = (pass: string) => {const newChecks = {
+      length: pass.length >= 8, uppercase: /[A-Z]/.test(pass), lowercase: /[a-z]/.test(pass), numbers: /\d/.test(pass), symbols: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(pass),
       noCommon: !isCommonPassword(pass),
       noSequential: !hasSequentialChars(pass)
     },
 
     setChecks(newChecks),
 
-    // Calculate strength score
-<<<<<<< HEAD
-    let score = 0,
+    // Calculate strength score,
+let score = 0,
     score += newChecks.length ? 15 : 0,
     score += newChecks.uppercase ? 15 : 0,
     score += newChecks.lowercase ? 15 : 0,
@@ -81,26 +72,14 @@ export default function PasswordCheckerPage() {_const [password, _setPassword] =
     score += newChecks.symbols ? 20 : 0,
     score += newChecks.noCommon ? 10 : 0,
     score += newChecks.noSequential ? 10 : 0,
-=======
-    let _score = 0;
-    score += newChecks.length ? 15 : 0;
-    score += newChecks.uppercase ? 15 : 0;
-    score += newChecks.lowercase ? 15 : 0;
-    score += newChecks.numbers ? 15 : 0;
-    score += newChecks.symbols ? 20 : 0;
-    score += newChecks.noCommon ? 10 : 0;
-    score += newChecks.noSequential ? 10 : 0;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-    // Bonus for length
-    if (pass.length >= 12) score += 10,
+    // Bonus for length,
+if (pass.length >= 12) score += 10,
     if (pass.length >= 16) score += 5,
 
     setStrength(score),
 
-    // Set strength text and color
-<<<<<<< HEAD
-    if (score >= 90) {
+    // Set strength text and color,
+if (score >= 90) {
       setStrengthText('Very Strong'),
       setStrengthColor('text-green-400')
     } else if (score >= 70) {
@@ -116,20 +95,10 @@ export default function PasswordCheckerPage() {_const [password, _setPassword] =
       setStrengthText('Very Weak'),
       setStrengthColor('text-red-400')
     }
-=======
-    if (score >= 90) {_setStrengthText('Very Strong');
-      setStrengthColor('text-green-400');} else if (score >= 70) {_setStrengthText('Strong');
-      setStrengthColor('text-green-400');} else if (score >= 50) {_setStrengthText('Moderate');
-      setStrengthColor('text-yellow-400');} else if (score >= 30) {_setStrengthText('Weak');
-      setStrengthColor('text-orange-400');} else {_setStrengthText('Very Weak');
-      setStrengthColor('text-red-400');}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-    // Generate suggestions
-    generateSuggestions(newChecks, pass)
+    // Generate suggestions,
+generateSuggestions(newChecks, pass)
   },
 
-<<<<<<< HEAD
   const isCommonPassword = (pass: string) => {
     const commonPasswords = [
       'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhello'
@@ -143,38 +112,14 @@ export default function PasswordCheckerPage() {_const [password, _setPassword] =
   },
 
   const generateSuggestions = (checks: any, pass: string) => {
-    const suggestions: string[] = [],
-=======
-  const _isCommonPassword = (_pass: string) => {_const _commonPasswords = [
-      'password', _'123456', _'123456789', _'qwerty', _'abc123', _'password123', _'admin', _'letmein', _'welcome', _'monkey', _'dragon', _'master', _'hello'
-    ];
-    return commonPasswords.includes(pass.toLowerCase());};
-
-  const _hasSequentialChars = (_pass: string) => {_const _sequences = ['123', _'abc', _'qwe', _'asd', _'zxc', _'789', _'456'];
-    return sequences.some(seq => pass.toLowerCase().includes(seq));};
-
-  const _generateSuggestions = (_checks: unknown, _pass: string) => {_const suggestions: string[] = [];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    
-<<<<<<< HEAD
+    const suggestions: string[] = [],    
     if (!checks.length) suggestions.push('Make your password at least 8 characters long'),
     if (!checks.uppercase) suggestions.push('Add at least one uppercase letter (A-Z)'),
     if (!checks.lowercase) suggestions.push('Add at least one lowercase letter (a-z)'),
     if (!checks.numbers) suggestions.push('Add at least one number (0-9)'),
     if (!checks.symbols) suggestions.push('Add at least one special character (!@#$%^&*)'),
     if (!checks.noCommon) suggestions.push('Avoid common passwords like "password" or "123456"'),
-    if (!checks.noSequential) suggestions.push('Avoid sequential characters like "123" or "abc"'),
-=======
-    if (!checks.length) suggestions.push('Make your password at least 8 characters long');
-    if (!checks.uppercase) suggestions.push('Add at least one uppercase letter (A-Z)');
-    if (!checks.lowercase) suggestions.push('Add at least one lowercase letter (a-z)');
-    if (!checks.numbers) suggestions.push('Add at least one number (0-9)');
-    if (!checks.symbols) suggestions.push('Add at least one special character (!@#$%^&*)');
-    if (!checks.noCommon) suggestions.push('Avoid common passwords like &quot;password&quot; or &quot;123456&quot;');
-    if (!checks.noSequential) suggestions.push('Avoid sequential characters like &quot;123&quot; or &quot;abc"');
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    
-<<<<<<< HEAD
+    if (!checks.noSequential) suggestions.push('Avoid sequential characters like "123" or "abc"'),    
     if (pass.length < 12) suggestions.push('Consider making your password 12+ characters for better security'),
     if (pass.length < 16) suggestions.push('For maximum security, use 16+ characters'),
     
@@ -200,40 +145,20 @@ export default function PasswordCheckerPage() {_const [password, _setPassword] =
   const generateStrongPassword = () => {
     const length = 16,
     const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*',
-    let result = '',
-=======
-    if (pass.length < 12) suggestions.push('Consider making your password 12+ characters for better security');
-    if (pass.length < 16) suggestions.push('For maximum security, _use 16+ characters');
+    let result = '',    
+    // Ensure at least one of each required character type,
+result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)], // Uppercase,
+result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)], // Lowercase,
+result += '0123456789'[Math.floor(Math.random() * 10)], // Number,
+result += '!@#$%^&*'[Math.floor(Math.random() * 8)], // Symbol
     
-    setSuggestions(suggestions);};
-
-  const _resetAnalysis = () => {_setStrength(0);
-    setStrengthText('');
-    setStrengthColor('');
-    setChecks({
-      length: false, _uppercase: false, _lowercase: false, _numbers: false, _symbols: false, _noCommon: false, _noSequential: false});
-    setSuggestions([]);
-  };
-
-  const _generateStrongPassword = () => {_const _length = 16;
-    const _charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*';
-    let _result = '';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    
-    // Ensure at least one of each required character type
-    result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)], // Uppercase
-    result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)], // Lowercase
-    result += '0123456789'[Math.floor(Math.random() * 10)], // Number
-    result += '!@#$%^&*'[Math.floor(Math.random() * 8)], // Symbol
-    
-    // Fill the rest randomly
-<<<<<<< HEAD
-    for (let i = 4, i < length, i++) {
+    // Fill the rest randomly,
+for (let i = 4, i < length, i++) {
       result += charset[Math.floor(Math.random() * charset.length)]
     }
     
-    // Shuffle the password
-    result = result.split('').sort(() => Math.random() - 0.5).join(''),
+    // Shuffle the password,
+result = result.split('').sort(() => Math.random() - 0.5).join(''),
     setGeneratedPassword(result),
     setPassword(result)
   },
@@ -249,55 +174,19 @@ export default function PasswordCheckerPage() {_const [password, _setPassword] =
     if (strength >= 30) return 'bg-orange-400',
     return 'bg-red-400'
   },
-=======
-    for (let i = 4; i < length; i++) {
-      result += charset[Math.floor(Math.random() * charset.length)];}
-    
-    // Shuffle the password
-    result = result.split('').sort__(() => Math.random() - 0.5).join('');
-    setGeneratedPassword(result);
-    setPassword(result);
-  };
-
-  const _copyToClipboard = (_text: string) => {_navigator.clipboard.writeText(text);};
-
-  const _getStrengthBarColor = () => {_if (strength >= 90) return 'bg-green-500';
-    if (strength >= 70) return 'bg-green-400';
-    if (strength >= 50) return 'bg-yellow-400';
-    if (strength >= 30) return 'bg-orange-400';
-    return 'bg-red-400';};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-  const _getCheckIcon = (_passed: boolean) => {_return passed ? (
+  const getCheckIcon = (passed: boolean) => {return passed ? (
       <CheckCircle className="w-5 h-5 text-green-400" />
     ) : (
-<<<<<<< HEAD
       <XCircle className="w-5 h-5 text-red-400" />
-<<<<<<< HEAD
     )
-  },
-=======
-      <XCircle className="w-5 h-5 text-red-400&quot; />
-    );
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-    );};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+  },    )};
 
   return (_<>
       <Head>
         <title>Password Strength Checker - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name=&quot;description&quot; content=&quot;Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords.&quot; />
         <meta property=&quot;og:title&quot; content=&quot;Password Strength Checker - Zion Tech Group&quot; />
-        <meta property=&quot;og:description&quot; content=&quot;Advanced password strength analyzer with security recommendations." />
-=======
-        <meta name="description" content="Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, _more secure passwords." />
-        <meta property="og:title" content="Password Strength Checker - Zion Tech Group" />
-        <meta property="og:description" content="Advanced password strength analyzer with security recommendations." />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      </Head>
+        <meta property=&quot;og:description&quot; content=&quot;Advanced password strength analyzer with security recommendations." />      </Head>
 
       {_/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
@@ -312,7 +201,7 @@ export default function PasswordCheckerPage() {_const [password, _setPassword] =
             Password Strength Checker
           </h1>
           <p className="text-xl text-indigo-200 max-w-4xl mx-auto leading-relaxed">
-            Analyze your password security with our advanced strength checker. Get detailed feedback, _suggestions, _and generate strong passwords to protect your accounts and data.
+            Analyze your password security with our advanced strength checker. Get detailed feedback, suggestions, and generate strong passwords to protect your accounts and data.
           </p>
         </div>
       </section>
@@ -344,39 +233,26 @@ export default function PasswordCheckerPage() {_const [password, _setPassword] =
                     Enter Password
                   </label>
                   <div className="relative&quot;>
-                    <input
-<<<<<<< HEAD
-                      type={showPassword ? 'text' : 'password'}
+                    <input,
+type={showPassword ? 'text' : 'password'}
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       placeholder=&quot;Type your password here..."
                       className="w-full px-4 py-3 pr-12 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent&quot;
                     />
-                    <button
-                      type=&quot;button"
-                      onClick={() => setShowPassword(!showPassword)}
-=======
-                      type={_showPassword ? 'text' : 'password'}
-                      value={_password}
-                      onChange={_(e) => setPassword(e.target.value)}
-                      placeholder="Type your password here..."
-                      className="w-full px-4 py-3 pr-12 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                    />
-                    <button
-                      type="button"
-                      onClick={_() => setShowPassword(!showPassword)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-white"
+                    <button,
+type=&quot;button"
+                      onClick={() => setShowPassword(!showPassword)}                      className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-white"
                     >
-                      {_showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                      {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     </button>
                   </div>
                 </div>
 
                 {_/* Generate Password */}
                 <div>
-                  <Button
-                    onClick={_generateStrongPassword}
+                  <Button,
+onClick={generateStrongPassword}
                     className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
@@ -385,11 +261,11 @@ export default function PasswordCheckerPage() {_const [password, _setPassword] =
                 </div>
 
                 {_/* Generated Password Display */}
-                {_generatedPassword && (_<div className="p-4 bg-gray-700 rounded-lg border border-gray-600">
+                {generatedPassword && (_<div className="p-4 bg-gray-700 rounded-lg border border-gray-600">
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-300&quot;>Generated Password:</span>
-                      <Button
-                        onClick={() => copyToClipboard(generatedPassword)}
+                      <Button,
+onClick={() => copyToClipboard(generatedPassword)}
                         variant=&quot;outline&quot;
                         size=&quot;sm"
                         className="border-gray-600 text-gray-300 hover:bg-gray-600"
@@ -399,7 +275,7 @@ export default function PasswordCheckerPage() {_const [password, _setPassword] =
                       </Button>
                     </div>
                     <div className="mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all">
-                      {_generatedPassword}
+                      {generatedPassword}
                     </div>
                   </div>
                 )}
@@ -420,19 +296,19 @@ export default function PasswordCheckerPage() {_const [password, _setPassword] =
                 Security Analysis
               </h3>
 
-              {_password ? (
+              {password ? (
                 <div className="space-y-6">
                   {/* Strength Score */}
                   <div>
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm text-gray-300">Password Strength:</span>
                       <span className={_`text-lg font-bold ${strengthColor}`}>
-                        {_strengthText} ({_strength}/100)
+                        {strengthText} ({strength}/100)
                       </span>
                     </div>
                     <div className="w-full bg-gray-700 rounded-full h-3">
-                      <div 
-                        className={_`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
+                      <div,
+className={_`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
                         style={_{ width: `${strength}%` }}
                       />
                     </div>
@@ -442,17 +318,17 @@ export default function PasswordCheckerPage() {_const [password, _setPassword] =
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3">Security Criteria</h4>
                     <div className="space-y-3">
-                      {_Object.entries(checks).map(_([key, _passed]) => (
+                      {Object.entries(checks).map(_([key, passed]) => (
                         <div key={key} className="flex items-center space-x-3">
-                          {_getCheckIcon(passed)}
+                          {getCheckIcon(passed)}
                           <span className={_`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>
-                            {_key === 'length' && 'At least 8 characters'}
-                            {_key === 'uppercase' && 'Contains uppercase letter'}
-                            {_key === 'lowercase' && 'Contains lowercase letter'}
-                            {_key === 'numbers' && 'Contains number'}
-                            {_key === 'symbols' && 'Contains special character'}
-                            {_key === 'noCommon' && 'Not a common password'}
-                            {_key === 'noSequential' && 'No sequential characters'}
+                            {key === 'length' && 'At least 8 characters'}
+                            {key === 'uppercase' && 'Contains uppercase letter'}
+                            {key === 'lowercase' && 'Contains lowercase letter'}
+                            {key === 'numbers' && 'Contains number'}
+                            {key === 'symbols' && 'Contains special character'}
+                            {key === 'noCommon' && 'Not a common password'}
+                            {key === 'noSequential' && 'No sequential characters'}
                           </span>
                         </div>
                       ))}
@@ -460,13 +336,13 @@ export default function PasswordCheckerPage() {_const [password, _setPassword] =
                   </div>
 
                   {_/* Suggestions */}
-                  {_suggestions.length > 0 && (_<div>
+                  {suggestions.length > 0 && (_<div>
                       <h4 className="text-lg font-semibold text-white mb-3">Suggestions</h4>
                       <div className="space-y-2">
-                        {suggestions.map((suggestion, _index) => (
+                        {suggestions.map((suggestion, index) => (
                           <div key={index} className="flex items-start space-x-3">
                             <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
-                            <span className="text-sm text-yellow-300">{_suggestion}</span>
+                            <span className="text-sm text-yellow-300">{suggestion}</span>
                           </div>
                         ))}
                       </div>
@@ -630,16 +506,16 @@ export default function PasswordCheckerPage() {_const [password, _setPassword] =
             Join thousands of users who trust our password strength checker to improve their account security.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              href="/contact&quot;
+            <Button,
+href="/contact&quot;
               size=&quot;lg"
               className="bg-white text-indigo-600 hover:bg-gray-100"
             >
               Get Started Today
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <Button
-              href="/pricing&quot;
+            <Button,
+href="/pricing&quot;
               variant=&quot;outline&quot;
               size=&quot;lg"
               className="border-white text-white hover:bg-white hover:text-indigo-600"

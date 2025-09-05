@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants',
 
 export interface ComprehensiveMicroSaasService {
@@ -93,16 +92,9 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     launchDate: '2024-03-15',
     customers: 2450,
     rating: 4.8,
-<<<<<<< HEAD
     reviews: 1234,
     benefits: ['10x faster content creation', 'Improved SEO rankings', 'Higher engagement rates', 'Cost reduction'],
-    capabilities: ['Multi-format content generation', 'Real-time optimization', 'Advanced analytics', 'Team collaboration'],
-=======
-    reviews: 1,234,
-    benefits: ['10x faster content creationImproved SEO rankings', 'Higher engagement ratesCost reduction'],
-    capabilities: ['Multi-format content generationReal-time optimization', 'Advanced analyticsTeam collaboration'],
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-    marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
+    capabilities: ['Multi-format content generation', 'Real-time optimization', 'Advanced analytics', 'Team collaboration'],    marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
   },
 
   // Healthcare AI Services
@@ -473,7 +465,6 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
   }
 ],
-=======
 
 export interface ComprehensiveMicroSaasService {_id: string;
   name: string;
@@ -565,4 +556,3 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
       'Multi-vehicle autonomous coordination', _'AI-powered route optimization', _'Real-time safety monitoring', _'Fleet management and optimization', _'Predictive maintenance alerts', _'Weather and traffic integration', _'Emergency response coordination', _'Regulatory compliance monitoring', _'Real-time performance analytics', _'Custom autonomous system integration'
     ], _popular: true, _icon: '🤖', _color: 'from-cyan-600 to-blue-600', _textColor: 'text-cyan-400', _link: 'https://ziontechgroup.com/autonomous-systems-orchestration', _marketPosition: 'Advanced autonomous systems platform competing with Waymo ($1000/month) and Cruise ($800/month)', _targetAudience: 'Autonomous vehicle companies, _Drone operators, _Robotics companies, _Logistics firms', _trialDays: 30, _setupTime: '2 weeks', _category: 'Autonomous Systems', _realService: true, _technology: ['AI/ML, _Computer Vision, _Robotics, _Python, _TensorFlow, _ROS'], _integrations: ['Autonomous vehicles, _Drones, _Robotics platforms, _Traffic systems'], _useCases: ['Fleet management', _'Route optimization', _'Safety monitoring', _'Maintenance planning'], _roi: 'Average 450% ROI through operational efficiency and safety improvements', _competitors: ['Waymo, _Cruise, _Argo AI, _Aurora'], _marketSize: '$11.3B autonomous systems market', _growthRate: '340% annual growth', _variant: 'ai-futuristic', _contactInfo: contact, _realImplementation: true, _implementationDetails: 'Enterprise-grade autonomous systems platform with AI orchestration and comprehensive safety features', _launchDate: '2024-03-10', _customers: 89, _rating: 4.7, _reviews: 67, _benefits: ['Operational efficiency', _'Safety improvements', _'Cost reduction', _'Scalability'], _capabilities: ['Multi-system coordination', _'AI optimization', _'Safety monitoring', _'Performance analytics'], _marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'}
 ];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import Link from "next/link",
 export const metadata = {
   title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",
   description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.",
   keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events"},
-=======
-import Link from "next/link";
-
-export const _metadata = {_title: "Events - Zion Tech Group | Conferences, _Webinars & Workshops", _description: "Join Zion Tech Group at upcoming technology events, _conferences, _webinars, _and workshops. Network with industry leaders and learn about the latest innovations.", _keywords: "events, _conferences, _webinars, _workshops, _technology events, _Zion Tech Group, _AI conferences, _quantum computing events"};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function EventsPage() {_return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -415,14 +408,8 @@ export default function EventsPage() {_return (
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Event Registration CTA */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
-=======
-      {_/* Event Registration CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">        <div className="max-w-4xl mx-auto text-center">
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Can't Find What You're Looking For?

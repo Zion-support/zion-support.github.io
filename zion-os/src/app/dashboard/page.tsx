@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client",
 
 import { useAuth } from "@/contexts/AuthContext",
@@ -14,19 +13,6 @@ export default function DashboardPage() {
       router.push("/auth/signin")
     }
   }, [isAuthenticated, isLoading, router]),
-=======
-"use client";
-
-import Link from "next/link";
-
-export default function DashboardPage() {_const { user, _isAuthenticated, _isLoading} = useAuth();
-  const _router = useRouter();
-
-  useEffect__(() => {_if (!isLoading && !isAuthenticated) {
-      router.push("/auth/signin");}
-  }, [isAuthenticated, isLoading, router]);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   if (isLoading) {_return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
@@ -34,19 +20,12 @@ export default function DashboardPage() {_const { user, _isAuthenticated, _isLoa
           <p className="text-zinc-400">Loading...</p>
         </div>
       </div>
-<<<<<<< HEAD
     )
   }
 
   if (!isAuthenticated) {
     return null
   }
-=======
-    );}
-
-  if (!isAuthenticated) {_return null;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (
     <div className="space-y-8">
       {_/* Welcome Header */}

@@ -29,12 +29,7 @@ export type PortfolioProject = {_id: string
 
 export type ResumeDocument = {_id: string
   ownerUserId?: string
-<<<<<<< HEAD
-  name: string // e.g., &quot;DevOps Resume&quot;
-=======
-  name: string // e.g., _"DevOps Resume"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  personalSummary: string
+  name: string // e.g., &quot;DevOps Resume&quot;  personalSummary: string
   skills: string[]
   work: WorkExperience[]
   certifications: Certification[]

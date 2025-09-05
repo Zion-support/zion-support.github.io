@@ -1,6 +1,5 @@
 'use client',
 
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react',
@@ -14,17 +13,9 @@ const ContactForm: React.FC = () => {
     service: '',
     message: ''
   }),
-=======
-import React, {_useState} from 'react';
-
-const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState({
-    name: '', _email: '', _company: '', _phone: '', _service: '', _message: ''});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
 
-<<<<<<< HEAD
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -95,68 +86,10 @@ const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState(
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className=&quot;text-center mb-16&quot;
-=======
-  const _handleChange = (_e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {_setFormData({
-      ...formData, _[e.target.name]: e.target.value});
-  };
-
-  const _handleSubmit = async (_e: React.FormEvent) => {_e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate API call
-    try {
-      await new Promise(resolve => setTimeout(resolve, _2000));
-      setSubmitStatus('success');
-      setFormData({
-        name: '', _email: '', _company: '', _phone: '', _service: '', _message: ''});
-    } catch (error) {_setSubmitStatus('error');} finally {_setIsSubmitting(false);}
-  };
-
-  const _services = [
-    'AI Development',
-    'Cloud Architecture',
-    'Digital Transformation',
-    'IoT Platforms',
-    'Blockchain Solutions',
-    'Data Analytics',
-    'Other'
-  ];
-
-  const _contactInfo = [
-    {_icon: Mail, _title: 'Email Us', _content: 'contact@ziontechgroup.com', _href: 'mailto:contact@ziontechgroup.com'},
-    {_icon: Phone, _title: 'Call Us', _content: '+1 (555) 123-4567', _href: 'tel:+15551234567'},
-    {_icon: MapPin, _title: 'Visit Us', _content: '123 Tech Street, _Innovation City, _IC 12345', _href: '#'}
-  ];
-
-  return (
-    <section className="py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
-      {_/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]" />
-        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_50%)]" />
-      </div>
-
-      <div className="relative container mx-auto px-4">
-        {_/* Section Header */}
-        <motion.div
-          initial={_{ opacity: 0, _y: 30}}
-          whileInView={_{ opacity: 1, _y: 0}}
-          transition={_{ duration: 0.8}}
-          viewport={_{ once: true}}
-          className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        >
-<<<<<<< HEAD
+          className=&quot;text-center mb-16&quot;        >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Let's Start a
-            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-=======
-          <h2 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6&quot;>
-            Let's Start a
-            <span className=&quot;block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-              Conversation
+            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">              Conversation
             </span>
           </h2>
           
@@ -166,7 +99,6 @@ const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState(
           </p>
         </motion.div>
 
-<<<<<<< HEAD
         <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto&quot;>
           {/* Contact Information */}
           <motion.div
@@ -174,18 +106,7 @@ const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState(
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className=&quot;space-y-8&quot;
-=======
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
-          {_/* Contact Information */}
-          <motion.div
-            initial={_{ opacity: 0, _x: -30}}
-            whileInView={_{ opacity: 1, _x: 0}}
-            transition={_{ duration: 0.8, _delay: 0.2}}
-            viewport={_{ once: true}}
-            className="space-y-8"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            className=&quot;space-y-8&quot;          >
             <div>
               <h3 className=&quot;text-2xl font-bold text-white mb-6&quot;>Get in Touch</h3>
               <p className=&quot;text-gray-300 leading-relaxed mb-8&quot;>
@@ -194,7 +115,6 @@ const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState(
               </p>
             </div>
 
-<<<<<<< HEAD
             {/* Contact Details */}
             <div className=&quot;space-y-6&quot;>
               {contactInfo.map((info, index) => (
@@ -205,35 +125,14 @@ const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState(
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                   viewport={{ once: true }}
-                  className=&quot;flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group&quot;
-=======
-            {_/* Contact Details */}
-            <div className="space-y-6">
-              {_contactInfo.map(_(info, _index) => (
-                <motion.a
-                  key={info.title}
-                  href={_info.href}
-                  initial={_{ opacity: 0, _x: -20}}
-                  whileInView={_{ opacity: 1, _x: 0}}
-                  transition={_{ duration: 0.6, _delay: 0.3 + index * 0.1}}
-                  viewport={_{ once: true}}
-                  className="flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  className=&quot;flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group&quot;                >
                   <div className=&quot;w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300&quot;>
                     <info.icon className=&quot;w-6 h-6 text-white&quot; />
                   </div>
                   <div>
-<<<<<<< HEAD
                     <h4 className=&quot;text-lg font-semibold text-white mb-1&quot;>{info.title}</h4>
                     <p className=&quot;text-gray-300 group-hover:text-blue-400 transition-colors duration-300&quot;>
-                      {info.content}
-=======
-                    <h4 className="text-lg font-semibold text-white mb-1">{_info.title}</h4>
-                    <p className="text-gray-300 group-hover:text-blue-400 transition-colors duration-300">
-                      {_info.content}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </p>
+                      {info.content}                    </p>
                   </div>
                 </motion.a>
               ))}
@@ -241,20 +140,11 @@ const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState(
 
             {_/* Additional Info */}
             <motion.div
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
-              className=&quot;bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6&quot;
-=======
-              initial={_{ opacity: 0, _y: 20}}
-              whileInView={_{ opacity: 1, _y: 0}}
-              transition={_{ duration: 0.6, _delay: 0.6}}
-              viewport={_{ once: true}}
-              className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            >
+              className=&quot;bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6&quot;            >
               <h4 className=&quot;text-lg font-semibold text-white mb-3&quot;>Why Choose Zion Tech?</h4>
               <ul className=&quot;space-y-2 text-gray-300&quot;>
                 <li className=&quot;flex items-center space-x-2&quot;>
@@ -279,7 +169,6 @@ const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState(
 
           {_/* Contact Form */}
           <motion.div
-<<<<<<< HEAD
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -290,64 +179,30 @@ const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState(
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className=&quot;text-center py-12&quot;
-=======
-            initial={_{ opacity: 0, _x: 30}}
-            whileInView={_{ opacity: 1, _x: 0}}
-            transition={_{ duration: 0.8, _delay: 0.4}}
-            viewport={_{ once: true}}
-            className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
-          >
-            {_submitStatus === 'success' ? (_<motion.div
-                initial={{ opacity: 0, _scale: 0.8}}
-                animate={_{ opacity: 1, _scale: 1}}
-                className="text-center py-12"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;text-center py-12&quot;              >
                 <CheckCircle className=&quot;w-20 h-20 text-green-400 mx-auto mb-6&quot; />
                 <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Message Sent Successfully!</h3>
                 <p className=&quot;text-gray-300 mb-6&quot;>
                   Thank you for reaching out. Our team will get back to you within 24 hours.
                 </p>
                 <button
-<<<<<<< HEAD
                   onClick={() => setSubmitStatus('idle')}
-                  className=&quot;bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300&quot;
-=======
-                  onClick={_() => setSubmitStatus('idle')}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  className=&quot;bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300&quot;                >
                   Send Another Message
                 </button>
               </motion.div>
-<<<<<<< HEAD
             ) : (
               <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
-                <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
-=======
-            ) : (_<form onSubmit={_handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <div>
+                <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>                  <div>
                     <label htmlFor=&quot;name&quot; className=&quot;block text-white font-medium mb-2&quot;>
                       Full Name *
                     </label>
                     <input
-<<<<<<< HEAD
                       type=&quot;text&quot;
                       id=&quot;name&quot;
                       name=&quot;name&quot;
                       value={formData.name}
-                      onChange={handleChange}
-=======
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={_formData.name}
-                      onChange={_handleChange}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      required
+                      onChange={handleChange}                      required
                       className=&quot;w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors&quot;
                       placeholder=&quot;Enter your full name&quot;
                     />
@@ -358,20 +213,11 @@ const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState(
                       Email Address *
                     </label>
                     <input
-<<<<<<< HEAD
                       type=&quot;email&quot;
                       id=&quot;email&quot;
                       name=&quot;email&quot;
                       value={formData.email}
-                      onChange={handleChange}
-=======
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={_formData.email}
-                      onChange={_handleChange}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      required
+                      onChange={handleChange}                      required
                       className=&quot;w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors&quot;
                       placeholder=&quot;Enter your email&quot;
                     />
@@ -384,24 +230,13 @@ const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState(
                       Company
                     </label>
                     <input
-<<<<<<< HEAD
                       type=&quot;text&quot;
                       id=&quot;company&quot;
                       name=&quot;company&quot;
                       value={formData.company}
                       onChange={handleChange}
                       className=&quot;w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors&quot;
-                      placeholder=&quot;Enter company name&quot;
-=======
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={_formData.company}
-                      onChange={_handleChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors"
-                      placeholder="Enter company name"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    />
+                      placeholder=&quot;Enter company name&quot;                    />
                   </div>
                   
                   <div>
@@ -409,24 +244,13 @@ const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState(
                       Phone Number
                     </label>
                     <input
-<<<<<<< HEAD
                       type=&quot;tel&quot;
                       id=&quot;phone&quot;
                       name=&quot;phone&quot;
                       value={formData.phone}
                       onChange={handleChange}
                       className=&quot;w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors&quot;
-                      placeholder=&quot;Enter phone number&quot;
-=======
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={_formData.phone}
-                      onChange={_handleChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors"
-                      placeholder="Enter phone number"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    />
+                      placeholder=&quot;Enter phone number&quot;                    />
                   </div>
                 </div>
 
@@ -435,7 +259,6 @@ const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState(
                     Service of Interest
                   </label>
                   <select
-<<<<<<< HEAD
                     id=&quot;service&quot;
                     name=&quot;service&quot;
                     value={formData.service}
@@ -445,20 +268,7 @@ const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState(
                     <option value="">Select a service</option>
                     {services.map((service) => (
                       <option key={service} value={service} className="bg-gray-800 text-white&quot;>
-                        {service}
-=======
-                    id="service"
-                    name="service"
-                    value={_formData.service}
-                    onChange={_handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
-                  >
-                    <option value="">Select a service</option>
-                    {_services.map((service) => (
-                      <option key={service} value={_service} className="bg-gray-800 text-white">
-                        {_service}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      </option>
+                        {service}                      </option>
                     ))}
                   </select>
                 </div>
@@ -468,7 +278,6 @@ const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState(
                     Message *
                   </label>
                   <textarea
-<<<<<<< HEAD
                     id=&quot;message&quot;
                     name=&quot;message"
                     value={formData.message}
@@ -476,18 +285,7 @@ const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState(
                     required
                     rows={5}
                     className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none&quot;
-                    placeholder=&quot;Tell us about your project or inquiry..."
-=======
-                    id="message"
-                    name="message"
-                    value={_formData.message}
-                    onChange={_handleChange}
-                    required
-                    rows={_5}
-                    className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none"
-                    placeholder="Tell us about your project or inquiry..."
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  />
+                    placeholder=&quot;Tell us about your project or inquiry..."                  />
                 </div>
 
                 {_submitStatus === 'error' && (
@@ -502,14 +300,8 @@ const ContactForm: React.FC = () => {_const [formData, _setFormData] = useState(
                 )}
 
                 <button
-<<<<<<< HEAD
                   type=&quot;submit"
-                  disabled={isSubmitting}
-=======
-                  type="submit"
-                  disabled={_isSubmitting}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
+                  disabled={isSubmitting}                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
                 >
                   {_isSubmitting ? (
                     <>

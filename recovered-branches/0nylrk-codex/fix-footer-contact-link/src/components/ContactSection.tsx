@@ -1,16 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
-import { Mail } from "lucide-react",
-=======
-import { GradientHeading } from &quot;@/components/GradientHeading&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Mail } from &quot;lucide-react&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export function ContactSection() {
+import { Mail } from "lucide-react",export function ContactSection() {
   return (
     <section className=&quot;py-20 bg-zion-blue&quot; id=&quot;contact&quot;>
       <div className=&quot;container mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -19,7 +10,6 @@ export function ContactSection() {
             <GradientHeading>Get In Touch</GradientHeading>
             <p className=&quot;mt-4 text-zion-slate-light text-xl mb-8&quot;>
               We have the equipment, the parts, and the maintenance services ready for you — right now. Contact us today.
-=======
 
 export function ContactSection() {_return (
     <section className="py-20 bg-zion-blue" id="contact">
@@ -29,7 +19,6 @@ export function ContactSection() {_return (
             <GradientHeading>Get In Touch</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl mb-8">
               We have the equipment, _the parts, _and the maintenance services ready for you — right now. Contact us today.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             </p>
             <div className=&quot;flex items-center mb-6&quot;>
               <div className=&quot;mr-4 p-2 bg-zion-purple/20 rounded-full text-zion-cyan&quot;>
@@ -90,12 +79,7 @@ export function ContactSection() {_return (
                   <textarea
                     id=&quot;message&quot;
                     rows={4}
-<<<<<<< HEAD
-                    className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus: border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-=======
-                    className=&quot;w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-                  ></textarea>
+                    className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus: border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"                  ></textarea>
                 </div>
                 <div>
                   <Button className=&quot;w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white&quot;>

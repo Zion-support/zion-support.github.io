@@ -1,16 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import HelpCenter from "@/components/support/HelpCenter",
-import { SEO } from "@/components/SEO",
-=======
-import React from &quot;react&quot;;
-import HelpCenter from &quot;@/components/support/HelpCenter&quot;;
-import { SEO } from &quot;@/components/SEO&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export default function HelpCenterPage() {
+import { SEO } from "@/components/SEO",export default function HelpCenterPage() {
   return (
     <>
       <SEO 
@@ -22,7 +13,6 @@ export default function HelpCenterPage() {
     </>
   )
 }
-=======
 import React from "react";
 import HelpCenter from "@/components/support/HelpCenter";
 
@@ -36,4 +26,3 @@ export default function HelpCenterPage() {_return (
       <HelpCenter />
     </>
   );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

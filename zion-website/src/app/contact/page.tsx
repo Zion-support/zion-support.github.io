@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { 
   EnvelopeIcon,
   PhoneIcon, 
@@ -6,10 +5,6 @@ import {
   ClockIcon,
   ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline'
-=======
-import {_EnvelopeIcon, _PhoneIcon, _MapPinIcon, _ClockIcon, _ChatBubbleLeftRightIcon} from '@heroicons/react/24/outline'
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 const _contactMethods = [
   {_name: 'Email', _description: 'Get in touch with our team', _value: 'contact@ziontechgroup.com', _href: 'mailto:contact@ziontechgroup.com', _icon: EnvelopeIcon},
   {_name: 'Phone', _description: 'Speak with an expert', _value: '+1 (555) 123-4567', _href: 'tel:+15551234567', _icon: PhoneIcon},
@@ -26,7 +21,6 @@ const _faqs = [
   {_question: 'Do you provide ongoing support?', _answer: 'Yes, _we provide comprehensive ongoing support including technical assistance, _updates, _training, _and optimization services to ensure your AI solutions continue to deliver value.'},
   {_question: 'What security measures do you have?', _answer: 'We implement enterprise-grade security including end-to-end encryption, _SOC 2 compliance, _regular security audits, _and strict access controls to protect your data and systems.'}]
 
-<<<<<<< HEAD
 export default function ContactPage() {
   return (
     <div className=&quot;bg-black&quot;>
@@ -36,18 +30,7 @@ export default function ContactPage() {
           <div className=&quot;text-center&quot;>
             <h1 className=&quot;text-4xl font-bold tracking-tight text-white sm:text-6xl&quot;>
               Get in{' '}
-              <span className=&quot;bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent&quot;>
-=======
-export default function ContactPage() {_return (_<div className="bg-black">
-      {/* Hero section */}
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Get in{_' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                Touch
+              <span className=&quot;bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent&quot;>                Touch
               </span>
             </h1>
             <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
@@ -58,7 +41,6 @@ export default function ContactPage() {_return (_<div className="bg-black">
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Contact methods */}
       <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
@@ -83,35 +65,7 @@ export default function ContactPage() {_return (_<div className="bg-black">
                       className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
                     >
                       {method.value} <span aria-hidden=&quot;true&quot;>→</span>
-                    </Link>
-=======
-      {_/* Contact methods */}
-      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Contact Us</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Multiple ways to reach us
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-            {_contactMethods.map((method) => (
-              <div key={method.name} className="flex flex-col group">
-                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                  <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
-                  {_method.name}
-                </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                  <p className="flex-auto">{_method.description}</p>
-                  <p className="mt-6">
-                    <a 
-                      href={_method.href} 
-                      className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
-                    >
-                      {_method.value} <span aria-hidden="true">→</span>
-                    </a>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </p>
+                    </Link>                  </p>
                 </dd>
               </div>
             ))}
@@ -119,20 +73,11 @@ export default function ContactPage() {_return (_<div className="bg-black">
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Contact form */}
       <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Send us a message</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
-      {_/* Contact form */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Send us a message</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            Let's start a conversation
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>            Let's start a conversation
           </p>
         </div>
         <div className=&quot;mx-auto mt-16 max-w-2xl lg:max-w-none&quot;>
@@ -200,20 +145,11 @@ export default function ContactPage() {_return (_<div className="bg-black">
                 </label>
                 <div className=&quot;mt-2.5&quot;>
                   <textarea
-<<<<<<< HEAD
                     name=&quot;message&quot;
                     id=&quot;message&quot;
                     rows={4}
                     className=&quot;block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6&quot;
-                    defaultValue={''}
-=======
-                    name="message"
-                    id="message"
-                    rows={_4}
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
-                    defaultValue={_''}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  />
+                    defaultValue={''}                  />
                 </div>
               </div>
             </div>
@@ -229,7 +165,6 @@ export default function ContactPage() {_return (_<div className="bg-black">
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Office locations */}
       <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
@@ -261,42 +196,7 @@ export default function ContactPage() {_return (_<div className="bg-black">
                   </p>
                   <p className=&quot;flex items-center gap-2&quot;>
                     <ClockIcon className=&quot;h-5 w-5 text-blue-400&quot; />
-                    {office.hours}
-=======
-      {_/* Office locations */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Global Presence</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Visit our offices worldwide
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
-            {_officeLocations.map(_(office) => (
-              <div key={office.name} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center gap-x-3 mb-4">
-                  <MapPinIcon className="h-8 w-8 text-blue-400" />
-                  <h3 className="text-xl font-semibold text-white">{_office.name}</h3>
-                </div>
-                <div className="space-y-3 text-gray-300">
-                  <p className="flex items-start gap-2">
-                    <MapPinIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                    {_office.address}
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <PhoneIcon className="h-5 w-5 text-blue-400" />
-                    {_office.phone}
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <EnvelopeIcon className="h-5 w-5 text-blue-400" />
-                    {_office.email}
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <ClockIcon className="h-5 w-5 text-blue-400" />
-                    {_office.hours}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </p>
+                    {office.hours}                  </p>
                 </div>
               </div>
             ))}
@@ -304,7 +204,6 @@ export default function ContactPage() {_return (_<div className="bg-black">
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* FAQ */}
       <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
@@ -321,45 +220,17 @@ export default function ContactPage() {_return (_<div className="bg-black">
                   {faq.question}
                 </dt>
                 <dd className=&quot;text-base leading-7 text-gray-300&quot;>
-                  {faq.answer}
-=======
-      {_/* FAQ */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Frequently Asked</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Common questions
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
-          <dl className="space-y-8">
-            {_faqs.map(_(faq, _index) => (
-              <div key={index} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
-                <dt className="text-lg font-semibold leading-7 text-white mb-4">
-                  {_faq.question}
-                </dt>
-                <dd className="text-base leading-7 text-gray-300">
-                  {_faq.answer}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </dd>
+                  {faq.answer}                </dd>
               </div>
             ))}
           </dl>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* CTA section */}
       <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
-          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
-      {_/* CTA section */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            Ready to get started?
+          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>            Ready to get started?
           </h2>
           <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
             Our team is ready to help you explore the possibilities of AI and transform your business.

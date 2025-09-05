@@ -1,137 +1,113 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Fixing syntax errors...');
-
-<<<<<<< HEAD
-// Files with known syntax issues
-const filesToFix = [
-  '/workspace/lib/analytics.ts',
-  '/workspace/lib/utils.ts',
-  '/workspace/pages/404.tsx',
-  '/workspace/src/App.tsx',
-  '/workspace/src/components/ErrorBoundary.tsx',
-  '/workspace/src/components/FuturisticFooter.tsx',
-  '/workspace/src/components/Header.tsx',
-  '/workspace/src/components/PerformanceMonitor.tsx',
-  '/workspace/src/components/PerformanceOptimized.tsx',
-  '/workspace/src/components/layout/Header.tsx',
-  '/workspace/src/components/layout/MainLayout.tsx',
-  '/workspace/src/components/layout/Sidebar.tsx',
-  '/workspace/src/data/advancedMicroSaaS2026.ts',
-  '/workspace/src/data/enhancedServices.ts',
-  '/workspace/src/main.tsx',
-  '/workspace/src/utils/accessibility-checker.ts',
-  '/workspace/src/utils/monitoring.ts',
-  '/workspace/src/utils/performance-optimizer.ts',
-  '/workspace/src/utils/performance.ts',
-  '/workspace/src/utils/seo-optimizer.ts',
-];
-
-function fixFile(filePath) {
+function fixSyntaxErrors(filePath) {
   try {
-    if (!fs.existsSync(filePath)) {
-      console.log(`Skipping non-existent file: ${filePath}`);
-      return false;
-=======
+    let content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix common syntax errors
-    // Remove extra commas and semicolons
-    content = content.replace(/;/g, ';');
-    content = content.replace(/,(\s*[;}])/g, '$1');
-    content = content.replace(/,(\s*\/\/)/g, '$1');
-    content = content.replace(/,(\s*\/\*)/g, '$1');
+    // Fix common syntax issues
+    content = content.replace(/,(\s*})/g, '$1'); // Remove trailing commas before closing braces
+    content = content.replace(/,(\s*])/g, '$1'); // Remove trailing commas before closing brackets
+    content = content.replace(/;(\s*})/g, '$1'); // Replace semicolons with commas before closing braces
+    content = content.replace(/;(\s*])/g, '$1'); // Replace semicolons with commas before closing brackets
     
-    // Fix JSX syntax issues
-    content = content.replace(/,(\s*<)/g, '$1');
-    content = content.replace(/,(\s*{)/g, '$1');
-    content = content.replace(/,(\s*})/g, '$1');
+    // Fix object property syntax
+    content = content.replace(/(\w+):\s*;/g, '$1: null,'); // Fix missing values
+    content = content.replace(/(\w+):\s*(\w+);/g, '$1: $2,'); // Fix semicolons in object properties
     
-    // Fix object syntax
-    content = content.replace(/,(\s*})/g, '$1');
-    content = content.replace(/,(\s*])/g, '$1');
+    // Fix function calls with underscores
+    content = content.replace(/_(\w+)/g, '$1'); // Remove underscores from variable names
     
-    // Fix function parameters
-    content = content.replace(/,(\s*\))/g, '$1');
+    // Fix missing commas in arrays and objects
+    content = content.replace(/(\w+)\s*\n\s*(\w+)/g, '$1,\n$2'); // Add missing commas between properties
     
-    // Fix class names with spaces
-    content = content.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1$2"');
+    // Fix import statements
+    content = content.replace(/import\s+{\s*_(\w+)/g, 'import { $1'); // Fix import destructuring
+    content = content.replace(/,(\s*})/g, '$1'); // Remove trailing commas in imports
     
-    // Fix hover states
-    content = content.replace(/hove: r:\s+([a-zA-Z-]+)/g, 'hove: r:$1');
+    // Fix export statements
+    content = content.replace(/export\s+{\s*_(\w+)/g, 'export { $1');
     
-    // Fix focus states
-    content = content.replace(/focu: s:\s+([a-zA-Z-]+)/g, 'focu: s:$1');
+    // Fix function declarations
+    content = content.replace(/function\s+_(\w+)/g, 'function $1');
+    content = content.replace(/const\s+_(\w+)/g, 'const $1');
+    content = content.replace(/let\s+_(\w+)/g, 'let $1');
+    content = content.replace(/var\s+_(\w+)/g, 'var $1');
     
-    // Fix group hover
-    content = content.replace(/group-hove: r:\s+([a-zA-Z-]+)/g, 'group-hove: r:$1');
+    // Fix object property access
+    content = content.replace(/\._(\w+)/g, '.$1');
+    content = content.replace(/\[_(\w+)\]/g, '[$1]');
     
-    // Fix not-sr-only
-    content = content.replace(/not-sr-only/g, 'not-sr-only');
+    // Fix string literals
+    content = content.replace(/'_(\w+)'/g, "'$1'");
+    content = content.replace(/"_(\w+)"/g, '"$1"');
     
-    // Fix missing imports
-    if (content.includes('React') && !content.includes("import React")) {
-      content = "import React from 'react';\n" + content;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-    }
-
-    const content = fs.readFileSync(filePath, 'utf8');
-
-    // Check if file is corrupted or has syntax issues
-    if (
-      content.length < 50 ||
-      content.includes('<<<<<<< HEAD') ||
-      content.includes('=======')
-    ) {
-      console.log(`Fixing corrupted file: ${filePath}`);
-
-      // Create a basic valid file based on the file type
-      const ext = path.extname(filePath);
-      let newContent = '';
-
-      if (ext === '.tsx') {
-        newContent = `import React from 'react';
-
-export default function Component() {
-  return <div>Component</div>;
-}`;
-      } else if (ext === '.ts') {
-        newContent = `// TypeScript file
-export const placeholder = 'placeholder';
-`;
-      } else if (ext === '.js') {
-        newContent = `// JavaScript file
-export const placeholder = 'placeholder';
-`;
-      }
-<<<<<<< HEAD
-
-      fs.writeFileSync(filePath, newContent);
-=======
-    }
+    // Fix boolean values
+    content = content.replace(/_true/g, 'true');
+    content = content.replace(/_false/g, 'false');
+    content = content.replace(/_null/g, 'null');
+    content = content.replace(/_undefined/g, 'undefined');
     
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixe: d: ${filePath}`);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-      return true;
-    }
-
-    return false;
+    // Clean up multiple semicolons
+    content = content.replace(/;+;/g, ';');
+    content = content.replace(/;+(\s*})/g, '$1');
+    content = content.replace(/;+(\s*])/g, '$1');
+    
+    // Clean up multiple commas
+    content = content.replace(/,+/g, ',');
+    content = content.replace(/,+(\s*})/g, '$1');
+    content = content.replace(/,+(\s*])/g, '$1');
+    
+    // Clean up extra whitespace
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed syntax errors in: ${filePath}`);
+    return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
+function findFilesWithSyntaxErrors(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && !item.includes('src.broken')) {
+        traverse(fullPath);
+      } else if (stat.isFile() && /\.(ts|tsx|js|jsx|mjs)$/.test(item)) {
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes('_') && (content.includes('_true') || content.includes('_false') || content.includes('_null') || content.includes('_(') || content.includes('_ '))) {
+            files.push(fullPath);
+          }
+        } catch (error) {
+          // Skip files that can't be read
+        }
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Find and fix all files with syntax errors
+const filesToFix = findFilesWithSyntaxErrors('.');
+console.log(`Found ${filesToFix.length} files with potential syntax errors`);
+
 let fixedCount = 0;
 for (const file of filesToFix) {
-  if (fixFile(file)) {
+  if (fixSyntaxErrors(file)) {
     fixedCount++;
   }
 }
 
-console.log(`✅ Fixed ${fixedCount} files`);
+console.log(`Fixed syntax errors in ${fixedCount} files`);

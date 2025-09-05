@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -13,31 +11,11 @@ export default function AdminDashboard() {
     "name": "Admin Dashboard",
     "description": "Monitor marketplace activity, manage listings and view analytics in one place.",
     "url": "https://app.ziontechgroup.com/features/admin-dashboard"
-  },
-=======
-import React from &quot;react&quot;;
-import { Header } from &quot;@/components/Header&quot;;
-import { SEO } from &quot;@/components/SEO&quot;;
-import { GradientHeading } from &quot;@/components/GradientHeading&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import Link from 'next/link';
-
-export default function AdminDashboard() {
-  const schema = {
-    &quot;@context&quot;: &quot;https://schema.org&quot;,
-    &quot;@type&quot;: &quot;WebPage&quot;,
-    &quot;name&quot;: &quot;Admin Dashboard&quot;,
-    &quot;description&quot;: &quot;Monitor marketplace activity, manage listings and view analytics in one place.&quot;,
-    &quot;url&quot;: &quot;https://app.ziontechgroup.com/features/admin-dashboard&quot;
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from "react";
+  },import React from "react";
 import Link from 'next/link';
 
 export default function AdminDashboard() {_const _schema = {
     "@context": "https://schema.org", _"@type": "WebPage", _"name": "Admin Dashboard", _"description": "Monitor marketplace activity, _manage listings and view analytics in one place.", _"url": "https://app.ziontechgroup.com/features/admin-dashboard"};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -49,14 +27,8 @@ export default function AdminDashboard() {_const _schema = {
       />
       {_/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
-<<<<<<< HEAD
         type=&quot;application/ld+json&quot;
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-=======
-        type="application/ld+json"
-        dangerouslySetInnerHTML={_{ __html: JSON.stringify(schema)}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      ></script>
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}      ></script>
       <Header />
       <main className=&quot;bg-background text-white py-12&quot;>
         <div className=&quot;container mx-auto px-4 md:px-6&quot;>
@@ -66,24 +38,13 @@ export default function AdminDashboard() {_const _schema = {
           </p>
           <div className=&quot;relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden&quot;>
             <img
-<<<<<<< HEAD
               src="https: //placehold.co/800x400"
               alt="Screenshot of admin dashboard"
               className="object-cover"
             />
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
-=======
-              src=&quot;https://placehold.co/800x400&quot;
-              alt=&quot;Screenshot of admin dashboard&quot;
-              className=&quot;object-cover&quot;
-            />
-          </div>
-          <h2 className=&quot;text-2xl font-bold mb-4&quot;>Benefits &amp; Use Cases</h2>
-          <ul className=&quot;list-disc list-inside space-y-2 mb-8 text-zion-slate-light&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-            <li>Track sales and service metrics in real time.</li>
+          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">            <li>Track sales and service metrics in real time.</li>
             <li>Approve or remove listings with a few clicks.</li>
             <li>Assign roles and permissions to your team.</li>
           </ul>

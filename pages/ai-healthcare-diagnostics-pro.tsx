@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
@@ -212,65 +211,9 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       accuracy: &quot;98.8%&quot;
     }
   ],
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import {_Stethoscope, _Brain, _Eye, _Heart, _Microscope, _Shield, _BarChart3, _TrendingUp, _Target, _Users, _CheckCircle, _ArrowRight, _Cpu, _Network, _Database, _Lock, _Clock, _DollarSign, _PieChart, _Activity, _Zap, _Pill, _Syringe, _Hospital, _Ambulance} from 'lucide-react';
-import Link from 'next/link';
-
-const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
-    {
-      icon: Brain, _title: "Advanced AI Diagnostics", _description: "Deep learning algorithms analyze medical images, _lab results, _and patient data with 99.2% accuracy for early disease detection.", _color: "from-blue-500 to-cyan-500"},
-    {_icon: Eye, _title: "Multi-Modal Imaging", _description: "Process X-rays, _CT scans, _MRIs, _ultrasounds, _and pathology slides with specialized AI models for comprehensive analysis.", _color: "from-purple-500 to-pink-500"},
-    {_icon: Heart, _title: "Predictive Analytics", _description: "AI-powered risk assessment and early warning systems for cardiovascular, _cancer, _and chronic disease prevention.", _color: "from-red-500 to-orange-500"},
-    {_icon: Shield, _title: "HIPAA Compliant", _description: "Enterprise-grade security with end-to-end encryption, _audit trails, _and compliance with healthcare data regulations.", _color: "from-green-500 to-emerald-500"},
-    {_icon: BarChart3, _title: "Real-time Monitoring", _description: "Continuous patient monitoring with instant alerts for critical changes and automated reporting to healthcare providers.", _color: "from-indigo-500 to-blue-500"},
-    {_icon: Zap, _title: "Automated Workflows", _description: "Streamline diagnostic processes with intelligent automation, _reducing diagnosis time by up to 80%.", _color: "from-yellow-500 to-orange-500"}
-  ];
-
-  const _useCases = [
-    {_icon: Microscope, _title: "Radiology & Imaging", _description: "AI-powered analysis of X-rays, _CT scans, _MRIs, _and ultrasounds for faster, _more accurate diagnoses.", _benefits: ["95% accuracy rate", _"80% faster diagnosis", _"Reduced radiologist workload"]},
-    {_icon: Heart, _title: "Cardiology", _description: "Early detection of heart disease, _arrhythmias, _and cardiovascular risks through AI analysis of ECG and imaging data.", _benefits: ["Early disease detection", _"Risk stratification", _"Preventive care"]},
-    {_icon: Brain, _title: "Neurology", _description: "AI detection of brain tumors, _strokes, _Alzheimer's, _and neurological disorders from imaging and clinical data.", _benefits: ["Early intervention", _"Treatment planning", _"Outcome prediction"]},
-    {_icon: Microscope, _title: "Pathology", _description: "Digital pathology analysis for cancer detection, _grading, _and personalized treatment recommendations.", _benefits: ["Precision medicine", _"Faster results", _"Standardized analysis"]}
-  ];
-
-  const _pricingPlans = [
-    {_name: "Starter", _price: "$4, _999", _period: "/month", _description: "Perfect for small clinics and practices", _features: [
-        "Up to 1, _000 diagnostic scans/month", _"Basic AI diagnostic models", _"Standard reporting dashboard", _"Email support", _"HIPAA compliance", _"API access (5, _000 calls/month)"
-      ], _color: "from-blue-500 to-cyan-500", _popular: false},
-    {_name: "Professional", _price: "$12, _999", _period: "/month", _description: "Ideal for hospitals and medical centers", _features: [
-        "Up to 10, _000 diagnostic scans/month", _"Advanced AI diagnostic models", _"Multi-modal imaging support", _"Real-time monitoring & alerts", _"Priority support", _"API access (50, _000 calls/month)", _"Custom integrations", _"Training & certification"
-      ], _color: "from-purple-500 to-pink-500", _popular: true},
-    {_name: "Enterprise", _price: "$29, _999", _period: "/month", _description: "For large healthcare networks", _features: [
-        "Unlimited diagnostic scans", _"Custom AI model development", _"Full multi-modal support", _"Dedicated account manager", _"24/7 phone support", _"Unlimited API access", _"White-label solutions", _"On-premise deployment", _"Custom compliance features"
-      ], _color: "from-green-500 to-emerald-500", _popular: false}
-  ];
-
-  const _integrations = [
-    {_name: "PACS Systems", _icon: Database, _description: "DICOM integration with major PACS vendors", _color: "from-blue-500 to-cyan-500"},
-    {_name: "EHR Platforms", _icon: Database, _description: "Epic, _Cerner, _Allscripts, _athenahealth", _color: "from-green-500 to-emerald-500"},
-    {_name: "LIS Systems", _icon: Microscope, _description: "Lab information systems integration", _color: "from-purple-500 to-pink-500"},
-    {_name: "RIS Systems", _icon: BarChart3, _description: "Radiology information systems", _color: "from-orange-500 to-red-500"},
-    {_name: "Medical Devices", _icon: Stethoscope, _description: "CT, _MRI, _X-ray, _ultrasound machines", _color: "from-indigo-500 to-blue-500"},
-    {_name: "Cloud Platforms", _icon: Cpu, _description: "AWS, _Azure, _Google Cloud, _IBM Cloud", _color: "from-yellow-500 to-orange-500"}
-  ];
-
-  const _specialties = [
-    {_icon: Heart, _name: "Cardiology", _description: "Heart disease detection, _ECG analysis, _cardiovascular risk assessment", _accuracy: "99.1%"},
-    {_icon: Brain, _name: "Neurology", _description: "Brain tumor detection, _stroke diagnosis, _neurological disorder analysis", _accuracy: "98.9%"},
-    {_icon: Activity, _name: "Pulmonology", _description: "Lung cancer screening, _pneumonia detection, _respiratory disease analysis", _accuracy: "99.3%"},
-    {_icon: Eye, _name: "Ophthalmology", _description: "Retinal disease detection, _glaucoma screening, _diabetic retinopathy", _accuracy: "98.7%"},
-    {_icon: Shield, _name: "Hepatology", _description: "Liver disease detection, _cirrhosis assessment, _tumor identification", _accuracy: "99.0%"},
-    {_icon: Microscope, _name: "Nephrology", _description: "Kidney disease detection, _renal function analysis, _transplant assessment", _accuracy: "98.8%"}
-  ];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (_<Layout>
       <Head>
         <title>AI Healthcare Diagnostics Pro - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name=&quot;description&quot; content=&quot;Revolutionize healthcare with AI-powered diagnostics. Achieve 99.2% accuracy in disease detection, reduce diagnosis time by 80%, and improve patient outcomes with our advanced AI platform.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI healthcare, medical diagnostics, medical imaging, disease detection, healthcare AI, medical AI, diagnostic accuracy&quot; />
         <meta property=&quot;og:title&quot; content=&quot;AI Healthcare Diagnostics Pro - Zion Tech Group&quot; />
@@ -290,44 +233,13 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
         {/* Floating Elements */}
         <div className=&quot;absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse&quot;></div>
         <div className=&quot;absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000&quot;></div>
-        <div className=&quot;absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500&quot;></div>
-=======
-        <meta name="description" content="Revolutionize healthcare with AI-powered diagnostics. Achieve 99.2% accuracy in disease detection, _reduce diagnosis time by 80%, _and improve patient outcomes with our advanced AI platform." />
-        <meta name="keywords" content="AI healthcare, _medical diagnostics, _medical imaging, _disease detection, _healthcare AI, _medical AI, _diagnostic accuracy" />
-        <meta property="og:title" content="AI Healthcare Diagnostics Pro - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionize healthcare with AI-powered diagnostics. Achieve 99.2% accuracy in disease detection and reduce diagnosis time by 80%." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-healthcare-diagnostics-pro" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-healthcare-diagnostics-pro" />
-      </Head>
-
-      {_/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-        {_/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%, _rgba(56, _189, _248, _0.15),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]"></div>
-        
-        {_/* Floating Elements */}
-        <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse"></div>
-        <div className="absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500"></div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        
+        <div className=&quot;absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500&quot;></div>        
         <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
           <motion.div
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className=&quot;mb-8&quot;
-=======
-            initial={_{ opacity: 0, _y: 30}}
-            animate={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8}}
-            className="mb-8"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            className=&quot;mb-8&quot;          >
             <div className=&quot;inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6&quot;>
               <Brain className=&quot;w-4 h-4&quot; />
               <span>AI-Powered Healthcare</span>
@@ -344,94 +256,48 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
               Achieve 99.2% accuracy in disease detection, reduce diagnosis time by 80%, and save countless lives through early intervention.
             </p>
             
-<<<<<<< HEAD
             {/* Key Metrics */}
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto&quot;>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className=&quot;bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm&quot;
-=======
-            {_/* Key Metrics */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-              <motion.div
-                initial={_{ opacity: 0, _scale: 0.8}}
-                animate={_{ opacity: 1, _scale: 1}}
-                transition={_{ duration: 0.6, _delay: 0.2}}
-                className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm&quot;              >
                 <div className=&quot;text-3xl font-bold text-green-400 mb-2&quot;>99.2%</div>
                 <div className=&quot;text-gray-300&quot;>Diagnostic Accuracy</div>
               </motion.div>
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className=&quot;bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm&quot;
-=======
-                initial={_{ opacity: 0, _scale: 0.8}}
-                animate={_{ opacity: 1, _scale: 1}}
-                transition={_{ duration: 0.6, _delay: 0.4}}
-                className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm&quot;              >
                 <div className=&quot;text-3xl font-bold text-cyan-400 mb-2&quot;>80%</div>
                 <div className=&quot;text-gray-300&quot;>Faster Diagnosis</div>
               </motion.div>
               <motion.div
-<<<<<<< HEAD
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className=&quot;bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm&quot;
-=======
-                initial={_{ opacity: 0, _scale: 0.8}}
-                animate={_{ opacity: 1, _scale: 1}}
-                transition={_{ duration: 0.6, _delay: 0.6}}
-                className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm&quot;              >
                 <div className=&quot;text-3xl font-bold text-purple-400 mb-2&quot;>24/7</div>
                 <div className=&quot;text-gray-300&quot;>Continuous Monitoring</div>
               </motion.div>
             </div>
 
-<<<<<<< HEAD
             {/* CTA Buttons */}
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className=&quot;px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25&quot;
-=======
-            {_/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                initial={_{ opacity: 0, _y: 20}}
-                animate={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6, _delay: 0.8}}
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25&quot;              >
                 Schedule Demo
               </motion.button>
               <motion.button
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.0 }}
-                className=&quot;px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300&quot;
-=======
-                initial={_{ opacity: 0, _y: 20}}
-                animate={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6, _delay: 1.0}}
-                className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300&quot;              >
                 Contact Sales
               </motion.button>
             </div>
@@ -439,7 +305,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className=&quot;py-20 bg-gray-900 relative overflow-hidden&quot;>
         <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]&quot;></div>
@@ -449,20 +314,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className=&quot;text-center mb-16&quot;
-=======
-      {_/* Features Section */}
-      <section className="py-20 bg-gray-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={_{ opacity: 0, _y: 30}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8}}
-            viewport={_{ once: true}}
-            className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
               Powered by <span className=&quot;bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent&quot;>Advanced AI</span>
             </h2>
@@ -471,7 +323,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {features.map((feature, index) => (
               <motion.div
@@ -486,31 +337,12 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
                   <feature.icon className=&quot;w-8 h-8 text-white&quot; />
                 </div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-4&quot;>{feature.title}</h3>
-                <p className=&quot;text-gray-300 leading-relaxed&quot;>{feature.description}</p>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {_features.map(_(feature, _index) => (
-              <motion.div
-                key={index}
-                initial={_{ opacity: 0, _y: 30}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6, _delay: index * 0.1}}
-                viewport={_{ once: true}}
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group"
-              >
-                <div className={_`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{_feature.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{_feature.description}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </motion.div>
+                <p className=&quot;text-gray-300 leading-relaxed&quot;>{feature.description}</p>              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Medical Specialties Section */}
       <section className=&quot;py-20 bg-black relative overflow-hidden&quot;>
         <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]&quot;></div>
@@ -520,20 +352,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className=&quot;text-center mb-16&quot;
-=======
-      {_/* Medical Specialties Section */}
-      <section className="py-20 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={_{ opacity: 0, _y: 30}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8}}
-            viewport={_{ once: true}}
-            className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
               Medical <span className=&quot;bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>Specialties</span>
             </h2>
@@ -542,7 +361,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {specialties.map((specialty, index) => (
               <motion.div
@@ -551,47 +369,23 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className=&quot;bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300&quot;
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {_specialties.map(_(specialty, _index) => (
-              <motion.div
-                key={index}
-                initial={_{ opacity: 0, _y: 30}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6, _delay: index * 0.1}}
-                viewport={_{ once: true}}
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300&quot;              >
                 <div className=&quot;flex items-center justify-between mb-4&quot;>
                   <div className=&quot;w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center&quot;>
                     <specialty.icon className=&quot;w-8 h-8 text-white&quot; />
                   </div>
-<<<<<<< HEAD
                   <div className=&quot;text-right&quot;>
                     <div className=&quot;text-2xl font-bold text-green-400&quot;>{specialty.accuracy}</div>
                     <div className=&quot;text-sm text-gray-400&quot;>Accuracy</div>
                   </div>
                 </div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{specialty.name}</h3>
-                <p className=&quot;text-gray-300 leading-relaxed&quot;>{specialty.description}</p>
-=======
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-green-400">{_specialty.accuracy}</div>
-                    <div className="text-sm text-gray-400">Accuracy</div>
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{_specialty.name}</h3>
-                <p className="text-gray-300 leading-relaxed">{_specialty.description}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </motion.div>
+                <p className=&quot;text-gray-300 leading-relaxed&quot;>{specialty.description}</p>              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Use Cases Section */}
       <section className=&quot;py-20 bg-gray-900 relative overflow-hidden&quot;>
         <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]&quot;></div>
@@ -601,20 +395,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className=&quot;text-center mb-16&quot;
-=======
-      {_/* Use Cases Section */}
-      <section className="py-20 bg-gray-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={_{ opacity: 0, _y: 30}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8}}
-            viewport={_{ once: true}}
-            className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
               Transform Your <span className=&quot;bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent&quot;>Practice</span>
             </h2>
@@ -623,7 +404,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
             {useCases.map((useCase, index) => (
               <motion.div
@@ -632,23 +412,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className=&quot;bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm&quot;
-=======
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {_useCases.map(_(useCase, _index) => (_<motion.div
-                key={index}
-                initial={_{ opacity: 0, _x: index % 2 === 0 ? -30 : 30}}
-                whileInView={_{ opacity: 1, _x: 0}}
-                transition={_{ duration: 0.6, _delay: index * 0.1}}
-                viewport={_{ once: true}}
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                className=&quot;bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm&quot;              >
                 <div className=&quot;flex items-start space-x-4&quot;>
                   <div className=&quot;w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0&quot;>
                     <useCase.icon className=&quot;w-8 h-8 text-white&quot; />
                   </div>
-<<<<<<< HEAD
                   <div className=&quot;flex-1&quot;>
                     <h3 className=&quot;text-2xl font-semibold text-white mb-3&quot;>{useCase.title}</h3>
                     <p className=&quot;text-gray-300 mb-4 leading-relaxed&quot;>{useCase.description}</p>
@@ -656,18 +424,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className=&quot;flex items-center space-x-2 text-sm&quot;>
                           <CheckCircle className=&quot;w-4 h-4 text-green-400&quot; />
-                          <span className=&quot;text-gray-300&quot;>{benefit}</span>
-=======
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-semibold text-white mb-3">{_useCase.title}</h3>
-                    <p className="text-gray-300 mb-4 leading-relaxed">{_useCase.description}</p>
-                    <div className="space-y-2">
-                      {_useCase.benefits.map((benefit, _benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-center space-x-2 text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-400" />
-                          <span className="text-gray-300">{_benefit}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        </div>
+                          <span className=&quot;text-gray-300&quot;>{benefit}</span>                        </div>
                       ))}
                     </div>
                   </div>
@@ -678,7 +435,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Pricing Section */}
       <section className=&quot;py-20 bg-black relative overflow-hidden&quot;>
         <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]&quot;></div>
@@ -688,20 +444,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className=&quot;text-center mb-16&quot;
-=======
-      {_/* Pricing Section */}
-      <section className="py-20 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={_{ opacity: 0, _y: 30}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8}}
-            viewport={_{ once: true}}
-            className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
               Choose Your <span className=&quot;bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent&quot;>Plan</span>
             </h2>
@@ -710,14 +453,8 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
-            {pricingPlans.map((plan, index) => (
-=======
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {_pricingPlans.map(_(plan, _index) => (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <motion.div
+            {pricingPlans.map((plan, index) => (              <motion.div
                 key={index}
                 initial={_{ opacity: 0, _y: 30}}
                 whileInView={_{ opacity: 1, _y: 0}}
@@ -728,21 +465,13 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
                     ? 'border-green-500/50 shadow-lg shadow-green-500/25' 
                     : 'border-gray-700/50'}`}
               >
-<<<<<<< HEAD
                 {plan.popular && (
                   <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;>
-                    <div className=&quot;bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium&quot;>
-=======
-                {_plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      Most Popular
+                    <div className=&quot;bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium&quot;>                      Most Popular
                     </div>
                   </div>
                 )}
                 
-<<<<<<< HEAD
                 <div className=&quot;text-center mb-8&quot;>
                   <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{plan.name}</h3>
                   <div className=&quot;flex items-baseline justify-center space-x-1 mb-2&quot;>
@@ -756,24 +485,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=&quot;flex items-center space-x-3&quot;>
                       <CheckCircle className=&quot;w-5 h-5 text-green-400 flex-shrink-0&quot; />
-                      <span className=&quot;text-gray-300&quot;>{feature}</span>
-=======
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{_plan.name}</h3>
-                  <div className="flex items-baseline justify-center space-x-1 mb-2">
-                    <span className="text-4xl font-bold text-white">{_plan.price}</span>
-                    <span className="text-gray-400">{_plan.period}</span>
-                  </div>
-                  <p className="text-gray-300">{_plan.description}</p>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {_plan.features.map(_(feature, _featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300">{_feature}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </li>
+                      <span className=&quot;text-gray-300&quot;>{feature}</span>                    </li>
                   ))}
                 </ul>
 
@@ -786,7 +498,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Integrations Section */}
       <section className=&quot;py-20 bg-gray-900 relative overflow-hidden&quot;>
         <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]&quot;></div>
@@ -796,20 +507,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className=&quot;text-center mb-16&quot;
-=======
-      {_/* Integrations Section */}
-      <section className="py-20 bg-gray-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={_{ opacity: 0, _y: 30}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8}}
-            viewport={_{ once: true}}
-            className="text-center mb-16"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            className=&quot;text-center mb-16&quot;          >
             <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
               Seamless <span className=&quot;bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent&quot;>Integrations</span>
             </h2>
@@ -818,7 +516,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {integrations.map((integration, index) => (
               <motion.div
@@ -833,55 +530,23 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {_const _features = [
                   <integration.icon className=&quot;w-8 h-8 text-white&quot; />
                 </div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>{integration.name}</h3>
-                <p className=&quot;text-gray-300 text-sm&quot;>{integration.description}</p>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {_integrations.map(_(integration, _index) => (
-              <motion.div
-                key={index}
-                initial={_{ opacity: 0, _y: 30}}
-                whileInView={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6, _delay: index * 0.1}}
-                viewport={_{ once: true}}
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300"
-              >
-                <div className={_`w-16 h-16 bg-gradient-to-r ${integration.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                  <integration.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{_integration.name}</h3>
-                <p className="text-gray-300 text-sm">{_integration.description}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </motion.div>
+                <p className=&quot;text-gray-300 text-sm&quot;>{integration.description}</p>              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className=&quot;py-20 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-cyan-900/20 relative overflow-hidden&quot;>
         <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]&quot;></div>
-        <div className=&quot;relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
-=======
-      {_/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-cyan-900/20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          <motion.div
+        <div className=&quot;relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>          <motion.div
             initial={_{ opacity: 0, _y: 30}}
             whileInView={_{ opacity: 1, _y: 0}}
             transition={_{ duration: 0.8}}
             viewport={_{ once: true}}
           >
-<<<<<<< HEAD
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-              Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?
-=======
-            <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
-              Ready to <span className=&quot;bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent&quot;>Transform</span> Healthcare?
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-            </h2>
+              Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?            </h2>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-2xl mx-auto&quot;>
               Join leading healthcare institutions worldwide who have already revolutionized patient care with AI-powered diagnostics.
             </p>

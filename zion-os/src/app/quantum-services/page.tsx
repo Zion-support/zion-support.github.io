@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import Link from "next/link",
 export const metadata = {
   title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",
   description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.",
   keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"},
-=======
-import Link from "next/link";
-
-export const _metadata = {_title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions", _description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, _unlock unprecedented computational power.", _keywords: "quantum computing, _quantum algorithms, _quantum machine learning, _quantum optimization, _Zion Tech Group, _quantum services"};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default function QuantumServicesPage() {_return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -439,14 +432,8 @@ export default function QuantumServicesPage() {_return (
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
-=======
-      {_/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">        <div className="max-w-4xl mx-auto text-center">
           <div className="card bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-500/30">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Go Quantum?

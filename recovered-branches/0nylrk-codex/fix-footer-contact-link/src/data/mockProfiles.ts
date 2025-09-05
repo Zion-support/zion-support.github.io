@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ProfileData } from "@/types/profile",
 export const MOCK_PROFILES: Record<string ProfileData> = {
   "service-provider-1": {
@@ -10,21 +8,7 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
     avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=200&h=200",
     coverImageUrl: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600",
     bio: "Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.",
-    location: "San Francisco, CA",
-=======
-import { ProfileData } from &quot;@/types/profile&quot;;
-
-export const MOCK_PROFILES: Record<string, ProfileData> = {
-  &quot;service-provider-1&quot;: {
-    id: &quot;service-provider-1&quot;,
-    name: &quot;TechSolutions Inc.&quot;,
-    title: &quot;Enterprise AI Integration Services&quot;,
-    avatarUrl: &quot;https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=200&h=200&quot;,
-    coverImageUrl: &quot;https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600&quot;,
-    bio: &quot;Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.&quot;,
-    location: &quot;San Francisco, CA&quot;,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    rating: 4.9,
+    location: "San Francisco, CA",    rating: 4.9,
     reviewCount: 124,
     aiScore: 95,
     profileType: &quot;service&quot; as &quot;service&quot; | &quot;talent&quot;,
@@ -174,7 +158,6 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         { day: &quot;Wednesday&quot;, hours: &quot;10:00 AM - 6:00 PM&quot; },
         { day: &quot;Thursday&quot;, hours: &quot;10:00 AM - 6:00 PM&quot; },
         { day: &quot;Friday&quot;, hours: &quot;10:00 AM - 2:00 PM&quot; }
-=======
 
 export const MOCK_PROFILES: Record<string, ProfileData> = {_"service-provider-1": {
     id: "service-provider-1", _name: "TechSolutions Inc.", _title: "Enterprise AI Integration Services", _avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=200&h=200", _coverImageUrl: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600", _bio: "Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.", _location: "San Francisco, _CA", _rating: 4.9, _reviewCount: 124, _aiScore: 95, _profileType: "service" as "service" | "talent", _hourlyRate: 200, _skills: [
@@ -225,7 +208,6 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {_"service-provider-1"
         {_day: "Wednesday", _hours: "10:00 AM - 6:00 PM"},
         {_day: "Thursday", _hours: "10:00 AM - 6:00 PM"},
         {_day: "Friday", _hours: "10:00 AM - 2:00 PM"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       ]
     }
   }

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useMemo } from "react",
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
 import { Input } from "@/components/ui/input",
@@ -15,111 +13,65 @@ export function ITServicePricingTable() {
   }>({
     key: "country",
     direction: "ascending"}),
-=======
-import { useState, useMemo } from &quot;react&quot;;
-import { onsiteServicePricing, CountryPricing } from &quot;@/data/onsiteServicePricing&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from &quot;@/components/ui/table&quot;;
-import { Globe, Search, ArrowUpDown } from &quot;lucide-react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-
-export function ITServicePricingTable() {
-  const [searchQuery, setSearchQuery] = useState("&quot;);
-  const [sortConfig, setSortConfig] = useState<{
-    key: keyof CountryPricing;
-    direction: &quot;ascending&quot; | &quot;descending&quot;;
-  }>({
-    key: &quot;country&quot;,
-    direction: &quot;ascending&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing],
-=======
 
-export function ITServicePricingTable() {_const [searchQuery, _setSearchQuery] = useState("");
-  const [sortConfig, _setSortConfig] = useState<{
+export function ITServicePricingTable() {const [searchQuery, setSearchQuery] = useState("");
+  const [sortConfig, setSortConfig] = useState<{
     key: keyof CountryPricing;
-    direction: "ascending" | "descending";}>({_key: "country", _direction: "ascending"});
+    direction: "ascending" | "descending"}>({key: "country", direction: "ascending"});
 
-  const _sortedData = useMemo__(() => {_let _filteredData = [...onsiteServicePricing];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+  const sortedData = useMemo_(() => {let filteredData = [...onsiteServicePricing];
     
-    // Filter by search query
-    if (searchQuery) {
+    // Filter by search query,
+if (searchQuery) {
       filteredData = filteredData.filter(item => 
         item.country.toLowerCase().includes(searchQuery.toLowerCase())
-<<<<<<< HEAD
       )
     }
     
-    // Sort data
-    filteredData.sort((a, b) => {
+    // Sort data,
+filteredData.sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
-<<<<<<< HEAD
         return sortConfig.direction === "ascending" ? -1 : 1
       }
       if (a[sortConfig.key] > b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? 1 : -1
-=======
-        return sortConfig.direction === &quot;ascending&quot; ? -1 : 1;
-      }
-      if (a[sortConfig.key] > b[sortConfig.key]) {
-        return sortConfig.direction === &quot;ascending&quot; ? 1 : -1;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      }
+        return sortConfig.direction === "ascending" ? 1 : -1      }
       return 0
     }),
-=======
-      );}
+      )}
     
-    // Sort data
-    filteredData.sort(_(a, _b) => {_if (a[sortConfig.key] < b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? -1 : 1;}
-      if (a[sortConfig.key] > b[sortConfig.key]) {_return sortConfig.direction === "ascending" ? 1 : -1;}
-      return 0;
+    // Sort data,
+filteredData.sort(_(a, b) => {if (a[sortConfig.key] < b[sortConfig.key]) {
+        return sortConfig.direction === "ascending" ? -1 : 1}
+      if (a[sortConfig.key] > b[sortConfig.key]) {return sortConfig.direction === "ascending" ? 1 : -1}
+      return 0
     });
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     return filteredData
   }, [onsiteServicePricing, searchQuery, sortConfig]),
 
-<<<<<<< HEAD
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
       key,
       direction: 
-<<<<<<< HEAD
-=======
-  const _handleSort = (_key: keyof CountryPricing) => {_setSortConfig({
-      key, _direction: 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         sortConfig.key === key && sortConfig.direction === "ascending" 
           ? "descending" 
           : "ascending"})
   },
-=======
         sortConfig.key === key && sortConfig.direction === &quot;ascending&quot; 
           ? &quot;descending&quot; 
-          : &quot;ascending"});
+          : &quot;ascending"})
   };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   return (_<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light&quot; />
-          <Input
-<<<<<<< HEAD
-            placeholder=&quot;Search by country..."
+          <Input,
+placeholder=&quot;Search by country..."
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-=======
-            placeholder="Search by country..."
-            value={_searchQuery}
-            onChange={_(e) => setSearchQuery(e.target.value)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white"
+            onChange={(e) => setSearchQuery(e.target.value)}            className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white"
           />
         </div>
       </div>
@@ -129,30 +81,18 @@ export function ITServicePricingTable() {_const [searchQuery, _setSearchQuery] =
           <TableHeader className="bg-zion-blue">
             <TableRow>
               <TableHead className="text-zion-cyan font-medium&quot;>
-                <Button 
-<<<<<<< HEAD
-                  variant=&quot;ghost&quot; 
-                  onClick={() => handleSort(&quot;country")}
-=======
-                  variant="ghost" 
-                  onClick={_() => handleSort("country")}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
+                <Button,
+variant=&quot;ghost&quot; 
+                  onClick={() => handleSort(&quot;country")}                  className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
                 >
                   <span>Country</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
               </TableHead>
               <TableHead className="text-right text-zion-cyan font-medium&quot;>
-                <Button 
-<<<<<<< HEAD
-                  variant=&quot;ghost&quot; 
-                  onClick={() => handleSort(&quot;pricePerIncident")}
-=======
-                  variant="ghost" 
-                  onClick={_() => handleSort("pricePerIncident")}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
+                <Button,
+variant=&quot;ghost&quot; 
+                  onClick={() => handleSort(&quot;pricePerIncident")}                  className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
                 >
                   <span>Price Per Incident</span>
                   <ArrowUpDown className="h-4 w-4" />
@@ -161,18 +101,18 @@ export function ITServicePricingTable() {_const [searchQuery, _setSearchQuery] =
             </TableRow>
           </TableHeader>
           <TableBody className="bg-zion-blue-dark">
-            {_sortedData.length > 0 ? (_sortedData.map((item) => (
+            {sortedData.length > 0 ? (sortedData.map((item) => (
                 <TableRow key={item.country} className="border-b border-zion-blue-light hover:bg-zion-blue/50">
                   <TableCell className="flex items-center space-x-2">
                     <Globe className="h-4 w-4 text-zion-purple" />
-                    <span className="text-white">{_item.country}</span>
+                    <span className="text-white">{item.country}</span>
                   </TableCell>
-                  <TableCell className="text-right font-medium text-white">${_item.pricePerIncident.toFixed(2)}</TableCell>
+                  <TableCell className="text-right font-medium text-white">${item.pricePerIncident.toFixed(2)}</TableCell>
                 </TableRow>
               ))
             ) : (
               <TableRow>
-                <TableCell colSpan={_2} className="text-center py-10 text-zion-slate-light">
+                <TableCell colSpan={2} className="text-center py-10 text-zion-slate-light">
                   No countries match your search
                 </TableCell>
               </TableRow>

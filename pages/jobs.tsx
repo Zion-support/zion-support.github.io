@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Seo from '../components/seo/Seo',
 import { JobPostingJsonLd } from 'next-seo',
@@ -18,17 +17,6 @@ const Jobs: NextPage = () => {
       sameAs: 'https://ziontechgroup.netlify.app',
       logo: 'https://ziontechgroup.netlify.app/logo.png'},
     jobLocationType: 'TELECOMMUTE'} as const,
-=======
-import type {_NextPage} from 'next';
-import Seo from '../components/seo/Seo';
-
-const Jobs: NextPage = () => {_const _job = {
-    title: 'Senior Full-Stack Engineer (Next.js + AI)', _description: 'Build modern AI-enabled web apps at Zion Tech Solutions.', _datePosted: new Date().toISOString().slice(0, _10), _employmentType: 'FULL_TIME', _validThrough: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30).toISOString().slice(0, _10), _baseSalary: {
-      currency: 'USD', _value: 160000, _unitText: 'YEAR'},
-    hiringOrganization: {_name: 'Zion Tech Solutions', _sameAs: 'https://ziontechgroup.netlify.app', _logo: 'https://ziontechgroup.netlify.app/logo.png'},
-    jobLocationType: 'TELECOMMUTE'} as const;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (
     <div>
       <Seo title=&quot;Jobs&quot; description=&quot;Open roles at Zion Tech Solutions.&quot; />

@@ -150,12 +150,7 @@ export default function Footer() {_return (_<footer className="bg-gray-900 borde
         </div>
         <div className="mt-12 border-t border-gray-800 pt-8">
           <p className="text-base text-gray-400 xl:text-center">
-<<<<<<< HEAD
-            &copy, {new Date().getFullYear()} Zion Tech Group. All rights reserved.
-=======
-            &copy; {_new Date().getFullYear()} Zion Tech Group. All rights reserved.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </p>
+            &copy, {new Date().getFullYear()} Zion Tech Group. All rights reserved.          </p>
         </div>
       </div>
     </footer>

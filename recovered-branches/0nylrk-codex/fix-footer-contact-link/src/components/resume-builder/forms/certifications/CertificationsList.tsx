@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { Certification } from '@/types/resume',
 import { Card, CardContent } from '@/components/ui/card',
 import { Button } from '@/components/ui/button',
@@ -27,29 +26,7 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                 <h4 className=&quot;font-medium&quot;>{cert.name}</h4>
                 <p className=&quot;text-sm text-muted-foreground&quot;>{cert.issuing_organization}</p>
                 <p className=&quot;text-xs text-muted-foreground mt-1&quot;>
-                  Issued: {cert.issue_date ? (typeof cert.issue_date === 'string' 
-=======
-
-interface CertificationsListProps {_certifications: Certification[];
-  onEdit: (_cert: Certification) => void;
-  onDelete: (_id: string) => void;}
-
-export function CertificationsList(_{_certifications, _onEdit, _onDelete}: CertificationsListProps) {_if (certifications.length === 0) {
-    return null;}
-
-  return (_<div className="space-y-4">
-      <h3 className="text-md font-medium">Added Certifications</h3>
-      {_certifications.map((cert) => (
-        <Card key={cert.id} className="bg-muted/40">
-          <CardContent className="pt-6">
-            <div className="flex justify-between">
-              <div>
-                <h4 className="font-medium">{_cert.name}</h4>
-                <p className="text-sm text-muted-foreground">{_cert.issuing_organization}</p>
-                <p className="text-xs text-muted-foreground mt-1">
-                  Issued: {_cert.issue_date ? (typeof cert.issue_date === 'string' 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    ? cert.issue_date 
+                  Issued: {cert.issue_date ? (typeof cert.issue_date === 'string'                     ? cert.issue_date 
                     : format(cert.issue_date, _'MMM yyyy')) : 'N/A'}
                   {_cert.expiration_date && (
                     <> · Expires: {typeof cert.expiration_date === 'string' 
@@ -61,41 +38,21 @@ export function CertificationsList(_{_certifications, _onEdit, _onDelete}: Certi
               </div>
               <div className=&quot;flex gap-2&quot;>
                 <Button
-<<<<<<< HEAD
                   variant=&quot;ghost&quot;
                   size=&quot;icon&quot;
-                  onClick={() => onEdit(cert)}
-=======
-                  variant="ghost"
-                  size="icon"
-                  onClick={_() => onEdit(cert)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  onClick={() => onEdit(cert)}                >
                   <Edit className=&quot;h-4 w-4&quot; />
                 </Button>
                 <Button
-<<<<<<< HEAD
                   variant=&quot;ghost&quot;
                   size=&quot;icon&quot;
-                  onClick={() => onDelete(cert.id!)}
-=======
-                  variant="ghost"
-                  size="icon"
-                  onClick={_() => onDelete(cert.id!)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  onClick={() => onDelete(cert.id!)}                >
                   <Trash2 className=&quot;h-4 w-4&quot; />
                 </Button>
               </div>
             </div>
-<<<<<<< HEAD
             {cert.credential_url && (
-              <p className=&quot;text-xs mt-2&quot;>
-=======
-            {_cert.credential_url && (
-              <p className="text-xs mt-2">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                <a 
+              <p className=&quot;text-xs mt-2&quot;>                <a 
                   href={cert.credential_url} 
                   target=&quot;_blank&quot; 
                   rel=&quot;noopener noreferrer&quot;

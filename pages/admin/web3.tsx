@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',
 import Head from 'next/head',
 export default function AdminWeb3Page() {
@@ -20,24 +19,8 @@ export default function AdminWeb3Page() {
     sol: users.filter(u => u.chain === 'sol').length,
     enabled: users.filter(u => u.enabled).length,
     disabled: users.filter(u => !u.enabled).length},
-=======
-import React, {_useEffect, _useState} from 'react';
-import Head from 'next/head';
-
-export default function AdminWeb3Page() {_const [users, _setUsers] = useState<{ id: string; enabled: boolean; chain?: string}[]>([]);
-
-  useEffect__(() => {_const _raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null;
-    setUsers(raw ? JSON.parse(raw) : []);}, []);
-
-  const _save = (_list: unknown) => {_if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', _JSON.stringify(list));
-    setUsers(list);};
-
-  const _metrics = {_total: users.length, _evm: users.filter(u => u.chain === 'evm').length, _sol: users.filter(u => u.chain === 'sol').length, _enabled: users.filter(u => u.enabled).length, _disabled: users.filter(u => !u.enabled).length};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (_<>
       <Head><title>Admin — Web3</title></Head>
-<<<<<<< HEAD
       <div className=&quot;max-w-3xl mx-auto space-y-6&quot;>
         <h1 className=&quot;text-xl font-semibold&quot;>Web3 Admin</h1>
         <div className=&quot;rounded-md border p-4&quot;>
@@ -53,31 +36,23 @@ export default function AdminWeb3Page() {_const [users, _setUsers] = useState<{ 
                 <div className=&quot;text-sm&quot;>{u.id}</div>
                 <label className=&quot;inline-flex items-center gap-2 text-sm&quot;>
                   <span>Web3</span>
-<<<<<<< HEAD
                   <input type="checkbox" checked={u.enabled} onChange={(e) => {
-                    const next = users.slice(), next[i] = { ...u, enabled: e.target.checked }, save(next)
-=======
-                  <input type=&quot;checkbox&quot; checked={u.enabled} onChange={(e) => {
-                    const next = users.slice(); next[i] = { ...u, enabled: e.target.checked }; save(next);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-      <div className="max-w-3xl mx-auto space-y-6">
+                    const next = users.slice(), next[i] = { ...u, enabled: e.target.checked }, save(next)      <div className="max-w-3xl mx-auto space-y-6">
         <h1 className="text-xl font-semibold">Web3 Admin</h1>
         <div className="rounded-md border p-4">
           <div className="font-medium mb-2">Usage Metrics</div>
-          <div className="text-sm text-gray-600">Total: {_metrics.total} · EVM: {_metrics.evm} · Solana: {_metrics.sol} · Enabled: {_metrics.enabled} · Disabled: {_metrics.disabled}</div>
+          <div className="text-sm text-gray-600">Total: {metrics.total} · EVM: {metrics.evm} · Solana: {metrics.sol} · Enabled: {metrics.enabled} · Disabled: {metrics.disabled}</div>
         </div>
         <div className="rounded-md border p-4">
           <div className="font-medium mb-2">Users</div>
-          {_users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>}
+          {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>}
           <ul className="space-y-2">
-            {_users.map((u, _i) => (_<li key={i} className="flex items-center justify-between">
-                <div className="text-sm">{_u.id}</div>
+            {users.map((u, i) => (_<li key={i} className="flex items-center justify-between">
+                <div className="text-sm">{u.id}</div>
                 <label className="inline-flex items-center gap-2 text-sm">
                   <span>Web3</span>
-                  <input type="checkbox" checked={_u.enabled} onChange={_(e) => {
-                    const _next = users.slice(); next[i] = { ...u, _enabled: e.target.checked}; save(next);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+                  <input type="checkbox" checked={u.enabled} onChange={_(e) => {
+                    const next = users.slice(); next[i] = { ...u, enabled: e.target.checked}; save(next)
                   }} />
                 </label>
               </li>

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 module.exports = {
   apps: [
     {
@@ -82,5 +80,4 @@ module.exports = {
       time: true
     }
   ]
->>>>>>> 878d942794613d77e7906d7fb8891458141d2dcc
 },

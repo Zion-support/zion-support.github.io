@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface MarketplaceCardProps {
-  title: string;
-=======
-interface MarketplaceCardProps {_title: string;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  description: string;
+  title: string;  description: string;
   price: number;
   rating: number;
   image: string;
@@ -52,7 +45,6 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = (_{_title, _desc
 };
 
 export default EnhancedMarketplaceCard;
-=======
 
           <div className="h-12 w-12 rounded bg-gray-200" />)},
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>,
@@ -62,7 +54,6 @@ export default EnhancedMarketplaceCard;
         {price && <span className="text-sm font-medium text-blue-600">{price}</span>},
 import React from 'react',
 import EnhancedCard from './EnhancedCard',
-=======
           <div className=&quot;h-12 w-12 rounded bg-gray-200&quot; />)};
         <h3 className=&quot;text-lg font-semibold text-gray-900&quot;>{title}</h3>,
       </div>,
@@ -72,7 +63,6 @@ import EnhancedCard from './EnhancedCard',
 import React from 'react';
 import EnhancedCard from './EnhancedCard';
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export type MarketplaceCardProps = {
   title: string,
   subtitle?: string,
@@ -94,4 +84,3 @@ export default function EnhancedMarketplaceCard({ title, subtitle, description, 
     </EnhancedCard>
   )
 }
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

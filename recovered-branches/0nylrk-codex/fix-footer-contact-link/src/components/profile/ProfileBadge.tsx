@@ -1,34 +1,16 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",
 import { cn } from "@/lib/utils",
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
-=======
-import React from &quot;react&quot;;
-import { BadgeCheck, Star, Clock, Award } from &quot;lucide-react&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-=======
-import React from "react";
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
-<<<<<<< HEAD
 interface ProfileBadgeProps {
   type: BadgeType,
   className?: string
 }
-=======
-interface ProfileBadgeProps {_type: BadgeType;
-  className?: string;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export function ProfileBadge(_{_type, _className}: ProfileBadgeProps) {_const _badgeConfig = {
     verified: {
-<<<<<<< HEAD
       icon: BadgeCheck,
       text: &quot;Verified&quot;,
       colors: &quot;bg-blue-500/20 text-blue-400&quot;},
@@ -42,14 +24,8 @@ export function ProfileBadge(_{_type, _className}: ProfileBadgeProps) {_const _b
       colors: &quot;bg-green-500/20 text-green-400&quot;},
     &quot;top-rated&quot;: {
       icon: Award,
-<<<<<<< HEAD
       text: "Top Rated",
       colors: "bg-purple-500/20 text-purple-400"}},
-=======
-      text: &quot;Top Rated&quot;,
-      colors: &quot;bg-purple-500/20 text-purple-400&quot;}};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
   const { icon: Icon, text, colors } = badgeConfig[type],
 
   return (
@@ -60,7 +36,6 @@ export function ProfileBadge(_{_type, _className}: ProfileBadgeProps) {_const _b
     )}>
       <Icon className=&quot;w-3 h-3&quot; />
       <span>{text}</span>
-=======
       icon: BadgeCheck, _text: "Verified", _colors: "bg-blue-500/20 text-blue-400"},
     featured: {_icon: Star, _text: "Featured", _colors: "bg-yellow-500/20 text-yellow-400"},
     new: {_icon: Clock, _text: "New", _colors: "bg-green-500/20 text-green-400"},
@@ -74,7 +49,6 @@ export function ProfileBadge(_{_type, _className}: ProfileBadgeProps) {_const _b
     )}>
       <Icon className="w-3 h-3" />
       <span>{_text}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     </div>
   )
 }

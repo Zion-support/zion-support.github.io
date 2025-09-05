@@ -1,15 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { FileText, ShieldCheck } from "lucide-react",
-=======
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { FileText, ShieldCheck } from &quot;lucide-react&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 interface ContractTypeCardsProps {
   onStandardClick: () => void,
   onSmartClick: () => void
@@ -18,14 +10,12 @@ interface ContractTypeCardsProps {
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
   return (
     <div className=&quot;grid md:grid-cols-2 gap-6 mb-10&quot;>
-=======
 
 interface ContractTypeCardsProps {_onStandardClick: () => void;
   onSmartClick: () => void;}
 
 export function ContractTypeCards(_{_onStandardClick, _onSmartClick}: ContractTypeCardsProps) {_return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <Card>
         <CardHeader>
           <CardTitle className=&quot;flex items-center gap-2&quot;>
@@ -77,14 +67,8 @@ export function ContractTypeCards(_{_onStandardClick, _onSmartClick}: ContractTy
         </CardContent>
         <CardFooter>
           <Button 
-<<<<<<< HEAD
             className=&quot;w-full bg-gradient-to-r from-blue-600 to-indigo-600&quot; 
-            onClick={onSmartClick}
-=======
-            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
-            onClick={_onSmartClick}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            onClick={onSmartClick}          >
             Create Smart Contract
           </Button>
         </CardFooter>

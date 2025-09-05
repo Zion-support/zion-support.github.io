@@ -10,7 +10,6 @@ export type IntegrationProviderId =
   | 'workable'
   | 'bamboohr',
 
-<<<<<<< HEAD
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId,
   name: string,
@@ -19,18 +18,8 @@ export interface IntegrationProviderMeta {
   oauthScopes?: string[],
   icon?: string
 }
-=======
-export interface IntegrationProviderMeta {_id: IntegrationProviderId;
-  name: string;
-  category: IntegrationCategory;
-  description?: string;
-  oauthScopes?: string[];
-  icon?: string;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected',
 
-<<<<<<< HEAD
 export interface SyncRules {
   // CRM rules
   autoCreateContacts?: boolean,
@@ -80,42 +69,3 @@ export interface IntegrationsState {
   overrides: ManualOverride[],
   events: ZapierEvent[]
 }
-=======
-export interface SyncRules {_// CRM rules
-  autoCreateContacts?: boolean;
-  pushNotesMode?: 'auto' | 'manual';
-  // ATS rules
-  autoSyncApplicants?: boolean;
-  autoUploadResumes?: boolean;}
-
-export interface ProviderConnection {_providerId: IntegrationProviderId;
-  status: SyncStatus;
-  accessToken?: string;
-  refreshToken?: string;
-  expiresAt?: number;
-  connectedAt?: number;
-  syncRules?: SyncRules;
-  lastSyncAt?: number;
-  lastError?: string | null;}
-
-export interface SyncLogEntry {_id: string;
-  timestamp: number;
-  providerId: IntegrationProviderId;
-  level: 'info' | 'warn' | 'error';
-  action: string;
-  details?: Record<string, _any>;}
-
-export interface ManualOverride {_jobId: string;
-  disableCrmSync?: boolean;
-  disableAtsSync?: boolean;}
-
-export interface ZapierEvent {_id: string;
-  type: 'zion.job.posted' | 'zion.talent.matched';
-  timestamp: number;
-  payload: Record<string, _any>;}
-
-export interface IntegrationsState {_connections: ProviderConnection[];
-  logs: SyncLogEntry[];
-  overrides: ManualOverride[];
-  events: ZapierEvent[];}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

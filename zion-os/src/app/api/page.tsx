@@ -218,7 +218,6 @@ export default function APIPage() {_return (
               <div className="bg-gray-900/50 rounded-lg p-4">
                 <div className="text-sm text-gray-400 mb-2">Node.js</div>
                 <pre className="text-sm text-gray-300 overflow-x-auto">
-<<<<<<< HEAD
 {`const { ZionOS } = require('@zion-os/sdk'),
 
 const client = new ZionOS('YOUR_API_KEY'),
@@ -230,17 +229,7 @@ const economy = await client.economies.create({
   blockchain: 'ethereum'
 }),
 
-// // // console.log('Economy created:', economy.id),`}
-=======
-{_`const { ZionOS} = require('@zion-os/sdk');
-
-const _client = new ZionOS('YOUR_API_KEY');
-
-const _economy = await client.economies.create({_name: 'My Digital Economy', _description: 'A sovereign digital economy', _features: ['marketplace', _'governance', _'tokens'], _blockchain: 'ethereum'});
-
-`}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </pre>
+// // // console.log('Economy created:', economy.id),`}                </pre>
               </div>
             </div>
 

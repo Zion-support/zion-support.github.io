@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -19,30 +17,7 @@ import { Switch } from "@/components/ui/switch",
 export default function TenantOnboarding() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("company"),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-=======
-import React, { useState } from &quot;react&quot;;
-import { Header } from &quot;@/components/Header&quot;;
-import { Footer } from &quot;@/components/Footer&quot;;
-import { SEO } from &quot;@/components/SEO&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { Navigate } from &quot;react-router-dom&quot;;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Label } from &quot;@/components/ui/label&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from &quot;@/components/ui/select&quot;;
-import { toast } from &quot;sonner&quot;;
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import { Switch } from &quot;@/components/ui/switch&quot;;
-
-export default function TenantOnboarding() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState(&quot;company&quot;);
-  const [isSubmitting, setIsSubmitting] = useState(false);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  const [formData, setFormData] = useState({
+  const [isSubmitting, setIsSubmitting] = useState(false),  const [formData, setFormData] = useState({
     brand_name: "&quot;,
     subdomain: "&quot;,
     logo_url: "&quot;,
@@ -55,18 +30,10 @@ export default function TenantOnboarding() {
   }),
   
   // Check if user has admin role
-<<<<<<< HEAD
   const isAdmin = user?.role === "admin",
   
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" />
-=======
-  const isAdmin = user?.role === &quot;admin&quot;;
-  
-  if (!isAdmin) {
-    return <Navigate to=&quot;/unauthorized&quot; />;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  }
+    return <Navigate to="/unauthorized" />  }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target,
@@ -91,51 +58,13 @@ export default function TenantOnboarding() {
       
       // Create landing page copy
       const landingPageCopy = {
-<<<<<<< HEAD
         headline: "AI Hiring Assistant",
-        subtitle: `Find the best talent for your ${formData.industry || "company"}`,
-=======
-import React, {_useState} from "react";
-
-export default function TenantOnboarding() {_const { user} = useAuth();
-  const [activeTab, setActiveTab] = useState("company");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({_brand_name: "", _subdomain: "", _logo_url: "", _primary_color: "#9b87f5", _theme_preset: "light", _company_size: "", _industry: "", _custom_domain: "", _is_co_branded: true});
-  
-  // Check if user has admin role
-  const _isAdmin = user?.role === "admin";
-  
-  if (!isAdmin) {_return <Navigate to="/unauthorized" />;}
-
-  const _handleInputChange = (_e: React.ChangeEvent<HTMLInputElement>) => {_const { name, _value} = e.target;
-    setFormData(prev => ({_...prev, _[name]: value}));
-  };
-  
-  const _handleSelectChange = (_name: string, _value: string) => {_setFormData(prev => ({ ...prev, _[name]: value}));
-  };
-  
-  const _handleSwitchChange = (_name: string, _checked: boolean) => {_setFormData(prev => ({ ...prev, _[name]: checked}));
-  };
-  
-  const _handleSubmit = async (_e: React.FormEvent) => {_e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      // Generate subdomain if not provided
-      const _subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, _'');
-      
-      // Create landing page copy
-      const _landingPageCopy = {
-        headline: "AI Hiring Assistant", _subtitle: `Find the best talent for your ${formData.industry || "company"}`,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        cta: "Get Started"
+        subtitle: `Find the best talent for your ${formData.industry || "company"}`,        cta: "Get Started"
       },
-=======
         headline: &quot;AI Hiring Assistant&quot;,
         subtitle: `Find the best talent for your ${formData.industry || &quot;company&quot;}`,
         cta: &quot;Get Started&quot;
       };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       // Submit to Supabase
       const {_data, _error} = await supabase
@@ -146,7 +75,6 @@ export default function TenantOnboarding() {_const { user} = useAuth();
       
       if (error) throw error,
       
-<<<<<<< HEAD
       toast.success(&quot;Tenant created successfully!&quot;, {
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
       }),
@@ -165,20 +93,13 @@ export default function TenantOnboarding() {_const { user} = useAuth();
       })
       
     } catch (error: any) {
-<<<<<<< HEAD
       console.error("Error creating tenant:", error),
-      toast.error("Failed to create tenant", { 
-=======
-      console.error(&quot;Error creating tenant:&quot;, error);
-      toast.error(&quot;Failed to create tenant&quot;, { 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-        description: error.message 
+      toast.error("Failed to create tenant", {         description: error.message 
       })
     } finally {
       setIsSubmitting(false)
     }
   },
-=======
       toast.success("Tenant created successfully!", {_description: `${data.brand_name} is now available at ${_data.subdomain}.ziontechmarketplace.com`
       });
       
@@ -189,7 +110,6 @@ export default function TenantOnboarding() {_const { user} = useAuth();
         description: error.message});
     } finally {_setIsSubmitting(false);}
   };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (_<>
       <SEO 
@@ -214,57 +134,31 @@ export default function TenantOnboarding() {_const { user} = useAuth();
               </CardDescription>
             </CardHeader>
             <CardContent>
-<<<<<<< HEAD
               <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
                 <Tabs value={activeTab} onValueChange={setActiveTab} className=&quot;w-full&quot;>
                   <TabsList className=&quot;mb-4 grid grid-cols-3 w-full&quot;>
                     <TabsTrigger value=&quot;company&quot;>Company Info</TabsTrigger>
                     <TabsTrigger value=&quot;branding&quot;>Branding</TabsTrigger>
-                    <TabsTrigger value=&quot;domain&quot;>Domain Setup</TabsTrigger>
-=======
-              <form onSubmit={_handleSubmit} className="space-y-6">
-                <Tabs value={_activeTab} onValueChange={_setActiveTab} className="w-full">
-                  <TabsList className="mb-4 grid grid-cols-3 w-full">
-                    <TabsTrigger value="company">Company Info</TabsTrigger>
-                    <TabsTrigger value="branding">Branding</TabsTrigger>
-                    <TabsTrigger value="domain">Domain Setup</TabsTrigger>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </TabsList>
+                    <TabsTrigger value=&quot;domain&quot;>Domain Setup</TabsTrigger>                  </TabsList>
                   
                   <TabsContent value=&quot;company&quot; className=&quot;space-y-4&quot;>
                     <div className=&quot;space-y-2&quot;>
                       <Label htmlFor=&quot;brand_name&quot;>Company Name</Label>
                       <Input
-<<<<<<< HEAD
                         id=&quot;brand_name&quot;
                         name=&quot;brand_name&quot;
                         value={formData.brand_name}
                         onChange={handleInputChange}
-                        placeholder=&quot;Acme Corporation&quot;
-=======
-                        id="brand_name"
-                        name="brand_name"
-                        value={_formData.brand_name}
-                        onChange={_handleInputChange}
-                        placeholder="Acme Corporation"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        required
+                        placeholder=&quot;Acme Corporation&quot;                        required
                       />
                     </div>
                     
                     <div className=&quot;space-y-2&quot;>
                       <Label htmlFor=&quot;industry&quot;>Industry</Label>
                       <Select 
-<<<<<<< HEAD
                         name=&quot;industry&quot; 
                         value={formData.industry} 
-                        onValueChange={(value) => handleSelectChange(&quot;industry&quot;, value)}
-=======
-                        name="industry" 
-                        value={_formData.industry} 
-                        onValueChange={_(value) => handleSelectChange("industry", _value)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      >
+                        onValueChange={(value) => handleSelectChange(&quot;industry&quot;, value)}                      >
                         <SelectTrigger>
                           <SelectValue placeholder=&quot;Select industry&quot; />
                         </SelectTrigger>
@@ -284,16 +178,9 @@ export default function TenantOnboarding() {_const { user} = useAuth();
                     <div className=&quot;space-y-2&quot;>
                       <Label htmlFor=&quot;company_size&quot;>Company Size</Label>
                       <Select 
-<<<<<<< HEAD
                         name=&quot;company_size&quot; 
                         value={formData.company_size} 
-                        onValueChange={(value) => handleSelectChange(&quot;company_size&quot;, value)}
-=======
-                        name="company_size" 
-                        value={_formData.company_size} 
-                        onValueChange={_(_value) => handleSelectChange("company_size", _value)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      >
+                        onValueChange={(value) => handleSelectChange(&quot;company_size&quot;, value)}                      >
                         <SelectTrigger>
                           <SelectValue placeholder=&quot;Select company size&quot; />
                         </SelectTrigger>
@@ -309,7 +196,6 @@ export default function TenantOnboarding() {_const { user} = useAuth();
                     </div>
                   </TabsContent>
                   
-<<<<<<< HEAD
                   <TabsContent value=&quot;branding&quot; className=&quot;space-y-4&quot;>
                     <div className=&quot;space-y-2&quot;>
                       <Label htmlFor=&quot;logo_url&quot;>Logo URL</Label>
@@ -321,29 +207,13 @@ export default function TenantOnboarding() {_const { user} = useAuth();
                         placeholder=&quot;https://example.com/logo.png&quot;
                       />
                       <p className=&quot;text-xs text-muted-foreground&quot;>
-                        Enter a direct URL to your logo image (SVG or PNG with transparent background recommended)
-=======
-                  <TabsContent value="branding" className="space-y-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="logo_url">Logo window.URL</Label>
-                      <Input
-                        id="logo_url"
-                        name="logo_url"
-                        value={_formData.logo_url}
-                        onChange={_handleInputChange}
-                        placeholder="https://example.com/logo.png"
-                      />
-                      <p className="text-xs text-muted-foreground">
-                        Enter a direct window.URL to your logo image (SVG or PNG with transparent background recommended)
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      </p>
+                        Enter a direct URL to your logo image (SVG or PNG with transparent background recommended)                      </p>
                     </div>
                     
                     <div className=&quot;space-y-2&quot;>
                       <Label htmlFor=&quot;primary_color&quot;>Primary Brand Color</Label>
                       <div className=&quot;flex items-center gap-2&quot;>
                         <Input
-<<<<<<< HEAD
                           id=&quot;primary_color&quot;
                           name=&quot;primary_color&quot;
                           type=&quot;color&quot;
@@ -355,38 +225,16 @@ export default function TenantOnboarding() {_const { user} = useAuth();
                           name=&quot;primary_color&quot;
                           value={formData.primary_color}
                           onChange={handleInputChange}
-                          placeholder=&quot;#9b87f5&quot;
-=======
-                          id="primary_color"
-                          name="primary_color"
-                          type="color"
-                          value={_formData.primary_color}
-                          onChange={_handleInputChange}
-                          className="w-12 p-1 h-10"
-                        />
-                        <Input
-                          name="primary_color"
-                          value={_formData.primary_color}
-                          onChange={_handleInputChange}
-                          placeholder="#9b87f5"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        />
+                          placeholder=&quot;#9b87f5&quot;                        />
                       </div>
                     </div>
                     
                     <div className=&quot;space-y-2&quot;>
                       <Label htmlFor=&quot;theme_preset&quot;>Theme Preset</Label>
                       <Select 
-<<<<<<< HEAD
                         name=&quot;theme_preset&quot; 
                         value={formData.theme_preset} 
-                        onValueChange={(value) => handleSelectChange(&quot;theme_preset&quot;, value)}
-=======
-                        name="theme_preset" 
-                        value={_formData.theme_preset} 
-                        onValueChange={_(_value) => handleSelectChange("theme_preset", _value)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      >
+                        onValueChange={(value) => handleSelectChange(&quot;theme_preset&quot;, value)}                      >
                         <SelectTrigger>
                           <SelectValue placeholder=&quot;Select theme&quot; />
                         </SelectTrigger>
@@ -408,16 +256,9 @@ export default function TenantOnboarding() {_const { user} = useAuth();
                         </p>
                       </div>
                       <Switch
-<<<<<<< HEAD
                         id=&quot;is_co_branded&quot;
                         checked={formData.is_co_branded}
-                        onCheckedChange={(checked) => handleSwitchChange(&quot;is_co_branded&quot;, checked)}
-=======
-                        id="is_co_branded"
-                        checked={_formData.is_co_branded}
-                        onCheckedChange={_(_checked) => handleSwitchChange("is_co_branded", _checked)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      />
+                        onCheckedChange={(checked) => handleSwitchChange(&quot;is_co_branded&quot;, checked)}                      />
                     </div>
                   </TabsContent>
                   
@@ -426,22 +267,12 @@ export default function TenantOnboarding() {_const { user} = useAuth();
                       <Label htmlFor=&quot;subdomain&quot;>Subdomain</Label>
                       <div className=&quot;flex items-center&quot;>
                         <Input
-<<<<<<< HEAD
                           id=&quot;subdomain&quot;
                           name=&quot;subdomain&quot;
                           value={formData.subdomain}
                           onChange={handleInputChange}
                           placeholder={formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '') : &quot;company&quot;}
-                          className=&quot;rounded-r-none&quot;
-=======
-                          id="subdomain"
-                          name="subdomain"
-                          value={_formData.subdomain}
-                          onChange={_handleInputChange}
-                          placeholder={_formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, _'') : "company"}
-                          className="rounded-r-none"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        />
+                          className=&quot;rounded-r-none&quot;                        />
                         <div className=&quot;bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground&quot;>
                           .ziontechmarketplace.com
                         </div>
@@ -454,20 +285,11 @@ export default function TenantOnboarding() {_const { user} = useAuth();
                     <div className=&quot;space-y-2&quot;>
                       <Label htmlFor=&quot;custom_domain&quot;>Custom Domain (Optional)</Label>
                       <Input
-<<<<<<< HEAD
                         id=&quot;custom_domain&quot;
                         name=&quot;custom_domain&quot;
                         value={formData.custom_domain}
                         onChange={handleInputChange}
-                        placeholder=&quot;hire.yourcompany.com&quot;
-=======
-                        id="custom_domain"
-                        name="custom_domain"
-                        value={_formData.custom_domain}
-                        onChange={_handleInputChange}
-                        placeholder="hire.yourcompany.com"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      />
+                        placeholder=&quot;hire.yourcompany.com&quot;                      />
                       <p className=&quot;text-xs text-muted-foreground&quot;>
                         If you want to use your own domain, enter it here. You'll need to configure DNS records.
                       </p>
@@ -475,22 +297,12 @@ export default function TenantOnboarding() {_const { user} = useAuth();
                   </TabsContent>
                 </Tabs>
                 
-<<<<<<< HEAD
                 <div className=&quot;flex justify-end space-x-2&quot;>
                   <Button type=&quot;button&quot; variant=&quot;outline&quot; onClick={() => window.history.back()}>
                     Cancel
                   </Button>
                   <Button type=&quot;submit&quot; disabled={isSubmitting}>
-                    {isSubmitting ? &quot;Creating...&quot; : &quot;Create Tenant&quot;}
-=======
-                <div className="flex justify-end space-x-2">
-                  <Button type="button" variant="outline" onClick={_() => window.history.back()}>
-                    Cancel
-                  </Button>
-                  <Button type="submit" disabled={_isSubmitting}>
-                    {_isSubmitting ? "Creating..." : "Create Tenant"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </Button>
+                    {isSubmitting ? &quot;Creating...&quot; : &quot;Create Tenant&quot;}                  </Button>
                 </div>
               </form>
             </CardContent>

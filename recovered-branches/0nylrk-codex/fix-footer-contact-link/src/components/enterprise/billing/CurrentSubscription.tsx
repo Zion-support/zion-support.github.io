@@ -1,18 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-=======
-import React from &quot;react&quot;;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export function CurrentSubscription() {
+import { Badge } from "@/components/ui/badge",export function CurrentSubscription() {
   // Mock subscription data
   const subscription = {
     plan: &quot;Business&quot;,
@@ -26,7 +16,6 @@ export function CurrentSubscription() {
       total: 50
     }
   },
-=======
 import React from "react";
 
 export function CurrentSubscription() {_// Mock subscription data
@@ -34,7 +23,6 @@ export function CurrentSubscription() {_// Mock subscription data
     plan: "Business", _status: "active", _billingCycle: "Annual", _startDate: "May 1, _2025", _nextBillingDate: "May 1, _2026", _amount: "$1, _999.00", _teamSeats: {
       used: 32, _total: 50}
   };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <Card>
@@ -45,7 +33,6 @@ export function CurrentSubscription() {_// Mock subscription data
         </div>
         <CardDescription>Your subscription details and plan information</CardDescription>
       </CardHeader>
-<<<<<<< HEAD
       <CardContent className=&quot;grid gap-6&quot;>
         <div className=&quot;grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3&quot;>
           <div className=&quot;space-y-1&quot;>
@@ -71,36 +58,7 @@ export function CurrentSubscription() {_// Mock subscription data
           <div className=&quot;space-y-1&quot;>
             <p className=&quot;text-sm font-medium leading-none text-muted-foreground&quot;>Team Seats</p>
             <p className=&quot;text-lg&quot;>
-              {subscription.teamSeats.used} / {subscription.teamSeats.total} used
-=======
-      <CardContent className="grid gap-6">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <div className="space-y-1">
-            <p className="text-sm font-medium leading-none text-muted-foreground">Plan</p>
-            <p className="text-lg font-bold">{_subscription.plan}</p>
-          </div>
-          <div className="space-y-1">
-            <p className="text-sm font-medium leading-none text-muted-foreground">Billing Cycle</p>
-            <p className="text-lg">{_subscription.billingCycle}</p>
-          </div>
-          <div className="space-y-1">
-            <p className="text-sm font-medium leading-none text-muted-foreground">Amount</p>
-            <p className="text-lg">{_subscription.amount} per year</p>
-          </div>
-          <div className="space-y-1">
-            <p className="text-sm font-medium leading-none text-muted-foreground">Start Date</p>
-            <p className="text-lg">{_subscription.startDate}</p>
-          </div>
-          <div className="space-y-1">
-            <p className="text-sm font-medium leading-none text-muted-foreground">Next Billing Date</p>
-            <p className="text-lg">{_subscription.nextBillingDate}</p>
-          </div>
-          <div className="space-y-1">
-            <p className="text-sm font-medium leading-none text-muted-foreground">Team Seats</p>
-            <p className="text-lg">
-              {_subscription.teamSeats.used} / {_subscription.teamSeats.total} used
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </p>
+              {subscription.teamSeats.used} / {subscription.teamSeats.total} used            </p>
           </div>
         </div>
         

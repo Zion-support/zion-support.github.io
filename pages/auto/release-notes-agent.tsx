@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
 const ReleaseNotesAgent: NextPage = () => {
-  return (
-=======
-import type {_NextPage} from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-
-const ReleaseNotesAgent: NextPage = () => {_return (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    <div>
+  return (    <div>
       <Head>
         <title>AI Release Notes Agent</title>
         <meta name=&quot;description&quot; content=&quot;Daily AI-generated release notes.&quot; />
@@ -22,11 +13,6 @@ const ReleaseNotesAgent: NextPage = () => {_return (
         <Link href=&quot;/data/reports/release/latest.json&quot;><a className=&quot;text-blue-600 underline&quot;>Latest Release Notes (JSON)</Link></Link>
       </main>
     </div>
-<<<<<<< HEAD
   )
 },
-=======
-  );};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default ReleaseNotesAgent,

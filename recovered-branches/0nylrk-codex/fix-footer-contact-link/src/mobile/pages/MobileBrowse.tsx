@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -8,21 +6,7 @@ import { BrowseFilters } from "../components/browse/BrowseFilters",
 import { BrowseCards } from "../components/browse/BrowseCards",
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
-=======
-import React, { useState } from &quot;react&quot;;
-import { MobileHeader } from &quot;../components/common/MobileHeader&quot;;
-import { BottomNavigation } from &quot;../components/common/BottomNavigation&quot;;
-import { BrowseFilters } from &quot;../components/browse/BrowseFilters&quot;;
-import { BrowseCards } from &quot;../components/browse/BrowseCards&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-=======
-import React, {_useState} from "react";
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 // Mock data for demonstration
-<<<<<<< HEAD
 const jobsData = [
   {
     id: &quot;1&quot;,
@@ -96,29 +80,18 @@ const talentsData = [
 ],
 
 export function MobileBrowse() {
-<<<<<<< HEAD
   const { user } = useAuth(),
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs"),
   
   const handleViewDetails = (id: string) => {
-    // // // console.log(`View details for item ${id}`),
-=======
-  const { user } = useAuth();
-  const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
-  const [browseType, setBrowseType] = useState<&quot;jobs&quot; | &quot;talents&quot;>(isClient ? &quot;talents&quot; : &quot;jobs");
-  
-  const handleViewDetails = (id: string) => {
-    // console.log(`View details for item ${id}`);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    // Navigate to details page
+    // // // console.log(`View details for item ${id}`),    // Navigate to details page
   },
   
   return (
     <div className="min-h-screen&quot;>
       <MobileHeader
         title={browseType === &quot;jobs&quot; ? &quot;Browse Jobs&quot; : &quot;Browse Talents"}
-=======
 const _jobsData = [
   {_id: "1", _title: "Senior React Developer", _subtitle: "TechCorp Inc.", _description: "Looking for a skilled React developer to join our team for a long-term project. Experience with TypeScript and GraphQL required.", _location: "Remote", _badges: ["React", _"TypeScript", _"GraphQL"], _price: "$70-90/hr", _timePosted: "2 days ago", _match: 92},
   {_id: "2", _title: "UX/UI Designer", _subtitle: "Creative Studios", _description: "Seeking a creative UI/UX designer with experience in mobile app design. Portfolio must include at least 3 shipped applications.", _location: "New York, _US (Hybrid)", _badges: ["Figma", _"Design System", _"Mobile Apps"], _price: "$60-80/hr", _timePosted: "4 hours ago", _match: 87},
@@ -140,36 +113,21 @@ export function MobileBrowse() {_const { user} = useAuth();
   return (_<div className="min-h-screen">
       <MobileHeader
         title={_browseType === "jobs" ? "Browse Jobs" : "Browse Talents"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         showBack
       />
       
       <div className="flex justify-center my-3 px-4">
         <div className="inline-flex rounded-full border border-border p-1&quot;>
           <Button
-<<<<<<< HEAD
             variant={browseType === &quot;jobs&quot; ? &quot;default&quot; : &quot;ghost"}
             className="rounded-full&quot;
-            onClick={() => setBrowseType(&quot;jobs&quot;)}
-=======
-            variant={_browseType === "jobs" ? "default" : "ghost"}
-            className="rounded-full"
-            onClick={_() => setBrowseType("jobs")}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            onClick={() => setBrowseType(&quot;jobs&quot;)}          >
             Jobs
           </Button>
           <Button
-<<<<<<< HEAD
             variant={browseType === &quot;talents&quot; ? &quot;default&quot; : &quot;ghost"}
             className="rounded-full&quot;
-            onClick={() => setBrowseType(&quot;talents")}
-=======
-            variant={_browseType === "talents" ? "default" : "ghost"}
-            className="rounded-full"
-            onClick={_() => setBrowseType("talents")}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            onClick={() => setBrowseType(&quot;talents")}          >
             Talents
           </Button>
         </div>
@@ -179,16 +137,9 @@ export function MobileBrowse() {_const { user} = useAuth();
       
       <div className="py-4 px-4&quot;>
         <BrowseCards
-<<<<<<< HEAD
           items={browseType === &quot;jobs" ? jobsData : talentsData}
           type={browseType}
-          onViewDetails={handleViewDetails}
-=======
-          items={_browseType === "jobs" ? jobsData : talentsData}
-          type={_browseType}
-          onViewDetails={_handleViewDetails}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        />
+          onViewDetails={handleViewDetails}        />
       </div>
       
       <BottomNavigation />

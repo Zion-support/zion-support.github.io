@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface EmergingTechService {
   id: string,
   name: string,
@@ -48,47 +47,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
       currency: 'USD',
       trialDays: 45,
       setupTime: '2 weeks'
-    },
-=======
-export interface EmergingTechService {_id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number;
-    setupTime: string;};
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  marketPosition: string;
-  competitors: string[];
-  techStack: string[];
-  realImplementation: boolean;
-  implementationDetails: string;
-  roi: string;
-  useCases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
-
-export const emergingTechServices2025: EmergingTechService[] = [
-  {_id: 'neuromorphic-computing', _name: 'Neuromorphic Computing Platform', _tagline: 'Brain-inspired computing that mimics neural networks for ultra-efficient AI', _description: 'Revolutionary computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing, _enabling edge computing with minimal power consumption and maximum performance.', _category: 'Emerging Technology', _price: {
-      monthly: 3499, _yearly: 34990, _currency: 'USD', _trialDays: 45, _setupTime: '2 weeks'},
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    features: [
+    },    features: [
       'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesEdge computing optimizationNeuromorphic chip integrationAdaptive neural networksEnergy-efficient AI processingHardware-software co-design',
       'Scalable neuromorphic systemsResearch collaboration tools'
     ],
@@ -418,7 +377,6 @@ export const emergingTechServices2025: EmergingTechService[] = [
   }
 ],
 
-<<<<<<< HEAD
 export const getPopularEmergingTechServices = () => {
   return emergingTechServices2025.filter(service => service.popular)
 },
@@ -433,13 +391,3 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     return price >= minPrice && price <= maxPrice
   })
 },
-=======
-export const _getPopularEmergingTechServices = () => {_return emergingTechServices2025.filter(service => service.popular);};
-
-export const _getEmergingTechServicesByCategory = (_category: string) => {_return emergingTechServices2025.filter(service => service.category === category);};
-
-export const _getEmergingTechServicesByPriceRange = (_minPrice: number, _maxPrice: number) => {_return emergingTechServices2025.filter(service => {
-    const _price = parseInt(service.price.monthly.toString()) || 0;
-    return price >= minPrice && price <= maxPrice;});
-};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -22,41 +20,13 @@ import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingIntervie
 function TalentDashboardContent() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("job-matches"),
-  const onboardingStatus = useOnboardingStatus(),
-=======
-import { useState, useEffect } from &quot;react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
-import Link from &quot;next/link&quot;;
-import { SEO } from &quot;@/components/SEO&quot;;
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video } from 'lucide-react'
-import { ProtectedRoute } from &quot;@/components/ProtectedRoute&quot;;
-import { SuggestedJobs } from &quot;@/components/jobs/SuggestedJobs&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Avatar } from &quot;@/components/ui/avatar&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { TalentOnboardingSteps } from &quot;@/components/onboarding/TalentOnboardingSteps&quot;;
-import { AdvancedOnboardingSteps } from &quot;@/components/onboarding/AdvancedOnboardingSteps&quot;;
-import { useOnboardingStatus } from &quot;@/hooks/useOnboardingStatus&quot;;
-import { MyApplications } from &quot;@/components/jobs/MyApplications&quot;;
-import { ProjectOfferBanner } from &quot;@/components/projects/ProjectOfferBanner&quot;;
-import { UpcomingInterviewsCard } from &quot;@/components/interviews/UpcomingInterviewsCard&quot;;
-
-function TalentDashboardContent() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState(&quot;job-matches&quot;);
-  const onboardingStatus = useOnboardingStatus();
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  const showAdvanced =
-=======
+  const onboardingStatus = useOnboardingStatus(),  const showAdvanced =
 import Link from "next/link";
 
 function TalentDashboardContent() {_const { user} = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
   const _onboardingStatus = useOnboardingStatus();
   const _showAdvanced =
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     onboardingStatus.profileCompleted &&
     onboardingStatus.skillsAdded &&
     onboardingStatus.availabilitySet &&
@@ -94,7 +64,6 @@ function TalentDashboardContent() {_const { user} = useAuth();
 
         <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-8&quot;>
           <div>
-<<<<<<< HEAD
             <Card className=&quot;mb-8&quot;>
               <CardHeader className=&quot;pb-2&quot;>
                 <div className=&quot;flex items-center justify-between&quot;>
@@ -104,31 +73,12 @@ function TalentDashboardContent() {_const { user} = useAuth();
                         <img src={user.avatarUrl} alt={user.displayName || &quot;User&quot;} loading=&quot;lazy&quot; />
                       ) : (
                         <div className=&quot;flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase&quot;>
-                          {user?.displayName?.charAt(0) || &quot;U&quot;}
-=======
-            <Card className="mb-8">
-              <CardHeader className="pb-2">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <Avatar className="h-12 w-12 border">
-                      {_user?.avatarUrl ? (
-                        <img src={user.avatarUrl} alt={_user.displayName || "User"} loading="lazy" />
-                      ) : (
-                        <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
-                          {_user?.displayName?.charAt(0) || "U"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        </div>
+                          {user?.displayName?.charAt(0) || &quot;U&quot;}                        </div>
                       )}
                     </Avatar>
                     <div>
-<<<<<<< HEAD
                       <CardTitle>{user?.displayName || &quot;User&quot;}</CardTitle>
-                      <CardDescription>{user?.headline || &quot;AI Professional&quot;}</CardDescription>
-=======
-                      <CardTitle>{_user?.displayName || "User"}</CardTitle>
-                      <CardDescription>{_user?.headline || "AI Professional"}</CardDescription>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </div>
+                      <CardDescription>{user?.headline || &quot;AI Professional&quot;}</CardDescription>                    </div>
                   </div>
                   <Badge className=&quot;bg-green-100 text-green-800&quot;>Online</Badge>
                 </div>
@@ -161,25 +111,13 @@ function TalentDashboardContent() {_const { user} = useAuth();
             
             {_/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
-<<<<<<< HEAD
             {showAdvanced && (
-              <div className=&quot;mt-6&quot;>
-=======
-            {_showAdvanced && (
-              <div className="mt-6">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                <AdvancedOnboardingSteps />
+              <div className=&quot;mt-6&quot;>                <AdvancedOnboardingSteps />
               </div>
             )}
             
-<<<<<<< HEAD
             {/* Upcoming Interviews Card */}
-            <div className=&quot;mt-8&quot;>
-=======
-            {_/* Upcoming Interviews Card */}
-            <div className="mt-8">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <UpcomingInterviewsCard />
+            <div className=&quot;mt-8&quot;>              <UpcomingInterviewsCard />
             </div>
             
             <Card className=&quot;mt-8&quot;>
@@ -209,20 +147,11 @@ function TalentDashboardContent() {_const { user} = useAuth();
             </Card>
           </div>
           
-<<<<<<< HEAD
           <div className=&quot;lg:col-span-2&quot;>
             <Tabs defaultValue=&quot;job-matches&quot; onValueChange={setActiveTab}>
               <TabsList className=&quot;mb-6&quot;>
                 <TabsTrigger value=&quot;job-matches&quot; className=&quot;flex items-center&quot;>
-                  <BriefcaseIcon className=&quot;h-4 w-4 mr-2&quot; />
-=======
-          <div className="lg:col-span-2">
-            <Tabs defaultValue="job-matches" onValueChange={_setActiveTab}>
-              <TabsList className="mb-6">
-                <TabsTrigger value="job-matches" className="flex items-center">
-                  <BriefcaseIcon className="h-4 w-4 mr-2" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  AI Job Matches
+                  <BriefcaseIcon className=&quot;h-4 w-4 mr-2&quot; />                  AI Job Matches
                 </TabsTrigger>
                 <TabsTrigger value=&quot;applications&quot;>My Applications</TabsTrigger>
                 <TabsTrigger value=&quot;saved&quot;>Saved Jobs</TabsTrigger>
@@ -267,9 +196,5 @@ export default function TalentDashboard() {_return (
     <ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

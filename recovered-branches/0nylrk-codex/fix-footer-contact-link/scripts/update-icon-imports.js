@@ -6,7 +6,6 @@
  * 2. This will find and replace lucide-react icon imports with imports from our custom icons package
  */
 
-<<<<<<< HEAD
 const fs = require('fs'),
 const path = require('path'),
 const glob = require('glob'),
@@ -18,7 +17,6 @@ function updateIconImportsInFile(filePath) {
     
     // Replace direct lucide imports with our custom icons
     const updatedContent = content.replace(
-<<<<<<< HEAD
       /import\s+{([^}]*)}\s+from\s+['"]lucide-react['"]/g,
       'import {$1} from "@/components/icons"'
     ),
@@ -26,19 +24,7 @@ function updateIconImportsInFile(filePath) {
     if (content !== updatedContent) {
       fs.writeFileSync(filePath, updatedContent, 'utf8'),
       // // // console.log(`✅ Updated imports in ${filePath}`),
-      return true
-=======
-      /import\s+{([^}]*)}\s+from\s+['&quot;]lucide-react['&quot;]/g,
-      'import {$1} from &quot;@/components/icons&quot;'
-    );
-    
-    // Only write if changes were made
-    if (content !== updatedContent) {
-      fs.writeFileSync(filePath, updatedContent, 'utf8');
-      // console.log(`✅ Updated imports in ${filePath}`);
-      return true;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
+      return true    }
     
     return false
   } catch (err) {
@@ -56,15 +42,8 @@ files.forEach(file => {
   if (updated) updatedFiles++
 }),
 
-<<<<<<< HEAD
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
-// // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
-=======
-// console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`);
-// console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-const _fs = require('fs');
+// // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),const _fs = require('fs');
 const _path = require('path');
 const _glob = require('glob');
 
@@ -94,6 +73,3 @@ let _updatedFiles = 0;
 files.forEach(file => {_const _updated = updateIconImportsInFile(file);
   if (updated) updatedFiles++;});
 
-
-
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

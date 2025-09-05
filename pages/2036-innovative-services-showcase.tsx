@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import Layout from '../components/layout/Layout',
@@ -24,7 +23,6 @@ const categories = [
 ],
 
 const categoryIcons: { [key: string]: React.ReactNode } = {
-<<<<<<< HEAD
   'AI & Data': <Brain className="w-5 h-5" />,
   'Quantum Technology': <Atom className="w-5 h-5" />,
   'Space Technology': <Rocket className="w-5 h-5" />,
@@ -41,25 +39,6 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
   'Autonomous Systems': <Rocket className="w-5 h-5" />,
   'Climate Technology': <Globe className="w-5 h-5" />
 },
-=======
-  'AI & Data': <Brain className=&quot;w-5 h-5&quot; />,
-  'Quantum Technology': <Atom className=&quot;w-5 h-5&quot; />,
-  'Space Technology': <Rocket className=&quot;w-5 h-5&quot; />,
-  'IT Infrastructure': <Cpu className=&quot;w-5 h-5&quot; />,
-  'Cybersecurity': <Shield className=&quot;w-5 h-5&quot; />,
-  'Edge Computing': <Zap className=&quot;w-5 h-5&quot; />,
-  'Blockchain': <Globe className=&quot;w-5 h-5&quot; />,
-  'Manufacturing': <Building className=&quot;w-5 h-5&quot; />,
-  'Healthcare AI': <Eye className=&quot;w-5 h-5&quot; />,
-  'Emerging Technology': <Lightbulb className=&quot;w-5 h-5&quot; />,
-  'Biotechnology': <Target className=&quot;w-5 h-5&quot; />,
-  'Human-Computer Interaction': <Users className=&quot;w-5 h-5&quot; />,
-  'Metaverse': <Globe className=&quot;w-5 h-5&quot; />,
-  'Autonomous Systems': <Rocket className=&quot;w-5 h-5&quot; />,
-  'Climate Technology': <Globe className=&quot;w-5 h-5&quot; />
-};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 export default function InnovativeServicesShowcase2036() {
   const [selectedCategory, setSelectedCategory] = useState('All Services'),
   const [searchTerm, setSearchTerm] = useState(''),
@@ -75,15 +54,14 @@ export default function InnovativeServicesShowcase2036() {
                          service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
     return matchesCategory && matchesSearch
   }),
-=======
-import React, {_useState} from 'react';
+import React, {useState} from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
-import {_Brain, _Rocket, _Shield, _Zap, _Target, _Atom, _Globe, _Cpu, _Lock, _Cloud, _Settings, _Eye, _Award, _Clock, _Star, _TrendingUp, _Users, _Building, _Lightbulb, _ArrowRight, _Filter, _Search, _Grid, _List, _Phone, _Mail, _MapPin} from 'lucide-react';
+import {Brain, Rocket, Shield, Zap, Target, Atom, Globe, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Star, TrendingUp, Users, Building, Lightbulb, ArrowRight, Filter, Search, Grid, List, Phone, Mail, MapPin} from 'lucide-react';
 
-const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
+const contactInfo = {mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', website: 'https://ziontechgroup.com'};
 
-const _categories = [
+const categories = [
   'All Services',
   'AI & Data',
   'Quantum Technology',
@@ -104,151 +82,94 @@ const _categories = [
 
 const categoryIcons: {_[key: string]: React.ReactNode} = {_'AI & Data': <Brain className="w-5 h-5" />, _'Quantum Technology': <Atom className="w-5 h-5" />, _'Space Technology': <Rocket className="w-5 h-5" />, _'IT Infrastructure': <Cpu className="w-5 h-5" />, _'Cybersecurity': <Shield className="w-5 h-5" />, _'Edge Computing': <Zap className="w-5 h-5" />, _'Blockchain': <Globe className="w-5 h-5" />, _'Manufacturing': <Building className="w-5 h-5" />, _'Healthcare AI': <Eye className="w-5 h-5" />, _'Emerging Technology': <Lightbulb className="w-5 h-5" />, _'Biotechnology': <Target className="w-5 h-5" />, _'Human-Computer Interaction': <Users className="w-5 h-5" />, _'Metaverse': <Globe className="w-5 h-5" />, _'Autonomous Systems': <Rocket className="w-5 h-5" />, _'Climate Technology': <Globe className="w-5 h-5" />};
 
-export default function InnovativeServicesShowcase2036() {_const [selectedCategory, _setSelectedCategory] = useState('All Services');
-  const [searchTerm, _setSearchTerm] = useState('');
-  const [viewMode, _setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, _setSortBy] = useState<'name' | 'price' | 'rating' | 'marketSize'>('name');
+export default function InnovativeServicesShowcase2036() {const [selectedCategory, setSelectedCategory] = useState('All Services');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'marketSize'>('name');
 
-  const _allServices = [...real2036InnovativeServices, _...real2036SpecializedServices];
+  const allServices = [...real2036InnovativeServices, _...real2036SpecializedServices];
 
-  const _filteredServices = allServices.filter(service => {
-    const _matchesCategory = selectedCategory === 'All Services' || service.category === selectedCategory;
-    const _matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'All Services' || service.category === selectedCategory;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+    return matchesCategory && matchesSearch});
 
-  const _sortedServices = [...filteredServices].sort(_(a, _b) => {_switch (sortBy) {
+  const sortedServices = [...filteredServices].sort(_(a, b) => {switch (sortBy) {
       case 'price':
-<<<<<<< HEAD
-        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
-=======
-        return parseFloat(a.price.replace('$', _'').replace(', _', _'')) - parseFloat(b.price.replace('$', _'').replace(', _', _''));
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      case 'rating':
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),      case 'rating':
         return (b.rating || 0) - (a.rating || 0),
       case 'marketSize':
-<<<<<<< HEAD
         return parseFloat(b.marketSize?.replace('$', '').replace('B', '') || '0') - parseFloat(a.marketSize?.replace('$', '').replace('B', '') || '0'),
       default: return a.name.localeCompare(b.name)
     }
   }),
-=======
-        return parseFloat(b.marketSize?.replace('$', _'').replace('B', _'') || '0') - parseFloat(a.marketSize?.replace('$', _'').replace('B', _'') || '0');
-      default:
-        return a.name.localeCompare(b.name);}
-  });
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-  const _containerVariants = {_hidden: { opacity: 0},
-    visible: {_opacity: 1, _transition: {
+  const containerVariants = {hidden: { opacity: 0},
+    visible: {opacity: 1, transition: {
         staggerChildren: 0.1}
     }
   },
 
-  const _itemVariants = {_hidden: { y: 20, _opacity: 0},
-    visible: {_y: 0, _opacity: 1, _transition: {
+  const itemVariants = {hidden: { y: 20, opacity: 0},
+    visible: {y: 0, opacity: 1, transition: {
         duration: 0.5}
     }
   },
 
   return (
     <Layout>
-      <SEO 
-        title=&quot;2036 Innovative Services Showcase | Zion Tech Group&quot;
+      <SEO,
+title=&quot;2036 Innovative Services Showcase | Zion Tech Group&quot;
         description=&quot;Discover our cutting-edge 2036 innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with next-generation technology.&quot;
         keywords=&quot;2036 services, innovative micro SAAS, AI platforms, quantum technology, space technology, IT solutions, Zion Tech Group&quot;
       />
       
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className=&quot;relative min-h-screen flex items-center justify-center px-4 overflow-hidden&quot;>
         {/* Animated Background */}
         <div className=&quot;absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-cyan-900/20&quot;>
-          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]&quot; />
-          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]&quot; />
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circleat_50%50%,rgba(120,119,198,0.1),transparent50%)]&quot; />
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circleat_80%20%,rgba(120,119,198,0.1),transparent50%)]&quot; />
         </div>
         
         {/* Floating Elements */}
         <div className=&quot;absolute inset-0 overflow-hidden&quot;>
           {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
+            <motion.div,
+key={i}
               className=&quot;absolute w-2 h-2 bg-cyan-400/30 rounded-full&quot;
-              style={{
-=======
-      {_/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
-        {_/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-cyan-900/20">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
-        </div>
-        
-        {_/* Floating Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          {_[...Array(20)].map(_(_, _i) => (
-            <motion.div
-              key={i}
-              className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
-              style={_{
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                left: `${Math.random() * 100}%`,
-                top: `${_Math.random() * 100}%`}}
+              style={{                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`}}
               animate={_{
-                y: [0, _-100, _0], _opacity: [0.3, _1, _0.3]}}
+                y: [0, _-100, 0], opacity: [0.3, 1, 0.3]}}
               transition={_{
-                duration: 3 + Math.random() * 2, _repeat: Infinity, _delay: Math.random() * 2}}
+                duration: 3 + Math.random() * 2, repeat: Infinity, delay: Math.random() * 2}}
             />
           ))}
         </div>
 
         <div className=&quot;relative z-10 text-center max-w-6xl mx-auto&quot;>
-          <motion.h1 
-<<<<<<< HEAD
-            className=&quot;text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent&quot;
+          <motion.h1,
+className=&quot;text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent&quot;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-=======
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-            initial={_{ opacity: 0, _y: 30}}
-            animate={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            transition={{ duration: 0.8 }}          >
             2036 Innovative Services
           </motion.h1>
-          <motion.p 
-<<<<<<< HEAD
-            className=&quot;text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;
+          <motion.p,
+className=&quot;text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-=======
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
-            initial={_{ opacity: 0, _y: 20}}
-            animate={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8, _delay: 0.2}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            transition={{ duration: 0.8, delay: 0.2 }}          >
             Experience the future of technology with our cutting-edge micro SAAS services,
             AI platforms, and quantum solutions. Transform your business with next-generation innovation.
           </motion.p>
-          <motion.div 
-<<<<<<< HEAD
-            className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;
+          <motion.div,
+className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-=======
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={_{ opacity: 0, _y: 20}}
-            animate={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8, _delay: 0.4}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            transition={{ duration: 0.8, delay: 0.4 }}          >
             <button className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25&quot;>
               Explore Services
             </button>
@@ -259,12 +180,11 @@ export default function InnovativeServicesShowcase2036() {_const [selectedCatego
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Contact Information */}
       <section className=&quot;py-12 px-4 bg-gradient-to-r from-gray-900 to-gray-800&quot;>
         <div className=&quot;max-w-6xl mx-auto&quot;>
-          <motion.div 
-            className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;
+          <motion.div,
+className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -283,62 +203,21 @@ export default function InnovativeServicesShowcase2036() {_const [selectedCatego
             <div className=&quot;text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300&quot;>
               <MapPin className=&quot;w-8 h-8 mx-auto mb-4 text-cyan-400&quot; />
               <h3 className=&quot;text-lg font-semibold mb-2&quot;>Address</h3>
-              <p className=&quot;text-gray-300&quot;>{contactInfo.address}</p>
-=======
-      {_/* Contact Information */}
-      <section className="py-12 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
-        <div className="max-w-6xl mx-auto">
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.6}}
-            viewport={_{ once: true}}
-          >
-            <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
-              <Phone className="w-8 h-8 mx-auto mb-4 text-cyan-400" />
-              <h3 className="text-lg font-semibold mb-2">Phone</h3>
-              <p className="text-gray-300">{_contactInfo.mobile}</p>
-            </div>
-            <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
-              <Mail className="w-8 h-8 mx-auto mb-4 text-cyan-400" />
-              <h3 className="text-lg font-semibold mb-2">Email</h3>
-              <p className="text-gray-300">{_contactInfo.email}</p>
-            </div>
-            <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
-              <MapPin className="w-8 h-8 mx-auto mb-4 text-cyan-400" />
-              <h3 className="text-lg font-semibold mb-2">Address</h3>
-              <p className="text-gray-300">{_contactInfo.address}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </div>
+              <p className=&quot;text-gray-300&quot;>{contactInfo.address}</p>            </div>
           </motion.div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Services Section */}
       <section className=&quot;py-20 px-4&quot;>
         <div className=&quot;max-w-7xl mx-auto&quot;>
           {/* Section Header */}
-          <motion.div 
-            className=&quot;text-center mb-16&quot;
+          <motion.div,
+className=&quot;text-center mb-16&quot;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-=======
-      {_/* Services Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          {_/* Section Header */}
-          <motion.div 
-            className="text-center mb-16"
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.6}}
-            viewport={_{ once: true}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            viewport={{ once: true }}          >
             <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
               Revolutionary Services
             </h2>
@@ -349,9 +228,8 @@ export default function InnovativeServicesShowcase2036() {_const [selectedCatego
           </motion.div>
 
           {_/* Filters and Controls */}
-          <motion.div 
-<<<<<<< HEAD
-            className=&quot;mb-12 space-y-6&quot;
+          <motion.div,
+className=&quot;mb-12 space-y-6&quot;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -361,45 +239,19 @@ export default function InnovativeServicesShowcase2036() {_const [selectedCatego
             <div className=&quot;flex flex-col lg:flex-row gap-4 justify-between items-center&quot;>
               <div className=&quot;relative flex-1 max-w-md&quot;>
                 <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot; />
-                <input
-                  type=&quot;text&quot;
+                <input,
+type=&quot;text&quot;
                   placeholder=&quot;Search services...&quot;
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className=&quot;w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300&quot;
-=======
-            className="mb-12 space-y-6"
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.6}}
-            viewport={_{ once: true}}
-          >
-            {_/* Search and View Controls */}
-            <div className="flex flex-col lg:flex-row gap-4 justify-between items-center">
-              <div className="relative flex-1 max-w-md">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={_searchTerm}
-                  onChange={_(_e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                />
+                  className=&quot;w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300&quot;                />
               </div>
               
               <div className=&quot;flex gap-4 items-center&quot;>
-                <select
-<<<<<<< HEAD
-                  value={sortBy}
+                <select,
+value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
-                  className=&quot;px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300&quot;
-=======
-                  value={_sortBy}
-                  onChange={_(_e) => setSortBy(e.target.value as any)}
-                  className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                >
+                  className=&quot;px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300&quot;                >
                   <option value=&quot;name&quot;>Sort by Name</option>
                   <option value=&quot;price&quot;>Sort by Price</option>
                   <option value=&quot;rating&quot;>Sort by Rating</option>
@@ -407,14 +259,14 @@ export default function InnovativeServicesShowcase2036() {_const [selectedCatego
                 </select>
                 
                 <div className=&quot;flex bg-gray-800/50 border border-gray-700 rounded-lg p-1&quot;>
-                  <button
-                    onClick={_() => setViewMode('grid')}
+                  <button,
+onClick={_() => setViewMode('grid')}
                     className={_`p-2 rounded ${viewMode === 'grid' ? 'bg-cyan-500 text-black' : 'text-gray-400 hover:text-white'}`}
                   >
                     <Grid className=&quot;w-5 h-5&quot; />
                   </button>
-                  <button
-                    onClick={_() => setViewMode('list')}
+                  <button,
+onClick={_() => setViewMode('list')}
                     className={_`p-2 rounded ${viewMode === 'list' ? 'bg-cyan-500 text-black' : 'text-gray-400 hover:text-white'}`}
                   >
                     <List className=&quot;w-5 h-5&quot; />
@@ -423,74 +275,43 @@ export default function InnovativeServicesShowcase2036() {_const [selectedCatego
               </div>
             </div>
 
-<<<<<<< HEAD
             {/* Category Filters */}
             <div className=&quot;flex flex-wrap gap-3 justify-center&quot;>
               {categories.map((category) => (
-                <button
-=======
-            {_/* Category Filters */}
-            <div className="flex flex-wrap gap-3 justify-center">
-              {_categories.map(_(category) => (_<button
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  key={category}
+                <button                  key={category}
                   onClick={_() => setSelectedCategory(category)}
                   className={_`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 ${
                     selectedCategory === category
                       ? 'bg-cyan-500 text-black border-cyan-500'
                       : 'bg-gray-800/50 text-gray-300 border-gray-700 hover:border-cyan-400 hover:text-cyan-400'}`}
                 >
-<<<<<<< HEAD
                   {categoryIcons[category] || <Star className=&quot;w-4 h-4&quot; />}
-                  {category}
-=======
-                  {_categoryIcons[category] || <Star className="w-4 h-4" />}
-                  {_category}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </button>
+                  {category}                </button>
               ))}
             </div>
           </motion.div>
 
           {_/* Services Grid */}
-          <motion.div
-<<<<<<< HEAD
-            variants={containerVariants}
+          <motion.div,
+variants={containerVariants}
             initial=&quot;hidden&quot;
             whileInView=&quot;visible&quot;
             viewport={{ once: true }}
-            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
-=======
-            variants={_containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={_{ once: true}}
-            className={_viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
-            {_sortedServices.map(_(service, _index) => (
-              <motion.div
-                key={service.id}
-                variants={_itemVariants}
+            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}          >
+            {sortedServices.map(_(service, index) => (
+              <motion.div,
+key={service.id}
+                variants={itemVariants}
                 className={_`bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
                   viewMode === 'list' ? 'flex gap-6' : ''}`}
               >
-<<<<<<< HEAD
                 {viewMode === 'list' && (
                   <div className=&quot;flex-shrink-0&quot;>
                     <div className=&quot;w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center text-2xl&quot;>
-                      {categoryIcons[service.category] || <Star className=&quot;w-8 h-8&quot; />}
-=======
-                {_viewMode === 'list' && (
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center text-2xl">
-                      {categoryIcons[service.category] || <Star className="w-8 h-8" />}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </div>
+                      {categoryIcons[service.category] || <Star className=&quot;w-8 h-8&quot; />}                    </div>
                   </div>
                 )}
                 
-<<<<<<< HEAD
                 <div className=&quot;flex-1&quot;>
                   {/* Service Header */}
                   <div className=&quot;mb-4&quot;>
@@ -515,55 +336,18 @@ export default function InnovativeServicesShowcase2036() {_const [selectedCatego
                       {service.rating && (
                         <div className=&quot;flex items-center gap-1&quot;>
                           <Star className=&quot;w-4 h-4 text-yellow-400 fill-current&quot; />
-                          <span className=&quot;text-sm text-gray-300&quot;>{service.rating}</span>
-=======
-                <div className="flex-1">
-                  {_/* Service Header */}
-                  <div className="mb-4">
-                    <div className="flex items-start justify-between mb-2">
-                      <h3 className="text-xl font-bold text-white mb-2">{_service.name}</h3>
-                      <div className="flex items-center gap-2">
-                        <span className="text-cyan-400 font-semibold">{_service.price}</span>
-                        {_service.period && <span className="text-gray-400 text-sm">{service.period}</span>}
-                      </div>
-                    </div>
-                    <p className="text-cyan-400 font-medium mb-2">{_service.tagline}</p>
-                    <p className="text-gray-300 text-sm leading-relaxed">{_service.description}</p>
-                  </div>
-
-                  {_/* Service Details */}
-                  <div className="space-y-4">
-                    {_/* Category and Rating */}
-                    <div className="flex items-center justify-between">
-                      <span className="px-3 py-1 bg-gray-800 text-cyan-400 text-sm rounded-full border border-gray-700">
-                        {_service.category}
-                      </span>
-                      {_service.rating && (
-                        <div className="flex items-center gap-1">
-                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                          <span className="text-sm text-gray-300">{service.rating}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        </div>
+                          <span className=&quot;text-sm text-gray-300&quot;>{service.rating}</span>                        </div>
                       )}
                     </div>
 
-<<<<<<< HEAD
                     {/* Market Size */}
                     {service.marketSize && (
                       <div className=&quot;text-sm text-gray-400&quot;>
-                        Market Size: <span className=&quot;text-green-400 font-medium&quot;>{service.marketSize}</span>
-=======
-                    {_/* Market Size */}
-                    {_service.marketSize && (
-                      <div className="text-sm text-gray-400">
-                        Market Size: <span className="text-green-400 font-medium">{service.marketSize}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      </div>
+                        Market Size: <span className=&quot;text-green-400 font-medium&quot;>{service.marketSize}</span>                      </div>
                     )}
 
                     {_/* Features */}
                     <div>
-<<<<<<< HEAD
                       <h4 className=&quot;text-sm font-semibold text-gray-300 mb-2&quot;>Key Features:</h4>
                       <div className=&quot;grid grid-cols-1 gap-1&quot;>
                         {service.features.slice(0, 4).map((feature, idx) => (
@@ -573,27 +357,14 @@ export default function InnovativeServicesShowcase2036() {_const [selectedCatego
                           </div>
                         ))}
                         {service.features.length > 4 && (
-                          <div className=&quot;text-xs text-gray-500 mt-1&quot;>
-=======
-                      <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
-                      <div className="grid grid-cols-1 gap-1">
-                        {_service.features.slice(0, _4).map(_(feature, _idx) => (
-                          <div key={idx} className="flex items-center gap-2 text-sm text-gray-400">
-                            <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
-                            {_feature}
-                          </div>
-                        ))}
-                        {_service.features.length > 4 && (
-                          <div className="text-xs text-gray-500 mt-1">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                            +{service.features.length - 4} more features
+                          <div className=&quot;text-xs text-gray-500 mt-1&quot;>                            +{service.features.length - 4} more features
                           </div>
                         )}
                       </div>
                     </div>
 
                     {_/* Target Audience */}
-                    {_service.targetAudience && (
+                    {service.targetAudience && (
                       <div>
                         <h4 className=&quot;text-sm font-semibold text-gray-300 mb-2&quot;>Target Audience:</h4>
                         <p className=&quot;text-sm text-gray-400&quot;>{service.targetAudience}</p>
@@ -601,27 +372,18 @@ export default function InnovativeServicesShowcase2036() {_const [selectedCatego
                     )}
 
                     {_/* Competitive Advantage */}
-                    {_service.competitiveAdvantage && (
+                    {service.competitiveAdvantage && (
                       <div>
                         <h4 className=&quot;text-sm font-semibold text-gray-300 mb-2&quot;>Competitive Advantage:</h4>
                         <p className=&quot;text-sm text-gray-400&quot;>{service.competitiveAdvantage}</p>
                       </div>
                     )}
 
-<<<<<<< HEAD
                     {/* CTA Button */}
                     <div className=&quot;mt-6&quot;>
-                      <a
-                        href={service.link}
-                        className=&quot;inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25&quot;
-=======
-                    {_/* CTA Button */}
-                    <div className="mt-6">
-                      <a
-                        href={_service.link}
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      >
+                      <a,
+href={service.link}
+                        className=&quot;inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25&quot;                      >
                         Learn More
                         <ArrowRight className=&quot;w-4 h-4&quot; />
                       </Link>
@@ -633,38 +395,22 @@ export default function InnovativeServicesShowcase2036() {_const [selectedCatego
           </motion.div>
 
           {_/* Results Summary */}
-          <motion.div 
-<<<<<<< HEAD
-            className=&quot;mt-12 text-center text-gray-400&quot;
+          <motion.div,
+className=&quot;mt-12 text-center text-gray-400&quot;
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-=======
-            className="mt-12 text-center text-gray-400"
-            initial={_{ opacity: 0}}
-            whileInView={_{ opacity: 1}}
-            transition={_{ duration: 0.6}}
-            viewport={_{ once: true}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
-            Showing {_sortedServices.length} of {_allServices.length} services
+            viewport={{ once: true }}          >
+            Showing {sortedServices.length} of {allServices.length} services
           </motion.div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Call to Action */}
       <section className=&quot;py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800&quot;>
-        <div className=&quot;max-w-4xl mx-auto text-center&quot;>
-=======
-      {_/* Call to Action */}
-      <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
-        <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          <motion.div
-            initial={_{ opacity: 0, _y: 20}}
-            whileInView={_{ opacity: 1, _y: 0}}
+        <div className=&quot;max-w-4xl mx-auto text-center&quot;>          <motion.div,
+initial={_{ opacity: 0, y: 20}}
+            whileInView={_{ opacity: 1, y: 0}}
             transition={_{ duration: 0.6}}
             viewport={_{ once: true}}
           >
@@ -676,29 +422,15 @@ export default function InnovativeServicesShowcase2036() {_const [selectedCatego
               Contact us today to discuss how we can help you achieve your goals.
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
-              <a
-<<<<<<< HEAD
-                href={`mailto:${contactInfo.email}`}
-                className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25&quot;
-=======
-                href={_`mailto:${contactInfo.email}`}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+              <a,
+href={`mailto:${contactInfo.email}`}
+                className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25&quot;              >
                 Get Started Today
               </Link>
-              <a
-<<<<<<< HEAD
-                href={`tel:${contactInfo.mobile}`}
-<<<<<<< HEAD
-                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-=======
-                className=&quot;px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-                href={_`tel:${contactInfo.mobile}`}
+              <a,
+href={`tel:${contactInfo.mobile}`}
+                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"                href={_`tel:${contactInfo.mobile}`}
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               >
                 Call Us Now
               </Link>

@@ -1,16 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
-import { Check } from "lucide-react",
-=======
-import React from &quot;react&quot;;
-import { Card, CardContent } from &quot;@/components/ui/card&quot;;
-import { Check } from &quot;lucide-react&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export function FeatureHighlights() {
+import { Check } from "lucide-react",export function FeatureHighlights() {
   const highlightsData = [
     {
       title: &quot;For Talent Seekers&quot;,
@@ -67,7 +58,6 @@ export function FeatureHighlights() {
                     <li key={idx} className=&quot;flex items-start&quot;>
                       <Check className=&quot;h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0&quot; />
                       <span className=&quot;text-zion-slate-light&quot;>{feature}</span>
-=======
 import React from "react";
 
 export function FeatureHighlights() {_const _highlightsData = [
@@ -101,7 +91,6 @@ export function FeatureHighlights() {_const _highlightsData = [
                     <li key={idx} className="flex items-start">
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-zion-slate-light">{_feature}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </li>
                   ))}
                 </ul>

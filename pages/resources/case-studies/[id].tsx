@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -6,15 +5,6 @@ import { useRouter } from 'next/router',
 export default function CaseStudyResourcePage() {
   const router = useRouter(),
   const { id } = router.query,
-=======
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
-export default function CaseStudyResourcePage() {_const _router = useRouter();
-  const { id} = router.query;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   // Case studies data - this should match the data in resources.tsx
   const _caseStudies = [
     {_id: 'ai-automation-manufacturing', _title: 'AI-Powered Manufacturing Automation', _company: 'Global Manufacturing Corp', _industry: 'Manufacturing', _results: '40% increase in production efficiency, _60% reduction in downtime', _description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.', _fullContent: `
@@ -182,19 +172,11 @@ export default function CaseStudyResourcePage() {_const _router = useRouter();
         <p>The cloud infrastructure optimization project transformed the platform's performance and cost structure. 
         The self-healing, _auto-scaling infrastructure now supports continued business growth while maintaining 
         optimal performance and cost efficiency.</p>
-<<<<<<< HEAD
       `
     }
   ],
 
   const caseStudy = caseStudies.find(study => study.id === id),
-=======
-      `}
-  ];
-
-  const _caseStudy = caseStudies.find(study => study.id === id);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   if (!caseStudy) {_return (
       <>
         <Head>
@@ -208,42 +190,23 @@ export default function CaseStudyResourcePage() {_const _router = useRouter();
                 The case study resource you're looking for doesn't exist.
               </p>
               <Link 
-<<<<<<< HEAD
                 href="/resources"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
-                href=&quot;/resources&quot;
-                className=&quot;inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-              >
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"              >
                 ← Back to Resources
               </Link>
             </div>
           </main>
         </div>
       </>
-<<<<<<< HEAD
     )
   }
-=======
-    );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (
     <>
       <Head>
-<<<<<<< HEAD
         <title>{caseStudy.title} | Zion Tech Group - Case Study Resource</title>
         <meta name=&quot;description&quot; content={caseStudy.description} />
         <meta property=&quot;og:title&quot; content={`${caseStudy.title} | Zion Tech Group`} />
-        <meta property=&quot;og:description&quot; content={caseStudy.description} />
-=======
-        <title>{_caseStudy.title} | Zion Tech Group - Case Study Resource</title>
-        <meta name="description" content={_caseStudy.description} />
-        <meta property="og:title" content={_`${caseStudy.title} | Zion Tech Group`} />
-        <meta property="og:description" content={_caseStudy.description} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      </Head>
+        <meta property=&quot;og:description&quot; content={caseStudy.description} />      </Head>
       
       <div className=&quot;min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white&quot;>
         <main className=&quot;container mx-auto px-6 py-12&quot;>
@@ -254,7 +217,6 @@ export default function CaseStudyResourcePage() {_const _router = useRouter();
               </Link>
             </nav>
             
-<<<<<<< HEAD
             <header className=&quot;mb-12&quot;>
               <div className=&quot;mb-6&quot;>
                 <span className=&quot;px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30&quot;>
@@ -268,47 +230,18 @@ export default function CaseStudyResourcePage() {_const _router = useRouter();
             
             <div className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 mb-8&quot;>
               <h2 className=&quot;text-2xl font-bold mb-4 text-white&quot;>Key Results</h2>
-              <p className=&quot;text-green-400 font-semibold text-lg&quot;>{caseStudy.results}</p>
-=======
-            <header className="mb-12">
-              <div className="mb-6">
-                <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-                  {_caseStudy.industry}
-                </span>
-              </div>
-              <h1 className="text-4xl font-bold mb-4 text-white">{_caseStudy.title}</h1>
-              <p className="text-xl text-cyan-400 font-semibold mb-2">{_caseStudy.company}</p>
-              <p className="text-white/80 text-lg">{_caseStudy.description}</p>
-            </header>
-            
-            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 mb-8">
-              <h2 className="text-2xl font-bold mb-4 text-white">Key Results</h2>
-              <p className="text-green-400 font-semibold text-lg">{_caseStudy.results}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </div>
+              <p className=&quot;text-green-400 font-semibold text-lg&quot;>{caseStudy.results}</p>            </div>
             
             <div className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12&quot;>
               <div 
-<<<<<<< HEAD
                 className=&quot;prose prose-invert max-w-none&quot;
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
-=======
-                className="prose prose-invert max-w-none"
-                dangerouslySetInnerHTML={_{ __html: caseStudy.fullContent}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              />
+                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}              />
             </div>
             
             <div className=&quot;text-center&quot;>
               <Link 
-<<<<<<< HEAD
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
-=======
-                href=&quot;/contact&quot;
-                className=&quot;inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-              >
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"              >
                 Get Started with Your Project
               </Link>
             </div>

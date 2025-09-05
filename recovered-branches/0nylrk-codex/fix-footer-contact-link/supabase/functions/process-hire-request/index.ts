@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",
@@ -8,16 +6,6 @@ import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
-=======
-import { serve } from &quot;https://deno.land/std@0.190.0/http/server.ts&quot;;
-import { createClient } from &quot;https://esm.sh/@supabase/supabase-js@2&quot;;
-import { Configuration, OpenAIApi } from &quot;https://esm.sh/openai@3.2.1&quot;;
-
-const corsHeaders = {
-  &quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;,
-  &quot;Access-Control-Allow-Headers&quot;: &quot;authorization, x-client-info, apikey, content-type&quot;};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 interface HireRequest {
   talent: {
     id: string,
@@ -45,80 +33,24 @@ interface EnhancedContent {
 
 serve(async (req) => {
   // Handle CORS preflight requests
-<<<<<<< HEAD
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-=======
-  if (req.method === &quot;OPTIONS&quot;) {
-    return new Response(null, { headers: corsHeaders });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  }
+    return new Response(null, { headers: corsHeaders })  }
   
   try {
     const supabase = createClient(
-<<<<<<< HEAD
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
-    ),
-=======
-      Deno.env.get(&quot;SUPABASE_URL&quot;) ?? "&quot;,
-      Deno.env.get(&quot;SUPABASE_SERVICE_ROLE_KEY&quot;) ?? "&quot;
-=======
-
-const _corsHeaders = {_"Access-Control-Allow-Origin": "*", _"Access-Control-Allow-Headers": "authorization, _x-client-info, _apikey, _content-type"};
-
-interface HireRequest {_talent: {
-    id: string;
-    full_name: string;
-    professional_title: string;
-    email?: string;};
-  requester: {_name: string;
-    email: string;
-    id?: string;};
-  project: {_overview: string;
-    timeline: string;
-    budgetMin: number;
-    budgetMax: number;};
-}
-
-interface EnhancedContent {_summary: string;
-  projectType: string;}
-
-serve(_async (req) => {_// Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
-    return new Response(null, _{ headers: corsHeaders});
-  }
-  
-  try {_const _supabase = createClient(
-      Deno.env.get("SUPABASE_URL") ?? "", _Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    );
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+    ),    );
     
-<<<<<<< HEAD
     const requestData: HireRequest = await req.json(),
     const { talent, requester, project } = requestData,
     
     // Format budget for display
-    const budgetDisplay = `$${project.budgetMin.toLocaleString()} - $${project.budgetMax.toLocaleString()}`,
-=======
-    const requestData: HireRequest = await req.json();
-    const { talent, _requester, _project} = requestData;
-    
-    // Format budget for display
-    const _budgetDisplay = `$${_project.budgetMin.toLocaleString()} - $${_project.budgetMax.toLocaleString()}`;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    
+    const budgetDisplay = `$${project.budgetMin.toLocaleString()} - $${project.budgetMax.toLocaleString()}`,    
     // 1. Optional: Enhance content with AI
     let enhancedContent: EnhancedContent | null = null,
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const openAiKey = Deno.env.get("OPENAI_API_KEY"),
-=======
-    const openAiKey = Deno.env.get(&quot;OPENAI_API_KEY&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    if (openAiKey) {
+    const openAiKey = Deno.env.get("OPENAI_API_KEY"),    if (openAiKey) {
       try {
         const configuration = new Configuration({
           apiKey: openAiKey}),
@@ -126,7 +58,6 @@ serve(_async (req) => {_// Handle CORS preflight requests
         
         const prompt = `
           Project Overview: &quot;${project.overview}&quot;
-=======
     const _openAiKey = Deno.env.get("OPENAI_API_KEY");
     if (openAiKey) {_try {
         const _configuration = new Configuration({
@@ -135,14 +66,12 @@ serve(_async (req) => {_// Handle CORS preflight requests
         
         const _prompt = `
           Project Overview: "${_project.overview}"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           
           Please provide:
           1. A brief summary of this project (max 100 characters)
           2. Classify this project into one category (e.g., &quot;AI Development&quot;, &quot;Cloud Migration&quot;, &quot;Web Design&quot;, etc.)
           
           Format your response as JSON:
-<<<<<<< HEAD
           {
             &quot;summary&quot;: &quot;Brief summary here&quot;,
             &quot;projectType&quot;: &quot;Project type here&quot;
@@ -155,17 +84,11 @@ serve(_async (req) => {_// Handle CORS preflight requests
           max_tokens: 150,
           temperature: 0.3}),
         
-<<<<<<< HEAD
-        const responseText = completion.data.choices[0]?.text || "",
-=======
-        const responseText = completion.data.choices[0]?.text || "&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-        
+        const responseText = completion.data.choices[0]?.text || "",        
         try {
           // Extract JSON from the response
           const jsonMatch = responseText.match(/\{[\s\S]*\}/),
           if (jsonMatch) {
-<<<<<<< HEAD
             enhancedContent = JSON.parse(jsonMatch[0]),
             // // // console.log("Enhanced content generated:", enhancedContent)
           }
@@ -174,21 +97,8 @@ serve(_async (req) => {_// Handle CORS preflight requests
           // Continue without enhanced content
         }
       } catch (aiError) {
-        console.error("Error generating enhanced content:", aiError),
-=======
-            enhancedContent = JSON.parse(jsonMatch[0]);
-            // console.log(&quot;Enhanced content generated:&quot;, enhancedContent);
-          }
-        } catch (jsonError) {
-          console.error(&quot;Error parsing AI response:&quot;, jsonError);
-          // Continue without enhanced content
-        }
-      } catch (aiError) {
-        console.error(&quot;Error generating enhanced content:&quot;, aiError);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-        // Continue without enhanced content
+        console.error("Error generating enhanced content:", aiError),        // Continue without enhanced content
       }
-=======
           {_"summary": "Brief summary here", _"projectType": "Project type here"}
         `;
         
@@ -201,7 +111,6 @@ serve(_async (req) => {_// Handle CORS preflight requests
           if (jsonMatch) {_enhancedContent = JSON.parse(jsonMatch[0]);}
         } catch (jsonError) {_// Continue without enhanced content}
       } catch (aiError) {_// Continue without enhanced content}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
     
     // 2. Store the request in the database
@@ -213,13 +122,8 @@ serve(_async (req) => {_// Handle CORS preflight requests
       ])
       .select(),
       
-<<<<<<< HEAD
     if (requestError) {
-      throw new Error(`Error storing hire request: ${requestError.message}`)
-=======
-    if (requestError) {_throw new Error(`Error storing hire request: ${requestError.message}`);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    }
+      throw new Error(`Error storing hire request: ${requestError.message}`)    }
     
     // 3. Create notification for the admin
     // Fetch admin users
@@ -229,41 +133,21 @@ serve(_async (req) => {_// Handle CORS preflight requests
       .eq('user_typeadmin')
       .limit(1),
       
-<<<<<<< HEAD
     if (adminError) {
-<<<<<<< HEAD
-      console.error("Error fetching admin users:", adminError)
-=======
-      console.error(&quot;Error fetching admin users:&quot;, adminError);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
-=======
+      console.error("Error fetching admin users:", adminError)    }
     if (adminError) {}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     let adminId: string | undefined = undefined,
     
     // Create notification for admin (if any found)
-<<<<<<< HEAD
     if (adminUsers && adminUsers.length > 0) {
-      adminId = adminUsers[0].id,
-=======
-    if (adminUsers && adminUsers.length > 0) {_adminId = adminUsers[0].id;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      
+      adminId = adminUsers[0].id,      
       const _adminNotificationContent = {
         title: `New hiring request for ${talent.full_name}`,
-<<<<<<< HEAD
         message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`,
-        type: &quot;hire_request&quot;,
-=======
-        message: `${_requester.name} (${_requester.email}) wants to hire ${_talent.full_name} for a project with budget ${_budgetDisplay}.`,
-        type: "hire_request",
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        related_id: requestRecord[0].id
+        type: &quot;hire_request&quot;,        related_id: requestRecord[0].id
       },
       
-<<<<<<< HEAD
       const { error: notificationError } = await supabase
         .rpc('create_notification', {
           _user_id: adminId,
@@ -274,18 +158,11 @@ serve(_async (req) => {_// Handle CORS preflight requests
         }),
         
       if (notificationError) {
-<<<<<<< HEAD
-        console.error("Error creating admin notification:", notificationError)
-=======
-        console.error(&quot;Error creating admin notification:&quot;, notificationError);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      }
-=======
+        console.error("Error creating admin notification:", notificationError)      }
       const {_error: notificationError} = await supabase
         .rpc('create_notification', {_user_id: adminId, _title: adminNotificationContent.title, _message: adminNotificationContent.message, _type: adminNotificationContent.type, _related_id: adminNotificationContent.related_id});
         
       if (notificationError) {}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
     
     // 4. Send email notification to talent
@@ -307,13 +184,7 @@ serve(_async (req) => {_// Handle CORS preflight requests
             <p>Best regards,<br>The Zion AI Marketplace Team</p>
           `}}),
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // // // console.log("Email sending result:", emailResponse)
-=======
-      // console.log(&quot;Email sending result:&quot;, emailResponse);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
+      // // // console.log("Email sending result:", emailResponse)    }
 
     return new Response(
       JSON.stringify({ 
@@ -326,12 +197,7 @@ serve(_async (req) => {_// Handle CORS preflight requests
         status: 200}
     )
   } catch (error) {
-<<<<<<< HEAD
-    console.error("Error processing hire request:", error.message),
-=======
-    console.error(&quot;Error processing hire request:&quot;, error.message);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    
+    console.error("Error processing hire request:", error.message),    
     return new Response(
       JSON.stringify({ 
         success: false, 
@@ -340,7 +206,6 @@ serve(_async (req) => {_// Handle CORS preflight requests
       }),
       {
         headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json" },
-=======
       
     }
 
@@ -353,7 +218,6 @@ serve(_async (req) => {_// Handle CORS preflight requests
       JSON.stringify({ 
         success: false, _message: "Failed to process hire request", _error: error.message}),
       {_headers: { ...corsHeaders, _"Content-Type": "application/json"},
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         status: 500}
     )
   }

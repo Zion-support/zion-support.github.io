@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
-import React, {_useState} from 'react';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-import Link from 'next/link';
+import React, { useState } from 'react';import Link from 'next/link';
 import {_Menu, _X, _Phone, _Mail, _Facebook, _Twitter, _Linkedin, _Instagram, } from 'lucide-react';
 
 const Header: React.FC = () => {_const [isMenuOpen, _setIsMenuOpen] = useState(false);
@@ -150,7 +144,6 @@ const Header: React.FC = () => {_const [isMenuOpen, _setIsMenuOpen] = useState(f
 },
 
 export default Header;
-=======
       {/* Top Bar */};
       <div className="bg-blue-900text-whitepy-2">;
         <div className="containermx-autopx-4">;
@@ -361,4 +354,3 @@ export default Header;
           </button>;
         </div>;
         {/* Mobile Menu */};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

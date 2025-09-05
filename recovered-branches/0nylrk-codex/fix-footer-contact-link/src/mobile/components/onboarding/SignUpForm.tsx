@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { Label } from "@/components/ui/label",
 import { Input } from "@/components/ui/input",
@@ -9,23 +7,11 @@ import { useNavigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
 import { AlertCircle } from "lucide-react",
 import { Alert, AlertDescription } from "@/components/ui/alert",
-=======
-import React, { useState } from &quot;react&quot;;
-import { Label } from &quot;@/components/ui/label&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { useNavigate } from &quot;react-router-dom&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { AlertCircle } from &quot;lucide-react&quot;;
-import { Alert, AlertDescription } from &quot;@/components/ui/alert&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 export function SignUpForm() {
   const navigate = useNavigate(),
   const { signup, login, loginWithGoogle } = useAuth(),
   
   const [formData, setFormData] = useState({
-<<<<<<< HEAD
     email: "",
     password: "",
     name: ""}),
@@ -42,24 +28,10 @@ export function SignUpForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setError(""),
-    setIsLoading(true),
-=======
-    email: "&quot;,
-    password: "&quot;,
-    name: "&quot;});
-=======
-import React, {_useState} from "react";
-
-export function SignUpForm() {_const _navigate = useNavigate();
-  const { signup, _login, _loginWithGoogle} = useAuth();
-  
-  const [formData, setFormData] = useState({_email: "", _password: "", _name: ""});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  const [isLoading, setIsLoading] = useState(false);
+    setIsLoading(true),  const [isLoading, setIsLoading] = useState(false);
   const [signupMode, setSignupMode] = useState(true);
   const [error, setError] = useState("&quot;);
   
-<<<<<<< HEAD
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -68,22 +40,10 @@ export function SignUpForm() {_const _navigate = useNavigate();
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError("&quot;);
-=======
-  const _handleInputChange = (_e: React.ChangeEvent<HTMLInputElement>) => {_const { name, _value} = e.target;
-    setFormData(prev => ({_...prev, _[name]: value}));
-    setError("");
-  };
-  
-  const _handleSubmit = async (_e: React.FormEvent) => {_e.preventDefault();
-    setError("");
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    setIsLoading(true);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+    setError("&quot;);    setIsLoading(true);
     
     try {
       if (signupMode) {
-<<<<<<< HEAD
         const { error } = await signup(formData.email, formData.password, {
           name: formData.name}),
         
@@ -91,18 +51,12 @@ export function SignUpForm() {_const _navigate = useNavigate();
           throw new Error(error)
         }
         
-<<<<<<< HEAD
-        navigate("/mobile")
-=======
-        navigate(&quot;/mobile&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      } else {
+        navigate("/mobile")      } else {
         const { error } = await login(formData.email, formData.password),
         
         if (error) {
           throw new Error(error)
         }
-=======
         const { error} = await signup(formData.email, formData.password, {_name: formData.name});
         
         if (error) {_throw new Error(error);}
@@ -111,15 +65,8 @@ export function SignUpForm() {_const _navigate = useNavigate();
       } else {_const { error} = await login(formData.email, formData.password);
         
         if (error) {_throw new Error(error);}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         
-<<<<<<< HEAD
-        navigate("/mobile")
-=======
-        navigate(&quot;/mobile&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      }
-<<<<<<< HEAD
+        navigate("/mobile")      }
     } catch (err: any) {
       setError(err.message)
     } finally {
@@ -138,34 +85,13 @@ export function SignUpForm() {_const _navigate = useNavigate();
   return (
     <div className=&quot;space-y-4 px-4&quot;>
       <h2 className=&quot;text-xl font-medium text-center&quot;>
-        {signupMode ? &quot;Create your account&quot; : &quot;Welcome back&quot;}
-=======
-    } catch (err: unknown) {_setError(err.message);} finally {_setIsLoading(false);}
-  };
-  
-  const _handleGoogleLogin = async () => {_try {
-      await loginWithGoogle();} catch (err: unknown) {_setError(err.message);}
-  };
-  
-  return (
-    <div className="space-y-4 px-4">
-      <h2 className="text-xl font-medium text-center">
-        {_signupMode ? "Create your account" : "Welcome back"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      </h2>
+        {signupMode ? &quot;Create your account&quot; : &quot;Welcome back&quot;}      </h2>
       
       <div className=&quot;space-y-2&quot;>
         <Button 
-<<<<<<< HEAD
           variant=&quot;outline&quot; 
           className=&quot;w-full py-6 relative&quot;
-          onClick={handleGoogleLogin}
-=======
-          variant="outline" 
-          className="w-full py-6 relative"
-          onClick={_handleGoogleLogin}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        >
+          onClick={handleGoogleLogin}        >
           <svg viewBox=&quot;0 0 24 24&quot; className=&quot;h-5 w-5 mr-2&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;>
             <path d=&quot;M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z&quot; fill=&quot;#4285F4&quot; />
             <path d=&quot;M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z&quot; fill=&quot;#34A853&quot; />
@@ -192,31 +118,16 @@ export function SignUpForm() {_const _navigate = useNavigate();
         <div className=&quot;flex-grow border-t border-border&quot;></div>
       </div>
       
-<<<<<<< HEAD
       {error && (
         <Alert variant=&quot;destructive&quot;>
-          <AlertCircle className=&quot;h-4 w-4&quot; />
-=======
-      {_error && (
-        <Alert variant="destructive">
-          <AlertCircle className="h-4 w-4" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          <AlertDescription>{error}</AlertDescription>
+          <AlertCircle className=&quot;h-4 w-4&quot; />          <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
       
-<<<<<<< HEAD
       <form onSubmit={handleSubmit} className=&quot;space-y-4&quot;>
         {signupMode && (
           <div className=&quot;space-y-2&quot;>
-            <Label htmlFor=&quot;name&quot;>Full name</Label>
-=======
-      <form onSubmit={_handleSubmit} className="space-y-4">
-        {_signupMode && (
-          <div className="space-y-2">
-            <Label htmlFor="name">Full name</Label>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            <Input
+            <Label htmlFor=&quot;name&quot;>Full name</Label>            <Input
               id=&quot;name&quot;
               name=&quot;name&quot;
               value={formData.name}
@@ -230,20 +141,11 @@ export function SignUpForm() {_const _navigate = useNavigate();
         <div className=&quot;space-y-2&quot;>
           <Label htmlFor=&quot;email&quot;>Email address</Label>
           <Input
-<<<<<<< HEAD
             id=&quot;email&quot;
             name=&quot;email&quot;
             type=&quot;email&quot;
             value={formData.email}
-            onChange={handleInputChange}
-=======
-            id="email"
-            name="email"
-            type="email"
-            value={_formData.email}
-            onChange={_handleInputChange}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            required
+            onChange={handleInputChange}            required
             placeholder=&quot;Enter your email&quot;
           />
         </div>
@@ -251,26 +153,16 @@ export function SignUpForm() {_const _navigate = useNavigate();
         <div className=&quot;space-y-2&quot;>
           <Label htmlFor=&quot;password&quot;>Password</Label>
           <Input
-<<<<<<< HEAD
             id=&quot;password&quot;
             name=&quot;password&quot;
             type=&quot;password&quot;
             value={formData.password}
-            onChange={handleInputChange}
-=======
-            id="password"
-            name="password"
-            type="password"
-            value={_formData.password}
-            onChange={_handleInputChange}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            required
+            onChange={handleInputChange}            required
             placeholder=&quot;Create a password&quot;
           />
         </div>
         
         <Button 
-<<<<<<< HEAD
           type=&quot;submit&quot; 
           className=&quot;w-full py-6&quot;
           disabled={isLoading}
@@ -294,32 +186,7 @@ export function SignUpForm() {_const _navigate = useNavigate();
           className=&quot;p-0 h-auto&quot;
           onClick={() => setSignupMode(!signupMode)}
         >
-          {signupMode ? &quot;Sign In&quot; : &quot;Sign Up&quot;}
-=======
-          type="submit" 
-          className="w-full py-6"
-          disabled={_isLoading}
-        >
-          {_isLoading 
-            ? "Please wait..." 
-            : signupMode 
-              ? "Create Account" 
-              : "Sign In"}
-        </Button>
-      </form>
-      
-      <p className="text-center text-sm">
-        {_signupMode
-          ? "Already have an account? "
-          : "Don't have an account? "}
-        <Button
-          variant="link"
-          className="p-0 h-auto"
-          onClick={_() => setSignupMode(!signupMode)}
-        >
-          {_signupMode ? "Sign In" : "Sign Up"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        </Button>
+          {signupMode ? &quot;Sign In&quot; : &quot;Sign Up&quot;}        </Button>
       </p>
     </div>
   )

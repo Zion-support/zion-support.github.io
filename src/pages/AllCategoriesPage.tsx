@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { CategoryCard } from "@/components/CategoryCard",
 import { GradientHeading } from "@/components/GradientHeading",
-import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
-=======
-import { CategoryCard } from &quot;@/components/CategoryCard&quot;;
-import { GradientHeading } from &quot;@/components/GradientHeading&quot;;
-import ErrorBoundary from &quot;@/components/GlobalErrorBoundary&quot;; // Import ErrorBoundary
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
+import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundaryimport { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API
@@ -48,7 +40,6 @@ export default function AllCategoriesPage() {
       <div className=&quot;container mx-auto px-4 py-12&quot;>
         <div className=&quot;text-center mb-12&quot;>
           <GradientHeading level=&quot;h1&quot; className=&quot;text-4xl md:text-5xl font-bold mb-4&quot;>
-=======
 import ErrorBoundary from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
 
 // Reusing the categories array from CategoriesSection.tsx
@@ -66,7 +57,6 @@ export default function AllCategoriesPage() {_return (_<div className="min-h-scr
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <GradientHeading level="h1" className="text-4xl md:text-5xl font-bold mb-4">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             All Categories
           </GradientHeading>
           <p className=&quot;text-zion-slate-light text-lg max-w-3xl mx-auto&quot;>

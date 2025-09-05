@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link',
 import React from 'react',
 export default function PerformanceOptimization() {
-  return (
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
-
-export default function PerformanceOptimization() {_return (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    <>
+  return (    <>
       <Head>
         <title>
           Performance Optimization in Autonomous Systems | Zion Tech Group
@@ -68,12 +59,7 @@ export default function PerformanceOptimization() {_return (
                   Understanding Performance Metrics
                 </h2>
                 <p className='text-white/90 mb-4'>
-<<<<<<< HEAD
-                  Before diving into optimization strategies, it's crucial
-=======
-                  Before diving into optimization strategies, _it&apos;s crucial
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  to understand what performance means in the context of
+                  Before diving into optimization strategies, it's crucial                  to understand what performance means in the context of
                   autonomous systems. Key metrics include:
                 </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
@@ -284,9 +270,5 @@ export default function PerformanceOptimization() {_return (
         </main>
       </div>
     </>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

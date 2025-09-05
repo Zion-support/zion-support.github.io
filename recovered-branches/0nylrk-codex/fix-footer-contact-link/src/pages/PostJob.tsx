@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Header } from "@/components/header",
 import { Footer } from "@/components/Footer",
 import { JobPostingForm } from "@/components/jobs",
@@ -8,19 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { SEO } from "@/components/SEO",
 import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
-import { useIsMobile } from "@/hooks/use-mobile",
-=======
-import { Header } from &quot;@/components/header&quot;;
-import { Footer } from &quot;@/components/Footer&quot;;
-import { JobPostingForm } from &quot;@/components/jobs&quot;;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { SEO } from &quot;@/components/SEO&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { Navigate } from &quot;react-router-dom&quot;;
-import { useIsMobile } from &quot;@/hooks/use-mobile&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export default function PostJob() {
+import { useIsMobile } from "@/hooks/use-mobile",export default function PostJob() {
   const { isAuthenticated, isLoading } = useAuth(),
   const isMobile = useIsMobile(),
   
@@ -31,7 +17,6 @@ export default function PostJob() {
       </div>
     )
   }
-=======
 
 export default function PostJob() {_const { isAuthenticated, _isLoading} = useAuth();
   const _isMobile = useIsMobile();
@@ -41,7 +26,6 @@ export default function PostJob() {_const { isAuthenticated, _isLoading} = useAu
         <div className="animate-pulse">Loading...</div>
       </div>
     );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
   return (
     <>
@@ -50,14 +34,8 @@ export default function PostJob() {_const { isAuthenticated, _isLoading} = useAu
         description=&quot;Post a job to find the perfect AI talent for your project.&quot; 
       />
       <Header />
-<<<<<<< HEAD
       <main className={`container mx-auto px-${isMobile ? '2' : '4'} py-${isMobile ? '6' : '12'} max-w-4xl`}>
-        <Card className=&quot;border shadow-md&quot;>
-=======
-      <main className={_`container mx-auto px-${isMobile ? '2' : '4'} py-${_isMobile ? '6' : '12'} max-w-4xl`}>
-        <Card className="border shadow-md">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          <CardHeader>
+        <Card className=&quot;border shadow-md&quot;>          <CardHeader>
             <CardTitle className={_`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Post a Job</CardTitle>
             <CardDescription>
               Fill out the form below to post your job and find the perfect talent.
@@ -69,13 +47,7 @@ export default function PostJob() {_const { isAuthenticated, _isLoading} = useAu
         </Card>
       </main>
       <Footer />
-<<<<<<< HEAD
       {/* Add extra bottom padding on mobile to account for the bottom nav */}
-      {isMobile && <div className=&quot;h-16&quot;></div>}
-=======
-      {_/* Add extra bottom padding on mobile to account for the bottom nav */}
-      {_isMobile && <div className="h-16"></div>}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    </>
+      {isMobile && <div className=&quot;h-16&quot;></div>}    </>
   )
 }

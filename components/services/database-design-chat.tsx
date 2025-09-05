@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
 const DatabaseDesignChat: NextPage = () => {
-  return (
-=======
-import type {_NextPage} from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-
-const DatabaseDesignChat: NextPage = () => {_return (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    <div>
+  return (    <div>
       <Head>
         <title>DatabaseDesignChat - Zion Tech Solutions</title>
         <meta name=&quot;description&quot; content=&quot;DatabaseDesignChat service&quot; />
@@ -23,11 +14,6 @@ const DatabaseDesignChat: NextPage = () => {_return (
         <a href=&quot;/services&quot;>Back to Services</a>
       </main>
     </div>
-<<<<<<< HEAD
   )
 },
-=======
-  );};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export default DatabaseDesignChat,

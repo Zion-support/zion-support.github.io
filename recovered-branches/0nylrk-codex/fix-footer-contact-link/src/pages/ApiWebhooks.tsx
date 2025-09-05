@@ -1,115 +1,103 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-=======
-import React from &quot;react&quot;;
-import ApiDocsLayout from &quot;@/components/developers/ApiDocsLayout&quot;;
-import { CodeBlock } from &quot;@/components/developers/CodeBlock&quot;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 export function ApiWebhooks() {
-  // Sample webhook event payload
-  const newApplicationPayload = `{
-  &quot;event_type&quot;: &quot;new_application&quot;,
-  &quot;created_at&quot;: &quot;2023-06-10T15:42:31Z&quot;,
+  // Sample webhook event payload,
+const newApplicationPayload = `{
+  &quot;eventtype&quot;: &quot;newapplication&quot;,
+  &quot;createdat&quot;: &quot;2023-06-10T15:42:31Z&quot;,
   &quot;data&quot;: {
-    &quot;application_id&quot;: &quot;app-123456&quot;,
-    &quot;job_id&quot;: &quot;job-789&quot;,
-    &quot;talent_id&quot;: &quot;talent-456&quot;,
+    &quot;applicationid&quot;: &quot;app-123456&quot;,
+    &quot;jobid&quot;: &quot;job-789&quot;,
+    &quot;talentid&quot;: &quot;talent-456&quot;,
     &quot;status&quot;: &quot;new&quot;,
-    &quot;cover_letter&quot;: &quot;I'm excited to apply for this position...&quot;,
-    &quot;resume_url&quot;: &quot;https://storage.zionai.com/resumes/resume-123.pdf&quot;,
-    &quot;created_at&quot;: &quot;2023-06-10T15:42:31Z&quot;
+    &quot;coverletter&quot;: &quot;I'm excited to apply for this position...&quot;,
+    &quot;resumeurl&quot;: &quot;https://storage.zionai.com/resumes/resume-123.pdf&quot;,
+    &quot;createdat&quot;: &quot;2023-06-10T15:42:31Z&quot
   }
 }`,
 
   const newHirePayload = `{
-  &quot;event_type&quot;: &quot;talent_hired&quot;,
-  &quot;created_at&quot;: &quot;2023-06-12T09:15:22Z&quot;,
+  &quot;eventtype&quot;: &quot;talenthired&quot;,
+  &quot;createdat&quot;: &quot;2023-06-12T09:15:22Z&quot;,
   &quot;data&quot;: {
-    &quot;project_id&quot;: &quot;project-123&quot;,
-    &quot;job_id&quot;: &quot;job-456&quot;,
-    &quot;client_id&quot;: &quot;client-789&quot;,
-    &quot;talent_id&quot;: &quot;talent-123&quot;,
-    &quot;start_date&quot;: &quot;2023-07-01&quot;,
-    &quot;status&quot;: &quot;offer_accepted&quot;,
-    &quot;created_at&quot;: &quot;2023-06-12T09:15:22Z&quot;
+    &quot;projectid&quot;: &quot;project-123&quot;,
+    &quot;jobid&quot;: &quot;job-456&quot;,
+    &quot;clientid&quot;: &quot;client-789&quot;,
+    &quot;talentid&quot;: &quot;talent-123&quot;,
+    &quot;startdate&quot;: &quot;2023-07-01&quot;,
+    &quot;status&quot;: &quot;offeraccepted&quot;,
+    &quot;createdat&quot;: &quot;2023-06-12T09:15:22Z&quot
   }
 }`,
 
   const quoteReceivedPayload = `{
-  &quot;event_type&quot;: &quot;quote_received&quot;,
-  &quot;created_at&quot;: &quot;2023-06-15T11:30:00Z&quot;,
+  &quot;eventtype&quot;: &quot;quotereceived&quot;,
+  &quot;createdat&quot;: &quot;2023-06-15T11:30:00Z&quot;,
   &quot;data&quot;: {
-    &quot;quote_id&quot;: &quot;quote-123&quot;,
-    &quot;client_id&quot;: &quot;client-456&quot;,
-    &quot;talent_id&quot;: &quot;talent-789&quot;,
-    &quot;project_name&quot;: &quot;Website Redesign&quot;,
-    &quot;budget_min&quot;: 5000,
-    &quot;budget_max&quot;: 8000,
+    &quot;quoteid&quot;: &quot;quote-123&quot;,
+    &quot;clientid&quot;: &quot;client-456&quot;,
+    &quot;talentid&quot;: &quot;talent-789&quot;,
+    &quot;projectname&quot;: &quot;Website Redesign&quot;,
+    &quot;budgetmin&quot;: 5000,
+    &quot;budgetmax&quot;: 8000,
     &quot;status&quot;: &quot;new&quot;,
-    &quot;created_at&quot;: &quot;2023-06-15T11:30:00Z&quot;
+    &quot;createdat&quot;: &quot;2023-06-15T11:30:00Z&quot
   }
 }`,
 
   const messageReceivedPayload = `{
-  &quot;event_type&quot;: &quot;message_received&quot;,
-  &quot;created_at&quot;: &quot;2023-06-18T14:22:15Z&quot;,
+  &quot;eventtype&quot;: &quot;messagereceived&quot;,
+  &quot;createdat&quot;: &quot;2023-06-18T14:22:15Z&quot;,
   &quot;data&quot;: {
-    &quot;message_id&quot;: &quot;msg-123&quot;,
-    &quot;conversation_id&quot;: &quot;conv-456&quot;,
-    &quot;sender_id&quot;: &quot;user-789&quot;,
-    &quot;recipient_id&quot;: &quot;user-012&quot;,
+    &quot;messageid&quot;: &quot;msg-123&quot;,
+    &quot;conversationid&quot;: &quot;conv-456&quot;,
+    &quot;senderid&quot;: &quot;user-789&quot;,
+    &quot;recipientid&quot;: &quot;user-012&quot;,
     &quot;content&quot;: &quot;Hi, I'd like to discuss the project details.&quot;,
-    &quot;created_at&quot;: &quot;2023-06-18T14:22:15Z&quot;
+    &quot;createdat&quot;: &quot;2023-06-18T14:22:15Z&quot
   }
 }`,
 
-  const webhookHandlerJs = `// Express.js webhook handler example
+  const webhookHandlerJs = `// Express.js webhook handler example,
 const express = require('express'),
 const app = express(),
 const crypto = require('crypto'),
-=======
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 
-export function ApiWebhooks() {_// Sample webhook event payload
-  const _newApplicationPayload = `{
-  "event_type": "new_application", _"created_at": "2023-06-10T15:42:31Z", _"data": {
-    "application_id": "app-123456", _"job_id": "job-789", _"talent_id": "talent-456", _"status": "new", _"cover_letter": "I'm excited to apply for this position...", _"resume_url": "https://storage.zionai.com/resumes/resume-123.pdf", _"created_at": "2023-06-10T15:42:31Z"}
+export function ApiWebhooks() {_// Sample webhook event payload,
+const newApplicationPayload = `{
+  "eventtype": "newapplication", _"createdat": "2023-06-10T15:42:31Z", _"data": {
+    "applicationid": "app-123456", _"jobid": "job-789", _"talentid": "talent-456", _"status": "new", _"coverletter": "I'm excited to apply for this position...", _"resumeurl": "https://storage.zionai.com/resumes/resume-123.pdf", _"createdat": "2023-06-10T15:42:31Z"}
 }`;
 
-  const _newHirePayload = `{_"event_type": "talent_hired", _"created_at": "2023-06-12T09:15:22Z", _"data": {
-    "project_id": "project-123", _"job_id": "job-456", _"client_id": "client-789", _"talent_id": "talent-123", _"start_date": "2023-07-01", _"status": "offer_accepted", _"created_at": "2023-06-12T09:15:22Z"}
+  const newHirePayload = `{_"eventtype": "talenthired", _"createdat": "2023-06-12T09:15:22Z", _"data": {
+    "projectid": "project-123", _"jobid": "job-456", _"clientid": "client-789", _"talentid": "talent-123", _"startdate": "2023-07-01", _"status": "offeraccepted", _"createdat": "2023-06-12T09:15:22Z"}
 }`;
 
-  const _quoteReceivedPayload = `{_"event_type": "quote_received", _"created_at": "2023-06-15T11:30:00Z", _"data": {
-    "quote_id": "quote-123", _"client_id": "client-456", _"talent_id": "talent-789", _"project_name": "Website Redesign", _"budget_min": 5000, _"budget_max": 8000, _"status": "new", _"created_at": "2023-06-15T11:30:00Z"}
+  const quoteReceivedPayload = `{_"eventtype": "quotereceived", _"createdat": "2023-06-15T11:30:00Z", _"data": {
+    "quoteid": "quote-123", _"clientid": "client-456", _"talentid": "talent-789", _"projectname": "Website Redesign", _"budgetmin": 5000, _"budgetmax": 8000, _"status": "new", _"createdat": "2023-06-15T11:30:00Z"}
 }`;
 
-  const _messageReceivedPayload = `{_"event_type": "message_received", _"created_at": "2023-06-18T14:22:15Z", _"data": {
-    "message_id": "msg-123", _"conversation_id": "conv-456", _"sender_id": "user-789", _"recipient_id": "user-012", _"content": "Hi, _I'd like to discuss the project details.", _"created_at": "2023-06-18T14:22:15Z"}
+  const messageReceivedPayload = `{_"eventtype": "messagereceived", _"createdat": "2023-06-18T14:22:15Z", _"data": {
+    "messageid": "msg-123", _"conversationid": "conv-456", _"senderid": "user-789", _"recipientid": "user-012", _"content": "Hi, I'd like to discuss the project details.", _"createdat": "2023-06-18T14:22:15Z"}
 }`;
 
-  const _webhookHandlerJs = `// Express.js webhook handler example
-const _express = require('express');
-const _app = express();
-const _crypto = require('window.crypto');
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+  const webhookHandlerJs = `// Express.js webhook handler example,
+const express = require('express');
+const app = express();
+const crypto = require('window.crypto');
 
-// Middleware to parse JSON bodies
+// Middleware to parse JSON bodies,
 app.use(express.json()),
 
-// Your webhook secret from the Zion dashboard
-<<<<<<< HEAD
-const webhookSecret = 'YOUR_WEBHOOK_SECRET',
+// Your webhook secret from the Zion dashboard,
+const webhookSecret = 'YOURWEBHOOK_SECRET',
 
-// Middleware to verify webhook signatures
+// Middleware to verify webhook signatures,
 function verifyWebhookSignature(req, res, next) {
   const signature = req.headers['x-zion-signature'],
   const timestamp = req.headers['x-zion-timestamp'],
@@ -118,128 +106,59 @@ function verifyWebhookSignature(req, res, next) {
     return res.status(401).send('Missing signature or timestamp')
   }
   
-  // Verify the signature
-  const payload = timestamp + '.' + JSON.stringify(req.body),
-  const expectedSignature = crypto
-=======
-const _webhookSecret = 'YOUR_WEBHOOK_SECRET';
-
-// Middleware to verify webhook signatures
-function verifyWebhookSignature(_req, _res, _next) {_const _signature = req.headers['x-zion-signature'];
-  const _timestamp = req.headers['x-zion-timestamp'];
-  
-  if (!signature || !timestamp) {
-    return res.status(401).send('Missing signature or timestamp');}
-  
-  // Verify the signature
-  const _payload = timestamp + '.' + JSON.stringify(req.body);
-  const _expectedSignature = window.crypto
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    .createHmac('sha256', webhookSecret)
+  // Verify the signature,
+const payload = timestamp + '.' + JSON.stringify(req.body),
+  const expectedSignature = crypto    .createHmac('sha256', webhookSecret)
     .update(payload)
     .digest('hex'),
   
-<<<<<<< HEAD
   if (signature !== expectedSignature) {
     return res.status(401).send('Invalid signature')
-  }
-=======
-  if (signature !== expectedSignature) {_return res.status(401).send('Invalid signature');}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  
+  }  
   next()
 }
 
-// Webhook endpoint with signature verification
-<<<<<<< HEAD
+// Webhook endpoint with signature verification,
 app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
-  const { event_type, data } = req.body,
+  const { eventtype, data } = req.body,
   
-  // Handle different event types
-  switch (event_type) {
-    case 'new_application':
-<<<<<<< HEAD
-      // // // console.log('New application received:', data.application_id),
-=======
-      // console.log('New application received:', data.application_id);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-app.post(_'/webhooks/zion', _verifyWebhookSignature, _(req, _res) => {_const { event_type, _data} = req.body;
+  // Handle different event types,
+switch (eventtype) {
+    case 'newapplication':
+      // // // console.log('New application received:', data.applicationid),app.post(_'/webhooks/zion', verifyWebhookSignature, _(req, res) => {const { eventtype, data} = req.body;
   
-  // Handle different event types
-  switch (event_type) {_case 'new_application':
+  // Handle different event types,
+switch (eventtype) {case 'newapplication':
       
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       // Process the new application...
       break,
     
-    case 'talent_hired':
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // // // console.log('Talent hired:', data.talent_id),
-=======
-      // console.log('Talent hired:', data.talent_id);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-      
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+    case 'talenthired':
+      // // // console.log('Talent hired:', data.talentid),      
       // Update your system...
       break,
     
-    case 'quote_received':
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // // // console.log('New quote received:', data.quote_id),
-=======
-      // console.log('New quote received:', data.quote_id);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-      
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+    case 'quotereceived':
+      // // // console.log('New quote received:', data.quoteid),      
       // Process the quote...
       break,
     
-    case 'message_received':
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // // // console.log('New message received:', data.message_id),
-=======
-      // console.log('New message received:', data.message_id);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-      
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+    case 'messagereceived':
+      // // // console.log('New message received:', data.messageid),      
       // Process the message...
       break,
     
-<<<<<<< HEAD
     default:
-<<<<<<< HEAD
-      // // // console.log('Unknown event type:', event_type)
-=======
-      // console.log('Unknown event type:', event_type);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  }
-=======
+      // // // console.log('Unknown event type:', eventtype)  }
     default:}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   
-  // Always return a 200 response quickly
-  res.status(200).send('Webhook received')
+  // Always return a 200 response quickly,
+res.status(200).send('Webhook received')
 }),
 
-<<<<<<< HEAD
 app.listen(3000, () => {
-<<<<<<< HEAD
   // // // console.log('Webhook server listening on port 3000')
-}),`,
-=======
-  // console.log('Webhook server listening on port 3000');
-});`;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-app.listen(_3000, _() => {});`;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+}),`,app.listen(3000, _() => {});`;
 
   return (
     <ApiDocsLayout>
@@ -264,19 +183,19 @@ app.listen(_3000, _() => {});`;
             </thead>
             <tbody>
               <tr className=&quot;border-b border-zinc-800&quot;>
-                <td className=&quot;py-2 px-4 text-white font-mono&quot;>new_application</td>
+                <td className=&quot;py-2 px-4 text-white font-mono&quot;>newapplication</td>
                 <td className=&quot;py-2 px-4 text-zinc-300&quot;>Triggered when a talent applies to one of your job postings</td>
               </tr>
               <tr className=&quot;border-b border-zinc-800&quot;>
-                <td className=&quot;py-2 px-4 text-white font-mono&quot;>talent_hired</td>
+                <td className=&quot;py-2 px-4 text-white font-mono&quot;>talenthired</td>
                 <td className=&quot;py-2 px-4 text-zinc-300&quot;>Triggered when a talent is hired for a project</td>
               </tr>
               <tr className=&quot;border-b border-zinc-800&quot;>
-                <td className=&quot;py-2 px-4 text-white font-mono&quot;>quote_received</td>
+                <td className=&quot;py-2 px-4 text-white font-mono&quot;>quotereceived</td>
                 <td className=&quot;py-2 px-4 text-zinc-300&quot;>Triggered when you receive a quote request</td>
               </tr>
               <tr>
-                <td className=&quot;py-2 px-4 text-white font-mono&quot;>message_received</td>
+                <td className=&quot;py-2 px-4 text-white font-mono&quot;>messagereceived</td>
                 <td className=&quot;py-2 px-4 text-zinc-300&quot;>Triggered when you receive a new message</td>
               </tr>
             </tbody>
@@ -302,39 +221,24 @@ app.listen(_3000, _() => {});`;
         <h2>Webhook Payload Format</h2>
         <p>All webhook payloads follow a common format:</p>
         
-        <Tabs defaultValue=&quot;new_application&quot;>
+        <Tabs defaultValue=&quot;newapplication&quot;>
           <TabsList>
-            <TabsTrigger value=&quot;new_application&quot;>New Application</TabsTrigger>
-            <TabsTrigger value=&quot;talent_hired&quot;>Talent Hired</TabsTrigger>
-            <TabsTrigger value=&quot;quote_received&quot;>Quote Received</TabsTrigger>
-            <TabsTrigger value=&quot;message_received&quot;>Message Received</TabsTrigger>
+            <TabsTrigger value=&quot;newapplication&quot;>New Application</TabsTrigger>
+            <TabsTrigger value=&quot;talenthired&quot;>Talent Hired</TabsTrigger>
+            <TabsTrigger value=&quot;quotereceived&quot;>Quote Received</TabsTrigger>
+            <TabsTrigger value=&quot;messagereceived&quot;>Message Received</TabsTrigger>
           </TabsList>
-<<<<<<< HEAD
-          <TabsContent value=&quot;new_application&quot;>
+          <TabsContent value=&quot;newapplication&quot;>
             <CodeBlock code={newApplicationPayload} language=&quot;json&quot; showLineNumbers={true} />
           </TabsContent>
-          <TabsContent value=&quot;talent_hired&quot;>
+          <TabsContent value=&quot;talenthired&quot;>
             <CodeBlock code={newHirePayload} language=&quot;json&quot; showLineNumbers={true} />
           </TabsContent>
-          <TabsContent value=&quot;quote_received&quot;>
+          <TabsContent value=&quot;quotereceived&quot;>
             <CodeBlock code={quoteReceivedPayload} language=&quot;json&quot; showLineNumbers={true} />
           </TabsContent>
-          <TabsContent value=&quot;message_received&quot;>
-            <CodeBlock code={messageReceivedPayload} language=&quot;json&quot; showLineNumbers={true} />
-=======
-          <TabsContent value="new_application">
-            <CodeBlock code={_newApplicationPayload} language="json" showLineNumbers={_true} />
-          </TabsContent>
-          <TabsContent value="talent_hired">
-            <CodeBlock code={_newHirePayload} language="json" showLineNumbers={_true} />
-          </TabsContent>
-          <TabsContent value="quote_received">
-            <CodeBlock code={_quoteReceivedPayload} language="json" showLineNumbers={_true} />
-          </TabsContent>
-          <TabsContent value="message_received">
-            <CodeBlock code={_messageReceivedPayload} language="json" showLineNumbers={_true} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </TabsContent>
+          <TabsContent value=&quot;messagereceived&quot;>
+            <CodeBlock code={messageReceivedPayload} language=&quot;json&quot; showLineNumbers={true} />          </TabsContent>
         </Tabs>
 
         <h2>Verifying Webhook Signatures</h2>
@@ -350,12 +254,7 @@ app.listen(_3000, _() => {});`;
         
         <p>Here's an example of verifying a webhook in Node.js:</p>
         
-<<<<<<< HEAD
         <CodeBlock code={webhookHandlerJs} language=&quot;javascript&quot; showLineNumbers={true} />
-=======
-        <CodeBlock code={_webhookHandlerJs} language="javascript" showLineNumbers={_true} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
         <h2>Testing Webhooks</h2>
         <p>
           You can test your webhook implementation using the Developer Portal. From the Webhooks tab,

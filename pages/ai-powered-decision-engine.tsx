@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AiPoweredDecisionEngine() {
@@ -20,15 +19,8 @@ export default function AiPoweredDecisionEngine() {
 				&quot;Drift monitoring and alerts&quot;,
 				&quot;Versioned strategies with canary rollouts&quot;
 			]}
-<<<<<<< HEAD
 			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}
-			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
-=======
-			industries={[&quot;Fintech&quot;, &quot;SaaS&quot;, &quot;Marketplaces&quot;, &quot;Logistics&quot;]}
-			canonical=&quot;https://ziontechgroup.com/ai-powered-decision-engine&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AiPoweredDecisionEngine() {_return (
@@ -44,7 +36,6 @@ export default function AiPoweredDecisionEngine() {_return (
 			]}
 			industries={_["Fintech", _"SaaS", _"Marketplaces", _"Logistics"]}
 			canonical="https://ziontechgroup.com/ai-powered-decision-engine"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		/>
 	)
 }

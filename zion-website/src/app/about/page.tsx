@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { 
   UserGroupIcon,
   LightBulbIcon, 
@@ -7,10 +6,6 @@ import {
   AcademicCapIcon,
   RocketLaunchIcon
 } from '@heroicons/react/24/outline'
-=======
-import {_UserGroupIcon, _LightBulbIcon, _GlobeAltIcon, _ShieldCheckIcon, _AcademicCapIcon, _RocketLaunchIcon} from '@heroicons/react/24/outline'
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 const _values = [
   {_name: 'Innovation First', _description: 'We push the boundaries of what\'s possible, _constantly exploring new frontiers in AI and technology.', _icon: LightBulbIcon},
   {_name: 'Global Impact', _description: 'Our solutions reach across borders, _transforming industries and improving lives worldwide.', _icon: GlobeAltIcon},
@@ -23,7 +18,6 @@ const _team = [
   {_name: 'Dr. Elena Petrov', _role: 'Head of Research', _bio: 'Leading researcher in autonomous systems and AI ethics, _with publications in top-tier journals.', _image: '/images/team/elena-petrov.jpg'},
   {_name: 'James Kim', _role: 'Chief Operations Officer', _bio: 'Former Fortune 500 executive, _specializing in scaling AI operations and enterprise deployment.', _image: '/images/team/james-kim.jpg'}]
 
-<<<<<<< HEAD
 export default function AboutPage() {
   return (
     <div className=&quot;bg-black&quot;>
@@ -39,41 +33,16 @@ export default function AboutPage() {
             </h1>
             <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
               We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
-              dedicated to transforming industries and advancing human potential through technology.
-=======
-export default function AboutPage() {_return (_<div className="bg-black">
-      {/* Hero section */}
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              About{_' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                Zion Tech Group
-              </span>
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              We are pioneers in artificial intelligence, _quantum computing, _and autonomous systems, _dedicated to transforming industries and advancing human potential through technology.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </p>
+              dedicated to transforming industries and advancing human potential through technology.            </p>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Mission & Vision */}
       <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Purpose</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
-      {_/* Mission & Vision */}
-      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Purpose</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            Mission & Vision
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>            Mission & Vision
           </p>
         </div>
         <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
@@ -93,22 +62,14 @@ export default function AboutPage() {_return (_<div className="bg-black">
                 <LightBulbIcon className=&quot;h-8 w-8 text-purple-400&quot; />
                 <h3 className=&quot;text-xl font-semibold text-white&quot;>Our Vision</h3>
               </div>
-<<<<<<< HEAD
               <p className=&quot;text-gray-300&quot;>
                 A future where AI and technology seamlessly enhance human capabilities, creating a more 
-                intelligent, efficient, and sustainable world for generations to come.
-=======
-              <p className="text-gray-300">
-                A future where AI and technology seamlessly enhance human capabilities, _creating a more 
-                intelligent, _efficient, _and sustainable world for generations to come.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </p>
+                intelligent, efficient, and sustainable world for generations to come.              </p>
             </div>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Company Story */}
       <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
@@ -132,38 +93,12 @@ export default function AboutPage() {_return (_<div className="bg-black">
             </p>
             <p className=&quot;text-lg text-gray-300&quot;>
               Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative 
-              startups, helping them harness the power of AI to transform their operations and 
-=======
-      {_/* Company Story */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Story</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            From Research to Revolution
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
-          <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
-            <p className="text-lg text-gray-300 mb-6">
-              Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs, _Zion Tech Group emerged from a shared vision: to bridge the gap between cutting-edge 
-              research and real-world applications.
-            </p>
-            <p className="text-lg text-gray-300 mb-6">
-              What started as a small research lab has grown into a global technology powerhouse, _with offices in Silicon Valley, _London, _Tokyo, _and Singapore. Our team of 200+ 
-              researchers, _engineers, _and business professionals work tirelessly to push the 
-              boundaries of what's possible.
-            </p>
-            <p className="text-lg text-gray-300">
-              Today, _we serve over 1, _000 clients worldwide, _from Fortune 500 companies to innovative 
-              startups, _helping them harness the power of AI to transform their operations and 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              accelerate their growth.
+              startups, helping them harness the power of AI to transform their operations and               accelerate their growth.
             </p>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Values */}
       <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
@@ -181,54 +116,23 @@ export default function AboutPage() {_return (_<div className="bg-black">
                   {value.name}
                 </dt>
                 <dd className=&quot;mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300&quot;>
-                  <p className=&quot;flex-auto&quot;>{value.description}</p>
-=======
-      {_/* Values */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">What Drives Us</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Our Core Values
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-            {_values.map((value) => (
-              <div key={value.name} className="flex flex-col group">
-                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                  <value.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
-                  {_value.name}
-                </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                  <p className="flex-auto">{_value.description}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </dd>
+                  <p className=&quot;flex-auto&quot;>{value.description}</p>                </dd>
               </div>
             ))}
           </dl>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Leadership Team */}
       <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Leadership</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
-      {_/* Leadership Team */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Leadership</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            Meet Our Team
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>            Meet Our Team
           </p>
           <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
             World-class researchers, engineers, and business leaders driving innovation at Zion Tech Group.
           </p>
         </div>
-<<<<<<< HEAD
         <div className=&quot;mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2&quot;>
           {team.map((person) => (
             <article key={person.name} className=&quot;flex flex-col items-start group&quot;>
@@ -237,60 +141,29 @@ export default function AboutPage() {_return (_<div className="bg-black">
                   <div className=&quot;h-full w-full bg-gradient-to-br from-blue-900/20 to-purple-900/20 rounded-2xl flex items-center justify-center&quot;>
                     <div className=&quot;text-center&quot;>
                       <div className=&quot;mx-auto h-12 w-12 rounded-full bg-blue-600/20 flex items-center justify-center mb-4&quot;>
-                        <UserGroupIcon className=&quot;h-6 w-6 text-blue-400&quot; />
-=======
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          {_team.map(_(person) => (
-            <article key={person.name} className="flex flex-col items-start group">
-              <div className="relative w-full">
-                <div className="aspect-[16/9] w-full rounded-2xl bg-gray-900 object-cover sm:aspect-[2/1] lg:aspect-[3/2]">
-                  <div className="h-full w-full bg-gradient-to-br from-blue-900/20 to-purple-900/20 rounded-2xl flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="mx-auto h-12 w-12 rounded-full bg-blue-600/20 flex items-center justify-center mb-4">
-                        <UserGroupIcon className="h-6 w-6 text-blue-400" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      </div>
+                        <UserGroupIcon className=&quot;h-6 w-6 text-blue-400&quot; />                      </div>
                       <p className=&quot;text-sm text-gray-400&quot;>Team Member</p>
                     </div>
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
               <div className=&quot;max-w-xl&quot;>
                 <div className=&quot;group relative&quot;>
                   <h3 className=&quot;mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200&quot;>
                     {person.name}
                   </h3>
                   <p className=&quot;mt-2 text-sm text-blue-400&quot;>{person.role}</p>
-                  <p className=&quot;mt-5 line-clamp-3 text-sm leading-6 text-gray-300&quot;>{person.bio}</p>
-=======
-              <div className="max-w-xl">
-                <div className="group relative">
-                  <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
-                    {_person.name}
-                  </h3>
-                  <p className="mt-2 text-sm text-blue-400">{_person.role}</p>
-                  <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-300">{_person.bio}</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </div>
+                  <p className=&quot;mt-5 line-clamp-3 text-sm leading-6 text-gray-300&quot;>{person.bio}</p>                </div>
               </div>
             </article>
           ))}
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* CTA section */}
       <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
-          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
-      {_/* CTA section */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            Join us in shaping the future
+          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>            Join us in shaping the future
           </h2>
           <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
             Ready to be part of the AI revolution? Let's discuss how we can work together to 

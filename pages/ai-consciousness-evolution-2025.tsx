@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIConsciousnessEvolution2025() {
@@ -19,15 +18,8 @@ export default function AIConsciousnessEvolution2025() {
 				&quot;Multi-modal context fusion (text, voice, UI)&quot;,
 				&quot;Partnered research roadmap and governance&quot;
 			]}
-<<<<<<< HEAD
 			industries={["R&D", "Healthcare", "Education", "Assistive Tech"]}
-			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025"
-=======
-			industries={[&quot;R&D&quot;, &quot;Healthcare&quot;, &quot;Education&quot;, &quot;Assistive Tech&quot;]}
-			canonical=&quot;https://ziontechgroup.com/ai-consciousness-evolution-2025&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025"import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIConsciousnessEvolution2025() {_return (
@@ -44,7 +36,6 @@ export default function AIConsciousnessEvolution2025() {_return (
 			]}
 			industries={_["R&D", _"Healthcare", _"Education", _"Assistive Tech"]}
 			canonical="https://ziontechgroup.com/ai-consciousness-evolution-2025"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 		/>
 	)
 }

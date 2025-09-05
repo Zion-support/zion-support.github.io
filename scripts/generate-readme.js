@@ -5,14 +5,8 @@
  * Creates or updates the main README.md file
  */
 
-<<<<<<< HEAD
 const fs = require('fs'),
 const path = require('path'),
-=======
-const _fs = require('fs');
-const _path = require('path');
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 const _README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub
 
 Leading-edge technology solutions and autonomous innovation systems.
@@ -95,7 +89,6 @@ This project is proprietary software. All rights reserved.
 
 ---
 
-<<<<<<< HEAD
 *Generated on ${new Date().toISOString()}*
 `,
 
@@ -106,31 +99,19 @@ function generateReadme() {
   if (fs.existsSync(outputPath)) {
     const existingContent = fs.readFileSync(outputPath, 'utf8'),
     if (existingContent.length > 1000) {
-<<<<<<< HEAD
       // // // console.log('⚠️  README.md already exists and appears substantial. Skipping generation.'),
       return
     }
   }
 
   fs.writeFileSync(outputPath, README_TEMPLATE),
-  // // // console.log(`✅ README generated at: ${outputPath}`)
-=======
-      // console.log('⚠️  README.md already exists and appears substantial. Skipping generation.');
-      return;
-    }
-  }
-
-  fs.writeFileSync(outputPath, README_TEMPLATE);
-  // console.log(`✅ README generated at: ${outputPath}`);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-}
+  // // // console.log(`✅ README generated at: ${outputPath}`)}
 
 if (require.main === module) {
   generateReadme()
 }
 
 module.exports = { generateReadme },
-=======
 *Generated on ${_new Date().toISOString()}*
 `;
 
@@ -151,4 +132,3 @@ function generateReadme() {_const _outputPath = path.join(__dirname, _'..', _'RE
 if (require.main === module) {_generateReadme();}
 
 module.exports = {_generateReadme};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

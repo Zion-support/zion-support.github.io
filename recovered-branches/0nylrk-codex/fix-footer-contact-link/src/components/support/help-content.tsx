@@ -1,24 +1,12 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
-import { HelpCategory } from "./types",
-=======
-import React from &quot;react&quot;;
-import { HelpCategory } from &quot;./types&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import { 
+import { HelpCategory } from "./types",import { 
   HelpCircle,
   CreditCard, 
   Users, 
   Calendar, 
   Briefcase 
-<<<<<<< HEAD
 } from "lucide-react",
-=======
-} from &quot;lucide-react&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 export const HELP_CATEGORIES: HelpCategory[] = [
   {
     id: &quot;getting-started&quot;,
@@ -170,7 +158,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         lastUpdated: &quot;2023-12-05&quot;,
         tags: [&quot;prevention&quot;, &quot;best practices&quot;, &quot;communication&quot;]
       }
-=======
 import React from "react";
 import {_HelpCircle, _CreditCard, _Users, _Calendar, _Briefcase} from "lucide-react";
 
@@ -209,7 +196,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         id: "file-dispute", _title: "How to file a dispute", _content: "If you encounter issues with a contract or project, _you can use our dispute resolution system. Here's how to file a dispute:\n\n1. Navigate to the project in question from your dashboard\n2. Click the 'Issues' tab and select 'File a Dispute'\n3. Select the dispute category (payment, _deliverables, _communication, _etc.)\n4. Provide a clear description of the issue\n5. Attach any relevant evidence (messages, _deliverables, _contract details)\n6. Submit your dispute\n\nOnce submitted, _the other party will be notified and given 72 hours to respond. Our support team will be automatically notified of all disputes filed.", _lastUpdated: "2023-11-05", _tags: ["dispute", _"resolution", _"conflict"]},
       {_id: "mediation-process", _title: "The mediation process", _content: "When disputes can't be resolved directly between parties, _our mediation process helps find a fair solution. Here's how mediation works:\n\n1. After a dispute is filed, _both parties have 72 hours to attempt direct resolution\n2. If unresolved, _a mediator from our support team is assigned to the case\n3. The mediator reviews all details and evidence from both sides\n4. A mediation call is scheduled with all parties (optional but recommended)\n5. The mediator proposes a resolution based on contract terms and platform policies\n6. Both parties can accept the proposed resolution or request escalation\n\nMost disputes are successfully resolved during mediation, _avoiding the need for further escalation.", _lastUpdated: "2023-11-18", _tags: ["mediation", _"dispute", _"resolution"]},
       {_id: "dispute-prevention", _title: "Tips for preventing disputes", _content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, _detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, _not just at the end\n\nBy following these guidelines, _you can significantly reduce the risk of disputes and ensure a smooth working relationship.", _lastUpdated: "2023-12-05", _tags: ["prevention", _"best practices", _"communication"]}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     ]
   }
 ],

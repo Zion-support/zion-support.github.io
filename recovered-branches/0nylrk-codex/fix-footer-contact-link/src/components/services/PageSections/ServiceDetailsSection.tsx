@@ -1,14 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { CountryPricing } from "@/data/onsiteServicePricing",
-import { CountryServiceSelector } from "../CountryServiceSelector",
-=======
-import { CountryPricing } from &quot;@/data/onsiteServicePricing&quot;;
-import { CountryServiceSelector } from &quot;../CountryServiceSelector&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface ServiceDetailsSectionProps {
+import { CountryServiceSelector } from "../CountryServiceSelector",interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null,
   setSelectedCountry: (country: CountryPricing | null) => void
 }
@@ -16,14 +8,12 @@ interface ServiceDetailsSectionProps {
 export function ServiceDetailsSection({ selectedCountry, setSelectedCountry }: ServiceDetailsSectionProps) {
   return (
     <div id=&quot;service-details&quot; className=&quot;mt-12&quot;>
-=======
 
 interface ServiceDetailsSectionProps {_selectedCountry: CountryPricing | null;
   setSelectedCountry: (_country: CountryPricing | null) => void;}
 
 export function ServiceDetailsSection(_{_selectedCountry, _setSelectedCountry}: ServiceDetailsSectionProps) {_return (
     <div id="service-details" className="mt-12">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       {selectedCountry ? (
         <CountryServiceSelector 
           selectedCountry={selectedCountry}

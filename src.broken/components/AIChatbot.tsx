@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useRef, useEffect, Dispatch, SetStateAction } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import { MessageCircle, X, Send, Bot, User, Sparkles, ChevronUp, ChevronDown } from 'lucide-react',
@@ -15,16 +14,9 @@ interface AIChatbotProps {
   className?: string
 }
 
-<<<<<<< HEAD
 const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
   const [isOpen, setIsOpen] = useState(false),
-  const [isMinimized, setIsMinimized] = useState(false),
-=======
-const AIChatbot: React.FC<AIChatbotProps> = ({ className = "&quot; }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  const [messages, setMessages] = useState<ChatMessage[]>([
+  const [isMinimized, setIsMinimized] = useState(false),  const [messages, setMessages] = useState<ChatMessage[]>([
     {
       id: '1',
       type: 'bot',
@@ -53,92 +45,28 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "&quot; }) => {
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000)),
     
     const responses = [
-<<<<<<< HEAD
       "That's a great question! Let me help you with that. Our AI solutions are designed to transform your business operations and drive innovation.",
       "I understand you're interested in our services. We offer cutting-edge AI, quantum computing, and autonomous solutions that can revolutionize your business.",
       "Excellent choice! Our quantum computing platform provides unprecedented computational power for complex problem-solving and optimization.",
       "I'd be happy to connect you with our team of experts. They can provide detailed information about our services and help you find the perfect solution.",
       "That's exactly what we specialize in! Our autonomous systems can streamline your operations and provide 24/7 intelligent monitoring.",
       "Great question! Our pricing is competitive and we offer flexible plans to meet your specific needs. Let me get you in touch with our sales team."
-    ],
-=======
-      &quot;That's a great question! Let me help you with that. Our AI solutions are designed to transform your business operations and drive innovation.&quot;,
-      &quot;I understand you're interested in our services. We offer cutting-edge AI, quantum computing, and autonomous solutions that can revolutionize your business.&quot;,
-      &quot;Excellent choice! Our quantum computing platform provides unprecedented computational power for complex problem-solving and optimization.&quot;,
-      &quot;I'd be happy to connect you with our team of experts. They can provide detailed information about our services and help you find the perfect solution.&quot;,
-      &quot;That's exactly what we specialize in! Our autonomous systems can streamline your operations and provide 24/7 intelligent monitoring.&quot;,
-      &quot;Great question! Our pricing is competitive and we offer flexible plans to meet your specific needs. Let me get you in touch with our sales team.&quot;
-=======
-import React, {_useState, _useRef, _useEffect, _Dispatch, _SetStateAction} from 'react';
-
-interface ChatMessage {_id: string;
-  type: 'user' | 'bot';
-  content: string;
-  timestamp: Date;
-  isTyping?: boolean;}
-
-interface AIChatbotProps {_className?: string;}
-
-const AIChatbot: React.FC<AIChatbotProps> = (_{_className = ""}) => {_const [isOpen, _setIsOpen] = useState(false);
-  const [isMinimized, _setIsMinimized] = useState(false);
-  const [messages, _setMessages] = useState<ChatMessage[]>([
-    {
-      id: '1', _type: 'bot', _content: 'Hello! I\'m Zion AI, _your intelligent assistant. How can I help you today? I can help with:\n\n• AI & Quantum Computing Services\n• Business Solutions\n• Technical Support\n• Pricing Information\n• Service Comparisons', _timestamp: new Date()}
-  ]);
-  const [inputValue, setInputValue] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
-  const _messagesEndRef = useRef<HTMLDivElement>(null);
-  const _inputRef = useRef<HTMLInputElement>(null);
-
-  const _scrollToBottom = () => {_messagesEndRef.current?.scrollIntoView({ behavior: 'smooth'});
-  };
-
-  useEffect__(() => {_scrollToBottom();}, [messages]);
-
-  // AI response simulation
-  const _generateAIResponse = async (userMessage: string): Promise<string> => {_setIsTyping(true);
+    ],    ];
     
-    // Simulate AI processing time
-    await new Promise(resolve => setTimeout(resolve, _1000 + Math.random() * 2000));
-    
-    const _responses = [
-      "That's a great question! Let me help you with that. Our AI solutions are designed to transform your business operations and drive innovation.", _"I understand you're interested in our services. We offer cutting-edge AI, _quantum computing, _and autonomous solutions that can revolutionize your business.", _"Excellent choice! Our quantum computing platform provides unprecedented computational power for complex problem-solving and optimization.", _"I'd be happy to connect you with our team of experts. They can provide detailed information about our services and help you find the perfect solution.", _"That's exactly what we specialize in! Our autonomous systems can streamline your operations and provide 24/7 intelligent monitoring.", _"Great question! Our pricing is competitive and we offer flexible plans to meet your specific needs. Let me get you in touch with our sales team."
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    
-<<<<<<< HEAD
-    const randomResponse = responses[Math.floor(Math.random() * responses.length)] || responses[0],
-=======
-    const _randomResponse = responses[Math.floor(Math.random() * responses.length)] || responses[0];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    
+    const randomResponse = responses[Math.floor(Math.random() * responses.length)] || responses[0],    
     // Add some context-aware responses
     let finalResponse: string = randomResponse,
     if (userMessage.toLowerCase().includes('price') || userMessage.toLowerCase().includes('cost')) {
-<<<<<<< HEAD
-<<<<<<< HEAD
       finalResponse = "Our pricing varies based on your specific needs. We offer flexible plans starting from $799/month. Would you like me to connect you with our pricing specialist?"
     } else if (userMessage.toLowerCase().includes('ai') || userMessage.toLowerCase().includes('artificial intelligence')) {
       finalResponse = "Our AI services include consciousness evolution, emotional intelligence, autonomous research, and predictive analytics. Each solution is designed to drive business transformation. Which area interests you most?"
     } else if (userMessage.toLowerCase().includes('quantum')) {
-      finalResponse = "Our quantum computing solutions cover neural networks, cybersecurity, materials discovery, and financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?"
-=======
-      finalResponse = &quot;Our pricing varies based on your specific needs. We offer flexible plans starting from $799/month. Would you like me to connect you with our pricing specialist?&quot;;
-    } else if (userMessage.toLowerCase().includes('ai') || userMessage.toLowerCase().includes('artificial intelligence')) {
-      finalResponse = &quot;Our AI services include consciousness evolution, emotional intelligence, autonomous research, and predictive analytics. Each solution is designed to drive business transformation. Which area interests you most?&quot;;
-    } else if (userMessage.toLowerCase().includes('quantum')) {
-      finalResponse = &quot;Our quantum computing solutions cover neural networks, cybersecurity, materials discovery, and financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
-=======
+      finalResponse = "Our quantum computing solutions cover neural networks, cybersecurity, materials discovery, and financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?"    }
       finalResponse = "Our pricing varies based on your specific needs. We offer flexible plans starting from $799/month. Would you like me to connect you with our pricing specialist?";} else if (userMessage.toLowerCase().includes('ai') || userMessage.toLowerCase().includes('artificial intelligence')) {_finalResponse = "Our AI services include consciousness evolution, _emotional intelligence, _autonomous research, _and predictive analytics. Each solution is designed to drive business transformation. Which area interests you most?";} else if (userMessage.toLowerCase().includes('quantum')) {_finalResponse = "Our quantum computing solutions cover neural networks, _cybersecurity, _materials discovery, _and financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?";}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     return finalResponse!
   },
 
-<<<<<<< HEAD
   const handleSendMessage = async () => {
     if (!inputValue.trim() || isTyping) return,
 
@@ -148,18 +76,10 @@ const AIChatbot: React.FC<AIChatbotProps> = (_{_className = ""}) => {_const [isO
       content: inputValue.trim(),
       timestamp: new Date()
     },
-=======
-  const _handleSendMessage = async () => {_if (!inputValue.trim() || isTyping) return;
-
-    const userMessage: ChatMessage = {
-      id: Date.now().toString(), _type: 'user', _content: inputValue.trim(), _timestamp: new Date()};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
     setMessages([...messages, userMessage]),
     setInputValue(''),
     
     // Generate AI response
-<<<<<<< HEAD
     const aiResponse = await generateAIResponse(userMessage.content),
     
     const botMessage: ChatMessage = {
@@ -168,17 +88,10 @@ const AIChatbot: React.FC<AIChatbotProps> = (_{_className = ""}) => {_const [isO
       content: aiResponse,
       timestamp: new Date()
     },
-=======
-    const _aiResponse = await generateAIResponse(userMessage.content);
-    
-    const botMessage: ChatMessage = {_id: (Date.now() + 1).toString(), _type: 'bot', _content: aiResponse, _timestamp: new Date()};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
     setMessages([...messages, botMessage]),
     setIsTyping(false)
   },
 
-<<<<<<< HEAD
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault(),
@@ -187,40 +100,23 @@ const AIChatbot: React.FC<AIChatbotProps> = (_{_className = ""}) => {_const [isO
   },
 
   const quickReplies = [
-<<<<<<< HEAD
-=======
-  const _handleKeyPress = (_e: React.KeyboardEvent) => {_if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSendMessage();}
-  };
-
-  const _quickReplies = [
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     "Tell me about AI services",
     "Quantum computing pricing",
     "Business solutions",
     "Contact sales team",
     "Technical support"
   ],
-=======
     &quot;Tell me about AI services&quot;,
     &quot;Quantum computing pricing&quot;,
     &quot;Business solutions&quot;,
     &quot;Contact sales team&quot;,
     &quot;Technical support"
   ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
-<<<<<<< HEAD
   const handleQuickReply = (reply: string) => {
     setInputValue(reply),
     setTimeout(() => handleSendMessage(), 100)
   },
-=======
-  const _handleQuickReply = (_reply: string) => {_setInputValue(reply);
-    setTimeout__(() => handleSendMessage(), _100);};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (_<div className={_`fixed bottom-4 right-4 z-50 ${className}`}>
       {_/* Chat Toggle Button */}
       {_!isOpen && (
@@ -359,22 +255,12 @@ const AIChatbot: React.FC<AIChatbotProps> = (_{_className = ""}) => {_const [isO
                 <div className="p-4 border-t border-white/10">
                   <div className="flex gap-2&quot;>
                     <input
-<<<<<<< HEAD
                       ref={inputRef}
                       type=&quot;text&quot;
                       value={inputValue}
                       onChange={(e) => setInputValue(e.target.value)}
                       onKeyPress={handleKeyPress}
-                      placeholder=&quot;Type your message..."
-=======
-                      ref={_inputRef}
-                      type="text"
-                      value={_inputValue}
-                      onChange={_(_e) => setInputValue(e.target.value)}
-                      onKeyPress={_handleKeyPress}
-                      placeholder="Type your message..."
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      className="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-200"
+                      placeholder=&quot;Type your message..."                      className="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-200"
                     />
                     <button
                       onClick={_handleSendMessage}

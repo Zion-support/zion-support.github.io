@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client",
 
 import { useState } from "react",
@@ -75,57 +74,6 @@ export default function AdminDeployPage() {
       default: return <Crown className="w-5 h-5 text-gray-400" />
     }
   },
-=======
-"use client";
-
-import LoadingSpinner from "@/app/components/LoadingSpinner";
-
-export default function AdminDeployPage() {_const [loading, _setLoading] = useState(false);
-  const [message, _setMessage] = useState<string | null>(null);
-  const [messageType, _setMessageType] = useState<'success' | 'error'>('success');
-
-  async function onSubmit(_event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setLoading(true);
-    setMessage(null);
-    
-    const _formData = new FormData(event.currentTarget);
-    const features: Record<string, _boolean> = {};
-    FeatureKeys.forEach(_(k) => (features[k] = formData.get(k) === "on"));
-
-      const _payload = {_instanceName: String(formData.get("instanceName") || ""), _domain: String(formData.get("domain") || "" ) || undefined, _subdomain: String(formData.get("subdomain") || "" ) || undefined, _vertical: String(formData.get("vertical") || "GENERAL"), _defaultLanguage: String(formData.get("defaultLanguage") || "en"), _tokenSystem: String(formData.get("tokenSystem") || "SHARED"), _governanceType: String(formData.get("governanceType") || "ADMIN"), _region: String(formData.get("region") || "") || undefined, _country: String(formData.get("country") || "") || undefined, _features, _addons: {
-          paymentGateway: String(formData.get("paymentGateway") || "") || undefined, _sovereignTreasury: formData.get("sovereignTreasury") === "on", _dualGovernance: formData.get("dualGovernance") === "on", _aiModeration: formData.get("aiModeration") === "on", _affiliatePanel: formData.get("affiliatePanel") === "on"}};
-
-    try {_const _res = await fetch("/api/deploy", _{ method: "POST", _body: JSON.stringify(payload)});
-      const _data = await res.json();
-      
-      if (!res.ok) {_setMessageType('error');
-        setMessage(data.error || "Deployment failed");
-        return;}
-      
-      setMessageType('success');
-      setMessage(`✅ Deployment queued successfully! ID: ${_data.deploymentId}`);
-      (event.target as HTMLFormElement).reset();
-    } catch (error) {_setMessageType('error');
-      setMessage("Network error occurred. Please try again.");} finally {_setLoading(false);}
-  }
-
-  const _getVerticalIcon = (_vertical: string) => {_switch (vertical) {
-      case "HEALTH": return <Shield className="w-5 h-5 text-blue-400" />;
-      case "EDUCATION": return <Building2 className="w-5 h-5 text-green-400" />;
-      case "LAW": return <Shield className="w-5 h-5 text-purple-400" />;
-      case "GOV": return <Users className="w-5 h-5 text-red-400" />;
-      default: return <Globe className="w-5 h-5 text-gray-400" />;}
-  };
-
-  const _getGovernanceIcon = (_type: string) => {_switch (type) {
-      case "ADMIN": return <Crown className="w-5 h-5 text-yellow-400" />;
-      case "DAO_LITE": return <Users className="w-5 h-5 text-blue-400" />;
-      case "DAO_FULL": return <Zap className="w-5 h-5 text-purple-400" />;
-      default: return <Crown className="w-5 h-5 text-gray-400" />;}
-  };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (_<div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {_/* Header */}
@@ -481,7 +429,6 @@ export default function AdminDeployPage() {_const [loading, _setLoading] = useSt
   )
 }
 
-<<<<<<< HEAD
 function labelFor(key: string) {
   switch (key) {
     case "marketplace": return "Marketplace",
@@ -520,41 +467,4 @@ function getFeatureDescription(key: string) {
     case "multi_currency": return "Multi-currency support",
     default: return "Core platform feature"
   }
-}
-=======
-function labelFor(_key: string) {_switch (key) {
-    case "marketplace": return "Marketplace";
-    case "zion_gpt": return "ZionGPT Core";
-    case "resume_ai": return "Resume AI";
-    case "token_rewards": return "Token System";
-    case "onchain_contracts": return "Smart Contracts";
-    case "kyc_aml": return "KYC/AML";
-    case "dao_voting": return "DAO Voting";
-    case "incubator_grants": return "Incubator";
-    case "academy": return "Zion Academy";
-    case "partner_api": return "Partner API";
-    case "regional_dashboards": return "Regional Dashboards";
-    case "vendor_plugin": return "Vendor Plugin";
-    case "web3_login": return "Web3 Login";
-    case "multi_currency": return "Multi-Currency";
-    default: return key;}
-}
-
-function getFeatureDescription(_key: string) {_switch (key) {
-    case "marketplace": return "Jobs, _talent, _and project marketplace";
-    case "zion_gpt": return "Core AI intelligence system";
-    case "resume_ai": return "AI-powered resume and proposal builder";
-    case "token_rewards": return "Token system with rewards";
-    case "onchain_contracts": return "Smart contract builder";
-    case "kyc_aml": return "Identity verification and compliance";
-    case "dao_voting": return "Proposal and voting system";
-    case "incubator_grants": return "Startup incubation and funding";
-    case "academy": return "Educational platform";
-    case "partner_api": return "API access for partners";
-    case "regional_dashboards": return "Regional and institutional views";
-    case "vendor_plugin": return "White-label vendor solutions";
-    case "web3_login": return "Web3 authentication and DID";
-    case "multi_currency": return "Multi-currency support";
-    default: return "Core platform feature";}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-}
+}}

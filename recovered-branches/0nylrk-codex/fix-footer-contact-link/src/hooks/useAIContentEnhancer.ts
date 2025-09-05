@@ -1,19 +1,13 @@
 
-<<<<<<< HEAD
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
-import { toast } from '@/hooks/use-toast',
-=======
-
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-type EnhancementType = 
+import { toast } from '@/hooks/use-toast',type EnhancementType = 
   | 'resume-summary' 
   | 'work-description' 
   | 'job-post' 
   | 'proposal' 
   | 'general',
 
-<<<<<<< HEAD
 export interface AIEnhancementOptions {
   enhancementType: EnhancementType,
   content?: string,
@@ -55,18 +49,10 @@ export function useAIContentEnhancer() {
       toast({
         title: &quot;AI Enhancement Failed&quot;,
         description: errorMessage,
-<<<<<<< HEAD
         variant: "destructive"
       }),
       console.error('Enhancement error:', err),
-      return null
-=======
-        variant: &quot;destructive&quot;
-      });
-      console.error('Enhancement error:', err);
-      return null;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+      return null    } finally {
       setIsEnhancing(false)
     }
   },
@@ -76,7 +62,6 @@ export function useAIContentEnhancer() {
     isEnhancing,
     error
   }
-=======
 export interface AIEnhancementOptions {_enhancementType: EnhancementType;
   content?: string;
   context?: string;
@@ -107,5 +92,4 @@ export function useAIContentEnhancer() {_const [isEnhancing, _setIsEnhancing] = 
   };
   
   return {_enhanceContent, _isEnhancing, _error};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

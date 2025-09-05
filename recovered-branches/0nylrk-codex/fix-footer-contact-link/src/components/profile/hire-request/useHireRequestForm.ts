@@ -1,22 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 import { useHireRequest } from "@/hooks/useHireRequest",
-import { TalentProfile } from "@/types/talent",
-=======
-import { useState } from &quot;react&quot;;
-import { useForm } from &quot;react-hook-form&quot;;
-import { zodResolver } from &quot;@hookform/resolvers/zod&quot;;
-import { z } from &quot;zod&quot;;
-import { useHireRequest } from &quot;@/hooks/useHireRequest&quot;;
-import { TalentProfile } from &quot;@/types/talent&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface UseHireRequestFormProps {
+import { TalentProfile } from "@/types/talent",interface UseHireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
   initialJobTitle?: string,
@@ -49,16 +37,9 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     budgetMin: z.number().min(1, &quot;Budget minimum is required&quot;),
     budgetMax: z.number().min(1, &quot;Budget maximum is required&quot;)
   }).refine(data => data.budgetMax >= data.budgetMin, {
-<<<<<<< HEAD
     message: "Maximum budget must be greater than or equal to minimum budget",
     path: ["budgetMax"]
   }),
-=======
-    message: &quot;Maximum budget must be greater than or equal to minimum budget&quot;,
-    path: [&quot;budgetMax&quot;]
-  });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
   // Initialize the form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -67,7 +48,6 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
       requesterEmail: userDetails?.email || "&quot;,
       projectOverview: initialJobTitle ? `Job: ${initialJobTitle}` : "&quot;,
       timeline: "&quot;,
-=======
 
 interface UseHireRequestFormProps {_talent: TalentProfile;
   onClose: () => void;
@@ -95,23 +75,16 @@ export function useHireRequestForm(_{_talent, _onClose, _initialJobTitle, _userD
   const _form = useForm<FormValues>({_resolver: zodResolver(formSchema), _defaultValues: {
       requesterName: userDetails?.name || "", _requesterEmail: userDetails?.email || "", _projectOverview: initialJobTitle ? `Job: ${initialJobTitle}` : "",
       timeline: "",
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       budgetMin: talent.hourly_rate || 25,
       budgetMax: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50
     }
   }),
 
   // Handle form submission
-<<<<<<< HEAD
   const onSubmit = async (values: FormValues) => {
-    setIsSubmitting(true),
-=======
-  const _onSubmit = async (_values: FormValues) => {_setIsSubmitting(true);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    try {
+    setIsSubmitting(true),    try {
       const _requestData = {
         talent: {
-<<<<<<< HEAD
           id: talent.id || "&quot;,
           full_name: talent.full_name,
           professional_title: talent.professional_title},
@@ -133,12 +106,7 @@ export function useHireRequestForm(_{_talent, _onClose, _initialJobTitle, _userD
         onClose()
       }
     } catch (error) {
-<<<<<<< HEAD
-      console.error("Error submitting hire request:", error)
-=======
-      console.error(&quot;Error submitting hire request:", error);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+      console.error("Error submitting hire request:", error)    } finally {
       setIsSubmitting(false)
     }
   },
@@ -148,7 +116,6 @@ export function useHireRequestForm(_{_talent, _onClose, _initialJobTitle, _userD
     isSubmitting,
     onSubmit
   }
-=======
           id: talent.id || "", _full_name: talent.full_name, _professional_title: talent.professional_title},
         requester: {_name: values.requesterName, _email: values.requesterEmail, _id: userDetails?.id},
         project: {_overview: values.projectOverview, _timeline: values.timeline, _budgetMin: values.budgetMin, _budgetMax: values.budgetMax}
@@ -160,5 +127,4 @@ export function useHireRequestForm(_{_talent, _onClose, _initialJobTitle, _userD
   };
 
   return {_form, _isSubmitting, _onSubmit};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

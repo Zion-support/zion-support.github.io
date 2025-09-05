@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { useParams } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
@@ -8,51 +6,22 @@ import { Button } from "@/components/ui/button",
 import { Skeleton } from "@/components/ui/skeleton",
 import { Star, MessageSquare, Brain, Shield } from "lucide-react",
 import { cn } from "@/lib/utils",
-import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
+import { MARKETPLACELISTINGS } from "@/data/marketplaceData",
 import { toast } from "@/hooks/use-toast",
 import { PaymentButton } from "@/components/transactions/PaymentButton",
 import { AppLayout } from "@/layout/AppLayout",
 import { ProfileContact } from "@/components/profile/ProfileContact",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-=======
-import { useState } from &quot;react&quot;;
-import { useParams } from &quot;react-router-dom&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Skeleton } from &quot;@/components/ui/skeleton&quot;;
-import { Star, MessageSquare, Brain, Shield } from &quot;lucide-react&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-import { MARKETPLACE_LISTINGS } from &quot;@/data/marketplaceData&quot;;
-import { toast } from &quot;@/hooks/use-toast&quot;;
-import { PaymentButton } from &quot;@/components/transactions/PaymentButton&quot;;
-import { AppLayout } from &quot;@/layout/AppLayout&quot;;
-import { ProfileContact } from &quot;@/components/profile/ProfileContact&quot;;
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from &quot;@/components/ui/dialog&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-export default function ListingDetail() {_// useParams may be untyped in this environment, _so avoid passing a
+export default function ListingDetail() {_// useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-<<<<<<< HEAD
   const { id } = useParams() as { id?: string },
   const [selectedImageIndex, setSelectedImageIndex] = useState(0),
   const [isLoading, setIsLoading] = useState(false),
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false),
 
-  // Find the listing from our shared data source - now also checking equipment listings
-  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
-=======
-  const { id} = useParams() as {_id?: string};
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
-
-  // Find the listing from our shared data source - now also checking equipment listings
-  const _listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-  if (!listing) {_return (
+  // Find the listing from our shared data source - now also checking equipment listings,
+const listing = MARKETPLACELISTINGS.find(item => item.id === id),
+  if (!listing) {return (
       <AppLayout>
         <div className=&quot;min-h-screen bg-zion-blue py-12 px-4&quot;>
           <div className=&quot;container mx-auto&quot;>
@@ -66,7 +35,6 @@ export default function ListingDetail() {_// useParams may be untyped in this en
           </div>
         </div>
       </AppLayout>
-<<<<<<< HEAD
     )
   }
 
@@ -84,23 +52,16 @@ export default function ListingDetail() {_// useParams may be untyped in this en
               <div className=&quot;bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light&quot;>
                 <div className=&quot;aspect-[16/9] w-full relative&quot;>
                   {listing.images && listing.images.length > 0 ? (
-                    <img 
-                      src={listing.images[selectedImageIndex]} 
+                    <img,
+src={listing.images[selectedImageIndex]} 
                       alt={listing.title} 
                       className=&quot;w-full h-full object-cover&quot;
                       onError={(e) => {
-<<<<<<< HEAD
                         const target = e.target as HTMLImageElement,
-                        target.src = "/placeholder.svg"
-=======
-                        const target = e.target as HTMLImageElement;
-                        target.src = &quot;/placeholder.svg&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-                      }}
-=======
-    );}
+                        target.src = "/placeholder.svg"                      }}
+    )}
 
-  const _handleContact = () => {_setIsContactDialogOpen(true);};
+  const handleContact = () => {setIsContactDialogOpen(true)};
 
   return (_<AppLayout>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -110,15 +71,14 @@ export default function ListingDetail() {_// useParams may be untyped in this en
             <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
                 <div className="aspect-[16/9] w-full relative">
-                  {_listing.images && listing.images.length > 0 ? (
-                    <img 
-                      src={listing.images[selectedImageIndex]} 
-                      alt={_listing.title} 
+                  {listing.images && listing.images.length > 0 ? (
+                    <img,
+src={listing.images[selectedImageIndex]} 
+                      alt={listing.title} 
                       className="w-full h-full object-cover"
                       onError={_(e) => {
-                        const _target = e.target as HTMLImageElement;
-                        target.src = "/placeholder.svg";}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+                        const target = e.target as HTMLImageElement;
+                        target.src = "/placeholder.svg"}}
                     />
                   ) : (
                     <div className=&quot;w-full h-full flex items-center justify-center bg-zion-blue-light/20&quot;>
@@ -127,48 +87,39 @@ export default function ListingDetail() {_// useParams may be untyped in this en
                   )}
                 </div>
                 
-<<<<<<< HEAD
                 {listing.images && listing.images.length > 1 && (
                   <div className=&quot;flex p-4 gap-2 overflow-x-auto&quot;>
                     {listing.images.map((image, index) => (
-                      <div 
-                        key={index}
+                      <div,
+key={index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={cn(
                           &quot;w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2&quot;,
                           index === selectedImageIndex ? &quot;border-zion-purple&quot; : &quot;border-transparent&quot;
                         )}
                       >
-                        <img 
-                          src={image} 
+                        <img,
+src={image} 
                           alt={`${listing.title} - image ${index + 1}`} 
                           className=&quot;w-full h-full object-cover&quot;
                           onError={(e) => {
-<<<<<<< HEAD
                             const target = e.target as HTMLImageElement,
-                            target.src = "/placeholder.svg"
-=======
-                            const target = e.target as HTMLImageElement;
-                            target.src = &quot;/placeholder.svg&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-                          }}
-=======
-                {_listing.images && listing.images.length > 1 && (_<div className="flex p-4 gap-2 overflow-x-auto">
-                    {listing.images.map((image, _index) => (_<div 
-                        key={index}
+                            target.src = "/placeholder.svg"                          }}
+                {listing.images && listing.images.length > 1 && (_<div className="flex p-4 gap-2 overflow-x-auto">
+                    {listing.images.map((image, index) => (_<div,
+key={index}
                         onClick={_() => setSelectedImageIndex(index)}
-                        className={_cn(
-                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2", _index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
+                        className={cn(
+                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2", index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         )}
                       >
-                        <img 
-                          src={_image} 
-                          alt={_`${listing.title} - image ${_index + 1}`} 
+                        <img,
+src={image} 
+                          alt={_`${listing.title} - image ${index + 1}`} 
                           className="w-full h-full object-cover"
-                          onError={_(_e) => {
-                            const _target = e.target as HTMLImageElement;
-                            target.src = "/placeholder.svg";}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+                          onError={_(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.src = "/placeholder.svg"}}
                         />
                       </div>
                     ))}
@@ -176,7 +127,6 @@ export default function ListingDetail() {_// useParams may be untyped in this en
                 )}
               </div>
 
-<<<<<<< HEAD
               {/* Description Section */}
               <div className=&quot;mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light&quot;>
                 <h2 className=&quot;text-2xl font-bold text-white mb-4&quot;>Description</h2>
@@ -188,22 +138,7 @@ export default function ListingDetail() {_// useParams may be untyped in this en
                   <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
                     <div className=&quot;flex items-start gap-3&quot;>
                       <div className=&quot;p-2 rounded-full bg-zion-purple/20&quot;>
-                        <Brain className=&quot;h-5 w-5 text-zion-purple&quot; />
-=======
-              {_/* Description Section */}
-              <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
-                <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
-                <p className="text-zion-slate-light whitespace-pre-line">{_listing.description}</p>
-                
-                {_/* Features */}
-                <div className="mt-8">
-                  <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="flex items-start gap-3">
-                      <div className="p-2 rounded-full bg-zion-purple/20">
-                        <Brain className="h-5 w-5 text-zion-purple" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      </div>
+                        <Brain className=&quot;h-5 w-5 text-zion-purple&quot; />                      </div>
                       <div>
                         <h4 className=&quot;font-medium text-white&quot;>Advanced AI</h4>
                         <p className=&quot;text-sm text-zion-slate-light&quot;>State-of-the-art machine learning techniques</p>
@@ -221,31 +156,19 @@ export default function ListingDetail() {_// useParams may be untyped in this en
                   </div>
                 </div>
                 
-<<<<<<< HEAD
                 {/* Tags */}
                 <div className=&quot;mt-8&quot;>
                   <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Tags</h3>
                   <div className=&quot;flex flex-wrap gap-2&quot;>
                     {listing.tags.map((tag, i) => (
                       <Badge key={i} variant=&quot;outline&quot; className=&quot;border-zion-slate-dark text-zion-slate-light py-1 px-3&quot;>
-                        {tag}
-=======
-                {_/* Tags */}
-                <div className="mt-8">
-                  <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {_listing.tags.map(_(tag, _i) => (
-                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
-                        {_tag}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      </Badge>
+                        {tag}                      </Badge>
                     ))}
                   </div>
                 </div>
               </div>
             </div>
             
-<<<<<<< HEAD
             {/* Right Column - Details */}
             <div className=&quot;lg:col-span-1&quot;>
               <div className=&quot;bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6&quot;>
@@ -254,76 +177,35 @@ export default function ListingDetail() {_// useParams may be untyped in this en
                     {listing.category}
                   </Badge>
                   {listing.featured && (
-                    <Badge className=&quot;ml-2 bg-zion-cyan/20 text-zion-cyan&quot;>
-=======
-            {_/* Right Column - Details */}
-            <div className="lg:col-span-1">
-              <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
-                <div className="mb-2">
-                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
-                    {_listing.category}
-                  </Badge>
-                  {_listing.featured && (
-                    <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      Featured
+                    <Badge className=&quot;ml-2 bg-zion-cyan/20 text-zion-cyan&quot;>                      Featured
                     </Badge>
                   )}
                 </div>
                 
-<<<<<<< HEAD
                 <h1 className=&quot;text-2xl font-bold text-white mb-4&quot;>{listing.title}</h1>
                 
                 {listing.rating && (
                   <div className=&quot;flex items-center gap-2 mb-6&quot;>
                     <div className=&quot;flex items-center&quot;>
                       {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
+                        <Star,
+key={i}
                           className={cn(
                             &quot;h-5 w-5&quot;,
-                            i < Math.floor(listing.rating!) ? &quot;text-zion-cyan fill-zion-cyan&quot; : &quot;text-zion-slate-light&quot;
-=======
-                <h1 className="text-2xl font-bold text-white mb-4">{_listing.title}</h1>
-                
-                {_listing.rating && (
-                  <div className="flex items-center gap-2 mb-6">
-                    <div className="flex items-center">
-                      {[...Array(5)].map(_(_, _i) => (
-                        <Star
-                          key={i}
-                          className={_cn(
-                            "h-5 w-5", _i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                          )}
+                            i < Math.floor(listing.rating!) ? &quot;text-zion-cyan fill-zion-cyan&quot; : &quot;text-zion-slate-light&quot;                          )}
                         />
                       ))}
                     </div>
-<<<<<<< HEAD
                     <span className=&quot;text-sm text-zion-slate-light&quot;>
-                      {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
-=======
-                    <span className="text-sm text-zion-slate-light">
-                      {_listing.rating.toFixed(1)} ({_listing.reviewCount} reviews)
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </span>
+                      {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)                    </span>
                   </div>
                 )}
                 
-<<<<<<< HEAD
                 {/* Price */}
                 <div className=&quot;mb-6&quot;>
                   {listing.price !== null ? (
                     <div className=&quot;text-3xl font-bold text-white&quot;>
-                      {listing.currency}{listing.price.toLocaleString()}
-=======
-                {_/* Price */}
-                <div className="mb-6">
-                  {_listing.price !== null ? (
-                    <div className="text-3xl font-bold text-white">
-                      {listing.currency}{_listing.price.toLocaleString()}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </div>
+                      {listing.currency}{listing.price.toLocaleString()}                    </div>
                   ) : (
                     <div className=&quot;text-2xl font-bold text-white&quot;>
                       Custom Pricing
@@ -331,97 +213,63 @@ export default function ListingDetail() {_// useParams may be untyped in this en
                   )}
                 </div>
                 
-<<<<<<< HEAD
                 {/* Action Buttons */}
                 <div className=&quot;space-y-3 mb-8&quot;>
                   {listing.price !== null ? (
-                    <PaymentButton
-                      amount={listing.price}
+                    <PaymentButton,
+amount={listing.price}
                       serviceId={listing.id}
                       providerId={listing.author.id}
                       buttonText=&quot;Buy Now&quot;
                       className=&quot;w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6&quot;
                       onPaymentInitiated={() => {
                         toast({
-<<<<<<< HEAD
                           title: "Payment Processing",
                           description: "Redirecting to secure checkout..."
-                        })
-=======
-                          title: &quot;Payment Processing&quot;,
-                          description: &quot;Redirecting to secure checkout...&quot;
-                        });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-                {_/* Action Buttons */}
+                        })                {_/* Action Buttons */}
                 <div className="space-y-3 mb-8">
-                  {_listing.price !== null ? (_<PaymentButton
-                      amount={listing.price}
-                      serviceId={_listing.id}
-                      providerId={_listing.author.id}
+                  {listing.price !== null ? (_<PaymentButton,
+amount={listing.price}
+                      serviceId={listing.id}
+                      providerId={listing.author.id}
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
                       onPaymentInitiated={_() => {
                         toast({
-                          title: "Payment Processing", _description: "Redirecting to secure checkout..."});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+                          title: "Payment Processing", description: "Redirecting to secure checkout..."})
                       }}
                     />
                   ) : (
-                    <Button 
-<<<<<<< HEAD
-                      onClick={handleContact}
+                    <Button,
+onClick={handleContact}
                       disabled={isLoading}
                       className=&quot;w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6&quot;
                     >
-                      {isLoading ? &quot;Processing...&quot; : &quot;Request Quote&quot;}
-=======
-                      onClick={_handleContact}
-                      disabled={_isLoading}
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
-                    >
-                      {_isLoading ? "Processing..." : "Request Quote"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </Button>
+                      {isLoading ? &quot;Processing...&quot; : &quot;Request Quote&quot}                    </Button>
                   )}
                   
-                  <Button 
-<<<<<<< HEAD
-                    variant=&quot;outline&quot; 
+                  <Button,
+variant=&quot;outline&quot; 
                     onClick={handleContact}
                     disabled={isLoading}
-                    className=&quot;w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10&quot;
-=======
-                    variant="outline" 
-                    onClick={_handleContact}
-                    disabled={_isLoading}
-                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  >
+                    className=&quot;w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10&quot;                  >
                     <MessageSquare className=&quot;h-4 w-4 mr-2&quot; />
                     Contact Publisher
                   </Button>
                 </div>
                 
-<<<<<<< HEAD
                 {/* Publisher Info */}
                 <div className=&quot;border-t border-zion-blue-light pt-6&quot;>
                   <h3 className=&quot;text-lg font-bold text-white mb-3&quot;>Publisher</h3>
                   <div className=&quot;flex items-center gap-3&quot;>
                     {listing.author.avatarUrl ? (
-                      <img 
-                        src={listing.author.avatarUrl} 
+                      <img,
+src={listing.author.avatarUrl} 
                         alt={listing.author.name} 
                         className=&quot;h-12 w-12 rounded-full&quot;
                         onError={(e) => {
-<<<<<<< HEAD
                           const target = e.target as HTMLImageElement,
-                          target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
-=======
-                          const target = e.target as HTMLImageElement;
-                          target.src = &quot;https://ui-avatars.com/api/?name=&quot; + encodeURIComponent(listing.author.name);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-                        }}
+                          target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)                        }}
                       />
                     ) : (
                       <div className=&quot;h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center&quot;>
@@ -431,33 +279,30 @@ export default function ListingDetail() {_// useParams may be untyped in this en
                     <div>
                       <p className=&quot;font-medium text-white&quot;>{listing.author.name}</p>
                       <p className=&quot;text-xs text-zion-slate-light&quot;>Member since 2022</p>
-=======
                 {_/* Publisher Info */}
                 <div className="border-t border-zion-blue-light pt-6">
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
                   <div className="flex items-center gap-3">
-                    {_listing.author.avatarUrl ? (_<img 
-                        src={listing.author.avatarUrl} 
-                        alt={_listing.author.name} 
+                    {listing.author.avatarUrl ? (_<img,
+src={listing.author.avatarUrl} 
+                        alt={listing.author.name} 
                         className="h-12 w-12 rounded-full"
                         onError={_(e) => {
-                          const _target = e.target as HTMLImageElement;
-                          target.src = "https://ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name);}}
+                          const target = e.target as HTMLImageElement;
+                          target.src = "https://ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)}}
                       />
                     ) : (
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">
-                        <span className="text-lg font-medium text-zion-purple">{_listing.author.name.charAt(0)}</span>
+                        <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span>
                       </div>
                     )}
                     <div>
-                      <p className="font-medium text-white">{_listing.author.name}</p>
+                      <p className="font-medium text-white">{listing.author.name}</p>
                       <p className="text-xs text-zion-slate-light">Member since 2022</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                     </div>
                   </div>
                 </div>
                 
-<<<<<<< HEAD
                 {/* Additional Info */}
                 <div className=&quot;border-t border-zion-blue-light mt-6 pt-6&quot;>
                   <div className=&quot;flex justify-between mb-2&quot;>
@@ -466,19 +311,7 @@ export default function ListingDetail() {_// useParams may be untyped in this en
                   </div>
                   <div className=&quot;flex justify-between mb-2&quot;>
                     <span className=&quot;text-zion-slate-light&quot;>ID</span>
-                    <span className=&quot;text-white&quot;>{listing.id}</span>
-=======
-                {_/* Additional Info */}
-                <div className="border-t border-zion-blue-light mt-6 pt-6">
-                  <div className="flex justify-between mb-2">
-                    <span className="text-zion-slate-light">Listed on</span>
-                    <span className="text-white">{_new Date(listing.createdAt).toLocaleDateString()}</span>
-                  </div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-zion-slate-light">ID</span>
-                    <span className="text-white">{_listing.id}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </div>
+                    <span className=&quot;text-white&quot;>{listing.id}</span>                  </div>
                 </div>
               </div>
             </div>
@@ -486,29 +319,15 @@ export default function ListingDetail() {_// useParams may be untyped in this en
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
-        <DialogContent className=&quot;bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md&quot;>
-=======
-      {_/* Contact Dialog */}
-      <Dialog open={_isContactDialogOpen} onOpenChange={_setIsContactDialogOpen}>
-        <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          <DialogHeader>
+        <DialogContent className=&quot;bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md&quot;>          <DialogHeader>
             <DialogTitle className=&quot;text-xl font-bold text-white&quot;>Contact Publisher</DialogTitle>
           </DialogHeader>
-          <ProfileContact 
-<<<<<<< HEAD
-            email={listing.author.email} // TypeScript now knows this might be undefined
-            profileName={listing.author.name}
-            profileType=&quot;service&quot;
-=======
-            email={_listing.author.email} // TypeScript now knows this might be undefined
-            profileName={_listing.author.name}
-            profileType="service"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          />
+          <ProfileContact,
+email={listing.author.email} // TypeScript now knows this might be undefined,
+profileName={listing.author.name}
+            profileType=&quot;service&quot;          />
         </DialogContent>
       </Dialog>
     </AppLayout>

@@ -1,13 +1,8 @@
 
 // Content monitoring functionality
-<<<<<<< HEAD
 import { FraudFlag, FraudSeverity } from '@/types/fraud',
 import { analyzeContent } from './analyzeContent',
-import { flagContent } from './flagContent',
-=======
-
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-/**
+import { flagContent } from './flagContent',/**
  * Create a monitoring system helper to easily monitor any content
  */
 export const _monitorContent = async (
@@ -16,13 +11,8 @@ export const _monitorContent = async (
   contentType: FraudFlag['content_type'],
   contentId: string,
   content: string
-<<<<<<< HEAD
 ): Promise<void> => {
-  const analysis = analyzeContent(content),
-=======
-): Promise<void> => {_const _analysis = analyzeContent(content);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  
+  const analysis = analyzeContent(content),  
   if (analysis.isSuspicious) {
     let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
     
@@ -32,13 +22,8 @@ export const _monitorContent = async (
       r.includes('external') || 
       r.includes('bypass')
     )) {
-<<<<<<< HEAD
       severity = 'dangerous'
-    }
-=======
-      severity = 'dangerous';}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    
+    }    
     await flagContent(
       userId,
       userEmail,
@@ -52,17 +37,9 @@ export const _monitorContent = async (
     
     // If this is a 'dangerous' flag, automatically hide content
     // This would be implemented in a real system with appropriate flags
-<<<<<<< HEAD
     if (severity === 'dangerous') {
-<<<<<<< HEAD
-      // // // console.log('Auto-hiding dangerous content:', contentId),
-=======
-      // console.log('Auto-hiding dangerous content:', contentId);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      // Code to hide content would go here
+      // // // console.log('Auto-hiding dangerous content:', contentId),      // Code to hide content would go here
     }
-=======
     if (severity === 'dangerous') {_// Code to hide content would go here}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   }
 },

@@ -1,31 +1,15 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react",
-=======
-import React from &quot;react&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import {
+import React from "react",import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 import { CalendarIcon, Search } from "lucide-react",
 import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-=======
-  TableRow} from &quot;@/components/ui/table&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { CalendarIcon, Search } from &quot;lucide-react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export function TeamActivity() {
+import { Input } from "@/components/ui/input",export function TeamActivity() {
   // Mock activity data
   const activities = [
     {
@@ -69,12 +53,7 @@ export function TeamActivity() {
       action: &quot;Updated budget&quot;,
       target: &quot;Monthly spending cap&quot;,
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
-<<<<<<< HEAD
       category: "billing"}],
-=======
-      category: &quot;billing&quot;}];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
   // Function to format the date in a readable way
   const formatDate = (date: Date) => {
     const now = new Date(),
@@ -95,20 +74,11 @@ export function TeamActivity() {
   },
 
   const getCategoryBadge = (category: string) => {
-<<<<<<< HEAD
     const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {
       jobs: { variant: "default" },
       candidates: { variant: "outline" },
       team: { variant: "secondary" },
       billing: { variant: "destructive" }},
-=======
-    const categoryStyles: Record<string, { variant: &quot;default&quot; | &quot;outline&quot; | &quot;secondary&quot; | &quot;destructive&quot; }> = {
-      jobs: { variant: &quot;default&quot; },
-      candidates: { variant: &quot;outline&quot; },
-      team: { variant: &quot;secondary&quot; },
-      billing: { variant: &quot;destructive&quot; }};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
   },
 
@@ -119,7 +89,6 @@ export function TeamActivity() {
         <div className=&quot;flex items-center gap-2&quot;>
           <div className=&quot;relative&quot;>
             <Search className=&quot;absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground&quot; />
-=======
 import React from "react";
 import {_Table, _TableBody, _TableCell, _TableHead, _TableHeader, _TableRow} from "@/components/ui/table";
 
@@ -161,7 +130,6 @@ export function TeamActivity() {_// Mock activity data
         <div className="flex items-center gap-2">
           <div className="relative">
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <Input
               type=&quot;search&quot;
               placeholder=&quot;Search activities...&quot;
@@ -188,7 +156,6 @@ export function TeamActivity() {_// Mock activity data
           <TableBody>
             {_activities.map((activity) => (
               <TableRow key={activity.id}>
-<<<<<<< HEAD
                 <TableCell className=&quot;font-medium&quot;>{activity.user}</TableCell>
                 <TableCell>{activity.action}</TableCell>
                 <TableCell>
@@ -196,18 +163,7 @@ export function TeamActivity() {_// Mock activity data
                 </TableCell>
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>
                 <TableCell className=&quot;text-muted-foreground&quot;>
-                  {formatDate(activity.timestamp)}
-=======
-                <TableCell className="font-medium">{_activity.user}</TableCell>
-                <TableCell>{_activity.action}</TableCell>
-                <TableCell>
-                  <span className="font-medium">{_activity.target}</span>
-                </TableCell>
-                <TableCell>{_getCategoryBadge(activity.category)}</TableCell>
-                <TableCell className="text-muted-foreground">
-                  {_formatDate(activity.timestamp)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                </TableCell>
+                  {formatDate(activity.timestamp)}                </TableCell>
               </TableRow>
             ))}
           </TableBody>

@@ -1,49 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-=======
-import React, {_useState, _useEffect} from 'react';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-import Link from 'next/link';
+import React, { useState, useEffect } from 'react';import Link from 'next/link';
 
-<<<<<<< HEAD
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-=======
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { 
-  Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, 
-  Cpu, Database, Users, Award, BookOpen, Phone
-} from 'lucide-react',
-
-const EnhancedNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false),
-  const [isScrolled, setIsScrolled] = useState(false),
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     },
-=======
-const EnhancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = useState(false);
-  const [isScrolled, _setIsScrolled] = useState(false);
+const EnhancedNavigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect__(() => {
-    const _handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+  useEffect_(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)};
 
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
-<<<<<<< HEAD
-=======
   const services = [
     { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },
     { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' },
@@ -70,18 +44,12 @@ const EnhancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = useSta
     setIsOpen(false)
   },
 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
   return (
     <nav className={_`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-xl border-b border-white/10 shadow-2xl' 
-<<<<<<< HEAD
         : 'bg-transparent'
     }`}>
-<<<<<<< HEAD
-=======
-        : 'bg-transparent'}`}>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center space-x-3">
@@ -103,7 +71,6 @@ const EnhancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = useSta
             </Link>
           </div>
         </div>
-=======
       <div className=&quot;max-w-7xl mx-auto px-6&quot;>
         <div className=&quot;flex items-center justify-between h-20&quot;>
           {/* Logo */}
@@ -120,8 +87,8 @@ const EnhancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = useSta
           <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
             {/* Services Dropdown */}
             <div className=&quot;relative&quot;>
-              <button
-                onClick={() => toggleDropdown('services')}
+              <button,
+onClick={() => toggleDropdown('services')}
                 className=&quot;flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-200 py-2&quot;
               >
                 <span>Solutions</span>
@@ -132,8 +99,8 @@ const EnhancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = useSta
               
               <AnimatePresence>
                 {activeDropdown === 'services' && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                  <motion.div,
+initial={{ opacity: 0, y: 10, scale: 0.95 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
                     transition={{ duration: 0.2 }}
@@ -145,8 +112,8 @@ const EnhancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = useSta
                       </h3>
                       <div className=&quot;grid grid-cols-1 gap-2&quot;>
                         {services.map((service) => (
-                          <Link
-                            key={service.name}
+                          <Link,
+key={service.name}
                             href={service.href}
                             onClick={closeAllDropdowns}
                             className=&quot;flex items-start space-x-3 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200 group&quot;
@@ -166,8 +133,8 @@ const EnhancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = useSta
 
             {/* Company Dropdown */}
             <div className=&quot;relative&quot;>
-              <button
-                onClick={() => toggleDropdown('company')}
+              <button,
+onClick={() => toggleDropdown('company')}
                 className=&quot;flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-200 py-2&quot;
               >
                 <span>About</span>
@@ -184,8 +151,8 @@ const EnhancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = useSta
                     </h3>
                     <div className=&quot;grid grid-cols-1 gap-2&quot;>
                       {company.map((item) => (
-                        <Link
-                          key={item.name}
+                        <Link,
+key={item.name}
                           href={item.href}
                           onClick={closeAllDropdowns}
                           className=&quot;flex items-start space-x-3 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200 group&quot;
@@ -208,8 +175,8 @@ const EnhancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = useSta
             </div>
 
             {/* Contact Button */}
-            <Link
-              href=&quot;mailto:kleber@ziontechgroup.com&quot;
+            <Link,
+href=&quot;mailto:kleber@ziontechgroup.com&quot;
               className=&quot;px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl&quot;
             >
               Get Started
@@ -217,8 +184,8 @@ const EnhancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = useSta
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
+          <button,
+onClick={() => setIsOpen(!isOpen)}
             className=&quot;lg:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors&quot;
           >
             {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}
@@ -227,8 +194,8 @@ const EnhancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = useSta
 
         {/* Mobile Menu */}
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
+          <motion.div,
+initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             className=&quot;lg:hidden py-6 border-t border-white/10&quot;
@@ -240,8 +207,8 @@ const EnhancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = useSta
                 </h3>
                 <div className=&quot;space-y-2&quot;>
                   {services.map((service) => (
-                    <Link
-                      key={service.name}
+                    <Link,
+key={service.name}
                       href={service.href}
                       onClick={closeAllDropdowns}
                       className=&quot;flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-colors&quot;
@@ -259,8 +226,8 @@ const EnhancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = useSta
                 </h3>
                 <div className=&quot;space-y-2&quot;>
                   {company.map((item) => (
-                    <Link
-                      key={item.name}
+                    <Link,
+key={item.name}
                       href={item.href}
                       onClick={closeAllDropdowns}
                       className=&quot;flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-colors&quot;
@@ -274,14 +241,9 @@ const EnhancedNavigation: React.FC = () => {_const [isOpen, _setIsOpen] = useSta
             </div>
           </motion.div>
         )}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       </div>
     </nav>
   )
 },
 
-<<<<<<< HEAD
 export default EnhancedNavigation;
-=======
-export default EnhancedNavigation,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

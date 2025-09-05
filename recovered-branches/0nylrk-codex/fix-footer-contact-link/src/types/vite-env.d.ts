@@ -1,7 +1,5 @@
 
 
-
-<<<<<<< HEAD
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string,
   readonly VITE_SUPABASE_URL: string,
@@ -36,19 +34,13 @@ declare module 'lovable-tagger' {
 }
 
 // Add Node.js globals
-<<<<<<< HEAD
-declare let __dirname: string,
-=======
-declare let __dirname: string;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-declare let process: {
+declare let __dirname: string,declare let process: {
   env: {
     [key: string]: string | undefined,
     NODE_ENV: 'development' | 'production' | 'test',
     PORT?: string
   }
 },
-=======
 interface ImportMetaEnv {_readonly VITE_APP_TITLE: string;
   readonly VITE_SUPABASE_URL: string;
   readonly VITE_SUPABASE_ANON_KEY: string;
@@ -76,4 +68,3 @@ declare var process: {_env: {
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;}
 };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

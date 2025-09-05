@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
@@ -8,19 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ForumReply } from "@/types/community",
-import { cn } from "@/lib/utils",
-=======
-import { formatDistanceToNow } from &quot;date-fns&quot;;
-import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader } from &quot;@/components/ui/card&quot;;
-import { Avatar, AvatarFallback, AvatarImage } from &quot;@/components/ui/avatar&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Badge } from &quot;@/components/ui/badge&quot;;
-import { ForumReply } from &quot;@/types/community&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface ReplyCardProps {
+import { cn } from "@/lib/utils",interface ReplyCardProps {
   reply: ForumReply,
   onMarkAnswer?: () => void,
   canMarkAnswer?: boolean,
@@ -59,7 +45,6 @@ export const ReplyCard = ({
             {reply.isAnswer && (
               <Badge className=&quot;ml-2 bg-green-500 text-white&quot;>
                 <CheckCircle className=&quot;h-3 w-3 mr-1&quot; />
-=======
 
 interface ReplyCardProps {_reply: ForumReply;
   onMarkAnswer?: () => void;
@@ -90,19 +75,12 @@ export const _ReplyCard = (_{_reply, _onMarkAnswer, _canMarkAnswer = false, _cla
             {_reply.isAnswer && (
               <Badge className="ml-2 bg-green-500 text-white">
                 <CheckCircle className="h-3 w-3 mr-1" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
                 Answer
               </Badge>
             )}
           </div>
-<<<<<<< HEAD
           <div className=&quot;text-xs text-muted-foreground&quot;>
-            {timeAgo}
-=======
-          <div className="text-xs text-muted-foreground">
-            {_timeAgo}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </div>
+            {timeAgo}          </div>
         </div>
       </CardHeader>
       
@@ -110,7 +88,6 @@ export const _ReplyCard = (_{_reply, _onMarkAnswer, _canMarkAnswer = false, _cla
         <div>{_reply.content}</div>
       </CardContent>
       
-<<<<<<< HEAD
       <CardFooter className=&quot;flex justify-between&quot;>
         <div className=&quot;flex items-center gap-2&quot;>
           <Button variant=&quot;ghost&quot; size=&quot;sm&quot; className=&quot;px-2&quot;>
@@ -125,25 +102,7 @@ export const _ReplyCard = (_{_reply, _onMarkAnswer, _canMarkAnswer = false, _cla
         
         {canMarkAnswer && !reply.isAnswer && (
           <Button size=&quot;sm&quot; variant=&quot;outline&quot; onClick={onMarkAnswer} className=&quot;text-green-600&quot;>
-            <CheckCircle className=&quot;h-4 w-4 mr-1&quot; />
-=======
-      <CardFooter className="flex justify-between">
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="sm" className="px-2">
-            <ThumbsUp className="h-4 w-4 mr-1" />
-            <span>{_reply.upvotes}</span>
-          </Button>
-          <Button variant="ghost" size="sm" className="px-2">
-            <ThumbsDown className="h-4 w-4 mr-1" />
-            <span>{_reply.downvotes}</span>
-          </Button>
-        </div>
-        
-        {_canMarkAnswer && !reply.isAnswer && (
-          <Button size="sm" variant="outline" onClick={onMarkAnswer} className="text-green-600">
-            <CheckCircle className="h-4 w-4 mr-1" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            Mark as Answer
+            <CheckCircle className=&quot;h-4 w-4 mr-1&quot; />            Mark as Answer
           </Button>
         )}
       </CardFooter>

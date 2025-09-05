@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -12,37 +10,16 @@ import { Input } from "@/components/ui/input",
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
 import { BlogPost } from "@/types/blog",
 import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost",
-import { BLOG_POSTS } from "@/data/blog-posts",
-=======
-import { useState, useEffect } from &quot;react&quot;;
-import Link from &quot;next/link&quot;;
-import { useRouter } from &quot;next/router&quot;;
-import { useDebounce } from &quot;@/hooks/useDebounce&quot;;
-import { GradientHeading } from &quot;@/components/GradientHeading&quot;;
-import { SEO } from &quot;@/components/SEO&quot;;
-import { Card, CardContent, CardFooter } from &quot;@/components/ui/card&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from &quot;@/components/ui/select&quot;;
-import { BlogPost } from &quot;@/types/blog&quot;;
-import { generateRandomBlogPost } from &quot;@/utils/generateRandomBlogPost&quot;;
-import { BLOG_POSTS } from &quot;@/data/blog-posts&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import { Search } from 'lucide-react'
+import { BLOGPOSTS } from "@/data/blog-posts",import { Search } from 'lucide-react'
 import { fetchWithRetry } from '@/utils/fetchWithRetry',
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
-
-// Categories for filtering
+// Categories for filtering,
 const CATEGORIES = [
-<<<<<<< HEAD
-=======
 import Link from "next/link";
 
-
-// Categories for filtering
-const _CATEGORIES = [
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+// Categories for filtering,
+const CATEGORIES = [
   "All Categories",
   "Trends",
   "Marketing",
@@ -51,76 +28,31 @@ const _CATEGORIES = [
   "Recruitment",
   "Infrastructure"
 ],
-=======
-  &quot;All Categories&quot;,
-  &quot;Trends&quot;,
-  &quot;Marketing&quot;,
-  &quot;Sustainability&quot;,
-  &quot;Ethics&quot;,
-  &quot;Recruitment&quot;,
-  &quot;Infrastructure&quot;
-];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
-<<<<<<< HEAD
 export interface BlogProps {
   posts?: BlogPost[]
 }
 
-export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
-<<<<<<< HEAD
-  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts }),
+export default function Blog({ posts: initialPosts = BLOGPOSTS }: BlogProps) {
+  logInfo('BlogPage rendering. Initial BLOGPOSTS:', { data: initialPosts }),
   const [searchQuery, setSearchQuery] = useState(""),
   const [selectedCategory, setSelectedCategory] = useState("All Categories"),
   const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]),
   const query = useDebounce(searchQuery, 300),
   const [isLoading, setIsLoading] = useState(false),
-  const router = useRouter(),
-=======
-  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts });
-  const [searchQuery, setSearchQuery] = useState("&quot;);
-  const [selectedCategory, setSelectedCategory] = useState(&quot;All Categories&quot;);
-=======
-export interface BlogProps {_posts?: BlogPost[];}
-
-export default function Blog(_{_posts: initialPosts = BLOG_POSTS}: BlogProps) {_logInfo('BlogPage rendering. Initial BLOG_POSTS:', _{ data: initialPosts});
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All Categories");
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]);
-  const _query = useDebounce(searchQuery, 300);
+  const router = useRouter(),  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]);
+  const query = useDebounce(searchQuery, 300);
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
   const router = useRouter();
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
-  // Reset state when navigating away to avoid cross-page leakage
-  useEffect(() => {
+  // Reset state when navigating away to avoid cross-page leakage,
+useEffect(() => {
     return () => {
-<<<<<<< HEAD
       setSearchQuery(""),
       setSelectedCategory("All Categories"),
       setPosts([...initialPosts])
     }
-  }, [router.asPath, initialPosts]),
-=======
-      setSearchQuery("&quot;);
-      setSelectedCategory(&quot;All Categories&quot;);
-      setPosts([...initialPosts]);
-    };
-=======
-  const _router = useRouter();
+  }, [router.asPath, initialPosts])  }, [router.asPath, initialPosts]);
 
-  // Reset state when navigating away to avoid cross-page leakage
-  useEffect__(() => {_return () => {
-      setSearchQuery("");
-      setSelectedCategory("All Categories");
-      setPosts([...initialPosts]);};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  }, [router.asPath, initialPosts]);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
-<<<<<<< HEAD
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     setPosts(prev => [...prev, generateRandomBlogPost()]),
@@ -142,78 +74,42 @@ export default function Blog(_{_posts: initialPosts = BLOG_POSTS}: BlogProps) {_
         setIsLoading(false)
       }
     },
-=======
-  // useEffect__(() => {_//   const _interval = setInterval__(() => {
-  //     setPosts(prev => [...prev, _generateRandomBlogPost()]);
-  //}, 120000); // every 2 minutes
-  //   return () => clearInterval(interval);
-  // }, []);
-
-  useEffect__(() => {_const _fetchPosts = async () => {
-      setIsLoading(true);
-      try {
-        const data: BlogPost[] = await fetchWithRetry(
-          `/api/blog?query=${encodeURIComponent(query)}`
-        );
-        setPosts(data);
-      } catch (err) {_logErrorToProduction('Failed to fetch blog posts', _{ data: err});
-      } finally {_setIsLoading(false);}
-    };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
     fetchPosts()
   }, [query]),
 
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
-<<<<<<< HEAD
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
-<<<<<<< HEAD
       selectedCategory === "All Categories" || post.category === selectedCategory,
-=======
-      selectedCategory === &quot;All Categories&quot; || post.category === selectedCategory;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
     return matchesCategory
   }),
   
-  // Get featured posts
-  const featuredPosts = posts.filter(post => post.isFeatured),
+  // Get featured posts,
+const featuredPosts = posts.filter(post => post.isFeatured),
 
   logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
-=======
-  const _filteredPosts = posts.filter(post => {_const _matchesCategory =
+  const filteredPosts = posts.filter(post => {const matchesCategory =
       selectedCategory === "All Categories" || post.category === selectedCategory;
 
-    return matchesCategory;});
+    return matchesCategory});
   
-  // Get featured posts
-  const _featuredPosts = posts.filter(post => post.isFeatured);
+  // Get featured posts,
+const featuredPosts = posts.filter(post => post.isFeatured);
 
-  logInfo('BlogPage filteredPosts:', {_data: filteredPosts});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+  logInfo('BlogPage filteredPosts:', {data: filteredPosts});
   
   return (_<>
-      <SEO
-<<<<<<< HEAD
-        title=&quot;Blog - Latest from Zion Tech Marketplace&quot;
+      <SEO,
+title=&quot;Blog - Latest from Zion Tech Marketplace&quot;
         description=&quot;Read expert insights and news on the Zion Tech Marketplace blog. Stay informed about trends, tips, and stories that help you succeed. Sign up for updates and never miss a breakthrough.&quot;
         keywords=&quot;AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT&quot;
-        canonical=&quot;https://app.ziontechgroup.com/blog&quot;
-=======
-        title="Blog - Latest from Zion Tech Marketplace"
-        description="Read expert insights and news on the Zion Tech Marketplace blog. Stay informed about trends, _tips, _and stories that help you succeed. Sign up for updates and never miss a breakthrough."
-        keywords="AI blog, _tech trends, _IT services blog, _artificial intelligence news, _technology innovation, _digital transformation, _sustainable IT"
-        canonical="https://app.ziontechgroup.com/blog"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      />
+        canonical=&quot;https://app.ziontechgroup.com/blog&quot;      />
       <div className=&quot;min-h-screen bg-zion-blue pt-12 pb-20 px-4&quot;>
         <h1>Blog</h1>
         <div className=&quot;container mx-auto&quot;>
           <div className=&quot;text-center mb-12&quot;>
             <GradientHeading>AI & Tech Insights</GradientHeading>
-<<<<<<< HEAD
             <p className=&quot;mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto&quot;>
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation
             </p>
@@ -229,21 +125,13 @@ export default function Blog(_{_posts: initialPosts = BLOG_POSTS}: BlogProps) {_
               <h2 className=&quot;text-2xl font-bold text-white mb-6&quot;>Featured Article</h2>
               <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
                 <div className=&quot;aspect-video overflow-hidden rounded-lg&quot;>
-                  <img
-                    src={featuredPost.featuredImage}
+                  <img,
+src={featuredPost.featuredImage}
                     alt={featuredPost.featuredImageAlt || featuredPost.title}
-<<<<<<< HEAD
                     className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
                     onError={(e) => {
                       const target = e.currentTarget as HTMLImageElement,
-                      target.src = "/images/blog-placeholder.svg"
-=======
-                    className=&quot;object-cover w-full h-full hover:scale-105 transition-transform duration-300&quot;
-                    onError={(e) => {
-                      const target = e.currentTarget as HTMLImageElement;
-                      target.src = &quot;/images/blog-placeholder.svg&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-                    }}
+                      target.src = "/images/blog-placeholder.svg"                    }}
                   />
                 </div>
                 <div className=&quot;flex flex-col justify-center&quot;>
@@ -255,79 +143,68 @@ export default function Blog(_{_posts: initialPosts = BLOG_POSTS}: BlogProps) {_
                   </h3>
                   <p className=&quot;text-zion-slate-light mb-6&quot;>
                     {featuredPost.excerpt}
-=======
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Expert perspectives on artificial intelligence, _tech innovation, _and digital transformation
+              Expert perspectives on artificial intelligence, tech innovation, and digital transformation
             </p>
           </div>
           
           {_/* Featured Post Section - Only show if there are featured posts */}
-          {_featuredPosts.length > 0 && (() => {
-            const _featuredPost = featuredPosts[0];
+          {featuredPosts.length > 0 && (() => {
+            const featuredPost = featuredPosts[0];
             if (!featuredPost) return null;
             
             return (_<div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="aspect-video overflow-hidden rounded-lg">
-                  <img
-                    src={featuredPost.featuredImage}
-                    alt={_featuredPost.featuredImageAlt || featuredPost.title}
+                  <img,
+src={featuredPost.featuredImage}
+                    alt={featuredPost.featuredImageAlt || featuredPost.title}
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                     onError={_(e) => {
-                      const _target = e.currentTarget as HTMLImageElement;
-                      target.src = "/images/blog-placeholder.svg";}}
+                      const target = e.currentTarget as HTMLImageElement;
+                      target.src = "/images/blog-placeholder.svg"}}
                   />
                 </div>
                 <div className="flex flex-col justify-center">
                   <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2">
-                    {_featuredPost.category}
+                    {featuredPost.category}
                   </span>
                   <h3 className="text-3xl font-bold text-white mb-4">
-                    {_featuredPost.title}
+                    {featuredPost.title}
                   </h3>
                   <p className="text-zion-slate-light mb-6">
-                    {_featuredPost.excerpt}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+                    {featuredPost.excerpt}
                   </p>
                   <div className=&quot;flex items-center mb-6&quot;>
-                    <img
-<<<<<<< HEAD
-                      src={featuredPost.author.avatarUrl}
+                    <img,
+src={featuredPost.author.avatarUrl}
                       alt={featuredPost.author.name}
                       className=&quot;w-10 h-10 rounded-full mr-3&quot;
                       onError={(e) => {
-<<<<<<< HEAD
                         const target = e.currentTarget as HTMLImageElement,
-                        target.src = "/images/blog-placeholder.svg"
-=======
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.src = &quot;/images/blog-placeholder.svg&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-                      }}
+                        target.src = "/images/blog-placeholder.svg"                      }}
                     />
                     <div>
                       <p className=&quot;text-white font-medium&quot;>{featuredPost.author.name}</p>
                       <p className=&quot;text-sm text-zion-slate-light&quot;>
                         {featuredPost.publishedDate} • {featuredPost.readTime}
-=======
-                      src={_featuredPost.author.avatarUrl}
-                      alt={_featuredPost.author.name}
+                      src={featuredPost.author.avatarUrl}
+                      alt={featuredPost.author.name}
                       className="w-10 h-10 rounded-full mr-3"
-                      onError={_(_e) => {
-                        const _target = e.currentTarget as HTMLImageElement;
-                        target.src = "/images/blog-placeholder.svg";}}
+                      onError={_(e) => {
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.src = "/images/blog-placeholder.svg"}}
                     />
                     <div>
-                      <p className="text-white font-medium">{_featuredPost.author.name}</p>
+                      <p className="text-white font-medium">{featuredPost.author.name}</p>
                       <p className="text-sm text-zion-slate-light">
-                        {_featuredPost.publishedDate} • {_featuredPost.readTime}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+                        {featuredPost.publishedDate} • {featuredPost.readTime}
                       </p>
                     </div>
                   </div>
-                  <Button 
-                    asChild
+                  <Button,
+asChild
                     className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit&quot;
                   >
                     <Link href={_`/blog/${featuredPost.slug}`}>
@@ -340,14 +217,13 @@ export default function Blog(_{_posts: initialPosts = BLOG_POSTS}: BlogProps) {_
             )
           })()}
         
-<<<<<<< HEAD
           {/* Filters and Search */}
           <div className=&quot;bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light&quot;>
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
               <div className=&quot;relative&quot;>
                 <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate&quot; />
-                <Input
-                  type=&quot;text&quot;
+                <Input,
+type=&quot;text&quot;
                   placeholder=&quot;Search articles...&quot;
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -362,81 +238,34 @@ export default function Blog(_{_posts: initialPosts = BLOG_POSTS}: BlogProps) {_
                 <SelectContent className=&quot;bg-zion-blue-dark border border-zion-blue-light&quot;>
                   {CATEGORIES.map((category) => (
                     <SelectItem key={category} value={category} className=&quot;text-white&quot;>
-                      {category}
-=======
-          {_/* Filters and Search */}
-          <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
-                <Input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={_searchQuery}
-                  onChange={_(_e) => setSearchQuery(e.target.value)}
-                  className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
-                />
-              </div>
-              
-              <Select value={_selectedCategory} onValueChange={_setSelectedCategory}>
-                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" aria-label="Filter by category">
-                  <SelectValue placeholder="Select Category" />
-                </SelectTrigger>
-                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                  {_CATEGORIES.map(_(category) => (
-                    <SelectItem key={category} value={_category} className="text-white">
-                      {_category}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </SelectItem>
+                      {category}                    </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
             </div>
-<<<<<<< HEAD
             {isLoading && (
-              <div className=&quot;text-center py-4 text-white&quot;>
-=======
-            {_isLoading && (
-              <div className="text-center py-4 text-white">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                Loading articles...
+              <div className=&quot;text-center py-4 text-white&quot;>                Loading articles...
               </div>
             )}
           </div>
 
-<<<<<<< HEAD
           {/* Blog Posts Grid */}
           {!isLoading && filteredPosts.length > 0 ? (
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {filteredPosts.map((post) => (
-                <Card
-=======
-          {_/* Blog Posts Grid */}
-          {_!isLoading && filteredPosts.length > 0 ? (_<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (_<Card
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  key={post.id}
-                  asChild
-                  className=&quot;bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg&quot;
+                <Card                  key={post.id}
+                  asChild,
+className=&quot;bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg&quot;
                 >
-<<<<<<< HEAD
                   <Link href={`/blog/${post.slug}`} className=&quot;block group&quot;>
                   <div className=&quot;aspect-[16/9] relative overflow-hidden&quot;>
-                    <img
-                      src={post.featuredImage}
+                    <img,
+src={post.featuredImage}
                       alt={post.featuredImageAlt || post.title}
-<<<<<<< HEAD
                       className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
                       onError={(e) => {
                         const target = e.currentTarget as HTMLImageElement,
-                        target.src = "/images/blog-placeholder.svg"
-=======
-                      className=&quot;object-cover w-full h-full hover:scale-105 transition-transform duration-300&quot;
-                      onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.src = &quot;/images/blog-placeholder.svg&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-                      }}
+                        target.src = "/images/blog-placeholder.svg"                      }}
                     />
                   </div>
                   <CardContent className=&quot;p-6&quot;>
@@ -453,61 +282,50 @@ export default function Blog(_{_posts: initialPosts = BLOG_POSTS}: BlogProps) {_
                     </h3>
                     <p className=&quot;text-zion-slate-light mb-4 line-clamp-3&quot;>
                       {post.excerpt}
-=======
                   <Link href={_`/blog/${post.slug}`} className="block group">
                   <div className="aspect-[16/9] relative overflow-hidden">
-                    <img
-                      src={_post.featuredImage}
-                      alt={_post.featuredImageAlt || post.title}
+                    <img,
+src={post.featuredImage}
+                      alt={post.featuredImageAlt || post.title}
                       className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                       onError={_(e) => {
-                        const _target = e.currentTarget as HTMLImageElement;
-                        target.src = "/images/blog-placeholder.svg";}}
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.src = "/images/blog-placeholder.svg"}}
                     />
                   </div>
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full">
-                        {_post.category}
+                        {post.category}
                       </span>
                       <div className="text-xs text-zion-slate-light">
-                        {_post.publishedDate} • {_post.readTime}
+                        {post.publishedDate} • {post.readTime}
                       </div>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">
-                      {_post.title}
+                      {post.title}
                     </h3>
                     <p className="text-zion-slate-light mb-4 line-clamp-3">
-                      {_post.excerpt}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+                      {post.excerpt}
                     </p>
                     <div className=&quot;flex items-center&quot;>
-                      <img
-<<<<<<< HEAD
-                        src={post.author.avatarUrl}
+                      <img,
+src={post.author.avatarUrl}
                         alt={post.author.name}
                         className=&quot;w-8 h-8 rounded-full mr-2&quot;
                         onError={(e) => {
-<<<<<<< HEAD
                           const target = e.currentTarget as HTMLImageElement,
-                          target.src = "/images/blog-placeholder.svg"
-=======
-                          const target = e.currentTarget as HTMLImageElement;
-                          target.src = &quot;/images/blog-placeholder.svg&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-                        }}
+                          target.src = "/images/blog-placeholder.svg"                        }}
                       />
                       <span className=&quot;text-sm text-white&quot;>{post.author.name}</span>
-=======
-                        src={_post.author.avatarUrl}
-                        alt={_post.author.name}
+                        src={post.author.avatarUrl}
+                        alt={post.author.name}
                         className="w-8 h-8 rounded-full mr-2"
-                        onError={_(_e) => {
-                          const _target = e.currentTarget as HTMLImageElement;
-                          target.src = "/images/blog-placeholder.svg";}}
+                        onError={_(e) => {
+                          const target = e.currentTarget as HTMLImageElement;
+                          target.src = "/images/blog-placeholder.svg"}}
                       />
-                      <span className="text-sm text-white">{_post.author.name}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+                      <span className="text-sm text-white">{post.author.name}</span>
                     </div>
                   </CardContent>
                   <CardFooter className=&quot;p-6 pt-0&quot;>
@@ -519,34 +337,17 @@ export default function Blog(_{_posts: initialPosts = BLOG_POSTS}: BlogProps) {_
             </div>
           ) : null}
 
-<<<<<<< HEAD
           {/* No Results Message - Show only if not loading and no posts */}
           {!isLoading && filteredPosts.length === 0 && (
             <div className=&quot;text-center py-16&quot;>
               <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>No articles found</h3>
-              <p className=&quot;text-zion-slate-light mb-6&quot;>Try adjusting your search or filter criteria</p>
-=======
-          {_/* No Results Message - Show only if not loading and no posts */}
-          {_!isLoading && filteredPosts.length === 0 && (_<div className="text-center py-16">
-              <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>
-              <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <Button
-                variant=&quot;outline&quot;
+              <p className=&quot;text-zion-slate-light mb-6&quot;>Try adjusting your search or filter criteria</p>              <Button,
+variant=&quot;outline&quot;
                 onClick={() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
                   setSearchQuery(""),
-                  setSelectedCategory("All Categories")
-=======
-                  setSearchQuery("&quot;);
-                  setSelectedCategory(&quot;All Categories");
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-                }}
-=======
+                  setSelectedCategory("All Categories")                }}
                   setSearchQuery("");
-                  setSelectedCategory("All Categories");}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+                  setSelectedCategory("All Categories")}}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
                 Clear all filters

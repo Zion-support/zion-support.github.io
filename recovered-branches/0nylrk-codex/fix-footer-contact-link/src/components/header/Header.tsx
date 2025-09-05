@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from 'react',
 import { Link } from 'react-router-dom',
 import { Logo } from './Logo',
@@ -11,24 +10,7 @@ import { useWhitelabel } from '@/context/WhitelabelContext',
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { useNavigate } from "react-router-dom",
-import { useState } from "react",
-=======
-import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Logo } from './Logo';
-import { UserMenu } from './UserMenu';
-import { LanguageSelector } from './LanguageSelector';
-import { MainNavigation } from '@/layout/MainNavigation';
-import { useAuth } from '@/hooks/useAuth';
-import { useWhitelabel } from '@/context/WhitelabelContext';
-import { EnhancedSearchInput } from &quot;@/components/search/EnhancedSearchInput&quot;;
-import { generateSearchSuggestions } from &quot;@/data/marketplaceData&quot;;
-import { useNavigate } from &quot;react-router-dom&quot;;
-import { useState } from &quot;react&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export interface HeaderProps {
+import { useState } from "react",export interface HeaderProps {
   hideLogin?: boolean,
   customLogo?: string,
   customTheme?: {
@@ -39,20 +21,11 @@ export interface HeaderProps {
 }
 
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
-<<<<<<< HEAD
   const { user } = useAuth(),
   const { isWhitelabel, primaryColor } = useWhitelabel(),
   const navigate = useNavigate(),
   const [query, setQuery] = useState(""),
-  const searchSuggestions = generateSearchSuggestions(),
-=======
-  const { user } = useAuth();
-  const { isWhitelabel, primaryColor } = useWhitelabel();
-  const navigate = useNavigate();
-  const [query, setQuery] = useState("&quot;);
-  const searchSuggestions = generateSearchSuggestions();
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  
+  const searchSuggestions = generateSearchSuggestions(),  
   // If we have a white-label tenant and no specific customTheme is provided,
   // use the tenant's primary color
   const effectiveTheme = customTheme || (isWhitelabel ? {
@@ -69,7 +42,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
-=======
 
 export interface HeaderProps {_hideLogin?: boolean;
   customLogo?: string;
@@ -94,43 +66,22 @@ export function Header(_{_hideLogin = false, _customLogo, _customTheme}: HeaderP
   } : {};
 
   const _handleSubmit = (_e: React.FormEvent) => {_e.preventDefault();
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     if (query.trim()) {
-<<<<<<< HEAD
       navigate(`/search?q=${encodeURIComponent(query)}`),
-      setQuery("")
-=======
-      navigate(`/search?q=${encodeURIComponent(query)}`);
-      setQuery("&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
+      setQuery("")    }
   },
   
   return (
     <header 
-<<<<<<< HEAD
       className=&quot;sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md&quot;
       style={headerStyle}
     >
       <div className=&quot;container flex h-16 items-center px-4 sm:px-6&quot;>
         <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
-=======
-      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"
-      style={_headerStyle}
-    >
-      <div className="container flex h-16 items-center px-4 sm:px-6">
-        <Logo customLogo={_customLogo} customColor={_effectiveTheme?.primaryColor} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
         <div className=&quot;ml-6 flex-1&quot;>
           <MainNavigation />
         </div>
-<<<<<<< HEAD
-        <form onSubmit={handleSubmit} className=&quot;hidden md:block w-64 mx-4&quot;>
-=======
-        <form onSubmit={_handleSubmit} className="hidden md:block w-64 mx-4">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          <EnhancedSearchInput
+        <form onSubmit={handleSubmit} className=&quot;hidden md:block w-64 mx-4&quot;>          <EnhancedSearchInput
             value={_query}
             onChange={_setQuery}
             searchSuggestions={_searchSuggestions}

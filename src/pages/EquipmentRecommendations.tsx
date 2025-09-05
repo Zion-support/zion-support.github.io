@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react',
 import { ProductListingCard } from '@/components/ProductListingCard',
 import { useAuth } from '@/hooks/useAuth',
@@ -24,24 +23,6 @@ export default function EquipmentRecommendations() {
         .finally(() => setLoading(false))
     }
   }, [isAuthenticated, user]),
-=======
-import type {_ProductListing} from '@/types/listings';
-import Link from 'next/link';
-
-export default function EquipmentRecommendations() {_const { isAuthenticated, _user} = useAuth();
-  const [listings, setListings] = useState<ProductListing[]>([]);
-  const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<boolean>(false);
-
-  useEffect__(() => {_if (isAuthenticated && user?.id) {
-      setLoading(true);
-      fetchRecommendations(user.id)
-        .then(setListings)
-        .catch__(() => setError(true))
-        .finally__(() => setLoading(false));}
-  }, [isAuthenticated, user]);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   if (!isAuthenticated) {_return (
       <Dialog open>
         <DialogContent className=&quot;bg-zion-blue border-zion-blue-light text-white&quot;>
@@ -54,7 +35,6 @@ export default function EquipmentRecommendations() {_const { isAuthenticated, _u
           </Button>
         </DialogContent>
       </Dialog>
-<<<<<<< HEAD
     )
   }
 
@@ -70,25 +50,7 @@ export default function EquipmentRecommendations() {_const { isAuthenticated, _u
       <div className=&quot;columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4&quot;>
         {listings.map((listing) => (
           <div key={listing.id} className=&quot;break-inside-avoid mb-4&quot;>
-            <ProductListingCard listing={listing} />
-=======
-    );}
-
-  return (
-    <div className="min-h-screen bg-zion-blue py-8 px-4">
-      <h1 className="text-2xl font-bold text-white mb-6">AI Equipment Recommendations</h1>
-      {_loading && (
-        <div className="flex justify-center py-20">
-          <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
-        </div>
-      )}
-      {_error && <ErrorState error="Failed to load recommendations." />}
-      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-        {_listings.map(_(listing) => (
-          <div key={listing.id} className="break-inside-avoid mb-4">
-            <ProductListingCard listing={_listing} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </div>
+            <ProductListingCard listing={listing} />          </div>
         ))}
       </div>
     </div>

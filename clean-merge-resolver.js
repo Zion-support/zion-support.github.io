@@ -12,9 +12,7 @@ function fixMergeConflicts(filePath) {
     const originalContent = content,
     
     // Remove merge conflict markers and keep HEAD version
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, ''),
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, ''),
-    
+    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/[\s\S]*?    
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8'),
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),
@@ -113,7 +111,7 @@ async function main() {
     for (const file of files) {
       try {
         const content = fs.readFileSync(file, 'utf8'),
-        if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+        if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
           if (fixMergeConflicts(file)) {
             fixedCount++
           }

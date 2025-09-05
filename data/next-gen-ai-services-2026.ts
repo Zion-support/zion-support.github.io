@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ServiceVariant } from '../types/service-variants',
-=======
-import { ServiceVariant } from &apos;../types/service-variants&apos;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export interface NextGenAIService2026 {
+import { ServiceVariant } from '../types/service-variants',export interface NextGenAIService2026 {
   id: string,
   name: string,
   tagline: string,
@@ -47,20 +40,11 @@ export interface NextGenAIService2026 {
 }
 
 const contact = {
-<<<<<<< HEAD
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-=======
-  mobile: &apos;+1 302 464 0950&apos;,
-  email: &apos;kleber@ziontechgroup.com&apos;,
-  address: &apos;364 E Main St STE 1008 Middletown DE 19709&apos;,
-  website: &apos;https://ziontechgroup.com&apos;
-};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 export const nextGenAIServices2026: NextGenAIService2026[] = [
   {
     id: &apos;ai-emotional-intelligence-platform&apos;,
@@ -70,22 +54,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: &apos;/month&apos;,
     description: &apos;Advanced AI platform that analyzes facial expressions, voice tone, and text to provide emotional intelligence insights for customer service, mental health, and human resources.&apos;,
     features: [
-<<<<<<< HEAD
       'Real-time emotion detection from video/audioSentiment analysis with emotional contextEmotional response recommendationsMulti-modal emotion fusion (facial, voice, text)Emotional intelligence training modulesCustom emotion models for specific industriesReal-time emotional analytics dashboardAPI for integration with existing systems',
-      'Privacy-compliant emotion processingEmotional intelligence scoring and reports'
-=======
-      &apos;Real-time emotion detection from video/audio&apos;,
-      &apos;Sentiment analysis with emotional context&apos;,
-      &apos;Emotional response recommendations&apos;,
-      &apos;Multi-modal emotion fusion (facial, voice, text)&apos;,
-      &apos;Emotional intelligence training modules&apos;,
-      &apos;Custom emotion models for specific industries&apos;,
-      &apos;Real-time emotional analytics dashboard&apos;,
-      &apos;API for integration with existing systems&apos;,
-      &apos;Privacy-compliant emotion processing&apos;,
-      &apos;Emotional intelligence scoring and reports&apos;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    ],
+      'Privacy-compliant emotion processingEmotional intelligence scoring and reports'    ],
     popular: true,
     icon: &apos;🧠💙&apos;,
     color: &apos;from-blue-600 to-purple-700&apos;,
@@ -97,7 +67,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: &apos;2-3 days&apos;,
     category: &apos;AI & Emotional Intelligence&apos;,
     realService: true,
-<<<<<<< HEAD
     technology: ['TensorFlowOpenCVPyTorchWebRTCReactNode.jsPostgreSQL'],
     integrations: ['ZoomTeamsSlackSalesforceHubSpotZendeskCustom APIs'],
     useCases: ['Customer sentiment analysisEmployee wellness monitoringMental health assessmentEducational engagement tracking'],
@@ -105,18 +74,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     competitors: ['AffectivaRealeyesEmotientNoldus'],
     marketSize: '$3.2B emotional AI market',
     growthRate: '150% annual growth',
-    variant: 'ai-futuristic',
-=======
-    technology: [&apos;TensorFlow&apos;, &apos;OpenCV&apos;, &apos;PyTorch&apos;, &apos;WebRTC&apos;, &apos;React&apos;, &apos;Node.js&apos;, &apos;PostgreSQL&apos;],
-    integrations: [&apos;Zoom&apos;, &apos;Teams&apos;, &apos;Slack&apos;, &apos;Salesforce&apos;, &apos;HubSpot&apos;, &apos;Zendesk&apos;, &apos;Custom APIs&apos;],
-    useCases: [&apos;Customer sentiment analysis&apos;, &apos;Employee wellness monitoring&apos;, &apos;Mental health assessment&apos;, &apos;Educational engagement tracking&apos;],
-    roi: &apos;Average 40% improvement in customer satisfaction scores and 25% reduction in employee turnover.&apos;,
-    competitors: [&apos;Affectiva&apos;, &apos;Realeyes&apos;, &apos;Emotient&apos;, &apos;Noldus&apos;],
-    marketSize: &apos;$3.2B emotional AI market&apos;,
-    growthRate: &apos;150% annual growth&apos;,
-    variant: &apos;ai-futuristic&apos;,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    contactInfo: contact,
+    variant: 'ai-futuristic',    contactInfo: contact,
     realImplementation: true,
     implementationDetails: &apos;Production-ready platform with real-time video/audio processing, emotion detection models, and comprehensive analytics dashboard.&apos;,
     launchDate: &apos;2025-06-01&apos;,
@@ -132,22 +90,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: &apos;/month&apos;,
     description: &apos;Industrial IoT platform that uses machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.&apos;,
     features: [
-<<<<<<< HEAD
       'Real-time sensor data monitoringMachine learning failure prediction modelsPredictive maintenance schedulingEquipment health scoringAnomaly detection algorithmsMaintenance cost optimizationIntegration with CMMS systemsMobile app for field technicians',
-      'Custom alerting and notificationsHistorical performance analytics'
-=======
-      &apos;Real-time sensor data monitoring&apos;,
-      &apos;Machine learning failure prediction models&apos;,
-      &apos;Predictive maintenance scheduling&apos;,
-      &apos;Equipment health scoring&apos;,
-      &apos;Anomaly detection algorithms&apos;,
-      &apos;Maintenance cost optimization&apos;,
-      &apos;Integration with CMMS systems&apos;,
-      &apos;Mobile app for field technicians&apos;,
-      &apos;Custom alerting and notifications&apos;,
-      &apos;Historical performance analytics&apos;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    ],
+      'Custom alerting and notificationsHistorical performance analytics'    ],
     popular: true,
     icon: &apos;⚙️🔮&apos;,
     color: &apos;from-green-600 to-teal-700&apos;,
@@ -159,7 +103,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: &apos;1-2 weeks&apos;,
     category: &apos;AI & Industrial IoT&apos;,
     realService: true,
-<<<<<<< HEAD
     technology: ['PythonTensorFlowApache KafkaInfluxDBReactNode.jsDocker'],
     integrations: ['SAPOracleMaximoServiceNowModbusOPC UAREST APIs'],
     useCases: ['Equipment failure predictionMaintenance optimizationEnergy efficiencyQuality control'],
@@ -167,18 +110,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     competitors: ['UptakeC3.aiPTCSiemens Mindsphere'],
     marketSize: '$12.3B predictive maintenance market',
     growthRate: '120% annual growth',
-    variant: 'ai-futuristic',
-=======
-    technology: [&apos;Python&apos;, &apos;TensorFlow&apos;, &apos;Apache Kafka&apos;, &apos;InfluxDB&apos;, &apos;React&apos;, &apos;Node.js&apos;, &apos;Docker&apos;],
-    integrations: [&apos;SAP&apos;, &apos;Oracle&apos;, &apos;Maximo&apos;, &apos;ServiceNow&apos;, &apos;Modbus&apos;, &apos;OPC UA&apos;, &apos;REST APIs&apos;],
-    useCases: [&apos;Equipment failure prediction&apos;, &apos;Maintenance optimization&apos;, &apos;Energy efficiency&apos;, &apos;Quality control&apos;],
-    roi: &apos;Average 30% reduction in unplanned downtime and 25% decrease in maintenance costs.&apos;,
-    competitors: [&apos;Uptake&apos;, &apos;C3.ai&apos;, &apos;PTC&apos;, &apos;Siemens Mindsphere&apos;],
-    marketSize: &apos;$12.3B predictive maintenance market&apos;,
-    growthRate: &apos;120% annual growth&apos;,
-    variant: &apos;ai-futuristic&apos;,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    contactInfo: contact,
+    variant: 'ai-futuristic',    contactInfo: contact,
     realImplementation: true,
     implementationDetails: &apos;Full-stack IoT platform with edge computing capabilities, real-time analytics, and comprehensive maintenance management tools.&apos;,
     launchDate: &apos;2025-03-15&apos;,
@@ -194,22 +126,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: &apos;/month&apos;,
     description: &apos;Advanced AI engine that personalizes content, recommendations, and user experiences in real-time based on user behavior, preferences, and contextual data.&apos;,
     features: [
-<<<<<<< HEAD
       'Real-time user behavior trackingDynamic content personalizationA/B testing automationMulti-channel personalizationPredictive user modelingContent performance optimizationPersonalization analytics dashboardAPI for content delivery',
-      'GDPR-compliant data handlingCustom personalization rules engine'
-=======
-      &apos;Real-time user behavior tracking&apos;,
-      &apos;Dynamic content personalization&apos;,
-      &apos;A/B testing automation&apos;,
-      &apos;Multi-channel personalization&apos;,
-      &apos;Predictive user modeling&apos;,
-      &apos;Content performance optimization&apos;,
-      &apos;Personalization analytics dashboard&apos;,
-      &apos;API for content delivery&apos;,
-      &apos;GDPR-compliant data handling&apos;,
-      &apos;Custom personalization rules engine&apos;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    ],
+      'GDPR-compliant data handlingCustom personalization rules engine'    ],
     popular: false,
     icon: &apos;🎯✨&apos;,
     color: &apos;from-purple-600 to-pink-700&apos;,
@@ -221,7 +139,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: &apos;3-5 days&apos;,
     category: &apos;AI & Personalization&apos;,
     realService: true,
-<<<<<<< HEAD
     technology: ['PythonTensorFlowRedisPostgreSQLReactNode.jsAWS Lambda'],
     integrations: ['ShopifyWooCommerceWordPressHubSpotMailchimpCustom CMS'],
     useCases: ['Product recommendationsContent personalizationEmail marketingWebsite optimization'],
@@ -229,18 +146,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     competitors: ['Dynamic YieldOptimizelyEvergageAdobe Target'],
     marketSize: '$8.7B personalization market',
     growthRate: '140% annual growth',
-    variant: 'ai-futuristic',
-=======
-    technology: [&apos;Python&apos;, &apos;TensorFlow&apos;, &apos;Redis&apos;, &apos;PostgreSQL&apos;, &apos;React&apos;, &apos;Node.js&apos;, &apos;AWS Lambda&apos;],
-    integrations: [&apos;Shopify&apos;, &apos;WooCommerce&apos;, &apos;WordPress&apos;, &apos;HubSpot&apos;, &apos;Mailchimp&apos;, &apos;Custom CMS&apos;],
-    useCases: [&apos;Product recommendations&apos;, &apos;Content personalization&apos;, &apos;Email marketing&apos;, &apos;Website optimization&apos;],
-    roi: &apos;Average 35% increase in conversion rates and 40% improvement in user engagement.&apos;,
-    competitors: [&apos;Dynamic Yield&apos;, &apos;Optimizely&apos;, &apos;Evergage&apos;, &apos;Adobe Target&apos;],
-    marketSize: &apos;$8.7B personalization market&apos;,
-    growthRate: &apos;140% annual growth&apos;,
-    variant: &apos;ai-futuristic&apos;,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    contactInfo: contact,
+    variant: 'ai-futuristic',    contactInfo: contact,
     realImplementation: true,
     implementationDetails: &apos;Production-ready personalization engine with real-time processing, comprehensive analytics, and easy integration capabilities.&apos;,
     launchDate: &apos;2025-04-20&apos;,
@@ -256,22 +162,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: &apos;/month&apos;,
     description: &apos;Professional voice cloning platform that creates high-quality, natural-sounding voice replicas for content creators, marketers, and businesses.&apos;,
     features: [
-<<<<<<< HEAD
       'High-quality voice cloning (5+ minutes of audio)Multiple voice styles and emotionsReal-time voice synthesisText-to-speech with cloned voicesVoice customization controlsBatch processing capabilitiesAPI for integrationVoice library management',
-      'Quality assurance toolsCommercial usage rights'
-=======
-      &apos;High-quality voice cloning (5+ minutes of audio)&apos;,
-      &apos;Multiple voice styles and emotions&apos;,
-      &apos;Real-time voice synthesis&apos;,
-      &apos;Text-to-speech with cloned voices&apos;,
-      &apos;Voice customization controls&apos;,
-      &apos;Batch processing capabilities&apos;,
-      &apos;API for integration&apos;,
-      &apos;Voice library management&apos;,
-      &apos;Quality assurance tools&apos;,
-      &apos;Commercial usage rights&apos;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    ],
+      'Quality assurance toolsCommercial usage rights'    ],
     popular: false,
     icon: &apos;🎤🎭&apos;,
     color: &apos;from-orange-600 to-red-700&apos;,
@@ -283,7 +175,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: &apos;1 day&apos;,
     category: &apos;AI & Voice Technology&apos;,
     realService: true,
-<<<<<<< HEAD
     technology: ['PythonPyTorchTensorFlowReactNode.jsAWS PollyGoogle Cloud TTS'],
     integrations: ['Adobe AuditionAudacityGarageBandCustom audio workflowsREST APIs'],
     useCases: ['Podcast productionMarketing videosE-learning contentAudiobook narration'],
@@ -291,18 +182,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     competitors: ['ElevenLabsPlay.htResemble AIDescript'],
     marketSize: '$2.1B voice cloning market',
     growthRate: '180% annual growth',
-    variant: 'ai-futuristic',
-=======
-    technology: [&apos;Python&apos;, &apos;PyTorch&apos;, &apos;TensorFlow&apos;, &apos;React&apos;, &apos;Node.js&apos;, &apos;AWS Polly&apos;, &apos;Google Cloud TTS&apos;],
-    integrations: [&apos;Adobe Audition&apos;, &apos;Audacity&apos;, &apos;GarageBand&apos;, &apos;Custom audio workflows&apos;, &apos;REST APIs&apos;],
-    useCases: [&apos;Podcast production&apos;, &apos;Marketing videos&apos;, &apos;E-learning content&apos;, &apos;Audiobook narration&apos;],
-    roi: &apos;Average 60% reduction in voice recording costs and 3x faster content production.&apos;,
-    competitors: [&apos;ElevenLabs&apos;, &apos;Play.ht&apos;, &apos;Resemble AI&apos;, &apos;Descript&apos;],
-    marketSize: &apos;$2.1B voice cloning market&apos;,
-    growthRate: &apos;180% annual growth&apos;,
-    variant: &apos;ai-futuristic&apos;,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    contactInfo: contact,
+    variant: 'ai-futuristic',    contactInfo: contact,
     realImplementation: true,
     implementationDetails: &apos;Professional-grade voice cloning platform with advanced AI models, comprehensive voice management, and easy integration.&apos;,
     launchDate: &apos;2025-02-10&apos;,
@@ -318,22 +198,8 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     period: &apos;/month&apos;,
     description: &apos;Intelligent code review assistant that automatically analyzes code quality, identifies potential issues, and provides actionable improvement suggestions.&apos;,
     features: [
-<<<<<<< HEAD
       'Automated code quality analysisSecurity vulnerability detectionPerformance optimization suggestionsCode style and best practicesIntegration with Git platformsCustom rule configurationTeam collaboration toolsCode review analytics',
-      'Pull request automationMulti-language support'
-=======
-      &apos;Automated code quality analysis&apos;,
-      &apos;Security vulnerability detection&apos;,
-      &apos;Performance optimization suggestions&apos;,
-      &apos;Code style and best practices&apos;,
-      &apos;Integration with Git platforms&apos;,
-      &apos;Custom rule configuration&apos;,
-      &apos;Team collaboration tools&apos;,
-      &apos;Code review analytics&apos;,
-      &apos;Pull request automation&apos;,
-      &apos;Multi-language support&apos;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    ],
+      'Pull request automationMulti-language support'    ],
     popular: true,
     icon: &apos;💻🔍&apos;,
     color: &apos;from-indigo-600 to-blue-700&apos;,
@@ -345,7 +211,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     setupTime: &apos;2-3 days&apos;,
     category: &apos;AI & Development&apos;,
     realService: true,
-<<<<<<< HEAD
     technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisDocker'],
     integrations: ['GitHubGitLabBitbucketAzure DevOpsSlackJiraTeams'],
     useCases: ['Code quality improvementSecurity auditingPerformance optimizationTeam collaboration'],
@@ -353,18 +218,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     competitors: ['SonarQubeCodeClimateDeepCodeSnyk'],
     marketSize: '$5.4B code quality market',
     growthRate: '110% annual growth',
-    variant: 'ai-futuristic',
-=======
-    technology: [&apos;Python&apos;, &apos;TensorFlow&apos;, &apos;React&apos;, &apos;Node.js&apos;, &apos;PostgreSQL&apos;, &apos;Redis&apos;, &apos;Docker&apos;],
-    integrations: [&apos;GitHub&apos;, &apos;GitLab&apos;, &apos;Bitbucket&apos;, &apos;Azure DevOps&apos;, &apos;Slack&apos;, &apos;Jira&apos;, &apos;Teams&apos;],
-    useCases: [&apos;Code quality improvement&apos;, &apos;Security auditing&apos;, &apos;Performance optimization&apos;, &apos;Team collaboration&apos;],
-    roi: &apos;Average 40% reduction in code review time and 30% improvement in code quality scores.&apos;,
-    competitors: [&apos;SonarQube&apos;, &apos;CodeClimate&apos;, &apos;DeepCode&apos;, &apos;Snyk&apos;],
-    marketSize: &apos;$5.4B code quality market&apos;,
-    growthRate: &apos;110% annual growth&apos;,
-    variant: &apos;ai-futuristic&apos;,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    contactInfo: contact,
+    variant: 'ai-futuristic',    contactInfo: contact,
     realImplementation: true,
     implementationDetails: &apos;Production-ready code review platform with advanced AI analysis, comprehensive reporting, and seamless Git integration.&apos;,
     launchDate: &apos;2025-01-25&apos;,
@@ -373,7 +227,6 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     reviews: 445
   }
 ],
-=======
 
 export interface NextGenAIService2026 {_id: string;
   name: string;
@@ -433,4 +286,3 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       'Automated code quality analysis', _'Security vulnerability detection', _'Performance optimization suggestions', _'Code style and best practices', _'Integration with Git platforms', _'Custom rule configuration', _'Team collaboration tools', _'Code review analytics', _'Pull request automation', _'Multi-language support'
     ], _popular: true, _icon: '💻🔍', _color: 'from-indigo-600 to-blue-700', _textColor: 'text-indigo-400', _link: 'https://ziontechgroup.com/ai-code-review', _marketPosition: 'Competitive with SonarQube and CodeClimate, _with more advanced AI capabilities and better developer experience.', _targetAudience: 'Software development teams, _DevOps engineers, _Code quality managers, _Open source projects', _trialDays: 14, _setupTime: '2-3 days', _category: 'AI & Development', _realService: true, _technology: ['Python', _'TensorFlow', _'React', _'Node.js', _'PostgreSQL', _'Redis', _'Docker'], _integrations: ['GitHub', _'GitLab', _'Bitbucket', _'Azure DevOps', _'Slack', _'Jira', _'Teams'], _useCases: ['Code quality improvement', _'Security auditing', _'Performance optimization', _'Team collaboration'], _roi: 'Average 40% reduction in code review time and 30% improvement in code quality scores.', _competitors: ['SonarQube', _'CodeClimate', _'DeepCode', _'Snyk'], _marketSize: '$5.4B code quality market', _growthRate: '110% annual growth', _variant: 'ai-futuristic', _contactInfo: contact, _realImplementation: true, _implementationDetails: 'Production-ready code review platform with advanced AI analysis, _comprehensive reporting, _and seamless Git integration.', _launchDate: '2025-01-25', _customers: 203, _rating: 4.7, _reviews: 445}
 ];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

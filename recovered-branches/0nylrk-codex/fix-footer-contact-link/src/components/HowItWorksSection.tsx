@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from "lucide-react",
-=======
-import { GradientHeading } from &quot;./GradientHeading&quot;;
-import { Check, Handshake, Search, Send } from &quot;lucide-react&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 const steps = [
   {
     title: &quot;Post&quot;,
@@ -22,22 +15,14 @@ const steps = [
     description: &quot;Connect directly with matched providers and complete your transaction securely.&quot;,
     icon: Handshake},
   {
-<<<<<<< HEAD
     title: "Done",
     description: "Enjoy hassle-free delivery and support for your technology solutions.",
     icon: Check}],
-=======
-    title: &quot;Done&quot;,
-    description: &quot;Enjoy hassle-free delivery and support for your technology solutions.&quot;,
-    icon: Check}];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
 export function HowItWorksSection() {
   return (
     <section className=&quot;py-20 bg-zion-blue&quot;>
       <div className=&quot;container mx-auto px-4&quot;>
         <div className=&quot;text-center mb-16&quot;>
-=======
 
 const _steps = [
   {_title: "Post", _description: "Publish your service, _job, _or equipment in minutes with our AI-powered form.", _icon: Send},
@@ -48,7 +33,6 @@ const _steps = [
 export function HowItWorksSection() {_return (_<section className="py-20 bg-zion-blue">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           <GradientHeading>How It Works</GradientHeading>
           <p className=&quot;text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto&quot;>
             A simple four-step process to connect technology providers with clients
@@ -59,23 +43,13 @@ export function HowItWorksSection() {_return (_<section className="py-20 bg-zion
           {/* Timeline line */}
           <div className=&quot;absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden&quot;></div>
           
-<<<<<<< HEAD
           <div className=&quot;space-y-12 md:space-y-0&quot;>
             {steps.map((step, index) => (
               <div 
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${
                   index % 2 === 0 ? &quot;md:flex-row-reverse&quot; : ""
-                } relative`}
-=======
-          <div className="space-y-12 md:space-y-0">
-            {_steps.map((step, _index) => (
-              <div 
-                key={step.title}
-                className={_`flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""} relative`}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                } relative`}              >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
                   {_index % 2 === 0 ? (
                     <div>

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useNavigate } from 'react-router-dom',
@@ -11,18 +10,7 @@ export default function PaymentSuccess() {
     <div className=&quot;min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4&quot;>
       <div className=&quot;max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center&quot;>
         <div className=&quot;inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center&quot;>
-          <CheckCircle2 className=&quot;h-6 w-6 text-green-600&quot; />
-=======
-import React from 'react';
-
-export default function PaymentSuccess() {_const _navigate = useNavigate();
-  
-  return (_<div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
-      <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
-        <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">
-          <CheckCircle2 className="h-6 w-6 text-green-600" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        </div>
+          <CheckCircle2 className=&quot;h-6 w-6 text-green-600&quot; />        </div>
         
         <h1 className=&quot;text-2xl font-bold text-white mb-2&quot;>Payment Successful!</h1>
         
@@ -31,27 +19,19 @@ export default function PaymentSuccess() {_const _navigate = useNavigate();
         </p>
         
         <div className=&quot;flex flex-col space-y-3&quot;>
-          <Button 
-            onClick={() => navigate('/dashboard')}
+          <Button,
+onClick={() => navigate('/dashboard')}
             className=&quot;bg-zion-purple hover:bg-zion-purple-dark text-white&quot;
           >
             Go to Dashboard
           </Button>
           
-          <Button 
-<<<<<<< HEAD
-            variant=&quot;outline&quot;
+          <Button,
+variant=&quot;outline&quot;
             onClick={() => navigate('/')}
-<<<<<<< HEAD
-            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
-=======
-            className=&quot;border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-            variant="outline"
+            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"            variant="outline"
             onClick={_() => navigate('/')}
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
           >
             Return to Home
           </Button>

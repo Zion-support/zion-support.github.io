@@ -1,23 +1,11 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
 export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired',
-=======
-import { useState } from &quot;react&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import { toast } from &quot;@/hooks/use-toast&quot;;
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
-<<<<<<< HEAD
 export interface Webhook {
   id: string,
   name: string,
@@ -40,31 +28,10 @@ export function useWebhooks() {
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const [testResult, setTestResult] = useState<TestWebhookResult | null>(null),
-=======
-export interface Webhook {_id: string;
-  name: string;
-  url: string;
-  event_types: WebhookEventType[];
-  is_active: boolean;
-  created_at: string;
-  last_triggered_at: string | null;}
-
-export interface TestWebhookResult {_status: number;
-  statusText: string;
-  responseBody: string;}
-
-export function useWebhooks() {_const { user} = useAuth();
-  const [webhooks, setWebhooks] = useState<Webhook[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [testResult, setTestResult] = useState<TestWebhookResult | null>(null);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   // Helper to get the base window.URL for webhook functions
   const _getWebhookUrl = () => {_// import.meta may be undefined when this hook is executed in a Node
     // environment (e.g. during server side rendering or tests). Using optional
     // chaining avoids a TypeError in those cases and falls back to process.env.
-<<<<<<< HEAD
     const env = (import.meta as any)?.env ?? process.env,
     const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,
     return `${url}/functions/v1/webhook-manager`
@@ -72,37 +39,18 @@ export function useWebhooks() {_const { user} = useAuth();
 
   // Fetch user's webhooks
   const fetchWebhooks = async () => {
-    if (!user) return,
-=======
-    const _env = (import.meta as any)?.env ?? process.env;
-    const _url = env.VITE_SUPABASE_URL || env.SUPABASE_URL;
-    return `${url}/functions/v1/webhook-manager`;
-  };
-
-  // Fetch user's webhooks
-  const _fetchWebhooks = async () => {_if (!user) return;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    
+    if (!user) return,    
     setLoading(true),
     setError(null),
     
     try {
-<<<<<<< HEAD
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
-<<<<<<< HEAD
         setError("Authentication required"),
-        return
-=======
-        setError(&quot;Authentication required&quot;);
-        return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      }
-=======
+        return      }
       const { data: { session} } = await supabase.auth.getSession();
       if (!session) {_setError("Authentication required");
         return;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
       const _response = await fetch(`${_getWebhookUrl()}/webhooks`, {_method: 'GET', _headers: {
           'Authorization': `Bearer ${session.access_token}`,
@@ -110,7 +58,6 @@ export function useWebhooks() {_const { user} = useAuth();
         }
       }),
 
-<<<<<<< HEAD
       const result = await response.json(),
       
       if (!response.ok) {
@@ -122,16 +69,9 @@ export function useWebhooks() {_const { user} = useAuth();
       console.error('Error fetching webhooks:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
-<<<<<<< HEAD
         variant: "destructive",
         title: "Error fetching webhooks",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
-=======
-        variant: &quot;destructive&quot;,
-        title: &quot;Error fetching webhooks&quot;,
-        description: err instanceof Error ? err.message : 'An unknown error occurred'});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})    } finally {
       setLoading(false)
     }
   },
@@ -139,7 +79,6 @@ export function useWebhooks() {_const { user} = useAuth();
   // Create new webhook
   const createWebhook = async (name: string, url: string, eventTypes: WebhookEventType[], secret?: string) => {
     if (!user) return,
-=======
       const _result = await response.json();
       
       if (!response.ok) {_throw new Error(result.error || 'Failed to fetch webhooks');}
@@ -153,34 +92,23 @@ export function useWebhooks() {_const { user} = useAuth();
 
   // Create new webhook
   const _createWebhook = async (_name: string, _url: string, _eventTypes: WebhookEventType[], _secret?: string) => {_if (!user) return;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     setLoading(true),
     setError(null),
     
     try {
-<<<<<<< HEAD
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
-<<<<<<< HEAD
         setError("Authentication required"),
-        return
-=======
-        setError(&quot;Authentication required&quot;);
-        return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      }
-=======
+        return      }
       const { data: { session} } = await supabase.auth.getSession();
       if (!session) {_setError("Authentication required");
         return;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
       const _response = await fetch(`${_getWebhookUrl()}/create`, {_method: 'POST', _headers: {
           'Authorization': `Bearer ${session.access_token}`,
           'Content-Type': 'application/json'
         },
-<<<<<<< HEAD
         body: JSON.stringify({
           name,
           url,
@@ -194,43 +122,20 @@ export function useWebhooks() {_const { user} = useAuth();
       if (!response.ok) {
         throw new Error(result.error || 'Failed to create webhook')
       }
-=======
-        body: JSON.stringify({_name, _url, _eventTypes, _secret})
-      });
-
-      const _result = await response.json();
-      
-      if (!response.ok) {_throw new Error(result.error || 'Failed to create webhook');}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
       // Add the new webhook to the list
       setWebhooks(prev => [result.webhook, ...prev]),
       
-<<<<<<< HEAD
       toast({
-<<<<<<< HEAD
         title: "Webhook Created",
-        description: "Your webhook has been created successfully."}),
-=======
-        title: &quot;Webhook Created&quot;,
-        description: &quot;Your webhook has been created successfully.&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      
+        description: "Your webhook has been created successfully."}),      
       return result.webhook
     } catch (err) {
       console.error('Error creating webhook:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
-<<<<<<< HEAD
         variant: "destructive",
         title: "Error creating webhook",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
-=======
-        variant: &quot;destructive&quot;,
-        title: &quot;Error creating webhook&quot;,
-        description: err instanceof Error ? err.message : 'An unknown error occurred'});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})    } finally {
       setLoading(false)
     }
   },
@@ -238,7 +143,6 @@ export function useWebhooks() {_const { user} = useAuth();
   // Toggle webhook active status
   const toggleWebhook = async (webhookId: string, isActive: boolean) => {
     if (!user) return,
-=======
       toast({_title: "Webhook Created", _description: "Your webhook has been created successfully."});
       
       return result.webhook;
@@ -250,34 +154,23 @@ export function useWebhooks() {_const { user} = useAuth();
 
   // Toggle webhook active status
   const _toggleWebhook = async (_webhookId: string, _isActive: boolean) => {_if (!user) return;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     setLoading(true),
     setError(null),
     
     try {
-<<<<<<< HEAD
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
-<<<<<<< HEAD
         setError("Authentication required"),
-        return
-=======
-        setError(&quot;Authentication required&quot;);
-        return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      }
-=======
+        return      }
       const { data: { session} } = await supabase.auth.getSession();
       if (!session) {_setError("Authentication required");
         return;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
       const _response = await fetch(`${_getWebhookUrl()}/toggle`, {_method: 'POST', _headers: {
           'Authorization': `Bearer ${session.access_token}`,
           'Content-Type': 'application/json'
         },
-<<<<<<< HEAD
         body: JSON.stringify({ webhookId, isActive })
       }),
 
@@ -293,29 +186,16 @@ export function useWebhooks() {_const { user} = useAuth();
       )),
       
       toast({
-<<<<<<< HEAD
         title: isActive ? "Webhook Activated" : "Webhook Deactivated",
-        description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`}),
-=======
-        title: isActive ? &quot;Webhook Activated&quot; : &quot;Webhook Deactivated&quot;,
-        description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      
+        description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`}),      
       return result
     } catch (err) {
       console.error('Error toggling webhook:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
-<<<<<<< HEAD
         variant: "destructive",
         title: "Error updating webhook",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
-=======
-        variant: &quot;destructive&quot;,
-        title: &quot;Error updating webhook&quot;,
-        description: err instanceof Error ? err.message : 'An unknown error occurred'});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})    } finally {
       setLoading(false)
     }
   },
@@ -323,7 +203,6 @@ export function useWebhooks() {_const { user} = useAuth();
   // Delete webhook
   const deleteWebhook = async (webhookId: string) => {
     if (!user) return,
-=======
         body: JSON.stringify({_webhookId, _isActive})
       });
 
@@ -347,34 +226,23 @@ export function useWebhooks() {_const { user} = useAuth();
 
   // Delete webhook
   const _deleteWebhook = async (_webhookId: string) => {_if (!user) return;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     setLoading(true),
     setError(null),
     
     try {
-<<<<<<< HEAD
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
-<<<<<<< HEAD
         setError("Authentication required"),
-        return
-=======
-        setError(&quot;Authentication required&quot;);
-        return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      }
-=======
+        return      }
       const { data: { session} } = await supabase.auth.getSession();
       if (!session) {_setError("Authentication required");
         return;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
       const _response = await fetch(`${_getWebhookUrl()}/delete`, {_method: 'POST', _headers: {
           'Authorization': `Bearer ${session.access_token}`,
           'Content-Type': 'application/json'
         },
-<<<<<<< HEAD
         body: JSON.stringify({ webhookId })
       }),
 
@@ -383,43 +251,20 @@ export function useWebhooks() {_const { user} = useAuth();
       if (!response.ok) {
         throw new Error(result.error || 'Failed to delete webhook')
       }
-=======
-        body: JSON.stringify({_webhookId})
-      });
-
-      const _result = await response.json();
-      
-      if (!response.ok) {_throw new Error(result.error || 'Failed to delete webhook');}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
       // Remove the webhook from the list
       setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId)),
       
-<<<<<<< HEAD
       toast({
-<<<<<<< HEAD
         title: "Webhook Deleted",
-        description: "The webhook has been deleted successfully."}),
-=======
-        title: &quot;Webhook Deleted&quot;,
-        description: &quot;The webhook has been deleted successfully.&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      
+        description: "The webhook has been deleted successfully."}),      
       return result
     } catch (err) {
       console.error('Error deleting webhook:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
-<<<<<<< HEAD
         variant: "destructive",
         title: "Error deleting webhook",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
-=======
-        variant: &quot;destructive&quot;,
-        title: &quot;Error deleting webhook&quot;,
-        description: err instanceof Error ? err.message : 'An unknown error occurred'});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})    } finally {
       setLoading(false)
     }
   },
@@ -427,7 +272,6 @@ export function useWebhooks() {_const { user} = useAuth();
   // Test webhook
   const testWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     if (!user) return,
-=======
       toast({_title: "Webhook Deleted", _description: "The webhook has been deleted successfully."});
       
       return result;
@@ -439,35 +283,24 @@ export function useWebhooks() {_const { user} = useAuth();
 
   // Test webhook
   const _testWebhook = async (_webhookId: string, _eventType: WebhookEventType) => {_if (!user) return;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     
     setLoading(true),
     setError(null),
     setTestResult(null),
     
     try {
-<<<<<<< HEAD
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
-<<<<<<< HEAD
         setError("Authentication required"),
-        return
-=======
-        setError(&quot;Authentication required&quot;);
-        return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      }
-=======
+        return      }
       const { data: { session} } = await supabase.auth.getSession();
       if (!session) {_setError("Authentication required");
         return;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
       const _response = await fetch(`${_getWebhookUrl()}/test`, {_method: 'POST', _headers: {
           'Authorization': `Bearer ${session.access_token}`,
           'Content-Type': 'application/json'
         },
-<<<<<<< HEAD
         body: JSON.stringify({ webhookId, eventType })
       }),
 
@@ -490,29 +323,16 @@ export function useWebhooks() {_const { user} = useAuth();
       )),
       
       toast({
-<<<<<<< HEAD
         title: "Webhook Test Sent",
-        description: `Test completed with status: ${result.status} ${result.statusText}`}),
-=======
-        title: &quot;Webhook Test Sent&quot;,
-        description: `Test completed with status: ${result.status} ${result.statusText}`});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      
+        description: `Test completed with status: ${result.status} ${result.statusText}`}),      
       return result
     } catch (err) {
       console.error('Error testing webhook:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
-<<<<<<< HEAD
         variant: "destructive",
         title: "Error testing webhook",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
-=======
-        variant: &quot;destructive&quot;,
-        title: &quot;Error testing webhook&quot;,
-        description: err instanceof Error ? err.message : 'An unknown error occurred'});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})    } finally {
       setLoading(false)
     }
   },
@@ -529,7 +349,6 @@ export function useWebhooks() {_const { user} = useAuth();
     testWebhook,
     clearTestResult: () => setTestResult(null)
   }
-=======
         body: JSON.stringify({_webhookId, _eventType})
       });
 
@@ -555,5 +374,4 @@ export function useWebhooks() {_const { user} = useAuth();
   };
 
   return {_webhooks, _loading, _error, _testResult, _fetchWebhooks, _createWebhook, _toggleWebhook, _deleteWebhook, _testWebhook, _clearTestResult: () => setTestResult(null)};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 }

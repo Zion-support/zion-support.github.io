@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -21,14 +20,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-=======
-import React, {_useState} from 'react';
-import Link from 'next/link';
-import {_Menu, _X, _Search, _ChevronDown, _ChevronRight, _Home, _Users, _Settings, _HelpCircle, _Mail, _Phone, _MapPin, _BookOpen, _MessageCircle, _Star, _TrendingUp, _Layers, _Cpu, _Database, _Cloud, _Lock, _Shield, _Globe, _Factory, _Car, _Building, _GraduationCap, _Scale, _Palette, _Camera, _Video, _Music, _Gamepad2, _Heart, _Leaf, _Sun, _Moon, _Wind, _Droplets, _Mountain, _Code, _Wrench, _Smartphone, _BarChart3, _Eye, _Globe2, _Zap, _Rocket, _Brain, _Sparkles, _ShieldCheck, _Target, _Users2, _Briefcase, _Lightbulb, _Award, _Clock, _CheckCircle} from 'lucide-react';
-
-const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 const _serviceCategories = [
   {_title: '🚀 2029 Futuristic AI Services', _icon: Brain, _color: 'from-violet-600 via-purple-600 to-indigo-600', _description: 'Next-generation AI consciousness and creativity', _services: [
       { name: 'AI Consciousness Evolution Platform', _href: '/services/ai-consciousness-evolution-platform', _description: 'Develop genuine AI consciousness', _price: '$19, _999/month'},
@@ -65,7 +56,6 @@ const _serviceCategories = [
       {_name: 'Intelligent Sales Optimization', _href: '/services/intelligent-sales-optimization', _description: 'AI-powered sales intelligence', _price: '$1, _799/month'}
     ]
   },
-<<<<<<< HEAD
   {
     title: '🔬 2029 Research & Development',
     icon: Eye,
@@ -117,54 +107,7 @@ export default function UltraFuturisticNavigation2029V2() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className=&quot;flex-shrink-0&quot;
-=======
-  {_title: '🔬 2029 Research & Development', _icon: Eye, _color: 'from-orange-600 via-red-600 to-pink-600', _description: 'Breakthrough research solutions', _services: [
-      'Advanced Research Automation', _'Quantum Research Platform', _'AI Research Assistant', _'Biotech Research Suite'
-    ]}
-];
-
-const _mainNavigation = [
-  {_name: 'Home', _href: '/', _icon: Home},
-  {_name: 'Services', _href: '/services', _icon: Briefcase},
-  {_name: 'AI Solutions', _href: '/ai-solutions', _icon: Brain},
-  {_name: 'Quantum Tech', _href: '/quantum-tech', _icon: Globe},
-  {_name: 'Enterprise IT', _href: '/enterprise-it', _icon: Cpu},
-  {_name: 'Space Tech', _href: '/space-tech', _icon: Rocket},
-  {_name: 'Micro SAAS', _href: '/micro-saas', _icon: Target},
-  {_name: 'Innovations', _href: '/innovations', _icon: Sparkles},
-  {_name: 'About', _href: '/about', _icon: Users},
-  {_name: 'Contact', _href: '/contact', _icon: MessageCircle}
-];
-
-const _quickLinks = [
-  {_name: 'About Us', _href: '/about', _icon: Users},
-  {_name: 'Case Studies', _href: '/case-studies', _icon: BookOpen},
-  {_name: 'Blog', _href: '/blog', _icon: BookOpen},
-  {_name: 'News', _href: '/news', _icon: TrendingUp},
-  {_name: 'Careers', _href: '/careers', _icon: GraduationCap},
-  {_name: 'Support', _href: '/support', _icon: MessageCircle}
-];
-
-export default function UltraFuturisticNavigation2029V2() {_const [isOpen, _setIsOpen] = useState(false);
-  const [activeCategory, _setActiveCategory] = useState<string | null>(null);
-  const [searchQuery, _setSearchQuery] = useState('');
-
-  const _toggleMenu = () => setIsOpen(!isOpen);
-  const _closeMenu = () => setIsOpen(false);
-
-  return (_<nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">
-      {/* Main Navigation Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {_/* Logo */}
-          <motion.div
-            initial={_{ opacity: 0, _x: -20}}
-            animate={_{ opacity: 1, _x: 0}}
-            transition={_{ duration: 0.5}}
-            className="flex-shrink-0"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          >
+            className=&quot;flex-shrink-0&quot;          >
             <Link href=&quot;/&quot; className=&quot;flex items-center space-x-3 group&quot;>
               <div className=&quot;relative&quot;>
                 <div className=&quot;w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300&quot;>
@@ -181,7 +124,6 @@ export default function UltraFuturisticNavigation2029V2() {_const [isOpen, _setI
             </a>
           </motion.div>
 
-<<<<<<< HEAD
           {/* Desktop Navigation */}
           <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
             {mainNavigation.map((item) => (
@@ -201,34 +143,10 @@ export default function UltraFuturisticNavigation2029V2() {_const [isOpen, _setI
                 </a>
                 
                 {/* Hover effect */}
-                <div className=&quot;absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300&quot; />
-=======
-          {_/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {_mainNavigation.map((item) => (
-              <motion.div
-                key={item.name}
-                initial={_{ opacity: 0, _y: -20}}
-                animate={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.5, _delay: mainNavigation.indexOf(item) * 0.1}}
-                className="relative group"
-              >
-                <Link
-                  href={_item.href}
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 rounded-lg hover:bg-cyan-500/10"
-                >
-                  <item.icon className="w-4 h-4" />
-                  <span>{_item.name}</span>
-                </Link>
-                
-                {_/* Hover effect */}
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </motion.div>
+                <div className=&quot;absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300&quot; />              </motion.div>
             ))}
           </div>
 
-<<<<<<< HEAD
           {/* Right side - Contact & Search */}
           <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
             {/* Search */}
@@ -239,21 +157,7 @@ export default function UltraFuturisticNavigation2029V2() {_const [isOpen, _setI
                 placeholder=&quot;Search services...&quot;
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className=&quot;pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64&quot;
-=======
-          {_/* Right side - Contact & Search */}
-          <div className="hidden lg:flex items-center space-x-4">
-            {_/* Search */}
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Search services..."
-                value={_searchQuery}
-                onChange={_(_e) => setSearchQuery(e.target.value)}
-                className="pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              />
+                className=&quot;pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64&quot;              />
             </div>
 
             {_/* Contact Button */}
@@ -272,31 +176,19 @@ export default function UltraFuturisticNavigation2029V2() {_const [isOpen, _setI
             </motion.div>
           </div>
 
-<<<<<<< HEAD
           {/* Mobile menu button */}
           <div className=&quot;lg:hidden&quot;>
             <button
               onClick={toggleMenu}
               className=&quot;p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800 transition-colors duration-300&quot;
             >
-              {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}
-=======
-          {_/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button
-              onClick={_toggleMenu}
-              className="p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800 transition-colors duration-300"
-            >
-              {_isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </button>
+              {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}            </button>
           </div>
         </div>
       </div>
 
       {_/* Mobile Navigation Menu */}
       <AnimatePresence>
-<<<<<<< HEAD
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -346,63 +238,10 @@ export default function UltraFuturisticNavigation2029V2() {_const [isOpen, _setI
                     >
                       <item.icon className=&quot;w-4 h-4&quot; />
                       <span className=&quot;text-sm&quot;>{item.name}</span>
-                    </a>
-=======
-        {_isOpen && (_<motion.div
-            initial={{ opacity: 0, _height: 0}}
-            animate={_{ opacity: 1, _height: 'auto'}}
-            exit={_{ opacity: 0, _height: 0}}
-            transition={_{ duration: 0.3}}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20"
-          >
-            <div className="px-4 py-6 space-y-4">
-              {_/* Mobile Search */}
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={_searchQuery}
-                  onChange={_(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
-                />
-              </div>
-
-              {_/* Mobile Navigation Links */}
-              <div className="space-y-2">
-                {_mainNavigation.map(_(item) => (
-                  <Link
-                    key={item.name}
-                    href={_item.href}
-                    onClick={_closeMenu}
-                    className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
-                  >
-                    <item.icon className="w-5 h-5" />
-                    <span>{_item.name}</span>
-                  </Link>
-                ))}
-              </div>
-
-              {_/* Quick Links */}
-              <div className="pt-4 border-t border-gray-700">
-                <h3 className="text-sm font-medium text-gray-400 mb-3 px-4">Quick Links</h3>
-                <div className="space-y-2">
-                  {_quickLinks.map(_(item) => (
-                    <Link
-                      key={item.name}
-                      href={_item.href}
-                      onClick={_closeMenu}
-                      className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
-                    >
-                      <item.icon className="w-4 h-4" />
-                      <span className="text-sm">{_item.name}</span>
-                    </Link>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  ))}
+                    </a>                  ))}
                 </div>
               </div>
 
-<<<<<<< HEAD
               {/* Contact Info */}
               <div className=&quot;pt-4 border-t border-gray-700&quot;>
                 <h3 className=&quot;text-sm font-medium text-gray-400 mb-3 px-4&quot;>Contact Info</h3>
@@ -417,25 +256,7 @@ export default function UltraFuturisticNavigation2029V2() {_const [isOpen, _setI
                   </div>
                   <div className=&quot;flex items-center space-x-3 text-gray-400&quot;>
                     <MapPin className=&quot;w-4 h-4&quot; />
-                    <span className=&quot;text-sm&quot;>{contactInfo.address}</span>
-=======
-              {_/* Contact Info */}
-              <div className="pt-4 border-t border-gray-700">
-                <h3 className="text-sm font-medium text-gray-400 mb-3 px-4">Contact Info</h3>
-                <div className="space-y-2 px-4">
-                  <div className="flex items-center space-x-3 text-gray-400">
-                    <Phone className="w-4 h-4" />
-                    <span className="text-sm">{_contactInfo.mobile}</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-400">
-                    <Mail className="w-4 h-4" />
-                    <span className="text-sm">{_contactInfo.email}</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-400">
-                    <MapPin className="w-4 h-4" />
-                    <span className="text-sm">{_contactInfo.address}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </div>
+                    <span className=&quot;text-sm&quot;>{contactInfo.address}</span>                  </div>
                 </div>
               </div>
             </div>
@@ -445,7 +266,6 @@ export default function UltraFuturisticNavigation2029V2() {_const [isOpen, _setI
 
       {_/* Service Categories Dropdown */}
       <AnimatePresence>
-<<<<<<< HEAD
         {activeCategory && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -473,54 +293,15 @@ export default function UltraFuturisticNavigation2029V2() {_const [isOpen, _setI
                         <Link
                           key={service.name}
                           href={service.href}
-                          className=&quot;block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group&quot;
-=======
-        {_activeCategory && (_<motion.div
-            initial={{ opacity: 0, _y: -20}}
-            animate={_{ opacity: 1, _y: 0}}
-            exit={_{ opacity: 0, _y: -20}}
-            transition={_{ duration: 0.3}}
-            className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40"
-          >
-            <div className="max-w-7xl mx-auto px-4 py-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-                {_serviceCategories.map((category) => (_<div key={category.title} className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <div className={_`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
-                        <category.icon className="w-5 h-5 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white">{_category.title}</h3>
-                        <p className="text-sm text-gray-400">{_category.description}</p>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-3">
-                      {_category.services.map((service, _index) => (
-                        <Link
-                          key={service.name}
-                          href={_service.href}
-                          className="block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        >
+                          className=&quot;block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group&quot;                        >
                           <div className=&quot;flex justify-between items-start&quot;>
                             <div>
-<<<<<<< HEAD
                               <h4 className=&quot;font-medium text-white group-hover:text-cyan-400 transition-colors duration-300&quot;>
                                 {service.name}
                               </h4>
                               <p className=&quot;text-sm text-gray-400 mt-1&quot;>{service.description}</p>
                             </div>
-                            <span className=&quot;text-sm font-semibold text-cyan-400&quot;>{service.price}</span>
-=======
-                              <h4 className="font-medium text-white group-hover:text-cyan-400 transition-colors duration-300">
-                                {_service.name}
-                              </h4>
-                              <p className="text-sm text-gray-400 mt-1">{_service.description}</p>
-                            </div>
-                            <span className="text-sm font-semibold text-cyan-400">{_service.price}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                          </div>
+                            <span className=&quot;text-sm font-semibold text-cyan-400&quot;>{service.price}</span>                          </div>
                         </a>
                       ))}
                     </div>

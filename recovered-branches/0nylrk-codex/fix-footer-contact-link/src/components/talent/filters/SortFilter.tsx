@@ -1,19 +1,11 @@
 
-<<<<<<< HEAD
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-<<<<<<< HEAD
   SelectValue} from "@/components/ui/select",
-import { SortFilterProps } from "@/types/filters",
-=======
-  SelectValue} from &quot;@/components/ui/select&quot;;
-import { SortFilterProps } from &quot;@/types/filters&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
+import { SortFilterProps } from "@/types/filters",export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className=&quot;mb-6&quot;>
       <label className=&quot;text-sm font-medium text-zion-slate-light mb-2 block&quot;>
@@ -22,7 +14,6 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
       <Select value={sortOption} onValueChange={setSortOption}>
         <SelectTrigger className=&quot;bg-zion-blue border-zion-blue-light text-white&quot;>
           <SelectValue placeholder=&quot;Sort by&quot; />
-=======
 import {_Select, _SelectContent, _SelectItem, _SelectTrigger, _SelectValue} from "@/components/ui/select";
 
 export function SortFilter(_{_sortOption, _setSortOption}: SortFilterProps) {_return (
@@ -33,7 +24,6 @@ export function SortFilter(_{_sortOption, _setSortOption}: SortFilterProps) {_re
       <Select value={sortOption} onValueChange={_setSortOption}>
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
           <SelectValue placeholder="Sort by" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </SelectTrigger>
         <SelectContent className=&quot;bg-zion-blue border-zion-blue-light text-white&quot;>
           <SelectItem value=&quot;relevance&quot;>Relevance</SelectItem>

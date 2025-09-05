@@ -1,23 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from "next/link",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { useAuth } from "@/hooks/useAuth",
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
 import { ForumCategoryInfo } from "@/types/community",
-=======
-import Link from &quot;next/link&quot;;
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from &quot;@/components/ui/card&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
-import { ForumCategoryInfo } from &quot;@/types/community&quot;;
-=======
-import Link from "next/link";
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 const categories: ForumCategoryInfo[] = [
-<<<<<<< HEAD
   {
     id: &quot;getting-hired&quot;,
     name: &quot;Getting Hired&quot;,
@@ -66,32 +52,12 @@ const iconMap = {
 export const ForumCategories = () => {
   const { user } = useAuth(),
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
-=======
-  {_id: "getting-hired", _name: "Getting Hired", _description: "Tips, _strategies, _and questions about getting hired on the platform.", _adminOnly: false, _icon: "Briefcase"},
-  {_id: "project-help", _name: "Project Help", _description: "Get help with your ongoing projects and collaboration.", _adminOnly: false, _icon: "MessageSquare"},
-  {_id: "ai-tools", _name: "AI Tools Discussion", _description: "Discuss AI tools, _frameworks, _and best practices.", _adminOnly: false, _icon: "Code"},
-  {_id: "feedback", _name: "Feedback & Feature Requests", _description: "Share your feedback and suggest new features.", _adminOnly: false, _icon: "FileText"},
-  {_id: "announcements", _name: "Announcements", _description: "Official announcements from the Zion team.", _adminOnly: true, _icon: "Megaphone"}
-];
-
-const _iconMap = {_Briefcase, _MessageSquare, _Code, _FileText, _Megaphone};
-
-export const _ForumCategories = () => {_const { user} = useAuth();
-  const _isAdmin = user?.userType === 'admin' || user?.role === 'admin';
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   const _visibleCategories = categories.filter(
     category => !category.adminOnly || isAdmin
   ),
 
-<<<<<<< HEAD
   return (
-<<<<<<< HEAD
-    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
-=======
-    <div className=&quot;grid gap-4 md:grid-cols-2 lg:grid-cols-3&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      {visibleCategories.map((category) => {
+    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">      {visibleCategories.map((category) => {
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
           <Link key={category.id} href={`/community/category/${category.id}`}>
@@ -104,7 +70,6 @@ export const _ForumCategories = () => {_const { user} = useAuth();
               </CardHeader>
               <CardContent>
                 <CardDescription className=&quot;text-base&quot;>{category.description}</CardDescription>
-=======
   return (_<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
       {_visibleCategories.map((category) => {
         const _Icon = iconMap[category.icon as keyof typeof iconMap];
@@ -119,7 +84,6 @@ export const _ForumCategories = () => {_const { user} = useAuth();
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">{_category.description}</CardDescription>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
               </CardContent>
             </Card>
           </Link>

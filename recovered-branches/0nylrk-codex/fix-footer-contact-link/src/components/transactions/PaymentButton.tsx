@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
@@ -8,19 +6,7 @@ import { useAuth } from "@/hooks/useAuth",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { Loader2 } from "lucide-react",
-import { useNavigate } from "react-router-dom",
-=======
-import { useState } from &quot;react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { cn } from &quot;@/lib/utils&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { toast } from &quot;@/hooks/use-toast&quot;;
-import { supabase } from &quot;@/integrations/supabase/client&quot;;
-import { Loader2 } from &quot;lucide-react&quot;;
-import { useNavigate } from &quot;react-router-dom&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface PaymentButtonProps {
+import { useNavigate } from "react-router-dom",interface PaymentButtonProps {
   amount: number,
   serviceId: string,
   providerId: string,
@@ -41,32 +27,23 @@ export function PaymentButton({
   const [isProcessing, setIsProcessing] = useState(false),
   const { isAuthenticated, user } = useAuth(),
   const navigate = useNavigate(),
-=======
 
-interface PaymentButtonProps {_amount: number;
-  serviceId: string;
-  providerId: string;
+interface PaymentButtonProps {amount: number,
+  serviceId: string,
+  providerId: string,
   buttonText?: string;
   className?: string;
   onPaymentInitiated?: () => void;
-  redirectUrl?: string;}
+  redirectUrl?: string}
 
-export function PaymentButton(_{_amount, _serviceId, _providerId, _buttonText = "Purchase", _className, _onPaymentInitiated, _redirectUrl}: PaymentButtonProps) {_const [isProcessing, _setIsProcessing] = useState(false);
-  const { isAuthenticated, _user} = useAuth();
-  const _navigate = useNavigate();
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+export function PaymentButton(_{amount, serviceId, providerId, buttonText = "Purchase", className, onPaymentInitiated, redirectUrl}: PaymentButtonProps) {const [isProcessing, setIsProcessing] = useState(false);
+  const { isAuthenticated, user} = useAuth();
+  const navigate = useNavigate();
   
-  const _handlePaymentClick = async () => {_if (!isAuthenticated) {
+  const handlePaymentClick = async () => {if (!isAuthenticated) {
       toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
         title: "Authentication required",
-        description: "Please sign in to make a purchase."}),
-=======
-        title: &quot;Authentication required&quot;,
-        description: &quot;Please sign in to make a purchase.&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      
+        description: "Please sign in to make a purchase."}),      
       navigate(&quot;/login&quot;, { 
         state: { from: window.location.pathname } 
       }),
@@ -80,8 +57,8 @@ export function PaymentButton(_{_amount, _serviceId, _providerId, _buttonText = 
         onPaymentInitiated()
       }
       
-      // Call the create-checkout edge function
-      const { data, error } = await supabase.functions.invoke(&quot;create-checkout&quot;, {
+      // Call the create-checkout edge function,
+const { data, error } = await supabase.functions.invoke(&quot;create-checkout&quot;, {
         body: {
           amount,
           serviceId,
@@ -95,10 +72,9 @@ export function PaymentButton(_{_amount, _serviceId, _providerId, _buttonText = 
       }
       
       if (data?.url) {
-        // Open Stripe checkout in a new tab
-        window.open(data.url, '_blank')
+        // Open Stripe checkout in a new tab,
+window.open(data.url, 'blank')
       } else {
-<<<<<<< HEAD
         throw new Error("No checkout URL returned")
       }
       
@@ -107,71 +83,49 @@ export function PaymentButton(_{_amount, _serviceId, _providerId, _buttonText = 
       toast({
         title: "Payment error",
         description: "There was a problem initiating your payment. Please try again.",
-        variant: "destructive"})
-=======
-        throw new Error(&quot;No checkout URL returned&quot;);
-      }
-      
-    } catch (error) {
-      console.error(&quot;Payment error:&quot;, error);
-      toast({
-        title: &quot;Payment error&quot;,
-        description: &quot;There was a problem initiating your payment. Please try again.&quot;,
-        variant: &quot;destructive&quot;});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
-      // Reset button state after a short delay
-      setTimeout(() => {
+        variant: "destructive"})    } finally {
+      // Reset button state after a short delay,
+setTimeout(() => {
         setIsProcessing(false)
       }, 1500)
-=======
-        title: "Authentication required", _description: "Please sign in to make a purchase."});
+        title: "Authentication required", description: "Please sign in to make a purchase."});
       
-      navigate("/login", {_state: { from: window.location.pathname} 
+      navigate("/login", {state: { from: window.location.pathname} 
       });
-      return;
+      return
     }
     
-    try {_setIsProcessing(true);
+    try {setIsProcessing(true);
       
       if (onPaymentInitiated) {
-        onPaymentInitiated();}
+        onPaymentInitiated()}
       
-      // Call the create-checkout edge function
-      const {_data, _error} = await supabase.functions.invoke(_"create-checkout", _{_body: {
-          amount, _serviceId, _providerId, _userId: user?.id, _successUrl: redirectUrl || window.location.href, _cancelUrl: window.location.href}});
+      // Call the create-checkout edge function,
+const {data, error} = await supabase.functions.invoke(_"create-checkout", _{body: {
+          amount, serviceId, providerId, userId: user?.id, successUrl: redirectUrl || window.location.href, cancelUrl: window.location.href}});
       
-      if (error) {_throw error;}
+      if (error) {throw error}
       
-      if (data?.url) {_// Open Stripe checkout in a new tab
-        window.open(data.url, _'_blank');} else {_throw new Error("No checkout window.URL returned");}
+      if (data?.url) {_// Open Stripe checkout in a new tab,
+window.open(data.url, _'blank')} else {throw new Error("No checkout window.URL returned")}
       
-    } catch (error) {_toast({
-        title: "Payment error", _description: "There was a problem initiating your payment. Please try again.", _variant: "destructive"});
-    } finally {_// Reset button state after a short delay
-      setTimeout__(() => {
-        setIsProcessing(false);}, 1500);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+    } catch (error) {toast({
+        title: "Payment error", description: "There was a problem initiating your payment. Please try again.", variant: "destructive"})
+    } finally {_// Reset button state after a short delay,
+setTimeout_(() => {
+        setIsProcessing(false)}, 1500)
     }
   },
   
   return (
-    <Button
-<<<<<<< HEAD
-      onClick={handlePaymentClick}
+    <Button,
+onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
         &quot;relative min-w-[120px]&quot;,
-        className
-=======
-      onClick={_handlePaymentClick}
-      disabled={_isProcessing}
-      className={_cn(
-        "relative min-w-[120px]", _className
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      )}
+        className      )}
     >
-      {_isProcessing ? (
+      {isProcessing ? (
         <>
           <Loader2 className=&quot;h-4 w-4 mr-2 animate-spin&quot; />
           Processing...

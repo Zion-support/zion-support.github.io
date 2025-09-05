@@ -1,23 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { TransactionHistory } from "@/components/transactions/TransactionHistory",
 import { GradientHeading } from "@/components/GradientHeading",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-=======
-import React from &quot;react&quot;;
-import { Header } from &quot;@/components/Header&quot;;
-import { Footer } from &quot;@/components/Footer&quot;;
-import { TransactionHistory } from &quot;@/components/transactions/TransactionHistory&quot;;
-import { GradientHeading } from &quot;@/components/GradientHeading&quot;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from "react";
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",import React from "react";
 
 export default function Payments() {_return (_<>
       <Header />
@@ -27,14 +14,8 @@ export default function Payments() {_return (_<>
             <GradientHeading level=&quot;h1&quot; className=&quot;text-4xl lg:text-5xl font-bold mb-4&quot;>
               Payments & Transactions
             </GradientHeading>
-<<<<<<< HEAD
             <p className=&quot;text-zion-slate-light max-w-2xl mx-auto&quot;>
-              Track your payment history, manage transactions in escrow, and view your financial activities.
-=======
-            <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Track your payment history, _manage transactions in escrow, _and view your financial activities.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-            </p>
+              Track your payment history, manage transactions in escrow, and view your financial activities.            </p>
           </div>
           
           <Tabs defaultValue=&quot;history&quot; className=&quot;w-full&quot;>
@@ -58,17 +39,9 @@ export default function Payments() {_return (_<>
                       Manage your payment methods and set your default preference.
                     </p>
                     <Button 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      onClick={() => window.open('https://stripe.com_blank')}
-=======
-                      onClick={() => window.open('https://stripe.com', _'_blank')}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
-=======
+                      onClick={() => window.open('https://stripe.com_blank')}                      className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
                       onClick={() => window.open('https://stripe.com', '_blank')}
                       className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                     >
                       Manage Payment Methods
                     </Button>
@@ -96,14 +69,8 @@ export default function Payments() {_return (_<>
                       <div className=&quot;flex items-center space-x-2&quot;>
                         <Checkbox id=&quot;notify-email&quot; defaultChecked />
                         <label
-<<<<<<< HEAD
                           htmlFor="notify-email"
-                          className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white"
-=======
-                          htmlFor=&quot;notify-email&quot;
-                          className=&quot;text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white&quot;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-                        >
+                          className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white"                        >
                           Email notifications
                         </label>
                       </div>
@@ -130,17 +97,7 @@ export default function Payments() {_return (_<>
 }
 
 // Import UI components for Payment Settings tab
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Switch } from "@/components/ui/switch",
 import { Label } from "@/components/ui/label",
 import { Checkbox } from "@/components/ui/checkbox",
-=======
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Switch } from &quot;@/components/ui/switch&quot;;
-import { Label } from &quot;@/components/ui/label&quot;;
-import { Checkbox } from &quot;@/components/ui/checkbox&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

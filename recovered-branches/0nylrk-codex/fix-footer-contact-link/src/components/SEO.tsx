@@ -1,12 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async",
-=======
-import { Helmet } from &quot;react-helmet-async&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface SEOProps {
+import { Helmet } from "react-helmet-async",interface SEOProps {
   title: string,
   description: string,
   keywords?: string,
@@ -25,14 +18,8 @@ export function SEO({
   ogUrl,
   canonical,
   noindex}: SEOProps) {
-<<<<<<< HEAD
   const siteTitle = "Zion - The Future of Tech & AI Marketplace",
-  const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle,
-=======
-  const siteTitle = &quot;Zion - The Future of Tech & AI Marketplace&quot;;
-  const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  
+  const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle,  
   return (
     <Helmet>
       <title>{fullTitle}</title>
@@ -58,7 +45,6 @@ export function SEO({
       
       {/* No index directive for search engines if needed */}
       {noindex && <meta name=&quot;robots&quot; content=&quot;noindex&quot; />}
-=======
 
 interface SEOProps {_title: string;
   description: string;
@@ -97,7 +83,6 @@ export function SEO(_{_title, _description, _keywords, _// Default to the Google
       
       {_/* No index directive for search engines if needed */}
       {_noindex && <meta name="robots" content="noindex" />}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     </Helmet>
   )
 }

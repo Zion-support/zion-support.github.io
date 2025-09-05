@@ -17,7 +17,6 @@ export function StructuredData() {_const _structuredData = {
     "screenshot": "https: //ziontechgroup.com/screenshot.png",
     "softwareVersion": "1.0.0",
     "releaseNotes": "Initial release with core features for launching digital economies",
-<<<<<<< HEAD
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.8",
@@ -31,12 +30,6 @@ export function StructuredData() {_const _structuredData = {
       "url": "https://ziontechgroup.com"
     }
   },
-=======
-    "aggregateRating": {_"@type": "AggregateRating", _"ratingValue": "4.8", _"ratingCount": "150", _"bestRating": "5", _"worstRating": "1"},
-    "author": {_"@type": "Organization", _"name": "Zion Tech Group", _"url": "https://ziontechgroup.com"}
-  };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (
     <script
       type="application/ld+json"

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
@@ -9,52 +7,25 @@ import { z } from "zod",
 import { Mail } from "lucide-react",
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-=======
-import { useState } from &quot;react&quot;;
-import { Link } from &quot;react-router-dom&quot;;
-import { useForm, type UseFormReturn } from &quot;react-hook-form&quot;;
-import { zodResolver } from &quot;@hookform/resolvers/zod&quot;;
-import { z } from &quot;zod&quot;;
-import { Mail } from &quot;lucide-react&quot;;
-
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-import {
+import { Input } from "@/components/ui/input",import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD
   FormMessage} from "@/components/ui/form",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 // Form validation schema
 const forgotPasswordSchema = z.object({
   email: z.string().email("Please enter a valid email")}),
-=======
-  FormMessage} from &quot;@/components/ui/form&quot;;
-import { Header } from &quot;@/components/Header&quot;;
-import { Footer } from &quot;@/components/Footer&quot;;
-
-// Form validation schema
-const forgotPasswordSchema = z.object({
-  email: z.string().email(&quot;Please enter a valid email&quot;)});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-
 import {_Form, _FormControl, _FormField, _FormItem, _FormLabel, _FormMessage} from "@/components/ui/form";
 
 // Form validation schema
 const _forgotPasswordSchema = z.object({_email: z.string().email("Please enter a valid email")});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
 
-<<<<<<< HEAD
 export default function ForgotPassword() {
   const { resetPassword, isLoading } = useAuth(),
   const [submitted, setSubmitted] = useState(false),
@@ -70,19 +41,6 @@ export default function ForgotPassword() {
     await resetPassword(data.email),
     setSubmitted(true)
   },
-=======
-export default function ForgotPassword() {_const { resetPassword, _isLoading} = useAuth();
-  const [submitted, setSubmitted] = useState(false);
-  
-  // Initialize react-hook-form
-  const _form = useForm({_resolver: zodResolver(forgotPasswordSchema), _defaultValues: {
-      email: ""}}) as UseFormReturn<ForgotPasswordFormValues>;
-
-  // Form submission handler
-  const _onSubmit = async (_data: ForgotPasswordFormValues) => {_await resetPassword(data.email);
-    setSubmitted(true);};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (
     <>
       <Header />
@@ -119,20 +77,11 @@ export default function ForgotPassword() {_const { resetPassword, _isLoading} = 
                 </div>
               ) : (
                 <Form {...form}>
-<<<<<<< HEAD
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6&quot;>
                     <FormField
                       control={form.control}
                       name=&quot;email"
-                      render={({ field }) => (
-=======
-                  <form onSubmit={_form.handleSubmit(onSubmit)} className="space-y-6">
-                    <FormField
-                      control={_form.control}
-                      name="email"
-                      render={_(_{ field}) => (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        <FormItem>
+                      render={({ field }) => (                        <FormItem>
                           <FormLabel className="text-zion-slate-light">Email address</FormLabel>
                           <FormControl>
                             <div className="relative&quot;>
@@ -150,20 +99,11 @@ export default function ForgotPassword() {_const { resetPassword, _isLoading} = 
                     />
 
                     <Button
-<<<<<<< HEAD
                       type=&quot;submit"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white&quot;
                       disabled={isLoading}
                     >
-                      {isLoading ? &quot;Sending...&quot; : &quot;Reset Password"}
-=======
-                      type="submit"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                      disabled={_isLoading}
-                    >
-                      {_isLoading ? "Sending..." : "Reset Password"}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                    </Button>
+                      {isLoading ? &quot;Sending...&quot; : &quot;Reset Password"}                    </Button>
 
                     <div className="text-center&quot;>
                       <Link

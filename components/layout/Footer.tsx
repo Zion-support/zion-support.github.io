@@ -1,94 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                  key={social.name};
-                  href={social.href};
-
-                  target=&quot;_blank&quot;,
-                  rel=&quot;noopener noreferrer&quot;,
-                  className=&quot;text-gray-400 hover: text-blue-400 transition-colors&quot;,
-                  aria-label={social.name};
-                >,
-                  <social.icon className=&quot;h-5 w-5&quot; />,
-                </a>))};
-            </div>,
-          </div>,
-          {/* Services */},
-          <div>,
-            <h3 className=&quot;text-lg font-semibold mb-4&quot;>Services</h3>,
-            <ul className=&quot;space-y-2&quot;>,
-              {services.map((service) => (,
-                <li key={service.name}>,
-                  <Link,
-                    href={service.href};
-                    {service.name};
-                  </a>,
-                </li>))};
-            </ul>,
-          </div>,
-          {/* Company */},
-          <div>,
-            <h3 className=&quot;text-lg font-semibold mb-4&quot;>Company</h3>,
-            <ul className=&quot;space-y-2&quot;>,
-              {company.map((item) => (,
-                <li key={item.name}>,
-                  <Link,
-                    href={item.href};
-                    {item.name};
-                  </a>,
-                </li>))};
-            </ul>,
-          </div>,
-          {/* Resources & Contact */},
-          <div>,
-            <h3 className=&quot;text-lg font-semibold mb-4&quot;>Resources</h3>,
-            <ul className=&quot;space-y-2 mb-6&quot;>,
-              {resources.map((resource) => (,
-                <li key={resource.name}>,
-                  <Link,
-                    href={resource.href};
-                    {resource.name};
-                  </a>,
-                </li>))};
-            </ul>,
-            <h3 className=&quot;text-lg font-semibold mb-4&quot;>Contact</h3>,
-            <div className=&quot;space-y-2&quot;>,
-              <div className=&quot;flex items-center text-gray-300&quot;>,
-                <Mail className=&quot;h-4 w-4 mr-2&quot; />,
-                <a href=&quot;mailto: info@ziontechgroup.com&quot; className=&quot;hover:text-blue-400&quot;>,
-                  info@ziontechgroup.com,
-                </a>,
-              </div>,
-              <div className=&quot;flex items-center text-gray-300&quot;>,
-                <Phone className=&quot;h-4 w-4 mr-2&quot; />,
-                <a href=&quot;tel: +1-555-123-4567&quot; className=&quot;hover:text-blue-400&quot;>,
-                  +1 (555) 123-4567,
-                </a>,
-              </div>,
-              <div className=&quot;flex items-start text-gray-300&quot;>,
-                <MapPin className=&quot;h-4 w-4 mr-2 mt-0.5&quot; />,
-                <span>,
-                  123 Tech Street<br />,
-                  San Francisco, CA 94105,
-                </span>,
-              </div>,
-            </div>,
-          </div>,
-        </div>,
-        {/* Bottom Section */};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import React from 'react';
 import Link from 'next/link';
 import {_Facebook, _Twitter, _Linkedin, _Instagram, _Mail, _Phone, } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const Footer: React.FC = () => {
-  return (
-=======
-const Footer: React.FC = () => {_return (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    <footer className="bg-gray-900 text-white">
+  return (    <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
@@ -156,7 +71,6 @@ const Footer: React.FC = () => {_return (
                 <Mail className="w-4 h-4 mr-2" />
                 <span className="text-gray-300">kleber@ziontechgroup.com</span>
               </div>
-=======
 const Footer = () => {
   const currentYear = new Date().getFullYear(),
 
@@ -263,41 +177,20 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
-          </p>
-=======
-        {/* Bottom Section */}
-        <div className=&quot;border-t border-gray-600/20 mt-16 pt-8&quot;>
-          <div className=&quot;flex flex-col md:flex-row justify-between items-center&quot;>
-            <p className=&quot;text-gray-400 text-sm&quot;>
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-            <div className=&quot;flex items-center space-x-8 mt-4 md:mt-0&quot;>
-              <Link href=&quot;/privacy&quot; className=&quot;text-gray-400 hover:text-blue-500 text-sm transition-colors duration-200&quot;>
-                Privacy Policy
-              </a>
-              <Link href=&quot;/terms&quot; className=&quot;text-gray-400 hover:text-blue-500 text-sm transition-colors duration-200&quot;>
-                Terms of Service
-              </a>
-            </div>
-          </div>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-        </div>
+          </p>        </div>
       </div>
     </footer>
   )
 },
 
 export default Footer;
-=======
                   key={social.name};
                   href={social.href};
                   target="_blank";
@@ -372,4 +265,3 @@ export default Footer;
           </div>;
         </div>;
         {/* Bottom Section */};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

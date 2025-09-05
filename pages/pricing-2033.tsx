@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
@@ -17,21 +16,9 @@ const contactInfo = {
 export default function Pricing2033Page() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
-=======
-import React, {_useState} from 'react';
-import Head from 'next/head';
-import {_Check, _Star, _Zap, _Shield, _Users, _Globe, _ArrowRight, _ExternalLink, _TrendingUp, _Clock, _Target, _Building, _Rocket, _Award, _DollarSign, _ChartBar, _Lock, _Cpu, _Database, _Cloud, _Smartphone, _Palette, _Search, _MessageSquare, _FileText, _Calendar, _CreditCard, _BarChart3, _Settings, _Code, _BookOpen, _Activity, _Crown, _Gem, _Infinity, _Brain, _Atom, _Microscope, _Phone, _Mail, _MapPin} from 'lucide-react';
-
-const _contactInfo = {_mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
-
-export default function Pricing2033Page() {_const [billingCycle, _setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [selectedPlan, _setSelectedPlan] = useState<string | null>(null);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-  // Enhanced service categories with pricing
-  const _serviceCategories = [
+  // Enhanced service categories with pricing,
+const serviceCategories = [
     {
-<<<<<<< HEAD
       name: 'Revolutionary AI Services',
       description: 'AI consciousness evolution and emotional intelligence',
       services: ['AI Consciousness EvolutionAI Emotional IntelligenceAI Creativity OrchestratorAI Autonomous Business Manager'],
@@ -87,8 +74,8 @@ export default function Pricing2033Page() {_const [billingCycle, _setBillingCycl
     }
   ],
 
-  // Enhanced pricing tiers with more realistic and comprehensive offerings
-  const pricingTiers = [
+  // Enhanced pricing tiers with more realistic and comprehensive offerings,
+const pricingTiers = [
     {
       name: 'Starter',
       description: 'Perfect for small businesses and startups',
@@ -130,8 +117,8 @@ export default function Pricing2033Page() {_const [billingCycle, _setBillingCycl
     }
   ],
 
-  // Popular services with pricing
-  const popularServices = [
+  // Popular services with pricing,
+const popularServices = [
     {
       name: 'AI Consciousness Evolution Platform',
       price: '$24,999/month',
@@ -165,40 +152,8 @@ export default function Pricing2033Page() {_const [billingCycle, _setBillingCycl
       savings: 'Save 50% vs. competitors'
     }
   ],
-=======
-      name: 'Revolutionary AI Services', _description: 'AI consciousness evolution and emotional intelligence', _services: ['AI Consciousness Evolution', _'AI Emotional Intelligence', _'AI Creativity Orchestrator', _'AI Autonomous Business Manager'], _avgPrice: '$11, _499/month', _savings: 'Save 60-80% vs. competitors', _icon: Brain, _color: 'from-violet-500 to-purple-500'},
-    {_name: 'Quantum & Emerging Tech', _description: 'Quantum computing and DNA-based solutions', _services: ['Quantum DNA Computing', _'Quantum Internet Security', _'Quantum Financial Trading', _'Quantum Creativity Studio'], _avgPrice: '$19, _999/month', _savings: 'Save 70-85% vs. competitors', _icon: Atom, _color: 'from-indigo-500 to-blue-500'},
-    {_name: 'Enterprise IT Solutions', _description: 'Autonomous operations and zero-trust security', _services: ['Autonomous DevOps', _'Zero Trust Architecture', _'Edge Computing Orchestration', _'AI IT Operations Center'], _avgPrice: '$649/month', _savings: 'Save 50-70% vs. competitors', _icon: Cpu, _color: 'from-blue-500 to-cyan-500'},
-    {_name: 'Space & Metaverse Tech', _description: 'Space mining and metaverse development', _services: ['Space Mining Automation', _'Metaverse AI Development', _'AI Health Analytics', _'Holographic Events'], _avgPrice: '$14, _999/month', _savings: 'Save 65-80% vs. competitors', _icon: Rocket, _color: 'from-teal-500 to-emerald-500'},
-    {_name: 'Innovative Micro SAAS', _description: 'Cutting-edge solutions for every business', _services: ['AI Business Intelligence', _'Quantum-Secure Communication', _'AI Customer Success', _'Blockchain Supply Chain'], _avgPrice: '$374/month', _savings: 'Save 40-60% vs. competitors', _icon: Target, _color: 'from-green-500 to-yellow-500'},
-    {_name: 'Research & Development', _description: 'Breakthrough technologies and innovations', _services: ['Neuromorphic Computing', _'Photonic Computing', _'Swarm Robotics', _'Biotech Automation'], _avgPrice: '$1, _099/month', _savings: 'Save 55-75% vs. competitors', _icon: Microscope, _color: 'from-orange-500 to-red-500'}
-  ];
-
-  // Enhanced pricing tiers with more realistic and comprehensive offerings
-  const _pricingTiers = [
-    {_name: 'Starter', _description: 'Perfect for small businesses and startups', _price: billingCycle === 'monthly' ? 99 : 79, _period: billingCycle === 'monthly' ? '/month' : '/month', _savings: billingCycle === 'yearly' ? 'Save 20%' : '', _features: [
-        'Access to 100+ Core Services', _'Basic AI Integration', _'Standard Support (24/7)', _'30-Day Free Trial', _'Basic Analytics Dashboard', _'Email Support', _'99.5% Uptime Guarantee', _'Basic Security Features', _'API Access (1000 calls/month)', _'Community Support'
-      ], _popular: false, _color: 'from-gray-500 to-gray-600'},
-    {_name: 'Professional', _description: 'Ideal for growing businesses and teams', _price: billingCycle === 'monthly' ? 299 : 239, _period: billingCycle === 'monthly' ? '/month' : '/month', _savings: billingCycle === 'yearly' ? 'Save 20%' : '', _features: [
-        'Access to 200+ Advanced Services', _'Advanced AI Integration', _'Priority Support (24/7)', _'60-Day Free Trial', _'Advanced Analytics Dashboard', _'Phone & Email Support', _'99.9% Uptime Guarantee', _'Advanced Security Features', _'API Access (10, _000 calls/month)', _'Dedicated Account Manager', _'Custom Integrations', _'Advanced Reporting'
-      ], _popular: true, _color: 'from-purple-500 to-cyan-500'},
-    {_name: 'Enterprise', _description: 'For large organizations and enterprises', _price: billingCycle === 'monthly' ? 999 : 799, _period: billingCycle === 'monthly' ? '/month' : '/month', _savings: billingCycle === 'yearly' ? 'Save 20%' : '', _features: [
-        'Access to All 500+ Services', _'Full AI & Quantum Integration', _'Premium Support (24/7)', _'90-Day Free Trial', _'Enterprise Analytics Suite', _'Dedicated Support Users', _'99.99% Uptime Guarantee', _'Enterprise Security Features', _'Unlimited API Access', _'Dedicated Success Manager', _'Custom Development', _'Advanced Compliance', _'White-label Solutions', _'SLA Guarantees'
-      ], _popular: false, _color: 'from-blue-500 to-indigo-500'}
-  ];
-
-  // Popular services with pricing
-  const _popularServices = [
-    {_name: 'AI Consciousness Evolution Platform', _price: '$24, _999/month', _description: 'Develop genuine AI consciousness through advanced neural architecture', _category: 'AI & Consciousness', _features: ['Multi-dimensional consciousness mapping', _'Emotional intelligence evolution', _'Self-awareness development'], _savings: 'Save 70% vs. competitors'},
-    {_name: 'Quantum DNA Computing Platform', _price: '$35, _999/month', _description: 'Breakthrough platform combining quantum computing with DNA-based computation', _category: 'Quantum & Biotech', _features: ['DNA-based quantum algorithms', _'Biological quantum entanglement', _'DNA memory systems'], _savings: 'Save 75% vs. competitors'},
-    {_name: 'Space Mining Automation Platform', _price: '$45, _999/month', _description: 'Revolutionary platform for automated asteroid mining and resource extraction', _category: 'Space Technology', _features: ['Asteroid identification and mapping', _'Automated mining operations', _'Resource extraction algorithms'], _savings: 'Save 80% vs. competitors'},
-    {_name: 'AI Business Intelligence Suite', _price: '$299/month', _description: 'Comprehensive business intelligence platform powered by artificial intelligence', _category: 'Micro SAAS', _features: ['AI-powered analytics', _'Predictive insights', _'Automated reporting'], _savings: 'Save 50% vs. competitors'}
-  ];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
   return (_<>
       <Head>
-<<<<<<< HEAD
         <title>2033 Revolutionary Technology Pricing | Zion Tech Group - AI Consciousness, Quantum DNA Computing, Space Mining</title>
         <meta name=&quot;description&quot; content=&quot;Discover competitive pricing for Zion Tech Group's revolutionary 2033 technology solutions. From AI consciousness evolution to quantum DNA computing and space mining automation.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI consciousness pricing, quantum DNA computing cost, space mining automation price, neuromorphic computing pricing, photonic computing cost, swarm robotics pricing&quot; />
@@ -209,7 +164,7 @@ export default function Pricing2033Page() {_const [billingCycle, _setBillingCycl
         <meta property=&quot;og:type&quot; content=&quot;website&quot; />
         <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/pricing-2033&quot; />
         <meta property=&quot;og:image&quot; content=&quot;https://ziontechgroup.com/og-image.svg&quot; />
-        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summarylarge_image&quot; />
         <meta name=&quot;twitter:title&quot; content=&quot;2033 Revolutionary Technology Pricing | Zion Tech Group&quot; />
         <meta name=&quot;twitter:description&quot; content=&quot;Competitive pricing for revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions.&quot; />
         <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/pricing-2033&quot; />
@@ -221,101 +176,42 @@ export default function Pricing2033Page() {_const [billingCycle, _setBillingCycl
           <div className=&quot;absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5&quot;></div>
           <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20&quot;>
             <div className=&quot;text-center&quot;>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
+              <motion.div,
+initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }} className=&quot;mb-6&quot;>
                 <div className=&quot;inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium&quot;>
-                  <Crown className=&quot;w-4 h-4&quot; />
-=======
-        <title>2033 Revolutionary Technology Pricing | Zion Tech Group - AI Consciousness, _Quantum DNA Computing, _Space Mining</title>
-        <meta name="description" content="Discover competitive pricing for Zion Tech Group's revolutionary 2033 technology solutions. From AI consciousness evolution to quantum DNA computing and space mining automation." />
-        <meta name="keywords" content="AI consciousness pricing, _quantum DNA computing cost, _space mining automation price, _neuromorphic computing pricing, _photonic computing cost, _swarm robotics pricing" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, _follow" />
-        <meta property="og:title" content="2033 Revolutionary Technology Pricing | Zion Tech Group" />
-        <meta property="og:description" content="Competitive pricing for revolutionary AI consciousness, _quantum DNA computing, _and space mining automation solutions." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/pricing-2033" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="2033 Revolutionary Technology Pricing | Zion Tech Group" />
-        <meta name="twitter:description" content="Competitive pricing for revolutionary AI consciousness, _quantum DNA computing, _and space mining automation solutions." />
-        <link rel="canonical" href="https://ziontechgroup.com/pricing-2033" />
-      </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
-        {_/* Header */}
-        <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <motion.div
-                initial={_{ opacity: 0, _y: 20}}
-                animate={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6}} className="mb-6">
-                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium">
-                  <Crown className="w-4 h-4" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <span>2033 Revolutionary Pricing</span>
+                  <Crown className=&quot;w-4 h-4&quot; />                  <span>2033 Revolutionary Pricing</span>
                 </div>
               </motion.div>
 
-              <motion.h1
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 20 }}
+              <motion.h1,
+initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }} className=&quot;text-4xl md:text-5xl lg:text-6xl font-bold mb-6&quot;>
-                <span className=&quot;bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent&quot;>
-=======
-                initial={_{ opacity: 0, _y: 20}}
-                animate={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6, _delay: 0.1}} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  Revolutionary Technology
+                <span className=&quot;bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent&quot;>                  Revolutionary Technology
                 </span>
                 <br />
                 <span className=&quot;text-white&quot;>Pricing</span>
               </motion.h1>
 
-              <motion.p
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 20 }}
+              <motion.p,
+initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }} className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8&quot;>
-                Experience the future of technology with our revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions at competitive prices.
-=======
-                initial={_{ opacity: 0, _y: 20}}
-                animate={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6, _delay: 0.2}} className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
-                Experience the future of technology with our revolutionary AI consciousness, _quantum DNA computing, _and space mining automation solutions at competitive prices.
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              </motion.p>
+                Experience the future of technology with our revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions at competitive prices.              </motion.p>
 
               {_/* Billing Toggle */}
-              <motion.div
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 20 }}
+              <motion.div,
+initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }} className=&quot;flex items-center justify-center space-x-4 mb-8&quot;>
                 <span className={`text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
                   Monthly
                 </span>
-                <button
-                  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')} className=&quot;relative w-16 h-8 bg-gray-700 rounded-full p-1 transition-colors duration-200&quot;>
-=======
-                initial={_{ opacity: 0, _y: 20}}
-                animate={_{ opacity: 1, _y: 0}}
-                transition={_{ duration: 0.6, _delay: 0.3}} className="flex items-center justify-center space-x-4 mb-8">
-                <span className={_`text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
-                  Monthly
-                </span>
-                <button
-                  onClick={_() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')} className="relative w-16 h-8 bg-gray-700 rounded-full p-1 transition-colors duration-200">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  <div
-                    className={_`w-6 h-6 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full transition-transform duration-200 ${
+                <button,
+onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')} className=&quot;relative w-16 h-8 bg-gray-700 rounded-full p-1 transition-colors duration-200&quot;>                  <div,
+className={_`w-6 h-6 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full transition-transform duration-200 ${
                       billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-0'}`}
                   />
                 </button>
@@ -330,44 +226,26 @@ export default function Pricing2033Page() {_const [billingCycle, _setBillingCycl
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Pricing Tiers */}
         <div className=&quot;relative py-20&quot;>
           <div className=&quot;absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5&quot;></div>
           <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
-              {pricingTiers.map((tier, index) => (
-=======
-        {_/* Pricing Tiers */}
-        <div className="relative py-20">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {_pricingTiers.map(_(tier, _index) => (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                <motion.div
-                  key={tier.name}
-                  initial={_{ opacity: 0, _y: 20}}
-                  animate={_{ opacity: 1, _y: 0}}
-                  transition={_{ duration: 0.6, _delay: index * 0.1}}
+              {pricingTiers.map((tier, index) => (                <motion.div,
+key={tier.name}
+                  initial={_{ opacity: 0, y: 20}}
+                  animate={_{ opacity: 1, y: 0}}
+                  transition={_{ duration: 0.6, delay: index * 0.1}}
                   className={_`relative ${
                     tier.popular ? 'scale-105' : ''}`}
                 >
-<<<<<<< HEAD
                   {tier.popular && (
                     <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;>
-                      <div className=&quot;px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-full&quot;>
-=======
-                  {_tier.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-full">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        Most Popular
+                      <div className=&quot;px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-full&quot;>                        Most Popular
                       </div>
                     </div>
                   )}
 
-<<<<<<< HEAD
                   <div className={`relative bg-gray-900/50 border border-purple-500/30 rounded-2xl p-8 h-full backdrop-blur-sm ${
                     tier.popular ? 'border-purple-500/50 shadow-2xl shadow-purple-500/25' : ''
                   }`}>
@@ -389,36 +267,12 @@ export default function Pricing2033Page() {_const [billingCycle, _setBillingCycl
                       {tier.features.map((feature, idx) => (
                         <li key={idx} className=&quot;flex items-start space-x-3&quot;>
                           <Check className=&quot;w-5 h-5 text-green-400 flex-shrink-0 mt-0.5&quot; />
-                          <span className=&quot;text-gray-300&quot;>{feature}</span>
-=======
-                  <div className={_`relative bg-gray-900/50 border border-purple-500/30 rounded-2xl p-8 h-full backdrop-blur-sm ${
-                    tier.popular ? 'border-purple-500/50 shadow-2xl shadow-purple-500/25' : ''}`}>
-                    <div className="text-center mb-8">
-                      <h3 className="text-2xl font-bold text-white mb-2">{_tier.name}</h3>
-                      <p className="text-gray-400 mb-6">{_tier.description}</p>
-                      
-                      <div className="mb-4">
-                        <span className="text-4xl font-bold text-white">${_tier.price}</span>
-                        <span className="text-gray-400">{_tier.period}</span>
-                      </div>
-                      
-                      {_tier.savings && (
-                        <div className="text-green-400 text-sm font-medium">{tier.savings}</div>
-                      )}
-                    </div>
-
-                    <ul className="space-y-4 mb-8">
-                      {_tier.features.map(_(feature, _idx) => (
-                        <li key={idx} className="flex items-start space-x-3">
-                          <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-300">{_feature}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                        </li>
+                          <span className=&quot;text-gray-300&quot;>{feature}</span>                        </li>
                       ))}
                     </ul>
 
-                    <button
-                      onClick={_() => setSelectedPlan(tier.name)}
+                    <button,
+onClick={_() => setSelectedPlan(tier.name)}
                       className={_`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 ${
                         tier.popular
                           ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700 shadow-lg'
@@ -433,33 +287,22 @@ export default function Pricing2033Page() {_const [billingCycle, _setBillingCycl
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Service Categories Pricing */}
         <div className=&quot;relative py-20&quot;>
           <div className=&quot;absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5&quot;></div>
           <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <div className=&quot;text-center mb-16&quot;>
-              <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;>
-=======
-        {_/* Service Categories Pricing */}
-        <div className="relative py-20">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                Service Category Pricing
+              <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;>                Service Category Pricing
               </h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Explore our comprehensive service categories with competitive pricing and significant savings compared to market alternatives.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {serviceCategories.map((category, index) => (
-                <motion.div
-                  key={category.name}
+                <motion.div,
+key={category.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }} className=&quot;bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300&quot;>
@@ -482,41 +325,12 @@ export default function Pricing2033Page() {_const [billingCycle, _setBillingCycl
                     {category.services.map((service, idx) => (
                       <li key={idx} className=&quot;flex items-center space-x-2&quot;>
                         <Check className=&quot;w-4 h-4 text-green-400 flex-shrink-0&quot; />
-                        <span className=&quot;text-sm text-gray-300&quot;>{service}</span>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {_serviceCategories.map(_(category, _index) => (_<motion.div
-                  key={category.name}
-                  initial={_{ opacity: 0, _y: 20}}
-                  animate={_{ opacity: 1, _y: 0}}
-                  transition={_{ duration: 0.6, _delay: index * 0.1}} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className={_`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
-                      <category.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white">{_category.name}</h3>
-                      <p className="text-sm text-gray-400">{_category.description}</p>
-                    </div>
-                  </div>
-
-                  <div className="mb-6">
-                    <div className="text-3xl font-bold text-purple-400 mb-2">{_category.avgPrice}</div>
-                    <div className="text-green-400 text-sm font-medium">{_category.savings}</div>
-                  </div>
-
-                  <ul className="space-y-2 mb-6">
-                    {_category.services.map((service, _idx) => (
-                      <li key={idx} className="flex items-center space-x-2">
-                        <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-sm text-gray-300">{_service}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      </li>
+                        <span className=&quot;text-sm text-gray-300&quot;>{service}</span>                      </li>
                     ))}
                   </ul>
 
-                  <a
-                    href=&quot;/services&quot; className=&quot;inline-flex items-center space-x-2 text-purple-400 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium&quot;>
+                  <a,
+href=&quot;/services&quot; className=&quot;inline-flex items-center space-x-2 text-purple-400 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium&quot;>
                     <span>Learn More</span>
                     <ArrowRight className=&quot;w-4 h-4&quot; />
                   </Link>
@@ -526,33 +340,22 @@ export default function Pricing2033Page() {_const [billingCycle, _setBillingCycl
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Popular Services */}
         <div className=&quot;relative py-20&quot;>
           <div className=&quot;absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5&quot;></div>
           <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <div className=&quot;text-center mb-16&quot;>
-              <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;>
-=======
-        {_/* Popular Services */}
-        <div className="relative py-20">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                Popular Services
+              <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;>                Popular Services
               </h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Our most requested revolutionary technology solutions with competitive pricing and exceptional value.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
               {popularServices.map((service, index) => (
-                <motion.div
-                  key={service.name}
+                <motion.div,
+key={service.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }} className=&quot;bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300&quot;>
@@ -574,50 +377,17 @@ export default function Pricing2033Page() {_const [billingCycle, _setBillingCycl
                     {service.features.map((feature, idx) => (
                       <li key={idx} className=&quot;flex items-center space-x-2&quot;>
                         <Check className=&quot;w-4 h-4 text-green-400 flex-shrink-0&quot; />
-                        <span className=&quot;text-sm text-gray-300&quot;>{feature}</span>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {_popularServices.map(_(service, _index) => (_<motion.div
-                  key={service.name}
-                  initial={_{ opacity: 0, _y: 20}}
-                  animate={_{ opacity: 1, _y: 0}}
-                  transition={_{ duration: 0.6, _delay: index * 0.1}} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2">{_service.name}</h3>
-                      <p className="text-gray-400 text-sm mb-3">{_service.description}</p>
-                      <div className="inline-flex items-center px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">
-                        {_service.category}
-                      </div>
-                    </div>
-                    <div className="text-right ml-4">
-                      <div className="text-2xl font-bold text-purple-400">{_service.price}</div>
-                      <div className="text-green-400 text-xs">{_service.savings}</div>
-                    </div>
-                  </div>
-
-                  <ul className="space-y-2 mb-6">
-                    {_service.features.map((feature, _idx) => (
-                      <li key={idx} className="flex items-center space-x-2">
-                        <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-sm text-gray-300">{_feature}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      </li>
+                        <span className=&quot;text-sm text-gray-300&quot;>{feature}</span>                      </li>
                     ))}
                   </ul>
 
                   <div className=&quot;flex space-x-3&quot;>
-                    <a
-                      href=&quot;/contact&quot; className=&quot;flex-1 px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 text-center&quot;>
+                    <a,
+href=&quot;/contact&quot; className=&quot;flex-1 px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 text-center&quot;>
                       Get Quote
                     </Link>
-                    <a
-<<<<<<< HEAD
-                      href={`tel:${contactInfo.mobile}`} className=&quot;px-4 py-2 bg-gray-800/50 border border-purple-500/30 text-purple-300 text-sm font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200&quot;>
-=======
-                      href={_`tel:${contactInfo.mobile}`} className="px-4 py-2 bg-gray-800/50 border border-purple-500/30 text-purple-300 text-sm font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                      Call Now
+                    <a,
+href={`tel:${contactInfo.mobile}`} className=&quot;px-4 py-2 bg-gray-800/50 border border-purple-500/30 text-purple-300 text-sm font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200&quot;>                      Call Now
                     </Link>
                   </div>
                 </motion.div>
@@ -626,22 +396,12 @@ export default function Pricing2033Page() {_const [billingCycle, _setBillingCycl
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Call to Action */}
         <div className=&quot;relative py-20&quot;>
           <div className=&quot;absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5&quot;></div>
           <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <div className=&quot;bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-2xl p-12 backdrop-blur-sm text-center&quot;>
-              <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;>
-=======
-        {_/* Call to Action */}
-        <div className="relative py-20">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-2xl p-12 backdrop-blur-sm text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                Ready to Transform Your Business?
+              <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;>                Ready to Transform Your Business?
               </h2>
               <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
                 Join the future of technology with our revolutionary AI, quantum computing, and cutting-edge solutions. 
@@ -649,25 +409,18 @@ export default function Pricing2033Page() {_const [billingCycle, _setBillingCycl
               </p>
               
               <div className=&quot;flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4&quot;>
-                <a
-                  href=&quot;/contact&quot; className=&quot;px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg hover:shadow-purple-500/25&quot;>
+                <a,
+href=&quot;/contact&quot; className=&quot;px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg hover:shadow-purple-500/25&quot;>
                   Start Your Journey
                   <ArrowRight className=&quot;w-5 h-5 ml-2 inline&quot; />
                 </Link>
                 
-                <a
-<<<<<<< HEAD
-                  href={`tel:${contactInfo.mobile}`} className=&quot;px-8 py-4 bg-gray-800/50 border border-purple-500/30 text-purple-300 font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200&quot;>
-                  <Phone className=&quot;w-5 h-5 mr-2 inline&quot; />
-=======
-                  href={_`tel:${contactInfo.mobile}`} className="px-8 py-4 bg-gray-800/50 border border-purple-500/30 text-purple-300 font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200">
-                  <Phone className="w-5 h-5 mr-2 inline" />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  Call Now
+                <a,
+href={`tel:${contactInfo.mobile}`} className=&quot;px-8 py-4 bg-gray-800/50 border border-purple-500/30 text-purple-300 font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200&quot;>
+                  <Phone className=&quot;w-5 h-5 mr-2 inline&quot; />                  Call Now
                 </Link>
               </div>
 
-<<<<<<< HEAD
               {/* Contact Info */}
               <div className=&quot;mt-12 pt-8 border-t border-purple-500/20&quot;>
                 <div className=&quot;flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-300&quot;>
@@ -681,24 +434,7 @@ export default function Pricing2033Page() {_const [billingCycle, _setBillingCycl
                   </div>
                   <div className=&quot;flex items-center space-x-2&quot;>
                     <MapPin className=&quot;w-4 h-4 text-purple-400&quot; />
-                    <span>{contactInfo.address}</span>
-=======
-              {_/* Contact Info */}
-              <div className="mt-12 pt-8 border-t border-purple-500/20">
-                <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-300">
-                  <div className="flex items-center space-x-2">
-                    <Phone className="w-4 h-4 text-purple-400" />
-                    <span>{_contactInfo.mobile}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Mail className="w-4 h-4 text-purple-400" />
-                    <span>{_contactInfo.email}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="w-4 h-4 text-purple-400" />
-                    <span>{_contactInfo.address}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </div>
+                    <span>{contactInfo.address}</span>                  </div>
                 </div>
               </div>
             </div>

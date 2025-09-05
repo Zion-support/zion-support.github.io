@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useRef, useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -17,27 +15,11 @@ export function PartnerReferralLinks() {
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),
   const [customParam, setCustomParam] = useState<string>(""),
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
-=======
-import { useRef, useState } from &quot;react&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
-import { Input } from &quot;@/components/ui/input&quot;;
-import { Copy, Download, Link, Plus } from 'lucide-react'
-import { toast } from &quot;@/hooks/use-toast&quot;;
-import { useReferrals } from &quot;@/hooks/useReferrals&quot;;
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from &quot;@/components/ui/dialog&quot;;
-import { Label } from &quot;@/components/ui/label&quot;;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from &quot;@/components/ui/select&quot;;
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
 export function PartnerReferralLinks() {_const { referralCode, _getReferralLink, _copyReferralLink, _shareOnSocialMedia} = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-<<<<<<< HEAD
   const [selectedCampaign, setSelectedCampaign] = useState<string>(&quot;default&quot;);
   const [customParam, setCustomParam] = useState<string>("&quot;);
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Get the base referral link
   const baseLink = getReferralLink(),
@@ -45,102 +27,47 @@ export function PartnerReferralLinks() {_const { referralCode, _getReferralLink,
   const handleCopyLink = (link: string) => {
     navigator.clipboard.writeText(link),
     toast({
-<<<<<<< HEAD
       title: "Link copied!",
       description: "The referral link has been copied to your clipboard",
       variant: "default"
     })
-  },
-=======
-      title: &quot;Link copied!&quot;,
-      description: &quot;The referral link has been copied to your clipboard&quot;,
-      variant: &quot;default&quot;
-    });
-=======
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
-  const [customParam, setCustomParam] = useState<string>("");
-  const [generatedLinks, setGeneratedLinks] = useState<{_name: string, _link: string}[]>([]);
+  },  };
   
-  // Get the base referral link
-  const _baseLink = getReferralLink();
-  
-  const _handleCopyLink = (_link: string) => {_navigator.clipboard.writeText(link);
-    toast({
-      title: "Link copied!", _description: "The referral link has been copied to your clipboard", _variant: "default"});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  
-<<<<<<< HEAD
   const handleGenerateLink = () => {
     if (baseLink) {
-      const url = new URL(baseLink),
-=======
-  const _handleGenerateLink = () => {_if (baseLink) {
-      const _url = new window.URL(baseLink);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      
+      const url = new URL(baseLink),      
       // Add custom campaign parameter if selected
-<<<<<<< HEAD
       if (selectedCampaign !== "default") {
-<<<<<<< HEAD
-        url.searchParams.append("campaign", selectedCampaign)
-=======
-      if (selectedCampaign !== &quot;default&quot;) {
-        url.searchParams.append(&quot;campaign&quot;, selectedCampaign);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      }
+        url.searchParams.append("campaign", selectedCampaign)      }
       
       // Add custom parameter if provided
       if (customParam) {
-<<<<<<< HEAD
-        url.searchParams.append("source", customParam)
-=======
-        url.searchParams.append(&quot;source&quot;, customParam);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-      }
+        url.searchParams.append("source", customParam)      }
       
       const newLink = {
         name: `${selectedCampaign}${customParam ? `-${customParam}` : "&quot;}`,
-=======
         url.searchParams.append("campaign", _selectedCampaign);}
       
       // Add custom parameter if provided
       if (customParam) {_url.searchParams.append("source", _customParam);}
       
       const _newLink = {_name: `${selectedCampaign}${_customParam ? `-${customParam}` : ""}`,
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         link: url.toString()
       },
       
-<<<<<<< HEAD
       setGeneratedLinks(prev => [...prev, newLink]),
       setIsDialogOpen(false),
-      setCustomParam("")
-=======
-      setGeneratedLinks(prev => [...prev, newLink]);
-      setIsDialogOpen(false);
-      setCustomParam("&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    }
+      setCustomParam("")    }
   },
   
-<<<<<<< HEAD
   const handleDownloadLinks = () => {
     const allLinks = [
-      { name: &quot;Default&quot;, link: baseLink },
-=======
-  const _handleDownloadLinks = () => {_const _allLinks = [
-      { name: "Default", _link: baseLink},
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      ...generatedLinks
+      { name: &quot;Default&quot;, link: baseLink },      ...generatedLinks
     ],
     
-<<<<<<< HEAD
     const csvContent = [
       &quot;Name,Link&quot;,
       ...allLinks.map(l => `${l.name},${l.link}`)
-<<<<<<< HEAD
     ].join("\n"),
     
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),
@@ -152,33 +79,11 @@ export function PartnerReferralLinks() {_const { referralCode, _getReferralLink,
     document.body.appendChild(link),
     link.click(),
     document.body.removeChild(link)
-  },
-=======
-    ].join(&quot;\n&quot;);
-    
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement(&quot;a&quot;);
-    link.setAttribute(&quot;href&quot;, url);
-    link.setAttribute(&quot;download&quot;, &quot;zion_referral_links.csv");
-=======
-    const _csvContent = [
-      "Name,Link",
-      ...allLinks.map(l => `${_l.name},${_l.link}`)
-    ].join("\n");
-    
-    const _blob = new Blob([csvContent], {_type: 'text/csv;charset=utf-8;'});
-    const _url = window.URL.createObjectURL(blob);
-    const _link = document.createElement("a");
-    link.setAttribute("href", url);
-    link.setAttribute("download", "zion_referral_links.csv");
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-    link.style.visibility = 'hidden';
+  },    link.style.visibility = 'hidden';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   return (_<div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -186,16 +91,9 @@ export function PartnerReferralLinks() {_const { referralCode, _getReferralLink,
           <CardTitle className="flex items-center justify-between&quot;>
             <span>Your Referral Link</span>
             <Button 
-<<<<<<< HEAD
               variant=&quot;outline&quot; 
               size=&quot;sm" 
-              onClick={handleDownloadLinks}
-=======
-              variant="outline" 
-              size="sm" 
-              onClick={_handleDownloadLinks}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              className="flex items-center gap-2"
+              onClick={handleDownloadLinks}              className="flex items-center gap-2"
             >
               <Download className="h-4 w-4" />
               Export Links
@@ -210,12 +108,7 @@ export function PartnerReferralLinks() {_const { referralCode, _getReferralLink,
               readOnly
               className="font-mono text-sm&quot;
             />
-<<<<<<< HEAD
-            <Button variant=&quot;outline" onClick={() => handleCopyLink(baseLink)}>
-=======
-            <Button variant="outline" onClick={_() => handleCopyLink(baseLink)}>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              <Copy className="h-4 w-4" />
+            <Button variant=&quot;outline" onClick={() => handleCopyLink(baseLink)}>              <Copy className="h-4 w-4" />
               <span className="sr-only">Copy</span>
             </Button>
           </div>
@@ -223,14 +116,8 @@ export function PartnerReferralLinks() {_const { referralCode, _getReferralLink,
       </Card>
 
       <div className="flex justify-between items-center">
-<<<<<<< HEAD
         <h3 className="text-lg font-semibold text-white&quot;>Custom Campaign Links</h3>
-        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-=======
-        <h3 className="text-lg font-semibold text-white">Custom Campaign Links</h3>
-        <Dialog open={_isDialogOpen} onOpenChange={_setIsDialogOpen}>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          <DialogTrigger asChild>
+        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>          <DialogTrigger asChild>
             <Button variant=&quot;outline&quot; size=&quot;sm" className="flex items-center gap-2">
               <Plus className="h-4 w-4" />
               Create New Link
@@ -266,43 +153,22 @@ export function PartnerReferralLinks() {_const { referralCode, _getReferralLink,
               <div className="grid gap-2&quot;>
                 <Label htmlFor=&quot;custom&quot;>Custom Parameter (Optional)</Label>
                 <Input 
-<<<<<<< HEAD
                   id=&quot;custom&quot; 
                   placeholder=&quot;spring_campaign, video_123, etc.&quot; 
                   value={customParam}
-                  onChange={(e) => setCustomParam(e.target.value)}
-=======
-                  id="custom" 
-                  placeholder="spring_campaign, video_123, etc." 
-                  value={_customParam}
-                  onChange={_(_e) => setCustomParam(e.target.value)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                />
+                  onChange={(e) => setCustomParam(e.target.value)}                />
               </div>
             </div>
             <DialogFooter>
               <Button 
-<<<<<<< HEAD
                 type=&quot;button&quot; 
                 variant=&quot;secondary&quot; 
-                onClick={() => setIsDialogOpen(false)}
-=======
-                type="button" 
-                variant="secondary" 
-                onClick={_() => setIsDialogOpen(false)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-              >
+                onClick={() => setIsDialogOpen(false)}              >
                 Cancel
               </Button>
               <Button 
-<<<<<<< HEAD
                 type=&quot;button" 
-                onClick={handleGenerateLink}
-=======
-                type="button" 
-                onClick={_handleGenerateLink}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                className="bg-zion-purple hover:bg-zion-purple-dark"
+                onClick={handleGenerateLink}                className="bg-zion-purple hover:bg-zion-purple-dark"
               >
                 Generate Link
               </Button>
@@ -316,14 +182,8 @@ export function PartnerReferralLinks() {_const { referralCode, _getReferralLink,
               <CardHeader className="pb-2">
                 <CardTitle className="text-base flex items-center justify-between">
                   <div className="flex items-center gap-2">
-<<<<<<< HEAD
                     <Link className="h-4 w-4 text-zion-purple&quot; />
-                    <span>{item.name || &quot;Campaign Link"}</span>
-=======
-                    <Link className="h-4 w-4 text-zion-purple" />
-                    <span>{_item.name || "Campaign Link"}</span>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </div>
+                    <span>{item.name || &quot;Campaign Link"}</span>                  </div>
                 </CardTitle>
               </CardHeader>
               <CardContent className="pb-4">
@@ -334,16 +194,9 @@ export function PartnerReferralLinks() {_const { referralCode, _getReferralLink,
                     className="font-mono text-xs&quot;
                   />
                   <Button 
-<<<<<<< HEAD
                     variant=&quot;outline&quot; 
                     size=&quot;sm" 
-                    onClick={() => handleCopyLink(item.link)}
-=======
-                    variant="outline" 
-                    size="sm" 
-                    onClick={_() => handleCopyLink(item.link)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  >
+                    onClick={() => handleCopyLink(item.link)}                  >
                     <Copy className="h-4 w-4" />
                     <span className="sr-only">Copy</span>
                   </Button>
@@ -357,14 +210,8 @@ export function PartnerReferralLinks() {_const { referralCode, _getReferralLink,
                 Create custom campaign links to track different marketing efforts
               </p>
               <Button 
-<<<<<<< HEAD
                 variant=&quot;outline"
-                onClick={() => setIsDialogOpen(true)}
-=======
-                variant="outline"
-                onClick={_() => setIsDialogOpen(true)}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                className="flex items-center gap-2"
+                onClick={() => setIsDialogOpen(true)}                className="flex items-center gap-2"
               >
                 <Plus className="h-4 w-4" />
                 Create First Link

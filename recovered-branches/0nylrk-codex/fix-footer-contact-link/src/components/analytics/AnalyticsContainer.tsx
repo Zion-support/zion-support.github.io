@@ -1,22 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { SEO } from "@/components/SEO",
 import { Navigate } from "react-router-dom",
-import { useAuth } from "@/hooks/useAuth",
-=======
-import React from &quot;react&quot;;
-import { Header } from &quot;@/components/Header&quot;;
-import { Footer } from &quot;@/components/Footer&quot;;
-import { SEO } from &quot;@/components/SEO&quot;;
-import { Navigate } from &quot;react-router-dom&quot;;
-import { useAuth } from &quot;@/hooks/useAuth&quot;;
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-interface AnalyticsContainerProps {
+import { useAuth } from "@/hooks/useAuth",interface AnalyticsContainerProps {
   children: React.ReactNode
 }
 
@@ -37,22 +25,11 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   
   // If not authenticated, redirect
   if (!isAuthenticated) {
-<<<<<<< HEAD
-    return <Navigate to="/login" state={{ from: '/analytics' }} replace />
-=======
-    return <Navigate to=&quot;/login&quot; state={{ from: '/analytics' }} replace />;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  }
+    return <Navigate to="/login" state={{ from: '/analytics' }} replace />  }
   
   // If not admin, redirect
   if (!isAdmin) {
-<<<<<<< HEAD
-    return <Navigate to="/unauthorized" replace />
-=======
-    return <Navigate to=&quot;/unauthorized&quot; replace />;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-  }
-=======
+    return <Navigate to="/unauthorized" replace />  }
 import React from "react";
 
 interface AnalyticsContainerProps {_children: React.ReactNode;}
@@ -75,7 +52,6 @@ export function AnalyticsContainer(_{_children}: AnalyticsContainerProps) {_cons
   
   // If not admin, redirect
   if (!isAdmin) {_return <Navigate to="/unauthorized" replace />;}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <div className=&quot;min-h-screen flex flex-col bg-zion-blue&quot;>

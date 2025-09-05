@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -13,31 +11,11 @@ export default function Ecommerce() {
     "name": "E-commerce Platform",
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
     "url": "https://app.ziontechgroup.com/features/e-commerce"
-  },
-=======
-import React from &quot;react&quot;;
-import { Header } from &quot;@/components/Header&quot;;
-import { SEO } from &quot;@/components/SEO&quot;;
-import { GradientHeading } from &quot;@/components/GradientHeading&quot;;
-import { Button } from &quot;@/components/ui/button&quot;;
-import Link from 'next/link';
-
-export default function Ecommerce() {
-  const schema = {
-    &quot;@context&quot;: &quot;https://schema.org&quot;,
-    &quot;@type&quot;: &quot;WebPage&quot;,
-    &quot;name&quot;: &quot;E-commerce Platform&quot;,
-    &quot;description&quot;: &quot;Sell or purchase AI solutions and IT equipment through our secure marketplace.&quot;,
-    &quot;url&quot;: &quot;https://app.ziontechgroup.com/features/e-commerce&quot;
-  };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from "react";
+  },import React from "react";
 import Link from 'next/link';
 
 export default function Ecommerce() {_const _schema = {
     "@context": "https://schema.org", _"@type": "WebPage", _"name": "E-commerce Platform", _"description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.", _"url": "https://app.ziontechgroup.com/features/e-commerce"};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -49,27 +27,13 @@ export default function Ecommerce() {_const _schema = {
       />
       {_/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
-<<<<<<< HEAD
         type=&quot;application/ld+json&quot;
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-=======
-        type="application/ld+json"
-        dangerouslySetInnerHTML={_{ __html: JSON.stringify(schema)}}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      ></script>
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}      ></script>
       <Header />
-<<<<<<< HEAD
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">E-commerce Platform</GradientHeading>
-          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
-=======
-      <main className=&quot;bg-background text-white py-12&quot;>
-        <div className=&quot;container mx-auto px-4 md:px-6&quot;>
-          <GradientHeading className=&quot;mb-4 text-center&quot;>E-commerce Platform</GradientHeading>
-          <p className=&quot;text-center text-zion-slate-light max-w-3xl mx-auto mb-8&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-            Showcase your products with rich media listings and accept payments with Stripe-powered checkout.
+          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">            Showcase your products with rich media listings and accept payments with Stripe-powered checkout.
           </p>
           <div className=&quot;relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden&quot;>
             <img
@@ -78,14 +42,8 @@ export default function Ecommerce() {_const _schema = {
               className=&quot;object-cover&quot;
             />
           </div>
-<<<<<<< HEAD
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
-=======
-          <h2 className=&quot;text-2xl font-bold mb-4&quot;>Benefits &amp; Use Cases</h2>
-          <ul className=&quot;list-disc list-inside space-y-2 mb-8 text-zion-slate-light&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-            <li>Support for videos and 3D models to highlight your offerings.</li>
+          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">            <li>Support for videos and 3D models to highlight your offerings.</li>
             <li>Secure transactions with Stripe and fraud protection.</li>
             <li>Reach new customers around the world via our global platform.</li>
           </ul>

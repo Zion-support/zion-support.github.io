@@ -1,20 +1,12 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 export default function InvestorsPage() {
 	return (
-<<<<<<< HEAD
-		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">
-=======
-		<div className=&quot;min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8&quot;>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-import React from 'react';
+		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">import React from 'react';
 import Head from 'next/head';
 
 export default function InvestorsPage() {_return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 			<Head>
 				<title>Investors | Zion Tech Group</title>
 				<meta name=&quot;description&quot; content=&quot;Investor relations and key metrics overview.&quot; />
@@ -31,9 +23,5 @@ export default function InvestorsPage() {_return (
 				<div className=&quot;pt-4 text-slate-300&quot;>Contact IR: <a className=&quot;text-cyan-400&quot; href=&quot;mailto:kleber@ziontechgroup.com&quot;>kleber@ziontechgroup.com</a></div>
 			</div>
 		</div>
-<<<<<<< HEAD
 	)
 }
-=======
-	);}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

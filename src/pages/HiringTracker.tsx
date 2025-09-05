@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react",
 import { useRouter } from "next/router",
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",
@@ -14,27 +12,9 @@ function HiringTrackerContent() {
   const router = useRouter(),
   const jobId = router.query.jobId as string,
   const [activeTab, setActiveTab] = useState<string>("kanban"),
-=======
-import { useState } from &quot;react&quot;;
-import { useRouter } from &quot;next/router&quot;;
-import { KanbanBoard } from &quot;@/components/hiring-tracker/KanbanBoard&quot;;
-import { HiringAnalytics } from &quot;@/components/hiring-tracker/HiringAnalytics&quot;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
-import { SEO } from &quot;@/components/SEO&quot;;
-import { ProtectedRoute } from &quot;@/components/ProtectedRoute&quot;;
-import { Briefcase } from 'lucide-react'
-
-function HiringTrackerContent() {
-  const router = useRouter();
-  const jobId = router.query.jobId as string;
-  const [activeTab, setActiveTab] = useState<string>(&quot;kanban&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
-
 function HiringTrackerContent() {_const _router = useRouter();
   const _jobId = router.query.jobId as string;
   const [activeTab, _setActiveTab] = useState<string>("kanban");
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   return (
     <>
@@ -61,22 +41,12 @@ function HiringTrackerContent() {_const _router = useRouter();
             <TabsTrigger value=&quot;analytics&quot;>Analytics</TabsTrigger>
           </TabsList>
           
-<<<<<<< HEAD
           <TabsContent value=&quot;kanban&quot; className=&quot;mt-6&quot;>
             <KanbanBoard jobId={jobId} />
           </TabsContent>
           
           <TabsContent value=&quot;analytics&quot; className=&quot;mt-6&quot;>
-            <HiringAnalytics jobId={jobId} />
-=======
-          <TabsContent value="kanban" className="mt-6">
-            <KanbanBoard jobId={_jobId} />
-          </TabsContent>
-          
-          <TabsContent value="analytics" className="mt-6">
-            <HiringAnalytics jobId={_jobId} />
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          </TabsContent>
+            <HiringAnalytics jobId={jobId} />          </TabsContent>
         </Tabs>
       </main>
     </>
@@ -87,9 +57,5 @@ export default function HiringTracker() {_return (
     <ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>
-<<<<<<< HEAD
   )
 }
-=======
-  );}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

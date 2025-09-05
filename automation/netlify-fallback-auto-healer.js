@@ -3,14 +3,8 @@
 // Netlify Function Fallback: auto-healer
 // This is a local fallback when the main function is unavailable
 
-<<<<<<< HEAD
 exports.handler = async (_event, _context) => {
-<<<<<<< HEAD
-    // // // console.log('auto-healer fallback executed locally'),
-=======
-    // console.log('auto-healer fallback executed locally');
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    
+    // // // console.log('auto-healer fallback executed locally'),    
     try {
         // Basic fallback logic
         const result = {
@@ -32,7 +26,6 @@ exports.handler = async (_event, _context) => {
                 message: error.message
             })
         }
-=======
 exports.handler = async (_event, _context) => {_try {
         // Basic fallback logic
         const _result = {
@@ -45,6 +38,5 @@ exports.handler = async (_event, _context) => {_try {
             statusCode: 500, _body: JSON.stringify({
                 error: 'Fallback execution failed', _message: error.message})
         };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     }
 },

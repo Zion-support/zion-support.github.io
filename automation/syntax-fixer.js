@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }})};
 ; async fixImportIssues() {_; const _files = this.getSourceFiles(); files.forEach(file = > {; try {; let _content = fs.readFileSync(file, _"utf8"); let _modified = false;
 ; // Fix import statements; content = content.replace(/import\s+([^]+), _\s*$/gm, _'import $1, _'); content = content.replace(/import\s+([^]+), _\s*$/gm, _'import $1, _');
@@ -117,43 +116,7 @@ if (import.meta.url === `file: //${_process.argv[1]}`) {_;
   const _fixer = new SyntaxFixer();
   fixer.run().catch(console.error);};
 ;
-export default SyntaxFixer;
-=======
-
-      }
-
-    })
-  },
-,
-  async fixImportIssues() {,
-    const files = this.getSourceFiles(),
-    files.forEach(file => {,
-      try {,
-        let content = fs.readFileSync(file, &quot;utf8&quot;),
-        let modified = false,
-,
-        // Fix import statements,
-        content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),
-        content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),
-,
-        if (content !== fs.readFileSync(file, &quot;utf8&quot;)) {,
-          modified = true
-        },
-,
-        if (modified) {,
-          fs.writeFileSync(file, content),
-          this.fixesApplied++,
-          this.log(`Fixed import issues in ${file}`),
-        }
-      } catch (error) {,
-<<<<<<< HEAD
-        this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
-      }
-=======
-        this.log(`Failed to fix ${file}: ${error.message}`, &quot;WARN&quot;)
-      };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    })
+export default SyntaxFixer;    })
   },
 ,
   async fixExportIssues() {,
@@ -176,14 +139,8 @@ export default SyntaxFixer;
           this.log(`Fixed export issues in ${file}`)
         }
       } catch (error) {,
-<<<<<<< HEAD
         this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
-      }
-=======
-        this.log(`Failed to fix ${file}: ${error.message}`, &quot;WARN&quot;)
-      };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    })
+      }    })
   },
 ,
   getSourceFiles() {,
@@ -217,7 +174,6 @@ export default SyntaxFixer;
     try {,
       await this.fixSyntaxErrors(),
 ,
-<<<<<<< HEAD
       this.log("=" * 50),
       this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
 
@@ -225,16 +181,7 @@ export default SyntaxFixer;
       this.log(`❌ Syntax Fixer: failed: ${error.message}`, "ERROR")
     }
   }
-},
-=======
-      this.log(&quot;=&quot; * 50),
-      this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`)} catch (error) {,
-      this.log(`❌ Syntax Fixer failed: ${error.message}`, &quot;ERROR&quot;)
-    };
-  };
-};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-,
+},,
 // Main execution,
 if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
   const fixer = new SyntaxFixer(),
@@ -243,4 +190,3 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
 ,
 export default SyntaxFixer,
 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da

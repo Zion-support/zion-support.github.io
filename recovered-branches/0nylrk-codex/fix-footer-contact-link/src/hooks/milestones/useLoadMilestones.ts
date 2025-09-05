@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState, useEffect } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -20,77 +19,44 @@ export const useLoadMilestones = (projectId?: string) => {
     }
     
     try {
-      setIsLoading(true),
-=======
-
-export const _useLoadMilestones = (_projectId?: string) => {_const { user} = useAuth();
-  const [milestones, setMilestones] = useState<Milestone[]>([]);
-  const [activities, setActivities] = useState<Record<string, MilestoneActivity[]>>({});
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  const _fetchMilestones = async () => {_if (!projectId) {
-      setIsLoading(false);
-      return;}
-    
-    try {_setIsLoading(true);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      
-      const { data: milestonesData, _error: milestonesError} = await supabase
-        .from('project_milestones')
+      setIsLoading(true),      
+      const { data: milestonesData, error: milestonesError} = await supabase
+        .from('projectmilestones')
         .select('*')
-        .eq('project_id', projectId)
-<<<<<<< HEAD
-        .order('due_date', { ascending: true }),
-=======
-        .order('due_date', {_ascending: true});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-      
+        .eq('projectid', projectId)
+        .order('duedate', { ascending: true }),      
       if (milestonesError) throw milestonesError,
       
       setMilestones(milestonesData),
       
-      // Fetch activities for each milestone
-      const activitiesMap: Record<string MilestoneActivity[]> = {},
+      // Fetch activities for each milestone,
+const activitiesMap: Record<string MilestoneActivity[]> = {},
       
-      for (const milestone of milestonesData) {_const { data: activitiesData, _error: activitiesError} = await supabase
-          .from('milestone_activities')
+      for (const milestone of milestonesData) {const { data: activitiesData, error: activitiesError} = await supabase
+          .from('milestoneactivities')
           .select(`
             *,
-            created_by_profile:profiles!user_id(display_name, avatar_url)
+            createdby_profile:profiles!userid(displayname, avatarurl)
           `)
-          .eq('milestone_id', milestone.id)
-<<<<<<< HEAD
-          .order('created_at', { ascending: false }),
-=======
-          .order('created_at', {_ascending: false});
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-          
+          .eq('milestoneid', milestone.id)
+          .order('createdat', { ascending: false }),          
         if (activitiesError) throw activitiesError,
         
         activitiesMap[milestone.id] = activitiesData || []
       }
       
-<<<<<<< HEAD
       setActivities(activitiesMap),
       setError(null)
     } catch (err: any) {
-<<<<<<< HEAD
       console.error("Error fetching milestones:", err),
       setError("Failed to fetch milestones: " + err.message),
-      toast.error("Failed to fetch milestones")
-=======
-      console.error(&quot;Error fetching milestones:&quot;, err);
-      setError(&quot;Failed to fetch milestones: &quot; + err.message);
-      toast.error(&quot;Failed to fetch milestones&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-    } finally {
+      toast.error("Failed to fetch milestones")    } finally {
       setIsLoading(false)
     }
   },
 
-  // Fetch milestones when component mounts or projectId changes
-  useEffect(() => {
+  // Fetch milestones when component mounts or projectId changes,
+useEffect(() => {
     if (projectId) {
       fetchMilestones()
     }
@@ -104,18 +70,16 @@ export const _useLoadMilestones = (_projectId?: string) => {_const { user} = use
     refetch: fetchMilestones
   }
 },
-=======
       setActivities(activitiesMap);
-      setError(null);
-    } catch (err: unknown) {_setError("Failed to fetch milestones: " + err.message);
-      toast.error("Failed to fetch milestones");} finally {_setIsLoading(false);}
+      setError(null)
+    } catch (err: unknown) {setError("Failed to fetch milestones: " + err.message);
+      toast.error("Failed to fetch milestones")} finally {setIsLoading(false)}
   };
 
-  // Fetch milestones when component mounts or projectId changes
-  useEffect__(() => {_if (projectId) {
-      fetchMilestones();}
+  // Fetch milestones when component mounts or projectId changes,
+useEffect_(() => {if (projectId) {
+      fetchMilestones()}
   }, [projectId]);
 
-  return {_milestones, _activities, _isLoading, _error, _refetch: fetchMilestones};
+  return {milestones, activities, isLoading, error, refetch: fetchMilestones}
 };
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
