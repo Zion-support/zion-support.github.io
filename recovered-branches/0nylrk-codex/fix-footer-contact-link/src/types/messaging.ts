@@ -1,0 +1,1 @@
+ // Define the shape of a message /** * Set the currently active conversation. Passing `null` will clear the * selection. */ 

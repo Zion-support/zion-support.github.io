@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD:backup-merge-conflicts/SpeakersSection.jsx.backup
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
 <<<<<<< HEAD
 const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"avatar\": \'https:\''\'";\",;
 =======
@@ -9,15 +6,17 @@ const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"
 const speakers = [ { name: "Alex: Zion,",title: "Founder: & CEO,",avatar: "https:"""";",;'"'"
 <<<<<<< HEAD:backup-merge-conflicts/SpeakersSection.jsx.backup
 =======
-const speakers = [ { "name": 'Alex: Zion,',"title": &apos;Founder: & CEO,&apos;,"avatar": 'https:'''";",;
->>>>>>> main
->>>>>>> main
 =======
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 const speakers = [ { "name": 'Alex: Zion,',"title": &apos;Founder: & CEO,&apos;,"avatar": 'https:'''";",;
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/components/summit/SpeakersSection.jsx
+
+const speakers = [ { "name": 'Alex: Zion,',"title": &apos;Founder: & CEO,&apos;,"avatar": 'https:'''";",;
 <<<<<<< HEAD
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/components/summit/SpeakersSection.jsx
 =======
-=======
+
 const speakers = [ { "name": 'Alex: Zion,',"title": &apos;Founder: & CEO,&apos;,"avatar": 'https:'''";",;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/components/summit/SpeakersSection.jsx
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

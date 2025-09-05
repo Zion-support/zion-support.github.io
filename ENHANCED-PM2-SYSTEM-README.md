@@ -7,26 +7,31 @@ This enhanced PM2 system provides intelligent automation, predictive analytics, 
 ## ✨ Key Features
 
 ### 🤖 AI-Powered Intelligence
+
 - **Intelligent Orchestrator**: AI-driven decision making for process management
 - **Predictive Analytics**: ML-powered failure prediction and performance optimization
 - **Learning System**: Continuously improves based on system behavior
 
 ### ⚖️ Auto-Scaling
+
 - **Intelligent Scaling**: Automatically scales processes based on resource usage
 - **Dynamic Thresholds**: Self-adjusting scaling parameters
 - **Resource Optimization**: Smart resource allocation and management
 
 ### 🏥 Health Monitoring
+
 - **Real-time Dashboard**: Comprehensive web-based monitoring interface
 - **Health Scoring**: Overall system health assessment
 - **Alert System**: Proactive notification of issues
 
 ### 🔒 Security & Quality
+
 - **Advanced Security Scanner**: Comprehensive vulnerability detection
 - **Code Quality Manager**: Automated code quality monitoring and improvement
 - **Dependency Management**: Intelligent dependency updates and security patches
 
 ### 🚀 Deployment & CI/CD
+
 - **Smart Deployment**: Blue-green deployment with rollback capabilities
 - **Git Integration**: Intelligent Git workflow automation
 - **Testing Automation**: Comprehensive testing pipeline
@@ -54,6 +59,7 @@ Enhanced PM2 System
 ## 🛠️ Installation & Setup
 
 ### Prerequisites
+
 - Node.js (v16 or higher)
 - PM2 (latest version)
 - Git
@@ -62,6 +68,7 @@ Enhanced PM2 System
 ### Quick Start
 
 1. **Clone and Setup**
+
    ```bash
    git clone <your-repo>
    cd <your-project>
@@ -69,6 +76,7 @@ Enhanced PM2 System
    ```
 
 2. **Start the Enhanced System**
+
    ```bash
    ./start-enhanced-pm2-system.sh
    ```
@@ -80,12 +88,14 @@ Enhanced PM2 System
 ### Manual Setup
 
 1. **Install Dependencies**
+
    ```bash
    npm install
    npm install -g pm2
    ```
 
 2. **Start PM2 Processes**
+
    ```bash
    pm2 start ecosystem.enhanced-intelligent-v3.cjs --env production
    ```
@@ -100,20 +110,25 @@ Enhanced PM2 System
 ## 📊 Monitoring & Dashboards
 
 ### Health Dashboard
+
 Access the real-time health dashboard at `http://localhost:3001` to view:
+
 - Process status and health scores
 - System resource usage
 - Recent alerts and recommendations
 - Performance metrics
 
 ### PM2 Web Interface
+
 Use `pm2 web` to access the PM2 web interface for:
+
 - Process management
 - Log viewing
 - Performance monitoring
 - Process restart/stop operations
 
 ### API Endpoints
+
 - `GET /api/health` - System health status
 - `GET /api/processes` - Process information
 - `GET /api/system` - System metrics
@@ -122,6 +137,7 @@ Use `pm2 web` to access the PM2 web interface for:
 ## 🔧 Configuration
 
 ### Environment Variables
+
 ```bash
 # AI Orchestrator
 AI_MODE=intelligent
@@ -148,7 +164,9 @@ PERFORMANCE_MONITORING=true
 ```
 
 ### Ecosystem Configuration
+
 The system uses `ecosystem.enhanced-intelligent-v3.cjs` with:
+
 - 15+ intelligent automation processes
 - Advanced monitoring and logging
 - Intelligent scheduling and scaling
@@ -157,6 +175,7 @@ The system uses `ecosystem.enhanced-intelligent-v3.cjs` with:
 ## 🚀 Advanced Features
 
 ### Intelligent Auto-Scaling
+
 - **CPU-based scaling**: Scales up when CPU usage exceeds threshold
 - **Memory-based scaling**: Scales up when memory usage exceeds threshold
 - **Load-based scaling**: Considers system load average
@@ -164,18 +183,21 @@ The system uses `ecosystem.enhanced-intelligent-v3.cjs` with:
 - **Learning algorithms**: Improves scaling decisions over time
 
 ### Predictive Analytics
+
 - **Failure prediction**: Predicts system failures before they occur
 - **Performance forecasting**: Anticipates performance issues
 - **Resource planning**: Predicts future resource needs
 - **Maintenance scheduling**: Suggests optimal maintenance windows
 
 ### Security Automation
+
 - **Dependency scanning**: Regular security audits of dependencies
 - **Code analysis**: Static analysis for security vulnerabilities
 - **Configuration scanning**: Checks for security misconfigurations
 - **Threat detection**: Real-time threat monitoring
 
 ### Git Workflow Automation
+
 - **Intelligent merging**: AI-powered merge conflict resolution
 - **Branch management**: Automated branch cleanup and organization
 - **PR automation**: Automated pull request management
@@ -184,12 +206,14 @@ The system uses `ecosystem.enhanced-intelligent-v3.cjs` with:
 ## 📈 Performance Optimization
 
 ### Resource Management
+
 - **Memory optimization**: Intelligent memory usage monitoring and optimization
 - **CPU optimization**: Dynamic CPU allocation and process prioritization
 - **Disk optimization**: Log rotation and cleanup automation
 - **Network optimization**: Connection pooling and request optimization
 
 ### Monitoring & Alerting
+
 - **Real-time metrics**: Continuous monitoring of system metrics
 - **Intelligent alerts**: Smart alerting based on patterns and trends
 - **Performance reports**: Detailed performance analysis and recommendations
@@ -198,12 +222,14 @@ The system uses `ecosystem.enhanced-intelligent-v3.cjs` with:
 ## 🔄 Maintenance & Operations
 
 ### Automated Maintenance
+
 - **Log rotation**: Automatic log file rotation and cleanup
 - **Process restart**: Intelligent process restart scheduling
 - **Health checks**: Regular system health assessments
 - **Backup management**: Automated backup creation and management
 
 ### Manual Operations
+
 ```bash
 # Health check
 ./health-check.sh
@@ -219,6 +245,7 @@ The system uses `ecosystem.enhanced-intelligent-v3.cjs` with:
 ```
 
 ### Monitoring Commands
+
 ```bash
 # Process status
 pm2 list
@@ -242,6 +269,7 @@ pm2 delete [process-name]
 ## 📊 Reports & Analytics
 
 ### Generated Reports
+
 - **Health Reports**: `logs/health-report.json`
 - **Scaling Analysis**: `logs/scaling-analysis-report.json`
 - **Performance Reports**: `logs/performance-report.json`
@@ -249,6 +277,7 @@ pm2 delete [process-name]
 - **Predictive Analytics**: `logs/predictive-analytics-report.json`
 
 ### Log Files
+
 - **Main Logs**: `logs/` directory
 - **Process Logs**: `logs/pm2/` directory
 - **Automation Logs**: `logs/automation/` directory
@@ -257,12 +286,14 @@ pm2 delete [process-name]
 ## 🛡️ Security Features
 
 ### Vulnerability Management
+
 - **Dependency scanning**: Regular npm audit and security checks
 - **Code analysis**: Static analysis for security issues
 - **Configuration scanning**: Security configuration validation
 - **Threat monitoring**: Real-time security threat detection
 
 ### Access Control
+
 - **Process isolation**: Isolated process environments
 - **Resource limits**: Memory and CPU limits per process
 - **Log security**: Secure log file handling
@@ -273,18 +304,21 @@ pm2 delete [process-name]
 ### Common Issues
 
 1. **Process not starting**
+
    ```bash
    pm2 logs [process-name]
    pm2 restart [process-name]
    ```
 
 2. **High memory usage**
+
    ```bash
    pm2 list
    pm2 restart [process-name]
    ```
 
 3. **Dashboard not accessible**
+
    ```bash
    pm2 restart health-dashboard
    ```
@@ -295,6 +329,7 @@ pm2 delete [process-name]
    ```
 
 ### Debug Mode
+
 ```bash
 # Enable debug logging
 export DEBUG=pm2:*
@@ -302,6 +337,7 @@ pm2 restart all
 ```
 
 ### Reset System
+
 ```bash
 pm2 kill
 pm2 start ecosystem.enhanced-intelligent-v3.cjs --env production
@@ -310,6 +346,7 @@ pm2 start ecosystem.enhanced-intelligent-v3.cjs --env production
 ## 📚 API Documentation
 
 ### Health API
+
 ```bash
 # Get system health
 curl http://localhost:3001/api/health
@@ -339,6 +376,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 🆘 Support
 
 For support and questions:
+
 - Check the logs in the `logs/` directory
 - Review the health dashboard at http://localhost:3001
 - Use `pm2 logs` to check process logs
@@ -347,12 +385,14 @@ For support and questions:
 ## 🔄 Updates & Maintenance
 
 The system includes automatic updates for:
+
 - Dependencies and security patches
 - Process configurations
 - Monitoring thresholds
 - Performance optimizations
 
 Manual updates can be performed using:
+
 ```bash
 pm2 restart all
 pm2 save

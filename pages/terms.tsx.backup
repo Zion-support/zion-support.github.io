@@ -19,22 +19,14 @@ export default function TermsPage() {
           <div className="container mx-auto px-4 relative z-10">      <div className="min-h-screen bg-gray-50">
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { FileText, Shield, AlertCircle, Scale, Mail, Phone, MapPin } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
-=======
+
 import { motion } from 'framer-motion';
 import { FileText, Scale, Shield, AlertTriangle } from 'lucide-react';
->>>>>>> pr-11914
-=======
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FileText, Shield, AlertCircle, Scale, Mail, Phone, MapPin } from 'lucide-react';
 import MainLayout from '../src/components/layout/MainLayout';
->>>>>>> pr-11935
 
 export default function TermsPage() {
   return (
@@ -60,7 +52,6 @@ export default function TermsPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Please read these terms carefully before using our services.
               </p>
-
 
                   </p>;
                 </div>;

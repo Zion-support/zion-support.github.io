@@ -1,14 +1,27 @@
+<<<<<<< HEAD
 import React from 'react';
-;
-interface Playwright.configProps {;
+
+interface Playwright.configProps {
   // Add props here as needed
-};
-export default function Playwright.config({ }: Playwright.configProps) {,
-  return (,
-    <div>,
-      <h1>Playwright.config</h1>,
-      <p>This component is currently under development.</p>,
-    </div>)
-};
-};
-};
+}
+
+export default function Playwright.config({ }: Playwright.configProps) {
+  return (
+    <div>
+      <h1>Playwright.config</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+=======
+}
+=======
+}
+=======
+}}},
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

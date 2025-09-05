@@ -1,7 +1,19 @@
-      "mergeConflicts": { resolved: 0, "failed": 0 },
-      "syntaxErrors": { fixed: 0, "failed": 0 },
-      "prsProcessed": { merged: 0, "failed": 0 },
-      "improvements": { applied: 0, "failed": 0 }};
+const fs = require('fs');
+const { exec, execSync } = require('child_process');
+const { promisify } = require('util');
+
+const execAsync = promisify(exec);
+
+class CompleteImprovementSuite {
+  constructor() {
+    this.reportsDir = './automation-reports';
+    this.projectRoot = process.cwd();
+    this.stats = {
+      "mergeConflicts": { resolved: 0, "failed": 0 };
+      "syntaxErrors": { fixed: 0, "failed": 0 };
+      "prsProcessed": { merged: 0, "failed": 0 };
+      "improvements": { applied: 0, "failed": 0 }
+    };
   }
 
   ensureDirectories() {
@@ -11,7 +23,7 @@
   }
 
   log(message) {
-    .toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`);
   }
 
   async runCommand(command, description, timeout = 60000) {
@@ -172,10 +184,16 @@
       const content = fs.readFileSync(filePath, 'utf8');
       return (
 <<<<<<< HEAD
+<<<<<<< HEAD
         content.includes('>>>>>>> ')
 =======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+=======
+        content.includes('<<<<<<< HEAD') ||
+        content.includes('=======') ||
+        content.includes('>>>>>>> ')
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       );
     } catch (error) {
       return false;
@@ -190,18 +208,26 @@
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+=======
+        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [a-f0-9]+/gs,
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
         '$1'
       );
 
       // Clean up any remaining markers
 <<<<<<< HEAD
+<<<<<<< HEAD
       content = content.replace(/>>>>>>> [^\n]+\n/g, '');
 =======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+=======
+      content = content.replace(/>>>>>>> [^\n]+\n/g, '');
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
@@ -356,7 +382,7 @@
         "pushSuccessful": pushSuccess}};
 
     fs.writeFileSync(
-      path.join(this.reportsDir, 'complete-improvement-report.json'),
+      path.join(this.reportsDir, 'complete-improvement-report.json');
       JSON.stringify(finalReport, null, 2)
     );
 

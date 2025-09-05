@@ -1,0 +1,3 @@
+ > <div className="flex items-center justify-between mb-4" > <div className="flex items-center space-x-2" > <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse" /> <span className="text-sm text-cyan-400 font-medium" >NEW</span> </div> <div className="flex items-center space-x-1" > <Star className="w-4 h-4 text-yellow-400 fill-current" /> <span className="text-sm text-gray-300" >5.0</span> </div> </div> </div> </div> <Link > Get Started <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </motion.div>) ) 
+}</div> <motion.div > <Link > View All Services <ArrowRight className="w-4 h-4 ml-2" /> </a> </motion.div> </div> </section>) 
+}

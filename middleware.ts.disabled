@@ -18,6 +18,17 @@ const publicRoutes = [
   "/privacy",
   "/terms",
   "/cookies",
+<<<<<<< HEAD
+  "/sitemap",
+  "/auth/login",
+  "/auth/register",
+  "/auth/forgot-password",
+  "/auth/reset-password",
+  "/auth/verify",
+  "/ai-services",
+  "/it-services",
+  "/micro-saas"
+=======
   "/accessibility",
   "/compliance",
   "/gdpr",
@@ -72,23 +83,37 @@ const publicRoutes = [
   "/industries/healthcare",
   "/industries/manufacturing",
   "/industries/retail"
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 ];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
+<<<<<<< HEAD
+=======
   // Check if the route is public
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
   if (publicRoutes.includes(pathname)) {
     return NextResponse.next();
   }
   
+<<<<<<< HEAD
+  const authCookie = request.cookies.get("auth-token");
+  if (!authCookie) {
+    return NextResponse.redirect(new URL("/auth/login", request.url));
+  }
+  
+=======
   // For protected routes, you can add authentication logic here
   // For now, we'll just allow all requests
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
   return NextResponse.next();
 }
 
 export const config = {
   matcher: [
+<<<<<<< HEAD
+=======
     /*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
@@ -96,6 +121,7 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      */
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     "/((?!api|_next/static|_next/image|favicon.ico).*)",
   ],
 };

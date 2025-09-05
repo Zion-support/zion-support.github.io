@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:backup-merge-conflicts/dropdown-menu.js.jsx.backup
->>>>>>> pr-11935
 <<<<<<< HEAD
 import React, {useState} from 'react';
 const DropdownMenu({children}) {;
@@ -10,6 +7,7 @@ const DropdownMenu({children}) {;
   { isOpen,;
   setIsOpen ;
 
+<<<<<<< HEAD
 }}>;
       <div className="relative">;
 =======
@@ -17,19 +15,19 @@ const DropdownMenu({children}) {;
 import React,{useState} from &apos;react&apos;; const DropdownMenu({children}) { const [isOpen,setIsOpen] = useState(false); return (<DropdownMenuContext.Provider value = { { isOpen,setIsOpen }}> <div className=&quot;relative&quot;> {children} </div> </DropdownMenuContext.Provider>)} export function DropdownMenuTrigger($1) { const context = useContext(DropdownMenuContext); if (!context)&apos;;&apos;; throw new Error(&apos;DropdownMenuTrigger must be used within DropdownMenu&apos;); if (asChild) { return (<div onClick={() => context.setIsOpen(!context.isOpen)}> {children} </div> )} return (<div onClick={() => context.setIsOpen(!context.isOpen)}> {children} </div> )} export function DropdownMenuContent($1) { const context = useContext(DropdownMenuContext); if (!context)&apos;;&apos;; throw new Error(&apos;DropdownMenuContent must be used within DropdownMenu&apos;); if (!context.isOpen) return null; const alignClasses = { start: &apos;left-0&apos;,center: &apos;left-1/2 transform -translate-x-1/2&apos;,end: &apos;right-0&apos; };; return ( <div className=&quot;min-h-screen bg-white&quot;> {children} </div> )} export function DropdownMenuItem($1) { const context = useContext(DropdownMenuContext); if (!context)&apos;;&apos;; throw new Error(&apos;DropdownMenuItem must be used within DropdownMenu&apos;); const handleClick = (props) => { if (onClick) onClick(); context.setIsOpen(false)}; if (asChild) { return ( <div className=&quot;min-h-screen bg-white&quot;> {children} </div> )} return (<button className={`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none ${className}`} onClick={handleClick}> {children} </button>)} </DropdownMenuContext>;&apos;;
 <<<<<<< HEAD:backup-merge-conflicts/dropdown-menu.js.jsx.backup
 =======
-
-<<<<<<< HEAD
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/dropdown-menu.js.jsx
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+
 }}>
       <div className="relative">
->>>>>>> main
 <<<<<<< HEAD
-=======
+>>>>>>> main
 =======
 
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/dropdown-menu.js.jsx
->>>>>>> pr-11935
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
         {children}
       </div>;
     </DropdownMenuContext.Provider>)}
@@ -38,9 +36,7 @@ export function DropdownMenuTrigger("props": "any) {;
     if (!context);
         throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD:backup-merge-conflicts/dropdown-menu.js.jsx.backup
->>>>>>> pr-11935
 <<<<<<< HEAD
     if (asChild) {;
         return (<div onClick={() => context.setIsOpen(!context.isOpen)"}>;
@@ -48,11 +44,11 @@ export function DropdownMenuTrigger("props": "any) {;
       </div>)}
     return (<div onClick={() => context.setIsOpen(!context.isOpen)}>;
 =======
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/dropdown-menu.js.jsx
->>>>>>> pr-11935
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     if (asChild) {
         return (
         <div onClick={() => context.setIsOpen(!context.isOpen)}>
@@ -60,7 +56,11 @@ export function DropdownMenuTrigger("props": "any) {;
       </div>)}
     return (
         <div onClick={() => context.setIsOpen(!context.isOpen)}>
+<<<<<<< HEAD
 >>>>>>> main
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       {children}
     </div>)}
 export function DropdownMenuContent("props": "any) {;
@@ -77,20 +77,21 @@ export function DropdownMenuContent("props": "any) {;
 
 };
 <<<<<<< HEAD
-<<<<<<< HEAD
-    return (<div className={`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>;
-=======
-=======
 <<<<<<< HEAD:backup-merge-conflicts/dropdown-menu.js.jsx.backup
 <<<<<<< HEAD
     return (<div className={`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>;
 =======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/dropdown-menu.js.jsx
->>>>>>> pr-11935
     return (
         <div className={`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>
 >>>>>>> main
+=======
+
+    return (
+        <div className={`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
       {children}
     </div>)}
 export function DropdownMenuItem("props": "any) {;
@@ -101,33 +102,33 @@ export function DropdownMenuItem("props": "any) {;
         if (onClick);
             onClick();
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD:backup-merge-conflicts/dropdown-menu.js.jsx.backup
->>>>>>> pr-11935
 <<<<<<< HEAD
         context.setIsOpen(false)"};
     if (asChild) {;
         return (<div className={`block w-full text-left px-4 py-2 text-sm text-gray-700 "hover": "bg-gray-100 cursor-pointer ${className"}`}>;
 =======
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/dropdown-menu.js.jsx
->>>>>>> pr-11935
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
         context.setIsOpen(false)};
     if (asChild) {
         return (
         <div className={`block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer ${className}`}>
+<<<<<<< HEAD
 >>>>>>> main
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
         {children}
       </div>)}
     return (<button className={`block w-full text-left px-4 py-2 text-sm text-gray-700 "hover": "bg-gray-100 "focus":bg-gray-100 "focus":outline-none ${className"}`} onClick={handleClick}>;
       {children}
     </button>)}
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD:backup-merge-conflicts/dropdown-menu.js.jsx.backup
->>>>>>> pr-11935
 <<<<<<< HEAD
 ;
 </DropdownMenuContext>
@@ -142,10 +143,14 @@ export function DropdownMenuItem("props": "any) {;
 =======
 </DropdownMenuContext>
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/dropdown-menu.js.jsx
-<<<<<<< HEAD
-=======
 =======
 
 </DropdownMenuContext>
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/components/ui/dropdown-menu.js.jsx
->>>>>>> pr-11935
+=======
+
+</DropdownMenuContext>
+
+</DropdownMenuContext>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

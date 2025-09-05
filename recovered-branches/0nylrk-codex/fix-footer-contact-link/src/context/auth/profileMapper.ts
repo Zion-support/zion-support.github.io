@@ -1,0 +1,2 @@
+ >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //We cannot rely on the Supabase SDK types here because the project //declares `@supabase/supabase-js` as an untyped external module. Define //a minimal user shape that includes only the properties we actually use //in this file. /** * Maps Supabase profile data to our app's user model */ 
+}
