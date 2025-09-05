@@ -29,7 +29,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-    ),
+    );
   }
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
