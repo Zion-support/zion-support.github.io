@@ -5,9 +5,13 @@ import {
   BarChart3, 
   ArrowRight,
   TrendingUp,
+<<<<<<< HEAD
+  CheckCircle,
+=======
   Users,
   Building,
   Globe,
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
   Award,
   Clock,
   Target,
@@ -19,6 +23,81 @@ import MainLayout from '../components/layout/MainLayout';
 
 const caseStudies = [
   {
+<<<<<<< HEAD
+    id: 1,
+    title: "AI-Powered Customer Service Transformation",
+    client: "Global E-commerce Retailer",
+    industry: "E-commerce",
+    challenge: "High customer service costs and inconsistent response quality",
+    solution: "Implemented AI-powered chatbot and intelligent routing system",
+    results: "60% reduction in support costs, 40% faster response times",
+    category: "AI Solutions",
+    duration: "3 months",
+    teamSize: "8 developers",
+    technologies: ["AI/ML", "NLP", "Python", "AWS"],
+    featured: true,
+    metrics: {
+      costReduction: "60%",
+      responseTime: "40%",
+      customerSatisfaction: "85%",
+      roi: "300%"
+    },
+    testimonial: {
+      quote: "The AI solution transformed our customer service operations. We've seen incredible improvements in efficiency and customer satisfaction.",
+      author: "Sarah Johnson",
+      role: "VP of Customer Experience"
+    }
+  },
+  {
+    id: 2,
+    title: "Cloud Infrastructure Migration",
+    client: "Financial Services Company",
+    industry: "Financial Services",
+    challenge: "Legacy infrastructure causing performance issues",
+    solution: "Complete cloud migration with microservices architecture",
+    results: "50% cost reduction, 99.9% uptime, 3x faster performance",
+    category: "IT Services",
+    duration: "6 months",
+    teamSize: "12 developers",
+    technologies: ["AWS", "Docker", "Kubernetes", "Terraform"],
+    featured: true,
+    metrics: {
+      costReduction: "50%",
+      uptime: "99.9%",
+      performance: "300%",
+      roi: "250%"
+    },
+    testimonial: {
+      quote: "The migration was seamless and exceeded our expectations.",
+      author: "Michael Chen",
+      role: "CTO"
+    }
+  },
+  {
+    id: 3,
+    title: "Micro SaaS Platform Development",
+    client: "Tech Startup",
+    industry: "Technology",
+    challenge: "Need for scalable project management solution",
+    solution: "Built custom micro SaaS platform with real-time collaboration",
+    results: "10,000+ users, $50K MRR, 95% user satisfaction",
+    category: "Micro SaaS",
+    duration: "4 months",
+    teamSize: "6 developers",
+    technologies: ["React", "Node.js", "PostgreSQL", "Redis"],
+    featured: false,
+    metrics: {
+      users: "10,000+",
+      mrr: "$50K",
+      satisfaction: "95%",
+      growth: "400%"
+    },
+    testimonial: {
+      quote: "The platform has been instrumental in our growth.",
+      author: "Emily Rodriguez",
+      role: "Founder & CEO"
+    }
+=======
     title: "Healthcare AI Platform Transformation",
     client: "MedTech Solutions",
     industry: "Healthcare",
@@ -125,10 +204,18 @@ const caseStudies = [
     technologies: ["React", "AI/ML", "Video Streaming", "Analytics"],
     image: "/images/case-studies/education-platform.jpg",
     featured: false
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
   }
 ];
 
 const industries = [
+<<<<<<< HEAD
+  { name: 'All Industries', count: caseStudies.length },
+  { name: 'Healthcare', count: caseStudies.filter(cs => cs.industry === 'Healthcare').length },
+  { name: 'E-commerce', count: caseStudies.filter(cs => cs.industry === 'E-commerce').length },
+  { name: 'Financial Services', count: caseStudies.filter(cs => cs.industry === 'Financial Services').length },
+  { name: 'Technology', count: caseStudies.filter(cs => cs.industry === 'Technology').length }
+=======
   { name: "Healthcare", count: 12, icon: Users },
   { name: "Finance", count: 8, icon: Building },
   { name: "Manufacturing", count: 6, icon: Globe },
@@ -142,6 +229,7 @@ const stats = [
   { number: '98%', label: 'Client Satisfaction' },
   { number: '$50M+', label: 'Cost Savings Delivered' },
   { number: '500+', label: 'Years Combined Experience' }
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
 ];
 
 export default function CaseStudiesPage() {
@@ -151,6 +239,12 @@ export default function CaseStudiesPage() {
       description="Explore our successful projects and client transformations. Real case studies showcasing our expertise in AI, cloud, and digital transformation."
       keywords="case studies, success stories, client projects, digital transformation, AI implementation, cloud migration"
     >
+<<<<<<< HEAD
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-emerald-900 via-blue-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
+=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         
         {/* Hero Section */}
@@ -162,6 +256,7 @@ export default function CaseStudiesPage() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -194,17 +289,69 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
+        {/* Search and Filter Section */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex flex-col lg:flex-row gap-4 mb-8">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search case studies..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                  />
+                </div>
+                <div className="flex gap-2 overflow-x-auto">
+                  {caseStudyCategories.map((category) => (
+                    <button
+                      key={category.name}
+                      onClick={() => setSelectedCategory(category.name)}
+                      className={`px-4 py-2 rounded-lg whitespace-nowrap transition-colors ${
+                        selectedCategory === category.name
+                          ? "bg-emerald-600 text-white" : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      }`}
+                    >
+                      {category.name} ({category.count})
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Case Studies */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Case Studies</h2>
+              <p className="text-lg text-gray-600">Highlighting our most impactful projects</p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {caseStudies.filter(cs => cs.featured).map((caseStudy, index) => (
+=======
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center"
                 >
                   <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
                     {stat.number}
@@ -218,8 +365,13 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
+        {/* All Case Studies */}
+        <section className="py-16 bg-gray-50">
+=======
         {/* Industries Section */}
         <section className="py-20 bg-gray-50">
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -235,6 +387,72 @@ export default function CaseStudiesPage() {
               </p>
             </motion.div>
 
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredCaseStudies.map((caseStudy, index) => (
+                <motion.article
+                  key={caseStudy.id}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="px-3 py-1 bg-emerald-100 text-emerald-800 text-sm rounded-full">
+                        {caseStudy.category}
+                      </span>
+                      <div className="flex items-center text-sm text-gray-500">
+                        <Star className="w-4 h-4 text-yellow-500 mr-1" />
+                        4.9
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                      {caseStudy.title}
+                    </h3>
+                    
+                    <div className="mb-4">
+                      <p className="text-gray-700 font-medium">{caseStudy.client}</p>
+                      <p className="text-sm text-gray-500">{caseStudy.industry}</p>
+                    </div>
+                    
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                      {caseStudy.challenge}
+                    </p>
+                    
+                    <div className="mb-4">
+                      <div className="flex flex-wrap gap-1">
+                        {caseStudy.technologies.slice(0, 3).map((tech, techIndex) => (
+                          <span key={techIndex} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
+                            {tech}
+                          </span>
+                        ))}
+                        {caseStudy.technologies.length > 3 && (
+                          <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
+                            +{caseStudy.technologies.length - 3} more
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center text-sm text-gray-500">
+                        <User className="w-4 h-4 mr-1" />
+                        {caseStudy.teamSize}
+                      </div>
+                      <Link
+                        href={`/case-studies/${caseStudy.id}`}
+                        className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-semibold group-hover:text-emerald-700"
+                      >
+                        <span>Read More</span>
+                        <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    </div>
+                  </div>
+                </motion.article>
+=======
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {industries.map((industry, index) => (
                 <motion.div
@@ -254,11 +472,45 @@ export default function CaseStudiesPage() {
                     {industry.count} projects
                   </p>
                 </motion.div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
+        {/* CTA Section */}
+        <section className="py-16 bg-emerald-900 text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-4">Ready to Start Your Success Story?</h2>
+                <p className="text-xl text-emerald-100 mb-8">
+                  Let's discuss how we can help transform your business with technology
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link
+                    href="/contact"
+                    className="bg-white text-emerald-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+                  >
+                    Start Your Project
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                  <Link
+                    href="/services"
+                    className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-900 transition-colors inline-flex items-center justify-center"
+                  >
+                    View Our Services
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
+=======
         {/* Case Studies Grid */}
         <section id="case-studies" className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -411,6 +663,7 @@ export default function CaseStudiesPage() {
                 </Link>
               </div>
             </motion.div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
           </div>
         </section>
       </div>

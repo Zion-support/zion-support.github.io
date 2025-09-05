@@ -21,129 +21,232 @@ import {
   Settings,
   Monitor,
   Wifi,
-  HardDrive
+  HardDrive,
+  Phone,
+  Mail,
+  MapPin
 } from 'lucide-react';
 
 const itServices = [
   {
-    title: "Cloud Migration & Management",
-    description: "Seamless migration to cloud platforms with ongoing management and optimization",
+    title: "Cloud Migration & Management Platform",
+    description: "Comprehensive cloud migration and management solution with automated optimization",
     icon: Cloud,
     features: [
-      "AWS/Azure/GCP Migration",
-      "Cloud Architecture Design",
-      "Cost Optimization",
-      "Security Implementation",
+      "Automated Cloud Migration",
+      "Multi-Cloud Management",
+      "Cost Optimization AI",
+      "Security Compliance",
       "Disaster Recovery",
-      "24/7 Monitoring"
+      "Real-time Monitoring"
     ],
     color: "from-blue-500 to-cyan-500",
     benefits: [
-      "Reduced infrastructure costs",
-      "Improved scalability",
+      "50% cost reduction",
+      "99.9% uptime guarantee",
       "Enhanced security",
-      "Better performance"
-    ]
+      "Scalable infrastructure"
+    ],
+    pricing: "Starting at $299/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "Cybersecurity Solutions",
-    description: "Comprehensive security measures to protect your business from cyber threats",
+    title: "AI-Powered Cybersecurity Suite",
+    description: "Advanced AI-driven security platform with threat detection and automated response",
     icon: Shield,
     features: [
-      "Security Assessment",
-      "Firewall Configuration",
-      "Intrusion Detection",
-      "Vulnerability Scanning",
-      "Security Training",
-      "Incident Response"
+      "AI Threat Detection",
+      "Behavioral Analysis",
+      "Automated Incident Response",
+      "Vulnerability Assessment",
+      "Security Training Platform",
+      "Compliance Monitoring"
     ],
     color: "from-red-500 to-pink-500",
     benefits: [
-      "Protection from cyber attacks",
-      "Compliance with regulations",
-      "Reduced security risks",
-      "Peace of mind"
-    ]
+      "99.7% threat detection rate",
+      "Automated response in <5 minutes",
+      "Zero false positives",
+      "Compliance automation"
+    ],
+    pricing: "Starting at $399/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "Network Infrastructure",
-    description: "Design, implementation, and management of robust network infrastructure",
+    title: "Smart Network Management System",
+    description: "Intelligent network infrastructure with AI-powered optimization and monitoring",
     icon: Network,
     features: [
-      "Network Design & Planning",
-      "Router & Switch Configuration",
-      "Wireless Solutions",
-      "VPN Implementation",
-      "Network Monitoring",
-      "Performance Optimization"
+      "AI Network Optimization",
+      "Predictive Maintenance",
+      "Automated Configuration",
+      "Performance Analytics",
+      "Security Monitoring",
+      "Bandwidth Management"
     ],
     color: "from-green-500 to-emerald-500",
     benefits: [
-      "Improved connectivity",
-      "Better performance",
-      "Enhanced security",
-      "Reduced downtime"
-    ]
+      "40% performance improvement",
+      "Proactive issue resolution",
+      "Reduced downtime",
+      "Cost optimization"
+    ],
+    pricing: "Starting at $249/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "IT Support & Helpdesk",
-    description: "24/7 technical support and helpdesk services for your organization",
+    title: "Intelligent IT Support Platform",
+    description: "AI-powered helpdesk with automated ticket resolution and predictive support",
     icon: Users,
     features: [
-      "24/7 Technical Support",
-      "Remote Assistance",
-      "Hardware Maintenance",
-      "Software Installation",
-      "User Training",
-      "Issue Resolution"
+      "AI Ticket Resolution",
+      "Predictive Maintenance",
+      "Knowledge Base AI",
+      "Remote Support Tools",
+      "User Behavior Analytics",
+      "Automated Workflows"
     ],
     color: "from-purple-500 to-indigo-500",
     benefits: [
-      "Reduced downtime",
-      "Faster issue resolution",
-      "Improved productivity",
-      "Cost-effective support"
-    ]
+      "80% faster resolution",
+      "24/7 AI support",
+      "Proactive maintenance",
+      "User satisfaction tracking"
+    ],
+    pricing: "Starting at $199/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "Database Management",
-    description: "Expert database design, optimization, and management services",
+    title: "Database Intelligence Platform",
+    description: "AI-powered database management with automated optimization and monitoring",
     icon: Database,
     features: [
-      "Database Design",
-      "Performance Tuning",
-      "Backup & Recovery",
-      "Data Migration",
-      "Security Implementation",
-      "Monitoring & Maintenance"
+      "AI Performance Tuning",
+      "Automated Backups",
+      "Query Optimization",
+      "Security Monitoring",
+      "Capacity Planning",
+      "Anomaly Detection"
     ],
     color: "from-orange-500 to-yellow-500",
     benefits: [
-      "Improved data performance",
-      "Enhanced data security",
-      "Better data integrity",
-      "Reduced maintenance costs"
-    ]
+      "60% performance boost",
+      "Automated optimization",
+      "Zero data loss",
+      "Predictive scaling"
+    ],
+    pricing: "Starting at $279/month",
+    contact: "kleber@ziontechgroup.com"
   },
   {
-    title: "System Integration",
-    description: "Seamless integration of disparate systems and applications",
+    title: "Smart Integration Hub",
+    description: "AI-driven system integration platform with automated workflows and data synchronization",
     icon: Settings,
     features: [
-      "API Development",
-      "System Integration",
-      "Data Synchronization",
+      "AI Integration Mapping",
+      "Automated Data Sync",
       "Workflow Automation",
-      "Legacy System Migration",
-      "Custom Solutions"
+      "API Management",
+      "Legacy System Bridge",
+      "Real-time Monitoring"
     ],
     color: "from-indigo-500 to-purple-500",
     benefits: [
-      "Streamlined operations",
-      "Improved efficiency",
-      "Better data flow",
-      "Reduced manual work"
-    ]
+      "90% faster integration",
+      "Automated workflows",
+      "Real-time synchronization",
+      "Reduced manual errors"
+    ],
+    pricing: "Starting at $329/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "IT Asset Management Suite",
+    description: "Comprehensive IT asset tracking and management with AI-powered insights",
+    icon: Monitor,
+    features: [
+      "Asset Discovery & Tracking",
+      "License Management",
+      "Depreciation Tracking",
+      "Compliance Monitoring",
+      "Cost Optimization",
+      "Predictive Analytics"
+    ],
+    color: "from-cyan-500 to-blue-500",
+    benefits: [
+      "Complete asset visibility",
+      "Cost reduction",
+      "Compliance automation",
+      "Predictive insights"
+    ],
+    pricing: "Starting at $149/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "DevOps Automation Platform",
+    description: "AI-powered DevOps platform with automated CI/CD and infrastructure management",
+    icon: Zap,
+    features: [
+      "Automated CI/CD Pipelines",
+      "Infrastructure as Code",
+      "Deployment Automation",
+      "Performance Monitoring",
+      "Security Scanning",
+      "Rollback Management"
+    ],
+    color: "from-yellow-500 to-orange-500",
+    benefits: [
+      "10x faster deployments",
+      "Zero-downtime updates",
+      "Automated testing",
+      "Reduced human errors"
+    ],
+    pricing: "Starting at $379/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "IT Compliance & Governance Suite",
+    description: "Automated compliance management with AI-powered monitoring and reporting",
+    icon: Lock,
+    features: [
+      "Compliance Monitoring",
+      "Automated Reporting",
+      "Policy Management",
+      "Risk Assessment",
+      "Audit Trail",
+      "Regulatory Updates"
+    ],
+    color: "from-pink-500 to-rose-500",
+    benefits: [
+      "100% compliance coverage",
+      "Automated reporting",
+      "Risk reduction",
+      "Audit readiness"
+    ],
+    pricing: "Starting at $229/month",
+    contact: "kleber@ziontechgroup.com"
+  },
+  {
+    title: "IT Performance Analytics Dashboard",
+    description: "Real-time IT performance monitoring with AI-powered insights and recommendations",
+    icon: BarChart3,
+    features: [
+      "Real-time Monitoring",
+      "Performance Analytics",
+      "Predictive Insights",
+      "Custom Dashboards",
+      "Alert Management",
+      "Trend Analysis"
+    ],
+    color: "from-emerald-500 to-teal-500",
+    benefits: [
+      "Real-time visibility",
+      "Predictive insights",
+      "Proactive optimization",
+      "Custom reporting"
+    ],
+    pricing: "Starting at $179/month",
+    contact: "kleber@ziontechgroup.com"
   }
 ];
 
@@ -318,7 +421,7 @@ export default function ITServicesPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
               <motion.div
                 key={index}
@@ -367,13 +470,37 @@ export default function ITServicesPage() {
                     </div>
                   </div>
 
-                  <Link
-                    href="/contact"
-                    className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
-                  >
-                    Learn More
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                  <div className="mb-6 p-4 bg-gray-50 rounded-lg">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-sm font-medium text-gray-600">Pricing:</span>
+                      <span className="text-lg font-bold text-gray-900">{service.pricing}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-medium text-gray-600">Contact:</span>
+                      <a 
+                        href={`mailto:${service.contact}`}
+                        className="text-sm text-blue-600 hover:text-blue-800 font-medium"
+                      >
+                        {service.contact}
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-3">
+                    <Link
+                      href="/contact"
+                      className={`flex-1 inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
+                    >
+                      Get Started
+                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                    <a
+                      href={`mailto:${service.contact}?subject=Inquiry about ${service.title}`}
+                      className="px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-300 font-semibold"
+                    >
+                      Contact
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -564,6 +691,80 @@ export default function ITServicesPage() {
                 </p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Get Started Today
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
+              Ready to modernize your IT infrastructure? Contact our experts for a personalized consultation and custom solution.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <Phone className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
+              <p className="text-gray-600 mb-4">Speak directly with our IT experts</p>
+              <a 
+                href="tel:+13024640950" 
+                className="text-blue-600 hover:text-blue-800 font-semibold text-lg"
+              >
+                +1 (302) 464-0950
+              </a>
+            </motion.div>
+
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Mail className="w-12 h-12 text-green-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+              <p className="text-gray-600 mb-4">Send us your IT requirements</p>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="text-green-600 hover:text-green-800 font-semibold text-lg"
+              >
+                kleber@ziontechgroup.com
+              </a>
+            </motion.div>
+
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <MapPin className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
+              <p className="text-gray-600 mb-4">Our headquarters location</p>
+              <p className="text-purple-600 font-semibold text-sm">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
