@@ -5,16 +5,12 @@ import { useEffect } from 'react';
 export default function AccessibilityEnhancer() {
   useEffect(() => {
     // Skip focus outline for mouse users
-    let usingMouse = false;
-
     const handleMouseDown = () => {
-      usingMouse = true;
       document.body.classList.add('using-mouse');
     };
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
-        usingMouse = false;
         document.body.classList.remove('using-mouse');
       }
     };

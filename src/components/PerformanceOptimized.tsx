@@ -2,7 +2,7 @@ import React, { memo, useMemo, useCallback } from 'react';
 
 // Higher-order component for performance optimization
 export const withPerformanceOptimization = <P extends object>(
-  Component: React.ComponentType<P>,
+  Component: React.ComponentType<P>;
   options: {
     memo?: boolean;
     memoDeps?: (props: P) => any[];
@@ -33,7 +33,7 @@ export const withPerformanceOptimization = <P extends object>(
 
 // Hook for expensive calculations
 export const useExpensiveCalculation = <T>(
-  calculation: () => T,
+  calculation: () => T;
   deps: React.DependencyList
 ): T => {
   return useMemo(calculation, deps);
@@ -41,7 +41,7 @@ export const useExpensiveCalculation = <T>(
 
 // Hook for stable callbacks
 export const useStableCallback = <T extends (...args: any[]) => any>(
-  callback: T,
+  callback: T;
   deps: React.DependencyList
 ): T => {
   return useCallback(callback, deps);
@@ -149,7 +149,7 @@ export const OptimizedImage: React.FC<{
 
 // Virtual scrolling hook for large lists
 export const useVirtualScroll = <T>(
-  items: T[],
+  items: T[];
   itemHeight: number,
   containerHeight: number
 ) => {
