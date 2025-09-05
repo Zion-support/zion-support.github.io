@@ -560,13 +560,9 @@ const microSaaSProducts = [
 
 const features = [
   {
-=======
-    description: 'Automated code review with security scanning, performance optimization, and best practices enforcement.',
-    icon: Code,
-    features: ['Automated Reviews', 'Security Scanning', 'Performance Analysis', 'Best Practices Check'],
-    pricing: '$299 - $1,999/month',
-    category: 'Developer Tools',
-    popular: true
+    icon: Zap,
+    title: 'Rapid Deployment',
+    description: 'Get up and running in days, not months'
   },
   {
     title: 'Smart Contract Security Auditor',
@@ -741,8 +737,8 @@ const features = [
   }
 ];
 
-const features = [{
->>>>>>> cursor/automate-test-improve-and-merge-code-7050
+const features = [
+  {
     icon: Zap,
     title: 'Rapid Deployment',
     description: 'Get up and running in days, not months'
@@ -801,7 +797,8 @@ const benefits = [
   }
 ];
 
-
+const pricingPlans = [
+  {
     name: 'Starter',
     description: 'Perfect for small teams and MVPs',
     price: '$299',
@@ -820,7 +817,7 @@ const benefits = [
     description: 'Ideal for growing businesses',
     price: '$799',
     period: '/month',
-
+    features: [
       'Advanced analytics',
       'Priority support',
       'Enhanced security',
@@ -834,7 +831,7 @@ const benefits = [
     description: 'For large organizations',
     price: 'Custom',
     period: '',
-
+    features: [
       'Custom analytics',
       'Dedicated support',
       'Enterprise security',
@@ -856,22 +853,33 @@ export default function MicroSaaSPage() {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">
-
+        <div className="container mx-auto px-4">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Micro SaaS{' '}
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Specialized software solutions that solve specific business problems with minimal overhead and maximum impact.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Start Your SaaS
               </Link>
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
-                  </div>
-                  </motion.div>
-                  </div>
-                  </section>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Products Grid */}
       <section className="py-20 bg-gray-50">
@@ -894,7 +902,7 @@ export default function MicroSaaSPage() {
               return (
                 <motion.div
                   key={index}
-
+                  className={`bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
                     product.popular ? 'ring-2 ring-purple-200' : ''
                   }`}
                   initial={{ opacity: 0, y: 30 }}
@@ -912,7 +920,7 @@ export default function MicroSaaSPage() {
                   )}
                   
                   <div className="flex items-center justify-between mb-4">
-
+                    <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm font-medium rounded-full">
                       {product.category}
                     </span>
                   </div>
@@ -923,17 +931,17 @@ export default function MicroSaaSPage() {
                     {product.description}
                   </p>
                   <div className="mb-4">
-
+                    <ul className="space-y-2">
                       {product.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
-                  <CheckCircle className="w-3 h-3 text-purple-500 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-3 h-3 text-purple-500 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div className="mb-4">
-                  <span className="text-sm font-semibold text-purple-600">{product.pricing}</span>
+                    <span className="text-sm font-semibold text-purple-600">{product.pricing}</span>
                   </div>
                   <Link
                     href="/contact"
@@ -979,12 +987,12 @@ export default function MicroSaaSPage() {
                   <p className="text-gray-600">
                     {feature.description}
                   </p>
-                  </motion.div>
+                </motion.div>
               );
             })}
           </div>
-                  </div>
-                  </section>
+        </div>
+      </section>
 
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">

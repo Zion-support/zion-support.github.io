@@ -628,16 +628,17 @@ export default function AIServicesPage() {
                     {service.description}
                   </p>
                   <div className="mb-4">
+                    <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
-                  <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div className="mb-4">
-                  <span className="text-sm font-semibold text-blue-600">{service.pricing}</span>
+                    <span className="text-sm font-semibold text-blue-600">{service.pricing}</span>
                   </div>
                   <Link
                     href="/contact"
@@ -673,8 +674,14 @@ export default function AIServicesPage() {
               return (
                 <motion.div
                   key={index}
+                  className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="w-8 h-8 text-blue-600" />
+                    <IconComponent className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {industry.name}
@@ -682,7 +689,7 @@ export default function AIServicesPage() {
                   <p className="text-gray-600">
                     {industry.description}
                   </p>
-                  </motion.div>
+                </motion.div>
               );
             })}
           </div>
@@ -736,25 +743,30 @@ export default function AIServicesPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Business with AI?
+            </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let&apos;s discuss how our AI solutions can drive innovation and growth for your organization.
             </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Start Your AI Journey
               </Link>
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
-                  </div>
-                  </motion.div>
-                  </div>
-                  </section>
-                  </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 }

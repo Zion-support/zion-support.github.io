@@ -367,9 +367,10 @@ const itServices = [
     features: ['Compliance Assessment', 'Regulatory Reporting', 'Policy Development', 'Audit Support'],
     pricing: '$8,000 - $40,000/project',
     category: 'Compliance'
-  },
-  {
+  }
+];
 
+const technologies = [
   { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },
   { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' },
   { name: 'Monitoring', icon: BarChart3, description: 'Prometheus, Grafana, ELK Stack' },
@@ -377,7 +378,8 @@ const itServices = [
   { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD-WAN' }
 ];
 
-
+const benefits = [
+  {
     icon: Clock,
     title: 'Reduced Downtime',
     description: 'Proactive monitoring and maintenance',
@@ -403,7 +405,8 @@ const itServices = [
   }
 ];
 
-
+const supportLevels = [
+  {
     name: 'Basic Support',
     description: 'Standard business hours support',
     features: ['Email Support', 'Phone Support', 'Basic Monitoring', 'Monthly Reports'],
@@ -434,27 +437,33 @@ export default function ITServicesPage() {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">
-
+        <div className="container mx-auto px-4">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-
-                IT{' '}
-                <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                  Services
-                </span>
-
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              IT{' '}
+              <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                Services
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Comprehensive IT solutions to keep your business running smoothly and securely.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Get IT Consultation
               </Link>
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
-                  </div>
-                  </motion.div>
-                  </div>
-                  </section>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Services Grid */}
       <section className="py-20 bg-gray-50">
@@ -466,25 +475,27 @@ export default function ITServicesPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our IT Solutions
             </h2>
-                  <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               End-to-end IT services designed to optimize your infrastructure and ensure business continuity.
             </p>
-                  </motion.div>
+          </motion.div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {itServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <motion.div
                   key={index}
-
+                  className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
                       {service.category}
                     </span>
                   </div>
@@ -495,17 +506,17 @@ export default function ITServicesPage() {
                     {service.description}
                   </p>
                   <div className="mb-4">
-
+                    <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
-                  <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div className="mb-4">
-                  <span className="text-sm font-semibold text-green-600">{service.pricing}</span>
+                    <span className="text-sm font-semibold text-green-600">{service.pricing}</span>
                   </div>
                   <Link
                     href="/contact"
@@ -542,9 +553,14 @@ export default function ITServicesPage() {
               return (
                 <motion.div
                   key={index}
-
+                  className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="w-8 h-8 text-green-600" />
+                    <IconComponent className="w-8 h-8 text-green-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {tech.name}
@@ -552,7 +568,7 @@ export default function ITServicesPage() {
                   <p className="text-gray-600">
                     {tech.description}
                   </p>
-                  </motion.div>
+                </motion.div>
               );
             })}
           </div>
@@ -650,15 +666,15 @@ export default function ITServicesPage() {
                   ))}
                 </ul>
                   <Link
-                  href="/contact"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
-                    index === 1
-
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }`}
-                >
-                  <span>Choose Plan</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                    href="/contact"
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
+                      index === 1
+                        ? 'bg-green-600 hover:bg-green-700 text-white'
+                        : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                    }`}
+                  >
+                    <span>Choose Plan</span>
+                    <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                   </motion.div>
             ))}
@@ -668,22 +684,30 @@ export default function ITServicesPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Optimize Your IT Infrastructure?
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Let our expert team help you build a robust, scalable, and secure IT environment.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Get IT Assessment
               </Link>
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
-                  </div>
-                  </motion.div>
-                  </div>
-                  </section>
-                  </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 }
