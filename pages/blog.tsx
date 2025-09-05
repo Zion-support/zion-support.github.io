@@ -1,176 +1,190 @@
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { 
+  Calendar, 
+  User, 
+  Clock, 
+  ArrowRight, 
+  Search,
+  Filter,
+  Tag,
+  BookOpen
+} from 'lucide-react';
+import Layout from './components/Layout';
 
 const blogPosts = [
   {
     id: 1,
-  }
-]
     title: 'Cloud Security Best Practices for Enterprise Applications',
     excerpt: 'Essential security measures every enterprise should implement in their cloud infrastructure.',
     content: 'Cloud security is paramount in today\'s digital landscape...',
     author: 'Michael Chen',
     date: '2024-01-05',
-    readTime: '6 min read',
     category: 'Security',
-    image: '/blog/cloud-security.jpg',
-    tags: ['Security', 'Cloud', 'Enterprise', 'Best Practices']
+    tags: ['Cloud', 'Security', 'Enterprise'],
+    readTime: '5 min read',
+    image: '/blog/cloud-security.jpg'
   },
   {
-    id: 4,
-    title: 'Quantum Computing: The Next Frontier in Technology',
-    excerpt: 'Understanding quantum computing and its potential impact on various industries.',
-    content: 'Quantum computing represents a fundamental shift in computational power...',
-    author: 'Dr. Kleber Santos',
+    id: 2,
+    title: 'AI-Powered Automation: Transforming Business Operations',
+    excerpt: 'How artificial intelligence is revolutionizing business processes and increasing efficiency.',
+    content: 'Artificial intelligence is no longer a futuristic concept...',
+    author: 'Sarah Johnson',
+    date: '2024-01-03',
+    category: 'AI',
+    tags: ['AI', 'Automation', 'Business'],
+    readTime: '7 min read',
+    image: '/blog/ai-automation.jpg'
+  },
+  {
+    id: 3,
+    title: 'Microservices Architecture: Building Scalable Applications',
+    excerpt: 'A comprehensive guide to designing and implementing microservices for modern applications.',
+    content: 'Microservices architecture has become the standard...',
+    author: 'David Rodriguez',
     date: '2024-01-01',
-    readTime: '8 min read',
-    category: 'Quantum Computing',
-    image: '/blog/quantum-computing.jpg',
-    tags: ['Quantum Computing', 'Technology', 'Innovation', 'Future']
+    category: 'Architecture',
+    tags: ['Microservices', 'Architecture', 'Scalability'],
+    readTime: '6 min read',
+    image: '/blog/microservices.jpg'
   }
 ];
 
+const categories = [
+  'All',
+  'AI',
+  'Security',
+  'Architecture',
+  'Cloud',
+  'Development',
+  'DevOps'
 ];
-
-const blogCategories = [
-  "All Posts",
-  "AI & Technology",
-  "Cloud Computing",
-  "Cybersecurity",
-  "SaaS",
-  "Digital Transformation"
->>>>>>> main
->>>>>>> main
-];
->>>>>>> main
 
 export default function BlogPage() {
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const filteredPosts = selectedCategory === 'All' 
-    ? blogPosts 
-    : blogPosts.filter(post => post.category === selectedCategory);
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
 
   return (
->>>>>>> main
+    <Layout
       title="Blog - Zion Tech Group"
-      description="Latest insights and trends in technology, AI, and business"
-      keywords="blog, technology news, AI trends, business insights, tech articles"
+      description="Stay updated with the latest insights, trends, and best practices in technology, AI, and digital transformation."
+      keywords="blog, technology insights, AI trends, cloud computing, security, development"
     >
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
             <motion.div
->>>>>>> main
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
->>>>>>> main
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Technology{' '}
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Insights
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
+                Stay ahead with expert insights, industry trends, and practical guides
               </p>
             </motion.div>
->>>>>>> main
           </div>
         </section>
 
-                <button
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                  }`}
-                >
-                  {category.name} ({category.count})
-                </button>
-              ))}
->>>>>>> main
+        {/* Search and Filter */}
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex flex-col md:flex-row gap-4 mb-8">
+              <div className="relative flex-1">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search articles..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+              <div className="flex gap-2 overflow-x-auto">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-4 py-2 rounded-full whitespace-nowrap transition-colors ${
+                      selectedCategory === category
+                        ? 'bg-blue-500 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         {/* Blog Posts */}
         <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post, index) => (
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPosts.map((post) => (
                 <motion.article
->>>>>>> main
+                  key={post.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                 >
-                  <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
-                    <BookOpen className="w-16 h-16 text-white" />
-                  </div>
-                  
+                  <div className="aspect-video bg-gradient-to-br from-blue-400 to-purple-500"></div>
                   <div className="p-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      <Tag className="w-4 h-4 text-blue-500" />
+                      <span className="text-sm text-blue-600 font-medium">{post.category}</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 line-clamp-2">{post.title}</h3>
+                    <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                      <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-1">
+                          <User className="w-4 h-4" />
+                          <span>{post.author}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          <span>{post.readTime}</span>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        <span>{post.date}</span>
                       </div>
                     </div>
-                    
-                    </div>
-                    
                     <Link
                       href={`/blog/${post.id}`}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                      className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
                     >
                       Read More
-                      <ArrowRight className="ml-2 w-4 h-4" />
+                      <ArrowRight className="w-4 h-4" />
                     </Link>
->>>>>>> main
                   </div>
                 </motion.article>
               ))}
             </div>
-            {/* Load More Button */}
-            <div className="text-center mt-12">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Load More Posts
-              </button>
-            </div>
-            {filteredPosts.length === 0 && (
-              <div className="text-center py-12">
-                <div className="text-gray-400 mb-4">
-                  <BookOpen className="w-16 h-16 mx-auto" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">No posts found</h3>
-                <p className="text-gray-600">Try selecting a different category.</p>
-              </div>
-            )}
->>>>>>> main
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Stay Updated
-              </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Subscribe to our newsletter and never miss the latest insights on technology and innovation.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-                >
-                  Subscribe Now
-                </Link>
-                <Link
-                  href="/services"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-                >
-                  View Our Services
-                </Link>
-              </div>
-            </motion.div>
           </div>
         </section>
       </div>
     </Layout>
->>>>>>> main
->>>>>>> main
   );
 }
