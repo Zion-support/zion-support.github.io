@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, Clock, Star, FileText, Globe, Code, Database, Cloud } from 'lucide-react';
@@ -239,7 +238,6 @@ export default function SearchPage() {
         </section>
       </div>
     </MainLayout>
-=======
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -381,7 +379,8 @@ export default function SearchPage() {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-<<<<<<< HEAD
+    if (query.trim()) {
+      router.push(`/search?q=${encodeURIComponent(query)}`);
     performSearch(query);
     router.push(`/search?q=${encodeURIComponent(query)}`, undefined, { shallow: true });
   };
@@ -409,10 +408,6 @@ export default function SearchPage() {
         return '📚';
       default:
         return '🔍';
-=======
-    if (query.trim()) {
-      router.push(`/search?q=${encodeURIComponent(query)}`);
->>>>>>> main
     }
   };
 
@@ -599,6 +594,5 @@ export default function SearchPage() {
         </div>
       </div>
     </Layout>
->>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   );
 }

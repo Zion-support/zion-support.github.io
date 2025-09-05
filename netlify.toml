@@ -1,7 +1,6 @@
 [build]
-  command = "npm ci && npm run build"
+  command = "npm run build"
   publish = ".next"
-<<<<<<< HEAD
 
 [build.environment]
   NODE_VERSION = "18"
@@ -10,27 +9,11 @@
   package = "@netlify/plugin-nextjs"
 
 [functions]
-  node_bundler = "esbuild"
-=======
-  
-[build.environment]
-  NODE_VERSION = "18"
-  NPM_FLAGS = "--legacy-peer-deps"
+  directory = "netlify/functions"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Role = ["admin"]}
-
-# Handle Next.js routing
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
-
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
->>>>>>> main
+  node_bundler = "esbuild"
+>>>>>>> origin/cursor/check-and-fix-netlify-build-1edd

@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD:pages/pricing.tsx
+:pages/pricing.tsx
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Check, X, Star, Zap, Shield, Users, ArrowRight } from 'lucide-react';
@@ -127,13 +127,11 @@ const Pricing = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6">
               Pricing Plans
-=======
 
 export default function PricingPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
-<<<<<<< HEAD
 </Head>
         <title>Pricing - Zion Tech Group</title>"
         <meta name="description" content="Transparent pricing for AI solutions, IT services, and technology consulting. Choose the plan that fits your business needs." />"
@@ -147,7 +145,6 @@ export default function PricingPage() {
 </div>
             <h1 className="text-5xl font-bold mb-6">"
 </h1>
->>>>>>> cursor/expand-services-advertise-and-build-project-0033:pages_disabled/pricing.tsx
             </h1>
             <p className="text-xl text-blue-100 mb-8">
               Choose the perfect plan for your business needs
@@ -336,13 +333,11 @@ export default function PricingPage() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD:pages/pricing.tsx
+:pages/pricing.tsx
   );
 };
 
 export default Pricing;
-=======
-=======
         <title>Pricing - Zion Tech Group</title>
         <meta name="description" content="Transparent pricing for AI, IT, and Micro SaaS services." />
       </Head>
@@ -352,6 +347,5 @@ export default Pricing;
       </main>
     </div>
   );
->>>>>>> ff4fe8fcd43 (Add services-extended catalog with real offerings; fix critical utilities; quarantine broken pages for stability; build passes)
+ (Add services-extended catalog with real offerings; fix critical utilities; quarantine broken pages for stability; build passes)
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-0033:pages_disabled/pricing.tsx

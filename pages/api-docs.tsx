@@ -483,6 +483,7 @@ export default function APIDocsPage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   );
 }
+

@@ -15,12 +15,9 @@ export default function RegisterPage() {
     confirmPassword: '',
     agreeToTerms: false
   });
-<<<<<<< HEAD
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-=======
->>>>>>> main
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,11 +30,8 @@ export default function RegisterPage() {
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
-<<<<<<< HEAD
-    });
-=======
     }));
->>>>>>> main
+    });
   };
 
   return (
