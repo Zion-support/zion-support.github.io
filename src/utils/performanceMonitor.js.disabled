@@ -1,0 +1,12 @@
+<<<<<<< HEAD:src/utils/performanceMonitor.js.disabled
+// performanceMonitor utility,
+export const performanceMonitor = {
+  // Placeholder utility functions,
+"init": function() {
+    
+  }
+};
+export default performanceMonitor;
+=======
+export const performanceMonitor = { init: function() { } }; export default performanceMonitor;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe:src/utils/performanceMonitor.js

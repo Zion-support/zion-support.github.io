@@ -2,14 +2,19 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
+<<<<<<< HEAD
   { number: '1000+', label: 'Projects Completed' },
   { number: '110+', label: 'Services Offered' },
   { number: '75+', label: 'Expert Team Members' }
+=======
+  { number: '500+', label: 'Projects Completed' },
+  { number: '50+', label: 'Expert Team Members' }
+>>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
 ];
 
 const services = [
@@ -35,8 +40,8 @@ const services = [
 
 export default function HomePage() {
   return (
-    <MainLayout>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <Layout>
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
@@ -60,9 +65,14 @@ export default function HomePage() {
                 Cutting-Edge Technology
               </span>
             </h1>
+<<<<<<< HEAD
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Zion Tech Group delivers innovative AI, IT, and Micro SaaS solutions 
               that drive growth, efficiency, and competitive advantage for businesses worldwide.
+=======
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
+>>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link 
@@ -156,6 +166,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -247,6 +258,28 @@ export default function HomePage() {
               </Link>
             </div>
           </motion.div>
+=======
+      {/* Stats Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-600 font-medium">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+>>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
         </div>
       </section>
 
@@ -276,8 +309,13 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 
       </div>
     </MainLayout>
+=======
+    </div>
+    </Layout>
+>>>>>>> 8391ff08d5a213489d27660faf5d33b8ff91b13c
   );
 }

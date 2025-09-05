@@ -1,0 +1,12 @@
+<<<<<<< HEAD:src/utils/seoOptimizer.tsx.disabled
+// seoOptimizer utility
+export const seoOptimizer = {
+  // Placeholder utility functions
+  "init": () => {
+    
+  }
+};
+export default seoOptimizer;
+=======
+export const seoOptimizer = { init: () => { } };; export default seoOptimizer;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe:src/utils/seoOptimizer.tsx

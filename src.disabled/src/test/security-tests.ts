@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Security test configuration
 export const securityTests = {
@@ -23,3 +24,6 @@ export const securityTests = {
       "csrf": vulnerabilities.filter(v => csrfPatterns.some(p => p.test(v)))
     }}
 };
+=======
+export const securityTests = { checkVulnerabilities: async () => { const vulnerabilities = []; const xssPatterns = [ /innerHTMLs*=/,/dangerouslySetInnerHTML/,/evals*(/,/Functions*(/ ]; const csrfPatterns = [ /fetchs*(/,/axioss*./,/XMLHttpRequest/ ]; return { xss: vulnerabilities.filter(v => xssPatterns.some(p => p.test(v))),csrf: vulnerabilities.filter(v => csrfPatterns.some(p => p.test(v))) }} };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

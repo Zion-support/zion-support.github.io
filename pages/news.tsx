@@ -1,129 +1,185 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Calendar, 
-  ArrowRight,
-  Tag,
-  User,
-  Clock
-} from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import { Calendar, User, ArrowRight, Tag, ExternalLink } from 'lucide-react';
 
-const news = [
+const newsArticles = [
   {
-    title: "Zion Tech Group Launches New AI-Powered Analytics Platform",
-    excerpt: "We're excited to announce the launch of our next-generation AI analytics platform that helps businesses make data-driven decisions faster than ever.",
-    date: "2024-01-15",
-    author: "Sarah Johnson",
+    id: 1,
+    title: "Zion Tech Group Launches Revolutionary AI Platform",
+    excerpt: "Our new AI platform revolutionizes how businesses approach artificial intelligence, offering unprecedented capabilities and ease of use.",
+    author: "Dr. Sarah Chen",
+    date: "2024-01-20",
     category: "Product Launch",
-    image: "🚀",
-    readTime: "3 min read"
+    readTime: "3 min read",
+    image: "/api/placeholder/600/300",
+    featured: true
   },
   {
-    title: "Company Expands to European Markets",
-    excerpt: "Zion Tech Group announces expansion into European markets with new offices in London and Berlin, bringing our innovative solutions to more businesses worldwide.",
-    date: "2024-01-10",
-    author: "Michael Chen",
-    category: "Company News",
-    image: "🌍",
-    readTime: "2 min read"
-  },
-  {
-    title: "Partnership with Leading Cloud Provider",
-    excerpt: "We're thrilled to announce our strategic partnership with a major cloud provider to deliver enhanced scalability and performance to our clients.",
-    date: "2024-01-05",
-    author: "Emily Rodriguez",
+    id: 2,
+    title: "Partnership with Leading Cloud Provider Announced",
+    excerpt: "We're excited to announce our strategic partnership with a major cloud provider to enhance our service offerings.",
+    author: "Michael Rodriguez",
+    date: "2024-01-18",
     category: "Partnership",
-    image: "🤝",
-    readTime: "4 min read"
+    readTime: "2 min read",
+    image: "/api/placeholder/600/300",
+    featured: false
   },
   {
-    title: "Industry Recognition for Innovation",
-    excerpt: "Zion Tech Group receives the 'Innovation in Technology' award at the annual Tech Excellence Awards for our groundbreaking AI solutions.",
-    date: "2023-12-28",
-    author: "David Kim",
+    id: 3,
+    title: "Zion Tech Group Recognized as Top AI Company",
+    excerpt: "Industry recognition for our innovative AI solutions and commitment to excellence in technology services.",
+    author: "Jennifer Lee",
+    date: "2024-01-15",
     category: "Awards",
-    image: "🏆",
-    readTime: "2 min read"
+    readTime: "4 min read",
+    image: "/api/placeholder/600/300",
+    featured: false
   },
   {
+    id: 4,
     title: "New Office Opening in Silicon Valley",
-    excerpt: "We're expanding our presence in Silicon Valley with a new state-of-the-art office that will serve as our West Coast innovation hub.",
-    date: "2023-12-20",
-    author: "Lisa Wang",
+    excerpt: "Expanding our presence with a new state-of-the-art office in the heart of Silicon Valley's tech ecosystem.",
+    author: "Alex Thompson",
+    date: "2024-01-12",
     category: "Company News",
-    image: "🏢",
-    readTime: "3 min read"
+    readTime: "3 min read",
+    image: "/api/placeholder/600/300",
+    featured: false
   },
   {
-    title: "Sustainability Initiative Launch",
-    excerpt: "Zion Tech Group commits to carbon-neutral operations by 2025 with new sustainability initiatives and green technology investments.",
-    date: "2023-12-15",
-    author: "Alex Thompson",
-    category: "Sustainability",
-    image: "🌱",
-    readTime: "5 min read"
+    id: 5,
+    title: "Cybersecurity Solutions Get Major Update",
+    excerpt: "Enhanced security features and improved threat detection capabilities in our cybersecurity offerings.",
+    author: "David Kim",
+    date: "2024-01-10",
+    category: "Product Update",
+    readTime: "5 min read",
+    image: "/api/placeholder/600/300",
+    featured: false
+  },
+  {
+    id: 6,
+    title: "Zion Tech Group Expands European Operations",
+    excerpt: "Growing our international presence with new offices and partnerships across Europe.",
+    author: "Emma Wilson",
+    date: "2024-01-08",
+    category: "Expansion",
+    readTime: "4 min read",
+    image: "/api/placeholder/600/300",
+    featured: false
   }
 ];
 
 const categories = [
   "All News",
   "Product Launch",
-  "Company News", 
   "Partnership",
   "Awards",
-  "Sustainability"
+  "Company News",
+  "Product Update",
+  "Expansion"
 ];
 
 export default function NewsPage() {
   return (
-    <MainLayout
-      title="News - Zion Tech Group"
-      description="Stay updated with the latest news, announcements, and updates from Zion Tech Group. Read about our innovations, partnerships, and company milestones."
-      keywords="news, announcements, company updates, product launches, partnerships, awards"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-violet-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-fuchsia-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-          </div>
+    <div className="min-h-screen bg-gray-50">
+      <Head>
+        <title>News & Updates - Zion Tech Group</title>
+        <meta name="description" content="Stay updated with the latest news, announcements, and updates from Zion Tech Group." />
+      </Head>
 
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Latest{' '}
-                <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
-                  News
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Stay updated with our latest announcements, product launches, 
-                partnerships, and company milestones.
-              </p>
-            </motion.div>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl font-bold mb-6">
+              News & Updates
+            </h1>
+            <p className="text-xl text-blue-100">
+              Stay informed about our latest developments, partnerships, and industry insights
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Category Filter */}
-        <section className="py-8 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center gap-4">
+      {/* Featured Article */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured News</h2>
+            
+            {newsArticles.filter(article => article.featured).map((article) => (
+              <motion.article
+                key={article.id}
+                className="bg-white rounded-lg shadow-lg overflow-hidden mb-8"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="md:flex">
+                  <div className="md:w-1/2">
+                    <div className="h-64 md:h-full bg-gradient-to-r from-blue-500 to-purple-600"></div>
+                  </div>
+                  <div className="md:w-1/2 p-8">
+                    <div className="flex items-center gap-2 mb-4">
+                      <Tag className="w-4 h-4 text-blue-600" />
+                      <span className="text-sm text-blue-600 font-medium">
+                        {article.category}
+                      </span>
+                    </div>
+                    
+                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                      {article.title}
+                    </h2>
+                    
+                    <p className="text-gray-600 mb-6 text-lg">
+                      {article.excerpt}
+                    </p>
+                    
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
+                      <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-2">
+                          <User className="w-4 h-4" />
+                          <span>{article.author}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Calendar className="w-4 h-4" />
+                          <span>{article.date}</span>
+                        </div>
+                      </div>
+                      <span>{article.readTime}</span>
+                    </div>
+                    
+                    <Link
+                      href={`/news/${article.id}`}
+                      className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                    >
+                      Read Full Article
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Categories */}
+      <section className="py-8 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-wrap gap-4 justify-center">
               {categories.map((category, index) => (
                 <button
                   key={index}
-                  className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                    category === "All News"
-                      ? "bg-violet-600 text-white"
-                      : "bg-white text-gray-600 hover:bg-violet-50 hover:text-violet-600"
+                  className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
+                    index === 0
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-blue-50'
                   }`}
                 >
                   {category}
@@ -131,127 +187,102 @@ export default function NewsPage() {
               ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* News Grid */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
+      {/* News Grid */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Latest News</h2>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {news.map((article, index) => (
+              {newsArticles.filter(article => !article.featured).map((article, index) => (
                 <motion.article
-                  key={index}
-                  className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 group"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  key={article.id}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
                   whileHover={{ y: -5 }}
                 >
+                  <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-600"></div>
                   <div className="p-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="px-3 py-1 bg-violet-100 text-violet-800 text-xs font-semibold rounded-full">
+                    <div className="flex items-center gap-2 mb-3">
+                      <Tag className="w-4 h-4 text-blue-600" />
+                      <span className="text-sm text-blue-600 font-medium">
                         {article.category}
                       </span>
-                      <div className="text-3xl">{article.image}</div>
                     </div>
-
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-violet-600 transition-colors">
+                    
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                       {article.title}
                     </h3>
-
+                    
                     <p className="text-gray-600 mb-4 line-clamp-3">
                       {article.excerpt}
                     </p>
-
+                    
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                      <div className="flex items-center space-x-4">
-                        <div className="flex items-center">
-                          <User className="w-4 h-4 mr-1" />
-                          {article.author}
-                        </div>
-                        <div className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {article.readTime}
-                        </div>
+                      <div className="flex items-center gap-2">
+                        <User className="w-4 h-4" />
+                        <span>{article.author}</span>
                       </div>
-                      <div className="flex items-center">
-                        <Calendar className="w-4 h-4 mr-1" />
-                        {new Date(article.date).toLocaleDateString()}
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4" />
+                        <span>{article.date}</span>
                       </div>
                     </div>
-
-                    <Link
-                      href="#"
-                      className="inline-flex items-center text-violet-600 hover:text-violet-700 font-semibold group-hover:text-violet-700 transition-colors"
-                    >
-                      <span>Read More</span>
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                    
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">{article.readTime}</span>
+                      <Link
+                        href={`/news/${article.id}`}
+                        className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
+                      >
+                        Read More
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </div>
                   </div>
                 </motion.article>
               ))}
             </div>
-          </div>
-        </section>
 
-        {/* Newsletter Signup */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Stay Updated
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-                Subscribe to our newsletter to get the latest news and updates delivered to your inbox
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-transparent"
-                />
-                <button className="px-8 py-3 bg-gradient-to-r from-violet-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Subscribe
-                </button>
-              </div>
-            </motion.div>
+            {/* Load More Button */}
+            <div className="text-center mt-12">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Load More Articles
+              </button>
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Want to Learn More?
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
-                Explore our services and see how we can help transform your business
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/services" className="px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Explore Services
-                </Link>
-                <Link href="/contact" className="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Contact Us
-                </Link>
-              </div>
-            </motion.div>
+      {/* Newsletter Signup */}
+      <section className="py-16 bg-blue-600">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Stay Updated
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Subscribe to our newsletter for the latest news and updates
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
+              />
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Subscribe
+              </button>
+            </div>
           </div>
-        </section>
-      </div>
-    </MainLayout>
+        </div>
+      </section>
+    </div>
   );
 }
