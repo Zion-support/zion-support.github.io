@@ -1,7 +1,14 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useAuth } from "./useAuth",
 import { supabase } from "@/integrations/supabase/client",
+=======
+import { useState, useEffect } from &quot;react&quot;;
+import { useAuth } from &quot;./useAuth&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface OnboardingStatus {
   profileCompleted: boolean,
   skillsAdded: boolean,
@@ -37,8 +44,13 @@ export function useOnboardingStatus() {
           .single(),
           
         if (error) {
+<<<<<<< HEAD
           console.error("Error fetching onboarding status:", error),
           return
+=======
+          console.error(&quot;Error fetching onboarding status:&quot;, error);
+          return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         }
         
         if (data) {
@@ -53,7 +65,11 @@ export function useOnboardingStatus() {
           })
         }
       } catch (err) {
+<<<<<<< HEAD
         console.error("Error in onboarding status hook:", err)
+=======
+        console.error(&quot;Error in onboarding status hook:&quot;, err);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
     },
     

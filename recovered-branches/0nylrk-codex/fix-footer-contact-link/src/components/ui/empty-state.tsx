@@ -1,8 +1,16 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
+=======
+import React from &quot;react&quot;;
+import { cn } from &quot;@/lib/utils&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Link } from &quot;react-router-dom&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface EmptyStateProps {
   icon: React.ReactNode,
   title: string,
@@ -30,26 +38,26 @@ export function EmptyState({
   return (
     <div
       className={cn(
-        "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50",
+        &quot;flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50&quot;,
         className
       )}
     >
-      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
+      <div className=&quot;bg-zion-blue/30 p-6 rounded-full mb-6&quot;>
         {icon}
       </div>
-      <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>
-      <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>
+      <h3 className=&quot;text-2xl font-semibold text-white mb-3&quot;>{title}</h3>
+      <p className=&quot;text-zion-slate text-lg mb-8 max-w-md&quot;>{description}</p>
 
-      <div className="flex flex-col sm:flex-row gap-4">
+      <div className=&quot;flex flex-col sm:flex-row gap-4&quot;>
         {action && (
           action.href ? (
-            <Button asChild size="lg" className="bg-zion-purple hover:bg-zion-purple-light">
+            <Button asChild size=&quot;lg&quot; className=&quot;bg-zion-purple hover:bg-zion-purple-light&quot;>
               <Link to={action.href}>{action.text}</Link>
             </Button>
           ) : (
             <Button 
-              size="lg" 
-              className="bg-zion-purple hover:bg-zion-purple-light"
+              size=&quot;lg&quot; 
+              className=&quot;bg-zion-purple hover:bg-zion-purple-light&quot;
               onClick={action.onClick}
             >
               {action.text}
@@ -59,14 +67,14 @@ export function EmptyState({
 
         {secondaryAction && (
           secondaryAction.href ? (
-            <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">
+            <Button asChild variant=&quot;outline&quot; size=&quot;lg&quot; className=&quot;border-zion-blue-light hover:bg-zion-blue-light&quot;>
               <Link to={secondaryAction.href}>{secondaryAction.text}</Link>
             </Button>
           ) : (
             <Button 
-              variant="outline" 
-              size="lg"
-              className="border-zion-blue-light hover:bg-zion-blue-light"
+              variant=&quot;outline&quot; 
+              size=&quot;lg&quot;
+              className=&quot;border-zion-blue-light hover:bg-zion-blue-light&quot;
               onClick={secondaryAction.onClick}
             >
               {secondaryAction.text}

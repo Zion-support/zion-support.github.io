@@ -45,41 +45,41 @@ const EnhancedFooter: React.FC = () => {
   ],
 
   return (
-    <footer className="bg-slate-950 border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-16">
+    <footer className=&quot;bg-slate-950 border-t border-white/10&quot;>
+      <div className=&quot;max-w-7xl mx-auto px-6 py-16&quot;>
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12&quot;>
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">
-                <Brain className="w-6 h-6 text-white" />
+          <div className=&quot;lg:col-span-2&quot;>
+            <div className=&quot;flex items-center space-x-3 mb-6&quot;>
+              <div className=&quot;w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center&quot;>
+                <Brain className=&quot;w-6 h-6 text-white&quot; />
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+              <span className=&quot;text-xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent&quot;>
                 Zion Tech Group
               </span>
             </div>
-            <p className="text-white/70 mb-6 max-w-md">
+            <p className=&quot;text-white/70 mb-6 max-w-md&quot;>
               Leading-edge technology solutions and autonomous innovation platform. 
               Empowering businesses with cutting-edge AI, quantum computing, and digital transformation.
             </p>
             
             {/* Contact Info */}
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-white/70">
-                <Mail className="w-4 h-4" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
+            <div className=&quot;space-y-3&quot;>
+              <div className=&quot;flex items-center space-x-3 text-white/70&quot;>
+                <Mail className=&quot;w-4 h-4&quot; />
+                <a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;hover:text-white transition-colors&quot;>
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              <div className="flex items-center space-x-3 text-white/70">
-                <Phone className="w-4 h-4" />
-                <a href="tel:+13024640950" className="hover:text-white transition-colors">
+              <div className=&quot;flex items-center space-x-3 text-white/70&quot;>
+                <Phone className=&quot;w-4 h-4&quot; />
+                <a href=&quot;tel:+13024640950&quot; className=&quot;hover:text-white transition-colors&quot;>
                   +1 (302) 464-0950
                 </a>
               </div>
-              <div className="flex items-center space-x-3 text-white/70">
-                <MapPin className="w-4 h-4" />
+              <div className=&quot;flex items-center space-x-3 text-white/70&quot;>
+                <MapPin className=&quot;w-4 h-4&quot; />
                 <span>Global Operations</span>
               </div>
             </div>
@@ -88,16 +88,16 @@ const EnhancedFooter: React.FC = () => {
           {/* Footer Sections */}
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h3 className="text-white font-semibold mb-4">{section.title}</h3>
-              <ul className="space-y-2">
+              <h3 className=&quot;text-white font-semibold mb-4&quot;>{section.title}</h3>
+              <ul className=&quot;space-y-2&quot;>
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-white/70 hover:text-white transition-colors duration-200"
+                      className=&quot;text-white/70 hover:text-white transition-colors duration-200&quot;
                     >
                       {link.name}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -106,25 +106,25 @@ const EnhancedFooter: React.FC = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="pt-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className=&quot;pt-8 border-t border-white/10&quot;>
+          <div className=&quot;flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0&quot;>
             {/* Copyright */}
-            <div className="text-white/60 text-sm">
+            <div className=&quot;text-white/60 text-sm&quot;>
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center space-x-4">
+            <div className=&quot;flex items-center space-x-4&quot;>
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/70 hover:text-white transition-all duration-200"
+                  target=&quot;_blank&quot;
+                  rel=&quot;noopener noreferrer&quot;
+                  className=&quot;w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/70 hover:text-white transition-all duration-200&quot;
                   aria-label={social.name}
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className=&quot;w-5 h-5&quot; />
                 </a>
               ))}
             </div>

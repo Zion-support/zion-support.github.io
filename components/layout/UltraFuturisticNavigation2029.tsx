@@ -164,24 +164,24 @@ export default function UltraFuturisticNavigation2029() {
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
-          <div className="flex items-center space-x-6">
-            <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-2 hover:text-cyan-300 transition-colors">
+      <div className=&quot;bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4&quot;>
+        <div className=&quot;max-w-7xl mx-auto flex flex-wrap items-center justify-between&quot;>
+          <div className=&quot;flex items-center space-x-6&quot;>
+            <a href={`tel:${contactInfo.mobile}`} className=&quot;flex items-center space-x-2 hover:text-cyan-300 transition-colors&quot;>
               <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
-            <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-300 transition-colors">
+            <a href={`mailto:${contactInfo.email}`} className=&quot;flex items-center space-x-2 hover:text-cyan-300 transition-colors&quot;>
               <Mail size={14} />
               <span>{contactInfo.email}</span>
             </a>
-            <div className="flex items-center space-x-2">
+            <div className=&quot;flex items-center space-x-2&quot;>
               <MapPin size={14} />
               <span>{contactInfo.address}</span>
             </div>
           </div>
-          <div className="flex items-center space-x-4">
-            <a href={contactInfo.website} className="hover:text-cyan-300 transition-colors">
+          <div className=&quot;flex items-center space-x-4&quot;>
+            <a href={contactInfo.website} className=&quot;hover:text-cyan-300 transition-colors&quot;>
               {contactInfo.website.replace('https://', '')}
             </a>
           </div>
@@ -194,88 +194,88 @@ export default function UltraFuturisticNavigation2029() {
           ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' 
           : 'bg-transparent'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;flex items-center justify-between h-20&quot;>
             {/* Logo */}
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex items-center space-x-3"
+              className=&quot;flex items-center space-x-3&quot;
             >
-              <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
-                  <Rocket className="w-6 h-6 text-white" />
+              <div className=&quot;relative&quot;>
+                <div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center&quot;>
+                  <Rocket className=&quot;w-6 h-6 text-white&quot; />
                 </div>
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg blur opacity-75 animate-pulse"></div>
+                <div className=&quot;absolute -inset-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg blur opacity-75 animate-pulse&quot;></div>
               </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+              <div className=&quot;flex flex-col&quot;>
+                <span className=&quot;text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent&quot;>
                   Zion Tech Group
                 </span>
-                <span className="text-xs text-gray-400">2029 Innovation Hub</span>
+                <span className=&quot;text-xs text-gray-400&quot;>2029 Innovation Hub</span>
               </div>
             </motion.div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
               {mainNavItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="group relative text-gray-300 hover:text-white transition-colors duration-200"
+                  className=&quot;group relative text-gray-300 hover:text-white transition-colors duration-200&quot;
                 >
-                  <div className="flex items-center space-x-2">
-                    <item.icon size={16} className="group-hover:text-cyan-400 transition-colors" />
+                  <div className=&quot;flex items-center space-x-2&quot;>
+                    <item.icon size={16} className=&quot;group-hover:text-cyan-400 transition-colors&quot; />
                     <span>{item.name}</span>
                   </div>
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></div>
-                </Link>
+                  <div className=&quot;absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full&quot;></div>
+                </a>
               ))}
 
               {/* Services Dropdown */}
-              <div className="relative group">
-                <button className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
-                  <Briefcase size={16} className="group-hover:text-cyan-400 transition-colors" />
+              <div className=&quot;relative group&quot;>
+                <button className=&quot;flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200&quot;>
+                  <Briefcase size={16} className=&quot;group-hover:text-cyan-400 transition-colors&quot; />
                   <span>All Services</span>
-                  <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
+                  <ChevronDown size={14} className=&quot;group-hover:rotate-180 transition-transform duration-200&quot; />
                 </button>
                 
                 {/* Mega Menu */}
-                <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className=&quot;absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0&quot;>
+                  <div className=&quot;p-6 grid grid-cols-2 lg:grid-cols-3 gap-6&quot;>
                     {serviceCategories.map((category, index) => (
                       <motion.div
                         key={category.title}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        className="group"
+                        className=&quot;group&quot;
                       >
                         <div className={`p-4 rounded-lg bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>
-                          <div className="flex items-center space-x-3 mb-3">
-                            <category.icon size={20} className="text-cyan-400" />
-                            <h3 className="font-semibold text-white group-hover:text-cyan-300 transition-colors">
+                          <div className=&quot;flex items-center space-x-3 mb-3&quot;>
+                            <category.icon size={20} className=&quot;text-cyan-400&quot; />
+                            <h3 className=&quot;font-semibold text-white group-hover:text-cyan-300 transition-colors&quot;>
                               {category.title}
                             </h3>
                           </div>
-                          <p className="text-sm text-gray-400 mb-4">{category.description}</p>
-                          <div className="space-y-2">
+                          <p className=&quot;text-sm text-gray-400 mb-4&quot;>{category.description}</p>
+                          <div className=&quot;space-y-2&quot;>
                             {category.services.slice(0, 3).map((service) => (
                               <Link
                                 key={service.name}
                                 href={service.href}
-                                className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200 group"
+                                className=&quot;block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200 group&quot;
                               >
-                                <div className="flex items-center justify-between">
-                                  <span className="text-sm text-gray-300 group-hover:text-white transition-colors">
+                                <div className=&quot;flex items-center justify-between&quot;>
+                                  <span className=&quot;text-sm text-gray-300 group-hover:text-white transition-colors&quot;>
                                     {service.name}
                                   </span>
-                                  <span className="text-xs text-cyan-400 font-mono">
+                                  <span className=&quot;text-xs text-cyan-400 font-mono&quot;>
                                     {service.price}
                                   </span>
                                 </div>
-                                <p className="text-xs text-gray-500 mt-1">{service.description}</p>
-                              </Link>
+                                <p className=&quot;text-xs text-gray-500 mt-1&quot;>{service.description}</p>
+                              </a>
                             ))}
                           </div>
                         </div>
@@ -289,17 +289,17 @@ export default function UltraFuturisticNavigation2029() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
+                className=&quot;px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40&quot;
               >
                 Get Started
               </motion.button>
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="lg:hidden">
+            <div className=&quot;lg:hidden&quot;>
               <button
                 onClick={toggleMenu}
-                className="text-gray-300 hover:text-white transition-colors"
+                className=&quot;text-gray-300 hover:text-white transition-colors&quot;
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -315,59 +315,59 @@ export default function UltraFuturisticNavigation2029() {
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            className="fixed inset-0 z-50 lg:hidden"
+            className=&quot;fixed inset-0 z-50 lg:hidden&quot;
           >
-            <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={closeMenu} />
-            <div className="absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/30 overflow-y-auto">
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-8">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
-                      <Rocket className="w-5 h-5 text-white" />
+            <div className=&quot;absolute inset-0 bg-black/80 backdrop-blur-sm&quot; onClick={closeMenu} />
+            <div className=&quot;absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/30 overflow-y-auto&quot;>
+              <div className=&quot;p-6&quot;>
+                <div className=&quot;flex items-center justify-between mb-8&quot;>
+                  <div className=&quot;flex items-center space-x-3&quot;>
+                    <div className=&quot;w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center&quot;>
+                      <Rocket className=&quot;w-5 h-5 text-white&quot; />
                     </div>
-                    <span className="text-lg font-bold text-white">Zion Tech</span>
+                    <span className=&quot;text-lg font-bold text-white&quot;>Zion Tech</span>
                   </div>
-                  <button onClick={closeMenu} className="text-gray-400 hover:text-white">
+                  <button onClick={closeMenu} className=&quot;text-gray-400 hover:text-white&quot;>
                     <X size={24} />
                   </button>
                 </div>
 
                 {/* Mobile Navigation Items */}
-                <div className="space-y-4">
+                <div className=&quot;space-y-4&quot;>
                   {mainNavItems.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
                       onClick={closeMenu}
-                      className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-cyan-500/20 transition-all duration-200"
+                      className=&quot;flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-cyan-500/20 transition-all duration-200&quot;
                     >
-                      <item.icon size={20} className="text-cyan-400" />
+                      <item.icon size={20} className=&quot;text-cyan-400&quot; />
                       <span>{item.name}</span>
-                    </Link>
+                    </a>
                   ))}
                 </div>
 
                 {/* Mobile Services */}
-                <div className="mt-8">
-                  <h3 className="text-lg font-semibold text-white mb-4">Our Services</h3>
-                  <div className="space-y-3">
+                <div className=&quot;mt-8&quot;>
+                  <h3 className=&quot;text-lg font-semibold text-white mb-4&quot;>Our Services</h3>
+                  <div className=&quot;space-y-3&quot;>
                     {serviceCategories.slice(0, 6).map((category) => (
-                      <div key={category.title} className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20">
-                        <h4 className="font-medium text-white mb-2">{category.title}</h4>
-                        <p className="text-sm text-gray-400 mb-3">{category.description}</p>
-                        <div className="space-y-2">
+                      <div key={category.title} className=&quot;p-3 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20&quot;>
+                        <h4 className=&quot;font-medium text-white mb-2&quot;>{category.title}</h4>
+                        <p className=&quot;text-sm text-gray-400 mb-3&quot;>{category.description}</p>
+                        <div className=&quot;space-y-2&quot;>
                           {category.services.slice(0, 2).map((service) => (
                             <Link
                               key={service.name}
                               href={service.href}
                               onClick={closeMenu}
-                              className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200"
+                              className=&quot;block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200&quot;
                             >
-                              <div className="flex items-center justify-between">
-                                <span className="text-sm text-gray-300">{service.name}</span>
-                                <span className="text-xs text-cyan-400 font-mono">{service.price}</span>
+                              <div className=&quot;flex items-center justify-between&quot;>
+                                <span className=&quot;text-sm text-gray-300&quot;>{service.name}</span>
+                                <span className=&quot;text-xs text-cyan-400 font-mono&quot;>{service.price}</span>
                               </div>
-                            </Link>
+                            </a>
                           ))}
                         </div>
                       </div>
@@ -376,11 +376,11 @@ export default function UltraFuturisticNavigation2029() {
                 </div>
 
                 {/* Mobile CTA */}
-                <div className="mt-8">
+                <div className=&quot;mt-8&quot;>
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                    className=&quot;w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300&quot;
                   >
                     Get Started
                   </motion.button>
@@ -392,7 +392,7 @@ export default function UltraFuturisticNavigation2029() {
       </AnimatePresence>
 
       {/* Spacer for fixed navigation */}
-      <div className="h-20" />
+      <div className=&quot;h-20&quot; />
     </>
   )
 }

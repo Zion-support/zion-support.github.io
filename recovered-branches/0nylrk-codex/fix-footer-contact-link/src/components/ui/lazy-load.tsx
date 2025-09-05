@@ -1,7 +1,14 @@
 
+<<<<<<< HEAD
 import { useEffect, useState, useRef, ReactNode } from "react",
 import { cn } from "@/lib/utils",
 import { Skeleton } from "@/components/ui/skeleton",
+=======
+import { useEffect, useState, useRef, ReactNode } from &quot;react&quot;;
+import { cn } from &quot;@/lib/utils&quot;;
+import { Skeleton } from &quot;@/components/ui/skeleton&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface LazyLoadProps {
   height?: string | number,
   width?: string | number,
@@ -11,8 +18,8 @@ interface LazyLoadProps {
 }
 
 export function LazyLoad({
-  height = "200px",
-  width = "100%",
+  height = &quot;200px&quot;,
+  width = &quot;100%&quot;,
   children,
   loadingComponent,
   className}: LazyLoadProps) {
@@ -29,7 +36,7 @@ export function LazyLoad({
         }
       },
       {
-        rootMargin: "200px", // Start loading when element is within 200px of viewport
+        rootMargin: &quot;200px&quot;, // Start loading when element is within 200px of viewport
         threshold: 0.1}
     ),
 
@@ -58,15 +65,15 @@ export function LazyLoad({
   const defaultLoadingComponent = (
     <Skeleton
       style={{ height, width }}
-      className="rounded-md bg-zion-blue-light/20"
+      className=&quot;rounded-md bg-zion-blue-light/20&quot;
     />
   ),
 
   return (
     <div
       ref={containerRef}
-      className={cn("transition-opacity duration-500", 
-        isLoaded ? "opacity-100" : "opacity-0",
+      className={cn(&quot;transition-opacity duration-500&quot;, 
+        isLoaded ? &quot;opacity-100&quot; : &quot;opacity-0&quot;,
         className
       )}
     >

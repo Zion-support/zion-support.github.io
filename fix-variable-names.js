@@ -13,8 +13,13 @@ function fixedCount = 0; for (const filePath = path.join(dir, file); const stat 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     .replace(/^(.)/, (match) => match.toUpperCase())};
       return true};
+<<<<<<< HEAD
     return false} catch (error) {;
     console.error("Error fixing ${filePath}:", error.message);
+=======
+    return false} catch (error) {,
+    console.error(&quot;Error fixing ${filePath}:&quot;, error.message),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     return false};
 };
 <<<<<<< HEAD

@@ -35,7 +35,11 @@ function findBestBackup(pagePath) {
         return backupPath
       }
     } catch (error) {
+<<<<<<< HEAD
       // // // console.log(`Error reading backup ${backupPath}:`, error.message)
+=======
+      // console.log(`Error reading backup ${backupPath}:`, error.message);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   }
   
@@ -124,6 +128,7 @@ function restoreAllCorruptedPages() {
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
         
+<<<<<<< HEAD
         // // // console.log(`\n🔍 Checking: ${fullPath}`),
         const result = restorePage(fullPath),
         
@@ -136,6 +141,20 @@ function restoreAllCorruptedPages() {
           results.failed++,
           // // // console.log(`❌ Failed: ${fullPath}`),
           // // // console.log(`   Reason: ${result.reason}`)
+=======
+        // console.log(`\n🔍 Checking: ${fullPath}`);
+        const result = restorePage(fullPath);
+        
+        if (result.restored) {
+          results.restored++;
+          // console.log(`✅ Restored: ${fullPath}`);
+          // console.log(`   Used backup: ${result.backupUsed}`);
+          // console.log(`   Corrupted backup: ${result.corruptedBackup}`);
+        } else {
+          results.failed++;
+          // console.log(`❌ Failed: ${fullPath}`);
+          // console.log(`   Reason: ${result.reason}`);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         }
         
         results.details.push({
@@ -146,6 +165,7 @@ function restoreAllCorruptedPages() {
     }
   }
   
+<<<<<<< HEAD
   // // // console.log('🚀 Starting page restoration process...'),
   scanDirectory(pagesDir),
   
@@ -160,6 +180,22 @@ function restoreAllCorruptedPages() {
   const reportPath = path.join(process.cwd(), 'page-restoration-report.json'),
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),
   // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),
+=======
+  // console.log('🚀 Starting page restoration process...');
+  scanDirectory(pagesDir);
+  
+  // Generate summary
+  // console.log('\n📊 Restoration Summary:');
+  // console.log(`   Total pages: ${results.total}`);
+  // console.log(`   Restored: ${results.restored}`);
+  // console.log(`   Failed: ${results.failed}`);
+  // console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`);
+  
+  // Save detailed report
+  const reportPath = path.join(process.cwd(), 'page-restoration-report.json');
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
+  // console.log(`\n📄 Detailed report saved to: ${reportPath}`);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   return results
 }

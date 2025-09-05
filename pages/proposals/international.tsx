@@ -25,11 +25,11 @@ export default function InternationalProposalsPage() {
 
   return (
     <EnhancedLayout>
-      <div className="space-y-4">
-        <h1 className="text-2xl font-semibold">International Proposals</h1>
-        <div className="flex items-center gap-2 text-sm">
+      <div className=&quot;space-y-4&quot;>
+        <h1 className=&quot;text-2xl font-semibold&quot;>International Proposals</h1>
+        <div className=&quot;flex items-center gap-2 text-sm&quot;>
           <span>Filter by region:</span>
-          <select className="border rounded px-2 py-1" value={filter} onChange={(e) => setFilter(e.target.value)}>
+          <select className=&quot;border rounded px-2 py-1&quot; value={filter} onChange={(e) => setFilter(e.target.value)}>
             <option>All</option>
             <option>Global</option>
             <option>Africa</option>
@@ -38,25 +38,25 @@ export default function InternationalProposalsPage() {
             <option>EU</option>
           </select>
         </div>
-        <div className="divide-y border rounded">
+        <div className=&quot;divide-y border rounded&quot;>
           {filtered.map((i) => (
-            <div key={i.id} className="p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+            <div key={i.id} className=&quot;p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2&quot;>
               <div>
-                <div className="font-medium">{i.title}</div>
-                <div className="text-sm text-gray-600">{i.targetInstitution} • {i.type} • {i.regionalScope}</div>
-                <div className="text-xs text-gray-500">Created {new Date(i.createdAt).toLocaleString()}</div>
+                <div className=&quot;font-medium&quot;>{i.title}</div>
+                <div className=&quot;text-sm text-gray-600&quot;>{i.targetInstitution} • {i.type} • {i.regionalScope}</div>
+                <div className=&quot;text-xs text-gray-500&quot;>Created {new Date(i.createdAt).toLocaleString()}</div>
               </div>
-              <div className="flex items-center gap-4 text-sm">
-                <span className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800">{i.status}</span>
-                <a className="text-blue-600 underline" href={`/api/proposals?id=${i.id}`} target="_blank" rel="noreferrer">JSON</a>
-                <a className="text-blue-600 underline" href={`/proposals/${i.id}.md`} target="_blank" rel="noreferrer">Markdown</a>
-                <a className="text-blue-600 underline" href={`/proposals/${i.id}.pdf`} target="_blank" rel="noreferrer">PDF</a>
+              <div className=&quot;flex items-center gap-4 text-sm&quot;>
+                <span className=&quot;px-2 py-1 rounded bg-gray-100 dark:bg-gray-800&quot;>{i.status}</span>
+                <a className=&quot;text-blue-600 underline&quot; href={`/api/proposals?id=${i.id}`} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>JSON</Link>
+                <a className=&quot;text-blue-600 underline&quot; href={`/proposals/${i.id}.md`} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>Markdown</Link>
+                <a className=&quot;text-blue-600 underline&quot; href={`/proposals/${i.id}.pdf`} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>PDF</Link>
               </div>
             </div>
           ))}
-          {filtered.length === 0 && <div className="p-4 text-sm text-gray-600">No proposals yet.</div>}
+          {filtered.length === 0 && <div className=&quot;p-4 text-sm text-gray-600&quot;>No proposals yet.</div>}
         </div>
-        <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
+        <div className=&quot;text-sm text-gray-600&quot;>Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
     </EnhancedLayout>
   )

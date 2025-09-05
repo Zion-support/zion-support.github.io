@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react',
 import { useNavigate } from 'react-router-dom',
 import { toast } from "sonner",
@@ -12,16 +13,39 @@ import { DateFields } from './DateFields',
 import { DescriptionFields } from './DescriptionFields',
 import { useJobs } from "@/hooks/useJobs",
 import { JobSchemaType } from './validation',
+=======
+import React, { useState, useEffect, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { toast } from &quot;sonner&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Label } from &quot;@/components/ui/label&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Form } from &quot;@/components/ui/form&quot;;
+import { useJobForm } from './useJobForm';
+import { BasicInfoFields } from './BasicInfoFields';
+import { DateFields } from './DateFields';
+import { DescriptionFields } from './DescriptionFields';
+import { useJobs } from &quot;@/hooks/useJobs&quot;;
+import { JobSchemaType } from './validation';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface JobPostingFormProps {
   jobId?: string,
   onSuccess?: () => void
 }
 
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
+<<<<<<< HEAD
   const navigate = useNavigate(),
   const { createJob, updateJob, getJobById } = useJobs(),
   const [isFormLoading, setIsFormLoading] = useState(false),
   const [editorContent, setEditorContent] = useState(""),
+=======
+  const navigate = useNavigate();
+  const { createJob, updateJob, getJobById } = useJobs();
+  const [isFormLoading, setIsFormLoading] = useState(false);
+  const [editorContent, setEditorContent] = useState("&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   const {
     form,
@@ -69,8 +93,13 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
           }
         })
         .catch((error) => {
+<<<<<<< HEAD
           console.error("Failed to load job:", error),
           toast.error("Failed to load job")
+=======
+          console.error(&quot;Failed to load job:&quot;, error);
+          toast.error(&quot;Failed to load job&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         })
         .finally(() => {
           setIsFormLoading(false)
@@ -90,6 +119,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
       const jobData = await submitJob(values),
       
       if (jobId) {
+<<<<<<< HEAD
         await updateJob(jobId, jobData),
         toast.success("Job updated successfully!")
       } else {
@@ -97,29 +127,47 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
         toast.success("Job posted successfully!"),
         form.reset(),
         setEditorContent("")
+=======
+        await updateJob(jobId, jobData);
+        toast.success(&quot;Job updated successfully!&quot;);
+      } else {
+        await createJob(jobData);
+        toast.success(&quot;Job posted successfully!&quot;);
+        form.reset();
+        setEditorContent("&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
 
       if (onSuccess) {
         onSuccess()
       }
     } catch (error: any) {
+<<<<<<< HEAD
       console.error("Error creating/updating job:", error),
       toast.error(error.message || "Failed to post job")
+=======
+      console.error(&quot;Error creating/updating job:&quot;, error);
+      toast.error(error.message || &quot;Failed to post job&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsFormLoading(false)
     }
   },
 
   if (isLoading || isFormLoading) {
+<<<<<<< HEAD
     return <div className="flex items-center justify-center p-8">Loading...</div>
+=======
+    return <div className=&quot;flex items-center justify-center p-8&quot;>Loading...</div>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+      <form onSubmit={handleSubmit(onSubmit)} className=&quot;space-y-6&quot;>
         <div>
-          <h3 className="text-lg font-medium">Post a Job</h3>
-          <p className="text-sm text-muted-foreground">
+          <h3 className=&quot;text-lg font-medium&quot;>Post a Job</h3>
+          <p className=&quot;text-sm text-muted-foreground&quot;>
             Fill in the details below to create a job posting.
           </p>
         </div>
@@ -134,12 +182,12 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
         />
 
         <div>
-          <Label htmlFor="isRemote">
+          <Label htmlFor=&quot;isRemote&quot;>
             <Input
-              type="checkbox"
-              id="isRemote"
+              type=&quot;checkbox&quot;
+              id=&quot;isRemote&quot;
               checked={isRemote}
-              className="mr-2"
+              className=&quot;mr-2&quot;
               onChange={(e) => setIsRemote(e.target.checked)}
             />
             Remote
@@ -152,8 +200,8 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
           editorContent={editorContent}
         />
 
-        <Button type="submit" disabled={isSubmitting || isFormLoading}>
-          {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
+        <Button type=&quot;submit&quot; disabled={isSubmitting || isFormLoading}>
+          {isSubmitting || isFormLoading ? &quot;Submitting...&quot; : jobId ? &quot;Update Job&quot; : &quot;Post Job&quot;}
         </Button>
       </form>
     </Form>

@@ -21,7 +21,7 @@ interface FraudDetectionContextType {
   }>
 }
 
-// Create the context. "createContext" can be untyped if React type definitions
+// Create the context. &quot;createContext&quot; can be untyped if React type definitions
 // aren't available. Passing a generic argument to an untyped function causes
 // TS2347, so we cast the default value instead of using a type parameter.
 export const FraudDetectionContext = React.createContext(
@@ -54,22 +54,31 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         // If it's dangerous, show a warning to the user
         if (quickCheck.severity === 'dangerous') {
           toast({
-            title: "Message Flagged",
-            description: "Your message contains content that may violate our terms of service.",
-            variant: "destructive",
+            title: &quot;Message Flagged&quot;,
+            description: &quot;Your message contains content that may violate our terms of service.&quot;,
+            variant: &quot;destructive&quot;,
             duration: 5000
           }),
           
           return { 
             isSafe: false,
+<<<<<<< HEAD
             explanation: "Message contains prohibited content. Please review our communication guidelines."
           }
+=======
+            explanation: &quot;Message contains prohibited content. Please review our communication guidelines.&quot;
+          };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         }
       }
       
       // For suspicious but not dangerous content, log but let it pass through
       if (quickCheck.severity === 'suspicious') {
+<<<<<<< HEAD
         // // // console.log('Suspicious content detected but allowed:', content)
+=======
+        // console.log('Suspicious content detected but allowed:', content);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
       
       // For more complex analysis (in a real app), we would call the edge function
@@ -86,10 +95,17 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       
       if (data.classification === 'dangerous') {
         toast({
+<<<<<<< HEAD
           title: "Message Blocked",
           description: data.explanation || "This message contains prohibited content.",
           variant: "destructive"
         }),
+=======
+          title: &quot;Message Blocked&quot;,
+          description: data.explanation || &quot;This message contains prohibited content.&quot;,
+          variant: &quot;destructive&quot;
+        });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         return { 
           isSafe: false,
           explanation: data.explanation

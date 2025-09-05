@@ -51,11 +51,11 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
 
   if (loading) {
     return (
-      <Card className="w-full max-w-sm">
-        <CardContent className="p-6">
-          <div className="animate-pulse space-y-4">
-            <div className="h-4 bg-muted rounded"></div>
-            <div className="h-4 bg-muted rounded w-3/4"></div>
+      <Card className=&quot;w-full max-w-sm&quot;>
+        <CardContent className=&quot;p-6&quot;>
+          <div className=&quot;animate-pulse space-y-4&quot;>
+            <div className=&quot;h-4 bg-muted rounded&quot;></div>
+            <div className=&quot;h-4 bg-muted rounded w-3/4&quot;></div>
           </div>
         </CardContent>
       </Card>
@@ -64,16 +64,16 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
 
   if (!user) {
     return (
-      <Card className="w-full max-w-sm">
+      <Card className=&quot;w-full max-w-sm&quot;>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <User className="h-5 w-5" />
+          <CardTitle className=&quot;flex items-center gap-2&quot;>
+            <User className=&quot;h-5 w-5&quot; />
             Not Signed In
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <Button onClick={handleSignIn} className="w-full">
-            <LogIn className="h-4 w-4 mr-2" />
+          <Button onClick={handleSignIn} className=&quot;w-full&quot;>
+            <LogIn className=&quot;h-4 w-4 mr-2&quot; />
             Sign In
           </Button>
         </CardContent>
@@ -82,35 +82,35 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
   }
 
   return (
-    <Card className="w-full max-w-sm">
+    <Card className=&quot;w-full max-w-sm&quot;>
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <User className="h-5 w-5" />
+        <CardTitle className=&quot;flex items-center gap-2&quot;>
+          <User className=&quot;h-5 w-5&quot; />
           User Profile
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-4">
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <span className="text-sm font-medium">Email:</span>
-            <span className="text-sm">{user.email}</span>
+      <CardContent className=&quot;space-y-4&quot;>
+        <div className=&quot;space-y-2&quot;>
+          <div className=&quot;flex items-center gap-2&quot;>
+            <span className=&quot;text-sm font-medium&quot;>Email:</span>
+            <span className=&quot;text-sm&quot;>{user.email}</span>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="text-sm font-medium">Status:</span>
-            <Badge variant={user.email_confirmed_at ? "default" : "secondary"}>
-              {user.email_confirmed_at ? "Verified" : "Unverified"}
+          <div className=&quot;flex items-center gap-2&quot;>
+            <span className=&quot;text-sm font-medium&quot;>Status:</span>
+            <Badge variant={user.email_confirmed_at ? &quot;default&quot; : &quot;secondary&quot;}>
+              {user.email_confirmed_at ? &quot;Verified&quot; : &quot;Unverified&quot;}
             </Badge>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="text-sm font-medium">Joined:</span>
-            <span className="text-sm">
+          <div className=&quot;flex items-center gap-2&quot;>
+            <span className=&quot;text-sm font-medium&quot;>Joined:</span>
+            <span className=&quot;text-sm&quot;>
               {new Date(user.created_at).toLocaleDateString()}
             </span>
           </div>
         </div>
         
-        <Button onClick={handleSignOut} variant="outline" className="w-full">
-          <LogOut className="h-4 w-4 mr-2" />
+        <Button onClick={handleSignOut} variant=&quot;outline&quot; className=&quot;w-full&quot;>
+          <LogOut className=&quot;h-4 w-4 mr-2&quot; />
           Sign Out
         </Button>
       </CardContent>

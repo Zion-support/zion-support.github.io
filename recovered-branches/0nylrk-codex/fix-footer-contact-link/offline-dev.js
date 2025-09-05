@@ -26,7 +26,11 @@ const server = http.createServer((req, res) => {
 
 const PORT = 8080,
 server.listen(PORT, () => {
+<<<<<<< HEAD
   // // // console.log(`
+=======
+  // console.log(`
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 ╔══════════════════════════════════════════════════════════════════╗
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║
 ╠══════════════════════════════════════════════════════════════════╣

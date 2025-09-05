@@ -5,7 +5,12 @@
 /**
  * Serverless Environment Polyfill
  * 
+<<<<<<< HEAD
  * This polyfill addresses common issues in serverless environments like Netlify: * - "self is not defined" errors
+=======
+ * This polyfill addresses common issues in serverless environments like Netlify:
+ * - &quot;self is not defined&quot; errors
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
  * - Missing global objects
  * - Webpack chunk loading issues
  * - TypeScript helper function issues
@@ -62,8 +67,13 @@ if (typeof webpackChunk_N_E === 'undefined') {
 // TypeScript helper polyfills for runtime
 const tsHelpers = {
   __extends: function(d: any, b: any) {
+<<<<<<< HEAD
     if (typeof b !== "function" && b !== null)
       throw new TypeError("Class extends value " + String(b) + " is not a constructor or null"),
+=======
+    if (typeof b !== &quot;function&quot; && b !== null)
+      throw new TypeError(&quot;Class extends value &quot; + String(b) + &quot; is not a constructor or null&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     function __extends_helper(this: any) { this.constructor = d }
     d.prototype = b === null ? Object.create(b) : (__extends_helper.prototype = b.prototype, new (__extends_helper as any)())
@@ -83,11 +93,19 @@ const tsHelpers = {
   __rest: function (s: any, e: string[]) {
     let t: any = {},
     for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+<<<<<<< HEAD
       t[p] = s[p],
     if (s != null && typeof Object.getOwnPropertySymbols === "function") {
       const symbols = Object.getOwnPropertySymbols(s),
       for (let i = 0, i < symbols.length, i++) {
         const symbol = symbols[i],
+=======
+      t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === &quot;function&quot;) {
+      const symbols = Object.getOwnPropertySymbols(s);
+      for (let i = 0; i < symbols.length; i++) {
+        const symbol = symbols[i];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol))
           t[symbol] = s[symbol]
       }
@@ -96,20 +114,35 @@ const tsHelpers = {
   },
   
   __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
+<<<<<<< HEAD
     let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,
     if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc),
     else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,
     return c > 3 && r && key && Object.defineProperty(target, key, r), r
+=======
+    let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d;
+    if (typeof Reflect === &quot;object&quot; && typeof (Reflect as any).decorate === &quot;function&quot;) r = (Reflect as any).decorate(decorators, target, key, desc);
+    else for (let i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && key && Object.defineProperty(target, key, r), r;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   },
   
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
     function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value) }) }
     return new (P || (P = Promise))(function (resolve: any, reject: any) {
+<<<<<<< HEAD
       function fulfilled(value: any) { try { step(generator.next(value)) } catch (e) { reject(e) } }
       function rejected(value: any) { try { step(generator["throw"](value)) } catch (e) { reject(e) } }
       function step(result: any) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected) }
       step((generator = generator.apply(thisArg, _arguments || [])).next())
     })
+=======
+      function fulfilled(value: any) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+      function rejected(value: any) { try { step(generator[&quot;throw&quot;](value)); } catch (e) { reject(e); } }
+      function step(result: any) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+      step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 },
 
@@ -210,9 +243,15 @@ export const verifyPolyfills = () => {
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
   },
   
+<<<<<<< HEAD
   // // // console.log('Serverless polyfill verification:', checks),
   return Object.values(checks).every(Boolean)
 },
+=======
+  // console.log('Serverless polyfill verification:', checks);
+  return Object.values(checks).every(Boolean);
+};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {

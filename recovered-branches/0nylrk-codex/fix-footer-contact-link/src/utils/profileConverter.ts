@@ -1,6 +1,12 @@
 
+<<<<<<< HEAD
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
+=======
+import { ProfileData } from &quot;@/types/profile&quot;;
+import { TalentProfile } from &quot;@/types/talent&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
   // Handle both ProfileData and existing TalentProfile inputs
   

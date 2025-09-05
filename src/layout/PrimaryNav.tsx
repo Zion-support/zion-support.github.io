@@ -54,23 +54,23 @@ export function PrimaryNav() {
   return (
     <>
       <header
-        className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md"
-        role="navigation"
-        aria-label="Primary"
-        data-testid="header"
+        className=&quot;sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md&quot;
+        role=&quot;navigation&quot;
+        aria-label=&quot;Primary&quot;
+        data-testid=&quot;header&quot;
       >
-        <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
+        <div className=&quot;container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap&quot;>
           <Logo />
           
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
-          <div className="hidden lg:block order-1 flex-shrink-0">
+          <div className=&quot;hidden lg:block order-1 flex-shrink-0&quot;>
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
           </div>
           
           {/* Actions container with responsive layout */}
-          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
+          <div className=&quot;hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0&quot;>
             {/* Search form with clamped width */}
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
+            <form onSubmit={handleSubmit} className=&quot;flex-shrink-0&quot; style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
@@ -106,25 +106,31 @@ export function PrimaryNav() {
             </form>
             
             {/* Compact actions group */}
-            <div className="flex items-center gap-1">
+            <div className=&quot;flex items-center gap-1&quot;>
               <PointsBadge />
               <CartDrawer />
             </div>
             
             {/* Compact controls group */}
-            <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
+            <div className=&quot;flex items-center gap-1 border-l border-primary/20 pl-1 ml-1&quot;>
               <ModeToggle />
               <LanguageSelector />
             </div>
             
             {/* Auth links - flex wrap for very small screens */}
-            <div className="flex items-center gap-1 flex-wrap">
+            <div className=&quot;flex items-center gap-1 flex-wrap&quot;>
               {!isLoggedIn && (
                 <>
                   <Link
+<<<<<<< HEAD
                     href="/auth/login"
                     className="text-sm hover: text-primary whitespace-nowrap"
                     data-testid="login-link"
+=======
+                    href=&quot;/auth/login&quot;
+                    className=&quot;text-sm hover:text-primary whitespace-nowrap&quot;
+                    data-testid=&quot;login-link&quot;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                     onClick={(e) => {
                       e.preventDefault(),
                       setLoginOpen(true)
@@ -133,8 +139,8 @@ export function PrimaryNav() {
                     {t('auth.login')}
                   </Link>
                   <Link
-                    href="/signup"
-                    className="text-sm hover:text-primary whitespace-nowrap"
+                    href=&quot;/signup&quot;
+                    className=&quot;text-sm hover:text-primary whitespace-nowrap&quot;
                   >
                     {t('auth.signup')}
                   </Link>
@@ -145,14 +151,18 @@ export function PrimaryNav() {
           </div>
           
           {/* Tablet view (md to lg) - simplified controls */}
+<<<<<<< HEAD
           <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
+=======
+          <div className=&quot;hidden md:flex lg:hidden items-center gap-2 order-2&quot;>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             <ModeToggle />
             <LanguageSelector />
             {!isLoggedIn && (
               <Link
-                href="/auth/login"
-                className="text-sm hover:text-primary"
-                data-testid="login-link"
+                href=&quot;/auth/login&quot;
+                className=&quot;text-sm hover:text-primary&quot;
+                data-testid=&quot;login-link&quot;
                 onClick={(e) => {
                   e.preventDefault(),
                   setLoginOpen(true)
@@ -166,27 +176,27 @@ export function PrimaryNav() {
           
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 rounded focus:outline-none flex-shrink-0"
+            className=&quot;lg:hidden p-2 rounded focus:outline-none flex-shrink-0&quot;
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
           >
             {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className=&quot;h-6 w-6&quot; />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className=&quot;h-6 w-6&quot; />
             )}
           </button>
         </div>
       </header>
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-60 pt-16">
+        <div className=&quot;lg:hidden fixed inset-0 z-60 pt-16&quot;>
           <div
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            className=&quot;absolute inset-0 bg-black/50 backdrop-blur-sm&quot;
             onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true"
+            aria-hidden=&quot;true&quot;
           />
-          <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
+          <div className=&quot;relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto&quot;>
             <MobileMenu
               unreadCount={unreadCount}
               onClose={() => setMobileMenuOpen(false)}

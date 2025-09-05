@@ -87,70 +87,70 @@ export default function RevolutionaryServicesPage() {
     {
       name: 'Quantum AI & Cognitive Computing',
       description: 'Revolutionary quantum AI solutions with human-level reasoning capabilities',
-      icon: <Brain className="w-6 h-6" />,
+      icon: <Brain className=&quot;w-6 h-6&quot; />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum AI & Cognitive Computing').length,
       color: 'from-purple-500 to-indigo-600'
     },
     {
       name: 'Autonomous Manufacturing & Industry 4.0',
       description: 'Next-generation autonomous manufacturing with zero human intervention',
-      icon: <Factory className="w-6 h-6" />,
+      icon: <Factory className=&quot;w-6 h-6&quot; />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Manufacturing & Industry 4.0').length,
       color: 'from-orange-500 to-red-600'
     },
     {
       name: 'Quantum Blockchain & DeFi',
       description: 'Quantum-secured blockchain platforms with infinite scalability',
-      icon: <Globe className="w-6 h-6" />,
+      icon: <Globe className=&quot;w-6 h-6&quot; />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Blockchain & DeFi').length,
       color: 'from-green-500 to-emerald-600'
     },
     {
       name: 'AI Biomedical Research & Drug Discovery',
       description: 'AI-powered platforms for accelerated drug discovery and medical research',
-      icon: <FlaskIcon className="w-6 h-6" />,
+      icon: <FlaskIcon className=&quot;w-6 h-6&quot; />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Biomedical Research & Drug Discovery').length,
       color: 'from-blue-500 to-indigo-600'
     },
     {
       name: 'Quantum Cybersecurity & Threat Detection',
       description: 'Quantum-resistant cybersecurity with AI-powered threat detection',
-      icon: <ShieldCheck className="w-6 h-6" />,
+      icon: <ShieldCheck className=&quot;w-6 h-6&quot; />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Cybersecurity & Threat Detection').length,
       color: 'from-red-500 to-pink-600'
     },
     {
       name: 'Space Technology & Satellite Optimization',
       description: 'Revolutionary platforms for space exploration and satellite optimization',
-      icon: <Rocket className="w-6 h-6" />,
+      icon: <Rocket className=&quot;w-6 h-6&quot; />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Space Technology & Satellite Optimization').length,
       color: 'from-indigo-500 to-purple-600'
     },
     {
       name: 'AI Content Creation & Marketing',
       description: 'Quantum-powered content creation at infinite scale',
-      icon: <FileText className="w-6 h-6" />,
+      icon: <FileText className=&quot;w-6 h-6&quot; />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Content Creation & Marketing').length,
       color: 'from-teal-500 to-cyan-600'
     },
     {
       name: 'Quantum Computing as a Service',
       description: 'Enterprise quantum computing with real quantum processors',
-      icon: <Cpu className="w-6 h-6" />,
+      icon: <Cpu className=&quot;w-6 h-6&quot; />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Computing as a Service').length,
       color: 'from-violet-500 to-purple-600'
     },
     {
       name: 'Autonomous Vehicles & Smart Transportation',
       description: 'AI platforms for autonomous vehicles and smart transportation',
-      icon: <CarIcon className="w-6 h-6" />,
+      icon: <CarIcon className=&quot;w-6 h-6&quot; />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Vehicles & Smart Transportation').length,
       color: 'from-emerald-500 to-green-600'
     },
     {
       name: 'Smart Energy & Renewable Energy',
       description: 'AI platforms for smart energy grids and renewable energy optimization',
-      icon: <LeafIcon className="w-6 h-6" />,
+      icon: <LeafIcon className=&quot;w-6 h-6&quot; />,
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length,
       color: 'from-yellow-500 to-orange-600'
     }
@@ -178,38 +178,38 @@ export default function RevolutionaryServicesPage() {
   },
 
   return (
-    <UltraFuturisticBackground variant="quantum" intensity="high">
-      <div className="min-h-screen">
+    <UltraFuturisticBackground variant=&quot;quantum&quot; intensity=&quot;high&quot;>
+      <div className=&quot;min-h-screen&quot;>
         <Head>
           <title>Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI, Autonomous Systems, Space Technology</title>
-          <meta name="description" content="Discover revolutionary micro SaaS services from Zion Tech Group. Quantum AI, autonomous manufacturing, space technology, biomedical research, and cutting-edge solutions. Start your free trial today." />
-          <meta name="keywords" content="revolutionary micro SaaS, quantum AI, autonomous manufacturing, space technology, biomedical research, quantum cybersecurity, blockchain, autonomous vehicles, smart energy" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta property="og:title" content="Revolutionary Micro SaaS Services | Zion Tech Group" />
-          <meta property="og:description" content="Cutting-edge micro SaaS platform with quantum AI, autonomous systems, and revolutionary technology solutions." />
-          <meta property="og:url" content="https://ziontechgroup.com/revolutionary-services" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/revolutionary-services" />
+          <meta name=&quot;description&quot; content=&quot;Discover revolutionary micro SaaS services from Zion Tech Group. Quantum AI, autonomous manufacturing, space technology, biomedical research, and cutting-edge solutions. Start your free trial today.&quot; />
+          <meta name=&quot;keywords&quot; content=&quot;revolutionary micro SaaS, quantum AI, autonomous manufacturing, space technology, biomedical research, quantum cybersecurity, blockchain, autonomous vehicles, smart energy&quot; />
+          <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
+          <meta property=&quot;og:title&quot; content=&quot;Revolutionary Micro SaaS Services | Zion Tech Group&quot; />
+          <meta property=&quot;og:description&quot; content=&quot;Cutting-edge micro SaaS platform with quantum AI, autonomous systems, and revolutionary technology solutions.&quot; />
+          <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/revolutionary-services&quot; />
+          <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+          <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/revolutionary-services&quot; />
         </Head>
 
         {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="container mx-auto px-4 text-center">
-            <div className="max-w-5xl mx-auto">
+        <section className=&quot;relative py-20 overflow-hidden&quot;>
+          <div className=&quot;container mx-auto px-4 text-center&quot;>
+            <div className=&quot;max-w-5xl mx-auto&quot;>
               <motion.h1 
-                className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
+                className=&quot;text-6xl md:text-8xl font-bold mb-8 futuristic-glow&quot;
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
                   Revolutionary
                 </span>
                 <br />
-                <span className="text-white">Micro SaaS Services</span>
+                <span className=&quot;text-white&quot;>Micro SaaS Services</span>
               </motion.h1>
               <motion.p 
-                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+                className=&quot;text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed&quot;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -220,51 +220,57 @@ export default function RevolutionaryServicesPage() {
               
               {/* Service Count Stats */}
               <motion.div 
-                className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+                className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 mb-16&quot;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{revolutionaryMicroSaasServices.length}+</div>
-                  <div className="text-gray-400">Revolutionary Services</div>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;text-3xl font-bold text-cyan-400 mb-2&quot;>{revolutionaryMicroSaasServices.length}+</div>
+                  <div className=&quot;text-gray-400&quot;>Revolutionary Services</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">99.99%</div>
-                  <div className="text-gray-400">Accuracy Rate</div>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;text-3xl font-bold text-purple-400 mb-2&quot;>99.99%</div>
+                  <div className=&quot;text-gray-400&quot;>Accuracy Rate</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">21</div>
-                  <div className="text-gray-400">Day Free Trial</div>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;text-3xl font-bold text-green-400 mb-2&quot;>21</div>
+                  <div className=&quot;text-gray-400&quot;>Day Free Trial</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">2000%+</div>
-                  <div className="text-gray-400">Average ROI</div>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;text-3xl font-bold text-pink-400 mb-2&quot;>2000%+</div>
+                  <div className=&quot;text-gray-400&quot;>Average ROI</div>
                 </div>
               </motion.div>
 
               {/* CTA Buttons */}
               <motion.div 
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <Button 
-                  variant="primary" 
-                  size="lg"
+                  variant=&quot;primary&quot; 
+                  size=&quot;lg&quot;
                   onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Explore Services
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className=&quot;ml-2 w-5 h-5&quot; />
                 </Button>
                 <Button 
+<<<<<<< HEAD
                   variant="futuristic" 
                   size="lg"
                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+=======
+                  variant=&quot;futuristic&quot; 
+                  size=&quot;lg&quot;
+                  onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 >
                   Get Started
-                  <Rocket className="ml-2 w-5 h-5" />
+                  <Rocket className=&quot;ml-2 w-5 h-5&quot; />
                 </Button>
               </motion.div>
             </div>
@@ -272,33 +278,33 @@ export default function RevolutionaryServicesPage() {
         </section>
 
         {/* Contact Information Banner */}
-        <section className="py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="flex items-center gap-4">
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <span className="text-white">{contactInfo.mobile}</span>
-                <Mail className="w-5 h-5 text-purple-400" />
-                <span className="text-white">{contactInfo.email}</span>
+        <section className=&quot;py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20&quot;>
+          <div className=&quot;container mx-auto px-4&quot;>
+            <div className=&quot;flex flex-col md:flex-row justify-between items-center gap-4&quot;>
+              <div className=&quot;flex items-center gap-4&quot;>
+                <Phone className=&quot;w-5 h-5 text-cyan-400&quot; />
+                <span className=&quot;text-white&quot;>{contactInfo.mobile}</span>
+                <Mail className=&quot;w-5 h-5 text-purple-400&quot; />
+                <span className=&quot;text-white&quot;>{contactInfo.email}</span>
               </div>
-              <div className="flex items-center gap-4">
-                <MapPin className="w-5 h-5 text-green-400" />
-                <span className="text-white">{contactInfo.address}</span>
-                <Globe className="w-5 h-5 text-blue-400" />
-                <span className="text-white">{contactInfo.website}</span>
+              <div className=&quot;flex items-center gap-4&quot;>
+                <MapPin className=&quot;w-5 h-5 text-green-400&quot; />
+                <span className=&quot;text-white&quot;>{contactInfo.address}</span>
+                <Globe className=&quot;w-5 h-5 text-blue-400&quot; />
+                <span className=&quot;text-white&quot;>{contactInfo.website}</span>
               </div>
             </div>
           </div>
         </section>
 
         {/* Category Navigation */}
-        <section className="py-12">
-          <div className="container mx-auto px-4">
+        <section className=&quot;py-12&quot;>
+          <div className=&quot;container mx-auto px-4&quot;>
             <motion.div 
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
+              className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6&quot;
               variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
+              initial=&quot;hidden&quot;
+              whileInView=&quot;visible&quot;
               viewport={{ once: true }}
             >
               {enhancedCategories.map((category, index) => (
@@ -309,18 +315,18 @@ export default function RevolutionaryServicesPage() {
                   whileTap={{ scale: 0.95 }}
                 >
                   <UltraFuturisticCard
-                    variant="quantum-advanced"
-                    size="small"
-                    className="text-center cursor-pointer h-full"
+                    variant=&quot;quantum-advanced&quot;
+                    size=&quot;small&quot;
+                    className=&quot;text-center cursor-pointer h-full&quot;
                     onClick={() => setSelectedCategory(category.name === selectedCategory ? 'All' : category.name)}
                   >
                     <div className={`w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br ${category.color} flex items-center justify-center text-white`}>
                       {category.icon}
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
-                    <p className="text-sm text-gray-400 mb-3">{category.description}</p>
-                    <div className="text-2xl font-bold text-cyan-400">{category.count}</div>
-                    <div className="text-xs text-gray-500">Services</div>
+                    <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>{category.name}</h3>
+                    <p className=&quot;text-sm text-gray-400 mb-3&quot;>{category.description}</p>
+                    <div className=&quot;text-2xl font-bold text-cyan-400&quot;>{category.count}</div>
+                    <div className=&quot;text-xs text-gray-500&quot;>Services</div>
                   </UltraFuturisticCard>
                 </motion.div>
               ))}
@@ -329,32 +335,32 @@ export default function RevolutionaryServicesPage() {
         </section>
 
         {/* Popular Services Showcase */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
+        <section className=&quot;py-16&quot;>
+          <div className=&quot;container mx-auto px-4&quot;>
             <motion.div 
-              className="text-center mb-12"
+              className=&quot;text-center mb-12&quot;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-4&quot;>
+                <span className=&quot;bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent&quot;>
                   Most Popular
                 </span>
                 <br />
-                <span className="text-white">Revolutionary Services</span>
+                <span className=&quot;text-white&quot;>Revolutionary Services</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.
               </p>
             </motion.div>
 
             <motion.div 
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
               variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
+              initial=&quot;hidden&quot;
+              whileInView=&quot;visible&quot;
               viewport={{ once: true }}
             >
               {popularServices.slice(0, 6).map((service, index) => (
@@ -365,36 +371,36 @@ export default function RevolutionaryServicesPage() {
                 >
                   <UltraFuturisticCard
                     variant={service.variant as any}
-                    size="large"
-                    className="h-full cursor-pointer"
+                    size=&quot;large&quot;
+                    className=&quot;h-full cursor-pointer&quot;
                     onClick={() => setSelectedService(service)}
                   >
-                    <div className="text-center mb-6">
-                      <div className="text-4xl mb-4">{service.icon}</div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
-                      <p className="text-gray-300 mb-4">{service.tagline}</p>
-                      <div className="text-3xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                      <div className="text-sm text-gray-400">{service.period}</div>
+                    <div className=&quot;text-center mb-6&quot;>
+                      <div className=&quot;text-4xl mb-4&quot;>{service.icon}</div>
+                      <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{service.name}</h3>
+                      <p className=&quot;text-gray-300 mb-4&quot;>{service.tagline}</p>
+                      <div className=&quot;text-3xl font-bold text-cyan-400 mb-2&quot;>{service.price}</div>
+                      <div className=&quot;text-sm text-gray-400&quot;>{service.period}</div>
                     </div>
                     
-                    <div className="space-y-3 mb-6">
+                    <div className=&quot;space-y-3 mb-6&quot;>
                       {service.features.slice(0, 4).map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-2">
-                          <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          <span className="text-sm text-gray-300">{feature}</span>
+                        <div key={idx} className=&quot;flex items-center gap-2&quot;>
+                          <Check className=&quot;w-4 h-4 text-green-400 flex-shrink-0&quot; />
+                          <span className=&quot;text-sm text-gray-300&quot;>{feature}</span>
                         </div>
                       ))}
                     </div>
 
-                    <div className="text-center">
+                    <div className=&quot;text-center&quot;>
                                                  <Button 
-                             variant="primary" 
-                             size="md"
+                             variant=&quot;primary&quot; 
+                             size=&quot;md&quot;
                              onClick={() => window.open(service.link, '_blank')}
-                             className="w-full"
+                             className=&quot;w-full&quot;
                            >
                              Learn More
-                             <ExternalLink className="ml-2 w-4 h-4" />
+                             <ExternalLink className=&quot;ml-2 w-4 h-4&quot; />
                            </Button>
                     </div>
                   </UltraFuturisticCard>
@@ -405,24 +411,24 @@ export default function RevolutionaryServicesPage() {
         </section>
 
         {/* Services Grid */}
-        <section id="services-grid" className="py-16">
-          <div className="container mx-auto px-4">
+        <section id=&quot;services-grid&quot; className=&quot;py-16&quot;>
+          <div className=&quot;container mx-auto px-4&quot;>
             {/* Filters and Controls */}
             <motion.div 
-              className="mb-8"
+              className=&quot;mb-8&quot;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-                <div className="flex flex-wrap gap-4">
+              <div className=&quot;flex flex-col lg:flex-row gap-6 items-center justify-between&quot;>
+                <div className=&quot;flex flex-wrap gap-4&quot;>
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-4 py-2 bg-slate-800 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400"
+                    className=&quot;px-4 py-2 bg-slate-800 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:border-cyan-400&quot;
                   >
-                    <option value="All">All Categories</option>
+                    <option value=&quot;All&quot;>All Categories</option>
                     {revolutionaryServiceCategories.map(category => (
                       <option key={category} value={category}>{category}</option>
                     ))}
@@ -431,7 +437,7 @@ export default function RevolutionaryServicesPage() {
                   <select
                     value={priceRange}
                     onChange={(e) => setPriceRange(e.target.value)}
-                    className="px-4 py-2 bg-slate-800 border border-purple-400/30 rounded-lg text-white focus:outline-none focus:border-purple-400"
+                    className=&quot;px-4 py-2 bg-slate-800 border border-purple-400/30 rounded-lg text-white focus:outline-none focus:border-purple-400&quot;
                   >
                     {priceRanges.map(range => (
                       <option key={range.value} value={range.value}>{range.label}</option>
@@ -441,7 +447,7 @@ export default function RevolutionaryServicesPage() {
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="px-4 py-2 bg-slate-800 border border-green-400/30 rounded-lg text-white focus:outline-none focus:border-green-400"
+                    className=&quot;px-4 py-2 bg-slate-800 border border-green-400/30 rounded-lg text-white focus:outline-none focus:border-green-400&quot;
                   >
                     {sortOptions.map(option => (
                       <option key={option.value} value={option.value}>{option.label}</option>
@@ -449,30 +455,30 @@ export default function RevolutionaryServicesPage() {
                   </select>
                 </div>
                 
-                <div className="flex items-center gap-4">
-                  <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                <div className=&quot;flex items-center gap-4&quot;>
+                  <div className=&quot;relative&quot;>
+                    <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400&quot; />
                     <input
-                      type="text"
-                      placeholder="Search services..."
+                      type=&quot;text&quot;
+                      placeholder=&quot;Search services...&quot;
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      className="pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64"
+                      className=&quot;pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64&quot;
                     />
                   </div>
                   
-                  <div className="flex border border-gray-600 rounded-lg overflow-hidden">
+                  <div className=&quot;flex border border-gray-600 rounded-lg overflow-hidden&quot;>
                     <button
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
-                      <Grid className="w-4 h-4" />
+                      <Grid className=&quot;w-4 h-4&quot; />
                     </button>
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
-                      <List className="w-4 h-4" />
+                      <List className=&quot;w-4 h-4&quot; />
                     </button>
                   </div>
                 </div>
@@ -482,12 +488,12 @@ export default function RevolutionaryServicesPage() {
             {/* Services Display */}
             <motion.div 
               className={viewMode === 'grid' 
-                ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                : "space-y-6"
+                ? &quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
+                : &quot;space-y-6&quot;
               }
               variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
+              initial=&quot;hidden&quot;
+              whileInView=&quot;visible&quot;
               viewport={{ once: true }}
             >
               {filteredServices.map((service, index) => (
@@ -504,88 +510,88 @@ export default function RevolutionaryServicesPage() {
                   >
                     {viewMode === 'grid' ? (
                       // Grid View
-                      <div className="text-center">
-                        <div className="text-4xl mb-4">{service.icon}</div>
-                        <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                        <p className="text-gray-300 mb-4 text-sm">{service.tagline}</p>
-                        <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                        <div className="text-sm text-gray-400 mb-4">{service.period}</div>
+                      <div className=&quot;text-center&quot;>
+                        <div className=&quot;text-4xl mb-4&quot;>{service.icon}</div>
+                        <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{service.name}</h3>
+                        <p className=&quot;text-gray-300 mb-4 text-sm&quot;>{service.tagline}</p>
+                        <div className=&quot;text-2xl font-bold text-cyan-400 mb-2&quot;>{service.price}</div>
+                        <div className=&quot;text-sm text-gray-400 mb-4&quot;>{service.period}</div>
                         
-                        <div className="space-y-2 mb-6">
+                        <div className=&quot;space-y-2 mb-6&quot;>
                           {service.features.slice(0, 3).map((feature, idx) => (
-                            <div key={idx} className="flex items-center gap-2 text-sm">
-                              <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
-                              <span className="text-gray-300">{feature}</span>
+                            <div key={idx} className=&quot;flex items-center gap-2 text-sm&quot;>
+                              <Check className=&quot;w-3 h-3 text-green-400 flex-shrink-0&quot; />
+                              <span className=&quot;text-gray-300&quot;>{feature}</span>
                             </div>
                           ))}
                         </div>
 
-                        <div className="text-center">
+                        <div className=&quot;text-center&quot;>
                           <Button 
-                            variant="primary" 
-                            size="sm"
+                            variant=&quot;primary&quot; 
+                            size=&quot;sm&quot;
                             onClick={() => window.open(service.link, '_blank')}
-                            className="w-full"
+                            className=&quot;w-full&quot;
                           >
                             Learn More
-                            <ExternalLink className="ml-2 w-4 h-4" />
+                            <ExternalLink className=&quot;ml-2 w-4 h-4&quot; />
                           </Button>
                         </div>
                       </div>
                     ) : (
                       // List View
-                      <div className="flex flex-col md:flex-row gap-6 w-full">
-                        <div className="text-4xl md:text-5xl flex-shrink-0">{service.icon}</div>
-                        <div className="flex-1">
-                          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                      <div className=&quot;flex flex-col md:flex-row gap-6 w-full&quot;>
+                        <div className=&quot;text-4xl md:text-5xl flex-shrink-0&quot;>{service.icon}</div>
+                        <div className=&quot;flex-1&quot;>
+                          <div className=&quot;flex flex-col md:flex-row md:items-center md:justify-between mb-4&quot;>
                             <div>
-                              <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                              <p className="text-gray-300 text-sm">{service.tagline}</p>
+                              <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{service.name}</h3>
+                              <p className=&quot;text-gray-300 text-sm&quot;>{service.tagline}</p>
                             </div>
-                            <div className="text-right mt-2 md:mt-0">
-                              <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                              <div className="text-sm text-gray-400">{service.period}</div>
+                            <div className=&quot;text-right mt-2 md:mt-0&quot;>
+                              <div className=&quot;text-2xl font-bold text-cyan-400&quot;>{service.price}</div>
+                              <div className=&quot;text-sm text-gray-400&quot;>{service.period}</div>
                             </div>
                           </div>
                           
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4 mb-4&quot;>
                             <div>
-                              <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features</h4>
-                              <div className="space-y-1">
+                              <h4 className=&quot;text-sm font-semibold text-cyan-400 mb-2&quot;>Key Features</h4>
+                              <div className=&quot;space-y-1&quot;>
                                 {service.features.slice(0, 4).map((feature, idx) => (
-                                  <div key={idx} className="flex items-center gap-2 text-sm">
-                                    <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
-                                    <span className="text-gray-300">{feature}</span>
+                                  <div key={idx} className=&quot;flex items-center gap-2 text-sm&quot;>
+                                    <Check className=&quot;w-3 h-3 text-green-400 flex-shrink-0&quot; />
+                                    <span className=&quot;text-gray-300&quot;>{feature}</span>
                                   </div>
                                 ))}
                               </div>
                             </div>
                             <div>
-                              <h4 className="text-sm font-semibold text-purple-400 mb-2">Market Info</h4>
-                              <div className="space-y-1 text-sm text-gray-300">
-                                <div><span className="text-gray-400">ROI:</span> {service.roi}</div>
-                                <div><span className="text-gray-400">Market:</span> {service.marketSize}</div>
-                                <div><span className="text-gray-400">Growth:</span> {service.growthRate}</div>
+                              <h4 className=&quot;text-sm font-semibold text-purple-400 mb-2&quot;>Market Info</h4>
+                              <div className=&quot;space-y-1 text-sm text-gray-300&quot;>
+                                <div><span className=&quot;text-gray-400&quot;>ROI:</span> {service.roi}</div>
+                                <div><span className=&quot;text-gray-400&quot;>Market:</span> {service.marketSize}</div>
+                                <div><span className=&quot;text-gray-400&quot;>Growth:</span> {service.growthRate}</div>
                               </div>
                             </div>
                           </div>
                           
-                          <div className="flex gap-2">
+                          <div className=&quot;flex gap-2&quot;>
                                                          <Button 
-                               variant="primary" 
-                               size="sm"
+                               variant=&quot;primary&quot; 
+                               size=&quot;sm&quot;
                                onClick={() => window.open(service.link, '_blank')}
                              >
                                Learn More
-                               <ExternalLink className="ml-2 w-4 h-4" />
+                               <ExternalLink className=&quot;ml-2 w-4 h-4&quot; />
                              </Button>
                              <Button 
-                               variant="futuristic" 
-                               size="sm"
+                               variant=&quot;futuristic&quot; 
+                               size=&quot;sm&quot;
                                onClick={() => setSelectedService(service)}
                              >
                                View Details
-                               <Eye className="ml-2 w-4 h-4" />
+                               <Eye className=&quot;ml-2 w-4 h-4&quot; />
                              </Button>
                           </div>
                         </div>
@@ -598,16 +604,16 @@ export default function RevolutionaryServicesPage() {
 
             {filteredServices.length === 0 && (
               <motion.div 
-                className="text-center py-16"
+                className=&quot;text-center py-16&quot;
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
-                <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>
+                <div className=&quot;text-6xl mb-4&quot;>🔍</div>
+                <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>No Services Found</h3>
+                <p className=&quot;text-gray-400 mb-6&quot;>Try adjusting your search criteria or filters.</p>
                                          <Button 
-                           variant="primary"
+                           variant=&quot;primary&quot;
                            onClick={() => {
                              setSearchQuery(''),
                              setSelectedCategory('All'),
@@ -625,94 +631,94 @@ export default function RevolutionaryServicesPage() {
         <AnimatePresence>
           {selectedService && (
             <motion.div
-              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+              className=&quot;fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4&quot;
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedService(null)}
             >
               <motion.div
-                className="bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+                className=&quot;bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto&quot;
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
                 onClick={(e) => e.stopPropagation()}
               >
-                <div className="p-8">
-                  <div className="flex justify-between items-start mb-6">
-                    <div className="flex items-center gap-4">
-                      <div className="text-5xl">{selectedService.icon}</div>
+                <div className=&quot;p-8&quot;>
+                  <div className=&quot;flex justify-between items-start mb-6&quot;>
+                    <div className=&quot;flex items-center gap-4&quot;>
+                      <div className=&quot;text-5xl&quot;>{selectedService.icon}</div>
                       <div>
-                        <h2 className="text-3xl font-bold text-white mb-2">{selectedService.name}</h2>
-                        <p className="text-xl text-gray-300">{selectedService.tagline}</p>
+                        <h2 className=&quot;text-3xl font-bold text-white mb-2&quot;>{selectedService.name}</h2>
+                        <p className=&quot;text-xl text-gray-300&quot;>{selectedService.tagline}</p>
                       </div>
                     </div>
                     <button
                       onClick={() => setSelectedService(null)}
-                      className="text-gray-400 hover:text-white text-2xl"
+                      className=&quot;text-gray-400 hover:text-white text-2xl&quot;
                     >
                       ×
                     </button>
                   </div>
 
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
                     <div>
-                      <h3 className="text-xl font-semibold text-cyan-400 mb-4">Service Details</h3>
-                      <p className="text-gray-300 mb-6">{selectedService.description}</p>
+                      <h3 className=&quot;text-xl font-semibold text-cyan-400 mb-4&quot;>Service Details</h3>
+                      <p className=&quot;text-gray-300 mb-6&quot;>{selectedService.description}</p>
                       
-                      <div className="space-y-4">
+                      <div className=&quot;space-y-4&quot;>
                         <div>
-                          <h4 className="text-sm font-semibold text-purple-400 mb-2">Pricing</h4>
-                          <div className="text-2xl font-bold text-white">{selectedService.price}{selectedService.period}</div>
-                          <div className="text-sm text-gray-400">{selectedService.marketPrice}</div>
+                          <h4 className=&quot;text-sm font-semibold text-purple-400 mb-2&quot;>Pricing</h4>
+                          <div className=&quot;text-2xl font-bold text-white&quot;>{selectedService.price}{selectedService.period}</div>
+                          <div className=&quot;text-sm text-gray-400&quot;>{selectedService.marketPrice}</div>
                         </div>
                         
                         <div>
-                          <h4 className="text-sm font-semibold text-green-400 mb-2">ROI & Market</h4>
-                          <div className="text-sm text-gray-300 space-y-1">
-                            <div><span className="text-gray-400">ROI:</span> {selectedService.roi}</div>
-                            <div><span className="text-gray-400">Market Size:</span> {selectedService.marketSize}</div>
-                            <div><span className="text-gray-400">Growth Rate:</span> {selectedService.growthRate}</div>
+                          <h4 className=&quot;text-sm font-semibold text-green-400 mb-2&quot;>ROI & Market</h4>
+                          <div className=&quot;text-sm text-gray-300 space-y-1&quot;>
+                            <div><span className=&quot;text-gray-400&quot;>ROI:</span> {selectedService.roi}</div>
+                            <div><span className=&quot;text-gray-400&quot;>Market Size:</span> {selectedService.marketSize}</div>
+                            <div><span className=&quot;text-gray-400&quot;>Growth Rate:</span> {selectedService.growthRate}</div>
                           </div>
                         </div>
                       </div>
                     </div>
 
                     <div>
-                      <h3 className="text-xl font-semibold text-cyan-400 mb-4">Features & Capabilities</h3>
+                      <h3 className=&quot;text-xl font-semibold text-cyan-400 mb-4&quot;>Features & Capabilities</h3>
                       
-                      <div className="space-y-4">
+                      <div className=&quot;space-y-4&quot;>
                         <div>
-                          <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features</h4>
-                          <div className="space-y-2">
+                          <h4 className=&quot;text-sm font-semibold text-purple-400 mb-2&quot;>Key Features</h4>
+                          <div className=&quot;space-y-2&quot;>
                             {selectedService.features.map((feature, idx) => (
-                              <div key={idx} className="flex items-center gap-2 text-sm">
-                                <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
-                                <span className="text-gray-300">{feature}</span>
+                              <div key={idx} className=&quot;flex items-center gap-2 text-sm&quot;>
+                                <Check className=&quot;w-3 h-3 text-green-400 flex-shrink-0&quot; />
+                                <span className=&quot;text-gray-300&quot;>{feature}</span>
                               </div>
                             ))}
                           </div>
                         </div>
                         
                         <div>
-                          <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits</h4>
-                          <div className="space-y-2">
+                          <h4 className=&quot;text-sm font-semibold text-green-400 mb-2&quot;>Benefits</h4>
+                          <div className=&quot;space-y-2&quot;>
                             {selectedService.benefits.map((benefit, idx) => (
-                              <div key={idx} className="flex items-center gap-2 text-sm">
-                                <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />
-                                <span className="text-gray-300">{benefit}</span>
+                              <div key={idx} className=&quot;flex items-center gap-2 text-sm&quot;>
+                                <Star className=&quot;w-3 h-3 text-yellow-400 flex-shrink-0&quot; />
+                                <span className=&quot;text-gray-300&quot;>{benefit}</span>
                               </div>
                             ))}
                           </div>
                         </div>
                         
                         <div>
-                          <h4 className="text-sm font-semibold text-blue-400 mb-2">Capabilities</h4>
-                          <div className="space-y-2">
+                          <h4 className=&quot;text-sm font-semibold text-blue-400 mb-2&quot;>Capabilities</h4>
+                          <div className=&quot;space-y-2&quot;>
                             {selectedService.capabilities.map((capability, idx) => (
-                              <div key={idx} className="flex items-center gap-2 text-sm">
-                                <Zap className="w-3 h-3 text-cyan-400 flex-shrink-0" />
-                                <span className="text-gray-300">{capability}</span>
+                              <div key={idx} className=&quot;flex items-center gap-2 text-sm&quot;>
+                                <Zap className=&quot;w-3 h-3 text-cyan-400 flex-shrink-0&quot; />
+                                <span className=&quot;text-gray-300&quot;>{capability}</span>
                               </div>
                             ))}
                           </div>
@@ -721,27 +727,32 @@ export default function RevolutionaryServicesPage() {
                     </div>
                   </div>
 
-                  <div className="mt-8 pt-6 border-t border-gray-700">
-                    <div className="flex flex-col sm:flex-row gap-4 justify-between items-center">
-                      <div className="text-sm text-gray-400">
+                  <div className=&quot;mt-8 pt-6 border-t border-gray-700&quot;>
+                    <div className=&quot;flex flex-col sm:flex-row gap-4 justify-between items-center&quot;>
+                      <div className=&quot;text-sm text-gray-400&quot;>
                         <div>Setup Time: {selectedService.setupTime}</div>
                         <div>Trial: {selectedService.trialDays} days</div>
                       </div>
                       
-                      <div className="flex gap-4">
+                      <div className=&quot;flex gap-4&quot;>
                                                  <Button 
-                           variant="primary"
+                           variant=&quot;primary&quot;
                            onClick={() => window.open(selectedService.link, '_blank')}
                          >
                            Visit Service
-                           <ExternalLink className="ml-2 w-4 h-4" />
+                           <ExternalLink className=&quot;ml-2 w-4 h-4&quot; />
                          </Button>
                          <Button 
+<<<<<<< HEAD
                            variant="futuristic"
                            onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+=======
+                           variant=&quot;futuristic&quot;
+                           onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                          >
                            Contact Sales
-                           <Mail className="ml-2 w-4 h-4" />
+                           <Mail className=&quot;ml-2 w-4 h-4&quot; />
                          </Button>
                       </div>
                     </div>
@@ -753,56 +764,68 @@ export default function RevolutionaryServicesPage() {
         </AnimatePresence>
 
         {/* Contact Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
+        <section className=&quot;py-20&quot;>
+          <div className=&quot;container mx-auto px-4 text-center&quot;>
             <motion.div 
-              className="max-w-4xl mx-auto"
+              className=&quot;max-w-4xl mx-auto&quot;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
                 Ready to Experience the Future?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Join thousands of companies already transforming their business with our revolutionary micro SaaS services.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center mb-8&quot;>
                                  <Button 
+<<<<<<< HEAD
                    variant="primary" 
                    size="lg"
                    onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+=======
+                   variant=&quot;primary&quot; 
+                   size=&quot;lg&quot;
+                   onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                  >
                    Start Free Trial
-                   <Rocket className="ml-2 w-5 h-5" />
+                   <Rocket className=&quot;ml-2 w-5 h-5&quot; />
                  </Button>
                  <Button 
+<<<<<<< HEAD
                    variant="futuristic" 
                    size="lg"
                    onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+=======
+                   variant=&quot;futuristic&quot; 
+                   size=&quot;lg&quot;
+                   onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                  >
                    Schedule Demo
-                   <Calendar className="ml-2 w-5 h-5" />
+                   <Calendar className=&quot;ml-2 w-5 h-5&quot; />
                  </Button>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 text-center&quot;>
                 <div>
-                  <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
-                  <div className="text-white font-semibold">{contactInfo.mobile}</div>
-                  <div className="text-gray-400 text-sm">Call us anytime</div>
+                  <Phone className=&quot;w-8 h-8 text-cyan-400 mx-auto mb-2&quot; />
+                  <div className=&quot;text-white font-semibold&quot;>{contactInfo.mobile}</div>
+                  <div className=&quot;text-gray-400 text-sm&quot;>Call us anytime</div>
                 </div>
                 <div>
-                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />
-                  <div className="text-white font-semibold">{contactInfo.email}</div>
-                  <div className="text-gray-400 text-sm">Email us 24/7</div>
+                  <Mail className=&quot;w-8 h-8 text-purple-400 mx-auto mb-2&quot; />
+                  <div className=&quot;text-white font-semibold&quot;>{contactInfo.email}</div>
+                  <div className=&quot;text-gray-400 text-sm&quot;>Email us 24/7</div>
                 </div>
                 <div>
-                  <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                  <div className="text-white font-semibold">{contactInfo.address}</div>
-                  <div className="text-gray-400 text-sm">Visit our office</div>
+                  <MapPin className=&quot;w-8 h-8 text-green-400 mx-auto mb-2&quot; />
+                  <div className=&quot;text-white font-semibold&quot;>{contactInfo.address}</div>
+                  <div className=&quot;text-gray-400 text-sm&quot;>Visit our office</div>
                 </div>
               </div>
             </motion.div>

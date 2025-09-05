@@ -11,7 +11,7 @@ import { ApplyToJobModalProps } from './types',
 export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess }: ApplyToJobModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[600px]">
+      <DialogContent className=&quot;sm:max-w-[600px]&quot;>
         <DialogHeader>
           <DialogTitle>Apply to Job: {job.title}</DialogTitle>
           <DialogDescription>

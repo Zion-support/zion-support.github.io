@@ -46,7 +46,7 @@ function buildTrainingPairs(records) {
 
   for (const job of records.jobs) {
     pairs.push({
-      prompt: `Create a job description titled "${stripPii(job.title)}"`,
+      prompt: `Create a job description titled &quot;${stripPii(job.title)}&quot;`,
       completion: stripPii(job.description)
     })
   }
@@ -99,9 +99,15 @@ async function createFineTune(filePath) {
       training_file: uploaded.id,
       model: 'gpt-3.5-turbo'
     })
+<<<<<<< HEAD
   }),
   const job = await jobRes.json(),
   // // // console.log('Fine-tune job created:', job.id)
+=======
+  });
+  const job = await jobRes.json();
+  // console.log('Fine-tune job created:', job.id);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 }
 
 async function main() {

@@ -23,43 +23,48 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
   },
 
   return (
-    <div className="flex items-center justify-center min-h-[400px] p-6">
-      <div className="max-w-md w-full space-y-4">
-        <Alert variant="destructive">
-          <AlertCircle className="h-4 w-4" />
+    <div className=&quot;flex items-center justify-center min-h-[400px] p-6&quot;>
+      <div className=&quot;max-w-md w-full space-y-4&quot;>
+        <Alert variant=&quot;destructive&quot;>
+          <AlertCircle className=&quot;h-4 w-4&quot; />
           <AlertTitle>Something went wrong in the marketplace</AlertTitle>
-          <AlertDescription className="mt-2">
+          <AlertDescription className=&quot;mt-2&quot;>
             {error?.message || 'An unexpected error occurred while loading marketplace content.'}
           </AlertDescription>
         </Alert>
         
-        <div className="flex flex-col space-y-2">
+        <div className=&quot;flex flex-col space-y-2&quot;>
           <Button 
             onClick={handleRetry}
-            className="w-full"
-            variant="default"
+            className=&quot;w-full&quot;
+            variant=&quot;default&quot;
           >
-            <RefreshCcw className="mr-2 h-4 w-4" />
+            <RefreshCcw className=&quot;mr-2 h-4 w-4&quot; />
             Retry
           </Button>
           
           <Button 
             onClick={() => window.location.reload()}
-            variant="outline"
-            className="w-full"
+            variant=&quot;outline&quot;
+            className=&quot;w-full&quot;
           >
             Reload Page
           </Button>
         </div>
         
-        <div className="text-center text-sm text-muted-foreground">
+        <div className=&quot;text-center text-sm text-muted-foreground&quot;>
           If the problem persists, please{' '}
           <a 
+<<<<<<< HEAD
             href="mailto: support@example.com" 
             className="text-primary hover:underline"
+=======
+            href=&quot;mailto:support@example.com&quot; 
+            className=&quot;text-primary hover:underline&quot;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           >
             contact support
-          </a>
+          </Link>
         </div>
       </div>
     </div>

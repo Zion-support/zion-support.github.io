@@ -1,9 +1,18 @@
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
 export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage',
+=======
+import { useState } from &quot;react&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
+
+export type ApiKeyScope = 'jobs:read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export interface ApiKey {
   id: string,
@@ -55,8 +64,13 @@ export function useApiKeys() {
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
+<<<<<<< HEAD
         setError("Authentication required"),
         return
+=======
+        setError(&quot;Authentication required&quot;);
+        return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
 
       const response = await fetch(`${getApiUrl()}/keys`, {
@@ -78,9 +92,15 @@ export function useApiKeys() {
       console.error('Error fetching API keys:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
+<<<<<<< HEAD
         variant: "destructive",
         title: "Error fetching API keys",
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
+=======
+        variant: &quot;destructive&quot;,
+        title: &quot;Error fetching API keys&quot;,
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setLoading(false)
     }
@@ -97,8 +117,13 @@ export function useApiKeys() {
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
+<<<<<<< HEAD
         setError("Authentication required"),
         return
+=======
+        setError(&quot;Authentication required&quot;);
+        return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
 
       const response = await fetch(`${getApiUrl()}/create`, {
@@ -127,17 +152,28 @@ export function useApiKeys() {
       setNewApiKey(result.key),
       
       toast({
+<<<<<<< HEAD
         title: "API Key Created",
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."}),
+=======
+        title: &quot;API Key Created&quot;,
+        description: &quot;Your new API key has been generated. Save it now, you won't be able to see it again.&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       return result
     } catch (err) {
       console.error('Error creating API key:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
+<<<<<<< HEAD
         variant: "destructive",
         title: "Error creating API key",
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
+=======
+        variant: &quot;destructive&quot;,
+        title: &quot;Error creating API key&quot;,
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setLoading(false)
     }
@@ -154,8 +190,13 @@ export function useApiKeys() {
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
+<<<<<<< HEAD
         setError("Authentication required"),
         return
+=======
+        setError(&quot;Authentication required&quot;);
+        return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
 
       const response = await fetch(`${getApiUrl()}/regenerate`, {
@@ -182,17 +223,28 @@ export function useApiKeys() {
       setNewApiKey(result.key),
       
       toast({
+<<<<<<< HEAD
         title: "API Key Regenerated",
         description: "Your API key has been regenerated. Save it now, you won't be able to see it again."}),
+=======
+        title: &quot;API Key Regenerated&quot;,
+        description: &quot;Your API key has been regenerated. Save it now, you won't be able to see it again.&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       return result
     } catch (err) {
       console.error('Error regenerating API key:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
+<<<<<<< HEAD
         variant: "destructive",
         title: "Error regenerating API key",
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
+=======
+        variant: &quot;destructive&quot;,
+        title: &quot;Error regenerating API key&quot;,
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setLoading(false)
     }
@@ -208,8 +260,13 @@ export function useApiKeys() {
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
+<<<<<<< HEAD
         setError("Authentication required"),
         return
+=======
+        setError(&quot;Authentication required&quot;);
+        return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
 
       const response = await fetch(`${getApiUrl()}/revoke`, {
@@ -233,17 +290,28 @@ export function useApiKeys() {
       )),
       
       toast({
+<<<<<<< HEAD
         title: "API Key Revoked",
         description: "The API key has been revoked successfully."}),
+=======
+        title: &quot;API Key Revoked&quot;,
+        description: &quot;The API key has been revoked successfully.&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       return result
     } catch (err) {
       console.error('Error revoking API key:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
+<<<<<<< HEAD
         variant: "destructive",
         title: "Error revoking API key",
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
+=======
+        variant: &quot;destructive&quot;,
+        title: &quot;Error revoking API key&quot;,
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setLoading(false)
     }
@@ -259,8 +327,13 @@ export function useApiKeys() {
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
+<<<<<<< HEAD
         setError("Authentication required"),
         return
+=======
+        setError(&quot;Authentication required&quot;);
+        return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
 
       const response = await fetch(
@@ -288,9 +361,15 @@ export function useApiKeys() {
       console.error('Error fetching API logs:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
+<<<<<<< HEAD
         variant: "destructive",
         title: "Error fetching API logs",
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
+=======
+        variant: &quot;destructive&quot;,
+        title: &quot;Error fetching API logs&quot;,
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setLoading(false)
     }

@@ -12,12 +12,12 @@ export default function ServiceDetailPage() {
   
   if (!id || typeof id !== 'string') {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-white mb-4">Service Not Found</h1>
-          <p className="text-gray-400 mb-6">The requested service could not be found.</p>
-          <Button href="/services" variant="primary">
-            <ArrowLeft className="w-4 h-4 mr-2" />
+      <div className=&quot;min-h-screen bg-black flex items-center justify-center&quot;>
+        <div className=&quot;text-center&quot;>
+          <h1 className=&quot;text-2xl font-bold text-white mb-4&quot;>Service Not Found</h1>
+          <p className=&quot;text-gray-400 mb-6&quot;>The requested service could not be found.</p>
+          <Button href=&quot;/services&quot; variant=&quot;primary&quot;>
+            <ArrowLeft className=&quot;w-4 h-4 mr-2&quot; />
             Back to Services
           </Button>
         </div>
@@ -29,12 +29,12 @@ export default function ServiceDetailPage() {
 
   if (!service) {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-white mb-4">Service Not Found</h1>
-          <p className="text-gray-400 mb-6">The requested service "{id}" could not be found.</p>
-          <Button href="/services" variant="primary">
-            <ArrowLeft className="w-4 h-4 mr-2" />
+      <div className=&quot;min-h-screen bg-black flex items-center justify-center&quot;>
+        <div className=&quot;text-center&quot;>
+          <h1 className=&quot;text-2xl font-bold text-white mb-4&quot;>Service Not Found</h1>
+          <p className=&quot;text-gray-400 mb-6&quot;>The requested service &quot;{id}&quot; could not be found.</p>
+          <Button href=&quot;/services&quot; variant=&quot;primary&quot;>
+            <ArrowLeft className=&quot;w-4 h-4 mr-2&quot; />
             Back to Services
           </Button>
         </div>
@@ -46,31 +46,31 @@ export default function ServiceDetailPage() {
     <>
       <Head>
         <title>{service.name} | Zion Tech Group - Micro SaaS Services</title>
-        <meta name="description" content={service.description} />
-        <meta property="og:title" content={`${service.name} | Zion Tech Group`} />
-        <meta property="og:description" content={service.description} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name=&quot;description&quot; content={service.description} />
+        <meta property=&quot;og:title&quot; content={`${service.name} | Zion Tech Group`} />
+        <meta property=&quot;og:description&quot; content={service.description} />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
       </Head>
 
-      <div className="min-h-screen bg-black">
+      <div className=&quot;min-h-screen bg-black&quot;>
         {/* Navigation */}
-        <nav className="border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16">
+        <nav className=&quot;border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50&quot;>
+          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+            <div className=&quot;flex items-center justify-between h-16&quot;>
               <Button
-                href="/services"
-                variant="ghost"
-                size="sm"
-                className="text-gray-400 hover:text-white"
+                href=&quot;/services&quot;
+                variant=&quot;ghost&quot;
+                size=&quot;sm&quot;
+                className=&quot;text-gray-400 hover:text-white&quot;
               >
-                <ArrowLeft className="w-4 h-4 mr-2" />
+                <ArrowLeft className=&quot;w-4 h-4 mr-2&quot; />
                 Back to Services
               </Button>
               <Button
                 href={service.website}
-                variant="primary"
-                size="sm"
-                icon={<ExternalLink className="w-4 h-4" />}
+                variant=&quot;primary&quot;
+                size=&quot;sm&quot;
+                icon={<ExternalLink className=&quot;w-4 h-4&quot; />}
               >
                 Visit Service
               </Button>
@@ -82,28 +82,34 @@ export default function ServiceDetailPage() {
         <ServiceDetail service={service} />
 
         {/* Related Services CTA */}
+<<<<<<< HEAD
         <section className="py-16 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
+=======
+        <section className=&quot;py-16 bg-gray-900/50&quot;>
+          <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
+            <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
               Looking for Something Else?
             </h2>
-            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+            <p className=&quot;text-gray-400 mb-8 max-w-2xl mx-auto&quot;>
               Explore our complete portfolio of micro SaaS services to find the perfect solution for your business needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
               <Button
-                href="/services"
-                variant="primary"
-                size="lg"
-                className="shadow-2xl shadow-blue-500/25"
+                href=&quot;/services&quot;
+                variant=&quot;primary&quot;
+                size=&quot;lg&quot;
+                className=&quot;shadow-2xl shadow-blue-500/25&quot;
               >
                 View All Services
               </Button>
               <Button
-                href="/contact"
-                variant="outline"
-                size="lg"
-                className="border-white/20 text-white hover:border-white/40"
+                href=&quot;/contact&quot;
+                variant=&quot;outline&quot;
+                size=&quot;lg&quot;
+                className=&quot;border-white/20 text-white hover:border-white/40&quot;
               >
                 Get Custom Solution
               </Button>

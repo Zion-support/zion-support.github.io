@@ -15,11 +15,11 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
   },
   
   return (
-    <div className="p-3 text-center border-t border-zion-blue-light">
+    <div className=&quot;p-3 text-center border-t border-zion-blue-light&quot;>
       <Button
-        variant="link"
-        size="sm"
-        className="text-zion-slate-light text-xs"
+        variant=&quot;link&quot;
+        size=&quot;sm&quot;
+        className=&quot;text-zion-slate-light text-xs&quot;
         onClick={handleViewAll}
       >
         View all notifications

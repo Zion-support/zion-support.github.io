@@ -92,7 +92,7 @@ class AggressiveSyntaxFixer {
         // Check for various syntax error patterns
         const errorPatterns = [
             //, // Multiple quotes
-            /""""""""""""""""""/, // Multiple quotes"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+            /&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;""&quot;/, // Multiple quotes"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"&quot;"""
             /``````````````````/, // Multiple quotes
             /import React from react',export/, // Missing newline
             /const [^a-zA-Z_$][^a-zA-Z0-9_$]*? =/, // Invalid variable name
@@ -203,13 +203,21 @@ module.exports = AggressiveSyntaxFixer,
 
 // Graceful shutdown handling
 process.on('SIGINT', () => {
+<<<<<<< HEAD
   // // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
+=======
+  // console.log('\n🛑 Received SIGINT, shutting down gracefully...');
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   // Add cleanup logic here
   process.exit(0)
 }),
 
 process.on('SIGTERM', () => {
+<<<<<<< HEAD
   // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
+=======
+  // console.log('\n🛑 Received SIGTERM, shutting down gracefully...');
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   // Add cleanup logic here
   process.exit(0)
 }),

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useParams, Link, useNavigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
@@ -9,6 +10,20 @@ import { Separator } from "@/components/ui/separator",
 import { AppLayout } from "@/layout/AppLayout",
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts",
+=======
+import { useState, useEffect } from &quot;react&quot;;
+import { useParams, Link, useNavigate } from &quot;react-router-dom&quot;;
+import { SEO } from &quot;@/components/SEO&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from &quot;lucide-react&quot;;
+import type { BlogPost as BlogPostType } from &quot;@/types/blog&quot;;
+import { Separator } from &quot;@/components/ui/separator&quot;;
+import { AppLayout } from &quot;@/layout/AppLayout&quot;;
+
+// Importing the sample blog posts - in a real app, you would fetch this from an API
+import { BLOG_POSTS } from &quot;@/data/blog-posts&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export default function BlogPost() {
   const { slug } = useParams() as { slug: string },
   const navigate = useNavigate(),
@@ -33,7 +48,11 @@ export default function BlogPost() {
       setRelatedPosts(related)
     } else {
       // Post not found
+<<<<<<< HEAD
       navigate("/blog", { replace: true })
+=======
+      navigate(&quot;/blog&quot;, { replace: true });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     // Scroll to top when post changes
@@ -43,8 +62,8 @@ export default function BlogPost() {
   if (!post) {
     return (
       <AppLayout>
-        <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
-          <div className="animate-pulse">Loading article...</div>
+        <div className=&quot;min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center&quot;>
+          <div className=&quot;animate-pulse&quot;>Loading article...</div>
         </div>
       </AppLayout>
     )
@@ -71,105 +90,110 @@ export default function BlogPost() {
       <SEO 
         title={post.title} 
         description={post.excerpt} 
-        keywords={post.tags.join(", ")}
+        keywords={post.tags.join(&quot;, &quot;)}
         ogImage={post.featuredImage}
         canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
       />
-      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
-        <div className="container mx-auto">
+      <div className=&quot;min-h-screen bg-zion-blue pt-12 pb-20 px-4&quot;>
+        <div className=&quot;container mx-auto&quot;>
           {/* Back to blog button */}
-          <div className="mb-8">
+          <div className=&quot;mb-8&quot;>
             <Button 
-              variant="outline" 
-              className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+              variant=&quot;outline&quot; 
+              className=&quot;border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white&quot;
               asChild
             >
-              <Link to="/blog">
-                <ArrowLeft className="mr-2 h-4 w-4" />
+              <Link to=&quot;/blog&quot;>
+                <ArrowLeft className=&quot;mr-2 h-4 w-4&quot; />
                 Back to all articles
               </Link>
             </Button>
           </div>
           
           {/* Article header */}
-          <div className="mb-8 max-w-4xl mx-auto">
-            <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
+          <div className=&quot;mb-8 max-w-4xl mx-auto&quot;>
+            <span className=&quot;text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4&quot;>
               {post.category}
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
               {post.title}
             </h1>
-            <p className="text-xl text-zion-slate-light mb-8">
+            <p className=&quot;text-xl text-zion-slate-light mb-8&quot;>
               {post.excerpt}
             </p>
             
             {/* Author and metadata */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">
-              <div className="flex items-center mb-4 sm:mb-0">
+            <div className=&quot;flex flex-col sm:flex-row sm:items-center justify-between mb-8&quot;>
+              <div className=&quot;flex items-center mb-4 sm:mb-0&quot;>
                 <img 
                   src={post.author.avatarUrl} 
                   alt={post.author.name} 
-                  className="w-12 h-12 rounded-full mr-3"
+                  className=&quot;w-12 h-12 rounded-full mr-3&quot;
                   onError={(e) => {
+<<<<<<< HEAD
                     const target = e.target as HTMLImageElement,
                     target.src = "https: //images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80"
+=======
+                    const target = e.target as HTMLImageElement;
+                    target.src = &quot;https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                   }}
                 />
                 <div>
-                  <p className="text-white font-medium">{post.author.name}</p>
-                  <p className="text-sm text-zion-slate-light">{post.author.title}</p>
+                  <p className=&quot;text-white font-medium&quot;>{post.author.name}</p>
+                  <p className=&quot;text-sm text-zion-slate-light&quot;>{post.author.title}</p>
                 </div>
               </div>
               
-              <div className="flex items-center space-x-4">
-                <div className="flex items-center text-zion-slate-light">
-                  <Calendar className="h-4 w-4 mr-1" />
-                  <span className="text-sm">{post.publishedDate}</span>
+              <div className=&quot;flex items-center space-x-4&quot;>
+                <div className=&quot;flex items-center text-zion-slate-light&quot;>
+                  <Calendar className=&quot;h-4 w-4 mr-1&quot; />
+                  <span className=&quot;text-sm&quot;>{post.publishedDate}</span>
                 </div>
-                <div className="flex items-center text-zion-slate-light">
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span className="text-sm">{post.readTime}</span>
+                <div className=&quot;flex items-center text-zion-slate-light&quot;>
+                  <Clock className=&quot;h-4 w-4 mr-1&quot; />
+                  <span className=&quot;text-sm&quot;>{post.readTime}</span>
                 </div>
-                <div className="relative">
+                <div className=&quot;relative&quot;>
                   <Button 
-                    variant="ghost" 
-                    size="sm"
-                    className="text-zion-slate-light hover:text-white hover:bg-zion-blue-dark"
+                    variant=&quot;ghost&quot; 
+                    size=&quot;sm&quot;
+                    className=&quot;text-zion-slate-light hover:text-white hover:bg-zion-blue-dark&quot;
                     onClick={() => setShowShareMenu(!showShareMenu)}
                   >
-                    <Share2 className="h-4 w-4 mr-1" />
-                    <span className="text-sm">Share</span>
+                    <Share2 className=&quot;h-4 w-4 mr-1&quot; />
+                    <span className=&quot;text-sm&quot;>Share</span>
                   </Button>
                   
                   {showShareMenu && (
-                    <div className="absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10">
+                    <div className=&quot;absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10&quot;>
                       <a 
                         href={getShareUrl('facebook')} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
+                        target=&quot;_blank&quot; 
+                        rel=&quot;noopener noreferrer&quot;
+                        className=&quot;flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white&quot;
                       >
-                        <Facebook className="h-4 w-4 mr-2" />
+                        <Facebook className=&quot;h-4 w-4 mr-2&quot; />
                         <span>Facebook</span>
-                      </a>
+                      </Link>
                       <a 
                         href={getShareUrl('twitter')} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
+                        target=&quot;_blank&quot; 
+                        rel=&quot;noopener noreferrer&quot;
+                        className=&quot;flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white&quot;
                       >
-                        <Twitter className="h-4 w-4 mr-2" />
+                        <Twitter className=&quot;h-4 w-4 mr-2&quot; />
                         <span>Twitter</span>
-                      </a>
+                      </Link>
                       <a 
                         href={getShareUrl('linkedin')} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
+                        target=&quot;_blank&quot; 
+                        rel=&quot;noopener noreferrer&quot;
+                        className=&quot;flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white&quot;
                       >
-                        <Linkedin className="h-4 w-4 mr-2" />
+                        <Linkedin className=&quot;h-4 w-4 mr-2&quot; />
                         <span>LinkedIn</span>
-                      </a>
+                      </Link>
                     </div>
                   )}
                 </div>
@@ -178,66 +202,76 @@ export default function BlogPost() {
           </div>
           
           {/* Featured image */}
-          <div className="mb-12 max-w-5xl mx-auto">
-            <div className="aspect-[21/9] rounded-lg overflow-hidden">
+          <div className=&quot;mb-12 max-w-5xl mx-auto&quot;>
+            <div className=&quot;aspect-[21/9] rounded-lg overflow-hidden&quot;>
               <img 
                 src={post.featuredImage} 
                 alt={post.title}
-                className="object-cover w-full h-full"
+                className=&quot;object-cover w-full h-full&quot;
                 onError={(e) => {
+<<<<<<< HEAD
                   const target = e.target as HTMLImageElement,
                   target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
+=======
+                  const target = e.target as HTMLImageElement;
+                  target.src = &quot;https://images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 }}
               />
             </div>
           </div>
           
           {/* Article content */}
-          <div className="max-w-4xl mx-auto">
+          <div className=&quot;max-w-4xl mx-auto&quot;>
             <div 
-              className="prose prose-lg prose-invert max-w-none"
+              className=&quot;prose prose-lg prose-invert max-w-none&quot;
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
             
             {/* Tags */}
-            <div className="flex flex-wrap gap-2 mt-12">
+            <div className=&quot;flex flex-wrap gap-2 mt-12&quot;>
               {post.tags.map(tag => (
                 <span 
                   key={tag} 
-                  className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
+                  className=&quot;text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full&quot;
                 >
                   #{tag}
                 </span>
               ))}
             </div>
             
-            <Separator className="my-12 bg-zion-blue-light" />
+            <Separator className=&quot;my-12 bg-zion-blue-light&quot; />
             
             {/* Related articles */}
             {relatedPosts.length > 0 && (
-              <div className="mt-12">
-                <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className=&quot;mt-12&quot;>
+                <h3 className=&quot;text-2xl font-bold text-white mb-6&quot;>Related Articles</h3>
+                <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
                   {relatedPosts.map(relatedPost => (
                     <Link 
                       key={relatedPost.id}
                       to={`/blog/${relatedPost.slug}`}
-                      className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300"
+                      className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300&quot;
                     >
-                      <div className="aspect-[16/9] relative">
+                      <div className=&quot;aspect-[16/9] relative&quot;>
                         <img 
                           src={relatedPost.featuredImage} 
                           alt={relatedPost.title}
-                          className="object-cover w-full h-full"
+                          className=&quot;object-cover w-full h-full&quot;
                           onError={(e) => {
+<<<<<<< HEAD
                             const target = e.target as HTMLImageElement,
                             target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
+=======
+                            const target = e.target as HTMLImageElement;
+                            target.src = &quot;https://images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                           }}
                         />
                       </div>
-                      <div className="p-4">
-                        <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
-                        <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
+                      <div className=&quot;p-4&quot;>
+                        <span className=&quot;text-xs text-zion-cyan&quot;>{relatedPost.category}</span>
+                        <h4 className=&quot;text-white font-bold mt-1 line-clamp-2&quot;>{relatedPost.title}</h4>
                       </div>
                     </Link>
                   ))}
@@ -246,14 +280,19 @@ export default function BlogPost() {
             )}
             
             {/* Navigation */}
-            <div className="flex justify-between items-center mt-12">
+            <div className=&quot;flex justify-between items-center mt-12&quot;>
               <Button
+<<<<<<< HEAD
                 variant="outline"
                 className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
+=======
+                variant=&quot;outline&quot;
+                className=&quot;border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white&quot;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 asChild
               >
-                <Link to="/blog">
-                  <ChevronLeft className="mr-2 h-4 w-4" />
+                <Link to=&quot;/blog&quot;>
+                  <ChevronLeft className=&quot;mr-2 h-4 w-4&quot; />
                   All Articles
                 </Link>
               </Button>

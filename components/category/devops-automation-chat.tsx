@@ -6,13 +6,13 @@ const DevopsAutomationChat: NextPage = () => {
     <div>
       <Head>
         <title>DevopsAutomationChat - Zion Tech Solutions</title>
-        <meta name="description" content="DevopsAutomationChat blog post" />
+        <meta name=&quot;description&quot; content=&quot;DevopsAutomationChat blog post&quot; />
       </Head>
       
       <main>
         <h1>DevopsAutomationChat</h1>
         <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
+        <a href=&quot;/blog&quot;>Back to Blog</a>
       </main>
     </div>
   )

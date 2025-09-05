@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react",
 import {
   useToast as useToastHook,
@@ -9,6 +10,19 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
   title?: string,
   variant?: "default" | "destructive" | "success"
 },
+=======
+import React from &quot;react&quot;;
+import {
+  useToast as useToastHook,
+  Toast} from &quot;@/components/ui/toast&quot;;
+
+// Extend the Toast component props with common toast options
+export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
+  description?: string;
+  title?: string;
+  variant?: &quot;default&quot; | &quot;destructive&quot; | &quot;success&quot;;
+};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export const useToast = useToastHook,
 
@@ -28,12 +42,21 @@ baseToast.description = (description: string) => {
 },
 
 baseToast.error = (error: string) => {
+<<<<<<< HEAD
   baseToast({ variant: "destructive", title: "Error", description: error })
 },
 
 baseToast.success = (message: string) => {
   baseToast({ variant: "success", title: "Success", description: message })
 },
+=======
+  baseToast({ variant: &quot;destructive&quot;, title: &quot;Error&quot;, description: error });
+};
+
+baseToast.success = (message: string) => {
+  baseToast({ variant: &quot;success&quot;, title: &quot;Success&quot;, description: message });
+};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 // Export the callable toast function.
 export const toast = baseToast as typeof baseToast & {

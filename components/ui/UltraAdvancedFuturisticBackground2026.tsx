@@ -392,18 +392,18 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
   }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects, enableNeuralNetworks, enableMultidimensional]),
 
   return (
-    <div ref={containerRef} className="fixed inset-0 w-full h-full overflow-hidden">
+    <div ref={containerRef} className=&quot;fixed inset-0 w-full h-full overflow-hidden&quot;>
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
+        className=&quot;absolute inset-0 w-full h-full&quot;
         style={{ zIndex: -1 }}
       />
       
       {/* Additional visual effects */}
       {enableMultidimensional && (
-        <div className="absolute inset-0 pointer-events-none">
+        <div className=&quot;absolute inset-0 pointer-events-none&quot;>
           <motion.div
-            className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full"
+            className=&quot;absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full&quot;
             animate={{
               scale: [1, 1.2, 1],
               rotate: [0, 180, 360],
@@ -412,11 +412,11 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
             transition={{
               duration: 8,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: &quot;easeInOut&quot;
             }}
           />
           <motion.div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full"
+            className=&quot;absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full&quot;
             animate={{
               scale: [1.2, 1, 1.2],
               rotate: [360, 180, 0],
@@ -425,7 +425,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
             transition={{
               duration: 10,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: &quot;easeInOut&quot;
             }}
           />
         </div>

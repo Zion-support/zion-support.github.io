@@ -20,28 +20,28 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
   }, [selectedVersionId, initialData, versions]),
 
   return (
-    <div className="relative">
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-3">
-          <label className="text-sm">Theme</label>
+    <div className=&quot;relative&quot;>
+      <div className=&quot;flex items-center justify-between mb-4&quot;>
+        <div className=&quot;flex items-center gap-3&quot;>
+          <label className=&quot;text-sm&quot;>Theme</label>
           <select
             value={theme}
             onChange={(e) => setTheme(e.target.value as 'light' | 'dark')}
-            className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
+            className=&quot;border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black&quot;
           >
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
+            <option value=&quot;light&quot;>Light</option>
+            <option value=&quot;dark&quot;>Dark</option>
           </select>
 
           {versions.length > 0 && (
             <>
-              <label className="text-sm ml-4">Version</label>
+              <label className=&quot;text-sm ml-4&quot;>Version</label>
               <select
                 value={selectedVersionId}
                 onChange={(e) => setSelectedVersionId(e.target.value)}
-                className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
+                className=&quot;border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black&quot;
               >
-                <option value="current">Current</option>
+                <option value=&quot;current&quot;>Current</option>
                 {versions.map(v => (
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))}
@@ -53,7 +53,7 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
 
       <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
 
-      <div className="mx-auto">
+      <div className=&quot;mx-auto&quot;>
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>

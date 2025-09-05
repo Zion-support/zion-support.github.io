@@ -12,19 +12,19 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {
     <div>
       <Head>
         <title>{topic} - Zion Blog</title>
-        <meta name="description" content={`Articles about ${topic}`} />
-        <meta property="og:title" content={`${topic} - Zion Blog`} />
-        <meta property="og:description" content={`Articles about ${topic}`} />
-        <meta property="og:image" content="/images/og/topic-default.jpg" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${topic} - Zion Blog`} />
-        <meta name="twitter:description" content={`Articles about ${topic}`} />
-        <meta name="twitter:image" content="/images/og/topic-default.jpg" />
+        <meta name=&quot;description&quot; content={`Articles about ${topic}`} />
+        <meta property=&quot;og:title&quot; content={`${topic} - Zion Blog`} />
+        <meta property=&quot;og:description&quot; content={`Articles about ${topic}`} />
+        <meta property=&quot;og:image&quot; content=&quot;/images/og/topic-default.jpg&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+        <meta name=&quot;twitter:title&quot; content={`${topic} - Zion Blog`} />
+        <meta name=&quot;twitter:description&quot; content={`Articles about ${topic}`} />
+        <meta name=&quot;twitter:image&quot; content=&quot;/images/og/topic-default.jpg&quot; />
       </Head>
-      <div className="mx-auto max-w-6xl">
-        <h1 className="text-4xl font-bold mb-3">{topic}</h1>
-        <div className="mb-6">
+      <div className=&quot;mx-auto max-w-6xl&quot;>
+        <h1 className=&quot;text-4xl font-bold mb-3&quot;>{topic}</h1>
+        <div className=&quot;mb-6&quot;>
           <PageShareButtons
             title={`${topic} - Zion Blog`}
             url={typeof window === 'undefined' ? `https://zion.app/categories/${encodeURIComponent(topic)}` : window.location.href}
@@ -32,12 +32,12 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {
             onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url: window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch(() => {})}
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
           {posts.map((p) => (
             <BlogCard key={p.id} post={p} />
           ))}
         </div>
-        <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>
+        <div className=&quot;mt-6&quot;><Link href=&quot;/blog&quot; className=&quot;underline&quot;>Back to Blog</a></div>
       </div>
     </div>
   )

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",
 import { TalentProfile } from "@/components/profile/TalentProfile",
@@ -15,6 +16,25 @@ import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
 import { UserProfile } from "@/types/auth",
 import { toast } from "@/hooks/use-toast",
+=======
+import React, { useState, useEffect } from &quot;react&quot;;
+import { useParams, useNavigate } from &quot;react-router-dom&quot;;
+import { TalentProfile } from &quot;@/components/profile/TalentProfile&quot;;
+import { ProfileLoadingState } from &quot;@/components/profile/ProfileLoadingState&quot;;
+import { ProfileErrorState } from &quot;@/components/profile/ProfileErrorState&quot;;
+import { BackToDirectoryButton } from &quot;@/components/profile/BackToDirectoryButton&quot;;
+import { useTalentProfile } from &quot;@/hooks/useTalentProfile&quot;;
+import { HireRequestModal } from &quot;@/components/profile/hire-request&quot;;
+import { useAuthStatus } from &quot;@/hooks/talent&quot;;
+import { MessageTalentModal } from &quot;@/components/messaging/MessageTalentModal&quot;;
+import { StickyAction } from &quot;@/components/ui/sticky-action&quot;;
+import { Handshake, MessageSquare } from &quot;lucide-react&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { UserProfile } from &quot;@/types/auth&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export default function TalentProfilePage() {
   // Cast to specify the expected route param type since useParams may be untyped
   const { id } = useParams() as { id?: string },
@@ -50,9 +70,15 @@ export default function TalentProfilePage() {
   useEffect(() => {
     if (error) {
       toast({
+<<<<<<< HEAD
         title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
         variant: "destructive"})
+=======
+        title: &quot;Error loading profile&quot;,
+        description: &quot;There was a problem loading this talent profile. Please try again.&quot;,
+        variant: &quot;destructive&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   }, [error]),
 
@@ -67,11 +93,19 @@ export default function TalentProfilePage() {
   const handleRequestHire = () => {
     if (!isAuthenticated) {
       toast({
+<<<<<<< HEAD
         title: "Authentication required",
         description: "Please sign in to hire this talent.",
         variant: "default"}),
       navigate('/login', { state: { from: `/talent/${id}` } }),
       return
+=======
+        title: &quot;Authentication required&quot;,
+        description: &quot;Please sign in to hire this talent.&quot;,
+        variant: &quot;default&quot;});
+      navigate('/login', { state: { from: `/talent/${id}` } });
+      return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     setIsHireModalOpen(true)
   },
@@ -79,17 +113,25 @@ export default function TalentProfilePage() {
   const handleMessageTalent = () => {
     if (!isAuthenticated) {
       toast({
+<<<<<<< HEAD
         title: "Authentication required",
         description: "Please sign in to message this talent.",
         variant: "default"}),
       navigate('/login', { state: { from: `/talent/${id}` } }),
       return
+=======
+        title: &quot;Authentication required&quot;,
+        description: &quot;Please sign in to message this talent.&quot;,
+        variant: &quot;default&quot;});
+      navigate('/login', { state: { from: `/talent/${id}` } });
+      return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     setIsMessageModalOpen(true)
   },
 
   return (
-    <div className="min-h-screen bg-zion-blue pb-12">
+    <div className=&quot;min-h-screen bg-zion-blue pb-12&quot;>
       <TalentProfile 
         profile={profile} 
         onRequestHire={handleRequestHire}
@@ -99,22 +141,22 @@ export default function TalentProfilePage() {
       
       {/* Sticky action buttons that appear when scrolling */}
       <StickyAction>
-        <div className="p-2 flex gap-2">
+        <div className=&quot;p-2 flex gap-2&quot;>
           <Button 
-            size="sm"
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+            size=&quot;sm&quot;
+            className=&quot;bg-zion-purple text-white hover:bg-zion-purple-dark&quot;
             onClick={handleRequestHire}
           >
-            <Handshake className="mr-2 h-4 w-4" />
+            <Handshake className=&quot;mr-2 h-4 w-4&quot; />
             Hire Now
           </Button>
           <Button 
-            size="sm"
-            variant="outline"
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+            size=&quot;sm&quot;
+            variant=&quot;outline&quot;
+            className=&quot;border-zion-purple text-zion-purple hover:bg-zion-purple/10&quot;
             onClick={handleMessageTalent}
           >
-            <MessageSquare className="mr-2 h-4 w-4" />
+            <MessageSquare className=&quot;mr-2 h-4 w-4&quot; />
             Message
           </Button>
         </div>

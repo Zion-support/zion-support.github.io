@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Star } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -7,6 +8,18 @@ import { HireRequestModal } from "@/components/profile/hire-request",
 import { useAuthStatus } from "@/hooks/talent",
 import type { UserProfile } from "@/types/auth",
 import { useRouter } from 'next/router',
+=======
+import React, { useState } from &quot;react&quot;;
+import { Star } from 'lucide-react'
+import { Button } from &quot;@/components/ui/button&quot;;
+import { ExternalLink } from 'lucide-react'
+import { TalentProfile } from &quot;@/types/talent&quot;;
+import { HireRequestModal } from &quot;@/components/profile/hire-request&quot;;
+import { useAuthStatus } from &quot;@/hooks/talent&quot;;
+import type { UserProfile } from &quot;@/types/auth&quot;;
+import { useRouter } from 'next/router';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface TalentCardFooterProps {
   profile: TalentProfile,
   onViewProfile: (id: string) => void,
@@ -60,41 +73,41 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
 
   return (
     <>
-      <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">
+      <div className=&quot;mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between&quot;>
         {/* Experience or Hourly Rate */}
         <div>
           {profile.hourly_rate ? (
             <div>
-              <span className="text-zion-slate-light text-xs">Hourly Rate</span>
-              <div className="text-white font-bold">${profile.hourly_rate}/hr</div>
+              <span className=&quot;text-zion-slate-light text-xs&quot;>Hourly Rate</span>
+              <div className=&quot;text-white font-bold&quot;>${profile.hourly_rate}/hr</div>
             </div>
           ) : (
-            <div className="flex items-center gap-1">
-              <Star className="h-4 w-4 text-zion-purple" />
-              <span className="text-zion-slate-light">{profile.years_experience} years exp.</span>
+            <div className=&quot;flex items-center gap-1&quot;>
+              <Star className=&quot;h-4 w-4 text-zion-purple&quot; />
+              <span className=&quot;text-zion-slate-light&quot;>{profile.years_experience} years exp.</span>
             </div>
           )}
         </div>
         
         {/* Action Buttons */}
-        <div className="flex gap-2">
+        <div className=&quot;flex gap-2&quot;>
           <Button 
-            variant="default" 
-            size="sm" 
+            variant=&quot;default&quot; 
+            size=&quot;sm&quot; 
             onClick={handleRequestHire}
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            className=&quot;bg-zion-purple hover:bg-zion-purple-dark text-white&quot;
           >
             Hire
           </Button>
           
           <Button 
-            variant="outline" 
-            size="sm" 
+            variant=&quot;outline&quot; 
+            size=&quot;sm&quot; 
             onClick={handleViewProfile}
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+            className=&quot;border-zion-purple text-zion-purple hover:bg-zion-purple/10&quot;
           >
             View
-            <ExternalLink className="h-3 w-3 ml-1" />
+            <ExternalLink className=&quot;h-3 w-3 ml-1&quot; />
           </Button>
         </div>
       </div>

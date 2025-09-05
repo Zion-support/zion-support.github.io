@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
@@ -15,27 +16,54 @@ serve(async (req) => {
     const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
     if (!openAIApiKey) {
       throw new Error("OpenAI API key is not set in environment variables")
+=======
+import { serve } from &quot;https://deno.land/std@0.190.0/http/server.ts&quot;;
+import &quot;https://deno.land/x/xhr@0.1.0/mod.ts&quot;;
+
+const corsHeaders = {
+  &quot;Access-Control-Allow-Origin&quot;: &quot;*&quot;,
+  &quot;Access-Control-Allow-Headers&quot;: &quot;authorization, x-client-info, apikey, content-type&quot;};
+
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req.method === &quot;OPTIONS&quot;) {
+    return new Response(null, { headers: corsHeaders });
+  }
+
+  try {
+    const openAIApiKey = Deno.env.get(&quot;OPENAI_API_KEY&quot;);
+    if (!openAIApiKey) {
+      throw new Error(&quot;OpenAI API key is not set in environment variables&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
 
     const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json(),
     
     if (!prompt) {
+<<<<<<< HEAD
       throw new Error("Prompt is required")
+=======
+      throw new Error(&quot;Prompt is required&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     // Define the appropriate model to use
     // Default to base model if no specific model provided
+<<<<<<< HEAD
     const model = modelId || "gpt-3.5-turbo",
+=======
+    const model = modelId || &quot;gpt-3.5-turbo&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
+    const response = await fetch(&quot;https://api.openai.com/v1/chat/completions&quot;, {
+      method: &quot;POST&quot;,
       headers: {
-        "Authorization": `Bearer ${openAIApiKey}`,
-        "Content-Type": "application/json"},
+        &quot;Authorization&quot;: `Bearer ${openAIApiKey}`,
+        &quot;Content-Type&quot;: &quot;application/json&quot;},
       body: JSON.stringify({
         model: model,
         messages: [{ 
-          role: "user", 
+          role: &quot;user&quot;, 
           content: prompt 
         }],
         max_tokens: maxTokens,
@@ -56,16 +84,28 @@ serve(async (req) => {
         tokensUsed: data.usage?.total_tokens || 0
       }),
       {
+<<<<<<< HEAD
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
   } catch (error) {
     console.error("Error in zion-gpt function:", error),
+=======
+        headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; }}
+    );
+  } catch (error) {
+    console.error(&quot;Error in zion-gpt function:&quot;, error);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     return new Response(
       JSON.stringify({ error: error.message }),
       {
         status: 500,
+<<<<<<< HEAD
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
+=======
+        headers: { ...corsHeaders, &quot;Content-Type&quot;: &quot;application/json&quot; }}
+    );
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 }),

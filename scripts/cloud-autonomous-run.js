@@ -78,7 +78,11 @@ async function main() {
     await generateIdeasIfPossible()
   } catch {}
 
+<<<<<<< HEAD
   // // // console.log('Cloud autonomous run complete:', status.updatedAt)
+=======
+  // console.log('Cloud autonomous run complete:', status.updatedAt);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 }
 
 main().catch((e) => { console.error(e), process.exit(1) }),

@@ -1,15 +1,27 @@
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { Link } from "react-router-dom",
+=======
+import { useState } from &quot;react&quot;;
+import { Link } from &quot;react-router-dom&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { 
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger
+<<<<<<< HEAD
 } from "@/components/ui/dropdown-menu",
 import { Button } from "@/components/ui/button",
 import { Eye, ChevronDown, Loader2 } from "lucide-react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
+=======
+} from &quot;@/components/ui/dropdown-menu&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Eye, ChevronDown, Loader2 } from &quot;lucide-react&quot;;
+import { JobApplication, ApplicationStatus } from &quot;@/types/jobs&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 interface ApplicationActionsProps {
   application: JobApplication,
@@ -25,49 +37,49 @@ export function ApplicationActions({
   onStatusChange
 }: ApplicationActionsProps) {
   return (
-    <div className="flex items-center justify-end gap-2">
+    <div className=&quot;flex items-center justify-end gap-2&quot;>
       <Button 
-        variant="outline" 
-        size="sm" 
+        variant=&quot;outline&quot; 
+        size=&quot;sm&quot; 
         onClick={() => onViewApplication(application.id)}
         disabled={!!application.viewed_at}
       >
-        <Eye className="h-4 w-4" />
+        <Eye className=&quot;h-4 w-4&quot; />
       </Button>
       
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button 
-            variant="outline" 
-            size="sm"
+            variant=&quot;outline&quot; 
+            size=&quot;sm&quot;
             disabled={processingId === application.id}
           >
             {processingId === application.id ? (
-              <Loader2 className="h-4 w-4 animate-spin" />
+              <Loader2 className=&quot;h-4 w-4 animate-spin&quot; />
             ) : (
-              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>
+              <>Status <ChevronDown className=&quot;h-4 w-4 ml-1&quot; /></>
             )}
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
+        <DropdownMenuContent align=&quot;end&quot;>
           <DropdownMenuItem 
-            onClick={() => onStatusChange(application.id, "shortlisted")}
+            onClick={() => onStatusChange(application.id, &quot;shortlisted&quot;)}
           >
             Shortlist
           </DropdownMenuItem>
           <DropdownMenuItem 
-            onClick={() => onStatusChange(application.id, "interview")}
+            onClick={() => onStatusChange(application.id, &quot;interview&quot;)}
           >
             Schedule Interview
           </DropdownMenuItem>
           <DropdownMenuItem 
-            onClick={() => onStatusChange(application.id, "hired")}
+            onClick={() => onStatusChange(application.id, &quot;hired&quot;)}
           >
             Hire
           </DropdownMenuItem>
           <DropdownMenuItem 
-            onClick={() => onStatusChange(application.id, "rejected")}
-            className="text-red-600"
+            onClick={() => onStatusChange(application.id, &quot;rejected&quot;)}
+            className=&quot;text-red-600&quot;
           >
             Reject
           </DropdownMenuItem>
@@ -75,8 +87,8 @@ export function ApplicationActions({
       </DropdownMenu>
       
       <Button 
-        variant="default" 
-        size="sm"
+        variant=&quot;default&quot; 
+        size=&quot;sm&quot;
         asChild
       >
         <Link to={`/messages?talentId=${application.talent_id}`}>

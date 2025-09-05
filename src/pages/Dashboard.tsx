@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import dynamic from 'next/dynamic',
 import { useAuth } from "@/hooks/useAuth",
@@ -33,6 +34,44 @@ const GuidedTour = dynamic(() => import("@/components/onboarding/GuidedTour").th
 
 // Lazy load notification functions
 const loadNotificationFunctions = () => import("@/utils/notifications"),
+=======
+import React from 'react';
+import dynamic from 'next/dynamic';
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { useRequireAuth } from &quot;@/hooks/useAuthGuard&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Header } from &quot;@/components/Header&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings, FileText, Heart, Key, ShoppingBag } from 'lucide-react'
+import { useGetOrdersQuery } from '@/hooks/useOrders';
+import { useFavorites } from '@/hooks/useFavorites';
+import { useToast } from &quot;@/hooks/use-toast&quot;;
+import { EmptyState } from &quot;@/components/ui/empty-state&quot;;
+import Link from 'next/link';
+
+// Lazy load heavy components to prevent router abort
+const CommunityDiscussion = dynamic(() => import(&quot;@/components/CommunityDiscussion&quot;).then(mod => ({ default: mod.CommunityDiscussion })), {
+  loading: () => <div className=&quot;h-32 bg-zion-blue-light rounded animate-pulse&quot; />,
+  ssr: false});
+
+const PointsBadge = dynamic(() => import('@/components/loyalty/PointsBadge').then(mod => ({ default: mod.PointsBadge })), {
+  loading: () => <span className=&quot;text-zion-cyan font-medium&quot;>Loading...</span>,
+  ssr: false});
+
+const ApiKeysManager = dynamic(() => import('@/components/developers/ApiKeysManager').then(mod => ({ default: mod.ApiKeysManager })), {
+  loading: () => <div className=&quot;h-24 bg-zion-blue-light rounded animate-pulse&quot; />,
+  ssr: false});
+
+const NotificationBell = dynamic(() => import(&quot;@/components/NotificationBell&quot;).then(mod => ({ default: mod.NotificationBell })), {
+  loading: () => <Bell size={16} className=&quot;text-zion-cyan&quot; />,
+  ssr: false});
+
+const GuidedTour = dynamic(() => import(&quot;@/components/onboarding/GuidedTour&quot;).then(mod => ({ default: mod.GuidedTour })), {
+  ssr: false});
+
+// Lazy load notification functions
+const loadNotificationFunctions = () => import(&quot;@/utils/notifications&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export default function Dashboard() {
   const { logout } = useAuth(),
@@ -51,10 +90,10 @@ export default function Dashboard() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading dashboard...</p>
+      <div className=&quot;min-h-screen flex items-center justify-center&quot;>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4&quot;></div>
+          <p className=&quot;text-gray-600&quot;>Loading dashboard...</p>
         </div>
       </div>
     )
@@ -63,10 +102,10 @@ export default function Dashboard() {
   // useRequireAuth will handle redirect if user is not authenticated
   if (!user) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Redirecting to login...</p>
+      <div className=&quot;min-h-screen flex items-center justify-center&quot;>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4&quot;></div>
+          <p className=&quot;text-gray-600&quot;>Redirecting to login...</p>
         </div>
       </div>
     )
@@ -74,6 +113,7 @@ export default function Dashboard() {
 
   const handleTestNotification = async () => {
     try {
+<<<<<<< HEAD
       const { createTestNotification } = await loadNotificationFunctions(),
       const result = await createTestNotification(user?.id ?? ""),
       if (result.success) {
@@ -91,6 +131,25 @@ export default function Dashboard() {
         title: "Error loading notification system",
         description: "Please try again",
         variant: "destructive"})
+=======
+      const { createTestNotification } = await loadNotificationFunctions();
+      const result = await createTestNotification(user?.id ?? "&quot;);
+      if (result.success) {
+        toast({
+          title: &quot;Test notification created&quot;,
+          description: &quot;Check your notification center&quot;});
+      } else {
+        toast({
+          title: &quot;Error creating test notification&quot;,
+          description: &quot;Something went wrong&quot;,
+          variant: &quot;destructive&quot;});
+      }
+    } catch (error) {
+      toast({
+        title: &quot;Error loading notification system&quot;,
+        description: &quot;Please try again&quot;,
+        variant: &quot;destructive"});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
@@ -111,15 +170,15 @@ export default function Dashboard() {
                   <p className="text-zion-slate-light mb-2">{user?.email}</p>
                   
                   <Badge
-                    className="bg-zion-purple text-white mb-4"
+                    className="bg-zion-purple text-white mb-4&quot;
                   >
-                    {userType ? userType.charAt(0).toUpperCase() + userType.slice(1) : "New User"}
+                    {userType ? userType.charAt(0).toUpperCase() + userType.slice(1) : &quot;New User&quot;}
                   </Badge>
                   
                   <Button
-                    id="profile-link"
-                    className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                    onClick={() => window.location.href = "/profile"}
+                    id=&quot;profile-link"
+                    className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white&quot;
+                    onClick={() => window.location.href = &quot;/profile"}
                   >
                     <UserCheck size={16} />
                     Edit Profile
@@ -136,7 +195,7 @@ export default function Dashboard() {
                     <span className="text-zion-cyan font-medium">65%</span>
                   </div>
                   <div className="w-full bg-zion-blue rounded-full h-2">
-                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>
+                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full&quot; style={{ width: &quot;65%" }}></div>
                   </div>
                   
                   <div className="flex justify-between items-center">
@@ -158,8 +217,8 @@ export default function Dashboard() {
                   {/* Test notification buttons */}
                   <div className="flex flex-col gap-2 mt-4">
                     <Button 
-                      className="w-full flex items-center justify-center gap-2"
-                      variant="outline"
+                      className="w-full flex items-center justify-center gap-2&quot;
+                      variant=&quot;outline"
                       onClick={handleTestNotification}
                     >
                       <Send size={16} className="text-zion-cyan" />
@@ -167,17 +226,18 @@ export default function Dashboard() {
                     </Button>
 
                     <Button 
-                      className="w-full flex items-center justify-center gap-2"
-                      variant="outline"
+                      className="w-full flex items-center justify-center gap-2&quot;
+                      variant=&quot;outline&quot;
                       onClick={async () => {
                         try {
                           const { createOnboardingNotification } = await loadNotificationFunctions(),
                           await createOnboardingNotification({
-                            userId: user?.id ?? "",
+                            userId: user?.id ?? "&quot;,
                             missingMilestone: 'profile_completed',
                             userRole: roleForTour
                           }),
                           toast({
+<<<<<<< HEAD
                             title: "Onboarding notification sent",
                             description: "Check your notification center"
                           })
@@ -186,20 +246,31 @@ export default function Dashboard() {
                             title: "Error sending notification",
                             description: "Please try again",
                             variant: "destructive"})
+=======
+                            title: &quot;Onboarding notification sent&quot;,
+                            description: &quot;Check your notification center&quot;
+                          });
+                        } catch (error) {
+                          toast({
+                            title: &quot;Error sending notification&quot;,
+                            description: &quot;Please try again&quot;,
+                            variant: &quot;destructive&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                         }
                       }}
                     >
-                      <Settings size={16} className="text-zion-purple" />
+                      <Settings size={16} className=&quot;text-zion-purple&quot; />
                       Send Onboarding Nudge
                     </Button>
 
                     <Button 
-                      className="w-full flex items-center justify-center gap-2"
-                      variant="outline"
+                      className=&quot;w-full flex items-center justify-center gap-2&quot;
+                      variant=&quot;outline&quot;
                       onClick={async () => {
                         try {
                           const { createSystemNotification } = await loadNotificationFunctions(),
                           await createSystemNotification({
+<<<<<<< HEAD
                             userId: user?.id ?? "",
                             title: "New Feature Available!",
                             message: "We've added a new notification center to help you stay updated with important information.",
@@ -215,6 +286,23 @@ export default function Dashboard() {
                             title: "Error sending notification",
                             description: "Please try again",
                             variant: "destructive"})
+=======
+                            userId: user?.id ?? "&quot;,
+                            title: &quot;New Feature Available!&quot;,
+                            message: &quot;We've added a new notification center to help you stay updated with important information.&quot;,
+                            actionUrl: &quot;/notifications&quot;,
+                            actionText: &quot;Explore Now&quot;
+                          });
+                          toast({
+                            title: &quot;System notification sent&quot;,
+                            description: &quot;Check your notification center&quot;
+                          });
+                        } catch (error) {
+                          toast({
+                            title: &quot;Error sending notification&quot;,
+                            description: &quot;Please try again&quot;,
+                            variant: &quot;destructive"});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                         }
                       }}
                     >
@@ -232,8 +320,8 @@ export default function Dashboard() {
                   Recent Notifications
                 </h3>
                 <div className="space-y-4">
-                  <Link href="/notifications" className="block" id="notifications-link">
-                    <Button variant="outline" className="w-full">
+                  <Link href="/notifications" className="block&quot; id=&quot;notifications-link&quot;>
+                    <Button variant=&quot;outline" className="w-full">
                       <Bell className="mr-2 h-4 w-4" />
                       View All Notifications
                     </Button>
@@ -246,11 +334,11 @@ export default function Dashboard() {
             <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-bold text-white" data-testid="dashboard-header">Dashboard</h2>
-                  <div className="flex items-center gap-2">
+                  <h2 className="text-2xl font-bold text-white&quot; data-testid=&quot;dashboard-header">Dashboard</h2>
+                  <div className="flex items-center gap-2&quot;>
                     <NotificationBell />
                     <Button 
-                      variant="outline" 
+                      variant=&quot;outline" 
                       className="text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white"
                       onClick={logout}
                     >
@@ -297,13 +385,13 @@ export default function Dashboard() {
                       <div className="w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2">
                         <span className="text-zion-slate-light text-xl">?</span>
                       </div>
-                      <span className="text-xs text-center text-zion-slate-light">Locked</span>
+                      <span className="text-xs text-center text-zion-slate-light&quot;>Locked</span>
                     </div>
                   </div>
                 </div>
                 
                 {/* Community Section */}
-                <div id="community-section">
+                <div id=&quot;community-section">
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>
                   <CommunityDiscussion />
                 </div>
@@ -318,9 +406,9 @@ export default function Dashboard() {
                       <p className="text-zion-slate-light">Loading...</p>
                     ) : orders.length === 0 ? (
                       <EmptyState
-                        icon={<ShoppingBag className="h-8 w-8" />}
-                        title="No Orders"
-                        description="You haven't purchased anything yet."
+                        icon={<ShoppingBag className="h-8 w-8&quot; />}
+                        title=&quot;No Orders&quot;
+                        description=&quot;You haven't purchased anything yet."
                         action={{ text: 'Visit Marketplace', href: '/marketplace' }}
                         className="border-none bg-transparent text-center"
                       />

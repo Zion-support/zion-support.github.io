@@ -1,9 +1,17 @@
 
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+=======
+import React, { useState } from 'react';
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Card, CardContent, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { Avatar, AvatarFallback, AvatarImage } from &quot;@/components/ui/avatar&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
 import './video-call.css',
 interface Participant {
@@ -105,72 +113,72 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
 
   return (
     <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>
-      <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">
-        <div className="flex items-center space-x-2">
-          <CardTitle className="text-white">Video Call</CardTitle>
-          <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">
+      <CardHeader className=&quot;flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4&quot;>
+        <div className=&quot;flex items-center space-x-2&quot;>
+          <CardTitle className=&quot;text-white&quot;>Video Call</CardTitle>
+          <Badge variant=&quot;outline&quot; className=&quot;text-white border-zion-purple bg-zion-blue-light&quot;>
             Room: {roomId}
           </Badge>
         </div>
-        <div className="flex items-center space-x-2">
-          <Badge variant="secondary" className="bg-zion-blue-light text-white">
+        <div className=&quot;flex items-center space-x-2&quot;>
+          <Badge variant=&quot;secondary&quot; className=&quot;bg-zion-blue-light text-white&quot;>
             {formatDuration(callDuration)}
           </Badge>
-          <Badge variant="outline" className="text-white">
+          <Badge variant=&quot;outline&quot; className=&quot;text-white&quot;>
             {participants.length} participant{participants.length !== 1 ? 's' : ''}
           </Badge>
         </div>
       </CardHeader>
       
-      <CardContent className="p-0">
-        <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <CardContent className=&quot;p-0&quot;>
+        <div className=&quot;video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4&quot;>
           {participants.length > 0 ? (
             participants.map((participant) => (
-              <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
+              <div key={participant.id} className=&quot;video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative&quot;>
                 {participant.isVideoEnabled && !participant.isScreenSharing ? (
-                  <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">
+                  <div className=&quot;bg-zion-blue-light h-full w-full flex items-center justify-center text-white&quot;>
                     {/* Placeholder for actual video stream */}
-                    <Video className="h-12 w-12 opacity-50" />
+                    <Video className=&quot;h-12 w-12 opacity-50&quot; />
                   </div>
                 ) : participant.isScreenSharing ? (
-                  <div className="bg-zion-blue h-full w-full flex items-center justify-center text-white">
+                  <div className=&quot;bg-zion-blue h-full w-full flex items-center justify-center text-white&quot;>
                     {/* Placeholder for screen share */}
-                    <ScreenShare className="h-12 w-12 opacity-50" />
+                    <ScreenShare className=&quot;h-12 w-12 opacity-50&quot; />
                   </div>
                 ) : (
-                  <div className="bg-zion-blue-dark h-full w-full flex items-center justify-center">
-                    <Avatar className="h-20 w-20">
+                  <div className=&quot;bg-zion-blue-dark h-full w-full flex items-center justify-center&quot;>
+                    <Avatar className=&quot;h-20 w-20&quot;>
                       <AvatarImage src={participant.avatar} alt={participant.name} />
-                      <AvatarFallback className="bg-zion-purple text-white text-2xl">
+                      <AvatarFallback className=&quot;bg-zion-purple text-white text-2xl&quot;>
                         {participant.name.charAt(0).toUpperCase()}
                       </AvatarFallback>
                     </Avatar>
                   </div>
                 )}
                 
-                <div className="video-metadata flex items-center space-x-2">
+                <div className=&quot;video-metadata flex items-center space-x-2&quot;>
                   <span>{participant.name}</span>
-                  {participant.isMuted && <MicOff className="h-4 w-4" />}
-                  {participant.isHost && <Badge variant="secondary" className="text-xs">Host</Badge>}
+                  {participant.isMuted && <MicOff className=&quot;h-4 w-4&quot; />}
+                  {participant.isHost && <Badge variant=&quot;secondary&quot; className=&quot;text-xs&quot;>Host</Badge>}
                 </div>
               </div>
             ))
           ) : (
-            <div className="col-span-full flex flex-col items-center justify-center py-12 text-white">
-              <Video className="h-16 w-16 mb-4 opacity-30" />
-              <p className="text-center text-lg mb-2">No participants yet</p>
-              <p className="text-center text-sm text-gray-300">
+            <div className=&quot;col-span-full flex flex-col items-center justify-center py-12 text-white&quot;>
+              <Video className=&quot;h-16 w-16 mb-4 opacity-30&quot; />
+              <p className=&quot;text-center text-lg mb-2&quot;>No participants yet</p>
+              <p className=&quot;text-center text-sm text-gray-300&quot;>
                 Share the meeting link to invite others
               </p>
             </div>
           )}
         </div>
         
-        <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
+        <div className=&quot;bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3&quot;>
           <Button
-            variant="outline"
-            size="icon"
-            className="video-button rounded-full h-10 w-10"
+            variant=&quot;outline&quot;
+            size=&quot;icon&quot;
+            className=&quot;video-button rounded-full h-10 w-10&quot;
             onClick={handleToggleMute}
             aria-label={isMuted ? 'Unmute microphone' : 'Mute microphone'}
           >
@@ -178,9 +186,9 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
           </Button>
           
           <Button
-            variant="outline"
-            size="icon"
-            className="video-button rounded-full h-10 w-10"
+            variant=&quot;outline&quot;
+            size=&quot;icon&quot;
+            className=&quot;video-button rounded-full h-10 w-10&quot;
             onClick={handleToggleVideo}
             aria-label={isVideoEnabled ? 'Disable camera' : 'Enable camera'}
           >
@@ -188,9 +196,9 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
           </Button>
           
           <Button
-            variant="outline"
-            size="icon"
-            className="video-button rounded-full h-10 w-10"
+            variant=&quot;outline&quot;
+            size=&quot;icon&quot;
+            className=&quot;video-button rounded-full h-10 w-10&quot;
             onClick={handleToggleScreenShare}
             aria-label={isScreenSharing ? 'Stop sharing screen' : 'Share screen'}
           >
@@ -198,9 +206,9 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
           </Button>
           
           <Button
-            variant="outline"
-            size="icon"
-            className="video-button rounded-full h-10 w-10"
+            variant=&quot;outline&quot;
+            size=&quot;icon&quot;
+            className=&quot;video-button rounded-full h-10 w-10&quot;
             onClick={handleToggleAudioOnly}
             aria-label={isAudioOnly ? 'Disable audio only' : 'Enable audio only'}
           >
@@ -208,13 +216,13 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
           </Button>
           
           <Button
-            variant="destructive"
-            size="icon"
-            className="video-button video-button-danger rounded-full h-10 w-10"
+            variant=&quot;destructive&quot;
+            size=&quot;icon&quot;
+            className=&quot;video-button video-button-danger rounded-full h-10 w-10&quot;
             onClick={handleLeaveCall}
-            aria-label="Leave call"
+            aria-label=&quot;Leave call&quot;
           >
-            <Phone className="rotate-135" />
+            <Phone className=&quot;rotate-135&quot; />
           </Button>
         </div>
       </CardContent>

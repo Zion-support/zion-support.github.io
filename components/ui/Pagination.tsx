@@ -17,14 +17,14 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
   },
 
   return (
-    <div className="flex items-center justify-between gap-2 mt-4">
-      <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>
+    <div className=&quot;flex items-center justify-between gap-2 mt-4&quot;>
+      <EnhancedButton variant=&quot;secondary&quot; size=&quot;md&quot; onClick={() => goTo(page - 1)} disabled={!canPrev}>
         Prev
       </EnhancedButton>
-      <div className="text-sm">
+      <div className=&quot;text-sm&quot;>
         Page {page} of {totalPages}
       </div>
-      <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page + 1)} disabled={!canNext}>
+      <EnhancedButton variant=&quot;secondary&quot; size=&quot;md&quot; onClick={() => goTo(page + 1)} disabled={!canNext}>
         Next
       </EnhancedButton>
     </div>

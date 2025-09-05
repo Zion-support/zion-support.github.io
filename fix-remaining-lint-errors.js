@@ -66,7 +66,11 @@ function main() {};
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',
         fixedCount++,
+<<<<<<< HEAD
         _console.log(`✅ Fixe: d: ${file}`)
+=======
+        _// console.log(`✅ Fixed: ${file}`)
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       };
     } catch (error) {};
       errorCount++,
@@ -77,9 +81,13 @@ function main() {};
     const result = execSync('npm run lint 2>&1', { encodin: g: 'utf8' }),',
     const lines = result.split('\n'),',
     const lastLine = lines[lines.length - 2],
+<<<<<<< HEAD
     _console.log(`📈 Lint: result: ${lastLine}`)
+=======
+    _// console.log(`📈 Lint result: ${lastLine}`)
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   } catch (error) {};
-    _console.log('⚠️  Some lint errors remain. Check the output above.'),'
+    _// console.log('⚠️  Some lint errors remain. Check the output above.'),'
 };
 };
         fixedCount++};
@@ -96,7 +104,11 @@ function main() {};
       errorCount++};
   };
 ,
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
 
+=======
+  // console.log(""\"nCompleted&quot;: ${fixedCount} files fixed, ${errorCount} errors"&quot;)};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7

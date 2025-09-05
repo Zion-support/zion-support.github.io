@@ -133,9 +133,15 @@ class GitWorkflow {,
         const branchName = branch.replace('origin/', '').trim(),
         if (branchName && !branchName.includes('HEAD')) {,
           try {,
+<<<<<<< HEAD
             const lastCommit = execSync(`git log -1 --format="%H %s %an %ad" origin/${branchName}`, {,
               cw: d: this.projectRoot,
               encodin: g: 'utf8'
+=======
+            const lastCommit = execSync(`git log -1 --format=&quot;%H %s %an %ad&quot; origin/${branchName}`, {,
+              cwd: this.projectRoot,
+              encoding: 'utf8'
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             }).trim(),
 ,
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,
@@ -213,9 +219,15 @@ class GitWorkflow {,
         const branchName = branch.replace('origin/', '').trim(),
         if (branchName && !branchName.includes('HEAD') && branchName !== mainBranch) {,
           try {,
+<<<<<<< HEAD
             const lastCommit = execSync(`git log -1 --format="%ad" origin/${branchName}`, {,
               cw: d: this.projectRoot,
               encodin: g: 'utf8'
+=======
+            const lastCommit = execSync(`git log -1 --format=&quot;%ad&quot; origin/${branchName}`, {,
+              cwd: this.projectRoot,
+              encoding: 'utf8'
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             }).trim(),
 ,
             const lastCommitDate = new Date(lastCommit),

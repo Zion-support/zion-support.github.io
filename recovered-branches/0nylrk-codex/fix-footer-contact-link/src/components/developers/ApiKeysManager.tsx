@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",
 import { format } from "date-fns",
@@ -14,6 +15,25 @@ import { Badge } from "@/components/ui/badge",
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
+=======
+import { useState } from &quot;react&quot;;
+import { Check, Clock, Key, MoreVertical, RefreshCw, X } from &quot;lucide-react&quot;;
+import { format } from &quot;date-fns&quot;;
+import { useApiKeys, type ApiKeyScope } from &quot;@/hooks/useApiKeys&quot;;
+
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from &quot;@/components/ui/card&quot;;
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from &quot;@/components/ui/dialog&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Checkbox } from &quot;@/components/ui/checkbox&quot;;
+import { Label } from &quot;@/components/ui/label&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { Popover, PopoverContent, PopoverTrigger } from &quot;@/components/ui/popover&quot;;
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from &quot;@/components/ui/dropdown-menu&quot;;
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from &quot;@/components/ui/alert-dialog&quot;;
+
+import CodeBlock from &quot;./CodeBlock&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 import CodeBlock from "./CodeBlock",
 export function ApiKeysManager() {
@@ -33,8 +53,13 @@ export function ApiKeysManager() {
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
   
   // Create key form state
+<<<<<<< HEAD
   const [keyName, setKeyName] = useState(""),
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
+=======
+  const [keyName, setKeyName] = useState("&quot;);
+  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   // Load keys on mount
   useState(() => {
@@ -42,6 +67,7 @@ export function ApiKeysManager() {
   }),
   
   const handleCreateKey = async () => {
+<<<<<<< HEAD
     if (keyName.trim() === "" || selectedScopes.length === 0) return,
     
     await createApiKey(keyName, selectedScopes),
@@ -49,6 +75,15 @@ export function ApiKeysManager() {
     setKeyName(""),
     setSelectedScopes([])
   },
+=======
+    if (keyName.trim() === "&quot; || selectedScopes.length === 0) return;
+    
+    await createApiKey(keyName, selectedScopes);
+    setShowCreateDialog(false);
+    setKeyName("&quot;);
+    setSelectedScopes([]);
+  };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const handleRegenerateKey = async (keyId: string) => {
     await regenerateApiKey(keyId),
@@ -78,6 +113,7 @@ export function ApiKeysManager() {
   },
   
   const getExampleCode = (key: string) => {
+<<<<<<< HEAD
     return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
   -H "Content-Type: application/json"`
@@ -89,53 +125,66 @@ export function ApiKeysManager() {
     setSelectedScopes([]),
     setShowCreateDialog(false)
   },
+=======
+    return `curl -X GET &quot;https://api.ziontechgroup.com/v1/jobs&quot; \\
+  -H &quot;Authorization: Bearer ${key}&quot; \\
+  -H &quot;Content-Type: application/json&quot;`;
+  };
+
+  // Reset form when dialog closes
+  const handleDialogClose = () => {
+    setKeyName("&quot;);
+    setSelectedScopes([]);
+    setShowCreateDialog(false);
+  };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   return (
-    <Card className="bg-zinc-900 border-zinc-800 text-white">
+    <Card className=&quot;bg-zinc-900 border-zinc-800 text-white&quot;>
       <CardHeader>
-        <CardTitle className="text-xl flex items-center">
-          <Key className="mr-2" size={20} /> API Keys
+        <CardTitle className=&quot;text-xl flex items-center&quot;>
+          <Key className=&quot;mr-2&quot; size={20} /> API Keys
         </CardTitle>
-        <CardDescription className="text-zinc-400">
+        <CardDescription className=&quot;text-zinc-400&quot;>
           Create and manage API keys for accessing the Zion APIs.
         </CardDescription>
       </CardHeader>
       
       <CardContent>
-        <div className="flex justify-between items-center mb-6">
-          <p className="text-sm text-zinc-400">
+        <div className=&quot;flex justify-between items-center mb-6&quot;>
+          <p className=&quot;text-sm text-zinc-400&quot;>
             You have {keys.length} API {keys.length === 1 ? 'key' : 'keys'}
           </p>
           
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
             <DialogTrigger asChild>
-              <Button variant="default">Create New API Key</Button>
+              <Button variant=&quot;default&quot;>Create New API Key</Button>
             </DialogTrigger>
-            <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
+            <DialogContent className=&quot;bg-zinc-900 border-zinc-800 text-white&quot;>
               <DialogHeader>
                 <DialogTitle>Create API Key</DialogTitle>
-                <DialogDescription className="text-zinc-400">
+                <DialogDescription className=&quot;text-zinc-400&quot;>
                   Generate a new API key for accessing the Zion APIs.
                 </DialogDescription>
               </DialogHeader>
               
-              <div className="space-y-4 py-4">
-                <div className="space-y-2">
-                  <Label htmlFor="key-name">Key Name</Label>
+              <div className=&quot;space-y-4 py-4&quot;>
+                <div className=&quot;space-y-2&quot;>
+                  <Label htmlFor=&quot;key-name&quot;>Key Name</Label>
                   <Input
-                    id="key-name"
+                    id=&quot;key-name&quot;
                     value={keyName}
                     onChange={(e) => setKeyName(e.target.value)}
-                    placeholder="e.g. Production API Key"
-                    className="bg-zinc-800 border-zinc-700"
+                    placeholder=&quot;e.g. Production API Key&quot;
+                    className=&quot;bg-zinc-800 border-zinc-700&quot;
                   />
                 </div>
                 
-                <div className="space-y-2">
+                <div className=&quot;space-y-2&quot;>
                   <Label>Scopes</Label>
-                  <div className="grid gap-2 pt-2">
+                  <div className=&quot;grid gap-2 pt-2&quot;>
                     {scopeOptions.map((scope) => (
-                      <div key={scope.value} className="flex items-center space-x-2">
+                      <div key={scope.value} className=&quot;flex items-center space-x-2&quot;>
                         <Checkbox 
                           id={scope.value} 
                           checked={selectedScopes.includes(scope.value)}
@@ -143,10 +192,10 @@ export function ApiKeysManager() {
                         />
                         <Label
                           htmlFor={scope.value}
-                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                          className=&quot;text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70&quot;
                         >
                           {scope.label}
-                          <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>
+                          <span className=&quot;block text-xs text-zinc-400 mt-1&quot;>{scope.description}</span>
                         </Label>
                       </div>
                     ))}
@@ -155,7 +204,7 @@ export function ApiKeysManager() {
               </div>
               
               <DialogFooter>
-                <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
+                <Button variant=&quot;outline&quot; onClick={handleDialogClose}>Cancel</Button>
                 <Button onClick={handleCreateKey} disabled={keyName.trim() === "" || selectedScopes.length === 0}>
                   Create Key
                 </Button>
@@ -169,11 +218,11 @@ export function ApiKeysManager() {
           <div className="mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md">
             <div className="flex justify-between items-start mb-2">
               <span className="font-medium flex items-center">
-                <Check size={16} className="mr-2 text-green-500" /> New API Key Generated
+                <Check size={16} className="mr-2 text-green-500&quot; /> New API Key Generated
               </span>
               <Button
-                variant="ghost"
-                size="icon"
+                variant=&quot;ghost&quot;
+                size=&quot;icon"
                 className="h-6 w-6"
                 onClick={clearNewApiKey}
               >
@@ -185,9 +234,9 @@ export function ApiKeysManager() {
             </p>
             <CodeBlock code={newApiKey} className="mb-3" />
             <div className="text-sm text-zinc-400">
-              <span className="font-medium">Example usage:</span>
+              <span className="font-medium&quot;>Example usage:</span>
             </div>
-            <CodeBlock code={getExampleCode(newApiKey)} language="bash" />
+            <CodeBlock code={getExampleCode(newApiKey)} language=&quot;bash" />
           </div>
         )}
         
@@ -211,9 +260,9 @@ export function ApiKeysManager() {
                       <div className="flex items-center space-x-2 mt-1">
                         <span className="text-sm text-zinc-400 font-mono">{key.key_prefix}••••••••••••</span>
                         {key.is_active ? (
-                          <Badge className="bg-green-700 text-white">Active</Badge>
+                          <Badge className="bg-green-700 text-white&quot;>Active</Badge>
                         ) : (
-                          <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
+                          <Badge variant=&quot;secondary" className="bg-red-900 text-white border-red-800&quot;>Revoked</Badge>
                         )}
                       </div>
                     </div>
@@ -221,11 +270,11 @@ export function ApiKeysManager() {
                   
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" size="icon">
+                      <Button variant=&quot;ghost&quot; size=&quot;icon&quot;>
                         <MoreVertical size={16} />
                       </Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">
+                    <DropdownMenuContent align=&quot;end" className="bg-zinc-900 border-zinc-800 text-white">
                       <DropdownMenuItem
                         onClick={() => setShowRegenerateConfirm(key.id)}
                         className="cursor-pointer"
@@ -244,11 +293,11 @@ export function ApiKeysManager() {
                   </DropdownMenu>
                 </div>
                 
-                <div className="mt-3 flex flex-wrap gap-2">
+                <div className="mt-3 flex flex-wrap gap-2&quot;>
                   {key.scopes.map((scope) => (
                     <Badge 
                       key={scope} 
-                      variant="secondary"
+                      variant=&quot;secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
                     >
                       {scope}
@@ -285,10 +334,10 @@ export function ApiKeysManager() {
       </CardContent>
       
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
-        <div className="text-xs text-zinc-500">
+        <div className="text-xs text-zinc-500&quot;>
           Keep your API keys secure. They have the same permissions as your account.
         </div>
-        <Button variant="outline" size="sm" onClick={fetchApiKeys}>
+        <Button variant=&quot;outline&quot; size=&quot;sm" onClick={fetchApiKeys}>
           Refresh
         </Button>
       </CardFooter>

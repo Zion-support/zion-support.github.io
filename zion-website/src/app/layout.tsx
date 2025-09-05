@@ -40,10 +40,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang=&quot;en&quot; className=&quot;scroll-smooth&quot;>
       <body className={`${inter.className} bg-black text-white antialiased`}>
         <Navigation />
-        <main className="min-h-screen">
+        <main className=&quot;min-h-screen&quot;>
           {children}
         </main>
         <Footer />

@@ -41,7 +41,11 @@ export const monitorContent = async (
     // If this is a 'dangerous' flag, automatically hide content
     // This would be implemented in a real system with appropriate flags
     if (severity === 'dangerous') {
+<<<<<<< HEAD
       // // // console.log('Auto-hiding dangerous content:', contentId),
+=======
+      // console.log('Auto-hiding dangerous content:', contentId);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       // Code to hide content would go here
     }
   }

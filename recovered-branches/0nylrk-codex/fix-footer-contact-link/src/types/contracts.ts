@@ -1,5 +1,10 @@
 
+<<<<<<< HEAD
 import { ContractFormValues } from "@/components/contracts/components/ContractForm",
+=======
+import { ContractFormValues } from &quot;@/components/contracts/components/ContractForm&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export interface ContractTemplate {
   id: string,
   title: string,

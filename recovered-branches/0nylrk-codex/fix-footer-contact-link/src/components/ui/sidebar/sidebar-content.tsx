@@ -1,9 +1,9 @@
 
-import * as React from "react"
-import { Input } from "@/components/ui/input"
-import { Separator } from "@/components/ui/separator"
-import { cn } from "@/lib/utils"
-import type { SafeRef } from "../sidebar.types"
+import * as React from &quot;react&quot;
+import { Input } from &quot;@/components/ui/input&quot;
+import { Separator } from &quot;@/components/ui/separator&quot;
+import { cn } from &quot;@/lib/utils&quot;
+import type { SafeRef } from &quot;../sidebar.types&quot;
 
 export const SidebarInput = React.forwardRef<
   React.ElementRef<typeof Input>,
@@ -12,46 +12,46 @@ export const SidebarInput = React.forwardRef<
   return (
     <Input
       ref={ref}
-      data-sidebar="input"
+      data-sidebar=&quot;input&quot;
       className={cn(
-        "h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring",
+        &quot;h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring&quot;,
         props.className
       )}
       {...props}
     />
   )
 })
-SidebarInput.displayName = "SidebarInput"
+SidebarInput.displayName = &quot;SidebarInput&quot;
 
 export const SidebarHeader = React.forwardRef<
   HTMLDivElement,
-  React.ComponentProps<"div">
+  React.ComponentProps<&quot;div&quot;>
 >((props, ref) => {
   return (
     <div
       ref={ref as SafeRef<HTMLDivElement>}
-      data-sidebar="header"
-      className={cn("flex flex-col gap-2 p-2", props.className)}
+      data-sidebar=&quot;header&quot;
+      className={cn(&quot;flex flex-col gap-2 p-2&quot;, props.className)}
       {...props}
     />
   )
 })
-SidebarHeader.displayName = "SidebarHeader"
+SidebarHeader.displayName = &quot;SidebarHeader&quot;
 
 export const SidebarFooter = React.forwardRef<
   HTMLDivElement,
-  React.ComponentProps<"div">
+  React.ComponentProps<&quot;div&quot;>
 >((props, ref) => {
   return (
     <div
       ref={ref as SafeRef<HTMLDivElement>}
-      data-sidebar="footer"
-      className={cn("flex flex-col gap-2 p-2", props.className)}
+      data-sidebar=&quot;footer&quot;
+      className={cn(&quot;flex flex-col gap-2 p-2&quot;, props.className)}
       {...props}
     />
   )
 })
-SidebarFooter.displayName = "SidebarFooter"
+SidebarFooter.displayName = &quot;SidebarFooter&quot;
 
 export const SidebarSeparator = React.forwardRef<
   HTMLDivElement,
@@ -60,43 +60,43 @@ export const SidebarSeparator = React.forwardRef<
   return (
     <Separator
       ref={ref}
-      data-sidebar="separator"
-      className={cn("mx-2 w-auto bg-sidebar-border", props.className)}
+      data-sidebar=&quot;separator&quot;
+      className={cn(&quot;mx-2 w-auto bg-sidebar-border&quot;, props.className)}
       {...props}
     />
   )
 })
-SidebarSeparator.displayName = "SidebarSeparator"
+SidebarSeparator.displayName = &quot;SidebarSeparator&quot;
 
 export const SidebarContent = React.forwardRef<
   HTMLDivElement,
-  React.ComponentProps<"div">
+  React.ComponentProps<&quot;div&quot;>
 >((props, ref) => {
   return (
     <div
       ref={ref}
-      data-sidebar="content"
+      data-sidebar=&quot;content&quot;
       className={cn(
-        "flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden",
+        &quot;flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden&quot;,
         props.className
       )}
       {...props}
     />
   )
 })
-SidebarContent.displayName = "SidebarContent"
+SidebarContent.displayName = &quot;SidebarContent&quot;
 
 export const SidebarGroup = React.forwardRef<
   HTMLDivElement,
-  React.ComponentProps<"div">
+  React.ComponentProps<&quot;div&quot;>
 >((props, ref) => {
   return (
     <div
       ref={ref}
-      data-sidebar="group"
-      className={cn("relative flex w-full min-w-0 flex-col p-2", props.className)}
+      data-sidebar=&quot;group&quot;
+      className={cn(&quot;relative flex w-full min-w-0 flex-col p-2&quot;, props.className)}
       {...props}
     />
   )
 })
-SidebarGroup.displayName = "SidebarGroup"
+SidebarGroup.displayName = &quot;SidebarGroup&quot;

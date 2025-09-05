@@ -58,31 +58,31 @@ export default function TokenManager() {
     <ProtectedRoute adminOnly>
       <div>
         <Header />
-        <div className="min-h-screen bg-zion-blue px-4 py-8">
-          <div className="container mx-auto">
-            <h1 className="text-3xl font-bold text-white mb-6">Token Manager</h1>
-            <Card className="mb-6">
+        <div className=&quot;min-h-screen bg-zion-blue px-4 py-8&quot;>
+          <div className=&quot;container mx-auto&quot;>
+            <h1 className=&quot;text-3xl font-bold text-white mb-6&quot;>Token Manager</h1>
+            <Card className=&quot;mb-6&quot;>
               <CardHeader>
                 <CardTitle>Issue or Revoke Tokens</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <Input placeholder="User ID" value={userId} onChange={e => setUserId(e.target.value)} />
-                <Input type="number" placeholder="Amount" value={amount} onChange={e => setAmount(parseInt(e.target.value))} />
-                <div className="flex gap-2">
+              <CardContent className=&quot;space-y-4&quot;>
+                <Input placeholder=&quot;User ID&quot; value={userId} onChange={e => setUserId(e.target.value)} />
+                <Input type=&quot;number&quot; placeholder=&quot;Amount&quot; value={amount} onChange={e => setAmount(parseInt(e.target.value))} />
+                <div className=&quot;flex gap-2&quot;>
                   <Button onClick={() => handleIssue('earn')}>Issue</Button>
-                  <Button variant="destructive" onClick={() => handleIssue('burn')}>Revoke</Button>
+                  <Button variant=&quot;destructive&quot; onClick={() => handleIssue('burn')}>Revoke</Button>
                 </div>
               </CardContent>
             </Card>
 
-            <Tabs defaultValue="history">
+            <Tabs defaultValue=&quot;history&quot;>
               <TabsList>
-                <TabsTrigger value="history">Transaction History</TabsTrigger>
+                <TabsTrigger value=&quot;history&quot;>Transaction History</TabsTrigger>
               </TabsList>
-              <TabsContent value="history">
-                <ul className="space-y-2">
+              <TabsContent value=&quot;history&quot;>
+                <ul className=&quot;space-y-2&quot;>
                   {transactions.map(tx => (
-                    <li key={tx.id} className="flex justify-between border-b py-2 text-white">
+                    <li key={tx.id} className=&quot;flex justify-between border-b py-2 text-white&quot;>
                       <span>{tx.user_id}</span>
                       <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>
                     </li>

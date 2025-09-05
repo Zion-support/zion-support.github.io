@@ -1,8 +1,15 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+=======
+import React from &quot;react&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from &quot;@/components/ui/select&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import { Search, Filter } from 'lucide-react'
 
 interface FraudFiltersProps {
@@ -28,58 +35,63 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   setContentTypeFilter,
   resetFilters}) => {
   return (
-    <div className="flex flex-col md:flex-row gap-4 mb-6">
-      <div className="relative flex-1">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+    <div className=&quot;flex flex-col md:flex-row gap-4 mb-6&quot;>
+      <div className=&quot;relative flex-1&quot;>
+        <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400&quot; />
         <Input
-          placeholder="Search by user or content..."
+          placeholder=&quot;Search by user or content...&quot;
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="pl-10"
+          className=&quot;pl-10&quot;
         />
       </div>
       
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
-        <SelectTrigger className="w-[180px]">
-          <SelectValue placeholder="Status" />
+        <SelectTrigger className="w-[180px]&quot;>
+          <SelectValue placeholder=&quot;Status&quot; />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="">All Statuses</SelectItem>
-          <SelectItem value="pending">Pending</SelectItem>
-          <SelectItem value="reviewed">Reviewed</SelectItem>
-          <SelectItem value="ignored">Ignored</SelectItem>
-          <SelectItem value="actioned">Actioned</SelectItem>
+          <SelectItem value="&quot;>All Statuses</SelectItem>
+          <SelectItem value=&quot;pending&quot;>Pending</SelectItem>
+          <SelectItem value=&quot;reviewed&quot;>Reviewed</SelectItem>
+          <SelectItem value=&quot;ignored&quot;>Ignored</SelectItem>
+          <SelectItem value=&quot;actioned&quot;>Actioned</SelectItem>
         </SelectContent>
       </Select>
       
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
-        <SelectTrigger className="w-[180px]">
-          <SelectValue placeholder="Severity" />
+        <SelectTrigger className="w-[180px]&quot;>
+          <SelectValue placeholder=&quot;Severity&quot; />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="">All Severities</SelectItem>
-          <SelectItem value="safe">Safe</SelectItem>
-          <SelectItem value="suspicious">Suspicious</SelectItem>
-          <SelectItem value="dangerous">Dangerous</SelectItem>
+          <SelectItem value="&quot;>All Severities</SelectItem>
+          <SelectItem value=&quot;safe&quot;>Safe</SelectItem>
+          <SelectItem value=&quot;suspicious&quot;>Suspicious</SelectItem>
+          <SelectItem value=&quot;dangerous&quot;>Dangerous</SelectItem>
         </SelectContent>
       </Select>
       
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
-        <SelectTrigger className="w-[180px]">
-          <SelectValue placeholder="Content Type" />
+        <SelectTrigger className="w-[180px]&quot;>
+          <SelectValue placeholder=&quot;Content Type&quot; />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="">All Types</SelectItem>
-          <SelectItem value="signup">Signups</SelectItem>
-          <SelectItem value="job">Jobs</SelectItem>
-          <SelectItem value="message">Messages</SelectItem>
-          <SelectItem value="quote">Quotes</SelectItem>
-          <SelectItem value="review">Reviews</SelectItem>
+          <SelectItem value="&quot;>All Types</SelectItem>
+          <SelectItem value=&quot;signup&quot;>Signups</SelectItem>
+          <SelectItem value=&quot;job&quot;>Jobs</SelectItem>
+          <SelectItem value=&quot;message&quot;>Messages</SelectItem>
+          <SelectItem value=&quot;quote&quot;>Quotes</SelectItem>
+          <SelectItem value=&quot;review&quot;>Reviews</SelectItem>
         </SelectContent>
       </Select>
       
+<<<<<<< HEAD
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">
         <Filter className="h-4 w-4 mr-2" /> Reset Filters
+=======
+      <Button variant=&quot;outline&quot; onClick={resetFilters} className=&quot;md:w-auto&quot;>
+        <Filter className=&quot;h-4 w-4 mr-2&quot; /> Reset Filters
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       </Button>
     </div>
   )

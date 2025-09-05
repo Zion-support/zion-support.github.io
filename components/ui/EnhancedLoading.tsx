@@ -5,9 +5,9 @@ type EnhancedLoadingProps = {
 
 export default function EnhancedLoading({ lines = 3 }: EnhancedLoadingProps) {
   return (
-    <div className="space-y-2">
+    <div className=&quot;space-y-2&quot;>
       {Array.from({ length: lines }).map((_, idx) => (
-        <div key={idx} className="skeleton h-4 rounded" />
+        <div key={idx} className=&quot;skeleton h-4 rounded&quot; />
       ))}
     </div>
   )

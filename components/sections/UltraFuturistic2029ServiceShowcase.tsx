@@ -30,8 +30,8 @@ const categoryIcons: { [key: string]: any } = {
 
 const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceShowcaseProps> = ({
   services,
-  title = "2029 Ultra-Futuristic Innovations",
-  subtitle = "Experience the future of technology with our revolutionary services",
+  title = &quot;2029 Ultra-Futuristic Innovations&quot;,
+  subtitle = &quot;Experience the future of technology with our revolutionary services&quot;,
   maxServices = 12
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
@@ -77,33 +77,33 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut" as const
+        ease: &quot;easeOut&quot; as const
       }
     }
   },
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section className=&quot;py-20 relative overflow-hidden&quot;>
       {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
+      <div className=&quot;absolute inset-0 pointer-events-none&quot;>
+        <div className=&quot;absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl&quot;></div>
+        <div className=&quot;absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl&quot;></div>
+        <div className=&quot;absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl&quot;></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className=&quot;text-center mb-16&quot;
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6"
+            className=&quot;text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6&quot;
           >
             {title}
           </motion.h2>
@@ -111,7 +111,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+            className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed&quot;
           >
             {subtitle}
           </motion.p>
@@ -122,12 +122,12 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12"
+          className=&quot;flex flex-col sm:flex-row items-center justify-between gap-4 mb-12&quot;
         >
           {/* Category Filter */}
-          <div className="flex items-center space-x-2">
-            <span className="text-gray-300 text-sm font-medium">Filter by:</span>
-            <div className="flex flex-wrap gap-2">
+          <div className=&quot;flex items-center space-x-2&quot;>
+            <span className=&quot;text-gray-300 text-sm font-medium&quot;>Filter by:</span>
+            <div className=&quot;flex flex-wrap gap-2&quot;>
               {categories.map((category) => (
                 <button
                   key={category}
@@ -145,16 +145,16 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           </div>
 
           {/* Sort Options */}
-          <div className="flex items-center space-x-2">
-            <span className="text-gray-300 text-sm font-medium">Sort by:</span>
+          <div className=&quot;flex items-center space-x-2&quot;>
+            <span className=&quot;text-gray-300 text-sm font-medium&quot;>Sort by:</span>
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
-              className="px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 focus:outline-none focus:border-purple-500"
+              className=&quot;px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 focus:outline-none focus:border-purple-500&quot;
             >
-              <option value="innovation">Innovation Level</option>
-              <option value="price">Price</option>
-              <option value="rating">Rating</option>
+              <option value=&quot;innovation&quot;>Innovation Level</option>
+              <option value=&quot;price&quot;>Price</option>
+              <option value=&quot;rating&quot;>Rating</option>
             </select>
           </div>
         </motion.div>
@@ -162,20 +162,20 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial=&quot;hidden&quot;
+          whileInView=&quot;visible&quot;
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
         >
           {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
-              className="group"
+              className=&quot;group&quot;
             >
               <UltraFuturisticServiceCard
                 service={service}
-                className="h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300"
+                className=&quot;h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300&quot;
               />
             </motion.div>
           ))}
@@ -186,25 +186,25 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center mt-16"
+          className=&quot;text-center mt-16&quot;
         >
-          <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm">
-            <h3 className="text-3xl font-bold text-white mb-4">
+          <div className=&quot;bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm&quot;>
+            <h3 className=&quot;text-3xl font-bold text-white mb-4&quot;>
               Ready to Experience the Future?
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-2xl mx-auto&quot;>
               Join thousands of forward-thinking companies already using our revolutionary 2029 technology solutions.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className=&quot;flex flex-col sm:flex-row items-center justify-center gap-4&quot;>
               <a
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25"
+                href=&quot;/contact&quot;
+                className=&quot;px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25&quot;
               >
                 Get Started Today
               </a>
               <a
-                href="/pricing"
-                className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold"
+                href=&quot;/pricing&quot;
+                className=&quot;px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold&quot;
               >
                 View Pricing
               </a>
@@ -217,9 +217,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-20"
+          className=&quot;mt-20&quot;
         >
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-4 gap-8&quot;>
             {[
               { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
               { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
@@ -231,13 +231,13 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
+                className=&quot;text-center&quot;
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                  <stat.icon className="w-8 h-8 text-white" />
+                  <stat.icon className=&quot;w-8 h-8 text-white&quot; />
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-400">{stat.label}</div>
+                <div className=&quot;text-3xl font-bold text-white mb-2&quot;>{stat.value}</div>
+                <div className=&quot;text-gray-400&quot;>{stat.label}</div>
               </motion.div>
             ))}
           </div>

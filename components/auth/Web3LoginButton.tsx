@@ -45,10 +45,10 @@ export default function Web3LoginButton() {
   if (user) {
     const base = displayName || `${user.address.slice(0, 6)}…${user.address.slice(-4)}`,
     return (
-      <div className="flex items-center gap-2">
-        <span className="hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5">Web3 Verified</span>
-        <button className="rounded-md border px-2 py-1 text-xs" onClick={() => setOpen(true)}>{base}</button>
-        <button className="text-xs text-red-600" onClick={disconnect}>Logout</button>
+      <div className=&quot;flex items-center gap-2&quot;>
+        <span className=&quot;hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5&quot;>Web3 Verified</span>
+        <button className=&quot;rounded-md border px-2 py-1 text-xs&quot; onClick={() => setOpen(true)}>{base}</button>
+        <button className=&quot;text-xs text-red-600&quot; onClick={disconnect}>Logout</button>
         {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
       </div>
     )
@@ -56,7 +56,7 @@ export default function Web3LoginButton() {
 
   return (
     <>
-      <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs">Connect Wallet</button>
+      <button onClick={() => setOpen(true)} className=&quot;rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs&quot;>Connect Wallet</button>
       {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
     </>
   )

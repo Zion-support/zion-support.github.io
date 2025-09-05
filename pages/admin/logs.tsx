@@ -48,6 +48,7 @@ interface LogsPageProps {
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
     case 'debug':
+<<<<<<< HEAD
       return <Info className="h-4 w-4 text-blue-500" />,
     case 'info':
       return <Info className="h-4 w-4 text-green-500" />,
@@ -58,6 +59,19 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
     case 'critical':
       return <XCircle className="h-4 w-4 text-red-700" />,
     default: return <Info className="h-4 w-4 text-gray-500" />
+=======
+      return <Info className=&quot;h-4 w-4 text-blue-500&quot; />;
+    case 'info':
+      return <Info className=&quot;h-4 w-4 text-green-500&quot; />;
+    case 'warn':
+      return <AlertTriangle className=&quot;h-4 w-4 text-yellow-500&quot; />;
+    case 'error':
+      return <AlertCircle className=&quot;h-4 w-4 text-red-500&quot; />;
+    case 'critical':
+      return <XCircle className=&quot;h-4 w-4 text-red-700&quot; />;
+    default:
+      return <Info className=&quot;h-4 w-4 text-gray-500&quot; />;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 },
 
@@ -167,64 +181,64 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
   },
 
   return (
-    <div className="container mx-auto p-6 space-y-6">
-      <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold">System Logs & Error Monitoring</h1>
-        <div className="flex items-center space-x-2">
-          <Button onClick={refreshLogs} disabled={isLoading} variant="outline">
+    <div className=&quot;container mx-auto p-6 space-y-6&quot;>
+      <div className=&quot;flex items-center justify-between&quot;>
+        <h1 className=&quot;text-3xl font-bold&quot;>System Logs & Error Monitoring</h1>
+        <div className=&quot;flex items-center space-x-2&quot;>
+          <Button onClick={refreshLogs} disabled={isLoading} variant=&quot;outline&quot;>
             <RefreshCw className={`h-4 w-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
             Refresh
           </Button>
-          <Button onClick={exportLogs} variant="outline">
-            <Download className="h-4 w-4 mr-2" />
+          <Button onClick={exportLogs} variant=&quot;outline&quot;>
+            <Download className=&quot;h-4 w-4 mr-2&quot; />
             Export
           </Button>
         </div>
       </div>
 
       {/* Summary Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className=&quot;grid grid-cols-1 md:grid-cols-4 gap-4&quot;>
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Logs</CardTitle>
-            <Info className="h-4 w-4 text-muted-foreground" />
+          <CardHeader className=&quot;flex flex-row items-center justify-between space-y-0 pb-2&quot;>
+            <CardTitle className=&quot;text-sm font-medium&quot;>Total Logs</CardTitle>
+            <Info className=&quot;h-4 w-4 text-muted-foreground&quot; />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">{totalCount}</div>
-            <p className="text-xs text-muted-foreground">All log entries</p>
+            <div className=&quot;text-2xl font-bold&quot;>{totalCount}</div>
+            <p className=&quot;text-xs text-muted-foreground&quot;>All log entries</p>
           </CardContent>
         </Card>
 
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Errors</CardTitle>
-            <XCircle className="h-4 w-4 text-red-500" />
+          <CardHeader className=&quot;flex flex-row items-center justify-between space-y-0 pb-2&quot;>
+            <CardTitle className=&quot;text-sm font-medium&quot;>Errors</CardTitle>
+            <XCircle className=&quot;h-4 w-4 text-red-500&quot; />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-red-600">{errorCount}</div>
-            <p className="text-xs text-muted-foreground">Critical & error logs</p>
+            <div className=&quot;text-2xl font-bold text-red-600&quot;>{errorCount}</div>
+            <p className=&quot;text-xs text-muted-foreground&quot;>Critical & error logs</p>
           </CardContent>
         </Card>
 
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Warnings</CardTitle>
-            <AlertTriangle className="h-4 w-4 text-yellow-500" />
+          <CardHeader className=&quot;flex flex-row items-center justify-between space-y-0 pb-2&quot;>
+            <CardTitle className=&quot;text-sm font-medium&quot;>Warnings</CardTitle>
+            <AlertTriangle className=&quot;h-4 w-4 text-yellow-500&quot; />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-yellow-600">{warningCount}</div>
-            <p className="text-xs text-muted-foreground">Warning logs</p>
+            <div className=&quot;text-2xl font-bold text-yellow-600&quot;>{warningCount}</div>
+            <p className=&quot;text-xs text-muted-foreground&quot;>Warning logs</p>
           </CardContent>
         </Card>
 
         <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Last Updated</CardTitle>
-            <RefreshCw className="h-4 w-4 text-muted-foreground" />
+          <CardHeader className=&quot;flex flex-row items-center justify-between space-y-0 pb-2&quot;>
+            <CardTitle className=&quot;text-sm font-medium&quot;>Last Updated</CardTitle>
+            <RefreshCw className=&quot;h-4 w-4 text-muted-foreground&quot; />
           </CardHeader>
           <CardContent>
-            <div className="text-sm font-medium">{formatTimestamp(lastUpdated)}</div>
-            <p className="text-xs text-muted-foreground">Data freshness</p>
+            <div className=&quot;text-sm font-medium&quot;>{formatTimestamp(lastUpdated)}</div>
+            <p className=&quot;text-xs text-muted-foreground&quot;>Data freshness</p>
           </CardContent>
         </Card>
       </div>
@@ -235,12 +249,12 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
           <CardTitle>Filters</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div className="relative">
-              <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
+          <div className=&quot;grid grid-cols-1 md:grid-cols-4 gap-4&quot;>
+            <div className=&quot;relative&quot;>
+              <Search className=&quot;absolute left-2 top-2.5 h-4 w-4 text-muted-foreground&quot; />
               <Input
-                placeholder="Search logs..."
-                className="pl-8"
+                placeholder=&quot;Search logs...&quot;
+                className=&quot;pl-8&quot;
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -248,24 +262,24 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
             
             <Select value={levelFilter} onValueChange={setLevelFilter}>
               <SelectTrigger>
-                <SelectValue placeholder="All levels" />
+                <SelectValue placeholder=&quot;All levels&quot; />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">All Levels</SelectItem>
-                <SelectItem value="debug">Debug</SelectItem>
-                <SelectItem value="info">Info</SelectItem>
-                <SelectItem value="warn">Warning</SelectItem>
-                <SelectItem value="error">Error</SelectItem>
-                <SelectItem value="critical">Critical</SelectItem>
+                <SelectItem value=&quot;all&quot;>All Levels</SelectItem>
+                <SelectItem value=&quot;debug&quot;>Debug</SelectItem>
+                <SelectItem value=&quot;info&quot;>Info</SelectItem>
+                <SelectItem value=&quot;warn&quot;>Warning</SelectItem>
+                <SelectItem value=&quot;error&quot;>Error</SelectItem>
+                <SelectItem value=&quot;critical&quot;>Critical</SelectItem>
               </SelectContent>
             </Select>
 
             <Select value={categoryFilter} onValueChange={setCategoryFilter}>
               <SelectTrigger>
-                <SelectValue placeholder="All categories" />
+                <SelectValue placeholder=&quot;All categories&quot; />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">All Categories</SelectItem>
+                <SelectItem value=&quot;all&quot;>All Categories</SelectItem>
                 {categories.map(category => (
                   <SelectItem key={category} value={category}>{category}</SelectItem>
                 ))}
@@ -274,10 +288,10 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 
             <Select value={sourceFilter} onValueChange={setSourceFilter}>
               <SelectTrigger>
-                <SelectValue placeholder="All sources" />
+                <SelectValue placeholder=&quot;All sources&quot; />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">All Sources</SelectItem>
+                <SelectItem value=&quot;all&quot;>All Sources</SelectItem>
                 {sources.map(source => (
                   <SelectItem key={source} value={source}>{source}</SelectItem>
                 ))}
@@ -293,57 +307,57 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
           <CardTitle>Log Entries ({filteredLogs.length})</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-4">
+          <div className=&quot;space-y-4&quot;>
             {filteredLogs.length > 0 ? (
               filteredLogs.map((log) => (
-                <div key={log.id} className="border rounded-lg p-4 space-y-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
+                <div key={log.id} className=&quot;border rounded-lg p-4 space-y-2&quot;>
+                  <div className=&quot;flex items-center justify-between&quot;>
+                    <div className=&quot;flex items-center space-x-2&quot;>
                       <LogLevelIcon level={log.level} />
                       <LogLevelBadge level={log.level} />
-                      <Badge variant="outline">{log.category}</Badge>
-                      <Badge variant="secondary">{log.source}</Badge>
+                      <Badge variant=&quot;outline&quot;>{log.category}</Badge>
+                      <Badge variant=&quot;secondary&quot;>{log.source}</Badge>
                       {log.component && (
-                        <Badge variant="outline">{log.component}</Badge>
+                        <Badge variant=&quot;outline&quot;>{log.component}</Badge>
                       )}
                     </div>
-                    <span className="text-sm text-muted-foreground">
+                    <span className=&quot;text-sm text-muted-foreground&quot;>
                       {formatTimestamp(log.timestamp)}
                     </span>
                   </div>
                   
-                  <div className="text-sm font-medium">{log.message}</div>
+                  <div className=&quot;text-sm font-medium&quot;>{log.message}</div>
                   
                   {log.context && Object.keys(log.context).length > 0 && (
-                    <details className="text-xs">
-                      <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
+                    <details className=&quot;text-xs&quot;>
+                      <summary className=&quot;cursor-pointer text-muted-foreground hover:text-foreground&quot;>
                         View Context
                       </summary>
-                      <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-x-auto">
+                      <pre className=&quot;mt-2 p-2 bg-muted rounded text-xs overflow-x-auto&quot;>
                         {JSON.stringify(log.context, null, 2)}
                       </pre>
                     </details>
                   )}
                   
                   {log.error && (
-                    <details className="text-xs">
-                      <summary className="cursor-pointer text-red-600 hover:text-red-800">
+                    <details className=&quot;text-xs&quot;>
+                      <summary className=&quot;cursor-pointer text-red-600 hover:text-red-800&quot;>
                         View Error Details
                       </summary>
-                      <div className="mt-2 p-2 bg-red-50 rounded">
+                      <div className=&quot;mt-2 p-2 bg-red-50 rounded&quot;>
                         <div><strong>Name:</strong> {log.error.name}</div>
                         <div><strong>Message:</strong> {log.error.message}</div>
                         {log.error.stack && (
-                          <details className="mt-2">
-                            <summary className="cursor-pointer">Stack Trace</summary>
-                            <pre className="mt-1 text-xs overflow-x-auto">{log.error.stack}</pre>
+                          <details className=&quot;mt-2&quot;>
+                            <summary className=&quot;cursor-pointer&quot;>Stack Trace</summary>
+                            <pre className=&quot;mt-1 text-xs overflow-x-auto&quot;>{log.error.stack}</pre>
                           </details>
                         )}
                       </div>
                     </details>
                   )}
                   
-                  <div className="flex items-center justify-between text-xs text-muted-foreground">
+                  <div className=&quot;flex items-center justify-between text-xs text-muted-foreground&quot;>
                     <div>
                       Session: {log.sessionId}
                       {log.userId && ` • User: ${log.userId}`}
@@ -354,14 +368,14 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                   </div>
                   
                   {log.url && (
-                    <div className="text-xs text-muted-foreground truncate">
+                    <div className=&quot;text-xs text-muted-foreground truncate&quot;>
                       URL: {log.url}
                     </div>
                   )}
                 </div>
               ))
             ) : (
-              <div className="text-center text-muted-foreground py-8">
+              <div className=&quot;text-center text-muted-foreground py-8&quot;>
                 No logs found matching the current filters.
               </div>
             )}

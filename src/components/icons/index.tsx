@@ -616,8 +616,13 @@ export const Icon: React.FC<IconProps> = ({
   const LucideIconComponent = iconMap[name],
 
   if (!LucideIconComponent) {
+<<<<<<< HEAD
     logWarn(`Icon "${name}" not found.`),
     return null
+=======
+    logWarn(`Icon &quot;${name}&quot; not found.`);
+    return null;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 
   // Render the dynamically selected Lucide icon component

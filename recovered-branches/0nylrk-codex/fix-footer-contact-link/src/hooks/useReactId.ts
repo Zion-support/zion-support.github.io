@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from &quot;react&quot;
 
 /**
  * React 18 introduced `useId` for generating unique IDs. If an older
@@ -6,7 +6,7 @@ import * as React from "react"
  * a small fallback that mimics the API using `useRef`.
  */
 export function useReactId(): string {
-  if (typeof (React as any).useId === "function") {
+  if (typeof (React as any).useId === &quot;function&quot;) {
     return (React as any).useId()
   }
 

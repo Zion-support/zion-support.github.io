@@ -41,9 +41,15 @@ async function main() {
       console.warn('Generate failed for', p.prompt),
       continue
     }
+<<<<<<< HEAD
     const file = path.join(outDir, `${res.slug}.json`),
     fs.writeFileSync(file, JSON.stringify(res.payload, null, 2)),
     // // // console.log('Wrote', file)
+=======
+    const file = path.join(outDir, `${res.slug}.json`);
+    fs.writeFileSync(file, JSON.stringify(res.payload, null, 2));
+    // console.log('Wrote', file);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 }
 

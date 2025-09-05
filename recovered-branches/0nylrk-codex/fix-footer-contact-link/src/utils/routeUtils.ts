@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
+=======
+import { completeSitemap, SitemapItem } from &quot;@/config/sitemap&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 // Find a route by path in the complete sitemap
 export const findRouteByPath = (path: string): SitemapItem | undefined => {

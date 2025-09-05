@@ -28,7 +28,7 @@ interface SearchProps {
 const EnhancedSearch: React.FC<SearchProps> = ({
   onSearch,
   onResultSelect,
-  placeholder = "Search revolutionary services...",
+  placeholder = &quot;Search revolutionary services...&quot;,
   className = "",
   showFilters = true
 }) => {
@@ -213,30 +213,30 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       {/* Search Form */}
       <form onSubmit={handleSearch} className="relative">
         <div className="relative">
-          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot; />
           <input
-            type="text"
+            type=&quot;text"
             value={query}
             onChange={handleInputChange}
             placeholder={placeholder}
-            className="w-full pl-12 pr-20 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+            className="w-full pl-12 pr-20 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300&quot;
             onFocus={() => setShowResults(true)}
           />
           
           {/* Clear Button */}
           {query && (
             <button
-              type="button"
+              type=&quot;button"
               onClick={clearSearch}
               className="absolute right-16 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
             >
-              <X className="w-4 h-4" />
+              <X className="w-4 h-4&quot; />
             </button>
           )}
           
           {/* Search Button */}
           <button
-            type="submit"
+            type=&quot;submit"
             className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
           >
             Search
@@ -381,7 +381,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                 </div>
               ) : query.trim().length > 0 ? (
                 <div className="text-center py-8">
-                  <div className="text-gray-400 mb-2">No results found for "{query}"</div>
+                  <div className="text-gray-400 mb-2&quot;>No results found for &quot;{query}"</div>
                   <div className="text-sm text-gray-500">Try adjusting your search terms or filters</div>
                 </div>
               ) : (

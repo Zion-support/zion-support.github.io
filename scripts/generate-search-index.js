@@ -29,7 +29,11 @@ function extractTextFromJSX(content) {
   // Simple text extraction from JSX/TSX content
   return content
     .replace(/<[^>]*>/g, ' ') // Remove HTML/JSX tags
+<<<<<<< HEAD
     .replace(/import.*?from.*?['"`][^'"`]*['"`],?/g, '') // Remove imports
+=======
+    .replace(/import.*?from.*?['&quot;`][^'&quot;`]*['"`];?/g, '') // Remove imports
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     .replace(/export.*?function.*?{/g, '') // Remove function declarations
     .replace(/[{}()]/g, ' ') // Remove brackets
     .replace(/\s+/g, ' ') // Normalize whitespace
@@ -96,8 +100,13 @@ function generateSearchIndex() {
   const indexPath = path.join(OUTPUT_DIR, 'index.json'),
   fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2)),
   
+<<<<<<< HEAD
   // // // console.log(`✅ Search index generated at: ${indexPath}`),
   // // // console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`)
+=======
+  // console.log(`✅ Search index generated at: ${indexPath}`);
+  // console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 }
 
 if (require.main === module) {

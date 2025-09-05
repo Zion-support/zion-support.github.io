@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -11,8 +12,23 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useForm } from "react-hook-form",
 import z from "zod",
 import { zodResolver } from "@hookform/resolvers/zod",
+=======
+import React, { useState } from &quot;react&quot;;
+import { useToast } from &quot;@/hooks/use-toast&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from &quot;@/components/ui/card&quot;;
+import { Loader, Sparkles } from &quot;lucide-react&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from &quot;@/components/ui/form&quot;;
+import { useForm } from &quot;react-hook-form&quot;;
+import z from &quot;zod&quot;;
+import { zodResolver } from &quot;@hookform/resolvers/zod&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 const formSchema = z.object({
-  title: z.string().min(3, "Title must be at least 3 characters"),
+  title: z.string().min(3, &quot;Title must be at least 3 characters&quot;),
   keyFeatures: z.string(),
   targetAudience: z.string()}),
 
@@ -29,9 +45,15 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+<<<<<<< HEAD
       title: "",
       keyFeatures: "",
       targetAudience: ""}}),
+=======
+      title: "&quot;,
+      keyFeatures: "&quot;,
+      targetAudience: "&quot;}});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const handleSubmit = async (data: FormData) => {
     setIsLoading(true),
@@ -56,6 +78,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       onDescriptionGenerated(response.description),
       
       toast({
+<<<<<<< HEAD
         title: "Description Generated",
         description: "Your professional service description has been created."
       })
@@ -66,6 +89,18 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
         description: error instanceof Error ? error.message : "Failed to generate description. Please try again.",
         variant: "destructive"
       })
+=======
+        title: &quot;Description Generated&quot;,
+        description: &quot;Your professional service description has been created.&quot;
+      });
+    } catch (error) {
+      console.error(&quot;Error generating description:&quot;, error);
+      toast({
+        title: &quot;Generation Failed&quot;,
+        description: error instanceof Error ? error.message : &quot;Failed to generate description. Please try again.&quot;,
+        variant: &quot;destructive"
+      });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsLoading(false)
     }
@@ -84,18 +119,18 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       </CardHeader>
       <CardContent>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
+          <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4&quot;>
             <FormField
               control={form.control}
-              name="title"
+              name=&quot;title"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-zion-slate-light">Service Title</FormLabel>
+                  <FormLabel className="text-zion-slate-light&quot;>Service Title</FormLabel>
                   <FormControl>
                     <Input 
                       {...field} 
-                      placeholder="e.g. Professional Web Design Services"
-                      className="bg-zion-blue border border-zion-blue-light text-white"
+                      placeholder=&quot;e.g. Professional Web Design Services"
+                      className="bg-zion-blue border border-zion-blue-light text-white&quot;
                       disabled={isLoading}
                     />
                   </FormControl>
@@ -106,15 +141,15 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
             
             <FormField
               control={form.control}
-              name="keyFeatures"
+              name=&quot;keyFeatures"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-zion-slate-light">Key Features</FormLabel>
+                  <FormLabel className="text-zion-slate-light&quot;>Key Features</FormLabel>
                   <FormControl>
                     <Textarea 
                       {...field}
-                      placeholder="Enter key features, separated by commas"
-                      className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
+                      placeholder=&quot;Enter key features, separated by commas"
+                      className="bg-zion-blue border border-zion-blue-light text-white min-h-20&quot;
                       disabled={isLoading}
                     />
                   </FormControl>
@@ -125,15 +160,15 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
             
             <FormField
               control={form.control}
-              name="targetAudience"
+              name=&quot;targetAudience"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-zion-slate-light">Target Audience</FormLabel>
+                  <FormLabel className="text-zion-slate-light&quot;>Target Audience</FormLabel>
                   <FormControl>
                     <Input 
                       {...field} 
-                      placeholder="e.g. Small businesses, Startups, E-commerce brands"
-                      className="bg-zion-blue border border-zion-blue-light text-white"
+                      placeholder=&quot;e.g. Small businesses, Startups, E-commerce brands"
+                      className="bg-zion-blue border border-zion-blue-light text-white&quot;
                       disabled={isLoading}
                     />
                   </FormControl>
@@ -143,7 +178,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
             />
             
             <Button 
-              type="submit"
+              type=&quot;submit"
               disabled={isLoading}
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
             >

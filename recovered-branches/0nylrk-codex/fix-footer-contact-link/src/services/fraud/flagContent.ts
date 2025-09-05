@@ -17,7 +17,11 @@ export const flagContent = async (
   ipAddress?: string
 ): Promise<FlagResult> => {
   try {
+<<<<<<< HEAD
     // // // console.log('Flagging content for review:', {
+=======
+    // console.log('Flagging content for review:', {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       userId,
       contentType,
       contentId,

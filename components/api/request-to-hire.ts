@@ -12,8 +12,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
+<<<<<<< HEAD
     const timestamp = new Date().toISOString(),
     // // // console.log('[Operator] New request to hire:', { timestamp, talentSlug, requesterName, requesterEmail, projectInfo }),
+=======
+    const timestamp = new Date().toISOString();
+    // console.log('[Operator] New request to hire:', { timestamp, talentSlug, requesterName, requesterEmail, projectInfo });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
     // Persist to data/requests as a simple CMS-like log
     const dir = path.join(process.cwd(), 'datarequests'),

@@ -48,12 +48,19 @@ export function useAIContentEnhancer() {
       const errorMessage = err.message || 'Failed to enhance content',
       setError(errorMessage),
       toast({
-        title: "AI Enhancement Failed",
+        title: &quot;AI Enhancement Failed&quot;,
         description: errorMessage,
+<<<<<<< HEAD
         variant: "destructive"
       }),
       console.error('Enhancement error:', err),
       return null
+=======
+        variant: &quot;destructive&quot;
+      });
+      console.error('Enhancement error:', err);
+      return null;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsEnhancing(false)
     }

@@ -7,9 +7,15 @@ function summarizeModules(modules: Record<string boolean>, bonus: Record<string 
   return active.length ? active.sort().join() : 'None'
 }
 
+<<<<<<< HEAD
 function missionParagraph(region: string, instanceName: string, modules: Record<string boolean>, bonus: Record<string boolean>) {
   const activeCount = Object.values(modules).filter(Boolean).length + Object.values(bonus).filter(Boolean).length,
   return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`
+=======
+function missionParagraph(region: string, instanceName: string, modules: Record<string, boolean>, bonus: Record<string, boolean>) {
+  const activeCount = Object.values(modules).filter(Boolean).length + Object.values(bonus).filter(Boolean).length;
+  return `&quot;${instanceName}&quot; activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

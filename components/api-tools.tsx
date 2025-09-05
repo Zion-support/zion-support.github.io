@@ -24,7 +24,7 @@ import {
 export default function ApiToolsPage() {
   const apiTools = [
     {
-      icon: <Code className="w-8 h-8 text-white" />,
+      icon: <Code className=&quot;w-8 h-8 text-white&quot; />,
       title: 'CodeGen API - AI-Powered Code Generation',
       description: 'Generate production-ready code in multiple languages using natural language descriptions and AI.',
       features: [
@@ -47,7 +47,7 @@ export default function ApiToolsPage() {
       responseTime: '<100ms'
     },
     {
-      icon: <Database className="w-8 h-8 text-white" />,
+      icon: <Database className=&quot;w-8 h-8 text-white&quot; />,
       title: 'DataSync API - Real-time Data Synchronization',
       description: 'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.',
       features: [
@@ -70,7 +70,7 @@ export default function ApiToolsPage() {
       responseTime: '<50ms'
     },
     {
-      icon: <Globe className="w-8 h-8 text-white" />,
+      icon: <Globe className=&quot;w-8 h-8 text-white&quot; />,
       title: 'GeoAPI - Advanced Geospatial Services',
       description: 'Comprehensive geolocation, mapping, and spatial analysis APIs for location-based applications.',
       features: [
@@ -93,7 +93,7 @@ export default function ApiToolsPage() {
       responseTime: '<75ms'
     },
     {
-      icon: <Shield className="w-8 h-8 text-white" />,
+      icon: <Shield className=&quot;w-8 h-8 text-white&quot; />,
       title: 'AuthGuard API - Enterprise Authentication',
       description: 'Secure, scalable authentication and authorization system with advanced security features.',
       features: [
@@ -116,7 +116,7 @@ export default function ApiToolsPage() {
       responseTime: '<25ms'
     },
     {
-      icon: <Zap className="w-8 h-8 text-white" />,
+      icon: <Zap className=&quot;w-8 h-8 text-white&quot; />,
       title: 'WebhookHub - Intelligent Webhook Management',
       description: 'Reliable webhook delivery, retry logic, and event processing for modern applications.',
       features: [
@@ -139,7 +139,7 @@ export default function ApiToolsPage() {
       responseTime: '<30ms'
     },
     {
-      icon: <Bot className="w-8 h-8 text-white" />,
+      icon: <Bot className=&quot;w-8 h-8 text-white&quot; />,
       title: 'NLP API - Natural Language Processing',
       description: 'Advanced text analysis, sentiment detection, and language understanding capabilities.',
       features: [
@@ -162,7 +162,7 @@ export default function ApiToolsPage() {
       responseTime: '<200ms'
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
+      icon: <BarChart3 className=&quot;w-8 h-8 text-white&quot; />,
       title: 'Analytics API - Business Intelligence',
       description: 'Comprehensive analytics and reporting APIs for data-driven decision making.',
       features: [
@@ -185,7 +185,7 @@ export default function ApiToolsPage() {
       responseTime: '<150ms'
     },
     {
-      icon: <Lock className="w-8 h-8 text-white" />,
+      icon: <Lock className=&quot;w-8 h-8 text-white&quot; />,
       title: 'EncryptAPI - Data Encryption Services',
       description: 'Enterprise-grade encryption, hashing, and cryptographic operations for secure applications.',
       features: [
@@ -220,30 +220,30 @@ export default function ApiToolsPage() {
     <>
       <Head>
         <title>API Tools & Developer Services | Zion Tech Group - Powerful APIs for Modern Applications</title>
-        <meta name="description" content="Discover powerful APIs and developer tools for building modern applications. From AI-powered code generation to real-time data synchronization, we provide the building blocks you need." />
-        <meta property="og:title" content="API Tools & Developer Services | Zion Tech Group" />
-        <meta property="og:description" content="Powerful APIs and developer tools for modern applications. AI, security, analytics, and more." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name=&quot;description&quot; content=&quot;Discover powerful APIs and developer tools for building modern applications. From AI-powered code generation to real-time data synchronization, we provide the building blocks you need.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;API Tools & Developer Services | Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Powerful APIs and developer tools for modern applications. AI, security, analytics, and more.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
       </Head>
 
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.15),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.1),transparent_50%)]" />
+      <section className=&quot;relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden&quot;>
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.15),transparent_50%)]&quot; />
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.1),transparent_50%)]&quot; />
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6">
-            <Terminal className="w-4 h-4 mr-2" />
+        <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
+          <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6&quot;>
+            <Terminal className=&quot;w-4 h-4 mr-2&quot; />
             Developer-First API Solutions
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-white leading-tight">
+          <h1 className=&quot;text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-white leading-tight&quot;>
             Powerful API Tools & Services
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+          <p className=&quot;text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed&quot;>
             Build faster, scale better, and deliver more with our comprehensive collection of developer APIs. Each tool is designed for performance, reliability, and ease of integration.
           </p>
           
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div className=&quot;flex flex-wrap justify-center gap-4 mb-8&quot;>
             {categories.map((category) => (
               <button
                 key={category}
@@ -262,102 +262,102 @@ export default function ApiToolsPage() {
       </section>
 
       {/* API Tools Grid */}
-      <section className="py-24 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
+      <section className=&quot;py-24 bg-gray-900&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;text-center mb-20&quot;>
+            <h2 className=&quot;text-3xl sm:text-4xl font-bold mb-6 text-white&quot;>
               {selectedCategory === 'All' ? 'All API Tools' : `${selectedCategory} APIs`}
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
               {filteredTools.length} APIs available. Each tool is production-ready with comprehensive documentation, SDKs, and support.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
             {filteredTools.map((tool, index) => (
               <Card
                 key={index}
-                className="group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300"
+                className=&quot;group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300&quot;
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex items-start space-x-6">
-                  <div className="relative">
+                <div className=&quot;flex items-start space-x-6&quot;>
+                  <div className=&quot;relative&quot;>
                     <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
                       {tool.icon}
                     </div>
                     <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
                   </div>
                   
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-3">
-                      <h3 className="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors duration-300">
+                  <div className=&quot;flex-1&quot;>
+                    <div className=&quot;flex items-center justify-between mb-3&quot;>
+                      <h3 className=&quot;text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors duration-300&quot;>
                         {tool.title}
                       </h3>
-                      <div className="flex items-center space-x-2">
-                        <div className="flex items-center text-yellow-400">
-                          <Star className="w-4 h-4 fill-current" />
-                          <span className="ml-1 text-sm font-medium">{tool.rating}</span>
+                      <div className=&quot;flex items-center space-x-2&quot;>
+                        <div className=&quot;flex items-center text-yellow-400&quot;>
+                          <Star className=&quot;w-4 h-4 fill-current&quot; />
+                          <span className=&quot;ml-1 text-sm font-medium&quot;>{tool.rating}</span>
                         </div>
-                        <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium">
+                        <span className=&quot;px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium&quot;>
                           {tool.status}
                         </span>
                       </div>
                     </div>
                     
-                    <p className="text-gray-400 leading-relaxed mb-6">
+                    <p className=&quot;text-gray-400 leading-relaxed mb-6&quot;>
                       {tool.description}
                     </p>
                     
-                    <div className="grid grid-cols-3 gap-4 mb-6">
-                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-                        <div className="text-lg font-bold text-indigo-400">{tool.users}</div>
-                        <div className="text-xs text-gray-500">Users</div>
+                    <div className=&quot;grid grid-cols-3 gap-4 mb-6&quot;>
+                      <div className=&quot;text-center p-3 bg-gray-800/50 rounded-lg&quot;>
+                        <div className=&quot;text-lg font-bold text-indigo-400&quot;>{tool.users}</div>
+                        <div className=&quot;text-xs text-gray-500&quot;>Users</div>
                       </div>
-                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-                        <div className="text-lg font-bold text-green-400">{tool.responseTime}</div>
-                        <div className="text-xs text-gray-500">Response</div>
+                      <div className=&quot;text-center p-3 bg-gray-800/50 rounded-lg&quot;>
+                        <div className=&quot;text-lg font-bold text-green-400&quot;>{tool.responseTime}</div>
+                        <div className=&quot;text-xs text-gray-500&quot;>Response</div>
                       </div>
-                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-                        <div className="text-sm font-medium text-gray-300">Starting at</div>
-                        <div className="text-lg font-bold text-green-400">{tool.pricing.free}</div>
+                      <div className=&quot;text-center p-3 bg-gray-800/50 rounded-lg&quot;>
+                        <div className=&quot;text-sm font-medium text-gray-300&quot;>Starting at</div>
+                        <div className=&quot;text-lg font-bold text-green-400&quot;>{tool.pricing.free}</div>
                       </div>
                     </div>
 
-                    <ul className="space-y-2 mb-6">
+                    <ul className=&quot;space-y-2 mb-6&quot;>
                       {tool.features.slice(0, 3).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <li key={featureIndex} className=&quot;flex items-center text-gray-300 text-sm&quot;>
+                          <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
                           {feature}
                         </li>
                       ))}
                     </ul>
 
-                    <div className="flex flex-wrap gap-3">
+                    <div className=&quot;flex flex-wrap gap-3&quot;>
                       <Button
                         href={tool.website}
-                        variant="primary"
-                        size="sm"
-                        className="bg-indigo-600 hover:bg-indigo-700"
+                        variant=&quot;primary&quot;
+                        size=&quot;sm&quot;
+                        className=&quot;bg-indigo-600 hover:bg-indigo-700&quot;
                       >
-                        <ExternalLink className="w-4 h-4 mr-2" />
+                        <ExternalLink className=&quot;w-4 h-4 mr-2&quot; />
                         Visit API
                       </Button>
                       <Button
                         href={tool.docs}
-                        variant="outline"
-                        size="sm"
-                        className="border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400"
+                        variant=&quot;outline&quot;
+                        size=&quot;sm&quot;
+                        className=&quot;border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400&quot;
                       >
-                        <BookOpen className="w-4 h-4 mr-2" />
+                        <BookOpen className=&quot;w-4 h-4 mr-2&quot; />
                         Documentation
                       </Button>
                       <Button
                         href={tool.github}
-                        variant="ghost"
-                        size="sm"
-                        className="text-gray-400 hover:text-indigo-400"
+                        variant=&quot;ghost&quot;
+                        size=&quot;sm&quot;
+                        className=&quot;text-gray-400 hover:text-indigo-400&quot;
                       >
-                        <Github className="w-4 h-4 mr-2" />
+                        <Github className=&quot;w-4 h-4 mr-2&quot; />
                         GitHub
                       </Button>
                     </div>
@@ -370,57 +370,57 @@ export default function ApiToolsPage() {
       </section>
 
       {/* Developer Resources */}
-      <section className="py-24 bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
+      <section className=&quot;py-24 bg-gray-800&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;text-center mb-20&quot;>
+            <h2 className=&quot;text-3xl sm:text-4xl font-bold mb-6 text-white&quot;>
               Developer Resources
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
               Everything you need to get started and build amazing applications with our APIs.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center border border-gray-700 hover:border-indigo-500/30">
-              <div className="w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <BookOpen className="w-8 h-8 text-indigo-400" />
+          <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
+            <Card className=&quot;text-center border border-gray-700 hover:border-indigo-500/30&quot;>
+              <div className=&quot;w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6&quot;>
+                <BookOpen className=&quot;w-8 h-8 text-indigo-400&quot; />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Comprehensive Documentation</h3>
-              <p className="text-gray-400 mb-6">
+              <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Comprehensive Documentation</h3>
+              <p className=&quot;text-gray-400 mb-6&quot;>
                 Detailed API references, code examples, and integration guides for every service.
               </p>
-              <Button href="/docs" variant="outline" size="sm">
+              <Button href=&quot;/docs&quot; variant=&quot;outline&quot; size=&quot;sm&quot;>
                 Explore Docs
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className=&quot;w-4 h-4 ml-2&quot; />
               </Button>
             </Card>
 
-            <Card className="text-center border border-gray-700 hover:border-indigo-500/30">
-              <div className="w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Play className="w-8 h-8 text-indigo-400" />
+            <Card className=&quot;text-center border border-gray-700 hover:border-indigo-500/30&quot;>
+              <div className=&quot;w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6&quot;>
+                <Play className=&quot;w-8 h-8 text-indigo-400&quot; />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Interactive Playground</h3>
-              <p className="text-gray-400 mb-6">
+              <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Interactive Playground</h3>
+              <p className=&quot;text-gray-400 mb-6&quot;>
                 Test APIs directly in your browser with our interactive testing environment.
               </p>
-              <Button href="/playground" variant="outline" size="sm">
+              <Button href=&quot;/playground&quot; variant=&quot;outline&quot; size=&quot;sm&quot;>
                 Try Playground
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className=&quot;w-4 h-4 ml-2&quot; />
               </Button>
             </Card>
 
-            <Card className="text-center border border-gray-700 hover:border-indigo-500/30">
-              <div className="w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Github className="w-8 h-8 text-indigo-400" />
+            <Card className=&quot;text-center border border-gray-700 hover:border-indigo-500/30&quot;>
+              <div className=&quot;w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6&quot;>
+                <Github className=&quot;w-8 h-8 text-indigo-400&quot; />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Open Source SDKs</h3>
-              <p className="text-gray-400 mb-6">
+              <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Open Source SDKs</h3>
+              <p className=&quot;text-gray-400 mb-6&quot;>
                 Official SDKs and client libraries for popular programming languages and frameworks.
               </p>
-              <Button href="/sdk" variant="outline" size="sm">
+              <Button href=&quot;/sdk&quot; variant=&quot;outline&quot; size=&quot;sm&quot;>
                 Browse SDKs
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className=&quot;w-4 h-4 ml-2&quot; />
               </Button>
             </Card>
           </div>
@@ -428,30 +428,37 @@ export default function ApiToolsPage() {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
+=======
+      <section className=&quot;py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden&quot;>
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10&quot; />
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10&quot;>
+          <h2 className=&quot;text-4xl sm:text-5xl font-bold text-white mb-8&quot;>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             Ready to Build Something Amazing?
           </h2>
-          <p className="text-xl text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className=&quot;text-xl text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed&quot;>
             Start integrating our APIs today and join thousands of developers building the future.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center&quot;>
             <Button
-              href="/contact"
-              variant="secondary"
-              size="lg"
-              className="bg-white text-indigo-600 hover:bg-gray-100 shadow-2xl"
+              href=&quot;/contact&quot;
+              variant=&quot;secondary&quot;
+              size=&quot;lg&quot;
+              className=&quot;bg-white text-indigo-600 hover:bg-gray-100 shadow-2xl&quot;
             >
               Get API Access
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
             </Button>
             <Button
-              href="/docs"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl"
+              href=&quot;/docs&quot;
+              variant=&quot;outline&quot;
+              size=&quot;lg&quot;
+              className=&quot;border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl&quot;
             >
               View Documentation
             </Button>

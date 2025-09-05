@@ -49,10 +49,10 @@ export function SafeImage({
       <div 
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
         style={{ width, height }}
-        role="img"
+        role=&quot;img&quot;
         aria-label={alt}
       >
-        <ImageIcon className="w-6 h-6" />
+        <ImageIcon className=&quot;w-6 h-6&quot; />
       </div>
     )
   }

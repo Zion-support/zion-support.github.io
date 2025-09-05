@@ -1,8 +1,16 @@
 
+<<<<<<< HEAD
 import { Button } from "./ui/button",
 import { Input } from "./ui/input",
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
+=======
+import { Button } from &quot;./ui/button&quot;;
+import { Input } from &quot;./ui/input&quot;;
+import { GradientHeading } from &quot;./GradientHeading&quot;;
+import { useState } from &quot;react&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -19,95 +27,95 @@ export function QuoteFormSection() {
   },
 
   return (
-    <section className="py-20 bg-zion-blue">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+    <section className=&quot;py-20 bg-zion-blue&quot;>
+      <div className=&quot;container mx-auto px-4 sm:px-6 lg:px-8&quot;>
+        <div className=&quot;text-center mb-12&quot;>
           <GradientHeading>Get a Quote Now</GradientHeading>
-          <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
+          <p className=&quot;mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto&quot;>
             Request your instant commercial proposal and discover how Zion can revolutionize your IT operations
           </p>
         </div>
 
-        <div className="max-w-2xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-8">
+        <div className=&quot;max-w-2xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-8&quot;>
           {isSubmitted ? (
-            <div className="text-center py-8">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-purple/20 rounded-full mb-6">
-                <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"></path>
+            <div className=&quot;text-center py-8&quot;>
+              <div className=&quot;inline-flex items-center justify-center w-16 h-16 bg-zion-purple/20 rounded-full mb-6&quot;>
+                <svg className=&quot;w-8 h-8 text-zion-cyan&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;>
+                  <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M5 13l4 4L19 7&quot;></path>
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Quote Request Sent!</h3>
-              <p className="text-zion-slate-light mb-6">
+              <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Quote Request Sent!</h3>
+              <p className=&quot;text-zion-slate-light mb-6&quot;>
                 Thank you for your interest in Zion's services. Our team will prepare your personalized commercial proposal and contact you shortly.
               </p>
               <Button 
                 onClick={() => setIsSubmitted(false)}
-                variant="outline" 
-                className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
+                variant=&quot;outline&quot; 
+                className=&quot;border-zion-purple text-zion-cyan hover:bg-zion-purple/10&quot;
               >
                 Submit Another Request
               </Button>
             </div>
           ) : (
             <form onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              <div className=&quot;grid grid-cols-1 gap-6 sm:grid-cols-2&quot;>
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">
+                  <label htmlFor=&quot;name&quot; className=&quot;block text-sm font-medium text-zion-slate-light mb-1&quot;>
                     Name
                   </label>
                   <Input
-                    id="name"
-                    type="text"
-                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+                    id=&quot;name&quot;
+                    type=&quot;text&quot;
+                    className=&quot;w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white&quot;
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-1">
+                  <label htmlFor=&quot;company&quot; className=&quot;block text-sm font-medium text-zion-slate-light mb-1&quot;>
                     Company
                   </label>
                   <Input
-                    id="company"
-                    type="text"
-                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+                    id=&quot;company&quot;
+                    type=&quot;text&quot;
+                    className=&quot;w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white&quot;
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">
+                  <label htmlFor=&quot;email&quot; className=&quot;block text-sm font-medium text-zion-slate-light mb-1&quot;>
                     Email
                   </label>
                   <Input
-                    id="email"
-                    type="email"
-                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+                    id=&quot;email&quot;
+                    type=&quot;email&quot;
+                    className=&quot;w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white&quot;
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-zion-slate-light mb-1">
+                  <label htmlFor=&quot;phone&quot; className=&quot;block text-sm font-medium text-zion-slate-light mb-1&quot;>
                     Phone
                   </label>
                   <Input
-                    id="phone"
-                    type="tel"
-                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+                    id=&quot;phone&quot;
+                    type=&quot;tel&quot;
+                    className=&quot;w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white&quot;
                   />
                 </div>
               </div>
               
-              <div className="mt-6">
-                <label htmlFor="interest" className="block text-sm font-medium text-zion-slate-light mb-1">
+              <div className=&quot;mt-6&quot;>
+                <label htmlFor=&quot;interest&quot; className=&quot;block text-sm font-medium text-zion-slate-light mb-1&quot;>
                   I'm interested in (select all that apply)
                 </label>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">
-                  {["AI Products/Services", "IT Equipment", "Server Solutions", "Storage Solutions", "Networking", "24/7 Support", "Recycling Services"].map((item, index) => (
-                    <div key={index} className="flex items-center">
+                <div className=&quot;grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2&quot;>
+                  {[&quot;AI Products/Services&quot;, &quot;IT Equipment&quot;, &quot;Server Solutions&quot;, &quot;Storage Solutions&quot;, &quot;Networking&quot;, &quot;24/7 Support&quot;, &quot;Recycling Services&quot;].map((item, index) => (
+                    <div key={index} className=&quot;flex items-center&quot;>
                       <input
                         id={`interest-${index}`}
-                        type="checkbox"
-                        className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
+                        type=&quot;checkbox&quot;
+                        className=&quot;h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50&quot;
                       />
-                      <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
+                      <label htmlFor={`interest-${index}`} className=&quot;ml-2 text-sm text-zion-slate-light&quot;>
                         {item}
                       </label>
                     </div>
@@ -115,24 +123,24 @@ export function QuoteFormSection() {
                 </div>
               </div>
               
-              <div className="mt-6">
-                <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1">
+              <div className=&quot;mt-6&quot;>
+                <label htmlFor=&quot;message&quot; className=&quot;block text-sm font-medium text-zion-slate-light mb-1&quot;>
                   Additional Details
                 </label>
                 <textarea
-                  id="message"
+                  id=&quot;message&quot;
                   rows={4}
-                  className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+                  className=&quot;w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white&quot;
                 ></textarea>
               </div>
               
-              <div className="mt-6">
+              <div className=&quot;mt-6&quot;>
                 <Button 
-                  type="submit" 
+                  type=&quot;submit&quot; 
                   disabled={isSubmitting} 
-                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-3"
+                  className=&quot;w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-3&quot;
                 >
-                  {isSubmitting ? "Sending..." : "Get Your Free Commercial Proposal"}
+                  {isSubmitting ? &quot;Sending...&quot; : &quot;Get Your Free Commercial Proposal&quot;}
                 </Button>
               </div>
             </form>

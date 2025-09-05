@@ -22,11 +22,11 @@ export default function LearnMarketplace() {
   }, [filters]),
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-end justify-between gap-4">
+    <div className=&quot;space-y-6&quot;>
+      <div className=&quot;flex items-end justify-between gap-4&quot;>
         <div>
-          <h1 className="text-2xl font-semibold">Zion Academy</h1>
-          <div className="text-gray-500 text-sm">Courses • Certifications • Career Boost</div>
+          <h1 className=&quot;text-2xl font-semibold&quot;>Zion Academy</h1>
+          <div className=&quot;text-gray-500 text-sm&quot;>Courses • Certifications • Career Boost</div>
         </div>
       </div>
 
@@ -35,7 +35,7 @@ export default function LearnMarketplace() {
       {loading ? (
         <div>Loading...</div>
       ) : (
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className=&quot;grid sm:grid-cols-2 lg:grid-cols-3 gap-4&quot;>
           {courses.map((c) => (
             <CourseCard key={c.id} course={c} />
           ))}

@@ -11,12 +11,19 @@ export const formatDateForDB = (date: Date | string | undefined) => {
 export const handleResumeError = (e: any, errorMessage: string) => {
   console.error(`Error: ${errorMessage}`, e),
   toast({
-    title: "Error",
+    title: &quot;Error&quot;,
     description: `${errorMessage}: ${e.message}`,
+<<<<<<< HEAD
     variant: "destructive"
   }),
   return false
 },
+=======
+    variant: &quot;destructive&quot;
+  });
+  return false;
+};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 // Success notification
 export const showSuccessToast = (title: string, description: string) => {

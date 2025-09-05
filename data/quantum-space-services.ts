@@ -17,25 +17,25 @@ export interface QuantumSpaceService {
 
 export const quantumSpaceServices: QuantumSpaceService[] = [
   {
-    id: "quantum-computing-platform",
-    name: "Quantum Computing Platform",
-    tagline: "Next-generation quantum computing solutions",
-    price: "$199/month",
-    description: "Advanced quantum computing platform for complex calculations and simulations.",
+    id: &quot;quantum-computing-platform&quot;,
+    name: &quot;Quantum Computing Platform&quot;,
+    tagline: &quot;Next-generation quantum computing solutions&quot;,
+    price: &quot;$199/month&quot;,
+    description: &quot;Advanced quantum computing platform for complex calculations and simulations.&quot;,
     features: [
-      "Quantum algorithms",
-      "Simulation tools",
-      "API access",
-      "Documentation",
-      "Support services"
+      &quot;Quantum algorithms&quot;,
+      &quot;Simulation tools&quot;,
+      &quot;API access&quot;,
+      &quot;Documentation&quot;,
+      &quot;Support services&quot;
     ],
-    link: "/services/quantum-computing-platform",
-    category: "Quantum Computing",
+    link: &quot;/services/quantum-computing-platform&quot;,
+    category: &quot;Quantum Computing&quot;,
     realImplementation: true,
     contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      mobile: &quot;+1 302 464 0950&quot;,
+      email: &quot;kleber@ziontechgroup.com&quot;,
+      address: &quot;364 E Main St STE 1008 Middletown DE 19709&quot;
     }
   }
 ],

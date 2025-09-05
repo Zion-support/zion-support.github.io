@@ -280,19 +280,19 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
   }, []),
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div className=&quot;fixed inset-0 pointer-events-none z-0 overflow-hidden&quot;>
       {/* HTML Canvas Background */}
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
+        className=&quot;absolute inset-0 w-full h-full&quot;
         style={{ filter: `blur(${0.5 * intensity}px)` }}
       />
       
       {/* Framer Motion Geometric Shapes */}
-      <div className="absolute inset-0">
+      <div className=&quot;absolute inset-0&quot;>
         {/* Floating geometric shapes */}
         <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
+          className=&quot;absolute top-20 left-20 w-32 h-32 border border-cyan-400/30&quot;
           animate={{
             rotate: 360,
             scale: [1, 1.2, 1],
@@ -301,12 +301,12 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           transition={{
             duration: 8,
             repeat: -1,
-            ease: "linear"
+            ease: &quot;linear&quot;
           }}
         />
         
         <motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full"
+          className=&quot;absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full&quot;
           animate={{
             y: [0, -20, 0],
             opacity: [0.4, 0.8, 0.4],
@@ -315,12 +315,12 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           transition={{
             duration: 6,
             repeat: -1,
-            ease: "easeInOut"
+            ease: &quot;easeInOut&quot;
           }}
         />
         
         <motion.div
-          className="absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30"
+          className=&quot;absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30&quot;
           style={{ clipPath: 'polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
           animate={{
             rotate: [0, 180, 360],
@@ -329,44 +329,44 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           transition={{
             duration: 12,
             repeat: -1,
-            ease: "linear"
+            ease: &quot;linear&quot;
           }}
         />
       </div>
 
       {/* Energy waves */}
-      <div className="absolute inset-0">
+      <div className=&quot;absolute inset-0&quot;>
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent"
+          className=&quot;absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent&quot;
           animate={{
             x: ['-100%100%']
           }}
           transition={{
             duration: 15,
             repeat: -1,
-            ease: "linear"
+            ease: &quot;linear&quot;
           }}
         />
         
         <motion.div
-          className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent"
+          className=&quot;absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent&quot;
           animate={{
             y: ['-100%100%']
           }}
           transition={{
             duration: 20,
             repeat: -1,
-            ease: "linear"
+            ease: &quot;linear&quot;
           }}
         />
       </div>
 
       {/* Holographic matrix effect */}
-      <div className="absolute inset-0">
+      <div className=&quot;absolute inset-0&quot;>
         {Array.from({ length: 20 }).map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/20 to-transparent"
+            className=&quot;absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/20 to-transparent&quot;
             style={{ left: `${(i * 5) % 100}%` }}
             animate={{
               opacity: [0, 1, 0],
@@ -376,16 +376,16 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
               duration: 3,
               delay: i * 0.1,
               repeat: -1,
-              ease: "easeInOut"
+              ease: &quot;easeInOut&quot;
             }}
           />
         ))}
       </div>
 
       {/* Cyberpunk grid */}
-      <div className="absolute inset-0">
+      <div className=&quot;absolute inset-0&quot;>
         <motion.div
-          className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
+          className=&quot;absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]&quot;
           style={{
             backgroundSize: '50px 50px'
           }}
@@ -395,7 +395,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           transition={{
             duration: 4,
             repeat: -1,
-            ease: "easeInOut"
+            ease: &quot;easeInOut&quot;
           }}
         />
       </div>

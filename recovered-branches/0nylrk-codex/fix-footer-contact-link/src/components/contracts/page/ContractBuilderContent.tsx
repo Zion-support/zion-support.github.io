@@ -40,11 +40,19 @@ export function ContractBuilderContent() {
   ]),
 
   const handleContractGenerated = (content: string) => {
+<<<<<<< HEAD
     // // // console.log('Contract generated:', content.substring(0, 100) + '...')
   },
 
   const handleViewContract = (contractId: string) => {
     // // // console.log('Viewing contract:', contractId),
+=======
+    // console.log('Contract generated:', content.substring(0, 100) + '...');
+  };
+
+  const handleViewContract = (contractId: string) => {
+    // console.log('Viewing contract:', contractId);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     // Future implementation: View specific contract details
   },
 

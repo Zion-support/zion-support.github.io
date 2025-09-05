@@ -60,19 +60,19 @@ export default function ServiceDescriptionGeneratorPage() {
   }
 
   return (
-    <div className="max-w-3xl mx-auto">
-      <h1 className="text-2xl font-semibold mb-4">Service Description Generator</h1>
-      <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
+    <div className=&quot;max-w-3xl mx-auto&quot;>
+      <h1 className=&quot;text-2xl font-semibold mb-4&quot;>Service Description Generator</h1>
+      <p className=&quot;text-sm text-gray-600 dark:text-gray-300 mb-6&quot;>
         Enter your service details. We will generate a polished description using GPT-4. You can edit it on the page and accept when ready.
       </p>
 
-      <form onSubmit={handleSubmit} className="space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4">
+      <form onSubmit={handleSubmit} className=&quot;space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4&quot;>
         <div>
-          <label className="block text-sm font-medium mb-1">Service Title</label>
+          <label className=&quot;block text-sm font-medium mb-1&quot;>Service Title</label>
           <input
-            type="text"
-            className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="e.g., On-Demand Web Performance Audit"
+            type=&quot;text&quot;
+            className=&quot;w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
+            placeholder=&quot;e.g., On-Demand Web Performance Audit&quot;
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
@@ -80,11 +80,11 @@ export default function ServiceDescriptionGeneratorPage() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1">Target Audience</label>
+          <label className=&quot;block text-sm font-medium mb-1&quot;>Target Audience</label>
           <input
-            type="text"
-            className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="e.g., CTOs and product teams at growth-stage SaaS"
+            type=&quot;text&quot;
+            className=&quot;w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
+            placeholder=&quot;e.g., CTOs and product teams at growth-stage SaaS&quot;
             value={targetAudience}
             onChange={(e) => setTargetAudience(e.target.value)}
             required
@@ -92,10 +92,10 @@ export default function ServiceDescriptionGeneratorPage() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1">Key Features (one per line)</label>
+          <label className=&quot;block text-sm font-medium mb-1&quot;>Key Features (one per line)</label>
           <textarea
-            className="w-full min-h-[120px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder={"e.g.\nCore Web Vitals deep-dive\nActionable prioritised recommendations\nHands-on fixes or step-by-step guidance"}
+            className=&quot;w-full min-h-[120px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
+            placeholder={&quot;e.g.\nCore Web Vitals deep-dive\nActionable prioritised recommendations\nHands-on fixes or step-by-step guidance&quot;}
             value={featuresInput}
             onChange={(e) => setFeaturesInput(e.target.value)}
             required
@@ -103,55 +103,55 @@ export default function ServiceDescriptionGeneratorPage() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1">Tone</label>
+          <label className=&quot;block text-sm font-medium mb-1&quot;>Tone</label>
           <select
-            className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className=&quot;w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
             value={tone}
             onChange={(e) => setTone(e.target.value as any)}
           >
-            <option value="professional">Professional</option>
-            <option value="friendly">Friendly</option>
-            <option value="persuasive">Persuasive</option>
-            <option value="technical">Technical</option>
+            <option value=&quot;professional&quot;>Professional</option>
+            <option value=&quot;friendly&quot;>Friendly</option>
+            <option value=&quot;persuasive&quot;>Persuasive</option>
+            <option value=&quot;technical&quot;>Technical</option>
           </select>
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1">Additional Notes (optional)</label>
+          <label className=&quot;block text-sm font-medium mb-1&quot;>Additional Notes (optional)</label>
           <textarea
-            className="w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Constraints, deliverables, timeline, pricing preferences, compliance, etc."
+            className=&quot;w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
+            placeholder=&quot;Constraints, deliverables, timeline, pricing preferences, compliance, etc.&quot;
             value={additionalNotes}
             onChange={(e) => setAdditionalNotes(e.target.value)}
           />
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className=&quot;flex items-center gap-3&quot;>
           <button
-            type="submit"
+            type=&quot;submit&quot;
             disabled={loading}
-            className="inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60"
+            className=&quot;inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60&quot;
           >
             {loading ? 'Generating…' : 'Generate Description'}
           </button>
-          {error && <span className="text-red-600 text-sm">{error}</span>}
+          {error && <span className=&quot;text-red-600 text-sm&quot;>{error}</span>}
         </div>
       </form>
 
       {generated && (
-        <div className="mt-8 space-y-3">
-          <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold">Generated Description</h2>
-            <div className="flex items-center gap-2">
+        <div className=&quot;mt-8 space-y-3&quot;>
+          <div className=&quot;flex items-center justify-between&quot;>
+            <h2 className=&quot;text-xl font-semibold&quot;>Generated Description</h2>
+            <div className=&quot;flex items-center gap-2&quot;>
               <button
                 onClick={handleCopy}
-                className="rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
+                className=&quot;rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800&quot;
               >
                 Copy
               </button>
               <button
                 onClick={handleAccept}
-                className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm"
+                className=&quot;rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm&quot;
               >
                 Accept
               </button>
@@ -159,13 +159,13 @@ export default function ServiceDescriptionGeneratorPage() {
           </div>
 
           <textarea
-            className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className=&quot;w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
             value={generated}
             onChange={(e) => setGenerated(e.target.value)}
           />
 
           {accepted && (
-            <div className="text-emerald-700 dark:text-emerald-400 text-sm">Accepted. You can copy and paste this into your CMS.</div>
+            <div className=&quot;text-emerald-700 dark:text-emerald-400 text-sm&quot;>Accepted. You can copy and paste this into your CMS.</div>
           )}
         </div>
       )}

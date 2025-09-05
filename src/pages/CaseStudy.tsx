@@ -20,7 +20,7 @@ export default function CaseStudy() {
 
   if (!study) {
     return (
-      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
+      <div className=&quot;min-h-screen bg-zion-blue flex items-center justify-center text-white&quot;>
         Case study not found.
       </div>
     )
@@ -29,59 +29,59 @@ export default function CaseStudy() {
   return (
     <>
       <SEO title={study.title} description={study.excerpt} />
-      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
-        <div className="container mx-auto max-w-3xl">
+      <div className=&quot;min-h-screen bg-zion-blue pt-12 pb-20 px-4&quot;>
+        <div className=&quot;container mx-auto max-w-3xl&quot;>
           <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
-          <Breadcrumb className="mb-4 text-sm text-muted-foreground">
+          <Breadcrumb className=&quot;mb-4 text-sm text-muted-foreground&quot;>
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="/">Home</Link>
+                  <Link href=&quot;/&quot;>Home</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="/case-studies">Case Studies</Link>
+                  <Link href=&quot;/case-studies&quot;>Case Studies</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink asChild aria-current="page">
+                <BreadcrumbLink asChild aria-current=&quot;page&quot;>
                   <span>{study.title}</span>
                 </BreadcrumbLink>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
           <Button
-            variant="outline"
-            className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+            variant=&quot;outline&quot;
+            className=&quot;mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white&quot;
             asChild
           >
-            <Link href="/case-studies">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
+            <Link href=&quot;/case-studies&quot;>
+              <ArrowLeft className=&quot;mr-2 h-4 w-4&quot; /> Back to Case Studies
             </Link>
           </Button>
           <img
             src={study.companyLogo}
             alt={`${study.company} logo`}
-            className="h-12 mb-4"
-            loading="lazy"
+            className=&quot;h-12 mb-4&quot;
+            loading=&quot;lazy&quot;
           />
-          <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
-          <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
+          <h1 className=&quot;text-3xl font-bold text-white mb-4&quot;>{study.title}</h1>
+          <p className=&quot;text-zion-slate-light mb-8&quot;>{study.excerpt}</p>
           {study.pdf && (
-            <Button variant="secondary" className="mb-6" asChild>
-              <a href={study.pdf} target="_blank" rel="noopener noreferrer">
+            <Button variant=&quot;secondary&quot; className=&quot;mb-6&quot; asChild>
+              <a href={study.pdf} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>
                 Download PDF
-              </a>
+              </Link>
             </Button>
           )}
           <div
-            className="prose prose-invert"
+            className=&quot;prose prose-invert&quot;
             dangerouslySetInnerHTML={{ __html: study.content }}
           />
-          <p className="mt-8 text-white font-semibold">
+          <p className=&quot;mt-8 text-white font-semibold&quot;>
             — {study.author}, {study.role}
           </p>
         </div>

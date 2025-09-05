@@ -123,20 +123,20 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
       }
 
       return (
-        <div className="flex min-h-screen items-center justify-center p-4">
-          <div className="w-full max-w-md space-y-4">
-            <Alert variant="destructive">
-              <div className="flex items-center gap-2">
+        <div className=&quot;flex min-h-screen items-center justify-center p-4&quot;>
+          <div className=&quot;w-full max-w-md space-y-4&quot;>
+            <Alert variant=&quot;destructive&quot;>
+              <div className=&quot;flex items-center gap-2&quot;>
                 {isNetworkError ? (
-                  <WifiOff className="h-4 w-4" />
+                  <WifiOff className=&quot;h-4 w-4&quot; />
                 ) : (
-                  <RefreshCw className="h-4 w-4" />
+                  <RefreshCw className=&quot;h-4 w-4&quot; />
                 )}
                 <AlertTitle>
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
                 </AlertTitle>
               </div>
-              <AlertDescription className="mt-2">
+              <AlertDescription className=&quot;mt-2&quot;>
                 {isNetworkError ? (
                   !this.state.isOnline ? (
                     'You appear to be offline. Please check your internet connection.'
@@ -149,47 +149,47 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
               </AlertDescription>
             </Alert>
 
-            <div className="flex flex-col gap-2">
+            <div className=&quot;flex flex-col gap-2&quot;>
               <Button
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
-                className="w-full"
+                className=&quot;w-full&quot;
               >
                 {this.state.isRetrying ? (
                   <>
-                    <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
+                    <RefreshCw className=&quot;mr-2 h-4 w-4 animate-spin&quot; />
                     Retrying...
                   </>
                 ) : (
                   <>
-                    <RefreshCw className="mr-2 h-4 w-4" />
+                    <RefreshCw className=&quot;mr-2 h-4 w-4&quot; />
                     Try Again
                   </>
                 )}
               </Button>
 
               <Button
-                variant="outline"
+                variant=&quot;outline&quot;
                 onClick={() => window.location.reload()}
-                className="w-full"
+                className=&quot;w-full&quot;
               >
                 Reload Page
               </Button>
             </div>
 
             {!this.state.isOnline && (
-              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                <WifiOff className="h-4 w-4" />
+              <div className=&quot;flex items-center justify-center gap-2 text-sm text-muted-foreground&quot;>
+                <WifiOff className=&quot;h-4 w-4&quot; />
                 <span>Offline</span>
               </div>
             )}
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-4 rounded border p-2 text-xs">
-                <summary className="cursor-pointer font-medium">
+              <details className=&quot;mt-4 rounded border p-2 text-xs&quot;>
+                <summary className=&quot;cursor-pointer font-medium&quot;>
                   Debug Info (Development Only)
                 </summary>
-                <pre className="mt-2 whitespace-pre-wrap break-all">
+                <pre className=&quot;mt-2 whitespace-pre-wrap break-all&quot;>
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>

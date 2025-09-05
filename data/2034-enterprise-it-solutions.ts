@@ -5,6 +5,7 @@ export type EnterpriseITSolution = {
 	description: string,
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 	pricing: {
+<<<<<<< HEAD
 		starter: string, // e.g. "$2,999/mo"
 		professional?: string,
 		enterprise?: string
@@ -17,6 +18,20 @@ export type EnterpriseITSolution = {
 	rating?: number,
 	launchDate?: string
 },
+=======
+		starter: string; // e.g. &quot;$2,999/mo&quot;
+		professional?: string;
+		enterprise?: string;
+	};
+	features: string[];
+	integrations?: string[];
+	useCases?: string[];
+	link: string; // canonical internal link under /services/*
+	realService?: boolean;
+	rating?: number;
+	launchDate?: string;
+};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
 	{

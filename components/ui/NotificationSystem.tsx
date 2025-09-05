@@ -52,11 +52,19 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`},
 
         >,
+<<<<<<< HEAD
           <div className="flex items-start justify-between">,
             <div className="flex-1">,
               {notification.title && (
                 <h4 className="font-medium mb-1">{notification.title}</h4>)},
               <p className="text-sm">{notification.message}</p>,
+=======
+          <div className=&quot;flex items-start justify-between&quot;>,
+            <div className=&quot;flex-1&quot;>,
+              {notification.title && (,
+                <h4 className=&quot;font-medium mb-1&quot;>{notification.title}</h4>)};
+              <p className=&quot;text-sm&quot;>{notification.message}</p>,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             </div>,
             {onDismiss && (
               <button
@@ -93,7 +101,33 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
       value={{ notifications, addNotification, removeNotification }}
     >
       {children}
+<<<<<<< HEAD
       <NotificationContainer />
+=======
+      <div className=&quot;fixed inset-x-0 top-4 z-[100] flex justify-center pointer-events-none&quot;>
+        <div className=&quot;w-full max-w-md px-4&quot;>
+          <AnimatePresence>
+            {toasts.map((toast) => (
+              <motion.div
+                key={toast.id}
+                initial={{ opacity: 0, y: -8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                className={`mb-2 pointer-events-auto rounded-lg border backdrop-blur px-4 py-3 shadow-lg ${
+                  toast.tone === 'success'
+                    ? 'border-emerald-300/50 bg-emerald-50 text-emerald-900 dark:bg-emerald-950/60 dark:text-emerald-200'
+                    : toast.tone === 'error'
+                    ? 'border-rose-300/50 bg-rose-50 text-rose-900 dark:bg-rose-950/60 dark:text-rose-200'
+                    : 'border-gray-200 bg-white/90 text-gray-900 dark:border-gray-800 dark:bg-gray-900/90 dark:text-gray-100'
+                }`}
+              >
+                <div className=&quot;text-sm font-medium&quot;>{toast.message}</div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     </NotificationContext.Provider>
 <<<<<<< HEAD
   );

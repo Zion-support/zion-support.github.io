@@ -236,7 +236,7 @@ export default function BlockchainWeb3Page() {
             </ul>
             <a href="mailto:kleber@ziontechgroup.com?subject=Blockchain Starter Package" className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors">
               Get Started
-            </a>
+            </Link>
           </div>
 
           <div className="bg-gradient-to-r from-orange-600 to-purple-600 rounded-lg p-6 text-center text-white relative">
@@ -254,7 +254,7 @@ export default function BlockchainWeb3Page() {
             </ul>
             <a href="mailto:kleber@ziontechgroup.com?subject=Blockchain Professional Package" className="block w-full bg-white text-orange-600 py-2 px-4 rounded-lg font-medium hover:bg-gray-100 transition-colors">
               Get Started
-            </a>
+            </Link>
           </div>
 
           <div className="bg-zinc-900 border border-white/10 rounded-lg p-6 text-center">
@@ -269,7 +269,7 @@ export default function BlockchainWeb3Page() {
             </ul>
             <a href="mailto:kleber@ziontechgroup.com?subject=Blockchain Enterprise Package" className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors">
               Contact Sales
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -286,13 +286,13 @@ export default function BlockchainWeb3Page() {
             className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Schedule Consultation
-          </a>
+          </Link>
           <a
             href="tel:+13024640950"
             className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
           >
             Call +1 302 464 0950
-          </a>
+          </Link>
         </div>
       </div>
     </div>

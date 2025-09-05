@@ -78,6 +78,7 @@ const HealthDashboard: React.FC = () => {
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'healthy':
+<<<<<<< HEAD
         return <CheckCircle className="w-5 h-5 text-green-500" />,
       case 'warning':
         return <AlertTriangle className="w-5 h-5 text-yellow-500" />,
@@ -85,6 +86,15 @@ const HealthDashboard: React.FC = () => {
         return <XCircle className="w-5 h-5 text-red-500" />,
       default:
         return <Activity className="w-5 h-5 text-gray-500" />
+=======
+        return <CheckCircle className=&quot;w-5 h-5 text-green-500&quot; />;
+      case 'warning':
+        return <AlertTriangle className=&quot;w-5 h-5 text-yellow-500&quot; />;
+      case 'critical':
+        return <XCircle className=&quot;w-5 h-5 text-red-500&quot; />;
+      default:
+        return <Activity className=&quot;w-5 h-5 text-gray-500&quot; />;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
@@ -92,7 +102,7 @@ const HealthDashboard: React.FC = () => {
     const variant = status === 'healthy' ? 'default' : 
                    status === 'warning' ? 'secondary' : 'destructive',
     return (
-      <Badge variant={variant} className="ml-2">
+      <Badge variant={variant} className=&quot;ml-2&quot;>
         {status.toUpperCase()}
       </Badge>
     )
@@ -110,21 +120,21 @@ const HealthDashboard: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center p-8">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
+      <div className=&quot;flex items-center justify-center p-8&quot;>
+        <div className=&quot;animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900&quot;></div>
       </div>
     )
   }
 
   if (error) {
     return (
-      <Card className="border-red-200 bg-red-50">
-        <CardContent className="p-6">
-          <div className="flex items-center text-red-600">
-            <XCircle className="w-5 h-5 mr-2" />
+      <Card className=&quot;border-red-200 bg-red-50&quot;>
+        <CardContent className=&quot;p-6&quot;>
+          <div className=&quot;flex items-center text-red-600&quot;>
+            <XCircle className=&quot;w-5 h-5 mr-2&quot; />
             <span>Failed to load health data: {error}</span>
           </div>
-          <Button onClick={fetchHealthData} className="mt-4">
+          <Button onClick={fetchHealthData} className=&quot;mt-4&quot;>
             Retry
           </Button>
         </CardContent>
@@ -135,72 +145,72 @@ const HealthDashboard: React.FC = () => {
   if (!healthData) return null,
 
   return (
-    <div className="space-y-6">
+    <div className=&quot;space-y-6&quot;>
       {/* Header */}
-      <div className="flex items-center justify-between">
-        <div className="flex items-center">
-          <h1 className="text-3xl font-bold">Health Dashboard</h1>
+      <div className=&quot;flex items-center justify-between&quot;>
+        <div className=&quot;flex items-center&quot;>
+          <h1 className=&quot;text-3xl font-bold&quot;>Health Dashboard</h1>
           {getStatusBadge(healthData.status)}
         </div>
-        <div className="flex items-center space-x-2">
+        <div className=&quot;flex items-center space-x-2&quot;>
           <Button
-            variant="outline"
-            size="sm"
+            variant=&quot;outline&quot;
+            size=&quot;sm&quot;
             onClick={() => setAutoRefresh(!autoRefresh)}
           >
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
           </Button>
-          <Button onClick={fetchHealthData} size="sm">
+          <Button onClick={fetchHealthData} size=&quot;sm&quot;>
             Refresh
           </Button>
         </div>
       </div>
 
       {/* Overview Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className=&quot;grid grid-cols-1 md:grid-cols-4 gap-4&quot;>
         <Card>
-          <CardContent className="p-6">
-            <div className="flex items-center">
+          <CardContent className=&quot;p-6&quot;>
+            <div className=&quot;flex items-center&quot;>
               {getStatusIcon(healthData.status)}
-              <div className="ml-2">
-                <p className="text-sm font-medium text-gray-600">Overall Health</p>
-                <p className="text-2xl font-bold">{healthData.health.score}/100</p>
+              <div className=&quot;ml-2&quot;>
+                <p className=&quot;text-sm font-medium text-gray-600&quot;>Overall Health</p>
+                <p className=&quot;text-2xl font-bold&quot;>{healthData.health.score}/100</p>
               </div>
             </div>
           </CardContent>
         </Card>
 
         <Card>
-          <CardContent className="p-6">
-            <div className="flex items-center">
-              <Clock className="w-5 h-5 text-blue-500" />
-              <div className="ml-2">
-                <p className="text-sm font-medium text-gray-600">Uptime</p>
-                <p className="text-2xl font-bold">{formatUptime(healthData.uptime)}</p>
+          <CardContent className=&quot;p-6&quot;>
+            <div className=&quot;flex items-center&quot;>
+              <Clock className=&quot;w-5 h-5 text-blue-500&quot; />
+              <div className=&quot;ml-2&quot;>
+                <p className=&quot;text-sm font-medium text-gray-600&quot;>Uptime</p>
+                <p className=&quot;text-2xl font-bold&quot;>{formatUptime(healthData.uptime)}</p>
               </div>
             </div>
           </CardContent>
         </Card>
 
         <Card>
-          <CardContent className="p-6">
-            <div className="flex items-center">
-              <TrendingUp className="w-5 h-5 text-orange-500" />
-              <div className="ml-2">
-                <p className="text-sm font-medium text-gray-600">Error Rate</p>
-                <p className="text-2xl font-bold">{healthData.metrics.errorRate.toFixed(1)}%</p>
+          <CardContent className=&quot;p-6&quot;>
+            <div className=&quot;flex items-center&quot;>
+              <TrendingUp className=&quot;w-5 h-5 text-orange-500&quot; />
+              <div className=&quot;ml-2&quot;>
+                <p className=&quot;text-sm font-medium text-gray-600&quot;>Error Rate</p>
+                <p className=&quot;text-2xl font-bold&quot;>{healthData.metrics.errorRate.toFixed(1)}%</p>
               </div>
             </div>
           </CardContent>
         </Card>
 
         <Card>
-          <CardContent className="p-6">
-            <div className="flex items-center">
-              <Activity className="w-5 h-5 text-purple-500" />
-              <div className="ml-2">
-                <p className="text-sm font-medium text-gray-600">Response Time</p>
-                <p className="text-2xl font-bold">{healthData.metrics.responseTime.toFixed(0)}ms</p>
+          <CardContent className=&quot;p-6&quot;>
+            <div className=&quot;flex items-center&quot;>
+              <Activity className=&quot;w-5 h-5 text-purple-500&quot; />
+              <div className=&quot;ml-2&quot;>
+                <p className=&quot;text-sm font-medium text-gray-600&quot;>Response Time</p>
+                <p className=&quot;text-2xl font-bold&quot;>{healthData.metrics.responseTime.toFixed(0)}ms</p>
               </div>
             </div>
           </CardContent>
@@ -208,37 +218,37 @@ const HealthDashboard: React.FC = () => {
       </div>
 
       {/* Detailed Information */}
-      <Tabs defaultValue="overview" className="space-y-4">
+      <Tabs defaultValue=&quot;overview&quot; className=&quot;space-y-4&quot;>
         <TabsList>
-          <TabsTrigger value="overview">Overview</TabsTrigger>
-          <TabsTrigger value="errors">Error Analysis</TabsTrigger>
-          <TabsTrigger value="metrics">Metrics</TabsTrigger>
-          <TabsTrigger value="recommendations">Recommendations</TabsTrigger>
+          <TabsTrigger value=&quot;overview&quot;>Overview</TabsTrigger>
+          <TabsTrigger value=&quot;errors&quot;>Error Analysis</TabsTrigger>
+          <TabsTrigger value=&quot;metrics&quot;>Metrics</TabsTrigger>
+          <TabsTrigger value=&quot;recommendations&quot;>Recommendations</TabsTrigger>
         </TabsList>
 
-        <TabsContent value="overview" className="space-y-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <TabsContent value=&quot;overview&quot; className=&quot;space-y-4&quot;>
+          <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-4&quot;>
             <Card>
               <CardHeader>
                 <CardTitle>System Information</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">Environment:</span>
-                    <Badge variant="outline">{healthData.environment}</Badge>
+                <div className=&quot;space-y-2&quot;>
+                  <div className=&quot;flex justify-between&quot;>
+                    <span className=&quot;text-sm text-gray-600&quot;>Environment:</span>
+                    <Badge variant=&quot;outline&quot;>{healthData.environment}</Badge>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">Version:</span>
-                    <span className="text-sm font-mono">{healthData.version}</span>
+                  <div className=&quot;flex justify-between&quot;>
+                    <span className=&quot;text-sm text-gray-600&quot;>Version:</span>
+                    <span className=&quot;text-sm font-mono&quot;>{healthData.version}</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">Memory Usage:</span>
-                    <span className="text-sm">{formatBytes(healthData.metrics.memoryUsage)}</span>
+                  <div className=&quot;flex justify-between&quot;>
+                    <span className=&quot;text-sm text-gray-600&quot;>Memory Usage:</span>
+                    <span className=&quot;text-sm&quot;>{formatBytes(healthData.metrics.memoryUsage)}</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">Last Updated:</span>
-                    <span className="text-sm">{new Date(healthData.timestamp).toLocaleTimeString()}</span>
+                  <div className=&quot;flex justify-between&quot;>
+                    <span className=&quot;text-sm text-gray-600&quot;>Last Updated:</span>
+                    <span className=&quot;text-sm&quot;>{new Date(healthData.timestamp).toLocaleTimeString()}</span>
                   </div>
                 </div>
               </CardContent>
@@ -246,52 +256,52 @@ const HealthDashboard: React.FC = () => {
 
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center">
-                  <AlertTriangle className="w-4 h-4 mr-2" />
+                <CardTitle className=&quot;flex items-center&quot;>
+                  <AlertTriangle className=&quot;w-4 h-4 mr-2&quot; />
                   Current Issues ({healthData.health.issues.length})
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 {healthData.health.issues.length > 0 ? (
-                  <ul className="space-y-2">
+                  <ul className=&quot;space-y-2&quot;>
                     {healthData.health.issues.map((issue, index) => (
-                      <li key={index} className="text-sm text-red-600 flex items-start">
-                        <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                      <li key={index} className=&quot;text-sm text-red-600 flex items-start&quot;>
+                        <span className=&quot;w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0&quot;></span>
                         {issue}
                       </li>
                     ))}
                   </ul>
                 ) : (
-                  <p className="text-green-600 text-sm">No issues detected</p>
+                  <p className=&quot;text-green-600 text-sm&quot;>No issues detected</p>
                 )}
               </CardContent>
             </Card>
           </div>
         </TabsContent>
 
-        <TabsContent value="errors" className="space-y-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <TabsContent value=&quot;errors&quot; className=&quot;space-y-4&quot;>
+          <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-4&quot;>
             <Card>
               <CardHeader>
                 <CardTitle>Error Summary</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center">
-                    <p className="text-2xl font-bold text-red-600">{healthData.errors.summary.critical}</p>
-                    <p className="text-sm text-gray-600">Critical</p>
+                <div className=&quot;grid grid-cols-2 gap-4&quot;>
+                  <div className=&quot;text-center&quot;>
+                    <p className=&quot;text-2xl font-bold text-red-600&quot;>{healthData.errors.summary.critical}</p>
+                    <p className=&quot;text-sm text-gray-600&quot;>Critical</p>
                   </div>
-                  <div className="text-center">
-                    <p className="text-2xl font-bold text-orange-600">{healthData.errors.summary.high}</p>
-                    <p className="text-sm text-gray-600">High</p>
+                  <div className=&quot;text-center&quot;>
+                    <p className=&quot;text-2xl font-bold text-orange-600&quot;>{healthData.errors.summary.high}</p>
+                    <p className=&quot;text-sm text-gray-600&quot;>High</p>
                   </div>
-                  <div className="text-center">
-                    <p className="text-2xl font-bold text-yellow-600">{healthData.errors.summary.medium}</p>
-                    <p className="text-sm text-gray-600">Medium</p>
+                  <div className=&quot;text-center&quot;>
+                    <p className=&quot;text-2xl font-bold text-yellow-600&quot;>{healthData.errors.summary.medium}</p>
+                    <p className=&quot;text-sm text-gray-600&quot;>Medium</p>
                   </div>
-                  <div className="text-center">
-                    <p className="text-2xl font-bold text-gray-600">{healthData.errors.summary.low}</p>
-                    <p className="text-sm text-gray-600">Low</p>
+                  <div className=&quot;text-center&quot;>
+                    <p className=&quot;text-2xl font-bold text-gray-600&quot;>{healthData.errors.summary.low}</p>
+                    <p className=&quot;text-sm text-gray-600&quot;>Low</p>
                   </div>
                 </div>
               </CardContent>
@@ -303,85 +313,85 @@ const HealthDashboard: React.FC = () => {
               </CardHeader>
               <CardContent>
                 {healthData.errors.topErrors.length > 0 ? (
-                  <div className="space-y-2">
+                  <div className=&quot;space-y-2&quot;>
                     {healthData.errors.topErrors.slice(0, 5).map((error, index) => (
-                      <div key={index} className="border-l-4 border-red-400 pl-3 py-1">
-                        <p className="text-sm font-medium">{error.description}</p>
-                        <p className="text-xs text-gray-600">
+                      <div key={index} className=&quot;border-l-4 border-red-400 pl-3 py-1&quot;>
+                        <p className=&quot;text-sm font-medium&quot;>{error.description}</p>
+                        <p className=&quot;text-xs text-gray-600&quot;>
                           {error.occurrences} occurrences • {error.severity}
                         </p>
                       </div>
                     ))}
                   </div>
                 ) : (
-                  <p className="text-gray-600 text-sm">No recurring errors</p>
+                  <p className=&quot;text-gray-600 text-sm&quot;>No recurring errors</p>
                 )}
               </CardContent>
             </Card>
           </div>
         </TabsContent>
 
-        <TabsContent value="metrics" className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <TabsContent value=&quot;metrics&quot; className=&quot;space-y-4&quot;>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
             <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm">Error Rate</CardTitle>
+              <CardHeader className=&quot;pb-2&quot;>
+                <CardTitle className=&quot;text-sm&quot;>Error Rate</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-2xl font-bold">{healthData.metrics.errorRate.toFixed(2)}%</p>
-                <p className="text-xs text-gray-600">Errors per request</p>
+                <p className=&quot;text-2xl font-bold&quot;>{healthData.metrics.errorRate.toFixed(2)}%</p>
+                <p className=&quot;text-xs text-gray-600&quot;>Errors per request</p>
               </CardContent>
             </Card>
 
             <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm">Critical Errors</CardTitle>
+              <CardHeader className=&quot;pb-2&quot;>
+                <CardTitle className=&quot;text-sm&quot;>Critical Errors</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-2xl font-bold text-red-600">{healthData.metrics.criticalErrors}</p>
-                <p className="text-xs text-gray-600">In last hour</p>
+                <p className=&quot;text-2xl font-bold text-red-600&quot;>{healthData.metrics.criticalErrors}</p>
+                <p className=&quot;text-xs text-gray-600&quot;>In last hour</p>
               </CardContent>
             </Card>
 
             <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm">Avg Response</CardTitle>
+              <CardHeader className=&quot;pb-2&quot;>
+                <CardTitle className=&quot;text-sm&quot;>Avg Response</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-2xl font-bold">{healthData.metrics.responseTime.toFixed(0)}ms</p>
-                <p className="text-xs text-gray-600">API response time</p>
+                <p className=&quot;text-2xl font-bold&quot;>{healthData.metrics.responseTime.toFixed(0)}ms</p>
+                <p className=&quot;text-xs text-gray-600&quot;>API response time</p>
               </CardContent>
             </Card>
 
             <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm">Memory Usage</CardTitle>
+              <CardHeader className=&quot;pb-2&quot;>
+                <CardTitle className=&quot;text-sm&quot;>Memory Usage</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-2xl font-bold">{formatBytes(healthData.metrics.memoryUsage)}</p>
-                <p className="text-xs text-gray-600">JavaScript heap</p>
+                <p className=&quot;text-2xl font-bold&quot;>{formatBytes(healthData.metrics.memoryUsage)}</p>
+                <p className=&quot;text-xs text-gray-600&quot;>JavaScript heap</p>
               </CardContent>
             </Card>
           </div>
         </TabsContent>
 
-        <TabsContent value="recommendations" className="space-y-4">
+        <TabsContent value=&quot;recommendations&quot; className=&quot;space-y-4&quot;>
           <Card>
             <CardHeader>
               <CardTitle>Improvement Recommendations</CardTitle>
             </CardHeader>
             <CardContent>
               {healthData.health.recommendations.length > 0 ? (
-                <ul className="space-y-3">
+                <ul className=&quot;space-y-3&quot;>
                   {healthData.health.recommendations.map((rec, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
-                      <span className="text-sm">{rec}</span>
+                    <li key={index} className=&quot;flex items-start&quot;>
+                      <CheckCircle className=&quot;w-4 h-4 text-green-500 mt-0.5 mr-2 flex-shrink-0&quot; />
+                      <span className=&quot;text-sm&quot;>{rec}</span>
                     </li>
                   ))}
                 </ul>
               ) : (
-                <p className="text-gray-600">No specific recommendations at this time</p>
+                <p className=&quot;text-gray-600&quot;>No specific recommendations at this time</p>
               )}
             </CardContent>
           </Card>

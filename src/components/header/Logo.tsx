@@ -17,15 +17,15 @@ export function Logo({ customLogo }: LogoProps) {
   
   if (logoToUse) {
     return (
-      <Link href="/" className="flex items-center">
-        <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" width={32} height={32} />
+      <Link href=&quot;/&quot; className=&quot;flex items-center&quot;>
+        <img src={logoToUse} alt={`${brandName} Logo`} className=&quot;h-8&quot; width={32} height={32} />
       </Link>
     )
   }
   
   return (
-    <Link href="/" className="flex items-center">
-      <img src="/logos/zion-logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />
+    <Link href=&quot;/&quot; className=&quot;flex items-center&quot;>
+      <img src=&quot;/logos/zion-logo.png&quot; alt=&quot;Zion Logo&quot; className=&quot;h-8&quot; width={32} height={32} />
     </Link>
   )
 }

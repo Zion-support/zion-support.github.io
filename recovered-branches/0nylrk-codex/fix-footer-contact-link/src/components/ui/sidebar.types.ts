@@ -23,7 +23,11 @@ export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> =
 export type SafeRef<T> = React.Ref<T>,
 
 // Sidebar specific types
+<<<<<<< HEAD
 export type SidebarState = "expanded" | "collapsed",
+=======
+export type SidebarState = &quot;expanded&quot; | &quot;collapsed&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export type SidebarContext = {
   state: SidebarState,

@@ -8,36 +8,36 @@ type Props = {
 
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (
-    <div className="enhanced-card hover:shadow-lg transition-shadow">
-      <div className="flex items-center justify-between mb-2">
-        <div className="flex items-center gap-2">
+    <div className=&quot;enhanced-card hover:shadow-lg transition-shadow&quot;>
+      <div className=&quot;flex items-center justify-between mb-2&quot;>
+        <div className=&quot;flex items-center gap-2&quot;>
           <StarRating value={review.rating} onChange={() => {}} readOnly size={18} />
-          <span className="text-sm text-gray-500">{new Date(review.createdAt).toLocaleDateString()}</span>
+          <span className=&quot;text-sm text-gray-500&quot;>{new Date(review.createdAt).toLocaleDateString()}</span>
         </div>
         <button
-          className="text-xs text-red-500 hover:underline"
+          className=&quot;text-xs text-red-500 hover:underline&quot;
           onClick={() => onReport && onReport(review.id)}
         >
           Report abuse
         </button>
       </div>
-      <div className="flex items-center gap-2 mb-3">
-        <span className="text-sm font-medium">{review.authorName}</span>
+      <div className=&quot;flex items-center gap-2 mb-3&quot;>
+        <span className=&quot;text-sm font-medium&quot;>{review.authorName}</span>
         {review.categories?.wouldWorkWithAgain && (
-          <span className="pill pill-success">Would work again</span>
+          <span className=&quot;pill pill-success&quot;>Would work again</span>
         )}
       </div>
-      <p className="text-sm leading-6">{review.text}</p>
+      <p className=&quot;text-sm leading-6&quot;>{review.text}</p>
 
-      <div className="flex flex-wrap gap-2 mt-3">
+      <div className=&quot;flex flex-wrap gap-2 mt-3&quot;>
         {typeof review.categories?.communication === 'number' && (
-          <span className="pill">Communication: {review.categories.communication}★</span>
+          <span className=&quot;pill&quot;>Communication: {review.categories.communication}★</span>
         )}
         {typeof review.categories?.qualityOfWork === 'number' && (
-          <span className="pill">Quality: {review.categories.qualityOfWork}★</span>
+          <span className=&quot;pill&quot;>Quality: {review.categories.qualityOfWork}★</span>
         )}
         {typeof review.categories?.timeliness === 'number' && (
-          <span className="pill">Timeliness: {review.categories.timeliness}★</span>
+          <span className=&quot;pill&quot;>Timeliness: {review.categories.timeliness}★</span>
         )}
       </div>
     </div>

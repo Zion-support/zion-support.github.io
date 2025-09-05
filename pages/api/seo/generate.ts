@@ -37,7 +37,7 @@ Tone: professional, modern, trustworthy`,
     const faqResp = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
-        { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' },
+        { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{&quot;q&quot;:"&quot;,&quot;a&quot;:"&quot;}], focus on buyer concerns for the topic.' },
         { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }],
       temperature: 0.5}),
 

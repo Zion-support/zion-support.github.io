@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 import { useState } from "react",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Button } from "@/components/ui/button",
 import CodeBlock from "./CodeBlock",
+=======
+import { useState } from &quot;react&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import CodeBlock from &quot;./CodeBlock&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface Param {
   name: string,
   type: string,
@@ -16,11 +25,19 @@ interface ApiPlaygroundProps {
 }
 
 export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {
+<<<<<<< HEAD
   const [apiKey, setApiKey] = useState("demo_key_123"),
   const [paramValues, setParamValues] = useState<Record<string string>>({}),
   const [body, setBody] = useState("{}"),
   const [response, setResponse] = useState<string | null>(null),
   const [loading, setLoading] = useState(false),
+=======
+  const [apiKey, setApiKey] = useState(&quot;demo_key_123&quot;);
+  const [paramValues, setParamValues] = useState<Record<string, string>>({});
+  const [body, setBody] = useState(&quot;{}&quot;);
+  const [response, setResponse] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const handleParamChange = (name: string, value: string) => {
     setParamValues((prev) => ({ ...prev, [name]: value }))
@@ -31,8 +48,13 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
     const baseUrl = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? window.location.origin : ''),
     let url = `${baseUrl}${path}`,
 
+<<<<<<< HEAD
     const searchParams = new URLSearchParams(),
     if (method === "GET" || method === "DELETE") {
+=======
+    const searchParams = new URLSearchParams();
+    if (method === &quot;GET&quot; || method === &quot;DELETE&quot;) {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       params.forEach((p) => {
         const val = paramValues[p.name],
         if (val) searchParams.append(p.name, val)
@@ -45,11 +67,11 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       method,
       headers: {
         Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json"},
+        &quot;Content-Type&quot;: &quot;application/json&quot;},
       // Add timeout to prevent hanging
       signal: AbortSignal.timeout(15000)},
 
-    if (method !== "GET" && method !== "DELETE") {
+    if (method !== &quot;GET&quot; && method !== &quot;DELETE&quot;) {
       try {
         options.body = JSON.stringify(JSON.parse(body))
       } catch {
@@ -97,30 +119,30 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
   },
 
   return (
-    <div className="space-y-4">
+    <div className=&quot;space-y-4&quot;>
       <Input
         value={apiKey}
         onChange={(e) => setApiKey(e.target.value)}
-        placeholder="API Key"
+        placeholder=&quot;API Key&quot;
       />
       {params.map((p) => (
         <Input
           key={p.name}
-          value={paramValues[p.name] || ""}
+          value={paramValues[p.name] || "&quot;}
           onChange={(e) => handleParamChange(p.name, e.target.value)}
         />
       ))}
-      {method !== "GET" && method !== "DELETE" && (
+      {method !== &quot;GET&quot; && method !== &quot;DELETE" && (
         <Textarea
           value={body}
           onChange={(e) => setBody(e.target.value)}
-          className="font-mono"
+          className="font-mono&quot;
         />
       )}
       <Button onClick={sendRequest} disabled={loading}>
-        {loading ? "Sending..." : "Send Request"}
+        {loading ? &quot;Sending...&quot; : &quot;Send Request&quot;}
       </Button>
-      {response && <CodeBlock code={response} language="json" />}
+      {response && <CodeBlock code={response} language=&quot;json" />}
     </div>
   )
 }

@@ -41,12 +41,16 @@ function fixTypeScriptFiles(dir) {,
       try {,
         const content = fs.readFileSync(fullPath, 'utf8'),
         if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {,
-          console.log(`Fixing "file": ${fullPath}`),
+          // console.log(`Fixing &quot;file&quot;: ${fullPath}`),
           fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')};
       } catch (error) {,
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
         console.log(`Error processing ${fullPath}: ${error.message}`)};
+=======
+        // console.log(`Error processing ${fullPath}: ${error.message}`)};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 };
   })};
 

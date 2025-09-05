@@ -167,31 +167,31 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 export default function RootServiceDetailPage({ service }: { service: Service }) {
 	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`,
 	return (
-		<UltraFuturisticBackground variant="quantum" intensity="high">
+		<UltraFuturisticBackground variant=&quot;quantum&quot; intensity=&quot;high&quot;>
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
-				<meta name="description" content={service.tagline || service.description} />
-				<link rel="canonical" href={canonical} />
+				<meta name=&quot;description&quot; content={service.tagline || service.description} />
+				<link rel=&quot;canonical&quot; href={canonical} />
 				<script
-					type="application/ld+json"
+					type=&quot;application/ld+json&quot;
 					dangerouslySetInnerHTML={{
 						__html: JSON.stringify(
 							{
-								"@context": "https://schema.org",
-								"@type": "Service",
+								&quot;@context&quot;: &quot;https://schema.org&quot;,
+								&quot;@type&quot;: &quot;Service&quot;,
 								name: service.name,
 								description: service.tagline || service.description,
 								url: canonical,
 								provider: {
-									"@type": "Organization",
-									name: "Zion Tech Group",
-									url: "https://ziontechgroup.com"
+									&quot;@type&quot;: &quot;Organization&quot;,
+									name: &quot;Zion Tech Group&quot;,
+									url: &quot;https://ziontechgroup.com&quot;
 								},
 								offers: {
-									"@type": "Offer",
+									&quot;@type&quot;: &quot;Offer&quot;,
 									price: (service.price || '').replace(/[^0-9.]/g, ''),
-									priceCurrency: "USD",
-									availability: "https://schema.org/InStock"
+									priceCurrency: &quot;USD&quot;,
+									availability: &quot;https://schema.org/InStock&quot;
 								}
 							},
 							null,
@@ -201,68 +201,76 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 				/>
 			</Head>
 
-			<div className="container mx-auto px-4 py-16">
-				<div className="text-center mb-10">
-					<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+			<div className=&quot;container mx-auto px-4 py-16&quot;>
+				<div className=&quot;text-center mb-10&quot;>
+					<h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4&quot;>
 						{service.name}
 					</h1>
-					<p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
+					<p className=&quot;text-gray-300 text-lg max-w-3xl mx-auto&quot;>{service.tagline || service.description}</p>
 				</div>
 
-				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-					<div className="lg:col-span-2 space-y-6">
-						<Card className="p-6 bg-black/40 border border-gray-700/50">
-							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
-							<p className="text-gray-300 leading-relaxed">{service.description}</p>
+				<div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12&quot;>
+					<div className=&quot;lg:col-span-2 space-y-6&quot;>
+						<Card className=&quot;p-6 bg-black/40 border border-gray-700/50&quot;>
+							<h2 className=&quot;text-white text-xl font-semibold mb-3&quot;>Overview</h2>
+							<p className=&quot;text-gray-300 leading-relaxed&quot;>{service.description}</p>
 						</Card>
 
-						<Card className="p-6 bg-black/40 border border-gray-700/50">
-							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
-							<ul className="space-y-2 text-gray-300">
+						<Card className=&quot;p-6 bg-black/40 border border-gray-700/50&quot;>
+							<h3 className=&quot;text-white text-lg font-semibold mb-4&quot;>Key Features</h3>
+							<ul className=&quot;space-y-2 text-gray-300&quot;>
 								{(service.features || []).slice(0, 12).map((f: string) => (
-									<li key={f} className="flex items-start gap-2">
-										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
+									<li key={f} className=&quot;flex items-start gap-2&quot;>
+										<Check className=&quot;w-4 h-4 mt-0.5 text-emerald-400&quot; />
 										<span>{f}</span>
 									</li>
 								))}
 							</ul>
 						</Card>
 
-						<Card className="p-6 bg-black/40 border border-gray-700/50">
-							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>
-							<div className="flex flex-wrap gap-2">
+						<Card className=&quot;p-6 bg-black/40 border border-gray-700/50&quot;>
+							<h3 className=&quot;text-white text-lg font-semibold mb-4&quot;>Integrations</h3>
+							<div className=&quot;flex flex-wrap gap-2&quot;>
 								{(service.integrations || []).slice(0, 12).map((i: string) => (
-									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
+									<span key={i} className=&quot;px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200&quot;>{i}</span>
 								))}
 							</div>
 						</Card>
 					</div>
 
-					<div className="space-y-6">
-						<Card className="p-6 bg-black/40 border border-gray-700/50">
-							<div className="text-3xl font-bold text-white">{service.price} <span className="text-base text-gray-400">{service.period}</span></div>
-							<p className="text-gray-400 text-sm mt-1">Transparent pricing with market references</p>
-							<div className="mt-4 space-y-3">
-								<a href="/contact" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
-									<Phone className="w-4 h-4" /> +1 302 464 0950
-								</a>
-								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
-									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
-								</a>
-								<div className="flex items-start gap-2 text-gray-300">
-									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709
+					<div className=&quot;space-y-6&quot;>
+						<Card className=&quot;p-6 bg-black/40 border border-gray-700/50&quot;>
+							<div className=&quot;text-3xl font-bold text-white&quot;>{service.price} <span className=&quot;text-base text-gray-400&quot;>{service.period}</span></div>
+							<p className=&quot;text-gray-400 text-sm mt-1&quot;>Transparent pricing with market references</p>
+							<div className=&quot;mt-4 space-y-3&quot;>
+								<a href=&quot;/contact&quot; className=&quot;inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200&quot;>
+									<Phone className=&quot;w-4 h-4&quot; /> +1 302 464 0950
+								</Link>
+								<a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200&quot;>
+									<Mail className=&quot;w-4 h-4&quot; /> kleber@ziontechgroup.com
+								</Link>
+								<div className=&quot;flex items-start gap-2 text-gray-300&quot;>
+									<MapPin className=&quot;w-4 h-4 mt-1&quot; /> 364 E Main St STE 1008 Middletown DE 19709
 								</div>
 							</div>
-							<div className="mt-6">
-								<Button href="/contact" className="w-full">Talk to Sales</Button>
+							<div className=&quot;mt-6&quot;>
+								<Button href=&quot;/contact&quot; className=&quot;w-full&quot;>Talk to Sales</Button>
 							</div>
 						</Card>
 
+<<<<<<< HEAD
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
 							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
 								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
+=======
+						<Card className=&quot;p-6 bg-black/40 border border-gray-700/50&quot;>
+							<h3 className=&quot;text-white text-lg font-semibold mb-3&quot;>Learn More</h3>
+							<a href={service.link || canonical} className=&quot;inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200&quot;>
+								Open canonical page <ExternalLink className=&quot;w-4 h-4&quot; />
+							</Link>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 						</Card>
 					</div>
 				</div>

@@ -23,8 +23,13 @@ export const useUpdateMilestone = () => {
         .eq('id', milestoneId)
         .single(),
       
+<<<<<<< HEAD
       if (fetchError) throw fetchError,
       if (!milestoneData) throw new Error("Milestone not found"),
+=======
+      if (fetchError) throw fetchError;
+      if (!milestoneData) throw new Error(&quot;Milestone not found&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       const previousStatus = milestoneData.status,
       
@@ -43,9 +48,15 @@ export const useUpdateMilestone = () => {
       
       return true
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error updating milestone status:", err),
       toast.error("Failed to update status: " + err.message),
       return false
+=======
+      console.error(&quot;Error updating milestone status:&quot;, err);
+      toast.error(&quot;Failed to update status: &quot; + err.message);
+      return false;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsSubmitting(false)
     }
@@ -67,13 +78,23 @@ export const useUpdateMilestone = () => {
       // Create activity record
       await recordMilestoneActivity(milestoneId, 'updated', null, 'updatedMilestone details updated'),
       
+<<<<<<< HEAD
       toast.success("Milestone updated successfully"),
+=======
+      toast.success(&quot;Milestone updated successfully&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       return true
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error updating milestone:", err),
       toast.error("Failed to update milestone: " + err.message),
       return false
+=======
+      console.error(&quot;Error updating milestone:&quot;, err);
+      toast.error(&quot;Failed to update milestone: &quot; + err.message);
+      return false;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsSubmitting(false)
     }

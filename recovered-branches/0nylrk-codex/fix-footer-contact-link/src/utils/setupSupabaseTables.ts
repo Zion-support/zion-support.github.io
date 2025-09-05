@@ -1,5 +1,10 @@
 
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
+=======
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 /**
  * Checks if the profiles table exists and creates it if it doesn't
  * This is a utility function that can be called when the app starts
@@ -17,7 +22,11 @@ export const ensureProfilesTableExists = async () => {
     
     // If there's an error, log it and proceed with table creation
     if (error) {
+<<<<<<< HEAD
       console.warn("Error checking if profiles table exists, attempting to create it:", error)
+=======
+      console.warn(&quot;Error checking if profiles table exists, attempting to create it:&quot;, error);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     // Attempt to create the table and related objects
@@ -45,7 +54,7 @@ export const ensureProfilesTableExists = async () => {
           WHERE policyname = 'Users can view their own profile'
           AND tablename = 'profiles'
         ) THEN
-          CREATE POLICY "Users can view their own profile" 
+          CREATE POLICY &quot;Users can view their own profile&quot; 
             ON public.profiles FOR SELECT 
             USING (auth.uid() = id),
         END IF,
@@ -59,7 +68,7 @@ export const ensureProfilesTableExists = async () => {
           WHERE policyname = 'Users can update their own profile'
           AND tablename = 'profiles'
         ) THEN
-          CREATE POLICY "Users can update their own profile" 
+          CREATE POLICY &quot;Users can update their own profile&quot; 
             ON public.profiles FOR UPDATE 
             USING (auth.uid() = id),
         END IF,
@@ -97,7 +106,11 @@ export const ensureProfilesTableExists = async () => {
     if (createError) {
       console.error('Error creating profiles table:', createError)
     } else {
+<<<<<<< HEAD
       // // // console.log('Profiles table setup completed')
+=======
+      // console.log('Profiles table setup completed');
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   } catch (error) {
     console.error('Error setting up profiles table:', error)

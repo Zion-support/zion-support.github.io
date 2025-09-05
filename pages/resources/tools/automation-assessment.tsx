@@ -79,46 +79,50 @@ export default function ToolPage() {
       <>
         <Head>
           <title>Automation Readiness Assessment - Results | Zion Tech Group</title>
-          <meta name="description" content="View your automation readiness assessment results and get personalized recommendations." />
+          <meta name=&quot;description&quot; content=&quot;View your automation readiness assessment results and get personalized recommendations.&quot; />
         </Head>
         
-        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-          <main className="container mx-auto px-6 py-12">
-            <div className="max-w-4xl mx-auto">
-              <nav className="mb-8">
-                <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+        <div className=&quot;min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white&quot;>
+          <main className=&quot;container mx-auto px-6 py-12&quot;>
+            <div className=&quot;max-w-4xl mx-auto&quot;>
+              <nav className=&quot;mb-8&quot;>
+                <Link href=&quot;/resources&quot; className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
                   ← Back to Resources
                 </Link>
               </nav>
 
-              <div className="text-center mb-12">
-                <h1 className="text-4xl font-bold text-white mb-4">Assessment Results</h1>
-                <p className="text-white/80 text-lg">Your automation readiness evaluation is complete</p>
+              <div className=&quot;text-center mb-12&quot;>
+                <h1 className=&quot;text-4xl font-bold text-white mb-4&quot;>Assessment Results</h1>
+                <p className=&quot;text-white/80 text-lg&quot;>Your automation readiness evaluation is complete</p>
               </div>
 
-              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20 mb-8">
+              <div className=&quot;bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20 mb-8&quot;>
                 <h2 className={`text-3xl font-bold mb-4 ${result.color}`}>Level: {result.level}</h2>
-                <p className="text-white/90 text-lg mb-6">{result.description}</p>
+                <p className=&quot;text-white/90 text-lg mb-6&quot;>{result.description}</p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6 mb-8&quot;>
                   {questions.map((q, index) => (
-                    <div key={q.id} className="bg-white/10 rounded-lg p-4 border border-white/20">
-                      <h3 className="font-semibold text-cyan-400 mb-2">{q.question}</h3>
-                      <p className="text-white/80 text-sm">Score: {answers[q.id] || 0}/5</p>
+                    <div key={q.id} className=&quot;bg-white/10 rounded-lg p-4 border border-white/20&quot;>
+                      <h3 className=&quot;font-semibold text-cyan-400 mb-2&quot;>{q.question}</h3>
+                      <p className=&quot;text-white/80 text-sm&quot;>Score: {answers[q.id] || 0}/5</p>
                     </div>
                   ))}
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                   <button 
                     onClick={resetAssessment}
+<<<<<<< HEAD
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+=======
+                    className=&quot;bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300&quot;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                   >
                     Retake Assessment
                   </button>
                   <Link 
-                    href="/contact"
-                    className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
+                    href=&quot;/contact&quot;
+                    className=&quot;px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300&quot;
                   >
                     Get Personalized Recommendations
                   </Link>
@@ -137,50 +141,50 @@ export default function ToolPage() {
     <>
       <Head>
         <title>Automation Readiness Assessment | Zion Tech Group</title>
-        <meta name="description" content="Evaluate your organization's readiness for AI automation implementation with our interactive assessment tool." />
+        <meta name=&quot;description&quot; content=&quot;Evaluate your organization's readiness for AI automation implementation with our interactive assessment tool.&quot; />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          <div className="max-w-4xl mx-auto">
-            <nav className="mb-8">
-              <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+      <div className=&quot;min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white&quot;>
+        <main className=&quot;container mx-auto px-6 py-12&quot;>
+          <div className=&quot;max-w-4xl mx-auto&quot;>
+            <nav className=&quot;mb-8&quot;>
+              <Link href=&quot;/resources&quot; className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
                 ← Back to Resources
               </Link>
             </nav>
 
-            <div className="text-center mb-12">
-              <h1 className="text-4xl font-bold text-white mb-4">Automation Readiness Assessment</h1>
-              <p className="text-white/80 text-lg">Evaluate your organization's readiness for AI automation</p>
-              <div className="mt-4 text-cyan-400">
+            <div className=&quot;text-center mb-12&quot;>
+              <h1 className=&quot;text-4xl font-bold text-white mb-4&quot;>Automation Readiness Assessment</h1>
+              <p className=&quot;text-white/80 text-lg&quot;>Evaluate your organization's readiness for AI automation</p>
+              <div className=&quot;mt-4 text-cyan-400&quot;>
                 Question {currentQuestion + 1} of {questions.length}
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
-              <h2 className="text-2xl font-bold mb-6 text-white">{currentQ.question}</h2>
+            <div className=&quot;bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20&quot;>
+              <h2 className=&quot;text-2xl font-bold mb-6 text-white&quot;>{currentQ.question}</h2>
               
-              <div className="space-y-4 mb-8">
+              <div className=&quot;space-y-4 mb-8&quot;>
                 {currentQ.options.map((option, index) => (
-                  <label key={index} className="flex items-center p-4 bg-white/10 rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer">
+                  <label key={index} className=&quot;flex items-center p-4 bg-white/10 rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer&quot;>
                     <input
-                      type="radio"
+                      type=&quot;radio&quot;
                       name={currentQ.id}
                       value={index + 1}
                       checked={answers[currentQ.id] === index + 1}
                       onChange={() => handleAnswer(currentQ.id, index + 1)}
-                      className="mr-3 text-cyan-400 focus:ring-cyan-400"
+                      className=&quot;mr-3 text-cyan-400 focus:ring-cyan-400&quot;
                     />
-                    <span className="text-white/90">{option}</span>
+                    <span className=&quot;text-white/90&quot;>{option}</span>
                   </label>
                 ))}
               </div>
 
-              <div className="flex justify-between">
+              <div className=&quot;flex justify-between&quot;>
                 <button 
                   onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
                   disabled={currentQuestion === 0}
-                  className="px-6 py-3 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className=&quot;px-6 py-3 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed&quot;
                 >
                   Previous
                 </button>
@@ -188,7 +192,7 @@ export default function ToolPage() {
                 <button 
                   onClick={nextQuestion}
                   disabled={!answers[currentQ.id]}
-                  className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className=&quot;bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed&quot;
                 >
                   {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'}
                 </button>

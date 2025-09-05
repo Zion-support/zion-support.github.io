@@ -21,14 +21,14 @@ export function PromptCard({ prompt }: PromptCardProps) {
   },
 
   return (
-    <div className="p-4 border rounded-md bg-background flex flex-col justify-between">
-      <p className="mb-4 text-sm">{prompt.text}</p>
-      <div className="flex gap-2 mt-auto">
-        <Button variant="outline" size="sm" onClick={handleCopy} aria-label="Copy prompt">
-          {copied ? 'Copied' : <Copy className="w-4 h-4" />}
+    <div className=&quot;p-4 border rounded-md bg-background flex flex-col justify-between&quot;>
+      <p className=&quot;mb-4 text-sm&quot;>{prompt.text}</p>
+      <div className=&quot;flex gap-2 mt-auto&quot;>
+        <Button variant=&quot;outline&quot; size=&quot;sm&quot; onClick={handleCopy} aria-label=&quot;Copy prompt&quot;>
+          {copied ? 'Copied' : <Copy className=&quot;w-4 h-4&quot; />}
         </Button>
-        <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">
-          <Send className="w-4 h-4" />
+        <Button variant=&quot;secondary&quot; size=&quot;sm&quot; onClick={handleSend} aria-label=&quot;Send to ZionGPT&quot;>
+          <Send className=&quot;w-4 h-4&quot; />
         </Button>
       </div>
     </div>

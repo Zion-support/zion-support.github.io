@@ -140,18 +140,18 @@ export default function ServicesIndexPage() {
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>Zion AI Marketplace - Services</title>
-        <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." />
+        <meta name=&quot;description&quot; content=&quot;Discover curated IT services. Request quotes with AI-assisted summaries.&quot; />
       </Head>
-      <div className="relative">
-        <div className="absolute -z-10 -top-40 -left-40 w-96 h-96 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500" />
-        <div className="flex flex-col sm:flex-row gap-6">
+      <div className=&quot;relative&quot;>
+        <div className=&quot;absolute -z-10 -top-40 -left-40 w-96 h-96 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500&quot; />
+        <div className=&quot;flex flex-col sm:flex-row gap-6&quot;>
           <MarketplaceFilters availableCategories={availableCategories} value={filters} onChange={setFilters} />
-          <div className="flex-1">
-            <div className="mb-4 flex items-center justify-between">
-              <h1 className="text-2xl font-semibold text-white">Services</h1>
-              <div className="text-sm text-white/70">{filtered.length} results</div>
+          <div className=&quot;flex-1&quot;>
+            <div className=&quot;mb-4 flex items-center justify-between&quot;>
+              <h1 className=&quot;text-2xl font-semibold text-white&quot;>Services</h1>
+              <div className=&quot;text-sm text-white/70&quot;>{filtered.length} results</div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5&quot;>
               {filtered.map((service) => (
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
               ))}
@@ -161,16 +161,16 @@ export default function ServicesIndexPage() {
 
             {/* Featured Services */}
             {featuredServices.length > 0 && (
-              <section className="mb-20">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              <section className=&quot;mb-20&quot;>
+                <h2 className=&quot;text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
                   Featured Services
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
                   {featuredServices.map((service: Service, index: number) => (
                     <UltraFuturisticServiceCard2026
                       key={`${service.id || service.name}-${index}`}
                       service={service}
-                      variant="quantum"
+                      variant=&quot;quantum&quot;
                     />
                   ))}
                 </div>
@@ -179,16 +179,16 @@ export default function ServicesIndexPage() {
 
             {/* Latest Services */}
             {latestServices.length > 0 && (
-              <section className="mb-20">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+              <section className=&quot;mb-20&quot;>
+                <h2 className=&quot;text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent&quot;>
                   Latest Services (2026)
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
                   {latestServices.map((service: Service, index: number) => (
                     <UltraFuturisticServiceCard2026
                       key={`${service.id || service.name}-${index}`}
                       service={service}
-                      variant="ai"
+                      variant=&quot;ai&quot;
                     />
                   ))}
                 </div>
@@ -196,19 +196,24 @@ export default function ServicesIndexPage() {
             )}
 
             {/* Services by Category */}
+<<<<<<< HEAD
             <section className="mb-20">
               <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+=======
+            <section className=&quot;mb-20&quot;>
+              <h2 className=&quot;text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent&quot;>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 Services by Category
               </h2>
-              <div className="space-y-12">
+              <div className=&quot;space-y-12&quot;>
                 {categories.map((category) => {
                   const categoryServices = servicesByCategory[category],
                   if (!categoryServices || categoryServices.length === 0) return null,
 
                   return (
-                    <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">
-                      <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
-                        <span className="text-3xl">
+                    <div key={category} className=&quot;border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm&quot;>
+                      <h3 className=&quot;text-2xl font-bold mb-6 text-white flex items-center gap-3&quot;>
+                        <span className=&quot;text-3xl&quot;>
                           {category === 'AI & Data' && '🧠'}
                           {category === 'Developer Tools' && '⚙️'}
                           {category === 'Cloud & FinOps' && '☁️'}
@@ -229,28 +234,28 @@ export default function ServicesIndexPage() {
                           {category === 'Transportation' && '🚗'}
                         </span>
                         {category}
-                        <span className="px-3 py-1 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full text-sm text-gray-300">
+                        <span className=&quot;px-3 py-1 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full text-sm text-gray-300&quot;>
                           {categoryServices.length} services
                         </span>
                       </h3>
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
                         {categoryServices.slice(0, 6).map((service: Service, index: number) => (
                           <UltraFuturisticServiceCard2026
                             key={`${service.id || service.name}-${index}`}
                             service={service}
-                            variant="default"
+                            variant=&quot;default&quot;
                           />
                         ))}
                       </div>
                       {categoryServices.length > 6 && (
-                        <div className="mt-6 text-center">
+                        <div className=&quot;mt-6 text-center&quot;>
                           <Link
                             href={`/services/category/${toSlug(category)}`}
-                            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105"
+                            className=&quot;inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105&quot;
                           >
                             View All {category} Services
-                            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            <svg className=&quot;ml-2 w-5 h-5&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
+                              <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M9 5l7 7-7 7&quot; />
                             </svg>
                           </Link>
                         </div>
@@ -262,25 +267,25 @@ export default function ServicesIndexPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="text-center">
-              <div className="bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-2xl p-12">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <section className=&quot;text-center&quot;>
+              <div className=&quot;bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-2xl p-12&quot;>
+                <h2 className=&quot;text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
                   Need a Custom Solution?
                 </h2>
-                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
                   Our team of experts can help you build custom solutions tailored to your specific needs. 
                   Let's discuss how we can transform your business with cutting-edge technology.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                   <Link
-                    href="/contact"
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105"
+                    href=&quot;/contact&quot;
+                    className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105&quot;
                   >
                     Get Started
                   </Link>
                   <Link
-                    href="/contact"
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105"
+                    href=&quot;/contact&quot;
+                    className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105&quot;
                   >
                     Schedule Demo
                   </Link>
@@ -293,12 +298,13 @@ export default function ServicesIndexPage() {
 
         {categories.map((cat) => (
           <section key={cat} id={anchorMap[cat] || toSlug(cat)}>
-            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">{cat}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <h2 className=&quot;text-2xl md:text-3xl font-semibold text-white mb-4&quot;>{cat}</h2>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
               {byCategory[cat].slice(0, (shownCounts[cat] ?? 12)).map((s) => {
                 const service = s as { id?: string, name?: string, link?: string, category?: string, tagline?: string, description?: string, price?: string, period?: string },
                 const slug = service.link ? (() => { try { const u = new URL(service.link), const p = u.pathname.replace(/^\/+|\/+$/g, ''), return p.startsWith('services/') ? p.substring('services/'.length) : toSlug(service.id || service.name || '') } catch { return toSlug(service.id || service.name || '') } })() : toSlug(service.id || service.name || ''),
                 return (
+<<<<<<< HEAD
                   <Card key={service.id || service.name} className="p-6 bg-black/50 border border-gray-700/60 hover:border-cyan-500/50 transition-colors shadow-lg/10">
                     <div className="text-sm text-gray-400 mb-1">{service.category || 'Service'}</div>
                     <h3 className="text-white text-xl font-semibold mb-2">{service.name}</h3>
@@ -307,6 +313,16 @@ export default function ServicesIndexPage() {
                     <div className="flex gap-3">
                       <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-glow hover:shadow-glow-lg">View</Link>
                       <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg border border-gray-600 text-gray-200 hover: border-cyan-500/70">Learn</Link>
+=======
+                  <Card key={service.id || service.name} className=&quot;p-6 bg-black/50 border border-gray-700/60 hover:border-cyan-500/50 transition-colors shadow-lg/10&quot;>
+                    <div className=&quot;text-sm text-gray-400 mb-1&quot;>{service.category || 'Service'}</div>
+                    <h3 className=&quot;text-white text-xl font-semibold mb-2&quot;>{service.name}</h3>
+                    <p className=&quot;text-gray-300/90 line-clamp-3 mb-3&quot;>{service.tagline || service.description}</p>
+                    <div className=&quot;text-gray-100 font-bold mb-4&quot;>{service.price}<span className=&quot;text-sm text-gray-400 font-medium&quot;>{service.period}</span></div>
+                    <div className=&quot;flex gap-3&quot;>
+                      <Link href={service.link || `/${slug}`} className=&quot;px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-glow hover:shadow-glow-lg&quot;>View</Link>
+                      <Link href={service.link || `/${slug}`} className=&quot;px-4 py-2 rounded-lg border border-gray-600 text-gray-200 hover:border-cyan-500/70&quot;>Learn</Link>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                     </div>
                   </Card>
                 )
@@ -316,16 +332,16 @@ export default function ServicesIndexPage() {
 
           {/* Featured Services */}
           {featuredServices.length > 0 && (
-            <section className="mb-20">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <section className=&quot;mb-20&quot;>
+              <h2 className=&quot;text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent&quot;>
                 Featured Services
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
                 {featuredServices.map((service: Service, index: number) => (
                   <UltraFuturisticServiceCard2026
                     key={`${service.id || service.name}-${index}`}
                     service={service}
-                    variant="quantum"
+                    variant=&quot;quantum&quot;
                   />
                 ))}
               </div>
@@ -334,16 +350,16 @@ export default function ServicesIndexPage() {
 
           {/* Latest Services */}
           {latestServices.length > 0 && (
-            <section className="mb-20">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+            <section className=&quot;mb-20&quot;>
+              <h2 className=&quot;text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent&quot;>
                 Latest Services (2026)
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
                 {latestServices.map((service: Service, index: number) => (
                   <UltraFuturisticServiceCard2026
                     key={`${service.id || service.name}-${index}`}
                     service={service}
-                    variant="ai"
+                    variant=&quot;ai&quot;
                   />
                 ))}
               </div>
@@ -351,19 +367,24 @@ export default function ServicesIndexPage() {
           )}
 
           {/* Services by Category */}
+<<<<<<< HEAD
           <section className="mb-20">
             <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+=======
+          <section className=&quot;mb-20&quot;>
+            <h2 className=&quot;text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent&quot;>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
               Services by Category
             </h2>
-            <div className="space-y-12">
+            <div className=&quot;space-y-12&quot;>
               {categories.map((category) => {
                 const categoryServices = servicesByCategory[category],
                 if (!categoryServices || categoryServices.length === 0) return null,
 
                 return (
-                  <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">
-                    <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
-                      <span className="text-3xl">
+                  <div key={category} className=&quot;border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm&quot;>
+                    <h3 className=&quot;text-2xl font-bold mb-6 text-white flex items-center gap-3&quot;>
+                      <span className=&quot;text-3xl&quot;>
                         {category === 'AI & Data' && '🧠'}
                         {category === 'Developer Tools' && '⚙️'}
                         {category === 'Cloud & FinOps' && '☁️'}
@@ -384,71 +405,71 @@ export default function ServicesIndexPage() {
                         {category === 'Transportation' && '🚗'}
                       </span>
                       {category}
-                      <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
+                      <span className=&quot;text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full&quot;>
                         {categoryServices.length} services
                       </span>
                     </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
                       {categoryServices.slice(0, 6).map((service: Service, index: number) => (
                         <UltraFuturisticServiceCard2026
                           key={`${service.id || service.name}-${index}`}
                           service={service}
-                          variant="default"
+                          variant=&quot;default&quot;
                         />
                       ))}
                     </div>
                     {categoryServices.length > 6 && (
-                      <div className="text-center mt-6">
+                      <div className=&quot;text-center mt-6&quot;>
                         <Link
                           href={`/services/category/${toSlug(category)}`}
-                          className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg text-cyan-300 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all"
+                          className=&quot;inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg text-cyan-300 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all&quot;
                         >
                           View All {category} Services ({categoryServices.length})
                         </Link>
                       </div>
                     )}
 
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="text-cyan-400 group-hover:text-blue-400 transition-colors duration-300">
-                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
-                          <span className="text-2xl font-bold">{service.name.charAt(0)}</span>
+                    <div className=&quot;flex items-center justify-between mb-6&quot;>
+                      <div className=&quot;text-cyan-400 group-hover:text-blue-400 transition-colors duration-300&quot;>
+                        <div className=&quot;w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center&quot;>
+                          <span className=&quot;text-2xl font-bold&quot;>{service.name.charAt(0)}</span>
                         </div>
                       </div>
-                      <ArrowRight className="w-5 h-5 text-gray-500 group-hover:text-cyan-400 transition-colors duration-300" />
+                      <ArrowRight className=&quot;w-5 h-5 text-gray-500 group-hover:text-cyan-400 transition-colors duration-300&quot; />
                     </div>
                     
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                    <h3 className=&quot;text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300&quot;>
                       {service.name}
                     </h3>
                     
-                    <p className="text-cyan-400 text-sm mb-4">
+                    <p className=&quot;text-cyan-400 text-sm mb-4&quot;>
                       {service.tagline}
                     </p>
                     
-                    <p className="text-gray-300 mb-6 leading-relaxed">
+                    <p className=&quot;text-gray-300 mb-6 leading-relaxed&quot;>
                       {service.description}
                     </p>
 
-                    <div className="space-y-2 mb-6">
+                    <div className=&quot;space-y-2 mb-6&quot;>
                       {service.features.slice(0, 3).map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <div key={featureIndex} className=&quot;flex items-center text-sm text-gray-400&quot;>
+                          <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
                           {feature}
                         </div>
                       ))}
                     </div>
 
-                    <div className="flex items-center justify-between">
-                      <div className="text-2xl font-bold text-white">
+                    <div className=&quot;flex items-center justify-between&quot;>
+                      <div className=&quot;text-2xl font-bold text-white&quot;>
                         {service.price}
                       </div>
                       {service.link && (
                         <a
                           href={service.link}
-                          className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+                          className=&quot;inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300&quot;
                         >
                           Learn More
-                        </a>
+                        </Link>
                       )}
                     </div>
                   </div>
@@ -457,38 +478,42 @@ export default function ServicesIndexPage() {
             </div>
 
             {filteredServices.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
+              <div className=&quot;text-center py-12&quot;>
+                <p className=&quot;text-gray-400 text-lg&quot;>No services found matching your criteria.</p>
               </div>
             )}
           </div>
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-4xl text-center">
+        <section className=&quot;py-20 px-4&quot;>
+          <div className=&quot;container mx-auto max-w-4xl text-center&quot;>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Get Started?</h2>
+              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Contact us today to discuss how our services can transform your business.
               </p>
+<<<<<<< HEAD
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
+=======
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 <a
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                  href=&quot;/contact&quot;
+                  className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105&quot;
                 >
                   Contact Sales
-                </a>
+                </Link>
                 <a
-                  href="/get-started"
-                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
+                  href=&quot;/get-started&quot;
+                  className=&quot;px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300&quot;
                 >
                   Get Started
-                </a>
+                </Link>
               </div>
             </motion.div>
           </div>

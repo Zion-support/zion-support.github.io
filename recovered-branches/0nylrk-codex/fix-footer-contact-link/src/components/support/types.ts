@@ -1,5 +1,10 @@
 
+<<<<<<< HEAD
 import { ReactNode } from "react",
+=======
+import { ReactNode } from &quot;react&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export interface HelpArticle {
   id: string,
   title: string,
@@ -17,6 +22,7 @@ export interface HelpCategory {
 }
 
 export interface SupportTicket {
+<<<<<<< HEAD
   id: string,
   userId: string,
   subject: string,
@@ -25,4 +31,14 @@ export interface SupportTicket {
   priority: "low" | "medium" | "high",
   createdAt: string,
   updatedAt: string
+=======
+  id: string;
+  userId: string;
+  subject: string;
+  message: string;
+  status: &quot;open&quot; | &quot;in-progress&quot; | &quot;resolved&quot; | &quot;closed&quot;;
+  priority: &quot;low&quot; | &quot;medium&quot; | &quot;high&quot;;
+  createdAt: string;
+  updatedAt: string;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 }

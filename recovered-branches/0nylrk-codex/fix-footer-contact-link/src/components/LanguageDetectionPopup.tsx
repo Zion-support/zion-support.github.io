@@ -47,22 +47,22 @@ export function LanguageDetectionPopup() {
 
   return (
     <AlertDialog open={open} onOpenChange={setOpen}>
-      <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">
+      <AlertDialogContent className=&quot;bg-zion-blue-dark text-white border border-zion-purple/20&quot;>
         <AlertDialogHeader>
-          <AlertDialogTitle className="text-white">
+          <AlertDialogTitle className=&quot;text-white&quot;>
             {t('language.switch_to_detected', { language: languageName })}
           </AlertDialogTitle>
-          <AlertDialogDescription className="text-zion-slate-light">
+          <AlertDialogDescription className=&quot;text-zion-slate-light&quot;>
             {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
+          <AlertDialogCancel className=&quot;bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10&quot;>
             {t('general.no')}
           </AlertDialogCancel>
           <AlertDialogAction 
             onClick={handleAccept}
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+            className=&quot;bg-zion-purple text-white hover:bg-zion-purple-dark&quot;
           >
             {t('general.yes')}
           </AlertDialogAction>

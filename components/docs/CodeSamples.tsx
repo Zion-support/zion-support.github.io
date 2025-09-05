@@ -14,8 +14,8 @@ export default function CodeSamples({ samples }: Props) {
   const sampleMap = Object.fromEntries(samples.map((s) => [s.language, s.code])),
 
   return (
-    <div className="w-full">
-      <div className="flex gap-2 mb-2">
+    <div className=&quot;w-full&quot;>
+      <div className=&quot;flex gap-2 mb-2&quot;>
         {tabs.map((t) => (
           <button
             key={t.key}
@@ -26,7 +26,7 @@ export default function CodeSamples({ samples }: Props) {
           </button>
         ))}
       </div>
-      <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm">
+      <pre className=&quot;p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm&quot;>
         <code>{sampleMap[active] || ''}</code>
       </pre>
     </div>

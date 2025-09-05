@@ -107,12 +107,22 @@ export function ValidatedFormField({
 
     switch (validationState) {
       case 'validating':
+<<<<<<< HEAD
         return <div className="animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full" />,
       case 'valid':
         return <CheckCircle className="h-4 w-4 text-green-500" />,
       case 'invalid':
         return <AlertCircle className="h-4 w-4 text-red-500" />,
       default: return null
+=======
+        return <div className=&quot;animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full&quot; />;
+      case 'valid':
+        return <CheckCircle className=&quot;h-4 w-4 text-green-500&quot; />;
+      case 'invalid':
+        return <AlertCircle className=&quot;h-4 w-4 text-red-500&quot; />;
+      default:
+        return null;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
@@ -135,14 +145,14 @@ export function ValidatedFormField({
     switch (type) {
       case 'textarea':
         return (
-          <div className="relative">
+          <div className=&quot;relative&quot;>
             <Textarea
               disabled={disabled}
               className={baseClasses}
               rows={4}
               {...form.register(name)}
             />
-            <div className="absolute top-2 right-2">
+            <div className=&quot;absolute top-2 right-2&quot;>
               {getValidationIcon()}
             </div>
           </div>
@@ -150,7 +160,7 @@ export function ValidatedFormField({
 
       case 'select':
         return (
-          <div className="relative">
+          <div className=&quot;relative&quot;>
             <Select onValueChange={(value) => form.setValue(name, value)} disabled={disabled}>
               <SelectTrigger className={baseClasses}>
                 <SelectValue placeholder={placeholder} />
@@ -163,7 +173,7 @@ export function ValidatedFormField({
                 ))}
               </SelectContent>
             </Select>
-            <div className="absolute top-2 right-8">
+            <div className=&quot;absolute top-2 right-8&quot;>
               {getValidationIcon()}
             </div>
           </div>
@@ -171,7 +181,7 @@ export function ValidatedFormField({
 
       case 'checkbox':
         return (
-          <div className="flex items-center space-x-2">
+          <div className=&quot;flex items-center space-x-2&quot;>
             <Checkbox
               id={name}
               checked={fieldValue}
@@ -180,7 +190,7 @@ export function ValidatedFormField({
             />
             <label
               htmlFor={name}
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              className=&quot;text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70&quot;
             >
               {label}
             </label>
@@ -190,27 +200,27 @@ export function ValidatedFormField({
 
       case 'password':
         return (
-          <div className="relative">
+          <div className=&quot;relative&quot;>
             <Input
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}
               className={cn(baseClasses, 'pr-20')}
               {...form.register(name)}
             />
-            <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
+            <div className=&quot;absolute inset-y-0 right-0 flex items-center gap-1 pr-3&quot;>
               {getValidationIcon()}
               <Button
-                type="button"
-                variant="ghost"
-                size="sm"
-                className="h-7 w-7 p-0"
+                type=&quot;button&quot;
+                variant=&quot;ghost&quot;
+                size=&quot;sm&quot;
+                className=&quot;h-7 w-7 p-0&quot;
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
                 {showPassword ? (
-                  <EyeOff className="h-4 w-4" />
+                  <EyeOff className=&quot;h-4 w-4&quot; />
                 ) : (
-                  <Eye className="h-4 w-4" />
+                  <Eye className=&quot;h-4 w-4&quot; />
                 )}
               </Button>
             </div>
@@ -219,14 +229,14 @@ export function ValidatedFormField({
 
       default:
         return (
-          <div className="relative">
+          <div className=&quot;relative&quot;>
             <Input
               type={type}
               disabled={disabled}
               className={baseClasses}
               {...form.register(name)}
             />
-            <div className="absolute inset-y-0 right-0 flex items-center pr-3">
+            <div className=&quot;absolute inset-y-0 right-0 flex items-center pr-3&quot;>
               {getValidationIcon()}
             </div>
           </div>
@@ -240,19 +250,19 @@ export function ValidatedFormField({
         control={form.control}
         name={name}
         render={() => (
-          <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+          <FormItem className=&quot;flex flex-row items-start space-x-3 space-y-0&quot;>
             <FormControl>
               {renderField()}
             </FormControl>
             {(fieldError || description) && (
-              <div className="space-y-1">
+              <div className=&quot;space-y-1&quot;>
                 {fieldError && (
-                  <FormMessage className="text-sm text-red-500">
+                  <FormMessage className=&quot;text-sm text-red-500&quot;>
                     {fieldError.message}
                   </FormMessage>
                 )}
                 {description && !fieldError && (
-                  <p className="text-sm text-muted-foreground">{description}</p>
+                  <p className=&quot;text-sm text-muted-foreground&quot;>{description}</p>
                 )}
               </div>
             )}
@@ -268,23 +278,23 @@ export function ValidatedFormField({
       name={name}
       render={() => (
         <FormItem>
-          <FormLabel className="text-sm font-medium">
+          <FormLabel className=&quot;text-sm font-medium&quot;>
             {label}
-            {validation.required && <span className="text-red-500 ml-1">*</span>}
+            {validation.required && <span className=&quot;text-red-500 ml-1&quot;>*</span>}
           </FormLabel>
           <FormControl>
             {renderField()}
           </FormControl>
           {(fieldError || description) && (
-            <div className="space-y-1">
+            <div className=&quot;space-y-1&quot;>
               {fieldError && (
-                <FormMessage className="text-sm text-red-500 flex items-center gap-1">
-                  <AlertCircle className="h-3 w-3" />
+                <FormMessage className=&quot;text-sm text-red-500 flex items-center gap-1&quot;>
+                  <AlertCircle className=&quot;h-3 w-3&quot; />
                   {fieldError.message}
                 </FormMessage>
               )}
               {description && !fieldError && (
-                <p className="text-sm text-muted-foreground">{description}</p>
+                <p className=&quot;text-sm text-muted-foreground&quot;>{description}</p>
               )}
             </div>
           )}

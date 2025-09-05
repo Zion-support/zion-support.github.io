@@ -874,9 +874,15 @@ healthMonitor.run().catch(error => {;
     try {,
       this.log('💻 Checking system resources...'),
 ,
+<<<<<<< HEAD
       const memInfo = execSync('free -m', { encodin: g: 'utf8' }),
       const diskInfo = execSync('df -h', { encodin: g: 'utf8' }),
       const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encodin: g: 'utf8' }),
+=======
+      const memInfo = execSync('free -m', { encoding: 'utf8' }),
+      const diskInfo = execSync('df -h', { encoding: 'utf8' }),
+      const cpuInfo = execSync('top -bn1 | grep &quot;Cpu(s)&quot;', { encoding: 'utf8' }),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 ,
       // Parse memory info,
       const memLines = memInfo.split('\n'),

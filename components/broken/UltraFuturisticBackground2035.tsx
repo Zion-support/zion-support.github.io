@@ -274,13 +274,13 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
 
   return (
     <>
-      <div className="fixed inset-0 z-0 overflow-hidden">
+      <div className=&quot;fixed inset-0 z-0 overflow-hidden&quot;>
         {/* Enhanced background layers */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
+        <div className=&quot;absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black&quot; />
         
         {/* Animated gradient overlay */}
         <motion.div
-          className="absolute inset-0 opacity-30"
+          className=&quot;absolute inset-0 opacity-30&quot;
           animate={{
             background: [
               'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)'
@@ -294,8 +294,8 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
         />
         
         {/* Holographic grid effect */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="h-full w-full" style={{
+        <div className=&quot;absolute inset-0 opacity-20&quot;>
+          <div className=&quot;h-full w-full&quot; style={{
             backgroundImage: `
               linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
@@ -307,13 +307,13 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
         {/* Canvas for animated particles */}
         <canvas
           ref={canvasRef}
-          className="absolute inset-0 w-full h-full"
+          className=&quot;absolute inset-0 w-full h-full&quot;
           style={{ filter: 'blur(0.5px)' }}
         />
 
         {/* Floating neon orbs */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20"
+          className=&quot;absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20&quot;
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.2, 0.4, 0.2],
@@ -327,7 +327,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
         />
         
         <motion.div
-          className="absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20"
+          className=&quot;absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20&quot;
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.2, 0.5, 0.2],
@@ -341,9 +341,9 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
         />
 
         {/* Quantum energy waves */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className=&quot;absolute inset-0 overflow-hidden&quot;>
           <motion.div
-            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+            className=&quot;absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent&quot;
             animate={{
               y: [-100, 100, -100],
               opacity: [0, 0.3, 0]
@@ -355,7 +355,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
             }}
           />
           <motion.div
-            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent"
+            className=&quot;absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent&quot;
             animate={{
               y: [100, -100, 100],
               opacity: [0, 0.3, 0]

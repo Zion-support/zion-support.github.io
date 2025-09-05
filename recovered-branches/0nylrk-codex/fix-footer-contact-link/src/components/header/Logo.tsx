@@ -17,16 +17,16 @@ export function Logo({ customLogo, customColor }: LogoProps) {
   
   if (logoToUse) {
     return (
-      <Link to="/" className="flex items-center">
-        <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" />
+      <Link to=&quot;/&quot; className=&quot;flex items-center&quot;>
+        <img src={logoToUse} alt={`${brandName} Logo`} className=&quot;h-8&quot; />
       </Link>
     )
   }
   
   return (
-    <Link to="/" className="flex items-center">
-      <div className="text-2xl font-bold" style={colorToUse ? { color: colorToUse } : {}}>
-        {isWhitelabel ? brandName : 'Zion'}<span className="text-zion-cyan">AI</span>
+    <Link to=&quot;/&quot; className=&quot;flex items-center&quot;>
+      <div className=&quot;text-2xl font-bold&quot; style={colorToUse ? { color: colorToUse } : {}}>
+        {isWhitelabel ? brandName : 'Zion'}<span className=&quot;text-zion-cyan&quot;>AI</span>
       </div>
     </Link>
   )

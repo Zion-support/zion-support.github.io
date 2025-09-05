@@ -1,21 +1,39 @@
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { Star } from 'lucide-react'
 import { useForm } from "react-hook-form",
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
+=======
+import { useState } from &quot;react&quot;;
+import { Star } from 'lucide-react'
+import { useForm } from &quot;react-hook-form&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
   FormMessage} from "@/components/ui/form",
 import {
   RadioGroup,
   RadioGroupItem} from "@/components/ui/radio-group",
 import { Switch } from "@/components/ui/switch",
 import { Review } from "@/types/reviews",
+=======
+  FormMessage} from &quot;@/components/ui/form&quot;;
+import {
+  RadioGroup,
+  RadioGroupItem} from &quot;@/components/ui/radio-group&quot;;
+import { Switch } from &quot;@/components/ui/switch&quot;;
+import { Review } from &quot;@/types/reviews&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -54,7 +72,7 @@ export function ReviewForm({
       would_work_again: defaultValues.would_work_again,
       is_anonymous: defaultValues.is_anonymous} : {
       rating: 0,
-      review_text: "",
+      review_text: "&quot;,
       communication_rating: undefined,
       quality_rating: undefined,
       timeliness_rating: undefined,
@@ -74,27 +92,31 @@ export function ReviewForm({
     }
   },
   
+<<<<<<< HEAD
   const watchRating = form.watch("rating"),
+=======
+  const watchRating = form.watch(&quot;rating");
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6&quot;>
         {/* Main Rating */}
         <FormField
           control={form.control}
-          name="rating"
-          rules={{ required: "Rating is required" }}
+          name=&quot;rating&quot;
+          rules={{ required: &quot;Rating is required" }}
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel className="block text-center mb-2">
                 How was your experience with {revieweeName}?
               </FormLabel>
               <FormControl>
-                <div className="flex justify-center gap-1">
+                <div className="flex justify-center gap-1&quot;>
                   {[1, 2, 3, 4, 5].map((star) => (
                     <button
                       key={star}
-                      type="button"
+                      type=&quot;button"
                       onClick={() => field.onChange(star)}
                       onMouseEnter={() => setHoveredStar(star)}
                       onMouseLeave={() => setHoveredStar(0)}
@@ -104,15 +126,15 @@ export function ReviewForm({
                       <Star
                         className={`h-10 w-10 ${
                           star <= (hoveredStar || field.value || 0)
-                            ? "fill-yellow-400 text-yellow-400"
-                            : "text-gray-300"
+                            ? "fill-yellow-400 text-yellow-400&quot;
+                            : &quot;text-gray-300"
                         } transition-colors`}
                       />
                     </button>
                   ))}
                 </div>
               </FormControl>
-              <div className="text-center mt-1 h-5">
+              <div className="text-center mt-1 h-5&quot;>
                 <FormMessage />
               </div>
             </FormItem>
@@ -122,18 +144,18 @@ export function ReviewForm({
         {/* Review Text */}
         <FormField
           control={form.control}
-          name="review_text"
+          name=&quot;review_text&quot;
           rules={{
-            required: "Please provide feedback",
+            required: &quot;Please provide feedback&quot;,
             minLength: {
               value: 20,
-              message: "Review must be at least 20 characters"}}}
+              message: &quot;Review must be at least 20 characters&quot;}}}
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Your Review</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Share your experience and feedback..."
+                  placeholder=&quot;Share your experience and feedback..."
                   className="min-h-24 resize-none"
                   {...field}
                 />
@@ -146,12 +168,12 @@ export function ReviewForm({
         {/* Additional Rating Categories (only shown if main rating is provided) */}
         {(watchRating ?? 0) > 0 && (
           <div className="space-y-6 border-t pt-6">
-            <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
+            <h3 className="font-medium text-sm&quot;>Additional Ratings (Optional)</h3>
             
             {/* Communication */}
             <FormField
               control={form.control}
-              name="communication_rating"
+              name=&quot;communication_rating"
               render={({ field }: { field: any }) => (
                 <FormItem className="space-y-2">
                   <FormLabel>Communication</FormLabel>
@@ -169,7 +191,7 @@ export function ReviewForm({
                           <FormControl>
                             <RadioGroupItem value={value.toString()} />
                           </FormControl>
-                          <FormLabel className="cursor-pointer font-normal">
+                          <FormLabel className="cursor-pointer font-normal&quot;>
                             {value}
                           </FormLabel>
                         </FormItem>
@@ -184,7 +206,7 @@ export function ReviewForm({
             {/* Quality */}
             <FormField
               control={form.control}
-              name="quality_rating"
+              name=&quot;quality_rating"
               render={({ field }: { field: any }) => (
                 <FormItem className="space-y-2">
                   <FormLabel>Quality of Work</FormLabel>
@@ -202,7 +224,7 @@ export function ReviewForm({
                           <FormControl>
                             <RadioGroupItem value={value.toString()} />
                           </FormControl>
-                          <FormLabel className="cursor-pointer font-normal">
+                          <FormLabel className="cursor-pointer font-normal&quot;>
                             {value}
                           </FormLabel>
                         </FormItem>
@@ -217,7 +239,7 @@ export function ReviewForm({
             {/* Timeliness */}
             <FormField
               control={form.control}
-              name="timeliness_rating"
+              name=&quot;timeliness_rating"
               render={({ field }: { field: any }) => (
                 <FormItem className="space-y-2">
                   <FormLabel>Timeliness</FormLabel>
@@ -235,7 +257,7 @@ export function ReviewForm({
                           <FormControl>
                             <RadioGroupItem value={value.toString()} />
                           </FormControl>
-                          <FormLabel className="cursor-pointer font-normal">
+                          <FormLabel className="cursor-pointer font-normal&quot;>
                             {value}
                           </FormLabel>
                         </FormItem>
@@ -250,20 +272,20 @@ export function ReviewForm({
             {/* Would Work Again */}
             <FormField
               control={form.control}
-              name="would_work_again"
+              name=&quot;would_work_again"
               render={({ field }: { field: any }) => (
                 <FormItem>
                   <div className="flex items-center gap-2">
                     <FormLabel>Would you work with {revieweeName} again?</FormLabel>
                     <FormControl>
-                      <div className="flex items-center space-x-2">
+                      <div className="flex items-center space-x-2&quot;>
                         <Switch
-                          aria-label="Would work again"
+                          aria-label=&quot;Would work again"
                           checked={field.value}
                           onCheckedChange={field.onChange}
                         />
-                        <span className="text-sm text-muted-foreground">
-                          {field.value ? "Yes" : "No"}
+                        <span className="text-sm text-muted-foreground&quot;>
+                          {field.value ? &quot;Yes&quot; : &quot;No&quot;}
                         </span>
                       </div>
                     </FormControl>
@@ -278,13 +300,13 @@ export function ReviewForm({
         {/* Anonymous Review */}
         <FormField
           control={form.control}
-          name="is_anonymous"
+          name=&quot;is_anonymous"
           render={({ field }: { field: any }) => (
             <FormItem>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2&quot;>
                 <FormControl>
                   <Switch
-                    aria-label="Submit anonymously"
+                    aria-label=&quot;Submit anonymously"
                     checked={field.value}
                     onCheckedChange={field.onChange}
                   />
@@ -293,7 +315,7 @@ export function ReviewForm({
                   Submit anonymously
                 </FormLabel>
               </div>
-              <p className="text-xs text-muted-foreground mt-1">
+              <p className="text-xs text-muted-foreground mt-1&quot;>
                 Anonymous reviews won't display your name but will still be linked to your account.
               </p>
               <FormMessage />
@@ -302,11 +324,11 @@ export function ReviewForm({
         />
         
         <Button
-          type="submit"
-          className="w-full"
+          type=&quot;submit"
+          className="w-full&quot;
           disabled={isSubmitting || !form.formState.isValid}
         >
-          {isSubmitting ? "Submitting..." : defaultValues ? "Save Changes" : "Submit Review"}
+          {isSubmitting ? &quot;Submitting...&quot; : defaultValues ? &quot;Save Changes&quot; : &quot;Submit Review"}
         </Button>
       </form>
     </Form>

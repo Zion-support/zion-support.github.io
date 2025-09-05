@@ -20,7 +20,7 @@ const Jobs: NextPage = () => {
 
   return (
     <div>
-      <Seo title="Jobs" description="Open roles at Zion Tech Solutions." />
+      <Seo title=&quot;Jobs&quot; description=&quot;Open roles at Zion Tech Solutions.&quot; />
       <JobPostingJsonLd
         datePosted={job.datePosted}
         description={job.description}

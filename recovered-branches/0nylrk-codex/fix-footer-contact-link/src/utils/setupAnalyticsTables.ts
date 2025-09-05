@@ -9,8 +9,13 @@ export async function ensureAnalyticsTablesExist() {
       .limit(1),
       
     if (error && error.code === 'PGRST204') {
+<<<<<<< HEAD
       // // // console.log('Creating analytics tables...'),
       await createAnalyticsTables()
+=======
+      // console.log('Creating analytics tables...');
+      await createAnalyticsTables();
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   } catch (error) {
     console.warn('Error checking if analytics tables exist:', error),
@@ -81,7 +86,11 @@ async function createAnalyticsTables() {
       `
     }),
     
+<<<<<<< HEAD
     // // // console.log('Analytics tables created successfully')
+=======
+    // console.log('Analytics tables created successfully');
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   } catch (error) {
     console.error('Error creating analytics tables:', error),
     // Tables creation failed, but we can still continue

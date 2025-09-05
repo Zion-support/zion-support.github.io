@@ -11,8 +11,13 @@ async function post(url: string, body: any) {
 async function main() {
   const seedsPath = path.join(process.cwd(), 'datapage-metadataseo-seeds.json'),
   if (!fs.existsSync(seedsPath)) {
+<<<<<<< HEAD
     // // // console.log('No seeds file found at', seedsPath),
     process.exit(0)
+=======
+    // console.log('No seeds file found at', seedsPath);
+    process.exit(0);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
   const seeds = JSON.parse(fs.readFileSync(seedsPath, 'utf8')) as Array<{ prompt: string, region?: string, service?: string }>,
   const outDir = path.join(process.cwd(), 'datapage-metadataseo'),
@@ -20,8 +25,13 @@ async function main() {
   for (const s of seeds) {
     const gen = await post(`${HOST}/api/seo/generate`, s),
     if (gen?.slug && gen?.payload) {
+<<<<<<< HEAD
       fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),
       // // // console.log('Generated', gen.slug)
+=======
+      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2));
+      // console.log('Generated', gen.slug);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   }
 }

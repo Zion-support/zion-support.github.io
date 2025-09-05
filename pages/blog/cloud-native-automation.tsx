@@ -182,7 +182,12 @@ export default function CloudNativeAutomation() {
                 <p className='text-white/90 mb-4'>
                   As we continue to evolve our cloud-native automation
                   infrastructure, we're exploring emerging technologies
+<<<<<<< HEAD
                   like: </p>
+=======
+                  like:
+                </p>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>• Serverless computing for event-driven automation</li>
                   <li>Edge computing for low-latency processing</li>

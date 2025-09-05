@@ -18,7 +18,7 @@ const navigationItems = [
   {
     name: 'All Services',
     href: '/2025-innovative-services-showcase',
-    icon: <Globe className="w-5 h-5" />,
+    icon: <Globe className=&quot;w-5 h-5&quot; />,
     description: 'Complete portfolio of all technology services',
     badge: 'New',
     children: [
@@ -40,7 +40,7 @@ const navigationItems = [
   {
     name: 'AI & Consciousness',
     href: '/ai-services',
-    icon: <Brain className="w-5 h-5" />,
+    icon: <Brain className=&quot;w-5 h-5&quot; />,
     description: 'Revolutionary AI consciousness and emotional intelligence',
     badge: 'New',
     children: [
@@ -75,7 +75,7 @@ const navigationItems = [
   {
     name: 'AI Automation',
     href: '/ai-automation-services',
-    icon: <Zap className="w-5 h-5" />,
+    icon: <Zap className=&quot;w-5 h-5&quot; />,
     description: 'Advanced AI-powered automation solutions',
     badge: 'Hot',
     children: [
@@ -94,7 +94,7 @@ const navigationItems = [
   {
     name: 'AI Automation',
     href: '/ai-automation-services',
-    icon: <Zap className="w-5 h-5" />,
+    icon: <Zap className=&quot;w-5 h-5&quot; />,
     description: 'Advanced AI-powered automation solutions',
     badge: 'Hot',
     children: [
@@ -113,7 +113,7 @@ const navigationItems = [
   {
     name: 'Quantum & Emerging Tech',
     href: '/quantum-services',
-    icon: <Atom className="w-5 h-5" />,
+    icon: <Atom className=&quot;w-5 h-5&quot; />,
     description: 'Quantum computing and breakthrough technologies',
     badge: 'Hot',
     children: [
@@ -137,7 +137,7 @@ const navigationItems = [
   {
     name: 'Cybersecurity',
     href: '/cybersecurity-services',
-    icon: <Shield className="w-5 h-5" />,
+    icon: <Shield className=&quot;w-5 h-5&quot; />,
     description: 'Next-generation cybersecurity solutions',
     badge: 'Hot',
     children: [
@@ -156,7 +156,7 @@ const navigationItems = [
   {
     name: 'Cybersecurity',
     href: '/cybersecurity-services',
-    icon: <Shield className="w-5 h-5" />,
+    icon: <Shield className=&quot;w-5 h-5&quot; />,
     description: 'Next-generation cybersecurity solutions',
     badge: 'Hot',
     children: [
@@ -175,7 +175,7 @@ const navigationItems = [
   {
     name: 'Enterprise IT',
     href: '/enterprise-it',
-    icon: <Cpu className="w-5 h-5" />,
+    icon: <Cpu className=&quot;w-5 h-5&quot; />,
     description: 'Enterprise solutions and infrastructure',
     children: [
       { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure', description: 'Future-proof cloud security' },
@@ -198,7 +198,7 @@ const navigationItems = [
   {
     name: 'Blockchain & Web3',
     href: '/blockchain-web3-services',
-    icon: <Globe className="w-5 h-5" />,
+    icon: <Globe className=&quot;w-5 h-5&quot; />,
     description: 'Advanced blockchain and Web3 solutions',
     badge: 'New',
     children: [
@@ -217,7 +217,7 @@ const navigationItems = [
   {
     name: 'Micro SAAS',
     href: '/micro-saas',
-    icon: <Rocket className="w-5 h-5" />,
+    icon: <Rocket className=&quot;w-5 h-5&quot; />,
     description: 'Innovative business solutions for modern enterprises',
     badge: 'Popular',
     children: [
@@ -236,7 +236,7 @@ const navigationItems = [
   {
     name: 'Healthcare & Biotech',
     href: '/healthcare-biotech-services',
-    icon: <Heart className="w-5 h-5" />,
+    icon: <Heart className=&quot;w-5 h-5&quot; />,
     description: 'AI-powered healthcare and biotechnology',
     badge: 'New',
     children: [
@@ -255,7 +255,7 @@ const navigationItems = [
   {
     name: 'Healthcare & Biotech',
     href: '/healthcare-biotech-services',
-    icon: <Heart className="w-5 h-5" />,
+    icon: <Heart className=&quot;w-5 h-5&quot; />,
     description: 'AI-powered healthcare and biotechnology',
     badge: 'New',
     children: [
@@ -274,7 +274,7 @@ const navigationItems = [
   {
     name: 'Solutions',
     href: '/solutions',
-    icon: <Target className="w-5 h-5" />,
+    icon: <Target className=&quot;w-5 h-5&quot; />,
     description: 'Industry-specific solutions',
     children: [
       { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },
@@ -288,7 +288,7 @@ const navigationItems = [
   {
     name: 'Research & Development',
     href: '/research-development',
-    icon: <BookOpen className="w-5 h-5" />,
+    icon: <BookOpen className=&quot;w-5 h-5&quot; />,
     description: 'Cutting-edge research and development services',
     children: [
       { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', description: 'Self-directed research' },
@@ -302,7 +302,7 @@ const navigationItems = [
   {
     name: 'Industry Solutions',
     href: '/industry-solutions',
-    icon: <Truck className="w-5 h-5" />,
+    icon: <Truck className=&quot;w-5 h-5&quot; />,
     description: 'Specialized solutions for specific industries',
     children: [
       { name: 'Healthcare AI', href: '/healthcare-ai-solutions', description: 'Medical AI applications' },
@@ -316,7 +316,7 @@ const navigationItems = [
   {
     name: 'Pricing & Plans',
     href: '/pricing',
-    icon: <DollarSign className="w-5 h-5" />,
+    icon: <DollarSign className=&quot;w-5 h-5&quot; />,
     description: 'Flexible pricing options for all services',
     children: [
       { name: '2025 Pricing', href: '/pricing-2025', description: 'Current year pricing' },
@@ -330,7 +330,7 @@ const navigationItems = [
   {
     name: 'Resources',
     href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
+    icon: <BookOpen className=&quot;w-5 h-5&quot; />,
     description: 'Educational resources and documentation',
     children: [
       { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
@@ -344,7 +344,7 @@ const navigationItems = [
   {
     name: 'Support',
     href: '/support',
-    icon: <Settings className="w-5 h-5" />,
+    icon: <Settings className=&quot;w-5 h-5&quot; />,
     description: 'Technical support and customer service',
     children: [
       { name: 'Help Center', href: '/help', description: 'Self-service support' },
@@ -382,22 +382,22 @@ export default function EnhancedNavigation2025() {
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-cyan-900 to-purple-900 text-white py-2">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
-            <div className="flex items-center gap-4 mb-2 sm:mb-0">
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-cyan-300" />
+      <div className=&quot;bg-gradient-to-r from-cyan-900 to-purple-900 text-white py-2&quot;>
+        <div className=&quot;container mx-auto px-4&quot;>
+          <div className=&quot;flex flex-col sm:flex-row justify-between items-center text-sm&quot;>
+            <div className=&quot;flex items-center gap-4 mb-2 sm:mb-0&quot;>
+              <div className=&quot;flex items-center gap-2&quot;>
+                <Phone className=&quot;w-4 h-4 text-cyan-300&quot; />
                 <span>{contactInfo.phone}</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-purple-300" />
+              <div className=&quot;flex items-center gap-2&quot;>
+                <Mail className=&quot;w-4 h-4 text-purple-300&quot; />
                 <span>{contactInfo.email}</span>
               </div>
             </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-green-300" />
-              <span className="text-xs">{contactInfo.address}</span>
+            <div className=&quot;flex items-center gap-2&quot;>
+              <MapPin className=&quot;w-4 h-4 text-green-300&quot; />
+              <span className=&quot;text-xs&quot;>{contactInfo.address}</span>
             </div>
           </div>
         </div>
@@ -409,31 +409,31 @@ export default function EnhancedNavigation2025() {
           ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50' 
           : 'bg-transparent'
       }`}>
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
+        <div className=&quot;container mx-auto px-4&quot;>
+          <div className=&quot;flex items-center justify-between h-20&quot;>
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Star className="w-6 h-6 text-white" />
+            <Link href=&quot;/&quot; className=&quot;flex items-center space-x-3 group&quot;>
+              <div className=&quot;relative&quot;>
+                <div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300&quot;>
+                  <Star className=&quot;w-6 h-6 text-white&quot; />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                <div className=&quot;absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300&quot;></div>
               </div>
               <div>
-                <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>
-                <p className="text-xs text-gray-400">Innovation • Intelligence • Impact</p>
+                <h1 className=&quot;text-xl font-bold text-white&quot;>Zion Tech Group</h1>
+                <p className=&quot;text-xs text-gray-400&quot;>Innovation • Intelligence • Impact</p>
               </div>
-            </Link>
+            </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
               {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
+                <div key={item.name} className=&quot;relative group&quot;>
                   <button
                     onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                    className=&quot;flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2&quot;
                   >
-                    <item.icon className="w-4 h-4" />
+                    <item.icon className=&quot;w-4 h-4&quot; />
                     <span>{item.name}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                       activeSubmenu === item.name ? 'rotate-180' : ''
@@ -448,41 +448,41 @@ export default function EnhancedNavigation2025() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden"
+                        className=&quot;absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden&quot;
                       >
-                        <div className="p-6">
+                        <div className=&quot;p-6&quot;>
                           {item.submenu?.map((subitem) => (
                             <Link
                               key={subitem.name}
                               href={subitem.href}
                               onClick={() => setActiveSubmenu(null)}
-                              className="group block p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200 mb-2 last:mb-0"
+                              className=&quot;group block p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200 mb-2 last:mb-0&quot;
                             >
-                              <div className="flex items-start space-x-3">
+                              <div className=&quot;flex items-start space-x-3&quot;>
                                 {subitem.icon && (
-                                  <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-200">
-                                    <subitem.icon className="w-5 h-5 text-cyan-400" />
+                                  <div className=&quot;p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-200&quot;>
+                                    <subitem.icon className=&quot;w-5 h-5 text-cyan-400&quot; />
                                   </div>
                                 )}
-                                <div className="flex-1">
-                                  <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-200">
+                                <div className=&quot;flex-1&quot;>
+                                  <h3 className=&quot;font-semibold text-white group-hover:text-cyan-400 transition-colors duration-200&quot;>
                                     {subitem.name}
                                   </h3>
-                                  <p className="text-sm text-gray-400 mt-1">
+                                  <p className=&quot;text-sm text-gray-400 mt-1&quot;>
                                     {subitem.description}
                                   </p>
                                   {subitem.services && (
-                                    <div className="mt-2 flex flex-wrap gap-1">
+                                    <div className=&quot;mt-2 flex flex-wrap gap-1&quot;>
                                       {subitem.services.slice(0, 2).map((service) => (
                                         <span
                                           key={service}
-                                          className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md"
+                                          className=&quot;px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md&quot;
                                         >
                                           {service}
                                         </span>
                                       ))}
                                       {subitem.services.length > 2 && (
-                                        <span className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">
+                                        <span className=&quot;px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md&quot;>
                                           +{subitem.services.length - 2} more
                                         </span>
                                       )}
@@ -490,7 +490,7 @@ export default function EnhancedNavigation2025() {
                                   )}
                                 </div>
                               </div>
-                            </Link>
+                            </a>
                           ))}
                         </div>
                       </motion.div>
@@ -501,27 +501,27 @@ export default function EnhancedNavigation2025() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
               <Link
-                href="/pricing"
-                className="px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200"
+                href=&quot;/pricing&quot;
+                className=&quot;px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200&quot;
               >
                 Pricing
-              </Link>
+              </a>
               <Link
-                href="/contact"
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                href=&quot;/contact&quot;
+                className=&quot;px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105&quot;
               >
                 Get Started
-              </Link>
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
+              className=&quot;lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200&quot;
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}
             </button>
           </div>
         </div>
@@ -536,7 +536,7 @@ export default function EnhancedNavigation2025() {
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
                       {item.badge && (
-                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">
+                        <span className=&quot;px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full&quot;>
                           {item.badge}
                         </span>
                       )}
@@ -552,21 +552,21 @@ export default function EnhancedNavigation2025() {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="ml-8 mt-2 space-y-2"
+                      className=&quot;ml-8 mt-2 space-y-2&quot;
                     >
                       {item.children?.map((child) => (
                         <Link
                           key={child.name}
                           href={child.href}
-                          className="block px-4 py-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                          className=&quot;block px-4 py-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200&quot;
                           onClick={() => setIsOpen(false)}
-                          className="block p-2 text-gray-300 hover:text-white transition-colors text-sm"
+                          className=&quot;block p-2 text-gray-300 hover:text-white transition-colors text-sm&quot;
                         >
-                          <subItem.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
-                          <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
+                          <subItem.icon className=&quot;w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200&quot; />
+                          <span className=&quot;text-gray-300 group-hover:text-white transition-colors duration-200&quot;>
                             {subItem.name}
                           </span>
-                        </Link>
+                        </a>
                       ))}
                     </motion.div>
                   )}
@@ -574,46 +574,46 @@ export default function EnhancedNavigation2025() {
               ))}
 
               {/* Mobile CTA */}
-              <div className="pt-4">
+              <div className=&quot;pt-4&quot;>
                 <Link
-                  href="/contact"
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300"
+                  href=&quot;/contact&quot;
+                  className=&quot;block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300&quot;
                   onClick={() => setIsOpen(false)}
                 >
                   Get Started
-                </Link>
-            className="fixed inset-0 z-50 lg:hidden"
+                </a>
+            className=&quot;fixed inset-0 z-50 lg:hidden&quot;
           >
             {/* Backdrop */}
             <div
-              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+              className=&quot;absolute inset-0 bg-black/50 backdrop-blur-sm&quot;
               onClick={closeMenu}
             />
             
             {/* Menu Panel */}
-            <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">
-              <div className="p-6">
+            <div className=&quot;absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto&quot;>
+              <div className=&quot;p-6&quot;>
                 {/* Close Button */}
-                <div className="flex justify-end mb-6">
+                <div className=&quot;flex justify-end mb-6&quot;>
                   <button
                     onClick={closeMenu}
-                    className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
+                    className=&quot;p-2 text-gray-400 hover:text-white transition-colors duration-200&quot;
                   >
-                    <X className="w-6 h-6" />
+                    <X className=&quot;w-6 h-6&quot; />
                   </button>
                 </div>
 
                 {/* Mobile Navigation Items */}
-                <div className="space-y-4">
+                <div className=&quot;space-y-4&quot;>
                   {navigationItems.map((item) => (
                     <div key={item.name}>
                       <button
                         onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
-                        className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
+                        className=&quot;flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200&quot;
                       >
-                        <div className="flex items-center space-x-3">
-                          <item.icon className="w-5 h-5 text-cyan-400" />
-                          <span className="text-white font-medium">{item.name}</span>
+                        <div className=&quot;flex items-center space-x-3&quot;>
+                          <item.icon className=&quot;w-5 h-5 text-cyan-400&quot; />
+                          <span className=&quot;text-white font-medium&quot;>{item.name}</span>
                         </div>
                         <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
                           activeSubmenu === item.name ? 'rotate-180' : ''
@@ -628,18 +628,18 @@ export default function EnhancedNavigation2025() {
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2 }}
-                            className="ml-8 space-y-2"
+                            className=&quot;ml-8 space-y-2&quot;
                           >
                             {item.submenu?.map((subitem) => (
                               <Link
                                 key={subitem.name}
                                 href={subitem.href}
                                 onClick={closeMenu}
-                                className="block p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200"
+                                className=&quot;block p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200&quot;
                               >
-                                <h4 className="text-white font-medium">{subitem.name}</h4>
-                                <p className="text-sm text-gray-400 mt-1">{subitem.description}</p>
-                              </Link>
+                                <h4 className=&quot;text-white font-medium&quot;>{subitem.name}</h4>
+                                <p className=&quot;text-sm text-gray-400 mt-1&quot;>{subitem.description}</p>
+                              </a>
                             ))}
                           </motion.div>
                         )}
@@ -649,37 +649,37 @@ export default function EnhancedNavigation2025() {
                 </div>
 
                 {/* Mobile CTA */}
-                <div className="mt-8 space-y-4">
+                <div className=&quot;mt-8 space-y-4&quot;>
                   <Link
-                    href="/pricing"
+                    href=&quot;/pricing&quot;
                     onClick={closeMenu}
-                    className="block w-full text-center px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-200"
+                    className=&quot;block w-full text-center px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-200&quot;
                   >
                     View Pricing
-                  </Link>
+                  </a>
                   <Link
-                    href="/contact"
+                    href=&quot;/contact&quot;
                     onClick={closeMenu}
-                    className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                    className=&quot;block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300&quot;
                   >
                     Contact Us
-                  </Link>
+                  </a>
                 </div>
 
                 {/* Mobile Contact Info */}
-                <div className="mt-8 pt-6 border-t border-gray-700/50">
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-center space-x-3 text-gray-400">
-                      <Phone className="w-4 h-4 text-cyan-400" />
+                <div className=&quot;mt-8 pt-6 border-t border-gray-700/50&quot;>
+                  <div className=&quot;space-y-3 text-sm&quot;>
+                    <div className=&quot;flex items-center space-x-3 text-gray-400&quot;>
+                      <Phone className=&quot;w-4 h-4 text-cyan-400&quot; />
                       <span>{contactInfo.phone}</span>
                     </div>
-                    <div className="flex items-center space-x-3 text-gray-400">
-                      <Mail className="w-4 h-4 text-purple-400" />
+                    <div className=&quot;flex items-center space-x-3 text-gray-400&quot;>
+                      <Mail className=&quot;w-4 h-4 text-purple-400&quot; />
                       <span>{contactInfo.email}</span>
                     </div>
-                    <div className="flex items-start space-x-3 text-gray-400">
-                      <MapPin className="w-4 h-4 text-green-400 mt-0.5" />
-                      <span className="text-xs">{contactInfo.address}</span>
+                    <div className=&quot;flex items-start space-x-3 text-gray-400&quot;>
+                      <MapPin className=&quot;w-4 h-4 text-green-400 mt-0.5&quot; />
+                      <span className=&quot;text-xs&quot;>{contactInfo.address}</span>
                     </div>
                   </div>
                 </div>
@@ -690,7 +690,7 @@ export default function EnhancedNavigation2025() {
       </AnimatePresence>
 
       {/* Spacer for fixed navigation */}
-      <div className="h-20" />
+      <div className=&quot;h-20&quot; />
     </>
   )
 },

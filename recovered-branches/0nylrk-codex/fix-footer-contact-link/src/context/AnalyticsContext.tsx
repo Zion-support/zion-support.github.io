@@ -79,7 +79,11 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
         metadata: metadata
       }]),
       
+<<<<<<< HEAD
       // // // console.log(`Analytics event tracked: ${type}`, metadata)
+=======
+      // console.log(`Analytics event tracked: ${type}`, metadata);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (error) {
       console.error('Error logging analytics event:', error)
     }

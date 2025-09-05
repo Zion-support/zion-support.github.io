@@ -51,8 +51,13 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
             filter: `user_id=eq.${user.id}`
           },
           (payload) => {
+<<<<<<< HEAD
             // // // console.log('Notification change received:', payload),
             notificationOps.fetchNotifications()
+=======
+            // console.log('Notification change received:', payload);
+            notificationOps.fetchNotifications();
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           }
         )
         .subscribe(),

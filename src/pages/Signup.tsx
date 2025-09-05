@@ -249,10 +249,10 @@ export default function Signup() {
   if (healthCheckLoading) {
     return (
       <AuthLayout>
-        <div className="flex min-h-screen items-center justify-center p-4">
-          <div className="text-center space-y-4">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
-            <p className="text-muted-foreground">Initializing signup...</p>
+        <div className=&quot;flex min-h-screen items-center justify-center p-4&quot;>
+          <div className=&quot;text-center space-y-4&quot;>
+            <div className=&quot;animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto&quot;></div>
+            <p className=&quot;text-muted-foreground&quot;>Initializing signup...</p>
           </div>
         </div>
       </AuthLayout>
@@ -261,29 +261,29 @@ export default function Signup() {
 
   return (
     <AuthLayout>
-      <div className="flex min-h-screen items-center justify-center p-4">
-        <div className="w-full max-w-sm space-y-4">
+      <div className=&quot;flex min-h-screen items-center justify-center p-4&quot;>
+        <div className=&quot;w-full max-w-sm space-y-4&quot;>
           {isPartnerSignup && (
-            <div className="text-center mb-6">
-              <h1 className="text-2xl font-bold text-foreground">Partner Application</h1>
-              <p className="text-sm text-muted-foreground mt-2">
+            <div className=&quot;text-center mb-6&quot;>
+              <h1 className=&quot;text-2xl font-bold text-foreground&quot;>Partner Application</h1>
+              <p className=&quot;text-sm text-muted-foreground mt-2&quot;>
                 Join the Zion AI Partner Program and start earning rewards
               </p>
             </div>
           )}
-          <form onSubmit={handleFormSubmit} className="space-y-4" noValidate>
+          <form onSubmit={handleFormSubmit} className=&quot;space-y-4&quot; noValidate>
           {/* Show Health Check Warning */}
           {healthCheckError && (
-            <Alert variant="destructive" className="border-yellow-500 bg-yellow-50 text-yellow-900">
-              <AlertCircle className="h-4 w-4" />
-              <AlertDescription className="flex items-center justify-between">
+            <Alert variant=&quot;destructive&quot; className=&quot;border-yellow-500 bg-yellow-50 text-yellow-900&quot;>
+              <AlertCircle className=&quot;h-4 w-4&quot; />
+              <AlertDescription className=&quot;flex items-center justify-between&quot;>
                 <span>{healthCheckError}. You can still try to sign up, but it may fail.</span>
                 <Button 
-                  variant="outline" 
-                  size="sm" 
+                  variant=&quot;outline&quot; 
+                  size=&quot;sm&quot; 
                   onClick={performHealthCheck}
                   disabled={healthCheckLoading}
-                  className="ml-2 text-xs"
+                  className=&quot;ml-2 text-xs&quot;
                 >
                   {healthCheckLoading ? 'Checking...' : 'Retry'}
                 </Button>
@@ -293,23 +293,23 @@ export default function Signup() {
           
           {/* Show Success message */}
           {successMessage && (
-            <Alert className="border-green-500 bg-green-50 text-green-900" data-testid="success-alert">
-              {emailVerificationRequired ? <Mail className="h-4 w-4" /> : <CheckCircle className="h-4 w-4" />}
+            <Alert className=&quot;border-green-500 bg-green-50 text-green-900&quot; data-testid=&quot;success-alert&quot;>
+              {emailVerificationRequired ? <Mail className=&quot;h-4 w-4&quot; /> : <CheckCircle className=&quot;h-4 w-4&quot; />}
               <AlertDescription>{successMessage}</AlertDescription>
             </Alert>
           )}
           
           {/* Show Error message */}
           {errorMessage && (
-            <Alert variant="destructive" data-testid="error-alert">
-              <AlertCircle className="h-4 w-4" />
+            <Alert variant=&quot;destructive&quot; data-testid=&quot;error-alert&quot;>
+              <AlertCircle className=&quot;h-4 w-4&quot; />
               <AlertDescription>{errorMessage}</AlertDescription>
             </Alert>
           )}
           
           {emailVerificationRequired && (
-            <Alert className="border-blue-500 bg-blue-50 text-blue-900">
-              <Mail className="h-4 w-4" />
+            <Alert className=&quot;border-blue-500 bg-blue-50 text-blue-900&quot;>
+              <Mail className=&quot;h-4 w-4&quot; />
               <AlertDescription>
                 Before you can log in, please click the verification link in the email we sent to <strong>{formik.values.email}</strong>.
               </AlertDescription>
@@ -317,108 +317,108 @@ export default function Signup() {
           )}
           
           <div>
-            <label htmlFor="name" className="block text-sm font-medium">
+            <label htmlFor=&quot;name&quot; className=&quot;block text-sm font-medium&quot;>
               Full Name
             </label>
             <Input
-              id="name"
-              name="name"
-              data-testid="name-input"
+              id=&quot;name&quot;
+              name=&quot;name&quot;
+              data-testid=&quot;name-input&quot;
               value={formik.values.name}
               onChange={formik.handleChange}
               disabled={loading || emailVerificationRequired}
             />
             {formik.touched.name && formik.errors.name && (
-              <div className="text-red-500 text-sm">{formik.errors.name}</div>
+              <div className=&quot;text-red-500 text-sm&quot;>{formik.errors.name}</div>
             )}
           </div>
           
           <div>
-            <label htmlFor="email" className="block text-sm font-medium">
+            <label htmlFor=&quot;email&quot; className=&quot;block text-sm font-medium&quot;>
               Email address
             </label>
             <Input
-              id="email"
-              type="email"
-              name="email"
-              data-testid="email-input"
+              id=&quot;email&quot;
+              type=&quot;email&quot;
+              name=&quot;email&quot;
+              data-testid=&quot;email-input&quot;
               value={formik.values.email}
               onChange={formik.handleChange}
               disabled={loading || emailVerificationRequired}
             />
             {formik.touched.email && formik.errors.email && (
-              <div className="text-red-500 text-sm">{formik.errors.email}</div>
+              <div className=&quot;text-red-500 text-sm&quot;>{formik.errors.email}</div>
             )}
           </div>
           
           <div>
-            <label htmlFor="password" className="block text-sm font-medium">
+            <label htmlFor=&quot;password&quot; className=&quot;block text-sm font-medium&quot;>
               Password
             </label>
           <Input
-            id="password"
-            type="password"
-            name="password"
-            data-testid="password-input"
+            id=&quot;password&quot;
+            type=&quot;password&quot;
+            name=&quot;password&quot;
+            data-testid=&quot;password-input&quot;
             value={formik.values.password}
             onChange={formik.handleChange}
             disabled={loading || emailVerificationRequired}
           />
           <PasswordStrengthMeter password={formik.values.password} />
           {formik.touched.password && formik.errors.password && (
-            <div className="text-red-500 text-sm">{formik.errors.password}</div>
+            <div className=&quot;text-red-500 text-sm&quot;>{formik.errors.password}</div>
           )}
         </div>
           
           <div>
-            <label htmlFor="confirm" className="block text-sm font-medium">
+            <label htmlFor=&quot;confirm&quot; className=&quot;block text-sm font-medium&quot;>
               Confirm Password
             </label>
             <Input
-              id="confirm"
-              type="password"
-              name="confirm"
-              data-testid="confirm-password-input"
+              id=&quot;confirm&quot;
+              type=&quot;password&quot;
+              name=&quot;confirm&quot;
+              data-testid=&quot;confirm-password-input&quot;
               value={formik.values.confirm}
               onChange={formik.handleChange}
               disabled={loading || emailVerificationRequired}
             />
             {formik.touched.confirm && formik.errors.confirm && (
-              <div className="text-red-500 text-sm">{formik.errors.confirm}</div>
+              <div className=&quot;text-red-500 text-sm&quot;>{formik.errors.confirm}</div>
             )}
           </div>
           
-          <div className="flex items-center space-x-2">
+          <div className=&quot;flex items-center space-x-2&quot;>
             <input
-              id="terms"
-              name="terms"
-              type="checkbox"
-              data-testid="terms-checkbox"
+              id=&quot;terms&quot;
+              name=&quot;terms&quot;
+              type=&quot;checkbox&quot;
+              data-testid=&quot;terms-checkbox&quot;
               checked={formik.values.terms}
               onChange={formik.handleChange}
               disabled={loading || emailVerificationRequired}
             />
-            <label htmlFor="terms" className="text-sm">
+            <label htmlFor=&quot;terms&quot; className=&quot;text-sm&quot;>
               I agree to the{' '}
-              <Link href="/terms" className="underline">Terms of Service</Link>{' '}
+              <Link href=&quot;/terms&quot; className=&quot;underline&quot;>Terms of Service</Link>{' '}
               and{' '}
-              <Link href="/privacy" className="underline">Privacy Policy</Link>
+              <Link href=&quot;/privacy&quot; className=&quot;underline&quot;>Privacy Policy</Link>
             </label>
           </div>
           {formik.touched.terms && formik.errors.terms && (
-            <div className="text-red-500 text-sm">{formik.errors.terms}</div>
+            <div className=&quot;text-red-500 text-sm&quot;>{formik.errors.terms}</div>
           )}
           
           {!emailVerificationRequired ? (
             <Button 
-              type="submit" 
+              type=&quot;submit&quot; 
               disabled={loading} 
-              data-testid="signup-submit"
+              data-testid=&quot;signup-submit&quot;
               className={healthCheckError ? 'bg-yellow-600 hover:bg-yellow-700' : ''}
             >
               {loading ? (
                 <>
-                  <LoadingSpinner size="sm" className="mr-2" />
+                  <LoadingSpinner size=&quot;sm&quot; className=&quot;mr-2&quot; />
                   Creating Account...
                 </>
               ) : (
@@ -426,19 +426,19 @@ export default function Signup() {
               )}
             </Button>
           ) : (
-            <div className="space-y-2">
+            <div className=&quot;space-y-2&quot;>
               <Button
-                type="button"
-                variant="outline"
-                className="w-full"
+                type=&quot;button&quot;
+                variant=&quot;outline&quot;
+                className=&quot;w-full&quot;
                 onClick={() => router.push('/login')}
               >
                 Go to Login
               </Button>
               <Button
-                type="button"
-                variant="outline"
-                className="w-full"
+                type=&quot;button&quot;
+                variant=&quot;outline&quot;
+                className=&quot;w-full&quot;
                 onClick={() =>
                   router.push(`/verify-status?email=${encodeURIComponent(formik.values.email)}`)
                 }
@@ -446,9 +446,9 @@ export default function Signup() {
                 Check Verification Status
               </Button>
               <Button
-                type="button"
-                variant="ghost"
-                className="w-full text-sm"
+                type=&quot;button&quot;
+                variant=&quot;ghost&quot;
+                className=&quot;w-full text-sm&quot;
                 onClick={() => {
                   setEmailVerificationRequired(false),
                   setSuccessMessage('')
@@ -461,15 +461,15 @@ export default function Signup() {
           
           {/* Additional help text when service issues are detected */}
           {healthCheckError && (
-            <div className="text-center text-xs text-muted-foreground mt-4 p-3 bg-muted rounded">
+            <div className=&quot;text-center text-xs text-muted-foreground mt-4 p-3 bg-muted rounded&quot;>
               <p>⚠️ We detected some authentication service issues.</p>
               <p>If signup fails, please try again in a few minutes or contact support.</p>
             </div>
           )}
           </form>
           {!emailVerificationRequired && (
-            <div className="mt-6">
-              <AuthButtons providers={["google", "github"]} />
+            <div className=&quot;mt-6&quot;>
+              <AuthButtons providers={[&quot;google&quot;, &quot;github&quot;]} />
             </div>
           )}
         </div>

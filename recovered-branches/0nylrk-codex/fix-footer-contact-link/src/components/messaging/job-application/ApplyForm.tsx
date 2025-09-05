@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
@@ -10,6 +11,20 @@ import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { MessageTab } from "./MessageTab",
 import { ResumeTab } from "./ResumeTab",
 import { Job } from "./types",
+=======
+import React, { useState } from 'react';
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Loader2 } from &quot;lucide-react&quot;;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from &quot;@/components/ui/tabs&quot;;
+import { useJobApplications } from &quot;@/hooks/useJobApplications&quot;;
+import { useMessaging } from &quot;@/context/MessagingContext&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
+import { ResumeSelector, ResumeOption } from &quot;../resume-selector&quot;;
+import { MessageTab } from &quot;./MessageTab&quot;;
+import { ResumeTab } from &quot;./ResumeTab&quot;;
+import { Job } from &quot;./types&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface ApplyFormProps {
   job: Job,
   onClose: () => void,
@@ -20,6 +35,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging(),
   const { applyToJob } = useJobApplications(),
   const [message, setMessage] = useState(
+<<<<<<< HEAD
     `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
   ),
   const [proposalLink, setProposalLink] = useState(''),
@@ -27,6 +43,15 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const [activeTab, setActiveTab] = useState<string>("message"),
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),
+=======
+    `Hi, I'm interested in your job &quot;${job.title}&quot; and would like to apply. I believe my skills and experience are a great match for this role.`
+  );
+  const [proposalLink, setProposalLink] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [activeTab, setActiveTab] = useState<string>(&quot;message&quot;);
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
+  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   const handleResumeSelected = (resume: ResumeOption) => {
     setSelectedResume(resume),
@@ -36,11 +61,19 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const handleApply = async () => {
     if (!message.trim()) {
       toast({
+<<<<<<< HEAD
         title: "Message required",
         description: "Please enter a message before applying.",
         variant: "destructive"
       }),
       return
+=======
+        title: &quot;Message required&quot;,
+        description: &quot;Please enter a message before applying.&quot;,
+        variant: &quot;destructive&quot;
+      });
+      return;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     try {
@@ -54,7 +87,11 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       ),
       
       if (!applicationSuccess) {
+<<<<<<< HEAD
         throw new Error("Failed to submit application")
+=======
+        throw new Error(&quot;Failed to submit application&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
       
       // Format message with proposal link if provided
@@ -95,17 +132,31 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       }
       
       toast({
+<<<<<<< HEAD
         title: "Application sent",
         description: `Your application for "${job.title}" has been sent.`}),
+=======
+        title: &quot;Application sent&quot;,
+        description: `Your application for &quot;${job.title}&quot; has been sent.`});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       onClose()
     } catch (error) {
+<<<<<<< HEAD
       console.error("Failed to send application:", error),
       toast({
         title: "Application failed",
         description: "There was an error sending your application. Please try again.",
         variant: "destructive"
       })
+=======
+      console.error(&quot;Failed to send application:&quot;, error);
+      toast({
+        title: &quot;Application failed&quot;,
+        description: &quot;There was an error sending your application. Please try again.&quot;,
+        variant: &quot;destructive&quot;
+      });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsSubmitting(false)
     }
@@ -113,17 +164,17 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
 
   return (
     <>
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="w-full mb-4 bg-zion-blue-dark/30">
-          <TabsTrigger value="message" className="flex-1">
+      <Tabs value={activeTab} onValueChange={setActiveTab} className=&quot;w-full&quot;>
+        <TabsList className=&quot;w-full mb-4 bg-zion-blue-dark/30&quot;>
+          <TabsTrigger value=&quot;message&quot; className=&quot;flex-1&quot;>
             Message
           </TabsTrigger>
-          <TabsTrigger value="resume" className="flex-1">
+          <TabsTrigger value=&quot;resume&quot; className=&quot;flex-1&quot;>
             Resume
           </TabsTrigger>
         </TabsList>
         
-        <TabsContent value="message">
+        <TabsContent value=&quot;message&quot;>
           <MessageTab 
             message={message}
             setMessage={setMessage}
@@ -132,7 +183,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
           />
         </TabsContent>
         
-        <TabsContent value="resume">
+        <TabsContent value=&quot;resume&quot;>
           <ResumeTab 
             onResumeSelected={handleResumeSelected}
             selectedResumeId={selectedResumeId} 
@@ -140,24 +191,24 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         </TabsContent>
       </Tabs>
       
-      <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
+      <div className=&quot;flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4&quot;>
         <Button
-          type="button"
-          variant="outline"
+          type=&quot;button&quot;
+          variant=&quot;outline&quot;
           onClick={onClose}
-          className="border-zion-purple/30 text-white"
+          className=&quot;border-zion-purple/30 text-white&quot;
         >
           Cancel
         </Button>
         <Button
-          type="button" 
+          type=&quot;button&quot; 
           onClick={handleApply}
           disabled={isSubmitting}
-          className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+          className=&quot;bg-zion-purple hover:bg-zion-purple-dark text-white&quot;
         >
           {isSubmitting ? (
             <>
-              <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+              <Loader2 className=&quot;h-4 w-4 mr-2 animate-spin&quot; />
               Submitting...
             </>
           ) : (

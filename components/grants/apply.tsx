@@ -55,17 +55,17 @@ export default function ApplyGrantPage() {
 
   return (
     <EnhancedLayout>
-      <h1 className="text-2xl font-semibold mb-4">Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>
-      <div className="grid gap-4 max-w-3xl">
-        <div className="grid md:grid-cols-2 gap-3">
-          <label className="text-sm">Program
-            <select className="mt-1 w-full border rounded p-2" value={program} onChange={(e) => setProgram(e.target.value as any)}>
-              <option value="grant">Grant</option>
-              <option value="incubator">Incubator</option>
+      <h1 className=&quot;text-2xl font-semibold mb-4&quot;>Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>
+      <div className=&quot;grid gap-4 max-w-3xl&quot;>
+        <div className=&quot;grid md:grid-cols-2 gap-3&quot;>
+          <label className=&quot;text-sm&quot;>Program
+            <select className=&quot;mt-1 w-full border rounded p-2&quot; value={program} onChange={(e) => setProgram(e.target.value as any)}>
+              <option value=&quot;grant&quot;>Grant</option>
+              <option value=&quot;incubator&quot;>Incubator</option>
             </select>
           </label>
-          <label className="text-sm">Sector
-            <select className="mt-1 w-full border rounded p-2" value={sector} onChange={(e) => setSector(e.target.value)}>
+          <label className=&quot;text-sm&quot;>Sector
+            <select className=&quot;mt-1 w-full border rounded p-2&quot; value={sector} onChange={(e) => setSector(e.target.value)}>
               <option value="">Select sector</option>
               {categories.map((c) => <option key={c} value={c}>{c}</option>)}
             </select>
@@ -84,17 +84,17 @@ export default function ApplyGrantPage() {
           <input className="mt-1 w-full border rounded p-2" value={timeline} onChange={(e) => setTimeline(e.target.value)} />
         </label>
         <div className="grid md:grid-cols-3 gap-3">
-          <label className="text-sm">Budget Amount
-            <input type="number" className="mt-1 w-full border rounded p-2" value={budgetAmount} onChange={(e) => setBudgetAmount(Number(e.target.value))} />
+          <label className="text-sm&quot;>Budget Amount
+            <input type=&quot;number" className="mt-1 w-full border rounded p-2" value={budgetAmount} onChange={(e) => setBudgetAmount(Number(e.target.value))} />
           </label>
           <label className="text-sm">Currency
-            <select className="mt-1 w-full border rounded p-2" value={budgetCurrency} onChange={(e) => setBudgetCurrency(e.target.value as any)}>
-              <option value="USDC">USDC</option>
-              <option value="ZION$">ZION$</option>
+            <select className="mt-1 w-full border rounded p-2&quot; value={budgetCurrency} onChange={(e) => setBudgetCurrency(e.target.value as any)}>
+              <option value=&quot;USDC&quot;>USDC</option>
+              <option value=&quot;ZION$">ZION$</option>
             </select>
           </label>
           <label className="text-sm">Region
-            <input className="mt-1 w-full border rounded p-2" value={region} onChange={(e) => setRegion(e.target.value)} placeholder="e.g., LATAM, EU, Global" />
+            <input className="mt-1 w-full border rounded p-2&quot; value={region} onChange={(e) => setRegion(e.target.value)} placeholder=&quot;e.g., LATAM, EU, Global" />
           </label>
         </div>
         <label className="text-sm">Supporting Links (one per line)

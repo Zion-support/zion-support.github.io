@@ -266,33 +266,33 @@ const UltraFuturisticBackground2046: React.FC = () => {
   }, []),
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0">
+    <div className=&quot;fixed inset-0 pointer-events-none z-0&quot;>
       {/* Animated gradient background */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/30 to-black"
+        className=&quot;absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/30 to-black&quot;
         animate={{
           background: [
             'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)']}}
         transition={{
           duration: 10,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: &quot;easeInOut&quot;
         }}
       />
       
       {/* Quantum particle canvas */}
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
+        className=&quot;absolute inset-0 w-full h-full&quot;
         style={{ filter: 'blur(0.5px)' }}
       />
       
       {/* Floating geometric shapes */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className=&quot;absolute inset-0 overflow-hidden&quot;>
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-32 h-32 border border-cyan-500/20 rounded-full"
+            className=&quot;absolute w-32 h-32 border border-cyan-500/20 rounded-full&quot;
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`}}
@@ -303,7 +303,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
             transition={{
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
-              ease: "linear",
+              ease: &quot;linear&quot;,
               delay: i * 0.5}}
           />
         ))}
@@ -311,7 +311,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={`square-${i}`}
-            className="absolute w-24 h-24 border border-purple-500/20 rotate-45"
+            className=&quot;absolute w-24 h-24 border border-purple-500/20 rotate-45&quot;
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`}}
@@ -322,41 +322,41 @@ const UltraFuturisticBackground2046: React.FC = () => {
             transition={{
               duration: Math.random() * 8 + 8,
               repeat: Infinity,
-              ease: "linear",
+              ease: &quot;linear&quot;,
               delay: i * 0.7}}
           />
         ))}
       </div>
       
       {/* Energy waves */}
-      <div className="absolute bottom-0 left-0 right-0 h-32">
+      <div className=&quot;absolute bottom-0 left-0 right-0 h-32&quot;>
         <motion.div
-          className="absolute inset-0 bg-gradient-to-t from-cyan-500/10 to-transparent"
+          className=&quot;absolute inset-0 bg-gradient-to-t from-cyan-500/10 to-transparent&quot;
           animate={{
             height: ['32px48px32px']}}
           transition={{
             duration: 4,
             repeat: Infinity,
-            ease: "easeInOut"}}
+            ease: &quot;easeInOut&quot;}}
         />
         <motion.div
-          className="absolute inset-0 bg-gradient-to-t from-purple-500/10 to-transparent"
+          className=&quot;absolute inset-0 bg-gradient-to-t from-purple-500/10 to-transparent&quot;
           animate={{
             height: ['24px40px24px']}}
           transition={{
             duration: 3,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: &quot;easeInOut&quot;,
             delay: 1}}
         />
       </div>
       
       {/* Quantum interference patterns */}
-      <div className="absolute inset-0">
+      <div className=&quot;absolute inset-0&quot;>
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={`interference-${i}`}
-            className="absolute inset-0 opacity-5"
+            className=&quot;absolute inset-0 opacity-5&quot;
             style={{
               background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`}}
             animate={{
@@ -365,7 +365,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
             transition={{
               duration: Math.random() * 6 + 4,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: &quot;easeInOut&quot;,
               delay: i * 0.8}}
           />
         ))}

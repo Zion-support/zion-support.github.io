@@ -83,26 +83,26 @@ const ComprehensiveServicesShowcase2025 = () => {
   },
 
   return (
-    <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+    <section className=&quot;relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden&quot;>
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+      <div className=&quot;absolute inset-0 overflow-hidden&quot;>
+        <div className=&quot;absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob&quot;></div>
+        <div className=&quot;absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000&quot;></div>
+        <div className=&quot;absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000&quot;></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=&quot;relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className=&quot;text-center mb-16&quot;
         >
-          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6">
+          <h2 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6&quot;>
             Revolutionary 2025 Services
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed&quot;>
             Discover our comprehensive suite of cutting-edge micro SAAS services, IT solutions, and AI innovations designed to transform your business and drive success in the digital age.
           </p>
         </motion.div>
@@ -110,64 +110,64 @@ const ComprehensiveServicesShowcase2025 = () => {
         {/* Service Categories */}
         <motion.div
           variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial=&quot;hidden&quot;
+          whileInView=&quot;visible&quot;
           viewport={{ once: true }}
-          className="space-y-16"
+          className=&quot;space-y-16&quot;
         >
           {serviceCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
               variants={itemVariants}
-              className="relative"
+              className=&quot;relative&quot;
             >
               {/* Category Header */}
-              <div className="flex items-center mb-8">
+              <div className=&quot;flex items-center mb-8&quot;>
                 <div className={`p-3 rounded-xl bg-gradient-to-r ${category.gradient} mr-4`}>
-                  <category.icon className="w-8 h-8 text-white" />
+                  <category.icon className=&quot;w-8 h-8 text-white&quot; />
                 </div>
                 <div>
-                  <h3 className="text-3xl font-bold text-white mb-2">
+                  <h3 className=&quot;text-3xl font-bold text-white mb-2&quot;>
                     {category.title}
                   </h3>
-                  <p className="text-gray-400 text-lg">
+                  <p className=&quot;text-gray-400 text-lg&quot;>
                     {category.description}
                   </p>
                 </div>
               </div>
 
               {/* Services Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;>
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
-                    className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
+                    className=&quot;group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30&quot;
                   >
                     {/* Service Header */}
-                    <div className="mb-4">
-                      <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                    <div className=&quot;mb-4&quot;>
+                      <h4 className=&quot;text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors&quot;>
                         {service.name}
                       </h4>
-                      <p className="text-gray-400 text-sm leading-relaxed">
+                      <p className=&quot;text-gray-400 text-sm leading-relaxed&quot;>
                         {service.description}
                       </p>
                     </div>
 
                     {/* Features */}
-                    <div className="mb-4">
-                      <h5 className="text-sm font-medium text-purple-300 mb-2">Key Features:</h5>
-                      <ul className="space-y-1">
+                    <div className=&quot;mb-4&quot;>
+                      <h5 className=&quot;text-sm font-medium text-purple-300 mb-2&quot;>Key Features:</h5>
+                      <ul className=&quot;space-y-1&quot;>
                         {service.features?.slice(0, 3).map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-xs text-gray-400">
-                            <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          <li key={featureIndex} className=&quot;flex items-center text-xs text-gray-400&quot;>
+                            <CheckCircle className=&quot;w-3 h-3 text-green-400 mr-2 flex-shrink-0&quot; />
                             {feature}
                           </li>
                         ))}
                         {service.features && service.features.length > 3 && (
-                          <li className="text-xs text-gray-500 italic">
+                          <li className=&quot;text-xs text-gray-500 italic&quot;>
                             +{service.features.length - 3} more features
                           </li>
                         )}
@@ -175,40 +175,40 @@ const ComprehensiveServicesShowcase2025 = () => {
                     </div>
 
                     {/* Pricing */}
-                    <div className="mb-4">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-400">Starting from:</span>
-                        <span className="text-lg font-bold text-green-400">
+                    <div className=&quot;mb-4&quot;>
+                      <div className=&quot;flex items-center justify-between&quot;>
+                        <span className=&quot;text-sm text-gray-400&quot;>Starting from:</span>
+                        <span className=&quot;text-lg font-bold text-green-400&quot;>
                           {service.price}{service.period}
                         </span>
                       </div>
-                      <div className="text-xs text-gray-500 mt-1">
+                      <div className=&quot;text-xs text-gray-500 mt-1&quot;>
                         Market position: {service.marketPosition}
                       </div>
                     </div>
 
                     {/* ROI */}
-                    <div className="mb-4">
-                      <h5 className="text-sm font-medium text-purple-300 mb-2">ROI & Benefits:</h5>
-                      <div className="text-xs text-gray-400">
-                        <div className="flex items-center mb-1">
-                          <TrendingUp className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
+                    <div className=&quot;mb-4&quot;>
+                      <h5 className=&quot;text-sm font-medium text-purple-300 mb-2&quot;>ROI & Benefits:</h5>
+                      <div className=&quot;text-xs text-gray-400&quot;>
+                        <div className=&quot;flex items-center mb-1&quot;>
+                          <TrendingUp className=&quot;w-3 h-3 text-blue-400 mr-2 flex-shrink-0&quot; />
                           {service.roi}
                         </div>
-                        <div className="text-xs text-gray-500">
+                        <div className=&quot;text-xs text-gray-500&quot;>
                           Setup time: {service.setupTime}
                         </div>
                       </div>
                     </div>
 
                     {/* Use Cases */}
-                    <div className="mb-4">
-                      <h5 className="text-sm font-medium text-purple-300 mb-2">Perfect for:</h5>
-                      <div className="flex flex-wrap gap-1">
+                    <div className=&quot;mb-4&quot;>
+                      <h5 className=&quot;text-sm font-medium text-purple-300 mb-2&quot;>Perfect for:</h5>
+                      <div className=&quot;flex flex-wrap gap-1&quot;>
                         {service.useCases?.slice(0, 3).map((useCase, useCaseIndex) => (
                           <span
                             key={useCaseIndex}
-                            className="px-2 py-1 bg-slate-700/50 text-xs text-gray-300 rounded-full"
+                            className=&quot;px-2 py-1 bg-slate-700/50 text-xs text-gray-300 rounded-full&quot;
                           >
                             {useCase}
                           </span>
@@ -217,18 +217,18 @@ const ComprehensiveServicesShowcase2025 = () => {
                     </div>
 
                     {/* CTA Button */}
-                    <div className="mt-6">
+                    <div className=&quot;mt-6&quot;>
                       <a
                         href={service.link}
-                        className="inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30"
+                        className=&quot;inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30&quot;
                       >
                         Learn More
-                        <ArrowRight className="w-4 h-4 ml-2" />
+                        <ArrowRight className=&quot;w-4 h-4 ml-2&quot; />
                       </a>
                     </div>
 
                     {/* Hover Effect Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                    <div className=&quot;absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none&quot; />
                   </motion.div>
                 ))}
               </div>
@@ -241,29 +241,33 @@ const ComprehensiveServicesShowcase2025 = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-center mt-20"
+          className=&quot;text-center mt-20&quot;
         >
-          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30">
-            <h3 className="text-3xl font-bold text-white mb-4">
+          <div className=&quot;bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30&quot;>
+            <h3 className=&quot;text-3xl font-bold text-white mb-4&quot;>
               Ready to Transform Your Business?
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-2xl mx-auto&quot;>
               Join thousands of businesses already leveraging our cutting-edge solutions to drive innovation, efficiency, and growth.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
+=======
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
               <a
-                href="https://ziontechgroup.com/contact"
-                className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30"
+                href=&quot;https://ziontechgroup.com/contact&quot;
+                className=&quot;inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30&quot;
               >
                 Get Started Today
-                <Rocket className="w-5 h-5 ml-2" />
+                <Rocket className=&quot;w-5 h-5 ml-2&quot; />
               </a>
               <a
-                href="tel:+13024640950"
-                className="inline-flex items-center justify-center px-8 py-3 bg-slate-700/50 text-white font-semibold rounded-xl hover:bg-slate-600/50 transition-all duration-200 border border-slate-600"
+                href=&quot;tel:+13024640950&quot;
+                className=&quot;inline-flex items-center justify-center px-8 py-3 bg-slate-700/50 text-white font-semibold rounded-xl hover:bg-slate-600/50 transition-all duration-200 border border-slate-600&quot;
               >
                 Call +1 302 464 0950
-                <Phone className="w-5 h-5 ml-2" />
+                <Phone className=&quot;w-5 h-5 ml-2&quot; />
               </a>
             </div>
           </div>

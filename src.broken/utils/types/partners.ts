@@ -1,10 +1,19 @@
 export type UseCaseType =
+<<<<<<< HEAD
   | "Education Partnership"
   | "Workforce Development"
   | "Token Integration"
   | "Custom Marketplace Instance",
 
 export type PartnerStatus = "pending" | "approved" | "rejected",
+=======
+  | &quot;Education Partnership&quot;
+  | &quot;Workforce Development&quot;
+  | &quot;Token Integration&quot;
+  | &quot;Custom Marketplace Instance&quot;;
+
+export type PartnerStatus = &quot;pending&quot; | &quot;approved&quot; | &quot;rejected&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export interface PartnerPointOfContact {
   name: string,

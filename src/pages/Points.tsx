@@ -32,32 +32,32 @@ export default function PointsPage() {
 
   const earningOpportunities = [
     {
-      icon: <Users className="h-5 w-5" />,
-      title: "Sign Up & Profile Setup",
-      description: "Complete your profile and verify your email",
-      points: "50 pts",
-      action: isAuthenticated ? "✓ Completed" : "Get Started"
+      icon: <Users className=&quot;h-5 w-5&quot; />,
+      title: &quot;Sign Up & Profile Setup&quot;,
+      description: &quot;Complete your profile and verify your email&quot;,
+      points: &quot;50 pts&quot;,
+      action: isAuthenticated ? &quot;✓ Completed&quot; : &quot;Get Started&quot;
     },
     {
-      icon: <ShoppingBag className="h-5 w-5" />,
-      title: "First Purchase",
-      description: "Make your first purchase on the marketplace",
-      points: "100 pts",
-      action: "Browse Marketplace"
+      icon: <ShoppingBag className=&quot;h-5 w-5&quot; />,
+      title: &quot;First Purchase&quot;,
+      description: &quot;Make your first purchase on the marketplace&quot;,
+      points: &quot;100 pts&quot;,
+      action: &quot;Browse Marketplace&quot;
     },
     {
-      icon: <MessageSquare className="h-5 w-5" />,
-      title: "Community Engagement",
-      description: "Post in the community or comment on discussions",
-      points: "25 pts per post",
-      action: "Join Community"
+      icon: <MessageSquare className=&quot;h-5 w-5&quot; />,
+      title: &quot;Community Engagement&quot;,
+      description: &quot;Post in the community or comment on discussions&quot;,
+      points: &quot;25 pts per post&quot;,
+      action: &quot;Join Community&quot;
     },
     {
-      icon: <Users className="h-5 w-5" />,
-      title: "Refer Friends",
-      description: "Invite friends to join Zion marketplace",
-      points: "200 pts per referral",
-      action: "Share Referral Link"
+      icon: <Users className=&quot;h-5 w-5&quot; />,
+      title: &quot;Refer Friends&quot;,
+      description: &quot;Invite friends to join Zion marketplace&quot;,
+      points: &quot;200 pts per referral&quot;,
+      action: &quot;Share Referral Link&quot;
     }
   ],
 
@@ -72,38 +72,38 @@ export default function PointsPage() {
   if (!isAuthenticated) {
     return (
       <>
-        <div className="container py-10 max-w-4xl">
-          <div className="text-center mb-8">
-            <Gift className="h-16 w-16 text-primary mx-auto mb-4" />
-            <h1 className="text-4xl font-bold mb-4">Zion Rewards Program</h1>
-            <p className="text-xl text-muted-foreground mb-6">
+        <div className=&quot;container py-10 max-w-4xl&quot;>
+          <div className=&quot;text-center mb-8&quot;>
+            <Gift className=&quot;h-16 w-16 text-primary mx-auto mb-4&quot; />
+            <h1 className=&quot;text-4xl font-bold mb-4&quot;>Zion Rewards Program</h1>
+            <p className=&quot;text-xl text-muted-foreground mb-6&quot;>
               Earn points for every action you take and redeem them for exclusive rewards!
             </p>
-            <Button onClick={() => setLoginOpen(true)} size="lg">
+            <Button onClick={() => setLoginOpen(true)} size=&quot;lg&quot;>
               Join Now to Start Earning
             </Button>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className=&quot;grid md:grid-cols-2 gap-8 mb-12&quot;>
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <TrendingUp className="h-5 w-5" />
+                <CardTitle className=&quot;flex items-center gap-2&quot;>
+                  <TrendingUp className=&quot;h-5 w-5&quot; />
                   How to Earn Points
                 </CardTitle>
                 <CardDescription>
                   Multiple ways to accumulate rewards
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className=&quot;space-y-4&quot;>
                 {earningOpportunities.map((opportunity, index) => (
-                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-                    <div className="text-primary mt-1">{opportunity.icon}</div>
-                    <div className="flex-1">
-                      <h4 className="font-medium">{opportunity.title}</h4>
-                      <p className="text-sm text-muted-foreground">{opportunity.description}</p>
+                  <div key={index} className=&quot;flex items-start gap-3 p-3 rounded-lg border&quot;>
+                    <div className=&quot;text-primary mt-1&quot;>{opportunity.icon}</div>
+                    <div className=&quot;flex-1&quot;>
+                      <h4 className=&quot;font-medium&quot;>{opportunity.title}</h4>
+                      <p className=&quot;text-sm text-muted-foreground&quot;>{opportunity.description}</p>
                     </div>
-                    <Badge variant="secondary">{opportunity.points}</Badge>
+                    <Badge variant=&quot;secondary&quot;>{opportunity.points}</Badge>
                   </div>
                 ))}
               </CardContent>
@@ -111,33 +111,33 @@ export default function PointsPage() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Gift className="h-5 w-5" />
+                <CardTitle className=&quot;flex items-center gap-2&quot;>
+                  <Gift className=&quot;h-5 w-5&quot; />
                   Upcoming Rewards
                 </CardTitle>
                 <CardDescription>
                   What you can redeem your points for
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className=&quot;space-y-4&quot;>
                 {upcomingRewards.map((reward, index) => (
-                  <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
+                  <div key={index} className=&quot;flex items-center justify-between p-3 rounded-lg border&quot;>
                     <div>
-                      <h4 className="font-medium">{reward.title}</h4>
-                      <p className="text-sm text-muted-foreground">{reward.category}</p>
+                      <h4 className=&quot;font-medium&quot;>{reward.title}</h4>
+                      <p className=&quot;text-sm text-muted-foreground&quot;>{reward.category}</p>
                     </div>
-                    <Badge variant="outline">{reward.cost}</Badge>
+                    <Badge variant=&quot;outline&quot;>{reward.cost}</Badge>
                   </div>
                 ))}
               </CardContent>
             </Card>
           </div>
 
-          <Card className="text-center">
-            <CardContent className="pt-6">
-              <Star className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-2">Coming Soon</h3>
-              <p className="text-muted-foreground mb-4">
+          <Card className=&quot;text-center&quot;>
+            <CardContent className=&quot;pt-6&quot;>
+              <Star className=&quot;h-12 w-12 text-primary mx-auto mb-4&quot; />
+              <h3 className=&quot;text-2xl font-bold mb-2&quot;>Coming Soon</h3>
+              <p className=&quot;text-muted-foreground mb-4&quot;>
                 Our full rewards system is launching soon! Sign up now to start earning points immediately.
               </p>
               <Button onClick={() => setLoginOpen(true)}>
@@ -152,44 +152,44 @@ export default function PointsPage() {
   }
 
   return (
-    <div className="container py-10 max-w-4xl">
-      <div className="text-center mb-8">
-        <Gift className="h-16 w-16 text-primary mx-auto mb-4" />
-        <h1 className="text-4xl font-bold mb-4">Your Rewards</h1>
-        <div className="text-6xl font-bold text-primary mb-2">
-          {loading ? "..." : balance}
+    <div className=&quot;container py-10 max-w-4xl&quot;>
+      <div className=&quot;text-center mb-8&quot;>
+        <Gift className=&quot;h-16 w-16 text-primary mx-auto mb-4&quot; />
+        <h1 className=&quot;text-4xl font-bold mb-4&quot;>Your Rewards</h1>
+        <div className=&quot;text-6xl font-bold text-primary mb-2&quot;>
+          {loading ? &quot;...&quot; : balance}
         </div>
-        <p className="text-xl text-muted-foreground">Points Available</p>
+        <p className=&quot;text-xl text-muted-foreground&quot;>Points Available</p>
         {!loading && balance === 0 && (
-          <p className="text-sm text-muted-foreground mt-2">
+          <p className=&quot;text-sm text-muted-foreground mt-2&quot;>
             You haven't earned any points yet. Complete the tasks below to start
             earning and redeem rewards.
           </p>
         )}
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 mb-12">
+      <div className=&quot;grid md:grid-cols-2 gap-8 mb-12&quot;>
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <TrendingUp className="h-5 w-5" />
+            <CardTitle className=&quot;flex items-center gap-2&quot;>
+              <TrendingUp className=&quot;h-5 w-5&quot; />
               Keep Earning
             </CardTitle>
             <CardDescription>
               More ways to boost your point balance
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className=&quot;space-y-4&quot;>
             {earningOpportunities.map((opportunity, index) => (
-              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-                <div className="text-primary mt-1">{opportunity.icon}</div>
-                <div className="flex-1">
-                  <h4 className="font-medium">{opportunity.title}</h4>
-                  <p className="text-sm text-muted-foreground">{opportunity.description}</p>
+              <div key={index} className=&quot;flex items-start gap-3 p-3 rounded-lg border&quot;>
+                <div className=&quot;text-primary mt-1&quot;>{opportunity.icon}</div>
+                <div className=&quot;flex-1&quot;>
+                  <h4 className=&quot;font-medium&quot;>{opportunity.title}</h4>
+                  <p className=&quot;text-sm text-muted-foreground&quot;>{opportunity.description}</p>
                 </div>
-                <div className="text-right">
-                  <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>
-                  <p className="text-xs text-muted-foreground">{opportunity.action}</p>
+                <div className=&quot;text-right&quot;>
+                  <Badge variant=&quot;secondary&quot; className=&quot;mb-1&quot;>{opportunity.points}</Badge>
+                  <p className=&quot;text-xs text-muted-foreground&quot;>{opportunity.action}</p>
                 </div>
               </div>
             ))}
@@ -198,29 +198,29 @@ export default function PointsPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Gift className="h-5 w-5" />
+            <CardTitle className=&quot;flex items-center gap-2&quot;>
+              <Gift className=&quot;h-5 w-5&quot; />
               Available Rewards
             </CardTitle>
             <CardDescription>
               Redeem your points for these rewards
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className=&quot;space-y-4&quot;>
             {upcomingRewards.map((reward) => (
-              <div key={reward.id} className="flex items-center justify-between p-3 rounded-lg border">
+              <div key={reward.id} className=&quot;flex items-center justify-between p-3 rounded-lg border&quot;>
                 <div>
-                  <h4 className="font-medium">{reward.title}</h4>
-                  <p className="text-sm text-muted-foreground">{reward.category}</p>
+                  <h4 className=&quot;font-medium&quot;>{reward.title}</h4>
+                  <p className=&quot;text-sm text-muted-foreground&quot;>{reward.category}</p>
                 </div>
-                <div className="text-right space-y-1">
-                  <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
+                <div className=&quot;text-right space-y-1&quot;>
+                  <Badge variant=&quot;outline&quot; className=&quot;mb-1&quot;>{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
-                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
+                    <Button size=&quot;sm&quot; onClick={() => handleRedeem(reward)} disabled={redeeming}>
                       {redeeming ? 'Processing...' : 'Redeem'}
                     </Button>
                   ) : (
-                    <p className="text-xs text-muted-foreground">Need more points</p>
+                    <p className=&quot;text-xs text-muted-foreground&quot;>Need more points</p>
                   )}
                 </div>
               </div>
@@ -231,28 +231,28 @@ export default function PointsPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <History className="h-5 w-5" />
+          <CardTitle className=&quot;flex items-center gap-2&quot;>
+            <History className=&quot;h-5 w-5&quot; />
             Points History
           </CardTitle>
           <CardDescription>Your recent points activity</CardDescription>
         </CardHeader>
         <CardContent>
           {ledger.length === 0 ? (
-            <p className="text-center py-8 text-muted-foreground">No points activity yet.</p>
+            <p className=&quot;text-center py-8 text-muted-foreground&quot;>No points activity yet.</p>
           ) : (
-            <ScrollArea className="h-64">
-              <div className="space-y-2 mt-2">
+            <ScrollArea className=&quot;h-64&quot;>
+              <div className=&quot;space-y-2 mt-2&quot;>
                 {ledger.map(entry => (
-                  <div key={entry.id} className="flex items-center justify-between py-2 border-b">
+                  <div key={entry.id} className=&quot;flex items-center justify-between py-2 border-b&quot;>
                     <div>
-                      <p className="font-medium capitalize">{entry.reason || 'adjustment'}</p>
-                      <p className="text-xs text-muted-foreground">
+                      <p className=&quot;font-medium capitalize&quot;>{entry.reason || 'adjustment'}</p>
+                      <p className=&quot;text-xs text-muted-foreground&quot;>
                         {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true })}
                       </p>
                     </div>
                     <Badge
-                      variant="outline"
+                      variant=&quot;outline&quot;
                       className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
                     >
                       {entry.delta >= 0 ? '+' : ''}
@@ -266,19 +266,19 @@ export default function PointsPage() {
         </CardContent>
       </Card>
 
-      <Card className="text-center">
-        <CardContent className="pt-6">
-          <Star className="h-12 w-12 text-primary mx-auto mb-4" />
-          <h3 className="text-2xl font-bold mb-2">Full Rewards System Coming Soon</h3>
-          <p className="text-muted-foreground mb-4">
+      <Card className=&quot;text-center&quot;>
+        <CardContent className=&quot;pt-6&quot;>
+          <Star className=&quot;h-12 w-12 text-primary mx-auto mb-4&quot; />
+          <h3 className=&quot;text-2xl font-bold mb-2&quot;>Full Rewards System Coming Soon</h3>
+          <p className=&quot;text-muted-foreground mb-4&quot;>
             We're finalizing the redemption system. Keep earning points - they'll be ready to spend soon!
           </p>
-          <div className="flex gap-4 justify-center">
-            <Button variant="outline" asChild>
-              <Link href="/marketplace">Browse Marketplace</Link>
+          <div className=&quot;flex gap-4 justify-center&quot;>
+            <Button variant=&quot;outline&quot; asChild>
+              <Link href=&quot;/marketplace&quot;>Browse Marketplace</Link>
             </Button>
-            <Button variant="outline" asChild>
-              <Link href="/community">Join Community</Link>
+            <Button variant=&quot;outline&quot; asChild>
+              <Link href=&quot;/community&quot;>Join Community</Link>
             </Button>
           </div>
         </CardContent>

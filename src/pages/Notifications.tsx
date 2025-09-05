@@ -42,6 +42,7 @@ const getNotificationIcon = (
 const getNotificationTypeBadge = (type: NotificationType) => {
   switch (type) {
     case 'message':
+<<<<<<< HEAD
       return <Badge className="bg-blue-500">Message</Badge>,
     case 'quote_request':
       return <Badge className="bg-purple-500">Quote Request</Badge>,
@@ -61,6 +62,27 @@ const getNotificationTypeBadge = (type: NotificationType) => {
       return <Badge className="bg-orange-500">Order</Badge>,
     default:
       return <Badge variant="outline">Notification</Badge>
+=======
+      return <Badge className=&quot;bg-blue-500&quot;>Message</Badge>;
+    case 'quote_request':
+      return <Badge className=&quot;bg-purple-500&quot;>Quote Request</Badge>;
+    case 'booking_confirmation':
+      return <Badge className=&quot;bg-green-500&quot;>Booking</Badge>;
+    case 'hire_request':
+      return <Badge className=&quot;bg-zion-purple&quot;>Hire Request</Badge>;
+    case 'onboarding':
+      return <Badge className=&quot;bg-zion-cyan&quot;>Onboarding</Badge>;
+    case 'system':
+      return <Badge className=&quot;bg-yellow-500&quot;>System</Badge>;
+    case 'project_update':
+      return <Badge className=&quot;bg-indigo-500&quot;>Project</Badge>;
+    case 'milestone_complete':
+      return <Badge className=&quot;bg-green-500&quot;>Milestone</Badge>;
+    case 'order_status':
+      return <Badge className=&quot;bg-orange-500&quot;>Order</Badge>;
+    default:
+      return <Badge variant=&quot;outline&quot;>Notification</Badge>;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 },
 
@@ -98,24 +120,24 @@ const NotificationCard: React.FC<{
           ? 'border-zion-blue-light bg-zion-blue-dark/10'
           : 'border-zion-cyan bg-zion-blue-dark/30')}
     >
-      <div className="flex items-start gap-4">
-        <div className="mt-1">
+      <div className=&quot;flex items-start gap-4&quot;>
+        <div className=&quot;mt-1&quot;>
           {getNotificationIcon(notification.type, 'h-6 w-6')}
         </div>
-        <div className="flex-1">
-          <div className="flex justify-between">
-            <div className="flex flex-col">
-              <h3 className="font-medium text-white">{notification.title}</h3>
-              <div className="flex items-center gap-2 mb-2">
+        <div className=&quot;flex-1&quot;>
+          <div className=&quot;flex justify-between&quot;>
+            <div className=&quot;flex flex-col&quot;>
+              <h3 className=&quot;font-medium text-white&quot;>{notification.title}</h3>
+              <div className=&quot;flex items-center gap-2 mb-2&quot;>
                 {getNotificationTypeBadge(notification.type)}
-                <span className="text-xs text-zion-slate-light">
+                <span className=&quot;text-xs text-zion-slate-light&quot;>
                   {formatDistanceToNow(new Date(notification.created_at), {
                     addSuffix: true})}
                 </span>
                 {!notification.read && (
                   <Badge
-                    variant="outline"
-                    className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs"
+                    variant=&quot;outline&quot;
+                    className=&quot;bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs&quot;
                   >
                     New
                   </Badge>
@@ -123,41 +145,41 @@ const NotificationCard: React.FC<{
               </div>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className=&quot;flex items-center gap-2&quot;>
               {!notification.read && (
                 <Button
-                  variant="ghost"
-                  size="sm"
-                  className="h-8 w-8 p-0"
+                  variant=&quot;ghost&quot;
+                  size=&quot;sm&quot;
+                  className=&quot;h-8 w-8 p-0&quot;
                   onClick={() => onMarkAsRead(notification.id)}
                 >
-                  <Check className="h-4 w-4 text-green-400" />
-                  <span className="sr-only">Mark as read</span>
+                  <Check className=&quot;h-4 w-4 text-green-400&quot; />
+                  <span className=&quot;sr-only&quot;>Mark as read</span>
                 </Button>
               )}
               <Button
-                variant="ghost"
-                size="sm"
-                className="h-8 w-8 p-0"
+                variant=&quot;ghost&quot;
+                size=&quot;sm&quot;
+                className=&quot;h-8 w-8 p-0&quot;
                 onClick={() => onDismiss(notification.id)}
               >
-                <Trash2 className="h-4 w-4 text-red-400" />
-                <span className="sr-only">Dismiss</span>
+                <Trash2 className=&quot;h-4 w-4 text-red-400&quot; />
+                <span className=&quot;sr-only&quot;>Dismiss</span>
               </Button>
             </div>
           </div>
 
-          <p className="text-zion-slate-light mb-3">{notification.message}</p>
+          <p className=&quot;text-zion-slate-light mb-3&quot;>{notification.message}</p>
 
           {notification.action_url && notification.action_text && (
             <Button
-              variant="outline"
-              size="sm"
-              className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black"
+              variant=&quot;outline&quot;
+              size=&quot;sm&quot;
+              className=&quot;mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black&quot;
               onClick={handleAction}
             >
               {notification.action_text}
-              <ChevronRight className="ml-1 h-4 w-4" />
+              <ChevronRight className=&quot;ml-1 h-4 w-4&quot; />
             </Button>
           )}
         </div>
@@ -180,62 +202,62 @@ export default function NotificationsPage() {
   return (
     <>
       <SEO
-        title="Notifications | Zion AI Marketplace"
-        description="View and manage your notifications on the Zion AI Marketplace."
+        title=&quot;Notifications | Zion AI Marketplace&quot;
+        description=&quot;View and manage your notifications on the Zion AI Marketplace.&quot;
       />
-      <main className="container mx-auto px-4 py-8 min-h-screen">
-        <div className="flex justify-between items-center mb-6">
+      <main className=&quot;container mx-auto px-4 py-8 min-h-screen&quot;>
+        <div className=&quot;flex justify-between items-center mb-6&quot;>
           <div>
-            <h1 className="text-3xl font-bold flex items-center">
-              <Bell className="mr-3 h-7 w-7" /> Notifications
+            <h1 className=&quot;text-3xl font-bold flex items-center&quot;>
+              <Bell className=&quot;mr-3 h-7 w-7&quot; /> Notifications
               {unreadCount > 0 && (
-                <Badge className="ml-3 bg-zion-cyan">
+                <Badge className=&quot;ml-3 bg-zion-cyan&quot;>
                   {unreadCount} unread
                 </Badge>
               )}
             </h1>
-            <p className="text-muted-foreground">
+            <p className=&quot;text-muted-foreground&quot;>
               Stay updated with the latest activities and reminders
             </p>
           </div>
 
           {unreadCount > 0 && (
-            <Button variant="outline" onClick={() => markAllAsRead()}>
-              <Check className="mr-2 h-4 w-4" />
+            <Button variant=&quot;outline&quot; onClick={() => markAllAsRead()}>
+              <Check className=&quot;mr-2 h-4 w-4&quot; />
               Mark all as read
             </Button>
           )}
         </div>
 
-        <div className="mb-8">
+        <div className=&quot;mb-8&quot;>
           <Tabs
             defaultValue={filter}
             onValueChange={(value) => setFilter(value as any)}
           >
-            <TabsList className="grid w-full max-w-md grid-cols-6">
-              <TabsTrigger value="all">All</TabsTrigger>
-              <TabsTrigger value="unread">Unread</TabsTrigger>
-              <TabsTrigger value="onboarding">Onboarding</TabsTrigger>
-              <TabsTrigger value="messages">Messages</TabsTrigger>
-              <TabsTrigger value="system">System</TabsTrigger>
-              <TabsTrigger value="orders">Orders</TabsTrigger>
+            <TabsList className=&quot;grid w-full max-w-md grid-cols-6&quot;>
+              <TabsTrigger value=&quot;all&quot;>All</TabsTrigger>
+              <TabsTrigger value=&quot;unread&quot;>Unread</TabsTrigger>
+              <TabsTrigger value=&quot;onboarding&quot;>Onboarding</TabsTrigger>
+              <TabsTrigger value=&quot;messages&quot;>Messages</TabsTrigger>
+              <TabsTrigger value=&quot;system&quot;>System</TabsTrigger>
+              <TabsTrigger value=&quot;orders&quot;>Orders</TabsTrigger>
             </TabsList>
-            <TabsContent value={filter} className="mt-6">
+            <TabsContent value={filter} className=&quot;mt-6&quot;>
               {loading ? (
-                <div className="space-y-4">
-                  <Skeleton className="h-24 w-full rounded-lg" />
-                  <Skeleton className="h-24 w-full rounded-lg" />
-                  <Skeleton className="h-24 w-full rounded-lg" />
+                <div className=&quot;space-y-4&quot;>
+                  <Skeleton className=&quot;h-24 w-full rounded-lg&quot; />
+                  <Skeleton className=&quot;h-24 w-full rounded-lg&quot; />
+                  <Skeleton className=&quot;h-24 w-full rounded-lg&quot; />
                 </div>
               ) : filteredNotifications.length === 0 ? (
-                <div className="text-center py-12 bg-muted rounded-lg">
-                  <Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30" />
-                  <h3 className="text-xl font-medium">
+                <div className=&quot;text-center py-12 bg-muted rounded-lg&quot;>
+                  <Bell className=&quot;mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30&quot; />
+                  <h3 className=&quot;text-xl font-medium&quot;>
                     No notifications found
                   </h3>
-                  <p className="text-muted-foreground mt-1">
+                  <p className=&quot;text-muted-foreground mt-1&quot;>
                     {filter === 'all'
-                      ? "You don't have any notifications yet"
+                      ? &quot;You don't have any notifications yet&quot;
                       : `You don't have any ${filter} notifications`}
                   </p>
                 </div>

@@ -11,6 +11,12 @@ interface Process {
   }
 }
 
+<<<<<<< HEAD
 declare let process: Process,
 declare let console: Console,
 declare let __dirname: string,
+=======
+declare let process: Process;
+declare let console: Console;
+declare let __dirname: string;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7

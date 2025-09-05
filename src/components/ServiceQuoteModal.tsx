@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react',
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
@@ -15,6 +16,27 @@ import { ProductListing } from "@/types/listings",
 import { toast } from '@/hooks/use-toast',
 import { supabase } from "@/integrations/supabase/client",
 import {logErrorToProduction} from '@/utils/productionLogger',
+=======
+import { useState } from 'react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from &quot;@/components/ui/dialog&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from &quot;@/components/ui/select&quot;;
+import { Label } from &quot;@/components/ui/label&quot;;
+import { Slider } from &quot;@/components/ui/slider&quot;;
+import { Calendar } from &quot;@/components/ui/calendar&quot;;
+import { Popover, PopoverContent, PopoverTrigger } from &quot;@/components/ui/popover&quot;;
+import { format } from &quot;date-fns&quot;;
+import { CalendarIcon } from 'lucide-react'
+import { cn } from &quot;@/lib/utils&quot;;
+import { ProductListing } from &quot;@/types/listings&quot;;
+import { toast } from '@/hooks/use-toast';
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+import {logErrorToProduction} from '@/utils/productionLogger';
+
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface ServiceQuoteModalProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,
@@ -22,6 +44,7 @@ interface ServiceQuoteModalProps {
 }
 
 const BUDGET_RANGES = [
+<<<<<<< HEAD
   { label: "Less than $5,000", value: "0-5000" },
   { label: "$5,000 - $10,000", value: "5000-10000" },
   { label: "$10,000 - $25,000", value: "10000-25000" },
@@ -33,6 +56,19 @@ const TIMELINE_OPTIONS = [
   { label: "1-3 months", value: "1-3months" },
   { label: "3-6 months", value: "3-6months" },
   { label: "6+ months", value: "6+months" }],
+=======
+  { label: &quot;Less than $5,000&quot;, value: &quot;0-5000&quot; },
+  { label: &quot;$5,000 - $10,000&quot;, value: &quot;5000-10000&quot; },
+  { label: &quot;$10,000 - $25,000&quot;, value: &quot;10000-25000&quot; },
+  { label: &quot;$25,000 - $50,000&quot;, value: &quot;25000-50000&quot; },
+  { label: &quot;$50,000+&quot;, value: &quot;50000+&quot; }];
+
+const TIMELINE_OPTIONS = [
+  { label: &quot;Less than 1 month&quot;, value: &quot;lt-1month&quot; },
+  { label: &quot;1-3 months&quot;, value: &quot;1-3months&quot; },
+  { label: &quot;3-6 months&quot;, value: &quot;3-6months&quot; },
+  { label: &quot;6+ months&quot;, value: &quot;6+months&quot; }];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
   const [formData, setFormData] = useState({
@@ -73,8 +109,13 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
       // Show success message
       toast({
+<<<<<<< HEAD
         title: "Quote Request Submitted!",
         description: "We've sent your request to the service provider. They will contact you soon."}),
+=======
+        title: &quot;Quote Request Submitted!&quot;,
+        description: &quot;We've sent your request to the service provider. They will contact you soon.&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
       // Close the modal and reset form
       onOpenChange(false),
@@ -89,9 +130,15 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     } catch (error) {
       logErrorToProduction('Error submitting quote:', { data: error }),
       toast({
+<<<<<<< HEAD
         title: "Error",
         description: "There was an error submitting your quote request. Please try again.",
         variant: "destructive"})
+=======
+        title: &quot;Error&quot;,
+        description: &quot;There was an error submitting your quote request. Please try again.&quot;,
+        variant: &quot;destructive&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsSubmitting(false)
     }
@@ -109,48 +156,48 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">
+      <DialogContent className=&quot;bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]&quot;>
         <DialogHeader>
-          <DialogTitle className="text-2xl font-semibold text-white">
+          <DialogTitle className=&quot;text-2xl font-semibold text-white&quot;>
             Request Service Quote
           </DialogTitle>
         </DialogHeader>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
           {/* Step 1: Service Details */}
           {currentStep === 'details' && (
-            <div className="space-y-4">
-              <div className="p-4 bg-zion-blue-dark rounded-md border border-zion-blue-light">
-                <h3 className="font-medium text-zion-cyan mb-2">Selected Service</h3>
-                <p className="text-white text-lg">{service?.title || "Custom Service"}</p>
-                <p className="text-zion-slate-light text-sm mt-1">{service?.category}</p>
+            <div className=&quot;space-y-4&quot;>
+              <div className=&quot;p-4 bg-zion-blue-dark rounded-md border border-zion-blue-light&quot;>
+                <h3 className=&quot;font-medium text-zion-cyan mb-2&quot;>Selected Service</h3>
+                <p className=&quot;text-white text-lg&quot;>{service?.title || &quot;Custom Service&quot;}</p>
+                <p className=&quot;text-zion-slate-light text-sm mt-1&quot;>{service?.category}</p>
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="description" className="text-white">Project Description</Label>
+              <div className=&quot;space-y-2&quot;>
+                <Label htmlFor=&quot;description&quot; className=&quot;text-white&quot;>Project Description</Label>
                 <Textarea
-                  id="description"
-                  name="description"
+                  id=&quot;description&quot;
+                  name=&quot;description&quot;
                   value={formData.description}
                   onChange={handleInputChange}
-                  placeholder="Describe your project needs in detail..."
-                  className="h-32 bg-zion-blue-dark border-zion-blue-light text-white resize-none"
+                  placeholder=&quot;Describe your project needs in detail...&quot;
+                  className=&quot;h-32 bg-zion-blue-dark border-zion-blue-light text-white resize-none&quot;
                   required
                 />
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="budget" className="text-white">Estimated Budget</Label>
+              <div className=&quot;space-y-2&quot;>
+                <Label htmlFor=&quot;budget&quot; className=&quot;text-white&quot;>Estimated Budget</Label>
                 <Select 
                   value={formData.budget} 
                   onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
                 >
-                  <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
-                    <SelectValue placeholder="Select your budget range" />
+                  <SelectTrigger className=&quot;bg-zion-blue-dark border-zion-blue-light text-white&quot;>
+                    <SelectValue placeholder=&quot;Select your budget range&quot; />
                   </SelectTrigger>
-                  <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
+                  <SelectContent className=&quot;bg-zion-blue-dark border-zion-blue-light&quot;>
                     {BUDGET_RANGES.map((range) => (
-                      <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">
+                      <SelectItem key={range.value} value={range.value} className=&quot;text-white hover:bg-zion-blue-light&quot;>
                         {range.label}
                       </SelectItem>
                     ))}
@@ -162,19 +209,19 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
           {/* Step 2: Timeline */}
           {currentStep === 'timeline' && (
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <Label className="text-white">Project Timeline</Label>
+            <div className=&quot;space-y-4&quot;>
+              <div className=&quot;space-y-2&quot;>
+                <Label className=&quot;text-white&quot;>Project Timeline</Label>
                 <Select 
                   value={formData.timeframe}
                   onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}
                 >
-                  <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
-                    <SelectValue placeholder="Select your timeline" />
+                  <SelectTrigger className=&quot;bg-zion-blue-dark border-zion-blue-light text-white&quot;>
+                    <SelectValue placeholder=&quot;Select your timeline&quot; />
                   </SelectTrigger>
-                  <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
+                  <SelectContent className=&quot;bg-zion-blue-dark border-zion-blue-light&quot;>
                     {TIMELINE_OPTIONS.map((option) => (
-                      <SelectItem key={option.value} value={option.value} className="text-white hover:bg-zion-blue-light">
+                      <SelectItem key={option.value} value={option.value} className=&quot;text-white hover:bg-zion-blue-light&quot;>
                         {option.label}
                       </SelectItem>
                     ))}
@@ -182,57 +229,57 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 </Select>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label className="text-white">Expected Start Date</Label>
+              <div className=&quot;grid grid-cols-2 gap-4&quot;>
+                <div className=&quot;space-y-2&quot;>
+                  <Label className=&quot;text-white&quot;>Expected Start Date</Label>
                   <Popover>
                     <PopoverTrigger asChild>
                       <Button
-                        variant={"outline"}
+                        variant={&quot;outline&quot;}
                         className={cn(
-                          "justify-start text-left font-normal w-full",
-                          "bg-zion-blue-dark border-zion-blue-light text-white"
+                          &quot;justify-start text-left font-normal w-full&quot;,
+                          &quot;bg-zion-blue-dark border-zion-blue-light text-white&quot;
                         )}
                       >
-                        <CalendarIcon className="mr-2 h-4 w-4" aria-hidden="true" />
-                        {startDate ? format(startDate, "PPP") : <span>Pick a date</span>}
+                        <CalendarIcon className=&quot;mr-2 h-4 w-4&quot; aria-hidden=&quot;true&quot; />
+                        {startDate ? format(startDate, &quot;PPP&quot;) : <span>Pick a date</span>}
                       </Button>
                     </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">
+                    <PopoverContent className=&quot;w-auto p-0 bg-zion-blue-dark border-zion-blue-light&quot;>
                       <Calendar
-                        mode="single"
+                        mode=&quot;single&quot;
                         selected={startDate}
                         onSelect={setStartDate}
                         initialFocus
-                        className="p-3 pointer-events-auto bg-zion-blue-dark text-white"
+                        className=&quot;p-3 pointer-events-auto bg-zion-blue-dark text-white&quot;
                       />
                     </PopoverContent>
                   </Popover>
                 </div>
 
-                <div className="space-y-2">
-                  <Label className="text-white">Expected End Date</Label>
+                <div className=&quot;space-y-2&quot;>
+                  <Label className=&quot;text-white&quot;>Expected End Date</Label>
                   <Popover>
                     <PopoverTrigger asChild>
                       <Button
-                        variant={"outline"}
+                        variant={&quot;outline&quot;}
                         className={cn(
-                          "justify-start text-left font-normal w-full",
-                          "bg-zion-blue-dark border-zion-blue-light text-white"
+                          &quot;justify-start text-left font-normal w-full&quot;,
+                          &quot;bg-zion-blue-dark border-zion-blue-light text-white&quot;
                         )}
                       >
-                        <CalendarIcon className="mr-2 h-4 w-4" aria-hidden="true" />
-                        {endDate ? format(endDate, "PPP") : <span>Pick a date</span>}
+                        <CalendarIcon className=&quot;mr-2 h-4 w-4&quot; aria-hidden=&quot;true&quot; />
+                        {endDate ? format(endDate, &quot;PPP&quot;) : <span>Pick a date</span>}
                       </Button>
                     </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">
+                    <PopoverContent className=&quot;w-auto p-0 bg-zion-blue-dark border-zion-blue-light&quot;>
                       <Calendar
-                        mode="single"
+                        mode=&quot;single&quot;
                         selected={endDate}
                         onSelect={setEndDate}
                         disabled={(date) => !startDate || date < startDate}
                         initialFocus
-                        className="p-3 pointer-events-auto bg-zion-blue-dark text-white"
+                        className=&quot;p-3 pointer-events-auto bg-zion-blue-dark text-white&quot;
                       />
                     </PopoverContent>
                   </Popover>
@@ -243,46 +290,46 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
           {/* Step 3: Contact */}
           {currentStep === 'contact' && (
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-white">Contact Email</Label>
+            <div className=&quot;space-y-4&quot;>
+              <div className=&quot;space-y-2&quot;>
+                <Label htmlFor=&quot;email&quot; className=&quot;text-white&quot;>Contact Email</Label>
                 <Input
-                  id="email"
-                  name="email"
-                  type="email"
+                  id=&quot;email&quot;
+                  name=&quot;email&quot;
+                  type=&quot;email&quot;
                   value={formData.email}
                   onChange={handleInputChange}
-                  placeholder="your@email.com"
-                  className="bg-zion-blue-dark border-zion-blue-light text-white"
+                  placeholder=&quot;your@email.com&quot;
+                  className=&quot;bg-zion-blue-dark border-zion-blue-light text-white&quot;
                   required
                 />
               </div>
 
-              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-md p-4">
-                <h3 className="font-medium text-zion-cyan mb-2">Quote Summary</h3>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-zion-slate-light">Service:</span>
-                    <span className="text-white">{service?.title || "Custom Service"}</span>
+              <div className=&quot;bg-zion-blue-dark border border-zion-blue-light rounded-md p-4&quot;>
+                <h3 className=&quot;font-medium text-zion-cyan mb-2&quot;>Quote Summary</h3>
+                <div className=&quot;space-y-2 text-sm&quot;>
+                  <div className=&quot;flex justify-between&quot;>
+                    <span className=&quot;text-zion-slate-light&quot;>Service:</span>
+                    <span className=&quot;text-white&quot;>{service?.title || &quot;Custom Service&quot;}</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-zion-slate-light">Budget:</span>
-                    <span className="text-white">{BUDGET_RANGES.find(b => b.value === formData.budget)?.label}</span>
+                  <div className=&quot;flex justify-between&quot;>
+                    <span className=&quot;text-zion-slate-light&quot;>Budget:</span>
+                    <span className=&quot;text-white&quot;>{BUDGET_RANGES.find(b => b.value === formData.budget)?.label}</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-zion-slate-light">Timeline:</span>
-                    <span className="text-white">{TIMELINE_OPTIONS.find(t => t.value === formData.timeframe)?.label}</span>
+                  <div className=&quot;flex justify-between&quot;>
+                    <span className=&quot;text-zion-slate-light&quot;>Timeline:</span>
+                    <span className=&quot;text-white&quot;>{TIMELINE_OPTIONS.find(t => t.value === formData.timeframe)?.label}</span>
                   </div>
                   {startDate && (
-                    <div className="flex justify-between">
-                      <span className="text-zion-slate-light">Start Date:</span>
-                      <span className="text-white">{format(startDate, "PPP")}</span>
+                    <div className=&quot;flex justify-between&quot;>
+                      <span className=&quot;text-zion-slate-light&quot;>Start Date:</span>
+                      <span className=&quot;text-white&quot;>{format(startDate, &quot;PPP&quot;)}</span>
                     </div>
                   )}
                   {endDate && (
-                    <div className="flex justify-between">
-                      <span className="text-zion-slate-light">End Date:</span>
-                      <span className="text-white">{format(endDate, "PPP")}</span>
+                    <div className=&quot;flex justify-between&quot;>
+                      <span className=&quot;text-zion-slate-light&quot;>End Date:</span>
+                      <span className=&quot;text-white&quot;>{format(endDate, &quot;PPP&quot;)}</span>
                     </div>
                   )}
                 </div>
@@ -290,43 +337,43 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
             </div>
           )}
 
-          <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">
+          <DialogFooter className=&quot;flex-col sm:flex-row sm:justify-between sm:space-x-2&quot;>
             {currentStep !== 'details' && (
               <Button
-                type="button"
-                variant="outline"
+                type=&quot;button&quot;
+                variant=&quot;outline&quot;
                 onClick={prevStep}
-                className="border-zion-blue-light text-white hover:bg-zion-blue-light"
+                className=&quot;border-zion-blue-light text-white hover:bg-zion-blue-light&quot;
               >
                 Previous
               </Button>
             )}
             
-            <div className={cn("flex gap-2", currentStep === 'details' && "ml-auto")}>
+            <div className={cn(&quot;flex gap-2&quot;, currentStep === 'details' && &quot;ml-auto&quot;)}>
               <Button
-                type="button"
-                variant="outline"
+                type=&quot;button&quot;
+                variant=&quot;outline&quot;
                 onClick={() => onOpenChange(false)}
-                className="border-zion-blue-light text-white hover:bg-zion-blue-light"
+                className=&quot;border-zion-blue-light text-white hover:bg-zion-blue-light&quot;
               >
                 Cancel
               </Button>
               
               {currentStep !== 'contact' ? (
                 <Button 
-                  type="button" 
+                  type=&quot;button&quot; 
                   onClick={nextStep}
-                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple&quot;
                 >
                   Next
                 </Button>
               ) : (
                 <Button 
-                  type="submit"
+                  type=&quot;submit&quot;
                   disabled={isSubmitting}
-                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  className=&quot;bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple&quot;
                 >
-                  {isSubmitting ? "Submitting..." : "Submit Request"}
+                  {isSubmitting ? &quot;Submitting...&quot; : &quot;Submit Request&quot;}
                 </Button>
               )}
             </div>

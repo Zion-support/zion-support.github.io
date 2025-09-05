@@ -10,8 +10,8 @@ function ProjectMilestones() {
     <ProtectedRoute>
       <>
         <SEO 
-          title="Payment Milestones | Zion AI Marketplace" 
-          description="Manage project payment milestones and deliverables"
+          title=&quot;Payment Milestones | Zion AI Marketplace&quot; 
+          description=&quot;Manage project payment milestones and deliverables&quot;
         />
         <AppHeader />
         <ProjectMilestonesContent />

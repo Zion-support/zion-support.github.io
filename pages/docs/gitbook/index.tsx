@@ -23,19 +23,19 @@ export async function getStaticProps() {
 
 export default function DocsIndex({ sections }: { sections: { title: string, items: { name: string, rel: string, isDir: boolean }[] }[] }) {
   return (
-    <div className="space-y-6">
-      <h1 className="text-3xl font-bold">Zion Docs (GitBook)</h1>
-      <p className="text-gray-600 dark:text-gray-300">Browse the documentation structure. Files link to the repository for now.</p>
-      <div className="space-y-4">
+    <div className=&quot;space-y-6&quot;>
+      <h1 className=&quot;text-3xl font-bold&quot;>Zion Docs (GitBook)</h1>
+      <p className=&quot;text-gray-600 dark:text-gray-300&quot;>Browse the documentation structure. Files link to the repository for now.</p>
+      <div className=&quot;space-y-4&quot;>
         {sections.map((s) => (
-          <div key={s.title} className="border rounded p-4">
-            <h2 className="font-semibold mb-2">{s.title}</h2>
-            <ul className="list-disc pl-5 space-y-1">
+          <div key={s.title} className=&quot;border rounded p-4&quot;>
+            <h2 className=&quot;font-semibold mb-2&quot;>{s.title}</h2>
+            <ul className=&quot;list-disc pl-5 space-y-1&quot;>
               {s.items.map((it) => (
                 <li key={it.rel}>
-                  <a className="underline" href={`https://github.com/Zion-Holdings/zion.app/blob/main/docs/gitbook/${it.rel}`} target="_blank" rel="noreferrer">
+                  <a className=&quot;underline&quot; href={`https://github.com/Zion-Holdings/zion.app/blob/main/docs/gitbook/${it.rel}`} target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>
                     {it.rel}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

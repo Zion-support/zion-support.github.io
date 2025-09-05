@@ -18,12 +18,12 @@ export function CurrencySelector() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-zion-purple/10">
-          <DollarSign className="h-5 w-5" />
-          <span className="sr-only">Select currency</span>
+        <Button variant=&quot;ghost&quot; size=&quot;icon&quot; className=&quot;text-white hover:bg-zion-purple/10&quot;>
+          <DollarSign className=&quot;h-5 w-5&quot; />
+          <span className=&quot;sr-only&quot;>Select currency</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="bg-zion-blue-dark border border-zion-purple/20">
+      <DropdownMenuContent align=&quot;end&quot; className=&quot;bg-zion-blue-dark border border-zion-purple/20&quot;>
         {SUPPORTED.map(c => (
           <DropdownMenuItem
             key={c.code}

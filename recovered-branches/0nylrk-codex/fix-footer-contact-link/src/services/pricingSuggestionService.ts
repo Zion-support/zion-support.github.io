@@ -2,10 +2,17 @@
 
 // Define types for the pricing recommendation
 export interface PricingSuggestion {
+<<<<<<< HEAD
   minRate: number,
   maxRate: number,
   confidence: "High" | "Medium" | "Low",
   explanation: string
+=======
+  minRate: number;
+  maxRate: number;
+  confidence: &quot;High&quot; | &quot;Medium&quot; | &quot;Low&quot;;
+  explanation: string;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 }
 
 export interface ClientBudgetParams {
@@ -34,6 +41,7 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
     await new Promise(resolve => setTimeout(resolve, 1000)),
     
     // Basic logic to determine budget range based on category
+<<<<<<< HEAD
     let minRate = 25,
     let maxRate = 50,
     let confidence: "High" | "Medium" | "Low" = "Medium",
@@ -73,6 +81,47 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
     
     // Generate explanation
     const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`,
+=======
+    let minRate = 25;
+    let maxRate = 50;
+    let confidence: &quot;High&quot; | &quot;Medium&quot; | &quot;Low&quot; = &quot;Medium&quot;;
+    
+    if (category === &quot;development&quot;) {
+      minRate = 40;
+      maxRate = 80;
+      confidence = &quot;High&quot;;
+    } else if (category === &quot;design&quot;) {
+      minRate = 35;
+      maxRate = 70;
+      confidence = &quot;High&quot;;
+    } else if (category === &quot;marketing&quot;) {
+      minRate = 30;
+      maxRate = 60;
+      confidence = &quot;Medium&quot;;
+    } else if (category === &quot;data&quot;) {
+      minRate = 45;
+      maxRate = 90;
+      confidence = &quot;High&quot;;
+    } else {
+      minRate = 25;
+      maxRate = 50;
+      confidence = &quot;Low&quot;;
+    }
+    
+    // Adjust based on job title keywords
+    const lowercaseTitle = jobTitle.toLowerCase();
+    if (lowercaseTitle.includes(&quot;senior&quot;) || lowercaseTitle.includes(&quot;lead&quot;)) {
+      minRate += 20;
+      maxRate += 30;
+    } else if (lowercaseTitle.includes(&quot;junior&quot;)) {
+      minRate -= 10;
+      maxRate -= 15;
+      minRate = Math.max(minRate, 15); // Ensure minimum doesn't go too low
+    }
+    
+    // Generate explanation
+    const explanation = `Based on market rates for ${category} projects, particularly for roles similar to &quot;${jobTitle}&quot;, we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     return {
       minRate,
@@ -81,14 +130,24 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       explanation
     }
   } catch (error) {
+<<<<<<< HEAD
     console.error("Error generating budget suggestion:", error),
+=======
+    console.error(&quot;Error generating budget suggestion:&quot;, error);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     // Return a fallback suggestion
     return {
       minRate: 30,
       maxRate: 60,
+<<<<<<< HEAD
       confidence: "Low",
       explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
     }
+=======
+      confidence: &quot;Low&quot;,
+      explanation: &quot;We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget.&quot;
+    };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 }
 
@@ -131,11 +190,19 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     const maxRate = Math.round(baseRate * locationFactor * 1.2),
     
     // Determine confidence
+<<<<<<< HEAD
     let confidence: "High" | "Medium" | "Low" = "Medium",
     if (yearsExperience > 3 && hasInDemandSkills && location) {
       confidence = "High"
     } else if (!location || yearsExperience < 1) {
       confidence = "Low"
+=======
+    let confidence: &quot;High&quot; | &quot;Medium&quot; | &quot;Low&quot; = &quot;Medium&quot;;
+    if (yearsExperience > 3 && hasInDemandSkills && location) {
+      confidence = &quot;High&quot;;
+    } else if (!location || yearsExperience < 1) {
+      confidence = &quot;Low&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     // Generate explanation
@@ -157,6 +224,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
       explanation
     }
   } catch (error) {
+<<<<<<< HEAD
     console.error("Error generating rate suggestion:", error),
     return {
       minRate: 25,
@@ -164,6 +232,15 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
       confidence: "Low",
       explanation: "We encountered an issue generating a precise rate recommendation. This is a general suggestion based on market averages."
     }
+=======
+    console.error(&quot;Error generating rate suggestion:&quot;, error);
+    return {
+      minRate: 25,
+      maxRate: 50,
+      confidence: &quot;Low&quot;,
+      explanation: &quot;We encountered an issue generating a precise rate recommendation. This is a general suggestion based on market averages.&quot;
+    };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 }
 
@@ -179,7 +256,11 @@ export async function trackPricingSuggestion(data: {
   try {
     // In a real implementation, this would save to the database
     // For now, we'll just log it
+<<<<<<< HEAD
     // // // console.log("Tracking pricing suggestion:", data),
+=======
+    // console.log(&quot;Tracking pricing suggestion:&quot;, data);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     
     // In a real implementation with Supabase: // await supabase
     //  .from('pricing_suggestions')
@@ -187,7 +268,12 @@ export async function trackPricingSuggestion(data: {
     
     return true
   } catch (error) {
+<<<<<<< HEAD
     console.error("Error tracking pricing suggestion:", error),
     return false
+=======
+    console.error(&quot;Error tracking pricing suggestion:&quot;, error);
+    return false;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 }

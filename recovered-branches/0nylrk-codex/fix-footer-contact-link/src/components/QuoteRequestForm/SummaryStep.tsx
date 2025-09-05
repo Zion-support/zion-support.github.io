@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react",
 import { QuoteFormData } from "@/types/quotes",
 import { Card, CardContent } from "@/components/ui/card",
@@ -6,6 +7,17 @@ import { Textarea } from "@/components/ui/textarea",
 import { AIMatchingResults } from "@/components/AIMatchingResults",
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
 import { toast } from "@/hooks/use-toast",
+=======
+import { useEffect, useState } from &quot;react&quot;;
+import { QuoteFormData } from &quot;@/types/quotes&quot;;
+import { Card, CardContent } from &quot;@/components/ui/card&quot;;
+import { Label } from &quot;@/components/ui/label&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
+import { AIMatchingResults } from &quot;@/components/AIMatchingResults&quot;;
+import { findMatches, MatchResult } from &quot;@/lib/ai-matchmaking&quot;;
+import { toast } from &quot;@/hooks/use-toast&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface SummaryStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -40,11 +52,19 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
         
         setMatches(results)
       } catch (error) {
+<<<<<<< HEAD
         console.error("Error during AI matching:", error),
         toast({
           title: "Matching Error",
           description: "We couldn't find matches for your request. Please try again.",
           variant: "destructive"})
+=======
+        console.error(&quot;Error during AI matching:&quot;, error);
+        toast({
+          title: &quot;Matching Error&quot;,
+          description: &quot;We couldn't find matches for your request. Please try again.&quot;,
+          variant: &quot;destructive&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       } finally {
         setIsMatching(false)
       }
@@ -61,9 +81,15 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
     }),
     
     toast({
+<<<<<<< HEAD
       title: "Match Selected",
       description: `You've selected ${match.item.title}`})
   },
+=======
+      title: &quot;Match Selected&quot;,
+      description: `You've selected ${match.item.title}`});
+  };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item),
@@ -78,8 +104,8 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
   },
   
   return (
-    <div className="space-y-6">
-      <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
+    <div className=&quot;space-y-6&quot;>
+      <h3 className=&quot;text-xl font-semibold text-white mb-4&quot;>Review Your Request</h3>
       
       {/* AI Matching Results */}
       <AIMatchingResults 
@@ -92,19 +118,19 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
       
       {/* Service Information */}
       <div>
-        <h4 className="text-lg font-medium text-white mb-2">Service Information</h4>
-        <Card className="bg-zion-blue-dark border border-zion-blue-light">
-          <CardContent className="pt-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <h4 className=&quot;text-lg font-medium text-white mb-2&quot;>Service Information</h4>
+        <Card className=&quot;bg-zion-blue-dark border border-zion-blue-light&quot;>
+          <CardContent className=&quot;pt-4&quot;>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
               <div>
-                <Label className="text-zion-slate-light">Service Type</Label>
-                <div className="text-white">{formData.serviceType}</div>
+                <Label className=&quot;text-zion-slate-light&quot;>Service Type</Label>
+                <div className=&quot;text-white&quot;>{formData.serviceType}</div>
               </div>
               
               {formData.specificItem && (
                 <div>
-                  <Label className="text-zion-slate-light">Selected Item</Label>
-                  <div className="text-white">{formData.specificItem.title}</div>
+                  <Label className=&quot;text-zion-slate-light&quot;>Selected Item</Label>
+                  <div className=&quot;text-white&quot;>{formData.specificItem.title}</div>
                 </div>
               )}
             </div>
@@ -114,18 +140,18 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
       
       {/* Project Details */}
       <div>
-        <h4 className="text-lg font-medium text-white mb-2">Project Details</h4>
-        <Card className="bg-zion-blue-dark border border-zion-blue-light">
-          <CardContent className="pt-4">
-            <div className="space-y-4">
+        <h4 className=&quot;text-lg font-medium text-white mb-2&quot;>Project Details</h4>
+        <Card className=&quot;bg-zion-blue-dark border border-zion-blue-light&quot;>
+          <CardContent className=&quot;pt-4&quot;>
+            <div className=&quot;space-y-4&quot;>
               <div>
-                <Label className="text-zion-slate-light">Project Name</Label>
-                <div className="text-white">{formData.projectName}</div>
+                <Label className=&quot;text-zion-slate-light&quot;>Project Name</Label>
+                <div className=&quot;text-white&quot;>{formData.projectName}</div>
               </div>
               
               <div>
-                <Label className="text-zion-slate-light">Project Description</Label>
-                <div className="text-white whitespace-pre-wrap">{formData.projectDescription}</div>
+                <Label className=&quot;text-zion-slate-light&quot;>Project Description</Label>
+                <div className=&quot;text-white whitespace-pre-wrap&quot;>{formData.projectDescription}</div>
               </div>
             </div>
           </CardContent>
@@ -134,19 +160,19 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
       
       {/* Timeline */}
       <div>
-        <h4 className="text-lg font-medium text-white mb-2">Timeline</h4>
-        <Card className="bg-zion-blue-dark border border-zion-blue-light">
-          <CardContent className="pt-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <h4 className=&quot;text-lg font-medium text-white mb-2&quot;>Timeline</h4>
+        <Card className=&quot;bg-zion-blue-dark border border-zion-blue-light&quot;>
+          <CardContent className=&quot;pt-4&quot;>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
               <div>
-                <Label className="text-zion-slate-light">Timeline Type</Label>
-                <div className="text-white capitalize">{formData.timeline}</div>
+                <Label className=&quot;text-zion-slate-light&quot;>Timeline Type</Label>
+                <div className=&quot;text-white capitalize&quot;>{formData.timeline}</div>
               </div>
               
               {formData.startDate && (
                 <div>
-                  <Label className="text-zion-slate-light">Start Date</Label>
-                  <div className="text-white">
+                  <Label className=&quot;text-zion-slate-light&quot;>Start Date</Label>
+                  <div className=&quot;text-white&quot;>
                     {formData.startDate.toLocaleDateString()}
                   </div>
                 </div>
@@ -154,8 +180,8 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
               
               {formData.endDate && (
                 <div>
-                  <Label className="text-zion-slate-light">End Date</Label>
-                  <div className="text-white">
+                  <Label className=&quot;text-zion-slate-light&quot;>End Date</Label>
+                  <div className=&quot;text-white&quot;>
                     {formData.endDate.toLocaleDateString()}
                   </div>
                 </div>
@@ -167,18 +193,18 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
       
       {/* Budget */}
       <div>
-        <h4 className="text-lg font-medium text-white mb-2">Budget</h4>
-        <Card className="bg-zion-blue-dark border border-zion-blue-light">
-          <CardContent className="pt-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <h4 className=&quot;text-lg font-medium text-white mb-2&quot;>Budget</h4>
+        <Card className=&quot;bg-zion-blue-dark border border-zion-blue-light&quot;>
+          <CardContent className=&quot;pt-4&quot;>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
               <div>
-                <Label className="text-zion-slate-light">Budget Type</Label>
-                <div className="text-white capitalize">{formData.budget.type}</div>
+                <Label className=&quot;text-zion-slate-light&quot;>Budget Type</Label>
+                <div className=&quot;text-white capitalize&quot;>{formData.budget.type}</div>
               </div>
               
               <div>
-                <Label className="text-zion-slate-light">Amount</Label>
-                <div className="text-white">
+                <Label className=&quot;text-zion-slate-light&quot;>Amount</Label>
+                <div className=&quot;text-white&quot;>
                   ${formData.budget.amount.toLocaleString()}
                   {formData.budget.maxAmount ? ` - $${formData.budget.maxAmount.toLocaleString()}` : ''}
                 </div>
@@ -190,28 +216,28 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
       
       {/* Contact Information */}
       <div>
-        <h4 className="text-lg font-medium text-white mb-2">Contact Information</h4>
-        <Card className="bg-zion-blue-dark border border-zion-blue-light">
-          <CardContent className="pt-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <h4 className=&quot;text-lg font-medium text-white mb-2&quot;>Contact Information</h4>
+        <Card className=&quot;bg-zion-blue-dark border border-zion-blue-light&quot;>
+          <CardContent className=&quot;pt-4&quot;>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
               <div>
-                <Label className="text-zion-slate-light">Name</Label>
-                <div className="text-white">{formData.contactInfo.name}</div>
+                <Label className=&quot;text-zion-slate-light&quot;>Name</Label>
+                <div className=&quot;text-white&quot;>{formData.contactInfo.name}</div>
               </div>
               
               <div>
-                <Label className="text-zion-slate-light">Company</Label>
-                <div className="text-white">{formData.contactInfo.company || "N/A"}</div>
+                <Label className=&quot;text-zion-slate-light&quot;>Company</Label>
+                <div className=&quot;text-white&quot;>{formData.contactInfo.company || &quot;N/A&quot;}</div>
               </div>
               
               <div>
-                <Label className="text-zion-slate-light">Email</Label>
-                <div className="text-white">{formData.contactInfo.email}</div>
+                <Label className=&quot;text-zion-slate-light&quot;>Email</Label>
+                <div className=&quot;text-white&quot;>{formData.contactInfo.email}</div>
               </div>
               
               <div>
-                <Label className="text-zion-slate-light">Phone</Label>
-                <div className="text-white">{formData.contactInfo.phone || "N/A"}</div>
+                <Label className=&quot;text-zion-slate-light&quot;>Phone</Label>
+                <div className=&quot;text-white&quot;>{formData.contactInfo.phone || &quot;N/A&quot;}</div>
               </div>
             </div>
           </CardContent>

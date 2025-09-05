@@ -75,66 +75,71 @@ export default function AIAssistant({
   return (
     <>
       <button
-        type="button"
+        type=&quot;button&quot;
         onClick={onOpen}
-        className="inline-flex items-center gap-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
+        className=&quot;inline-flex items-center gap-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800&quot;
       >
         {buttonLabel}
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="absolute inset-0 bg-black/50" onClick={onClose} />
-          <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">
-            <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">
-              <h3 className="text-base font-semibold">{title}</h3>
-              <button onClick={onClose} className="text-sm opacity-70 hover:opacity-100">Close</button>
+        <div className=&quot;fixed inset-0 z-50 flex items-center justify-center&quot;>
+          <div className=&quot;absolute inset-0 bg-black/50&quot; onClick={onClose} />
+          <div className=&quot;relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl&quot;>
+            <div className=&quot;flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800&quot;>
+              <h3 className=&quot;text-base font-semibold&quot;>{title}</h3>
+              <button onClick={onClose} className=&quot;text-sm opacity-70 hover:opacity-100&quot;>Close</button>
             </div>
 
-            <div className="p-4 space-y-3">
+            <div className=&quot;p-4 space-y-3&quot;>
               <div>
-                <label className="block text-xs font-medium mb-1">Operator prompt</label>
+                <label className=&quot;block text-xs font-medium mb-1&quot;>Operator prompt</label>
                 <textarea
                   value={prompt}
                   onChange={(e) => setPrompt(e.target.value)}
                   rows={4}
-                  className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm"
+                  className=&quot;w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm&quot;
                 />
               </div>
 
-              <div className="flex items-center gap-2">
-                <button onClick={callOperator} disabled={loading} className="rounded-md bg-blue-600 text-white px-3 py-1.5 text-sm disabled:opacity-60">
+              <div className=&quot;flex items-center gap-2&quot;>
+                <button onClick={callOperator} disabled={loading} className=&quot;rounded-md bg-blue-600 text-white px-3 py-1.5 text-sm disabled:opacity-60&quot;>
                   {loading ? 'Generating…' : 'Generate'}
                 </button>
-                <button onClick={callOperator} disabled={loading} className="rounded-md border px-3 py-1.5 text-sm">
+                <button onClick={callOperator} disabled={loading} className=&quot;rounded-md border px-3 py-1.5 text-sm&quot;>
                   {loading ? '…' : 'Regenerate'}
                 </button>
+<<<<<<< HEAD
                 <button onClick={() => setIsEditing((v) => !v)} className="rounded-md border px-3 py-1.5 text-sm">{isEditing ? 'Preview' : 'Edit'}</button>
                 <button onClick={onCopy} disabled={!output} className="rounded-md border px-3 py-1.5 text-sm disabled: opacity-60">Copy</button>
+=======
+                <button onClick={() => setIsEditing((v) => !v)} className=&quot;rounded-md border px-3 py-1.5 text-sm&quot;>{isEditing ? 'Preview' : 'Edit'}</button>
+                <button onClick={onCopy} disabled={!output} className=&quot;rounded-md border px-3 py-1.5 text-sm disabled:opacity-60&quot;>Copy</button>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 <button
                   onClick={() => { onAccept(output), onClose() }}
                   disabled={!canAccept}
-                  className="ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm disabled:opacity-60"
+                  className=&quot;ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm disabled:opacity-60&quot;
                 >
                   Accept
                 </button>
               </div>
 
               {error && (
-                <div className="text-red-600 text-sm">{error}</div>
+                <div className=&quot;text-red-600 text-sm&quot;>{error}</div>
               )}
 
               <div>
-                <label className="block text-xs font-medium mb-1">Output (markdown)</label>
+                <label className=&quot;block text-xs font-medium mb-1&quot;>Output (markdown)</label>
                 {isEditing ? (
                   <textarea
                     value={output}
                     onChange={(e) => setOutput(e.target.value)}
                     rows={12}
-                    className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm"
+                    className=&quot;w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm&quot;
                   />
                 ) : (
-                  <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">{output || 'No content yet. Click Generate.'}</pre>
+                  <pre className=&quot;w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap&quot;>{output || 'No content yet. Click Generate.'}</pre>
                 )}
               </div>
             </div>

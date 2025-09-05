@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 import React, { ReactNode } from "react",
 import { cn } from "@/lib/utils",
 import { slugify } from "@/lib/slugify",
 import { Link } from "react-router-dom",
+=======
+import React, { ReactNode } from &quot;react&quot;;
+import { cn } from &quot;@/lib/utils&quot;;
+import { slugify } from &quot;@/lib/slugify&quot;;
+import { Link } from &quot;react-router-dom&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface CategoryCardProps {
   title: string,
   description: string,
@@ -24,23 +32,23 @@ export function CategoryCard({ title, description, icon, color, count, className
     <Link 
       to={`/category/${slug}`} 
       className={cn(
-        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
+        &quot;flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group&quot;,
         className
       )}
     >
       <div
         className={cn(
-          "mb-4 p-3 bg-zion-blue-dark rounded-full",
-          !color && "text-zion-cyan"
+          &quot;mb-4 p-3 bg-zion-blue-dark rounded-full&quot;,
+          !color && &quot;text-zion-cyan&quot;
         )}
         style={color ? { color } : undefined}
       >
         {icon}
       </div>
-      <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
-      <p className="text-zion-slate-light text-center">{description}</p>
+      <h3 className=&quot;text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors&quot;>{title}</h3>
+      <p className=&quot;text-zion-slate-light text-center&quot;>{description}</p>
       {count !== undefined && (
-        <div className="mt-3 text-sm text-zion-cyan">{count} listings</div>
+        <div className=&quot;mt-3 text-sm text-zion-cyan&quot;>{count} listings</div>
       )}
     </Link>
   )

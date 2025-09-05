@@ -71,8 +71,16 @@ app.command('/zion', async ({ command, ack, respond }) => {
 }),
 
 (async () => {
+<<<<<<< HEAD
   const port = Number(process.env.SLACK_PORT || 3001),
   await app.start(port),
   // eslint-disable-next-line no-console
   // // // console.log(`⚡️ Zion Slack bot running on port ${port}`)
 })(),
+=======
+  const port = Number(process.env.SLACK_PORT || 3001);
+  await app.start(port);
+   
+  // console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7

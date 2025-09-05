@@ -27,9 +27,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true }),
     await browser.close(),
 
+<<<<<<< HEAD
     res.setHeader('Content-Typeapplication/pdf'),
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"'),
     res.status(200).send(pdfBuffer)
+=======
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader('Content-Disposition', 'attachment; filename=&quot;zion-os-book.pdf&quot;');
+    res.status(200).send(pdfBuffer);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   } catch (e: any) {
     try { await browser.close() } catch {}
     res.status(500).json({ error: e?.message || 'Failed to render PDF' })

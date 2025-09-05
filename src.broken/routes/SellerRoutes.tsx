@@ -5,7 +5,7 @@ export default function SellerRoutes() {
   return (
     <Routes>
       <Route
-        path="/dashboard"
+        path=&quot;/dashboard&quot;
         element={
           <ProtectedRoute>
             <SellerDashboard />

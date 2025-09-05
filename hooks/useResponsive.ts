@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 interface Breakpoints {
@@ -51,6 +52,9 @@ export function useResponsive(breakpoints: Breakpoints = defaultBreakpoints) {
 }
 =======
         "isDesktop": width >= 1024})},
+=======
+        &quot;isDesktop&quot;: width >= 1024})};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
     updateDimensions(),
     window.addEventListener(

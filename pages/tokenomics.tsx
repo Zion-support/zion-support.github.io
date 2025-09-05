@@ -135,111 +135,111 @@ export default function TokenomicsWhitepaperBuilder() {
       <Head>
         <title>Tokenomics Whitepaper Generator</title>
       </Head>
-      <div className="space-y-6">
-        <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-semibold">Whitepaper Generator</h1>
-          <div className="flex items-center gap-3 text-sm">
-            <label className="inline-flex items-center gap-2">
-              <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
+      <div className=&quot;space-y-6&quot;>
+        <div className=&quot;flex items-center justify-between&quot;>
+          <h1 className=&quot;text-2xl font-semibold&quot;>Whitepaper Generator</h1>
+          <div className=&quot;flex items-center gap-3 text-sm&quot;>
+            <label className=&quot;inline-flex items-center gap-2&quot;>
+              <input type=&quot;checkbox&quot; checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
               <span>Admin</span>
             </label>
-            <label className="inline-flex items-center gap-2">
-              <input type="checkbox" checked={publicPreview} onChange={(e) => setPublicPreview(e.target.checked)} />
+            <label className=&quot;inline-flex items-center gap-2&quot;>
+              <input type=&quot;checkbox&quot; checked={publicPreview} onChange={(e) => setPublicPreview(e.target.checked)} />
               <span>Public after launch</span>
             </label>
-            <button onClick={handleShareableLink} className="px-3 py-1 rounded-md bg-indigo-600 text-white">Create Share Link</button>
+            <button onClick={handleShareableLink} className=&quot;px-3 py-1 rounded-md bg-indigo-600 text-white&quot;>Create Share Link</button>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="space-y-6">
-            <div className="rounded-lg border p-4 space-y-4">
-              <h2 className="font-medium">Builder Inputs</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-6&quot;>
+          <div className=&quot;space-y-6&quot;>
+            <div className=&quot;rounded-lg border p-4 space-y-4&quot;>
+              <h2 className=&quot;font-medium&quot;>Builder Inputs</h2>
+              <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
                 <div>
-                  <label className="text-xs opacity-70">Token name</label>
-                  <input className="w-full border rounded-md px-3 py-2" value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
-                </div>
-                <div>
-                  <label className="text-xs opacity-70">Token supply</label>
-                  <input className="w-full border rounded-md px-3 py-2" value={tokenSupply} onChange={(e) => setTokenSupply(e.target.value)} />
-                </div>
-                <div className="md:col-span-2">
-                  <label className="text-xs opacity-70">Use cases</label>
-                  <textarea className="w-full border rounded-md px-3 py-2" rows={2} value={useCases} onChange={(e) => setUseCases(e.target.value)} />
-                </div>
-                <div className="md:col-span-2">
-                  <label className="text-xs opacity-70">Rewards logic</label>
-                  <textarea className="w-full border rounded-md px-3 py-2" rows={2} value={rewardsLogic} onChange={(e) => setRewardsLogic(e.target.value)} />
-                </div>
-                <div className="md:col-span-2">
-                  <label className="text-xs opacity-70">Governance logic</label>
-                  <textarea className="w-full border rounded-md px-3 py-2" rows={2} value={governance} onChange={(e) => setGovernance(e.target.value)} />
+                  <label className=&quot;text-xs opacity-70&quot;>Token name</label>
+                  <input className=&quot;w-full border rounded-md px-3 py-2&quot; value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
                 </div>
                 <div>
-                  <label className="text-xs opacity-70">Legal jurisdiction</label>
-                  <select className="w-full border rounded-md px-3 py-2" value={jurisdiction} onChange={(e) => setJurisdiction(e.target.value)}>
-                    <option value="US">US</option>
-                    <option value="EU">EU</option>
-                    <option value="SG">Singapore</option>
-                    <option value="AE">UAE</option>
+                  <label className=&quot;text-xs opacity-70&quot;>Token supply</label>
+                  <input className=&quot;w-full border rounded-md px-3 py-2&quot; value={tokenSupply} onChange={(e) => setTokenSupply(e.target.value)} />
+                </div>
+                <div className=&quot;md:col-span-2&quot;>
+                  <label className=&quot;text-xs opacity-70&quot;>Use cases</label>
+                  <textarea className=&quot;w-full border rounded-md px-3 py-2&quot; rows={2} value={useCases} onChange={(e) => setUseCases(e.target.value)} />
+                </div>
+                <div className=&quot;md:col-span-2&quot;>
+                  <label className=&quot;text-xs opacity-70&quot;>Rewards logic</label>
+                  <textarea className=&quot;w-full border rounded-md px-3 py-2&quot; rows={2} value={rewardsLogic} onChange={(e) => setRewardsLogic(e.target.value)} />
+                </div>
+                <div className=&quot;md:col-span-2&quot;>
+                  <label className=&quot;text-xs opacity-70&quot;>Governance logic</label>
+                  <textarea className=&quot;w-full border rounded-md px-3 py-2&quot; rows={2} value={governance} onChange={(e) => setGovernance(e.target.value)} />
+                </div>
+                <div>
+                  <label className=&quot;text-xs opacity-70&quot;>Legal jurisdiction</label>
+                  <select className=&quot;w-full border rounded-md px-3 py-2&quot; value={jurisdiction} onChange={(e) => setJurisdiction(e.target.value)}>
+                    <option value=&quot;US&quot;>US</option>
+                    <option value=&quot;EU&quot;>EU</option>
+                    <option value=&quot;SG&quot;>Singapore</option>
+                    <option value=&quot;AE&quot;>UAE</option>
                   </select>
                 </div>
-                <div className="flex items-center gap-2">
-                  <input id="legalReview" type="checkbox" checked={legalReview} onChange={(e) => setLegalReview(e.target.checked)} />
-                  <label htmlFor="legalReview" className="text-sm">Submit to Counsel</label>
+                <div className=&quot;flex items-center gap-2&quot;>
+                  <input id=&quot;legalReview&quot; type=&quot;checkbox&quot; checked={legalReview} onChange={(e) => setLegalReview(e.target.checked)} />
+                  <label htmlFor=&quot;legalReview&quot; className=&quot;text-sm&quot;>Submit to Counsel</label>
                 </div>
               </div>
             </div>
 
-            <div className="rounded-lg border p-4 space-y-3">
-              <h3 className="font-medium">Distribution</h3>
-              <div className="space-y-2">
+            <div className=&quot;rounded-lg border p-4 space-y-3&quot;>
+              <h3 className=&quot;font-medium&quot;>Distribution</h3>
+              <div className=&quot;space-y-2&quot;>
                 {distribution.map((item, idx) => (
-                  <div key={idx} className="grid grid-cols-12 gap-2 items-center">
-                    <input className="col-span-6 border rounded-md px-3 py-2" value={item.label} onChange={(e) => updateDistribution(idx, 'label', e.target.value)} />
-                    <input className="col-span-4 border rounded-md px-3 py-2" type="number" min={0} max={100} value={item.percent} onChange={(e) => updateDistribution(idx, 'percent', e.target.value)} />
-                    <button onClick={() => removeDistributionItem(idx)} className="col-span-2 px-3 py-2 rounded-md bg-rose-600 text-white">Remove</button>
+                  <div key={idx} className=&quot;grid grid-cols-12 gap-2 items-center&quot;>
+                    <input className=&quot;col-span-6 border rounded-md px-3 py-2&quot; value={item.label} onChange={(e) => updateDistribution(idx, 'label', e.target.value)} />
+                    <input className=&quot;col-span-4 border rounded-md px-3 py-2&quot; type=&quot;number&quot; min={0} max={100} value={item.percent} onChange={(e) => updateDistribution(idx, 'percent', e.target.value)} />
+                    <button onClick={() => removeDistributionItem(idx)} className=&quot;col-span-2 px-3 py-2 rounded-md bg-rose-600 text-white&quot;>Remove</button>
                   </div>
                 ))}
-                <div className="flex items-center justify-between text-xs opacity-70">
+                <div className=&quot;flex items-center justify-between text-xs opacity-70&quot;>
                   <span>Total: {totalPercent}%</span>
-                  <button onClick={addDistributionItem} className="px-3 py-1 rounded-md bg-gray-900 text-white">Add allocation</button>
+                  <button onClick={addDistributionItem} className=&quot;px-3 py-1 rounded-md bg-gray-900 text-white&quot;>Add allocation</button>
                 </div>
               </div>
-              <div className="mt-3">
+              <div className=&quot;mt-3&quot;>
                 <DistributionDonut data={distribution} />
               </div>
             </div>
 
-            <div className="rounded-lg border p-4 space-y-3">
-              <h3 className="font-medium">Operator Prompt</h3>
-              <textarea className="w-full border rounded-md px-3 py-2" rows={4} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
-              <div className="flex gap-3">
-                <button disabled={!isAdmin || isGenerating} onClick={handleGenerate} className="px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50">
+            <div className=&quot;rounded-lg border p-4 space-y-3&quot;>
+              <h3 className=&quot;font-medium&quot;>Operator Prompt</h3>
+              <textarea className=&quot;w-full border rounded-md px-3 py-2&quot; rows={4} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
+              <div className=&quot;flex gap-3&quot;>
+                <button disabled={!isAdmin || isGenerating} onClick={handleGenerate} className=&quot;px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50&quot;>
                   {isGenerating ? 'Generating…' : 'Generate with GPT'}
                 </button>
-                <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
+                <button onClick={() => setGeneratedMarkdown('')} className=&quot;px-4 py-2 rounded-md border&quot;>Clear AI Draft</button>
               </div>
             </div>
 
-            <div className="rounded-lg border p-4 space-y-2">
-              <h3 className="font-medium">Output</h3>
-              <div className="flex gap-3">
-                <button onClick={() => handleDownload('md')} className="px-3 py-2 rounded-md border">Download .md</button>
-                <button onClick={() => handleDownload('pdf')} className="px-3 py-2 rounded-md border">Download PDF</button>
+            <div className=&quot;rounded-lg border p-4 space-y-2&quot;>
+              <h3 className=&quot;font-medium&quot;>Output</h3>
+              <div className=&quot;flex gap-3&quot;>
+                <button onClick={() => handleDownload('md')} className=&quot;px-3 py-2 rounded-md border&quot;>Download .md</button>
+                <button onClick={() => handleDownload('pdf')} className=&quot;px-3 py-2 rounded-md border&quot;>Download PDF</button>
               </div>
             </div>
           </div>
 
-          <div className="rounded-lg border p-4">
-            <div className="flex items-center justify-between mb-3">
-              <div className="flex gap-2 overflow-x-auto">
+          <div className=&quot;rounded-lg border p-4&quot;>
+            <div className=&quot;flex items-center justify-between mb-3&quot;>
+              <div className=&quot;flex gap-2 overflow-x-auto&quot;>
                 {sections.map((s) => (
                   <button key={s} onClick={() => setActiveSection(s)} className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-900 text-white' : ''}`}>{s}</button>
                 ))}
               </div>
-              <span className="text-xs opacity-60">Auto-updating preview</span>
+              <span className=&quot;text-xs opacity-60&quot;>Auto-updating preview</span>
             </div>
             <MarkdownPreview markdown={previewMarkdown} activeSection={activeSection} />
           </div>
@@ -283,13 +283,13 @@ function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) || 1,
   return (
-    <div className="space-y-1 text-sm">
+    <div className=&quot;space-y-1 text-sm&quot;>
       {data.map((d, idx) => (
-        <div key={idx} className="flex items-center gap-2">
-          <div className="h-2 bg-gray-200 rounded w-full">
-            <div className="h-2 bg-indigo-600 rounded" style={{ width: `${(d.percent / total) * 100}%` }} />
+        <div key={idx} className=&quot;flex items-center gap-2&quot;>
+          <div className=&quot;h-2 bg-gray-200 rounded w-full&quot;>
+            <div className=&quot;h-2 bg-indigo-600 rounded&quot; style={{ width: `${(d.percent / total) * 100}%` }} />
           </div>
-          <span className="w-48 truncate">{d.label} ({d.percent}%)</span>
+          <span className=&quot;w-48 truncate&quot;>{d.label} ({d.percent}%)</span>
         </div>
       ))}
     </div>
@@ -312,6 +312,11 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   const content = parts[activeSection] || '',
 
   return (
+<<<<<<< HEAD
     <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>
   )
+=======
+    <pre className=&quot;whitespace-pre-wrap text-sm leading-6&quot;>{content || markdown}</pre>
+  );
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 }

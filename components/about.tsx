@@ -14,45 +14,53 @@ export default function AboutPage() {
 	},
 
 	const pillars = [
+<<<<<<< HEAD
 		{ title: 'AI-first Engineering', icon: <Brain className="w-6 h-6" />, desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.' },
 		{ title: 'Platform and SRE', icon: <ShieldCheck className="w-6 h-6" />, desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.' },
 		{ title: 'Quantum R&D', icon: <Cpu className="w-6 h-6" />, desc: 'Exploratory quantum workloads with pragmatic business outcomes.' },
 		{ title: 'Global Delivery', icon: <Globe className="w-6 h-6" />, desc: 'Secure, reliable delivery with 24/7 support and 99.99% uptime.' }
 	],
+=======
+		{ title: 'AI-first Engineering', icon: <Brain className=&quot;w-6 h-6&quot; />, desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.' },
+		{ title: 'Platform and SRE', icon: <ShieldCheck className=&quot;w-6 h-6&quot; />, desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.' },
+		{ title: 'Quantum R&D', icon: <Cpu className=&quot;w-6 h-6&quot; />, desc: 'Exploratory quantum workloads with pragmatic business outcomes.' },
+		{ title: 'Global Delivery', icon: <Globe className=&quot;w-6 h-6&quot; />, desc: 'Secure, reliable delivery with 24/7 support and 99.99% uptime.' }
+	];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 	return (
-		<UltraFuturisticBackground variant="holographic" intensity="high">
+		<UltraFuturisticBackground variant=&quot;holographic&quot; intensity=&quot;high&quot;>
 			<Head>
 				<title>About Us - Zion Tech Group</title>
-				<meta name="description" content="Zion Tech Group builds outcome-driven AI, micro SaaS, and platform engineering solutions with transparent pricing and 24/7 support." />
+				<meta name=&quot;description&quot; content=&quot;Zion Tech Group builds outcome-driven AI, micro SaaS, and platform engineering solutions with transparent pricing and 24/7 support.&quot; />
 			</Head>
-			<section className="relative py-24 px-4">
-				<div className="max-w-6xl mx-auto">
-					<div className="text-center mb-14">
-						<h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-400 bg-clip-text text-transparent">
+			<section className=&quot;relative py-24 px-4&quot;>
+				<div className=&quot;max-w-6xl mx-auto&quot;>
+					<div className=&quot;text-center mb-14&quot;>
+						<h1 className=&quot;text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-400 bg-clip-text text-transparent&quot;>
 							We build practical AI and platform solutions
 						</h1>
-						<p className="mt-4 text-gray-300 max-w-3xl mx-auto">
+						<p className=&quot;mt-4 text-gray-300 max-w-3xl mx-auto&quot;>
 							From micro SaaS accelerators to enterprise AI services, we focus on measurable outcomes: faster delivery, higher reliability, and lower cost.
 						</p>
 					</div>
 
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-						<Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8">
-							<div className="flex items-center gap-3 mb-4">
-								<Rocket className="w-6 h-6 text-cyan-400" />
-								<h2 className="text-2xl font-bold text-white">Our Mission</h2>
+					<div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8 mb-12&quot;>
+						<Card className=&quot;bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8&quot;>
+							<div className=&quot;flex items-center gap-3 mb-4&quot;>
+								<Rocket className=&quot;w-6 h-6 text-cyan-400&quot; />
+								<h2 className=&quot;text-2xl font-bold text-white&quot;>Our Mission</h2>
 							</div>
-							<p className="text-gray-300">
+							<p className=&quot;text-gray-300&quot;>
 								Deliver future-grade capabilities with present-day ROI. We productize repeatable outcomes so you start fast and scale predictably.
 							</p>
 						</Card>
-						<Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8">
-							<div className="flex items-center gap-3 mb-4">
-								<Sparkles className="w-6 h-6 text-purple-400" />
-								<h2 className="text-2xl font-bold text-white">How We Work</h2>
+						<Card className=&quot;bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8&quot;>
+							<div className=&quot;flex items-center gap-3 mb-4&quot;>
+								<Sparkles className=&quot;w-6 h-6 text-purple-400&quot; />
+								<h2 className=&quot;text-2xl font-bold text-white&quot;>How We Work</h2>
 							</div>
-							<ul className="list-disc list-inside text-gray-300 space-y-2">
+							<ul className=&quot;list-disc list-inside text-gray-300 space-y-2&quot;>
 								<li>Productized service tiers with clear SLAs</li>
 								<li>Security, compliance, and FinOps baked in</li>
 								<li>Build-operate-transfer options for in-house teams</li>
@@ -61,34 +69,34 @@ export default function AboutPage() {
 						</Card>
 					</div>
 
-					<div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+					<div className=&quot;grid grid-cols-1 md:grid-cols-4 gap-6 mb-16&quot;>
 						{pillars.map((p) => (
-							<Card key={p.title} className="bg-gradient-to-br from-gray-900/70 to-black/80 border border-gray-700/40 p-6">
-								<div className="flex items-center gap-3 mb-3 text-white">{p.icon}<span className="font-semibold">{p.title}</span></div>
-								<p className="text-gray-300 text-sm">{p.desc}</p>
+							<Card key={p.title} className=&quot;bg-gradient-to-br from-gray-900/70 to-black/80 border border-gray-700/40 p-6&quot;>
+								<div className=&quot;flex items-center gap-3 mb-3 text-white&quot;>{p.icon}<span className=&quot;font-semibold&quot;>{p.title}</span></div>
+								<p className=&quot;text-gray-300 text-sm&quot;>{p.desc}</p>
 							</Card>
 						))}
 					</div>
 
-					<Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8">
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-							<div className="flex items-center gap-3 text-cyan-400">
-								<Phone className="w-5 h-5" />
-								<a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:text-white">{contactInfo.mobile}</a>
+					<Card className=&quot;bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8&quot;>
+						<div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
+							<div className=&quot;flex items-center gap-3 text-cyan-400&quot;>
+								<Phone className=&quot;w-5 h-5&quot; />
+								<a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className=&quot;hover:text-white&quot;>{contactInfo.mobile}</a>
 							</div>
-							<div className="flex items-center gap-3 text-purple-400">
-								<Mail className="w-5 h-5" />
-								<a href={`mailto:${contactInfo.email}`} className="hover:text-white">{contactInfo.email}</a>
+							<div className=&quot;flex items-center gap-3 text-purple-400&quot;>
+								<Mail className=&quot;w-5 h-5&quot; />
+								<a href={`mailto:${contactInfo.email}`} className=&quot;hover:text-white&quot;>{contactInfo.email}</a>
 							</div>
-							<div className="flex items-center gap-3 text-green-400">
-								<MapPin className="w-5 h-5" />
-								<a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+							<div className=&quot;flex items-center gap-3 text-green-400&quot;>
+								<MapPin className=&quot;w-5 h-5&quot; />
+								<a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; className=&quot;hover:text-white&quot;>
 									{contactInfo.address}
 								</a>
 							</div>
 						</div>
-						<div className="mt-6 flex justify-center">
-							<Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Us</Button>
+						<div className=&quot;mt-6 flex justify-center&quot;>
+							<Button href=&quot;/contact&quot; className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 text-white&quot;>Contact Us</Button>
 						</div>
 					</Card>
 				</div>
@@ -154,49 +162,49 @@ export default function AboutPage() {
     <>
       <Head>
         <title>About Zion Tech Group | Autonomous Innovation Hub</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize technology through autonomous innovation and AI-powered solutions." />
-        <meta property="og:title" content="About Zion Tech Group" />
-        <meta property="og:description" content="Learn about Zion Tech Group's mission and vision." />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://ziontechgroup.com/about" />
+        <meta name=&quot;description&quot; content=&quot;Learn about Zion Tech Group's mission to revolutionize technology through autonomous innovation and AI-powered solutions.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;About Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Learn about Zion Tech Group's mission and vision.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/about&quot; />
       </Head>
 
-      <section className="relative section-padding bg-gradient-cursor overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />
-        <div className="absolute inset-0 bg-grid opacity-10" />
-        <div className="relative z-10 container-cursor text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
+      <section className=&quot;relative section-padding bg-gradient-cursor overflow-hidden&quot;>
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]&quot; />
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]&quot; />
+        <div className=&quot;absolute inset-0 bg-grid opacity-10&quot; />
+        <div className=&quot;relative z-10 container-cursor text-center&quot;>
+          <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6&quot;>
+            <span className=&quot;w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse&quot; />
             About Our Company
           </div>
-          <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">
+          <h1 className=&quot;text-responsive-xl font-black mb-8 gradient-text text-shadow-lg&quot;>
             About Zion Tech Group
           </h1>
-          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
+          <p className=&quot;text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed&quot;>
             Pioneering the future of autonomous technology and AI-driven innovation
           </p>
         </div>
       </section>
 
-      <section className="section-padding bg-gradient-cursor-accent">
-        <div className="container-cursor">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
-            <Card className="card-hover group border-gradient-blue hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/20">
-              <h2 className="text-3xl font-bold mb-6 text-cyan-400">Our Mission</h2>
-              <p className="text-lg text-gray-300 mb-4 leading-relaxed">
+      <section className=&quot;section-padding bg-gradient-cursor-accent&quot;>
+        <div className=&quot;container-cursor&quot;>
+          <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20&quot;>
+            <Card className=&quot;card-hover group border-gradient-blue hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/20&quot;>
+              <h2 className=&quot;text-3xl font-bold mb-6 text-cyan-400&quot;>Our Mission</h2>
+              <p className=&quot;text-lg text-gray-300 mb-4 leading-relaxed&quot;>
                 To create a world where technology operates autonomously, continuously improving and innovating without human intervention.
               </p>
-              <p className="text-gray-400 leading-relaxed">
+              <p className=&quot;text-gray-400 leading-relaxed&quot;>
                 We believe in the power of AI to solve complex problems, automate routine tasks, and unlock new possibilities for humanity.
               </p>
             </Card>
-            <Card className="card-hover group border-gradient-purple hover:border-fuchsia-400/40 hover:shadow-2xl hover:shadow-fuchsia-400/20">
-              <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Our Vision</h2>
-              <p className="text-lg text-gray-300 mb-4 leading-relaxed">
+            <Card className=&quot;card-hover group border-gradient-purple hover:border-fuchsia-400/40 hover:shadow-2xl hover:shadow-fuchsia-400/20&quot;>
+              <h2 className=&quot;text-3xl font-bold mb-6 text-fuchsia-400&quot;>Our Vision</h2>
+              <p className=&quot;text-lg text-gray-300 mb-4 leading-relaxed&quot;>
                 To be the leading force in autonomous technology, creating systems that think, learn, and evolve independently.
               </p>
-              <p className="text-gray-400 leading-relaxed">
+              <p className=&quot;text-gray-400 leading-relaxed&quot;>
                 We envision a future where AI and automation work seamlessly together to enhance human capabilities and drive progress.
               </p>
             </Card>
@@ -204,50 +212,50 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-gradient-cursor">
-        <div className="container-cursor">
-          <div className="text-center mb-20">
-            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">Our Core Values</h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+      <section className=&quot;section-padding bg-gradient-cursor&quot;>
+        <div className=&quot;container-cursor&quot;>
+          <div className=&quot;text-center mb-20&quot;>
+            <h2 className=&quot;text-responsive-lg font-bold mb-8 gradient-text text-shadow&quot;>Our Core Values</h2>
+            <p className=&quot;text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed&quot;>
               The principles that guide our innovation and shape our future
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>
             {values.map((value, index) => (
-              <Card key={index} className="card-hover text-center group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="relative">
+              <Card key={index} className=&quot;card-hover text-center group border-gradient-blue&quot; style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className=&quot;relative&quot;>
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${value.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                     {value.icon}
                   </div>
                 </div>
                 <h3 className={`text-2xl font-bold mb-4 ${value.color}`}>{value.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{value.description}</p>
+                <p className=&quot;text-gray-400 leading-relaxed&quot;>{value.description}</p>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-gradient-cursor-blue">
-        <div className="container-cursor">
-          <div className="text-center mb-20">
-            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">What We Do</h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+      <section className=&quot;section-padding bg-gradient-cursor-blue&quot;>
+        <div className=&quot;container-cursor&quot;>
+          <div className=&quot;text-center mb-20&quot;>
+            <h2 className=&quot;text-responsive-lg font-bold mb-8 gradient-text text-shadow&quot;>What We Do</h2>
+            <p className=&quot;text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed&quot;>
               Comprehensive solutions that drive innovation and transformation
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12&quot;>
             {services.map((service, index) => (
-              <Card key={index} className="card-hover group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="flex items-start space-x-6">
-                  <div className="relative">
+              <Card key={index} className=&quot;card-hover group border-gradient-blue&quot; style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className=&quot;flex items-start space-x-6&quot;>
+                  <div className=&quot;relative&quot;>
                     <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${service.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                       {service.icon}
                     </div>
                   </div>
-                  <div className="flex-1">
+                  <div className=&quot;flex-1&quot;>
                     <h3 className={`text-2xl font-bold mb-4 ${service.color}`}>{service.title}</h3>
-                    <p className="text-gray-400 leading-relaxed">{service.description}</p>
+                    <p className=&quot;text-gray-400 leading-relaxed&quot;>{service.description}</p>
                   </div>
                 </div>
               </Card>
@@ -256,70 +264,78 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-gradient-cursor">
-        <div className="container-cursor">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className=&quot;section-padding bg-gradient-cursor&quot;>
+        <div className=&quot;container-cursor&quot;>
+          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8&quot;>
             {achievements.map((achievement, index) => (
-              <div key={index} className="text-center group">
+              <div key={index} className=&quot;text-center group&quot;>
                 <div className={`text-4xl md:text-5xl font-bold mb-3 ${achievement.color} group-hover:scale-110 transition-transform duration-300`}>{achievement.number}</div>
-                <div className="text-gray-400 text-sm md:text-base font-medium">{achievement.label}</div>
+                <div className=&quot;text-gray-400 text-sm md:text-base font-medium&quot;>{achievement.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className="section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-dots opacity-10" />
         <div className="container-cursor text-center relative z-10">
           <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">Ready to Join the Future?</h2>
           <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+=======
+      <section className=&quot;section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden&quot;>
+        <div className=&quot;absolute inset-0 bg-dots opacity-10&quot; />
+        <div className=&quot;container-cursor text-center relative z-10&quot;>
+          <h2 className=&quot;text-responsive-lg font-bold text-white mb-8 text-shadow-lg&quot;>Ready to Join the Future?</h2>
+          <p className=&quot;text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed&quot;>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             Let's work together to build the next generation of autonomous technology and shape the future of innovation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button href="/contact" size="lg" className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow">Get in Touch</Button>
-            <Button href="/services" variant="outline" size="lg" className="border-white text-white hover:bg:white hover:text-cursor-blue shadow-2xl">Explore Services</Button>
+          <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center&quot;>
+            <Button href=&quot;/contact&quot; size=&quot;lg&quot; className=&quot;bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow&quot;>Get in Touch</Button>
+            <Button href=&quot;/services&quot; variant=&quot;outline&quot; size=&quot;lg&quot; className=&quot;border-white text-white hover:bg:white hover:text-cursor-blue shadow-2xl&quot;>Explore Services</Button>
           </div>
         </div>
 
         {/* Contact Section */}
-        <section className="section-padding bg-gradient-cursor-accent">
-          <div className="container-cursor">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-6 text-white">Ready to Transform Your Business?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+        <section className=&quot;section-padding bg-gradient-cursor-accent&quot;>
+          <div className=&quot;container-cursor&quot;>
+            <div className=&quot;text-center mb-16&quot;>
+              <h2 className=&quot;text-4xl font-bold mb-6 text-white&quot;>Ready to Transform Your Business?</h2>
+              <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
                 Get in touch with our experts today for a free consultation and discover how our 500+ revolutionary micro SaaS services can drive unprecedented growth
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <Card className="text-center p-8 bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-500/30">
-                <div className="text-4xl mb-4">📞</div>
-                <h3 className="text-2xl font-bold text-white mb-2">Call Us</h3>
-                <p className="text-blue-400 font-semibold text-lg">{contactInfo.mobile}</p>
-                <p className="text-gray-400 text-sm mt-2">Available 24/7 for urgent inquiries</p>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 mb-12&quot;>
+              <Card className=&quot;text-center p-8 bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-500/30&quot;>
+                <div className=&quot;text-4xl mb-4&quot;>📞</div>
+                <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>Call Us</h3>
+                <p className=&quot;text-blue-400 font-semibold text-lg&quot;>{contactInfo.mobile}</p>
+                <p className=&quot;text-gray-400 text-sm mt-2&quot;>Available 24/7 for urgent inquiries</p>
               </Card>
               
-              <Card className="text-center p-8 bg-gradient-to-br from-green-500/20 to-green-600/20 border border-green-500/30">
-                <div className="text-4xl mb-4">✉️</div>
-                <h3 className="text-2xl font-bold text-white mb-2">Email Us</h3>
-                <p className="text-green-400 font-semibold text-lg">{contactInfo.email}</p>
-                <p className="text-gray-400 text-sm mt-2">Response within 2 hours guaranteed</p>
+              <Card className=&quot;text-center p-8 bg-gradient-to-br from-green-500/20 to-green-600/20 border border-green-500/30&quot;>
+                <div className=&quot;text-4xl mb-4&quot;>✉️</div>
+                <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>Email Us</h3>
+                <p className=&quot;text-green-400 font-semibold text-lg&quot;>{contactInfo.email}</p>
+                <p className=&quot;text-gray-400 text-sm mt-2&quot;>Response within 2 hours guaranteed</p>
               </Card>
               
-              <Card className="text-center p-8 bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/30">
-                <div className="text-4xl mb-4">📍</div>
-                <h3 className="text-2xl font-bold text-white mb-2">Visit Us</h3>
-                <p className="text-purple-400 font-semibold text-sm">{contactInfo.address}</p>
-                <p className="text-gray-400 text-sm mt-2">Global headquarters and innovation center</p>
+              <Card className=&quot;text-center p-8 bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/30&quot;>
+                <div className=&quot;text-4xl mb-4&quot;>📍</div>
+                <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>Visit Us</h3>
+                <p className=&quot;text-purple-400 font-semibold text-sm&quot;>{contactInfo.address}</p>
+                <p className=&quot;text-gray-400 text-sm mt-2&quot;>Global headquarters and innovation center</p>
               </Card>
             </div>
 
-            <div className="text-center">
-              <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-semibold text-lg mb-6">
+            <div className=&quot;text-center&quot;>
+              <div className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-semibold text-lg mb-6&quot;>
                 🌐 Visit our website: {contactInfo.website}
               </div>
-              <p className="text-gray-400 text-lg">
+              <p className=&quot;text-gray-400 text-lg&quot;>
                 Start your 21-day free trial today and experience the future of technology
               </p>
             </div>

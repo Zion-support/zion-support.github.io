@@ -45,7 +45,7 @@ class UltimateAutomationFactory {,
   log(message, type = 'info') {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`,
-    console.log(logMessage),
+    // console.log(logMessage),
 ,
     const logFile = path.join(this.logsDir, 'ultimate-automation.log'),
     fs.appendFileSync(logFile, logMessage + '\n')
@@ -131,7 +131,12 @@ class UltimateAutomationFactory {,
 if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
   const factory = new UltimateAutomationFactory(),
   factory.start().then(report => {,
+<<<<<<< HEAD
     console.log('Ultimate Automation Factory: completed:', report.summary),
+=======
+    // console.log('Ultimate Automation Factory completed:', report.summary),
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     process.exit(0)
   }).catch(error => {,
     console.error('Ultimate Automation Factory: failed:', error),

@@ -1,6 +1,12 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import type { UserProfile } from "@/types/auth",
+=======
+import React, { useState } from &quot;react&quot;;
+import type { UserProfile } from &quot;@/types/auth&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 /**
  * Custom hook to manage auth state
  */

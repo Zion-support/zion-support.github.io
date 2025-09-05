@@ -96,10 +96,17 @@ export function useMessages(
     } catch (error) {
       console.error('Error sending message:', error),
       toast({
+<<<<<<< HEAD
         title: "Failed to send message",
         description: "Please try again later",
         variant: "destructive"
       })
+=======
+        title: &quot;Failed to send message&quot;,
+        description: &quot;Please try again later&quot;,
+        variant: &quot;destructive&quot;
+      });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 

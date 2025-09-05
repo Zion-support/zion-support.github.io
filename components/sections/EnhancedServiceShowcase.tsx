@@ -144,15 +144,15 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   ],
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;>
+      <div className=&quot;max-w-7xl mx-auto&quot;>
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className=&quot;text-center mb-16&quot;>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6"
+            className=&quot;text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6&quot;
           >
             {title}
           </motion.h2>
@@ -160,7 +160,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+            className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;
           >
             {subtitle}
           </motion.p>
@@ -170,15 +170,15 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+            className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto&quot;
           >
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className=&quot;text-center&quot;>
                 <div className={`${stat.color} mb-2 flex justify-center`}>
-                  <stat.icon className="w-8 h-8" />
+                  <stat.icon className=&quot;w-8 h-8&quot; />
                 </div>
-                <div className="text-2xl font-bold text-white">{stat.value}</div>
-                <div className="text-sm text-gray-400">{stat.label}</div>
+                <div className=&quot;text-2xl font-bold text-white&quot;>{stat.value}</div>
+                <div className=&quot;text-sm text-gray-400&quot;>{stat.label}</div>
               </div>
             ))}
           </motion.div>
@@ -190,17 +190,17 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mb-12"
+            className=&quot;mb-12&quot;
           >
-            <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className=&quot;bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50&quot;>
+              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
                 {/* Category Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-3">Category</label>
+                  <label className=&quot;block text-sm font-medium text-gray-300 mb-3&quot;>Category</label>
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className=&quot;w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent&quot;
                   >
                     {categories.map((category) => (
                       <option key={category.id} value={category.id}>
@@ -212,11 +212,11 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
                 {/* Price Range Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-3">Price Range</label>
+                  <label className=&quot;block text-sm font-medium text-gray-300 mb-3&quot;>Price Range</label>
                   <select
                     value={selectedPriceRange}
                     onChange={(e) => setSelectedPriceRange(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className=&quot;w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent&quot;
                   >
                     {priceRanges.map((range) => (
                       <option key={range.id} value={range.id}>
@@ -228,11 +228,11 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
                 {/* Sort Options */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-3">Sort By</label>
+                  <label className=&quot;block text-sm font-medium text-gray-300 mb-3&quot;>Sort By</label>
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className=&quot;w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent&quot;
                   >
                     {sortOptions.map((option) => (
                       <option key={option.id} value={option.id}>
@@ -251,7 +251,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
         >
           <AnimatePresence>
             {filteredServices.map((service, index) => (
@@ -261,43 +261,43 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -5, scale: 1.02 }}
-                className="group"
+                className=&quot;group&quot;
               >
-                <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full">
+                <div className=&quot;relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full&quot;>
                   {/* Popular Badge */}
                   {service.popular && (
-                    <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    <div className=&quot;absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full&quot;>
                       ⭐ Most Popular
                     </div>
                   )}
 
                   {/* Header */}
-                  <div className="mb-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="text-3xl">{service.icon}</div>
-                      <div className="text-right">
-                        <div className="text-2xl font-bold text-white">{service.price}</div>
-                        <div className="text-sm text-gray-400">{service.period}</div>
+                  <div className=&quot;mb-6&quot;>
+                    <div className=&quot;flex items-center justify-between mb-4&quot;>
+                      <div className=&quot;text-3xl&quot;>{service.icon}</div>
+                      <div className=&quot;text-right&quot;>
+                        <div className=&quot;text-2xl font-bold text-white&quot;>{service.price}</div>
+                        <div className=&quot;text-sm text-gray-400&quot;>{service.period}</div>
                       </div>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                    <h3 className=&quot;text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors&quot;>
                       {service.name}
                     </h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">
+                    <p className=&quot;text-gray-300 text-sm leading-relaxed&quot;>
                       {service.tagline}
                     </p>
                   </div>
 
                   {/* Features */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
-                      <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
+                  <div className=&quot;mb-6&quot;>
+                    <h4 className=&quot;text-sm font-semibold text-gray-300 mb-3 flex items-center&quot;>
+                      <CheckCircle className=&quot;w-4 h-4 mr-2 text-green-400&quot; />
                       Key Features
                     </h4>
-                    <ul className="space-y-2">
+                    <ul className=&quot;space-y-2&quot;>
                       {service.features.slice(0, 4).map((feature, idx) => (
-                        <li key={idx} className="text-sm text-gray-400 flex items-start">
-                          <span className="text-cyan-400 mr-2">•</span>
+                        <li key={idx} className=&quot;text-sm text-gray-400 flex items-start&quot;>
+                          <span className=&quot;text-cyan-400 mr-2&quot;>•</span>
                           {feature}
                         </li>
                       ))}
@@ -305,56 +305,56 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   </div>
 
                   {/* Stats */}
-                  <div className="grid grid-cols-3 gap-4 mb-6 text-center">
+                  <div className=&quot;grid grid-cols-3 gap-4 mb-6 text-center&quot;>
                     <div>
-                      <div className="text-lg font-bold text-white">{service.rating}</div>
-                      <div className="text-xs text-gray-400">Rating</div>
+                      <div className=&quot;text-lg font-bold text-white&quot;>{service.rating}</div>
+                      <div className=&quot;text-xs text-gray-400&quot;>Rating</div>
                     </div>
                     <div>
-                      <div className="text-lg font-bold text-white">{service.customers?.toLocaleString() || '0'}</div>
-                      <div className="text-xs text-gray-400">Customers</div>
+                      <div className=&quot;text-lg font-bold text-white&quot;>{service.customers?.toLocaleString() || '0'}</div>
+                      <div className=&quot;text-xs text-gray-400&quot;>Customers</div>
                     </div>
                     <div>
-                      <div className="text-lg font-bold text-white">{service.trialDays}</div>
-                      <div className="text-xs text-gray-400">Trial Days</div>
+                      <div className=&quot;text-lg font-bold text-white&quot;>{service.trialDays}</div>
+                      <div className=&quot;text-xs text-gray-400&quot;>Trial Days</div>
                     </div>
                   </div>
 
                   {/* ROI Highlight */}
-                  <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">
-                    <div className="text-sm text-green-400 font-semibold mb-1">🚀 ROI Promise</div>
-                    <div className="text-xs text-gray-300 leading-relaxed">
+                  <div className=&quot;mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20&quot;>
+                    <div className=&quot;text-sm text-green-400 font-semibold mb-1&quot;>🚀 ROI Promise</div>
+                    <div className=&quot;text-xs text-gray-300 leading-relaxed&quot;>
                       {service.roi}
                     </div>
                   </div>
 
                   {/* Market Position */}
-                  <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">
-                    <div className="text-sm text-cyan-400 font-semibold mb-2">📊 Market Position</div>
-                    <div className="text-xs text-gray-300 leading-relaxed">
+                  <div className=&quot;mb-6 p-4 bg-gray-800/30 rounded-lg&quot;>
+                    <div className=&quot;text-sm text-cyan-400 font-semibold mb-2&quot;>📊 Market Position</div>
+                    <div className=&quot;text-xs text-gray-300 leading-relaxed&quot;>
                       {service.marketPosition}
                     </div>
                   </div>
 
                   {/* CTA */}
-                  <div className="mt-auto">
+                  <div className=&quot;mt-auto&quot;>
                     <Button
                       href={service.link}
-                      variant="primary"
-                      className="w-full group-hover:bg-cyan-500 transition-colors"
+                      variant=&quot;primary&quot;
+                      className=&quot;w-full group-hover:bg-cyan-500 transition-colors&quot;
                     >
                       Get Started
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className=&quot;ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform&quot; />
                     </Button>
                   </div>
 
                   {/* Contact Info */}
-                  <div className="mt-4 text-center">
-                    <div className="text-xs text-gray-500">
-                      Contact: <span className="text-cyan-400">{service.contactInfo.mobile}</span>
+                  <div className=&quot;mt-4 text-center&quot;>
+                    <div className=&quot;text-xs text-gray-500&quot;>
+                      Contact: <span className=&quot;text-cyan-400&quot;>{service.contactInfo.mobile}</span>
                     </div>
-                    <div className="text-xs text-gray-500">
-                      Email: <span className="text-cyan-400">{service.contactInfo.email}</span>
+                    <div className=&quot;text-xs text-gray-500&quot;>
+                      Email: <span className=&quot;text-cyan-400&quot;>{service.contactInfo.email}</span>
                     </div>
                   </div>
                 </div>
@@ -368,30 +368,35 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
-          className="text-center mt-16"
+          className=&quot;text-center mt-16&quot;
         >
-          <div className="bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">
-            <h3 className="text-2xl font-bold text-white mb-4">
+          <div className=&quot;bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20&quot;>
+            <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>
               Ready to Transform Your Business?
             </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className=&quot;text-gray-300 mb-6 max-w-2xl mx-auto&quot;>
               Join thousands of companies already achieving breakthrough results with our cutting-edge AI, quantum, and blockchain solutions. 
               Get started today and see the future of business technology.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary" className="text-lg px-8 py-4">
+=======
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <Button href=&quot;/contact&quot; variant=&quot;primary&quot; className=&quot;text-lg px-8 py-4&quot;>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 Schedule a Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className=&quot;ml-2 w-5 h-5&quot; />
               </Button>
-              <Button href="/pricing" variant="secondary" className="text-lg px-8 py-4">
+              <Button href=&quot;/pricing&quot; variant=&quot;secondary&quot; className=&quot;text-lg px-8 py-4&quot;>
                 View Pricing Plans
-                <DollarSign className="ml-2 w-5 h-5" />
+                <DollarSign className=&quot;ml-2 w-5 h-5&quot; />
               </Button>
             </div>
-            <div className="mt-6 text-sm text-gray-400">
-              <p>📞 Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>
-              <p>📧 Email: <span className="text-cyan-400">kleber@ziontechgroup.com</span></p>
-              <p>🌐 Visit: <span className="text-cyan-400">https://ziontechgroup.com</span></p>
+            <div className=&quot;mt-6 text-sm text-gray-400&quot;>
+              <p>📞 Call us: <span className=&quot;text-cyan-400&quot;>+1 302 464 0950</span></p>
+              <p>📧 Email: <span className=&quot;text-cyan-400&quot;>kleber@ziontechgroup.com</span></p>
+              <p>🌐 Visit: <span className=&quot;text-cyan-400&quot;>https://ziontechgroup.com</span></p>
             </div>
           </div>
         </motion.div>

@@ -20,10 +20,10 @@ export function CartDrawer() {
 
   return (
     <>
-      <Link href="/cart" aria-label="Cart" className="relative p-1" onClick={handleClick}>
-        <ShoppingCart className="h-5 w-5 text-foreground hover:text-primary" />
+      <Link href=&quot;/cart&quot; aria-label=&quot;Cart&quot; className=&quot;relative p-1&quot; onClick={handleClick}>
+        <ShoppingCart className=&quot;h-5 w-5 text-foreground hover:text-primary&quot; />
         {count > 0 && (
-          <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
+          <span className=&quot;absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center&quot;>
             {count}
           </span>
         )}

@@ -1,10 +1,19 @@
 
+<<<<<<< HEAD
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
 import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",
 import { useContractTemplates } from "@/hooks/useContractTemplates",
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
+=======
+import { ContractTemplate } from &quot;@/types/contracts&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Loader2, Edit, Trash, Star, StarOff } from &quot;lucide-react&quot;;
+import { useContractTemplates } from &quot;@/hooks/useContractTemplates&quot;;
+import { Card, CardContent } from &quot;@/components/ui/card&quot;;
+import { Separator } from &quot;@/components/ui/separator&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 import {
   AlertDialog,
   AlertDialogAction,
@@ -13,8 +22,14 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
+<<<<<<< HEAD
   AlertDialogTitle} from "@/components/ui/alert-dialog",
 import { useState } from "react",
+=======
+  AlertDialogTitle} from &quot;@/components/ui/alert-dialog&quot;;
+import { useState } from &quot;react&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
@@ -48,25 +63,25 @@ export function TemplateList({
 
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center py-8">
-        <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
+      <div className=&quot;flex justify-center items-center py-8&quot;>
+        <Loader2 className=&quot;h-8 w-8 animate-spin text-zion-purple&quot; />
       </div>
     )
   }
 
   if (!templates.length) {
     return (
-      <div className="text-center py-8">
-        <p className="text-muted-foreground">No templates found.</p>
-        <p className="text-sm text-muted-foreground">Save a contract as a template to reuse it later.</p>
+      <div className=&quot;text-center py-8&quot;>
+        <p className=&quot;text-muted-foreground&quot;>No templates found.</p>
+        <p className=&quot;text-sm text-muted-foreground&quot;>Save a contract as a template to reuse it later.</p>
       </div>
     )
   }
 
   return (
-    <div className="space-y-3">
+    <div className=&quot;space-y-3&quot;>
       {templates.map((template) => (
-        <Card key={template.id} className={template.is_default ? "border-zion-purple" : ""}>
+        <Card key={template.id} className={template.is_default ? &quot;border-zion-purple&quot; : ""}>
           <CardContent className="p-4">
             <div className="flex items-center justify-between">
               <div className="space-y-1">
@@ -81,30 +96,30 @@ export function TemplateList({
                 </p>
               </div>
               
-              <div className="flex items-center gap-2">
-                <Button variant="ghost" size="icon" onClick={() => onEdit(template)}>
-                  <Edit className="h-4 w-4" />
+              <div className="flex items-center gap-2&quot;>
+                <Button variant=&quot;ghost&quot; size=&quot;icon" onClick={() => onEdit(template)}>
+                  <Edit className="h-4 w-4&quot; />
                 </Button>
                 {!template.is_default ? (
-                  <Button variant="ghost" size="icon" onClick={() => handleSetDefault(template.id)}>
-                    <Star className="h-4 w-4" />
+                  <Button variant=&quot;ghost&quot; size=&quot;icon" onClick={() => handleSetDefault(template.id)}>
+                    <Star className="h-4 w-4&quot; />
                   </Button>
                 ) : (
-                  <Button variant="ghost" size="icon" disabled>
-                    <StarOff className="h-4 w-4" />
+                  <Button variant=&quot;ghost&quot; size=&quot;icon" disabled>
+                    <StarOff className="h-4 w-4&quot; />
                   </Button>
                 )}
-                <Button variant="ghost" size="icon" onClick={() => handleDeleteClick(template.id)}>
+                <Button variant=&quot;ghost&quot; size=&quot;icon" onClick={() => handleDeleteClick(template.id)}>
                   <Trash className="h-4 w-4 text-destructive" />
                 </Button>
               </div>
             </div>
             
-            <Separator className="my-3" />
+            <Separator className="my-3&quot; />
             
             <Button 
               onClick={() => onSelect(template)} 
-              variant="outline" 
+              variant=&quot;outline" 
               className="w-full"
             >
               Use This Template

@@ -88,21 +88,21 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
 
   return (
     <div
-      className="relative w-full"
+      className=&quot;relative w-full&quot;
       ref={containerRef}
-      role="combobox"
+      role=&quot;combobox&quot;
       aria-expanded={focused && suggestions.length > 0}
-      aria-haspopup="listbox"
+      aria-haspopup=&quot;listbox&quot;
       aria-controls={listId}
-      data-testid="search-bar"
+      data-testid=&quot;search-bar&quot;
     >
-      <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate" />
+      <div className=&quot;relative&quot;>
+        <Search className=&quot;absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate&quot; />
         <Input
           ref={inputRef}
-          type="text"
-          id="main-search-input"
-          name="search"
+          type=&quot;text&quot;
+          id=&quot;main-search-input&quot;
+          name=&quot;search&quot;
           value={value}
           onChange={(e) => onChange(e.target.value)}
           onFocus={(e) => {
@@ -118,10 +118,10 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
               setHighlightedIndex(-1)
             }
           }}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
-          aria-autocomplete="list"
+          className=&quot;pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate&quot;
+          aria-autocomplete=&quot;list&quot;
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-          autoComplete="search"
+          autoComplete=&quot;search&quot;
           onKeyDown={(e) => {
             if (!focused || suggestions.length === 0) {
               if (e.key === 'Escape') {
@@ -176,11 +176,11 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
         />
         {value && (
           <button
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white"
+            className=&quot;absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white&quot;
             onClick={() => onChange('')}
-            aria-label="Clear search"
+            aria-label=&quot;Clear search&quot;
           >
-            <X className="h-4 w-4" />
+            <X className=&quot;h-4 w-4&quot; />
           </button>
         )}
       </div>

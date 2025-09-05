@@ -25,8 +25,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!course) return res.status(404).json({ error: 'Course not found' }),
     if (!user) return res.status(404).json({ error: 'User not found' }),
 
+<<<<<<< HEAD
     res.setHeader('Content-Typeapplication/pdf'),
     res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`),
+=======
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader('Content-Disposition', `attachment; filename=&quot;${courseId}-certificate.pdf&quot;`);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
     const doc = new PDFDocument({ size: 'A4', margin: 50 }),
     // Pipe to response

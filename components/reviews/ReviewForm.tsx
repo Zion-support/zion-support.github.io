@@ -61,16 +61,16 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
       <div>
-        <label className="block text-sm font-medium mb-2">Overall Rating</label>
+        <label className=&quot;block text-sm font-medium mb-2&quot;>Overall Rating</label>
         <StarRating value={rating} onChange={setRating} />
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-2">Your Review</label>
+        <label className=&quot;block text-sm font-medium mb-2&quot;>Your Review</label>
         <textarea
-          className="w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className=&quot;w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
           rows={5}
           value={text}
           onChange={(e) => setText(e.target.value)}
@@ -78,51 +78,51 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
         />
       </div>
 
-      <div className="flex items-center gap-3">
-        <input id="anonymous" type="checkbox" checked={anonymous} onChange={(e) => setAnonymous(e.target.checked)} />
-        <label htmlFor="anonymous">Submit anonymously</label>
+      <div className=&quot;flex items-center gap-3&quot;>
+        <input id=&quot;anonymous&quot; type=&quot;checkbox&quot; checked={anonymous} onChange={(e) => setAnonymous(e.target.checked)} />
+        <label htmlFor=&quot;anonymous&quot;>Submit anonymously</label>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-4">
-        <div className="enhanced-card">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm">Communication</span>
+      <div className=&quot;grid md:grid-cols-2 gap-4&quot;>
+        <div className=&quot;enhanced-card&quot;>
+          <div className=&quot;flex items-center justify-between mb-2&quot;>
+            <span className=&quot;text-sm&quot;>Communication</span>
             <StarRating value={communication || 0} onChange={(v) => setCommunication(v)} />
           </div>
-          <span className="pill">Optional</span>
+          <span className=&quot;pill&quot;>Optional</span>
         </div>
-        <div className="enhanced-card">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm">Quality of Work</span>
+        <div className=&quot;enhanced-card&quot;>
+          <div className=&quot;flex items-center justify-between mb-2&quot;>
+            <span className=&quot;text-sm&quot;>Quality of Work</span>
             <StarRating value={qualityOfWork || 0} onChange={(v) => setQualityOfWork(v)} />
           </div>
-          <span className="pill">Optional</span>
+          <span className=&quot;pill&quot;>Optional</span>
         </div>
-        <div className="enhanced-card">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm">Timeliness</span>
+        <div className=&quot;enhanced-card&quot;>
+          <div className=&quot;flex items-center justify-between mb-2&quot;>
+            <span className=&quot;text-sm&quot;>Timeliness</span>
             <StarRating value={timeliness || 0} onChange={(v) => setTimeliness(v)} />
           </div>
-          <span className="pill">Optional</span>
+          <span className=&quot;pill&quot;>Optional</span>
         </div>
-        <div className="enhanced-card">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm">Would Work With Again</span>
-            <input type="checkbox" checked={wouldWorkWithAgain} onChange={(e) => setWouldWorkWithAgain(e.target.checked)} />
+        <div className=&quot;enhanced-card&quot;>
+          <div className=&quot;flex items-center justify-between mb-2&quot;>
+            <span className=&quot;text-sm&quot;>Would Work With Again</span>
+            <input type=&quot;checkbox&quot; checked={wouldWorkWithAgain} onChange={(e) => setWouldWorkWithAgain(e.target.checked)} />
           </div>
-          <span className="pill">Optional</span>
+          <span className=&quot;pill&quot;>Optional</span>
         </div>
       </div>
 
       <button
-        type="submit"
-        className="enhanced-button enhanced-button-primary"
+        type=&quot;submit&quot;
+        className=&quot;enhanced-button enhanced-button-primary&quot;
         disabled={submitting}
       >
         {submitting ? 'Submitting...' : 'Submit Review'}
       </button>
 
-      {message && <p className="text-sm">{message}</p>}
+      {message && <p className=&quot;text-sm&quot;>{message}</p>}
     </form>
   )
 },

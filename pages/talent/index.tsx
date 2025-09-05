@@ -30,25 +30,25 @@ const TalentDirectory: NextPage = () => {
   }, [page]),
 
   return (
-    <div className="space-y-6 pb-16">
+    <div className=&quot;space-y-6 pb-16&quot;>
       <Head>
         <title>Talent - Zion</title>
       </Head>
 
-      <h1 className="text-2xl font-semibold">Explore Talent</h1>
+      <h1 className=&quot;text-2xl font-semibold&quot;>Explore Talent</h1>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className=&quot;grid sm:grid-cols-2 lg:grid-cols-3 gap-4&quot;>
         {pageItems.map((t) => (
-          <article key={t.id} className="border rounded-md p-4 space-y-2">
-            <div className="flex items-center justify-between">
-              <h3 className="font-semibold">{t.name}</h3>
-              <div className="flex gap-1">
+          <article key={t.id} className=&quot;border rounded-md p-4 space-y-2&quot;>
+            <div className=&quot;flex items-center justify-between&quot;>
+              <h3 className=&quot;font-semibold&quot;>{t.name}</h3>
+              <div className=&quot;flex gap-1&quot;>
                 {t.badges.map((b) => (
                   <TrustBadge key={b} type={b} />
                 ))}
               </div>
             </div>
-            <div className="text-sm opacity-80">{t.title}</div>
+            <div className=&quot;text-sm opacity-80&quot;>{t.title}</div>
             {t.testimonial && (
               <MicroTestimonial quote={t.testimonial.quote} author={t.testimonial.author} />
             )}

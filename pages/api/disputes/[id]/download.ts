@@ -21,10 +21,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const att = dispute.attachments.find(a => a.fileName === fileName),
   if (!att) return res.status(404).json({ error: 'Attachment not found' }),
 
+<<<<<<< HEAD
   const stat = fs.statSync(att.path),
   res.setHeader('Content-Type', att.mimeType),
   res.setHeader('Content-Length', String(stat.size)),
   res.setHeader('Content-Disposition', `attachment, filename="${path.basename(att.fileName)}"`),
   const stream = fs.createReadStream(att.path),
   stream.pipe(res)
+=======
+  const stat = fs.statSync(att.path);
+  res.setHeader('Content-Type', att.mimeType);
+  res.setHeader('Content-Length', String(stat.size));
+  res.setHeader('Content-Disposition', `attachment; filename=&quot;${path.basename(att.fileName)}&quot;`);
+  const stream = fs.createReadStream(att.path);
+  stream.pipe(res);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 }

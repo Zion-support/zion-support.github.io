@@ -6,13 +6,13 @@ const BusinessIntelligenceChat: NextPage = () => {
     <div>
       <Head>
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
-        <meta name="description" content="BusinessIntelligenceChat service" />
+        <meta name=&quot;description&quot; content=&quot;BusinessIntelligenceChat service&quot; />
       </Head>
       
       <main>
         <h1>BusinessIntelligenceChat</h1>
         <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
+        <a href=&quot;/services&quot;>Back to Services</a>
       </main>
     </div>
   )

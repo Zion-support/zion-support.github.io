@@ -4,13 +4,13 @@ export default function FeatureFlagsAdminPage() {
   const url = process.env.UNLEASH_URL || '',
   return (
     <AdminLayout>
-      <div className="space-y-4">
-        <h1 className="text-2xl font-bold">Feature Flags</h1>
+      <div className=&quot;space-y-4&quot;>
+        <h1 className=&quot;text-2xl font-bold&quot;>Feature Flags</h1>
         <p>
           Manage flags in the{' '}
-          <a href={url} className="text-blue-600 underline">
+          <a href={url} className=&quot;text-blue-600 underline&quot;>
             Unleash admin UI
-          </a>
+          </Link>
           .
         </p>
       </div>

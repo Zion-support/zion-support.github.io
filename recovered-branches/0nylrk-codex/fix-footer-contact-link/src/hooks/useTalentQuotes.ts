@@ -48,15 +48,24 @@ export const useTalentQuotes = () => {
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService.updateStatus(id, status),
     onSuccess: (_, variables) => {
+<<<<<<< HEAD
       let message = "Status updated",
       if (variables.status === 'in_review') {
         message = "Quote marked as viewed"
       } else if (variables.status === 'responded') {
         message = "Quote marked as responded"
+=======
+      let message = &quot;Status updated&quot;;
+      if (variables.status === 'in_review') {
+        message = &quot;Quote marked as viewed&quot;;
+      } else if (variables.status === 'responded') {
+        message = &quot;Quote marked as responded&quot;;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
       
       toast({
         title: message,
+<<<<<<< HEAD
         description: "The quote request status has been updated"
       }),
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
@@ -67,6 +76,18 @@ export const useTalentQuotes = () => {
         description: "Failed to update status: " + error.message,
         variant: "destructive"
       })
+=======
+        description: &quot;The quote request status has been updated&quot;
+      });
+      queryClient.invalidateQueries({ queryKey: ['quotes', 'talent', talentId] });
+    },
+    onError: (error: Error) => {
+      toast({
+        title: &quot;Error&quot;,
+        description: &quot;Failed to update status: &quot; + error.message,
+        variant: &quot;destructive&quot;
+      });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   }),
 
@@ -76,8 +97,9 @@ export const useTalentQuotes = () => {
       quoteRequestService.toggleArchive(id, isArchived),
     onSuccess: (_, variables) => {
       toast({
-        title: variables.isArchived ? "Quote archived" : "Quote unarchived",
+        title: variables.isArchived ? &quot;Quote archived&quot; : &quot;Quote unarchived&quot;,
         description: variables.isArchived 
+<<<<<<< HEAD
           ? "The quote request has been archived" 
           : "The quote request has been moved back to active quotes"
       }),
@@ -89,6 +111,19 @@ export const useTalentQuotes = () => {
         description: "Failed to update quote: " + error.message,
         variant: "destructive"
       })
+=======
+          ? &quot;The quote request has been archived&quot; 
+          : &quot;The quote request has been moved back to active quotes&quot;
+      });
+      queryClient.invalidateQueries({ queryKey: ['quotes', 'talent', talentId] });
+    },
+    onError: (error: Error) => {
+      toast({
+        title: &quot;Error&quot;,
+        description: &quot;Failed to update quote: &quot; + error.message,
+        variant: &quot;destructive&quot;
+      });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   }),
 

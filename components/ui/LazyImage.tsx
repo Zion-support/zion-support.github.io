@@ -67,8 +67,8 @@ export const LazyImage: React.FC<LazyImageProps> = ({
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
           transition={{ duration: 0.5 }}
-          className="w-full h-full object-cover"
-          loading="lazy"
+          className="w-full h-full object-cover&quot;
+          loading=&quot;lazy"
           style={{ width, height }}
         />
       )}

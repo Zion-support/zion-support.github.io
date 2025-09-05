@@ -90,15 +90,24 @@ export function OptimizedImage({
     if (blurDataURL) return blurDataURL,
     
     // Generate a simple gray blur placeholder
+<<<<<<< HEAD
     return `data: image/svg+xml,base64,${Buffer.from(
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
         <defs>
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" style="stop-color:#f3f4f6,stop-opacity:1" />
             <stop offset="100%" style="stop-color:#e5e7eb,stop-opacity:1" />
+=======
+    return `data:image/svg+xml;base64,${Buffer.from(
+      `<svg width=&quot;${width || 400}&quot; height=&quot;${height || 300}&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;>
+        <defs>
+          <linearGradient id=&quot;grad&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;100%&quot; y2=&quot;100%&quot;>
+            <stop offset=&quot;0%&quot; style=&quot;stop-color:#f3f4f6;stop-opacity:1&quot; />
+            <stop offset=&quot;100%&quot; style=&quot;stop-color:#e5e7eb;stop-opacity:1&quot; />
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           </linearGradient>
         </defs>
-        <rect width="100%" height="100%" fill="url(#grad)" />
+        <rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;url(#grad)&quot; />
       </svg>`
     ).toString('base64')}`
   },
@@ -129,33 +138,33 @@ export function OptimizedImage({
 
       {/* Loading placeholder */}
       {(isLoading && isInView) && (
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
+        <div className=&quot;absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse&quot; />
       )}
 
       {/* Error fallback */}
       {hasError && (
-        <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+        <div className=&quot;absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center&quot;>
           {fallbackSrc ? (
             <img
               src={fallbackSrc}
               alt={alt}
-              className="max-w-full max-h-full object-contain"
+              className=&quot;max-w-full max-h-full object-contain&quot;
               onLoad={handleLoad}
             />
           ) : (
-            <div className="text-gray-400 text-center">
+            <div className=&quot;text-gray-400 text-center&quot;>
               <svg
-                className="w-8 h-8 mx-auto mb-2"
-                fill="currentColor"
-                viewBox="0 0 20 20"
+                className=&quot;w-8 h-8 mx-auto mb-2&quot;
+                fill=&quot;currentColor&quot;
+                viewBox=&quot;0 0 20 20&quot;
               >
                 <path
-                  fillRule="evenodd"
-                  d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
-                  clipRule="evenodd"
+                  fillRule=&quot;evenodd&quot;
+                  d=&quot;M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z&quot;
+                  clipRule=&quot;evenodd&quot;
                 />
               </svg>
-              <span className="text-xs">Image not available</span>
+              <span className=&quot;text-xs&quot;>Image not available</span>
             </div>
           )}
         </div>
@@ -163,7 +172,7 @@ export function OptimizedImage({
 
       {/* Lazy loading placeholder */}
       {!isInView && lazy && !priority && (
-        <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800" />
+        <div className=&quot;absolute inset-0 bg-gray-100 dark:bg-gray-800&quot; />
       )}
     </div>
   )

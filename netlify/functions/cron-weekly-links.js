@@ -7,7 +7,11 @@ async function fetchHtml(url) {
 }
 
 function extractLinks(html, base) {
+<<<<<<< HEAD
   const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),
+=======
+  const aTags = [...html.matchAll(/<a[^>]+href=[&quot;']([^&quot;']+)["']/gi)].map((m) => m[1]);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   const links = aTags
     .filter((h) => h && !h.startsWith('mailto:') && !h.startsWith('tel:'))
     .map((h) => (h.startsWith('http') ? h : `${base}${h.startsWith('/') ? h : `/${h}`}`)),

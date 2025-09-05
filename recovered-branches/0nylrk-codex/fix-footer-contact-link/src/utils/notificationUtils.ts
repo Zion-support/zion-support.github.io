@@ -1,6 +1,12 @@
 
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',
+=======
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+
+type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
 /**
  * Creates a notification for a user and optionally sends an email notification
@@ -75,11 +81,19 @@ export async function createHireRequestNotifications({
 }) {
   const projectInfo = projectType 
     ? `${projectType} project` 
+<<<<<<< HEAD
     : "project",
   
   const summaryText = projectSummary 
     ? `: "${projectSummary}"` 
     : "",
+=======
+    : &quot;project&quot;;
+  
+  const summaryText = projectSummary 
+    ? `: &quot;${projectSummary}&quot;` 
+    : "";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Create notification for talent
   const talentNotification = await createNotification({

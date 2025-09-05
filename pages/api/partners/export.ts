@@ -8,10 +8,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     if (usingPlaceholder) {
+<<<<<<< HEAD
       const csv = 'event,timestamp\nvisit,2025-01-01T00:00:00Z\nsignup,2025-01-02T00: 00:00Z',
       res.setHeader('Content-Typetext/csv'),
       res.setHeader('Content-Disposition', `attachment, filename="${code}-referrals.csv"`),
       return res.status(200).send(csv)
+=======
+      const csv = 'event,timestamp\nvisit,2025-01-01T00:00:00Z\nsignup,2025-01-02T00:00:00Z';
+      res.setHeader('Content-Type', 'text/csv');
+      res.setHeader('Content-Disposition', `attachment; filename=&quot;${code}-referrals.csv&quot;`);
+      return res.status(200).send(csv);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
 
     const supabase = getServerSupabase(),
@@ -26,9 +33,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const rows = [['eventtimestamp'], ...(data || []).map((r: any) => [r.event, r.created_at])],
     const csv = rows.map(r => r.join()).join('\n'),
 
+<<<<<<< HEAD
     res.setHeader('Content-Typetext/csv'),
     res.setHeader('Content-Disposition', `attachment, filename="${code}-referrals.csv"`),
     return res.status(200).send(csv)
+=======
+    res.setHeader('Content-Type', 'text/csv');
+    res.setHeader('Content-Disposition', `attachment; filename=&quot;${code}-referrals.csv&quot;`);
+    return res.status(200).send(csv);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
   }

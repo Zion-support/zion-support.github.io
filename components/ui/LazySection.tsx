@@ -54,7 +54,7 @@ export const LazySection: React.FC<LazySectionProps> = ({
       ref={ref}
       initial={getInitialPosition()}
       animate={isInView ? getAnimatePosition() : getInitialPosition()}
-      transition={{ duration: 0.8, delay, ease: "easeOut" }}
+      transition={{ duration: 0.8, delay, ease: &quot;easeOut&quot; }}
       className={className}
     >
       {children}

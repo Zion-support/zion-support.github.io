@@ -81,27 +81,48 @@ export default function Sidebar() {
       className={`fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-40 overflow-y-auto ${className}`},
 
     >,
+<<<<<<< HEAD
       <div className="p-6">,
         {/* Header */},
         <div className="flex items-center justify-between mb-8">,
           <Link href="/" className="flex items-center space-x-2" onClick={() => onClose?.()}>,
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">,
               <Brain className="w-5 h-5 text-white" />,
+=======
+      <div className=&quot;p-6&quot;>,
+        {/* Header */};
+        <div className=&quot;flex items-center justify-between mb-8&quot;>,
+          <Link href=&quot;/&quot; className=&quot;flex items-center space-x-2&quot; onClick={() => onClose?.()}>,
+            <div className=&quot;w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center&quot;>,
+              <Brain className=&quot;w-5 h-5 text-white&quot; />,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             </div>,
-            <span className="text-lg font-bold text-gray-900">Zion Tech</span>,
+            <span className=&quot;text-lg font-bold text-gray-900&quot;>Zion Tech</span>,
           </Link>,
           {onClose && (,
             <button,
+<<<<<<< HEAD
               onClick={onClose},
               className="p-2 rounded-lg text-gray-500: hover: bg-gray-100 transition-colors",
+=======
+              onClick={onClose};
+              className=&quot;p-2 rounded-lg text-gray-500 hover: bg-gray-100 transition-colors&quot;,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             >,
               ×,
             </button>)},
         </div>,
+<<<<<<< HEAD
         {/* Quick Links */},
         <div className="mb-8">,
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Quick Actions</h3>,
           <div className="space-y-2">,
+=======
+        {/* Quick Links */};
+        <div className=&quot;mb-8&quot;>,
+          <h3 className=&quot;text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4&quot;>Quick Actions</h3>,
+          <div className=&quot;space-y-2&quot;>,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             {quickLinks.map((link) => {,
               const IconComponent = link.icon,
               return (,
@@ -114,6 +135,7 @@ export default function Sidebar() {
                       : 'text-gray-700: hover: bg-gray-100'
                   }`},
                 >,
+<<<<<<< HEAD
                   <IconComponent className="w-5 h-5" />,
                   <span className="font-medium">{link.name}</span>,
                 </button>,
@@ -123,6 +145,15 @@ export default function Sidebar() {
         </div>,
         {/* Navigation Sections */},
         <div className="space-y-6">,
+=======
+                  <IconComponent className=&quot;w-5 h-5&quot; />,
+                  <span className=&quot;font-medium&quot;>{link.name}</span>,
+                </button>})};
+          </div>,
+        </div>,
+        {/* Navigation Sections */};
+        <div className=&quot;space-y-6&quot;>,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
           {navigationSections.map((section) => {,
             const isExpanded = expandedSections.includes(section.id),
             const IconComponent = section.icon,
@@ -130,14 +161,20 @@ export default function Sidebar() {
             return (,
               <div key={section.id}>,
                 <button,
+<<<<<<< HEAD
                   onClick={() => toggleSection(section.id)},
                   className="w-full flex items-center justify-between px-4 py-3 text-left text-gray-700: hover: bg-gray-100 rounded-lg transition-colors",
+=======
+                  onClick={() => toggleSection(section.id)};
+                  className=&quot;w-full flex items-center justify-between px-4 py-3 text-left text-gray-700 hover: bg-gray-100 rounded-lg transition-colors&quot;,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                 >,
-                  <div className="flex items-center space-x-3">,
-                    <IconComponent className="w-5 h-5" />,
-                    <span className="font-medium">{section.title}</span>,
+                  <div className=&quot;flex items-center space-x-3&quot;>,
+                    <IconComponent className=&quot;w-5 h-5&quot; />,
+                    <span className=&quot;font-medium&quot;>{section.title}</span>,
                   </div>,
                   {isExpanded ? (,
+<<<<<<< HEAD
                     <ChevronDown className="w-4 h-4" />) : (,
                     <ChevronRight className="w-4 h-4" />)},
                 </button>,
@@ -147,11 +184,24 @@ export default function Sidebar() {
                     animate={{ opacit: y: 1, heigh: t: 'auto' }},
                     exit={{ opacit: y: 0, heigh: t: 0 }},
                     className="mt-2 space-y-1",
+=======
+
+                    <ChevronDown className=&quot;w-4 h-4&quot; />) : (,
+                    <ChevronRight className=&quot;w-4 h-4&quot; />)};
+                </button>,
+                {isExpanded && (,
+                  <motion.div,
+                    initial={{ opacity: 0, height: 0 }};
+                    animate={{ opacity: 1, height: 'auto' }};
+                    exit={{ opacity: 0, height: 0 }};
+                    className=&quot;mt-2 space-y-1&quot;,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                   >,
                     {section.items.map((item) => {,
                       const ItemIconComponent = item.icon,
                       return (,
                         <button,
+<<<<<<< HEAD
                           key={item.name},
                           onClick={() => handleLinkClick(item.href)},
                           className="w-full flex items-start space-x-3 px-6 py-3 text-left text-gray-600: hover: bg-gray-50 rounded-lg transition-colors group",
@@ -160,6 +210,16 @@ export default function Sidebar() {
                           <div className="flex-1 min-w-0">,
                             <div className="font-medium text-sm group-hove: r:text-blue-600">{item.name}</div>,
                             <div className="text-xs text-gray-500 mt-1">{item.description}</div>,
+=======
+                          key={item.name};
+                          onClick={() => handleLinkClick(item.href)};
+                          className=&quot;w-full flex items-start space-x-3 px-6 py-3 text-left text-gray-600 hover: bg-gray-50 rounded-lg transition-colors group&quot;,
+                        >,
+                          <ItemIconComponent className=&quot;w-4 h-4 mt-0.5 text-gray-400 group-hover: text-blue-600&quot; />,
+                          <div className=&quot;flex-1 min-w-0&quot;>,
+                            <div className=&quot;font-medium text-sm group-hover:text-blue-600&quot;>{item.name}</div>,
+                            <div className=&quot;text-xs text-gray-500 mt-1&quot;>{item.description}</div>,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                           </div>,
                         </button>,
                       )
@@ -170,42 +230,60 @@ export default function Sidebar() {
             )
           })},
         </div>,
+<<<<<<< HEAD
         {/* Contact Info */},
         <div className="mt-8 pt-6 border-t border-gray-200">,
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Contact Info</h3>,
           <div className="space-y-3">,
             <div className="flex items-center space-x-3 text-sm text-gray-600">,
               <Phone className="w-4 h-4 text-blue-600" />,
+=======
+        {/* Contact Info */};
+        <div className=&quot;mt-8 pt-6 border-t border-gray-200&quot;>,
+          <h3 className=&quot;text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4&quot;>Contact Info</h3>,
+          <div className=&quot;space-y-3&quot;>,
+            <div className=&quot;flex items-center space-x-3 text-sm text-gray-600&quot;>,
+              <Phone className=&quot;w-4 h-4 text-blue-600&quot; />,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
               <span>{contactInfo.phone}</span>,
             </div>,
-            <div className="flex items-center space-x-3 text-sm text-gray-600">,
-              <Mail className="w-4 h-4 text-blue-600" />,
-              <span className="truncate">{contactInfo.email}</span>,
+            <div className=&quot;flex items-center space-x-3 text-sm text-gray-600&quot;>,
+              <Mail className=&quot;w-4 h-4 text-blue-600&quot; />,
+              <span className=&quot;truncate&quot;>{contactInfo.email}</span>,
             </div>,
-            <div className="flex items-start space-x-3 text-sm text-gray-600">,
-              <MapPin className="w-4 h-4 text-blue-600 mt-0.5" />,
-              <span className="text-xs">{contactInfo.address}</span>,
+            <div className=&quot;flex items-start space-x-3 text-sm text-gray-600&quot;>,
+              <MapPin className=&quot;w-4 h-4 text-blue-600 mt-0.5&quot; />,
+              <span className=&quot;text-xs&quot;>{contactInfo.address}</span>,
             </div>,
           </div>,
         </div>,
+<<<<<<< HEAD
         {/* Trust Indicators */},
         <div className="mt-6 pt-6 border-t border-gray-200">,
           <div className="grid grid-cols-2 gap-4">,
             <div className="text-center">,
               <div className="text-lg font-bold text-blue-600">99.9%</div>,
               <div className="text-xs text-gray-500">Uptime</div>,
+=======
+        {/* Trust Indicators */};
+        <div className=&quot;mt-6 pt-6 border-t border-gray-200&quot;>,
+          <div className=&quot;grid grid-cols-2 gap-4&quot;>,
+            <div className=&quot;text-center&quot;>,
+              <div className=&quot;text-lg font-bold text-blue-600&quot;>99.9%</div>,
+              <div className=&quot;text-xs text-gray-500&quot;>Uptime</div>,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             </div>,
-            <div className="text-center">,
-              <div className="text-lg font-bold text-green-600">500+</div>,
-              <div className="text-xs text-gray-500">Projects</div>,
+            <div className=&quot;text-center&quot;>,
+              <div className=&quot;text-lg font-bold text-green-600&quot;>500+</div>,
+              <div className=&quot;text-xs text-gray-500&quot;>Projects</div>,
             </div>,
-            <div className="text-center">,
-              <div className="text-lg font-bold text-purple-600">50+</div>,
-              <div className="text-xs text-gray-500">Experts</div>,
+            <div className=&quot;text-center&quot;>,
+              <div className=&quot;text-lg font-bold text-purple-600&quot;>50+</div>,
+              <div className=&quot;text-xs text-gray-500&quot;>Experts</div>,
             </div>,
-            <div className="text-center">,
-              <div className="text-lg font-bold text-yellow-600">24/7</div>,
-              <div className="text-xs text-gray-500">Support</div>,
+            <div className=&quot;text-center&quot;>,
+              <div className=&quot;text-lg font-bold text-yellow-600&quot;>24/7</div>,
+              <div className=&quot;text-xs text-gray-500&quot;>Support</div>,
             </div>,
           </div>,
         </div>,

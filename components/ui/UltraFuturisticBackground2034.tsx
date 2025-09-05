@@ -122,17 +122,17 @@ const UltraFuturisticBackground2034: React.FC = () => {
   }, []),
 
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
+    <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
       {/* Canvas Background */}
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
+        className=&quot;absolute inset-0 w-full h-full&quot;
         style={{ background: 'radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)' }}
       />
 
       {/* Animated Grid */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0" style={{
+      <div className=&quot;absolute inset-0 opacity-20&quot;>
+        <div className=&quot;absolute inset-0&quot; style={{
           backgroundImage: `
             linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
@@ -143,7 +143,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
 
       {/* Floating Geometric Shapes */}
       <motion.div
-        className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-full"
+        className=&quot;absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-full&quot;
         animate={{
           rotate: 360,
           scale: [1, 1.2, 1],
@@ -152,12 +152,12 @@ const UltraFuturisticBackground2034: React.FC = () => {
         transition={{
           duration: 20,
           repeat: Infinity,
-          ease: "linear"
+          ease: &quot;linear&quot;
         }}
       />
 
       <motion.div
-        className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 transform rotate-45"
+        className=&quot;absolute top-40 right-32 w-24 h-24 border border-purple-400/30 transform rotate-45&quot;
         animate={{
           rotate: -360,
           scale: [1, 1.3, 1],
@@ -166,12 +166,12 @@ const UltraFuturisticBackground2034: React.FC = () => {
         transition={{
           duration: 25,
           repeat: Infinity,
-          ease: "linear"
+          ease: &quot;linear&quot;
         }}
       />
 
       <motion.div
-        className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 rounded-lg"
+        className=&quot;absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 rounded-lg&quot;
         animate={{
           rotate: 360,
           scale: [1, 1.4, 1],
@@ -180,13 +180,13 @@ const UltraFuturisticBackground2034: React.FC = () => {
         transition={{
           duration: 18,
           repeat: Infinity,
-          ease: "linear"
+          ease: &quot;linear&quot;
         }}
       />
 
       {/* Energy Orbs */}
       <motion.div
-        className="absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm"
+        className=&quot;absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm&quot;
         animate={{
           y: [0, -20, 0],
           scale: [1, 1.2, 1],
@@ -195,12 +195,12 @@ const UltraFuturisticBackground2034: React.FC = () => {
         transition={{
           duration: 4,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: &quot;easeInOut&quot;
         }}
       />
 
       <motion.div
-        className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full blur-sm"
+        className=&quot;absolute bottom-1/3 left-1/3 w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full blur-sm&quot;
         animate={{
           y: [0, 15, 0],
           scale: [1, 1.3, 1],
@@ -209,17 +209,17 @@ const UltraFuturisticBackground2034: React.FC = () => {
         transition={{
           duration: 5,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: &quot;easeInOut&quot;,
           delay: 1
         }}
       />
 
       {/* Quantum Field Lines */}
-      <div className="absolute inset-0">
+      <div className=&quot;absolute inset-0&quot;>
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-px h-32 bg-gradient-to-b from-transparent via-cyan-400/50 to-transparent"
+            className=&quot;absolute w-px h-32 bg-gradient-to-b from-transparent via-cyan-400/50 to-transparent&quot;
             style={{
               left: `${(i + 1) * 12.5}%`,
               top: '20%'
@@ -231,7 +231,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
             transition={{
               duration: 3 + i * 0.5,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: &quot;easeInOut&quot;,
               delay: i * 0.2
             }}
           />
@@ -240,7 +240,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
 
       {/* Holographic Rings */}
       <motion.div
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-400/20 rounded-full"
+        className=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-400/20 rounded-full&quot;
         animate={{
           rotate: 360,
           scale: [1, 1.1, 1],
@@ -249,12 +249,12 @@ const UltraFuturisticBackground2034: React.FC = () => {
         transition={{
           duration: 30,
           repeat: Infinity,
-          ease: "linear"
+          ease: &quot;linear&quot;
         }}
       />
 
       <motion.div
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-purple-400/20 rounded-full"
+        className=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-purple-400/20 rounded-full&quot;
         animate={{
           rotate: -360,
           scale: [1, 1.2, 1],
@@ -263,16 +263,16 @@ const UltraFuturisticBackground2034: React.FC = () => {
         transition={{
           duration: 25,
           repeat: Infinity,
-          ease: "linear"
+          ease: &quot;linear&quot;
         }}
       />
 
       {/* Neural Network Nodes */}
-      <div className="absolute inset-0">
+      <div className=&quot;absolute inset-0&quot;>
         {[...Array(12)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-3 h-3 bg-green-400 rounded-full"
+            className=&quot;absolute w-3 h-3 bg-green-400 rounded-full&quot;
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`
@@ -284,7 +284,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
             transition={{
               duration: 2 + Math.random() * 2,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: &quot;easeInOut&quot;,
               delay: Math.random() * 2
             }}
           />
@@ -292,11 +292,11 @@ const UltraFuturisticBackground2034: React.FC = () => {
       </div>
 
       {/* Data Streams */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className=&quot;absolute inset-0 overflow-hidden&quot;>
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-px h-20 bg-gradient-to-b from-transparent via-blue-400/60 to-transparent"
+            className=&quot;absolute w-px h-20 bg-gradient-to-b from-transparent via-blue-400/60 to-transparent&quot;
             style={{
               left: `${(i + 1) * 16.66}%`,
               top: '-20px'
@@ -308,7 +308,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
             transition={{
               duration: 8 + i * 0.5,
               repeat: Infinity,
-              ease: "linear",
+              ease: &quot;linear&quot;,
               delay: i * 1.5
             }}
           />
@@ -317,7 +317,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
 
       {/* Quantum Entanglement Effect */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full"
+        className=&quot;absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full&quot;
         animate={{
           boxShadow: [
             '0 0 10px rgba(0, 255, 255, 0.5)0 0 30px rgba(0, 255, 255, 0.8)0 0 10px rgba(0, 255, 255, 0.5)'
@@ -326,12 +326,12 @@ const UltraFuturisticBackground2034: React.FC = () => {
         transition={{
           duration: 2,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: &quot;easeInOut&quot;
         }}
       />
 
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-cyan-400 rounded-full"
+        className=&quot;absolute bottom-1/4 right-1/4 w-2 h-2 bg-cyan-400 rounded-full&quot;
         animate={{
           boxShadow: [
             '0 0 10px rgba(0, 255, 255, 0.5)0 0 30px rgba(0, 255, 255, 0.8)0 0 10px rgba(0, 255, 255, 0.5)'
@@ -340,14 +340,14 @@ const UltraFuturisticBackground2034: React.FC = () => {
         transition={{
           duration: 2,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: &quot;easeInOut&quot;,
           delay: 1
         }}
       />
 
       {/* Metaverse Portal Effect */}
       <motion.div
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-purple-400/30 rounded-full"
+        className=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-purple-400/30 rounded-full&quot;
         animate={{
           rotate: 360,
           scale: [1, 1.05, 1],
@@ -356,16 +356,16 @@ const UltraFuturisticBackground2034: React.FC = () => {
         transition={{
           duration: 40,
           repeat: Infinity,
-          ease: "linear"
+          ease: &quot;linear&quot;
         }}
       />
 
       {/* AI Consciousness Waves */}
-      <div className="absolute inset-0">
+      <div className=&quot;absolute inset-0&quot;>
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-pink-400/20 rounded-full"
+            className=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-pink-400/20 rounded-full&quot;
             style={{
               width: `${200 + i * 100}px`,
               height: `${200 + i * 100}px`
@@ -377,7 +377,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
             transition={{
               duration: 6 + i * 0.5,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: &quot;easeInOut&quot;,
               delay: i * 0.8
             }}
           />

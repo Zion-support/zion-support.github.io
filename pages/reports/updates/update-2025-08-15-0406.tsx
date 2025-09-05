@@ -7,7 +7,7 @@ export default function Update202508150406() {
         <title>Autonomous Update — 2025: 08: 15: 0406 | Zion Tech Group</title>
         <meta
           name='description'
-          content="Latest autonomous update from Zion Tech Group's AI systems covering innovation, automation, and technology advancements."
+          content=&quot;Latest autonomous update from Zion Tech Group's AI systems covering innovation, automation, and technology advancements.&quot;
         />
         <meta
           property='og:title'
@@ -15,7 +15,7 @@ export default function Update202508150406() {
         />
         <meta
           property='og:description'
-          content="Latest autonomous update from Zion Tech Group's AI systems."
+          content=&quot;Latest autonomous update from Zion Tech Group's AI systems.&quot;
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>

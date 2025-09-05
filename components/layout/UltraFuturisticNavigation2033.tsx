@@ -92,26 +92,26 @@ export default function UltraFuturisticNavigation2033() {
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-black via-purple-900/30 to-black border-b border-purple-500/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-10 text-xs text-purple-300">
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-3 h-3 text-purple-400" />
+      <div className=&quot;bg-gradient-to-r from-black via-purple-900/30 to-black border-b border-purple-500/20&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;flex items-center justify-between h-10 text-xs text-purple-300&quot;>
+            <div className=&quot;flex items-center space-x-4&quot;>
+              <div className=&quot;flex items-center space-x-2&quot;>
+                <Phone className=&quot;w-3 h-3 text-purple-400&quot; />
                 <span>{contactInfo.mobile}</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-3 h-3 text-purple-400" />
+              <div className=&quot;flex items-center space-x-2&quot;>
+                <Mail className=&quot;w-3 h-3 text-purple-400&quot; />
                 <span>{contactInfo.email}</span>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-3 h-3 text-purple-400" />
+            <div className=&quot;flex items-center space-x-4&quot;>
+              <div className=&quot;flex items-center space-x-2&quot;>
+                <MapPin className=&quot;w-3 h-3 text-purple-400&quot; />
                 <span>{contactInfo.address}</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Globe className="w-3 h-3 text-purple-400" />
+              <div className=&quot;flex items-center space-x-2&quot;>
+                <Globe className=&quot;w-3 h-3 text-purple-400&quot; />
                 <span>{contactInfo.website}</span>
               </div>
             </div>
@@ -120,44 +120,44 @@ export default function UltraFuturisticNavigation2033() {
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-gradient-to-r from-black via-gray-900/95 to-black border-b border-purple-500/20 backdrop-blur-xl sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+      <nav className=&quot;bg-gradient-to-r from-black via-gray-900/95 to-black border-b border-purple-500/20 backdrop-blur-xl sticky top-0 z-50&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+          <div className=&quot;flex items-center justify-between h-20&quot;>
             {/* Logo */}
             <motion.div 
-              className="flex items-center space-x-3"
+              className=&quot;flex items-center space-x-3&quot;
               whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              transition={{ type: &quot;spring&quot;, stiffness: 400, damping: 10 }}
             >
-              <Link href="/" className="flex items-center space-x-3">
-                <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl">
-                    <Rocket className="w-7 h-7 text-white" />
+              <Link href=&quot;/&quot; className=&quot;flex items-center space-x-3&quot;>
+                <div className=&quot;relative&quot;>
+                  <div className=&quot;w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl&quot;>
+                    <Rocket className=&quot;w-7 h-7 text-white&quot; />
                   </div>
-                  <div className="absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse"></div>
+                  <div className=&quot;absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse&quot;></div>
                 </div>
-                <div className="flex flex-col">
-                  <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                <div className=&quot;flex flex-col&quot;>
+                  <span className=&quot;text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent&quot;>
                     Zion Tech Group
                   </span>
-                  <span className="text-xs text-purple-300 font-medium">
+                  <span className=&quot;text-xs text-purple-300 font-medium&quot;>
                     Future Technology Solutions
                   </span>
                 </div>
-              </Link>
+              </a>
             </motion.div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className=&quot;hidden lg:flex items-center space-x-8&quot;>
               {/* Services Mega Menu */}
-              <div className="relative group">
+              <div className=&quot;relative group&quot;>
                 <button
                   onMouseEnter={() => setActiveCategory('services')}
                   onMouseLeave={() => setActiveCategory(null)}
-                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+                  className=&quot;flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50&quot;
                 >
                   <span>Services</span>
-                  <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                  <ChevronDown className=&quot;w-4 h-4 transition-transform duration-200 group-hover:rotate-180&quot; />
                 </button>
 
                 {/* Mega Menu */}
@@ -170,36 +170,36 @@ export default function UltraFuturisticNavigation2033() {
                       transition={{ duration: 0.2 }}
                       onMouseEnter={() => setActiveCategory('services')}
                       onMouseLeave={() => setActiveCategory(null)}
-                      className="absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4"
+                      className=&quot;absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4&quot;
                     >
-                      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                      <div className=&quot;grid grid-cols-2 lg:grid-cols-4 gap-8&quot;>
                         {serviceCategories.map((category) => (
-                          <div key={category.title} className="space-y-4">
-                            <div className="flex items-center space-x-3">
+                          <div key={category.title} className=&quot;space-y-4&quot;>
+                            <div className=&quot;flex items-center space-x-3&quot;>
                               <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
-                                <category.icon className="w-5 h-5 text-white" />
+                                <category.icon className=&quot;w-5 h-5 text-white&quot; />
                               </div>
-                              <h3 className="text-lg font-semibold text-white">{category.title}</h3>
+                              <h3 className=&quot;text-lg font-semibold text-white&quot;>{category.title}</h3>
                             </div>
-                            <div className="space-y-3">
+                            <div className=&quot;space-y-3&quot;>
                               {category.services.map((service) => (
                                 <Link
                                   key={service.name}
                                   href={service.href}
-                                  className="block group"
+                                  className=&quot;block group&quot;
                                 >
-                                  <div className="p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200">
-                                    <div className="flex items-center justify-between mb-2">
-                                      <h4 className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                                  <div className=&quot;p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200&quot;>
+                                    <div className=&quot;flex items-center justify-between mb-2&quot;>
+                                      <h4 className=&quot;font-medium text-white group-hover:text-cyan-400 transition-colors&quot;>
                                         {service.name}
                                       </h4>
-                                      <span className="text-sm text-purple-400 font-medium">
+                                      <span className=&quot;text-sm text-purple-400 font-medium&quot;>
                                         {service.price}
                                       </span>
                                     </div>
-                                    <p className="text-sm text-gray-400">{service.description}</p>
+                                    <p className=&quot;text-sm text-gray-400&quot;>{service.description}</p>
                                   </div>
-                                </Link>
+                                </a>
                               ))}
                             </div>
                           </div>
@@ -215,10 +215,10 @@ export default function UltraFuturisticNavigation2033() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+                  className=&quot;text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50&quot;
                 >
                   {link.name}
-                </Link>
+                </a>
               ))}
 
               {/* Contact Button */}
@@ -227,21 +227,21 @@ export default function UltraFuturisticNavigation2033() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-                  href="/contact"
-                  className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg"
+                  href=&quot;/contact&quot;
+                  className=&quot;px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg&quot;
                 >
                   Get Started
-                </Link>
+                </a>
               </motion.div>
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="lg:hidden">
+            <div className=&quot;lg:hidden&quot;>
               <button
                 onClick={toggleMenu}
-                className="text-gray-300 hover:text-white transition-colors duration-200 p-2"
+                className=&quot;text-gray-300 hover:text-white transition-colors duration-200 p-2&quot;
               >
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isOpen ? <X className=&quot;w-6 h-6&quot; /> : <Menu className=&quot;w-6 h-6&quot; />}
               </button>
             </div>
           </div>
@@ -255,25 +255,25 @@ export default function UltraFuturisticNavigation2033() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20"
+              className=&quot;lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20&quot;
             >
-              <div className="px-4 py-6 space-y-6">
+              <div className=&quot;px-4 py-6 space-y-6&quot;>
                 {/* Mobile Services */}
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-white">Services</h3>
+                <div className=&quot;space-y-4&quot;>
+                  <h3 className=&quot;text-lg font-semibold text-white&quot;>Services</h3>
                   {serviceCategories.map((category) => (
-                    <div key={category.title} className="ml-4 space-y-2">
-                      <h4 className="font-medium text-purple-300">{category.title}</h4>
-                      <div className="ml-4 space-y-1">
+                    <div key={category.title} className=&quot;ml-4 space-y-2&quot;>
+                      <h4 className=&quot;font-medium text-purple-300&quot;>{category.title}</h4>
+                      <div className=&quot;ml-4 space-y-1&quot;>
                         {category.services.map((service) => (
                           <Link
                             key={service.name}
                             href={service.href}
                             onClick={closeMenu}
-                            className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+                            className=&quot;block text-sm text-gray-400 hover:text-cyan-400 transition-colors&quot;
                           >
                             {service.name}
-                          </Link>
+                          </a>
                         ))}
                       </div>
                     </div>
@@ -281,31 +281,31 @@ export default function UltraFuturisticNavigation2033() {
                 </div>
 
                 {/* Mobile Quick Links */}
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-white">Quick Links</h3>
-                  <div className="grid grid-cols-2 gap-2">
+                <div className=&quot;space-y-4&quot;>
+                  <h3 className=&quot;text-lg font-semibold text-white&quot;>Quick Links</h3>
+                  <div className=&quot;grid grid-cols-2 gap-2&quot;>
                     {quickLinks.map((link) => (
                       <Link
                         key={link.name}
                         href={link.href}
                         onClick={closeMenu}
-                        className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+                        className=&quot;text-sm text-gray-400 hover:text-cyan-400 transition-colors&quot;
                       >
                         {link.name}
-                      </Link>
+                      </a>
                     ))}
                   </div>
                 </div>
 
                 {/* Mobile Contact Button */}
-                <div className="pt-4">
+                <div className=&quot;pt-4&quot;>
                   <Link
-                    href="/contact"
+                    href=&quot;/contact&quot;
                     onClick={closeMenu}
-                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200"
+                    className=&quot;block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-200&quot;
                   >
                     Get Started
-                  </Link>
+                  </a>
                 </div>
               </div>
             </motion.div>

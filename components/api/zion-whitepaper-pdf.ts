@@ -15,8 +15,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const editionParam = (req.query.edition as string) || 'full',
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full',
 
+<<<<<<< HEAD
   res.setHeader('Content-Typeapplication/pdf'),
   res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`),
+=======
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader('Content-Disposition', `attachment; filename=&quot;zion-protocol-${edition}.pdf&quot;`);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   const doc = new (PDFDocument as any)({ autoFirstPage: false }),
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`,

@@ -51,7 +51,7 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
 /**
  * Format a date to show how long ago it was
  * @param date Date to format
- * @returns Time ago string (e.g., "2 hours ago")
+ * @returns Time ago string (e.g., &quot;2 hours ago&quot;)
  */
 export const timeAgo = (date: Date | string | number): string => {
   const dateObj = new Date(date),

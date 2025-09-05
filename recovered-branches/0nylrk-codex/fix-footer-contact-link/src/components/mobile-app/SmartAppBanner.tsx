@@ -1,8 +1,16 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import { X, ArrowRight } from "lucide-react",
 import { Link } from "react-router-dom",
 import { useIsMobile } from "@/hooks/use-mobile",
+=======
+import React, { useState, useEffect } from &quot;react&quot;;
+import { X, ArrowRight } from &quot;lucide-react&quot;;
+import { Link } from &quot;react-router-dom&quot;;
+import { useIsMobile } from &quot;@/hooks/use-mobile&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface SmartAppBannerProps {
   appName?: string,
   appIconSrc?: string,
@@ -12,10 +20,10 @@ interface SmartAppBannerProps {
 }
 
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
-  appName = "Zion Marketplace",
+  appName = &quot;Zion Marketplace&quot;,
   appIconSrc,
-  appStoreUrl = "/download",
-  googlePlayUrl = "/download",
+  appStoreUrl = &quot;/download&quot;,
+  googlePlayUrl = &quot;/download&quot;,
   delay = 1500
 }) => {
   const [isVisible, setIsVisible] = useState(false),
@@ -23,7 +31,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   
   useEffect(() => {
     // Only show banner on mobile devices and if it hasn't been dismissed
-    if (isMobile && !localStorage.getItem("smartBannerDismissed")) {
+    if (isMobile && !localStorage.getItem(&quot;smartBannerDismissed&quot;)) {
       const timer = setTimeout(() => {
         setIsVisible(true)
       }, delay),
@@ -33,6 +41,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   }, [isMobile, delay]),
   
   const dismissBanner = () => {
+<<<<<<< HEAD
     setIsVisible(false),
     localStorage.setItem("smartBannerDismissed", "true")
   },
@@ -41,12 +50,22 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     localStorage.removeItem("smartBannerDismissed"),
     setIsVisible(true)
   },
+=======
+    setIsVisible(false);
+    localStorage.setItem(&quot;smartBannerDismissed&quot;, &quot;true&quot;);
+  };
+
+  const resetBanner = () => {
+    localStorage.removeItem(&quot;smartBannerDismissed&quot;);
+    setIsVisible(true);
+  };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   // Only render on mobile devices
   if (!isMobile || !isVisible) {
     return process.env.NODE_ENV === 'development' ? (
-      <div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-400">
-        Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only)
+      <div className=&quot;bg-zion-blue-dark p-2 text-xs text-center text-gray-400&quot;>
+        Smart banner hidden. <button onClick={resetBanner} className=&quot;text-zion-cyan underline&quot;>Show banner</button> (development only)
       </div>
     ) : null
   }
@@ -56,32 +75,32 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
   
   return (
-    <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">
-      <div className="flex items-center">
-        <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg mr-3 flex-shrink-0 flex items-center justify-center">
+    <div className=&quot;fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in&quot;>
+      <div className=&quot;flex items-center&quot;>
+        <div className=&quot;w-12 h-12 bg-zion-cyan/20 rounded-lg mr-3 flex-shrink-0 flex items-center justify-center&quot;>
           {appIconSrc ? (
-            <img src={appIconSrc} alt={appName} className="w-10 h-10 rounded-md" />
+            <img src={appIconSrc} alt={appName} className=&quot;w-10 h-10 rounded-md&quot; />
           ) : (
-            <div className="text-zion-cyan font-bold text-lg">Z</div>
+            <div className=&quot;text-zion-cyan font-bold text-lg&quot;>Z</div>
           )}
         </div>
         
-        <div className="flex-1">
-          <h4 className="font-semibold text-white">{appName}</h4>
-          <p className="text-xs text-gray-300">Get our app for the best experience</p>
+        <div className=&quot;flex-1&quot;>
+          <h4 className=&quot;font-semibold text-white&quot;>{appName}</h4>
+          <p className=&quot;text-xs text-gray-300&quot;>Get our app for the best experience</p>
         </div>
         
-        <div className="flex items-center gap-3">
+        <div className=&quot;flex items-center gap-3&quot;>
           <Link 
-            to="/open-app" 
-            className="flex items-center px-4 py-1.5 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium"
+            to=&quot;/open-app&quot; 
+            className=&quot;flex items-center px-4 py-1.5 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium&quot;
           >
             View
-            <ArrowRight className="w-3 h-3 ml-1" />
+            <ArrowRight className=&quot;w-3 h-3 ml-1&quot; />
           </Link>
           
-          <button onClick={dismissBanner} className="text-gray-400" aria-label="Dismiss">
-            <X className="h-5 w-5" />
+          <button onClick={dismissBanner} className=&quot;text-gray-400&quot; aria-label=&quot;Dismiss&quot;>
+            <X className=&quot;h-5 w-5&quot; />
           </button>
         </div>
       </div>

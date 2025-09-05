@@ -10,64 +10,64 @@ export default function Revolutionary2026ServicesPage() {
     <>
       <Head>
         <title>Revolutionary 2026 Services - Zion Tech Group</title>
-        <meta name="description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions." />
-        <meta name="keywords" content="AI services, quantum computing, emerging technology, healthcare biotech, fintech blockchain, 2026 technology, Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name=&quot;description&quot; content=&quot;Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;AI services, quantum computing, emerging technology, healthcare biotech, fintech blockchain, 2026 technology, Zion Tech Group&quot; />
+        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Revolutionary 2026 Services - Zion Tech Group" />
-        <meta property="og:description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/revolutionary-2026-services" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image-revolutionary-2026.jpg" />
+        <meta property=&quot;og:title&quot; content=&quot;Revolutionary 2026 Services - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Experience the future with our cutting-edge AI, quantum computing, and emerging technology services.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/revolutionary-2026-services&quot; />
+        <meta property=&quot;og:image&quot; content=&quot;https://ziontechgroup.com/og-image-revolutionary-2026.jpg&quot; />
         
         {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Revolutionary 2026 Services - Zion Tech Group" />
-        <meta name="twitter:description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-image-revolutionary-2026.jpg" />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+        <meta name=&quot;twitter:title&quot; content=&quot;Revolutionary 2026 Services - Zion Tech Group&quot; />
+        <meta name=&quot;twitter:description&quot; content=&quot;Experience the future with our cutting-edge AI, quantum computing, and emerging technology services.&quot; />
+        <meta name=&quot;twitter:image&quot; content=&quot;https://ziontechgroup.com/og-image-revolutionary-2026.jpg&quot; />
         
         {/* Additional Meta */}
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="contact" content="kleber@ziontechgroup.com" />
-        <meta name="phone" content="+1 302 464 0950" />
-        <meta name="address" content="364 E Main St STE 1008 Middletown DE 19709" />
+        <meta name=&quot;robots&quot; content=&quot;index, follow&quot; />
+        <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
+        <meta name=&quot;contact&quot; content=&quot;kleber@ziontechgroup.com&quot; />
+        <meta name=&quot;phone&quot; content=&quot;+1 302 464 0950&quot; />
+        <meta name=&quot;address&quot; content=&quot;364 E Main St STE 1008 Middletown DE 19709&quot; />
         
         {/* Structured Data */}
         <script
-          type="application/ld+json"
+          type=&quot;application/ld+json&quot;
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "description": "Revolutionary AI, quantum computing, and emerging technology services for 2026",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-                "addressCountry": "US"
+              &quot;@context&quot;: &quot;https://schema.org&quot;,
+              &quot;@type&quot;: &quot;Organization&quot;,
+              &quot;name&quot;: &quot;Zion Tech Group&quot;,
+              &quot;url&quot;: &quot;https://ziontechgroup.com&quot;,
+              &quot;logo&quot;: &quot;https://ziontechgroup.com/logo.png&quot;,
+              &quot;description&quot;: &quot;Revolutionary AI, quantum computing, and emerging technology services for 2026&quot;,
+              &quot;address&quot;: {
+                &quot;@type&quot;: &quot;PostalAddress&quot;,
+                &quot;streetAddress&quot;: &quot;364 E Main St STE 1008&quot;,
+                &quot;addressLocality&quot;: &quot;Middletown&quot;,
+                &quot;addressRegion&quot;: &quot;DE&quot;,
+                &quot;postalCode&quot;: &quot;19709&quot;,
+                &quot;addressCountry&quot;: &quot;US&quot;
               },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
+              &quot;contactPoint&quot;: {
+                &quot;@type&quot;: &quot;ContactPoint&quot;,
+                &quot;telephone&quot;: &quot;+1-302-464-0950&quot;,
+                &quot;contactType&quot;: &quot;customer service&quot;,
+                &quot;email&quot;: &quot;kleber@ziontechgroup.com&quot;
               },
-              "sameAs": [
-                "https://github.com/Zion-Holdings"
+              &quot;sameAs&quot;: [
+                &quot;https://github.com/Zion-Holdings&quot;
               ]
             })
           }}
         />
       </Head>
 
-      <main className="min-h-screen bg-gray-900">
+      <main className=&quot;min-h-screen bg-gray-900&quot;>
         {/* Navigation */}
         <Revolutionary2026UltimateNavigation />
         
@@ -78,25 +78,25 @@ export default function Revolutionary2026ServicesPage() {
         <Revolutionary2026UltimateServicesShowcase />
         
         {/* Additional Content Sections */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10"></div>
+        <section className=&quot;py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden&quot;>
+          <div className=&quot;absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10&quot;></div>
           
-          <div className="max-w-7xl mx-auto relative z-10">
+          <div className=&quot;max-w-7xl mx-auto relative z-10&quot;>
             {/* Why Choose Zion Tech Group */}
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <div className=&quot;text-center mb-16&quot;>
+              <h2 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
+                <span className=&quot;bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>
                   Why Choose Zion Tech Group?
                 </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 We're not just another technology company. We're pioneers in the future of AI, quantum computing, 
                 and emerging technologies, delivering revolutionary solutions that transform industries.
               </p>
             </div>
 
             {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16&quot;>
               {[
                 {
                   icon: '🧠',
@@ -135,43 +135,49 @@ export default function Revolutionary2026ServicesPage() {
                   color: 'from-indigo-500 to-purple-500'
                 }
               ].map((feature, index) => (
-                <div key={index} className="group">
-                  <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105">
+                <div key={index} className=&quot;group&quot;>
+                  <div className=&quot;bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105&quot;>
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform`}>
                       {feature.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                    <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                    <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>{feature.title}</h3>
+                    <p className=&quot;text-gray-400 leading-relaxed&quot;>{feature.description}</p>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Call to Action */}
+<<<<<<< HEAD
             <div className="text-center">
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">
                 <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
+=======
+            <div className=&quot;text-center&quot;>
+              <div className=&quot;bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20&quot;>
+                <h3 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                   Ready to Experience the Future?
                 </h3>
-                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
                   Join thousands of forward-thinking companies already using our revolutionary services 
                   to gain competitive advantages and accelerate innovation.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
                   <a 
-                    href="tel:+13024640950"
-                    className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2"
+                    href=&quot;tel:+13024640950&quot;
+                    className=&quot;bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2&quot;
                   >
-                    <Phone className="w-5 h-5" />
+                    <Phone className=&quot;w-5 h-5&quot; />
                     Call +1 302 464 0950
-                  </a>
+                  </Link>
                   <a 
-                    href="mailto:kleber@ziontechgroup.com"
-                    className="border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
+                    href=&quot;mailto:kleber@ziontechgroup.com&quot;
+                    className=&quot;border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2&quot;
                   >
-                    <Mail className="w-5 h-5" />
+                    <Mail className=&quot;w-5 h-5&quot; />
                     Email Us
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

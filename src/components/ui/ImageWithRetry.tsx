@@ -37,7 +37,7 @@ export function ImageWithRetry({
   const fill = !('width' in props) && !('height' in props),
 
   return (
-    <div className="relative inline-block">
+    <div className=&quot;relative inline-block&quot;>
       <Image
         {...props}
         src={currentSrc}
@@ -48,7 +48,7 @@ export function ImageWithRetry({
       />
       {failed && (
         <button
-          type="button"
+          type=&quot;button&quot;
           onClick={handleRetry}
           className={cn('absolute bottom-1 right-1 text-xs underline', retryClassName)}
         >

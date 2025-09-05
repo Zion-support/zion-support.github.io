@@ -11,8 +11,15 @@ if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true }),
 const sizes = [16, 32, 48, 128],
 
 for (const size of sizes) {
+<<<<<<< HEAD
   const out = resolve(outDir, `icon-${size}.png`),
   await sharp(svgPath).resize(size, size).png().toFile(out),
   // eslint-disable-next-line no-console
   // // // console.log('generated', out)
+=======
+  const out = resolve(outDir, `icon-${size}.png`);
+  await sharp(svgPath).resize(size, size).png().toFile(out);
+   
+  // console.log('generated', out);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 }

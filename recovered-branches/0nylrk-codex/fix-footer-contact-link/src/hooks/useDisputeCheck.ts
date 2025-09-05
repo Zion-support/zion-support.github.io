@@ -1,6 +1,12 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
+=======
+import { useState, useEffect } from &quot;react&quot;;
+import { supabase } from &quot;@/integrations/supabase/client&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {
   const [isUnderDispute, setIsUnderDispute] = useState(false),
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
@@ -18,6 +24,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
         setIsLoading(true),
         
         let query = supabase
+<<<<<<< HEAD
           .from("disputes")
           .select("id, status")
           .eq("project_id", projectId),
@@ -29,6 +36,19 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
         
         // Order by status priority: open, under_review, resolved, closed
         query = query.order("status", { ascending: true }),
+=======
+          .from(&quot;disputes&quot;)
+          .select(&quot;id, status&quot;)
+          .eq(&quot;project_id&quot;, projectId);
+        
+        // If milestone ID is provided, filter by that too
+        if (milestoneId) {
+          query = query.eq(&quot;milestone_id&quot;, milestoneId);
+        }
+        
+        // Order by status priority: open, under_review, resolved, closed
+        query = query.order(&quot;status&quot;, { ascending: true });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         
         const { data, error } = await query,
         
@@ -45,10 +65,17 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
           setDisputeId(null)
         }
       } catch (err) {
+<<<<<<< HEAD
         console.error("Error checking dispute status:", err),
         setIsUnderDispute(false),
         setDisputeStatus(null),
         setDisputeId(null)
+=======
+        console.error(&quot;Error checking dispute status:&quot;, err);
+        setIsUnderDispute(false);
+        setDisputeStatus(null);
+        setDisputeId(null);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       } finally {
         setIsLoading(false)
       }

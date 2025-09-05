@@ -9,13 +9,13 @@ export default function SEOIndex() {
 
   return (
     <div>
-      <h1 className="text-2xl font-semibold mb-4">SEO Landing Pages</h1>
+      <h1 className=&quot;text-2xl font-semibold mb-4&quot;>SEO Landing Pages</h1>
       {slugs.length === 0 ? (
-        <div className="text-sm text-gray-500">Generated pages will appear once deployed.</div>
+        <div className=&quot;text-sm text-gray-500&quot;>Generated pages will appear once deployed.</div>
       ) : (
-        <ul className="list-disc ml-5">
+        <ul className=&quot;list-disc ml-5&quot;>
           {slugs.map((s) => (
-            <li key={s}><a className="text-cyan-600" href={`/seo/${s}`}>{s}</a></li>
+            <li key={s}><a className=&quot;text-cyan-600&quot; href={`/seo/${s}`}>{s}</Link></li>
           ))}
         </ul>
       )}

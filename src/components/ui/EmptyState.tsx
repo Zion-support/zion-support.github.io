@@ -9,32 +9,36 @@ interface EmptyStateProps {
 }
 
 export function EmptyState({ 
+<<<<<<< HEAD
   text = "No items available",
+=======
+  text = &quot;No items available&quot;, 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   description,
   onRetry,
   showRetry = false,
   icon
 }: EmptyStateProps) {
   return (
-    <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
-      <div className="mb-4 text-gray-400">
-        {icon || <Package className="h-16 w-16" />}
+    <div className=&quot;flex flex-col items-center justify-center py-16 px-4 text-center&quot;>
+      <div className=&quot;mb-4 text-gray-400&quot;>
+        {icon || <Package className=&quot;h-16 w-16&quot; />}
       </div>
-      <h3 className="text-xl font-semibold text-white mb-2">
+      <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>
         {text}
       </h3>
       {description && (
-        <p className="text-gray-400 mb-6 max-w-md">
+        <p className=&quot;text-gray-400 mb-6 max-w-md&quot;>
           {description}
         </p>
       )}
       {showRetry && onRetry && (
         <Button
           onClick={onRetry}
-          variant="outline"
-          className="flex items-center gap-2"
+          variant=&quot;outline&quot;
+          className=&quot;flex items-center gap-2&quot;
         >
-          <RefreshCw className="h-4 w-4" />
+          <RefreshCw className=&quot;h-4 w-4&quot; />
           Try Again
         </Button>
       )}

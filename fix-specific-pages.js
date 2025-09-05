@@ -41,7 +41,11 @@ function findBestBackup(pagePath) {
         return backupPath
       }
     } catch (error) {
+<<<<<<< HEAD
       // // // console.log(`Error reading backup ${backupPath}:`, error.message)
+=======
+      // console.log(`Error reading backup ${backupPath}:`, error.message);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   }
   
@@ -116,6 +120,7 @@ function fixSpecificPages() {
     details: []
   },
   
+<<<<<<< HEAD
   // // // console.log('🚀 Starting targeted page restoration...'),
   // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
   
@@ -123,6 +128,15 @@ function fixSpecificPages() {
     if (!fs.existsSync(pagePath)) {
       // // // console.log(`⚠️  Page not found: ${pagePath}`),
       results.failed++,
+=======
+  // console.log('🚀 Starting targeted page restoration...');
+  // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`);
+  
+  for (const pagePath of corruptedPages) {
+    if (!fs.existsSync(pagePath)) {
+      // console.log(`⚠️  Page not found: ${pagePath}`);
+      results.failed++;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       results.details.push({
         file: pagePath,
         restored: false,
@@ -131,6 +145,7 @@ function fixSpecificPages() {
       continue
     }
     
+<<<<<<< HEAD
     // // // console.log(`\n🔍 Checking: ${pagePath}`),
     const result = restorePage(pagePath),
     
@@ -143,6 +158,20 @@ function fixSpecificPages() {
       results.failed++,
       // // // console.log(`❌ Failed: ${pagePath}`),
       // // // console.log(`   Reason: ${result.reason}`)
+=======
+    // console.log(`\n🔍 Checking: ${pagePath}`);
+    const result = restorePage(pagePath);
+    
+    if (result.restored) {
+      results.restored++;
+      // console.log(`✅ Restored: ${pagePath}`);
+      // console.log(`   Used backup: ${result.backupUsed}`);
+      // console.log(`   Corrupted backup: ${result.corruptedBackup}`);
+    } else {
+      results.failed++;
+      // console.log(`❌ Failed: ${pagePath}`);
+      // console.log(`   Reason: ${result.reason}`);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
     
     results.details.push({
@@ -152,6 +181,7 @@ function fixSpecificPages() {
   }
   
   // Generate summary
+<<<<<<< HEAD
   // // // console.log('\n📊 Restoration Summary: '),
   // // // console.log(`   Total pages: ${results.total}`),
   // // // console.log(`   Restored: ${results.restored}`),
@@ -162,6 +192,18 @@ function fixSpecificPages() {
   const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json'),
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),
   // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),
+=======
+  // console.log('\n📊 Restoration Summary:');
+  // console.log(`   Total pages: ${results.total}`);
+  // console.log(`   Restored: ${results.restored}`);
+  // console.log(`   Failed: ${results.failed}`);
+  // console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`);
+  
+  // Save detailed report
+  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json');
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
+  // console.log(`\n📄 Detailed report saved to: ${reportPath}`);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   
   return results
 }

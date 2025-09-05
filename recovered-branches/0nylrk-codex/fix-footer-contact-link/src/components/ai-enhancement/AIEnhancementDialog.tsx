@@ -31,7 +31,7 @@ export function AIEnhancementDialog({
 
   return (
     <Dialog open={isOpen} onOpenChange={() => onClose()}>
-      <DialogContent className="max-w-3xl">
+      <DialogContent className=&quot;max-w-3xl&quot;>
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>

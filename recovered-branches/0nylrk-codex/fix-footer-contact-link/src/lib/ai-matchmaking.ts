@@ -21,35 +21,35 @@ export interface MatchResult {
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
   {
-    id: "talent-1",
-    title: "Senior AI Engineer",
-    description: "Experienced AI engineer with expertise in machine learning and computer vision",
-    category: "Talent - Engineering",
+    id: &quot;talent-1&quot;,
+    title: &quot;Senior AI Engineer&quot;,
+    description: &quot;Experienced AI engineer with expertise in machine learning and computer vision&quot;,
+    category: &quot;Talent - Engineering&quot;,
     price: 120,
-    skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"]
+    skills: [&quot;Machine Learning&quot;, &quot;Computer Vision&quot;, &quot;TensorFlow&quot;, &quot;Python&quot;]
   },
   {
-    id: "service-1",
-    title: "AI Model Training",
-    description: "Custom AI model training service with data preparation and deployment",
-    category: "Services - AI Development",
+    id: &quot;service-1&quot;,
+    title: &quot;AI Model Training&quot;,
+    description: &quot;Custom AI model training service with data preparation and deployment&quot;,
+    category: &quot;Services - AI Development&quot;,
     price: 5000,
-    skills: ["Machine Learning", "Model Training", "AI Deployment"]
+    skills: [&quot;Machine Learning&quot;, &quot;Model Training&quot;, &quot;AI Deployment&quot;]
   },
   {
-    id: "equipment-1",
-    title: "NVIDIA A100 GPU Server",
-    description: "High-performance GPU server for AI model training and inference",
-    category: "Equipment - Hardware",
+    id: &quot;equipment-1&quot;,
+    title: &quot;NVIDIA A100 GPU Server&quot;,
+    description: &quot;High-performance GPU server for AI model training and inference&quot;,
+    category: &quot;Equipment - Hardware&quot;,
     price: 15000,
-    skills: ["GPU Computing", "High Performance", "AI Hardware"]
+    skills: [&quot;GPU Computing&quot;, &quot;High Performance&quot;, &quot;AI Hardware&quot;]
   }
 ],
 
 // Function to find matches based on query and type
 export async function findMatches(
   query: string,
-  type: string = "",
+  type: string = "&quot;,
   limit: number = 5
 ): Promise<MatchResult[]> {
   try {
@@ -60,8 +60,13 @@ export async function findMatches(
     await new Promise(resolve => setTimeout(resolve, 1000)),
     
     // Filter by type if provided
+<<<<<<< HEAD
     let filteredItems = sampleData,
     if (type && type !== "all") {
+=======
+    let filteredItems = sampleData;
+    if (type && type !== &quot;all&quot;) {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       filteredItems = sampleData.filter(item => 
         item.category.toLowerCase().includes(type.toLowerCase())
       )
@@ -78,7 +83,12 @@ export async function findMatches(
     // Sort by score
     return matches.sort((a, b) => b.score - a.score).slice(0, limit)
   } catch (error) {
+<<<<<<< HEAD
     console.error("Error in matchmaking:", error),
     return []
+=======
+    console.error(&quot;Error in matchmaking:", error);
+    return [];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
   }
 }

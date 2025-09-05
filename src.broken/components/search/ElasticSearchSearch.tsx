@@ -5,18 +5,23 @@ export default function ElasticSearchSearch() {
 
   const search = () => {
     // Placeholder for actual ElasticSearch request
+<<<<<<< HEAD
     // // // console.log('ElasticSearch query', query)
   },
+=======
+    // console.log('ElasticSearch query', query);
+  };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   return (
-    <div className="space-y-2">
+    <div className=&quot;space-y-2&quot;>
       <input
-        className="border p-2 rounded w-full"
+        className=&quot;border p-2 rounded w-full&quot;
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="ElasticSearch query"
+        placeholder=&quot;ElasticSearch query&quot;
       />
-      <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={search}>
+      <button className=&quot;bg-blue-500 text-white px-4 py-2 rounded&quot; onClick={search}>
         Search
       </button>
     </div>

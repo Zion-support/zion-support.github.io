@@ -55,15 +55,27 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
       URL.revokeObjectURL(url),
       
       toast({
+<<<<<<< HEAD
         title: "Success!",
         description: "Your resume has been downloaded as a PDF."})
+=======
+        title: &quot;Success!&quot;,
+        description: &quot;Your resume has been downloaded as a PDF.&quot;});
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (error) {
       logErrorToProduction('Error exporting PDF:', { data: error }),
       toast({
+<<<<<<< HEAD
         title: "Export failed",
         description: "There was an error exporting your resume to PDF.",
         variant: "destructive"
       })
+=======
+        title: &quot;Export failed&quot;,
+        description: &quot;There was an error exporting your resume to PDF.&quot;,
+        variant: &quot;destructive&quot;
+      });
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsExporting(false)
     }
@@ -73,36 +85,36 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button 
-          variant="outline" 
-          className="gap-2"
+          variant=&quot;outline&quot; 
+          className=&quot;gap-2&quot;
           disabled={isExporting}
         >
           {isExporting ? (
-            <Loader2 className="h-4 w-4 animate-spin" />
+            <Loader2 className=&quot;h-4 w-4 animate-spin&quot; />
           ) : (
-            <FileText className="h-4 w-4" />
+            <FileText className=&quot;h-4 w-4&quot; />
           )}
           Export PDF
-          <ChevronDown className="h-4 w-4" />
+          <ChevronDown className=&quot;h-4 w-4&quot; />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-56">
+      <DropdownMenuContent align=&quot;end&quot; className=&quot;w-56&quot;>
         <DropdownMenuLabel>PDF Export Options</DropdownMenuLabel>
         <DropdownMenuSeparator />
         
-        <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Theme</DropdownMenuLabel>
+        <DropdownMenuLabel className=&quot;text-xs font-normal text-muted-foreground&quot;>Theme</DropdownMenuLabel>
         <DropdownMenuRadioGroup value={theme} onValueChange={(value) => setTheme(value as 'light' | 'dark')}>
-          <DropdownMenuRadioItem value="light">Light</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="dark">Dark</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value=&quot;light&quot;>Light</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value=&quot;dark&quot;>Dark</DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
         
         <DropdownMenuSeparator />
-        <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Font</DropdownMenuLabel>
+        <DropdownMenuLabel className=&quot;text-xs font-normal text-muted-foreground&quot;>Font</DropdownMenuLabel>
         <DropdownMenuRadioGroup value={fontFamily} onValueChange={(value) => setFontFamily(value as FontFamily)}>
-          <DropdownMenuRadioItem value="default">Default</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="montserrat">Montserrat</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="open-sans">Open Sans</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="roboto">Roboto</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value=&quot;default&quot;>Default</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value=&quot;montserrat&quot;>Montserrat</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value=&quot;open-sans&quot;>Open Sans</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value=&quot;roboto&quot;>Roboto</DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
         
         <DropdownMenuSeparator />
@@ -115,7 +127,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
         
         <DropdownMenuSeparator />
         <DropdownMenuItem onClick={handleExport}>
-          <Download className="h-4 w-4 mr-2" />
+          <Download className=&quot;h-4 w-4 mr-2&quot; />
           Download PDF
         </DropdownMenuItem>
       </DropdownMenuContent>

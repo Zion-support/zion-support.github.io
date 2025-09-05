@@ -1,10 +1,20 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",
 import { useJobMatches } from "@/hooks/useJobMatches",
 import { Skeleton } from "@/components/ui/skeleton",
+=======
+import React from &quot;react&quot;;
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from &quot;@/components/ui/card&quot;;
+import { EmptyMatchesCard } from &quot;@/components/jobs/EmptyMatchesCard&quot;;
+import { JobMatchCard } from &quot;@/components/jobs/JobMatchCard&quot;;
+import { useJobMatches } from &quot;@/hooks/useJobMatches&quot;;
+import { Skeleton } from &quot;@/components/ui/skeleton&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 interface JobMatchesProps {
   jobId: string
 }
@@ -16,20 +26,20 @@ export function JobMatches({ jobId }: JobMatchesProps) {
     return (
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Skeleton className="h-4 w-24" />
+          <CardTitle className=&quot;flex items-center gap-2&quot;>
+            <Skeleton className=&quot;h-4 w-24&quot; />
           </CardTitle>
           <CardDescription>
-            <Skeleton className="h-4 w-full" />
+            <Skeleton className=&quot;h-4 w-full&quot; />
           </CardDescription>
         </CardHeader>
-        <CardContent className="space-y-4">
+        <CardContent className=&quot;space-y-4&quot;>
           {[1, 2, 3].map((i) => (
-            <div key={i} className="flex items-center gap-4">
-              <Skeleton className="h-12 w-12 rounded-full" />
-              <div className="space-y-2">
-                <Skeleton className="h-4 w-48" />
-                <Skeleton className="h-4 w-32" />
+            <div key={i} className=&quot;flex items-center gap-4&quot;>
+              <Skeleton className=&quot;h-12 w-12 rounded-full&quot; />
+              <div className=&quot;space-y-2&quot;>
+                <Skeleton className=&quot;h-4 w-48&quot; />
+                <Skeleton className=&quot;h-4 w-32&quot; />
               </div>
             </div>
           ))}
@@ -43,18 +53,18 @@ export function JobMatches({ jobId }: JobMatchesProps) {
   }
 
   return (
-    <div className="space-y-4">
+    <div className=&quot;space-y-4&quot;>
       {matches.map((match) => (
         <JobMatchCard
           key={match.id}
           matchId={match.id}
-          talentId={match.talent_profile?.id || ""}
-          name={match.talent_profile?.full_name || ""}
-          title={match.talent_profile?.professional_title || ""}
-          company={match.talent_profile?.company_name || ""}
-          avatar={match.talent_profile?.profile_picture_url || ""}
-          location={match.talent_profile?.location || "Remote"}
-          category={match.talent_profile?.category || "Development"}
+          talentId={match.talent_profile?.id || "&quot;}
+          name={match.talent_profile?.full_name || "&quot;}
+          title={match.talent_profile?.professional_title || "&quot;}
+          company={match.talent_profile?.company_name || "&quot;}
+          avatar={match.talent_profile?.profile_picture_url || "&quot;}
+          location={match.talent_profile?.location || &quot;Remote&quot;}
+          category={match.talent_profile?.category || &quot;Development"}
           matchPercent={match.match_score || 0}
           skills={match.talent_profile?.skills || []}
         />

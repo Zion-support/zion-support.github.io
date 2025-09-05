@@ -134,14 +134,14 @@ export default SyntaxFixer;
     const files = this.getSourceFiles(),
     files.forEach(file => {,
       try {,
-        let content = fs.readFileSync(file, "utf8"),
+        let content = fs.readFileSync(file, &quot;utf8&quot;),
         let modified = false,
 ,
         // Fix import statements,
         content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),
         content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),
 ,
-        if (content !== fs.readFileSync(file, "utf8")) {,
+        if (content !== fs.readFileSync(file, &quot;utf8&quot;)) {,
           modified = true
         },
 ,
@@ -151,8 +151,13 @@ export default SyntaxFixer;
           this.log(`Fixed import issues in ${file}`),
         }
       } catch (error) {,
+<<<<<<< HEAD
         this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
       }
+=======
+        this.log(`Failed to fix ${file}: ${error.message}`, &quot;WARN&quot;)
+      };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     })
   },
 ,
@@ -160,13 +165,13 @@ export default SyntaxFixer;
     const files = this.getSourceFiles(),
     files.forEach(file => {,
       try {,
-        let content = fs.readFileSync(file, "utf8"),
+        let content = fs.readFileSync(file, &quot;utf8&quot;),
         let modified = false,
 ,
         // Fix export statements,
         content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),
 ,
-        if (content !== fs.readFileSync(file, "utf8")) {,
+        if (content !== fs.readFileSync(file, &quot;utf8&quot;)) {,
           modified = true
         },
 ,
@@ -176,14 +181,19 @@ export default SyntaxFixer;
           this.log(`Fixed export issues in ${file}`)
         }
       } catch (error) {,
+<<<<<<< HEAD
         this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
       }
+=======
+        this.log(`Failed to fix ${file}: ${error.message}`, &quot;WARN&quot;)
+      };
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     })
   },
 ,
   getSourceFiles() {,
     const files = [],
-    const srcDir = path.join(process.cwd(), "src"),
+    const srcDir = path.join(process.cwd(), &quot;src&quot;),
 ,
     if (fs.existsSync(srcDir)) {,
       const walkDir = (dir) => {,
@@ -192,9 +202,9 @@ export default SyntaxFixer;
           const fullPath = path.join(dir, item),
           const stat = fs.statSync(fullPath),
 ,
-          if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
+          if (stat.isDirectory() && !item.startsWith(&quot;.&quot;) && item !== &quot;node_modules&quot;) {,
             walkDir(fullPath)
-          } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
+          } else if (item.endsWith(&quot;.ts&quot;) || item.endsWith(&quot;.tsx&quot;) || item.endsWith(&quot;.js&quot;) || item.endsWith(&quot;.jsx&quot;)) {,
             files.push(fullPath)
           }
         })
@@ -207,11 +217,12 @@ export default SyntaxFixer;
   },
 ,
   async run() {,
-    this.log("🚀 Starting Syntax Fixer"),
+    this.log(&quot;🚀 Starting Syntax Fixer&quot;),
 ,
     try {,
       await this.fixSyntaxErrors(),
 ,
+<<<<<<< HEAD
       this.log("=" * 50),
       this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
 
@@ -220,6 +231,14 @@ export default SyntaxFixer;
     }
   }
 },
+=======
+      this.log(&quot;=&quot; * 50),
+      this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`)} catch (error) {,
+      this.log(`❌ Syntax Fixer failed: ${error.message}`, &quot;ERROR&quot;)
+    };
+  };
+};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 ,
 // Main execution,
 if (import.meta.url === `fil: e: //${process.argv[1]}`) {,

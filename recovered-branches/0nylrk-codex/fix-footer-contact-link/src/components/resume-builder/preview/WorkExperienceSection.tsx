@@ -27,25 +27,25 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
   if (sortedWorkExperience.length === 0) return null,
   
   return (
-    <div className="mb-6">
-      <h2 className="text-lg font-semibold border-b mb-3">Professional Experience</h2>
-      <div className="space-y-4">
+    <div className=&quot;mb-6&quot;>
+      <h2 className=&quot;text-lg font-semibold border-b mb-3&quot;>Professional Experience</h2>
+      <div className=&quot;space-y-4&quot;>
         {sortedWorkExperience.map((work, index) => (
-          <div key={work.id || index} className="space-y-1">
-            <div className="flex justify-between items-start">
-              <h3 className="font-medium">{work.role_title}</h3>
-              <span className="text-sm">
+          <div key={work.id || index} className=&quot;space-y-1&quot;>
+            <div className=&quot;flex justify-between items-start&quot;>
+              <h3 className=&quot;font-medium&quot;>{work.role_title}</h3>
+              <span className=&quot;text-sm&quot;>
                 {formatDate(work.start_date)} - {work.is_current ? 'Present' : formatDate(work.end_date)}
               </span>
             </div>
-            <div className="flex justify-between">
-              <p className="text-sm">{work.company_name}</p>
+            <div className=&quot;flex justify-between&quot;>
+              <p className=&quot;text-sm&quot;>{work.company_name}</p>
               {work.location && (
-                <span className="text-sm">{work.location}</span>
+                <span className=&quot;text-sm&quot;>{work.location}</span>
               )}
             </div>
             {work.description && (
-              <p className="text-sm mt-2 whitespace-pre-line">{work.description}</p>
+              <p className=&quot;text-sm mt-2 whitespace-pre-line&quot;>{work.description}</p>
             )}
           </div>
         ))}

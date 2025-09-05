@@ -10,8 +10,8 @@ function DisputeDetailPage() {
     <ProtectedRoute>
       <>
         <SEO 
-          title="Dispute Details | Zion AI Marketplace" 
-          description="View and manage dispute details"
+          title=&quot;Dispute Details | Zion AI Marketplace&quot; 
+          description=&quot;View and manage dispute details&quot;
         />
         <AppHeader />
         <DisputeDetail />

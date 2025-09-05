@@ -34,8 +34,13 @@ export const useRecordActivity = () => {
       
       return data
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error recording activity:", err),
       return null
+=======
+      console.error(&quot;Error recording activity:&quot;, err);
+      return null;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
   

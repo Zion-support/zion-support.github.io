@@ -33,7 +33,11 @@ export function useResumeActions() {
       
       if (error) throw error,
       
+<<<<<<< HEAD
       showSuccessToast("Resume created", "Your resume has been created successfully"),
+=======
+      showSuccessToast(&quot;Resume created&quot;, &quot;Your resume has been created successfully&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       
       return data.id
     } catch (e: any) {
@@ -65,7 +69,11 @@ export function useResumeActions() {
       
       if (error) throw error,
       
+<<<<<<< HEAD
       return showSuccessToast("Resume updated", "Your resume information has been updated")
+=======
+      return showSuccessToast(&quot;Resume updated&quot;, &quot;Your resume information has been updated&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
       return handleResumeError(e, 'Could not update resume')
     } finally {
@@ -100,7 +108,11 @@ export function useResumeActions() {
       
       if (error) throw error,
       
+<<<<<<< HEAD
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
+=======
+      return showSuccessToast(&quot;Active resume set&quot;, &quot;Your selected resume is now marked as active&quot;);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } catch (e: any) {
       return handleResumeError(e, 'Could not set active resume')
     } finally {

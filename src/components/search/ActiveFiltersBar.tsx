@@ -105,34 +105,34 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
 
   return (
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>
-      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
+      <span className=&quot;text-sm font-medium text-muted-foreground&quot;>Active filters:</span>
       
       {activeFilters.map(filter => (
         <Badge 
           key={filter.key} 
-          variant="secondary" 
-          className="flex items-center gap-1 pl-2 pr-1"
+          variant=&quot;secondary&quot; 
+          className=&quot;flex items-center gap-1 pl-2 pr-1&quot;
         >
-          <span className="text-xs">
+          <span className=&quot;text-xs&quot;>
             {filter.label}: {filter.value}
           </span>
           <Button
-            variant="ghost"
-            size="sm"
-            className="h-4 w-4 p-0 hover:bg-transparent"
+            variant=&quot;ghost&quot;
+            size=&quot;sm&quot;
+            className=&quot;h-4 w-4 p-0 hover:bg-transparent&quot;
             onClick={() => removeFilter(filter.key)}
             aria-label={`Remove ${filter.label} filter`}
           >
-            <X className="h-3 w-3" />
+            <X className=&quot;h-3 w-3&quot; />
           </Button>
         </Badge>
       ))}
 
       <Button
-        variant="ghost"
-        size="sm"
+        variant=&quot;ghost&quot;
+        size=&quot;sm&quot;
         onClick={onClearAll}
-        className="text-xs h-6 px-2"
+        className=&quot;text-xs h-6 px-2&quot;
       >
         Clear all
       </Button>

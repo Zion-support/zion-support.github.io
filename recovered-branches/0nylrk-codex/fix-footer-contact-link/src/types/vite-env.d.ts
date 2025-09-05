@@ -35,7 +35,11 @@ declare module 'lovable-tagger' {
 }
 
 // Add Node.js globals
+<<<<<<< HEAD
 declare let __dirname: string,
+=======
+declare let __dirname: string;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 declare let process: {
   env: {
     [key: string]: string | undefined,

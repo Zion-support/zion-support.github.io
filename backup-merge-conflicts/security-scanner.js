@@ -34,7 +34,12 @@ class SecurityScanner {,
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`,
+<<<<<<< HEAD
     console.log(logMessage.trim()),
+=======
+    // console.log(logMessage.trim()),
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 ,
     // Ensure log directory exists,
     const logDir = path.dirname(this.logFile),

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react",
 import FeedbackModal from "../../components/ui/FeedbackModal",
 export default function ClientHirePage() {
@@ -11,11 +12,28 @@ export default function ClientHirePage() {
   const [loading, setLoading] = useState(false),
   const [result, setResult] = useState<any | null>(null),
   const [showFeedback, setShowFeedback] = useState(false),
+=======
+import { useState } from &quot;react&quot;;
+import FeedbackModal from &quot;../../components/ui/FeedbackModal&quot;;
+
+export default function ClientHirePage() {
+  const [talentSlug, setTalentSlug] = useState(&quot;ava-chen&quot;);
+  const [startDateIso, setStartDateIso] = useState<string>(new Date().toISOString().slice(0, 10));
+  const [scopeSummary, setScopeSummary] = useState(&quot;Build AI-enabled reporting module&quot;);
+  const [termsType, setTermsType] = useState(&quot;hourly&quot;);
+  const [hourlyRateUsd, setHourlyRateUsd] = useState(120);
+  const [fixedAmountUsd, setFixedAmountUsd] = useState(5000);
+  const [agreementUrl, setAgreementUrl] = useState("&quot;);
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<any | null>(null);
+  const [showFeedback, setShowFeedback] = useState(false);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
   async function sendOffer() {
     setLoading(true),
     setResult(null),
     const paymentTerms =
+<<<<<<< HEAD
       termsType === "hourly"
         ? { type: "hourly", hourlyRateUsd }
         : termsType === "fixed"
@@ -30,6 +48,22 @@ export default function ClientHirePage() {
     setLoading(false),
     if (!json.ok) {
       alert(json.error || "Failed to send offer")
+=======
+      termsType === &quot;hourly&quot;
+        ? { type: &quot;hourly&quot;, hourlyRateUsd }
+        : termsType === &quot;fixed&quot;
+        ? { type: &quot;fixed&quot;, fixedAmountUsd }
+        : { type: &quot;milestone&quot;, milestones: [] };
+
+    const res = await fetch(&quot;/api/marketplace/offers&quot;, {
+      method: &quot;POST&quot;,
+      headers: { &quot;Content-Type&quot;: &quot;application/json&quot;, &quot;x-demo-user-role&quot;: &quot;client&quot;, &quot;x-demo-user-id&quot;: &quot;client-1&quot; },
+      body: JSON.stringify({ talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl })});
+    const json = await res.json();
+    setLoading(false);
+    if (!json.ok) {
+      alert(json.error || &quot;Failed to send offer");
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } else {
       setResult(json.offer),
       setShowFeedback(true)
@@ -47,8 +81,8 @@ export default function ClientHirePage() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium">Start date</label>
-          <input type="date" value={startDateIso} onChange={(e) => setStartDateIso(e.target.value)} className="w-full border rounded px-3 py-2" />
+          <label className="block text-sm font-medium&quot;>Start date</label>
+          <input type=&quot;date" value={startDateIso} onChange={(e) => setStartDateIso(e.target.value)} className="w-full border rounded px-3 py-2" />
         </div>
 
         <div>
@@ -58,35 +92,35 @@ export default function ClientHirePage() {
 
         <div>
           <label className="block text-sm font-medium">Payment terms</label>
-          <select value={termsType} onChange={(e) => setTermsType(e.target.value)} className="w-full border rounded px-3 py-2">
-            <option value="hourly">Hourly</option>
-            <option value="fixed">Fixed</option>
-            <option value="milestone">Milestone</option>
+          <select value={termsType} onChange={(e) => setTermsType(e.target.value)} className="w-full border rounded px-3 py-2&quot;>
+            <option value=&quot;hourly&quot;>Hourly</option>
+            <option value=&quot;fixed&quot;>Fixed</option>
+            <option value=&quot;milestone&quot;>Milestone</option>
           </select>
         </div>
 
-        {termsType === "hourly" && (
+        {termsType === &quot;hourly" && (
           <div>
-            <label className="block text-sm font-medium">Hourly rate (USD)</label>
-            <input type="number" value={hourlyRateUsd} onChange={(e) => setHourlyRateUsd(Number(e.target.value))} className="w-full border rounded px-3 py-2" />
+            <label className="block text-sm font-medium&quot;>Hourly rate (USD)</label>
+            <input type=&quot;number" value={hourlyRateUsd} onChange={(e) => setHourlyRateUsd(Number(e.target.value))} className="w-full border rounded px-3 py-2&quot; />
           </div>
         )}
 
-        {termsType === "fixed" && (
+        {termsType === &quot;fixed" && (
           <div>
-            <label className="block text-sm font-medium">Fixed amount (USD)</label>
-            <input type="number" value={fixedAmountUsd} onChange={(e) => setFixedAmountUsd(Number(e.target.value))} className="w-full border rounded px-3 py-2" />
+            <label className="block text-sm font-medium&quot;>Fixed amount (USD)</label>
+            <input type=&quot;number" value={fixedAmountUsd} onChange={(e) => setFixedAmountUsd(Number(e.target.value))} className="w-full border rounded px-3 py-2" />
           </div>
         )}
 
         <div>
-          <label className="block text-sm font-medium">Agreement URL (optional)</label>
-          <input value={agreementUrl} onChange={(e) => setAgreementUrl(e.target.value)} placeholder="https://..." className="w-full border rounded px-3 py-2" />
+          <label className="block text-sm font-medium&quot;>Agreement URL (optional)</label>
+          <input value={agreementUrl} onChange={(e) => setAgreementUrl(e.target.value)} placeholder=&quot;https://..." className="w-full border rounded px-3 py-2" />
         </div>
 
         <div className="flex justify-end">
-          <button onClick={sendOffer} disabled={loading} className="px-4 py-2 rounded bg-indigo-600 text-white">
-            {loading ? "Sending…" : "Send Offer to Confirm"}
+          <button onClick={sendOffer} disabled={loading} className="px-4 py-2 rounded bg-indigo-600 text-white&quot;>
+            {loading ? &quot;Sending…&quot; : &quot;Send Offer to Confirm"}
           </button>
         </div>
       </div>

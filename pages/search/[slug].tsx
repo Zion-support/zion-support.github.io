@@ -342,7 +342,7 @@ export default function SearchResultsPage({
       case 'product':
       case 'equipment':
         return (
-          <div key={result.id} data-testid="result-card">
+          <div key={result.id} data-testid=&quot;result-card&quot;>
             <ProductCard
               product={{
                 id: result.id,
@@ -366,7 +366,7 @@ export default function SearchResultsPage({
         ),
       case 'talent':
         return (
-          <div key={result.id} data-testid="result-card">
+          <div key={result.id} data-testid=&quot;result-card&quot;>
             <TalentCard
               talent={{
                 id: result.id,
@@ -393,7 +393,7 @@ export default function SearchResultsPage({
         ),
       case 'category':
         return (
-          <div key={result.id} data-testid="result-card">
+          <div key={result.id} data-testid=&quot;result-card&quot;>
             <CategoryCard
               title={result.title}
               description={result.description || ''}
@@ -405,11 +405,11 @@ export default function SearchResultsPage({
         return (
           <div
             key={result.id}
-            className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow"
-            data-testid="result-card"
+            className=&quot;p-4 bg-white dark:bg-gray-800 rounded-lg shadow&quot;
+            data-testid=&quot;result-card&quot;
           >
-            <h3 className="font-semibold">{result.title}</h3>
-            <p className="text-gray-600 dark:text-gray-200">
+            <h3 className=&quot;font-semibold&quot;>{result.title}</h3>
+            <p className=&quot;text-gray-600 dark:text-gray-200&quot;>
               {result.description}
             </p>
           </div>
@@ -420,79 +420,79 @@ export default function SearchResultsPage({
   return (
     <>
       <SEO
-        title={`Search Results for "${query}" - Zion Marketplace`}
+        title={`Search Results for &quot;${query}&quot; - Zion Marketplace`}
         description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`}
         keywords={`${query}, search, marketplace, products, talent, services`}
         canonical={`https://app.ziontechgroup.com/search/${slug}`}
       />
 
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div className=&quot;min-h-screen bg-gray-50 dark:bg-gray-900&quot;>
         <div
-          className="container mx-auto px-4 py-8"
-          data-testid="search-results"
+          className=&quot;container mx-auto px-4 py-8&quot;
+          data-testid=&quot;search-results&quot;
         >
           {/* Search Header */}
-          <div className="mb-8">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-              <div className="flex-1">
-                <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+          <div className=&quot;mb-8&quot;>
+            <div className=&quot;flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4&quot;>
+              <div className=&quot;flex-1&quot;>
+                <h1 className=&quot;text-3xl font-bold text-gray-900 dark:text-white mb-2&quot;>
                   Search Results
                 </h1>
                 <p
-                  className="text-gray-600 dark:text-gray-200"
-                  data-testid="results-count"
+                  className=&quot;text-gray-600 dark:text-gray-200&quot;
+                  data-testid=&quot;results-count&quot;
                 >
                   {filteredResults.length > 0
-                    ? `Found ${filteredResults.length} results for "${query}"`
-                    : `No results found for "${query}"`}
+                    ? `Found ${filteredResults.length} results for &quot;${query}&quot;`
+                    : `No results found for &quot;${query}&quot;`}
                 </p>
               </div>
 
               {/* Search Input */}
-              <div className="relative w-full lg:w-96">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200" />
+              <div className=&quot;relative w-full lg:w-96&quot;>
+                <Search className=&quot;absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200&quot; />
                 <Input
-                  type="text"
+                  type=&quot;text&quot;
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
-                  placeholder="Search marketplace..."
-                  className="pl-10"
+                  placeholder=&quot;Search marketplace...&quot;
+                  className=&quot;pl-10&quot;
                 />
               </div>
             </div>
 
             {/* Controls */}
-            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
-              <div className="flex items-center gap-2 flex-wrap">
+            <div className=&quot;flex flex-wrap items-center justify-between gap-4 mt-6&quot;>
+              <div className=&quot;flex items-center gap-2 flex-wrap&quot;>
                 <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex items-center gap-2"
-                  data-testid="filter-button"
+                  variant=&quot;outline&quot;
+                  size=&quot;sm&quot;
+                  className=&quot;flex items-center gap-2&quot;
+                  data-testid=&quot;filter-button&quot;
                 >
-                  <Filter className="h-4 w-4" />
+                  <Filter className=&quot;h-4 w-4&quot; />
                   Filters
                 </Button>
 
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
-                  data-testid="sort-select"
+                  className=&quot;px-3 py-1 border border-gray-300 rounded-md text-sm&quot;
+                  data-testid=&quot;sort-select&quot;
                 >
-                  <option value="relevance">Relevance</option>
-                  <option value="newest">Newest</option>
-                  <option value="price_asc">Price: Low to High</option>
-                  <option value="price_desc">Price: High to Low</option>
-                  <option value="rating">Highest Rated</option>
+                  <option value=&quot;relevance&quot;>Relevance</option>
+                  <option value=&quot;newest&quot;>Newest</option>
+                  <option value=&quot;price_asc&quot;>Price: Low to High</option>
+                  <option value=&quot;price_desc&quot;>Price: High to Low</option>
+                  <option value=&quot;rating&quot;>Highest Rated</option>
                 </select>
 
                 <select
                   value={categoryFilter}
                   onChange={(e) => setCategoryFilter(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+                  className=&quot;px-3 py-1 border border-gray-300 rounded-md text-sm&quot;
                 >
-                  <option value="all">All Categories</option>
+                  <option value=&quot;all&quot;>All Categories</option>
                   {categories.map((c) => (
                     <option key={c} value={c}>
                       {c}
@@ -500,51 +500,51 @@ export default function SearchResultsPage({
                   ))}
                 </select>
 
-                <div className="flex items-center gap-1">
+                <div className=&quot;flex items-center gap-1&quot;>
                   <input
-                    type="number"
-                    placeholder="Min $"
+                    type=&quot;number&quot;
+                    placeholder=&quot;Min $&quot;
                     value={minPrice}
                     onChange={(e) => setMinPrice(e.target.value)}
-                    className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
+                    className=&quot;w-20 px-2 py-1 border border-gray-300 rounded-md text-sm&quot;
                   />
                   <span>-</span>
                   <input
-                    type="number"
-                    placeholder="Max $"
+                    type=&quot;number&quot;
+                    placeholder=&quot;Max $&quot;
                     value={maxPrice}
                     onChange={(e) => setMaxPrice(e.target.value)}
-                    className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
+                    className=&quot;w-20 px-2 py-1 border border-gray-300 rounded-md text-sm&quot;
                   />
                 </div>
 
                 <select
                   value={minRating}
                   onChange={(e) => setMinRating(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+                  className=&quot;px-3 py-1 border border-gray-300 rounded-md text-sm&quot;
                 >
-                  <option value="">All Ratings</option>
-                  <option value="4">4★ & up</option>
-                  <option value="3">3★ & up</option>
-                  <option value="2">2★ & up</option>
+                  <option value="&quot;>All Ratings</option>
+                  <option value=&quot;4&quot;>4★ & up</option>
+                  <option value=&quot;3&quot;>3★ & up</option>
+                  <option value=&quot;2">2★ & up</option>
                 </select>
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2&quot;>
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'}
-                  size="sm"
+                  size=&quot;sm&quot;
                   onClick={() => setViewMode('grid')}
-                  data-testid="view-mode-grid"
+                  data-testid=&quot;view-mode-grid"
                   className={viewMode === 'grid' ? 'active' : ''}
                 >
-                  <Grid className="h-4 w-4" />
+                  <Grid className="h-4 w-4&quot; />
                 </Button>
                 <Button
                   variant={viewMode === 'list' ? 'default' : 'outline'}
-                  size="sm"
+                  size=&quot;sm&quot;
                   onClick={() => setViewMode('list')}
-                  data-testid="view-mode-list"
+                  data-testid=&quot;view-mode-list"
                   className={viewMode === 'list' ? 'active' : ''}
                 >
                   <List className="h-4 w-4" />
@@ -556,13 +556,13 @@ export default function SearchResultsPage({
           {/* Loading State */}
           {loading && results.length === 0 && (
             <div className="flex justify-center py-12">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600&quot;></div>
             </div>
           )}
 
           {/* Empty State */}
           {!loading && filteredResults.length === 0 && (
-            <div data-testid="search-empty-state">
+            <div data-testid=&quot;search-empty-state">
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
             </div>
           )}

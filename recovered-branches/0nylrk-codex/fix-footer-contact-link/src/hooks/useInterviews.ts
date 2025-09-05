@@ -1,9 +1,18 @@
 
+<<<<<<< HEAD
 import { useState } from 'react',
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from '@/integrations/supabase/client',
 import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview',
 import { toast } from '@/components/ui/use-toast',
+=======
+import { useState } from 'react';
+import { useAuth } from &quot;@/hooks/useAuth&quot;;
+import { supabase } from '@/integrations/supabase/client';
+import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview';
+import { toast } from '@/components/ui/use-toast';
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 export function useInterviews() {
   const [interviews, setInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(false),
@@ -14,11 +23,19 @@ export function useInterviews() {
   const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
     if (!user) {
       toast({
+<<<<<<< HEAD
         title: "Authentication required",
         description: "You must be logged in to request interviews",
         variant: "destructive"
       }),
       return null
+=======
+        title: &quot;Authentication required&quot;,
+        description: &quot;You must be logged in to request interviews&quot;,
+        variant: &quot;destructive&quot;
+      });
+      return null;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
 
     setIsLoading(true),
@@ -43,9 +60,15 @@ export function useInterviews() {
         .single(),
 
       if (insertError) {
+<<<<<<< HEAD
         console.error("Error requesting interview:", insertError),
         setError(insertError.message),
         return null
+=======
+        console.error(&quot;Error requesting interview:&quot;, insertError);
+        setError(insertError.message);
+        return null;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
 
       // Create notification for talent
@@ -58,9 +81,15 @@ export function useInterviews() {
 
       return data
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error in requestInterview:", err),
       setError(err.message),
       return null
+=======
+      console.error(&quot;Error in requestInterview:&quot;, err);
+      setError(err.message);
+      return null;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsLoading(false)
     }
@@ -89,9 +118,15 @@ export function useInterviews() {
         .order('scheduled_date', { ascending: true }),
 
       if (fetchError) {
+<<<<<<< HEAD
         console.error("Error fetching interviews:", fetchError),
         setError(fetchError.message),
         return []
+=======
+        console.error(&quot;Error fetching interviews:&quot;, fetchError);
+        setError(fetchError.message);
+        return [];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
 
       // Transform the data to match Interview type
@@ -118,9 +153,15 @@ export function useInterviews() {
       setInterviews(formattedInterviews),
       return formattedInterviews
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error in fetchInterviews:", err),
       setError(err.message),
       return []
+=======
+      console.error(&quot;Error in fetchInterviews:&quot;, err);
+      setError(err.message);
+      return [];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsLoading(false)
     }
@@ -133,11 +174,19 @@ export function useInterviews() {
   ): Promise<boolean> => {
     if (!user?.id) {
       toast({
+<<<<<<< HEAD
         title: "Authentication required",
         description: "You must be logged in to respond to interviews",
         variant: "destructive"
       }),
       return false
+=======
+        title: &quot;Authentication required&quot;,
+        description: &quot;You must be logged in to respond to interviews&quot;,
+        variant: &quot;destructive&quot;
+      });
+      return false;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
 
     setIsLoading(true),
@@ -154,9 +203,15 @@ export function useInterviews() {
         .eq('id', interviewId),
 
       if (updateError) {
+<<<<<<< HEAD
         console.error("Error responding to interview:", updateError),
         setError(updateError.message),
         return false
+=======
+        console.error(&quot;Error responding to interview:&quot;, updateError);
+        setError(updateError.message);
+        return false;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
 
       // Get the interview to notify the client
@@ -167,9 +222,15 @@ export function useInterviews() {
         .single(),
 
       if (fetchError) {
+<<<<<<< HEAD
         console.error("Error fetching interview:", fetchError),
         setError(fetchError.message),
         return false
+=======
+        console.error(&quot;Error fetching interview:&quot;, fetchError);
+        setError(fetchError.message);
+        return false;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
 
       // Create notification for client
@@ -199,9 +260,15 @@ export function useInterviews() {
       await fetchInterviews(),
       return true
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error in respondToInterview:", err),
       setError(err.message),
       return false
+=======
+      console.error(&quot;Error in respondToInterview:&quot;, err);
+      setError(err.message);
+      return false;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsLoading(false)
     }
@@ -223,7 +290,11 @@ export function useInterviews() {
         message,
         related_id: relatedId})
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error creating notification:", error)
+=======
+      console.error(&quot;Error creating notification:&quot;, error);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
   },
 
@@ -249,8 +320,13 @@ export function useInterviews() {
 
       // Check if user is part of this interview
       if (interview.client_id !== user.id && interview.talent_id !== user.id) {
+<<<<<<< HEAD
         setError("You don't have permission to cancel this interview"),
         return false
+=======
+        setError(&quot;You don't have permission to cancel this interview&quot;);
+        return false;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
       }
 
       // Update the interview status
@@ -284,9 +360,15 @@ export function useInterviews() {
       await fetchInterviews(),
       return true
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error in cancelInterview:", err),
       setError(err.message),
       return false
+=======
+      console.error(&quot;Error in cancelInterview:&quot;, err);
+      setError(err.message);
+      return false;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     } finally {
       setIsLoading(false)
     }

@@ -85,13 +85,13 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
   }, [participants.length]),
 
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100 flex flex-col">
-      <div className="p-4 flex items-center justify-between border-b border-gray-800">
+    <div className=&quot;min-h-screen bg-gray-950 text-gray-100 flex flex-col&quot;>
+      <div className=&quot;p-4 flex items-center justify-between border-b border-gray-800&quot;>
         <div>
-          <h2 className="text-lg font-semibold">Project Room: {projectId}</h2>
-          <p className="text-xs text-gray-400">Room {roomName}</p>
+          <h2 className=&quot;text-lg font-semibold&quot;>Project Room: {projectId}</h2>
+          <p className=&quot;text-xs text-gray-400&quot;>Room {roomName}</p>
         </div>
-        <Controls room={room} onLeave={handleLeave} accent="cyan" />
+        <Controls room={room} onLeave={handleLeave} accent=&quot;cyan&quot; />
       </div>
 
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>

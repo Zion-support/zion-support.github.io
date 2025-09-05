@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { ListingScoreCard } from "@/components/ListingScoreCard",
@@ -7,6 +8,18 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/u
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
 import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton",
 import { safeStorage } from "@/utils/safeStorage",
+=======
+import { useState, useEffect } from &quot;react&quot;;
+import { GradientHeading } from &quot;@/components/GradientHeading&quot;;
+import { ListingScoreCard } from &quot;@/components/ListingScoreCard&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Input } from &quot;@/components/ui/input&quot;;
+import { Select, SelectTrigger, SelectContent, SelectItem } from &quot;@/components/ui/select&quot;;
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
+import ListingGridSkeleton from &quot;@/components/skeletons/ListingGridSkeleton&quot;;
+import { safeStorage } from &quot;@/utils/safeStorage&quot;;
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 // Example listing type
 interface Listing {
   id: string,
@@ -130,10 +143,10 @@ export function CategoryListingPage({
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate&quot; />
                 <Input
-                  type="text"
-                  placeholder="Search listings..."
+                  type=&quot;text&quot;
+                  placeholder=&quot;Search listings..."
                   value={searchQuery}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
@@ -184,9 +197,9 @@ export function CategoryListingPage({
 
           {/* Results Count */}
           <div className="mb-6">
-            <p className="text-zion-slate-light">
+            <p className="text-zion-slate-light&quot;>
               Showing {processedListings.length} results
-              {searchQuery && ` for "${searchQuery}"`}
+              {searchQuery && ` for &quot;${searchQuery}"`}
             </p>
           </div>
 
@@ -215,14 +228,19 @@ export function CategoryListingPage({
             ) : (
               <div className="text-center py-20">
                 <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>
-                <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
+                <p className="text-zion-slate-light mb-6&quot;>Try adjusting your filters or search query</p>
                 <Button
-                  variant="outline"
+                  variant=&quot;outline&quot;
                   onClick={() => {
+<<<<<<< HEAD
                     setSearchQuery(""),
                     setSelectedFilter(filterOptions[0]?.value || 'all')
+=======
+                    setSearchQuery("&quot;);
+                    setSelectedFilter(filterOptions[0]?.value || 'all');
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
                   }}
-                  className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+                  className=&quot;border-zion-purple text-zion-purple hover:bg-zion-purple/10&quot;
                 >
                   Clear all filters
                 </Button>

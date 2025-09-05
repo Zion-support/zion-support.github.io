@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }),
     
     // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href^=&quot;#&quot;]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault(),
             const target = document.querySelector(this.getAttribute('href')),
@@ -75,9 +75,15 @@ document.addEventListener('DOMContentLoaded', function() {
         form.addEventListener('submit', function(e) {
             e.preventDefault(),
             
+<<<<<<< HEAD
             const formData = new FormData(form),
             const submitBtn = form.querySelector('button[type="submit"]'),
             const originalText = submitBtn.textContent,
+=======
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('button[type=&quot;submit&quot;]');
+            const originalText = submitBtn.textContent;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             
             // Show loading state
             submitBtn.textContent = 'Sending...',
@@ -143,9 +149,15 @@ document.addEventListener('DOMContentLoaded', function() {
         newsletterForm.addEventListener('submit', function(e) {
             e.preventDefault(),
             
+<<<<<<< HEAD
             const email = this.querySelector('input[type="email"]').value,
             const submitBtn = this.querySelector('button[type="submit"]'),
             const originalText = submitBtn.textContent,
+=======
+            const email = this.querySelector('input[type=&quot;email&quot;]').value;
+            const submitBtn = this.querySelector('button[type=&quot;submit&quot;]');
+            const originalText = submitBtn.textContent;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
             
             // Show loading state
             submitBtn.textContent = 'Subscribing...',
@@ -243,12 +255,21 @@ function performSearch(query) {
         
         if (results.length > 0) {
             searchResults.innerHTML = results.map(result => 
+<<<<<<< HEAD
                 `<a href="${result.url}" class="search-result-item">${result.title}</a>`
             ).join(''),
             searchResults.style.display = 'block'
         } else {
             searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',
             searchResults.style.display = 'block'
+=======
+                `<a href=&quot;${result.url}&quot; class=&quot;search-result-item&quot;>${result.title}</Link>`
+            ).join('');
+            searchResults.style.display = 'block';
+        } else {
+            searchResults.innerHTML = '<div class=&quot;search-result-item no-results&quot;>No results found</div>';
+            searchResults.style.display = 'block';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
         }
     }
 }
@@ -352,9 +373,15 @@ function initializeModals() {
 // Performance monitoring
 function logPerformance() {
     if ('performance' in window) {
+<<<<<<< HEAD
         const perfData = window.window.window.performance.getEntriesByType('navigation')[0],
         // // // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'),
         // // // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
+=======
+        const perfData = performance.getEntriesByType('navigation')[0];
+        // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+        // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms');
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     }
 }
 
@@ -366,7 +393,11 @@ window.addEventListener('error', function(e) {
 
 // Analytics tracking (replace with your analytics service)
 function trackEvent(eventName, eventData = {}) {
+<<<<<<< HEAD
     // // // console.log('Event tracked:', eventName, eventData),
+=======
+    // console.log('Event tracked:', eventName, eventData);
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
     // Implement your analytics tracking here
 }
 
