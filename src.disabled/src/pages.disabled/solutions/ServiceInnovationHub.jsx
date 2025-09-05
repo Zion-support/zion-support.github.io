@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+import React from \"react\"; import Link from \"next/link\"; import { ArrowRight,Phone,Mail } from \"lucide-react\"; ); export default function Serviceinnovationhub() {}; return null} )}
+=======
+<<<<<<< HEAD
+const React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Serviceinnovationhub() { return; }; return null} )}""
+=======
+import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Serviceinnovationhub() {}; return null} )}
+>>>>>>> main
+>>>>>>> main

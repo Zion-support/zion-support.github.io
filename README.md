@@ -1,34 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Zion Tech Group Website
 
-## Getting Started
+A modern, high-performance website built with Next.js 15, TypeScript, and Tailwind CSS for Zion Tech Group - a leading provider of micro SaaS products, AI services, and IT solutions.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- **Modern Tech Stack**: Next.js 15, TypeScript, Tailwind CSS
+- **Performance Optimized**: Core Web Vitals monitoring, image optimization, lazy loading
+- **Mobile-First Design**: Responsive design with mobile optimization
+- **SEO Optimized**: Enhanced meta tags, structured data, sitemap generation
+- **Security Enhanced**: Comprehensive security headers, CSP, HSTS
+- **Error Handling**: Robust error boundaries and monitoring
+- **Automation Ready**: Extensive automation scripts for deployment and maintenance
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📊 Performance Metrics
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- **Build Time**: ~4 seconds
+- **Bundle Size**: Optimized with tree shaking and code splitting
+- **Core Web Vitals**: Monitored and optimized
+- **Mobile Performance**: Enhanced for 35% mobile traffic
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 🛠️ Tech Stack
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **Framework**: Next.js 15.5.2
+- **Language**: TypeScript 5.9.2
+- **Styling**: Tailwind CSS 3.4.17
+- **UI Components**: Radix UI
+- **Icons**: Lucide React
+- **Performance**: Web Vitals, Performance Observer API
+- **Deployment**: Netlify ready
 
-## Learn More
+## 🚀 Quick Start
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js 18.0.0 or higher
+- npm 10.0.0 or higher
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1. **Clone the repository**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   git clone https://github.com/Zion-Holdings/zion.app.git
+   cd zion.app
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. **Install dependencies**

@@ -1,0 +1,1 @@
+module.exports = const cache = {}; export default cache;
