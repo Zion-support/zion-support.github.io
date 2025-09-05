@@ -3,135 +3,81 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Fixing syntax errors...');
-
-<<<<<<< HEAD
-// Files with known syntax issues
-const filesToFix = [
-  '/workspace/lib/analytics.ts',
-  '/workspace/lib/utils.ts',
-  '/workspace/pages/404.tsx',
-  '/workspace/src/App.tsx',
-  '/workspace/src/components/ErrorBoundary.tsx',
-  '/workspace/src/components/FuturisticFooter.tsx',
-  '/workspace/src/components/Header.tsx',
-  '/workspace/src/components/PerformanceMonitor.tsx',
-  '/workspace/src/components/PerformanceOptimized.tsx',
-  '/workspace/src/components/layout/Header.tsx',
-  '/workspace/src/components/layout/MainLayout.tsx',
-  '/workspace/src/components/layout/Sidebar.tsx',
-  '/workspace/src/data/advancedMicroSaaS2026.ts',
-  '/workspace/src/data/enhancedServices.ts',
-  '/workspace/src/main.tsx',
-  '/workspace/src/utils/accessibility-checker.ts',
-  '/workspace/src/utils/monitoring.ts',
-  '/workspace/src/utils/performance-optimizer.ts',
-  '/workspace/src/utils/performance.ts',
-  '/workspace/src/utils/seo-optimizer.ts',
-];
-
-function fixFile(filePath) {
+function fixSyntaxErrors(filePath) {
   try {
-    if (!fs.existsSync(filePath)) {
-      console.log(`Skipping non-existent file: ${filePath}`);
-      return false;
-=======
+    let content = fs.readFileSync(filePath, 'utf8');
     
     // Fix common syntax errors
-    // Remove extra commas and semicolons
-    content = content.replace(/;/g, ';');
-    content = content.replace(/,(\s*[;}])/g, '$1');
-    content = content.replace(/,(\s*\/\/)/g, '$1');
-    content = content.replace(/,(\s*\/\*)/g, '$1');
+    content = content
+      // Remove extra commas and semicolons
+      .replace(/,;/g, ';')
+      .replace(/,\s*;/g, ';')
+      .replace(/,\s*$/gm, '')
+      .replace(/;\s*$/gm, ';')
+      // Fix object syntax
+      .replace(/,(\s*[}\]])/g, '$1')
+      // Fix function parameters
+      .replace(/,\s*\)/g, ')')
+      // Fix JSX attributes
+      .replace(/,(\s*[>}])/g, '$1')
+      // Fix CSS class names
+      .replace(/:\s*([a-zA-Z-]+)\s*{/g, ':$1 {')
+      .replace(/:\s*not-([a-zA-Z-]+)/g, ':not-$1')
+      // Fix hover states
+      .replace(/hover:\s*([a-zA-Z-]+)/g, 'hover:$1')
+      // Fix focus states
+      .replace(/focus:\s*([a-zA-Z-]+)/g, 'focus:$1')
+      // Fix group hover
+      .replace(/group-hover:\s*([a-zA-Z-]+)/g, 'group-hover:$1')
+      // Fix missing imports
+      .replace(/^import\s+React[^;]*;\s*$/gm, (match) => {
+        if (!match.includes('{')) {
+          return match.replace('React', 'React, { useState, useEffect }');
+        }
+        return match;
+      })
+      // Fix missing export
+      .replace(/^const\s+(\w+):\s*React\.FC[^;]*$/gm, (match, name) => {
+        if (!content.includes(`export default ${name}`)) {
+          return match + `\n\nexport default ${name};`;
+        }
+        return match;
+      });
     
-    // Fix JSX syntax issues
-    content = content.replace(/,(\s*<)/g, '$1');
-    content = content.replace(/,(\s*{)/g, '$1');
-    content = content.replace(/,(\s*})/g, '$1');
-    
-    // Fix object syntax
-    content = content.replace(/,(\s*})/g, '$1');
-    content = content.replace(/,(\s*])/g, '$1');
-    
-    // Fix function parameters
-    content = content.replace(/,(\s*\))/g, '$1');
-    
-    // Fix class names with spaces
-    content = content.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1$2"');
-    
-    // Fix hover states
-    content = content.replace(/hove: r:\s+([a-zA-Z-]+)/g, 'hove: r:$1');
-    
-    // Fix focus states
-    content = content.replace(/focu: s:\s+([a-zA-Z-]+)/g, 'focu: s:$1');
-    
-    // Fix group hover
-    content = content.replace(/group-hove: r:\s+([a-zA-Z-]+)/g, 'group-hove: r:$1');
-    
-    // Fix not-sr-only
-    content = content.replace(/not-sr-only/g, 'not-sr-only');
-    
-    // Fix missing imports
-    if (content.includes('React') && !content.includes("import React")) {
-      content = "import React from 'react';\n" + content;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-    }
-
-    const content = fs.readFileSync(filePath, 'utf8');
-
-    // Check if file is corrupted or has syntax issues
-    if (
-      content.length < 50 ||
-      content.includes('<<<<<<< HEAD') ||
-      content.includes('=======')
-    ) {
-      console.log(`Fixing corrupted file: ${filePath}`);
-
-      // Create a basic valid file based on the file type
-      const ext = path.extname(filePath);
-      let newContent = '';
-
-      if (ext === '.tsx') {
-        newContent = `import React from 'react';
-
-export default function Component() {
-  return <div>Component</div>;
-}`;
-      } else if (ext === '.ts') {
-        newContent = `// TypeScript file
-export const placeholder = 'placeholder';
-`;
-      } else if (ext === '.js') {
-        newContent = `// JavaScript file
-export const placeholder = 'placeholder';
-`;
-      }
-<<<<<<< HEAD
-
-      fs.writeFileSync(filePath, newContent);
-=======
-    }
-    
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixe: d: ${filePath}`);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-      return true;
-    }
-
-    return false;
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+    return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-let fixedCount = 0;
-for (const file of filesToFix) {
-  if (fixFile(file)) {
-    fixedCount++;
+function findAndFixFiles(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      fixedCount += findAndFixFiles(filePath);
+    } else if (file.match(/\.(tsx?|jsx?)$/)) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
+      }
+    }
   }
+  
+  return fixedCount;
 }
 
-console.log(`✅ Fixed ${fixedCount} files`);
+console.log('Starting syntax error fixes...');
+const fixedCount = findAndFixFiles('/workspace/components');
+console.log(`Fixed ${fixedCount} files in components directory`);
+
+const hooksFixedCount = findAndFixFiles('/workspace/hooks');
+console.log(`Fixed ${hooksFixedCount} files in hooks directory`);
+
+console.log('Syntax error fixes completed!');

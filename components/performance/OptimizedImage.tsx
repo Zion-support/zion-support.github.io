@@ -1,25 +1,8 @@
-import React from 'react';
-import Image from 'next/image';
-className?: string;
-priority?: boolean;
-quality?: number;
-sizes?: string;
-}<Image src= {
-  src 
-}alt= {
-  alt 
-}width= {
-  width 
-}height= {
-  height 
-}className= {
-  className 
-}priority= {
-  priority 
-}quality= {
-  quality 
-}sizes= {
-  sizes 
-}/>);
-};
-export default OptimizedImage;
+      src={src};
+      alt={alt};
+      width={width};
+      height={height};
+      priority={priority};
+      className={className};
+      sizes={sizes};
+      quality={85};
