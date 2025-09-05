@@ -1,7 +1,7 @@
-import React from "react"
-import Head from 'next/head'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
+import React from "react";
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
   Brain,
   Zap,
@@ -45,8 +45,10 @@ import {
   Home,
   Gamepad2,
   Package
-} from 'lucide-react'
-const aiServices = [{
+} from 'lucide-react';
+
+const aiServices = [
+  {
     title: 'AI-Powered Email Responder',
     description: 'Automated email responses using advanced NLP and machine learning algorithms.',
     icon: Mail,
@@ -306,7 +308,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Computer Vision', 'Sensor Fusion', 'Path Planning', 'Real-time Decision Making'],
     pricing: '$100,000 - $500,000/project',
     category: 'Autonomous Systems',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI Drug Discovery Platform',
@@ -395,7 +397,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Radiology Analysis', 'Pathology Detection', 'Diagnostic Support', '3D Reconstruction'],
     pricing: '$15,000 - $75,000 setup',
     category: 'Medical AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Cybersecurity Threat Hunter',
@@ -612,7 +614,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Molecular Design', 'Drug Optimization', 'Toxicity Prediction', 'Clinical Trial Design'],
     pricing: '$50,000 - $500,000/project',
     category: 'Pharmaceuticals',
-    popular: true
+    popular: true,
   },
   {
     title: 'Generative AI Content Creation Suite',
@@ -621,7 +623,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Text Generation', 'Image Creation', 'Video Production', 'Voice Synthesis'],
     pricing: '$2,000 - $15,000/month',
     category: 'Content Generation',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Cybersecurity Platform',
@@ -630,7 +632,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Threat Hunting', 'Behavioral Analysis', 'Automated Response', 'Zero-day Detection'],
     pricing: '$15,000 - $100,000/setup',
     category: 'Cybersecurity',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI Climate Change Modeling',
@@ -639,7 +641,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Climate Prediction', 'Carbon Footprint Analysis', 'Environmental Monitoring', 'Policy Impact Assessment'],
     pricing: '$25,000 - $150,000/project',
     category: 'Environmental AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Space Exploration',
@@ -648,7 +650,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Mission Planning', 'Satellite Management', 'Planetary Analysis', 'Autonomous Navigation'],
     pricing: '$50,000 - $500,000/project',
     category: 'Space Technology',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI Quantum Computing Optimization',
@@ -657,7 +659,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Quantum Algorithm Design', 'Quantum ML Models', 'Optimization Problems', 'Quantum Simulation'],
     pricing: '$30,000 - $200,000/project',
     category: 'Quantum AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Brain-Computer Interface',
@@ -666,7 +668,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Diagnostics'],
     pricing: '$40,000 - $300,000/project',
     category: 'Neurotechnology',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI Digital Twin for Smart Cities',
@@ -675,7 +677,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Real-time Simulation', 'Traffic Optimization', 'Resource Management', 'Predictive Analytics'],
     pricing: '$100,000 - $1,000,000/project',
     category: 'Smart Cities',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Precision Medicine',
@@ -684,7 +686,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Genomic Analysis', 'Treatment Optimization', 'Drug Discovery', 'Clinical Decision Support'],
     pricing: '$25,000 - $200,000/project',
     category: 'Precision Medicine',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI Agricultural Intelligence',
@@ -693,7 +695,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
     pricing: '$10,000 - $75,000/project',
     category: 'AgTech',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Financial Trading',
@@ -702,7 +704,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Market Analysis', 'Algorithmic Trading', 'Risk Management', 'Portfolio Optimization'],
     pricing: '$20,000 - $150,000/setup',
     category: 'FinTech',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI Metaverse Development Platform',
@@ -711,7 +713,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Virtual World Creation', 'Avatar AI', 'Behavioral Simulation', 'Content Generation'],
     pricing: '$50,000 - $500,000/project',
     category: 'Metaverse',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Language Translation',
@@ -720,7 +722,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['100+ Languages', 'Cultural Context', 'Real-time Processing', 'Voice Translation'],
     pricing: '$0.01 - $0.10 per 1K characters',
     category: 'Language AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI Emotional Intelligence Platform',
@@ -729,7 +731,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Emotion Recognition', 'Empathy Modeling', 'Social Interaction', 'Mental Health Support'],
     pricing: '$15,000 - $100,000/setup',
     category: 'Emotional AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Scientific Discovery',
@@ -738,7 +740,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Hypothesis Generation', 'Literature Analysis', 'Experiment Design', 'Data Interpretation'],
     pricing: '$30,000 - $250,000/project',
     category: 'Scientific AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI Edge Computing Intelligence',
@@ -747,7 +749,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Edge AI Processing', 'Real-time Inference', 'Resource Optimization', 'Distributed Learning'],
     pricing: '$20,000 - $150,000/setup',
     category: 'Edge AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Personal Assistant',
@@ -756,7 +758,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Voice Interaction', 'Task Automation', 'Learning & Adaptation', 'Privacy Protection'],
     pricing: '$5,000 - $30,000/setup',
     category: 'Personal AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI Creative Design Studio',
@@ -765,7 +767,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Graphic Design', 'Music Composition', 'Video Editing', '3D Modeling'],
     pricing: '$1,000 - $10,000/month',
     category: 'Creative AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Predictive Maintenance',
@@ -774,7 +776,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Failure Prediction', 'Maintenance Scheduling', 'Performance Optimization', 'Cost Reduction'],
     pricing: '$15,000 - $100,000/setup',
     category: 'Industrial AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Quantum Machine Learning',
@@ -783,7 +785,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Quantum Algorithms', 'Hybrid Classical-Quantum', 'Optimization Problems', 'Pattern Recognition'],
     pricing: '$50,000 - $500,000/project',
     category: 'Quantum AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Synthetic Biology Platform',
@@ -792,7 +794,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['DNA Design', 'Protein Engineering', 'Metabolic Modeling', 'Biological Simulation'],
     pricing: '$75,000 - $750,000/project',
     category: 'Synthetic Biology',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Autonomous Drones',
@@ -801,7 +803,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Autonomous Navigation', 'Mission Planning', 'Object Detection', 'Swarm Coordination'],
     pricing: '$25,000 - $200,000/project',
     category: 'Autonomous Systems',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Climate Engineering',
@@ -810,7 +812,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Climate Modeling', 'Geoengineering Design', 'Impact Assessment', 'Risk Analysis'],
     pricing: '$80,000 - $800,000/project',
     category: 'Climate Engineering',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Neural Architecture Search',
@@ -819,7 +821,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Architecture Search', 'Hyperparameter Optimization', 'Model Compression', 'Performance Prediction'],
     pricing: '$30,000 - $300,000/setup',
     category: 'AutoML',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Dark Matter Detection',
@@ -828,7 +830,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Particle Detection', 'Signal Analysis', 'Background Rejection', 'Statistical Analysis'],
     pricing: '$70,000 - $700,000/project',
     category: 'Particle Physics AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Exoplanet Discovery',
@@ -837,7 +839,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Light Curve Analysis', 'Transit Detection', 'Atmospheric Modeling', 'Habitability Assessment'],
     pricing: '$45,000 - $450,000/project',
     category: 'Astrobiology AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Protein Folding Prediction',
@@ -846,7 +848,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Structure Prediction', 'Folding Simulation', 'Function Analysis', 'Drug Design'],
     pricing: '$35,000 - $350,000/setup',
     category: 'Structural Biology AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Cryptocurrency Mining Optimization',
@@ -855,7 +857,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Hash Rate Optimization', 'Energy Efficiency', 'Profit Maximization', 'Market Analysis'],
     pricing: '$20,000 - $200,000/setup',
     category: 'Crypto AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Virtual Reality Content Generation',
@@ -864,7 +866,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['3D Content Generation', 'Physics Simulation', 'Interactive Design', 'Realistic Rendering'],
     pricing: '$25,000 - $250,000/project',
     category: 'VR AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Augmented Reality Intelligence',
@@ -873,7 +875,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Object Recognition', 'Spatial Mapping', 'Real-time Processing', 'Context Awareness'],
     pricing: '$30,000 - $300,000/setup',
     category: 'AR AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Holographic Display Technology',
@@ -882,7 +884,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Hologram Generation', 'Real-time Rendering', 'Interactive Controls', '3D Projection'],
     pricing: '$40,000 - $400,000/project',
     category: 'Holographic AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Teleportation Simulation',
@@ -891,7 +893,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Quantum Simulation', 'Entanglement Modeling', 'Protocol Optimization', 'Error Correction'],
     pricing: '$55,000 - $550,000/project',
     category: 'Quantum Communication',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Time Travel Simulation',
@@ -900,7 +902,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Temporal Modeling', 'Paradox Analysis', 'Causality Simulation', 'Timeline Optimization'],
     pricing: '$90,000 - $900,000/project',
     category: 'Temporal AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Multiverse Exploration',
@@ -909,7 +911,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Multiverse Modeling', 'Theory Testing', 'Scenario Simulation', 'Physics Exploration'],
     pricing: '$100,000 - $1,000,000/project',
     category: 'Theoretical Physics AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Quantum Machine Learning',
@@ -918,7 +920,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Quantum Algorithms', 'Optimization Problems', 'Quantum Neural Networks', 'Hybrid Classical-Quantum'],
     pricing: '$25,000 - $100,000/project',
     category: 'Quantum AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Autonomous Vehicle Systems',
@@ -1071,7 +1073,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Quantum Circuit Design', 'Algorithm Simulation', 'Error Correction', 'Performance Analysis'],
     pricing: '$15,000 - $75,000/setup',
     category: 'Quantum AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI Brain-Computer Interface',
@@ -1120,7 +1122,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Zero-day Protection'],
     pricing: '$20,000 - $100,000/setup',
     category: 'Cybersecurity AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI Creative Studio',
@@ -1225,7 +1227,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Virtual World Creation', 'AI Avatars', 'Real-time Interactions', 'Blockchain Integration'],
     pricing: '$50,000 - $500,000/project',
     category: 'Metaverse',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered IoT Intelligence',
@@ -1234,7 +1236,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Device Management', 'Predictive Maintenance', 'Data Analytics', 'Automated Control'],
     pricing: '$8,000 - $50,000/project',
     category: 'IoT',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Virtual Reality',
@@ -1243,7 +1245,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Immersive Environments', 'AI NPCs', 'Adaptive Learning', 'Haptic Feedback'],
     pricing: '$25,000 - $200,000/project',
     category: 'Virtual Reality',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered 5G Network Optimization',
@@ -1252,7 +1254,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Network Slicing', 'Resource Allocation', 'Quality of Service', 'Predictive Maintenance'],
     pricing: '$30,000 - $250,000/project',
     category: '5G Technology',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Digital Transformation',
@@ -1261,7 +1263,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Process Automation', 'Workflow Optimization', 'Data Integration', 'Change Management'],
     pricing: '$40,000 - $300,000/project',
     category: 'Digital Transformation',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Customer Experience',
@@ -1270,7 +1272,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Journey Mapping', 'Personalization', 'Sentiment Analysis', 'Predictive Support'],
     pricing: '$15,000 - $100,000/setup',
     category: 'Customer Experience',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Cybersecurity Intelligence',
@@ -1279,7 +1281,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Threat Intelligence'],
     pricing: '$25,000 - $150,000/setup',
     category: 'Cybersecurity',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Drug Discovery Platform',
@@ -1288,7 +1290,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Molecular Analysis', 'Drug Design', 'Toxicity Prediction', 'Clinical Trial Optimization'],
     pricing: '$50,000 - $500,000/setup',
     category: 'Healthcare',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Autonomous Vehicle Systems',
@@ -1297,7 +1299,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Computer Vision', 'Path Planning', 'Sensor Fusion', 'Safety Systems'],
     pricing: '$100,000 - $1,000,000/setup',
     category: 'Autonomous Systems',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Financial Trading Algorithm',
@@ -1306,7 +1308,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Market Analysis', 'Risk Management', 'Portfolio Optimization', 'Real-time Trading'],
     pricing: '$75,000 - $500,000/setup',
     category: 'FinTech',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Climate Change Modeling',
@@ -1315,7 +1317,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Climate Modeling', 'Weather Prediction', 'Impact Assessment', 'Policy Analysis'],
     pricing: '$100,000 - $750,000/setup',
     category: 'Environmental AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Space Exploration Systems',
@@ -1324,7 +1326,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Mission Planning', 'Autonomous Navigation', 'Resource Management', 'Data Analysis'],
     pricing: '$200,000 - $2,000,000/setup',
     category: 'Space Technology',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Quantum Computing Optimization',
@@ -1333,7 +1335,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Quantum Algorithms', 'Optimization', 'Machine Learning', 'Error Correction'],
     pricing: '$150,000 - $1,000,000/setup',
     category: 'Quantum Computing',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Smart Grid Management',
@@ -1342,7 +1344,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Load Forecasting', 'Grid Optimization', 'Renewable Integration', 'Demand Response'],
     pricing: '$50,000 - $300,000/setup',
     category: 'Energy',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Precision Agriculture',
@@ -1351,7 +1353,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
     pricing: '$30,000 - $200,000/setup',
     category: 'Agriculture',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Smart City Infrastructure',
@@ -1360,7 +1362,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Traffic Management', 'Energy Optimization', 'Public Safety', 'Resource Management'],
     pricing: '$100,000 - $1,000,000/setup',
     category: 'Smart Cities',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Personalized Medicine',
@@ -1369,7 +1371,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Genomic Analysis', 'Treatment Personalization', 'Drug Discovery', 'Clinical Decision Support'],
     pricing: '$75,000 - $500,000/setup',
     category: 'Healthcare',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Advanced Robotics',
@@ -1378,7 +1380,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Computer Vision', 'Machine Learning', 'Autonomous Control', 'Human-Robot Interaction'],
     pricing: '$100,000 - $750,000/setup',
     category: 'Robotics',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Natural Language Understanding',
@@ -1387,7 +1389,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Multilingual Processing', 'Context Understanding', 'Sentiment Analysis', 'Language Generation'],
     pricing: '$25,000 - $150,000/setup',
     category: 'Natural Language Processing',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Advanced Computer Vision',
@@ -1396,7 +1398,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['3D Vision', 'Real-time Processing', 'Object Recognition', 'Scene Understanding'],
     pricing: '$40,000 - $250,000/setup',
     category: 'Computer Vision',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Predictive Maintenance',
@@ -1405,7 +1407,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'IoT Integration'],
     pricing: '$35,000 - $200,000/setup',
     category: 'Industrial AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Supply Chain Optimization',
@@ -1414,7 +1416,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Risk Management'],
     pricing: '$50,000 - $300,000/setup',
     category: 'Supply Chain',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Advanced Analytics Platform',
@@ -1423,7 +1425,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Real-time Analytics', 'Machine Learning', 'Predictive Modeling', 'Data Visualization'],
     pricing: '$30,000 - $200,000/setup',
     category: 'Analytics',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Content Generation Suite',
@@ -1432,7 +1434,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Text Generation', 'Image Creation', 'Video Production', 'Audio Synthesis'],
     pricing: '$20,000 - $150,000/setup',
     category: 'Content Creation',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Advanced Search Engine',
@@ -1441,7 +1443,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Semantic Search', 'Personalization', 'Multilingual Support', 'Real-time Indexing'],
     pricing: '$40,000 - $250,000/setup',
     category: 'Search Technology',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Drug Discovery Platform',
@@ -1450,7 +1452,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Molecular Design', 'Target Identification', 'Clinical Trial Optimization', 'Toxicity Prediction'],
     pricing: '$100,000 - $1,000,000/project',
     category: 'Pharmaceutical AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Climate Change Modeling',
@@ -1499,7 +1501,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Threat Detection', 'Adaptive Defense', 'Zero-day Protection', 'Automated Response'],
     pricing: '$100,000 - $1,000,000/setup',
     category: 'Cybersecurity AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered High-Frequency Trading',
@@ -1548,7 +1550,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Multi-modal Content', 'Brand Consistency', 'Content Optimization', 'Automated Publishing'],
     pricing: '$199 - $1,999/month',
     category: 'Content AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Language Translation API',
@@ -1573,7 +1575,7 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     features: ['Natural Language Understanding', 'Task Automation', 'Calendar Management', 'Email Processing'],
     pricing: '$9.99 - $99.99/month',
     category: 'Personal AI',
-    popular: true
+    popular: true,
   },
   {
     title: 'AI-Powered Code Generation Platform',
@@ -1631,15 +1633,20 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     pricing: '$199 - $1,999/month',
     category: 'Customer Experience AI',
     popular: true
-  }]
+  }
+];
+
 const industries = [
   { name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },
   { name: 'Finance', icon: Building, description: 'Fraud detection and risk assessment' },
   { name: 'E-commerce', icon: ShoppingCart, description: 'Personalized recommendations and automation' },
   { name: 'Manufacturing', icon: Settings, description: 'Predictive maintenance and quality control' },
   { name: 'Education', icon: BookOpen, description: 'Personalized learning and assessment' },
-  { name: 'Transportation', icon: Car, description: 'Autonomous systems and route optimization' }]
-const benefits = [{
+  { name: 'Transportation', icon: Car, description: 'Autonomous systems and route optimization' }
+];
+
+const benefits = [
+  {
     icon: Zap,
     title: 'Increased Efficiency',
     description: 'Automate repetitive tasks and processes',
@@ -1662,103 +1669,131 @@ const benefits = [{
     title: 'Improved Experience',
     description: 'Personalized user interactions',
     stat: '85%'
-  }]
-export default function AIServicesPage() {
-  return (
+  };
+];
+
+export default function AIServicesPage() {}
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Head>
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Cutting-edge AI solutions including machine learning, natural language processing, computer vision, and intelligent automation." />
         <meta name="keywords" content="AI services, machine learning, NLP, computer vision, artificial intelligence, automation" />
       </Head>
-      {/* Hero Section */}
+
+      {/* Hero Section */};
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
+          </div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
+          </div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center">
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }};
+            animate={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
+            className="text-center"
+          >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                AI Services
-              </span>
+              AI Services;
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence solutions
+              Transform your business with cutting-edge artificial intelligence solutions;
             </p>
           </motion.div>
         </div>
       </section>
-      {/* Services Grid */}
+
+      {/* Services Grid */};
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}>
+            initial={{ opacity: 0, y: 30 }};
+            whileInView={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
+            viewport={{ once: true }};
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our AI Solutions
+              Our AI Solutions;
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive AI services designed to drive innovation and efficiency
+              Comprehensive AI services designed to drive innovation and efficiency;
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => {
-              const IconComponent = service.icon
-              return (
-                <motion.div
-                  key={index}
+            {aiServices.map((service, index) => {}
+              const IconComponent = service.icon;
+              return ()
+                <motion.div;
+                  key={index};
                   className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}>
+                  initial={{ opacity: 0, y: 30 }};
+                  whileInView={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.8, delay: index * 0.1 }};
+                  viewport={{ once: true }};
+                  whileHover={{ y: -5 }};
+                >
                   <div className="flex items-center mb-4">
                     <IconComponent className="h-12 w-12 text-blue-600 mr-4" />
                     <div>
-                      <h3{service.title}></h3>
-                      <p{service.category}></p>
-                  <p{service.description}></p>
+                      <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                      <p className="text-sm text-blue-600 font-semibold">{service.category}</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>
                   <div className="mb-4">
-                    <span{service.pricing}>></span>
-                  <Link
+                    <span className="text-lg font-semibold text-blue-600">{service.pricing}</span>
+                  </div>
+                  <Link;
                     href="/contact"
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200">
-                    Learn More
+                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200"
+                  >
+                    Learn More;
                     <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
                 </motion.div>
-              )
-            })}>>
-      {/* CTA Section */}
+              );
+            })};
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */};
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}>
-            <h2
-              Ready to Transform Your Business with AI?></h2>
-            <p
-              Let's discuss how our AI solutions can drive innovation and growth for your organization.></p>
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }};
+            whileInView={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
+            viewport={{ once: true }};
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Business with AI?
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Let's discuss how our AI solutions can drive innovation and growth for your organization.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 href="/contact"
-                className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                Start Your AI Journey>
-              <Link
+                className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
+              >
+                Start Your AI Journey;
+              </Link>
+              <Link;
                 href="/services"
-                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                View All Services>
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+              >
+                View All Services;
+              </Link>
+            </div>
           </motion.div>
-  )
-}
+        </div>
+      </section>
+    </div>
+  );
+};
