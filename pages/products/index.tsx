@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -269,7 +268,6 @@ export default function ProductsIndex() {
     </Layout>
   );
 }
-=======
 import MainLayout from '../../src/components/layout/MainLayout';
 
 const Page = () => {
@@ -289,4 +287,3 @@ const Page = () => {
 };
 
 export default Page;
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

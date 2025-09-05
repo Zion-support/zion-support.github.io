@@ -3,4 +3,3 @@
   ContentQualityAnalyzer.instance = new ContentQualityAnalyzer()} return ContentQualityAnalyzer.instance}; analyzePageContent(pageUrl, title, content, metaDescription = '', images = [], links = []) {};
 export {};
 export default contentQualityAnalyzer}}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

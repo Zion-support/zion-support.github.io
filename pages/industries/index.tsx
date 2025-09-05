@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import MainLayout from '../../src/components/layout/MainLayout';
-=======
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
 import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';
 
 const industries = [
@@ -106,7 +102,6 @@ export default function Industries() {
         </section>
       </Layout>
     </>
-=======
 import MainLayout from '../../src/components/layout/MainLayout';
 
 const Page = () => {
@@ -122,7 +117,6 @@ const Page = () => {
         </div>
       </div>
     </MainLayout>
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   );
 };
 

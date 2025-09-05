@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -413,7 +412,6 @@ export default function CustomDevelopmentPage() {
         </section>
       </div>
     </Layout>
-=======
 import MainLayout from '../../src/components/layout/MainLayout';
 
 const Page = () => {
@@ -429,7 +427,6 @@ const Page = () => {
         </div>
       </div>
     </MainLayout>
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
   );
 };
 

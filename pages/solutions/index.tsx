@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -15,9 +14,7 @@ import {
   Target
 } from 'lucide-react';
 import Layout from '../../components/Layout';
-=======
 import MainLayout from '../../src/components/layout/MainLayout';
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
 
 const Page = () => {
   return (

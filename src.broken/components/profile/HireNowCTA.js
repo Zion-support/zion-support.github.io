@@ -1,5 +1,3 @@
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 import React, { useState } from 'react';
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     const [isFormOpen, setIsFormOpen] = useState(false);
@@ -8,8 +6,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         budget: '',
         startDate: '',
         message: ''
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
         e.preventDefault();
         if (onHire) {
             onHire(formData);
@@ -19,8 +15,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             projectDescription: '',
             budget: '',
             startDate: '',
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
     const handleChange = (e) => {
         setFormData(prev => ({
             ...prev,
@@ -88,6 +82,4 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
           </form>)}
       </CardContent>
     </Card>);
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 }
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

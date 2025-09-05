@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -69,15 +68,11 @@ export default function SitemapPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
-=======
-<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { FileText, ExternalLink, ArrowRight } from 'lucide-react';
-=======
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -133,7 +128,6 @@ const sitemapData = {
     { name: 'Cookie Policy', href: '/cookies' }
   ]
 };
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
 
 export default function SitemapPage() {
   const siteStructure = [
@@ -204,17 +198,13 @@ export default function SitemapPage() {
   return (
     <MainLayout
       title="Sitemap - Zion Tech Group"
-<<<<<<< HEAD
       description="Navigate through all pages and sections of our website. Find the information you need quickly and easily."
       keywords="sitemap, navigation, website structure, pages"
-=======
       description="Navigate our website easily with our comprehensive sitemap. Find all pages and resources in one place."
       keywords="sitemap, navigation, website map, pages, resources"
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
@@ -222,11 +212,8 @@ export default function SitemapPage() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-=======
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
->>>>>>> 9a4f5825b5f6e9b21a821d0a21c3aa51adf201e7
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -234,13 +221,10 @@ export default function SitemapPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
                 Site <span className="text-yellow-400">Map</span>
               </h1>
               <p className="text-xl mb-8 max-w-3xl mx-auto">
                 Navigate through all our pages, services, and resources
-=======
-<<<<<<< HEAD
                 Site{' '}
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
                   Map
@@ -249,20 +233,16 @@ export default function SitemapPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Navigate through all pages and sections of our website. 
                 Find the information you need quickly and easily.
-=======
                 Sitemap
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Navigate our website easily with our comprehensive sitemap
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
->>>>>>> 9a4f5825b5f6e9b21a821d0a21c3aa51adf201e7
               </p>
             </motion.div>
           </div>
         </section>
 
         {/* Sitemap Content */}
-<<<<<<< HEAD
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -301,8 +281,6 @@ export default function SitemapPage() {
         </section>
       </div>
     </>
-=======
-<<<<<<< HEAD
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
@@ -407,7 +385,6 @@ export default function SitemapPage() {
                     </Link>
                   </motion.div>
                 ))}
-=======
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -550,13 +527,11 @@ export default function SitemapPage() {
                     ))}
                   </ul>
                 </motion.div>
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
               </div>
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
@@ -593,7 +568,6 @@ export default function SitemapPage() {
         </section>
       </div>
     </MainLayout>
-=======
         {/* Contact Information */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -624,7 +598,6 @@ export default function SitemapPage() {
         </section>
       </div>
     </Layout>
-=======
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 
@@ -641,9 +614,6 @@ const Page = () => {
         </div>
       </div>
     </MainLayout>
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
->>>>>>> 9a4f5825b5f6e9b21a821d0a21c3aa51adf201e7
   );
 };
 

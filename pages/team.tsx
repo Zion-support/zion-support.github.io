@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -159,7 +158,6 @@ export default function TeamPage() {
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
       keywords="team, experts, engineers, data scientists, AI specialists, cybersecurity experts, technology professionals"
       canonical="https://ziontechgroup.com/team"
-=======
 import MainLayout from '../src/components/layout/MainLayout';
 
 const Page = () => {
@@ -167,14 +165,12 @@ const Page = () => {
     <MainLayout 
       title="Page - Zion Tech Group"
       description="Zion Tech Group page"
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
     >
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 py-20">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
           <p className="text-xl text-gray-600">Coming soon...</p>
         </div>
-<<<<<<< HEAD
       </section>
 
       {/* Stats Section */}
@@ -376,10 +372,8 @@ const Page = () => {
         </div>
       </section>
     </Layout>
-=======
       </div>
     </MainLayout>
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
   );
 };
 

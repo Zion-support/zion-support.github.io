@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -15,7 +14,6 @@ import {
   Download,
   ExternalLink,
   ChevronDown,
-<<<<<<< HEAD
   Cloud
 } from 'lucide-react';
 
@@ -94,11 +92,6 @@ export default function HelpPage() {
   const toggleCategory = (index: number) => {
     setExpandedCategory(expandedCategory === index ? null : index);
   };
-=======
-  ChevronRight,
-  ArrowRight
-} from 'lucide-react';
-import Layout from '../components/Layout';
 
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -253,7 +246,6 @@ export default function HelpPage() {
       responseTime: 'Mon-Fri 9AM-6PM EST'
     }
   ];
->>>>>>> 9a4f5825b5f6e9b21a821d0a21c3aa51adf201e7
 
   const filteredCategories = helpCategories.map(category => ({
     ...category,
@@ -263,7 +255,6 @@ export default function HelpPage() {
     )
   })).filter(category => category.articles.length > 0);
 
-<<<<<<< HEAD
   return (
     <>
       <Head>
@@ -303,7 +294,6 @@ export default function HelpPage() {
         </section>
       </div>
     </>
-=======
   const toggleSection = (sectionId) => {
     setExpandedSection(expandedSection === sectionId ? null : sectionId);
   };
@@ -645,7 +635,6 @@ export default function HelpPage() {
         </div>
       </section>
     </Layout>
-=======
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 
@@ -662,8 +651,6 @@ const Page = () => {
         </div>
       </div>
     </MainLayout>
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
->>>>>>> 9a4f5825b5f6e9b21a821d0a21c3aa51adf201e7
   );
 };
 

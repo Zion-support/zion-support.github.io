@@ -1,6 +1,5 @@
 const nextConfig = {
   reactStrictMode: true,
-<<<<<<< HEAD
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
@@ -25,7 +24,6 @@ const nextConfig = {
       };
     }
     return config;
-=======
   compress: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
@@ -120,7 +118,6 @@ const nextConfig = {
         permanent: true,
       },
     ];
->>>>>>> 380d5be269a380502c5b88f5cbeaaaacd40bbf12
   }
 };
 

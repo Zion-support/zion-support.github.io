@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -421,7 +420,6 @@ export default function CloudMigration() {
         </section>
       </div>
     </Layout>
-=======
 import MainLayout from '../../src/components/layout/MainLayout';
 
 const Page = () => {
@@ -437,7 +435,6 @@ const Page = () => {
         </div>
       </div>
     </MainLayout>
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
   );
 };
 

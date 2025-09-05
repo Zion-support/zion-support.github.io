@@ -59,4 +59,3 @@ class MetricsCollector {
     fs.writeFileSync(metricsPath, JSON.stringify(this.getMetrics(), null, 2))}
 }
 module.exports = MetricsCollector;
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

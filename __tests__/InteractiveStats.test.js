@@ -1,3 +1,1 @@
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 import _React from 'react"  import '@testing-library/jest-dom import InteractiveStats from '../components/InteractiveStats" describe('InteractiveStats',() => {' test('renders without crashing',() => {' render(<InteractiveStats / / />) expect(screen.getByTestId("interactivestats")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveStats / / />) }) test('handles user interactions',() => {' render(<InteractiveStats / / />) }) test('applies correct styling',() => {' render(<InteractiveStats / / />) }) })
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -264,12 +263,6 @@ const quickLinks = [
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-=======
-import React from 'react';
-import MainLayout from '../../src/components/layout/MainLayout';
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
-
-const Page = () => {
   return (
     <MainLayout 
       title="Page - Zion Tech Group"
@@ -285,4 +278,3 @@ const Page = () => {
   );
 };
 
-export default Page;

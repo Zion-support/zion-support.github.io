@@ -1,29 +1,17 @@
 import js from '@eslint/js';
-<<<<<<< HEAD
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import typescript from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
       },
-=======
->>>>>>> main
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default [{
     "ignores": [
-=======
 import react from 'eslint-plugin-react';
-=======
-=======
 import globals from 'globals';
->>>>>>> main
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from '@typescript-eslint/eslint-plugin';
@@ -31,23 +19,12 @@ import tsparser from '@typescript-eslint/parser';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
 import jsxA11y from 'eslint-plugin-jsx-a11y';
->>>>>>> main
-=======
 import jsxA11y from 'eslint-plugin-jsx-a11y';
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 
 export default [
   {
     ignores: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
->>>>>>> main
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
       'node_modules/',
       '.next/',
       'out/',
@@ -57,16 +34,10 @@ export default [
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       '.prettierrc.js',
       '.eslintrc.*',
       '*.min.js',
       '*.bundle.js',
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
       'scripts/',
       'automation/',
       'automation_backup/',
@@ -80,9 +51,6 @@ export default [
       'pages.blog.disabled/',
       'pages._archive_corrupted/',
       'pages._quarantine/',
-<<<<<<< HEAD
-=======
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
       'fix-critical-files.js',
       'fix-*.js',
       'fix-*.cjs',
@@ -112,7 +80,6 @@ export default [
       'backup/',
       'lib_backup/',
       'data_backup/',
-<<<<<<< HEAD
       'pm2-automation/',
       '__tests__/',
       'pages.disabled/',
@@ -121,7 +88,6 @@ export default [
       'pages.bak/',
       'pages.blog.disabled/',
       'pages._archive_corrupted/',
-=======
       'styles_backup/',
       'api-backup/',
       'temp_backup/',
@@ -136,25 +102,16 @@ export default [
       'pages-disabled/',
       'pages.disabled_auto/',
       'pages.disabled.full/',
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
       'pages._quarantine/',
       'pages._archive_corrupted/',
       'pages.blog.disabled/',
       'pages.bak/',
       'pages.broken/',
       'pages.corrupted.*/',
->>>>>>> main
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
       'pages-disabled/',
       'pages-quarantine/',
       'pages.__backup/',
       'pages-backup/',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       '*.test.js',
       '*.test.ts',
       '*.test.tsx',
@@ -303,10 +260,7 @@ export default [
       'tests/**',
       'test-results/**',
       'test-reports/**',
-=======
       'src_backup_temp/',
-=======
->>>>>>> main
       'src.pages.disabled/',
       'src.pages.disabled/**/*',
       'src_backup_temp/',
@@ -370,9 +324,6 @@ export default [
       'corrupted-files-backup/',
       'corrupted-files-backup/**/*',
       'cypress_backup/',
-<<<<<<< HEAD
-=======
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
       'src_backup_temp/',
       'src.pages.disabled/',
       'src.disabled/',
@@ -442,7 +393,6 @@ export default [
       'contracts.disabled/',
       'corrupted-files-backup/',
       'cypress_backup/',
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
       'ai-optimization-backups/',
       'api-backup/',
       'backup/',
@@ -467,34 +417,19 @@ export default [
       'components/ui/',
       '*.cjs',
       '*.js',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
       'cypress_backup/**/*',
       'middleware/',
       'middleware/**/*',
       'zion_academy/',
       'zion_academy/**/*',
-=======
->>>>>>> main
->>>>>>> main
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
       '*.test.js',
       '*.test.ts',
       '*.test.tsx',
       '*.spec.js',
       '*.spec.ts',
       '*.spec.tsx',
-<<<<<<< HEAD
       'test-*.js',
       'test-*.cjs',
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
       '*.report.json',
       'temp_*/',
       'test_build/',
@@ -505,7 +440,6 @@ export default [
       'contracts.disabled/',
       'solutions.disabled/',
       'zion-os.disabled/',
-<<<<<<< HEAD
       'cypress.disabled/',
       'data/2024-*.ts',
       'data/2025-*.ts',
@@ -551,7 +485,6 @@ export default [
       'pages._quarantine/',
       'pages-quarantine/',
       'pages-backup/',
-=======
       'src_backup_temp/',
       'temp-backup/',
       'tests/',
@@ -559,7 +492,6 @@ export default [
       'public/',
       'server/',
       'services/',
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
       'components.disabled_full/',
       'data.disabled/',
       'database/',
@@ -606,7 +538,6 @@ export default [
       'pages.disabled.full/'
     ]
   },
-=======
       'src.corrupted/',
       'src.disabled/',
       'src.broken/',
@@ -761,7 +692,6 @@ export default [
       '*.swo.jsx',
       '*.swo.ts',
       '*.swo.tsx',
-=======
       '*.backup.*',
       '*.broken.*',
       '*.corrupted.*',
@@ -774,7 +704,6 @@ export default [
       '*.rej.*',
       '*.swp.*',
       '*.swo.*',
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
       '*.log',
       '*.pid',
       '*.seed',
@@ -785,10 +714,7 @@ export default [
       'final-*.js',
       'fix_*.js',
       'health-endpoint.js',
-<<<<<<< HEAD
-=======
       'improve-app.js',
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
       'maintenance-scheduler.js',
       'merge-*.js',
       'monitoring-system.js',
@@ -800,7 +726,6 @@ export default [
       'services-broken.tsx',
       'simple-*.js',
       'test-*.js',
-<<<<<<< HEAD
       '*.tgz',
       '*.tar.gz',
       '*.zip',
@@ -905,9 +830,6 @@ export default [
       'no-undef': 'off',
     },
   },
->>>>>>> main
-=======
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
       'ultimate-*.js',
       'systematic-merge.cjs',
       'targeted-merge-resolver.cjs',
@@ -916,7 +838,6 @@ export default [
       'vite.config.ts'
     ]
   },
-<<<<<<< HEAD
   js.configs.recommended,
   {
     files: ['**/*.cjs', '**/scripts/**/*.js', '**/automation/**/*.js', '**/pm2/**/*.js'],
@@ -1011,11 +932,8 @@ export default [
   },
   {
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   {
     files: ['**/*.{js,jsx}'],
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
@@ -1135,39 +1053,23 @@ export default [
       }
     },
     plugins: {
-<<<<<<< HEAD
       '@typescript-eslint': tseslint,
-<<<<<<< HEAD
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
-=======
       react: react,
       'react-hooks': reactHooks
-<<<<<<< HEAD
-=======
       '@typescript-eslint': typescript,
       react: react,
       'jsx-a11y': jsxA11y,
->>>>>>> main
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
->>>>>>> 380d5be269a380502c5b88f5cbeaaaacd40bbf12
     },
     rules: {
       'no-console': 'warn',
       'no-unused-vars': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 380d5be269a380502c5b88f5cbeaaaacd40bbf12
       '@typescript-eslint/no-explicit-any': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
     }
-=======
       'react/jsx-uses-react': 'error',
       'react/jsx-uses-vars': 'error',
       'react/prop-types': 'off',
@@ -1178,7 +1080,6 @@ export default [
         version: 'detect',
       },
     },
->>>>>>> main
   },
   {
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
@@ -1201,18 +1102,12 @@ export default [
     rules: {
       'no-console': 'off',
       'no-unused-vars': 'warn',
-<<<<<<< HEAD
       '@typescript-eslint/no-unused-vars': 'warn'
     }
-=======
       '@typescript-eslint/no-unused-vars': 'warn',
     },
-<<<<<<< HEAD
   }
 ];
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   },
   {
     ignores: [
@@ -1226,17 +1121,8 @@ export default [
     ],
   },
 ];
-=======
-  }
-<<<<<<< HEAD
-];
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
->>>>>>> main
   }
 ];
->>>>>>> main
-=======
+  }
 ];
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+];

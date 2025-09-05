@@ -1,21 +1,14 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Mail, Phone, MapPin } from 'lucide-react';
-<<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
-=======
-=======
 import React from 'react';
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
 import MainLayout from '../src/components/layout/MainLayout';
->>>>>>> 9a4f5825b5f6e9b21a821d0a21c3aa51adf201e7
 
 const Page = () => {
   return (
-<<<<<<< HEAD
     <MainLayout
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
@@ -155,7 +148,6 @@ const Page = () => {
             </motion.div>
           </div>
         </section>
-=======
     <MainLayout 
       title="Page - Zion Tech Group"
       description="Zion Tech Group page"
@@ -165,7 +157,6 @@ const Page = () => {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
           <p className="text-xl text-gray-600">Coming soon...</p>
         </div>
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
       </div>
     </MainLayout>
   );

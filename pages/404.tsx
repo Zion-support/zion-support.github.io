@@ -1,17 +1,13 @@
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 
-<<<<<<< HEAD
 export default function Custom404() {
-=======
 const Page = () => {
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
   return (
     <MainLayout 
       title="Page - Zion Tech Group"
       description="Zion Tech Group page"
     >
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 flex items-center justify-center px-4">
         <div className="text-center max-w-2xl mx-auto">
           <motion.div
@@ -87,12 +83,10 @@ const Page = () => {
               </Link>
             </div>
           </motion.div>
-=======
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 py-20">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
           <p className="text-xl text-gray-600">Coming soon...</p>
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
         </div>
       </div>
     </MainLayout>

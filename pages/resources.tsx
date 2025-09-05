@@ -2,13 +2,10 @@ import { FileText, BarChart3, MessageSquare, Settings, BookOpen, Video, Download
 import Head from 'next/head';
 import Link from 'next/link';
 
-<<<<<<< HEAD
 import React from 'react';
 import { FileText, BarChart3, MessageSquare, Settings, BookOpen, Video, Download } from 'lucide-react';
 import Layout from '../components/Layout';
 
-=======
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
 const resources = [
   {
     title: "Documentation",
@@ -40,7 +37,6 @@ const resources = [
     icon: Settings,
     href: "/api-docs",
     color: "from-orange-500 to-orange-600",
-<<<<<<< HEAD
     items: ["REST API", "GraphQL", "SDKs", "Code Examples"]
   }
 ];
@@ -96,7 +92,6 @@ export default function ResourcesPage() {
             </motion.div>;
           </div>;
         </section>;
-=======
     items: ["REST API", "GraphQL", "Webhooks", "SDKs"]
   },
   {
@@ -140,7 +135,6 @@ export default function Resources() {
             </div>
           </div>
         </div>
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
 
         {/* Resources Grid */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -28,10 +27,7 @@ import {
   DollarSign
 } from 'lucide-react';
 import Layout from '../../components/Layout';
-<<<<<<< HEAD
 import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users, CreditCard, Smartphone, Globe, Database, TrendingUp } from 'lucide-react';
-=======
->>>>>>> 9a4f5825b5f6e9b21a821d0a21c3aa51adf201e7
 
 const solutions = [
   {
@@ -92,11 +88,9 @@ const benefits = [
 ];
 
 export default function Retail() {
-=======
 import MainLayout from '../../src/components/layout/MainLayout';
 
 const Page = () => {
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
   return (
     <MainLayout 
       title="Page - Zion Tech Group"

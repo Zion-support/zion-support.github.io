@@ -3,11 +3,9 @@ import MainLayout from '../src/components/layout/MainLayout';
 
 const Page = () => {
   return (
-<<<<<<< HEAD
     <MainLayout title="Test Page">
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
         <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>
-=======
     <MainLayout 
       title="Page - Zion Tech Group"
       description="Zion Tech Group page"
@@ -17,7 +15,6 @@ const Page = () => {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
           <p className="text-xl text-gray-600">Coming soon...</p>
         </div>
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
       </div>
     </MainLayout>
   );

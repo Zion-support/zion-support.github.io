@@ -1,16 +1,10 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 const publicRoutes = [
   "/",
   "/about",
   "/contact",
-<<<<<<< HEAD
   "/services",
   "/ai-services",
   "/it-services",
@@ -22,7 +16,6 @@ const publicRoutes = [
   "/case-studies",
   "/cookies",
   "/industries"
-=======
   "/blog",
   "/services",
   "/solutions",
@@ -42,9 +35,6 @@ const publicRoutes = [
   "/auth/forgot-password",
   "/auth/reset-password",
   "/auth/verify",
-<<<<<<< HEAD
-=======
-=======
 const publicPaths = [
   '/',
   '/about',
@@ -68,9 +58,6 @@ const publicPaths = [
   '/auth/forgot-password',
   '/auth/reset-password',
   '/auth/verify'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
->>>>>>> main
-=======
 const protectedRoutes = [
   "/",
   "/about",
@@ -135,17 +122,11 @@ const adminRoutes = [
   "/admin/analytics",
   "/admin/content",
   "/admin/security"
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
 ];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   // Allow public routes
   if (publicRoutes.includes(pathname)) {
     return NextResponse.next();
@@ -153,9 +134,6 @@ export function middleware(request: NextRequest) {
   
   // For all other routes, continue normally
   return NextResponse.next();
-=======
-<<<<<<< HEAD
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
   if (publicRoutes.includes(pathname)) {
     return NextResponse.next();
   }
@@ -166,13 +144,11 @@ export function middleware(request: NextRequest) {
   }
   
   return NextResponse.next();
-=======
   // Allow public paths
   if (publicPaths.includes(pathname)) {
     return NextResponse.next();
   }
   
-=======
   // Skip middleware for static files and API routes
   if (
     pathname.startsWith('/_next/') ||
@@ -209,18 +185,13 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL('/unauthorized', request.url));
   }
 
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   // Add security headers
   const response = NextResponse.next();
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-Content-Type-Options', 'nosniff');
-<<<<<<< HEAD
   response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
   
   return response;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
->>>>>>> main
-=======
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   response.headers.set('X-XSS-Protection', '1; mode=block');
   
@@ -247,19 +218,10 @@ export function middleware(request: NextRequest) {
   }
 
   return response;
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 }
 
 export const config = {
   matcher: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
     /*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
@@ -267,13 +229,6 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
 };

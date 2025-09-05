@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
@@ -314,7 +313,6 @@ export default function SecurityPage() {
         </section>
       </div>
     </Layout>
-=======
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 
@@ -331,7 +329,6 @@ const Page = () => {
         </div>
       </div>
     </MainLayout>
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   );
 };
 

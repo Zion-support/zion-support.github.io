@@ -8,9 +8,5 @@ const { render, screen } from "@testing-library/react"; render(<AIChatAssistant 
   it("handles user interactions", () => {;"}
 
     render(<AIChatAssistant />);
-<<<<<<< HEAD
 import { render,screen } from "@testing-library/react"; render(<AIChatAssistant />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => {; render(<AIChatAssistant />); it("handles user interactions",() => {; render(<AIChatAssistant />)})
-=======
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     // Add interaction tests based on component functionality})});
