@@ -1,3 +1,48 @@
+<<<<<<< HEAD
+module.exports = {
+  apps: [
+    {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+      name: 'auto-fix',
+      script: 'scripts/pm2/auto-fix.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: 'logs/pm2/auto-fix.log',
+      error_file: 'logs/pm2/auto-fix-error.log',
+      out_file: 'logs/pm2/auto-fix-out.log',
+    },
+    {
+      name: 'healthcheck',
+      script: 'scripts/pm2/healthcheck.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '128M',
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: 'logs/pm2/health.log',
+      error_file: 'logs/pm2/health-error.log',
+      out_file: 'logs/pm2/health-out.log',
+    },
+    {
+      name: 'code-quality-monitor',
+      script: 'scripts/pm2/code-quality-monitor.js',
+<<<<<<< HEAD
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
       name: 'bolt-zion-app',
       script: 'npm',
       args: 'run start',
@@ -7,6 +52,30 @@
       watch: false,
       max_memory_restart: '1G',
       env: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'code-quality-monitor',
+        QUALITY_THRESHOLD: '80',
+        AUTO_FIX_CRITICAL: 'true',
+      },
+      log_file: 'logs/pm2/code-quality-monitor.log',
+      error_file: 'logs/pm2/code-quality-monitor-error.log',
+      out_file: 'logs/pm2/code-quality-monitor-out.log',
+    },
+    {
+      name: 'auto-commit-fixes',
+      script: 'scripts/pm2/auto-commit-fixes.js',
+<<<<<<< HEAD
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         NODE_ENV: 'production',
       },
       log_file: 'logs/pm2/preview.log',
@@ -47,7 +116,32 @@
       watch: false,
       max_memory_restart: '1G',
       env: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        NODE_ENV: 'production',
+=======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'auto-commit-fixes',
+        COMMIT_FREQUENCY: 'hourly',
+        AUTO_PUSH: 'false',
+      },
+      log_file: 'logs/pm2/auto-commit-fixes.log',
+      error_file: 'logs/pm2/auto-commit-fixes-error.log',
+      out_file: 'logs/pm2/auto-commit-fixes-out.log',
+    },
+    {
+      name: 'dependency-monitor',
+      script: 'scripts/pm2/dependency-monitor.js',
+<<<<<<< HEAD
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
+=======
+        NODE_ENV: 'development',
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
@@ -56,6 +150,16 @@
       log_file: 'logs/pm2/code-quality-monitor.log',
       error_file: 'logs/pm2/code-quality-monitor-error.log',
       out_file: 'logs/pm2/code-quality-monitor-out.log',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+  ]
+=======
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
     },
     {
       name: 'auto-commit-fixes',
@@ -444,4 +548,13 @@ module.exports = {}
       "error_file": 'logs/pm2/type-checker-error.log',
       "out_file": 'logs/pm2/type-checker-out.log'};
   ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 };
+=======
+};
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+};
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

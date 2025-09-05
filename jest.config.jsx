@@ -12,3 +12,4 @@ export default function Jest.config({ }: Jest.configProps) {
     </div>
   );
 }
+}

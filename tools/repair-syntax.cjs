@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
 #!/usr/bin/env node;
 /*
   Automated syntax repair for widespread mangling and merge markers.

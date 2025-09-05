@@ -1,10 +1,23 @@
-=======
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
 module.exports = {
-  "webpack": (config, { isServer }) => {
-  if (!isServer) {
-  config.plugins.push(;
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.plugins.push(
         new BundleAnalyzerPlugin({
+<<<<<<< HEAD
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
+          analyzerMode: 'static',
+          openAnalyzer: false,
+          reportFilename: 'bundle-analysis.html',
+        })
+      );
+    }
+    return config;
+  },
+};
+=======
   "analyzerMode": "static",
           "openAnalyzer": false,
           "reportFilename": "bundle-analysis.html"});
@@ -13,7 +26,11 @@ module.exports = {
 }
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",; openAnalyzer: 'false',; reportFilename: "bundle-analysis.html";,}); )} return config} }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
+>>>>>>> main

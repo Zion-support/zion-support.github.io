@@ -10,8 +10,12 @@ import {
   Users,
   Settings,
   HelpCircle,
-  LogOut,
+  Phone,
+  Mail,
+  MapPin,
+  Building2,
   User,
+  LogOut,
   Search
 } from 'lucide-react';
 
@@ -20,10 +24,10 @@ interface SidebarProps {
   onClose: () => void;
 }
 
-const navigation = [
+const navigationItems = [
   {
-    label: 'Dashboard',
-    href: '/dashboard',
+    label: 'Home',
+    href: '/',
     icon: Home
   },
   {
@@ -31,21 +35,20 @@ const navigation = [
     href: '/services',
     icon: Briefcase,
     children: [
-      { label: 'AI Services', href: '/ai-services' },
-      { label: 'IT Services', href: '/it-services' },
-      { label: 'Micro SaaS', href: '/micro-saas' },
-      { label: 'Cybersecurity', href: '/cybersecurity' }
+      { label: 'AI Services', href: '/ai-services', icon: Briefcase },
+      { label: 'IT Services', href: '/it-services', icon: Settings },
+      { label: 'Cloud Services', href: '/cloud-services', icon: Building2 }
     ]
   },
   {
-    label: 'Team',
-    href: '/team',
+    label: 'About',
+    href: '/about',
     icon: Users
   },
   {
-    label: 'Settings',
-    href: '/settings',
-    icon: Settings
+    label: 'Contact',
+    href: '/contact',
+    icon: Phone
   },
   {
     label: 'Help',
@@ -109,77 +112,74 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <X className="h-6 w-6" />
                 </button>
               </div>
-
+              
               {/* Navigation */}
               <nav className="flex-1 overflow-y-auto py-4">
                 <div className="px-4 space-y-2">
-                  {navigation.map((item) => {
-                    const IconComponent = item.icon;
-                    const isExpanded = expandedItems.includes(item.label);
-                    
-                    return (
-                      <div key={item.label}>
-                        <div className="flex items-center">
-                          <Link
-                            href={item.href}
-                            className="flex items-center flex-1 px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                  {navigationItems.map((item) => (
+                    <div key={item.label}>
+                      {item.children ? (
+                        <div>
+                          <button
+                            onClick={() => toggleExpanded(item.label)}
+                            className="w-full flex items-center justify-between px-3 py-2 text-left text-gray-700 hover:bg-gray-100 rounded-md transition-colors"
                           >
-                            <IconComponent className="h-5 w-5 mr-3" />
-                            <span className="font-medium">{item.label}</span>
-                          </Link>
-                          
-                          {item.children && (
-                            <button
-                              onClick={() => toggleExpanded(item.label)}
-                              className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
-                            >
-                              {isExpanded ? (
-                                <ChevronDown className="h-4 w-4" />
-                              ) : (
-                                <ChevronRight className="h-4 w-4" />
-                              )}
-                            </button>
+                            <div className="flex items-center">
+                              <item.icon className="h-5 w-5 mr-3" />
+                              {item.label}
+                            </div>
+                            {expandedItems.includes(item.label) ? (
+                              <ChevronDown className="h-4 w-4" />
+                            ) : (
+                              <ChevronRight className="h-4 w-4" />
+                            )}
+                          </button>
+                          {expandedItems.includes(item.label) && (
+                            <div className="ml-6 mt-1 space-y-1">
+                              {item.children.map((child) => (
+                                <Link
+                                  key={child.label}
+                                  href={child.href}
+                                  className="flex items-center px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md transition-colors"
+                                  onClick={onClose}
+                                >
+                                  <child.icon className="h-4 w-4 mr-3" />
+                                  {child.label}
+                                </Link>
+                              ))}
+                            </div>
                           )}
                         </div>
-                        
-                        {/* Children */}
-                        {item.children && isExpanded && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            className="ml-8 mt-2 space-y-1"
-                          >
-                            {item.children.map((child) => (
-                              <Link
-                                key={child.label}
-                                href={child.href}
-                                className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
-                              >
-                                {child.label}
-                              </Link>
-                            ))}
-                          </motion.div>
-                        )}
-                      </div>
-                    );
-                  })}
+                      ) : (
+                        <Link
+                          href={item.href}
+                          className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors"
+                          onClick={onClose}
+                        >
+                          <item.icon className="h-5 w-5 mr-3" />
+                          {item.label}
+                        </Link>
+                      )}
+                    </div>
+                  ))}
                 </div>
               </nav>
-
-              {/* Footer */}
-              <div className="border-t p-4">
-                <div className="flex items-center space-x-3">
-                  <div className="h-8 w-8 bg-gray-300 rounded-full flex items-center justify-center">
-                    <User className="h-5 w-5 text-gray-600" />
+              
+              {/* Contact Info */}
+              <div className="p-6 border-t bg-gray-50">
+                <div className="space-y-3">
+                  <div className="flex items-center text-sm text-gray-600">
+                    <Phone className="h-4 w-4 mr-2" />
+                    <span>+1 (555) 123-4567</span>
                   </div>
-                  <div className="flex-1">
-                    <p className="text-sm font-medium text-gray-900">John Doe</p>
-                    <p className="text-xs text-gray-500">john@example.com</p>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <Mail className="h-4 w-4 mr-2" />
+                    <span>info@ziontechgroup.com</span>
                   </div>
-                  <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
-                    <LogOut className="h-5 w-5" />
-                  </button>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <MapPin className="h-4 w-4 mr-2" />
+                    <span>123 Tech Street, Innovation City</span>
+                  </div>
                 </div>
               </div>
             </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Layout from '../components/Layout';
 import {
   BookOpen,
   FileText,
@@ -14,13 +15,66 @@ import {
   Clock,
   CheckCircle,
   ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
   Search,
   Filter
 } from 'lucide-react';
 
+<<<<<<< HEAD
+import React from 'react';
+import { FileText, BarChart3, MessageSquare, Settings, BookOpen, Video, Download } from 'lucide-react';
+import Layout from '../components/Layout';
+
+const resources = [
+  {
+    title: "Documentation",
+    description: "Comprehensive guides and technical documentation",
+    icon: FileText,
+    href: "/docs",
+    color: "from-blue-500 to-blue-600",
+    items: ["API Documentation", "Integration Guides", "Best Practices", "Troubleshooting"]
+  },
+  {
+    title: "Case Studies",
+    description: "Real-world success stories and implementations",
+    icon: BarChart3,
+    href: "/case-studies",
+    color: "from-green-500 to-green-600",
+    items: ["Client Success Stories", "Implementation Examples", "ROI Analysis", "Lessons Learned"]
+  },
+  {
+    title: "Blog",
+    description: "Latest insights, trends, and technical articles",
+    icon: MessageSquare,
+    href: "/blog",
+    color: "from-purple-500 to-purple-600",
+    items: ["Technology Trends", "Industry Insights", "Technical Tutorials", "Company News"]
+  },
+  {
+    title: "API Reference",
+    description: "Complete API documentation and examples",
+    icon: Settings,
+    href: "/api-docs",
+    color: "from-orange-500 to-orange-600",
+    items: ["REST API", "GraphQL", "SDKs", "Code Examples"]
+  }
+];
+
+const quickLinks = [
+  { title: "Getting Started", href: "/docs/getting-started", icon: BookOpen },
+  { title: "Video Tutorials", href: "/tutorials", icon: Video },
+  { title: "Download SDKs", href: "/downloads", icon: Download },
+  { title: "Support Center", href: "/support", icon: MessageSquare }
+];
+
+export default function ResourcesPage() {
+  return (
+    <Layout
+      title="Resources - Zion Tech Group"
+      description="Comprehensive resources including documentation, case studies, blog posts, and API references for developers and businesses."
+      keywords="documentation, case studies, blog, API reference, resources, tutorials, guides"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
+=======
 const resources = [
   {
     title: 'AI Implementation Guide',
@@ -45,13 +99,12 @@ const resources = [
     duration: '20 min read',
     downloads: '890',
     rating: 4.6,
-    link: 'https://ziontechgroup.com/resources/cloud-migration-checklist.pdf',
-    popular: true
+    link: 'https://ziontechgroup.com/resources/cloud-migration-checklist.pdf'
   },
   {
     title: 'Cybersecurity Best Practices',
-    description: 'Essential cybersecurity practices to protect your business from threats and attacks.',
-    type: 'Whitepaper',
+    description: 'Essential security practices to protect your business from cyber threats.',
+    type: 'Guide',
     category: 'Security',
     format: 'PDF',
     size: '3.1 MB',
@@ -62,397 +115,220 @@ const resources = [
     popular: true
   },
   {
-    title: 'Micro SaaS Development Video Series',
-    description: '10-part video series covering everything from ideation to deployment of micro SaaS products.',
-    type: 'Video Series',
-    category: 'Development',
-    format: 'Video',
-    size: '2.5 GB',
-    duration: '4 hours',
-    downloads: '650',
-    rating: 4.7,
-    link: 'https://ziontechgroup.com/resources/micro-saas-development-series',
-    popular: false
-  },
-  {
-    title: 'API Design Standards',
-    description: 'Comprehensive standards and best practices for designing robust and scalable APIs.',
-    type: 'Standards',
-    category: 'Development',
-    format: 'PDF',
-    size: '1.8 MB',
-    duration: '35 min read',
-    downloads: '720',
-    rating: 4.5,
-    link: 'https://ziontechgroup.com/resources/api-design-standards.pdf',
-    popular: false
-  },
-  {
-    title: 'Data Analytics Implementation',
-    description: 'Guide to implementing data analytics solutions for business intelligence and insights.',
-    type: 'Guide',
-    category: 'Analytics',
-    format: 'PDF',
-    size: '2.2 MB',
-    duration: '50 min read',
-    downloads: '980',
-    rating: 4.6,
-    link: 'https://ziontechgroup.com/resources/data-analytics-implementation.pdf',
-    popular: true
-  },
-  {
-    title: 'DevOps Transformation Webinar',
-    description: 'Recorded webinar on transforming your development and operations processes.',
+    title: 'Webinar: Future of AI in Business',
+    description: 'Join our experts as they discuss the latest AI trends and their impact on business.',
     type: 'Webinar',
-    category: 'DevOps',
+    category: 'AI',
     format: 'Video',
-    size: '1.8 GB',
-    duration: '90 min',
-    downloads: '420',
-    rating: 4.4,
-    link: 'https://ziontechgroup.com/resources/devops-transformation-webinar',
-    popular: false
-  },
-  {
-    title: 'IoT Security Framework',
-    description: 'Comprehensive framework for securing IoT devices and networks in enterprise environments.',
-    type: 'Framework',
-    category: 'IoT',
-    format: 'PDF',
-    size: '2.8 MB',
-    duration: '55 min read',
-    downloads: '340',
+    size: '450 MB',
+    duration: '1 hour',
+    downloads: '3,200',
     rating: 4.7,
-    link: 'https://ziontechgroup.com/resources/iot-security-framework.pdf',
-    popular: false
+    link: 'https://ziontechgroup.com/webinars/future-of-ai-in-business',
+    upcoming: true
   },
   {
-    title: 'Digital Transformation Roadmap',
-    description: 'Strategic roadmap for digital transformation initiatives across different industries.',
-    type: 'Roadmap',
+    title: 'API Integration Tutorial',
+    description: 'Learn how to integrate our APIs into your applications with practical examples.',
+    type: 'Tutorial',
+    category: 'Development',
+    format: 'Video',
+    size: '280 MB',
+    duration: '35 min',
+    downloads: '1,800',
+    rating: 4.5,
+    link: 'https://ziontechgroup.com/tutorials/api-integration'
+  },
+  {
+    title: 'White Paper: Digital Transformation',
+    description: 'Comprehensive analysis of digital transformation strategies for modern businesses.',
+    type: 'White Paper',
     category: 'Strategy',
     format: 'PDF',
-    size: '1.5 MB',
-    duration: '30 min read',
-    downloads: '1,100',
+    size: '4.2 MB',
+    duration: '90 min read',
+    downloads: '1,500',
     rating: 4.8,
-    link: 'https://ziontechgroup.com/resources/digital-transformation-roadmap.pdf',
-    popular: true
-  },
-  {
-    title: 'Machine Learning Model Deployment',
-    description: 'Best practices for deploying and monitoring machine learning models in production.',
-    type: 'Best Practices',
-    category: 'AI',
-    format: 'PDF',
-    size: '2.0 MB',
-    duration: '40 min read',
-    downloads: '580',
-    rating: 4.5,
-    link: 'https://ziontechgroup.com/resources/ml-model-deployment.pdf',
-    popular: false
-  },
-  {
-    title: 'Cloud Cost Optimization Strategies',
-    description: 'Proven strategies for optimizing cloud costs and improving resource utilization.',
-    type: 'Strategies',
-    category: 'Cloud',
-    format: 'PDF',
-    size: '1.3 MB',
-    duration: '25 min read',
-    downloads: '750',
-    rating: 4.6,
-    link: 'https://ziontechgroup.com/resources/cloud-cost-optimization.pdf',
-    popular: false
-  },
-  {
-    title: 'API Security Workshop',
-    description: 'Interactive workshop materials for implementing comprehensive API security measures.',
-    type: 'Workshop',
-    category: 'Security',
-    format: 'ZIP',
-    size: '15 MB',
-    duration: '2 hours',
-    downloads: '290',
-    rating: 4.9,
-    link: 'https://ziontechgroup.com/resources/api-security-workshop.zip',
-    popular: false
+    link: 'https://ziontechgroup.com/whitepapers/digital-transformation.pdf'
   }
 ];
 
-const categories = ['All', 'AI', 'Cloud', 'Security', 'Development', 'Analytics', 'DevOps', 'IoT', 'Strategy'];
-const types = ['All', 'Guide', 'Checklist', 'Whitepaper', 'Video Series', 'Standards', 'Webinar', 'Framework', 'Roadmap', 'Best Practices', 'Strategies', 'Workshop'];
+const categories = ['All', 'AI', 'Cloud', 'Security', 'Development', 'Strategy'];
+const types = ['All', 'Guide', 'Checklist', 'Webinar', 'Tutorial', 'White Paper'];
 
-export default function ResourcesPage() {
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-  const [selectedType, setSelectedType] = React.useState('All');
-  const [searchTerm, setSearchTerm] = React.useState('');
-
-  const filteredResources = resources.filter(resource => {
-    const matchesCategory = selectedCategory === 'All' || resource.category === selectedCategory;
-    const matchesType = selectedType === 'All' || resource.type === selectedType;
-    const matchesSearch = searchTerm === '' || 
-      resource.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      resource.description.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    return matchesCategory && matchesType && matchesSearch;
-  });
-
-  const stats = [
-    { number: '50+', label: 'Resources Available' },
-    { number: '10,000+', label: 'Total Downloads' },
-    { number: '4.7', label: 'Average Rating' },
-    { number: '24/7', label: 'Access Available' }
-  ];
-
+export default function Resources() {
   return (
-    <>
-      <Head>
-        <title>Resources - Zion Tech Group</title>
-        <meta name="description" content="Free resources, guides, whitepapers, and tools to help you succeed with technology. Download our comprehensive guides and best practices." />
-        <meta name="keywords" content="technology resources, guides, whitepapers, best practices, tutorials, downloads" />
-      </Head>
-
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.h1 
-              className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
+    <Layout title="Resources - Zion Tech Group">
+      <div className="min-h-screen bg-gray-50">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              className="text-center text-white"
             >
-              Resources & Guides
-            </motion.h1>
-            <motion.p 
-              className="text-xl md:text-2xl mb-8 text-gray-200"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Access our comprehensive library of free resources, guides, and best practices to accelerate your technology journey.
-            </motion.p>
-            <motion.div 
-              className="flex flex-col sm:flex-row justify-center gap-4"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                Request Custom Resource
-              </Link>
-              <a href="tel:+13024640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                Call +1 302 464 0950
-              </a>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Resources & Documentation
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
+                Access our comprehensive library of guides, tutorials, and best practices to accelerate your success.
+              </p>
             </motion.div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Our Resources Matter</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our resources are created by industry experts and based on real-world experience and proven methodologies.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                <div className="text-gray-600">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Browse Resources</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Find the perfect resource for your needs with our comprehensive library.
-            </p>
-            
-            <div className="max-w-2xl mx-auto mb-8">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search resources..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-            </div>
-            
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="flex items-center gap-2">
-                <Filter className="w-5 h-5 text-gray-600" />
-                <span className="text-gray-600 font-medium">Filter by Category:</span>
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
-                >
-                  {categories.map((category) => (
-                    <option key={category} value={category}>{category}</option>
-                  ))}
-                </select>
-              </div>
-              
-              <div className="flex items-center gap-2">
-                <span className="text-gray-600 font-medium">Type:</span>
-                <select
-                  value={selectedType}
-                  onChange={(e) => setSelectedType(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
-                >
-                  {types.map((type) => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
-                </select>
+        {/* Search and Filter Section */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex flex-col md:flex-row gap-4 mb-8">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search resources..."
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                <div className="flex gap-2">
+                  <select className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    {categories.map((category) => (
+                      <option key={category} value={category}>
+                        {category}
+                      </option>
+                    ))}
+                  </select>
+                  <select className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    {types.map((type) => (
+                      <option key={type} value={type}>
+                        {type}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
             </div>
           </div>
+        </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredResources.map((resource, index) => (
-              <motion.div
-                key={index}
-                className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    {resource.format === 'PDF' && <FileText className="w-5 h-5 text-red-500" />}
-                    {resource.format === 'Video' && <Video className="w-5 h-5 text-blue-500" />}
-                    {resource.format === 'ZIP' && <Download className="w-5 h-5 text-green-500" />}
-                    <span className="text-sm font-medium text-gray-600">{resource.type}</span>
-                  </div>
-                  {resource.popular && (
-                    <span className="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">
-                      Popular
-                    </span>
-                  )}
-                </div>
-                
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{resource.title}</h3>
-                <p className="text-gray-600 mb-4 text-sm">{resource.description}</p>
-                
-                <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
-                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">{resource.category}</span>
-                  <span>{resource.size}</span>
-                  <span>{resource.duration}</span>
-                </div>
-                
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (
-                        <Award
-                          key={i}
-                          className={`w-4 h-4 ${
-                            i < Math.floor(resource.rating) ? 'text-yellow-400' : 'text-gray-300'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                    <span className="text-sm text-gray-600">{resource.rating}</span>
-                  </div>
-                  <span className="text-sm text-gray-500">{resource.downloads} downloads</span>
-                </div>
-                
-                <a
-                  href={resource.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center transition-colors flex items-center justify-center gap-2"
+        {/* Resources Grid */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {resources.map((resource, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow p-6"
                 >
-                  <Download className="w-4 h-4" />
-                  Download Now
-                </a>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Need Custom Resources?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Can't find what you're looking for? We can create custom resources tailored to your specific needs and industry.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Request Custom Resource</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-center">
-                      <Phone className="w-5 h-5 text-blue-600 mr-3" />
-                      <a href="tel:+13024640950" className="text-gray-700 hover:text-blue-600">
-                        +1 302 464 0950
-                      </a>
-                    </div>
-                    <div className="flex items-center">
-                      <Mail className="w-5 h-5 text-blue-600 mr-3" />
-                      <a href="mailto:kleber@ziontechgroup.com" className="text-gray-700 hover:text-blue-600">
-                        kleber@ziontechgroup.com
-                      </a>
-                    </div>
-                    <div className="flex items-center">
-                      <MapPin className="w-5 h-5 text-blue-600 mr-3" />
-                      <span className="text-gray-700">
-                        364 E Main St STE 1008<br />
-                        Middletown DE 19709
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-2">
+                      {resource.type === 'Webinar' ? (
+                        <Video className="w-5 h-5 text-red-500" />
+                      ) : resource.type === 'Tutorial' ? (
+                        <Video className="w-5 h-5 text-blue-500" />
+                      ) : (
+                        <FileText className="w-5 h-5 text-green-500" />
+                      )}
+                      <span className="text-sm font-medium text-gray-600 bg-gray-100 px-2 py-1 rounded">
+                        {resource.type}
                       </span>
                     </div>
+                    {resource.popular && (
+                      <span className="text-xs font-medium text-orange-600 bg-orange-100 px-2 py-1 rounded">
+                        Popular
+                      </span>
+                    )}
+                    {resource.upcoming && (
+                      <span className="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded">
+                        Upcoming
+                      </span>
+                    )}
                   </div>
-                </div>
-                
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">What We Can Create</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-center text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                      Industry-Specific Guides
-                    </li>
-                    <li className="flex items-center text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                      Custom Checklists & Templates
-                    </li>
-                    <li className="flex items-center text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                      Video Tutorials & Webinars
-                    </li>
-                    <li className="flex items-center text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                      Technical Documentation
-                    </li>
-                  </ul>
-                </div>
-              </div>
+
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {resource.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {resource.description}
+                  </p>
+
+                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <div className="flex items-center space-x-4">
+                      <span className="flex items-center">
+                        <Clock className="w-4 h-4 mr-1" />
+                        {resource.duration}
+                      </span>
+                      <span className="flex items-center">
+                        <Download className="w-4 h-4 mr-1" />
+                        {resource.downloads}
+                      </span>
+                    </div>
+                    <div className="flex items-center">
+                      <Award className="w-4 h-4 text-yellow-500 mr-1" />
+                      {resource.rating}
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-500">
+                      {resource.format} • {resource.size}
+                    </div>
+                    <a
+                      href={resource.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                    >
+                      {resource.type === 'Webinar' ? 'Register' : 'Download'}
+                      <ExternalLink className="w-4 h-4 ml-2" />
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
-    </>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Need More Resources?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Can't find what you're looking for? Our team is here to help you with custom solutions and personalized guidance.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Contact Us
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+                <Link
+                  href="/docs"
+                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                >
+                  View Documentation
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
   );
 }

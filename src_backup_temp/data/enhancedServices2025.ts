@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:src/data/enhancedServices2025.ts
-export interface Service { "id": "string; "title": string; "description": string; "category": string; "subcategory": string; "priceRange": string; "features": string[]; "benefits": string[]; "useCases": string[]; "targetAudience": string[]; "icon": string; "href": string; popular?: boolean; new?: boolean; marketPrice?: string; implementationTime?: string; supportLevel?: string; integrations?: string[]; compliance?: string[]; "} export const "enhancedServices2025": "Service[] = ["
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-export interface Service { "id": string; title: string; description: string; category: string; subcategory: string; priceRange: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; icon: string; href: string; popular?: boolean; new?: boolean; marketPrice?: string; implementationTime?: string; supportLevel?: string; integrations?: string[]; compliance?: string[]; } export const "enhancedServices2025": Service[] = [
-export interface Service { id: string; title: string; description: string; category: string; subcategory: string; priceRange: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; icon: string; href: string; popular?: boolean; new?: boolean; marketPrice?: string; implementationTime?: string; supportLevel?: string; integrations?: string[]; compliance?: string[]} export const enhancedServices2025: Service[] = [

@@ -12,3 +12,4 @@ export default function Jest.setup({ }: Jest.setupProps) {
     </div>
   );
 }
+}
