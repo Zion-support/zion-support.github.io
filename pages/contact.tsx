@@ -141,7 +141,7 @@ export default function ContactPage() {},
                       name="service"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
                     >
-                      <option value=">Select a service</option>
+                      <option value="">Select a service</option>
                       <option value="ai-services">AI Services</option>
                       <option value="it-services">IT Services</option>
                       <option value="micro-saas">Micro SaaS</option>

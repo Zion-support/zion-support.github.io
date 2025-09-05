@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 import MainLayout from '../components/layout/MainLayout'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import {
   Users, 
   MapPin, 
@@ -16,7 +16,7 @@ import {
   Laptop,
   BookOpen,
   Target
-} from 'lucide-react'
+} from 'lucide-react';
 
 const benefits = [
   {
@@ -89,141 +89,118 @@ const openPositions = [
     type: "Full-time",
     experience: "4+ years",
     description: "Manage cloud infrastructure, CI/CD pipelines, and deployment automation.",
-    requirements: []
+    requirements: [
       "4+ years of DevOps experience",
       "Expertise in AWS, Docker, and Kubernetes",
       "Experience with CI/CD tools (Jenkins, GitLab CI)",
-<<<<<<< HEAD
       "Infrastructure as Code (Terraform, CloudFormation)"
-=======
-      "Infrastructure as Code (Terraform, CloudFormation)"];
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
     ],
     featured: false
   },
-  {}
+  {
     title: "Product Manager",
     department: "Product",
     location: "Remote / Delaware",
     type: "Full-time",
     experience: "3+ years",
     description: "Lead product strategy and roadmap for our AI and SaaS solutions.",
-    requirements: []
+    requirements: [
       "3+ years of product management experience",
       "Experience with B2B SaaS products",
       "Strong analytical and communication skills",
-<<<<<<< HEAD
       "Technical background preferred"
-=======
-      "Technical background preferred"];
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
     ],
     featured: false
   },
-  {}
+  {
     title: "Sales Engineer",
     department: "Sales",
     location: "Remote / Delaware",
     type: "Full-time",
     experience: "2+ years",
     description: "Support sales team with technical expertise and client demonstrations.",
-    requirements: []
+    requirements: [
       "2+ years of technical sales experience",
       "Strong technical background",
       "Excellent presentation and communication skills",
-<<<<<<< HEAD
       "Experience with enterprise software sales"
-=======
-      "Experience with enterprise software sales"];
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
     ],
     featured: false
   },
-  {}
+  {
     title: "UX/UI Designer",
     department: "Design",
     location: "Remote / Delaware",
     type: "Full-time",
     experience: "3+ years",
     description: "Design user experiences and interfaces for our web and mobile applications.",
-    requirements: []
+    requirements: [
       "3+ years of UX/UI design experience",
       "Proficiency in Figma, Sketch, or Adobe XD",
       "Experience with design systems",
-<<<<<<< HEAD
       "Portfolio demonstrating B2B product design"
     ],
     featured: false
   }
-=======
-      "Portfolio demonstrating B2B product design"];
-    ],
-    featured: false;
-  };
->>>>>>> c9e9689af585540f887bafbc0e4ae1c044e075be
 ];
 
-const culture = []
-  {}
+const culture = [
+  {
     title: "Innovation First",
     description: "We encourage experimentation and innovative thinking in everything we do.",
-    icon: Zap;
+    icon: Zap
   },
-  {}
+  {
     title: "Collaborative Environment",
     description: "Open communication and teamwork are at the heart of our culture.",
-    icon: Users;
+    icon: Users
   },
-  {}
+  {
     title: "Continuous Learning",
     description: "We invest in our team's growth with learning opportunities and development programs.",
-    icon: BookOpen;
+    icon: BookOpen
   },
-  {}
+  {
     title: "Work-Life Balance",
     description: "We believe in sustainable work practices and supporting our team's well-being.",
-    icon: Heart;
-  }];
+    icon: Heart
+  }
 ];
 
-const testimonials = []
-  {}
+const testimonials = [
+  {
     name: "Sarah Chen",
     role: "Senior Developer",
     content: "Working at Zion Tech Group has been incredible. The team is supportive, the projects are challenging, and I've grown tremendously in my career.",
     avatar: "SC"
   },
-  {}
+  {
     name: "Michael Rodriguez",
     role: "AI Engineer",
     content: "The opportunity to work on cutting-edge AI projects while having the flexibility to work remotely has been perfect for me.",
     avatar: "MR"
   },
-  {}
+  {
     name: "Emily Johnson",
     role: "Product Manager",
     content: "The collaborative culture and focus on innovation make this an amazing place to work. I love being part of building solutions that make a real impact.",
     avatar: "EJ"
-  }];
+  }
 ];
 
-export default function CareersPage() {}
-  return ()
-    <MainLayout;"
+export default function CareersPage() {
+  return (
+    <MainLayout
       title="Careers - Zion Tech Group"
       description="Join our team of innovative technologists. Explore career opportunities at Zion Tech Group and help us build the future of technology."
     >
-</MainLayout>"
-      <div className="min-h-screen bg-gray-50">"
-</div>"
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
-</section>"
-          <div className="container mx-auto px-4">"
-</div>
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }};
-              animate={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
+      <div className="min-h-screen bg-gray-50">
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
@@ -281,12 +258,12 @@ export default function CareersPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;"
+            <motion.div"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -299,13 +276,13 @@ export default function CareersPage() {}
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
 </div>
-                  <motion.div;
-                    key={index};
+                  <motion.div
+                    key={index}
                     className="text-center"
-                    initial={{ opacity: 0, y: 30 }};
-                    whileInView={{ opacity: 1, y: 0 }};
-                    transition={{ duration: 0.8, delay: index * 0.1 }};
-                    viewport={{ once: true }};
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
                   >
 </motion>"
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
@@ -319,9 +296,9 @@ export default function CareersPage() {}
                     <p className="text-gray-600">"
 </p>
                     </p>
-                  </motion.div>);
+                  </motion.div>)
                 );
-              })};
+              })}
             </div>
           </div>
         </section>"
@@ -329,12 +306,12 @@ export default function CareersPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;"
+            <motion.div"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -347,13 +324,13 @@ export default function CareersPage() {}
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
-                  <motion.div;
-                    key={index};
+                  <motion.div
+                    key={index}
                     className="bg-gray-50 p-6 rounded-lg hover:bg-blue-50 transition-colors"
-                    initial={{ opacity: 0, y: 30 }};
-                    whileInView={{ opacity: 1, y: 0 }};
-                    transition={{ duration: 0.8, delay: index * 0.1 }};
-                    viewport={{ once: true }};
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
                   >
 </motion>"
                     <div className="flex items-start space-x-4">"
@@ -375,7 +352,7 @@ export default function CareersPage() {}
                     </div>
                   </motion.div>
                 );
-              })};
+              })}
             </div>
           </div>
         </section>"
@@ -383,12 +360,12 @@ export default function CareersPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;"
+            <motion.div"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -401,17 +378,17 @@ export default function CareersPage() {}
 "
             <div className="space-y-6">"
 </div>
-                <motion.div;
-                  key={index};
-                  className={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ${`}
+                <motion.div
+                  key={index}
+                  className={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 ${
                     position.featured ? 'ring-2 ring-blue-500' : '''
-                  }`};`
-                  initial={{ opacity: 0, y: 30 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.8, delay: index * 0.1 }};
-                  viewport={{ once: true }};
+                  }`}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
-</motion>``
+</motion>'
                     <div className="mb-4">"
 </div>"
                       <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">"
@@ -479,7 +456,7 @@ export default function CareersPage() {}
                     </ul>
                   </div>
                 </motion.div>
-              ))};
+              ))}
             </div>
           </div>
         </section>"
@@ -487,12 +464,12 @@ export default function CareersPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;"
+            <motion.div"
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -505,13 +482,13 @@ export default function CareersPage() {}
 "
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
 </div>
-                <motion.div;
-                  key={index};
+                <motion.div
+                  key={index}
                   className="bg-gray-50 p-6 rounded-lg"
-                  initial={{ opacity: 0, y: 30 }};
-                  whileInView={{ opacity: 1, y: 0 }};
-                  transition={{ duration: 0.8, delay: index * 0.1 }};
-                  viewport={{ once: true }};
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
 </motion>"
                   <p className="text-gray-600 mb-4 italic">"
@@ -532,7 +509,7 @@ export default function CareersPage() {}
                     </div>
                   </div>
                 </motion.div>
-              ))};
+              ))}
             </div>
           </div>
         </section>"
@@ -540,11 +517,11 @@ export default function CareersPage() {}
 </section>"
           <div className="container mx-auto px-4 text-center">"
 </div>
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }};
-              transition={{ duration: 0.8 }};
-              viewport={{ once: true }};
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
 </motion>"
               <h2 className="text-3xl md:text-4xl font-bold mb-6">"

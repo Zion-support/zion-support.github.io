@@ -2,12 +2,10 @@ import { withErrorLogging } from '../withErrorLogging.cjs';
 
 export default withErrorLogging(async (req, res) => {
   if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' }
-});
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    // TODO: Implement
     // Sample wallet data - in production, this would come from a secure source
     const walletData = {
       balance: 0,
@@ -21,9 +19,7 @@ export default withErrorLogging(async (req, res) => {
     console.error('Wallet data fetch failed:', error);
     res.status(500).json({
       error: 'Failed to fetch wallet data',
-      message: error.message
-    }
-});
+      message: error.message,
+    });
   }
-}
 });
