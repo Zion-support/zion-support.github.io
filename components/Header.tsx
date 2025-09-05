@@ -24,7 +24,7 @@ import {
   DollarSign,
   ShoppingCart,
   BookOpen,
-  Monitor
+  Video
 } from 'lucide-react';
 
 const navigation = [
@@ -33,10 +33,10 @@ const navigation = [
     href: '/services',
     icon: Settings,
     children: [
-      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '50+' },
-      { name: 'IT Services', href: '/it-services', icon: Network, count: '40+' },
-      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '60+' },
-      { name: 'All Services', href: '/services', icon: Globe, count: '150+' }
+      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '35+' },
+      { name: 'IT Services', href: '/it-services', icon: Network, count: '30+' },
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '40+' },
+      { name: 'All Services', href: '/services', icon: Globe, count: '105+' }
     ]
   },
   {
@@ -59,10 +59,10 @@ const navigation = [
     children: [
       { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
       { name: 'Finance', href: '/industries/finance', icon: DollarSign },
-      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
       { name: 'E-commerce', href: '/industries/ecommerce', icon: ShoppingCart },
+      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
       { name: 'Education', href: '/industries/education', icon: BookOpen },
-      { name: 'Government', href: '/industries/government', icon: Building }
+      { name: 'Government', href: '/industries/government', icon: Shield }
     ]
   },
   {
@@ -74,34 +74,19 @@ const navigation = [
       { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
       { name: 'Blog', href: '/blog', icon: MessageSquare },
       { name: 'API Reference', href: '/api-docs', icon: Settings },
-      { name: 'White Papers', href: '/white-papers', icon: FileText },
-      { name: 'Webinars', href: '/webinars', icon: Globe }
+      { name: 'White Papers', href: '/whitepapers', icon: FileText },
+      { name: 'Webinars', href: '/webinars', icon: Video }
     ]
   },
   {
-    name: 'Company',
+    name: 'About',
     href: '/about',
-    icon: Users,
-    children: [
-      { name: 'About Us', href: '/about', icon: Users },
-      { name: 'Our Team', href: '/about#team', icon: Users },
-      { name: 'Careers', href: '/careers', icon: Users },
-      { name: 'Partners', href: '/partners', icon: Network },
-      { name: 'News', href: '/news', icon: MessageSquare },
-      { name: 'Contact', href: '/contact', icon: Phone }
-    ]
+    icon: Users
   },
   {
-    name: 'Support',
-    href: '/support',
-    icon: MessageSquare,
-    children: [
-      { name: 'Help Center', href: '/support', icon: MessageSquare },
-      { name: 'Technical Support', href: '/support/technical', icon: Settings },
-      { name: 'Training', href: '/training', icon: BookOpen },
-      { name: 'Community', href: '/community', icon: Users },
-      { name: 'Status Page', href: '/status', icon: Monitor }
-    ]
+    name: 'Contact',
+    href: '/contact',
+    icon: Phone
   }
 ];
 
