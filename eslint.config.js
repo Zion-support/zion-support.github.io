@@ -4,6 +4,11 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+
+// Aliases for compatibility
+const typescript = tseslint;
 
 export default [
   {
@@ -233,59 +238,56 @@ export default [
     }
   },
   {
-<<<<<<< HEAD
     files: ['**/*.{ts,tsx}'],
-=======
-    "files": ['**/*.{ts,tsx}'],
-    "languageOptions": {
+    languageOptions: {
       parser: tsparser,
-      "ecmaVersion": 2021,
-      "sourceType": 'module',
-      "globals": {
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
         window: 'readonly',
-        "document": 'readonly',
-        "navigator": 'readonly',
-        "localStorage": 'readonly',
-        "sessionStorage": 'readonly',
-        "console": 'readonly',
-        "setTimeout": 'readonly',
-        "setInterval": 'readonly',
-        "clearTimeout": 'readonly',
-        "clearInterval": 'readonly',
-        "requestAnimationFrame": 'readonly',
-        "cancelAnimationFrame": 'readonly',
-        "fetch": 'readonly',
-        "URL": 'readonly',
-        "URLSearchParams": 'readonly',
-        "Blob": 'readonly',
-        "CustomEvent": 'readonly',
-        "Intl": 'readonly',
-        "performance": 'readonly',
-        "caches": 'readonly',
-        "Notification": 'readonly',
-        "ServiceWorker": 'readonly',
-        "ServiceWorkerRegistration": 'readonly',
-        "PushSubscription": 'readonly',
-        "NotificationPermission": 'readonly',
-        "process": 'readonly',
-        "global": 'readonly',
-        "jest": 'readonly',
-        "describe": 'readonly',
-        "it": 'readonly',
-        "test": 'readonly',
-        "expect": 'readonly',
-        "vi": 'readonly',
-        "Deno": 'readonly',
-        "React": 'readonly',
-        "KeyboardEvent": 'readonly',
-        "HTMLElement": 'readonly',
-        "HTMLButtonElement": 'readonly',
-        "HTMLAnchorElement": 'readonly',
-        "MutationObserver": 'readonly',
-        "RequestInit": 'readonly',
-        "AbortController": 'readonly',
-        "fs": 'readonly',
-        "CodeQualityChecker": 'readonly'
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        fetch: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
+        Blob: 'readonly',
+        CustomEvent: 'readonly',
+        Intl: 'readonly',
+        performance: 'readonly',
+        caches: 'readonly',
+        Notification: 'readonly',
+        ServiceWorker: 'readonly',
+        ServiceWorkerRegistration: 'readonly',
+        PushSubscription: 'readonly',
+        NotificationPermission: 'readonly',
+        process: 'readonly',
+        global: 'readonly',
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        vi: 'readonly',
+        Deno: 'readonly',
+        React: 'readonly',
+        KeyboardEvent: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLButtonElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        MutationObserver: 'readonly',
+        RequestInit: 'readonly',
+        AbortController: 'readonly',
+        fs: 'readonly',
+        CodeQualityChecker: 'readonly'
       }
     },
     plugins: {
@@ -297,8 +299,10 @@ export default [
       'no-console': 'warn',
       'no-unused-vars': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
+    }
   },
   {
+    ignores: [
       'src/**',
       'automation/**',
       'automation_backup/**',
@@ -431,10 +435,9 @@ export default [
       '*.sar',
       '*.nar'
     ]
-  }
-];
+  },
+  {
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
->>>>>>> b53b98be96da3bddf99ec2a6a7536d70cb4cb38c
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
