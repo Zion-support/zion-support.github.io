@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 import { Code, Book, Zap, Shield, Globe, Database, Server, Lock, CheckCircle, ArrowRight } from 'lucide-react';
 
@@ -12,32 +13,14 @@ const apiServices = [
   {
     title: 'GraphQL API',
     description: 'Flexible query language for APIs',
-    icon: Code,
-    features: ['Single Endpoint', 'Type Safety', 'Real-time Subscriptions', 'Introspection']
+    icon: Database,
+    features: ['Single Endpoint', 'Real-time Subscriptions', 'Type Safety', 'Introspection']
   },
   {
     title: 'WebSocket API',
     description: 'Real-time bidirectional communication',
     icon: Zap,
-    features: ['Real-time Updates', 'Low Latency', 'Persistent Connection', 'Event-driven']
-  },
-  {
-    title: 'Authentication API',
-    description: 'Secure user authentication and authorization',
-    icon: Lock,
-    features: ['OAuth 2.0', 'JWT Tokens', 'Multi-factor Auth', 'Session Management']
-  },
-  {
-    title: 'Data API',
-    description: 'Access and manage your data',
-    icon: Database,
-    features: ['CRUD Operations', 'Data Validation', 'Query Optimization', 'Caching']
-  },
-  {
-    title: 'Analytics API',
-    description: 'Track and analyze usage patterns',
-    icon: Server,
-    features: ['Usage Metrics', 'Performance Data', 'Custom Events', 'Real-time Dashboards']
+    features: ['Real-time Updates', 'Low Latency', 'Persistent Connections', 'Event-driven']
   }
 ];
 
@@ -47,172 +30,99 @@ export default function APIPage() {
       title: "RESTful APIs",
       description: "Clean, intuitive REST API endpoints for easy integration",
       icon: Code,
-      benefits: [
-        "Standard HTTP methods",
-        "JSON request/response format",
-        "Comprehensive error handling",
-        "Rate limiting and throttling"
-      ]
+      features: ["JSON Responses", "HTTP Status Codes", "Rate Limiting"]
     },
     {
-      title: "Real-time Communication",
-      description: "WebSocket and Server-Sent Events for live updates",
-      icon: Zap,
-      benefits: [
-        "Instant data synchronization",
-        "Low-latency communication",
-        "Scalable connection management",
-        "Automatic reconnection"
-      ]
-    },
-    {
-      title: "Security & Authentication",
-      description: "Enterprise-grade security with multiple auth methods",
-      icon: Shield,
-      benefits: [
-        "OAuth 2.0 and OpenID Connect",
-        "JWT token management",
-        "API key authentication",
-        "Role-based access control"
-      ]
-    },
-    {
-      title: "Developer Experience",
-      description: "Comprehensive documentation and developer tools",
+      title: "Comprehensive Documentation",
+      description: "Detailed API documentation with examples and guides",
       icon: Book,
-      benefits: [
-        "Interactive API documentation",
-        "SDKs for multiple languages",
-        "Code examples and tutorials",
-        "Sandbox environment"
-      ]
+      features: ["Interactive Docs", "Code Examples", "SDK Libraries"]
+    },
+    {
+      title: "High Performance",
+      description: "Fast, reliable APIs built for scale and speed",
+      icon: Zap,
+      features: ["Low Latency", "High Throughput", "Global CDN"]
+    },
+    {
+      title: "Enterprise Security",
+      description: "Bank-level security with authentication and encryption",
+      icon: Shield,
+      features: ["OAuth 2.0", "API Keys", "SSL/TLS Encryption"]
     }
   ];
 
   return (
-    <Layout>
+    <Layout
+      title="API - Zion Tech Group"
+      description="Powerful APIs for AI, cloud services, and enterprise solutions"
+      keywords="API, REST API, GraphQL, WebSocket, AI API, cloud API"
+    >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center text-white"
+              className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Powerful APIs
+                Powerful APIs for Modern Development
               </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                Build amazing applications with our comprehensive suite of APIs. 
-                From REST to GraphQL, we provide the tools you need to succeed.
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Integrate with our comprehensive suite of APIs for AI, cloud services, and enterprise solutions.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
+                >
                   Get Started
-                </button>
-                <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                </Link>
+                <Link
+                  href="/docs"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
                   View Documentation
-                </button>
+                </Link>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* API Services Grid */}
-        <section className="py-20 bg-white">
+        {/* API Features */}
+        <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Available APIs
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose from our comprehensive suite of APIs designed for modern applications.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {apiServices.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-200"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="p-3 bg-blue-100 rounded-lg mr-4">
-                      <service.icon className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
+            <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Our APIs?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our APIs are built with developers in mind, offering powerful features and excellent documentation.
+                Built for developers, by developers. Our APIs are designed for simplicity, performance, and reliability.
               </p>
-            </motion.div>
+            </div>
 
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {apiFeatures.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white p-8 rounded-lg shadow-lg"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center"
                 >
-                  <div className="flex items-center mb-4">
-                    <div className="p-3 bg-blue-100 rounded-lg mr-4">
-                      <feature.icon className="h-8 w-8 text-blue-600" />
-                    </div>
-                    <h3 className="text-2xl font-semibold text-gray-900">
-                      {feature.title}
-                    </h3>
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-blue-600" />
                   </div>
-                  <p className="text-gray-600 mb-6">
-                    {feature.description}
-                  </p>
-                  <ul className="space-y-3">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-gray-700">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                        {benefit}
+                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                  <p className="text-gray-600 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.features.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        {item}
                       </li>
                     ))}
                   </ul>
@@ -222,68 +132,208 @@ export default function APIPage() {
           </div>
         </section>
 
-        {/* Code Example Section */}
-        <section className="py-20 bg-white">
+        {/* Additional API Services */}
+        <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Code className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">GraphQL API</h3>
+                <p className="text-gray-600 mb-4">Flexible GraphQL API for complex queries</p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Flexible Queries
+                  </li>
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Real-time Subscriptions
+                  </li>
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Schema Introspection
+                  </li>
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Type Safety
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">WebSocket API</h3>
+                <p className="text-gray-600 mb-4">Real-time communication and updates</p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Real-time Updates
+                  </li>
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Bidirectional Communication
+                  </li>
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Low Latency
+                  </li>
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Event-driven
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Book className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">SDK Libraries</h3>
+                <p className="text-gray-600 mb-4">Official SDKs for popular programming languages</p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    JavaScript/TypeScript
+                  </li>
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Python
+                  </li>
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Java
+                  </li>
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    C#/.NET
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* API Documentation Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Quick Start Example
+                API Documentation
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Get started with our APIs in just a few lines of code.
+                Comprehensive API documentation with examples and interactive testing
               </p>
-            </motion.div>
+            </div>
 
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-gray-900 rounded-lg p-6 text-white font-mono text-sm overflow-x-auto">
-                <div className="text-green-400 mb-2"># Install the SDK</div>
-                <div className="text-blue-400 mb-4">npm install zion-tech-api</div>
+            <div className="space-y-8">
+              <div className="bg-gray-50 rounded-xl p-8">
+                <h3 className="text-2xl font-semibold mb-4">Authentication</h3>
+                <p className="text-gray-600 mb-6">Secure authentication and authorization endpoints</p>
                 
-                <div className="text-green-400 mb-2"># Initialize the client</div>
-                <div className="text-white mb-4">import {'{ ZionTechAPI }'} from 'zion-tech-api';</div>
-                <div className="text-white mb-4">const api = new ZionTechAPI('your-api-key');</div>
+                <div className="space-y-6">
+                  <div className="bg-white rounded-lg p-6 border">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="px-2 py-1 bg-green-100 text-green-800 text-sm font-medium rounded">POST</span>
+                      <code className="text-sm font-mono">/api/v1/auth/login</code>
+                    </div>
+                    <p className="text-gray-600 mb-4">Authenticate user with email and password</p>
+                    <div className="bg-gray-900 rounded p-4 overflow-x-auto">
+                      <pre className="text-green-400 text-sm">
+{`curl -X POST https://api.ziontechgroup.com/v1/auth/login \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "email": "user@example.com",
+    "password": "your_password"
+  }'`}
+                      </pre>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-lg p-6 border">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="px-2 py-1 bg-green-100 text-green-800 text-sm font-medium rounded">POST</span>
+                      <code className="text-sm font-mono">/api/v1/auth/register</code>
+                    </div>
+                    <p className="text-gray-600 mb-4">Register a new user account</p>
+                    <div className="bg-gray-900 rounded p-4 overflow-x-auto">
+                      <pre className="text-green-400 text-sm">
+{`curl -X POST https://api.ziontechgroup.com/v1/auth/register \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "email": "user@example.com",
+    "password": "your_password",
+    "name": "John Doe"
+  }'`}
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 rounded-xl p-8">
+                <h3 className="text-2xl font-semibold mb-4">AI Services</h3>
+                <p className="text-gray-600 mb-6">Access to our AI-powered services and models</p>
                 
-                <div className="text-green-400 mb-2"># Make API calls</div>
-                <div className="text-white mb-2">// Get all services</div>
-                <div className="text-white mb-4">const services = await api.services.list();</div>
-                
-                <div className="text-white mb-2">// Create a new service</div>
-                <div className="text-white">const newService = await api.services.create({'{'}</div>
-                <div className="text-white ml-4">name: 'My Service',</div>
-                <div className="text-white ml-4">description: 'A new service'</div>
-                <div className="text-white">{'}'});</div>
+                <div className="space-y-6">
+                  <div className="bg-white rounded-lg p-6 border">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="px-2 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded">POST</span>
+                      <code className="text-sm font-mono">/api/v1/ai/email-responder</code>
+                    </div>
+                    <p className="text-gray-600 mb-4">Generate intelligent email responses using AI</p>
+                    <div className="bg-gray-900 rounded p-4 overflow-x-auto">
+                      <pre className="text-green-400 text-sm">
+{`curl -X POST https://api.ziontechgroup.com/v1/ai/email-responder \\
+  -H "Content-Type: application/json" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -d '{
+    "message": "Hello, I need help with my account",
+    "context": {
+      "user_id": "12345",
+      "previous_messages": []
+    }
+  }'`}
+                      </pre>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Build Something Amazing?
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Get Started?
               </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Start building with our APIs today and join thousands of developers creating innovative applications.
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Start building with our powerful APIs today. Get your API key and begin integrating our services.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
+                >
                   Get API Key
-                  <ArrowRight className="ml-2 h-5 w-5 inline" />
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                </Link>
+                <Link
+                  href="/docs"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
                   View Documentation
-                </button>
+                </Link>
               </div>
             </motion.div>
           </div>

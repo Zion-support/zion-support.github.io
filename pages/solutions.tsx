@@ -255,14 +255,7 @@ import {
   Star,
   Award,
   Globe,
-  Zap,
-  Cloud,
-  Code,
-  Heart,
-  ShoppingCart,
-  Settings,
-  GraduationCap,
-  Building
+  Zap
 } from 'lucide-react';
 
 >>>>>>> main
