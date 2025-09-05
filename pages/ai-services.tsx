@@ -400,6 +400,177 @@ title: 'Generative AI Content Creation Suite',
     popular: true
   },
   {
+    title: 'AI Ethics & Governance Consulting',
+    description: 'Comprehensive AI ethics framework development and responsible AI implementation consulting.',
+    icon: Shield,
+    features: ['Ethics Framework Design', 'Bias Detection & Mitigation', 'Transparency Audits', 'Compliance Training'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'AI Ethics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Autonomous Drones',
+    description: 'Fully autonomous drone systems with AI navigation, object detection, and mission planning.',
+    icon: Rocket,
+    features: ['Autonomous Navigation', 'Object Recognition', 'Mission Planning', 'Swarm Coordination'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Autonomous Systems',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Robotic Process Automation (RPA)',
+    description: 'Intelligent RPA with AI decision-making capabilities for complex business processes.',
+    icon: Settings,
+    features: ['Process Discovery', 'Intelligent Automation', 'Exception Handling', 'Continuous Learning'],
+    pricing: '$5,000 - $50,000/setup',
+    category: 'Intelligent Automation',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Hunting',
+    description: 'Advanced AI-driven threat hunting and security incident response automation.',
+    icon: Shield,
+    features: ['Threat Intelligence', 'Behavioral Analysis', 'Automated Response', 'Forensic Analysis'],
+    pricing: '$20,000 - $150,000/setup',
+    category: 'AI Security',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Virtual Reality Training',
+    description: 'Immersive VR training platforms with AI-powered personalized learning experiences.',
+    icon: Monitor,
+    features: ['VR Environment Creation', 'Adaptive Learning', 'Performance Analytics', 'Skill Assessment'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'VR Training',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Augmented Reality Solutions',
+    description: 'AR applications with AI object recognition, spatial computing, and interactive experiences.',
+    icon: Eye,
+    features: ['Object Recognition', 'Spatial Mapping', 'Real-time Rendering', 'Gesture Control'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'AR Solutions',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Digital Twin Technology',
+    description: 'Comprehensive digital twin solutions with real-time AI simulation and optimization.',
+    icon: Monitor,
+    features: ['Real-time Simulation', 'Predictive Analytics', 'Optimization Algorithms', 'IoT Integration'],
+    pricing: '$30,000 - $300,000/project',
+    category: 'Digital Twin',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Blockchain Analytics',
+    description: 'Advanced blockchain transaction analysis and cryptocurrency intelligence using AI.',
+    icon: TrendingUp,
+    features: ['Transaction Analysis', 'Anomaly Detection', 'Risk Assessment', 'Compliance Monitoring'],
+    pricing: '$5,000 - $40,000/month',
+    category: 'Blockchain AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Grid Management',
+    description: 'Intelligent smart grid optimization with AI for energy distribution and consumption.',
+    icon: Zap,
+    features: ['Load Forecasting', 'Grid Optimization', 'Renewable Integration', 'Fault Detection'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Smart Grid',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Autonomous Vehicles Fleet Management',
+    description: 'Complete fleet management system for autonomous vehicles with AI coordination.',
+    icon: Car,
+    features: ['Fleet Coordination', 'Route Optimization', 'Predictive Maintenance', 'Safety Monitoring'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Autonomous Fleet',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Mental Health Assessment',
+    description: 'AI-driven mental health screening, assessment, and early intervention systems.',
+    icon: Heart,
+    features: ['Mental Health Screening', 'Risk Assessment', 'Intervention Recommendations', 'Progress Tracking'],
+    pricing: '$10,000 - $75,000/setup',
+    category: 'Mental Health AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Smart Home Intelligence',
+    description: 'Comprehensive smart home AI system with learning capabilities and automation.',
+    icon: Home,
+    features: ['Learning Automation', 'Energy Optimization', 'Security Monitoring', 'Predictive Maintenance'],
+    pricing: '$5,000 - $30,000/setup',
+    category: 'Smart Home',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Sports Analytics',
+    description: 'Advanced sports performance analysis and prediction using computer vision and AI.',
+    icon: Target,
+    features: ['Performance Analysis', 'Injury Prediction', 'Tactical Analysis', 'Player Development'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Sports AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Weather Prediction',
+    description: 'Advanced weather forecasting using AI and machine learning for accurate predictions.',
+    icon: Globe,
+    features: ['Hyperlocal Forecasting', 'Severe Weather Detection', 'Climate Modeling', 'Agricultural Insights'],
+    pricing: '$8,000 - $60,000/setup',
+    category: 'Weather AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Legal Research Assistant',
+    description: 'Intelligent legal research platform with AI-powered case analysis and precedent finding.',
+    icon: BookOpen,
+    features: ['Case Analysis', 'Precedent Research', 'Document Review', 'Legal Writing Assistance'],
+    pricing: '$3,000 - $25,000/month',
+    category: 'Legal AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Real Estate Valuation',
+    description: 'Automated property valuation using AI analysis of market data and property features.',
+    icon: Building,
+    features: ['Property Analysis', 'Market Comparison', 'Investment Insights', 'Risk Assessment'],
+    pricing: '$2,000 - $15,000/month',
+    category: 'Real Estate AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Insurance Risk Assessment',
+    description: 'Advanced insurance risk modeling and fraud detection using AI and machine learning.',
+    icon: Shield,
+    features: ['Risk Modeling', 'Fraud Detection', 'Claims Processing', 'Underwriting Automation'],
+    pricing: '$15,000 - $100,000/setup',
+    category: 'Insurance AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Educational Personalization',
+    description: 'Personalized learning platforms with AI-driven curriculum adaptation and progress tracking.',
+    icon: BookOpen,
+    features: ['Learning Path Optimization', 'Adaptive Content', 'Progress Analytics', 'Intervention Alerts'],
+    pricing: '$5,000 - $40,000/setup',
+    category: 'EdTech AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Supply Chain Visibility',
+    description: 'End-to-end supply chain visibility and optimization using AI and IoT integration.',
+    icon: Network,
+    features: ['Real-time Tracking', 'Predictive Analytics', 'Risk Management', 'Optimization Recommendations'],
+    pricing: '$20,000 - $150,000/setup',
+    category: 'Supply Chain AI',
+    popular: true
+  },
+  {
     title: 'AI-Powered Fusion Energy Optimization',
     description: 'AI systems for optimizing nuclear fusion reactor designs and plasma control.',
     icon: Zap,
@@ -900,9 +1071,11 @@ whileHover={{ y: -5 }}
               return (
                 <motion.div
                   key={index}
-className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-blue-600" />

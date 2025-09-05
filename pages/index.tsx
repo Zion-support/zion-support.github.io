@@ -58,6 +58,23 @@ export default function HomePage() {
               <br className="hidden md:block" />
                   <span className="text-blue-300 font-semibold">📞 +1 302 464 0950 | 📧 kleber@ziontechgroup.com | 🌐 ziontechgroup.com</span>
                   </p>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8 max-w-4xl mx-auto">
+                  <h3 className="text-2xl font-bold text-white mb-4">🚀 Why Choose Zion Tech Group?</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                  <div>
+                  <h4 className="text-lg font-semibold text-blue-300 mb-2">💡 Innovation Leader</h4>
+                  <p className="text-gray-200 text-sm">50+ cutting-edge services including Quantum AI, Edge Computing, and Advanced Cybersecurity solutions</p>
+                  </div>
+                  <div>
+                  <h4 className="text-lg font-semibold text-purple-300 mb-2">💰 Competitive Pricing</h4>
+                  <p className="text-gray-200 text-sm">Transparent pricing from $29/month for micro SaaS to $1M+ for enterprise AI projects</p>
+                  </div>
+                  <div>
+                  <h4 className="text-lg font-semibold text-green-300 mb-2">⚡ Rapid Deployment</h4>
+                  <p className="text-gray-200 text-sm">Fast implementation with 24/7 support and dedicated project managers</p>
+                  </div>
+                  </div>
+                  </div>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Get Started Today
@@ -164,10 +181,12 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
             >
                   <h3 className="text-xl font-bold text-gray-900 mb-4">💰 Competitive Pricing</h3>
                   <ul className="text-gray-600 space-y-2">
-                  <li>• Micro "SaaS": $29 - $4,999/month</li>
-                  <li>• IT "Services": $120 - $500/hour</li>
-                  <li>• AI Solutions: $1,000 - $1M/project</li>
-                  <li>• Transparent, no hidden fees</li>
+                  <li>• <strong>Micro SaaS:</strong> $29 - $4,999/month (50+ solutions)</li>
+                  <li>• <strong>IT Services:</strong> $120 - $500/hour (24/7 support)</li>
+                  <li>• <strong>AI Solutions:</strong> $1,000 - $1M/project (cutting-edge AI)</li>
+                  <li>• <strong>Quantum Computing:</strong> $100K - $1M/project</li>
+                  <li>• <strong>Cybersecurity:</strong> $5K - $300K/setup</li>
+                  <li>• <strong>Free consultations</strong> and custom quotes available</li>
                   </ul>
                   </motion.div>
                   <motion.div
@@ -212,6 +231,115 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
                   <p className="text-lg mb-6">
               Contact us today for a free consultation and custom quote tailored to your needs.
             </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <div className="text-center sm:text-left">
+                  <p className="text-blue-100 mb-1">📞 <strong>Call:</strong> +1 302 464 0950</p>
+                  <p className="text-blue-100 mb-1">📧 <strong>Email:</strong> kleber@ziontechgroup.com</p>
+                  <p className="text-blue-100">📍 <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
+                  </div>
+                  <Link href="/contact" className="px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">Get Free Quote</Link>
+            </div>
+                  </motion.div>
+                  </div>
+                  </section>
+
+      {/* Innovative Services Showcase */}
+      <section className="py-20 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white">
+                  <div className="container mx-auto px-4">
+                  <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">🚀 Cutting-Edge Technology Solutions</h2>
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
+              We deliver innovative solutions across AI, Quantum Computing, Blockchain, IoT, and Advanced Cybersecurity. 
+              Our team of 50+ experts provides comprehensive technology services to transform your business.
+            </p>
+                  </motion.div>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <motion.div
+              className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+                  <h3 className="text-xl font-bold text-blue-300 mb-3">🤖 AI & Machine Learning</h3>
+                  <ul className="text-sm text-gray-200 space-y-1">
+                  <li>• Generative AI Content Creation</li>
+                  <li>• Computer Vision Solutions</li>
+                  <li>• Natural Language Processing</li>
+                  <li>• Predictive Analytics</li>
+                  <li>• AI Ethics & Governance</li>
+                  </ul>
+                  <p className="text-xs text-blue-200 mt-3">Starting at $1,000/month</p>
+                  </motion.div>
+                  <motion.div
+              className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+                  <h3 className="text-xl font-bold text-purple-300 mb-3">⚛️ Quantum Computing</h3>
+                  <ul className="text-sm text-gray-200 space-y-1">
+                  <li>• Quantum Algorithm Development</li>
+                  <li>• Quantum Machine Learning</li>
+                  <li>• Quantum-Safe Cryptography</li>
+                  <li>• Quantum Simulation</li>
+                  <li>• Hybrid Quantum-Classical Systems</li>
+                  </ul>
+                  <p className="text-xs text-purple-200 mt-3">Starting at $100,000/project</p>
+                  </motion.div>
+                  <motion.div
+              className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+                  <h3 className="text-xl font-bold text-green-300 mb-3">🔒 Advanced Cybersecurity</h3>
+                  <ul className="text-sm text-gray-200 space-y-1">
+                  <li>• Zero-Trust Architecture</li>
+                  <li>• AI-Powered Threat Hunting</li>
+                  <li>• Quantum-Safe Security</li>
+                  <li>• Advanced Persistent Threat Protection</li>
+                  <li>• Cyber Resilience Planning</li>
+                  </ul>
+                  <p className="text-xs text-green-200 mt-3">Starting at $5,000/setup</p>
+                  </motion.div>
+                  <motion.div
+              className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+                  <h3 className="text-xl font-bold text-yellow-300 mb-3">🌐 Micro SaaS Solutions</h3>
+                  <ul className="text-sm text-gray-200 space-y-1">
+                  <li>• AI-Powered Tools</li>
+                  <li>• Blockchain Services</li>
+                  <li>• IoT Platforms</li>
+                  <li>• API Management</li>
+                  <li>• Real-time Analytics</li>
+                  </ul>
+                  <p className="text-xs text-yellow-200 mt-3">Starting at $29/month</p>
+                  </motion.div>
+                  </div>
+                  <div className="text-center mt-12">
+                  <motion.div
+              className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-lg inline-block"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+                  <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
+                  <p className="text-lg mb-6">Get a free consultation and custom quote for your project</p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <div className="text-center sm:text-left">
                   <p className="text-blue-100 mb-1">📞 <strong>Call:</strong> +1 302 464 0950</p>

@@ -4,11 +4,10 @@ import { motion } from 'framer-motion';
 import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from 'lucide-react';
 import Layout from '../components/Layout';
 
-export default function RegisterPage() {},
-  {
-  const ["showPassword", "setShowPassword"] = useState(false);
-  const ["showConfirmPassword", "setShowConfirmPassword"] = useState(false);
-  const ["formData", "setFormData"] = useState({})
+export default function RegisterPage() {
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
@@ -19,7 +18,7 @@ export default function RegisterPage() {},
     subscribeNewsletter: false
   });
 
-  const ["passwordRequirements", "setPasswordRequirements"] = useState({})
+  const [passwordRequirements, setPasswordRequirements] = useState({
     length: false,
     uppercase: false,
     lowercase: false,
@@ -27,35 +26,29 @@ export default function RegisterPage() {},
     special: false
   });
 
-  const handleSubmit = (e: React.FormEvent) => {},
-  {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle registration logic here
-  },
-  {
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {},
-  {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({})
+    setFormData(prev => ({
       ...prev,
-      ["name"]: type === 'checkbox' ? checked : value
-  }));
+      [name]: type === 'checkbox' ? checked : value
+    }));
 
-    // Check password requirements;
-    if (name === 'password') {},
-  {
-      setPasswordRequirements({})
+    // Check password requirements
+    if (name === 'password') {
+      setPasswordRequirements({
         length: value.length >= 8,
-        uppercase: /["A-Z"]/.test(value),
-        lowercase: /["a-z"]/.test(value),
+        uppercase: /[A-Z]/.test(value),
+        lowercase: /[a-z]/.test(value),
         number: /\d/.test(value),
         special: /[!@#$%^&*(),.?":{}|<>]/.test(value)
-  })
-  },
-  {
-  },
-  {
+      });
+    }
+  };
 
   const isPasswordValid = Object.values(passwordRequirements).every(Boolean);
   const isFormValid = formData.firstName && formData.lastName && formData.email && 
@@ -72,32 +65,26 @@ export default function RegisterPage() {},
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }},
-  {
-            animate={{ opacity: 1, y: 0 }},
-  {
-            transition={{ duration: 0.6 }},
-  {
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center"
           >
             <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">Z</span>
             </div>
             <h2 className="mt-6 text-3xl font-bold text-white">
-              Create your account;
+              Create your account
             </h2>
             <p className="mt-2 text-sm text-gray-300">
-              Join Zion Tech Group and start your digital transformation journey;
+              Join Zion Tech Group and start your digital transformation journey
             </p>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }},
-  {
-            animate={{ opacity: 1, y: 0 }},
-  {
-            transition={{ duration: 0.6, delay: 0.2 }},
-  {
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-white/10 backdrop-blur-md rounded-lg shadow-xl p-8"
           >
             <form className="space-y-6" onSubmit={handleSubmit}>
@@ -114,11 +101,9 @@ export default function RegisterPage() {},
                       id="firstName"
                       name="firstName"
                       type="text"
-                      required;
-                      value={formData.firstName},
-  {
-                      onChange={handleChange},
-  {
+                      required
+                      value={formData.firstName}
+                      onChange={handleChange}
                       className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="First name"
                     />
@@ -127,17 +112,15 @@ export default function RegisterPage() {},
 
                 <div>
                   <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
-                    Last name;
+                    Last name
                   </label>
                   <input
                     id="lastName"
                     name="lastName"
                     type="text"
-                    required;
-                    value={formData.lastName},
-  {
-                    onChange={handleChange},
-  {
+                    required
+                    value={formData.lastName}
+                    onChange={handleChange}
                     className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Last name"
                   />
@@ -157,11 +140,9 @@ export default function RegisterPage() {},
                     name="email"
                     type="email"
                     autoComplete="email"
-                    required;
-                    value={formData.email},
-  {
-                    onChange={handleChange},
-  {
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
                     className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your email"
                   />
@@ -170,16 +151,14 @@ export default function RegisterPage() {},
 
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                  Company (optional);
+                  Company (optional)
                 </label>
                 <input
                   id="company"
                   name="company"
                   type="text"
-                  value={formData.company},
-  {
-                  onChange={handleChange},
-  {
+                  value={formData.company}
+                  onChange={handleChange}
                   className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your company name"
                 />
@@ -196,27 +175,24 @@ export default function RegisterPage() {},
                   <input
                     id="password"
                     name="password"
-                    type={showPassword ? 'text' : 'password'},
-  {
+                    type={showPassword ? 'text' : 'password'}
                     autoComplete="new-password"
-                    required;
-                    value={formData.password},
-  {
-                    onChange={handleChange},
-  {
+                    required
+                    value={formData.password}
+                    onChange={handleChange}
                     className="block w-full pl-10 pr-12 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Create a password"
                   />
                   <button
                     type="button"
                     className="absolute inset-y-0 right-0 pr-3 flex items-center"
-                    onClick={() => setShowPassword(!showPassword)},
-  {
+                    onClick={() => setShowPassword(!showPassword)}
                   >
-                    {showPassword ? (})
+                    {showPassword ? (
                       <EyeOff className="h-5 w-5 text-gray-400 hover:text-gray-300" />
-                    ) : ()
+                    ) : (
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-300" />
+                    )}
                     )},
   {
                   </button>

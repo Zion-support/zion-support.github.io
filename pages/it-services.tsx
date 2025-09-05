@@ -397,6 +397,69 @@ title: 'AI-Powered IT Operations (AIOps)',
     popular: true
   },
   {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing infrastructure setup and quantum algorithm development services.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Algorithm Development', 'Quantum Simulation', 'Hybrid Systems'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered IT Operations (AIOps)',
+    description: 'Intelligent IT operations using AI and machine learning for predictive maintenance and automation.',
+    icon: Brain,
+    features: ['Predictive Analytics', 'Automated Incident Response', 'Anomaly Detection', 'Self-healing Systems'],
+    pricing: '$30,000 - $200,000/setup',
+    category: 'AIOps',
+    popular: true
+  },
+  {
+    title: 'Advanced Persistent Threat (APT) Protection',
+    description: 'Comprehensive APT detection and response solutions for enterprise security.',
+    icon: Shield,
+    features: ['Threat Hunting', 'Behavioral Analysis', 'Incident Response', 'Forensic Analysis'],
+    pricing: '$50,000 - $300,000/setup',
+    category: 'Advanced Security',
+    popular: true
+  },
+  {
+    title: 'Multi-Cloud Orchestration Platform',
+    description: 'Unified management and orchestration across multiple cloud providers and environments.',
+    icon: Cloud,
+    features: ['Multi-cloud Management', 'Workload Migration', 'Cost Optimization', 'Unified Monitoring'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'Multi-Cloud',
+    popular: true
+  },
+  {
+    title: 'Intelligent Data Lake Architecture',
+    description: 'AI-powered data lake implementation with automated data discovery and governance.',
+    icon: Database,
+    features: ['Data Discovery', 'Automated Classification', 'Data Lineage', 'Governance Framework'],
+    pricing: '$60,000 - $400,000/project',
+    category: 'Data Lake',
+    popular: true
+  },
+  {
+    title: 'Cyber Resilience & Recovery Planning',
+    description: 'Comprehensive cyber resilience strategy with advanced recovery and business continuity planning.',
+    icon: Shield,
+    features: ['Risk Assessment', 'Recovery Planning', 'Testing & Validation', 'Crisis Management'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Cyber Resilience',
+    popular: true
+  },
+  {
+    title: 'Intelligent Network Performance Optimization',
+    description: 'AI-driven network optimization with predictive analytics and automated tuning.',
+    icon: Network,
+    features: ['Performance Analytics', 'Predictive Optimization', 'Automated Tuning', 'Capacity Planning'],
+    pricing: '$20,000 - $120,000/setup',
+    category: 'Network Optimization',
+    popular: true
+  },
+  {
     title: 'Zero-Trust Security Architecture',
     description: 'Complete zero-trust security model implementation with continuous verification.',
     icon: Shield,
@@ -746,9 +809,11 @@ whileHover={{ y: -5 }}
               return (
                 <motion.div
                   key={index}
-className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-green-600" />

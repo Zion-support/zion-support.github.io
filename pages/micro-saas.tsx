@@ -398,6 +398,87 @@ description: 'Automated code review with security scanning, performance optimiza
     popular: true
   },
   {
+    title: 'AI-Powered Voice Cloning Platform',
+    description: 'Advanced voice synthesis and cloning technology for personalized audio content.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Text-to-Speech', 'Voice Conversion', 'Emotion Control'],
+    pricing: '$199 - $1,499/month',
+    category: 'Voice AI',
+    popular: true
+  },
+  {
+    title: 'Blockchain Smart Contract Auditor',
+    description: 'Automated smart contract security analysis and vulnerability detection.',
+    icon: Lock,
+    features: ['Security Analysis', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Check'],
+    pricing: '$299 - $2,999/month',
+    category: 'Blockchain Security',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review with security scanning and performance optimization.',
+    icon: Code,
+    features: ['Automated Reviews', 'Security Scanning', 'Performance Analysis', 'Best Practices'],
+    pricing: '$99 - $799/month',
+    category: 'Developer Tools',
+    popular: true
+  },
+  {
+    title: 'Real-Time Video Analytics Platform',
+    description: 'AI-powered video analysis for security, retail, and business intelligence.',
+    icon: Video,
+    features: ['Object Detection', 'Behavior Analysis', 'Crowd Counting', 'Anomaly Detection'],
+    pricing: '$199 - $1,999/month',
+    category: 'Video Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Email Security Suite',
+    description: 'Advanced email protection with AI-driven threat detection and response.',
+    icon: Shield,
+    features: ['Threat Detection', 'Phishing Prevention', 'Spam Filtering', 'Incident Response'],
+    pricing: '$49 - $399/month',
+    category: 'Email Security',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Development Platform',
+    description: 'No-code smart contract creation and deployment for blockchain applications.',
+    icon: Code,
+    features: ['Visual Builder', 'Template Library', 'Testing Suite', 'Deployment Tools'],
+    pricing: '$99 - $699/month',
+    category: 'Blockchain Development',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Moderation API',
+    description: 'Automated content moderation for text, images, and videos using advanced AI.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
+    pricing: '$0.01 - $0.10 per request',
+    category: 'Content Moderation',
+    popular: true
+  },
+  {
+    title: 'Intelligent Data Backup & Recovery',
+    description: 'AI-powered backup solutions with intelligent deduplication and recovery.',
+    icon: HardDrive,
+    features: ['Smart Deduplication', 'Incremental Backups', 'Fast Recovery', 'Compliance'],
+    pricing: '$29 - $299/month',
+    category: 'Data Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Meeting Assistant',
+    description: 'Intelligent meeting transcription, summarization, and action item tracking.',
+    icon: MessageSquare,
+    features: ['Live Transcription', 'Meeting Summaries', 'Action Items', 'Integration APIs'],
+    pricing: '$19 - $199/month',
+    category: 'Productivity',
+    popular: true
+  },
+  {
     title: 'AI-Powered Cybersecurity Threat Hunter',
     description: 'Advanced threat detection and response with behavioral analysis and automated incident response.',
     icon: Shield,
