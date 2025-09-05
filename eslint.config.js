@@ -185,6 +185,53 @@ export default [
       'contracts.disabled/',
       'solutions.disabled/',
       'zion-os.disabled/',
+<<<<<<< HEAD
+      'cypress.disabled/',
+      'data/2024-*.ts',
+      'data/2025-*.ts',
+      'data/2026-*.ts',
+      'data/2026-*.js',
+      'data/',
+      'disabled-api/',
+      'fix_utils_files.ts',
+      'zion_academy/',
+      'automation_backup/',
+      'automation/backups/',
+      'backup-pages/',
+      'backup/',
+      'lib_backup/',
+      'data_backup/',
+      'styles_backup/',
+      'api-backup/',
+      'temp_backup/',
+      'corrupted_files_backup_2/',
+      'ai-optimization-backups/',
+      'optimization-reports/',
+      'test-generation-reports/',
+      'test-reports/',
+      'test-results/',
+      'security-reports/',
+      'pages.__backup/',
+      'pages-disabled/',
+      'pages.disabled_auto/',
+      'pages.disabled_full/',
+      'pages.old/',
+      'pages_api.disabled/',
+      'pages_backup/',
+      'pages_backup_before_cleanup/',
+      'pages_backup_conflict/',
+      'pages_backup_conflicts/',
+      'pages_disabled/',
+      'pages.bak/',
+      'pages.broken/',
+      'pages.corrupted.*/',
+      'pages.blog.disabled/',
+      'pages.disabled.full/',
+      'pages._archive_corrupted/',
+      'pages._quarantine/',
+      'pages-quarantine/',
+      'pages-backup/',
+=======
       'src_backup_temp/',
       'temp-backup/',
       'tests/',
@@ -192,6 +239,7 @@ export default [
       'public/',
       'server/',
       'services/',
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
       'components.disabled_full/',
       'data.disabled/',
       'database/',
@@ -642,22 +690,35 @@ export default [
     plugins: {
 <<<<<<< HEAD
       '@typescript-eslint': tseslint,
+<<<<<<< HEAD
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+=======
       react: react,
       'react-hooks': reactHooks
+<<<<<<< HEAD
 =======
       '@typescript-eslint': typescript,
       react: react,
       'jsx-a11y': jsxA11y,
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
+>>>>>>> 380d5be269a380502c5b88f5cbeaaaacd40bbf12
     },
     rules: {
       'no-console': 'warn',
       'no-unused-vars': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 380d5be269a380502c5b88f5cbeaaaacd40bbf12
       '@typescript-eslint/no-explicit-any': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0b51
     }
 =======
       'react/jsx-uses-react': 'error',
