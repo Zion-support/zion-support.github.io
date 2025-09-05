@@ -16,22 +16,12 @@ import {
   Users,
   Shield,
   Globe,
-  Package,
+  ShoppingCart,
+  Target,
   DollarSign,
   GraduationCap,
-  Calendar,
+  Package,
   FileText,
-  ShoppingCart,
-  Network,
-  Wifi,
-  Brain,
-  Video,
-  Smartphone,
-  Calculator,
-  Receipt,
-  Heart,
-  Target,
-  Lock,
   MessageSquare
 } from 'lucide-react';
 import Layout from './components/Layout';
@@ -50,9 +40,8 @@ const microSaasSolutions = [
       "Real-time Notifications"
     ],
     price: "Starting at $1,500/month",
-    marketPrice: "$2,500-5,000/month",
-    benefits: ["Reduce manual work by 80%", "Increase efficiency by 60%", "Save 20+ hours/week"],
-    setupTime: "1-2 weeks"
+    marketPrice: "$2,500-4,000/month",
+    benefits: ["Reduce manual work by 80%", "Increase efficiency by 60%", "Save 20+ hours/week"]
   },
   {
     title: "Data Processing Tools",
@@ -67,9 +56,8 @@ const microSaasSolutions = [
       "Data Export/Import"
     ],
     price: "Starting at $2,000/month",
-    marketPrice: "$3,500-7,000/month",
-    benefits: ["Process 10x more data", "Real-time insights", "50% faster reporting"],
-    setupTime: "2-3 weeks"
+    marketPrice: "$3,500-6,000/month",
+    benefits: ["Process 10x more data", "Generate insights 5x faster", "Reduce errors by 90%"]
   },
   {
     title: "API Integration Services",
@@ -84,9 +72,8 @@ const microSaasSolutions = [
       "Authentication & Security"
     ],
     price: "Starting at $1,800/month",
-    marketPrice: "$3,000-6,000/month",
-    benefits: ["Connect 50+ services", "99.9% uptime", "Reduce integration time by 70%"],
-    setupTime: "1-2 weeks"
+    marketPrice: "$3,000-5,500/month",
+    benefits: ["Connect 50+ systems", "Reduce integration time by 70%", "99.9% uptime guarantee"]
   },
   {
     title: "Custom Dashboard Solutions",
@@ -101,9 +88,8 @@ const microSaasSolutions = [
       "Export Capabilities"
     ],
     price: "Starting at $1,200/month",
-    marketPrice: "$2,000-4,500/month",
-    benefits: ["Centralized data view", "Mobile access", "Custom branding"],
-    setupTime: "1-2 weeks"
+    marketPrice: "$2,000-3,500/month",
+    benefits: ["Improve decision making", "Save 15+ hours/week", "Real-time insights"]
   },
   {
     title: "SaaS Platform Development",
@@ -118,9 +104,8 @@ const microSaasSolutions = [
       "Scalable Infrastructure"
     ],
     price: "Starting at $3,500/month",
-    marketPrice: "$5,000-15,000/month",
-    benefits: ["Full SaaS solution", "Scalable architecture", "Revenue generation"],
-    setupTime: "4-8 weeks"
+    marketPrice: "$6,000-15,000/month",
+    benefits: ["Scale to millions of users", "Generate recurring revenue", "Reduce development costs by 60%"]
   },
   {
     title: "Business Intelligence Tools",
@@ -135,587 +120,168 @@ const microSaasSolutions = [
       "Real-time Insights"
     ],
     price: "Starting at $2,500/month",
-    marketPrice: "$4,000-8,000/month",
-    benefits: ["Data-driven decisions", "Predictive insights", "ROI tracking"],
-    setupTime: "3-4 weeks"
+    marketPrice: "$4,500-8,000/month",
+    benefits: ["Increase revenue by 25%", "Reduce costs by 30%", "Make data-driven decisions"]
   },
   {
     title: "Customer Relationship Management",
-    description: "Comprehensive CRM solution for managing customer relationships",
+    description: "Comprehensive CRM solution for managing customer relationships and sales pipelines",
     icon: Users,
     features: [
       "Contact Management",
-      "Lead Tracking",
-      "Sales Pipeline",
-      "Email Marketing",
-      "Customer Support",
-      "Analytics & Reporting"
+      "Sales Pipeline Tracking",
+      "Email Marketing Automation",
+      "Lead Scoring",
+      "Customer Analytics",
+      "Integration with 100+ tools"
     ],
-    price: "Starting at $1,800/month",
-    marketPrice: "$2,500-6,000/month",
-    benefits: ["Increase sales by 30%", "Better customer retention", "Automated follow-ups"],
-    setupTime: "2-3 weeks"
+    price: "Starting at $2,200/month",
+    marketPrice: "$4,000-7,000/month",
+    benefits: ["Increase sales by 35%", "Improve customer retention", "Automate follow-ups"]
   },
   {
-    title: "Project Management Platform",
-    description: "Complete project management solution for teams",
-    icon: CheckCircle,
+    title: "Project Management Suite",
+    description: "Complete project management solution with team collaboration and resource planning",
+    icon: Globe,
     features: [
       "Task Management",
       "Team Collaboration",
-      "Time Tracking",
       "Resource Planning",
-      "Progress Monitoring",
-      "Document Sharing"
+      "Time Tracking",
+      "Budget Management",
+      "Progress Reporting"
     ],
-    price: "Starting at $1,500/month",
-    marketPrice: "$2,000-5,000/month",
-    benefits: ["Improve productivity by 40%", "Better project visibility", "Team coordination"],
-    setupTime: "2-3 weeks"
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,200-6,000/month",
+    benefits: ["Complete projects 40% faster", "Improve team productivity", "Reduce project costs"]
   },
   {
-    title: "Inventory Management System",
-    description: "Smart inventory tracking and management solution",
-    icon: Package,
+    title: "E-commerce Management",
+    description: "All-in-one e-commerce platform with inventory, orders, and customer management",
+    icon: ShoppingCart,
     features: [
-      "Real-time Inventory Tracking",
-      "Automated Reordering",
-      "Barcode Scanning",
-      "Multi-location Support",
-      "Analytics & Forecasting",
-      "Integration with POS/ERP"
+      "Inventory Management",
+      "Order Processing",
+      "Customer Management",
+      "Payment Processing",
+      "Shipping Integration",
+      "Analytics & Reporting"
     ],
-    price: "Starting at $1,200/month",
-    marketPrice: "$2,000-4,500/month",
-    benefits: ["Reduce stockouts by 90%", "Lower inventory costs", "Automated reordering"],
-    setupTime: "2-4 weeks"
-  },
-  {
-    title: "Email Marketing Automation",
-    description: "Advanced email marketing and automation platform",
-    icon: Mail,
-    features: [
-      "Email Campaign Builder",
-      "Automation Workflows",
-      "A/B Testing",
-      "List Segmentation",
-      "Analytics & Reporting",
-      "Integration with CRM"
-    ],
-    price: "Starting at $1,000/month",
-    marketPrice: "$1,500-4,000/month",
-    benefits: ["Increase open rates by 25%", "Automated nurturing", "Better targeting"],
-    setupTime: "1-2 weeks"
-  },
-  {
-    title: "Social Media Management",
-    description: "Comprehensive social media scheduling and analytics platform",
-    icon: Globe,
-    features: [
-      "Multi-platform Posting",
-      "Content Calendar",
-      "Analytics & Insights",
-      "Team Collaboration",
-      "Hashtag Research",
-      "Competitor Analysis"
-    ],
-    price: "Starting at $1,500/month",
-    marketPrice: "$2,500-5,000/month",
-    benefits: ["Save 10+ hours/week", "Increase engagement by 35%", "Better content planning"],
-    setupTime: "1-2 weeks"
+    price: "Starting at $2,800/month",
+    marketPrice: "$5,000-12,000/month",
+    benefits: ["Increase sales by 50%", "Reduce order processing time", "Improve customer experience"]
   },
   {
     title: "HR Management System",
-    description: "Complete human resources management solution",
+    description: "Comprehensive HR solution for employee management, payroll, and performance tracking",
     icon: Users,
     features: [
       "Employee Database",
-      "Time & Attendance",
-      "Payroll Integration",
+      "Payroll Management",
       "Performance Reviews",
-      "Recruitment Tools",
-      "Benefits Management"
+      "Time & Attendance",
+      "Benefits Administration",
+      "Compliance Tracking"
     ],
     price: "Starting at $2,000/month",
-    marketPrice: "$3,000-7,000/month",
-    benefits: ["Streamline HR processes", "Reduce paperwork by 80%", "Better employee experience"],
-    setupTime: "3-4 weeks"
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Reduce HR workload by 60%", "Improve employee satisfaction", "Ensure compliance"]
   },
   {
-    title: "Financial Management Platform",
-    description: "Comprehensive financial tracking and management solution",
+    title: "Marketing Automation",
+    description: "Advanced marketing automation platform for lead nurturing and campaign management",
+    icon: Target,
+    features: [
+      "Email Marketing",
+      "Lead Nurturing",
+      "Campaign Management",
+      "A/B Testing",
+      "Social Media Integration",
+      "Analytics & ROI Tracking"
+    ],
+    price: "Starting at $1,600/month",
+    marketPrice: "$3,000-6,500/month",
+    benefits: ["Increase leads by 200%", "Improve conversion rates", "Automate marketing tasks"]
+  },
+  {
+    title: "Financial Management",
+    description: "Complete financial management solution for accounting, invoicing, and expense tracking",
     icon: DollarSign,
     features: [
+      "Accounting & Bookkeeping",
+      "Invoice Generation",
       "Expense Tracking",
-      "Invoice Management",
-      "Budget Planning",
       "Financial Reporting",
       "Tax Preparation",
       "Bank Integration"
     ],
-    price: "Starting at $1,800/month",
-    marketPrice: "$2,500-6,000/month",
-    benefits: ["Better financial visibility", "Automated bookkeeping", "Tax compliance"],
-    setupTime: "2-3 weeks"
+    price: "Starting at $1,900/month",
+    marketPrice: "$3,500-7,000/month",
+    benefits: ["Save 25+ hours/month", "Improve cash flow", "Ensure tax compliance"]
   },
   {
     title: "Learning Management System",
-    description: "Complete e-learning platform for training and education",
+    description: "Comprehensive LMS for online courses, training, and educational content delivery",
     icon: GraduationCap,
     features: [
       "Course Creation",
       "Student Management",
       "Progress Tracking",
+      "Assessment Tools",
       "Certification System",
-      "Video Streaming",
-      "Assessment Tools"
+      "Mobile Learning"
     ],
-    price: "Starting at $2,200/month",
-    marketPrice: "$3,500-8,000/month",
-    benefits: ["Scalable training", "Better engagement", "Progress tracking"],
-    setupTime: "3-5 weeks"
+    price: "Starting at $2,300/month",
+    marketPrice: "$4,000-9,000/month",
+    benefits: ["Scale education programs", "Improve learning outcomes", "Reduce training costs"]
   },
   {
-    title: "Event Management Platform",
-    description: "Complete solution for managing events and conferences",
-    icon: Calendar,
+    title: "Inventory Management",
+    description: "Advanced inventory management system with real-time tracking and automated reordering",
+    icon: Package,
     features: [
-      "Event Registration",
-      "Ticketing System",
-      "Attendee Management",
-      "Payment Processing",
-      "Event Analytics",
-      "Mobile App"
+      "Real-time Inventory Tracking",
+      "Automated Reordering",
+      "Supplier Management",
+      "Barcode Scanning",
+      "Multi-location Support",
+      "Analytics & Forecasting"
     ],
-    price: "Starting at $1,500/month",
-    marketPrice: "$2,500-5,500/month",
-    benefits: ["Streamline event planning", "Better attendee experience", "Revenue optimization"],
-    setupTime: "2-4 weeks"
+    price: "Starting at $2,100/month",
+    marketPrice: "$3,800-7,500/month",
+    benefits: ["Reduce stockouts by 80%", "Lower inventory costs", "Improve accuracy"]
   },
   {
-    title: "Content Management System",
-    description: "Advanced CMS for managing digital content",
-    icon: FileText,
-    features: [
-      "Content Editor",
-      "Media Library",
-      "SEO Optimization",
-      "Multi-language Support",
-      "Version Control",
-      "Publishing Workflow"
-    ],
-    price: "Starting at $1,200/month",
-    marketPrice: "$2,000-4,500/month",
-    benefits: ["Easy content updates", "Better SEO", "Team collaboration"],
-    setupTime: "2-3 weeks"
-  },
-  {
-    title: "Analytics & Reporting Platform",
-    description: "Advanced analytics and business intelligence solution",
-    icon: BarChart3,
-    features: [
-      "Custom Dashboards",
-      "Data Visualization",
-      "Real-time Analytics",
-      "Automated Reports",
-      "Data Export",
-      "API Integration"
-    ],
-    price: "Starting at $2,000/month",
-    marketPrice: "$3,500-7,000/month",
-    benefits: ["Data-driven insights", "Real-time monitoring", "Better decision making"],
-    setupTime: "2-4 weeks"
-  },
-  {
-    title: "Customer Support Platform",
-    description: "Comprehensive customer support and helpdesk solution",
-    icon: Shield,
-    features: [
-      "Ticket Management",
-      "Live Chat",
-      "Knowledge Base",
-      "Automation Rules",
-      "Performance Analytics",
-      "Multi-channel Support"
-    ],
-    price: "Starting at $1,500/month",
-    marketPrice: "$2,500-5,000/month",
-    benefits: ["Faster response times", "Better customer satisfaction", "Reduced support costs"],
-    setupTime: "2-3 weeks"
-  },
-  {
-    title: "E-commerce Platform",
-    description: "Complete online store solution with advanced features",
-    icon: ShoppingCart,
-    features: [
-      "Product Catalog",
-      "Shopping Cart",
-      "Payment Processing",
-      "Order Management",
-      "Inventory Tracking",
-      "Marketing Tools"
-    ],
-    price: "Starting at $2,500/month",
-    marketPrice: "$4,000-10,000/month",
-    benefits: ["Complete e-commerce solution", "Mobile optimized", "SEO friendly"],
-    setupTime: "4-6 weeks"
-  },
-  {
-    title: "Document Management System",
-    description: "Secure document storage and collaboration platform",
+    title: "Document Management",
+    description: "Secure document management system with version control and collaboration features",
     icon: FileText,
     features: [
       "Document Storage",
       "Version Control",
       "Collaboration Tools",
+      "Search & Retrieval",
       "Access Control",
-      "Search & Indexing",
-      "Compliance Management"
-    ],
-    price: "Starting at $1,000/month",
-    marketPrice: "$1,800-4,000/month",
-    benefits: ["Secure document storage", "Better collaboration", "Compliance ready"],
-    setupTime: "1-2 weeks"
-  },
-  {
-    title: "API Gateway & Management",
-    description: "Comprehensive API management and gateway solution",
-    icon: Network,
-    features: [
-      "API Gateway",
-      "Rate Limiting",
-      "Authentication",
-      "Monitoring & Analytics",
-      "Developer Portal",
-      "API Documentation"
-    ],
-    price: "Starting at $2,000/month",
-    marketPrice: "$3,500-8,000/month",
-    benefits: ["Secure API management", "Better performance", "Developer friendly"],
-    setupTime: "2-3 weeks"
-  },
-  {
-    title: "IoT Device Management",
-    description: "Complete IoT device monitoring and management platform",
-    icon: Wifi,
-    features: [
-      "Device Registration",
-      "Real-time Monitoring",
-      "Remote Control",
-      "Data Collection",
-      "Alert System",
-      "Analytics Dashboard"
-    ],
-    price: "Starting at $2,500/month",
-    marketPrice: "$4,000-10,000/month",
-    benefits: ["Centralized device management", "Real-time insights", "Predictive maintenance"],
-    setupTime: "3-5 weeks"
-  },
-  {
-    title: "Blockchain Integration Platform",
-    description: "Blockchain integration and smart contract management",
-    icon: Shield,
-    features: [
-      "Smart Contract Deployment",
-      "Blockchain Integration",
-      "Wallet Management",
-      "Transaction Monitoring",
-      "Security Auditing",
-      "API Development"
-    ],
-    price: "Starting at $3,500/month",
-    marketPrice: "$5,000-15,000/month",
-    benefits: ["Blockchain integration", "Enhanced security", "Transparent transactions"],
-    setupTime: "4-6 weeks"
-  },
-  {
-    title: "Machine Learning Platform",
-    description: "End-to-end ML platform for model development and deployment",
-    icon: Brain,
-    features: [
-      "Model Training",
-      "Data Preprocessing",
-      "Model Deployment",
-      "A/B Testing",
-      "Monitoring & Alerts",
-      "AutoML Capabilities"
-    ],
-    price: "Starting at $4,000/month",
-    marketPrice: "$6,000-20,000/month",
-    benefits: ["Faster ML development", "Automated model training", "Production ready"],
-    setupTime: "4-8 weeks"
-  },
-  {
-    title: "Video Conferencing Platform",
-    description: "Custom video conferencing and collaboration solution",
-    icon: Video,
-    features: [
-      "HD Video Calls",
-      "Screen Sharing",
-      "Recording & Playback",
-      "Chat & Messaging",
-      "Meeting Scheduling",
-      "Integration APIs"
-    ],
-    price: "Starting at $2,000/month",
-    marketPrice: "$3,500-8,000/month",
-    benefits: ["Custom branding", "Better security", "Integration ready"],
-    setupTime: "3-4 weeks"
-  },
-  {
-    title: "Mobile App Backend",
-    description: "Complete backend infrastructure for mobile applications",
-    icon: Smartphone,
-    features: [
-      "User Authentication",
-      "Database Management",
-      "Push Notifications",
-      "File Storage",
-      "API Development",
-      "Analytics Integration"
-    ],
-    price: "Starting at $2,500/month",
-    marketPrice: "$4,000-10,000/month",
-    benefits: ["Scalable backend", "Real-time features", "Cross-platform support"],
-    setupTime: "3-5 weeks"
-  },
-  {
-    title: "AI-Powered Social Media Scheduler",
-    description: "Intelligent social media management with AI content optimization",
-    icon: Globe,
-    features: [
-      "AI Content Generation",
-      "Optimal Post Timing",
-      "Hashtag Optimization",
-      "Engagement Analytics",
-      "Multi-platform Publishing",
-      "Brand Voice Training"
-    ],
-    price: "Starting at $1,800/month",
-    marketPrice: "$3,000-6,000/month",
-    benefits: ["40% increase in engagement", "Save 15+ hours/week", "AI-driven optimization"],
-    setupTime: "1-2 weeks"
-  },
-  {
-    title: "Subscription Cancellation Service",
-    description: "Automated subscription management and cancellation platform",
-    icon: DollarSign,
-    features: [
-      "Subscription Discovery",
-      "One-click Cancellation",
-      "Spending Analytics",
-      "Renewal Alerts",
-      "Cost Optimization",
-      "Multi-provider Support"
-    ],
-    price: "Starting at $1,200/month",
-    marketPrice: "$2,000-4,500/month",
-    benefits: ["Save $200+/month per user", "Automated management", "Spending insights"],
-    setupTime: "1-2 weeks"
-  },
-  {
-    title: "AI Meeting Cost Calculator",
-    description: "Real-time meeting cost analysis and optimization tool",
-    icon: Calculator,
-    features: [
-      "Real-time Cost Tracking",
-      "ROI Analysis",
-      "Meeting Optimization",
-      "Productivity Metrics",
-      "Cost Alerts",
-      "Team Analytics"
-    ],
-    price: "Starting at $800/month",
-    marketPrice: "$1,500-3,500/month",
-    benefits: ["Reduce meeting costs by 30%", "Better time management", "ROI visibility"],
-    setupTime: "1 week"
-  },
-  {
-    title: "AI-Powered Expense Tracker",
-    description: "Smart expense tracking with receipt scanning and categorization",
-    icon: Receipt,
-    features: [
-      "Receipt OCR Scanning",
-      "AI Categorization",
-      "Tax Preparation",
-      "Spending Insights",
-      "Multi-currency Support",
-      "Integration with Accounting"
-    ],
-    price: "Starting at $1,500/month",
-    marketPrice: "$2,500-5,000/month",
-    benefits: ["90% faster expense entry", "Automated categorization", "Tax-ready reports"],
-    setupTime: "1-2 weeks"
-  },
-  {
-    title: "Mental Health Support App",
-    description: "AI-powered mental wellness and support platform",
-    icon: Heart,
-    features: [
-      "AI Chat Support",
-      "Mood Tracking",
-      "Meditation Guides",
-      "Crisis Intervention",
-      "Progress Analytics",
-      "Professional Referrals"
-    ],
-    price: "Starting at $2,200/month",
-    marketPrice: "$3,500-8,000/month",
-    benefits: ["24/7 support availability", "Personalized care", "Privacy-focused"],
-    setupTime: "3-4 weeks"
-  },
-  {
-    title: "AI Content Repurposing Tool",
-    description: "Transform content across multiple formats using AI",
-    icon: FileText,
-    features: [
-      "Blog to Video Conversion",
-      "Podcast Transcription",
-      "Social Media Adaptation",
-      "Multi-language Translation",
-      "SEO Optimization",
-      "Brand Consistency"
-    ],
-    price: "Starting at $1,600/month",
-    marketPrice: "$2,800-6,000/month",
-    benefits: ["10x content output", "Consistent branding", "Multi-format reach"],
-    setupTime: "2-3 weeks"
-  },
-  {
-    title: "AI-Powered Lead Scoring",
-    description: "Intelligent lead qualification and prioritization system",
-    icon: Target,
-    features: [
-      "Behavioral Analysis",
-      "Predictive Scoring",
-      "Lead Nurturing",
-      "CRM Integration",
-      "Performance Analytics",
-      "Custom Scoring Models"
-    ],
-    price: "Starting at $2,000/month",
-    marketPrice: "$3,500-7,000/month",
-    benefits: ["35% higher conversion", "Better lead quality", "Automated prioritization"],
-    setupTime: "2-3 weeks"
-  },
-  {
-    title: "Cloud Cost Optimization Tool",
-    description: "AI-driven cloud infrastructure cost analysis and optimization",
-    icon: Cloud,
-    features: [
-      "Cost Analysis",
-      "Resource Optimization",
-      "Waste Detection",
-      "Right-sizing Recommendations",
-      "Budget Alerts",
-      "Multi-cloud Support"
-    ],
-    price: "Starting at $1,800/month",
-    marketPrice: "$3,000-6,500/month",
-    benefits: ["Save 25-40% on cloud costs", "Automated optimization", "Real-time monitoring"],
-    setupTime: "2-3 weeks"
-  },
-  {
-    title: "AI-Powered Email Follow-up",
-    description: "Intelligent email automation and follow-up system",
-    icon: Mail,
-    features: [
-      "Smart Follow-up Timing",
-      "Personalized Templates",
-      "A/B Testing",
-      "Response Prediction",
-      "CRM Integration",
-      "Performance Analytics"
+      "Audit Trail"
     ],
     price: "Starting at $1,400/month",
-    marketPrice: "$2,500-5,500/month",
-    benefits: ["60% higher response rates", "Automated nurturing", "Personalized outreach"],
-    setupTime: "1-2 weeks"
-  },
-  {
-    title: "AI Meeting Summarizer",
-    description: "Automatic meeting transcription and intelligent summarization",
-    icon: Video,
-    features: [
-      "Real-time Transcription",
-      "AI Summarization",
-      "Action Item Extraction",
-      "Multi-language Support",
-      "Integration with Calendars",
-      "Searchable Archive"
-    ],
-    price: "Starting at $1,200/month",
-    marketPrice: "$2,000-4,500/month",
-    benefits: ["Save 2+ hours per meeting", "Never miss key points", "Searchable history"],
-    setupTime: "1-2 weeks"
-  },
-  {
-    title: "AI-Powered Password Manager",
-    description: "Advanced password security with AI-powered breach detection",
-    icon: Lock,
-    features: [
-      "Secure Password Generation",
-      "Breach Monitoring",
-      "Dark Web Scanning",
-      "Family Sharing",
-      "2FA Integration",
-      "Security Analytics"
-    ],
-    price: "Starting at $1,000/month",
-    marketPrice: "$1,800-3,500/month",
-    benefits: ["Enhanced security", "Proactive breach alerts", "Family protection"],
-    setupTime: "1 week"
-  },
-  {
-    title: "AI Local SEO Optimizer",
-    description: "Automated local search optimization and reputation management",
-    icon: MapPin,
-    features: [
-      "Google My Business Optimization",
-      "Review Management",
-      "Local Keyword Tracking",
-      "Competitor Analysis",
-      "Citation Building",
-      "Performance Reporting"
-    ],
-    price: "Starting at $1,500/month",
     marketPrice: "$2,500-5,000/month",
-    benefits: ["50% more local visibility", "Automated optimization", "Better local rankings"],
-    setupTime: "2-3 weeks"
+    benefits: ["Improve document security", "Reduce search time by 90%", "Enable remote collaboration"]
   },
   {
-    title: "AI-Powered Invoice Processing",
-    description: "Intelligent invoice automation and payment processing",
-    icon: FileText,
-    features: [
-      "OCR Invoice Reading",
-      "Automated Data Extraction",
-      "Approval Workflows",
-      "Payment Processing",
-      "Compliance Checking",
-      "Analytics Dashboard"
-    ],
-    price: "Starting at $2,200/month",
-    marketPrice: "$3,500-7,500/month",
-    benefits: ["90% faster processing", "Reduced errors", "Automated workflows"],
-    setupTime: "2-4 weeks"
-  },
-  {
-    title: "AI Customer Sentiment Analyzer",
-    description: "Real-time customer feedback analysis and sentiment tracking",
+    title: "Communication Platform",
+    description: "Unified communication platform with messaging, video calls, and file sharing",
     icon: MessageSquare,
     features: [
-      "Multi-channel Monitoring",
-      "Sentiment Analysis",
-      "Trend Detection",
-      "Alert System",
-      "Custom Dashboards",
-      "Integration APIs"
+      "Team Messaging",
+      "Video Conferencing",
+      "File Sharing",
+      "Screen Sharing",
+      "Integration with 200+ apps",
+      "Mobile & Desktop Apps"
     ],
-    price: "Starting at $1,800/month",
+    price: "Starting at $1,700/month",
     marketPrice: "$3,000-6,000/month",
-    benefits: ["Real-time insights", "Proactive issue detection", "Better customer experience"],
-    setupTime: "2-3 weeks"
+    benefits: ["Improve team collaboration", "Reduce meeting costs", "Increase productivity"]
   }
 ];
 
@@ -833,7 +399,7 @@ export default function MicroSaasPage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {microSaasSolutions.map((solution, index) => (
               <motion.div 
                 key={index}
@@ -847,51 +413,40 @@ export default function MicroSaasPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">{solution.title}</h3>
                 <p className="text-gray-600 mb-4">{solution.description}</p>
-                
-                {/* Features */}
                 <ul className="text-sm text-gray-500 space-y-2 mb-4">
-                  {solution.features.slice(0, 4).map((feature, idx) => (
+                  {solution.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                       {feature}
                     </li>
                   ))}
-                  {solution.features.length > 4 && (
-                    <li className="text-purple-600 font-medium">
-                      +{solution.features.length - 4} more features
-                    </li>
-                  )}
                 </ul>
-
-                {/* Benefits */}
-                {solution.benefits && (
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Benefits:</h4>
-                    <ul className="text-xs text-gray-600 space-y-1">
-                      {solution.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <ArrowRight className="w-3 h-3 text-purple-500 mr-1" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {/* Pricing */}
-                <div className="border-t pt-4">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-lg font-bold text-purple-600">{solution.price}</span>
-                    {solution.setupTime && (
-                      <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
-                        {solution.setupTime}
+                <div className="mt-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-2xl font-bold text-purple-600">{solution.price}</span>
+                    {solution.marketPrice && (
+                      <span className="text-sm text-gray-500 line-through">
+                        {solution.marketPrice}
                       </span>
                     )}
                   </div>
                   {solution.marketPrice && (
-                    <p className="text-xs text-gray-500">
-                      Market rate: {solution.marketPrice}
-                    </p>
+                    <div className="text-xs text-green-600 font-medium mb-2">
+                      Save up to 40% vs market rate
+                    </div>
+                  )}
+                  {solution.benefits && (
+                    <div className="text-xs text-gray-600">
+                      <div className="font-semibold mb-1">Key Benefits:</div>
+                      <ul className="space-y-1">
+                        {solution.benefits.slice(0, 2).map((benefit, idx) => (
+                          <li key={idx} className="flex items-center">
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-1" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   )}
                 </div>
               </motion.div>
