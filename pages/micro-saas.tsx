@@ -18,6 +18,7 @@ import {
   Lock,
   Cpu,
   Bot,
+<<<<<<< HEAD
   FileText,
   Image,
   Video,
@@ -32,7 +33,24 @@ import {
   Rocket,
   Heart,
   Building,
+=======
+  Database,
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   Sprout,
+  FileText,
+  Image,
+  Video,
+  Mic,
+  Code,
+  Settings,
+  Monitor,
+  Smartphone,
+  Server,
+  Network,
+  Car,
+  Rocket,
+  Heart,
+  Building,
   Mail,
   MessageSquare,
   Search,
@@ -47,9 +65,15 @@ import {
   Home,
   Trash2,
   Camera,
+<<<<<<< HEAD
   HardDrive,
   Database
 } from 'lucide-react';
+=======
+  HardDrive
+} from 'lucide-react';
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
 const microSaaSProducts = [{
     title: 'Cloud Cost Guard (FinOps Assistant)',
     description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
@@ -150,6 +174,7 @@ const microSaaSProducts = [{
     category: 'E-commerce'
   },
   {
+<<<<<<< HEAD
     title: 'AI-Powered Code Generator',
     description: 'Intelligent code generation and completion for developers using advanced AI.',
     icon: Code,
@@ -669,6 +694,14 @@ const microSaaSProducts = [{
     features: ['Problem Solving', 'Learning', 'Reasoning', 'Perception'],
     pricing: '$249 - $1,249/month',
     category: 'General AI'
+=======
+    title: 'Customer Support Ticketing',
+    description: 'AI-powered customer support ticketing and knowledge base system.',
+    icon: MessageSquare,
+    features: ['Ticket Management', 'Knowledge Base', 'AI Chatbot', 'Performance Analytics'],
+    pricing: '$19 - $149/month',
+    category: 'Support'
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
   },
   {
     title: 'HR & Payroll Management',
@@ -813,6 +846,7 @@ description: 'Automated code review with security scanning, performance optimiza
     popular: true
   },
   {
+<<<<<<< HEAD
     title: 'AI-Powered Metaverse Builder',
     description: 'No-code platform for creating immersive 3D virtual worlds and metaverse experiences.',
     icon: Globe,
@@ -908,10 +942,27 @@ description: 'Automated code review with security scanning, performance optimiza
     icon: FileText,
     features: ['Document Templates', 'Compliance Checking', 'Version Control', 'E-signature Integration'],
     pricing: '$199 - $1,999/month',
+=======
+    title: 'Real-Time Language Translation API',
+    description: 'Advanced translation service with context awareness and industry-specific terminology.',
+    icon: Globe,
+    features: ['100+ Languages', 'Context Awareness', 'Industry Terms', 'Real-time Processing'],
+    pricing: '$0.01 - $0.10 per 1K characters',
+    category: 'Language Services',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Legal Document Analyzer',
+    description: 'Automated legal document analysis with contract review and compliance checking.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Compliance Checking', 'Risk Assessment', 'Clause Extraction'],
+    pricing: '$299 - $1,999/month',
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
     category: 'Legal Tech',
     popular: true
   },
   {
+<<<<<<< HEAD
     title: 'Smart Home IoT Management',
     description: 'Centralized management platform for smart home devices and automation.',
     icon: Home,
@@ -1050,6 +1101,47 @@ description: 'Automated code review with security scanning, performance optimiza
     title: 'Smart Home Automation Platform',
     description: 'Comprehensive smart home control with AI-powered automation and energy management.',
     icon: Home,
+=======
+    title: 'Smart Energy Management System',
+    description: 'IoT-based energy monitoring and optimization for buildings and facilities.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Usage Analytics', 'Cost Optimization', 'Predictive Maintenance'],
+    pricing: '$199 - $1,299/month',
+    category: 'IoT & Energy',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Recruitment Platform',
+    description: 'Intelligent candidate screening and matching with bias detection and diversity analytics.',
+    icon: Users,
+    features: ['Resume Screening', 'Skill Matching', 'Bias Detection', 'Diversity Analytics'],
+    pricing: '$199 - $1,499/month',
+    category: 'HR & Recruitment',
+    popular: true
+  },
+  {
+    title: 'Blockchain Analytics & Compliance',
+    description: 'Comprehensive blockchain transaction analysis with AML and compliance reporting.',
+    icon: TrendingUp,
+    features: ['Transaction Analysis', 'AML Detection', 'Compliance Reporting', 'Risk Scoring'],
+    pricing: '$399 - $2,999/month',
+    category: 'Blockchain Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Medical Image Analysis',
+    description: 'Advanced medical image analysis with AI-powered diagnosis assistance and reporting.',
+    icon: Eye,
+    features: ['Image Analysis', 'Diagnosis Assistance', 'Report Generation', 'Integration APIs'],
+    pricing: '$999 - $4,999/month',
+    category: 'Healthcare AI',
+    popular: true
+  },
+  {
+    title: 'Smart Home Automation Platform',
+    description: 'Comprehensive smart home control with AI-powered automation and energy management.',
+    icon: Home,
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
     features: ['Device Control', 'Automation Rules', 'Energy Management', 'Voice Integration'],
     pricing: '$29 - $199/month',
     category: 'Smart Home',
@@ -1117,8 +1209,95 @@ description: 'Automated code review with security scanning, performance optimiza
     pricing: '$199 - $1,299/month',
     category: 'Voice Analytics',
     popular: true
+<<<<<<< HEAD
   }
 ];
+=======
+  },
+  {
+    title: 'AI-Powered Cybersecurity Threat Hunter',
+    description: 'Advanced threat detection and response system using machine learning to identify and neutralize cyber threats.',
+    icon: Shield,
+    features: ['Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Incident Forensics'],
+    pricing: '$599 - $3,999/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Development Platform',
+    description: 'No-code smart contract creation with automated testing, deployment, and monitoring.',
+    icon: Code,
+    features: ['Visual Builder', 'Auto Testing', 'Gas Optimization', 'Multi-chain Support'],
+    pricing: '$299 - $1,999/month',
+    category: 'Blockchain Development',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personal Finance Advisor',
+    description: 'Intelligent personal finance management with investment recommendations and budgeting insights.',
+    icon: DollarSign,
+    features: ['Expense Tracking', 'Investment Advice', 'Budget Planning', 'Goal Setting'],
+    pricing: '$9 - $49/month',
+    category: 'FinTech',
+    popular: true
+  },
+  {
+    title: 'Real-Time Collaboration Whiteboard',
+    description: 'Advanced digital whiteboard with AI-powered assistance for brainstorming and project planning.',
+    icon: Monitor,
+    features: ['Real-time Collaboration', 'AI Suggestions', 'Template Library', 'Export Options'],
+    pricing: '$19 - $99/month',
+    category: 'Collaboration',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Email Security Gateway',
+    description: 'Advanced email protection against phishing, malware, and advanced persistent threats.',
+    icon: Mail,
+    features: ['Phishing Detection', 'Malware Scanning', 'URL Analysis', 'Quarantine Management'],
+    pricing: '$2 - $8 per user/month',
+    category: 'Email Security',
+    popular: true
+  },
+  {
+    title: 'Smart Home IoT Management Platform',
+    description: 'Centralized IoT device management with automation, monitoring, and energy optimization.',
+    icon: Home,
+    features: ['Device Management', 'Automation Rules', 'Energy Monitoring', 'Security Controls'],
+    pricing: '$29 - $149/month',
+    category: 'IoT & Smart Home',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Code Quality Monitor',
+    description: 'Continuous code quality monitoring with automated suggestions and technical debt tracking.',
+    icon: Code,
+    features: ['Quality Metrics', 'Technical Debt Tracking', 'Automated Suggestions', 'Team Analytics'],
+    pricing: '$99 - $599/month',
+    category: 'Developer Tools',
+    popular: true
+  },
+  {
+    title: 'Blockchain DeFi Analytics Dashboard',
+    description: 'Comprehensive DeFi protocol analytics with yield farming optimization and risk assessment.',
+    icon: TrendingUp,
+    features: ['Yield Optimization', 'Risk Assessment', 'Portfolio Tracking', 'Protocol Analytics'],
+    pricing: '$49 - $299/month',
+    category: 'DeFi Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Moderation API',
+    description: 'Advanced content moderation for text, images, and videos with custom rule configuration.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
+    pricing: '$0.01 - $0.05 per request',
+    category: 'Content Safety',
+    popular: true
+  }
+];
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
 const features = [{
     icon: Zap,
     title: 'Rapid Deployment',
@@ -1150,6 +1329,10 @@ const features = [{
     description: 'GDPR and SOC 2 compliant by default'
   }
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
 const benefits = [{
     icon: Clock,
     title: 'Fast Time to Market',
@@ -1175,6 +1358,10 @@ const benefits = [{
     stat: '10x'
   }
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
 const pricingTiers = [{
     name: 'Starter',
     description: 'Perfect for small teams and MVPs',
@@ -1226,6 +1413,10 @@ export default function MicroSaaSPage() {
                   <meta name="description" content="Scalable Micro SaaS solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics." />
                   <meta name="keywords" content="Micro SaaS, SaaS solutions, cloud applications, scalable software, business automation" />
                   </Head>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">
 <div className="absolute inset-0">
@@ -1261,6 +1452,10 @@ export default function MicroSaaSPage() {
                   </motion.div>
                   </div>
                   </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
       {/* Products Grid */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -1339,6 +1534,10 @@ className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all du
           </div>
                   </div>
                   </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
       {/* Features Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -1381,6 +1580,10 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
           </div>
                   </div>
                   </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -1426,6 +1629,10 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
           </div>
                   </div>
                   </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
       {/* Pricing Section */}
       <section className="py-20 bg-white">
                   <div className="container mx-auto px-4">
@@ -1494,16 +1701,127 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
           </div>
                   </div>
                   </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
       {/* Contact Information Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
+=======
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Get Started Today
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Ready to transform your business with cutting-edge micro SaaS solutions? Our expert team is here to help you build, deploy, and scale your next-generation software products. Contact us for a free consultation and discover how we can accelerate your digital transformation.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MessageSquare className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Free Consultation</h3>
+              <p className="text-gray-600 mb-4">Get expert advice on your micro SaaS project with our complimentary 30-minute consultation.</p>
+              <a href="tel:+13024640950" className="text-purple-600 font-semibold hover:text-purple-700">
+                Call Now: +1 302 464 0950
+              </a>
+            </motion.div>
+
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+              <p className="text-gray-600 mb-4">Send us your project details and we'll respond within 24 hours with a detailed proposal.</p>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-600 font-semibold hover:text-purple-700">
+                kleber@ziontechgroup.com
+              </a>
+            </motion.div>
+
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Building className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our Office</h3>
+              <p className="text-gray-600 mb-4">Schedule an in-person meeting at our headquarters in Middletown, Delaware.</p>
+              <address className="text-purple-600 font-semibold not-italic">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </address>
+            </motion.div>
+          </div>
+
+          <motion.div
+            className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Why Choose Zion Tech Group?
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-yellow-300 mb-2">500+</div>
+                <div className="text-sm">Projects Delivered</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-yellow-300 mb-2">99.9%</div>
+                <div className="text-sm">Uptime Guarantee</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-yellow-300 mb-2">24/7</div>
+                <div className="text-sm">Support Available</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-yellow-300 mb-2">5★</div>
+                <div className="text-sm">Client Rating</div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+<div className="container mx-auto px-4 text-center">
+                  <motion.div
+            initial={{ opacity: 0, y: 30 }}
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+<<<<<<< HEAD
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Get Started Today
             </h2>
@@ -1602,6 +1920,8 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-9cae
 <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Launch Your Micro SaaS?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Join 500+ successful businesses that trust Zion Tech Group for their micro SaaS development needs. Let&apos;s build the perfect solution for your business.
