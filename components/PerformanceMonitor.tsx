@@ -1,23 +1,19 @@
 import React, { useEffect } from 'react';
 
 interface PerformanceMonitorProps {
-  onPerformanceData?: (data: any) => void;
+  onPerformanceData?: (data: Record<string, unknown>) => void;
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
-  // Only render on client side
-  if (typeof window === 'undefined') {
-    return null;
-  }
-
   useEffect(() => {
-    if (typeof performance === 'undefined') return;
+    // Only run on client side
+    if (typeof window === 'undefined' || typeof performance === 'undefined') return;
 
     const measurePerformance = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
       
-      const performanceData = {
+      const performanceData: Record<string, unknown> = {
         // Navigation timing
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
@@ -31,10 +27,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         resourceCount: performance.getEntriesByType('resource').length,
         
         // Memory usage (if available)
-        memory: (performance as any).memory ? {
-          used: (performance as any).memory.usedJSHeapSize,
-          total: (performance as any).memory.totalJSHeapSize,
-          limit: (performance as any).memory.jsHeapSizeLimit
+        memory: (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory ? {
+          used: (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
+          total: (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
+          limit: (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
         } : null
       };
 
