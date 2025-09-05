@@ -1,188 +1,214 @@
-import React, { useState } from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
-import { Mail, CheckCircle, ArrowRight, Users, Calendar, FileText, Video, Globe, Shield, Zap, BarChart3 } from 'lucide-react';
+import Head from 'next/head';
 import Layout from '../components/Layout';
+import { Mail, ArrowRight, Users, Calendar, FileText, Video, Globe, Shield, Zap } from 'lucide-react';
 
-const newsletterFeatures = [
+const benefits = [
   {
-    title: 'Weekly Tech Insights',
-    description: 'Stay ahead with the latest technology trends and industry insights',
+    title: 'Exclusive Content',
+    description: 'Get access to exclusive white papers, case studies, and industry insights.',
     icon: FileText
   },
   {
-    title: 'Exclusive Content',
-    description: 'Access to premium content and expert analysis not available elsewhere',
-    icon: Video
-  },
-  {
-    title: 'Product Updates',
-    description: 'Be the first to know about new features and product launches',
+    title: 'Early Access',
+    description: 'Be the first to know about new features, products, and services.',
     icon: Zap
   },
   {
-    title: 'Industry Reports',
-    description: 'Comprehensive reports on market trends and business opportunities',
-    icon: BarChart3
+    title: 'Expert Insights',
+    description: 'Learn from our team of experts through detailed technical articles.',
+    icon: Users
+  },
+  {
+    title: 'Industry Updates',
+    description: 'Stay informed about the latest trends and developments in technology.',
+    icon: Globe
+  }
+];
+
+const newsletterIssues = [
+  {
+    title: 'AI Revolution in Healthcare',
+    date: 'January 15, 2024',
+    description: 'How artificial intelligence is transforming patient care and medical research.',
+    readTime: '8 min read',
+    featured: true
+  },
+  {
+    title: 'Cloud Security Best Practices',
+    date: 'January 10, 2024',
+    description: 'Essential security measures for protecting your cloud infrastructure.',
+    readTime: '6 min read',
+    featured: false
+  },
+  {
+    title: 'The Future of Remote Work',
+    date: 'January 5, 2024',
+    description: 'Technology trends shaping the future of remote and hybrid work.',
+    readTime: '7 min read',
+    featured: false
   }
 ];
 
 export default function NewsletterPage() {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle newsletter subscription logic here
-    console.log('Newsletter subscription:', email);
-    setIsSubscribed(true);
-  };
-
   return (
     <Layout
       title="Newsletter - Zion Tech Group"
-      description="Subscribe to our newsletter for the latest technology insights, product updates, and industry news."
-      keywords="newsletter, subscription, technology insights, product updates, industry news"
+      description="Subscribe to our newsletter for exclusive content, industry insights, and the latest technology updates."
+      keywords="newsletter, subscribe, technology updates, industry insights, exclusive content"
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-          </div>
-          
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Stay <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Informed</span>
+                Our Newsletter
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Subscribe to our newsletter and never miss the latest technology insights, 
-                product updates, and industry news.
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Stay ahead of the curve with exclusive content, industry insights, and the latest technology updates
               </p>
             </motion.div>
           </div>
         </section>
 
-        {/* Newsletter Features */}
+        {/* Benefits Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
+            <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                What You'll Get
+                Why Subscribe?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our newsletter delivers valuable content directly to your inbox, 
-                helping you stay informed and ahead of the curve.
+                Join thousands of professionals who rely on our newsletter for the latest insights and updates
               </p>
-            </motion.div>
+            </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-              {newsletterFeatures.map((feature, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center"
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center"
                 >
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-blue-600" />
+                    <benefit.icon className="w-8 h-8 text-blue-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Subscription Form */}
+        {/* Newsletter Signup */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-2xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="bg-gray-50 rounded-xl shadow-lg p-8"
               >
-                {!isSubscribed ? (
-                  <>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-                      Subscribe to Our Newsletter
-                    </h2>
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                          Email Address
-                        </label>
-                        <div className="relative">
-                          <input
-                            type="email"
-                            id="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            placeholder="Enter your email address"
-                            required
-                          />
-                          <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-center">
-                        <input
-                          type="checkbox"
-                          id="terms"
-                          className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                          required
-                        />
-                        <label htmlFor="terms" className="ml-2 block text-sm text-gray-700">
-                          I agree to receive newsletters and marketing communications from Zion Tech Group.
-                        </label>
-                      </div>
-                      
-                      <button
-                        type="submit"
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
-                      >
-                        <ArrowRight className="w-5 h-5 mr-2" />
-                        Subscribe Now
-                      </button>
-                    </form>
-                  </>
-                ) : (
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle className="w-8 h-8 text-green-600" />
-                    </div>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                      Thank You for Subscribing!
-                    </h2>
-                    <p className="text-gray-600 mb-6">
-                      You've successfully subscribed to our newsletter. You'll receive our latest updates and insights soon.
-                    </p>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Subscribe Today
+                </h2>
+                <p className="text-xl text-gray-600 mb-8">
+                  Get our weekly newsletter delivered straight to your inbox
+                </p>
+                
+                <form className="space-y-4">
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <input
+                      type="email"
+                      placeholder="Enter your email address"
+                      className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      required
+                    />
                     <button
-                      onClick={() => setIsSubscribed(false)}
-                      className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                      type="submit"
+                      className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold flex items-center justify-center"
                     >
-                      Subscribe Another Email
+                      Subscribe
+                      <ArrowRight className="ml-2 w-4 h-4" />
                     </button>
                   </div>
-                )}
+                  
+                  <p className="text-sm text-gray-500">
+                    We respect your privacy. Unsubscribe at any time.
+                  </p>
+                </form>
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Recent Issues */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Recent Issues
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Take a look at some of our recent newsletter content
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="space-y-6">
+                {newsletterIssues.map((issue, index) => (
+                  <motion.article
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 ${
+                      issue.featured ? 'border-2 border-blue-500' : ''
+                    }`}
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
+                          <Calendar className="w-4 h-4" />
+                          <span>{issue.date}</span>
+                          <span className="mx-2">•</span>
+                          <span>{issue.readTime}</span>
+                          {issue.featured && (
+                            <>
+                              <span className="mx-2">•</span>
+                              <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
+                                Featured
+                              </span>
+                            </>
+                          )}
+                        </div>
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                          {issue.title}
+                        </h3>
+                        <p className="text-gray-600 mb-4">
+                          {issue.description}
+                        </p>
+                        <button className="text-blue-600 hover:text-blue-800 font-medium">
+                          Read Issue
+                        </button>
+                      </div>
+                      <div className="ml-4">
+                        <Mail className="w-8 h-8 text-gray-400" />
+                      </div>
+                    </div>
+                  </motion.article>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -192,22 +218,22 @@ export default function NewsletterPage() {
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Get Started?
+                Ready to Stay Informed?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Join thousands of subscribers who are already staying informed with our newsletter.
+                Join our community of technology professionals and never miss an update.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center">
-                  <ArrowRight className="w-5 h-5 mr-2" />
+                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                   Subscribe Now
                 </button>
                 <button className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  Learn More
+                  View Archive
                 </button>
               </div>
             </motion.div>
@@ -215,5 +241,25 @@ export default function NewsletterPage() {
         </section>
       </div>
     </Layout>
+=======
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   );
-}
+};
+
+export default Page;

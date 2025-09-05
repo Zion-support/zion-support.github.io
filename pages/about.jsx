@@ -1,4 +1,4 @@
-import Layout from './components/Layout';
+import Layout from '../components/Layout';
 
 const About = () => {
   return (
@@ -58,7 +58,7 @@ const About = () => {
                 for future growth and innovation.
               </p>
               <p className="text-lg text-gray-600">
-                Today, we're proud to have helped over 150+ businesses transform their digital 
+                Today, we&apos;re proud to have helped over 150+ businesses transform their digital 
                 presence, from small startups to enterprise-level organizations. Our commitment 
                 to excellence, innovation, and client success continues to drive everything we do.
               </p>
@@ -73,7 +73,7 @@ const About = () => {
                 <div className="text-4xl mb-4">💡</div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Innovation</h3>
                 <p className="text-gray-600">
-                  We constantly push the boundaries of what's possible, embracing new technologies 
+                  We constantly push the boundaries of what&apos;s possible, embracing new technologies 
                   and methodologies to deliver cutting-edge solutions.
                 </p>
               </div>
@@ -140,7 +140,7 @@ const About = () => {
           <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-lg p-8 text-white">
             <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
             <p className="text-xl mb-6">
-              Let's discuss how we can help transform your business with our technology solutions.
+              Let&apos;s discuss how we can help transform your business with our technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <a 

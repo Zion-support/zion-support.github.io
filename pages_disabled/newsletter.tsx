@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Mail, CheckCircle, ArrowRight, Users, Calendar, FileText, Video, Globe, Shield, Zap, BarChart3 } from 'lucide-react';
 
 const newsletterFeatures = [
   {

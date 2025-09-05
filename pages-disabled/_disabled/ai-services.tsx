@@ -1,7 +1,5 @@
 import React from "react";
 import MainLayout from '../components/layout/MainLayout';
-import { motion } from 'framer-motion';
-import { Brain, MessageSquare, Eye, FileText, Mic, BarChart3 } from 'lucide-react';
 
 const aiServices = [
   {

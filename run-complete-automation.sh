@@ -71,11 +71,7 @@ echo "🔒 Phase 3: Security & Performance"
 echo "====="
 
 # Security scan
-<<<<<<< HEAD
-run_with_log "Security Scanner" "node scripts/security-audit.cjs"
-=======
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
 
 # Security audit
 run_optional "Security Audit" "node scripts/security-audit.cjs"

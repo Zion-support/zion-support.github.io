@@ -1,8 +1,139 @@
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Home, 
+  Brain, 
+  Network, 
+  Target, 
+  Users, 
+  Shield, 
+  Cloud, 
+  BarChart3, 
+  Settings, 
+  Globe, 
+  ArrowRight 
+} from 'lucide-react';
+
+const sitemapData = [
+  {
+    category: 'Main Pages',
+    pages: [
+      { name: 'Home', url: '/', icon: Home },
+      { name: 'About', url: '/about', icon: Users },
+      { name: 'Contact', url: '/contact', icon: Globe },
+      { name: 'Services', url: '/services', icon: Settings }
+    ]
+  },
+  {
+    category: 'Services',
+    pages: [
+      { name: 'AI Services', url: '/ai-services', icon: Brain },
+      { name: 'IT Services', url: '/it-services', icon: Network },
+      { name: 'Micro SaaS', url: '/micro-saas', icon: Target },
+      { name: 'Cloud Services', url: '/services/cloud', icon: Cloud },
+      { name: 'Cybersecurity', url: '/services/cybersecurity', icon: Shield },
+      { name: 'Data Analytics', url: '/services/data-analytics', icon: BarChart3 }
+    ]
+  },
+  {
+    category: 'Solutions',
+    pages: [
+      { name: 'Cloud Migration', url: '/solutions/cloud-migration', icon: Cloud },
+      { name: 'Digital Transformation', url: '/solutions/digital-transformation', icon: Settings },
+      { name: 'Custom Solutions', url: '/solutions/custom', icon: Target }
+    ]
+  },
+  {
+    category: 'Resources',
+    pages: [
+      { name: 'Documentation', url: '/docs', icon: Globe },
+      { name: 'API Documentation', url: '/api-docs', icon: Settings },
+      { name: 'Guides', url: '/guides', icon: Globe },
+      { name: 'FAQ', url: '/faq', icon: Users }
+    ]
+  }
+];
+
+export default function SitemapPage() {
+  return (
+    <>
+      <Head>
+        <title>Sitemap - Zion Tech Group</title>
+        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
+=======
+<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { FileText, ExternalLink, ArrowRight } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Link from 'next/link';
+import Layout from '../components/Layout';
+import { 
+  Home, 
+  Users, 
+  Briefcase, 
+  Phone, 
+  Mail, 
+  Phone as PhoneIcon, 
+  MapPin, 
+  Globe,
+  ArrowRight
+} from 'lucide-react';
+
+const sitemapData = {
+  main: [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Services', href: '/services', icon: Briefcase },
+    { name: 'Products', href: '/products', icon: Globe },
+    { name: 'Contact', href: '/contact', icon: Phone }
+  ],
+  services: [
+    { name: 'AI Services', href: '/services/ai' },
+    { name: 'Cloud Computing', href: '/services/cloud' },
+    { name: 'Micro SaaS', href: '/services/saas' },
+    { name: 'Security', href: '/security' }
+  ],
+  products: [
+    { name: 'AI Email Responder', href: '/products/ai-email-responder' },
+    { name: 'Cloud Infrastructure', href: '/products/cloud-infrastructure' },
+    { name: 'Security Suite', href: '/products/security-suite' },
+    { name: 'Micro SaaS Platform', href: '/products/micro-saas-platform' }
+  ],
+  resources: [
+    { name: 'Blog', href: '/blog' },
+    { name: 'News', href: '/news' },
+    { name: 'Guides', href: '/guides' },
+    { name: 'Help', href: '/help' },
+    { name: 'API Documentation', href: '/api-docs' }
+  ],
+  company: [
+    { name: 'About Us', href: '/about' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Newsletter', href: '/newsletter' }
+  ],
+  legal: [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' }
+  ]
+};
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
 
 export default function SitemapPage() {
   const siteStructure = [
@@ -73,11 +204,17 @@ export default function SitemapPage() {
   return (
     <MainLayout
       title="Sitemap - Zion Tech Group"
+<<<<<<< HEAD
       description="Navigate through all pages and sections of our website. Find the information you need quickly and easily."
       keywords="sitemap, navigation, website structure, pages"
+=======
+      description="Navigate our website easily with our comprehensive sitemap. Find all pages and resources in one place."
+      keywords="sitemap, navigation, website map, pages, resources"
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
@@ -85,13 +222,25 @@ export default function SitemapPage() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
+=======
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+>>>>>>> 9a4f5825b5f6e9b21a821d0a21c3aa51adf201e7
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+<<<<<<< HEAD
+                Site <span className="text-yellow-400">Map</span>
+              </h1>
+              <p className="text-xl mb-8 max-w-3xl mx-auto">
+                Navigate through all our pages, services, and resources
+=======
+<<<<<<< HEAD
                 Site{' '}
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
                   Map
@@ -100,12 +249,60 @@ export default function SitemapPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Navigate through all pages and sections of our website. 
                 Find the information you need quickly and easily.
+=======
+                Sitemap
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Navigate our website easily with our comprehensive sitemap
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+>>>>>>> 9a4f5825b5f6e9b21a821d0a21c3aa51adf201e7
               </p>
             </motion.div>
           </div>
         </section>
 
         {/* Sitemap Content */}
+<<<<<<< HEAD
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {sitemapData.map((section, sectionIndex) => (
+                <motion.div
+                  key={section.category}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
+                  className="bg-white rounded-lg shadow-lg p-6"
+                >
+                  <h3 className="text-xl font-bold mb-4 text-gray-800">
+                    {section.category}
+                  </h3>
+                  <div className="space-y-3">
+                    {section.pages.map((page, pageIndex) => (
+                      <Link
+                        key={page.name}
+                        href={page.url}
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                      >
+                        <page.icon className="w-5 h-5 text-blue-600 group-hover:text-blue-700" />
+                        <div>
+                          <div className="font-medium text-gray-800 group-hover:text-blue-600">
+                            {page.name}
+                          </div>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 ml-auto" />
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+=======
+<<<<<<< HEAD
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
@@ -210,11 +407,156 @@ export default function SitemapPage() {
                     </Link>
                   </motion.div>
                 ))}
+=======
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Main Navigation */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="bg-white rounded-xl shadow-lg p-6"
+                >
+                  <h2 className="text-xl font-semibold text-gray-900 mb-4">Main Navigation</h2>
+                  <ul className="space-y-3">
+                    {sitemapData.main.map((item, index) => (
+                      <li key={index}>
+                        <Link
+                          href={item.href}
+                          className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                        >
+                          <item.icon className="w-4 h-4 mr-2" />
+                          {item.name}
+                          <ArrowRight className="w-3 h-3 ml-auto" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+
+                {/* Services */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  className="bg-white rounded-xl shadow-lg p-6"
+                >
+                  <h2 className="text-xl font-semibold text-gray-900 mb-4">Services</h2>
+                  <ul className="space-y-3">
+                    {sitemapData.services.map((item, index) => (
+                      <li key={index}>
+                        <Link
+                          href={item.href}
+                          className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                        >
+                          {item.name}
+                          <ArrowRight className="w-3 h-3 ml-auto" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+
+                {/* Products */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="bg-white rounded-xl shadow-lg p-6"
+                >
+                  <h2 className="text-xl font-semibold text-gray-900 mb-4">Products</h2>
+                  <ul className="space-y-3">
+                    {sitemapData.products.map((item, index) => (
+                      <li key={index}>
+                        <Link
+                          href={item.href}
+                          className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                        >
+                          {item.name}
+                          <ArrowRight className="w-3 h-3 ml-auto" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+
+                {/* Resources */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="bg-white rounded-xl shadow-lg p-6"
+                >
+                  <h2 className="text-xl font-semibold text-gray-900 mb-4">Resources</h2>
+                  <ul className="space-y-3">
+                    {sitemapData.resources.map((item, index) => (
+                      <li key={index}>
+                        <Link
+                          href={item.href}
+                          className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                        >
+                          {item.name}
+                          <ArrowRight className="w-3 h-3 ml-auto" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+
+                {/* Company */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="bg-white rounded-xl shadow-lg p-6"
+                >
+                  <h2 className="text-xl font-semibold text-gray-900 mb-4">Company</h2>
+                  <ul className="space-y-3">
+                    {sitemapData.company.map((item, index) => (
+                      <li key={index}>
+                        <Link
+                          href={item.href}
+                          className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                        >
+                          {item.name}
+                          <ArrowRight className="w-3 h-3 ml-auto" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+
+                {/* Legal */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  className="bg-white rounded-xl shadow-lg p-6"
+                >
+                  <h2 className="text-xl font-semibold text-gray-900 mb-4">Legal</h2>
+                  <ul className="space-y-3">
+                    {sitemapData.legal.map((item, index) => (
+                      <li key={index}>
+                        <Link
+                          href={item.href}
+                          className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                        >
+                          {item.name}
+                          <ArrowRight className="w-3 h-3 ml-auto" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
               </div>
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
@@ -251,5 +593,58 @@ export default function SitemapPage() {
         </section>
       </div>
     </MainLayout>
+=======
+        {/* Contact Information */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
+                <div className="grid md:grid-cols-3 gap-8">
+                  <div className="flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-blue-600 mr-2" />
+                    <span className="text-gray-600">info@ziontechgroup.com</span>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <PhoneIcon className="w-6 h-6 text-blue-600 mr-2" />
+                    <span className="text-gray-600">+1 (555) 123-4567</span>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-blue-600 mr-2" />
+                    <span className="text-gray-600">San Francisco, CA</span>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+=======
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+>>>>>>> 9a4f5825b5f6e9b21a821d0a21c3aa51adf201e7
   );
-}
+};
+
+export default Page;

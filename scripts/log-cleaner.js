@@ -1,3 +1,4 @@
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
@@ -303,3 +304,4 @@ if (isMainModule) {
 }
 
 export default LogCleaner;
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

@@ -1,7 +1,5 @@
 import React from "react";
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
 const jobOpenings = [{}]

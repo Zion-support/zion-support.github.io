@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");const { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");"console.log(" Starting error prevention monitor.");class ErrorPreventionMonitor { constructor() { this.projectRoot = process.cwd();"""
-=======
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -9,14 +6,6 @@ const { execSync } = require("child_process");
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-
-
-
-class ErrorPreventionMonitor {
-  constructor() {
-    this.projectRoot = process.cwd();
-=======
 console.log('🛡️ Starting error prevention monitor...');
 class ErrorPreventionMonitor {
   constructor() {
@@ -213,7 +202,6 @@ class ErrorPreventionMonitor {
       this.log(`Build check "failed": ${error.message}`);
       this.triggerAutoFix()}
   }
->>>>>>> main
     this.reportsDir = path.join(this.projectRoot, 'error-reports');
     this.logsDir = path.join(this.projectRoot, 'automation/logs');
     this.checkInterval = parseInt(process.env.PREVENTION_CHECK_INTERVAL) || 600000; // 10 minutes
@@ -227,12 +215,7 @@ class ErrorPreventionMonitor {
     this.riskFactors = new Map()}
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-    }
-
-=======
     console.log(`[${timestamp}] [${level}] ${message}`)}
->>>>>>> main
   async checkFileSizeIssues() {
     this.log('Checking for file size issues...', 'INFO');
     const largeFiles = [];
@@ -648,10 +631,6 @@ if (require.main === module) {
   monitor.startMonitor().catch(error => {
     monitor.log(`Failed to start "monitor": ${error.message}`, 'ERROR');
     process.exit(1)})}
-<<<<<<< HEAD
-
-=======
->>>>>>> main
   run() {
     this.log('Error Prevention Monitor started');
     // Run initial health check
@@ -664,4 +643,3 @@ if (require.main === module) {
 // Start the monitor
 const monitor = new ErrorPreventionMonitor();
 monitor.run();
->>>>>>> main

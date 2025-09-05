@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Building, Shield, Users, BarChart3, ArrowRight, CheckCircle, Clock, Globe, Database, Lock } from 'lucide-react';
 import Layout from '../../components/Layout';
+import { Building, Shield, Database, Users, Zap, BarChart3, Cloud, Lock, CheckCircle, ArrowRight, Star, TrendingUp, Award, Clock, Globe, Cpu, Workflow, MessageCircle, ArrowUp, Sparkles, Home, Truck, BookOpen, Leaf, Satellite, HelpCircle, Menu, X, DollarSign, ShoppingCart, Heart, Eye, FileText, AlertCircle, Scale, Phone, Mail, MapPin, Instagram, Linkedin, Twitter, Facebook, ExternalLink, Calendar, User, Download, Play, Tag, Smartphone, Target, Server, Network, Settings, Brain, Factory, Rocket, Building2 } from 'lucide-react';
 
 const features = [
   {

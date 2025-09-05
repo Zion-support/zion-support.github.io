@@ -1,3 +1,5 @@
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 import { 
 	Award, 
 	Brain, 
@@ -7,6 +9,8 @@ import {
 	Cloud, 
 	Shield, 
 	Code 
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 export default function Services() {
 	const title = \"Services — Zion Tech Group\";
 	const description = \"AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.\";

@@ -7,15 +7,19 @@ import {
   Mail,
   MapPin,
   TrendingUp,
-  CheckCircle,
   Users,
+  Clock,
+  CheckCircle,
   Building,
   Globe,
   Award,
-  Clock,
   BarChart3,
   Cloud,
-  Shield
+  Shield,
+  Calendar,
+  User,
+  Tag,
+  ExternalLink
 } from 'lucide-react';
 
 const caseStudies = [
@@ -68,11 +72,69 @@ const caseStudies = [
       "24/7 threat monitoring",
       "50% faster incident response"
     ],
+    technologies: ["Cybersecurity", "SIEM", "Compliance", "Monitoring"],
     duration: "4 months",
     team: "6 experts",
-    technologies: ["Cybersecurity", "SIEM", "Compliance", "Monitoring"],
     image: "/images/case-studies/healthcare-security.jpg"
+  },
+  {
+    id: 5,
+    title: "Real Estate PropTech Platform",
+    client: "PropertyPro",
+    industry: "Real Estate",
+    challenge: "Fragmented property management and lead generation",
+    solution: "Integrated PropTech platform with AI-powered lead scoring",
+    results: [
+      "200% increase in lead conversion",
+      "50% reduction in manual work",
+      "Automated property matching",
+      "Mobile-first user experience"
+    ],
+    technologies: ["PropTech", "AI/ML", "Mobile Development"],
+    duration: "7 months",
+    team: "10 experts",
+    image: "/api/placeholder/600/400"
+  },
+  {
+    id: 6,
+    title: "SaaS Platform Development",
+    client: "StartupTech",
+    industry: "SaaS",
+    challenge: "Building scalable SaaS platform from scratch",
+    solution: "End-to-end SaaS development with multi-tenant architecture",
+    results: [
+      "10,000+ active users",
+      "99.9% uptime",
+      "Scalable infrastructure",
+      "Rapid feature deployment"
+    ],
+    technologies: ["SaaS Development", "Multi-tenancy", "Cloud Computing"],
+    duration: "12 months",
+    team: "25 experts",
+    image: "/api/placeholder/600/400"
   }
+];
+
+const industries = [
+  "All Industries",
+  "Healthcare",
+  "E-commerce",
+  "Finance",
+  "Manufacturing",
+  "Real Estate",
+  "SaaS",
+  "Education"
+];
+
+const technologies = [
+  "All Technologies",
+  "AI/ML",
+  "Cloud Computing",
+  "Cybersecurity",
+  "IoT",
+  "PropTech",
+  "SaaS Development",
+  "Data Analytics"
 ];
 
 const stats = [
@@ -141,22 +203,21 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
-        {/* Case Studies */}
-        <section className="py-20 bg-gray-50">
+        {/* Featured Case Studies */}
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Featured Case Studies
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Success Stories
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Real projects, real results. See how we've helped businesses across 
-                different industries achieve their technology goals.
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Discover how we've helped businesses transform and achieve their goals
               </p>
             </motion.div>
 

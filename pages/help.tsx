@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -14,6 +15,86 @@ import {
   Download,
   ExternalLink,
   ChevronDown,
+<<<<<<< HEAD
+  Cloud
+} from 'lucide-react';
+
+const helpArticles = [
+  {
+    id: 'overview',
+    title: 'Understanding Our Services',
+    description: 'Overview of all available services and solutions',
+    readTime: '7 min read',
+    type: 'Overview'
+  },
+  {
+    id: 'ai-services',
+    title: 'AI Services',
+    description: 'Everything about our AI and machine learning solutions.',
+    icon: HelpCircle,
+    color: 'green',
+    articles: [
+      {
+        title: 'AI Implementation Guide',
+        description: 'How to implement AI solutions in your business',
+        readTime: '10 min read',
+        type: 'Guide'
+      },
+      {
+        title: 'Machine Learning Models',
+        description: 'Understanding different ML models and their applications',
+        readTime: '8 min read',
+        type: 'Technical'
+      },
+      {
+        title: 'AI Best Practices',
+        description: 'Tips and best practices for AI development',
+        readTime: '6 min read',
+        type: 'Best Practice'
+      }
+    ]
+  },
+  {
+    id: 'cloud-services',
+    title: 'Cloud Services',
+    description: 'Cloud infrastructure and deployment solutions.',
+    icon: Cloud,
+    color: 'blue',
+    articles: [
+      {
+        title: 'Cloud Migration Guide',
+        description: 'Step-by-step guide to migrating to the cloud',
+        readTime: '12 min read',
+        type: 'Guide'
+      },
+      {
+        title: 'Cloud Security',
+        description: 'Best practices for securing your cloud infrastructure',
+        readTime: '9 min read',
+        type: 'Security'
+      }
+    ]
+  }
+];
+
+const helpCategories = [
+  {
+    title: 'Getting Started',
+    description: 'New to our platform? Start here.',
+    icon: BookOpen,
+    color: 'blue',
+    articles: helpArticles
+  }
+];
+
+export default function HelpPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
+
+  const toggleCategory = (index: number) => {
+    setExpandedCategory(expandedCategory === index ? null : index);
+  };
+=======
   ChevronRight,
   ArrowRight
 } from 'lucide-react';
@@ -172,6 +253,7 @@ export default function HelpPage() {
       responseTime: 'Mon-Fri 9AM-6PM EST'
     }
   ];
+>>>>>>> 9a4f5825b5f6e9b21a821d0a21c3aa51adf201e7
 
   const filteredCategories = helpCategories.map(category => ({
     ...category,
@@ -181,9 +263,55 @@ export default function HelpPage() {
     )
   })).filter(category => category.articles.length > 0);
 
+<<<<<<< HEAD
+  return (
+    <>
+      <Head>
+        <title>Help Center - Zion Tech Group</title>
+        <meta name="description" content="Get help with Zion Tech Group services. Find documentation, tutorials, and support resources." />
+        <meta name="keywords" content="help, support, documentation, FAQ, tutorials, guides" />
+      </Head>
+
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Help <span className="text-blue-600">Center</span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Find answers, get support, and learn how to make the most of our services.
+              </p>
+              <div className="relative max-w-md mx-auto">
+                <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search help articles..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+=======
   const toggleSection = (sectionId) => {
     setExpandedSection(expandedSection === sectionId ? null : sectionId);
   };
+
+  const filteredFaqs = faqCategories[selectedCategory].faqs.filter(faq =>
+    faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <Layout>
@@ -220,7 +348,8 @@ export default function HelpPage() {
               </p>
             </motion.div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Search Section */}
         <section className="py-16 bg-white">
@@ -385,7 +514,8 @@ export default function HelpPage() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Contact Support */}
         <section className="py-16 bg-gray-50">
@@ -462,8 +592,79 @@ export default function HelpPage() {
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {resources.map((resource, index) => (
+              <motion.div
+                key={resource.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <resource.icon className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{resource.title}</h3>
+                <p className="text-gray-600 mb-4 text-sm">{resource.description}</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-blue-600 font-semibold">{resource.type}</span>
+                  <ExternalLink className="w-4 h-4 text-gray-400" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Still Need Help?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Can't find what you're looking for? Our support team is here to help you 24/7
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 text-lg font-semibold inline-flex items-center"
+            >
+              Call Support
+              <Phone className="ml-2 w-5 h-5" />
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-200 text-lg font-semibold inline-flex items-center"
+            >
+              Email Support
+              <Mail className="ml-2 w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </section>
     </Layout>
+=======
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+>>>>>>> 9a4f5825b5f6e9b21a821d0a21c3aa51adf201e7
   );
-}
+};
+
+export default Page;

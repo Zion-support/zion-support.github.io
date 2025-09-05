@@ -1,10 +1,7 @@
-<<<<<<< \"HEAD\": src.pages.disabled/Login.jsx import { useEffect } from \'react\'';\'; import { useNavigate,useLocation } from \'react-router-dom\'';\'; import { useAuth } from \'@/hooks/useAuth\'';\'; import { safeStorage } from \'@/utils/safeStorage\'';\'; import { LoginContent } from \'@/components/auth/login\'';\'; import { ErrorBoundary } from \'react-error-boundary\'';\'; import { useCart } from \'@/context/CartContext\'';\';\''; import { toast } from \'@/hooks/use-toast\'';\'; import { useDispatch } from \'react-redux\'';\'; import { setLoggedIn } from \'@/store/authSlice\'; useEffect ( () => {}; import { useEffect } from \'react\'';\'; import { useNavigate,useLocation } from \'react - router - dom\'';\'; import { useAuth } from \'@/hooks / useAuth\'';\'; import { safeStorage } from \'@/utils / safeStorage\'';\'; import { LoginContent } from \'@/components / auth / login\'';\'; import { ErrorBoundary } from \'react - error - boundary\'';\'; import { useCart } from \'@/context / CartContext\'';\';\''; import { toast } from \'@/hooks / use - toast\'';\'; import { useDispatch } from \'react - redux\'';\'; import { setLoggedIn } from \'@/store / authSlice\'; useEffect ( () => {}\';\'';
 import React from 'react';
-
 interface LoginProps {
   // Add props here as needed
 }
-
 export default function Login({ }: LoginProps) {
   return (
     <div>
@@ -12,4 +9,16 @@ export default function Login({ }: LoginProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+=======
+}
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

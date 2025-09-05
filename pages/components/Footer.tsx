@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
@@ -56,8 +57,13 @@ const Footer = () => {
     { name: 'Instagram', href: '#', icon: Instagram },
     { name: 'GitHub', href: '#', icon: Github }
   ];
+=======
+import MainLayout from '../../src/components/layout/MainLayout';
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
 
+const Page = () => {
   return (
+<<<<<<< HEAD
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-8">
@@ -219,7 +225,20 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+=======
+    <MainLayout 
+      title="Page - Zion Tech Group"
+      description="Zion Tech Group page"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
   );
 };
 
-export default Footer;
+export default Page;

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,6 +61,7 @@ const Header = () => {
       name: 'Company',
       href: '/company',
       dropdown: [
+        { name: 'About Us', href: '/about' },
         { name: 'Our Team', href: '/team' },
         { name: 'Careers', href: '/careers' },
         { name: 'Partners', href: '/partners' },

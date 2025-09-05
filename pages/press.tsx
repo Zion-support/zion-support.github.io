@@ -1,6 +1,5 @@
-import React from 'react';
+import * as React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { 
   Calendar, 
   ExternalLink, 
@@ -15,7 +14,7 @@ import {
   Users,
   TrendingUp
 } from 'lucide-react';
-import Layout from './components/Layout';
+import Layout from '../components/Layout';
 
 const pressReleases = [
   {
