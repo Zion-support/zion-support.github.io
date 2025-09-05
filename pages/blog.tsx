@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Calendar, User, ArrowRight, Tag } from 'lucide-react'
 import MainLayout from '../components/layout/MainLayout'
+
+const BlogPage = () => {
 const blogPosts = [{
     id: 1,
     title: "The Future of AI in Business: 2025 Trends",
@@ -64,7 +66,7 @@ const blogPosts = [{
     readTime: "6 min read",
     image: "/api/placeholder/600/300"
   }]
-export default function BlogPage() {
+
   return (
     <MainLayout
       title="Blog - Zion Tech Group"
@@ -150,3 +152,5 @@ export default function BlogPage() {
     </MainLayout>
   );
 }
+
+export default BlogPage;

@@ -316,7 +316,7 @@ const contactInfo = {
   address: '364 E Main St STE 1008, Middletown, DE 19709'
 };
 
-export default function Header() {}
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -365,11 +365,11 @@ export default function Header() {}
         </div>
       </div>
 
-              {/* Main Navigation */}
+      {/* Main Navigation */};
       <nav className="bg-white shadow-sm">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
-                          {/* Logo */}
+            {/* Logo */};
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
@@ -409,11 +409,11 @@ export default function Header() {}
                                 <child.icon className="w-5 h-5 text-blue-600 mt-0.5 group-hover:text-blue-700" />
                                 <div>
                                   <div className="font-medium text-gray-900 group-hover:text-blue-600">
-                                                                          {child.name}
-                                    </div>
-                                    <div className="text-sm text-gray-500 mt-1">
-                                      {child.description}
-                                    </div>
+                                    {child.name}
+                                  </div>
+                                  <div className="text-sm text-gray-500 mt-1">
+                                    {child.description}
+                                  </div>
                                 </div>
                               </Link>
                             </div>

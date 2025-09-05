@@ -16,6 +16,8 @@ import {
   ChevronDown,
   ChevronRight
 } from 'lucide-react';
+
+const HelpPage = () => {
 const helpCategories = [
   {
     title: "Getting Started",
@@ -141,9 +143,20 @@ const faqs = [
   }
 ]
 
-export default function HelpPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+
+  const toggleCategory = (categoryTitle: string) => {
+    setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle);
+  };
+
+  const filteredCategories = helpCategories.filter(category =>
+    category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    category.articles.some(article =>
+      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      article.description.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  );
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -202,10 +215,9 @@ export default function HelpPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-              Help Categories
+              Frequently Asked Questions
             </h2>
             <div className="space-y-6">
-              {helpCategories.map((category, categoryIndex) => (
                 <motion.div
                   key={categoryIndex}
                   className="bg-white rounded-lg shadow-lg overflow-hidden"
@@ -215,7 +227,7 @@ export default function HelpPage() {
                 >
                   <button
                     onClick={() => toggleCategory(category.title)}
-                    className="w-full p-6 text-left hover:bg-gray-50 transition-colors"
+                    className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                   >
                     <div className="flex items-center gap-4">
                       <category.icon className="w-6 h-6 text-blue-600" />
@@ -223,13 +235,11 @@ export default function HelpPage() {
                         {category.title}
                       </h3>
                     </div>
-                    <div className="flex items-center">
-                      {expandedCategory === category.title ? (
-                        <ChevronDown className="w-5 h-5 text-gray-500" />
-                      ) : (
-                        <ChevronRight className="w-5 h-5 text-gray-500" />
-                      )}
-                    </div>
+                    {expandedCategory === category.title ? (
+                      <ChevronDown className="w-5 h-5 text-gray-500" />
+                    ) : (
+                      <ChevronRight className="w-5 h-5 text-gray-500" />
+                    )}
                   </button>
                   
                   <AnimatePresence>
@@ -251,7 +261,7 @@ export default function HelpPage() {
                               >
                                 <div className="flex items-start justify-between mb-2">
                                   <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
-                                    {article.type}
+                                    {article.category}
                                   </span>
                                   <span className="text-xs text-gray-500">
                                     {article.readTime}
@@ -280,10 +290,10 @@ export default function HelpPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-              Frequently Asked Questions
+              Contact Support
             </h2>
             <div className="space-y-6">
-              {faqs.map((faq, index) => (
+              {supportOptions.map((option, index) => (
                 <motion.div
                   key={index}
                   className="bg-gray-50 rounded-lg p-6"
@@ -292,10 +302,10 @@ export default function HelpPage() {
                   transition={{ delay: index * 0.1 }}
                 >
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                    {faq.question}
+                    {option.title}
                   </h3>
                   <p className="text-gray-600">
-                    {faq.answer}
+                    {option.description}
                   </p>
                 </motion.div>
               ))}
@@ -348,5 +358,8 @@ export default function HelpPage() {
         </div>
       </section>
     </div>
-  );
-}
+  </Layout>
+);
+};
+
+export default HelpPage;
