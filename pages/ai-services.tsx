@@ -122,6 +122,9 @@ const aiServices = [
     description: "Intelligent conversational agents for customer engagement",
 
 ---
+
+---
+
     title: 'AI Content Generation',
     description: 'Automated content creation using advanced language models.',
     icon: FileText,
@@ -778,6 +781,12 @@ description: 'Complete autonomous vehicle systems with advanced perception and d
     popular: true
   },
   {
+
+---
+    popular: true
+  },
+  {
+
 
 ---
     popular: true
@@ -1872,6 +1881,9 @@ const benefits = [
   {
 
 ---
+
+---
+
   { name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },
   { name: 'Finance', icon: Building, description: 'Fraud detection and risk assessment' },
   { name: 'E-commerce', icon: ShoppingCart, description: 'Personalized recommendations and automation' },
@@ -1888,6 +1900,9 @@ const benefits = [
     stat: '40%'
   },
   {
+
+
+---
 
     icon: TrendingUp,
     title: "Better Decision Making",
@@ -1914,6 +1929,9 @@ const benefits = [
     description: 'Personalized user interactions',
     stat: '85%'
 
+
+---
+
   }
 ];
 
@@ -1931,6 +1949,9 @@ export default function AIServicesPage() {
           <motion.div
 
 ---
+
+---
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Head>
         <title>AI Services - Zion Tech Group</title>
@@ -1938,7 +1959,7 @@ export default function AIServicesPage() {
         <meta name="keywords" content="AI services, machine learning, NLP, computer vision, artificial intelligence, automation" />
       </Head>
 
-      {/* Hero Section */};
+      {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
@@ -1951,6 +1972,9 @@ export default function AIServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+
+
+---
 
             className="text-center"
             initial={{ opacity: 0, y: 30 }}
@@ -1966,12 +1990,16 @@ export default function AIServicesPage() {
 
 ---
               Transform your business with cutting-edge artificial intelligence solutions;
+
+---
+              Transform your business with cutting-edge artificial intelligence solutions
+
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Services Grid */};
+      {/* Services Grid */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
@@ -2032,6 +2060,11 @@ export default function AIServicesPage() {
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
+
+---
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }};
+
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
