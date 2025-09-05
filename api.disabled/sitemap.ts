@@ -1,2 +1,5 @@
-// Sitemap module
+<<<<<<< HEAD
 export {};
+=======
+module.exports = {};
+>>>>>>> main

@@ -1,11 +1,25 @@
-import React, {useState, useEffect, useRef} from 'react';'
+import React, {useState, useEffect, useRef} from 'react';';
 import {motion, useInView} from 'framer-motion';
-import {EnhancedLoading} from "./EnhancedLoading";'
-const LazyWrapper = (props: any) => {}
-export default function Page(props: any) {}
+import {EnhancedLoading} from "./EnhancedLoading";';
+const LazyWrapper = ("props": "any) => {"}
+export default function Page("props": "any) {"}
     }, [inView, isInView]) ;
     if(!isInView) {}
-        return (<div ref={ref} className={`min-h-[200px] ${className}`}>
+<<<<<<< HEAD
+        return (<div ref={ref} className={`min-h-[200px] ${className}`}>;
+        <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize} />;
+      </div>) }
+    if(!isLoaded) {}
+`;
+``;
+```;
+````;
+        return (<div className={`min-h-[200px] ${className}`}>;
+        <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize} />;
+      </div>) ;
+=======
+        return (
+        <div ref={ref} className={`min-h-[200px] ${className}`}>
         <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize} />
       </div>) }
     if(!isLoaded) {}
@@ -13,28 +27,31 @@ export default function Page(props: any) {}
 ``
 ```
 ````
-        return (<div className={`min-h-[200px] ${className}`}>
+        return (
+        <div className={`min-h-[200px] ${className}`}>
         <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize} />
-      </div>) ;
+      </div>
+    );
+>>>>>>> main
     }
     return (<motion.div initial = {}
-  {opacity: 0,
-  y: 20;}} animate = {}
-  {opacity: 1,
-  y: 0;}} transition={{ duration: 0.6 }} className={className}>
+  {"opacity": "0",;
+  "y": "20;"}} animate = {}
+  {"opacity": "1",;
+  "y": "0;"}} transition={{ "duration": "0.6 "}} className={className}>;
       {children}
     </motion.div>)};
 export default LazyWrapper;
 }}}
-
+;
 export {LazyWrapper};
-
+;
 export {LazyWrapper};
-
+;
 export {LazyWrapper};
-
+;
 export {LazyWrapper};
-
+;
 export {LazyWrapper, Page};
-
+;
 </motion>
