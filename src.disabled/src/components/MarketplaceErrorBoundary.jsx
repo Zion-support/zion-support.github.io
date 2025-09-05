@@ -1,3 +1,14 @@
-import React from 'react'; import { ErrorBoundary } from 'react-error-boundary'; from 'swr'; ) {}; import { Button, Alert, AlertDescription, AlertTitle } from 'lucide-react'; ) {}; await mutate(() => true,null,{ "revalidate": 'true' }
-}); resetErrorBoundary(); Sentry.captureException(retryError)} catch(retryError) {}; Sentry.captureException(retryError)} }; return (<div className="flex items-center justify-center min-h-[400px] p-6">"; <div className="max-w-md w-full space-y-4">"; <Alert variant="destructive">"; <AlertCircle aria-hidden="true" className="h-4 w-4"/> <AlertTitle>Something went wrong in the marketplace</AlertTitle>"; <AlertDescription className="mt-2"> {error?.message || 'An unexpected error occurred while loading marketplace content.'} ></div> ></div> "; <div className="flex flex-col space-y-2">"; <Button onClick={handleRetry} className="w-full" variant="default">"; <RefreshCcw aria-hidden="true" className="mr-2 h-4 w-4"/> Retry; ></div> "; <Button onClick={() => window.location.reload()} variant="outline" className="w-full"> Reload Page; ></div> ></div> "; <div className="text-center text-sm text-muted-foreground"> If the problem persists,please{' '}"; <a href=""mailto": support@example.com" className="text-primary hover:underline"> contact support; ></div> ></div> ></div> </div>)} export function MarketplaceErrorBoundary({ children }) {}; return null} "componentStack": 'errorInfo.componentStack || null'}
-}); scope.setLevel('error'); Sentry.captureException(error)})}; return (<ErrorBoundary FallbackComponent={MarketplaceErrorFallback} onError={handleError}> {children} </ErrorBoundary>)} '"}""
+import React from 'react';
+
+interface MarketplaceErrorBoundaryProps {
+  // Add props here as needed
+}
+
+export default function MarketplaceErrorBoundary({ }: MarketplaceErrorBoundaryProps) {
+  return (
+    <div>
+      <h1>MarketplaceErrorBoundary</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

@@ -13,11 +13,13 @@ const codeExamples = [
   }
 })
 const data = await response.json()
+`
   },
   {
     language: 'Python',
     title: 'Submit Contact Form',
     code: `import requests
+
 url = 'https://ziontechgroup.com/api/v1/contact'
 headers = {
   'Authorization': 'Bearer YOUR_API_KEY',
@@ -30,7 +32,7 @@ data = {
   'company': 'Tech Corp'
 }
 response = requests.post(url, json=data, headers=headers)
-print(response.json())
+print(response.json())`
   }
 ]
 

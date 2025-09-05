@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
-import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES } from '../src/data/comprehensiveServicesData';
-import { ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, BarChart3 } from 'lucide-react';
+import { COMPREHENSIVE_SERVICES, INNOVATIVE_SERVICES, SERVICE_CATEGORIES } from '../src/data/comprehensiveServicesData';
+import { ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, BarChart3, Sparkles } from 'lucide-react';
 
 const ServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
 
+  const allServices = [...COMPREHENSIVE_SERVICES, ...INNOVATIVE_SERVICES];
+  
   const filteredServices = selectedCategory === 'All' 
-    ? COMPREHENSIVE_SERVICES 
-    : COMPREHENSIVE_SERVICES.filter(service => service.category === selectedCategory);
+    ? allServices 
+    : allServices.filter(service => service.category === selectedCategory);
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -35,6 +37,84 @@ const ServicesShowcase: React.FC = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             From AI-powered solutions to cutting-edge IT services, we provide everything you need to transform your business and stay ahead of the competition.
           </p>
+        </div>
+
+        {/* Innovative Services Section */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Sparkles className="w-8 h-8 text-purple-600" />
+              <h3 className="text-3xl font-bold text-gray-900">Revolutionary AI & Innovation Services</h3>
+              <Sparkles className="w-8 h-8 text-purple-600" />
+            </div>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Cutting-edge solutions that push the boundaries of technology and transform industries
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {INNOVATIVE_SERVICES.map((service) => (
+              <div
+                key={service.id}
+                className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-purple-200"
+                onMouseEnter={() => setHoveredService(service.id)}
+                onMouseLeave={() => setHoveredService(null)}
+              >
+                {/* Service Header */}
+                <div className="p-6 border-b border-purple-100">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 bg-purple-100 rounded-lg">
+                        <Sparkles className="w-6 h-6 text-purple-600" />
+                      </div>
+                      <div>
+                        <h4 className="text-xl font-bold text-gray-900">{service.title}</h4>
+                        <p className="text-sm text-purple-600 font-semibold">{service.innovationLevel}</p>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-gray-900">{service.currency}{service.price}</div>
+                      <div className="text-sm text-gray-500">/{service.pricingModel}</div>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                </div>
+
+                {/* Service Features */}
+                <div className="p-6">
+                  <div className="mb-4">
+                    <h5 className="font-semibold text-gray-900 mb-2">Key Features:</h5>
+                    <div className="space-y-1">
+                      {service.features.slice(0, 4).map((feature, index) => (
+                        <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
+                          <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="mb-4">
+                    <h5 className="font-semibold text-gray-900 mb-2">ROI:</h5>
+                    <p className="text-sm text-green-600 font-semibold">{service.roi}</p>
+                  </div>
+
+                  <div className="flex items-center justify-between text-sm text-gray-500">
+                    <span>Market: {service.marketPrice}</span>
+                    <span>Delivery: {service.estimatedDelivery}</span>
+                  </div>
+                </div>
+
+                {/* Service Footer */}
+                <div className="p-6 bg-gradient-to-r from-purple-600 to-blue-600">
+                  <button className="w-full bg-white text-purple-600 font-semibold py-3 px-6 rounded-lg hover:bg-purple-50 transition-colors duration-300 flex items-center justify-center gap-2">
+                    Get Started
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Category Filter */}

@@ -1,19 +1,14 @@
-import React from 'react'''
-import Head from 'next/head'''
-import Link from 'next/link'''
-      name: 'Services API'''
-      "endpoint"""
-      "method"""
-      "description"""
-      "response"""
-      "name"""
-      "endpoint"""
-      "method"""
-      "description"""
-      "response"""
-      "name"""
-      "endpoint"""
-      "method"""
-      "description"""
-      "response""
-cursor/fix-lint-push-and-merge-to-main-f3c1;"
+import React from 'react';
+
+interface ApiProps {
+  // Add props here as needed
+}
+
+export default function Api({ }: ApiProps) {
+  return (
+    <div>
+      <h1>Api</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

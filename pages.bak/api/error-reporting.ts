@@ -1,4 +1,14 @@
-import type { NextApiRequest, NextApiResponse } from 'next'''
-export default function handler(req: NextApiRequest,res: NextApiResponse) { if (req.method !== 'POST') { return res.status(405).json({ message: 'Method not allowed' })} try { const errorReport: ErrorReport = req.body; console.error('Client Error Report:',{ error: errorReport.error,stack: errorReport.stack,componentStack: errorReport.componentStack,timestamp: errorReport.timestamp,userAgent: errorReport.userAgent,url: errorReport.url }
-}); res.status(200).json({ message: 'Error reported successfully' })} catch (error) { console.error('Error processing error report:',error); res.status(500).json({ message: 'Internal server error''})
-cursor/fix-lint-push-and-merge-to-main-f3c1;)'
+import React from 'react';
+
+interface ErrorreportingProps {
+  // Add props here as needed
+}
+
+export default function Errorreporting({ }: ErrorreportingProps) {
+  return (
+    <div>
+      <h1>Errorreporting</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

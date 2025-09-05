@@ -1,23 +1,14 @@
-export const MobileLaunchHero = (props) => {return (})
-    <div className="min-h-screen bg-white">"
-</div>"
-      <div className="container mx-auto px-4 text-center">"
-</div>"
-        <h1 className="text-4xl "md": text-6xl font-bold mb-6">"
-</h1>
-        </h1>"
-        <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">"
-</p>
-        </p>"
-        <div className="flex flex-col "sm": flex-row gap-4 justify-center">"
-</div>"
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">"
-</button>
-          </button>"
-          <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">"
-</button>
-          </button>
-        </div>
-      </div>
-    </div>)"
-export const MobileLaunchHero = (props) => {return ( <div className="min-h-screen bg-white"> <div className="container mx-auto px-4 text-center"> <h1 className="text-4xl md:text-6xl font-bold mb-6"> Zion Mobile App </h1> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"> Get the Zion AI marketplace in your pocket. Hire talent,find jobs,and manage projects on the go. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"> Download for iOS </button> <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"> Download for Android </button> </div> </div> </div> )};""
+import React from 'react';
+
+interface MobileLaunchHeroProps {
+  // Add props here as needed
+}
+
+export default function MobileLaunchHero({ }: MobileLaunchHeroProps) {
+  return (
+    <div>
+      <h1>MobileLaunchHero</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

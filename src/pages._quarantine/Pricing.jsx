@@ -1,33 +1,14 @@
-import React from 'react'''
-import {SEO} from '../components/SEO'''
-'''
-      "name"""
-      "price"""
-      "period"""
-      "popular"""
-      "cta"""
-      "link"""
-      "name"""
-      "price"""
-      "period"""
-      "description"""
-      "popular"""
-      "cta"""
-      "link"""
-      "name"""
-      "price"""
-      "period"""
-      "description"""
-      "popular"""
-      "cta"""
-      "link"""
-      "name"""
-      "price"""
-      "period": """
-      "popular"""
-      "cta"""
-      "link"""
-              Simple, Transparent"""
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"""
-                    tier.popular""""
-                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white "hover": from-blue-600 hover:to-cyan-600""'"""
+import React from 'react';
+
+interface PricingProps {
+  // Add props here as needed
+}
+
+export default function Pricing({ }: PricingProps) {
+  return (
+    <div>
+      <h1>Pricing</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

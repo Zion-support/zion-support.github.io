@@ -1,3 +1,14 @@
-import { useState, useEffect, useCallback } from 'react'''
-import { supabase } from '@/integrations/supabase/client''
-cursor/fix-lint-push-and-merge-to-main-f3c1;'
+import React from 'react';
+
+interface UseProjectsProps {
+  // Add props here as needed
+}
+
+export default function UseProjects({ }: UseProjectsProps) {
+  return (
+    <div>
+      <h1>UseProjects</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

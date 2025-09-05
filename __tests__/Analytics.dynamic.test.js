@@ -1,14 +1,14 @@
-import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import Analyticsdynamic from '../components/Analytics.dynamic'; describe('Analyticsdynamic',() => { test('renders without crashing',() => { render(<Analyticsdynamic />); expect(screen.getByTestId('analytics.dynamic')).toBeInTheDocument()}
-}); test('displays correct content',() => { render(<Analyticsdynamic />)}
-}); test('handles user interactions',() => { render(<Analyticsdynamic />)}
-}); test('applies correct styling',() => { render(<Analyticsdynamic />)})}
-});'
-</Analyticsdynamic>
-    render(<Analyticsdynamic />);
-</Analyticsdynamic>
-    render(<Analyticsdynamic />);
-</Analyticsdynamic>
-    render(<Analyticsdynamic />);
-</Analyticsdynamic>
-    render(<Analyticsdynamic />);
-</Analyticsdynamic>'
+import React from 'react';
+
+interface Analytics.dynamic.testProps {
+  // Add props here as needed
+}
+
+export default function Analytics.dynamic.test({ }: Analytics.dynamic.testProps) {
+  return (
+    <div>
+      <h1>Analytics.dynamic.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

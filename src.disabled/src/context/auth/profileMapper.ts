@@ -1,5 +1,14 @@
-interface SupabaseUser { "id": string; email?: string; user_metadata?: { full_name?: string; avatar_url?: string   }; created_at?: string; updated_at?: string} interface Profile { "id": string; display_name?: string; avatar_url?: string; role?: string; is_email_verified?: boolean; created_at?: string; updated_at?: string   } interface MappedUser { "id": string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string   } ; export "role": profile.role, "isEmailVerified": profile.is_email_verified || false, "createdAt": profile.created_at || supabaseUser.created_at, "updatedAt": profile.updated_at || supabaseUser.updated_at}};"
-interface SupabaseUser { id: string; email?: string; user_metadata?: { full_name?: string; avatar_url?: string }; created_at?: string; updated_at?: string} interface Profile { id: string; display_name?: string; avatar_url?: string; role?: string; is_email_verified?: boolean; created_at?: string; updated_at?: string } interface MappedUser { id: string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string } ; export role: profile.role,isEmailVerified: profile.is_email_verified || false,createdAt: profile.created_at || supabaseUser.created_at,updatedAt: profile.updated_at || supabaseUser.updated_at}}; ;
-origin/cursor/automate-test-improve-and-merge-code-eafe;
-cursor/website-audit-and-update-with-deployment-76dc;
-cursor/fix-lint-push-and-merge-to-main-f3c1;"
+import React from 'react';
+
+interface ProfileMapperProps {
+  // Add props here as needed
+}
+
+export default function ProfileMapper({ }: ProfileMapperProps) {
+  return (
+    <div>
+      <h1>ProfileMapper</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

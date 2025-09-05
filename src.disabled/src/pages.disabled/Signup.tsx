@@ -1,8 +1,14 @@
-import { useState, Link, Navigate, useNavigate } from 'lucide-react'; import { useForm, type UseFormReturn, zodResolver } from 'lucide-react'; import { z, User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from 'lucide-react'; import { useAuth, register } from 'lucide-react'; import { toast, Button } from 'lucide-react'; import { Input, Checkbox } from 'lucide-react'; import { Alert, AlertDescription, PasswordStrengthMeter } from 'lucide-react'; import {}} from "@/components/ui/form"; const signupSchema = z; .object({}}),;}
-}); .refine(data => data.password === data.confirmPassword,{}}
-}); type SignupFormValues = z.infer<typeof signupSchema> ; export default function Signup() {}; return null} const { signup,loginWithGoogle,loginWithFacebook,loginWithTwitter,isLoading,isAuthenticated,user } = useAuth(); const navigate = useNavigate(); const [showPassword,setShowPassword] = useState(false); const [showConfirmPassword,setShowConfirmPassword] = useState(false); const [confirmPasswordValue,setConfirmPasswordValue] = useState(); const passwordValue = form.watch("password"); const [isSubmitting,setIsSubmitting] = useState(false); const form = useForm({}},;}) as UseFormReturn<SignupFormValues> ; const onSubmit = async ("data": SignupFormValues) => {}; const { res,"data": 'resData' } = await register(; data.displayName,; data.email,; data.password; ); if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {}; form.setError('email',{ "message": 'resData.message' }
-}); toast.error('Email already registered – please login.'); return;} ; if (res.ok && resData.token && resData.user) {}; setTokens({ "accessToken": 'resData.token',"refreshToken": 'resData.refreshToken || null' }
-}); if (resData?.emailVerificationRequired) {}} else if (resData?.session) {}; const { "error": 'sessionError' } = await supabase.auth.setSession(resData.session); if (sessionError) {}; form.setError("root",{ "message": sessionError.message || "Failed to set session. Please try logging in." }
-}); toast.error(sessionError.message || "Failed to set session. Please try logging in."); return;} toast.success("Welcome to ZionAI �"); navigate("/dashboard");} else {}; form.setError("root",{ "message": "Registration complete,but an unexpected issue occurred. Please try logging in." }
-}); toast.error("Registration complete,but an unexpected issue occurred. Please try logging in manually."); return;} ; if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {}; "mergeFields""
-</typeof>"
+import React from 'react';
+
+interface SignupProps {
+  // Add props here as needed
+}
+
+export default function Signup({ }: SignupProps) {
+  return (
+    <div>
+      <h1>Signup</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}

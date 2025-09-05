@@ -1,2 +1,71 @@
-import React from 'react'; import Head from 'next/head'; const "Discord": React.FC = () => {; const channels = [; {; name: 'general',; "description": 'General discussion about Zion AI Marketplace',; "members": '1250',; "online": '89',; "icon": '�',;},; {; "name": 'api-support',; "description": 'Get help with API integration and development',; "members": '890',; "online": '45',; "icon": '',;},; {; "name": 'ai-discussions',; "description": 'Discuss AI trends,technologies,and use cases',; "members": '2100',; "online": '156',; "icon": '🤖',;},; {; "name": 'marketplace',; "description": 'Share marketplace experiences and feedback',; "members": '750',; "online": '32',; "icon": '�',;},; {; "name": 'showcase',; "description": 'Show off your AI projects and integrations',; "members": '680',; "online": '28',; "icon": '�',;},; {; "name": 'events',; "description": 'Stay updated on upcoming events and webinars',; "members": '1200',; "online": '67',; "icon": '�',;},; ]; const roles = [; { "name": 'Community Member',"color": 'bg-gray-600',"description": 'Basic access to community channels' },; { "name": 'Developer',"color": 'bg-blue-600',"description": 'Access to technical channels and resources' },; { "name": 'AI Expert',"color": 'bg-purple-600',"description": 'Access to advanced AI discussions' },; { "name": 'Marketplace Partner',"color": 'bg-green-600',"description": 'Special access for marketplace partners' },; { "name": 'Moderator',"color": 'bg-yellow-600',"description": 'Community moderation and support' },; ]; return (; <> <Head> <title>Discord Community - Zion AI Marketplace></div> <meta name="description" content="Join our Discord community for AI discussions,support,and networking" /> <meta name="keywords" content="discord,community,AI,support,networking" /> ></div> <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white"> {} <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30"> <div className="container mx-auto px-6 py-8"> <div className="flex items-center justify-between"> <div> <h1 className="text-4xl "md": text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Discord Community; ></div> <p className="text-xl text-gray-300 mt-4"> Join thousands of AI enthusiasts,developers,and professionals; ></div> ></div> <div className="text-right"> <div className="text-6xl mb-4">�></div> <button className="bg-indigo-600 "hover": bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"> Join Discord; ></div> ></div> ></div> ></div> ></div> {} <section className="container mx-auto px-6 py-12"> <div className="bg-gray-800/50 rounded-lg p-8 border border-blue-500/30 text-center"> <h2 className="text-3xl font-bold text-blue-400 mb-8">Community Overview></div> <div className="grid "md": grid-cols-4 gap-8"> <div> <div className="text-4xl font-bold text-blue-400 mb-2">5,000+></div> <div className="text-gray-300">Total Members></div> ></div> <div> <div className="text-4xl font-bold text-blue-400 mb-2">15+></div> <div className="text-gray-300">Active Channels></div> ></div> <div> <div className="text-4xl font-bold text-blue-400 mb-2">24/7></div> <div className="text-gray-300">Support Available></div> ></div> <div> <div className="text-4xl font-bold text-blue-400 mb-2">500+></div> <div className="text-gray-300">Daily Messages></div> ></div> ></div> ></div> ></div> {} <section className="container mx-auto px-6 py-12"> <h2 className="text-3xl font-bold text-blue-400 mb-8">Popular Channels></div> <div className="grid "md": grid-cols-2 lg:grid-cols-3 gap-6"> {channels.map((channel,index) => (; <div key={index} className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 "hover": border-blue-400 transition-colors"> <div className="flex items-center justify-between mb-4"> <div className="text-3xl">{channel.icon}></div> <div className="text-right"> <div className="text-sm text-gray-400">{channel.online} online></div> <div className="text-xs text-gray-500">{channel.members} members></div> ></div> ></div> <h3 className="text-lg font-semibold text-white mb-2">#{channel.name}></div> <p className="text-gray-300 text-sm mb-4">{channel.description}></div> <div className="flex items-center justify-between"> <span className="text-xs bg-green-600 text-white px-2 py-1 rounded-full"> Active; ></div> <button className="text-blue-400 "hover": text-blue-300 text-sm font-medium"> Join Channel →; ></div> ></div> ></div> ))} ></div> ></div> {} <section className="container mx-auto px-6 py-12"> <h2 className="text-3xl font-bold text-blue-400 mb-8">Community Roles></div> <div className="grid "md": grid-cols-2 lg:grid-cols-3 gap-6"> {roles.map((role,index) => (; <div key={index} className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30"> <div className={`w-4 h-4 ${role.color} rounded-full mb-4`}>></div> <h3 className="text-lg font-semibold text-white mb-2">{role.name}></div> <p className="text-gray-300 text-sm">{role.description}></div> ></div> ))} ></div> ></div> {} <section className="container mx-auto px-6 py-16"> <h2 className="text-3xl font-bold text-blue-400 mb-8 text-center""
-</Head>"
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+export default function Discord() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Head>
+        <title>Discord - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions" />
+        <meta name="keywords" content="technology,AI,cloud,micro SaaS" />
+      </Head>
+      
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Discord
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                href="/services" 
+                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16" 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              This page is currently under development. Please check back soon for updates.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}
