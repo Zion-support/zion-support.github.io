@@ -2,6 +2,7 @@ import React from "react";
 import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+
 export default function APIPage() {
   const apiFeatures = [
     {
@@ -50,9 +51,18 @@ export default function APIPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Comprehensive API documentation and reference for integrating with Zion Tech Group services
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  Get Started
+                </button>
+                <button className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+                  View Documentation
+                </button>
+              </div>
             </motion.div>
           </div>
         </section>
+
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -94,84 +104,3 @@ export default function APIPage() {
     </Layout>
   );
 }
-                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">AI</span>"
-                  </div>"
-                  <div className="flex items-center justify-between">"
-</div>"
-                    <span className="text-sm text-gray-600">POST /api/ai/process</span>"
-                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">AI</span>"
-                  </div>
-                </div>
-              </div>
-"
-              <div className="bg-gray-50 p-6 rounded-lg">"
-</div>"
-                <h3 className="text-xl font-bold text-gray-900 mb-4">IT Services API</h3>"
-                <div className="space-y-2">"
-</div>"
-                  <div className="flex items-center justify-between">"
-</div>"
-                    <span className="text-sm text-gray-600">GET /api/infrastructure/status</span>"
-                    <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">IT</span>"
-                  </div>"
-                  <div className="flex items-center justify-between">"
-</div>"
-                    <span className="text-sm text-gray-600">POST /api/security/scan</span>"
-                    <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">IT</span>"
-                  </div>"
-                  <div className="flex items-center justify-between">"
-</div>"
-                    <span className="text-sm text-gray-600">GET /api/cloud/resources</span>"
-                    <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">IT</span>"
-                  </div>
-                </div>
-              </div>
-"
-              <div className="bg-gray-50 p-6 rounded-lg">"
-</div>"
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Micro SaaS API</h3>"
-                <div className="space-y-2">"
-</div>"
-                  <div className="flex items-center justify-between">"
-</div>"
-                    <span className="text-sm text-gray-600">POST /api/saas/subscribe</span>"
-                    <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">SaaS</span>"
-                  </div>"
-                  <div className="flex items-center justify-between">"
-</div>"
-                    <span className="text-sm text-gray-600">GET /api/saas/usage</span>"
-                    <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">SaaS</span>"
-                  </div>"
-                  <div className="flex items-center justify-between">"
-</div>"
-                    <span className="text-sm text-gray-600">POST /api/saas/configure</span>"
-                    <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">SaaS</span>"
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>"
-        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">"
-</section>"
-          <div className="container mx-auto px-4 text-center">"
-</div>"
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">"
-</h2>
-            </h2>"
-            <p className="text-xl mb-8 max-w-2xl mx-auto">"
-</p>
-            </p>
-            <motion.a;"
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              whileHover={{ scale: 1.05 }};
-            >
-</motion>"
-              <ArrowRight className="w-5 h-5 ml-2" />"
-</ArrowRight>
-            </motion.a>
-          </div>
-        </section>
-      </div>
-    </Layout>"
