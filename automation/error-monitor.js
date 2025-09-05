@@ -84,6 +84,7 @@ class ErrorMonitor {
       this.monitoringReport.errorsDetected.push({
         type: 'health_check_failure',
         message: error.message,
+<<<<<<< HEAD
         timestamp: new Date().toISOString(),
       });
     }
@@ -195,6 +196,9 @@ class ErrorMonitor {
             column: parseInt(match[3]),
             message: match[4].trim(),
             timestamp: new Date().toISOString(),
+=======
+        timestamp: new Date().toISOString()            timestamp: new Date().toISOString(),
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
           });
         }
       }
@@ -216,12 +220,19 @@ class ErrorMonitor {
           line: parseInt(match[2]),
           column: parseInt(match[3]),
           message: match[4].trim(),
+<<<<<<< HEAD
           timestamp: new Date().toISOString(),
         });
       }
     }
 
     return errors;
+=======
+          timestamp: new Date().toISOString()
+        });
+      }
+    }    return errors;
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
   }
 
   updateHealthStatus() {
@@ -245,6 +256,7 @@ class ErrorMonitor {
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
+<<<<<<< HEAD
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -265,11 +277,17 @@ class ErrorMonitor {
       await automation.run();
 
       console.log('✅ Error fixer completed');
+=======
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);      console.log('✅ Error fixer completed');
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
+<<<<<<< HEAD
         timestamp: new Date().toISOString(),
       });
     }
@@ -301,6 +319,9 @@ class ErrorMonitor {
     }
 
     // Add duration to report
+=======
+        timestamp: new Date().toISOString()    // Add duration to report
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     this.monitoringReport.duration = Date.now() - this.startTime;
 
     fs.writeFileSync(

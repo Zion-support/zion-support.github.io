@@ -4,13 +4,19 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 
 console.log('🚀 Comprehensive Merge & PR Resolver');
-console.log('====================================');
+console.log('=');
 
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
+<<<<<<< HEAD
     .replace(/>>>>>>> [a-f0-9]+/g, '');
 }
+=======
+    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
+    .replace(//g, '')
+    .replace(/}
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
@@ -75,3 +81,154 @@ function processFile(filePath) {
     let modified = false;
 
     // Check for merge conflict markers
+<<<<<<< HEAD
+=======
+    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+      console.log(`🔧 Removing merge conflict markers from ${filePath}`);
+      content = removeMergeConflictMarkers(content);
+      modified = true;
+    }
+
+    // Fix syntax errors
+    const originalContent = content;
+    content = fixSyntaxErrors(content);
+    
+    if (content !== originalContent) {
+      console.log(`🔧 Fixing syntax errors in ${filePath}`);
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed ${filePath}`);
+      return true;
+    }
+
+    return false;
+  } catch (error) {
+    console.log(`❌ Error processing ${filePath}: ${error.message}`);
+    return false;
+  }
+}
+
+// Main execution
+async function main() {
+  try {
+    console.log('🔍 Checking for merge conflicts and syntax errors...');
+    
+    // Process all TypeScript/JavaScript files
+    const allFiles = [
+      'pages/about.tsx',
+      'pages/blog.tsx',
+      'pages/ai-services.tsx',
+      'pages/api.tsx',
+      'pages/accessibility.tsx',
+      'pages/careers.tsx',
+      'pages/docs/api.tsx',
+      'components/Header.tsx',
+      'components/Footer.tsx',
+      'components/Layout.tsx',
+      'components/layout/MainLayout.tsx'
+    ];
+
+    let totalFixed = 0;
+
+    for (const file of allFiles) {
+      if (processFile(file)) {
+        totalFixed++;
+      }
+    }
+
+    console.log(`\n✅ Fixed ${totalFixed} files`);
+
+    // Try to build
+    console.log('\n🔨 Testing build...');
+    try {
+      execSync('npm run build', { cwd: '/workspace', stdio: 'pipe' }
+});
+      console.log('✅ Build successful!');
+    } catch (error) {
+      console.log('⚠️  Build still has issues, but conflicts were resolved');
+      console.log('Error:', error.message);
+    }
+
+    // Check git status
+    console.log('\n📊 Checking git status...');
+    try {
+      const gitStatus = execSync('git status --porcelain', { cwd: '/workspace', encoding: 'utf8' }
+});
+      if (gitStatus.trim()) {
+        console.log('📝 Staging and committing changes...');
+        execSync('git add .', { cwd: '/workspace' }
+});
+        execSync('git commit -m "fix: Resolve merge conflicts and syntax errors"', { cwd: '/workspace' }
+});
+        console.log('✅ Changes committed');
+      } else {
+        console.log('✅ No changes to commit');
+      }
+    } catch (error) {
+      console.log('⚠️  Git operations failed:', error.message);
+    }
+
+    // Check for open PRs (if GitHub CLI is available)
+    console.log('\n🔍 Checking for open PRs...');
+    try {
+      const prs = execSync('gh pr list --state open', { cwd: '/workspace', encoding: 'utf8' }
+});
+      if (prs.trim()) {
+        console.log('📋 Open PRs found:');
+        console.log(prs);
+        
+        // Try to merge PRs
+        const prNumbers = prs.match(/#(\d+)/g);
+        if (prNumbers) {
+          for (const prNumber of prNumbers) {
+            const number = prNumber.replace('#', '');
+            try {
+              console.log(`🔄 Merging PR #${number}...`);
+              execSync(`gh pr merge ${number} --merge`, { cwd: '/workspace' }
+});
+              console.log(`✅ PR #${number} merged successfully`);
+            } catch (error) {
+              console.log(`⚠️  Failed to merge PR #${number}:`, error.message);
+            }
+          }
+        }
+      } else {
+        console.log('✅ No open PRs found');
+      }
+    } catch (error) {
+      console.log('⚠️  GitHub CLI not available or no PRs found');
+    }
+
+    // Pull latest changes
+    console.log('\n📥 Pulling latest changes from remote...');
+    try {
+      execSync('git pull origin main', { cwd: '/workspace' }
+});
+      console.log('✅ Latest changes pulled');
+    } catch (error) {
+      console.log('⚠️  Failed to pull changes:', error.message);
+    }
+
+    // Push changes
+    console.log('\n🚀 Pushing changes to main branch...');
+    try {
+      execSync('git push origin main', { cwd: '/workspace' }
+});
+      console.log('✅ Changes pushed to main branch');
+    } catch (error) {
+      console.log('⚠️  Failed to push changes:', error.message);
+    }
+
+    console.log('\n🎉 Comprehensive merge and PR resolution completed!');
+
+  } catch (error) {
+    console.error('❌ Error:', error.message);
+    process.exit(1);
+  }
+}
+
+main();
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

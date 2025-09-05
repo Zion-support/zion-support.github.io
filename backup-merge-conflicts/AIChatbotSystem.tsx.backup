@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
 <<<<<<< HEAD:src/components/AIChatbotSystem.tsx
 =======
 <<<<<<< HEAD
@@ -31,6 +32,10 @@ interface ChatMessage {
   type: 'text';';';
 =======
 import {;
+=======
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';import {;
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
   MessageCircle,;
   X,;
   Send,;
@@ -48,7 +53,6 @@ import {;
   HelpCircle
 >>>>>>> main
 } from 'lucide-react';
-<<<<<<< HEAD
 ;
 interface ChatMessage {;
   "id": "string;
@@ -57,10 +61,14 @@ interface ChatMessage {;
   "timestamp": Dat e;
   "type": 'text';
   "status": 'sent';
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
   metadata?: {;
 =======
 
 interface ChatMessage {
+=======
+  metadata?: {;interface ChatMessage {
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
   id: string;
   content: string;
   sender: 'user' | 'bot';
@@ -79,7 +87,6 @@ interface ChatMessage {
     estimatedResponseTime?: number;
   "};
 }
-<<<<<<< HEAD
 ;
 interface AIChatbotSystemProps {;
   showHeader?: "boolean;
@@ -97,11 +104,15 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
   maxMessages = 50,
   autoScroll = true
 }) => {';
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
   const [messages, setMessages] = useState<ChatMessage[]>([]);';';
 =======
 =======
 "}
 >>>>>>> main
+=======
+  const [messages, setMessages] = useState<ChatMessage[]>([]);';';"}
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
 ;
 export const "AIChatbotSystem": "React.FC<AIChatbotSystemProps> = ({;
   showHeader = true",;
@@ -136,9 +147,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   const [isTyping, setIsTyping] = useState<any>(false);
   const [isOpen, setIsOpen] = useState<any>(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
   // Sample welcome message
   useEffect(() => {
     if (isOpen && messages.length === 0) {';
@@ -153,15 +167,18 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
           confidence: 0.95,';';
           suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],';';
           relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
           estimatedResponseTime: 2
 =======
 =======
 >>>>>>> main
 ;
+=======
+          estimatedResponseTime: 2;
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
   // Sample welcome message;
   useEffect(() => {;
     if (isOpen && messages.length === 0) {;
-<<<<<<< HEAD
       const welcomeMessage: ChatMessag e = {;
         id: 'welcome',;
         content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with:\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",;
@@ -173,6 +190,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
           confidence: 0.95,;
           suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],;
           relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],;
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
           estimatedResponseTime: 2;
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
@@ -263,6 +281,13 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 =======
     await new Promise(resolve => setTimeout(resolve", 1000 + Math.random() * 2000));
 >>>>>>> main
+=======
+          estimatedResponseTime: 2;;
+  // Auto-scroll to bottom;
+  useEffect(() => {;
+    if (autoScroll && messagesEndRef.current) {;
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });    await new Promise(resolve => setTimeout(resolve", 1000 + Math.random() * 2000));
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
 ;
     const responses = [;
       {;
@@ -276,9 +301,9 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         "relatedServices": "['Cybersecurity'", 'Compliance', 'Security Operations'];
       },;
       {;
-<<<<<<< HEAD
         content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",;
         suggestions: ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],;
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
         relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management'];
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
@@ -344,6 +369,9 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 >>>>>>> main
 
     const botMessage: ChatMessag e = {
+=======
+        relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management'];    const botMessage: ChatMessag e = {
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
       id: Dat e.now().toString(),
       content: randomRespons e.content,
       sender: 'bot',
@@ -370,6 +398,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         suggestions: randomRespons e.suggestions,;
         relatedServices: randomRespons e.relatedServices,;
         estimatedResponseTime: 1 + Math.random() * 2;
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 >>>>>>> main
@@ -396,14 +425,19 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       "status": 'sent';
 =======
 
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
   // Handle message submission
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     if (!inputValue.trim() || isTyping) return;
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
 
     const userMessage: ChatMessag e = {
       id: Dat e.now().toString(),
@@ -414,8 +448,8 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       status: 'sent'
 >>>>>>> main
     };
-<<<<<<< HEAD
 ';
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
     setMessages(prev => [...prev, userMessage]);';';
 =======
 ;
@@ -434,11 +468,13 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
     setMessages(prev => [...prev, userMessage]);
 >>>>>>> main
+=======
+    setMessages(prev => [...prev, userMessage]);';';    setMessages(prev => [...prev, userMessage]);
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
     setInputValue('');
     
     await simulateAIResponse(inputValue.trim());
   }, [inputValue, isTyping, simulateAIResponse]);
-<<<<<<< HEAD
 ;
   // Handle suggestion click;
   const handleSuggestionClick = ("props": "any) => {;
@@ -455,10 +491,14 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         "sender": 'user',;
         "timestamp": "new Date()",;
         "type": 'file',;
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
         "status": 'sent';
 =======
 
   // Handle suggestion click
+=======
+        "status": 'sent';  // Handle suggestion click
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
   const handleSuggestionClick = (props: any) => {
     setInputValue(suggestion);
     }, []);
@@ -488,6 +528,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         timestamp: new Date(),;
         type: 'file',;
         status: 'sent';
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 >>>>>>> main
@@ -512,6 +553,8 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     <>;
 =======
 
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
   // Clear chat
   const clearChat = (props: any) => {
     setMessages([]);
@@ -523,7 +566,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       {/* Chat Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-<<<<<<< HEAD
         className="fixed bottom-4 right-4 z-50 p-4 bg-cyan-500 text-white rounded-full shadow-lg "hover": "shado w-xl transition-all duration-300 "focus": outlin e-none "focus": rin g-2 "focus": rin g-cyan-500 "focus": rin g-offset-2 "focus": rin g-offset-gray-900";
         whileHover={{ "scale": 1.1 "}}
         whileTap={{ "scale": "0.95 "}}
@@ -572,6 +614,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                 </div>
                   </div>
   );
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
 }
 =======
                       className="p-2 text-gray-400 hover: tex t-white transition-colors";
@@ -591,6 +634,9 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 =======
 =======
         className="fixed bottom-4 right-4 z-50 p-4 bg-cyan-500 text-white rounded-full shadow-lg hover: shado w-xl transition-all duration-300 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-500 focus: rin g-offset-2 focus: rin g-offset-gray-900"
+=======
+}        className="fixed bottom-4 right-4 z-50 p-4 bg-cyan-500 text-white rounded-full shadow-lg hover: shado w-xl transition-all duration-300 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-500 focus: rin g-offset-2 focus: rin g-offset-gray-900"
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Toggle AI chatbot"
@@ -638,13 +684,17 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
               </div>
             )}
 
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
             {/* Messages */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4">
               {messages.map((message) => (
                 <motion.div
                   key={message.id}
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
                   initial={{ opacity: 0, y: 1 0 }}';
@@ -687,17 +737,27 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                           </button>;
 =======
                             className="text-xs bg-gray-700 hover: b g-gray-600 text-gray-300 px-2 py-1 rounded transition-colors"
+=======
+                  initial={{ opacity: 0, y: 1 0 }}';
+                  animate={{ opacity: 1, y: 0 }}';';
+                  className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}';
+                >';';                            className="text-xs bg-gray-700 hover: b g-gray-600 text-gray-300 px-2 py-1 rounded transition-colors"
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
                           >
                             {suggestion}
                           </button>
 >>>>>>> main
                         ))}
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
                           </div>
   );
 }
                   </div>
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
                 </motion.div>
 =======
                       </div>;
@@ -707,6 +767,9 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
                       </div>
+=======
+                </motion.div>                      </div>
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
                     )}
                   </div>
                 </motion.div>
@@ -714,7 +777,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
               ))}
 
               {/* Typing Indicator */}
-<<<<<<< HEAD
               {isTyping && (;
                 <motion.div;
 <<<<<<< HEAD
@@ -731,10 +793,14 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                     </div>
                     <span className="text-sm text-gray-400">Zion AI is typing...</span>
                   </div>
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
                 </motion.div>
 =======
 =======
                   initial={{ "opacity": "0 "}}
+=======
+                </motion.div>                  initial={{ "opacity": "0 "}}
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
                   animate={{ "opacity": "1 "}}
 >>>>>>> main
                   className="flex justify-start";
@@ -748,6 +814,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                     <span className="text-sm text-gray-400">Zion AI is typing...</span>;
                   </div>;
                 </motion.div>;
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
 <<<<<<< HEAD
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
@@ -789,18 +856,22 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   />;
                 </div>;
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
                     placeholder="Ask me anything about Zion Tech Group..."
                     className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-500 focus: borde r-transparent"
                     disabled={isTyping}
                   />
                 </div>
 
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
 >>>>>>> main
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
                 {/* Send Button */}
                 <button
                   type="submit"
                   disabled={!inputValue.trim() || isTyping}
-<<<<<<< HEAD
                   className="p-3 bg-cyan-500 text-white rounded-lg "hover": "b g-cyan-600 transition-colors "disabled": opacit y-50 "disabled": curso r-not-allowed";
                   aria-label="Send message";
                 >;
@@ -819,6 +890,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
           </motion.div>;
 =======
                   className="p-3 bg-cyan-500 text-white rounded-lg hover: b g-cyan-600 transition-colors disabled: opacit y-50 disabled: curso r-not-allowed"
@@ -866,6 +938,9 @@ export default AIChatbotSystem;
 </AIChatbotSystemProps>;';;';
 =======
 ;
+=======
+          </motion.div>;;
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx
 export default AIChatbotSystem;
 </motion>;
 </motion>;
@@ -876,6 +951,7 @@ export default AIChatbotSystem;
 </any>;
 </ChatMessage>;
 </AIChatbotSystemProps>;
+<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 </any>
@@ -966,3 +1042,5 @@ import _React,{ useState,useEffect,useRef,useCallback } from 'react'; import { m
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatbotSystem.tsx

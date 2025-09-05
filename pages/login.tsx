@@ -9,7 +9,6 @@ export default function LoginPage() {
     password: ''
   });
   const [showPassword, setShowPassword] = useState(false);
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle login logic here
@@ -20,8 +19,7 @@ export default function LoginPage() {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
+    });  };
 
   return (
     <Layout
@@ -110,8 +108,7 @@ export default function LoginPage() {
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                   />
-                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                    Remember me
+                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">                    Remember me
                   </label>
                 </div>
 
@@ -126,8 +123,7 @@ export default function LoginPage() {
                 <button
                   type="submit"
                   className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
-                >
-                  Sign in
+                >                  Sign in
                 </button>
               </div>
 
@@ -170,8 +166,7 @@ export default function LoginPage() {
                 </div>
               </div>
             </div>
-          </motion.form>
-        </div>
+          </motion.form>        </div>
       </div>
     </Layout>
   );

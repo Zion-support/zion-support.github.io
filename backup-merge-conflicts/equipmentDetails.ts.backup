@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/equipmentDetails.ts.backup
 <<<<<<< HEAD:src/data/equipmentDetails.ts
 =======
 <<<<<<< HEAD
@@ -14,3 +15,6 @@ export interface EquipmentItem { "id": 'string; name: string; description: strin
 >>>>>>> main:src_backup_temp/data/equipmentDetails.ts
 >>>>>>> main
 >>>>>>> main
+=======
+export interface EquipmentItem { "id": 'string; name: string; description: string; price: number; category: string; image: string; specs: string[]; availability: boolean' } ; export const "EQUIPMENT_DETAILS": EquipmentIte m[] = [ { id: "1"," "name": "High-Performance GPU Server"," "description": "Enterprise-grade GPU server for AI/ML workloads","price": '250 0'," "category": "Servers"," "image": "https:"]"}
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/data/equipmentDetails.ts

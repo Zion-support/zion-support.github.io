@@ -59,8 +59,11 @@ const seoContent = fs.readFileSync('src/components/SEO.tsx', 'utf8');
 const seoFixed = seoContent.split('  );')[0] + '  );';
 fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8');
 console.log('✅ Fixed SEO.tsx');
+<<<<<<< HEAD
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 
 // Fix TalentCard.jsx - fix malformed JSX
 const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8');
@@ -97,8 +100,11 @@ const toastContent = fs.readFileSync('src/components/ui/use-toast.ts', 'utf8');
 const toastFixed = toastContent.replace('  return { showToast };\n}', '  return { showToast };\n}');
 fs.writeFileSync('src/components/ui/use-toast.ts', toastFixed, 'utf8');
 console.log('✅ Fixed use-toast.ts');
+<<<<<<< HEAD
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 
 // Fix enhancedServices.ts - fix malformed object properties
 const servicesContent = fs.readFileSync('src/data/enhancedServices.ts', 'utf8');
@@ -144,7 +150,10 @@ console.log('✨ Final comprehensive fixes completed!');
 =======
   }} else {
   }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 #!/usr/bin/env node;
 const fs = require('fs')
     return match.replace(/,\s*$/, '')

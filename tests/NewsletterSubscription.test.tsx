@@ -11,4 +11,8 @@ export default function NewsletterSubscription.test({ }: NewsletterSubscription.
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

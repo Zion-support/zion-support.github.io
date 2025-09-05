@@ -1,1 +1,25 @@
+<<<<<<< HEAD
 import _React from 'react';  import '@testing-library/jest-dom'; import SecurityEnhancerdynamic from '../components/SecurityEnhancer.dynamic'; describe('SecurityEnhancerdynamic',() => { test('renders without crashing',() => { render(<SecurityEnhancerdynamic />); expect(screen.getByTestId('securityenhancer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityEnhancerdynamic />)}); test('handles user interactions',() => { render(<SecurityEnhancerdynamic />)}); test('applies correct styling',() => { render(<SecurityEnhancerdynamic />)})});
+=======
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import SecurityEnhancerdynamic from '../components/SecurityEnhancer.dynamic';
+describe('SecurityEnhancerdynamic', () => {
+  test('renders without crashing', () => {
+    render(<SecurityEnhancerdynamic />);
+    expect(screen.getByTestId('securityenhancer.dynamic')).toBeInTheDocument();
+  });
+  test('displays correct content', () => {
+    render(<SecurityEnhancerdynamic />);
+  });
+  test('handles user interactions', () => {
+    render(<SecurityEnhancerdynamic />);
+  });
+  test('applies correct styling', () => {
+    render(<SecurityEnhancerdynamic />);
+  });
+});
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityEnhancerdynamic from "./components/SecurityEnhancer.dynamic"; describe("SecurityEnhancerdynamic",() => { test("renders without crashing",() => { render(<SecurityEnhancerdynamic />); expect(screen.getByTestId("securityenhancer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityEnhancerdynamic />)}); test("handles user interactions",() => { render(<SecurityEnhancerdynamic />)}); test("applies correct styling",() => { render(<SecurityEnhancerdynamic />)})});''"
+import _React from 'react';  import '@testing-library/jest-dom'; import SecurityEnhancerdynamic from '../components/SecurityEnhancer.dynamic'; describe('SecurityEnhancerdynamic',() => { test('renders without crashing',() => { render(<SecurityEnhancerdynamic />); expect(screen.getByTestId('securityenhancer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityEnhancerdynamic />)}); test('handles user interactions',() => { render(<SecurityEnhancerdynamic />)}); test('applies correct styling',() => { render(<SecurityEnhancerdynamic />)})});
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

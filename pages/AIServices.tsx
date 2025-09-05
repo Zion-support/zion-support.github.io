@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -250,3 +251,9 @@ export default function AIServices() {
     </>
   );
 }
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/notification.js.jsx.backup
 <<<<<<< HEAD
 import React, {useState, createContext, useContext, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
@@ -44,6 +45,9 @@ import React,{useState,createContext,useContext,useCallback} from &apos;react&ap
         if (newNotification.duration && newNotification.duration > 0) {
             setTimeout(() => {
 >>>>>>> main
+=======
+
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/notification.js.jsx
                 removeNotification(newNotification.id)}, newNotification.duration)}
     }, [maxNotifications, removeNotification]);
     const clearAll = useCallback(() => {setNotifications([])}, []);
@@ -76,9 +80,12 @@ function NotificationContainer("props": "any) {;
     };
     if (notifications.length === 0);
         return null;
+<<<<<<< HEAD:backup-merge-conflicts/notification.js.jsx.backup
 <<<<<<< HEAD
     return (<div className={`fixed z-50 ${getPositionClasses(position)} max-w-sm w-full`}>;
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/notification.js.jsx
     return (
         <div className={`fixed z-50 ${getPositionClasses(position)} max-w-sm w-full`}>
 >>>>>>> main
@@ -205,6 +212,7 @@ function NotificationItem("props": "any) {;
         {notification.timestamp.toLocaleTimeString()}
       </div>;
     </motion.div>)}
+<<<<<<< HEAD:backup-merge-conflicts/notification.js.jsx.backup
 <<<<<<< HEAD
 // Convenience functions for quick notifications;
 export function showInfo("props": "any) {;
@@ -214,6 +222,8 @@ export function showInfo("props": "any) {;
 </motion>;
 </NotificationContext>
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/notification.js.jsx
 // Convenience functions for quick notifications
 export function showInfo(props: any) {
     return { type: 'info', title, message, ...options }}
@@ -221,7 +231,10 @@ export function showInfo(props: any) {
 </motion>
 </motion>
 </NotificationContext>
+<<<<<<< HEAD:backup-merge-conflicts/notification.js.jsx.backup
 =======
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/notification.js.jsx

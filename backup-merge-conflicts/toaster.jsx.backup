@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/toaster.jsx.backup
 <<<<<<< HEAD
 import * as React from "react";
 import {Toaster as HotToaster} from "react-hot-toast";
@@ -17,3 +18,7 @@ import * as _React from "react"; import {Toaster as HotToaster} from "react-hot-
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+import _React from 'react';,
+import * as _React from "react"; import {Toaster as HotToaster} from "react-hot-toast"; export function Toaster(_) {return (<HotToaster position="top-right" />)} export default toaster;
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/toaster.jsx

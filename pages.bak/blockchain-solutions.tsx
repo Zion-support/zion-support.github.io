@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface BlockchainsolutionsProps {
@@ -12,3 +13,6 @@ export default function Blockchainsolutions({ }: BlockchainsolutionsProps) {
     </div>
   );
 }
+=======
+module.exports = default function BlockchainSolutions() { return null}
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

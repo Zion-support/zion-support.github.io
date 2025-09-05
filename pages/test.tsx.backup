@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
+=======
+import React from 'react';
+:pages/test.tsx.backup
+import SimpleLayout from './components/SimpleLayout';
+import Layout from './components/Layout';
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 
 export default function TestPage() {
   return (

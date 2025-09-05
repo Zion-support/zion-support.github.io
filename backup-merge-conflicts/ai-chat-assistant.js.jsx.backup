@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/ai-chat-assistant.js.jsx.backup
 <<<<<<< HEAD
 import React, {useState, useRef, useEffect, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
@@ -68,6 +69,9 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
 <<<<<<< HEAD
 }
 >>>>>>> main
+=======
+
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/ai-chat-assistant.js.jsx
             };
             setMessages(prev => [...prev, aiMessage]);
             setIsTyping(false);
@@ -106,9 +110,12 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
     const clearChat = ("props": "any) => {setMessages([messages[0]]); // Keep welcome message"};
     if (!enabled);
         return null;
+<<<<<<< HEAD:backup-merge-conflicts/ai-chat-assistant.js.jsx.backup
 <<<<<<< HEAD
     return (<div className={`fixed bottom-4 right-4 z-40 ${className}`}>;
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/ai-chat-assistant.js.jsx
     return (
         <div className={`fixed bottom-4 right-4 z-40 ${className}`}>
 >>>>>>> main
@@ -142,6 +149,7 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
 
 }}>;
               {/* Header */}
+<<<<<<< HEAD:backup-merge-conflicts/ai-chat-assistant.js.jsx.backup
 <<<<<<< HEAD
               <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30 bg-zion-blue/20">;
                 <div className="flex items-center gap-3">;
@@ -154,6 +162,8 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
                       <div className={`w-2 h-2 rounded-full ${isTyping ? 'bg-zion-cyan animate-pulse' : 'bg-green-400'}`} />;
                       <span className="text-zinc-400 text-xs">;
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/ai-chat-assistant.js.jsx
               <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30 bg-zion-blue/20">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
@@ -329,6 +339,7 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
           </motion.div>)}
       </AnimatePresence>;
     </div>)}
+<<<<<<< HEAD:backup-merge-conflicts/ai-chat-assistant.js.jsx.backup
 <<<<<<< HEAD
 ;
 </motion>;
@@ -351,3 +362,13 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</div>
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/ai-chat-assistant.js.jsx

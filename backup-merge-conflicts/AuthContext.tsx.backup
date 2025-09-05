@@ -3,11 +3,11 @@
 <<<<<<< HEAD
 =======
 import React, { createContext, useContext } from 'react';
-<<<<<<< HEAD
 ;
 interface User {;
 
   "id": "string;
+<<<<<<< HEAD:backup-merge-conflicts/AuthContext.tsx.backup
   "email": string;
 =======
 interface User {
@@ -49,6 +49,9 @@ const AuthContext = createContext<AuthContextType | null>(null);
 export const useAuth = ("props": "any) => {;
 =======
   updatedAt?: string}
+=======
+  "email": string;  updatedAt?: string}
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/context/auth/AuthContext.tsx
 interface AuthTokens {
   "accessToken": string | null;
   refreshToken: string | null}
@@ -73,7 +76,6 @@ export const useAuth = (props) => {;
   const context = useContext(AuthContext);
   if (context = == null) {;';';
     throw new Error('useAuth must be used within an AuthProvider');
-<<<<<<< HEAD
 ;
   return context;
 "};
@@ -91,6 +93,7 @@ export type { User, AuthTokens, AuthContextType };}}}}
 </any>;
 </any>;
 </any>;
+<<<<<<< HEAD:backup-merge-conflicts/AuthContext.tsx.backup
 </any>
 =======
   return context;
@@ -108,3 +111,6 @@ import React,{ createContext,useContext } from 'react'; interface User { id: str
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main:src_backup_temp/context/auth/AuthContext.tsx
+=======
+</any>
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/context/auth/AuthContext.tsx

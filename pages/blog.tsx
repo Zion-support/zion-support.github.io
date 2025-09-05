@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Calendar, 
@@ -26,6 +27,19 @@ const blogPosts = [
     readTime: "5 min read",
     image: "/api/placeholder/600/300",
     featured: true
+=======
+import { Calendar, User, ArrowRight, Search, Tag, Clock } from 'lucide-react';
+const blogPosts = [
+  {
+    id: 1,
+    title: 'The Future of AI in Business: Trends to Watch in 2024',
+    excerpt: 'Discover the latest AI trends that are transforming how businesses operate and compete in the digital landscape.',
+    author: 'Sarah Johnson',
+    date: '2024-01-15',
+    readTime: '5 min read',
+    category: 'AI & Machine Learning',
+    image: '/api/placeholder/600/400',    featured: true
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
   },
   {
     id: 2,
@@ -69,6 +83,7 @@ const blogPosts = [
   },
   {
     id: 6,
+<<<<<<< HEAD
     title: "Automation in Real Estate: PropTech Revolution",
     excerpt: "How automation and technology are transforming the real estate industry.",
     author: "Lisa Wang",
@@ -77,6 +92,16 @@ const blogPosts = [
     readTime: "6 min read",
     image: "/api/placeholder/600/300"
   }
+=======
+    title: 'Digital Transformation: A Step-by-Step Guide',
+    excerpt: 'Learn how to successfully navigate your organization through digital transformation.',
+    author: 'Lisa Park',
+    date: '2024-01-03',
+    readTime: '9 min read',
+    category: 'Digital Transformation',
+    image: '/api/placeholder/600/400',
+    featured: false  }
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 ];
 
 const categories = [
@@ -94,11 +119,17 @@ const featuredPost = blogPosts.find(post => post.featured);
 
 export default function BlogPage() {
   return (
+<<<<<<< HEAD
     <Layout
       title="Blog - Zion Tech Group"
       description="Latest insights, trends, and best practices in technology. Stay updated with our expert articles on AI, cloud computing, cybersecurity, and more."
       keywords="technology blog, AI insights, cloud computing, cybersecurity, SaaS development, data analytics, tech trends"
       canonical="https://ziontechgroup.com/blog"
+=======
+    <MainLayout      title="Blog - Zion Tech Group"
+      description="Stay updated with the latest insights, trends, and best practices in technology and digital transformation."
+      keywords="technology blog, AI insights, cybersecurity, software development, digital transformation"
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -110,6 +141,7 @@ export default function BlogPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD
               Technology 
               <span className="text-blue-400"> Insights & Trends</span>
             </motion.h1>
@@ -166,9 +198,20 @@ export default function BlogPage() {
               </div>
             </div>
           </div>
+=======
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Technology Insights
+                <span className="block text-yellow-400">& Best Practices</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
+                Stay ahead with expert insights on AI, cybersecurity, cloud computing, and digital transformation.
+              </p>
+            </motion.div>          </div>
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
         </section>
       )}
 
+<<<<<<< HEAD
       {/* Blog Posts */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -206,6 +249,28 @@ export default function BlogPage() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
+=======
+        {/* Search and Filter */}
+        <section className="py-8 bg-white border-b">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+              <div className="relative flex-1 max-w-md">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search articles..."
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />              </div>
+              <div className="flex flex-wrap gap-2">
+                {categories.map((category, index) => (
+                  <button
+                    key={index}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                      category === 'All'
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
                   >
                     <img 
                       src={post.image} 
@@ -244,6 +309,47 @@ export default function BlogPage() {
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+            {/* Sidebar */}
+            <div className="md:w-1/3">
+              <div className="bg-gray-50 rounded-lg p-6 mb-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Categories</h3>
+                <ul className="space-y-2">
+                  {categories.map(category => (
+                    <li key={category}>
+                      <Link 
+                        href={`/blog?category=${category.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="text-gray-600 hover:text-blue-600 transition-colors"
+                      >
+                        {category}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Newsletter</h3>
+                <p className="text-gray-600 mb-4">
+                  Subscribe to our newsletter for the latest technology insights and updates.
+                </p>
+                <div className="space-y-3">
+                  <input 
+                    type="email" 
+                    placeholder="Enter your email"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                  <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 
             {/* Sidebar */}
             <div className="md:w-1/3">
@@ -312,8 +418,14 @@ export default function BlogPage() {
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
     </Layout>
   );
+=======
+        </section>
+      </div>
+    </MainLayout>  );
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 }

@@ -4,7 +4,6 @@
 =======
 import React, { useState } from 'react';
 import { Send, Bot, User } from 'lucide-react';
-<<<<<<< HEAD
 ;
 interface Message {;
   "id": "string;
@@ -33,6 +32,7 @@ const "AIChatAssistant": "React.FC = ("props": any) => {;
       const "aiMessage": "Message = {;
         "id": (Date.now() + 1).toString()",;
         "text": "`I "understand": "${userMessage.text"}". How can I help?`,;
+<<<<<<< HEAD:backup-merge-conflicts/AIChatAssistant.tsx.backup
         "sender": 'ai';
 =======
 interface Message {
@@ -90,6 +90,9 @@ const "AIChatAssistant": React.FC = (props) => {
             type="text";
 =======
   return (
+=======
+        "sender": 'ai';  return (
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatAssistant.tsx
     <div className="min-h-screen bg-white">
       <div className="p-4 border-b">
         <h3 className="text-lg font-semibold flex items-center">
@@ -119,7 +122,6 @@ const "AIChatAssistant": React.FC = (props) => {
           />;
           <button;
             onClick={handleSend}
-<<<<<<< HEAD
             className="px-4 py-2 bg-blue-500 text-white rounded-lg "hover": "bg-blue-600";
           >;
             <Send className="w-4 h-4" />;
@@ -133,6 +135,7 @@ const "AIChatAssistant": React.FC = (props) => {
 export default AIChatAssistant;
 ;
 </any>;
+<<<<<<< HEAD:backup-merge-conflicts/AIChatAssistant.tsx.backup
 </Message>
 =======
             className="px-4 py-2 bg-blue-500 text-white rounded-lg "hover": bg-blue-600"
@@ -151,3 +154,6 @@ import React,{ useState } from 'react'; import { Send,Bot,User } from 'lucide-re
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main:src_backup_temp/components/AIChatAssistant.tsx
+=======
+</Message>
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AIChatAssistant.tsx

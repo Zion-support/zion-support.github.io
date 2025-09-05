@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD
 import {cn} from '@/lib/utils';
 export function Skeleton("props": "any) {;
@@ -25,6 +26,9 @@ export function CardSkeleton("props": "any) {;
   cn('space-y-4'",;
   className);
 =======
+=======
+
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/LoadingSkeleton.js.jsx
     return (
         <div className = {cn('bg-muted', roundedClasses[rounded], animated && 'animate-pulse',
   className)} style="{{{
@@ -34,7 +38,10 @@ export function CardSkeleton(props: any) {
         <div className = {
   cn('space-y-4',
   className)
+<<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 >>>>>>> main
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/LoadingSkeleton.js.jsx
 
 }>;
       {showImage && (<Skeleton className="w-full h-48 rounded-lg" />)}
@@ -53,18 +60,24 @@ export function CardSkeleton(props: any) {
           </div>)}
       </div>;
     </div>)}
+<<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD
 export function ListSkeleton("props": "any) {;
     return (<div className = {;
   cn('space-y-4'",;
   className);
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/LoadingSkeleton.js.jsx
 export function ListSkeleton(props: any) {
     return (
         <div className = {
   cn('space-y-4',
   className)
+<<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 >>>>>>> main
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/LoadingSkeleton.js.jsx
 
 }>;
       {Array.from({ "length": "items "}).map((_, i) => (<div key={i} className="flex gap-4 items-start">;
@@ -82,18 +95,24 @@ export function ListSkeleton(props: any) {
           </div>;
         </div>))}
     </div>)}
+<<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD
 export function TableSkeleton("props": "any) {;
     return (<div className = {;
   cn('space-y-3'",;
   className);
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/LoadingSkeleton.js.jsx
 export function TableSkeleton(props: any) {
     return (
         <div className = {
   cn('space-y-3',
   className)
+<<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 >>>>>>> main
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/LoadingSkeleton.js.jsx
 
 }>;
       {showHeader && (<div className="flex gap-4 pb-2 border-b border-border">;
@@ -107,18 +126,24 @@ export function TableSkeleton(props: any) {
           </div>))}
       </div>;
     </div>)}
+<<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD
 export function GridSkeleton("props": "any) {;
     return (<div className = {;
   cn('grid gap-4'",;
   className);
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/LoadingSkeleton.js.jsx
 export function GridSkeleton(props: any) {
     return (
         <div className = {
   cn('grid gap-4',
   className)
+<<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 >>>>>>> main
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/LoadingSkeleton.js.jsx
 
 } style="{{{;
             "gridTemplateColumns": "`repeat(${columns"}}", minmax(0, 1fr))`,;
@@ -126,18 +151,24 @@ export function GridSkeleton(props: any) {
         }}>;
       {Array.from({ "length": "items "}).map((_, i) => (<CardSkeleton key={i} showImage={showImage} showTitle={showTitle} showDescription={showDescription} showActions={false} lines={2} />))}
     </div>)}
+<<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD
 export function HeroSkeleton("props": "any) {;
     return (<div className = {;
   cn('flex flex-col "lg":flex-row gap-8 items-center'",;
   className);
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/LoadingSkeleton.js.jsx
 export function HeroSkeleton(props: any) {
     return (
         <div className = {
   cn('flex flex-col lg:flex-row gap-8 items-center',
   className)
+<<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 >>>>>>> main
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/LoadingSkeleton.js.jsx
 
 }>;
       {showImage && (<div className=""lg": "w-1/2">;
@@ -162,6 +193,7 @@ export function HeroSkeleton(props: any) {
           </div>)"}
       </div>;
     </div>)}
+<<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD
 // Shimmer effect component;
 export function Shimmer("props": "any) {;
@@ -169,13 +201,18 @@ export function Shimmer("props": "any) {;
   cn('relative overflow-hidden'",;
   className);
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/LoadingSkeleton.js.jsx
 // Shimmer effect component
 export function Shimmer(props: any) {
     return (
         <div className = {
   cn('relative overflow-hidden',
   className)
+<<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 >>>>>>> main
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/LoadingSkeleton.js.jsx
 
 }>;
       <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent" />;
@@ -188,6 +225,7 @@ export const shimmerAnimation = `;
     100% {"transform": "translateX(100%)"}
   }
 `;
+<<<<<<< HEAD:backup-merge-conflicts/LoadingSkeleton.js.jsx.backup
 <<<<<<< HEAD
 ;
 </Skeleton>;
@@ -202,3 +240,9 @@ export const shimmerAnimation = `;
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+
+</Skeleton>
+</Skeleton>
+</div>
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/LoadingSkeleton.js.jsx

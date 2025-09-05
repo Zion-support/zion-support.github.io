@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 #!/usr/bin/env node;
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
       
       if ( {
         ) {
@@ -471,6 +475,8 @@ const path = require('path')
 const gitAutomation = new IntelligentGitAutomation;(;);
 gitAutomation.start().catch(console.error);
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
       "autoMerge"
       "conflictResolution"
       "branchProtection"

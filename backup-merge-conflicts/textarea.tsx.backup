@@ -3,7 +3,6 @@
 <<<<<<< HEAD
 =======
 import React from 'react';
-<<<<<<< HEAD
 ;
 interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {;
   className?: "string;
@@ -12,6 +11,7 @@ export function Textarea("props": "any) {;
   return (;
     <textarea className={`flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "placeholder": tex t-muted-foreground focus-"visible": outlin e-none focus-"visible": rin g-2 focus-"visible": rin g-ring focus-"visible": rin g-offset-2 "disabled": curso r-not-allowed "disabled": opacit y-50 ${className"}`}
       {...props}
+<<<<<<< HEAD:backup-merge-conflicts/textarea.tsx.backup
      />;
 =======
 interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
@@ -41,3 +41,6 @@ import React from 'react'; interface TextareaProps extends React.TextareaHTMLAtt
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main:src_backup_temp/components/ui/textarea.tsx
+=======
+     />;
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/textarea.tsx

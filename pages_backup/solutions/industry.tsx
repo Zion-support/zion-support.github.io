@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -5,6 +6,12 @@ import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Hea
 import Layout from "../../components/Layout";";
 
 const industries = [;
+=======
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { Heart, CreditCard, Globe, GraduationCap, Factory, Home } from 'lucide-react';const industries = [;
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
   {}
     name: 'Healthcare,',
     icon: Heart,

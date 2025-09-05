@@ -5,13 +5,23 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🚀 Comprehensive Merge Conflict Resolver');
+<<<<<<< HEAD
 console.log('=====================================');
+=======
+console.log('==');
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
+<<<<<<< HEAD
     .replace(/>>>>>>> [a-f0-9]+/g, '');
 }
+=======
+    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
+    .replace(//g, '')
+    .replace(/}
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
@@ -90,6 +100,54 @@ function processFile(filePath) {
     let modified = false;
 
     // Check for merge conflict markers
+<<<<<<< HEAD
+=======
+    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+      console.log(`🔧 Removing merge conflict markers from ${filePath}`);
+      content = removeMergeConflictMarkers(content);
+      modified = true;
+    }
+
+    // Fix syntax errors
+    const originalContent = content;
+    content = fixSyntaxErrors(content);
+    
+    if (content !== originalContent) {
+      console.log(`🔧 Fixing syntax errors in ${filePath}`);
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed ${filePath}`);
+      return true;
+    }
+
+    return false;
+  } catch (error) {
+    console.log(`❌ Error processing ${filePath}: ${error.message}`);
+    return false;
+  }
+}
+
+// Function to find all files with merge conflicts
+function findFilesWithConflicts() {
+  const files = [];
+  
+  function searchDirectory(dir) {
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        searchDirectory(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
             files.push(fullPath);
           }
         } catch (error) {

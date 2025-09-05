@@ -92,11 +92,7 @@ export default function AIServicesPage() {
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => {
-<:pages-disabled/ai-services.tsx.disabled
-              const IconComponent = (service as any).icon || CheckCircle;
-=
-              const IconComponent = service.icon;
->              return (
+              return (
                 <motion.div
                   key={index}
                   className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
@@ -104,12 +100,7 @@ export default function AIServicesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<:pages-disabled/ai-services.tsx.disabled
-                  whileHover={{ y: -5 }}
-                >
-=
-                  whileHover={{ y: -5 }} >
->                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center justify-between mb-4">
                     <div className="text-blue-600 group-hover:text-purple-600 transition-colors">
                       <IconComponent className="w-10 h-10" />
                     </div>
@@ -126,11 +117,7 @@ export default function AIServicesPage() {
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
                   <ul className="space-y-1">
-<:pages-disabled/ai-services.tsx.disabled
-                      {(service.features || []).map((feature, featureIndex) => (
-=
-                      {service.features.map((feature, featureIndex) => (
->                        <li key={featureIndex} className="flex items-center text-xs text-gray-600">
+                        <li key={featureIndex} className="flex items-center text-xs text-gray-600">
                   <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
@@ -148,12 +135,7 @@ export default function AIServicesPage() {
                   <ArrowRight className="w-3 h-3 ml-1" />
                   </Link>
                   </motion.div>
-<:pages-disabled/ai-services.tsx.disabled
-              )})}
-=
-              );
-            })}
->          </div>
+          </div>
                   </div>
                   </section>
 
@@ -268,16 +250,3 @@ export default function AIServicesPage() {
               </Link>
                   </div>
                   </motion.div>
-<:pages-disabled/ai-services.tsx.disabled
-                  </div>
-                  </section>
-                  </div>
-)
-}
-=
-                </div>
-              </section>
-            </div>
-          </Layout>
-        );
->

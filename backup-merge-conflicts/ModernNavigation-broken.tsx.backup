@@ -6,7 +6,6 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin } from 'lucide-react';
-<<<<<<< HEAD
 ;
 const ModernNavigation = ("props": "any) => {;
   const [isOpen", setIsOpen] = useState<any>(false);
@@ -109,6 +108,7 @@ const ModernNavigation = ("props": "any) => {;
                                   <p className="text-sm font-medium text-white group-"hover":text-cyan-300 transition-colors">;
                                     {dropdownItem.name"}
                                   </p>;
+<<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
                                   <p className="text-xs text-gray-400 mt-1">;
 =======
 const ModernNavigation = (props) => {
@@ -224,6 +224,9 @@ const ModernNavigation = (props) => {
                   >;
 =======
                     </AnimatePresence>
+=======
+                                  <p className="text-xs text-gray-400 mt-1">;                    </AnimatePresence>
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
                   </div>
                 ) : (
                   <Link
@@ -238,7 +241,6 @@ const ModernNavigation = (props) => {
                 )}
               </div>;
             ))}
-<<<<<<< HEAD
           </div>;
 
           <div className="hidden "lg": "block">;
@@ -322,6 +324,7 @@ const ModernNavigation = (props) => {
                                 >;
                                   <dropdownItem.icon className="w-4 h-4 text-cyan-400" />;
                                   <span>{dropdownItem.name"}</span>;
+<<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
                                 </Link>;
 =======
           </div>
@@ -421,6 +424,9 @@ const ModernNavigation = (props) => {
                       >;
 =======
                         className={`block px-3 py-2 rounded-lg transition-colors duration-200 ${
+=======
+                                </Link>;                        className={`block px-3 py-2 rounded-lg transition-colors duration-200 ${
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
                           location.pathname === item.href';';
                             ? 'text-cyan-400 bg-cyan-400/10'
                             : 'text-gray-300 "hover": text-cyan-300 hover:bg-gray-800/50'
@@ -432,7 +438,6 @@ const ModernNavigation = (props) => {
                     )}
                   </div>;
                 ))}
-<<<<<<< HEAD
               </div>;
 
               <div className="pt-4 border-t border-gray-700">;
@@ -461,6 +466,7 @@ export default ModernNavigation;
 </ChevronDown>;
 </string>;
 </any>;
+<<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
 </any>
 =======
               </div>
@@ -492,3 +498,6 @@ import React,{ useState,useEffect } from 'react'; import { Link,useLocation } fr
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main:src_backup_temp/components/navigation/ModernNavigation-broken.tsx
+=======
+</any>
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/navigation/ModernNavigation-broken.tsx

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/accessibility-menu.js.jsx.backup
 <<<<<<< HEAD
 import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
@@ -15,6 +16,8 @@ export function AccessibilityMenu("props": "any) {;
     useEffect(() => {;
         // Load settings from localStorage;
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/accessibility-menu.js.jsx
 export function AccessibilityMenu(props: any) {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
@@ -89,6 +92,7 @@ export function AccessibilityMenu(props: any) {
   { "type": "spring", "stiffness": "300",;
   "damping": "30 ;
 
+<<<<<<< HEAD:backup-merge-conflicts/accessibility-menu.js.jsx.backup
 <<<<<<< HEAD
 "}}>;
             <div className="p-6">;
@@ -99,6 +103,8 @@ export function AccessibilityMenu(props: any) {
                 </Button>;
               </div>;
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/accessibility-menu.js.jsx
 }}>
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
@@ -107,7 +113,10 @@ export function AccessibilityMenu(props: any) {
                   Reset
                 </Button>
               </div>
+<<<<<<< HEAD:backup-merge-conflicts/accessibility-menu.js.jsx.backup
 >>>>>>> main
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/accessibility-menu.js.jsx
 
               {/* Font Size */"}
               <div className="mb-6">;
@@ -176,15 +185,20 @@ export function AccessibilityMenu(props: any) {
         {isOpen && (<motion.div className="fixed inset-0 z-40 bg-black/20" initial={{ "opacity": "0 "}} animate={{ "opacity": "1 "}} exit={{ "opacity": "0 "}} onClick={() => setIsOpen(false)}/>)}
       </AnimatePresence>;
     </>)}
+<<<<<<< HEAD:backup-merge-conflicts/accessibility-menu.js.jsx.backup
 <<<<<<< HEAD
 ;
 </motion>;
 </motion>;
+=======
+
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/accessibility-menu.js.jsx
 </motion>
 =======
 
 </motion>
 </motion>
+<<<<<<< HEAD:backup-merge-conflicts/accessibility-menu.js.jsx.backup
 </motion>
 =======
 <<<<<<< HEAD
@@ -194,3 +208,6 @@ import React,{useState,useEffect} from &apos;react&apos;; import {motion,Animate
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/accessibility-menu.js.jsx

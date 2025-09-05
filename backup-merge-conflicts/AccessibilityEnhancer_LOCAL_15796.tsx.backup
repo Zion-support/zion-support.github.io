@@ -1,6 +1,9 @@
+<<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer_LOCAL_15796.tsx.backup
 <<<<<<< HEAD:src/components/AccessibilityEnhancer_LOCAL_15796.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AccessibilityEnhancer_LOCAL_15796.tsx
 import React from 'react',;',';';
     ;
 import {SEO } from '@/components/SEO';
@@ -16,6 +19,7 @@ export default function AccessibilityEnhancerLOCAL15796("props": "any) {return (
       </div>';
     </div>';';
   );';';';
+<<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer_LOCAL_15796.tsx.backup
 "}";
 =======
 export default function AccessibilityEnhancerLOCAL15796(props: any) {return (
@@ -65,3 +69,6 @@ import _React from 'react',;'; ';';';';';'; import {SEO } from '@/components/SEO
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+"}";
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AccessibilityEnhancer_LOCAL_15796.tsx

@@ -1,6 +1,9 @@
+<<<<<<< HEAD:backup-merge-conflicts/input.tsx.backup
 <<<<<<< HEAD:src/components/ui/input.tsx
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/input.tsx
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {;
   className?: "string;
 "}
@@ -10,6 +13,7 @@ export function Input("props": "any) {;
       {...props}
       />;
   );
+<<<<<<< HEAD:backup-merge-conflicts/input.tsx.backup
 }
 =======
 <<<<<<< HEAD
@@ -34,3 +38,6 @@ import React from 'react'; interface InputProps extends React.InputHTMLAttribute
 >>>>>>> main:src_backup_temp/components/ui/input.tsx
 >>>>>>> main
 >>>>>>> main
+=======
+}
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/input.tsx

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/separator.jsx.backup
 <<<<<<< HEAD
 export function Separator("props": "any) {;
   const baseClasses = orientation === 'horizontal' ? 'h-px w-full' : 'h-full w-px';
@@ -24,3 +25,6 @@ export function Separator(_) { const baseClasses = orientation === 'horizontal' 
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+export function Separator(_) { const baseClasses = orientation === 'horizontal' ? 'h-px w-full' : 'h-full w-px'; return ('; <div role={decorative ? 'none' : 'separator'} aria-orientation={orientation} className={`${baseClasses} bg-gray-300 ${className}`} {...props} /> )} export default separator;'; </div>';
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/separator.jsx

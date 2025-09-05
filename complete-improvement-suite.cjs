@@ -171,8 +171,11 @@
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       return (
+<<<<<<< HEAD
         content.includes('>>>>>>> ')
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
       );
     } catch (error) {
       return false;
@@ -186,13 +189,19 @@
 
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
         '$1'
       );
 
       // Clean up any remaining markers
+<<<<<<< HEAD
       content = content.replace(/>>>>>>> [^\n]+\n/g, '');
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
@@ -369,7 +378,10 @@
 // Run the complete improvement suite
 const suite = new CompleteImprovementSuite();
 suite.run().catch(console.error);
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

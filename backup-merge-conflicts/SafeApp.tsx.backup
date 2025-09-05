@@ -3,7 +3,6 @@
 <<<<<<< HEAD
 =======
 import React from 'react';
-<<<<<<< HEAD
 ;
 function SafeApp() {;
   return (;
@@ -15,6 +14,7 @@ function SafeApp() {;
   );
 }
 export default SafeApp;
+<<<<<<< HEAD:backup-merge-conflicts/SafeApp.tsx.backup
 ;
 =======
 function SafeApp() {
@@ -30,3 +30,6 @@ import React from 'react'; function SafeApp() { return ('; <div style={{ padding
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main:src_backup_temp/SafeApp.tsx
+=======
+;
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/SafeApp.tsx

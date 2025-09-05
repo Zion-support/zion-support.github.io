@@ -114,15 +114,18 @@ export function AnalyticsManager("props": "any) {;
 
       saveSessionData(currentSession)}
   }, [currentSession]) };
-<<<<<<< HEAD
 ;
     // Scroll tracking';
     document.addEventListener('scroll', handleScroll, { "passive": "tru e "});
 ;
+<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
     // Page unload tracking';
 =======
 
     // Scroll tracking'
+=======
+    // Page unload tracking';    // Scroll tracking'
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AnalyticsManager.tsx
     document.addEventListener('scroll', handleScroll, { passive: tru e }
     );
 
@@ -170,10 +173,10 @@ export function AnalyticsManager("props": "any) {;
         if(fcp) {;
 
           trackPerformance('fcp', fcp.startTime)}
-<<<<<<< HEAD
       });
       fcpObserver.observe({ "entryTypes": "['paint'] "});
 ;
+<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
       // Largest Contentful Paint;
 =======
       }
@@ -184,11 +187,14 @@ export function AnalyticsManager("props": "any) {;
 
         if(lcp) {;
 
+=======
+      // Largest Contentful Paint;        if(lcp) {;
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AnalyticsManager.tsx
           trackPerformance('lcp', lcp.startTime)}
-<<<<<<< HEAD
       });
       lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
 ;
+<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
       // First Input Delay;
 =======
       }
@@ -199,12 +205,15 @@ export function AnalyticsManager("props": "any) {;
 
         if(fid) {;
 
+=======
+      // First Input Delay;        if(fid) {;
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AnalyticsManager.tsx
           trackPerformance('fid', fid.processingStart - fid.startTime)}
-<<<<<<< HEAD
       });
       fidObserver.observe({ "entryTypes": "['first-input'] "});
 ;
       // Cumulative Layout Shift;
+<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
       const clsObserver = new PerformanceObserver(list => {;
 =======
       }
@@ -215,12 +224,15 @@ export function AnalyticsManager("props": "any) {;
 
         let clsValue = 0;        for (const entry of list.getEntries()) {;
 
+=======
+      const clsObserver = new PerformanceObserver(list => {;        let clsValue = 0;        for (const entry of list.getEntries()) {;
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AnalyticsManager.tsx
           if(!entry.hadRecentInput) {;
 
             clsValue += (entry as any).value}
         }
-<<<<<<< HEAD
         trackPerformance('cls', clsValue)});
+<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
       clsObserver.observe({ "entryTypes": "['layout-shift'] "})}
 =======
         trackPerformance('cls', clsValue)}
@@ -242,6 +254,9 @@ export function AnalyticsManager("props": "any) {;
 =======
 
         trackEvent('page_view', { path }
+=======
+      clsObserver.observe({ "entryTypes": "['layout-shift'] "})}        trackEvent('page_view', { path }
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/AnalyticsManager.tsx
     );
 
         // Send to analytics endpoint'

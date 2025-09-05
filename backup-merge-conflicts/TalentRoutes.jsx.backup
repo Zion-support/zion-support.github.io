@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/TalentRoutes.jsx.backup
 <<<<<<< HEAD
 import React from 'react';
 // Next.js routing - no need for react-router-dom;
@@ -20,3 +21,6 @@ import _React from 'react'; import TalentDirectory from '@/pages/TalentDirectory
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+import _React from 'react'; import TalentDirectory from '@/pages/TalentDirectory import TalentsPage from '@/pages/TalentsPage'; export default function TalentRoutes(_) { return (<> <Route path="directory" element={<TalentDirectory />}/> <Route path="list" element={<TalentsPage />}/> </>)} ;';';
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/routes/TalentRoutes.jsx

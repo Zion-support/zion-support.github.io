@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/analytics-dashboard.js.jsx.backup
 <<<<<<< HEAD
 import React, {useState, useEffect, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
@@ -19,6 +20,8 @@ export function AnalyticsDashboard("props": "any) {;
     useEffect(() => {;
         if (!enabled || !isExpanded);
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/analytics-dashboard.js.jsx
     // Mock analytics data
     const [metrics, setMetrics] = useState({
         totalUsers: 12450,
@@ -70,6 +73,7 @@ export function AnalyticsDashboard("props": "any) {;
 
 "}} transition={{ "duration": "0.6 "}}>;
       {/* Header */}
+<<<<<<< HEAD:backup-merge-conflicts/analytics-dashboard.js.jsx.backup
 <<<<<<< HEAD
       <div className="flex items-center justify-between mb-6">;
         <div>;
@@ -90,6 +94,8 @@ export function AnalyticsDashboard("props": "any) {;
         </div>;
       </div>;
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/analytics-dashboard.js.jsx
       <div className="flex items-center justify-between mb-6">
         <div>
           <h3 className="text-xl font-semibold text-white mb-2">Analytics Dashboard
@@ -108,7 +114,10 @@ export function AnalyticsDashboard("props": "any) {;
           </Button>
         </div>
       </div>
+<<<<<<< HEAD:backup-merge-conflicts/analytics-dashboard.js.jsx.backup
 >>>>>>> main
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/analytics-dashboard.js.jsx
 
       {/* Metrics Grid */"}
       <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-4 gap-6 mb-8">;
@@ -231,6 +240,7 @@ export function AnalyticsDashboard("props": "any) {;
           </motion.div>)}
       </AnimatePresence>;
     </motion.div>)}
+<<<<<<< HEAD:backup-merge-conflicts/analytics-dashboard.js.jsx.backup
 <<<<<<< HEAD
 ;
 </motion>;
@@ -238,6 +248,9 @@ export function AnalyticsDashboard("props": "any) {;
 </motion>;
 </motion>;
 </motion>;
+=======
+
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/analytics-dashboard.js.jsx
 </motion>
 =======
 
@@ -246,6 +259,7 @@ export function AnalyticsDashboard("props": "any) {;
 </motion>
 </motion>
 </motion>
+<<<<<<< HEAD:backup-merge-conflicts/analytics-dashboard.js.jsx.backup
 </motion>
 =======
 <<<<<<< HEAD
@@ -255,3 +269,6 @@ import React,{useState,useEffect,useCallback} from &apos;react&apos;; import {mo
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/analytics-dashboard.js.jsx

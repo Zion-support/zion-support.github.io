@@ -606,4 +606,7 @@ if (healthReport.status === 'unhealthy') {
 } else {
     process.exit(0);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

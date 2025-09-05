@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
 import React from 'react';
@@ -30,26 +29,7 @@ const features = [;
   {}
     icon: Package,
     title: 'Supply Chain Optimization,',
-    description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
-=======
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  ShoppingCart, 
-  Users, 
-  BarChart3, 
-  Smartphone, 
-  CheckCircle, 
-  ArrowRight 
-} from 'lucide-react';
-
-const features = [
-  {
-    icon: ShoppingCart,
->>>>>>> origin/main
-    title: 'E-commerce Platform',
+    description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';    title: 'E-commerce Platform',
     description: 'Complete online store solution with payment processing'
   },
   {
@@ -63,7 +43,6 @@ const features = [
     description: 'Real-time inventory tracking and automated reordering'
   },
   {
-<<<<<<< HEAD
     icon: ArrowRight,
     title: 'Omnichannel',
     description: 'Seamless integration across all sales channels'
@@ -144,17 +123,7 @@ const benefits = [
   'Streamlined operations',
   'Mobile-first customer engagement'
 ];
-export default function RetailSolutions() {
-=======
-    icon: Smartphone,
-    title: 'Mobile Commerce',
-    description: 'Mobile-optimized shopping experience'
-  }
-];
-
-export default function RetailSolutionsPage() {
->>>>>>> origin/main
-  return (
+export default function RetailSolutions() {  return (
     <>
       <Head>
         <title>Retail Solutions - Zion Tech Group</title>
@@ -191,14 +160,8 @@ export default function RetailSolutionsPage() {
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Everything you need to succeed in modern retail.
               </p>
-<<<<<<< HEAD
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> origin/main
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">              {features.map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -209,7 +172,6 @@ export default function RetailSolutionsPage() {
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-6 h-6 text-green-600" />
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -333,14 +295,7 @@ export default function RetailSolutionsPage() {
                   Schedule Demo
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
-              </div>
-=======
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                </motion.div>
-              ))}
->>>>>>> origin/main
-            </div>
+              </div>            </div>
           </div>
         </section>
         {/* CTA Section */}
@@ -376,10 +331,5 @@ export default function RetailSolutionsPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </Layout>
-=======
-    </>
->>>>>>> origin/main
-  );
+    </Layout>  );
 }

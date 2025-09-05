@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {

@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
 const MicroSaaS: React.FC = () => {
@@ -456,7 +455,10 @@ const MicroSaaS: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD:backup-merge-conflicts/MicroSaaS.tsx.backup
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/pages/MicroSaaS.tsx
 ;
 const "MicroSaaS": "React.FC = () => {;
   return (;

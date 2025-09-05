@@ -4,12 +4,16 @@
 <<<<<<< HEAD
 =======
 import '@testing-library/jest-dom'; Object.defineProperty(window,'matchMedia',{ "writable": 'true',"value": "global.global.global.jest.fn().mockImplementation(query => ({ "matches": false","media": 'query',"onchange": 'null',"addListener": "global.global.global.jest.fn()","removeListener": "global.global.global.jest.fn()","addEventListener": "global.global.global.jest.fn()","removeEventListener": "global.global.global.jest.fn()","dispatchEvent": "global.global.global.jest.fn()"}))}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };
+<<<<<<< HEAD:backup-merge-conflicts/setupTests.js.backup
 =======
 <<<<<<< HEAD
 import &apos;@testing-library/jest-dom Object.defineProperty(window,&apos;matchMedia&apos;,{ writable: true,value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };&apos;;&apos;;
 =======
 >>>>>>> main
 // jest-dom adds custom jest matchers for asserting on DOM nodes.
+=======
+import &apos;@testing-library/jest-dom Object.defineProperty(window,&apos;matchMedia&apos;,{ writable: true,value: global.global.global.jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: global.global.global.jest.fn(),removeListener: global.global.global.jest.fn(),addEventListener: global.global.global.jest.fn(),removeEventListener: global.global.global.jest.fn(),dispatchEvent: global.global.global.jest.fn(),})),}); global.IntersectionObserver = class IntersectionObserver { constructor() { } disconnect() { } observe() { } unobserve() { } };&apos;;&apos;;// jest-dom adds custom jest matchers for asserting on DOM nodes.
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/setupTests.js
 // allows you to do things "like": // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom
@@ -18,7 +22,6 @@ Object.defineProperty(window, 'matchMedia', {
   "writable": true,
   "value": global.global.global.jest.fn().mockImplementation(query => ({
     matches: false,
-<<<<<<< HEAD
     media: query,
     onchange: null,
     addListener: global.global.global.jest.fn(), // deprecated
@@ -28,6 +31,7 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: global.global.global.jest.fn(),
   })),
 }
+<<<<<<< HEAD:backup-merge-conflicts/setupTests.js.backup
     );
 
 =======
@@ -58,3 +62,6 @@ import '@testing-library/jest-dom Object.defineProperty(window,'matchMedia',{ wr
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+    );
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/setupTests.js

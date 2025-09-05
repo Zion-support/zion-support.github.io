@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 import fs from 'fs';''
 import path from 'path';''
@@ -33,37 +34,55 @@ function findConflictedFiles() {}
     return result.trim().split('\n').map(line => line.split(' ').pop()).filter(Boolean);'
   } catch (error) {'}
     console.log('No conflicted files found or error:', error.message);'
+=======
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+
+console.log('🔧 Resolving merge conflicts...');
+
+// Find all files with merge conflicts
+const findConflictFiles = () => {
+  try {
+    const result = execSync('grep -r -l "" . --exclude-dir=node_modules --exclude-dir=.git', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(file => file);
+  } catch (error) {
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     return [];
-  };
+  }
 };
-// Main function;
-async function main() {'}
-  console.log('🔍 Finding files with merge conflicts...');'
-  const conflictedFiles = findConflictedFiles();
-  
-  if (conflictedFiles.length === 0) {'}
-    console.log('✅ No merge conflicts found');'
-    return;
-  };
-  console.log(`📁 Found ${conflictedFiles.length} files with conflicts`);
-  
-  let resolvedCount = 0;
-  for (const file of conflictedFiles) {}
-    if (resolveMergeConflicts(file)) {}
-      resolvedCount++;
-    };
-  };
-  console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
-  
-  // Add resolved files to git;
-  try {}
-  // TODO: Implement;
-}
-    execSync('git add .', { stdio: 'inherit' }
-});''
-    console.log('📝 Added resolved files to git');'
-  } catch (error) {'}
-    console.error('❌ Error adding files to git:', error.message);'
-  };
+
+// Resolve conflicts in a file by keeping HEAD version
+const resolveConflictsInFile = (filePath) => {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove all conflict markers and keep HEAD version
+    content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
+    // Clean up any remaining conflict markers
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/    
+    fs.writeFileSync(filePath, content);
+    console.log(`✅ Resolved conflicts in ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
+    return false;
+  }
 };
-main().catch(console.error);'
+
+// Main execution
+const conflictFiles = findConflictFiles();
+console.log(`Found ${conflictFiles.length} files with merge conflicts`);
+
+let resolvedCount = 0;
+conflictFiles.forEach(file => {
+  if (resolveConflictsInFile(file)) {
+    resolvedCount++;
+  }
+});
+
+console.log(`🎉 Resolved conflicts in ${resolvedCount}/${conflictFiles.length} files`);

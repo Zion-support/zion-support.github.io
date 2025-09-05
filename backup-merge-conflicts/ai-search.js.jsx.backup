@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-merge-conflicts/ai-search.js.jsx.backup
 <<<<<<< HEAD
 import React, {useState, useEffect, useRef, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
@@ -22,6 +23,8 @@ export function AISearch("props": "any) {;
         "featured": "false;
     "});
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/ai-search.js.jsx
         verified: false,
         featured: false
     }
@@ -120,10 +123,13 @@ export function AISearch("props": "any) {;
         await new Promise(resolve => setTimeout(resolve, 800));
         // Filter results based on query and filters;
         const filteredResults = mockResults.filter(result => {const matchesVerified = !searchFilters.verified || result.metadata.verified;
+<<<<<<< HEAD:backup-merge-conflicts/ai-search.js.jsx.backup
 <<<<<<< HEAD
             return matchesQuery && matchesCategory && matchesRating && matchesVerified});
         // Sort by relevance;
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/ai-search.js.jsx
             return matchesQuery && matchesCategory && matchesRating && matchesVerified}
     );
         // Sort by relevance
@@ -194,9 +200,12 @@ export function AISearch("props": "any) {;
     }, [isOpen]);
     if (!enabled);
         return null;
+<<<<<<< HEAD:backup-merge-conflicts/ai-search.js.jsx.backup
 <<<<<<< HEAD
     return (<div className={`relative ${className}`} ref={searchRef}>;
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/ai-search.js.jsx
     return (
         <div className={`relative ${className}`} ref={searchRef}>
 >>>>>>> main
@@ -261,6 +270,7 @@ export function AISearch("props": "any) {;
 
 }}>;
             {/* Header */}
+<<<<<<< HEAD:backup-merge-conflicts/ai-search.js.jsx.backup
 <<<<<<< HEAD
             <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30">;
               <div className="flex items-center gap-3">;
@@ -283,6 +293,8 @@ export function AISearch("props": "any) {;
               </div>;
             </div>;
 =======
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/ai-search.js.jsx
             <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
@@ -303,7 +315,10 @@ export function AISearch("props": "any) {;
                 </Button>
               </div>
             </div>
+<<<<<<< HEAD:backup-merge-conflicts/ai-search.js.jsx.backup
 >>>>>>> main
+=======
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/ai-search.js.jsx
 
             {/* Filters Panel */"}
             <AnimatePresence>;
@@ -489,17 +504,22 @@ export function AISearch("props": "any) {;
           </motion.div>)"}
       </AnimatePresence>;
     </div>)}
+<<<<<<< HEAD:backup-merge-conflicts/ai-search.js.jsx.backup
 <<<<<<< HEAD
 ;
 </motion>;
 </motion>;
 </motion>;
+=======
+
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/ai-search.js.jsx
 </motion>
 =======
 
 </motion>
 </motion>
 </motion>
+<<<<<<< HEAD:backup-merge-conflicts/ai-search.js.jsx.backup
 </motion>
 =======
 <<<<<<< HEAD
@@ -509,3 +529,6 @@ import React,{useState,useEffect,useRef,useCallback} from &apos;react&apos;; imp
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+=======
+
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985:src_backup_temp/components/ui/ai-search.js.jsx

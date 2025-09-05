@@ -35,6 +35,91 @@ const { execSync } = require("child_process")
       const distPath = path.join(this.projectRoot, "dist")
       const nodeModulesPath = path.join(this.projectRoot, "node_modules")
       const srcPath = path.join(this.projectRoot, "src")
+<<<<<<< HEAD
+=======
+  getDirectorySize(dirPath) {
+    let totalSize = 0
+    if (!fs.existsSync(dirPath)) return 0
+    const files = fs.readdirSync(dirPath)
+    for (const file of files) {
+      const filePath = path.join(dirPath, file)
+      const stats = fs.statSync(filePath)
+      if (stats.isDirectory()) {
+        // Skip directories we can"t access
+        if (file === "node_modules" || file === ".git") continue
+        totalSize += this.getDirectorySize(filePath)} else {
+        totalSize += stats.size}
+    }
+    return totalSize}
+  countFiles(dirPath, extensions) {
+    if (!fs.existsSync(dirPath)) return 0
+    let count = 0
+    const files = fs.readdirSync(dirPath)
+    for (const file of files) {
+      const filePath = path.join(dirPath, file)
+      const stats = fs.statSync(filePath)
+      if (stats.isDirectory()) {
+        count += this.countFiles(filePath, extensions)} else if (extensions.some(ext => file.endsWith(ext))) {
+        count++}
+    }
+    return count}
+  async saveMetrics() {
+    const reportPath = path.join(this.projectRoot, "performance-report.json")
+    fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2))
+    }
+  displaySummary() {
+    )
+    // System metrics
+    // Application metrics
+    // Build metrics
+    )
+    try {
+      const files = fs.readdirSync(dirPath)
+      for (const file of files) {
+        const filePath = path.join(dirPath, file)
+        const stats = fs.statSync(filePath)
+        if (stats.isDirectory()) {
+          totalSize += this.getDirectorySize(filePath)} else {
+          totalSize += stats.size}
+      }
+    } catch (error) {
+      // Ignore errors for inaccessible files}
+    return totalSize}
+  async runPerformanceTest() {,",    await this.collectSystemMetrics()
+    await this.collectApplicationMetrics()
+    await this.collectWebMetrics()
+    this.displayResults()
+    this.saveReport()
+    return this.metrics}
+  displayResults() {
+    ";    );"";    // System metrics
+    "    ,      `   "Memory": ${this.metrics.system.memory.heapUsed || "N/A"}MB used / ${this.metrics.system.memory.heapTotal || "N/A"}MB total`");";          "   CPU": ${this.metrics.system.cpu.user || "N/A"}ms user / ${this.metrics.system.cpu.system || "N/A"}ms system"");";    ";";    // Application metrics;";    "    if (this.metrics.application.buildSize) {",      "}
+    "
+    // Web metrics
+    ,"    }ms");";    }ms`);";    }");";    }ms`);";    }ms");";    // Performance score
+    const score = this.calculatePerformanceScore()
+    "
+    if (score >= 90) {
+      } else if (score >= 70) {      } else {      }"}
+  calculatePerformanceScore() {
+    let score = 100
+    // Deduct points for poor metrics
+    if (this.metrics.web.lcp > 2500) score -= 20
+    if (this.metrics.web.fid > 100) score -= 15
+    if (this.metrics.web.cls > 0.1) score -= 15
+    if (this.metrics.web.fcp > 1800) score -= 10
+    if (this.metrics.web.ttfb > 600) score -= 10
+    if (this.metrics.application.buildSize > 50) score -= 10
+    if (this.metrics.system.memory.heapUsed > 100) score -= 10
+    return Math.max(0, score)}
+  saveReport() {
+    try {
+      const report = {timestamp": new Date().toISOString(),","metrics": this.metrics,,        "score": this.calculatePerformanceScore(),        "recommendations": this.getRecommendations()}
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))
+      "} catch (error) {console.error("Error saving report":", error.message),"}"}
+  getRecommendations() {
+    const recommendations = []
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
       this.metrics.application.fileCounts = {"source": this.countFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]),"components": this.countFiles(path.join(srcPath, "components"), [".tsx", ".jsx"]),"pages": this.countFiles(path.join(srcPath, "pages"), [".tsx", ".jsx"}]
       console.log(" Application metrics collected")
       console.warn("⚠  Could not collect application "metrics": ")

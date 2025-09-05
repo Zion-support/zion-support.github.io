@@ -1,4 +1,5 @@
 import "@testing-library/jest-dom";
+<<<<<<< HEAD
 // Type definition for HTMLElement
 interface HTMLElement {
   click(): void;
@@ -24,3 +25,26 @@ export class TestingSystem {
   }
 }
 import "@testing-library/jest-dom"; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: 'click' | 'type' | 'hover' ) { switch (action) { case 'click': element.click(); break; case 'type': break; case 'hover': break; default: break} } }
+=======
+export class TestingSystem {
+  static async testUserInteraction(
+    element: HTMLElement,
+    action: "click" | "type" | "hover"
+  ) {
+    switch (action) {
+      case "click":
+        element.click();
+        break;
+      case "type":
+        // Handle type action
+        break;
+      case "hover":
+        // Handle hover action
+        break;
+      default:
+        throw new Error(`Unknown action: ${action}`);
+    }
+  }
+}
+import &quot;@testing-library/jest-dom&quot;; interface HTMLElement { click(): void} export class TestingSystem { static async testUserInteraction( element: HTMLElement,action: &apos;click&apos; | &apos;type&apos; | &apos;hover&apos; ) { switch (action) { case &apos;click&apos;: element.click(); break; case &apos;type&apos;: break; case &apos;hover&apos;: break; default: break} } }
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985

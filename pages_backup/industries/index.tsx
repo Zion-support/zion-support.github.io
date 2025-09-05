@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -17,6 +18,26 @@ import {
   Brain;
 } from 'lucide-react';
     href: '/industries/healthcare,',
+=======
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Heart, 
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+import { Heart, 
+  DollarSign, 
+  Settings, 
+  ShoppingCart, 
+  BookOpen, 
+  Building,    href: '/industries/healthcare,',
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     features: ['AI Diagnostics, 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],',
     color: 'from-red-500 to-pink-500'';
   },
@@ -24,6 +45,7 @@ import {
     name: 'Finance',
     description: 'Secure financial services with blockchain technology, fraud detection, and automated trading systems.',
     icon: DollarSign,
+<<<<<<< HEAD
     href: '/industries/finance,',
     features: ['Blockchain Solutions, 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],',
     color: 'from-green-500 to-emerald-500'';
@@ -33,6 +55,11 @@ import {
     description: 'Optimize production with IoT sensors, predictive maintenance, and smart factory solutions.',
     icon: Settings,
     href: '/industries/manufacturing,',
+=======
+    href: '/industries/finance',
+    features: ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],
+    color: 'from-green-500 to-emerald-500'    href: '/industries/manufacturing,',
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     features: ['IoT Integration, 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],',
     color: 'from-blue-500 to-cyan-500'';
   },
@@ -40,6 +67,7 @@ import {
     name: 'Retail',
     description: 'Enhance customer experience with personalized recommendations, inventory management, and omnichannel solutions.',
     icon: ShoppingCart,
+<<<<<<< HEAD
     href: '/industries/retail,',
     features: ['Personalization, 'Inventory Management', 'Omnichannel', 'Customer Analytics'],',
     color: 'from-purple-500 to-violet-500'';
@@ -49,6 +77,11 @@ import {
     description: 'Revolutionize learning with AI tutoring, virtual classrooms, and personalized education platforms.',
     icon: BookOpen,
     href: '/industries/education,',
+=======
+    href: '/industries/retail',
+    features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],
+    color: 'from-purple-500 to-violet-500'    href: '/industries/education,',
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     features: ['AI Tutoring, 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],',
     color: 'from-orange-500 to-yellow-500'';
   },
@@ -56,6 +89,7 @@ import {
     name: 'Government',
     description: 'Modernize public services with secure citizen portals, data analytics, and digital transformation.',
     icon: Building,
+<<<<<<< HEAD
     href: '/industries/government,',
     features: ['Citizen Portals, 'Data Analytics', 'Digital Services', 'Security Compliance'],',
     color: 'from-gray-500 to-slate-500'';
@@ -70,6 +104,19 @@ const stats = [;
 ;];
 
 export default function IndustriesPage() {
+=======
+    href: '/industries/government',
+    features: ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Compliance'],
+    color: 'from-gray-500 to-slate-500'
+  }
+];
+const stats = [
+  { number: '500+', label: 'Industry Projects' },
+  { number: '50+', label: 'Fortune 500 Clients' },
+  { number: '99.9%', label: 'Uptime Guarantee' },
+  { number: '24/7', label: 'Industry Support' }
+];export default function IndustriesPage() {
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
   return (;
     <Layout);
       title="Industry Solutions - Zion Tech Group"";
@@ -133,6 +180,7 @@ export default function Industries() {
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">"
           <div className="absolute inset-0">";
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
@@ -141,6 +189,14 @@ export default function Industries() {
           </div>;
 
           <div className="container mx-auto px-4 relative z-10">
+=======
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>          <div className="container mx-auto px-4 relative z-10">
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -148,6 +204,7 @@ export default function Industries() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+<<<<<<< HEAD
                 Industry Solutions
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -167,6 +224,61 @@ export default function Industries() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+=======
+                Industry-Specific{' '}
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Technology Solutions
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                We understand the unique challenges and requirements of different industries. Our specialized solutions 
+                are designed to address sector-specific needs while ensuring compliance, security, and scalability.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Get Industry Consultation
+                </Link>
+                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                  View All Solutions
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+        {/* Industries Grid */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              className="text-center""
+            >;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
+                Industry-Specific{' '}',
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">";
+                  Technology Solutions;
+                </span>;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
+                We understand the unique challenges and requirements of different industries. Our specialized solutions;
+                are designed to address sector-specific needs while ensuring compliance, security, and scalability.,
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">";
+                  Get Industry Consultation;
+                </Link>;
+                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">";
+                  View All Solutions;
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+        {/* Industries Grid */}
+        <section className="py-20 bg-gray-50">"
+          <div className="container mx-auto px-4">";
+            <motion.div;
+              className="text-center mb-16"";            >
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Industries We Serve
               </h2>
@@ -181,6 +293,7 @@ export default function Industries() {
                 return (;
                   <motion.div);
                     key={index}
+<<<<<<< HEAD
                     className="bg-white/10 backdrop-blur-md rounded-xl p-8 hover:bg-white/20 transition-all duration-300 group"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -188,6 +301,9 @@ export default function Industries() {
                     viewport={{ once: true }}
                     whileHover={{ y: -5 }}
                     <p className="text-gray-600 mb-6 leading-relaxed">";
+=======
+                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""                    <p className="text-gray-600 mb-6 leading-relaxed">";
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
                   >
                     <div className="text-blue-400 mb-6 group-hover:text-blue-300 transition-colors">
                       <IconComponent className="w-12 h-12" />
@@ -200,6 +316,7 @@ export default function Industries() {
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {industry.description}
                     </p>
+<<<<<<< HEAD
                     
                       </div>,
                     </div>;
@@ -207,6 +324,44 @@ export default function Industries() {
                     <Link
                       href={industry.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors""
+=======
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {industry.features.map((feature, idx) => (
+                          <span
+                            key={idx}
+                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                          >
+                    <div className="mb-6">";
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>";
+                      <div className="flex flex-wrap gap-2">";
+                        {industry.features.map((feature, idx) => (,
+                          <span}),
+                            key={idx}
+                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full""
+                          >;
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                      </div>,
+                    </div>;
+                    <Link
+                      href={industry.href}
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
+                    >
+                      <span>Learn More</span>
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors""
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
                     >;
                       <span>Learn More</span>;
                       <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />";
@@ -233,8 +388,16 @@ export default function Industries() {
             </div>,
           </div>;
         </section>;
+<<<<<<< HEAD
 
         <section className="py-20 bg-white">"
+=======
+        {/* Why Choose Us Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"        <section className="py-20 bg-white">"
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
           <div className="container mx-auto px-4">";
             <motion.div;
               className="text-center mb-16"";
@@ -242,6 +405,7 @@ export default function Industries() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
             >,
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">";
                 Why Choose Our Industry Solutions?;
@@ -252,12 +416,23 @@ export default function Industries() {
             </motion.div>;
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Why Choose Our Industry Solutions?
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                We combine deep industry knowledge with cutting-edge technology to deliver solutions that truly understand your business.
+              </p>
+            </motion.div>            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
               <motion.div
                 className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
               >,
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">";
                   <Users className="w-8 h-8 text-blue-600" />";
@@ -276,6 +451,14 @@ export default function Industries() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
               >,
+=======
+              >
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Users className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Industry Expertise</h3>
+                <p className="text-gray-600">              >,
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">";
                   <Shield className="w-8 h-8 text-green-600" />";
                 </div>;
@@ -292,6 +475,7 @@ export default function Industries() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
               >,
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">";
                   <Cloud className="w-8 h-8 text-purple-600" />";
@@ -308,6 +492,14 @@ export default function Industries() {
 
         {/* Stats Section */}
         <section className="py-20 bg-gray-50">"
+=======
+              >
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Cloud className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>
+                <p className="text-gray-600">        <section className="py-20 bg-gray-50">"
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
               {stats.map((stat, index) => (,
@@ -318,6 +510,7 @@ export default function Industries() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
                 >,
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">";
                     {stat.number}
@@ -342,6 +535,22 @@ export default function Industries() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+=======
+                >
+                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-600 font-medium">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div            >
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Don't See Your Industry?
               </h2>
@@ -358,6 +567,10 @@ export default function Industries() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
+=======
+    </SimpleLayout>
+>>>>>>> de7f6c5eff04de594f29a9b2825d434cd6b01985
     </Layout>
   );
 }
