@@ -40,7 +40,7 @@ info() {
 # Show help
 show_help() {
     echo -e "${CYAN}🔧 Error Fixing Automation Management Tool${NC}"
-    echo "=============================================="
+    echo "===="
     echo ""
     echo -e "${BLUE}Usage:${NC} $0 [COMMAND]"
     echo ""
@@ -90,11 +90,11 @@ restart_automation() {
 # Show status
 show_status() {
     echo -e "${CYAN}📊 Error Fixing Automation Status${NC}"
-    echo "=================================="
+    echo "======"
     pm2 status
     echo ""
     echo -e "${CYAN}📁 Log Files Location${NC}"
-    echo "========================"
+    echo "==="
     echo "Logs: $LOG_DIR"
     echo "Reports: $REPORTS_DIR"
 }
@@ -103,11 +103,11 @@ show_status() {
 show_logs() {
     if [ -n "$1" ]; then
         echo -e "${CYAN}📋 Logs for $1${NC}"
-        echo "====================="
+        echo ""
         pm2 logs "$1" --lines 50
     else
         echo -e "${CYAN}📋 All Automation Logs${NC}"
-        echo "====================="
+        echo ""
         pm2 logs --lines 30
     fi
 }
@@ -133,7 +133,7 @@ run_immediate_fix() {
 # Show reports
 show_reports() {
     echo -e "${CYAN}📊 Recent Error Fixing Reports${NC}"
-    echo "================================="
+    echo "====="
     
     if [ -d "$REPORTS_DIR" ]; then
         # Find the 5 most recent reports
@@ -190,7 +190,7 @@ clean_old_files() {
 # Show configuration
 show_config() {
     echo -e "${CYAN}⚙️  Error Fixing Automation Configuration${NC}"
-    echo "========================================="
+    echo "======"
     echo ""
     
     if [ -f "$ECOSYSTEM_FILE" ]; then
@@ -217,7 +217,7 @@ show_config() {
 # Check system health
 check_health() {
     echo -e "${CYAN}🏥 Error Fixing Automation Health Check${NC}"
-    echo "====================================="
+    echo "=="
     echo ""
     
     # Check PM2 status

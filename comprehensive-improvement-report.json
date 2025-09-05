@@ -1,13 +1,37 @@
 {
-  "timestamp": "2025-09-04T02:07:21.510Z",
-  "duration": "1286ms",
-  "improvements": [
-    "codeQuality",
-    "security",
-    "performance",
-    "seo",
-    "monitoring"
+  "startTime": "2025-09-04T15:35:18.837Z",
+  "endTime": "2025-09-04T15:35:47.567Z",
+  "duration": "29s",
+  "fixesApplied": [
+    "Performance optimizations applied",
+    "SEO optimizations applied",
+    "Accessibility improvements applied"
   ],
-  "totalImprovements": 5,
-  "successRate": 83.33333333333334
+  "errorsFound": [
+    {
+      "command": "npm run lint:fix",
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:3250) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    },
+    {
+      "command": "npx eslint . --fix",
+      "error": "Command failed: npx eslint . --fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:3298) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    },
+    {
+      "command": "npx eslint . --fix --ext .js,.jsx,.ts,.tsx",
+      "error": "Command failed: npx eslint . --fix --ext .js,.jsx,.ts,.tsx\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:3322) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    },
+    {
+      "command": "npm run type-check",
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "command": "npm run build",
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⚠ Specified \"rewrites\" will not automatically work with \"output: export\". See more info here: https://nextjs.org/docs/messages/export-no-custom-routes\n ⚠ Specified \"redirects\" will not automatically work with \"output: export\". See more info here: https://nextjs.org/docs/messages/export-no-custom-routes\n ⚠ Specified \"headers\" will not automatically work with \"output: export\". See more info here: https://nextjs.org/docs/messages/export-no-custom-routes\n ⨯ Conflicting app and page file was found, please remove the conflicting files to continue:\n ⨯   \"pages/index.tsx\" - \"app/page.tsx\"\n"
+    },
+    {
+      "command": "npm run perf:monitor",
+      "error": "Command failed: npm run perf:monitor\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nfile:///workspace/scripts/performance-monitor.js:14\nconst performanceChecks = {\n      ^^^^^^^^^^^^^^^^^\n\nSyntaxError: Unexpected identifier 'performanceChecks'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
+    }
+  ],
+  "status": "PARTIAL_SUCCESS"
 }

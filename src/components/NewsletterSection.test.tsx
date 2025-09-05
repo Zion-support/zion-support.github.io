@@ -9,6 +9,6 @@ export default function NewsletterSection.test() {return (
           Professional NewsletterSection.test services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

@@ -1,2 +1,5 @@
-// Analytics module
+<<<<<<< HEAD
 export {};
+=======
+module.exports = {};
+>>>>>>> main

@@ -1,3 +1,1 @@
-// comment;
-export const performanceOptimizer = {};
-export default performanceOptimizer;
+module.exports = const performanceOptimizer = {}; export default performanceOptimizer;

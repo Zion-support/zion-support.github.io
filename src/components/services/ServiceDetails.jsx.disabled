@@ -1,0 +1,1 @@
+import {Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle} from "@/components/ui/card"; import { Server,Clock,MapPin export function ServiceDetails($1) { const getDatacenters = (props) => { const dataCenters = { export default ServiceDetails;
