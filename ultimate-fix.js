@@ -1,6 +1,6 @@
-import fs from 'fs',
-import path from 'path',
-import { fileURLToPath } from 'url',
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 ,
 const __filename = fileURLToPath(import.meta.url),
 const __dirname = path.dirname(__filename),
@@ -13,8 +13,8 @@ function fixAllRemainingIssues(content) {,
   content = content.replace(/]\s*$/g, ']'),
 ,
   // Fix malformed JSX attributes,
-  content = content.replace(/initial={{ opacity: 0, y: 30 ,}},/g, 'initial={{ opacity: 0, y: 30 ,}}'),
-  content = content.replace(/animate={{ opacity: 1, y: 0 ,}},/g, 'animate={{ opacity: 1, y: 0 ,}}'),
+  content = content.replace(/initial={{ opacity: 0, y: 30 }},/g, 'initial={{ opacity: 0, y: 30 }}'),
+  content = content.replace(/animate={{ opacity: 1, y: 0 }},/g, 'animate={{ opacity: 1, y: 0 }}'),
 ,
   // Fix missing commas in arrays,
   content = content.replace(/}\s*\n\s*{/g, '},\n  {'),
@@ -35,29 +35,29 @@ function fixAllRemainingIssues(content) {,
     if (line.includes('const') && line.includes('= [')) {,
       inArray = true,
       bracketCount = 1,
-      arrayStartLine = i,
+      arrayStartLine = i
     } else if (inArray) {,
       if (line.includes('[')) bracketCount++,
       if (line.includes(']')) bracketCount--,
       if (bracketCount === 0) {,
         inArray = false,
-        arrayStartLine = -1,
+        arrayStartLine = -1
       };
     };
     // Fix array items that are outside brackets,
     if (inArray && line.trim().startsWith('{') && !line.includes('[') && !line.includes(']')) {,
-      if (!line.includes(',')) {,
-        fixedLines.push(line + ','),
+      if (!line.includes()) {,
+        fixedLines.push(line + ',')
       } else {,
-        fixedLines.push(line),
+        fixedLines.push(line)
       };
     } else {,
-      fixedLines.push(line),
+      fixedLines.push(line)
     };
   };
   content = fixedLines.join('\n'),
 ,
-  return content,
+  return content
 };
 // Function to process a file,
 function processFile(filePath) {,
@@ -67,22 +67,20 @@ function processFile(filePath) {,
 ,
     if (content !== fixedContent) {,
       fs.writeFileSync(filePath, fixedContent),
-      console.log(`Fixed: ${filePath,}`),
-      return true,
+      console.log(`Fixed: ${filePath}`),
+      return true
     };
-    return false,
+    return false
   } catch (error) {,
     console.error(`Error processing ${filePath}:`, error.message),
-    return false,
+    return false
   };
 };
 // Process the specific files that have errors,
 const errorFiles = [,
-  'pages/about.tsx',;
-  'pages/accessibility.tsx',;
-  'pages/ai-services.tsx',;
-  'pages/api.tsx',;
-  'pages/blog.tsx',
+  'pages/about.tsxpages/accessibility.tsx',
+  'pages/ai-services.tsxpages/api.tsx',
+  'pages/blog.tsx'
 ],
 ,
 console.log(`Processing ${errorFiles.length} files with errors`),
@@ -90,7 +88,7 @@ console.log(`Processing ${errorFiles.length} files with errors`),
 let fixedCount = 0,
 errorFiles.forEach(file => {,
   if (processFile(file)) {,
-    fixedCount++,
+    fixedCount++
   };
 }),
 ,

@@ -58,7 +58,7 @@ export default function AccessibilityEnhancer() {
 
       interactiveElements.forEach((element) => {
         if (!element.getAttribute('tabindex')) {
-          element.setAttribute('tabindex', '0');
+          element.setAttribute('tabindex0');
         }
         // Add keyboard event handlers
         element.addEventListener('keydown', (e) => {
@@ -79,8 +79,8 @@ export default function AccessibilityEnhancer() {
 
     // Add ARIA live region for announcements
     const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
+    liveRegion.setAttribute('aria-livepolite');
+    liveRegion.setAttribute('aria-atomictrue');
     liveRegion.className = 'sr-only';
     liveRegion.id = 'live-region';
     document.body.appendChild(liveRegion);

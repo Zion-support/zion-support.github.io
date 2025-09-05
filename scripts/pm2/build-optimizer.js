@@ -100,7 +100,7 @@ class BuildOptimizer {
     try {
       this.log('📊 Checking bundle analyzer availability...');
       
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
       const hasAnalyzer = packageJson.devDependencies &&
         (packageJson.devDependencies['webpack-bundle-analyzer'] ||
          packageJson.devDependencies['@next/bundle-analyzer']);
@@ -132,13 +132,13 @@ class BuildOptimizer {
       
       // Check Next.js config
       if (fs.existsSync('next.config.js')) {
-        const nextConfig = fs.readFileSync('next.config.js', 'utf8');
+        const nextConfig = fs.readFileSync('next.config.jsutf8');
         settings.minification = nextConfig.includes('swcMinify: true') || nextConfig.includes('swcMinify:true');
         settings.compression = nextConfig.includes('compress: true') || nextConfig.includes('compress:true');
       }
       
       // Check package.json for optimization scripts
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
       const scripts = packageJson.scripts || {};
       
       settings.treeShaking = scripts.build && scripts.build.includes('--tree-shaking');

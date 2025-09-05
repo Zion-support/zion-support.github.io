@@ -1,6 +1,6 @@
-import fs from 'fs',
-import path from 'path',
-import { fileURLToPath } from 'url',
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 ,
 const __filename = fileURLToPath(import.meta.url),
 const __dirname = path.dirname(__filename),
@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename),
 // Function to fix structural issues,
 function fixStructuralIssues(content) {,
   // Fix malformed function declarations,
-  content = content.replace(/export default function (\w+)()\s*{\s*return\s*(\s*<div>Content<\/div>\s*),\s*}\s*return\s*(/g,;
+  content = content.replace(/export default function (\w+)()\s*{\s*return\s*(\s*<div>Content<\/div>\s*),\s*}\s*return\s*(/g,
     'export default function $1() {\n  return ('),
 ,
   // Fix duplicate return statements,
@@ -35,12 +35,12 @@ function fixStructuralIssues(content) {,
   content = content.replace(/<p className="[^"]*">"/g, '<p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">'),
 ,
   // Fix missing closing tags,
-  content = content.replace(/<\/div>\s*)\s*,}\s*$/g, '</div>\n  ),\n}'),
+  content = content.replace(/<\/div>\s*)\s*}\s*$/g, '</div>\n  ),\n}'),
 ,
   // Fix semicolons in JSX,
   content = content.replace(/,\s*$/g, ''),
 ,
-  return content,
+  return content
 };
 // Function to process a file,
 function processFile(filePath) {,
@@ -50,22 +50,20 @@ function processFile(filePath) {,
 ,
     if (content !== fixedContent) {,
       fs.writeFileSync(filePath, fixedContent),
-      console.log(`Fixed: ${filePath,}`),
-      return true,
+      console.log(`Fixed: ${filePath}`),
+      return true
     };
-    return false,
+    return false
   } catch (error) {,
     console.error(`Error processing ${filePath}:`, error.message),
-    return false,
+    return false
   };
 };
 // Process the specific files that have errors,
 const errorFiles = [,
-  'pages/about.tsx',;
-  'pages/accessibility.tsx',;
-  'pages/ai-services.tsx',;
-  'pages/api.tsx',;
-  'pages/blog.tsx',
+  'pages/about.tsxpages/accessibility.tsx',
+  'pages/ai-services.tsxpages/api.tsx',
+  'pages/blog.tsx'
 ],
 ,
 console.log(`Processing ${errorFiles.length} files with structural issues`),
@@ -73,7 +71,7 @@ console.log(`Processing ${errorFiles.length} files with structural issues`),
 let fixedCount = 0,
 errorFiles.forEach(file => {,
   if (processFile(file)) {,
-    fixedCount++,
+    fixedCount++
   };
 }),
 ,

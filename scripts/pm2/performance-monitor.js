@@ -147,7 +147,7 @@ class PerformanceMonitor {
     try {
       this.log('📦 Analyzing dependencies...');
       
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
       const dependencies = Object.keys(packageJson.dependencies || {});
       const devDependencies = Object.keys(packageJson.devDependencies || {});
       
@@ -229,7 +229,7 @@ class PerformanceMonitor {
     try {
       this.log('📈 Checking bundle analyzer availability...');
       
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
       const hasAnalyzer = packageJson.devDependencies &&
         (packageJson.devDependencies['webpack-bundle-analyzer'] ||
          packageJson.devDependencies['@next/bundle-analyzer']);

@@ -7,22 +7,22 @@ export const securityConfig = {,
     const missingVars = requiredVars.filter(varName => !process.env[varName]),
 ,
     if (missingVars.length > 0) {,
-      console.warn('Missing required environment variables:', missingVars),
+      console.warn('Missing required environment variables:', missingVars)
     };
-    return missingVars.length === 0,
-  },;
+    return missingVars.length === 0
+  },
   // Sanitize environment variables for client-side use,
   getClientEnvVars: () => {,
-    const clientVars = {,};
-    const allowedClientVars = ['NEXT_PUBLIC_API_URL', 'NEXT_PUBLIC_APP_NAME'],
+    const clientVars = {};
+    const allowedClientVars = ['NEXT_PUBLIC_API_URLNEXT_PUBLIC_APP_NAME'],
 ,
     allowedClientVars.forEach(varName => {,
       if (process.env[varName]) {,
-        clientVars[varName] = process.env[varName],
+        clientVars[varName] = process.env[varName]
       };
     }),
 ,
-    return clientVars,
+    return clientVars
   };
 };
 ,

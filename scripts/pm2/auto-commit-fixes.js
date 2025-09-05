@@ -165,7 +165,7 @@ class AutoCommitFixes {
       messages.push(`Other changes in ${changes.other.length} file(s)`);
     }
     
-    return messages.join(', ');
+    return messages.join();
   }
 
   async run() {

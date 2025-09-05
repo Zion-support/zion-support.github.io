@@ -1,17 +1,17 @@
 #!/usr/bin/env node,
-import fs from 'fs',
-import path from 'path',
-import { execSync } from 'child_process',
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
 ,
 console.log('🔧 Resolving merge conflicts comprehensively...'),
 ,
 // Get list of conflicted files,
 const getConflictedFiles = () => {,
   try {,
-    const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' ,}),
-    return result.trim().split('\n').filter(file => file),
+    const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }),
+    return result.trim().split('\n').filter(file => file)
   } catch (error) {,
-    return [],
+    return []
   };
 };
 ,
@@ -28,31 +28,31 @@ const resolveConflicts = (filePath) => {,
         filePath.includes('.disabled') ||,
         filePath.includes('yarn.lock') ||,
         filePath.includes('package-lock.json')) {,
-      console.log(`Accepting HEAD version for: ${filePath,}`),
-      execSync(`git checkout --ours "${filePath}"`, { stdio: 'inherit' ,}),
-      return true,
+      console.log(`Accepting HEAD version for: ${filePath}`),
+      execSync(`git checkout --ours "${filePath}"`, { stdio: 'inherit' }),
+      return true
     };
     // For main source files, try to resolve conflicts intelligently,
     if (filePath.includes('pages/') ||,
         filePath.includes('components/') ||,
         filePath.includes('utils/') ||,
         filePath.includes('types/')) {,
-      console.log(`Resolving conflicts for: ${filePath,}`),
+      console.log(`Resolving conflicts for: ${filePath}`),
 ,
       let content = fs.readFileSync(filePath, 'utf8'),
 ,
       // Remove conflict markers and keep HEAD version,
       fs.writeFileSync(filePath, content),
-      return true,
+      return true
     };
     // For other files, accept HEAD version,
-    console.log(`Accepting HEAD version for: ${filePath,}`),
-    execSync(`git checkout --ours "${filePath}"`, { stdio: 'inherit' ,}),
+    console.log(`Accepting HEAD version for: ${filePath}`),
+    execSync(`git checkout --ours "${filePath}"`, { stdio: 'inherit' }),
     return true,
-,
+
   } catch (error) {,
     console.error(`Error resolving conflicts in ${filePath}:`, error.message),
-    return false,
+    return false
   };
 };
 ,
@@ -62,7 +62,7 @@ const main = () => {,
 ,
   if (conflictedFiles.length === 0) {,
     console.log('No conflicted files found.'),
-    return,
+    return
   };
   console.log(`Found ${conflictedFiles.length} conflicted files.`),
 ,
@@ -71,21 +71,21 @@ const main = () => {,
 ,
   for (const file of conflictedFiles) {,
     if (resolveConflicts(file)) {,
-      resolvedCount++,
+      resolvedCount++
     } else {,
-      failedCount++,
+      failedCount++
     };
   };
-  console.log(`\n✅ Resolved: ${resolvedCount,} files`),
-  console.log(`❌ Failed: ${failedCount,} files`),
+  console.log(`\n✅ Resolved: ${resolvedCount} files`),
+  console.log(`❌ Failed: ${failedCount} files`),
 ,
   if (resolvedCount > 0) {,
     console.log('\n📝 Adding resolved files...'),
     try {,
-      execSync('git add .', { stdio: 'inherit' ,}),
-      console.log('✅ Files added to staging area'),
+      execSync('git add .', { stdio: 'inherit' }),
+      console.log('✅ Files added to staging area')
     } catch (error) {,
-      console.error('❌ Error adding files:', error.message),
+      console.error('❌ Error adding files:', error.message)
     };
   };
 };

@@ -3,16 +3,14 @@ interface EnhancedMarketplaceCardProps {,
   description: string,
   price?: string,
   image?: string,
-,};
+};
 export default function EnhancedMarketplaceCard({ title, description, price, image }: EnhancedMarketplaceCardProps) {,
   return (,
     <div className="rounded-xl border bg-white shadow-sm hover: shadow-md transition p-4 flex flex-col">,
       <div className="flex items-center gap-3 mb-3">,
         {image ? (,
-          <Image src={image,} alt={title} width={48} height={48} className="rounded" />,
-        ) : (,
-          <div className="h-12 w-12 rounded bg-gray-200" />,
-        )};
+          <Image src={image} alt={title} width={48} height={48} className="rounded" />) : (,
+          <div className="h-12 w-12 rounded bg-gray-200" />)};
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>,
       </div>,
       <p className="text-sm text-gray-600 mb-4">{description}</p>,
@@ -24,4 +22,4 @@ export default function EnhancedMarketplaceCard({ title, description, price, ima
       </div>,
     </div>,
   ),
-,};
+};

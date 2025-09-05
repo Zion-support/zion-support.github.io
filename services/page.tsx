@@ -1,87 +1,87 @@
-import React from 'react',
-import * as React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import Layout from '../pages/components/Layout',
-import {,
-  Brain,;
-  Cloud,;
-  Shield,;
-  BarChart3,;
-  CheckCircle,;
-  ArrowRight,;
-  Clock,;
-  Star,;
-  DollarSign,;
-  Award,;
-  Globe,;
-  Lock,;
-  Cpu,;
-  Bot,;
-  FileText,;
-  Video,;
-  Mic,;
-  Code,;
-  Settings,;
-  Monitor,;
-  Smartphone,;
-  Server,;
-  Network,;
-  Car,;
-  Rocket,;
-  Heart,;
-  Building,;
-  Sprout,;
-  Mail,;
-  Search,;
-  Target,;
-  TrendingUp,;
-  Package,;
-  Calendar,;
-  BookOpen,;
-  ShoppingCart,;
-  Home,;
-  Trash2,;
-  Camera,;
-  HardDrive,;
-  Database,;
-  Phone,;
-  MapPin,;
-  Zap,;
-  Users,
+import React from 'react';
+import * as React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Layout from '../pages/components/Layout';
+import {;
+  Brain,
+  Cloud,
+  Shield,
+  BarChart3,
+  CheckCircle,
+  ArrowRight,
+  Clock,
+  Star,
+  DollarSign,
+  Award,
+  Globe,
+  Lock,
+  Cpu,
+  Bot,
+  FileText,
+  Video,
+  Mic,
+  Code,
+  Settings,
+  Monitor,
+  Smartphone,
+  Server,
+  Network,
+  Car,
+  Rocket,
+  Heart,
+  Building,
+  Sprout,
+  Mail,
+  Search,
+  Target,
+  TrendingUp,
+  Package,
+  Calendar,
+  BookOpen,
+  ShoppingCart,
+  Home,
+  Trash2,
+  Camera,
+  HardDrive,
+  Database,
+  Phone,
+  MapPin,
+  Zap,
+  Users
 } from 'lucide-react',
 ,
 const allServices = [,
   {,
-    id: 1,;
-    title: 'AI Services',;
-    description: 'Cutting-edge artificial intelligence solutions including machine learning, computer vision, and NLP.',;
-    icon: Brain,;
-    category: 'AI & ML',;
-    href: '/ai-services',;
-    color: 'purple',;
-    services: ['Machine Learning', 'Computer Vision', 'NLP', 'Predictive Analytics', 'AI Chatbots'],
-  },;
+    id: 1,
+    title: 'AI Services',
+    description: 'Cutting-edge artificial intelligence solutions including machine learning, computer vision, and NLP.',
+    icon: Brain,
+    category: 'AI & ML',
+    href: '/ai-services',
+    color: 'purple',
+    services: ['Machine LearningComputer Vision', 'NLPPredictive Analytics', 'AI Chatbots']
+  },
   {,
-    id: 2,;
-    title: 'IT Services',;
-    description: 'Comprehensive IT solutions including cloud infrastructure, cybersecurity, and DevOps.',;
-    icon: Server,;
-    category: 'Information Technology',;
-    href: '/it-services',;
-    color: 'green',;
-    services: ['Cloud Migration', 'Cybersecurity', 'DevOps', 'Database Management', 'IT Support'],
-  },;
+    id: 2,
+    title: 'IT Services',
+    description: 'Comprehensive IT solutions including cloud infrastructure, cybersecurity, and DevOps.',
+    icon: Server,
+    category: 'Information Technology',
+    href: '/it-services',
+    color: 'green',
+    services: ['Cloud MigrationCybersecurity', 'DevOpsDatabase Management', 'IT Support']
+  },
   {,
-    id: 3,;
-    title: 'Micro SaaS',;
-    description: 'Innovative micro SaaS solutions designed to solve specific business challenges.',;
-    icon: Cloud,;
-    category: 'Software as a Service',;
-    href: '/micro-saas',;
-    color: 'blue',;
-    services: ['Analytics Dashboard', 'Document Processing', 'Customer Experience', 'Inventory Management', 'Project Management'],
+    id: 3,
+    title: 'Micro SaaS',
+    description: 'Innovative micro SaaS solutions designed to solve specific business challenges.',
+    icon: Cloud,
+    category: 'Software as a Service',
+    href: '/micro-saas',
+    color: 'blue',
+    services: ['Analytics DashboardDocument Processing', 'Customer ExperienceInventory Management', 'Project Management']
   };
 ],
 ,
@@ -99,26 +99,26 @@ export default function ServicesPage() {,
             <div className="text-center max-w-4xl mx-auto">,
               <motion.h1,
                 className="text-5xl md: text-6xl font-bold mb-6 leading-tight",
-                initial={{ opacity: 0, y: 20 ,}};
-                animate={{ opacity: 1, y: 0 ,}};
-                transition={{ duration: 0.8 ,}};
+                initial={{ opacity: 0, y: 20 }};
+                animate={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.8 }};
               >,
                 Our Comprehensive Services,
               </motion.h1>,
               <motion.p,
                 className="text-xl md: text-2xl mb-8 text-gray-200",
-                initial={{ opacity: 0, y: 20 ,}};
-                animate={{ opacity: 1, y: 0 ,}};
-                transition={{ duration: 0.8, delay: 0.2 ,}};
+                initial={{ opacity: 0, y: 20 }};
+                animate={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.8, delay: 0.2 }};
               >,
-                From AI-powered solutions to IT infrastructure and micro SaaS platforms,;
+                From AI-powered solutions to IT infrastructure and micro SaaS platforms,
                 we provide end-to-end technology services to transform your business.,
               </motion.p>,
               <motion.div,
                 className="flex flex-col sm: flex-row justify-center gap-4 mb-12",
-                initial={{ opacity: 0, y: 20 ,}};
-                animate={{ opacity: 1, y: 0 ,}};
-                transition={{ duration: 0.8, delay: 0.4 ,}};
+                initial={{ opacity: 0, y: 20 }};
+                animate={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.8, delay: 0.4 }};
               >,
                 <Link href="/contact" className="bg-blue-600 hover: bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">,
                   Get Free Consultation,
@@ -127,12 +127,12 @@ export default function ServicesPage() {,
                   Call +1 302 464 0950,
                 </a>,
               </motion.div>,
-              {/* Stats */,};
+              {/* Stats */};
               <motion.div,
                 className="grid md: grid-cols-4 gap-8 mt-16",
-                initial={{ opacity: 0, y: 20 ,}};
-                animate={{ opacity: 1, y: 0 ,}};
-                transition={{ duration: 0.8, delay: 0.6 ,}};
+                initial={{ opacity: 0, y: 20 }};
+                animate={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.8, delay: 0.6 }};
               >,
                 <div className="text-center">,
                   <div className="text-3xl font-bold text-blue-400">235+</div>,
@@ -160,7 +160,7 @@ export default function ServicesPage() {,
             <div className="text-center mb-16">,
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Service Categories</h2>,
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">,
-                We offer comprehensive technology services across three main categories,;
+                We offer comprehensive technology services across three main categories,
                 each designed to address specific business needs and challenges.,
               </p>,
             </div>,
@@ -169,9 +169,9 @@ export default function ServicesPage() {,
                 <motion.div,
                   key={service.id};
                   className="bg-white rounded-lg shadow-lg hover: shadow-xl transition-shadow duration-300 border border-gray-200",
-                  initial={{ opacity: 0, y: 20 ,}};
-                  whileInView={{ opacity: 1, y: 0 ,}};
-                  transition={{ duration: 0.6, delay: index * 0.1 ,}};
+                  initial={{ opacity: 0, y: 20 }};
+                  whileInView={{ opacity: 1, y: 0 }};
+                  transition={{ duration: 0.6, delay: index * 0.1 }};
                 >,
                   <div className="p-8">,
                     {/* Header */};
@@ -194,14 +194,13 @@ export default function ServicesPage() {,
                           <li key={idx} className="flex items-center text-sm text-gray-600">,
                             <CheckCircle className={`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />,
                             {item};
-                          </li>,
-                        ))};
+                          </li>))};
                       </ul>,
                     </div>,
                     {/* CTA */};
                     <Link,
                       href={service.href};
-                      className={`w-full bg-${service.color}-600 hover: bg-${service.color,}-700 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors flex items-center justify-center`};
+                      className={`w-full bg-${service.color}-600 hover: bg-${service.color}-700 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors flex items-center justify-center`};
                     >,
                       Explore {service.title};
                       <ArrowRight className="w-4 h-4 ml-2" />,
@@ -224,9 +223,9 @@ export default function ServicesPage() {,
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
               <motion.div,
                 className="text-center",
-                initial={{ opacity: 0, y: 20 ,}};
-                whileInView={{ opacity: 1, y: 0 ,}};
-                transition={{ duration: 0.6 ,}};
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.6 }};
               >,
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">,
                   <Award className="w-8 h-8 text-blue-600" />,
@@ -236,9 +235,9 @@ export default function ServicesPage() {,
               </motion.div>,
               <motion.div,
                 className="text-center",
-                initial={{ opacity: 0, y: 20 ,}};
-                whileInView={{ opacity: 1, y: 0 ,}};
-                transition={{ duration: 0.6, delay: 0.1 ,}};
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.6, delay: 0.1 }};
               >,
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">,
                   <Clock className="w-8 h-8 text-blue-600" />,
@@ -248,9 +247,9 @@ export default function ServicesPage() {,
               </motion.div>,
               <motion.div,
                 className="text-center",
-                initial={{ opacity: 0, y: 20 ,}};
-                whileInView={{ opacity: 1, y: 0 ,}};
-                transition={{ duration: 0.6, delay: 0.2 ,}};
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.6, delay: 0.2 }};
               >,
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">,
                   <Shield className="w-8 h-8 text-blue-600" />,
@@ -260,9 +259,9 @@ export default function ServicesPage() {,
               </motion.div>,
               <motion.div,
                 className="text-center",
-                initial={{ opacity: 0, y: 20 ,}};
-                whileInView={{ opacity: 1, y: 0 ,}};
-                transition={{ duration: 0.6, delay: 0.3 ,}};
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.6, delay: 0.3 }};
               >,
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">,
                   <DollarSign className="w-8 h-8 text-blue-600" />,
@@ -293,4 +292,4 @@ export default function ServicesPage() {,
       </div>,
     </Layout>,
   ),
-,};
+};

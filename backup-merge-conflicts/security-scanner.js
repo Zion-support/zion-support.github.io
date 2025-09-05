@@ -75,10 +75,10 @@ class SecurityScanner {
         { pattern: /secret\s*=\s*['"][^'"]*['"]/gi, message: 'Hardcoded secret detected' },
         { pattern: /eval\s*\(/gi, message: 'eval() usage detected' },
         { pattern: /innerHTML\s*=/gi, message: 'innerHTML usage detected (potential XSS)' },
-        { pattern: /document\.write/gi, message: 'document.write usage detected' },
+        { pattern: /document\.write/gi, message: 'document.write usage detected' }
       ];
 
-      const filesToScan = this.getFilesToScan(['.js', '.jsx', '.ts', '.tsx']);
+      const filesToScan = this.getFilesToScan(['.js.jsx', '.ts.tsx']);
       let issuesFound = 0;
 
       for (const file of filesToScan) {
@@ -111,14 +111,10 @@ class SecurityScanner {
       this.log('Scanning configuration files...');
       
       const configFiles = [
-        'package.json',
-        'next.config.js',
-        'next.config.mjs',
-        '.env',
-        '.env.local',
-        '.env.production',
-        'ecosystem.config.js',
-        'nginx.conf'
+        'package.jsonnext.config.js',
+        'next.config.mjs.env',
+        '.env.local.env.production',
+        'ecosystem.config.jsnginx.conf'
       ];
 
       for (const configFile of configFiles) {
@@ -133,7 +129,7 @@ class SecurityScanner {
               { pattern: /password\s*[:=]\s*['"][^'"]*['"]/gi, message: 'Password in config' },
               { pattern: /secret\s*[:=]\s*['"][^'"]*['"]/gi, message: 'Secret in config' },
               { pattern: /key\s*[:=]\s*['"][^'"]*['"]/gi, message: 'Key in config' },
-              { pattern: /token\s*[:=]\s*['"][^'"]*['"]/gi, message: 'Token in config' },
+              { pattern: /token\s*[:=]\s*['"][^'"]*['"]/gi, message: 'Token in config' }
             ];
 
             for (const { pattern, message } of sensitivePatterns) {
@@ -166,7 +162,7 @@ class SecurityScanner {
           
           if (stat.isDirectory()) {
             // Skip node_modules and other common directories
-            if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+            if (!['node_modules.git', '.nextdist', 'build'].includes(item)) {
               scanDirectory(fullPath);
             }
           } else if (stat.isFile()) {

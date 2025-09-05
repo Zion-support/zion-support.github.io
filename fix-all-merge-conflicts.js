@@ -1,7 +1,7 @@
 #!/usr/bin/env node,
-import fs from 'fs',
-import path from 'path',
-import { fileURLToPath } from 'url',
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 ,
 const __filename = fileURLToPath(import.meta.url),
 const __dirname = path.dirname(__filename),
@@ -21,8 +21,8 @@ function fixMergeConflicts(filePath) {,
       const benefits = match.match(/benefits: \s*[([^]]*)]/g),
       if (benefits && benefits.length > 1) {,
         return benefits[0], // Keep the first one,
-      ,};
-      return match,
+      };
+      return match
     }),
 ,
     // Fix malformed JSX,
@@ -35,13 +35,13 @@ function fixMergeConflicts(filePath) {,
     content = content.replace(/\s*<\/div>\s*<\/section>\s*<\/div>\s*<\/>\s*),\s*}\s*const\s+stats\s*=/g, '\n      </>\n    ),\n  }\n\n  const stats = '),
 ,
     fs.writeFileSync(filePath, content),
-    console.log(`Fixed merge conflicts in ${filePath}`),
+    console.log(`Fixed merge conflicts in ${filePath}`)
   } catch (error) {,
-    console.error(`Error fixing ${filePath}:`, error.message),
+    console.error(`Error fixing ${filePath}:`, error.message)
   };
 };
 // Function to find all TypeScript/JavaScript files,
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {,
+function findFiles(dir, extensions = ['.tsx.ts', '.jsx.js']) {,
   const files = [],
 ,
   function traverse(currentDir) {,
@@ -52,14 +52,14 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {,
       const stat = fs.statSync(fullPath),
 ,
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {,
-        traverse(fullPath),
+        traverse(fullPath)
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {,
-        files.push(fullPath),
+        files.push(fullPath)
       };
     };
   };
   traverse(dir),
-  return files,
+  return files
 };
 // Main execution,
 console.log('🔧 Fixing merge conflicts and syntax issues...'),
@@ -69,15 +69,15 @@ const componentsDir = path.join(__dirname, 'components'),
 ,
 // Find all files to fix,
 const filesToFix = [,
-  ...findFiles(pagesDir),;
-  ...findFiles(componentsDir),
+  ...findFiles(pagesDir),
+  ...findFiles(componentsDir)
 ],
 ,
 console.log(`Found ${filesToFix.length} files to check`),
 ,
 // Fix each file,
 filesToFix.forEach(filePath => {,
-  fixMergeConflicts(filePath),
+  fixMergeConflicts(filePath)
 }),
 ,
 console.log('✅ Merge conflict fixing completed!'),

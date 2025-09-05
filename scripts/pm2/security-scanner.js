@@ -138,7 +138,7 @@ class SecurityScanner {
 
   getSourceFiles() {
     const files = [];
-    const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+    const extensions = ['.js.jsx', '.ts.tsx'];
     
     const scanDirectory = (dir) => {
       try {
@@ -173,12 +173,9 @@ class SecurityScanner {
       
       const configIssues = [];
       const configFiles = [
-        'package.json',
-        'next.config.js',
-        'tsconfig.json',
-        '.env',
-        '.env.local',
-        '.env.production'
+        'package.jsonnext.config.js',
+        'tsconfig.json.env',
+        '.env.local.env.production'
       ];
       
       configFiles.forEach(configFile => {

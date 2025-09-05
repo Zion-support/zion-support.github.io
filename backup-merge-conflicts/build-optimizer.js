@@ -33,7 +33,7 @@ class BuildOptimizer {
       this.log('Starting build optimization...');
       
       // Check if this is a Next.js project
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
       const isNextJS = packageJson.dependencies?.next || packageJson.devDependencies?.next;
       
       if (!isNextJS) {
@@ -102,7 +102,7 @@ class BuildOptimizer {
       // Check for unused dependencies
       const unusedDeps = await this.findUnusedDependencies();
       if (unusedDeps.length > 0) {
-        this.log(`Unused dependencies found: ${unusedDeps.join(', ')}`);
+        this.log(`Unused dependencies found: ${unusedDeps.join()}`);
       }
 
       // Check for duplicate dependencies
@@ -172,7 +172,7 @@ class BuildOptimizer {
   async findUnusedDependencies() {
     try {
       // This is a simplified check - in practice, you'd use tools like depcheck
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
       const dependencies = Object.keys(packageJson.dependencies || {});
       const devDependencies = Object.keys(packageJson.devDependencies || {});
       
@@ -188,7 +188,7 @@ class BuildOptimizer {
     try {
       // Check for duplicate dependencies in package-lock.json
       if (fs.existsSync('package-lock.json')) {
-        const lockFile = JSON.parse(fs.readFileSync('package-lock.json', 'utf8'));
+        const lockFile = JSON.parse(fs.readFileSync('package-lock.jsonutf8'));
         const dependencies = lockFile.dependencies || {};
         
         // This would need more sophisticated analysis

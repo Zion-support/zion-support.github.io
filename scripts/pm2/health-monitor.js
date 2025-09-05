@@ -44,7 +44,7 @@ class HealthMonitor {
       
       // Parse CPU info
       const cpuUsage = cpuInfo.includes('id') ? 
-        (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())) : 0;
+        (100 - parseFloat(cpuInfo.split('id')[0].split()[3].replace('%id', '').trim())) : 0;
       
       return {
         success: true,
@@ -149,7 +149,7 @@ class HealthMonitor {
       
       // Check if package.json exists and is valid
       try {
-        const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+        const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
         healthChecks.push({
           name: 'Package.json',
           status: 'healthy',

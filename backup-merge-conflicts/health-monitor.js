@@ -124,7 +124,7 @@ class HealthMonitor {
       
       // Check load average
       const loadAvg = os.loadavg();
-      this.log(`Load average: ${loadAvg.map(load => load.toFixed(2)).join(', ')}`);
+      this.log(`Load average: ${loadAvg.map(load => load.toFixed(2)).join()}`);
       
       // Check if load is too high
       const cpuCount = os.cpus().length;

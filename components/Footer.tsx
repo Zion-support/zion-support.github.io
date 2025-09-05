@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
       { name: 'Computer Vision Solutions', href: '/ai-services#computer-vision' },
       { name: 'Natural Language Processing', href: '/ai-services#nlp' },
       { name: 'Machine Learning Models', href: '/ai-services#machine-learning' },
-      { name: 'AI Analytics Platform', href: '/ai-services#ai-analytics' },
+      { name: 'AI Analytics Platform', href: '/ai-services#ai-analytics' }
     ],
     'IT Services': [
       { name: 'Cloud Migration', href: '/it-services#cloud-migration' },
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
       { name: 'DevOps Automation', href: '/it-services#devops' },
       { name: 'Infrastructure Management', href: '/it-services#infrastructure' },
       { name: 'Data Analytics', href: '/it-services#data-analytics' },
-      { name: 'Network Security', href: '/it-services#network-security' },
+      { name: 'Network Security', href: '/it-services#network-security' }
     ],
     'Micro SAAS': [
       { name: 'CRM Solutions', href: '/micro-saas#crm' },
@@ -28,8 +28,8 @@ const Footer: React.FC = () => {
       { name: 'Email Marketing', href: '/micro-saas#email-marketing' },
       { name: 'AI Content Tools', href: '/micro-saas#ai-content-tools' },
       { name: 'Analytics Dashboard', href: '/micro-saas#analytics-dashboard' },
-      { name: 'Automation Tools', href: '/micro-saas#automation-tools' },
-    ],
+      { name: 'Automation Tools', href: '/micro-saas#automation-tools' }
+    ]
   };
 
   const company = [
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Press', href: '/press' },
+    { name: 'Press', href: '/press' }
   ];
 
   const resources = [
@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
     { name: 'Tutorials', href: '/tutorials' },
     { name: 'Support', href: '/support' },
     { name: 'FAQ', href: '/faq' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   const socialLinks = [
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
   ];
 
   return (

@@ -1,12 +1,12 @@
   type: 'success' | 'error' | 'warning' | 'info',
   message: string,
   title?: string,
-,};
+};
 interface NotificationSystemProps {,
   notifications: Notification[],
   onDismiss?: (id: string) => void,
   className?: string,
-,};
+};
 }) => {,
   const getNotificationStyles = (type: Notification['type']) => {,
     switch (type) {,
@@ -20,7 +20,7 @@ interface NotificationSystemProps {,
         return 'bg-blue-50 border-blue-200 text-blue-800',
       default:,
         return 'bg-gray-50 border-gray-200 text-gray-800',
-    ,};
+    };
   };
   return (,
     <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>,
@@ -32,8 +32,7 @@ interface NotificationSystemProps {,
           <div className="flex items-start justify-between">,
             <div className="flex-1">,
               {notification.title && (,
-                <h4 className="font-medium mb-1">{notification.title}</h4>,
-              )};
+                <h4 className="font-medium mb-1">{notification.title}</h4>)};
               <p className="text-sm">{notification.message}</p>,
             </div>,
             {onDismiss && (,
@@ -41,7 +40,7 @@ interface NotificationSystemProps {,
                 onClick={() => onDismiss(notification.id)};
                 className="ml-4 text-gray-400 hover: text-gray-600",
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">,
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M6 18L18 6M6 6l12 12" />,
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />,
                 </svg>,
               </button>,
             )};
@@ -49,7 +48,7 @@ interface NotificationSystemProps {,
         </div>,
       ))};
     </div>,
-  ),
+  )
 };
 export default NotificationSystem,
 ,

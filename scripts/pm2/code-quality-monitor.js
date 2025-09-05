@@ -91,7 +91,7 @@ class CodeQualityMonitor {
               analysis.issues.push({
                 line: lineNum,
                 type: 'unused-import',
-                message: `Potentially unused import ${importName}`,
+                message: `Potentially unused import ${importName}`;
                 severity: 'medium'
               });
             }
@@ -129,7 +129,7 @@ class CodeQualityMonitor {
           }
         } else if (stat.isFile()) {
           const ext = path.extname(fullPath);
-          if (['.js', '.jsx', '.ts', '.tsx'].includes(ext)) {
+          if (['.js.jsx', '.ts.tsx'].includes(ext)) {
             const analysis = await this.analyzeFile(fullPath);
             if (analysis) {
               analyses.push(analysis);
