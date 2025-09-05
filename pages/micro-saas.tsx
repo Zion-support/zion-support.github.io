@@ -48,7 +48,8 @@ import {
   HardDrive,
   Bell,
   Home,
-  BookOpen
+  BookOpen,
+  Database
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -197,6 +198,181 @@ const microSaaSProducts = [
     pricing: '$19 - $99/month',
     category: 'Scheduling',
     link: 'https://meetingscheduler.ziontechgroup.com'
+  },
+  {
+    title: 'AI Video Editor Pro',
+    description: 'Automated video editing with AI-powered content analysis and social media optimization.',
+    icon: Video,
+    features: ['Auto Video Editing', 'Social Media Optimization', 'Content Analysis', 'Multi-format Export'],
+    pricing: '$79 - $399/month',
+    category: 'Video Production',
+    popular: true,
+    link: 'https://aivideoeditor.ziontechgroup.com'
+  },
+  {
+    title: 'E-commerce Return Manager',
+    description: 'Automated return processing with AI-powered fraud detection and customer satisfaction tracking.',
+    icon: Package,
+    features: ['Auto Return Processing', 'Fraud Detection', 'Customer Satisfaction', 'Analytics Dashboard'],
+    pricing: '$149 - $699/month',
+    category: 'E-commerce',
+    link: 'https://returnmanager.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Survey Builder',
+    description: 'Mobile-first survey platform with AI-driven question optimization and real-time analytics.',
+    icon: Search,
+    features: ['Mobile Optimization', 'AI Question Optimization', 'Real-time Analytics', 'Offline Collection'],
+    pricing: '$39 - $199/month',
+    category: 'Research',
+    link: 'https://aisurvey.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Computing Simulator',
+    description: 'Cloud-based quantum computing simulation for optimization, cryptography, and research applications.',
+    icon: Cpu,
+    features: ['Quantum Simulation', 'Optimization Algorithms', 'Cryptography Tools', 'Research APIs'],
+    pricing: '$999 - $4,999/month',
+    category: 'Quantum Computing',
+    link: 'https://quantumsim.ziontechgroup.com'
+  },
+  {
+    title: 'AI Talent Matcher Pro',
+    description: 'Advanced AI-powered talent matching with skills analysis and cultural fit assessment.',
+    icon: Users,
+    features: ['AI Skills Analysis', 'Cultural Fit Assessment', 'Performance Prediction', 'Automated Screening'],
+    pricing: '$299 - $1,499/month',
+    category: 'HR Tech',
+    popular: true,
+    link: 'https://aitalent.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Analytics Platform',
+    description: 'Comprehensive blockchain analysis with transaction tracking and compliance monitoring.',
+    icon: Network,
+    features: ['Transaction Tracking', 'Compliance Monitoring', 'Risk Assessment', 'Real-time Alerts'],
+    pricing: '$199 - $999/month',
+    category: 'Blockchain',
+    link: 'https://blockchainanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'AI Content Moderation Suite',
+    description: 'Advanced content moderation with multi-language support and custom policy enforcement.',
+    icon: Shield,
+    features: ['Multi-language Support', 'Custom Policies', 'Real-time Processing', 'API Integration'],
+    pricing: '$149 - $799/month',
+    category: 'Content Safety',
+    link: 'https://contentmodsuite.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Auditor',
+    description: 'Automated smart contract security analysis with vulnerability detection and recommendations.',
+    icon: Code,
+    features: ['Security Analysis', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checks'],
+    pricing: '$499 - $2,499/project',
+    category: 'Blockchain Security',
+    link: 'https://contractauditor.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Email Security',
+    description: 'Advanced email threat protection with AI-driven phishing detection and response automation.',
+    icon: Mail,
+    features: ['Phishing Detection', 'Response Automation', 'Threat Intelligence', 'Compliance Reporting'],
+    pricing: '$99 - $499/month',
+    category: 'Email Security',
+    link: 'https://emailsecurity.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Device Manager',
+    description: 'Comprehensive IoT device management with real-time monitoring and automated updates.',
+    icon: Smartphone,
+    features: ['Device Monitoring', 'Automated Updates', 'Security Management', 'Analytics Dashboard'],
+    pricing: '$79 - $399/month',
+    category: 'IoT',
+    link: 'https://iotmanager.ziontechgroup.com'
+  },
+  {
+    title: 'AI Code Review Assistant',
+    description: 'Automated code review with security analysis, performance optimization, and best practices enforcement.',
+    icon: Code,
+    features: ['Security Analysis', 'Performance Optimization', 'Best Practices', 'Team Collaboration'],
+    pricing: '$199 - $999/month',
+    category: 'Development',
+    popular: true,
+    link: 'https://codereview.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Asset Manager',
+    description: 'AI-powered digital asset management with automated tagging and intelligent search capabilities.',
+    icon: Image,
+    features: ['Auto Tagging', 'Intelligent Search', 'Version Control', 'Team Collaboration'],
+    pricing: '$49 - $249/month',
+    category: 'Asset Management',
+    link: 'https://assetmanager.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered A/B Testing Platform',
+    description: 'Intelligent A/B testing with automated optimization and statistical significance analysis.',
+    icon: BarChart3,
+    features: ['Automated Optimization', 'Statistical Analysis', 'Multi-variate Testing', 'Real-time Results'],
+    pricing: '$99 - $499/month',
+    category: 'Testing',
+    link: 'https://abtesting.ziontechgroup.com'
+  },
+  {
+    title: 'Voice AI Assistant Platform',
+    description: 'Custom voice AI assistants with natural language processing and multi-platform deployment.',
+    icon: Mic,
+    features: ['Natural Language Processing', 'Multi-platform Deployment', 'Custom Voice Training', 'API Integration'],
+    pricing: '$299 - $1,499/month',
+    category: 'Voice AI',
+    link: 'https://voiceai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Data Pipeline',
+    description: 'Automated data processing pipeline with ETL capabilities and real-time analytics.',
+    icon: Database,
+    features: ['ETL Automation', 'Real-time Processing', 'Data Quality Checks', 'Scalable Infrastructure'],
+    pricing: '$399 - $1,999/month',
+    category: 'Data Engineering',
+    link: 'https://datapipeline.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Home Automation Hub',
+    description: 'AI-powered home automation with voice control and predictive behavior learning.',
+    icon: Home,
+    features: ['Voice Control', 'Predictive Learning', 'Device Integration', 'Energy Optimization'],
+    pricing: '$149 - $699/month',
+    category: 'Smart Home',
+    link: 'https://smarthome.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Compliance Monitor',
+    description: 'Automated compliance monitoring with regulatory updates and risk assessment.',
+    icon: Shield,
+    features: ['Regulatory Updates', 'Risk Assessment', 'Automated Reporting', 'Audit Trail'],
+    pricing: '$199 - $999/month',
+    category: 'Compliance',
+    link: 'https://compliancemonitor.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Platform',
+    description: 'Distributed edge computing platform with AI inference and real-time processing capabilities.',
+    icon: Server,
+    features: ['Edge AI Inference', 'Real-time Processing', 'Global Distribution', 'Auto-scaling'],
+    pricing: '$499 - $2,499/month',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Fraud Detection',
+    description: 'Real-time fraud detection with machine learning models and behavioral analysis.',
+    icon: Lock,
+    features: ['Real-time Detection', 'Behavioral Analysis', 'Machine Learning Models', 'Custom Rules'],
+    pricing: '$299 - $1,499/month',
+    category: 'Fraud Prevention',
+    popular: true,
+    link: 'https://frauddetection.ziontechgroup.com'
   },
   {
     title: 'Code Review Assistant',

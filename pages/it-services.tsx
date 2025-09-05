@@ -33,7 +33,8 @@ import {
   Kanban,
   DollarSign,
   Code,
-  Rocket
+  Rocket,
+  Brain
 } from 'lucide-react';
 
 const itServices = [
@@ -245,6 +246,117 @@ const itServices = [
     pricing: '$20,000 - $150,000/project',
     category: 'Digital Transformation',
     link: 'https://digitaltransformation.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing infrastructure setup and management for research and enterprise applications.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Quantum Software Stack', 'Hybrid Classical-Quantum Systems', 'Research Support'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Quantum Computing',
+    popular: true,
+    link: 'https://quantuminfrastructure.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Distributed edge computing infrastructure for real-time processing and low-latency applications.',
+    icon: Server,
+    features: ['Edge Node Deployment', 'Real-time Processing', 'Global Distribution', 'Auto-scaling'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Edge Computing',
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Complete blockchain infrastructure setup including nodes, validators, and smart contract deployment.',
+    icon: Network,
+    features: ['Blockchain Node Setup', 'Validator Services', 'Smart Contract Deployment', 'Security Auditing'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Blockchain',
+    link: 'https://blockchaininfra.ziontechgroup.com'
+  },
+  {
+    title: 'AI Infrastructure & ML Ops',
+    description: 'Complete AI infrastructure setup with MLOps pipelines and model deployment services.',
+    icon: Brain,
+    features: ['ML Pipeline Setup', 'Model Deployment', 'GPU Infrastructure', 'Model Monitoring'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'AI Infrastructure',
+    popular: true,
+    link: 'https://aiinfrastructure.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'End-to-end IoT platform development with device management and data analytics.',
+    icon: Smartphone,
+    features: ['Device Management', 'Data Analytics', 'Real-time Processing', 'Security Framework'],
+    pricing: '$35,000 - $250,000/project',
+    category: 'IoT',
+    link: 'https://iotplatform.ziontechgroup.com'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Complete zero trust security implementation with identity verification and micro-segmentation.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    pricing: '$60,000 - $400,000/project',
+    category: 'Security Architecture',
+    link: 'https://zerotrust.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network infrastructure design and implementation for enterprise and industrial applications.',
+    icon: Wifi,
+    features: ['5G Network Design', 'Core Network Setup', 'Edge Computing Integration', 'Performance Optimization'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: '5G Networks',
+    link: 'https://5gnetworks.ziontechgroup.com'
+  },
+  {
+    title: 'Hybrid Cloud Architecture',
+    description: 'Seamless hybrid cloud architecture connecting on-premises and cloud environments.',
+    icon: Cloud,
+    features: ['Hybrid Connectivity', 'Data Synchronization', 'Workload Migration', 'Security Integration'],
+    pricing: '$45,000 - $350,000/project',
+    category: 'Hybrid Cloud',
+    link: 'https://hybridcloud.ziontechgroup.com'
+  },
+  {
+    title: 'Container Orchestration & Kubernetes',
+    description: 'Advanced container orchestration with Kubernetes and microservices architecture.',
+    icon: Package,
+    features: ['Kubernetes Setup', 'Microservices Architecture', 'Service Mesh', 'Auto-scaling'],
+    pricing: '$25,000 - $180,000/project',
+    category: 'Containerization',
+    popular: true,
+    link: 'https://kubernetes.ziontechgroup.com'
+  },
+  {
+    title: 'Data Lake & Analytics Platform',
+    description: 'Enterprise data lake setup with advanced analytics and machine learning capabilities.',
+    icon: Database,
+    features: ['Data Lake Architecture', 'ETL Pipelines', 'Analytics Platform', 'ML Integration'],
+    pricing: '$50,000 - $400,000/project',
+    category: 'Data Analytics',
+    link: 'https://datalake.ziontechgroup.com'
+  },
+  {
+    title: 'API Gateway & Management',
+    description: 'Comprehensive API gateway setup with security, monitoring, and rate limiting.',
+    icon: Network,
+    features: ['API Gateway Setup', 'Security Policies', 'Rate Limiting', 'Analytics Dashboard'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'API Management',
+    link: 'https://apigateway.ziontechgroup.com'
+  },
+  {
+    title: 'Disaster Recovery as a Service (DRaaS)',
+    description: 'Comprehensive disaster recovery services with automated failover and testing.',
+    icon: HardDrive,
+    features: ['Automated Failover', 'Regular Testing', 'RTO/RPO Optimization', 'Multi-site Replication'],
+    pricing: '$5,000 - $50,000/month',
+    category: 'Disaster Recovery',
+    link: 'https://draas.ziontechgroup.com'
   },
   {
     title: 'IT Service Management (ITSM)',
