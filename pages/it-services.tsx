@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Server, Shield, Cloud, Database, Network, Monitor, Settings, CheckCircle, ArrowRight, Clock, Award, Star, Zap, TrendingUp, Users, Lock, Globe, Cpu, HardDrive, Wifi, Smartphone, Laptop, Building, BarChart3, Code, Search, ShoppingCart, BookOpen, Brain, DollarSign, Rocket, Phone, Mail } from 'lucide-react';
+import { Server, Shield, Cloud, Database, Network, Monitor, Settings, CheckCircle, ArrowRight, Clock, Award, Star, Zap, TrendingUp, Users, Lock, Globe, Cpu, HardDrive, Wifi, Smartphone, Laptop, Building, BarChart3, Code, Search, ShoppingCart, BookOpen, Brain, DollarSign, Rocket, Phone, Mail, LinkIcon, TestTube, Wrench } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const itServices = [
@@ -413,21 +413,32 @@ const itServices = [
     marketPrice: '$6,000 - $20,000/month',
     link: 'https://ziontechgroup.com/itsm',
     popular: false
-  }
-];
-      pricing: '$120 – $220/hour',
-      projectPricing: '$6,000 – $30,000/project',
-      timeline: '2–8 weeks',
-      benefits: [
-        '99.9% uptime guarantee',
-        'Automated deployment processes',
-        'Reduced infrastructure costs',
-        'Improved system reliability'
-      ],
-      category: 'Cloud & Infrastructure'
-    },
-    {
-      icon: Shield,
+  },
+  {
+    icon: Cloud,
+    name: 'Cloud Infrastructure & DevOps',
+    description: 'Complete cloud migration and DevOps implementation with automated deployment and monitoring.',
+    features: [
+      'Cloud migration and optimization',
+      'CI/CD pipeline setup',
+      'Infrastructure as Code (IaC)',
+      'Container orchestration',
+      'Monitoring and logging',
+      'Disaster recovery planning'
+    ],
+    pricing: '$120 – $220/hour',
+    projectPricing: '$6,000 – $30,000/project',
+    timeline: '2–8 weeks',
+    benefits: [
+      '99.9% uptime guarantee',
+      'Automated deployment processes',
+      'Reduced infrastructure costs',
+      'Improved system reliability'
+    ],
+    category: 'Cloud & Infrastructure'
+  },
+  {
+    icon: Shield,
       name: 'Cybersecurity Hardening & SOC',
       description: 'Comprehensive security solutions including zero trust architecture, endpoint detection, and security operations center setup.',
       features: [
@@ -1723,9 +1734,9 @@ export default function ITServicesPage() {
 
   const filteredServices = itServices.filter(service => {
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch = (service.title && service.title.toLowerCase().includes(searchTerm.toLowerCase())) ||
+                         (service.description && service.description.toLowerCase().includes(searchTerm.toLowerCase())) ||
+                         (service.category && service.category.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
