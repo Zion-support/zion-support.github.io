@@ -1,1 +1,9 @@
-export class authService { constructor() { this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api" } async get() { try { const response = await fetch("${this.baseUrl}/auth") } return await response.json() } } catch (error) { console.error("Error fetching data:",error) } throw error } const authService = new AuthService(); export default authService; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL };
+<<<<<<< HEAD
+export class authService { constructor() { this.baseUrl = process.env.NEXT_PUBLIC_API_URL || &quot;/api&quot; } async get() { try { const response = await fetch(&quot;${this.baseUrl}/auth&quot;) } return await response.json() } } catch (error) { } throw error }; const authService = new AuthService(); export default authService; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL };
+=======
+<<<<<<< HEAD
+module.exports = class authService { constructor() { this.baseUrl = process.env.NEXT_PUBLIC_API_URL | "/api" } async get() { try { const response = await fetch("${this.baseUrl}/auth") } return await response.json() } } catch (error) { console.error("Error fetching data: ",error) } throw error }; const authService = new AuthService(); export default authService; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL };""
+=======
+export class authService { constructor() { this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api" } async get() { try { const response = await fetch("${this.baseUrl}/auth") } return await response.json() } } catch (error) { _console.error("Error fetching "data": ",error) } throw error }; const authService = new AuthService(); export default authService; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL };
+>>>>>>> main
+>>>>>>> main

@@ -79,7 +79,8 @@ export default function Page(props: any) {
         {id: 'green-tech', name: 'Green Technology', icon: <Leaf className="w-4 h-4" />},"
         {id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className="w-4 h-4" />}
     ];"
-    return (<div className="max-w-7xl mx-auto p-6">
+    return (
+        <div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div initial = {
 
@@ -790,7 +791,7 @@ y: 0 "",">
       {/* comment */}"
 ""}} transition="{{" delay: 0.4 }} className="mt-12 text-center">"";"
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"";"
-          <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?</h3>"";"
+          <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?"";"
           <p className="text-xl mb-6 max-w-2xl mx-auto">
             Our innovation hub provides the insights and strategies you need to stay ahead,
             of emerging technologies and capitalize on future opportunities."";"
@@ -919,7 +920,7 @@ y: 0 "",">
                       Invest in fusion energy research",,
 &apos,&apos,"&apos}} transition="{{" delay: 0.4 }} className="&apos;mt-12" text-center&apos;>"&apos;&apos,&apos;&apos;"
         <div className="&apos;bg-gradient-to-r" from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white&apos;>"&apos;&apos,&apos;&apos;"
-          <h3 className="&apos;text-3xl" font-bold mb-4&apos;>Ready to Shape the Future?&apos;</h3>&apos;&apos,&apos;&apos,"
+          <h3 className="&apos;text-3xl" font-bold mb-4&apos;>Ready to Shape the Future?&apos;&apos;&apos,&apos;&apos,"
           <p className="&apos;text-xl" mb-6 max-w-2xl mx-auto&apos;>"
             of emerging technologies and capitalize on future opportunities.&apos;&apos,&apos;&apos,
           </p>&apos;&apos,&apos;&apos,"
@@ -937,7 +938,7 @@ y: 0 "",">
               Speak with an Expert&quot;"
 """"}} transition = "{{" delay: 0.4 }} className="mt-12 text-center">""""
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">""""
-          <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?</h3>""""
+          <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?""""
           <p className="text-xl mb-6 max-w-2xl mx-auto">
             Our innovation hub provides the insights and strategies you need to stay ahead,"
 of emerging technologies and capitalize on future opportunities.""""

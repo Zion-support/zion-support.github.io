@@ -227,7 +227,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                     className = "{"text-6xl" mb-4 group-hover:scale-110 transition-transform duration-300"}>
                   >{service.icon}"";"
                   <h3 className="text - xl font-semibold text-white mb-2"> {service.name}"",
-                  </h3>"";"
+                  "";"
                   <p className = "text-sm text-blue-400 font-medium">"{service.category.replace("-").toUpperCase()}
 
                   </p>
@@ -241,7 +241,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                   </h4>"";"
                   <div className="space-y-1 text-xs text-gray-300">
                     <div>Monthly: {service.pricing.monthly}</div>
-  );
+    );
 }
                     <div>Yearly: {service.pricing.yearly}</div>
                     <div>Setup: {service.pricing.setup}</div>
@@ -278,7 +278,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                   >{service.icon}&apos;&apos,&apos;&apos;"
                   <h3 className="&apos;text-xl" font-semibold text-white mb-2&apos;>"
                     {service.name}&apos;&apos,&apos;&apos,
-                  </h3>&apos;&apos,&apos;&apos,"
+                  &apos;&apos,&apos;&apos,"
                   <p className="&apos;text-sm" text-blue-400 font-medium&apos;>&apos {service.category.replace(&apos;-&apos).toUpperCase()}&apos;&apos,
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
                 <p className="&apos;text-gray-300" text-sm mb-4 text-center&apos;>
@@ -296,7 +296,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                   >{service.icon}""""
                   <h3 className="text-xl font-semibold text-white mb-2">"
                     {service.name}"""""
-                  </h3>""""
+                  """"
                   <p className="text-sm text-blue-400 font-medium">"{service.category.replace("-").toUpperCase()}""
 """{/* comment */}"""""
                 <p className="text-gray-300 text-sm mb-4 text-center">
@@ -629,7 +629,7 @@ className="&apos;mt-8" text-sm text-gray-400&apos;&apos,"
   delay: 0.6
 
 }}>"
-            <h3 className="text-lg font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>"
+            <h3 className="text-lg font-semibold text-white mb-4">Why Choose Zion Tech Group?"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">"
               <div className="flex items-center">"
                 <span className="text-green-400 mr-2">✓</span>
@@ -682,20 +682,20 @@ export {EnhancedServicesShowcase}
 </p>
 </motion>
 </motion>
-</h3>
+
 </a>
 </motion>
 </motion>
 </div>
 </div>
-</h3>
+
 </motion>
 </motion>
 </div>
 </section>
 </div>
 </div>
-</h3>
+
 </motion>
 </div>
 </section>

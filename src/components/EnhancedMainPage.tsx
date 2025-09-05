@@ -9,6 +9,6 @@ export default function EnhancedMainPage(props: any) {return (
           Professional EnhancedMainPage services to help your business grow.
         </p>
       </div>
-  );"}"
+    );"}"
 
 </div>

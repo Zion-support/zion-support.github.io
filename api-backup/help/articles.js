@@ -1,1 +1,0 @@
-import React from';react'' export: default function handler(req,res) { if (req.method !== 'GET') { res.status(405).end() return } const search = (req.query?.q || ').toLowerCase()

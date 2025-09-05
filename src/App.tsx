@@ -5,33 +5,56 @@ import Footer from './components/Footer';
 import { Sidebar } from './components/Sidebar';
 import { ErrorBoundary } from 'react-error-boundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
-
 // Enhanced Components
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
-// import { ChatAssistant } from './components/ChatAssistant';
-
-// Enhanced lazy loading with preloading hints
-const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
-  const LazyComponent = lazy(importFn);
-  return (props: any) => (
-    <Suspense fallback={fallback || <LoadingSpinner />}>
-      <LazyComponent {...props} />
-    </Suspense>
-  );
-};
-
+import { ChatAssistant } from './components/ChatAssistant';
 // Lazy load pages for better performance - only import existing pages
 const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ default: module.default })));
-
 // Service Pages
+<<<<<<< HEAD
+const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions })));
+const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.QuantumComputing })));
+const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ default: module.Cybersecurity })));
+
+// Loading component
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-screen bg-gray-900">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
+      <p className="text-gray-400">Loading...</p>
+    </div>
+  </div>
+    );
+
+// Lazy load pages - only import existing ones
+const Home = createLazyComponent(() => import('./pages/Home'));
+const About = createLazyComponent(() => import('./pages/About'));
+const Contact = createLazyComponent(() => import('./pages/Contact'));
+const Services = createLazyComponent(() => import('./pages/Services'));
+const Solutions = createLazyComponent(() => import('./pages/Solutions'));
+const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
+const Dashboard = createLazyComponent(() => import('./pages/Dashboard'));
+const Login = createLazyComponent(() => import('./pages/Login'));
+const FAQ = createLazyComponent(() => import('./pages/FAQ'));
+const Privacy = createLazyComponent(() => import('./pages/Privacy'));
+const Terms = createLazyComponent(() => import('./pages/Terms'));
+const Cookies = createLazyComponent(() => import('./pages/Cookies'));
+const Pricing = createLazyComponent(() => import('./pages/Pricing'));
+const Help = createLazyComponent(() => import('./pages/Help'));
+const News = createLazyComponent(() => import('./pages/News'));
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const Support = createLazyComponent(() => import('./pages/Support'));
+const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
+const ComprehensivePricing = createLazyComponent(() => import('./pages/ComprehensivePricing'));
+
+export default function App(props: any) {
+=======
 const AISolutions = lazy(() => import('./pages/AIServices').then(module => ({ default: module.default })));
 const ITServices = lazy(() => import('./pages/ITServices').then(module => ({ default: module.default })));
-const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase').then(module => ({ default: module.default })));
-
-// Import HomePage component
-const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.default })));
+// Create placeholder components for missing pages
+const HomePage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Zion Tech Group - Home</h1></div>;
 const ServicesPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Services</h1></div>;
 const AboutPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">About Us</h1></div>;
 const ContactPage = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Contact Us</h1></div>;
@@ -50,18 +73,7 @@ const PricingPage = () => <div className="min-h-screen flex items-center justify
 const ComprehensiveServicesShowcase = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Comprehensive Services Showcase</h1></div>;
 const QuantumComputing = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Quantum Computing</h1></div>;
 const Cybersecurity = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Cybersecurity</h1></div>;
-
-// Loading component
-const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gray-900">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
-      <p className="text-gray-400">Loading...</p>
-    </div>
-  </div>
-);
-
-// Lazy load pages - only import existing ones
+const AIContentCreation = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">AI Content Creation</h1></div>;
 // Placeholder components for missing pages
 const Home = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Zion Tech Group - Home</h1></div>;
 const About = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">About Us</h1></div>;
@@ -80,21 +92,18 @@ const News = () => <div className="min-h-screen flex items-center justify-center
 const Careers = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Careers</h1></div>;
 const WhitePapers = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">White Papers</h1></div>;
 const ComprehensivePricing = () => <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"><h1 className="text-4xl">Comprehensive Pricing</h1></div>;
-
-// Additional service components - using existing declarations above
-
 export default function App() {
+>>>>>>> main
   return (
     <ErrorBoundary>
       <Router>
         <div className="min-h-screen bg-gray-50">
           <Header />
           <Sidebar />
-          
           <main className="flex-1 lg:ml-80">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
-                <Route path="/" element={<HomePage />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/blog" element={<BlogPage />} />
@@ -107,7 +116,7 @@ export default function App() {
                 <Route path="/search" element={<Services />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesShowcase />} />
-                <Route path="/solutions" element={<Solutions />} />
+                <Route path="/solutions" element={<SolutionsPage />} />
                 <Route path="/resources" element={<Services />} />
                 <Route path="/case-studies" element={<Services />} />
                 <Route path="/white-papers" element={<WhitePapers />} />
@@ -121,22 +130,15 @@ export default function App() {
                 <Route path="/team" element={<About />} />
                 <Route path="/news" element={<News />} />
                 <Route path="/help" element={<Help />} />
-                
                 {/* New pricing guide route */}
                 <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricing />} />
-                
                 {/* Service Routes */}
-                <Route path="/ai-services" element={<AIServices />} />
+                <Route path="/ai-services" element={<AISolutions />} />
                 <Route path="/it-services" element={<ITServices />} />
-                <Route path="/micro-saas" element={<MicroSaaS />} />
-                <Route path="/innovative-services" element={<InnovativeServicesShowcase />} />
-                <Route path="/services-showcase" element={<InnovativeServicesShowcase />} />
-                
                 {/* New sitemap routes */}
                 <Route path="/ai-solutions" element={<AISolutions />} />
-                <Route path="/solutions/enterprise" element={<Solutions />} />
-                <Route path="/solutions/healthcare" element={<Solutions />} />
-                
+                <Route path="/solutions/enterprise" element={<SolutionsPage />} />
+                <Route path="/solutions/healthcare" element={<SolutionsPage />} />
                 {/* Service routes */}
                 <Route path="/services/cloud-devops" element={<Services />} />
                 <Route path="/services/digital-twin" element={<Services />} />
@@ -159,59 +161,47 @@ export default function App() {
                 <Route path="/services/it-helpdesk" element={<Services />} />
                 <Route path="/services/affiliate-tracking" element={<Services />} />
                 <Route path="/services/mobile-survey" element={<Services />} />
-                
                 {/* Additional new service routes */}
                 <Route path="/services/ai-seo" element={<Services />} />
                 <Route path="/services/interview-assessment" element={<Services />} />
                 <Route path="/services/helpdesk" element={<Helpdesk />} />
                 <Route path="/services/dsr-portal" element={<Services />} />
                 <Route path="/services/security-headers-csp" element={<Services />} />
-                
                 {/* New AI-powered micro SAAS service routes */}
                 <Route path="/services/ai-project-management" element={<Services />} />
                 <Route path="/services/ai-customer-support-automation" element={<Services />} />
                 <Route path="/services/ai-financial-analytics" element={<Services />} />
                 <Route path="/services/ai-marketing-automation" element={<Services />} />
-                
                 {/* Additional innovative AI services */}
                 <Route path="/services/ai-quantum-financial-trading" element={<Services />} />
                 <Route path="/services/ai-predictive-maintenance" element={<Services />} />
-                
                 {/* Additional innovative AI services */}
                 <Route path="/services/ai-autonomous-supply-chain" element={<Services />} />
                 <Route path="/services/ai-cybersecurity-threat-intelligence" element={<Services />} />
-                
                 {/* Additional innovative AI service routes */}
                 <Route path="/services/ai-workflow-orchestrator" element={<Services />} />
                 <Route path="/services/ai-data-governance-platform" element={<Services />} />
                 <Route path="/services/ai-customer-experience-analytics" element={<Services />} />
-                
                 {/* Quantum and advanced services */}
                 <Route path="/services/quantum-computing" element={<QuantumComputing />} />
                 <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-                
                 {/* Revolutionary services */}
                 <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
                 <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
                 <Route path="/enhanced-services-2025" element={<EnhancedNewServices2025 />} />
-                
                 {/* Sitemap routes */}
                 <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
-                
                 {/* Support routes */}
                 <Route path="/support" element={<Support />} />
                 <Route path="/training" element={<Training />} />
                 <Route path="/helpdesk" element={<Helpdesk />} />
-                
                 {/* Catch-all route */}
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </Suspense>
           </main>
-          
           <Footer />
-          
           {/* Enhanced Components */}
           <PerformanceOptimizer />
           <EnhancedAccessibilityEnhancer />

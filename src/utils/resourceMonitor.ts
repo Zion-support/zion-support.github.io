@@ -62,8 +62,10 @@ class ResourceMonitor {
     if(window.MutationObserver) {
 
               this.monitorElement(element)}
-          })})});
-      observer.observe(document.head, { childList: tru e, subtree: tru e });
+          })})}
+    );
+      observer.observe(document.head, { childList: tru e, subtree: tru e }
+    );
       observer.observe(document.body, { childList: tru e, subtree: tru e })}
   }
 
@@ -242,7 +244,8 @@ class ResourceMonitor {
     
     this.errors.forEach(error => {
 
-      summary.byType[error.type] = (summary.byType[error.type] || 0) + 1});
+      summary.byType[error.type] = (summary.byType[error.type] || 0) + 1}
+    );
     return summary}
 }
 

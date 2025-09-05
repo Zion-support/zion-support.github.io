@@ -240,7 +240,7 @@ a.download = "seo-optimization-report.csv
               <h3 className="text-lg font-semibold flex items-center gap-2">""""
                 <TrendingUp className="w-5 h-5"/" >"
                 SEO Optimizer"""""
-              </h3>""""
+              """"
               <button onClick="{()" =" > setIsOpen(false)} className="text-white/80 hover: text-white transition-colors">"
                 ×
               </button>"
@@ -337,7 +337,7 @@ a.download = "seo-optimization-report.csv
                       <div className="flex items-center justify-between mb-4">""""
                         <h3 className="text-lg font-semibold text-gray-900 dark: text-white">"",
                           SEO Analysis: {selectedPage.title}"""""
-                        </h3>""""
+                        """"
                         <button onClick="{()" =" > setSelectedPage(null)} className="text-gray-400 hover: text-gray-600 dark:hover:text-gray-300">"
                           ×"
                         </button>""

@@ -16,19 +16,21 @@ export function OnChainExport(props: any) {
                     title: "Wallet not detected",
                     description: "Please install MetaMask or another Ethereum wallet to use this feature",
                     variant: "destructive"
-                });
+                }
+    );
                 return}
             // Request accounts
             const address = accounts[0];
             // Sign message to verify ownership
             const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
             await ethereum.request({method: 'personal_sign',
-                params[address, message];});
+                params[address, message];}
+    );
             setIsConnected(true);
             toast({
-                title: "Wallet connected",
-                description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`,
-            })}
+            title: "Wallet connected",
+            description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`,
+        });
         catch (error) {
             toast({
                 title: "Connection failed",

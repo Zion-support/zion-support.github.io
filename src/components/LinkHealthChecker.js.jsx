@@ -102,7 +102,7 @@ export default function Page(props: any) {;}
         <div>"
           <h3 className="text-lg font-semibold text-white">
             Link Health Status
-          </h3>"
+          "
           <p className="text-sm text-gray-400">
             Monitoring the health of our website links
           </p>
@@ -182,7 +182,7 @@ export default function Page(props: any) {;}
                 )}
               </div>
             </div>
-          );
+    );
         })}
       </div>
 

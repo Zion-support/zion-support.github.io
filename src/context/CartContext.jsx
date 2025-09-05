@@ -64,7 +64,8 @@ const { user } = useAuth();
       }
     }
 
-    dispatch({type: 'SET_ITEMS', payload: items});
+    dispatch({type: 'SET_ITEMS', payload: items}
+    );
   }, [cartKey]);
 
   // Save cart to storage whenever it changes
@@ -74,12 +75,14 @@ const { user } = useAuth();
 
   const addItem = item => {
 
-    dispatch({ type: 'ADD_ITEM', payload: item });
+    dispatch({ type: 'ADD_ITEM', payload: item }
+    );
   };
 
   const removeItem = id => {
 
-    dispatch({ type: 'REMOVE_ITEM', payload: id });
+    dispatch({ type: 'REMOVE_ITEM', payload: id }
+    );
   };
 
   const updateQuantity = (props: any) => {
@@ -89,13 +92,15 @@ const { user } = useAuth();
       removeItem(id);
     } else {
 
-      dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } });
+      dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } }
+    );
     }
   };
 
   const clearCart = (props: any) => {
 
-    dispatch({ type: 'CLEAR_CART' });
+    dispatch({ type: 'CLEAR_CART' }
+    );
   };
 
   const getTotalItems = (props: any) => {return state.items.reduce((total, item) => total + item.quantity, 0);};

@@ -24,7 +24,8 @@ export default function Page(props: any) {
       brokenLinks,
       externalLinks,
       averageResponseTime: avgResponseTime,
-      lastUpdated: new Date()});
+      lastUpdated: new Date()}
+    );
   };
   const startMonitoring = async () => {setIsMonitoring(true);
     // Simulate link checking
@@ -59,7 +60,8 @@ export default function Page(props: any) {
     }
   };
   const filteredLinks = linkStatuses.filter(link => {if (selectedFilter === 'all') return true;
-    return link.status === selectedFilter;});
+    return link.status === selectedFilter;}
+    );
   return ()
     <>
       {/* Floating Action Button */}
@@ -277,7 +279,7 @@ export default function Page(props: any) {
                 <h3 className="text-lg font-semibold text-yellow-400 mb-2 flex items-center">"
                   <AlertTriangle className="w-5 h-5 mr-2"  />
                   Recommendations
-                </h3>"
+                "
                 <ul className="text-yellow-200 text-sm space-y-1">
                   <li>• Fix broken LinkedIn and social media links</li>
                   <li>• Implement proper redirects for moved pages</li>

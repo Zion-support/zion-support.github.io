@@ -1,23 +1,10 @@
 import React from 'react';
-export function TrustIndicatorsCompact(props: any) {
-import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators(props: any) {
-    const indicators = [{
 
-            icon: Shield,
-            title: "Enterprise Security","
-            description: "SOC 2 Type II certified with end-to-end encryption","
-            color: "text-zion-cyan"
-        },
-        {icon: Lock,"
-            title: "Data Protection","
-            description: "GDPR & CCPA compliant with zero-knowledge architecture","
-            color: "text-zion-purple"},
-        {icon: Award,"
-            title: "Industry Leader","
-            description: "Recognized by Gartner & Forrester as market leader","
-            color: "text-zion-cyan"},
-        {
+interface TrustIndicators.jsProps {
+  // Add props here as needed
+}
 
+<<<<<<< HEAD
             icon: Users,"
             title: "Verified Community","
             description: "10,000+ verified professionals and companies","
@@ -56,7 +43,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
               </div>"
               <h3 className="text-lg font-semibold text-white mb-2">
                 {indicator.title}
-              </h3>"
+              "
               <p className="text-zion-slate-light text-sm leading-relaxed">
                 {indicator.description}
               </p>
@@ -84,7 +71,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
         {showCertifications && (<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">"
             <h3 className="text-2xl font-bold text-white text-center mb-8">
               Certifications & Compliance
-            </h3>"
+            "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">"
               {certifications.map((cert, index) => (<div key={index} className="text-center p-4 bg-white/5 rounded-lg border border-white/10">"
                   <div className="w-12 h-12 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-3">"
@@ -112,7 +99,8 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
 // Compact version for smaller spaces
 export function TrustIndicatorsCompact(props: any) {
 '`
-    return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>"
+    return (
+        <div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>"
       <div className="flex items-center gap-2 text-zion-cyan text-sm">"
         <Shield className="w-4 h-4" />
         <span>SOC 2 Certified</span>
@@ -131,3 +119,13 @@ export function TrustIndicatorsCompact(props: any) {
       </div>
     </div>)}
 '"`
+=======
+export default function TrustIndicators.js({ }: TrustIndicators.jsProps) {
+  return (
+    <div>
+      <h1>TrustIndicators.js</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> main

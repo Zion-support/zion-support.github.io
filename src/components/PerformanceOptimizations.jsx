@@ -25,7 +25,7 @@ import {LoadingSpinner} from './ui / loading -spinner';
         >"
           <h3 className="text-lg font-semibold text-zion-slate-light mb-2">
             {item.title}
-          </h3>"
+          "
           <p className="text-zion-slate text-sm mb-2">{item.description}</p>"
           <div className="text-zion-cyan text-sm">
             Processed: {item.processed}
@@ -33,8 +33,9 @@ import {LoadingSpinner} from './ui / loading -spinner';
         </div>
       ))}
     </div>
-  );
-});
+    );
+}
+    );
 MemoizedDataGrid.displayName = 'MemoizedDataGrid';
 // Virtual scrolling component for large lists;
 const VirtualList = (props: any) => {
@@ -53,7 +54,8 @@ const VirtualList = (props: any) => {
             }
         }) ) }, [items, scrollTop, itemHeight, containerHeight]) ;
     const handleScroll = useCallback((e) => {setScrollTop(e.currentTarget.scrollTop) ;}, []) ;
-    return (<div style="{{{ height: containerHeight; overflow: 'auto'}}"} onScroll={handleScroll} className="border border-zion - slate / 20 rounded-lg">
+    return (
+        <div style="{{{ height: containerHeight; overflow: 'auto'}}"} onScroll={handleScroll} className="border border-zion - slate / 20 rounded-lg">
       <div style="{{{ height: items.length * itemHeight; position: 'relative'
       ...item; index: startIndex + index; style: {
 
@@ -81,7 +83,7 @@ const VirtualList = (props: any) => {
         ))}
       </div>
     </div>
-  );
+    );
 };
 // Main performance optimizations component
 export function PerformanceOptimizations(props: any) {

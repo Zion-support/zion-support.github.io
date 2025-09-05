@@ -1,1 +1,1 @@
-export const helpers = {}; export default helpers;
+module.exports = const helpers = {}; export default helpers;
