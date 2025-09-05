@@ -1,12 +1,11 @@
 const fs = require('fs');
-const path = require('path');
 const { execSync } = require('child_process');
 
 function findFilesWithConflicts() {
   try {
     const result = execSync('find . -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" | grep -v node_modules | grep -v .git | xargs grep -l "<<<<<<< " 2>/dev/null || true', { encoding: 'utf8' });
     return result.trim().split('\n').filter(line => line.trim().length > 0);
-  } catch (error) {
+  } catch {
     console.log('No files with merge conflicts found');
     return [];
   }

@@ -1,6 +1,4 @@
 const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
 // Find all files with merge conflict markers
 const conflictFiles = [
@@ -25,15 +23,16 @@ function cleanMergeConflicts(filePath) {
     
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove merge conflict markers and keep our version (the part after )
-    content = content.replace(/\n([\s\S]*?)
+    // Remove merge conflict markers and keep our version (the part after =======)
+    content = content.replace(/\n<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, '$1');
     
-    // Also handle cases where there's no content after 
-    content = content.replace(/\n
+    // Also handle cases where there's no content after =======
+    content = content.replace(/\n<<<<<<< HEAD\n([\s\S]*?)\n=======\n>>>>>>> [^\n]+\n/g, '$1');
     
     // Remove any remaining conflict markers
-    content = content.replace(/.*?\n/g, '');
-    content = content.replace(/
+    content = content.replace(/<<<<<<< HEAD\n/g, '');
+    content = content.replace(/=======\n/g, '');
+    content = content.replace(/>>>>>>> [^\n]+\n/g, '');
     
     fs.writeFileSync(filePath, content);
     console.log(`Cleaned merge conflicts: in: ${filePath}`);

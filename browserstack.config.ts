@@ -1,10 +1,11 @@
-import { defineConfig, devices } from '@playwright/test',
+import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: 'tests/e2e',
   use: {
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
-    trace: 'on-first-retry'},
+    trace: 'on-first-retry'
+  },
   projects: [
     {
       name: 'Desktop Chrome',
@@ -32,10 +33,12 @@ export default defineConfig({
       name: 'Mobile Safari',
       use: {
         browserName: 'webkit',
-        ...devices['iPhone 12']}
+        ...devices['iPhone 12']
+      }
     }
   ],
   reporter: [
     ['list'],
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
-}),
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
+  ]
+});
