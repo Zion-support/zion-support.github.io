@@ -1,769 +1,236 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import { BookOpen, Code, Settings, Shield, Users, Zap, ChevronRight, Search, Clock, ExternalLink, FileText, CheckCircle } from 'lucide-react';
 
-import { BookOpen, Code, Settings, Shield, Users, Zap, ChevronRight, Search, Clock, ExternalLink, FileText, CheckCircle } from 'lucide-react';;
-
-=======
-import React from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { BookOpen, Search, FileText, Code, ArrowRight, CheckCircle, Clock, Users, Download } from 'lucide-react';
-import SimpleLayout from '../components/SimpleLayout';
-
-=======
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { 
-  BookOpen, 
-  ArrowRight,
-  Search,
-  FileText,
-  Code,
-  Settings,
-  Users,
-  Globe,
-  Download,
-  ExternalLink,
-  ChevronRight,
-  Filter
-} from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
-import { BookOpen, Search, FileText, Code, ArrowRight, CheckCircle, Clock, Users, Download } from 'lucide-react';
-<<<<<<< HEAD
-import Layout from '../components/Layout';';
-
-const categories = [;
-  {}
-    title: 'Getting Started,',
-    description: 'Quick start guides and setup instructions,',
-=======
-import Layout from '../components/Layout';
-import SimpleLayout from '../components/SimpleLayout';
-
-ursor/website-audit-and-update-with-deployment-9cae
->>>>>>> main
->>>>>>> main
 const categories = [
   {
     title: 'Getting Started',
     description: 'Quick start guides and setup instructions',
-<<<<<<< HEAD
     icon: BookOpen,
-    color: 'from-blue-500 to-cyan-500',
-    docs: [
-      { title: 'Quick Start Guide', description: 'Get up and running in minutes', time: '5 min read' },
-      { title: 'Installation Guide', description: 'Step-by-step installation instructions', time: '10 min read' },
-      { title: 'Configuration', description: 'Configure your environment', time: '15 min read' },
-      { title: 'First Project', description: 'Create your first project', time: '20 min read' }
+    articles: [
+      { title: 'Introduction to Zion Tech Group', href: '/docs/getting-started/introduction' },
+      { title: 'Setting Up Your Account', href: '/docs/getting-started/account-setup' },
+      { title: 'First Steps with AI Services', href: '/docs/getting-started/ai-services' }
     ]
-=======
->>>>>>> main
-    icon: BookOpen,
-    color: 'from-blue-500 to-cyan-500,',
-    docs: [;
-      { title: 'Quick Start Guide, description: 'Get up and running in minutes, time: '5 min read' },',
-      { title: 'Installation Guide, description: 'Step-by-step installation instructions, time: '10 min read' },',
-      { title: 'Configuration, description: 'Configure your environment, time: '15 min read' },',
-      { title: 'First Project, description: 'Create your first project, time: '20 min read' }',
-    ];
->>>>>>> main
+  },
+  {
+    title: 'AI Services',
+    description: 'Comprehensive guides for our AI solutions',
+    icon: Zap,
+    articles: [
+      { title: 'AI Email Responder Setup', href: '/docs/ai-services/email-responder' },
+      { title: 'Predictive Analytics Guide', href: '/docs/ai-services/predictive-analytics' },
+      { title: 'Chatbot Configuration', href: '/docs/ai-services/chatbot' }
+    ]
+  },
+  {
+    title: 'IT Services',
+    description: 'Documentation for our IT infrastructure services',
+    icon: Settings,
+    articles: [
+      { title: 'Cloud Infrastructure Setup', href: '/docs/it-services/cloud-infrastructure' },
+      { title: 'Cybersecurity Best Practices', href: '/docs/it-services/cybersecurity' },
+      { title: 'Network Configuration', href: '/docs/it-services/network' }
+    ]
   },
   {
     title: 'API Reference',
-    description: 'Complete API documentation and endpoints',
+    description: 'Complete API documentation and examples',
     icon: Code,
-<<<<<<< HEAD
-    color: 'from-green-500 to-emerald-500',
-    docs: [
-      { title: 'Authentication', description: 'API authentication and security', time: '8 min read' },
-      { title: 'Endpoints', description: 'All available API endpoints', time: '12 min read' },
-      { title: 'Rate Limiting', description: 'Understanding rate limits', time: '5 min read' },
-      { title: 'Error Handling', description: 'Error codes and responses', time: '7 min read' }
+    articles: [
+      { title: 'Authentication', href: '/docs/api/authentication' },
+      { title: 'Endpoints Reference', href: '/docs/api/endpoints' },
+      { title: 'Code Examples', href: '/docs/api/examples' }
     ]
-=======
-    color: 'from-green-500 to-emerald-500,',
-    docs: [;
-      { title: 'Authentication, description: 'API authentication and security, time: '8 min read' },',
-      { title: 'Endpoints, description: 'All available API endpoints, time: '12 min read' },',
-      { title: 'Rate Limiting, description: 'Understanding rate limits, time: '5 min read' },',
-      { title: 'Error Handling, description: 'Error codes and responses, time: '7 min read' }',
-    ];
->>>>>>> main
   },
   {
-    title: 'Tutorials',
-    description: 'Step-by-step tutorials and examples',
-    icon: FileText,
-<<<<<<< HEAD
-    color: 'from-purple-500 to-pink-500',
-    docs: [
-      { title: 'Building a Web App', description: 'Complete web application tutorial', time: '45 min read' },
-      { title: 'Mobile Integration', description: 'Integrate with mobile apps', time: '30 min read' },
-      { title: 'Database Setup', description: 'Database configuration and management', time: '25 min read' },
-      { title: 'Deployment Guide', description: 'Deploy your application', time: '20 min read' }
+    title: 'Security',
+    description: 'Security guidelines and compliance information',
+    icon: Shield,
+    articles: [
+      { title: 'Data Protection', href: '/docs/security/data-protection' },
+      { title: 'Compliance Standards', href: '/docs/security/compliance' },
+      { title: 'Security Best Practices', href: '/docs/security/best-practices' }
     ]
-=======
-    color: 'from-purple-500 to-pink-500,',
-    docs: [;
-      { title: 'Building a Web App, description: 'Complete web application tutorial, time: '45 min read' },',
-      { title: 'Mobile Integration, description: 'Integrate with mobile apps, time: '30 min read' },',
-      { title: 'Database Setup, description: 'Database configuration and management, time: '25 min read' },',
-      { title: 'Deployment Guide, description: 'Deploy your application, time: '20 min read' }',
-    ];
->>>>>>> main
   },
   {
-    title: 'Best Practices',
-    description: 'Recommended practices and guidelines',
-    icon: CheckCircle,
-<<<<<<< HEAD
-    color: 'from-orange-500 to-red-500',
-    docs: [
-      { title: 'Security Guidelines', description: 'Security best practices', time: '15 min read' },
-      { title: 'Performance Optimization', description: 'Optimize your application', time: '18 min read' },
-      { title: 'Code Standards', description: 'Coding standards and conventions', time: '12 min read' },
-      { title: 'Testing Strategies', description: 'Testing approaches and tools', time: '22 min read' }
+    title: 'Support',
+    description: 'Troubleshooting and support resources',
+    icon: Users,
+    articles: [
+      { title: 'FAQ', href: '/docs/support/faq' },
+      { title: 'Troubleshooting Guide', href: '/docs/support/troubleshooting' },
+      { title: 'Contact Support', href: '/docs/support/contact' }
     ]
   }
 ];
 
-const popularDocs = [
-  { title: 'Quick Start Guide', description: 'Get started with our platform in minutes', category: 'Getting Started', views: '2.5k' },
-  { title: 'API Authentication', description: 'Learn how to authenticate with our API', category: 'API Reference', views: '1.8k' },
-  { title: 'Building a Web App', description: 'Complete tutorial for web application development', category: 'Tutorials', views: '3.2k' },
-  { title: 'Security Guidelines', description: 'Essential security practices for your applications', category: 'Best Practices', views: '1.5k' }
-];
-
 export default function DocsPage() {
   return (
-    <SimpleLayout
-      title="Documentation - Zion Tech Group"
-      description="Comprehensive documentation for our services, APIs, and development tools. Get started quickly with our guides and tutorials."
-      keywords="documentation, API reference, tutorials, guides, getting started, development docs"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <Layout>
+      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
-=======
-    color: 'from-orange-500 to-red-500,',
-    docs: [;
-      { title: 'Security Guidelines, description: 'Security best practices, time: '15 min read' },',
-      { title: 'Performance Optimization, description: 'Optimize your application, time: '18 min read' },',
-      { title: 'Code Standards, description: 'Coding standards and conventions, time: '12 min read' },',
-      { title: 'Testing Strategies, description: 'Testing approaches and tools, time: '22 min read' }',
-    ];
-  }
-<<<<<<< HEAD
-;];
-
-const popularDocs = [;
-  { title: 'Quick Start Guide, description: 'Get started with our platform in minutes, category: 'Getting Started, views: '2.5k' },',
-  { title: 'API Authentication, description: 'Learn how to authenticate with our API, category: 'API Reference, views: '1.8k' },',
-  { title: 'Building a Web App, description: 'Complete tutorial for web application development, category: 'Tutorials, views: '3.2k' },',
-  { title: 'Security Guidelines, description: 'Essential security practices for your applications, category: 'Best Practices, views: '1.5k' }',
-;];
-
-export default function DocsPage() {
-  return (;
-    <Layout);
-      title="Documentation - Zion Tech Group"";
-      description="Comprehensive documentation for our services, APIs, and development tools. Get started quickly with our guides and tutorials.""
-      keywords="documentation, API reference, tutorials, guides, getting started, development docs""
-    >;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">"
-          <div className="absolute inset-0">";
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
-          </div>;
->>>>>>> main
-
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
+          <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className="text-center max-w-4xl mx-auto"
+              className="max-w-4xl mx-auto text-center"
             >
-              <div className="flex items-center justify-center mb-6">
-                <BookOpen className="w-16 h-16 text-blue-400 mr-4" />
-                <h1 className="text-5xl md:text-6xl font-bold">
-                  Documentation <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Center</span>
-                </h1>
-              </div>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Comprehensive documentation, guides, and tutorials to help you get the most out of our services
+              <BookOpen className="w-16 h-16 mx-auto mb-6" />
+              <h1 className="text-5xl font-bold mb-6">
+                Documentation
+              </h1>
+              <p className="text-xl text-blue-100 mb-8">
+                Comprehensive guides and resources to help you get the most out of our services.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="#getting-started"
-                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href="#api-reference"
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"
-                >
-                  API Reference
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-=======
-              className="text-center max-w-4xl mx-auto""
-            >;
-              <div className="flex items-center justify-center mb-6">";
-                <BookOpen className="w-16 h-16 text-blue-400 mr-4" />";
-                <h1 className="text-5xl md:text-6xl font-bold">";
-                  Documentation <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Center</span>";
-                </h1>;
-              </div>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">";
-                Comprehensive documentation, guides, and tutorials to help you get the most out of our services,
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link;
-                  href="#getting-started"";
-                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
-                >;
-                  Get Started;
-                  <ArrowRight className="ml-2 w-5 h-5" />";
-                </Link>;
-                <Link;
-                  href="#api-reference"";
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"";
-                >;
-                  API Reference;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
->>>>>>> main
-
-=======
-];
-
-ursor/website-audit-and-update-with-deployment-9cae
-const popularDocs = [
-  { title: 'Quick Start Guide', description: 'Get started with our platform in minutes', category: 'Getting Started', views: '2.5k' },
-  { title: 'API Authentication', description: 'Learn how to authenticate with our API', category: 'API Reference', views: '1.8k' },
-  { title: 'Building a Web App', description: 'Complete tutorial for web application development', category: 'Tutorials', views: '3.2k' },
-  { title: 'Security Guidelines', description: 'Essential security practices for your applications', category: 'Best Practices', views: '1.5k' }
-];
-
-ursor/website-audit-and-update-with-deployment-9cae
-export default function DocsPage() {
-  return (
-    <SimpleLayout
-      title="Documentation - Zion Tech Group"
-      description="Comprehensive documentation for our services, APIs, and development tools. Get started quickly with our guides and tutorials."
-      keywords="documentation, API reference, tutorials, guides, getting started, development docs"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
-
-ursor/website-audit-and-update-with-deployment-9cae
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <div className="flex items-center justify-center mb-6">
-                <BookOpen className="w-16 h-16 text-blue-400 mr-4" />
-                <h1 className="text-5xl md:text-6xl font-bold">
-                  Documentation <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Center</span>
-                </h1>
-              </div>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Comprehensive documentation, guides, and tutorials to help you get the most out of our services
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="#getting-started"
-                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href="#api-reference"
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"
-                >
-                  API Reference
-                </Link>
+              <div className="relative max-w-md mx-auto">
+                <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search documentation..."
+                  className="w-full pl-10 pr-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
               </div>
             </motion.div>
           </div>
         </section>
 
-ursor/website-audit-and-update-with-deployment-9cae
->>>>>>> main
-        {/* Search Section */}
-<<<<<<< HEAD
+        {/* Documentation Categories */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Documentation Categories</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Browse our documentation by category to find the information you need.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {categories.map((category, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                      <category.icon className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold">{category.title}</h3>
+                  </div>
+                  <p className="text-gray-600 mb-4">{category.description}</p>
+                  <ul className="space-y-2">
+                    {category.articles.map((article, articleIndex) => (
+                      <li key={articleIndex}>
+                        <Link
+                          href={article.href}
+                          className="flex items-center text-blue-600 hover:text-blue-700 transition-colors"
+                        >
+                          <ChevronRight className="w-4 h-4 mr-2" />
+                          {article.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Quick Links */}
         <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="max-w-2xl mx-auto"
+              className="text-center mb-12"
             >
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search documentation..."
-                  className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </section>
-=======
-        <section className="py-16 bg-white">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className="max-w-2xl mx-auto""
-            >;
-              <div className="relative">";
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />";
-                <input;
-                  type="text"";
-                  placeholder="Search documentation..."";
-                  className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"";
-                />;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
->>>>>>> main
-
-=======
-              className="max-w-2xl mx-auto"
-            >
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search documentation..."
-                  className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-ursor/website-audit-and-update-with-deployment-9cae
->>>>>>> main
-        {/* Popular Docs */}
-<<<<<<< HEAD
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Popular <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Documentation</span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Most viewed and helpful documentation to get you started quickly
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Quick Links</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Popular documentation pages and resources.
               </p>
             </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {popularDocs.map((doc, index) => (
-                <motion.div
-=======
-        <section className="py-20 bg-gray-50">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className="text-center mb-16""
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Popular <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Documentation</span>";
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Most viewed and helpful documentation to get you started quickly;
-              </p>;
-            </motion.div>;
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
-              {popularDocs.map((doc, index) => (,
-                <motion.div}),
-=======
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Popular <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Documentation</span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Most viewed and helpful documentation to get you started quickly
-              </p>
-            </motion.div>
-
-ursor/website-audit-and-update-with-deployment-9cae
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {popularDocs.map((doc, index) => (
-                <motion.div
->>>>>>> main
->>>>>>> main
-                  key={doc.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{doc.title}</h3>
-                      <p className="text-gray-600 mb-2">{doc.description}</p>
-                      <span className="text-sm text-blue-600 font-medium">{doc.category}</span>
-                    </div>
-                    <div className="flex items-center text-sm text-gray-500">
-                      <Users className="w-4 h-4 mr-1" />
-                      {doc.views}
-                    </div>
-                  </div>
-                  <Link
-                    href="#"
-                    className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
-                  >
-                    Read More
-                    <ArrowRight className="ml-1 w-4 h-4" />
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-=======
-                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300""
-                >;
-                  <div className="flex items-start justify-between mb-4">";
-                    <div>;
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{doc.title}</h3>"
-                      <p className="text-gray-600 mb-2">{doc.description}</p>"
-                      <span className="text-sm text-blue-600 font-medium">{doc.category}</span>"
-                    </div>;
-                    <div className="flex items-center text-sm text-gray-500">";
-                      <Users className="w-4 h-4 mr-1" />";
-                      {doc.views}
-                    </div>,
-                  </div>;
-                  <Link;
-                    href="#"";
-                    className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"";
-                  >;
-                    Read More;
-                    <ArrowRight className="ml-1 w-4 h-4" />";
-                  </Link>;
-                </motion.div>;
-              ))}
-<<<<<<< HEAD
-            </div>,
-          </div>;
-        </section>;
->>>>>>> main
-
-=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Link
+                href="/docs/getting-started/introduction"
+                className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors"
+              >
+                <BookOpen className="w-8 h-8 text-blue-600 mb-3" />
+                <h3 className="font-semibold mb-2">Getting Started</h3>
+                <p className="text-sm text-gray-600">Learn the basics and get up and running quickly.</p>
+              </Link>
+              <Link
+                href="/docs/api/endpoints"
+                className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors"
+              >
+                <Code className="w-8 h-8 text-green-600 mb-3" />
+                <h3 className="font-semibold mb-2">API Reference</h3>
+                <p className="text-sm text-gray-600">Complete API documentation and examples.</p>
+              </Link>
+              <Link
+                href="/docs/support/faq"
+                className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors"
+              >
+                <Users className="w-8 h-8 text-purple-600 mb-3" />
+                <h3 className="font-semibold mb-2">FAQ</h3>
+                <p className="text-sm text-gray-600">Find answers to common questions.</p>
+              </Link>
+              <Link
+                href="/contact"
+                className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors"
+              >
+                <ExternalLink className="w-8 h-8 text-orange-600 mb-3" />
+                <h3 className="font-semibold mb-2">Contact Support</h3>
+                <p className="text-sm text-gray-600">Get help from our support team.</p>
+              </Link>
             </div>
           </div>
         </section>
 
-ursor/website-audit-and-update-with-deployment-9cae
->>>>>>> main
-        {/* Categories Section */}
-<<<<<<< HEAD
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Browse by <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Category</span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Find the documentation you need organized by category and topic
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {categories.map((category, index) => (
-                <motion.div
-=======
-        <section className="py-20 bg-white">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className="text-center mb-16""
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Browse by <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Category</span>";
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Find the documentation you need organized by category and topic;
-              </p>;
-            </motion.div>;
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
-              {categories.map((category, index) => (,
-                <motion.div}),
-=======
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Browse by <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Category</span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Find the documentation you need organized by category and topic
-              </p>
-            </motion.div>
-
-ursor/website-audit-and-update-with-deployment-9cae
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {categories.map((category, index) => (
-                <motion.div
->>>>>>> main
->>>>>>> main
-                  key={category.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-<<<<<<< HEAD
-                  className="bg-white rounded-2xl shadow-xl p-8"
-                >
-                  <div className="flex items-center mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mr-4`}>
-                      <category.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{category.title}</h3>
-                      <p className="text-gray-600">{category.description}</p>
-                    </div>
-                  </div>
-
-=======
-<<<<<<< HEAD
-                  className="bg-white rounded-2xl shadow-xl p-8""
-                >;
-                  <div className="flex items-center mb-6">";
-                    <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mr-4`}>,
-                      <category.icon className="w-8 h-8 text-white" />";
-                    </div>;
-                    <div>;
-                      <h3 className="text-2xl font-bold text-gray-900">{category.title}</h3>"
-                      <p className="text-gray-600">{category.description}</p>"
-                    </div>;
-                  </div>;
-
-                  <div className="space-y-4">";
-                    {category.docs.map((doc, docIndex) => (,
-                      <div key={docIndex} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">"
-                        <div>;
-                          <h4 className="font-semibold text-gray-900">{doc.title}</h4>"
-                          <p className="text-sm text-gray-600">{doc.description}</p>"
-                        </div>;
-                        <div className="flex items-center text-sm text-gray-500">";
-                          <Clock className="w-4 h-4 mr-1" />";
-=======
-                  className="bg-white rounded-2xl shadow-xl p-8"
-                >
-                  <div className="flex items-center mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mr-4`}>
-                      <category.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{category.title}</h3>
-                      <p className="text-gray-600">{category.description}</p>
-                    </div>
-                  </div>
-
-ursor/website-audit-and-update-with-deployment-9cae
->>>>>>> main
-                  <div className="space-y-4">
-                    {category.docs.map((doc, docIndex) => (
-                      <div key={docIndex} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <div>
-                          <h4 className="font-semibold text-gray-900">{doc.title}</h4>
-                          <p className="text-sm text-gray-600">{doc.description}</p>
-                        </div>
-                        <div className="flex items-center text-sm text-gray-500">
-                          <Clock className="w-4 h-4 mr-1" />
-<<<<<<< HEAD
-                          {doc.time}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-=======
->>>>>>> main
-                          {doc.time}
-                        </div>,
-                      </div>;
-                    ))}
-<<<<<<< HEAD
-                  </div>,
-
-                  <Link;
-                    href="#"";
-                    className="mt-6 w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
-                  >;
-=======
-                  </div>
-
-ursor/website-audit-and-update-with-deployment-9cae
->>>>>>> main
-                  <Link
-                    href="#"
-                    className="mt-6 w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-                  >
-<<<<<<< HEAD
-                    View All {category.title}
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-=======
->>>>>>> main
-                    View All {category.title}
-                    <ArrowRight className="ml-2 w-4 h-4" />"
-                  </Link>;
-                </motion.div>;
-              ))}
-<<<<<<< HEAD
-            </div>,
-          </div>;
-        </section>;
->>>>>>> main
-
-=======
-            </div>
-          </div>
-        </section>
-
-ursor/website-audit-and-update-with-deployment-9cae
->>>>>>> main
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
+        <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
-          <div className="container mx-auto px-4 text-center">";
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-            >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Need Help Getting Started?;
-              </h2>;
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";
-                Our documentation team is here to help you succeed. Contact us if you can't find what you're looking for.';
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link;
-                  href="/contact"";
-                  className="px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
-                >;
-                  Contact Support;
-                  <ArrowRight className="ml-2 w-5 h-5" />";
-                </Link>;
-                <Link;
-                  href="/api-docs"";
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-semibold transition-colors"";
-                >;
-                  API Reference;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-=======
->>>>>>> main
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Need Help Getting Started?
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Need More Help?
               </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Our documentation team is here to help you succeed. Contact us if you can't find what you're looking for.
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Can't find what you're looking for? Our support team is here to help.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
                 >
                   Contact Support
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ExternalLink className="ml-2 w-4 h-4" />
                 </Link>
                 <Link
-                  href="/api-docs"
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-semibold transition-colors"
+                  href="/ai-services"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
-                  API Reference
+                  View Services
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-    </MainLayout>
     </Layout>
-    </SimpleLayout>
-<<<<<<< HEAD
-=======
-ursor/website-audit-and-update-with-deployment-9cae
->>>>>>> main
->>>>>>> main
   );
 }
-

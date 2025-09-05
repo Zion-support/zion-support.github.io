@@ -1,11 +1,6 @@
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-
-import Layout from '../components/Layout';
-import { useState } from 'react';
-=======
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import { 
@@ -312,7 +307,6 @@ const stats = [
   { number: "24/7", label: "AI Monitoring" },
   { number: "48hrs", label: "Average Response Time" }
 ];
->>>>>>> main
 
 export default function AIServices() {
   return (

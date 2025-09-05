@@ -3,9 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
-<<<<<<< HEAD
-import { useState } from 'react';
-=======
 import { 
   Server, 
   Shield, 
@@ -312,7 +309,6 @@ const stats = [
   { number: "500+", label: "IT Projects Completed" },
   { number: "24/7", label: "Support Available" }
 ];
->>>>>>> main
 
 export default function ITServices() {
   return (
