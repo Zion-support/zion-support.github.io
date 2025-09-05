@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -35,9 +35,8 @@ import {
   Sprout,
   Eye,
   Bot,
-  Rocket,
-  Car,
-  Heart
+  DollarSign,
+  Rocket
 } from 'lucide-react';
 
 const itServices = [
@@ -303,132 +302,6 @@ const itServices = [
     popular: true
   },
   {
-    title: 'Autonomous IT Operations Center',
-    description: 'Fully automated IT operations with self-healing systems and predictive maintenance.',
-    icon: Settings,
-    features: ['Self-healing Systems', 'Predictive Maintenance', 'Automated Incident Response', 'Intelligent Monitoring'],
-    pricing: '$50,000 - $300,000/setup',
-    category: 'Autonomous IT',
-    popular: true
-  },
-  {
-    title: 'Quantum Computing Infrastructure',
-    description: 'Quantum computing infrastructure setup and integration for advanced computational needs.',
-    icon: Cpu,
-    features: ['Quantum Hardware Setup', 'Quantum Software Integration', 'Hybrid Classical-Quantum Systems', 'Expert Training'],
-    pricing: '$100,000 - $1,000,000/project',
-    category: 'Quantum Computing',
-    popular: true
-  },
-  {
-    title: 'Neural Network Infrastructure',
-    description: 'Specialized infrastructure for deep learning and neural network training and inference.',
-    icon: Brain,
-    features: ['GPU Clusters', 'Distributed Training', 'Model Optimization', 'Inference Acceleration'],
-    pricing: '$75,000 - $500,000/setup',
-    category: 'AI Infrastructure',
-    popular: true
-  },
-  {
-    title: 'Space-Grade IT Systems',
-    description: 'Radiation-hardened and space-qualified IT systems for aerospace and satellite applications.',
-    icon: Rocket,
-    features: ['Radiation Hardening', 'Space Qualification', 'Redundant Systems', 'Mission Critical Design'],
-    pricing: '$200,000 - $2,000,000/project',
-    category: 'Aerospace IT',
-    popular: true
-  },
-  {
-    title: 'Biometric Security Infrastructure',
-    description: 'Advanced biometric authentication systems with multi-modal recognition capabilities.',
-    icon: Eye,
-    features: ['Multi-modal Biometrics', 'Liveness Detection', 'Privacy Protection', 'Scalable Architecture'],
-    pricing: '$40,000 - $250,000/project',
-    category: 'Biometric Security',
-    popular: true
-  },
-  {
-    title: 'Digital Twin Infrastructure',
-    description: 'Complete digital twin platform for real-time monitoring and simulation of physical assets.',
-    icon: Monitor,
-    features: ['Real-time Synchronization', 'Predictive Modeling', 'Simulation Engine', 'IoT Integration'],
-    pricing: '$60,000 - $400,000/setup',
-    category: 'Digital Twins',
-    popular: true
-  },
-  {
-    title: 'Holographic Display Systems',
-    description: 'Advanced holographic display infrastructure for immersive visualization and collaboration.',
-    icon: Eye,
-    features: ['3D Holographic Displays', 'Spatial Computing', 'Gesture Recognition', 'Collaborative Workspaces'],
-    pricing: '$100,000 - $800,000/project',
-    category: 'Holographic Tech',
-    popular: true
-  },
-  {
-    title: 'Neuromorphic Computing Infrastructure',
-    description: 'Brain-inspired computing systems for ultra-low power and high-efficiency processing.',
-    icon: Brain,
-    features: ['Neuromorphic Chips', 'Spiking Neural Networks', 'Ultra-low Power', 'Real-time Processing'],
-    pricing: '$150,000 - $1,200,000/setup',
-    category: 'Neuromorphic Computing',
-    popular: true
-  },
-  {
-    title: 'Autonomous Vehicle IT Infrastructure',
-    description: 'Complete IT infrastructure for autonomous vehicle testing, simulation, and deployment.',
-    icon: Car,
-    features: ['Simulation Environment', 'Sensor Data Processing', 'Safety Systems', 'Regulatory Compliance'],
-    pricing: '$200,000 - $1,500,000/project',
-    category: 'Autonomous Vehicles',
-    popular: true
-  },
-  {
-    title: 'Smart Grid IT Infrastructure',
-    description: 'Advanced IT infrastructure for smart grid management and renewable energy integration.',
-    icon: Network,
-    features: ['Grid Monitoring', 'Energy Management', 'Demand Response', 'Renewable Integration'],
-    pricing: '$300,000 - $2,000,000/project',
-    category: 'Smart Grid',
-    popular: true
-  },
-  {
-    title: 'Telemedicine IT Platform',
-    description: 'Comprehensive telemedicine infrastructure with AI-powered diagnostics and remote monitoring.',
-    icon: Heart,
-    features: ['Video Conferencing', 'AI Diagnostics', 'Remote Monitoring', 'HIPAA Compliance'],
-    pricing: '$80,000 - $500,000/setup',
-    category: 'Telemedicine',
-    popular: true
-  },
-  {
-    title: 'Augmented Reality Workspace',
-    description: 'AR-powered collaborative workspace infrastructure for remote teams and training.',
-    icon: Monitor,
-    features: ['AR Collaboration', 'Spatial Computing', 'Remote Assistance', 'Training Simulations'],
-    pricing: '$120,000 - $800,000/project',
-    category: 'AR Workspace',
-    popular: true
-  },
-  {
-    title: 'Blockchain-as-a-Service Platform',
-    description: 'Enterprise blockchain platform with smart contract deployment and management tools.',
-    icon: Server,
-    features: ['Multi-chain Support', 'Smart Contract Tools', 'Consensus Management', 'Token Economics'],
-    pricing: '$100,000 - $600,000/setup',
-    category: 'Blockchain Platform',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Cybersecurity Operations Center',
-    description: 'Next-generation SOC with AI-driven threat hunting and automated response capabilities.',
-    icon: Shield,
-    features: ['AI Threat Hunting', 'Automated Response', 'Behavioral Analysis', 'Threat Intelligence'],
-    pricing: '$200,000 - $1,000,000/setup',
-    category: 'AI SOC',
-    popular: true
-  },
-  {
     title: 'Digital Twin Infrastructure',
     description: 'Digital twin technology implementation for physical assets and processes.',
     icon: Monitor,
@@ -508,6 +381,177 @@ const itServices = [
     pricing: '$30,000 - $150,000/setup',
     category: 'Threat Intelligence',
     popular: true
+  },
+  {
+    title: 'Quantum-Safe Security Implementation',
+    description: 'Post-quantum cryptography implementation for future-proof security.',
+    icon: Lock,
+    features: ['Quantum-Resistant Algorithms', 'Migration Planning', 'Compliance Support', 'Performance Optimization'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Quantum Security',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Distributed edge computing infrastructure for low-latency applications.',
+    icon: Cpu,
+    features: ['Edge Node Deployment', 'Latency Optimization', 'Resource Management', 'Monitoring'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, implementation, and optimization services.',
+    icon: Network,
+    features: ['Network Design', 'Spectrum Planning', 'Performance Optimization', 'Security Integration'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: '5G Networks',
+    popular: true
+  },
+  {
+    title: 'IoT Security & Management',
+    description: 'Comprehensive IoT security and device management solutions.',
+    icon: Settings,
+    features: ['Device Security', 'Firmware Updates', 'Access Control', 'Threat Detection'],
+    pricing: '$15,000 - $100,000/setup',
+    category: 'IoT Security',
+    popular: true
+  },
+  {
+    title: 'Blockchain Infrastructure Services',
+    description: 'Blockchain network setup, maintenance, and security services.',
+    icon: Lock,
+    features: ['Network Setup', 'Node Management', 'Security Hardening', 'Performance Optimization'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Blockchain Infrastructure',
+    popular: true
+  },
+  {
+    title: 'AI Infrastructure & MLOps',
+    description: 'AI/ML infrastructure setup and machine learning operations services.',
+    icon: Brain,
+    features: ['ML Pipeline Setup', 'Model Deployment', 'Monitoring', 'Auto-scaling'],
+    pricing: '$30,000 - $200,000/setup',
+    category: 'AI Infrastructure',
+    popular: true
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Complete zero trust security implementation and architecture design.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'Zero Trust',
+    popular: true
+  },
+  {
+    title: 'Hybrid Cloud Management',
+    description: 'Unified management of multi-cloud and hybrid cloud environments.',
+    icon: Cloud,
+    features: ['Multi-cloud Orchestration', 'Cost Optimization', 'Security Management', 'Compliance'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'Hybrid Cloud',
+    popular: true
+  },
+  {
+    title: 'Digital Transformation Consulting',
+    description: 'Comprehensive digital transformation strategy and implementation.',
+    icon: Building,
+    features: ['Strategy Development', 'Technology Assessment', 'Change Management', 'Implementation'],
+    pricing: '$200 - $500/hour',
+    category: 'Digital Transformation',
+    popular: true
+  },
+  {
+    title: 'IT Compliance & Governance',
+    description: 'IT compliance management and governance framework implementation.',
+    icon: Shield,
+    features: ['Compliance Auditing', 'Policy Development', 'Risk Assessment', 'Training'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Compliance',
+    popular: true
+  },
+  {
+    title: 'Advanced Analytics Platform',
+    description: 'Big data analytics platform with real-time processing capabilities.',
+    icon: BarChart3,
+    features: ['Data Pipeline Setup', 'Real-time Processing', 'Advanced Analytics', 'Visualization'],
+    pricing: '$30,000 - $200,000/setup',
+    category: 'Analytics',
+    popular: true
+  },
+  {
+    title: 'IT Service Management (ITSM)',
+    description: 'Complete IT service management implementation with ITSM tools.',
+    icon: Settings,
+    features: ['Service Catalog', 'Incident Management', 'Change Management', 'SLA Management'],
+    pricing: '$20,000 - $150,000/setup',
+    category: 'ITSM',
+    popular: true
+  },
+  {
+    title: 'Network Performance Optimization',
+    description: 'Advanced network performance analysis and optimization services.',
+    icon: Network,
+    features: ['Performance Analysis', 'Traffic Optimization', 'QoS Implementation', 'Monitoring'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'Network Optimization',
+    popular: true
+  },
+  {
+    title: 'IT Disaster Recovery Planning',
+    description: 'Comprehensive disaster recovery planning and testing services.',
+    icon: Shield,
+    features: ['DR Planning', 'Testing', 'Documentation', 'Training'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Disaster Recovery',
+    popular: true
+  },
+  {
+    title: 'IT Cost Optimization',
+    description: 'IT infrastructure cost analysis and optimization services.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Optimization Recommendations', 'Implementation', 'Monitoring'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'Cost Optimization',
+    popular: true
+  },
+  {
+    title: 'IT Security Awareness Training',
+    description: 'Comprehensive cybersecurity awareness training for employees.',
+    icon: Users,
+    features: ['Phishing Simulation', 'Training Modules', 'Progress Tracking', 'Compliance Reporting'],
+    pricing: '$5,000 - $30,000/setup',
+    category: 'Security Training',
+    popular: true
+  },
+  {
+    title: 'IT Vendor Risk Management',
+    description: 'Third-party vendor risk assessment and management services.',
+    icon: Shield,
+    features: ['Risk Assessment', 'Due Diligence', 'Contract Review', 'Ongoing Monitoring'],
+    pricing: '$8,000 - $50,000/project',
+    category: 'Vendor Risk',
+    popular: true
+  },
+  {
+    title: 'IT Innovation Lab',
+    description: 'Dedicated innovation lab for emerging technology experimentation.',
+    icon: Rocket,
+    features: ['Technology Research', 'Proof of Concepts', 'Innovation Workshops', 'Pilot Programs'],
+    pricing: '$50,000 - $300,000/setup',
+    category: 'Innovation',
+    popular: true
+  },
+  {
+    title: 'IT Performance Monitoring',
+    description: 'Comprehensive IT infrastructure performance monitoring and alerting.',
+    icon: Monitor,
+    features: ['Real-time Monitoring', 'Performance Analytics', 'Alerting', 'Capacity Planning'],
+    pricing: '$10,000 - $75,000/setup',
+    category: 'Performance Monitoring',
+    popular: true
   }
 ];
 
@@ -569,19 +613,6 @@ const supportLevels = [
 ];
 
 export default function ITServicesPage() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 12;
-  const totalPages = Math.ceil(itServices.length / itemsPerPage);
-  
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentServices = itServices.slice(startIndex, endIndex);
-
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Head>
@@ -647,7 +678,7 @@ export default function ITServicesPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {currentServices.map((service, index) => {
+            {itServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <motion.div
@@ -702,43 +733,6 @@ export default function ITServicesPage() {
               );
             })}
           </div>
-
-          {/* Pagination */}
-          {totalPages > 1 && (
-            <div className="flex justify-center mt-12">
-              <div className="flex items-center space-x-2">
-                <button
-                  onClick={() => handlePageChange(currentPage - 1)}
-                  disabled={currentPage === 1}
-                  className="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  Previous
-                </button>
-                
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                  <button
-                    key={page}
-                    onClick={() => handlePageChange(page)}
-                    className={`px-3 py-2 rounded-lg border ${
-                      currentPage === page
-                        ? 'bg-green-600 text-white border-green-600'
-                        : 'border-gray-300 text-gray-700 hover:bg-gray-50'
-                    }`}
-                  >
-                    {page}
-                  </button>
-                ))}
-                
-                <button
-                  onClick={() => handlePageChange(currentPage + 1)}
-                  disabled={currentPage === totalPages}
-                  className="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  Next
-                </button>
-              </div>
-            </div>
-          )}
         </div>
       </section>
 
@@ -916,6 +910,17 @@ export default function ITServicesPage() {
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let our expert team help you build a robust, secure, and scalable IT environment.
             </p>
+            <div className="mb-8">
+              <p className="text-lg text-green-100 mb-2">
+                📞 <strong>Call us:</strong> +1 302 464 0950
+              </p>
+              <p className="text-lg text-green-100 mb-2">
+                📧 <strong>Email us:</strong> kleber@ziontechgroup.com
+              </p>
+              <p className="text-lg text-green-100">
+                📍 <strong>Visit us:</strong> 364 E Main St STE 1008, Middletown DE 19709
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Get IT Assessment

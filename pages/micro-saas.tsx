@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -45,7 +45,7 @@ import {
   ShoppingCart,
   Home,
   Database,
-  Brain
+  Vote
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -299,141 +299,6 @@ const microSaaSProducts = [
     popular: true
   },
   {
-    title: 'AI-Powered Legal Document Analyzer',
-    description: 'Intelligent legal document review and contract analysis with risk assessment and compliance checking.',
-    icon: FileText,
-    features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'],
-    pricing: '$399 - $2,499/month',
-    category: 'Legal Tech',
-    popular: true
-  },
-  {
-    title: 'Quantum-Safe Encryption Manager',
-    description: 'Post-quantum cryptography solution for future-proof data protection and secure communications.',
-    icon: Lock,
-    features: ['Quantum-Safe Algorithms', 'Key Management', 'Secure Communications', 'Compliance Tools'],
-    pricing: '$799 - $4,999/month',
-    category: 'Cybersecurity',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Medical Diagnosis Assistant',
-    description: 'Advanced medical imaging analysis and diagnostic support for healthcare professionals.',
-    icon: Heart,
-    features: ['Medical Imaging Analysis', 'Diagnostic Support', 'Patient Data Integration', 'Clinical Decision Support'],
-    pricing: '$1,999 - $9,999/month',
-    category: 'Healthcare AI',
-    popular: true
-  },
-  {
-    title: 'Autonomous Drone Fleet Manager',
-    description: 'Complete drone fleet management with autonomous flight planning, monitoring, and maintenance.',
-    icon: Rocket,
-    features: ['Autonomous Flight Planning', 'Fleet Monitoring', 'Maintenance Scheduling', 'Regulatory Compliance'],
-    pricing: '$999 - $5,999/month',
-    category: 'Drone Technology',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Financial Risk Analyzer',
-    description: 'Real-time financial risk assessment and portfolio optimization using advanced machine learning.',
-    icon: TrendingUp,
-    features: ['Risk Assessment', 'Portfolio Optimization', 'Market Analysis', 'Regulatory Compliance'],
-    pricing: '$1,499 - $7,999/month',
-    category: 'FinTech',
-    popular: true
-  },
-  {
-    title: 'Smart City IoT Management Platform',
-    description: 'Comprehensive IoT platform for smart city infrastructure management and optimization.',
-    icon: Globe,
-    features: ['IoT Device Management', 'Data Analytics', 'Predictive Maintenance', 'Resource Optimization'],
-    pricing: '$2,999 - $15,999/month',
-    category: 'Smart Cities',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Language Learning Platform',
-    description: 'Personalized language learning with AI tutors, speech recognition, and adaptive curriculum.',
-    icon: BookOpen,
-    features: ['AI Tutoring', 'Speech Recognition', 'Adaptive Learning', 'Progress Tracking'],
-    pricing: '$29 - $199/month',
-    category: 'EdTech',
-    popular: true
-  },
-  {
-    title: 'Blockchain Identity Verification System',
-    description: 'Decentralized identity verification and KYC/AML compliance using blockchain technology.',
-    icon: Shield,
-    features: ['Decentralized Identity', 'KYC/AML Compliance', 'Privacy Protection', 'Cross-Platform Verification'],
-    pricing: '$199 - $1,499/month',
-    category: 'Blockchain',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Environmental Monitoring',
-    description: 'Real-time environmental monitoring and sustainability tracking with predictive analytics.',
-    icon: Sprout,
-    features: ['Environmental Sensors', 'Data Analytics', 'Sustainability Tracking', 'Predictive Modeling'],
-    pricing: '$499 - $2,999/month',
-    category: 'Environmental Tech',
-    popular: true
-  },
-  {
-    title: 'Neural Interface Development Kit',
-    description: 'SDK for developing brain-computer interface applications and neural control systems.',
-    icon: Brain,
-    features: ['Neural Signal Processing', 'Real-time Analysis', 'Device Integration', 'API Development'],
-    pricing: '$1,999 - $9,999/month',
-    category: 'Neurotechnology',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Space Mission Planner',
-    description: 'Autonomous space mission planning and satellite constellation management platform.',
-    icon: Rocket,
-    features: ['Mission Planning', 'Satellite Management', 'Orbital Mechanics', 'Resource Optimization'],
-    pricing: '$4,999 - $24,999/month',
-    category: 'Space Technology',
-    popular: true
-  },
-  {
-    title: 'Quantum Computing Cloud Platform',
-    description: 'Access to quantum computing resources with quantum algorithm development tools.',
-    icon: Cpu,
-    features: ['Quantum Computing Access', 'Algorithm Development', 'Quantum Simulation', 'Expert Support'],
-    pricing: '$999 - $9,999/month',
-    category: 'Quantum Computing',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Drug Discovery Platform',
-    description: 'Machine learning platform for pharmaceutical drug discovery and molecular design.',
-    icon: Heart,
-    features: ['Molecular Design', 'Drug Discovery', 'Clinical Trial Optimization', 'Patent Analysis'],
-    pricing: '$2,999 - $19,999/month',
-    category: 'Pharmaceutical AI',
-    popular: true
-  },
-  {
-    title: 'Autonomous Vehicle Fleet Management',
-    description: 'Complete management system for autonomous vehicle fleets with safety monitoring and optimization.',
-    icon: Car,
-    features: ['Fleet Monitoring', 'Safety Systems', 'Route Optimization', 'Predictive Maintenance'],
-    pricing: '$1,999 - $12,999/month',
-    category: 'Autonomous Vehicles',
-    popular: true
-  },
-  {
-    title: 'AI-Powered Cybersecurity Threat Hunter',
-    description: 'Advanced threat detection and response system using AI and machine learning for zero-day attacks.',
-    icon: Shield,
-    features: ['Threat Detection', 'Zero-day Protection', 'Incident Response', 'Threat Intelligence'],
-    pricing: '$1,499 - $8,999/month',
-    category: 'Cybersecurity',
-    popular: true
-  },
-  {
     title: 'Real-Time Language Translation API',
     description: 'Advanced translation service with context awareness and industry-specific terminology.',
     icon: Globe,
@@ -558,6 +423,186 @@ const microSaaSProducts = [
     pricing: '$199 - $1,299/month',
     category: 'Voice Analytics',
     popular: true
+  },
+  {
+    title: 'Quantum-Safe Encryption API',
+    description: 'Post-quantum cryptography solutions for future-proof data protection.',
+    icon: Lock,
+    features: ['Quantum-Resistant Algorithms', 'API Integration', 'Key Management', 'Compliance Ready'],
+    pricing: '$499 - $2,999/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Code Generation',
+    description: 'Automated code generation from natural language descriptions with multiple language support.',
+    icon: Code,
+    features: ['Natural Language to Code', 'Multi-language Support', 'Code Review', 'Testing Generation'],
+    pricing: '$199 - $1,499/month',
+    category: 'Developer Tools',
+    popular: true
+  },
+  {
+    title: 'Edge Computing Orchestrator',
+    description: 'Intelligent edge computing management with real-time workload distribution.',
+    icon: Cpu,
+    features: ['Edge Workload Management', 'Latency Optimization', 'Resource Allocation', 'Monitoring'],
+    pricing: '$299 - $1,999/month',
+    category: 'Edge Computing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Threat Intelligence',
+    description: 'Real-time threat detection and intelligence gathering for cybersecurity teams.',
+    icon: Shield,
+    features: ['Threat Detection', 'Intelligence Gathering', 'Risk Assessment', 'Automated Response'],
+    pricing: '$399 - $2,499/month',
+    category: 'Cybersecurity',
+    popular: true
+  },
+  {
+    title: 'Digital Twin Platform',
+    description: 'Create and manage digital twins for IoT devices and physical assets.',
+    icon: Monitor,
+    features: ['3D Modeling', 'Real-time Sync', 'Predictive Analytics', 'Simulation Engine'],
+    pricing: '$599 - $3,999/month',
+    category: 'IoT & Digital Twins',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Market Research',
+    description: 'Automated market research with sentiment analysis and trend prediction.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Sentiment Tracking', 'Trend Prediction', 'Competitor Intelligence'],
+    pricing: '$299 - $1,999/month',
+    category: 'Market Research',
+    popular: true
+  },
+  {
+    title: 'Blockchain Supply Chain Tracker',
+    description: 'End-to-end supply chain transparency using blockchain technology.',
+    icon: Package,
+    features: ['Product Tracking', 'Authenticity Verification', 'Compliance Monitoring', 'Smart Contracts'],
+    pricing: '$199 - $1,299/month',
+    category: 'Blockchain & Supply Chain',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Email Security',
+    description: 'Advanced email protection against phishing, malware, and business email compromise.',
+    icon: Mail,
+    features: ['Phishing Detection', 'Malware Scanning', 'BEC Protection', 'User Training'],
+    pricing: '$99 - $599/month',
+    category: 'Email Security',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Development Platform',
+    description: 'No-code smart contract creation and deployment across multiple blockchains.',
+    icon: Code,
+    features: ['Visual Builder', 'Multi-chain Support', 'Testing Suite', 'Deployment Tools'],
+    pricing: '$199 - $1,499/month',
+    category: 'Blockchain Development',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Data Quality Engine',
+    description: 'Automated data cleaning, validation, and quality improvement for enterprise data.',
+    icon: Database,
+    features: ['Data Cleaning', 'Quality Scoring', 'Duplicate Detection', 'Validation Rules'],
+    pricing: '$299 - $1,999/month',
+    category: 'Data Management',
+    popular: true
+  },
+  {
+    title: 'Real-Time Collaboration Platform',
+    description: 'Advanced real-time collaboration with AR/VR integration for remote teams.',
+    icon: Users,
+    features: ['Real-time Editing', 'AR/VR Support', 'Whiteboard Integration', 'Voice/Video Chat'],
+    pricing: '$49 - $299/month',
+    category: 'Collaboration',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Compliance Monitor',
+    description: 'Automated compliance monitoring across multiple regulations and standards.',
+    icon: Shield,
+    features: ['Multi-regulation Support', 'Automated Auditing', 'Risk Assessment', 'Reporting'],
+    pricing: '$399 - $2,499/month',
+    category: 'Compliance',
+    popular: true
+  },
+  {
+    title: 'Intelligent API Gateway',
+    description: 'AI-powered API gateway with intelligent routing, caching, and security.',
+    icon: Network,
+    features: ['Smart Routing', 'Intelligent Caching', 'Security Policies', 'Performance Optimization'],
+    pricing: '$199 - $1,299/month',
+    category: 'API Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Customer Journey Analytics',
+    description: 'Comprehensive customer journey mapping with predictive analytics and optimization.',
+    icon: Target,
+    features: ['Journey Mapping', 'Predictive Analytics', 'Optimization Suggestions', 'ROI Tracking'],
+    pricing: '$299 - $1,999/month',
+    category: 'Customer Analytics',
+    popular: true
+  },
+  {
+    title: 'Blockchain-Based Voting System',
+    description: 'Secure, transparent voting platform with blockchain verification and audit trails.',
+    icon: Vote,
+    features: ['Secure Voting', 'Blockchain Verification', 'Audit Trails', 'Real-time Results'],
+    pricing: '$199 - $1,299/month',
+    category: 'Blockchain & Governance',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Moderation Suite',
+    description: 'Advanced content moderation with multi-modal detection and custom policy enforcement.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Policies', 'Real-time Processing', 'Human Review Queue'],
+    pricing: '$199 - $1,499/month',
+    category: 'Content Safety',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Audit Platform',
+    description: 'Automated smart contract security auditing with comprehensive vulnerability detection.',
+    icon: Lock,
+    features: ['Automated Auditing', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checks'],
+    pricing: '$299 - $1,999/month',
+    category: 'Blockchain Security',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Predictive Maintenance',
+    description: 'Intelligent predictive maintenance for industrial equipment and machinery.',
+    icon: Settings,
+    features: ['Predictive Analytics', 'Equipment Monitoring', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$399 - $2,499/month',
+    category: 'Industrial IoT',
+    popular: true
+  },
+  {
+    title: 'Decentralized Identity Management',
+    description: 'Self-sovereign identity management with privacy-preserving authentication.',
+    icon: Lock,
+    features: ['Self-Sovereign Identity', 'Privacy Protection', 'Zero-Knowledge Proofs', 'Interoperability'],
+    pricing: '$199 - $1,299/month',
+    category: 'Identity Management',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Financial Planning',
+    description: 'Intelligent financial planning and investment optimization for individuals and businesses.',
+    icon: DollarSign,
+    features: ['Portfolio Optimization', 'Risk Assessment', 'Goal Planning', 'Tax Optimization'],
+    pricing: '$99 - $599/month',
+    category: 'FinTech',
+    popular: true
   }
 ];
 
@@ -669,19 +714,6 @@ const pricingTiers = [
 ];
 
 export default function MicroSaaSPage() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 12;
-  const totalPages = Math.ceil(microSaaSProducts.length / itemsPerPage);
-  
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentProducts = microSaaSProducts.slice(startIndex, endIndex);
-
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Head>
@@ -747,7 +779,7 @@ export default function MicroSaaSPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {currentProducts.map((product, index) => {
+            {microSaaSProducts.map((product, index) => {
               const IconComponent = product.icon;
               return (
                 <motion.div
@@ -812,43 +844,6 @@ export default function MicroSaaSPage() {
               );
             })}
           </div>
-
-          {/* Pagination */}
-          {totalPages > 1 && (
-            <div className="flex justify-center mt-12">
-              <div className="flex items-center space-x-2">
-                <button
-                  onClick={() => handlePageChange(currentPage - 1)}
-                  disabled={currentPage === 1}
-                  className="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  Previous
-                </button>
-                
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                  <button
-                    key={page}
-                    onClick={() => handlePageChange(page)}
-                    className={`px-3 py-2 rounded-lg border ${
-                      currentPage === page
-                        ? 'bg-purple-600 text-white border-purple-600'
-                        : 'border-gray-300 text-gray-700 hover:bg-gray-50'
-                    }`}
-                  >
-                    {page}
-                  </button>
-                ))}
-                
-                <button
-                  onClick={() => handlePageChange(currentPage + 1)}
-                  disabled={currentPage === totalPages}
-                  className="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  Next
-                </button>
-              </div>
-            </div>
-          )}
         </div>
       </section>
 
@@ -1035,6 +1030,17 @@ export default function MicroSaaSPage() {
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let&apos;s build the perfect SaaS solution for your business needs. Fast, secure, and scalable.
             </p>
+            <div className="mb-8">
+              <p className="text-lg text-purple-100 mb-2">
+                📞 <strong>Call us:</strong> +1 302 464 0950
+              </p>
+              <p className="text-lg text-purple-100 mb-2">
+                📧 <strong>Email us:</strong> kleber@ziontechgroup.com
+              </p>
+              <p className="text-lg text-purple-100">
+                📍 <strong>Visit us:</strong> 364 E Main St STE 1008, Middletown DE 19709
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Start Building
