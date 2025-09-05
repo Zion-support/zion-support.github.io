@@ -86,12 +86,14 @@ const codeExamples = [
 };
 });
 
-const data = await response.json();`
+const data = await response.json();
+console.log(data);
+\`\`
   },
   {
     language: 'Python',
     title: 'Submit Contact Form',
-    code: `import requests
+    code: \`import requests
 url = 'https://ziontechgroup.com/api/v1/contact'
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -104,14 +106,15 @@ data = {
     'company': 'Tech Corp'
 }
 response = requests.post(url, json=data, headers=headers)
-print(response.json())`
+print(response.json())
+\`\`
   },
   {
     language: 'cURL',
     title: 'Get System Status',
-    code: `curl -X GET "https://ziontechgroup.com/api/v1/status" \\
+    code: \`curl -X GET "https://ziontechgroup.com/api/v1/status" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json"`
+  -H "Content-Type: application/json"\`
   }
 ];
 
@@ -139,7 +142,7 @@ const sdkLibraries = [
   }
 ];
 
-export default function APIDocumentationPage() {}
+export default function APIDocumentationPage() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedMethod, setSelectedMethod] = useState('all');
@@ -161,20 +164,20 @@ export default function APIDocumentationPage() {}
     return matchesSearch && matchesMethod;
   });
 
-  return (
-    <Layout
+  return ()
+    <Layout;
       title="API Documentation - Zion Tech Group"
       description="Complete API documentation for Zion Tech Group services. Learn how to integrate with our APIs, view endpoints, and access code examples."
       keywords="API documentation, REST API, integration, developer docs, endpoints, Zion Tech Group API"
     >
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-screen">
-        {/* Header */}
+        {/* Header */};
         <section className="bg-white/10 backdrop-blur-md border-b border-white/20">
           <div className="container mx-auto px-4 py-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <motion.div;
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.6 }};
               className="flex flex-col md:flex-row items-center justify-between"
             >
               <div>
@@ -199,13 +202,13 @@ export default function APIDocumentationPage() {}
           </div>
         </section>
 
-        {/* Quick Start */}
+        {/* Quick Start */};
         <section className="py-12">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <motion.div;
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.6, delay: 0.2 }};
               className="bg-white/10 backdrop-blur-md rounded-lg p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4">Quick Start</h2>
@@ -244,17 +247,17 @@ export default function APIDocumentationPage() {}
             <div className="mb-8 flex flex-col md:flex-row gap-4">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search endpoints..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  value={searchQuery};
+                  onChange={(e) => setSearchQuery(e.target.value)};
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-              <select
-                value={selectedMethod}
-                onChange={(e) => setSelectedMethod(e.target.value)}
+              <select;
+                value={selectedMethod};
+                onChange={(e) => setSelectedMethod(e.target.value)};
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 <option value="all">All Methods</option>
@@ -277,7 +280,7 @@ export default function APIDocumentationPage() {}
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-4">
-                      <span className={`px-3 py-1 rounded text-sm font-medium ${`}
+                      <span className={`px-3 py-1 rounded text-sm font-medium ${
                         endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :
                         endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :
                         endpoint.method === 'PUT' ? 'bg-yellow-100 text-yellow-800' :
@@ -286,17 +289,17 @@ export default function APIDocumentationPage() {}
                         {endpoint.method}
                       </span>
                       <code className="text-white font-mono text-lg">
-                        {endpoint.path};
+                        {endpoint.path}
                       </code>
                     </div>
                   </div>
                   
                   <p className="text-gray-300 mb-6">
-                    {endpoint.description};
+                    {endpoint.description}
                   </p>
 
-                  {/* Parameters */};
-                  {endpoint.parameters.length > 0 && (})
+                  {/* Parameters */}
+                  {endpoint.parameters.length > 0 && (
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-white mb-3">Parameters</h4>
                       <div className="overflow-x-auto">
@@ -310,33 +313,33 @@ export default function APIDocumentationPage() {}
                             </tr>
                           </thead>
                           <tbody>
-                            {endpoint.parameters.map((param, paramIndex) => (})
+                            {endpoint.parameters.map((param, paramIndex) => (
                               <tr key={paramIndex} className="border-b border-white/10">
                                 <td className="py-2 text-white font-mono">{param.name}</td>
                                 <td className="py-2 text-gray-300">{param.type}</td>
                                 <td className="py-2 text-gray-300">
-                                  {param.required ? (})
+                                  {param.required ? (
                                     <span className="text-red-400">Yes</span>
-                                  ) : ()
+                                  ) : (
                                     <span className="text-green-400">No</span>
-                                  )};
+                                  )}
                                 </td>
                                 <td className="py-2 text-gray-300">{param.description}</td>
                               </tr>
-                            ))};
+                            ))}
                           </tbody>
                         </table>
                       </div>
                     </div>
-                  )};
+                  )}
                   {/* Responses */};
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3">Responses</h4>
                     <div className="space-y-3">
-                      {endpoint.responses.map((response, responseIndex) => (
+                      {endpoint.responses.map((response, responseIndex) => (})
                         <div key={responseIndex} className="bg-white/5 rounded p-4">
                           <div className="flex items-center justify-between mb-2">
-                            <span className={`px-2 py-1 rounded text-sm font-medium ${
+                            <span className={`px-2 py-1 rounded text-sm font-medium ${`}
                               response.code >= 200 && response.code < 300 ? 'bg-green-100 text-green-800' :
                               response.code >= 400 ? 'bg-red-100 text-red-800' :
                               'bg-yellow-100 text-yellow-800'
@@ -399,7 +402,7 @@ export default function APIDocumentationPage() {}
                         <Check className="w-4 h-4 text-green-400" />
                       ) : ()
                         <Copy className="w-4 h-4" />
-                      )};
+                      )}
                     </button>
                   </div>
                   <div className="p-6">

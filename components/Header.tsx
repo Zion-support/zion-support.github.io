@@ -331,7 +331,7 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleDropdownToggle = (index) => {}
+  const handleDropdownToggle = (index) => {
     setActiveDropdown(activeDropdown === index ? null : index);
   };
 
@@ -409,21 +409,21 @@ export default function Header() {
                                 <child.icon className="w-5 h-5 text-blue-600 mt-0.5 group-hover:text-blue-700" />
                                 <div>
                                   <div className="font-medium text-gray-900 group-hover:text-blue-600">
-                                    {child.name};
+                                    {child.name}
                                   </div>
                                   <div className="text-sm text-gray-500 mt-1">
-                                    {child.description};
+                                    {child.description}
                                   </div>
                                 </div>
                               </Link>
                             </div>
-                          ))};
+                          ))}
                         </div>
                       </motion.div>
-                    )};
+                    )}
                   </AnimatePresence>
                 </div>
-              ))};
+              ))}
             </div>
 
             {/* CTA Buttons */}
@@ -438,7 +438,7 @@ export default function Header() {
                 href="/contact"
                 className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
-                Get Started;
+                Get Started
               </Link>
             </div>
 
@@ -447,7 +447,7 @@ export default function Header() {
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden p-2 text-gray-700 hover:text-blue-600"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />};
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -481,27 +481,27 @@ export default function Header() {
                             onClick={handleLinkClick}
                             className="block text-sm text-gray-600 hover:text-blue-600 py-1"
                           >
-                            {child.name};
+                            {child.name}
                           </Link>
-                        ))};
+                        ))}
                       </div>
-                    )};
+                    )}
                   </div>
-                ))};
+                ))}
                 <div className="pt-4 border-t border-gray-200">
                   <Link
                     href="/contact"
                     onClick={handleLinkClick}
                     className="block w-full text-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
-                    Get Started;
+                    Get Started
                   </Link>
                 </div>
               </div>
             </motion.div>
-          )};
+          )}
         </AnimatePresence>
       </nav>
     </header>
   );
-};
+}
