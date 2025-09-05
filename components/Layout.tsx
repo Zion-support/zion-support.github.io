@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Header from './Header';
-import { Sidebar } from './Sidebar';
 import Footer from './Footer';
 
 interface LayoutProps {
@@ -10,43 +9,44 @@ interface LayoutProps {
   description?: string;
   keywords?: string;
   canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
   ogImage?: string;
   noIndex?: boolean;
 }
 
-export default function Layout({
+const Layout: React.FC<LayoutProps> = ({
   children,
   title = "Zion Tech Group",
   description = "Leading technology solutions provider",
-  keywords = "technology, AI, IT services, micro SaaS",
-  canonical,
+  keywords = "technology, AI, IT, micro SaaS, solutions",
+  canonical = "https://ziontechgroup.com",
+  ogTitle,
+  ogDescription,
   ogImage,
-  noIndex = false
-}: LayoutProps) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
+  noIndex = false,
+}) => {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         {canonical && <link rel="canonical" href={canonical} />}
-        {noIndex && <meta name="robots" content="noindex,nofollow" />}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="website" />
+        {ogTitle && <meta property="og:title" content={ogTitle} />}
+        {ogDescription && <meta property="og:description" content={ogDescription} />}
         {ogImage && <meta property="og:image" content={ogImage} />}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:type" content="website" />
+        {noIndex && <meta name="robots" content="noindex, nofollow" />}
       </Head>
-      <div className="min-h-screen bg-gray-50">
-        <Header onMenuClick={() => setSidebarOpen(true)} />
-        <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
-      </div>
-    </>
+      <Header />
+      <main className="flex-grow">
+        {children}
+      </main>
+      <Footer />
+    </div>
   );
-}
+};
+
+export default Layout;

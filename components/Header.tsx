@@ -1,68 +1,76 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { 
-  Menu, 
-  X, 
-  Search, 
-  Phone, 
-  Mail, 
-  MapPin,
-  ChevronDown,
-  Building2
-} from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
-export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const router = useRouter();
+const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
-    }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center space-x-2">
-            <Building2 className="w-8 h-8 text-blue-600" />
-            <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
-          </Link>
-          
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/services" className="text-gray-700 hover:text-blue-600 font-medium">
-              Services
+    <header className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4">
+          <div className="flex items-center">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech Group
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium">
+          </div>
+          
+          <nav className="hidden md:flex space-x-8">
+            <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Home
+            </Link>
+            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
               About
             </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium">
+            <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Services
+            </Link>
+            <Link href="/ai-services" className="text-gray-700 hover:text-blue-600 transition-colors">
+              AI Services
+            </Link>
+            <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
               Contact
             </Link>
-            <Link href="/quote" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-              Get Quote
-            </Link>
           </nav>
-          
-          <div className="flex items-center space-x-4">
-            <button className="p-2 text-gray-700 hover:text-blue-600">
-              <Search className="w-5 h-5" />
-            </button>
-            <button 
-              onClick={onMenuClick}
-              className="md:hidden p-2 text-gray-700 hover:text-blue-600"
+
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-700 hover:text-blue-600 transition-colors"
             >
-              <Menu className="w-5 h-5" />
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
+
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+              <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
+                Home
+              </Link>
+              <Link href="/about" className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
+                About
+              </Link>
+              <Link href="/services" className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
+                Services
+              </Link>
+              <Link href="/ai-services" className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
+                AI Services
+              </Link>
+              <Link href="/contact" className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
+                Contact
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );
-}
+};
+
+export default Header;
