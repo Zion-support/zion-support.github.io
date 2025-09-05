@@ -111,11 +111,11 @@ const openPositions = [
     description: "Lead product strategy and roadmap for our AI and SaaS solutions.",
     requirements: [
       "3+ years of product management experience",
-      "Experience with B2B SaaS products"
-      "Strong analytical and communication skills"}
-      "Technical background preferred"}
-    ],}
-    featured: false}
+      "Experience with B2B SaaS products",
+      "Strong analytical and communication skills",
+      "Technical background preferred"
+    ],
+    featured: false
   },
   {
     title: "Sales Engineer",
@@ -274,8 +274,8 @@ export default function CareersPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => {}
-                const IconComponent = benefit.icon;}
+              {benefits.map((benefit, index) => {
+                const IconComponent = benefit.icon;
                 return (
                   <motion.div
                     key={index}

@@ -212,8 +212,8 @@ export default function AccessibilityPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {accessibilityFeatures.map((feature, index) => {
                 const IconComponent = feature.icon;
-                return (}
-                  <motion.div}
+                return (
+                  <motion.div
                     key={index}
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                     initial={{ opacity: 0, y: 30 }}
@@ -233,7 +233,7 @@ export default function AccessibilityPage() {
                           {feature.description}
                         </p>
                         <ul className="space-y-2">
-                          {feature.features.map((item, idx) => (}
+                          {feature.features.map((item, idx) => (
                             <li key={idx} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {item}
@@ -267,8 +267,8 @@ export default function AccessibilityPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {standardsCompliance.map((standard, index) => {}
-                const IconComponent = standard.icon;}
+              {standardsCompliance.map((standard, index) => {
+                const IconComponent = standard.icon;
                 return (
                   <motion.div
                     key={index}
@@ -426,7 +426,7 @@ export default function AccessibilityPage() {
                     {standard.level}
                   </span>
                 </motion.div>
-              ))}
+              </motion.div>
             </div>
           </div>
         </section>
@@ -457,4 +457,5 @@ export default function AccessibilityPage() {
         </section>
       </div>
     </MainLayout>
+  );
 }
