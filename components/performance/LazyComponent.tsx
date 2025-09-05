@@ -1,22 +1,22 @@
-import React, { Suspense, lazy } from 'react'
+import React, { Suspense, lazy } from 'react';
+
 interface LazyComponentProps {
-  component: () => Promise<{ default: React.ComponentType<unknown> }>
-  fallback?: React.ReactNode
-  [key: string]: unknownursor/add-new-services-and-deploy-updates-1b90
+  component: () => Promise<{ default: React.ComponentType<unknown> }>;
+  fallback?: React.ReactNode;
+  [key: string]: unknown;
 }
 
-export const "LazyComponent": React.FC<LazyComponentProps> = ({ 
+export const LazyComponent: React.FC<LazyComponentProps> = ({ 
   component, 
   fallback = <div>Loading...</div>,
   ...props 
 }) => {
-  const LazyLoadedComponent = lazy(component)
+  const LazyLoadedComponent = lazy(component);
   return (
     <Suspense fallback={fallback}>
       <LazyLoadedComponent {...props} />
     </Suspense>
-  )
-}
-export default LazyComponent
-import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<unknown> }> fallback?: React.ReactNode [key: string]: unknown } export const LazyComponent: React.FC<LazyComponentProps> = ({ component,fallback = <div>Loading...</div>,...props }) => { const LazyLoadedComponent = lazy(component) return ( <Suspense fallback={fallback}> <LazyLoadedComponent {...props} /> </Suspense> ) } export default LazyComponent
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+  );
+};
+
+export default LazyComponent;

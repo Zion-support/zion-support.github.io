@@ -19,28 +19,28 @@ export const validators = {
     return value !== null && value !== undefined && value !== '';
   },
 
-  "minLength": (value: string, "min": number): boolean => {
+  minLength: (value: string, min: number): boolean => {
     return value.length >= min;
   },
 
-  "maxLength": (value: string, "max": number): boolean => {
+  maxLength: (value: string, max: number): boolean => {
     return value.length <= max;
   },
 
-  "pattern": (value: string, "regex": RegExp): boolean => {
+  pattern: (value: string, regex: RegExp): boolean => {
     return regex.test(value);
   }
 };
 
-export const formatValidationError = ("field": string, "rule": string, value?: unknown): string => {
-  const "messages": Record<string, string> = {
-    "email": 'Please enter a valid email address',
-    "phone": 'Please enter a valid phone number',
-    "url": 'Please enter a valid URL',
-    "required": 'This field is required',
-    "minLength": `This field must be at least ${value} characters long`,
-    "maxLength": `This field must be no more than ${value} characters long`,
-    "pattern": 'This field format is invalid'
+export const formatValidationError = (field: string, rule: string, value?: unknown): string => {
+  const messages: Record<string, string> = {
+    email: 'Please enter a valid email address',
+    phone: 'Please enter a valid phone number',
+    url: 'Please enter a valid URL',
+    required: 'This field is required',
+    minLength: `This field must be at least ${value} characters long`,
+    maxLength: `This field must be no more than ${value} characters long`,
+    pattern: 'This field format is invalid'
   };
 
   return messages[rule] || `${field} is invalid`};

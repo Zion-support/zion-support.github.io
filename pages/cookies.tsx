@@ -208,7 +208,7 @@ export default function CookiesPage() {
                         Cookie Consent Banner
                       </h3>
                       <p className="text-gray-600">
-                        When you first visit our website, you'll see a cookie consent banner where you can 
+                        When you first visit our website, you&apos;ll see a cookie consent banner where you can 
                         choose which types of cookies to accept.
                       </p>
                     </div>

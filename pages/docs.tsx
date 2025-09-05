@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { BookOpen, Search, FileText, Code, ArrowRight, CheckCircle, Clock, Users, Download } from 'lucide-react';
+import { BookOpen, Search, FileText, Clock, Users } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const categories = [
@@ -259,7 +259,7 @@ export default function DocsPage() {
                 Need Help Getting Started?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Our documentation team is here to help you succeed. Contact us if you can't find what you're looking for.
+                Our documentation team is here to help you succeed. Contact us if you can&apos;t find what you&apos;re looking for.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

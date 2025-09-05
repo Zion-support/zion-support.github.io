@@ -11,4 +11,3 @@ export const messageChannelHandler: MessageHandler = {
     // No-op: placeholder for message listener registration
   }
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

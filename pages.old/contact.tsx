@@ -16,7 +16,7 @@ export default function ContactPage() {
           </h1>
           
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="grid grid-cols-1 "md": grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">
                   Get in Touch

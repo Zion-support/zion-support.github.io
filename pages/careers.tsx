@@ -165,7 +165,7 @@ export default function CareersPage() {
                 Why Join Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-600">
-                We're building something special, and we want you to be part of it
+                We&apos;re building something special, and we want you to be part of it
               </p>
             </div>
 
@@ -294,7 +294,7 @@ export default function CareersPage() {
 
             <div className="text-center mt-12">
               <p className="text-gray-600 mb-4">
-                Don't see a position that fits? We're always looking for talented people.
+                Don&apos;t see a position that fits? We&apos;re always looking for talented people.
               </p>
               <Link
                 href="/contact"

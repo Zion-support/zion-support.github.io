@@ -46,7 +46,7 @@ import {
   Gamepad2
 } from 'lucide-react';
 
-const aiServices = [{ursor/add-new-services-and-deploy-updates-1b90
+const aiServices = [{
     title: 'AI-Powered Email Responder',
     description: 'Automated email responses using advanced NLP and machine learning algorithms.',
     icon: Mail,

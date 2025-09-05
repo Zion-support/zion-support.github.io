@@ -1,5 +1,5 @@
 // HTML sanitization utility to prevent CSP violations
-export function sanitizeHtml("html": string): string {
+export function sanitizeHtml(html: string): string {
   // Remove script tags
   let sanitized = html.replace(/<script\b[^<]*(?: (?!<\/script>)<[^<]*)*<\/script>/gi, '');
   // Remove event handlers

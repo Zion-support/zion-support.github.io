@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
-const "EnhancedNavigation": React.FC = () => {
+const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
@@ -17,7 +17,7 @@ const "EnhancedNavigation": React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
 <div className="text-xl font-bold text-gray-800">Logo</div>
-          <div className="hidden md:flex space-x-8>
+          <div className="hidden md:flex space-x-8">
             <Link href="/"><span className="text-gray-600 hover:text-gray-900">Home</span></Link>
             <Link href="/services"><span className="text-gray-600 hover:text-gray-900">Services</span></Link>
             <Link href="/about"><span className="text-gray-600 hover:text-gray-900">About</span></Link>

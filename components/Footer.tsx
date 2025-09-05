@@ -95,7 +95,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   hours: '24/7 Support Available'
-};ursor/add-new-services-and-deploy-updates-1b90
+};
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -342,9 +342,9 @@ export default function Footer() {
               <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
               <p className="text-gray-400 text-sm">
                 Get the latest technology insights and company updates delivered to your inbox.
-              </p>ursor/add-new-services-and-deploy-updates-1b90
+              </p>
             </div>
-          ))}
+          </div>
         </div>
 
         {/* Newsletter Signup */}

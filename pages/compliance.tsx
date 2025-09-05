@@ -389,8 +389,8 @@ export default function CompliancePage() {
                 </div>
                 <div className="prose prose-lg max-w-none text-gray-600">
                   <p className="mb-4">
-                    At Zion Tech Group, compliance is not just a requirement—it's a fundamental part of our commitment to 
-                    protecting our clients' data and maintaining the highest standards of security and privacy.
+                    At Zion Tech Group, compliance is not just a requirement—it&apos;s a fundamental part of our commitment to 
+                    protecting our clients&apos; data and maintaining the highest standards of security and privacy.
                   </p>
                   <p className="mb-4">
                     We continuously monitor and update our compliance programs to ensure they meet the latest regulatory 

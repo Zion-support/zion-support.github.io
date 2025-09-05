@@ -7,7 +7,7 @@ type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: React.ReactNode;
 };
 
-function resolveHref("href": Href): string {
+function resolveHref(href: Href): string {
   if (typeof href === 'string') return href;
   return href?.pathname || (href as { href?: string })?.href || '#';
 }

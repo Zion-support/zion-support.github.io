@@ -68,7 +68,7 @@ const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709'
-};ursor/add-new-services-and-deploy-updates-1b90
+};
 
   useEffect(() => {
     const handleScroll = () => {
@@ -260,7 +260,7 @@ const contactInfo = {
                         ))}
                       </motion.div>
                     )}
-                  </AnimatePresence>ursor/add-new-services-and-deploy-updates-1b90
+                  </AnimatePresence>
                 )}
               </div>
 

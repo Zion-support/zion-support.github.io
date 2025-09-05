@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
-const jobOpenings = [{ursor/add-new-services-and-deploy-updates-1b90
+const jobOpenings = [{
     id: 1,
     title: "Senior AI/ML Engineer",
     department: "AI Services",

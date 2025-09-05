@@ -195,7 +195,7 @@ export default function IndustriesPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Tailored technology solutions designed specifically for your industry's unique challenges and opportunities.
+              Tailored technology solutions designed specifically for your industry&apos;s unique challenges and opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
