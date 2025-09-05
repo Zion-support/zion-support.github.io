@@ -1,54 +1,32 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Header from './Header';
-import { Sidebar } from './Sidebar';
 import Footer from './Footer';
 
 interface LayoutProps {
-  children: React.ReactNode;
   title?: string;
   description?: string;
-  keywords?: string;
-  ogImage?: string;
-  noIndex?: boolean;
+  children: React.ReactNode;
 }
 
-export default function Layout({
-  children,
-  title = 'Zion Tech Group - Leading AI & Technology Solutions',
-  description = 'Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results.',
-  keywords = 'AI solutions, cloud services, technology consulting, digital transformation, IT services, machine learning, cybersecurity',
-  ogImage = '/images/og-image.jpg',
-  noIndex = false
-}: LayoutProps) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
+const Layout: React.FC<LayoutProps> = ({ children, title, description }) => {
   return (
     <>
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        {noIndex && <meta name="robots" content="noindex,nofollow" />}
-        <link rel="canonical" href="https://ziontechgroup.com" />
+        <title>{title || 'Zion Tech Group'}</title>
+        <meta name="description" content={description || 'Leading technology solutions provider'} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      
       <div className="min-h-screen bg-gray-50">
-        <Header onMenuClick={() => setIsSidebarOpen(true)} />
-        <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-        <main className="pt-16">
+        <Header />
+        <main className="flex-1">
           {children}
         </main>
         <Footer />
       </div>
     </>
   );
-}
+};
+
+export default Layout;

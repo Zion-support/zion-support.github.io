@@ -40,8 +40,7 @@ const benefits = [
   {
     icon: Shield,
     title: 'Enhanced Security',
-    description: 'Advanced security measures protect against cyber threats and fraud',
-    icon: Lock
+    description: 'Advanced security measures protect against cyber threats and fraud'
   },
   {
     title: 'Improved Efficiency',
