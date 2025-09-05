@@ -390,6 +390,133 @@ const aiServices = [
     pricing: '$2,500 - $15,000/month',
     category: 'Performance AI',
     link: 'https://aiperformance.ziontechgroup.com'
+  },
+  {
+    title: 'LLM Fine-tuning & Customization',
+    description: 'Custom large language model fine-tuning for specific business domains and use cases.',
+    icon: Brain,
+    features: ['Domain-specific Training', 'Custom Datasets', 'Model Optimization', 'Deployment Support'],
+    pricing: '$5,000 - $50,000/project',
+    category: 'LLM Development',
+    popular: true,
+    link: 'https://llmfinetuning.ziontechgroup.com'
+  },
+  {
+    title: 'Edge AI Deployment Platform',
+    description: 'Deploy and manage AI models at the edge with optimized inference and real-time processing.',
+    icon: Cpu,
+    features: ['Edge Deployment', 'Model Optimization', 'Real-time Inference', 'Device Management'],
+    pricing: '$3,000 - $25,000/project',
+    category: 'Edge AI',
+    link: 'https://edgeai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Cybersecurity Suite',
+    description: 'Advanced AI-driven threat detection, behavioral analysis, and automated response systems.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Zero-day Protection'],
+    pricing: '$4,000 - $30,000/month',
+    category: 'AI Security',
+    link: 'https://aicybersecurity.ziontechgroup.com'
+  },
+  {
+    title: 'Multimodal AI Platform',
+    description: 'Unified AI platform processing text, images, audio, and video with cross-modal understanding.',
+    icon: Eye,
+    features: ['Multimodal Processing', 'Cross-modal Understanding', 'Unified API', 'Real-time Analysis'],
+    pricing: '$5,000 - $40,000/month',
+    category: 'Multimodal AI',
+    link: 'https://multimodalai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Drug Discovery',
+    description: 'Machine learning-driven drug discovery and molecular design for pharmaceutical research.',
+    icon: Heart,
+    features: ['Molecular Design', 'Drug Discovery', 'Toxicity Prediction', 'Clinical Trial Optimization'],
+    pricing: '$10,000 - $100,000/project',
+    category: 'Healthcare AI',
+    link: 'https://aidrugdiscovery.ziontechgroup.com'
+  },
+  {
+    title: 'Autonomous Vehicle AI',
+    description: 'AI systems for autonomous vehicles including perception, planning, and control algorithms.',
+    icon: Car,
+    features: ['Computer Vision', 'Path Planning', 'Sensor Fusion', 'Safety Systems'],
+    pricing: '$15,000 - $150,000/project',
+    category: 'Autonomous Systems',
+    link: 'https://autonomousai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Climate Modeling',
+    description: 'Advanced climate prediction and environmental impact analysis using machine learning.',
+    icon: Globe,
+    features: ['Climate Prediction', 'Impact Analysis', 'Weather Forecasting', 'Sustainability Planning'],
+    pricing: '$8,000 - $60,000/project',
+    category: 'Climate AI',
+    link: 'https://climateai.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum-AI Hybrid Computing',
+    description: 'Hybrid quantum-classical AI algorithms for optimization and machine learning problems.',
+    icon: Zap,
+    features: ['Quantum Algorithms', 'Hybrid Computing', 'Optimization Problems', 'Quantum ML'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Quantum AI',
+    link: 'https://quantumai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Space Analytics',
+    description: 'Satellite data analysis and space mission optimization using advanced AI algorithms.',
+    icon: Rocket,
+    features: ['Satellite Analysis', 'Mission Optimization', 'Space Weather', 'Orbital Mechanics'],
+    pricing: '$12,000 - $120,000/project',
+    category: 'Space AI',
+    link: 'https://spaceai.ziontechgroup.com'
+  },
+  {
+    title: 'Neural Architecture Search',
+    description: 'Automated neural network design and optimization for specific tasks and constraints.',
+    icon: Network,
+    features: ['Auto Architecture', 'Task Optimization', 'Constraint Handling', 'Performance Tuning'],
+    pricing: '$5,000 - $50,000/project',
+    category: 'AutoML',
+    link: 'https://neuralsearch.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Materials Science',
+    description: 'Machine learning for materials discovery, property prediction, and design optimization.',
+    icon: Building,
+    features: ['Materials Discovery', 'Property Prediction', 'Design Optimization', 'Simulation'],
+    pricing: '$8,000 - $80,000/project',
+    category: 'Materials AI',
+    link: 'https://materialsai.ziontechgroup.com'
+  },
+  {
+    title: 'Federated Learning Platform',
+    description: 'Privacy-preserving machine learning with federated learning across distributed datasets.',
+    icon: Lock,
+    features: ['Privacy Preservation', 'Distributed Training', 'Model Aggregation', 'Secure Communication'],
+    pricing: '$6,000 - $60,000/project',
+    category: 'Privacy AI',
+    link: 'https://federatedlearning.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Robotics Control',
+    description: 'Advanced AI control systems for industrial and service robotics applications.',
+    icon: Settings,
+    features: ['Motion Planning', 'Object Recognition', 'Manipulation Control', 'Safety Systems'],
+    pricing: '$10,000 - $100,000/project',
+    category: 'Robotics AI',
+    link: 'https://roboticsai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Financial Trading',
+    description: 'Algorithmic trading systems with AI-driven market analysis and automated execution.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Algorithmic Trading', 'Risk Management', 'Portfolio Optimization'],
+    pricing: '$15,000 - $150,000/project',
+    category: 'FinTech AI',
+    link: 'https://tradingai.ziontechgroup.com'
   }
 ];
 

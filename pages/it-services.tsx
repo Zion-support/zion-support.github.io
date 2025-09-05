@@ -33,7 +33,9 @@ import {
   Kanban,
   DollarSign,
   Code,
-  Rocket
+  Rocket,
+  Brain,
+  Sprout
 } from 'lucide-react';
 
 const itServices = [
@@ -416,6 +418,142 @@ const itServices = [
     pricing: '$12,000 - $80,000/project',
     category: 'Monitoring Solutions',
     link: 'https://enterprisemonitoring.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Distributed edge computing solutions for low-latency applications and IoT deployments.',
+    icon: Cpu,
+    features: ['Edge Nodes', 'Low-latency Processing', 'IoT Integration', 'Distributed Management'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Edge Computing',
+    popular: true,
+    link: 'https://edgecomputing.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Computing Readiness',
+    description: 'Preparation and integration services for quantum computing technologies and hybrid systems.',
+    icon: Zap,
+    features: ['Quantum Readiness Assessment', 'Hybrid Systems', 'Algorithm Development', 'Future-proofing'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Quantum Computing',
+    link: 'https://quantumreadiness.ziontechgroup.com'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Complete zero trust security implementation with identity verification and micro-segmentation.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'Advanced Security',
+    link: 'https://zerotrust.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, deployment, and optimization for enterprise and industrial applications.',
+    icon: Wifi,
+    features: ['5G Network Design', 'Deployment Services', 'Performance Optimization', 'IoT Integration'],
+    pricing: '$30,000 - $300,000/project',
+    category: '5G Networks',
+    link: 'https://5gnetworks.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Blockchain network setup, smart contract development, and decentralized application deployment.',
+    icon: Lock,
+    features: ['Blockchain Setup', 'Smart Contracts', 'DApp Development', 'Consensus Mechanisms'],
+    pricing: '$15,000 - $120,000/project',
+    category: 'Blockchain',
+    link: 'https://blockchaininfra.ziontechgroup.com'
+  },
+  {
+    title: 'AI Infrastructure & MLOps',
+    description: 'Complete AI infrastructure setup with MLOps pipelines and model deployment platforms.',
+    icon: Brain,
+    features: ['MLOps Pipelines', 'Model Deployment', 'GPU Clusters', 'Model Monitoring'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'AI Infrastructure',
+    link: 'https://aiinfrastructure.ziontechgroup.com'
+  },
+  {
+    title: 'Hyperconverged Infrastructure',
+    description: 'HCI solutions combining compute, storage, and networking in a single platform.',
+    icon: Server,
+    features: ['HCI Design', 'Storage Virtualization', 'Network Integration', 'Management Platform'],
+    pricing: '$40,000 - $400,000/project',
+    category: 'HCI',
+    link: 'https://hci.ziontechgroup.com'
+  },
+  {
+    title: 'Software-Defined Everything',
+    description: 'SDN, SD-WAN, and software-defined storage solutions for modern infrastructure.',
+    icon: Network,
+    features: ['SDN Implementation', 'SD-WAN Deployment', 'Software-defined Storage', 'Orchestration'],
+    pricing: '$20,000 - $180,000/project',
+    category: 'Software-Defined',
+    link: 'https://sdx.ziontechgroup.com'
+  },
+  {
+    title: 'Green IT & Sustainability',
+    description: 'Sustainable IT solutions with energy efficiency and carbon footprint reduction.',
+    icon: Sprout,
+    features: ['Energy Efficiency', 'Carbon Tracking', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$10,000 - $80,000/project',
+    category: 'Green IT',
+    link: 'https://greenit.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Twin Technology',
+    description: 'Digital twin implementation for physical assets, processes, and systems monitoring.',
+    icon: Monitor,
+    features: ['Asset Modeling', 'Real-time Monitoring', 'Predictive Analytics', 'Simulation'],
+    pricing: '$30,000 - $250,000/project',
+    category: 'Digital Twins',
+    link: 'https://digitaltwins.ziontechgroup.com'
+  },
+  {
+    title: 'Extended Reality (XR) Infrastructure',
+    description: 'AR/VR infrastructure setup and management for enterprise applications.',
+    icon: Smartphone,
+    features: ['XR Hardware Setup', 'Content Management', 'User Management', 'Analytics'],
+    pricing: '$15,000 - $120,000/project',
+    category: 'XR Infrastructure',
+    link: 'https://xrinfrastructure.ziontechgroup.com'
+  },
+  {
+    title: 'API Gateway & Management',
+    description: 'Comprehensive API management platform with security, monitoring, and developer tools.',
+    icon: Code,
+    features: ['API Gateway', 'Security Policies', 'Rate Limiting', 'Developer Portal'],
+    pricing: '$8,000 - $60,000/project',
+    category: 'API Management',
+    link: 'https://apimanagement.ziontechgroup.com'
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Microservices design, implementation, and orchestration for scalable applications.',
+    icon: Settings,
+    features: ['Service Design', 'Container Orchestration', 'Service Mesh', 'Monitoring'],
+    pricing: '$25,000 - $200,000/project',
+    category: 'Microservices',
+    link: 'https://microservices.ziontechgroup.com'
+  },
+  {
+    title: 'IT Disaster Recovery as a Service',
+    description: 'Comprehensive disaster recovery solutions with automated failover and testing.',
+    icon: HardDrive,
+    features: ['Automated Failover', 'Recovery Testing', 'RTO/RPO Optimization', 'Cloud Backup'],
+    pricing: '$5,000 - $50,000/month',
+    category: 'DRaaS',
+    link: 'https://draas.ziontechgroup.com'
+  },
+  {
+    title: 'IT Governance & Risk Management',
+    description: 'Comprehensive IT governance framework with risk assessment and compliance management.',
+    icon: Shield,
+    features: ['Risk Assessment', 'Compliance Management', 'Policy Development', 'Audit Support'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'IT Governance',
+    link: 'https://itgovernance.ziontechgroup.com'
   }
 ];
 

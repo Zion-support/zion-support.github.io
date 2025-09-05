@@ -14,19 +14,19 @@ const stats = [
 const services = [
   {
     title: "AI Services",
-    description: "Cutting-edge artificial intelligence solutions",
+    description: "Revolutionary artificial intelligence solutions including LLM fine-tuning, edge AI deployment, multimodal AI platforms, and specialized AI applications for healthcare, finance, and autonomous systems. Transform your business with cutting-edge machine learning and deep learning technologies.",
     icon: Brain,
     href: "/ai-services",
   },
   {
     title: "IT Services", 
-    description: "Comprehensive information technology services",
+    description: "Comprehensive information technology services covering cloud infrastructure, cybersecurity, edge computing, quantum computing readiness, zero trust security, 5G networks, and modern IT solutions. Enterprise-grade technology services to power your digital transformation.",
     icon: Network,
     href: "/it-services",
   },
   {
     title: "Micro SaaS",
-    description: "Scalable software as a service solutions",
+    description: "Innovative micro software-as-a-service solutions including AI-powered tools, automation platforms, analytics dashboards, and specialized business applications. Scalable, cost-effective solutions designed to solve specific business challenges with modern technology.",
     icon: Cloud,
     href: "/micro-saas",
   }
@@ -61,7 +61,8 @@ export default function HomePage() {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services. 
-              We deliver innovative micro SaaS solutions, cutting-edge AI services, and comprehensive IT solutions to help businesses thrive in the digital age.
+              We deliver innovative micro SaaS solutions, cutting-edge AI services, and comprehensive IT solutions to help businesses thrive in the digital age. 
+              From quantum computing readiness to edge AI deployment, we provide enterprise-grade technology solutions that drive innovation and growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
@@ -89,7 +90,8 @@ export default function HomePage() {
               Our Core Services
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              We provide comprehensive technology solutions to help your business thrive in the digital age. From innovative micro SaaS applications to cutting-edge AI services and enterprise IT solutions.
+              We provide comprehensive technology solutions to help your business thrive in the digital age. From innovative micro SaaS applications to cutting-edge AI services and enterprise IT solutions. 
+              Our expertise spans across 50+ specialized services including quantum computing, edge AI, zero trust security, and advanced analytics platforms designed to accelerate your digital transformation.
             </p>
           </motion.div>
 
