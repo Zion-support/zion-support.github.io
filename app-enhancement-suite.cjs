@@ -13,7 +13,18 @@ class AppEnhancementSuite {
   
   createPerformanceOptimizations() {
     this.log('⚡ Creating Performance Optimizations');
-    const configPath = path.join(this.projectRoot, 'performance-config.json');
+    // Create performance configuration
+    const performanceConfig = {
+      'bundleOptimization': true,
+      'codeSplitting': true,
+      'treeShaking': true,
+      'minification': true
+    };
+    
+    fs.writeFileSync(
+      path.join(this.projectRoot, 'performance-config.json'),
+      JSON.stringify(performanceConfig, null, 2)
+    );
     this.enhancements.push('Performance optimization configuration created');
   }
   
@@ -136,14 +147,14 @@ class AppEnhancementSuite {
       enhancements: this.enhancements,
       status: 'completed'
     };
+    
+    // Write enhancement report
+    fs.writeFileSync(
+      path.join(this.projectRoot, 'enhancement-report.json'),
+      JSON.stringify(report, null, 2)
+    );
 
-    const securityHeaders = {
-      'X-Content-Type-Options': 'nosniff',
-      'X-Frame-Options': 'DENY',
-      'X-XSS-Protection': '1; mode=block',
-      'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
-      'Content-Security-Policy': "default-src 'self'"
-    };
+    // Security headers are already configured in createSecurityEnhancements
     this.enhancements.push('Security headers configuration created');
   };
   createHealthCheck() {
@@ -170,7 +181,13 @@ class AppEnhancementSuite {
         }
       }
     };
+    
+    // Write health check configuration
+    fs.writeFileSync(
+      path.join(this.projectRoot, 'health-check-config.json'),
+      JSON.stringify(healthCheckConfig, null, 2)
+    );
     this.enhancements.push('Health check endpoint created');
-  };
+  }
 };
 module.exports = AppEnhancementSuite;
