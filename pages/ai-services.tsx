@@ -162,7 +162,7 @@ export default function AIServicesPage() {
     ],
     marketPrice: '$3,500-7,500/month',
     setupTime: '2-3 weeks',
-    targetUsers: 'Customer Service, Content, Legal, Healthcare'
+    targetUsers: 'Customer Service, Content, Legal, Healthcare',
   },
   {
     id: 4,

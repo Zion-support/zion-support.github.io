@@ -25,8 +25,6 @@ import {
   GraduationCap,
   Building
 } from 'lucide-react';
-
->>>>>>> main
 const solutions = [
   {
     title: 'Enterprise Solutions',
@@ -405,6 +403,5 @@ export default function SolutionsPage() {
         </section>
       </div>
     </>
->>>>>>> main
   );
 }
