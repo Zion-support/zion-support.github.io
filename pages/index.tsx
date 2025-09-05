@@ -17,30 +17,33 @@ const stats = [
 const services = [
   {
     title: "AI Services",
-    description: "100+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, autonomous systems, and advanced analytics with real-world applications",
+    description: "100+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, business automation, content generation, and advanced analytics with real-world applications",
     icon: Brain,
     href: "/ai-services",
     count: "100+ Solutions",
-    pricing: "Starting at $2,500/month",
-    marketPrice: "$4,000-15,000/month",
+    pricing: "Starting at $1,500/month",
+    marketPrice: "$2,500-15,000/month",
     benefits: ["40-60% accuracy improvement", "80% automation", "25-35% ROI increase"]
   },
   {
     title: "IT Services", 
-    description: "85+ comprehensive IT services from cloud infrastructure to cybersecurity, quantum computing, zero-trust architecture, and enterprise digital transformation",
+    description: "85+ comprehensive IT services from cloud infrastructure to cybersecurity, DevOps automation, managed services, and enterprise digital transformation",
     icon: Network,
     href: "/it-services",
     count: "85+ Services",
-    pricing: "Starting at $150/hour",
-    marketPrice: "$200-500/hour",
+    pricing: "Starting at $1,000/month",
+    marketPrice: "$2,000-15,000/month",
     benefits: ["99.9% uptime", "50% cost reduction", "24/7 support"]
   },
   {
     title: "Micro SaaS",
-    description: "120+ innovative micro SaaS solutions for modern businesses across all industries with real-time pricing, market analysis, and instant deployment",
+    description: "120+ innovative micro SaaS solutions for modern businesses including AI-powered lead generation, smart scheduling, customer support automation, and financial analytics",
     icon: Cloud,
     href: "/micro-saas",
-    price: "Starting at $1,500/month"
+    count: "120+ Solutions",
+    pricing: "Starting at $800/month",
+    marketPrice: "$1,500-7,500/month",
+    benefits: ["300% lead increase", "70% time savings", "60% cost reduction"]
   }
 ];
 
@@ -238,32 +241,36 @@ export default function HomePage() {
               })}
             </div>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (
-              <motion.div 
-                key={index}
-                className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="text-3xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <ul className="text-sm text-gray-500 space-y-2 mb-4">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx}>• {feature}</li>
-                  ))}
-                </ul>
-                <div className="mt-4">
-                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                </div>
-              </motion.div>
-            ))}
+        </section>
+
+        {/* Featured Services Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredServices.map((service, index) => (
+                <motion.div 
+                  key={index}
+                  className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                >
+                  <div className="text-3xl mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <ul className="text-sm text-gray-500 space-y-2 mb-4">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx}>• {feature}</li>
+                    ))}
+                  </ul>
+                  <div className="mt-4">
+                    <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Stats Section */}
       <section className="py-20 bg-white">
@@ -277,43 +284,11 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                >
-                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Market Position & Pricing Section */}
-        <section className="py-20 bg-gray-100">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why Choose Zion Tech Group?</h2>
-              <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-                We deliver cutting-edge technology solutions with competitive pricing and unmatched expertise.
-                Our comprehensive service portfolio covers everything from micro SaaS development to enterprise AI solutions.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                <div className="text-gray-600">{stat.label}</div>
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-600 font-medium">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -337,22 +312,19 @@ export default function HomePage() {
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-4">💰 Competitive Pricing</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Micro SaaS: $19 - $4,999/month</li>
-                  <li>• IT Services: $120 - $500/hour</li>
-                  <li>• AI Solutions: $1,000 - $1M/project</li>
-                  <li>• Blockchain: $50K - $500K/project</li>
-                  <li>• Quantum Computing: $100K - $1M/project</li>
-                  <li>• Transparent, no hidden fees</li>
-                </ul>
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">{item.icon}</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
               </motion.div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Contact CTA Section */}
       <section className="py-20 bg-blue-600 text-white">
@@ -385,6 +357,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </div>
     </Layout>
   );
 }

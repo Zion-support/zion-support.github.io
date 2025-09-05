@@ -15,94 +15,233 @@ import {
   MapPin,
   Users,
   Shield,
-  Globe
+  Globe,
+  Calendar,
+  FileText,
+  MessageSquare,
+  DollarSign,
+  Package,
+  ClipboardList,
+  ShoppingCart
 } from 'lucide-react';
 import Layout from './components/Layout';
 
 const microSaasSolutions = [
   {
-    title: "Workflow Automation",
-    description: "Streamline business processes with intelligent automation tools",
-    icon: Zap,
+    title: "AI-Powered Lead Generation",
+    description: "Automated lead discovery, qualification, and nurturing using advanced AI algorithms",
+    icon: Users,
     features: [
-      "Process Automation",
-      "Task Scheduling",
-      "Data Integration",
-      "Custom Workflows",
-      "API Integrations",
-      "Real-time Notifications"
+      "AI Lead Scoring & Qualification",
+      "Automated Prospect Research",
+      "Multi-channel Lead Capture",
+      "Personalized Outreach Sequences",
+      "CRM Integration & Sync",
+      "Real-time Lead Analytics",
+      "Email & Social Media Automation",
+      "Lead Nurturing Workflows"
     ],
-    price: "Starting at $1,500/month"
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,500-5,000/month",
+    benefits: ["Increase qualified leads by 300%", "Reduce lead cost by 60%", "Save 25 hours/week"]
   },
   {
-    title: "Data Processing Tools",
-    description: "Powerful data analysis and processing solutions",
-    icon: BarChart3,
+    title: "Smart Appointment Scheduling",
+    description: "Intelligent scheduling system with AI-powered optimization and automated reminders",
+    icon: Calendar,
     features: [
-      "Data Visualization",
-      "ETL Processes",
-      "Real-time Analytics",
-      "Custom Dashboards",
-      "Report Generation",
-      "Data Export/Import"
+      "AI-Powered Time Optimization",
+      "Multi-calendar Integration",
+      "Automated Reminders & Follow-ups",
+      "Rescheduling & Cancellation Handling",
+      "Payment Processing Integration",
+      "Video Conference Integration",
+      "Customer Self-Service Portal",
+      "Analytics & Performance Tracking"
     ],
-    price: "Starting at $2,000/month"
+    price: "Starting at $800/month",
+    marketPrice: "$1,500-3,000/month",
+    benefits: ["Reduce no-shows by 70%", "Increase bookings by 45%", "Save 15 hours/week"]
   },
   {
-    title: "API Integration Services",
-    description: "Connect your systems with seamless API solutions",
-    icon: Code,
+    title: "AI Content Management System",
+    description: "Intelligent content creation, optimization, and distribution platform",
+    icon: FileText,
     features: [
-      "REST API Development",
-      "Third-party Integrations",
-      "Webhook Management",
-      "API Documentation",
-      "Rate Limiting",
-      "Authentication & Security"
+      "AI Content Generation",
+      "SEO Optimization",
+      "Multi-platform Publishing",
+      "Content Calendar Management",
+      "Performance Analytics",
+      "Brand Voice Consistency",
+      "Automated Social Media Posting",
+      "Content Collaboration Tools"
     ],
-    price: "Starting at $1,800/month"
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,800-5,500/month",
+    benefits: ["Generate 50+ pieces daily", "Increase engagement by 80%", "Reduce content costs by 75%"]
   },
   {
-    title: "Custom Dashboard Solutions",
-    description: "Tailored dashboards for your business needs",
-    icon: Settings,
+    title: "Customer Support Automation",
+    description: "AI-powered customer service with intelligent ticket routing and automated responses",
+    icon: MessageSquare,
     features: [
-      "Real-time Monitoring",
-      "Custom Widgets",
-      "User Management",
-      "Role-based Access",
-      "Mobile Responsive",
-      "Export Capabilities"
+      "AI Chatbot & Virtual Assistant",
+      "Intelligent Ticket Routing",
+      "Automated Response Generation",
+      "Multi-channel Support (Email, Chat, Phone)",
+      "Knowledge Base Integration",
+      "Sentiment Analysis",
+      "Escalation Management",
+      "Performance Analytics"
     ],
-    price: "Starting at $1,200/month"
+    price: "Starting at $1,000/month",
+    marketPrice: "$2,000-4,500/month",
+    benefits: ["Reduce response time by 90%", "Handle 80% of queries automatically", "Improve satisfaction by 60%"]
   },
   {
-    title: "SaaS Platform Development",
-    description: "Complete SaaS solutions from concept to deployment",
-    icon: Cloud,
+    title: "Financial Analytics & Forecasting",
+    description: "AI-powered financial insights, budgeting, and predictive analytics for small businesses",
+    icon: DollarSign,
     features: [
-      "Multi-tenant Architecture",
-      "Subscription Management",
-      "Payment Integration",
-      "User Onboarding",
-      "Analytics & Reporting",
-      "Scalable Infrastructure"
+      "Automated Financial Reporting",
+      "Cash Flow Forecasting",
+      "Expense Categorization & Tracking",
+      "Profit/Loss Analysis",
+      "Tax Preparation Assistance",
+      "Investment Recommendations",
+      "Risk Assessment",
+      "Compliance Monitoring"
     ],
-    price: "Starting at $3,500/month"
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,500-7,000/month",
+    benefits: ["Improve financial accuracy by 95%", "Reduce accounting time by 70%", "Increase profitability by 25%"]
   },
   {
-    title: "Business Intelligence Tools",
-    description: "Advanced BI solutions for data-driven decisions",
-    icon: BarChart3,
+    title: "Inventory Management AI",
+    description: "Smart inventory optimization with demand forecasting and automated reordering",
+    icon: Package,
     features: [
-      "Interactive Dashboards",
-      "Predictive Analytics",
-      "Data Mining",
-      "Custom Reports",
-      "Machine Learning Integration",
-      "Real-time Insights"
+      "AI Demand Forecasting",
+      "Automated Reorder Points",
+      "Multi-location Inventory Tracking",
+      "Supplier Management",
+      "Cost Optimization",
+      "Waste Reduction Analytics",
+      "Integration with POS Systems",
+      "Real-time Stock Alerts"
     ],
-    price: "Starting at $2,500/month"
+    price: "Starting at $1,400/month",
+    marketPrice: "$2,500-5,500/month",
+    benefits: ["Reduce stockouts by 85%", "Lower inventory costs by 30%", "Increase turnover by 40%"]
+  },
+  {
+    title: "Social Media Management AI",
+    description: "Automated social media posting, engagement, and analytics with AI optimization",
+    icon: Globe,
+    features: [
+      "AI Content Creation & Curation",
+      "Optimal Posting Time Detection",
+      "Hashtag Research & Optimization",
+      "Engagement Automation",
+      "Influencer Identification",
+      "Crisis Management",
+      "Competitor Analysis",
+      "ROI Tracking & Analytics"
+    ],
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,200-4,800/month",
+    benefits: ["Increase engagement by 120%", "Save 20 hours/week", "Grow followers by 200%"]
+  },
+  {
+    title: "Email Marketing Automation",
+    description: "Advanced email marketing with AI-powered personalization and optimization",
+    icon: Mail,
+    features: [
+      "AI-Powered Personalization",
+      "Behavioral Trigger Automation",
+      "A/B Testing & Optimization",
+      "List Segmentation & Management",
+      "Deliverability Optimization",
+      "Template Design & Creation",
+      "Performance Analytics",
+      "GDPR Compliance Tools"
+    ],
+    price: "Starting at $900/month",
+    marketPrice: "$1,800-3,500/month",
+    benefits: ["Increase open rates by 65%", "Boost click-through by 80%", "Improve conversions by 45%"]
+  },
+  {
+    title: "Project Management AI",
+    description: "Intelligent project management with AI-powered task optimization and resource allocation",
+    icon: ClipboardList,
+    features: [
+      "AI Task Prioritization",
+      "Resource Allocation Optimization",
+      "Deadline Prediction & Alerts",
+      "Team Performance Analytics",
+      "Risk Assessment & Mitigation",
+      "Automated Progress Reporting",
+      "Integration with Popular Tools",
+      "Predictive Project Insights"
+    ],
+    price: "Starting at $1,300/month",
+    marketPrice: "$2,400-4,800/month",
+    benefits: ["Improve project delivery by 50%", "Reduce project costs by 35%", "Increase team productivity by 60%"]
+  },
+  {
+    title: "HR & Recruitment AI",
+    description: "AI-powered human resources management with automated screening and candidate matching",
+    icon: Users,
+    features: [
+      "AI Resume Screening",
+      "Candidate Matching & Ranking",
+      "Interview Scheduling Automation",
+      "Skills Assessment Tools",
+      "Employee Onboarding Automation",
+      "Performance Review Management",
+      "Compliance Monitoring",
+      "Talent Analytics & Insights"
+    ],
+    price: "Starting at $1,600/month",
+    marketPrice: "$3,000-6,500/month",
+    benefits: ["Reduce hiring time by 70%", "Improve candidate quality by 85%", "Lower recruitment costs by 50%"]
+  },
+  {
+    title: "E-commerce Optimization AI",
+    description: "AI-powered e-commerce tools for pricing, recommendations, and conversion optimization",
+    icon: ShoppingCart,
+    features: [
+      "Dynamic Pricing Optimization",
+      "AI Product Recommendations",
+      "Cart Abandonment Recovery",
+      "Inventory Demand Forecasting",
+      "Customer Behavior Analysis",
+      "Conversion Rate Optimization",
+      "Fraud Detection",
+      "Performance Analytics"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,500-7,500/month",
+    benefits: ["Increase sales by 40%", "Reduce cart abandonment by 60%", "Improve customer lifetime value by 55%"]
+  },
+  {
+    title: "Document Processing AI",
+    description: "Automated document processing, extraction, and management using AI technology",
+    icon: FileText,
+    features: [
+      "OCR & Text Extraction",
+      "Document Classification",
+      "Automated Data Entry",
+      "Contract Analysis",
+      "Compliance Checking",
+      "Version Control",
+      "Search & Retrieval",
+      "Workflow Automation"
+    ],
+    price: "Starting at $1,100/month",
+    marketPrice: "$2,200-4,200/month",
+    benefits: ["Process documents 10x faster", "Reduce errors by 95%", "Save 30 hours/week"]
   }
 ];
 
@@ -235,16 +374,41 @@ export default function MicroSaasPage() {
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">{solution.title}</h3>
                 <p className="text-gray-600 mb-4">{solution.description}</p>
                 <ul className="text-sm text-gray-500 space-y-2 mb-4">
-                  {solution.features.map((feature, idx) => (
+                  {solution.features.slice(0, 4).map((feature, idx) => (
                     <li key={idx} className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <div className="mt-4">
-                  <span className="text-2xl font-bold text-purple-600">{solution.price}</span>
+                <div className="mb-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-2xl font-bold text-purple-600">{solution.price}</span>
+                    {solution.marketPrice && (
+                      <span className="text-sm text-gray-500 line-through">
+                        {solution.marketPrice}
+                      </span>
+                    )}
+                  </div>
+                  {solution.marketPrice && (
+                    <div className="text-xs text-green-600 font-medium">
+                      Save up to 50% vs market rate
+                    </div>
+                  )}
                 </div>
+                {solution.benefits && (
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Benefits:</h4>
+                    <ul className="text-xs text-gray-600 space-y-1">
+                      {solution.benefits.slice(0, 2).map((benefit, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <ArrowRight className="w-3 h-3 text-purple-500 mr-1" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>

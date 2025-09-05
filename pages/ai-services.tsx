@@ -150,6 +150,195 @@ const aiServices = [
     marketPrice: '$3,500-7,500/month',
     setupTime: '2-3 weeks',
     targetUsers: 'Customer Service, Content, Legal, Healthcare'
+  },
+  {
+    id: 4,
+    title: 'AI-Powered Business Automation',
+    description: 'Intelligent automation solutions that handle repetitive tasks, customer interactions, and business processes.',
+    icon: Bot,
+    category: 'Automation',
+    price: 'Starting at $1,800/month',
+    features: [
+      'Workflow automation & orchestration',
+      'Intelligent document processing',
+      'Customer service automation',
+      'Lead qualification & scoring',
+      'Appointment scheduling & reminders',
+      'Email & SMS automation',
+      'Data entry & validation',
+      'Process optimization recommendations'
+    ],
+    benefits: [
+      'Reduce manual work by 70-85%',
+      'Improve response time by 90%',
+      'Increase lead conversion by 40%',
+      'Save 20-30 hours per week'
+    ],
+    marketPrice: '$3,000-6,000/month',
+    setupTime: '1-3 weeks',
+    targetUsers: 'Small Business, E-commerce, Real Estate, Professional Services'
+  },
+  {
+    id: 5,
+    title: 'AI Content Generation & Marketing',
+    description: 'Automated content creation, social media management, and marketing campaign optimization using AI.',
+    icon: FileText,
+    category: 'Content & Marketing',
+    price: 'Starting at $1,500/month',
+    features: [
+      'Blog post & article generation',
+      'Social media content creation',
+      'Email marketing automation',
+      'SEO-optimized content',
+      'Ad copy & creative generation',
+      'Content calendar management',
+      'Brand voice consistency',
+      'Performance analytics & optimization'
+    ],
+    benefits: [
+      'Generate 50+ pieces of content daily',
+      'Increase engagement by 60%',
+      'Reduce content creation costs by 80%',
+      'Improve SEO rankings by 45%'
+    ],
+    marketPrice: '$2,500-5,000/month',
+    setupTime: '1-2 weeks',
+    targetUsers: 'Marketing Agencies, E-commerce, SaaS, Content Creators'
+  },
+  {
+    id: 6,
+    title: 'AI Data Analytics & Insights',
+    description: 'Advanced data analysis, predictive insights, and business intelligence powered by artificial intelligence.',
+    icon: BarChart3,
+    category: 'Analytics',
+    price: 'Starting at $2,000/month',
+    features: [
+      'Predictive analytics & forecasting',
+      'Customer behavior analysis',
+      'Market trend identification',
+      'Anomaly detection & alerting',
+      'Custom dashboard creation',
+      'Real-time data processing',
+      'Automated reporting',
+      'ROI & performance tracking'
+    ],
+    benefits: [
+      'Identify trends 3x faster',
+      'Improve decision accuracy by 65%',
+      'Reduce analysis time by 75%',
+      'Increase revenue by 25-40%'
+    ],
+    marketPrice: '$3,500-8,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'E-commerce, Finance, Healthcare, Manufacturing'
+  },
+  {
+    id: 7,
+    title: 'AI Voice & Speech Solutions',
+    description: 'Voice recognition, speech synthesis, and conversational AI for enhanced customer experiences.',
+    icon: Mic,
+    category: 'Voice AI',
+    price: 'Starting at $2,500/month',
+    features: [
+      'Voice-to-text transcription',
+      'Text-to-speech synthesis',
+      'Voice command processing',
+      'Call center automation',
+      'Voice biometrics & authentication',
+      'Multi-language voice support',
+      'Real-time voice analysis',
+      'Custom voice model training'
+    ],
+    benefits: [
+      'Process 1000+ calls per hour',
+      'Reduce call center costs by 60%',
+      'Improve customer satisfaction by 50%',
+      'Enable 24/7 voice support'
+    ],
+    marketPrice: '$4,000-10,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Call Centers, Healthcare, Customer Service, Accessibility'
+  },
+  {
+    id: 8,
+    title: 'AI-Powered Search & Recommendation',
+    description: 'Intelligent search engines and recommendation systems that understand user intent and preferences.',
+    icon: Search,
+    category: 'Search & Recommendations',
+    price: 'Starting at $1,800/month',
+    features: [
+      'Semantic search capabilities',
+      'Personalized recommendations',
+      'Product discovery optimization',
+      'Search analytics & insights',
+      'Auto-complete & suggestions',
+      'Multi-modal search (text, image, voice)',
+      'Real-time search optimization',
+      'A/B testing for search algorithms'
+    ],
+    benefits: [
+      'Increase search conversion by 45%',
+      'Improve user engagement by 55%',
+      'Reduce bounce rate by 30%',
+      'Boost average order value by 25%'
+    ],
+    marketPrice: '$3,000-7,000/month',
+    setupTime: '2-3 weeks',
+    targetUsers: 'E-commerce, SaaS, Media, Education'
+  },
+  {
+    id: 9,
+    title: 'AI Fraud Detection & Security',
+    description: 'Advanced fraud detection, cybersecurity, and risk assessment using machine learning algorithms.',
+    icon: Shield,
+    category: 'Security',
+    price: 'Starting at $3,000/month',
+    features: [
+      'Real-time fraud detection',
+      'Anomaly detection & alerting',
+      'Risk scoring & assessment',
+      'Identity verification',
+      'Transaction monitoring',
+      'Threat intelligence analysis',
+      'Compliance monitoring',
+      'Automated response systems'
+    ],
+    benefits: [
+      'Reduce fraud losses by 85%',
+      'Improve detection accuracy by 95%',
+      'Decrease false positives by 70%',
+      'Ensure regulatory compliance'
+    ],
+    marketPrice: '$5,000-15,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Banking, E-commerce, Insurance, Fintech'
+  },
+  {
+    id: 10,
+    title: 'AI Process Optimization',
+    description: 'Intelligent process mining and optimization to identify bottlenecks and improve operational efficiency.',
+    icon: Settings,
+    category: 'Process Optimization',
+    price: 'Starting at $2,200/month',
+    features: [
+      'Process mining & analysis',
+      'Bottleneck identification',
+      'Workflow optimization',
+      'Resource allocation optimization',
+      'Performance monitoring',
+      'Predictive maintenance',
+      'Cost optimization',
+      'Continuous improvement recommendations'
+    ],
+    benefits: [
+      'Increase efficiency by 40-60%',
+      'Reduce operational costs by 30%',
+      'Improve process visibility by 90%',
+      'Eliminate bottlenecks automatically'
+    ],
+    marketPrice: '$4,000-9,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Manufacturing, Logistics, Healthcare, Finance'
   }
 ];
 
@@ -157,7 +346,14 @@ const categories = [
   { name: "All", count: aiServices.length },
   { name: "Machine Learning", count: aiServices.filter(s => s.category === "Machine Learning").length },
   { name: "Computer Vision", count: aiServices.filter(s => s.category === "Computer Vision").length },
-  { name: "NLP", count: aiServices.filter(s => s.category === "NLP").length }
+  { name: "NLP", count: aiServices.filter(s => s.category === "NLP").length },
+  { name: "Automation", count: aiServices.filter(s => s.category === "Automation").length },
+  { name: "Content & Marketing", count: aiServices.filter(s => s.category === "Content & Marketing").length },
+  { name: "Analytics", count: aiServices.filter(s => s.category === "Analytics").length },
+  { name: "Voice AI", count: aiServices.filter(s => s.category === "Voice AI").length },
+  { name: "Search & Recommendations", count: aiServices.filter(s => s.category === "Search & Recommendations").length },
+  { name: "Security", count: aiServices.filter(s => s.category === "Security").length },
+  { name: "Process Optimization", count: aiServices.filter(s => s.category === "Process Optimization").length }
 ];
 
 export default function AIServicesPage() {

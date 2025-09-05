@@ -36,6 +36,7 @@ export default function Layout({ title, description, children, keywords }: Layou
     { name: 'AI Services', href: '/ai-services', description: 'Machine Learning, NLP, Computer Vision' },
     { name: 'IT Services', href: '/it-services', description: 'Cloud, DevOps, Cybersecurity' },
     { name: 'Micro SaaS', href: '/micro-saas', description: 'Custom SaaS Solutions' },
+    { name: 'All Services', href: '/services-extended', description: 'Complete Service Portfolio' },
     { name: 'Blockchain', href: '/blockchain', description: 'Smart Contracts, DeFi, NFTs' },
     { name: 'IoT Solutions', href: '/iot', description: 'Connected Devices, Edge Computing' },
     { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security Audits, Compliance' }
@@ -139,7 +140,7 @@ export default function Layout({ title, description, children, keywords }: Layou
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
+                        className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50"
                         onMouseEnter={() => setIsServicesOpen(true)}
                         onMouseLeave={() => setIsServicesOpen(false)}
                       >
@@ -161,7 +162,7 @@ export default function Layout({ title, description, children, keywords }: Layou
                         </div>
                         <div className="border-t border-gray-200 mt-4 pt-4 px-6">
                           <Link 
-                            href="/services" 
+                            href="/services-extended" 
                             className="flex items-center text-blue-600 hover:text-blue-700 font-medium"
                           >
                             View All Services
@@ -189,7 +190,7 @@ export default function Layout({ title, description, children, keywords }: Layou
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
+                        className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50"
                         onMouseEnter={() => setIsSolutionsOpen(true)}
                         onMouseLeave={() => setIsSolutionsOpen(false)}
                       >
@@ -266,81 +267,87 @@ export default function Layout({ title, description, children, keywords }: Layou
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
-                  className="lg:hidden border-t border-gray-200"
+                  className="lg:hidden border-t border-gray-200 bg-white"
                 >
-                  <div className="py-4 space-y-2">
+                  <div className="py-4 space-y-1 max-h-96 overflow-y-auto">
                     <Link 
                       href="/" 
-                      className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
+                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg mx-2"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Home
                     </Link>
+                    
                     <div className="px-4 py-2">
-                      <div className="font-medium text-gray-900 mb-2">Services</div>
-                      <div className="space-y-1 ml-4">
+                      <div className="font-semibold text-gray-900 mb-3 text-sm uppercase tracking-wide">Services</div>
+                      <div className="space-y-1 ml-2">
                         {services.map((service, index) => (
                           <Link
                             key={index}
                             href={service.href}
-                            className="block py-1 text-sm text-gray-600 hover:text-blue-600"
+                            className="block py-2 px-3 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg"
                             onClick={() => setIsMenuOpen(false)}
                           >
-                            {service.name}
+                            <div className="font-medium">{service.name}</div>
+                            <div className="text-xs text-gray-500">{service.description}</div>
                           </Link>
                         ))}
                       </div>
                     </div>
+                    
                     <div className="px-4 py-2">
-                      <div className="font-medium text-gray-900 mb-2">Solutions</div>
-                      <div className="space-y-1 ml-4">
+                      <div className="font-semibold text-gray-900 mb-3 text-sm uppercase tracking-wide">Solutions</div>
+                      <div className="space-y-1 ml-2">
                         {solutions.map((solution, index) => (
                           <Link
                             key={index}
                             href={solution.href}
-                            className="block py-1 text-sm text-gray-600 hover:text-blue-600"
+                            className="block py-2 px-3 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg"
                             onClick={() => setIsMenuOpen(false)}
                           >
-                            {solution.name}
+                            <div className="font-medium">{solution.name}</div>
+                            <div className="text-xs text-gray-500">{solution.description}</div>
                           </Link>
                         ))}
                       </div>
                     </div>
+                    
                     <Link 
                       href="/pricing" 
-                      className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
+                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg mx-2"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Pricing
                     </Link>
                     <Link 
                       href="/about" 
-                      className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
+                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg mx-2"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       About
                     </Link>
                     <Link 
                       href="/contact" 
-                      className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
+                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg mx-2"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Contact
                     </Link>
-                    <div className="px-4 py-2 space-y-2">
+                    
+                    <div className="px-4 py-4 space-y-3 border-t border-gray-200 mt-4">
                       <Link 
                         href="/contact" 
-                        className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center"
+                        className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium text-center transition-colors"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Get Started
                       </Link>
                       <a 
                         href="tel:+13024640950" 
-                        className="block bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg font-medium text-center"
+                        className="block bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-3 rounded-lg font-medium text-center transition-colors"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        Call Now
+                        Call +1 302 464 0950
                       </a>
                     </div>
                   </div>
@@ -356,9 +363,9 @@ export default function Layout({ title, description, children, keywords }: Layou
         {/* Footer */}
         <footer className="bg-gray-900 text-white">
           <div className="container mx-auto px-4 py-16">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
               {/* Company Info */}
-              <div className="lg:col-span-1">
+              <div className="lg:col-span-2">
                 <div className="flex items-center space-x-2 mb-4">
                   <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-xl">Z</span>
@@ -368,24 +375,24 @@ export default function Layout({ title, description, children, keywords }: Layou
                     <div className="text-sm text-gray-400">Technology Solutions</div>
                   </div>
                 </div>
-                <p className="text-gray-400 mb-6">
-                  Leading provider of AI services, IT solutions, and innovative micro SAAS platforms. 
-                  We help businesses scale, automate, and innovate with cutting-edge technology.
+                <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+                  Leading provider of 305+ AI services, IT solutions, and innovative micro SaaS platforms. 
+                  We help businesses scale, automate, and innovate with cutting-edge technology and competitive pricing.
                 </p>
                 <div className="flex space-x-4">
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                     <Facebook className="w-5 h-5" />
                   </a>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                     <Twitter className="w-5 h-5" />
                   </a>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="w-5 h-5" />
                   </a>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                     <Instagram className="w-5 h-5" />
                   </a>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                     <Github className="w-5 h-5" />
                   </a>
                 </div>
@@ -395,16 +402,12 @@ export default function Layout({ title, description, children, keywords }: Layou
               <div>
                 <h3 className="text-lg font-semibold mb-4">Services</h3>
                 <ul className="space-y-2">
-                  {services.slice(0, 6).map((service, index) => (
-                    <li key={index}>
-                      <Link 
-                        href={service.href} 
-                        className="text-gray-400 hover:text-white transition-colors"
-                      >
-                        {service.name}
-                      </Link>
-                    </li>
-                  ))}
+                  <li><Link href="/ai-services" className="text-gray-400 hover:text-white transition-colors text-sm">AI Services</Link></li>
+                  <li><Link href="/it-services" className="text-gray-400 hover:text-white transition-colors text-sm">IT Services</Link></li>
+                  <li><Link href="/micro-saas" className="text-gray-400 hover:text-white transition-colors text-sm">Micro SaaS</Link></li>
+                  <li><Link href="/services-extended" className="text-gray-400 hover:text-white transition-colors text-sm">All Services</Link></li>
+                  <li><Link href="/cybersecurity" className="text-gray-400 hover:text-white transition-colors text-sm">Cybersecurity</Link></li>
+                  <li><Link href="/cloud-solutions" className="text-gray-400 hover:text-white transition-colors text-sm">Cloud Solutions</Link></li>
                 </ul>
               </div>
 
@@ -412,49 +415,46 @@ export default function Layout({ title, description, children, keywords }: Layou
               <div>
                 <h3 className="text-lg font-semibold mb-4">Solutions</h3>
                 <ul className="space-y-2">
-                  {solutions.slice(0, 6).map((solution, index) => (
-                    <li key={index}>
-                      <Link 
-                        href={solution.href} 
-                        className="text-gray-400 hover:text-white transition-colors"
-                      >
-                        {solution.name}
-                      </Link>
-                    </li>
-                  ))}
+                  <li><Link href="/solutions/enterprise" className="text-gray-400 hover:text-white transition-colors text-sm">Enterprise</Link></li>
+                  <li><Link href="/solutions/startup" className="text-gray-400 hover:text-white transition-colors text-sm">Startup</Link></li>
+                  <li><Link href="/solutions/industry" className="text-gray-400 hover:text-white transition-colors text-sm">Industry</Link></li>
+                  <li><Link href="/solutions/custom" className="text-gray-400 hover:text-white transition-colors text-sm">Custom</Link></li>
+                  <li><Link href="/ecommerce" className="text-gray-400 hover:text-white transition-colors text-sm">E-commerce</Link></li>
+                  <li><Link href="/healthcare" className="text-gray-400 hover:text-white transition-colors text-sm">Healthcare</Link></li>
                 </ul>
               </div>
 
-              {/* Contact Info */}
+              {/* Company & Contact */}
               <div>
-                <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
+                <h3 className="text-lg font-semibold mb-4">Company</h3>
+                <ul className="space-y-2 mb-6">
+                  <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors text-sm">About Us</Link></li>
+                  <li><Link href="/team" className="text-gray-400 hover:text-white transition-colors text-sm">Our Team</Link></li>
+                  <li><Link href="/careers" className="text-gray-400 hover:text-white transition-colors text-sm">Careers</Link></li>
+                  <li><Link href="/blog" className="text-gray-400 hover:text-white transition-colors text-sm">Blog</Link></li>
+                  <li><Link href="/case-studies" className="text-gray-400 hover:text-white transition-colors text-sm">Case Studies</Link></li>
+                  <li><Link href="/pricing" className="text-gray-400 hover:text-white transition-colors text-sm">Pricing</Link></li>
+                </ul>
+                
+                <h3 className="text-lg font-semibold mb-4">Contact</h3>
                 <div className="space-y-3">
                   <div className="flex items-start">
-                    <Phone className="w-5 h-5 mr-3 mt-1 text-blue-400" />
-                    <div>
-                      <div className="text-gray-400">Phone</div>
-                      <a href="tel:+13024640950" className="text-white hover:text-blue-400">
-                        +1 302 464 0950
-                      </a>
-                    </div>
+                    <Phone className="w-4 h-4 mr-2 mt-1 text-blue-400 flex-shrink-0" />
+                    <a href="tel:+13024640950" className="text-white hover:text-blue-400 text-sm">
+                      +1 302 464 0950
+                    </a>
                   </div>
                   <div className="flex items-start">
-                    <Mail className="w-5 h-5 mr-3 mt-1 text-blue-400" />
-                    <div>
-                      <div className="text-gray-400">Email</div>
-                      <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-blue-400">
-                        kleber@ziontechgroup.com
-                      </a>
-                    </div>
+                    <Mail className="w-4 h-4 mr-2 mt-1 text-blue-400 flex-shrink-0" />
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-blue-400 text-sm break-all">
+                      kleber@ziontechgroup.com
+                    </a>
                   </div>
                   <div className="flex items-start">
-                    <MapPin className="w-5 h-5 mr-3 mt-1 text-blue-400" />
-                    <div>
-                      <div className="text-gray-400">Address</div>
-                      <div className="text-white">
-                        364 E Main St STE 1008<br />
-                        Middletown DE 19709
-                      </div>
+                    <MapPin className="w-4 h-4 mr-2 mt-1 text-blue-400 flex-shrink-0" />
+                    <div className="text-white text-sm">
+                      364 E Main St STE 1008<br />
+                      Middletown DE 19709
                     </div>
                   </div>
                 </div>
@@ -465,9 +465,9 @@ export default function Layout({ title, description, children, keywords }: Layou
             <div className="border-t border-gray-800 mt-12 pt-8">
               <div className="flex flex-col md:flex-row justify-between items-center">
                 <div className="text-gray-400 text-sm mb-4 md:mb-0">
-                  © 2025 Zion Tech Group. All rights reserved.
+                  © 2025 Zion Tech Group. All rights reserved. | 305+ Services & Solutions
                 </div>
-                <div className="flex space-x-6 text-sm">
+                <div className="flex flex-wrap gap-4 text-sm">
                   <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
                     Privacy Policy
                   </Link>
@@ -476,6 +476,9 @@ export default function Layout({ title, description, children, keywords }: Layou
                   </Link>
                   <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors">
                     Cookie Policy
+                  </Link>
+                  <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors">
+                    Sitemap
                   </Link>
                 </div>
               </div>
