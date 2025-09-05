@@ -8,7 +8,7 @@ echo "Fixing merge conflicts in pages/ directory..."
 files_with_conflicts=$(grep -r "" src/ --include="*.js" --include="*.jsx" --include="*.ts" --include="*.tsx" -l)
 =======
 files_with_conflicts=$(find pages/ -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {} \;)
->>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-82f1
 
 for file in $files_with_conflicts; do
     echo "Fixing merge conflicts in: $file"
@@ -28,7 +28,7 @@ for file in $files_with_conflicts; do
     # Remove lines from ======= to >>>>>>> (inclusive)
     sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
     sed -i '/=======/,/>>>>>>> /d' "$file"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-82f1
     
     echo "Fixed: $file"
 done

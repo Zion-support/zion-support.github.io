@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+const React,{ useState,useEffect } from";react" import { motion } from";";framer-motion" import { ADVANCED_INNOVATIVE_SERVICES_2025 } from "./data/advancedInnovativeServices2025"" import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from";";./data/nextGenInnovativeServices2026" const AdvancedInnovativeServicesShowcase2026: React.FC = () => { const [selectedCategor,y,setSelectedCategory] = useState("";all") const [searchTerm,setSearchTerm] = useState("") const [selectedService,setSelectedService] = useState<any>(null) "";";"""
+=======
 import _React,{ useState,useEffect } from';react' import { motion } from';';framer-motion' import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '../data/advancedInnovativeServices2025'' import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from';';../data/nextGenInnovativeServices2026' const "AdvancedInnovativeServicesShowcase2026": _React.FC = () => { const [selectedCategor,y,setSelectedCategory] = useState('';all') const [searchTerm,setSearchTerm] = useState('') const [selectedService,setSelectedService] = useState<any>(null) '';';
+>>>>>>> main

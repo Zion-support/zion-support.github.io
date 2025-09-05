@@ -1,30 +1,5 @@
 <<<<<<< HEAD
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import InteractiveNavigation from '../components/InteractiveNavigation';
-
-describe('InteractiveNavigation', () => {
-  test('renders without crashing', () => {
-    render(<InteractiveNavigation />);
-    expect(screen.getByTestId('interactivenavigation')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
-    render(<InteractiveNavigation />);
-    // Add specific content tests here
-  });
-
-  test('handles user interactions', () => {
-    render(<InteractiveNavigation />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
-    render(<InteractiveNavigation />);
-    // Add styling tests here
-  });
-});
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import InteractiveNavigation from "./components/InteractiveNavigation" describe("InteractiveNavigation",() => {" test("renders without crashing",() => {" render(<InteractiveNavigation / / />) expect(screen.getByTestId("interactivenavigation")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<InteractiveNavigation / / />) }) test("handles user interactions",() => {" render(<InteractiveNavigation / / />) }) test("applies correct styling",() => {" render(<InteractiveNavigation / / />) }) })'"'"
 =======
 import _React from 'react"  import '@testing-library/jest-dom import InteractiveNavigation from '../components/InteractiveNavigation" describe('InteractiveNavigation',() => {' test('renders without crashing',() => {' render(<InteractiveNavigation / / />) expect(screen.getByTestId("interactivenavigation")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<InteractiveNavigation / / />) }) test('handles user interactions',() => {' render(<InteractiveNavigation / / />) }) test('applies correct styling',() => {' render(<InteractiveNavigation / / />) }) })
->>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
+>>>>>>> main

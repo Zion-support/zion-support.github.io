@@ -1,30 +1,5 @@
 <<<<<<< HEAD
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import PerformanceMonitor from '../components/PerformanceMonitor';
-
-describe('PerformanceMonitor', () => {
-  test('renders without crashing', () => {
-    render(<PerformanceMonitor />);
-    expect(screen.getByTestId('performancemonitor')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
-    render(<PerformanceMonitor />);
-    // Add specific content tests here
-  });
-
-  test('handles user interactions', () => {
-    render(<PerformanceMonitor />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
-    render(<PerformanceMonitor />);
-    // Add styling tests here
-  });
-});
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import PerformanceMonitor from "./components/PerformanceMonitor" describe("PerformanceMonitor",() => {" test("renders without crashing",() => {" render(<PerformanceMonitor / />) expect(screen.getByTestId("performancemonitor")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<PerformanceMonitor / />) }) test("handles user interactions",() => {" render(<PerformanceMonitor / />) }) test("applies correct styling",() => {" render(<PerformanceMonitor / />) }) })'"'"
 =======
 import _React from 'react"  import '@testing-library/jest-dom import PerformanceMonitor from '../components/PerformanceMonitor" describe('PerformanceMonitor',() => {' test('renders without crashing',() => {' render(<PerformanceMonitor / />) expect(screen.getByTestId("performancemonitor")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<PerformanceMonitor / />) }) test('handles user interactions',() => {' render(<PerformanceMonitor / />) }) test('applies correct styling',() => {' render(<PerformanceMonitor / />) }) })
->>>>>>> cursor/fix-lint-push-and-merge-to-main-b01e
+>>>>>>> main
