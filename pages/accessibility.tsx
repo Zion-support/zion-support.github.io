@@ -19,8 +19,6 @@ import {
 const accessibilityFeatures = [
   {
     icon: Eye,
-    title: "Visual Accessibility",
-    description: "High contrast themes, scalable fonts, and screen reader compatibility",
     features: [
       "WCAG 2.1 AA compliant color contrast",
       "Scalable text up to 200% without loss of functionality",
@@ -35,17 +33,11 @@ const accessibilityFeatures = [
   },
   {
     icon: Ear,
-    title: "Audio Accessibility", 
-    description: "Captions, transcripts, and audio descriptions for multimedia content",
     features: [
       "Closed captions for all video content",
       "Audio descriptions for visual content",
       "Transcript files for audio content",
-      "Visual indicators for audio alerts"
-    ]
-  },
-  {
-=======
+      "Visual indicators for audio alerts",
       "Closed captions",
       "Visual alerts",
       "Text alternatives for audio",
@@ -55,21 +47,12 @@ const accessibilityFeatures = [
     ]
   },
   {
-    title: "Motor Accessibility",
-    description: "Features to support users with motor impairments",
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
     icon: Hand,
-    title: "Motor Accessibility",
-    description: "Keyboard navigation and customizable interaction methods",
     features: [
       "Full keyboard navigation support",
       "Customizable click targets",
       "Drag and drop alternatives",
-      "Timeout extensions and controls"
-    ]
-  },
-  {
-=======
+      "Timeout extensions and controls",
       "Keyboard-only navigation",
       "Voice control",
       "Large click targets",
@@ -79,25 +62,18 @@ const accessibilityFeatures = [
     ]
   },
   {
-    title: "Cognitive Accessibility",
-    description: "Features to support users with cognitive impairments",
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
     icon: Brain,
-    title: "Cognitive Accessibility",
-    description: "Clear navigation, consistent layouts, and simplified interfaces",
     features: [
       "Consistent navigation patterns",
       "Clear and simple language",
       "Error prevention and recovery",
-      "Customizable interface complexity"
-=======
+      "Customizable interface complexity",
       "Clear navigation",
       "Consistent layout",
       "Error prevention",
       "Progress indicators",
       "Help and support",
       "Customizable interface"
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
     ]
   }
 ];
@@ -132,8 +108,6 @@ const complianceStandards = [
 export default function AccessibilityPage() {
   const accessibilityFeatures = [
     {
-      title: 'Screen Reader Compatibility',
-      description: 'Our website is fully compatible with screen readers and assistive technologies',
       icon: Ear,
       features: [
         'Semantic HTML structure',
@@ -143,8 +117,6 @@ export default function AccessibilityPage() {
       ]
     },
     {
-      title: 'Keyboard Navigation',
-      description: 'Complete website functionality accessible via keyboard only',
       icon: Hand,
       features: [
         'Tab navigation support',
@@ -154,8 +126,6 @@ export default function AccessibilityPage() {
       ]
     },
     {
-      title: 'Visual Accessibility',
-      description: 'High contrast and customizable visual elements for better visibility',
       icon: Eye,
       features: [
         'High contrast color schemes',
@@ -165,8 +135,6 @@ export default function AccessibilityPage() {
       ]
     },
     {
-      title: 'Cognitive Accessibility',
-      description: 'Clear, simple language and intuitive navigation for all users',
       icon: Brain,
       features: [
         'Plain language content',
@@ -229,23 +197,15 @@ export default function AccessibilityPage() {
 
   const accessibilityCommitments = [
     {
-      title: 'Continuous Improvement',
-      description: 'We regularly audit and improve our accessibility features',
       icon: Zap
     },
     {
-      title: 'User Feedback',
-      description: 'We actively seek and incorporate feedback from users with disabilities',
       icon: Heart
     },
     {
-      title: 'Training & Awareness',
-      description: 'Our team receives regular accessibility training and education',
       icon: Brain
     },
     {
-      title: 'Compliance Monitoring',
-      description: 'Ongoing monitoring to ensure continued compliance with standards',
       icon: Shield
     }
   ];
@@ -288,13 +248,12 @@ export default function AccessibilityPage() {
                 viewport={{ once: true }}
               >
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                </div>
+                  Accessibility Compliance Standards
+                </h2>
+                <p className="text-lg text-gray-600 mb-8">
+                  We adhere to international accessibility standards to ensure our solutions are inclusive for all users.
+                </p>
               </motion.div>
-            </div>
-          </div>
-        </section>
-
-              </div>
             </div>
           </div>
         </section>

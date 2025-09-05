@@ -5,27 +5,19 @@ import Link from 'next/link';
 import { ArrowRight, CheckCircle, ShoppingCart, Users, Clock, Star, Shield, TrendingUp } from 'lucide-react';
 
 const solutions = [
-  {
-    title: 'E-commerce Platforms',
-    description: 'Complete e-commerce solutions with online stores, payment processing, and inventory management.',
+  {,
     features: ['Online Store', 'Payment Processing', 'Inventory Management', 'Order Tracking'],
     icon: ShoppingCart
   },
-  {
-    title: 'Customer Analytics',
-    description: 'Advanced analytics for customer behavior, preferences, and personalized marketing campaigns.',
+  {,
     features: ['Customer Insights', 'Behavior Analysis', 'Personalization', 'Marketing Automation'],
     icon: TrendingUp
   },
-  {
-    title: 'Point of Sale Systems',
-    description: 'Modern POS systems with inventory management, customer management, and reporting capabilities.',
+  {,
     features: ['Transaction Processing', 'Inventory Tracking', 'Customer Management', 'Sales Reporting'],
     icon: Users
   },
-  {
-    title: 'Supply Chain Management',
-    description: 'End-to-end supply chain visibility and optimization for retail operations.',
+  {,
     features: ['Inventory Optimization', 'Supplier Management', 'Demand Forecasting', 'Logistics Tracking'],
     icon: Shield
   }
@@ -34,23 +26,15 @@ const solutions = [
 const benefits = [
   {
     icon: Shield,
-    title: 'Retail Expertise',
-    description: 'Deep understanding of retail operations and customer experience requirements'
   },
   {
     icon: Clock,
-    title: '24/7 Support',
-    description: 'Round-the-clock technical support for retail operations'
   },
   {
     icon: Users,
-    title: 'Retail Specialists',
-    description: 'Team of experts with extensive retail industry experience'
   },
   {
     icon: Star,
-    title: 'Proven Results',
-    description: 'Track record of successful implementations in retail businesses'
   }
 ];
 

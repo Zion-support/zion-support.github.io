@@ -53,25 +53,19 @@ const faqs = [
 
 const supportChannels = [
   {
-    icon: Phone,
-    title: 'Phone Support',
-    description: 'Speak directly with our support team',
+    icon: Phone,,
     contact: '+1 302 464 0950',
     availability: '24/7 for Enterprise',
     action: 'Call Now'
   },
   {
-    icon: Mail,
-    title: 'Email Support',
-    description: 'Send us a detailed message',
+    icon: Mail,,
     contact: 'support@ziontechgroup.com',
     availability: '24/7 Response',
     action: 'Send Email'
   },
   {
-    icon: MessageCircle,
-    title: 'Live Chat',
-    description: 'Chat with our support team in real-time',
+    icon: MessageCircle,,
     contact: 'Available on website',
     availability: 'Business Hours',
     action: 'Start Chat'
@@ -80,21 +74,15 @@ const supportChannels = [
 
 const resources = [
   {
-    icon: FileText,
-    title: 'Documentation',
-    description: 'Comprehensive guides and API documentation',
+    icon: FileText,,
     href: '/docs'
   },
   {
-    icon: Video,
-    title: 'Video Tutorials',
-    description: 'Step-by-step video guides for our services',
+    icon: Video,,
     href: '/tutorials'
   },
   {
-    icon: BookOpen,
-    title: 'Knowledge Base',
-    description: 'Searchable database of articles and solutions',
+    icon: BookOpen,,
     href: '/knowledge-base'
   }
 ];

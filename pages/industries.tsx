@@ -21,9 +21,7 @@ import {
 } from 'lucide-react';
 
 const industries = [
-  {
-    title: 'Healthcare & Life Sciences',
-    description: 'Transform healthcare delivery with AI-powered diagnostics, patient management systems, and telemedicine solutions.',
+  {,
     icon: Heart,
     services: ['AI Diagnostics', 'Patient Management', 'Telemedicine', 'HIPAA Compliance', 'Medical Records'],
     challenges: ['Data Privacy', 'Regulatory Compliance', 'Interoperability', 'Cost Optimization'],
@@ -31,9 +29,7 @@ const industries = [
     pricing: 'Starting at $5,000/month',
     popular: true
   },
-  {
-    title: 'Financial Services',
-    description: 'Secure, scalable solutions for banking, insurance, and fintech with advanced fraud detection and compliance.',
+  {,
     icon: DollarSign,
     services: ['Fraud Detection', 'Risk Management', 'Payment Processing', 'Regulatory Compliance', 'Customer Analytics'],
     challenges: ['Security Requirements', 'Regulatory Compliance', 'Real-time Processing', 'Scalability'],
@@ -41,9 +37,7 @@ const industries = [
     pricing: 'Starting at $8,000/month',
     popular: true
   },
-  {
-    title: 'Education & E-Learning',
-    description: 'Modernize education with learning management systems, virtual classrooms, and personalized learning experiences.',
+  {,
     icon: GraduationCap,
     services: ['LMS Development', 'Virtual Classrooms', 'Student Analytics', 'Content Management', 'Assessment Tools'],
     challenges: ['Scalability', 'User Experience', 'Content Delivery', 'Accessibility'],
@@ -51,9 +45,7 @@ const industries = [
     pricing: 'Starting at $3,000/month',
     popular: true
   },
-  {
-    title: 'E-Commerce & Retail',
-    description: 'Boost sales with AI-powered recommendations, inventory management, and seamless customer experiences.',
+  {,
     icon: ShoppingCart,
     services: ['E-commerce Platforms', 'Inventory Management', 'AI Recommendations', 'Payment Integration', 'Analytics'],
     challenges: ['Inventory Optimization', 'Customer Experience', 'Payment Security', 'Scalability'],
@@ -61,9 +53,7 @@ const industries = [
     pricing: 'Starting at $2,500/month',
     popular: true
   },
-  {
-    title: 'Manufacturing & Industrial',
-    description: 'Optimize production with IoT solutions, predictive maintenance, and smart manufacturing systems.',
+  {,
     icon: Factory,
     services: ['IoT Integration', 'Predictive Maintenance', 'Quality Control', 'Supply Chain', 'Automation'],
     challenges: ['Legacy Systems', 'Data Integration', 'Quality Control', 'Efficiency'],
@@ -71,9 +61,7 @@ const industries = [
     pricing: 'Starting at $6,000/month',
     popular: false
   },
-  {
-    title: 'Automotive & Transportation',
-    description: 'Drive innovation with connected vehicles, fleet management, and autonomous systems.',
+  {,
     icon: Car,
     services: ['Fleet Management', 'Connected Vehicles', 'Route Optimization', 'Predictive Maintenance', 'Safety Systems'],
     challenges: ['Real-time Data', 'Safety Requirements', 'Integration', 'Scalability'],
@@ -81,9 +69,7 @@ const industries = [
     pricing: 'Starting at $4,500/month',
     popular: false
   },
-  {
-    title: 'Real Estate & Construction',
-    description: 'Streamline operations with property management systems, virtual tours, and construction project management.',
+  {,
     icon: Building2,
     services: ['Property Management', 'Virtual Tours', 'Project Management', 'CRM Systems', 'Analytics'],
     challenges: ['Data Management', 'Project Coordination', 'Client Communication', 'Compliance'],
@@ -91,9 +77,7 @@ const industries = [
     pricing: 'Starting at $3,500/month',
     popular: false
   },
-  {
-    title: 'Government & Public Sector',
-    description: 'Modernize government services with citizen portals, data analytics, and digital transformation.',
+  {,
     icon: Shield,
     services: ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Solutions', 'Compliance'],
     challenges: ['Security Requirements', 'Compliance', 'Legacy Systems', 'Citizen Experience'],

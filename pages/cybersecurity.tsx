@@ -12,39 +12,27 @@ export default function Cybersecurity() {
   }
   const services = [
     {
-      icon: Shield,
-      title: 'Security Assessment & Auditing',
-      description: 'Comprehensive security evaluations to identify vulnerabilities and compliance gaps.',
+      icon: Shield,,
       features: ['Penetration testing', 'Vulnerability scanning', 'Compliance audits', 'Risk assessments']
     },
     {
-      icon: Lock,
-      title: 'Identity & Access Management',
-      description: 'Robust IAM solutions to control user access and protect sensitive data.',
+      icon: Lock,,
       features: ['Multi-factor authentication', 'Single sign-on', 'Role-based access', 'Privileged access management']
     },
     {
-      icon: Eye,
-      title: 'Security Monitoring & SIEM',
-      description: '24/7 security monitoring with advanced threat detection and incident response.',
+      icon: Eye,,
       features: ['Real-time monitoring', 'Threat intelligence', 'Incident response', 'Forensic analysis']
     },
     {
-      icon: AlertTriangle,
-      title: 'Threat Detection & Response',
-      description: 'Advanced threat hunting and automated response to security incidents.',
+      icon: AlertTriangle,,
       features: ['Behavioral analytics', 'AI-powered detection', 'Automated response', 'Threat hunting']
     },
     {
-      icon: Users,
-      title: 'Security Training & Awareness',
-      description: 'Comprehensive security education programs to build a security-conscious culture.',
+      icon: Users,,
       features: ['Phishing simulations', 'Security workshops', 'Compliance training', 'Awareness campaigns']
     },
     {
-      icon: Database,
-      title: 'Data Protection & Encryption',
-      description: 'End-to-end data protection with advanced encryption and backup solutions.',
+      icon: Database,,
       features: ['Data encryption', 'Backup solutions', 'Data loss prevention', 'Privacy compliance']
     }
   ];

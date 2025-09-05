@@ -20,48 +20,32 @@ import MainLayout from '../src/components/layout/MainLayout';
 const features = [
   {
     icon: Building,
-    title: 'Scalable Architecture',
-    description: 'Enterprise-grade solutions designed to scale with your business growth and requirements.'
   },
   {
     icon: Shield,
-    title: 'Security & Compliance',
-    description: 'Comprehensive security measures and compliance with industry standards and regulations.'
   },
   {
     icon: Users,
-    title: 'Team Collaboration',
-    description: 'Advanced collaboration tools and workflows to enhance team productivity and communication.'
   },
   {
     icon: Zap,
-    title: 'Performance Optimization',
-    description: 'High-performance solutions optimized for speed, reliability, and efficiency.'
   }
 ];
 
 const solutions = [
-  {
-    title: 'Enterprise Resource Planning',
-    description: 'Comprehensive ERP solutions integrating all business processes and departments.',
+  {,
     features: ['Financial Management', 'Supply Chain', 'Human Resources', 'Customer Relations'],
     pricing: 'Starting at $50,000'
   },
-  {
-    title: 'Customer Relationship Management',
-    description: 'Advanced CRM systems to manage customer relationships and sales processes.',
+  {,
     features: ['Lead Management', 'Sales Pipeline', 'Customer Analytics', 'Marketing Automation'],
     pricing: 'Starting at $25,000'
   },
-  {
-    title: 'Business Intelligence',
-    description: 'Data analytics and reporting solutions for informed business decision making.',
+  {,
     features: ['Data Visualization', 'Real-time Dashboards', 'Predictive Analytics', 'Custom Reports'],
     pricing: 'Starting at $30,000'
   },
-  {
-    title: 'Cloud Migration',
-    description: 'Seamless migration of enterprise systems to cloud infrastructure.',
+  {,
     features: ['Infrastructure Migration', 'Data Migration', 'Security Implementation', 'Performance Optimization'],
     pricing: 'Starting at $40,000'
   }

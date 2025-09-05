@@ -52,8 +52,6 @@ const aiServices = [
   // AI Automation & Process Intelligence
   {
     id: 1,
-    title: 'Machine Learning Models',
-    description: 'Custom ML models for predictive analytics, automation, and intelligent decision-making across various industries.',
     icon: Brain,
     category: 'Machine Learning',
     price: 'Starting at $3,500/month',
@@ -79,8 +77,6 @@ const aiServices = [
   },
   {
     id: 2,
-    title: 'Computer Vision Solutions',
-    description: 'Advanced image and video analysis for object detection, recognition, and automated visual inspection.',
     icon: Eye,
     category: 'Computer Vision',
     price: 'Starting at $2,800/month',
@@ -106,8 +102,6 @@ const aiServices = [
   },
   {
     id: 3,
-    title: 'Natural Language Processing',
-    description: 'Text analysis, sentiment analysis, language understanding, and automated content processing solutions.',
     icon: MessageSquare,
     category: 'NLP',
     price: 'Starting at $2,200/month',
@@ -133,8 +127,6 @@ const aiServices = [
   },
   {
     id: 4,
-    title: 'AI-Powered Analytics',
-    description: 'Intelligent data analysis with predictive insights, anomaly detection, and automated reporting.',
     icon: BarChart3,
     category: 'Analytics',
     price: 'Starting at $2,500/month',
@@ -160,8 +152,6 @@ const aiServices = [
   },
   {
     id: 5,
-    title: 'AI Chatbots & Virtual Assistants',
-    description: 'Intelligent conversational AI for customer service, sales, and internal operations automation.',
     icon: Bot,
     category: 'Conversational AI',
     price: 'Starting at $1,800/month',
@@ -189,8 +179,6 @@ const aiServices = [
   // Advanced AI Services
   {
     id: 6,
-    title: 'Quantum AI & Machine Learning',
-    description: 'Quantum-enhanced machine learning solutions for complex optimization problems and advanced computational tasks.',
     icon: Cpu,
     category: 'Quantum AI',
     price: 'Starting at $5,500/month',
@@ -216,8 +204,6 @@ const aiServices = [
   },
   {
     id: 7,
-    title: 'AI Drug Discovery & Development',
-    description: 'AI-powered drug discovery platform with molecular analysis, compound screening, and clinical trial optimization.',
     icon: Heart,
     category: 'AI Healthcare',
     price: 'Starting at $4,500/month',
@@ -243,8 +229,6 @@ const aiServices = [
   },
   {
     id: 8,
-    title: 'AI Climate & Environmental Solutions',
-    description: 'AI-powered climate analysis, environmental monitoring, and sustainability optimization solutions.',
     icon: TreePine,
     category: 'AI Climate',
     price: 'Starting at $2,200/month',
@@ -270,8 +254,6 @@ const aiServices = [
   },
   {
     id: 9,
-    title: 'AI Space Technology & Research',
-    description: 'AI solutions for space exploration, satellite data analysis, and astronomical research applications.',
     icon: Rocket,
     category: 'AI Space',
     price: 'Starting at $3,500/month',
@@ -296,8 +278,6 @@ const aiServices = [
     targetUsers: 'Space agencies, Research institutions, Satellite companies, Aerospace'
   },
   {
-    title: 'AI-Powered Blockchain Analytics',
-    description: 'Advanced blockchain transaction analysis and cryptocurrency intelligence.',
     icon: TrendingUp,
     features: ['Transaction Analysis', 'Pattern Recognition', 'Risk Assessment', 'Compliance Monitoring'],
     pricing: '$5,000 - $40,000/month',
@@ -305,8 +285,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Climate Change Mitigation',
-    description: 'Advanced AI systems for climate modeling, carbon capture optimization, and environmental restoration.',
     icon: Sprout,
     features: ['Climate Modeling', 'Carbon Capture Optimization', 'Environmental Restoration', 'Policy Simulation'],
     pricing: '$50,000 - $500,000/project',
@@ -314,8 +292,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Space Colonization',
-    description: 'AI systems for space habitat design, resource management, and autonomous space operations.',
     icon: Rocket,
     features: ['Habitat Design', 'Resource Management', 'Autonomous Operations', 'Life Support Systems'],
     pricing: '$100,000 - $1,000,000/project',
@@ -323,8 +299,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Human Longevity',
-    description: 'AI-driven research and development for extending human lifespan and healthspan.',
     icon: Heart,
     features: ['Longevity Research', 'Health Optimization', 'Aging Reversal', 'Personalized Medicine'],
     pricing: '$75,000 - $750,000/project',
@@ -332,8 +306,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Consciousness Transfer',
-    description: 'Advanced AI systems for digital consciousness preservation and transfer.',
     icon: Brain,
     features: ['Consciousness Preservation', 'Digital Transfer', 'Identity Continuity', 'Ethical Framework'],
     pricing: '$200,000 - $2,000,000/project',
@@ -341,8 +313,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Universal Problem Solver',
-    description: 'General-purpose AI system capable of solving complex problems across all domains.',
     icon: Cpu,
     features: ['Universal Problem Solving', 'Cross-Domain Learning', 'Creative Solutions', 'Scalable Intelligence'],
     pricing: '$100,000 - $1,000,000/project',
@@ -350,8 +320,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Reality Simulation',
-    description: 'Ultra-realistic reality simulation for training, entertainment, and research applications.',
     icon: Eye,
     features: ['Ultra-Realistic Simulation', 'Physics Modeling', 'Behavioral Simulation', 'Immersive Training'],
     pricing: '$150,000 - $1,500,000/project',
@@ -359,8 +327,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Time Prediction',
-    description: 'Advanced temporal AI for predicting future events and outcomes with high accuracy.',
     icon: Clock,
     features: ['Future Prediction', 'Event Forecasting', 'Outcome Analysis', 'Temporal Modeling'],
     pricing: '$50,000 - $500,000/project',
@@ -368,8 +334,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Universal Translator',
-    description: 'Real-time translation across all languages including extinct and alien languages.',
     icon: Globe,
     features: ['Universal Translation', 'Language Reconstruction', 'Cultural Context', 'Real-time Processing'],
     pricing: '$25,000 - $250,000/setup',
@@ -377,8 +341,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Dream Analysis',
-    description: 'Advanced AI for dream interpretation and subconscious pattern analysis.',
     icon: Brain,
     features: ['Dream Interpretation', 'Subconscious Analysis', 'Pattern Recognition', 'Therapeutic Insights'],
     pricing: '$15,000 - $150,000/project',
@@ -386,8 +348,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Emotion Synthesis',
-    description: 'AI systems that can generate and understand complex human emotions and empathy.',
     icon: Heart,
     features: ['Emotion Generation', 'Empathy Simulation', 'Emotional Intelligence', 'Therapeutic Applications'],
     pricing: '$30,000 - $300,000/project',
@@ -395,8 +355,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Memory Enhancement',
-    description: 'AI systems for memory augmentation and cognitive enhancement.',
     icon: Brain,
     features: ['Memory Augmentation', 'Cognitive Enhancement', 'Learning Acceleration', 'Memory Retrieval'],
     pricing: '$40,000 - $400,000/project',
@@ -404,8 +362,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Creativity Engine',
-    description: 'Advanced AI for creative problem-solving and artistic expression.',
     icon: FileText,
     features: ['Creative Problem Solving', 'Artistic Generation', 'Innovation Catalyst', 'Design Thinking'],
     pricing: '$20,000 - $200,000/project',
@@ -413,8 +369,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Telepathy Simulation',
-    description: 'AI systems that simulate telepathic communication and mind-reading capabilities.',
     icon: Brain,
     features: ['Thought Reading', 'Mental Communication', 'Neural Interface', 'Privacy Protection'],
     pricing: '$100,000 - $1,000,000/project',
@@ -422,8 +376,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Universal Education',
-    description: 'Personalized AI tutoring system that adapts to any learning style and pace.',
     icon: BookOpen,
     features: ['Personalized Learning', 'Adaptive Curriculum', 'Multi-Modal Teaching', 'Progress Optimization'],
     pricing: '$10,000 - $100,000/setup',
@@ -431,8 +383,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Universal Healthcare',
-    description: 'Comprehensive AI healthcare system for diagnosis, treatment, and prevention.',
     icon: Heart,
     features: ['Universal Diagnosis', 'Treatment Optimization', 'Prevention Strategies', 'Personalized Medicine'],
     pricing: '$50,000 - $500,000/project',
@@ -440,8 +390,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Universal Energy',
-    description: 'AI systems for optimizing energy production, distribution, and consumption globally.',
     icon: Zap,
     features: ['Energy Optimization', 'Grid Management', 'Renewable Integration', 'Efficiency Maximization'],
     pricing: '$75,000 - $750,000/project',
@@ -449,8 +397,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Universal Transportation',
-    description: 'Autonomous transportation systems for all modes of travel and logistics.',
     icon: Car,
     features: ['Autonomous Vehicles', 'Route Optimization', 'Logistics Management', 'Safety Systems'],
     pricing: '$100,000 - $1,000,000/project',
@@ -458,8 +404,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Universal Communication',
-    description: 'AI system for universal communication across all languages and communication barriers.',
     icon: MessageSquare,
     features: ['Universal Communication', 'Language Translation', 'Cultural Adaptation', 'Real-time Processing'],
     pricing: '$25,000 - $250,000/setup',
@@ -467,8 +411,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Universal Security',
-    description: 'Comprehensive AI security system for protecting all digital and physical assets.',
     icon: Shield,
     features: ['Universal Protection', 'Threat Detection', 'Automated Response', 'Predictive Security'],
     pricing: '$50,000 - $500,000/project',
@@ -476,8 +418,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Universal Manufacturing',
-    description: 'AI-driven manufacturing systems for any product with maximum efficiency and quality.',
     icon: Settings,
     features: ['Universal Manufacturing', 'Quality Optimization', 'Efficiency Maximization', 'Custom Production'],
     pricing: '$75,000 - $750,000/project',
@@ -485,8 +425,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Universal Agriculture',
-    description: 'AI systems for optimizing agriculture and food production globally.',
     icon: Sprout,
     features: ['Crop Optimization', 'Yield Maximization', 'Resource Management', 'Climate Adaptation'],
     pricing: '$50,000 - $500,000/project',
@@ -494,8 +432,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Universal Entertainment',
-    description: 'AI-generated entertainment content personalized for every individual.',
     icon: Video,
     features: ['Personalized Content', 'Creative Generation', 'Interactive Experiences', 'Emotional Engagement'],
     pricing: '$20,000 - $200,000/project',
@@ -503,8 +439,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Universal Research',
-    description: 'AI system for accelerating scientific research and discovery across all fields.',
     icon: Search,
     features: ['Research Acceleration', 'Hypothesis Generation', 'Data Analysis', 'Discovery Optimization'],
     pricing: '$100,000 - $1,000,000/project',
@@ -512,8 +446,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Universal Governance',
-    description: 'AI systems for optimizing governance and policy-making at all levels.',
     icon: Building,
     features: ['Policy Optimization', 'Decision Support', 'Stakeholder Analysis', 'Outcome Prediction'],
     pricing: '$150,000 - $1,500,000/project',
@@ -521,8 +453,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Universal Justice',
-    description: 'AI system for fair and efficient justice administration and legal analysis.',
     icon: Scale,
     features: ['Legal Analysis', 'Fair Decision Making', 'Case Prediction', 'Justice Optimization'],
     pricing: '$75,000 - $750,000/project',
@@ -530,8 +460,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Universal Economics',
-    description: 'AI systems for optimizing economic systems and resource allocation globally.',
     icon: TrendingUp,
     features: ['Economic Optimization', 'Resource Allocation', 'Market Analysis', 'Policy Simulation'],
     pricing: '$100,000 - $1,000,000/project',
@@ -539,8 +467,6 @@ const aiServices = [
     popular: true
   },
   {
-    title: 'AI-Powered Universal Philosophy',
-    description: 'AI system for exploring philosophical questions and ethical decision-making.',
     icon: Brain,
     features: ['Philosophical Analysis', 'Ethical Reasoning', 'Moral Decision Making', 'Wisdom Generation'],
     pricing: '$50,000 - $500,000/project',
@@ -561,8 +487,6 @@ const industries = [
 const benefits = [
   {
     id: 11,
-    title: 'AI Legal & Compliance Solutions',
-    description: 'AI-powered legal research, contract analysis, and compliance monitoring for legal professionals.',
     icon: BookOpen,
     category: 'AI Legal',
     price: 'Starting at $2,800/month',
@@ -588,8 +512,6 @@ const benefits = [
   },
   {
     id: 12,
-    title: 'AI Financial Services & Trading',
-    description: 'AI solutions for financial analysis, algorithmic trading, risk management, and fraud detection.',
     icon: DollarSign,
     category: 'AI Finance',
     price: 'Starting at $3,200/month',
@@ -615,8 +537,6 @@ const benefits = [
   },
   {
     id: 13,
-    title: 'AI Agriculture & Food Tech',
-    description: 'AI solutions for precision agriculture, crop monitoring, and food production optimization.',
     icon: Sprout,
     category: 'AI Agriculture',
     price: 'Starting at $2,500/month',
@@ -642,8 +562,6 @@ const benefits = [
   },
   {
     id: 14,
-    title: 'AI Energy & Utilities',
-    description: 'AI solutions for energy management, grid optimization, and renewable energy integration.',
     icon: Zap,
     category: 'AI Energy',
     price: 'Starting at $2,800/month',
@@ -669,8 +587,6 @@ const benefits = [
   },
   {
     id: 15,
-    title: 'AI Education & Learning',
-    description: 'AI-powered educational platforms with personalized learning, adaptive content, and intelligent tutoring.',
     icon: GraduationCap,
     category: 'AI Education',
     price: 'Starting at $1,800/month',

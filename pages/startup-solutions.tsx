@@ -6,39 +6,27 @@ import MainLayout from '../src/components/layout/MainLayout';
 
 const solutions = [
   {
-    icon: Rocket,
-    title: 'MVP Development',
-    description: 'Rapid development of minimum viable products to validate your business idea',
+    icon: Rocket,,
     features: ['Fast prototyping', 'User feedback integration', 'Iterative development', 'Cost-effective solutions']
   },
   {
-    icon: Zap,
-    title: 'Scalable Architecture',
-    description: 'Future-proof architecture that grows with your startup',
+    icon: Zap,,
     features: ['Microservices design', 'Auto-scaling', 'Cloud-native solutions', 'Performance optimization']
   },
   {
-    icon: Users,
-    title: 'Team Augmentation',
-    description: 'Extend your team with skilled developers and designers',
+    icon: Users,,
     features: ['Dedicated developers', 'Project managers', 'UI/UX designers', 'DevOps engineers']
   },
   {
-    icon: Shield,
-    title: 'Security & Compliance',
-    description: 'Enterprise-grade security for your growing business',
+    icon: Shield,,
     features: ['Data protection', 'Security audits', 'Compliance guidance', 'Threat monitoring']
   },
   {
-    icon: BarChart3,
-    title: 'Analytics & Insights',
-    description: 'Data-driven insights to fuel your growth',
+    icon: BarChart3,,
     features: ['User analytics', 'Business intelligence', 'Custom dashboards', 'Growth metrics']
   },
   {
-    icon: Globe,
-    title: 'Global Deployment',
-    description: 'Deploy your solution worldwide with confidence',
+    icon: Globe,,
     features: ['Multi-region hosting', 'CDN optimization', 'Localization support', 'Global compliance']
   }
 ];

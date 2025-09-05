@@ -22,27 +22,19 @@ import {
 export default function CloudSolutionsPage() {
   const features = [
     {
-      icon: Cloud,
-      title: 'Cloud Migration',
-      description: 'Seamless migration to AWS, Azure, or Google Cloud with zero downtime',
+      icon: Cloud,,
       benefits: ['Automated migration tools', 'Data integrity assurance', 'Cost optimization']
     },
     {
-      icon: Server,
-      title: 'Infrastructure as Code',
-      description: 'Manage your cloud infrastructure with Terraform, CloudFormation, and Kubernetes',
+      icon: Server,,
       benefits: ['Version control', 'Automated deployments', 'Scalable architecture']
     },
     {
-      icon: Database,
-      title: 'Cloud Databases',
-      description: 'Managed database services with high availability and automatic scaling',
+      icon: Database,,
       benefits: ['Auto-scaling', 'Backup & recovery', 'Performance monitoring']
     },
     {
-      icon: Shield,
-      title: 'Cloud Security',
-      description: 'Comprehensive security solutions for your cloud environment',
+      icon: Shield,,
       benefits: ['Identity management', 'Data encryption', 'Compliance monitoring']
     }
   ];

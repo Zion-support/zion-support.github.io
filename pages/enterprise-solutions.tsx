@@ -6,39 +6,27 @@ import MainLayout from '../src/components/layout/MainLayout';
 
 const solutions = [
   {
-    icon: Building2,
-    title: 'Enterprise Architecture',
-    description: 'Comprehensive IT architecture design for large-scale organizations',
+    icon: Building2,,
     features: ['Scalable infrastructure', 'Microservices architecture', 'API management', 'Integration planning']
   },
   {
-    icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Advanced security solutions for enterprise-grade protection',
+    icon: Shield,,
     features: ['Identity management', 'Zero-trust architecture', 'Compliance automation', 'Threat detection']
   },
   {
-    icon: Database,
-    title: 'Data Management',
-    description: 'Enterprise data solutions for analytics and business intelligence',
+    icon: Database,,
     features: ['Data warehousing', 'ETL processes', 'Real-time analytics', 'Data governance']
   },
   {
-    icon: Server,
-    title: 'Cloud Infrastructure',
-    description: 'Scalable cloud solutions for enterprise workloads',
+    icon: Server,,
     features: ['Multi-cloud strategy', 'Container orchestration', 'Auto-scaling', 'Disaster recovery']
   },
   {
-    icon: Users,
-    title: 'Digital Workplace',
-    description: 'Modern workplace solutions for enhanced productivity',
+    icon: Users,,
     features: ['Collaboration tools', 'Mobile solutions', 'Workflow automation', 'Employee experience']
   },
   {
-    icon: BarChart3,
-    title: 'Business Intelligence',
-    description: 'Advanced analytics and reporting for data-driven decisions',
+    icon: BarChart3,,
     features: ['Executive dashboards', 'Predictive analytics', 'Custom reporting', 'Data visualization']
   }
 ];

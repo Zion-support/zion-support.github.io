@@ -17,9 +17,7 @@ import Layout from '../components/Layout';
 
 const courses = [
   {
-    id: 1,
-    title: 'AI Fundamentals for Business',
-    description: 'Learn the basics of artificial intelligence and how to implement AI solutions in your business.',
+    id: 1,,
     duration: '8 hours',
     level: 'Beginner',
     rating: 4.8,
@@ -30,9 +28,7 @@ const courses = [
     category: 'AI & Technology'
   },
   {
-    id: 2,
-    title: 'Cloud Infrastructure Management',
-    description: 'Master cloud computing concepts and learn to manage scalable infrastructure solutions.',
+    id: 2,,
     duration: '12 hours',
     level: 'Intermediate',
     rating: 4.9,
@@ -43,9 +39,7 @@ const courses = [
     category: 'IT Services'
   },
   {
-    id: 3,
-    title: 'Micro SaaS Development',
-    description: 'Build and launch your own micro SaaS products with modern development practices.',
+    id: 3,,
     duration: '16 hours',
     level: 'Advanced',
     rating: 4.7,
@@ -56,9 +50,7 @@ const courses = [
     category: 'Micro SaaS'
   },
   {
-    id: 4,
-    title: 'Cybersecurity Best Practices',
-    description: 'Protect your business with comprehensive cybersecurity strategies and implementation.',
+    id: 4,,
     duration: '10 hours',
     level: 'Intermediate',
     rating: 4.8,
@@ -82,23 +74,15 @@ const categories = [
 const features = [
   {
     icon: GraduationCap,
-    title: 'Expert Instructors',
-    description: 'Learn from industry experts with years of real-world experience'
   },
   {
     icon: BookOpen,
-    title: 'Comprehensive Curriculum',
-    description: 'Well-structured courses covering all aspects of modern technology'
   },
   {
     icon: Play,
-    title: 'Hands-on Learning',
-    description: 'Practical exercises and real-world projects to reinforce learning'
   },
   {
     icon: Award,
-    title: 'Certification',
-    description: 'Earn industry-recognized certificates upon course completion'
   }
 ];
 

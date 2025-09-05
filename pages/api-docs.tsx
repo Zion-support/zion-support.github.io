@@ -17,43 +17,31 @@ import {
 
 const apiEndpoints = [
   {
-    title: 'Authentication API',
-    description: 'Secure authentication and authorization endpoints',
     icon: Lock,
     methods: ['POST', 'GET', 'PUT', 'DELETE'],
     endpoint: '/api/auth'
   },
   {
-    title: 'User Management',
-    description: 'User profile and account management',
     icon: Globe,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     endpoint: '/api/users'
   },
   {
-    title: 'Services API',
-    description: 'Access to our micro SaaS and IT services',
     icon: Server,
     methods: ['GET', 'POST'],
     endpoint: '/api/services'
   },
   {
-    title: 'AI Services',
-    description: 'AI-powered solutions and machine learning APIs',
     icon: Brain,
     methods: ['POST', 'GET'],
     endpoint: '/api/ai'
   },
   {
-    title: 'Analytics',
-    description: 'Data analytics and reporting endpoints',
     icon: Database,
     methods: ['GET', 'POST'],
     endpoint: '/api/analytics'
   },
   {
-    title: 'Cloud Services',
-    description: 'Cloud infrastructure and deployment APIs',
     icon: Cloud,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     endpoint: '/api/cloud'
@@ -63,23 +51,15 @@ const apiEndpoints = [
 const features = [
   {
     icon: Shield,
-    title: 'Secure',
-    description: 'Enterprise-grade security with OAuth 2.0 and JWT tokens'
   },
   {
     icon: Zap,
-    title: 'Fast',
-    description: 'High-performance APIs with sub-100ms response times'
   },
   {
     icon: CheckCircle,
-    title: 'Reliable',
-    description: '99.9% uptime with comprehensive error handling'
   },
   {
     icon: Code,
-    title: 'Developer Friendly',
-    description: 'Clear documentation and SDKs for all major languages'
   }
 ];
 
@@ -91,12 +71,6 @@ export default function APIDocs() {
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group's services and solutions." />
       </Head>
 
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-          <div className="container mx-auto px-4">
-=======
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
@@ -206,11 +180,10 @@ export default function APIDocs() {
           </motion.div>
         </div>
       </section>
-    </div>
-        {/* Code Examples */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+
+      {/* Code Examples */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}

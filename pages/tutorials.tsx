@@ -22,9 +22,7 @@ const tutorials = [
     price: 'Free'
   },
   {
-    id: 2,
-    title: 'Cloud Security Best Practices',
-    description: 'Master cloud security fundamentals and learn how to protect your infrastructure from common threats.',
+    id: 2,,
     instructor: 'Michael Chen',
     duration: '1 hour 45 minutes',
     level: 'Intermediate',
@@ -38,9 +36,7 @@ const tutorials = [
     price: 'Free'
   },
   {
-    id: 3,
-    title: 'Building Scalable Microservices',
-    description: 'Learn how to design and implement microservices architecture that can scale with your business.',
+    id: 3,,
     instructor: 'David Rodriguez',
     duration: '3 hours 15 minutes',
     level: 'Advanced',
@@ -54,9 +50,7 @@ const tutorials = [
     price: '$99'
   },
   {
-    id: 4,
-    title: 'Data Analytics with Python',
-    description: 'Complete guide to data analysis using Python, pandas, and visualization libraries.',
+    id: 4,,
     instructor: 'Emily Watson',
     duration: '4 hours',
     level: 'Intermediate',
@@ -70,9 +64,7 @@ const tutorials = [
     price: '$149'
   },
   {
-    id: 5,
-    title: 'DevOps Fundamentals',
-    description: 'Introduction to DevOps practices, tools, and methodologies for modern software development.',
+    id: 5,,
     instructor: 'Alex Thompson',
     duration: '2 hours 20 minutes',
     level: 'Beginner',
@@ -86,9 +78,7 @@ const tutorials = [
     price: 'Free'
   },
   {
-    id: 6,
-    title: 'Blockchain Development Basics',
-    description: 'Learn the fundamentals of blockchain technology and smart contract development.',
+    id: 6,,
     instructor: 'Lisa Park',
     duration: '3 hours 30 minutes',
     level: 'Intermediate',
@@ -102,9 +92,7 @@ const tutorials = [
     price: '$199'
   },
   {
-    id: 7,
-    title: 'API Design and Documentation',
-    description: 'Best practices for designing, building, and documenting RESTful APIs.',
+    id: 7,,
     instructor: 'John Smith',
     duration: '1 hour 30 minutes',
     level: 'Intermediate',
@@ -118,9 +106,7 @@ const tutorials = [
     price: 'Free'
   },
   {
-    id: 8,
-    title: 'Machine Learning Model Deployment',
-    description: 'Learn how to deploy machine learning models to production environments.',
+    id: 8,,
     instructor: 'Dr. Sarah Johnson',
     duration: '2 hours 45 minutes',
     level: 'Advanced',

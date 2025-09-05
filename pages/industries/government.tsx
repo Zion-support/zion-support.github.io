@@ -5,27 +5,19 @@ import Link from 'next/link';
 import { ArrowRight, CheckCircle, Shield, Building, Users, Clock, Star, FileText } from 'lucide-react';
 
 const solutions = [
-  {
-    title: 'Citizen Services Portal',
-    description: 'Comprehensive digital platform for citizen services, applications, and government interactions.',
+  {,
     features: ['Online Applications', 'Document Management', 'Payment Processing', 'Status Tracking'],
     icon: Building
   },
-  {
-    title: 'Data Management Systems',
-    description: 'Secure data management and analytics platforms for government operations and decision-making.',
+  {,
     features: ['Data Integration', 'Analytics Dashboard', 'Report Generation', 'Data Security'],
     icon: FileText
   },
-  {
-    title: 'Cybersecurity Solutions',
-    description: 'Advanced security measures to protect government systems and sensitive citizen data.',
+  {,
     features: ['Threat Detection', 'Access Control', 'Compliance Monitoring', 'Incident Response'],
     icon: Shield
   },
-  {
-    title: 'Workflow Automation',
-    description: 'Automated processes for government operations, approvals, and citizen service delivery.',
+  {,
     features: ['Process Automation', 'Approval Workflows', 'Document Processing', 'Notification Systems'],
     icon: Users
   }
@@ -34,23 +26,15 @@ const solutions = [
 const benefits = [
   {
     icon: Shield,
-    title: 'Security Compliance',
-    description: 'Full compliance with government security standards and regulations'
   },
   {
     icon: Clock,
-    title: '24/7 Support',
-    description: 'Round-the-clock technical support for critical government operations'
   },
   {
     icon: Users,
-    title: 'Government Expertise',
-    description: 'Deep understanding of government processes and regulatory requirements'
   },
   {
     icon: Star,
-    title: 'Proven Track Record',
-    description: 'Successfully delivered solutions for federal, state, and local governments'
   }
 ];
 

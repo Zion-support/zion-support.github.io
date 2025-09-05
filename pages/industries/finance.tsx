@@ -5,27 +5,19 @@ import Link from 'next/link';
 import { ArrowRight, CheckCircle, Shield, DollarSign, TrendingUp, Users, Clock, Star } from 'lucide-react';
 
 const solutions = [
-  {
-    title: 'Fintech Applications',
-    description: 'Secure, scalable fintech solutions including mobile banking, payment processing, and digital wallets.',
+  {,
     features: ['Mobile Banking', 'Payment Processing', 'Digital Wallets', 'API Integration'],
     icon: DollarSign
   },
-  {
-    title: 'Risk Management Systems',
-    description: 'Advanced risk assessment and management platforms with real-time monitoring and compliance.',
+  {,
     features: ['Real-time Monitoring', 'Fraud Detection', 'Compliance Reporting', 'Risk Analytics'],
     icon: Shield
   },
-  {
-    title: 'Trading Platforms',
-    description: 'High-performance trading platforms with low latency and advanced analytics capabilities.',
+  {,
     features: ['Low Latency', 'Real-time Data', 'Advanced Analytics', 'Algorithmic Trading'],
     icon: TrendingUp
   },
-  {
-    title: 'Regulatory Compliance',
-    description: 'Comprehensive compliance solutions for financial regulations and reporting requirements.',
+  {,
     features: ['KYC/AML', 'Regulatory Reporting', 'Audit Trails', 'Data Governance'],
     icon: Users
   }
@@ -34,23 +26,15 @@ const solutions = [
 const benefits = [
   {
     icon: Shield,
-    title: 'Bank-Grade Security',
-    description: 'Enterprise-level security with encryption, authentication, and fraud prevention'
   },
   {
     icon: Clock,
-    title: 'Real-time Processing',
-    description: 'High-performance systems for real-time financial transactions and data processing'
   },
   {
     icon: Users,
-    title: 'Compliance Expertise',
-    description: 'Deep knowledge of financial regulations and compliance requirements'
   },
   {
     icon: Star,
-    title: 'Proven Track Record',
-    description: 'Successfully delivered solutions for leading financial institutions'
   }
 ];
 

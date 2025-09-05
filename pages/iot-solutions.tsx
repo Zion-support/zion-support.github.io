@@ -4,49 +4,37 @@ import { motion } from 'framer-motion';
 import { Globe, Wifi, Database, Shield, Zap, Cloud, ArrowRight, CheckCircle, Star, Clock, DollarSign, TrendingUp } from 'lucide-react';
 
 const iotServices = [
-  {
-    title: "Smart Device Development",
-    description: "Custom IoT devices and sensors for your specific business needs",
+  {,
     icon: Globe,
     features: ["Sensor Integration", "Edge Computing", "Real-time Monitoring"],
     pricing: "Starting at $3,500/month",
     timeline: "8-20 weeks"
   },
-  {
-    title: "IoT Platform Development",
-    description: "Comprehensive IoT platforms for device management and data processing",
+  {,
     icon: Cloud,
     features: ["Device Management", "Data Analytics", "API Integration"],
     pricing: "Starting at $2,500/month",
     timeline: "12-24 weeks"
   },
-  {
-    title: "Industrial IoT (IIoT)",
-    description: "IoT solutions for manufacturing and industrial automation",
+  {,
     icon: Zap,
     features: ["Predictive Maintenance", "Quality Control", "Supply Chain Optimization"],
     pricing: "Starting at $5,000/month",
     timeline: "16-32 weeks"
   },
-  {
-    title: "Smart City Solutions",
-    description: "IoT infrastructure for smart cities and urban management",
+  {,
     icon: Database,
     features: ["Traffic Management", "Environmental Monitoring", "Public Safety"],
     pricing: "Starting at $8,000/month",
     timeline: "24-48 weeks"
   },
-  {
-    title: "IoT Security",
-    description: "Comprehensive security solutions for IoT networks and devices",
+  {,
     icon: Shield,
     features: ["Device Authentication", "Data Encryption", "Threat Detection"],
     pricing: "Starting at $2,000/month",
     timeline: "6-12 weeks"
   },
-  {
-    title: "IoT Analytics & AI",
-    description: "Advanced analytics and AI integration for IoT data insights",
+  {,
     icon: TrendingUp,
     features: ["Predictive Analytics", "Machine Learning", "Real-time Insights"],
     pricing: "Starting at $3,000/month",
@@ -64,27 +52,19 @@ const industries = [
 ];
 
 const benefits = [
-  {
-    title: "Real-time Monitoring",
-    description: "Monitor your operations in real-time with IoT sensors and devices",
+  {,
     icon: Globe,
     percentage: "99.9%"
   },
-  {
-    title: "Cost Reduction",
-    description: "Reduce operational costs through automation and optimization",
+  {,
     icon: DollarSign,
     percentage: "35%"
   },
-  {
-    title: "Improved Efficiency",
-    description: "Enhance operational efficiency with data-driven insights",
+  {,
     icon: TrendingUp,
     percentage: "50%"
   },
-  {
-    title: "Predictive Maintenance",
-    description: "Prevent equipment failures with predictive maintenance",
+  {,
     icon: Shield,
     percentage: "80%"
   }
@@ -92,39 +72,27 @@ const benefits = [
 
 const process = [
   {
-    step: "1",
-    title: "Requirements Analysis",
-    description: "Analyze your business needs and IoT requirements",
+    step: "1",,
     duration: "1-2 weeks"
   },
   {
-    step: "2",
-    title: "Architecture Design",
-    description: "Design IoT architecture and select appropriate technologies",
+    step: "2",,
     duration: "2-3 weeks"
   },
   {
-    step: "3",
-    title: "Device Development",
-    description: "Develop and configure IoT devices and sensors",
+    step: "3",,
     duration: "8-20 weeks"
   },
   {
-    step: "4",
-    title: "Platform Development",
-    description: "Build IoT platform for data management and analytics",
+    step: "4",,
     duration: "12-24 weeks"
   },
   {
-    step: "5",
-    title: "Integration & Testing",
-    description: "Integrate all components and conduct comprehensive testing",
+    step: "5",,
     duration: "2-4 weeks"
   },
   {
-    step: "6",
-    title: "Deployment & Support",
-    description: "Deploy IoT solution and provide ongoing support",
+    step: "6",,
     duration: "Ongoing"
   }
 ];

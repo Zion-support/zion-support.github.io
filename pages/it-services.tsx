@@ -34,9 +34,7 @@ import {
 import Layout from '../components/Layout';
 
 const itServices = [
-  {
-    title: 'AI-Powered IT Operations Center',
-    description: 'Intelligent IT operations management with predictive analytics and automated incident response.',
+  {,
     icon: Brain,
     features: ['Predictive Analytics', 'Automated Incident Response', 'Performance Monitoring', 'Capacity Planning'],
     pricing: '$2,999 - $9,999/month',
@@ -46,9 +44,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/ai-it-operations',
     popular: true
   },
-  {
-    title: 'Quantum-Safe Cybersecurity Implementation',
-    description: 'Future-proof security solutions using quantum-resistant encryption and advanced threat protection.',
+  {,
     icon: Shield,
     features: ['Quantum-Resistant Encryption', 'Advanced Threat Detection', 'Zero Trust Architecture', 'Compliance Management'],
     pricing: '$4,999 - $19,999/month',
@@ -58,9 +54,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/quantum-security',
     popular: true
   },
-  {
-    title: 'Edge Computing Infrastructure',
-    description: 'Distributed computing infrastructure for low-latency applications and IoT deployments.',
+  {,
     icon: Cpu,
     features: ['Edge Nodes Deployment', 'Low-Latency Processing', 'IoT Integration', 'Real-time Analytics'],
     pricing: '$1,999 - $7,999/month',
@@ -70,9 +64,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/edge-computing',
     popular: false
   },
-  {
-    title: '5G Network Implementation & Optimization',
-    description: 'Complete 5G network deployment and optimization services for enhanced connectivity.',
+  {,
     icon: Wifi,
     features: ['5G Network Design', 'Performance Optimization', 'Coverage Analysis', 'Capacity Planning'],
     pricing: '$9,999 - $49,999/month',
@@ -82,9 +74,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/5g-networks',
     popular: true
   },
-  {
-    title: 'Blockchain Infrastructure & Integration',
-    description: 'Enterprise blockchain solutions with smart contracts and decentralized applications.',
+  {,
     icon: Database,
     features: ['Blockchain Development', 'Smart Contracts', 'DApp Integration', 'Consensus Mechanisms'],
     pricing: '$3,999 - $14,999/month',
@@ -94,9 +84,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/blockchain-infrastructure',
     popular: false
   },
-  {
-    title: 'IoT Platform Development & Management',
-    description: 'Comprehensive IoT solutions for device management, data collection, and analytics.',
+  {,
     icon: Smartphone,
     features: ['Device Management', 'Data Collection', 'Real-time Analytics', 'Remote Monitoring'],
     pricing: '$2,499 - $9,999/month',
@@ -106,9 +94,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/iot-platforms',
     popular: false
   },
-  {
-    title: 'AI Infrastructure & ML Pipeline Setup',
-    description: 'Complete AI infrastructure setup with machine learning pipelines and model deployment.',
+  {,
     icon: Brain,
     features: ['ML Pipeline Setup', 'Model Training', 'Model Deployment', 'Performance Monitoring'],
     pricing: '$4,999 - $19,999/month',
@@ -118,9 +104,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/ai-infrastructure',
     popular: true
   },
-  {
-    title: 'Green IT & Sustainability Solutions',
-    description: 'Eco-friendly IT solutions for reducing carbon footprint and energy consumption.',
+  {,
     icon: Globe,
     features: ['Energy Optimization', 'Carbon Footprint Reduction', 'Sustainable Practices', 'Green Monitoring'],
     pricing: '$1,999 - $7,999/month',
@@ -130,9 +114,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/green-it',
     popular: false
   },
-  {
-    title: 'Zero Trust Security Architecture',
-    description: 'Comprehensive zero trust security implementation for enhanced protection.',
+  {,
     icon: Lock,
     features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Access Controls'],
     pricing: '$3,999 - $14,999/month',
@@ -142,9 +124,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/zero-trust',
     popular: true
   },
-  {
-    title: 'Hybrid Cloud Management Platform',
-    description: 'Unified management platform for hybrid cloud environments and multi-cloud operations.',
+  {,
     icon: Cloud,
     features: ['Multi-Cloud Management', 'Resource Optimization', 'Cost Management', 'Security Controls'],
     pricing: '$2,999 - $11,999/month',
@@ -154,9 +134,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/hybrid-cloud',
     popular: false
   },
-  {
-    title: 'Advanced Analytics & Business Intelligence',
-    description: 'Comprehensive analytics platform with real-time insights and predictive capabilities.',
+  {,
     icon: BarChart3,
     features: ['Real-time Analytics', 'Predictive Modeling', 'Data Visualization', 'Business Intelligence'],
     pricing: '$2,499 - $9,999/month',
@@ -166,9 +144,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/advanced-analytics',
     popular: false
   },
-  {
-    title: 'IT Disaster Recovery & Business Continuity',
-    description: 'Comprehensive disaster recovery solutions ensuring business continuity and data protection.',
+  {,
     icon: Shield,
     features: ['Backup Solutions', 'Recovery Planning', 'Business Continuity', 'Data Protection'],
     pricing: '$1,999 - $7,999/month',
@@ -178,9 +154,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/disaster-recovery',
     popular: false
   },
-  {
-    title: 'Advanced Network Security Implementation',
-    description: 'Comprehensive network security solutions with advanced threat protection and monitoring.',
+  {,
     icon: Network,
     features: ['Firewall Management', 'Intrusion Detection', 'Threat Prevention', 'Network Monitoring'],
     pricing: '$2,999 - $11,999/month',
@@ -190,9 +164,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/network-security',
     popular: false
   },
-  {
-    title: 'IT Compliance & Regulatory Services',
-    description: 'Comprehensive compliance management for various industry regulations and standards.',
+  {,
     icon: CheckCircle,
     features: ['Compliance Monitoring', 'Audit Support', 'Regulatory Updates', 'Documentation Management'],
     pricing: '$1,999 - $7,999/month',
@@ -202,9 +174,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/it-compliance',
     popular: false
   },
-  {
-    title: 'Digital Transformation Consulting',
-    description: 'Strategic consulting services for digital transformation and technology modernization.',
+  {,
     icon: Rocket,
     features: ['Strategy Development', 'Technology Assessment', 'Change Management', 'Implementation Planning'],
     pricing: '$4,999 - $19,999/month',
@@ -214,9 +184,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/digital-transformation',
     popular: true
   },
-  {
-    title: 'IT Asset Management & Optimization',
-    description: 'Comprehensive IT asset management with optimization and lifecycle management.',
+  {,
     icon: Settings,
     features: ['Asset Tracking', 'Lifecycle Management', 'Cost Optimization', 'Performance Monitoring'],
     pricing: '$1,499 - $5,999/month',
@@ -226,9 +194,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/it-asset-management',
     popular: false
   },
-  {
-    title: 'Advanced Backup & Data Protection',
-    description: 'Comprehensive backup and data protection solutions with automated recovery.',
+  {,
     icon: HardDrive,
     features: ['Automated Backups', 'Data Encryption', 'Recovery Testing', 'Compliance Support'],
     pricing: '$1,999 - $7,999/month',
@@ -238,9 +204,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/backup-protection',
     popular: false
   },
-  {
-    title: 'IT Performance Monitoring & Optimization',
-    description: 'Comprehensive IT performance monitoring with optimization and capacity planning.',
+  {,
     icon: Monitor,
     features: ['Performance Monitoring', 'Capacity Planning', 'Optimization Recommendations', 'Alert Management'],
     pricing: '$2,499 - $9,999/month',
@@ -250,9 +214,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/performance-monitoring',
     popular: false
   },
-  {
-    title: 'Cloud Security & Compliance Services',
-    description: 'Comprehensive cloud security solutions with compliance management and monitoring.',
+  {,
     icon: Cloud,
     features: ['Cloud Security', 'Compliance Management', 'Threat Detection', 'Access Controls'],
     pricing: '$2,999 - $11,999/month',
@@ -262,9 +224,7 @@ const itServices = [
     link: 'https://ziontechgroup.com/cloud-security',
     popular: false
   },
-  {
-    title: 'IT Service Management (ITSM) Implementation',
-    description: 'Complete ITSM implementation with service desk, change management, and incident handling.',
+  {,
     icon: Settings,
     features: ['Service Desk', 'Change Management', 'Incident Management', 'Problem Management'],
     pricing: '$3,999 - $14,999/month',
@@ -274,279 +234,217 @@ const itServices = [
     link: 'https://ziontechgroup.com/itsm',
     popular: false
   },
-  {
-    title: 'Edge Computing Infrastructure',
-    description: 'Distributed edge computing solutions for low-latency applications and IoT.',
+  {,
     icon: Cpu,
     features: ['Edge Data Centers', 'Latency Optimization', 'IoT Integration', 'Distributed Processing'],
     pricing: '$20,000 - $150,000/setup',
     category: 'Edge Computing',
     popular: true
   },
-  {
-    title: '5G Network Implementation',
-    description: 'Complete 5G network deployment and optimization for businesses and organizations.',
+  {,
     icon: Network,
     features: ['5G Infrastructure', 'Network Optimization', 'IoT Connectivity', 'Performance Monitoring'],
     pricing: '$100,000 - $1,000,000/project',
     category: '5G Networks',
     popular: true
   },
-  {
-    title: 'Blockchain Infrastructure',
-    description: 'Enterprise blockchain solutions with smart contracts and decentralized applications.',
+  {,
     icon: Lock,
     features: ['Blockchain Development', 'Smart Contracts', 'DApp Creation', 'Consensus Mechanisms'],
     pricing: '$30,000 - $300,000/project',
     category: 'Blockchain',
     popular: true
   },
-  {
-    title: 'IoT Platform Development',
-    description: 'Comprehensive IoT platform for device management, data collection, and analytics.',
+  {,
     icon: Wifi,
     features: ['Device Management', 'Data Collection', 'Real-time Analytics', 'Integration APIs'],
     pricing: '$25,000 - $200,000/project',
     category: 'IoT',
     popular: true
   },
-  {
-    title: 'Microservices Architecture',
-    description: 'Modern microservices architecture design and implementation for scalable applications.',
+  {,
     icon: Server,
     features: ['Service Design', 'API Gateway', 'Container Orchestration', 'Service Mesh'],
     pricing: '$40,000 - $400,000/project',
     category: 'Architecture',
     popular: true
   },
-  {
-    title: 'DevOps & CI/CD Pipeline',
-    description: 'Complete DevOps implementation with automated CI/CD pipelines and infrastructure as code.',
+  {,
     icon: Settings,
     features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Automated Testing', 'Deployment Automation'],
     pricing: '$15,000 - $100,000/setup',
     category: 'DevOps',
     popular: true
   },
-  {
-    title: 'Data Lake & Analytics Platform',
-    description: 'Enterprise data lake with advanced analytics and machine learning capabilities.',
+  {,
     icon: Database,
     features: ['Data Lake Design', 'ETL Pipelines', 'Analytics Dashboard', 'ML Integration'],
     pricing: '$50,000 - $500,000/project',
     category: 'Data Analytics',
     popular: true
   },
-  {
-    title: 'API Gateway & Management',
-    description: 'Comprehensive API gateway solution with security, monitoring, and rate limiting.',
+  {,
     icon: Network,
     features: ['API Gateway', 'Rate Limiting', 'Authentication', 'Analytics & Monitoring'],
     pricing: '$10,000 - $80,000/setup',
     category: 'API Management',
     popular: true
   },
-  {
-    title: 'Content Delivery Network (CDN)',
-    description: 'Global CDN implementation for fast content delivery and improved user experience.',
+  {,
     icon: Globe,
     features: ['Global CDN', 'Edge Caching', 'DDoS Protection', 'Performance Optimization'],
     pricing: '$5,000 - $50,000/setup',
     category: 'CDN',
     popular: true
   },
-  {
-    title: 'Disaster Recovery & Backup',
-    description: 'Comprehensive disaster recovery and backup solutions for business continuity.',
+  {,
     icon: Shield,
     features: ['Backup Solutions', 'Disaster Recovery', 'Business Continuity', 'Data Replication'],
     pricing: '$20,000 - $200,000/setup',
     category: 'Disaster Recovery',
     popular: true
   },
-  {
-    title: 'Identity & Access Management',
-    description: 'Enterprise identity and access management with single sign-on and multi-factor authentication.',
+  {,
     icon: Lock,
     features: ['Single Sign-On', 'Multi-Factor Auth', 'Identity Federation', 'Access Control'],
     pricing: '$15,000 - $150,000/setup',
     category: 'IAM',
     popular: true
   },
-  {
-    title: 'Enterprise Resource Planning (ERP)',
-    description: 'Custom ERP system development and integration for business process automation.',
+  {,
     icon: Settings,
     features: ['Process Automation', 'Integration', 'Custom Development', 'User Training'],
     pricing: '$100,000 - $1,000,000/project',
     category: 'ERP',
     popular: true
   },
-  {
-    title: 'Customer Relationship Management (CRM)',
-    description: 'Custom CRM solution development and integration with existing business systems.',
+  {,
     icon: Users,
     features: ['Lead Management', 'Sales Automation', 'Customer Analytics', 'Integration'],
     pricing: '$30,000 - $300,000/project',
     category: 'CRM',
     popular: true
   },
-  {
-    title: 'E-commerce Platform Development',
-    description: 'Custom e-commerce platform development with payment integration and inventory management.',
+  {,
     icon: ShoppingCart,
     features: ['Custom Development', 'Payment Integration', 'Inventory Management', 'Analytics'],
     pricing: '$50,000 - $500,000/project',
     category: 'E-commerce',
     popular: true
   },
-  {
-    title: 'Learning Management System (LMS)',
-    description: 'Custom LMS development for online education and corporate training.',
+  {,
     icon: BookOpen,
     features: ['Course Management', 'User Management', 'Progress Tracking', 'Assessment Tools'],
     pricing: '$25,000 - $250,000/project',
     category: 'LMS',
     popular: true
   },
-  {
-    title: 'Healthcare IT Solutions',
-    description: 'HIPAA-compliant healthcare IT solutions including EHR and telemedicine platforms.',
+  {,
     icon: Heart,
     features: ['EHR Systems', 'Telemedicine', 'HIPAA Compliance', 'Integration'],
     pricing: '$75,000 - $750,000/project',
     category: 'Healthcare IT',
     popular: true
   },
-  {
-    title: 'Financial Technology (FinTech)',
-    description: 'Secure financial technology solutions including payment processing and banking systems.',
+  {,
     icon: DollarSign,
     features: ['Payment Processing', 'Banking Systems', 'Security Compliance', 'API Integration'],
     pricing: '$100,000 - $1,000,000/project',
     category: 'FinTech',
     popular: true
   },
-  {
-    title: 'Real Estate Technology',
-    description: 'Property management and real estate technology solutions.',
+  {,
     icon: Building,
     features: ['Property Management', 'Listing Systems', 'CRM Integration', 'Analytics'],
     pricing: '$40,000 - $400,000/project',
     category: 'PropTech',
     popular: true
   },
-  {
-    title: 'Manufacturing IT Solutions',
-    description: 'Industrial IT solutions for manufacturing including MES and SCADA systems.',
+  {,
     icon: Settings,
     features: ['MES Systems', 'SCADA Integration', 'IoT Sensors', 'Analytics'],
     pricing: '$60,000 - $600,000/project',
     category: 'Manufacturing IT',
     popular: true
   },
-  {
-    title: 'Retail Technology Solutions',
-    description: 'Point-of-sale and retail management systems with inventory and customer analytics.',
+  {,
     icon: ShoppingCart,
     features: ['POS Systems', 'Inventory Management', 'Customer Analytics', 'Integration'],
     pricing: '$30,000 - $300,000/project',
     category: 'Retail Tech',
     popular: true
   },
-  {
-    title: 'Education Technology (EdTech)',
-    description: 'Educational technology solutions including virtual classrooms and student management.',
+  {,
     icon: BookOpen,
     features: ['Virtual Classrooms', 'Student Management', 'Assessment Tools', 'Parent Portal'],
     pricing: '$35,000 - $350,000/project',
     category: 'EdTech',
     popular: true
   },
-  {
-    title: 'Government IT Solutions',
-    description: 'Secure government IT solutions with compliance and citizen services.',
+  {,
     icon: Building,
     features: ['Citizen Services', 'Compliance', 'Security', 'Integration'],
     pricing: '$150,000 - $1,500,000/project',
     category: 'GovTech',
     popular: true
   },
-  {
-    title: 'Non-Profit IT Solutions',
-    description: 'Cost-effective IT solutions for non-profit organizations and charities.',
+  {,
     icon: Heart,
     features: ['Donor Management', 'Volunteer Coordination', 'Event Management', 'Fundraising Tools'],
     pricing: '$20,000 - $200,000/project',
     category: 'Non-Profit IT',
     popular: true
   },
-  {
-    title: 'Startup IT Infrastructure',
-    description: 'Scalable IT infrastructure solutions for startups and growing businesses.',
+  {,
     icon: Rocket,
     features: ['Scalable Infrastructure', 'Cost Optimization', 'Rapid Deployment', 'Growth Support'],
     pricing: '$10,000 - $100,000/setup',
     category: 'Startup IT',
     popular: true
   },
-  {
-    title: 'Enterprise Integration',
-    description: 'Integration of disparate systems and applications across the enterprise.',
+  {,
     icon: Network,
     features: ['System Integration', 'Data Synchronization', 'API Development', 'Legacy Modernization'],
     pricing: '$50,000 - $500,000/project',
     category: 'Integration',
     popular: true
   },
-  {
-    title: 'Digital Transformation',
-    description: 'Complete digital transformation strategy and implementation for traditional businesses.',
+  {,
     icon: Zap,
     features: ['Strategy Development', 'Process Automation', 'Technology Adoption', 'Change Management'],
     pricing: '$100,000 - $1,000,000/project',
     category: 'Digital Transformation',
     popular: true
   },
-  {
-    title: 'Cloud Migration Services',
-    description: 'Complete cloud migration strategy and implementation for on-premise systems.',
+  {,
     icon: Cloud,
     features: ['Migration Strategy', 'Data Migration', 'Application Migration', 'Optimization'],
     pricing: '$30,000 - $300,000/project',
     category: 'Cloud Migration',
     popular: true
   },
-  {
-    title: 'Legacy System Modernization',
-    description: 'Modernization of legacy systems with modern technologies and architectures.',
+  {,
     icon: Settings,
     features: ['Legacy Analysis', 'Modernization Strategy', 'Data Migration', 'System Replacement'],
     pricing: '$75,000 - $750,000/project',
     category: 'Legacy Modernization',
     popular: true
   },
-  {
-    title: 'IT Consulting & Strategy',
-    description: 'Strategic IT consulting and technology roadmap development.',
+  {,
     icon: Target,
     features: ['Technology Assessment', 'Strategic Planning', 'Vendor Selection', 'Implementation Guidance'],
     pricing: '$150 - $500/hour',
     category: 'IT Consulting',
     popular: true
   },
-  {
-    title: '24/7 IT Support & Monitoring',
-    description: 'Round-the-clock IT support and system monitoring services.',
+  {,
     icon: Clock,
     features: ['24/7 Support', 'System Monitoring', 'Incident Response', 'Preventive Maintenance'],
     pricing: '$2,000 - $20,000/month',
     category: 'IT Support',
     popular: true
   },
-  {
-    title: 'IT Training & Certification',
-    description: 'Comprehensive IT training programs and certification preparation.',
+  {,
     icon: BookOpen,
     features: ['Technical Training', 'Certification Prep', 'Hands-on Labs', 'Custom Curriculum'],
     pricing: '$500 - $5,000/person',

@@ -25,50 +25,34 @@ import Layout from '../../components/Layout';
 
 const transportationSolutions = [
   {
-    icon: Navigation,
-    title: 'Fleet Management',
-    description: 'AI-powered fleet optimization and real-time tracking systems.',
+    icon: Navigation,,
     features: ['Route Optimization', 'Fuel Efficiency', 'Driver Safety', 'Maintenance Scheduling']
   },
   {
-    icon: MapPin,
-    title: 'Logistics Optimization',
-    description: 'Advanced logistics planning and supply chain management solutions.',
+    icon: MapPin,,
     features: ['Demand Forecasting', 'Inventory Management', 'Warehouse Automation', 'Last-Mile Delivery']
   },
   {
-    icon: Shield,
-    title: 'Safety & Compliance',
-    description: 'Comprehensive safety monitoring and regulatory compliance systems.',
+    icon: Shield,,
     features: ['Driver Monitoring', 'Vehicle Safety', 'Compliance Tracking', 'Incident Management']
   },
   {
-    icon: BarChart3,
-    title: 'Analytics & Insights',
-    description: 'Data-driven insights for operational efficiency and cost reduction.',
+    icon: BarChart3,,
     features: ['Performance Analytics', 'Cost Analysis', 'Predictive Maintenance', 'KPI Dashboard']
   }
 ];
 
 const transportationChallenges = [
-  {
-    title: 'Route Optimization',
-    description: 'Minimizing fuel costs and delivery times while meeting customer expectations.',
+  {,
     solution: 'AI-powered route planning with real-time traffic and weather data integration.'
   },
-  {
-    title: 'Fleet Maintenance',
-    description: 'Preventing breakdowns and reducing maintenance costs through predictive analytics.',
+  {,
     solution: 'IoT sensors and machine learning for predictive maintenance scheduling.'
   },
-  {
-    title: 'Driver Safety',
-    description: 'Ensuring driver safety and reducing accidents through monitoring and training.',
+  {,
     solution: 'Advanced driver monitoring systems with real-time alerts and coaching.'
   },
-  {
-    title: 'Regulatory Compliance',
-    description: 'Meeting complex transportation regulations and safety standards.',
+  {,
     solution: 'Automated compliance monitoring and reporting systems.'
   }
 ];
@@ -105,27 +89,19 @@ const transportationTechnologies = [
 
 const transportationModes = [
   {
-    icon: Truck,
-    title: 'Road Transportation',
-    description: 'Fleet management, route optimization, and driver safety solutions.',
+    icon: Truck,,
     solutions: ['Fleet Tracking', 'Route Planning', 'Driver Monitoring', 'Fuel Management']
   },
   {
-    icon: Train,
-    title: 'Rail Transportation',
-    description: 'Rail network optimization and passenger experience enhancement.',
+    icon: Train,,
     solutions: ['Schedule Optimization', 'Passenger Analytics', 'Maintenance Planning', 'Safety Systems']
   },
   {
-    icon: Plane,
-    title: 'Air Transportation',
-    description: 'Aircraft maintenance, flight optimization, and passenger services.',
+    icon: Plane,,
     solutions: ['Flight Planning', 'Maintenance Scheduling', 'Passenger Management', 'Cargo Optimization']
   },
   {
-    icon: Ship,
-    title: 'Maritime Transportation',
-    description: 'Vessel tracking, port optimization, and cargo management.',
+    icon: Ship,,
     solutions: ['Vessel Tracking', 'Port Operations', 'Cargo Management', 'Weather Routing']
   }
 ];

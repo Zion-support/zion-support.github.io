@@ -43,33 +43,25 @@ const allServices = [
     icon: Brain,
     color: "from-purple-500 to-purple-700",
     services: [
-      {
-        title: "Machine Learning Models",
-        description: "Custom ML models for predictive analytics and intelligent decision-making",
+      {,
         price: "$3,500/month",
         marketPrice: "$5,000-12,000/month",
         features: ["Custom model development", "Real-time prediction APIs", "A/B testing", "Model monitoring"],
         benefits: ["40-60% accuracy improvement", "80% automation", "25-35% ROI increase"]
       },
-      {
-        title: "AI-Powered Business Automation",
-        description: "Intelligent automation for repetitive tasks and business processes",
+      {,
         price: "$1,800/month",
         marketPrice: "$3,000-6,000/month",
         features: ["Workflow automation", "Customer service automation", "Lead qualification", "Process optimization"],
         benefits: ["70-85% manual work reduction", "90% faster response time", "40% lead conversion increase"]
       },
-      {
-        title: "AI Content Generation & Marketing",
-        description: "Automated content creation and marketing campaign optimization",
+      {,
         price: "$1,500/month",
         marketPrice: "$2,500-5,000/month",
         features: ["Content generation", "SEO optimization", "Social media automation", "Performance analytics"],
         benefits: ["50+ pieces daily", "60% engagement increase", "80% cost reduction"]
       },
-      {
-        title: "AI Data Analytics & Insights",
-        description: "Advanced data analysis and predictive insights powered by AI",
+      {,
         price: "$2,000/month",
         marketPrice: "$3,500-8,000/month",
         features: ["Predictive analytics", "Customer behavior analysis", "Real-time processing", "Custom dashboards"],
@@ -83,33 +75,25 @@ const allServices = [
     icon: Network,
     color: "from-blue-500 to-blue-700",
     services: [
-      {
-        title: "Cloud Infrastructure & Migration",
-        description: "Comprehensive cloud solutions with seamless migration and optimization",
+      {,
         price: "$1,800/month",
         marketPrice: "$3,500-8,000/month",
         features: ["AWS, Azure, GCP migration", "Container orchestration", "Auto-scaling", "Disaster recovery"],
         benefits: ["40% cost reduction", "300% scalability improvement", "99.9% uptime"]
       },
-      {
-        title: "Advanced Cybersecurity Solutions",
-        description: "Enterprise-grade security services protecting against modern threats",
+      {,
         price: "$2,500/month",
         marketPrice: "$5,000-15,000/month",
         features: ["Security audits", "Penetration testing", "Zero-trust architecture", "Compliance management"],
         benefits: ["90% incident reduction", "100% compliance", "99.9% threat protection"]
       },
-      {
-        title: "DevOps & CI/CD Automation",
-        description: "Modern DevOps practices with automated deployment and monitoring",
+      {,
         price: "$2,000/month",
         marketPrice: "$4,000-10,000/month",
         features: ["CI/CD pipelines", "Infrastructure as code", "Container orchestration", "Performance optimization"],
         benefits: ["10x faster deployment", "95% error reduction", "60% productivity increase"]
       },
-      {
-        title: "Managed IT Services",
-        description: "Complete IT management and support for small to medium businesses",
+      {,
         price: "$1,200/month",
         marketPrice: "$2,500-6,000/month",
         features: ["24/7 help desk", "Proactive monitoring", "Security management", "Asset management"],
@@ -123,33 +107,25 @@ const allServices = [
     icon: Cloud,
     color: "from-green-500 to-green-700",
     services: [
-      {
-        title: "AI-Powered Lead Generation",
-        description: "Automated lead discovery, qualification, and nurturing using AI",
+      {,
         price: "$1,200/month",
         marketPrice: "$2,500-5,000/month",
         features: ["AI lead scoring", "Automated research", "Multi-channel capture", "CRM integration"],
         benefits: ["300% lead increase", "60% cost reduction", "25 hours/week saved"]
       },
-      {
-        title: "Smart Appointment Scheduling",
-        description: "Intelligent scheduling with AI optimization and automated reminders",
+      {,
         price: "$800/month",
         marketPrice: "$1,500-3,000/month",
         features: ["AI time optimization", "Multi-calendar integration", "Automated reminders", "Payment processing"],
         benefits: ["70% no-show reduction", "45% booking increase", "15 hours/week saved"]
       },
-      {
-        title: "Customer Support Automation",
-        description: "AI-powered customer service with intelligent routing and responses",
+      {,
         price: "$1,000/month",
         marketPrice: "$2,000-4,500/month",
         features: ["AI chatbot", "Intelligent routing", "Multi-channel support", "Sentiment analysis"],
         benefits: ["90% faster response", "80% automatic handling", "60% satisfaction improvement"]
       },
-      {
-        title: "Financial Analytics & Forecasting",
-        description: "AI-powered financial insights and predictive analytics for businesses",
+      {,
         price: "$1,800/month",
         marketPrice: "$3,500-7,000/month",
         features: ["Automated reporting", "Cash flow forecasting", "Expense tracking", "Risk assessment"],

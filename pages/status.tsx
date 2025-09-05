@@ -32,27 +32,21 @@ const services = [
 
 const incidents = [
   {
-    id: 1,
-    title: 'Scheduled Maintenance - AI Services',
-    description: 'Planned maintenance window for AI service infrastructure updates.',
+    id: 1,,
     status: 'resolved',
     startTime: '2024-01-07T02:00:00Z',
     endTime: '2024-01-07T04:00:00Z',
     impact: 'minor'
   },
   {
-    id: 2,
-    title: 'Database Performance Issue',
-    description: 'Temporary performance degradation in database queries.',
+    id: 2,,
     status: 'resolved',
     startTime: '2024-01-05T14:30:00Z',
     endTime: '2024-01-05T16:45:00Z',
     impact: 'minor'
   },
   {
-    id: 3,
-    title: 'CDN Outage',
-    description: 'Content delivery network experiencing intermittent issues.',
+    id: 3,,
     status: 'resolved',
     startTime: '2024-01-03T09:15:00Z',
     endTime: '2024-01-03T11:30:00Z',

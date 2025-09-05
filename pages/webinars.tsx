@@ -83,9 +83,7 @@ export default function WebinarsPage() {
 
   const webinars = [
     {
-      id: 1,
-      title: 'Introduction to AI and Machine Learning',
-      description: 'Learn the fundamentals of AI and ML, including key concepts, applications, and implementation strategies for your business.',
+      id: 1,,
       category: 'ai',
       date: '2024-01-15',
       time: '2:00 PM EST',
@@ -101,9 +99,7 @@ export default function WebinarsPage() {
       rating: 4.8
     },
     {
-      id: 2,
-      title: 'Cloud Migration Best Practices',
-      description: 'Discover proven strategies for migrating your infrastructure to the cloud while minimizing downtime and maximizing efficiency.',
+      id: 2,,
       category: 'cloud',
       date: '2024-01-22',
       time: '3:00 PM EST',
@@ -119,9 +115,7 @@ export default function WebinarsPage() {
       rating: 4.9
     },
     {
-      id: 3,
-      title: 'Cybersecurity in the Digital Age',
-      description: 'Explore the latest cybersecurity threats and learn how to protect your organization with modern security practices.',
+      id: 3,,
       category: 'security',
       date: '2024-01-08',
       time: '1:00 PM EST',
@@ -137,9 +131,7 @@ export default function WebinarsPage() {
       rating: 4.7
     },
     {
-      id: 4,
-      title: 'Building Scalable Web Applications',
-      description: 'Learn how to design and build web applications that can handle millions of users with modern development practices.',
+      id: 4,,
       category: 'development',
       date: '2024-01-29',
       time: '4:00 PM EST',
@@ -155,9 +147,7 @@ export default function WebinarsPage() {
       rating: 0
     },
     {
-      id: 5,
-      title: 'Digital Transformation Strategy',
-      description: 'Understand how to create and execute a successful digital transformation strategy for your organization.',
+      id: 5,,
       category: 'business',
       date: '2024-02-05',
       time: '2:30 PM EST',
@@ -173,9 +163,7 @@ export default function WebinarsPage() {
       rating: 0
     },
     {
-      id: 6,
-      title: 'Advanced AI Implementation',
-      description: 'Deep dive into advanced AI techniques and learn how to implement complex AI solutions in production environments.',
+      id: 6,,
       category: 'ai',
       date: '2023-12-20',
       time: '3:30 PM EST',

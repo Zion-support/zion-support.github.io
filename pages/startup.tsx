@@ -19,30 +19,22 @@ import {
 } from 'lucide-react';
 
 const startupSolutions = [
-  {
-    title: "MVP Development",
-    description: "Rapid development of minimum viable products to validate your business idea",
+  {,
     icon: Rocket,
     features: ["Quick Prototyping", "User Testing", "Iterative Development", "Market Validation"],
     price: "Starting at $5,000"
   },
-  {
-    title: "Scalable Architecture",
-    description: "Build for growth with scalable technology architecture from day one",
+  {,
     icon: Globe,
     features: ["Cloud-Native Design", "Auto-Scaling", "Performance Optimization", "Cost Efficiency"],
     price: "Starting at $8,000"
   },
-  {
-    title: "Tech Stack Selection",
-    description: "Choose the right technologies for your startup's specific needs and budget",
+  {s specific needs and budget",
     icon: BarChart3,
     features: ["Technology Consulting", "Stack Evaluation", "Cost Analysis", "Future-Proofing"],
     price: "Starting at $2,000"
   },
-  {
-    title: "Funding-Ready Solutions",
-    description: "Prepare your technology for investor presentations and due diligence",
+  {,
     icon: DollarSign,
     features: ["Technical Documentation", "Security Audits", "Performance Reports", "Scalability Plans"],
     price: "Starting at $3,000"
@@ -50,19 +42,13 @@ const startupSolutions = [
 ];
 
 const startupFeatures = [
-  {
-    title: "Fast Delivery",
-    description: "Get to market quickly with our rapid development approach",
+  {,
     icon: Zap
   },
-  {
-    title: "Cost Effective",
-    description: "Startup-friendly pricing and flexible payment options",
+  {,
     icon: DollarSign
   },
-  {
-    title: "Growth Ready",
-    description: "Solutions designed to scale with your business",
+  {,
     icon: Users
   }
 ];

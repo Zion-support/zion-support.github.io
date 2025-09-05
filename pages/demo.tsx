@@ -4,23 +4,17 @@ import { motion } from 'framer-motion';
 import { Play, CheckCircle, ArrowRight, Star, Users, Clock, Shield } from 'lucide-react';
 
 const demoFeatures = [
-  {
-    title: "AI Services Demo",
-    description: "Experience our AI solutions in action",
+  {,
     icon: Play,
     duration: "15 min",
     features: ["Machine Learning Models", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
   },
-  {
-    title: "IT Services Demo",
-    description: "See our IT infrastructure solutions",
+  {,
     icon: CheckCircle,
     duration: "20 min",
     features: ["Cloud Migration", "Security Implementation", "DevOps Automation", "Monitoring & Analytics"]
   },
-  {
-    title: "Micro SaaS Demo",
-    description: "Explore our micro SaaS platforms",
+  {,
     icon: Star,
     duration: "25 min",
     features: ["Real-time Dashboards", "API Integration", "User Management", "Analytics & Reporting"]
@@ -28,19 +22,13 @@ const demoFeatures = [
 ];
 
 const benefits = [
-  {
-    title: "Hands-on Experience",
-    description: "Try our solutions before you buy",
+  {,
     icon: Play
   },
-  {
-    title: "Expert Guidance",
-    description: "Get personalized recommendations",
+  {,
     icon: Users
   },
-  {
-    title: "No Commitment",
-    description: "Free demo with no strings attached",
+  {,
     icon: Shield
   }
 ];

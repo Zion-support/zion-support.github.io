@@ -5,27 +5,19 @@ import Link from 'next/link';
 import { ArrowRight, CheckCircle, Factory, Cpu, Users, Clock, Star, Shield } from 'lucide-react';
 
 const solutions = [
-  {
-    title: 'Industrial IoT Solutions',
-    description: 'Connected manufacturing systems with real-time monitoring, predictive maintenance, and process optimization.',
+  {,
     features: ['Sensor Integration', 'Real-time Monitoring', 'Predictive Maintenance', 'Process Optimization'],
     icon: Factory
   },
-  {
-    title: 'Manufacturing Execution Systems',
-    description: 'Comprehensive MES for production planning, quality control, and resource management.',
+  {,
     features: ['Production Planning', 'Quality Control', 'Resource Management', 'Performance Tracking'],
     icon: Cpu
   },
-  {
-    title: 'Supply Chain Management',
-    description: 'End-to-end supply chain visibility and optimization for improved efficiency and cost reduction.',
+  {,
     features: ['Inventory Management', 'Supplier Integration', 'Demand Forecasting', 'Logistics Optimization'],
     icon: Users
   },
-  {
-    title: 'Quality Management Systems',
-    description: 'Advanced quality control and compliance management for manufacturing operations.',
+  {,
     features: ['Quality Control', 'Compliance Management', 'Audit Trails', 'Defect Tracking'],
     icon: Shield
   }
@@ -34,23 +26,15 @@ const solutions = [
 const benefits = [
   {
     icon: Shield,
-    title: 'Industry Expertise',
-    description: 'Deep understanding of manufacturing processes and industry requirements'
   },
   {
     icon: Clock,
-    title: '24/7 Support',
-    description: 'Round-the-clock technical support for critical manufacturing operations'
   },
   {
     icon: Users,
-    title: 'Manufacturing Specialists',
-    description: 'Team of experts with extensive manufacturing industry experience'
   },
   {
     icon: Star,
-    title: 'Proven Results',
-    description: 'Track record of successful implementations in manufacturing facilities'
   }
 ];
 

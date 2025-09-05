@@ -19,48 +19,32 @@ import MainLayout from '../src/components/layout/MainLayout';
 const features = [
   {
     icon: Shield,
-    title: 'Smart Contracts',
-    description: 'Secure, self-executing contracts with automated enforcement and transparent terms.'
   },
   {
     icon: Zap,
-    title: 'DeFi Solutions',
-    description: 'Decentralized finance applications including lending, borrowing, and trading platforms.'
   },
   {
     icon: Globe,
-    title: 'NFT Marketplaces',
-    description: 'Custom NFT platforms for digital art, collectibles, and unique digital assets.'
   },
   {
     icon: Lock,
-    title: 'Security Audits',
-    description: 'Comprehensive smart contract audits to ensure security and prevent vulnerabilities.'
   }
 ];
 
 const services = [
   {
-    title: 'Smart Contract Development',
-    description: 'Custom smart contracts for various blockchain platforms including Ethereum, BSC, and Polygon.',
     features: ['Solidity Development', 'Gas Optimization', 'Multi-chain Support', 'Testing & Deployment'],
     pricing: 'Starting at $5,000'
   },
   {
-    title: 'DeFi Platform Development',
-    description: 'Complete decentralized finance solutions with advanced trading and liquidity features.',
     features: ['DEX Development', 'Yield Farming', 'Liquidity Pools', 'Token Economics'],
     pricing: 'Starting at $15,000'
   },
   {
-    title: 'NFT Marketplace',
-    description: 'Custom NFT platforms with minting, trading, and marketplace functionality.',
     features: ['NFT Minting', 'Marketplace UI', 'Royalty System', 'Wallet Integration'],
     pricing: 'Starting at $8,000'
   },
   {
-    title: 'Blockchain Integration',
-    description: 'Integrate blockchain technology into existing applications and systems.',
     features: ['API Integration', 'Wallet Connectivity', 'Transaction Management', 'Real-time Updates'],
     pricing: 'Starting at $3,000'
   }

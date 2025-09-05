@@ -22,9 +22,7 @@ import {
 import Layout from '../components/Layout';
 
 const analyticsServices = [
-  {
-    title: "Business Intelligence",
-    description: "Transform raw data into actionable insights with powerful BI solutions",
+  {,
     icon: BarChart3,
     features: [
       "Interactive Dashboards",
@@ -36,9 +34,7 @@ const analyticsServices = [
     ],
     price: "Starting at $2,000/month"
   },
-  {
-    title: "Predictive Analytics",
-    description: "Leverage machine learning to predict future trends and behaviors",
+  {,
     icon: Brain,
     features: [
       "Machine Learning Models",
@@ -50,9 +46,7 @@ const analyticsServices = [
     ],
     price: "Starting at $3,500/month"
   },
-  {
-    title: "Data Warehousing",
-    description: "Centralized data storage and management for enterprise analytics",
+  {,
     icon: Database,
     features: [
       "Data Integration",
@@ -64,9 +58,7 @@ const analyticsServices = [
     ],
     price: "Starting at $2,500/month"
   },
-  {
-    title: "Real-time Analytics",
-    description: "Process and analyze data streams in real-time for instant insights",
+  {,
     icon: Zap,
     features: [
       "Stream Processing",
@@ -78,9 +70,7 @@ const analyticsServices = [
     ],
     price: "Starting at $2,800/month"
   },
-  {
-    title: "Data Visualization",
-    description: "Create compelling visual representations of your data",
+  {,
     icon: PieChart,
     features: [
       "Interactive Charts",
@@ -92,9 +82,7 @@ const analyticsServices = [
     ],
     price: "Starting at $1,500/month"
   },
-  {
-    title: "Advanced Analytics",
-    description: "Sophisticated analytical techniques for complex business problems",
+  {,
     icon: TrendingUp,
     features: [
       "Statistical Analysis",
@@ -109,57 +97,37 @@ const analyticsServices = [
 ];
 
 const industries = [
-  {
-    title: "E-commerce",
-    description: "Customer behavior analysis, sales forecasting, and inventory optimization",
+  {,
     icon: "🛒"
   },
-  {
-    title: "Healthcare",
-    description: "Patient data analysis, treatment outcomes, and operational efficiency",
+  {,
     icon: "🏥"
   },
-  {
-    title: "Finance",
-    description: "Risk assessment, fraud detection, and investment analytics",
+  {,
     icon: "💰"
   },
-  {
-    title: "Manufacturing",
-    description: "Production optimization, quality control, and supply chain analytics",
+  {,
     icon: "🏭"
   },
-  {
-    title: "Marketing",
-    description: "Campaign performance, customer segmentation, and ROI analysis",
+  {,
     icon: "📊"
   },
-  {
-    title: "Retail",
-    description: "Sales trends, inventory management, and customer insights",
+  {,
     icon: "🏪"
   }
 ];
 
 const whyChooseUs = [
-  {
-    title: "Expert Data Scientists",
-    description: "Certified professionals with advanced degrees in data science",
+  {,
     icon: "👥"
   },
-  {
-    title: "Advanced Technology",
-    description: "Cutting-edge tools and platforms for maximum accuracy",
+  {,
     icon: "🔬"
   },
-  {
-    title: "Actionable Insights",
-    description: "Transform data into clear, actionable business recommendations",
+  {,
     icon: "💡"
   },
-  {
-    title: "Scalable Solutions",
-    description: "Built to grow with your data needs from startup to enterprise",
+  {,
     icon: "📈"
   }
 ];

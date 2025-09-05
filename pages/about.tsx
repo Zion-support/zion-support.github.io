@@ -5,15 +5,7 @@ import {
   Building,
   Rocket,
   Lightbulb,
-<<<<<<< HEAD
   Handshake,
-=======
-  Handshake
-} from 'lucide-react';
-
-const values = [{
-import { 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
   Brain, 
   Users, 
   Award, 
@@ -33,32 +25,50 @@ import {
 const values = [
   {
     icon: Brain,
-    title: 'Innovation',
-    description: 'We push the boundaries of technology to create cutting-edge solutions that transform businesses.'
   },
   {
     icon: Users,
-    title: 'Collaboration',
-<<<<<<< HEAD
-    description: 'We work closely with our clients as partners, ensuring their success is our success.'
   },
   {
     icon: Award,
-    title: 'Excellence',
-    description: 'We maintain the highest standards in everything we do, delivering quality that exceeds expectations.'
-=======
-<h1 className="text-4xl md:text-6xl font-bold mb-6">
+  }
+];
+
+export default function About() {
+  return (
+    <>
+      <Head>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, vision, and values. Discover our commitment to innovation, collaboration, and excellence in technology solutions." />
+      </Head>
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               About{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
-</h1>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               We are a leading technology solutions provider dedicated to transforming businesses through innovative AI, cloud architecture, and cutting-edge development services.
             </p>
-                  </motion.div>
-                  </div>
-                  </section>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Mission, Vision, Values */}
       <section className="py-20 bg-gray-50">
                   <div className="container mx-auto px-4">
@@ -310,7 +320,7 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
 
@@ -389,9 +399,6 @@ const timeline = [{
     "year": '2024',
     "title": 'Micro SaaS Platform',
     "description": 'Introduced our Micro SaaS solutions platform for rapid business application deployment.'
-    icon: Award,
-    title: 'Excellence',
-    description: 'We strive for excellence in everything we do, delivering quality results every time.'
   }
 ];
 
@@ -420,36 +427,157 @@ export default function AboutPage() {
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-    description: 'We work closely with our clients as partners, understanding their unique challenges and co-creating solutions.'
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
-  },
-  {
-    icon: Target,
-    title: 'Results',
-    description: 'We focus on measurable outcomes that drive real business value and growth.'
-  },
-  {
-    icon: Heart,
-    title: 'Integrity',
-    description: 'We conduct business with honesty, transparency, and ethical practices.'
-  },
-  {
-    icon: Globe,
-    title: 'Global Impact',
-    description: 'We build solutions that make a positive difference in the world.'
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                About{' '}
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                We are a leading technology solutions provider dedicated to transforming businesses through innovative AI, cloud architecture, and cutting-edge development services.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Mission, Vision, Values */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                Our Foundation
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Our mission, vision, and values guide everything we do, ensuring we deliver exceptional results for our clients.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {values.map((value, index) => {
+                const IconComponent = value.icon;
+                return (
+                  <motion.div
+                    key={value.title}
+                    className="bg-white p-8 rounded-lg shadow-lg text-center"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.2 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-3 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                      <IconComponent className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
+                    <p className="text-gray-600">{value.description}</p>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Team Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                Meet Our Team
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Our diverse team of experts brings together decades of experience in technology, business, and innovation.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {team.map((member, index) => (
+                <motion.div
+                  key={member.name}
+                  className="bg-gray-50 p-6 rounded-lg text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-2xl font-bold text-white">
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
+                  <p className="text-blue-600 font-medium mb-2">{member.role}</p>
+                  <p className="text-sm text-gray-500 mb-2">{member.expertise}</p>
+                  <p className="text-sm text-gray-500">
+                    {member.experience}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Timeline Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                Our Journey
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                From our founding to today, we've been committed to innovation and excellence.
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto">
+              {timeline.map((event, index) => (
+                <motion.div
+                  key={event.year}
+                  className="flex items-start mb-8"
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    {event.year}
+                  </div>
+                  <div className="ml-6 flex-1">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{event.title}</h3>
+                    <p className="text-gray-600">{event.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </>
+    );
   }
-];
 
-const stats = [
-  { number: '500+', label: 'Projects Completed' },
-  { number: '50+', label: 'Happy Clients' },
-  { number: '99%', label: 'Client Satisfaction' },
-  { number: '24/7', label: 'Support Available' }
-];
-
-const team = [
-  {
-    name: 'John Smith',
+  const team = [
+    {
+      name: 'John Smith',
     role: 'CEO & Founder',
     image: '/images/team/john-smith.jpg',
     bio: 'Visionary leader with 15+ years in tech innovation.'
@@ -541,13 +669,7 @@ export default function About() {
                   <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
-<<<<<<< HEAD
-                  <div className="text-gray-600 font-medium">
-                    {stat.label}
-                  </div>
-=======
-                  <div className="text-gray-600">{stat.label}</div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+
                 </motion.div>
               ))}
             </div>
@@ -563,35 +685,7 @@ export default function About() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-<<<<<<< HEAD
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Values
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-=======
-              {values.map((value, index) => {
-                const IconComponent = value.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-8 text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -5 }}
-                  >
-                    <div className="text-blue-600 mb-4">
-                      <IconComponent className="w-12 h-12 mx-auto" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
-                    <p className="text-gray-600">{value.description}</p>
-                  </motion.div>
-                );
-              })}
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Values</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
+
                 These core values guide everything we do and shape our company culture.
               </p>
             </motion.div>

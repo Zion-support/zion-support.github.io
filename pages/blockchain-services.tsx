@@ -35,8 +35,6 @@ const contactInfo = {
 const blockchainServices = [
   {
     id: 1,
-    title: 'Smart Contract Development',
-    description: 'Secure, audited smart contracts for DeFi, NFTs, DAOs, and enterprise applications with comprehensive testing and deployment.',
     icon: LinkIcon,
     category: 'Development',
     price: 'Starting at $8,000/month',
@@ -62,8 +60,6 @@ const blockchainServices = [
   },
   {
     id: 2,
-    title: 'DeFi Platform Development',
-    description: 'Complete decentralized finance platforms including DEXs, lending protocols, yield farming, and liquidity management.',
     icon: Coins,
     category: 'DeFi',
     price: 'Starting at $25,000/month',
@@ -89,8 +85,6 @@ const blockchainServices = [
   },
   {
     id: 3,
-    title: 'NFT Marketplace Development',
-    description: 'Custom NFT marketplaces with advanced features, multi-chain support, and comprehensive trading capabilities.',
     icon: Globe,
     category: 'NFT',
     price: 'Starting at $15,000/month',
@@ -116,8 +110,6 @@ const blockchainServices = [
   },
   {
     id: 4,
-    title: 'Blockchain Consulting & Strategy',
-    description: 'Strategic guidance for blockchain adoption, technology selection, and implementation roadmap development.',
     icon: Target,
     category: 'Consulting',
     price: 'Starting at $5,000/month',
@@ -143,8 +135,6 @@ const blockchainServices = [
   },
   {
     id: 5,
-    title: 'Web3 Application Development',
-    description: 'Full-stack Web3 applications with wallet integration, decentralized storage, and seamless user experience.',
     icon: Smartphone,
     category: 'Web3',
     price: 'Starting at $12,000/month',
@@ -170,8 +160,6 @@ const blockchainServices = [
   },
   {
     id: 6,
-    title: 'Blockchain Security & Auditing',
-    description: 'Comprehensive security audits, penetration testing, and vulnerability assessments for blockchain applications.',
     icon: Shield,
     category: 'Security',
     price: 'Starting at $10,000/month',
@@ -199,38 +187,26 @@ const blockchainServices = [
 
 const industries = [
   {
-    title: "Finance & Banking",
-    description: "DeFi protocols, digital payments, and blockchain-based financial services",
     icon: "🏦",
     useCases: ["Cross-border payments", "Lending platforms", "Asset tokenization", "Trading systems"]
   },
   {
-    title: "Gaming & Entertainment",
-    description: "Play-to-earn games, NFT collectibles, and virtual economies",
     icon: "🎮",
     useCases: ["Game assets as NFTs", "In-game economies", "Player ownership", "Virtual worlds"]
   },
   {
-    title: "Supply Chain",
-    description: "Transparent supply chain tracking and product authentication",
     icon: "📦",
     useCases: ["Product provenance", "Anti-counterfeiting", "Quality assurance", "Traceability"]
   },
   {
-    title: "Real Estate",
-    description: "Property tokenization and fractional ownership platforms",
     icon: "🏠",
     useCases: ["Property tokens", "Fractional ownership", "Rental income sharing", "Property management"]
   },
   {
-    title: "Healthcare",
-    description: "Secure medical records and pharmaceutical supply chain",
     icon: "🏥",
     useCases: ["Medical records", "Drug authentication", "Clinical trials", "Patient data"]
   },
   {
-    title: "Energy & Carbon",
-    description: "Carbon credit trading and renewable energy certificates",
     icon: "🌱",
     useCases: ["Carbon credits", "Energy trading", "Sustainability tracking", "Green certificates"]
   }
@@ -453,23 +429,15 @@ export default function BlockchainServicesPage() {
               {[
                 {
                   icon: Award,
-                  title: "Blockchain Expertise",
-                  description: "Certified blockchain developers with 5+ years experience"
                 },
                 {
                   icon: Shield,
-                  title: "Security First",
-                  description: "Comprehensive security audits and best practices"
                 },
                 {
                   icon: DollarSign,
-                  title: "Competitive Pricing",
-                  description: "50% lower than market rates with transparent pricing"
                 },
                 {
                   icon: Clock,
-                  title: "Fast Delivery",
-                  description: "Rapid development with 4-16 week timelines"
                 }
               ].map((item, index) => (
                 <motion.div

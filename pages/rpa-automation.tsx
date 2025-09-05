@@ -43,9 +43,7 @@ const contactInfo = {
 
 const automationServices = [
   {
-    id: 1,
-    title: 'Robotic Process Automation (RPA)',
-    description: 'Automate repetitive tasks and processes with intelligent software robots that work 24/7 without errors.',
+    id: 1,,
     icon: Bot,
     category: 'RPA',
     price: 'Starting at $5,000/month',
@@ -70,9 +68,7 @@ const automationServices = [
     targetUsers: 'Finance, HR, Customer Service, Operations'
   },
   {
-    id: 2,
-    title: 'Intelligent Document Processing',
-    description: 'AI-powered document processing that extracts, classifies, and processes information from various document types.',
+    id: 2,,
     icon: FileText,
     category: 'Document Processing',
     price: 'Starting at $8,000/month',
@@ -97,9 +93,7 @@ const automationServices = [
     targetUsers: 'Legal, Finance, Insurance, Healthcare'
   },
   {
-    id: 3,
-    title: 'Workflow Automation',
-    description: 'End-to-end workflow automation that streamlines business processes and improves operational efficiency.',
+    id: 3,,
     icon: Workflow,
     category: 'Workflow',
     price: 'Starting at $6,000/month',
@@ -124,9 +118,7 @@ const automationServices = [
     targetUsers: 'Operations, HR, Finance, Project Management'
   },
   {
-    id: 4,
-    title: 'AI-Powered Chatbots & Virtual Assistants',
-    description: 'Intelligent conversational AI that handles customer inquiries, provides support, and automates interactions.',
+    id: 4,,
     icon: MessageSquare,
     category: 'Conversational AI',
     price: 'Starting at $4,000/month',
@@ -151,9 +143,7 @@ const automationServices = [
     targetUsers: 'Customer Service, E-commerce, Healthcare, Education'
   },
   {
-    id: 5,
-    title: 'Data Processing & ETL Automation',
-    description: 'Automated data extraction, transformation, and loading processes with real-time data validation and cleansing.',
+    id: 5,,
     icon: Database,
     category: 'Data Processing',
     price: 'Starting at $7,000/month',
@@ -178,9 +168,7 @@ const automationServices = [
     targetUsers: 'Data Analytics, Business Intelligence, Finance, Marketing'
   },
   {
-    id: 6,
-    title: 'Email & Communication Automation',
-    description: 'Automated email processing, response generation, and communication workflows for improved efficiency.',
+    id: 6,,
     icon: Mail,
     category: 'Communication',
     price: 'Starting at $3,000/month',
@@ -205,9 +193,7 @@ const automationServices = [
     targetUsers: 'Sales, Customer Service, HR, Operations'
   },
   {
-    id: 7,
-    title: 'Financial Process Automation',
-    description: 'Automated financial processes including invoice processing, payment reconciliation, and financial reporting.',
+    id: 7,,
     icon: DollarSign,
     category: 'Finance',
     price: 'Starting at $10,000/month',
@@ -232,9 +218,7 @@ const automationServices = [
     targetUsers: 'Finance Departments, Accounting Firms, Enterprises'
   },
   {
-    id: 8,
-    title: 'HR Process Automation',
-    description: 'Automated HR processes including recruitment, onboarding, payroll, and employee management.',
+    id: 8,,
     icon: Users,
     category: 'HR',
     price: 'Starting at $6,000/month',
@@ -261,39 +245,27 @@ const automationServices = [
 ];
 
 const industries = [
-  {
-    title: "Banking & Finance",
-    description: "Automate loan processing, compliance, and customer service",
+  {,
     icon: "🏦",
     useCases: ["Loan processing", "Compliance reporting", "Customer onboarding", "Fraud detection"]
   },
-  {
-    title: "Healthcare",
-    description: "Streamline patient care and administrative processes",
+  {,
     icon: "🏥",
     useCases: ["Patient scheduling", "Insurance processing", "Medical records", "Billing automation"]
   },
-  {
-    title: "Manufacturing",
-    description: "Optimize production and supply chain processes",
+  {,
     icon: "🏭",
     useCases: ["Inventory management", "Quality control", "Order processing", "Supply chain"]
   },
-  {
-    title: "Retail & E-commerce",
-    description: "Automate customer service and order management",
+  {,
     icon: "🛒",
     useCases: ["Order processing", "Customer service", "Inventory management", "Returns processing"]
   },
-  {
-    title: "Insurance",
-    description: "Streamline claims processing and underwriting",
+  {,
     icon: "🛡️",
     useCases: ["Claims processing", "Underwriting", "Policy management", "Customer service"]
   },
-  {
-    title: "Real Estate",
-    description: "Automate property management and client services",
+  {,
     icon: "🏠",
     useCases: ["Property listings", "Lead management", "Document processing", "Client communication"]
   }
@@ -588,23 +560,15 @@ export default function RPAAutomationPage() {
               {[
                 {
                   icon: Award,
-                  title: "Automation Expertise",
-                  description: "Certified automation engineers with 5+ years experience"
                 },
                 {
                   icon: Zap,
-                  title: "Fast Implementation",
-                  description: "Rapid deployment with 1-8 week timelines"
                 },
                 {
                   icon: DollarSign,
-                  title: "Competitive Pricing",
-                  description: "50% lower than market rates with transparent pricing"
                 },
                 {
                   icon: Shield,
-                  title: "Proven Results",
-                  description: "Successfully automated 1000+ processes"
                 }
               ].map((item, index) => (
                 <motion.div

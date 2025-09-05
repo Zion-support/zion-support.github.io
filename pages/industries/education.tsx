@@ -5,27 +5,19 @@ import Link from 'next/link';
 import { ArrowRight, CheckCircle, BookOpen, Users, GraduationCap, Clock, Star, Shield } from 'lucide-react';
 
 const solutions = [
-  {
-    title: 'Learning Management Systems (LMS)',
-    description: 'Comprehensive LMS platforms with course management, student tracking, and assessment tools.',
+  {,
     features: ['Course Management', 'Student Tracking', 'Assessment Tools', 'Mobile Access'],
     icon: BookOpen
   },
-  {
-    title: 'Virtual Classrooms',
-    description: 'Interactive virtual learning environments with video conferencing and collaboration tools.',
+  {,
     features: ['Video Conferencing', 'Screen Sharing', 'Interactive Whiteboards', 'Breakout Rooms'],
     icon: Users
   },
-  {
-    title: 'Student Information Systems',
-    description: 'Integrated SIS for managing student data, enrollment, and academic records.',
+  {,
     features: ['Student Records', 'Enrollment Management', 'Grade Tracking', 'Parent Portals'],
     icon: GraduationCap
   },
-  {
-    title: 'Educational Analytics',
-    description: 'Data-driven insights for student performance, engagement, and institutional effectiveness.',
+  {,
     features: ['Performance Analytics', 'Engagement Tracking', 'Predictive Modeling', 'Reporting Dashboards'],
     icon: BookOpen
   }
@@ -34,23 +26,15 @@ const solutions = [
 const benefits = [
   {
     icon: Shield,
-    title: 'FERPA Compliance',
-    description: 'Full compliance with educational privacy regulations and data protection standards'
   },
   {
     icon: Clock,
-    title: '24/7 Support',
-    description: 'Round-the-clock technical support for educational institutions'
   },
   {
     icon: Users,
-    title: 'Education Experts',
-    description: 'Team of specialists with deep understanding of educational technology needs'
   },
   {
     icon: Star,
-    title: 'Proven Results',
-    description: 'Track record of successful implementations in schools and universities'
   }
 ];
 

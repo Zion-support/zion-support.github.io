@@ -13,54 +13,42 @@ const stats = [
 ];
 
 const services = [
-  {
-    title: 'AI Services',
-    description: '20+ cutting-edge AI solutions including machine learning, computer vision, NLP, and quantum AI',
+  {,
     icon: Brain,
     link: '/ai-services',
     color: 'from-blue-500 to-purple-600',
     stats: '20+ AI Solutions',
     pricing: 'Starting at $1,800/month'
   },
-  {
-    title: 'IT Services',
-    description: '25+ comprehensive IT services from cloud infrastructure to quantum computing and 6G networks',
+  {,
     icon: Network,
     link: '/it-services',
     color: 'from-green-500 to-blue-600',
     stats: '25+ IT Services',
     pricing: 'Starting at $1,999/month'
   },
-  {
-    title: 'Micro SAAS',
-    description: '30+ innovative micro SaaS solutions for modern businesses across all industries',
+  {,
     icon: Cloud,
     link: '/micro-saas',
     color: 'from-purple-500 to-pink-600',
     stats: '30+ SaaS Solutions',
     pricing: 'Starting at $15/month'
   },
-  {
-    title: 'Cloud Solutions',
-    description: 'Scalable cloud infrastructure, migration services, and DevOps automation',
+  {,
     icon: Globe,
     link: '/cloud-solutions',
     color: 'from-indigo-500 to-cyan-600',
     stats: 'Multi-Cloud Support',
     pricing: 'Starting at $1,800/month'
   },
-  {
-    title: 'Cybersecurity',
-    description: 'Advanced security solutions with AI-powered threat detection and zero-trust architecture',
+  {,
     icon: Shield,
     link: '/cybersecurity',
     color: 'from-red-500 to-orange-600',
     stats: '24/7 Protection',
     pricing: 'Starting at $2,000/month'
   },
-  {
-    title: 'Quantum Computing',
-    description: 'Next-generation quantum computing infrastructure and quantum AI solutions',
+  {,
     icon: Cpu,
     link: '/quantum-computing',
     color: 'from-violet-500 to-purple-600',
@@ -70,24 +58,16 @@ const services = [
 ];
 
 const features = [
-  {
-    title: 'Lightning Fast',
-    description: 'Optimized performance with sub-second response times',
+  {,
     icon: Zap
   },
-  {
-    title: 'Secure & Reliable',
-    description: 'Enterprise-grade security and 99.9% uptime guarantee',
+  {,
     icon: Shield
   },
-  {
-    title: 'Global Reach',
-    description: 'Serving clients worldwide with local support',
+  {,
     icon: Globe
   },
-  {
-    title: 'Award Winning',
-    description: 'Recognized for excellence in technology innovation',
+  {,
     icon: Award
   }
 ];

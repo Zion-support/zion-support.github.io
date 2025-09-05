@@ -45,9 +45,7 @@ const contactInfo = {
 
 const cybersecurityServices = [
   {
-    id: 1,
-    title: 'Zero Trust Security Architecture',
-    description: 'Implement comprehensive zero trust security model with continuous verification, least privilege access, and micro-segmentation.',
+    id: 1,,
     icon: Shield,
     category: 'Architecture',
     price: 'Starting at $15,000/month',
@@ -72,9 +70,7 @@ const cybersecurityServices = [
     targetUsers: 'Enterprises, Government, Healthcare, Finance'
   },
   {
-    id: 2,
-    title: 'Advanced Threat Detection & Response',
-    description: 'AI-powered threat detection, incident response, and security orchestration with 24/7 monitoring and rapid response capabilities.',
+    id: 2,,
     icon: Eye,
     category: 'Threat Detection',
     price: 'Starting at $12,000/month',
@@ -99,9 +95,7 @@ const cybersecurityServices = [
     targetUsers: 'Large Enterprises, Critical Infrastructure, Government'
   },
   {
-    id: 3,
-    title: 'Cloud Security & Compliance',
-    description: 'Comprehensive cloud security solutions including CSPM, CWPP, and compliance management for AWS, Azure, and GCP.',
+    id: 3,,
     icon: Cloud,
     category: 'Cloud Security',
     price: 'Starting at $10,000/month',
@@ -126,9 +120,7 @@ const cybersecurityServices = [
     targetUsers: 'Cloud-First Companies, Enterprises, SaaS Providers'
   },
   {
-    id: 4,
-    title: 'Penetration Testing & Red Team Services',
-    description: 'Comprehensive security assessments including penetration testing, red team exercises, and vulnerability management.',
+    id: 4,,
     icon: Target,
     category: 'Testing',
     price: 'Starting at $8,000/month',
@@ -153,9 +145,7 @@ const cybersecurityServices = [
     targetUsers: 'All Industries, Compliance-Heavy Organizations'
   },
   {
-    id: 5,
-    title: 'Security Operations Center (SOC)',
-    description: 'Managed security operations center with 24/7 monitoring, incident response, and threat hunting capabilities.',
+    id: 5,,
     icon: Monitor,
     category: 'SOC',
     price: 'Starting at $20,000/month',
@@ -180,9 +170,7 @@ const cybersecurityServices = [
     targetUsers: 'Mid to Large Enterprises, Critical Infrastructure'
   },
   {
-    id: 6,
-    title: 'Data Protection & Privacy',
-    description: 'Comprehensive data protection solutions including encryption, privacy compliance, and data governance.',
+    id: 6,,
     icon: Database,
     category: 'Data Protection',
     price: 'Starting at $8,000/month',
@@ -207,9 +195,7 @@ const cybersecurityServices = [
     targetUsers: 'Healthcare, Finance, E-commerce, SaaS Companies'
   },
   {
-    id: 7,
-    title: 'Identity & Access Management',
-    description: 'Comprehensive IAM solutions including single sign-on, multi-factor authentication, and privileged access management.',
+    id: 7,,
     icon: Key,
     category: 'IAM',
     price: 'Starting at $6,000/month',
@@ -234,9 +220,7 @@ const cybersecurityServices = [
     targetUsers: 'All Organizations, Remote Workforces'
   },
   {
-    id: 8,
-    title: 'Security Awareness Training',
-    description: 'Comprehensive security awareness training programs to educate employees and reduce human error risks.',
+    id: 8,,
     icon: Users,
     category: 'Training',
     price: 'Starting at $3,000/month',
@@ -296,39 +280,27 @@ const complianceFrameworks = [
 ];
 
 const industries = [
-  {
-    title: "Healthcare",
-    description: "HIPAA compliance and medical data protection",
+  {,
     icon: "🏥",
     threats: ["Ransomware", "Data breaches", "Insider threats", "Medical device attacks"]
   },
-  {
-    title: "Finance",
-    description: "PCI DSS compliance and financial data security",
+  {,
     icon: "🏦",
     threats: ["Fraud", "Payment card attacks", "Insider trading", "Regulatory violations"]
   },
-  {
-    title: "Government",
-    description: "National security and citizen data protection",
+  {,
     icon: "🏛️",
     threats: ["Nation-state attacks", "Espionage", "Critical infrastructure", "Data leaks"]
   },
-  {
-    title: "E-commerce",
-    description: "Customer data and payment security",
+  {,
     icon: "🛒",
     threats: ["Payment fraud", "Account takeovers", "Data breaches", "DDoS attacks"]
   },
-  {
-    title: "Manufacturing",
-    description: "Industrial control systems and IP protection",
+  {,
     icon: "🏭",
     threats: ["OT attacks", "IP theft", "Supply chain", "Ransomware"]
   },
-  {
-    title: "Education",
-    description: "Student data and research protection",
+  {,
     icon: "🎓",
     threats: ["Student data breaches", "Research theft", "Ransomware", "Phishing"]
   }
@@ -590,23 +562,15 @@ export default function CybersecurityAdvancedPage() {
               {[
                 {
                   icon: Award,
-                  title: "Security Expertise",
-                  description: "Certified security professionals with 10+ years experience"
                 },
                 {
                   icon: Shield,
-                  title: "Proven Track Record",
-                  description: "Successfully protected 500+ organizations"
                 },
                 {
                   icon: DollarSign,
-                  title: "Competitive Pricing",
-                  description: "50% lower than market rates with transparent pricing"
                 },
                 {
                   icon: Clock,
-                  title: "24/7 Support",
-                  description: "Round-the-clock monitoring and incident response"
                 }
               ].map((item, index) => (
                 <motion.div

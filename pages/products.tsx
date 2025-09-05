@@ -5,9 +5,7 @@ import { motion } from 'framer-motion';
 import { Brain, Cloud, Shield, Smartphone, Database, Zap, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
 const products = [
-  {
-    title: "ZionAI Analytics",
-    description: "Advanced AI-powered analytics platform that transforms raw data into actionable insights for business growth.",
+  {,
     icon: Brain,
     category: "AI Solutions",
     features: [
@@ -23,9 +21,7 @@ const products = [
     reviews: 127,
     href: "/products/zion-ai-analytics"
   },
-  {
-    title: "CloudSecure Pro",
-    description: "Enterprise-grade cloud security solution with zero-trust architecture and advanced threat protection.",
+  {,
     icon: Shield,
     category: "Security",
     features: [
@@ -41,9 +37,7 @@ const products = [
     reviews: 89,
     href: "/products/cloudsecure-pro"
   },
-  {
-    title: "DataFlow Engine",
-    description: "High-performance data processing and ETL platform for modern data pipelines and analytics.",
+  {,
     icon: Database,
     category: "Data Solutions",
     features: [
@@ -59,9 +53,7 @@ const products = [
     reviews: 156,
     href: "/products/dataflow-engine"
   },
-  {
-    title: "MobileFirst CMS",
-    description: "Headless CMS designed for mobile-first experiences with advanced content management capabilities.",
+  {,
     icon: Smartphone,
     category: "Content Management",
     features: [
@@ -77,9 +69,7 @@ const products = [
     reviews: 98,
     href: "/products/mobilefirst-cms"
   },
-  {
-    title: "ZionCloud Platform",
-    description: "Comprehensive cloud infrastructure platform with automated scaling and management capabilities.",
+  {,
     icon: Cloud,
     category: "Cloud Infrastructure",
     features: [
@@ -95,9 +85,7 @@ const products = [
     reviews: 203,
     href: "/products/zioncloud-platform"
   },
-  {
-    title: "WorkflowMax",
-    description: "Business process automation platform that streamlines operations and increases productivity.",
+  {,
     icon: Zap,
     category: "Automation",
     features: [

@@ -5,27 +5,19 @@ import Link from 'next/link';
 import { ArrowRight, CheckCircle, Shield, Heart, Activity, Users, Clock, Star } from 'lucide-react';
 
 const solutions = [
-  {
-    title: 'AI-Powered Medical Imaging',
-    description: 'Advanced AI algorithms for radiology, pathology, and diagnostic imaging with 95%+ accuracy rates.',
+  {,
     features: ['Computer Vision', 'Deep Learning', 'Real-time Analysis', 'Integration with PACS'],
     icon: Activity
   },
-  {
-    title: 'Electronic Health Records (EHR)',
-    description: 'Comprehensive EHR systems with interoperability, data analytics, and patient management capabilities.',
+  {,
     features: ['Interoperability', 'Data Analytics', 'Patient Portals', 'Mobile Access'],
     icon: Users
   },
-  {
-    title: 'Telemedicine Platforms',
-    description: 'Secure, scalable telemedicine solutions for remote patient care and consultation.',
+  {,
     features: ['Video Conferencing', 'Secure Messaging', 'Appointment Scheduling', 'Prescription Management'],
     icon: Heart
   },
-  {
-    title: 'Healthcare Data Analytics',
-    description: 'Advanced analytics for population health, clinical outcomes, and operational efficiency.',
+  {,
     features: ['Population Health', 'Clinical Analytics', 'Predictive Modeling', 'Real-time Dashboards'],
     icon: Activity
   }
@@ -34,23 +26,15 @@ const solutions = [
 const benefits = [
   {
     icon: Shield,
-    title: 'HIPAA Compliance',
-    description: 'Full compliance with healthcare regulations and data protection standards'
   },
   {
     icon: Clock,
-    title: '24/7 Support',
-    description: 'Round-the-clock technical support for critical healthcare operations'
   },
   {
     icon: Users,
-    title: 'Expert Team',
-    description: 'Healthcare technology specialists with deep industry knowledge'
   },
   {
     icon: Star,
-    title: 'Proven Results',
-    description: 'Track record of successful healthcare implementations and transformations'
   }
 ];
 

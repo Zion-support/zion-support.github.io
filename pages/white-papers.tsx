@@ -84,9 +84,7 @@ export default function WhitePapersPage() {
 
   const whitePapers = [
     {
-      id: 1,
-      title: 'The Future of Artificial Intelligence in Business',
-      description: 'A comprehensive analysis of how AI is transforming business operations, including case studies, implementation strategies, and ROI calculations.',
+      id: 1,,
       category: 'ai',
       author: 'Dr. Sarah Johnson',
       authorTitle: 'AI Research Director',
@@ -101,9 +99,7 @@ export default function WhitePapersPage() {
       isFeatured: true
     },
     {
-      id: 2,
-      title: 'Cloud Migration Strategies for Enterprise',
-      description: 'Best practices and proven methodologies for migrating enterprise applications to the cloud while ensuring security and performance.',
+      id: 2,,
       category: 'cloud',
       author: 'Mike Chen',
       authorTitle: 'Cloud Solutions Architect',
@@ -118,9 +114,7 @@ export default function WhitePapersPage() {
       isFeatured: true
     },
     {
-      id: 3,
-      title: 'Cybersecurity in the Age of Remote Work',
-      description: 'An in-depth look at the security challenges and solutions for organizations transitioning to remote and hybrid work models.',
+      id: 3,,
       category: 'security',
       author: 'Alex Rodriguez',
       authorTitle: 'Chief Security Officer',
@@ -135,9 +129,7 @@ export default function WhitePapersPage() {
       isFeatured: false
     },
     {
-      id: 4,
-      title: 'Building Scalable Web Applications',
-      description: 'Technical guide covering architecture patterns, performance optimization, and scalability best practices for modern web applications.',
+      id: 4,,
       category: 'development',
       author: 'Emily Watson',
       authorTitle: 'Senior Full-Stack Developer',
@@ -152,9 +144,7 @@ export default function WhitePapersPage() {
       isFeatured: false
     },
     {
-      id: 5,
-      title: 'Digital Transformation Roadmap',
-      description: 'A strategic framework for organizations looking to embark on digital transformation initiatives, with practical implementation guidelines.',
+      id: 5,,
       category: 'business',
       author: 'David Kim',
       authorTitle: 'Digital Transformation Consultant',
@@ -169,9 +159,7 @@ export default function WhitePapersPage() {
       isFeatured: true
     },
     {
-      id: 6,
-      title: 'Machine Learning Model Deployment Best Practices',
-      description: 'Comprehensive guide to deploying ML models in production environments, covering MLOps, monitoring, and maintenance strategies.',
+      id: 6,,
       category: 'ai',
       author: 'Dr. Sarah Johnson',
       authorTitle: 'AI Research Director',

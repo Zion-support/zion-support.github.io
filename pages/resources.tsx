@@ -1,8 +1,6 @@
 
 const resources = [
-  {
-    title: "Documentation",
-    description: "Comprehensive guides and technical documentation",
+  {,
     icon: FileText,
     href: "/docs",
     color: "from-blue-500 to-blue-600",
