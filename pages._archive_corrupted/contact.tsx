@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
 const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
 const \"ContactPage\": React.FC = () => {
@@ -22,6 +27,13 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
 const "ContactPage": React.FC = () => {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   const contactInfo = [{
       icon: <Phone className=\"w-6 h-6\"  />,
       \"title\": \"Phone\",
@@ -47,6 +59,11 @@ const "ContactPage": React.FC = () => {
       \"link\": null
     }
   ]
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
   const services = [\"AI & Machine Learning Solutions\",
     \"IT Infrastructure & Support\",
     \"Micro SaaS Development\",
@@ -63,6 +80,13 @@ const "ContactPage": React.FC = () => {
     "Blockchain Technology",
     "Digital Transformation",
     "Consulting & Strategy"
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   ]
   return (
     <>
@@ -111,11 +135,23 @@ const "ContactPage": React.FC = () => {
               </motion.div>
             </div>
           </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 const \"Contact\": NextPage = () => {
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 const "Contact": NextPage = () => {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
@@ -358,12 +394,24 @@ const "Contact": NextPage = () => {
               Get answers to common questions about our services and process
             </p>
           </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
           <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                 What is your typical project timeline?
               </h3>
               <p className=\"text-gray-600\">
@@ -372,10 +420,22 @@ const "Contact": NextPage = () => {
                 We\'ll provide a detailed timeline during our initial consultation.
               </p>
             </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                 Do you provide ongoing support?
               </h3>
               <p className=\"text-gray-600\">
@@ -384,10 +444,22 @@ const "Contact": NextPage = () => {
                 security patches, and technical support.
               </p>
             </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                 What technologies do you specialize in?
               </h3>
               <p className=\"text-gray-600\">
@@ -396,10 +468,22 @@ const "Contact": NextPage = () => {
                 the best technology stack for each project\'s specific needs.
               </p>
             </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                 How do you ensure project quality?
               </h3>
               <p className=\"text-gray-600\">
@@ -430,8 +514,19 @@ const "Contact": NextPage = () => {
                   Multiple ways to reach us for your convenience
                 </p>
               </motion.div>
+<<<<<<< HEAD
+<<<<<<< HEAD
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+=======
+<<<<<<< HEAD
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
@@ -479,8 +574,19 @@ const "Contact": NextPage = () => {
                   Fill out the form below and we\'ll get back to you within 24 hours
                 </p>
               </motion.div>
+<<<<<<< HEAD
+<<<<<<< HEAD
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
+=======
+<<<<<<< HEAD
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                 <motion.form
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -513,8 +619,19 @@ const "Contact": NextPage = () => {
                        />
                     </div>
                   </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+=======
+<<<<<<< HEAD
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                     <div>
                       <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Phone Number
@@ -538,10 +655,22 @@ const "Contact": NextPage = () => {
                        />
                     </div>
                   </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
                   <div className=\"mb-6\">
                     <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                       Service Interest
                     </label>
                     <select
@@ -557,10 +686,22 @@ const "Contact": NextPage = () => {
                       ))}
                     </select>
                   </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
                   <div className=\"mb-6\">
                     <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                       Message *
                     </label>
                     <textarea
@@ -582,8 +723,19 @@ const "Contact": NextPage = () => {
                     Send Message
                   </motion.button>
                 </motion.form>
+<<<<<<< HEAD
+<<<<<<< HEAD
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+=======
+<<<<<<< HEAD
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
@@ -602,10 +754,22 @@ const "Contact": NextPage = () => {
           <div className=\"max-w-7xl mx-auto\">
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">
               {/* Contact Form */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
                 <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                 {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
@@ -652,8 +816,19 @@ const "Contact": NextPage = () => {
                         />
                       </div>
                     </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+=======
+<<<<<<< HEAD
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
@@ -743,8 +918,19 @@ const "Contact": NextPage = () => {
                     We\'re here to help you succeed. Reach out to us through any of the channels below, and we\'ll respond promptly.
                   </p>
                 </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
+=======
+<<<<<<< HEAD
+                <div className=\"space-y-6\">
+                <div className="space-y-6">
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
@@ -760,6 +946,11 @@ const "Contact": NextPage = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
           </section>
           {/* Services Overview */}
           <section className="py-20">
@@ -800,10 +991,27 @@ const "Contact": NextPage = () => {
   )
 }
 export default ContactPage
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
           </div>
         </section>
       </div>
     </>
   );
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+=======
+<<<<<<< HEAD
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

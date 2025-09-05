@@ -1,186 +1,280 @@
-import React from 'react';
-import Layout from '../components/Layout';
 import { motion } from 'framer-motion';
-import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
-export default function APIPage() {
-  const apiFeatures = [
-    {
-      title: "RESTful APIs",
-      description: "Clean, intuitive REST API endpoints for easy integration",
-      icon: Code,
-      features: ["JSON Responses", "HTTP Status Codes", "Rate Limiting"]
-    },
-    {
-      title: "Comprehensive Documentation",
-      description: "Detailed API documentation with examples and guides",
-      icon: Book,
-      features: ["Interactive Docs", "Code Examples", "SDK Libraries"]
-    },
-    {
-      title: "High Performance",
-      description: "Fast, reliable APIs built for scale and speed",
-      icon: Zap,
-      features: ["Low Latency", "High Throughput", "Global CDN"]
-    },
-    {
-      title: "Enterprise Security",
-      description: "Bank-level security with authentication and encryption",
-      icon: Shield,
-      features: ["OAuth 2.0", "API Keys", "SSL/TLS Encryption"]
-    }
-  ];
+import Head from 'next/head';
+import Link from 'next/link';
+import Layout from '../components/Layout';
+import { 
+  Globe,
+  Shield,
+  Zap,
+  Code,
+  Database,
+  Cloud,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Clock,
+  Users,
+  Award,
+  TrendingUp,
+  Target,
+  Rocket
+} from 'lucide-react';
+
+const apiServices = [
+  {
+    title: 'RESTful API',
+    description: 'Clean, intuitive REST API design',
+    icon: Globe,
+    features: ['RESTful Design', 'JSON Responses', 'HTTP Status Codes', 'Error Handling'],
+    pricing: 'Starting at $1,500/month'
+  },
+  {
+    title: 'GraphQL API',
+    description: 'Flexible, efficient data querying',
+    icon: Code,
+    features: ['Single Endpoint', 'Type Safety', 'Real-time Subscriptions', 'Schema Introspection'],
+    pricing: 'Starting at $2,000/month'
+  },
+  {
+    title: 'Microservices API',
+    description: 'Scalable, distributed API architecture',
+    icon: Cloud,
+    features: ['Service Discovery', 'Load Balancing', 'Circuit Breakers', 'Distributed Tracing'],
+    pricing: 'Starting at $3,500/month'
+  },
+  {
+    title: 'API Security',
+    description: 'Enterprise-grade API protection',
+    icon: Shield,
+    features: ['OAuth 2.0', 'JWT Tokens', 'Rate Limiting', 'API Gateway'],
+    pricing: 'Starting at $2,500/month'
+  },
+  {
+    title: 'API Analytics',
+    description: 'Comprehensive API monitoring and insights',
+    icon: TrendingUp,
+    features: ['Usage Analytics', 'Performance Metrics', 'Error Tracking', 'Custom Dashboards'],
+    pricing: 'Starting at $1,200/month'
+  },
+  {
+    title: 'API Documentation',
+    description: 'Interactive, always up-to-date documentation',
+    icon: Database,
+    features: ['Auto-generated Docs', 'Interactive Testing', 'Code Examples', 'Version Control'],
+    pricing: 'Starting at $800/month'
+  }
+];
+
+const benefits = [
+  {
+    icon: Zap,
+    title: 'Lightning Fast',
+    description: 'Optimized for speed and performance'
+  },
+  {
+    icon: Shield,
+    title: 'Secure by Design',
+    description: 'Built-in security best practices'
+  },
+  {
+    icon: Users,
+    title: 'Developer Friendly',
+    description: 'Intuitive and easy to integrate'
+  },
+  {
+    icon: Award,
+    title: 'Enterprise Ready',
+    description: 'Scalable for any business size'
+  }
+];
+
+export default function API() {
   return (
     <Layout
-      title="API Reference - Zion Tech Group"
-      description="Comprehensive API documentation and reference for integrating with Zion Tech Group services."
+      title="API Services - Zion Tech Group"
+      description="Professional API development services including REST, GraphQL, microservices, and comprehensive API management solutions."
+      keywords="API development, REST API, GraphQL, microservices, API security, API documentation"
     >
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-          <div className="container mx-auto px-4">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                API Reference
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                Professional
+                <span className="text-blue-600 block">API Development</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Integrate with Zion Tech Group services using our comprehensive APIs.
-                Build powerful applications with our developer-friendly platform.
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Build robust, scalable, and secure APIs that power your applications 
+                and enable seamless integration with third-party services.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center px-8 py-4 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors"
+                >
+                  Learn More
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>
-        {/* Features Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {apiFeatures.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="text-indigo-600 mb-4">
-                      <IconComponent className="w-10 h-10" />
+
+        {/* Services Grid */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our API Service Portfolio
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive API solutions designed to meet your specific requirements 
+                and integrate seamlessly with your existing systems.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {apiServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+                >
+                  <div className="flex items-center mb-6">
+                    <div className="p-3 bg-blue-100 rounded-lg mr-4">
+                      <service.icon className="h-8 w-8 text-blue-600" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">
-                      {feature.title}
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      {service.title}
                     </h3>
-                    <p className="text-gray-600 mb-4">
-                      {feature.description}
-                    </p>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-6">
+                    {service.description}
+                  </p>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {feature.features.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                          {item}
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                          {feature}
                         </li>
                       ))}
                     </ul>
-                  </motion.div>
-                );
-              })}
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-semibold text-blue-600">
+                      {service.pricing}
+                    </span>
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                    >
+                      Learn More
+                      <ArrowRight className="ml-1 h-4 w-4" />
+                    </Link>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
-        {/* API Endpoints Section */}
+
+        {/* Benefits Section */}
         <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Available Endpoints
+                Why Choose Our API Services?
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Explore our comprehensive API endpoints for AI services, IT solutions, and micro SaaS platforms.
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We combine technical expertise with industry best practices to deliver 
+                APIs that are secure, scalable, and developer-friendly.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">AI Services API</h3>
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">POST /api/ai/analyze</span>
-                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">AI</span>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="p-4 bg-blue-100 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                    <benefit.icon className="h-8 w-8 text-blue-600" />
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">POST /api/ai/predict</span>
-                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">AI</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">POST /api/ai/process</span>
-                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">AI</span>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">IT Services API</h3>
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">GET /api/infrastructure/status</span>
-                    <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">IT</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">POST /api/security/scan</span>
-                    <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">IT</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">GET /api/cloud/resources</span>
-                    <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">IT</span>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Micro SaaS API</h3>
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">POST /api/saas/subscribe</span>
-                    <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">SaaS</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">GET /api/saas/usage</span>
-                    <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">SaaS</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">POST /api/saas/configure</span>
-                    <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">SaaS</span>
-                  </div>
-                </div>
-              </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {benefit.description}
+                  </p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Start Building Today
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Ready to integrate with our APIs? Get started with our comprehensive documentation and developer tools.
-            </p>
-            <motion.a
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              whileHover={{ scale: 1.05 }}
+        <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >
-              Get API Access
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </motion.a>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Build Your API?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Let our API experts help you design, develop, and deploy APIs that 
+                power your business and enable seamless integrations.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  Start Your API Project
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center px-8 py-4 border border-blue-300 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Meet Our Team
+                </Link>
+              </div>
+            </motion.div>
           </div>
         </section>
       </div>

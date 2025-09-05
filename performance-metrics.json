@@ -8,15 +8,24 @@
     "arrayBuffers": 10515
   },
   "uptime": 0.016888379,
-  "timestamp": "2025-09-04T23:24:14.834Z",
-  "memory": {
-    "rss": 48963584,
-    "heapTotal": 5570560,
-    "heapUsed": 4385808,
-    "external": 1472832,
-    "arrayBuffers": 10515
-  },
-  "uptime": 0.028368744,
   "platform": "linux",
-  "nodeVersion": "v22.16.0"
+  "nodeVersion": "v22.16.0",
+  "bundleSize": {
+    ".next": {
+      "size": 28534499,
+      "sizeMB": "27.21"
+    },
+    "node_modules": {
+      "size": 0,
+      "sizeMB": "0.00"
+    }
+  },
+  "fileCounts": {
+    ".tsx": 25,
+    ".ts": 0,
+    ".jsx": 0,
+    ".js": 0,
+    ".css": 2,
+    ".json": 0
+  }
 }

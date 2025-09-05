@@ -519,7 +519,6 @@ class AICodeAnalyzer {
 
   displaySummary() {
     console.log('\n🤖 AI CODE ANALYZER SUMMARY');
-    console.log('============================');
     
     const metrics = this.analysis.metrics;
     const issues = this.analysis.issues;

@@ -22,8 +22,6 @@ function resolveSecondPRConflicts() {
       let content = fs.readFileSync(file, 'utf8');
       
       // Remove merge conflict markers
-      content = content.replace(/<<<<<<< HEAD\n?/g, '');
-      content = content.replace(/=======.*?\n?/g, '');
       content = content.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
       content = content.replace(/>>>>>>> origin\/[^\n]+\n?/g, '');
       

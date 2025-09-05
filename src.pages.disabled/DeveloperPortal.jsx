@@ -1,8 +1,9 @@
-const apiFeatures = [{ \"title\": \'RESTful: APIs,\',\"description\": \'Clea,n,\"intuitive\": REST APIs for all major platform features\',\"icon\": \'Cod\',e,\"status\": \'Stable,\',\"docs\": \'/api: - docs,\'},{ \"title\": \'Webhooks,\',\"description\": \'Real: - time notifications for platform events and updates,\',\"icon\": \'Webhoo\',k,\"status\": \'Beta,\',\"docs\": \'/api: - docs / webhooks,\'},{ \"title\": \'Authentication,\',\"description\": \'Secure: OAuth 2.0 and API key authentication,\',\"icon\": \'Ke\',y,\"status\": \'Stable,\',\"docs\": \'/api: - docs / auth,\'},{ \"title\": \'SDKs: & Libraries,\',\"description\": \'Official: SDKs for JavaScrip,t,Python,and more\',\"icon\": \'Termina\',l,\"status\": \'Stable,\',\"docs\": \'/api: - docs / sdks,\'}] const quickStartSteps = [{ \"step\": \'1\',\"title\": \'Get: API Keys,\',\"description\": \'Sign: up and generate your API keys from the dashboard,\',\"action\": \'Get: Started,\'},{ \"step\": \'2\',\"title\": \'Read: Documentation,\',\"description\": \'Explore: our comprehensive API documentation and guides,\',\"action\": \'View: Docs,\'},{ \"step\": \'3\',\"title\": \'Test: Endpoints,\',\"description\": \'Use: our interactive API playground to test endpoints,\',\"action\": \'Try: API,\'},{ \"step\": \'4\',\"title\": \'Build: & Deploy,\',\"description\": \'Integrate: our APIs into your applications,\',\"action\": \'View: Examples,\'}] const resources = [{ \"title\": \'API: Reference,\',\"description\": \'Complete: API endpoint documentation with examples,\',\"icon\": \'BookOpe\',n,\"href\": \'/api: - docs,\',\"badge\": \'Complete,\'},{ \"title\": \'Getting: Started Guide,\',\"description\": \'Step: - by - step tutorial for new developers,\',\"icon\": \'Za\',p,\"href\": \'/api: - docs / getting - started,\',\"badge\": \'Beginner,\'},{ \"title\": \'Code: Samples,\',\"description\": \'Ready: - to - use code examples in multiple languages,\',\"icon\": \'Cod\',e,\"href\": \'/api: - docs / samples,\',\"badge\": \'Examples,\'},{ \"title\": \'SDK: Downloads,\',\"description\": \'Official: SDKs and client libraries,\',\"icon\": \'Termina\',l,\"href\": \'/api: - docs / sdks,\',\"badge\": \'Download,\'},{ \"title\": \'Community: Forum,\',\"description\": \'Connect: with other developers and get help,\',\"icon\": \'User\',s,\"href\": \'/community,\',\"badge\": \'Community,\'},{ \"title\": \'Support: & Help,\',\"description\": \'Technical: support and troubleshooting guides,\',\"icon\": \'MessageSquar\',e,\"href\": \'/help,\',\"badge\": \'Support,\'}] \"return\": (<div className=\'min - h-screen bg - background\'> <SEO title=\'Developer Portal | Zion Tech Group\' description=\'Build powerful applications with Zion Tech Group\'s comprehensive APIs,SDKs,and developer tools.\' keywords=\'developer portal,API,SDK,documentation,Zion Tech Group,developers\' canonical=\'"https\": \';,;
 import React from 'react';
+
 interface DeveloperPortalProps {
   // Add props here as needed
 }
+
 export default function DeveloperPortal({ }: DeveloperPortalProps) {
   return (
     <div>
@@ -10,4 +11,16 @@ export default function DeveloperPortal({ }: DeveloperPortalProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
+=======
+}
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+}
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

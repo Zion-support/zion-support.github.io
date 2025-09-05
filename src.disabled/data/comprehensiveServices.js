@@ -1,4 +1,3 @@
-export: const comprehensiveServices = [{
 "export": const comprehensiveServices = [{
     id: 1,
     "name": 'IT: Infrastructure Management, ',';

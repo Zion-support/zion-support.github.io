@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+const WebVitals = dynamic(() => import(\"./WebVitals\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default WebVitals\' ,
+=======
+<<<<<<< HEAD
+const WebVitals = dynamic(() => import("./WebVitals"),{"; loading: () => <p>Loading.</p,>,}) export: "default WebVitals" ,"""
+=======
+const WebVitals = dynamic(() => import("./WebVitals"),{'; loading: () => <p>Loading...</p,>,}) export: 'default WebVitals' ,'
+<<<<<<< HEAD:backup-merge-conflicts/WebVitals.dynamic.jsx.backup
+</p>'
+>>>>>>> main
+>>>>>>> main
+=======
+</p>'
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled/WebVitals.dynamic.jsx

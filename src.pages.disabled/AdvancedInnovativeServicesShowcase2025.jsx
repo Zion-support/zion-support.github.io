@@ -1,8 +1,9 @@
-const AdvancedInnovativeServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') const [sortBy,setSortBy] = useState (\'name\') const categories = [\'all\',\'Legal Tech & Compliance\',\'Quantum Computing & Security\',\'Healthcare & Biotech\',\'Energy & Sustainability\',\'Cybersecurity\',\'Fintech & Trading\',\'Quantum Computing & AI\',\'Supply Chain & Logistics\',\'Edge Computing & IoT\',\'Marketing & Automation\',\'Quantum Technology\',\'AI & Machine Learning\',\'AI & Analytics\',\'AI & Customer Experience\' ] const allServices = [...advancedInnovativeServices2025V3.map (service => ({ ...service,\"type\": \'Micro: SAAS\'}) ) ,...advancedITServices2025.map (service => ({ ...service,\"type\": \'IT: Service\'}) ) ,...advancedAIServices2025.map (service => ({ ...service,\"type\": \'AI: Service\'}) ) ] const filteredServices = allServices .filter (service => selectedCategory === \'all\' || service.category === selectedCategory) .filter (service => service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.features?.some ( (feature) => feature.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ) .sort ( (a,b) => { switch (sortBy) { case \'price\': \"return\": parseFloat (a.price?.replace (/[^0 - 9.]/g,\') || \'0\') - parseFloat (b.price?.replace (/[^0 - 9.]/g,\') || \'0\') case \'category\': \"return\": a.category.localeCompare (b.category) case \'name\': default: return: a.name.localeCompare (b.name)} }) const getCategoryIcon = (category) => { const icons = { \'Legal Tech & Compliance\': \',\'"Quantum\": Computing & Security\': \',\'"Healthcare\": & Biotech\': \',\'"Energy\": & Sustainability\': \',\'Cybersecurity\': \',\'"Fintech\": & Trading\': \',\'"Quantum\": Computing & AI\': \',\'"Supply\": Chain & Logistics\': \',\'"Edge\": Computing & IoT\': \',\'"Marketing\": & Automation\': \',\'"Quantum\": Technology\': \',\'"AI\": & Machine Learning\': \',\'"AI\": & Analytics\': \',\''\';\"";
 import React from 'react';
+
 interface AdvancedInnovativeServicesShowcase2025Props {
   // Add props here as needed
 }
+
 export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInnovativeServicesShowcase2025Props) {
   return (
     <div>
@@ -10,4 +11,16 @@ export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInno
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
+=======
+}
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+}
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

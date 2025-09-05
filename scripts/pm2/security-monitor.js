@@ -472,7 +472,6 @@ class SecurityMonitor {
 
   displaySummary() {
     console.log('\n🔒 SECURITY MONITOR SUMMARY');
-    console.log('===========================');
     
     const deps = this.securityReport.dependencies;
     const code = this.securityReport.codeSecurity;

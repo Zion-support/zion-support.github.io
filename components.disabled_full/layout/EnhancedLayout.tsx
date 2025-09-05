@@ -1,7 +1,3 @@
-import React, { ReactNode } from "react";
-import { ReactNode } from "react";
-import EnhancedNavigation from "./EnhancedNavigation";
-import EnhancedFooter from "./EnhancedFooter";
 interface EnhancedLayoutProps {
   \"children\": ReactNode;
 }
@@ -16,4 +12,3 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
     </div>
   );
 }
- import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";

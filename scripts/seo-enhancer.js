@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class SEOEnhancer { constructor() { this.seoChecks = []} async checkMetaTags() {  this.seoChecks.push('Meta tags checked')} async checkStructuredData() {  this.seoChecks.push('Structured data checked')} async generateReport() { const report = { timestamp: new Date().toISOString(),checks: this.seoChecks }; const reportPath = path.join(process.cwd(),'seo-reports','enhancement-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = SEOEnhancer;
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node const fs = require("fs"); const path = require("path"); class SEOEnhancer { constructor() { this.seoChecks = []} async checkMetaTags() { console.log(" Checking meta tags."); this.seoChecks.push("Meta tags checked")} async checkStructuredData() { console.log(" Checking structured data."); this.seoChecks.push("Structured data checked")} async generateReport() { const report = { timestamp: new Date().toISOString(),checks: this.seoChecks }; const reportPath = path.join(process.cwd(),"seo-reports","enhancement-report.json"); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = SEOEnhancer;''"
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class SEOEnhancer { constructor() { this.seoChecks = []} async checkMetaTags() { _console.log('🏷️ Checking meta tags...'); this.seoChecks.push('Meta tags checked')} async checkStructuredData() { _console.log('📊 Checking structured data...'); this.seoChecks.push('Structured data checked')} async generateReport() { const report = { timestamp: new Date().toISOString(),checks: this.seoChecks }; const reportPath = path.join(process.cwd(),'seo-reports','enhancement-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = SEOEnhancer;
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

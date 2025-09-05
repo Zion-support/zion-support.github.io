@@ -1,0 +1,27 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge  } from 'tailwind-merge';
+
+export function cn(...inputs: ClassValue[]) {;
+  return twMerge(clsx(inputs)),
+}
+=======
+import { type ClassValue,clsx } from 'clsx'; import { twMerge } from 'tailwind-merge'; export function cn(...inputs: ClassValue[]) {; return twMerge(clsx(inputs));,}
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+=======
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge  } from 'tailwind-merge';
+export function cn(..."inputs": ClassValue[]) {;
+  return twMerge(clsx(inputs))}
+<<<<<<< HEAD:backup-merge-conflicts/utils.ts.backup
+>>>>>>> main
+>>>>>>> main
+import { type ClassValue,clsx } from 'clsx'; import { twMerge } from 'tailwind-merge'; export function cn(...inputs: ClassValue[]) {; return twMerge(clsx(inputs)),}
+>>>>>>> main
+=======
+import { type ClassValue,clsx } from 'clsx'; import { twMerge } from 'tailwind-merge'; export function cn(...inputs: ClassValue[]) {; return twMerge(clsx(inputs)),}
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/lib/utils.ts

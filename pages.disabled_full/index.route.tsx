@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React from \'react\'; import Link from \'next/link\'; export default function HomeRoute() { return ( <main style={{ \"padding\": \'24\',\"fontFamily\": \'ui-sans-serif,system-ui\' }}> <h1 style={{ \"fontSize\": \'28\',\"fontWeight\": \'700\' }}>Zion Tech Group</h1> <p style={{ \"marginTop\": \'8\' }}>AI-powered Micro SAAS,IT and AI solutions.</p> <div style={{ \"marginTop\": \'16\',\"display\": \'flex\',\"gap\": \'12\' }}> <Link href=\"/services/comprehensive-micro-saas-showcase\" legacyBehavior> <a style={{ \"color\": \'#4f46e5\' }}>Explore Services</a> </Link> <Link href=\"/services\" legacyBehavior> <a style={{ \"color\": \'#4f46e5\' }}>Services Overview</a> </Link> <a href=\""https\": </div> </main> )}
 const React from "react"; import Link from "next/link"; export default function HomeRoute() { return ( <main style={{ padding: "24",fontFamily: "ui-sans-serif,system-ui" }}> <h1 style={{ fontSize: "28",fontWeight: "700" }}>Zion Tech Group</h1> <p style={{ marginTop: "8" }}>AI-powered Micro SAAS,IT and AI solutions.</p> <div style={{ marginTop: "16",display: "flex",gap: "12" }}> <Link href="/services/comprehensive-micro-saas-showcase" legacyBehavior> <a style={{ color: "#4f46e5" }}>Explore Services</a> </Link> <Link href="/services" legacyBehavior> <a style={{ color: "#4f46e5" }}>Services Overview</a> </Link> <a href="https: </div> </main> )}'"'"
 import _React from 'react'; import Link from 'next/link'; export default function HomeRoute() { return ( <main style={{ "padding": '24',"fontFamily": 'ui-sans-serif,system-ui' }}> <h1 style={{ "fontSize": '28',"fontWeight": '700' }}>Zion Tech Group</h1> <p style={{ "marginTop": '8' }}>AI-powered Micro SAAS,IT and AI solutions.</p> <div style={{ "marginTop": '16',"display": 'flex',"gap": '12' }}> <Link href="/services/comprehensive-micro-saas-showcase" legacyBehavior> <a style={{ "color": '#4f46e5' }}>Explore Services</a> </Link> <Link href="/services" legacyBehavior> <a style={{ "color": '#4f46e5' }}>Services Overview</a> </Link> <a href=""https": </div> </main> )}
+>>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

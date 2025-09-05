@@ -1,10 +1,27 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import Layout from '../../components/Layout';
+import { Cloud, Server, Shield, Zap } from 'lucide-react';
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 export default function CloudServicesPage() {
   const cloudServices = [;
     {}
@@ -39,6 +56,56 @@ export default function CloudServicesPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+
+const cloudServices = [
+  {
+    title: "Cloud Migration",
+    description: "Seamless migration of your infrastructure to the cloud",
+    icon: Cloud,
+    features: ["Zero-downtime migration", "Cost optimization", "Performance improvement", "Scalability"],
+    pricing: "$5,000 - $25,000/project"
+  },
+  {
+    title: "Cloud Infrastructure",
+    description: "Design and implement scalable cloud infrastructure",
+    icon: Server,
+    features: ["Auto-scaling", "Load balancing", "High availability", "Disaster recovery"],
+    pricing: "$2,000 - $10,000/month"
+  },
+  {
+    title: "Database Services",
+    description: "Managed database services with high availability",
+    icon: Database,
+    features: ["Managed databases", "Backup & recovery", "Performance tuning", "Security"],
+    pricing: "$1,000 - $5,000/month"
+  },
+  {
+    title: "Cloud Security",
+    description: "Comprehensive security solutions for cloud environments",
+    icon: Shield,
+    features: ["Security audits", "Compliance", "Access control", "Monitoring"],
+    pricing: "$1,500 - $8,000/month"
+  },
+  {
+    title: "DevOps Automation",
+    description: "Automated deployment and infrastructure management",
+    icon: Zap,
+    features: ["CI/CD pipelines", "Infrastructure as code", "Monitoring", "Alerting"],
+    pricing: "$2,500 - $12,000/month"
+  }
+];
+
+export default function CloudServicesPage() {
+<<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   return (
     <Layout
       title="Cloud Solutions - Zion Tech Group"
@@ -52,6 +119,11 @@ export default function CloudServicesPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -64,6 +136,13 @@ export default function CloudServicesPage() {
             </motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -76,6 +155,11 @@ export default function CloudServicesPage() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -117,6 +201,56 @@ export default function CloudServicesPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+
+        {/* Services Grid */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {cloudServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <service.icon className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <div className="space-y-2 mb-4">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="text-lg font-semibold text-blue-600 mb-4">{service.pricing}</div>
+                  <Link
+                    href="/contact"
+                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Get Quote
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+<<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

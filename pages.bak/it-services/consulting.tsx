@@ -1,9 +1,17 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import Link from \'next/link\'; import Head from \'next/head\'; export default function ITConsulting() { return ( <> <Head> <title>IT Consulting Services - Zion Tech Group</title> <meta name=\"description\" content=\"Expert IT consulting services for strategic planning,technology assessment,and digital strategy development.\" />\" <meta name=\"keywords\" content=\"IT consulting,technology strategy,digital strategy,technology assessment,IT planning\" />\" <link rel=\"canonical\" href=\""https\": </Head> \" <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\" <div className=\"max-w-6xl mx-auto px-4 py-16\">\" <div className=\"text-center mb-12\">\" <h1 className=\"text-4xl md:text-5xl font-bold mb-6\">IT Consulting Services</h1>\" <p className=\"text-xl text-slate-300 max-w-3xl mx-auto\"> Strategic technology guidance to drive your business forward </p> </div> \" <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12\">\" <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\">\" <h3 className=\"text-xl font-bold mb-4 text-blue-400\">Technology Strategy</h3>\" <p className=\"text-slate-300 mb-4\">Develop comprehensive technology roadmaps</p>\" <ul className=\"text-slate-400 space-y-2\"> <li>• Technology assessment</li> <li>• Roadmap development</li> <li>• Vendor evaluation</li> <li>• Investment planning</li> </ul> </div> \" <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\">\" <h3 className=\"text-xl font-bold mb-4 text-purple-400\">Digital Strategy</h3>\" <p className=\"text-slate-300 mb-4\">Create digital transformation strategies</p>\" <ul className=\"text-slate-400 space-y-2\"> <li>• Digital readiness assessment</li> <li>• Transformation planning</li> <li>• Change management</li> <li>• ROI analysis</li> </ul> </div> \" <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\">\" <h3 className=\"text-xl font-bold mb-4 text-green-400\">Architecture Review</h3>\" <p className=\"text-slate-300 mb-4\">Evaluate and optimize your IT architecture</p>\" <ul className=\"text-slate-400 space-y-2\"> <li>• Architecture assessment</li> <li>• Performance optimization</li> <li>• Security review</li> <li>• Scalability planning</li> </ul> </div> </div> \" <div className=\"text-center\">\" <Link href=\"/contact\" className=\"px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors mr-4\"> Get Consultation </Link>\" <Link href=\"/it-services\" className=\"px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors\"> View All IT Services </Link> </div> </div> </main> </> );\"}
 const Link from "next/link"; import Head from "next/head"; export default function ITConsulting() { return ( <> <Head> <title>IT Consulting Services - Zion Tech Group</title> <meta name="description" content="Expert IT consulting services for strategic planning,technology assessment,and digital strategy development." />" <meta name="keywords" content="IT consulting,technology strategy,digital strategy,technology assessment,IT planning" />" <link rel="canonical" href="https: </Head> " <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">" <div className="max-w-6xl mx-auto px-4 py-16">" <div className="text-center mb-12">" <h1 className="text-4xl md:text-5xl font-bold mb-6">IT Consulting Services</h1>" <p className="text-xl text-slate-300 max-w-3xl mx-auto"> Strategic technology guidance to drive your business forward </p> </div> " <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">" <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">" <h3 className="text-xl font-bold mb-4 text-blue-400">Technology Strategy</h3>" <p className="text-slate-300 mb-4">Develop comprehensive technology roadmaps</p>" <ul className="text-slate-400 space-y-2"> <li> Technology assessment</li> <li> Roadmap development</li> <li> Vendor evaluation</li> <li> Investment planning</li> </ul> </div> " <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">" <h3 className="text-xl font-bold mb-4 text-purple-400">Digital Strategy</h3>" <p className="text-slate-300 mb-4">Create digital transformation strategies</p>" <ul className="text-slate-400 space-y-2"> <li> Digital readiness assessment</li> <li> Transformation planning</li> <li> Change management</li> <li> ROI analysis</li> </ul> </div> " <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">" <h3 className="text-xl font-bold mb-4 text-green-400">Architecture Review</h3>" <p className="text-slate-300 mb-4">Evaluate and optimize your IT architecture</p>" <ul className="text-slate-400 space-y-2"> <li> Architecture assessment</li> <li> Performance optimization</li> <li> Security review</li> <li> Scalability planning</li> </ul> </div> </div> " <div className="text-center">" <Link href="/contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors mr-4"> Get Consultation </Link>" <Link href="/it-services" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"> View All IT Services </Link> </div> </div> </main> </> );"}'"'"
+=======
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import React from 'react';
+
 interface ConsultingProps {
   // Add props here as needed
 }
+
 export default function Consulting({ }: ConsultingProps) {
   return (
     <div>
@@ -11,4 +19,12 @@ export default function Consulting({ }: ConsultingProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+}
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

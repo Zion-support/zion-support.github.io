@@ -1,9 +1,23 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import Layout from '../../components/Layout';
+import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 export default function SMBSolutionsPage() {
   const smbServices = [;
@@ -39,6 +53,53 @@ export default function SMBSolutionsPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
+<<<<<<< HEAD
+=======
+=======
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+import { 
+  Building2, 
+  Users, 
+  DollarSign, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
+
+const smbServices = [
+  {
+    icon: DollarSign,
+    title: 'Cost-Effective IT',
+    description: 'Affordable technology solutions for small and medium businesses'
+  },
+  {
+    icon: Zap,
+    title: 'Quick Setup',
+    description: 'Fast implementation to get you up and running quickly'
+  },
+  {
+    icon: Users,
+    title: 'Dedicated Support',
+    description: 'Personal support team for your business needs'
+  },
+  {
+    icon: Building2,
+    title: 'Scalable Solutions',
+    description: 'Grow with your business as it expands'
+  }
+];
+
+export default function SMBSolutionsPage() {
+<<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
   return (
     <Layout
       title="SMB Solutions - Zion Tech Group"
@@ -52,6 +113,11 @@ export default function SMBSolutionsPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -64,6 +130,13 @@ export default function SMBSolutionsPage() {
             </motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -76,6 +149,11 @@ export default function SMBSolutionsPage() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -117,6 +195,51 @@ export default function SMBSolutionsPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+
+        {/* Services Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">SMB Services</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Affordable technology solutions that grow with your business.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {smbServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center"
+                >
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <service.icon className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                  <p className="text-gray-600">{service.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+<<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

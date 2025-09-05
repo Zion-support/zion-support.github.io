@@ -538,7 +538,6 @@ class DeploymentPipeline {
 
   displaySummary() {
     console.log('\n🚀 DEPLOYMENT PIPELINE SUMMARY');
-    console.log('===============================');
     
     console.log(`🆔 Deployment ID: ${this.deployment.id}`);
     console.log(`📅 Timestamp: ${this.deployment.timestamp}`);

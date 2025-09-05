@@ -1,44 +1,8 @@
-const fs = require('fs');
-const path = require('path');
-const { exec } = require('child_process');
-const { promisify } = require('util');
-const execAsync = promisify(exec);
-class RunAllAutomations {
-  constructor() {
-    this.logFile = path.join(__dirname, '..', 'automation', 'logs', 'run-all-automations.log');
-    this.results = {
-      success: [],
-      failed: [],
-      warnings: []
-    };
-  }
-  log(message) {
-    const timestamp = new Date().toISOString();
-    }
-  async runAutomation(scriptName, scriptPath) {
-    this.log(`🚀 Running ${scriptName}...`);
-    try {
-      const result = execSync(`node ${scriptPath}`, {
-        "cwd": this.projectRoot,
-        "encoding": 'utf8',
-        "timeout": 300000 // 5 minutes
-      });
-      this.log(`✅ ${scriptName} completed successfully`);
-      return {
-        "name": scriptName,
-        "success": true,
-        "output": result
-      }} catch (error) {
-      this.log(`❌ ${scriptName} "failed": ${error.message}`);
-      return {
-        "name": scriptName,
-        "success": false,
-        "error": error.message
-      }}
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
   }
+
   async runCommand(command, options = {}) {
     try {
       const { stdout, stderr } = await execAsync(command, { 
@@ -56,9 +20,11 @@ class RunAllAutomations {
       };
     }
   }
+
   async runAutomation(scriptName, command) {
     this.log(`Running: ${scriptName}`);
     const result = await this.runCommand(command);
+    
     if (result.success) {
       this.results.success.push({ script: scriptName, output: result.stdout });
       this.log(`✅ ${scriptName} completed successfully`);
@@ -66,15 +32,19 @@ class RunAllAutomations {
       this.results.failed.push({ script: scriptName, error: result.stderr });
       this.log(`❌ ${scriptName} failed: ${result.stderr}`);
     }
+    
     return result;
   }
+
   async runAll() {
     this.log('🚀 Starting comprehensive automation run...');
+    
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, '..', 'automation', 'logs');
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
+
     // Define all automation scripts to run
     const automations = [
       { name: 'Install Dependencies', command: 'npm install' },
@@ -94,18 +64,23 @@ class RunAllAutomations {
       { name: 'Git Commit', command: 'git commit -m "Automated improvements and fixes"' },
       { name: 'Git Push', command: 'git push origin main' }
     ];
+
     // Run each automation
     for (const automation of automations) {
       await this.runAutomation(automation.name, automation.command);
     }
+
     // Generate comprehensive report
     this.generateReport();
+    
     this.log('🎉 Comprehensive automation run completed');
     this.log(`✅ Successful: ${this.results.success.length}`);
     this.log(`❌ Failed: ${this.results.failed.length}`);
     this.log(`⚠️ Warnings: ${this.results.warnings.length}`);
+
     return this.results;
   }
+
   generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
@@ -121,16 +96,19 @@ class RunAllAutomations {
         warnings: this.results.warnings
       }
     };
+
     const reportFile = path.join(__dirname, '..', 'automation', 'logs', 'comprehensive-automation-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to ${reportFile}`);
     return report;
   }
 }
+
 // Handle command line arguments
 if (require.main === module) {
   const runner = new RunAllAutomations();
   const command = process.argv[2];
+
   switch (command) {
     case "run":
       runner.runAll().catch(error => {
@@ -146,7 +124,9 @@ if (require.main === module) {
       process.exit(1);
   }
 }
+
 module.exports = RunAllAutomations;
+=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
