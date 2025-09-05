@@ -609,6 +609,141 @@ const aiServices = [
     marketPrice: '$12,000-50,000/month',
     setupTime: '8-16 weeks',
     targetUsers: 'Automotive, Logistics, Manufacturing, Agriculture'
+  },
+  {
+    id: 21,
+    title: 'AI-Powered Drug Discovery',
+    description: 'Accelerated drug discovery and molecular design using advanced AI algorithms.',
+    icon: Heart,
+    category: 'Healthcare AI',
+    price: 'Starting at $8,000/month',
+    features: [
+      'Molecular property prediction',
+      'Drug-target interaction modeling',
+      'Compound optimization',
+      'Toxicity prediction',
+      'Clinical trial optimization',
+      'Biomarker discovery',
+      'Personalized medicine',
+      'Regulatory compliance'
+    ],
+    benefits: [
+      'Reduce drug discovery time by 50%',
+      'Lower R&D costs by 40%',
+      'Improve success rates by 30%',
+      'Accelerate time to market'
+    ],
+    marketPrice: '$15,000-40,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Pharmaceutical, Biotechnology, Research Institutions'
+  },
+  {
+    id: 22,
+    title: 'AI-Powered Climate Modeling',
+    description: 'Advanced climate prediction and environmental impact analysis using AI.',
+    icon: TreePine,
+    category: 'Environmental AI',
+    price: 'Starting at $5,000/month',
+    features: [
+      'Climate pattern prediction',
+      'Weather forecasting',
+      'Carbon footprint analysis',
+      'Renewable energy optimization',
+      'Environmental risk assessment',
+      'Sustainability planning',
+      'Emission tracking',
+      'Policy impact modeling'
+    ],
+    benefits: [
+      'Improve prediction accuracy by 60%',
+      'Reduce environmental risks',
+      'Optimize resource usage',
+      'Support sustainability goals'
+    ],
+    marketPrice: '$8,000-20,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Government, Energy, Agriculture, Environmental Organizations'
+  },
+  {
+    id: 23,
+    title: 'AI-Powered Space Analytics',
+    description: 'Satellite data analysis and space mission optimization using AI.',
+    icon: Globe,
+    category: 'Space AI',
+    price: 'Starting at $6,000/month',
+    features: [
+      'Satellite image analysis',
+      'Orbital prediction',
+      'Space debris tracking',
+      'Mission planning optimization',
+      'Earth observation analytics',
+      'Space weather prediction',
+      'Resource utilization',
+      'Risk assessment'
+    ],
+    benefits: [
+      'Improve mission success rates',
+      'Reduce operational costs',
+      'Enhanced data insights',
+      'Better resource management'
+    ],
+    marketPrice: '$10,000-30,000/month',
+    setupTime: '6-10 weeks',
+    targetUsers: 'Space Agencies, Satellite Companies, Research Institutions'
+  },
+  {
+    id: 24,
+    title: 'AI-Powered Quantum Computing',
+    description: 'Quantum algorithm optimization and quantum machine learning solutions.',
+    icon: Cpu,
+    category: 'Quantum AI',
+    price: 'Starting at $10,000/month',
+    features: [
+      'Quantum algorithm development',
+      'Quantum machine learning',
+      'Quantum optimization',
+      'Quantum error correction',
+      'Hybrid classical-quantum systems',
+      'Quantum simulation',
+      'Quantum cryptography',
+      'Performance optimization'
+    ],
+    benefits: [
+      'Exponential computational speedup',
+      'Solve complex optimization problems',
+      'Breakthrough in cryptography',
+      'Revolutionary computing power'
+    ],
+    marketPrice: '$20,000-100,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Research Institutions, Tech Giants, Financial Services'
+  },
+  {
+    id: 25,
+    title: 'AI-Powered Metaverse Platform',
+    description: 'Intelligent virtual world creation and management with AI-driven interactions.',
+    icon: Gamepad2,
+    category: 'Metaverse AI',
+    price: 'Starting at $7,000/month',
+    features: [
+      'Virtual world generation',
+      'AI-powered NPCs',
+      'Realistic physics simulation',
+      'Dynamic content creation',
+      'User behavior analysis',
+      'Virtual economy management',
+      'Cross-platform integration',
+      'Immersive experiences'
+    ],
+    benefits: [
+      'Create engaging virtual worlds',
+      'Realistic AI interactions',
+      'Scalable virtual environments',
+      'Enhanced user engagement'
+    ],
+    marketPrice: '$12,000-50,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Gaming, Education, Real Estate, Entertainment'
   }
 ];
 

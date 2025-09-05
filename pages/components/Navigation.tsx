@@ -262,7 +262,9 @@ const quickLinks = [
   { title: 'Pricing', href: '/pricing', icon: DollarSign },
   { title: 'Contact', href: '/contact', icon: Phone },
   { title: 'Support', href: '/support', icon: MessageSquare },
-  { title: 'Status', href: '/status', icon: BarChart3 }
+  { title: 'Status', href: '/status', icon: BarChart3 },
+  { title: 'Quote', href: '/quote', icon: FileText },
+  { title: 'API Docs', href: '/api-docs', icon: Code }
 ];
 
 export default function Navigation() {

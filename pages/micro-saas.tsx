@@ -26,7 +26,11 @@ import {
   Wifi,
   Brain,
   Video,
-  Smartphone
+  Smartphone,
+  Mic,
+  Camera,
+  Server,
+  Lock
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -472,6 +476,159 @@ const microSaasSolutions = [
     marketPrice: "$4,000-10,000/month",
     benefits: ["Scalable backend", "Real-time features", "Cross-platform support"],
     setupTime: "3-5 weeks"
+  },
+  {
+    title: "AI-Powered Content Generator",
+    description: "Intelligent content creation platform with AI writing assistance",
+    icon: Brain,
+    features: [
+      "AI Writing Assistant",
+      "Content Templates",
+      "SEO Optimization",
+      "Multi-language Support",
+      "Brand Voice Training",
+      "Plagiarism Detection"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$3,000-7,000/month",
+    benefits: ["10x faster content creation", "Consistent brand voice", "SEO optimized content"],
+    setupTime: "2-3 weeks"
+  },
+  {
+    title: "Smart Contract Automation",
+    description: "Automated contract generation and management platform",
+    icon: FileText,
+    features: [
+      "Contract Templates",
+      "AI Contract Review",
+      "Electronic Signatures",
+      "Compliance Checking",
+      "Version Control",
+      "Integration APIs"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Reduce contract time by 80%", "Legal compliance", "Automated workflows"],
+    setupTime: "3-4 weeks"
+  },
+  {
+    title: "Predictive Maintenance System",
+    description: "AI-powered equipment maintenance prediction and scheduling",
+    icon: Settings,
+    features: [
+      "Equipment Monitoring",
+      "Failure Prediction",
+      "Maintenance Scheduling",
+      "Cost Optimization",
+      "Real-time Alerts",
+      "Analytics Dashboard"
+    ],
+    price: "Starting at $3,000/month",
+    marketPrice: "$5,000-12,000/month",
+    benefits: ["Reduce downtime by 60%", "Lower maintenance costs", "Predictive insights"],
+    setupTime: "4-6 weeks"
+  },
+  {
+    title: "Voice Commerce Platform",
+    description: "Voice-activated shopping and commerce solution",
+    icon: Mic,
+    features: [
+      "Voice Recognition",
+      "Natural Language Processing",
+      "Order Processing",
+      "Payment Integration",
+      "Multi-language Support",
+      "Analytics & Insights"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-10,000/month",
+    benefits: ["Hands-free shopping", "Better accessibility", "Faster transactions"],
+    setupTime: "3-5 weeks"
+  },
+  {
+    title: "AR/VR Experience Platform",
+    description: "Immersive AR/VR experiences for training and marketing",
+    icon: Camera,
+    features: [
+      "3D Content Creation",
+      "AR/VR App Development",
+      "Interactive Experiences",
+      "Analytics Tracking",
+      "Multi-platform Support",
+      "Cloud Rendering"
+    ],
+    price: "Starting at $4,500/month",
+    marketPrice: "$7,000-20,000/month",
+    benefits: ["Immersive experiences", "Better engagement", "Future-ready technology"],
+    setupTime: "6-10 weeks"
+  },
+  {
+    title: "Smart Energy Management",
+    description: "AI-powered energy optimization and monitoring system",
+    icon: Zap,
+    features: [
+      "Energy Monitoring",
+      "Usage Optimization",
+      "Cost Analysis",
+      "Renewable Integration",
+      "Predictive Analytics",
+      "Automated Controls"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-9,000/month",
+    benefits: ["Reduce energy costs by 30%", "Carbon footprint tracking", "Automated optimization"],
+    setupTime: "3-5 weeks"
+  },
+  {
+    title: "Digital Twin Platform",
+    description: "Digital replicas of physical assets for simulation and optimization",
+    icon: Globe,
+    features: [
+      "3D Asset Modeling",
+      "Real-time Simulation",
+      "Performance Monitoring",
+      "Predictive Analytics",
+      "Scenario Testing",
+      "Integration APIs"
+    ],
+    price: "Starting at $5,000/month",
+    marketPrice: "$8,000-25,000/month",
+    benefits: ["Optimize operations", "Reduce risks", "Better decision making"],
+    setupTime: "6-12 weeks"
+  },
+  {
+    title: "Edge Computing Platform",
+    description: "Distributed computing infrastructure for real-time processing",
+    icon: Server,
+    features: [
+      "Edge Node Management",
+      "Real-time Processing",
+      "Data Synchronization",
+      "Load Balancing",
+      "Security Management",
+      "Monitoring & Analytics"
+    ],
+    price: "Starting at $3,500/month",
+    marketPrice: "$6,000-15,000/month",
+    benefits: ["Ultra-low latency", "Better performance", "Reduced bandwidth costs"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "Quantum-Safe Security Platform",
+    description: "Post-quantum cryptography and security solutions",
+    icon: Lock,
+    features: [
+      "Quantum-Safe Encryption",
+      "Key Management",
+      "Secure Communications",
+      "Compliance Standards",
+      "Migration Tools",
+      "Security Auditing"
+    ],
+    price: "Starting at $4,000/month",
+    marketPrice: "$7,000-18,000/month",
+    benefits: ["Future-proof security", "Quantum resistance", "Enhanced protection"],
+    setupTime: "5-8 weeks"
   }
 ];
 

@@ -45,7 +45,11 @@ import {
   Wrench,
   PieChart,
   ClipboardList,
-  Layers
+  Layers,
+  TreePine,
+  Cpu,
+  Server,
+  Wifi
 } from 'lucide-react';
 
 const footerSections = [
@@ -297,15 +301,15 @@ export default function Footer() {
               <div className="text-gray-400">Services & Solutions</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-green-400 mb-2">1,200+</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">3,200+</div>
               <div className="text-gray-400">Projects Completed</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-purple-400 mb-2">95+</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">180+</div>
               <div className="text-gray-400">Expert Team Members</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-yellow-400 mb-2">15+</div>
+              <div className="text-3xl font-bold text-yellow-400 mb-2">18+</div>
               <div className="text-gray-400">Years Experience</div>
             </div>
           </div>

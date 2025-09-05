@@ -7,45 +7,45 @@ import Layout from './components/Layout';
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
-  { number: '2,500+', label: 'Projects Completed' },
-  { number: '65+', label: 'Services & Solutions' },
-  { number: '150+', label: 'Expert Team Members' },
+  { number: '3,200+', label: 'Projects Completed' },
+  { number: '235+', label: 'Services & Solutions' },
+  { number: '180+', label: 'Expert Team Members' },
   { number: '18+', label: 'Years Experience' }
 ];
 
 const services = [
   {
     title: "AI Services",
-    description: "20+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, predictive analytics, chatbots, fraud detection, and autonomous systems with real-world applications",
+    description: "25+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, predictive analytics, quantum AI, drug discovery, climate modeling, space analytics, and metaverse platforms with real-world applications",
     icon: Brain,
     href: "/ai-services",
-    count: "20+ Solutions",
+    count: "25+ Solutions",
     pricing: "Starting at $1,800/month",
-    marketPrice: "$2,500-50,000/month",
+    marketPrice: "$2,500-100,000/month",
     benefits: ["40-95% accuracy improvement", "60-90% automation", "15-90% ROI increase"],
     setupTime: "2-16 weeks"
   },
   {
     title: "IT Services", 
-    description: "20+ comprehensive IT services from cloud infrastructure to cybersecurity, DevOps, managed services, compliance, and enterprise digital transformation",
+    description: "28+ comprehensive IT services from cloud infrastructure to cybersecurity, DevOps, 5G networks, quantum computing, edge computing, blockchain infrastructure, and green IT solutions",
     icon: Network,
     href: "/it-services",
-    count: "20+ Services",
+    count: "28+ Services",
     pricing: "Starting at $800/month",
-    marketPrice: "$1,500-20,000/month",
+    marketPrice: "$1,500-100,000/month",
     benefits: ["99.9% uptime", "30-50% cost reduction", "24/7 support"],
-    setupTime: "1-12 weeks"
+    setupTime: "1-24 weeks"
   },
   {
     title: "Micro SaaS",
-    description: "25+ innovative micro SaaS solutions for modern businesses across all industries with real-time pricing, market analysis, and instant deployment",
+    description: "35+ innovative micro SaaS solutions including AI content generators, smart contracts, predictive maintenance, voice commerce, AR/VR platforms, digital twins, and quantum-safe security for modern businesses",
     icon: Cloud,
     href: "/micro-saas",
-    count: "25+ Solutions",
+    count: "35+ Solutions",
     pricing: "Starting at $1,000/month",
-    marketPrice: "$1,800-20,000/month",
+    marketPrice: "$1,800-25,000/month",
     benefits: ["80% efficiency improvement", "60-90% cost savings", "10x faster deployment"],
-    setupTime: "1-8 weeks"
+    setupTime: "1-12 weeks"
   }
 ];
 
@@ -111,7 +111,7 @@ export default function HomePage() {
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 We provide comprehensive technology solutions to help your business thrive in the digital age. 
                 From innovative micro SaaS applications to cutting-edge AI services, quantum computing, blockchain solutions, 
-                and enterprise IT infrastructure. Our 65+ services cover every aspect of modern technology needs with 
+                and enterprise IT infrastructure. Our 235+ services cover every aspect of modern technology needs with 
                 competitive pricing and proven results.
               </p>
             </motion.div>
@@ -177,38 +177,11 @@ export default function HomePage() {
               })}
             </div>
           </div>
-<<<<<<< HEAD
-=======
-        </section>
-
-        {/* Stats Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                >
-                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-0bf0
         </section>
 
         {/* Stats Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-<<<<<<< HEAD
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
               {stats.map((stat, index) => (
                 <motion.div
@@ -223,21 +196,7 @@ export default function HomePage() {
                   <div className="text-gray-600">{stat.label}</div>
                 </motion.div>
               ))}
-=======
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why Choose Zion Tech Group?</h2>
-              <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-                We deliver cutting-edge technology solutions with competitive pricing and unmatched expertise.
-                Our comprehensive service portfolio covers everything from micro SaaS development to enterprise AI solutions.
-              </p>
-            </motion.div>
->>>>>>> cursor/website-audit-and-update-with-deployment-0bf0
+            </div>
           </div>
         </section>
 
@@ -309,8 +268,7 @@ export default function HomePage() {
               </motion.div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
         {/* Contact CTA Section */}
         <section className="py-20 bg-blue-600 text-white">
@@ -342,12 +300,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
-=======
-        </div>
-      </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-0bf0
       </div>
     </Layout>
   );

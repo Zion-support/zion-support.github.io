@@ -19,7 +19,11 @@ import {
   Users,
   Package,
   GraduationCap,
-  DollarSign
+  DollarSign,
+  Cpu,
+  Wifi,
+  TreePine,
+  Brain
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -363,6 +367,142 @@ const services = [
     marketPrice: "$3,500-8,000/month",
     benefits: ["30% cost reduction", "Better ROI", "Optimized spending"],
     setupTime: "2-3 weeks"
+  },
+  {
+    title: "5G Network Implementation",
+    description: "Next-generation 5G network deployment and optimization services",
+    icon: Network,
+    features: [
+      "5G Infrastructure Design",
+      "Network Slicing",
+      "Edge Computing Integration",
+      "IoT Connectivity",
+      "Performance Optimization",
+      "Security Implementation"
+    ],
+    price: "Starting at $5,000/month",
+    marketPrice: "$8,000-25,000/month",
+    benefits: ["Ultra-fast connectivity", "Low latency", "Massive IoT support"],
+    setupTime: "6-12 weeks"
+  },
+  {
+    title: "Quantum Computing Infrastructure",
+    description: "Quantum computing setup and integration for advanced problem solving",
+    icon: Cpu,
+    features: [
+      "Quantum Hardware Setup",
+      "Quantum Algorithm Development",
+      "Hybrid Classical-Quantum Systems",
+      "Quantum Security Implementation",
+      "Performance Optimization",
+      "Research & Development"
+    ],
+    price: "Starting at $15,000/month",
+    marketPrice: "$25,000-100,000/month",
+    benefits: ["Exponential computing power", "Breakthrough capabilities", "Future-proof technology"],
+    setupTime: "12-24 weeks"
+  },
+  {
+    title: "Edge Computing Solutions",
+    description: "Distributed edge computing infrastructure for real-time processing",
+    icon: Server,
+    features: [
+      "Edge Node Deployment",
+      "Real-time Data Processing",
+      "Latency Optimization",
+      "Bandwidth Management",
+      "Security Implementation",
+      "Monitoring & Analytics"
+    ],
+    price: "Starting at $3,500/month",
+    marketPrice: "$6,000-15,000/month",
+    benefits: ["Ultra-low latency", "Reduced bandwidth costs", "Better performance"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "Blockchain Infrastructure",
+    description: "Complete blockchain setup and management for secure transactions",
+    icon: Shield,
+    features: [
+      "Blockchain Network Setup",
+      "Smart Contract Development",
+      "Consensus Mechanism Implementation",
+      "Security Auditing",
+      "Integration Services",
+      "Maintenance & Support"
+    ],
+    price: "Starting at $4,000/month",
+    marketPrice: "$7,000-20,000/month",
+    benefits: ["Enhanced security", "Transparent transactions", "Decentralized systems"],
+    setupTime: "6-10 weeks"
+  },
+  {
+    title: "AI Infrastructure Management",
+    description: "Specialized infrastructure for AI and machine learning workloads",
+    icon: Brain,
+    features: [
+      "GPU Cluster Setup",
+      "AI Model Deployment",
+      "Data Pipeline Management",
+      "Model Training Infrastructure",
+      "Performance Optimization",
+      "Scalability Management"
+    ],
+    price: "Starting at $6,000/month",
+    marketPrice: "$10,000-30,000/month",
+    benefits: ["Optimized AI performance", "Scalable infrastructure", "Cost-effective training"],
+    setupTime: "4-8 weeks"
+  },
+  {
+    title: "IoT Platform Management",
+    description: "Comprehensive IoT infrastructure and device management",
+    icon: Wifi,
+    features: [
+      "IoT Device Integration",
+      "Data Collection & Processing",
+      "Real-time Monitoring",
+      "Device Management",
+      "Security Implementation",
+      "Analytics & Insights"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,500-12,000/month",
+    benefits: ["Centralized IoT management", "Real-time insights", "Scalable connectivity"],
+    setupTime: "3-6 weeks"
+  },
+  {
+    title: "Green IT Solutions",
+    description: "Sustainable and energy-efficient IT infrastructure solutions",
+    icon: TreePine,
+    features: [
+      "Energy-Efficient Hardware",
+      "Renewable Energy Integration",
+      "Carbon Footprint Tracking",
+      "Waste Reduction",
+      "Sustainable Practices",
+      "Compliance Management"
+    ],
+    price: "Starting at $2,000/month",
+    marketPrice: "$3,500-8,000/month",
+    benefits: ["Reduce carbon footprint", "Lower energy costs", "Sustainability compliance"],
+    setupTime: "2-4 weeks"
+  },
+  {
+    title: "Disaster Recovery as a Service",
+    description: "Comprehensive disaster recovery and business continuity solutions",
+    icon: Shield,
+    features: [
+      "Automated Backup Systems",
+      "Failover Mechanisms",
+      "Data Replication",
+      "Recovery Testing",
+      "Compliance Management",
+      "24/7 Monitoring"
+    ],
+    price: "Starting at $3,000/month",
+    marketPrice: "$5,000-15,000/month",
+    benefits: ["Minimize downtime", "Data protection", "Business continuity"],
+    setupTime: "4-6 weeks"
   }
 ];
 
