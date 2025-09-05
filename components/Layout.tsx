@@ -1,6 +1,6 @@
 import React, { useState, ReactNode } from 'react';
 import Head from 'next/head';
-import { Header } from './Header';
+import Header from './Header';
 import { Sidebar } from './Sidebar';
 import Footer from './Footer';
 
@@ -11,13 +11,14 @@ interface LayoutProps {
   keywords?: string;
   ogImage?: string;
   noIndex?: boolean;
+  canonical?: string;
 }
 
 export default function Layout({
   children,
   title = 'Zion Tech Group - Leading AI & Technology Solutions',
   description = 'Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results.',
-  keywords = 'AI solutions, cloud services, technology consulting, digital transformation, IT services, machine learning, cybersecurity',
+  keywords = 'AI solutions, cloud services, technology consulting, digital transformation, IT services, machine learning, cybersecurity'
 }: LayoutProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -28,7 +29,7 @@ export default function Layout({
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="robots" content="index,follow" />
+        <meta name="robots" content="index,follow" />
         <link rel="canonical" href="https://ziontechgroup.com" />
         
         {/* Open Graph */}
@@ -53,7 +54,7 @@ export default function Layout({
         
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https: //fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />ursor/add-new-services-and-deploy-updates-1b90
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Structured Data */}
         <script

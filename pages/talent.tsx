@@ -1,8 +1,8 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
+import MainLayout from '../components/layout/MainLayout';
 
 const jobOpenings = [{
     id: 1,
@@ -29,7 +29,7 @@ const jobOpenings = [{
     type: "Full-time",
     experience: "3+ years",
     description: "Build scalable web applications and microservices for our SaaS solutions.",
-requirements: ["Bachelor's degree in Computer Science or related field",ursor/add-new-services-and-deploy-updates-1b90
+    requirements: ["Bachelor's degree in Computer Science or related field",
       "3+ years experience in full-stack development",
       "Proficiency in React, Node.js, TypeScript",
       "Experience with databases (PostgreSQL, MongoDB)",
@@ -45,7 +45,7 @@ requirements: ["Bachelor's degree in Computer Science or related field",ursor/ad
     type: "Full-time",
     experience: "7+ years",
     description: "Design and implement cloud infrastructure solutions for enterprise clients.",
-requirements: ["Bachelor's degree in Computer Science or related field",ursor/add-new-services-and-deploy-updates-1b90
+    requirements: ["Bachelor's degree in Computer Science or related field",
       "7+ years experience in cloud architecture",
       "AWS/Azure/GCP certifications preferred",
       "Experience with containerization (Docker, Kubernetes)",
@@ -61,7 +61,7 @@ requirements: ["Bachelor's degree in Computer Science or related field",ursor/ad
     type: "Full-time",
     experience: "4+ years",
     description: "Protect our clients' digital assets and implement security best practices.",
-requirements: ["Bachelor's degree in Cybersecurity or related field",ursor/add-new-services-and-deploy-updates-1b90
+    requirements: ["Bachelor's degree in Cybersecurity or related field",
       "4+ years experience in cybersecurity",
       "Certifications (CISSP, CISM, CEH) preferred",
       "Experience with security tools and frameworks",
@@ -77,7 +77,7 @@ requirements: ["Bachelor's degree in Cybersecurity or related field",ursor/add-n
     type: "Full-time",
     experience: "3+ years",
     description: "Streamline our development and deployment processes with modern DevOps practices.",
-requirements: ["Bachelor's degree in Computer Science or related field",ursor/add-new-services-and-deploy-updates-1b90
+    requirements: ["Bachelor's degree in Computer Science or related field",
       "3+ years experience in DevOps",
       "Proficiency in CI/CD pipelines",
       "Experience with infrastructure as code (Terraform, CloudFormation)",
@@ -93,7 +93,7 @@ requirements: ["Bachelor's degree in Computer Science or related field",ursor/ad
     type: "Full-time",
     experience: "2+ years",
     description: "Create intuitive and beautiful user experiences for our digital products.",
-requirements: ["Bachelor's degree in Design or related field",ursor/add-new-services-and-deploy-updates-1b90
+    requirements: ["Bachelor's degree in Design or related field",
       "2+ years experience in UX/UI design",
       "Proficiency in Figma, Sketch, Adobe Creative Suite",
       "Experience with user research and testing",
@@ -103,7 +103,7 @@ requirements: ["Bachelor's degree in Design or related field",ursor/add-new-serv
   }
 ];
 
-const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
+const benefits = [{
     title: "Competitive Compensation",
     description: "We offer competitive salaries and performance-based bonuses",
     icon: Star
@@ -125,8 +125,7 @@ const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
   }
 ];
 
-const values = [
-  "Innovation and creativity",
+const values = ["Innovation and creativity",
   "Collaboration and teamwork",
   "Continuous learning",
   "Work-life balance",
@@ -136,7 +135,7 @@ const values = [
 
 export default function TalentPage() {
   return (
-<MainLayout 
+    <MainLayout 
       title="Careers - Zion Tech Group"
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect"
@@ -229,13 +228,13 @@ export default function TalentPage() {
               {values.map((value, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-lg"ursor/add-new-services-and-deploy-updates-1b90
+                  className="bg-white p-6 rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-<div className="flex items-center">
+                  <div className="flex items-center">
                   <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" />
                   <span className="text-gray-900 font-medium">{value}</span>
                   </div>
@@ -353,6 +352,6 @@ export default function TalentPage() {
                   </div>
                   </section>
                   </div>
-                  </MainLayout>ursor/add-new-services-and-deploy-updates-1b90
+                  </MainLayout>
   );
 }

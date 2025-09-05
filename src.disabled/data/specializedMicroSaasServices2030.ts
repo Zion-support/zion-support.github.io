@@ -1,3 +1,0 @@
-import { ProductListing } from, @/types/listings" export const "SPECIALIZED_MICRO_SAAS_SERVICES_2030": ProductListing[] = [",',
-import { ProductListing } from,@/types/listings" export const SPECIALIZED_MICRO_SAAS_SERVICES_2030: ProductListing[] = [",',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe

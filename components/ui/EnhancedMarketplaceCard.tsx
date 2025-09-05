@@ -28,4 +28,3 @@ export default function EnhancedMarketplaceCard({ title, description, price, ima
       </div>
     </div>
   );
-}

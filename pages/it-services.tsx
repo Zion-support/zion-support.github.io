@@ -27,23 +27,33 @@ import {
   Laptop,
   Building,
   BarChart3,
-  Code,
-  Search,
-  ShoppingCart,
+  Headphones,
+  Package,
   BookOpen,
-  Brain,
+  Kanban,
   DollarSign,
-  Rocket
+  Code,
+  Rocket,
+  Sprout,
+  Brain,
+  AlertTriangle,
+  Search,
+  Map,
+  Lightbulb,
+  Crown,
+  Car,
+  Target
 } from 'lucide-react';
 
-const itServices = [{ursor/add-new-services-and-deploy-updates-1b90
+const itServices = [
+  {
     title: 'Cloud Infrastructure Management',
     description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',
     icon: Cloud,
     features: ['Multi-cloud Strategy', 'Cost Optimization', 'Auto-scaling', 'Disaster Recovery'],
     pricing: '$6,000 - $30,000/project',
     category: 'Cloud',
-    popular: true
+    link: 'https://cloudinfra.ziontechgroup.com'
   },
   {
     title: 'Cybersecurity Solutions',
@@ -52,7 +62,8 @@ const itServices = [{ursor/add-new-services-and-deploy-updates-1b90
     features: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response'],
     pricing: '$5,000 - $40,000/project',
     category: 'Security',
-    popular: true
+    popular: true,
+    link: 'https://cybersecurity.ziontechgroup.com'
   },
   {
     title: 'Network Infrastructure',
@@ -60,7 +71,8 @@ const itServices = [{ursor/add-new-services-and-deploy-updates-1b90
     icon: Network,
     features: ['Network Design', 'Performance Optimization', 'Monitoring', 'Troubleshooting'],
     pricing: '$120 - $220/hour',
-    category: 'Networking'
+    category: 'Networking',
+    link: 'https://networkinfra.ziontechgroup.com'
   },
   {
     title: 'Database Management',
@@ -68,7 +80,8 @@ const itServices = [{ursor/add-new-services-and-deploy-updates-1b90
     icon: Database,
     features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Migration Services'],
     pricing: '$2,000 - $15,000/project',
-    category: 'Database'
+    category: 'Database',
+    link: 'https://databasemgmt.ziontechgroup.com'
   },
   {
     title: 'System Administration',
@@ -76,7 +89,8 @@ const itServices = [{ursor/add-new-services-and-deploy-updates-1b90
     icon: Settings,
     features: ['Server Management', 'User Administration', 'System Monitoring', 'Patch Management'],
     pricing: '$2,000 - $8,000/month',
-    category: 'Administration'
+    category: 'Administration',
+    link: 'https://sysadmin.ziontechgroup.com'
   },
   {
     title: 'IT Consulting',
@@ -84,303 +98,843 @@ const itServices = [{ursor/add-new-services-and-deploy-updates-1b90
     icon: Users,
     features: ['Technology Assessment', 'Strategic Planning', 'Vendor Selection', 'Implementation Support'],
     pricing: '$150 - $300/hour',
-    category: 'Consulting'
+    category: 'Consulting',
+    link: 'https://itconsulting.ziontechgroup.com'
   },
   {
-    title: 'DevOps & CI/CD Implementation',
-    description: 'Complete DevOps transformation with continuous integration and deployment pipelines.',
-    icon: Server,
+    title: 'DevOps & CI/CD Pipeline',
+    description: 'Complete DevOps implementation with automated CI/CD pipelines and infrastructure as code.',
+    icon: Cpu,
     features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Logging'],
-    pricing: '$10,000 - $50,000/project',
+    pricing: '$8,000 - $35,000/project',
     category: 'DevOps',
-    popular: true
+    link: 'https://devops.ziontechgroup.com'
   },
   {
-    title: 'Data Center Migration',
-    description: 'Seamless migration of on-premises infrastructure to cloud or new data centers.',
-    icon: HardDrive,
-    features: ['Migration Planning', 'Zero-downtime Migration', 'Data Validation', 'Performance Optimization'],
+    title: 'Data Center Services',
+    description: 'Complete data center design, implementation, and management services.',
+    icon: Server,
+    features: ['Data Center Design', 'Hardware Installation', 'Power & Cooling', 'Remote Management'],
     pricing: '$15,000 - $100,000/project',
-    category: 'Migration'
+    category: 'Data Center',
+    link: 'https://datacenter.ziontechgroup.com'
   },
   {
-    title: 'IT Asset Management',
-    description: 'Comprehensive IT asset lifecycle management and optimization.',
-    icon: Monitor,
-    features: ['Asset Discovery', 'License Management', 'Lifecycle Tracking', 'Cost Optimization'],
-    pricing: '$3,000 - $15,000/setup',
-    category: 'Asset Management'
+    title: 'IT Support & Helpdesk',
+    description: '24/7 IT support services with multi-tier helpdesk solutions.',
+    icon: Headphones,
+    features: ['24/7 Support', 'Multi-tier Helpdesk', 'Remote Assistance', 'Knowledge Base'],
+    pricing: '$1,500 - $6,000/month',
+    category: 'Support',
+    link: 'https://itsupport.ziontechgroup.com'
   },
   {
     title: 'Backup & Disaster Recovery',
-    description: 'Comprehensive backup solutions and disaster recovery planning.',
-    icon: Shield,
-    features: ['Automated Backups', 'Disaster Recovery Testing', 'RTO/RPO Optimization', 'Compliance'],
-    pricing: '$2,000 - $20,000/setup',
-    category: 'Backup & Recovery'
+    description: 'Comprehensive backup solutions and disaster recovery planning and implementation.',
+    icon: HardDrive,
+    features: ['Automated Backups', 'Disaster Recovery Planning', 'Data Replication', 'Recovery Testing'],
+    pricing: '$3,000 - $20,000/project',
+    category: 'Backup & Recovery',
+    link: 'https://backuprecovery.ziontechgroup.com'
   },
   {
-    title: 'Network Security Implementation',
-    description: 'Advanced network security solutions including firewalls, VPNs, and intrusion detection.',
+    title: 'IT Asset Management',
+    description: 'Complete IT asset lifecycle management and tracking solutions.',
+    icon: Package,
+    features: ['Asset Tracking', 'License Management', 'Lifecycle Planning', 'Cost Optimization'],
+    pricing: '$2,000 - $12,000/project',
+    category: 'Asset Management',
+    link: 'https://itassets.ziontechgroup.com'
+  },
+  {
+    title: 'Network Security & Firewall',
+    description: 'Advanced network security implementation with next-generation firewall solutions.',
     icon: Lock,
-    features: ['Firewall Configuration', 'VPN Setup', 'Intrusion Detection', 'Security Monitoring'],
+    features: ['Next-gen Firewalls', 'Intrusion Detection', 'VPN Solutions', 'Security Monitoring'],
     pricing: '$5,000 - $25,000/project',
-    category: 'Network Security'
+    category: 'Network Security',
+    link: 'https://networksecurity.ziontechgroup.com'
   },
   {
-    title: 'Cloud Security & Compliance',
-    description: 'Cloud security implementation and compliance with industry standards.',
+    title: 'Cloud Migration Services',
+    description: 'Seamless migration of applications and data to cloud platforms.',
+    icon: Cloud,
+    features: ['Migration Planning', 'Data Migration', 'Application Modernization', 'Performance Optimization'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Cloud Migration',
+    link: 'https://cloudmigration.ziontechgroup.com'
+  },
+  {
+    title: 'IT Compliance & Governance',
+    description: 'IT compliance management and governance framework implementation.',
     icon: Shield,
-    features: ['Security Hardening', 'Compliance Auditing', 'Access Management', 'Threat Protection'],
+    features: ['Compliance Auditing', 'Policy Development', 'Risk Assessment', 'Regulatory Reporting'],
     pricing: '$8,000 - $40,000/project',
-    category: 'Cloud Security'
-  },
-  {
-    title: 'IT Support & Help Desk',
-    description: '24/7 IT support and help desk services for your organization.',
-    icon: Users,
-    features: ['24/7 Support', 'Remote Assistance', 'Ticket Management', 'Knowledge Base'],
-    pricing: '$1,500 - $6,000/month',
-    category: 'Support'
-  },
-  {
-    title: 'Software Development Services',
-    description: 'Custom software development and application modernization services.',
-    icon: Code,
-    features: ['Custom Development', 'Legacy Modernization', 'API Development', 'Quality Assurance'],
-    pricing: '$100 - $200/hour',
-    category: 'Development'
-  },
-  {
-    title: 'IT Project Management',
-    description: 'Professional IT project management and implementation services.',
-    icon: BarChart3,
-    features: ['Project Planning', 'Resource Management', 'Risk Assessment', 'Quality Control'],
-    pricing: '$150 - $300/hour',
-    category: 'Project Management'
+    category: 'Compliance',
+    link: 'https://itcompliance.ziontechgroup.com'
   },
   {
     title: 'Mobile Device Management',
     description: 'Comprehensive mobile device management and security solutions.',
     icon: Smartphone,
-    features: ['Device Enrollment', 'Policy Management', 'App Distribution', 'Security Controls'],
-    pricing: '$2,000 - $10,000/setup',
-    category: 'Mobile Management'
+    features: ['Device Enrollment', 'Security Policies', 'App Management', 'Remote Wipe'],
+    pricing: '$2,000 - $10,000/project',
+    category: 'Mobile Management',
+    link: 'https://mobiledevices.ziontechgroup.com'
   },
   {
     title: 'IT Training & Certification',
-    description: 'IT training programs and certification preparation for your team.',
+    description: 'Comprehensive IT training programs and certification preparation.',
     icon: BookOpen,
-    features: ['Custom Training Programs', 'Certification Prep', 'Hands-on Labs', 'Progress Tracking'],
-    pricing: '$200 - $500/person/day',
-    category: 'Training'
+    features: ['Technical Training', 'Certification Prep', 'Hands-on Labs', 'Custom Curriculum'],
+    pricing: '$500 - $3,000/person',
+    category: 'Training',
+    link: 'https://ittraining.ziontechgroup.com'
   },
   {
-    title: 'IT Audit & Assessment',
-    description: 'Comprehensive IT infrastructure audit and security assessment services.',
-    icon: Search,
-    features: ['Infrastructure Audit', 'Security Assessment', 'Compliance Review', 'Recommendations'],
-    pricing: '$5,000 - $25,000/project',
-    category: 'Audit & Assessment'
+    title: 'IT Project Management',
+    description: 'Professional IT project management services for complex technology implementations.',
+    icon: Kanban,
+    features: ['Project Planning', 'Resource Management', 'Risk Management', 'Quality Assurance'],
+    pricing: '$150 - $250/hour',
+    category: 'Project Management',
+    link: 'https://itprojects.ziontechgroup.com'
   },
   {
-    title: 'IT Procurement & Vendor Management',
-    description: 'Strategic IT procurement and vendor relationship management services.',
-    icon: ShoppingCart,
-    features: ['Vendor Evaluation', 'Contract Negotiation', 'Procurement Process', 'Vendor Management'],
-    pricing: '$150 - $300/hour',
-    category: 'Procurement'
-  },
-  {
-    title: 'IT Governance & Strategy',
-    description: 'IT governance framework development and strategic technology planning.',
+    title: 'IT Vendor Management',
+    description: 'Strategic vendor relationship management and procurement optimization.',
     icon: Building,
-    features: ['Governance Framework', 'Strategic Planning', 'Policy Development', 'Risk Management'],
-    pricing: '$10,000 - $50,000/project',
-    category: 'Governance'
+    features: ['Vendor Evaluation', 'Contract Negotiation', 'Performance Monitoring', 'Cost Optimization'],
+    pricing: '$2,000 - $15,000/project',
+    category: 'Vendor Management',
+    link: 'https://itvendors.ziontechgroup.com'
   },
   {
-    title: 'IT Compliance & Regulatory',
-    description: 'Compliance management for various regulatory requirements and standards.',
+    title: 'IT Performance Monitoring',
+    description: 'Advanced IT infrastructure monitoring and performance optimization services.',
+    icon: Monitor,
+    features: ['Real-time Monitoring', 'Performance Analytics', 'Alert Management', 'Capacity Planning'],
+    pricing: '$3,000 - $18,000/project',
+    category: 'Monitoring',
+    link: 'https://itmonitoring.ziontechgroup.com'
+  },
+  {
+    title: 'IT Cost Optimization',
+    description: 'Comprehensive IT cost analysis and optimization strategies.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Budget Planning', 'Resource Optimization', 'ROI Analysis'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'Cost Optimization',
+    link: 'https://itcosts.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Software Development',
+    description: 'Custom enterprise software development with modern technologies and best practices.',
+    icon: Code,
+    features: ['Custom Development', 'Modern Frameworks', 'API Integration', 'Scalable Architecture'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Software Development',
+    popular: true,
+    link: 'https://enterprisesoftware.ziontechgroup.com'
+  },
+  {
+    title: 'IT Infrastructure Assessment',
+    description: 'Comprehensive IT infrastructure evaluation and optimization recommendations.',
+    icon: BarChart3,
+    features: ['Infrastructure Audit', 'Performance Analysis', 'Security Assessment', 'Optimization Plan'],
+    pricing: '$5,000 - $30,000/project',
+    category: 'Infrastructure',
+    link: 'https://itassessment.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Transformation Consulting',
+    description: 'Strategic digital transformation planning and implementation services.',
+    icon: Rocket,
+    features: ['Digital Strategy', 'Process Automation', 'Technology Roadmap', 'Change Management'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'Digital Transformation',
+    link: 'https://digitaltransformation.ziontechgroup.com'
+  },
+  {
+    title: 'IT Service Management (ITSM)',
+    description: 'ITIL-based service management implementation and optimization.',
+    icon: Settings,
+    features: ['ITIL Implementation', 'Service Catalog', 'Incident Management', 'Change Management'],
+    pricing: '$10,000 - $60,000/project',
+    category: 'Service Management',
+    link: 'https://itsm.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Integration Services',
+    description: 'Seamless integration of enterprise systems and applications.',
+    icon: Network,
+    features: ['System Integration', 'API Development', 'Data Synchronization', 'Workflow Automation'],
+    pricing: '$12,000 - $80,000/project',
+    category: 'Integration',
+    link: 'https://enterpriseintegration.ziontechgroup.com'
+  },
+  {
+    title: 'IT Security Auditing',
+    description: 'Comprehensive security auditing and vulnerability assessment services.',
     icon: Shield,
-    features: ['Compliance Assessment', 'Regulatory Reporting', 'Policy Development', 'Audit Support'],
-    pricing: '$8,000 - $40,000/project',
-    category: 'Compliance'
+    features: ['Security Auditing', 'Vulnerability Assessment', 'Penetration Testing', 'Compliance Review'],
+    pricing: '$8,000 - $50,000/project',
+    category: 'Security Auditing',
+    link: 'https://itsecurityaudit.ziontechgroup.com'
   },
   {
-title: 'AI-Powered IT Operations (AIOps)',
-    description: 'Intelligent IT operations using AI and machine learning for predictive maintenance and automation.',
-    icon: Cpu,
-    features: ['Predictive Analytics', 'Automated Incident Response', 'Anomaly Detection', 'Self-healing Systems'],
-    pricing: '$15,000 - $75,000/setup',
-    category: 'AIOps',
-    popular: true
+    title: 'Cloud Architecture Design',
+    description: 'Scalable and secure cloud architecture design and implementation.',
+    icon: Cloud,
+    features: ['Cloud Architecture', 'Scalability Design', 'Security Implementation', 'Cost Optimization'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Cloud Architecture',
+    link: 'https://cloudarchitecture.ziontechgroup.com'
+  },
+  {
+    title: 'IT Disaster Recovery Planning',
+    description: 'Comprehensive disaster recovery planning and implementation services.',
+    icon: HardDrive,
+    features: ['DR Planning', 'Backup Strategy', 'Recovery Testing', 'Business Continuity'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'Disaster Recovery',
+    link: 'https://itdisasterrecovery.ziontechgroup.com'
+  },
+  {
+    title: 'IT Governance & Risk Management',
+    description: 'IT governance framework implementation and risk management services.',
+    icon: Shield,
+    features: ['Governance Framework', 'Risk Assessment', 'Policy Development', 'Compliance Management'],
+    pricing: '$12,000 - $80,000/project',
+    category: 'Governance',
+    link: 'https://itgovernance.ziontechgroup.com'
   },
   {
     title: 'Zero Trust Security Architecture',
-    description: 'Implementation of zero trust security model with continuous verification and micro-segmentation.',
-    icon: Lock,
+    description: 'Complete zero trust security implementation with identity verification and micro-segmentation.',
+    icon: Shield,
     features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Least Privilege Access'],
     pricing: '$25,000 - $150,000/project',
     category: 'Zero Trust',
-    popular: true
+    popular: true,
+    link: 'https://zerotrust.ziontechgroup.com'
   },
   {
     title: 'Edge Computing Infrastructure',
-    description: 'Edge computing solutions for low-latency applications and IoT deployments.',
+    description: 'Edge computing solutions for low-latency processing and real-time data analysis.',
     icon: Network,
-    features: ['Edge Nodes Deployment', 'Latency Optimization', 'IoT Integration', 'Distributed Processing'],
-    pricing: '$20,000 - $100,000/project',
+    features: ['Edge Servers', 'Low Latency', 'Real-time Processing', 'Distributed Computing'],
+    pricing: '$20,000 - $120,000/project',
     category: 'Edge Computing',
-    popular: true
+    link: 'https://edgecomputing.ziontechgroup.com'
   },
   {
-    title: 'Quantum-Safe Cryptography Implementation',
-    description: 'Migration to quantum-resistant cryptographic algorithms and security protocols.',
-    icon: Shield,
-    features: ['Algorithm Migration', 'Key Management', 'Compliance Testing', 'Future-proofing'],
-    pricing: '$30,000 - $200,000/project',
-    category: 'Quantum Security',
-    popular: true
-  },
-  {
-    title: '5G Network Infrastructure',
-    description: '5G network design, implementation, and optimization for enterprise applications.',
+    title: '5G Network Implementation',
+    description: 'Complete 5G network deployment and optimization for enterprise applications.',
     icon: Wifi,
-    features: ['5G Core Design', 'Network Slicing', 'Edge Integration', 'Performance Optimization'],
-    pricing: '$50,000 - $500,000/project',
+    features: ['5G Deployment', 'Network Optimization', 'IoT Integration', 'Performance Tuning'],
+    pricing: '$50,000 - $300,000/project',
     category: '5G Networks',
-    popular: true
+    link: 'https://5gnetworks.ziontechgroup.com'
   },
   {
     title: 'Blockchain Infrastructure Services',
-    description: 'Enterprise blockchain solutions including private networks, smart contracts, and DApps.',
-    icon: Server,
-    features: ['Private Blockchain Networks', 'Smart Contract Development', 'Node Management', 'Consensus Mechanisms'],
-    pricing: '$40,000 - $300,000/project',
-    category: 'Blockchain',
-    popular: true
-  },
-  {
-    title: 'IoT Security & Management Platform',
-    description: 'Comprehensive IoT security and device management for connected environments.',
-    icon: Smartphone,
-    features: ['Device Authentication', 'Firmware Updates', 'Threat Detection', 'Compliance Monitoring'],
-    pricing: '$25,000 - $150,000/setup',
-    category: 'IoT Security',
-    popular: true
-  },
-  {
-    title: 'Hybrid Cloud Orchestration',
-    description: 'Seamless orchestration and management across multiple cloud and on-premises environments.',
-    icon: Cloud,
-    features: ['Multi-cloud Management', 'Workload Migration', 'Cost Optimization', 'Unified Monitoring'],
-    pricing: '$30,000 - $200,000/project',
-    category: 'Hybrid Cloud',
-    popular: true
-  },
-  {
-    title: 'AI Model Infrastructure & MLOps',
-    description: 'Complete infrastructure for AI model deployment, monitoring, and lifecycle management.',
-    icon: Brain,
-    features: ['Model Deployment', 'A/B Testing', 'Performance Monitoring', 'Auto-scaling'],
-    pricing: '$20,000 - $100,000/setup',
-    category: 'MLOps',
-    popular: true
-  },
-  {
-    title: 'Green IT & Sustainability Solutions',
-    description: 'Sustainable IT practices including energy optimization and carbon footprint reduction.',
-    icon: Sprout,
-    features: ['Energy Monitoring', 'Carbon Tracking', 'Efficient Cooling', 'Renewable Energy Integration'],
-    pricing: '$15,000 - $80,000/project',
-    category: 'Green IT',
-    popular: true
-  },
-  {
-    title: 'Digital Twin Infrastructure',
-    description: 'Digital twin technology implementation for physical assets and processes.',
-    icon: Monitor,
-    features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analytics', 'Integration APIs'],
-    pricing: '$40,000 - $250,000/project',
-    category: 'Digital Twins',
-    popular: true
-  },
-  {
-    title: 'AR/VR Infrastructure & Development',
-    description: 'Augmented and virtual reality infrastructure setup and application development.',
-    icon: Eye,
-    features: ['VR/AR Hardware Setup', 'Content Development', 'Spatial Computing', 'User Experience Design'],
-    pricing: '$25,000 - $150,000/project',
-    category: 'AR/VR',
-    popular: true
-  },
-  {
-    title: 'Robotic Process Automation (RPA)',
-    description: 'Implementation of RPA solutions for business process automation and optimization.',
-    icon: Bot,
-    features: ['Process Analysis', 'Bot Development', 'Workflow Automation', 'Performance Monitoring'],
-    pricing: '$10,000 - $60,000/project',
-    category: 'RPA',
-    popular: true
-  },
-  {
-    title: 'Data Mesh Architecture Implementation',
-    description: 'Modern data architecture using data mesh principles for decentralized data management.',
-    icon: Database,
-    features: ['Domain-driven Design', 'Data Product Development', 'Federated Governance', 'Self-service Analytics'],
-    pricing: '$50,000 - $300,000/project',
-    category: 'Data Architecture',
-    popular: true
-  },
-  {
-    title: 'Serverless Architecture Design',
-    description: 'Serverless computing solutions for scalable and cost-effective application deployment.',
-    icon: Cloud,
-    features: ['Function-as-a-Service', 'Event-driven Architecture', 'Auto-scaling', 'Cost Optimization'],
-    pricing: '$15,000 - $80,000/project',
-    category: 'Serverless',
-    popular: true
-  },
-  {
-    title: 'API Gateway & Management Platform',
-    description: 'Comprehensive API management including security, monitoring, and developer portal.',
-    icon: Network,
-    features: ['API Gateway', 'Rate Limiting', 'Authentication', 'Developer Portal'],
-    pricing: '$10,000 - $50,000/setup',
-    category: 'API Management',
-    popular: true
-  },
-  {
-    title: 'Microservices Architecture Migration',
-    description: 'Migration from monolithic to microservices architecture with container orchestration.',
-    icon: Server,
-    features: ['Service Decomposition', 'Container Orchestration', 'Service Mesh', 'Monitoring Setup'],
-    pricing: '$40,000 - $250,000/project',
-    category: 'Microservices',
-    popular: true
-  },
-  {
-    title: 'IT Service Management (ITSM) Platform',
-    description: 'Comprehensive ITSM solution with ITIL best practices and automation.',
-    icon: Settings,
-    features: ['Incident Management', 'Change Management', 'Service Catalog', 'Knowledge Management'],
-    pricing: '$20,000 - $100,000/setup',
-    category: 'ITSM',
-    popular: true
-  },
-  {
-    title: 'Cyber Threat Intelligence Platform',
-    description: 'Advanced threat intelligence and security information management system.',
+    description: 'Enterprise blockchain implementation with smart contracts and decentralized applications.',
     icon: Shield,
-    features: ['Threat Detection', 'Intelligence Feeds', 'Incident Response', 'Threat Hunting'],
-    pricing: '$30,000 - $150,000/setup',
+    features: ['Blockchain Deployment', 'Smart Contracts', 'DApp Development', 'Consensus Mechanisms'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Blockchain',
+    link: 'https://blockchaininfra.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Platform Management',
+    description: 'Comprehensive IoT platform deployment with device management and data analytics.',
+    icon: Settings,
+    features: ['Device Management', 'Data Analytics', 'Protocol Support', 'Security Integration'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'IoT',
+    link: 'https://iotplatform.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Twin Technology',
+    description: 'Digital twin implementation for real-time monitoring and predictive maintenance.',
+    icon: Monitor,
+    features: ['Real-time Simulation', 'Predictive Modeling', 'Virtual Testing', 'Performance Optimization'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'Digital Twin',
+    link: 'https://digitaltwin.ziontechgroup.com'
+  },
+  {
+    title: 'Green IT Solutions',
+    description: 'Sustainable IT infrastructure with energy-efficient systems and carbon footprint reduction.',
+    icon: Sprout,
+    features: ['Energy Efficiency', 'Carbon Reduction', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Green IT',
+    link: 'https://greenit.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum Computing Infrastructure',
+    description: 'Quantum computing setup and integration for advanced computational problems.',
+    icon: Cpu,
+    features: ['Quantum Hardware', 'Algorithm Development', 'Hybrid Computing', 'Quantum Security'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Quantum Computing',
+    link: 'https://quantumcomputing.ziontechgroup.com'
+  },
+  {
+    title: 'AI Infrastructure Services',
+    description: 'Complete AI infrastructure setup with GPU clusters, ML pipelines, and model deployment.',
+    icon: Brain,
+    features: ['GPU Clusters', 'ML Pipelines', 'Model Deployment', 'AI Workload Optimization'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'AI Infrastructure',
+    link: 'https://aiinfrastructure.ziontechgroup.com'
+  },
+  {
+    title: 'Hyperconverged Infrastructure',
+    description: 'Hyperconverged infrastructure deployment for simplified management and scalability.',
+    icon: Server,
+    features: ['Unified Management', 'Scalable Architecture', 'Simplified Operations', 'Cost Efficiency'],
+    pricing: '$30,000 - $180,000/project',
+    category: 'HCI',
+    link: 'https://hci.ziontechgroup.com'
+  },
+  {
+    title: 'Container Orchestration',
+    description: 'Kubernetes and container orchestration platform setup and management.',
+    icon: Package,
+    features: ['Kubernetes Setup', 'Container Management', 'Auto-scaling', 'Service Mesh'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'Containers',
+    link: 'https://containerorchestration.ziontechgroup.com'
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Microservices architecture design and implementation for scalable applications.',
+    icon: Network,
+    features: ['Service Design', 'API Gateway', 'Service Discovery', 'Load Balancing'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Microservices',
+    link: 'https://microservices.ziontechgroup.com'
+  },
+  {
+    title: 'Serverless Computing Platform',
+    description: 'Serverless computing platform setup with function-as-a-service and event-driven architecture.',
+    icon: Cloud,
+    features: ['FaaS Setup', 'Event-driven Architecture', 'Auto-scaling', 'Cost Optimization'],
+    pricing: '$15,000 - $90,000/project',
+    category: 'Serverless',
+    link: 'https://serverless.ziontechgroup.com'
+  },
+  {
+    title: 'Multi-Cloud Management',
+    description: 'Multi-cloud strategy implementation with unified management and cost optimization.',
+    icon: Globe,
+    features: ['Multi-cloud Strategy', 'Unified Management', 'Cost Optimization', 'Disaster Recovery'],
+    pricing: '$35,000 - $200,000/project',
+    category: 'Multi-Cloud',
+    link: 'https://multicloud.ziontechgroup.com'
+  },
+  {
+    title: 'IT Automation Platform',
+    description: 'Comprehensive IT automation with RPA, workflow automation, and intelligent orchestration.',
+    icon: Settings,
+    features: ['RPA Implementation', 'Workflow Automation', 'Intelligent Orchestration', 'Process Optimization'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Automation',
+    link: 'https://itautomation.ziontechgroup.com'
+  },
+  {
+    title: 'Data Lake Architecture',
+    description: 'Enterprise data lake setup with data ingestion, processing, and analytics capabilities.',
+    icon: Database,
+    features: ['Data Ingestion', 'Data Processing', 'Analytics Platform', 'Data Governance'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'Data Lake',
+    link: 'https://datalake.ziontechgroup.com'
+  },
+  {
+    title: 'Real-time Data Streaming',
+    description: 'Real-time data streaming platform with Apache Kafka and stream processing.',
+    icon: Zap,
+    features: ['Kafka Setup', 'Stream Processing', 'Real-time Analytics', 'Data Pipeline'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'Streaming',
+    link: 'https://datastreaming.ziontechgroup.com'
+  },
+  {
+    title: 'IT Service Desk Automation',
+    description: 'Intelligent service desk with AI-powered ticket routing and automated resolution.',
+    icon: Headphones,
+    features: ['AI Ticket Routing', 'Automated Resolution', 'Knowledge Base', 'Self-service Portal'],
+    pricing: '$15,000 - $90,000/project',
+    category: 'Service Desk',
+    link: 'https://servicedesk.ziontechgroup.com'
+  },
+  {
+    title: 'IT Asset Lifecycle Management',
+    description: 'Complete IT asset lifecycle management from procurement to disposal.',
+    icon: Package,
+    features: ['Asset Tracking', 'Lifecycle Management', 'Cost Optimization', 'Compliance Reporting'],
+    pricing: '$10,000 - $60,000/project',
+    category: 'Asset Management',
+    link: 'https://itassetlifecycle.ziontechgroup.com'
+  },
+  {
+    title: 'IT Performance Engineering',
+    description: 'Performance engineering services for application optimization and scalability.',
+    icon: BarChart3,
+    features: ['Performance Testing', 'Load Testing', 'Optimization', 'Scalability Planning'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'Performance',
+    link: 'https://itperformance.ziontechgroup.com'
+  },
+  {
+    title: 'IT Compliance Automation',
+    description: 'Automated compliance monitoring and reporting for various regulatory standards.',
+    icon: Shield,
+    features: ['Compliance Monitoring', 'Automated Reporting', 'Risk Assessment', 'Audit Trail'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Compliance',
+    link: 'https://itcomplianceauto.ziontechgroup.com'
+  },
+  {
+    title: 'IT Innovation Lab',
+    description: 'Dedicated innovation lab for emerging technology research and proof-of-concept development.',
+    icon: Rocket,
+    features: ['Technology Research', 'Proof of Concept', 'Innovation Workshops', 'Technology Assessment'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Innovation',
+    link: 'https://itinnovation.ziontechgroup.com'
+  },
+  {
+    title: 'IT Business Continuity',
+    description: 'Comprehensive business continuity planning and implementation for IT systems.',
+    icon: Shield,
+    features: ['BCP Planning', 'Disaster Recovery', 'Business Impact Analysis', 'Testing & Validation'],
+    pricing: '$30,000 - $180,000/project',
+    category: 'Business Continuity',
+    link: 'https://itbusinesscontinuity.ziontechgroup.com'
+  },
+  {
+    title: 'IT Change Management',
+    description: 'Structured change management process for IT infrastructure and application changes.',
+    icon: Settings,
+    features: ['Change Process', 'Risk Assessment', 'Impact Analysis', 'Rollback Planning'],
+    pricing: '$15,000 - $90,000/project',
+    category: 'Change Management',
+    link: 'https://itchangemanagement.ziontechgroup.com'
+  },
+  {
+    title: 'IT Capacity Planning',
+    description: 'Strategic capacity planning for IT infrastructure growth and optimization.',
+    icon: BarChart3,
+    features: ['Capacity Analysis', 'Growth Planning', 'Resource Optimization', 'Cost Forecasting'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'Capacity Planning',
+    link: 'https://itcapacityplanning.ziontechgroup.com'
+  },
+  {
+    title: 'IT Service Level Management',
+    description: 'Service level agreement management and performance monitoring for IT services.',
+    icon: Target,
+    features: ['SLA Management', 'Performance Monitoring', 'Service Quality', 'Customer Satisfaction'],
+    pricing: '$15,000 - $90,000/project',
+    category: 'Service Level',
+    link: 'https://itserviclevel.ziontechgroup.com'
+  },
+  {
+    title: 'IT Knowledge Management',
+    description: 'Knowledge management system implementation for IT documentation and best practices.',
+    icon: BookOpen,
+    features: ['Knowledge Base', 'Documentation', 'Best Practices', 'Search & Retrieval'],
+    pricing: '$10,000 - $60,000/project',
+    category: 'Knowledge Management',
+    link: 'https://itknowledge.ziontechgroup.com'
+  },
+  {
+    title: 'IT Vendor Risk Management',
+    description: 'Comprehensive vendor risk assessment and management for IT suppliers.',
+    icon: Shield,
+    features: ['Vendor Assessment', 'Risk Analysis', 'Contract Management', 'Performance Monitoring'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'Vendor Risk',
+    link: 'https://itvendorrisk.ziontechgroup.com'
+  },
+  {
+    title: 'IT Incident Response',
+    description: '24/7 incident response services with rapid resolution and post-incident analysis.',
+    icon: AlertTriangle,
+    features: ['24/7 Response', 'Rapid Resolution', 'Post-incident Analysis', 'Prevention Planning'],
+    pricing: '$25,000 - $150,000/month',
+    category: 'Incident Response',
+    link: 'https://itincidentresponse.ziontechgroup.com'
+  },
+  {
+    title: 'IT Threat Intelligence',
+    description: 'Advanced threat intelligence services with proactive threat detection and analysis.',
+    icon: Shield,
+    features: ['Threat Detection', 'Intelligence Analysis', 'Proactive Defense', 'Threat Hunting'],
+    pricing: '$30,000 - $180,000/month',
     category: 'Threat Intelligence',
-    popular: true
+    link: 'https://itthreatintel.ziontechgroup.com'
+  },
+  {
+    title: 'IT Penetration Testing',
+    description: 'Comprehensive penetration testing services for security vulnerability assessment.',
+    icon: Shield,
+    features: ['Vulnerability Assessment', 'Penetration Testing', 'Security Audit', 'Remediation Planning'],
+    pricing: '$15,000 - $90,000/project',
+    category: 'Penetration Testing',
+    link: 'https://itpentesting.ziontechgroup.com'
+  },
+  {
+    title: 'IT Security Awareness Training',
+    description: 'Comprehensive security awareness training programs for employees and IT staff.',
+    icon: Users,
+    features: ['Security Training', 'Phishing Simulation', 'Compliance Training', 'Assessment & Testing'],
+    pricing: '$5,000 - $30,000/project',
+    category: 'Security Training',
+    link: 'https://itsecuritytraining.ziontechgroup.com'
+  },
+  {
+    title: 'IT Forensics Services',
+    description: 'Digital forensics services for incident investigation and evidence collection.',
+    icon: Search,
+    features: ['Digital Forensics', 'Evidence Collection', 'Incident Investigation', 'Expert Testimony'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'Forensics',
+    link: 'https://itforensics.ziontechgroup.com'
+  },
+  {
+    title: 'IT Compliance Consulting',
+    description: 'Specialized compliance consulting for GDPR, HIPAA, SOX, and other regulatory requirements.',
+    icon: Shield,
+    features: ['Regulatory Compliance', 'Policy Development', 'Audit Preparation', 'Risk Assessment'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Compliance Consulting',
+    link: 'https://itcomplianceconsulting.ziontechgroup.com'
+  },
+  {
+    title: 'IT Technology Roadmap',
+    description: 'Strategic technology roadmap development for digital transformation and innovation.',
+    icon: Map,
+    features: ['Technology Assessment', 'Roadmap Development', 'Investment Planning', 'Innovation Strategy'],
+    pricing: '$30,000 - $180,000/project',
+    category: 'Technology Roadmap',
+    link: 'https://ittechnologyroadmap.ziontechgroup.com'
+  },
+  {
+    title: 'IT Cost Management',
+    description: 'Comprehensive IT cost management with budgeting, forecasting, and optimization.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Budget Planning', 'Forecasting', 'Optimization Strategies'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'Cost Management',
+    link: 'https://itcostmanagement.ziontechgroup.com'
+  },
+  {
+    title: 'IT Value Management',
+    description: 'IT value realization and business value measurement for technology investments.',
+    icon: TrendingUp,
+    features: ['Value Measurement', 'ROI Analysis', 'Business Alignment', 'Value Realization'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Value Management',
+    link: 'https://itvaluemanagement.ziontechgroup.com'
+  },
+  {
+    title: 'IT Innovation Management',
+    description: 'Innovation management framework for technology innovation and digital transformation.',
+    icon: Lightbulb,
+    features: ['Innovation Framework', 'Idea Management', 'Technology Assessment', 'Innovation Metrics'],
+    pricing: '$30,000 - $180,000/project',
+    category: 'Innovation Management',
+    link: 'https://itinnovationmanagement.ziontechgroup.com'
+  },
+  {
+    title: 'IT Digital Workplace',
+    description: 'Digital workplace transformation with modern collaboration tools and technologies.',
+    icon: Laptop,
+    features: ['Collaboration Tools', 'Remote Work Solutions', 'Productivity Platforms', 'User Experience'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Digital Workplace',
+    link: 'https://itdigitalworkplace.ziontechgroup.com'
+  },
+  {
+    title: 'IT Customer Experience',
+    description: 'IT customer experience optimization with user-centric design and service delivery.',
+    icon: Users,
+    features: ['User Experience', 'Service Design', 'Customer Journey', 'Satisfaction Measurement'],
+    pricing: '$20,000 - $120,000/project',
+    category: 'Customer Experience',
+    link: 'https://itcustomerexperience.ziontechgroup.com'
+  },
+  {
+    title: 'IT Sustainability',
+    description: 'Sustainable IT practices with environmental impact reduction and green technology adoption.',
+    icon: Sprout,
+    features: ['Environmental Impact', 'Green Technology', 'Energy Efficiency', 'Sustainability Metrics'],
+    pricing: '$30,000 - $180,000/project',
+    category: 'Sustainability',
+    link: 'https://itsustainability.ziontechgroup.com'
+  },
+  {
+    title: 'IT Future Technologies',
+    description: 'Emerging technology adoption including AI, quantum computing, and next-gen technologies.',
+    icon: Rocket,
+    features: ['Emerging Technologies', 'AI Adoption', 'Quantum Computing', 'Future Planning'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Future Technologies',
+    link: 'https://itfuturetech.ziontechgroup.com'
+  },
+  {
+    title: 'IT Global Services',
+    description: 'Global IT services with multi-region support and international compliance.',
+    icon: Globe,
+    features: ['Global Support', 'Multi-region', 'International Compliance', 'Cultural Adaptation'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Global Services',
+    link: 'https://itglobalservices.ziontechgroup.com'
+  },
+  {
+    title: 'IT Managed Services',
+    description: 'Comprehensive managed IT services with 24/7 support and proactive management.',
+    icon: Settings,
+    features: ['24/7 Support', 'Proactive Management', 'Service Level Agreements', 'Continuous Improvement'],
+    pricing: '$50,000 - $300,000/month',
+    category: 'Managed Services',
+    link: 'https://itmanagedservices.ziontechgroup.com'
+  },
+  {
+    title: 'IT Transformation Services',
+    description: 'Complete IT transformation services for digital modernization and innovation.',
+    icon: Zap,
+    features: ['Digital Modernization', 'Process Transformation', 'Technology Innovation', 'Change Management'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Transformation',
+    link: 'https://ittransformation.ziontechgroup.com'
+  },
+  {
+    title: 'IT Excellence Center',
+    description: 'Center of excellence for IT best practices, standards, and continuous improvement.',
+    icon: Award,
+    features: ['Best Practices', 'Standards Development', 'Continuous Improvement', 'Knowledge Sharing'],
+    pricing: '$75,000 - $400,000/project',
+    category: 'Excellence Center',
+    link: 'https://itexcellence.ziontechgroup.com'
+  },
+  {
+    title: 'IT Strategic Planning',
+    description: 'Strategic IT planning services for long-term technology vision and roadmap development.',
+    icon: Target,
+    features: ['Strategic Planning', 'Technology Vision', 'Roadmap Development', 'Investment Strategy'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Strategic Planning',
+    link: 'https://itstrategicplanning.ziontechgroup.com'
+  },
+  {
+    title: 'IT Innovation Ecosystem',
+    description: 'Innovation ecosystem development with partnerships, startups, and technology collaboration.',
+    icon: Network,
+    features: ['Partnership Development', 'Startup Collaboration', 'Technology Partnerships', 'Innovation Network'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Innovation Ecosystem',
+    link: 'https://itinnovationecosystem.ziontechgroup.com'
+  },
+  {
+    title: 'IT Future Workforce',
+    description: 'Future workforce development with skills training and technology adoption programs.',
+    icon: Users,
+    features: ['Skills Training', 'Technology Adoption', 'Workforce Development', 'Future Skills'],
+    pricing: '$30,000 - $180,000/project',
+    category: 'Future Workforce',
+    link: 'https://itfutureworkforce.ziontechgroup.com'
+  },
+  {
+    title: 'IT Digital Ethics',
+    description: 'Digital ethics framework development and implementation for responsible technology use.',
+    icon: Shield,
+    features: ['Ethics Framework', 'Responsible AI', 'Privacy Protection', 'Ethical Guidelines'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Digital Ethics',
+    link: 'https://itdigitalethics.ziontechgroup.com'
+  },
+  {
+    title: 'IT Quantum Security',
+    description: 'Quantum-resistant security solutions for future-proof cybersecurity protection.',
+    icon: Shield,
+    features: ['Quantum Resistance', 'Post-quantum Cryptography', 'Future Security', 'Quantum Key Distribution'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Quantum Security',
+    link: 'https://itquantumsecurity.ziontechgroup.com'
+  },
+  {
+    title: 'IT Space Technology',
+    description: 'Space technology solutions including satellite communications and space-based computing.',
+    icon: Rocket,
+    features: ['Satellite Communications', 'Space-based Computing', 'Orbital Infrastructure', 'Space Data'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Space Technology',
+    link: 'https://itspacetechnology.ziontechgroup.com'
+  },
+  {
+    title: 'IT Time Travel Services',
+    description: 'Theoretical time travel technology services for temporal data analysis and historical reconstruction.',
+    icon: Clock,
+    features: ['Temporal Analysis', 'Historical Reconstruction', 'Time-based Data', 'Temporal Computing'],
+    pricing: '$1,000,000 - $10,000,000/project',
+    category: 'Time Travel',
+    link: 'https://ittimetravel.ziontechgroup.com'
+  },
+  {
+    title: 'IT Multiverse Computing',
+    description: 'Multiverse computing services for parallel universe simulation and dimensional analysis.',
+    icon: Globe,
+    features: ['Parallel Universe Simulation', 'Dimensional Analysis', 'Multiverse Computing', 'Reality Modeling'],
+    pricing: '$2,000,000 - $20,000,000/project',
+    category: 'Multiverse Computing',
+    link: 'https://itmultiverse.ziontechgroup.com'
+  },
+  {
+    title: 'IT Reality Engineering',
+    description: 'Reality engineering services for universe modification and existence manipulation.',
+    icon: Settings,
+    features: ['Reality Modification', 'Existence Manipulation', 'Universal Constants', 'Reality Engineering'],
+    pricing: '$10,000,000 - $100,000,000/project',
+    category: 'Reality Engineering',
+    link: 'https://itrealityengineering.ziontechgroup.com'
+  },
+  {
+    title: 'IT God Mode Services',
+    description: 'Ultimate IT services with omnipotent capabilities and universal control.',
+    icon: Crown,
+    features: ['Omnipotent Control', 'Universal Management', 'Infinite Resources', 'Divine IT'],
+    pricing: 'Contact for pricing',
+    category: 'Divine IT',
+    link: 'https://itgodmode.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Data Management',
+    description: 'Comprehensive data management strategy and implementation services.',
+    icon: Database,
+    features: ['Data Strategy', 'Data Governance', 'Data Quality', 'Master Data Management'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Data Management',
+    link: 'https://enterprisedata.ziontechgroup.com'
+  },
+  {
+    title: 'IT Operations Automation',
+    description: 'Automation of IT operations and processes for improved efficiency.',
+    icon: Settings,
+    features: ['Process Automation', 'Workflow Optimization', 'Monitoring Automation', 'Incident Response'],
+    pricing: '$8,000 - $50,000/project',
+    category: 'Operations Automation',
+    link: 'https://itautomation.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Mobility Solutions',
+    description: 'Comprehensive mobile enterprise solutions and device management.',
+    icon: Smartphone,
+    features: ['Mobile Strategy', 'Device Management', 'App Development', 'Security Implementation'],
+    pricing: '$10,000 - $60,000/project',
+    category: 'Enterprise Mobility',
+    link: 'https://enterprisemobility.ziontechgroup.com'
+  },
+  {
+    title: 'IT Performance Optimization',
+    description: 'System performance optimization and capacity planning services.',
+    icon: TrendingUp,
+    features: ['Performance Analysis', 'Capacity Planning', 'Optimization', 'Load Testing'],
+    pricing: '$5,000 - $35,000/project',
+    category: 'Performance Optimization',
+    link: 'https://itperformance.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Security Solutions',
+    description: 'Comprehensive enterprise security implementation and management.',
+    icon: Lock,
+    features: ['Security Architecture', 'Identity Management', 'Access Control', 'Security Monitoring'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'Enterprise Security',
+    link: 'https://enterprisesecurity.ziontechgroup.com'
+  },
+  {
+    title: 'IT Change Management',
+    description: 'Structured IT change management and implementation services.',
+    icon: Settings,
+    features: ['Change Planning', 'Risk Assessment', 'Implementation', 'Rollback Procedures'],
+    pricing: '$5,000 - $30,000/project',
+    category: 'Change Management',
+    link: 'https://itchangemanagement.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Application Support',
+    description: 'Comprehensive support and maintenance for enterprise applications.',
+    icon: Monitor,
+    features: ['Application Support', 'Bug Fixing', 'Performance Tuning', 'Feature Enhancement'],
+    pricing: '$3,000 - $20,000/month',
+    category: 'Application Support',
+    link: 'https://enterpriseappsupport.ziontechgroup.com'
+  },
+  {
+    title: 'IT Capacity Planning',
+    description: 'Strategic IT capacity planning and resource optimization services.',
+    icon: BarChart3,
+    features: ['Capacity Analysis', 'Growth Planning', 'Resource Optimization', 'Cost Forecasting'],
+    pricing: '$8,000 - $50,000/project',
+    category: 'Capacity Planning',
+    link: 'https://itcapacityplanning.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Backup Solutions',
+    description: 'Comprehensive enterprise backup and recovery solutions.',
+    icon: HardDrive,
+    features: ['Backup Strategy', 'Data Replication', 'Recovery Testing', 'Compliance'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'Backup Solutions',
+    link: 'https://enterprisebackup.ziontechgroup.com'
+  },
+  {
+    title: 'IT Service Desk Implementation',
+    description: 'Professional IT service desk setup and management services.',
+    icon: Headphones,
+    features: ['Service Desk Setup', 'Process Implementation', 'Staff Training', 'Performance Monitoring'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Service Desk',
+    link: 'https://itservicedesk.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Network Design',
+    description: 'Scalable enterprise network design and implementation services.',
+    icon: Network,
+    features: ['Network Design', 'Security Implementation', 'Performance Optimization', 'Monitoring'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'Network Design',
+    link: 'https://enterprisenetwork.ziontechgroup.com'
+  },
+  {
+    title: 'IT Compliance & Regulatory',
+    description: 'IT compliance management and regulatory adherence services.',
+    icon: Shield,
+    features: ['Compliance Assessment', 'Regulatory Adherence', 'Audit Preparation', 'Documentation'],
+    pricing: '$10,000 - $75,000/project',
+    category: 'Compliance',
+    link: 'https://itcompliance.ziontechgroup.com'
+  },
+  {
+    title: 'Enterprise Monitoring Solutions',
+    description: 'Comprehensive enterprise monitoring and alerting solutions.',
+    icon: Monitor,
+    features: ['Infrastructure Monitoring', 'Application Monitoring', 'Log Management', 'Alerting'],
+    pricing: '$12,000 - $80,000/project',
+    category: 'Monitoring Solutions',
+    link: 'https://enterprisemonitoring.ziontechgroup.com'
   }
 ];
 
-const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },ursor/add-new-services-and-deploy-updates-1b90
+const technologies = [
+  { name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
   { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },
   { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' },
   { name: 'Monitoring', icon: BarChart3, description: 'Prometheus, Grafana, ELK Stack' },
@@ -388,7 +942,8 @@ const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS,
   { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD-WAN' }
 ];
 
-const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
+const benefits = [
+  {
     icon: Clock,
     title: 'Reduced Downtime',
     description: 'Proactive monitoring and maintenance',
@@ -414,7 +969,8 @@ const benefits = [{ursor/add-new-services-and-deploy-updates-1b90
   }
 ];
 
-const supportLevels = [{ursor/add-new-services-and-deploy-updates-1b90
+const supportLevels = [
+  {
     name: 'Basic Support',
     description: 'Standard business hours support',
     features: ['Email Support', 'Phone Support', 'Basic Monitoring', 'Monthly Reports'],
@@ -437,148 +993,169 @@ const supportLevels = [{ursor/add-new-services-and-deploy-updates-1b90
 export default function ITServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-                  <Head>
-                  <title>IT Services - Zion Tech Group</title>
-                  <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and system administration." />
-                  <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, network management, system administration" />
-                  </Head>
+      <Head>
+        <title>IT Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and system administration." />
+        <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, network management, system administration" />
+      </Head>
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">
-<div className="absolute inset-0">
-                  <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
-                  </div>
-                  <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
-                  </div>
-                  </div>
-                  <div className="container mx-auto px-4 relative z-10">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-<div className="flex items-center justify-center mb-6">
-                  <Server className="h-16 w-16 text-green-400 mr-4" />
-                  <h1 className="text-4xl md:text-6xl font-bold">ursor/add-new-services-and-deploy-updates-1b90
+            <div className="flex items-center justify-center mb-6">
+              <Server className="h-16 w-16 text-green-400 mr-4" />
+              <h1 className="text-4xl md:text-6xl font-bold">
                 IT{' '}
                 <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                   Services
                 </span>
-</h1>
-                  </div>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              </h1>
+            </div>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Comprehensive IT solutions to keep your business running smoothly. From cloud infrastructure to cybersecurity, we&apos;ve got you covered.
             </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">ursor/add-new-services-and-deploy-updates-1b90
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Get IT Consultation
               </Link>
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
-                  </div>
-                  </motion.div>
-                  </div>
-                  </section>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Services Grid */}
       <section className="py-20 bg-gray-50">
-                  <div className="container mx-auto px-4">
-                  <motion.div
+        <div className="container mx-auto px-4">
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">ursor/add-new-services-and-deploy-updates-1b90
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our IT Solutions
             </h2>
-                  <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               End-to-end IT services designed to optimize your infrastructure and ensure business continuity.
             </p>
-                  </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <motion.div
                   key={index}
-className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 groupursor/add-new-services-and-deploy-updates-1b90
+                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-whileHover={{ y: -5 }} ">
+                  whileHover={{ y: -5 }}
+                >
                   <div className="flex items-center justify-between mb-4">
-                  <div className="text-green-600 group-hover:text-emerald-600 transition-colors">
-                  <IconComponent className="w-10 h-10" />
-                  </div>
-                  <span className="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">ursor/add-new-services-and-deploy-updates-1b90
+                    <div className="text-green-600 group-hover:text-emerald-600 transition-colors">
+                      <IconComponent className="w-10 h-10" />
+                    </div>
+                    <span className="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">
                       {service.category}
                     </span>
                   </div>
+                  
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 mb-4 leading-relaxed">
                     {service.description}
                   </p>
+                  
                   <div className="mb-4">
-<h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
-                  <ul className="space-y-1">ursor/add-new-services-and-deploy-updates-1b90
+                    <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
+                    <ul className="space-y-1">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
-                  <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
+
                   <div className="mb-4">
-                  <span className="text-sm font-semibold text-green-600">{service.pricing}</span>
+                    <span className="text-sm font-semibold text-green-600">{service.pricing}</span>
                   </div>
-                  <Link
-                    href="/contact"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
-                  >
-                    <span>Get Quote</span>
-                  <ArrowRight className="w-3 h-3 ml-1" />
-                  </Link>
-                  </motion.div>
+
+                  <div className="space-y-2">
+                    <Link
+                      href={service.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    >
+                      <span>Learn More</span>
+                      <ArrowRight className="w-3 h-3 ml-1" />
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="w-full border border-green-600 text-green-600 hover:bg-green-50 py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
+                    >
+                      <span>Get Quote</span>
+                    </Link>
+                  </div>
+                </motion.div>
               );
             })}
           </div>
-                  </div>
-                  </section>
+        </div>
+      </section>
 
       {/* Technologies Section */}
       <section className="py-20 bg-white">
-                  <div className="container mx-auto px-4">
-                  <motion.div
+        <div className="container mx-auto px-4">
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Technologies We Work With</h2>ursor/add-new-services-and-deploy-updates-1b90
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Technologies We Work With
+            </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We leverage cutting-edge technologies to deliver robust IT solutions.
             </p>
-                  </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index) => {
               const IconComponent = tech.icon;
               return (
                 <motion.div
                   key={index}
-className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
+                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}">ursor/add-new-services-and-deploy-updates-1b90
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="w-8 h-8 text-green-600" />
+                    <IconComponent className="w-8 h-8 text-green-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {tech.name}
@@ -586,29 +1163,32 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   <p className="text-gray-600">
                     {tech.description}
                   </p>
-                  </motion.div>
+                </motion.div>
               );
             })}
           </div>
-                  </div>
-                  </section>
+        </div>
+      </section>
 
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
-                  <div className="container mx-auto px-4">
-                  <motion.div
+        <div className="container mx-auto px-4">
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Our IT Services?</h2>ursor/add-new-services-and-deploy-updates-1b90
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our IT Services?
+            </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Proven expertise and measurable results for your technology infrastructure.
             </p>
-                  </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (
@@ -621,7 +1201,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   viewport={{ once: true }}
                 >
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="w-8 h-8 text-green-600" />
+                    <IconComponent className="w-8 h-8 text-green-600" />
                   </div>
                   <div className="text-3xl font-bold text-green-600 mb-2">
                     {benefit.stat}
@@ -632,29 +1212,32 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   <p className="text-gray-600">
                     {benefit.description}
                   </p>
-                  </motion.div>
+                </motion.div>
               );
             })}
           </div>
-                  </div>
-                  </section>
+        </div>
+      </section>
 
       {/* Support Levels Section */}
       <section className="py-20 bg-white">
-                  <div className="container mx-auto px-4">
-                  <motion.div
+        <div className="container mx-auto px-4">
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Support Levels</h2>ursor/add-new-services-and-deploy-updates-1b90
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Support Levels
+            </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Choose the support level that best fits your business needs.
             </p>
-                  </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {supportLevels.map((level, index) => (
               <motion.div
                 key={index}
@@ -666,64 +1249,66 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {level.name}
                 </h3>
-                  <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 mb-6">
                   {level.description}
                 </p>
-                  <div className="text-3xl font-bold text-green-600 mb-6">
+                <div className="text-3xl font-bold text-green-600 mb-6">
                   {level.pricing}
                 </div>
-                  <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-8">
                   {level.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                  <Link
+                <Link
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     index === 1
-? 'bg-green-600 hover: bg-green-700 text-white'ursor/add-new-services-and-deploy-updates-1b90
+                      ? 'bg-green-600 hover:bg-green-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
                 >
                   <span>Choose Plan</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                  </motion.div>
+                </Link>
+              </motion.div>
             ))}
           </div>
-                  </div>
-                  </section>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-<div className="container mx-auto px-4 text-center">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your IT Infrastructure?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Optimize Your IT Infrastructure?
+            </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let our expert team help you build a robust, secure, and scalable IT environment.
             </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">ursor/add-new-services-and-deploy-updates-1b90
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Get IT Assessment
               </Link>
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
-                  </div>
-                  </motion.div>
-                  </div>
-                  </section>
-                  </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 }

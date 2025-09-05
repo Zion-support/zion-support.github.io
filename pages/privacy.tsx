@@ -41,7 +41,7 @@ export default function PrivacyPage() {
               <div className="prose max-w-none">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Information We Collect</h2>
                 <p className="text-gray-600 mb-4">
-                  We collect information you provide directly to us, such as when you create an account, 
+                  We collect information you provide directly to us, such as when you create an account,
                   contact us, or use our services. This may include: </p>
                 <ul className="list-disc list-inside text-gray-600 mb-6">
                   <li>Name and contact information</li>
@@ -59,7 +59,7 @@ export default function PrivacyPage() {
                       </h3>
                       <p className="text-gray-600">
                         We automatically collect certain information about your use of our services, including 
-                        your IP address, browser type, device information, pages visited, time spent on pages, 
+                        your IP address, browser type, device information, pages visited, time spent on pages,
                         and other usage statistics.
                       </p>
                     </div>
@@ -213,7 +213,6 @@ export default function PrivacyPage() {
                     the "Last updated" date.
                   </p>
                 </div>
-              </motion.div>
             </div>
           </div>
         </div>
