@@ -1,5 +1,4 @@
 ;,"});,})
->>>>>>> pr-10728,});,"})"
 }
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';

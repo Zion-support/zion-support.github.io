@@ -72,7 +72,6 @@ const jobOpenings = [
       'Excellent communication skills'
     ],
     benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Learning budget']
-=======
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
   }
 ];
@@ -147,7 +146,6 @@ export default function CareersPage() {
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-=======
     icon: Heart,
     title: 'Health & Wellness',
     description: 'Comprehensive health insurance and wellness programs'
@@ -219,7 +217,6 @@ export default function Careers() {
                   Learn About Us
                 </Link>
               </div>
-=======
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Join Our{' '}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -595,7 +592,6 @@ export default function Careers() {
         </section>
       </div>
     </>
-=======
         </section>
       </div>
     </MainLayout>

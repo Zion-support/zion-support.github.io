@@ -54,23 +54,17 @@ export default function WebinarsPage() {
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-=======
-import React, { useState } from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import {
-  Play,
-  Calendar,
-  Clock,
-  Users,
-  ExternalLink,
-  ArrowRight,
-  Filter,
-  Search,
-  Star,
-  BookOpen,
-  Video,
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Webinars</h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Join our educational webinars and learn from industry experts.
+              </p>
+            </motion.div>
+          </div>
+        </section>
   Download
 } from 'lucide-react';
 
@@ -439,7 +433,6 @@ export default function WebinarsPage() {
                     Download
                   </button>
                 </div>
-=======
         {/* Upcoming Webinars */}
         {upcomingWebinars.length > 0 && (
           <section className="py-16 bg-gray-50">
@@ -629,7 +622,6 @@ export default function WebinarsPage() {
         </section>
       </div>
     </>
-=======
     </MainLayout>
   );
 }

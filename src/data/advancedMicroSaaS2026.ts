@@ -27,5 +27,3 @@
     &quot;documentationUrl&quot;: &apos;https://ziontechgroup.com/docs&apos;
   };
 ];
->>>>>>> main
->>>>>>> main

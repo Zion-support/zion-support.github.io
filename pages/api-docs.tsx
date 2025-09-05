@@ -390,7 +390,6 @@ export default function APIDocsPage() {
         </div>
       </section>
     </div>
-=======
         {/* Code Examples */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">

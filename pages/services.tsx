@@ -1,8 +1,12 @@
-=======
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { Brain, Network, Zap, Shield, Users, Globe, Award, Star, TrendingUp, Clock, DollarSign, BarChart3, Settings, Code, Database, Server, MessageSquare, FileText, Mic, Search, Calendar, Package, ClipboardList, ShoppingCart } from 'lucide-react';
+
+const services = [
+  {
+    title: "AI Services",
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
     icon: Brain,
     href: "/ai-services",
@@ -57,7 +61,6 @@ const stats = [
   { number: '99.9%', label: 'Client Satisfaction' },
   { number: '24/7', label: 'Support Available' }
 ];
-=======
 import {
   Brain,
   Cloud,
@@ -232,7 +235,6 @@ export default function ServicesPage() {
               From AI development to cloud solutions, we provide end-to-end technology services 
               that drive business growth and digital transformation.
             </p>
-=======
     <MainLayout
       title="Our Services - Zion Tech Group"
       description="Discover our comprehensive range of technology services including AI solutions, cloud services, cybersecurity, and custom development. Transform your business with our expertise."
@@ -267,7 +269,6 @@ export default function ServicesPage() {
           </div>
         </section>
 
-=======
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -286,7 +287,6 @@ export default function ServicesPage() {
                   </div>
                   <div className="text-gray-600 font-medium">{stat.label}</div>
                 </motion.div>
-=======
               ))}
             </div>
           </div>
@@ -357,7 +357,6 @@ export default function ServicesPage() {
         </div>
       </section>
     </>
-=======
         {/* Main Services */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">

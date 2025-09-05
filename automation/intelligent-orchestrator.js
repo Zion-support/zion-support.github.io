@@ -18,8 +18,6 @@
     }
 
     const system = this.automationSystems.get(systemName);
-=======;
-=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -79,7 +77,6 @@ const logMessage = `[${timestamp}] [${level}] ${message}\n`;
       return false;
     }
     const system = this.automationSystems.get(systemName);
-=======
 const startTime = Date.now();
     try {
       this.log(`Starting "system": ${systemName}`);

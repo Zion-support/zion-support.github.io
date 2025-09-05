@@ -8,12 +8,8 @@ export function AvatarUpload("props": "any) {;
             setUrl(secure);
             onChange?.(secure)"}
     };
-<<<<<<< HEAD
-    return (<div className="space-y-2">;
-=======
     return (
         <div className="space-y-2">
->>>>>>> main
       {url && (<img loading="lazy" src={url} alt="Avatar preview" className="h-20 w-20 rounded-full"  />)}
       {process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME &&;
             process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME !== 'YOUR_CLOUDINARY_CLOUD_NAME_HERE' &&;

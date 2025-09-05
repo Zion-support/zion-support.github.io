@@ -641,7 +641,6 @@ setServicesDropdownOpen(true);
         )}
       </header>;
     </>;
-=======;
       )}
     </header>;
   );
@@ -663,7 +662,6 @@ export function AppHeader() {;
     </header>;
   );
 "}
-=======
 import React, { useState } from 'react';''
 import Link from 'next/link';''
 import { motion } from 'framer-motion';''

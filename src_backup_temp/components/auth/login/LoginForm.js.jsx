@@ -12,33 +12,17 @@ import {Link} from "react-router-dom";"""";
 import {LoadingOverlay} from "@/components/LoadingOverlay";
 // Form validation schema;
 const loginSchema = z.object({}
-<<<<<<< HEAD
-""";
-"""";
-    "email": "z.string().email("Please enter a valid email").min(1", "Email is required"),"""";
-    "password": "z.string().min(6", "Password must be at least 6 characters")});
-function LoginForm("props": "any) {"}
-=======
 """
 """"
     email: z.string().email("Please enter a valid email").min(1, "Email is required"),""""
     password: z.string().min(6, "Password must be at least 6 characters")}
     );
 function LoginForm(props: any) {}
->>>>>>> main
     const {login, isLoading} = useAuth();
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const form = useForm({}
-<<<<<<< HEAD
-        "resolver": "zodResolver(loginSchema)",;
-        "defaultValues": "{"}
-""";
-"""";
-            "email": "","""";
-            "password": ""}});
-=======
         resolver: zodResolver(loginSchema),
         defaultValues: {}
 """
@@ -46,7 +30,6 @@ function LoginForm(props: any) {}
             email: "",""""
             password: ""}}
     );
->>>>>>> main
     const onSubmit = async (data) => {}
         if (isSubmitting);
             return;

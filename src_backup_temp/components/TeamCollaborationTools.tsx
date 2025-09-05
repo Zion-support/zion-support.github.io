@@ -23,7 +23,6 @@ interface Message {
 interface FileItem {;
   id: string;
   name: string;
-=======
 
 interface FileItem {
   id: string;
@@ -73,7 +72,6 @@ showProjects: tru e,;
         uploadedBy: 'Sarah Johnson',;
         uploadDate: '2024-01-15',;
         lastModified: '2024-01-15',;
-=======
     const "sampleFiles": "FileIte m[] = [{;
         "id": '1'",;
         "name": 'AI_Platform_Architecture.pdf',;
@@ -112,7 +110,6 @@ showProjects: tru e,;
         sharedWith['Lisa Thompson'],;
         "permissions": 'view',;
         "version": '1.0';
-=======
 
   // Sample data
   useEffect(() => {
@@ -169,7 +166,6 @@ showProjects: tru e,;
     setTeamMembers(sampleTeamMembers) ;
     setProjects(sampleProjects) ;
     setMessages(sampleMessages) ;
-=======
     setFiles(sampleFiles) }, []) ;
       "default": "retur n 'text-zinc-400 bg-zinc-400/20'"}
   };
@@ -181,7 +177,6 @@ showProjects: tru e,;
           msg.reactions.push({ "type": "reactionTyp e", "count": "1 "})}
       }
       return msg}) ) };
-=======
 ;
   return (";
     <div className="w-full max-w-7xl mx-auto p-6">;
@@ -206,7 +201,6 @@ showProjects: tru e,;
                   : 'text-zinc-400 "hover": "tex t-white "hover": b g-zinc-800/50'`;
               "}`}
 ;
-=======
 
   // Get status color and icon'
       default: retur n { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> }}};
@@ -273,7 +267,6 @@ showProjects: tru e,;
           initial = {;
   { opacity: 0,;
   y: 2 0;
-=======
 }}
           animate = {
 
@@ -349,7 +342,6 @@ showProjects: tru e,;
                 {teamMembers.filter(m => m.status === 'online').length}
               </div>";
               <div className="text-zinc-400">Online Now</div>;
-=======
             </motion.div>;
                 {teamMembers.filter(m => m.availability === 'available').length}
               </div>";
@@ -391,7 +383,6 @@ showProjects: tru e,;
                 <div className="flex items-center gap-4 mb-4">";
                   <div className="relative">";
                     <div className="w-16 h-16 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold text-lg">;
-=======
 
             <motion.div
               initial = {
@@ -500,7 +491,6 @@ showProjects: tru e,;
                     member.availability === 'busy' ? 'text-yellow-400 bg-yellow-400/20' :';
                     'text-red-400 bg-red-400/20'`;
                   }`}>;
-=======
                     {member.availability.charAt(0) .toUpperCase () + member.availability.slice(1) }
                   </span>
                 </div> {/* Skills */}"
@@ -568,7 +558,6 @@ showProjects: tru e,;
           initial = {;
   { opacity: 0,;
   y: 2 0;
-=======
 }}
           animate = {
 
@@ -644,7 +633,6 @@ showProjects: tru e,;
                 {projects.filter(p => p.status === 'active').length}
               </div>";
               <div className="text-zinc-400">Active</div>;
-=======
             </motion.div>;
                 {projects.filter(p => p.status === 'completed').length}
               </div>";
@@ -669,7 +657,6 @@ showProjects: tru e,;
             </motion.div>;
           </div>;
           {/* Projects List */}";
-=======
 
             <motion.div
               initial = {
@@ -818,7 +805,6 @@ showProjects: tru e,;
 
           {/* Add Project Button */}"
           <div className="text-center">;
-=======
         </motion.div>) "}
 ;
       {/* Communication Tab */}
@@ -862,7 +848,6 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-green-400 mb-2">;
-=======
             <button
               onClick={() => setShowProjectForm(true)}"
               className="px-8 py-3 bg-zion-cyan text-white rounded-lg hover: b g-zion-cyan/80 transition-colors flex items-center gap-2 mx-auto"
@@ -985,7 +970,6 @@ showProjects: tru e,;
 ";
                 <div className="flex items-start gap-4">";
                   <div className="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold">;
-=======
                 <div className="flex items-start gap-4">"
                   <div className="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold">
                     {message.sender.split(' ').map(n => n[0]).join('')}
@@ -1008,7 +992,6 @@ showProjects: tru e,;
                       {message.reactions.map((reaction, idx) => (
                         <button
                           key={idx}
-=======
                           onClick={;
   () => handleMessageReaction(message.id,;
   reaction.type);
@@ -1098,7 +1081,6 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-green-400 mb-2">;
-=======
                           onClick={
 
   () => handleMessageReaction(message.id,
@@ -1165,7 +1147,6 @@ showProjects: tru e,;
           initial = {;
   { opacity: 0,;
   y: 2 0;
-=======
 }}
           animate = {
 
@@ -1241,7 +1222,6 @@ showProjects: tru e,;
                 {files.filter(f => f.type === 'document').length}
               </div>";
               <div className="text-zinc-400">Documents</div>;
-=======
             </motion.div>;
                 {files.filter(f => f.type === 'image').length}
               </div>";
@@ -1260,7 +1240,6 @@ showProjects: tru e,;
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
               <div className="text-3xl font-bold text-zion-cyan mb-2">;
-=======
 
             <motion.div
               initial = {
@@ -1451,6 +1430,5 @@ showProjects: tru e,;
 </Project>;
 </TeamMember>;
 </TeamCollaborationToolsProps>;
-=======
 </TeamMember>
 </TeamCollaborationToolsProps>

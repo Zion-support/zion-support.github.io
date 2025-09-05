@@ -50,6 +50,3 @@ export interface ProductListing {
     ]
   };
 ];
->>>>>>> main
->>>>>>> main
->>>>>>> main

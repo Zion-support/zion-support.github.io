@@ -9,9 +9,7 @@ import Link from 'next/link';
 } from 'lucide-react';
 
 const values = [{
-=======
 import { 
-=======
   Brain, 
   Users, 
   Award, 
@@ -237,7 +235,6 @@ className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transit
                   viewport={{ once: true }}
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-=======
                     <IconComponent className="w-8 h-8 text-blue-600" />
                   </div>
                   <div className="text-3xl font-bold text-blue-600 mb-2">
@@ -387,7 +384,6 @@ const timeline = [{
     "year": '2024',
     "title": 'Micro SaaS Platform',
     "description": 'Introduced our Micro SaaS solutions platform for rapid business application deployment.'
-=======
     icon: Award,
     title: 'Excellence',
     description: 'We strive for excellence in everything we do, delivering quality results every time.'
@@ -419,7 +415,6 @@ export default function AboutPage() {
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-=======
     description: 'We work closely with our clients as partners, understanding their unique challenges and co-creating solutions.'
   },
   {
@@ -516,7 +511,6 @@ export default function About() {
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
-=======
                   <div className="text-gray-600">{stat.label}</div>
                 </motion.div>
               ))}
@@ -620,7 +614,6 @@ export default function About() {
                   </motion.div>
                 );
               })}
-=======
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Values</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 These core values guide everything we do and shape our company culture.
@@ -646,7 +639,6 @@ export default function About() {
           </div>
         </section>
 
-=======
         {/* Team Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">

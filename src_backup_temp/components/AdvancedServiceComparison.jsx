@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import React, {useState, useMemo} from 'react';
-import {motion} from 'framer-motion';
-import {Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone} from 'lucide-react';
-import {Card, CardContent, CardHeader, CardTitle} from "ui/card.tsx";
-import {Button} from "ui/button.tsx";
-import {Badge} from "ui/badge.tsx";
-import {Input} from "ui/input.tsx";
-const COMPLEXITY_LEVELS = ['Basic', 'Intermediate', 'Advanced', 'Enterprise'];
-const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
-<<<<<<< HEAD
-export const AdvancedServiceComparison = ("props": "any) => {;
-    const [selectedServices", setSelectedServices] = useState([]);
-    const [filters, setFilters] = useState({;
-        "category": 'all',;
-        "complexity": 'all',;
-        "priceRange": 'all',;
-        "technology": 'all';
-    });
-=======
 export const AdvancedServiceComparison = (props: any) => {
     const [selectedServices, setSelectedServices] = useState([]);
     const [filters, setFilters] = useState({
@@ -27,7 +7,6 @@ export const AdvancedServiceComparison = (props: any) => {
         technology: 'all'
     }
     );
->>>>>>> main
     const [searchTerm, setSearchTerm] = useState('');
     const [viewMode, setViewMode] = useState('grid');
     // Mock data - in real app this would come from props or API;
@@ -118,12 +97,8 @@ export const AdvancedServiceComparison = (props: any) => {
             case 'Low': return <Target className="w-4 h-4 text-gray-500" />;
             "default": return <Users className="w-4 h-4 text-gray-500" />"}
     };
-<<<<<<< HEAD
-    return (<div className="max-w-7xl mx-auto p-6">;
-=======
     return (
         <div className="max-w-7xl mx-auto p-6">
->>>>>>> main
       {/* Header */}
       <motion.div initial = {;
   { "opacity": "0",;
@@ -401,22 +376,6 @@ export const AdvancedServiceComparison = (props: any) => {
 
 ;
 
-<<<<<<< HEAD
-;
-"}} transition={{ "delay": "0.3 "}} className="mt-8 bg-white rounded-lg shadow-lg p-6">;
-          <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">;
-            Comparison Summary ({selectedServices.length} services selected);
-          </h3>;
-          <div className="grid grid-cols-1 "md": "grid-cols-3 gap-4">;
-            <div className="text-center p-4 bg-zion-blue-light/10 rounded-lg">;
-              <div className="text-2xl font-bold text-zion-cyan">;
-                {selectedServices.length"}
-              </div>;
-              <div className="text-zion-slate-light">Services Selected</div>;
-            </div>;
-            <div className="text-center p-4 bg-zion-purple/10 rounded-lg">;
-              <div className="text-2xl font-bold text-zion-purple">;
-=======
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -439,7 +398,6 @@ export const AdvancedServiceComparison = (props: any) => {
             </div>
             <div className="text-center p-4 bg-zion-purple/10 rounded-lg">
               <div className="text-2xl font-bold text-zion-purple">
->>>>>>> main
                 {Math.max(...filteredServices.filter(s => selectedServices.includes(s.id)).map(s => s.rating))}
               </div>;
               <div className="text-zion-slate-light">Highest Rating</div>;
@@ -479,39 +437,6 @@ export const AdvancedServiceComparison = (props: any) => {
 
 ;
 
-<<<<<<< HEAD
-;
-"}} transition={{ "delay": "0.4 "}} className="mt-12 text-center">;
-        <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">;
-          <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>;
-          <p className="text-xl mb-6 max-w-2xl mx-auto">;
-            Our cutting-edge services are designed to give you a competitive advantage in the digital age.;
-            Contact us today to discuss your specific needs and find the perfect solution.;
-          </p>;
-          <div className="flex flex-col "sm": "flex-row gap-4 justify-center">;
-            <Button className="bg-white text-zion-purple "hover":bg-zion-slate-light" onClick={() => window.open('"mailto":kleber@ziontechgroup.com'",;
-  '_blank')}>;
-              <Mail className="w-4 h-4 mr-2" />;
-              Get Started;
-            </Button>;
-            <Button variant="outline" className="border-white text-white "hover": "bg-white "hover":text-zion-purple" onClick={() => window.open('"tel":+13024640950'",;
-  '_blank')}>;
-              <Phone className="w-4 h-4 mr-2" />;
-              Call Now;
-            </Button>;
-          </div>;
-        </div>;
-      </motion.div>;
-    </div>)};
-export default AdvancedServiceComparison;
-}}}}
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>
-=======
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -551,7 +476,6 @@ export default AdvancedServiceComparison;
 </motion>
 </motion>
 </motion>
-=======
 import React, {useState, useMemo} from 'react'''
 import {motion} from 'framer-motion'''
 import {Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone} from 'lucide-react'''
@@ -615,5 +539,3 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+''']
           <divclassName="flex flex-col "sm": flex-row gap-4 justify-center"""
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light"""
             <Button variant="outline" className="border-white text-white "hover": bg-white hover:text-zion-purple""]"
->>>>>>> main
->>>>>>> main

@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface SupabaseUser { id: string; email?: string; user_metadata?: { full_name?: string; avatar_url?: string   }; created_at?: string; updated_at?: string} interface Profile { id: string; display_name?: string; avatar_url?: string; role?: string; is_email_verified?: boolean; created_at?: string; updated_at?: string   } interface MappedUser { id: string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string   } ; export role: profil e.role, isEmailVerified: profil e.is_email_verified || false, createdAt: profil e.created_at || supabaseUser.created_at, updatedAt: profil e.updated_at || supabaseUser.updated_at}}; ;
-=======
 interface SupabaseUser { id: string; email?: string; user_metadata?: { full_name?: string; avatar_url?: string }; created_at?: string; updated_at?: string} interface Profile { id: 'string; display_name?: string; avatar_url?: string; role?: string; is_email_verified?: boolean; created_at?: string; updated_at?: string' } interface MappedUser { id: 'string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string' } ; export role: 'profil e.role',; isEmailVerified: 'profil e.is_email_verified || false',; createdAt: 'profil e.created_at || supabaseUser.created_at',; updatedAt: 'profil e.updated_at || supabaseUser.updated_at'}}; ;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 interface SupabaseUser { "id": "string; email?: string; user_metadata?: { full_name?: string; avatar_url?: string "}; created_at?: "string; updated_at?: string"} interface Profile { "id": 'string; display_name?: "string; avatar_url?: string; role?: string; is_email_verified?: boolean; created_at?: string; updated_at?: string' "} interface MappedUser { "id": 'string; "email": "string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string' "} ; export "role": 'profil e.role',; "isEmailVerified": 'profil e.is_email_verified || false',; "createdAt": 'profil e.created_at || supabaseUser.created_at',; "updatedAt": 'profil e.updated_at || supabaseUser.updated_at'}}; ;
-=======
-<<<<<<< HEAD
-interface SupabaseUser { id: string; email?: string; user_metadata?: { full_name?: string; avatar_url?: string }; created_at?: string; updated_at?: string} interface Profile { id: string; display_name?: string; avatar_url?: string; role?: string; is_email_verified?: boolean; created_at?: string; updated_at?: string } interface MappedUser { id: string; email: string; displayName?: string; avatar?: string; role?: string; isEmailVerified?: boolean; createdAt?: string; updatedAt?: string } ; export role: profil e.role,isEmailVerified: profil e.is_email_verified | false,createdAt: profil e.created_at | supabaseUser.created_at,updatedAt: profil e.updated_at | supabaseUser.updated_at}}; ;
-=======
 import React from 'react';
 
 interface ProfileMapperProps {
@@ -24,6 +14,3 @@ export default function ProfileMapper({ }: ProfileMapperProps) {
     </div>
   );
 }
->>>>>>> main
->>>>>>> main
->>>>>>> main

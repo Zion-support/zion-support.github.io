@@ -31,7 +31,6 @@
     cron.schedule('
   '0 4 * * 0', () => {
 
-=======
   async scanProject() {}
     this.log('Starting file integrity scan...');',
     const checksums = {};,
@@ -124,8 +123,6 @@ switch (command) {}
 }
 
 module.exports = FileIntegrityMonitor;
-=======;
-=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -205,7 +202,6 @@ class FileIntegrityMonitor {
       }
       issues.push({
 
-=======
 // Save current checksums
       fs.writeFileSync(this.checksumsFile, JSON.stringify(checksums, null, 2));ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       this.integrityChecks++;
@@ -255,7 +251,6 @@ process.on(
   "if": (monitor) {
     await monitor.stop()})
 // Start the monitor;
-=======
 const walkDir = (dir) => {
       try {
         const items = fs.readdirSync(dir);

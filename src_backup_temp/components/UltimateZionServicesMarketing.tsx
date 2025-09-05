@@ -1,4 +1,3 @@
-=======
 const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 
@@ -71,7 +70,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
   const selectedServices = getServicesByCategory(selectedCategory) ;
 ;
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">;
-=======
 
   return (
         <div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">
@@ -140,7 +138,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     : 'bg-white / 10 border-white / 20 text-gray - 300 "hover": "b g-white / 20 "hover": borde r-white / 40'                "}`}
               >";
                 <span className="mr-2 text-lg">{category.icon}</span>;
-=======
       <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div  className="max - w-7xl mx - auto text-center">
           <motion.h1
@@ -163,7 +160,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
             whileInView = {;
   { opacity: 1,;
   y: 0;
-=======
 }}
             transition={{ duration: 0.6 }}
           >
@@ -402,7 +398,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                 {/* Service Header */"}";
                 <div className="text-center mb-6">`;
                   <div className={`text-6xl mb-4 group-"hover": "scal e-110 transition-transform duration-300`"}>;
-=======
       <section className="py-20 px-4 sm: p x-6 lg: p x-8">
         <div  className="max - w-7xl mx -auto">
           <motion.h2
@@ -469,7 +464,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     {service.innovationLevel}
                   </div>";
                   <p className="text-sm text-purple-400 font-medium">;
-=======
                   </div>"
                   <p className="text-sm text-purple-400 font-medium">
                     {service.category.replace('-',).toUpperCase()}
@@ -612,7 +606,6 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     </a>;
                   </div>;
                 </div>;
-=======
               </motion.div>) ) }
           </motion.div>
         </div>
@@ -655,9 +648,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
             </div>;
           </motion.div>;
         </div>;
-=======
       </section>;
-=======
     </div>;) };
 export default UltimateZionServicesMarketing;'"`
 

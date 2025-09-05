@@ -9,4 +9,3 @@ export const lazyLoadImage = ("img": HTMLImageElemen t) => {
           image.classList.remove('lazy');
           observer.unobserve(image)}
       }
->>>>>>> main

@@ -1,12 +1,12 @@
 
-const resources = [;
-  {}
-    title: "Documentation","
-    description: "Comprehensive guides and technical documentation","
+const resources = [
+  {
+    title: "Documentation",
+    description: "Comprehensive guides and technical documentation",
     icon: FileText,
-    href: "/docs","
-    color: "from-blue-500 to-blue-600","
-    items: ["API Documentation", "Integration Guides", "Best Practices", "Troubleshooting"]"
+    href: "/docs",
+    color: "from-blue-500 to-blue-600",
+    items: ["API Documentation", "Integration Guides", "Best Practices", "Troubleshooting"]
   },
   {}
     title: "Case Studies","
