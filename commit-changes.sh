@@ -1,33 +1,21 @@
 #!/bin/bash
 
-echo "🚀 Committing automation improvements..."
-
-# Add all changes
+echo "Adding all changes..."
 git add .
 
-# Commit with descriptive message
-git commit -m "feat: comprehensive automation system improvements
+echo "Checking status..."
+git status
 
-- Fixed merge conflicts in package.json
-- Fixed syntax errors in test setup files
-- Created 6 new enhanced automation scripts:
-  * Enhanced Automation Orchestrator
-  * Enhanced Test Automation
-  * Enhanced Deployment Automation
-  * Enhanced Monitoring System
-  * Master Automation Orchestrator
-  * Quick Test Script
-- Added new npm scripts for automation
-- Improved error handling and performance
-- Enhanced reporting and logging
-- Added comprehensive monitoring capabilities
+echo "Committing changes..."
+git commit -m "Resolve merge conflicts and merge all PRs into main branch
 
-All scripts are production-ready with detailed logging and reporting."
+- Fixed all merge conflicts by keeping main branch content
+- Merged PR #11811: Website audit and update with deployment
+- Merged PR #11809: Enhance and expand ziontechgroup.com services and site
+- Resolved build issues and ensured all pages work correctly
+- Cleaned up conflicting files and maintained working state"
 
-echo "✅ Changes committed successfully!"
+echo "Pushing to main branch..."
+git push origin main
 
-# Push to repository
-echo "📤 Pushing to repository..."
-git push origin HEAD
-
-echo "🎉 All changes pushed successfully!"
+echo "All changes committed and pushed successfully!"

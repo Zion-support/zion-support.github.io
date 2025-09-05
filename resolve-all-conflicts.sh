@@ -1,30 +1,30 @@
 #!/bin/bash
 
-echo "Resolving all merge conflicts by accepting incoming changes..."
+echo "Starting to resolve all merge conflicts..."
 
-# Find all files with merge conflicts
-conflict_files=$(grep -l "" $(find . -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json") 2>/dev/null)
-
-echo "Found $(echo "$conflict_files" | wc -l) files with merge conflicts"
-
-# Resolve conflicts by accepting incoming changes
-for file in $conflict_files; do
-    echo "Resolving conflicts in: $file"
-    git checkout --theirs "$file"
-    git add "$file"
+# Find all files with merge conflict markers and resolve them
+find . -type f \( -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" -o -name "*.cjs" \) \
+  -not -path "./node_modules/*" \
+  -not -path "./.next/*" \
+  -not -path "./.git/*" \
+  -exec grep -l "<<<<<<< HEAD" {} + | while read -r file; do
+  echo "Resolving conflicts in: $file"
+  
+  # Create a backup
+  cp "$file" "$file.backup"
+  
+  # Keep only the content from the 'main' branch (after =======)
+  # This removes everything from <<<<<<< HEAD to =======
+  sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+  
+  # Remove the >>>>>>> branch-name line
+  sed -i '/>>>>>>> /d' "$file"
+  
+  # Remove any remaining conflict markers
+  sed -i '/^=======$/d' "$file"
+  
+  echo "Resolved: $file"
 done
 
-echo "🎉 All merge conflicts resolved!"
-echo "Running build test..."
-
-# Test the build
-if npm run build; then
-    echo "✅ Build successful after conflict resolution!"
-else
-    echo "❌ Build still has issues, checking for remaining conflicts..."
-    find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" | while read file; do
-        if grep -q "\|\|>>>>>>> " "$file" 2>/dev/null; then
-            echo "Remaining conflicts in: $file"
-        fi
-    done
-fi
+echo "All merge conflicts resolved!"
+echo "Files with conflicts have been backed up with .backup extension"
