@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import Layout from "../components/Layout";
 import { motion } from 'framer-motion';
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 
@@ -188,7 +188,7 @@ export default function APIPage() {
     }
   }
   return (
-    <Layout
+    <Layout 
       title="API Reference - Zion Tech Group"
       description="Comprehensive API documentation and reference for integrating with Zion Tech Group services."
     >

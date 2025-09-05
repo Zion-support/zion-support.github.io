@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from "../../components/Layout";""
+import Layout from "../../components/Layout";
 import { motion } from 'framer-motion';
 import { BarChart3, TrendingUp, Database, Brain, CheckCircle, ArrowRight } from 'lucide-react';
 export default function DataAnalyticsPage() {
@@ -31,7 +31,7 @@ export default function DataAnalyticsPage() {
   ];
 
   return (
-    <Layout"
+    <Layout 
       title="Data Analytics Services - Zion Tech Group"
       description="Advanced data analytics solutions to unlock insights from your data and drive business growth."
     >
@@ -120,5 +120,6 @@ export default function DataAnalyticsPage() {
           </div>
         </section>
       </div>
-    </$1>
+    </Layout>
+  );
 }

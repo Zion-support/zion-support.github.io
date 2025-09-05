@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from "../../components/Layout";""
+import Layout from "../../components/Layout";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 export default function CloudServicesPage() {
@@ -31,7 +31,7 @@ export default function CloudServicesPage() {
   ];
 
   return (
-    <Layout"
+    <Layout 
       title="Cloud Solutions - Zion Tech Group"
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
     >
@@ -120,5 +120,6 @@ export default function CloudServicesPage() {
           </div>
         </section>
       </div>
-    </$1>
+    </Layout>
+  );
 }

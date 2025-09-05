@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from "../../components/Layout";""
+import Layout from "../../components/Layout";
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 export default function CybersecurityPage() {
@@ -31,7 +31,7 @@ export default function CybersecurityPage() {
   ];
 
   return (
-    <Layout"
+    <Layout 
       title="Cybersecurity Services - Zion Tech Group"
       description="Advanced cybersecurity solutions to protect your business from evolving threats and ensure compliance."
     >
@@ -120,5 +120,6 @@ export default function CybersecurityPage() {
           </div>
         </section>
       </div>
-    </$1>
+    </Layout>
+  );
 }

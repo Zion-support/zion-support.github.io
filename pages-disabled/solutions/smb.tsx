@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from "../../components/Layout";""
+import Layout from "../../components/Layout";
 import { motion } from 'framer-motion';
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 export default function SMBSolutionsPage() {
@@ -31,7 +31,7 @@ export default function SMBSolutionsPage() {
   ];
 
   return (
-    <Layout"
+    <Layout 
       title="SMB Solutions - Zion Tech Group"
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."
     >
@@ -120,5 +120,6 @@ export default function SMBSolutionsPage() {
           </div>
         </section>
       </div>
-    </$1>
+    </Layout>
+  );
 }
