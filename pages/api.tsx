@@ -171,13 +171,7 @@ export default function APIPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
-=======
-    title: 'GraphQL API',
-    description: 'Flexible GraphQL API for complex queries',
-    icon: Code,
-    features: ['Flexible Queries', 'Real-time Subscriptions', 'Schema Introspection', 'Type Safety']
   },
   {
     title: 'WebSocket API',

@@ -45,7 +45,9 @@ const accessibilityFeatures = [
     ]
   },
   {
-=======
+    title: "Audio Accessibility",
+    description: "Making audio content accessible to all users",
+    features: [
       "Closed captions",
       "Visual alerts",
       "Text alternatives for audio",

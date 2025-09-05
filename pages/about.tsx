@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { 
@@ -5,15 +6,7 @@ import {
   Building,
   Rocket,
   Lightbulb,
-<<<<<<< HEAD
   Handshake,
-=======
-  Handshake
-} from 'lucide-react';
-
-const values = [{
-import { 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-4bb1
   Brain, 
   Users, 
   Award, 
