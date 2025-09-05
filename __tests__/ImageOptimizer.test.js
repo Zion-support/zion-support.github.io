@@ -1,1 +1,3 @@
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 import _React from 'react"  import '@testing-library/jest-dom import ImageOptimizer from '../components/ImageOptimizer" describe('ImageOptimizer',() => {' test('renders without crashing',() => {' render(<ImageOptimizer / / />) expect(screen.getByTestId("imageoptimizer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ImageOptimizer / / />) }) test('handles user interactions',() => {' render(<ImageOptimizer / / />) }) test('applies correct styling',() => {' render(<ImageOptimizer / / />) }) })
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

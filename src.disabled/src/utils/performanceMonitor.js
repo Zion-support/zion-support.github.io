@@ -1,1 +1,0 @@
-module.exports = const performanceMonitor = {}; export default performanceMonitor;

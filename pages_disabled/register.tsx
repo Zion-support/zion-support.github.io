@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { User, Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
+import Layout from '../components/Layout';
 
 export default function RegisterPage() {
   const [formData, setFormData] = useState({
@@ -27,16 +25,15 @@ export default function RegisterPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle registration logic here
-    console.log('Registration data:', formData);
+    console.log('Registration attempt:', formData);
   };
 
   return (
-    <>
-      <Head>
-        <title>Register - Zion Tech Group</title>
-        <meta name="description" content="Create your Zion Tech Group account to access our comprehensive technology solutions and services." />
-      </Head>
-
+    <Layout
+      title="Register - Zion Tech Group"
+      description="Create your Zion Tech Group account to access our comprehensive technology solutions and services."
+      keywords="register, sign up, account, Zion Tech Group, technology solutions"
+    >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <motion.div
@@ -245,6 +242,6 @@ export default function RegisterPage() {
           </motion.div>
         </div>
       </div>
-    </>
+    </Layout>
   );
 }

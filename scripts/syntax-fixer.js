@@ -1,3 +1,2 @@
-#!/usr/bin/env node  module.exports = {};
-#!/usr/bin/env node/usr/bin/env node/usr/bin/env node console.log("scripts/syntax-fixer: noop"); module.exports = {};'"'"
-#!/usr/bin/env node _console.log('scripts/syntax-"fixer": noop'); module.exports = {};
+>>>>>>> origin/main
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326

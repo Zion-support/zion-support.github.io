@@ -1,15 +1,8 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Header } from './components/Header';
 import Footer from './components/Footer';
-import { Sidebar } from './components/Sidebar';
-import { ErrorBoundary } from 'react-error-boundary';
-import { LoadingSpinner } from './components/ui/loading-spinner';
 // Enhanced Components
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
-import { ChatAssistant } from './components/ChatAssistant';
 // Lazy load pages for better performance - only import existing pages
 const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ default: module.default })));
 // Service Pages

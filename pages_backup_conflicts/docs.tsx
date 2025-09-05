@@ -1,7 +1,9 @@
-import React from 'react';
+import * as React from 'react';
+
 interface DocsProps {
   // Add props here as needed
 }
+
 export default function Docs({ }: DocsProps) {
   return (
     <div>

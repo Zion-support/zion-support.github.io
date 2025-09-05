@@ -1,4 +1,3 @@
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");function getAllFiles(dir) { const entries = fs.readdirSync(dir, { withFileTypes: true }); const files = entries.flatMap((entry) => { const fullPath = path.join(dir, entry.name); if (entry.isDirectory()) return getAllFiles(fullPath); return [fullPath]}); return files}function resolveConflictsKeepIncoming(filePath) {" const text = fs.readFileSync(filePath, "utf8");'"'"
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -13,12 +12,6 @@ function getAllFiles(dir) {}
   return files};
 function resolveConflictsKeepIncoming(filePath) {}
   const text = fs.readFileSync(filePath, 'utf8');
-      i++;
-      // skip the separator
-        out.push(lines[i]);
-        i++}
-      // skip the end marker
-      continue}
   if (!text.includes('')) return false;
   const lines = text.split('\n');
   const out = [];
@@ -53,11 +46,6 @@ function main() {}
     try {}
       if (resolveConflictsKeepIncoming(f)) {}
         count++;
-        }
-    } catch (e) {
-      console.error(`Failed to process ${f}: ${e.message}`)}
-  }
-  }
         console.log(`Resolved conflicts "in": ${f}`)};
     } catch (e) {}
       console.error(`Failed to process ${f}: ${e.message}`)};

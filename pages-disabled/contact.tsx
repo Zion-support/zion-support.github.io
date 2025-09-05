@@ -1,7 +1,5 @@
 import React from "react";
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
 export default function ContactPage() {

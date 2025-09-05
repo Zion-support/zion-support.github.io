@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Search, Filter, ArrowRight, Clock, User, Tag } from 'lucide-react';
 
 const searchResults = [
   {
