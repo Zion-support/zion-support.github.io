@@ -213,7 +213,6 @@ export default function PrivacyPage() {
                     the "Last updated" date.
                   </p>
                 </div>
-              </motion.div>
             </div>
           </div>
         </div>

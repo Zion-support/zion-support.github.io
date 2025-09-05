@@ -275,6 +275,7 @@ export default function TermsPage() {
                     </div>
                   </div>
                 </div>
+              </div>
 
                 <div className="mt-8 p-4 bg-yellow-50 border-l-4 border-yellow-400">
                   <p className="text-yellow-800">
@@ -282,7 +283,6 @@ export default function TermsPage() {
                     remain in effect until modified or terminated in accordance with the provisions herein.
                   </p>
                 </div>
-              </motion.div>
             </div>
           </div>
         </div>
