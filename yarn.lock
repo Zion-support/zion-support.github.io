@@ -2508,7 +2508,6 @@
   dependencies:
     "@tanstack/query-core" "5.87.1"
 
-<<<<<<< HEAD
 "@testing-library/dom@^10.4.1":
   version "10.4.1"
   resolved "https://registry.npmjs.org/@testing-library/dom/-/dom-10.4.1.tgz"
@@ -2523,8 +2522,6 @@
     picocolors "1.1.1"
     pretty-format "^27.0.2"
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-bf0a
 "@testing-library/jest-dom@^6.8.0":
   version "6.8.0"
   resolved "https://registry.npmjs.org/@testing-library/jest-dom/-/jest-dom-6.8.0.tgz"
@@ -2544,14 +2541,11 @@
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-<<<<<<< HEAD
-=======
 "@testing-library/user-event@^14.6.1":
   version "14.6.1"
   resolved "https://registry.npmjs.org/@testing-library/user-event/-/user-event-14.6.1.tgz"
   integrity sha512-vq7fv0rnt+QTXgPxr5Hjc210p6YKq2kmdziLgnsZGgLJ9e6VAShx1pACLuRjd/AS/sr7phAR58OIIpf0LlmQNw==
 
->>>>>>> cursor/automate-test-improve-and-merge-code-bf0a
 "@tootallnate/once@2":
   version "2.0.0"
   resolved "https://registry.npmjs.org/@tootallnate/once/-/once-2.0.0.tgz"
@@ -3034,22 +3028,18 @@ aria-hidden@^1.2.4:
   dependencies:
     tslib "^2.0.0"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+aria-query@^5.0.0:
+  version "5.3.0"
+  resolved "https://registry.npmjs.org/aria-query/-/aria-query-5.3.0.tgz"
+  integrity sha512-b0P0sZPKtyu8HkeRAfCq0IfURZK+SuwMjY1UXGBU27wpAiTwQAIlq56IbIO+ytk/JjS1fMR14ee5WBBfKi5J6A==
+  dependencies:
+    dequal "^2.0.3"
+
 aria-query@^5.3.2:
-=======
-aria-query@^5.0.0:
->>>>>>> dee69f7abb748a793666f5594a9924708a24cc59
-=======
-aria-query@^5.0.0:
->>>>>>> cursor/automate-test-improve-and-merge-code-bf0a
   version "5.3.2"
   resolved "https://registry.npmjs.org/aria-query/-/aria-query-5.3.2.tgz"
   integrity sha512-COROpnaoap1E2F000S62r6A60uHZnmlvomhfyT2DlTcrY1OrBKn2UhH7qn5wTC9zMvD0AY7csdPSNwKP+7WiQw==
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 aria-query@5.3.0:
   version "5.3.0"
   resolved "https://registry.npmjs.org/aria-query/-/aria-query-5.3.0.tgz"
@@ -3057,9 +3047,6 @@ aria-query@5.3.0:
   dependencies:
     dequal "^2.0.3"
 
->>>>>>> dee69f7abb748a793666f5594a9924708a24cc59
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-bf0a
 array-buffer-byte-length@^1.0.1, array-buffer-byte-length@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/array-buffer-byte-length/-/array-buffer-byte-length-1.0.2.tgz"
@@ -4085,14 +4072,11 @@ doctrine@^2.1.0:
   dependencies:
     esutils "^2.0.2"
 
-<<<<<<< HEAD
 dom-accessibility-api@^0.5.9:
   version "0.5.16"
   resolved "https://registry.npmjs.org/dom-accessibility-api/-/dom-accessibility-api-0.5.16.tgz"
   integrity sha512-X7BJ2yElsnOJ30pZF4uIIDfBEVgF4XEBxL9Bxhy6dnrm5hkzqmsWHGTiHqRiITNhMyFLyAiWndIJP7Z1NTteDg==
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-bf0a
 dom-accessibility-api@^0.6.3:
   version "0.6.3"
   resolved "https://registry.npmjs.org/dom-accessibility-api/-/dom-accessibility-api-0.6.3.tgz"

@@ -1,29 +1,44 @@
-import { useEffect } from 'react',
-,
-export const usePerformanceMonitor = () => {,
-  useEffect(() => {,
-    // Monitor Core Web Vitals,
-    if (typeof window !== 'undefined' && 'web-vitals' in window) {,
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {,
-        getCLS(console.log),
-        getFID(console.log),
-        getFCP(console.log),
-        getLCP(console.log),
-        getTTFB(console.log),
-      }),
+import { useState, useEffect } from 'react';
+
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
+}
+
+export function usePerformanceMonitor(): PerformanceMetrics | null {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('performance' in window)) {
+      return;
+    }
+
+    const updateMetrics = () => {
+      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const memory = (window.performance as any).memory;
+      
+      if (navigation) {
+        setMetrics({
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+          renderTime: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          memoryUsage: memory?.usedJSHeapSize || 0,
+          fps: 60,
+        });
+      }
     };
-    // Monitor bundle size,
-    const observer = new PerformanceObserver((list) => {,
-      for (const entry of list.getEntries()) {,
-        if (entry.entryType === 'navigation') {,
-        };
-      };
-    }),
-,
-    observer.observe({ entryTypes: ['navigation'] ,}),
-,
-    return () => observer.disconnect(),
-  }, []),
-};
-,
-export default usePerformanceMonitor,
+
+    if (document.readyState === 'complete') {
+      updateMetrics();
+    } else {
+      window.addEventListener('load', updateMetrics);
+    }
+
+    return () => {
+      window.removeEventListener('load', updateMetrics);
+    };
+  }, []);
+
+  return metrics;
+}

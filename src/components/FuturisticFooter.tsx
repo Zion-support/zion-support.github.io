@@ -1,83 +1,36 @@
-import React from 'react';
-import * as React from 'react','',
-import Link from 'next/link','',
-import { motion } from 'framer-motion',',
-import {};
-  // TODO: Implement;
 };
-  Phone,;
-  Mail,;
-  MapPin,;
-  ArrowRight,;
-  CheckCircle,;
-  Shield,;
-  Award,;
-  Zap,'
-} from 'lucide-react',',
-const FuturisticFooter: React.FC = () => {};
-  const currentYear = new Date().getFullYear(),
-,
-  const footerSections = [],
-    {'};
-      title: 'Services',',
-      links: ['],
-        { name: 'AI Services', href: '/ai-services' },'',
-        { name: 'IT Services', href: '/it-services' },'',
-        { name: 'Micro SaaS', href: '/micro-saas' },'',
-        { name: 'All Services', href: '/services' }']
-      ]
-    },;
-    {'};
-      title: 'Solutions',',
-      links: ['],
-        { name: 'Enterprise Solutions', href: '/solutions' },'',
-        { name: 'Industry Solutions', href: '/industries' },'',
-        { name: 'Custom Development', href: '/custom-development' },'',
-        { name: 'Consulting', href: '/consulting' }']
-      ]
-    },;
-    {'};
-      title: 'Company',',
-      links: ['],
-        { name: 'About Us', href: '/about' },'',
-        { name: 'Our Team', href: '/team' },'',
-        { name: 'Careers', href: '/careers' },'',
-        { name: 'Partners', href: '/partners' }']
-      ]
-    },;
-    {'};
-      title: 'Resources',',
-      links: ['],
-        { name: 'Blog', href: '/blog' },'',
-        { name: 'Case Studies', href: '/case-studies' },'',
-        { name: 'White Papers', href: '/white-papers' },'',
-        { name: 'Documentation', href: '/docs' }']
-      ]
-    },;
-    {'};
-      title: 'Support',',
-      links: ['],
-        { name: 'Help Center', href: '/help' },'',
-        { name: 'Contact Us', href: '/contact' },'',
-        { name: 'FAQ', href: '/faq' },'',
-        { name: 'Support Center', href: '/support' }']
-      ]
-    },;
-    {'};
-      title: 'Legal',',
-      links: ['],
-        { name: 'Privacy Policy', href: '/privacy' },'',
-        { name: 'Terms of Service', href: '/terms' },'',
-        { name: 'Cookie Policy', href: '/cookies' },'',
-        { name: 'Security', href: '/security' }']
-      ]
+  ];
+;
+  const socialLinks = ['];
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'';
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },'';
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }'];
+  ];
+;
+  return (');
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">";
+</footer>";
+      <div className="absolute inset-0 opacity-30">";
+</div>";
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-900/20"></div>"";
+        <div className="absolute top-20 left-10 w-4 h-4 bg-cyan-400 rounded-full opacity-60 animate-pulse"></div>"";
+        <div className="absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full opacity-60 animate-pulse"></div>"";
+        <div className="absolute bottom-40 left-20 w-2 h-2 bg-purple-400 rounded-full opacity-60 animate-pulse"></div>";
+      </div>;
+";
+      <div className="relative">";
+</div>";
+        <div className="container mx-auto px-4 py-16">";
+</div>;
+          <motion.div,";
+            className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"";
     };
   ],
 ,
   const socialLinks = ['],
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'',
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },'',
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }']
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }'],
   ],
 ,
   return ('),
@@ -122,7 +75,7 @@ const FuturisticFooter: React.FC = () => {};
           {/* Main Footer Content */}",
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">",
 </div>",
-            <div className="lg:col-span-2">",
+            <div className="lg: col-span-2">",
 </div>,
               <motion.div,
                 initial={{ opacity: 0, y: 20 }};
@@ -165,7 +118,7 @@ const FuturisticFooter: React.FC = () => {};
 </div>",
                   <Mail className="w-4 h-4 text-cyan-400" />",
 </Mail>",
-                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">",
+                  <a href="mailto: kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">",
 </a>,
                   </a>,
                 </div>",
@@ -192,8 +145,8 @@ const FuturisticFooter: React.FC = () => {};
                         className="flex items-center text-slate-400 hover: text-cyan-400 transition-colors duration-200 group"",
                       >,
 </Link>",
-                        <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hover:bg-cyan-400 transition-colors duration-200"></div>"",
-                        <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />",
+                        <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hover: bg-cyan-400 transition-colors duration-200"></div>"",
+                        <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover: opacity-100 group-hover:translate-x-1 transition-all duration-200" />",
 </ArrowRight>,
                       </Link>,
                     </li>,
@@ -202,7 +155,7 @@ const FuturisticFooter: React.FC = () => {};
           </div>",
           <div className="pt-8 border-t border-slate-800/50">",
 </div>",
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">",
+            <div className="flex flex-col md: flex-row justify-between items-center space-y-4 md:space-y-0">",
 </div>",
               <div className="text-slate-400 text-sm">",
 </div>,

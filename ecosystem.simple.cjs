@@ -12,12 +12,12 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PORT: 3000
+        PORT: 3000,
       },
       error_file: 'logs/web-error.log',
       out_file: 'logs/web-out.log',
       log_file: 'logs/web-combined.log',
-      time: true
+      time: true,
     },
 
     // Error Prevention System
@@ -32,12 +32,12 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTO_FIX_ENABLED: 'true'
+        AUTO_FIX_ENABLED: 'true',
       },
       error_file: 'logs/error-prevention-error.log',
       out_file: 'logs/error-prevention-out.log',
       log_file: 'logs/error-prevention-combined.log',
-      time: true
+      time: true,
     },
 
     // Health Monitor
@@ -52,12 +52,12 @@ module.exports = {
       max_memory_restart: '256M',
       env: {
         NODE_ENV: 'production',
-        HEALTH_CHECK_INTERVAL: 300000
+        HEALTH_CHECK_INTERVAL: 300000,
       },
       error_file: 'logs/health-monitor-error.log',
       out_file: 'logs/health-monitor-out.log',
       log_file: 'logs/health-monitor-combined.log',
-      time: true
-    }
-  ]
+      time: true,
+    },
+  ],
 };

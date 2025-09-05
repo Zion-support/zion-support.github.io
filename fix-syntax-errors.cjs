@@ -1,94 +1,84 @@
 const fs = require('fs');
 const path = require('path');
 
-// List of files with syntax errors
-const filesToFix = [
-  'components/Header.tsx',
-  'components/OptimizedImage.tsx',
-  'components/Sidebar.tsx',
-  'components/SimpleLayout.tsx',
-  'components/SkeletonLoader.tsx',
-  'components/layout/EnhancedFooter.tsx',
-  'components/layout/Footer.tsx',
-  'components/layout/Header.tsx',
-  'components/layout/Layout.tsx',
-  'components/layout/MainLayout.tsx',
-  'components/performance/LazyComponent.tsx',
-  'components/performance/OptimizedImage.tsx',
-  'components/ui/EnhancedMarketplaceCard.tsx',
-  'components/ui/InteractiveNavigation.tsx',
-  'components/ui/NotificationSystem.tsx'
-];
-
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Fix common syntax errors
     content = content
-      // Fix import statements - replace commas with semicolons
-      .replace(/import\s+[^;]+,\s*$/gm, (match) => match.replace(/,\s*$/, ';'))
-      // Fix object properties - replace commas with colons
-      .replace(/"([^"]+)",\s*$/gm, '"$1",')
-      .replace(/'([^']+)',\s*$/gm, "'$1',")
-      // Fix function parameters
-      .replace(/,\s*\)/g, ')')
-      .replace(/,\s*}/g, '}')
-      .replace(/,\s*]/g, ']')
-      // Fix semicolons in wrong places
-      .replace(/;\s*;/g, ';')
-      .replace(/,\s*;/g, ';')
-      // Fix malformed object syntax
-      .replace(/\{\s*,/g, '{')
-      .replace(/,\s*\}/g, '}')
-      // Fix array syntax
-      .replace(/\[\s*,/g, '[')
-      .replace(/,\s*\]/g, ']')
-      // Fix function declarations
-      .replace(/,\s*\)\s*=>/g, ') =>')
-      .replace(/,\s*\)\s*{/g, ') {')
-      // Remove extra commas and semicolons
-      .replace(/,\s*,/g, ',')
-      .replace(/;\s*;/g, ';')
-      // Fix React component syntax
-      .replace(/React\.FC<\{[^}]*,\s*\}\s*>/g, (match) => match.replace(/,\s*}/, '}'))
-      // Fix useState calls
-      .replace(/useState\([^)]*,\s*\)/g, (match) => match.replace(/,\s*\)/, ')'))
-      // Fix useEffect calls
-      .replace(/useEffect\([^)]*,\s*\)/g, (match) => match.replace(/,\s*\)/, ')'))
-      // Fix return statements
-      .replace(/return\s+[^;]*,\s*$/gm, (match) => match.replace(/,\s*$/, ''))
-      // Fix JSX syntax
-      .replace(/<\s*,\s*>/g, '<>')
-      .replace(/,\s*>/g, '>')
-      // Fix template literals
-      .replace(/`[^`]*,\s*`/g, (match) => match.replace(/,\s*`/, '`'))
-      // Clean up multiple newlines
-      .replace(/\n\s*\n\s*\n/g, '\n\n')
-      // Fix trailing commas in objects and arrays
-      .replace(/,(\s*[}\]])/g, '$1');
-
+      // Remove trailing commas before semicolons
+      .replace(/,;/g, ';')
+      // Fix JSX attributes with trailing commas
+      .replace(/,(\s*[}>])/g, '$1')
+      // Fix object properties with trailing commas
+      .replace(/,(\s*[}])/g, '$1')
+      // Fix array elements with trailing commas
+      .replace(/,(\s*\])/g, '$1')
+      // Fix function parameters with trailing commas
+      .replace(/,(\s*\))/g, '$1')
+      // Fix JSX closing tags with trailing commas
+      .replace(/,(\s*\/>)/g, '$1')
+      // Fix JSX children with trailing commas
+      .replace(/,(\s*<\/[^>]+>)/g, '$1')
+      // Remove standalone commas
+      .replace(/^,;$/gm, '')
+      .replace(/^,$/gm, '')
+      // Fix multiple semicolons
+      .replace(/;+/g, ';')
+      // Fix spaces around colons in CSS
+      .replace(/:\s*;/g, ': ')
+      // Fix malformed JSX attributes
+      .replace(/(\w+)\s*=\s*{([^}]+)}\s*,/g, '$1={$2}')
+      // Fix malformed object properties
+      .replace(/(\w+):\s*([^,}]+)\s*,/g, '$1: $2,')
+      // Clean up extra whitespace
+      .replace(/\s+/g, ' ')
+      .replace(/\n\s*\n/g, '\n');
+    
     fs.writeFileSync(filePath, content);
-    console.log(`✅ Fixed syntax errors in ${filePath}`);
+    console.log(`Fixed: ${filePath}`);
     return true;
   } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-console.log('🔧 Starting syntax error fixes...');
+// Get all TypeScript and JSX files
+const files = [
+  'components/AccessibilityEnhancer.tsx',
+  'components/AccessibilityProvider.tsx',
+  'components/Analytics.tsx',
+  'components/ContactForm.tsx',
+  'components/Header.tsx',
+  'components/Layout.tsx',
+  'components/LoadingSpinner.tsx',
+  'components/OptimizedImage.tsx',
+  'components/PerformanceMonitor.tsx',
+  'components/SEOHead.tsx',
+  'components/SearchBar.tsx',
+  'components/Sidebar.tsx',
+  'components/SimpleLayout.tsx',
+  'components/layout/Footer.tsx',
+  'components/layout/Layout.tsx',
+  'components/layout/MainLayout.tsx',
+  'components/performance/LazyComponent.tsx',
+  'components/performance/OptimizedImage.tsx',
+  'components/ui/EnhancedMarketplaceCard.tsx',
+  'components/ui/InteractiveNavigation.tsx',
+  'components/ui/NotificationSystem.tsx',
+  'hooks/useApi.ts',
+  'hooks/useLocalStorage.ts',
+  'hooks/usePerformanceMonitor.ts',
+  'hooks/useResponsive.ts'
+];
 
 let fixedCount = 0;
-filesToFix.forEach(file => {
-  const fullPath = path.join('/workspace', file);
-  if (fs.existsSync(fullPath)) {
-    if (fixSyntaxErrors(fullPath)) {
-      fixedCount++;
-    }
-  } else {
-    console.log(`⚠️  File not found: ${file}`);
+files.forEach(file => {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
   }
 });
 
-console.log(`\n🎉 Fixed syntax errors in ${fixedCount}/${filesToFix.length} files`);
+console.log(`Fixed ${fixedCount} files`);

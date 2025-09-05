@@ -1,7 +1,19 @@
+const fs = require('fs');
+const { exec, execSync } = require('child_process');
+const { promisify } = require('util');
+
+const execAsync = promisify(exec);
+
+class CompleteImprovementSuite {
+  constructor() {
+    this.reportsDir = './automation-reports';
+    this.projectRoot = process.cwd();
+    this.stats = {
       "mergeConflicts": { resolved: 0, "failed": 0 },
       "syntaxErrors": { fixed: 0, "failed": 0 },
       "prsProcessed": { merged: 0, "failed": 0 },
-      "improvements": { applied: 0, "failed": 0 }};
+      "improvements": { applied: 0, "failed": 0 }
+    };
   }
 
   ensureDirectories() {
@@ -11,7 +23,7 @@
   }
 
   log(message) {
-    .toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`);
   }
 
   async runCommand(command, description, timeout = 60000) {
@@ -171,11 +183,9 @@
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       return (
-<<<<<<< HEAD
+        content.includes('<<<<<<< HEAD') ||
+        content.includes('=======') ||
         content.includes('>>>>>>> ')
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
       );
     } catch (error) {
       return false;
