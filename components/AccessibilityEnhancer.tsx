@@ -14,18 +14,15 @@ const AccessibilityEnhancer: React.FC = () => {
       color: #fff;
       padding: 8px;
       text-decoration: none;
-      z-index: 1000
-    `,
+      z-index: 1000;
+    `;
     document.body.insertBefore(skipLink, document.body.firstChild);
     // Focus management
-    let usingMouse = false;
     const handleMouseDown = () => {
-      usingMouse = true;
-      document.body.classList.add('using-mouse')
+      document.body.classList.add('using-mouse');
     };
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
-        usingMouse = false;
         document.body.classList.remove('using-mouse');
       }
     };
@@ -42,7 +39,7 @@ const AccessibilityEnhancer: React.FC = () => {
     const announcePageChange = (message: string) => {
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {
-        liveRegion.textContent = message,
+        liveRegion.textContent = message;
       }
     };
     // Listen for route changes (Next.js specific)
