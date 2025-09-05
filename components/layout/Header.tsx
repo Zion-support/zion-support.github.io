@@ -57,7 +57,7 @@ const "Header": React.FC = () => {
         <Link href="/" className="text-white font-bold">Zion Tech Group</Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           {navigationItems.map((item) => (
-            <Link key={item.name} href={item.href} className="text-gray-300 hover: text-white">
+            <Link key={item.name} href={item.href} className="text-gray-300 hover:text-white">
               {item.name}
             </Link>
           ))}

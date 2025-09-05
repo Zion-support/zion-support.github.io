@@ -4,33 +4,38 @@ import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
 import Layout from '../components/Layout';
 
-const stats = [{ number: '99.9%', label: 'Uptime Guarantee' },ursor/add-new-services-and-deploy-updates-1b90
+const stats = [
+  { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
   { number: '500+', label: 'Projects Completed' },
   { number: '50+', label: 'Expert Team Members' }
 ];
 
-const services = [{
+const services = [
+  {
     title: "AI Services",
     description: "Cutting-edge artificial intelligence solutions",
     icon: Brain,
-    href: "/ai-services"},
+    href: "/ai-services"
+  },
   {
     title: "IT Services", 
     description: "Comprehensive information technology services",
     icon: Network,
-    href: "/it-services"},
+    href: "/it-services"
+  },
   {
     title: "Micro SaaS",
     description: "Scalable software as a service solutions",
     icon: Cloud,
-    href: "/micro-saas"}ursor/add-new-services-and-deploy-updates-1b90
+    href: "/micro-saas"
+  }
 ];
 
 export default function HomePage() {
   return (
-<MainLayout>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">ursor/add-new-services-and-deploy-updates-1b90
+    <Layout>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         {/* Background Animation */}
@@ -43,13 +48,13 @@ export default function HomePage() {
                   </div>
                   </div>
                   <div className="container mx-auto px-4 relative z-10">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-<h1 className="text-4xl md:text-6xl font-bold mb-6">ursor/add-new-services-and-deploy-updates-1b90
+<h1 className="text-4xl md:text-6xl font-bold mb-6">
               Transform Your Business with{' '}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 AI & Technology
@@ -61,7 +66,7 @@ export default function HomePage() {
                   <span className="text-blue-300 font-semibold">Contact us: +1 302 464 0950 | kleber@ziontechgroup.com</span>
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">ursor/add-new-services-and-deploy-updates-1b90
+                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Get Started Today
               </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
@@ -81,7 +86,7 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }} ">
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">ursor/add-new-services-and-deploy-updates-1b90
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our Core Services
             </h2>
                   <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -99,7 +104,7 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }} whileHover={{ y: -5 }}">
                   <div className="text-blue-600 mb-4 group-hover:text-purple-600 transition-colors">
-                  <IconComponent className="w-10 h-10 md:w-12 md:h-12" />ursor/add-new-services-and-deploy-updates-1b90
+                  <IconComponent className="w-10 h-10 md:w-12 md:h-12" />
                   </div>
                   <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
                     {service.title}
@@ -107,7 +112,7 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
 <p className="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">{service.description}</p>
                   <Link
                     href={service.href}
-                    className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center"ursor/add-new-services-and-deploy-updates-1b90
+                    className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center"
                   >
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -123,7 +128,7 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
       <section className="py-20 bg-white">
 <div className="container mx-auto px-4">
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    {stats.map((stat, index) => (ursor/add-new-services-and-deploy-updates-1b90
+                    {stats.map((stat, index) => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -132,7 +137,7 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-<div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>ursor/add-new-services-and-deploy-updates-1b90
+<div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
                   </motion.div>
             ))}
@@ -229,7 +234,7 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
                   <div className="container mx-auto px-4 text-center">
-                  <motion.divursor/add-new-services-and-deploy-updates-1b90
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -253,7 +258,7 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
               </p>
                   </div>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">ursor/add-new-services-and-deploy-updates-1b90
+                  <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Get Free Consultation
               </Link>
                   <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
@@ -264,6 +269,6 @@ className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-a
                   </div>
                   </section>
                   </div>
-                  </MainLayout>ursor/add-new-services-and-deploy-updates-1b90
+    </Layout>
   );
 }
