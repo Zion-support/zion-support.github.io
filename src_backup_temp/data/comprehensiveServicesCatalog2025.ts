@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/comprehensiveServicesCatalog2025.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -234,3 +236,4 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2025,SPECIALIZED_SERVICES } from "innova
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/comprehensiveServicesCatalog2025.ts

@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/comprehensiveServicesIndex2030.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -106,19 +108,13 @@ export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(s
 =======
   return false});
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/comprehensiveServicesIndex2030.ts
 // Quick Setup Services (< 8 weeks)
 export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
   const setupTime = service.setupTime;
   if (typeof setupTime = == 'string') {;';';
     const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
     return weeks < 8}
-<<<<<<< HEAD
-  return false}
-    );
-
-=======
-  return false});
->>>>>>> main
 // Affordable Services (< $500)
 export const AFFORDABLE_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service =>
   service.price < 500

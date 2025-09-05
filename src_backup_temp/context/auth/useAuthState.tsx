@@ -25,18 +25,6 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : "unkn
   const [onboardingStep, setOnboardingStep] = useState<typeof 0>(0);
   const [tokens, setTokens] = useState<any>({;
 
-<<<<<<< HEAD
-    "accessToken": "nul l",;
-    "refreshToken": "nul l;
-  "});
-;
-  useEffect(() => {;
-  // "TODO": "Add dependencies if needed;
-"}, []);
-    // Check for existing auth state on mount;
-: "src/context/auth/useAuthState.tsx;
-    ;
-=======
     accessToken: nul l,
     refreshToken: nul l
   }
@@ -48,7 +36,6 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : "unkn
     // Check for existing auth state on mount
 :src/context/auth/useAuthState.tsx
     
->>>>>>> main
         if(typeof window !== 'null') {;
           ;
           if(auth) {;

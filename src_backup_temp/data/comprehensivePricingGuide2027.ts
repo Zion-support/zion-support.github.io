@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/comprehensivePricingGuide2027.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListin g[] = [// AI-Powered Micro SAAS Services
@@ -676,3 +678,4 @@ export const "pricingSubcategories2027": unknow n = {};
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/comprehensivePricingGuide2027.ts

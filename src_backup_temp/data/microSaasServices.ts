@@ -1,3 +1,5 @@
+<<<<<<< HEAD:src/data/microSaasServices.ts
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -688,3 +690,4 @@ export interface MicroSaasService { id: string; title: string; description: stri
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main:src_backup_temp/data/microSaasServices.ts

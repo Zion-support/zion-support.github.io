@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 // comment;
 export const cn = {};
@@ -13,6 +15,7 @@ export const cn = {}; return twMerge(clsx (inputs) ) ;,}
 // comment;
 export const cn = {};
   return twMerge(clsx (inputs) ) }
+>>>>>>> main
 >>>>>>> main
 export const cn = {}; return twMerge(clsx (inputs) ) ,}
 >>>>>>> main
