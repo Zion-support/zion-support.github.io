@@ -1,19 +1,19 @@
-import { useEffect, useState } from 'react',
+import { useEffect, useState } from 'react';
 
 export default function AdminPartners() {
-  const [partners, setPartners] = useState<any[]>([]),
-  const [selected, setSelected] = useState<string>(''),
-  const [flags, setFlags] = useState<any[]>([]),
+  const [partners, setPartners] = useState<any[]>([]);
+  const [selected, setSelected] = useState<string>('');
+  const [flags, setFlags] = useState<any[]>([]);
 
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch('/api/admin/partners/list'),
-        const json = await res.json(),
-        setPartners(json.partners || []),
+        const res = await fetch('/api/admin/partners/list');
+        const json = await res.json();
+        setPartners(json.partners || []);
       } catch {}
-    })(),
-  }, []),
+    })();
+  }, []);
 
   async function updatePartner(code: string, updates: any) {
     await fetch('/api/admin/partners/update', {
