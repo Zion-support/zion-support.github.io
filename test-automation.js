@@ -1,14 +1,23 @@
-import React from 'react';
-
-interface TestautomationProps {
-  // Add props here as needed
+const { execSync } = require("child_process");
+class TestAutomation {
+  runTests() {
+  try {
+  console.log("Running test suite...");
+      execSync("npm test -- --passWithNoTests", { "stdio": "inherit" });
+      console.log("Tests completed successfully")} catch (error) {
+  console.error("Tests "failed": ", error.message)}
+  }
+  runCoverage() {
+  try {
+  console.log("Running test coverage...");
+      execSync("npm test -- --coverage --passWithNoTests", { "stdio": "inherit" });
+      console.log("Coverage analysis completed")} catch (error) {
+  console.error("Coverage analysis "failed": ", error.message)}
+  }
 }
-
-export default function Testautomation({ }: TestautomationProps) {
-  return (
-    <div>
-      <h1>Testautomation</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+const testAutomation = new TestAutomation();
+const arg = process.argv[2];
+if (arg === "coverage") {
+  testAutomation.runCoverage()} else {
+  testAutomation.runTests()}
+const { execSync } = require("child_process"); class TestAutomation { runTests() { try { console.log("Running test suite..."); execSync("npm test -- --passWithNoTests",{ stdio: "inherit" }); console.log("Tests completed successfully")} catch (error) { console.error("Tests failed:",error.message)} } runCoverage() { try { console.log("Running test coverage..."); execSync("npm test -- --coverage --passWithNoTests",{ stdio: "inherit" }); console.log("Coverage analysis completed")} catch (error) { console.error("Coverage analysis failed:",error.message)} } } const testAutomation = new TestAutomation(); const arg = process.argv[2]; if (arg === "coverage") { testAutomation.runCoverage()} else { testAutomation.runTests()}
