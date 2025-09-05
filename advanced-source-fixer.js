@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+import fs from 'fs'
+import path from 'path'
+    this.reportFile = path.join(process.cwd(), 'advanced-source-fix-report.json'
+  log(message, level = 'INFO'
+    this.log('Starting advanced source file fixing...'
+    await this.fixDirectory(path.join(process.cwd(), 'src'
+    await this.fixDirectory(path.join(process.cwd(), 'pages'
+        !item.startsWith('.'
+        item !== 'node_modules'
+        item.endsWith('.ts'
+        item.endsWith('.tsx'
+        item.endsWith('.js'
+        item.endsWith('.jsx'
+      const content = fs.readFileSync(filePath, 'utf8'
+      this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR'
+      /'from'
+      /','
+      /';'
+      /'\)'
+      /'\}'
+      content.includes('from'
+      !content.includes('import'
+      !content.includes('export'
+    fixed = fixed.replace(/"[^"]*$/gm, '"
+    fixed = fixed.replace(/'[^']*$/gm, "
