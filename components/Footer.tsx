@@ -191,7 +191,7 @@ export default function Footer() {
                 href={link.href}
                 className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
               >
-                {link.label}
+                {link.name}
               </Link>
             ))}
           </div>
