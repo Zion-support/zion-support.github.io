@@ -1,9 +1,7 @@
 import React from 'react'
 import MainLayout from '../components/layout/MainLayout'
-import { motion } from 'framer-motion
+import { motion } from 'framer-motion'
 import {
-  // TODO: Implement
-}
   Shield, 
   Settings, 
   CheckCircle, 
@@ -11,36 +9,36 @@ import {
   Cookie,
   Eye,
   Lock,
-  Globe;'
-} from 'lucide-react
+  Globe
+} from 'lucide-react'
 const cookieTypes = [
-  {'
+  {
     title: "Essential Cookies",
     description: "These cookies are necessary for the website to function and cannot be switched off in our systems.",
-    required: true,]
-    examples: [Authentication", "Security", "Load balancing", "User preferences"],
-    icon: Shield;
+    required: true,
+    examples: ["Authentication", "Security", "Load balancing", "User preferences"],
+    icon: Shield
   },
   {
     title: "Analytics Cookies",
     description: "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site.",
     required: false,
-    examples: [Google Analytics", "Page views", "User behavior", "Performance metrics"],
-    icon: Eye;
+    examples: ["Google Analytics", "Page views", "User behavior", "Performance metrics"],
+    icon: Eye
   },
   {
     title: "Functional Cookies",
     description: "These cookies enable the website to provide enhanced functionality and personalization.",
     required: false,
-    examples: [Language preferences", "Region settings", "Customization", "User interface"],
-    icon: Settings;
+    examples: ["Language preferences", "Region settings", "Customization", "User interface"],
+    icon: Settings
   },
   {
     title: "Marketing Cookies",
     description: "These cookies may be set through our site by our advertising partners to build a profile of your interests.",
     required: false,
-    examples: [Advertising", "Social media", "Retargeting", "Personalized content"],
-    icon: Globe;
+    examples: ["Advertising", "Social media", "Retargeting", "Personalized content"],
+    icon: Globe
   }
 ];
 
@@ -74,34 +72,30 @@ const cookieDetails = [
     purpose: "Tracks marketing consent status",
     duration: "1 year",
     type: "Marketing"
-  }]
+  }
 ];
 
 export default function CookiesPage() {
   return (
-    <MainLayout;"
+    <MainLayout
       title="Cookie Policy - Zion Tech Group"
       description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience and analyze website usage."
     >
-</MainLayout>"
-      <div className="min-h-screen bg-gray-50">"
-</div>"
-        <section className="bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">"
-</section>"
-          <div className="container mx-auto px-4">"
-</div>
-            <motion.div;
+      <div className="min-h-screen bg-gray-50">
+        <section className="bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">"
-</h1>"
-                <span className="bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">"
-</span>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
+                  Cookie Policy
                 </span>
+              </h1>
               </h1>"
               <p className="text-xl md:text-2xl text-gray-300 mb-8">"
 </p>
@@ -296,10 +290,10 @@ export default function CookiesPage() {
                         <td className="px-6 py-4">"
 </td>
                           <span className={`px-2 py-1 text-xs rounded-full ${
-                            cookie.type === 'Essential' ? 'bg-red-100 text-red-800' :''
-                            cookie.type === 'Analytics' ? 'bg-blue-100 text-blue-800' :''
-                            cookie.type === 'Functional' ? 'bg-green-100 text-green-800' :''
-                            'bg-purple-100 text-purple-800''
+                            cookie.type === 'Essential' ? 'bg-red-100 text-red-800' :
+                            cookie.type === 'Analytics' ? 'bg-blue-100 text-blue-800' :
+                            cookie.type === 'Functional' ? 'bg-green-100 text-green-800' :
+                            'bg-purple-100 text-purple-800'
                           }`}>
 </span>
                           </span>

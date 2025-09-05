@@ -42,7 +42,7 @@ const services = ['
 
 export default function CloudDevOpsPage() {
   return (
-    <Layout;'
+    <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
       description="Expert cloud migration, infrastructure automation, and DevOps solutions. Transform your operations with scalable, secure cloud infrastructure."
     >

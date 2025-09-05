@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import MainLayout from '../components/layout/MainLayout'
 import Link from 'next/link'
-import { motion } from 'framer-motion
+import { motion } from 'framer-motion'
 import {
-  // TODO: Implement
-}
   BarChart3, 
   Search, 
   Filter,
@@ -20,15 +18,15 @@ import {
   Shield,
   Zap,
   Award,
-  ChevronRight;'
-} from 'lucide-react
-const caseStudyCategories = ['
+  ChevronRight
+} from 'lucide-react'
+const caseStudyCategories = [
   { name: "All", count: 25, active: true },
   { name: "AI Solutions", count: 8, active: false },
   { name: "IT Services", count: 6, active: false },
   { name: "Micro SaaS", count: 5, active: false },
   { name: "Enterprise", count: 4, active: false },
-  { name: "Startup", count: 2, active: false }]
+  { name: "Startup", count: 2, active: false }
 ];
 
 const caseStudies = [
@@ -42,17 +40,17 @@ const caseStudies = [
     results: "60% reduction in support costs, 40% faster response times",
     category: "AI Solutions",
     duration: "3 months",
-    teamSize: "8 developers",]
-    technologies: [AI/ML", "NLP", "Python", "AWS"],
+    teamSize: "8 developers",
+    technologies: ["AI/ML", "NLP", "Python", "AWS"],
     featured: true,
-    metrics: {,
-  costReduction: "60%",
+    metrics: {
+      costReduction: "60%",
       responseTime: "40%",
       customerSatisfaction: "85%",
       roi: "300%"
     },
-    testimonial: {,
-  quote: "The AI solution transformed our customer service operations. We've seen incredible improvements in efficiency and customer satisfaction.",
+    testimonial: {
+      quote: "The AI solution transformed our customer service operations. We've seen incredible improvements in efficiency and customer satisfaction.",
       author: "Sarah Johnson",
       role: "VP of Customer Experience"
     }
@@ -68,15 +66,15 @@ const caseStudies = [
     category: "IT Services",
     duration: "6 months",
     teamSize: "12 developers",
-    technologies: [AWS", "Docker", "Kubernetes", "Terraform"],
+    technologies: ["AWS", "Docker", "Kubernetes", "Terraform"],
     featured: true,
-    metrics: {,
-  costReduction: "50%",
+    metrics: {
+      costReduction: "50%",
       uptime: "99.9%",
       performance: "300%",
       roi: "250%"
     },
-    testimonial: {,
+    testimonial: {
   quote: "The migration was seamless and the results exceeded our expectations. Our infrastructure is now more reliable and cost-effective.",
       author: "Michael Chen",
       role: "CTO"
@@ -93,15 +91,15 @@ const caseStudies = [
     category: "Micro SaaS",
     duration: "4 months",
     teamSize: "6 developers",
-    technologies: [React", "Node.js", "PostgreSQL", "Redis"],
+    technologies: ["React", "Node.js", "PostgreSQL", "Redis"],
     featured: false,
-    metrics: {,
-  users: "10,000+",
+    metrics: {
+      users: "10,000+",
       mrr: "$50K",
       satisfaction: "95%",
       growth: "400%"
     },
-    testimonial: {,
+    testimonial: {
   quote: "The platform has been instrumental in our growth. The team delivered exactly what we needed and more.",
       author: "Emily Rodriguez",
       role: "Founder & CEO"
@@ -118,15 +116,15 @@ const caseStudies = [
     category: "IT Services",
     duration: "5 months",
     teamSize: "10 developers",
-    technologies: [Security", "Compliance", "Monitoring", "Encryption"],
+    technologies: ["Security", "Compliance", "Monitoring", "Encryption"],
     featured: false,
-    metrics: {,
-  compliance: "100%",
+    metrics: {
+      compliance: "100%",
       incidents: "0",
       auditScore: "A+",
       roi: "200%"
     },
-    testimonial: {,
+    testimonial: {
   quote: "The security implementation was thorough and professional. We now have complete confidence in our data protection.",
       author: "Dr. James Wilson",
       role: "Chief Information Officer"
@@ -143,15 +141,15 @@ const caseStudies = [
     category: "AI Solutions",
     duration: "4 months",
     teamSize: "7 developers",
-    technologies: [Machine Learning", "Python", "TensorFlow", "APIs"],
+    technologies: ["Machine Learning", "Python", "TensorFlow", "APIs"],
     featured: false,
-    metrics: {,
-  costReduction: "30%",
+    metrics: {
+      costReduction: "30%",
       accuracy: "95%",
       efficiency: "45%",
       roi: "180%"
     },
-    testimonial: {,
+    testimonial: {
   quote: "The AI solution has revolutionized our inventory management. We've eliminated stockouts and reduced costs significantly.",
       author: "Lisa Thompson",
       role: "Operations Director"
@@ -168,15 +166,15 @@ const caseStudies = [
     category: "Micro SaaS",
     duration: "3 months",
     teamSize: "5 developers",
-    technologies: [Vue.js", "Laravel", "MySQL", "APIs"],
+    technologies: ["Vue.js", "Laravel", "MySQL", "APIs"],
     featured: false,
-    metrics: {,
-  conversion: "200%",
+    metrics: {
+      conversion: "200%",
       timeSavings: "50%",
       userAdoption: "90%",
       roi: "150%"
     },
-    testimonial: {,
+    testimonial: {
   quote: "The custom CRM has transformed our business. Our team is more efficient and our conversion rates have skyrocketed.",
       author: "Robert Davis",
       role: "Managing Partner"
@@ -188,10 +186,10 @@ const featuredCaseStudies = caseStudies.filter(caseStudy => caseStudy.featured);
 const regularCaseStudies = caseStudies.filter(caseStudy => !caseStudy.featured);
 
 export default function CaseStudiesPage() {
-  const [selectedCategory, setSelectedCategory] = useState('All');''
-  const [searchQuery, setSearchQuery] = useState('');'
-  const filteredCaseStudies = caseStudies.filter(caseStudy => {'
-    const matchesCategory = selectedCategory === 'All' || caseStudy.category === selectedCategory;')
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const filteredCaseStudies = caseStudies.filter(caseStudy => {
+    const matchesCategory = selectedCategory === 'All' || caseStudy.category === selectedCategory;
     const matchesSearch = caseStudy.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          caseStudy.client.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          caseStudy.industry.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -200,29 +198,25 @@ export default function CaseStudiesPage() {
   });
 
   return (
-    <MainLayout;'
+    <MainLayout
       title="Case Studies - Zion Tech Group"
       description="Real-world success stories and case studies showcasing how we've helped businesses achieve their goals with technology solutions."
     >
-</MainLayout>"
-      <div className="min-h-screen bg-gray-50">"
-</div>"
-        <section className="bg-gradient-to-br from-emerald-900 via-blue-900 to-indigo-900 text-white py-20">"
-</section>"
-          <div className="container mx-auto px-4">"
-</div>
-            <motion.div;
+      <div className="min-h-screen bg-gray-50">
+        <section className="bg-gradient-to-br from-emerald-900 via-blue-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">"
-</h1>"
-                <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">"
-</span>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
+                  Case Studies
                 </span>
+              </h1>
               </h1>"
               <p className="text-xl md:text-2xl text-gray-300 mb-8">"
 </p>

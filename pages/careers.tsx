@@ -1,10 +1,8 @@
 import React from 'react'
 import MainLayout from '../components/layout/MainLayout'
 import Link from 'next/link'
-import { motion } from 'framer-motion
+import { motion } from 'framer-motion'
 import {
-  // TODO: Implement
-}
   Users, 
   MapPin, 
   Clock, 
@@ -17,39 +15,39 @@ import {
   Coffee,
   Laptop,
   BookOpen,
-  Target;'
-} from 'lucide-react
+  Target
+} from 'lucide-react'
 const benefits = [
-  {'
+  {
     title: "Competitive Compensation",
     description: "Above-market salaries and performance bonuses",
-    icon: Award;
+    icon: Award
   },
   {
     title: "Health & Wellness",
     description: "Comprehensive health, dental, and vision insurance",
-    icon: Heart;
+    icon: Heart
   },
   {
     title: "Flexible Work",
     description: "Remote work options and flexible schedules",
-    icon: Laptop;
+    icon: Laptop
   },
   {
     title: "Learning & Development",
     description: "Professional development budget and training programs",
-    icon: BookOpen;
+    icon: BookOpen
   },
   {
     title: "Team Building",
     description: "Regular team events and company retreats",
-    icon: Users;
+    icon: Users
   },
   {
     title: "Innovation Time",
     description: "Dedicated time for personal projects and innovation",
-    icon: Zap;
-  }]
+    icon: Zap
+  }
 ];
 
 const openPositions = [
@@ -64,9 +62,9 @@ const openPositions = [
       "5+ years of full-stack development experience",
       "Expertise in React, Node.js, and TypeScript",
       "Experience with cloud platforms (AWS, Azure, or GCP)",
-      "Strong problem-solving and communication skills"]
+      "Strong problem-solving and communication skills"
     ],
-    featured: true;
+    featured: true
   },
   {
     title: "AI/ML Engineer",
@@ -79,9 +77,9 @@ const openPositions = [
       "3+ years of ML/AI development experience",
       "Proficiency in Python, TensorFlow, and PyTorch",
       "Experience with MLOps and model deployment",
-      "Knowledge of cloud ML services"]
+      "Knowledge of cloud ML services"
     ],
-    featured: true;
+    featured: true
   },
   {
     title: "DevOps Engineer",
@@ -94,9 +92,9 @@ const openPositions = [
       "4+ years of DevOps experience",
       "Expertise in AWS, Docker, and Kubernetes",
       "Experience with CI/CD tools (Jenkins, GitLab CI)",
-      "Infrastructure as Code (Terraform, CloudFormation)"]
+      "Infrastructure as Code (Terraform, CloudFormation)"
     ],
-    featured: false;
+    featured: false
   },
   {
     title: "Product Manager",
@@ -109,9 +107,9 @@ const openPositions = [
       "3+ years of product management experience",
       "Experience with B2B SaaS products",
       "Strong analytical and communication skills",
-      "Technical background preferred"]
+      "Technical background preferred"
     ],
-    featured: false;
+    featured: false
   },
   {
     title: "Sales Engineer",
@@ -124,9 +122,9 @@ const openPositions = [
       "2+ years of technical sales experience",
       "Strong technical background",
       "Excellent presentation and communication skills",
-      "Experience with enterprise software sales"]
+      "Experience with enterprise software sales"
     ],
-    featured: false;
+    featured: false
   },
   {
     title: "UX/UI Designer",
@@ -139,9 +137,9 @@ const openPositions = [
       "3+ years of UX/UI design experience",
       "Proficiency in Figma, Sketch, or Adobe XD",
       "Experience with design systems",
-      "Portfolio demonstrating B2B product design"]
+      "Portfolio demonstrating B2B product design"
     ],
-    featured: false;
+    featured: false
   }
 ];
 
@@ -149,23 +147,23 @@ const culture = [
   {
     title: "Innovation First",
     description: "We encourage experimentation and innovative thinking in everything we do.",
-    icon: Zap;
+    icon: Zap
   },
   {
     title: "Collaborative Environment",
     description: "Open communication and teamwork are at the heart of our culture.",
-    icon: Users;
+    icon: Users
   },
   {
     title: "Continuous Learning",
     description: "We invest in our team's growth with learning opportunities and development programs.",
-    icon: BookOpen;
+    icon: BookOpen
   },
   {
     title: "Work-Life Balance",
     description: "We believe in sustainable work practices and supporting our team's well-being.",
-    icon: Heart;
-  }]
+    icon: Heart
+  }
 ];
 
 const testimonials = [
@@ -186,18 +184,16 @@ const testimonials = [
     role: "Product Manager",
     content: "The collaborative culture and focus on innovation make this an amazing place to work. I love being part of building solutions that make a real impact.",
     avatar: "EJ"
-  }]
+  }
 ];
 
 export default function CareersPage() {
   return (
-    <MainLayout;"
+    <MainLayout
       title="Careers - Zion Tech Group"
       description="Join our team of innovative technologists. Explore career opportunities at Zion Tech Group and help us build the future of technology."
     >
-</MainLayout>"
       <div className="min-h-screen bg-gray-50">"
-</div>"
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
 </section>"
           <div className="container mx-auto px-4">"

@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Check, X, Star, Zap, Shield, Users, ArrowRight } from 'lucide-react
+import { Check, X, Star, Zap, Shield, Users, ArrowRight } from 'lucide-react'
+
 const plans = [
-  {'
+  {
     name: "Starter",
     price: "$2,000",
     period: "/month",
@@ -115,16 +116,13 @@ const faqs = [
 ];
 
 export default function PricingPage() {
-  const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'yearly'>('monthly');'
-  return ('
-    <div className="min-h-screen bg-gray-50">"
-</div>
+  const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'yearly'>('monthly');
+  return (
+    <div className="min-h-screen bg-gray-50">
       <Head>
-</Head>
-        <title>Pricing - Zion Tech Group</title>"
-        <meta name="description" content="Transparent pricing for AI solutions, IT services, and technology consulting. Choose the plan that fits your business needs." />"
-</meta>
-      </Head>"
+        <title>Pricing - Zion Tech Group</title>
+        <meta name="description" content="Transparent pricing for AI solutions, IT services, and technology consulting. Choose the plan that fits your business needs." />
+      </Head>
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">"
 </section>"
         <div className="container mx-auto px-4">"
@@ -223,7 +221,7 @@ export default function PricingPage() {
                     <Link;"
                       href={plan.name === 'Enterprise' ? '/contact' : '/contact'}'
                       className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-                        plan.popular;'
+                        plan.popular
                           ? 'bg-blue-600 text-white hover:bg-blue-700'''
                           : 'bg-gray-900 text-white hover:bg-gray-800''
                       }`}
