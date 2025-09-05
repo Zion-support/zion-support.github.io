@@ -1,1 +1,5 @@
-import React from 'react'; export const "SkipLink": React.FC = () => {; return(; <a; href="#main-content";" className="skip-link"; data-skip-link; >;" Skip to main content;";" </a>;";" );" };";";
+<<<<<<< HEAD
+const React from "react"; export const SkipLink: React.FC = () => {; return(; <a; href="#main-content";" className="skip-link"; data-skip-link; >;" Skip to main content;";" </a>;";" );" };";";'"'"
+=======
+import _React from 'react'; export const "SkipLink": _React.FC = () => {; return(; <a; href="#main-content";" className="skip-link"; data-skip-link; >;" Skip to main content;";" </a>;";" );" };";";
+>>>>>>> main

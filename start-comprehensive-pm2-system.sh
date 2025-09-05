@@ -169,7 +169,7 @@ save_pm2_config() {
 # Main execution
 main() {
     print_header "Starting Comprehensive PM2 System"
-    echo "=========================================="
+    echo ""
     
     # Pre-flight checks
     check_node
