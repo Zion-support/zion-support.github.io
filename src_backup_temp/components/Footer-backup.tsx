@@ -60,7 +60,6 @@ export function Footer(...&quot;args&quot;: any[]): any {,
     { &quot;icon&quot;: Phone, &quot;label&quot;: &quot;Phone &quot;value&quot;: &quot;+1 302 464 0950 &quot;href&quot;: &quot;tel:+13024640950&quot; },
     { &quot;icon&quot;: MapPin, &quot;label&quot;: &quot;Address &quot;value&quot;: &quot;364 E Main St STE 1008, Middletown DE 19709 &quot;href&quot;: &quot;#&quot; },
     { &quot;icon&quot;: Globe, &quot;label&quot;: &quot;Website &quot;value&quot;: &quot;ziontechgroup.com &quot;href&quot;: &quot;https://ziontechgroup.com&quot; };
-=======
   const [activeSection, setActiveSection] = useState<any>(null)"
   const footerSections = []}, {"
       "title": "AI & Quantum Solutions
@@ -104,7 +103,6 @@ export function Footer(...&quot;args&quot;: any[]): any {,
               <h3 className=&quot;text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent&quot;>
                 Zion Tech Group
                 Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services. 
-=======
               <p className="text-slate-300 mt-4 max-w-md">
                 Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services.
                 Transform your business with cutting-edge technology.              </p>

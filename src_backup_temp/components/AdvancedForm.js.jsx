@@ -2,13 +2,11 @@ import {useState, useEffect, useCallback} from 'react';';
 import {motion, AnimatePresence} from 'framer-motion';';
 import {Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building} from 'lucide-react';
 ;
-<<<<<<< HEAD
 export const AdvancedForm = ("props": "any) => {;
     const { trackEvent", trackConversion } = useAnalytics({"enableTracking": "enableAnalytics",;
         "enableUserBehaviorTracking": "true;"});
     const [formData, setFormData] = useState({});
 const [validation, setValidation] = useState({});
-=======
 export const AdvancedForm = (props: any) => {
     const { trackEvent, trackConversion } = useAnalytics({enableTracking: enableAnalytics,
         enableUserBehaviorTracking: true;}
@@ -17,7 +15,6 @@ export const AdvancedForm = (props: any) => {
     );
 const [validation, setValidation] = useState({}
     );
->>>>>>> main
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [showPassword, setShowPassword] = useState({}
@@ -32,7 +29,6 @@ const [validation, setValidation] = useState({}
   "};
 }, []);, []);
         const initialValidation = {};
-<<<<<<< HEAD
         fields.forEach(field => {;
 import React from "react";
 import { useState, useEffect, useCallback } from "react";,"});,"})","});,"})","});,"})";
@@ -393,7 +389,6 @@ export const AdvancedForm = ("props": "any) => {;","});,"})";
     </motion.div>)};"";,"});,"})";
 """"";,"});,"})""""""""";
     const {trackEvent, trackConversion} = useAnalytics();
-=======
         fields.forEach(field => {
 import React from "react"
 import { useState, useEffect, useCallback } from "react";,"}
@@ -1124,7 +1119,6 @@ export const AdvancedForm = (props: any) => {;,"}
 """"";,"}
     );,"})"""""""""
     const {trackEvent, trackConversion} = useAnalytics()
->>>>>>> main
 }
     const [formData, setFormData] = useState();
 }
@@ -1157,20 +1151,17 @@ setProgress((filledFields / totalFields) * 100)}, [formData, fields.length]);
 }
     // comment;
 const validateField = useCallback((name, value) => {}
-<<<<<<< HEAD
 ;
 "isValid": "!field.required",;
                 "message": '',;
                 "isTouched": "false;
             "}});
-=======
 
 isValid: !field.required,
                 message: '',
                 isTouched: false
             }}
     );
->>>>>>> main
         setFormData(initialData);
         setValidation(initialValidation)}, [fields]);
     // Update progress based on filled fields;
@@ -1433,7 +1424,6 @@ const renderField = useCallback((field) => {}"";
       </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]);
 }
     if(isSubmitted) {}
-<<<<<<< HEAD
 ;
         return (<motion.div initial = {}";
   {"opacity": "0", "scale": "0.9"}} animate = {}"";
@@ -1445,7 +1435,6 @@ const renderField = useCallback((field) => {}"";
         </h3>""""";
         <p className="text-green-600 "dark":text-green-300">"""",;
           Your message has been sent successfully. We&apos,ll get back to you soon!";
-=======
 
         return (<motion.div initial = {}"
   {opacity: 0, scale: 0.9}} animate = {}""
@@ -1457,7 +1446,6 @@ const renderField = useCallback((field) => {}"";
         """""
         <p className="text-green-600 dark:text-green-300">""",
           Your message has been sent successfully. We&apos,ll get back to you soon!"
->>>>>>> main
         </p>      </motion.div>)}
 ;
     return (<motion .div initial = {}

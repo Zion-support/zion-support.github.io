@@ -1,20 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';'''';';
 import ReactMarkdown from 'react-markdown';'''';';
 import {Header} from '@/components/Header';'''';';
 import {Footer} from '@/components/Footer';'''';';
-=======
-=======
->>>>>>> main
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
 import SEO from '@/components/SEO';
 const markdown = ```;
 # Privacy Policy```;
@@ -52,15 +43,9 @@ export {PrivacyPolicy};
 export {PrivacyPolicy};
 ;
 export {PrivacyPolicy};
-<<<<<<< HEAD
-<<<<<<< HEAD
 ';
 </SEO>;';;';
-=======
 ;
 </SEO>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 ;
 </SEO>;
->>>>>>> main

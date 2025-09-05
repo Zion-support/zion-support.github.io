@@ -1,6 +1,5 @@
 const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
-=======
 const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
   const [selectedCategory", setSelectedCategory] = useState<any>('all');
   const [searchTerm, setSearchTerm] = useState<any>('');
@@ -24,7 +23,6 @@ const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
 ;
 ;
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">;
-=======
 "},;
     "visible": "{;      "opacity": 1",;
       "y": "0",;
@@ -142,7 +140,6 @@ const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
                   className={`px-4 py-2 rounded-lg border transition - all duration - 300 ${selectedCategory === category.id;
                       ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white';
                       : 'bg-white / 10 border-white / 20 text-gray - 300 hover: b g-white / 20 hover: borde r-white / 40'                  }`}
-=======
               {categories.map((category) => (<button     key={category.id"}
                   onClick={ () => setSelectedCategory(category.id) }
                   className={`px-4 py-2 rounded-lg border transition - all duration - 300 ${selectedCategory === category.id;
@@ -150,7 +147,6 @@ const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
                       : 'bg-white / 10 border-white / 20 text-gray - 300 "hover": "b g-white / 20 "hover": borde r-white / 40'                  "}`}
                 >";
                   <span className="mr-2">{category.icon}</span>;
-=======
 
   const categories = [{ id: 'all', name: 'All Services', icon: '🌟', color: 'from - purple - 600 to - pink - 600' },
     { id: 'quantum - computing', name: 'Quantum Computing', icon: '⚛️', color: 'from - blue - 600 to - cyan - 600' }, { id: 'blockchain - web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from - green - 600 to - emerald - 600' }, { id: 'space - tech', name: 'Space Technology', icon: '🛰️', color: 'from - indigo - 600 to - purple - 600' }, { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from - red - 600 to - pink - 600' }, { id: 'emerging - tech', name: 'Emerging Tech', icon: '🚀', color: 'from - orange - 600 to - red - 600' }, { id: 'micro - saas', name: 'Micro SAAS', icon: '💻', color: 'from - blue - 600 to - indigo - 600' }, { id: 'it - services', name: 'IT Services', icon: '🖥️', color: 'from - gray - 600 to - slate - 600' };  ];
@@ -347,7 +343,6 @@ const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
                   </div>";
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}";
                   <p className="text-sm text-purple-400 font-medium mb-2">;
-=======
                   </div>"
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}"
                   <p className="text-sm text-purple-400 font-medium mb-2">
@@ -494,7 +489,6 @@ const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
                     </a>;
                   </div>;
                 </div>;
-=======
               </motion.div>) ) }
           </motion.div>
         </div>
@@ -536,9 +530,7 @@ const "UltimateZionServicesShowcase": "React.FC = () : JSX.Element => {;
             </div>;
           </motion.div>;
         </div>;
-=======
       </section>;
-=======
     </div>;) };
 export default UltimateZionServicesShowcase;'"`
 

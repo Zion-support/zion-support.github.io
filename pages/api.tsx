@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+import Layout from '../components/Layout';
 import { Code, Book, Zap, Shield, Globe, Database, Server, Lock, CheckCircle, ArrowRight } from 'lucide-react';
 
 const apiServices = [
@@ -8,9 +10,18 @@ const apiServices = [
     features: ['RESTful Design', 'JSON Responses', 'HTTP Status Codes', 'Error Handling']
   },
   {
-import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
-import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+    title: 'GraphQL API',
+    description: 'Flexible query language for APIs',
+    icon: Database,
+    features: ['Single Endpoint', 'Real-time Subscriptions', 'Type Safety', 'Introspection']
+  },
+  {
+    title: 'WebSocket API',
+    description: 'Real-time bidirectional communication',
+    icon: Zap,
+    features: ['Real-time Updates', 'Low Latency', 'Persistent Connections', 'Event-driven']
+  }
+];
 
 export default function APIPage() {
   const apiFeatures = [

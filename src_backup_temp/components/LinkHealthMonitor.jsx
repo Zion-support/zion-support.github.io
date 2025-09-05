@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, {useState, useEffect} from 'react';'''';';
-=======
 import React, {useState, useEffect} from 'react';'''
->>>>>>> main
 import {motion} from 'framer-motion';
 import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = ("props": "any) => {"}
     const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +10,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
     // Sample data based on the analysis report;
     const sampleLinks = []
         {}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -61,7 +56,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             "lastChecked": "new Date()",''';
             "parentPage": 'Contact',''';
             "linkText": 'Email';
-=======
 '
 ''
 '''
@@ -109,7 +103,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             parentPage: 'Contact','''
             linkText: 'Email'
 
-<<<<<<< HEAD
     ];
     useEffect ( () => {}
         setLinkStatuses (sampleLinks) ;
@@ -118,7 +111,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
         const totalLinks = links.length;'';';
         const healthyLinks = links.filter(l => l.status === 'healthy').length;'';';
         const brokenLinks = links.filter(l => l.status === 'broken').length;'';';
-=======
 import React, {useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
 import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = (props: any) => {}
@@ -176,22 +168,14 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             lastChecked: new Date(),''';
             parentPage: 'Contact',''';
             linkText: 'Email';
-=======
->>>>>>> main
->>>>>>> main
     ];
     useEffect ( () => {}
         setLinkStatuses (sampleLinks) ;
         generateReport (sampleLinks) }, []) ;
-<<<<<<< HEAD
     const generateReport = ("props": "any) => {"}
         const totalLinks = links.length;';
         const healthyLinks = links.filter(l => l.status === 'healthy').length;';
         const brokenLinks = links.filter(l => l.status === 'broken').length;';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
         const externalLinks = links.filter(l => l.status === 'external').length;
         const avgResponseTime = links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks;
         setReport({}
@@ -201,7 +185,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             externalLinks,;
             "averageResponseTime": "avgResponseTime",;
             "lastUpdated": "new Date () "}) };
-=======
     const generateReport = (props: any) => {}
         const totalLinks = links.length;'
         const healthyLinks = links.filter(l => l.status === 'healthy').length;'
@@ -215,14 +198,11 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             externalLinks,
             averageResponseTime: avgResponseTime,
             lastUpdated: new Date () }) };
->>>>>>> main
     const startMonitoring = async () => {}
         setIsMonitoring(true) ;
         // Simulate link checking;
         await new Promise(resolve => setTimeout (resolve, 2000) ) ;
         setIsMonitoring(false) };
-<<<<<<< HEAD
-<<<<<<< HEAD
     const getStatusIcon = (props: any) => {}';
         switch (status) {}';';
 '';';
@@ -254,13 +234,9 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
 ''';';
 '''';';
         if (selectedFilter === 'all')
-=======
     const getStatusIcon = (props: any) => {}
-=======
     const getStatusIcon = ("props": "any) => {"}
->>>>>>> main
         switch (status) {}
-<<<<<<< HEAD
 ';
             case 'healthy': "any;
                 return <CheckCircle className="w-4 h-4 text-green-400" />;'""";
@@ -270,7 +246,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                 return <ExternalLink className="w-4 h-4 text-blue-400" />;""";
             "default":"""";
                 return <RefreshCw className="w-4 h-4 text-yellow-400" />"}
-=======
 '
             case 'healthy': any;
                 return <CheckCircle className="w-4 h-4 text-green-400" />;'"""
@@ -280,11 +255,9 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                 return <ExternalLink className="w-4 h-4 text-blue-400" />;"""
             default:""""
                 return <RefreshCw className="w-4 h-4 text-yellow-400" />}
->>>>>>> main
     };
     const getStatusColor = ("props": "any) => {"}
         switch (status) {}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -295,7 +268,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             case 'external':'''';
                 return 'text-blue-400';''';
             "default":'''';
-=======
 '
 ''
 '''
@@ -306,24 +278,18 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             case 'external':''''
                 return 'text-blue-400';'''
             default:''''
->>>>>>> main
                 return 'text-yellow-400'}
     };
     const filteredLinks = linkStatuses.filter(link => {}
-<<<<<<< HEAD
 ';
 '';
 ''';
         if (selectedFilter === 'all');
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 '
 ''
 '''
         if (selectedFilter === 'all')
->>>>>>> main
             return true;
-<<<<<<< HEAD
         return link.status === selectedFilter});
     return (<>""";
       {/* Floating Action Button */}"""";
@@ -355,8 +321,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
               </div>"""";
               <p className="text-cyan-100 mt-2">;
                 Monitor and maintain the health of all website links;
-<<<<<<< HEAD
-<<<<<<< HEAD
               </p>
             </div>
 """
@@ -434,9 +398,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                           Response Time"""
                         </th>""""
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
-=======
-=======
->>>>>>> main
               </p>;
             </div>;
 """;
@@ -512,10 +473,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                           Response Time""";
                         </th>"""";
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">;
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
                           Last Checked;
                         </th>;
                       </tr>""";
@@ -538,7 +495,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                               </a>"""";
                               {link.linkText && (<div className="text-xs text-gray-400 mt-1">;
                                   "Text": "{link.linkText"}
-=======
         return link.status === selectedFilter}
     );
     return (<>"""
@@ -668,8 +624,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                               </a>""""
                               {link.linkText && (<div className="text-xs text-gray-400 mt-1">
                                   Text: {link.linkText}
-<<<<<<< HEAD
-<<<<<<< HEAD
                                     </div>
   );
 }
@@ -682,7 +636,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                             {link.responseTime ? `${link.responseTime}ms` : 'N/A'}"""
                           </td>""""
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
-=======
                                 </div>) }
                             </div>""";
                           </td>"""";
@@ -693,9 +646,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                             {link.responseTime ? `${link.responseTime}ms` : 'N/A'}""";
                           </td>"""";
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
                                 </div>) }
                             </div>"""
                           </td>""""
@@ -706,7 +656,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                             {link.responseTime ? `${link.responseTime}ms` : 'N/A'}"""
                           </td>""""
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
->>>>>>> main
                             {link.lastChecked.toLocaleDateString()}
                           </td>
                         </tr>) ) }
@@ -734,7 +683,6 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
     </>)};
 export default LinkHealthMonitor;
 }}}}
-<<<<<<< HEAD
 ;
 export {LinkHealthMonitor};
 ;
@@ -745,17 +693,13 @@ export {LinkHealthMonitor};
 export {LinkHealthMonitor};
 ;
 export {LinkHealthMonitor};
-<<<<<<< HEAD
 
 </motion>';
 </motion>;';;';
-=======
 ;
 </motion>;
 </motion>;
 </motion>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 
 export {LinkHealthMonitor};
 
@@ -770,4 +714,3 @@ export {LinkHealthMonitor};
 </motion>
 </motion>
 </motion>
->>>>>>> main

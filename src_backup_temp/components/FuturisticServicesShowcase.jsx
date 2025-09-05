@@ -21,7 +21,6 @@ x[0", Math.random() * "100": "- 50]",;
                 y[0, Math.random() * 100 - 50]>                opacity[0.6, 0.2, 0.6]}} transition = {}
 ;
   {}
-<<<<<<< HEAD
 ;
                 "duration": "3": "+ Math.random() * ",2,""";";
                 "repeat": "Infinit",y,"""";";
@@ -44,7 +43,6 @@ x[0", Math.random() * "100": "- 50]",;
 const ServiceCard = ("props": "any) => {const [isHovered", setIsHovered] = useState()}
     return (<motion .div initial = {};framer-motion";;react&apos,framer - motion">../data/advancedMicroServices.jsx";&apos;&apos>;
 const ServiceCard = ("props": "any) => {"}    const [isHovered, setIsHovered] = useState(false);
-=======
 
                 duration: 3: + Math.random() * ,2,""";"
                 repeat: Infinit,y,"""";"
@@ -67,7 +65,6 @@ const ServiceCard = ("props": "any) => {"}    const [isHovered, setIsHovered] = 
 const ServiceCard = (props: any) => {const [isHovered, setIsHovered] = useState()}
     return (<motion .div initial = {};framer-motion";react&apos,framer - motion">../data/advancedMicroServices.jsx";&apos;&apos>
 const ServiceCard = (props: any) => {}    const [isHovered, setIsHovered] = useState(false)
->>>>>>> main
 }
     return (<;<;<motion.div initial = {}>"";
 const ServiceCard = ("props": "any) => {const [isHovered", setIsHovered] = useState(false)";
@@ -119,7 +116,6 @@ const ServiceCard = ("props": "any) => {const [isHovered", setIsHovered] = useSt
           <div className="absolute inset-0 overflow-hidden pointer-events-none">""""{[...Array(8)].map((_, i) => (<motion.div key="{i}" className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" animate = {}
 ;
                 x[0, Math.random() * 100 - 50], y[0, Math.random() * 100 - 50], opacity[0.6, 0.2, 0.6]}} transition = {}
-<<<<<<< HEAD
 ;
                 "duration": "3 + Math.random() * 2",&apos;&apos>;
                 "repeat": "Infinity",&apos;&apos,";";
@@ -178,7 +174,6 @@ const ServiceCard = ("props": "any) => {const [isHovered", setIsHovered] = useSt
                 <div className="flex items-center space-x-2 mb-3">"";";
                   <span className="px - 2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full border border-cyan-500/30"> {service.category}"",;
                   </span>"";";
-=======
 
                 duration: 3 + Math.random() * 2,&apos;&apos>
                 repeat: Infinity,&apos;&apos,";"
@@ -237,7 +232,6 @@ const ServiceCard = ("props": "any) => {const [isHovered", setIsHovered] = useSt
                 <div className="flex items-center space-x-2 mb-3">"";"
                   <span className="px - 2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full border border-cyan-500/30"> {service.category}"",
                   </span>"";"
->>>>>>> main
                   <span className = "px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30"> {service.subcategory}
 ;
                   </span>;";
@@ -248,7 +242,6 @@ const ServiceCard = ("props": "any) => {const [isHovered", setIsHovered] = useSt
                   <div className="absolute - top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-black"></div>,;
 ""{/* comment */}"";";
             <p className = "text-gray-300 text-sm leading-relaxed mb-4"> {service.description}
-<<<<<<< HEAD
 ;
             </p>;
 ""{/* comment */}"";";
@@ -338,7 +331,6 @@ const ServiceCard = ("props": "any) => {const [isHovered", setIsHovered] = useSt
                 <"h4": "className = "text-sm font-semibold text-purple-400 mb-2">Tech Stack</h4>"""""",",";
                 <"div": "className="flex flex - wrap gap-1">""""{service.technologyStack.slice(0", 4).map((tech, idx) => (<span key="{idx}" className="px-2 py-1 bg-purple-500 / 20 text-purple-300 text-xs rounded border border-purple-500/30">", {tech}
 ;
-=======
 
             </p>
 ""{/* comment */}"";"
@@ -428,7 +420,6 @@ const ServiceCard = ("props": "any) => {const [isHovered", setIsHovered] = useSt
                 <h4: className = "text-sm font-semibold text-purple-400 mb-2">Tech Stack</h4>""""",","
                 <div: className="flex flex - wrap gap-1">""""{service.technologyStack.slice(0, 4).map((tech, idx) => (<span key="{idx}" className="px-2 py-1 bg-purple-500 / 20 text-purple-300 text-xs rounded border border-purple-500/30">", {tech}
 
->>>>>>> main
                     </span>) ) }
 ;
               </div>) }";
@@ -541,7 +532,6 @@ const ServiceCard = ("props": "any) => {;
             service.tags.some("tag": "=> tag.toLowerCase().includes(searchTerm.toLowerCase()))",;
         "return": "matchesCategory && matchesSearch"});
 }
-<<<<<<< HEAD
     // comment;
     useEffect(() => {}";
         const allIndices = new Set(filteredServices.map((_, index) => index))";;";
@@ -555,7 +545,6 @@ const ServiceCard = ("props": "any) => {;
                 "animationDuration": "${"3": "+ Math.random() * ",4}s"}}/>))}";";
       <"div": "className = "relative z-10 max-w-7xl mx-auto px-4 "sm": px-"6": "lg":px-8">""," {/* comment */}
 ;
-=======
     // comment
     useEffect(() => {}"
         const allIndices = new Set(filteredServices.map((_, index) => index))";"
@@ -569,7 +558,6 @@ const ServiceCard = ("props": "any) => {;
                 animationDuration: "${3: + Math.random() * ,4}s"}}/>))}";"
       <div: className = "relative z-10 max-w-7xl mx-auto px-4 sm: px-6: lg:px-8">"," {/* comment */}
 
->>>>>>> main
         <motion.div initial = {}
 ;
   {"opacity": ",0>;
@@ -692,18 +680,15 @@ export const FuturisticServicesShowcase = ("props": "any) => {"}
       service.tags.some(tag =>;
         tag.toLowerCase().includes(searchTerm.toLowerCase());
       );
-<<<<<<< HEAD
     return matchesCategory && matchesSearch;});
   // Set all services as visible initially for better UX;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-=======
     return matchesCategory && matchesSearch;}
     );
   // Set all services as visible initially for better UX
   useEffect(() => {
   // TODO: Add dependencies if needed
->>>>>>> main
 
   return () => {;
     // Cleanup function;

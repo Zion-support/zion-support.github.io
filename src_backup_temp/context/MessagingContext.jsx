@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {createContext, useContext, useState} from 'react';
 const MessagingProvider({children}) {}
     const [messages, setMessages] = useState([]);
@@ -18,7 +17,6 @@ export {MessagingProvider};
 export {MessagingProvider};
 ;
 export {MessagingProvider};
-=======
 import React from 'react';
 
 interface MessagingContext.jsProps {
@@ -33,4 +31,3 @@ export default function MessagingContext.js({ }: MessagingContext.jsProps) {
     </div>
   );
 }
->>>>>>> main

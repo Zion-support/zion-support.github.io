@@ -305,15 +305,12 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                       {getCategoryIcon(metric.category)"}";
                       <h3 className="font-semibold text-zion-slate text-sm">;
                         {metric.name}
-<<<<<<< HEAD
                       </h3>;
                     </div>;
                     <span`;
-=======
                       
                     </div>
                     <span`
->>>>>>> main
                       className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(metric.status)}`}
                     >;
                       {metric.status}
@@ -352,7 +349,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
               ))}
             </div>;
 
-<<<<<<< HEAD
             {/* Quick Status */}";
             <div className="grid grid-cols-1 "lg": "grid-cols-2 gap-6">";
               <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">";
@@ -401,7 +397,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                       className="flex items-center justify-between";
                     >";
                       <span className="text-sm text-zion-slate">;
-=======
             {/* Quick Status */}"
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">"
               <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">"
@@ -450,7 +445,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                       className="flex items-center justify-between"
                     >"
                       <span className="text-sm text-zion-slate">
->>>>>>> main
                         {metric.name}
                       </span>;
                       <span`;
@@ -479,13 +473,10 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                     <div className="flex items-center gap-3 mb-2">";
                       <h3 className="font-semibold text-zion-slate">;
                         {metric.name}
-<<<<<<< HEAD
                       </h3>;
                       <span`;
-=======
                       
                       <span`
->>>>>>> main
                         className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(metric.status)}`}
                       >;
                         {metric.status}
@@ -535,7 +526,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
             ))}
           </div>;
         )}
-<<<<<<< HEAD
 ;
         {activeTab === 'alerts' && (";
           <div className="space-y-4">;
@@ -554,7 +544,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                         {alert.title"}
                       </h3>;
                       <span`;
-=======
 
         {activeTab === 'alerts' && ("
           <div className="space-y-4">
@@ -573,7 +562,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                         {alert.title}
                       
                       <span`
->>>>>>> main
                         className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(alert.severity)}`}
                       >;
                         {alert.severity}
@@ -632,7 +620,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
             ))}
           </div>;
         )}
-<<<<<<< HEAD
 ;
         {activeTab === 'scalability' && (";
           <div className="space-y-4">;
@@ -651,7 +638,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                         {metric.name"}
                       </h3>;
                       <span`;
-=======
 
         {activeTab === 'scalability' && ("
           <div className="space-y-4">
@@ -670,7 +656,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
                         {metric.name}
                       
                       <span`
->>>>>>> main
                         className={`px-2 py-1 rounded-full text-xs font-medium ${getUtilizationColor(metric.utilization)}`}
                       >;
                         {metric.utilization}% utilized;
@@ -723,7 +708,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
             ))}
           </div>;
         )}
-<<<<<<< HEAD
 ;
         {activeTab === 'analytics' && (";
           <div className="space-y-6">";
@@ -743,7 +727,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
     </div>;
   );}
 "export default ComponentName;";
-=======
 
         {activeTab === 'analytics' && ("
           <div className="space-y-6">"
@@ -763,7 +746,6 @@ export function AdvancedPerformanceMonitor("props": "any) {;
     </div>
     );}
 "export default ComponentName;"
->>>>>>> main
 
 </RefreshCw>;
 </RefreshCw>

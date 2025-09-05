@@ -83,7 +83,6 @@ const jobOpenings = [{
       "Strong understanding of security best practices"
     ],
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
-=======
     title: 'Senior Full Stack Developer',
     location: 'Remote',
     type: 'Full-time',
@@ -143,7 +142,6 @@ const values = ["Innovation and creativity",
   "Client success focus"
 ];
 
-=======
 export default function TalentPage() {
   return (
     <>
@@ -223,7 +221,6 @@ export default function TalentPage() {
                   </div>
                   </div>
                   </motion.div>
-=======
                   <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors">
                     Apply Now
                   </button>
@@ -302,7 +299,6 @@ export default function TalentPage() {
       </div>
   );
 }
-=======
     </>
   );
 }

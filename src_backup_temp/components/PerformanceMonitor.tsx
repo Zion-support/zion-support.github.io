@@ -9,7 +9,6 @@ const PerformanceMonitor: React.FC = () => {
   });
 
   useEffect(() => {
-=======
 ;
 interface PerformanceMetrics {;
   "loadTime": "number;
@@ -40,7 +39,6 @@ const "PerformanceMonitor": "React.FC = () => {;
         ...prev, 
         memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024) 
       }));
-=======
       setMetrics(prev => ({ ...prev, loadTime }));
     }
 ;
@@ -59,7 +57,6 @@ const "PerformanceMonitor": "React.FC = () => {;
   }, []);
   );
 };
-=======
 ;
   return (;
     <div className="bg-gray-100 p-4 rounded-lg">;
@@ -83,7 +80,6 @@ const "PerformanceMonitor": "React.FC = () => {;
 };
 ;
 export default PerformanceMonitor;
-=======
 import { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 import logger from '../utils/logger';

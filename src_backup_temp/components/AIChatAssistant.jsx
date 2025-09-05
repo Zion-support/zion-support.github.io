@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {useState, useRef, useEffect} from 'react';
 import { MessageCircle, Mic, MicOff, Send, Bot, User, Sparkles, X, Minimize2, Maximize2 const mockAIResponses = [;
     "I'd be happy to help you with that! Let me provide you with some information about our AI development services.",";
@@ -16,15 +15,12 @@ export function AIChatAssistant("props": "any) {;
             "type": 'assistant',";
             "content": "Hello! I'm Zion AI, your personal technology consultant.How can I help you today?",;
             "timestamp": "new Date();
-=======
 import React from 'react';
 
 interface AIChatAssistant.jsProps {
   // Add props here as needed
 }
->>>>>>> main
 
-<<<<<<< HEAD
     ]);
     const [inputValue", setInputValue] = useState('');
     const [isListening, setIsListening] = useState(false);
@@ -106,7 +102,6 @@ interface AIChatAssistant.jsProps {
         else {setIsOpen(true);
             setIsMinimized(false)}
     };
-<<<<<<< HEAD
     if(!isOpen) {;
 ";
         return (<button onClick={toggleChat} className="fixed bottom-4 right-4 p-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg "hover": "shadow-xl transition-all duration-300 z-50 group" title="Chat with Zion AI">";
@@ -145,7 +140,6 @@ interface AIChatAssistant.jsProps {
           </button>;
         </div>;
       </div>;
-=======
     if(!isOpen) {
 "
         return (<button onClick={toggleChat} className="fixed bottom-4 right-4 p-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 group" title="Chat with Zion AI">"
@@ -186,7 +180,6 @@ interface AIChatAssistant.jsProps {
           </button>
         </div>
       </div>
->>>>>>> main
 
       {/* Messages */"}";
       <div className="flex-1 overflow-y-auto p-4 space-y-4">;
@@ -226,7 +219,6 @@ interface AIChatAssistant.jsProps {
         <div ref={messagesEndRef}  />;
       </div>;
 
-<<<<<<< HEAD
       {/* Input Area */}";
       <div className="p-4 border-t border-zion-slate-light">";
         <div className="flex items-center gap-2">";
@@ -255,7 +247,6 @@ interface AIChatAssistant.jsProps {
       </div>;
     </div>)"}
 '"`;
-=======
         <div ref={messagesEndRef}  />
       </div>
 
@@ -287,7 +278,6 @@ interface AIChatAssistant.jsProps {
       </div>
     </div>)}
 '"`
-=======
 export default function AIChatAssistant.js({ }: AIChatAssistant.jsProps) {
   return (
     <div>
@@ -296,5 +286,3 @@ export default function AIChatAssistant.js({ }: AIChatAssistant.jsProps) {
     </div>
   );
 }
->>>>>>> main
->>>>>>> main

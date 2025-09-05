@@ -18,7 +18,6 @@ export default function Page("props": "any) {;
     const lowIssues = issues.filter(i => i.severity === 'low').length;
     setReport({;
 
-<<<<<<< HEAD
       totalPages,;
       pagesWithIssues,;
       criticalIssues,;
@@ -28,7 +27,6 @@ export default function Page("props": "any) {;
       "pagesWithImages": "45", // Sample data;
       "pagesWithMetaDescriptions": "32", // Sample data;
       "lastUpdated": "new Date()"});
-=======
       totalPages,
       pagesWithIssues,
       criticalIssues,
@@ -39,7 +37,6 @@ export default function Page("props": "any) {;
       pagesWithMetaDescriptions: 32, // Sample data
       lastUpdated: new Date()}
     );
->>>>>>> main
   };
   const startAnalysis = async () => {setIsAnalyzing(true);
     // Simulate content analysis;
@@ -90,14 +87,11 @@ export default function Page("props": "any) {;
   const filteredIssues = contentIssues.filter(issue => {const matchesSearch =;
       issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       issue.description.toLowerCase().includes(searchTerm.toLowerCase());
-<<<<<<< HEAD
     return matchesFilter && matchesSearch;});
   const getIssueTypeLabel = type => {;
-=======
     return matchesFilter && matchesSearch;}
     );
   const getIssueTypeLabel = type => {
->>>>>>> main
 
     switch(type) {;
 
@@ -381,7 +375,6 @@ export default function Page("props": "any) {;
                 </div>;
               </div>;
 
-<<<<<<< HEAD
               {/* Quick Actions */}";
               <div className="grid grid-cols-1 "md": "grid-cols-3 gap-4">";
                 <div className="bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/20 rounded-lg p-4">";
@@ -399,7 +392,6 @@ export default function Page("props": "any) {;
             </div>;
           </motion.div>;
         </motion.div>)"}
-=======
               {/* Quick Actions */}"
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"
                 <div className="bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/20 rounded-lg p-4">"
@@ -417,7 +409,6 @@ export default function Page("props": "any) {;
             </div>
           </motion.div>
         </motion.div>)}
->>>>>>> main
     </>)};
 export default ContentQualityAnalyzer;
 ;
