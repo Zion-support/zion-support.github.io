@@ -68,7 +68,6 @@ const whitePapers = [
     downloadCount: 750
   }
 ];
-=======
 
 export default function WhitePapersPage() {
   const [searchTerm, setSearchTerm] = useState('');

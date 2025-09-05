@@ -54,15 +54,6 @@ export default function WebinarsPage() {
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-=======
-import React, { useState } from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import {
-  Play,
-  Calendar,
-  Clock,
   Users,
   ExternalLink,
   ArrowRight,
