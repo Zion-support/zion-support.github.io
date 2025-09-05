@@ -3,6 +3,10 @@ import Layout from "../components/Layout";
 import { motion } from 'framer-motion';
 import { Code, Book, Zap, Shield, CheckCircle, ArrowRight, Copy, Check, ExternalLink, Search, Filter, BookOpen, Globe, Terminal, Database, Server, Cpu, Lock, Clock, Users, BarChart3, Settings, Play, Pause, RotateCcw } from 'lucide-react';
 
+---
+import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+
+
 export default function APIPage() {
   const apiFeatures = [
     {
@@ -189,6 +193,10 @@ export default function APIPage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {apiFeaturesDetailed.map((feature, index) => {
+
+---
+              {apiFeatures.map((feature, index) => {
+
                 const IconComponent = feature.icon;
                 return (
                   <motion.div
@@ -198,20 +206,21 @@ export default function APIPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
+
+---
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+
                   >
-                    <div className="text-indigo-600 mb-4">
-                      <IconComponent className="w-10 h-10" />
+                    <div className="flex items-center mb-4">
+                      <IconComponent className="h-12 w-12 text-indigo-600 mr-4" />
+                      <h3 className="text-xl font-bold text-gray-900">{feature.title}</h3>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      {feature.description}
-                    </p>
+                    <p className="text-gray-600 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
-                      {feature.features.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      {feature.features.map((item, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                           {item}
                         </li>
                       ))}
@@ -321,6 +330,27 @@ export default function APIPage() {
               Get API Access
               <ArrowRight className="w-5 h-5 ml-2" />
             </motion.a>
+
+---
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Get Started with Our APIs
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Start building with our powerful APIs today. Get your API key and begin integrating in minutes.
+              </p>
+            </motion.div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-300 font-semibold">
+                Get API Key
+              </button>
+              <button className="px-8 py-4 border-2 border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-600 hover:text-white transition-all duration-300 font-semibold">
+                View Documentation
+              </button>
+            </div>
+
           </div>
         </section>
       </div>
