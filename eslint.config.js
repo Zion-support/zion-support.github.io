@@ -15,8 +15,8 @@ export default [
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true,
-        },
+          jsx: true
+        }
       },
       globals: {
         // Browser globals
@@ -43,13 +43,23 @@ export default [
         PerformanceObserver: 'readonly',
         // React
         React: 'readonly',
-      },
+        // Jest/Testing globals
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        jest: 'readonly'
+      }
     },
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks,
-      '@next/next': next,
+      '@next/next': next
     },
     rules: {
       ...typescript.configs.recommended.rules,
@@ -63,19 +73,37 @@ export default [
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn'
     },
     settings: {
       react: {
-        version: 'detect',
-      },
-    },
+        version: 'detect'
+      }
+    }
   },
   {
     files: ['**/*.cjs'],
     languageOptions: {
       sourceType: 'commonjs',
-    },
+      globals: {
+        // Node.js globals
+        process: 'readonly',
+        console: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        Buffer: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        setImmediate: 'readonly',
+        clearImmediate: 'readonly'
+      }
+    }
   },
   {
     ignores: [
@@ -88,19 +116,16 @@ export default [
       'coverage/**',
 
       // Large/legacy sources and disabled dirs
-      'src/**',
-      'src.corrupted/**',
-      'src.disabled/**',
-      'src.broken/**',
-      'src.pages.disabled/**',
+      'src/**/src.corrupted/**',
+      'src/**/src.disabled/**',
+      'src/**/src.broken/**',
+      'src/**/src.pages.disabled/**',
       'solutions.disabled/**',
       'components.disabled/**',
       'components.corrupted/**',
-      'hooks/**',
-      'hooks.disabled/**',
+      'hooks/**/hooks.disabled/**',
       'lib.disabled/**',
-      'lib/**',
-      'lib.corrupted/**',
+      'lib/**/lib.corrupted/**',
       'zion-os.disabled/**',
       'zion_academy/**',
       'contracts.disabled/**',
@@ -162,7 +187,6 @@ export default [
       // Root-level noisy files
       'api/**',
       '*.js',
-      '.*.js',
       '*.ts',
       '*.tsx',
       '*.jsx',
@@ -179,7 +203,7 @@ export default [
       // Page backups
       'pages.__backup/**',
       'pages-disabled/**',
-      'pages.disabled_auto/**',
-    ],
-  },
+      'pages.disabled_auto/**'
+    ]
+  }
 ];

@@ -1,47 +1,74 @@
-import React from 'react';
-import Link from 'next/link';
-
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-slate-900 border-t border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <div className="text-white font-bold text-xl mb-2">Zion Tech Group</div>
-          <p className="text-gray-400 text-sm">AI, cloud, and modern software solutions.</p>
-        </div>
-        <div>
-          <div className="text-white font-semibold mb-3">Company</div>
-          <nav className="flex flex-col gap-2 text-gray-300 text-sm">
-            <Link href="/about" className="hover:text-white">About</Link>
-            <Link href="/careers" className="hover:text-white">Careers</Link>
-            <Link href="/pricing" className="hover:text-white">Pricing</Link>
-            <Link href="/contact" className="hover:text-white">Contact</Link>
-          </nav>
-        </div>
-        <div>
-          <div className="text-white font-semibold mb-3">Resources</div>
-          <nav className="flex flex-col gap-2 text-gray-300 text-sm">
-            <Link href="/blog" className="hover:text-white">Blog</Link>
-            <Link href="/docs" className="hover:text-white">Docs</Link>
-            <Link href="/privacy" className="hover:text-white">Privacy</Link>
-            <Link href="/terms" className="hover:text-white">Terms</Link>
-            <Link href="/sitemap" className="hover:text-white">Sitemap</Link>
-          </nav>
-        </div>
-      </div>
-      <div className="border-t border-slate-800 py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between text-gray-400 text-sm">
-          <div>© {currentYear} Zion Tech Group. All rights reserved.</div>
-          <div className="flex gap-4">
-            <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white">kleber@ziontechgroup.com</a>
-            <a href="tel:+13024640950" className="hover:text-white">+1 302 464 0950</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-};
-
-export default Footer;
+                  key={social.name};
+                  href={social.href};
+                  target="_blank",;
+                  rel="noopener noreferrer",;
+                  className="text-gray-400 hover: text-blue-400 transition-colors",;
+                  aria-label={social.name};
+                >,;
+                  <social.icon className="h-5 w-5" />,;
+                </a>))};
+            </div>,;
+          </div>,;
+          {/* Services */};
+          <div>,;
+            <h3 className="text-lg font-semibold mb-4">Services</h3>,;
+            <ul className="space-y-2">,;
+              {services.map((service) => (,;
+                <li key={service.name}>,;
+                  <Link,;
+                    href={service.href};
+                    {service.name};
+                  </Link>,;
+                </li>))};
+            </ul>,;
+          </div>,;
+          {/* Company */};
+          <div>,;
+            <h3 className="text-lg font-semibold mb-4">Company</h3>,;
+            <ul className="space-y-2">,;
+              {company.map((item) => (,;
+                <li key={item.name}>,;
+                  <Link,;
+                    href={item.href};
+                    {item.name};
+                  </Link>,;
+                </li>))};
+            </ul>,;
+          </div>,;
+          {/* Resources & Contact */};
+          <div>,;
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>,;
+            <ul className="space-y-2 mb-6">,;
+              {resources.map((resource) => (,;
+                <li key={resource.name}>,;
+                  <Link,;
+                    href={resource.href};
+                    {resource.name};
+                  </Link>,;
+                </li>))};
+            </ul>,;
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>,;
+            <div className="space-y-2">,;
+              <div className="flex items-center text-gray-300">,;
+                <Mail className="h-4 w-4 mr-2" />,;
+                <a href="mailto: info@ziontechgroup.com" className="hover:text-blue-400">,;
+                  info@ziontechgroup.com,;
+                </a>,;
+              </div>,;
+              <div className="flex items-center text-gray-300">,;
+                <Phone className="h-4 w-4 mr-2" />,;
+                <a href="tel:+1-555-123-4567" className="hover:text-blue-400">,;
+                  +1 (555) 123-4567,;
+                </a>,;
+              </div>,;
+              <div className="flex items-start text-gray-300">,;
+                <MapPin className="h-4 w-4 mr-2 mt-0.5" />,;
+                <span>,;
+                  123 Tech Street<br />,;
+                  San Francisco, CA 94105,;
+                </span>,;
+              </div>,;
+            </div>,;
+          </div>,;
+        </div>,;
+        {/* Bottom Section */};

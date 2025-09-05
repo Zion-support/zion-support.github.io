@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { ContactInfo, AnimationState } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
+import PerformanceMonitor from '../components/PerformanceMonitor';
 
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
@@ -93,7 +96,9 @@ export default function Home() {
         />
       </Head>
       
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+      <ErrorBoundary level="page">
+        <Suspense fallback={<LoadingSpinner fullScreen text="Loading Zion Tech Group..." />}>
+          <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
           <div className="max-w-4xl mx-auto">
@@ -251,7 +256,16 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </main>
+          </main>
+        </Suspense>
+        <PerformanceMonitor 
+          showMetrics={process.env.NODE_ENV === 'development'}
+          logMetrics={true}
+          onThresholdExceeded={(metrics) => {
+            console.warn('Performance thresholds exceeded:', metrics);
+          }}
+        />
+      </ErrorBoundary>
     </>
   );
 }
