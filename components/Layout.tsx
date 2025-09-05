@@ -4,11 +4,7 @@ import { Header } from './Header';
 import Footer from './Footer';
 
 interface LayoutProps {
-<<<<<<< HEAD
-  children: ReactNode;
-=======
   children: React.ReactNode;
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
   title?: string;
   description?: string;
   keywords?: string;
@@ -31,16 +27,15 @@ export default function Layout({
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-<<<<<<< HEAD
-        <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
-        <link rel="canonical" href={canonical || 'https: //ziontechgroup.com'} />
+        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
+        <link rel="canonical" href={ogImage || 'https://ziontechgroup.com'} />
         
         {/* Open Graph */}
-        <meta property="og: title" content={title} />
-        <meta property="og: description" content={description} />
-        <meta property="og: type" content="website" />
-        <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
-        <meta property="og: site_name" content="Zion Tech Group" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={ogImage || 'https://ziontechgroup.com'} />
+        <meta property="og:site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
         
         {/* Twitter Card */}
@@ -77,7 +72,6 @@ export default function Layout({
         {/* SEO */}
         <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
         <link rel="canonical" href="https://ziontechgroup.com" />
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
         
         {/* Structured Data */}
         <script
@@ -86,19 +80,11 @@ export default function Layout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-<<<<<<< HEAD
-              name: "Zion Tech Group",
-              url: "https: //ziontechgroup.com",
-              logo: "https: //ziontechgroup.com/logo.png",
-              description: description,
-              address: {
-=======
               "name": "Zion Tech Group",
               "url": "https://ziontechgroup.com",
               "logo": "https://ziontechgroup.com/logo.png",
               "description": description,
               "address": {
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
                 "@type": "PostalAddress",
                 "streetAddress": "123 Technology Drive",
                 "addressLocality": "Innovation City",
@@ -108,26 +94,14 @@ export default function Layout({
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-<<<<<<< HEAD
-                telephone: "+1-302-464-0950",
-=======
-                "telephone": "+1-555-123-4567",
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
+                "telephone": "+1-302-464-0950",
                 "contactType": "customer service",
                 "email": "contact@ziontechgroup.com"
               },
-<<<<<<< HEAD
-              "sameAs": ["https: //linkedin.com/company/ziontechgroup",
-                "https: //twitter.com/ziontechgroup",
-                "https: //github.com/ziontechgroup"
-=======
               "sameAs": [
-                "https://facebook.com/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
                 "https://linkedin.com/company/ziontechgroup",
-                "https://instagram.com/ziontechgroup",
+                "https://twitter.com/ziontechgroup",
                 "https://github.com/ziontechgroup"
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
               ]
             })
           }}

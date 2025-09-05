@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
 
-<<<<<<< HEAD
-const blogPosts = [{
+const blogPosts = [
+  {
     id: 1,
     title: "The Future of AI in Business: Trends and Predictions for 2024",
     excerpt: "Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.",
@@ -67,13 +67,15 @@ const blogPosts = [{
   }
 ];
 
-const categories = [{ name: "AI & Machine Learning", count: 12 },
+const categories = [
+  { name: "AI & Machine Learning", count: 12 },
   { name: "Cloud Computing", count: 8 },
   { name: "Cybersecurity", count: 6 },
   { name: "SaaS Development", count: 10 },
   { name: "Digital Transformation", count: 7 },
   { name: "IT Infrastructure", count: 5 }
-=======
+];
+
 const blogPosts = [
   {
     id: 1,
@@ -124,12 +126,10 @@ const categories = [
   "Cybersecurity",
   "SaaS",
   "Digital Transformation"
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
 ];
 
 export default function BlogPage() {
   return (
-<<<<<<< HEAD
     <MainLayout 
       title="Blog - Zion Tech Group"
       description="Insights, trends, and best practices in AI, cloud computing, cybersecurity, and technology solutions."
@@ -152,7 +152,6 @@ export default function BlogPage() {
                 Stay updated with the latest insights, trends, and best practices in technology
               </p>
             </motion.div>
-=======
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Blog - Zion Tech Group</title>
@@ -169,12 +168,10 @@ export default function BlogPage() {
             <p className="text-xl text-blue-100 mb-8">
               Stay updated with the latest trends, insights, and innovations in technology
             </p>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
         {/* Blog Posts Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -229,7 +226,6 @@ export default function BlogPage() {
                             <ArrowRight className="w-4 h-4 ml-1" />
                           </Link>
                         </div>
-=======
       {/* Blog Content */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -279,7 +275,6 @@ export default function BlogPage() {
                       <div className="flex items-center gap-2">
                         <User className="w-4 h-4" />
                         <span>{post.author}</span>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
                       </div>
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" />
@@ -302,7 +297,6 @@ export default function BlogPage() {
               ))}
             </div>
 
-<<<<<<< HEAD
                 {/* Pagination */}
                 <div className="mt-12 flex justify-center">
                   <nav className="flex space-x-2">
@@ -366,13 +360,11 @@ export default function BlogPage() {
                   </form>
                 </div>
               </div>
-=======
             {/* Load More Button */}
             <div className="text-center mt-12">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 Load More Posts
               </button>
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
             </div>
           </div>
         </div>

@@ -21,7 +21,6 @@ import {
   DollarSign
 } from 'lucide-react';
 
-<<<<<<< HEAD
 const navigation = [{
     name: 'Services',
     href: '/services',
@@ -70,7 +69,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709'
 };
-=======
+
 interface HeaderProps {
   className?: string;
 }
@@ -85,7 +84,6 @@ export function Header({ className }: HeaderProps) {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [searchQuery, setSearchQuery] = useState('');
   const router = useRouter();
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
 
   useEffect(() => {
     const handleScroll = () => {
@@ -173,21 +171,15 @@ export function Header({ className }: HeaderProps) {
       {/* Top Bar */}
       <div className="bg-gray-900 text-gray-300 text-sm py-2">
         <div className="container mx-auto px-4">
-<<<<<<< HEAD
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
-            <div className="flex flex-col sm:flex-row gap-4 mb-2 sm:mb-0">
-              <div className="flex items-center gap-2">
-=======
           <div className="flex items-center justify-between">
             <div className="hidden lg:flex items-center space-x-6">
               <div className="flex items-center space-x-2">
->>>>>>> cursor/add-new-services-and-deploy-updates-1b90
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>contact@ziontechgroup.com</span>
+                <span>kleber@ziontechgroup.com</span>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -212,20 +204,19 @@ export function Header({ className }: HeaderProps) {
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
 
-<<<<<<< HEAD
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <div key={item.name} className="relative group">
-                <Link
-                  href={item.href}
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                  onMouseEnter={() => setActiveDropdown(item.name)}
-                  onMouseLeave={() => setActiveDropdown(null)}
-                >
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.name}</span>
-                  {item.children && <ChevronDown className="w-4 h-4" />}
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
+              {navigation.map((item) => (
+                <div key={item.name} className="relative group">
+                  <Link
+                    href={item.href}
+                    className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                    onMouseEnter={() => setActiveDropdown(item.name)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
+                    <item.icon className="w-4 h-4" />
+                    <span>{item.name}</span>
+                    {item.children && <ChevronDown className="w-4 h-4" />}
                 </Link>
 
                 {/* Dropdown Menu */}
@@ -260,56 +251,9 @@ export function Header({ className }: HeaderProps) {
                       </motion.div>
                     )}
                   </AnimatePresence>
-=======
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              {navigationItems.map((item, index) => (
-                <div key={index} className="relative group">
-                  <Link
-                    href={item.href}
-                    className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors font-medium"
-                    onMouseEnter={() => {
-                      if (item.hasDropdown) {
-                        if (item.label === 'Services') setIsServicesOpen(true);
-                        if (item.label === 'Company') setIsCompanyOpen(true);
-                      }
-                    }}
-                    onMouseLeave={() => {
-                      if (item.hasDropdown) {
-                        if (item.label === 'Services') setIsServicesOpen(false);
-                        if (item.label === 'Company') setIsCompanyOpen(false);
-                      }
-                    }}
-                  >
-                    <span>{item.label}</span>
-                    {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
-                  </Link>
-
-                  {/* Dropdown Menus */}
-                  {item.hasDropdown && item.dropdownItems && (
-                    <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ${
-                      item.label === 'Services' && isServicesOpen ? 'opacity-100 visible' : ''
-                    } ${item.label === 'Company' && isCompanyOpen ? 'opacity-100 visible' : ''}`}>
-                      {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
-                        <Link
-                          key={dropdownIndex}
-                          href={dropdownItem.href}
-                          className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                        >
-                          {dropdownItem.label === 'AI Services' && <Brain className="w-4 h-4" />}
-                          {dropdownItem.label === 'IT Services' && <Shield className="w-4 h-4" />}
-                          {dropdownItem.label === 'Micro SaaS' && <Cloud className="w-4 h-4" />}
-                          {dropdownItem.label === 'About Us' && <Users className="w-4 h-4" />}
-                          {dropdownItem.label === 'Blog' && <FileText className="w-4 h-4" />}
-                          {dropdownItem.label === 'Help Center' && <HelpCircle className="w-4 h-4" />}
-                          <span>{dropdownItem.label}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  )}
                 </div>
               ))}
-            </nav>
+            </div>
 
             {/* Right side actions */}
             <div className="flex items-center space-x-4">
