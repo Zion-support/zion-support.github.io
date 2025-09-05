@@ -12,6 +12,7 @@ const publicRoutes = [
   "/resources",
   "/talent",
   "/team",
+<<<<<<< HEAD
   "/careers",
   "/help",
   "/faq",
@@ -49,6 +50,20 @@ const publicRoutes = [
   "/revolutionary-2025-pricing",
   "/products",
   "/solutions/enterprise"
+=======
+  "/partners",
+  "/news",
+  "/careers",
+  "/privacy",
+  "/terms",
+  "/cookies",
+  "/sitemap",
+  "/auth/login",
+  "/auth/register",
+  "/auth/forgot-password",
+  "/auth/reset-password",
+  "/auth/verify",
+>>>>>>> main
 ];
 
 export function middleware(request: NextRequest) {
@@ -59,13 +74,22 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
   
+<<<<<<< HEAD
   // Add any authentication logic here
   // For now, just allow all requests
+=======
+  const authCookie = request.cookies.get("auth-token");
+  if (!authCookie) {
+    return NextResponse.redirect(new URL("/auth/login", request.url));
+  }
+  
+>>>>>>> main
   return NextResponse.next();
 }
 
 export const config = {
   matcher: [
+<<<<<<< HEAD
     /*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
@@ -74,5 +98,8 @@ export const config = {
      * - favicon.ico (favicon file)
      */
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
+=======
+    "/((?!api|_next/static|_next/image|favicon.ico).*)",
+>>>>>>> main
   ],
 };

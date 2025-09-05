@@ -26,7 +26,7 @@ import {
   Cpu,
   DollarSign
 } from 'lucide-react';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from '../components/Layout';
 
 const solutions = [
   {
@@ -136,7 +136,7 @@ const caseStudies = [
 
 export default function Manufacturing() {
   return (
-    <MainLayout
+    <Layout
       title="Manufacturing Technology Solutions - Zion Tech Group"
       description="Transform manufacturing with smart factory solutions, IoT, AI quality control, and supply chain optimization."
       keywords="smart manufacturing, industrial IoT, quality control, supply chain, manufacturing automation, Industry 4.0"
@@ -419,6 +419,6 @@ export default function Manufacturing() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }
