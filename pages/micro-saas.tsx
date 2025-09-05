@@ -15,94 +15,204 @@ import {
   MapPin,
   Users,
   Shield,
-  Globe
+  Globe,
+  FileText,
+  TrendingUp
 } from 'lucide-react';
 import Layout from './components/Layout';
 
 const microSaasSolutions = [
   {
-    title: "Workflow Automation",
-    description: "Streamline business processes with intelligent automation tools",
+    title: "AI-Powered Document Processing",
+    description: "Intelligent document extraction, classification, and data entry automation using advanced OCR and machine learning",
     icon: Zap,
     features: [
-      "Process Automation",
-      "Task Scheduling",
-      "Data Integration",
-      "Custom Workflows",
-      "API Integrations",
-      "Real-time Notifications"
+      "OCR & Text Extraction",
+      "Document Classification",
+      "Data Validation & Verification",
+      "Multi-format Support (PDF, Images, Scans)",
+      "API Integration",
+      "Real-time Processing"
     ],
-    price: "Starting at $1,500/month"
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-6,000/month",
+    benefits: ["90% reduction in manual data entry", "99.5% accuracy", "Process 10,000+ documents/hour"]
   },
   {
-    title: "Data Processing Tools",
-    description: "Powerful data analysis and processing solutions",
+    title: "Smart Inventory Management",
+    description: "AI-driven inventory optimization with predictive analytics, automated reordering, and demand forecasting",
     icon: BarChart3,
     features: [
-      "Data Visualization",
-      "ETL Processes",
-      "Real-time Analytics",
-      "Custom Dashboards",
-      "Report Generation",
-      "Data Export/Import"
+      "Predictive Analytics",
+      "Automated Reordering",
+      "Multi-location Tracking",
+      "Barcode/QR Integration",
+      "Real-time Alerts",
+      "Cost Optimization"
     ],
-    price: "Starting at $2,000/month"
+    price: "Starting at $1,800/month",
+    marketPrice: "$2,500-4,500/month",
+    benefits: ["25% reduction in stockouts", "30% lower carrying costs", "95% forecast accuracy"]
   },
   {
-    title: "API Integration Services",
-    description: "Connect your systems with seamless API solutions",
+    title: "Customer Experience Analytics",
+    description: "Advanced customer journey mapping, sentiment analysis, and behavioral insights for enhanced engagement",
     icon: Code,
     features: [
-      "REST API Development",
-      "Third-party Integrations",
-      "Webhook Management",
-      "API Documentation",
-      "Rate Limiting",
-      "Authentication & Security"
+      "Customer Journey Mapping",
+      "Sentiment Analysis",
+      "Behavioral Tracking",
+      "Churn Prediction",
+      "Personalization Engine",
+      "Real-time Dashboards"
     ],
-    price: "Starting at $1,800/month"
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-7,000/month",
+    benefits: ["40% increase in customer satisfaction", "35% reduction in churn", "50% improvement in conversion"]
   },
   {
-    title: "Custom Dashboard Solutions",
-    description: "Tailored dashboards for your business needs",
+    title: "Automated Financial Reporting",
+    description: "AI-powered financial data processing, compliance reporting, and real-time financial insights",
     icon: Settings,
     features: [
-      "Real-time Monitoring",
-      "Custom Widgets",
-      "User Management",
-      "Role-based Access",
-      "Mobile Responsive",
-      "Export Capabilities"
+      "Automated Bookkeeping",
+      "Compliance Reporting",
+      "Real-time P&L",
+      "Cash Flow Forecasting",
+      "Tax Preparation",
+      "Multi-currency Support"
     ],
-    price: "Starting at $1,200/month"
+    price: "Starting at $1,500/month",
+    marketPrice: "$2,200-4,000/month",
+    benefits: ["80% time savings on reporting", "100% compliance accuracy", "Real-time financial visibility"]
   },
   {
-    title: "SaaS Platform Development",
-    description: "Complete SaaS solutions from concept to deployment",
+    title: "Smart Email Marketing Platform",
+    description: "AI-driven email campaigns with advanced segmentation, personalization, and performance optimization",
     icon: Cloud,
     features: [
-      "Multi-tenant Architecture",
-      "Subscription Management",
-      "Payment Integration",
-      "User Onboarding",
-      "Analytics & Reporting",
-      "Scalable Infrastructure"
+      "AI Content Generation",
+      "Advanced Segmentation",
+      "A/B Testing Automation",
+      "Send Time Optimization",
+      "Deliverability Monitoring",
+      "ROI Tracking"
     ],
-    price: "Starting at $3,500/month"
+    price: "Starting at $1,200/month",
+    marketPrice: "$2,000-3,500/month",
+    benefits: ["45% higher open rates", "60% increase in click-through", "35% boost in conversions"]
   },
   {
-    title: "Business Intelligence Tools",
-    description: "Advanced BI solutions for data-driven decisions",
+    title: "Workflow Automation Suite",
+    description: "Comprehensive business process automation with no-code/low-code workflow builder and integrations",
     icon: BarChart3,
     features: [
-      "Interactive Dashboards",
-      "Predictive Analytics",
-      "Data Mining",
-      "Custom Reports",
-      "Machine Learning Integration",
-      "Real-time Insights"
+      "Visual Workflow Builder",
+      "500+ Integrations",
+      "Conditional Logic",
+      "Approval Workflows",
+      "Task Automation",
+      "Performance Analytics"
     ],
-    price: "Starting at $2,500/month"
+    price: "Starting at $1,000/month",
+    marketPrice: "$1,500-2,800/month",
+    benefits: ["70% reduction in manual tasks", "50% faster process completion", "90% error reduction"]
+  },
+  {
+    title: "AI-Powered Lead Scoring",
+    description: "Intelligent lead qualification and scoring using machine learning to identify high-value prospects",
+    icon: Users,
+    features: [
+      "Behavioral Analysis",
+      "Predictive Scoring",
+      "Lead Nurturing Automation",
+      "CRM Integration",
+      "Custom Scoring Models",
+      "Real-time Updates"
+    ],
+    price: "Starting at $1,800/month",
+    marketPrice: "$2,800-5,000/month",
+    benefits: ["65% improvement in lead quality", "40% increase in conversion rates", "50% reduction in sales cycle"]
+  },
+  {
+    title: "Smart Social Media Management",
+    description: "AI-driven social media scheduling, content creation, and performance optimization across all platforms",
+    icon: Globe,
+    features: [
+      "AI Content Creation",
+      "Optimal Posting Times",
+      "Hashtag Optimization",
+      "Engagement Analytics",
+      "Competitor Analysis",
+      "Multi-platform Management"
+    ],
+    price: "Starting at $1,400/month",
+    marketPrice: "$2,200-4,000/month",
+    benefits: ["55% increase in engagement", "40% more followers", "60% time savings"]
+  },
+  {
+    title: "Automated Customer Support",
+    description: "AI-powered chatbot and ticketing system with natural language processing and escalation management",
+    icon: Shield,
+    features: [
+      "Natural Language Processing",
+      "Multi-language Support",
+      "Ticket Routing",
+      "Knowledge Base Integration",
+      "Sentiment Analysis",
+      "Human Handoff"
+    ],
+    price: "Starting at $1,600/month",
+    marketPrice: "$2,500-4,500/month",
+    benefits: ["80% reduction in response time", "24/7 availability", "90% customer satisfaction"]
+  },
+  {
+    title: "Predictive Maintenance System",
+    description: "IoT-enabled equipment monitoring with predictive analytics to prevent failures and optimize maintenance",
+    icon: Settings,
+    features: [
+      "IoT Sensor Integration",
+      "Predictive Analytics",
+      "Failure Prediction",
+      "Maintenance Scheduling",
+      "Cost Optimization",
+      "Real-time Alerts"
+    ],
+    price: "Starting at $2,800/month",
+    marketPrice: "$4,500-8,000/month",
+    benefits: ["60% reduction in downtime", "40% lower maintenance costs", "95% prediction accuracy"]
+  },
+  {
+    title: "Smart Contract Management",
+    description: "AI-powered contract analysis, risk assessment, and automated compliance monitoring",
+    icon: FileText,
+    features: [
+      "Contract Analysis",
+      "Risk Assessment",
+      "Compliance Monitoring",
+      "Renewal Alerts",
+      "Clause Extraction",
+      "Legal Review Automation"
+    ],
+    price: "Starting at $2,200/month",
+    marketPrice: "$3,500-6,000/month",
+    benefits: ["70% faster contract review", "95% compliance accuracy", "50% reduction in legal costs"]
+  },
+  {
+    title: "Dynamic Pricing Optimization",
+    description: "AI-driven pricing strategy with real-time market analysis, competitor monitoring, and revenue optimization",
+    icon: TrendingUp,
+    features: [
+      "Market Analysis",
+      "Competitor Monitoring",
+      "Demand Forecasting",
+      "Price Elasticity Modeling",
+      "A/B Testing",
+      "Revenue Optimization"
+    ],
+    price: "Starting at $2,500/month",
+    marketPrice: "$4,000-7,500/month",
+    benefits: ["25% increase in revenue", "15% improvement in margins", "Real-time pricing adjustments"]
   }
 ];
 
@@ -242,8 +352,34 @@ export default function MicroSaasPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-4">
-                  <span className="text-2xl font-bold text-purple-600">{solution.price}</span>
+                
+                {/* Benefits */}
+                {solution.benefits && (
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Benefits:</h4>
+                    <ul className="text-xs text-gray-600 space-y-1">
+                      {solution.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <div className="w-1 h-1 bg-purple-500 rounded-full mr-2"></div>
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                
+                <div className="mt-4 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-bold text-purple-600">{solution.price}</span>
+                    {solution.marketPrice && (
+                      <span className="text-sm text-gray-500 line-through">{solution.marketPrice}</span>
+                    )}
+                  </div>
+                  {solution.marketPrice && (
+                    <div className="text-xs text-green-600 font-medium">
+                      Save up to 40% vs market rates
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}

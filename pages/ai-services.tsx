@@ -72,84 +72,273 @@ const contactInfo = {
 const aiServices = [
   {
     id: 1,
-    title: 'Machine Learning Models',
-    description: 'Custom ML models for predictive analytics, automation, and intelligent decision-making across various industries.',
+    title: 'GPT-4o & Advanced LLM Integration',
+    description: 'Custom large language model solutions with GPT-4o, Claude, and other cutting-edge models for enterprise applications.',
     icon: Brain,
     category: 'Machine Learning',
-    price: 'Starting at $3,500/month',
+    price: 'Starting at $2,500/month',
     features: [
-      'Custom model development & training',
-      'Data preprocessing & feature engineering',
-      'Model deployment & monitoring',
-      'A/B testing & performance optimization',
-      'Real-time prediction APIs',
-      'Model versioning & management',
-      'Automated retraining pipelines',
-      'Integration with existing systems'
+      'GPT-4o API integration & optimization',
+      'Custom prompt engineering',
+      'Fine-tuned model deployment',
+      'Multi-model orchestration',
+      'Context-aware responses',
+      'Cost optimization strategies',
+      'Real-time inference APIs',
+      'Custom training pipelines'
     ],
     benefits: [
-      'Increase prediction accuracy by 40-60%',
-      'Automate decision-making processes',
-      'Reduce manual analysis time by 80%',
-      'Improve business outcomes by 25-35%'
+      '95% accuracy in complex reasoning tasks',
+      '60% reduction in development time',
+      '40% cost savings vs building from scratch',
+      'Seamless integration with existing systems'
     ],
-    marketPrice: '$5,000-12,000/month',
-    setupTime: '3-6 weeks',
-    targetUsers: 'E-commerce, Finance, Healthcare, Manufacturing'
+    marketPrice: '$4,000-8,000/month',
+    setupTime: '1-2 weeks',
+    targetUsers: 'Enterprise, SaaS, Content, Customer Service'
   },
   {
     id: 2,
-    title: 'Computer Vision Solutions',
-    description: 'Advanced image and video analysis for object detection, recognition, and automated visual inspection.',
+    title: 'AI-Powered Document Intelligence',
+    description: 'Advanced document processing with OCR, classification, and data extraction using state-of-the-art computer vision and NLP.',
+    icon: Eye,
+    category: 'Computer Vision',
+    price: 'Starting at $1,800/month',
+    features: [
+      'Advanced OCR with 99.5% accuracy',
+      'Document classification & routing',
+      'Intelligent data extraction',
+      'Multi-format support (PDF, images, scans)',
+      'Handwriting recognition',
+      'Table & form extraction',
+      'Automated validation & verification',
+      'Real-time processing pipeline'
+    ],
+    benefits: [
+      '90% reduction in manual data entry',
+      'Process 10,000+ documents per hour',
+      '99.5% accuracy in data extraction',
+      '50% faster document processing'
+    ],
+    marketPrice: '$3,000-6,000/month',
+    setupTime: '2-3 weeks',
+    targetUsers: 'Finance, Legal, Healthcare, Insurance'
+  },
+  {
+    id: 3,
+    title: 'Conversational AI & Chatbots',
+    description: 'Intelligent conversational agents with natural language understanding, context awareness, and human-like interactions.',
+    icon: MessageSquare,
+    category: 'NLP',
+    price: 'Starting at $1,200/month',
+    features: [
+      'Natural language understanding',
+      'Multi-turn conversation handling',
+      'Intent recognition & entity extraction',
+      'Voice & text integration',
+      'Knowledge base integration',
+      'Sentiment analysis & emotion detection',
+      'Multi-language support',
+      'Human handoff capabilities'
+    ],
+    benefits: [
+      '80% reduction in support tickets',
+      '24/7 customer availability',
+      '90% customer satisfaction rate',
+      '60% cost savings on support'
+    ],
+    marketPrice: '$2,000-4,500/month',
+    setupTime: '1-2 weeks',
+    targetUsers: 'Customer Service, E-commerce, Healthcare, Education'
+  },
+  {
+    id: 4,
+    title: 'Predictive Analytics & Forecasting',
+    description: 'Advanced predictive models for demand forecasting, risk assessment, and business intelligence using machine learning.',
+    icon: BarChart3,
+    category: 'Machine Learning',
+    price: 'Starting at $2,200/month',
+    features: [
+      'Time series forecasting',
+      'Demand prediction models',
+      'Risk assessment algorithms',
+      'Anomaly detection systems',
+      'Real-time predictions',
+      'Custom model training',
+      'Performance monitoring',
+      'Automated retraining'
+    ],
+    benefits: [
+      '85% accuracy in demand forecasting',
+      '30% reduction in inventory costs',
+      '40% improvement in planning accuracy',
+      'Real-time business insights'
+    ],
+    marketPrice: '$3,500-7,000/month',
+    setupTime: '3-4 weeks',
+    targetUsers: 'Retail, Manufacturing, Finance, Supply Chain'
+  },
+  {
+    id: 5,
+    title: 'AI-Powered Content Generation',
+    description: 'Intelligent content creation using advanced language models for marketing, documentation, and creative writing.',
+    icon: FileText,
+    category: 'NLP',
+    price: 'Starting at $1,500/month',
+    features: [
+      'AI content writing & editing',
+      'Multi-format content generation',
+      'Brand voice customization',
+      'SEO optimization',
+      'Content personalization',
+      'Plagiarism detection',
+      'Multi-language content',
+      'Quality scoring & improvement'
+    ],
+    benefits: [
+      '70% faster content creation',
+      '50% reduction in writing costs',
+      '40% improvement in engagement',
+      'Consistent brand messaging'
+    ],
+    marketPrice: '$2,500-5,000/month',
+    setupTime: '1-2 weeks',
+    targetUsers: 'Marketing, Content, E-commerce, Publishing'
+  },
+  {
+    id: 6,
+    title: 'Computer Vision for Quality Control',
+    description: 'Automated visual inspection systems for manufacturing, retail, and quality assurance using advanced computer vision.',
     icon: Eye,
     category: 'Computer Vision',
     price: 'Starting at $2,800/month',
     features: [
-      'Object detection & recognition',
-      'Image classification & tagging',
-      'Facial recognition & analysis',
-      'Video analytics & monitoring',
-      'OCR & document processing',
-      'Quality control automation',
-      'Real-time processing capabilities',
-      'Custom model fine-tuning'
+      'Defect detection & classification',
+      'Real-time visual inspection',
+      'Quality scoring algorithms',
+      'Multi-angle analysis',
+      'Custom model training',
+      'Integration with production lines',
+      'Statistical process control',
+      'Automated reporting'
     ],
     benefits: [
-      'Improve accuracy by 95%+ in visual tasks',
-      'Reduce inspection time by 90%',
-      'Enable 24/7 automated monitoring',
-      'Lower operational costs by 50%'
+      '95% accuracy in defect detection',
+      '60% reduction in inspection time',
+      '40% improvement in product quality',
+      '24/7 automated monitoring'
     ],
-    marketPrice: '$4,000-8,000/month',
-    setupTime: '2-4 weeks',
-    targetUsers: 'Manufacturing, Retail, Security, Healthcare'
+    marketPrice: '$4,500-9,000/month',
+    setupTime: '3-4 weeks',
+    targetUsers: 'Manufacturing, Automotive, Electronics, Food'
   },
   {
-    id: 3,
-    title: 'Natural Language Processing',
-    description: 'Text analysis, sentiment analysis, language understanding, and automated content processing solutions.',
-    icon: MessageSquare,
-    category: 'NLP',
-    price: 'Starting at $2,200/month',
+    id: 7,
+    title: 'AI-Powered Recommendation Systems',
+    description: 'Intelligent recommendation engines for personalized user experiences, product suggestions, and content curation.',
+    icon: Target,
+    category: 'Machine Learning',
+    price: 'Starting at $1,800/month',
     features: [
-      'Text analysis & sentiment detection',
-      'Language translation & localization',
-      'Chatbot & virtual assistant development',
-      'Document summarization & extraction',
-      'Content moderation & filtering',
-      'Voice-to-text & text-to-speech',
-      'Intent recognition & classification',
-      'Multi-language support'
+      'Collaborative filtering',
+      'Content-based recommendations',
+      'Hybrid recommendation models',
+      'Real-time personalization',
+      'A/B testing framework',
+      'Cold start problem solutions',
+      'Multi-criteria recommendations',
+      'Performance analytics'
     ],
     benefits: [
-      'Process 10,000+ documents per hour',
-      'Improve customer satisfaction by 35%',
-      'Reduce content moderation costs by 70%',
-      'Enable multilingual operations'
+      '35% increase in conversion rates',
+      '50% improvement in user engagement',
+      '25% boost in average order value',
+      'Personalized user experiences'
     ],
-    marketPrice: '$3,500-7,500/month',
+    marketPrice: '$3,000-6,000/month',
     setupTime: '2-3 weeks',
-    targetUsers: 'Customer Service, Content, Legal, Healthcare'
+    targetUsers: 'E-commerce, Media, SaaS, Retail'
+  },
+  {
+    id: 8,
+    title: 'AI-Powered Fraud Detection',
+    description: 'Advanced fraud detection and prevention systems using machine learning for real-time transaction monitoring.',
+    icon: Shield,
+    category: 'Machine Learning',
+    price: 'Starting at $2,500/month',
+    features: [
+      'Real-time fraud scoring',
+      'Behavioral analysis',
+      'Anomaly detection',
+      'Pattern recognition',
+      'Risk assessment models',
+      'Automated decision making',
+      'False positive reduction',
+      'Continuous learning'
+    ],
+    benefits: [
+      '90% reduction in fraud losses',
+      '95% accuracy in fraud detection',
+      '60% reduction in false positives',
+      'Real-time protection'
+    ],
+    marketPrice: '$4,000-8,000/month',
+    setupTime: '3-4 weeks',
+    targetUsers: 'Finance, E-commerce, Insurance, Banking'
+  },
+  {
+    id: 9,
+    title: 'AI-Powered Voice Analytics',
+    description: 'Advanced voice analysis for sentiment detection, emotion recognition, and speech analytics in customer interactions.',
+    icon: Mic,
+    category: 'NLP',
+    price: 'Starting at $1,600/month',
+    features: [
+      'Voice sentiment analysis',
+      'Emotion recognition',
+      'Speaker identification',
+      'Call quality assessment',
+      'Real-time transcription',
+      'Keyword extraction',
+      'Conversation analytics',
+      'Performance insights'
+    ],
+    benefits: [
+      '85% accuracy in sentiment detection',
+      '40% improvement in customer satisfaction',
+      'Real-time conversation insights',
+      'Automated quality monitoring'
+    ],
+    marketPrice: '$2,800-5,500/month',
+    setupTime: '2-3 weeks',
+    targetUsers: 'Call Centers, Customer Service, Sales, Healthcare'
+  },
+  {
+    id: 10,
+    title: 'AI-Powered Supply Chain Optimization',
+    description: 'Intelligent supply chain management with demand forecasting, route optimization, and inventory management.',
+    icon: Truck,
+    category: 'Machine Learning',
+    price: 'Starting at $3,200/month',
+    features: [
+      'Demand forecasting',
+      'Route optimization',
+      'Inventory optimization',
+      'Supplier risk assessment',
+      'Cost optimization',
+      'Real-time tracking',
+      'Predictive maintenance',
+      'Sustainability metrics'
+    ],
+    benefits: [
+      '25% reduction in logistics costs',
+      '30% improvement in delivery times',
+      '40% reduction in stockouts',
+      '20% increase in efficiency'
+    ],
+    marketPrice: '$5,000-10,000/month',
+    setupTime: '4-6 weeks',
+    targetUsers: 'Logistics, Manufacturing, Retail, E-commerce'
   }
 ];
 
