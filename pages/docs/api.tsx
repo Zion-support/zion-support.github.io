@@ -73,26 +73,10 @@ const response = await fetch('/api/ai/email-responder', {
   body: JSON.stringify({
     message: 'I need help with my account',
     context: { userId: '12345' }
+  })
+});`
   }
 ];
-
-import MainLayout from '../../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
-import {
-  Code,
-  Copy,
-  Check,
-  ExternalLink,
-  ArrowRight,
-  Terminal,
-  Globe,
-  Shield,
-  Zap,
-  Database,
-  Cpu,
-  Cloud,
-  XCircle
-} from 'lucide-react';
 
 export default function APIDocumentationPage() {
   const [copiedCode, setCopiedCode] = useState(null);
