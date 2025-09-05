@@ -1,6 +1,25 @@
 import { useEffect, useState } from 'react';
 import { PerformanceMetrics } from '../types';
 
+// Type definitions for performance APIs
+declare global {
+  interface PerformanceEntry {
+    name: string;
+    entryType: string;
+    startTime: number;
+    duration: number;
+  }
+  
+  interface PerformanceNavigationTiming extends PerformanceEntry {
+    loadEventEnd: number;
+    loadEventStart: number;
+  }
+  
+  interface PerformanceEventTiming extends PerformanceEntry {
+    processingStart: number;
+  }
+}
+
 export function usePerformanceMetrics() {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
