@@ -3,7 +3,7 @@
 if (typeof window !== 'undefined') {,
   // Core Web Vitals monitoring,
   function sendToAnalytics(metric) {,
-    console.log('Performance metric:', metric),
+    ,
     // In production, send to analytics service
   };
   // LCP monitoring,

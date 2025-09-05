@@ -78,7 +78,7 @@ function processFile(filePath) {,
 ,
     if (content !== fixedContent) {,
       fs.writeFileSync(filePath, fixedContent),
-      console.log(`Fixed: ${filePath}`),
+      ,
       return true
     };
     return false
@@ -93,7 +93,7 @@ const files = fs.readdirSync(pagesDir),
   .filter(file => file.endsWith('.tsx')),
   .map(file => path.join(pagesDir, file)),
 ,
-console.log(`Processing ${files.length} .tsx files`),
+,
 ,
 let fixedCount = 0,
 files.forEach(file => {,
@@ -102,5 +102,4 @@ files.forEach(file => {,
   };
 }),
 ,
-console.log(`Fixed ${fixedCount} files`)
 }}}}

@@ -35,8 +35,7 @@ function fixMergeConflicts(filePath) {,
     content = content.replace(/\s*<\/div>\s*<\/section>\s*<\/div>\s*<\/>\s*),\s*}\s*const\s+stats\s*=/g, '\n      </>\n    ),\n  }\n\n  const stats = '),
 ,
     fs.writeFileSync(filePath, content),
-    console.log(`Fixed merge conflicts in ${filePath}`)
-  } catch (error) {,
+    } catch (error) {,
     console.error(`Error fixing ${filePath}:`, error.message)
   };
 };
@@ -62,7 +61,7 @@ function findFiles(dir, extensions = ['.tsx.ts.jsx.js']) {,
   return files
 };
 // Main execution,
-console.log('🔧 Fixing merge conflicts and syntax issues...'),
+,
 ,
 const pagesDir = path.join(__dirname, 'pages'),
 const componentsDir = path.join(__dirname, 'components'),
@@ -73,11 +72,11 @@ const filesToFix = [,
   ...findFiles(componentsDir)
 ],
 ,
-console.log(`Found ${filesToFix.length} files to check`),
+,
 ,
 // Fix each file,
 filesToFix.forEach(filePath => {,
   fixMergeConflicts(filePath)
 }),
 ,
-console.log('✅ Merge conflict fixing completed!'),
+,

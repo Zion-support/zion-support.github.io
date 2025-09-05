@@ -10,38 +10,32 @@ const STATIC_FILES = [
 
 // Install event - cache static files
 self.addEventListener('install', (event) => {
-  // // console.log('Service Worker installing...');
-  event.waitUntil(
+  // // event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        // // console.log('Caching static files');
-        return cache.addAll(STATIC_FILES);
+        // // return cache.addAll(STATIC_FILES);
       })
       .then(() => {
-        // // console.log('Service Worker installed');
-        return self.skipWaiting();
+        // // return self.skipWaiting();
       })
   );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  // // console.log('Service Worker activating...');
-  event.waitUntil(
+  // // event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              // // console.log('Deleting old cache:', cacheName);
-              return caches.delete(cacheName);
+              // // return caches.delete(cacheName);
             }
           })
         );
       })
       .then(() => {
-        // // console.log('Service Worker activated');
-        return self.clients.claim();
+        // // return self.clients.claim();
       })
   );
 });
@@ -66,8 +60,7 @@ self.addEventListener('fetch', (event) => {
       .then((cachedResponse) => {
         // Return cached version if available
         if (cachedResponse) {
-          // // console.log('Serving from cache:', request.url);
-          return cachedResponse;
+          // // return cachedResponse;
         }
 
         // Otherwise fetch from network
@@ -92,9 +85,7 @@ self.addEventListener('fetch', (event) => {
             return response;
           })
           .catch((error) => {
-            // // console.log('Fetch failed:', error);
-            
-            // Return offline page for navigation requests
+            // // // Return offline page for navigation requests
             if (request.mode === 'navigate') {
               return caches.match('/offline.html');
             }
@@ -107,18 +98,14 @@ self.addEventListener('fetch', (event) => {
 
 // Background sync for offline actions
 self.addEventListener('sync', (event) => {
-  // // console.log('Background sync triggered:', event.tag);
-  
-  if (event.tag === 'background-sync') {
+  // // if (event.tag === 'background-sync') {
     event.waitUntil(doBackgroundSync());
   }
 });
 
 // Push notifications
 self.addEventListener('push', (event) => {
-  // // console.log('Push message received');
-  
-  const options = {
+  // // const options = {
     body: event.data ? event.data.text() : 'New update available',
     icon: '/icon-192x192.png',
     badge: '/badge-72x72.png',
@@ -148,9 +135,7 @@ self.addEventListener('push', (event) => {
 
 // Notification click handler
 self.addEventListener('notificationclick', (event) => {
-  // // console.log('Notification clicked:', event.action);
-  
-  event.notification.close();
+  // // event.notification.close();
   
   if (event.action === 'explore') {
     event.waitUntil(
@@ -178,16 +163,13 @@ function shouldCache(url) {
 async function doBackgroundSync() {
   try {
     // Perform background sync operations
-    // // console.log('Performing background sync...');
-    
-    // Example: Sync offline data
+    // // // Example: Sync offline data
     const offlineData = await getOfflineData();
     if (offlineData.length > 0) {
       await syncOfflineData(offlineData);
     }
     
-    // // console.log('Background sync completed');
-  } catch (error) {
+    // // } catch (error) {
     console.error('Background sync failed:', error);
   }
 }
@@ -199,8 +181,7 @@ async function getOfflineData() {
 
 async function syncOfflineData(data) {
   // Sync offline data with server
-  // // console.log('Syncing offline data:', data);
-}
+  // // }
 
 // Cache management
 async function clearOldCaches() {

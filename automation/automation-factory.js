@@ -54,8 +54,7 @@ class AutomationFactory {
   log(message, level = "INFO") {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    // // console.log(`[${level}] ${message}`);
-    fs.appendFileSync(this.logFile, logMessage);
+    // // fs.appendFileSync(this.logFile, logMessage);
   }
 
   loadExistingScripts() {
@@ -110,8 +109,7 @@ class CodeQualityMonitor {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] \${message}\\n\`;
-    // // console.log(message);
-    fs.appendFileSync(this.logFile, logMessage);
+    // // fs.appendFileSync(this.logFile, logMessage);
   }
 
   async analyzeCodeQuality() {
@@ -205,8 +203,7 @@ class CodeQualityMonitor {
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics => {
   if (metrics) {
-    // // console.log("Metrics:", metrics);
-  }
+    // // }
 });`;
 
     const scriptPath = path.join(__dirname, "code-quality-monitor.js");
@@ -240,8 +237,7 @@ class PerformanceOptimizer {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] \${message}\\n\`;
-    // // console.log(message);
-    fs.appendFileSync(this.logFile, logMessage);
+    // // fs.appendFileSync(this.logFile, logMessage);
   }
 
   async optimizePerformance() {
@@ -338,8 +334,7 @@ class PerformanceOptimizer {
 const optimizer = new PerformanceOptimizer();
 optimizer.optimizePerformance().then(report => {
   if (report) {
-    // // console.log("Performance report:", report);
-  }
+    // // }
 });`;
 
     const scriptPath = path.join(__dirname, "performance-optimizer.js");
@@ -437,24 +432,15 @@ optimizer.optimizePerformance().then(report => {
   }
 
   listScripts() {
-    // // console.log("\nAvailable Automation Scripts:");
-    
-    for (const [name, script] of this.scripts) {
+    // // for (const [name, script] of this.scripts) {
       const status = this.runningScripts.has(name) ? "RUNNING" : script.status.toUpperCase();
       const lastRun = script.lastRun ? new Date(script.lastRun).toLocaleString() : "Never";
       
-      // // console.log(`\n${name}:`);
-      // // console.log(`  Description: ${script.description}`);
-      // // console.log(`  Status: ${status}`);
-      // // console.log(`  Last Run: ${lastRun}`);
-      // // console.log(`  Success Count: ${script.successCount}`);
-      // // console.log(`  Error Count: ${script.errorCount}`);
-    }
+      // // // // // // // // // // // // }
 
-    // // console.log("\nRunning Scripts:");
-    for (const [name, info] of this.runningScripts) {
+    // // for (const [name, info] of this.runningScripts) {
       const duration = Date.now() - info.startTime;
-      // // console.log(`${name}: Running for ${Math.floor(duration / 1000)}s`);
+      // // }s`);
     }
   }
 
@@ -507,10 +493,5 @@ switch (command) {
     factory.startContinuousMode();
     break;
   default:
-    // // console.log("Usage:");
-    // // console.log("  node automation-factory.js list");
-    // // console.log("  node automation-factory.js run [script-name]");
-    // // console.log("  node automation-factory.js generate");
-    // // console.log("  node automation-factory.js continuous");
-    break;
+    // // // // // // // // // // break;
 }

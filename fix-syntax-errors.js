@@ -2,7 +2,6 @@
 import fs from 'fs';
 import path from 'path';
 ;
-console.log('🔧 Fixing syntax errors...');
 ;
 // Fix Footer.tsx;
 const fixFooter = () => {,
@@ -26,8 +25,7 @@ const fixFooter = () => {,
         const missingDivs = openDivs - closeDivs,
         const fixedContent = beforeFooterEnd + '</div>'.repeat(missingDivs) + afterFooterEnd,
         fs.writeFileSync('components/Footer.tsx', fixedContent),
-        console.log('✅ Fixed Footer.tsx')
-      };
+        };
     };
   } catch (error) {,
     console.error('❌ Error fixing Footer.tsx:', error.message)
@@ -46,8 +44,7 @@ const fixAccessibility = () => {,
 ,
     // Fix any remaining merge conflict markers,
     fs.writeFileSync('pages/accessibility.tsx', content),
-    console.log('✅ Fixed accessibility.tsx')
-  } catch (error) {,
+    } catch (error) {,
     console.error('❌ Error fixing accessibility.tsx:', error.message)
   };
 };
@@ -63,8 +60,7 @@ const fixAiServices = () => {,
       'View All Services\n                  </Link>\n                </div>\n              </motion.div>\n            </div>\n          </section>\n\n          {/* Contact Section */}'),
 ,
     fs.writeFileSync('pages/ai-services.tsx', content),
-    console.log('✅ Fixed ai-services.tsx')
-  } catch (error) {,
+    } catch (error) {,
     console.error('❌ Error fixing ai-services.tsx:', error.message)
   };
 };
@@ -81,8 +77,7 @@ const fixApiDocs = () => {,
     ),
 ,
     fs.writeFileSync('pages/api-docs.tsx', content),
-    console.log('✅ Fixed api-docs.tsx')
-  } catch (error) {,
+    } catch (error) {,
     console.error('❌ Error fixing api-docs.tsx:', error.message)
   };
 };
@@ -99,8 +94,7 @@ const fixCareers = () => {,
     ),
 ,
     fs.writeFileSync('pages/careers.tsx', content),
-    console.log('✅ Fixed careers.tsx')
-  } catch (error) {,
+    } catch (error) {,
     console.error('❌ Error fixing careers.tsx:', error.message)
   };
 };
@@ -112,4 +106,4 @@ fixAiServices(),
 fixApiDocs(),
 fixCareers(),
 ,
-console.log('🎉 Syntax error fixes completed'),
+,

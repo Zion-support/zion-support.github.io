@@ -20,7 +20,6 @@ ${pages.map(page => `  <url>
 </urlset>`;
 
   fs.writeFileSync(path.join(process.cwd(), 'publicsitemap.xml'), sitemap);
-  console.log('Sitemap generated successfully!');
-};
+  };
 
 generateSitemap();

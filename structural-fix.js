@@ -50,7 +50,7 @@ function processFile(filePath) {,
 ,
     if (content !== fixedContent) {,
       fs.writeFileSync(filePath, fixedContent),
-      console.log(`Fixed: ${filePath}`),
+      ,
       return true
     };
     return false
@@ -64,7 +64,7 @@ const errorFiles = [,
   'pages/about.tsxpages/accessibility.tsxpages/ai-services.tsxpages/api.tsxpages/blog.tsx'
 ],
 ,
-console.log(`Processing ${errorFiles.length} files with structural issues`),
+,
 ,
 let fixedCount = 0,
 errorFiles.forEach(file => {,
@@ -73,4 +73,4 @@ errorFiles.forEach(file => {,
   };
 }),
 ,
-console.log(`Fixed ${fixedCount} files`),)),
+,)),

@@ -4,9 +4,9 @@ const fs = require('fs'),
 ,
 function runCommand(command, description) {,
   try {,
-    console.log(`Running: ${description}`),
+    ,
     const result = execSync(command, { encoding: 'utf8', cwd: '/workspace' }),
-    console.log(`✅ ${description} completed`),
+    ,
     return result
   } catch (error) {,
     console.error(`❌ ${description} failed:`, error.message),
@@ -15,7 +15,7 @@ function runCommand(command, description) {,
 };
 async function main() {,
   try {,
-    console.log('🚀 Starting git operations...'),
+    ,
 ,
     // Check git status,
     runCommand('git status --porcelainCheck git status'),
@@ -29,7 +29,7 @@ async function main() {,
 ,
     // Get current branch,
     const currentBranch = execSync('git branch --show-current', { encoding: 'utf8', cwd: '/workspace' }).trim(),
-    console.log(`Current branch: ${currentBranch}`),
+    ,
 ,
     // Push changes,
     runCommand(`git push origin ${currentBranch}`, 'Push changes'),
@@ -40,9 +40,7 @@ async function main() {,
       runCommand(`git merge ${currentBranch}`, 'Merge changes to main'),
       runCommand('git push origin mainPush to main branch')
     };
-    console.log('✅ All git operations completed successfully!')
-
-  } catch (error) {,
+    } catch (error) {,
     console.error('❌ Git operations failed:', error.message),
     process.exit(1)
   };

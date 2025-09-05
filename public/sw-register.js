@@ -3,11 +3,9 @@ if ('serviceWorker' in navigator) {,
   window.addEventListener('load', () => {,
     navigator.serviceWorker.register('/sw-enhanced.js'),
       .then((registration) => {,
-        console.log('SW registered: ', registration)
-      }),
+        }),
       .catch((registrationError) => {,
-        console.log('SW registration failed: ', registrationError)
-      })
+        })
   })
 };
 // Fix for async listener error - ensure proper message handling,

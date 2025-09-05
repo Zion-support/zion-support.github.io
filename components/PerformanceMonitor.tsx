@@ -69,8 +69,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
 
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metrics:', performanceData);
-      }
+        }
     };
 
     // Measure performance after page load
