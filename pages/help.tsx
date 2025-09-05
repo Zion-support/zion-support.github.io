@@ -343,22 +343,14 @@ export default function HelpPage() {
     <Layout>
       <Head>
         <title>Help Center - Zion Tech Group</title>
-    icon: Video,
-    href: '/tutorials'
-  },
-  {
-    title: 'Community Forum',
-    description: 'Connect with other users and experts',
-    icon: MessageCircle,
-    href: '/community'
-  },
-  {
-    title: 'Contact Support',
-    description: 'Get help from our support team',
-    icon: Phone,
-    href: '/contact'
-  }
-];
+        <meta name="description" content="Get help and support for Zion Tech Group services" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        {/* Help content will go here */}
+      </div>
+    </Layout>
+  );
+}
 
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState('');

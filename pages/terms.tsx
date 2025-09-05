@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { FileText, Shield, AlertCircle, Scale, Mail, Phone, MapPin } from 'lucide-react';
 import MainLayout from '../src/components/layout/MainLayout';
 
@@ -114,6 +115,6 @@ export default function TermsPage() {
           </div>
         </section>
       </div>
-    </>
+    </MainLayout>
   );
 }

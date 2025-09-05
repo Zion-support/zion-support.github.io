@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -72,7 +73,9 @@ const response = await fetch('/api/ai/email-responder', {
   body: JSON.stringify({
     message: 'I need help with my account',
     context: { userId: '12345' }
-import React, { useState } from 'react';
+  }
+];
+
 import MainLayout from '../../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
