@@ -1,375 +1,339 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Layout from './components/Layout';
-import {
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  ArrowRight,
-  CheckCircle,
+import Layout from '../components/Layout';
+import { 
+  Brain, 
+  Bot, 
+  Eye, 
+  MessageSquare, 
+  BarChart3, 
+  Zap, 
+  Shield, 
+  ArrowRight, 
+  CheckCircle, 
   Star,
-  Users,
-  Globe,
+  Clock,
+  DollarSign,
   Award,
-  Phone,
-  Mail,
-  MapPin,
-  Play,
-  Download,
-  ExternalLink,
+  Globe,
+  Lock,
+  Cpu,
+  FileText,
+  Image,
+  Video,
+  Mic,
   Code,
+  Settings,
+  Monitor,
+  Smartphone,
+  Cloud,
+  Server,
+  Network,
+  Car,
+  Rocket,
+  Heart,
+  Building,
+  Sprout,
+  Mail,
+  Search,
+  Target,
+  TrendingUp,
+  Package,
+  Calendar,
+  BookOpen,
+  ShoppingCart,
+  Home,
+  Trash2,
+  Camera,
+  HardDrive,
   Database,
-  BarChart,
-  Info
+  Phone,
+  MapPin
 } from 'lucide-react';
 
-const microSaasProducts = [
-  {
-    id: 1,
-    name: 'AI Content Generator',
-    description: 'Generate high-quality content using advanced AI algorithms',
-    category: 'Content Creation',
-    price: '$29/month',
-    features: ['AI Writing', 'SEO Optimization', 'Multi-language', 'Templates'],
-    icon: Brain,
-    color: 'from-blue-500 to-purple-600',
-    rating: 4.9,
-    users: 2500,
-    image: '/images/micro-saas/ai-content.jpg'
-  },
-  {
-    id: 2,
-    name: 'Cloud Analytics Dashboard',
-    description: 'Real-time analytics and insights for your business data',
-    category: 'Analytics',
-    price: '$49/month',
-    features: ['Real-time Data', 'Custom Reports', 'API Integration', 'Alerts'],
-    icon: BarChart,
-    color: 'from-green-500 to-blue-600',
-    rating: 4.8,
-    users: 1800,
-    image: '/images/micro-saas/analytics.jpg'
-  },
-  {
-    id: 3,
-    name: 'Security Monitor',
-    description: 'Advanced security monitoring and threat detection',
-    category: 'Security',
-    price: '$39/month',
-    features: ['Threat Detection', 'Real-time Alerts', 'Compliance Reports', '24/7 Monitoring'],
-    icon: Shield,
-    color: 'from-red-500 to-orange-600',
-    rating: 4.7,
-    users: 1200,
-    image: '/images/micro-saas/security.jpg'
-  },
-  {
-    id: 4,
-    name: 'Workflow Automator',
-    description: 'Automate repetitive tasks and streamline your workflows',
-    category: 'Automation',
-    price: '$59/month',
-    features: ['Task Automation', 'Integration Hub', 'Custom Workflows', 'Scheduling'],
-    icon: Zap,
-    color: 'from-purple-500 to-pink-600',
-    rating: 4.9,
-    users: 3200,
-    image: '/images/micro-saas/automation.jpg'
-  },
-  {
-    id: 5,
-    name: 'Database Optimizer',
-    description: 'Optimize database performance and reduce costs',
-    category: 'Database',
-    price: '$79/month',
-    features: ['Performance Tuning', 'Query Optimization', 'Cost Analysis', 'Monitoring'],
-    icon: Database,
-    color: 'from-indigo-500 to-cyan-600',
-    rating: 4.8,
-    users: 950,
-    image: '/images/micro-saas/database.jpg'
-  },
-  {
-    id: 6,
-    name: 'API Gateway',
-    description: 'Manage and secure your APIs with advanced features',
-    category: 'API Management',
-    price: '$99/month',
-    features: ['API Security', 'Rate Limiting', 'Analytics', 'Documentation'],
-    icon: Code,
-    color: 'from-teal-500 to-green-600',
-    rating: 4.9,
-    users: 2100,
-    image: '/images/micro-saas/api-gateway.jpg'
-  }
-];
+const MicroSAASPage = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
-const categories = [
-  { name: 'All', count: microSaasProducts.length, icon: Globe },
-  { name: 'Content Creation', count: 1, icon: Brain },
-  { name: 'Analytics', count: 1, icon: BarChart },
-  { name: 'Security', count: 1, icon: Shield },
-  { name: 'Automation', count: 1, icon: Zap },
-  { name: 'Database', count: 1, icon: Database },
-  { name: 'API Management', count: 1, icon: Code }
-];
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Brain },
+    { id: 'ai-powered', name: 'AI-Powered', icon: Bot },
+    { id: 'automation', name: 'Automation', icon: Zap },
+    { id: 'analytics', name: 'Analytics', icon: BarChart3 },
+    { id: 'productivity', name: 'Productivity', icon: Target },
+    { id: 'marketing', name: 'Marketing', icon: TrendingUp }
+  ];
 
-const benefits = [
-  {
-    icon: Zap,
-    title: 'Lightning Fast Setup',
-    description: 'Get up and running in minutes, not months'
-  },
-  {
-    icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Bank-level security and compliance standards'
-  },
-  {
-    icon: Cloud,
-    title: 'Scalable Infrastructure',
-    description: 'Grows with your business automatically'
-  },
-  {
-    icon: Users,
-    title: '24/7 Support',
-    description: 'Expert support whenever you need it'
-  }
-];
+  const microSAASServices = [
+    {
+      id: 'ai-code-review',
+      title: 'AI-Powered Code Review Assistant',
+      description: 'Intelligent code review tool that automatically detects bugs, suggests improvements, and enforces coding standards.',
+      icon: Code,
+      category: 'ai-powered',
+      features: [
+        'Automated bug detection',
+        'Code quality scoring',
+        'Security vulnerability scanning',
+        'Performance optimization suggestions',
+        'Integration with popular IDEs'
+      ],
+      pricing: '$89/month',
+      marketPrice: '$89 - $299/month',
+      timeline: '1-2 weeks',
+      benefits: [
+        'Reduce code review time by 70%',
+        'Improve code quality consistently',
+        'Catch bugs before deployment',
+        'Enforce team coding standards'
+      ],
+      link: 'https://ziontechgroup.com/ai-code-review'
+    },
+    {
+      id: 'smart-inventory-predictor',
+      title: 'Smart Inventory Predictor',
+      description: 'AI-driven inventory management system that predicts demand, optimizes stock levels, and prevents stockouts.',
+      icon: Package,
+      category: 'ai-powered',
+      features: [
+        'Demand forecasting',
+        'Automated reorder points',
+        'Seasonal trend analysis',
+        'Supplier performance tracking',
+        'Cost optimization recommendations'
+      ],
+      pricing: '$199/month',
+      marketPrice: '$199 - $599/month',
+      timeline: '2-3 weeks',
+      benefits: [
+        'Reduce inventory costs by 25%',
+        'Eliminate stockouts and overstock',
+        'Improve cash flow management',
+        'Optimize supplier relationships'
+      ],
+      link: 'https://ziontechgroup.com/smart-inventory-predictor'
+    },
+    {
+      id: 'voice-meeting-transcriber',
+      title: 'Voice-to-Text Meeting Transcriber',
+      description: 'Real-time meeting transcription with AI-powered speaker identification and action item extraction.',
+      icon: Mic,
+      category: 'ai-powered',
+      features: [
+        'Real-time transcription',
+        'Speaker identification',
+        'Action item extraction',
+        'Meeting summaries',
+        'Multi-language support'
+      ],
+      pricing: '$79/month',
+      marketPrice: '$79 - $199/month',
+      timeline: '1 week',
+      benefits: [
+        'Improve meeting productivity',
+        'Never miss important details',
+        'Automated follow-up generation',
+        'Better meeting documentation'
+      ],
+      link: 'https://ziontechgroup.com/voice-meeting-transcriber'
+    },
+    {
+      id: 'ai-sentiment-analyzer',
+      title: 'AI Customer Sentiment Analyzer',
+      description: 'Advanced sentiment analysis tool that monitors customer feedback across all channels and provides actionable insights.',
+      icon: Heart,
+      category: 'analytics',
+      features: [
+        'Multi-channel monitoring',
+        'Real-time sentiment tracking',
+        'Trend analysis and reporting',
+        'Alert system for negative feedback',
+        'Competitor sentiment comparison'
+      ],
+      pricing: '$149/month',
+      marketPrice: '$149 - $399/month',
+      timeline: '2 weeks',
+      benefits: [
+        'Improve customer satisfaction',
+        'Identify issues before they escalate',
+        'Track brand reputation',
+        'Make data-driven decisions'
+      ],
+      link: 'https://ziontechgroup.com/ai-sentiment-analyzer'
+    },
+    {
+      id: 'smart-contract-generator',
+      title: 'Smart Contract Generator',
+      description: 'AI-powered tool for creating, testing, and deploying smart contracts on various blockchain platforms.',
+      icon: Shield,
+      category: 'ai-powered',
+      features: [
+        'Natural language to code conversion',
+        'Multi-blockchain support',
+        'Automated testing and validation',
+        'Security audit integration',
+        'Deployment automation'
+      ],
+      pricing: '$299/month',
+      marketPrice: '$299 - $999/month',
+      timeline: '3-4 weeks',
+      benefits: [
+        'Reduce development time by 80%',
+        'Ensure contract security',
+        'Lower development costs',
+        'Enable rapid prototyping'
+      ],
+      link: 'https://ziontechgroup.com/smart-contract-generator'
+    },
+    {
+      id: 'ai-logo-designer',
+      title: 'AI-Powered Logo Designer',
+      description: 'Intelligent logo design tool that creates professional logos based on brand requirements and industry trends.',
+      icon: Image,
+      category: 'ai-powered',
+      features: [
+        'AI-generated logo concepts',
+        'Industry-specific designs',
+        'Color palette optimization',
+        'Brand guideline generation',
+        'Multiple format exports'
+      ],
+      pricing: '$49/month',
+      marketPrice: '$49 - $149/month',
+      timeline: '1 week',
+      benefits: [
+        'Professional logo creation',
+        'Consistent brand identity',
+        'Cost-effective design solution',
+        'Quick turnaround times'
+      ],
+      link: 'https://ziontechgroup.com/ai-logo-designer'
+    }
+  ];
 
-export default function MicroSaasPage() {
+  const filteredServices = selectedCategory === 'all' 
+    ? microSAASServices 
+    : microSAASServices.filter(service => service.category === selectedCategory);
+
   return (
-    <Layout>
-      <Head>
-        <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover our innovative micro SaaS solutions designed to solve specific business problems with powerful, focused tools." />
-      </Head>
-
+    <Layout 
+      title="Micro SAAS Services - Zion Tech Group" 
+      description="Innovative micro SAAS solutions for modern businesses. AI-powered tools, automation, and productivity solutions."
+    >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-5xl font-bold mb-6">
-                Micro SaaS Solutions
-              </h1>
-              <p className="text-xl mb-8 text-purple-100">
-                Powerful, focused tools that solve specific business problems. 
-                Get started in minutes with our innovative micro SaaS products.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="#products"
-                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
-                >
-                  Browse Products
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href="#benefits"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center"
-                >
-                  Learn More
-                  <Info className="ml-2 w-5 h-5" />
-                </Link>
-              </div>
-            </motion.div>
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Micro SAAS Services
+                </h1>
+                <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+                  Powerful, focused software solutions that solve specific business problems. 
+                  From AI-powered tools to automation platforms, we build micro SAAS that delivers big results.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link 
+                    href="#services" 
+                    className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors"
+                  >
+                    Explore Services
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                  <Link 
+                    href="/contact" 
+                    className="inline-flex items-center px-6 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section id="benefits" className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Why Choose Micro SaaS?
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Focused solutions that deliver maximum value with minimal complexity.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={benefit.title}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+        {/* Categories Filter */}
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap justify-center gap-4">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`flex items-center px-6 py-3 rounded-lg transition-colors ${
+                    selectedCategory === category.id
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {benefit.description}
-                  </p>
-                </motion.div>
+                  <category.icon className="h-5 w-5 mr-2" />
+                  {category.name}
+                </button>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Categories Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Browse by Category
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Find the perfect solution for your specific business needs.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-              {categories.map((category, index) => (
+        {/* Services Grid */}
+        <section id="services" className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index) => (
                 <motion.div
-                  key={category.name}
-                  className="bg-white rounded-lg p-4 text-center hover:bg-purple-50 hover:border-purple-200 border-2 border-transparent transition-all cursor-pointer"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.05 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
                 >
-                  <category.icon className="w-8 h-8 mx-auto mb-2 text-purple-600" />
-                  <h3 className="font-semibold text-gray-900 text-sm mb-1">
-                    {category.name}
-                  </h3>
-                  <p className="text-gray-500 text-xs">
-                    {category.count} products
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Products Grid */}
-        <section id="products" className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Our Micro SaaS Products
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Powerful, focused tools designed to solve specific business challenges.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasProducts.map((product, index) => (
-                <motion.div
-                  key={product.id}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-200"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                >
-                  <div className="relative">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="absolute top-4 left-4 flex gap-2">
-                      <span className="px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-600">
-                        {product.category}
-                      </span>
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                      <service.icon className="h-6 w-6 text-white" />
                     </div>
-                    <div className="absolute top-4 right-4">
-                      <div className="bg-white bg-opacity-90 rounded-full p-2">
-                        <product.icon className="w-6 h-6 text-purple-600" />
-                      </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+                      <p className="text-sm text-gray-500">{service.marketPrice}</p>
                     </div>
                   </div>
-
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-xl font-bold text-gray-900">
-                        {product.name}
-                      </h3>
-                      <div className="text-2xl font-bold text-purple-600">
-                        {product.price}
-                      </div>
-                    </div>
-
-                    <p className="text-gray-600 mb-4">
-                      {product.description}
-                    </p>
-
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center">
-                        <div className="flex items-center">
-                          {[...Array(5)].map((_, i) => (
-                            <Star
-                              key={i}
-                              className={`w-4 h-4 ${
-                                i < Math.floor(product.rating)
-                                  ? 'text-yellow-400'
-                                  : 'text-gray-300'
-                              }`}
-                              fill="currentColor"
-                            />
-                          ))}
-                        </div>
-                        <span className="ml-2 text-sm text-gray-600">
-                          {product.rating} ({product.users} users)
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="space-y-2 mb-6">
-                      {product.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                  
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      {service.features.slice(0, 3).map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center">
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
-                        </div>
+                        </li>
                       ))}
+                    </ul>
+                  </div>
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-sm text-gray-500">
+                      <Clock className="h-4 w-4 inline mr-1" />
+                      {service.timeline}
                     </div>
-
-                    <div className="flex gap-2">
-                      <Link
-                        href="#"
-                        className="flex-1 bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center inline-flex items-center justify-center"
-                      >
-                        <Play className="w-4 h-4 mr-2" />
-                        Try Now
-                      </Link>
-                      <Link
-                        href="#"
-                        className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center"
-                      >
-                        <Download className="w-4 h-4" />
-                      </Link>
+                    <div className="text-sm text-gray-500">
+                      <DollarSign className="h-4 w-4 inline mr-1" />
+                      {service.pricing}
                     </div>
                   </div>
+                  
+                  <Link 
+                    href={service.link}
+                    className="inline-flex items-center w-full justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </motion.div>
               ))}
             </div>
@@ -377,34 +341,33 @@ export default function MicroSaasPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-          <div className="container mx-auto px-4">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl font-bold mb-6">
-                Ready to Get Started?
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Build Your Micro SAAS?
               </h2>
-              <p className="text-xl mb-8 text-purple-100">
-                Choose from our range of micro SaaS solutions and start solving your business challenges today.
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Let's discuss your specific needs and create a custom micro SAAS solution 
+                that perfectly fits your business requirements.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="#products"
-                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
+                <Link 
+                  href="/contact" 
+                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
                 >
-                  Browse All Products
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  Start Your Project
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-                <Link
-                  href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center"
+                <Link 
+                  href="/ai-services" 
+                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 >
-                  Contact Sales
-                  <ExternalLink className="ml-2 w-5 h-5" />
+                  Explore AI Services
                 </Link>
               </div>
             </motion.div>
@@ -413,4 +376,6 @@ export default function MicroSaasPage() {
       </div>
     </Layout>
   );
-}
+};
+
+export default MicroSAASPage;

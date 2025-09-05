@@ -18,57 +18,47 @@ interface MainLayoutProps {
 
 const MainLayout: React.FC<MainLayoutProps> = ({
   children,
-  title = 'Zion Tech Group - AI, IT & Micro SaaS Solutions',
-  description = 'Leading provider of AI solutions, IT services, and Micro SaaS products. Transform your business with our innovative technology and intelligent automation.',
-  keywords = 'AI solutions, IT services, Micro SaaS, artificial intelligence, technology consulting, software development, digital transformation',
-  image = '/images/og-image.jpg',
-  url = 'https://ziontechgroup.com',
+  title = "Zion Tech Group - Leading Technology Solutions Provider",
+  description = "Transform your business with cutting-edge AI, IT services, and micro SaaS solutions. Expert technology consulting and implementation services.",
+  keywords = "technology solutions, AI services, IT consulting, micro SaaS, cloud computing, digital transformation, cybersecurity, software development",
+  image,
+  url,
   type = 'website',
   noindex = false,
   nofollow = false,
   canonical
 }) => {
-  const robots = noindex || nofollow 
-    ? `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`
-    : 'index, follow';
-
   return (
     <>
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
+        <title>{title || 'Zion Tech Group'}</title>
+        <meta name="description" content={description || 'Leading technology solutions provider'} />
+        {keywords && <meta name="keywords" content={keywords} />}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content={robots} />
+        <link rel="icon" href="/favicon.ico" />
+        
+        {/* SEO Meta Tags */}
+        <meta name="robots" content={noindex ? "noindex" : nofollow ? "nofollow" : "index, follow"} />
         <meta name="author" content="Zion Tech Group" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content={type} />
-        <meta property="og:url" content={canonical || url} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={image} />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={canonical || url} />
-        <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content={image} />
         
         {/* Canonical URL */}
         {canonical && <link rel="canonical" href={canonical} />}
         
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
+        {/* Open Graph */}
+        <meta property="og:type" content={type} />
+        <meta property="og:title" content={title || 'Zion Tech Group'} />
+        <meta property="og:description" content={description || 'Leading technology solutions provider'} />
+        <meta property="og:site_name" content="Zion Tech Group" />
+        {image && <meta property="og:image" content={image} />}
+        {url && <meta property="og:url" content={url} />}
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title || 'Zion Tech Group'} />
+        <meta name="twitter:description" content={description || 'Leading technology solutions provider'} />
+        {image && <meta name="twitter:image" content={image} />}
       </Head>
-      
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col bg-gray-50">
         <Header />
         <main className="flex-grow">
           {children}

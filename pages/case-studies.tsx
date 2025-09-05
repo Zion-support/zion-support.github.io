@@ -1,134 +1,119 @@
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
-import Layout from './components/Layout';
 import {
   ArrowRight,
   Phone,
   Mail,
   MapPin,
   TrendingUp,
-  Users,
-  Clock,
   CheckCircle,
+  Users,
   Building,
   Globe,
   Award,
+  Clock,
   BarChart3,
-  Brain,
-  Shield,
-  Zap,
-  Cloud
+  Cloud,
+  Shield
 } from 'lucide-react';
 
 const caseStudies = [
   {
     id: 1,
-    title: "AI-Powered Healthcare Platform",
-    client: "Regional Medical Center",
-    industry: "Healthcare",
-    challenge: "Manual patient data processing and diagnosis delays",
-    solution: "AI-powered diagnostic platform with real-time analysis",
+    title: "AI-Powered Customer Service Transformation",
+    client: "Global E-commerce Retailer",
+    industry: "E-commerce",
+    challenge: "High customer service costs and inconsistent response quality",
+    solution: "Implemented AI-powered chatbot and intelligent routing system",
     results: [
       "60% reduction in support costs",
       "40% faster response times",
-      "95% customer satisfaction",
-      "50% increase in efficiency"
+      "95% customer satisfaction rate",
+      "$2M annual savings"
     ],
-    technologies: ["AI/ML", "React", "Node.js", "PostgreSQL"],
-    duration: "6 months",
+    duration: "3 months",
     team: "8 experts",
-    image: "/images/case-studies/healthcare-ai.jpg",
-    icon: Brain
+    technologies: ["AI/ML", "NLP", "Cloud", "Analytics"],
+    image: "/images/case-studies/ecommerce-ai.jpg"
   },
   {
     id: 2,
     title: "Cloud Migration for Financial Services",
     client: "Regional Bank",
-    industry: "Finance",
-    challenge: "Legacy system limitations and scalability issues",
+    industry: "Financial Services",
+    challenge: "Legacy systems limiting scalability and innovation",
     solution: "Complete cloud migration with microservices architecture",
     results: [
-      "70% cost reduction",
       "99.9% uptime achieved",
-      "3x faster processing",
+      "50% faster application deployment",
+      "30% reduction in infrastructure costs",
       "Enhanced security compliance"
     ],
-    technologies: ["AWS", "Docker", "Kubernetes", "MongoDB"],
-    duration: "8 months",
+    duration: "6 months",
     team: "12 experts",
-    image: "/images/case-studies/cloud-migration.jpg",
-    icon: Cloud
+    technologies: ["AWS", "Kubernetes", "Microservices", "DevOps"],
+    image: "/images/case-studies/cloud-migration.jpg"
   },
   {
     id: 3,
-    title: "E-commerce Platform Optimization",
-    client: "Global Retail Chain",
-    industry: "Retail",
-    challenge: "Poor performance and low conversion rates",
-    solution: "Complete platform redesign with performance optimization",
+    title: "Cybersecurity Enhancement for Healthcare",
+    client: "Healthcare Network",
+    industry: "Healthcare",
+    challenge: "Increasing cyber threats and compliance requirements",
+    solution: "Comprehensive security framework and threat detection system",
     results: [
-      "85% faster page load times",
-      "40% increase in conversions",
-      "60% reduction in bounce rate",
-      "50% improvement in mobile experience"
+      "Zero security breaches",
+      "100% compliance with HIPAA",
+      "24/7 threat monitoring",
+      "50% faster incident response"
     ],
-    technologies: ["Next.js", "Redis", "CDN", "Analytics"],
     duration: "4 months",
     team: "6 experts",
-    image: "/images/case-studies/ecommerce-optimization.jpg",
-    icon: Zap
+    technologies: ["Cybersecurity", "SIEM", "Compliance", "Monitoring"],
+    image: "/images/case-studies/healthcare-security.jpg"
   }
 ];
 
 const stats = [
-  { label: "Projects Completed", value: "500+", icon: CheckCircle },
-  { label: "Client Satisfaction", value: "98%", icon: Award },
-  { label: "Team Members", value: "50+", icon: Users },
-  { label: "Years Experience", value: "10+", icon: Clock }
+  { number: "500+", label: "Projects Completed" },
+  { number: "50+", label: "Happy Clients" },
+  { number: "99.9%", label: "Success Rate" },
+  { number: "24/7", label: "Support Available" }
 ];
 
 export default function CaseStudiesPage() {
   return (
-    <Layout>
-      <Head>
-        <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Discover how we've helped businesses transform their operations and achieve remarkable results through innovative technology solutions." />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
+    <MainLayout
+      title="Case Studies - Zion Tech Group"
+      description="Explore our success stories and see how we've helped businesses transform through innovative technology solutions."
+      keywords="case studies, success stories, client projects, technology solutions, AI implementation"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="container mx-auto px-4">
+        <section className="relative bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              className="text-center"
             >
-              <h1 className="text-5xl font-bold mb-6">
-                Success Stories
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Success{' '}
+                <span className="bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">
+                  Stories
+                </span>
               </h1>
-              <p className="text-xl mb-8 text-blue-100">
-                Discover how we've helped businesses transform their operations and achieve remarkable results through innovative technology solutions.
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Discover how we've helped businesses transform and achieve their goals 
+                through innovative technology solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="#case-studies"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
-                >
-                  View Case Studies
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center"
-                >
-                  Start Your Project
-                  <Phone className="ml-2 w-5 h-5" />
-                </Link>
-              </div>
             </motion.div>
           </div>
         </section>
@@ -139,132 +124,128 @@ export default function CaseStudiesPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <motion.div
-                  key={stat.label}
+                  key={index}
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >
-                  <stat.icon className="w-12 h-12 mx-auto mb-4 text-blue-600" />
-                  <div className="text-3xl font-bold text-gray-900 mb-2">
-                    {stat.value}
+                  <div className="text-3xl md:text-4xl font-bold text-green-600 mb-2">
+                    {stat.number}
                   </div>
-                  <div className="text-gray-600">
-                    {stat.label}
-                  </div>
+                  <div className="text-gray-600 font-medium">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Case Studies Grid */}
-        <section id="case-studies" className="py-16 bg-gray-50">
+        {/* Case Studies */}
+        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
-              className="text-center mb-12"
+              className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Featured Case Studies
               </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Real projects, real results. See how we've helped businesses across various industries achieve their goals.
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Real projects, real results. See how we've helped businesses across 
+                different industries achieve their technology goals.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.map((study, index) => (
-                <motion.div
-                  key={study.id}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                >
-                  <div className="relative">
-                    <img
-                      src={study.image}
-                      alt={study.title}
-                      className="w-full h-64 object-cover"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded">
-                        {study.industry}
-                      </span>
-                    </div>
-                  </div>
+            <div className="max-w-6xl mx-auto">
+              <div className="space-y-16">
+                {caseStudies.map((study, index) => (
+                  <motion.div
+                    key={study.id}
+                    className="bg-white rounded-lg shadow-lg overflow-hidden"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.2 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="grid grid-cols-1 lg:grid-cols-2">
+                      <div className="p-8">
+                        <div className="flex items-center mb-4">
+                          <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold mr-4">
+                            {study.industry}
+                          </span>
+                          <span className="text-gray-500 text-sm">{study.duration}</span>
+                        </div>
 
-                  <div className="p-6">
-                    <div className="flex items-center mb-4">
-                      <study.icon className="w-8 h-8 text-blue-600 mr-3" />
-                      <div>
-                        <h3 className="text-xl font-bold text-gray-900">
+                        <h3 className="text-2xl font-bold text-gray-900 mb-4">
                           {study.title}
                         </h3>
-                        <p className="text-gray-600">
-                          {study.client}
+                        <p className="text-gray-600 mb-6">
+                          <strong>Client:</strong> {study.client}
                         </p>
-                      </div>
-                    </div>
 
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
-                      <p className="text-gray-600 mb-4">{study.challenge}</p>
-                      
-                      <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
-                      <p className="text-gray-600 mb-4">{study.solution}</p>
-                    </div>
+                        <div className="space-y-4 mb-6">
+                          <div>
+                            <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
+                            <p className="text-gray-600">{study.challenge}</p>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
+                            <p className="text-gray-600">{study.solution}</p>
+                          </div>
+                        </div>
 
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-3">Results:</h4>
-                      <ul className="space-y-2">
-                        {study.results.map((result, idx) => (
-                          <li key={idx} className="flex items-center text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                            {result}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                        <div className="mb-6">
+                          <h4 className="font-semibold text-gray-900 mb-3">Key Results:</h4>
+                          <ul className="space-y-2">
+                            {study.results.map((result, idx) => (
+                              <li key={idx} className="flex items-center text-gray-600">
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                                {result}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
 
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-2">Technologies Used:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {study.technologies.map((tech) => (
-                          <span
-                            key={tech}
-                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded"
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {study.technologies.map((tech, idx) => (
+                            <span key={idx} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center text-sm text-gray-600">
+                            <Users className="w-4 h-4 mr-2" />
+                            {study.team}
+                          </div>
+                          <a
+                            href={`/case-studies/${study.id}`}
+                            className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
                           >
-                            {tech}
-                          </span>
-                        ))}
+                            Read Full Case Study
+                            <ArrowRight className="w-4 h-4 ml-2" />
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="bg-gradient-to-br from-green-500 to-teal-600 p-8 flex items-center justify-center">
+                        <div className="text-center text-white">
+                          <Building className="w-16 h-16 mx-auto mb-4 opacity-80" />
+                          <h4 className="text-xl font-semibold mb-2">Project Overview</h4>
+                          <p className="text-green-100">
+                            A comprehensive solution that transformed our client's business operations
+                          </p>
+                        </div>
                       </div>
                     </div>
-
-                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {study.duration}
-                      </div>
-                      <div className="flex items-center">
-                        <Users className="w-4 h-4 mr-1" />
-                        {study.team}
-                      </div>
-                    </div>
-
-                    <Link
-                      href="/contact"
-                      className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center inline-flex items-center justify-center"
-                    >
-                      Start Similar Project
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -277,33 +258,33 @@ export default function CaseStudiesPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Start Your Success Story?
               </h2>
-              <p className="text-xl mb-8 text-green-100">
-                Let's discuss how we can help transform your business with innovative technology solutions.
+              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+                Let's work together to create your own success story. 
+                Contact us today to discuss your project.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+                <a
                   href="/contact"
-                  className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center"
+                  className="px-8 py-4 bg-white text-green-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
                 >
-                  Get Started Today
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
+                  Start Your Project
+                </a>
+                <a
                   href="/services"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold"
                 >
-                  View Our Services
-                  <Building className="ml-2 w-5 h-5" />
-                </Link>
+                  Explore Our Services
+                </a>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   );
 }
