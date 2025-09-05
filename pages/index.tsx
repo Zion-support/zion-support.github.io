@@ -232,6 +232,67 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Contact Information Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Get In Touch
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Ready to transform your business? Contact our experts for a free consultation.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                className="text-center p-6 bg-white rounded-lg shadow-lg"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Phone className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
+                <p className="text-blue-600 font-semibold text-lg mb-2">+1 302 464 0950</p>
+                <p className="text-gray-600">24/7 Support Available</p>
+              </motion.div>
+
+              <motion.div
+                className="text-center p-6 bg-white rounded-lg shadow-lg"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Mail className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
+                <p className="text-blue-600 font-semibold text-lg mb-2">kleber@ziontechgroup.com</p>
+                <p className="text-gray-600">Response within 24 hours</p>
+              </motion.div>
+
+              <motion.div
+                className="text-center p-6 bg-white rounded-lg shadow-lg"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <MapPin className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Address</h3>
+                <p className="text-blue-600 font-semibold text-lg mb-2">364 E Main St STE 1008</p>
+                <p className="text-gray-600">Middletown, DE 19709</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">

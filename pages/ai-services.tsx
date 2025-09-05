@@ -1477,6 +1477,141 @@ const aiServices = [
     pricing: '$25,000 - $250,000/setup',
     category: 'Marine AI',
     popular: true
+  },
+  {
+    title: 'AI-Powered Quantum Machine Learning',
+    description: 'Revolutionary quantum machine learning algorithms for solving complex optimization problems with exponential speedup.',
+    icon: Cpu,
+    features: ['Quantum Neural Networks', 'Optimization Algorithms', 'Quantum Feature Maps', 'Hybrid Classical-Quantum'],
+    pricing: '$100,000 - $1,000,000/setup',
+    category: 'Quantum AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Synthetic Biology Platform',
+    description: 'Advanced AI platform for designing and optimizing biological systems and synthetic organisms.',
+    icon: Sprout,
+    features: ['DNA Sequence Design', 'Protein Engineering', 'Metabolic Pathway Design', 'Biological Simulation'],
+    pricing: '$75,000 - $750,000/project',
+    category: 'Synthetic Biology AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Autonomous Drone Swarms',
+    description: 'Intelligent drone swarm coordination for surveillance, delivery, and emergency response operations.',
+    icon: Rocket,
+    features: ['Swarm Coordination', 'Autonomous Navigation', 'Mission Planning', 'Real-time Communication'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Autonomous Systems AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Digital Twin Technology',
+    description: 'Comprehensive digital twin creation and simulation for industrial systems and smart cities.',
+    icon: Monitor,
+    features: ['Real-time Simulation', 'Predictive Modeling', 'Virtual Testing', 'Performance Optimization'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Digital Twin AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Edge Intelligence',
+    description: 'Distributed AI processing at the edge for real-time decision making in IoT and mobile environments.',
+    icon: Network,
+    features: ['Edge Processing', 'Real-time Inference', 'Distributed Learning', 'Low Latency'],
+    pricing: '$25,000 - $250,000/setup',
+    category: 'Edge AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Metaverse Development',
+    description: 'Complete AI-powered metaverse creation platform with virtual worlds, avatars, and interactions.',
+    icon: Globe,
+    features: ['Virtual World Creation', 'AI Avatars', 'Behavioral Simulation', 'Blockchain Integration'],
+    pricing: '$200,000 - $2,000,000/project',
+    category: 'Metaverse AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Advanced Robotics',
+    description: 'Next-generation robotics with human-like intelligence, dexterity, and learning capabilities.',
+    icon: Bot,
+    features: ['Human-like Intelligence', 'Advanced Manipulation', 'Learning from Demonstration', 'Human-Robot Collaboration'],
+    pricing: '$150,000 - $1,500,000/project',
+    category: 'Advanced Robotics AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Climate Engineering',
+    description: 'AI-driven climate engineering solutions for carbon capture, geoengineering, and environmental restoration.',
+    icon: Sprout,
+    features: ['Carbon Capture Optimization', 'Geoengineering Design', 'Environmental Monitoring', 'Impact Assessment'],
+    pricing: '$500,000 - $5,000,000/project',
+    category: 'Climate Engineering AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Space Colonization',
+    description: 'AI systems for space habitat design, resource management, and autonomous space operations.',
+    icon: Rocket,
+    features: ['Habitat Design', 'Resource Management', 'Autonomous Operations', 'Life Support Systems'],
+    pricing: '$1,000,000 - $10,000,000/project',
+    category: 'Space Colonization AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Consciousness Simulation',
+    description: 'Advanced AI systems for simulating consciousness and cognitive processes in artificial minds.',
+    icon: Brain,
+    features: ['Consciousness Modeling', 'Cognitive Simulation', 'Self-awareness', 'Emotional Intelligence'],
+    pricing: '$2,000,000 - $20,000,000/project',
+    category: 'Consciousness AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Time Series Forecasting',
+    description: 'Advanced time series analysis and forecasting using deep learning and statistical methods.',
+    icon: TrendingUp,
+    features: ['Deep Learning Models', 'Statistical Analysis', 'Multi-variate Forecasting', 'Anomaly Detection'],
+    pricing: '$10,000 - $100,000/setup',
+    category: 'Time Series AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Graph Neural Networks',
+    description: 'Advanced graph neural networks for complex relationship analysis and network optimization.',
+    icon: Network,
+    features: ['Graph Analysis', 'Relationship Modeling', 'Network Optimization', 'Link Prediction'],
+    pricing: '$15,000 - $150,000/setup',
+    category: 'Graph AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Reinforcement Learning',
+    description: 'Advanced reinforcement learning systems for autonomous decision making and optimization.',
+    icon: Target,
+    features: ['Autonomous Learning', 'Decision Making', 'Policy Optimization', 'Multi-agent Systems'],
+    pricing: '$20,000 - $200,000/setup',
+    category: 'Reinforcement Learning AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Transfer Learning',
+    description: 'Advanced transfer learning systems for adapting AI models across different domains and tasks.',
+    icon: GitBranch,
+    features: ['Domain Adaptation', 'Model Transfer', 'Few-shot Learning', 'Knowledge Distillation'],
+    pricing: '$12,000 - $120,000/setup',
+    category: 'Transfer Learning AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Federated Learning',
+    description: 'Distributed machine learning systems that preserve privacy while enabling collaborative model training.',
+    icon: Shield,
+    features: ['Privacy Preservation', 'Distributed Training', 'Secure Aggregation', 'Decentralized Learning'],
+    pricing: '$18,000 - $180,000/setup',
+    category: 'Federated Learning AI',
+    popular: true
   }
 ];
 

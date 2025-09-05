@@ -101,7 +101,8 @@ import {
   Cog as CogIcon,
   Layers as LayersIcon,
   GitBranch as GitBranchIcon,
-  Terminal as TerminalIcon
+  Terminal as TerminalIcon,
+  Sprout
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -602,6 +603,146 @@ const itServices = [
       "Better data flow",
       "Reduced manual work"
     ]
+  },
+  {
+    title: 'AI-Powered IT Operations',
+    description: 'Intelligent IT operations with AI-driven monitoring, automation, and optimization.',
+    icon: Bot,
+    features: ['AI Monitoring', 'Predictive Analytics', 'Automated Remediation', 'Performance Optimization'],
+    pricing: '$5,000 - $50,000/setup',
+    category: 'AI Operations',
+    popular: true,
+    benefits: ['Proactive Issue Resolution', 'Reduced Downtime', 'Cost Savings', 'Improved Performance']
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implementation of zero trust security model for comprehensive network protection.',
+    icon: Shield,
+    features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Policy Enforcement'],
+    pricing: '$10,000 - $100,000/setup',
+    category: 'Advanced Security',
+    popular: true,
+    benefits: ['Enhanced Security', 'Reduced Attack Surface', 'Compliance', 'Future-proof Architecture']
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Edge computing infrastructure for low-latency applications and IoT deployments.',
+    icon: Cpu,
+    features: ['Edge Infrastructure', 'IoT Integration', 'Real-time Processing', 'Data Synchronization'],
+    pricing: '$15,000 - $150,000/project',
+    category: 'Edge Computing',
+    popular: true,
+    benefits: ['Low Latency', 'Reduced Bandwidth', 'Improved Performance', 'Scalable Architecture']
+  },
+  {
+    title: 'Quantum-Safe Cryptography',
+    description: 'Implementation of quantum-resistant cryptographic solutions for future-proof security.',
+    icon: Lock,
+    features: ['Quantum-resistant Algorithms', 'Key Management', 'Migration Planning', 'Compliance'],
+    pricing: '$25,000 - $250,000/project',
+    category: 'Advanced Security',
+    popular: true,
+    benefits: ['Future-proof Security', 'Quantum Resistance', 'Compliance', 'Long-term Protection']
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, implementation, and optimization for enterprise applications.',
+    icon: Network,
+    features: ['5G Infrastructure', 'Network Slicing', 'Edge Integration', 'Performance Optimization'],
+    pricing: '$50,000 - $500,000/project',
+    category: '5G Technology',
+    popular: true,
+    benefits: ['High Speed', 'Low Latency', 'Massive Connectivity', 'Future-ready Infrastructure']
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Blockchain network setup, management, and integration for enterprise applications.',
+    icon: Database,
+    features: ['Blockchain Setup', 'Smart Contracts', 'Integration APIs', 'Security Management'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Blockchain',
+    popular: true,
+    benefits: ['Decentralized Security', 'Transparency', 'Immutable Records', 'Trust Building']
+  },
+  {
+    title: 'IoT Security & Management',
+    description: 'Comprehensive IoT security and device management solutions.',
+    icon: Wifi,
+    features: ['Device Authentication', 'Encrypted Communication', 'Firmware Updates', 'Threat Detection'],
+    pricing: '$5,000 - $50,000/setup',
+    category: 'IoT Security',
+    popular: true,
+    benefits: ['Device Protection', 'Data Security', 'Compliance', 'Scalable Management']
+  },
+  {
+    title: 'Hybrid Cloud Architecture',
+    description: 'Design and implementation of hybrid cloud solutions for optimal performance and cost.',
+    icon: Cloud,
+    features: ['Multi-cloud Strategy', 'Data Synchronization', 'Workload Optimization', 'Security Integration'],
+    pricing: '$25,000 - $250,000/project',
+    category: 'Hybrid Cloud',
+    popular: true,
+    benefits: ['Flexibility', 'Cost Optimization', 'Performance', 'Vendor Independence']
+  },
+  {
+    title: 'AI-Powered Cybersecurity',
+    description: 'Advanced cybersecurity solutions powered by artificial intelligence and machine learning.',
+    icon: Shield,
+    features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Predictive Security'],
+    pricing: '$10,000 - $100,000/setup',
+    category: 'AI Security',
+    popular: true,
+    benefits: ['Advanced Threat Protection', 'Automated Response', 'Reduced False Positives', 'Continuous Learning']
+  },
+  {
+    title: 'Digital Transformation Consulting',
+    description: 'Comprehensive digital transformation strategy and implementation consulting.',
+    icon: Users,
+    features: ['Strategy Development', 'Technology Assessment', 'Change Management', 'Implementation Planning'],
+    pricing: '$200 - $500/hour',
+    category: 'Digital Transformation',
+    popular: true,
+    benefits: ['Strategic Alignment', 'Competitive Advantage', 'Process Optimization', 'Innovation']
+  },
+  {
+    title: 'Green IT Solutions',
+    description: 'Sustainable IT solutions for energy efficiency and environmental responsibility.',
+    icon: Sprout,
+    features: ['Energy Optimization', 'Carbon Footprint Reduction', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$5,000 - $50,000/project',
+    category: 'Green IT',
+    popular: true,
+    benefits: ['Cost Savings', 'Environmental Impact', 'Compliance', 'Corporate Responsibility']
+  },
+  {
+    title: 'IT Governance & Risk Management',
+    description: 'Comprehensive IT governance framework and risk management implementation.',
+    icon: CheckCircle,
+    features: ['Governance Framework', 'Risk Assessment', 'Policy Development', 'Compliance Monitoring'],
+    pricing: '$15,000 - $150,000/project',
+    category: 'Governance',
+    popular: true,
+    benefits: ['Risk Mitigation', 'Compliance', 'Strategic Alignment', 'Accountability']
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Design and implementation of microservices architecture for scalable applications.',
+    icon: Layers,
+    features: ['Service Design', 'API Gateway', 'Container Orchestration', 'Service Mesh'],
+    pricing: '$20,000 - $200,000/project',
+    category: 'Architecture',
+    popular: true,
+    benefits: ['Scalability', 'Flexibility', 'Maintainability', 'Technology Diversity']
+  },
+  {
+    title: 'IT Disaster Recovery as a Service',
+    description: 'Comprehensive disaster recovery solutions with guaranteed recovery times.',
+    icon: HardDrive,
+    features: ['RTO/RPO Planning', 'Automated Failover', 'Data Replication', 'Recovery Testing'],
+    pricing: '$2,000 - $20,000/month',
+    category: 'Disaster Recovery',
+    popular: true,
+    benefits: ['Business Continuity', 'Minimized Downtime', 'Data Protection', 'Compliance']
   }
 ];
 
@@ -1028,309 +1169,6 @@ export default function ITServicesPage() {
           </motion.div>
         </div>
       </section>
-      </div>
     </Layout>
-
-    {/* IT Services Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our IT Solutions
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              End-to-end IT services designed to optimize your technology infrastructure, 
-              enhance security, and support your business objectives.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {itServices.map((service, index) => (
-              <motion.div
-                key={index}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-              >
-                <div className={`h-2 bg-gradient-to-r ${service.color}`}></div>
-                <div className="p-8">
-                  <div className="flex items-center mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-4`}>
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900">
-                      {service.title}
-                    </h3>
-                  </div>
-                  
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          <span className="text-gray-700 text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Benefits:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <span key={benefitIndex} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">
-                          {benefit}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <Link
-                    href="/contact"
-                    className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
-                  >
-                    Learn More
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Industries Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Industries We Serve
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Our IT solutions are tailored to meet the specific requirements and compliance 
-              standards of various industries.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {industries.map((industry, index) => (
-              <motion.div
-                key={index}
-                className="bg-gray-50 p-6 rounded-lg hover:bg-white hover:shadow-lg transition-all duration-300 group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="text-center mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <industry.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {industry.name}
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    {industry.description}
-                  </p>
-                </div>
-                
-                <ul className="space-y-2">
-                  {industry.solutions.map((solution, solutionIndex) => (
-                    <li key={solutionIndex} className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                      {solution}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Technologies We Work With
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              We leverage cutting-edge technologies and industry-leading tools to deliver 
-              robust and scalable IT solutions.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (
-              <motion.div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  {tech.category}
-                </h3>
-                <ul className="space-y-2">
-                  {tech.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-center text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Why Choose Our IT Services?
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Our IT solutions deliver measurable results and provide a solid foundation for your business growth.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                className="text-center p-6 bg-gray-50 rounded-lg hover:bg-white hover:shadow-lg transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our IT Service Process
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              A systematic approach to IT service delivery that ensures successful implementation and ongoing support.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {processSteps.map((step, index) => (
-              <motion.div
-                key={index}
-                className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  {step.step}
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {step.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Modernize Your IT Infrastructure?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let's discuss your IT needs and create a comprehensive solution that supports your business growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              >
-                Get IT Consultation
-              </Link>
-              <Link 
-                href="/services" 
-                className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-              >
-                Explore All Services
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
   );
 }
