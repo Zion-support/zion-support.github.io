@@ -27,7 +27,8 @@ export default function MicroSAAS() {
       ],
       marketPrice: "$49-79/month",
       savings: "Save up to $50/month",
-      category: "Financial Tools"
+      category: "Financial Tools",
+      popular: true
     },
     {
       name: "Smart Meeting Scheduler AI",
@@ -51,7 +52,233 @@ export default function MicroSAAS() {
       ],
       marketPrice: "$39-59/month",
       savings: "Save up to $40/month",
-      category: "Productivity"
+      category: "Productivity",
+      popular: true
+    },
+    {
+      name: "AI Content Marketing Suite",
+      description: "Complete AI-powered content creation platform that generates blog posts, social media content, and marketing copy with SEO optimization.",
+      price: "$39/month",
+      features: [
+        "AI blog post generation",
+        "Social media content creation",
+        "SEO optimization tools",
+        "Content calendar management",
+        "Brand voice consistency",
+        "Multi-language support",
+        "Performance analytics",
+        "Plagiarism detection"
+      ],
+      benefits: [
+        "10x content production speed",
+        "Improve SEO rankings by 150%",
+        "Consistent brand messaging",
+        "Reduce content costs by 70%"
+      ],
+      marketPrice: "$79-149/month",
+      savings: "Save up to $110/month",
+      category: "Marketing",
+      popular: true
+    },
+    {
+      name: "Smart Inventory Optimizer",
+      description: "AI-driven inventory management system that predicts demand, prevents stockouts, and optimizes reorder points using machine learning.",
+      price: "$49/month",
+      features: [
+        "Demand forecasting AI",
+        "Automated reorder alerts",
+        "Multi-location tracking",
+        "Supplier management",
+        "Cost optimization",
+        "Real-time analytics",
+        "Mobile app access",
+        "Integration with POS systems"
+      ],
+      benefits: [
+        "Reduce inventory costs by 25%",
+        "Eliminate stockouts by 90%",
+        "Improve cash flow by 40%",
+        "Automate 95% of inventory decisions"
+      ],
+      marketPrice: "$99-199/month",
+      savings: "Save up to $150/month",
+      category: "E-commerce",
+      popular: true
+    },
+    {
+      name: "AI Customer Support Bot",
+      description: "Intelligent chatbot that handles customer inquiries 24/7 with natural language processing and seamless human handoff capabilities.",
+      price: "$25/month",
+      features: [
+        "Natural language processing",
+        "Multi-channel support",
+        "Human handoff system",
+        "Knowledge base integration",
+        "Sentiment analysis",
+        "Custom conversation flows",
+        "Analytics dashboard",
+        "API integrations"
+      ],
+      benefits: [
+        "Handle 80% of inquiries automatically",
+        "Reduce response time by 95%",
+        "Improve customer satisfaction by 40%",
+        "Cut support costs by 60%"
+      ],
+      marketPrice: "$59-99/month",
+      savings: "Save up to $74/month",
+      category: "Customer Service",
+      popular: true
+    },
+    {
+      name: "Smart Social Media Manager",
+      description: "AI-powered social media management platform that schedules posts, analyzes performance, and suggests optimal posting times.",
+      price: "$35/month",
+      features: [
+        "AI post scheduling",
+        "Performance analytics",
+        "Hashtag optimization",
+        "Content suggestions",
+        "Multi-platform posting",
+        "Engagement tracking",
+        "Competitor analysis",
+        "ROI measurement"
+      ],
+      benefits: [
+        "Increase engagement by 200%",
+        "Save 15 hours per week",
+        "Improve reach by 150%",
+        "Professional social presence"
+      ],
+      marketPrice: "$79-149/month",
+      savings: "Save up to $114/month",
+      category: "Social Media",
+      popular: true
+    },
+    {
+      name: "AI Email Marketing Pro",
+      description: "Advanced email marketing platform with AI-powered segmentation, personalization, and automated campaign optimization.",
+      price: "$29/month",
+      features: [
+        "AI audience segmentation",
+        "Personalized content",
+        "Automated workflows",
+        "A/B testing",
+        "Deliverability optimization",
+        "Advanced analytics",
+        "Template library",
+        "Integration ecosystem"
+      ],
+      benefits: [
+        "Increase open rates by 300%",
+        "Boost click-through rates by 250%",
+        "Automate 90% of campaigns",
+        "Professional email design"
+      ],
+      marketPrice: "$59-99/month",
+      savings: "Save up to $70/month",
+      category: "Email Marketing",
+      popular: true
+    },
+    {
+      name: "Smart Analytics Dashboard",
+      description: "Comprehensive business analytics platform that aggregates data from multiple sources and provides actionable insights with AI recommendations.",
+      price: "$45/month",
+      features: [
+        "Multi-source data integration",
+        "AI-powered insights",
+        "Custom dashboards",
+        "Real-time reporting",
+        "Predictive analytics",
+        "Automated alerts",
+        "Data visualization",
+        "Export capabilities"
+      ],
+      benefits: [
+        "Make data-driven decisions",
+        "Identify trends 3x faster",
+        "Reduce reporting time by 80%",
+        "Improve business performance by 35%"
+      ],
+      marketPrice: "$99-199/month",
+      savings: "Save up to $154/month",
+      category: "Analytics",
+      popular: true
+    },
+    {
+      name: "AI Project Management Suite",
+      description: "Intelligent project management tool that uses AI to optimize task allocation, predict delays, and suggest resource adjustments.",
+      price: "$39/month",
+      features: [
+        "AI task optimization",
+        "Resource allocation",
+        "Timeline prediction",
+        "Risk assessment",
+        "Team collaboration",
+        "Progress tracking",
+        "Automated reporting",
+        "Integration capabilities"
+      ],
+      benefits: [
+        "Complete projects 25% faster",
+        "Reduce project overruns by 60%",
+        "Improve team productivity by 40%",
+        "Better resource utilization"
+      ],
+      marketPrice: "$79-149/month",
+      savings: "Save up to $110/month",
+      category: "Project Management",
+      popular: true
+    },
+    {
+      name: "Smart HR Management System",
+      description: "AI-powered HR platform that streamlines recruitment, employee onboarding, performance tracking, and workforce analytics.",
+      price: "$55/month",
+      features: [
+        "AI resume screening",
+        "Automated onboarding",
+        "Performance tracking",
+        "Employee analytics",
+        "Compliance management",
+        "Benefits administration",
+        "Time tracking",
+        "Reporting suite"
+      ],
+      benefits: [
+        "Reduce hiring time by 50%",
+        "Improve employee retention by 30%",
+        "Automate 80% of HR tasks",
+        "Better workforce insights"
+      ],
+      marketPrice: "$129-249/month",
+      savings: "Save up to $194/month",
+      category: "Human Resources",
+      popular: true
+    },
+    {
+      name: "AI Financial Forecasting Tool",
+      description: "Advanced financial planning and forecasting platform that uses machine learning to predict cash flow, revenue, and financial risks.",
+      price: "$49/month",
+      features: [
+        "Cash flow prediction",
+        "Revenue forecasting",
+        "Risk analysis",
+        "Scenario planning",
+        "Budget optimization",
+        "Financial reporting",
+        "Integration with accounting",
+        "Real-time monitoring"
+      ],
+      benefits: [
+        "Improve financial accuracy by 85%",
+        "Reduce financial risks by 70%",
+        "Better cash flow management",
+        "Data-driven financial decisions"
+      ],
+      marketPrice: "$99-199/month",
+      savings: "Save up to $150/month",
+      category: "Financial Planning",
+      popular: true
     }
   ];
 

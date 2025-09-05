@@ -477,6 +477,249 @@ const aiServices = [
     marketPrice: '$3,000-6,000/month',
     setupTime: '4-8 weeks',
     targetUsers: 'Schools, Universities, Online education, Corporate training'
+  },
+  {
+    id: 20,
+    title: 'AI-Powered Cybersecurity',
+    description: 'Advanced AI-driven security solutions for threat detection, prevention, and automated incident response.',
+    icon: Shield,
+    category: 'Security AI',
+    price: 'Starting at $3,200/month',
+    features: [
+      'Real-time threat detection',
+      'Behavioral analysis & anomaly detection',
+      'Automated incident response',
+      'Predictive security analytics',
+      'Zero-day attack prevention',
+      'Security orchestration',
+      'Compliance monitoring',
+      'Threat intelligence integration'
+    ],
+    benefits: [
+      'Detect threats 10x faster',
+      'Reduce false positives by 85%',
+      'Automate 90% of security responses',
+      'Improve security posture by 200%'
+    ],
+    marketPrice: '$5,000-12,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Financial services, Healthcare, Government, Enterprise'
+  },
+  {
+    id: 21,
+    title: 'AI Supply Chain Optimization',
+    description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
+    icon: Package,
+    category: 'Supply Chain AI',
+    price: 'Starting at $2,800/month',
+    features: [
+      'Demand forecasting & planning',
+      'Inventory optimization',
+      'Supplier risk assessment',
+      'Logistics route optimization',
+      'Quality control automation',
+      'Cost optimization',
+      'Real-time tracking & monitoring',
+      'Sustainability optimization'
+    ],
+    benefits: [
+      'Reduce inventory costs by 30%',
+      'Improve delivery times by 40%',
+      'Optimize supplier relationships',
+      'Increase supply chain visibility'
+    ],
+    marketPrice: '$4,500-10,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Manufacturing, Retail, Logistics, E-commerce'
+  },
+  {
+    id: 22,
+    title: 'AI Healthcare Diagnostics',
+    description: 'Advanced medical AI for diagnostic imaging, disease prediction, and personalized treatment recommendations.',
+    icon: Heart,
+    category: 'Healthcare AI',
+    price: 'Starting at $4,000/month',
+    features: [
+      'Medical image analysis',
+      'Disease prediction & screening',
+      'Treatment recommendation engine',
+      'Drug interaction analysis',
+      'Patient risk stratification',
+      'Clinical decision support',
+      'Medical record analysis',
+      'Telemedicine integration'
+    ],
+    benefits: [
+      'Improve diagnostic accuracy by 25%',
+      'Reduce misdiagnosis by 40%',
+      'Accelerate treatment decisions',
+      'Enhance patient outcomes'
+    ],
+    marketPrice: '$6,000-15,000/month',
+    setupTime: '6-12 weeks',
+    targetUsers: 'Hospitals, Clinics, Medical research, Telemedicine'
+  },
+  {
+    id: 23,
+    title: 'AI Financial Trading & Analysis',
+    description: 'Intelligent trading algorithms, risk assessment, and financial market analysis with real-time decision making.',
+    icon: DollarSign,
+    category: 'FinTech AI',
+    price: 'Starting at $3,500/month',
+    features: [
+      'Algorithmic trading strategies',
+      'Risk assessment & management',
+      'Market sentiment analysis',
+      'Fraud detection & prevention',
+      'Credit scoring & underwriting',
+      'Portfolio optimization',
+      'Regulatory compliance',
+      'Real-time market analysis'
+    ],
+    benefits: [
+      'Improve trading performance by 35%',
+      'Reduce risk exposure by 50%',
+      'Detect fraud with 99% accuracy',
+      'Optimize investment returns'
+    ],
+    marketPrice: '$5,500-15,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Banks, Investment firms, Trading companies, FinTech startups'
+  },
+  {
+    id: 24,
+    title: 'AI Voice & Speech Technology',
+    description: 'Advanced voice recognition, speech synthesis, and conversational AI for voice-enabled applications.',
+    icon: Mic,
+    category: 'Voice AI',
+    price: 'Starting at $2,200/month',
+    features: [
+      'Speech-to-text conversion',
+      'Text-to-speech synthesis',
+      'Voice biometrics & authentication',
+      'Real-time voice translation',
+      'Voice command processing',
+      'Emotion detection in speech',
+      'Multi-language support',
+      'Custom voice model training'
+    ],
+    benefits: [
+      'Achieve 98%+ speech accuracy',
+      'Enable hands-free operations',
+      'Improve accessibility',
+      'Enhance user experience'
+    ],
+    marketPrice: '$3,500-8,000/month',
+    setupTime: '3-6 weeks',
+    targetUsers: 'Call centers, Mobile apps, IoT devices, Accessibility services'
+  },
+  {
+    id: 25,
+    title: 'AI Content Generation & Marketing',
+    description: 'Intelligent content creation platform for marketing, social media, and brand communication with AI-powered optimization.',
+    icon: FileText,
+    category: 'Content AI',
+    price: 'Starting at $1,800/month',
+    features: [
+      'Automated content generation',
+      'SEO-optimized writing',
+      'Social media content creation',
+      'Brand voice consistency',
+      'Content performance analysis',
+      'Multi-platform publishing',
+      'A/B testing automation',
+      'Content personalization'
+    ],
+    benefits: [
+      'Increase content production by 500%',
+      'Improve engagement rates by 200%',
+      'Reduce content costs by 60%',
+      'Maintain brand consistency'
+    ],
+    marketPrice: '$3,000-7,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Marketing agencies, E-commerce, Media companies, Content creators'
+  },
+  {
+    id: 26,
+    title: 'AI Autonomous Vehicles & Robotics',
+    description: 'AI solutions for autonomous vehicle systems, robotic process automation, and intelligent automation.',
+    icon: Car,
+    category: 'Autonomous AI',
+    price: 'Starting at $5,000/month',
+    features: [
+      'Autonomous navigation systems',
+      'Object detection & avoidance',
+      'Path planning & optimization',
+      'Sensor fusion & processing',
+      'Real-time decision making',
+      'Safety monitoring systems',
+      'Fleet management',
+      'Predictive maintenance'
+    ],
+    benefits: [
+      'Improve safety by 90%',
+      'Reduce operational costs by 40%',
+      'Enable 24/7 operations',
+      'Optimize route efficiency'
+    ],
+    marketPrice: '$8,000-20,000/month',
+    setupTime: '8-16 weeks',
+    targetUsers: 'Transportation, Logistics, Manufacturing, Delivery services'
+  },
+  {
+    id: 27,
+    title: 'AI Energy & Smart Grid',
+    description: 'Intelligent energy management, smart grid optimization, and renewable energy integration solutions.',
+    icon: Zap,
+    category: 'Energy AI',
+    price: 'Starting at $2,500/month',
+    features: [
+      'Energy consumption optimization',
+      'Smart grid management',
+      'Renewable energy forecasting',
+      'Load balancing & distribution',
+      'Predictive maintenance',
+      'Energy storage optimization',
+      'Carbon footprint tracking',
+      'Real-time monitoring'
+    ],
+    benefits: [
+      'Reduce energy costs by 25%',
+      'Improve grid efficiency by 30%',
+      'Optimize renewable integration',
+      'Enhance sustainability'
+    ],
+    marketPrice: '$4,000-10,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Utility companies, Energy providers, Smart cities, Industrial facilities'
+  },
+  {
+    id: 28,
+    title: 'AI Legal & Compliance',
+    description: 'Intelligent legal document analysis, contract review, compliance monitoring, and legal research automation.',
+    icon: BookOpen,
+    category: 'Legal AI',
+    price: 'Starting at $2,800/month',
+    features: [
+      'Contract analysis & review',
+      'Legal document processing',
+      'Compliance monitoring',
+      'Legal research automation',
+      'Risk assessment',
+      'Due diligence support',
+      'Regulatory change tracking',
+      'Case law analysis'
+    ],
+    benefits: [
+      'Reduce legal review time by 70%',
+      'Improve accuracy by 95%',
+      'Lower legal costs by 50%',
+      'Enhance compliance coverage'
+    ],
+    marketPrice: '$4,500-12,000/month',
+    setupTime: '4-8 weeks',
+    targetUsers: 'Law firms, Corporate legal, Compliance teams, Government'
   }
 ];
 
