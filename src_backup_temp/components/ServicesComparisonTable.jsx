@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';'''';';
 import React from 'react';
 ;
@@ -12,11 +10,8 @@ import {}';';
 export function ServicesComparisonTable(props: any) {}';';
 ''';';
 '''';';
-=======
 import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';
-=======
 import {Check, X, Star, Clock, Phone, Mail} from 'lucide - react';'''
->>>>>>> main
 import React from 'react';
 ;
 import {Badge} from "./ui/badge";
@@ -25,14 +20,9 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "./ui/ca
 import {}
   COMPREHENSIVE_SERVICES,'
   CONTACT_INFO} from '@/data/comprehensiveServices';
-<<<<<<< HEAD
 export function ServicesComparisonTable("props": "any) {"}
 '';
 ''';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
   const serviceCategories = ['AI Services',IT Services',Micro SAAS'];
   const getFeatureIcon = hasFeature => {}
     return hasFeature ? (;
@@ -252,7 +242,6 @@ export default Component;
 </Check>;
 </div>;
 </div>;
-=======
 export function ServicesComparisonTable(props: any) {}
 ''
 '''
@@ -316,11 +305,6 @@ return()""
                     variant="outline"""""
                     className="w-full border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white ">,
                     View {category}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-
                   </Button>
                 </CardContent>
               </Card>
@@ -447,9 +431,7 @@ your business needs"
 }"""""
 """"""
 "
-
 export default Component
-
 </Button>
 </Badge>
 </div>
@@ -462,7 +444,6 @@ export default Component
 </div>
 </CardHeader>
 </div>
-
 </div>
 </Phone>
 </Phone>
@@ -480,10 +461,8 @@ export default Component
 </X>
 </X>
 </Check>
-<<<<<<< HEAD
 </div>';
 </div>;';;';
-=======
 ;
                   </Button>;
                 </CardContent>;
@@ -643,9 +622,5 @@ export default Component;
 </Check>;
 </div>;
 </div>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 </div>
 </div>
->>>>>>> main
->>>>>>> main

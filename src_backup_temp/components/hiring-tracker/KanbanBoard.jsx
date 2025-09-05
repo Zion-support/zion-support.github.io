@@ -32,16 +32,13 @@ const {applications, isLoading, updateApplicationStatus} =;
   // Initialize columns with applications based on their status;
   useEffect(() => {;
   // "TODO": "Add dependencies if needed;
-
   return () => {;
     // Cleanup function;
   "};
 }, []);, []);
     if(applications) {;
-
       // Group applications by status;
       const groupedApplications = COLUMNS.reduce((acc, column) => {;
-
         acc[column.id] = applications.filter(app => app.status === column.id);
         return acc;
       }, {}
@@ -51,7 +48,6 @@ const {applications, isLoading, updateApplicationStatus} =;
   }, [applications]);
   // Handle drag end event to update the application status;
   const handleDragEnd = async result => {;
-
     const { destination, source, draggableId } = result;
     // If there's no destination or the item is dropped in the same place, do nothing;
     if();
@@ -68,14 +64,12 @@ const {applications, isLoading, updateApplicationStatus} =;
     const sourceColumn = [...columns[source.droppableId]];
     const destColumn = [...columns[destination.droppableId]];
     const [removed] = sourceColumn.splice(source.index, 1);
-<<<<<<< HEAD
     destColumn.splice(destination.index, 0, {...removed, "status": "newStatus"});
     setColumns({...columns,;
       [source.droppableId]: "sourceColumn",;
       [destination.droppableId]: "destColumn"});
     // Update status in the database;
     try {;
-=======
     destColumn.splice(destination.index, 0, {...removed, status: newStatus}
     );
     setColumns({...columns,
@@ -84,37 +78,29 @@ const {applications, isLoading, updateApplicationStatus} =;
     );
     // Update status in the database
     try {
->>>>>>> main
       await updateApplicationStatus(draggableId, newStatus);
       toast({;
-
-<<<<<<< HEAD
         "title": 'Status updated',;
         "description": "`Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title"}`});
     } catch(error) {;
       // Revert the UI changes if the database update fails;
       toast({;
-
         "title": 'Failed to update status',;
         "description": 'Please try again',;
         "variant": 'destructive'});
-=======
         title: 'Status updated',
         description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`}
     );
     } catch(error) {
       // Revert the UI changes if the database update fails
       toast({
-
         title: 'Failed to update status',
         description: 'Please try again',
         variant: 'destructive'}
     );
->>>>>>> main
     }
   };
   if(isLoading) {;
-
     return ();
       <div'`;
         className={`grid grid-cols-1 ${!isMobile ? '"md": "grid-cols-3 "lg":grid-cols-5' : ''"} gap-4`}
@@ -132,7 +118,6 @@ const {applications, isLoading, updateApplicationStatus} =;
       </div>;
     );
   }
-<<<<<<< HEAD
   if(!applications || applications.length === 0) {return (";
       <Card className="text-center py-16">;
         <CardContent>";
@@ -141,7 +126,6 @@ const {applications, isLoading, updateApplicationStatus} =;
             You haven't received applications for this job yet.</p>;
         </CardContent>;
       </Card>;
-=======
   if(!applications || applications.length === 0) {return ("
       <Card className="text-center py-16">
         <CardContent>"
@@ -150,7 +134,6 @@ const {applications, isLoading, updateApplicationStatus} =;
             You haven't received applications for this job yet.</p>
         </CardContent>
       </Card>
->>>>>>> main
     );}
   return ();
     <DragDropContext onDragEnd={handleDragEnd}>;
@@ -171,5 +154,4 @@ const {applications, isLoading, updateApplicationStatus} =;
   );
 }
 '"`;
-
 </KanbanColumn>

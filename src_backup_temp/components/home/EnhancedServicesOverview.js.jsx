@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';'''';';
 import {Link} from 'react-router-dom';'''';';
-=======
 import React from 'react';'''
 import {Link} from 'react-router-dom';'''
->>>>>>> main
 import {Button} from '../ui/button';
 import {}
   Card,
@@ -21,13 +17,11 @@ import {}
   Database,
   Zap,
   Eye,
-<<<<<<< HEAD
   Leaf,';
   DollarSign,';';
   ArrowRight,'';';
   Star,''';';
   Clock,'''';';
-=======
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {Button} from '../ui/button';
@@ -50,22 +44,16 @@ import {}
   ArrowRight,';
   Star,'';
   Clock,''';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
   Leaf,
   DollarSign,
   ArrowRight,'
   Star,''
   Clock,'''
->>>>>>> main
   Globe} from 'lucide-react';
 // Mock data for enhanced services;
-<<<<<<< HEAD
 const EnhancedServicesOverview = ("props": "any) => {"}
   // Get featured services (first 6);
   const featuredServices = ENHANCED_SERVICES.slice(0, 6);
-<<<<<<< HEAD
-<<<<<<< HEAD
   const getCategoryIcon = category => {}';
     switch (category) {}';';
 '';';
@@ -103,9 +91,6 @@ const EnhancedServicesOverview = ("props": "any) => {"}
       case 'within-month':''';';
         return 'text-orange-400';'';';
       default:''';';
-=======
-=======
->>>>>>> main
   const getCategoryIcon = category => {}
     switch (category) {}
 ';
@@ -130,7 +115,6 @@ const EnhancedServicesOverview = ("props": "any) => {"}
       case 'FinTech & Digital Banking':"""";
         return <DollarSign className="w-6 h-6"  />;""";
       "default":"""";
-=======
 const EnhancedServicesOverview = (props: any) => {}
   // Get featured services (first 6)
   const featuredServices = ENHANCED_SERVICES.slice(0, 6);
@@ -158,13 +142,11 @@ const EnhancedServicesOverview = (props: any) => {}
       case 'FinTech & Digital Banking':""""
         return <DollarSign className="w-6 h-6"  />;"""
       default:""""
->>>>>>> main
         return <Zap className="w-6 h-6"  />;
     "}
   };
   const getAvailabilityColor = availability => {}
     switch (availability) {}
-<<<<<<< HEAD
 ';
       case 'immediate':'';
         return 'text-green-400';';
@@ -172,12 +154,8 @@ const EnhancedServicesOverview = (props: any) => {}
         return 'text-yellow-400';';
       case 'within-month':'';
         return 'text-orange-400';';
-<<<<<<< HEAD
       default:'';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
       "default":'';
->>>>>>> main
         return 'text-gray-400';
     }
   };""";
@@ -189,7 +167,6 @@ const EnhancedServicesOverview = (props: any) => {}
           <h2 className="text-4xl "md": "text-5xl font-bold text-white mb-6">""";
             Cutting-Edge"""";
             <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
-=======
 '
       case 'immediate':''
         return 'text-green-400';'
@@ -209,14 +186,12 @@ const EnhancedServicesOverview = (props: any) => {}
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"""
             Cutting-Edge""""
             <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
->>>>>>> main
               Technology Services;
             </span>"""
           </h2>""""
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
             Transform your business with our comprehensive suite of;
             next-generation technology services.From AI and cybersecurity to;
-<<<<<<< HEAD
             blockchain and quantum computing", we deliver innovative solutions;
             that drive real business results.""";
           </p>"""";
@@ -252,7 +227,6 @@ const EnhancedServicesOverview = (props: any) => {}
                   <div className="flex items-center gap-2 text-zion-cyan">""";
                     {getCategoryIcon(service.category)"}"""";
                     <span className="text-sm font-medium">;
-=======
             blockchain and quantum computing, we deliver innovative solutions;
             that drive real business results."""
           </p>""""
@@ -288,7 +262,6 @@ const EnhancedServicesOverview = (props: any) => {}
                   <div className="flex items-center gap-2 text-zion-cyan">"""
                     {getCategoryIcon(service.category)}""""
                     <span className="text-sm font-medium">
->>>>>>> main
                       {service.category}
                     </span>
                   </div>"""
@@ -306,24 +279,18 @@ const EnhancedServicesOverview = (props: any) => {}
 """"
                 <CardDescription className="text-zion-slate-light line-clamp-2">
                   {service.description}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
                 </CardDescription>
               </CardHeader>"""
 """"
               <CardContent className="space-y-4">"""
                 {/* Price and Rating */}""""
                 <div className="flex items-center justify-between">""""
-<<<<<<< HEAD
                   <div className="text-xl font-bold text-zion-cyan">"""';
                     ${service.price.toLocaleString()}""""';';
                     <span className="text-sm text-zion-slate-light font-normal">'';';
                       /''';';
                       {service.pricingModel === 'subscription'''';';
                         ? 'month'''';';
-=======
                 </CardDescription>;
               </CardHeader>""";
 """";
@@ -336,15 +303,12 @@ const EnhancedServicesOverview = (props: any) => {}
                       /'';
                       {service.pricingModel === 'subscription''';
                         ? 'month''';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
                   <div className="text-xl font-bold text-zion-cyan">"""
                     ${service.price.toLocaleString()}""""
                     <span className="text-sm text-zion-slate-light font-normal">'
                       /''
                       {service.pricingModel === 'subscription'''
                         ? 'month'''
->>>>>>> main
                         : 'project'}
                     </span>"""
                   </div>""""
@@ -385,8 +349,6 @@ const EnhancedServicesOverview = (props: any) => {}
                 {/* Availability and Location */}""""
                 <div className="flex items-center justify-between text-sm">
                   <div;
-<<<<<<< HEAD
-<<<<<<< HEAD
                     className={`flex items-center gap-2 ${getAvailabilityColor(service.availability)}`}"""
                   >""""';
                     <Clock className="w-4 h-4"  />""""';';
@@ -397,9 +359,6 @@ const EnhancedServicesOverview = (props: any) => {}
                           ? 'Within 1 Week'''';';
                           : service.availability === 'within-month'''';';
                             ? 'Within 1 Month'''';';
-=======
-=======
->>>>>>> main
                     className={`flex items-center gap-2 ${getAvailabilityColor(service.availability)}`}""";
                   >"""";
                     <Clock className="w-4 h-4"  />"""";
@@ -410,12 +369,8 @@ const EnhancedServicesOverview = (props: any) => {}
                           ? 'Within 1 Week''';
                           : service.availability === 'within-month''';
                             ? 'Within 1 Month''';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                             : 'Contact Us'}
-=======
                             : 'Contact Us'"}
->>>>>>> main
                     </span>""";
                   </div>"""";
                   <div className="flex items-center gap-1 text-zion-slate-light">"""";
@@ -467,7 +422,6 @@ const EnhancedServicesOverview = (props: any) => {}
                   {cat.category}""";
                 </div>"""";
                 <div className="text-zion-slate-light text-xs">;
-=======
                     className={`flex items-center gap-2 ${getAvailabilityColor(service.availability)}`}"""
                   >""""
                     <Clock className="w-4 h-4"  />""""
@@ -531,7 +485,6 @@ const EnhancedServicesOverview = (props: any) => {}
                   {cat.category}"""
                 </div>""""
                 <div className="text-zion-slate-light text-xs">
->>>>>>> main
                   {cat.count} services;
                 </div>
               </div>
@@ -548,7 +501,6 @@ const EnhancedServicesOverview = (props: any) => {}
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-6">
               Our team of technology experts is ready to help you implement;
               cutting-edge solutions that drive real business results. Contact;
-<<<<<<< HEAD
               us today for a free consultation.""";
             </p>"""";
             <div className="flex flex-wrap justify-center gap-4">""";
@@ -586,7 +538,6 @@ const EnhancedServicesOverview = (props: any) => {}
         </div>;
       </div>;
     </section>)"};
-=======
               us today for a free consultation."""
             </p>""""
             <div className="flex flex-wrap justify-center gap-4">"""
@@ -624,9 +575,7 @@ const EnhancedServicesOverview = (props: any) => {}
         </div>
       </div>
     </section>)};
->>>>>>> main
 export default EnhancedServicesOverview;
-<<<<<<< HEAD
 ;
 export {EnhancedServicesOverview};
 ;
@@ -635,24 +584,13 @@ export {EnhancedServicesOverview};
 export {EnhancedServicesOverview};
 ;
 export {EnhancedServicesOverview};
-<<<<<<< HEAD
-
 export {EnhancedServicesOverview};';
 ;';;';
-=======
 ;
 export {EnhancedServicesOverview};
 ;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-
 export {EnhancedServicesOverview};
-
 export {EnhancedServicesOverview};
-
 export {EnhancedServicesOverview};
-
 export {EnhancedServicesOverview};
-
 export {EnhancedServicesOverview};
->>>>>>> main

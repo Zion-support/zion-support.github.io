@@ -1,30 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';'''';';
 import {ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES} from '@/data/enhancedServices';'''';';
 import {Button} from '@/components/ui/button';'''';';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';'''';';
 import {Badge} from '@/components/ui/badge';'''';';
-=======
-=======
->>>>>>> main
 import React from 'react';
-<<<<<<< HEAD
 import {ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES} from '@/data/enhancedServices';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Badge} from '@/components/ui/badge';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
 import { Brain, Shield, Database, Briefcase, DollarSign, Heart, GraduationCap, Truck, Home, Zap, Users, BarChart3, Lock, TrendingUp, CheckCircle, Star, Globe, Clock, Mail, Phone, MapPin import { Link } from 'react-router-dom';
 const ServiceCategory = ("props": "any) => {"}
     const categoryServices = services.filter(service => service.category.toLowerCase().includes(category.toLowerCase()));
     if(categoryServices.length === 0);
         return null;
-<<<<<<< HEAD
-<<<<<<< HEAD
     const getCategoryIcon = (props: any) => {';
         const iconMap = {';';
   'AI & Machine Learning': <Brain className="w-6 h-6" />,';';
@@ -38,8 +26,6 @@ const ServiceCategory = ("props": "any) => {"}
             'Supply Chain & Logistics': <Truck className="w-6 h-6" />,';';
             'Real Estate & Property': <Home className="w-6 h-6" />,';';
             'Legal & Compliance': <Lock className="w-6 h-6" />,
-
-=======
     const getCategoryIcon = (props: any) => {;
         const iconMap = {;
   'AI & Machine Learning': <Brain className="w-6 h-6" />,;
@@ -53,8 +39,6 @@ const ServiceCategory = ("props": "any) => {"}
             'Supply Chain & Logistics': <Truck className="w-6 h-6" />,;
             'Real Estate & Property': <Home className="w-6 h-6" />,;
             'Legal & Compliance': <Lock className="w-6 h-6" />,;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
     const getCategoryIcon = ("props": "any) => {;
         const iconMap = {;
   'AI & Machine Learning': <Brain className="w-6 h-6" />",;
@@ -68,7 +52,6 @@ const ServiceCategory = ("props": "any) => {"}
             'Supply Chain & Logistics': "<Truck className="w-6 h-6" />",;
             'Real Estate & Property': "<Home className="w-6 h-6" />",;
             'Legal & Compliance': "<Lock className="w-6 h-6" />",;
->>>>>>> main
 export { ServiceCategory };
 ;
 export {ServiceCategory};
@@ -78,21 +61,13 @@ export {ServiceCategory};
 export {ServiceCategory};
 ;
 export {ServiceCategory};
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default Component';
 ;';;';
-=======
 export default Component;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 export default Component;
-=======
-
 interface EnhancedServicesOverview.jsProps {
   // Add props here as needed
 }
-
 export default function EnhancedServicesOverview.js({ }: EnhancedServicesOverview.jsProps) {
   return (
     <div>
@@ -101,5 +76,3 @@ export default function EnhancedServicesOverview.js({ }: EnhancedServicesOvervie
     </div>
   );
 }
->>>>>>> main
->>>>>>> main

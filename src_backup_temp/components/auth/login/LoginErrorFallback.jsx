@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ,"});,"})";
 const LoginErrorFallback = ("props": "any) => {"}"});,"})";
   return();,"});,"})";
@@ -31,7 +30,6 @@ const LoginErrorFallback = ("props": "any) => {"}"});,"})";
 export default LoginErrorFallback,"});,"})";
 ;,"});,"})";
 export {LoginErrorFallback};,"});,"});
-=======
 ,"}
     );,"})"
 const LoginErrorFallback = (props: any) => {}"}
@@ -96,7 +94,6 @@ export default LoginErrorFallback,"}
     );,"})"
 export {LoginErrorFallback};,"}
     );,"})
->>>>>>> main
 }
 const LoginErrorFallback = ("props": "any) => {"}
 ;

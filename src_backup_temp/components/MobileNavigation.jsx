@@ -1,29 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, {useState, useEffect, useRef} from 'react';'''';';
 import {Link, useLocation} from 'react-router-dom';'''';';
 import {motion, AnimatePresence} from 'framer-motion';';
 import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any) => {}';';
     const [activeDropdown, setActiveDropdown] = useState(null);'';';
-=======
 import React, {useState, useEffect, useRef} from 'react';
 import {Link, useLocation} from 'react-router-dom';
-=======
 import React, {useState, useEffect, useRef} from 'react';'''
 import {Link, useLocation} from 'react-router-dom';'''
->>>>>>> main
 import {motion, AnimatePresence} from 'framer-motion';
-<<<<<<< HEAD
 import { X, ChevronDown, Search, User, Bell const MobileNavigation = ("props": "any) => {"}
     const [activeDropdown, setActiveDropdown] = useState(null);';
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
 import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any) => {}
     const [activeDropdown, setActiveDropdown] = useState(null);'
->>>>>>> main
->>>>>>> main
     const [searchQuery, setSearchQuery] = useState('');
     const location = useLocation();
     const menuRef = useRef(null);
@@ -35,8 +23,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
         const handleClickOutside = ("props": "any) => {"}
             if (menuRef.current && !menuRef.current.contains(event.target)) {}
                 onToggle()}
-<<<<<<< HEAD
-<<<<<<< HEAD
         };';
         if (isOpen) {}';';
 '';';
@@ -104,9 +90,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
                 {label: 'Careers', href: '/careers'},'''';';
                 {label: 'News', href: '/news'},'''';';
                 {label: 'Press', href: '/press'},'''';';
-=======
-=======
->>>>>>> main
         };
         if (isOpen) {}
 '
@@ -122,7 +105,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             document.body.style.overflow = 'unset'}}, [isOpen, onToggle]);
     const navigationItems = []
         {}
-<<<<<<< HEAD
 ';
 '';
 ''';
@@ -171,17 +153,14 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             "label": 'Comp',''';
             "href": '/about','';
             children[;''';
-<<<<<<< HEAD
                 {label: 'About Us', href: '/about'},''';
                 {label: 'Careers', href: '/careers'},''';
                 {label: 'News', href: '/news'},''';
                 {label: 'Press', href: '/press'},''';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
                 {label: 'Contact', href: '/contact'}
             ];
     ];
     const toggleDropdown = (props: any) => {}
-<<<<<<< HEAD
         setActiveDropdown(activeDropdown === label ? null : label)};';
     const handleSearch = (props: any) => {}';';
         e.preventDefault();'';';
@@ -199,11 +178,8 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}';';
                 duration: 0.3,'';';
   ease: 'easeInOut'
-
-=======
         setActiveDropdown(activeDropdown === label ? null : label)};
     const handleSearch = (props: any) => {}
-=======
                 {"label": 'About Us', "href": '/about'},''';
                 {"label": 'Careers', "href": '/careers'},''';
                 {"label": 'News', "href": '/news'},''';
@@ -214,7 +190,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
     const toggleDropdown = ("props": "any) => {"}
         setActiveDropdown(activeDropdown === label ? null : "label)"};
     const handleSearch = ("props": "any) => {"}
->>>>>>> main
         e.preventDefault();';
         // Implement search functionality'';
         // // // // // // // //;
@@ -225,20 +200,16 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
 ';
 '';
 ''';
-<<<<<<< HEAD
             x: '100%',;
             opacity: 0,;
             transition: {}
                 duration: 0.3,';
   ease: 'easeInOut';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
             "x": '100%',;
             "opacity": "0",;
             "transition": "{"}
                 "duration": "0.3",';
   "ease": 'easeInOut';
->>>>>>> main
 }
         },;
         "open": "{"}
@@ -266,7 +237,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             "transition": "{"}
                 "duration": "0.2",';
                 "ease": 'easeInOut';
-=======
 '
 ''
 '''
@@ -321,7 +291,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
                 {label: 'Press', href: '/press'},'''
                 {label: 'Contact', href: '/contact'}
             ]
-
     ];
     const toggleDropdown = (props: any) => {}
         setActiveDropdown(activeDropdown === label ? null : label)};
@@ -341,20 +310,14 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}
                 duration: 0.3,'
   ease: 'easeInOut'
-
 }
         },
         open: {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
             x: 0,
             opacity: 1,
             transition: {}
                 duration: 0.3,'
                 ease: 'easeInOut'
-
     };
     const dropdownVariants = {}
   closed: {}
@@ -363,7 +326,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}
                 duration: 0.2,'
   ease: 'easeInOut'
-
 }
         },
         open: {}
@@ -375,9 +337,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}
                 duration: 0.2,'
                 ease: 'easeInOut'
-
-<<<<<<< HEAD
-=======
             x: 0,;
             opacity: 1,;
             transition: {}
@@ -402,17 +361,10 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             transition: {}
                 duration: 0.2,';
                 ease: 'easeInOut';
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
->>>>>>> main
     };
     return (<AnimatePresence>;
       {isOpen && (<>;
           {/* Backdrop */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           <motion .div initial={{ "opacity": "0 "}} animate={{ "opacity": "1 "}} exit={{ "opacity": "0 "}} className="fixed inset - 0 bg - black / 50 backdrop - blur - sm z - 40" onClick={onToggle} />;
 """;
           {/* Mobile Menu */}"""";
@@ -504,8 +456,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             </div>;
           </motion.div>;
         </>)"}
-=======
->>>>>>> main
           <motion .div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset - 0 bg - black / 50 backdrop - blur - sm z - 40" onClick={onToggle} />
 """
           {/* Mobile Menu */}""""
@@ -555,8 +505,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
                           {activeDropdown === item.label && (<motion.div variants={dropdownVariants} initial="closed" animate="open" exit="closed" className="overflow-hidden">""""
                               <div className="ml-4 space-y-1">""""
                                 {item.children.map((child) => (<Link key={child.href} to={child.href} className="block py-2 px-4 text-zion-slate-light hover:text-white hover:bg-white/5 rounded-lg transition-colors">
-<<<<<<< HEAD
-=======
           <motion .div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset - 0 bg - black / 50 backdrop - blur - sm z - 40" onClick={onToggle} />;
 """;
           {/* Mobile Menu */}"""";
@@ -606,9 +554,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
                           {activeDropdown === item.label && (<motion.div variants={dropdownVariants} initial="closed" animate="open" exit="closed" className="overflow-hidden">"""";
                               <div className="ml-4 space-y-1">"""";
                                 {item.children.map((child) => (<Link key={child.href} to={child.href} className="block py-2 px-4 text-zion-slate-light hover:text-white hover:bg-white/5 rounded-lg transition-colors">;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> main
                                     {child.label}
                                   </Link>) ) }
                               </div>
@@ -651,11 +596,9 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = (props: any
             </div>
           </motion.div>
         </>)}
->>>>>>> main
     </AnimatePresence>)};
 export default MobileNavigation;
 }}}}}}}}}</motion.div>}
-<<<<<<< HEAD
 ;
 export {MobileNavigation};
 ;
@@ -666,27 +609,15 @@ export {MobileNavigation};
 export {MobileNavigation};
 ;
 export {MobileNavigation};
-<<<<<<< HEAD
-
 </motion>';
 </motion>;';;';
-=======
 ;
 </motion>;
 </motion>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-
 export {MobileNavigation};
-
 export {MobileNavigation};
-
 export {MobileNavigation};
-
 export {MobileNavigation};
-
 export {MobileNavigation};
-
 </motion>
 </motion>
->>>>>>> main
