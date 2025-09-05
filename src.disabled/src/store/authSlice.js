@@ -1,1 +1,19 @@
-import React from "react"; ); export default function Authslice() {}; return null} }""
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from "react";
+  );
+export default function Authslice() {};
+  return null}
+}
+=======
+import React from "react"; ); export default function Authslice() {}; return null} }
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+const React from "react"; ); export default function Authslice() { return; }; return null} }""
+=======
+import _React from "react"; ); export default function Authslice() {}; return null} }
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

@@ -1,3 +1,10 @@
+  Menu, 
+  X, 
+  Home, 
+  Users, 
+  Briefcase, 
+  Phone, 
+  Mail, 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -25,10 +32,6 @@ import {
   Award,
   Globe,
   Search,
-  ArrowRight
-} from 'lucide-react';
-import { Button } from '../ui/Button';
-import { Badge } from '../ui/Badge';
 const "Header": React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
@@ -53,11 +56,10 @@ const "Header": React.FC = () => {
           {navigationItems.map((item) => (
             <Link key={item.name} href={item.href} className="text-gray-300 hover: text-white">
               {item.name}
-            </Link>
+            </Link>;
           ))}
-        </nav>
-      </div>
-    </header>
+        </nav>;
+      </div>;
+    </header>;
   );
-}
 export default Header;

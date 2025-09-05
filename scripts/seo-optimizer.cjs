@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");class SEOOptimizer { constructor() { this.projectRoot = process.cwd();" this.reportFile = path.join(__dirname, "./logs/seo-report.json"); }" log(message, level = "INFO") { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`); }"`"`
+=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -8,10 +11,14 @@ class SEOOptimizer {
   }
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`);
+    
   }
+<<<<<<< HEAD
+
+=======
   async optimizeSEO() {
     this.log('🔍 Starting SEO optimization...');
+>>>>>>> main
 // File extensions to analyze
 const fileExtensions = ['.js', '.jsx', '.ts', '.tsx'];
 // Analyze a single file for SEO
@@ -19,6 +26,10 @@ function analyzeFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const relativePath = path.relative(process.cwd(), filePat;h;);
+<<<<<<< HEAD
+    
+=======
+>>>>>>> main
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx', '.html']);
     const seoReport = {
       "timestamp": new Date().toISOString(),
@@ -172,3 +183,4 @@ if (require.main === module) {
   optimizer.run().catch(console.error);
 }
 module.exports = SEOOptimizer;
+>>>>>>> main

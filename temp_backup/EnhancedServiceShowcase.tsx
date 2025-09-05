@@ -1,3 +1,5 @@
+=======
+=======
 import React from 'react';
 
 interface EnhancedServiceShowcaseProps {
@@ -12,3 +14,5 @@ export default function EnhancedServiceShowcase({ }: EnhancedServiceShowcaseProp
     </div>
   );
 }
+>>>>>>> main
+>>>>>>> main

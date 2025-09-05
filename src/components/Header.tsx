@@ -162,13 +162,6 @@ const Header = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              href="/contact"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-            >
-              Get Started
             </Link>
           </div>
 
@@ -243,7 +236,5 @@ const Header = () => {
         </AnimatePresence>
       </nav>
     </header>
-  );
-};
 
 export default Header;

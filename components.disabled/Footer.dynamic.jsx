@@ -1,2 +1,10 @@
+<<<<<<< HEAD
+const Footer = dynamic(() => import(\"./Footer\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default Footer\' ,
+=======
+<<<<<<< HEAD
+const Footer = dynamic(() => import("./Footer"),{"; loading: () => <p>Loading.</p,>}) export: "default Footer" ,"""
+=======
 const Footer = dynamic(() => import("./Footer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Footer' ,'
 </p>'
+>>>>>>> main
+>>>>>>> main
