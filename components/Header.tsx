@@ -18,7 +18,12 @@ import {
   Users,
   FileText,
   HelpCircle,
-  DollarSign
+  DollarSign,
+  Settings,
+  Network,
+  Globe,
+  Rocket,
+  BarChart3
 } from 'lucide-react';
 
 const navigation = [{
