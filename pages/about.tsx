@@ -1,33 +1,18 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
-  TrendingUp,
-  Building,
-  Rocket,
-  Lightbulb,
-  Handshake
-} from 'lucide-react';
-
-const values = [{
-=======
 import { 
-=======
   Brain, 
   Users, 
   Award, 
   Target, 
   Heart, 
-  Globe, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Building, 
-  Rocket, 
-  Lightbulb, 
-  Handshake 
+  Globe,
+  TrendingUp,
+  Building,
+  Rocket,
+  Lightbulb,
+  Handshake
 } from 'lucide-react';
 
 const values = [
@@ -44,15 +29,8 @@ const values = [
   {
     icon: Users,
     title: 'Collaboration',
-<h1 className="text-4xl md:text-6xl font-bold mb-6">
-              About{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Zion Tech Group
-              </span>
-</h1>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              We are a leading technology solutions provider dedicated to transforming businesses through innovative AI, cloud architecture, and cutting-edge development services.
-            </p>
+    description: 'We believe in the power of collaboration and work closely with our clients to achieve their goals.'
+  }
                   </motion.div>
                   </div>
                   </section>
