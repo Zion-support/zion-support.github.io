@@ -14,7 +14,7 @@ import {
   Zap
 } from 'lucide-react';
 <<<<<<< HEAD
-import Layout from '../components/Layout';
+import Layout from './components/layout/MainLayout';
 
 const courses = [
   {

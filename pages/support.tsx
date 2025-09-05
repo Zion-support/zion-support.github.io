@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
+import Layout from './components/layout/MainLayout';
 import { 
   Phone, 
   Mail, 
@@ -108,7 +108,7 @@ const resources = [
 
 export default function SupportPage() {
   return (
-    <Layout 
+    <MainLayout 
       title="Support - Zion Tech Group | 24/7 Technical Support & Help Center"
       description="Get expert technical support for all Zion Tech Group services. 24/7 phone support, live chat, email support, and comprehensive help resources."
       keywords="technical support, help desk, customer service, 24/7 support, IT support, troubleshooting"
@@ -325,6 +325,6 @@ export default function SupportPage() {
           </div>
         </section>
     </div>
-    </Layout>
+    </MainLayout>
   );
 }

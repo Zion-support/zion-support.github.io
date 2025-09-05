@@ -101,12 +101,12 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
+import Layout from './components/layout/MainLayout';
 import { Cookie, Settings, Shield, Eye, Database, Mail, Phone, MapPin } from 'lucide-react';
 
 const CookiesPage = () => {
   return (
-    <Layout
+    <MainLayout
       title="Cookie Policy - Zion Tech Group"
       description="Learn about how we use cookies and similar technologies on our website to enhance your browsing experience."
       keywords="cookie policy, privacy, data protection, website cookies, tracking"
@@ -477,7 +477,7 @@ const CookiesPage = () => {
     </MainLayout>  );
 }
 =======
-    </Layout>
+    </MainLayout>
   );
 };
 

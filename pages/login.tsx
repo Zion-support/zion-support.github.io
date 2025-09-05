@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
-import Layout from '../components/Layout';
+import Layout from './components/layout/MainLayout';
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({
@@ -15,7 +15,7 @@ export default function LoginPage() {
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Eye, EyeOff, Lock, Mail, ArrowRight } from 'lucide-react';
-import Layout from '../components/Layout';
+import Layout from './components/layout/MainLayout';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -45,7 +45,7 @@ export default function LoginPage() {
 >>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
 
   return (
-    <Layout
+    <MainLayout
       title="Login - Zion Tech Group"
 <<<<<<< HEAD
       description="Sign in to your Zion Tech Group account to access our services and dashboard."
@@ -317,6 +317,6 @@ export default function LoginPage() {
         </div>
 >>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
       </div>
-    </Layout>
+    </MainLayout>
   );
 }

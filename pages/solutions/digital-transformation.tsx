@@ -19,7 +19,7 @@ import {
   Database,
   Globe
 } from 'lucide-react';
-import Layout from '../../components/Layout';
+import Layout from '.././components/layout/MainLayout';
 
 const transformationPhases = [
   {
@@ -138,7 +138,7 @@ const transformationTechnologies = [
 
 export default function DigitalTransformation() {
   return (
-    <Layout>
+    <MainLayout>
       <Head>
         <title>Digital Transformation Solutions - Zion Tech Group</title>
         <meta name="description" content="Transform your business with Zion Tech Group's comprehensive digital transformation solutions. Cloud migration, AI integration, and process automation." />
@@ -612,7 +612,7 @@ export default function DigitalTransformationPage() {
         </section>
       </div>
 :pages/solutions/digital-transformation.tsx.backup
-    </Layout>  );
+    </MainLayout>  );
     </>
   );
 }

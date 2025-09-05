@@ -25,7 +25,7 @@ import {
   Database,
   TrendingDown
 } from 'lucide-react';
-import Layout from '../../components/Layout';
+import Layout from '.././components/layout/MainLayout';
 
 const solutions = [
   {
@@ -134,7 +134,7 @@ const caseStudies = [
 
 export default function Finance() {
   return (
-    <Layout
+    <MainLayout
       title="Financial Technology Solutions - Zion Tech Group"
       description="Transform financial services with AI-powered fraud detection, algorithmic trading, and digital banking solutions."
       keywords="fintech, financial technology, fraud detection, algorithmic trading, digital banking, risk assessment"
@@ -412,6 +412,6 @@ export default function Finance() {
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   );
 }

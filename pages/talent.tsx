@@ -325,7 +325,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Users, Briefcase, Star, ArrowRight, CheckCircle, DollarSign, Calendar } from 'lucide-react';
-import Layout from '../components/Layout';
+import Layout from './components/layout/MainLayout';
 
 const jobOpenings = [
   {
@@ -445,7 +445,7 @@ export default function TalentPage() {
   });
 
   return (
-    <Layout title="Talent - Zion Tech Group">
+    <MainLayout title="Talent - Zion Tech Group">
       <Head>
         <title>Talent - Zion Tech Group</title>
         <meta name="description" content="Join our team of talented professionals and help us build the future of technology." />
@@ -768,7 +768,7 @@ export default function TalentPage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
   );
 }
 >>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34

@@ -35,7 +35,7 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-import Layout from '../components/Layout';
+import Layout from './components/layout/MainLayout';
 
 const newsCategories = [
   { name: 'Company News', count: 12, color: 'bg-blue-100 text-blue-800' },
@@ -136,7 +136,7 @@ const stats = [
 
 export default function NewsPage() {
   return (
-    <Layout
+    <MainLayout
       title="News & Updates - Zion Tech Group"
       description="Stay updated with the latest news, product launches, partnerships, and industry insights from Zion Tech Group."
       keywords="news, updates, company news, product launches, partnerships, industry insights, technology news"
@@ -582,7 +582,7 @@ export default function NewsPage() {
           </div>
         </section>
       </div>
-    </Layout>  );
+    </MainLayout>  );
 =======
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">

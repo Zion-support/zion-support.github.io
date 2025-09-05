@@ -17,7 +17,7 @@ import {
   Target,
   Rocket
 } from 'lucide-react';
-import Layout from '../components/Layout';
+import Layout from './components/layout/MainLayout';
 
 const process = [
   {
@@ -140,7 +140,7 @@ const technologies = [
 
 export default function CustomDevelopmentPage() {
   return (
-    <Layout 
+    <MainLayout 
       title="Custom Development - Zion Tech Group"
       description="Bespoke software development solutions tailored to your unique requirements. Full-stack development, AI/ML, mobile apps, and cloud solutions."
       keywords="custom development, bespoke software, full-stack development, custom applications, software development"
@@ -606,7 +606,7 @@ export default function CustomSolutionsPage() {
         </section>
       </div>
 :pages/solutions/custom.tsx.backup
-    </Layout>  );
+    </MainLayout>  );
     </>
   );
 }

@@ -37,7 +37,7 @@ import {
   Download,
   ExternalLink
 } from 'lucide-react';
-import Layout from '../components/Layout';
+import Layout from './components/layout/MainLayout';
 
 const tutorialCategories = [
   { name: 'AI & Machine Learning', count: 15, color: 'bg-blue-100 text-blue-800' },
@@ -152,7 +152,7 @@ const stats = [
 
 export default function TutorialsPage() {
   return (
-    <Layout
+    <MainLayout
       title="Tutorials - Zion Tech Group"
       description="Learn from our comprehensive collection of tutorials covering AI, web development, cloud computing, cybersecurity, and more."
       keywords="tutorials, learning, AI, web development, cloud computing, cybersecurity, programming, technology education"
@@ -556,7 +556,7 @@ export default function TutorialsPage() {
         </section>
 <<<<<<< HEAD
       </div>
-    </Layout>  );
+    </MainLayout>  );
 =======
 
         {/* CTA Section */}

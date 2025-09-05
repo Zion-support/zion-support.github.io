@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import Layout from '../components/Layout';
+import Layout from './components/layout/MainLayout';
 import { Search, HelpCircle, BookOpen, MessageCircle, Phone, Mail, FileText, Video, Download, ExternalLink, ChevronDown, ChevronRight } from 'lucide-react';
 
 const faqCategories = [
@@ -199,7 +199,7 @@ const HelpPage = () => {
   };
 
   return (
-    <Layout
+    <MainLayout
       title="Help Center - Zion Tech Group"
       description="Find answers to frequently asked questions, get technical support, and access our comprehensive help resources."
       keywords="help, support, FAQ, technical support, documentation, troubleshooting"
@@ -423,7 +423,7 @@ const HelpPage = () => {
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
 >>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
   );
 };

@@ -25,7 +25,7 @@ import {
   RefreshCw,
   DollarSign
 } from 'lucide-react';
-import Layout from '../components/Layout';
+import Layout from './components/layout/MainLayout';
 
 const migrationSteps = [
   {
@@ -187,7 +187,7 @@ const migrationTypes = [
 
 export default function CloudMigration() {
   return (
-    <Layout
+    <MainLayout
       title="Cloud Migration Solutions - Zion Tech Group"
       description="Migrate your infrastructure to the cloud with our expert cloud migration services. AWS, Azure, GCP support."
       keywords="cloud migration, AWS migration, Azure migration, GCP migration, cloud infrastructure, cloud services"
@@ -606,7 +606,7 @@ export default function CloudMigrationPage() {
         </section>
       </div>
 :pages/solutions/cloud-migration.tsx.backup
-    </Layout>  );
+    </MainLayout>  );
     </>
   );
 }

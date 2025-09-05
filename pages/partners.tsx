@@ -72,7 +72,7 @@ const partnershipBenefits = [
     description: 'Dedicated support from our partner network'
 =======
 import { Globe, Handshake, Users, Award, CheckCircle, ArrowRight, Star, Building, Shield, Zap } from 'lucide-react';
-import Layout from '../components/Layout';
+import Layout from './components/layout/MainLayout';
 
 const partnershipTypes = [
   {
@@ -145,7 +145,7 @@ export default function PartnersPage() {
         <title>Partners - Zion Tech Group</title>
         <meta name="description" content="Learn about our strategic partnerships with leading technology companies and how they benefit our clients." />
 =======
-    <Layout title="Partners - Zion Tech Group">
+    <MainLayout title="Partners - Zion Tech Group">
       <Head>
         <title>Partners - Zion Tech Group</title>
         <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group's innovative solutions." />
@@ -466,7 +466,7 @@ export default function PartnersPage() {
           </div>
         </section>
       </div>
-    </Layout>
+    </MainLayout>
 >>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
   );
 }

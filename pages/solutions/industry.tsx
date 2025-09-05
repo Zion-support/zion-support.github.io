@@ -17,7 +17,7 @@ import {
   Factory,
   Globe
 } from 'lucide-react';
-import Layout from '../components/Layout';
+import Layout from './components/layout/MainLayout';
 
 const industries = [
   {
@@ -204,7 +204,7 @@ const industries = [
 export default function IndustrySolutionsPage() {
   return (
 :pages/solutions/industry.tsx.backup
-    <Layout 
+    <MainLayout 
       title="Industry Solutions - Zion Tech Group"
       description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."
       keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, edtech, government solutions"
@@ -526,7 +526,7 @@ export default function IndustrySolutionsPage() {
         </section>
       </div>
 :pages/solutions/industry.tsx.backup
-    </Layout>  );
+    </MainLayout>  );
     </>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 :pages/index-test.tsx.backup
-import Layout from '../components/Layout';
+import Layout from './components/layout/MainLayout';
 import MainLayout from './components/layout/MainLayout';
 
 export default function HomePage() {

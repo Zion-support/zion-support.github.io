@@ -20,7 +20,7 @@ import {
 =======
 import { Brain, Cloud, Shield, Users, Mail, Linkedin, Twitter, Github } from 'lucide-react';
 >>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
-import Layout from '../components/Layout';
+import Layout from './components/layout/MainLayout';
 
 const teamMembers = [
   {
@@ -211,7 +211,7 @@ const stats = [
 export default function TeamPage() {
   return (
 <<<<<<< HEAD
-    <Layout
+    <MainLayout
       title="Our Team - Zion Tech Group"
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
       keywords="team, experts, engineers, data scientists, AI specialists, cybersecurity experts, technology professionals"
@@ -240,7 +240,7 @@ export default function TeamPage() {
               in AI, cloud computing, cybersecurity, and business transformation.
             </motion.p>
 =======
-    <Layout title="Our Team - Zion Tech Group">
+    <MainLayout title="Our Team - Zion Tech Group">
       <Head>
         <title>Our Team - Zion Tech Group</title>
         <meta name="description" content="Meet the talented individuals behind Zion Tech Group's innovative solutions." />
@@ -571,6 +571,6 @@ export default function TeamPage() {
         </section>
       </div>
 >>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
-    </Layout>
+    </MainLayout>
   );
 }
