@@ -1022,6 +1022,72 @@ export default function AIServices() {
         'Personalized user experiences',
         'Better content discovery and recommendations'
       ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI Customer Churn Predictor',
+      description: 'Advanced machine learning platform that predicts customer churn with 94% accuracy using behavioral analytics and predictive modeling.',
+      features: [
+        'Real-time churn prediction with 94% accuracy',
+        'Behavioral pattern analysis and scoring',
+        'Automated retention campaign triggers',
+        'Custom ML model training and optimization',
+        'API integration with CRM systems',
+        'Advanced analytics dashboard and insights'
+      ],
+      pricing: '$2,000 – $8,000 setup',
+      perUnit: '$0.02 – $0.20 per prediction',
+      timeline: '3–5 weeks',
+      benefits: [
+        'Reduce customer churn by 25-40%',
+        'Increase customer lifetime value',
+        'Optimize retention marketing spend',
+        'Improve customer satisfaction scores'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI Trading Platform',
+      description: 'Advanced AI-powered trading platform with algorithmic trading, risk management, and real-time market analysis for institutional and retail traders.',
+      features: [
+        'Market analysis and prediction algorithms',
+        'Automated trading execution and strategies',
+        'Risk management and portfolio optimization',
+        'Real-time market monitoring and alerts',
+        'Algorithmic trading strategy development',
+        'Performance analytics and reporting'
+      ],
+      pricing: '$15,000 – $125,000 setup',
+      perUnit: 'Performance-based fees',
+      timeline: '8–12 weeks',
+      benefits: [
+        'Improved trading performance and returns',
+        'Automated risk management',
+        '24/7 market monitoring and execution',
+        'Data-driven trading decisions'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI Financial Risk Assessment',
+      description: 'Advanced financial risk modeling and assessment using machine learning and big data analytics for comprehensive risk management.',
+      features: [
+        'Credit risk assessment and scoring',
+        'Market risk analysis and prediction',
+        'Operational risk identification',
+        'Fraud detection and prevention',
+        'Regulatory compliance monitoring',
+        'Stress testing and scenario analysis'
+      ],
+      pricing: '$15,000 – $100,000 setup',
+      perUnit: '$0.01 – $0.10 per assessment',
+      timeline: '8–16 weeks',
+      benefits: [
+        '99.9% accuracy in risk assessment',
+        'Reduced financial losses',
+        'Automated risk monitoring',
+        'Better regulatory compliance'
+      ]
     }
   ];
 
