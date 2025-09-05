@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -10,7 +9,6 @@ interface OptimizedImageProps {
   priority?: boolean;
   quality?: number;
 }
-
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -32,5 +30,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     />
   );
 };
-
 export default OptimizedImage;

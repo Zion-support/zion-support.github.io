@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     // Add skip link for keyboard navigation
@@ -18,7 +17,6 @@ const AccessibilityEnhancer: React.FC = () => {
       z-index: 1000;
     `;
     document.body.insertBefore(skipLink, document.body.firstChild);
-
     // Focus management
     const handleMouseDown = () => {
       document.body.classList.add('using-mouse');
@@ -28,10 +26,8 @@ const AccessibilityEnhancer: React.FC = () => {
         document.body.classList.remove('using-mouse');
       }
     };
-
     document.addEventListener('mousedown', handleMouseDown);
     document.addEventListener('keydown', handleKeyDown);
-
     // Add ARIA live region for announcements
     const liveRegion = document.createElement('div');
     liveRegion.setAttribute('aria-live', 'polite');
@@ -39,7 +35,6 @@ const AccessibilityEnhancer: React.FC = () => {
     liveRegion.className = 'sr-only';
     liveRegion.id = 'live-region';
     document.body.appendChild(liveRegion);
-
     // Announce page changes
     const announcePageChange = (message: string) => {
       const liveRegion = document.getElementById('live-region');
@@ -47,30 +42,24 @@ const AccessibilityEnhancer: React.FC = () => {
         liveRegion.textContent = message;
       }
     };
-
     // Listen for route changes (Next.js specific)
     const handleRouteChange = () => {
       announcePageChange('Page loaded');
     };
-
     // Add route change listener if available
     if (typeof window !== 'undefined' && window.history) {
       const originalPushState = window.history.pushState;
       const originalReplaceState = window.history.replaceState;
-
       window.history.pushState = function(...args) {
         originalPushState.apply(this, args);
         setTimeout(handleRouteChange, 100);
       };
-
       window.history.replaceState = function(...args) {
         originalReplaceState.apply(this, args);
         setTimeout(handleRouteChange, 100);
       };
-
       window.addEventListener('popstate', handleRouteChange);
     }
-
     // Cleanup
     return () => {
       document.removeEventListener('mousedown', handleMouseDown);
@@ -83,10 +72,8 @@ const AccessibilityEnhancer: React.FC = () => {
       }
     };
   }, []);
-
   return null;
 };
-
 // Add CSS for focus management
 const focusStyles = `
   .using-mouse *:focus {
@@ -118,12 +105,10 @@ const focusStyles = `
     white-space: normal;
   }
 `;
-
 // Inject styles
 if (typeof document !== 'undefined') {
   const styleSheet = document.createElement('style');
   styleSheet.textContent = focusStyles;
   document.head.appendChild(styleSheet);
 }
-
 export default AccessibilityEnhancer;

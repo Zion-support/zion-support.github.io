@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Phone, 
-  Mail, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-  Instagram, 
-  ChevronDown, 
-  Menu, 
+import {
+  Phone,
+  Mail,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  ChevronDown,
+  Menu,
   X,
   Code,
   Smartphone,
@@ -25,15 +25,12 @@ import {
   Truck,
   CreditCard
 } from 'lucide-react';
-
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
-
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
   const servicesDropdown = [
     {
       title: 'Web Development',
@@ -72,7 +69,6 @@ const Header: React.FC = () => {
       icon: Zap
     }
   ];
-
   const solutionsDropdown = [
     {
       title: 'Enterprise Solutions',
@@ -99,7 +95,6 @@ const Header: React.FC = () => {
       icon: GraduationCap
     }
   ];
-
   const industriesDropdown = [
     { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
     { name: 'Logistics', href: '/industries/logistics', icon: Truck },
@@ -108,7 +103,6 @@ const Header: React.FC = () => {
     { name: 'Education', href: '/industries/education', icon: GraduationCap },
     { name: 'Retail', href: '/industries/retail', icon: ShoppingCart }
   ];
-
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
@@ -117,7 +111,6 @@ const Header: React.FC = () => {
     { name: 'Industries', href: '/industries' },
     { name: 'Contact', href: '/contact' }
   ];
-
   return (
     <header className="bg-white shadow-lg">
       {/* Top Bar */}
@@ -146,7 +139,6 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
       <nav className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
@@ -160,7 +152,6 @@ const Header: React.FC = () => {
               <div className="text-xs text-gray-500">Technology Solutions</div>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex space-x-8">
             {/* Services Dropdown */}
@@ -201,7 +192,6 @@ const Header: React.FC = () => {
                 )}
               </AnimatePresence>
             </div>
-
             {/* Solutions Dropdown */}
             <div className="relative group">
               <button
@@ -238,7 +228,6 @@ const Header: React.FC = () => {
                 )}
               </AnimatePresence>
             </div>
-
             {/* Industries Dropdown */}
             <div className="relative group">
               <button
@@ -270,7 +259,6 @@ const Header: React.FC = () => {
                 )}
               </AnimatePresence>
             </div>
-
             {/* Other Navigation Links */}
             {navigation.slice(0, 2).map((item) => (
               <Link
@@ -282,7 +270,6 @@ const Header: React.FC = () => {
               </Link>
             ))}
           </div>
-
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4 text-sm text-gray-600">
             <div className="flex items-center">
@@ -294,7 +281,6 @@ const Header: React.FC = () => {
               <span>kleber@ziontechgroup.com</span>
             </div>
           </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -306,7 +292,6 @@ const Header: React.FC = () => {
           </div>
         </div>
       </nav>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
@@ -335,5 +320,4 @@ const Header: React.FC = () => {
     </header>
   );
 };
-
 export default Header;

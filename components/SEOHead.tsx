@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -13,7 +12,6 @@ interface SEOHeadProps {
   noindex?: boolean;
   nofollow?: boolean;
 }
-
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',
@@ -29,7 +27,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
   const imageUrl = ogImage.startsWith('http') ? ogImage : `https://zion.app${ogImage}`;
-
   const defaultStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -51,9 +48,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       'https://twitter.com/ziontechgroup',
     ],
   };
-
   const mergedStructuredData = structuredData || defaultStructuredData;
-
   return (
     <Head>
       {/* Basic Meta Tags */}
@@ -67,7 +62,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-
       {/* Open Graph Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -126,5 +120,4 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     </Head>
   );
 };
-
 export default SEOHead;

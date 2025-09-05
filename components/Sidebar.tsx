@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  X, 
-  Building2, 
-  Code, 
-  Smartphone, 
-  Cloud, 
-  Shield, 
+import {
+  X,
+  Building2,
+  Code,
+  Smartphone,
+  Cloud,
+  Shield,
   Zap,
   ShoppingCart,
   Heart,
@@ -19,15 +19,12 @@ import {
   Mail,
   ExternalLink
 } from 'lucide-react';
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
-
   const handleDropdownToggle = (title: string) => {
     setOpenDropdowns(prev =>
       prev.includes(title)
@@ -35,7 +32,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         : [...prev, title]
     );
   };
-
   const navigation = {
     'Services': [
       { name: 'Web Development', href: '/services/web-development', icon: Code },
@@ -58,7 +54,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Education', href: '/industries/education', icon: GraduationCap },
     ],
   };
-
   const quickLinks = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
@@ -67,7 +62,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];
-
   return (
     <AnimatePresence>
       {isOpen && (
@@ -103,7 +97,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <X className="w-6 h-6" />
                 </button>
               </div>
-
               {/* Navigation */}
               <nav className="space-y-4">
                 {Object.entries(navigation).map(([title, links]) => (
@@ -149,7 +142,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   </div>
                 ))}
               </nav>
-
               {/* Quick Links */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
@@ -166,7 +158,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   ))}
                 </div>
               </div>
-
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
@@ -198,5 +189,4 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     </AnimatePresence>
   );
 };
-
 export default Sidebar;

@@ -1,18 +1,15 @@
 import { useState, useEffect, useCallback } from 'react';
-
 interface UseApiOptions {
   immediate?: boolean;
   onSuccess?: (data: any) => void;
   onError?: (error: Error) => void;
 }
-
 interface UseApiResult<T> {
   data: T | null;
   loading: boolean;
   error: Error | null;
   execute: (...args: any[]) => Promise<void>;
 }
-
 export function useApi<T = any>(
   apiFunction: (...args: any[]) => Promise<T>,
   options: UseApiOptions = {}
@@ -20,7 +17,6 @@ export function useApi<T = any>(
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
-
   const execute = useCallback(async (...args: any[]) => {
     try {
       setLoading(true);
@@ -36,12 +32,10 @@ export function useApi<T = any>(
       setLoading(false);
     }
   }, [apiFunction, options]);
-
   useEffect(() => {
     if (options.immediate) {
       execute();
     }
   }, [execute, options.immediate]);
-
   return { data, loading, error, execute };
 }
