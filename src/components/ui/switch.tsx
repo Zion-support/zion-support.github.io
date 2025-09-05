@@ -1,26 +1,26 @@
-<<<<<<< HEAD
 const Switch = React.forwardRef<
-  React.ElementRef<typeof SwitchPrimitives.Root>,
+  React.ElementRef<typeof SwitchPrimitives.Root></typeof>
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
->(({ className, ...props }, ref) => (
-  <SwitchPrimitives.Root
-    className={cn(
-      "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-"visible": outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input
-      className
-    )}
-    {...props}
-    ref={ref}
+</typeof>
+  <SwitchPrimitives.Root;
+    className={cn(})
+      "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-"visible": outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input;"
+      className;);
+    )};
+    {...props};
+    ref={ref};
   >
-    <SwitchPrimitives.Thumb
-      className={cn(
-        "pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"
-      )}
+</SwitchPrimitives>
+    <SwitchPrimitives.Thumb;
+      className={cn("})
+        "pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"");
+      )};
     />
+</SwitchPrimitives>
   </SwitchPrimitives.Root>
-))
-Switch.displayName = SwitchPrimitives.Root.displayName
-
-export { Switch };
-=======
-import * as React from "react" import * as SwitchPrimitives from "@radix-ui/react-switch" import { cn } from "@/lib/utils" <<<<<<< HEAD const Switch = React.forwardRef< React.ElementRef<typeof SwitchPrimitives.Root>,React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root> >(({ className,...props },ref) => ( <SwitchPrimitives.Root className={cn( "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input",className )} {...props} ref={ref} > <SwitchPrimitives.Thumb className={cn( "pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0" )} /> </SwitchPrimitives.Root> )) Switch.displayName = SwitchPrimitives.Root.displayName export { Switch }; ======= checked?: boolean; onCheckedChange?: (checked: boolean) => void; disabled?: boolean; className?: string;'; id?: string;';'; 'aria-label'?: string; export function Switch($1) {; const handleToggle = (props) => {; if (!disabled && onCheckedChange) {; onCheckedChange(!checked)}; return ( <button type = "button" role="switch" aria-checked={checked} aria-label={ariaLabel} disabled={disabled} onClick={handleToggle} className = { cn('; 'peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50',checked ? 'bg-primary' : 'bg-input',disabled && 'opacity-50 cursor-not-allowed',className ) } id={id} {...props} <span className = { cn(';'; 'pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform',checked ? 'translate-x-5' : 'translate-x-0' )}; />; </button>; )}}} export default switch;'; </span>;';'; >>>>>>> cursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+));
+Switch.displayName = SwitchPrimitives.Root.displayName;
+export { Switch };ursor/migrate-github-actions-to-pm2-and-clean-up-5599;
+cursor/website-audit-and-update-with-deployment-76dc;
+origin/cursor/automate-test-improve-and-merge-code-eafe;
+cursor/fix-lint-push-and-merge-to-main-f3c1;"

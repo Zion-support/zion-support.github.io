@@ -1,5 +1,5 @@
 import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from "../components/Layout";
 import { motion } from 'framer-motion';
 import { Brain, Cloud, Shield, Users, Award, Globe } from 'lucide-react';
 
@@ -51,7 +51,7 @@ const stats = [
 
 export default function TeamPage() {
   return (
-    <MainLayout 
+    <Layout 
       title="Our Team - Zion Tech Group"
       description="Meet the expert team behind Zion Tech Group's innovative technology solutions."
     >
@@ -171,6 +171,6 @@ export default function TeamPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

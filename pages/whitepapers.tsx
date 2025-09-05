@@ -1,5 +1,5 @@
 import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from "../components/Layout";
 import { motion } from 'framer-motion';
 import { FileText, Download, Calendar, User, CheckCircle, ArrowRight } from 'lucide-react';
 
@@ -71,7 +71,7 @@ export default function WhitepapersPage() {
   ];
 
   return (
-    <MainLayout 
+    <Layout 
       title="White Papers - Zion Tech Group"
       description="Access our comprehensive collection of white papers on AI, cloud computing, cybersecurity, and digital transformation."
     >
@@ -220,6 +220,6 @@ export default function WhitepapersPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

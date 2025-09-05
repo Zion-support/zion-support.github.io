@@ -14,7 +14,7 @@ import {
   Zap,
   BarChart3
 } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
+import Layout from "../components/Layout";
 
 const benefits = [
   {
@@ -72,7 +72,7 @@ export default function NewsletterPage() {
   };
 
   return (
-    <MainLayout 
+    <Layout 
       title="Newsletter - Zion Tech Group"
       description="Subscribe to our newsletter for exclusive content, webinar invitations, and the latest technology insights."
       keywords="newsletter, technology updates, industry insights, exclusive content, webinars"
@@ -297,6 +297,6 @@ export default function NewsletterPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </Layout>
   );
 }

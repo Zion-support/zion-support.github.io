@@ -1,28 +1,25 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  HelpCircle, 
-  BookOpen, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  FileText, 
+import React, { useState } from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion, AnimatePresence } from 'framer-motion'
+import {
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
   Video,
   Download,
   ExternalLink,
   ChevronDown,
   ChevronRight
-} from 'lucide-react';
-
-const helpCategories = [
-  {
+} from 'lucide-react'
+const helpCategories = [{
     title: "Getting Started",
     icon: BookOpen,
-    articles: [
-      {
+    articles: [{
         title: "Welcome to Zion Tech Group",
         description: "Learn the basics of our platform and services",
         type: "Guide",
@@ -39,14 +36,12 @@ const helpCategories = [
         description: "How to get started with our AI solutions",
         type: "Tutorial",
         readTime: "15 min"
-      }
-    ]
+      }]
   },
   {
     title: "AI Services",
     icon: HelpCircle,
-    articles: [
-      {
+    articles: [{
         title: "Understanding AI Models",
         description: "Learn about different AI models and their applications",
         type: "Guide",
@@ -63,14 +58,12 @@ const helpCategories = [
         description: "Tips and best practices for using AI effectively",
         type: "Guide",
         readTime: "12 min"
-      }
-    ]
+      }]
   },
   {
     title: "Cloud Services",
     icon: MessageCircle,
-    articles: [
-      {
+    articles: [{
         title: "Cloud Migration Guide",
         description: "Complete guide to migrating to our cloud platform",
         type: "Guide",
@@ -87,14 +80,12 @@ const helpCategories = [
         description: "Keep your cloud environment secure",
         type: "Guide",
         readTime: "15 min"
-      }
-    ]
+      }]
   },
   {
     title: "Billing & Account",
     icon: FileText,
-    articles: [
-      {
+    articles: [{
         title: "Understanding Your Bill",
         description: "Learn how to read and understand your billing statement",
         type: "Guide",
@@ -111,20 +102,14 @@ const helpCategories = [
         description: "Manage your account preferences and settings",
         type: "Tutorial",
         readTime: "10 min"
-      }
-    ]
-  }
-];
-
+      }]
+  }]
 const quickLinks = [
   { title: "API Documentation", href: "/docs/api", icon: FileText },
   { title: "Video Tutorials", href: "/tutorials", icon: Video },
   { title: "Download Resources", href: "/downloads", icon: Download },
-  { title: "Community Forum", href: "/community", icon: MessageCircle }
-];
-
-const faqs = [
-  {
+  { title: "Community Forum", href: "/community", icon: MessageCircle }]
+const faqs = [{
     question: "How do I get started with your AI services?",
     answer: "Getting started is easy! First, create an account, then choose a plan that fits your needs. You can start with our free trial to explore our AI capabilities before committing to a paid plan."
   },
@@ -139,25 +124,43 @@ const faqs = [
   {
     question: "Can I cancel my subscription anytime?",
     answer: "Yes, you can cancel your subscription at any time. There are no cancellation fees, and you'll continue to have access to your services until the end of your current billing period."
+  }]
+
+const supportMethods = [
+  {
+    title: "Live Chat Support",
+    description: "Get instant help with our 24/7 live chat support. Our team is always ready to assist you."
+  },
+  {
+    title: "Email Support",
+    description: "Send us an email at support@ziontechgroup.com and we'll respond within 4 hours."
+  },
+  {
+    title: "Phone Support",
+    description: "Call us at +1 302 464 0950 for immediate assistance during business hours."
+  },
+  {
+    title: "Video Call Support",
+    description: "Schedule a video call with our technical experts for complex issues."
   }
-];
+]
 
 export default function HelpPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({})
+  
   const toggleCategory = (categoryTitle: string) => {
-    setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle);
-  };
-
+    setExpandedCategories(prev => ({
+      ...prev,
+      [categoryTitle]: !prev[categoryTitle]
+    }))
+  }
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Help Center - Zion Tech Group</title>
         <meta name="description" content="Get help with Zion Tech Group services. Find guides, tutorials, and support resources." />
       </Head>
-
-      {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -166,10 +169,8 @@ export default function HelpPage() {
               Help Center
             </h1>
             <p className="text-xl text-blue-100 mb-8">
-              Find answers, guides, and support to help you succeed
+              Find answers, guides, and support for all your questions
             </p>
-            
-            {/* Search Bar */}
             <div className="relative max-w-2xl mx-auto">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -177,14 +178,12 @@ export default function HelpPage() {
                 placeholder="Search for help articles, guides, and tutorials..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
           </div>
         </div>
       </section>
-
-      {/* Quick Links */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -209,15 +208,12 @@ export default function HelpPage() {
           </div>
         </div>
       </section>
-
-      {/* Help Categories */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-              Browse by Category
+              Frequently Asked Questions
             </h2>
-            
             <div className="space-y-6">
               {helpCategories.map((category, categoryIndex) => (
                 <motion.div
@@ -237,15 +233,14 @@ export default function HelpPage() {
                         {category.title}
                       </h3>
                     </div>
-                    {expandedCategory === category.title ? (
+                    {expandedCategories[category.title] ? (
                       <ChevronDown className="w-5 h-5 text-gray-500" />
                     ) : (
                       <ChevronRight className="w-5 h-5 text-gray-500" />
                     )}
                   </button>
-                  
                   <AnimatePresence>
-                    {expandedCategory === category.title && (
+                    {expandedCategories[category.title] && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
@@ -288,17 +283,14 @@ export default function HelpPage() {
           </div>
         </div>
       </section>
-
-      {/* FAQ Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-              Frequently Asked Questions
+              Contact Support
             </h2>
-            
             <div className="space-y-6">
-              {faqs.map((faq, index) => (
+              {supportMethods.map((method, index) => (
                 <motion.div
                   key={index}
                   className="bg-gray-50 rounded-lg p-6"
@@ -307,10 +299,10 @@ export default function HelpPage() {
                   transition={{ delay: index * 0.1 }}
                 >
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                    {faq.question}
+                    {method.title}
                   </h3>
                   <p className="text-gray-600">
-                    {faq.answer}
+                    {method.description}
                   </p>
                 </motion.div>
               ))}
@@ -318,8 +310,6 @@ export default function HelpPage() {
           </div>
         </div>
       </section>
-
-      {/* Contact Support */}
       <section className="py-16 bg-blue-600">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -327,9 +317,8 @@ export default function HelpPage() {
               Still Need Help?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Our support team is here to help you succeed
+              Our team is here to help you succeed. Get in touch with us today.
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white/10 rounded-lg p-6">
                 <Mail className="w-8 h-8 text-white mx-auto mb-4" />
@@ -342,7 +331,6 @@ export default function HelpPage() {
                   support@ziontechgroup.com
                 </a>
               </div>
-              
               <div className="bg-white/10 rounded-lg p-6">
                 <Phone className="w-8 h-8 text-white mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Phone Support</h3>
@@ -354,7 +342,6 @@ export default function HelpPage() {
                   +1 (555) 123-4567
                 </a>
               </div>
-              
               <div className="bg-white/10 rounded-lg p-6">
                 <MessageCircle className="w-8 h-8 text-white mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Live Chat</h3>
@@ -368,5 +355,5 @@ export default function HelpPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

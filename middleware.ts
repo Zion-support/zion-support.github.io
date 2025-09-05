@@ -5,16 +5,28 @@ const publicRoutes = [
   "/",
   "/about",
   "/contact",
-  "/blog",
   "/services",
-  "/products",
+  "/ai-services",
+  "/it-services",
+  "/micro-saas",
+  "/blog",
+  "/solutions",
+  "/industries",
+  "/resources",
   "/talent",
-  "/test",
+  "/team",
+  "/partners",
+  "/news",
+  "/careers",
+  "/privacy",
+  "/terms",
+  "/cookies",
+  "/sitemap",
   "/auth/login",
   "/auth/register",
   "/auth/forgot-password",
   "/auth/reset-password",
-  "/auth/verify",
+  "/auth/verify"
 ];
 
 export function middleware(request: NextRequest) {
@@ -25,11 +37,11 @@ export function middleware(request: NextRequest) {
   }
 
   const authCookie = request.cookies.get("auth-token");
-
+  
   if (!authCookie) {
     return NextResponse.redirect(new URL("/auth/login", request.url));
   }
-
+  
   return NextResponse.next();
 }
 

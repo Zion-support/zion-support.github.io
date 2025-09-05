@@ -1,6 +1,4 @@
-/** @type {import('next').NextConfig,
-  "experimental": { optimizeCss: true }
-} */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   images: {

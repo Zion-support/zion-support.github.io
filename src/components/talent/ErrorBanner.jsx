@@ -1,1 +1,1 @@
-export function ErrorBanner($1) { return ( <div className="min-h-screen bg-white"> {msg} </div> )} export default ErrorBanner;
+export function ErrorBanner($1) { return ( <div className="min-h-screen bg-white"> {msg} </div> )} export default ErrorBanner;""

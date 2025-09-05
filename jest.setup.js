@@ -1,34 +1,37 @@
-<<<<<<< HEAD
-require('@testing-library/jest-dom');
+// Jest setup for DOM testing
+require('@testing-library/jest-dom')
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
+class MockIntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-};
+}
+// @ts-ignore
+global.IntersectionObserver = MockIntersectionObserver
 
 // Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
+class MockResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-};
+}
+// @ts-ignore
+global.ResizeObserver = MockResizeObserver
 
-// Mock matchMedia
+// mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
-  "writable": true,
-  "value": jest.fn().mockImplementation(query => ({
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
     matches: false,
-    "media": query,
-    "onchange": null,
-    "addListener": jest.fn(), // deprecated
-    "removeListener": jest.fn(), // deprecated
-    "addEventListener": jest.fn(),
-    "removeEventListener": jest.fn(),
-    "dispatchEvent": jest.fn()}))});
-=======
-import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+})

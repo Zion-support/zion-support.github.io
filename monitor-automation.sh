@@ -4,7 +4,7 @@
 # This script monitors the status of the error automation system
 
 echo "🔍 Error Automation System Status"
-echo "=================================="
+echo "======"
 
 # Check PM2 status
 echo "📊 PM2 Processes:"
