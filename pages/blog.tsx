@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Calendar, User, ArrowRight, Tag } from 'lucide-react'
-import MainLayout from '../components/layout/MainLayout'
+import Layout from '../components/Layout'
 const blogPosts = [{
     id: 1,
     title: "The Future of AI in Business: 2025 Trends",
@@ -72,7 +72,7 @@ const blogPosts = [{
   }]
 export default function BlogPage() {
   return (
-    <MainLayout
+    <Layout
       title="Blog - Zion Tech Group"
       description="Latest insights on AI, technology, and business innovation from Zion Tech Group experts."
       keywords="blog, AI insights, technology news, business innovation, tech trends">
