@@ -3,7 +3,6 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  trailingSlash: true,
   
   // Minimal webpack config
   webpack: (config, { dev, isServer }) => {
@@ -25,13 +24,7 @@ const nextConfig = {
       };
     }
     return config;
-<<<<<<< HEAD
-  },
-  
-  // Note: Headers, redirects, and rewrites are not supported with static export
-=======
   }
->>>>>>> pr-11934
 };
 
 export default nextConfig;
