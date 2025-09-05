@@ -17,7 +17,6 @@ import {
   Cloud,
   Code,
   CreditCard,
-  Document,
   DollarSign,
   Eye,
   FileText,
@@ -190,7 +189,7 @@ const navigationItems = [
       {
         title: 'White Papers',
         href: '/white-papers',
-        icon: Document,
+        icon: FileText,
         description: 'In-depth research reports'
       },
       {
@@ -200,7 +199,7 @@ const navigationItems = [
         description: 'Step-by-step guides'
       },
       {
-        title: 'Documentation',
+        title: 'FileTextation',
         href: '/docs',
         icon: FileText,
         description: 'Technical documentation'
