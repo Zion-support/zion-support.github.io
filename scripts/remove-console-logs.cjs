@@ -102,7 +102,6 @@ function main() {
     }
   }
 
-<<<<<<< HEAD
   // Process pages directory if it exists
   if (fs.existsSync(pagesDir)) {
     const files = getAllFiles(pagesDir);
@@ -115,10 +114,7 @@ function main() {
     }
   }
 
-  console.log("\n📊 Summary: ");
-=======
   console.log("\n📊 Summary:");
->>>>>>> cursor/automate-test-improve-and-merge-code-7050
   console.log(`   Files processed: ${filesProcessed}`);
   console.log(`   Console statements removed: ${totalRemoved}`);
   

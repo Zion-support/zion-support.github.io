@@ -36,12 +36,8 @@ import {
   Rocket
 } from 'lucide-react';
 
-<<<<<<< HEAD
 const itServices = [
   {
-=======
-const itServices = [{
->>>>>>> cursor/automate-test-improve-and-merge-code-7050
     title: 'Cloud Infrastructure Management',
     description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.',
     icon: Cloud,
@@ -195,6 +191,166 @@ const itServices = [{
     features: ['Vendor Evaluation', 'Contract Negotiation', 'Procurement Process', 'Vendor Management'],
     pricing: '$150 - $300/hour',
     category: 'Procurement'
+  },
+  {
+    title: 'IT Governance & Strategy',
+    description: 'Strategic IT governance and technology roadmap development.',
+    icon: Building,
+    features: ['IT Strategy Development', 'Governance Framework', 'Technology Roadmap', 'Risk Management'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Governance'
+  },
+  {
+    title: 'Edge Computing Solutions',
+    description: 'Edge computing infrastructure and deployment for low-latency applications.',
+    icon: Cpu,
+    features: ['Edge Infrastructure', 'Latency Optimization', 'Distributed Computing', 'IoT Integration'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Edge Computing'
+  },
+  {
+    title: '5G Network Implementation',
+    description: '5G network design, implementation, and optimization services.',
+    icon: Wifi,
+    features: ['5G Planning', 'Network Optimization', 'Performance Testing', 'Coverage Analysis'],
+    pricing: '$25,000 - $150,000/project',
+    category: '5G Networks'
+  },
+  {
+    title: 'AI Infrastructure Setup',
+    description: 'AI and machine learning infrastructure deployment and optimization.',
+    icon: Brain,
+    features: ['GPU Clusters', 'ML Pipeline Setup', 'Model Deployment', 'Performance Optimization'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'AI Infrastructure'
+  },
+  {
+    title: 'Blockchain Infrastructure',
+    description: 'Blockchain network setup, deployment, and management services.',
+    icon: Network,
+    features: ['Blockchain Deployment', 'Smart Contract Development', 'Node Management', 'Security Hardening'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Blockchain'
+  },
+  {
+    title: 'Quantum Computing Integration',
+    description: 'Quantum computing infrastructure and hybrid classical-quantum systems.',
+    icon: Cpu,
+    features: ['Quantum Hardware Setup', 'Hybrid Systems', 'Algorithm Optimization', 'Security Implementation'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Quantum Computing'
+  },
+  {
+    title: 'IoT Platform Development',
+    description: 'Internet of Things platform development and device management.',
+    icon: Smartphone,
+    features: ['IoT Architecture', 'Device Management', 'Data Processing', 'Security Implementation'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'IoT'
+  },
+  {
+    title: 'Hybrid Cloud Solutions',
+    description: 'Hybrid cloud architecture design and implementation services.',
+    icon: Cloud,
+    features: ['Hybrid Architecture', 'Data Synchronization', 'Security Integration', 'Cost Optimization'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Hybrid Cloud'
+  },
+  {
+    title: 'IT Compliance & Regulatory',
+    description: 'IT compliance management for various industry regulations and standards.',
+    icon: Shield,
+    features: ['Compliance Assessment', 'Regulatory Alignment', 'Audit Preparation', 'Documentation'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Compliance'
+  },
+  {
+    title: 'Digital Transformation Services',
+    description: 'Complete digital transformation strategy and implementation services.',
+    icon: Rocket,
+    features: ['Digital Strategy', 'Process Automation', 'Technology Integration', 'Change Management'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Digital Transformation'
+  },
+  {
+    title: 'IT Cost Optimization',
+    description: 'IT cost analysis and optimization strategies for maximum ROI.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Optimization Strategies', 'Vendor Negotiation', 'ROI Tracking'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'Cost Optimization'
+  },
+  {
+    title: 'IT Performance Monitoring',
+    description: 'Advanced IT performance monitoring and optimization services.',
+    icon: Monitor,
+    features: ['Performance Monitoring', 'Capacity Planning', 'Optimization', 'Alerting Systems'],
+    pricing: '$3,000 - $15,000/setup',
+    category: 'Performance Monitoring'
+  },
+  {
+    title: 'IT Security Operations Center',
+    description: '24/7 security operations center and threat monitoring services.',
+    icon: Shield,
+    features: ['24/7 Monitoring', 'Threat Detection', 'Incident Response', 'Security Analytics'],
+    pricing: '$10,000 - $50,000/month',
+    category: 'SOC Services'
+  },
+  {
+    title: 'IT Business Continuity',
+    description: 'Business continuity planning and disaster recovery services.',
+    icon: Shield,
+    features: ['BCP Development', 'Disaster Recovery', 'Testing & Validation', 'Crisis Management'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Business Continuity'
+  },
+  {
+    title: 'IT Innovation Lab',
+    description: 'IT innovation lab setup and emerging technology exploration.',
+    icon: Rocket,
+    features: ['Lab Setup', 'Technology Research', 'Proof of Concepts', 'Innovation Strategy'],
+    pricing: '$25,000 - $125,000/project',
+    category: 'Innovation'
+  },
+  {
+    title: 'IT Managed Services',
+    description: 'Comprehensive IT managed services for complete infrastructure management.',
+    icon: Settings,
+    features: ['Infrastructure Management', 'Proactive Monitoring', 'Maintenance', 'Support'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Managed Services'
+  },
+  {
+    title: 'IT Vendor Consolidation',
+    description: 'IT vendor consolidation and relationship optimization services.',
+    icon: Users,
+    features: ['Vendor Analysis', 'Consolidation Strategy', 'Contract Optimization', 'Relationship Management'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Vendor Management'
+  },
+  {
+    title: 'IT Capacity Planning',
+    description: 'IT capacity planning and resource optimization services.',
+    icon: BarChart3,
+    features: ['Capacity Analysis', 'Growth Planning', 'Resource Optimization', 'Cost Projection'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Capacity Planning'
+  },
+  {
+    title: 'IT Risk Management',
+    description: 'Comprehensive IT risk assessment and management services.',
+    icon: Shield,
+    features: ['Risk Assessment', 'Mitigation Strategies', 'Risk Monitoring', 'Compliance'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Risk Management'
+  },
+  {
+    title: 'IT Service Management',
+    description: 'ITIL-based service management implementation and optimization.',
+    icon: Settings,
+    features: ['ITIL Implementation', 'Service Catalog', 'Incident Management', 'Change Management'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Service Management'
   },
   {
     title: 'IT Governance & Strategy',
@@ -703,7 +859,7 @@ export default function ITServicesPage() {
               End-to-end IT services designed to optimize your infrastructure and ensure business continuity.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {itServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
@@ -797,7 +953,7 @@ export default function ITServicesPage() {
               We leverage cutting-edge technologies to deliver robust IT solutions.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {technologies.map((tech, index) => {
               const IconComponent = tech.icon;
               return (
@@ -852,7 +1008,7 @@ export default function ITServicesPage() {
               Proven expertise and measurable results for your technology infrastructure.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (
@@ -904,7 +1060,7 @@ export default function ITServicesPage() {
               Choose the support level that best fits your business needs.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {supportLevels.map((level, index) => (
               <motion.div
                 key={index}

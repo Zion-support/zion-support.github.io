@@ -47,12 +47,8 @@ import {
   Trash2
 } from 'lucide-react';
 
-<<<<<<< HEAD
 const microSaaSProducts = [
   {
-=======
-const microSaaSProducts = [{
->>>>>>> cursor/automate-test-improve-and-merge-code-7050
     title: 'Cloud Cost Guard (FinOps Assistant)',
     description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
     icon: DollarSign,
@@ -246,6 +242,166 @@ const microSaaSProducts = [{
     features: ['Maintenance Scheduling', 'Work Order Management', 'Vendor Management', 'Reporting'],
     pricing: '$49 - $299/month',
     category: 'Property Management'
+  },
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review and quality assurance for development teams.',
+    icon: Code,
+    features: ['Code Quality Analysis', 'Security Scanning', 'Performance Optimization', 'Best Practices'],
+    pricing: '$99 - $499/month',
+    category: 'Development Tools'
+  },
+  {
+    title: 'Smart Contract Auditor',
+    description: 'Automated smart contract security auditing and vulnerability detection.',
+    icon: Shield,
+    features: ['Security Auditing', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checking'],
+    pricing: '$299 - $1,499/month',
+    category: 'Blockchain'
+  },
+  {
+    title: 'AI Content Moderation Platform',
+    description: 'Automated content moderation for text, images, and videos.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'API Integration'],
+    pricing: '$199 - $999/month',
+    category: 'Content Safety'
+  },
+  {
+    title: 'Voice AI Assistant Builder',
+    description: 'No-code platform for building voice AI assistants and chatbots.',
+    icon: Mic,
+    features: ['Visual Builder', 'Voice Recognition', 'Natural Language Processing', 'Multi-platform'],
+    pricing: '$149 - $799/month',
+    category: 'Voice AI'
+  },
+  {
+    title: 'AI-Powered Email Marketing',
+    description: 'Intelligent email marketing with AI-driven personalization and optimization.',
+    icon: Mail,
+    features: ['AI Personalization', 'Send Time Optimization', 'Subject Line Testing', 'Behavioral Triggers'],
+    pricing: '$79 - $399/month',
+    category: 'Email Marketing'
+  },
+  {
+    title: 'Smart Energy Management',
+    description: 'AI-powered energy monitoring and optimization for buildings.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Cost Optimization', 'Predictive Maintenance', 'Sustainability Reports'],
+    pricing: '$199 - $999/month',
+    category: 'Energy Management'
+  },
+  {
+    title: 'AI Legal Document Analyzer',
+    description: 'Automated legal document analysis and contract review.',
+    icon: BookOpen,
+    features: ['Contract Analysis', 'Risk Assessment', 'Clause Extraction', 'Compliance Checking'],
+    pricing: '$299 - $1,499/month',
+    category: 'Legal Tech'
+  },
+  {
+    title: 'Predictive Maintenance Platform',
+    description: 'AI-powered predictive maintenance for industrial equipment.',
+    icon: Settings,
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'],
+    pricing: '$399 - $1,999/month',
+    category: 'Industrial IoT'
+  },
+  {
+    title: 'AI Customer Sentiment Tracker',
+    description: 'Real-time customer sentiment analysis across all channels.',
+    icon: MessageSquare,
+    features: ['Multi-channel Analysis', 'Sentiment Scoring', 'Trend Detection', 'Alert System'],
+    pricing: '$99 - $499/month',
+    category: 'Customer Analytics'
+  },
+  {
+    title: 'Smart Inventory Optimizer',
+    description: 'AI-powered inventory optimization and demand forecasting.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Stock Optimization', 'Supplier Management', 'Cost Analysis'],
+    pricing: '$149 - $799/month',
+    category: 'Supply Chain'
+  },
+  {
+    title: 'AI-Powered A/B Testing',
+    description: 'Intelligent A/B testing platform with AI-driven insights.',
+    icon: BarChart3,
+    features: ['Smart Test Design', 'Statistical Analysis', 'Automated Insights', 'Conversion Optimization'],
+    pricing: '$79 - $399/month',
+    category: 'Conversion Optimization'
+  },
+  {
+    title: 'Voice Analytics Platform',
+    description: 'AI-powered voice analytics for call centers and customer service.',
+    icon: Mic,
+    features: ['Call Analysis', 'Sentiment Detection', 'Quality Scoring', 'Performance Insights'],
+    pricing: '$199 - $999/month',
+    category: 'Call Center'
+  },
+  {
+    title: 'AI Fraud Detection System',
+    description: 'Real-time fraud detection and prevention for financial transactions.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Machine Learning Models', 'Risk Scoring', 'Automated Alerts'],
+    pricing: '$299 - $1,499/month',
+    category: 'FinTech'
+  },
+  {
+    title: 'Smart Home Automation Hub',
+    description: 'AI-powered smart home control and automation platform.',
+    icon: Home,
+    features: ['Device Control', 'Automation Rules', 'Energy Management', 'Security Monitoring'],
+    pricing: '$49 - $249/month',
+    category: 'Smart Home'
+  },
+  {
+    title: 'AI-Powered Recruitment Platform',
+    description: 'Intelligent candidate screening and matching for HR teams.',
+    icon: Users,
+    features: ['Resume Analysis', 'Skill Matching', 'Interview Scheduling', 'Candidate Scoring'],
+    pricing: '$199 - $999/month',
+    category: 'HR Tech'
+  },
+  {
+    title: 'Blockchain Analytics Dashboard',
+    description: 'Comprehensive blockchain transaction analysis and monitoring.',
+    icon: Network,
+    features: ['Transaction Tracking', 'Address Analysis', 'Risk Assessment', 'Compliance Monitoring'],
+    pricing: '$399 - $1,999/month',
+    category: 'Blockchain Analytics'
+  },
+  {
+    title: 'AI-Powered Video Analytics',
+    description: 'Advanced video analysis for security and business intelligence.',
+    icon: Video,
+    features: ['Object Detection', 'Behavior Analysis', 'Crowd Counting', 'Anomaly Detection'],
+    pricing: '$299 - $1,499/month',
+    category: 'Video Analytics'
+  },
+  {
+    title: 'Smart Waste Management',
+    description: 'AI-powered waste collection optimization and recycling management.',
+    icon: Trash2,
+    features: ['Route Optimization', 'Waste Classification', 'Recycling Tracking', 'Cost Analysis'],
+    pricing: '$199 - $999/month',
+    category: 'Environmental'
+  },
+  {
+    title: 'AI-Powered Learning Platform',
+    description: 'Personalized learning management system with AI-driven content.',
+    icon: BookOpen,
+    features: ['Adaptive Learning', 'Content Personalization', 'Progress Tracking', 'Skill Assessment'],
+    pricing: '$99 - $499/month',
+    category: 'EdTech'
+  },
+  {
+    title: 'Smart Agriculture Monitor',
+    description: 'AI-powered crop monitoring and agricultural optimization platform.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Resource Optimization'],
+    pricing: '$149 - $799/month',
+    category: 'AgTech'
   },
   {
     title: 'AI-Powered Code Review Assistant',
@@ -802,7 +958,7 @@ export default function MicroSaaSPage() {
               Ready-to-deploy SaaS solutions that solve specific business problems with minimal setup time.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {microSaaSProducts.map((product, index) => {
               const IconComponent = product.icon;
               return (
@@ -910,7 +1066,7 @@ export default function MicroSaaSPage() {
               Built for modern businesses that need fast, reliable, and scalable solutions.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
                     {features.map((feature, index) => {
 >>>>>>> cursor/automate-test-improve-and-merge-code-7050
               const IconComponent = feature.icon;
@@ -964,7 +1120,7 @@ export default function MicroSaaSPage() {
               Our Micro SaaS solutions deliver measurable business impact.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (
@@ -1014,7 +1170,7 @@ export default function MicroSaaSPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {pricingTiers.map((tier, index) => (
 =======
                   <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
@@ -1022,7 +1178,7 @@ export default function MicroSaaSPage() {
               Choose the plan that fits your business needs. No hidden fees, no surprises.
             </p>
                   </motion.div>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     {pricingTiers.map((tier, index) => (
 >>>>>>> cursor/automate-test-improve-and-merge-code-7050
               <motion.div
