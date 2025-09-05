@@ -178,10 +178,11 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
                 <p className="text-gray-600 mb-2">
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-800">
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-800 font-semibold">
                     kleber@ziontechgroup.com
                   </a>
                 </p>
+                <p className="text-sm text-gray-500">24/7 Support Available</p>
               </div>
               
               <div className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors">
@@ -192,10 +193,11 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
                 <p className="text-gray-600 mb-2">
-                  <a href="tel:+13024640950" className="text-green-600 hover:text-green-800">
+                  <a href="tel:+13024640950" className="text-green-600 hover:text-green-800 font-semibold text-lg">
                     +1 302 464 0950
                   </a>
                 </p>
+                <p className="text-sm text-gray-500">Free Consultation Available</p>
               </div>
               
               <div className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors">
@@ -210,11 +212,30 @@ export default function HomePage() {
                   <a href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
                      target="_blank" 
                      rel="noopener noreferrer"
-                     className="text-purple-600 hover:text-purple-800">
+                     className="text-purple-600 hover:text-purple-800 font-semibold">
                     364 E Main St STE 1008<br />
                     Middletown, DE 19709
                   </a>
                 </p>
+                <p className="text-sm text-gray-500">Schedule a Visit</p>
+              </div>
+            </div>
+            
+            {/* Additional Contact Information */}
+            <div className="mt-12 text-center">
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-8 max-w-4xl mx-auto">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
+                <p className="text-lg text-gray-600 mb-6">
+                  Contact our expert team today for a free consultation and discover how our innovative technology solutions can transform your business.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 font-semibold">
+                    Get Free Quote
+                  </a>
+                  <a href="tel:+13024640950" className="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold">
+                    Call Now
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>

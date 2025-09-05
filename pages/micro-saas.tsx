@@ -199,6 +199,178 @@ const microSaaSProducts = [
     link: 'https://meetingscheduler.ziontechgroup.com'
   },
   {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review with security scanning, performance analysis, and best practice recommendations.',
+    icon: Code,
+    features: ['Security Scanning', 'Performance Analysis', 'Best Practice Checks', 'Automated Comments'],
+    pricing: '$199 - $999/month',
+    category: 'Development',
+    popular: true,
+    link: 'https://codereviewai.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Analytics Platform',
+    description: 'Blockchain smart contract analysis, security auditing, and performance monitoring.',
+    icon: Shield,
+    features: ['Security Auditing', 'Gas Optimization', 'Vulnerability Detection', 'Performance Monitoring'],
+    pricing: '$299 - $1,999/month',
+    category: 'Blockchain',
+    link: 'https://smartcontractai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered SEO Content Optimizer',
+    description: 'Intelligent SEO content analysis and optimization with real-time ranking predictions.',
+    icon: Search,
+    features: ['Content Analysis', 'Keyword Optimization', 'Ranking Predictions', 'Competitor Analysis'],
+    pricing: '$79 - $399/month',
+    category: 'SEO',
+    link: 'https://seooptimizer.ziontechgroup.com'
+  },
+  {
+    title: 'Real-Time Language Translation API',
+    description: 'Advanced neural translation service with 100+ languages and context-aware translations.',
+    icon: Globe,
+    features: ['100+ Languages', 'Context Awareness', 'Real-time Translation', 'API Integration'],
+    pricing: '$0.01 - $0.05 per 1000 characters',
+    category: 'Translation',
+    link: 'https://translationapi.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Video Analytics',
+    description: 'Intelligent video analysis with object detection, sentiment analysis, and content moderation.',
+    icon: Video,
+    features: ['Object Detection', 'Sentiment Analysis', 'Content Moderation', 'Real-time Processing'],
+    pricing: '$0.10 - $0.50 per minute',
+    category: 'Video AI',
+    link: 'https://videoanalytics.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Energy Management System',
+    description: 'IoT-based energy monitoring and optimization for buildings and industrial facilities.',
+    icon: Zap,
+    features: ['Real-time Monitoring', 'Predictive Analytics', 'Cost Optimization', 'Automated Controls'],
+    pricing: '$199 - $1,299/month',
+    category: 'IoT',
+    link: 'https://energyai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Customer Churn Prediction',
+    description: 'Machine learning models to predict and prevent customer churn with actionable insights.',
+    icon: TrendingUp,
+    features: ['Churn Prediction', 'Risk Scoring', 'Intervention Strategies', 'Real-time Alerts'],
+    pricing: '$299 - $1,499/month',
+    category: 'Analytics',
+    link: 'https://churnprediction.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Document Verification',
+    description: 'Immutable document verification and authentication using blockchain technology.',
+    icon: FileText,
+    features: ['Document Verification', 'Blockchain Storage', 'Tamper Detection', 'API Integration'],
+    pricing: '$0.50 - $2.00 per document',
+    category: 'Blockchain',
+    link: 'https://docverify.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Supply Chain Risk Assessment',
+    description: 'Intelligent supply chain risk analysis with predictive modeling and mitigation strategies.',
+    icon: Package,
+    features: ['Risk Assessment', 'Predictive Modeling', 'Mitigation Strategies', 'Real-time Monitoring'],
+    pricing: '$499 - $2,999/month',
+    category: 'Supply Chain',
+    link: 'https://supplychainai.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Home Automation Hub',
+    description: 'AI-powered home automation with voice control, learning algorithms, and energy optimization.',
+    icon: Home,
+    features: ['Voice Control', 'Learning Algorithms', 'Energy Optimization', 'Device Integration'],
+    pricing: '$99 - $499/month',
+    category: 'Smart Home',
+    link: 'https://smarthomeai.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Financial Planning Assistant',
+    description: 'Personalized financial planning with investment recommendations and risk assessment.',
+    icon: DollarSign,
+    features: ['Financial Planning', 'Investment Recommendations', 'Risk Assessment', 'Goal Tracking'],
+    pricing: '$29 - $199/month',
+    category: 'FinTech',
+    link: 'https://financialai.ziontechgroup.com'
+  },
+  {
+    title: 'Real-Time Sentiment Analysis API',
+    description: 'Advanced sentiment analysis for social media, reviews, and customer feedback in real-time.',
+    icon: MessageSquare,
+    features: ['Real-time Analysis', 'Multi-language Support', 'Emotion Detection', 'API Integration'],
+    pricing: '$0.02 - $0.10 per 1000 texts',
+    category: 'Analytics',
+    link: 'https://sentimentapi.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Inventory Forecasting',
+    description: 'Intelligent inventory forecasting with demand prediction and automated reordering.',
+    icon: BarChart3,
+    features: ['Demand Forecasting', 'Automated Reordering', 'Seasonal Analysis', 'Multi-location Support'],
+    pricing: '$199 - $999/month',
+    category: 'Inventory',
+    link: 'https://inventoryforecast.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Development Platform',
+    description: 'No-code smart contract creation with testing, deployment, and monitoring tools.',
+    icon: Code,
+    features: ['No-code Creation', 'Testing Tools', 'Deployment Automation', 'Monitoring Dashboard'],
+    pricing: '$99 - $599/month',
+    category: 'Blockchain',
+    link: 'https://smartcontractdev.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Personal Assistant API',
+    description: 'Advanced personal assistant with natural language processing and task automation.',
+    icon: Bot,
+    features: ['Natural Language Processing', 'Task Automation', 'Calendar Management', 'API Integration'],
+    pricing: '$0.05 - $0.25 per request',
+    category: 'AI Assistant',
+    link: 'https://personalassistant.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Identity Verification',
+    description: 'Decentralized identity verification with privacy-preserving authentication.',
+    icon: Lock,
+    features: ['Decentralized Identity', 'Privacy Protection', 'Zero-knowledge Proofs', 'API Integration'],
+    pricing: '$0.10 - $0.50 per verification',
+    category: 'Identity',
+    link: 'https://identityverify.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Market Research Platform',
+    description: 'Intelligent market research with competitor analysis, trend prediction, and consumer insights.',
+    icon: Search,
+    features: ['Competitor Analysis', 'Trend Prediction', 'Consumer Insights', 'Market Reports'],
+    pricing: '$299 - $1,999/month',
+    category: 'Market Research',
+    link: 'https://marketresearch.ziontechgroup.com'
+  },
+  {
+    title: 'Smart Contract Monitoring & Analytics',
+    description: 'Real-time monitoring and analytics for smart contracts with security alerts and performance metrics.',
+    icon: Monitor,
+    features: ['Real-time Monitoring', 'Security Alerts', 'Performance Metrics', 'Gas Optimization'],
+    pricing: '$199 - $1,299/month',
+    category: 'Blockchain',
+    link: 'https://contractmonitor.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Email Security Scanner',
+    description: 'Advanced email security with phishing detection, malware scanning, and threat intelligence.',
+    icon: Mail,
+    features: ['Phishing Detection', 'Malware Scanning', 'Threat Intelligence', 'Real-time Protection'],
+    pricing: '$2 - $10 per user/month',
+    category: 'Security',
+    link: 'https://emailsecurity.ziontechgroup.com'
+  },
+  {
     title: 'Code Review Assistant',
     description: 'AI-powered code review with automated suggestions and security vulnerability detection.',
     icon: Code,
