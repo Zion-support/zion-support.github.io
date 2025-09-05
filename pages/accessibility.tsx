@@ -1,7 +1,9 @@
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
-import { motion } from 'framer-motion';
-import { 
+import React from 'react';''
+import MainLayout from '../components/layout/MainLayout';''
+import { motion } from 'framer-motion';'
+import {
+  // TODO: Implement
+}
   Eye, 
   Ear, 
   Hand, 
@@ -13,295 +15,302 @@ import {
   Shield,
   Zap,
   FileText,
-  Settings
-} from 'lucide-react';
-
+  Settings;'
+} from 'lucide-react';'
 const accessibilityFeatures = [
-  {
-    title: "Visual Accessibility",
-    description: "Features to support users with visual impairments",
+  {'
+    title: "Visual Accessibility",""
+    description: "Features to support users with visual impairments","
     icon: Eye,
-    features: [
-      "High contrast color schemes",
-      "Scalable text and interface elements",
-      "Screen reader compatibility",
-      "Alternative text for images",
-      "Keyboard navigation support"
+    features: ["
+      "High contrast color schemes",""
+      "Scalable text and interface elements",""
+      "Screen reader compatibility",""
+      "Alternative text for images",""
+      "Keyboard navigation support""]
     ]
   },
-  {
-    title: "Auditory Accessibility",
-    description: "Support for users with hearing impairments",
+  {"
+    title: "Auditory Accessibility",""
+    description: "Support for users with hearing impairments","
     icon: Ear,
-    features: [
-      "Video captions and transcripts",
-      "Visual indicators for audio cues",
-      "Text-based communication options",
-      "Volume controls and audio descriptions",
-      "Sign language support where applicable"
+    features: ["
+      "Video captions and transcripts",""
+      "Visual indicators for audio cues",""
+      "Text-based communication options",""
+      "Volume controls and audio descriptions",""
+      "Sign language support where applicable""]
     ]
   },
-  {
-    title: "Motor Accessibility",
-    description: "Features for users with motor impairments",
+  {"
+    title: "Motor Accessibility",""
+    description: "Features for users with motor impairments","
     icon: Hand,
-    features: [
-      "Keyboard-only navigation",
-      "Voice control compatibility",
-      "Large click targets",
-      "Customizable interaction timing",
-      "Switch control support"
+    features: ["
+      "Keyboard-only navigation",""
+      "Voice control compatibility",""
+      "Large click targets",""
+      "Customizable interaction timing",""
+      "Switch control support""]
     ]
   },
-  {
-    title: "Cognitive Accessibility",
-    description: "Support for users with cognitive differences",
+  {"
+    title: "Cognitive Accessibility",""
+    description: "Support for users with cognitive differences","
     icon: Brain,
-    features: [
-      "Clear and simple language",
-      "Consistent navigation patterns",
-      "Error prevention and recovery",
-      "Progress indicators",
-      "Customizable interface complexity"
+    features: ["
+      "Clear and simple language",""
+      "Consistent navigation patterns",""
+      "Error prevention and recovery",""
+      "Progress indicators",""
+      "Customizable interface complexity""]
     ]
   }
 ];
 
 const standardsCompliance = [
-  {
-    standard: "WCAG 2.1 AA",
-    description: "Web Content Accessibility Guidelines 2.1 Level AA compliance",
-    status: "Compliant",
-    coverage: "95%",
-    icon: Shield
+  {"
+    standard: "WCAG 2.1 AA",""
+    description: "Web Content Accessibility Guidelines 2.1 Level AA compliance",""
+    status: "Compliant",""
+    coverage: "95%","
+    icon: Shield;
   },
-  {
-    standard: "Section 508",
-    description: "U.S. federal accessibility requirements",
-    status: "Compliant",
-    coverage: "100%",
-    icon: FileText
+  {"
+    standard: "Section 508",""
+    description: "U.S. federal accessibility requirements",""
+    status: "Compliant",""
+    coverage: "100%","
+    icon: FileText;
   },
-  {
-    standard: "ADA",
-    description: "Americans with Disabilities Act compliance",
-    status: "Compliant",
-    coverage: "100%",
-    icon: Users
+  {"
+    standard: "ADA",""
+    description: "Americans with Disabilities Act compliance",""
+    status: "Compliant",""
+    coverage: "100%","
+    icon: Users;
   },
-  {
-    standard: "EN 301 549",
-    description: "European accessibility standard for ICT products",
-    status: "Compliant",
-    coverage: "90%",
-    icon: Globe
-  }
+  {"
+    standard: "EN 301 549",""
+    description: "European accessibility standard for ICT products",""
+    status: "Compliant",""
+    coverage: "90%","
+    icon: Globe;
+  }]
 ];
 
 const accessibilityTools = [
-  {
-    name: "Screen Reader Testing",
-    description: "Regular testing with popular screen readers including NVDA, JAWS, and VoiceOver",
-    frequency: "Monthly"
+  {"
+    name: "Screen Reader Testing",""
+    description: "Regular testing with popular screen readers including NVDA, JAWS, and VoiceOver",""
+    frequency: "Monthly""
   },
-  {
-    name: "Keyboard Navigation",
-    description: "Comprehensive keyboard navigation testing for all interactive elements",
-    frequency: "Weekly"
+  {"
+    name: "Keyboard Navigation",""
+    description: "Comprehensive keyboard navigation testing for all interactive elements",""
+    frequency: "Weekly""
   },
-  {
-    name: "Color Contrast Analysis",
-    description: "Automated and manual color contrast testing to ensure readability",
-    frequency: "With each design update"
+  {"
+    name: "Color Contrast Analysis",""
+    description: "Automated and manual color contrast testing to ensure readability",""
+    frequency: "With each design update""
   },
-  {
-    name: "User Testing",
-    description: "Regular testing with users who have disabilities to identify barriers",
-    frequency: "Quarterly"
-  }
+  {"
+    name: "User Testing",""
+    description: "Regular testing with users who have disabilities to identify barriers",""
+    frequency: "Quarterly""
+  }]
 ];
 
 const accessibilityGuidelines = [
-  {
-    category: "Content",
-    guidelines: [
-      "Use clear and simple language",
-      "Provide alternative text for images",
-      "Use proper heading structure",
-      "Ensure sufficient color contrast",
-      "Provide captions for videos"
+  {"
+    category: "Content","
+    guidelines: ["
+      "Use clear and simple language",""
+      "Provide alternative text for images",""
+      "Use proper heading structure",""
+      "Ensure sufficient color contrast",""
+      "Provide captions for videos""]
     ]
   },
-  {
-    category: "Navigation",
-    guidelines: [
-      "Logical tab order",
-      "Skip links for main content",
-      "Consistent navigation patterns",
-      "Breadcrumb navigation",
-      "Search functionality"
+  {"
+    category: "Navigation","
+    guidelines: ["
+      "Logical tab order",""
+      "Skip links for main content",""
+      "Consistent navigation patterns",""
+      "Breadcrumb navigation",""
+      "Search functionality""]
     ]
   },
-  {
-    category: "Forms",
-    guidelines: [
-      "Clear labels and instructions",
-      "Error messages and validation",
-      "Required field indicators",
-      "Logical grouping of related fields",
-      "Multiple input methods"
+  {"
+    category: "Forms","
+    guidelines: ["
+      "Clear labels and instructions",""
+      "Error messages and validation",""
+      "Required field indicators",""
+      "Logical grouping of related fields",""
+      "Multiple input methods""]
     ]
   },
-  {
-    category: "Interactive Elements",
-    guidelines: [
-      "Keyboard accessible",
-      "Focus indicators",
-      "Adequate target sizes",
-      "No seizure-inducing content",
-      "Customizable timing"
+  {"
+    category: "Interactive Elements","
+    guidelines: ["
+      "Keyboard accessible",""
+      "Focus indicators",""
+      "Adequate target sizes",""
+      "No seizure-inducing content",""
+      "Customizable timing""]
     ]
   }
 ];
 
 export default function AccessibilityPage() {
   return (
-    <MainLayout 
-      title="Accessibility - Zion Tech Group"
-      description="Learn about Zion Tech Group's commitment to web accessibility and our compliance with WCAG 2.1, Section 508, and ADA standards."
+    <MainLayout;"
+      title="Accessibility - Zion Tech Group"""
+      description="Learn about Zion Tech Group's commitment to web accessibility and our compliance with WCAG 2.1, Section 508, and ADA standards.""
     >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
+</MainLayout>"
+      <div className="min-h-screen bg-gray-50">"
+</div>"
+        <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>
+            <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
+              transition={{ duration: 0.8 }}"
+              className="text-center max-w-4xl mx-auto""
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Web{' '}
-                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                  Accessibility
+</motion>"
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">"
+</h1>"
+                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">"
+</span>
                 </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                We are committed to making our website accessible to everyone, 
-                regardless of ability or technology used to access the web.
+              </h1>"
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">"
+</p>
               </p>
             </motion.div>
           </div>
-        </section>
-
-        {/* Accessibility Features */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
+        </section>"
+        <section className="py-20">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>
+            <motion.div;"
+              className="text-center mb-16""
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Accessibility Features
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Our website includes comprehensive accessibility features to ensure 
-                all users can access and use our services effectively.
+</motion>"
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
+</h2>
+              </h2>"
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
+</p>
               </p>
             </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {accessibilityFeatures.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
+</div>
+                  <motion.div;
+                    key={index}"
+                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300""
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <div className="flex items-start space-x-4">
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <IconComponent className="w-8 h-8 text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                          {feature.title}
-                        </h3>
-                        <p className="text-gray-600 mb-6 leading-relaxed">
-                          {feature.description}
-                        </p>
-                        <ul className="space-y-2">
-                          {feature.features.map((item, idx) => (
-                            <li key={idx} className="flex items-center text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                              {item}
+</motion>"
+                    <div className="flex items-start space-x-4">"
+</div>"
+                      <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">"
+</div>"
+                        <IconComponent className="w-8 h-8 text-white" />"
+</IconComponent>
+                      </div>"
+                      <div className="flex-1">"
+</div>"
+                        <h3 className="text-2xl font-bold text-gray-900 mb-3">"
+</h3>
+                        </h3>"
+                        <p className="text-gray-600 mb-6 leading-relaxed">"
+</p>
+                        </p>"
+                        <ul className="space-y-2">"
+</ul>"
+                            <li key={idx} className="flex items-center text-sm text-gray-600">"
+</li>"
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />"
+</CheckCircle>
                             </li>
-                          ))}
                         </ul>
                       </div>
                     </div>
-                  </motion.div>
+                  </motion.div>)
                 );
               })}
             </div>
           </div>
-        </section>
-
-        {/* Standards Compliance */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
+        </section>"
+        <section className="py-20 bg-white">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>
+            <motion.div;"
+              className="text-center mb-16""
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Standards Compliance
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We maintain compliance with international accessibility standards 
-                and guidelines to ensure the highest level of accessibility.
+</motion>"
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
+</h2>
+              </h2>"
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
+</p>
               </p>
             </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {standardsCompliance.map((standard, index) => {
-                const IconComponent = standard.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300"
+"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
+</div>
+                  <motion.div;
+                    key={index}"
+                    className="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300""
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">
-                      {standard.standard}
-                    </h3>
-                    <p className="text-gray-600 text-sm mb-4">
-                      {standard.description}
-                    </p>
-                    <div className="space-y-2">
-                      <span className={`px-3 py-1 text-xs rounded-full ${
-                        standard.status === 'Compliant' ? 'bg-green-100 text-green-800' :
-                        'bg-yellow-100 text-yellow-800'
+</motion>"
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
+</div>"
+                      <IconComponent className="w-8 h-8 text-white" />"
+</IconComponent>
+                    </div>"
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">"
+</h3>
+                    </h3>"
+                    <p className="text-gray-600 text-sm mb-4">"
+</p>
+                    </p>"
+                    <div className="space-y-2">"
+</div>
+                      <span className={`px-3 py-1 text-xs rounded-full ${"
+                        standard.status === 'Compliant' ? 'bg-green-100 text-green-800' :''
+                        'bg-yellow-100 text-yellow-800''
                       }`}>
-                        {standard.status}
-                      </span>
-                      <div className="text-sm text-gray-500">
-                        Coverage: {standard.coverage}
+</span>
+                      </span>'
+                      <div className="text-sm text-gray-500">"
+</div>
                       </div>
                     </div>
                   </motion.div>
@@ -309,52 +318,58 @@ export default function AccessibilityPage() {
               })}
             </div>
           </div>
-        </section>
-
-        {/* Testing and Tools */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
+        </section>"
+        <section className="py-20">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>
+            <motion.div;"
+              className="text-center mb-16""
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Accessibility Testing
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We use a combination of automated tools and manual testing to ensure 
-                our website meets accessibility standards.
+</motion>"
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
+</h2>
+              </h2>"
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
+</p>
               </p>
             </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {accessibilityTools.map((tool, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
+</div>
+                <motion.div;
+                  key={index}"
+                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300""
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Zap className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-gray-900">
-                          {tool.name}
-                        </h3>
-                        <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">
-                          {tool.frequency}
+</motion>"
+                  <div className="flex items-start space-x-4">"
+</div>"
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">"
+</div>"
+                      <Zap className="w-6 h-6 text-white" />"
+</Zap>
+                    </div>"
+                    <div className="flex-1">"
+</div>"
+                      <div className="flex items-center justify-between mb-2">"
+</div>"
+                        <h3 className="text-xl font-bold text-gray-900">"
+</h3>
+                        </h3>"
+                        <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">"
+</span>
                         </span>
-                      </div>
-                      <p className="text-gray-600">
-                        {tool.description}
+                      </div>"
+                      <p className="text-gray-600">"
+</p>
                       </p>
                     </div>
                   </div>
@@ -362,117 +377,115 @@ export default function AccessibilityPage() {
               ))}
             </div>
           </div>
-        </section>
-
-        {/* Accessibility Guidelines */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
+        </section>"
+        <section className="py-20 bg-white">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>
+            <motion.div;"
+              className="text-center mb-16""
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Accessibility Guidelines
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We follow established accessibility guidelines to ensure our website 
-                is usable by everyone.
+</motion>"
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
+</h2>
+              </h2>"
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
+</p>
               </p>
             </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {accessibilityGuidelines.map((category, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
+"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
+</div>
+                <motion.div;
+                  key={index}"
+                  className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300""
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">
-                    {category.category}
-                  </h3>
-                  <ul className="space-y-2">
-                    {category.guidelines.map((guideline, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {guideline}
+</motion>"
+                  <h3 className="text-lg font-bold text-gray-900 mb-4">"
+</h3>
+                  </h3>"
+                  <ul className="space-y-2">"
+</ul>"
+                      <li key={idx} className="flex items-center text-sm text-gray-600">"
+</li>"
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />"
+</CheckCircle>
                       </li>
-                    ))}
                   </ul>
                 </motion.div>
               ))}
             </div>
           </div>
-        </section>
-
-        {/* Accessibility Statement */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <motion.div
-                className="bg-white p-8 rounded-xl shadow-lg"
+        </section>"
+        <section className="py-20">"
+</section>"
+          <div className="container mx-auto px-4">"
+</div>"
+            <div className="max-w-4xl mx-auto">"
+</div>
+              <motion.div;"
+                className="bg-white p-8 rounded-xl shadow-lg""
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Accessibility Statement
-                </h2>
-                <div className="prose prose-lg max-w-none">
-                  <p className="text-gray-600 mb-6">
-                    Zion Tech Group is committed to ensuring digital accessibility for people with disabilities. 
-                    We are continually improving the user experience for everyone and applying the relevant 
-                    accessibility standards to ensure we provide equal access to all users.
-                  </p>
-                  <p className="text-gray-600 mb-6">
-                    We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA standards. 
-                    These guidelines help make web content more accessible to people with disabilities and 
-                    user-friendly for everyone.
-                  </p>
-                  <p className="text-gray-600 mb-6">
-                    We welcome your feedback on the accessibility of our website. If you encounter any 
-                    accessibility barriers, please let us know so we can address them promptly.
+</motion>"
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">"
+</h2>
+                </h2>"
+                <div className="prose prose-lg max-w-none">"
+</div>"
+                  <p className="text-gray-600 mb-6">"
+</p>
+                  </p>"
+                  <p className="text-gray-600 mb-6">"
+</p>
+                  </p>"
+                  <p className="text-gray-600 mb-6">"
+</p>
                   </p>
                 </div>
               </motion.div>
             </div>
           </div>
-        </section>
-
-        {/* Contact Information */}
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
+        </section>"
+        <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">"
+</section>"
+          <div className="container mx-auto px-4 text-center">"
+</div>
+            <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Accessibility Feedback
-              </h2>
-              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-                We welcome feedback on the accessibility of our website. If you encounter 
-                any accessibility barriers, please contact us.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="mailto:accessibility@ziontechgroup.com" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-                  accessibility@ziontechgroup.com
-                </a>
-                <a href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
-                  Contact Us
+</motion>"
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">"
+</h2>
+              </h2>"
+              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">"
+</p>
+              </p>"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+</div>"
+                <a href="mailto:accessibility@ziontechgroup.com" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">"
+</a>
+                </a>"
+                <a href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">"
+</a>
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-    </MainLayout>
-  );
-}
+    </MainLayout>"

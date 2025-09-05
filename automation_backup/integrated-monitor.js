@@ -1,5 +1,5 @@
-#!/usr/bin/"env"
-  ' "Integrated"
-  ' Failed to initialize Integrated "Monitor"
-  ' Failed to restart browser "monitor"
-cursor/fix-lint-push-and-merge-to-main-f3c1
+#!/usr/bin/"env"""
+  ' "Integrated"""
+  ' Failed to initialize Integrated "Monitor"""
+  ' Failed to restart browser "monitor""
+cursor/fix-lint-push-and-merge-to-main-f3c1;"

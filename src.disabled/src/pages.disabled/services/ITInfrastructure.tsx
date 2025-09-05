@@ -1,1 +1,1 @@
-import React from 'react'; import { Link } from 'react-router-dom'; import { SEO } from '../../components/SEO'; import { Server,Network,Database,Shield,Zap,Monitor,Wifi,Cloud } from 'lucide-react'
+import React from 'react'; import { Link, SEO } from 'lucide-react'; import { Server,Network,Database,Shield,Zap,Monitor,Wifi,Cloud } from 'lucide-react'''

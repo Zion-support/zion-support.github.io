@@ -1,2 +1,2 @@
-import React from 'react'
-export default GlobalServiceSection;';'
+import React from 'react'''
+export default GlobalServiceSection;';'''

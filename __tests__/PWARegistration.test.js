@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import PWARegistration from '../components/PWARegistration';
-
-describe('PWARegistration', () => {
-  test('renders without crashing', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import PWARegistration from '../components/PWARegistration';''
+describe('PWARegistration', () => {''
+  test('renders without crashing', () => {'
     render(<PWARegistration />);
-    expect(screen.getByTestId('pwaregistration')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
+</PWARegistration>
     render(<PWARegistration />);
-    // Add specific content tests here
-  });
-
-  test('handles user interactions', () => {
+</PWARegistration>
     render(<PWARegistration />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
+</PWARegistration>
     render(<PWARegistration />);
-    // Add styling tests here
-  });
-});
+</PWARegistration>'

@@ -1,1 +1,1 @@
-import React from 'react'; import { Header } from "../components/Header"; import { Footer } from "../components/Footer"; export function AppLayout($1) { return ( <div className = "min-h-screen bg-black text-white">; <main className="pt-20">; {children}; </main>; </div>; )} export default AppLayout;';';
+import React from 'react'; import { Header, Footer } from 'lucide-react'; export function AppLayout($1) { return ( <div className = "min-h-screen bg-black text-white">; <main className="pt-20">; {children}; </main>; </div>; )} export default AppLayout;';';''

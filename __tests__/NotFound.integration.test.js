@@ -1,26 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import NotFound from '../pages/NotFound';
-
-describe('NotFound Integration Tests', () => {
-  test('page renders correctly', () => {
+import React from 'react';''
+import { render, screen } from '@testing-library/react';''
+import '@testing-library/jest-dom';''
+import NotFound from '../pages/NotFound';''
+describe('NotFound Integration Tests', () => {''
+  test('page renders correctly', () => {'
     render(<NotFound />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
-  });
-
-  test('navigation works', () => {
+</NotFound>
     render(<NotFound />);
-    // Add navigation tests here
-  });
-
-  test('page content is accessible', () => {
+</NotFound>
     render(<NotFound />);
-    // Add accessibility tests here
-  });
-
-  test('page loads with correct data', () => {
+</NotFound>
     render(<NotFound />);
-    // Add data loading tests here
-  });
-});
+</NotFound>'

@@ -1,5 +1,5 @@
-import React from 'react'
-import Image from 'next/image'
-  className = ''
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-cursor/fix-lint-push-and-merge-to-main-f3c1
+import React from 'react'''
+import Image from 'next/image'''
+  className = ''''
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw''
+cursor/fix-lint-push-and-merge-to-main-f3c1;'
