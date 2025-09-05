@@ -12,8 +12,7 @@ export default function Compliance() {
       icon: Shield,
       description: 'Annual audits of security, availability, and confidentiality controls',
       details: [
-        'Independent third-party auditingSecurity controls assessmentAvailability and processing integrityConfidentiality safeguards',
-        'Annual compliance reporting'
+        'Independent third-party auditingSecurity controls assessmentAvailability and processing integrityConfidentiality safeguardsAnnual compliance reporting'
       ]
     },
     {
@@ -22,8 +21,7 @@ export default function Compliance() {
       icon: Scale,
       description: 'International standard for information security management',
       details: [
-        'Information security management system (ISMS)Risk assessment and managementSecurity policy implementationContinuous improvement processes',
-        'Regular certification audits'
+        'Information security management system (ISMS)Risk assessment and managementSecurity policy implementationContinuous improvement processesRegular certification audits'
       ]
     },
     {
@@ -32,8 +30,7 @@ export default function Compliance() {
       icon: Globe,
       description: 'European Union data protection regulation compliance',
       details: [
-        'Data protection by design and defaultIndividual rights managementData processing agreementsPrivacy impact assessments',
-        'Breach notification procedures'
+        'Data protection by design and defaultIndividual rights managementData processing agreementsPrivacy impact assessmentsBreach notification procedures'
       ]
     },
     {
@@ -42,8 +39,7 @@ export default function Compliance() {
       icon: Users,
       description: 'Healthcare information privacy and security standards',
       details: [
-        'Protected health information (PHI) safeguardsBusiness associate agreementsAccess controls and audit logsWorkforce training programs',
-        'Incident response procedures'
+        'Protected health information (PHI) safeguardsBusiness associate agreementsAccess controls and audit logsWorkforce training programsIncident response procedures'
       ]
     }
   ],

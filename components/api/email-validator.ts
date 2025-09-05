@@ -40,20 +40,19 @@ export default async function handler(
 
     // Check for common disposable email providers
     const disposableDomains = [
-      'tempmail.orgguerrillamail.commailinator.com10minutemail.com',
-      'temp-mail.orgsharklasers.comgetairmail.commailnesia.com'
+      'tempmail.orgguerrillamail.commailinator.com10minutemail.comtemp-mail.orgsharklasers.comgetairmail.commailnesia.com'
     ],
     const isDisposable = disposableDomains.some(d => domain?.includes(d)),
 
     // Check for role-based emails
     const roleBasedPatterns = [
-      'admin@info@support@contact@', 'sales@help@noreply@no-reply@', 'donotreply@do-not-reply@'
+      'admin@info@support@contact@sales@help@noreply@no-reply@', 'donotreply@do-not-reply@'
     ],
     const isRoleBased = roleBasedPatterns.some(pattern => email.startsWith(pattern)),
 
     // Check for free email providers
     const freeProviders = [
-      'gmail.comyahoo.comhotmail.comoutlook.com', 'aol.comicloud.comprotonmail.commail.com', 'yandex.com'
+      'gmail.comyahoo.comhotmail.comoutlook.comaol.comicloud.comprotonmail.commail.com', 'yandex.com'
     ],
     const isFreeProvider = freeProviders.some(provider => domain === provider),
 

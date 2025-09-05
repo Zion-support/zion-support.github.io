@@ -45,19 +45,16 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     id: 'advanced-research-automation',
     name: 'Advanced Research Automation',
     description: 'Comprehensive research automation platform that streamlines research workflows, automates data collection, and accelerates discovery across all scientific disciplines.',
-    category: ['ResearchAutomationAIData Science', 'Scientific Computing'],
+    category: ['ResearchAutomationAIData ScienceScientific Computing'],
     price: '$4,999/month',
     features: [
-      'Automated data collectionResearch workflow automationLiterature review automationData analysis automation',
-      'Report generationCollaboration toolsResearch trackingKnowledge management'
+      'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'
     ],
     benefits: [
-      'Accelerate research by 5xReduce manual errors by 90%Improve research qualityEnhance collaboration',
-      'Streamline workflowsIncrease productivity'
+      'Accelerate research by 5xReduce manual errors by 90%Improve research qualityEnhance collaborationStreamline workflowsIncrease productivity'
     ],
     useCases: [
-      'Academic researchCorporate R&DGovernment researchPharmaceutical research',
-      'Market researchScientific studies'
+      'Academic researchCorporate R&DGovernment researchPharmaceutical researchMarket researchScientific studies'
     ],
     marketSize: '$12.8B by 2029',
     competitors: ['LabVantageBenchlingLabArchivesSciNote'],
@@ -98,16 +95,13 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     category: ['Quantum ComputingResearchScientific ComputingTechnology Development'],
     price: '$8,999/month',
     features: [
-      'Quantum computing accessQuantum algorithm libraryQuantum simulation toolsResearch collaboration space',
-      'Quantum education resourcesPerformance analyticsResearch project managementPublication tools'
+      'Quantum computing accessQuantum algorithm libraryQuantum simulation toolsResearch collaboration spaceQuantum education resourcesPerformance analyticsResearch project managementPublication tools'
     ],
     benefits: [
-      'Access to quantum computingAccelerate quantum researchCollaborate with quantum expertsLearn quantum technologies',
-      'Publish quantum researchAdvance quantum science'
+      'Access to quantum computingAccelerate quantum researchCollaborate with quantum expertsLearn quantum technologiesPublish quantum researchAdvance quantum science'
     ],
     useCases: [
-      'Quantum physics researchQuantum algorithm developmentQuantum cryptography researchQuantum materials science',
-      'Quantum chemistryQuantum machine learning'
+      'Quantum physics researchQuantum algorithm developmentQuantum cryptography researchQuantum materials scienceQuantum chemistryQuantum machine learning'
     ],
     marketSize: '$18.5B by 2029',
     competitors: ['IBM QuantumGoogle QuantumMicrosoft QuantumD-Wave'],
@@ -145,19 +139,16 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     id: 'ai-research-assistant',
     name: 'AI Research Assistant',
     description: 'Intelligent AI research assistant that helps researchers with literature review, data analysis, hypothesis generation, and research planning across all scientific domains.',
-    category: ['AIResearchData AnalysisScientific Computing', 'Knowledge Management'],
+    category: ['AIResearchData AnalysisScientific ComputingKnowledge Management'],
     price: '$2,999/month',
     features: [
-      'Intelligent literature reviewData analysis assistanceHypothesis generationResearch planning tools',
-      'Knowledge synthesisCitation managementResearch collaborationProgress tracking'
+      'Intelligent literature reviewData analysis assistanceHypothesis generationResearch planning toolsKnowledge synthesisCitation managementResearch collaborationProgress tracking'
     ],
     benefits: [
-      'Accelerate research by 3xImprove research qualityReduce research timeEnhance collaboration',
-      'Generate new insightsStreamline workflows'
+      'Accelerate research by 3xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows'
     ],
     useCases: [
-      'Academic researchCorporate researchGovernment researchMarket research',
-      'Scientific studiesLiterature reviews'
+      'Academic researchCorporate researchGovernment researchMarket researchScientific studiesLiterature reviews'
     ],
     marketSize: '$15.2B by 2029',
     competitors: ['GrammarlyMendeleyZoteroEndNote'],
@@ -195,19 +186,16 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     id: 'biotech-research-suite',
     name: 'Biotech Research Suite',
     description: 'Comprehensive biotech research platform that provides tools for genetic research, drug discovery, clinical trials, and biotechnology development with AI-powered insights.',
-    category: ['BiotechnologyResearchHealthcareDrug Discovery', 'Clinical Trials'],
+    category: ['BiotechnologyResearchHealthcareDrug DiscoveryClinical Trials'],
     price: '$6,999/month',
     features: [
-      'Genetic research toolsDrug discovery platformClinical trial managementBiotech analytics',
-      'Research collaborationData visualizationRegulatory compliancePublication tools'
+      'Genetic research toolsDrug discovery platformClinical trial managementBiotech analyticsResearch collaborationData visualizationRegulatory compliancePublication tools'
     ],
     benefits: [
-      'Accelerate biotech researchImprove drug discoveryStreamline clinical trialsEnhance collaboration',
-      'Ensure complianceReduce research costs'
+      'Accelerate biotech researchImprove drug discoveryStreamline clinical trialsEnhance collaborationEnsure complianceReduce research costs'
     ],
     useCases: [
-      'Pharmaceutical researchGenetic researchClinical trialsBiotech development',
-      'Medical researchAgricultural biotech'
+      'Pharmaceutical researchGenetic researchClinical trialsBiotech developmentMedical researchAgricultural biotech'
     ],
     marketSize: '$22.8B by 2029',
     competitors: ['BenchlingLabVantageSciNoteLabArchives'],

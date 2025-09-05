@@ -16,8 +16,7 @@ const EnhancedContactForm: React.FC = () => {
   const { showSuccess, showError } = useToast(),
 
   const services = [
-    'AI & Machine LearningQuantum ComputingCybersecurityCloud Infrastructure',
-    'Data AnalyticsDigital TransformationOther'
+    'AI & Machine LearningQuantum ComputingCybersecurityCloud InfrastructureData AnalyticsDigital TransformationOther'
   ],
 
   const validateForm = (): boolean => {
@@ -81,8 +80,7 @@ const EnhancedContactForm: React.FC = () => {
   },
 
   const services = [
-    'AI Business IntelligenceQuantum CybersecurityEdge Computing OrchestrationSpace Technology Innovation',
-    'Neural Interface DevelopmentOther'
+    'AI Business IntelligenceQuantum CybersecurityEdge Computing OrchestrationSpace Technology InnovationNeural Interface DevelopmentOther'
   ],
 
   const handleInputBlur = (name: keyof FormData) => {

@@ -20,23 +20,20 @@ export default function AIBusinessIntelligenceSuite() {
   },
 
   const features = [
-    'Real-time data analysis and visualizationAI-powered trend prediction and forecastingAutomated report generation and schedulingCustom dashboard builder with drag-and-drop',
-    'Multi-source data integration (CRM, ERP, Analytics)Natural language query interfacePredictive analytics and machine learning modelsMobile-responsive dashboards',
+    'Real-time data analysis and visualizationAI-powered trend prediction and forecastingAutomated report generation and schedulingCustom dashboard builder with drag-and-dropMulti-source data integration (CRM, ERP, Analytics)Natural language query interfacePredictive analytics and machine learning modelsMobile-responsive dashboards',
     'Role-based access control and securityAPI access for custom integrations'
   ],
 
   const useCases = [
-    'Sales performance analysisCustomer behavior insightsFinancial forecastingMarketing ROI optimization',
-    'Operational efficiency tracking'
+    'Sales performance analysisCustomer behavior insightsFinancial forecastingMarketing ROI optimizationOperational efficiency tracking'
   ],
 
   const integrations = [
-    'SalesforceHubSpotGoogle AnalyticsShopify', 
-    'QuickBooksSlackMicrosoft Teams'
+    'SalesforceHubSpotGoogle AnalyticsShopifyQuickBooksSlackMicrosoft Teams'
   ],
 
   const technology = [
-    'PythonTensorFlowReactNode.js', 'PostgreSQLRedisAWSDocker'
+    'PythonTensorFlowReactNode.jsPostgreSQLRedisAWSDocker'
   ],
 
   return (

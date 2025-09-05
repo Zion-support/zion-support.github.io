@@ -56,8 +56,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     period: '/month',
     description: 'An advanced AI system that autonomously analyzes, optimizes, and executes business processes across all departments. Continuously learns and improves without human oversight.',
     features: [
-      'Autonomous process discovery and mappingReal-time optimization algorithmsCross-departmental coordinationPredictive maintenance scheduling',
-      'Resource allocation optimizationPerformance analytics dashboardAutomated decision makingProcess improvement suggestions',
+      'Autonomous process discovery and mappingReal-time optimization algorithmsCross-departmental coordinationPredictive maintenance schedulingResource allocation optimizationPerformance analytics dashboardAutomated decision makingProcess improvement suggestions',
       'Integration with existing systems24/7 autonomous operation'
     ],
     popular: true,
@@ -66,7 +65,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/ai-autonomous-business-processor',
     marketPosition: 'First autonomous business processor, competes with traditional BPM tools like Pega and Appian.',
-    targetAudience: ['Enterprise companiesmanufacturinglogisticshealthcare', 'financial services'],
+    targetAudience: ['Enterprise companiesmanufacturinglogisticshealthcarefinancial services'],
     trialDays: 21,
     setupTime: '1 week',
     category: 'AI & Automation',
@@ -95,8 +94,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     period: '/month',
     description: 'Enterprise-grade predictive analytics platform that forecasts business outcomes, market trends, and operational risks with unprecedented accuracy using advanced machine learning.',
     features: [
-      '99.7% prediction accuracyReal-time data processingMulti-dimensional forecastingRisk assessment algorithms',
-      'Market trend analysisCustom model trainingAPI integration capabilitiesAutomated reporting',
+      '99.7% prediction accuracyReal-time data processingMulti-dimensional forecastingRisk assessment algorithmsMarket trend analysisCustom model trainingAPI integration capabilitiesAutomated reporting',
       'Scenario planning toolsExecutive dashboard'
     ],
     popular: true,
@@ -134,8 +132,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     period: '/month',
     description: 'AI-powered customer success platform that automatically identifies at-risk customers, predicts churn, and implements retention strategies without human intervention.',
     features: [
-      'Automatic churn predictionPersonalized retention strategiesCustomer health scoringProactive issue resolution',
-      'Success metric trackingAutomated outreach campaignsCustomer journey optimizationSentiment analysis',
+      'Automatic churn predictionPersonalized retention strategiesCustomer health scoringProactive issue resolutionSuccess metric trackingAutomated outreach campaignsCustomer journey optimizationSentiment analysis',
       'ROI measurementIntegration with CRM systems'
     ],
     popular: true,
@@ -173,8 +170,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     period: '/month',
     description: 'End-to-end marketing automation platform that autonomously manages campaigns across all channels, optimizes budgets, and maximizes ROI using advanced AI algorithms.',
     features: [
-      'Cross-channel campaign coordinationAutonomous budget optimizationReal-time performance trackingA/B testing automation',
-      'Audience segmentation AIContent personalizationROI maximization algorithmsPredictive analytics',
+      'Cross-channel campaign coordinationAutonomous budget optimizationReal-time performance trackingA/B testing automationAudience segmentation AIContent personalizationROI maximization algorithmsPredictive analytics',
       'Multi-platform integrationAutomated reporting'
     ],
     popular: true,
@@ -212,8 +208,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     period: '/month',
     description: 'Intelligent sales platform that autonomously identifies high-value prospects, qualifies leads, and nurtures them through the sales funnel using advanced AI and behavioral analysis.',
     features: [
-      'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequences',
-      'Sales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection',
+      'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection',
       'ROI trackingCRM integration'
     ],
     popular: true,

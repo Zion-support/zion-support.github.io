@@ -31,8 +31,7 @@ export default function SaaSMarketplacePage() {
       icon: <Zap className="w-8 h-8 text-orange-400" />,
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       features: [
-        '5000+ app integrationsVisual workflow builderMulti-step automationsScheduled triggers',
-        'Error handlingTeam collaboration'
+        '5000+ app integrationsVisual workflow builderMulti-step automationsScheduled triggersError handlingTeam collaboration'
       ],
       website: 'https://zapier.com',
       useCase: 'Perfect for businesses looking to automate customer support, marketing, and sales processes.',
@@ -49,8 +48,7 @@ export default function SaaSMarketplacePage() {
       icon: <Code className="w-8 h-8 text-gray-400" />,
       color: 'bg-gradient-to-br from-gray-500 to-gray-700',
       features: [
-        'Note-taking & docsProject managementTeam collaborationDatabase & tables',
-        'Templates libraryAPI integration'
+        'Note-taking & docsProject managementTeam collaborationDatabase & tablesTemplates libraryAPI integration'
       ],
       website: 'https://notion.so',
       useCase: 'Ideal for teams that need a flexible workspace for documentation, project management, and knowledge sharing.',
@@ -67,8 +65,7 @@ export default function SaaSMarketplacePage() {
       icon: <Shield className="w-8 h-8 text-blue-400" />,
       color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
       features: [
-        'Global payment methodsSubscription billingFraud protectionCompliance tools',
-        'Developer-friendly APIAnalytics dashboard'
+        'Global payment methodsSubscription billingFraud protectionCompliance toolsDeveloper-friendly APIAnalytics dashboard'
       ],
       website: 'https://stripe.com',
       useCase: 'Essential for any online business that needs to accept payments, especially SaaS companies and e-commerce.',
@@ -85,8 +82,7 @@ export default function SaaSMarketplacePage() {
       icon: <Users className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Live chatCustomer messagingHelp deskUser onboarding',
-        'Analytics & reportingIntegration ecosystem'
+        'Live chatCustomer messagingHelp deskUser onboardingAnalytics & reportingIntegration ecosystem'
       ],
       website: 'https://intercom.com',
       useCase: 'Perfect for SaaS companies and online businesses that want to provide excellent customer support and user engagement.',
@@ -103,8 +99,7 @@ export default function SaaSMarketplacePage() {
       icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
-        'User behavior trackingFunnel analysisA/B testingReal-time data',
-        'Custom eventsMobile analytics'
+        'User behavior trackingFunnel analysisA/B testingReal-time dataCustom eventsMobile analytics'
       ],
       website: 'https://mixpanel.com',
       useCase: 'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.',
@@ -121,8 +116,7 @@ export default function SaaSMarketplacePage() {
       icon: <Database className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-teal-600',
       features: [
-        'Fully managed MongoDBGlobal clustersAuto-scalingBackup & recovery',
-        'Security & complianceMonitoring & alerting'
+        'Fully managed MongoDBGlobal clustersAuto-scalingBackup & recoverySecurity & complianceMonitoring & alerting'
       ],
       website: 'https://mongodb.com/atlas',
       useCase: 'Perfect for developers who want to use MongoDB without managing infrastructure, especially for modern web applications.',
@@ -139,8 +133,7 @@ export default function SaaSMarketplacePage() {
       icon: <Cloud className="w-8 h-8 text-black" />,
       color: 'bg-gradient-to-br from-gray-800 to-black',
       features: [
-        'Zero-config deploymentGlobal CDNAutomatic scalingGit integration',
-        'Preview deploymentsEdge functions'
+        'Zero-config deploymentGlobal CDNAutomatic scalingGit integrationPreview deploymentsEdge functions'
       ],
       website: 'https://vercel.com',
       useCase: 'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent performance.',
@@ -157,8 +150,7 @@ export default function SaaSMarketplacePage() {
       icon: <TrendingUp className="w-8 h-8 text-blue-400" />,
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       features: [
-        'Issue trackingRoadmap planningTeam collaborationGit integration',
-        'Automated workflowsMobile apps'
+        'Issue trackingRoadmap planningTeam collaborationGit integrationAutomated workflowsMobile apps'
       ],
       website: 'https://linear.app',
       useCase: 'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.',
@@ -167,7 +159,7 @@ export default function SaaSMarketplacePage() {
     }
   ],
 
-  const categories = ['AllAutomationProductivityPayments', 'Customer SupportAnalyticsDatabaseHosting', 'Project Management'],
+  const categories = ['AllAutomationProductivityPaymentsCustomer SupportAnalyticsDatabaseHosting', 'Project Management'],
   const [selectedCategory, setSelectedCategory] = React.useState('All'),
 
   const filteredServices = selectedCategory === 'All' 

@@ -1,6 +1,6 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout',
 const CAPABILITIES = [
-  'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOps','Data EngineeringBlockchainIoTSecurity'
+  'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
 ],
 
 export default function CapabilitiesPage() {

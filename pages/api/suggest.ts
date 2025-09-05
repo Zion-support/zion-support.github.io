@@ -1,12 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 
 const SAMPLE_QUERIES = [
-  'React developers under $50/hrPart-time DevOps jobs in LATAMLLM engineers with RAG experienceSecurity projects with Zero Trust',
-  'Next.js freelancers in Berlin'
+  'React developers under $50/hrPart-time DevOps jobs in LATAMLLM engineers with RAG experienceSecurity projects with Zero TrustNext.js freelancers in Berlin'
 ],
 
 const SKILLS = [
-  'ReactNext.jsTypeScriptNode', 'PythonAWSKubernetesDevOps', 'DockerTerraformOpenAILangChain', 'RAGNLPPostgreSQLRust'
+  'ReactNext.jsTypeScriptNodePythonAWSKubernetesDevOps', 'DockerTerraformOpenAILangChainRAGNLPPostgreSQLRust'
 ],
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

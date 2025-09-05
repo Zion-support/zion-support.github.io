@@ -15,8 +15,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Production-grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI-compatible and open-source models.',
     features: [
-      'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evals',
-      'Guardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
+      'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
     ],
     popular: true,
     icon: '📈',
@@ -30,7 +29,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     category: 'AI & Machine Learning',
     realService: true,
     technology: ['Next.jsOpenTelemetryPostgreSQLClickHouse'],
-    integrations: ['OpenAI-compatibleLangChainLlamaIndexDatadog', 'Grafana'],
+    integrations: ['OpenAI-compatibleLangChainLlamaIndexDatadogGrafana'],
     useCases: ['LLM app monitoringCost controlPolicy compliance'],
     roi: 'Cut LLM cost 20–45% while improving reliability',
     competitors: ['LangfuseArizeWeights & Biases'],
@@ -53,8 +52,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.',
     features: [
-      'Prospect enrichment via public sourcesPersonalized email generationSequence and follow-up schedulingA/B testing and analytics',
-      'SPF/DKIM/DMARC checksInbox rotation support'
+      'Prospect enrichment via public sourcesPersonalized email generationSequence and follow-up schedulingA/B testing and analyticsSPF/DKIM/DMARC checksInbox rotation support'
     ],
     popular: false,
     icon: '✉️',
@@ -91,8 +89,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.',
     features: [
-      'Policy packs for CIS/NISTKubernetes and cloud postureAuto-remediation PRsEvidence collection and reports',
-      'SOC2/ISO 27001 export'
+      'Policy packs for CIS/NISTKubernetes and cloud postureAuto-remediation PRsEvidence collection and reportsSOC2/ISO 27001 export'
     ],
     popular: true,
     icon: '🛡️',
@@ -106,7 +103,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     category: 'Cybersecurity',
     realService: true,
     technology: ['OPAKyvernoTerraformGitHub Actions'],
-    integrations: ['AWSAzureGCPGitHub', 'GitLab'],
+    integrations: ['AWSAzureGCPGitHubGitLab'],
     useCases: ['Baseline enforcementAudit readinessDrift detection'],
     roi: 'Reduce audit prep time by 70%',
     competitors: ['WizPrisma CloudSnyk'],

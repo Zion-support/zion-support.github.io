@@ -248,19 +248,16 @@ export default function ContactPage() {
               <p>✓ 24/7 AI support and emergency hotline</p>
               <p>✓ Custom implementation and training</p>
   const services = [
-    'AI Business IntelligenceQuantum CybersecurityEdge Computing OrchestrationSpace Technology Innovation',
-    'Neural Interface DevelopmentAutonomous DevOpsAI Customer ExperienceQuantum Neural Networks',
+    'AI Business IntelligenceQuantum CybersecurityEdge Computing OrchestrationSpace Technology InnovationNeural Interface DevelopmentAutonomous DevOpsAI Customer ExperienceQuantum Neural Networks',
     'Other (Please specify)'
   ],
 
   const budgets = [
-    'Under $10,000$10,000 - $50,000$50,000 - $100,000$100,000 - $500,000',
-    '$500,000+To be discussed'
+    'Under $10,000$10,000 - $50,000$50,000 - $100,000$100,000 - $500,000$500,000+To be discussed'
   ],
 
   const timelines = [
-    'Immediate (1-2 weeks)Quick (1-2 months)Standard (3-6 months)Extended (6+ months)',
-    'Flexible timelineTo be discussed'
+    'Immediate (1-2 weeks)Quick (1-2 months)Standard (3-6 months)Extended (6+ months)Flexible timelineTo be discussed'
   ],
 
 import React from 'react',

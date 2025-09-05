@@ -31,7 +31,7 @@ export default function AIFinancialRiskPage() {
               <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>
               <p className="text-slate-300 mb-6">{service?.description || 'Credit risk, market risk, model validation, and anti-fraud analytics powered by ML.'}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {(service?.features?.slice(0, 12) || ['Credit/market riskAnomaly detectionExplainable AIStress testing', 'Model governanceReal-time alerts']).map((feat, i) => (
+                {(service?.features?.slice(0, 12) || ['Credit/market riskAnomaly detectionExplainable AIStress testingModel governanceReal-time alerts']).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-cyan-400 mt-0.5" /><span>{feat}</span></li>
                 ))}
               </ul>

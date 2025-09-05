@@ -4,8 +4,7 @@ export const advancedITServices2025 = [
     name: 'QuantumCloud Infrastructure',
     description: 'Next-generation quantum-enhanced cloud infrastructure platform that provides unprecedented performance, security, and scalability for enterprise applications.',
     features: [
-      'Quantum-enhanced computing resourcesAdvanced security with quantum encryptionAuto-scaling infrastructureGlobal edge computing network',
-      'Integration with major cloud providersAdvanced monitoring and analyticsCustom quantum algorithms24/7 technical support'
+      'Quantum-enhanced computing resourcesAdvanced security with quantum encryptionAuto-scaling infrastructureGlobal edge computing networkIntegration with major cloud providersAdvanced monitoring and analyticsCustom quantum algorithms24/7 technical support'
     ],
     pricing: {
       starter: { price: 299, period: 'month', features: ['Up to 100 vCPUsBasic quantum featuresStandard support'] },
@@ -28,8 +27,7 @@ export const advancedITServices2025 = [
     name: 'EdgeComputing AI',
     description: 'AI-powered edge computing orchestration platform that optimizes distributed computing resources and enables real-time processing at the network edge.',
     features: [
-      'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancing',
-      'Integration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management'
+      'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management'
     ],
     pricing: {
       starter: { price: 199, period: 'month', features: ['Up to 10 edge nodesBasic AI optimizationStandard monitoring'] },
@@ -52,8 +50,7 @@ export const advancedITServices2025 = [
     name: 'ZeroTrust Security Pro',
     description: 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.',
     features: [
-      'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoring',
-      'Integration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center'
+      'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center'
     ],
     pricing: {
       starter: { price: 149, period: 'month', features: ['Up to 100 usersBasic zero-trustStandard monitoring'] },
@@ -76,8 +73,7 @@ export const advancedITServices2025 = [
     name: 'EnterpriseBlockchain Pro',
     description: 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.',
     features: [
-      'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance tools',
-      'Integration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support'
+      'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support'
     ],
     pricing: {
       starter: { price: 199, period: 'month', features: ['Up to 1,000 transactions/secBasic blockchainStandard support'] },
@@ -100,8 +96,7 @@ export const advancedITServices2025 = [
     name: 'DevOps AI Pro',
     description: 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery performance.',
     features: [
-      'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoring',
-      'Integration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring'
+      'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring'
     ],
     pricing: {
       starter: { price: 99, period: 'month', features: ['Up to 10 developersBasic AI automationStandard CI/CD'] },
@@ -124,8 +119,7 @@ export const advancedITServices2025 = [
     name: 'QuantumNet Pro',
     description: 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.',
     features: [
-      'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithms',
-      'Integration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support'
+      'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support'
     ],
     pricing: {
       starter: { price: 399, period: 'month', features: ['Up to 1GbpsBasic quantum featuresStandard support'] },
@@ -148,8 +142,7 @@ export const advancedITServices2025 = [
     name: 'AutonomousIT Pro',
     description: 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.',
     features: [
-      'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoring',
-      'Integration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations'
+      'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations'
     ],
     pricing: {
       starter: { price: 199, period: 'month', features: ['Up to 100 serversBasic autonomyStandard monitoring'] },
@@ -172,8 +165,7 @@ export const advancedITServices2025 = [
     name: 'QuantumDataCenter Pro',
     description: 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.',
     features: [
-      'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimization',
-      'Integration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support'
+      'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support'
     ],
     pricing: {
       starter: { price: 499, period: 'month', features: ['Up to 100 racksBasic quantum featuresStandard support'] },
@@ -196,8 +188,7 @@ export const advancedITServices2025 = [
     name: 'QuantumCyber Pro',
     description: 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.',
     features: [
-      'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoring',
-      'Integration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations'
+      'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations'
     ],
     pricing: {
       starter: { price: 299, period: 'month', features: ['Up to 100 endpointsBasic quantum securityStandard monitoring'] },
@@ -220,8 +211,7 @@ export const advancedITServices2025 = [
     name: 'QuantumMigration Pro',
     description: 'Intelligent quantum-enhanced cloud migration platform that optimizes the transition to quantum cloud infrastructure with minimal disruption.',
     features: [
-      'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoring',
-      'Integration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support'
+      'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support'
     ],
     pricing: {
       starter: { price: 199, period: 'month', features: ['Up to 100 workloadsBasic migration toolsStandard support'] },

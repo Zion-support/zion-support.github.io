@@ -80,8 +80,7 @@ export default function WebsitePerformanceMonitorPage() {
       period: '/month',
       description: 'Perfect for small websites and blogs',
       features: [
-        '5 websites monitoredBasic performance metricsDaily monitoringEmail alerts',
-        'Basic reportingCore Web Vitals tracking'
+        '5 websites monitoredBasic performance metricsDaily monitoringEmail alertsBasic reportingCore Web Vitals tracking'
       ],
       popular: false
     },
@@ -91,8 +90,7 @@ export default function WebsitePerformanceMonitorPage() {
       period: '/month',
       description: 'Ideal for growing businesses and e-commerce sites',
       features: [
-        '25 websites monitoredAdvanced performance metricsReal-time monitoringSMS & email alerts',
-        'Advanced reportingPerformance optimization tipsAPI accessTeam collaboration'
+        '25 websites monitoredAdvanced performance metricsReal-time monitoringSMS & email alertsAdvanced reportingPerformance optimization tipsAPI accessTeam collaboration'
       ],
       popular: true
     },
@@ -102,8 +100,7 @@ export default function WebsitePerformanceMonitorPage() {
       period: '/month',
       description: 'For large organizations with critical performance requirements',
       features: [
-        'Unlimited websitesEnterprise-grade monitoringCustom alerting rules24/7 support',
-        'Custom integrationsWhite-label reportingSLA guaranteesOn-premise options'
+        'Unlimited websitesEnterprise-grade monitoringCustom alerting rules24/7 supportCustom integrationsWhite-label reportingSLA guaranteesOn-premise options'
       ],
       popular: false
     }

@@ -47,8 +47,7 @@ export const realServicesQ32025: Q3Service[] = [
     period: '/month',
     description: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.',
     features: [
-      'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detection',
-      'Revenue forecasting modelsWeekly executive summaries'
+      'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detectionRevenue forecasting modelsWeekly executive summaries'
     ],
     popular: true,
     icon: '📊',
@@ -83,8 +82,7 @@ export const realServicesQ32025: Q3Service[] = [
     period: '/project',
     description: 'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.',
     features: [
-      'Payments, taxes, and invoicingLicense keys and subscriptionsEU/US tax and compliance guidanceStorefront templates and checkout',
-      'Sales analytics and email hooks1-week launch plan'
+      'Payments, taxes, and invoicingLicense keys and subscriptionsEU/US tax and compliance guidanceStorefront templates and checkoutSales analytics and email hooks1-week launch plan'
     ],
     icon: '🛒',
     color: 'from-cyan-600 to-blue-700',
@@ -114,8 +112,7 @@ export const realServicesQ32025: Q3Service[] = [
     period: '/month',
     description: 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments.',
     features: [
-      'Automatic link suggestions and anchorsOrphan page and pillar clusteringClick-through rate experimentsReporting and recommendations',
-      'Sitemap and crawl improvements'
+      'Automatic link suggestions and anchorsOrphan page and pillar clusteringClick-through rate experimentsReporting and recommendationsSitemap and crawl improvements'
     ],
     icon: '🔗',
     color: 'from-purple-600 to-pink-600',
@@ -146,8 +143,7 @@ export const realServicesQ32025: Q3Service[] = [
     period: '/project',
     description: 'We implement reviews and UGC collection across your storefront with on-brand widgets, post-purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift.',
     features: [
-      'Reviews widget integrationEmail/SMS post-purchase triggersPhoto/video UGC captureModeration and syndication',
-      'Conversion impact reporting'
+      'Reviews widget integrationEmail/SMS post-purchase triggersPhoto/video UGC captureModeration and syndicationConversion impact reporting'
     ],
     icon: '⭐',
     color: 'from-amber-600 to-rose-600',

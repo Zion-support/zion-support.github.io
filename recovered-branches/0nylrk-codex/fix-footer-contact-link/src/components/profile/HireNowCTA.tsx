@@ -85,8 +85,7 @@ function calculateProfileCompleteness(profile: any) {
   if (!profile) return 0,
   
   const fields = [
-    'full_nameprofessional_titlebioskills', 
-    'hourly_ratelocationportfolio_linksexperience',
+    'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience',
     'availability_type'
   ],
   

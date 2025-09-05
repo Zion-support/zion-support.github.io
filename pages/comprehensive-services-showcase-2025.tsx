@@ -17,14 +17,12 @@ const contactInfo = {
 },
 
 const categories = [
-  'All ServicesAI & Machine LearningCustomer SuccessSupply Chain',
-  'Financial PlanningSales IntelligenceHR AnalyticsDecision Intelligence',
+  'All ServicesAI & Machine LearningCustomer SuccessSupply ChainFinancial PlanningSales IntelligenceHR AnalyticsDecision Intelligence',
   'Content MarketingCRM & Customer IntelligenceBusiness Intelligence'
 ],
 
 const pricingRanges = [
-  'All PricesUnder $300$300 - $500$500 - $800',
-  '$800+'
+  'All PricesUnder $300$300 - $500$500 - $800$800+'
 ],
 
 export default function ComprehensiveServicesShowcase2025() {

@@ -372,8 +372,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   // Get all focusable elements
   const getFocusableElements = (): HTMLElement[] => {
     const focusableSelectors = [
-      'button:not([disabled])input:not([disabled])select:not([disabled])textarea:not([disabled])',
-      'a[href][tabindex]:not([tabindex="-1"])[role="button"][role="tab"]',
+      'button:not([disabled])input:not([disabled])select:not([disabled])textarea:not([disabled])a[href][tabindex]:not([tabindex="-1"])[role="button"][role="tab"]',
       '[role="menuitem"]'
     ],
     

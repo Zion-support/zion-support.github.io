@@ -128,7 +128,7 @@ export default function TokenomicsWhitepaperBuilder() {
     alert('Shareable link copied to clipboard')
   }
 
-  const sections = ['Executive SummaryMarket ContextUtility & UsageRewards System', 'DistributionGovernance ModelRisks + Disclaimers'],
+  const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'],
 
   return (
     <>

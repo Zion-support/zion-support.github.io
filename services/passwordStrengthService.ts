@@ -33,13 +33,13 @@ class PasswordStrengthService {
   constructor() {
     // Common weak passwords
     this.commonPasswords = new Set([
-      'password123456123456789qwerty', 'abc123password123adminletmein', 'welcomemonkeydragonmaster', 'hellofreedomwhateverqazwsx', 'trustno1jordanharleyranger', 'iwantujenniferhunterbuster', 'thomastiggerrobertsoccer', 'batmantestpasskiller', 'hockeygeorgecharlieandrew', 'michellelovesunshinejessica',
-      'asshole6969amandaaccess', 'yankees987654321dallasaustin', 'thundertaylorbaileyshadow', 'wolverinesteelers'
+      'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhellofreedomwhateverqazwsx', 'trustno1jordanharleyrangeriwantujenniferhunterbuster', 'thomastiggerrobertsoccerbatmantestpasskiller', 'hockeygeorgecharlieandrewmichellelovesunshinejessica',
+      'asshole6969amandaaccessyankees987654321dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers'
     ]),
 
     // Common words that make passwords weak
     this.commonWords = new Set([
-      'passwordadminuserlogin', 'welcomehellotestguest', 'demosampleexampledefault', 'rootsystemcomputerinternet', 'websiteemailphonemobile'
+      'passwordadminuserloginwelcomehellotestguest', 'demosampleexampledefaultrootsystemcomputerinternet', 'websiteemailphonemobile'
     ]),
 
     // Common patterns that make passwords predictable
@@ -317,8 +317,7 @@ class PasswordStrengthService {
    */
   generatePassphrase(wordCount: number = 4): string {
     const words = [
-      'applebananacherrydragon', 'eagleforestgardenharbor', 'islandjungleknightlighthouse', 'mountainoceanpenguinqueen', 'riversunsettigerumbrella',
-      'volcanowaterfallxylophoneyellow', 'zebra'
+      'applebananacherrydragoneagleforestgardenharbor', 'islandjungleknightlighthousemountainoceanpenguinqueen', 'riversunsettigerumbrellavolcanowaterfallxylophoneyellow', 'zebra'
     ],
     
     let passphrase = '',

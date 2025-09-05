@@ -47,22 +47,22 @@ export default function AISeosuitePage() {
     {
       category: 'Keyword Research',
       icon: <Search className="w-6 h-6 text-blue-400" />,
-      tools: ['Long-tail keyword finderCompetitor keyword analysisSearch volume estimationKeyword difficulty scoring', 'Trending keywords']
+      tools: ['Long-tail keyword finderCompetitor keyword analysisSearch volume estimationKeyword difficulty scoringTrending keywords']
     },
     {
       category: 'On-Page SEO',
       icon: <Target className="w-6 h-6 text-green-400" />,
-      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestions', 'Image optimization']
+      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
     },
     {
       category: 'Technical SEO',
       icon: <Settings className="w-6 h-6 text-purple-400" />,
-      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web Vitals', 'XML sitemap generator']
+      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator']
     },
     {
       category: 'Analytics & Reporting',
       icon: <BarChart3 className="w-6 h-6 text-orange-400" />,
-      tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoring', 'Custom dashboards']
+      tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
     }
   ],
 
@@ -73,8 +73,7 @@ export default function AISeosuitePage() {
       period: '/month',
       description: 'Perfect for small websites and blogs',
       features: [
-        'Up to 5 websitesBasic keyword researchMonthly site auditsEmail support',
-        'Basic reportingMobile app access'
+        'Up to 5 websitesBasic keyword researchMonthly site auditsEmail supportBasic reportingMobile app access'
       ],
       popular: false,
       color: 'border-gray-600',
@@ -86,8 +85,7 @@ export default function AISeosuitePage() {
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
       features: [
-        'Up to 25 websitesAdvanced keyword researchWeekly site auditsPriority support',
-        'Advanced reportingCompetitor analysisAPI accessWhite-label reports'
+        'Up to 25 websitesAdvanced keyword researchWeekly site auditsPriority supportAdvanced reportingCompetitor analysisAPI accessWhite-label reports'
       ],
       popular: true,
       color: 'border-blue-500',
@@ -99,8 +97,7 @@ export default function AISeosuitePage() {
       period: '/month',
       description: 'For large organizations and enterprises',
       features: [
-        'Unlimited websitesFull SEO suiteDaily site auditsDedicated support',
-        'Custom reportingAdvanced analyticsSLA guaranteeOn-premise option'
+        'Unlimited websitesFull SEO suiteDaily site auditsDedicated supportCustom reportingAdvanced analyticsSLA guaranteeOn-premise option'
       ],
       popular: false,
       color: 'border-purple-600',

@@ -55,8 +55,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           trailerScript: '/trailer/script'},
         summit: '/summit'},
       publicPages: [
-        '/about/manifesto/constitution/partners',
-        '/academy/marketplace/dao',
+        '/about/manifesto/constitution/partners/academy/marketplace/dao',
         `/nation/${defaultLanguage || 'en'}`]},
 
     const deployLog = {

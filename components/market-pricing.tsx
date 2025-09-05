@@ -796,8 +796,7 @@ export default function MarketPricing() {
               <h3 className="text-2xl font-bold mb-4 text-green-400">Growth Drivers</h3>
               <ul className="space-y-3">
                 {[
-                  'Increasing demand for AI consciousness in customer serviceQuantum computing breakthroughs in cryptographyAutomation needs in post-pandemic business operationsDigital transformation initiatives across industries',
-                  'Growing focus on AI ethics and responsible development'
+                  'Increasing demand for AI consciousness in customer serviceQuantum computing breakthroughs in cryptographyAutomation needs in post-pandemic business operationsDigital transformation initiatives across industriesGrowing focus on AI ethics and responsible development'
                 ].map((driver, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <TrendingUp className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
@@ -817,8 +816,7 @@ export default function MarketPricing() {
               <h3 className="text-2xl font-bold mb-4 text-blue-400">Market Opportunities</h3>
               <ul className="space-y-3">
                 {[
-                  'Untapped markets in emerging economiesIntegration opportunities with existing enterprise systemsCustom AI consciousness solutions for specific industriesPartnerships with research institutions and universities',
-                  'White-label solutions for enterprise software providers'
+                  'Untapped markets in emerging economiesIntegration opportunities with existing enterprise systemsCustom AI consciousness solutions for specific industriesPartnerships with research institutions and universitiesWhite-label solutions for enterprise software providers'
                 ].map((opportunity, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <Target className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />

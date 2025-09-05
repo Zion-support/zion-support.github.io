@@ -131,7 +131,7 @@ const LoginPage = () => {
       }
       
       // Prevent redirecting back to auth pages or creating loops
-      const authPages = ['/auth/login/auth/register/login/signup', '/auth/forgot-password'],
+      const authPages = ['/auth/login/auth/register/login/signup/auth/forgot-password'],
       if (authPages.includes(returnTo) || returnTo.startsWith('/auth/')) {
         returnTo = '/dashboard'
       }

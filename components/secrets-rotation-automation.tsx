@@ -4,8 +4,7 @@ import { Check, ExternalLink } from 'lucide-react',
 
 export default function SecretsRotationAutomationPage() {
 	const features = [
-		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)',
-		'Cloud KMS and Vault support'
+		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
 	],
 
 	return (

@@ -15,8 +15,7 @@ const contactInfo = {
 },
 
 const features = [
-  'Quantum-enhanced market prediction algorithmsReal-time market data processingAI-powered risk assessmentMulti-asset portfolio optimization',
-  'Regulatory compliance automationBacktesting and simulation engineCustom strategy builderPerformance analytics dashboard'
+  'Quantum-enhanced market prediction algorithmsReal-time market data processingAI-powered risk assessmentMulti-asset portfolio optimizationRegulatory compliance automationBacktesting and simulation engineCustom strategy builderPerformance analytics dashboard'
 ],
 
 const pricingPlans = [
@@ -31,14 +30,14 @@ const pricingPlans = [
     name: 'Professional',
     price: 499,
     period: 'month',
-    features: ['Advanced algorithmsAll asset classesReal-time rebalancingCustom strategies', 'Priority support'],
+    features: ['Advanced algorithmsAll asset classesReal-time rebalancingCustom strategiesPriority support'],
     popular: true
   },
   {
     name: 'Enterprise',
     price: 1299,
     period: 'month',
-    features: ['Quantum algorithmsWhite-label solutionAPI accessDedicated support', 'Custom integrations'],
+    features: ['Quantum algorithmsWhite-label solutionAPI accessDedicated supportCustom integrations'],
     popular: false
   }
 ],

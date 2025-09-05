@@ -83,13 +83,13 @@ export default function PasswordCheckerPage() {
 
   const isCommonPassword = (pass: string) => {
     const commonPasswords = [
-      'password123456123456789qwerty', 'abc123password123adminletmein', 'welcomemonkeydragonmaster', 'hello'
+      'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhello'
     ],
     return commonPasswords.includes(pass.toLowerCase())
   },
 
   const hasSequentialChars = (pass: string) => {
-    const sequences = ['123abcqweasd', 'zxc789456'],
+    const sequences = ['123abcqweasdzxc789456'],
     return sequences.some(seq => pass.toLowerCase().includes(seq))
   },
 

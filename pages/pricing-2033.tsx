@@ -84,8 +84,7 @@ export default function Pricing2033Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free Trial',
-        'Basic Analytics DashboardEmail Support99.5% Uptime GuaranteeBasic Security Features',
+        'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeBasic Security Features',
         'API Access (1000 calls/month)Community Support'
       ],
       popular: false,
@@ -98,8 +97,7 @@ export default function Pricing2033Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 200+ Advanced ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free Trial',
-        'Advanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features',
+        'Access to 200+ Advanced ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features',
         'API Access (10,000 calls/month)Dedicated Account ManagerCustom IntegrationsAdvanced Reporting'
       ],
       popular: true,
@@ -112,10 +110,8 @@ export default function Pricing2033Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to All 500+ ServicesFull AI & Quantum IntegrationPremium Support (24/7)90-Day Free Trial',
-        'Enterprise Analytics SuiteDedicated Support Users99.99% Uptime GuaranteeEnterprise Security Features',
-        'Unlimited API AccessDedicated Success ManagerCustom DevelopmentAdvanced Compliance',
-        'White-label SolutionsSLA Guarantees'
+        'Access to All 500+ ServicesFull AI & Quantum IntegrationPremium Support (24/7)90-Day Free TrialEnterprise Analytics SuiteDedicated Support Users99.99% Uptime GuaranteeEnterprise Security Features',
+        'Unlimited API AccessDedicated Success ManagerCustom DevelopmentAdvanced ComplianceWhite-label SolutionsSLA Guarantees'
       ],
       popular: false,
       color: 'from-blue-500 to-indigo-500'

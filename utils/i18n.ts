@@ -24,7 +24,7 @@ if (!i18n.isInitialized) {
       interpolation: { escapeValue: false },
       resources,
       detection: {
-        order: ['localStoragenavigatorhtmlTagcookie', 'pathsubdomain'],
+        order: ['localStoragenavigatorhtmlTagcookiepathsubdomain'],
         caches: ['localStorage']},
       react: { useSuspense: false },
       backend: {

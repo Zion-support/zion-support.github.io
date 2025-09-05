@@ -60,8 +60,7 @@ class ChunkErrorHandler {
     const errorName = error.name || '',
     
     const chunkErrorPatterns = [
-      'ChunkLoadErrorLoading chunkFailed to fetch dynamically imported moduleFailed to import',
-      'chunk-vendors-'
+      'ChunkLoadErrorLoading chunkFailed to fetch dynamically imported moduleFailed to importchunk-vendors-'
     ],
 
     return chunkErrorPatterns.some(pattern => 

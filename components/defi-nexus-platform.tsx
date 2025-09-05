@@ -15,8 +15,7 @@ const contactInfo = {
 },
 
 const features = [
-  'Multi-chain DeFi aggregationAutomated yield optimizationLiquidity pool managementCross-chain bridge services',
-  'Smart contract auditingDeFi analytics dashboardMobile app integrationStaking and governance'
+  'Multi-chain DeFi aggregationAutomated yield optimizationLiquidity pool managementCross-chain bridge servicesSmart contract auditingDeFi analytics dashboardMobile app integrationStaking and governance'
 ],
 
 const pricingPlans = [
@@ -31,14 +30,14 @@ const pricingPlans = [
     name: 'Professional',
     price: 99,
     period: 'month',
-    features: ['Advanced DeFi toolsAll major networksAutomated strategiesAnalytics', 'Priority support'],
+    features: ['Advanced DeFi toolsAll major networksAutomated strategiesAnalyticsPriority support'],
     popular: true
   },
   {
     name: 'Enterprise',
     price: 299,
     period: 'month',
-    features: ['Custom DeFi solutionsWhite-label platformAPI accessPriority support', 'Custom integrations'],
+    features: ['Custom DeFi solutionsWhite-label platformAPI accessPriority supportCustom integrations'],
     popular: false
   }
 ],

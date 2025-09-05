@@ -408,8 +408,7 @@ export const API_RATE_LIMITER_PRICING = {
     price: 25,
     period: '/month',
     features: [
-      'Up to 10 rate limit rulesBasic rate limitingAPI key managementEmail notifications',
-      '7-day data retentionBasic analytics'
+      'Up to 10 rate limit rulesBasic rate limitingAPI key managementEmail notifications7-day data retentionBasic analytics'
     ]
   },
   professional: {
@@ -417,8 +416,7 @@ export const API_RATE_LIMITER_PRICING = {
     price: 79,
     period: '/month',
     features: [
-      'Up to 50 rate limit rulesAdvanced rate limitingUnlimited API keysReal-time monitoring',
-      'Slack and webhook notifications30-day data retentionAdvanced analyticsCustom dashboards',
+      'Up to 50 rate limit rulesAdvanced rate limitingUnlimited API keysReal-time monitoringSlack and webhook notifications30-day data retentionAdvanced analyticsCustom dashboards',
       'API access'
     ]
   },
@@ -427,8 +425,7 @@ export const API_RATE_LIMITER_PRICING = {
     price: 199,
     period: '/month',
     features: [
-      'Unlimited rate limit rulesEnterprise-grade rate limitingAdvanced security featuresMultiple notification channels',
-      '1-year data retentionCustom integrationsWhite-label optionsPriority support',
+      'Unlimited rate limit rulesEnterprise-grade rate limitingAdvanced security featuresMultiple notification channels1-year data retentionCustom integrationsWhite-label optionsPriority support',
       'SLA guarantee'
     ]
   }

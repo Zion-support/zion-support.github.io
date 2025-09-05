@@ -107,15 +107,14 @@ const services: Service[] = [
     icon: <FaRobot className="w-6 h-6" />,
     category: 'automation',
     features: [
-      'Intelligent workflow automationNatural language processingPredictive analyticsReal-time decision making',
-      'Custom AI model trainingMulti-platform integration'
+      'Intelligent workflow automationNatural language processingPredictive analyticsReal-time decision makingCustom AI model trainingMulti-platform integration'
     ],
     pricing: {
       starter: 299,
       professional: 799,
       enterprise: 1999
     },
-    technologies: ['TensorFlowPyTorchOpenAILangChain', 'ReactNode.js'],
+    technologies: ['TensorFlowPyTorchOpenAILangChainReactNode.js'],
     benefits: [
       'Reduce manual tasks by 80%Improve accuracy by 95%24/7 automated operationsScalable AI infrastructure'
     ]
@@ -127,15 +126,14 @@ const services: Service[] = [
     icon: <FaBrain className="w-6 h-6" />,
     category: 'ai-ml',
     features: [
-      'Quantum algorithm optimizationHybrid classical-quantum computingQuantum machine learningCryptographic solutions',
-      'Quantum simulation toolsAPI access to quantum hardware'
+      'Quantum algorithm optimizationHybrid classical-quantum computingQuantum machine learningCryptographic solutionsQuantum simulation toolsAPI access to quantum hardware'
     ],
     pricing: {
       starter: 999,
       professional: 2499,
       enterprise: 4999
     },
-    technologies: ['QiskitCirqPennyLanePython', 'C++CUDA'],
+    technologies: ['QiskitCirqPennyLanePythonC++CUDA'],
     benefits: [
       'Solve previously impossible problemsExponential speed improvementsFuture-proof technologyResearch and development support'
     ]
@@ -147,15 +145,14 @@ const services: Service[] = [
     icon: <FaNetworkWired className="w-6 h-6" />,
     category: 'iot',
     features: [
-      'Edge device optimizationReal-time AI inferenceDistributed learningLow-latency processing',
-      'Offline AI capabilitiesEdge-to-cloud synchronization'
+      'Edge device optimizationReal-time AI inferenceDistributed learningLow-latency processingOffline AI capabilitiesEdge-to-cloud synchronization'
     ],
     pricing: {
       starter: 199,
       professional: 599,
       enterprise: 1499
     },
-    technologies: ['TensorFlow LiteONNX RuntimeEdge TPURaspberry Pi', 'Arduino'],
+    technologies: ['TensorFlow LiteONNX RuntimeEdge TPURaspberry PiArduino'],
     benefits: [
       'Reduced latency by 90%Lower bandwidth costsEnhanced privacyScalable edge deployment'
     ]
@@ -167,15 +164,14 @@ const services: Service[] = [
     icon: <FaShieldAlt className="w-6 h-6" />,
     category: 'security',
     features: [
-      'Post-quantum cryptographyQuantum key distributionAdvanced threat detectionZero-trust architecture',
-      'Compliance frameworksReal-time monitoring'
+      'Post-quantum cryptographyQuantum key distributionAdvanced threat detectionZero-trust architectureCompliance frameworksReal-time monitoring'
     ],
     pricing: {
       starter: 399,
       professional: 999,
       enterprise: 2499
     },
-    technologies: ['NIST PQCQKD protocolsZero TrustSIEM', 'SOAR'],
+    technologies: ['NIST PQCQKD protocolsZero TrustSIEMSOAR'],
     benefits: [
       'Future-proof securityQuantum-resistant encryptionComprehensive complianceAdvanced threat protection'
     ]
@@ -187,15 +183,14 @@ const services: Service[] = [
     icon: <FaDatabase className="w-6 h-6" />,
     category: 'data',
     features: [
-      'Unified data accessReal-time analyticsData governanceAI-powered insights',
-      'Multi-cloud supportData lineage tracking'
+      'Unified data accessReal-time analyticsData governanceAI-powered insightsMulti-cloud supportData lineage tracking'
     ],
     pricing: {
       starter: 299,
       professional: 799,
       enterprise: 1999
     },
-    technologies: ['Apache KafkaApache SparkSnowflakeDatabricks', 'Airflow'],
+    technologies: ['Apache KafkaApache SparkSnowflakeDatabricksAirflow'],
     benefits: [
       'Unified data viewReal-time insightsImproved data qualityReduced integration costs'
     ]
@@ -207,15 +202,14 @@ const services: Service[] = [
     icon: <FaCloud className="w-6 h-6" />,
     category: 'cloud',
     features: [
-      'Kubernetes orchestrationMicroservices architectureCI/CD pipelinesAuto-scaling',
-      'Multi-cloud deploymentDevOps automation'
+      'Kubernetes orchestrationMicroservices architectureCI/CD pipelinesAuto-scalingMulti-cloud deploymentDevOps automation'
     ],
     pricing: {
       starter: 199,
       professional: 599,
       enterprise: 1499
     },
-    technologies: ['KubernetesDockerHelmArgoCD', 'PrometheusGrafana'],
+    technologies: ['KubernetesDockerHelmArgoCDPrometheusGrafana'],
     benefits: [
       'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
     ]

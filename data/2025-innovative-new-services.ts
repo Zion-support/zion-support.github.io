@@ -50,8 +50,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     period: '/month',
     description: 'Advanced AI platform that automatically analyzes legal documents, contracts, and agreements to identify risks, compliance issues, and key terms.',
     features: [
-      'AI-powered contract analysis and risk assessmentAutomated compliance checkingLegal document summarizationRisk scoring and alerts',
-      'Template generation and customizationMulti-language supportIntegration with legal management systemsAudit trail and version control',
+      'AI-powered contract analysis and risk assessmentAutomated compliance checkingLegal document summarizationRisk scoring and alertsTemplate generation and customizationMulti-language supportIntegration with legal management systemsAudit trail and version control',
       'Real-time collaboration toolsMobile-responsive interface'
     ],
     popular: true,
@@ -96,8 +95,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     period: '/month',
     description: 'Next-generation communication platform using quantum key distribution and post-quantum cryptography to ensure unbreakable security.',
     features: [
-      'Quantum key distribution (QKD)Post-quantum cryptography algorithmsEnd-to-end encryptionReal-time threat detection',
-      'Multi-channel communication supportCompliance with NIST standardsAPI for third-party integrationsAdvanced audit logging',
+      'Quantum key distribution (QKD)Post-quantum cryptography algorithmsEnd-to-end encryptionReal-time threat detectionMulti-channel communication supportCompliance with NIST standardsAPI for third-party integrationsAdvanced audit logging',
       'Zero-knowledge architectureGlobal quantum network access'
     ],
     popular: true,
@@ -142,8 +140,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     period: '/month',
     description: 'Advanced AI platform that analyzes medical images, lab results, and patient data to provide accurate diagnostic insights and treatment recommendations.',
     features: [
-      'AI-powered medical image analysisDiagnostic accuracy validationPatient data integrationTreatment recommendation engine',
-      'Clinical decision supportHIPAA complianceMulti-modality imaging supportReal-time analysis',
+      'AI-powered medical image analysisDiagnostic accuracy validationPatient data integrationTreatment recommendation engineClinical decision supportHIPAA complianceMulti-modality imaging supportReal-time analysis',
       'Integration with EHR systemsMobile diagnostic tools'
     ],
     popular: true,
@@ -188,8 +185,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     period: '/month',
     description: 'Intelligent supply chain platform that automatically optimizes inventory, routes, and logistics using AI and machine learning.',
     features: [
-      'AI-powered demand forecastingAutonomous inventory optimizationRoute optimization algorithmsReal-time supply chain monitoring',
-      'Predictive maintenance alertsSupplier performance analyticsCost optimization recommendationsSustainability tracking',
+      'AI-powered demand forecastingAutonomous inventory optimizationRoute optimization algorithmsReal-time supply chain monitoringPredictive maintenance alertsSupplier performance analyticsCost optimization recommendationsSustainability tracking',
       'Multi-warehouse managementIntegration with ERP systems'
     ],
     popular: true,
@@ -234,8 +230,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     period: '/month',
     description: 'Advanced financial trading platform leveraging quantum computing for ultra-fast market analysis, risk assessment, and algorithmic trading.',
     features: [
-      'Quantum-powered market analysisUltra-fast algorithmic tradingReal-time risk assessmentPortfolio optimization algorithms',
-      'Market prediction modelsCompliance monitoringMulti-exchange integrationAdvanced analytics dashboard',
+      'Quantum-powered market analysisUltra-fast algorithmic tradingReal-time risk assessmentPortfolio optimization algorithmsMarket prediction modelsCompliance monitoringMulti-exchange integrationAdvanced analytics dashboard',
       'API for custom strategies24/7 market monitoring'
     ],
     popular: true,

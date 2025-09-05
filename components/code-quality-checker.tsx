@@ -51,8 +51,7 @@ export default function CodeQualityCheckerPage() {
       period: '/month',
       description: 'Perfect for individual developers and small projects',
       features: [
-        '100 code analyses/monthBasic quality metrics5 programming languagesEmail support',
-        'Basic reportingCommunity rules'
+        '100 code analyses/monthBasic quality metrics5 programming languagesEmail supportBasic reportingCommunity rules'
       ],
       popular: false
     },
@@ -62,8 +61,7 @@ export default function CodeQualityCheckerPage() {
       period: '/month',
       description: 'Ideal for development teams and growing companies',
       features: [
-        '500 code analyses/monthAdvanced quality metricsAll programming languagesPriority support',
-        'Advanced reportingCustom rulesTeam collaborationAPI access'
+        '500 code analyses/monthAdvanced quality metricsAll programming languagesPriority supportAdvanced reportingCustom rulesTeam collaborationAPI access'
       ],
       popular: true
     },
@@ -73,8 +71,7 @@ export default function CodeQualityCheckerPage() {
       period: '/month',
       description: 'For large organizations with complex codebases',
       features: [
-        'Unlimited analysesEnterprise metricsCustom language support24/7 dedicated support',
-        'Custom reportingWhite-label optionsOn-premise deploymentCustom integrations'
+        'Unlimited analysesEnterprise metricsCustom language support24/7 dedicated supportCustom reportingWhite-label optionsOn-premise deploymentCustom integrations'
       ],
       popular: false
     }

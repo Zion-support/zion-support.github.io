@@ -15,8 +15,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description: 'LLM-powered email assistant that drafts context-aware replies, routes by intent, summarizes threads, and syncs with your CRM. SOC 2-ready with redaction.',
 		features: [
-			'LLM reply drafts with tone controlsIntent routing and SLA predictionSmart summaries and action extractionCRM and ticket sync (Salesforce, HubSpot, Zendesk)',
-			'PII redaction and governanceDashboard with analytics and coaching'
+			'LLM reply drafts with tone controlsIntent routing and SLA predictionSmart summaries and action extractionCRM and ticket sync (Salesforce, HubSpot, Zendesk)PII redaction and governanceDashboard with analytics and coaching'
 		],
 		popular: true,
 		icon: '📧',
@@ -30,7 +29,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		category: 'AI & Data',
 		realService: true,
 		technology: ['Gmail/O365 APIsOpenAI/GroqNext.js'],
-		integrations: ['GmailOutlookSalesforceHubSpot', 'Zendesk'],
+		integrations: ['GmailOutlookSalesforceHubSpotZendesk'],
 		useCases: ['Inbound triageFollow-upsNPS outreach'],
 		roi: 'Reduce first response time by 60% and improve CSAT by 20%+',
 		competitors: ['Superhuman AIFront Workflows'],
@@ -53,8 +52,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description: 'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross-device attribution.',
 		features: [
-			'Link shortener and branded domainsUTM builder and traffic quality scoringMulti-touch attribution and deduplicationAutomated payouts and tax forms',
-			'Fraud and bot detectionPartner portal and reports'
+			'Link shortener and branded domainsUTM builder and traffic quality scoringMulti-touch attribution and deduplicationAutomated payouts and tax formsFraud and bot detectionPartner portal and reports'
 		],
 		popular: true,
 		icon: '🔗',
@@ -91,8 +89,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description: 'Branded returns portal with label generation, disposition workflows, warehouse updates, and refund/exchange automations.',
 		features: [
-			'Portal and RMA workflowsLabel generation and trackingWarehousing and disposition updatesRefunds and exchanges automation',
-			'Fraud checks and abuse controlsAnalytics and cohort reports'
+			'Portal and RMA workflowsLabel generation and trackingWarehousing and disposition updatesRefunds and exchanges automationFraud checks and abuse controlsAnalytics and cohort reports'
 		],
 		popular: false,
 		icon: '📦',
@@ -129,8 +126,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description: 'Create beautiful mobile surveys with skip logic, A/B paths, and an embeddable SDK. Export to Sheets, BI tools, or your data warehouse.',
 		features: [
-			'Branching logic designerEmbeddable SDK and JS snippetReal-time analytics and funnelsWebhook exports and CSV',
-			'Email/SMS invite campaignsConsent and PII redaction'
+			'Branching logic designerEmbeddable SDK and JS snippetReal-time analytics and funnelsWebhook exports and CSVEmail/SMS invite campaignsConsent and PII redaction'
 		],
 		popular: false,
 		icon: '📱',
@@ -167,8 +163,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description: 'No-cookie analytics with funnel views, events, and attribution—built for SMBs and agencies. Export raw data easily.',
 		features: [
-			'Pageviews, sessions, and cohortsEvents and conversionsSource/medium attributionFunnel and retention views',
-			'Custom dashboardsCSV and webhook export'
+			'Pageviews, sessions, and cohortsEvents and conversionsSource/medium attributionFunnel and retention viewsCustom dashboardsCSV and webhook export'
 		],
 		popular: false,
 		icon: '📊',

@@ -57,7 +57,7 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Quantum & Emerging Tech 2026',
       description: 'Cutting-edge quantum and emerging technologies',
-      services: ['Quantum Internet SecurityNeuromorphic ComputingDNA ComputingPhotonic Computing', 'Holographic Display'],
+      services: ['Quantum Internet SecurityNeuromorphic ComputingDNA ComputingPhotonic ComputingHolographic Display'],
       avgPrice: '$4,199/month',
       savings: 'Save 70-85% vs. competitors',
       icon: Atom,
@@ -66,7 +66,7 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Enterprise IT Solutions 2026',
       description: 'Advanced enterprise infrastructure and security',
-      services: ['Zero Trust Network ArchitectureEdge Computing Orchestration5G Private NetworksBlockchain Infrastructure', 'AI DevOps Automation'],
+      services: ['Zero Trust Network ArchitectureEdge Computing Orchestration5G Private NetworksBlockchain InfrastructureAI DevOps Automation'],
       avgPrice: '$5,199/month',
       savings: 'Save 50-75% vs. competitors',
       icon: Shield,
@@ -110,8 +110,7 @@ export default function PricingEnhanced2026Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free Trial',
-        'Basic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features',
+        'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features',
         'Mobile App AccessAPI Access (1000 calls/month)'
       ],
       icon: <Sparkles className="w-8 h-8" />,
@@ -127,8 +126,7 @@ export default function PricingEnhanced2026Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24/7)60-Day Free Trial',
-        'Advanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security Features',
+        'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security Features',
         'Custom IntegrationsAPI Access (10,000 calls/month)Users Collaboration ToolsAdvanced Workflow Automation'
       ],
       icon: <Star className="w-8 h-8" />,
@@ -144,10 +142,8 @@ export default function PricingEnhanced2026Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free Trial',
-        'Enterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance',
-        'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite-label Solutions',
-        'Custom SLA AgreementsOn-site Implementation'
+        'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free TrialEnterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance',
+        'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite-label SolutionsCustom SLA AgreementsOn-site Implementation'
       ],
       icon: <Crown className="w-8 h-8" />,
       variant: 'quantum-advanced' as const,

@@ -45,19 +45,16 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     id: 'quantum-internet-security-gateway',
     name: 'Quantum Internet Security Gateway',
     description: 'Next-generation quantum internet security platform that provides unbreakable encryption and quantum-safe communication protocols for the future quantum internet infrastructure.',
-    category: ['CybersecurityQuantum ComputingInternet SecurityEncryption', 'Network Security'],
+    category: ['CybersecurityQuantum ComputingInternet SecurityEncryptionNetwork Security'],
     price: '$15,999/month',
     features: [
-      'Quantum-resistant encryption algorithmsPost-quantum cryptographyQuantum key distribution (QKD)Real-time threat detection',
-      'Quantum-safe VPN servicesSecure quantum communication channelsQuantum network monitoringFuture-proof security protocols'
+      'Quantum-resistant encryption algorithmsPost-quantum cryptographyQuantum key distribution (QKD)Real-time threat detectionQuantum-safe VPN servicesSecure quantum communication channelsQuantum network monitoringFuture-proof security protocols'
     ],
     benefits: [
-      'Unbreakable encryption securityFuture-proof against quantum attacksQuantum-safe communicationEnhanced network protection',
-      'Compliance with quantum standardsLong-term security investment'
+      'Unbreakable encryption securityFuture-proof against quantum attacksQuantum-safe communicationEnhanced network protectionCompliance with quantum standardsLong-term security investment'
     ],
     useCases: [
-      'Government communicationsFinancial institutionsHealthcare data protectionMilitary communications',
-      'Critical infrastructureResearch institutions'
+      'Government communicationsFinancial institutionsHealthcare data protectionMilitary communicationsCritical infrastructureResearch institutions'
     ],
     marketSize: '$28.5B by 2029',
     competitors: ['CiscoJuniperPalo Alto NetworksFortinet'],
@@ -95,19 +92,16 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     id: 'biotech-dna-computing-platform',
     name: 'Biotech DNA Computing Platform',
     description: 'Revolutionary DNA-based computing platform that uses biological molecules for data storage and computation, offering unprecedented storage density and parallel processing capabilities.',
-    category: ['BiotechnologyComputingData StorageResearch', 'Innovation'],
+    category: ['BiotechnologyComputingData StorageResearchInnovation'],
     price: '$25,999/month',
     features: [
-      'DNA-based data storageMolecular computing algorithmsBiological data processingHigh-density storage solutions',
-      'Parallel molecular operationsBio-compatible interfacesMolecular programming toolsBiological error correction'
+      'DNA-based data storageMolecular computing algorithmsBiological data processingHigh-density storage solutionsParallel molecular operationsBio-compatible interfacesMolecular programming toolsBiological error correction'
     ],
     benefits: [
-      'Exponential storage density increaseParallel processing capabilitiesEnergy-efficient computingLong-term data preservation',
-      'Biological compatibilityRevolutionary computing paradigm'
+      'Exponential storage density increaseParallel processing capabilitiesEnergy-efficient computingLong-term data preservationBiological compatibilityRevolutionary computing paradigm'
     ],
     useCases: [
-      'Long-term data archivingScientific research computingMedical data storageEnvironmental monitoring',
-      'Space exploration dataBiological research'
+      'Long-term data archivingScientific research computingMedical data storageEnvironmental monitoringSpace exploration dataBiological research'
     ],
     marketSize: '$15.8B by 2029',
     competitors: ['MicrosoftIlluminaTwist BioscienceDNA Script'],
@@ -145,19 +139,16 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     id: 'quantum-financial-trading-platform',
     name: 'Quantum Financial Trading Platform',
     description: 'Advanced quantum-powered financial trading platform that uses quantum algorithms to analyze market data, predict trends, and execute trades with unprecedented speed and accuracy.',
-    category: ['FintechQuantum ComputingTradingFinance', 'Analytics'],
+    category: ['FintechQuantum ComputingTradingFinanceAnalytics'],
     price: '$35,999/month',
     features: [
-      'Quantum market analysis algorithmsReal-time trading executionPredictive market modelingRisk assessment and management',
-      'Portfolio optimizationHigh-frequency trading capabilitiesMarket sentiment analysisAutomated trading strategies'
+      'Quantum market analysis algorithmsReal-time trading executionPredictive market modelingRisk assessment and managementPortfolio optimizationHigh-frequency trading capabilitiesMarket sentiment analysisAutomated trading strategies'
     ],
     benefits: [
-      'Increase trading accuracy by 300%Reduce trading risks by 60%Faster trade executionBetter portfolio performance',
-      'Enhanced risk managementCompetitive trading advantage'
+      'Increase trading accuracy by 300%Reduce trading risks by 60%Faster trade executionBetter portfolio performanceEnhanced risk managementCompetitive trading advantage'
     ],
     useCases: [
-      'Institutional tradingHedge fund operationsAlgorithmic tradingRisk management',
-      'Portfolio optimizationMarket analysis'
+      'Institutional tradingHedge fund operationsAlgorithmic tradingRisk managementPortfolio optimizationMarket analysis'
     ],
     marketSize: '$42.3B by 2029',
     competitors: ['BloombergThomson ReutersFactSetRefinitiv'],
@@ -195,19 +186,16 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     id: 'quantum-creativity-studio',
     name: 'Quantum Creativity Studio',
     description: 'Innovative quantum-enhanced creativity platform that uses quantum algorithms to generate unique artistic content, design solutions, and creative concepts that push the boundaries of human imagination.',
-    category: ['CreativityQuantum ComputingAIDesign', 'Art'],
+    category: ['CreativityQuantum ComputingAIDesignArt'],
     price: '$1,999/month',
     features: [
-      'Quantum creativity algorithmsAI-powered content generationCreative design toolsCollaborative workspace',
-      'Real-time renderingCreative asset managementDesign automationCreative analytics'
+      'Quantum creativity algorithmsAI-powered content generationCreative design toolsCollaborative workspaceReal-time renderingCreative asset managementDesign automationCreative analytics'
     ],
     benefits: [
-      'Unleash unlimited creativityGenerate unique contentAccelerate design processesEnhance creative collaboration',
-      'Improve design qualityReduce creative blocks'
+      'Unleash unlimited creativityGenerate unique contentAccelerate design processesEnhance creative collaborationImprove design qualityReduce creative blocks'
     ],
     useCases: [
-      'Graphic designContent creationProduct designMarketing materials',
-      'Creative agenciesIndividual artists'
+      'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists'
     ],
     marketSize: '$18.9B by 2029',
     competitors: ['Adobe Creative SuiteCanvaFigmaSketch'],

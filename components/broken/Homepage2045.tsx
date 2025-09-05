@@ -90,8 +90,7 @@ const Homepage2045: React.FC = () => {
 
   const getColorClasses = (index: number) => {
     const colors = [
-      'from-cyan-400 to-blue-500from-purple-400 to-pink-500from-emerald-400 to-teal-500from-orange-400 to-red-500',
-      'from-indigo-400 to-purple-500from-yellow-400 to-orange-500'
+      'from-cyan-400 to-blue-500from-purple-400 to-pink-500from-emerald-400 to-teal-500from-orange-400 to-red-500from-indigo-400 to-purple-500from-yellow-400 to-orange-500'
     ],
     return colors[index % colors.length]
   },

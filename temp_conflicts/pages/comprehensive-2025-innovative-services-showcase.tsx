@@ -32,10 +32,8 @@ const allServices = [
 
 // Service categories
 const serviceCategories = [
-  'All ServicesAI & Machine LearningQuantum ComputingCybersecurity',
-  'Healthcare & BiotechFinance & InvestmentSupply Chain & LogisticsManufacturing & Industry 4.0',
-  'Space TechnologyBlockchain & Web3Education & LearningLegal & Compliance',
-  'Energy & SustainabilityAutonomous VehiclesIoT & Edge ComputingMetaverse & VR',
+  'All ServicesAI & Machine LearningQuantum ComputingCybersecurityHealthcare & BiotechFinance & InvestmentSupply Chain & LogisticsManufacturing & Industry 4.0',
+  'Space TechnologyBlockchain & Web3Education & LearningLegal & ComplianceEnergy & SustainabilityAutonomous VehiclesIoT & Edge ComputingMetaverse & VR',
   'Neuroscience & BCI'
 ],
 
@@ -128,8 +126,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
         title="2025 Innovative Services Showcase | Zion Tech Group"
         description="Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems."
         keywords={[
-          'innovative services 2025micro SAASquantum computingspace technology',
-          'AI platformsautonomous systems'
+          'innovative services 2025micro SAASquantum computingspace technologyAI platformsautonomous systems'
         ]}
       />
       

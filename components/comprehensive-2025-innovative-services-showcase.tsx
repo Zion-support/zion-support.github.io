@@ -37,8 +37,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         title="2025 Innovative Services Showcase | Zion Tech Group"
         description="Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems."
         keywords={[
-          'innovative services 2025micro SAASquantum computingspace technology',
-          'AI platformsautonomous systems'
+          'innovative services 2025micro SAASquantum computingspace technologyAI platformsautonomous systems'
         ]}
       />
       

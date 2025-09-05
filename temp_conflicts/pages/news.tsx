@@ -602,8 +602,7 @@ export default function News() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
-    'All NewsCompany NewsPartnershipsAI & Ethics',
-    'Quantum TechnologySpace TechnologyMicro SAASIT Services',
+    'All NewsCompany NewsPartnershipsAI & EthicsQuantum TechnologySpace TechnologyMicro SAASIT Services',
     'MetaverseIndustry Insights'
   ],
 

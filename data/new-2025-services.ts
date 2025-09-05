@@ -16,8 +16,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Policy checks, toxicity filters, red-team scenarios and model drift detection with alerts and CI gates. SDKs with minimal code changes.',
     features: [
-      'Prompt/output policy engineJailbreak and injection detectionPII redaction and audit trailHallucination and grounding score',
-      'Dashboards and CI quality gates'
+      'Prompt/output policy engineJailbreak and injection detectionPII redaction and audit trailHallucination and grounding scoreDashboards and CI quality gates'
     ],
     popular: true,
     icon: '🛡️',
@@ -54,8 +53,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Unified cron orchestration with jitter control, retries, DLQs and per-job SLAs. Works with Netlify, Vercel, AWS, and GCP.',
     features: [
-      'Human-readable schedulesIdempotency keys and dedupeMulti-cloud triggersJitter and backoff tuning',
-      'DLQ with webhooks and alerts'
+      'Human-readable schedulesIdempotency keys and dedupeMulti-cloud triggersJitter and backoff tuningDLQ with webhooks and alerts'
     ],
     popular: true,
     icon: '⏱️',
@@ -92,8 +90,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Centralize DSAR intake, identity verification, finding/erasure across systems with audit-ready evidence and SLAs.',
     features: [
-      'Identity verification and consentConnectors for common SaaSData discovery and redactionSLA timers and reminders',
-      'Evidence reports and exports'
+      'Identity verification and consentConnectors for common SaaSData discovery and redactionSLA timers and remindersEvidence reports and exports'
     ],
     popular: true,
     icon: '🔐',
@@ -130,8 +127,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Upload schemas, generate contract suites, run per-PR checks with diffs and breaking-change alerts.',
     features: [
-      'Schema diff and breaking checksPR status and GitHub appExamples and mock serverMulti-env test runners',
-      'Slack notifications'
+      'Schema diff and breaking checksPR status and GitHub appExamples and mock serverMulti-env test runnersSlack notifications'
     ],
     popular: false,
     icon: '📜',
@@ -168,8 +164,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Connect your cloud accounts and get daily optimizations, reserved instance suggestions and budget alerts with explainable savings.',
     features: [
-      'Cost explorer with tagsAnomaly detection and alertsRightsizing recommendationsSavings plan/RI advisor',
-      'Forecasting and budgets'
+      'Cost explorer with tagsAnomaly detection and alertsRightsizing recommendationsSavings plan/RI advisorForecasting and budgets'
     ],
     popular: true,
     icon: '💸',
@@ -206,8 +201,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Warmup flows, seed list testing, reputation signals and playbooks to protect sender score across ESPs.',
     features: [
-      'Smart warmup schedulesSeed list and spam testsDomain/reputation dashboardBlocklist monitoring',
-      'Deliverability playbooks'
+      'Smart warmup schedulesSeed list and spam testsDomain/reputation dashboardBlocklist monitoringDeliverability playbooks'
     ],
     popular: false,
     icon: '📧',
@@ -244,8 +238,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'End-to-end starter kits for semantic search with ingestion, chunking, hybrid retrieval and evaluation harness.',
     features: [
-      'Ingestion pipeline templatesHybrid retrieval patternsEvaluation notebooksDashboards and alerts',
-      'Deploy buttons'
+      'Ingestion pipeline templatesHybrid retrieval patternsEvaluation notebooksDashboards and alertsDeploy buttons'
     ],
     popular: true,
     icon: '🔎',
@@ -282,8 +275,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Continuously scan API endpoints and specs for risks, auth gaps and changes with pull-request recommendations.',
     features: [
-      'Shadow API discoveryAuth and RBAC checksSchema drift and diffsSecret/key exposure checks',
-      'PR suggestions and tickets'
+      'Shadow API discoveryAuth and RBAC checksSchema drift and diffsSecret/key exposure checksPR suggestions and tickets'
     ],
     popular: true,
     icon: '🧰',
@@ -320,8 +312,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Define SLOs with templates and get error budget burn alerts, fast triage and weekly reports for services and SLIs.',
     features: [
-      'SLO templates and calculatorBurn-rate alerts and pagingIntegration with traces/metricsWeekly reports and anomalies',
-      'On-call quality insights'
+      'SLO templates and calculatorBurn-rate alerts and pagingIntegration with traces/metricsWeekly reports and anomaliesOn-call quality insights'
     ],
     popular: false,
     icon: '📈',
@@ -358,8 +349,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Low-latency edge personalization with audience models, content variants and A/B testing for higher conversion.',
     features: [
-      'Audience/intent modelsContent and layout variantsEdge rules and fallbacksEasy A/B testing',
-      'Privacy-safe analytics'
+      'Audience/intent modelsContent and layout variantsEdge rules and fallbacksEasy A/B testingPrivacy-safe analytics'
     ],
     popular: true,
     icon: '🎯',
@@ -396,8 +386,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Plug-and-play SSO and user provisioning blueprints with guides, SDKs and test suites for faster enterprise deals.',
     features: [
-      'SAML/OIDC templatesSCIM provisioning flowsIdP compatibility matrixCompliance and security guides',
-      'Demo tenants and sandboxes'
+      'SAML/OIDC templatesSCIM provisioning flowsIdP compatibility matrixCompliance and security guidesDemo tenants and sandboxes'
     ],
     popular: true,
     icon: '🔐',
@@ -434,8 +423,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Ops runbooks, IaC modules, monitoring and SLOs for HA Postgres clusters with tested failover procedures.',
     features: [
-      'HA topology templatesAutomated backups and PITRFailover runbooksPerformance tuning profiles',
-      'SLOs and weekly reports'
+      'HA topology templatesAutomated backups and PITRFailover runbooksPerformance tuning profilesSLOs and weekly reports'
     ],
     popular: false,
     icon: '🗄️',
@@ -472,8 +460,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Multi-channel sequences, inbox rotation, safety guardrails and CRM syncing to generate more qualified meetings.',
     features: [
-      'Persona and ICP modelsMulti-channel sequencesGuardrails and blocklist checksCRM sync and dedupe',
-      'A/B tests and analytics'
+      'Persona and ICP modelsMulti-channel sequencesGuardrails and blocklist checksCRM sync and dedupeA/B tests and analytics'
     ],
     popular: true,
     icon: '📬',
@@ -510,8 +497,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Agent-based discovery for hardware, software and services with vulnerability signals and change alerts.',
     features: [
-      'Network and host discoverySoftware and service inventoryVuln and exposure signalsChange detection',
-      'Ticketing and webhooks'
+      'Network and host discoverySoftware and service inventoryVuln and exposure signalsChange detectionTicketing and webhooks'
     ],
     popular: false,
     icon: '🛰️',
@@ -548,8 +534,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Ship flags, gradual rollouts, kill switches and experiments with edge-evaluated rules and SDKs.',
     features: [
-      'Edge-evaluated rulesTargeting by attributesKill switches and rolloutsA/B test metrics',
-      'Audit logs and approvals'
+      'Edge-evaluated rulesTargeting by attributesKill switches and rolloutsA/B test metricsAudit logs and approvals'
     ],
     popular: true,
     icon: '🏁',
@@ -586,8 +571,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Manage datasets, training runs, cost, evals and rollouts for fine-tuned models across vendors.',
     features: [
-      'Dataset/version registryTraining run trackingCost/performance dashboardsEval suites and red-teaming',
-      'Canary and rollout controls'
+      'Dataset/version registryTraining run trackingCost/performance dashboardsEval suites and red-teamingCanary and rollout controls'
     ],
     popular: true,
     icon: '🧪',
@@ -624,8 +608,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Measure real-user and synthetic performance, pinpoint regressions and export fixes as PRs.',
     features: [
-      'RUM + synthetic testsCore Web Vitals dashboardsPerformance budgetsPR suggestions and diffs',
-      'Alerting and reports'
+      'RUM + synthetic testsCore Web Vitals dashboardsPerformance budgetsPR suggestions and diffsAlerting and reports'
     ],
     popular: false,
     icon: '📈',
@@ -662,8 +645,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Central registry of AI assets with ownership, risk, policy mappings and audit trails for compliance.',
     features: [
-      'Model and dataset registryRisk and policy mappingsPII/PHI tagging and checksChange approvals and trails',
-      'Reports and exports'
+      'Model and dataset registryRisk and policy mappingsPII/PHI tagging and checksChange approvals and trailsReports and exports'
     ],
     popular: true,
     icon: '📚',

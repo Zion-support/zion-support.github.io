@@ -108,8 +108,7 @@ export default function Careers() {
   ],
 
   const benefits = [
-    'Competitive salary and equity packagesComprehensive health, dental, and vision insuranceFlexible work arrangements and remote work optionsProfessional development and training programs',
-    'Generous paid time off and holidays401(k) with company matchingModern technology and equipmentCollaborative and inclusive work environment'
+    'Competitive salary and equity packagesComprehensive health, dental, and vision insuranceFlexible work arrangements and remote work optionsProfessional development and training programsGenerous paid time off and holidays401(k) with company matchingModern technology and equipmentCollaborative and inclusive work environment'
   ],
 
   const filteredJobs = selectedDepartment === 'all' 

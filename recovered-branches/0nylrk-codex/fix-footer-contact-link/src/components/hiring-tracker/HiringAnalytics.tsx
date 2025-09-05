@@ -85,7 +85,7 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
     )
   }
   
-  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042', '#8884d8'],
+  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
   
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

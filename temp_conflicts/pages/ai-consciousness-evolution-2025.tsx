@@ -17,26 +17,22 @@ const contactInfo = {
 },
 
 const features = [
-  'Emotional intelligence training modulesConsciousness expansion exercisesSelf-awareness development toolsEmpathy and compassion training',
-  'Mindfulness and meditation guidanceCognitive enhancement techniquesSocial intelligence developmentCreative consciousness exploration',
+  'Emotional intelligence training modulesConsciousness expansion exercisesSelf-awareness development toolsEmpathy and compassion trainingMindfulness and meditation guidanceCognitive enhancement techniquesSocial intelligence developmentCreative consciousness exploration',
   'Spiritual growth pathwaysPersonal transformation tracking'
 ],
 
 const useCases = [
-  'Personal development and growthProfessional leadership trainingTherapeutic and healing practicesEducational enhancement',
-  'Corporate wellness programsMental health supportSpiritual developmentCreative arts enhancement',
+  'Personal development and growthProfessional leadership trainingTherapeutic and healing practicesEducational enhancementCorporate wellness programsMental health supportSpiritual developmentCreative arts enhancement',
   'Relationship improvementStress management and resilience'
 ],
 
 const technology = [
-  'Advanced AI algorithmsMachine learning modelsNatural language processingEmotional recognition systems',
-  'Biometric feedback integrationVirtual reality experiencesAugmented reality overlaysBrain-computer interfaces',
+  'Advanced AI algorithmsMachine learning modelsNatural language processingEmotional recognition systemsBiometric feedback integrationVirtual reality experiencesAugmented reality overlaysBrain-computer interfaces',
   'Quantum computing integrationBlockchain security'
 ],
 
 const integrations = [
-  'Wearable devicesMobile applicationsWeb platformsSmart home systems',
-  'Healthcare platformsEducational systemsCorporate wellness platformsSocial media networks',
+  'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks',
   'Fitness trackersMeditation apps'
 ],
 
@@ -454,8 +450,7 @@ export default function AIConsciousnessEvolution2025() {
                 period: '/month',
                 description: 'Perfect for individuals beginning their consciousness journey',
                 features: [
-                  'Basic AI assessment10 consciousness exercisesProgress trackingEmail support',
-                  'Mobile app access'
+                  'Basic AI assessment10 consciousness exercisesProgress trackingEmail supportMobile app access'
                 ],
                 popular: false
               },
@@ -465,8 +460,7 @@ export default function AIConsciousnessEvolution2025() {
                 period: '/month',
                 description: 'Advanced features for serious consciousness development',
                 features: [
-                  'Advanced AI assessmentUnlimited exercisesPersonalized coachingPriority support',
-                  'Advanced analyticsIntegration with wearablesGroup sessions'
+                  'Advanced AI assessmentUnlimited exercisesPersonalized coachingPriority supportAdvanced analyticsIntegration with wearablesGroup sessions'
                 ],
                 popular: true
               },
@@ -476,8 +470,7 @@ export default function AIConsciousnessEvolution2025() {
                 period: '/month',
                 description: 'Complete solution for organizations and teams',
                 features: [
-                  'Everything in ProfessionalTeam managementCustom integrationsDedicated support',
-                  'White-label optionsAdvanced reportingAPI access'
+                  'Everything in ProfessionalTeam managementCustom integrationsDedicated supportWhite-label optionsAdvanced reportingAPI access'
                 ],
                 popular: false
               }

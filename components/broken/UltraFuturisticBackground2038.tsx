@@ -41,45 +41,45 @@ export default function UltraFuturisticBackground2038({
       switch (theme) {
         case 'consciousness':
           return {
-            primary: ['#ff0080#00ffff#ffff00#ff00ff', '#8000ff#00ff80'],
-            secondary: ['#ff8000#0080ff#ff4080#40ffff', '#ffff40#ff40ff'],
-            accent: ['#ff6b6b#4ecdc4#45b7d1#96ceb4', '#feca57#ff9ff3'],
-            quantum: ['#8b5cf6#06b6d4#ec4899#10b981', '#f59e0b#ef4444']
+            primary: ['#ff0080#00ffff#ffff00#ff00ff#8000ff#00ff80'],
+            secondary: ['#ff8000#0080ff#ff4080#40ffff#ffff40#ff40ff'],
+            accent: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
           },
         case 'neon':
           return {
-            primary: ['#ff0080#00ffff#ffff00#ff00ff', '#8000ff#00ff80'],
-            secondary: ['#ff8000#0080ff#ff4080#40ffff', '#ffff40#ff40ff'],
-            accent: ['#ff6b6b#4ecdc4#45b7d1#96ceb4', '#feca57#ff9ff3'],
-            quantum: ['#8b5cf6#06b6d4#ec4899#10b981', '#f59e0b#ef4444']
+            primary: ['#ff0080#00ffff#ffff00#ff00ff#8000ff#00ff80'],
+            secondary: ['#ff8000#0080ff#ff4080#40ffff#ffff40#ff40ff'],
+            accent: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
           },
         case 'holographic':
           return {
-            primary: ['#ff6b6b#4ecdc4#45b7d1#96ceb4', '#feca57#ff9ff3'],
-            secondary: ['#54a0ff#5f27cd#ff9ff3#54a0ff', '#5f27cd#ff6b6b'],
-            accent: ['#4ecdc4#45b7d1#96ceb4#feca57', '#ff9ff3#54a0ff'],
-            quantum: ['#8b5cf6#06b6d4#ec4899#10b981', '#f59e0b#ef4444']
+            primary: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
+            secondary: ['#54a0ff#5f27cd#ff9ff3#54a0ff#5f27cd#ff6b6b'],
+            accent: ['#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3#54a0ff'],
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
           },
         case 'cyberpunk':
           return {
-            primary: ['#ff0055#00ffff#ffff00#ff00ff', '#8000ff#00ff80'],
-            secondary: ['#ff8000#0080ff#ff4080#40ffff', '#ffff40#ff40ff'],
-            accent: ['#ffff40#ff40ff#ff6b6b#4ecdc4', '#45b7d1#96ceb4'],
-            quantum: ['#8b5cf6#06b6d4#ec4899#10b981', '#f59e0b#ef4444']
+            primary: ['#ff0055#00ffff#ffff00#ff00ff#8000ff#00ff80'],
+            secondary: ['#ff8000#0080ff#ff4080#40ffff#ffff40#ff40ff'],
+            accent: ['#ffff40#ff40ff#ff6b6b#4ecdc4#45b7d1#96ceb4'],
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
           },
         case 'space':
           return {
-            primary: ['#1e3a8a#7c3aed#059669#dc2626', '#ea580c#0891b2'],
-            secondary: ['#8b5cf6#ec4899#f59e0b#10b981', '#06b6d4#a855f7'],
-            accent: ['#f97316#ef4444#84cc16#06b6d4', '#a855f7#f97316'],
-            quantum: ['#8b5cf6#06b6d4#ec4899#10b981', '#f59e0b#ef4444']
+            primary: ['#1e3a8a#7c3aed#059669#dc2626#ea580c#0891b2'],
+            secondary: ['#8b5cf6#ec4899#f59e0b#10b981#06b6d4#a855f7'],
+            accent: ['#f97316#ef4444#84cc16#06b6d4#a855f7#f97316'],
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
           },
         default: // quantum
           return {
-            primary: ['#8b5cf6#06b6d4#ec4899#10b981', '#f59e0b#ef4444'],
-            secondary: ['#f59e0b#ef4444#8b5cf6#06b6d4', '#ec4899#10b981'],
-            accent: ['#ec4899#10b981#f59e0b#ef4444', '#8b5cf6#06b6d4'],
-            quantum: ['#8b5cf6#06b6d4#ec4899#10b981', '#f59e0b#ef4444']
+            primary: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444'],
+            secondary: ['#f59e0b#ef4444#8b5cf6#06b6d4#ec4899#10b981'],
+            accent: ['#ec4899#10b981#f59e0b#ef4444#8b5cf6#06b6d4'],
+            quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444']
           }
       }
     },

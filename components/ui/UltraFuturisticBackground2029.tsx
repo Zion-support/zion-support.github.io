@@ -83,7 +83,7 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
     // Initialize energy fields
     const initEnergyFields = () => {
       const fields: EnergyField[] = [],
-      const fieldColors = ['#00ffff#ff00ff#ffff00#00ff00', '#ff8000'],
+      const fieldColors = ['#00ffff#ff00ff#ffff00#00ff00#ff8000'],
       
       for (let i = 0, i < 8, i++) {
         fields.push({

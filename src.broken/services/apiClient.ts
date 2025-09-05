@@ -36,8 +36,7 @@ export const globalAxiosErrorHandler = (error: unknown) => {
 
   // URLs that should not trigger user-facing error toasts
   const SILENT_ERROR_PATTERNS = [
-    '/health/status/heartbeat/ping',
-    '/analytics/metrics/telemetrysupabase.co',
+    '/health/status/heartbeat/ping/analytics/metrics/telemetrysupabase.co',
     'googleapis.comgithub.com/api'],
 
   // Check if URL should fail silently

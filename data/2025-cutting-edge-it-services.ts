@@ -4,8 +4,7 @@ export const cuttingEdgeITServices2025 = [
     name: 'Quantum Cloud Infrastructure Platform',
     description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',
     features: [
-      'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryption',
-      'Advanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring',
+      'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring',
       'Quantum-enhanced data processingAutomated infrastructure management'
     ],
     pricing: {
@@ -26,7 +25,7 @@ export const cuttingEdgeITServices2025 = [
       }
     },
     category: 'Quantum IT',
-    tags: ['Quantum ComputingCloud InfrastructureSecurityPerformance', 'Scalability'],
+    tags: ['Quantum ComputingCloud InfrastructureSecurityPerformanceScalability'],
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -36,10 +35,9 @@ export const cuttingEdgeITServices2025 = [
     targetAudience: 'Cloud providers, enterprises, financial institutions, government agencies, research institutions',
     competitiveAdvantage: 'First quantum-enhanced cloud infrastructure, quantum-resistant security, real-time optimization',
     useCases: [
-      'High-security cloud deploymentsFinancial services infrastructureGovernment cloud systemsResearch computing platforms',
-      'Enterprise cloud migration'
+      'High-security cloud deploymentsFinancial services infrastructureGovernment cloud systemsResearch computing platformsEnterprise cloud migration'
     ],
-    integrations: ['AWSAzureGoogle CloudKubernetes', 'DockerTerraform'],
+    integrations: ['AWSAzureGoogle CloudKubernetesDockerTerraform'],
     compliance: ['SOC2ISO 27001FedRAMPQuantum Security Standards']
   },
   {
@@ -47,8 +45,7 @@ export const cuttingEdgeITServices2025 = [
     name: 'Edge Computing Orchestration Platform',
     description: 'Advanced platform for managing and orchestrating edge computing resources across distributed networks, enabling real-time processing and low-latency applications.',
     features: [
-      'Distributed edge node managementReal-time resource orchestrationIntelligent workload distributionEdge AI model deployment',
-      'Dynamic scaling and optimizationEdge security and complianceReal-time monitoring and analyticsAutomated edge deployment',
+      'Distributed edge node managementReal-time resource orchestrationIntelligent workload distributionEdge AI model deploymentDynamic scaling and optimizationEdge security and complianceReal-time monitoring and analyticsAutomated edge deployment',
       'Edge-to-cloud synchronizationPerformance optimization algorithms'
     ],
     pricing: {
@@ -69,7 +66,7 @@ export const cuttingEdgeITServices2025 = [
       }
     },
     category: 'Edge Computing',
-    tags: ['Edge ComputingOrchestrationReal-time ProcessingAI Deployment', 'Low Latency'],
+    tags: ['Edge ComputingOrchestrationReal-time ProcessingAI DeploymentLow Latency'],
     website: 'https://ziontechgroup.com/edge-computing-orchestration-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -79,10 +76,9 @@ export const cuttingEdgeITServices2025 = [
     targetAudience: 'IoT companies, telecommunications providers, manufacturing companies, smart city developers',
     competitiveAdvantage: 'Advanced edge orchestration, AI model deployment, real-time optimization',
     useCases: [
-      'IoT device managementSmart city infrastructureManufacturing automationAutonomous vehicle systems',
-      'Real-time analytics platforms'
+      'IoT device managementSmart city infrastructureManufacturing automationAutonomous vehicle systemsReal-time analytics platforms'
     ],
-    integrations: ['KubernetesDockerIoT PlatformsAI Frameworks', 'Cloud Platforms'],
+    integrations: ['KubernetesDockerIoT PlatformsAI FrameworksCloud Platforms'],
     compliance: ['IoT Security StandardsEdge Computing ProtocolsData Privacy Regulations']
   },
   {
@@ -90,8 +86,7 @@ export const cuttingEdgeITServices2025 = [
     name: 'Zero Trust Security Platform',
     description: 'Comprehensive zero-trust security platform that implements advanced authentication, authorization, and monitoring across all network resources and applications.',
     features: [
-      'Multi-factor authentication (MFA)Identity and access management (IAM)Continuous security monitoringBehavioral analytics',
-      'Threat detection and responseSecure access service edge (SASE)Micro-segmentationReal-time risk assessment',
+      'Multi-factor authentication (MFA)Identity and access management (IAM)Continuous security monitoringBehavioral analyticsThreat detection and responseSecure access service edge (SASE)Micro-segmentationReal-time risk assessment',
       'Automated security responsesComprehensive audit logging'
     ],
     pricing: {
@@ -112,7 +107,7 @@ export const cuttingEdgeITServices2025 = [
       }
     },
     category: 'Cybersecurity',
-    tags: ['Zero TrustSecurityAuthenticationIAM', 'Threat Detection'],
+    tags: ['Zero TrustSecurityAuthenticationIAMThreat Detection'],
     website: 'https://ziontechgroup.com/zero-trust-security-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -122,19 +117,17 @@ export const cuttingEdgeITServices2025 = [
     targetAudience: 'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions',
     competitiveAdvantage: 'Comprehensive zero-trust platform, behavioral analytics, automated threat response',
     useCases: [
-      'Enterprise security implementationGovernment security complianceFinancial services securityHealthcare data protection',
-      'Remote workforce security'
+      'Enterprise security implementationGovernment security complianceFinancial services securityHealthcare data protectionRemote workforce security'
     ],
-    integrations: ['Active DirectoryLDAPSAMLOAuth', 'SIEM SystemsSecurity Tools'],
-    compliance: ['SOC2ISO 27001FedRAMPHIPAA', 'PCI DSS']
+    integrations: ['Active DirectoryLDAPSAMLOAuthSIEM SystemsSecurity Tools'],
+    compliance: ['SOC2ISO 27001FedRAMPHIPAAPCI DSS']
   },
   {
     id: 'blockchain-enterprise-platform',
     name: 'Blockchain Enterprise Platform',
     description: 'Enterprise-grade blockchain platform that enables secure, transparent, and efficient business processes through distributed ledger technology and smart contracts.',
     features: [
-      'Enterprise blockchain networksSmart contract developmentConsensus mechanism managementBlockchain analytics and monitoring',
-      'Integration with legacy systemsScalable blockchain architectureSecurity and compliance toolsReal-time transaction processing',
+      'Enterprise blockchain networksSmart contract developmentConsensus mechanism managementBlockchain analytics and monitoringIntegration with legacy systemsScalable blockchain architectureSecurity and compliance toolsReal-time transaction processing',
       'Multi-party workflow automationComprehensive reporting and analytics'
     ],
     pricing: {
@@ -155,7 +148,7 @@ export const cuttingEdgeITServices2025 = [
       }
     },
     category: 'Blockchain',
-    tags: ['BlockchainSmart ContractsDistributed LedgerEnterprise', 'Automation'],
+    tags: ['BlockchainSmart ContractsDistributed LedgerEnterpriseAutomation'],
     website: 'https://ziontechgroup.com/blockchain-enterprise-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -165,10 +158,9 @@ export const cuttingEdgeITServices2025 = [
     targetAudience: 'Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies',
     competitiveAdvantage: 'Enterprise-grade blockchain platform, smart contract automation, legacy system integration',
     useCases: [
-      'Supply chain transparencyFinancial transaction processingHealthcare data managementGovernment record keeping',
-      'Manufacturing process tracking'
+      'Supply chain transparencyFinancial transaction processingHealthcare data managementGovernment record keepingManufacturing process tracking'
     ],
-    integrations: ['ERP SystemsCRM PlatformsFinancial SystemsSupply Chain Tools', 'Legacy Systems'],
+    integrations: ['ERP SystemsCRM PlatformsFinancial SystemsSupply Chain ToolsLegacy Systems'],
     compliance: ['Blockchain StandardsFinancial RegulationsData Privacy Laws']
   },
   {
@@ -176,8 +168,7 @@ export const cuttingEdgeITServices2025 = [
     name: 'AI-Powered DevOps Platform',
     description: 'Intelligent DevOps platform that leverages artificial intelligence to automate development, testing, deployment, and monitoring processes for faster and more reliable software delivery.',
     features: [
-      'AI-powered code analysisAutomated testing and quality assuranceIntelligent deployment strategiesPredictive performance monitoring',
-      'Automated incident responseContinuous integration/continuous deployment (CI/CD)Infrastructure as code (IaC)Real-time performance optimization',
+      'AI-powered code analysisAutomated testing and quality assuranceIntelligent deployment strategiesPredictive performance monitoringAutomated incident responseContinuous integration/continuous deployment (CI/CD)Infrastructure as code (IaC)Real-time performance optimization',
       'Automated security scanningComprehensive analytics and reporting'
     ],
     pricing: {
@@ -198,7 +189,7 @@ export const cuttingEdgeITServices2025 = [
       }
     },
     category: 'DevOps',
-    tags: ['AI DevOpsAutomationCI/CDMonitoring', 'Performance'],
+    tags: ['AI DevOpsAutomationCI/CDMonitoringPerformance'],
     website: 'https://ziontechgroup.com/ai-powered-devops-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -208,10 +199,9 @@ export const cuttingEdgeITServices2025 = [
     targetAudience: 'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies',
     competitiveAdvantage: 'AI-powered DevOps automation, predictive monitoring, intelligent incident response',
     useCases: [
-      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automation',
-      'Quality assurance automation'
+      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
     ],
-    integrations: ['GitHubGitLabJenkinsDocker', 'KubernetesAWSAzureGoogle Cloud'],
+    integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
   }
 ],

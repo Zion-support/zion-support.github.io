@@ -66,8 +66,7 @@ export default function APITestingSuitePage() {
       period: '/month',
       description: 'Perfect for developers and small teams',
       features: [
-        '100 API tests/monthBasic test scenariosEmail notificationsBasic reporting',
-        '5 API endpointsCommunity support'
+        '100 API tests/monthBasic test scenariosEmail notificationsBasic reporting5 API endpointsCommunity support'
       ],
       popular: false
     },
@@ -77,8 +76,7 @@ export default function APITestingSuitePage() {
       period: '/month',
       description: 'Ideal for growing businesses and development teams',
       features: [
-        '500 API tests/monthAdvanced test scenariosSMS & email alertsAdvanced reporting',
-        '25 API endpointsPerformance testingAPI accessPriority support'
+        '500 API tests/monthAdvanced test scenariosSMS & email alertsAdvanced reporting25 API endpointsPerformance testingAPI accessPriority support'
       ],
       popular: true
     },
@@ -88,8 +86,7 @@ export default function APITestingSuitePage() {
       period: '/month',
       description: 'For large organizations with complex API requirements',
       features: [
-        'Unlimited API testsCustom test scenariosCustom alerting rules24/7 dedicated support',
-        'Unlimited endpointsAdvanced security testingWhite-label optionsCustom integrations'
+        'Unlimited API testsCustom test scenariosCustom alerting rules24/7 dedicated supportUnlimited endpointsAdvanced security testingWhite-label optionsCustom integrations'
       ],
       popular: false
     }

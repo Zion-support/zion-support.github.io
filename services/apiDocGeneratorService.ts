@@ -140,11 +140,11 @@ export interface DocumentationConfig {
 
 export class APIDocGeneratorService {
   private supportedFrameworks = [
-    'expressfastifykoahapi', 'djangoflaskfastapispring', 'aspnetlaravel'
+    'expressfastifykoahapidjangoflaskfastapispring', 'aspnetlaravel'
   ],
 
   private supportedLanguages = [
-    'javascripttypescriptpythonjava', 'csharpphpgoruby'
+    'javascripttypescriptpythonjavacsharpphpgoruby'
   ],
 
   async generateDocumentation(
@@ -243,8 +243,7 @@ export class APIDocGeneratorService {
   private async scanDirectory(path: string): Promise<string[]> {
     // Simulate directory scanning
     return [
-      'src/routes/users.jssrc/routes/products.jssrc/routes/orders.jssrc/models/User.js',
-      'src/models/Product.jssrc/middleware/auth.jssrc/config/database.js'
+      'src/routes/users.jssrc/routes/products.jssrc/routes/orders.jssrc/models/User.jssrc/models/Product.jssrc/middleware/auth.jssrc/config/database.js'
     ]
   }
 

@@ -21,7 +21,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
       } else {
         // Convert object to CSV format
-        const headers = ['appTitleshortDescriptionlongDescriptionversion', 'platform'],
+        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'],
         const values = [
           metadata.appTitle,
           metadata.shortDescription,

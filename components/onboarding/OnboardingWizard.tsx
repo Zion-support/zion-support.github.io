@@ -32,7 +32,7 @@ export default function OnboardingWizard() {
       { title: 'Choose skills and availability', content: (
         <div className="space-y-3 text-sm">
           <div className="flex flex-wrap gap-2">
-            {['AILLMNext.jsPython', 'DevOpsSecurity'].map(s => (
+            {['AILLMNext.jsPythonDevOpsSecurity'].map(s => (
               <button key={s} className="px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5">{s}</button>
             ))}
           </div>

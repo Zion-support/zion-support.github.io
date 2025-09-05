@@ -28,8 +28,7 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
     .filter(Boolean),
 
   const baseThemes = [
-    'FoundationsTrust LayerAI-Native MatchingReputation & Identity',
-    'Payments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces',
+    'FoundationsTrust LayerAI-Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces',
     'Governance & OwnershipGlobal Scale'],
 
   return baseThemes.map((theme, index) => {
@@ -55,8 +54,7 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
       .map((s) => String(s)),
 
     const metrics: string[] = [
-      'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-pay',
-      'Retention and NPS'],
+      'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-payRetention and NPS'],
 
     return { id, name, theme, objective, highlights, metrics }
   })

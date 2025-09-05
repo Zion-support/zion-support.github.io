@@ -56,8 +56,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'A production-ready gateway that unifies access to OpenAI, Anthropic, Google, and open-source models with usage-based routing, rate limits, prompt/response logging, redaction, and cost controls.',
     features: [
-      'Unified API for multiple LLM providersSpend caps, rate limits, and usage alertsPII redaction and secrets filteringPrompt templates and versioning',
-      'Latency and cost-aware routingBatch and streaming inferenceAudit logs and RBACLangChain/LlamaIndex SDK support',
+      'Unified API for multiple LLM providersSpend caps, rate limits, and usage alertsPII redaction and secrets filteringPrompt templates and versioningLatency and cost-aware routingBatch and streaming inferenceAudit logs and RBACLangChain/LlamaIndex SDK support',
       'Export to data warehouse'
     ],
     popular: true,
@@ -95,8 +94,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Turn-key instrumentation templates, dashboards, and SLOs for Node/Next.js, with error budgets, golden signals, and alerts integrated out of the box.',
     features: [
-      'OpenTelemetry auto-instrumentationGolden signals dashboardsError budgets and SLO templatesJaeger/Tempo tracing ready',
-      'Grafana dashboards and alertsLatency heatmaps and p95/p99Service map and dependency view'
+      'OpenTelemetry auto-instrumentationGolden signals dashboardsError budgets and SLO templatesJaeger/Tempo tracing readyGrafana dashboards and alertsLatency heatmaps and p95/p99Service map and dependency view'
     ],
     popular: true,
     icon: '📈',
@@ -133,8 +131,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Improve inbox placement with domain alignment checks (SPF/DKIM/DMARC), seed-list tests, warmup automation, and blacklist monitoring with alerts and remediation playbooks.',
     features: [
-      'SPF/DKIM/DMARC configuration checksSeed-list deliverability testsAutomated sending warmup schedulesBlocklist and reputation monitoring',
-      'BIMI and TLS validationAlerts to Slack/Email with remediation steps'
+      'SPF/DKIM/DMARC configuration checksSeed-list deliverability testsAutomated sending warmup schedulesBlocklist and reputation monitoringBIMI and TLS validationAlerts to Slack/Email with remediation steps'
     ],
     popular: true,
     icon: '📧',
@@ -176,8 +173,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Cross-device attribution with UTM and first-party identity stitching, fraud heuristics, and automated payouts to affiliates across Stripe/PayPal.',
     features: [
-      'UTM, ref, and coupon trackingAttribution windows and LTV creditFraud detection heuristicsStripe/PayPal payout workflows',
-      'Partner portal and analyticsWebhooks and API access'
+      'UTM, ref, and coupon trackingAttribution windows and LTV creditFraud detection heuristicsStripe/PayPal payout workflowsPartner portal and analyticsWebhooks and API access'
     ],
     popular: false,
     icon: '🤝',
@@ -219,8 +215,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Bring chat, ticketing, and AI assistance together with RAG over docs, macros, and action tools for faster resolution and CSAT uplift.',
     features: [
-      'AI chat and email draftingRAG over product docs and ticketsMacros and action toolsSentiment and CSAT analytics',
-      'Zendesk/Intercom syncEscalation and SLA policies'
+      'AI chat and email draftingRAG over product docs and ticketsMacros and action toolsSentiment and CSAT analyticsZendesk/Intercom syncEscalation and SLA policies'
     ],
     popular: true,
     icon: '🤖',
@@ -262,8 +257,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Simple dashboards with traffic sources, conversions, and page insights for non-technical teams. Exports and alerts included.',
     features: [
-      'Traffic and conversion funnelsSource/medium and campaignsGoals and events trackingEmail/Slack anomaly alerts',
-      'CSV/BigQuery exportGDPR-friendly, IP anonymization'
+      'Traffic and conversion funnelsSource/medium and campaignsGoals and events trackingEmail/Slack anomaly alertsCSV/BigQuery exportGDPR-friendly, IP anonymization'
     ],
     popular: false,
     icon: '📊',
@@ -305,8 +299,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Automate detection of idle resources, rightsizing, and savings plans across AWS/GCP/Azure with weekly reports and Jira-ready tickets.',
     features: [
-      'Idle resource detectionRightsizing and reservationsAnomaly detection and alertsTag hygiene and compliance',
-      'Weekly savings reportsAuto-created ticketsRBAC and multi-account'
+      'Idle resource detectionRightsizing and reservationsAnomaly detection and alertsTag hygiene and complianceWeekly savings reportsAuto-created ticketsRBAC and multi-account'
     ],
     popular: true,
     icon: '💸',
@@ -343,8 +336,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Automate SOC 2 controls evidence from cloud providers, identity, CI/CD, and ticketing systems with auditor export packs.',
     features: [
-      'Automated evidence collectorsControl mapping (AICPA)Auditor export packsException workflows',
-      'Risk register and ownershipChange management checksContinuous monitoring'
+      'Automated evidence collectorsControl mapping (AICPA)Auditor export packsException workflowsRisk register and ownershipChange management checksContinuous monitoring'
     ],
     popular: true,
     icon: '🔐',
@@ -381,8 +373,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Ready-to-run vector database setup (Pinecone/Weaviate/Elastic) with embeddings pipelines, schema, and example retrieval for your data.',
     features: [
-      'Provider selection guideSchema and index templatesETL/ingestion pipelinesEmbeddings and chunking best practices',
-      'Latency and cost tuningSample RAG app integration'
+      'Provider selection guideSchema and index templatesETL/ingestion pipelinesEmbeddings and chunking best practicesLatency and cost tuningSample RAG app integration'
     ],
     popular: false,
     icon: '🧭',
@@ -419,8 +410,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Simple, reliable certificate expiry and chain monitoring with Slack/Email alerts and status pages.',
     features: [
-      'Multi-domain monitoringHTTP/TLS and OCSP checksSlack/Email alertsPublic status pages',
-      'Weekly compliance reports'
+      'Multi-domain monitoringHTTP/TLS and OCSP checksSlack/Email alertsPublic status pagesWeekly compliance reports'
     ],
     popular: false,
     icon: '🔒',
@@ -457,8 +447,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Continuous API security scanning for REST/GraphQL with schema discovery, auth testing, fuzzing and CI/CD gates. Reports mapped to OWASP API Top 10 with Jira-ready tickets.',
     features: [
-      'OpenAPI/GraphQL schema discoveryAuth and permission testingOWASP API Top 10 mappingFuzzing and payload mutations',
-      'CI/CD quality gatesJira tickets and Slack alerts'
+      'OpenAPI/GraphQL schema discoveryAuth and permission testingOWASP API Top 10 mappingFuzzing and payload mutationsCI/CD quality gatesJira tickets and Slack alerts'
     ],
     popular: true,
     icon: '🛡️',
@@ -495,8 +484,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Continuously monitors DNS auth records, blocklists and seed inbox placement. Actionable runbooks and alerts to keep campaigns landing in the inbox.',
     features: [
-      'SPF/DKIM/DMARC validationSeed inbox placement testsBlocklist monitoringDMARC aggregate reports (RUA/RUF)',
-      'Alerts and weekly scorecards'
+      'SPF/DKIM/DMARC validationSeed inbox placement testsBlocklist monitoringDMARC aggregate reports (RUA/RUF)Alerts and weekly scorecards'
     ],
     popular: false,
     icon: '📧',
@@ -533,8 +521,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Watches critical DNS records (A/AAAA, MX, TXT, NS) and TLS changes for drift and hijacks. Keeps an audit trail for compliance.',
     features: [
-      'DNS record drift detectionTLS and chain changesAudit log and diffsSlack/Email alerts',
-      'Exportable reports'
+      'DNS record drift detectionTLS and chain changesAudit log and diffsSlack/Email alertsExportable reports'
     ],
     popular: false,
     icon: '🌐',
@@ -571,8 +558,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Define SLOs and error budgets with multi-region uptime checks, latency SLIs and actionable burn-rate alerts.',
     features: [
-      'Multi-region uptime checksLatency and availability SLIsSLOs and error budgetsBurn-rate alerts',
-      'Public status pages'
+      'Multi-region uptime checksLatency and availability SLIsSLOs and error budgetsBurn-rate alertsPublic status pages'
     ],
     popular: true,
     icon: '📈',
@@ -905,8 +891,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Drop-in RUM snippet with Core Web Vitals, page timings, SPA route tracking, and conversion impact analysis. Alerts and weekly insights included.',
     features: [
-      'Core Web Vitals (LCP, INP, CLS)Conversion impact analysisGeo/device breakdownsAnomaly alerts to Slack/Email',
-      'Privacy-friendly, cookie-lite'
+      'Core Web Vitals (LCP, INP, CLS)Conversion impact analysisGeo/device breakdownsAnomaly alerts to Slack/EmailPrivacy-friendly, cookie-lite'
     ],
     popular: false,
     icon: '⚡',
@@ -943,8 +928,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Automate WCAG 2.2 AA checks with axe-core powered scans, page templates, and CI gates. Export auditor-ready reports and remediation tasks.',
     features: [
-      'axe-core rules and custom checksCI gate on severity thresholdsPage template scanningIssue tracker export',
-      'Auditor-ready PDF reports'
+      'axe-core rules and custom checksCI gate on severity thresholdsPage template scanningIssue tracker exportAuditor-ready PDF reports'
     ],
     popular: true,
     icon: '♿',
@@ -981,8 +965,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Define per-endpoint latency budgets (p95/p99) and auto-create remediation tasks when budgets are breached. Includes SLOs, error budgets, and on-call alerts.',
     features: [
-      'Per-route latency SLOsError budget trackingAuto-ticket creationSlack/PagerDuty alerts',
-      'Weekly drift reports'
+      'Per-route latency SLOsError budget trackingAuto-ticket creationSlack/PagerDuty alertsWeekly drift reports'
     ],
     popular: false,
     icon: '⏱️',
@@ -1019,8 +1002,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Monitors site headers and TLS for regressions. Provides CSP templates, HSTS, and modern TLS guidance with alerts and diffs.',
     features: [
-      'CSP/HSTS header checksTLS version/cipher checksAuto-diff of changesSlack/Email alerts',
-      'Hardening playbooks'
+      'CSP/HSTS header checksTLS version/cipher checksAuto-diff of changesSlack/Email alertsHardening playbooks'
     ],
     popular: true,
     icon: '🛡️',
@@ -1057,8 +1039,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Easy consent banner with per-region rules, audit logs, and auto-generated cookie policy pages. Integrates with analytics blockers.',
     features: [
-      'Geo-based consent rulesPolicy page generatorAudit log exportAnalytics/script blocking',
-      'A/B banner testing'
+      'Geo-based consent rulesPolicy page generatorAudit log exportAnalytics/script blockingA/B banner testing'
     ],
     popular: false,
     icon: '🍪',
@@ -1095,8 +1076,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Continuously checks backup policies against RPO/RTO targets across clouds and DBs. Flags drift and creates remediation tasks.',
     features: [
-      'RPO/RTO policy checksSnapshot/restore verificationDrift detectionWeekly compliance reports',
-      'Auto-ticket workflows'
+      'RPO/RTO policy checksSnapshot/restore verificationDrift detectionWeekly compliance reportsAuto-ticket workflows'
     ],
     popular: false,
     icon: '💾',
@@ -1133,8 +1113,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Deploy IAB TCF v2 compatible consent banners with region-aware policies, capture consent receipts, and export audit logs for GDPR/CPRA. Includes cookie inventory and auto-blocking helpers.',
     features: [
-      'IAB TCF v2.2 compatible consentGeo-targeted policies (EEA/UK/US states)Consent receipts and log exportsCookie inventory and auto-blocking',
-      'Policy pages and versioningCMP integrations and tag manager hooks'
+      'IAB TCF v2.2 compatible consentGeo-targeted policies (EEA/UK/US states)Consent receipts and log exportsCookie inventory and auto-blockingPolicy pages and versioningCMP integrations and tag manager hooks'
     ],
     popular: false,
     icon: '🛡️',
@@ -1171,8 +1150,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Detect and repair data gaps between SaaS APIs and your warehouse/CRM. Provides replay-safe backfills, idempotency, and reconciliation reports.',
     features: [
-      'Gap detection and backfill plansIdempotent replay and deduplicationHash-based reconciliation reportsRate-limit aware workers',
-      'Alerting and failure retriesWarehouse and CRM syncs'
+      'Gap detection and backfill plansIdempotent replay and deduplicationHash-based reconciliation reportsRate-limit aware workersAlerting and failure retriesWarehouse and CRM syncs'
     ],
     popular: false,
     icon: '🔁',
@@ -1209,8 +1187,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Define and monitor data SLAs for freshness and quality. Receive alerts, create tickets, and visualize lineage impacts for downstream consumers.',
     features: [
-      'Freshness and volume checksNull/outlier thresholdsSchema drift detectionLineage visualization',
-      'SLOs and error budgetsSlack/Jira alerts and reports'
+      'Freshness and volume checksNull/outlier thresholdsSchema drift detectionLineage visualizationSLOs and error budgetsSlack/Jira alerts and reports'
     ],
     popular: true,
     icon: '📊',
@@ -1247,8 +1224,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Analyze query plans and table stats to recommend and schedule index changes, vacuum/autovacuum tuning, and bloat remediation.',
     features: [
-      'EXPLAIN plan analysisMissing/unused index detectionAutovacuum and bloat tuningSafe change windows',
-      'Rollback and impact reportsAlerts on regressions'
+      'EXPLAIN plan analysisMissing/unused index detectionAutovacuum and bloat tuningSafe change windowsRollback and impact reportsAlerts on regressions'
     ],
     popular: false,
     icon: '🐘',
@@ -1285,8 +1261,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Continuously compare desired manifests to live resources, enforce policies, and open pull requests to reconcile drift automatically.',
     features: [
-      'Desired vs live diffingOPA/Conftest policy gatesAuto-PR remediationSlack/Jira alerts',
-      'Change history and approvalsMulti-cluster support'
+      'Desired vs live diffingOPA/Conftest policy gatesAuto-PR remediationSlack/Jira alertsChange history and approvalsMulti-cluster support'
     ],
     popular: false,
     icon: '🧭',
@@ -1323,8 +1298,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Pre-audit posture scanner that links integrations to controls, highlights evidence gaps, and produces auditor-friendly reports.',
     features: [
-      'Control mapping templatesEvidence collectors and checksPolicy and process coverageGap analysis and tasks',
-      'Exportable auditor reports'
+      'Control mapping templatesEvidence collectors and checksPolicy and process coverageGap analysis and tasksExportable auditor reports'
     ],
     popular: true,
     icon: '📋',
@@ -1361,8 +1335,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Discover assets across AWS/Azure/GCP, classify risks (public buckets, open ports), and generate remediation tickets with ownership routing.',
     features: [
-      'Multi-cloud asset discoveryPublic exposure detectionOwnership and taggingRisk scoring and SLAs',
-      'Auto-ticket creation'
+      'Multi-cloud asset discoveryPublic exposure detectionOwnership and taggingRisk scoring and SLAsAuto-ticket creation'
     ],
     popular: true,
     icon: '☁️',
@@ -1399,8 +1372,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Continuously test LLM apps against prompt injection, sensitive data exfiltration, and policy violations with trending dashboards and CI gates.',
     features: [
-      'Prompt injection librariesPII/redaction checksSafety regression testsModel/provider matrix',
-      'CI gates and reports'
+      'Prompt injection librariesPII/redaction checksSafety regression testsModel/provider matrixCI gates and reports'
     ],
     popular: false,
     icon: '🧪',
@@ -1437,8 +1409,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Enhances affiliate programs with fraud heuristics, device/identity checks, and payout holds to protect margins.',
     features: [
-      'Self-referral detectionDevice and IP risk signalsVelocity and cohort heuristicsPayout hold workflows',
-      'Appeal and review portal'
+      'Self-referral detectionDevice and IP risk signalsVelocity and cohort heuristicsPayout hold workflowsAppeal and review portal'
     ],
     popular: false,
     icon: '🛑',
@@ -1475,8 +1446,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Pragmatic data governance with automated discovery, column-level lineage, PII tagging, and policy enforcement. Vendor-neutral and dbt-friendly.',
     features: [
-      'Automated table/column discoveryColumn-level lineage and impact analysisPII tagging and masking policiesGlossary and ownership workflows',
-      'dbt/Snowflake/BigQuery integrations'
+      'Automated table/column discoveryColumn-level lineage and impact analysisPII tagging and masking policiesGlossary and ownership workflowsdbt/Snowflake/BigQuery integrations'
     ],
     popular: true,
     icon: '🗂️',
@@ -1513,8 +1483,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Plug-and-play personalization for storefronts. Learns from behavior and catalog to optimize recommendations, bundles, and on-site promotions.',
     features: [
-      'Session-based and user-based recommendationsBundle and upsell optimizerA/B testing and holdoutsShopify/BigCommerce apps',
-      'Audience segments and API'
+      'Session-based and user-based recommendationsBundle and upsell optimizerA/B testing and holdoutsShopify/BigCommerce appsAudience segments and API'
     ],
     popular: true,
     icon: '🛒',
@@ -1551,8 +1520,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Collect, store, and analyze telemetry from vehicles and devices. Real-time alerts, anomaly detection, geofencing, and maintenance predictions.',
     features: [
-      'MQTT/HTTP ingestion and device registryRules engine and alertingAnomaly detection and forecastingGeofencing and trip analytics',
-      'APIs and dashboards'
+      'MQTT/HTTP ingestion and device registryRules engine and alertingAnomaly detection and forecastingGeofencing and trip analyticsAPIs and dashboards'
     ],
     popular: false,
     icon: '🚚',
@@ -1589,8 +1557,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Shift-left API security with automated scanning in pipelines. Finds OWASP API Top 10 issues, secrets, and misconfigurations with fix guidance.',
     features: [
-      'OWASP API Top 10 checksSecrets and token leakage detectionCI/CD and PR annotationsSBOM and dependency risk',
-      'Reports and Jira tickets'
+      'OWASP API Top 10 checksSecrets and token leakage detectionCI/CD and PR annotationsSBOM and dependency riskReports and Jira tickets'
     ],
     popular: false,
     icon: '🛡️',
@@ -1627,8 +1594,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Edge proxy that adds Turnstile challenges, device fingerprints, and reputation checks in front of forms and APIs. Drop-in protection for signups, login, and sensitive endpoints.',
     features: [
-      'Turnstile token verificationReputation and ASN heuristicsIP/device fingerprintingAdaptive challenges',
-      'Block/allow lists and webhooks'
+      'Turnstile token verificationReputation and ASN heuristicsIP/device fingerprintingAdaptive challengesBlock/allow lists and webhooks'
     ],
     popular: false,
     icon: '🛡️',
@@ -1670,8 +1636,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Point-and-click syncs from BigQuery/Snowflake/Postgres to HubSpot, Salesforce, and ad platforms. Includes scheduling, mapping, and error handling.',
     features: [
-      'Warehouse connectorsField mapping UISchedules and retriesDry-run and diffs',
-      'Row-level filters'
+      'Warehouse connectorsField mapping UISchedules and retriesDry-run and diffsRow-level filters'
     ],
     popular: true,
     icon: '🔄',
@@ -1713,8 +1678,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Ingest past proposals, policies, and docs. Draft high-quality RFP responses with citations, track requirements coverage, and export to Word/PDF.',
     features: [
-      'RAG over proposals & policiesSection templates and stylesEvidence citationsGap coverage tracking',
-      'Word/PDF export'
+      'RAG over proposals & policiesSection templates and stylesEvidence citationsGap coverage trackingWord/PDF export'
     ],
     popular: true,
     icon: '📝',
@@ -1756,8 +1720,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Define tasks and datasets, run multi-model evaluations with judge prompts, track metrics and drift, and block risky deployments with CI gates.',
     features: [
-      'Golden sets and promptsJudge model scoringMulti-model matrixRegression and drift alerts',
-      'CI quality gates'
+      'Golden sets and promptsJudge model scoringMulti-model matrixRegression and drift alertsCI quality gates'
     ],
     popular: false,
     icon: '🧪',
@@ -1799,8 +1762,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Deploy a lightweight consent banner with geo rules, consent receipts, automatic tag blocking, and policy page generator.',
     features: [
-      'Geo rules (EEA/UK/US states)Consent receipts & exportsAuto-blocking for tagsPolicy page generator',
-      'A/B banner tests'
+      'Geo rules (EEA/UK/US states)Consent receipts & exportsAuto-blocking for tagsPolicy page generatorA/B banner tests'
     ],
     popular: true,
     icon: '🍪',
@@ -1842,8 +1804,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Render JS pages, rotate IPs, manage robots/politeness, and extract structured data to warehouses with retries and dedupe.',
     features: [
-      'Headless rendering & queuesIP rotation and backoffRobots/politeness guardsDeduplication and diffs',
-      'Warehouse exports'
+      'Headless rendering & queuesIP rotation and backoffRobots/politeness guardsDeduplication and diffsWarehouse exports'
     ],
     popular: false,
     icon: '🕸️',
@@ -1886,8 +1847,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'End‑to‑end returns and exchanges portal with automated label generation, status tracking, disposition rules, and reasons analytics across Shopify and WooCommerce.',
     features: [
-      'Self‑serve returns portalLabel generation and trackingExchange/repair workflowsReturn reasons and defect analytics',
-      'Email/SMS notificationsWarehouse and RMA integrations'
+      'Self‑serve returns portalLabel generation and trackingExchange/repair workflowsReturn reasons and defect analyticsEmail/SMS notificationsWarehouse and RMA integrations'
     ],
     popular: true,
     icon: '📦',
@@ -1929,8 +1889,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Create multi‑step follow‑up sequences for leads and customers with reply/booking detection, throttling, and deliverability insights.',
     features: [
-      'Sequence builder and templatesReply/booking detection and stopsInbox rotation and throttlingA/B testing for subject lines',
-      'Warmup and reputation checksCRM sync and webhooks'
+      'Sequence builder and templatesReply/booking detection and stopsInbox rotation and throttlingA/B testing for subject linesWarmup and reputation checksCRM sync and webhooks'
     ],
     popular: true,
     icon: '📨',
@@ -1972,8 +1931,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Upload episodes to get fast transcripts with speaker diarization, show notes, highlights, SEO chapters, and short social clips.',
     features: [
-      'High‑accuracy transcriptionSpeaker diarizationSummaries and chapteringTopic and keyword extraction',
-      'Clip generator for socialEmbeds and RSS sync'
+      'High‑accuracy transcriptionSpeaker diarizationSummaries and chapteringTopic and keyword extractionClip generator for socialEmbeds and RSS sync'
     ],
     popular: true,
     icon: '🎙️',
@@ -2015,8 +1973,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'No‑code portfolio builder with industry templates, project pages, lead capture forms, and simple SEO for freelancers and agencies.',
     features: [
-      'Drag‑and‑drop templatesCase study generatorContact and booking formsTestimonials and logos',
-      'Basic SEO and analyticsCustom domains'
+      'Drag‑and‑drop templatesCase study generatorContact and booking formsTestimonials and logosBasic SEO and analyticsCustom domains'
     ],
     popular: false,
     icon: '🖼️',
@@ -2058,8 +2015,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Lightweight CRM for local businesses: contacts, notes, tasks, reminders, pipeline stages, and SMS/email nudges.',
     features: [
-      'Contacts and notesReminders and tasksSimple pipeline stagesEmail/SMS nudges',
-      'Import/export and tagsMobile‑friendly UI'
+      'Contacts and notesReminders and tasksSimple pipeline stagesEmail/SMS nudgesImport/export and tagsMobile‑friendly UI'
     ],
     popular: true,
     icon: '📇',
@@ -2101,8 +2057,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Create and score subject lines using language models and historical performance data, export to ESPs and run quick A/B tests.',
     features: [
-      'AI suggestions and variantsTone and length tuningPerformance benchmarksESP export and A/B tests',
-      'Spam words and previewTeam review workflow'
+      'AI suggestions and variantsTone and length tuningPerformance benchmarksESP export and A/B testsSpam words and previewTeam review workflow'
     ],
     popular: false,
     icon: '🧪',
@@ -2144,8 +2099,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Ingest PRs, reviews, and CI to map cycle time, review quality, flaky tests, and hotspots with actionable recommendations.',
     features: [
-      'Cycle time and WIP analysisReview depth and latencyFlaky test detectionRepo hotspots and ownership',
-      'Team scorecards and alertsJira/Linear linkage'
+      'Cycle time and WIP analysisReview depth and latencyFlaky test detectionRepo hotspots and ownershipTeam scorecards and alertsJira/Linear linkage'
     ],
     popular: true,
     icon: '🧩',
@@ -2187,8 +2141,7 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Compliant consent banners, preference center, DSAR intake, and consent logs with exports and region rules.',
     features: [
-      'Geo/rule‑based bannersPreference centerDSAR intake and workflowsCookie catalog and scans',
-      'Consent logs and exportsMulti‑site management'
+      'Geo/rule‑based bannersPreference centerDSAR intake and workflowsCookie catalog and scansConsent logs and exportsMulti‑site management'
     ],
     popular: true,
     icon: '⚖️',

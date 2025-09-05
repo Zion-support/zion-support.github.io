@@ -45,19 +45,16 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     id: 'autonomous-devops-platform',
     name: 'Autonomous DevOps Platform',
     description: 'Fully autonomous DevOps platform that automatically manages infrastructure, deployments, monitoring, and optimization without human intervention, reducing operational overhead by 90%.',
-    category: ['DevOpsAutomationInfrastructureCI/CD', 'Monitoring'],
+    category: ['DevOpsAutomationInfrastructureCI/CDMonitoring'],
     price: '$6,999/month',
     features: [
-      'Autonomous infrastructure managementSelf-healing systemsAutomated deployment pipelinesIntelligent monitoring and alerting',
-      'Performance optimizationSecurity automationCost optimizationPredictive maintenance'
+      'Autonomous infrastructure managementSelf-healing systemsAutomated deployment pipelinesIntelligent monitoring and alertingPerformance optimizationSecurity automationCost optimizationPredictive maintenance'
     ],
     benefits: [
-      'Reduce operational costs by 90%Improve system reliability by 99.9%Accelerate deployment cycles by 10xEliminate manual interventions',
-      'Enhance security postureOptimize resource utilization'
+      'Reduce operational costs by 90%Improve system reliability by 99.9%Accelerate deployment cycles by 10xEliminate manual interventionsEnhance security postureOptimize resource utilization'
     ],
     useCases: [
-      'Enterprise DevOps transformationCloud infrastructure managementMicroservices deploymentContinuous integration/deployment',
-      'Infrastructure automationPerformance optimization'
+      'Enterprise DevOps transformationCloud infrastructure managementMicroservices deploymentContinuous integration/deploymentInfrastructure automationPerformance optimization'
     ],
     marketSize: '$25.8B by 2029',
     competitors: ['GitLabJenkinsCircleCIGitHub Actions'],
@@ -95,19 +92,16 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     id: 'quantum-cloud-infrastructure',
     name: 'Quantum Cloud Infrastructure',
     description: 'Next-generation quantum-enhanced cloud infrastructure that provides quantum computing capabilities, quantum-safe security, and unprecedented performance for enterprise applications.',
-    category: ['Cloud ComputingQuantum ComputingInfrastructureSecurity', 'Performance'],
+    category: ['Cloud ComputingQuantum ComputingInfrastructureSecurityPerformance'],
     price: '$18,999/month',
     features: [
-      'Quantum computing resourcesQuantum-safe encryptionHybrid quantum-classical computingQuantum networking capabilities',
-      'Quantum storage solutionsQuantum security protocolsPerformance optimizationScalable quantum resources'
+      'Quantum computing resourcesQuantum-safe encryptionHybrid quantum-classical computingQuantum networking capabilitiesQuantum storage solutionsQuantum security protocolsPerformance optimizationScalable quantum resources'
     ],
     benefits: [
-      'Quantum computing capabilitiesUnbreakable securityExponential performance gainsFuture-proof infrastructure',
-      'Competitive advantageLong-term investment value'
+      'Quantum computing capabilitiesUnbreakable securityExponential performance gainsFuture-proof infrastructureCompetitive advantageLong-term investment value'
     ],
     useCases: [
-      'Scientific computingFinancial modelingCryptography researchMachine learning acceleration',
-      'Optimization problemsResearch and development'
+      'Scientific computingFinancial modelingCryptography researchMachine learning accelerationOptimization problemsResearch and development'
     ],
     marketSize: '$35.2B by 2029',
     competitors: ['AWSMicrosoft AzureGoogle CloudIBM Cloud'],
@@ -145,19 +139,16 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     id: 'ai-powered-enterprise-security',
     name: 'AI-Powered Enterprise Security',
     description: 'Advanced AI-driven enterprise security platform that provides real-time threat detection, automated response, and predictive security analytics to protect against evolving cyber threats.',
-    category: ['CybersecurityAIEnterprise SecurityThreat Detection', 'Automation'],
+    category: ['CybersecurityAIEnterprise SecurityThreat DetectionAutomation'],
     price: '$9,999/month',
     features: [
-      'AI-powered threat detectionReal-time security monitoringAutomated incident responsePredictive threat analytics',
-      'Behavioral analysisZero-day threat protectionSecurity automationCompliance management'
+      'AI-powered threat detectionReal-time security monitoringAutomated incident responsePredictive threat analyticsBehavioral analysisZero-day threat protectionSecurity automationCompliance management'
     ],
     benefits: [
-      'Detect threats 10x fasterReduce false positives by 80%Automate security responsesImprove threat prevention',
-      'Enhance compliance postureReduce security team workload'
+      'Detect threats 10x fasterReduce false positives by 80%Automate security responsesImprove threat preventionEnhance compliance postureReduce security team workload'
     ],
     useCases: [
-      'Enterprise security operationsThreat intelligenceIncident responseCompliance management',
-      'Security automationRisk assessment'
+      'Enterprise security operationsThreat intelligenceIncident responseCompliance managementSecurity automationRisk assessment'
     ],
     marketSize: '$38.7B by 2029',
     competitors: ['CrowdStrikeSentinelOneDarktraceCylance'],
@@ -195,19 +186,16 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     id: 'autonomous-it-operations-center',
     name: 'Autonomous IT Operations Center',
     description: 'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal performance.',
-    category: ['IT OperationsAutomationInfrastructureMonitoring', 'Management'],
+    category: ['IT OperationsAutomationInfrastructureMonitoringManagement'],
     price: '$14,999/month',
     features: [
-      'Autonomous infrastructure managementSelf-healing systemsPredictive maintenancePerformance optimization',
-      'Capacity planningAutomated troubleshootingIntelligent resource allocationContinuous optimization'
+      'Autonomous infrastructure managementSelf-healing systemsPredictive maintenancePerformance optimizationCapacity planningAutomated troubleshootingIntelligent resource allocationContinuous optimization'
     ],
     benefits: [
-      'Achieve 99.99% uptimeReduce operational costs by 85%Eliminate manual interventionsImprove system performance',
-      'Enhance user experienceOptimize resource utilization'
+      'Achieve 99.99% uptimeReduce operational costs by 85%Eliminate manual interventionsImprove system performanceEnhance user experienceOptimize resource utilization'
     ],
     useCases: [
-      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automation',
-      'Service desk automationIT service management'
+      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
     ],
     marketSize: '$28.9B by 2029',
     competitors: ['ServiceNowBMCMicro FocusIvanti'],

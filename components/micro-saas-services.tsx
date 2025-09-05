@@ -31,16 +31,14 @@ export default function MicroSaasServicesPage() {
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       gradient: 'from-purple-400 to-pink-500',
       features: [
-        'AI-powered content generationMultiple content types (blog, social, email)SEO optimization suggestionsContent templates library',
-        'Plagiarism-free contentMulti-language support'
+        'AI-powered content generationMultiple content types (blog, social, email)SEO optimization suggestionsContent templates libraryPlagiarism-free contentMulti-language support'
       ],
       useCases: [
-        'Blog content creationSocial media postsEmail marketing campaignsProduct descriptions',
-        'Landing page copyNewsletter content'
+        'Blog content creationSocial media postsEmail marketing campaignsProduct descriptionsLanding page copyNewsletter content'
       ],
       pricing: {
         starter: { price: 29, features: ['100 generations/monthBasic templatesSEO analysisEmail support'] },
-        professional: { price: 99, features: ['500 generations/monthPremium templatesAdvanced SEOPriority support', 'API access'] },
+        professional: { price: 99, features: ['500 generations/monthPremium templatesAdvanced SEOPriority supportAPI access'] },
         enterprise: { price: 299, features: ['Unlimited generationsCustom templatesWhite-label optionsSLA guarantee'] }
       },
       marketPrice: '$29-299/month',
@@ -56,17 +54,15 @@ export default function MicroSaasServicesPage() {
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500',
       features: [
-        'Real-time performance monitoringCore Web Vitals trackingUptime monitoringPerformance alerts',
-        'Historical data analysisOptimization recommendations'
+        'Real-time performance monitoringCore Web Vitals trackingUptime monitoringPerformance alertsHistorical data analysisOptimization recommendations'
       ],
       useCases: [
-        'Website performance trackingUser experience monitoringSEO performance optimizationServer health monitoring',
-        'CDN performance analysisMobile performance testing'
+        'Website performance trackingUser experience monitoringSEO performance optimizationServer health monitoringCDN performance analysisMobile performance testing'
       ],
       pricing: {
-        starter: { price: 19, features: ['5 URLs5-min monitoringBasic metricsEmail alerts', '7-day retention'] },
-        professional: { price: 49, features: ['25 URLs1-min monitoringAdvanced metricsMultiple alerts', '30-day retentionAPI access'] },
-        enterprise: { price: 149, features: ['Unlimited URLsReal-time monitoringAll metricsCustom dashboards', '1-year retentionSLA guarantee'] }
+        starter: { price: 19, features: ['5 URLs5-min monitoringBasic metricsEmail alerts7-day retention'] },
+        professional: { price: 49, features: ['25 URLs1-min monitoringAdvanced metricsMultiple alerts30-day retentionAPI access'] },
+        enterprise: { price: 149, features: ['Unlimited URLsReal-time monitoringAll metricsCustom dashboards1-year retentionSLA guarantee'] }
       },
       marketPrice: '$19-149/month',
       competitors: ['PingdomGTmetrixWebPageTest'],
@@ -81,17 +77,15 @@ export default function MicroSaasServicesPage() {
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500',
       features: [
-        'Keyword tracking & rankingCompetitor analysisBacklink monitoringTechnical SEO audits',
-        'Performance reportingMobile optimization insights'
+        'Keyword tracking & rankingCompetitor analysisBacklink monitoringTechnical SEO auditsPerformance reportingMobile optimization insights'
       ],
       useCases: [
-        'SEO performance trackingCompetitor researchKeyword strategy developmentTechnical SEO audits',
-        'Link building campaignsContent optimization'
+        'SEO performance trackingCompetitor researchKeyword strategy developmentTechnical SEO auditsLink building campaignsContent optimization'
       ],
       pricing: {
-        starter: { price: 39, features: ['100 keywordsBasic analysisMonthly reportsEmail support', '7-day retention'] },
-        professional: { price: 89, features: ['500 keywordsAdvanced analysisWeekly reportsPriority support', '30-day retentionAPI access'] },
-        enterprise: { price: 199, features: ['Unlimited keywordsFull SEO suiteDaily reportsDedicated support', '1-year retentionWhite-label options'] }
+        starter: { price: 39, features: ['100 keywordsBasic analysisMonthly reportsEmail support7-day retention'] },
+        professional: { price: 89, features: ['500 keywordsAdvanced analysisWeekly reportsPriority support30-day retentionAPI access'] },
+        enterprise: { price: 199, features: ['Unlimited keywordsFull SEO suiteDaily reportsDedicated support1-year retentionWhite-label options'] }
       },
       marketPrice: '$39-199/month',
       competitors: ['AhrefsSEMrushMoz'],
@@ -106,17 +100,15 @@ export default function MicroSaasServicesPage() {
       color: 'bg-gradient-to-br from-red-500 to-orange-600',
       gradient: 'from-red-400 to-orange-500',
       features: [
-        'Intelligent rate limitingTraffic pattern analysisAPI key managementReal-time monitoring',
-        'Custom rules & policiesComprehensive analytics'
+        'Intelligent rate limitingTraffic pattern analysisAPI key managementReal-time monitoringCustom rules & policiesComprehensive analytics'
       ],
       useCases: [
-        'API protection & securityTraffic managementDeveloper portal managementMicroservices protection',
-        'SaaS API securityEnterprise API governance'
+        'API protection & securityTraffic managementDeveloper portal managementMicroservices protectionSaaS API securityEnterprise API governance'
       ],
       pricing: {
-        starter: { price: 25, features: ['10 rate limit rulesBasic limitingAPI key managementEmail notifications', '7-day retention'] },
-        professional: { price: 79, features: ['50 rate limit rulesAdvanced limitingUnlimited API keysReal-time monitoring', '30-day retentionAPI access'] },
-        enterprise: { price: 199, features: ['Unlimited rulesEnterprise securityAdvanced featuresCustom integrations', '1-year retentionSLA guarantee'] }
+        starter: { price: 25, features: ['10 rate limit rulesBasic limitingAPI key managementEmail notifications7-day retention'] },
+        professional: { price: 79, features: ['50 rate limit rulesAdvanced limitingUnlimited API keysReal-time monitoring30-day retentionAPI access'] },
+        enterprise: { price: 199, features: ['Unlimited rulesEnterprise securityAdvanced featuresCustom integrations1-year retentionSLA guarantee'] }
       },
       marketPrice: '$25-199/month',
       competitors: ['KongTykAWS API Gateway'],
@@ -131,17 +123,15 @@ export default function MicroSaasServicesPage() {
       color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
       gradient: 'from-indigo-400 to-purple-500',
       features: [
-        'Drag & drop email builderAdvanced automation workflowsA/B testing & optimizationSubscriber segmentation',
-        'Performance analyticsTemplate library'
+        'Drag & drop email builderAdvanced automation workflowsA/B testing & optimizationSubscriber segmentationPerformance analyticsTemplate library'
       ],
       useCases: [
-        'Newsletter campaignsWelcome series automationAbandoned cart recoveryProduct announcements',
-        'Customer onboardingLead nurturing'
+        'Newsletter campaignsWelcome series automationAbandoned cart recoveryProduct announcementsCustomer onboardingLead nurturing'
       ],
       pricing: {
-        starter: { price: 29, features: ['1,000 subscribersBasic templatesSimple automationBasic analytics', 'Email support'] },
-        professional: { price: 79, features: ['10,000 subscribersAdvanced templatesAdvanced automationAdvanced analytics', 'Priority supportAPI access'] },
-        enterprise: { price: 199, features: ['Unlimited subscribersCustom templatesComplex workflowsEnterprise analytics', 'Dedicated supportWhite-label options'] }
+        starter: { price: 29, features: ['1,000 subscribersBasic templatesSimple automationBasic analyticsEmail support'] },
+        professional: { price: 79, features: ['10,000 subscribersAdvanced templatesAdvanced automationAdvanced analyticsPriority supportAPI access'] },
+        enterprise: { price: 199, features: ['Unlimited subscribersCustom templatesComplex workflowsEnterprise analyticsDedicated supportWhite-label options'] }
       },
       marketPrice: '$29-199/month',
       competitors: ['MailchimpConvertKitActiveCampaign'],
@@ -156,17 +146,15 @@ export default function MicroSaasServicesPage() {
       color: 'bg-gradient-to-br from-pink-500 to-rose-600',
       gradient: 'from-pink-400 to-rose-500',
       features: [
-        'Multi-platform schedulingContent calendar managementCampaign planning toolsPerformance analytics',
-        'Team collaborationAuto-posting & optimization'
+        'Multi-platform schedulingContent calendar managementCampaign planning toolsPerformance analyticsTeam collaborationAuto-posting & optimization'
       ],
       useCases: [
-        'Social media managementContent calendar planningCampaign coordinationTeam collaboration',
-        'Performance trackingBrand consistency'
+        'Social media managementContent calendar planningCampaign coordinationTeam collaborationPerformance trackingBrand consistency'
       ],
       pricing: {
-        starter: { price: 19, features: ['3 social accountsBasic schedulingSimple calendarBasic analytics', 'Email support'] },
-        professional: { price: 49, features: ['10 social accountsAdvanced schedulingContent calendarAdvanced analytics', 'Priority supportAPI access'] },
-        enterprise: { price: 129, features: ['Unlimited accountsEnterprise schedulingAdvanced calendarEnterprise analytics', 'Dedicated supportWhite-label options'] }
+        starter: { price: 19, features: ['3 social accountsBasic schedulingSimple calendarBasic analyticsEmail support'] },
+        professional: { price: 49, features: ['10 social accountsAdvanced schedulingContent calendarAdvanced analyticsPriority supportAPI access'] },
+        enterprise: { price: 129, features: ['Unlimited accountsEnterprise schedulingAdvanced calendarEnterprise analyticsDedicated supportWhite-label options'] }
       },
       marketPrice: '$19-129/month',
       competitors: ['BufferHootsuiteLater'],

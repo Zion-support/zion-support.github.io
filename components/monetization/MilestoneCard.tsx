@@ -7,7 +7,7 @@ type Props = {
   onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void
 },
 
-const statusSteps = ['PendingIn ProgressSubmittedApproved', 'Paid'] as const,
+const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const,
 
 export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {
   const [expanded, setExpanded] = useState(false),

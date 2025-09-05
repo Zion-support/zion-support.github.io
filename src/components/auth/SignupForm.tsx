@@ -154,8 +154,8 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     
     strength = checks.filter(Boolean).length,
     
-    const labels = ['Very WeakWeakFairGood', 'Strong'],
-    const colors = ['bg-red-500bg-orange-500bg-yellow-500bg-blue-500', 'bg-green-500'],
+    const labels = ['Very WeakWeakFairGoodStrong'],
+    const colors = ['bg-red-500bg-orange-500bg-yellow-500bg-blue-500bg-green-500'],
     
     return {
       strength,

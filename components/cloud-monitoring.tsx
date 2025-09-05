@@ -47,22 +47,22 @@ export default function CloudMonitoringPage() {
     {
       category: 'Infrastructure',
       icon: <Server className="w-6 h-6 text-blue-400" />,
-      metrics: ['CPU UsageMemory UtilizationDisk I/ONetwork Performance', 'Container Metrics']
+      metrics: ['CPU UsageMemory UtilizationDisk I/ONetwork PerformanceContainer Metrics']
     },
     {
       category: 'Applications',
       icon: <Code className="w-6 h-6 text-green-400" />,
-      metrics: ['Response TimeError RatesThroughputUser Experience', 'API Performance']
+      metrics: ['Response TimeError RatesThroughputUser ExperienceAPI Performance']
     },
     {
       category: 'Databases',
       icon: <Database className="w-6 h-6 text-purple-400" />,
-      metrics: ['Query PerformanceConnection PoolIndex UsageReplication Lag', 'Storage Growth']
+      metrics: ['Query PerformanceConnection PoolIndex UsageReplication LagStorage Growth']
     },
     {
       category: 'Security',
       icon: <Shield className="w-6 h-6 text-red-400" />,
-      metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance Status', 'Audit Trails']
+      metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance StatusAudit Trails']
     }
   ],
 
@@ -73,8 +73,7 @@ export default function CloudMonitoringPage() {
       period: '/month',
       description: 'Perfect for small teams and startups',
       features: [
-        'Up to 10 serversBasic monitoringEmail alerts7-day data retention',
-        'Community supportMobile app access'
+        'Up to 10 serversBasic monitoringEmail alerts7-day data retentionCommunity supportMobile app access'
       ],
       popular: false,
       color: 'border-gray-600',
@@ -86,8 +85,7 @@ export default function CloudMonitoringPage() {
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 100 serversAdvanced monitoringSMS & Slack alerts30-day data retention',
-        'Priority supportCustom dashboardsAPI accessTeam collaboration'
+        'Up to 100 serversAdvanced monitoringSMS & Slack alerts30-day data retentionPriority supportCustom dashboardsAPI accessTeam collaboration'
       ],
       popular: true,
       color: 'border-blue-500',
@@ -99,8 +97,7 @@ export default function CloudMonitoringPage() {
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited serversFull monitoring suiteCustom integrations1-year data retention',
-        'Dedicated supportWhite-label solutionSLA guaranteeOn-premise option'
+        'Unlimited serversFull monitoring suiteCustom integrations1-year data retentionDedicated supportWhite-label solutionSLA guaranteeOn-premise option'
       ],
       popular: false,
       color: 'border-purple-600',

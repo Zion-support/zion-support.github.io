@@ -78,8 +78,7 @@ export default function PricingPage() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 50+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free Trial',
-        'Basic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
+        'Access to 50+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
       ],
       icon: <Sparkles className="w-8 h-8" />,
       variant: 'quantum' as const,
@@ -94,8 +93,7 @@ export default function PricingPage() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 200+ Premium ServicesAdvanced AI & Quantum ComputingPriority Support (24/7)60-Day Free Trial',
-        'Advanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security & Compliance',
+        'Access to 200+ Premium ServicesAdvanced AI & Quantum ComputingPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security & Compliance',
         'Custom IntegrationsTeam Collaboration ToolsAPI AccessWhite-label Options'
       ],
       icon: <Crown className="w-8 h-8" />,
@@ -111,10 +109,8 @@ export default function PricingPage() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to ALL 500+ ServicesFull Quantum AI & Autonomous SystemsDedicated Support Team (24/7)90-Day Free Trial',
-        'Enterprise Analytics & AI InsightsDedicated Account Manager99.99% Uptime SLAEnterprise Security & Compliance',
-        'Custom Development ServicesAdvanced Team ManagementFull API & SDK AccessCustom Branding & White-label',
-        'On-premise Deployment OptionsAdvanced AI Training & CustomizationPriority Feature DevelopmentGlobal Infrastructure Access'
+        'Access to ALL 500+ ServicesFull Quantum AI & Autonomous SystemsDedicated Support Team (24/7)90-Day Free TrialEnterprise Analytics & AI InsightsDedicated Account Manager99.99% Uptime SLAEnterprise Security & Compliance',
+        'Custom Development ServicesAdvanced Team ManagementFull API & SDK AccessCustom Branding & White-labelOn-premise Deployment OptionsAdvanced AI Training & CustomizationPriority Feature DevelopmentGlobal Infrastructure Access'
       ],
       icon: <Rocket className="w-8 h-8" />,
       variant: 'neural' as const,

@@ -64,7 +64,7 @@ function extractLocation(text: string): string | undefined {
 }
 
 const COMMON_SKILLS = [
-  'reactnext.jsnodetypescript', 'javascriptpythonawsgcp', 'azurekubernetesdevopsdocker', 'terraformraglangchainopenai', 'nlppytorchrustpostgresql'
+  'reactnext.jsnodetypescriptjavascriptpythonawsgcp', 'azurekubernetesdevopsdockerterraformraglangchainopenai', 'nlppytorchrustpostgresql'
 ],
 
 function extractSkills(text: string): string[] {
@@ -87,7 +87,7 @@ function extractKeywords(text: string): string[] {
     .replace(/[^a-z0-9\s]/g, ' ')
     .split(/\s+/)
     .filter(Boolean)
-    .filter((w) => w.length > 2 && !['showmewithand', 'fortheaan', 'tobyofunder', 'overin'].includes(w))
+    .filter((w) => w.length > 2 && !['showmewithandfortheaan', 'tobyofunderoverin'].includes(w))
 }
 
 export async function parseQueryToFilters(query: string): Promise<ParsedFilters> {

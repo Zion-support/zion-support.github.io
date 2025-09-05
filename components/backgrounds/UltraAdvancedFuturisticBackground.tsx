@@ -48,11 +48,11 @@ export default function UltraAdvancedFuturisticBackground({
     }> = [],
 
     const colors = {
-      quantum: ['#00ffff#ff00ff#ffff00#00ff00', '#ff0080#8000ff#00ffff'],
-      neon: ['#ff0066#00ffff#ff6600#9900ff', '#00ff99#ff1493#00bfff'],
-      holographic: ['#ff1493#00bfff#ffd700#7fff00', '#ff69b4#00ced1#ff4500'],
-      cyberpunk: ['#ff0066#00ffff#ff6600#9900ff', '#00ff99#ff1493#00bfff'],
-      'quantum-fusion': ['#00ffff#ff00ff#ffff00#00ff00', '#ff0080#8000ff#00ffff#ff1493', '#00bfff']
+      quantum: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff'],
+      neon: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'],
+      holographic: ['#ff1493#00bfff#ffd700#7fff00#ff69b4#00ced1#ff4500'],
+      cyberpunk: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'],
+      'quantum-fusion': ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff#ff1493', '#00bfff']
     },
 
     const selectedColors = colors[theme] || colors.quantum,

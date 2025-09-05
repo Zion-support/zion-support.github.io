@@ -11,8 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   try {
     const seedTopics = [
-      'AI Devs in BrazilAI Devs in KenyaAI Devs in VietnamRent Servers in Kabul',
-      'Rent Servers in NairobiLLM Engineers in TorontoCybersecurity Experts in BerlinCloud Architects in Lisbon'],
+      'AI Devs in BrazilAI Devs in KenyaAI Devs in VietnamRent Servers in KabulRent Servers in NairobiLLM Engineers in TorontoCybersecurity Experts in BerlinCloud Architects in Lisbon'],
 
     const picks = seedTopics.sort(() => 0.5 - Math.random()).slice(0, 4),
 

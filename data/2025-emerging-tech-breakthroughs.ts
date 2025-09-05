@@ -50,8 +50,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     period: '/month',
     description: 'Revolutionary brain-computer interface platform that enables direct communication between the human brain and computers for medical applications, gaming, and productivity enhancement.',
     features: [
-      'Non-invasive neural signal processingReal-time brain activity monitoringThought-to-text conversionBrain-controlled applications',
-      'Medical rehabilitation toolsGaming and entertainmentProductivity enhancementAccessibility solutions',
+      'Non-invasive neural signal processingReal-time brain activity monitoringThought-to-text conversionBrain-controlled applicationsMedical rehabilitation toolsGaming and entertainmentProductivity enhancementAccessibility solutions',
       'Research and development toolsCustom application development'
     ],
     popular: true,
@@ -96,8 +95,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     period: '/month',
     description: 'Next-generation quantum internet security platform that provides unbreakable encryption and secure communication protocols for the quantum internet era.',
     features: [
-      'Quantum key distribution networksPost-quantum cryptographyQuantum-resistant algorithmsSecure quantum communication',
-      'Quantum network monitoringQuantum state verificationMulti-party quantum protocolsQuantum memory systems',
+      'Quantum key distribution networksPost-quantum cryptographyQuantum-resistant algorithmsSecure quantum communicationQuantum network monitoringQuantum state verificationMulti-party quantum protocolsQuantum memory systems',
       'Quantum entanglement distributionCompliance and audit tools'
     ],
     popular: true,
@@ -142,8 +140,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     period: '/month',
     description: 'Revolutionary space mining operations platform that enables automated asteroid mining, resource extraction, and space resource management for commercial space operations.',
     features: [
-      'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics management',
-      'Resource processing facilitiesSpace transportation coordinationEnvironmental impact monitoringRegulatory compliance tools',
+      'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics managementResource processing facilitiesSpace transportation coordinationEnvironmental impact monitoringRegulatory compliance tools',
       'Resource valuation and tradingSpace infrastructure management'
     ],
     popular: true,
@@ -188,8 +185,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     period: '/month',
     description: 'Advanced quantum robotics platform that leverages quantum computing for enhanced robot intelligence, decision-making, and autonomous operations in complex environments.',
     features: [
-      'Quantum-enhanced AI algorithmsQuantum sensor integrationAdvanced autonomous navigationQuantum machine learning',
-      'Multi-robot coordinationQuantum optimization algorithmsReal-time quantum processingAdvanced perception systems',
+      'Quantum-enhanced AI algorithmsQuantum sensor integrationAdvanced autonomous navigationQuantum machine learningMulti-robot coordinationQuantum optimization algorithmsReal-time quantum processingAdvanced perception systems',
       'Adaptive learning capabilitiesQuantum communication networks'
     ],
     popular: true,
@@ -234,8 +230,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     period: '/month',
     description: 'Revolutionary autonomous vehicle AI platform that enables fully self-driving vehicles with advanced perception, decision-making, and safety systems powered by AI and quantum computing.',
     features: [
-      'Advanced computer vision systemsReal-time decision makingPredictive safety algorithmsMulti-sensor fusion',
-      'Quantum-enhanced navigationAdaptive learning systemsFleet management capabilitiesSafety monitoring and alerts',
+      'Advanced computer vision systemsReal-time decision makingPredictive safety algorithmsMulti-sensor fusionQuantum-enhanced navigationAdaptive learning systemsFleet management capabilitiesSafety monitoring and alerts',
       'Regulatory compliance toolsPerformance analytics'
     ],
     popular: true,
@@ -280,8 +275,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     period: '/month',
     description: 'Advanced quantum materials discovery platform that accelerates the development of new materials, drugs, and chemicals using quantum computing and AI-powered simulations.',
     features: [
-      'Quantum molecular simulationsAI-powered material designDrug discovery algorithmsChemical property prediction',
-      'Material performance optimizationQuantum chemistry calculationsHigh-throughput screeningProperty prediction models',
+      'Quantum molecular simulationsAI-powered material designDrug discovery algorithmsChemical property predictionMaterial performance optimizationQuantum chemistry calculationsHigh-throughput screeningProperty prediction models',
       'Optimization algorithmsResearch collaboration tools'
     ],
     popular: true,
@@ -326,8 +320,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     period: '/month',
     description: 'Comprehensive metaverse AI development platform that enables the creation of intelligent virtual worlds, AI-powered NPCs, and dynamic environments with advanced AI capabilities.',
     features: [
-      'AI-powered NPC generationDynamic world creationIntelligent environment adaptationAI behavior modeling',
-      'Real-time world generationUser interaction AIContent personalizationVirtual economy management',
+      'AI-powered NPC generationDynamic world creationIntelligent environment adaptationAI behavior modelingReal-time world generationUser interaction AIContent personalizationVirtual economy management',
       'AI-powered storytellingCross-platform deployment'
     ],
     popular: true,

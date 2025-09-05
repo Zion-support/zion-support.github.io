@@ -38,8 +38,7 @@ export default function EmailValidatorPage() {
     
     // Check for common disposable email domains
     const disposableDomains = [
-      'tempmail.orgguerrillamail.commailinator.com10minutemail.com',
-      'throwaway.emailtemp-mail.orgsharklasers.comgetairmail.com'
+      'tempmail.orgguerrillamail.commailinator.com10minutemail.comthrowaway.emailtemp-mail.orgsharklasers.comgetairmail.com'
     ],
     
     // Check for common typos

@@ -41,7 +41,7 @@ export default async function handler(
     
     // Check for common patterns
     const commonPatterns = [
-      '123abcqwepassword', 'adminusertest123456', 'password123admin123qwertyasdf'
+      '123abcqwepasswordadminusertest123456', 'password123admin123qwertyasdf'
     ],
     const hasCommonPatterns = commonPatterns.some(pattern => 
       password.toLowerCase().includes(pattern)

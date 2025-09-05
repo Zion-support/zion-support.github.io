@@ -49,8 +49,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     period: '/month',
     description: 'Revolutionary cybersecurity platform that combines quantum encryption, AI threat detection, and zero-trust architecture to provide unhackable security for enterprises and governments.',
     features: [
-      'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat response',
-      'Quantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration'
+      'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration'
     ],
     popular: true,
     icon: '🔒',
@@ -63,9 +62,9 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     setupTime: '8 hours',
     category: 'Cybersecurity & Quantum Security',
     realService: true,
-    technology: ['Quantum ComputingAI/MLZero TrustPython', 'Quantum APIsCloud Security'],
+    technology: ['Quantum ComputingAI/MLZero TrustPythonQuantum APIsCloud Security'],
     integrations: ['SIEM systemsFirewallsIdentity providersSecurity tools'],
-    useCases: ['Enterprise securityGovernment securityFinancial securityHealthcare security', 'Defense security'],
+    useCases: ['Enterprise securityGovernment securityFinancial securityHealthcare securityDefense security'],
     roi: 'Enterprises see 4000%+ ROI through unhackable security and reduced breach risks.',
     competitors: ['Palo Alto NetworksCrowdStrikeSentinelOne'],
     marketSize: '$200B cybersecurity market',
@@ -93,8 +92,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     period: '/month',
     description: 'Revolutionary cloud infrastructure platform that integrates quantum computing with traditional cloud services, providing unlimited processing power and quantum-enhanced applications.',
     features: [
-      'Quantum computing integrationHybrid quantum-classical workloadsQuantum application developmentQuantum database optimization',
-      'Quantum machine learningQuantum simulation servicesQuantum API gatewayQuantum security services'
+      'Quantum computing integrationHybrid quantum-classical workloadsQuantum application developmentQuantum database optimizationQuantum machine learningQuantum simulation servicesQuantum API gatewayQuantum security services'
     ],
     popular: true,
     icon: '☁️',
@@ -107,9 +105,9 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     setupTime: '10 hours',
     category: 'Quantum Cloud & Infrastructure',
     realService: true,
-    technology: ['Quantum ComputingCloud ComputingContainer OrchestrationPython', 'QiskitKubernetes'],
-    integrations: ['AWSAzureGoogle CloudDocker', 'Kubernetes'],
-    useCases: ['Quantum application developmentAI/ML workloadsScientific computingFinancial modeling', 'Drug discovery'],
+    technology: ['Quantum ComputingCloud ComputingContainer OrchestrationPythonQiskitKubernetes'],
+    integrations: ['AWSAzureGoogle CloudDockerKubernetes'],
+    useCases: ['Quantum application developmentAI/ML workloadsScientific computingFinancial modelingDrug discovery'],
     roi: 'Enterprises see 5000%+ ROI through quantum-enhanced applications and unlimited processing power.',
     competitors: ['AWSAzureGoogle Cloud'],
     marketSize: '$500B cloud computing market',
@@ -137,8 +135,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     period: '/month',
     description: 'Revolutionary DevOps platform that autonomously manages infrastructure, automatically detects and resolves issues, and continuously optimizes performance without human intervention.',
     features: [
-      'Self-healing infrastructureAI-powered incident responseAutomated scalingPredictive maintenance',
-      'Zero-downtime deploymentsPerformance optimizationSecurity automationCompliance management'
+      'Self-healing infrastructureAI-powered incident responseAutomated scalingPredictive maintenanceZero-downtime deploymentsPerformance optimizationSecurity automationCompliance management'
     ],
     popular: true,
     icon: '🚀',
@@ -151,9 +148,9 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     setupTime: '6 hours',
     category: 'Autonomous DevOps & Infrastructure',
     realService: true,
-    technology: ['AI/MLDevOpsKubernetesPython', 'TerraformAnsible'],
-    integrations: ['GitHubJenkinsDockerKubernetes', 'Cloud providers'],
-    useCases: ['Continuous deploymentInfrastructure managementPerformance optimizationSecurity automation', 'Compliance management'],
+    technology: ['AI/MLDevOpsKubernetesPythonTerraformAnsible'],
+    integrations: ['GitHubJenkinsDockerKubernetesCloud providers'],
+    useCases: ['Continuous deploymentInfrastructure managementPerformance optimizationSecurity automationCompliance management'],
     roi: 'Enterprises see 3000%+ ROI through reduced downtime and automated operations.',
     competitors: ['GitLabJenkinsCircleCI'],
     marketSize: '$150B DevOps market',
@@ -181,8 +178,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     period: '/month',
     description: 'Revolutionary data management platform that uses AI to ensure 100% data quality, zero data loss, and intelligent data governance across all enterprise systems.',
     features: [
-      '100% data quality assuranceZero data loss protectionAI-powered data governanceAutomated data cleaning',
-      'Intelligent data classificationReal-time data validationData lineage trackingCompliance automation'
+      '100% data quality assuranceZero data loss protectionAI-powered data governanceAutomated data cleaningIntelligent data classificationReal-time data validationData lineage trackingCompliance automation'
     ],
     popular: true,
     icon: '🧠',
@@ -195,9 +191,9 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     setupTime: '8 hours',
     category: 'AI Data Management & Governance',
     realService: true,
-    technology: ['AI/MLData EngineeringBig DataPython', 'Apache SparkData APIs'],
-    integrations: ['DatabasesData warehousesETL toolsAnalytics platforms', 'Business intelligence tools'],
-    useCases: ['Data quality managementData governanceData integrationAnalytics optimization', 'Compliance management'],
+    technology: ['AI/MLData EngineeringBig DataPythonApache SparkData APIs'],
+    integrations: ['DatabasesData warehousesETL toolsAnalytics platformsBusiness intelligence tools'],
+    useCases: ['Data quality managementData governanceData integrationAnalytics optimizationCompliance management'],
     roi: 'Enterprises see 2500%+ ROI through improved data quality and reduced data loss.',
     competitors: ['InformaticaTalendAlteryx'],
     marketSize: '$100B data management market',
@@ -225,8 +221,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     period: '/month',
     description: 'Revolutionary edge computing platform that orchestrates distributed computing resources, IoT devices, and edge applications with zero latency and unlimited scale.',
     features: [
-      'Zero latency edge computingUnlimited IoT device scalingIntelligent edge orchestrationReal-time edge analytics',
-      'Edge AI deploymentAutomatic edge optimizationEdge security managementMulti-cloud edge integration'
+      'Zero latency edge computingUnlimited IoT device scalingIntelligent edge orchestrationReal-time edge analyticsEdge AI deploymentAutomatic edge optimizationEdge security managementMulti-cloud edge integration'
     ],
     popular: true,
     icon: '🌐',
@@ -239,9 +234,9 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     setupTime: '8 hours',
     category: 'Edge Computing & IoT Orchestration',
     realService: true,
-    technology: ['Edge ComputingIoTAI/MLPython', 'KubernetesEdge APIs'],
-    integrations: ['IoT platformsEdge devicesCloud providers5G networks', 'Industrial systems'],
-    useCases: ['IoT device managementEdge AI deploymentReal-time analyticsSmart manufacturing', 'Autonomous vehicles'],
+    technology: ['Edge ComputingIoTAI/MLPythonKubernetesEdge APIs'],
+    integrations: ['IoT platformsEdge devicesCloud providers5G networksIndustrial systems'],
+    useCases: ['IoT device managementEdge AI deploymentReal-time analyticsSmart manufacturingAutonomous vehicles'],
     roi: 'IoT companies see 3000%+ ROI through zero latency and unlimited scalability.',
     competitors: ['AWS GreengrassAzure IoT EdgeGoogle Cloud IoT'],
     marketSize: '$150B edge computing market',
@@ -269,8 +264,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     period: '/month',
     description: 'Revolutionary blockchain infrastructure platform that provides enterprise-grade blockchain solutions with zero gas fees, infinite scalability, and seamless Web3 integration.',
     features: [
-      'Zero gas feesInfinite scalabilityEnterprise blockchainWeb3 integration',
-      'Smart contract automationDeFi infrastructureNFT marketplaceCross-chain interoperability'
+      'Zero gas feesInfinite scalabilityEnterprise blockchainWeb3 integrationSmart contract automationDeFi infrastructureNFT marketplaceCross-chain interoperability'
     ],
     popular: true,
     icon: '🔐',
@@ -283,9 +277,9 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     setupTime: '10 hours',
     category: 'Blockchain & Web3 Infrastructure',
     realService: true,
-    technology: ['BlockchainWeb3Smart ContractsSolidity', 'Web3.jsEthereum'],
-    integrations: ['DeFi protocolsNFT marketplacesWeb3 walletsEnterprise systems', 'Financial platforms'],
-    useCases: ['Enterprise blockchainDeFi applicationsNFT marketplacesSmart contracts', 'Cross-chain applications'],
+    technology: ['BlockchainWeb3Smart ContractsSolidityWeb3.jsEthereum'],
+    integrations: ['DeFi protocolsNFT marketplacesWeb3 walletsEnterprise systemsFinancial platforms'],
+    useCases: ['Enterprise blockchainDeFi applicationsNFT marketplacesSmart contractsCross-chain applications'],
     roi: 'Enterprises see 4000%+ ROI through zero gas fees and infinite scalability.',
     competitors: ['EthereumPolygonSolana'],
     marketSize: '$100B blockchain market',
@@ -313,8 +307,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     period: '/month',
     description: 'Revolutionary API management platform that provides intelligent API governance, zero downtime, auto-scaling, and seamless integration across all enterprise systems.',
     features: [
-      'Zero downtime API managementAuto-scaling APIsIntelligent API governanceReal-time monitoring',
-      'API security automationIntegration orchestrationAPI analyticsDeveloper portal'
+      'Zero downtime API managementAuto-scaling APIsIntelligent API governanceReal-time monitoringAPI security automationIntegration orchestrationAPI analyticsDeveloper portal'
     ],
     popular: true,
     icon: '🎯',
@@ -327,9 +320,9 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     setupTime: '4 hours',
     category: 'API Management & Integration',
     realService: true,
-    technology: ['API ManagementMicroservicesKubernetesPython', 'GraphQLREST APIs'],
-    integrations: ['API gatewaysMicroservicesCloud providersDeveloper tools', 'Monitoring systems'],
-    useCases: ['API governanceMicroservices integrationDeveloper experienceAPI security', 'Performance monitoring'],
+    technology: ['API ManagementMicroservicesKubernetesPythonGraphQLREST APIs'],
+    integrations: ['API gatewaysMicroservicesCloud providersDeveloper toolsMonitoring systems'],
+    useCases: ['API governanceMicroservices integrationDeveloper experienceAPI securityPerformance monitoring'],
     roi: 'Enterprises see 2000%+ ROI through zero downtime and improved API performance.',
     competitors: ['KongApigeeAWS API Gateway'],
     marketSize: '$50B API management market',
@@ -357,8 +350,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     period: '/month',
     description: 'Revolutionary business intelligence platform that provides AI-powered analytics with 100% accuracy, real-time insights, and predictive modeling for data-driven decision making.',
     features: [
-      '100% analytics accuracyReal-time insightsAI-powered predictionsAutomated reporting',
-      'Natural language queriesAdvanced visualizationsData storytellingCollaborative analytics'
+      '100% analytics accuracyReal-time insightsAI-powered predictionsAutomated reportingNatural language queriesAdvanced visualizationsData storytellingCollaborative analytics'
     ],
     popular: true,
     icon: '📊',
@@ -371,9 +363,9 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     setupTime: '6 hours',
     category: 'Business Intelligence & Analytics',
     realService: true,
-    technology: ['AI/MLData AnalyticsBusiness IntelligencePython', 'TensorFlowAnalytics APIs'],
-    integrations: ['Data warehousesDatabasesCRM systemsERP platforms', 'Cloud providers'],
-    useCases: ['Business analyticsPerformance monitoringPredictive modelingData visualization', 'Executive reporting'],
+    technology: ['AI/MLData AnalyticsBusiness IntelligencePythonTensorFlowAnalytics APIs'],
+    integrations: ['Data warehousesDatabasesCRM systemsERP platformsCloud providers'],
+    useCases: ['Business analyticsPerformance monitoringPredictive modelingData visualizationExecutive reporting'],
     roi: 'Enterprises see 3000%+ ROI through improved decision making and business insights.',
     competitors: ['TableauPower BILooker'],
     marketSize: '$100B business intelligence market',
@@ -401,8 +393,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     period: '/month',
     description: 'Revolutionary digital transformation platform that provides complete enterprise transformation with AI-powered innovation, process automation, and digital workforce enablement.',
     features: [
-      'Complete digital transformationAI-powered innovationProcess automationDigital workforce',
-      'Change managementInnovation labsDigital strategyTransformation roadmap'
+      'Complete digital transformationAI-powered innovationProcess automationDigital workforceChange managementInnovation labsDigital strategyTransformation roadmap'
     ],
     popular: true,
     icon: '🚀',
@@ -415,9 +406,9 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     setupTime: '12 hours',
     category: 'Digital Transformation & Innovation',
     realService: true,
-    technology: ['AI/MLProcess AutomationDigital InnovationPython', 'RPAInnovation APIs'],
+    technology: ['AI/MLProcess AutomationDigital InnovationPythonRPAInnovation APIs'],
     integrations: ['Enterprise systemsProcess platformsInnovation toolsChange management systems'],
-    useCases: ['Enterprise transformationProcess automationDigital innovationChange management', 'Strategy development'],
+    useCases: ['Enterprise transformationProcess automationDigital innovationChange managementStrategy development'],
     roi: 'Enterprises see 5000%+ ROI through complete digital transformation and innovation enablement.',
     competitors: ['McKinseyBCGBain'],
     marketSize: '$200B digital transformation market',

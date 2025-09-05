@@ -11,8 +11,7 @@ export default function HolographicAICommunicationPage() {
   },
 
   const features = [
-    'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice control',
-    'Cross-platform WebXR supportEnterprise-grade security'
+    'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security'
   ],
 
   return (

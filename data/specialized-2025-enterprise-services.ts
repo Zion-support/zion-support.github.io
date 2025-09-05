@@ -60,8 +60,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     period: '/month',
     description: 'Cutting-edge platform for AI consciousness research, enabling scientists to study artificial general intelligence, consciousness emergence, and cognitive modeling.',
     features: [
-      'Consciousness simulation engineCognitive architecture modelingEmotional intelligence algorithmsSelf-awareness development',
-      'Memory and learning systemsSocial interaction modelingResearch analytics toolsCollaborative research platform',
+      'Consciousness simulation engineCognitive architecture modelingEmotional intelligence algorithmsSelf-awareness developmentMemory and learning systemsSocial interaction modelingResearch analytics toolsCollaborative research platform',
       'API for research integrationExpert consultation services'
     ],
     popular: true,
@@ -91,12 +90,10 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     rating: 5.0,
     reviews: 18,
     benefits: [
-      'Breakthrough consciousness researchAGI development capabilitiesScientific collaborationPatent-pending algorithms',
-      'Exclusive research access'
+      'Breakthrough consciousness researchAGI development capabilitiesScientific collaborationPatent-pending algorithmsExclusive research access'
     ],
     capabilities: [
-      'Consciousness simulationCognitive modelingEmotional intelligenceResearch collaboration',
-      'Advanced analytics'
+      'Consciousness simulationCognitive modelingEmotional intelligenceResearch collaborationAdvanced analytics'
     ],
     marketAdvantage: 'Only comprehensive AI consciousness research platform available'
   },
@@ -110,8 +107,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     period: '/month',
     description: 'Revolutionary platform that combines quantum computing with machine learning, enabling unprecedented computational power for complex optimization problems.',
     features: [
-      'Quantum-enhanced ML algorithmsQuantum optimization solversHybrid quantum-classical computingQuantum feature selection',
-      'Quantum neural networksQuantum data encodingPerformance benchmarkingQuantum error correction',
+      'Quantum-enhanced ML algorithmsQuantum optimization solversHybrid quantum-classical computingQuantum feature selectionQuantum neural networksQuantum data encodingPerformance benchmarkingQuantum error correction',
       'Research and development toolsExpert quantum consulting'
     ],
     popular: true,
@@ -141,12 +137,10 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     rating: 4.9,
     reviews: 32,
     benefits: [
-      '100x research accelerationQuantum advantage in optimizationHybrid computing capabilitiesMulti-quantum backend support',
-      'Expert quantum consulting'
+      '100x research accelerationQuantum advantage in optimizationHybrid computing capabilitiesMulti-quantum backend supportExpert quantum consulting'
     ],
     capabilities: [
-      'Quantum ML algorithmsQuantum optimizationHybrid computingError correction',
-      'Research tools'
+      'Quantum ML algorithmsQuantum optimizationHybrid computingError correctionResearch tools'
     ],
     marketAdvantage: 'Advanced quantum ML platform with hybrid computing capabilities'
   },
@@ -160,8 +154,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     period: '/month',
     description: 'Advanced cryptography platform that implements post-quantum cryptographic algorithms, ensuring data security against future quantum computing threats.',
     features: [
-      'Post-quantum cryptographic algorithmsLattice-based cryptographyHash-based signaturesCode-based cryptography',
-      'Multivariate cryptographyQuantum key distributionHybrid encryption systemsMigration tools and services',
+      'Post-quantum cryptographic algorithmsLattice-based cryptographyHash-based signaturesCode-based cryptographyMultivariate cryptographyQuantum key distributionHybrid encryption systemsMigration tools and services',
       'Compliance and certificationExpert security consulting'
     ],
     popular: true,
@@ -191,12 +184,10 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     rating: 4.8,
     reviews: 56,
     benefits: [
-      'Future-proof securityQuantum-resistant algorithmsCompliance readinessMigration support',
-      'Expert consultation'
+      'Future-proof securityQuantum-resistant algorithmsCompliance readinessMigration supportExpert consultation'
     ],
     capabilities: [
-      'Post-quantum algorithmsLattice cryptographyHash-based signaturesMigration tools',
-      'Compliance support'
+      'Post-quantum algorithmsLattice cryptographyHash-based signaturesMigration toolsCompliance support'
     ],
     marketAdvantage: 'Comprehensive quantum-resistant cryptography platform with migration support'
   },
@@ -210,8 +201,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     period: '/month',
     description: 'Advanced AI platform for satellite constellation management, enabling autonomous satellite operations, data processing, and mission optimization.',
     features: [
-      'Autonomous satellite operationsConstellation optimizationAI-powered mission planningReal-time data processing',
-      'Orbital mechanics optimizationCollision avoidance systemsPayload managementGround station coordination',
+      'Autonomous satellite operationsConstellation optimizationAI-powered mission planningReal-time data processingOrbital mechanics optimizationCollision avoidance systemsPayload managementGround station coordination',
       'Mission analytics dashboardExpert space consulting'
     ],
     popular: false,
@@ -241,12 +231,10 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     rating: 4.9,
     reviews: 8,
     benefits: [
-      '400% operation optimization60% mission cost reductionAutonomous operationsAI mission planning',
-      'Expert space consulting'
+      '400% operation optimization60% mission cost reductionAutonomous operationsAI mission planningExpert space consulting'
     ],
     capabilities: [
-      'Autonomous operationsConstellation optimizationMission planningData processing',
-      'Collision avoidance'
+      'Autonomous operationsConstellation optimizationMission planningData processingCollision avoidance'
     ],
     marketAdvantage: 'Advanced AI satellite orchestration with autonomous capabilities'
   },
@@ -260,8 +248,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     period: '/month',
     description: 'Cutting-edge brain-computer interface platform that enables direct communication between the human brain and computers for research and medical applications.',
     features: [
-      'Neural signal processingBrain-computer communicationCognitive enhancement toolsMedical rehabilitation support',
-      'Research and development toolsReal-time neural monitoringCustom interface developmentSafety and compliance tools',
+      'Neural signal processingBrain-computer communicationCognitive enhancement toolsMedical rehabilitation supportResearch and development toolsReal-time neural monitoringCustom interface developmentSafety and compliance tools',
       'Expert neural consultationClinical trial support'
     ],
     popular: true,
@@ -291,12 +278,10 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     rating: 5.0,
     reviews: 5,
     benefits: [
-      'Revolutionary medical applicationsBreakthrough research capabilitiesCognitive enhancementMedical rehabilitation',
-      'Expert neural consultation'
+      'Revolutionary medical applicationsBreakthrough research capabilitiesCognitive enhancementMedical rehabilitationExpert neural consultation'
     ],
     capabilities: [
-      'Neural signal processingBrain-computer communicationCognitive enhancementMedical applications',
-      'Research tools'
+      'Neural signal processingBrain-computer communicationCognitive enhancementMedical applicationsResearch tools'
     ],
     marketAdvantage: 'Advanced BCI platform with medical-grade capabilities and research tools'
   },
@@ -310,8 +295,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     period: '/month',
     description: 'Revolutionary IoT platform that autonomously manages, optimizes, and secures IoT devices and networks using advanced AI and machine learning.',
     features: [
-      'Autonomous device managementSelf-healing networksAI-powered optimizationPredictive maintenance',
-      'Security automationScalable deploymentReal-time monitoringData analytics and insights',
+      'Autonomous device managementSelf-healing networksAI-powered optimizationPredictive maintenanceSecurity automationScalable deploymentReal-time monitoringData analytics and insights',
       'Custom IoT applicationsExpert IoT consultation'
     ],
     popular: false,
@@ -341,12 +325,10 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     rating: 4.7,
     reviews: 45,
     benefits: [
-      '70% management cost reduction50% operational efficiencyAutonomous managementSelf-healing networks',
-      'AI optimization'
+      '70% management cost reduction50% operational efficiencyAutonomous managementSelf-healing networksAI optimization'
     ],
     capabilities: [
-      'Autonomous managementSelf-healing networksAI optimizationPredictive maintenance',
-      'Security automation'
+      'Autonomous managementSelf-healing networksAI optimizationPredictive maintenanceSecurity automation'
     ],
     marketAdvantage: 'Advanced autonomous IoT platform with AI-powered management capabilities'
   },
@@ -360,8 +342,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     period: '/month',
     description: 'Advanced predictive analytics platform that uses machine learning and AI to provide accurate forecasts, trend analysis, and business intelligence insights.',
     features: [
-      'Advanced ML algorithmsPredictive modelingTime series forecastingTrend analysis',
-      'Anomaly detectionScenario modelingReal-time predictionsCustom model development',
+      'Advanced ML algorithmsPredictive modelingTime series forecastingTrend analysisAnomaly detectionScenario modelingReal-time predictionsCustom model development',
       'Performance analyticsExpert data consultation'
     ],
     popular: true,
@@ -391,12 +372,10 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     rating: 4.8,
     reviews: 145,
     benefits: [
-      '60% decision accuracy improvement35% operational cost reductionAdvanced ML algorithmsReal-time predictions',
-      'Custom model development'
+      '60% decision accuracy improvement35% operational cost reductionAdvanced ML algorithmsReal-time predictionsCustom model development'
     ],
     capabilities: [
-      'Predictive modelingTime series forecastingTrend analysisAnomaly detection',
-      'Scenario modeling'
+      'Predictive modelingTime series forecastingTrend analysisAnomaly detectionScenario modeling'
     ],
     marketAdvantage: 'Advanced predictive analytics platform with custom ML model development'
   }

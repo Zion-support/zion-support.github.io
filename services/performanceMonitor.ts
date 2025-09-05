@@ -159,8 +159,7 @@ export class PerformanceMonitorService {
         dates
       },
       recommendations: [
-        'Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold contentMinimize render-blocking resourcesUse a CDN for static assets',
-        'Enable compression for text-based resources'
+        'Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold contentMinimize render-blocking resourcesUse a CDN for static assetsEnable compression for text-based resources'
       ]
     }
   }
@@ -250,8 +249,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
     price: 19,
     period: '/month',
     features: [
-      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts',
-      '7-day data retentionBasic reporting'
+      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting'
     ]
   },
   professional: {
@@ -259,8 +257,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
     price: 49,
     period: '/month',
     features: [
-      'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts',
-      '30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access'
+      'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access'
     ]
   },
   enterprise: {
@@ -268,8 +265,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
     price: 149,
     period: '/month',
     features: [
-      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels',
-      '1-year data retentionCustom dashboardsWhite-label reportingPriority support',
+      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support',
       'SLA guarantee'
     ]
   }

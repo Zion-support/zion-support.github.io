@@ -15,8 +15,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.',
 		features: [
-			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domains',
-			'SLA-aware escalations and summariesAnalytics: response time, CSAT impact, volume by topic'
+			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and summariesAnalytics: response time, CSAT impact, volume by topic'
 		],
 		popular: true,
 		icon: '✉️',
@@ -30,7 +29,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		category: 'AI & Data',
 		realService: true,
 		technology: ['Next.jsTypeScriptOpenAIPostgreSQL'],
-		integrations: ['ZendeskFreshdeskHubSpotGmail', 'Microsoft 365'],
+		integrations: ['ZendeskFreshdeskHubSpotGmailMicrosoft 365'],
 		useCases: ['Customer support triageLead routingInternal helpdesk'],
 		roi: 'Reduce manual triage time by 60–80% and improve first-response SLAs.',
 		competitors: ['Superhuman AIZendesk AIHubSpot AI'],
@@ -53,8 +52,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Launch high-conversion mobile surveys with skip logic, NPS/CSAT templates, and shareable dashboards. Embed on sites or share links, export to CSV and data warehouses.',
 		features: [
-			'Branching logic and progress-saveQuestion bank: CSAT, NPS, PMF, churnAnonymous or identified responsesWebhooks and Zapier integration',
-			'Real-time charts and cohort filtersGDPR/CCPA consent and deletion tools'
+			'Branching logic and progress-saveQuestion bank: CSAT, NPS, PMF, churnAnonymous or identified responsesWebhooks and Zapier integrationReal-time charts and cohort filtersGDPR/CCPA consent and deletion tools'
 		],
 		popular: false,
 		icon: '📱',
@@ -91,8 +89,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.',
 		features: [
-			'QR tickets and check-in appSpeaker/sponsor asset managementAutomated reminders and WhatsApp/SMS alertsFeedback/NPS post-event forms',
-			'Budget tracker and P&L exportsEmbeddable agendas and live updates'
+			'QR tickets and check-in appSpeaker/sponsor asset managementAutomated reminders and WhatsApp/SMS alertsFeedback/NPS post-event formsBudget tracker and P&L exportsEmbeddable agendas and live updates'
 		],
 		popular: true,
 		icon: '🎟️',
@@ -129,8 +126,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.',
 		features: [
-			'Flexible rotations and override rulesEscalation policies and schedulesSlack/Teams integration and on-call handoffsVacation/holiday calendars',
-			'Incident reports and postmortem templatesSLO and error budget reminders'
+			'Flexible rotations and override rulesEscalation policies and schedulesSlack/Teams integration and on-call handoffsVacation/holiday calendarsIncident reports and postmortem templatesSLO and error budget reminders'
 		],
 		popular: false,
 		icon: '📆',
@@ -167,8 +163,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.',
 		features: [
-			'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestions',
-			'Rank tracking and change logsCMS export (Markdown/Headless)'
+			'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)'
 		],
 		popular: true,
 		icon: '🔎',
@@ -205,8 +200,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Add feature flags to your app with SDKs for React/Node, rule targeting, and environments. Includes audit logs and safe defaulting.',
 		features: [
-			'Boolean, multivariate, and JSON flagsUser and cohort targetingGradual rollouts and percentage splitsAudit logs and environment scoping',
-			'Server and client SDKsWebhook notifications'
+			'Boolean, multivariate, and JSON flagsUser and cohort targetingGradual rollouts and percentage splitsAudit logs and environment scopingServer and client SDKsWebhook notifications'
 		],
 		popular: false,
 		icon: '🚩',
@@ -243,8 +237,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.',
 		features: [
-			'Company/person enrich via email or domainTech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflows',
-			'Confidence scores and data provenanceUsage-based pricing tiers'
+			'Company/person enrich via email or domainTech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflowsConfidence scores and data provenanceUsage-based pricing tiers'
 		],
 		popular: true,
 		icon: '🧭',
@@ -281,8 +274,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Upload PDFs/images and get structured outputs (vendor, dates, taxes, line items). Human-in-the-loop validation and retraining for edge cases.',
 		features: [
-			'High-accuracy OCR and field mappingLine item extraction and taxesValidation UI and review queuesExport to CSV, JSON, or webhook',
-			'ERP connectors and retry policiesPII redaction and retention policies'
+			'High-accuracy OCR and field mappingLine item extraction and taxesValidation UI and review queuesExport to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies'
 		],
 		popular: false,
 		icon: '🧾',
@@ -319,8 +311,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Create robotic process automations for web workflows: login, scrape, form-fill, download, and upload. Includes scheduling, proxy support, and error screenshots.',
 		features: [
-			'Workflow editor and step recorderRetry logic and backoff policiesCaptcha solving hooks and proxiesFile storage and PII redaction',
-			'Job queue, metrics, and alertsHuman approval steps'
+			'Workflow editor and step recorderRetry logic and backoff policiesCaptcha solving hooks and proxiesFile storage and PII redactionJob queue, metrics, and alertsHuman approval steps'
 		],
 		popular: true,
 		icon: '🤖',
@@ -357,8 +348,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Detect and redact sensitive data (PII/PHI/PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.',
 		features: [
-			'Configurable detectors (SSN, phone, email, credit card)Context-aware redaction and maskingAudit logs and retention policiesBatch processing and streaming',
-			'Webhook retries and DLQsExport to S3/R2 and BigQuery'
+			'Configurable detectors (SSN, phone, email, credit card)Context-aware redaction and maskingAudit logs and retention policiesBatch processing and streamingWebhook retries and DLQsExport to S3/R2 and BigQuery'
 		],
 		popular: false,
 		icon: '🧼',
@@ -395,8 +385,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month',
 		description: 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.',
 		features: [
-			'Goal trees and KPI ownershipWeekly executive summariesAlerting on thresholds and trendsWarehouse connectors',
-			'Shareable links with permissionsAnnotations and change logs'
+			'Goal trees and KPI ownershipWeekly executive summariesAlerting on thresholds and trendsWarehouse connectorsShareable links with permissionsAnnotations and change logs'
 		],
 		popular: false,
 		icon: '📊',

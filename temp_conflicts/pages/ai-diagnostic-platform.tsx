@@ -15,8 +15,7 @@ const contactInfo = {
 },
 
 const features = [
-  'AI-powered medical image analysisSymptom assessment algorithmsTreatment recommendation enginePatient history integration',
-  'Real-time diagnostic updatesMulti-specialty coverageMobile app integrationHIPAA-compliant platform'
+  'AI-powered medical image analysisSymptom assessment algorithmsTreatment recommendation enginePatient history integrationReal-time diagnostic updatesMulti-specialty coverageMobile app integrationHIPAA-compliant platform'
 ],
 
 const pricingPlans = [
@@ -31,14 +30,14 @@ const pricingPlans = [
     name: 'Professional',
     price: 799,
     period: 'month',
-    features: ['Advanced AI diagnosticsAll specialtiesCustom reportingAPI access', 'Priority support'],
+    features: ['Advanced AI diagnosticsAll specialtiesCustom reportingAPI accessPriority support'],
     popular: true
   },
   {
     name: 'Enterprise',
     price: 1999,
     period: 'month',
-    features: ['Custom AI modelsWhite-label solutionDedicated supportCustom integrations', 'Training included'],
+    features: ['Custom AI modelsWhite-label solutionDedicated supportCustom integrationsTraining included'],
     popular: false
   }
 ],

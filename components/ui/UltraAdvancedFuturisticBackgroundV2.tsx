@@ -34,7 +34,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
     }> = [],
 
     const colors = [
-      '#00ffff#ff00ff#ffff00#00ff00', '#ff0080#8000ff#ff8000#0080ff', '#ff0080#80ff00'
+      '#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#ff8000#0080ff', '#ff0080#80ff00'
     ],
 
     // Initialize particles

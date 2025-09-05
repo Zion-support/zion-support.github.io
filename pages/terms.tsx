@@ -38,8 +38,7 @@ const TermsPage: React.FC = () => {
       icon: <Globe className="w-8 h-8" />,
       color: 'from-purple-500 to-pink-500',
       content: [
-        'AI and machine learning solutionsQuantum computing servicesIT infrastructure and consultingMicro SAAS applications',
-        'Business automation servicesTechnical support and maintenance'
+        'AI and machine learning solutionsQuantum computing servicesIT infrastructure and consultingMicro SAAS applicationsBusiness automation servicesTechnical support and maintenance'
       ]
     },
     {
@@ -47,8 +46,7 @@ const TermsPage: React.FC = () => {
       icon: <User className="w-8 h-8" />,
       color: 'from-green-500 to-emerald-500',
       content: [
-        'Provide accurate and complete informationMaintain security of your account credentialsComply with applicable laws and regulationsUse services for lawful purposes only',
-        'Respect intellectual property rights'
+        'Provide accurate and complete informationMaintain security of your account credentialsComply with applicable laws and regulationsUse services for lawful purposes onlyRespect intellectual property rights'
       ]
     },
     {
@@ -56,8 +54,7 @@ const TermsPage: React.FC = () => {
       icon: <Lock className="w-8 h-8" />,
       color: 'from-orange-500 to-red-500',
       content: [
-        'Our services and content are protected by copyrightYou retain rights to your own contentNo transfer of intellectual property rightsLicense to use our services as intended',
-        'Prohibition of reverse engineering'
+        'Our services and content are protected by copyrightYou retain rights to your own contentNo transfer of intellectual property rightsLicense to use our services as intendedProhibition of reverse engineering'
       ]
     }
   ],
@@ -721,13 +718,11 @@ export default function Terms() {
                           </li>
                         ))}
                       </ul>
-    'Unauthorized access to our systems or networksInterference with service operationDistribution of malware or harmful codeViolation of third-party rights',
-    'Attempts to gain unauthorized accessUse of services for illegal activities'
+    'Unauthorized access to our systems or networksInterference with service operationDistribution of malware or harmful codeViolation of third-party rightsAttempts to gain unauthorized accessUse of services for illegal activities'
   ],
 
   const limitations = [
-    'Services provided "as is" without warrantiesNo guarantee of uninterrupted serviceLimitation of liability for damagesNo responsibility for third-party content',
-    'Service availability subject to changeTechnical support during business hours only'
+    'Services provided "as is" without warrantiesNo guarantee of uninterrupted serviceLimitation of liability for damagesNo responsibility for third-party contentService availability subject to changeTechnical support during business hours only'
   ],
 
   return (

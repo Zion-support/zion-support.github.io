@@ -20,7 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const supabase = getServerSupabase(),
 
-    const events = ['visitsignupprofile_completedjob_created', 'hire'] as const,
+    const events = ['visitsignupprofile_completedjob_createdhire'] as const,
     const counts: Record<string, number> = {},
 
     for (const ev of events) {

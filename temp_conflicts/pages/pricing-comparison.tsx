@@ -40,8 +40,7 @@ export default function PricingComparisonPage() {
         }
       ],
       features: [
-        'AI-powered content generationMultiple content formatsSEO optimizationTeam collaboration',
-        'API accessCustom templates'
+        'AI-powered content generationMultiple content formatsSEO optimizationTeam collaborationAPI accessCustom templates'
       ],
       color: 'from-purple-500 to-indigo-600',
       icon: '🤖'
@@ -80,8 +79,7 @@ export default function PricingComparisonPage() {
         }
       ],
       features: [
-        'Real-time monitoringMulti-cloud supportAI-powered alertingAdvanced analytics',
-        'Custom dashboardsAPI access'
+        'Real-time monitoringMulti-cloud supportAI-powered alertingAdvanced analyticsCustom dashboardsAPI access'
       ],
       color: 'from-green-500 to-emerald-600',
       icon: '☁️'
@@ -120,8 +118,7 @@ export default function PricingComparisonPage() {
         }
       ],
       features: [
-        'CI/CD pipelinesInfrastructure as CodeSecurity automationMulti-cloud deployment',
-        'Team collaborationCustom integrations'
+        'CI/CD pipelinesInfrastructure as CodeSecurity automationMulti-cloud deploymentTeam collaborationCustom integrations'
       ],
       color: 'from-blue-500 to-cyan-600',
       icon: '🚀'

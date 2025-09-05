@@ -49,7 +49,7 @@ export function getRequiredDocuments(role: KycRole): Array<KycDocumentMeta['kind
     return ['government_id_frontgovernment_id_backselfie']
   }
   if (role === 'enterprise') {
-    return ['government_id_frontgovernment_id_backselfiebusiness_registration', 'tax_certificate']
+    return ['government_id_frontgovernment_id_backselfiebusiness_registrationtax_certificate']
   }
   return ['government_id_frontgovernment_id_back'], // talent
 }

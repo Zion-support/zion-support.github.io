@@ -81,8 +81,7 @@ const pricing = [
     period: '/month',
     description: 'Perfect for small teams getting started with emotion AI',
     features: [
-      'Up to 1,000 emotion analyses per monthBasic emotion detection (7 core emotions)Email supportStandard API access',
-      'Basic analytics dashboard'
+      'Up to 1,000 emotion analyses per monthBasic emotion detection (7 core emotions)Email supportStandard API accessBasic analytics dashboard'
     ],
     popular: false,
     cta: 'Get Started'
@@ -93,8 +92,7 @@ const pricing = [
     period: '/month',
     description: 'Advanced emotion intelligence for growing businesses',
     features: [
-      'Up to 10,000 emotion analyses per monthFull emotion detection (27 emotions)Priority supportAdvanced API access',
-      'Custom emotion trainingReal-time alertsAdvanced analyticsMulti-language support'
+      'Up to 10,000 emotion analyses per monthFull emotion detection (27 emotions)Priority supportAdvanced API accessCustom emotion trainingReal-time alertsAdvanced analyticsMulti-language support'
     ],
     popular: true,
     cta: 'Start Free Trial'
@@ -105,8 +103,7 @@ const pricing = [
     period: '',
     description: 'Custom solutions for large organizations',
     features: [
-      'Unlimited emotion analysesCustom emotion modelsDedicated support teamWhite-label solutions',
-      'Advanced integrationsCustom reportingSLA guaranteesOn-premise deployment'
+      'Unlimited emotion analysesCustom emotion modelsDedicated support teamWhite-label solutionsAdvanced integrationsCustom reportingSLA guaranteesOn-premise deployment'
     ],
     popular: false,
     cta: 'Contact Sales'

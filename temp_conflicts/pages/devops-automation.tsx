@@ -39,8 +39,7 @@ export default function DevOpsAutomationPage() {
       period: '/month',
       description: 'Perfect for small teams and startups',
       features: [
-        'Up to 5 repositoriesBasic CI/CD pipelinesGitHub integrationEmail notifications',
-        'Basic security scanningCommunity support'
+        'Up to 5 repositoriesBasic CI/CD pipelinesGitHub integrationEmail notificationsBasic security scanningCommunity support'
       ],
       popular: false,
       cta: 'Start Free Trial',
@@ -52,8 +51,7 @@ export default function DevOpsAutomationPage() {
       period: '/month',
       description: 'Ideal for growing development teams',
       features: [
-        'Up to 25 repositoriesAdvanced CI/CD workflowsMulti-cloud deploymentSlack & Teams integration',
-        'Advanced security suitePriority supportCustom pipelinesTeam collaboration'
+        'Up to 25 repositoriesAdvanced CI/CD workflowsMulti-cloud deploymentSlack & Teams integrationAdvanced security suitePriority supportCustom pipelinesTeam collaboration'
       ],
       popular: true,
       cta: 'Start Free Trial',
@@ -65,8 +63,7 @@ export default function DevOpsAutomationPage() {
       period: '/month',
       description: 'For large-scale development operations',
       features: [
-        'Unlimited repositoriesEnterprise CI/CDAdvanced IaC automationCustom integrations',
-        '24/7 dedicated supportSLA guaranteesOn-premise optionsCustom security policies'
+        'Unlimited repositoriesEnterprise CI/CDAdvanced IaC automationCustom integrations24/7 dedicated supportSLA guaranteesOn-premise optionsCustom security policies'
       ],
       popular: false,
       cta: 'Contact Sales',

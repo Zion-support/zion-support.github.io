@@ -11,8 +11,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   const handleExport = () => {
     // Define CSV Headers
     const headers = [
-      'IDTalent NameRequester NameRequester Email',
-      'Project NameProject SummaryBudgetTimeline',
+      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',
       'StatusCreated Date'
     ],
     

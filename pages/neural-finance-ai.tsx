@@ -63,8 +63,7 @@ const pricingPlans = [
     period: 'month',
     description: 'Perfect for individual traders and small investment firms',
     features: [
-      'Basic market analysis and insightsPortfolio tracking and monitoringRisk assessment and managementEmail support',
-      'Up to 5 trading strategiesBasic reporting and analytics'
+      'Basic market analysis and insightsPortfolio tracking and monitoringRisk assessment and managementEmail supportUp to 5 trading strategiesBasic reporting and analytics'
     ],
     popular: false,
     color: 'from-gray-500 to-gray-600'
@@ -75,8 +74,7 @@ const pricingPlans = [
     period: 'month',
     description: 'Ideal for professional traders and growing investment firms',
     features: [
-      'Advanced AI models and algorithmsAutomated trading with backtestingCustom strategy developmentPriority support and API access',
-      'Advanced risk management toolsMulti-portfolio managementReal-time market alertsCustom reporting and dashboards'
+      'Advanced AI models and algorithmsAutomated trading with backtestingCustom strategy developmentPriority support and API accessAdvanced risk management toolsMulti-portfolio managementReal-time market alertsCustom reporting and dashboards'
     ],
     popular: true,
     color: 'from-cyan-500 to-purple-600'
@@ -87,8 +85,7 @@ const pricingPlans = [
     period: 'month',
     description: 'For large investment firms and institutional investors',
     features: [
-      'Custom AI model training and developmentWhite-label solution with brandingDedicated account manager and supportAdvanced compliance automation',
-      '24/7 monitoring and supportCustom integrations and APIsAdvanced security and audit trailsMulti-user access and permissions'
+      'Custom AI model training and developmentWhite-label solution with brandingDedicated account manager and supportAdvanced compliance automation24/7 monitoring and supportCustom integrations and APIsAdvanced security and audit trailsMulti-user access and permissions'
     ],
     popular: false,
     color: 'from-purple-500 to-pink-600'

@@ -59,7 +59,7 @@ function prng(seed: string): () => number {
 }
 
 function buildTrend(baseMonthly: number, seedKey: string): { label: string, value: number }[] {
-  const months = ['JanFebMarApr','MayJunJulAug','SepOctNovDec'],
+  const months = ['JanFebMarAprMayJunJulAug','SepOctNovDec'],
   const now = new Date(),
   const seed = prng(seedKey),
   const series: { label: string, value: number }[] = [],
@@ -78,7 +78,7 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
   if (!apiKey) return undefined,
   try {
     const client = new OpenAI({ apiKey }),
-    const skillsStr = input.skills.join(', '),
+    const skillsStr = input.skills.join(),
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`,
 
     const completion = await client.chat.completions.create({
@@ -141,7 +141,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .slice(0, 8),
 
   // Tags
-  const scarceSkills = ['RAGLangChainVector DBsKubernetes', 'AppSecSecurity'],
+  const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'],
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase()))),
   const tags: string[] = [],
   if (remote) tags.push('Remote Premium'),

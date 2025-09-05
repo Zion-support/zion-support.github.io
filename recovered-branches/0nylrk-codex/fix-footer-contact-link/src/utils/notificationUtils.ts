@@ -224,7 +224,7 @@ export async function createSystemNotification({
  * Demo function to create test notifications for the current user
  */
 export async function createTestNotification(userId: string) {
-  const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_request', 'onboardingsystem'],
+  const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'],
   const randomType = types[Math.floor(Math.random() * types.length)],
   
   const titles = {

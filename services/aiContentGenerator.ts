@@ -156,8 +156,7 @@ export const AI_CONTENT_PRICING = {
     price: 29,
     period: '/month',
     features: [
-      '100 content generations per monthBasic templatesSEO analysisEmail support',
-      'Standard quality'
+      '100 content generations per monthBasic templatesSEO analysisEmail supportStandard quality'
     ]
   },
   professional: {
@@ -165,8 +164,7 @@ export const AI_CONTENT_PRICING = {
     price: 99,
     period: '/month',
     features: [
-      '500 content generations per monthPremium templatesAdvanced SEO analysisPriority support',
-      'High quality outputCustom brandingAPI access'
+      '500 content generations per monthPremium templatesAdvanced SEO analysisPriority supportHigh quality outputCustom brandingAPI access'
     ]
   },
   enterprise: {
@@ -174,8 +172,7 @@ export const AI_CONTENT_PRICING = {
     price: 299,
     period: '/month',
     features: [
-      'Unlimited content generationsCustom templatesAdvanced analyticsDedicated support',
-      'Highest qualityWhite-label optionsCustom integrationsSLA guarantee'
+      'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
     ]
   }
 },

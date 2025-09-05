@@ -18,10 +18,8 @@ const contactInfo = {
 },
 
 const categories = [
-  'All ServicesAI & DataQuantum TechnologySpace Technology',
-  'IT InfrastructureCybersecurityEdge ComputingBlockchain',
-  'ManufacturingHealthcare AIEmerging TechnologyBiotechnology',
-  'Human-Computer InteractionMetaverseAutonomous SystemsClimate Technology'
+  'All ServicesAI & DataQuantum TechnologySpace TechnologyIT InfrastructureCybersecurityEdge ComputingBlockchain',
+  'ManufacturingHealthcare AIEmerging TechnologyBiotechnologyHuman-Computer InteractionMetaverseAutonomous SystemsClimate Technology'
 ],
 
 const categoryIcons: { [key: string]: React.ReactNode } = {

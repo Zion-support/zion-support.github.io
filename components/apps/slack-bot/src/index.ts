@@ -14,8 +14,7 @@ const app = new App({
 
 function helpText(): string {
   return [
-    '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status',
-    '`/zion help` – command list'
+    '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list'
   ].join('\n')
 }
 

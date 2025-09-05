@@ -50,8 +50,7 @@ export default function AIContentGeneratorPage() {
       period: '/month',
       description: 'Perfect for individuals and small blogs',
       features: [
-        '1,000 words per month5 content templatesBasic SEO optimizationEmail support',
-        'API access (100 calls/month)Content analytics dashboard'
+        '1,000 words per month5 content templatesBasic SEO optimizationEmail supportAPI access (100 calls/month)Content analytics dashboard'
       ],
       popular: false,
       color: 'border-gray-600',
@@ -63,8 +62,7 @@ export default function AIContentGeneratorPage() {
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
       features: [
-        '10,000 words per month25+ content templatesAdvanced SEO toolsPriority support',
-        'API access (1,000 calls/month)Advanced analyticsTeam collaborationCustom branding'
+        '10,000 words per month25+ content templatesAdvanced SEO toolsPriority supportAPI access (1,000 calls/month)Advanced analyticsTeam collaborationCustom branding'
       ],
       popular: true,
       color: 'border-blue-500',
@@ -76,8 +74,7 @@ export default function AIContentGeneratorPage() {
       period: '/month',
       description: 'For large organizations and enterprises',
       features: [
-        'Unlimited wordsAll templates + customFull SEO suiteDedicated support',
-        'Unlimited API accessAdvanced analyticsWhite-label solutionCustom integrations',
+        'Unlimited wordsAll templates + customFull SEO suiteDedicated supportUnlimited API accessAdvanced analyticsWhite-label solutionCustom integrations',
         'SLA guarantee'
       ],
       popular: false,

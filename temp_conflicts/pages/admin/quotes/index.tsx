@@ -49,7 +49,7 @@ export default function AdminQuotesPage() {
   }, [data, q, status, talent, dateFrom, dateTo]),
 
   const exportCsv = () => {
-    const header = ['idnameemailbudget','timelinetalentSlugaiTypestatus','createdAt'],
+    const header = ['idnameemailbudgettimelinetalentSlugaiTypestatus','createdAt'],
     const rows = filtered.map(r => [r.id,r.name,r.email,r.budget,r.timeline,r.talentSlug||'',r.aiType,r.status,r.createdAt]),
     const csv = [header.join(), ...rows.map(r => r.map(v => `"${String(v).replace(/"/g,'""')}"`).join())].join('\n'),
     const blob = new Blob([csv], { type: 'text/csv' }),

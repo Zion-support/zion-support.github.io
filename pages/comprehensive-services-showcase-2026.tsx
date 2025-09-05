@@ -62,12 +62,9 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
   ],
 
   const categories = [
-    'allBusiness Intelligence & AnalyticsContent Creation & MarketingCustomer Service & Support',
-    'E-commerce & RetailHR & RecruitmentFinancial ManagementProject Management',
-    'Education & TrainingHealthcare & MedicalCloud Infrastructure & DevOpsCybersecurity & Threat Intelligence',
-    'Data Engineering & AnalyticsAPI Management & IntegrationNetwork Monitoring & ManagementDatabase Management & Optimization',
-    'IT Service ManagementBackup & Disaster RecoveryQuantum Computing & AIBlockchain & Web3',
-    'Internet of Things (IoT)Edge Computing & 5GAR/VR & Immersive TechnologyRobotics & Automation',
+    'allBusiness Intelligence & AnalyticsContent Creation & MarketingCustomer Service & SupportE-commerce & RetailHR & RecruitmentFinancial ManagementProject Management',
+    'Education & TrainingHealthcare & MedicalCloud Infrastructure & DevOpsCybersecurity & Threat IntelligenceData Engineering & AnalyticsAPI Management & IntegrationNetwork Monitoring & ManagementDatabase Management & Optimization',
+    'IT Service ManagementBackup & Disaster RecoveryQuantum Computing & AIBlockchain & Web3Internet of Things (IoT)Edge Computing & 5GAR/VR & Immersive TechnologyRobotics & Automation',
     'Digital Twin & Simulation'
   ],
 

@@ -12,8 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { operatorPrompt, inputs, metrics } = req.body || {},
 
   const seed = [
-    'Problem & OpportunitySolution & ProductMarket Size (TAM/SAM/SOM)Traction & Metrics',
-    'Business ModelGo-To-MarketTeamRoadmap',
+    'Problem & OpportunitySolution & ProductMarket Size (TAM/SAM/SOM)Traction & MetricsBusiness ModelGo-To-MarketTeamRoadmap',
     'Token StrategyAsk & Call to Action'],
 
   try {

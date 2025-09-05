@@ -38,7 +38,7 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
           vx: (Math.random() - 0.5) * 0.5,
           vy: (Math.random() - 0.5) * 0.5,
           size: Math.random() * 2 + 1,
-          color: ['#00ffff#ff00ff#ffff00#00ff00', '#ff0080'][Math.floor(Math.random() * 5)],
+          color: ['#00ffff#ff00ff#ffff00#00ff00#ff0080'][Math.floor(Math.random() * 5)],
           opacity: Math.random() * 0.8 + 0.2
         })
       }

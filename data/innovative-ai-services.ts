@@ -48,8 +48,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     period: '/month',
     description: 'World\'s first quantum-enhanced AI with human-like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months. Advanced neural signal processing with quantum encryption.',
     features: [
-      'Quantum neural signal processingReal-time brain activity monitoringAI-powered cognitive enhancementNeural pattern recognition',
-      'Secure quantum encryptionMulti-modal interface supportAdvanced analytics dashboardAPI for research integration',
+      'Quantum neural signal processingReal-time brain activity monitoringAI-powered cognitive enhancementNeural pattern recognitionSecure quantum encryptionMulti-modal interface supportAdvanced analytics dashboardAPI for research integration',
       'Compliance with medical standards24/7 quantum AI support'
     ],
     popular: true,
@@ -63,7 +62,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     setupTime: '2 weeks',
     category: 'Quantum AI & Neuroscience',
     realService: true,
-    technology: ['Quantum ComputingNeural NetworksBrain-Computer InterfaceAI/ML', 'Quantum Encryption'],
+    technology: ['Quantum ComputingNeural NetworksBrain-Computer InterfaceAI/MLQuantum Encryption'],
     integrations: ['Research APIsMedical devicesData analysis toolsCloud platforms'],
     useCases: ['Medical researchCognitive enhancementNeural rehabilitationAI development'],
     roi: '1000% ROI within 6 months through breakthrough discoveries and patents',
@@ -92,8 +91,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     period: '/month',
     description: 'Enterprise-grade autonomous driving platform with advanced AI, computer vision, and safety systems. Enable commercial fleets to operate autonomously with 99.99% safety record.',
     features: [
-      'Advanced computer vision AIReal-time decision makingMulti-sensor fusionPredictive maintenance',
-      'Fleet management dashboardSafety compliance toolsWeather adaptationTraffic prediction',
+      'Advanced computer vision AIReal-time decision makingMulti-sensor fusionPredictive maintenanceFleet management dashboardSafety compliance toolsWeather adaptationTraffic prediction',
       'Emergency response systemsPerformance analytics'
     ],
     popular: true,
@@ -107,7 +105,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     setupTime: '1 month',
     category: 'Autonomous Transportation',
     realService: true,
-    technology: ['Computer VisionDeep LearningLIDARRadar', 'GPSEdge Computing'],
+    technology: ['Computer VisionDeep LearningLIDARRadarGPSEdge Computing'],
     integrations: ['Fleet management systemsGPS trackingMaintenance softwareInsurance platforms'],
     useCases: ['Commercial deliveryPassenger transportLogistics operationsEmergency services'],
     roi: '300% ROI within 12 months through reduced labor costs and increased efficiency',
@@ -136,8 +134,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     period: '/month',
     description: 'AI-powered drug discovery and genetic engineering platform. Accelerate drug development by 10x while reducing costs by 90%. Advanced protein folding and drug interaction modeling.',
     features: [
-      'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modeling',
-      'Clinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',
+      'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',
       'API for research integrationMulti-omics data analysis'
     ],
     popular: true,
@@ -151,7 +148,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     setupTime: '2 weeks',
     category: 'Biotechnology & AI',
     realService: true,
-    technology: ['Machine LearningBioinformaticsComputational BiologyAI/ML', 'Cloud Computing'],
+    technology: ['Machine LearningBioinformaticsComputational BiologyAI/MLCloud Computing'],
     integrations: ['Research databasesLab equipmentClinical trial systemsRegulatory platforms'],
     useCases: ['Drug discoveryGenetic researchClinical trialsPersonalized medicine'],
     roi: '500% ROI within 18 months through accelerated drug development and cost savings',
@@ -180,8 +177,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     period: '/month',
     description: 'Quantum AI-powered algorithmic trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and profit generation.',
     features: [
-      'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management tools',
-      'Portfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance',
+      'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance',
       'Performance analyticsAPI for integration'
     ],
     popular: true,
@@ -195,7 +191,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     setupTime: '1 month',
     category: 'Quantum Finance',
     realService: true,
-    technology: ['Quantum ComputingAI/MLHigh-Frequency TradingBlockchain', 'Cloud Computing'],
+    technology: ['Quantum ComputingAI/MLHigh-Frequency TradingBlockchainCloud Computing'],
     integrations: ['Trading platformsMarket data feedsRisk management systemsCompliance tools'],
     useCases: ['Algorithmic tradingPortfolio managementRisk assessmentMarket analysis'],
     roi: '800% ROI within 6 months through superior trading performance and reduced risk',
@@ -224,8 +220,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     period: '/month',
     description: 'Complete space mission management and satellite operations platform. Enable commercial space companies to operate like NASA with advanced mission planning and satellite tracking.',
     features: [
-      'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoring',
-      'Launch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',
+      'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',
       'Regulatory compliance toolsMulti-satellite operations'
     ],
     popular: true,
@@ -239,7 +234,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     setupTime: '1 month',
     category: 'Space Technology',
     realService: true,
-    technology: ['Orbital MechanicsSatellite TechnologyAI/MLIoT', 'Cloud Computing'],
+    technology: ['Orbital MechanicsSatellite TechnologyAI/MLIoTCloud Computing'],
     integrations: ['Satellite systemsGround stationsLaunch providersRegulatory platforms'],
     useCases: ['Satellite operationsMission planningSpace researchCommercial space'],
     roi: '400% ROI within 12 months through operational efficiency and mission success',
@@ -268,8 +263,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     period: '/month',
     description: 'Complete AI-powered metaverse development platform with virtual world creation, AI NPCs, and immersive experiences. Build the next generation of digital worlds.',
     features: [
-      'AI-powered world generationIntelligent NPCs and avatars3D environment creationVirtual economy systems',
-      'Multi-user interactionsVR/AR integrationContent creation toolsAnalytics and insights',
+      'AI-powered world generationIntelligent NPCs and avatars3D environment creationVirtual economy systemsMulti-user interactionsVR/AR integrationContent creation toolsAnalytics and insights',
       'Monetization toolsCross-platform support'
     ],
     popular: true,
@@ -283,7 +277,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     setupTime: '2 weeks',
     category: 'Metaverse & Virtual Reality',
     realService: true,
-    technology: ['AI/ML3D GraphicsVirtual RealityBlockchain', 'Cloud Computing'],
+    technology: ['AI/ML3D GraphicsVirtual RealityBlockchainCloud Computing'],
     integrations: ['VR headsetsGaming platformsPayment systemsSocial media'],
     useCases: ['Virtual worldsGaming environmentsEducational spacesSocial platforms'],
     roi: '600% ROI within 12 months through virtual asset sales and user engagement',
@@ -312,8 +306,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     period: '/month',
     description: 'Advanced quantum AI robotics platform for industrial automation, precision manufacturing, and autonomous systems. Revolutionize manufacturing with quantum-enhanced robotics.',
     features: [
-      'Quantum AI decision makingPrecision robotics controlIndustrial automationPredictive maintenance',
-      'Quality control systemsSafety monitoringPerformance optimizationRemote operation',
+      'Quantum AI decision makingPrecision robotics controlIndustrial automationPredictive maintenanceQuality control systemsSafety monitoringPerformance optimizationRemote operation',
       'Analytics dashboardIntegration APIs'
     ],
     popular: true,
@@ -327,7 +320,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     setupTime: '1 month',
     category: 'Quantum Robotics',
     realService: true,
-    technology: ['Quantum ComputingAI/MLRoboticsIoT', 'Industrial Automation'],
+    technology: ['Quantum ComputingAI/MLRoboticsIoTIndustrial Automation'],
     integrations: ['Manufacturing systemsQuality controlMaintenance softwareSafety systems'],
     useCases: ['Industrial automationPrecision manufacturingQuality controlResearch robotics'],
     roi: '400% ROI within 18 months through increased efficiency and reduced errors',
@@ -356,8 +349,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     period: '/month',
     description: 'Next-generation quantum-resistant cybersecurity platform with AI-powered threat detection, quantum encryption, and advanced security analytics.',
     features: [
-      'Quantum-resistant encryptionAI threat detectionReal-time monitoringIncident response',
-      'Vulnerability assessmentCompliance toolsSecurity analyticsThreat intelligence',
+      'Quantum-resistant encryptionAI threat detectionReal-time monitoringIncident responseVulnerability assessmentCompliance toolsSecurity analyticsThreat intelligence',
       'Automated responseIntegration APIs'
     ],
     popular: true,
@@ -371,7 +363,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     setupTime: '2 weeks',
     category: 'Quantum Cybersecurity',
     realService: true,
-    technology: ['Quantum ComputingAI/MLCybersecurityEncryption', 'Threat Intelligence'],
+    technology: ['Quantum ComputingAI/MLCybersecurityEncryptionThreat Intelligence'],
     integrations: ['SIEM systemsFirewallsEndpoint protectionCompliance platforms'],
     useCases: ['Threat detectionIncident responseComplianceSecurity monitoring'],
     roi: '500% ROI within 12 months through threat prevention and compliance savings',
@@ -400,8 +392,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     period: '/month',
     description: 'Revolutionary quantum-secured internet infrastructure with quantum key distribution, quantum networks, and ultra-secure communications.',
     features: [
-      'Quantum key distributionQuantum networksUltra-secure communicationsQuantum routing',
-      'Network monitoringSecurity analyticsCompliance toolsPerformance optimization',
+      'Quantum key distributionQuantum networksUltra-secure communicationsQuantum routingNetwork monitoringSecurity analyticsCompliance toolsPerformance optimization',
       'Integration APIs24/7 support'
     ],
     popular: true,
@@ -415,7 +406,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     setupTime: '1 month',
     category: 'Quantum Internet',
     realService: true,
-    technology: ['Quantum ComputingQuantum NetworksQuantum Key DistributionAI/ML', 'Network Security'],
+    technology: ['Quantum ComputingQuantum NetworksQuantum Key DistributionAI/MLNetwork Security'],
     integrations: ['Network infrastructureSecurity systemsCompliance platformsMonitoring tools'],
     useCases: ['Secure communicationsGovernment networksFinancial transactionsHealthcare data'],
     roi: '600% ROI within 18 months through security improvements and compliance benefits',
@@ -444,8 +435,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     period: '/month',
     description: 'Advanced quantum AI logistics platform for supply chain optimization, route planning, and inventory management with unprecedented efficiency.',
     features: [
-      'Quantum AI optimizationSupply chain analyticsRoute optimizationInventory management',
-      'Demand forecastingReal-time trackingPerformance analyticsIntegration APIs',
+      'Quantum AI optimizationSupply chain analyticsRoute optimizationInventory managementDemand forecastingReal-time trackingPerformance analyticsIntegration APIs',
       'Mobile applications24/7 support'
     ],
     popular: true,
@@ -459,7 +449,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     setupTime: '2 weeks',
     category: 'Quantum Logistics',
     realService: true,
-    technology: ['Quantum ComputingAI/MLSupply Chain ManagementIoT', 'Cloud Computing'],
+    technology: ['Quantum ComputingAI/MLSupply Chain ManagementIoTCloud Computing'],
     integrations: ['ERP systemsWMS platformsTransportation systemsE-commerce platforms'],
     useCases: ['Supply chain optimizationRoute planningInventory managementDemand forecasting'],
     roi: '400% ROI within 12 months through operational efficiency and cost savings',

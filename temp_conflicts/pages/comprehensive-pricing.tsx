@@ -94,8 +94,7 @@ export default function ComprehensivePricingPage() {
       period: '/month',
       description: 'Perfect for small businesses and startups',
       features: [
-        'Basic service accessEmail supportStandard featuresCommunity forum access',
-        'Basic analytics'
+        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
       ],
       icon: <Star className="w-6 h-6" />,
       color: 'from-blue-500 to-cyan-600',
@@ -107,8 +106,7 @@ export default function ComprehensivePricingPage() {
       period: '/month',
       description: 'Ideal for growing businesses and teams',
       features: [
-        'Advanced service accessPriority supportAdvanced featuresAPI access',
-        'Advanced analyticsCustom integrations'
+        'Advanced service accessPriority supportAdvanced featuresAPI accessAdvanced analyticsCustom integrations'
       ],
       icon: <Gem className="w-6 h-6" />,
       color: 'from-purple-500 to-pink-600',
@@ -120,8 +118,7 @@ export default function ComprehensivePricingPage() {
       period: '/month',
       description: 'For large organizations and enterprises',
       features: [
-        'Full service access24/7 dedicated supportAll featuresCustom development',
-        'Enterprise analyticsWhite-label optionsSLA guarantees'
+        'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees'
       ],
       icon: <Crown className="w-6 h-6" />,
       color: 'from-yellow-500 to-orange-600',

@@ -4,8 +4,7 @@ export const advancedEmergingTechServices2025 = [
     name: 'SpaceMining Operations',
     description: 'Advanced space mining platform that enables asteroid mining, lunar resource extraction, and space resource management for sustainable space exploration.',
     features: [
-      'Asteroid mining operationsLunar resource extractionSpace resource mappingAutomated mining systems',
-      'Integration with space agenciesAdvanced analytics and reportingCustom mining strategies24/7 space operations monitoring'
+      'Asteroid mining operationsLunar resource extractionSpace resource mappingAutomated mining systemsIntegration with space agenciesAdvanced analytics and reportingCustom mining strategies24/7 space operations monitoring'
     ],
     pricing: {
       starter: { price: 999, period: 'month', features: ['Basic space operationsResource mappingStandard support'] },
@@ -28,8 +27,7 @@ export const advancedEmergingTechServices2025 = [
     name: 'QuantumBio Computing',
     description: 'Revolutionary quantum-biological hybrid computing platform that combines quantum computing with biological processing for unprecedented computational power.',
     features: [
-      'Quantum-biological hybrid processingDNA-based computingBiological algorithm optimizationReal-time quantum bio analytics',
-      'Integration with research platformsAdvanced analytics and reportingCustom quantum bio algorithms24/7 platform monitoring'
+      'Quantum-biological hybrid processingDNA-based computingBiological algorithm optimizationReal-time quantum bio analyticsIntegration with research platformsAdvanced analytics and reportingCustom quantum bio algorithms24/7 platform monitoring'
     ],
     pricing: {
       starter: { price: 599, period: 'month', features: ['Basic quantum bio featuresStandard processingEmail support'] },
@@ -52,8 +50,7 @@ export const advancedEmergingTechServices2025 = [
     name: 'BrainInterface Pro',
     description: 'Advanced brain-computer interface platform that enables direct neural communication, cognitive enhancement, and neurological research applications.',
     features: [
-      'Neural signal processingCognitive enhancement toolsBrain-computer communicationReal-time neural analytics',
-      'Integration with medical devicesAdvanced analytics and reportingCustom neural algorithms24/7 neural monitoring'
+      'Neural signal processingCognitive enhancement toolsBrain-computer communicationReal-time neural analyticsIntegration with medical devicesAdvanced analytics and reportingCustom neural algorithms24/7 neural monitoring'
     ],
     pricing: {
       starter: { price: 799, period: 'month', features: ['Basic neural interfaceStandard processingEmail support'] },
@@ -76,8 +73,7 @@ export const advancedEmergingTechServices2025 = [
     name: 'QuantumEnergy Fusion',
     description: 'Revolutionary quantum energy fusion platform that simulates and optimizes fusion power generation for sustainable energy solutions.',
     features: [
-      'Fusion power simulationQuantum energy optimizationReal-time fusion monitoringEnergy efficiency analytics',
-      'Integration with power gridsAdvanced analytics and reportingCustom fusion algorithms24/7 energy monitoring'
+      'Fusion power simulationQuantum energy optimizationReal-time fusion monitoringEnergy efficiency analyticsIntegration with power gridsAdvanced analytics and reportingCustom fusion algorithms24/7 energy monitoring'
     ],
     pricing: {
       starter: { price: 1299, period: 'month', features: ['Basic fusion simulationStandard optimizationEmail support'] },
@@ -100,8 +96,7 @@ export const advancedEmergingTechServices2025 = [
     name: 'AutonomousVehicle AI',
     description: 'Advanced autonomous vehicle AI platform that provides intelligent navigation, safety systems, and fleet management for autonomous transportation.',
     features: [
-      'AI-powered navigationAdvanced safety systemsFleet managementReal-time vehicle monitoring',
-      'Integration with vehicle systemsAdvanced analytics and reportingCustom AI algorithms24/7 autonomous operations'
+      'AI-powered navigationAdvanced safety systemsFleet managementReal-time vehicle monitoringIntegration with vehicle systemsAdvanced analytics and reportingCustom AI algorithms24/7 autonomous operations'
     ],
     pricing: {
       starter: { price: 399, period: 'month', features: ['Up to 10 vehiclesBasic AI navigationStandard monitoring'] },
@@ -124,8 +119,7 @@ export const advancedEmergingTechServices2025 = [
     name: 'QuantumMaterials Discovery',
     description: 'Revolutionary quantum materials discovery platform that accelerates the development of new materials using quantum computing and AI.',
     features: [
-      'Quantum materials simulationAI-powered discovery algorithmsReal-time material analysisAdvanced property prediction',
-      'Integration with research platformsAdvanced analytics and reportingCustom discovery algorithms24/7 discovery operations'
+      'Quantum materials simulationAI-powered discovery algorithmsReal-time material analysisAdvanced property predictionIntegration with research platformsAdvanced analytics and reportingCustom discovery algorithms24/7 discovery operations'
     ],
     pricing: {
       starter: { price: 699, period: 'month', features: ['Basic materials simulationStandard discoveryEmail support'] },
@@ -148,8 +142,7 @@ export const advancedEmergingTechServices2025 = [
     name: 'QuantumRobotics Pro',
     description: 'Advanced quantum robotics platform that combines quantum computing with robotics for intelligent automation and advanced robotic systems.',
     features: [
-      'Quantum-enhanced roboticsAI-powered automationReal-time robotic controlAdvanced motion planning',
-      'Integration with robotic systemsAdvanced analytics and reportingCustom robotic algorithms24/7 robotic operations'
+      'Quantum-enhanced roboticsAI-powered automationReal-time robotic controlAdvanced motion planningIntegration with robotic systemsAdvanced analytics and reportingCustom robotic algorithms24/7 robotic operations'
     ],
     pricing: {
       starter: { price: 499, period: 'month', features: ['Up to 5 robotsBasic quantum featuresStandard control'] },
@@ -172,8 +165,7 @@ export const advancedEmergingTechServices2025 = [
     name: 'QuantumInternet Security',
     description: 'Next-generation quantum internet security platform that provides unbreakable encryption and secure communication for the quantum internet.',
     features: [
-      'Quantum internet encryptionSecure quantum communicationReal-time security monitoringAdvanced threat detection',
-      'Integration with internet infrastructureAdvanced analytics and reportingCustom security protocols24/7 quantum security operations'
+      'Quantum internet encryptionSecure quantum communicationReal-time security monitoringAdvanced threat detectionIntegration with internet infrastructureAdvanced analytics and reportingCustom security protocols24/7 quantum security operations'
     ],
     pricing: {
       starter: { price: 299, period: 'month', features: ['Basic quantum securityStandard encryptionEmail support'] },
@@ -196,8 +188,7 @@ export const advancedEmergingTechServices2025 = [
     name: 'QuantumLogistics Pro',
     description: 'Advanced quantum logistics optimization platform that provides intelligent route planning, supply chain optimization, and logistics automation.',
     features: [
-      'Quantum route optimizationAI-powered logisticsReal-time supply chain monitoringAdvanced optimization algorithms',
-      'Integration with logistics systemsAdvanced analytics and reportingCustom optimization models24/7 logistics operations'
+      'Quantum route optimizationAI-powered logisticsReal-time supply chain monitoringAdvanced optimization algorithmsIntegration with logistics systemsAdvanced analytics and reportingCustom optimization models24/7 logistics operations'
     ],
     pricing: {
       starter: { price: 199, period: 'month', features: ['Up to 10 routesBasic optimizationStandard monitoring'] },
@@ -220,8 +211,7 @@ export const advancedEmergingTechServices2025 = [
     name: 'QuantumMetaverse Pro',
     description: 'Revolutionary quantum metaverse development platform that creates immersive virtual worlds with quantum-enhanced graphics and AI.',
     features: [
-      'Quantum-enhanced graphicsAI-powered world generationReal-time virtual renderingAdvanced user interaction',
-      'Integration with VR/AR systemsAdvanced analytics and reportingCustom metaverse solutions24/7 platform monitoring'
+      'Quantum-enhanced graphicsAI-powered world generationReal-time virtual renderingAdvanced user interactionIntegration with VR/AR systemsAdvanced analytics and reportingCustom metaverse solutions24/7 platform monitoring'
     ],
     pricing: {
       starter: { price: 399, period: 'month', features: ['Basic metaverse featuresStandard graphicsEmail support'] },

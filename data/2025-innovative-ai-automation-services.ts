@@ -56,8 +56,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     period: '/month',
     description: 'Advanced AI-powered code review system that automatically analyzes code quality, security vulnerabilities, and performance issues across multiple programming languages.',
     features: [
-      'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metrics',
-      'Integration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows',
+      'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metricsIntegration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows',
       'Compliance and best practices enforcement'
     ],
     popular: true,
@@ -71,8 +70,8 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     setupTime: '2 hours',
     category: 'AI & Development',
     realService: true,
-    technology: ['PythonTensorFlowOpenAI GPT-4PostgreSQL', 'Redis'],
-    integrations: ['GitHubGitLabBitbucketJira', 'SlackTeams'],
+    technology: ['PythonTensorFlowOpenAI GPT-4PostgreSQLRedis'],
+    integrations: ['GitHubGitLabBitbucketJiraSlackTeams'],
     useCases: ['Code quality assuranceSecurity scanningPerformance optimizationTeam collaboration'],
     roi: 'Reduce code review time by 70% and improve code quality by 40%',
     competitors: ['SonarQubeCodeClimateSnykDeepCode'],
@@ -95,8 +94,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     period: '/month',
     description: 'AI-powered testing platform that automatically generates, executes, and maintains test suites while adapting to application changes.',
     features: [
-      'AI-generated test cases and scenariosSelf-healing test automationCross-browser and cross-platform testingPerformance and load testing automation',
-      'Visual regression testing with AITest data generation and managementCI/CD pipeline integrationReal-time test execution monitoring',
+      'AI-generated test cases and scenariosSelf-healing test automationCross-browser and cross-platform testingPerformance and load testing automationVisual regression testing with AITest data generation and managementCI/CD pipeline integrationReal-time test execution monitoring',
       'Predictive test failure analysis'
     ],
     popular: true,
@@ -134,8 +132,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     period: '/month',
     description: 'AI-driven DevOps platform that automatically manages infrastructure, predicts scaling needs, and resolves issues before they impact users.',
     features: [
-      'Predictive infrastructure scalingAutomated incident response and resolutionIntelligent resource optimizationMulti-cloud orchestration',
-      'Security compliance automationPerformance monitoring and alertingCost optimization recommendationsInfrastructure as Code automation',
+      'Predictive infrastructure scalingAutomated incident response and resolutionIntelligent resource optimizationMulti-cloud orchestrationSecurity compliance automationPerformance monitoring and alertingCost optimization recommendationsInfrastructure as Code automation',
       'Real-time health monitoring'
     ],
     popular: false,
@@ -173,8 +170,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     period: '/month',
     description: 'AI-powered data pipeline platform that automatically optimizes data workflows, detects anomalies, and ensures data quality.',
     features: [
-      'Automated data quality monitoringIntelligent error handling and recoveryReal-time data validationPerformance optimization automation',
-      'Data lineage trackingCompliance and governance automationMulti-source data integrationPredictive maintenance alerts',
+      'Automated data quality monitoringIntelligent error handling and recoveryReal-time data validationPerformance optimization automationData lineage trackingCompliance and governance automationMulti-source data integrationPredictive maintenance alerts',
       'Scalable ETL/ELT processing'
     ],
     popular: false,
@@ -212,8 +208,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     period: '/month',
     description: 'AI-driven security monitoring platform that automatically detects threats, analyzes patterns, and responds to security incidents.',
     features: [
-      'AI-powered threat detectionAutomated incident responseBehavioral analysis and anomaly detectionReal-time security monitoring',
-      'Compliance reporting automationVulnerability assessment and managementSecurity orchestration and automationThreat intelligence integration',
+      'AI-powered threat detectionAutomated incident responseBehavioral analysis and anomaly detectionReal-time security monitoringCompliance reporting automationVulnerability assessment and managementSecurity orchestration and automationThreat intelligence integration',
       'Predictive security analytics'
     ],
     popular: true,
@@ -258,8 +253,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     period: '/month',
     description: 'Advanced analytics platform that automatically discovers insights, generates reports, and provides actionable recommendations. Democratizes data access while maintaining security and governance.',
     features: [
-      'AI-powered insight discoveryNatural language queriesAutomated report generationPredictive analytics',
-      'Data visualizationReal-time dashboardsData governanceSecurity controls',
+      'AI-powered insight discoveryNatural language queriesAutomated report generationPredictive analyticsData visualizationReal-time dashboardsData governanceSecurity controls',
       'API accessCustom model training'
     ],
     popular: false,

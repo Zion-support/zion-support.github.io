@@ -34,8 +34,7 @@ export default function StartupToolsPage() {
       icon: <Target className="w-8 h-8 text-orange-400" />,
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       features: [
-        'CRM systemEmail marketingLead generationAnalytics & reporting',
-        'Marketing automationFree tier available'
+        'CRM systemEmail marketingLead generationAnalytics & reportingMarketing automationFree tier available'
       ],
       website: 'https://hubspot.com',
       useCase: 'Perfect for startups that want to implement inbound marketing strategies and manage customer relationships effectively.',
@@ -53,8 +52,7 @@ export default function StartupToolsPage() {
       icon: <Mail className="w-8 h-8 text-yellow-400" />,
       color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
       features: [
-        'Email templatesAutomation workflowsA/B testingAnalytics & reporting',
-        'Integration ecosystemFree tier available'
+        'Email templatesAutomation workflowsA/B testingAnalytics & reportingIntegration ecosystemFree tier available'
       ],
       website: 'https://mailchimp.com',
       useCase: 'Ideal for startups that need to build email lists, nurture leads, and communicate with customers.',
@@ -72,8 +70,7 @@ export default function StartupToolsPage() {
       icon: <Calendar className="w-8 h-8 text-blue-400" />,
       color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
       features: [
-        'Automated schedulingCalendar integrationCustom booking pagesTeam scheduling',
-        'Analytics & reportingFree tier available'
+        'Automated schedulingCalendar integrationCustom booking pagesTeam schedulingAnalytics & reportingFree tier available'
       ],
       website: 'https://calendly.com',
       useCase: 'Essential for startups that need to schedule sales calls, investor meetings, and team collaborations efficiently.',
@@ -91,8 +88,7 @@ export default function StartupToolsPage() {
       icon: <Lightbulb className="w-8 h-8 text-blue-400" />,
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       features: [
-        'Design templatesStock photos & iconsBrand kitTeam collaboration',
-        'Social media formatsFree tier available'
+        'Design templatesStock photos & iconsBrand kitTeam collaborationSocial media formatsFree tier available'
       ],
       website: 'https://canva.com',
       useCase: 'Perfect for startups that need to create marketing materials, social media content, and presentations.',
@@ -110,8 +106,7 @@ export default function StartupToolsPage() {
       icon: <Globe className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Social media schedulingAnalytics & reportingTeam collaborationContent calendar',
-        'Multiple platformsFree tier available'
+        'Social media schedulingAnalytics & reportingTeam collaborationContent calendarMultiple platformsFree tier available'
       ],
       website: 'https://buffer.com',
       useCase: 'Ideal for startups that want to maintain a consistent social media presence and grow their audience.',
@@ -129,8 +124,7 @@ export default function StartupToolsPage() {
       icon: <Zap className="w-8 h-8 text-gray-400" />,
       color: 'bg-gradient-to-br from-gray-500 to-gray-700',
       features: [
-        'Note-taking & docsProject managementTeam collaborationDatabase & tables',
-        'Templates libraryAPI integration'
+        'Note-taking & docsProject managementTeam collaborationDatabase & tablesTemplates libraryAPI integration'
       ],
       website: 'https://notion.so',
       useCase: 'Perfect for startup teams that need a flexible workspace for documentation, project management, and knowledge sharing.',
@@ -148,8 +142,7 @@ export default function StartupToolsPage() {
       icon: <DollarSign className="w-8 h-8 text-blue-400" />,
       color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
       features: [
-        'Global payment methodsSubscription billingFraud protectionCompliance tools',
-        'Developer-friendly APIAnalytics dashboard'
+        'Global payment methodsSubscription billingFraud protectionCompliance toolsDeveloper-friendly APIAnalytics dashboard'
       ],
       website: 'https://stripe.com',
       useCase: 'Essential for any startup that needs to accept payments, especially SaaS companies and e-commerce businesses.',
@@ -167,8 +160,7 @@ export default function StartupToolsPage() {
       icon: <Users className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Live chatCustomer messagingHelp deskUser onboarding',
-        'Analytics & reportingIntegration ecosystem'
+        'Live chatCustomer messagingHelp deskUser onboardingAnalytics & reportingIntegration ecosystem'
       ],
       website: 'https://intercom.com',
       useCase: 'Perfect for SaaS startups and online businesses that want to provide excellent customer support and user engagement.',
@@ -186,8 +178,7 @@ export default function StartupToolsPage() {
       icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
-        'User behavior trackingFunnel analysisA/B testingReal-time data',
-        'Custom eventsMobile analytics'
+        'User behavior trackingFunnel analysisA/B testingReal-time dataCustom eventsMobile analytics'
       ],
       website: 'https://mixpanel.com',
       useCase: 'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.',
@@ -205,8 +196,7 @@ export default function StartupToolsPage() {
       icon: <Rocket className="w-8 h-8 text-black" />,
       color: 'bg-gradient-to-br from-gray-800 to-black',
       features: [
-        'Zero-config deploymentGlobal CDNAutomatic scalingGit integration',
-        'Preview deploymentsEdge functions'
+        'Zero-config deploymentGlobal CDNAutomatic scalingGit integrationPreview deploymentsEdge functions'
       ],
       website: 'https://vercel.com',
       useCase: 'Ideal for startup development teams that want to deploy modern web applications quickly with excellent performance.',
@@ -216,7 +206,7 @@ export default function StartupToolsPage() {
     }
   ],
 
-  const categories = ['AllMarketing & SalesEmail MarketingProductivity', 'DesignSocial MediaPaymentsCustomer Support', 'AnalyticsDevelopment'],
+  const categories = ['AllMarketing & SalesEmail MarketingProductivityDesignSocial MediaPaymentsCustomer Support', 'AnalyticsDevelopment'],
   const [selectedCategory, setSelectedCategory] = React.useState('All'),
 
   const filteredTools = selectedCategory === 'All' 

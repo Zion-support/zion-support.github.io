@@ -434,8 +434,7 @@ export default function Contact() {
             role: 'Support Bot'}}
           onSendMessage={handleSendMessage}
           starterQuestions={[
-            'How do I list a product?What services does Zion offer?Where can I view pricing plans?How do I create an account?',
-            'Can I talk to a human representative?']}
+            'How do I list a product?What services does Zion offer?Where can I view pricing plans?How do I create an account?Can I talk to a human representative?']}
         />
       )}
     </>

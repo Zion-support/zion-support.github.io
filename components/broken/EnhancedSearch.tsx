@@ -39,8 +39,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]),
   const [searchHistory, setSearchHistory] = useState<string[]>([]),
   const [popularSearches] = useState([
-    'AI ConsciousnessQuantum ComputingCybersecurityBusiness Intelligence',
-    'Space TechnologyAutonomous Systems'
+    'AI ConsciousnessQuantum ComputingCybersecurityBusiness IntelligenceSpace TechnologyAutonomous Systems'
   ]),
 
   // Mock search results - in real app, this would come from API

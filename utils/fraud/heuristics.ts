@@ -1,20 +1,16 @@
 import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types',
 
 const suspiciousLinkHosts = [
-  'paypal.mecash.appvenmo.comwa.me',
-  't.metelegram.mewhatsapp.comwesternunion.com',
+  'paypal.mecash.appvenmo.comwa.met.metelegram.mewhatsapp.comwesternunion.com',
   'moneygram.com'],
 
 const suspiciousPhrases = [
-  'whatsapp metelegram mecontact me on whatsappcashapp only',
-  'crypto onlysend cryptowire transfergift card',
-  'western unionoff-platform paymentoutside paymentpay outside',
-  'pay me directlydm me onreach me on whatsappskype me',
+  'whatsapp metelegram mecontact me on whatsappcashapp onlycrypto onlysend cryptowire transfergift card',
+  'western unionoff-platform paymentoutside paymentpay outsidepay me directlydm me onreach me on whatsappskype me',
   'email me at'],
 
 const vagueScammyJobPhrases = [
-  'easy workquick moneyno experience neededwork from home and earn fast',
-  'daily payoutsearn $\\d+ per day'],
+  'easy workquick moneyno experience neededwork from home and earn fastdaily payoutsearn $\\d+ per day'],
 
 function containsSuspiciousHost(text: string): boolean {
   const lower = text.toLowerCase(),

@@ -3,8 +3,7 @@ import React, { useEffect, useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import { useCurrentUser } from '../../utils/auth',
 const REASONS = [
-  'Scope DisagreementQuality IssuesDelivery DelayPayment Issue',
-  'Communication BreakdownOther'] as const,
+  'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const,
 
 type ReasonType = typeof REASONS[number],
 

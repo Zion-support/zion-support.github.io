@@ -9,8 +9,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'warn@typescript-eslint/no-empty-object-type': 'warn@next/next/no-html-link-for-pages': 'warn'
   },
   ignorePatterns: [
-    'node_modules/.next/out/build/',
-    'dist/*.config.js*.config.tsscripts/',
+    'node_modules/.next/out/build/dist/*.config.js*.config.tsscripts/',
     'automation/netlify/src/apps/'
   ]
 },

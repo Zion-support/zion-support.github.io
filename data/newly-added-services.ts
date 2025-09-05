@@ -15,8 +15,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Spin up a governed feature store with versioning, lineage, validation, and online/offline consistency. Includes SDKs and CI checks.',
     features: [
-      'Online/offline consistency checksSchema/version governanceBackfills and point-in-time joinsDrift alerts and quality tests',
-      'RBAC and audit logs'
+      'Online/offline consistency checksSchema/version governanceBackfills and point-in-time joinsDrift alerts and quality testsRBAC and audit logs'
     ],
     popular: true,
     icon: '🧬',
@@ -53,8 +52,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Point-and-click recorder producing deterministic agent scripts with selector healing, backoff, and CAPTCHA strategies.',
     features: [
-      'DOM diff–based selector healingAuto-wait and idempotent stepsProxies and device profilesRun history and replays',
-      'Webhooks and schedules'
+      'DOM diff–based selector healingAuto-wait and idempotent stepsProxies and device profilesRun history and replaysWebhooks and schedules'
     ],
     popular: false,
     icon: '🕹️',
@@ -91,8 +89,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Production-grade SSO (SAML/OIDC) with SCIM provisioning adapters, test suites, branding, and audit logs.',
     features: [
-      'SAML/OIDC providers ready-to-goSCIM provisioning adaptersEnd-to-end test suitesBranding and theming',
-      'Audit logs and support runbooks'
+      'SAML/OIDC providers ready-to-goSCIM provisioning adaptersEnd-to-end test suitesBranding and themingAudit logs and support runbooks'
     ],
     popular: true,
     icon: '🔐',
@@ -129,8 +126,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Continuously measure and improve your API latency with synthetic tests, adaptive rate-limit tuning, and contract-aware caching. Export recommendations as IaC.',
     features: [
-      'Synthetic latency monitoringAdaptive rate-limit tunerMulti-region load testingSchema & contract validation',
-      'Auto-caching recommendationsChange-impact reports'
+      'Synthetic latency monitoringAdaptive rate-limit tunerMulti-region load testingSchema & contract validationAuto-caching recommendationsChange-impact reports'
     ],
     popular: true,
     icon: '⚡',
@@ -167,8 +163,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Deploy a secure RAG stack with ingestion pipeline, chunking, embeddings, vector DB, and evaluation harness. Includes observability and guardrails.',
     features: [
-      'Document ingestion & chunkingEmbeddings & vector DB (Pinecone/Weaviate/PGVector)Prompt templates & guardrailsEvaluation harness (quality, toxicity, grounding)',
-      'Observability dashboardsOne-click deploys'
+      'Document ingestion & chunkingEmbeddings & vector DB (Pinecone/Weaviate/PGVector)Prompt templates & guardrailsEvaluation harness (quality, toxicity, grounding)Observability dashboardsOne-click deploys'
     ],
     popular: true,
     icon: '🧠',
@@ -205,8 +200,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Define robust browser automation using plain-language steps. Includes anti-fingerprint profiles, CAPTCHA strategies, and failure replay.',
     features: [
-      'Step-based DSLResilient selectors & healingProxy pools & rotationCaptcha solve workflows',
-      'Audit logs & video replayScheduler & webhooks'
+      'Step-based DSLResilient selectors & healingProxy pools & rotationCaptcha solve workflowsAudit logs & video replayScheduler & webhooks'
     ],
     popular: false,
     icon: '🧩',
@@ -243,8 +237,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Continuously monitor cloud bills and usage for anomalies, surface drivers, and open GitHub issues with Terraform recommendations.',
     features: [
-      'Anomaly detection & seasonalityService & tag attributionSlack and email alertsTerraform fix suggestions',
-      'Forecast & budget guardrailsMulti-cloud support'
+      'Anomaly detection & seasonalityService & tag attributionSlack and email alertsTerraform fix suggestionsForecast & budget guardrailsMulti-cloud support'
     ],
     popular: true,
     icon: '💸',
@@ -281,8 +274,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Define data and maintenance jobs using a YAML spec. We provision serverless cron, retries, dead-letter queues, and cost-aware schedules across AWS/Azure/GCP.',
     features: [
-      'YAML job specsCross-cloud schedulerRetries & DLQNotification hooks',
-      'Cost-aware windowsAudit & run history'
+      'YAML job specsCross-cloud schedulerRetries & DLQNotification hooksCost-aware windowsAudit & run history'
     ],
     popular: false,
     icon: '⏱️',
@@ -319,8 +311,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Continuously crawl your site, detect Core Web Vitals regressions, broken links, and missing structured data. Auto-open PRs with fixes.',
     features: [
-      'Automated crawlingCWV and Lighthouse checksBroken link detectionSchema.org suggestions',
-      'PR autofix workflowsSitemap & robots validation'
+      'Automated crawlingCWV and Lighthouse checksBroken link detectionSchema.org suggestionsPR autofix workflowsSitemap & robots validation'
     ],
     popular: true,
     icon: '🔍',
@@ -357,8 +348,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Deploy multi-region consent banners with IAB TCF compliance, A/B testing, and consent logs. Export DPIA and audit trails.',
     features: [
-      'IAB TCF supportRegion-based policiesConsent logs & exportsA/B banner optimization',
-      'CMP integrationsAccessibility first UI'
+      'IAB TCF supportRegion-based policiesConsent logs & exportsA/B banner optimizationCMP integrationsAccessibility first UI'
     ],
     popular: false,
     icon: '🛡️',
@@ -395,8 +385,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Capture meeting audio, generate summaries with speakers, and push action items to Jira/HubSpot/Salesforce with privacy controls.',
     features: [
-      'Auto-record & transcribeSpeaker diarizationAction item extractionCRM & PM sync',
-      'PII redactionTeam workspace'
+      'Auto-record & transcribeSpeaker diarizationAction item extractionCRM & PM syncPII redactionTeam workspace'
     ],
     popular: true,
     icon: '📝',
@@ -433,8 +422,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Automate upgrades across frameworks and libraries. Typed codemods, test-aware refactors, and PRs with diffs and rollback plans.',
     features: [
-      'Typed codemodsTest-aware refactorsMulti-repo orchestrationRisk scoring & rollbacks',
-      'CI validationChangelogs & docs'
+      'Typed codemodsTest-aware refactorsMulti-repo orchestrationRisk scoring & rollbacksCI validationChangelogs & docs'
     ],
     popular: false,
     icon: '🧩',
@@ -471,8 +459,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Automate incident status updates based on SLO breaches. Standardize RCAs, postmortems, and subscriber communication.',
     features: [
-      'SLO-triggered updatesRCA templatesSubscriber messagingIncident timeline',
-      'Webhook & chat opsAnalytics & CSAT'
+      'SLO-triggered updatesRCA templatesSubscriber messagingIncident timelineWebhook & chat opsAnalytics & CSAT'
     ],
     popular: false,
     icon: '🚨',
@@ -509,8 +496,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Protect databases and object stores with policy-based snapshots, immutability, encryption, and cross-cloud recovery runbooks.',
     features: [
-      'Snapshot policiesImmutability & WORMCross-cloud recoveryKey rotation & KMS',
-      'Drills & audit logsCost-aware tiers'
+      'Snapshot policiesImmutability & WORMCross-cloud recoveryKey rotation & KMSDrills & audit logsCost-aware tiers'
     ],
     popular: true,
     icon: '🗄️',
@@ -547,8 +533,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Aggregate NPS, reviews, and support tickets. Use LLMs to cluster themes, detect churn signals, and prioritize roadmap items.',
     features: [
-      'Omnichannel ingestionLLM theme clusteringChurn signal alertsRoadmap prioritization',
-      'VOC dashboardsCSV & API export'
+      'Omnichannel ingestionLLM theme clusteringChurn signal alertsRoadmap prioritizationVOC dashboardsCSV & API export'
     ],
     popular: false,
     icon: '💬',
@@ -585,8 +570,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Generate compliant, persona-aware sequences across email and LinkedIn. Test copy variants and optimize send windows.',
     features: [
-      'ICP & persona modelingSequence generatorDeliverability checksSend window optimizer',
-      'A/B copy testingCRM sync'
+      'ICP & persona modelingSequence generatorDeliverability checksSend window optimizerA/B copy testingCRM sync'
     ],
     popular: true,
     icon: '📈',
@@ -623,8 +607,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Profile jobs, detect bottlenecks, and tune parallelism. Catch schema drift early and enforce cost guardrails with auto-remediation.',
     features: [
-      'Throughput profilerParallelism tunerSchema drift alertsCost guardrails',
-      'Auto-remediationRunbook suggestions'
+      'Throughput profilerParallelism tunerSchema drift alertsCost guardrailsAuto-remediationRunbook suggestions'
     ],
     popular: false,
     icon: '📦',
@@ -661,8 +644,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Offer SSO to your customers in days, not months. Support SAML/OIDC, branded login pages, SCIM provisioning, and role mapping.',
     features: [
-      'SAML & OIDCSCIM provisioningBranded login pagesRole & group mapping',
-      'Audit logsTenant isolation'
+      'SAML & OIDCSCIM provisioningBranded login pagesRole & group mappingAudit logsTenant isolation'
     ],
     popular: true,
     icon: '🔐',
@@ -700,8 +682,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Continuous cloud spend monitoring with anomaly detection, budget guardrails, auto-tagging checks, and actionable playbooks that reduce waste fast.',
     features: [
-      'Real-time anomaly detectionBudget guardrails & alertsAuto-tagging verificationSavings recommendations',
-      'Slack/Email integrationsMulti-cloud coverage (AWS/Azure/GCP)'
+      'Real-time anomaly detectionBudget guardrails & alertsAuto-tagging verificationSavings recommendationsSlack/Email integrationsMulti-cloud coverage (AWS/Azure/GCP)'
     ],
     popular: true,
     icon: '💸',
@@ -738,8 +719,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'End-to-end DSAR workflows: identity verification, data discovery, redaction, secure delivery, and complete audit trails.',
     features: [
-      'Identity verification & consentCross-system data discoveryAutomatic PII redactionDeadline tracking & SLAs',
-      'Export bundles & receiptsPolicy templates'
+      'Identity verification & consentCross-system data discoveryAutomatic PII redactionDeadline tracking & SLAsExport bundles & receiptsPolicy templates'
     ],
     popular: true,
     icon: '✅',
@@ -776,8 +756,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Reduce MTTR with incident detection, guided diagnostics, automated status updates, and post-incident summaries.',
     features: [
-      'Playbook suggestionsAuto status page updatesRoot-cause timelinesSlack/PagerDuty bridges',
-      'Postmortem draftsService dependency mapping'
+      'Playbook suggestionsAuto status page updatesRoot-cause timelinesSlack/PagerDuty bridgesPostmortem draftsService dependency mapping'
     ],
     popular: false,
     icon: '🆘',
@@ -814,8 +793,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Find ICP-fit accounts, generate tailored messaging, schedule sequences across email/LinkedIn, and track replies with deliverability best practices.',
     features: [
-      'ICP filters & enrichmentPersonalized sequencesDeliverability checksLinkedIn assist',
-      'Reply classificationCRM sync'
+      'ICP filters & enrichmentPersonalized sequencesDeliverability checksLinkedIn assistReply classificationCRM sync'
     ],
     popular: true,
     icon: '📈',
@@ -852,8 +830,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Define data contracts, detect breaking changes, monitor SLAs, and auto-open tickets with owners enriched from lineage.',
     features: [
-      'Schema diff & validationData quality checksLineage-based ownershipSLA monitors',
-      'Contract registryAuto ticketing'
+      'Schema diff & validationData quality checksLineage-based ownershipSLA monitorsContract registryAuto ticketing'
     ],
     popular: false,
     icon: '🧾',
@@ -890,8 +867,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Auto-categorize, draft, and send replies to routine emails with human-in-the-loop review queues and SLA targets.',
     features: [
-      'Priority and intent detectionSafe auto-send rules with approvalsKnowledge-grounded answers (RAG)Shared inbox and assignments',
-      'Analytics and SLA dashboards'
+      'Priority and intent detectionSafe auto-send rules with approvalsKnowledge-grounded answers (RAG)Shared inbox and assignmentsAnalytics and SLA dashboards'
     ],
     popular: true,
     icon: '✉️',
@@ -928,8 +904,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Design mobile-optimized surveys with adaptive branching, QR codes, and embeddable widgets. Export insights and raw data.',
     features: [
-      'Branching & pipingTheme & embed widgetsQR & link distributionReal-time dashboards',
-      'Exports & webhooks'
+      'Branching & pipingTheme & embed widgetsQR & link distributionReal-time dashboardsExports & webhooks'
     ],
     popular: false,
     icon: '📱',
@@ -966,8 +941,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Self-serve returns portal, label generation, disposition workflows, and refund APIs. Reduce WISMR and improve CX.',
     features: [
-      'Return portal & policiesLabel generationReason codes & workflowsWarehouse disposition',
-      'Refund & exchange APIs'
+      'Return portal & policiesLabel generationReason codes & workflowsWarehouse dispositionRefund & exchange APIs'
     ],
     popular: true,
     icon: '📦',
@@ -1004,8 +978,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Automatically triage inbound emails, suggest responses, and escalate exceptions. Includes tone controls, policy guardrails, and CRM sync.',
     features: [
-      'Inbox categorization & prioritiesDraft reply suggestions with tone controlsPolicy filters and PII redactionCRM sync and tags',
-      'Auto follow-ups and SLAs'
+      'Inbox categorization & prioritiesDraft reply suggestions with tone controlsPolicy filters and PII redactionCRM sync and tagsAuto follow-ups and SLAs'
     ],
     popular: true,
     icon: '📧',
@@ -1042,8 +1015,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Build adaptive, mobile‑optimized surveys and embed them anywhere. Get real‑time analytics and audience insights.',
     features: [
-      'Branching logic and conditionsBeautiful mobile templatesReal‑time charts & exportsUTM and webhook integrations',
-      'NPS/CSAT/CES presets'
+      'Branching logic and conditionsBeautiful mobile templatesReal‑time charts & exportsUTM and webhook integrationsNPS/CSAT/CES presets'
     ],
     popular: false,
     icon: '📱',
@@ -1080,8 +1052,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Create affiliate programs with unique links, payouts, and fraud detection. Export-ready tax reports and analytics included.',
     features: [
-      'Referral links and attributionCommission rules and schedulesFraud checks and blacklistsAnalytics & tax exports',
-      'Webhook and API'
+      'Referral links and attributionCommission rules and schedulesFraud checks and blacklistsAnalytics & tax exportsWebhook and API'
     ],
     popular: true,
     icon: '🔗',
@@ -1118,8 +1089,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Upload audio, auto‑transcribe with speaker diarization, generate show notes, and publish SEO‑ready pages.',
     features: [
-      'Diarization & timestampsChapters and show notesVocabulary hintsExport SRT/VTT/Docs',
-      'SEO landing pages'
+      'Diarization & timestampsChapters and show notesVocabulary hintsExport SRT/VTT/DocsSEO landing pages'
     ],
     popular: false,
     icon: '🎙️',
@@ -1156,8 +1126,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Allow customers to initiate returns, generate labels, and track status. Automate refunds and reasons for analytics.',
     features: [
-      'Return reasons & RMA flowLabel creation and trackingStatus pages and notificationsExchange or refund rules',
-      'Analytics and exports'
+      'Return reasons & RMA flowLabel creation and trackingStatus pages and notificationsExchange or refund rulesAnalytics and exports'
     ],
     popular: true,
     icon: '📦',
@@ -1194,8 +1163,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Simple helpdesk for MSPs with SLA timers, KB, and client portal. Integrates with remote monitoring for alerts → tickets.',
     features: [
-      'Tickets and SLAsKB and canned repliesClient portal and rolesAlerts → ticket rules',
-      'Email ingest & automation'
+      'Tickets and SLAsKB and canned repliesClient portal and rolesAlerts → ticket rulesEmail ingest & automation'
     ],
     popular: false,
     icon: '🛠️',
@@ -1232,8 +1200,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'End-to-end privacy ops: system inventory, data flows, DPIAs, risk scoring, DSAR triage, and evidence exports mapped to GDPR/CCPA.',
     features: [
-      'Automated system discovery and RoPA builderDPIA templates with AI risk suggestionsDSAR intake, identity verification, redactionPolicy generation and version control',
-      'Evidence exports (ISO 27001/SOC2 mappings)'
+      'Automated system discovery and RoPA builderDPIA templates with AI risk suggestionsDSAR intake, identity verification, redactionPolicy generation and version controlEvidence exports (ISO 27001/SOC2 mappings)'
     ],
     popular: true,
     icon: '🛡️',
@@ -1270,8 +1237,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'AI sequences with intent signals, channel selection, and auto-logged CRM notes, improves reply rates and pipeline velocity.',
     features: [
-      'Adaptive sequencing and send windowsFirmographic and technographic personalizationMeeting transcription and action itemsAuto-log to Salesforce/HubSpot',
-      'Safety guardrails and opt-out handling'
+      'Adaptive sequencing and send windowsFirmographic and technographic personalizationMeeting transcription and action itemsAuto-log to Salesforce/HubSpotSafety guardrails and opt-out handling'
     ],
     popular: true,
     icon: '🚀',
@@ -1308,8 +1274,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Collectors for cloud configs, vulnerability status, access reviews, and tickets. Export auditor-ready evidence bundles.',
     features: [
-      'Cloud config collectors (AWS/GCP/Azure)Access review workflows and attestationsVulnerability snapshot with exceptionsTicket sampling and change history',
-      'Auditor-ready exports'
+      'Cloud config collectors (AWS/GCP/Azure)Access review workflows and attestationsVulnerability snapshot with exceptionsTicket sampling and change historyAuditor-ready exports'
     ],
     popular: false,
     icon: '📁',
@@ -1323,7 +1288,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     category: 'Quality & Monitoring',
     realService: true,
     technology: ['Cloud APIsNext.jsQueue workers'],
-    integrations: ['AWSGCPAzureJira', 'GitHub'],
+    integrations: ['AWSGCPAzureJiraGitHub'],
     useCases: ['SOC2 evidenceISO controlsAudit prep'],
     roi: 'Save 40–60% audit prep time',
     competitors: ['DrataVanta (lite)'],
@@ -1346,8 +1311,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Continuous research briefs across app reviews, news, social, and docs. Prioritize roadmap with evidence.',
     features: [
-      'Competitor monitoring and diffsUser review mining and clusteringOpportunity scoring and tagsWeekly executive briefings',
-      'Export to slides and docs'
+      'Competitor monitoring and diffsUser review mining and clusteringOpportunity scoring and tagsWeekly executive briefingsExport to slides and docs'
     ],
     popular: true,
     icon: '🧭',
@@ -1384,8 +1348,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Generate full briefs: channels, messaging, budget splits, creative ideas, and KPIs with benchmarks.',
     features: [
-      'Persona and JTBD inputsChannel mix recommendationsCreative prompts and examplesBenchmark KPIs by industry',
-      'Export to Google Docs/Slides'
+      'Persona and JTBD inputsChannel mix recommendationsCreative prompts and examplesBenchmark KPIs by industryExport to Google Docs/Slides'
     ],
     popular: false,
     icon: '📝',
@@ -1422,8 +1385,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Unified inbox for in-app, email, NPS, and social. Topic clustering and product area mapping with auto-routing.',
     features: [
-      'NPS/CSAT and feedback widgetsTopic clustering and trendsProduct area routing rulesRoadmap linkage and voting',
-      'Weekly summaries to Slack'
+      'NPS/CSAT and feedback widgetsTopic clustering and trendsProduct area routing rulesRoadmap linkage and votingWeekly summaries to Slack'
     ],
     popular: true,
     icon: '💬',
@@ -1460,8 +1422,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Edge-deployed flags, segments, and experiments for teams that need speed without platform bloat.',
     features: [
-      'Edge evaluation and low latencySDKs for JS, Node, PythonAudit log and approvalsExperiments and rollouts',
-      'Usage quotas'
+      'Edge evaluation and low latencySDKs for JS, Node, PythonAudit log and approvalsExperiments and rolloutsUsage quotas'
     ],
     popular: false,
     icon: '🚩',
@@ -1498,8 +1459,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Analyze contracts and propose clause language with rationale, fallback options, and playbooks for negotiation.',
     features: [
-      'Risk heatmap and clause classificationSuggested language with alternativesCounterparty playbooks and historyExport redlines to Word',
-      'Audit and approval workflows'
+      'Risk heatmap and clause classificationSuggested language with alternativesCounterparty playbooks and historyExport redlines to WordAudit and approval workflows'
     ],
     popular: false,
     icon: '⚖️',
@@ -1536,8 +1496,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Ingest alerts, logs, changes, and on-call notes to produce incident timelines, probable root causes, and runbook updates.',
     features: [
-      'Timeline and RCA suggestionsChange correlation and diffsDuplicate detection and clusteringRemediation proposals with context',
-      'Report and postmortem draft'
+      'Timeline and RCA suggestionsChange correlation and diffsDuplicate detection and clusteringRemediation proposals with contextReport and postmortem draft'
     ],
     popular: true,
     icon: '🧯',
@@ -1574,8 +1533,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Monitors data pipelines and warehouse tables, raises issues, and suggests owners and fixes with code snippets.',
     features: [
-      'Schema and distribution monitoringDrift detection and anomaly alertsOwnership inference and routingFix suggestions and PR templates',
-      'Dashboards and SLAs'
+      'Schema and distribution monitoringDrift detection and anomaly alertsOwnership inference and routingFix suggestions and PR templatesDashboards and SLAs'
     ],
     popular: true,
     icon: '📊',
@@ -1612,8 +1570,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Suggests alternative copy with rationale and runs lightweight experiments, integrates with feature flags.',
     features: [
-      'Copy suggestions with tone controlsExperiment setup in minutesSegmentation and resultsExport diffs and PRs',
-      'Design tool plugins'
+      'Copy suggestions with tone controlsExperiment setup in minutesSegmentation and resultsExport diffs and PRsDesign tool plugins'
     ],
     popular: false,
     icon: '✍️',
@@ -1650,8 +1607,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description: 'Catalog AI systems, track risks, evaluate prompts, and manage approvals with audit trails and policy templates.',
     features: [
-      'System registry and ownershipRisk assessment and mitigationsPrompt evals and guardrailsApproval workflows and logs',
-      'Policy templates and training'
+      'System registry and ownershipRisk assessment and mitigationsPrompt evals and guardrailsApproval workflows and logsPolicy templates and training'
     ],
     popular: true,
     icon: '📚',

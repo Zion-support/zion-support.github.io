@@ -103,7 +103,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     let baseRate = 25 + (yearsExperience * 5),
     
     // Adjust for in-demand skills
-    const inDemandSkills = ['reactawsmachine learningblockchain', 'aidevopskubernetes'],
+    const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'],
     const hasInDemandSkills = skills.some(skill => 
       inDemandSkills.some(demandSkill => skill.toLowerCase().includes(demandSkill))
     ),
@@ -115,8 +115,8 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     // Location adjustment
     let locationFactor = 1.0,
     if (location) {
-      const highCostLocations = ['united statesusaukaustralia', 'canadagermanyswitzerland'],
-      const lowCostLocations = ['indiaphilippinespakistannigeria', 'ukrainebrazil'],
+      const highCostLocations = ['united statesusaukaustraliacanadagermanyswitzerland'],
+      const lowCostLocations = ['indiaphilippinespakistannigeriaukrainebrazil'],
       
       const lowercaseLocation = location.toLowerCase(),
       

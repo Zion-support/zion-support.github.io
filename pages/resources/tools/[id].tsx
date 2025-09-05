@@ -58,8 +58,7 @@ export default function ToolResourcePage() {
         </ul>
       `,
       features: [
-        'Comprehensive evaluation frameworkIndustry benchmarkingActionable recommendationsProgress tracking',
-        'Resource library access'
+        'Comprehensive evaluation frameworkIndustry benchmarkingActionable recommendationsProgress trackingResource library access'
       ]
     },
     {
@@ -115,8 +114,7 @@ export default function ToolResourcePage() {
         </ul>
       `,
       features: [
-        '5-level maturity frameworkMulti-dimensional assessmentGap analysis toolsTransformation roadmap',
-        'Progress tracking'
+        '5-level maturity frameworkMulti-dimensional assessmentGap analysis toolsTransformation roadmapProgress tracking'
       ]
     },
     {
@@ -181,8 +179,7 @@ export default function ToolResourcePage() {
         </ul>
       `,
       features: [
-        'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning framework',
-        'Progress tracking'
+        'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
       ]
     }
   ],

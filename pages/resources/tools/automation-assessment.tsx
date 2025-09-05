@@ -11,40 +11,35 @@ export default function ToolPage() {
       id: 'current-automation',
       question: 'What is your current level of automation?',
       options: [
-        'No automation - everything is manualBasic automation - some repetitive tasks automatedModerate automation - multiple processes automatedAdvanced automation - most processes automated',
-        'Fully automated - autonomous systems in place'
+        'No automation - everything is manualBasic automation - some repetitive tasks automatedModerate automation - multiple processes automatedAdvanced automation - most processes automatedFully automated - autonomous systems in place'
       ]
     },
     {
       id: 'team-expertise',
       question: 'How would you rate your team\'s AI/automation expertise?',
       options: [
-        'No expertise - team needs trainingBeginner - some basic knowledgeIntermediate - can implement basic solutionsAdvanced - can build complex systems',
-        'Expert - can innovate and lead'
+        'No expertise - team needs trainingBeginner - some basic knowledgeIntermediate - can implement basic solutionsAdvanced - can build complex systemsExpert - can innovate and lead'
       ]
     },
     {
       id: 'data-quality',
       question: 'How would you assess your data quality and accessibility?',
       options: [
-        'Poor - data is scattered and unreliableFair - some data available but needs cleaningGood - most data is accessible and cleanVery good - comprehensive data with good structure',
-        'Excellent - real-time, high-quality data streams'
+        'Poor - data is scattered and unreliableFair - some data available but needs cleaningGood - most data is accessible and cleanVery good - comprehensive data with good structureExcellent - real-time, high-quality data streams'
       ]
     },
     {
       id: 'budget-commitment',
       question: 'What is your budget commitment for automation initiatives?',
       options: [
-        'No budget allocatedLimited budget - under $50KModerate budget - $50K to $200KSignificant budget - $200K to $1M',
-        'Unlimited budget - whatever it takes'
+        'No budget allocatedLimited budget - under $50KModerate budget - $50K to $200KSignificant budget - $200K to $1MUnlimited budget - whatever it takes'
       ]
     },
     {
       id: 'executive-support',
       question: 'How strong is executive support for automation?',
       options: [
-        'No support - resistance to changeWeak support - some interest but no actionModerate support - willing to try pilot projectsStrong support - actively championing automation',
-        'Full support - automation is strategic priority'
+        'No support - resistance to changeWeak support - some interest but no actionModerate support - willing to try pilot projectsStrong support - actively championing automationFull support - automation is strategic priority'
       ]
     }
   ],

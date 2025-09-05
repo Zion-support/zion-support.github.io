@@ -55,8 +55,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		period: '/month',
 		description: 'Full-stack affiliate tracking with multi-touch attribution, fraud detection, and automated commissions. Built for SMB e-commerce and content sites.',
 		features: [
-			'Multi-channel attribution and cookie-less trackingFraud rules, device fingerprinting, IP reputation checksCustomizable commission structures and tiersAutomated payouts and tax form collection',
-			'Shareable links, coupons, and influencer codesPartner portal and real-time analytics'
+			'Multi-channel attribution and cookie-less trackingFraud rules, device fingerprinting, IP reputation checksCustomizable commission structures and tiersAutomated payouts and tax form collectionShareable links, coupons, and influencer codesPartner portal and real-time analytics'
 		],
 		popular: true,
 		icon: '🔗',
@@ -93,8 +92,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		period: '/month',
 		description: 'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO-optimized summaries.',
 		features: [
-			'Multi-speaker diarizationTimestamps and filler removalChapter detection and show notesEmbeddings and semantic search',
-			'Export to SRT, VTT, DOCXPodcast platform integrations'
+			'Multi-speaker diarizationTimestamps and filler removalChapter detection and show notesEmbeddings and semantic searchExport to SRT, VTT, DOCXPodcast platform integrations'
 		],
 		popular: false,
 		icon: '🎧',
@@ -131,8 +129,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		period: '/month',
 		description: 'Lightweight, mobile-first CRM with contacts, tasks, deals, and SMS/email reminders. Built for solo and small teams.',
 		features: [
-			'Contact management and segmentationPipelines and kanban viewsCalendar with SMS/email remindersImport/export CSV and simple API',
-			'Mobile-friendly PWABasic reporting'
+			'Contact management and segmentationPipelines and kanban viewsCalendar with SMS/email remindersImport/export CSV and simple APIMobile-friendly PWABasic reporting'
 		],
 		popular: true,
 		icon: '📇',
@@ -169,8 +166,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		period: '/month',
 		description: 'Plug-and-play returns workflows with label generation, RMA approvals, and status tracking for Shopify/WooCommerce.',
 		features: [
-			'Customer returns portalPrepaid label generationRMA approval rulesInventory and refund sync',
-			'Email/SMS notificationsAnalytics on reasons and cost'
+			'Customer returns portalPrepaid label generationRMA approval rulesInventory and refund syncEmail/SMS notificationsAnalytics on reasons and cost'
 		],
 		popular: false,
 		icon: '📦',
@@ -207,8 +203,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		period: '/month',
 		description: 'Email/portal/API ticketing, SLA rules, KBs, and RMM/network integrations with client-facing reporting.',
 		features: [
-			'Inbox and portal ticket intakeAuto-routing, SLAs, and escalationsPublic/private knowledge baseClient portal with reports',
-			'RMM and network tool integrationsBilling export and time tracking'
+			'Inbox and portal ticket intakeAuto-routing, SLAs, and escalationsPublic/private knowledge baseClient portal with reportsRMM and network tool integrationsBilling export and time tracking'
 		],
 		popular: true,
 		icon: '🛠️',
@@ -247,8 +242,7 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.',
     features: [
-      'Document sync and chunking pipelinesMetadata and policy guardrailsEvals and drift trackingHuman-in-the-loop approvals',
-      'Observability and cost capsSDKs for Node/Python'
+      'Document sync and chunking pipelinesMetadata and policy guardrailsEvals and drift trackingHuman-in-the-loop approvalsObservability and cost capsSDKs for Node/Python'
     ],
     popular: true,
     icon: '🧠',
@@ -285,8 +279,7 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Low-latency personalization rules and ML scoring at the edge with audience definitions, A/B tests, and analytics.',
     features: [
-      'Audience builder and traitsEdge functions and KV cacheA/B and holdout testsPrivacy-first scoring',
-      'Dashboards and exports'
+      'Audience builder and traitsEdge functions and KV cacheA/B and holdout testsPrivacy-first scoringDashboards and exports'
     ],
     popular: true,
     icon: '⚡',
@@ -323,8 +316,7 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Spin up ephemeral environments per PR with seed data, smoke tests, screenshots, and teardown policies.',
     features: [
-      'One-PR one-env automationSeed data and fixturesSmoke tests and screenshotsSecrets and policies as code',
-      'Cost and TTL controls'
+      'One-PR one-env automationSeed data and fixturesSmoke tests and screenshotsSecrets and policies as codeCost and TTL controls'
     ],
     icon: '🚀',
     color: 'from-blue-600 to-indigo-700',
@@ -360,8 +352,7 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Stream logs to detect anomalies, regressions, and hotspots with LLM summaries and remediation hints.',
     features: [
-      'Streaming ingestion and rulesAnomaly detection and driftLLM summaries and hintsSlack/Email alerts and tickets',
-      'Dashboards and exports'
+      'Streaming ingestion and rulesAnomaly detection and driftLLM summaries and hintsSlack/Email alerts and ticketsDashboards and exports'
     ],
     icon: '📈',
     color: 'from-rose-600 to-red-700',
@@ -397,8 +388,7 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Lightweight feature flags with policy checks, approvals, change logs, and automatic rollbacks based on SLOs.',
     features: [
-      'Policies and approvalsChange logs and RBACSLO-based rollbacksSDKs and edge eval',
-      'Experiments and cohorts'
+      'Policies and approvalsChange logs and RBACSLO-based rollbacksSDKs and edge evalExperiments and cohorts'
     ],
     icon: '🏳️',
     color: 'from-amber-600 to-orange-700',
@@ -434,8 +424,7 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Compose, schedule, and monitor outbound sequences with domain warm-up, safety guardrails, and reply intent scoring.',
     features: [
-      'Sequence composer and AI draftWarm-up and safety checksReply intent and routingBlacklist monitoring',
-      'CRM sync'
+      'Sequence composer and AI draftWarm-up and safety checksReply intent and routingBlacklist monitoringCRM sync'
     ],
     icon: '✉️',
     color: 'from-fuchsia-600 to-pink-700',
@@ -471,8 +460,7 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Define and enforce data contracts with compatibility checks, lineage, owners, and alerting integrated with CI/CD.',
     features: [
-      'Schema registry and versioningBack/forward compatibility checksLineage and ownershipAlerts and SLOs',
-      'CI/CD integrations'
+      'Schema registry and versioningBack/forward compatibility checksLineage and ownershipAlerts and SLOsCI/CD integrations'
     ],
     icon: '🧮',
     color: 'from-sky-600 to-indigo-700',
@@ -580,8 +568,7 @@ export const real2025Q4Additions = [
     period: '/month',
     description: 'Reliably receive, verify, replay, and audit webhooks with DLQs, retries, and fan-out to multiple services.',
     features: [
-      'Signature verification and secretsReplay and DLQsRetries and backoffFan-out and transformations',
-      'Audit logs and RBAC'
+      'Signature verification and secretsReplay and DLQsRetries and backoffFan-out and transformationsAudit logs and RBAC'
     ],
     icon: '🔁',
     color: 'from-cyan-600 to-blue-700',

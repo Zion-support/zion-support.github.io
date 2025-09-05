@@ -4,7 +4,7 @@ exports.handler = async function() {
   try {
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
     const endpoints = [
-      '//learn/dao/certifications', '/api/learn/courses/api/dao/metrics'
+      '//learn/dao/certifications/api/learn/courses/api/dao/metrics'
     ],
 
     const results = [],

@@ -20,7 +20,7 @@ const formSchema = z.object({
     .regex(/^[a-z0-9-]+$/, { message: 'Subdomain can only contain lowercase letters, numbers, and hyphens' }),
   custom_domain: z.string().optional(),
   primary_color: z.string().regex(/^#([0-9A-F]{6})$/i, { message: 'Must be a valid hex color' }),
-  theme_preset: z.enum(['lightdarkneoncorporate', 'startup']),
+  theme_preset: z.enum(['lightdarkneoncorporatestartup']),
   headline: z.string().min(5, { message: 'Headline must be at least 5 characters' }),
   subtitle: z.string().min(5, { message: 'Subtitle must be at least 5 characters' }),
   cta: z.string().min(2, { message: 'CTA text must be at least 2 characters' })}),

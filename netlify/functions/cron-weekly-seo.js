@@ -19,7 +19,7 @@ async function scorePage(url) {
 exports.handler = async function() {
   try {
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
-    const pages = ['//learn/dao/certifications', '/blog'],
+    const pages = ['//learn/dao/certifications/blog'],
     const results = [],
     for (const p of pages) {
       results.push(await scorePage(`${baseUrl}${p}`))

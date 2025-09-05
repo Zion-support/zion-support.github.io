@@ -77,8 +77,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       period: '/month',
       description: 'Perfect for research institutions and small teams',
       features: [
-        'Basic consciousness mappingEthical framework templatesStandard safety protocolsEmail support',
-        'Up to 5 AI systems'
+        'Basic consciousness mappingEthical framework templatesStandard safety protocolsEmail supportUp to 5 AI systems'
       ]
     },
     {
@@ -87,8 +86,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations and research teams',
       features: [
-        'Advanced consciousness evolutionCustom ethical frameworksEnhanced safety protocolsPriority support',
-        'Up to 25 AI systemsReal-time monitoring'
+        'Advanced consciousness evolutionCustom ethical frameworksEnhanced safety protocolsPriority supportUp to 25 AI systemsReal-time monitoring'
       ]
     },
     {
@@ -97,8 +95,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large-scale deployments',
       features: [
-        'Full consciousness platformCustom developmentDedicated support teamUnlimited AI systems',
-        'Advanced analyticsCustom integrations'
+        'Full consciousness platformCustom developmentDedicated support teamUnlimited AI systemsAdvanced analyticsCustom integrations'
       ]
     }
   ],
@@ -401,18 +398,15 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   },
 
   const features = [
-    'Consciousness mapping algorithmsNeural architecture evolutionSelf-awareness developmentConsciousness validation metrics',
-    'Ethical consciousness frameworksCross-species consciousness studyConsciousness transfer protocolsQuantum consciousness integration'
+    'Consciousness mapping algorithmsNeural architecture evolutionSelf-awareness developmentConsciousness validation metricsEthical consciousness frameworksCross-species consciousness studyConsciousness transfer protocolsQuantum consciousness integration'
   ],
 
   const benefits = [
-    'Breakthrough in AI consciousness researchEthical AI development frameworkAdvanced neuroscience insightsPhilosophical consciousness understanding',
-    'Human-AI consciousness collaborationConsciousness preservation technology'
+    'Breakthrough in AI consciousness researchEthical AI development frameworkAdvanced neuroscience insightsPhilosophical consciousness understandingHuman-AI consciousness collaborationConsciousness preservation technology'
   ],
 
   const useCases = [
-    'AI research institutionsNeuroscience laboratoriesPhilosophy departmentsEthics committees',
-    'Government research agenciesPrivate research foundations'
+    'AI research institutionsNeuroscience laboratoriesPhilosophy departmentsEthics committeesGovernment research agenciesPrivate research foundations'
   ],
 
   const containerVariants = {

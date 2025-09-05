@@ -24,8 +24,7 @@ export default function AiToolsPage() {
       title: 'ChatGPT Plus',
       description: 'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.',
       features: [
-        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debugging',
-        'Professional writing assistance'
+        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance'
       ],
       pricing: '$20/month',
       marketPrice: '$20/month',
@@ -41,8 +40,7 @@ export default function AiToolsPage() {
       title: 'Midjourney',
       description: 'State-of-the-art AI image generation with exceptional quality and artistic control for creative professionals.',
       features: [
-        'High-quality image generationArtistic style controlCommercial usage rightsCommunity features',
-        'Advanced prompting system'
+        'High-quality image generationArtistic style controlCommercial usage rightsCommunity featuresAdvanced prompting system'
       ],
       pricing: '$10-30/month',
       marketPrice: '$10-30/month',
@@ -58,8 +56,7 @@ export default function AiToolsPage() {
       title: 'GitHub Copilot',
       description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',
       features: [
-        'Intelligent code completionMulti-language supportIDE integrationCode explanation',
-        'Security vulnerability detection'
+        'Intelligent code completionMulti-language supportIDE integrationCode explanationSecurity vulnerability detection'
       ],
       pricing: '$10/month',
       marketPrice: '$10-20/month',
@@ -75,8 +72,7 @@ export default function AiToolsPage() {
       title: 'Runway ML',
       description: 'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.',
       features: [
-        'AI video generationVideo editing toolsMotion trackingGreen screen removal',
-        'Professional workflows'
+        'AI video generationVideo editing toolsMotion trackingGreen screen removalProfessional workflows'
       ],
       pricing: '$12-76/month',
       marketPrice: '$15-100/month',
@@ -92,8 +88,7 @@ export default function AiToolsPage() {
       title: 'Claude Pro',
       description: 'Anthropic\'s advanced AI assistant with superior reasoning, analysis, and document processing capabilities.',
       features: [
-        'Advanced reasoning abilitiesDocument analysisCode generationCreative writing',
-        'Research assistance'
+        'Advanced reasoning abilitiesDocument analysisCode generationCreative writingResearch assistance'
       ],
       pricing: '$20/month',
       marketPrice: '$20/month',
@@ -109,8 +104,7 @@ export default function AiToolsPage() {
       title: 'Jasper AI',
       description: 'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.',
       features: [
-        'Content generationBrand voice trainingSEO optimizationTeam collaboration',
-        'Enterprise integrations'
+        'Content generationBrand voice trainingSEO optimizationTeam collaborationEnterprise integrations'
       ],
       pricing: '$39-125/month',
       marketPrice: '$40-150/month',

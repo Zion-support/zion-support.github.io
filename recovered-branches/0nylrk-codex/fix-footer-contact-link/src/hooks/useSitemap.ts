@@ -39,7 +39,7 @@ export function useSitemap() {
 
   // Helper function to check if userType is valid
   function isValidUserType(type: string): boolean {
-    return ['employerbuyerjobSeekercreator', 'admin'].includes(type)
+    return ['employerbuyerjobSeekercreatoradmin'].includes(type)
   }
   
   return {

@@ -49,7 +49,7 @@ export default function InnovativeServicesShowcase() {
       marketData: '$150B cybersecurity market, 300% annual growth',
       competitors: 'Traditional cybersecurity solutions',
       savings: 'Quantum-level protection vs. traditional methods',
-      features: ['Quantum key distribution (QKD)Post-quantum cryptographyQuantum-resistant VPN tunnelsReal-time threat detection', 'Zero-trust architecture'],
+      features: ['Quantum key distribution (QKD)Post-quantum cryptographyQuantum-resistant VPN tunnelsReal-time threat detectionZero-trust architecture'],
       link: 'https://ziontechgroup.com/quantum-internet-security-platform',
       color: 'from-indigo-600 to-purple-700'
     },
@@ -60,7 +60,7 @@ export default function InnovativeServicesShowcase() {
       marketData: '$150B AI in healthcare, 400% annual growth',
       competitors: 'Insitro ($100M+ funding), Recursion ($2B+ funding)',
       savings: '100x faster drug discovery vs. traditional methods',
-      features: ['Quantum molecular simulationAI-powered drug screeningProtein folding predictionDrug interaction modeling', 'Clinical trial optimization'],
+      features: ['Quantum molecular simulationAI-powered drug screeningProtein folding predictionDrug interaction modelingClinical trial optimization'],
       link: 'https://ziontechgroup.com/ai-quantum-drug-discovery',
       color: 'from-emerald-600 to-teal-700'
     },
@@ -71,7 +71,7 @@ export default function InnovativeServicesShowcase() {
       marketData: '$15T algorithmic trading, 200% annual growth',
       competitors: 'Renaissance Technologies, Two Sigma, Citadel',
       savings: 'Accessible quantum AI for smaller firms',
-      features: ['Quantum AI trading algorithmsNanosecond executionReal-time market analysisRisk management', 'Portfolio optimization'],
+      features: ['Quantum AI trading algorithmsNanosecond executionReal-time market analysisRisk managementPortfolio optimization'],
       link: 'https://ziontechgroup.com/autonomous-quantum-trading-system',
       color: 'from-yellow-600 to-orange-700'
     },
@@ -82,7 +82,7 @@ export default function InnovativeServicesShowcase() {
       marketData: '$5B neural interface market, 500% annual growth',
       competitors: 'Basic research tools, Traditional medical devices',
       savings: 'First comprehensive neural interface platform',
-      features: ['Neural signal processingBrain activity monitoringAI-powered interpretationReal-time communication', 'Safety protocols'],
+      features: ['Neural signal processingBrain activity monitoringAI-powered interpretationReal-time communicationSafety protocols'],
       link: 'https://ziontechgroup.com/neural-interface-development-platform',
       color: 'from-purple-600 to-indigo-700'
     }

@@ -74,8 +74,7 @@ function Dashboard() {
 
 function DataRoom() {
   const sections: DataRoomSection[] = useMemo(() => [
-    'FinancialsCap TableLegal DocsStrategic Partnerships',
-    'Press Coverage / PR kit'], []),
+    'FinancialsCap TableLegal DocsStrategic PartnershipsPress Coverage / PR kit'], []),
   const [active, setActive] = useState<DataRoomSection>('Financials'),
   const [files, setFiles] = useState<any[]>([]),
 

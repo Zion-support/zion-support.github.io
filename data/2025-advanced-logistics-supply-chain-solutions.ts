@@ -49,8 +49,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     period: '/month',
     description: 'Advanced AI-powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.',
     features: [
-      'Demand forecastingInventory optimizationRoute optimizationSupplier management',
-      'Risk assessmentPerformance analyticsReal-time monitoringAPI integration',
+      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration',
       'Custom algorithmsCompliance tools'
     ],
     popular: true,
@@ -93,8 +92,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     period: '/month',
     description: 'Revolutionary quantum logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and optimization problems.',
     features: [
-      'Quantum algorithmsRoute optimizationScheduling optimizationVehicle routing',
-      'Capacity planningReal-time optimizationHigh-performance computingAPI access',
+      'Quantum algorithmsRoute optimizationScheduling optimizationVehicle routingCapacity planningReal-time optimizationHigh-performance computingAPI access',
       'Custom modelsPerformance analytics'
     ],
     popular: false,
@@ -137,8 +135,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     period: '/month',
     description: 'Advanced IoT-based fleet management platform that provides real-time monitoring, predictive maintenance, and optimization for vehicle fleets.',
     features: [
-      'Real-time trackingPredictive maintenanceFuel monitoringDriver behavior analysis',
-      'Route optimizationPerformance analyticsMobile integrationAPI access',
+      'Real-time trackingPredictive maintenanceFuel monitoringDriver behavior analysisRoute optimizationPerformance analyticsMobile integrationAPI access',
       'Custom dashboardsCompliance tools'
     ],
     popular: true,
@@ -181,8 +178,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     period: '/month',
     description: 'Advanced blockchain-based supply chain transparency platform that provides end-to-end visibility, traceability, and compliance across global supply chains.',
     features: [
-      'End-to-end traceabilitySmart contractsCompliance trackingQuality assurance',
-      'Sustainability monitoringReal-time updatesAPI integrationData analytics',
+      'End-to-end traceabilitySmart contractsCompliance trackingQuality assuranceSustainability monitoringReal-time updatesAPI integrationData analytics',
       'Audit trailsPerformance monitoring'
     ],
     popular: false,
@@ -225,8 +221,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     period: '/month',
     description: 'Advanced AI-powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.',
     features: [
-      'Automated pickingSmart routingInventory optimizationPerformance analytics',
-      'Predictive maintenanceReal-time monitoringMobile integrationAPI access',
+      'Automated pickingSmart routingInventory optimizationPerformance analyticsPredictive maintenanceReal-time monitoringMobile integrationAPI access',
       'Custom workflowsCompliance tools'
     ],
     popular: true,

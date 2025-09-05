@@ -48,8 +48,7 @@ const ContactForm: React.FC = () => {
   },
 
   const services = [
-    'AI DevelopmentCloud ArchitectureDigital TransformationIoT Platforms',
-    'Blockchain SolutionsData AnalyticsOther'
+    'AI DevelopmentCloud ArchitectureDigital TransformationIoT PlatformsBlockchain SolutionsData AnalyticsOther'
   ],
 
   const contactInfo = [

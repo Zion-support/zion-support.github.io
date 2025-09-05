@@ -110,8 +110,7 @@ export default function PricingPage() {
   ],
 
   const categories = [
-    'AllContent & MarketingDevelopment & DevOpsSales & CRM',
-    'Legal & ComplianceHuman ResourcesAnalytics & DataFinance & Accounting',
+    'AllContent & MarketingDevelopment & DevOpsSales & CRMLegal & ComplianceHuman ResourcesAnalytics & DataFinance & Accounting',
     'Project ManagementCustomer ExperienceSecurity & Compliance'
   ],
 

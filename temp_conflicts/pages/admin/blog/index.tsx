@@ -84,7 +84,7 @@ export default function AdminBlog() {
             <input className="border rounded px-3 py-2" placeholder="Author" value={editing.author || ''} onChange={(e) => setEditing((s) => ({ ...s, author: e.target.value }))} />
             <input type="date" className="border rounded px-3 py-2" value={(editing.publishDate || '').slice(0, 10)} onChange={(e) => setEditing((s) => ({ ...s, publishDate: new Date(e.target.value).toISOString() }))} />
             <input className="border rounded px-3 py-2" placeholder="Tags (comma separated)" value={(editing.tags || []).join()} onChange={(e) => setEditing((s) => ({ ...s, tags: e.target.value.split().map((x) => x.trim()).filter(Boolean) }))} />
-            <input className="border rounded px-3 py-2" placeholder="Topics (comma separated)" value={(editing.topics || []).join()} onChange={(e) => setEditing((s) => ({ ...s, topics: e.target.value.split(',').map((x) => x.trim()).filter(Boolean) }))} />
+            <input className="border rounded px-3 py-2" placeholder="Topics (comma separated)" value={(editing.topics || []).join()} onChange={(e) => setEditing((s) => ({ ...s, topics: e.target.value.split().map((x) => x.trim()).filter(Boolean) }))} />
             <input className="border rounded px-3 py-2" placeholder="SEO Meta Title" value={editing.seo?.metaTitle || ''} onChange={(e) => setEditing((s) => ({ ...s, seo: { ...(s.seo || {} as any), metaTitle: e.target.value } }))} />
             <input className="border rounded px-3 py-2" placeholder="SEO Meta Description" value={editing.seo?.metaDescription || ''} onChange={(e) => setEditing((s) => ({ ...s, seo: { ...(s.seo || {} as any), metaDescription: e.target.value } }))} />
           </div>

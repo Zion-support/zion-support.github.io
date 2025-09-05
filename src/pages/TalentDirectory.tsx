@@ -112,7 +112,7 @@ export default function TalentDirectory() {
     
     const query: Record<string, string> = {},
     if (searchTerm) query.search = searchTerm,
-    if (selectedSkills.length) query.skills = selectedSkills.join(','),
+    if (selectedSkills.length) query.skills = selectedSkills.join(),
     if (selectedAvailability.length)
       query.availability = selectedAvailability.join(),
     if (selectedRegions.length) query.regions = selectedRegions.join(),

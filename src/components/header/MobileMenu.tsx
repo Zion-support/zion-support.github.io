@@ -15,8 +15,7 @@ export interface MobileMenuProps {
 // Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts
 // These are routes that should trigger the login modal if accessed while unauthenticated.
 const protectedRoutes = [
-  '/categories/talent/equipment/partners',
-  '/tutorials/case-studies/post-job', // Already marked as authRequired, but good to be explicit if used elsewhere
+  '/categories/talent/equipment/partners/tutorials/case-studies/post-job', // Already marked as authRequired, but good to be explicit if used elsewhere
   '/messages',  // Already marked as authRequired
   '/dashboard', // Already marked as authRequired
   // Add any specific sub-routes if necessary

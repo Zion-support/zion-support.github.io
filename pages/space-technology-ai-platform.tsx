@@ -18,22 +18,20 @@ export default function SpaceTechnologyAIPlatform() {
   },
 
   const features = [
-    'AI-powered satellite operationsAutonomous space explorationSpace data analyticsSatellite constellation management',
-    'Space debris trackingReal-time monitoringPredictive maintenanceMission planning tools',
+    'AI-powered satellite operationsAutonomous space explorationSpace data analyticsSatellite constellation managementSpace debris trackingReal-time monitoringPredictive maintenanceMission planning tools',
     'API accessExpert consultation'
   ],
 
   const useCases = [
-    'Satellite operationsSpace explorationEarth observationSpace debris monitoring',
-    'Mission planningSpace research'
+    'Satellite operationsSpace explorationEarth observationSpace debris monitoringMission planningSpace research'
   ],
 
   const integrations = [
-    'NASA APIsESA APIsSatellite ground stationsGIS systems', 'SlackMicrosoft TeamsCustom applications'
+    'NASA APIsESA APIsSatellite ground stationsGIS systemsSlackMicrosoft TeamsCustom applications'
   ],
 
   const competitors = [
-    'Maxar ($5000-50000/month)Planet Labs ($1000-10000/month)Airbus Defence ($10000-100000/month)Lockheed Martin', 'BoeingNorthrop Grumman'
+    'Maxar ($5000-50000/month)Planet Labs ($1000-10000/month)Airbus Defence ($10000-100000/month)Lockheed MartinBoeingNorthrop Grumman'
   ],
 
   return (

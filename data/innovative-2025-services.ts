@@ -50,8 +50,7 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description: 'Revolutionary platform that seamlessly processes and analyzes multiple data types simultaneously, enabling breakthrough insights and applications across industries.',
     features: [
-      'Cross-modal data fusion algorithmsReal-time multimodal analysisAdvanced pattern recognitionCustom model training',
-      'API-first architectureEnterprise security & compliance'
+      'Cross-modal data fusion algorithmsReal-time multimodal analysisAdvanced pattern recognitionCustom model trainingAPI-first architectureEnterprise security & compliance'
     ],
     popular: true,
     icon: '🔮',
@@ -64,8 +63,8 @@ export const innovative2025Services: Innovative2025Service[] = [
     setupTime: '2-3 weeks',
     category: 'AI & Machine Learning',
     realService: true,
-    technology: ['PyTorchTensorFlowCUDANVIDIA A100', 'KubernetesRedis'],
-    integrations: ['AWSAzureGCPDocker', 'KubernetesREST API'],
+    technology: ['PyTorchTensorFlowCUDANVIDIA A100KubernetesRedis'],
+    integrations: ['AWSAzureGCPDockerKubernetesREST API'],
     useCases: ['Medical diagnosisAutonomous navigationContent moderationResearch analysis'],
     roi: 'Average customer sees 500% ROI within 6 months through improved accuracy and efficiency.',
     competitors: ['OpenAI GPT-4VGoogle GeminiAnthropic ClaudeMicrosoft Azure AI'],
@@ -93,8 +92,7 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description: 'Cutting-edge platform that understands, analyzes, and responds to human emotions in real-time, enabling more empathetic and effective AI interactions.',
     features: [
-      'Real-time emotion detectionSentiment analysis & mood trackingEmotional response generationCultural context awareness',
-      'Privacy-preserving processingMulti-language support'
+      'Real-time emotion detectionSentiment analysis & mood trackingEmotional response generationCultural context awarenessPrivacy-preserving processingMulti-language support'
     ],
     popular: true,
     icon: '💝',
@@ -107,8 +105,8 @@ export const innovative2025Services: Innovative2025Service[] = [
     setupTime: '1-2 weeks',
     category: 'AI & Emotional Intelligence',
     realService: true,
-    technology: ['TensorFlowOpenCVNLPComputer Vision', 'PythonReact'],
-    integrations: ['SlackZoomTeamsCRM systems', 'Analytics platforms'],
+    technology: ['TensorFlowOpenCVNLPComputer VisionPythonReact'],
+    integrations: ['SlackZoomTeamsCRM systemsAnalytics platforms'],
     useCases: ['Mental health monitoringCustomer sentiment analysisEducational engagementGaming experiences'],
     roi: 'Improves customer satisfaction by 40% and engagement rates by 60% within 3 months.',
     competitors: ['AffectivaRealeyesEmotientNoldus'],
@@ -136,8 +134,7 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description: 'Revolutionary platform that combines classical AI with quantum computing power, solving previously intractable problems in optimization, cryptography, and simulation.',
     features: [
-      'Quantum-classical hybrid algorithmsReal-time quantum resource allocationAdvanced optimization solversQuantum machine learning',
-      'Secure quantum communicationsScalable quantum infrastructure'
+      'Quantum-classical hybrid algorithmsReal-time quantum resource allocationAdvanced optimization solversQuantum machine learningSecure quantum communicationsScalable quantum infrastructure'
     ],
     popular: true,
     icon: '⚛️',
@@ -150,7 +147,7 @@ export const innovative2025Services: Innovative2025Service[] = [
     setupTime: '4-6 weeks',
     category: 'Quantum Computing & AI',
     realService: true,
-    technology: ['QiskitCirqPennyLanePython', 'CUDAQuantum hardware'],
+    technology: ['QiskitCirqPennyLanePythonCUDAQuantum hardware'],
     integrations: ['IBM QuantumGoogle QuantumAWS BraketAzure Quantum'],
     useCases: ['Portfolio optimizationDrug discoverySupply chain optimizationCryptography'],
     roi: 'Delivers 1000%+ ROI through solving previously impossible problems in weeks instead of years.',
@@ -180,8 +177,7 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description: 'Advanced platform that uses AI to analyze blockchain transactions, detect patterns, and provide actionable insights for DeFi, NFTs, and cryptocurrency markets.',
     features: [
-      'Real-time blockchain monitoringAI-powered fraud detectionMarket trend analysisSmart contract auditing',
-      'DeFi risk assessmentNFT market insights'
+      'Real-time blockchain monitoringAI-powered fraud detectionMarket trend analysisSmart contract auditingDeFi risk assessmentNFT market insights'
     ],
     popular: true,
     icon: '🔗',
@@ -194,8 +190,8 @@ export const innovative2025Services: Innovative2025Service[] = [
     setupTime: '1 week',
     category: 'Blockchain & Web3',
     realService: true,
-    technology: ['PythonTensorFlowEthereumBitcoin', 'GraphQLPostgreSQL'],
-    integrations: ['CoinbaseBinanceUniswapOpenSea', 'Trading platforms'],
+    technology: ['PythonTensorFlowEthereumBitcoinGraphQLPostgreSQL'],
+    integrations: ['CoinbaseBinanceUniswapOpenSeaTrading platforms'],
     useCases: ['Fraud detectionMarket analysisCompliance monitoringInvestment research'],
     roi: 'Reduces fraud losses by 85% and improves trading decisions by 40% within 2 months.',
     competitors: ['ChainalysisEllipticCipherTraceTRM Labs'],
@@ -224,8 +220,7 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description: 'Revolutionary platform that uses AI to automatically generate, manage, and optimize immersive metaverse experiences with minimal human intervention.',
     features: [
-      'AI-generated 3D environmentsProcedural content generationReal-time world optimizationAvatar customization AI',
-      'Social interaction algorithmsCross-platform compatibility'
+      'AI-generated 3D environmentsProcedural content generationReal-time world optimizationAvatar customization AISocial interaction algorithmsCross-platform compatibility'
     ],
     popular: true,
     icon: '🌐',
@@ -238,7 +233,7 @@ export const innovative2025Services: Innovative2025Service[] = [
     setupTime: '2-3 weeks',
     category: 'Metaverse & VR',
     realService: true,
-    technology: ['UnityUnreal EngineAI/ML3D Graphics', 'WebGLWebXR'],
+    technology: ['UnityUnreal EngineAI/ML3D GraphicsWebGLWebXR'],
     integrations: ['Meta QuestHTC VivePlayStation VRSteam VR'],
     useCases: ['Virtual eventsGaming worldsEducational simulationsVirtual real estate'],
     roi: 'Reduces development time by 70% and increases user engagement by 150% within 4 months.',
@@ -268,8 +263,7 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description: 'Advanced platform that brings AI processing to the edge, enabling real-time intelligence for IoT devices without requiring cloud connectivity.',
     features: [
-      'Edge AI processingReal-time decision makingDevice optimizationPredictive maintenance',
-      'Energy efficiencySecure edge computing'
+      'Edge AI processingReal-time decision makingDevice optimizationPredictive maintenanceEnergy efficiencySecure edge computing'
     ],
     popular: true,
     icon: '🌐',
@@ -282,8 +276,8 @@ export const innovative2025Services: Innovative2025Service[] = [
     setupTime: '1-2 weeks',
     category: 'IoT & Edge Computing',
     realService: true,
-    technology: ['TensorFlow LiteEdge TPURaspberry PiArduino', 'PythonC++'],
-    integrations: ['AWS IoTAzure IoTGoogle Cloud IoTMQTT', 'CoAP'],
+    technology: ['TensorFlow LiteEdge TPURaspberry PiArduinoPythonC++'],
+    integrations: ['AWS IoTAzure IoTGoogle Cloud IoTMQTTCoAP'],
     useCases: ['Predictive maintenanceSmart agricultureIndustrial automationHealthcare monitoring'],
     roi: 'Reduces operational costs by 35% and improves efficiency by 60% within 3 months.',
     competitors: ['AWS GreengrassAzure IoT EdgeGoogle Cloud IoTIBM Edge Application Manager'],
@@ -312,8 +306,7 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description: 'Advanced cybersecurity platform that uses AI to proactively hunt for threats, detect zero-day vulnerabilities, and provide automated incident response.',
     features: [
-      'AI threat huntingZero-day detectionAutomated responseBehavioral analysis',
-      'Threat intelligenceIncident automation'
+      'AI threat huntingZero-day detectionAutomated responseBehavioral analysisThreat intelligenceIncident automation'
     ],
     popular: true,
     icon: '🛡️',
@@ -326,8 +319,8 @@ export const innovative2025Services: Innovative2025Service[] = [
     setupTime: '2-3 weeks',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['Machine LearningDeep LearningNLPPython', 'ElasticsearchKafka'],
-    integrations: ['SIEM systemsEDR platformsFirewallsIdentity providers', 'Cloud platforms'],
+    technology: ['Machine LearningDeep LearningNLPPythonElasticsearchKafka'],
+    integrations: ['SIEM systemsEDR platformsFirewallsIdentity providersCloud platforms'],
     useCases: ['Threat detectionIncident responseVulnerability managementSecurity automation'],
     roi: 'Reduces security incidents by 75% and response time by 90% within 6 months.',
     competitors: ['CrowdStrikeSentinelOneCarbon BlackCylance'],
@@ -356,8 +349,7 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description: 'Revolutionary healthcare platform that uses AI to analyze medical images, detect diseases, and provide diagnostic insights with unprecedented accuracy.',
     features: [
-      'Medical image analysisDisease detectionDiagnostic insightsPatient monitoring',
-      'Clinical decision supportHIPAA compliance'
+      'Medical image analysisDisease detectionDiagnostic insightsPatient monitoringClinical decision supportHIPAA compliance'
     ],
     popular: true,
     icon: '🏥',
@@ -370,7 +362,7 @@ export const innovative2025Services: Innovative2025Service[] = [
     setupTime: '3-4 weeks',
     category: 'Healthcare AI',
     realService: true,
-    technology: ['TensorFlowPyTorchMedical imagingDICOM', 'PythonCUDA'],
+    technology: ['TensorFlowPyTorchMedical imagingDICOMPythonCUDA'],
     integrations: ['PACS systemsEHR platformsRadiology workflowsHospital systems'],
     useCases: ['Radiology diagnosisDisease screeningTreatment planningPatient monitoring'],
     roi: 'Improves diagnostic accuracy by 25% and reduces reading time by 40% within 4 months.',
@@ -400,8 +392,7 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description: 'Advanced financial platform that uses AI to analyze markets, execute trades, and manage portfolios with superior performance and risk management.',
     features: [
-      'AI market analysisAlgorithmic tradingPortfolio optimizationRisk management',
-      'Real-time monitoringRegulatory compliance'
+      'AI market analysisAlgorithmic tradingPortfolio optimizationRisk managementReal-time monitoringRegulatory compliance'
     ],
     popular: true,
     icon: '📈',
@@ -414,8 +405,8 @@ export const innovative2025Services: Innovative2025Service[] = [
     setupTime: '2-3 weeks',
     category: 'Financial Technology',
     realService: true,
-    technology: ['PythonTensorFlowQuantitative financeReal-time data', 'Cloud computingBlockchain'],
-    integrations: ['BloombergReutersTrading platformsBrokerage accounts', 'Market data feeds'],
+    technology: ['PythonTensorFlowQuantitative financeReal-time dataCloud computingBlockchain'],
+    integrations: ['BloombergReutersTrading platformsBrokerage accountsMarket data feeds'],
     useCases: ['Algorithmic tradingPortfolio managementRisk assessmentMarket analysis'],
     roi: 'Improves trading performance by 35% and reduces risk by 50% within 6 months.',
     competitors: ['AlpacaInteractive BrokersRobinhoodE*TRADE'],

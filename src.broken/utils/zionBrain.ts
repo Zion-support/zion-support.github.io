@@ -53,9 +53,9 @@ export function detectIntent(text: string): RouterResult {
   const rules: Array<{ chain: ZionChain, keywords: string[] }> = [
     { chain: 'resumeBuilder', keywords: ['resumecvcurriculumjob'] },
     { chain: 'daoExplainer', keywords: ['daogovernance tokenproposaltreasury'] },
-    { chain: 'tokenomicsSimulator', keywords: ['tokenomicssupplyemissionvesting', 'circulating'] },
-    { chain: 'governanceSummarizer', keywords: ['governancevotesnapshotsummary', 'forum'] },
-    { chain: 'nationAssistant', keywords: ['nationcitizenconstitutioncharter', 'policy'] }],
+    { chain: 'tokenomicsSimulator', keywords: ['tokenomicssupplyemissionvestingcirculating'] },
+    { chain: 'governanceSummarizer', keywords: ['governancevotesnapshotsummaryforum'] },
+    { chain: 'nationAssistant', keywords: ['nationcitizenconstitutioncharterpolicy'] }],
 
   for (const rule of rules) {
     if (rule.keywords.some((k) => lower.includes(k))) {

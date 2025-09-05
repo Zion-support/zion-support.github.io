@@ -147,7 +147,7 @@ export default function ToolComparisonPage() {
     }
   ],
 
-  const categories = ['AllAI AssistantAI ArtAI Writing', 'AutomationProductivityPaymentsMarketing & Sales', 'Email Marketing'],
+  const categories = ['AllAI AssistantAI ArtAI WritingAutomationProductivityPaymentsMarketing & Sales', 'Email Marketing'],
 
   const filteredTools = allTools.filter(tool => {
     const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||

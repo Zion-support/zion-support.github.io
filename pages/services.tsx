@@ -26,8 +26,7 @@ export default function Services() {
       count: '150+',
       color: 'blue',
       services: [
-        'AI-Powered Video Clip MakerSmart Contract AnalyzerCybersecurity Threat IntelligenceMulti-Language Website Translator',
-        'Predictive Inventory OptimizerReal-Time Analytics DashboardAutomated Customer SupportBlockchain Transaction Monitor'
+        'AI-Powered Video Clip MakerSmart Contract AnalyzerCybersecurity Threat IntelligenceMulti-Language Website TranslatorPredictive Inventory OptimizerReal-Time Analytics DashboardAutomated Customer SupportBlockchain Transaction Monitor'
       ],
       href: '/micro-saas'
     },
@@ -37,8 +36,7 @@ export default function Services() {
       count: '100+',
       color: 'purple',
       services: [
-        'Autonomous AI AgentsAI-Powered Financial TradingAI Legal Document AnalysisAI-Powered Voice Analytics',
-        'AI-Powered Search & DiscoveryMachine Learning Model TrainingNatural Language ProcessingComputer Vision Solutions'
+        'Autonomous AI AgentsAI-Powered Financial TradingAI Legal Document AnalysisAI-Powered Voice AnalyticsAI-Powered Search & DiscoveryMachine Learning Model TrainingNatural Language ProcessingComputer Vision Solutions'
       ],
       href: '/ai-services'
     },
@@ -48,8 +46,7 @@ export default function Services() {
       count: '100+',
       color: 'green',
       services: [
-        'Quantum Computing ConsultingBlockchain & Web3 SolutionsDevSecOps & Security AutomationEnterprise Data Platform',
-        'High-Performance ComputingCloud Migration ServicesInfrastructure as CodeDisaster Recovery Solutions'
+        'Quantum Computing ConsultingBlockchain & Web3 SolutionsDevSecOps & Security AutomationEnterprise Data PlatformHigh-Performance ComputingCloud Migration ServicesInfrastructure as CodeDisaster Recovery Solutions'
       ],
       href: '/it-services'
     }

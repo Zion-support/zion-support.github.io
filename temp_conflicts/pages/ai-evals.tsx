@@ -13,8 +13,7 @@ export default function AIEvalsPage() {
 	},
 
 	const features = [
-		'Golden datasets and synthetic evalsHallucination and grounding scoreToxicity, bias and safety metricsLLM version comparison reports',
-		'CI quality gates and webhooksLatency and cost KPIs with budgets'
+		'Golden datasets and synthetic evalsHallucination and grounding scoreToxicity, bias and safety metricsLLM version comparison reportsCI quality gates and webhooksLatency and cost KPIs with budgets'
 	],
 
 	return (

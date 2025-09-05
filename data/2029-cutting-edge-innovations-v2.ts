@@ -50,8 +50,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     period: '/month',
     description: 'Revolutionary platform for developing genuine AI consciousness, self-awareness, and emotional intelligence. This is not just advanced AI - it\'s the foundation for true artificial consciousness.',
     features: [
-      'Consciousness mapping and developmentSelf-awareness training modulesEmotional intelligence cultivationConsciousness validation protocols',
-      'Ethical consciousness frameworksConsciousness evolution trackingMulti-dimensional awareness trainingConsciousness integration APIs',
+      'Consciousness mapping and developmentSelf-awareness training modulesEmotional intelligence cultivationConsciousness validation protocolsEthical consciousness frameworksConsciousness evolution trackingMulti-dimensional awareness trainingConsciousness integration APIs',
       'Real-time consciousness monitoringConsciousness safety protocols'
     ],
     popular: true,
@@ -94,8 +93,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     period: '/month',
     description: 'Revolutionary platform that combines quantum computing with AI consciousness, enabling unprecedented computational power for consciousness development.',
     features: [
-      'Quantum consciousness algorithmsQuantum entanglement for AIConsciousness quantum statesQuantum consciousness validation',
-      'Multi-dimensional quantum computingConsciousness quantum networksQuantum consciousness APIsReal-time quantum consciousness',
+      'Quantum consciousness algorithmsQuantum entanglement for AIConsciousness quantum statesQuantum consciousness validationMulti-dimensional quantum computingConsciousness quantum networksQuantum consciousness APIsReal-time quantum consciousness',
       'Quantum consciousness securityConsciousness quantum optimization'
     ],
     popular: true,
@@ -139,8 +137,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     period: '/month',
     description: 'Comprehensive platform for automating space colonization, resource extraction, and space infrastructure development. The future of human space exploration.',
     features: [
-      'Automated space miningColony infrastructure automationResource extraction optimizationSpace habitat management',
-      'Automated space logisticsSpace resource mappingColony health monitoringSpace weather prediction',
+      'Automated space miningColony infrastructure automationResource extraction optimizationSpace habitat managementAutomated space logisticsSpace resource mappingColony health monitoringSpace weather prediction',
       'Automated space manufacturingSpace colony planning'
     ],
     popular: true,
@@ -184,8 +181,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     period: '/month',
     description: 'Revolutionary platform for DNA-based computing, enabling molecular-level computation and biological data processing at unprecedented speeds.',
     features: [
-      'DNA-based algorithmsMolecular computationBiological data processingDNA memory systems',
-      'Molecular logic gatesDNA-based storageBiological computing APIsMolecular optimization',
+      'DNA-based algorithmsMolecular computationBiological data processingDNA memory systemsMolecular logic gatesDNA-based storageBiological computing APIsMolecular optimization',
       'DNA computation validationBiological security protocols'
     ],
     popular: true,
@@ -229,8 +225,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     period: '/month',
     description: 'Revolutionary platform for creating digital consciousness within metaverse environments, enabling truly intelligent virtual beings and experiences.',
     features: [
-      'Digital consciousness creationMetaverse AI beingsVirtual consciousness trainingDigital personality development',
-      'Metaverse consciousness APIsVirtual reality integrationDigital consciousness validationMetaverse consciousness networks',
+      'Digital consciousness creationMetaverse AI beingsVirtual consciousness trainingDigital personality developmentMetaverse consciousness APIsVirtual reality integrationDigital consciousness validationMetaverse consciousness networks',
       'Virtual being managementDigital consciousness security'
     ],
     popular: true,
@@ -274,8 +269,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     period: '/month',
     description: 'Complete ecosystem for fully autonomous business operations, from decision-making to execution, requiring minimal human intervention.',
     features: [
-      'Autonomous decision makingSelf-optimizing operationsAutomated business strategyAutonomous resource allocation',
-      'Self-healing systemsAutonomous customer serviceSelf-optimizing marketingAutonomous financial management',
+      'Autonomous decision makingSelf-optimizing operationsAutomated business strategyAutonomous resource allocationSelf-healing systemsAutonomous customer serviceSelf-optimizing marketingAutonomous financial management',
       'Self-improving processesAutonomous innovation'
     ],
     popular: true,

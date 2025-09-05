@@ -94,8 +94,8 @@ export default async function handler(
     const averageGrade = Math.round((fleschKincaidGrade + gunningFog + smog + colemanLiau + automatedReadability) / 5),
 
     // Sentiment analysis (simplified)
-    const positiveWords = ['goodgreatexcellentamazing', 'wonderfulfantasticbrilliantoutstanding', 'superbmarvelous'],
-    const negativeWords = ['badterribleawfulhorrible', 'dreadfulatrociousabysmalappalling', 'dismallousy'],
+    const positiveWords = ['goodgreatexcellentamazingwonderfulfantasticbrilliantoutstanding', 'superbmarvelous'],
+    const negativeWords = ['badterribleawfulhorribledreadfulatrociousabysmalappalling', 'dismallousy'],
 
     const textWords = text.toLowerCase().split(/\s+/),
     const positiveCount = textWords.filter(word => positiveWords.includes(word)).length,

@@ -83,7 +83,7 @@ export default function AISolutionsPage() {
   ],
 
   const technologies = [
-    'TensorFlowPyTorchScikit-learnOpenAI GPT', 'BERTYOLOKerasPandas'
+    'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas'
   ],
 
   return (

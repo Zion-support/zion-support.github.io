@@ -7,8 +7,7 @@ export const real2036ITServices = [
     price: '$6,999',
     period: 'month',
     features: [
-      'Quantum computing resourcesQuantum-classical hybrid computingQuantum resource managementQuantum networking',
-      'Quantum security protocolsScalable quantum infrastructure'
+      'Quantum computing resourcesQuantum-classical hybrid computingQuantum resource managementQuantum networkingQuantum security protocolsScalable quantum infrastructure'
     ],
     popular: true,
     category: 'Quantum Cloud',
@@ -29,8 +28,7 @@ export const real2036ITServices = [
     price: '$2,999',
     period: 'month',
     features: [
-      'AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident response',
-      'Smart resource optimizationContinuous learning algorithms'
+      'AI-powered deployment automationIntelligent testing strategiesPredictive infrastructure scalingAutomated incident responseSmart resource optimizationContinuous learning algorithms'
     ],
     popular: true,
     category: 'DevOps & AI',
@@ -51,8 +49,7 @@ export const real2036ITServices = [
     price: '$5,499',
     period: 'month',
     features: [
-      'Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distribution',
-      'Future-proof securityReal-time threat analysis'
+      'Quantum-resistant algorithmsQuantum threat detectionQuantum encryptionQuantum key distributionFuture-proof securityReal-time threat analysis'
     ],
     popular: true,
     category: 'Quantum Security',
@@ -73,8 +70,7 @@ export const real2036ITServices = [
     price: '$3,999',
     period: 'month',
     features: [
-      'Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimization',
-      'Edge resource managementDistributed data processing'
+      'Intelligent edge orchestrationDistributed computing optimizationEdge AI processingLatency optimizationEdge resource managementDistributed data processing'
     ],
     popular: true,
     category: 'Edge Computing',
@@ -95,8 +91,7 @@ export const real2036ITServices = [
     price: '$4,999',
     period: 'month',
     features: [
-      'Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexing',
-      'Quantum data analyticsHybrid quantum-classical storage'
+      'Quantum-accelerated queriesQuantum data compressionQuantum search algorithmsQuantum data indexingQuantum data analyticsHybrid quantum-classical storage'
     ],
     popular: true,
     category: 'Quantum Database',
@@ -117,8 +112,7 @@ export const real2036ITServices = [
     price: '$2,499',
     period: 'month',
     features: [
-      'AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detection',
-      'Automated threat responsePredictive security analytics'
+      'AI threat detectionIntelligent firewall managementBehavioral analysisAnomaly detectionAutomated threat responsePredictive security analytics'
     ],
     popular: true,
     category: 'Network Security',
@@ -139,8 +133,7 @@ export const real2036ITServices = [
     price: '$7,999',
     period: 'month',
     features: [
-      'Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimization',
-      'Quantum network securityQuantum internet standards'
+      'Quantum communication protocolsQuantum routing algorithmsQuantum entanglement distributionQuantum network optimizationQuantum network securityQuantum internet standards'
     ],
     popular: false,
     category: 'Quantum Internet',
@@ -161,8 +154,7 @@ export const real2036ITServices = [
     price: '$1,999',
     period: 'month',
     features: [
-      'AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimization',
-      'Automated monitoringResource optimization'
+      'AI-powered monitoringPredictive maintenanceIntelligent alertingPerformance optimizationAutomated monitoringResource optimization'
     ],
     popular: true,
     category: 'Infrastructure Monitoring',
@@ -183,8 +175,7 @@ export const real2036ITServices = [
     price: '$5,499',
     period: 'month',
     features: [
-      'Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimization',
-      'Hybrid quantum-classical storageQuantum storage security'
+      'Quantum data compressionQuantum data encodingQuantum storage algorithmsQuantum data optimizationHybrid quantum-classical storageQuantum storage security'
     ],
     popular: true,
     category: 'Quantum Storage',
@@ -205,8 +196,7 @@ export const real2036ITServices = [
     price: '$3,499',
     period: 'month',
     features: [
-      'AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planning',
-      'Automated testingBackup optimization'
+      'AI recovery strategiesIntelligent backup managementAutomated recovery proceduresPredictive recovery planningAutomated testingBackup optimization'
     ],
     popular: true,
     category: 'Disaster Recovery',

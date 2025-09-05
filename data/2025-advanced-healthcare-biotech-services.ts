@@ -50,8 +50,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     period: '/month',
     description: 'Advanced AI platform that accelerates drug discovery through molecular modeling, target identification, and predictive analytics, reducing development time and costs significantly.',
     features: [
-      'AI-powered molecular modeling and simulationTarget identification and validationDrug repurposing and optimizationPredictive toxicity and efficacy analysis',
-      'Clinical trial optimizationReal-time collaboration toolsIntegration with research databasesAdvanced analytics and reporting',
+      'AI-powered molecular modeling and simulationTarget identification and validationDrug repurposing and optimizationPredictive toxicity and efficacy analysisClinical trial optimizationReal-time collaboration toolsIntegration with research databasesAdvanced analytics and reporting',
       'Mobile research appAPI for research institutions'
     ],
     popular: true,
@@ -96,8 +95,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     period: '/month',
     description: 'Comprehensive precision medicine platform that combines genomic analysis, AI-powered diagnostics, and personalized treatment recommendations for improved patient outcomes.',
     features: [
-      'Whole genome sequencing and analysisAI-powered disease risk assessmentPersonalized treatment recommendationsDrug response prediction',
-      'Clinical decision supportPatient data managementIntegration with EHR systemsResearch collaboration tools',
+      'Whole genome sequencing and analysisAI-powered disease risk assessmentPersonalized treatment recommendationsDrug response predictionClinical decision supportPatient data managementIntegration with EHR systemsResearch collaboration tools',
       'Mobile patient appAPI for healthcare providers'
     ],
     popular: true,
@@ -142,8 +140,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     period: '/month',
     description: 'Advanced AI platform that provides automated medical image analysis, diagnosis assistance, and clinical decision support for radiologists and healthcare providers.',
     features: [
-      'AI-powered image analysis and diagnosisMulti-modality support (X-ray, MRI, CT, Ultrasound)Automated abnormality detectionClinical decision support tools',
-      'Integration with PACS systemsReal-time analysis and reportingMobile imaging appAPI for healthcare systems',
+      'AI-powered image analysis and diagnosisMulti-modality support (X-ray, MRI, CT, Ultrasound)Automated abnormality detectionClinical decision support toolsIntegration with PACS systemsReal-time analysis and reportingMobile imaging appAPI for healthcare systems',
       'Advanced analytics and insightsCompliance and audit tools'
     ],
     popular: true,
@@ -188,8 +185,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     period: '/month',
     description: 'Integrated digital health platform that provides telemedicine, remote patient monitoring, health analytics, and patient engagement tools for modern healthcare delivery.',
     features: [
-      'High-quality video consultationsRemote patient monitoringHealth data analytics and insightsPatient engagement and education',
-      'Integration with EHR systemsMobile health appsAI-powered health recommendationsSecure messaging and file sharing',
+      'High-quality video consultationsRemote patient monitoringHealth data analytics and insightsPatient engagement and educationIntegration with EHR systemsMobile health appsAI-powered health recommendationsSecure messaging and file sharing',
       'Billing and insurance integrationAPI for healthcare applications'
     ],
     popular: true,
@@ -234,8 +230,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     period: '/month',
     description: 'Advanced clinical trial platform that uses AI to optimize trial design, patient recruitment, data collection, and analysis for faster, more efficient clinical research.',
     features: [
-      'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insights',
-      'Regulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems',
+      'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems',
       'Mobile data collection appAPI for research platforms'
     ],
     popular: true,

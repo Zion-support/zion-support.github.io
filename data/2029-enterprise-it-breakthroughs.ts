@@ -49,8 +49,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     period: '/month',
     description: 'Revolutionary autonomous DevOps platform that uses AI to automatically manage, optimize, and scale infrastructure, deployments, and operations without human intervention.',
     features: [
-      'Autonomous infrastructure managementAI-powered deployment automationSelf-healing systemsPredictive scaling',
-      'Automated monitoringIntelligent incident responsePerformance optimizationSecurity automation',
+      'Autonomous infrastructure managementAI-powered deployment automationSelf-healing systemsPredictive scalingAutomated monitoringIntelligent incident responsePerformance optimizationSecurity automation',
       'Compliance monitoringAnalytics dashboard'
     ],
     popular: true,
@@ -93,8 +92,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     period: '/month',
     description: 'Advanced quantum-enhanced cloud infrastructure that provides unprecedented performance, security, and scalability using quantum computing principles and quantum-resistant encryption.',
     features: [
-      'Quantum-enhanced performanceQuantum-resistant securityAdvanced scalabilityQuantum encryption',
-      'Performance optimizationSecurity monitoringCompliance frameworksAnalytics dashboard',
+      'Quantum-enhanced performanceQuantum-resistant securityAdvanced scalabilityQuantum encryptionPerformance optimizationSecurity monitoringCompliance frameworksAnalytics dashboard',
       'Integration capabilitiesTraining and support'
     ],
     popular: true,
@@ -137,8 +135,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     period: '/month',
     description: 'Advanced AI-powered enterprise security platform that provides real-time threat detection, automated response, and comprehensive security management using machine learning and behavioral analysis.',
     features: [
-      'AI threat detectionAutomated response systemsBehavioral analysisReal-time monitoring',
-      'Threat intelligenceIncident automationCompliance monitoringSecurity analytics',
+      'AI threat detectionAutomated response systemsBehavioral analysisReal-time monitoringThreat intelligenceIncident automationCompliance monitoringSecurity analytics',
       'Integration frameworksTraining and support'
     ],
     popular: true,
@@ -181,8 +178,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     period: '/month',
     description: 'Revolutionary autonomous IT operations center that uses AI to automatically manage, monitor, and optimize entire IT infrastructure without human intervention, ensuring maximum uptime and performance.',
     features: [
-      'Autonomous IT managementSelf-healing infrastructurePredictive maintenancePerformance optimization',
-      'Automated monitoringIntelligent alertingCapacity planningCost optimization',
+      'Autonomous IT managementSelf-healing infrastructurePredictive maintenancePerformance optimizationAutomated monitoringIntelligent alertingCapacity planningCost optimization',
       'Compliance automationAnalytics dashboard'
     ],
     popular: true,

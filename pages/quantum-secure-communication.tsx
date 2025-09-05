@@ -20,24 +20,20 @@ export default function QuantumSecureCommunication() {
   },
 
   const features = [
-    'Quantum key distribution (QKD) encryptionEnd-to-end encryption for all communicationsQuantum-resistant algorithms and protocolsSecure file sharing and collaboration tools',
-    'Real-time encrypted messaging and video callsAudit trails and compliance reportingMulti-platform support (Web, Mobile, Desktop)Integration with existing communication tools',
+    'Quantum key distribution (QKD) encryptionEnd-to-end encryption for all communicationsQuantum-resistant algorithms and protocolsSecure file sharing and collaboration toolsReal-time encrypted messaging and video callsAudit trails and compliance reportingMulti-platform support (Web, Mobile, Desktop)Integration with existing communication tools',
     'Advanced threat detection and monitoring24/7 security monitoring and support'
   ],
 
   const useCases = [
-    'Secure executive communicationsConfidential document sharingRegulated industry complianceResearch collaboration',
-    'Government communications'
+    'Secure executive communicationsConfidential document sharingRegulated industry complianceResearch collaborationGovernment communications'
   ],
 
   const integrations = [
-    'SlackMicrosoft TeamsZoomEmail systems', 
-    'File storage platforms'
+    'SlackMicrosoft TeamsZoomEmail systemsFile storage platforms'
   ],
 
   const technology = [
-    'Quantum ComputingPost-Quantum CryptographyReactNode.js', 
-    'WebRTCWebAssemblyDockerKubernetes'
+    'Quantum ComputingPost-Quantum CryptographyReactNode.jsWebRTCWebAssemblyDockerKubernetes'
   ],
 
   return (

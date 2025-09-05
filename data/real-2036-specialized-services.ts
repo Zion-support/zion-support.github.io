@@ -29,8 +29,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$3,999',
     period: '/month',
     features: [
-      'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesAdaptive processing algorithms',
-      'Edge computing optimizationCustom neural modelsPerformance benchmarkingExpert consultation'
+      'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesAdaptive processing algorithmsEdge computing optimizationCustom neural modelsPerformance benchmarkingExpert consultation'
     ],
     link: 'https://ziontechgroup.com/services/neuromorphic-computing-platform',
     launchDate: '2036-04-01',
@@ -53,8 +52,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$5,999',
     period: '/month',
     features: [
-      'AI-powered DNA designBiological system simulationAutomated lab protocolsGenetic circuit optimization',
-      'Safety and compliance toolsReal-time monitoringCustom organism designExpert consultation'
+      'AI-powered DNA designBiological system simulationAutomated lab protocolsGenetic circuit optimizationSafety and compliance toolsReal-time monitoringCustom organism designExpert consultation'
     ],
     link: 'https://ziontechgroup.com/services/synthetic-biology-platform',
     launchDate: '2036-04-05',
@@ -77,8 +75,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$2,999',
     period: '/month',
     features: [
-      'Quantum network protocolsInteroperability standardsSecurity frameworksNetwork management tools',
-      'Performance optimizationCompliance certificationCustom protocol developmentExpert consultation'
+      'Quantum network protocolsInteroperability standardsSecurity frameworksNetwork management toolsPerformance optimizationCompliance certificationCustom protocol developmentExpert consultation'
     ],
     link: 'https://ziontechgroup.com/services/quantum-internet-protocol-suite',
     launchDate: '2036-04-10',
@@ -101,8 +98,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$4,999',
     period: '/month',
     features: [
-      'Neural signal processingReal-time brain monitoringCustom interface designSafety and compliance',
-      'Performance optimizationUser training toolsCustom applicationsExpert consultation'
+      'Neural signal processingReal-time brain monitoringCustom interface designSafety and compliancePerformance optimizationUser training toolsCustom applicationsExpert consultation'
     ],
     link: 'https://ziontechgroup.com/services/brain-computer-interface-platform',
     launchDate: '2036-04-15',
@@ -125,8 +121,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$1,999',
     period: '/month',
     features: [
-      '3D world building toolsAI-powered NPCsBlockchain integrationMulti-user environments',
-      'VR/AR supportPerformance optimizationCustom developmentExpert consultation'
+      '3D world building toolsAI-powered NPCsBlockchain integrationMulti-user environmentsVR/AR supportPerformance optimizationCustom developmentExpert consultation'
     ],
     link: 'https://ziontechgroup.com/services/metaverse-development-studio-pro',
     launchDate: '2036-04-20',
@@ -149,8 +144,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$3,999',
     period: '/month',
     features: [
-      'Computer vision systemsSensor fusion algorithmsPath planning and navigationSafety and redundancy',
-      'Real-time processingPerformance optimizationCustom vehicle integrationExpert consultation'
+      'Computer vision systemsSensor fusion algorithmsPath planning and navigationSafety and redundancyReal-time processingPerformance optimizationCustom vehicle integrationExpert consultation'
     ],
     link: 'https://ziontechgroup.com/services/autonomous-vehicle-ai-platform',
     launchDate: '2036-04-25',
@@ -173,8 +167,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$4,999',
     period: '/month',
     features: [
-      'Quantum material simulationAI-powered discoveryProperty predictionSynthesis optimization',
-      'Performance testingCustom material designExpert consultationResearch collaboration'
+      'Quantum material simulationAI-powered discoveryProperty predictionSynthesis optimizationPerformance testingCustom material designExpert consultationResearch collaboration'
     ],
     link: 'https://ziontechgroup.com/services/quantum-materials-discovery-platform',
     launchDate: '2036-04-30',
@@ -197,8 +190,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$2,499',
     period: '/month',
     features: [
-      'AI climate modelsReal-time data analysisPredictive modelingScenario simulation',
-      'Data visualizationCustom analysisExpert consultationResearch collaboration'
+      'AI climate modelsReal-time data analysisPredictive modelingScenario simulationData visualizationCustom analysisExpert consultationResearch collaboration'
     ],
     link: 'https://ziontechgroup.com/services/ai-climate-modeling-platform',
     launchDate: '2036-05-05',
@@ -221,8 +213,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$3,499',
     period: '/month',
     features: [
-      'Quantum neural networksHybrid quantum-classical AIAdvanced optimizationPerformance benchmarking',
-      'Custom model developmentExpert consultationResearch collaborationTraining and support'
+      'Quantum neural networksHybrid quantum-classical AIAdvanced optimizationPerformance benchmarkingCustom model developmentExpert consultationResearch collaborationTraining and support'
     ],
     link: 'https://ziontechgroup.com/services/quantum-neural-network-platform',
     launchDate: '2036-05-10',
@@ -245,8 +236,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$6,999',
     period: '/month',
     features: [
-      'Tourism management systemSafety protocolsTraining programsFlight operations',
-      'Customer managementCompliance toolsCustom developmentExpert consultation'
+      'Tourism management systemSafety protocolsTraining programsFlight operationsCustomer managementCompliance toolsCustom developmentExpert consultation'
     ],
     link: 'https://ziontechgroup.com/services/space-tourism-platform',
     launchDate: '2036-05-15',

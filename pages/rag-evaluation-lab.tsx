@@ -28,8 +28,7 @@ export default function RAGEvaluationLabPage() {
 					</div>
 
   const useCases = [
-    'Enterprise Knowledge ManagementCustomer Support SystemsResearch & DevelopmentContent Generation Platforms',
-    'Educational ApplicationsLegal & Compliance Systems'
+    'Enterprise Knowledge ManagementCustomer Support SystemsResearch & DevelopmentContent Generation PlatformsEducational ApplicationsLegal & Compliance Systems'
   ],
 
 					<div className="mt-12 flex flex-wrap items-center gap-4">

@@ -32,8 +32,7 @@ export default function AIBusinessToolsPage() {
       icon: <Brain className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Natural language processingCode generation & debuggingContent creationData analysis',
-        'Creative writingMulti-language support'
+        'Natural language processingCode generation & debuggingContent creationData analysisCreative writingMulti-language support'
       ],
       website: 'https://chat.openai.com',
       useCase: 'Ideal for writers, developers, researchers, and anyone who needs AI assistance with complex tasks.',
@@ -51,8 +50,7 @@ export default function AIBusinessToolsPage() {
       icon: <Image className="w-8 h-8 text-purple-400" />,
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
-        'Text-to-image generationHigh-resolution outputArtistic stylesCommercial usage rights',
-        'Community featuresDiscord integration'
+        'Text-to-image generationHigh-resolution outputArtistic stylesCommercial usage rightsCommunity featuresDiscord integration'
       ],
       website: 'https://midjourney.com',
       useCase: 'Perfect for designers, marketers, content creators, and businesses needing custom visual content.',
@@ -70,8 +68,7 @@ export default function AIBusinessToolsPage() {
       icon: <FileText className="w-8 h-8 text-blue-400" />,
       color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
       features: [
-        'Marketing copy generationBlog post writingSocial media contentSEO optimization',
-        'Brand voice trainingTeam collaboration'
+        'Marketing copy generationBlog post writingSocial media contentSEO optimizationBrand voice trainingTeam collaboration'
       ],
       website: 'https://jasper.ai',
       useCase: 'Essential for marketing teams, content creators, and businesses that need high-quality written content at scale.',
@@ -89,8 +86,7 @@ export default function AIBusinessToolsPage() {
       icon: <Video className="w-8 h-8 text-red-400" />,
       color: 'bg-gradient-to-br from-red-500 to-pink-600',
       features: [
-        'AI avatar generationText-to-speechVideo templatesMulti-language support',
-        'Custom brandingAPI access'
+        'AI avatar generationText-to-speechVideo templatesMulti-language supportCustom brandingAPI access'
       ],
       website: 'https://synthesia.io',
       useCase: 'Perfect for creating training videos, marketing content, and presentations without hiring actors or video crews.',
@@ -108,8 +104,7 @@ export default function AIBusinessToolsPage() {
       icon: <MessageSquare className="w-8 h-8 text-orange-400" />,
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       features: [
-        'Marketing copy generationProduct descriptionsSocial media postsEmail campaigns',
-        'Blog contentFree tier available'
+        'Marketing copy generationProduct descriptionsSocial media postsEmail campaignsBlog contentFree tier available'
       ],
       website: 'https://copy.ai',
       useCase: 'Great for small businesses, entrepreneurs, and marketers who need quality copy without hiring writers.',
@@ -127,8 +122,7 @@ export default function AIBusinessToolsPage() {
       icon: <Check className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-teal-600',
       features: [
-        'Grammar & spelling checkTone analysisStyle suggestionsPlagiarism detection',
-        'Browser extensionMobile apps'
+        'Grammar & spelling checkTone analysisStyle suggestionsPlagiarism detectionBrowser extensionMobile apps'
       ],
       website: 'https://grammarly.com',
       useCase: 'Essential for anyone who writes professionally, including students, professionals, and content creators.',
@@ -146,8 +140,7 @@ export default function AIBusinessToolsPage() {
       icon: <Video className="w-8 h-8 text-blue-400" />,
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       features: [
-        'Text-to-video conversionVideo templatesMusic libraryBrand customization',
-        'Social media formatsFree tier available'
+        'Text-to-video conversionVideo templatesMusic libraryBrand customizationSocial media formatsFree tier available'
       ],
       website: 'https://lumen5.com',
       useCase: 'Perfect for marketers, social media managers, and businesses that want to create video content from existing text.',
@@ -165,8 +158,7 @@ export default function AIBusinessToolsPage() {
       icon: <TrendingUp className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Content optimizationKeyword researchCompetitor analysisSERP analysis',
-        'Content editorRank tracking'
+        'Content optimizationKeyword researchCompetitor analysisSERP analysisContent editorRank tracking'
       ],
       website: 'https://surferseo.com',
       useCase: 'Essential for content marketers, SEO specialists, and businesses that want to improve their search rankings.',
@@ -176,7 +168,7 @@ export default function AIBusinessToolsPage() {
     }
   ],
 
-  const categories = ['AllAI AssistantAI ArtAI Writing', 'AI VideoAI CopywritingAI SEO'],
+  const categories = ['AllAI AssistantAI ArtAI WritingAI VideoAI CopywritingAI SEO'],
   const [selectedCategory, setSelectedCategory] = React.useState('All'),
 
   const filteredTools = selectedCategory === 'All' 

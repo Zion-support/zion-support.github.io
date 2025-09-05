@@ -4,8 +4,7 @@ export const advancedAIServices2025 = [
     name: 'BusinessIntelligence AI Pro',
     description: 'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.',
     features: [
-      'Natural language query processingAI-powered data visualizationPredictive analytics and forecastingAutomated report generation',
-      'Real-time data monitoringIntegration with 100+ data sourcesCustom AI model trainingAdvanced security and compliance'
+      'Natural language query processingAI-powered data visualizationPredictive analytics and forecastingAutomated report generationReal-time data monitoringIntegration with 100+ data sourcesCustom AI model trainingAdvanced security and compliance'
     ],
     pricing: {
       starter: { price: 199, period: 'month', features: ['Up to 10 usersBasic AI insightsStandard reports'] },
@@ -28,8 +27,7 @@ export const advancedAIServices2025 = [
     name: 'CustomerAnalytics AI',
     description: 'AI-powered customer analytics platform that provides deep insights into customer behavior, preferences, and lifetime value optimization.',
     features: [
-      'Customer behavior predictionPersonalization engineChurn risk analysisCustomer segmentation',
-      'Real-time analyticsIntegration with CRM systemsAdvanced reporting and dashboardsCustom AI model training'
+      'Customer behavior predictionPersonalization engineChurn risk analysisCustomer segmentationReal-time analyticsIntegration with CRM systemsAdvanced reporting and dashboardsCustom AI model training'
     ],
     pricing: {
       starter: { price: 149, period: 'month', features: ['Up to 10,000 customersBasic analyticsStandard reports'] },
@@ -52,8 +50,7 @@ export const advancedAIServices2025 = [
     name: 'FinancialRisk AI',
     description: 'Intelligent financial risk management platform that uses AI to detect fraud, assess credit risk, and optimize investment portfolios.',
     features: [
-      'AI-powered fraud detectionCredit risk assessmentPortfolio optimizationReal-time risk monitoring',
-      'Regulatory complianceIntegration with financial systemsAdvanced analytics and reportingCustom risk models'
+      'AI-powered fraud detectionCredit risk assessmentPortfolio optimizationReal-time risk monitoringRegulatory complianceIntegration with financial systemsAdvanced analytics and reportingCustom risk models'
     ],
     pricing: {
       starter: { price: 299, period: 'month', features: ['Basic risk assessmentStandard complianceEmail alerts'] },
@@ -76,8 +73,7 @@ export const advancedAIServices2025 = [
     name: 'SupplyChain AI',
     description: 'AI-powered supply chain optimization platform that predicts demand, optimizes inventory, and automates logistics operations.',
     features: [
-      'Demand forecasting with 95% accuracyInventory optimizationRoute optimizationSupplier performance analytics',
-      'Real-time trackingIntegration with ERP systemsAdvanced analytics and reportingCustom optimization models'
+      'Demand forecasting with 95% accuracyInventory optimizationRoute optimizationSupplier performance analyticsReal-time trackingIntegration with ERP systemsAdvanced analytics and reportingCustom optimization models'
     ],
     pricing: {
       starter: { price: 179, period: 'month', features: ['Up to 5 locationsBasic forecastingStandard reports'] },
@@ -100,8 +96,7 @@ export const advancedAIServices2025 = [
     name: 'HealthcareDiagnostics AI',
     description: 'Advanced AI-powered healthcare diagnostics platform that provides accurate medical image analysis, patient risk assessment, and treatment recommendations.',
     features: [
-      'Medical image analysis (X-ray, MRI, CT)Patient risk assessmentTreatment recommendation engineClinical decision support',
-      'Integration with EMR systemsAdvanced analytics and reportingCustom AI model trainingHIPAA compliance'
+      'Medical image analysis (X-ray, MRI, CT)Patient risk assessmentTreatment recommendation engineClinical decision supportIntegration with EMR systemsAdvanced analytics and reportingCustom AI model trainingHIPAA compliance'
     ],
     pricing: {
       starter: { price: 399, period: 'month', features: ['Up to 1,000 scans/monthBasic AI analysisStandard reports'] },
@@ -124,8 +119,7 @@ export const advancedAIServices2025 = [
     name: 'LegalDocument AI',
     description: 'AI-powered legal document analysis platform that automates contract review, legal research, and compliance monitoring.',
     features: [
-      'Contract analysis and reviewLegal research automationCompliance monitoringRisk assessment',
-      'Integration with legal systemsAdvanced analytics and reportingCustom AI model trainingLegal compliance automation'
+      'Contract analysis and reviewLegal research automationCompliance monitoringRisk assessmentIntegration with legal systemsAdvanced analytics and reportingCustom AI model trainingLegal compliance automation'
     ],
     pricing: {
       starter: { price: 249, period: 'month', features: ['Up to 100 documents/monthBasic AI analysisStandard templates'] },
@@ -148,8 +142,7 @@ export const advancedAIServices2025 = [
     name: 'MarketingAutomation AI',
     description: 'Intelligent marketing automation platform that uses AI to optimize campaigns, personalize content, and maximize ROI.',
     features: [
-      'AI-powered campaign optimizationPersonalized content generationCustomer segmentationPredictive analytics',
-      'Integration with marketing toolsAdvanced analytics and reportingCustom AI model trainingMulti-channel automation'
+      'AI-powered campaign optimizationPersonalized content generationCustomer segmentationPredictive analyticsIntegration with marketing toolsAdvanced analytics and reportingCustom AI model trainingMulti-channel automation'
     ],
     pricing: {
       starter: { price: 129, period: 'month', features: ['Up to 10,000 contactsBasic AIStandard automation'] },
@@ -172,8 +165,7 @@ export const advancedAIServices2025 = [
     name: 'SalesOptimization AI',
     description: 'AI-powered sales optimization platform that provides lead scoring, sales forecasting, and performance optimization insights.',
     features: [
-      'AI-powered lead scoringSales forecasting with 93% accuracyPerformance optimizationPipeline analytics',
-      'Integration with CRM systemsAdvanced analytics and reportingCustom AI model trainingSales coaching automation'
+      'AI-powered lead scoringSales forecasting with 93% accuracyPerformance optimizationPipeline analyticsIntegration with CRM systemsAdvanced analytics and reportingCustom AI model trainingSales coaching automation'
     ],
     pricing: {
       starter: { price: 99, period: 'month', features: ['Up to 10 sales repsBasic AI insightsStandard reports'] },
@@ -196,8 +188,7 @@ export const advancedAIServices2025 = [
     name: 'HRRecruitment AI',
     description: 'Intelligent HR recruitment platform that uses AI to screen candidates, optimize job postings, and improve hiring outcomes.',
     features: [
-      'AI-powered candidate screeningJob posting optimizationSkills assessmentInterview scheduling automation',
-      'Integration with ATS systemsAdvanced analytics and reportingCustom AI model trainingDiversity and inclusion tools'
+      'AI-powered candidate screeningJob posting optimizationSkills assessmentInterview scheduling automationIntegration with ATS systemsAdvanced analytics and reportingCustom AI model trainingDiversity and inclusion tools'
     ],
     pricing: {
       starter: { price: 89, period: 'month', features: ['Up to 50 job postings/monthBasic AI screeningStandard reports'] },
@@ -220,8 +211,7 @@ export const advancedAIServices2025 = [
     name: 'Cybersecurity AI',
     description: 'AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and security intelligence.',
     features: [
-      'AI-powered threat detectionAutomated incident responseSecurity intelligenceVulnerability assessment',
-      'Integration with security toolsAdvanced analytics and reportingCustom AI model training24/7 security monitoring'
+      'AI-powered threat detectionAutomated incident responseSecurity intelligenceVulnerability assessmentIntegration with security toolsAdvanced analytics and reportingCustom AI model training24/7 security monitoring'
     ],
     pricing: {
       starter: { price: 199, period: 'month', features: ['Up to 100 endpointsBasic threat detectionEmail alerts'] },

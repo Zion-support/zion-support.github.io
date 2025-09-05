@@ -25,7 +25,7 @@ interface DistributionChartItem {
     value: number
 }
 
-const COLORS = ['#0088FE#00C49F#FFBB28#FF8042', '#AA00FF#FF00AA#00AAAA#AAAA00'],
+const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#AA00FF#FF00AA#00AAAA#AAAA00'],
 
 // Helper for slugifying filenames
 const slugify = (text: string): string => {

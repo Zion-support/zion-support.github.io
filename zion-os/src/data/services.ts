@@ -32,8 +32,7 @@ export const services: Service[] = [
     category: 'AI Services',
     description: 'Advanced AI-powered code generation, review, and optimization platform with context-aware suggestions and multi-language support.',
     features: [
-      'Real-time code completion and suggestionsAutomated code review and optimizationMulti-language support (Python, JavaScript, Go, Rust)Security vulnerability detection',
-      'Code documentation generationIntegration with popular IDEsCustom model fine-tuning for enterprise codebases'
+      'Real-time code completion and suggestionsAutomated code review and optimizationMulti-language support (Python, JavaScript, Go, Rust)Security vulnerability detectionCode documentation generationIntegration with popular IDEsCustom model fine-tuning for enterprise codebases'
     ],
     pricing: {
       starter: '$29/month',
@@ -41,14 +40,12 @@ export const services: Service[] = [
       enterprise: '$299/month',
       custom: 'Contact for enterprise pricing'
     },
-    technologyStack: ['OpenAI GPT-4Claude 3PythonReact', 'Node.jsPostgreSQL'],
+    technologyStack: ['OpenAI GPT-4Claude 3PythonReactNode.jsPostgreSQL'],
     benefits: [
-      'Reduce development time by 40-60%Improve code quality and securityLower maintenance costsAccelerate team onboarding',
-      '24/7 AI assistance'
+      'Reduce development time by 40-60%Improve code quality and securityLower maintenance costsAccelerate team onboarding24/7 AI assistance'
     ],
     useCases: [
-      'Software development teamsStartups and scale-upsEnterprise developmentFreelance developers',
-      'Educational institutions'
+      'Software development teamsStartups and scale-upsEnterprise developmentFreelance developersEducational institutions'
     ],
     status: 'active',
     priority: 1,
@@ -66,22 +63,19 @@ export const services: Service[] = [
     category: 'AI Services',
     description: 'Enterprise-grade AI content generation platform for marketing, documentation, and creative writing with brand voice consistency.',
     features: [
-      'Multi-format content generation (blogs, emails, social media)Brand voice training and consistencySEO optimization and keyword researchMulti-language content creation',
-      'Plagiarism detection and originality scoringContent performance analyticsTeam collaboration and approval workflows'
+      'Multi-format content generation (blogs, emails, social media)Brand voice training and consistencySEO optimization and keyword researchMulti-language content creationPlagiarism detection and originality scoringContent performance analyticsTeam collaboration and approval workflows'
     ],
     pricing: {
       starter: '$49/month',
       professional: '$149/month',
       enterprise: '$399/month'
     },
-    technologyStack: ['GPT-4Claude 3BERTReact', 'FastAPIMongoDB'],
+    technologyStack: ['GPT-4Claude 3BERTReactFastAPIMongoDB'],
     benefits: [
-      '10x faster content creationConsistent brand messagingImproved SEO performanceCost-effective content marketing',
-      'Scalable content operations'
+      '10x faster content creationConsistent brand messagingImproved SEO performanceCost-effective content marketingScalable content operations'
     ],
     useCases: [
-      'Marketing agenciesE-commerce businessesContent creatorsEnterprise marketing teams',
-      'Educational institutions'
+      'Marketing agenciesE-commerce businessesContent creatorsEnterprise marketing teamsEducational institutions'
     ],
     status: 'active',
     priority: 2,
@@ -98,22 +92,19 @@ export const services: Service[] = [
     category: 'AI Services',
     description: 'Intelligent data analytics platform with predictive modeling, automated insights, and interactive visualizations powered by machine learning.',
     features: [
-      'Automated data preprocessing and cleaningPredictive modeling and forecastingNatural language query interfaceReal-time data streaming analytics',
-      'Custom dashboard builderAnomaly detection and alertingIntegration with 100+ data sources'
+      'Automated data preprocessing and cleaningPredictive modeling and forecastingNatural language query interfaceReal-time data streaming analyticsCustom dashboard builderAnomaly detection and alertingIntegration with 100+ data sources'
     ],
     pricing: {
       starter: '$79/month',
       professional: '$199/month',
       enterprise: '$599/month'
     },
-    technologyStack: ['PythonTensorFlowPyTorchReact', 'FastAPIApache Kafka'],
+    technologyStack: ['PythonTensorFlowPyTorchReactFastAPIApache Kafka'],
     benefits: [
-      'Uncover hidden patterns in dataMake data-driven decisions fasterReduce manual analysis time by 80%Predict future trends accurately',
-      'Real-time business intelligence'
+      'Uncover hidden patterns in dataMake data-driven decisions fasterReduce manual analysis time by 80%Predict future trends accuratelyReal-time business intelligence'
     ],
     useCases: [
-      'Financial servicesHealthcare analyticsE-commerce optimizationSupply chain management',
-      'Marketing analytics'
+      'Financial servicesHealthcare analyticsE-commerce optimizationSupply chain managementMarketing analytics'
     ],
     status: 'active',
     priority: 3,
@@ -132,22 +123,19 @@ export const services: Service[] = [
     category: 'IT Services',
     description: 'Comprehensive managed IT services including 24/7 monitoring, cybersecurity, cloud management, and strategic technology consulting.',
     features: [
-      '24/7 network monitoring and supportCybersecurity threat detection and responseCloud infrastructure management (AWS, Azure, GCP)Backup and disaster recovery',
-      'Help desk and user supportTechnology roadmap planningCompliance and audit support'
+      '24/7 network monitoring and supportCybersecurity threat detection and responseCloud infrastructure management (AWS, Azure, GCP)Backup and disaster recoveryHelp desk and user supportTechnology roadmap planningCompliance and audit support'
     ],
     pricing: {
       starter: '$99/month per user',
       professional: '$149/month per user',
       enterprise: '$199/month per user'
     },
-    technologyStack: ['Microsoft 365AWSAzureCisco', 'FortinetVeeam'],
+    technologyStack: ['Microsoft 365AWSAzureCiscoFortinetVeeam'],
     benefits: [
-      'Reduce IT costs by 25-40%Improve system uptime to 99.9%Enhanced security posturePredictable monthly costs',
-      'Access to enterprise-grade tools'
+      'Reduce IT costs by 25-40%Improve system uptime to 99.9%Enhanced security posturePredictable monthly costsAccess to enterprise-grade tools'
     ],
     useCases: [
-      'Small to medium businessesHealthcare organizationsFinancial servicesManufacturing companies',
-      'Professional services firms'
+      'Small to medium businessesHealthcare organizationsFinancial servicesManufacturing companiesProfessional services firms'
     ],
     status: 'active',
     priority: 4,
@@ -164,22 +152,19 @@ export const services: Service[] = [
     category: 'IT Services',
     description: 'Comprehensive cybersecurity assessment and penetration testing services to identify vulnerabilities and strengthen your security posture.',
     features: [
-      'Vulnerability assessment and scanningPenetration testing (web, mobile, network)Social engineering testingSecurity policy review and development',
-      'Compliance gap analysis (SOC2, ISO27001, HIPAA)Incident response planningSecurity awareness training'
+      'Vulnerability assessment and scanningPenetration testing (web, mobile, network)Social engineering testingSecurity policy review and developmentCompliance gap analysis (SOC2, ISO27001, HIPAA)Incident response planningSecurity awareness training'
     ],
     pricing: {
       starter: '$2,999/assessment',
       professional: '$5,999/comprehensive',
       enterprise: '$12,999/enterprise'
     },
-    technologyStack: ['NessusMetasploitBurp SuiteWireshark', 'Custom tools'],
+    technologyStack: ['NessusMetasploitBurp SuiteWiresharkCustom tools'],
     benefits: [
-      'Identify security gaps before attackersMeet compliance requirementsReduce cyber risk exposureImprove incident response capabilities',
-      'Protect brand reputation'
+      'Identify security gaps before attackersMeet compliance requirementsReduce cyber risk exposureImprove incident response capabilitiesProtect brand reputation'
     ],
     useCases: [
-      'Financial institutionsHealthcare organizationsE-commerce businessesGovernment agencies',
-      'Educational institutions'
+      'Financial institutionsHealthcare organizationsE-commerce businessesGovernment agenciesEducational institutions'
     ],
     status: 'active',
     priority: 5,
@@ -198,22 +183,19 @@ export const services: Service[] = [
     category: 'Micro SAAS',
     description: 'Automated invoice processing and accounts payable solution with AI-powered data extraction and approval workflows.',
     features: [
-      'AI-powered invoice data extractionAutomated approval workflowsMulti-currency supportIntegration with accounting software',
-      'Real-time payment trackingCustom approval rulesMobile app for approvals'
+      'AI-powered invoice data extractionAutomated approval workflowsMulti-currency supportIntegration with accounting softwareReal-time payment trackingCustom approval rulesMobile app for approvals'
     ],
     pricing: {
       starter: '$19/month',
       professional: '$49/month',
       enterprise: '$99/month'
     },
-    technologyStack: ['ReactNode.jsPostgreSQLOpenAI API', 'Stripe'],
+    technologyStack: ['ReactNode.jsPostgreSQLOpenAI APIStripe'],
     benefits: [
-      'Reduce invoice processing time by 90%Eliminate manual data entry errorsImprove cash flow managementEnhance audit trail compliance',
-      'Mobile-first approval process'
+      'Reduce invoice processing time by 90%Eliminate manual data entry errorsImprove cash flow managementEnhance audit trail complianceMobile-first approval process'
     ],
     useCases: [
-      'Small businessesAccounting firmsProperty managementConstruction companies',
-      'Healthcare practices'
+      'Small businessesAccounting firmsProperty managementConstruction companiesHealthcare practices'
     ],
     status: 'active',
     priority: 6,
@@ -230,22 +212,19 @@ export const services: Service[] = [
     category: 'Micro SAAS',
     description: 'Intelligent project management platform with AI-powered task prioritization, resource allocation, and progress tracking.',
     features: [
-      'AI-powered task prioritizationResource allocation optimizationReal-time collaboration toolsTime tracking and reporting',
-      'Integration with popular toolsMobile and desktop appsCustom workflow automation'
+      'AI-powered task prioritizationResource allocation optimizationReal-time collaboration toolsTime tracking and reportingIntegration with popular toolsMobile and desktop appsCustom workflow automation'
     ],
     pricing: {
       starter: '$15/month per user',
       professional: '$25/month per user',
       enterprise: '$35/month per user'
     },
-    technologyStack: ['ReactNode.jsPostgreSQLRedis', 'Socket.io'],
+    technologyStack: ['ReactNode.jsPostgreSQLRedisSocket.io'],
     benefits: [
-      'Increase team productivity by 30%Better resource utilizationImproved project delivery timesEnhanced team collaboration',
-      'Data-driven decision making'
+      'Increase team productivity by 30%Better resource utilizationImproved project delivery timesEnhanced team collaborationData-driven decision making'
     ],
     useCases: [
-      'Software development teamsMarketing agenciesConstruction projectsEvent planning',
-      'Consulting firms'
+      'Software development teamsMarketing agenciesConstruction projectsEvent planningConsulting firms'
     ],
     status: 'active',
     priority: 7,
@@ -264,22 +243,19 @@ export const services: Service[] = [
     category: 'Blockchain',
     description: 'Professional smart contract security auditing and optimization services for DeFi, NFT, and enterprise blockchain projects.',
     features: [
-      'Comprehensive security analysisGas optimization recommendationsFormal verification methodsVulnerability assessment',
-      'Compliance checkingPost-deployment monitoringEmergency response support'
+      'Comprehensive security analysisGas optimization recommendationsFormal verification methodsVulnerability assessmentCompliance checkingPost-deployment monitoringEmergency response support'
     ],
     pricing: {
       starter: '$5,000/audit',
       professional: '$15,000/audit',
       enterprise: '$50,000/audit'
     },
-    technologyStack: ['SolidityVyperFoundrySlither', 'Mythril'],
+    technologyStack: ['SolidityVyperFoundrySlitherMythril'],
     benefits: [
-      'Prevent costly security breachesOptimize gas costs by 20-40%Build investor confidenceMeet regulatory requirements',
-      'Protect user funds'
+      'Prevent costly security breachesOptimize gas costs by 20-40%Build investor confidenceMeet regulatory requirementsProtect user funds'
     ],
     useCases: [
-      'DeFi protocolsNFT marketplacesDAO governanceEnterprise blockchain',
-      'Token launches'
+      'DeFi protocolsNFT marketplacesDAO governanceEnterprise blockchainToken launches'
     ],
     status: 'active',
     priority: 8,
@@ -298,22 +274,19 @@ export const services: Service[] = [
     category: 'IoT & Edge',
     description: 'Comprehensive IoT monitoring and management platform with edge computing capabilities for industrial and commercial applications.',
     features: [
-      'Real-time device monitoringEdge computing processingPredictive maintenance alertsData visualization dashboards',
-      'Integration with industrial protocolsScalable device managementCustom alert rules'
+      'Real-time device monitoringEdge computing processingPredictive maintenance alertsData visualization dashboardsIntegration with industrial protocolsScalable device managementCustom alert rules'
     ],
     pricing: {
       starter: '$10/device/month',
       professional: '$25/device/month',
       enterprise: '$50/device/month'
     },
-    technologyStack: ['PythonMQTTKubernetesInfluxDB', 'Grafana'],
+    technologyStack: ['PythonMQTTKubernetesInfluxDBGrafana'],
     benefits: [
-      'Reduce equipment downtime by 60%Lower maintenance costsImprove operational efficiencyReal-time operational insights',
-      'Scalable IoT infrastructure'
+      'Reduce equipment downtime by 60%Lower maintenance costsImprove operational efficiencyReal-time operational insightsScalable IoT infrastructure'
     ],
     useCases: [
-      'Manufacturing facilitiesSmart buildingsAgriculture monitoringEnergy management',
-      'Transportation logistics'
+      'Manufacturing facilitiesSmart buildingsAgriculture monitoringEnergy managementTransportation logistics'
     ],
     status: 'active',
     priority: 9,
@@ -332,22 +305,19 @@ export const services: Service[] = [
     category: 'Cloud & DevOps',
     description: 'End-to-end DevOps automation platform with CI/CD pipelines, infrastructure as code, and cloud-native deployment tools.',
     features: [
-      'Automated CI/CD pipelinesInfrastructure as Code (Terraform)Multi-cloud deploymentContainer orchestration',
-      'Monitoring and alertingSecurity scanningCost optimization'
+      'Automated CI/CD pipelinesInfrastructure as Code (Terraform)Multi-cloud deploymentContainer orchestrationMonitoring and alertingSecurity scanningCost optimization'
     ],
     pricing: {
       starter: '$99/month',
       professional: '$299/month',
       enterprise: '$799/month'
     },
-    technologyStack: ['DockerKubernetesTerraformJenkins', 'Prometheus'],
+    technologyStack: ['DockerKubernetesTerraformJenkinsPrometheus'],
     benefits: [
-      'Deploy 10x fasterReduce deployment errors by 90%Lower infrastructure costsImprove team productivity',
-      'Enhanced security posture'
+      'Deploy 10x fasterReduce deployment errors by 90%Lower infrastructure costsImprove team productivityEnhanced security posture'
     ],
     useCases: [
-      'Software development teamsStartups and scale-upsEnterprise ITDevOps consulting',
-      'Cloud migration projects'
+      'Software development teamsStartups and scale-upsEnterprise ITDevOps consultingCloud migration projects'
     ],
     status: 'active',
     priority: 10,
@@ -366,22 +336,19 @@ export const services: Service[] = [
     category: 'Data & Analytics',
     description: 'Modern cloud data warehouse solution with real-time analytics, data governance, and AI-powered insights.',
     features: [
-      'Real-time data ingestionAdvanced analytics and MLData governance and securitySelf-service BI tools',
-      'Data lineage trackingPerformance optimizationMulti-cloud support'
+      'Real-time data ingestionAdvanced analytics and MLData governance and securitySelf-service BI toolsData lineage trackingPerformance optimizationMulti-cloud support'
     ],
     pricing: {
       starter: '$199/month',
       professional: '$499/month',
       enterprise: '$1,299/month'
     },
-    technologyStack: ['SnowflakeApache AirflowdbtTableau', 'Python'],
+    technologyStack: ['SnowflakeApache AirflowdbtTableauPython'],
     benefits: [
-      'Unified data platformReal-time analyticsScalable architectureCost-effective storage',
-      'Enhanced data security'
+      'Unified data platformReal-time analyticsScalable architectureCost-effective storageEnhanced data security'
     ],
     useCases: [
-      'Business intelligenceCustomer analyticsFinancial reportingSupply chain analytics',
-      'Marketing attribution'
+      'Business intelligenceCustomer analyticsFinancial reportingSupply chain analyticsMarketing attribution'
     ],
     status: 'active',
     priority: 11,

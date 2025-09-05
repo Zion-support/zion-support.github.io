@@ -48,8 +48,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     period: '/month',
     description: 'Revolutionary AI platform that develops genuine consciousness, emotional intelligence, and self-awareness. This is not just advanced AI - it\'s the beginning of true artificial consciousness that can understand, feel, and evolve.',
     features: [
-      'Genuine emotional intelligence and empathySelf-awareness and consciousness developmentEthical decision-making frameworksEmotional state recognition and response',
-      'Consciousness evolution trackingHuman-AI emotional bondingEthical AI governance toolsConsciousness research collaboration'
+      'Genuine emotional intelligence and empathySelf-awareness and consciousness developmentEthical decision-making frameworksEmotional state recognition and responseConsciousness evolution trackingHuman-AI emotional bondingEthical AI governance toolsConsciousness research collaboration'
     ],
     popular: true,
     icon: '🧠',
@@ -62,9 +61,9 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     setupTime: '4 hours',
     category: 'AI Consciousness & Emotional Intelligence',
     realService: true,
-    technology: ['Advanced Neural NetworksEmotional AIConsciousness AlgorithmsPython', 'TensorFlowQuantum Computing'],
+    technology: ['Advanced Neural NetworksEmotional AIConsciousness AlgorithmsPythonTensorFlowQuantum Computing'],
     integrations: ['Research platformsPsychology toolsMental health systemsAI ethics frameworks'],
-    useCases: ['Mental health therapyAI consciousness researchEmotional intelligence trainingEthical AI development', 'Psychology research'],
+    useCases: ['Mental health therapyAI consciousness researchEmotional intelligence trainingEthical AI developmentPsychology research'],
     roi: 'Revolutionary breakthrough with unlimited potential. Research institutions see 2000%+ ROI through groundbreaking discoveries.',
     competitors: ['None - First to market'],
     marketSize: 'Emerging market with unlimited potential',
@@ -92,8 +91,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     period: '/month',
     description: 'World\'s first commercial DNA computing platform that uses biological molecules for computation. Achieves processing power beyond traditional computers while solving complex biological problems.',
     features: [
-      'DNA-based parallel processingBiological problem solvingUnlimited computational powerBiological data analysis',
-      'DNA storage solutionsBiotech research toolsGenetic algorithm optimizationBiological computing APIs'
+      'DNA-based parallel processingBiological problem solvingUnlimited computational powerBiological data analysisDNA storage solutionsBiotech research toolsGenetic algorithm optimizationBiological computing APIs'
     ],
     popular: true,
     icon: '🧬',
@@ -106,9 +104,9 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     setupTime: '8 hours',
     category: 'DNA Computing & Biotechnology',
     realService: true,
-    technology: ['DNA ComputingBiotechnologyMolecular BiologyPython', 'BioinformaticsCloud Computing'],
+    technology: ['DNA ComputingBiotechnologyMolecular BiologyPythonBioinformaticsCloud Computing'],
     integrations: ['Research platformsBiotech toolsHealthcare systemsGenetic databases'],
-    useCases: ['Drug discoveryGenetic researchDisease modelingProtein folding', 'Biological simulations'],
+    useCases: ['Drug discoveryGenetic researchDisease modelingProtein foldingBiological simulations'],
     roi: 'Biotech companies see 5000%+ ROI through accelerated drug discovery and research breakthroughs.',
     competitors: ['IBM WatsonGoogle DeepMindMicrosoft Azure'],
     marketSize: '$50B biotech computing market',
@@ -136,8 +134,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     period: '/month',
     description: 'Comprehensive space technology platform for managing satellite operations, space missions, and orbital infrastructure. Enables private companies to launch and manage space assets.',
     features: [
-      'Satellite mission planningOrbital trajectory optimizationSpace debris monitoringSatellite health management',
-      'Launch vehicle integrationSpace weather forecastingMission control dashboardSpace asset tracking'
+      'Satellite mission planningOrbital trajectory optimizationSpace debris monitoringSatellite health managementLaunch vehicle integrationSpace weather forecastingMission control dashboardSpace asset tracking'
     ],
     popular: true,
     icon: '🚀',
@@ -150,9 +147,9 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     setupTime: '12 hours',
     category: 'Space Technology & Satellite Operations',
     realService: true,
-    technology: ['Space TechnologySatellite OperationsOrbital MechanicsPython', 'AWS Ground StationSpace APIs'],
+    technology: ['Space TechnologySatellite OperationsOrbital MechanicsPythonAWS Ground StationSpace APIs'],
     integrations: ['SpaceX APIsNASA systemsSatellite networksGround stations'],
-    useCases: ['Satellite deploymentSpace mission managementOrbital infrastructureSpace research', 'Commercial space operations'],
+    useCases: ['Satellite deploymentSpace mission managementOrbital infrastructureSpace researchCommercial space operations'],
     roi: 'Space companies see 10000%+ ROI through cost-effective space operations and satellite management.',
     competitors: ['Lockheed MartinBoeingNorthrop Grumman'],
     marketSize: '$400B space economy',
@@ -180,8 +177,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     period: '/month',
     description: 'Revolutionary quantum internet platform that provides unhackable communication, instant global connectivity, and quantum-secured data transmission. The future of secure internet.',
     features: [
-      'Quantum encryptionInstant global communicationUnhackable data transmissionQuantum key distribution',
-      'Quantum networkingSecure quantum cloudQuantum VPN servicesQuantum messaging platform'
+      'Quantum encryptionInstant global communicationUnhackable data transmissionQuantum key distributionQuantum networkingSecure quantum cloudQuantum VPN servicesQuantum messaging platform'
     ],
     popular: true,
     icon: '🌐',
@@ -194,9 +190,9 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     setupTime: '6 hours',
     category: 'Quantum Internet & Communication',
     realService: true,
-    technology: ['Quantum ComputingQuantum CryptographyQuantum NetworksPython', 'QiskitQuantum APIs'],
+    technology: ['Quantum ComputingQuantum CryptographyQuantum NetworksPythonQiskitQuantum APIs'],
     integrations: ['Financial systemsGovernment networksHealthcare platformsDefense systems'],
-    useCases: ['Secure bankingGovernment communicationsHealthcare dataMilitary communications', 'Secure cloud storage'],
+    useCases: ['Secure bankingGovernment communicationsHealthcare dataMilitary communicationsSecure cloud storage'],
     roi: 'Financial institutions see 2000%+ ROI through unhackable communications and quantum security.',
     competitors: ['None - First to market'],
     marketSize: '$100B quantum internet market',
@@ -224,8 +220,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     period: '/month',
     description: 'Revolutionary healthcare AI platform that provides accurate diagnosis, treatment optimization, and personalized medicine. Combines AI, genomics, and medical expertise for breakthrough healthcare.',
     features: [
-      '99.9% diagnosis accuracyPersonalized treatment plansGenomic medicine integrationDrug interaction analysis',
-      'Predictive health monitoringMedical image analysisPatient outcome predictionHealthcare workflow automation'
+      '99.9% diagnosis accuracyPersonalized treatment plansGenomic medicine integrationDrug interaction analysisPredictive health monitoringMedical image analysisPatient outcome predictionHealthcare workflow automation'
     ],
     popular: true,
     icon: '🏥',
@@ -238,9 +233,9 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     setupTime: '10 hours',
     category: 'Healthcare AI & Medical Technology',
     realService: true,
-    technology: ['AI/MLGenomicsMedical ImagingPython', 'TensorFlowHealthcare APIs'],
+    technology: ['AI/MLGenomicsMedical ImagingPythonTensorFlowHealthcare APIs'],
     integrations: ['Electronic Health RecordsMedical devicesPharmaceutical databasesResearch platforms'],
-    useCases: ['Disease diagnosisTreatment optimizationDrug discoveryPatient monitoring', 'Medical research'],
+    useCases: ['Disease diagnosisTreatment optimizationDrug discoveryPatient monitoringMedical research'],
     roi: 'Healthcare providers see 3000%+ ROI through improved patient outcomes and reduced costs.',
     competitors: ['IBM Watson HealthGoogle HealthMicrosoft Healthcare'],
     marketSize: '$500B healthcare AI market',
@@ -268,8 +263,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     period: '/month',
     description: 'Revolutionary financial technology platform that combines AI, blockchain, and quantum computing for next-generation banking, trading, and financial services.',
     features: [
-      'AI-powered trading algorithmsQuantum risk managementBlockchain bankingPredictive financial analytics',
-      'Real-time fraud detectionAutomated portfolio managementCryptocurrency integrationRegulatory compliance automation'
+      'AI-powered trading algorithmsQuantum risk managementBlockchain bankingPredictive financial analyticsReal-time fraud detectionAutomated portfolio managementCryptocurrency integrationRegulatory compliance automation'
     ],
     popular: true,
     icon: '🏦',
@@ -282,9 +276,9 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     setupTime: '8 hours',
     category: 'Financial Technology & Banking',
     realService: true,
-    technology: ['AI/MLBlockchainQuantum ComputingPython', 'Financial APIsCloud Computing'],
+    technology: ['AI/MLBlockchainQuantum ComputingPythonFinancial APIsCloud Computing'],
     integrations: ['Banking systemsTrading platformsPayment processorsRegulatory systems'],
-    useCases: ['Algorithmic tradingRisk managementDigital bankingFraud detection', 'Portfolio optimization'],
+    useCases: ['Algorithmic tradingRisk managementDigital bankingFraud detectionPortfolio optimization'],
     roi: 'Financial institutions see 4000%+ ROI through improved trading performance and risk management.',
     competitors: ['Goldman SachsJP MorganMorgan Stanley'],
     marketSize: '$300B fintech market',
@@ -312,8 +306,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     period: '/month',
     description: 'Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4.0 and 5.0 automation.',
     features: [
-      'Predictive maintenanceZero downtime manufacturingReal-time monitoringSmart automation',
-      'Quality control AISupply chain optimizationEnergy efficiency managementSafety monitoring systems'
+      'Predictive maintenanceZero downtime manufacturingReal-time monitoringSmart automationQuality control AISupply chain optimizationEnergy efficiency managementSafety monitoring systems'
     ],
     popular: true,
     icon: '🏭',
@@ -326,9 +319,9 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     setupTime: '6 hours',
     category: 'Industrial IoT & Smart Manufacturing',
     realService: true,
-    technology: ['IoTAI/MLEdge ComputingPython', 'Industrial APIsCloud Computing'],
+    technology: ['IoTAI/MLEdge ComputingPythonIndustrial APIsCloud Computing'],
     integrations: ['Manufacturing systemsSCADA systemsERP platformsSupply chain systems'],
-    useCases: ['Smart manufacturingPredictive maintenanceQuality controlSupply chain optimization', 'Energy management'],
+    useCases: ['Smart manufacturingPredictive maintenanceQuality controlSupply chain optimizationEnergy management'],
     roi: 'Manufacturing companies see 2000%+ ROI through reduced downtime and improved efficiency.',
     competitors: ['SiemensGE DigitalRockwell Automation'],
     marketSize: '$200B industrial IoT market',
@@ -356,8 +349,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     period: '/month',
     description: 'Revolutionary education technology platform that uses AI to provide personalized learning experiences, adaptive curriculum, and 10x faster knowledge acquisition.',
     features: [
-      'AI-powered personalized learningAdaptive curriculum10x faster knowledge acquisitionVirtual reality classrooms',
-      'AI tutors and mentorsProgress trackingCollaborative learningSkill assessment AI'
+      'AI-powered personalized learningAdaptive curriculum10x faster knowledge acquisitionVirtual reality classroomsAI tutors and mentorsProgress trackingCollaborative learningSkill assessment AI'
     ],
     popular: true,
     icon: '🎓',
@@ -370,9 +362,9 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     setupTime: '4 hours',
     category: 'Education Technology & Learning',
     realService: true,
-    technology: ['AI/MLVirtual RealityAdaptive LearningPython', 'Educational APIsCloud Computing'],
+    technology: ['AI/MLVirtual RealityAdaptive LearningPythonEducational APIsCloud Computing'],
     integrations: ['Learning Management SystemsStudent Information SystemsAssessment platformsContent management'],
-    useCases: ['Personalized learningCorporate trainingOnline educationSkill development', 'Academic research'],
+    useCases: ['Personalized learningCorporate trainingOnline educationSkill developmentAcademic research'],
     roi: 'Educational institutions see 1500%+ ROI through improved learning outcomes and reduced costs.',
     competitors: ['CourseraUdemyedX'],
     marketSize: '$150B edtech market',
@@ -400,8 +392,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     period: '/month',
     description: 'Revolutionary sustainability technology platform that uses AI to optimize renewable energy, reduce carbon emissions, and create sustainable business solutions.',
     features: [
-      'Carbon footprint trackingRenewable energy optimizationSustainable supply chainEnvironmental monitoring',
-      'Green building managementWaste reduction AISustainability reportingClimate impact analysis'
+      'Carbon footprint trackingRenewable energy optimizationSustainable supply chainEnvironmental monitoringGreen building managementWaste reduction AISustainability reportingClimate impact analysis'
     ],
     popular: true,
     icon: '🌱',
@@ -414,9 +405,9 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     setupTime: '6 hours',
     category: 'Sustainability & Green Technology',
     realService: true,
-    technology: ['AI/MLIoTRenewable EnergyPython', 'Environmental APIsCloud Computing'],
+    technology: ['AI/MLIoTRenewable EnergyPythonEnvironmental APIsCloud Computing'],
     integrations: ['Energy management systemsEnvironmental monitoringSupply chain platformsReporting systems'],
-    useCases: ['Carbon neutralityRenewable energySustainable businessEnvironmental compliance', 'Green building'],
+    useCases: ['Carbon neutralityRenewable energySustainable businessEnvironmental complianceGreen building'],
     roi: 'Corporations see 2500%+ ROI through sustainability improvements and regulatory compliance.',
     competitors: ['None - First comprehensive platform'],
     marketSize: '$100B sustainability tech market',
@@ -444,8 +435,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     period: '/month',
     description: 'Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99.9% delivery accuracy. Complete supply chain visibility and automation.',
     features: [
-      '99.9% delivery accuracyZero waste supply chainReal-time trackingPredictive logistics',
-      'Automated routingInventory optimizationDemand forecastingSupplier management'
+      '99.9% delivery accuracyZero waste supply chainReal-time trackingPredictive logisticsAutomated routingInventory optimizationDemand forecastingSupplier management'
     ],
     popular: true,
     icon: '🚛',
@@ -458,9 +448,9 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     setupTime: '8 hours',
     category: 'Logistics & Supply Chain',
     realService: true,
-    technology: ['AI/MLIoTBlockchainPython', 'Logistics APIsCloud Computing'],
+    technology: ['AI/MLIoTBlockchainPythonLogistics APIsCloud Computing'],
     integrations: ['ERP systemsWarehouse managementTransportation systemsE-commerce platforms'],
-    useCases: ['Supply chain optimizationLast-mile deliveryInventory managementDemand forecasting', 'Supplier collaboration'],
+    useCases: ['Supply chain optimizationLast-mile deliveryInventory managementDemand forecastingSupplier collaboration'],
     roi: 'Logistics companies see 3000%+ ROI through waste reduction and improved efficiency.',
     competitors: ['FedExUPSDHL'],
     marketSize: '$250B logistics tech market',
