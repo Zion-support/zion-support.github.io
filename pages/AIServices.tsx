@@ -578,17 +578,399 @@ export default function AIServices() {
       ],
       marketPrice: "$800-1200/month",
       savings: "Save up to $700/month"
+    },
+    {
+      name: "AI-Powered Quantum Computing Platform",
+      description: "Revolutionary quantum-enhanced AI platform for solving complex optimization problems and advanced machine learning tasks.",
+      price: "$2,999/month",
+      features: [
+        "Quantum machine learning algorithms",
+        "Hybrid classical-quantum processing",
+        "Complex optimization solutions",
+        "Quantum neural networks",
+        "Advanced cryptography",
+        "Quantum simulation capabilities",
+        "Real-time quantum processing",
+        "Custom quantum algorithms"
+      ],
+      benefits: [
+        "Solve problems impossible for classical computers",
+        "Exponential speedup for specific algorithms",
+        "Future-proof technology advantage",
+        "Breakthrough optimization capabilities"
+      ],
+      marketPrice: "$5000-10000/month",
+      savings: "Save up to $7000/month"
+    },
+    {
+      name: "AI-Powered Autonomous Vehicle Systems",
+      description: "Complete autonomous vehicle AI platform with computer vision, sensor fusion, and decision-making capabilities.",
+      price: "$1,999/month",
+      features: [
+        "Computer vision processing",
+        "Sensor fusion algorithms",
+        "Path planning and navigation",
+        "Obstacle detection and avoidance",
+        "Traffic sign recognition",
+        "Lane keeping assistance",
+        "Emergency braking systems",
+        "Real-time decision making"
+      ],
+      benefits: [
+        "Reduce accidents by 90%",
+        "Improve traffic flow efficiency",
+        "Lower transportation costs",
+        "Enable new mobility services"
+      ],
+      marketPrice: "$3000-6000/month",
+      savings: "Save up to $4000/month"
+    },
+    {
+      name: "AI-Powered Drug Discovery Platform",
+      description: "Advanced AI platform for pharmaceutical research, drug discovery, and molecular design with quantum computing integration.",
+      price: "$4,999/month",
+      features: [
+        "Molecular property prediction",
+        "Drug-target interaction modeling",
+        "Chemical synthesis planning",
+        "Toxicity prediction",
+        "Clinical trial optimization",
+        "Biomarker discovery",
+        "Personalized medicine design",
+        "Regulatory compliance tools"
+      ],
+      benefits: [
+        "Reduce drug discovery time by 70%",
+        "Lower development costs by 50%",
+        "Improve success rates",
+        "Enable personalized treatments"
+      ],
+      marketPrice: "$8000-15000/month",
+      savings: "Save up to $10000/month"
+    },
+    {
+      name: "AI-Powered Climate Change Solutions",
+      description: "Comprehensive AI platform for climate modeling, carbon tracking, and environmental impact optimization.",
+      price: "$799/month",
+      features: [
+        "Climate modeling and prediction",
+        "Carbon footprint tracking",
+        "Renewable energy optimization",
+        "Environmental impact assessment",
+        "Sustainability planning",
+        "Emission reduction strategies",
+        "Green technology recommendations",
+        "Compliance monitoring"
+      ],
+      benefits: [
+        "Reduce carbon footprint by 40%",
+        "Optimize energy consumption",
+        "Meet sustainability goals",
+        "Ensure regulatory compliance"
+      ],
+      marketPrice: "$1200-2500/month",
+      savings: "Save up to $1700/month"
+    },
+    {
+      name: "AI-Powered Space Technology Platform",
+      description: "Advanced AI solutions for space exploration, satellite management, and space-based applications.",
+      price: "$2,499/month",
+      features: [
+        "Satellite orbit optimization",
+        "Space debris tracking",
+        "Mission planning and execution",
+        "Space weather prediction",
+        "Autonomous spacecraft control",
+        "Resource utilization optimization",
+        "Communication network management",
+        "Scientific data analysis"
+      ],
+      benefits: [
+        "Improve mission success rates",
+        "Reduce operational costs",
+        "Enhance space safety",
+        "Enable new space applications"
+      ],
+      marketPrice: "$4000-8000/month",
+      savings: "Save up to $5500/month"
+    },
+    {
+      name: "AI-Powered Mental Health Assistant",
+      description: "Comprehensive AI platform for mental health support, therapy assistance, and wellness monitoring.",
+      price: "$299/month",
+      features: [
+        "Mood tracking and analysis",
+        "Therapeutic conversation AI",
+        "Crisis intervention support",
+        "Wellness recommendations",
+        "Progress monitoring",
+        "Privacy-preserving analytics",
+        "Integration with healthcare systems",
+        "24/7 mental health support"
+      ],
+      benefits: [
+        "Improve mental health outcomes",
+        "Provide accessible support",
+        "Reduce healthcare costs",
+        "Enable early intervention"
+      ],
+      marketPrice: "$500-1000/month",
+      savings: "Save up to $700/month"
+    },
+    {
+      name: "AI-Powered Agricultural Intelligence",
+      description: "Smart farming AI platform with crop monitoring, yield prediction, and automated agricultural management.",
+      price: "$599/month",
+      features: [
+        "Crop health monitoring",
+        "Yield prediction algorithms",
+        "Pest and disease detection",
+        "Irrigation optimization",
+        "Soil analysis and recommendations",
+        "Weather-based planning",
+        "Automated equipment control",
+        "Supply chain optimization"
+      ],
+      benefits: [
+        "Increase crop yields by 30%",
+        "Reduce water usage by 25%",
+        "Minimize pesticide use",
+        "Optimize farming operations"
+      ],
+      marketPrice: "$1000-2000/month",
+      savings: "Save up to $1400/month"
+    },
+    {
+      name: "AI-Powered Financial Risk Management",
+      description: "Advanced AI platform for financial risk assessment, fraud detection, and investment optimization.",
+      price: "$1,499/month",
+      features: [
+        "Real-time risk assessment",
+        "Fraud detection algorithms",
+        "Market prediction models",
+        "Portfolio optimization",
+        "Credit scoring enhancement",
+        "Regulatory compliance monitoring",
+        "Stress testing scenarios",
+        "Automated risk reporting"
+      ],
+      benefits: [
+        "Reduce financial losses by 60%",
+        "Improve investment returns",
+        "Enhance regulatory compliance",
+        "Automate risk management"
+      ],
+      marketPrice: "$2500-5000/month",
+      savings: "Save up to $3500/month"
+    },
+    {
+      name: "AI-Powered Smart City Platform",
+      description: "Comprehensive AI platform for smart city management, urban planning, and citizen services optimization.",
+      price: "$3,999/month",
+      features: [
+        "Traffic flow optimization",
+        "Energy grid management",
+        "Waste management optimization",
+        "Public safety monitoring",
+        "Citizen service automation",
+        "Urban planning insights",
+        "Environmental monitoring",
+        "Emergency response coordination"
+      ],
+      benefits: [
+        "Improve city efficiency by 40%",
+        "Reduce operational costs",
+        "Enhance citizen satisfaction",
+        "Enable sustainable urban development"
+      ],
+      marketPrice: "$6000-12000/month",
+      savings: "Save up to $8000/month"
+    },
+    {
+      name: "AI-Powered Cybersecurity Intelligence",
+      description: "Advanced AI platform for threat detection, security analysis, and automated incident response.",
+      price: "$1,999/month",
+      features: [
+        "Real-time threat detection",
+        "Behavioral analysis",
+        "Automated incident response",
+        "Vulnerability assessment",
+        "Security orchestration",
+        "Threat intelligence integration",
+        "Compliance monitoring",
+        "Security training simulation"
+      ],
+      benefits: [
+        "Reduce security incidents by 80%",
+        "Improve response time by 90%",
+        "Lower security costs",
+        "Enhance compliance posture"
+      ],
+      marketPrice: "$3000-6000/month",
+      savings: "Save up to $4000/month"
+    },
+    {
+      name: "AI-Powered Educational Personalization",
+      description: "Intelligent education platform that personalizes learning experiences and optimizes educational outcomes.",
+      price: "$399/month",
+      features: [
+        "Personalized learning paths",
+        "Adaptive content delivery",
+        "Learning style analysis",
+        "Progress tracking and analytics",
+        "Automated assessment",
+        "Tutoring assistance",
+        "Skill gap identification",
+        "Career guidance recommendations"
+      ],
+      benefits: [
+        "Improve learning outcomes by 50%",
+        "Personalize education at scale",
+        "Reduce dropout rates",
+        "Optimize educational resources"
+      ],
+      marketPrice: "$700-1500/month",
+      savings: "Save up to $1100/month"
+    },
+    {
+      name: "AI-Powered Manufacturing Intelligence",
+      description: "Smart manufacturing AI platform with predictive maintenance, quality control, and production optimization.",
+      price: "$1,299/month",
+      features: [
+        "Predictive maintenance algorithms",
+        "Quality control automation",
+        "Production line optimization",
+        "Supply chain coordination",
+        "Energy efficiency monitoring",
+        "Safety incident prevention",
+        "Inventory optimization",
+        "Performance analytics"
+      ],
+      benefits: [
+        "Reduce downtime by 70%",
+        "Improve product quality by 40%",
+        "Lower manufacturing costs",
+        "Increase production efficiency"
+      ],
+      marketPrice: "$2000-4000/month",
+      savings: "Save up to $2700/month"
+    },
+    {
+      name: "AI-Powered Legal Research Assistant",
+      description: "Advanced AI platform for legal research, case analysis, and document automation with natural language processing.",
+      price: "$799/month",
+      features: [
+        "Legal document analysis",
+        "Case law research",
+        "Contract review automation",
+        "Legal precedent identification",
+        "Compliance checking",
+        "Document generation",
+        "Legal writing assistance",
+        "Court filing automation"
+      ],
+      benefits: [
+        "Reduce research time by 80%",
+        "Improve case preparation accuracy",
+        "Lower legal costs",
+        "Enhance client service"
+      ],
+      marketPrice: "$1200-2500/month",
+      savings: "Save up to $1700/month"
+    },
+    {
+      name: "AI-Powered Healthcare Diagnostics",
+      description: "Advanced AI platform for medical diagnosis, imaging analysis, and treatment recommendation with FDA compliance.",
+      price: "$2,999/month",
+      features: [
+        "Medical image analysis",
+        "Symptom assessment and diagnosis",
+        "Treatment recommendation",
+        "Drug interaction checking",
+        "Patient monitoring",
+        "Clinical decision support",
+        "Electronic health record integration",
+        "Regulatory compliance tools"
+      ],
+      benefits: [
+        "Improve diagnostic accuracy by 30%",
+        "Reduce misdiagnosis rates",
+        "Lower healthcare costs",
+        "Enable personalized medicine"
+      ],
+      marketPrice: "$5000-10000/month",
+      savings: "Save up to $7000/month"
+    },
+    {
+      name: "AI-Powered Energy Grid Optimization",
+      description: "Smart energy management AI platform for grid optimization, renewable energy integration, and demand forecasting.",
+      price: "$1,799/month",
+      features: [
+        "Grid load balancing",
+        "Renewable energy forecasting",
+        "Demand response optimization",
+        "Energy storage management",
+        "Fault detection and prevention",
+        "Power quality monitoring",
+        "Market price optimization",
+        "Carbon footprint tracking"
+      ],
+      benefits: [
+        "Reduce energy costs by 25%",
+        "Improve grid stability",
+        "Increase renewable energy usage",
+        "Optimize energy distribution"
+      ],
+      marketPrice: "$3000-6000/month",
+      savings: "Save up to $4200/month"
+    },
+    {
+      name: "AI-Powered Retail Intelligence",
+      description: "Comprehensive AI platform for retail optimization, customer behavior analysis, and inventory management.",
+      price: "$999/month",
+      features: [
+        "Customer behavior analysis",
+        "Inventory optimization",
+        "Price optimization",
+        "Demand forecasting",
+        "Personalized recommendations",
+        "Store layout optimization",
+        "Supply chain coordination",
+        "Sales performance analytics"
+      ],
+      benefits: [
+        "Increase sales by 35%",
+        "Reduce inventory costs by 30%",
+        "Improve customer satisfaction",
+        "Optimize retail operations"
+      ],
+      marketPrice: "$1500-3000/month",
+      savings: "Save up to $2000/month"
+    },
+    {
+      name: "AI-Powered Real Estate Intelligence",
+      description: "Advanced AI platform for property valuation, market analysis, and real estate investment optimization.",
+      price: "$699/month",
+      features: [
+        "Property valuation algorithms",
+        "Market trend analysis",
+        "Investment opportunity identification",
+        "Risk assessment",
+        "Rental yield optimization",
+        "Property management automation",
+        "Market forecasting",
+        "Investment portfolio analysis"
+      ],
+      benefits: [
+        "Improve investment returns by 40%",
+        "Reduce investment risks",
+        "Optimize property portfolios",
+        "Enhance market insights"
+      ],
+      marketPrice: "$1200-2500/month",
+      savings: "Save up to $1800/month"
     }
   ];
-
-import { Star } from 'lucide-react';
-import Head from 'next/head';
-import Link from 'next/link';
-
-import Layout from '../components/Layout';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
 import { 
   Brain, 
   Bot, 

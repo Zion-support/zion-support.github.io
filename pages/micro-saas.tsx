@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Cloud, Zap, Shield, Users, BarChart3, CheckCircle, ArrowRight, Clock, Star, DollarSign, Award, Globe, Lock, Cpu, Bot, FileText, Video, Mic, Code, Settings, Monitor, Smartphone, Server, Network, Car, Rocket, Heart, Building, Sprout, Mail, MessageSquare, Search, Eye, Target, TrendingUp, Package, Calendar, BookOpen, ShoppingCart, Home, Trash2, Camera, HardDrive } from 'lucide-react';
+import { Cloud, Zap, Shield, Users, BarChart3, CheckCircle, ArrowRight, Clock, Star, DollarSign, Award, Globe, Lock, Cpu, Bot, FileText, Video, Mic, Code, Settings, Monitor, Smartphone, Server, Network, Car, Rocket, Heart, Building, Sprout, Mail, MessageSquare, Search, Eye, Target, TrendingUp, Package, Calendar, BookOpen, ShoppingCart, Home, Trash2, Camera, HardDrive, UserCheck } from 'lucide-react';
 
 import { motion } from 'framer-motion';
 import {
@@ -888,6 +888,209 @@ const microSaasProducts = [
     category: 'RPA',
     popular: true,
     link: 'https://rpaplatform.ziontechgroup.com'
+  },
+  {
+    title: 'AI-Powered Code Review Assistant',
+    description: 'Automated code review with security analysis, performance optimization, and best practice recommendations.',
+    icon: Code,
+    features: ['Security Analysis', 'Performance Optimization', 'Code Quality Metrics', 'Best Practice Suggestions'],
+    pricing: '$79 - $399/month',
+    category: 'Development Tools',
+    popular: true,
+    benefits: ['Faster Code Reviews', 'Better Code Quality', 'Security Compliance', 'Team Productivity'],
+    marketPrice: '$120 - $600/month',
+    link: 'https://ziontechgroup.com/ai-code-review'
+  },
+  {
+    title: 'Smart Contract Security Scanner',
+    description: 'Automated smart contract vulnerability detection and security analysis for blockchain projects.',
+    icon: Shield,
+    features: ['Vulnerability Detection', 'Gas Optimization', 'Compliance Checking', 'Audit Reports'],
+    pricing: '$199 - $999/month',
+    category: 'Blockchain Security',
+    popular: true,
+    benefits: ['Enhanced Security', 'Cost Savings', 'Compliance Assurance', 'Risk Mitigation'],
+    marketPrice: '$300 - $1500/month',
+    link: 'https://ziontechgroup.com/smart-contract-scanner'
+  },
+  {
+    title: 'AI-Powered API Testing Suite',
+    description: 'Comprehensive API testing with automated test generation, performance monitoring, and security scanning.',
+    icon: Network,
+    features: ['Auto Test Generation', 'Performance Testing', 'Security Scanning', 'Load Testing'],
+    pricing: '$99 - $599/month',
+    category: 'API Testing',
+    benefits: ['Faster Testing', 'Better Coverage', 'Reduced Bugs', 'Improved Performance'],
+    marketPrice: '$150 - $900/month',
+    link: 'https://ziontechgroup.com/api-testing-suite'
+  },
+  {
+    title: 'Quantum-Ready Encryption Manager',
+    description: 'Future-proof encryption solutions preparing for quantum computing threats with post-quantum cryptography.',
+    icon: Lock,
+    features: ['Post-Quantum Algorithms', 'Hybrid Encryption', 'Key Management', 'Migration Tools'],
+    pricing: '$299 - $1,999/month',
+    category: 'Cybersecurity',
+    popular: true,
+    benefits: ['Future-Proof Security', 'Quantum Resistance', 'Compliance Ready', 'Easy Migration'],
+    marketPrice: '$500 - $3000/month',
+    link: 'https://ziontechgroup.com/quantum-encryption'
+  },
+  {
+    title: 'AI-Powered Data Privacy Manager',
+    description: 'Automated data privacy compliance with GDPR, CCPA, and other regulations using AI classification.',
+    icon: Eye,
+    features: ['Data Classification', 'Privacy Impact Assessment', 'Consent Management', 'Compliance Reporting'],
+    pricing: '$149 - $799/month',
+    category: 'Data Privacy',
+    benefits: ['Regulatory Compliance', 'Risk Reduction', 'Automated Processes', 'Cost Savings'],
+    marketPrice: '$250 - $1200/month',
+    link: 'https://ziontechgroup.com/data-privacy-manager'
+  },
+  {
+    title: 'Edge AI Inference Platform',
+    description: 'Deploy and manage AI models at the edge with real-time inference and minimal latency.',
+    icon: Cpu,
+    features: ['Edge Deployment', 'Real-time Inference', 'Model Optimization', 'Device Management'],
+    pricing: '$199 - $1,299/month',
+    category: 'Edge Computing',
+    benefits: ['Low Latency', 'Reduced Bandwidth', 'Offline Capability', 'Cost Efficiency'],
+    marketPrice: '$350 - $2000/month',
+    link: 'https://ziontechgroup.com/edge-ai-platform'
+  },
+  {
+    title: 'AI-Powered Document Intelligence',
+    description: 'Extract, analyze, and process information from documents using advanced OCR and NLP technologies.',
+    icon: FileText,
+    features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Automated Workflows'],
+    pricing: '$59 - $399/month',
+    category: 'Document Processing',
+    benefits: ['Automated Processing', 'Improved Accuracy', 'Time Savings', 'Better Organization'],
+    marketPrice: '$100 - $600/month',
+    link: 'https://ziontechgroup.com/document-intelligence'
+  },
+  {
+    title: 'Smart Energy Management System',
+    description: 'AI-powered energy optimization for buildings and facilities with predictive maintenance.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Predictive Maintenance', 'Cost Optimization', 'Sustainability Tracking'],
+    pricing: '$199 - $999/month',
+    category: 'Energy Management',
+    benefits: ['Cost Reduction', 'Energy Efficiency', 'Sustainability', 'Predictive Insights'],
+    marketPrice: '$350 - $1500/month',
+    link: 'https://ziontechgroup.com/energy-management'
+  },
+  {
+    title: 'AI-Powered Fraud Detection Engine',
+    description: 'Real-time fraud detection and prevention using machine learning and behavioral analysis.',
+    icon: Shield,
+    features: ['Real-time Detection', 'Behavioral Analysis', 'Risk Scoring', 'Automated Response'],
+    pricing: '$299 - $1,499/month',
+    category: 'Fraud Prevention',
+    popular: true,
+    benefits: ['Fraud Prevention', 'Cost Savings', 'Real-time Protection', 'Reduced False Positives'],
+    marketPrice: '$500 - $2500/month',
+    link: 'https://ziontechgroup.com/fraud-detection'
+  },
+  {
+    title: 'Voice AI Assistant Platform',
+    description: 'Build and deploy custom voice assistants with natural language understanding and multi-language support.',
+    icon: Mic,
+    features: ['Voice Recognition', 'NLP Processing', 'Multi-language Support', 'Custom Commands'],
+    pricing: '$79 - $499/month',
+    category: 'Voice AI',
+    benefits: ['Hands-free Operation', 'Better Accessibility', 'Improved Efficiency', 'Custom Solutions'],
+    marketPrice: '$150 - $800/month',
+    link: 'https://ziontechgroup.com/voice-ai-platform'
+  },
+  {
+    title: 'AI-Powered Supply Chain Optimizer',
+    description: 'Optimize supply chain operations with demand forecasting, inventory management, and logistics planning.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Risk Assessment'],
+    pricing: '$399 - $1,999/month',
+    category: 'Supply Chain',
+    benefits: ['Cost Reduction', 'Improved Efficiency', 'Risk Mitigation', 'Better Planning'],
+    marketPrice: '$600 - $3000/month',
+    link: 'https://ziontechgroup.com/supply-chain-optimizer'
+  },
+  {
+    title: 'Smart Contract Development Suite',
+    description: 'Complete development environment for smart contracts with testing, deployment, and monitoring tools.',
+    icon: Code,
+    features: ['Development IDE', 'Testing Framework', 'Deployment Tools', 'Monitoring Dashboard'],
+    pricing: '$149 - $799/month',
+    category: 'Blockchain Development',
+    benefits: ['Faster Development', 'Better Testing', 'Easy Deployment', 'Comprehensive Monitoring'],
+    marketPrice: '$250 - $1200/month',
+    link: 'https://ziontechgroup.com/smart-contract-suite'
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Automated content moderation using AI to detect inappropriate content across text, images, and videos.',
+    icon: Eye,
+    features: ['Multi-modal Detection', 'Real-time Processing', 'Custom Rules', 'Human Review Queue'],
+    pricing: '$99 - $599/month',
+    category: 'Content Moderation',
+    benefits: ['Automated Moderation', 'Consistent Standards', 'Cost Reduction', 'Scalable Solution'],
+    marketPrice: '$200 - $1000/month',
+    link: 'https://ziontechgroup.com/content-moderation'
+  },
+  {
+    title: 'Quantum Machine Learning Platform',
+    description: 'Quantum-enhanced machine learning platform for solving complex optimization and classification problems.',
+    icon: Brain,
+    features: ['Quantum Algorithms', 'Hybrid Classical-Quantum', 'Optimization Problems', 'Performance Analytics'],
+    pricing: '$999 - $4,999/month',
+    category: 'Quantum ML',
+    popular: true,
+    benefits: ['Quantum Advantage', 'Complex Problem Solving', 'Future-Ready Technology', 'Competitive Edge'],
+    marketPrice: '$2000 - $8000/month',
+    link: 'https://ziontechgroup.com/quantum-ml-platform'
+  },
+  {
+    title: 'AI-Powered Personalization Engine',
+    description: 'Real-time personalization platform that adapts content, recommendations, and experiences for each user.',
+    icon: Target,
+    features: ['Real-time Personalization', 'A/B Testing', 'Recommendation Engine', 'Behavioral Analysis'],
+    pricing: '$199 - $999/month',
+    category: 'Personalization',
+    benefits: ['Higher Engagement', 'Better Conversions', 'Improved UX', 'Data-Driven Insights'],
+    marketPrice: '$350 - $1500/month',
+    link: 'https://ziontechgroup.com/personalization-engine'
+  },
+  {
+    title: 'Smart Contract Analytics Dashboard',
+    description: 'Comprehensive analytics and monitoring for smart contracts with performance metrics and user insights.',
+    icon: BarChart3,
+    features: ['Performance Metrics', 'User Analytics', 'Cost Analysis', 'Security Monitoring'],
+    pricing: '$79 - $399/month',
+    category: 'Blockchain Analytics',
+    benefits: ['Better Insights', 'Performance Optimization', 'Cost Tracking', 'Security Monitoring'],
+    marketPrice: '$150 - $600/month',
+    link: 'https://ziontechgroup.com/smart-contract-analytics'
+  },
+  {
+    title: 'AI-Powered Translation Platform',
+    description: 'Advanced translation platform with context-aware translations and real-time language processing.',
+    icon: Globe,
+    features: ['100+ Languages', 'Context Awareness', 'Real-time Translation', 'Custom Models'],
+    pricing: '$49 - $299/month',
+    category: 'Translation',
+    benefits: ['Global Reach', 'Accurate Translations', 'Real-time Processing', 'Custom Solutions'],
+    marketPrice: '$100 - $500/month',
+    link: 'https://ziontechgroup.com/ai-translation-platform'
+  },
+  {
+    title: 'Digital Identity Verification System',
+    description: 'Secure digital identity verification using biometrics, document analysis, and blockchain technology.',
+    icon: UserCheck,
+    features: ['Biometric Verification', 'Document Analysis', 'Blockchain Storage', 'Compliance Tools'],
+    pricing: '$199 - $999/month',
+    category: 'Identity Verification',
+    benefits: ['Enhanced Security', 'Fraud Prevention', 'Compliance Ready', 'User Convenience'],
+    marketPrice: '$350 - $1500/month',
+    link: 'https://ziontechgroup.com/digital-identity-verification'
   }
 ];
 
