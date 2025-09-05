@@ -2640,7 +2640,19 @@ const categories = [
   'Green IT',
   'Governance',
   'Architecture',
-  'Disaster Recovery'
+  'Disaster Recovery',
+  'Quantum Security',
+  '5G Networks',
+  'Blockchain Infrastructure',
+  'IoT Platforms',
+  'AI Infrastructure',
+  'Zero Trust Security',
+  'Analytics Platform',
+  'Network Security',
+  'IT Compliance',
+  'Performance Monitoring',
+  'Cloud Security',
+  'ITSM'
 ];
 
 const benefits = [
@@ -2830,6 +2842,191 @@ const benefits = [
     features: ['Governance Framework', 'Risk Management', 'Compliance Monitoring', 'Policy Development'],
     pricing: '$50,000 - $300,000/project',
     category: 'IT Governance'
+  },
+  {
+    title: 'AI-Powered IT Operations Center',
+    description: 'Intelligent IT operations with AI-driven monitoring, automation, and predictive maintenance.',
+    icon: Brain,
+    features: ['AI Monitoring', 'Predictive Maintenance', 'Automated Response', 'Performance Optimization'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'AI Operations',
+    popular: true,
+    link: 'https://ai-ops.ziontechgroup.com'
+  },
+  {
+    title: 'Quantum-Safe Cybersecurity Implementation',
+    description: 'Future-proof cybersecurity solutions resistant to quantum computing attacks.',
+    icon: Shield,
+    features: ['Quantum-Resistant Encryption', 'Post-Quantum Cryptography', 'Migration Planning', 'Compliance'],
+    pricing: '$100,000 - $500,000/project',
+    category: 'Quantum Security',
+    popular: true,
+    link: 'https://quantum-security.ziontechgroup.com'
+  },
+  {
+    title: 'Edge Computing Infrastructure',
+    description: 'Distributed edge computing solutions for real-time processing and low-latency applications.',
+    icon: Monitor,
+    features: ['Edge Hardware', 'Real-time Processing', 'Low Latency', 'IoT Integration'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Edge Computing',
+    link: 'https://edge-computing.ziontechgroup.com'
+  },
+  {
+    title: '5G Network Implementation & Optimization',
+    description: 'Complete 5G network infrastructure design, implementation, and performance optimization.',
+    icon: Wifi,
+    features: ['Network Planning', 'Infrastructure Setup', 'Performance Testing', 'Optimization'],
+    pricing: '$75,000 - $400,000/project',
+    category: '5G Networks',
+    link: 'https://5g-networks.ziontechgroup.com'
+  },
+  {
+    title: 'Blockchain Infrastructure & Integration',
+    description: 'Enterprise blockchain infrastructure setup and integration with existing systems.',
+    icon: Network,
+    features: ['Blockchain Setup', 'Smart Contract Development', 'Node Management', 'Security Hardening'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Blockchain Infrastructure',
+    popular: true,
+    link: 'https://blockchain-infra.ziontechgroup.com'
+  },
+  {
+    title: 'IoT Platform Development & Management',
+    description: 'Comprehensive IoT platform development with device management and data analytics.',
+    icon: Smartphone,
+    features: ['Device Management', 'Data Collection', 'Real-time Analytics', 'Security Implementation'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'IoT Platforms',
+    link: 'https://iot-platforms.ziontechgroup.com'
+  },
+  {
+    title: 'AI Infrastructure & ML Pipeline Setup',
+    description: 'Complete AI infrastructure including GPU clusters, ML pipelines, and model deployment.',
+    icon: Brain,
+    features: ['GPU Cluster Setup', 'ML Pipeline Development', 'Model Deployment', 'Performance Optimization'],
+    pricing: '$100,000 - $500,000/setup',
+    category: 'AI Infrastructure',
+    popular: true,
+    link: 'https://ai-infrastructure.ziontechgroup.com'
+  },
+  {
+    title: 'Green IT & Sustainability Solutions',
+    description: 'Sustainable IT infrastructure with energy-efficient systems and carbon footprint reduction.',
+    icon: Sprout,
+    features: ['Energy Optimization', 'Carbon Footprint Analysis', 'Sustainable Hardware', 'Green Data Centers'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Green IT',
+    link: 'https://green-it.ziontechgroup.com'
+  },
+  {
+    title: 'Zero Trust Security Architecture',
+    description: 'Implementation of zero trust security model for enhanced enterprise security.',
+    icon: Lock,
+    features: ['Identity Verification', 'Network Segmentation', 'Continuous Monitoring', 'Access Control'],
+    pricing: '$75,000 - $400,000/project',
+    category: 'Zero Trust Security',
+    popular: true,
+    link: 'https://zero-trust.ziontechgroup.com'
+  },
+  {
+    title: 'Hybrid Cloud Management Platform',
+    description: 'Seamless management of hybrid cloud environments across multiple providers.',
+    icon: Cloud,
+    features: ['Multi-cloud Management', 'Cost Optimization', 'Security Integration', 'Performance Monitoring'],
+    pricing: '$30,000 - $200,000/setup',
+    category: 'Hybrid Cloud',
+    link: 'https://hybrid-cloud.ziontechgroup.com'
+  },
+  {
+    title: 'Advanced Analytics & Business Intelligence',
+    description: 'Enterprise-grade analytics platform with real-time processing and machine learning capabilities.',
+    icon: BarChart3,
+    features: ['Real-time Analytics', 'Data Visualization', 'ML Integration', 'Custom Dashboards'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'Analytics Platform',
+    link: 'https://analytics-platform.ziontechgroup.com'
+  },
+  {
+    title: 'IT Disaster Recovery & Business Continuity',
+    description: 'Comprehensive disaster recovery planning and business continuity solutions.',
+    icon: Shield,
+    features: ['Disaster Recovery Planning', 'Business Continuity', 'Data Backup', 'Recovery Testing'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'Disaster Recovery',
+    link: 'https://disaster-recovery.ziontechgroup.com'
+  },
+  {
+    title: 'Advanced Network Security Implementation',
+    description: 'Next-generation network security with AI-powered threat detection and response.',
+    icon: Shield,
+    features: ['AI Threat Detection', 'Automated Response', 'Network Segmentation', 'Security Monitoring'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'Network Security',
+    link: 'https://network-security.ziontechgroup.com'
+  },
+  {
+    title: 'IT Compliance & Regulatory Services',
+    description: 'Comprehensive IT compliance management for various industry standards and regulations.',
+    icon: CheckCircle,
+    features: ['Compliance Assessment', 'Regulatory Reporting', 'Audit Support', 'Policy Development'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'IT Compliance',
+    link: 'https://it-compliance.ziontechgroup.com'
+  },
+  {
+    title: 'Digital Transformation Consulting',
+    description: 'Strategic digital transformation consulting to modernize business processes and technology.',
+    icon: TrendingUp,
+    features: ['Strategy Development', 'Technology Assessment', 'Change Management', 'Implementation Support'],
+    pricing: '$200 - $500/hour',
+    category: 'Digital Transformation',
+    link: 'https://digital-transformation.ziontechgroup.com'
+  },
+  {
+    title: 'IT Asset Management & Optimization',
+    description: 'Comprehensive IT asset lifecycle management with cost optimization and compliance tracking.',
+    icon: Monitor,
+    features: ['Asset Discovery', 'License Management', 'Lifecycle Tracking', 'Cost Optimization'],
+    pricing: '$15,000 - $100,000/setup',
+    category: 'Asset Management',
+    link: 'https://asset-management.ziontechgroup.com'
+  },
+  {
+    title: 'Advanced Backup & Data Protection',
+    description: 'Enterprise-grade backup solutions with automated recovery and data protection.',
+    icon: Shield,
+    features: ['Automated Backups', 'Disaster Recovery Testing', 'RTO/RPO Optimization', 'Compliance'],
+    pricing: '$20,000 - $150,000/setup',
+    category: 'Data Protection',
+    link: 'https://data-protection.ziontechgroup.com'
+  },
+  {
+    title: 'IT Performance Monitoring & Optimization',
+    description: 'Comprehensive IT performance monitoring with automated optimization and capacity planning.',
+    icon: BarChart3,
+    features: ['Performance Monitoring', 'Capacity Planning', 'Automated Optimization', 'Alert Management'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'Performance Monitoring',
+    link: 'https://performance-monitoring.ziontechgroup.com'
+  },
+  {
+    title: 'Cloud Security & Compliance Services',
+    description: 'Comprehensive cloud security implementation and compliance with industry standards.',
+    icon: Shield,
+    features: ['Security Hardening', 'Compliance Auditing', 'Access Management', 'Threat Protection'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'Cloud Security',
+    link: 'https://cloud-security.ziontechgroup.com'
+  },
+  {
+    title: 'IT Service Management (ITSM) Implementation',
+    description: 'Complete IT service management implementation with ITSM best practices and automation.',
+    icon: Settings,
+    features: ['ITSM Framework', 'Service Catalog', 'Incident Management', 'Change Management'],
+    pricing: '$40,000 - $250,000/project',
+    category: 'ITSM',
+    link: 'https://itsm.ziontechgroup.com'
   }
 ];
 const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
