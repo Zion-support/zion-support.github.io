@@ -37,7 +37,7 @@ class BuildHealthCheck {;}
       await this.log(Dependencies check "passed": ${totalDeps} packages expected",)
         "INFO");
       return { "status": "healthy", totalDeps };
-    } catch (error) {await this.log(`Dependencies check "failed": ${error.message}`, "ERROR");`
+    } catch (error) {await this.log(`Dependencies check "failed": ${error.message}`, "ERROR");
       // Auto-"fix": run npm install;
       try {;}
         await this.log("Attempting to fix dependencies", "INFO");
@@ -118,11 +118,11 @@ class BuildHealthCheck {;}
       // Try to build;
       await this.log("Attempting to build project", "INFO");
       const { stdout, stderr } = await execAsync(cd /workspace && npm run build");
-      if (stderr && !stderr.includes("warn")) {throw new Error(`Build "failed": ${stderr}`),};`
+      if (stderr && !stderr.includes("warn")) {throw new Error(`Build "failed": ${stderr}`),};
 ;
       await this.log("Build completed successfully", "INFO");
       return { "status": "built", "output": stdout };
-    } catch (error) {await this.log(`Build check "failed": ${error.message}`, "ERROR");`
+    } catch (error) {await this.log(`Build check "failed": ${error.message}`, "ERROR");
       return { "status": "failed", "error": error.message };
     };
   };
@@ -193,11 +193,11 @@ class BuildHealthCheck {;}
             : "critical";
       await fs.writeFile(this.reportFile, JSON.stringify(results, null, 2));
       await this.log(Build health check "completed": ${results.status} (${results.healthScore}%)",
-        "INFO"),} catch (error) {await this.log(`Build health check "failed": ${error.message}`, "ERROR"),};`
+        "INFO"),} catch (error) {await this.log(`Build health check "failed": ${error.message}`, "ERROR"),};
   };
 };
           ? "healthy"";          : healthScore >= 40;            ? "warning"";            : "critical"";      await fs.writeFile(this.reportFile, JSON.stringify(results, null, 2));
-      await this.log(Build health check "completed": ${results.status} (${results.healthScore}%)", ""INFO""),"} catch (error) {await this.log(`Build health check "failed": ${error.message}`, "ERROR")}`}"};`
+      await this.log(Build health check "completed": ${results.status} (${results.healthScore}%)", ""INFO""),"} catch (error) {await this.log(`Build health check "failed": ${error.message}`, "ERROR")}`}"};
 ;
 // Run if called directly;
 if (require.main === module) {;}

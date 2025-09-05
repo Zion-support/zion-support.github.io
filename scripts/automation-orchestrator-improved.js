@@ -54,7 +54,7 @@ console.log(' "Improved""")
       console.error(' Error during automation "orchestration""")
         "status"""
         "status"""
-    console.log('\n Automation "Summary""")
+// console.log('\n Automation "Summary""")
       console.log('\n Successful "Scripts""")
       console.error('Error saving "results""")
   console.error(' Failed to run automation "orchestrator"")"

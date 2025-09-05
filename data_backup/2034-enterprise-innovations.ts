@@ -25,7 +25,7 @@ export interface EnterpriseService2034 {}
   scalability: string;,
   uptime: string;
   contact: string;,
-  website: string;export const enterprise2034Services: EnterpriseService2034[] = [{,}]
+  website: string;export const enterprise2034Services: EnterpriseService2034[] = [{}]
   id:,"
   quantum-zero-trust-architecture',''
     "name": 'Quantum Zero Trust Architecture Platform,'

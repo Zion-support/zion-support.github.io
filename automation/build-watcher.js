@@ -17,9 +17,9 @@ const { execSync } = require('child_process''')
     const logsDir = path.join(this.projectRoot, 'automation', 'logs''')
     process.on('SIGINT''')
     process.on('SIGTERM''')
-    console.log('� Performing initial build check...''')
+// console.log('� Performing initial build check...''')
       console.log(' Initial build successful''')
-      console.log(' Initial build failed, triggering error fixer...''')
+// console.log(' Initial build failed, triggering error fixer...''')
     console.log('� Starting file watching...''')
     const watchDirs = [path.join(this.projectRoot, 'src''')]
       path.join(this.projectRoot, 'pages''')
@@ -33,7 +33,7 @@ const { execSync } = require('child_process''')
       .replace(/\?/g, '.'')]'
       .replace(/\{([^}]+)\}/g, '($1)'''
       .replace(/,/g, '|''')
-      console.log('⏳ Build already in progress, skipping...''')
+// console.log('⏳ Build already in progress, skipping...''')
     console.log('� Starting build...''')
         "type"""
         "type"""

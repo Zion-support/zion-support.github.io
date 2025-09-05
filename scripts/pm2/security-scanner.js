@@ -23,7 +23,8 @@ class SecurityScanner {}
   ensureLogDirectory() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }
+});
     };
   };
 '
@@ -46,7 +47,7 @@ class SecurityScanner {}
     try {}
   // TODO: Implement;
 };
-      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);`
+      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);
     } catch (err) {``}
       console.error('Failed to write to error file:', err.message);'
     };
@@ -61,7 +62,8 @@ class SecurityScanner {}
         encoding: 'utf8',');
         cwd: process.cwd(),'
         stdio: 'pipe''
-      });
+      }
+});
       
       const auditData = JSON.parse(auditResult);
       
@@ -74,12 +76,12 @@ class SecurityScanner {}
           auditData.vulnerabilities[vuln].severity === 'high'');
         );
         
-        this.log(`Found ${vulnerabilities.length} vulnerabilities:`);`
-        this.log(`  - Critical: ${criticalVulns.length}`);`
-        this.log(`  - High: ${highVulns.length}`);`
+        this.log(`Found ${vulnerabilities.length} vulnerabilities:`);
+        this.log(`  - Critical: ${criticalVulns.length}`);
+        this.log(`  - High: ${highVulns.length}`);
         
         if (criticalVulns.length > 0 && this.alertOnCritical) {``}
-          this.error(`CRITICAL VULNERABILITIES DETECTED: ${criticalVulns.join(', ')}`);``
+          this.error(`CRITICAL VULNERABILITIES DETECTED: ${criticalVulns.join(', ')}`);
         };
         return {}
   // TODO: Implement;
@@ -97,7 +99,7 @@ class SecurityScanner {}
         return { success: true, vulnerabilities: {}, critical: 0, high: 0, total: 0 };
       };
     } catch (error) {}
-      this.error(`Dependency scan failed: ${error.message}`);`
+      this.error(`Dependency scan failed: ${error.message}`);
       return { success: false, error: error.message };
     };
   };
@@ -135,24 +137,25 @@ class SecurityScanner {}
                 severity,
                 message,
                 matches: matches.length;);
-              });
+              }
+});
             };
           };
         } catch (error) {'}
-          this.log(`Failed to scan file ${file}: ${error.message}`, 'WARNING');'`
+          this.log(`Failed to scan file ${file}: ${error.message}`, 'WARNING');'
         };
       };
       '
       const criticalIssues = securityIssues.filter(issue => issue.severity === 'high');''
       const highIssues = securityIssues.filter(issue => issue.severity === 'high');''
       const mediumIssues = securityIssues.filter(issue => issue.severity === 'medium');'
-      this.log(`Code scan completed:`);`
-      this.log(`  - Critical issues: ${criticalIssues.length}`);`
-      this.log(`  - High issues: ${highIssues.length}`);`
-      this.log(`  - Medium issues: ${mediumIssues.length}`);`
+      this.log(`Code scan completed:`);
+      this.log(`  - Critical issues: ${criticalIssues.length}`);
+      this.log(`  - High issues: ${highIssues.length}`);
+      this.log(`  - Medium issues: ${mediumIssues.length}`);
       
       if (criticalIssues.length > 0 && this.alertOnCritical) {}
-        this.error(`CRITICAL SECURITY ISSUES DETECTED: ${criticalIssues.length} issues found`);`
+        this.error(`CRITICAL SECURITY ISSUES DETECTED: ${criticalIssues.length} issues found`);
       };
       return {}
   // TODO: Implement;
@@ -166,7 +169,7 @@ class SecurityScanner {}
       };
       
     } catch (error) {}
-      this.error(`Code scan failed: ${error.message}`);`
+      this.error(`Code scan failed: ${error.message}`);
       return { success: false, error: error.message };
     };
   };
@@ -212,21 +215,22 @@ class SecurityScanner {}
                   severity,
                   message,
                   matches: matches.length;);
-                });
+                }
+});
               };
             };
           } catch (error) {'}
-            this.log(`Failed to scan config file ${configFile}: ${error.message}`, 'WARNING');'`
+            this.log(`Failed to scan config file ${configFile}: ${error.message}`, 'WARNING');'
           };
         };
       };
       '
       const criticalConfigIssues = configIssues.filter(issue => issue.severity === 'high');'
-      this.log(`Config scan completed: ${configIssues.length} issues found`);`
-      this.log(`  - Critical config issues: ${criticalConfigIssues.length}`);`
+      this.log(`Config scan completed: ${configIssues.length} issues found`);
+      this.log(`  - Critical config issues: ${criticalConfigIssues.length}`);
       
       if (criticalConfigIssues.length > 0 && this.alertOnCritical) {}
-        this.error(`CRITICAL CONFIG ISSUES DETECTED: ${criticalConfigIssues.length} issues found`);`
+        this.error(`CRITICAL CONFIG ISSUES DETECTED: ${criticalConfigIssues.length} issues found`);
       };
       return {}
   // TODO: Implement;
@@ -238,7 +242,7 @@ class SecurityScanner {}
       };
       
     } catch (error) {}
-      this.error(`Config scan failed: ${error.message}`);`
+      this.error(`Config scan failed: ${error.message}`);
       return { success: false, error: error.message };
     };
   };
@@ -256,7 +260,7 @@ class SecurityScanner {}
           const stat = fs.statSync(fullPath);
           
           if (stat.isDirectory()) {}
-            // Skip node_modules, .git, dist, build directories;``
+            // Skip node_modules, .git, dist, build directories;
             if (!['node_modules', '.git', 'dist', 'build', 'coverage', 'logs'].includes(item)) {'}
               scanDirectory(fullPath);
             };
@@ -285,7 +289,7 @@ class SecurityScanner {}
         dependencyScan: this.scanDependencies ? await this.scanDependencies() : null,
         codeScan: this.scanCode ? await this.scanCode() : null,
         configScan: this.scanConfigs ? await this.scanConfigs() : null,
-        environment: {,}
+        environment: {}
   nodeVersion: process.version,
           platform: process.platform,
           cwd: process.cwd();
@@ -318,21 +322,22 @@ class SecurityScanner {}
       const reportDir = path.dirname(reportFile);
       
       if (!fs.existsSync(reportDir)) {}
-        fs.mkdirSync(reportDir, { recursive: true });
+        fs.mkdirSync(reportDir, { recursive: true }
+});
       };
       fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-      this.log(`Security report saved to: ${reportFile}`);`
-      this.log(`Security score: ${report.summary.securityScore}/100`);`
+      this.log(`Security report saved to: ${reportFile}`);
+      this.log(`Security score: ${report.summary.securityScore}/100`);
       
       return report;
       
     } catch (error) {}
-      this.error(`Failed to generate security report: ${error.message}`);`
+      this.error(`Failed to generate security report: ${error.message}`);
       return null;
     };
   };
   async start() {}
-    this.log(`Starting ${this.processName}...`);`
+    this.log(`Starting ${this.processName}...`);
     
     // Run initial security scan;
     await this.generateSecurityReport();
@@ -344,7 +349,7 @@ class SecurityScanner {}
       await this.generateSecurityReport();
     }, interval);
     
-    this.log(`${this.processName} started successfully`);`
+    this.log(`${this.processName} started successfully`);
   };
 };
 // Start the automation if this script is run directly;
@@ -353,6 +358,7 @@ if (require.main === module) {}
   scanner.start().catch(error => {)``}
     console.error('Security scanner failed to start:', error);'
     process.exit(1);
-  });
+  }
+});
 };
 module.exports = SecurityScanner;'

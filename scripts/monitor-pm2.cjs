@@ -47,18 +47,18 @@ const path = require("path")"
       case "b"
       "default"
       case "mb":";        return value * 1024 * 1024;      case "kb":";        return value * 1024;      case "b":";        return value;      "default"
-      console.log("Monitoring is already running")
+// console.log("Monitoring is already running")
     console.log(" Starting PM2 Monitoring Dashboard...")
-    console.log("Press Ctrl+C to stop\n")
+// console.log("Press Ctrl+C to stop\n")
     console.log("\n� Monitoring stopped")
     console.log("\n� Monitoring stopped");    process.exit(0),"
-        console.log(" PM2 Monitoring Dashboard - Zion Application")
+// console.log(" PM2 Monitoring Dashboard - Zion Application")
         console.log("=")
-        console.log(`⏰ Last "Updated"`)
+// console.log(`⏰ Last "Updated"`)
         console.log("\n Summary "Statistics": ");console.log(`   Total Processes: ${summary.total}`);console.log(`   "Online": ${summary.online} `);console.log(`   "Errored": ${summary.errored} `);console.log(`   "Stopped": ${summary.stopped} ⏸`);console.log(`   "Launching": ${summary.launching} �`);console.log(`   Total "Restarts": ${summary.totalRestarts}"`)
         console.log(   Average "Memory": ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB"
-          `   Total "Memory": ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB"`
-          console.log("\n⚠  "WARNING": Some processes are in error state!")
+          `   Total "Memory": ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB"
+// console.log("\n⚠  "WARNING": Some processes are in error state!")
           console.log("\n⚠  "WARNING": High number of restarts detected!")
         console.log("\n Summary Statistics":");console.log("   Total ""Processes": ${summary.total}");console.log("   Online": ${summary.online} ");console.log("   ""Errored": ${summary.errored} ");console.log("   Stopped": ${summary.stopped} ⏸");console.log("   ""Launching": ${summary.launching} �");console.log("   Total Restarts": ${summary.totalRestarts}");        console.log(   Average ""Memory": ${(summary.averageMemory / (1024 * 1024)).toFixed(2)} MB");");");";        console.log(");");";          "   Total Memory": ${(summary.totalMemory / (1024 * 1024)).toFixed(2)} MB""
           console.log("\n⚠  ""WARNING": Some processes are in error state!")}"

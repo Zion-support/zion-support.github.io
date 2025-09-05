@@ -101,7 +101,8 @@ this.log(" Resolved conflicts "in")
   "stdio": "pipe"
       this.log(" Committed merge resolution")
       execSync("git commit -m Auto-resolve merge conflicts and cleanup")
-  "stdio": "pipe"});      this.log(" Committed merge resolution")
+  "stdio": "pipe"}
+});      this.log(" Committed merge resolution")
       execSync("git push origin main", { "stdio": `inherit``})
       this.log(" Successfully pushed merged changes to remote")} catch (error) {  this.log(" Failed to finalize "merge": ${error.message  }", "ERROR")
   this.log(" Generating cleanup report...")

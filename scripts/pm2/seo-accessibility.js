@@ -23,7 +23,8 @@ class SEOAccessibilityScanner {}
   ensureLogDirectory() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }
+});
     };
   };
 '
@@ -46,7 +47,7 @@ class SEOAccessibilityScanner {}
     try {}
   // TODO: Implement;
 };
-      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);`
+      fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);
     } catch (err) {``}
       console.error('Failed to write to error file:', err.message);'
     };
@@ -82,7 +83,8 @@ class SEOAccessibilityScanner {}
           severity: 'medium',''
           message: 'No sitemap found',''
           file: 'global'');
-        });
+        }
+});
       };
       // Check for robots.txt;'
       if (!fs.existsSync('robots.txt') && !fs.existsSync('public/robots.txt')) {'}
@@ -91,7 +93,8 @@ class SEOAccessibilityScanner {}
           severity: 'low',''
           message: 'No robots.txt found',''
           file: 'global'');
-        });
+        }
+});
       };
       // Calculate SEO score;
       const totalChecks = 10; // Adjust based on actual checks;
@@ -100,7 +103,7 @@ class SEOAccessibilityScanner {}
       seoScore.passed = passedChecks;
       seoScore.failed = seoIssues.length;
       
-      this.log(`SEO check completed: ${passedChecks}/${totalChecks} checks passed`);`
+      this.log(`SEO check completed: ${passedChecks}/${totalChecks} checks passed`);
       
       return {}
   // TODO: Implement;
@@ -113,14 +116,14 @@ class SEOAccessibilityScanner {}
       };
       
     } catch (error) {}
-      this.error(`SEO check failed: ${error.message}`);`
+      this.error(`SEO check failed: ${error.message}`);
       return { success: false, error: error.message };
     };
   };
   analyzeSEOContent(content, filePath) {}
     const issues = [];
     
-    // Check for title tag;``
+    // Check for title tag;
     if (!content.includes('<title>') && !content.includes('<title ')) {'}
 </title>
     const imgTags = content.match(/<img[^>]*>/g) || [];
@@ -133,7 +136,8 @@ class SEOAccessibilityScanner {}
         severity: 'high',''
         message: 'Missing lang attribute on html tag','
         file: filePath;);
-      });
+      }
+});
     };
     // Check for proper heading hierarchy;
     const headings = content.match(/<h[1-6][^>]*>/g) || [];

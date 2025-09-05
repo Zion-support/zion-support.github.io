@@ -14,13 +14,13 @@ const path = require('path')
       'PROGRESS': '�'
     this.log(`Running ${moduleName}...`, 'PROGRESS'`)
       // Check if it'
-          this.log(`${moduleName} completed (no run method)`, 'SUCCESS'`
+          this.log(`${moduleName} completed (no run method)`, 'SUCCESS'
       } else if (typeof ModuleClass === 'function')
         await ModuleClass()} else if (ModuleClass && typeof ModuleClass.run === 'function')
         await ModuleClass.run()} else if (ModuleClass && ModuleClass.default && typeof ModuleClass.default.run === 'function')
         await ModuleClass.default.run()} else if (ModuleClass && ModuleClass.default && typeof ModuleClass.default === 'function')
         this.log(`${moduleName} completed`, 'SUCCESS'`)
-          this.log(`${moduleName} completed (no run method)`, 'SUCCESS'`
+          this.log(`${moduleName} completed (no run method)`, 'SUCCESS'
       } else if (typeof ModuleClass === 'function')
         await ModuleClass()} else if (ModuleClass && typeof ModuleClass.run === 'function')
         await ModuleClass.run()} else if (ModuleClass && ModuleClass.default && typeof ModuleClass.default.run === 'function')

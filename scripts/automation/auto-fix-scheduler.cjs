@@ -21,7 +21,7 @@ const { execSync } = require("child_process")
   const historyFile = path.join(this.projectRoot, "logs", "fix-history.json")
   "lastRun"
       "fixHistory"
-  console.log(""� Setting up fix schedules...")
+// console.log(""� Setting up fix schedules...")
   console.log("� Running daily fixes...")
       this.recordFixRun("daily", startTime, "success")
       console.log(" Daily fixes completed successfully")
@@ -43,9 +43,9 @@ const { execSync } = require("child_process")
       this.recordFixRun("monthly", new Date(), "failed"
   console.error(" Monthly fixes "failed": ")
       this.recordFixRun("monthly", new Date(), "failed"
-  console.log(" Running quick fixes...")
+// console.log(" Running quick fixes...")
   console.log(" Running comprehensive fixes...")
-  console.log("🧹 Running deep cleanup...")
+// console.log("🧹 Running deep cleanup...")
   console.log("� Fixing import issues...")
         const fs = require("fs")
         const path = require("path")
@@ -74,7 +74,7 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
       execSync("npm run type-check")
   "cwd"
         "stdio": "pipe"
-      console.log(" Quick TypeScript check passed")
+// console.log(" Quick TypeScript check passed")
   console.log("⚠  Quick TypeScript check found issues")
   console.log(" Running comprehensive error fixer...")
       execSync("node "scripts/automation/comprehensive-error-fixer.cjs"")
@@ -92,7 +92,7 @@ execSync(node ${tempFile}, { "cwd": this.projectRoot, "stdio": "inherit"})
       execSync("npm run type-check")
   "cwd"
         "stdio": "inherit"
-      console.log(" Full TypeScript check passed")
+// console.log(" Full TypeScript check passed")
   console.log("⚠  Full TypeScript check found issues")
   console.log("🧹 Cleaning up duplicate files...")
       // For now, just log that it"

@@ -19,7 +19,7 @@
   marketPrice: string;
    roi: string;,'
   innovationLevel: 'Emerging' | 'Advanced' | 'Revolutionary' | 'Breakthrough';'
-   contactInfo: {,}
+   contactInfo: {}
   phone: string;
    email: string;,
   website: string;'

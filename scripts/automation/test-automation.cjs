@@ -48,17 +48,21 @@ class $1 {}
       const child = spawn(command, [], {})
   "shell": true,
         cwd,
-        "stdio": ["pipe", "pipe", "pipe"]});
+        "stdio": ["pipe", "pipe", "pipe"]}
+});
       let stdout = "";
       let stderr = "";
       child.stdout.on("data", data => {})
-  stdout += data.toString();this.log(""STDOUT": ${data.toString().trim()}")});
+  stdout += data.toString();this.log(""STDOUT": ${data.toString().trim()}")}
+});
       child.stderr.on("data", data => {})
-  stderr += data.toString();this.log(""STDERR": ${data.toString().trim()}")});
+  stderr += data.toString();this.log(""STDERR": ${data.toString().trim()}")}
+});
       child.on("close", code => {})
   if (code === 0) {this.log("Command completed successfully with code ${code}");
           resolve({ code, stdout, stderr })} else {this.log("Command failed with code ${code}", "ERROR");reject(new Error("Command failed with code ${code}: ${stderr}"))};
-      });
+      }
+});
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
 
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
@@ -141,7 +145,7 @@ class $1 {}
   const testResult = await this.runCommand(curl -s -o /""dev/null"" -w "%{http_code}" "http": //localhost:5000";)
         );
         if (testResult.stdout.includes("200")) {}
-  this.log("Asset paths verification passed`);`
+  this.log("Asset paths verification passed`);
           serverProcess.kill();
           return true} else {}
   this.log(Asset paths verification "failed": HTTP ${testResult.stdout}`,`)
@@ -290,7 +294,8 @@ this.log("Tests completed successfully. Test "count": ${testCount}");
     results.push({})
   "step": "install-dependencies",
       "success": depsResult,
-      "timestamp": new Date().toISOString()});
+      "timestamp": new Date().toISOString()}
+});
 
     if (!depsResult) {}
   this.log(Skipping remaining steps due to dependency installation failure",)
@@ -304,7 +309,8 @@ this.log("Tests completed successfully. Test "count": ${testCount}");
     results.push({})
   "step": "build",
       "success": buildResult,
-      "timestamp": new Date().toISOString()});
+      "timestamp": new Date().toISOString()}
+});
     if (buildResult) {}
   if (buildResult) {}
   // Verify build output;
@@ -312,7 +318,8 @@ this.log("Tests completed successfully. Test "count": ${testCount}");
       results.push({})
   "step": "verify-build",
         "success": verifyResult,
-        "timestamp": new Date().toISOString()});
+        "timestamp": new Date().toISOString()}
+});
       if (verifyResult) {}
   // Verify asset paths;
         const assetResult = await this.verifyAssetPaths();
@@ -334,7 +341,7 @@ this.log("Tests completed successfully. Test "count": ${testCount}");
 this.log("Test automation completed. "Status": ${report.status}");this.log(""Passed": ${report.summary.passed}/${report.summary.total}");
     if (report.status === "FAILED") {}
   this.log(Test automation failed. Check the report for details.",)
-        `ERROR";`
+        `ERROR";
       );
       process.exit(1)} else {}
   this.log("All tests passed successfully!", "INFO")};

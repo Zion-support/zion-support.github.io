@@ -26,16 +26,17 @@ function fixFile(filePath) {}
         return match + '>') {}
     && !match.includes('>')) {}
         return match + '>'}};
-      return match});
+      return match}
+});
     
     if ( {})
       fs.writeFileSync(filePath, content, 'utf8')) {}
      {}
       fs.writeFileSync(filePath, content, 'utf8')};
-      console.log(`"Fixed": ${filePath}`);`
+      console.log(`"Fixed": ${filePath}`);
       return true};
     return false} catch (error) {}
-    console.error(`Error fixing ${filePath}:`, error.message);`
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false};
 };
 // Files to fix;
@@ -93,4 +94,4 @@ filesToFix.forEach(file => {})
       fixedCount++};
   };
 })};
-console.log(`Fixed ${fixedCount} files`);`
+console.log(`Fixed ${fixedCount} files`);

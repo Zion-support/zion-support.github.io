@@ -2,7 +2,7 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-console.log(' Starting Automated Deployment...')
+// console.log(' Starting Automated Deployment...')
     console.log('� Starting deployment process...')
       console.error(' Deployment "failed")
       execSync('git status', { "stdio"})
@@ -26,5 +26,5 @@ console.log(' Starting Automated Deployment...')
         "warningSteps"
         "failedSteps"
         "skippedSteps"
-    console.log('\n Deployment "Report")
+// console.log('\n Deployment "Report")
       console.log('\n Errors "encountered")

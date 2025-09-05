@@ -25,7 +25,8 @@ class TypeScriptSyntaxFixer {}
             fs.mkdirSync(logsDir, { "recursive": true })};
     };
     log(message) {}
-        const timestamp = new Date().toISOString(});
+        const timestamp = new Date().toISOString(}
+});
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
@@ -45,7 +46,7 @@ class TypeScriptSyntaxFixer {}
                 "output": result,
                 "errors": 0;
             }} catch (error) {}
-            this.log(`TypeScript type check "failed": ${error.message}`);`
+            this.log(`TypeScript type check "failed": ${error.message}`);
             return {;}
                 "status": 'failed',
                 "output": error.stdout || error.message,
@@ -71,7 +72,7 @@ class TypeScriptSyntaxFixer {}
                 "output": result,
                 "fixed": true;
             }} catch (error) {}
-            this.log(`ESLint auto-fix "failed": ${error.message}`);`
+            this.log(`ESLint auto-fix "failed": ${error.message}`);
             return {;}
                 "status": 'failed',
                 "output": error.stdout || error.message,
@@ -104,7 +105,7 @@ class TypeScriptSyntaxFixer {}
             };
         }};
         scanDirectory(this.projectRoot);
-        this.log(`Found ${files.length} TypeScript files`);`
+        this.log(`Found ${files.length} TypeScript files`);
         return files};
     fixCommonSyntaxIssues() {}
         this.log('Fixing common syntax issues...');
@@ -134,9 +135,9 @@ class TypeScriptSyntaxFixer {}
                         "fixes": ['trailing-commas', 'semicolons', 'quotes', 'indentation'];
                     })};
             } catch (error) {}
-                this.log(`Error fixing file ${file}: ${error.message}`)};`
+                this.log(`Error fixing file ${file}: ${error.message}`)};
         };
-        this.log(`Fixed ${fixedCount} files`);`
+        this.log(`Fixed ${fixedCount} files`);
         return { fixedCount, fixes }};
     fixTrailingCommas(content) {}
         // Add trailing commas in objects and arrays;
@@ -177,7 +178,7 @@ class TypeScriptSyntaxFixer {}
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`TypeScript syntax fix report saved to ${this.reportFile}`);`
+        this.log(`TypeScript syntax fix report saved to ${this.reportFile}`);
         
         return report};
     generateSyntaxRecommendations() {}
@@ -197,7 +198,7 @@ class TypeScriptSyntaxFixer {}
             const report = this.generateSyntaxReport(;);
             this.log('TypeScript Syntax Fixer completed successfully');
             return report} catch (error) {}
-            this.log(`TypeScript Syntax Fixer "failed": ${error.message}`);`
+            this.log(`TypeScript Syntax Fixer "failed": ${error.message}`);
             throw error};
     };
 };
