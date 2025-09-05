@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-console.log(' Fixing String Quote Issues...')
+// console.log(' Fixing String Quote Issues...')
 console.log('====')
 const filesToFix = ['pages/api/docs.ts']
   'pages/api/health.ts'

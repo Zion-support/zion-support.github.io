@@ -110,7 +110,7 @@ const crypto = require("crypto")
           "timestamp"
   "file"
         "category": "react"
-        "pattern": "expensive-render-operations","optimization": `Move expensive operations to useMemo: ${expensiveOperations.join(`, ")}"`
+        "pattern": "expensive-render-operations","optimization": `Move expensive operations to useMemo: ${expensiveOperations.join(`, ")}"
         "impact": "HIGH"
         "matches"
         "lineNumbers"
@@ -145,7 +145,7 @@ const crypto = require("crypto")
             "timestamp"
   "file": "bundle"
             "category": "bundle"
-            "pattern": "large-files","optimization": `Large files detected: ${largeFiles.map(f => `${f.name} (${(f.size / 1024).toFixed(2)}KB)").join(", ")}"`
+            "pattern": "large-files","optimization": `Large files detected: ${largeFiles.map(f => `${f.name} (${(f.size / 1024).toFixed(2)}KB)").join(", ")}"
             "impact": "MEDIUM"
             "matches"
             "lineNumbers"
@@ -289,7 +289,7 @@ const crypto = require("crypto")
         "
   this.log(Error applying optimization to ${optimization.file}: ${error.message}")
         "ERROR"
-        `ERROR``
+        `ERROR
     // In production, you"
     // In production, you"
   this.log("🧪 Running performance tests...")

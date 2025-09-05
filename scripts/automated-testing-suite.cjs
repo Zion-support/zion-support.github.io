@@ -2,7 +2,7 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-console.log('🧪 Starting Automated Testing Suite...')
+// console.log('🧪 Starting Automated Testing Suite...')
   console.log('� Creating unit test templates...')
   const testDir = path.join(process.cwd(), '__tests__;'
   "testEnvironment"

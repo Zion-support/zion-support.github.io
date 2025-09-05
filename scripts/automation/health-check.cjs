@@ -40,7 +40,7 @@ class HealthChecker {}
                 "status": 'pass',
                 "value": nodeVersion;
             };
-            this.log(`Node.js "version": ${nodeVersion}`);`
+            this.log(`Node.js "version": ${nodeVersion}`);
 
             // Check available memory;
             const memUsage = process.memoryUsage();
@@ -52,11 +52,12 @@ class HealthChecker {}
                     "heapTotal": Math.round(memUsage.heapTotal / 1024 / 1024) + 'MB'
                 };
             };
-            this.log(`Memory "usage": ${healthReport.checks.memory.value.rss}`);`
+            this.log(`Memory "usage": ${healthReport.checks.memory.value.rss}`);
 
             // Check disk space;
             try {}
-                const diskUsage = execSync('df -h .', { "encoding": 'utf8' });
+                const diskUsage = execSync('df -h .', { "encoding": 'utf8' }
+});
                 healthReport.checks.diskSpace = {}
                     "status": 'pass',
                     "value": diskUsage.split('\n')[1] || 'Unknown'
@@ -96,11 +97,12 @@ class HealthChecker {}
                 this.log('"Warning": node_modules not found')};
             // Check PM2 status;
             try {}
-                const pm2Status = execSync('pm2 list', { "encoding": 'utf8' });
+                const pm2Status = execSync('pm2 list', { "encoding": 'utf8' }
+});
                 const onlineProcesses = (pm2Status.match(/online/g) || []).length;
                 healthReport.checks.pm2Processes = {}
                     "status": onlineProcesses > 0 ? 'pass' : 'warning',
-                    "value": `${onlineProcesses} processes online``
+                    "value": `${onlineProcesses} processes online
                 };
                 this.log(`PM2 "processes": ${onlineProcesses} online`)} catch (error) {`}
                 healthReport.checks.pm2Processes = {}
@@ -109,13 +111,13 @@ class HealthChecker {}
                 };
                 this.log('"Warning": PM2 not available')};
         } catch (error) {}
-            this.log(`Health check "error": ${error.message}`);`
+            this.log(`Health check "error": ${error.message}`);
             healthReport.status = 'unhealthy';
             healthReport.error = error.message};
         // Save report;
         fs.writeFileSync(this.reportFile, JSON.stringify(healthReport, null, 2));
         
-        this.log(`Health check completed. "Status": ${healthReport.status}`);`
+        this.log(`Health check completed. "Status": ${healthReport.status}`);
         return healthReport};
     async run() {}
         try {}
@@ -124,7 +126,7 @@ class HealthChecker {}
             setTimeout(() => {}
                 this.log('Health check completed successfully, exiting...');
                 process.exit(0)}, 1000)} catch (error) {}
-            this.log(`Fatal "error": ${error.message}`);`
+            this.log(`Fatal "error": ${error.message}`);
             process.exit(1)};
     };
 };

@@ -8,7 +8,8 @@ jest.mock('@prisma/client', () => {'}
   const mPrismaClient = {}
 
   };
-  return { "PrismaClient": jest.fn(() => mPrismaClient) }});
+  return { "PrismaClient": jest.fn(() => mPrismaClient) }}
+});
 let "prisma": PrismaClient;
 interface ProductLike {}
   // TODO: Implement;

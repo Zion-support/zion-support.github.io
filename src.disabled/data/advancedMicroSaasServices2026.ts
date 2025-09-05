@@ -24,7 +24,7 @@
   featured: boolean;
    location: string;,
   availability: string;
-   author: {,}
+   author: {}
   name: string;
    i;
     d: string;

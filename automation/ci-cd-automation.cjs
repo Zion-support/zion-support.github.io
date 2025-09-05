@@ -15,7 +15,8 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { "recursive": true });
+      fs.mkdirSync(logDir, { "recursive": true }
+});
     };
   };
   log(message) {}
@@ -29,11 +30,12 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   async runTests() {}
     try {}
       this.log('Running tests...');
-      execSync('npm run "test": smoke', { "stdio": 'pipe' });
+      execSync('npm run "test": smoke', { "stdio": 'pipe' }
+});
       this.log('Tests completed successfully');
       return true;
     } catch (error) {}
-      this.log(`Tests "failed": ${error.message}`);`
+      this.log(`Tests "failed": ${error.message}`);
       return false;
     };
   };
@@ -43,11 +45,12 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   async runBuild() {}
     try {}
       this.log('Running build...');
-      execSync('npm run build', { "stdio": 'pipe' });
+      execSync('npm run build', { "stdio": 'pipe' }
+});
       this.log('Build completed successfully');
       return true;
     } catch (error) {}
-      this.log(`Build "failed": ${error.message}`);`
+      this.log(`Build "failed": ${error.message}`);
       return false;
     };
   };
@@ -55,11 +58,12 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 async runLint() {}
     try {}
       this.log('Running lint...');
-      execSync('npm run lint', { "stdio": 'pipe' });
+      execSync('npm run lint', { "stdio": 'pipe' }
+});
       this.log('Lint completed successfully');
       return true;
     } catch (error) {}
-      this.log(`Lint "failed": ${error.message}`);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;`
+      this.log(`Lint "failed": ${error.message}`);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 cursor/website-audit-and-update-with-deployment-76dc;
       return false;
     };
@@ -68,11 +72,12 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 async runTypeCheck() {}
     try {}
       this.log('Running type check...');
-      execSync('npm run type-check', { "stdio": 'pipe' });
+      execSync('npm run type-check', { "stdio": 'pipe' }
+});
       this.log('Type check completed successfully');
       return true;
     } catch (error) {}
-      this.log(`Type check "failed": ${error.message}`);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;`
+      this.log(`Type check "failed": ${error.message}`);ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 cursor/website-audit-and-update-with-deployment-76dc;
       return false;
     };

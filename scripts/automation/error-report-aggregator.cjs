@@ -14,7 +14,7 @@ class $1 {}
 ;
   log(message, type = "info") {}
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};`
+    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
 ;
   async ensureDirectoryExists(dirPath) {}
   if (!fs.existsSync(dirPath)) {}
@@ -41,10 +41,10 @@ class $1 {}
         const report = JSON.parse(reportContent);
         reports[file] = report;
         // Aggregate errors and fixes;
-        if (report.errorsFound) {this.errorsFound.push(...report.errorsFound.map(error => `${file}: ${error}`))};`
+        if (report.errorsFound) {this.errorsFound.push(...report.errorsFound.map(error => `${file}: ${error}`))};
         ;
-        if (report.fixesApplied) {this.fixesApplied.push(...report.fixesApplied.map(fix => `${file}: ${fix}`))};`
-      } catch (error) {  this.log(`Error reading report ${file  }: ${error.message}`, "error")};`
+        if (report.fixesApplied) {this.fixesApplied.push(...report.fixesApplied.map(fix => `${file}: ${fix}`))};
+      } catch (error) {  this.log(`Error reading report ${file  }: ${error.message}`, "error")};
     };
 ;
     return reports};
@@ -70,7 +70,7 @@ class $1 {}
 ;
     await this.ensureDirectoryExists(path.dirname(this.logFile));
     fs.writeFileSync(this.logFile, JSON.stringify(summary, null, 2));
-    this.log(`Aggregated report "generated": ${this.logFile}`);this.log(`Total "reports": ${summary.totalReports}, "Errors": ${summary.totalErrors}, "Fixes": ${summary.totalFixes}`)};`
+    this.log(`Aggregated report "generated": ${this.logFile}`);this.log(`Total "reports": ${summary.totalReports}, "Errors": ${summary.totalErrors}, "Fixes": ${summary.totalFixes}`)};
 ;
   categorizeErrors() {}
   const categories = {}
@@ -124,8 +124,8 @@ class $1 {}
   this.log("Starting error report aggregation process...");
     try {}
   await this.generateSummary();
-      this.log("Error report aggregation completed", "success")} catch (error) {  this.log(`Error during "aggregation": ${error.message  }`, "error");this.errorsFound.push(`Process "error": ${error.message}`);`
-      this.log("Error report aggregation completed", "success")} catch (error) {this.log(`Error during "aggregation": ${error.message}`, "error");this.errorsFound.push(`Process "error": ${error.message}`);`
+      this.log("Error report aggregation completed", "success")} catch (error) {  this.log(`Error during "aggregation": ${error.message  }`, "error");this.errorsFound.push(`Process "error": ${error.message}`);
+      this.log("Error report aggregation completed", "success")} catch (error) {this.log(`Error during "aggregation": ${error.message}`, "error");this.errorsFound.push(`Process "error": ${error.message}`);
       await this.generateSummary()};
   };
 };

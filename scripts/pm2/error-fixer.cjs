@@ -11,7 +11,8 @@ class ErrorFixer {}
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { "recursive": true });
+      fs.mkdirSync(logDir, { "recursive": true }
+});
     };
   };
   log(message) {}
@@ -90,7 +91,8 @@ class ErrorFixer {}
       execSync('npm run "lint": fix', { })
         "stdio": 'pipe',
         "cwd": process.cwd();
-      });
+      }
+});
       this.log('ESLint auto-fix completed');
       return true;
     } catch (err) {}
@@ -140,7 +142,7 @@ class ErrorFixer {}
         "success": true;
       };
     } catch (err) {}
-      this.error("Error in "run": ${err.message}`);`
+      this.error("Error in "run": ${err.message}`);
       return { "success": false, "error": err.message };
     };
   };
@@ -154,6 +156,7 @@ if (require.main === module) {}
     } else {}
       process.exit(1);
     };
-  });
+  }
+});
 };
 module.exports = ErrorFixer;

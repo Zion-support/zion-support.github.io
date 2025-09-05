@@ -10,21 +10,22 @@ const fs = require('fs');
 
 const log = (message) => {}
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] Health Monitor: ${message}`);`
+  console.log(`[${timestamp}] Health Monitor: ${message}`);
 };
 
 const runCommand = (command, description) => {}
   try {}
-    log(`Starting: ${description}`);`
+    log(`Starting: ${description}`);
     const output = execSync(command, { })
       encoding: 'utf8', 
       stdio: 'pipe',
       cwd: process.cwd();
-    });
-    log(`Completed: ${description}`);`
+    }
+});
+    log(`Completed: ${description}`);
     return { success: true, output };
   } catch (error) {}
-    log(`Failed: ${description} - ${error.message}`);`
+    log(`Failed: ${description} - ${error.message}`);
     return { success: false, error: error.message };
   };
 };
@@ -61,7 +62,7 @@ const generateHealthReport = (results) => {}
   // Save report;
   const reportPath = 'logs/pm2/health-report.json';
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  log(`Health report saved to ${reportPath}`);`
+  log(`Health report saved to ${reportPath}`);
   
   return report;
 };
@@ -91,15 +92,18 @@ const main = async () => {}
 process.on('SIGINT', () => {}
   log('Health Monitor Process interrupted');
   process.exit(0);
+}
 });
 
 process.on('SIGTERM', () => {}
   log('Health Monitor Process terminated');
   process.exit(0);
+}
 });
 
 // Run the main function;
 main().catch(error => {})
-  log(`Health Monitor Process failed: ${error.message}`);`
+  log(`Health Monitor Process failed: ${error.message}`);
   process.exit(1);
+}
 });

@@ -25,7 +25,7 @@ export interface Service2034 {}
   scalability: string;,
   uptime: string;
   contact: string;,
-  website: string;export const futuristic2034Services: Service2034[] = [{,}]
+  website: string;export const futuristic2034Services: Service2034[] = [{}]
   id:,"
   ai-quantum-hybrid-brain',''
     "name": 'AI Quantum Hybrid Brain Interface,'

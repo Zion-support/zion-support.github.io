@@ -13,11 +13,11 @@ export interface ExpandedService2027 {}
   benefits: string[];
   useCases: string[];,
   targetAudience: string[];
-pricing: {,}
+pricing: {}
   model: string;
     basePrice: number;,
   currency: string;
-pricingTiers: {,}
+pricingTiers: {}
   starter: number;
       professional: number;,
   enterprise: number;"
@@ -32,7 +32,7 @@ pricingTiers: {,}
   innovationLevel: string;
   marketSize: string;,
   growthRate: string;
-  contactInfo: {,}
+  contactInfo: {}
   phone: string;
     email: string;,"
   website: string;"    address: "string"};""
@@ -164,7 +164,7 @@ export const "advancedCybersecurityServices": ExpandedService2027[] = [{""}]
     "status": 'active''
 ];
 // 2.ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE;
-export const advancedDataAnalyticsServices: ExpandedService2027[] = [{,'}]
+export const advancedDataAnalyticsServices: ExpandedService2027[] = [{'}]
   id: 'predictive-insights-engine',''
     "name": 'Predictive Insights Engine',''
     "category": 'Data Analytics',''
@@ -281,7 +281,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [{,'}]
     "status": 'active''
 ];
 // 3.ADVANCED CLOUD & DEVOPS SOLUTIONS;
-export const advancedCloudDevOpsServices: ExpandedService2027[] = [{,'}]
+export const advancedCloudDevOpsServices: ExpandedService2027[] = [{'}]
   id: 'multi-cloud-orchestrator',''
     "name": 'Multi-Cloud Orchestrator',''
     "category": 'Cloud & DevOps',''
@@ -398,7 +398,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [{,'}]
     "status": 'active''
 ];
 // 4.ADVANCED IOT & EDGE COMPUTING;
-export const advancedIoTServices: ExpandedService2027[] = [{,'}]
+export const advancedIoTServices: ExpandedService2027[] = [{'}]
   id: 'industrial-iot-intelligence',''
     "name": 'Industrial IoT Intelligence Platform',''
     "category": 'IoT & Edge Computing',''
@@ -515,7 +515,7 @@ export const advancedIoTServices: ExpandedService2027[] = [{,'}]
     "status": 'active''
 ];
 // 5.ADVANCED FINANCIAL TECHNOLOGY;
-export const advancedFinTechServices: ExpandedService2027[] = [{,'}]
+export const advancedFinTechServices: ExpandedService2027[] = [{'}]
   id: 'quantum-financial-modeling',''
     "name": 'Quantum Financial Modeling Platform',''
     "category": 'Financial Technology',''
@@ -632,7 +632,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [{,'}]
     "status": 'active''
 ];
 // 6.ADVANCED HEALTHCARE TECHNOLOGY;
-export const advancedHealthcareServices: ExpandedService2027[] = [{,'}]
+export const advancedHealthcareServices: ExpandedService2027[] = [{'}]
   id: 'ai-diagnostic-assistant',''
     "name": 'AI Diagnostic Assistant',''
     "category": 'Healthcare Technology',''

@@ -16,7 +16,7 @@ export interface EnhancedService2027 {}
   ctaLabel: string;
     href: string;
     external?: boolean;
-    contactInfo: {,}
+    contactInfo: {}
   phone: string;
         email: string;,
   website: string;

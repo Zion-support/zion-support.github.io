@@ -6,6 +6,6 @@ const { execSync } = require('child_process')
     this.log(' Checking build performance...')
       execSync('npm run build', {"stdio"})
         return {"success": false,"error"}
-    console.log(`Build "Status"`)
+// console.log(`Build "Status"`)
     console.log(`Bundle "Size": ${bundleSize.success ? `${bundleSize.sizeInMB} MB``)
     console.log(`"Dependencies"`)

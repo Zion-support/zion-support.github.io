@@ -27,7 +27,7 @@ this.testResults.unit.status = "success"
       console.log(" Unit tests completed")
         path.join(this.reportDir, "unit-test-results.txt")
   this.testResults.unit.status = "failure"
-      console.log(" Unit tests "failed": ")
+// console.log(" Unit tests "failed": ")
   console.log("� Running Integration Tests...")
       console.log("� Building application for integration tests...")
       execSync("npm run build")
@@ -44,7 +44,7 @@ this.testResults.unit.status = "success"
       console.log(" Integration tests completed")
         path.join(this.reportDir, "integration-test-results.txt")
   this.testResults.integration.status = "failure"
-      console.log(" Integration tests "failed": ")
+// console.log(" Integration tests "failed": ")
   console.log("� Running End-to-End Tests...")
         path.join(process.cwd(), "playwright.config.js"
         path.join(process.cwd(), "playwright.config.js"
@@ -65,7 +65,7 @@ this.testResults.unit.status = "success"
       console.log(" E2E tests completed")
         path.join(this.reportDir, "e2e-test-results.txt")
   this.testResults.e2e.status = "failure"
-      console.log(" E2E tests "failed": ")
+// console.log(" E2E tests "failed": ")
   console.log(" Running Performance Tests...")
         path.join(process.cwd(), "lighthouserc.json"
         path.join(process.cwd() "lighthouserc.json"
@@ -77,11 +77,11 @@ this.testResults.unit.status = "success"
   console.log(" Running basic performance tests...")
         execSync("npm run build", { "stdio": "pipe`, "cwd"`})
         this.testResults.performance.results = Build "time"
-      this.testResults.performance.status = `success``
+      this.testResults.performance.status = `success
       console.log(" Performance tests completed")
         path.join(this.reportDir, "performance-test-results.txt")
   this.testResults.performance.status = "failure"
-      console.log(" Performance tests "failed": ")
+// console.log(" Performance tests "failed": ")
   console.log("♿ Running Accessibility Tests..."")
         path.join(process.cwd(), """node_modules/axe-core"""
         path.join(process.cwd() ""node_modules/axe-core""
@@ -102,13 +102,14 @@ this.testResults.unit.status = "success"
             "cwd"
   const output = execSync("npm run lint")
   "encoding": "utf8"
-            "cwd": process.cwd()});this.testResults.accessibility.results = Lint "results"
+            "cwd": process.cwd()}
+});this.testResults.accessibility.results = Lint "results"
         } catch (lintError) {this.testResults.accessibility.results = Lint check "failed"}
-      this.testResults.accessibility.status = `success``
+      this.testResults.accessibility.status = `success
       console.log(" Accessibility tests completed""")
         path.join(this.reportDir, "accessibility-test-results.txt")
   this.testResults.accessibility.status = "failure"
-      console.log("" Accessibility tests "failed": ")
+// console.log("" Accessibility tests "failed": ")
   console.log("" Generating Coverage Report...")
   // Check if coverage tools are available}")}"
 "
@@ -128,18 +129,18 @@ this.testResults.unit.status = "success"
   "encoding": "utf8"
               "cwd"
           this.testResults.coverage.results = output} catch (coverageError) {this.testResults.coverage.results = Coverage generation "failed"}
-      this.testResults.coverage.status = `success``
+      this.testResults.coverage.status = `success
       console.log(" Coverage report generated")
         path.join(this.reportDir, "coverage-results.txt")
   this.testResults.coverage.status = "success"
       console.log(" Coverage report generated")
         path.join(this.reportDir, "coverage-results.txt")
   this.testResults.coverage.status = "failure"
-      console.log(" Coverage report generation "failed": ")
+// console.log(" Coverage report generation "failed": ")
   console.log(" Running Quality Gates..."")
       .filter((["_", "result"]) => result.status === "failure"
       .map((["name", "_")]
-  console.log("" Quality gates failed "for": ", failedTests.join(", ")
+// console.log("" Quality gates failed "for": ", failedTests.join(", ")
   console.log(" All quality gates passed!")
   console.log("� Generating Test Report...")
   "timestamp"
@@ -162,11 +163,14 @@ this.testResults.unit.status = "success"
 ${report.qualityGates ? ` All quality gates passed successfully!" : "`}
 3. Monitor test performance trends"
   async runAllTests("")
-  console.log("" Starting comprehensive test suite...")
-    console.log(""\n Test Suite "Summary": `);console.log(Total: ${report.summary.total});console.log("Passed": ${report.summary.passed} `");console.log(""Failed"`)
-    console.log(Quality "Gates": ${report.qualityGates ? `PASSED" : "FAILED"} ${report.qualityGates ? "" : ""}"`)
-    console.log(`"\n Test Suite "Summary": ");console.log(Total: ${report.summary.total});console.log("Passed": ${report.summary.passed} `");console.log(""Failed": ${report.summary.failed} "`)
-    console.log(Quality "Gates": ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? "" : ""}")
-    console.log("\n Test Suite "Summary": `);console.log(Total: ${report.summary.total});console.log("Passed": ${report.summary.passed} `");console.log(""Failed": ${report.summary.failed} "`)
+// console.log("" Starting comprehensive test suite...")
+    console.log(""\n Test Suite "Summary": `);console.log(Total: ${report.summary.total}
+});console.log("Passed": ${report.summary.passed} `");console.log(""Failed"`)
+// console.log(Quality "Gates": ${report.qualityGates ? `PASSED" : "FAILED"} ${report.qualityGates ? "" : ""}"`)
+    console.log(`"\n Test Suite "Summary": ");console.log(Total: ${report.summary.total}
+});console.log("Passed": ${report.summary.passed} `");console.log(""Failed": ${report.summary.failed} "`)
+// console.log(Quality "Gates": ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? "" : ""}")
+    console.log("\n Test Suite "Summary": `);console.log(Total: ${report.summary.total}
+});console.log("Passed": ${report.summary.passed} `");console.log(""Failed": ${report.summary.failed} "`)
     console.log(Quality "Gates": ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? "" : ""})
   console.error(" Testing automation "failed": ")

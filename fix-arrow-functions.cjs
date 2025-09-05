@@ -9,12 +9,14 @@ function fixArrowFunctionSyntax(filePath) {
     // Fix malformed arrow functions in map functions
     content = content.replace(/\{([^}]*\.map\([^)]*\) => \(\)\}/g, (match, mapContent) => {
       return match.replace(/\(\)/g, '');
-    });
+    }
+});
     
     // Fix malformed arrow functions with extra parentheses
     content = content.replace(/\.map\([^)]*\) => \(\)/g, (match) => {
       return match.replace(/\(\)/g, '');
-    });
+    }
+});
     
     // Fix missing closing braces in function components
     if (content.includes('export default function') && !content.trim().endsWith('}')) {
@@ -32,7 +34,8 @@ function fixArrowFunctionSyntax(filePath) {
         return match + '`';
       }
       return match;
-    });
+    }
+});
     
     // Fix malformed JSX expressions
     content = content.replace(/\{([^}]*)\s*$/gm, (match, content) => {
@@ -40,17 +43,20 @@ function fixArrowFunctionSyntax(filePath) {
         return match + '}';
       }
       return match;
-    });
+    }
+});
     
     // Fix specific pattern: {feature.features.map((item, idx) => (}
     content = content.replace(/\{([^}]*\.map\([^)]*\) => \(\)\}/g, (match, mapContent) => {
       return match.replace(/\(\)/g, '');
-    });
+    }
+});
     
     // Fix specific pattern: {service.features.map((feature, featureIndex) => (}
     content = content.replace(/\{([^}]*\.map\([^)]*\) => \(\)\}/g, (match, mapContent) => {
       return match.replace(/\(\)/g, '');
-    });
+    }
+});
     
     // Write the fixed content back
     fs.writeFileSync(filePath, content, 'utf8');

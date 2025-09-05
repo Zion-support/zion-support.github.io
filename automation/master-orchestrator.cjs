@@ -12,7 +12,8 @@ class MasterOrchestrator {}
     this.startTime = Date.now();
     this.results = {};
     try {}
-      fs.mkdirSync(this.logsDir, { "recursive": true });
+      fs.mkdirSync(this.logsDir, { "recursive": true }
+});
     } catch {};
   };
   log(message, level = 'INFO') {}
@@ -24,7 +25,8 @@ class MasterOrchestrator {}
   };
   runCmd(cmd) {}
     try {}
-      const out = execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8' });
+      const out = execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8' }
+});
       return { "success": true, "output": out };
     } catch (e) {}
       return {}
@@ -46,7 +48,7 @@ class MasterOrchestrator {}
     ];
 
     for (const [name, cmd] of tasks) {}
-      this.log(`"Running": ${name}`);`
+      this.log(`"Running": ${name}`);
       const res = this.runCmd(cmd);
       this.results[name] = { "success": res.success, "error": res.error || null };
       if (!res.success && name === 'lint') {}
@@ -78,7 +80,7 @@ class MasterOrchestrator {}
       );
     } catch {};
     this.log()
-      `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})"`
+      `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})"
     );
     return passed === total;
   };

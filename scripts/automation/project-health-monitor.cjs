@@ -25,7 +25,8 @@ class ProjectHealthMonitor {}
             fs.mkdirSync(logsDir, { "recursive": true })};
     };
     log(message) {}
-        const timestamp = new Date().toISOString(});
+        const timestamp = new Date().toISOString(}
+});
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
@@ -62,12 +63,13 @@ class ProjectHealthMonitor {}
     structure.score += 10};
         // Check optional files;
         for (const file of optionalFiles) {}
-            const exists = fs.existsSync(path.join(this.projectRoot, file}););
+            const exists = fs.existsSync(path.join(this.projectRoot, file}
+}););
             structure.optional[file] = exists;
             if (structure.score += 5};)
         this.log(`Project structure "score": ${structure.score}/100`)) {`}
     structure.score += 5};
-        this.log(`Project structure "score": ${structure.score}/100`)};`
+        this.log(`Project structure "score": ${structure.score}/100`)};
         return structure};
     checkCodeQuality() {}
         this.log('Checking code quality...');
@@ -77,7 +79,8 @@ class ProjectHealthMonitor {}
             execSync('npm run lint', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
-            });
+            }
+});
             
             return {;}
                 "status": 'success',
@@ -98,7 +101,8 @@ class ProjectHealthMonitor {}
             execSync('npm run type-check', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
-            });
+            }
+});
             
             return {;}
                 "status": 'success',
@@ -119,7 +123,8 @@ class ProjectHealthMonitor {}
             execSync('npm run build', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
-            });
+            }
+});
             
             return {;}
                 "status": 'success',
@@ -155,7 +160,8 @@ class ProjectHealthMonitor {}
                         const outdated = JSON.parse(error.stdout) {}
      {}
                     try {}
-                        const outdated = JSON.parse(error.stdout});
+                        const outdated = JSON.parse(error.stdout}
+});
                         outdatedCount = Object.keys(outdated).length} catch (parseError) {}
                         // No outdated packages;
                     };
@@ -238,8 +244,8 @@ class ProjectHealthMonitor {}
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`Project health report saved to ${this.reportFile}`);`
-        this.log(`Overall health "score": ${totalScore}/100 (${healthStatus})`);`
+        this.log(`Project health report saved to ${this.reportFile}`);
+        this.log(`Overall health "score": ${totalScore}/100 (${healthStatus})`);
         
         return report};
     generateHealthRecommendations(score, status) {}
@@ -267,7 +273,7 @@ class ProjectHealthMonitor {}
             const report = this.generateHealthReport(;);
             this.log('Project Health Monitor completed successfully');
             return report} catch (error) {}
-            this.log(`Project Health Monitor "failed": ${error.message}`);`
+            this.log(`Project Health Monitor "failed": ${error.message}`);
             throw error};
     };
 };

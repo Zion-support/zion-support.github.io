@@ -12,12 +12,14 @@ function fixTargetedSyntax(filePath) {
     // Fix malformed arrow functions in map functions
     content = content.replace(/\.map\([^)]*\) => \(\)/g, (match) => {
       return match.replace(/\(\)/g, '');
-    });
+    }
+});
     
     // Fix specific pattern: {blogPosts.map((post, index) => (}
     content = content.replace(/\{([^}]*\.map\([^)]*\) => \(\)\}/g, (match) => {
       return match.replace(/\(\)/g, '');
-    });
+    }
+});
     
     // Fix malformed JSX elements with } instead of >
     content = content.replace(/<motion\.article\}/g, '<motion.article');

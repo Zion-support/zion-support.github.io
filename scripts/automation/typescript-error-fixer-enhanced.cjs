@@ -16,7 +16,7 @@ const { promisify } = require("util")
   "success"
         "error"
         "output": error.stdout || error.stderr || ""
-    console.log("" Enhanced TypeScript Error Fixer Started")
+// console.log("" Enhanced TypeScript Error Fixer Started")
     console.log(")
         "output": error.stdout || error.stderr || ""
 async log(message, type = "INFO")
@@ -44,7 +44,8 @@ async log(message, type = "INFO")
     // Find all "TypeScript/JavaScript"
     const files = await this.findFiles("src", [".ts", ".tsx", ".js", ".jsx")]
   const content = await readFile(file, "utf8")
-          this.fixes.push({ file, "type": "import", "description": "Fixed import paths" });await this.log("Fixed imports in ${file}")
+          this.fixes.push({ file, "type": "import", "description": "Fixed import paths" }
+});await this.log("Fixed imports in ${file}")
       } catch (error) {  await this.log("Error fixing imports in ${file  }: ${error.message}", "ERROR")
   await this.log(" Fixing type errors...")
     const typeFixes = ["]
@@ -60,13 +61,15 @@ async log(message, type = "INFO")
         "replacement": ": unknown[]"
     const files = await this.findFiles("src", [".ts", ".tsx")]
   const content = await readFile(file, "utf8")
-          this.fixes.push({ file, "type": "type", "description": "Fixed type annotations" });await this.log("Fixed types in ${file}")
+          this.fixes.push({ file, "type": "type", "description": "Fixed type annotations" }
+});await this.log("Fixed types in ${file}")
       } catch (error) {  await this.log("Error fixing types in ${file  }: ${error.message}", "ERROR")
   await this.log(" Fixing component errors...")
     const componentFixes = ["]
   "pattern": /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*null;\s*}/g", ""replacement": (match", "componentName) => {return "}
   )}"
-          this.fixes.push({ file, "type": "export", "description": "Added missing default export" });await this.log("Added default export to ${file}")
+          this.fixes.push({ file, "type": "export", "description": "Added missing default export" }
+});await this.log("Added default export to ${file}")
       } catch (error) {  await this.log("Error fixing exports in ${file  }: ${error.message}", "ERROR")
   await this.log(" Fixing ServicesPage specific error...")
     const appFile = path.join(this.projectRoot, ""src/App.tsx"")

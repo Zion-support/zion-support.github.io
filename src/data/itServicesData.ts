@@ -19,7 +19,7 @@ export interface ITService {}
   marketPrice: string;
   roi: string;,
   innovationLevel: string;
-  contactInfo: {,}
+  contactInfo: {}
   phone: string;
     email: string;,
   website: string};
@@ -81,13 +81,13 @@ export const IT_SERVICES: ITService[] = []
     marketPrice: "$15,000 - $100,000/project",""
     roi: "200-400%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["AWS", "Azure", "GCP", "Terraform", "Kubernetes", "Docker"],""
       integrations: ["On-premise systems", "SaaS applications", "Monitoring tools", "Security platforms"],"
       apiEndpoints: 500,"
@@ -147,13 +147,13 @@ export const IT_SERVICES: ITService[] = []
     marketPrice: "$25,000 - $150,000/project",""
     roi: "300-600%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["SIEM", "EDR", "XDR", "IAM", "PAM", "Zero Trust"],""
       integrations: ["Security tools", "Monitoring systems", "Compliance platforms", "Incident response tools"],"
       apiEndpoints: 200,"
@@ -213,13 +213,13 @@ export const IT_SERVICES: ITService[] = []
     marketPrice: "$50,000 - $500,000/project",""
     roi: "200-500%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["RPA", "AI/ML", "Cloud platforms", "APIs", "Data analytics", "Mobile solutions"],""
       integrations: ["ERP systems", "CRM platforms", "Legacy systems", "Cloud services", "Third-party APIs"],"
       apiEndpoints: 1000,"
@@ -279,13 +279,13 @@ export const IT_SERVICES: ITService[] = []
     marketPrice: "$75,000 - $500,000/project",""
     roi: "250-500%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["React", "Node.js", "Python", "Java", "PostgreSQL", "MongoDB", "Docker", "Kubernetes"],""
       integrations: ["Third-party APIs", "Legacy systems", "Cloud services", "Mobile platforms", "Analytics tools"],"
       apiEndpoints: 2000,"
@@ -345,13 +345,13 @@ export const IT_SERVICES: ITService[] = []
     marketPrice: "$30,000 - $200,000/project",""
     roi: "300-600%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Python", "R", "SQL", "Tableau", "Power BI", "Apache Spark", "Hadoop", "Snowflake"],""
       integrations: ["ERP systems", "CRM platforms", "Cloud data sources", "APIs", "Real-time data streams"],"
       apiEndpoints: 500,"
@@ -411,13 +411,13 @@ export const IT_SERVICES: ITService[] = []
     marketPrice: "$20,000 - $100,000/month",""
     roi: "200-400%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Monitoring tools", "Automation platforms", "Security tools", "Backup systems", "Cloud platforms"],""
       integrations: ["IT systems", "Security platforms", "Monitoring tools", "Cloud services", "Third-party tools"],"
       apiEndpoints: 300,"
@@ -477,13 +477,13 @@ export const IT_SERVICES: ITService[] = []
     marketPrice: "$40,000 - $200,000/project",""
     roi: "300-600%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Docker", "Kubernetes", "Terraform", "Ansible"],""
       integrations: ["Version control", "Testing tools", "Monitoring platforms", "Security scanners", "Cloud platforms"],"
       apiEndpoints: 400,"
@@ -543,13 +543,13 @@ export const IT_SERVICES: ITService[] = []
     marketPrice: "$18,000 - $80,000/month",""
     roi: "250-500%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Palo Alto", "Cisco", "Fortinet", "Check Point", "pfSense", "OpenVPN"],""
       integrations: ["SIEM platforms", "Monitoring tools", "Identity management", "Security scanners"],"
       apiEndpoints: 200,"
@@ -609,13 +609,13 @@ export const IT_SERVICES: ITService[] = []
     marketPrice: "$12,000 - $60,000/month",""
     roi: "200-400%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["PostgreSQL", "MySQL", "SQL Server", "Oracle", "MongoDB", "Redis"],""
       integrations: ["Applications", "Backup systems", "Monitoring tools", "Security platforms"],"
       apiEndpoints: 100,"
@@ -675,13 +675,13 @@ export const IT_SERVICES: ITService[] = []
     marketPrice: "$8,000 - $40,000/month",""
     roi: "150-300%",""
     innovationLevel: "Standard","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Remote desktop", "Ticketing systems", "Monitoring tools", "Asset management", "Knowledge base"],""
       integrations: ["Active Directory", "Email systems", "Cloud services", "Security tools"],"
       apiEndpoints: 50,"
@@ -741,13 +741,13 @@ export const IT_SERVICES: ITService[] = []
     marketPrice: "$15,000 - $150,000/project",""
     roi: "200-400%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform"],""
       integrations: ["VMware", "Hyper-V", "On-premises systems", "SaaS applications"],"
       apiEndpoints: 200,"
@@ -807,13 +807,13 @@ export const IT_SERVICES: ITService[] = []
     marketPrice: "$12,000 - $75,000/project",""
     roi: "250-500%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Nessus", "Metasploit", "Burp Suite", "Wireshark", "SIEM tools", "Firewall management"],""
       integrations: ["Active Directory", "Email systems", "Network infrastructure", "Cloud platforms"],"
       apiEndpoints: 100,"
@@ -873,13 +873,13 @@ export const IT_SERVICES: ITService[] = []
     marketPrice: "$18,000 - $120,000/project",""
     roi: "300-600%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Kubernetes", "Docker", "Terraform"],""
       integrations: ["Git repositories", "Cloud platforms", "Monitoring tools", "Security scanners"],"
       apiEndpoints: 300,"
@@ -939,13 +939,13 @@ export const IT_SERVICES: ITService[] = []
     marketPrice: "$20,000 - $200,000/project",""
     roi: "250-500%",""
     innovationLevel: "Advanced","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Python", "R", "SQL", "Tableau", "Power BI", "Apache Spark"],""
       integrations: ["ERP systems", "CRM platforms", "Cloud data sources", "APIs"],"
       apiEndpoints: 400,"
@@ -1005,13 +1005,13 @@ export const IT_SERVICES: ITService[] = []
     marketPrice: "$14,000 - $80,000/project",""
     roi: "200-400%",""
     innovationLevel: "Standard","
-    contactInfo: {,"}
+    contactInfo: {"}
   phone: "+1 302 464 0950",""
       email: "kleber@ziontechgroup.com",""
       website: "https://ziontechgroup.com",""
       address: "364 E Main St STE 1008 Middletown DE 19709""
     },
-    technicalSpecs: {,"}
+    technicalSpecs: {"}
   technology: ["Cisco", "Fortinet", "Palo Alto", "Ubiquiti", "Meraki", "SNMP"],""
       integrations: ["Active Directory", "Email systems", "Cloud services", "Security tools"],"
       apiEndpoints: 150,"
