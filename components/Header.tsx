@@ -22,9 +22,9 @@ import {
   Building,
   Heart,
   DollarSign,
-  ShoppingCart,
   BookOpen,
-  Video
+  ShoppingCart,
+  Monitor
 } from 'lucide-react';
 
 const navigation = [
@@ -33,10 +33,10 @@ const navigation = [
     href: '/services',
     icon: Settings,
     children: [
-      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '35+' },
-      { name: 'IT Services', href: '/it-services', icon: Network, count: '30+' },
-      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '40+' },
-      { name: 'All Services', href: '/services', icon: Globe, count: '105+' }
+      { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '40+' },
+      { name: 'IT Services', href: '/it-services', icon: Network, count: '35+' },
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '45+' },
+      { name: 'All Services', href: '/services', icon: Globe, count: '120+' }
     ]
   },
   {
@@ -59,10 +59,10 @@ const navigation = [
     children: [
       { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
       { name: 'Finance', href: '/industries/finance', icon: DollarSign },
-      { name: 'E-commerce', href: '/industries/ecommerce', icon: ShoppingCart },
       { name: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
       { name: 'Education', href: '/industries/education', icon: BookOpen },
-      { name: 'Government', href: '/industries/government', icon: Shield }
+      { name: 'Retail', href: '/industries/retail', icon: ShoppingCart },
+      { name: 'Government', href: '/industries/government', icon: Building }
     ]
   },
   {
@@ -74,8 +74,8 @@ const navigation = [
       { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
       { name: 'Blog', href: '/blog', icon: MessageSquare },
       { name: 'API Reference', href: '/api-docs', icon: Settings },
-      { name: 'White Papers', href: '/whitepapers', icon: FileText },
-      { name: 'Webinars', href: '/webinars', icon: Video }
+      { name: 'White Papers', href: '/white-papers', icon: FileText },
+      { name: 'Webinars', href: '/webinars', icon: Monitor }
     ]
   },
   {
