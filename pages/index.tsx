@@ -34,8 +34,17 @@ const services = [
 
 export default function HomePage() {
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <MainLayout>
+=======
     <Layout>
+>>>>>>> cursor/website-audit-and-update-with-deployment-090e
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+=======
+    <Layout>
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+>>>>>>> e26c98559061d7c7825ec15309661c1e278a39e3
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
@@ -246,7 +255,16 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
       </div>
+<<<<<<< HEAD
+    </MainLayout>
+=======
     </Layout>
+>>>>>>> cursor/website-audit-and-update-with-deployment-090e
+=======
+    </div>
+    </Layout>
+>>>>>>> e26c98559061d7c7825ec15309661c1e278a39e3
   );
 }
