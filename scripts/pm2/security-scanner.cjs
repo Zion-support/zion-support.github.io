@@ -21,7 +21,8 @@ class SecurityScanner {}
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }
+});
     };
   };
   log(message) {}
@@ -43,7 +44,8 @@ class SecurityScanner {}
         encoding: 'utf8',
         stdio: 'pipe',
         cwd: process.cwd();
-      });
+      }
+});
 
       const auditData = JSON.parse(auditResult);
       const vulnerabilities = auditData.vulnerabilities || {};
@@ -51,7 +53,7 @@ class SecurityScanner {}
       const highCount = Object.values(vulnerabilities).filter(v => v.severity === 'high').length;
       const moderateCount = Object.values(vulnerabilities).filter(v => v.severity === 'moderate').length;
 
-      this.log(`Found ${criticalCount} critical, ${highCount} high, ${moderateCount} moderate vulnerabilities`);`
+      this.log(`Found ${criticalCount} critical, ${highCount} high, ${moderateCount} moderate vulnerabilities`);
 
       if (criticalCount > 0 && this.alertOnCritical) {}
         this.log('ALERT: Critical vulnerabilities found!');
@@ -65,7 +67,7 @@ class SecurityScanner {}
         vulnerabilities;
       };
     } catch (error) {}
-      this.log(`Dependency scan failed: ${error.message}`);`
+      this.log(`Dependency scan failed: ${error.message}`);
       return { scanned: false, error: error.message };
     };
   };
@@ -100,14 +102,15 @@ class SecurityScanner {}
                 type: 'hardcoded_secret',
                 matches: matches.length,
                 severity: 'high'
-              });
+              }
+});
             };
           };
         } catch (err) {}
           // Skip files that can't be read;
         };
       };
-      this.log(`Found ${securityIssues.length} potential security issues in code`);`
+      this.log(`Found ${securityIssues.length} potential security issues in code`);
 
       return {}
         scanned: true,
@@ -115,7 +118,7 @@ class SecurityScanner {}
         totalIssues: securityIssues.length;
       };
     } catch (error) {}
-      this.log(`Code scan failed: ${error.message}`);`
+      this.log(`Code scan failed: ${error.message}`);
       return { scanned: false, error: error.message };
     };
   };
@@ -146,20 +149,22 @@ class SecurityScanner {}
               file,
               type: 'unsafe_eval',
               severity: 'high'
-            });
+            }
+});
           };
           if (content.includes('process.env') && !content.includes('process.env.NODE_ENV')) {}
             configIssues.push({})
               file,
               type: 'env_exposure',
               severity: 'medium'
-            });
+            }
+});
           };
         } catch (err) {}
           // Skip files that can't be read;
         };
       };
-      this.log(`Found ${configIssues.length} configuration security issues`);`
+      this.log(`Found ${configIssues.length} configuration security issues`);
 
       return {}
         scanned: true,
@@ -167,7 +172,7 @@ class SecurityScanner {}
         totalIssues: configIssues.length;
       };
     } catch (error) {}
-      this.log(`Config scan failed: ${error.message}`);`
+      this.log(`Config scan failed: ${error.message}`);
       return { scanned: false, error: error.message };
     };
   };
@@ -215,11 +220,11 @@ class SecurityScanner {}
     const reportFile = path.join(__dirname, '../../logs/pm2/security-scanner-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log(`Security report generated: ${reportFile}`);`
+    this.log(`Security report generated: ${reportFile}`);
     return report;
   };
   async start() {}
-    this.log(`${this.processName} started`);`
+    this.log(`${this.processName} started`);
     
     try {}
       const report = await this.generateReport();
@@ -231,14 +236,14 @@ class SecurityScanner {}
       if (totalIssues === 0) {}
         this.log('Security scan completed - no issues found');
       } else {}
-        this.log(`Security scan completed - found ${totalIssues} issues`);`
+        this.log(`Security scan completed - found ${totalIssues} issues`);
         
         if (report.dependencyScan.critical > 0 && this.alertOnCritical) {}
           this.log('ALERT: Critical vulnerabilities detected!');
         };
       };
     } catch (error) {}
-      this.log(`Security scan error: ${error.message}`);`
+      this.log(`Security scan error: ${error.message}`);
     };
   };
 };

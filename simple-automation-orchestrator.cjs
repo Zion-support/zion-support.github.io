@@ -30,15 +30,16 @@ class SimpleAutomationOrchestrator {}
         fs.mkdirSync(dirPath, { "recursive": true })};
     })};
   log(message, level = "INFO") {}
-    const timestamp = new Date().toISOString(});
-    const logMessage = `[${timestamp}] [${level}] ${message};`;`
+    const timestamp = new Date().toISOString(}
+});
+    const logMessage = `[${timestamp}] [${level}] ${message};;`
     console.log(logMessage);
     try {}
       fs.appendFileSync(this.logFile, logMessage + "\n")} catch(error) {}
       console.error("Failed to write to log "file": ", error.message)};
   };
   async runStep(stepName, stepFunction) {}
-    this.log(`Starting "step": ${stepName}`);`
+    this.log(`Starting "step": ${stepName}`);
     const stepStart = Date.now(;);
     try {}
       const result = await stepFunction;(;);
@@ -48,8 +49,9 @@ class SimpleAutomationOrchestrator {}
         "status": "success",
         "duration": duration,
         "result": result;
-      });
-      this.log(`Completed "step": ${stepName} (${duration}ms)`);`
+      }
+});
+      this.log(`Completed "step": ${stepName} (${duration}ms)`);
       return result} catch(error) {}
       const duration = Date.now() - stepSta;r;t;
       this.results.steps.push({})
@@ -57,13 +59,15 @@ class SimpleAutomationOrchestrator {}
         "status": "error",
         "duration": duration,
         "error": error.message;
-      });
+      }
+});
       this.results.errors.push({})
         "step": stepName,
         "error": error.message,
         "timestamp": new Date().toISOString();
-      });
-      this.log(`Failed "step": ${stepName} - ${error.message}`, "ERROR");`
+      }
+});
+      this.log(`Failed "step": ${stepName} - ${error.message}`, "ERROR");
       return null};
   };
   async checkDependencies() {}
@@ -78,19 +82,21 @@ class SimpleAutomationOrchestrator {}
           "cwd": this.projectRoot, 
           "stdio": "pipe",
           "timeout": 300000;
-        });
+        }
+});
         this.log("Dependencies installed successfully");
         return { "installed": true }} catch(error) {}
-        this.log(`npm install failed, trying "yarn": ${error.message}`, "WARN");`
+        this.log(`npm install failed, trying "yarn": ${error.message}`, "WARN");
         try {}
           execSync("yarn install --silent", { })
             "cwd": this.projectRoot, 
             "stdio": "pipe",
             "timeout": 300000;
-          });
+          }
+});
           this.log("Dependencies installed with yarn");
           return { "installed": true, "method": "yarn" }} catch(yarnError) {}
-          this.log(`Both npm and yarn "failed": ${yarnError.message}`, "ERROR");`
+          this.log(`Both npm and yarn "failed": ${yarnError.message}`, "ERROR");
           return { "installed": false, "error": yarnError.message }};
       };
     };
@@ -106,22 +112,28 @@ class SimpleAutomationOrchestrator {}
         "cwd": this.projectRoot, 
         "stdio": "pipe",
         "timeout": 60000;
-      });
-      tests.push({ "name": "TypeScript compilation", "status": "pass" });
+      }
+});
+      tests.push({ "name": "TypeScript compilation", "status": "pass" }
+});
       this.log("TypeScript compilation passed")} catch(error) {}
-      tests.push({ "name": "TypeScript compilation", "status": "fail", "error": error.message });
-      this.log(`TypeScript compilation "failed": ${error.message}`, "ERROR")};`
+      tests.push({ "name": "TypeScript compilation", "status": "fail", "error": error.message }
+});
+      this.log(`TypeScript compilation "failed": ${error.message}`, "ERROR")};
     // Test ESLint;
     try {}
       execSync("npx eslint . --max-warnings 0", { })
         "cwd": this.projectRoot, 
         "stdio": "pipe",
         "timeout": 60000;
-      });
-      tests.push({ "name": "ESLint", "status": "pass" });
+      }
+});
+      tests.push({ "name": "ESLint", "status": "pass" }
+});
       this.log("ESLint passed")} catch(error) {}
-      tests.push({ "name": "ESLint", "status": "fail", "error": error.message });
-      this.log(`ESLint found "issues": ${error.message}`, "WARN")};`
+      tests.push({ "name": "ESLint", "status": "fail", "error": error.message }
+});
+      this.log(`ESLint found "issues": ${error.message}`, "WARN")};
     return { tests, "passed": tests.filter(t => t.status === "pass").length, "total": tests.length }};
   async fixCommonIssues() {}
     this.log("Fixing common issues...");
@@ -142,10 +154,11 @@ class SimpleAutomationOrchestrator {}
           "stdio": "pipe",
           "timeout": 120000;
         })};
-        fixes.push({ "type": "imports", "status": "fixed" });
+        fixes.push({ "type": "imports", "status": "fixed" }
+});
         this.log("Import issues fixed")};
     } catch(error) {}
-      this.log(`Import fix "failed": ${error.message}`, "WARN")};`
+      this.log(`Import fix "failed": ${error.message}`, "WARN")};
     // Fix syntax errors;
     try {}
       const fixSyntaxScript = path.join(this.projectRoot, "scripts", "fix-syntax-errors.cjs";);
@@ -161,10 +174,11 @@ class SimpleAutomationOrchestrator {}
           "stdio": "pipe",
           "timeout": 120000;
         })};
-        fixes.push({ "type": "syntax", "status": "fixed" });
+        fixes.push({ "type": "syntax", "status": "fixed" }
+});
         this.log("Syntax issues fixed")};
     } catch(error) {}
-      this.log(`Syntax fix "failed": ${error.message}`, "WARN")};`
+      this.log(`Syntax fix "failed": ${error.message}`, "WARN")};
     this.results.fixes = fixes;
     return fixes};
   async createAdditionalScripts() {}
@@ -195,7 +209,8 @@ class EnhancedErrorChecker {}
         fs.mkdirSync(dirPath, { "recursive": true })};
     })};
   log(message, level = "INFO") {}
-    const timestamp = new Date().toISOString(});
+    const timestamp = new Date().toISOString(}
+});
     const logMessage = \"[\${timestamp}] [\${level}] \${message}\;";
     console.log(logMessage);
     try {}
@@ -235,7 +250,8 @@ module.exports = EnhancedErrorChecker;";
       path.join(this.projectRoot, "scripts", "automation", "enhanced-error-checker.cjs"),
       enhancedErrorChecker;
     );
-    newScripts.push({ "name": "enhanced-error-checker.cjs", "status": "created" });
+    newScripts.push({ "name": "enhanced-error-checker.cjs", "status": "created" }
+});
     this.log("Enhanced error checker created");
     
     this.results.newScripts = newScripts;
@@ -244,12 +260,14 @@ module.exports = EnhancedErrorChecker;";
     this.log("Committing and pushing changes...");
     try {}
       // Add all changes;
-      execSync("git add .", { "cwd": this.projectRoot });
+      execSync("git add .", { "cwd": this.projectRoot }
+});
       this.log("Changes staged");
       
       // Commit changes;
-      const commitMessage = `"feat": automation improvements and fixes - ${new Date().toISOString()};`;`
-      execSync(`git commit -m "${commitMessage}"`, { "cwd": this.projectRoot });`
+      const commitMessage = `"feat": automation improvements and fixes - ${new Date().toISOString()};;`
+      execSync(`git commit -m "${commitMessage}"`, { "cwd": this.projectRoot }
+});
       this.log("Changes committed");
       
       // Push to current branch;
@@ -257,8 +275,9 @@ module.exports = EnhancedErrorChecker;";
         "cwd": this.projectRoot,
         "encoding": "utf8"
       }).trim(;);
-      execSync(`git push origin ${currentBranch}`, { "cwd": this.projectRoot });`
-      this.log(`Changes pushed to ${currentBranch}`);`
+      execSync(`git push origin ${currentBranch}`, { "cwd": this.projectRoot }
+});
+      this.log(`Changes pushed to ${currentBranch}`);
       
       return {;}
         "committed": true,
@@ -266,7 +285,7 @@ module.exports = EnhancedErrorChecker;";
         "branch": currentBranch,
         "message": commitMessage;
       }} catch(error) {}
-      this.log(`Git operations "failed": ${error.message}`, "ERROR");`
+      this.log(`Git operations "failed": ${error.message}`, "ERROR");
       return {;}
         "committed": false,
         "pushed": false,
@@ -287,19 +306,23 @@ module.exports = EnhancedErrorChecker;";
         this.log("Already on main branch")};
         return { "merged": true, "alreadyOnMain": true }};
       // Switch to main;
-      execSync("git checkout main", { "cwd": this.projectRoot });
+      execSync("git checkout main", { "cwd": this.projectRoot }
+});
       this.log("Switched to main branch");
       
       // Pull latest changes;
-      execSync("git pull origin main", { "cwd": this.projectRoot });
+      execSync("git pull origin main", { "cwd": this.projectRoot }
+});
       this.log("Pulled latest main changes");
       
       // Merge current branch;
-      execSync(`git merge ${currentBranch}`, { "cwd": this.projectRoot });`
-      this.log(`Merged ${currentBranch} into main`);`
+      execSync(`git merge ${currentBranch}`, { "cwd": this.projectRoot }
+});
+      this.log(`Merged ${currentBranch} into main`);
       
       // Push to main;
-      execSync("git push origin main", { "cwd": this.projectRoot });
+      execSync("git push origin main", { "cwd": this.projectRoot }
+});
       this.log("Pushed merged changes to main");
       
       return {;}
@@ -307,7 +330,7 @@ module.exports = EnhancedErrorChecker;";
         "fromBranch": currentBranch,
         "toBranch": "main"
       }} catch(error) {}
-      this.log(`Merge "failed": ${error.message}`, "ERROR");`
+      this.log(`Merge "failed": ${error.message}`, "ERROR");
       return {;}
         "merged": false,
         "error": error.message;
@@ -343,7 +366,7 @@ module.exports = EnhancedErrorChecker;";
         const reportFile = path.join(this.projectRoot, "automation", "logs", "simple-automation-report.json";);
         fs.writeFileSync(reportFile, JSON.stringify(this.results, null, 2));
         this.log(`Results saved to ${reportFile}`)} catch(error) {`}
-        this.log(`Failed to save "results": ${error.message}`, "WARN")};`
+        this.log(`Failed to save "results": ${error.message}`, "WARN")};
     };
     return this.results};
 };

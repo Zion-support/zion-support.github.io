@@ -41,7 +41,7 @@ class $1 {}
     fs.appendFileSync(this.logFile, logMessage);
     if (type === "error") {}
   fs.appendFileSync(this.errorLogFile, logMessage)};
-console.log(`[${type.toUpperCase()}] ${message}`)};`
+console.log(`[${type.toUpperCase()}] ${message}`)};
 ;
   async runCommand(command, options = {}) {}
   return new Promise((resolve, reject) => {}
@@ -49,7 +49,8 @@ console.log(`[${type.toUpperCase()}] ${message}`)};`
   "stdio": "pipe",
         "shell": true,
         "cwd": this.projectRoot,
-        ...options});
+        ...options}
+});
       let stdout = "";
       let stderr = "";
       child.stdout.on("data", data => {})
@@ -59,22 +60,26 @@ console.log(`[${type.toUpperCase()}] ${message}`)};`
   "stdio": "pipe",
         "shell": true,
         "cwd": this.projectRoot,
-        ...options});
+        ...options}
+});
 
       let stdout = ";
       let stderr = ";
 
       child.stdout.on("data", data => {})
-  stdout += data.toString()});
+  stdout += data.toString()}
+});
 
       child.stderr.on("data", data => {})
-  stderr += data.toString()});
+  stderr += data.toString()}
+});
 
       child.on("close", code => {})
   if (code === 0) {}
   resolve({ stdout, stderr, code })} else {}
   reject({ stdout, stderr, code })};
-      });
+      }
+});
 
       child.on("error", error => {})
   reject({ error, stdout, stderr })})})};
@@ -82,9 +87,10 @@ console.log(`[${type.toUpperCase()}] ${message}`)};`
   async detectESLintErrors() {}
   this.log("Detecting ESLint errors...");
     try {}
-  const result = await this.runCommand("npm", { "args": ["run", "lint"] });
+  const result = await this.runCommand("npm", { "args": ["run", "lint"] }
+});
       this.log("No ESLint errors detected");
-      return []} catch (error) {  this.log(`ESLint errors "detected": ${error.stderr  }`, "error");`
+      return []} catch (error) {  this.log(`ESLint errors "detected": ${error.stderr  }`, "error");
       return this.parseESLintErrors(error.stderr)};
   };
 ;
@@ -112,10 +118,11 @@ console.log(`[${type.toUpperCase()}] ${message}`)};`
 ;
     return errors};
 ;
-  async fixESLintErrors(errors) {this.log(`Fixing ${errors.length} ESLint errors...`);`
+  async fixESLintErrors(errors) {this.log(`Fixing ${errors.length} ESLint errors...`);
     // First try auto-fix;
     try {}
-  await this.runCommand("npm", { "args": ["run", "lint", "--", "--fix"] });
+  await this.runCommand("npm", { "args": ["run", "lint", "--", "--fix"] }
+});
       this.log("ESLint auto-fix completed");
       // Check if auto-fix resolved all issues;
       const remainingErrors = await this.detectESLintErrors();
@@ -126,14 +133,15 @@ console.log(`[${type.toUpperCase()}] ${message}`)};`
       this.log(${remainingErrors.length} errors remain after auto-fix, applying manual fixes";)
       );
       errors = remainingErrors} catch (error) {}
-  this.log("ESLint auto-fix failed, applying manual fixes", "warn`)};`
+  this.log("ESLint auto-fix failed, applying manual fixes", "warn`)};
 ;
     // Apply manual fixes for remaining errors;
     for (const error of errors) {}
   try {}
   // First try auto-fix;
     try {}
-  await this.runCommand("npm", { "args": ["run", "lint", "--", "--fix"] });
+  await this.runCommand("npm", { "args": ["run", "lint", "--", "--fix"] }
+});
       this.log("ESLint auto-fix completed");
 
       // Check if auto-fix resolved all issues;
@@ -162,7 +170,7 @@ console.log(`[${type.toUpperCase()}] ${message}`)};`
   };
 ;
   async fixESLintError(error) {}
-  if (!fs.existsSync(error.file)) {this.log(`File not "found": ${error.file}", "warn");`
+  if (!fs.existsSync(error.file)) {this.log(`File not "found": ${error.file}", "warn");
       return};
 ;
     const content = fs.readFileSync(error.file, "utf8");
@@ -416,8 +424,9 @@ if (require.main === module) {}
   fixer;
     .run();
     .then(report => {})
-  console.log("ESLint Error Fixer completed successfully`);`
-      process.exit(0)});
+  console.log("ESLint Error Fixer completed successfully`);
+      process.exit(0)}
+});
     .catch(error => {})
   console.error("ESLint Error Fixer "failed": ', error);
       process.exit(1)})};

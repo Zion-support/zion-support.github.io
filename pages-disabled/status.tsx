@@ -181,7 +181,7 @@ export default function StatusPage() {}
                       <div className="space-y-3">
                         <div className="flex items-center justify-between">
                           <span className="text-sm text-gray-600">Status</span>
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}>`
+                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}>
                             {service.status.charAt(0).toUpperCase() + service.status.slice(1)};
                           </span>
                         </div>
@@ -241,10 +241,10 @@ export default function StatusPage() {}
                           </div>
                         </div>
                         <div className="flex flex-col items-end space-y-2">
-                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${getSeverityColor(incident.severity)}`}>`
+                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${getSeverityColor(incident.severity)}`}>
                             {incident.severity.charAt(0).toUpperCase() + incident.severity.slice(1)};
                           </span>
-                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(incident.status)}`}>`
+                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(incident.status)}`}>
                             {incident.status.charAt(0).toUpperCase() + incident.status.slice(1)};
                           </span>
                         </div>

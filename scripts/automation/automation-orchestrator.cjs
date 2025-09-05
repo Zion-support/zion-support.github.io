@@ -28,7 +28,7 @@ const path = require("path")
   this.processes.get(process.name).status = "errored"
   this.processes.get(process.name).status = "errored"
     if (log.includes("ERROR") || log.includes("CRITICAL")) {console.error("⚠  ${process.name}:", log)} else if (log.includes("SUCCESS") || log.includes("COMPLETED")) {console.log(" ${process.name}:")
-  console.log("� Critical process ${processName} failed, attempting recovery...")
+// console.log("� Critical process ${processName} failed, attempting recovery...")
   console.log("� Critical process ${processName} failed, attempting recovery...")
     if (!process) return;"
 "
@@ -111,7 +111,7 @@ const path = require("path")
   console.log(`� Attempting to restart unhealthy process ${processName}...``)
       health.issues.includes(`Excessive restarts``)
       health.issues.includes("Low uptime")
-  console.log("� Attempting to restart unhealthy process ${processName}...")
+// console.log("� Attempting to restart unhealthy process ${processName}...")
       console.log("� Attempting to restart unhealthy process ${processName}..."")
       );"
       this.restartProcess(processName).catch(error => {console.error( Failed to restart ${processName}:, error.message")
@@ -131,12 +131,12 @@ const path = require("path")
   report.summary.healthyProcesses++} else if (health.status === "unhealthy")
   report.summary.unhealthyProcesses++} else if (process.status === "errored")
         "status"
-        "health": health.status,"schedule": schedule.interval ? `${schedule.interval / 1000}s` : """N/A"""`
+        "health": health.status,"schedule": schedule.interval ? `${schedule.interval / 1000}s` : """N/A"""
         "priority": schedule.priority || """N/A"""
 } else if (health.status === "unhealthy")
   report.summary.unhealthyProcesses++} else if (process.status === "errored")
         "status"
-        "health": health.status,"schedule": schedule.interval ? `${schedule.interval / 1000}s` : ""N/A""`
+        "health": health.status,"schedule": schedule.interval ? `${schedule.interval / 1000}s` : ""N/A""
         "priority": schedule.priority || ""N/A""
   report.recommendations.push("Review and optimize unhealthy processes")
   report.recommendations.push("Investigate and fix errored processes")

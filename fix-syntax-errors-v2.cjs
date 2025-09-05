@@ -21,7 +21,8 @@ function fixSyntaxErrors(filePath) {
         .filter(imp => imp && !imp.includes('//'))
         .join(',\n  ');
       return `import {\n  ${cleanImports}\n} from 'lucide-react';`;
-    });
+    }
+});
     
     // Fix object syntax errors (remove extra quotes and semicolons)
     content = content.replace(/"([^"]+)",""/g, '"$1"');
@@ -80,7 +81,8 @@ function fixSyntaxErrors(filePath) {
         return match + '`';
       }
       return match;
-    });
+    }
+});
     
     // Fix malformed JSX expressions
     content = content.replace(/\{([^}]*)\s*$/gm, (match, content) => {
@@ -88,7 +90,8 @@ function fixSyntaxErrors(filePath) {
         return match + '}';
       }
       return match;
-    });
+    }
+});
     
     // Write the fixed content back
     fs.writeFileSync(filePath, content, 'utf8');

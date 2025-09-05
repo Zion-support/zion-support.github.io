@@ -1,22 +1,52 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require('fs')
-    return match.replace(/,\s*$/, '')
-  content = content.replace(/\{\s*,/g, '{'})
-  content = content.replace(/>\s*,\s*$/gm, '>')
-  content = content.replace(/>\s*,\s*</g, '><')
-  content = content.replace(/\)\s*\{\s*,/g, ') {'}
-  content = content.replace(/>\s*,\s*$/gm, '>')
-    return match.replace(/\}\);/g, '}\n      });'
-    return match.replace(/\}\);/g, '}\n      });'
-    const content = fs.readFileSync(filePath, 'utf8')
-      fs.writeFileSync(filePath, fixedContent, 'utf8')
-      fs.writeFileSync(filePath, fixedContent, 'utf8')
-console.log(' Starting ultimate syntax error fixing...')
-const filesToFix = ['components/ContactForm.tsx']
-  'components/ErrorBoundary.tsx'
-  'components/PerformanceMonitor.tsx'
-  'pages/cybersecurity.tsx'
-  'pages/docs.tsx'
-  console.log('\n All syntax errors have been fixed!')
-  console.log('\n All syntax errors have been fixed!')
-  console.log('\n No syntax errors found!')
+const path = require('path')
+
+function normalize(content) {
+  let result = content
+  // Remove commas between JSX tags
+  result = result.replace(/>\s*,\s*</g, '><')
+  // Remove stray commas after opening braces
+  result = result.replace(/\{\s*,/g, '{')
+  // Normalize ") {" to ") {"
+  result = result.replace(/\)\s*\{\s*,/g, ') {')
+  // Normalize "}
+});" endings that were split
+  result = result.replace(/\}\);/g, '}\n}
+});')
+  return result
+}
+
+function processFile(filePath) {
+  try {
+    const original = fs.readFileSync(filePath, 'utf8')
+    const fixed = normalize(original)
+    if (fixed !== original) {
+      fs.writeFileSync(filePath, fixed, 'utf8')
+      console.log(`Ultimate fixed: ${filePath}`)
+      return true
+    }
+    return false
+  } catch (e) {
+    console.error(`Ultimate fixer error for ${filePath}: ${e.message}`)
+    return false
+  }
+}
+
+function walk(dir, files = []) {
+  const entries = fs.readdirSync(dir, { withFileTypes: true })
+  for (const e of entries) {
+    if (e.name.startsWith('.git')) continue
+    const full = path.join(dir, e.name)
+    if (e.isDirectory()) walk(full, files)
+    else if (/\.(tsx|jsx|js|ts|cjs)$/.test(e.name)) files.push(full)
+  }
+  return files
+}
+
+console.log('Starting ultimate syntax fixer...')
+let count = 0
+for (const f of walk(process.cwd())) {
+  if (processFile(f)) count++
+}
+console.log(`Ultimate fixer updated ${count} files`)

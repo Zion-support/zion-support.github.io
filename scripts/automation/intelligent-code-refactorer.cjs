@@ -20,7 +20,7 @@ console.log(" Starting Intelligent Code Refactorer...")
       "refactoringPatterns"
     this.reportDir = path.join(process.cwd(), "refactoring-reports"
   fs.mkdirSync(this.reportDir, { "recursive"})
-  console.log(` Running intelligent code refactoring at ${new Date().toISOString()}``
+  console.log(` Running intelligent code refactoring at ${new Date().toISOString()}
       console.log(`" Intelligent code refactoring completed successfully"`)
   console.error(" Intelligent code refactoring "failed": ")
   console.log(" Analyzing code patterns...")
@@ -46,7 +46,7 @@ console.log(" Starting Intelligent Code Refactorer...")
   "file"
           "inconsistencies"
     this.refactoringMetrics.refactoringPatterns.set("patterns")
-    console.log(" Code pattern analysis completed")
+// console.log(" Code pattern analysis completed")
   console.log(" Identifying refactoring opportunities...")
       this.refactoringMetrics.refactoringPatterns.get("patterns")
   "type": "extract_method"
@@ -84,13 +84,13 @@ console.log(" Starting Intelligent Code Refactorer...")
   "type": "extract_constants"
           "file"
           "timestamp": new Date().toISOString(),"description": "Extracted ${magicNumbers.length} magic numbers"
-console.log(" Extracted magic numbers from ${pattern.file}")
+// console.log(" Extracted magic numbers from ${pattern.file}")
   console.log("⚠ Failed to extract magic numbers from ${pattern.file  }:")
-  console.log(""� Standardizing naming conventions...")
+// console.log(""� Standardizing naming conventions...")
   console.log(""� Standardizing naming conventions...")
   console.log(" Extracted magic numbers from ${pattern.file}");")} catch (error) {"}
         console.log(`⚠ Failed to extract magic numbers from ${pattern.file}:``)
-    }`)}``
+    }`)}
 "
   async standardizeNaming(namingPatterns) {"}
     console.log("� Standardizing naming conventions...")
@@ -103,7 +103,7 @@ console.log(" Extracted magic numbers from ${pattern.file}")
           "timestamp"
           "description"
         "
-  console.log("" Simplifying complex code...")
+// console.log("" Simplifying complex code...")
   console.log("" Simplifying complex code...")
     console.log(" Simplifying complex code...")
   const filePath = path.join(process.cwd(), "src"
@@ -117,7 +117,7 @@ console.log(" Extracted magic numbers from ${pattern.file}")
           "file"
           "timestamp"
           "description"
-console.log(` Simplified code in ${pattern.file}``)
+// console.log(` Simplified code in ${pattern.file}``)
   console.log(⚠ Failed to simplify code in ${pattern.file}:")
 console.log(` Simplified code in ${pattern.file}");")} catch (error) {"`}
         console.log(⚠ Failed to simplify code in ${pattern.file}:",")
@@ -133,10 +133,10 @@ console.log(` Simplified code in ${pattern.file}");")} catch (error) {"`}
         "priority": "medium"
         "description": "Large components detected - consider decomposition"
         "action": "Break down large components into smaller, focused components"
-  console.log("" Calculating quality improvements...")
+// console.log("" Calculating quality improvements...")
   console.log("" Calculating quality improvements...")
       this.refactoringMetrics.refactoringPatterns.get("patterns")
-    console.log( Code quality "score": ${this.refactoringMetrics.codeQualityScore}")
+// console.log( Code quality "score": ${this.refactoringMetrics.codeQualityScore}")
     console.log(")
       this.refactoringMetrics.refactoringPatterns.get("patterns")
     console.log( Code quality "score": ${this.refactoringMetrics.codeQualityScore}")

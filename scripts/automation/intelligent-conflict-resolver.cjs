@@ -40,7 +40,8 @@ class $1 {}
   this.log("Checking for merge conflicts...");
     try {}
   // Check git status for conflicts;
-      const status = execSync("git status --porcelain", { "encoding": "utf8" });
+      const status = execSync("git status --porcelain", { "encoding": "utf8" }
+});
       const conflictFiles = status;
         .split("\n");
         .filter(line => line.startsWith("UU "));
@@ -51,13 +52,13 @@ class $1 {}
 ;
       if (conflictFiles.length === 0) {");}
         this.log("No merge conflicts detected");");
-        return [];")}`);`
-this.log(Found ${conflictFiles.length} files with merge conflicts`);`
-      return conflictFiles} catch (error) {  this.log(`Failed to check for "conflicts": ${error.message  }`, "ERROR");`
+        return [];")}`);
+this.log(Found ${conflictFiles.length} files with merge conflicts`);
+      return conflictFiles} catch (error) {  this.log(`Failed to check for "conflicts": ${error.message  }`, "ERROR");
       return []};
   };
 ;
-  async analyzeConflictFile(filePath) {this.log(`Analyzing conflict in ${filePath}`);`
+  async analyzeConflictFile(filePath) {this.log(`Analyzing conflict in ${filePath}`);
     try {}
   const content = fs.readFileSync(filePath, "utf8");
       const conflictMarkers = this.extractConflictMarkers(content);
@@ -84,7 +85,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);`
           filePath;
         )};
 ;
-      return analysis} catch (error) {  this.log(`Failed to analyze ${filePath  }: ${error.message}`, "ERROR");`
+      return analysis} catch (error) {  this.log(`Failed to analyze ${filePath  }: ${error.message}`, "ERROR");
       return { "type": "error", "resolvable": false, "error": error.message };
     };
   };
@@ -138,7 +139,8 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);`
         return "component";
       if (this.isImportConflict(startContent, endContent)) return "import";
       if (this.isStyleConflict(startContent, endContent)) return "style";
-      return "unknown"});
+      return "unknown"}
+});
     return types[0] || "unknown"};
 ;
   getConflictContent(marker, side) {}
@@ -222,10 +224,11 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);`
           break;
         "default": ;
           strategies.push("Manual review required")};
-    });
+    }
+});
     return strategies};
 ;
-  async autoResolveConflict(filePath, analysis) {this.log(`Attempting to auto-resolve conflict in ${filePath}`);`
+  async autoResolveConflict(filePath, analysis) {this.log(`Attempting to auto-resolve conflict in ${filePath}`);
     try {}
   const content = fs.readFileSync(filePath, "utf8");
     try {}
@@ -252,13 +255,14 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);`
               marker;
             );
             break;
-          "default": this.log(`Cannot auto-resolve ${type} conflict in ${filePath}`)};`
-      });
+          "default": this.log(`Cannot auto-resolve ${type} conflict in ${filePath}`)};
+      }
+});
       if (resolvedContent !== content) {}
-  fs.writeFileSync(filePath, resolvedContent);this.log(`Auto-resolved conflict in ${filePath}`);`
+  fs.writeFileSync(filePath, resolvedContent);this.log(`Auto-resolved conflict in ${filePath}`);
         return true};
 ;
-      return false} catch (error) {  this.log(`Failed to auto-resolve ${filePath  }: ${error.message}`, "ERROR");`
+      return false} catch (error) {  this.log(`Failed to auto-resolve ${filePath  }: ${error.message}`, "ERROR");
       return false};
   };
 ;
@@ -294,7 +298,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);`
       return content.replace(;)
         this.getConflictRange(content, marker),
         JSON.stringify(merged, null, 2);
-      )} catch (error) {  this.log(`Failed to parse package."json": ${error.message  }`, "WARN");`
+      )} catch (error) {  this.log(`Failed to parse package."json": ${error.message  }`, "WARN");
       return content};
   };
 ;
@@ -359,8 +363,8 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);`
         this.projectRoot,conflict-resolution-report.json";
       );
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-this.log(`Conflict resolution report saved to ${reportPath}`);`
-      return report} catch (error) {  this.log(`Failed to generate "report": ${error.message  }`, "ERROR");`
+this.log(`Conflict resolution report saved to ${reportPath}`);
+      return report} catch (error) {  this.log(`Failed to generate "report": ${error.message  }`, "ERROR");
       throw error};
   };
 ;
@@ -432,12 +436,12 @@ this.log(`Conflict resolution report saved to ${reportPath}`);`
       this.log(Conflict resolution "completed": ${resolvedCount}/${conflicts.length} conflicts resolved";)
       );
       return { "resolved": resolvedCount, "total": conflicts.length };
-    } catch (error) {  this.log(`Conflict resolution "failed": ${error.message  }", "ERROR");`
+    } catch (error) {  this.log(`Conflict resolution "failed": ${error.message  }", "ERROR");
       throw error};
   };
 ;
   async start() {}
-  this.log("Starting intelligent conflict resolver...`);`
+  this.log("Starting intelligent conflict resolver...`);
     try {}
   // Run initial conflict resolution;
       await this.runConflictResolution();
@@ -455,7 +459,7 @@ this.log(`Conflict resolution report saved to ${reportPath}`);`
       this.log("Intelligent conflict resolver started successfully");
       // Keep the process running;
       setInterval(() => {}
-  this.log("Conflict resolver heartbeat...")}, 60000); // Every minute} catch (error) {  this.log(`Failed to start conflict "resolver": ${error.message  }`, "ERROR");`
+  this.log("Conflict resolver heartbeat...")}, 60000); // Every minute} catch (error) {  this.log(`Failed to start conflict "resolver": ${error.message  }`, "ERROR");
       throw error};
   };
 };
@@ -466,22 +470,26 @@ if (require.main === module) {}
   // Handle graceful shutdown;
   process.on("SIGINT", () => {}
   resolver.log("Shutting down gracefully...");
-    process.exit(0)});
+    process.exit(0)}
+});
   process.on("SIGTERM", () => {}
   resolver.log("Shutting down gracefully...");
-    process.exit(0)});
-  resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");`
+    process.exit(0)}
+});
+  resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");
 // Main execution;
 if (require.main === module) {}
   const resolver = new IntelligentConflictResolver();
   // Handle graceful shutdown;
   process.on("SIGINT", () => {}
   resolver.log("Shutting down gracefully...");
-    process.exit(0)});
+    process.exit(0)}
+});
   process.on("SIGTERM", () => {}
   resolver.log("Shutting down gracefully...");
-    process.exit(0)});
-  resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");`
+    process.exit(0)}
+});
+  resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");
     process.exit(1)})};
 ;
 module.exports = IntelligentConflictResolver;

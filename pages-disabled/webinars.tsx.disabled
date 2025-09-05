@@ -135,7 +135,8 @@ export default function WebinarsPage() {
       (selectedStatus === "Upcoming" && webinar.status === "upcoming") ||""
       (selectedStatus === "Recorded" && webinar.status === "recorded");"
     return categoryMatch && statusMatch;
-  });
+  }
+});
 
   return (
     <div className="min-h-screen bg-gray-50">"
@@ -334,13 +335,13 @@ export default function WebinarsPage() {
                   </div>
                   <div className="p-6">"
 </div>
-                    <div className="flex items-center gap-2 mb-3">"`
-</div>`
-                      <Tag className="w-4 h-4 text-blue-600" />"`
-</$1>`
-                      <span className="text-sm text-blue-600 font-medium">"`
-</span>`
-                      </span>`
+                    <div className="flex items-center gap-2 mb-3">"
+</div>
+                      <Tag className="w-4 h-4 text-blue-600" />"
+</$1>
+                      <span className="text-sm text-blue-600 font-medium">"
+</span>
+                      </span>
                       <span className={`text-xs px-2 py-1 rounded-full ${"
                         webinar.status === 'upcoming'''
                           ? 'bg-green-100 text-green-800'''
@@ -448,11 +449,11 @@ export default function WebinarsPage() {
               />
 </input>"
               <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">"
-</button>`
-              </button>`
-            </div>`
-          </div>`
-        </div>`
-      </section>`
-    </div>`
+</button>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 }

@@ -106,7 +106,7 @@ module."exports": = {"}
       // "Run": health check every 15 minutes;"]"
       cron_restart: */15: * * * *'']',
   deploy: {}
-    production: {,'}
+    production: {'}
   user:';nod,e, ';''
       "host": localhost', ';''
       "ref": 'origin/mai,n, ';''

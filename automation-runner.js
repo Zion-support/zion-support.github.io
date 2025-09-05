@@ -29,7 +29,8 @@ class AutomationRunner {
       const output = execSync(command, {
         encoding: 'utf8',
         stdio: 'pipe'
-      });
+      }
+});
       this.log(`${description} completed successfully`, 'SUCCESS');
       return { success: true, output };
     } catch (error) {

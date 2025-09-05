@@ -75,7 +75,8 @@ function fixFinalSyntax(filePath) {
         return match + '`';
       }
       return match;
-    });
+    }
+});
     
     // Fix malformed JSX expressions
     content = content.replace(/\{([^}]*)\s*$/gm, (match, content) => {
@@ -83,7 +84,8 @@ function fixFinalSyntax(filePath) {
         return match + '}';
       }
       return match;
-    });
+    }
+});
     
     // Write the fixed content back
     fs.writeFileSync(filePath, content, 'utf8');

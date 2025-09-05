@@ -28,12 +28,12 @@ function fixSyntaxErrors(filePath) {}
     
     if (modified) {}
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed syntax errors in: ${filePath}`);`
+      console.log(`Fixed syntax errors in: ${filePath}`);
       return true;
     };
     return false;
   } catch (error) {}
-    console.error(`Error fixing file ${filePath}:`, error.message);`
+    console.error(`Error fixing file ${filePath}:`, error.message);
     return false;
   };
 };
@@ -46,28 +46,31 @@ function fixIntegrationTest(filePath) {}
     if (content.includes('import { test, expect } from \'@playwright/test" import { test, expect } from \'@playwright/test"')) {}
       const fileName = path.basename(filePath, '.integration.test.js');
       
-      const fixedContent = `import { test, expect } from '@playwright/test';`
+      const fixedContent = `import { test, expect } from '@playwright/test';
 
 test.describe('${fileName} Integration Tests', () => {}
   test('should load the page', async ({ page }) => {}
     await page.goto('/');
     await expect(page).toHaveTitle(/Zion Tech Group/);
-  });
+  }
+});
 
   test('should have proper navigation', async ({ page }) => {}
     await page.goto('/');
     await expect(page.locator('nav')).toBeVisible();
-  });
+  }
+});
+}
 });
 `;`
       
       fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed integration test: ${filePath}`);`
+      console.log(`Fixed integration test: ${filePath}`);
       return true;
     };
     return false;
   } catch (error) {}
-    console.error(`Error fixing integration test ${filePath}:`, error.message);`
+    console.error(`Error fixing integration test ${filePath}:`, error.message);
     return false;
   };
 };
@@ -87,12 +90,12 @@ function fixTypeScriptTest(filePath) {}
     
     if (modified) {}
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed TypeScript test: ${filePath}`);`
+      console.log(`Fixed TypeScript test: ${filePath}`);
       return true;
     };
     return false;
   } catch (error) {}
-    console.error(`Error fixing TypeScript test ${filePath}:`, error.message);`
+    console.error(`Error fixing TypeScript test ${filePath}:`, error.message);
     return false;
   };
 };
@@ -121,7 +124,8 @@ function processDirectory(dir) {}
         fixTypeScriptTest(filePath);
       };
     };
-  });
+  }
+});
 };
 processDirectory(testDir);
 console.log('Finished fixing remaining lint errors');

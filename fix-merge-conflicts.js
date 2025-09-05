@@ -34,7 +34,7 @@ function fixMergeConflicts(filePath) {}
     const finalContent = cleanedLines.join('\n');''
     fs.writeFileSync(filePath, finalContent, 'utf8');''
     console.log(`Fixed merge conflicts "in": ${filePath}`)} catch (error) {``}
-    console.error(`Error fixing ${filePath}:`, error.message)};`
+    console.error(`Error fixing ${filePath}:`, error.message)};
 };
 function findFilesWithConflicts(dir) {}
   const files = [];
@@ -42,7 +42,7 @@ function findFilesWithConflicts(dir) {}
     const items = fs.readdirSync(currentDir);
     for (const item of items) {}
       const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);``
+      const stat = fs.statSync(fullPath);
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {''}
         traverse(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {''}
         const content = fs.readFileSync(fullPath, 'utf8');''

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from "../components/Layout";
 import { motion } from 'framer-motion';
-import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+import { Code, Book, Zap, Shield, CheckCircle, ArrowRight, Copy, Check, ExternalLink, Search, Filter, BookOpen, Globe, Terminal, Database, Server, Cpu, Lock, Clock, Users, BarChart3, Settings, Play, Pause, RotateCcw } from 'lucide-react';
 
 export default function APIPage() {
   const apiFeatures = [
@@ -31,35 +31,7 @@ export default function APIPage() {
     }
   ];
 
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import {
-  Code,
-  Copy,
-  Check,
-  ExternalLink,
-  Search,
-  Filter,
-  BookOpen,
-  Zap,
-  Shield,
-  Globe,
-  ArrowRight,
-  Terminal,
-  Database,
-  Server,
-  Cpu,
-  Lock,
-  Clock,
-  Users,
-  BarChart3,
-  Settings,
-  Play,
-  Pause,
-  RotateCcw
-} from 'lucide-react'
-import Layout from '../components/Layout'
-const apiEndpoints = [{
+  const apiEndpoints = [{
     method: 'GET',
     path: '/api/v1/services',
     description: 'Retrieve all available services',
@@ -109,7 +81,11 @@ const apiEndpoints = [{
       { code: 201, description: 'Quote created', example: '{ "quote_id": "456", "estimated_cost": "$10,000 - $15,000" }' },
       { code: 400, description: 'Bad Request', example: '{ "error": "Invalid project type" }' }]
   }]
-const apiFeatures = [{
+<<<<<<< HEAD
+const apiFeaturesDetailed = [{
+=======
+  const apiFeatures = [{
+>>>>>>> main
     title: 'RESTful API Design',
     description: 'Clean, intuitive REST API endpoints following industry best practices',
     icon: Code,
@@ -130,7 +106,7 @@ const apiFeatures = [{
   {
     title: 'Comprehensive Documentation',
     description: 'Interactive API documentation with examples and testing',
-    icon: BookOpen,
+    icon: Book,
     features: ['Interactive docs', 'Code examples', 'Testing interface', 'SDK generation']
   },
   {
@@ -145,6 +121,7 @@ const apiFeatures = [{
     icon: Server,
     features: ['Load balancing', 'Caching', 'CDN integration', 'Auto-scaling']
   }]
+<<<<<<< HEAD
 const sdkLanguages = [
   { name: 'JavaScript', icon: 'JS', color: 'bg-yellow-500' },
   { name: 'Python', icon: 'PY', color: 'bg-blue-500' },
@@ -152,7 +129,17 @@ const sdkLanguages = [
   { name: 'C#', icon: 'C#', color: 'bg-purple-500' },
   { name: 'PHP', icon: 'PHP', color: 'bg-indigo-500' },
   { name: 'Go', icon: 'GO', color: 'bg-cyan-500' }]
-export default function APIPage() {
+  
+  // UI State & helpers
+=======
+  const sdkLanguages = [
+    { name: 'JavaScript', icon: 'JS', color: 'bg-yellow-500' },
+    { name: 'Python', icon: 'PY', color: 'bg-blue-500' },
+    { name: 'Java', icon: 'J', color: 'bg-red-500' },
+    { name: 'C#', icon: 'C#', color: 'bg-purple-500' },
+    { name: 'PHP', icon: 'PHP', color: 'bg-indigo-500' },
+    { name: 'Go', icon: 'GO', color: 'bg-cyan-500' }]
+>>>>>>> main
   const [selectedEndpoint, setSelectedEndpoint] = useState(0)
   const [copiedCode, setCopiedCode] = useState<number | null>(null)
   const copyToClipboard = (text: string, index: number) => {
@@ -167,10 +154,10 @@ export default function APIPage() {
       .map((p: any) => `${p.name}: "example_${p.name}"`)
       .join(', ')
     if (endpoint.method === 'GET') {
-      return `fetch('${baseUrl}${endpoint.path}?${endpoint.parameters.map((p: any) => `${p.name}=example_${p.name}`).join('&')}')
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));`
+      return `fetch('${baseUrl}${endpoint.path}?${endpoint.parameters.map((p: any) => `${p.name}=example_${p.name}`).join('&')}')`
+        + `\n  .then(response => response.json())`
+        + `\n  .then(data => console.log(data))`
+        + `\n  .catch(error => console.error('Error:', error));`;
     } else {
       return `fetch('${baseUrl}${endpoint.path}', {
   method: '${endpoint.method}',
@@ -181,10 +168,10 @@ export default function APIPage() {
   body: JSON.stringify({
     ${exampleParams}
   })
-})
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error('Error:', error));`
+})`
+        + `\n.then(response => response.json())`
+        + `\n.then(data => console.log(data))`
+        + `\n.catch(error => console.error('Error:', error));`;
     }
   }
   return (
@@ -214,10 +201,10 @@ export default function APIPage() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {apiFeatures.map((feature, index) => {
+              {apiFeaturesDetailed.map((feature, index) => {
                 const IconComponent = feature.icon;
-                return (}
-                  <motion.div}
+                return (
+                  <motion.div
                     key={index}
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
                     initial={{ opacity: 0, y: 30 }}
@@ -235,7 +222,7 @@ export default function APIPage() {
                       {feature.description}
                     </p>
                     <ul className="space-y-2">
-                      {feature.features.map((item, itemIndex) => (}
+                      {feature.features.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                           {item}
