@@ -1,5 +1,6 @@
+import React from 'react'; import { render,screen,fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import TestimonialsSectiondynamic from '../components/TestimonialsSection.dynamic'; describe('TestimonialsSectiondynamic',() => { test('renders without crashing',() => { render(<TestimonialsSectiondynamic />); expect( screen.getByTestId('testimonialssection.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<TestimonialsSectiondynamic />)}); test('handles user interactions',() => { render(<TestimonialsSectiondynamic />)}); test('applies correct styling',() => { render(<TestimonialsSectiondynamic />)})});
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import TestimonialsSectiondynamic from '../components/TestimonialsSection.dynamic';
 
@@ -8,8 +9,7 @@ describe('TestimonialsSectiondynamic', () => {
     render(<TestimonialsSectiondynamic />);
     expect(
       screen.getByTestId('testimonialssection.dynamic')
-    ).toBeInTheDocument();
-  });
+    ).toBeInTheDocument()});
 
   test('displays correct content', () => {
     render(<TestimonialsSectiondynamic />);
@@ -24,5 +24,4 @@ describe('TestimonialsSectiondynamic', () => {
   test('applies correct styling', () => {
     render(<TestimonialsSectiondynamic />);
     // Add styling tests if needed
-  });
-});
+  })});

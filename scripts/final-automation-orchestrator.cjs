@@ -5,7 +5,7 @@ const path = require('path')
 const { execSync } = require('child_process');
 
 console.log('🎯 Final Automation Orchestrator');
-console.log('=================================');
+console.log('=====');
 
 // Function to run a command and return result;
 function runCommand(command, description) {

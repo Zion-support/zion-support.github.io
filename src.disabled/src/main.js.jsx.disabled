@@ -19,10 +19,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 // import { WhitelabelProvider } from '@/context/WhitelabelContext';
 // import { AppLayout } from '@/layout/AppLayout';
 // Import auth and notification providers
-<<<<<<< HEAD
 // import { AuthProvider } from "./context/auth/AuthProvider.jsx";
 // ;
-=======
 // import { AuthProvider } from "./src/context/auth/AuthProvider.jsx";
 // import { NotificationProvider } from "./context/notifications/NotificationContext";
 >>>>>>> origin/merge-pr-10625

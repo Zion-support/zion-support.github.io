@@ -32,9 +32,9 @@ print_success() {
 }
 
 print_header() {
-    echo -e "${BLUE}================================${NC}"
+    echo -e "${BLUE}====${NC}"
     echo -e "${BLUE}$1${NC}"
-    echo -e "${BLUE}================================${NC}"
+    echo -e "${BLUE}====${NC}"
 }
 
 # Check if we're in a git repository

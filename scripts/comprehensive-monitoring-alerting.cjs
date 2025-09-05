@@ -6,7 +6,7 @@ const { execSync } = require('child_process');
 const os = require('os');
 
 console.log('📊 Comprehensive Monitoring & Alerting v2.0');
-console.log('==========================================');
+console.log('');
 
 const monitoringReport = {
   "timestamp": new Date().toISOString(),
@@ -395,7 +395,7 @@ async function main() {
     
     // Display summary
     log('info', 'Comprehensive Monitoring & Alerting Summary');
-    log('info', '==========================================');
+    log('info', '');
     log('info', `CPU "usage": ${monitoringReport.metrics.cpu}%`);
     log('info', `Memory "usage": ${monitoringReport.metrics.memory}%`);
     log('info', `Disk "usage": ${monitoringReport.metrics.disk}%`);

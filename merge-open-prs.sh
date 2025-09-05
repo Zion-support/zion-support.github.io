@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "🔄 Open PR Merger"
-echo "=================="
+echo "===="
 echo ""
 
 # Colors for output
@@ -154,7 +154,7 @@ fi
 # Step 5: Summary
 echo ""
 echo "📈 PR MERGE SUMMARY"
-echo "=================="
+echo "===="
 echo "📋 PRs processed: $prs_processed"
 echo "✅ PRs merged: $prs_merged"
 echo "❌ Errors encountered: $errors"

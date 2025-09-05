@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /*
   Automated syntax repair for widespread mangling and merge markers.
-  - Removes git conflict markers, preferring the right side (after =======) when present, else left.
+  - Removes git conflict markers, preferring the right side (after ) when present, else left.
   - Fixes common token corruptions introduced into TS/TSX files.
 */
 
@@ -22,9 +22,9 @@ function listFiles(dir) {
   return out}
 
 function stripConflictMarkers(content) {
-  // Prefer the right side of conflicts (after =======) since HEAD often contains broken text
-  // "Pattern": <<<<<<< ... \n(left)\n=======\n(right)\n>>>>>>> ...
-  return content.replace(/<<<<<<<[\s\S]*?\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>>[\s\S]*?\n?/g, (_m, left, right) => {
+  // Prefer the right side of conflicts (after ) since HEAD often contains broken text
+  // "Pattern": <<<<<<< ... \n(left)\n\n(right)\n>>>>>>> ...
+  return content.replace(/<<<<<<<[\s\S]*?\n([\s\S]*?)\n\n([\s\S]*?)\n>>>>>>>[\s\S]*?\n?/g, (_m, left, right) => {
     // "Heuristic": choose the side with more balanced braces/quotes; default to right
     const score = (s) => {
       const open = (s.match(/[{(\[]/g) || []).length;

@@ -5,7 +5,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🔒 Enhanced Security Scanner v2.0');
-console.log('==================================');
+console.log('======');
 
 const securityReport = {
   "timestamp": new Date().toISOString(),
@@ -182,7 +182,7 @@ async function main() {
     
     // Display summary
     log('info', 'Enhanced Security Scanner Summary');
-    log('info', '=================================');
+    log('info', '=====');
     log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
     log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
     log('info', `High "severity": ${securityReport.summary.high}`);

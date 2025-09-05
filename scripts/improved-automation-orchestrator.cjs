@@ -23,7 +23,7 @@ async function runImprovedAutomation() {
   try {
     // Phase "1": Pre-flight Checks
     console.log('\n🔍 Phase 1: Pre-flight Checks');
-    console.log('================================');
+    console.log('====');
     
     await runTask('System Health Check', async () => {
       const healthCheck = require('../automation/health-check.cjs';);
@@ -35,7 +35,7 @@ async function runImprovedAutomation() {
 
     // Phase "2": Code Quality Enhancement
     console.log('\n🔧 Phase 2: Code Quality Enhancement');
-    console.log('=====================================');
+    console.log('==');
     
     await runTask('Enhanced Syntax Fixing', async () => {
       const syntaxFixer = require('./enhanced-syntax-fixer.cjs';);
@@ -59,7 +59,7 @@ async function runImprovedAutomation() {
 
     // Phase "3": Build and Test
     console.log('\n🏗️ Phase 3: Build and Test');
-    console.log('============================');
+    console.log('');
     
     await runTask('Production Build', async () => {
       execSync('npm run build', { "stdio": 'inherit' });
@@ -74,7 +74,7 @@ async function runImprovedAutomation() {
 
     // Phase "4": Performance Optimization
     console.log('\n⚡ Phase 4: Performance Optimization');
-    console.log('=====================================');
+    console.log('==');
     
     await runTask('Bundle Analysis', async () => {
       try {
@@ -94,7 +94,7 @@ async function runImprovedAutomation() {
 
     // Phase "5": Security and Monitoring
     console.log('\n🔒 Phase 5: Security and Monitoring');
-    console.log('====================================');
+    console.log('=');
     
     await runTask('Security Audit', async () => {
       try {
@@ -114,7 +114,7 @@ async function runImprovedAutomation() {
 
     // Phase "6": Deployment Preparation
     console.log('\n🚀 Phase 6: Deployment Preparation');
-    console.log('====================================');
+    console.log('=');
     
     await runTask('Build Verification', async () => {
       const buildExists = fs.existsSync('.next';);
@@ -139,7 +139,7 @@ async function runImprovedAutomation() {
     fs.writeFileSync(reportPath, JSON.stringify(automationReport, null, 2));
     
     console.log('\n🎉 Improved Automation Orchestrator Completed!');
-    console.log('===============================================');
+    console.log('=====');
     console.log("📊 Overall "Summary": ");
     console.log(`   - Total Tasks: ${automationReport.metrics.totalTasks}`);
     console.log(`   - "Successful": ${automationReport.metrics.successfulTasks}`);
