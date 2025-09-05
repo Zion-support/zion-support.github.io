@@ -46,7 +46,8 @@ import {
   Brain,
   ShoppingCart,
   Home,
-  Trash2
+  Trash2,
+  AlertTriangle
 } from 'lucide-react';
 
 const microSaaSProducts = [
@@ -470,6 +471,167 @@ const microSaaSProducts = [
     features: ['Real-time Detection', 'Machine Learning Models', 'Risk Scoring', 'API Integration'],
     pricing: '$0.10 - $0.50 per transaction',
     category: 'Fraud Prevention'
+  },
+  {
+    title: 'AI-Powered Code Generation Assistant',
+    description: 'Intelligent code generation and completion using advanced AI models.',
+    icon: Code,
+    features: ['Code Generation', 'Bug Fixing', 'Documentation', 'Multi-language Support'],
+    pricing: '$99 - $499/month',
+    category: 'Development Tools',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Security Scanner',
+    description: 'Automated smart contract vulnerability detection and security analysis.',
+    icon: Shield,
+    features: ['Vulnerability Detection', 'Gas Optimization', 'Compliance Checking', 'Audit Reports'],
+    pricing: '$199 - $999/month',
+    category: 'Blockchain Security'
+  },
+  {
+    title: 'AI-Powered Data Labeling Platform',
+    description: 'Automated data labeling and annotation for machine learning projects.',
+    icon: Target,
+    features: ['Auto Labeling', 'Quality Control', 'Team Collaboration', 'ML Pipeline Integration'],
+    pricing: '$0.05 - $0.25 per label',
+    category: 'Data Science'
+  },
+  {
+    title: 'Intelligent API Documentation Generator',
+    description: 'Auto-generate comprehensive API documentation from code and usage patterns.',
+    icon: FileText,
+    features: ['Auto Documentation', 'Interactive Examples', 'Version Control', 'Multi-format Export'],
+    pricing: '$49 - $299/month',
+    category: 'Developer Tools'
+  },
+  {
+    title: 'AI-Powered Test Data Generator',
+    description: 'Generate realistic test data for applications using AI and synthetic data techniques.',
+    icon: Database,
+    features: ['Synthetic Data', 'Privacy Compliant', 'Custom Schemas', 'API Integration'],
+    pricing: '$79 - $399/month',
+    category: 'Testing Tools'
+  },
+  {
+    title: 'Smart Contract Deployment Automation',
+    description: 'Automated smart contract deployment and management across multiple networks.',
+    icon: Rocket,
+    features: ['Multi-network Support', 'Automated Testing', 'Gas Optimization', 'Monitoring'],
+    pricing: '$149 - $799/month',
+    category: 'Blockchain DevOps'
+  },
+  {
+    title: 'AI-Powered Performance Monitoring',
+    description: 'Intelligent application performance monitoring with predictive analytics.',
+    icon: Monitor,
+    features: ['Real-time Monitoring', 'Anomaly Detection', 'Predictive Alerts', 'Root Cause Analysis'],
+    pricing: '$199 - $999/month',
+    category: 'DevOps'
+  },
+  {
+    title: 'Intelligent Database Query Optimizer',
+    description: 'AI-powered database query optimization and performance tuning.',
+    icon: Database,
+    features: ['Query Analysis', 'Index Recommendations', 'Performance Tuning', 'Cost Estimation'],
+    pricing: '$299 - $1,499/month',
+    category: 'Database Management'
+  },
+  {
+    title: 'AI-Powered Log Analysis Platform',
+    description: 'Intelligent log analysis and anomaly detection for system monitoring.',
+    icon: FileText,
+    features: ['Log Parsing', 'Anomaly Detection', 'Pattern Recognition', 'Alert Generation'],
+    pricing: '$99 - $499/month',
+    category: 'Monitoring'
+  },
+  {
+    title: 'Smart Contract ABI Generator',
+    description: 'Automated ABI generation and smart contract interface documentation.',
+    icon: Code,
+    features: ['ABI Generation', 'Interface Documentation', 'Type Safety', 'Multi-language Support'],
+    pricing: '$29 - $149/month',
+    category: 'Blockchain Tools'
+  },
+  {
+    title: 'AI-Powered Dependency Vulnerability Scanner',
+    description: 'Automated security scanning for application dependencies and libraries.',
+    icon: Shield,
+    features: ['Dependency Scanning', 'Vulnerability Database', 'Fix Recommendations', 'CI/CD Integration'],
+    pricing: '$49 - $299/month',
+    category: 'Security Tools'
+  },
+  {
+    title: 'Intelligent API Rate Limiting',
+    description: 'AI-powered API rate limiting with dynamic adjustment based on usage patterns.',
+    icon: BarChart3,
+    features: ['Dynamic Limiting', 'Usage Analytics', 'Predictive Scaling', 'Custom Rules'],
+    pricing: '$79 - $399/month',
+    category: 'API Management'
+  },
+  {
+    title: 'AI-Powered Configuration Management',
+    description: 'Intelligent configuration management and deployment automation.',
+    icon: Settings,
+    features: ['Config Validation', 'Environment Sync', 'Change Tracking', 'Rollback Support'],
+    pricing: '$99 - $499/month',
+    category: 'DevOps'
+  },
+  {
+    title: 'Smart Contract Event Monitoring',
+    description: 'Real-time monitoring and alerting for smart contract events and transactions.',
+    icon: Eye,
+    features: ['Event Tracking', 'Real-time Alerts', 'Transaction Analysis', 'Custom Filters'],
+    pricing: '$149 - $799/month',
+    category: 'Blockchain Monitoring'
+  },
+  {
+    title: 'AI-Powered Load Testing Platform',
+    description: 'Intelligent load testing with AI-generated realistic user scenarios.',
+    icon: Zap,
+    features: ['AI Scenarios', 'Realistic Loads', 'Performance Analysis', 'Auto Scaling'],
+    pricing: '$199 - $999/month',
+    category: 'Performance Testing'
+  },
+  {
+    title: 'Intelligent Error Tracking & Resolution',
+    description: 'AI-powered error tracking with automatic resolution suggestions.',
+    icon: AlertTriangle,
+    features: ['Error Grouping', 'Root Cause Analysis', 'Fix Suggestions', 'Team Collaboration'],
+    pricing: '$49 - $299/month',
+    category: 'Error Management'
+  },
+  {
+    title: 'AI-Powered API Testing Suite',
+    description: 'Comprehensive API testing with AI-generated test cases and validation.',
+    icon: Network,
+    features: ['Auto Test Generation', 'Contract Testing', 'Performance Testing', 'Security Testing'],
+    pricing: '$99 - $499/month',
+    category: 'API Testing'
+  },
+  {
+    title: 'Smart Contract Gas Optimizer',
+    description: 'AI-powered gas optimization for smart contracts to reduce transaction costs.',
+    icon: Zap,
+    features: ['Gas Analysis', 'Optimization Suggestions', 'Cost Estimation', 'Multi-network Support'],
+    pricing: '$199 - $999/month',
+    category: 'Blockchain Optimization'
+  },
+  {
+    title: 'AI-Powered Infrastructure Monitoring',
+    description: 'Comprehensive infrastructure monitoring with predictive maintenance.',
+    icon: Server,
+    features: ['Resource Monitoring', 'Predictive Alerts', 'Capacity Planning', 'Cost Optimization'],
+    pricing: '$149 - $799/month',
+    category: 'Infrastructure'
+  },
+  {
+    title: 'Intelligent Backup & Recovery System',
+    description: 'AI-powered backup and disaster recovery with intelligent scheduling.',
+    icon: Database,
+    features: ['Smart Scheduling', 'Incremental Backups', 'Disaster Recovery', 'Compliance'],
+    pricing: '$79 - $399/month',
+    category: 'Data Protection'
   }
 ];
 
@@ -893,6 +1055,8 @@ export default function MicroSaaSPage() {
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let&apos;s build the perfect SaaS solution for your business needs. Fast, secure, and scalable.
+              <br className="hidden md:block" />
+              <span className="text-blue-200 font-semibold">Contact us: +1 302 464 0950 | kleber@ziontechgroup.com</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">

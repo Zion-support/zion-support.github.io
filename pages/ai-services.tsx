@@ -43,7 +43,9 @@ import {
   ShoppingCart,
   BookOpen,
   Home,
-  Gamepad2
+  Gamepad2,
+  AlertTriangle,
+  DollarSign
 } from 'lucide-react';
 
 const aiServices = [
@@ -516,6 +518,159 @@ const aiServices = [
     features: ['Personalized Learning', 'Adaptive Assessment', 'Progress Tracking', 'Skill Development'],
     pricing: '$2,000 - $10,000/month',
     category: 'EdTech'
+  },
+  {
+    title: 'AI-Powered Code Generation',
+    description: 'Advanced AI code generation and completion using large language models.',
+    icon: Code,
+    features: ['Code Generation', 'Bug Fixing', 'Documentation', 'Multi-language Support'],
+    pricing: '$3,000 - $15,000/setup',
+    category: 'Development Tools',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Voice Cloning',
+    description: 'High-quality voice synthesis and cloning for various applications.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Emotion Control', 'Multi-language Support', 'Real-time Synthesis'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Voice Technology'
+  },
+  {
+    title: 'AI-Powered Medical Imaging',
+    description: 'Advanced medical image analysis and diagnosis assistance using deep learning.',
+    icon: Eye,
+    features: ['Image Analysis', 'Diagnosis Support', 'Disease Detection', 'Treatment Planning'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Medical AI'
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Automated content moderation using AI for text, images, and videos.',
+    icon: Shield,
+    features: ['Multi-modal Detection', 'Real-time Processing', 'Custom Rules', 'API Integration'],
+    pricing: '$2,000 - $10,000/month',
+    category: 'Content Safety'
+  },
+  {
+    title: 'AI-Powered Personalization Engine',
+    description: 'Real-time personalization for websites, apps, and marketing campaigns.',
+    icon: Target,
+    features: ['Behavioral Analysis', 'Content Personalization', 'A/B Testing', 'Real-time Adaptation'],
+    pricing: '$3,000 - $15,000/setup',
+    category: 'Personalization'
+  },
+  {
+    title: 'AI-Powered Data Labeling',
+    description: 'Automated data labeling and annotation for machine learning projects.',
+    icon: Database,
+    features: ['Auto Labeling', 'Quality Control', 'Team Collaboration', 'ML Pipeline Integration'],
+    pricing: '$0.05 - $0.25 per label',
+    category: 'Data Science'
+  },
+  {
+    title: 'AI-Powered Test Generation',
+    description: 'Automated test case generation and quality assurance using AI.',
+    icon: CheckCircle,
+    features: ['Test Generation', 'Coverage Analysis', 'Bug Detection', 'Performance Testing'],
+    pricing: '$2,500 - $12,000/setup',
+    category: 'Quality Assurance'
+  },
+  {
+    title: 'AI-Powered API Documentation',
+    description: 'Auto-generate comprehensive API documentation from code and usage patterns.',
+    icon: FileText,
+    features: ['Auto Documentation', 'Interactive Examples', 'Version Control', 'Multi-format Export'],
+    pricing: '$1,000 - $5,000/setup',
+    category: 'Developer Tools'
+  },
+  {
+    title: 'AI-Powered Load Testing',
+    description: 'Intelligent load testing with AI-generated realistic user scenarios.',
+    icon: Zap,
+    features: ['AI Scenarios', 'Realistic Loads', 'Performance Analysis', 'Auto Scaling'],
+    pricing: '$3,000 - $15,000/setup',
+    category: 'Performance Testing'
+  },
+  {
+    title: 'AI-Powered Error Detection',
+    description: 'Intelligent error detection and resolution suggestions using AI.',
+    icon: AlertTriangle,
+    features: ['Error Detection', 'Root Cause Analysis', 'Fix Suggestions', 'Prevention Alerts'],
+    pricing: '$1,500 - $8,000/setup',
+    category: 'Error Management'
+  },
+  {
+    title: 'AI-Powered Security Scanning',
+    description: 'Automated security vulnerability scanning and threat detection.',
+    icon: Shield,
+    features: ['Vulnerability Scanning', 'Threat Detection', 'Risk Assessment', 'Compliance Checking'],
+    pricing: '$2,000 - $10,000/setup',
+    category: 'Security'
+  },
+  {
+    title: 'AI-Powered Performance Optimization',
+    description: 'Intelligent application performance optimization using AI analysis.',
+    icon: TrendingUp,
+    features: ['Performance Analysis', 'Bottleneck Detection', 'Optimization Suggestions', 'Auto-tuning'],
+    pricing: '$5,000 - $25,000/project',
+    category: 'Performance'
+  },
+  {
+    title: 'AI-Powered Backup Intelligence',
+    description: 'Intelligent backup scheduling and disaster recovery using AI.',
+    icon: Database,
+    features: ['Smart Scheduling', 'Incremental Backups', 'Recovery Optimization', 'Compliance'],
+    pricing: '$1,000 - $5,000/setup',
+    category: 'Data Protection'
+  },
+  {
+    title: 'AI-Powered Infrastructure Monitoring',
+    description: 'Comprehensive infrastructure monitoring with predictive analytics.',
+    icon: Monitor,
+    features: ['Predictive Alerts', 'Anomaly Detection', 'Capacity Planning', 'Cost Optimization'],
+    pricing: '$2,000 - $10,000/setup',
+    category: 'Infrastructure'
+  },
+  {
+    title: 'AI-Powered Log Analysis',
+    description: 'Intelligent log analysis and anomaly detection for system monitoring.',
+    icon: FileText,
+    features: ['Log Parsing', 'Anomaly Detection', 'Pattern Recognition', 'Alert Generation'],
+    pricing: '$1,500 - $8,000/setup',
+    category: 'Monitoring'
+  },
+  {
+    title: 'AI-Powered Configuration Management',
+    description: 'Intelligent configuration management and deployment automation.',
+    icon: Settings,
+    features: ['Config Validation', 'Environment Sync', 'Change Tracking', 'Rollback Support'],
+    pricing: '$2,000 - $10,000/setup',
+    category: 'DevOps'
+  },
+  {
+    title: 'AI-Powered Cost Optimization',
+    description: 'AI-powered cost optimization and resource right-sizing for cloud infrastructure.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Resource Optimization', 'Budget Forecasting', 'Waste Detection'],
+    pricing: '$3,000 - $15,000/setup',
+    category: 'Cost Management'
+  },
+  {
+    title: 'AI-Powered Compliance Monitoring',
+    description: 'Automated compliance monitoring and reporting for various regulations.',
+    icon: Shield,
+    features: ['Compliance Tracking', 'Automated Auditing', 'Policy Enforcement', 'Report Generation'],
+    pricing: '$2,500 - $12,000/setup',
+    category: 'Compliance'
+  },
+  {
+    title: 'AI-Powered Innovation Lab',
+    description: 'AI-powered innovation lab for exploring emerging technologies and proof-of-concepts.',
+    icon: Rocket,
+    features: ['Technology Exploration', 'Proof of Concepts', 'Innovation Workshops', 'Pilot Programs'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Innovation'
   }
 ];
 
@@ -788,6 +943,8 @@ export default function AIServicesPage() {
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let&apos;s discuss how our AI solutions can drive innovation and growth for your organization.
+              <br className="hidden md:block" />
+              <span className="text-blue-200 font-semibold">Contact us: +1 302 464 0950 | kleber@ziontechgroup.com</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">

@@ -243,7 +243,7 @@ export default function Footer() {
                       className="text-gray-300 hover:text-blue-400 transition-colors flex items-center group"
                     >
                       <span>{link.label}</span>
-                      {link.href.startsWith('http') && (
+                      {link.href.indexOf('http') === 0 && (
                         <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                       )}
                     </Link>

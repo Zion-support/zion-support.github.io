@@ -1020,6 +1020,8 @@ export default function ServicesPage() {
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let's discuss your project and find the perfect solution for your business needs.
+              <br className="hidden md:block" />
+              <span className="text-blue-200 font-semibold">Contact us: +1 302 464 0950 | kleber@ziontechgroup.com</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 

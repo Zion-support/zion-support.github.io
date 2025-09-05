@@ -477,6 +477,159 @@ const itServices = [
     features: ['API Development', 'System Integration', 'Data Synchronization', 'Workflow Automation'],
     pricing: '$15,000 - $75,000/project',
     category: 'Integration'
+  },
+  {
+    title: 'AI-Powered IT Automation',
+    description: 'Intelligent automation of IT operations using AI and machine learning.',
+    icon: Brain,
+    features: ['Process Automation', 'Predictive Maintenance', 'Self-healing Systems', 'Intelligent Routing'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'AI Automation',
+    popular: true
+  },
+  {
+    title: 'Quantum-Safe Cryptography Implementation',
+    description: 'Implementation of quantum-resistant cryptographic solutions for future-proof security.',
+    icon: Lock,
+    features: ['Post-Quantum Algorithms', 'Key Management', 'Migration Planning', 'Compliance Testing'],
+    pricing: '$50,000 - $250,000/project',
+    category: 'Quantum Security'
+  },
+  {
+    title: 'Edge AI Computing Infrastructure',
+    description: 'Edge computing infrastructure optimized for AI workloads and real-time processing.',
+    icon: Cpu,
+    features: ['Edge AI Hardware', 'Model Deployment', 'Real-time Inference', 'Data Pipeline'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Edge AI'
+  },
+  {
+    title: 'IT Sustainability Consulting',
+    description: 'Green IT consulting and carbon footprint reduction strategies.',
+    icon: Sprout,
+    features: ['Carbon Footprint Analysis', 'Energy Optimization', 'Sustainable Hardware', 'Green Cloud Migration'],
+    pricing: '$15,000 - $75,000/project',
+    category: 'Sustainability'
+  },
+  {
+    title: 'Cybersecurity Mesh Architecture',
+    description: 'Implementation of distributed cybersecurity mesh for modern IT environments.',
+    icon: Shield,
+    features: ['Distributed Security', 'Identity-Centric Security', 'Policy Orchestration', 'Threat Intelligence'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Security Architecture'
+  },
+  {
+    title: 'IT Resilience Engineering',
+    description: 'Building resilient IT systems that can adapt and recover from failures.',
+    icon: Shield,
+    features: ['Chaos Engineering', 'Resilience Testing', 'Adaptive Systems', 'Failure Recovery'],
+    pricing: '$20,000 - $100,000/project',
+    category: 'Resilience'
+  },
+  {
+    title: 'Digital Twin Infrastructure',
+    description: 'Digital twin technology for IT infrastructure monitoring and optimization.',
+    icon: Monitor,
+    features: ['Real-time Modeling', 'Predictive Analytics', 'Virtual Testing', 'Performance Optimization'],
+    pricing: '$40,000 - $200,000/setup',
+    category: 'Digital Twin'
+  },
+  {
+    title: 'IT Observability Platform',
+    description: 'Comprehensive observability solution for modern distributed IT systems.',
+    icon: BarChart3,
+    features: ['Distributed Tracing', 'Metrics Collection', 'Log Aggregation', 'Alert Management'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Observability'
+  },
+  {
+    title: 'Multi-Cloud Security Orchestration',
+    description: 'Unified security management across multiple cloud environments.',
+    icon: Cloud,
+    features: ['Unified Security Policies', 'Cross-Cloud Monitoring', 'Automated Response', 'Compliance Management'],
+    pricing: '$25,000 - $125,000/setup',
+    category: 'Cloud Security'
+  },
+  {
+    title: 'IT Data Fabric Implementation',
+    description: 'Unified data management platform for enterprise IT data.',
+    icon: Database,
+    features: ['Data Virtualization', 'Real-time Processing', 'Data Governance', 'API Management'],
+    pricing: '$30,000 - $150,000/project',
+    category: 'Data Management'
+  },
+  {
+    title: 'IT Service Mesh Implementation',
+    description: 'Service mesh architecture for microservices communication and security.',
+    icon: Network,
+    features: ['Service Discovery', 'Load Balancing', 'Security Policies', 'Traffic Management'],
+    pricing: '$20,000 - $100,000/setup',
+    category: 'Service Mesh'
+  },
+  {
+    title: 'IT Compliance Automation',
+    description: 'Automated compliance monitoring and reporting for IT regulations.',
+    icon: Shield,
+    features: ['Automated Auditing', 'Compliance Dashboards', 'Policy Enforcement', 'Report Generation'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Compliance'
+  },
+  {
+    title: 'IT Cost Optimization Platform',
+    description: 'AI-powered IT cost optimization and resource right-sizing.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Resource Optimization', 'Budget Forecasting', 'Waste Detection'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Cost Optimization'
+  },
+  {
+    title: 'IT Innovation Lab Services',
+    description: 'Dedicated innovation lab for exploring emerging technologies and proof-of-concepts.',
+    icon: Rocket,
+    features: ['Technology Exploration', 'Proof of Concepts', 'Innovation Workshops', 'Pilot Programs'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Innovation'
+  },
+  {
+    title: 'IT Disaster Recovery Testing',
+    description: 'Comprehensive disaster recovery testing and validation services.',
+    icon: Shield,
+    features: ['Recovery Testing', 'RTO/RPO Validation', 'Failover Testing', 'Documentation Updates'],
+    pricing: '$8,000 - $40,000/project',
+    category: 'Disaster Recovery'
+  },
+  {
+    title: 'IT Performance Benchmarking',
+    description: 'Comprehensive IT performance benchmarking and optimization services.',
+    icon: TrendingUp,
+    features: ['Performance Testing', 'Benchmark Analysis', 'Optimization Recommendations', 'Capacity Planning'],
+    pricing: '$10,000 - $50,000/project',
+    category: 'Performance'
+  },
+  {
+    title: 'IT Knowledge Transfer Services',
+    description: 'Structured knowledge transfer and training for IT teams.',
+    icon: BookOpen,
+    features: ['Technical Training', 'Documentation', 'Mentoring', 'Best Practices'],
+    pricing: '$200 - $500/hour',
+    category: 'Knowledge Transfer'
+  },
+  {
+    title: 'IT Vendor Performance Management',
+    description: 'Ongoing monitoring and optimization of IT vendor relationships and performance.',
+    icon: Users,
+    features: ['Performance Monitoring', 'SLA Management', 'Vendor Optimization', 'Contract Management'],
+    pricing: '$5,000 - $25,000/month',
+    category: 'Vendor Management'
+  },
+  {
+    title: 'IT Innovation Consulting',
+    description: 'Strategic consulting for IT innovation and digital transformation initiatives.',
+    icon: Brain,
+    features: ['Innovation Strategy', 'Technology Roadmap', 'Digital Transformation', 'Change Management'],
+    pricing: '$250 - $500/hour',
+    category: 'Innovation Consulting'
   }
 ];
 
@@ -833,6 +986,8 @@ export default function ITServicesPage() {
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let our expert team help you build a robust, secure, and scalable IT environment.
+              <br className="hidden md:block" />
+              <span className="text-blue-200 font-semibold">Contact us: +1 302 464 0950 | kleber@ziontechgroup.com</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
