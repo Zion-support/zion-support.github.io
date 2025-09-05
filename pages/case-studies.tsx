@@ -1,5 +1,6 @@
 import React from 'react';
-import MainLayout from '../src/components/layout/MainLayout';import { motion } from 'framer-motion';
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
 import {
   Calendar,
   User,
@@ -11,9 +12,9 @@ import {
   CheckCircle,
   Users,
   Building,
-  Globe,  Award,
-  Clock,
-  CheckCircle
+  Globe,
+  Award,
+  Clock
 } from 'lucide-react';
 
 const caseStudies = [

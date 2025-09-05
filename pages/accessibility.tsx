@@ -285,11 +285,13 @@ export default function AccessibilityPage() {
                 viewport={{ once: true }}
               >
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                  Accessibility Standards
+                </h2>
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  We follow international accessibility standards to ensure our platform is usable by everyone.
+                </p>
+              </div>
             </div>
-          </div>
-        </section>
-
-              </div>            </div>
           </div>
         </section>
         <section className="py-20 bg-white">

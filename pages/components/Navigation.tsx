@@ -17,7 +17,9 @@ import {
   Cloud,
   Code,
   CreditCard,
-  Document,
+  Document
+} from 'lucide-react';
+
 const navigationItems = [
   {
     title: 'Services',

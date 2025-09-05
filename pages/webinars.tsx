@@ -330,5 +330,12 @@ export default function WebinarsPage() {
                 >
                   Browse Tutorials
                 </Link>
-              </div>  );
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  }
 }

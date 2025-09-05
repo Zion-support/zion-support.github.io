@@ -310,5 +310,20 @@ export default function SupportPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}  );
+              viewport={{ once: true }}
+            >
+              <div className="text-center">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                  Get Support
+                </h2>
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  We're here to help you succeed with our comprehensive support services.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 }

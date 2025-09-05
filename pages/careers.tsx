@@ -203,7 +203,8 @@ export default function CareersPage() {
                       {benefit.description}
                     </p>
                   </motion.div>
-                ))}              </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
