@@ -1112,6 +1112,119 @@ title: 'Generative AI Content Creation Suite',
     pricing: '$100,000 - $1,000,000/project',
     category: 'Theoretical Physics AI',
     popular: true
+  },
+  {
+    title: 'AI-Powered Cybersecurity Intelligence',
+    description: 'Advanced AI system for real-time threat detection, analysis, and automated response.',
+    icon: Shield,
+    features: ['Threat Hunting', 'Behavioral Analysis', 'Zero-day Detection', 'Automated Response'],
+    pricing: '$15,000 - $75,000/setup',
+    category: 'Cybersecurity AI',
+    popular: true
+  },
+  {
+    title: 'AI Medical Imaging Analysis',
+    description: 'Deep learning-powered medical image analysis for radiology and diagnostic support.',
+    icon: Heart,
+    features: ['X-ray Analysis', 'MRI Interpretation', 'CT Scan Processing', 'Pathology Detection'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Medical AI'
+  },
+  {
+    title: 'AI-Powered Drug Discovery Platform',
+    description: 'Accelerated drug discovery using AI for molecular design and clinical trial optimization.',
+    icon: Heart,
+    features: ['Molecular Modeling', 'Drug-Target Interaction', 'Toxicity Prediction', 'Clinical Trial Design'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Pharmaceutical AI'
+  },
+  {
+    title: 'AI Financial Trading Algorithm',
+    description: 'Advanced algorithmic trading system with machine learning and real-time market analysis.',
+    icon: TrendingUp,
+    features: ['Market Analysis', 'Risk Management', 'Portfolio Optimization', 'High-frequency Trading'],
+    pricing: '$30,000 - $200,000/setup',
+    category: 'FinTech AI'
+  },
+  {
+    title: 'AI-Powered Autonomous Drones',
+    description: 'Intelligent drone systems with computer vision and autonomous navigation capabilities.',
+    icon: Rocket,
+    features: ['Autonomous Navigation', 'Object Detection', 'Path Planning', 'Real-time Decision Making'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'Autonomous Systems'
+  },
+  {
+    title: 'AI Content Creation Studio',
+    description: 'Comprehensive AI platform for automated content creation across multiple media formats.',
+    icon: FileText,
+    features: ['Text Generation', 'Image Creation', 'Video Production', 'Audio Synthesis'],
+    pricing: '$2,000 - $15,000/month',
+    category: 'Content AI'
+  },
+  {
+    title: 'AI-Powered Smart Cities Platform',
+    description: 'Intelligent city management system with IoT integration and predictive analytics.',
+    icon: Building,
+    features: ['Traffic Optimization', 'Energy Management', 'Public Safety', 'Resource Allocation'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: 'Smart Cities AI'
+  },
+  {
+    title: 'AI Language Translation Engine',
+    description: 'Real-time multilingual translation with context understanding and cultural adaptation.',
+    icon: Globe,
+    features: ['Real-time Translation', 'Context Awareness', 'Cultural Adaptation', 'Voice Translation'],
+    pricing: '$1,000 - $8,000/month',
+    category: 'Language AI'
+  },
+  {
+    title: 'AI-Powered Personal Assistant',
+    description: 'Advanced personal AI assistant with natural language processing and task automation.',
+    icon: Bot,
+    features: ['Natural Language Understanding', 'Task Automation', 'Calendar Management', 'Email Processing'],
+    pricing: '$500 - $3,000/month',
+    category: 'Personal AI'
+  },
+  {
+    title: 'AI Weather Prediction System',
+    description: 'Advanced weather forecasting using machine learning and satellite data analysis.',
+    icon: Cloud,
+    features: ['Long-term Forecasting', 'Severe Weather Detection', 'Climate Modeling', 'Agricultural Predictions'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'Environmental AI'
+  },
+  {
+    title: 'AI-Powered Legal Research Assistant',
+    description: 'Intelligent legal research platform with case law analysis and document review.',
+    icon: BookOpen,
+    features: ['Case Law Analysis', 'Document Review', 'Legal Research', 'Compliance Checking'],
+    pricing: '$5,000 - $25,000/setup',
+    category: 'Legal AI'
+  },
+  {
+    title: 'AI Sports Performance Analytics',
+    description: 'Advanced sports analytics platform with player performance prediction and injury prevention.',
+    icon: Target,
+    features: ['Performance Analysis', 'Injury Prediction', 'Tactical Analysis', 'Player Scouting'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Sports AI'
+  },
+  {
+    title: 'AI-Powered Agricultural Intelligence',
+    description: 'Smart farming solution with crop monitoring, yield prediction, and resource optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Yield Prediction', 'Disease Detection', 'Resource Optimization'],
+    pricing: '$20,000 - $150,000/project',
+    category: 'AgTech AI'
+  },
+  {
+    title: 'AI Mental Health Companion',
+    description: 'AI-powered mental health support system with mood tracking and therapeutic conversations.',
+    icon: Heart,
+    features: ['Mood Tracking', 'Crisis Detection', 'Therapeutic Conversations', 'Progress Monitoring'],
+    pricing: '$2,000 - $12,000/setup',
+    category: 'HealthTech AI'
   }
 ];
 const industries = [{ name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },

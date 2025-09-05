@@ -1117,6 +1117,167 @@ description: 'Automated code review with security scanning, performance optimiza
     pricing: '$199 - $1,299/month',
     category: 'Voice Analytics',
     popular: true
+  },
+  {
+    title: 'AI Code Security Scanner',
+    description: 'Automated security vulnerability detection and code quality analysis for development teams.',
+    icon: Shield,
+    features: ['Vulnerability Detection', 'Code Quality Analysis', 'Dependency Scanning', 'Compliance Checking'],
+    pricing: '$149 - $799/month',
+    category: 'DevSecOps',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Audit Platform',
+    description: 'Automated smart contract security analysis and vulnerability detection for blockchain projects.',
+    icon: Lock,
+    features: ['Automated Auditing', 'Vulnerability Detection', 'Gas Optimization', 'Compliance Checking'],
+    pricing: '$299 - $1,999/month',
+    category: 'Blockchain Security'
+  },
+  {
+    title: 'AI-Powered API Testing Suite',
+    description: 'Intelligent API testing with automated test generation and performance optimization.',
+    icon: Code,
+    features: ['Auto Test Generation', 'Performance Testing', 'Security Testing', 'Load Testing'],
+    pricing: '$99 - $599/month',
+    category: 'API Testing'
+  },
+  {
+    title: 'Real-time Collaboration Whiteboard',
+    description: 'AI-enhanced collaborative whiteboard with smart drawing recognition and team features.',
+    icon: Monitor,
+    features: ['Real-time Collaboration', 'AI Drawing Recognition', 'Voice Notes', 'Template Library'],
+    pricing: '$19 - $99/month',
+    category: 'Collaboration'
+  },
+  {
+    title: 'AI Customer Churn Predictor',
+    description: 'Predictive analytics platform to identify and prevent customer churn with actionable insights.',
+    icon: TrendingUp,
+    features: ['Churn Prediction', 'Risk Scoring', 'Intervention Strategies', 'ROI Tracking'],
+    pricing: '$199 - $999/month',
+    category: 'Customer Analytics'
+  },
+  {
+    title: 'Smart Document Workflow Engine',
+    description: 'AI-powered document processing and workflow automation for business processes.',
+    icon: FileText,
+    features: ['Document Classification', 'Data Extraction', 'Workflow Automation', 'Approval Routing'],
+    pricing: '$79 - $399/month',
+    category: 'Document Management'
+  },
+  {
+    title: 'AI-Powered A/B Testing Platform',
+    description: 'Intelligent experimentation platform with statistical significance and conversion optimization.',
+    icon: Target,
+    features: ['Statistical Analysis', 'Auto-optimization', 'Multi-variate Testing', 'Conversion Tracking'],
+    pricing: '$49 - $299/month',
+    category: 'Conversion Optimization'
+  },
+  {
+    title: 'Voice-to-Action Automation',
+    description: 'Convert voice commands into automated actions across your business applications.',
+    icon: Mic,
+    features: ['Voice Commands', 'Action Automation', 'Multi-app Integration', 'Custom Workflows'],
+    pricing: '$29 - $199/month',
+    category: 'Voice Automation'
+  },
+  {
+    title: 'AI-Powered Lead Qualification',
+    description: 'Automated lead scoring and qualification using advanced AI and behavioral analysis.',
+    icon: Target,
+    features: ['Lead Scoring', 'Behavioral Analysis', 'Qualification Rules', 'CRM Integration'],
+    pricing: '$99 - $499/month',
+    category: 'Sales Automation'
+  },
+  {
+    title: 'Smart Inventory Forecasting',
+    description: 'AI-driven inventory prediction and optimization for retail and e-commerce businesses.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Stock Optimization', 'Seasonal Analysis', 'Supplier Integration'],
+    pricing: '$149 - $799/month',
+    category: 'Inventory Management'
+  },
+  {
+    title: 'AI Content Personalization Engine',
+    description: 'Dynamic content personalization based on user behavior and preferences.',
+    icon: Eye,
+    features: ['Behavioral Analysis', 'Content Optimization', 'Real-time Personalization', 'A/B Testing'],
+    pricing: '$199 - $999/month',
+    category: 'Personalization'
+  },
+  {
+    title: 'Automated Compliance Monitor',
+    description: 'AI-powered compliance monitoring and reporting for various industry regulations.',
+    icon: Shield,
+    features: ['Regulatory Monitoring', 'Automated Reporting', 'Risk Assessment', 'Audit Trail'],
+    pricing: '$299 - $1,499/month',
+    category: 'Compliance'
+  },
+  {
+    title: 'AI-Powered Price Optimization',
+    description: 'Dynamic pricing optimization using AI and market analysis for maximum revenue.',
+    icon: DollarSign,
+    features: ['Dynamic Pricing', 'Market Analysis', 'Competitor Tracking', 'Revenue Optimization'],
+    pricing: '$199 - $999/month',
+    category: 'Pricing Intelligence'
+  },
+  {
+    title: 'Smart Meeting Scheduler Pro',
+    description: 'AI-powered meeting scheduling with conflict resolution and optimal time suggestions.',
+    icon: Calendar,
+    features: ['Smart Scheduling', 'Conflict Resolution', 'Time Zone Handling', 'Calendar Integration'],
+    pricing: '$9 - $49/month',
+    category: 'Productivity'
+  },
+  {
+    title: 'AI-Powered Data Quality Manager',
+    description: 'Automated data quality assessment, cleaning, and validation for business data.',
+    icon: Database,
+    features: ['Data Quality Scoring', 'Automated Cleaning', 'Duplicate Detection', 'Validation Rules'],
+    pricing: '$99 - $599/month',
+    category: 'Data Management'
+  },
+  {
+    title: 'Voice-Controlled Business Intelligence',
+    description: 'Natural language query interface for business intelligence and data visualization.',
+    icon: BarChart3,
+    features: ['Voice Queries', 'Natural Language Processing', 'Data Visualization', 'Report Generation'],
+    pricing: '$149 - $799/month',
+    category: 'Business Intelligence'
+  },
+  {
+    title: 'AI-Powered Email Signature Generator',
+    description: 'Professional email signature generation with branding and contact management.',
+    icon: Mail,
+    features: ['Template Library', 'Brand Integration', 'Contact Management', 'Social Media Links'],
+    pricing: '$5 - $29/month',
+    category: 'Email Marketing'
+  },
+  {
+    title: 'Smart Password Manager for Teams',
+    description: 'AI-enhanced password management with security monitoring and team collaboration.',
+    icon: Lock,
+    features: ['Password Generation', 'Security Monitoring', 'Team Sharing', 'Breach Detection'],
+    pricing: '$19 - $99/month',
+    category: 'Security'
+  },
+  {
+    title: 'AI-Powered Meeting Transcription',
+    description: 'Real-time meeting transcription with speaker identification and action item extraction.',
+    icon: Mic,
+    features: ['Real-time Transcription', 'Speaker Identification', 'Action Item Extraction', 'Search & Archive'],
+    pricing: '$29 - $149/month',
+    category: 'Meeting Management'
+  },
+  {
+    title: 'Automated Social Media Content Calendar',
+    description: 'AI-generated social media content calendar with optimal posting times and engagement prediction.',
+    icon: Globe,
+    features: ['Content Generation', 'Optimal Timing', 'Engagement Prediction', 'Multi-platform Support'],
+    pricing: '$39 - $199/month',
+    category: 'Social Media Management'
   }
 ];
 const features = [{

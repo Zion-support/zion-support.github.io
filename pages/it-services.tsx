@@ -379,6 +379,127 @@ title: 'AI-Powered IT Operations (AIOps)',
     pricing: '$30,000 - $150,000/setup',
     category: 'Threat Intelligence',
     popular: true
+  },
+  {
+    title: 'Advanced Cloud Migration Services',
+    description: 'Comprehensive cloud migration strategy and execution for enterprise applications.',
+    icon: Cloud,
+    features: ['Migration Planning', 'Application Modernization', 'Data Migration', 'Performance Optimization'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Cloud Migration',
+    popular: true
+  },
+  {
+    title: 'Enterprise API Management Platform',
+    description: 'Complete API lifecycle management with security, monitoring, and developer portal.',
+    icon: Code,
+    features: ['API Gateway', 'Rate Limiting', 'Authentication', 'Analytics Dashboard'],
+    pricing: '$25,000 - $200,000/setup',
+    category: 'API Management'
+  },
+  {
+    title: 'Advanced Database Performance Tuning',
+    description: 'Expert database optimization and performance tuning for high-traffic applications.',
+    icon: Database,
+    features: ['Query Optimization', 'Index Tuning', 'Performance Monitoring', 'Capacity Planning'],
+    pricing: '$15,000 - $100,000/project',
+    category: 'Database Optimization'
+  },
+  {
+    title: 'Enterprise Backup & Disaster Recovery',
+    description: 'Comprehensive backup and disaster recovery solutions with automated failover.',
+    icon: Shield,
+    features: ['Automated Backups', 'Disaster Recovery Testing', 'RTO/RPO Optimization', 'Compliance'],
+    pricing: '$20,000 - $150,000/setup',
+    category: 'Backup & Recovery'
+  },
+  {
+    title: 'Advanced Network Security Implementation',
+    description: 'Next-generation network security with zero-trust architecture and micro-segmentation.',
+    icon: Lock,
+    features: ['Zero Trust Architecture', 'Micro-segmentation', 'Advanced Threat Protection', 'Network Monitoring'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'Network Security'
+  },
+  {
+    title: 'Enterprise Mobile Device Management',
+    description: 'Comprehensive mobile device management with advanced security and compliance.',
+    icon: Smartphone,
+    features: ['Device Enrollment', 'Policy Management', 'App Distribution', 'Security Controls'],
+    pricing: '$10,000 - $75,000/setup',
+    category: 'Mobile Management'
+  },
+  {
+    title: 'Advanced IT Infrastructure Monitoring',
+    description: 'Comprehensive infrastructure monitoring with predictive analytics and alerting.',
+    icon: Monitor,
+    features: ['Real-time Monitoring', 'Predictive Analytics', 'Automated Alerting', 'Performance Optimization'],
+    pricing: '$15,000 - $100,000/setup',
+    category: 'Infrastructure Monitoring'
+  },
+  {
+    title: 'Enterprise Identity & Access Management',
+    description: 'Advanced IAM solutions with single sign-on and multi-factor authentication.',
+    icon: Users,
+    features: ['Single Sign-On', 'Multi-Factor Authentication', 'Role-Based Access', 'Audit Logging'],
+    pricing: '$25,000 - $200,000/setup',
+    category: 'Identity Management'
+  },
+  {
+    title: 'Advanced IT Consulting & Strategy',
+    description: 'Strategic IT consulting with technology roadmap and digital transformation planning.',
+    icon: Building,
+    features: ['Technology Assessment', 'Strategic Planning', 'Digital Transformation', 'Vendor Selection'],
+    pricing: '$200 - $500/hour',
+    category: 'IT Consulting'
+  },
+  {
+    title: 'Enterprise Software Development',
+    description: 'Custom enterprise software development with modern technologies and best practices.',
+    icon: Code,
+    features: ['Custom Development', 'Legacy Modernization', 'API Development', 'Quality Assurance'],
+    pricing: '$150 - $400/hour',
+    category: 'Software Development'
+  },
+  {
+    title: 'Advanced IT Project Management',
+    description: 'Professional IT project management with agile methodologies and risk management.',
+    icon: BarChart3,
+    features: ['Agile Methodologies', 'Risk Management', 'Resource Planning', 'Quality Control'],
+    pricing: '$200 - $400/hour',
+    category: 'Project Management'
+  },
+  {
+    title: 'Enterprise IT Training & Certification',
+    description: 'Comprehensive IT training programs with certification preparation and hands-on labs.',
+    icon: BookOpen,
+    features: ['Custom Training Programs', 'Certification Prep', 'Hands-on Labs', 'Progress Tracking'],
+    pricing: '$300 - $800/person/day',
+    category: 'IT Training'
+  },
+  {
+    title: 'Advanced IT Audit & Compliance',
+    description: 'Comprehensive IT audit and compliance services for various industry standards.',
+    icon: Search,
+    features: ['Compliance Assessment', 'Security Auditing', 'Risk Assessment', 'Regulatory Reporting'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'IT Audit'
+  },
+  {
+    title: 'Enterprise IT Procurement & Vendor Management',
+    description: 'Strategic IT procurement and vendor relationship management with cost optimization.',
+    icon: ShoppingCart,
+    features: ['Vendor Evaluation', 'Contract Negotiation', 'Cost Optimization', 'Vendor Management'],
+    pricing: '$200 - $400/hour',
+    category: 'IT Procurement'
+  },
+  {
+    title: 'Advanced IT Governance & Risk Management',
+    description: 'Comprehensive IT governance framework with risk management and compliance monitoring.',
+    icon: Shield,
+    features: ['Governance Framework', 'Risk Management', 'Compliance Monitoring', 'Policy Development'],
+    pricing: '$50,000 - $300,000/project',
+    category: 'IT Governance'
   }
 ];
 const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
