@@ -1,6 +1,10 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "timestamp": "2025-09-03T16:40:29.486Z",
+=======
+  "timestamp": "2025-09-03T16:46:24.457Z",
+>>>>>>> origin/main
 =======
   "timestamp": "2025-09-03T16:46:24.457Z",
 >>>>>>> origin/main
@@ -26,9 +30,16 @@
     "pages/_app.tsx": {
       "path": "pages/_app.tsx",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "lines": 126,
 =======
       "lines": 121,
+>>>>>>> origin/main
+=======
+      "lines": 121,
+=======
+      "lines": 126,
+>>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
 >>>>>>> origin/main
       "issues": [],
       "complexity": 1
@@ -159,9 +170,16 @@
   "summary": {
     "totalFiles": 16,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "totalLines": 5773,
 =======
     "totalLines": 5768,
+>>>>>>> origin/main
+=======
+    "totalLines": 5768,
+=======
+    "totalLines": 5773,
+>>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
 >>>>>>> origin/main
     "averageComplexity": "1.06",
     "issues": [

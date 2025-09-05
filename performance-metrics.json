@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "timestamp": "2025-09-03T16:49:40.012Z",
   "score": 60,
   "checks": {
@@ -15,7 +16,10 @@
     "Implement code splitting"
   ]
 =======
+=======
+>>>>>>> origin/main
   "timestamp": "2025-09-03T16:54:18.031Z",
+  "score": 60,
   "bundleSize": {
     ".next": {
       "size": 41612654,
@@ -34,6 +38,21 @@
     ".css": 2,
     ".json": 0
   },
+<<<<<<< HEAD
   "recommendations": []
+>>>>>>> origin/main
+=======
+  "checks": {
+    "buildSize": true,
+    "bundleAnalysis": false,
+    "lighthouseScore": false,
+    "loadTime": true,
+    "memoryUsage": true
+  },
+  "recommendations": [
+    "Consider optimizing build size",
+    "Review bundle composition",
+    "Implement code splitting"
+  ]
 >>>>>>> origin/main
 }
