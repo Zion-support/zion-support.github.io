@@ -534,6 +534,67 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Testimonials Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                What Our Clients Say
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Don't just take our word for it - hear from our satisfied clients
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  name: "Sarah Johnson",
+                  company: "TechCorp Industries",
+                  rating: 5,
+                  text: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 40%."
+                },
+                {
+                  name: "Michael Chen",
+                  company: "StartupXYZ",
+                  rating: 5,
+                  text: "Outstanding micro-SaaS development. They delivered exactly what we needed, on time and within budget."
+                },
+                {
+                  name: "Emily Rodriguez",
+                  company: "Global Manufacturing Co",
+                  rating: 5,
+                  text: "Their cybersecurity solutions gave us peace of mind. Professional team with incredible expertise."
+                }
+              ].map((testimonial, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  className="bg-gray-50 p-6 rounded-lg"
+                >
+                  <div className="flex mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 mb-4">"{testimonial.text}"</p>
+                  <div>
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-gray-600 text-sm">{testimonial.company}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-16 bg-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
