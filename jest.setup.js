@@ -1,36 +1,37 @@
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-require('@testing-library/jest-dom');'
-// Mock IntersectionObserver;
-global.IntersectionObserver = class IntersectionObserver {}
-  // TODO: Implement;
-};
-  constructor() {};
-  disconnect() {};
-  observe() {};
-  unobserve() {};
-};
-// Mock ResizeObserver;
-global.ResizeObserver = class ResizeObserver {}
-  // TODO: Implement;
-};
-  constructor() {};
-  disconnect() {};
-  observe() {};
-  unobserve() {};
-};
-// Mock matchMedia;'
-Object.defineProperty(window, 'matchMedia', {'})
-  writable: true,);
-  value: jest.fn().mockImplementation(query => ({,})
-  matches: false,'
-    "media": query,""
-    "onchange": null,")"
-    "addListener": jest.fn(), // deprecated;""
-    "removeListener": jest.fn(), // deprecated;""
-    "addEventListener": jest.fn(),""
-    "removeEventListener": jest.fn(),""
-    "dispatchEvent": jest.fn()}))});""
-import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});'
-origin/cursor/automate-test-improve-and-merge-code-eafe;
-cursor/website-audit-and-update-with-deployment-76dc;
-cursor/fix-lint-push-and-merge-to-main-f3c1;'
+// Jest setup for DOM testing
+require('@testing-library/jest-dom')
+
+// Mock IntersectionObserver
+class MockIntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+}
+// @ts-ignore
+global.IntersectionObserver = MockIntersectionObserver
+
+// Mock ResizeObserver
+class MockResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+}
+// @ts-ignore
+global.ResizeObserver = MockResizeObserver
+
+// mock matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+})

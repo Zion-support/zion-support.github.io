@@ -12,6 +12,6 @@ function log(msg, level = "INFO")
     log("Vulnerabilities found, attempting npm audit fix", "WARN")
     tryExec("npm audit fix")
   const sensitive = [".env", ".env.local", ".env.production", "config.json", "secrets.json"]
-    log(`Sensitive files "present": ${found.join(", ")}`, "WARN"`
+    log(`Sensitive files "present": ${found.join(", ")}`, "WARN"
     log("No sensitive files found in repo root")
   log(" Security audit completed")

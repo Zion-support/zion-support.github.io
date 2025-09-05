@@ -2,7 +2,7 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-console.log(' Merge Conflict Resolver')
+// console.log(' Merge Conflict Resolver')
 console.log('=====')
     let content = fs.readFileSync(filePath, 'utf8')
     content = content.replace(/\n[\s\S]*?\n[\s\S]*?[^\n]+\n/g, '')

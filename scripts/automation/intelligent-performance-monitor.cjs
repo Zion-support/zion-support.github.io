@@ -50,9 +50,9 @@ const { execSync, spawn } = require("child_process")
         "performanceTrends"
         "bottlenecks"
         "optimizations"
-  console.log("" Starting continuous performance monitoring...")
+// console.log("" Starting continuous performance monitoring...")
   console.log("" Measuring application performance...")
-  console.log("" Measuring application performance...")
+// console.log("" Measuring application performance...")
     console.log(" Measuring application performance...")
   "timestamp"
       "buildTime"
@@ -115,8 +115,8 @@ this.logError("Performance measurement failed")
   console.log(""� Measuring bundle size...")
       const buildDirs = ["dist", "build", ".next", "out"]
   "type": "bundle"
-          "severity": "warning`,"message"`
-          "suggestion": `Consider code splitting, tree shaking, or removing unused dependencies"}"`
+          "severity": "warning`,"message"
+          "suggestion": `Consider code splitting, tree shaking, or removing unused dependencies"}"
   console.error("Error measuring bundle "size": ")
   "type": "bundle"
           "severity": "warning","message"
@@ -129,7 +129,7 @@ this.logError("Performance measurement failed")
   if (bytes === 0) return "0 Bytes"
     const sizes = ["Bytes", "KB", "MB", "GB"]
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " "
-  console.log(""⚡ Measuring runtime performance...")
+// console.log(""⚡ Measuring runtime performance...")
   console.log("⚡ Measuring runtime performance...")
   "type": "memory"
           "severity": "warning","message"
@@ -242,7 +242,7 @@ this.logError("Performance measurement failed")
   if (message && message.type === "build")
     process.on("message")
   if (message && message.type === "build")
-  console.log(" Build started - monitoring performance...")
+// console.log(" Build started - monitoring performance...")
   console.log("⚡ Setting up runtime monitoring...")
     process.on("exit")
     process.on("uncaughtException")

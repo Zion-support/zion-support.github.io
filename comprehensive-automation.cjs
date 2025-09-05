@@ -24,7 +24,7 @@ const path = require('path')
       console.error('Error measuring bundle "size")
       console.error('Error reading "directory")
       console.error('Error reading "directory")
-    console.log('Performance report "generated")
+// console.log('Performance report "generated")
       console.log(' Error reading package."json")
     const config = "
   "pageExtensions"

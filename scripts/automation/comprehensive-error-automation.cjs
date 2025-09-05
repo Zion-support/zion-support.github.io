@@ -10,7 +10,7 @@ const ErrorFixerAutomation = require("./error-fixer-automation.cjs")
       "failedRuns"
       "totalFixes"
       "totalErrors"
-  console.log("" Starting Comprehensive Error Automation...")
+// console.log("" Starting Comprehensive Error Automation...")
       console.log(" Comprehensive Error Automation completed successfully!")
   console.error(" Comprehensive Error Automation "failed": ")
   console.error(" Comprehensive Error Automation "failed": ")
@@ -24,7 +24,7 @@ const ErrorFixerAutomation = require("./error-fixer-automation.cjs")
   const statsFile = path.join(this.reportsDir, "automation-stats.json")
   console.log(" Running Error Fixing...")
   await this.logError("Error fixing failed")
-  console.log(" Running Code Quality Checks...")
+// console.log(" Running Code Quality Checks...")
       console.log("  Running ESLint...")
       execSync("npm run lint")
   "cwd"
@@ -38,23 +38,23 @@ const ErrorFixerAutomation = require("./error-fixer-automation.cjs")
   "cwd"
         "stdio": "pipe"
   await this.logError("Code quality checks failed")
-  console.log("⚡ Running Performance Optimizations...")
+// console.log("⚡ Running Performance Optimizations...")
       console.log("  Analyzing bundle...")
       execSync("npm run build")
   "cwd"
         "stdio": "pipe"
-      console.log("  Running performance monitoring...")
+// console.log("  Running performance monitoring...")
       console.log("  Running performance monitoring...")
   await this.logError("Performance optimizations failed")
-  console.log("� Running Security Checks...")
+// console.log("� Running Security Checks...")
       console.log("  Running npm audit...")
       execSync("npm audit")
   "cwd"
         "stdio": "pipe"
-      console.log("  Running security scanning...")
+// console.log("  Running security scanning...")
       console.log("  Running security scanning...")
   await this.logError("Security checks failed")
-  console.log("� Running Dependency Updates...")
+// console.log("� Running Dependency Updates...")
       console.log("  Checking for outdated packages...")
       execSync("npm outdated")
   "cwd"

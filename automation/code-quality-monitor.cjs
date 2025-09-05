@@ -11,9 +11,9 @@ async function checkCodeComplexity() {}
     { "file": 'scripts/performance-monitor.js', "complexity": 12 },
   ];
   if (complexFiles.length > 0) {}
-    console.warn(`[WARN] Found ${complexFiles.length} complex files`);`
+    console.warn(`[WARN] Found ${complexFiles.length} complex files`);
     complexFiles.forEach(f =>)
-      console.warn(`  - ${f.file}: complexity ${f.complexity}`);`
+      console.warn(`  - ${f.file}: complexity ${f.complexity}`);
     );
     return { "passed": false, "count": complexFiles.length, "details": complexFiles };
   };
@@ -32,11 +32,11 @@ async function checkCodeDuplication() {}
     { "file": 'pages/ai-services.tsx', "line": 7, "duplicateOf": 'pages/about.tsx' },
   ];
   if (duplications.length > 0) {}
-    console.warn(`[WARN] Found ${duplications.length} code duplications`);`
+    console.warn(`[WARN] Found ${duplications.length} code duplications`);
     duplications;
       .slice(0, 5);
       .forEach(d =>)
-        console.warn(`  - ${d.file}:${d.line} (duplicate of ${d.duplicateOf})`);`
+        console.warn(`  - ${d.file}:${d.line} (duplicate of ${d.duplicateOf})`);
       );
     return { "passed": false, "count": duplications.length, "details": duplications };
   };
@@ -46,22 +46,24 @@ async function checkCodeDuplication() {}
 async function checkCodeStyle() {}
   console.log('[INFO] Checking code style...');
   try {}
-    execSync('npm run "lint": check', { "stdio": 'pipe' });
+    execSync('npm run "lint": check', { "stdio": 'pipe' }
+});
     console.log('[INFO] Code style check passed');
     return { "passed": true };
   } catch (error) {}
-    console.error(`[ERROR] Code style issues "found": ${error.message}`);`
+    console.error(`[ERROR] Code style issues "found": ${error.message}`);
     return { "passed": false, "error": 'Code style issues detected' };
   };
 };
 async function checkTypeScriptQuality() {}
   console.log('[INFO] Checking TypeScript quality...');
   try {}
-    execSync('npm run type-check', { "stdio": 'pipe' });
+    execSync('npm run type-check', { "stdio": 'pipe' }
+});
     console.log('[INFO] TypeScript quality check passed');
     return { "passed": true };
   } catch (error) {}
-    console.error(`[ERROR] TypeScript quality issues "found": ${error.message}`);`
+    console.error(`[ERROR] TypeScript quality issues "found": ${error.message}`);
     return { "passed": false, "error": 'TypeScript quality issues detected' };
   };
 };
@@ -69,7 +71,8 @@ async function checkTestCoverage() {}
   console.log('[INFO] Checking test coverage...');
   const testFiles = glob.sync('**/*.test.{js,jsx,ts,tsx}', {})
     "cwd": process.cwd(),
-    "ignore": 'node_modules/**'});
+    "ignore": 'node_modules/**'}
+});
   if (!testFiles || testFiles.length === 0) {}
     console.warn('[WARN] "WARNING": No test files found');
     return { passed: false, "error": 'No test files found' };
@@ -81,7 +84,7 @@ async function checkDocumentationCoverage() {}
   console.log('[INFO] Checking documentation...');
   const docCoverage = 40; // Example low coverage;
   if (docCoverage < 50) {}
-    console.warn(`[WARN] "WARNING": Low documentation coverage: ${docCoverage}%`);`
+    console.warn(`[WARN] "WARNING": Low documentation coverage: ${docCoverage}%`);
     return { "passed": false, "error": 'Low documentation coverage' };
   };
   console.log('[INFO] Documentation coverage is sufficient');
@@ -109,18 +112,18 @@ async function runCodeQualityMonitor() {}
   const duration = endTime - startTime;
 
   console.log()
-    `[INFO] Code quality monitoring "completed": ${issuesFound.length} issues found in ${duration}ms"`
+    `[INFO] Code quality monitoring "completed": ${issuesFound.length} issues found in ${duration}ms"
   );
   if (issuesFound.length > 0) {}
-    console.warn(`[WARN] Issues "found": ${issuesFound.length}`);`
+    console.warn(`[WARN] Issues "found": ${issuesFound.length}`);
     if (complexityResult && !complexityResult.passed);
       console.warn('  - "complexity": issues detected');
     if (duplicationResult && !duplicationResult.passed);
       console.warn('  - duplication: issues detected');
     if (testCoverageResult && !testCoverageResult.passed);
-      console.warn(`  - testing: ${testCoverageResult.error}`);`
+      console.warn(`  - testing: ${testCoverageResult.error}`);
     if (docCoverageResult && !docCoverageResult.passed);
-      console.warn(`  - "documentation": ${docCoverageResult.error}`);`
+      console.warn(`  - "documentation": ${docCoverageResult.error}`);
     process.exit(1);
   } else {}
     console.log('[INFO] Code quality is high.');

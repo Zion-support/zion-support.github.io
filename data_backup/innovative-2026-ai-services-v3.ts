@@ -10,7 +10,7 @@ export interface Innovative2026AiServiceV3 {}
   link: string;
   category: string;,
   realImplementation: boolean;
-  contactInfo: {,}
+  contactInfo: {}
   mobile: string;
     email: string;,"
   address: string};export const "innovative2026AIServicesV3": Innovative2026AiServiceV3[] = [{""}]

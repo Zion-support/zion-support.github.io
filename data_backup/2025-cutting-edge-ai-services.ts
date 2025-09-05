@@ -16,7 +16,7 @@ export const cuttingEdgeAIServices2025 = [{}]
   'Consciousness level assessment and progression tracking''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 399,
         period:,"
   month',''
@@ -98,7 +98,7 @@ starter: {,}
   'API access for quantum computing resources and services''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 799,
         period:,"
   month',''
@@ -180,7 +180,7 @@ starter: {,}
   'Intelligent integration and API management''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 599,
         period:,"
   month',''
@@ -262,7 +262,7 @@ starter: {,}
   'Integration with regulatory frameworks and standards''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 299,
         period:,"
   month',''
@@ -344,7 +344,7 @@ starter: {,}
   'Real-time creative collaboration and feedback''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 199,
         period:,"
   month',''

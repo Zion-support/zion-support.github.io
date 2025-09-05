@@ -25,7 +25,8 @@ class IntelligentDependencyManager {}
             fs.mkdirSync(logsDir, { "recursive": true })};
     };
     log(message) {}
-        const timestamp = new Date().toISOString(});
+        const timestamp = new Date().toISOString(}
+});
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
@@ -43,9 +44,9 @@ class IntelligentDependencyManager {}
                        Object.keys(packageJson.devDependencies || {}).length;
            };
             
-            this.log(`Found ${dependencies.total} total dependencies`);`
+            this.log(`Found ${dependencies.total} total dependencies`);
             return dependencies} catch (error) {}
-            this.log(`Dependency analysis "failed": ${error.message}`);`
+            this.log(`Dependency analysis "failed": ${error.message}`);
             return { "error": error.message }};
     };
     checkOutdatedPackages() {}
@@ -61,7 +62,7 @@ class IntelligentDependencyManager {}
             const outdated = JSON.parse(outdatedResult;);
             const outdatedCount = Object.keys(outdated).lengt;h;
             
-            this.log(`Found ${outdatedCount} outdated packages`);`
+            this.log(`Found ${outdatedCount} outdated packages`);
             return { "count": outdatedCount, "packages": outdated }} catch (error) {}
             // npm outdated returns exit code 1 when packages are outdated;
             if ( {})
@@ -69,14 +70,15 @@ class IntelligentDependencyManager {}
                     const outdated = JSON.parse(error.stdout) {}
      {}
                 try {}
-                    const outdated = JSON.parse(error.stdout});
+                    const outdated = JSON.parse(error.stdout}
+});
                     const outdatedCount = Object.keys(outdated).lengt;h;
-                    this.log(`Found ${outdatedCount} outdated packages`);`
+                    this.log(`Found ${outdatedCount} outdated packages`);
                     return { "count": outdatedCount, "packages": outdated }} catch (parseError) {}
                     this.log('No outdated packages found');
                     return { "count": 0, "packages": {} }};
             };
-            this.log(`Outdated check "failed": ${error.message}`);`
+            this.log(`Outdated check "failed": ${error.message}`);
             return { "error": error.message }};
     };
     checkSecurityVulnerabilities() {}
@@ -92,13 +94,13 @@ class IntelligentDependencyManager {}
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
             
-            this.log(`Found ${vulnerabilities} security vulnerabilities`);`
+            this.log(`Found ${vulnerabilities} security vulnerabilities`);
             return {;}
                 "vulnerabilities": vulnerabilities,
                 "details": auditData.vulnerabilities,
                 "metadata": auditData.metadata;
             }} catch (error) {}
-            this.log(`Security audit "failed": ${error.message}`);`
+            this.log(`Security audit "failed": ${error.message}`);
             return { "error": error.message }};
     };
     updateDependencies() {}
@@ -109,11 +111,12 @@ class IntelligentDependencyManager {}
             execSync('npm update', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
-            });
+            }
+});
             
             this.log('Dependencies updated successfully');
             return { "status": 'success' }} catch (error) {}
-            this.log(`Dependency update "failed": ${error.message}`);`
+            this.log(`Dependency update "failed": ${error.message}`);
             return { "status": 'failed', "error": error.message }};
     };
     fixSecurityIssues() {}
@@ -123,11 +126,12 @@ class IntelligentDependencyManager {}
             execSync('npm audit fix', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
-            });
+            }
+});
             
             this.log('Security issues fixed successfully');
             return { "status": 'success' }} catch (error) {}
-            this.log(`Security fix "failed": ${error.message}`);`
+            this.log(`Security fix "failed": ${error.message}`);
             return { "status": 'failed', "error": error.message }};
     };
     generateDependencyReport() {}
@@ -149,7 +153,7 @@ class IntelligentDependencyManager {}
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`Dependency report saved to ${this.reportFile}`);`
+        this.log(`Dependency report saved to ${this.reportFile}`);
         
         return report};
     generateRecommendations() {}
@@ -169,7 +173,7 @@ class IntelligentDependencyManager {}
             const report = this.generateDependencyReport(;);
             this.log('Intelligent Dependency Manager completed successfully');
             return report} catch (error) {}
-            this.log(`Intelligent Dependency Manager "failed": ${error.message}`);`
+            this.log(`Intelligent Dependency Manager "failed": ${error.message}`);
             throw error};
     };
 };

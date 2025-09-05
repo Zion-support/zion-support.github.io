@@ -19,7 +19,7 @@ class BuildTestAutomation {}
     }};
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString(;);
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};`;`
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
     
     this.report.steps.push({})
@@ -29,20 +29,21 @@ class BuildTestAutomation {}
     })};
   async runCommand(command, description) {}
     try {}
-      this.log(`"Starting": ${description}`);`
+      this.log(`"Starting": ${description}`);
       const output = execSync(command, { })
         "encoding": 'utf8', 
         "cwd": '/workspace',
         "stdio": 'pipe'
       };);
-      this.log(`"Completed": ${description}`, 'success');`
+      this.log(`"Completed": ${description}`, 'success');
       return output} catch (error) {}
-      this.log(`"Failed": ${description} - ${error.message}`, 'error');`
+      this.log(`"Failed": ${description} - ${error.message}`, 'error');
       this.report.errors.push({})
         "step": description,
         "error": error.message,
         "timestamp": new Date().toISOString();
-      });
+      }
+});
       throw error};
   };
   async cleanBuild() {}
@@ -85,7 +86,7 @@ class BuildTestAutomation {}
         if ()) {}
           this.log(`Build output found "in": ${dir}`, 'success')) {`}
     )) {}
-          this.log(`Build output found "in": ${dir}`, 'success')};`
+          this.log(`Build output found "in": ${dir}`, 'success')};
           buildFound = true;
           break};
       };
@@ -108,7 +109,7 @@ class BuildTestAutomation {}
     const reportPath = path.join('/workspace', 'build-test-automation-report.json';);
     fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
     
-    this.log(`Report saved "to": ${reportPath}`)};`
+    this.log(`Report saved "to": ${reportPath}`)};
   async run() {}
     try {}
       this.log('Starting Build and Test Automation');

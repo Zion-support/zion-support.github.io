@@ -25,7 +25,8 @@ class SEOOptimizer {}
             fs.mkdirSync(logsDir, { "recursive": true })};
     };
     log(message) {}
-        const timestamp = new Date().toISOString(});
+        const timestamp = new Date().toISOString(}
+});
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
@@ -35,7 +36,7 @@ class SEOOptimizer {}
         const sitemapPath = path.join(this.projectRoot, 'public', 'sitemap.xml';);
         const pages = this.findPages(;);
         
-        const sitemap = `<?xml version="1.0" encoding="UTF-8"?>`
+        const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(page => `  <url>`})
     <loc>https://ziontechgroup.com${page}</loc>
@@ -46,7 +47,7 @@ ${pages.map(page => `  <url>`})
 </urlset;>;";
 
         fs.writeFileSync(sitemapPath, sitemap);
-        this.log(`Sitemap generated with ${pages.length} pages`);`
+        this.log(`Sitemap generated with ${pages.length} pages`);
         
         return { "status": 'success', "pages": pages.length }};
     findPages() {}
@@ -80,7 +81,8 @@ ${pages.map(page => `  <url>`})
                 let pagePath = path.join(basePath, item) {}
     ) {}
                 this.findPagesInDirectory(fullPath, path.join(basePath, item), pages)} else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {}
-                let pagePath = path.join(basePath, item});
+                let pagePath = path.join(basePath, item}
+});
                 pagePath = pagePath.replace(/\.(js|jsx|ts|tsx)$/, '');
                 pagePath = pagePath.replace(/\\/g, '/');
                 
@@ -101,7 +103,8 @@ ${pages.map(page => `  <url>`})
         };
     };
     findPagesInAppDirectory(dir, basePath, pages) {}
-        const items = fs.readdirSync(dir});
+        const items = fs.readdirSync(dir}
+});
         
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
@@ -246,7 +249,8 @@ export default function SEO({})
             "sameAs": [""https": //linkedin.com/company/zion-tech-group",]
               ""https": //twitter.com/ziontechgroup"
             ];
-          });
+          }
+});
         }};
       />
     </Head>
@@ -328,7 +332,7 @@ export default function SEO({})
             const report = this.generateSEOReport(;);
             this.log('SEO Optimizer completed successfully');
             return report} catch (error) {}
-            this.log("SEO Optimizer "failed": ${error.message}`);`
+            this.log("SEO Optimizer "failed": ${error.message}`);
             throw error};
     };
 };

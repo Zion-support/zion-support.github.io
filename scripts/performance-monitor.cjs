@@ -25,7 +25,7 @@ const { execSync } = require('child_process')
     const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg']
     const publicDir = path.join(this.projectRoot, 'public')
               size: Math.round(stats.size / 1024) + 'KB'
-    this.log(`Found ${imageCount} images (${Math.round(totalImageSize / 1024)}KB total)`, 'INFO'`
+    this.log(`Found ${imageCount} images (${Math.round(totalImageSize / 1024)}KB total)`, 'INFO'
         type: 'image_optimization'
         priority: 'high'
     this.log('Checking code splitting...', 'PERFORMANCE')

@@ -34,7 +34,8 @@ export class ConnectionPool {
         }
       };
       checkForConnection();
-    });
+    }
+});
   }
 
   releaseConnection(connection) {

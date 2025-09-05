@@ -2,7 +2,7 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-console.log(' Simple App Improvements System')
+// console.log(' Simple App Improvements System')
 console.log('=====')
   log(message, type = 'info')
         encoding: 'utf8'
@@ -10,7 +10,7 @@ console.log('=====')
       this.log(` ${description} completed successfully`, 'success'`)
       this.log(` ${description} failed: ${error.message}`, 'error'`)
       this.log('Creating performance optimization improvements...')
-      const performanceComponent = `import React, { useState, useEffect } from 'react'`
+      const performanceComponent = `import React, { useState, useEffect } from 'react'
       const seoPath = path.join(process.cwd(), 'components', 'SEO.js'
       this.log('Created SEO component')
       this.improvements.push('SEO optimizations created')

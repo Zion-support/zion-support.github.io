@@ -16,7 +16,7 @@ export const quantumBreakthroughServices2025 = [{}]
   '24/7 quantum security operations center''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 12999,
         period:,"
   month',''
@@ -98,7 +98,7 @@ starter: {,}
   'API access for research institutions''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 8999,
         period:,"
   month',''
@@ -180,7 +180,7 @@ starter: {,}
   'API for custom applications''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 15999,
         period:,"
   month',''
@@ -262,7 +262,7 @@ starter: {,}
   'API for space operations''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 19999,
         period:,"
   month',''
@@ -344,7 +344,7 @@ starter: {,}
   'API for energy management systems''];
     ],'
     "pricing": {"}
-starter: {,}
+starter: {}
   price: 7999,
         period:,"
   month',''

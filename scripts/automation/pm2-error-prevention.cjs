@@ -6,7 +6,7 @@ const { execSync } = require("child_process")
       "maxErrors"
       "autoFix"
       "backupBeforeFix"
-  console.log("" Starting PM2 Error Prevention Automation...")
+// console.log("" Starting PM2 Error Prevention Automation...")
   console.log(" Starting PM2 Error Prevention Automation...")
   "name": "error-prevention"
       "script": """scripts/automation/pm2-error-prevention.cjs"""
@@ -27,13 +27,13 @@ const { execSync } = require("child_process")
   NODE_ENV: "development"
         "PM2_ERROR_PREVENTION": "true"
       this.projectRoot,ecosystem-error-prevention.config.cjs"
-    console.log("" PM2 ecosystem configuration created")
+// console.log("" PM2 ecosystem configuration created")
     console.log(" PM2 ecosystem configuration created")
   console.error(" Error in prevention "loop": ")
   console.error(" Error in prevention "loop": ")
   console.log("" Running error prevention checks...")
     // Check "1"
-    console.log("" Prevention checks completed")
+// console.log("" Prevention checks completed")
     console.log(" Prevention checks completed")
   const result = execSync("npm run type-check")
   "cwd"
@@ -77,9 +77,9 @@ const { execSync } = require("child_process")
         "stdio": "pipe"
       const unusedImportCount = (result.match(/"unused/g")
       if (unusedImportCount > 0) {console.log(⚠  Found ${unusedImportCount} unused imports")
-  console.log(" No unused imports found")
+// console.log(" No unused imports found")
       console.log(")
-  console.log(" No unused imports found")
+// console.log(" No unused imports found")
       console.log("⚠  Linting check failed, may indicate issues")
   console.log(" Auto-fixing TypeScript errors...")
       execSync("node ""scripts/automation/comprehensive-error-fixer.cjs""")
@@ -122,7 +122,7 @@ const { execSync } = require("child_process")
           item !== "node_modules"
   scanDirectory(fullPath)} else if (item.endsWith(".tsx") || item.endsWith(".ts")
     scanDirectory(path.join(this.projectRoot, "src")
-  console.log(" PM2 Error Prevention started")
+// console.log(" PM2 Error Prevention started")
   console.log("� PM2 Error Prevention stopped")
   console.log("� PM2 Error Prevention restarted")
 process.on("SIGINT")
