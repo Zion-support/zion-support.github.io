@@ -29,7 +29,8 @@ function fixHoverSyntax(filePath) {
         content = content.replace(pattern.from, pattern.to);
         modified = true;
       }
-    });
+    }
+});
     
     if (modified) {
       fs.writeFileSync(filePath, content);
@@ -70,7 +71,8 @@ function fixAllFiles() {
         totalFixed++;
       }
     }
-  });
+  }
+});
   
   return totalFixed;
 }
@@ -86,7 +88,8 @@ try {
     // Try to build after fixes
     console.log('🔨 Attempting build after fixes...');
     try {
-      execSync('npm run build', { stdio: 'inherit' });
+      execSync('npm run build', { stdio: 'inherit' }
+});
       console.log('✅ Build successful!');
     } catch (error) {
       console.log('⚠️ Build still has issues, but syntax errors were fixed');

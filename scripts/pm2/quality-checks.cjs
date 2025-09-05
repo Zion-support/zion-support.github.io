@@ -11,21 +11,22 @@ const path = require('path');
 
 const log = (message) => {}
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] Quality Checks: ${message}`);`
+  console.log(`[${timestamp}] Quality Checks: ${message}`);
 };
 
 const runCommand = (command, description) => {}
   try {}
-    log(`Starting: ${description}`);`
+    log(`Starting: ${description}`);
     const output = execSync(command, { })
       encoding: 'utf8', 
       stdio: 'pipe',
       cwd: process.cwd();
-    });
-    log(`Completed: ${description}`);`
+    }
+});
+    log(`Completed: ${description}`);
     return { success: true, output };
   } catch (error) {}
-    log(`Failed: ${description} - ${error.message}`);`
+    log(`Failed: ${description} - ${error.message}`);
     return { success: false, error: error.message };
   };
 };
@@ -43,15 +44,16 @@ const runLinting = () => {}
   let lintFailed = 0;
   
   lintCommands.forEach(cmd => {})
-    const result = runCommand(cmd, `Running ${cmd}`);`
+    const result = runCommand(cmd, `Running ${cmd}`);
     if (result.success) {}
       lintPassed++;
     } else {}
       lintFailed++;
     };
-  });
+  }
+});
   
-  log(`Linting results: ${lintPassed} passed, ${lintFailed} failed`);`
+  log(`Linting results: ${lintPassed} passed, ${lintFailed} failed`);
   return { passed: lintPassed, failed: lintFailed };
 };
 
@@ -68,15 +70,16 @@ const runTypeChecking = () => {}
   let typeCheckFailed = 0;
   
   typeCheckCommands.forEach(cmd => {})
-    const result = runCommand(cmd, `Running ${cmd}`);`
+    const result = runCommand(cmd, `Running ${cmd}`);
     if (result.success) {}
       typeCheckPassed++;
     } else {}
       typeCheckFailed++;
     };
-  });
+  }
+});
   
-  log(`Type checking results: ${typeCheckPassed} passed, ${typeCheckFailed} failed`);`
+  log(`Type checking results: ${typeCheckPassed} passed, ${typeCheckFailed} failed`);
   return { passed: typeCheckPassed, failed: typeCheckFailed };
 };
 
@@ -94,15 +97,16 @@ const runCodeQualityChecks = () => {}
   let qualityFailed = 0;
   
   qualityCommands.forEach(cmd => {})
-    const result = runCommand(cmd, `Running ${cmd}`);`
+    const result = runCommand(cmd, `Running ${cmd}`);
     if (result.success) {}
       qualityPassed++;
     } else {}
       qualityFailed++;
     };
-  });
+  }
+});
   
-  log(`Code quality results: ${qualityPassed} passed, ${qualityFailed} failed`);`
+  log(`Code quality results: ${qualityPassed} passed, ${qualityFailed} failed`);
   return { passed: qualityPassed, failed: qualityFailed };
 };
 
@@ -119,15 +123,16 @@ const checkCodeCoverage = () => {}
   let coverageFailed = 0;
   
   coverageCommands.forEach(cmd => {})
-    const result = runCommand(cmd, `Running ${cmd}`);`
+    const result = runCommand(cmd, `Running ${cmd}`);
     if (result.success) {}
       coveragePassed++;
     } else {}
       coverageFailed++;
     };
-  });
+  }
+});
   
-  log(`Code coverage results: ${coveragePassed} passed, ${coverageFailed} failed`);`
+  log(`Code coverage results: ${coveragePassed} passed, ${coverageFailed} failed`);
   return { passed: coveragePassed, failed: coverageFailed };
 };
 
@@ -149,7 +154,7 @@ const generateQualityReport = (results) => {}
   // Save report;
   const reportPath = 'logs/pm2/quality-report.json';
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  log(`Quality report saved to ${reportPath}`);`
+  log(`Quality report saved to ${reportPath}`);
   
   return report;
 };
@@ -175,7 +180,7 @@ const main = async () => {}
   
   // Check if any quality checks failed;
   if (report.overall.failed > 0) {}
-    log(`Quality checks failed: ${report.overall.failed} failures detected`);`
+    log(`Quality checks failed: ${report.overall.failed} failures detected`);
     
     // Attempt to fix issues automatically;
     log('Attempting to fix quality issues automatically');
@@ -197,15 +202,18 @@ const main = async () => {}
 process.on('SIGINT', () => {}
   log('Quality Checks Process interrupted');
   process.exit(0);
+}
 });
 
 process.on('SIGTERM', () => {}
   log('Quality Checks Process terminated');
   process.exit(0);
+}
 });
 
 // Run the main function;
 main().catch(error => {})
-  log(`Quality Checks Process failed: ${error.message}`);`
+  log(`Quality Checks Process failed: ${error.message}`);
   process.exit(1);
+}
 });

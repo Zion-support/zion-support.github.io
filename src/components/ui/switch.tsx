@@ -1,6 +1,5 @@
 const Switch = React.forwardRef<
-  React.ElementRef<typeof SwitchPrimitives.Root>,
-</typeof>
+  React.ElementRef<typeof SwitchPrimitives.Root></typeof>
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
 </typeof>
   <SwitchPrimitives.Root;

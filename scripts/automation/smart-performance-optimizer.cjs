@@ -25,7 +25,8 @@ class SmartPerformanceOptimizer {}
             fs.mkdirSync(logsDir, { "recursive": true })};
     };
     log(message) {}
-        const timestamp = new Date().toISOString(});
+        const timestamp = new Date().toISOString(}
+});
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
@@ -37,7 +38,8 @@ class SmartPerformanceOptimizer {}
             execSync('npm run build', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
-            });
+            }
+});
             
             // Analyze bundle;
             const bundleAnalysis = execSync('npm run analyze', { })
@@ -48,7 +50,7 @@ class SmartPerformanceOptimizer {}
             
             this.log('Bundle analysis completed');
             return { "status": 'success', "output": bundleAnalysis }} catch (error) {}
-            this.log(`Bundle analysis "failed": ${error.message}`);`
+            this.log(`Bundle analysis "failed": ${error.message}`);
             return { "status": 'failed', "error": error.message }};
     };
     checkBuildPerformance() {}
@@ -60,17 +62,18 @@ class SmartPerformanceOptimizer {}
             execSync('npm run build', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
-            });
+            }
+});
             
             const buildTime = Date.now() - startTi;m;e;
-            this.log(`Build completed in ${buildTime}ms`);`
+            this.log(`Build completed in ${buildTime}ms`);
             
             return {;}
                 "status": 'success',
                 "buildTime": buildTime,
                 "performance": buildTime < 60000 ? 'good' : 'needs_optimization'
             }} catch (error) {}
-            this.log(`Build "failed": ${error.message}`);`
+            this.log(`Build "failed": ${error.message}`);
             return { "status": 'failed', "error": error.message }};
     };
     optimizeImages() {}
@@ -82,7 +85,7 @@ class SmartPerformanceOptimizer {}
             const publicDir = path.join(this.projectRoot, 'public';);
             const imageFiles = this.findImageFiles(publicDir;);
             
-            this.log(`Found ${imageFiles.length} image files`);`
+            this.log(`Found ${imageFiles.length} image files`);
             
             return {;}
                 "status": 'success',
@@ -92,7 +95,7 @@ class SmartPerformanceOptimizer {}
                     'Use responsive images with srcset'
                 ] : [];
             }} catch (error) {}
-            this.log(`Image optimization "failed": ${error.message}`);`
+            this.log(`Image optimization "failed": ${error.message}`);
             return { "status": 'failed', "error": error.message }};
     };
     findImageFiles(dir) {}
@@ -151,7 +154,7 @@ class SmartPerformanceOptimizer {}
        };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`Performance report saved to ${this.reportFile}`);`
+        this.log(`Performance report saved to ${this.reportFile}`);
         
         return report};
     generateOptimizationSuggestions() {}
@@ -171,7 +174,7 @@ class SmartPerformanceOptimizer {}
             const report = this.generateOptimizationReport(;);
             this.log('Smart Performance Optimizer completed successfully');
             return report} catch (error) {}
-            this.log(`Smart Performance Optimizer "failed": ${error.message}`);`
+            this.log(`Smart Performance Optimizer "failed": ${error.message}`);
             throw error};
     };
 };

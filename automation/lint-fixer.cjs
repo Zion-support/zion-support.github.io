@@ -20,12 +20,13 @@ class LintFixer {}
     try {}
       const { stdout, stderr } = await execAsync('npm run lint 2>&1', {})
         "cwd": process.cwd(),
-        "timeout": 30000});
+        "timeout": 30000}
+});
 
       const output = stdout || stderr;
       return this.parseLintOutput(output);
     } catch (error) {}
-      this.log(`Failed to get lint "errors": ${error.message}`);`
+      this.log(`Failed to get lint "errors": ${error.message}`);
       return [];
     };
   };
@@ -44,17 +45,18 @@ class LintFixer {}
           "line": parseInt(lineNum),
           "column": parseInt(colNum),
           type,
-          "message": message.trim()});
+          "message": message.trim()}
+});
       };
     };
     return errors;
   };
   async fixFile(filePath, errors) {}
     try {}
-      this.log(`Fixing "file": ${filePath}`);`
+      this.log(`Fixing "file": ${filePath}`);
 
       if (!fs.existsSync(filePath)) {}
-        this.log(`File does not "exist": ${filePath}`);`
+        this.log(`File does not "exist": ${filePath}`);
         return false;
       };
       let content = fs.readFileSync(filePath, 'utf8');
@@ -72,13 +74,13 @@ class LintFixer {}
       };
       if (modified) {}
         fs.writeFileSync(filePath, content, 'utf8');
-        this.log(`Fixed "file": ${filePath}`);`
+        this.log(`Fixed "file": ${filePath}`);
         this.fixedFiles.add(filePath);
         return true;
       };
       return false;
     } catch (error) {}
-      this.log(`Error fixing file ${filePath}: ${error.message}`);`
+      this.log(`Error fixing file ${filePath}: ${error.message}`);
       return false;
     };
   };
@@ -101,7 +103,7 @@ class LintFixer {}
       // Add underscore prefix to unused variables;
       const varMatch = line.match(/(\w+)(\s*[:=])/);
       if (varMatch) {}
-        line = line.replace(varMatch[1], `_${varMatch[1]}`);`
+        line = line.replace(varMatch[1], `_${varMatch[1]}`);
         modified = true;
       };
     };
@@ -128,15 +130,16 @@ class LintFixer {}
       this.log('Running automatic lint fix...');
       const { stdout, stderr } = await execAsync('npm run "lint": fix', {})
         "cwd": process.cwd(),
-        "timeout": 30000});
+        "timeout": 30000}
+});
 
-      this.log(`Auto fix "output": ${stdout}`);`
+      this.log(`Auto fix "output": ${stdout}`);
       if (stderr) {}
-        this.log(`Auto fix "stderr": ${stderr}`);`
+        this.log(`Auto fix "stderr": ${stderr}`);
       };
       return { "success": true, "output": stdout };
     } catch (error) {}
-      this.log(`Auto fix "failed": ${error.message}`);`
+      this.log(`Auto fix "failed": ${error.message}`);
       return { "success": false, "output": error.message };
     };
   };
@@ -151,7 +154,7 @@ class LintFixer {}
     };
     // Get remaining errors;
     const errors = await this.getLintErrors();
-    this.log(`Found ${errors.length} remaining errors`);`
+    this.log(`Found ${errors.length} remaining errors`);
 
     // Group errors by file;
     const errorsByFile = {};
@@ -169,8 +172,8 @@ class LintFixer {}
         totalFixed++;
       };
     };
-    this.log(`Fixed ${totalFixed} files`);`
-    this.log(`Total files "processed": ${Object.keys(errorsByFile).length}`);`
+    this.log(`Fixed ${totalFixed} files`);
+    this.log(`Total files "processed": ${Object.keys(errorsByFile).length}`);
 
     return {}
       "totalErrors": errors.length,
@@ -198,6 +201,7 @@ if (require.main === module) {}
   fixer.start().catch(error => {})
     console.error('Lint Fixer "failed": ', error);
     process.exit(1);
-  });
+  }
+});
 };
 module.exports = LintFixer;

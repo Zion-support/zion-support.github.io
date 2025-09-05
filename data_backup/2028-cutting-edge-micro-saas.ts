@@ -10,7 +10,7 @@ export interface CuttingEdgeMicroSaas2028 {}
   link: string;
   category: string;,
   realImplementation: boolean;
-  contactInfo: {,}
+  contactInfo: {}
   mobile: string;
     email: string;,"
   address: string};export const "cuttingEdge2028MicroSaas": CuttingEdgeMicroSaas2028[] = [{""}]

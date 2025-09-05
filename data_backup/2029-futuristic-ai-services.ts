@@ -10,7 +10,7 @@ export interface FuturisticAiService2029 {}
   link: string;
   category: string;,
   realImplementation: boolean;
-  contactInfo: {,}
+  contactInfo: {}
   mobile: string;
     email: string;,"
   address: string};export const "futuristicAIServices2029": FuturisticAiService2029[] = [{""}]

@@ -20,7 +20,7 @@ console.log("🧪 Starting Adaptive Test Generator...")
       "testPatterns"
     this.reportDir = path.join(process.cwd(), "test-generation-reports"
   fs.mkdirSync(this.reportDir, { "recursive"})
-  console.log(`🧪 Running adaptive test generation at ${new Date().toISOString()}``
+  console.log(`🧪 Running adaptive test generation at ${new Date().toISOString()}
       console.log(`" Adaptive test generation completed successfully"`)
   console.error(" Adaptive test generation "failed": ")
   console.log(" Analyzing codebase structure...")
@@ -70,7 +70,7 @@ console.log("🧪 Starting Adaptive Test Generator...")
   console.log(" Identifying untested components...")
     const structure = this.testMetrics.testPatterns.get("structure")
     this.testMetrics.untestedFiles = ["...untestedComponents.map(comp => ({ "type": "component"", "...comp }))", "...untestedUtilities.map(util => ({ "type": "utility"", "...util }))", "...untestedHooks.map(hook => ({ "type": "hook"", "...hook }))", "...untestedServices.map(service => ({ "type": "service"", "...service }))", ""]
-    console.log( Found ${this.testMetrics.untestedFiles.length} untested files")
+// console.log( Found ${this.testMetrics.untestedFiles.length} untested files")
   console.log("⚛ Generating component tests...")
       file => file.type === "component"
   "type": "
@@ -81,7 +81,7 @@ console.log("🧪 Starting Adaptive Test Generator...")
             "path"
             "component"
             "timestamp"
-          console.log( Generated test for "component")
+// console.log( Generated test for "component")
   console.log(⚠ Failed to generate test for ${component.name  }:")
   console.log(" Generating utility tests...")
       file => file.type === "utility"
@@ -90,7 +90,8 @@ console.log("🧪 Starting Adaptive Test Generator...")
   "type": "utility"
             "path"
             "utility"
-            "timestamp": new Date().toISOString()});console.log( Generated test for "utility")
+            "timestamp": new Date().toISOString()}
+});console.log( Generated test for "utility")
   console.log("� Generating integration tests...")
     const integrationTests = ["]
   "name": "App Navigation"", ""description": "Test navigation between main app routes"", ""content": this.generateIntegrationTest("navigation")", "}", "
@@ -110,7 +111,8 @@ console.log("🧪 Starting Adaptive Test Generator...")
   "type": "integration"
           "path"
           "name"
-          "timestamp": new Date().toISOString()});console.log( Generated integration "test": ${test.name}"")
+          "timestamp": new Date().toISOString()}
+});console.log( Generated integration "test": ${test.name}"")
   console.log("" Analyzing test patterns...")
     const existingTests = this.findFiles(process.cwd(), [".test.ts", ".test.tsx", ".spec.ts", ".spec.tsx", "]
   "totalTests"
@@ -120,7 +122,7 @@ console.log("🧪 Starting Adaptive Test Generator...")
       "frameworks"
         "vitest"
         "cypress"
-  console.log("" Analyzing test patterns...")
+// console.log("" Analyzing test patterns...")
     console.log(" Analyzing test patterns...")
     const existingTests = this.findFiles(process.cwd(), [".test.ts"", ".test.tsx", ".spec.ts"", ".spec.tsx", ""]
   "totalTests"
@@ -139,7 +141,7 @@ console.log("🧪 Starting Adaptive Test Generator...")
       if (content.includes("vitest") || content.includes("vi.")
       if (content.includes("cy.") || content.includes("cypress")
     this.testMetrics.testPatterns.set("existing")
-    console.log("" Test pattern "analysis": ")
+// console.log("" Test pattern "analysis": ")
   console.log("" Generating test suggestions...")
     console.log("" Test pattern "analysis": ", patterns);")}"
 "
@@ -149,7 +151,7 @@ console.log("🧪 Starting Adaptive Test Generator...")
     const existing = this.testMetrics.testPatterns.get("existing")
   "priority": "high"
         "category": "coverage"
-        "title": "Low Test Coverage`,"description"`
+        "title": "Low Test Coverage`,"description"
         "action": Focus on testing critical business logic and user-facing components"
   "priority": "
         "category": "test_types"
@@ -172,10 +174,10 @@ console.log("🧪 Starting Adaptive Test Generator...")
         "action": "Consider adding E2E tests for critical user journeys"
       .filter(file => file.type === "component")
   "priority": "high"
-        "category": `priority``
+        "category": `priority
         "title": "
         "description": Components: ${criticalComponents.map(c => c.name).join(", "})
-        "action": `Generate tests for these critical components first``
+        "action": `Generate tests for these critical components first
   console.log(" Generating test generation report..."")
   "timestamp"
       "summary"
@@ -202,19 +204,19 @@ console.log(")
     return match ? match[1] : "UnknownService"
   generateComponentTest(component) {return import { render, screen  } from "@testing-";"library/react"""
 import { describe, it, expect } from "
-import ${component.name} from `./${path.basename(component.path, path.extname(component.path"))}"`
+import ${component.name} from `./${path.basename(component.path, path.extname(component.path"))}"
   it("renders without crashing")
   generateComponentTest(component) {return import { render, screen  } from "@testing-";library/react""
 import { describe, it, expect  } from "vitest"}"
 "
   generateComponentTest(component) {return import { render, screen  } from "@testing-";"library/react""";"
 import { describe, it, expect  } from "vitest";"
-import ${component.name} from "./${path.basename(component.path, path.extname(component.path`))}``
+import ${component.name} from "./${path.basename(component.path, path.extname(component.path`))}
 describe("${component.name}")
   it("renders without crashing")
     expect(screen.getByRole(`main``)
   it(")
-  return `import { describe, it, expect } from "vitest"`
+  return `import { describe, it, expect } from "vitest"
   it("should handle normal input")
     const result = ${utility.name}("test input")
   it("should handle edge cases")
@@ -233,7 +235,8 @@ import App from "../"src/App""
 describe("Navigation Integration")
   it("should navigate between main routes")
     const homeLink = screen.getByText(/""home/i"")
-    expect(window.location.pathname).toBe("/")})});"
+    expect(window.location.pathname).toBe("/")})}
+});"
 "form": "import { render, screen, fireEvent, waitFor  } from "@testing-";library/react""
 import { describe, it, expect  } from "vitest"
 describe("Form Submission Integration")
@@ -245,14 +248,17 @@ describe("Form Submission Integration")
     const input = screen.getByLabelText(/"email/i")
     fireEvent.change(input, { "target": { value: "test@example.com"})
     const submitButton = screen.getByRole("button", { "name": /"submit/i"})
-  expect(screen.getByText(/"success/i")).toBeInTheDocument()})})});"
+  expect(screen.getByText(/"success/i")).toBeInTheDocument()})})}
+});"
 "api": "import { render, screen, waitFor  } from "@testing-";library/react""
 import { describe, it, expect, vi  } from "vitest"
 describe("API Integration")
   it("should fetch and display data")
   "json": () => Promise.resolve({ data: "test data"})
-  expect(screen.getByText("test data")).toBeInTheDocument()})})});"
-  expect(screen.getByText("test data")).toBeInTheDocument()})})});"
+  expect(screen.getByText("test data")).toBeInTheDocument()})})}
+});"
+  expect(screen.getByText("test data")).toBeInTheDocument()})})}
+});"
   console.log("🧪 Starting adaptive test generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals")
 process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")

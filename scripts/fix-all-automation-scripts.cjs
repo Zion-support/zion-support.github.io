@@ -19,7 +19,7 @@ class AutomationScriptFixer {}
     try {}
       await fs.appendFile(this.logFile, logEntry);
       console.log(`[${level}] ${message}`)} catch (error) {`}
-      console.error(`Failed to write to log "file": ${error.message}`)};`
+      console.error(`Failed to write to log "file": ${error.message}`)};
   };
   async ensureDirectories() {}
     const dirs = [path.dirname(this.logFile),]
@@ -50,7 +50,7 @@ class AutomationScriptFixer {}
             scriptFiles.push(path.join(dir, file))};
         };
       } catch (error) {}
-        await this.log(`Error reading directory ${dir}: ${error.message}`, 'WARN')};`
+        await this.log(`Error reading directory ${dir}: ${error.message}`, 'WARN')};
     };
     return scriptFiles};
   async fixScriptFile(filePath) {}
@@ -107,27 +107,30 @@ class AutomationScriptFixer {}
       };
       if (hasChanges) {}
         await fs.writeFile(filePath, fixedContent, 'utf8');
-        await this.log(`Fixed "script": ${path.basename(filePath)}`, 'SUCCESS');`
+        await this.log(`Fixed "script": ${path.basename(filePath)}`, 'SUCCESS');
         this.fixedScripts.push({})
           "file": path.basename(filePath),
           "path": filePath,
           "timestamp": new Date().toISOString();
-        });
+        }
+});
         return true};
       return false} catch (error) {}
-      await this.log(`Error fixing script ${filePath}: ${error.message}`, 'ERROR');`
+      await this.log(`Error fixing script ${filePath}: ${error.message}`, 'ERROR');
       this.errors.push({})
         "file": path.basename(filePath),
         "path": filePath,
         "error": error.message,
         "timestamp": new Date().toISOString();
-      });
+      }
+});
       return false};
   };
   async testScript(filePath) {}
     try {}
       // Try to run the script with --help or similar to test syntax;
-      const { stdout, stderr } = await execAsync(`node -c "${filePath}"`, { "timeout": 5000 });`
+      const { stdout, stderr } = await execAsync(`node -c "${filePath}"`, { "timeout": 5000 }
+});
       return { "success": true, "output": stdout, "error": stderr }} catch (error) {}
       return { "success": false, "output": '', "error": error.message }};
   };
@@ -136,13 +139,13 @@ class AutomationScriptFixer {}
     await this.ensureDirectories();
 
     const scriptFiles = await this.findScriptFiles();
-    await this.log(`Found ${scriptFiles.length} script files to check`, 'INFO');`
+    await this.log(`Found ${scriptFiles.length} script files to check`, 'INFO');
 
     let fixedCount = 0;
     let testedCount = 0;
 
     for (const scriptFile of scriptFiles) {}
-      await this.log(`"Processing": ${path.basename(scriptFile)}`, 'INFO');`
+      await this.log(`"Processing": ${path.basename(scriptFile)}`, 'INFO');
       
       const wasFixed = await this.fixScriptFile(scriptFile);
       if (wasFixed) {}
@@ -153,7 +156,7 @@ class AutomationScriptFixer {}
       
       if (testResult.success) {}
         await this.log(`✓ Syntax "OK": ${path.basename(scriptFile)}`, 'SUCCESS')} else {`}
-        await this.log(`✗ Syntax "Error": ${path.basename(scriptFile)} - ${testResult.error}`, 'ERROR')};`
+        await this.log(`✗ Syntax "Error": ${path.basename(scriptFile)} - ${testResult.error}`, 'ERROR')};
     };
     // Generate report;
     const report = {}
@@ -169,8 +172,8 @@ class AutomationScriptFixer {}
     };
 
     await fs.writeFile(this.reportFile, JSON.stringify(report, null, 2));
-    await this.log(`Script fixing completed. Fixed ${fixedCount} scripts, found ${this.errors.length} errors`, 'INFO');`
-    await this.log(`Report saved "to": ${this.reportFile}`, 'INFO');`
+    await this.log(`Script fixing completed. Fixed ${fixedCount} scripts, found ${this.errors.length} errors`, 'INFO');
+    await this.log(`Report saved "to": ${this.reportFile}`, 'INFO');
 
     return report};
 };

@@ -45,7 +45,8 @@ files.forEach(file => {
           content = content.replace(pattern.from, pattern.to);
           modified = true;
         }
-      });
+      }
+});
       
       if (modified) {
         fs.writeFileSync(file, content);
@@ -56,6 +57,7 @@ files.forEach(file => {
   } catch (error) {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
+}
 });
 
 console.log(`✅ Fixed ${totalFixed} files`);

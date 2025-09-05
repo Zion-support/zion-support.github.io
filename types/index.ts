@@ -9,7 +9,7 @@ export interface Service {}
     | 'micro-saas'''
     | 'ai-services'''
     | 'it-services';'
-  price: {,}
+  price: {}
   min: number;
     max: number;,
   currency: string};'

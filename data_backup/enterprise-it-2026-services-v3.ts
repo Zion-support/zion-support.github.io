@@ -10,7 +10,7 @@ export interface EnterpriseIt2026ServiceV3 {}
   link: string;
   category: string;,
   realImplementation: boolean;
-  contactInfo: {,}
+  contactInfo: {}
   mobile: string;
     email: string;,"
   address: string};export const "enterpriseIT2026ServicesV3": EnterpriseIt2026ServiceV3[] = [{""}]

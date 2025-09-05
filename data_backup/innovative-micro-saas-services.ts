@@ -10,7 +10,7 @@ export interface InnovativeMicroSaasService {}
   link: string;
   category: string;,
   realImplementation: boolean;
-  contactInfo: {,}
+  contactInfo: {}
   mobile: string;
     email: string;,"
   address: string};export const "innovativeMicroSaasServices": InnovativeMicroSaasService[] = [{""}]

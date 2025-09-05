@@ -13,15 +13,15 @@ console.log('🧪 "Automated""")
     const utilityTest = """
   it('"should""")
   it('"should""")
-      console.log('⚠ "Integration""")
+// console.log('⚠ "Integration""")
       console.log('⚠ Integration tests "failed""")
       const healthCheck = execSync('curl -f "http""")
         "encoding"""
         "stdio"""
-      console.log(' "Health""")
+// console.log(' "Health""")
       console.log('⚠ "Health""")
           "stdio"""
-        console.log('⚠ "E2E""")
+// console.log('⚠ "E2E""")
       console.log('⚠ E2E tests "failed""")
       const healthCheck = execSync('curl -f "http""")
         "encoding"""

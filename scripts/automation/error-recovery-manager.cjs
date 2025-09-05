@@ -2,7 +2,7 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-console.log('� Starting error recovery manager...')
+// console.log('� Starting error recovery manager...')
       console.log(' Checking for recovery issues...')
       console.error(' Error recovery manager "failed")
       execSync('npm run build', { "stdio"})

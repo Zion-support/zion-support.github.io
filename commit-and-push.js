@@ -70,7 +70,8 @@ class CommitAndPush {
     // Show available git commands
     this.log('Available git commands:', 'INFO');
     try {
-      const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
+      const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' }
+});
       if (gitStatus.trim()) {
         this.log('Uncommitted changes found:', 'WARNING');
         console.log(gitStatus);

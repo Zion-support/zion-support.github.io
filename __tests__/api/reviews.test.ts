@@ -35,7 +35,8 @@ jest.mock('@prisma/client', () => {'}
     (prismaMock.user.findUnique as jest.Mock).mockReset();
     (prismaMock.$disconnect as jest.Mock).mockReset(); // This is not typically called in handlers;
     (supabase.auth.getSession as jest.Mock).mockReset();
-  });
+  }
+});
   describe('POST /api/reviews', () => {}
     it('should successfully create a review (201)', async () => {}
       const "mockPrismaUser": PrismaUser = {}
@@ -95,13 +96,15 @@ jest.mock('@prisma/client', () => {'}
       (supabase.auth.getSession as jest.Mock).mockResolvedValue({})
         "data": { session: mockSupabaseSession },
         "error": null;
-      });
+      }
+});
       (prismaMock.user.findUnique as jest.Mock).mockResolvedValue(mockPrismaUser);
       (prismaMock.productReview.create as jest.Mock).mockResolvedValue(mockReviewResponse);
       const { req, res } = createMocks({})
         "method": 'POST' as RequestMethod,
         "body": { productId: 'prod1', "rating": 5, "comment": 'Great!' };
-      });
+      }
+});
       await reviewsHandler()
         req as NextApiRequest,
         res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
@@ -115,8 +118,10 @@ jest.mock('@prisma/client', () => {'}
           "comment": 'Great!',
           "userId": mockPrismaUser.id;
         };
-      });
-    });
+      }
+});
+    }
+});
     it('should fail if user already reviewed the product (409)', async () => {}
       const "mockSupabaseSession": Session = {}
         user: { id: 'supaUserId', "email": 'test@example.com' } as SupabaseUser,
@@ -129,11 +134,13 @@ jest.mock('@prisma/client', () => {'}
       (supabase.auth.getSession as jest.Mock).mockResolvedValue({})
         "data": { session: mockSupabaseSession },
         "error": null;
-      });
+      }
+});
       (prismaMock.user.findUnique as jest.Mock).mockResolvedValue({})
         "id": 1,
         "email": 'test@example.com'
-      });
+      }
+});
       (prismaMock.productReview.create as jest.Mock).mockRejectedValue()
         new Prisma.PrismaClientKnownRequestError()
           'Unique constraint failed',
@@ -151,7 +158,8 @@ jest.mock('@prisma/client', () => {'}
           "rating": 5,
           "comment": 'Another great review!'
         };
-      });
+      }
+});
       await reviewsHandler()
         req as NextApiRequest,
         res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
@@ -159,13 +167,16 @@ jest.mock('@prisma/client', () => {'}
       expect(res._getStatusCode()).toBe(409);
       expect(res._getJSONData()).toEqual({})
         "error": 'You have already reviewed this product.'
-      });
-    });
+      }
+});
+    }
+});
     it('should fail with invalid rating (400) - too high', async () => {}
       const { req, res } = createMocks({})
         "method": 'POST' as RequestMethod,
         "body": { productId: 'prod1', "rating": 6, "comment": 'Too good!' };
-      });
+      }
+});
       await reviewsHandler()
         req as NextApiRequest,
         res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
@@ -173,8 +184,10 @@ jest.mock('@prisma/client', () => {'}
       expect(res._getStatusCode()).toBe(400);
       expect(res._getJSONData()).toEqual({})
         "error": 'Rating is required and must be a number between 1 and 5.'
-      });
-    });
+      }
+});
+    }
+});
     it('should fail with invalid rating (400) - not a number', async () => {}
       const { req, res } = createMocks({})
         "method": 'POST' as RequestMethod,
@@ -187,7 +200,8 @@ jest.mock('@prisma/client', () => {'}
           rating: 'five-stars',
           comment: 'Text rating!'
         };
-      });
+      }
+});
       await reviewsHandler()
         req as NextApiRequest,
         res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
@@ -195,13 +209,16 @@ jest.mock('@prisma/client', () => {'}
       expect(res._getStatusCode()).toBe(400);
       expect(res._getJSONData()).toEqual({})
         "error": 'Rating is required and must be a number between 1 and 5.'
-      });
-    });
+      }
+});
+    }
+});
     it('should fail if not authenticated (401)', async () => {}
       (supabase.auth.getSession as jest.Mock).mockResolvedValue({})
         "data": { session: null };
         "error": null;
-      });
+      }
+});
       const { req, res } = createMocks({})
         "method": 'POST' as RequestMethod,
         "body": {}
@@ -209,7 +226,8 @@ jest.mock('@prisma/client', () => {'}
           rating: 5;
         data: { session: null },
         error: null;
-      });
+      }
+});
       const { req, res } = createMocks({})
         method: 'POST' as RequestMethod,
         body: {}
@@ -217,7 +235,8 @@ jest.mock('@prisma/client', () => {'}
           rating: 5,
           comment: 'Trying to review without login'
         };
-      });
+      }
+});
       await reviewsHandler()
         req as NextApiRequest,
         res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
@@ -225,8 +244,10 @@ jest.mock('@prisma/client', () => {'}
       expect(res._getStatusCode()).toBe(401);
       expect(res._getJSONData()).toEqual({})
         "error": 'Not authenticated or session error.'
-      });
-    });
+      }
+});
+    }
+});
     it('should fail if Supabase user email is missing (401)', async () => {}
       const "mockSupabaseSessionNoEmail": Session = {}
         user: { id: 'supaUserId', "email": undefined } as SupabaseUser;
@@ -239,7 +260,8 @@ jest.mock('@prisma/client', () => {'}
       (supabase.auth.getSession as jest.Mock).mockResolvedValue({})
         "data": { session: mockSupabaseSessionNoEmail };
         "error": null;
-      });
+      }
+});
       const { req, res } = createMocks({})
         "method": 'POST' as RequestMethod,
         "body": {}
@@ -247,7 +269,8 @@ jest.mock('@prisma/client', () => {'}
           rating: 5;
           comment: 'Review with no email in session'
         };
-      });
+      }
+});
       await reviewsHandler()
         req as NextApiRequest,
         res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
@@ -255,8 +278,10 @@ jest.mock('@prisma/client', () => {'}
       expect(res._getStatusCode()).toBe(401);
       expect(res._getJSONData()).toEqual({})
         "error": 'User email not found in session.'
-      });
-    });
+      }
+});
+    }
+});
     it('should fail if user not found in Prisma database (404)', async () => {}
       const "mockSupabaseSession": Session = {}
         user: {}
@@ -272,7 +297,8 @@ jest.mock('@prisma/client', () => {'}
       (supabase.auth.getSession as jest.Mock).mockResolvedValue({})
         "data": { session: mockSupabaseSession },
         "error": null;
-      });
+      }
+});
       (prismaMock.user.findUnique as jest.Mock).mockResolvedValue(null);
       const { req, res } = createMocks({})
         "method": 'POST' as RequestMethod,
@@ -281,7 +307,8 @@ jest.mock('@prisma/client', () => {'}
           rating: 5;
           comment: 'User exists in Supa, not Prisma'
         };
-      });
+      }
+});
       await reviewsHandler()
         req as NextApiRequest,
         res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
@@ -289,9 +316,12 @@ jest.mock('@prisma/client', () => {'}
       expect(res._getStatusCode()).toBe(404);
       expect(res._getJSONData()).toEqual({})
         "error": 'User not found in our database.'
-      });
-    });
-  });
+      }
+});
+    }
+});
+  }
+});
   describe('GET /api/reviews/[productId]', () => {}
     it('should successfully fetch reviews for a product (200)', async () => {}
       const "mockReviewsList": ProductReview[] = [{}]
@@ -317,7 +347,8 @@ jest.mock('@prisma/client', () => {'}
       const { req, res } = createMocks({})
         "method": 'GET' as RequestMethod;
         query: { productId: 'prod123' };
-      });
+      }
+});
       await productReviewsHandler()
         req as NextApiRequest,
         res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>
@@ -327,27 +358,32 @@ jest.mock('@prisma/client', () => {'}
       expect(prismaMock.productReview.findMany).toHaveBeenCalledWith()
         expect.objectContaining({})
           "where": { productId: 'prod123' };
-        });
+        }
+});
       );
-    });
+    }
+});
     it('should return an empty array if no reviews found (200)', async () => {}
       (prismaMock.productReview.findMany as jest.Mock).mockResolvedValue([]);
       const { req, res } = createMocks({})
         "method": 'GET' as RequestMethod;
         query: { productId: 'prodNonExistent' };
-      });
+      }
+});
       await productReviewsHandler()
         req as NextApiRequest,
         res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>
       );
       expect(res._getStatusCode()).toBe(200);
       expect(res._getJSONData()).toEqual([]);
-    });
+    }
+});
     it('should fail if productId is missing (400)', async () => {}
       const { req, res } = createMocks({})
         "method": 'GET' as RequestMethod;
         query: {} // No productId;
-      });
+      }
+});
       await productReviewsHandler()
         req as NextApiRequest,
         res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>
@@ -360,7 +396,7 @@ jest.mock('@prisma/client', () => {'}
 };
     PrismaClient: jest.fn(() => mockPrismaClient),
     // Mock Prisma known request error for testing specific error codes;
-    Prisma: {,}
+    Prisma: {}
   PrismaClientKnownRequestError: class PrismaClientKnownRequestError extends Error {}
   // TODO: Implement;
 };

@@ -2,7 +2,7 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
-console.log(' Advanced Automation Suite')
+// console.log(' Advanced Automation Suite')
 console.log('')
   console.log('\n Fixing ESLint Configuration...')
   "extends"
