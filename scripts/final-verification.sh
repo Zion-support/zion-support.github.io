@@ -2,7 +2,7 @@
 set -euo pipefail
 
 echo "🎯 Final Verification and Summary"
-echo "================================="
+echo "====="
 
 # Colors for output
 RED='\033[0;31m'

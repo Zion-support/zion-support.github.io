@@ -563,7 +563,7 @@ class IntelligentGitWorkflow {
           inConflict = true;
           conflictType = 'start';
           continue;
-        } else if (line.startsWith('=======')) {
+        } else if (line.startsWith('')) {
           conflictType = 'separator';
           continue;
         } else if (line.startsWith('>>>>>>')) {

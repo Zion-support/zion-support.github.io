@@ -35,7 +35,7 @@ info() {
 }
 
 print_header "🚀 Automated Deployment Pipeline"
-echo "====================================="
+echo "=="
 echo
 
 # Configuration
@@ -258,13 +258,13 @@ EOF
 # Main deployment function
 main() {
     print_header "🔧 Phase 1: Pre-deployment Setup"
-    echo "=================================="
+    echo "======"
     
     run_pre_deployment_checks
     create_deployment_backup
     
     print_header "🚀 Phase 2: Staging Deployment"
-    echo "=============================="
+    echo "=="
     
     deploy_to_staging
     run_health_checks
@@ -275,18 +275,18 @@ main() {
     fi
     
     print_header "🌟 Phase 3: Production Deployment"
-    echo "=================================="
+    echo "======"
     
     deploy_to_production
     create_rollback_script
     
     print_header "📊 Phase 4: Deployment Summary"
-    echo "=============================="
+    echo "=="
     
     generate_deployment_report
     
     print_header "🎉 Deployment Complete!"
-    echo "========================"
+    echo "==="
     
     success "Deployment ID: deployment-$TIMESTAMP"
     success "Location: $CURRENT_DEPLOYMENT"

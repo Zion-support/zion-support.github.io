@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 console.log('🔧 Fixing Remaining Corrupted Files...');
-console.log('======================================');
+console.log('===');
 
 // List of remaining corrupted files to fix
 const corruptedFiles = ['pages/docs/integration-examples.tsx',

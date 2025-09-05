@@ -73,7 +73,7 @@ class MasterAutomationSuite {
 
   async runMasterSuite() {
     this.log('🚀 Starting Master Automation Suite');
-    this.log('===================================');
+    this.log('');
 
     const phases = [{
         "name": 'enhanced-orchestrator',

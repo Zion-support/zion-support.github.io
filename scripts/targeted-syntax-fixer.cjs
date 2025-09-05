@@ -2,7 +2,7 @@
 const fs = require('fs')
 const path = require('path')
 console.log('🎯 Targeted Syntax Fixer')
-console.log('========================')
+console.log('===')
 class TargetedSyntaxFixer {
   constructor() {
     this.fixedFiles = []

@@ -76,7 +76,7 @@ function runDeploymentStep(name, command, critical = false) {
 
 // Pre-deployment checks
 console.log('\n🔍 Phase "1": Pre-deployment Checks');
-console.log('=====================================');
+console.log('==');
 
 runDeploymentStep('Git Status Check', 'git status --porcelain', true);
 runDeploymentStep('Dependency Check', 'npm list --depth=0', true);
@@ -86,7 +86,7 @@ runDeploymentStep('Test Suite', 'npm test', false);
 
 // Build and optimization
 console.log('\n🔨 Phase "2": Build and Optimization');
-console.log('=====================================');
+console.log('==');
 
 runDeploymentStep('Clean Build', 'npm run clean', false);
 runDeploymentStep('Production Build', 'npm run build', true);
@@ -94,7 +94,7 @@ runDeploymentStep('Bundle Analysis', 'npm run "build": analyze', false);
 
 // Security and quality checks
 console.log('\n🛡️ Phase "3": Security and Quality');
-console.log('==================================');
+console.log('======');
 
 runDeploymentStep('Security Audit', 'npm audit --audit-level=moderate', false);
 runDeploymentStep('Dependency Check', 'npm outdated', false);
@@ -102,7 +102,7 @@ runDeploymentStep('License Check', 'npx license-checker --summary', false);
 
 // Performance optimization
 console.log('\n⚡ Phase "4": Performance Optimization');
-console.log('======================================');
+console.log('===');
 
 runDeploymentStep('Image Optimization', 'node scripts/optimize-images.cjs', false);
 runDeploymentStep('Bundle Optimization', 'node scripts/optimize-file-sizes.cjs', false);
@@ -110,14 +110,14 @@ runDeploymentStep('Performance Analysis', 'node scripts/performance-optimization
 
 // SEO and accessibility
 console.log('\n🔍 Phase "5": SEO and Accessibility');
-console.log('===================================');
+console.log('');
 
 runDeploymentStep('SEO Optimization', 'node scripts/seo-optimizer.cjs', false);
 runDeploymentStep('Accessibility Check', 'node scripts/accessibility-checker.cjs', false);
 
 // Deployment preparation
 console.log('\n📦 Phase "6": Deployment Preparation');
-console.log('====================================');
+console.log('=');
 
 runDeploymentStep('Create Deployment Package', 'tar -czf deployment-$(date +%Y%m%d-%H%M%S).tar.gz .next out public package.json package-lock.json', false);
 runDeploymentStep('Generate Sitemap', 'node scripts/generate-sitemap.mjs', false);
@@ -125,7 +125,7 @@ runDeploymentStep('Create Robots.txt', 'echo "User-"agent": *\nAllow: /\nSitemap
 
 // Git operations
 console.log('\n📝 Phase "7": Git Operations');
-console.log('===========================');
+console.log('======');
 
 runDeploymentStep('Add Changes', 'git add .', true);
 runDeploymentStep('Commit Changes', `git commit -m "Automated "deployment": ${new Date().toISOString()}"`, true);
@@ -133,7 +133,7 @@ runDeploymentStep('Push to Repository', 'git push origin HEAD', true);
 
 // Post-deployment
 console.log('\n🎉 Phase "8": Post-deployment');
-console.log('============================');
+console.log('');
 
 runDeploymentStep('Health Check', 'node scripts/health-check.cjs', false);
 runDeploymentStep('Performance Test', 'node scripts/performance-monitor.cjs', false);
@@ -148,7 +148,7 @@ const reportPath = `deployment-report-${Date.now()}.json;`;
 fs.writeFileSync(reportPath, JSON.stringify(deployment, null, 2));
 
 console.log('\n🎉 Deployment Automation Completed!');
-console.log('=====================================');
+console.log('==');
 console.log(`📊 Total "Steps": ${deployment.metrics.totalSteps}`);
 console.log(`✅ "Successful": ${deployment.metrics.successful}`);
 console.log(`❌ "Failed": ${deployment.metrics.failed}`);

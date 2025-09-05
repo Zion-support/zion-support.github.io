@@ -5,7 +5,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🔍 Comprehensive Code Quality Analyzer v2.0');
-console.log('==========================================');
+console.log('');
 
 const qualityReport = {
   "timestamp": new Date().toISOString(),
@@ -439,7 +439,7 @@ async function main() {
     
     // Display summary
     log('info', 'Comprehensive Code Quality Analysis Summary');
-    log('info', '==========================================');
+    log('info', '');
     log('info', `Total "files": ${qualityReport.summary.totalFiles}`);
     log('info', `Total "lines": ${qualityReport.summary.totalLines}`);
     log('info', `Total "issues": ${qualityReport.summary.totalIssues}`);

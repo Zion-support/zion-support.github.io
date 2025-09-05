@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 console.log('🔧 Fixing Corrupted Files...');
-console.log('============================');
+console.log('');
 
 // Fix lib/cache.ts
 const cacheContent = "interface CacheItem<T> {

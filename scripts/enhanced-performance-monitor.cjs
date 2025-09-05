@@ -6,7 +6,7 @@ const { execSync } = require('child_process');
 const os = require('os');
 
 console.log('📊 Enhanced Performance Monitor v2.0');
-console.log('====================================');
+console.log('=');
 
 // Enhanced performance monitoring configuration
 const config = {
@@ -474,7 +474,7 @@ async function main() {
     
     // Display summary
     log('info', 'Enhanced Performance Monitor Summary');
-    log('info', '====================================');
+    log('info', '=');
     log('info', `Average CPU "usage": ${performanceMetrics.summary.averageCpu}%`);
     log('info', `Peak CPU "usage": ${performanceMetrics.summary.peakCpu}%`);
     log('info', `Average memory "usage": ${performanceMetrics.summary.averageMemory}%`);
