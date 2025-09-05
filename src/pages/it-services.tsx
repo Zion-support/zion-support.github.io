@@ -103,47 +103,207 @@ const itServices = [
       "Faster issue resolution",
       "Improved productivity",
       "Cost-effective support"
-    ]
+    ],
+    pricing: "Starting at $89/month per user",
+    marketRate: "$50-150/user/month"
   },
   {
-    title: "Database Management",
-    description: "Expert database design, optimization, and management services",
+    title: "Advanced Cybersecurity Suite",
+    description: "Enterprise-grade cybersecurity solutions with AI-powered threat detection and response",
+    icon: Shield,
+    features: [
+      "AI Threat Detection",
+      "Zero Trust Architecture",
+      "Advanced Endpoint Protection",
+      "Security Orchestration",
+      "Compliance Management",
+      "Incident Response Automation"
+    ],
+    color: "from-red-500 to-rose-500",
+    benefits: [
+      "99.9% threat prevention",
+      "Automated response",
+      "Compliance assurance",
+      "Reduced security costs"
+    ],
+    pricing: "Starting at $299/month for up to 100 users",
+    marketRate: "$200-500/month"
+  },
+  {
+    title: "Cloud Infrastructure Management",
+    description: "Comprehensive cloud infrastructure design, deployment, and ongoing management",
+    icon: Cloud,
+    features: [
+      "Multi-cloud Strategy",
+      "Infrastructure as Code",
+      "Auto-scaling Solutions",
+      "Cost Optimization",
+      "Disaster Recovery",
+      "Performance Monitoring"
+    ],
+    color: "from-blue-500 to-cyan-500",
+    benefits: [
+      "30% cost reduction",
+      "Improved reliability",
+      "Better scalability",
+      "Enhanced security"
+    ],
+    pricing: "Starting at $199/month for cloud management",
+    marketRate: "$150-400/month"
+  },
+  {
+    title: "Data Center Solutions",
+    description: "Complete data center design, implementation, and management services",
+    icon: Server,
+    features: [
+      "Data Center Design",
+      "Server Virtualization",
+      "Storage Solutions",
+      "Backup & Recovery",
+      "Power Management",
+      "Environmental Monitoring"
+    ],
+    color: "from-indigo-500 to-purple-500",
+    benefits: [
+      "Improved efficiency",
+      "Better reliability",
+      "Cost optimization",
+      "Enhanced security"
+    ],
+    pricing: "Starting at $1,500/month for data center management",
+    marketRate: "$1,000-3,000/month"
+  },
+  {
+    title: "Network Security & Monitoring",
+    description: "Advanced network security solutions with real-time monitoring and threat prevention",
+    icon: Network,
+    features: [
+      "Network Segmentation",
+      "Intrusion Prevention",
+      "Traffic Analysis",
+      "Vulnerability Assessment",
+      "Security Monitoring",
+      "Threat Intelligence"
+    ],
+    color: "from-green-500 to-emerald-500",
+    benefits: [
+      "Enhanced network security",
+      "Real-time threat detection",
+      "Reduced attack surface",
+      "Compliance assurance"
+    ],
+    pricing: "Starting at $149/month for network security",
+    marketRate: "$100-300/month"
+  },
+  {
+    title: "IT Consulting & Strategy",
+    description: "Strategic IT consulting to align technology with business objectives",
+    icon: Settings,
+    features: [
+      "IT Strategy Development",
+      "Technology Assessment",
+      "Digital Transformation",
+      "Process Optimization",
+      "Vendor Management",
+      "ROI Analysis"
+    ],
+    color: "from-orange-500 to-red-500",
+    benefits: [
+      "Better IT alignment",
+      "Cost optimization",
+      "Improved efficiency",
+      "Strategic planning"
+    ],
+    pricing: "Starting at $199/hour for consulting",
+    marketRate: "$150-300/hour"
+  },
+  {
+    title: "DevOps & CI/CD Implementation",
+    description: "Complete DevOps implementation with continuous integration and deployment pipelines",
+    icon: Zap,
+    features: [
+      "CI/CD Pipeline Setup",
+      "Container Orchestration",
+      "Infrastructure Automation",
+      "Monitoring & Logging",
+      "Security Integration",
+      "Performance Optimization"
+    ],
+    color: "from-yellow-500 to-orange-500",
+    benefits: [
+      "Faster deployments",
+      "Reduced errors",
+      "Better collaboration",
+      "Improved reliability"
+    ],
+    pricing: "Starting at $179/month for DevOps services",
+    marketRate: "$120-250/month"
+  },
+  {
+    title: "Database Management & Optimization",
+    description: "Comprehensive database services including design, optimization, and maintenance",
     icon: Database,
     features: [
       "Database Design",
       "Performance Tuning",
       "Backup & Recovery",
-      "Data Migration",
-      "Security Implementation",
-      "Monitoring & Maintenance"
+      "Security Hardening",
+      "Migration Services",
+      "Monitoring & Alerting"
     ],
-    color: "from-orange-500 to-yellow-500",
+    color: "from-teal-500 to-cyan-500",
     benefits: [
-      "Improved data performance",
-      "Enhanced data security",
-      "Better data integrity",
-      "Reduced maintenance costs"
-    ]
+      "Improved performance",
+      "Better reliability",
+      "Enhanced security",
+      "Reduced costs"
+    ],
+    pricing: "Starting at $129/month for database management",
+    marketRate: "$80-200/month"
   },
   {
-    title: "System Integration",
-    description: "Seamless integration of disparate systems and applications",
-    icon: Settings,
+    title: "IT Asset Management",
+    description: "Complete IT asset lifecycle management with tracking, optimization, and compliance",
+    icon: HardDrive,
     features: [
-      "API Development",
-      "System Integration",
-      "Data Synchronization",
-      "Workflow Automation",
-      "Legacy System Migration",
-      "Custom Solutions"
+      "Asset Discovery",
+      "License Management",
+      "Lifecycle Tracking",
+      "Cost Optimization",
+      "Compliance Reporting",
+      "Vendor Management"
     ],
-    color: "from-indigo-500 to-purple-500",
+    color: "from-violet-500 to-purple-500",
     benefits: [
-      "Streamlined operations",
-      "Improved efficiency",
-      "Better data flow",
-      "Reduced manual work"
-    ]
+      "Cost optimization",
+      "Better compliance",
+      "Reduced risks",
+      "Improved visibility"
+    ],
+    pricing: "Starting at $79/month for asset management",
+    marketRate: "$50-150/month"
+  },
+  {
+    title: "Mobile Device Management",
+    description: "Comprehensive mobile device management and security solutions",
+    icon: Smartphone,
+    features: [
+      "Device Enrollment",
+      "Policy Management",
+      "App Distribution",
+      "Security Controls",
+      "Remote Wipe",
+      "Compliance Monitoring"
+    ],
+    color: "from-pink-500 to-rose-500",
+    benefits: [
+      "Enhanced security",
+      "Better control",
+      "Compliance assurance",
+      "Cost savings"
+    ],
+    pricing: "Starting at $39/month per device",
+    marketRate: "$25-75/device/month"
   }
 ];
 
@@ -367,11 +527,24 @@ export default function ITServicesPage() {
                     </div>
                   </div>
 
+                  {service.pricing && (
+                    <div className="mb-6 p-4 bg-gray-50 rounded-lg">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-sm font-medium text-gray-600">Our Pricing:</span>
+                        <span className="text-lg font-bold text-gray-900">{service.pricing}</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm font-medium text-gray-600">Market Rate:</span>
+                        <span className="text-sm text-gray-500">{service.marketRate}</span>
+                      </div>
+                    </div>
+                  )}
+
                   <Link
                     href="/contact"
                     className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
                   >
-                    Learn More
+                    Get Started
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>

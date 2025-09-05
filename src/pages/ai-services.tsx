@@ -20,7 +20,9 @@ import {
   Bot,
   TrendingUp,
   Target,
-  Lightbulb
+  Lightbulb,
+  Shield,
+  PenTool
 } from 'lucide-react';
 
 const aiServices = [
@@ -143,6 +145,160 @@ const aiServices = [
       "Supply chain optimization",
       "Compliance monitoring"
     ]
+  },
+  {
+    title: "Quantum AI Computing",
+    description: "Next-generation quantum-enhanced AI for complex optimization and machine learning problems",
+    icon: Cpu,
+    features: [
+      "Quantum Machine Learning",
+      "Optimization Algorithms",
+      "Quantum Neural Networks",
+      "Cryptographic Security",
+      "Parallel Processing",
+      "Advanced Simulations"
+    ],
+    color: "from-violet-500 to-purple-500",
+    useCases: [
+      "Financial portfolio optimization",
+      "Drug discovery acceleration",
+      "Climate modeling",
+      "Cryptocurrency mining optimization"
+    ],
+    pricing: "Starting at $5,000/month for quantum computing access",
+    marketRate: "$3,000-10,000/month"
+  },
+  {
+    title: "Autonomous AI Systems",
+    description: "Self-managing AI systems that operate independently with minimal human intervention",
+    icon: Bot,
+    features: [
+      "Self-Learning Algorithms",
+      "Autonomous Decision Making",
+      "Adaptive Behavior",
+      "Self-Healing Systems",
+      "Continuous Optimization",
+      "Predictive Maintenance"
+    ],
+    color: "from-cyan-500 to-blue-500",
+    useCases: [
+      "Autonomous vehicles",
+      "Smart city management",
+      "Industrial automation",
+      "Autonomous trading systems"
+    ],
+    pricing: "Starting at $2,500/month for autonomous system deployment",
+    marketRate: "$1,500-5,000/month"
+  },
+  {
+    title: "AI Cybersecurity Intelligence",
+    description: "Advanced AI-powered cybersecurity solutions with real-time threat detection and response",
+    icon: Shield,
+    features: [
+      "Real-time Threat Detection",
+      "Behavioral Analysis",
+      "Automated Response",
+      "Zero-day Attack Prevention",
+      "Network Anomaly Detection",
+      "Incident Response Automation"
+    ],
+    color: "from-red-500 to-rose-500",
+    useCases: [
+      "Enterprise security monitoring",
+      "Financial fraud prevention",
+      "Government cybersecurity",
+      "Critical infrastructure protection"
+    ],
+    pricing: "Starting at $1,200/month for enterprise security",
+    marketRate: "$800-3,000/month"
+  },
+  {
+    title: "AI Content Generation Studio",
+    description: "Comprehensive AI content creation platform for text, images, video, and multimedia",
+    icon: PenTool,
+    features: [
+      "Multi-modal Content Creation",
+      "Brand Voice Consistency",
+      "SEO Optimization",
+      "Multi-language Support",
+      "Content Personalization",
+      "Automated Publishing"
+    ],
+    color: "from-pink-500 to-rose-500",
+    useCases: [
+      "Marketing content creation",
+      "Educational material generation",
+      "Social media automation",
+      "Multilingual content production"
+    ],
+    pricing: "Starting at $299/month for unlimited content generation",
+    marketRate: "$150-500/month"
+  },
+  {
+    title: "AI Financial Trading Systems",
+    description: "Advanced AI-powered trading algorithms with real-time market analysis and execution",
+    icon: TrendingUp,
+    features: [
+      "Real-time Market Analysis",
+      "Algorithmic Trading",
+      "Risk Management",
+      "Portfolio Optimization",
+      "Sentiment Analysis",
+      "High-frequency Trading"
+    ],
+    color: "from-emerald-500 to-green-500",
+    useCases: [
+      "Algorithmic trading",
+      "Portfolio management",
+      "Risk assessment",
+      "Market prediction"
+    ],
+    pricing: "Starting at $3,500/month for trading system access",
+    marketRate: "$2,000-8,000/month"
+  },
+  {
+    title: "AI Supply Chain Optimization",
+    description: "Intelligent supply chain management with predictive analytics and autonomous optimization",
+    icon: Globe,
+    features: [
+      "Demand Forecasting",
+      "Supplier Optimization",
+      "Route Optimization",
+      "Inventory Management",
+      "Risk Assessment",
+      "Sustainability Tracking"
+    ],
+    color: "from-teal-500 to-cyan-500",
+    useCases: [
+      "Global supply chain optimization",
+      "Logistics management",
+      "Supplier relationship management",
+      "Sustainability compliance"
+    ],
+    pricing: "Starting at $1,800/month for supply chain optimization",
+    marketRate: "$1,000-4,000/month"
+  },
+  {
+    title: "AI Healthcare Diagnostics",
+    description: "Advanced medical AI for diagnostic imaging, patient monitoring, and treatment recommendations",
+    icon: Users,
+    features: [
+      "Medical Image Analysis",
+      "Diagnostic Assistance",
+      "Patient Risk Assessment",
+      "Treatment Recommendations",
+      "Drug Interaction Analysis",
+      "Clinical Decision Support"
+    ],
+    color: "from-blue-500 to-indigo-500",
+    useCases: [
+      "Radiology image analysis",
+      "Pathology diagnosis",
+      "Patient monitoring",
+      "Treatment planning"
+    ],
+    pricing: "Starting at $2,200/month for healthcare AI platform",
+    marketRate: "$1,500-5,000/month"
   }
 ];
 
@@ -339,11 +495,24 @@ export default function AIServicesPage() {
                     </div>
                   </div>
 
+                  {service.pricing && (
+                    <div className="mb-6 p-4 bg-gray-50 rounded-lg">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-sm font-medium text-gray-600">Our Pricing:</span>
+                        <span className="text-lg font-bold text-gray-900">{service.pricing}</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm font-medium text-gray-600">Market Rate:</span>
+                        <span className="text-sm text-gray-500">{service.marketRate}</span>
+                      </div>
+                    </div>
+                  )}
+
                   <Link
                     href="/contact"
                     className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
                   >
-                    Learn More
+                    Get Started
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
