@@ -20,8 +20,8 @@ export interface AdvancedAIService {}
   marketPrice: string; ,
   roi: string; 
   innovationLevel: string; ,
-  contactInfo: { phone: string; email: string; website: string; address: string }; "
-  "technicalSpecs": { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[] };"
+  contactInfo: { phone: string; email: string; website: string; address: string };
+  "technicalSpecs": { technology: string[]; integrations: string[]; apiEndpoints: number; uptime: string; security: string[] };
   competitors?: string[]; 
   marketSize?: string;
 }"

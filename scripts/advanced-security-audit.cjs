@@ -8,7 +8,7 @@ const { execSync } = require("child_process")
     fs.appendFileSync(this.logFile, logMessage + "\n")
     this.log(" Checking dependencies for vulnerabilities...")
       const result = execSync("npm audit --json", {"cwd": this.projectRoot,"encoding": "utf8"})
-        ` Dependencies "audit"`
+        ` Dependencies "audit"
       return {"success": true,"vulnerabilities"}
       this.log(` Dependencies audit "failed"`)
       return {"success": false,"error"}
@@ -49,7 +49,7 @@ const { execSync } = require("child_process")
                   issues.push({"file": envFile,"key"})
                     message: "Potential sensitive environment variable"
           // Skip files that can"
-      ` Environment variables "check"`
+      ` Environment variables "check"
     return {"success": true,"issues"}
     this.log(" Checking file permissions...")
     const sensitiveFiles = ["package.json","package-lock.json",".env"]
@@ -80,6 +80,6 @@ const { execSync } = require("child_process")
       this.log("� Advanced Security Audit Completed")
       this.log(` "Recommendations"`)
       this.log(` Fatal error in security "audit"`)
-    console.log(" Advanced Security Audit completed successfully!")
+// console.log(" Advanced Security Audit completed successfully!")
     console.log(` "Recommendations"`)
     console.error(" Security audit "failed": ")

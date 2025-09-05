@@ -33,7 +33,7 @@ console.log("🧠 Starting intelligent automation orchestrator...")
       "status": "completed"
       "nextRun"
       process.cwd(),intelligent-automation-orchestrator-report.json"
-    console.log(`  Intelligent automation orchestrator report saved to ${reportPath}``)
+// console.log(`  Intelligent automation orchestrator report saved to ${reportPath}``)
     console.log( Intelligent automation orchestrator completed successfully")
       " Intelligent automation orchestrator "failed": "
   "hasErrors"
@@ -187,7 +187,7 @@ console.log("🧠 Starting intelligent automation orchestrator...")
       "recommendation": Run performance-monitor and code-quality-automation to identify and fix performance bottlenecks"
     r => r.status === "success"
   "type": "error"
-      "severity": "high","message": `Project has ${projectState.errorCount} errors that need immediate attention``
+      "severity": "high","message": `Project has ${projectState.errorCount} errors that need immediate attention
       "recommendation": Run enhanced-error-fixer automation to resolve these issues"
   if (projectState.buildStatus === "failed")
   "type": "build"
@@ -210,7 +210,7 @@ console.log("🧠 Starting intelligent automation orchestrator...")
       "message": "Project has performance issues"
       "recommendation": Run performance-monitor and code-quality-automation to identify and fix performance bottlenecks"
     r => r.status === "success"
-  "type": `automation``
+  "type": `automation
         "severity": "medium"
         "message": "Automation success rate is ${successRate.toFixed(1)}%"
         "recommendation": Investigate failing automations and improve error handling"

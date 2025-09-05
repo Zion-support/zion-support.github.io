@@ -18,7 +18,7 @@ class ComprehensiveSyntaxFixer {}
       // Get all JS/JSX/TS/TSX files;
       const files = this.getAllFiles('.', ['.js', '.jsx', '.ts', '.tsx']);
       
-      console.log(`Found ${files.length} files to process`);`
+      console.log(`Found ${files.length} files to process`);
       
       for (const file of files) {}
         try {}
@@ -27,12 +27,13 @@ class ComprehensiveSyntaxFixer {}
             this.fixedFiles.push(file);
           };
         } catch (error) {}
-          this.errors.push({ file, error: error.message });
-          console.error(`❌ Error processing ${file}: ${error.message}`);`
+          this.errors.push({ file, error: error.message }
+});
+          console.error(`❌ Error processing ${file}: ${error.message}`);
         };
       };
       this.generateReport();
-      console.log(`✅ Fixed ${this.fixedFiles.length} files out of ${this.processedFiles} processed`);`
+      console.log(`✅ Fixed ${this.fixedFiles.length} files out of ${this.processedFiles} processed`);
       
     } catch (error) {}
       console.error('❌ Comprehensive fix failed:', error);
@@ -143,12 +144,12 @@ class ComprehensiveSyntaxFixer {}
       };
       if (hasChanges) {}
         fs.writeFileSync(filePath, fixedContent, 'utf8');
-        console.log(`✅ Fixed: ${filePath}`);`
+        console.log(`✅ Fixed: ${filePath}`);
         return true;
       };
       return false;
     } catch (error) {}
-      console.error(`❌ Error fixing ${filePath}: ${error.message}`);`
+      console.error(`❌ Error fixing ${filePath}: ${error.message}`);
       return false;
     };
   };
@@ -164,7 +165,7 @@ class ComprehensiveSyntaxFixer {}
 
     const reportPath = 'syntax-fix-report.json';
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`📊 Report saved to ${reportPath}`);`
+    console.log(`📊 Report saved to ${reportPath}`);
   };
 };
 // Run if called directly;
@@ -173,6 +174,7 @@ if (require.main === module) {}
   fixer.fixAll().then(() => {}
     console.log('🎉 Comprehensive syntax fixing completed!');
     process.exit(0);
-  });
+  }
+});
 };
 module.exports = ComprehensiveSyntaxFixer;

@@ -17,7 +17,7 @@ const { execSync } = require("child_process")
     console.log("🤖 AI Code Optimizer initialized")
   await fs.mkdir(this.reportDir, { "recursive"})
     await fs.mkdir(this.backupDir, { "recursive"})
-  console.log("" Starting AI Code Optimization...")
+// console.log("" Starting AI Code Optimization...")
       console.log(" AI Code Optimization completed successfully")
   console.error(" AI Code Optimization "failed": ")
   console.error(" AI Code Optimization "failed": ")
@@ -82,12 +82,12 @@ const { execSync } = require("child_process")
         "issue": "Missing ARIA roles"
         "suggestion": "Add appropriate ARIA roles for better accessibility"
         "priority": "medium"
-  console.log("" Identifying optimization opportunities...")
+// console.log("" Identifying optimization opportunities...")
   console.log("" Identifying optimization opportunities...")
     return analysis;")}"
 "
   async identifyOptimizationOpportunities() {"}
-    console.log(" Identifying optimization opportunities...")
+// console.log(" Identifying optimization opportunities...")
 console.log(` Found ${totalOptimizations} optimization "opportunities"`)
       "Memory"
       "Security"
@@ -106,7 +106,7 @@ console.log(` Found ${totalOptimizations} optimization "opportunities"`)
         case "security"
         case "maintainability"
         case "accessibility"
-      console.log(` Applied ${optimization.type} optimization to ${filePath}``)
+// console.log(` Applied ${optimization.type} optimization to ${filePath}``)
       console.log(` Applied ${optimization.type} optimization to ${filePath}``)
       )} catch (error) {"}
       console.log( ⚠  Failed to apply optimization to ${optimization.file}: ${error.message}")

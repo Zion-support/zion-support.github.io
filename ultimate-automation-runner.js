@@ -14,7 +14,8 @@ function runCommand(command, description) {
       stdio: 'pipe', 
       encoding: 'utf8',
       cwd: '/workspace'
-    });
+    }
+});
     console.log(`✅ ${description} completed successfully`);
     return result;
   } catch (error) {
@@ -71,7 +72,8 @@ export class PerformanceMonitor {
   }
 
   startTiming(name) {
-    this.metrics.set(name, { start: performance.now() });
+    this.metrics.set(name, { start: performance.now() }
+});
   }
 
   endTiming(name) {
@@ -110,13 +112,14 @@ export const memoize = (fn) => {
     cache.set(key, result);
     return result;
   };
-};`
+};
   };
 
   Object.entries(optimizations).forEach(([filename, content]) => {
     fs.writeFileSync(path.join('/workspace', filename), content);
     console.log(`✅ Created ${filename}`);
-  });
+  }
+});
 }
 
 // Function to create security enhancements
@@ -167,13 +170,14 @@ export const cspConfig = {
     formAction: ["'self'"],
     upgradeInsecureRequests: []
   }
-};`
+};
   };
 
   Object.entries(securityFiles).forEach(([filename, content]) => {
     fs.writeFileSync(path.join('/workspace', filename), content);
     console.log(`✅ Created ${filename}`);
-  });
+  }
+});
 }
 
 // Function to create testing utilities
@@ -194,7 +198,8 @@ export const renderWithProviders = (ui, options = {}) => {
     </ThemeProvider>
   );
 
-  return render(ui, { wrapper: Wrapper, ...renderOptions });
+  return render(ui, { wrapper: Wrapper, ...renderOptions }
+});
 };
 
 export const mockNextRouter = () => ({
@@ -205,10 +210,12 @@ export const mockNextRouter = () => ({
   pathname: '/',
   query: {},
   asPath: '/',
+}
 });
 
 export const createMockProps = (overrides = {}) => ({
   ...overrides
+}
 });`,
     
     'performance-test.js': `// Performance testing utilities
@@ -227,13 +234,14 @@ export const measurePerformance = (fn, iterations = 1000) => {
   const max = Math.max(...times);
   
   return { avg, min, max, times };
-};`
+};
   };
 
   Object.entries(testFiles).forEach(([filename, content]) => {
     fs.writeFileSync(path.join('/workspace', filename), content);
     console.log(`✅ Created ${filename}`);
-  });
+  }
+});
 }
 
 // Main execution

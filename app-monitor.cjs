@@ -115,12 +115,14 @@ class AppMonitor {}
     this.monitoringData.push({})
       timestamp: new Date().toISOString(),
       checks: healthChecks;
-    });
+    }
+});
 
     // Log results;
     Object.entries(healthChecks).forEach(([check, result]) => {}
-      this.log(`${check}: ${result.status} - ${result.message}`);`
-    });
+      this.log(`${check}: ${result.status} - ${result.message}`);
+    }
+});
 
     return healthChecks;
   };
@@ -136,7 +138,7 @@ class AppMonitor {}
 
     const reportPath = path.join(this.projectRoot, 'monitoring-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`Monitoring report generated: ${reportPath}`);`
+    this.log(`Monitoring report generated: ${reportPath}`);
   };
   async run() {}
     this.log('🚀 Starting App Monitor...');
@@ -146,7 +148,7 @@ class AppMonitor {}
       this.generateReport();
       this.log('✅ App Monitor completed successfully!');
     } catch (error) {}
-      this.log(`❌ App Monitor failed: ${error.message}`);`
+      this.log(`❌ App Monitor failed: ${error.message}`);
     };
   };
 };

@@ -13,7 +13,7 @@ const blogPosts = [{
     category: "AI & Technology",
     readTime: "5 min read",
     image: "/api/placeholder/600/300",
-    tags: ["AI", "Business", "Technology", "Trends"]
+    tags: ["AI", "Business", "Technology"]
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const blogPosts = [{
     category: "Development",
     readTime: "7 min read",
     image: "/api/placeholder/600/300",
-    tags: ["SaaS", "Development", "Scalability", "Business"]
+    tags: ["SaaS", "Development", "Scalability"]
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const blogPosts = [{
     category: "Security",
     readTime: "6 min read",
     image: "/api/placeholder/600/300",
-    tags: ["Security", "Cloud", "Best Practices", "Infrastructure"]
+    tags: ["Security", "Cloud", "Best Practices"]
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const blogPosts = [{
     category: "Strategy",
     readTime: "8 min read",
     image: "/api/placeholder/600/300",
-    tags: ["Digital Transformation", "Strategy", "Business", "Innovation"]
+    tags: ["Strategy", "Digital Transformation", "Business"]
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ const blogPosts = [{
     category: "AI & Technology",
     readTime: "9 min read",
     image: "/api/placeholder/600/300",
-    tags: ["Machine Learning", "Production", "AI", "Deployment"]
+    tags: ["Machine Learning", "Production", "MLOps"]
   },
   {
     id: 6,
@@ -68,7 +68,7 @@ const blogPosts = [{
     category: "Development",
     readTime: "6 min read",
     image: "/api/placeholder/600/300",
-    tags: ["API", "Development", "Design", "Best Practices"]
+    tags: ["API", "Development", "Design"]
   }]
 export default function BlogPage() {
   return (
@@ -96,8 +96,6 @@ export default function BlogPage() {
                 Stay ahead with the latest insights on AI, technology trends, and business innovation
               </p>
             </motion.div>
-          </div>
-        </section>
         {/* Blog Posts Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -157,6 +155,6 @@ export default function BlogPage() {
           </div>
         </section>
       </div>
-    </MainLayout>
-  );
+    </Layout>
+  )
 }

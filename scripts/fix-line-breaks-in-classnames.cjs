@@ -8,5 +8,5 @@ console.log(' Fixing line breaks in className attributes...')
   '/workspace/pages/micro-saas.tsx'
     let content = fs.readFileSync(filePath, 'utf8')
     if (content !== fs.readFileSync(filePath, 'utf8')
-      console.log(` Fixed: ${path.relative('/workspace'`})
+// console.log(` Fixed: ${path.relative('/workspace'`})
 console.log('✨ Line break fixes completed!')

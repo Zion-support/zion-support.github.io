@@ -6,7 +6,7 @@ export interface PricingAnalysis {}
   category: string;
   currentPrice: string;,
   period: string;
-  marketAnalysis: {,}
+  marketAnalysis: {}
   averageMarketPrice: string;
     priceRange: string;,
   competitivePosition: string;

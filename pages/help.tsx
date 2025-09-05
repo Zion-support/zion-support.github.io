@@ -1,27 +1,25 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion'
 import {
-  Search, 
-  HelpCircle, 
-  BookOpen, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  FileText, 
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
   Video,
   Download,
   ExternalLink,
   ChevronDown,
   ChevronRight
-} from 'lucide-react';
-const helpCategories = [
-  {
+} from 'lucide-react'
+const helpCategories = [{
     title: "Getting Started",
     icon: BookOpen,
-    articles: [
-      {
+    articles: [{
         title: "Welcome to Zion Tech Group",
         description: "Learn the basics of our platform and services",
         type: "Guide",
@@ -38,14 +36,12 @@ const helpCategories = [
         description: "How to get started with our AI solutions",
         type: "Tutorial",
         readTime: "15 min"
-      }
-    ]
+      }]
   },
   {
     title: "AI Services",
     icon: HelpCircle,
-    articles: [
-      {
+    articles: [{
         title: "Understanding AI Models",
         description: "Learn about different AI models and their applications",
         type: "Guide",
@@ -62,14 +58,12 @@ const helpCategories = [
         description: "Tips and best practices for using AI effectively",
         type: "Guide",
         readTime: "12 min"
-      }
-    ]
+      }]
   },
   {
     title: "Cloud Services",
     icon: MessageCircle,
-    articles: [
-      {
+    articles: [{
         title: "Cloud Migration Guide",
         description: "Complete guide to migrating to our cloud platform",
         type: "Guide",
@@ -86,14 +80,12 @@ const helpCategories = [
         description: "Keep your cloud environment secure",
         type: "Guide",
         readTime: "15 min"
-      }
-    ]
+      }]
   },
   {
     title: "Billing & Account",
     icon: FileText,
-    articles: [
-      {
+    articles: [{
         title: "Understanding Your Bill",
         description: "Learn how to read and understand your billing statement",
         type: "Guide",
@@ -110,20 +102,14 @@ const helpCategories = [
         description: "Manage your account preferences and settings",
         type: "Tutorial",
         readTime: "10 min"
-      }
-    ]
-  }
-]
-
+      }]
+  }]
 const quickLinks = [
   { title: "API Documentation", href: "/docs/api", icon: FileText },
   { title: "Video Tutorials", href: "/tutorials", icon: Video },
   { title: "Download Resources", href: "/downloads", icon: Download },
-  { title: "Community Forum", href: "/community", icon: MessageCircle }
-]
-
-const faqs = [
-  {
+  { title: "Community Forum", href: "/community", icon: MessageCircle }]
+const faqs = [{
     question: "How do I get started with your AI services?",
     answer: "Getting started is easy! First, create an account, then choose a plan that fits your needs. You can start with our free trial to explore our AI capabilities before committing to a paid plan."
   },
@@ -138,13 +124,10 @@ const faqs = [
   {
     question: "Can I cancel my subscription anytime?",
     answer: "Yes, you can cancel your subscription at any time. There are no cancellation fees, and you'll continue to have access to your services until the end of your current billing period."
-  }
-]
-
+  }]
 export default function HelpPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
@@ -205,7 +188,7 @@ export default function HelpPage() {
               Frequently Asked Questions
             </h2>
             <div className="space-y-6">
-              {faqCategories.map((category, categoryIndex) => (
+              {helpCategories.map((category, categoryIndex) => (
                 <motion.div
                   key={categoryIndex}
                   className="bg-white rounded-lg shadow-lg overflow-hidden"
@@ -215,23 +198,22 @@ export default function HelpPage() {
                 >
                   <button
                     onClick={() => toggleCategory(category.title)}
-                    className="w-full px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                   >
                     <div className="flex items-center gap-4">
                       <category.icon className="w-6 h-6 text-blue-600" />
                       <h3 className="text-xl font-semibold text-gray-900">
                         {category.title}
                       </h3>
-                      {expandedCategories.includes(category.title) ? (
-                        <ChevronDown className="w-5 h-5 text-gray-500" />
-                      ) : (
-                        <ChevronRight className="w-5 h-5 text-gray-500" />
-                      )}
                     </div>
+                    {expandedCategories[category.title] ? (
+                      <ChevronDown className="w-5 h-5 text-gray-500" />
+                    ) : (
+                      <ChevronRight className="w-5 h-5 text-gray-500" />
+                    )}
                   </button>
-                  
                   <AnimatePresence>
-                    {expandedCategories.includes(category.title) && (
+                    {expandedCategories[category.title] && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
@@ -249,7 +231,7 @@ export default function HelpPage() {
                               >
                                 <div className="flex items-start justify-between mb-2">
                                   <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
-                                    {article.category}
+                                    {article.type}
                                   </span>
                                   <span className="text-xs text-gray-500">
                                     {article.readTime}
@@ -259,7 +241,7 @@ export default function HelpPage() {
                                   {article.title}
                                 </h4>
                                 <p className="text-sm text-gray-600">
-                                  {article.excerpt}
+                                  {article.description}
                                 </p>
                               </motion.div>
                             ))}
@@ -281,7 +263,7 @@ export default function HelpPage() {
               Contact Support
             </h2>
             <div className="space-y-6">
-              {supportOptions.map((option, index) => (
+              {supportMethods.map((method, index) => (
                 <motion.div
                   key={index}
                   className="bg-gray-50 rounded-lg p-6"
@@ -290,10 +272,10 @@ export default function HelpPage() {
                   transition={{ delay: index * 0.1 }}
                 >
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                    {option.title}
+                    {method.title}
                   </h3>
                   <p className="text-gray-600">
-                    {option.description}
+                    {method.description}
                   </p>
                 </motion.div>
               ))}
@@ -308,7 +290,7 @@ export default function HelpPage() {
               Still Need Help?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Our support team is here to help you succeed
+              Our team is here to help you succeed. Get in touch with us today.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white/10 rounded-lg p-6">
@@ -346,5 +328,5 @@ export default function HelpPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

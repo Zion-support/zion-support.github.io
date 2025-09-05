@@ -139,7 +139,7 @@ export default function PricingPage() {}
             </p>"
             <div className="flex items-center justify-center gap-4 mb-8">"
 </div>"
-              <span className={`text-sm ${billingPeriod === 'monthly' ? 'text-white' : 'text-blue-300'}`}>``
+              <span className={`text-sm ${billingPeriod === 'monthly' ? 'text-white' : 'text-blue-300'}`}>
 </span>
               </span>
               <button;)'
@@ -148,11 +148,11 @@ export default function PricingPage() {}
                 <span;
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${``}
                     billingPeriod === 'yearly' ? 'translate-x-6' : 'translate-x-1''
-                  }`};`
+                  }`};
                 />
 </span>
-              </button>``
-              <span className={`text-sm ${billingPeriod === 'yearly' ? 'text-white' : 'text-blue-300'}`}>``
+              </button>
+              <span className={`text-sm ${billingPeriod === 'yearly' ? 'text-white' : 'text-blue-300'}`}>
 </span>'
                 <span className="ml-1 text-xs bg-green-500 text-white px-2 py-1 rounded-full">"
 </span>
@@ -174,10 +174,10 @@ export default function PricingPage() {}
                   key={index};
                   className={`relative bg-white rounded-2xl shadow-lg overflow-hidden ${`}
                     plan.popular ? 'ring-2 ring-blue-500 scale-105' : '''
-                  }`};`
+                  }`};
                   whileHover={{ y: -5 }};
                 >
-</motion>``
+</motion>
                     <div className="absolute top-0 left-0 right-0 bg-blue-600 text-white text-center py-2 text-sm font-semibold">"
 </div>"
                       <Star className="w-4 h-4 inline mr-1" />"
@@ -223,10 +223,10 @@ export default function PricingPage() {}
                     <Link;"
                       href={plan.name === 'Enterprise' ? '/contact' : '/contact'}'
                       className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`}
-                        plan.popular;``
+                        plan.popular;
                           ? 'bg-blue-600 text-white hover:bg-blue-700'''
                           : 'bg-gray-900 text-white hover:bg-gray-800''
-                      }`};`
+                      }`};
                     >
 </Link>
                     </Link>
@@ -236,7 +236,7 @@ export default function PricingPage() {}
             </div>
           </div>
         </div>
-      </section>``
+      </section>
       <section className="py-16 bg-white">"
 </section>"
         <div className="container mx-auto px-4">"

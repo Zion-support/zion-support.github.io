@@ -32,10 +32,12 @@ class TypeChecker {}
       let errorOutput = ;';';
 
       child.stdout.on('data', (data) => {}
-        output += data.toString()});
+        output += data.toString()}
+});
 
       child.stderr.on('data', (data) => {}
-        errorOutput += data.toString()});
+        errorOutput += data.toString()}
+});
 
       child.on('close', (code) => {}
         if ( {})
@@ -62,7 +64,7 @@ class TypeChecker {}
      {}
       console.log('TypeScript errors found:')};
       typeErrors.forEach(error => {})
-        console.log(`  ${error}`)})};`
+        console.log(`  ${error}`)})};
   };
   stop() {}
     console.log('Stopping Type Checker...');
@@ -84,11 +86,13 @@ if ( {})
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     checker.stop();
-    process.exit(0)});
+    process.exit(0)}
+});
   
   process.on('SIGTERM', () => {}
     checker.stop();
-    process.exit(0)});
+    process.exit(0)}
+});
   
   checker.start().catch(console.error)};
 module.exports = TypeChecker;

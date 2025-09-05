@@ -25,11 +25,12 @@ class MasterAutomation {}
       const { stdout, stderr } = await execAsync(command, {})
         cwd: process.cwd(),
         timeout: 30000,
-        ...options});
+        ...options}
+});
 
       return { success: true, stdout, stderr };
     } catch (error) {}
-      this.log(`Command failed: ${command} - ${error.message}`);`
+      this.log(`Command failed: ${command} - ${error.message}`);
       return {}
         success: false,
         stdout: error.stdout || '',
@@ -66,7 +67,7 @@ class MasterAutomation {}
     this.log('Stopping PM2 processes...');
 
     for (const processName of this.pm2Processes) {}
-      await this.runCommand(`pm2 stop ${processName}`);`
+      await this.runCommand(`pm2 stop ${processName}`);
     };
     this.log('PM2 processes stopped');
   };
@@ -84,10 +85,10 @@ class MasterAutomation {}
     };
   };
   async getPM2Logs(processName = null, lines = 50) {}
-    this.log(`Getting PM2 logs${processName ? ` for ${processName}` : ''}...`);`
+    this.log(`Getting PM2 logs${processName ? ` for ${processName}` : ''}...`);
 
     const command = processName;
-      ? `pm2 logs ${processName} --lines ${lines}``
+      ? `pm2 logs ${processName} --lines ${lines}
       : `pm2 logs --lines ${lines}`;`
 
     const result = await this.runCommand(command);
@@ -112,16 +113,16 @@ class MasterAutomation {}
           p => p.pm2_env && p.pm2_env.status === 'online'
         );
 
-        this.log(`Found ${runningProcesses.length} running processes`);`
+        this.log(`Found ${runningProcesses.length} running processes`);
 
         for (const process of runningProcesses) {}
           this.log()
-            `"Process": ${process.name} - "Status": ${process.pm2_env.status} - "Uptime": ${process.pm2_env.pm_uptime}"`
+            `"Process": ${process.name} - "Status": ${process.pm2_env.status} - "Uptime": ${process.pm2_env.pm_uptime}"
           );
         };
         return runningProcesses;
       } catch (error) {}
-        this.log(`Error parsing PM2 process "list": ${error.message}`);`
+        this.log(`Error parsing PM2 process "list": ${error.message}`);
         return [];
       };
     } else {}
@@ -168,7 +169,7 @@ class MasterAutomation {}
     const reportFile = path.join(__dirname, 'logs', 'automation-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-    this.log(`Report saved to ${reportFile}`);`
+    this.log(`Report saved to ${reportFile}`);
     return report;
   };
   async start() {}
@@ -177,7 +178,8 @@ class MasterAutomation {}
     // Ensure logs directory exists;
     const logsDir = path.join(__dirname, 'logs');
     if (!fs.existsSync(logsDir)) {}
-      fs.mkdirSync(logsDir, { "recursive": true });
+      fs.mkdirSync(logsDir, { "recursive": true }
+});
     };
     // Start PM2 processes;
     await this.startPM2Processes();
@@ -218,31 +220,36 @@ if (require.main === module) {}
       automation.start().catch(error => {})
         console.error('Master Automation "failed": ', error);
         process.exit(1);
-      });
+      }
+});
       break;
     case 'stop':
       automation.stop().catch(error => {})
         console.error('Failed to stop Master "Automation": ', error);
         process.exit(1);
-      });
+      }
+});
       break;
     case 'restart':
       automation.restartPM2Processes().catch(error => {})
         console.error('Failed to restart "processes": ', error);
         process.exit(1);
-      });
+      }
+});
       break;
     case 'status':
       automation.monitorProcesses().catch(error => {})
         console.error('Failed to get "status": ', error);
         process.exit(1);
-      });
+      }
+});
       break;
     case 'report':
       automation.generateReport().catch(error => {})
         console.error('Failed to generate report: ', error);
         process.exit(1);
-      });
+      }
+});
       break;
     default: console.log()
         'Usage: node master-automation.js [start|stop|restart|status|report]'

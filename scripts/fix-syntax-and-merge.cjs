@@ -49,7 +49,8 @@ function fixSyntaxErrors(filePath) {
         content = content.replace(pattern.from, pattern.to);
         modified = true;
       }
-    });
+    }
+});
     
     if (modified) {
       fs.writeFileSync(filePath, content);
@@ -70,6 +71,7 @@ filesToFix.forEach(file => {
   if (fixSyntaxErrors(file)) {
     totalFixed++;
   }
+}
 });
 
 console.log(`✅ Fixed syntax errors in ${totalFixed} files`);
@@ -81,16 +83,19 @@ try {
   const { execSync } = require('child_process');
   
   // Add all changes
-  execSync('git add .', { stdio: 'inherit' });
+  execSync('git add .', { stdio: 'inherit' }
+});
   
   // Commit changes
-  execSync('git commit -m "fix: Resolve syntax errors and merge conflicts"', { stdio: 'inherit' });
+  execSync('git commit -m "fix: Resolve syntax errors and merge conflicts"', { stdio: 'inherit' }
+});
   
   console.log('✅ Changes committed successfully');
   
   // Try to push
   try {
-    execSync('git push origin main', { stdio: 'inherit' });
+    execSync('git push origin main', { stdio: 'inherit' }
+});
     console.log('✅ Changes pushed to main branch');
   } catch (pushError) {
     console.log('⚠️ Push failed, but changes are committed locally');

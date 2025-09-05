@@ -8,7 +8,7 @@ class RobustSyntaxFixer {;}
     this.errors = [],};
 ;
   log(message) {;}
-    console.log(`[${new Date().toISOString()}] ${message}`),};`
+    console.log(`[${new Date().toISOString()}] ${message}`),};
 ;
   fixFile(filePath) {;}
     try {;}
@@ -46,12 +46,13 @@ class RobustSyntaxFixer {;}
       if (content !== originalContent) {;}
         fs.writeFileSync(filePath, content, "utf8");
         this.fixedFiles.push(filePath);
-        this.log(`Fixed syntax errors "in": ${filePath}`);`
+        this.log(`Fixed syntax errors "in": ${filePath}`);
         return true,};
       ;
       return false,} catch (error) {;}
-      this.errors.push({ "file": filePath, "error": error.message });
-      this.log(`Error fixing ${filePath}: ${error.message}`);`
+      this.errors.push({ "file": filePath, "error": error.message }
+});
+      this.log(`Error fixing ${filePath}: ${error.message}`);
       return false,};
   };
 ;
@@ -65,8 +66,8 @@ class RobustSyntaxFixer {;}
         fixedCount++,};
     };
     ;
-    this.log(`Fixed ${fixedCount} files with syntax errors`);`
-    this.log(`Encountered ${this.errors.length} errors`);`
+    this.log(`Fixed ${fixedCount} files with syntax errors`);
+    this.log(`Encountered ${this.errors.length} errors`);
     return {;}
       "fixedFiles": this.fixedFiles,
       "errors": this.errors,
@@ -88,7 +89,7 @@ class RobustSyntaxFixer {;}
         };
       };
     } catch (error) {;}
-      this.log(`Error reading directory ${dir}: ${error.message}`),};`
+      this.log(`Error reading directory ${dir}: ${error.message}`),};
     ;
     return files,};
 };
