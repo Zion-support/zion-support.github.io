@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 
-interface LayoutProps {
+interface MainLayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
@@ -14,6 +14,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   description = "Leading technology solutions provider",
   keywords = "technology, AI, cloud, micro SaaS"
 }: MainLayoutProps) => {
+}) => {
   return (
     <>
       <Head>
@@ -27,3 +28,5 @@ const MainLayout: React.FC<MainLayoutProps> = ({
     </>
   );
 }
+
+export default MainLayout;

@@ -67,25 +67,49 @@ const PricingSection: React.FC = () => {
     {
       category: 'AI Services',
       services: [
-        { name: 'AI Content Generator', price: 199, period: 'month' },
-        { name: 'AI Customer Support', price: 299, period: 'month' },
-        { name: 'AI Data Analytics', price: 499, period: 'month' }
+        { name: 'AI Content Generator Pro', price: 199, period: 'month' },
+        { name: 'AI Customer Support Assistant', price: 299, period: 'month' },
+        { name: 'AI Data Analytics Platform', price: 499, period: 'month' },
+        { name: 'AI Code Review Assistant', price: 299, period: 'month' },
+        { name: 'AI Translation Platform', price: 199, period: 'month' },
+        { name: 'AI Video Analysis Platform', price: 399, period: 'month' },
+        { name: 'AI Personalization Engine', price: 499, period: 'month' }
       ]
     },
     {
       category: 'IT Services',
       services: [
-        { name: 'Cloud Migration', price: 2500, period: 'one-time' },
-        { name: 'Cybersecurity Audit', price: 1500, period: 'one-time' },
-        { name: 'Ongoing IT Support', price: 799, period: 'month' }
+        { name: 'Cloud Migration & Optimization', price: 2500, period: 'one-time' },
+        { name: 'Cybersecurity Audit & Implementation', price: 1500, period: 'one-time' },
+        { name: 'Cloud Cost Optimization (FinOps)', price: 1500, period: 'month' },
+        { name: 'API Security Audit & Protection', price: 2000, period: 'one-time' },
+        { name: 'Database Performance Optimization', price: 1200, period: 'month' },
+        { name: 'Disaster Recovery & Business Continuity', price: 800, period: 'month' },
+        { name: 'Network Security Assessment', price: 1800, period: 'one-time' }
       ]
     },
     {
       category: 'Micro SAAS',
       services: [
-        { name: 'Email Marketing Platform', price: 79, period: 'month' },
-        { name: 'Project Management', price: 149, period: 'month' },
-        { name: 'Inventory Management', price: 199, period: 'month' }
+        { name: 'Email Marketing Automation', price: 79, period: 'month' },
+        { name: 'AI Project Management Platform', price: 149, period: 'month' },
+        { name: 'Smart Inventory Management', price: 199, period: 'month' },
+        { name: 'Social Media Scheduler Pro', price: 89, period: 'month' },
+        { name: 'Smart Invoice Automation', price: 149, period: 'month' },
+        { name: 'AI Employee Scheduling', price: 99, period: 'month' },
+        { name: 'AI Lead Scoring Platform', price: 199, period: 'month' },
+        { name: 'Smart Document Management', price: 79, period: 'month' }
+      ]
+    },
+    {
+      category: 'Specialized Services',
+      services: [
+        { name: 'Blockchain Development', price: 5000, period: 'project' },
+        { name: 'IoT Solutions & Integration', price: 3000, period: 'project' },
+        { name: 'Custom AI Development', price: 2000, period: 'month' },
+        { name: 'API Development & Integration', price: 1500, period: 'project' },
+        { name: 'Mobile App Development', price: 2500, period: 'project' },
+        { name: 'E-commerce Platform Development', price: 3000, period: 'project' }
       ]
     }
   ];
@@ -193,7 +217,7 @@ const PricingSection: React.FC = () => {
             Individual Service Pricing
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {microSaasPlans.map((category, categoryIndex) => (
               <div key={categoryIndex} className="bg-white rounded-xl p-6">
                 <h4 className="text-xl font-bold text-gray-900 mb-6 text-center">

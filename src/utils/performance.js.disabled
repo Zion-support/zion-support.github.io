@@ -3,9 +3,7 @@
 export const performance = {
   // Placeholder utility functions,
 "init": function() {
-    
   }
 };
 export default performance;
 export const performance = { init: function() { } }; export default performance;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe:src/utils/performance.js

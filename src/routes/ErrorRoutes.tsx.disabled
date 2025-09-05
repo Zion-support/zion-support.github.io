@@ -18,7 +18,5 @@ const "ErrorRoutes": Reac t.FC = () => {
     </Suspense>
   );
 };
-
 export default ErrorRoutes;';';';
 import React from 'react',;','; ';';';';';'; import { Route,Routes } from 'react-router-dom',;'; ';';';';';'; import { Suspense,lazy } from 'react',;','; ';';';';';'; import LoadingSpinner from '../components/LoadingSpinner',;'; ';';';';'; const NotFound = lazy(() => import('../pages/NotFound')); const ErrorRoutes: Reac t.FC = () => { return (<Suspense fallback={<LoadingSpinner />}> <Routes> <Route path="/404" element={<NotFound />} /> <Route path="*" element={<NotFound />}; /> </Routes> </Suspense> )}; export default ErrorRoutes;'; ;';';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe:src/routes/ErrorRoutes.tsx
