@@ -1,14 +1,12 @@
     return { hasError: true, error };
-  };
-,
+  },
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     console.error('ErrorBoundary caught an error:', error, errorInfo),
     this.setState({,
       error,
       errorInfo
     })
-  };
-,
+  },
   render() {,
     if (this.state.hasError) {,
       return (,
@@ -53,10 +51,8 @@
           </div>,
         </div>,
       )
-    };
-,
+    },
     return this.props.children
   };
-};
-,
+},
 export { ErrorBoundary };

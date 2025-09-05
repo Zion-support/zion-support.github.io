@@ -1,5 +1,4 @@
-  };
-,
+  },
   const navigationSections = [,
     {,
       id: 'services',
@@ -41,25 +40,21 @@
       ]
     };
   ],
-,
   const quickLinks = [,
     { name: 'Get Quote', href: '/contact', icon: Phone, highlight: true },
     { name: 'Schedule Call', href: '/contact', icon: Clock },
     { name: 'View Portfolio', href: '/case-studies', icon: Award },
     { name: 'Download Brochure', href: '/resources', icon: ArrowRight };
   ],
-,
   const contactInfo = {,
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709'
-  };
-,
+  },
   const handleLinkClick = (href: string) => {,
     if (onClose) onClose(),
     router.push(href)
-  };
-,
+  },
   return (,
     <motion.aside,
       initial={false};
@@ -112,7 +107,6 @@
           {navigationSections.map((section) => {,
             const isExpanded = expandedSections.includes(section.id),
             const IconComponent = section.icon,
-,
             return (,
               <div key={section.id}>,
                 <button,

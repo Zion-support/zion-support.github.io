@@ -2,7 +2,6 @@
 const fs = require('fs'),
 const path = require('path'),
 const { execSync } = require('child_process'),
-,
 class AutoCommitFixes {,
   constructor() {,
     this.projectRoot = process.cwd(),
@@ -10,12 +9,10 @@ class AutoCommitFixes {,
     this.startTime = Date.now(),
     this.commitsMade = 0,
     this.filesChanged = 0
-  };
-,
+  },
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] ${message}\n`,
-,
     try {,
       fs.appendFileSync(this.logFile, logMessage)
     } catch (error) {,

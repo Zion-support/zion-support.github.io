@@ -1,5 +1,4 @@
-};
-,
+},
 const SEOHead: React.FC<SEOHeadProps> = ({,
   title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',
@@ -15,7 +14,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`,
   const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : ''),
   const imageUrl = ogImage.startsWith('http') ? ogImage : `https: //zion.app${ogImage}`,
-,
   const defaultStructuredData = {,
     '@context': 'https: //schema.org@type': 'Organization',
     name: 'Zion Tech Group',
@@ -34,10 +32,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
     sameAs: [,
       'https: //linkedin.com/company/zion-tech-grouphttps: //twitter.com/ziontechgroup'
     ]
-  };
-,
+  },
   const mergedStructuredData = structuredData || defaultStructuredData,
-,
   return (,
     <Head>,
       {/* Basic Meta Tags */};
@@ -50,8 +46,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       <meta httpEquiv="Content-Type" content="text/html, charset=utf-8" />,
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />,
       {/* Canonical URL */};
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />};
-,
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
       {/* Open Graph Tags */};
       <meta property="og: title" content={fullTitle} />,
       <meta property="og: description" content={description} />,
@@ -109,6 +104,5 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       <meta httpEquiv="X-XSS-Protection" content="1, mode=block" />,
     </Head>,
   )
-};
-,
+},
 export default SEOHead,

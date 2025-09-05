@@ -2,11 +2,9 @@ import React, { useState } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion',
 import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react',
-,
 const Header = () => {,
   const [isMenuOpen, setIsMenuOpen] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
-,
   const navigation = [,
     {,
       name: 'Home',
@@ -74,12 +72,10 @@ const Header = () => {,
       href: '/contact'
     };
   ],
-,
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen),
   const toggleDropdown = (name: string) => {,
     setActiveDropdown(activeDropdown === name ? null : name)
-  };
-,
+  },
   return (,
     <header className="bg-white shadow-lg sticky top-0 z-50">,
       {/* Top Bar */};
@@ -226,6 +222,5 @@ const Header = () => {,
       </nav>,
     </header>,
   )
-};
-,
+},
 export default Header,

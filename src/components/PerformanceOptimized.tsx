@@ -1,5 +1,4 @@
 import React, { memo, useMemo, useCallback } from 'react',
-,
 // Higher-order component for performance optimization,
 export const withPerformanceOptimization = <P extends object>(,
   Component: React.ComponentType<P>,
@@ -10,9 +9,7 @@ export const withPerformanceOptimization = <P extends object>(,
   } = {};
 ) => {,
   const { memo: useMemo = true, memoDeps, displayName } = options,
-,
   let OptimizedComponent = Component,
-,
   if (useMemo) {,
     OptimizedComponent = memo(Component, (prevProps, nextProps) => {,
       if (memoDeps) {,
@@ -22,31 +19,26 @@ export const withPerformanceOptimization = <P extends object>(,
       };
       return false, // Always re-render if no custom comparison
     })
-  };
-,
+  },
   if (displayName) {,
     OptimizedComponent.displayName = displayName
-  };
-,
+  },
   return OptimizedComponent
-};
-,
+},
 // Hook for expensive calculations,
 export const useExpensiveCalculation = <T>(,
   calculation: () => T,
   deps: React.DependencyList,
 ): T => {,
   return useMemo(calculation, deps)
-};
-,
+},
 // Hook for stable callbacks,
 export const useStableCallback = <T extends (...args: any[]) => any>(,
   callback: T,
   deps: React.DependencyList): T => {,
   return useCallback(callback, deps)
 };
-};
-,
+},
 // Lazy loading wrapper with intersection observer,
 export const LazyLoadWrapper: React.FC<{,
   children: React.ReactNode,
@@ -57,7 +49,6 @@ export const LazyLoadWrapper: React.FC<{,
   const [isVisible, setIsVisible] = React.useState(false),
   const [hasLoaded, setHasLoaded] = React.useState(false),
   const ref = React.useRef<HTMLDivElement>(null),
-,
   React.useEffect(() => {,
     const observer = new IntersectionObserver(,
       ([entry]) => {,
@@ -68,20 +59,16 @@ export const LazyLoadWrapper: React.FC<{,
       },
       { threshold, rootMargin };
     ),
-,
     if (ref.current) {,
       observer.observe(ref.current)
-    };
-,
+    },
     return () => observer.disconnect()
   }, [threshold, rootMargin, hasLoaded]),
-,
   return (,
     <div ref={ref}>,
       {isVisible ? children : fallback};
     </div>)
-};
-,
+},
 // Image optimization component,
 export const OptimizedImage: React.FC<{,
   src: string,
@@ -94,15 +81,12 @@ export const OptimizedImage: React.FC<{,
 }> = ({ src, alt, width, height, className, loading = 'lazy', placeholder }) => {,
   const [isLoaded, setIsLoaded] = React.useState(false),
   const [hasError, setHasError] = React.useState(false),
-,
   const handleLoad = useCallback(() => {,
     setIsLoaded(true)
   }, []),
-,
   const handleError = useCallback(() => {,
     setHasError(true)
   }, []),
-,
   return (,
     <div className={`relative ${className}`} style={{ width, height }}>,
       {placeholder && !isLoaded && (,
@@ -130,25 +114,20 @@ export const OptimizedImage: React.FC<{,
   )
 };
   };
-};
-,
+},
 // Debounced search hook,
 export const useDebouncedSearch = (value: string, delay: number = 300) => {,
   const [debouncedValue, setDebouncedValue] = React.useState(value),
-,
   React.useEffect(() => {,
     const handler = setTimeout(() => {,
       setDebouncedValue(value)
     }, delay),
-,
     return () => {,
       clearTimeout(handler)
     };
   }, [value, delay]),
-,
   return debouncedValue
-};
-,
+},
 // Performance metrics collection,
 export const usePerformanceMetrics = () => {,
   const [metrics, setMetrics] = React.useState({,
@@ -156,7 +135,6 @@ export const usePerformanceMetrics = () => {,
     lastRenderTime: 0,
     averageRenderTime: 0
   }),
-,
   const recordRender = useCallback((renderTime: number) => {,
     setMetrics(prev => ({,
       renderCount: prev.renderCount + 1,
@@ -164,6 +142,5 @@ export const usePerformanceMetrics = () => {,
       averageRenderTime: (prev.averageRenderTime * prev.renderCount + renderTime) / (prev.renderCount + 1)
     }))
   }, []),
-,
   return { metrics, recordRender };
 };

@@ -39,7 +39,7 @@ function removeUnusedVariables(content) {,
   // Remove common unused variable patterns};
 };
 // Main function,
-function main() {};
+
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',
         fixedCount++,
@@ -69,10 +69,8 @@ function main() {};
   fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm, match => {,
   if (!match.endsWith(",")) {,
   return match + ","};
-  fixed += "\n}".repeat(openBraces - closeBraces)};
-,
-  return fixed};
-,
+  fixed += "\n}".repeat(openBraces - closeBraces)},
+  return fixed},
 // Main function,
 async function $1() {,
   // Get all TypeScript/JavaScript files,
@@ -92,6 +90,5 @@ async function $1() {,
     } catch (error) {,
   console.error(`Error processing ${file}:`, error.message),
       errorCount++};
-  };
-,
+  },
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};

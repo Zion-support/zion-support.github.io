@@ -28,7 +28,7 @@ function fixSyntaxIssues(content) {};
     };
 };
 // Main function,
-function main() {};
+
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),',
         fixedCount++,
@@ -52,6 +52,5 @@ function main() {};
     } catch (error) {,
   console.error(`Error processing ${file}:`, error.message),
       errorCount++};
-  };
-,
+  },
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};

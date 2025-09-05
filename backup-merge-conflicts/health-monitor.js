@@ -1,9 +1,7 @@
-      };
-,
+      },
       if (this.monitorProcesses) {,
         await this.checkProcessHealth()
-      };
-,
+      },
       if (this.monitorSystem) {,
         await this.checkSystemStatus()
       };
@@ -11,8 +9,7 @@
     } catch (error) {,
       this.log(`Health check error: ${error.message}`)
     };
-  };
-,
+  },
   async checkResourceUsage() {,
     try {,
       // Check memory usage,
@@ -20,17 +17,13 @@
       const freeMem = os.freemem(),
       const usedMem = totalMem - freeMem,
       const memUsagePercent = (usedMem / totalMem) * 100,
-,
       this.log(`Memory usage: ${memUsagePercent.toFixed(2)}% (${(usedMem / 1024 / 1024 / 1024).toFixed(2)}GB used / ${(totalMem / 1024 / 1024 / 1024).toFixed(2)}GB total)`),
-,
       if (memUsagePercent > this.alertThreshold) {,
         this.log(`ALERT: Memory usage ${memUsagePercent.toFixed(2)}% exceeds threshold ${this.alertThreshold}%`)
-      };
-,
+      },
       // Check CPU usage,
       const cpus = os.cpus(),
       this.log(`CPU cores: ${cpus.length}`),
-,
       // Check disk usage,
       try {,
         const diskUsage = execSync('df -h /', { encoding: 'utf8' }),
@@ -42,25 +35,20 @@
     } catch (error) {,
       this.log(`Resource monitoring error: ${error.message}`)
     };
-  };
-,
+  },
   async checkProcessHealth() {,
     try {,
       // Check PM2 processes,
       try {,
         const pm2List = execSync('pm2 list --json', { encoding: 'utf8' }),
         const processes = JSON.parse(pm2List),
-,
         this.log(`PM2 processes: ${processes.length}`),
-,
         processes.forEach(proc => {,
           const status = proc.pm2_env?.status,
           const name = proc.name,
           const memory = proc.monit?.memory || 0,
           const cpu = proc.monit?.cpu || 0,
-,
           this.log(`  ${name}: ${status} (CPU: ${cpu}%, Memory: ${(memory / 1024 / 1024).toFixed(2)}MB)`),
-,
           if (status !== 'online') {,
             this.log(`ALERT: Process ${name} is not online (status: ${status})`)
           };
@@ -73,8 +61,7 @@
     } catch (error) {,
       this.log(`Process monitoring error: ${error.message}`)
     };
-  };
-,
+  },
   async checkSystemStatus() {,
     try {,
       // Check system uptime,
@@ -82,18 +69,14 @@
       const days = Math.floor(uptime / 86400),
       const hours = Math.floor((uptime % 86400) / 3600),
       const minutes = Math.floor((uptime % 3600) / 60),
-,
       this.log(`System uptime: ${days}d ${hours}h ${minutes}m`),
-,
       // Check load average,
       const loadAvg = os.loadavg(),
       this.log(`Load average: ${loadAvg.map(load => load.toFixed(2)).join()}`),
-,
       // Check if load is too high,
       const cpuCount = os.cpus().length,
       const currentLoad = loadAvg[0],
       const loadPercent = (currentLoad / cpuCount) * 100,
-,
       if (loadPercent > this.alertThreshold) {,
         this.log(`ALERT: Load average ${currentLoad.toFixed(2)} exceeds threshold (${cpuCount} cores)`)
       };
@@ -101,14 +84,12 @@
     } catch (error) {,
       this.log(`System status check error: ${error.message}`)
     };
-  };
-,
+  },
   async checkApplicationHealth() {,
     try {,
       // Check if the application is responding,
       const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
       const isNextJS = packageJson.dependencies?.next || packageJson.devDependencies?.next,
-,
       if (isNextJS) {,
         // Try to check if Next.js dev server is running,
         try {,
@@ -122,8 +103,7 @@
     } catch (error) {,
       this.log(`Application health check error: ${error.message}`)
     };
-  };
-,
+  },
   async generateHealthReport() {,
     try {,
       const report = {,
@@ -140,8 +120,7 @@
         },
         processes: [],
         alerts: []
-      };
-,
+      },
       // Get PM2 process info,
       try {,
         const pm2List = execSync('pm2 list --json', { encoding: 'utf8' }),
@@ -154,27 +133,22 @@
         }))
       } catch (error) {,
         this.log(`Failed to get PM2 process info: ${error.message}`)
-      };
-,
+      },
       // Save report,
       const reportFile = path.join(process.cwd(), 'logs/pm2/health-report.json'),
       fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),
-,
       this.log(`Health report saved to ${reportFile}`),
 
     } catch (error) {,
       this.log(`Health report generation error: ${error.message}`)
     };
-  };
-,
+  },
   async start() {,
     this.log('Health monitor service started'),
-,
     // Run health checks immediately,
     await this.checkSystemHealth(),
     await this.checkApplicationHealth(),
     await this.generateHealthReport(),
-,
     // Set up interval for periodic health checks,
     setInterval(async () => {,
       await this.checkSystemHealth(),
@@ -185,8 +159,7 @@
       await this.generateHealthReport()
     }, 60 * 60 * 1000), // Every hour
   };
-};
-,
+},
 // Start the service,
 const healthMonitor = new HealthMonitor(),
 healthMonitor.start().catch(console.error),

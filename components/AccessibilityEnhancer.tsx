@@ -1,5 +1,4 @@
-    };
-,
+    },
     // Add ARIA live region for announcements,
     const liveRegion = document.createElement('div'),
     liveRegion.setAttribute('aria-livepolite'),
@@ -7,38 +6,31 @@
     liveRegion.className = 'sr-only',
     liveRegion.id = 'live-region',
     document.body.appendChild(liveRegion),
-,
     // Announce page changes,
     const announcePageChange = (message: string) => {,
       const liveRegion = document.getElementById('live-region'),
       if (liveRegion) {,
         liveRegion.textContent = message
       };
-    };
-,
+    },
     // Listen for route changes (Next.js specific),
     const handleRouteChange = () => {,
       announcePageChange('Page loaded')
-    };
-,
+    },
     // Add route change listener if available,
     if (typeof window !== 'undefined' && window.history) {,
       const originalPushState = window.history.pushState,
       const originalReplaceState = window.history.replaceState,
-,
       window.history.pushState = function(...args) {,
         originalPushState.apply(this, args),
         setTimeout(handleRouteChange, 100)
-      };
-,
+      },
       window.history.replaceState = function(...args) {,
         originalReplaceState.apply(this, args),
         setTimeout(handleRouteChange, 100)
-      };
-,
+      },
       window.addEventListener('popstate', handleRouteChange)
-    };
-,
+    },
     // Cleanup,
     return () => {,
       document.removeEventListener('mousedown', handleMouseDown),
@@ -51,10 +43,8 @@
       };
     };
   }, []),
-,
   return null
-};
-,
+},
 // Add CSS for focus management,
 const focusStyles = `,
   .using-mouse *:focus {,
@@ -86,7 +76,6 @@ const focusStyles = `,
     white-space: normal
   };
 `,
-,
 // Inject styles,
 if (typeof document !== 'undefined') {,
   const styleSheet = document.createElement('style'),
