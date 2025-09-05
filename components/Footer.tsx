@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import {
   Phone,
   Mail,
@@ -48,12 +49,30 @@ export default function Footer({ className = '' }: FooterProps) {
     { name: 'Custom Development', href: '/custom-development' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
     { name: 'Consulting', href: '/consulting' }
+=======
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  ArrowRight,
+  Twitter,
+  Linkedin,
+  Github,
+  Facebook
+} from 'lucide-react';
+
+const Footer = () => {
+  const services = [
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Micro SaaS', href: '/micro-saas' }
+>>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
   ];
 
   const company = [
     { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
+<<<<<<< HEAD
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'News', href: '/news' },
     { name: 'Partners', href: '/partners' }
@@ -132,16 +151,53 @@ export default function Footer({ className = '' }: FooterProps) {
 
             {/* Social Links */}
             <div className="flex space-x-4 mt-6">
+=======
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' }
+  ];
+
+  const legal = [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' }
+  ];
+
+  const socialLinks = [
+    { name: 'Twitter', href: '#', icon: Twitter },
+    { name: 'LinkedIn', href: '#', icon: Linkedin },
+    { name: 'GitHub', href: '#', icon: Github },
+    { name: 'Facebook', href: '#', icon: Facebook }
+  ];
+
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold">Zion Tech Group</h3>
+            <p className="text-gray-300 text-sm">
+              Leading provider of AI, IT, and Micro SaaS solutions for modern businesses.
+            </p>
+            <div className="flex space-x-4">
+>>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
+<<<<<<< HEAD
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gray-800 p-2 rounded-lg hover:bg-gray-700 transition-colors"
                   aria-label={social.name}
                 >
                   <social.icon className="w-5 h-5" />
+=======
+                  className="text-gray-400 hover:text-white transition-colors"
+                  aria-label={social.name}
+                >
+                  <social.icon className="h-5 w-5" />
+>>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
                 </a>
               ))}
             </div>
@@ -149,23 +205,35 @@ export default function Footer({ className = '' }: FooterProps) {
 
           {/* Services */}
           <div>
+<<<<<<< HEAD
             <h4 className="text-lg font-semibold mb-6">Services</h4>
             <ul className="space-y-3">
+=======
+            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <ul className="space-y-2">
+>>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
               {services.map((service) => (
                 <li key={service.name}>
                   <Link
                     href={service.href}
+<<<<<<< HEAD
                     className="flex items-center text-gray-300 hover:text-white transition-colors group"
                   >
                     <service.icon className="w-4 h-4 mr-2" />
                     {service.name}
                     <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+=======
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {service.name}
+>>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
+<<<<<<< HEAD
           {/* Solutions */}
           <div>
             <h4 className="text-lg font-semibold mb-6">Solutions</h4>
@@ -177,12 +245,26 @@ export default function Footer({ className = '' }: FooterProps) {
                     className="text-gray-300 hover:text-white transition-colors"
                   >
                     {solution.name}
+=======
+          {/* Company */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Company</h4>
+            <ul className="space-y-2">
+              {company.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  >
+                    {item.name}
+>>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
+<<<<<<< HEAD
           {/* Company & Resources */}
           <div>
             <h4 className="text-lg font-semibold mb-6">Company</h4>
@@ -192,11 +274,23 @@ export default function Footer({ className = '' }: FooterProps) {
                   <Link
                     href={item.href}
                     className="text-gray-300 hover:text-white transition-colors"
+=======
+          {/* Legal */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Legal</h4>
+            <ul className="space-y-2">
+              {legal.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
+>>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
                   >
                     {item.name}
                   </Link>
                 </li>
               ))}
+<<<<<<< HEAD
             </ul>
 
             <h4 className="text-lg font-semibold mb-6">Resources</h4>
@@ -211,10 +305,13 @@ export default function Footer({ className = '' }: FooterProps) {
                   </Link>
                 </li>
               ))}
+=======
+>>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
             </ul>
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Trust Indicators */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -267,9 +364,48 @@ export default function Footer({ className = '' }: FooterProps) {
               <Globe className="w-4 h-4 mr-2 text-gray-400" />
               <span className="text-gray-400 text-sm">Serving clients worldwide</span>
             </div>
+=======
+        {/* Contact Info */}
+        <div className="mt-8 pt-8 border-t border-gray-800">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">
+            <div className="flex items-center space-x-2">
+              <Phone className="h-4 w-4" />
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Mail className="h-4 w-4" />
+              <span>info@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <MapPin className="h-4 w-4" />
+              <span>123 Innovation Drive, Tech City, TC 12345</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-8 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400 text-sm">
+            © 2024 Zion Tech Group. All rights reserved.
+          </p>
+          <div className="mt-4 md:mt-0">
+            <Link
+              href="/contact"
+              className="inline-flex items-center text-sm text-blue-400 hover:text-blue-300 transition-colors"
+            >
+              Get in touch
+              <ArrowRight className="ml-1 h-4 w-4" />
+            </Link>
+>>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
           </div>
         </div>
       </div>
     </footer>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default Footer;
+>>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34

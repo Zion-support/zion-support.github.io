@@ -1,2 +1,0 @@
-import _React from 'react';,
-import * as _React from "react"; import {Toaster as HotToaster} from "react-hot-toast"; export function Toaster(_) {return (<HotToaster position="top-right" />)} export default toaster;

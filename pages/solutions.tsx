@@ -25,7 +25,6 @@ import {
   GraduationCap,
   Building
 } from 'lucide-react';
-
 const solutions = [
   {
     title: 'Enterprise Solutions',

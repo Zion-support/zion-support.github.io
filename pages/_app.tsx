@@ -1,5 +1,6 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { useState } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -306,4 +307,10 @@ export default function App({ Component, pageProps }: AppProps) {
       <Footer />
     </ErrorBoundary>
   );
+=======
+import '../styles/globals.css';
+
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+>>>>>>> 7cd1f9a73b20571287d099e6b52b4a284469ba34
 }

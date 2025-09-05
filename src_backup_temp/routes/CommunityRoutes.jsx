@@ -1,1 +1,0 @@
-import _React from 'react'; import CommunityPage from '@/pages/CommunityPage export default function CommunityRoutes(_) { return (<> <Route path=" element={<CommunityPage />}/> </>)} ;';';
