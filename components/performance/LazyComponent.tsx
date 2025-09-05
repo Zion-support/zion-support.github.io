@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 import React, { Suspense, lazy } from 'react'
 interface LazyComponentProps {
-  "component": () => Promise<{ default: React.ComponentType<unknown> }>
+  component: () => Promise<{ default: React.ComponentType<unknown> }>
   fallback?: React.ReactNode
+<<<<<<< HEAD
   [key:string]: unknown
+=======
+  [key: string]: unknown
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
 }
 
 export const "LazyComponent": React.FC<LazyComponentProps> = ({ 

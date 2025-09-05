@@ -47,8 +47,12 @@ import {
   Trash2
 } from 'lucide-react';
 
+<<<<<<< HEAD
 const microSaaSProducts = [
   {
+=======
+const microSaaSProducts = [{
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
     title: 'Cloud Cost Guard (FinOps Assistant)',
     description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
     icon: DollarSign,
@@ -245,6 +249,7 @@ const microSaaSProducts = [
   },
   {
     title: 'AI-Powered Code Review Assistant',
+<<<<<<< HEAD
     description: 'Automated code review and quality assurance using advanced AI analysis.',
     icon: Code,
     features: ['Automated Code Review', 'Security Vulnerability Detection', 'Performance Analysis', 'Best Practice Suggestions'],
@@ -400,6 +405,189 @@ const microSaaSProducts = [
 
 const features = [
   {
+=======
+    description: 'Automated code review with security scanning, performance optimization, and best practices enforcement.',
+    icon: Code,
+    features: ['Automated Reviews', 'Security Scanning', 'Performance Analysis', 'Best Practices Check'],
+    pricing: '$299 - $1,999/month',
+    category: 'Developer Tools',
+    popular: true
+  },
+  {
+    title: 'Smart Contract Security Auditor',
+    description: 'Automated smart contract security analysis and vulnerability detection for blockchain projects.',
+    icon: Lock,
+    features: ['Vulnerability Detection', 'Gas Optimization', 'Compliance Checking', 'Audit Reports'],
+    pricing: '$499 - $2,999/month',
+    category: 'Blockchain Security',
+    popular: true
+  },
+  {
+    title: 'AI-Powered SEO Content Optimizer',
+    description: 'Intelligent content optimization for search engines with real-time ranking improvements.',
+    icon: Search,
+    features: ['Keyword Research', 'Content Analysis', 'Ranking Tracking', 'Competitor Analysis'],
+    pricing: '$199 - $1,299/month',
+    category: 'SEO & Marketing',
+    popular: true
+  },
+  {
+    title: 'Multi-Channel Customer Data Platform',
+    description: 'Unified customer data platform with real-time synchronization across all touchpoints.',
+    icon: Database,
+    features: ['Data Unification', 'Real-time Sync', 'Customer 360 View', 'Privacy Compliance'],
+    pricing: '$399 - $2,499/month',
+    category: 'Customer Data',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Video Content Generator',
+    description: 'Automated video creation from text, images, and audio with professional editing capabilities.',
+    icon: Video,
+    features: ['Text-to-Video', 'Auto Editing', 'Voice Synthesis', 'Template Library'],
+    pricing: '$199 - $1,499/month',
+    category: 'Content Creation',
+    popular: true
+  },
+  {
+    title: 'Intelligent Supply Chain Optimizer',
+    description: 'AI-driven supply chain optimization with demand forecasting and inventory management.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Analytics', 'Risk Assessment'],
+    pricing: '$599 - $3,999/month',
+    category: 'Supply Chain',
+    popular: true
+  },
+  {
+    title: 'Real-Time Language Translation API',
+    description: 'Advanced translation service with context awareness and industry-specific terminology.',
+    icon: Globe,
+    features: ['100+ Languages', 'Context Awareness', 'Industry Terms', 'Real-time Processing'],
+    pricing: '$0.01 - $0.10 per 1K characters',
+    category: 'Language Services',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Legal Document Analyzer',
+    description: 'Automated legal document analysis with contract review and compliance checking.',
+    icon: FileText,
+    features: ['Contract Analysis', 'Compliance Checking', 'Risk Assessment', 'Clause Extraction'],
+    pricing: '$299 - $1,999/month',
+    category: 'Legal Tech',
+    popular: true
+  },
+  {
+    title: 'Smart Energy Management System',
+    description: 'IoT-based energy monitoring and optimization for buildings and facilities.',
+    icon: Zap,
+    features: ['Energy Monitoring', 'Usage Analytics', 'Cost Optimization', 'Predictive Maintenance'],
+    pricing: '$199 - $1,299/month',
+    category: 'IoT & Energy',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Recruitment Platform',
+    description: 'Intelligent candidate screening and matching with bias detection and diversity analytics.',
+    icon: Users,
+    features: ['Resume Screening', 'Skill Matching', 'Bias Detection', 'Diversity Analytics'],
+    pricing: '$199 - $1,499/month',
+    category: 'HR & Recruitment',
+    popular: true
+  },
+  {
+    title: 'Blockchain Analytics & Compliance',
+    description: 'Comprehensive blockchain transaction analysis with AML and compliance reporting.',
+    icon: TrendingUp,
+    features: ['Transaction Analysis', 'AML Detection', 'Compliance Reporting', 'Risk Scoring'],
+    pricing: '$399 - $2,999/month',
+    category: 'Blockchain Analytics',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Medical Image Analysis',
+    description: 'Advanced medical image analysis with AI-powered diagnosis assistance and reporting.',
+    icon: Eye,
+    features: ['Image Analysis', 'Diagnosis Assistance', 'Report Generation', 'Integration APIs'],
+    pricing: '$999 - $4,999/month',
+    category: 'Healthcare AI',
+    popular: true
+  },
+  {
+    title: 'Smart Home Automation Platform',
+    description: 'Comprehensive smart home control with AI-powered automation and energy management.',
+    icon: Home,
+    features: ['Device Control', 'Automation Rules', 'Energy Management', 'Voice Integration'],
+    pricing: '$29 - $199/month',
+    category: 'Smart Home',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Financial Risk Assessment',
+    description: 'Real-time financial risk analysis with credit scoring and fraud detection.',
+    icon: Shield,
+    features: ['Credit Scoring', 'Fraud Detection', 'Risk Modeling', 'Real-time Alerts'],
+    pricing: '$499 - $2,999/month',
+    category: 'FinTech',
+    popular: true
+  },
+  {
+    title: 'Intelligent Document Processing',
+    description: 'Automated document extraction and processing with OCR and data validation.',
+    icon: FileText,
+    features: ['OCR Processing', 'Data Extraction', 'Validation Rules', 'Workflow Automation'],
+    pricing: '$0.10 - $0.50 per document',
+    category: 'Document Processing',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Social Media Monitoring',
+    description: 'Comprehensive social media monitoring with sentiment analysis and brand protection.',
+    icon: MessageSquare,
+    features: ['Brand Monitoring', 'Sentiment Analysis', 'Crisis Detection', 'Competitor Analysis'],
+    pricing: '$199 - $1,299/month',
+    category: 'Social Media',
+    popular: true
+  },
+  {
+    title: 'Smart Agriculture IoT Platform',
+    description: 'IoT-based agricultural monitoring with crop analysis and yield optimization.',
+    icon: Sprout,
+    features: ['Crop Monitoring', 'Weather Integration', 'Yield Prediction', 'Resource Optimization'],
+    pricing: '$299 - $1,999/month',
+    category: 'AgTech',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Personalization Engine',
+    description: 'Real-time personalization engine for e-commerce and content platforms.',
+    icon: Target,
+    features: ['Real-time Personalization', 'A/B Testing', 'Behavioral Analysis', 'Recommendation Engine'],
+    pricing: '$399 - $2,499/month',
+    category: 'Personalization',
+    popular: true
+  },
+  {
+    title: 'Blockchain Identity Verification',
+    description: 'Decentralized identity verification with KYC/AML compliance and privacy protection.',
+    icon: Lock,
+    features: ['Identity Verification', 'KYC/AML Compliance', 'Privacy Protection', 'Blockchain Integration'],
+    pricing: '$0.50 - $2.00 per verification',
+    category: 'Identity & Security',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Voice Analytics',
+    description: 'Advanced voice analysis for call centers with emotion detection and quality scoring.',
+    icon: Mic,
+    features: ['Emotion Detection', 'Quality Scoring', 'Sentiment Analysis', 'Performance Metrics'],
+    pricing: '$199 - $1,299/month',
+    category: 'Voice Analytics',
+    popular: true
+  }
+];
+
+const features = [{
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
     icon: Zap,
     title: 'Rapid Deployment',
     description: 'Get up and running in days, not months'
@@ -431,8 +619,12 @@ const features = [
   }
 ];
 
+<<<<<<< HEAD
 const benefits = [
   {
+=======
+const benefits = [{
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
     icon: Clock,
     title: 'Fast Time to Market',
     description: 'Launch your SaaS in weeks, not months',
@@ -458,8 +650,12 @@ const benefits = [
   }
 ];
 
+<<<<<<< HEAD
 const pricingTiers = [
   {
+=======
+const pricingTiers = [{
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
     name: 'Starter',
     description: 'Perfect for small teams and MVPs',
     price: '$299',
@@ -478,8 +674,12 @@ const pricingTiers = [
     description: 'Ideal for growing businesses',
     price: '$799',
     period: '/month',
+<<<<<<< HEAD
     features: [
       'Up to 10,000 users',
+=======
+    features: ['Up to 10,000 users',
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
       'Advanced analytics',
       'Priority support',
       'Enhanced security',
@@ -493,8 +693,12 @@ const pricingTiers = [
     description: 'For large organizations',
     price: 'Custom',
     period: '',
+<<<<<<< HEAD
     features: [
       'Unlimited users',
+=======
+    features: ['Unlimited users',
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
       'Custom analytics',
       'Dedicated support',
       'Enterprise security',
@@ -508,14 +712,15 @@ const pricingTiers = [
 export default function MicroSaaSPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Head>
-        <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Scalable Micro SaaS solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics." />
-        <meta name="keywords" content="Micro SaaS, SaaS solutions, cloud applications, scalable software, business automation" />
-      </Head>
+                  <Head>
+                  <title>Micro SaaS Solutions - Zion Tech Group</title>
+                  <meta name="description" content="Scalable Micro SaaS solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics." />
+                  <meta name="keywords" content="Micro SaaS, SaaS solutions, cloud applications, scalable software, business automation" />
+                  </Head>
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 overflow-hidden">
+<<<<<<< HEAD
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
           <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
@@ -523,11 +728,22 @@ export default function MicroSaaSPage() {
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
+=======
+                  <div className="absolute inset-0">
+                  <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
+                  </div>
+                  <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
+                  </div>
+                  </div>
+                  <div className="container mx-auto px-4 relative z-10">
+                  <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
+<<<<<<< HEAD
             <div className="flex items-center justify-center mb-6">
               <Cloud className="h-16 w-16 text-purple-400 mr-4" />
               <h1 className="text-4xl md:text-6xl font-bold">
@@ -542,41 +758,61 @@ export default function MicroSaaSPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+=======
+                  <div className="flex items-center justify-center mb-6">
+                  <Cloud className="h-16 w-16 text-purple-400 mr-4" />
+                  <h1 className="text-4xl md:text-6xl font-bold">
+                Micro{' '} <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+                  SaaS
+                </span>
+                  </h1>
+                  </div>
+                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">Scalable software solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
                 Start Your SaaS
               </Link>
-              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+                  </div>
+                  </motion.div>
+                  </div>
+                  </section>
 
       {/* Products Grid */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
+                  <div className="container mx-auto px-4">
+                  <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our Micro SaaS Products
             </h2>
+=======
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Micro SaaS Products</h2>
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Ready-to-deploy SaaS solutions that solve specific business problems with minimal setup time.
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  </motion.div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaaSProducts.map((product, index) => {
               const IconComponent = product.icon;
               return (
                 <motion.div
                   key={index}
+<<<<<<< HEAD
                   className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
+=======
+                  className={`bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 group relative ${
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
                     product.popular ? 'ring-2 ring-purple-200' : ''
                   }`}
                   initial={{ opacity: 0, y: 30 }}
@@ -587,68 +823,77 @@ export default function MicroSaaSPage() {
                 >
                   {product.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                  <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
                         Popular
                       </span>
-                    </div>
+                  </div>
                   )}
                   
                   <div className="flex items-center justify-between mb-4">
+<<<<<<< HEAD
                     <div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
                       <IconComponent className="w-10 h-10" />
                     </div>
                     <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">
+=======
+                  <div className="text-purple-600 group-hover:text-indigo-600 transition-colors">
+                  <IconComponent className="w-10 h-10" />
+                  </div>
+                  <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded-full">
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
                       {product.category}
                     </span>
                   </div>
-                  
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {product.title}
                   </h3>
                   <p className="text-gray-600 mb-4 leading-relaxed">
                     {product.description}
                   </p>
-                  
                   <div className="mb-4">
+<<<<<<< HEAD
                     <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
                     <ul className="space-y-1">
+=======
+                  <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
+                  <ul className="space-y-1">
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
                       {product.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">
-                          <CheckCircle className="w-3 h-3 text-purple-500 mr-2 flex-shrink-0" />
+                  <CheckCircle className="w-3 h-3 text-purple-500 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
-
                   <div className="mb-4">
-                    <span className="text-sm font-semibold text-purple-600">{product.pricing}</span>
+                  <span className="text-sm font-semibold text-purple-600">{product.pricing}</span>
                   </div>
-
                   <Link
                     href="/contact"
                     className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm"
                   >
                     <span>Get Started</span>
-                    <ArrowRight className="w-3 h-3 ml-1" />
+                  <ArrowRight className="w-3 h-3 ml-1" />
                   </Link>
-                </motion.div>
+                  </motion.div>
               );
             })}
           </div>
-        </div>
-      </section>
+                  </div>
+                  </section>
 
       {/* Features Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
+                  <div className="container mx-auto px-4">
+                  <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Micro SaaS?
             </h2>
@@ -659,18 +904,31 @@ export default function MicroSaaSPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
+=======
+                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Micro SaaS?</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Built for modern businesses that need fast, reliable, and scalable solutions.
+            </p>
+                  </motion.div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {features.map((feature, index) => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
               const IconComponent = feature.icon;
               return (
                 <motion.div
                   key={index}
+<<<<<<< HEAD
                   className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
+=======
+                  className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
                   <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-purple-600" />
+                  <IconComponent className="w-8 h-8 text-purple-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {feature.title}
@@ -678,32 +936,35 @@ export default function MicroSaaSPage() {
                   <p className="text-gray-600">
                     {feature.description}
                   </p>
-                </motion.div>
+                  </motion.div>
               );
             })}
           </div>
-        </div>
-      </section>
+                  </div>
+                  </section>
 
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
+                  <div className="container mx-auto px-4">
+                  <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Proven Results
             </h2>
+=======
+                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Proven Results</h2>
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Our Micro SaaS solutions deliver measurable business impact.
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  </motion.div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (
@@ -716,7 +977,7 @@ export default function MicroSaaSPage() {
                   viewport={{ once: true }}
                 >
                   <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-purple-600" />
+                  <IconComponent className="w-8 h-8 text-purple-600" />
                   </div>
                   <div className="text-3xl font-bold text-purple-600 mb-2">
                     {benefit.stat}
@@ -727,23 +988,24 @@ export default function MicroSaaSPage() {
                   <p className="text-gray-600">
                     {benefit.description}
                   </p>
-                </motion.div>
+                  </motion.div>
               );
             })}
           </div>
-        </div>
-      </section>
+                  </div>
+                  </section>
 
       {/* Pricing Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
+                  <div className="container mx-auto px-4">
+                  <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Simple, Transparent Pricing
             </h2>
@@ -754,6 +1016,15 @@ export default function MicroSaaSPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
+=======
+                  <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Choose the plan that fits your business needs. No hidden fees, no surprises.
+            </p>
+                  </motion.div>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {pricingTiers.map((tier, index) => (
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
               <motion.div
                 key={index}
                 className={`p-8 rounded-xl shadow-lg ${
@@ -766,7 +1037,7 @@ export default function MicroSaaSPage() {
               >
                 {tier.popular && (
                   <div className="text-center mb-4">
-                    <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -775,47 +1046,57 @@ export default function MicroSaaSPage() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {tier.name}
                 </h3>
-                <p className="text-gray-600 mb-6">
+                  <p className="text-gray-600 mb-6">
                   {tier.description}
                 </p>
-                <div className="mb-6">
+                  <div className="mb-6">
                   <span className="text-4xl font-bold text-purple-600">{tier.price}</span>
                   <span className="text-gray-600">{tier.period}</span>
-                </div>
-                <ul className="space-y-3 mb-8">
+                  </div>
+                  <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600">
-                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <Link
+                  <Link
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     tier.popular
+<<<<<<< HEAD
                       ? 'bg-purple-600 hover:bg-purple-700 text-white'
+=======
+                      ? 'bg-purple-600 hover: bg-purple-700 text-white'
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
                 >
                   <span>Choose Plan</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </motion.div>
+                  </Link>
+                  </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+                  </div>
+                  </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+<<<<<<< HEAD
         <div className="container mx-auto px-4 text-center">
           <motion.div
+=======
+                  <div className="container mx-auto px-4 text-center">
+                  <motion.div
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Launch Your Micro SaaS?
             </h2>
@@ -824,15 +1105,23 @@ export default function MicroSaaSPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+=======
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Launch Your Micro SaaS?</h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Let&apos;s build the perfect SaaS solution for your business needs. Fast, secure, and scalable.
+            </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+>>>>>>> cursor/automate-test-improve-and-merge-code-7050
                 Start Building
               </Link>
-              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
+                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
                 View All Services
               </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+                  </div>
+                  </motion.div>
+                  </div>
+                  </section>
+                  </div>
   );
 }
