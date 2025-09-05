@@ -4,7 +4,7 @@ import {
   Phone;
   Mail;
   MapPin;
-  Brain,
+  Brain;
   Cloud,
   Shield,
   Code,

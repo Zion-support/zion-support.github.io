@@ -5,7 +5,7 @@ import {
   Menu;
   X;
   ChevronDown;
-  Phone,
+  Phone;
   Mail,
   Facebook,
   Twitter,

@@ -7,7 +7,7 @@ import {;
 ;
 const servicesDropdown = [;
   {;
-    "icon": Brain,
+    "icon": Brain;
     "title": 'AI & Machine Learning',
     "description": 'Intelligent solutions for business automation',
     "href": '/ai-services'

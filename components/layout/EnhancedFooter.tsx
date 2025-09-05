@@ -1,7 +1,7 @@
 import React from 'react';
 ;
 const EnhancedFooter: React.FC = () => {;
-  const currentYear = new Date().getFullYear(),
+  const currentYear = new Date().getFullYear();
 ,
   const services = [,
     { name: 'AI Development', href: '/services/ai-development' },
