@@ -1,2 +1,5 @@
-// CSP report module
+<<<<<<< HEAD
 export {};
+=======
+module.exports = {};
+>>>>>>> main

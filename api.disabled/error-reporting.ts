@@ -1,2 +1,5 @@
-// Error reporting module
+<<<<<<< HEAD
 export {};
+=======
+module.exports = {};
+>>>>>>> main

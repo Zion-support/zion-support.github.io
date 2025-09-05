@@ -21,14 +21,13 @@ async function handler(req, res) {
     : 0;
   const { data, error } = await supabase
     .from('orders')
-    .insert({ user_id: null, email, items, total, status: 'pending', token })
+    .insert({ user_id: 'null', email, items, total, status: 'pending', token })
     .select('id')
     .single();
   if (error || !data) {
     res.status(500).json({ error: error?.message || 'Failed to create order' });
     return;
   }
-  res.status(200).json({ orderId: data.id, token });
+  res.status(200).json({ orderId: 'data.id', token });
 }
 export default withErrorLogging(handler);
-
