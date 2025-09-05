@@ -192,6 +192,7 @@ const faqData = {
 export default function FAQPage() {
   const [activeCategory, setActiveCategory] = useState('general');
   const [openItems, setOpenItems] = useState<number[]>([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   return (
     <MainLayout

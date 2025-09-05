@@ -13,7 +13,6 @@ import {
   Star,
   TrendingUp,
   CheckCircle,
-  Star,
   Award,
   ChevronRight
 } from 'lucide-react';
@@ -55,10 +54,10 @@ const caseStudies = [
   },
   {
     id: 2,
-    title: "Cloud Infrastructure Migration and Optimization",
+    title: "Cloud Infrastructure Migration",
     client: "Financial Services Company",
     industry: "Financial Services",
-    challenge: "Legacy infrastructure causing performance issues and high costs",
+    challenge: "Legacy infrastructure causing performance issues",
     solution: "Complete cloud migration with microservices architecture",
     results: "50% cost reduction, 99.9% uptime, 3x faster performance",
     category: "IT Services",
@@ -73,17 +72,17 @@ const caseStudies = [
       roi: "250%"
     },
     testimonial: {
-      quote: "The migration was seamless and the results exceeded our expectations. Our infrastructure is now more reliable and cost-effective.",
+      quote: "The migration was seamless and exceeded our expectations.",
       author: "Michael Chen",
       role: "CTO"
     }
   },
   {
     id: 3,
-    title: "Micro SaaS Platform for Project Management",
+    title: "Micro SaaS Platform Development",
     client: "Tech Startup",
     industry: "Technology",
-    challenge: "Need for a scalable project management solution",
+    challenge: "Need for scalable project management solution",
     solution: "Built custom micro SaaS platform with real-time collaboration",
     results: "10,000+ users, $50K MRR, 95% user satisfaction",
     category: "Micro SaaS",
@@ -98,84 +97,9 @@ const caseStudies = [
       growth: "400%"
     },
     testimonial: {
-      quote: "The platform has been instrumental in our growth. The team delivered exactly what we needed and more.",
+      quote: "The platform has been instrumental in our growth.",
       author: "Emily Rodriguez",
       role: "Founder & CEO"
-    }
-  },
-  {
-    id: 4,
-    title: "Enterprise Security Implementation",
-    client: "Healthcare Organization",
-    industry: "Healthcare",
-    challenge: "HIPAA compliance and security vulnerabilities",
-    solution: "Comprehensive security audit and implementation",
-    results: "100% HIPAA compliance, zero security incidents",
-    category: "IT Services",
-    duration: "5 months",
-    teamSize: "10 developers",
-    technologies: ["Security", "Compliance", "Monitoring", "Encryption"],
-    featured: false,
-    metrics: {
-      compliance: "100%",
-      incidents: "0",
-      auditScore: "A+",
-      roi: "200%"
-    },
-    testimonial: {
-      quote: "The security implementation was thorough and professional. We now have complete confidence in our data protection.",
-      author: "Dr. James Wilson",
-      role: "Chief Information Officer"
-    }
-  },
-  {
-    id: 5,
-    title: "AI-Powered Inventory Management",
-    client: "Manufacturing Company",
-    industry: "Manufacturing",
-    challenge: "Inefficient inventory management leading to stockouts and overstock",
-    solution: "AI-driven demand forecasting and inventory optimization",
-    results: "30% reduction in inventory costs, 95% stock accuracy",
-    category: "AI Solutions",
-    duration: "4 months",
-    teamSize: "7 developers",
-    technologies: ["Machine Learning", "Python", "TensorFlow", "APIs"],
-    featured: false,
-    metrics: {
-      costReduction: "30%",
-      accuracy: "95%",
-      efficiency: "45%",
-      roi: "180%"
-    },
-    testimonial: {
-      quote: "The AI solution has revolutionized our inventory management. We've eliminated stockouts and reduced costs significantly.",
-      author: "Lisa Thompson",
-      role: "Operations Director"
-    }
-  },
-  {
-    id: 6,
-    title: "Custom CRM Development",
-    client: "Real Estate Agency",
-    industry: "Real Estate",
-    challenge: "Need for industry-specific CRM functionality",
-    solution: "Custom CRM with property management and client tracking",
-    results: "200% increase in lead conversion, 50% time savings",
-    category: "Micro SaaS",
-    duration: "3 months",
-    teamSize: "5 developers",
-    technologies: ["Vue.js", "Laravel", "MySQL", "APIs"],
-    featured: false,
-    metrics: {
-      conversion: "200%",
-      timeSavings: "50%",
-      userAdoption: "90%",
-      roi: "150%"
-    },
-    testimonial: {
-      quote: "The custom CRM has transformed our business. Our team is more efficient and our conversion rates have skyrocketed.",
-      author: "Robert Davis",
-      role: "Managing Partner"
     }
   }
 ];
@@ -185,9 +109,7 @@ const industries = [
   { name: 'Healthcare', count: caseStudies.filter(cs => cs.industry === 'Healthcare').length },
   { name: 'E-commerce', count: caseStudies.filter(cs => cs.industry === 'E-commerce').length },
   { name: 'Financial Services', count: caseStudies.filter(cs => cs.industry === 'Financial Services').length },
-  { name: 'Education', count: caseStudies.filter(cs => cs.industry === 'Education').length },
-  { name: 'Manufacturing', count: caseStudies.filter(cs => cs.industry === 'Manufacturing').length },
-  { name: 'Banking', count: caseStudies.filter(cs => cs.industry === 'Banking').length }
+  { name: 'Technology', count: caseStudies.filter(cs => cs.industry === 'Technology').length }
 ];
 
 export default function CaseStudiesPage() {
@@ -209,6 +131,7 @@ export default function CaseStudiesPage() {
       description="Real-world success stories and case studies showcasing how we've helped businesses achieve their goals with technology solutions."
     >
       <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
         <section className="bg-gradient-to-br from-emerald-900 via-blue-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4">
             <motion.div
@@ -229,6 +152,7 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
+        {/* Search and Filter Section */}
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -251,7 +175,7 @@ export default function CaseStudiesPage() {
                       className={`px-4 py-2 rounded-lg whitespace-nowrap transition-colors ${
                         selectedCategory === category.name
                           ? "bg-emerald-600 text-white" : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                      }}
+                      }`}
                     >
                       {category.name} ({category.count})
                     </button>
@@ -262,6 +186,7 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
+        {/* Featured Case Studies */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
@@ -276,14 +201,13 @@ export default function CaseStudiesPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.filter(cs => cs.featured).map((caseStudy, index) => (}
+              {caseStudies.filter(cs => cs.featured).map((caseStudy, index) => (
                 <motion.div
                   key={caseStudy.id}
                   className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group border-2 border-emerald-100"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center"
                 >
                   <div className="p-8">
                     <div className="flex items-center justify-between mb-4">
@@ -360,7 +284,8 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
-        <section className="py-16">
+        {/* All Case Studies */}
+        <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-12"
@@ -376,7 +301,7 @@ export default function CaseStudiesPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredCaseStudies.map((caseStudy, index) => (}
+              {filteredCaseStudies.map((caseStudy, index) => (
                 <motion.article
                   key={caseStudy.id}
                   className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
@@ -391,43 +316,43 @@ export default function CaseStudiesPage() {
                         {caseStudy.category}
                       </span>
                       <div className="flex items-center text-sm text-gray-500">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {caseStudy.duration}
+                        <Star className="w-4 h-4 text-yellow-500 mr-1" />
+                        4.9
                       </div>
                     </div>
                     
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
                       {caseStudy.title}
                     </h3>
                     
                     <div className="mb-4">
-                      <p className="text-lg font-semibold text-gray-700 mb-1">{caseStudy.client}</p>
+                      <p className="text-gray-700 font-medium">{caseStudy.client}</p>
                       <p className="text-sm text-gray-500">{caseStudy.industry}</p>
                     </div>
                     
-                    <p className="text-gray-600 mb-4 leading-relaxed">
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">
                       {caseStudy.challenge}
                     </p>
                     
                     <div className="mb-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">Key Results:</h4>
-                      <p className="text-emerald-600 text-sm font-semibold">{caseStudy.results}</p>
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-1 mb-4">
-                      {caseStudy.technologies.map((tech, techIndex) => (}
-                        <span key={techIndex} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">
-                          {tech}
-                        </span>
-                      ))}
+                      <div className="flex flex-wrap gap-1">
+                        {caseStudy.technologies.slice(0, 3).map((tech, techIndex) => (
+                          <span key={techIndex} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
+                            {tech}
+                          </span>
+                        ))}
+                        {caseStudy.technologies.length > 3 && (
+                          <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
+                            +{caseStudy.technologies.length - 3} more
+                          </span>
+                        )}
+                      </div>
                     </div>
                     
                     <div className="flex items-center justify-between">
-                      <div className="text-sm text-gray-500">
-                        <div className="flex items-center">
-                          <User className="w-4 h-4 mr-1" />
-                          {caseStudy.teamSize}
-                        </div>
+                      <div className="flex items-center text-sm text-gray-500">
+                        <User className="w-4 h-4 mr-1" />
+                        {caseStudy.teamSize}
                       </div>
                       <Link
                         href={`/case-studies/${caseStudy.id}`}
@@ -438,49 +363,43 @@ export default function CaseStudiesPage() {
                       </Link>
                     </div>
                   </div>
-
-                  {/* Detailed View */}
-                  {/* This section was not part of the original file, so it's removed */}
                 </motion.article>
               ))}
             </div>
-            
-            {filteredCaseStudies.length === 0 && (
-              <div className="text-center py-12">
-                <BarChart3 className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  No case studies found
-                </h3>
-                <p className="text-gray-600">
-                  Try adjusting your search or filter criteria
-                </p>
-              </div>
-            )}
           </div>
         </section>
 
-        <section className="py-20 bg-gradient-to-r from-emerald-600 to-blue-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md: text-4xl font-bold mb-6">
-                Ready to Start Your Success Story?
-              </h2>
-              <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
-                Let us help you achieve similar results with our proven technology solutions and expertise.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-emerald-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-                  Start Your Project
-                </Link>
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold">
-                  Learn More About Us
-                </Link>
-              </div>
-            </motion.div>
+        {/* CTA Section */}
+        <section className="py-16 bg-emerald-900 text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold mb-4">Ready to Start Your Success Story?</h2>
+                <p className="text-xl text-emerald-100 mb-8">
+                  Let's discuss how we can help transform your business with technology
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link
+                    href="/contact"
+                    className="bg-white text-emerald-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+                  >
+                    Start Your Project
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                  <Link
+                    href="/services"
+                    className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-900 transition-colors inline-flex items-center justify-center"
+                  >
+                    View Our Services
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
       </div>

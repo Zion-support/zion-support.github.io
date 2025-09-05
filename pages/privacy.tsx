@@ -203,4 +203,5 @@ export default function PrivacyPage() {
         </section>
       </div>
     </Layout>
+  );
 }
