@@ -290,7 +290,7 @@ export default function AccessibilityPage() {
                 <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                   We follow international accessibility standards to ensure our platform is usable by everyone.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>

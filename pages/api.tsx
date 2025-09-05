@@ -262,5 +262,7 @@ export default function APIPage() {
             </div>
           </div>
         </section>
+      </div>
+    </MainLayout>
   );
 }
