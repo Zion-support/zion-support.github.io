@@ -1,53 +1,57 @@
 
-const resources = [;
-  {}
-    title: "Documentation","
-    description: "Comprehensive guides and technical documentation","
-    icon: FileText,
-    href: "/docs","
-    color: "from-blue-500 to-blue-600","
-    items: ["API Documentation", "Integration Guides", "Best Practices", "Troubleshooting"]"
-  },
-  {}
-    title: "Case Studies","
-    description: "Real-world success stories and implementations","
-    icon: BarChart3,
-    href: "/case-studies","
-    color: "from-green-500 to-green-600","
-    items: ["Client Success Stories", "Implementation Examples", "ROI Analysis", "Lessons Learned"]"
-  },
-  {}
-    title: "Blog","
-    description: "Latest insights, trends, and technical articles","
-    icon: MessageSquare,
-    href: "/blog","
-    color: "from-purple-500 to-purple-600","
-    items: ["Technology Trends", "Industry Insights", "Technical Tutorials", "Company News"]"
-  },
-  {}
-    title: "API Reference","
-    description: "Complete API documentation and examples","
-    icon: Settings,
-    href: "/api-docs","
-    color: "from-orange-500 to-orange-600","
-    items: ["REST API", "GraphQL", "SDKs", "Code Examples"]"
-  }
-;];
+import React from 'react';
+import { FileText, BarChart3, MessageSquare, Settings, BookOpen, Video, Download } from 'lucide-react';
+import Layout from '../components/Layout';
 
-const quickLinks = [;
-  { title: "Getting Started", href: "/docs/getting-started", icon: BookOpen },"
-  { title: "Video Tutorials", href: "/tutorials", icon: Video },"
-  { title: "Download SDKs", href: "/downloads", icon: Download },"
-  { title: "Support Center", href: "/support", icon: MessageSquare }"
-;];
+const resources = [
+  {
+    title: "Documentation",
+    description: "Comprehensive guides and technical documentation",
+    icon: FileText,
+    href: "/docs",
+    color: "from-blue-500 to-blue-600",
+    items: ["API Documentation", "Integration Guides", "Best Practices", "Troubleshooting"]
+  },
+  {
+    title: "Case Studies",
+    description: "Real-world success stories and implementations",
+    icon: BarChart3,
+    href: "/case-studies",
+    color: "from-green-500 to-green-600",
+    items: ["Client Success Stories", "Implementation Examples", "ROI Analysis", "Lessons Learned"]
+  },
+  {
+    title: "Blog",
+    description: "Latest insights, trends, and technical articles",
+    icon: MessageSquare,
+    href: "/blog",
+    color: "from-purple-500 to-purple-600",
+    items: ["Technology Trends", "Industry Insights", "Technical Tutorials", "Company News"]
+  },
+  {
+    title: "API Reference",
+    description: "Complete API documentation and examples",
+    icon: Settings,
+    href: "/api-docs",
+    color: "from-orange-500 to-orange-600",
+    items: ["REST API", "GraphQL", "SDKs", "Code Examples"]
+  }
+];
+
+const quickLinks = [
+  { title: "Getting Started", href: "/docs/getting-started", icon: BookOpen },
+  { title: "Video Tutorials", href: "/tutorials", icon: Video },
+  { title: "Download SDKs", href: "/downloads", icon: Download },
+  { title: "Support Center", href: "/support", icon: MessageSquare }
+];
 
 export default function ResourcesPage() {
-  return (;
-    <Layout);
-      title="Resources - Zion Tech Group"";
-      description="Comprehensive resources including documentation, case studies, blog posts, and API references for developers and businesses.""
-      keywords="documentation, case studies, blog, API reference, resources, tutorials, guides""
-    >;
+  return (
+    <Layout
+      title="Resources - Zion Tech Group"
+      description="Comprehensive resources including documentation, case studies, blog posts, and API references for developers and businesses."
+      keywords="documentation, case studies, blog, API reference, resources, tutorials, guides"
+    >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">"
