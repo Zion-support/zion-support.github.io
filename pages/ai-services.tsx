@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
 import { 
   Brain, 
   Eye, 
@@ -150,6 +150,330 @@ const aiServices = [
     marketPrice: '$3,500-7,500/month',
     setupTime: '2-3 weeks',
     targetUsers: 'Customer Service, Content, Legal, Healthcare'
+  },
+  {
+    id: 4,
+    title: 'Quantum AI Solutions',
+    description: 'Next-generation AI powered by quantum computing for complex optimization, cryptography, and advanced simulations.',
+    icon: Cpu,
+    category: 'Quantum AI',
+    price: 'Starting at $15,000/month',
+    features: [
+      'Quantum machine learning algorithms',
+      'Quantum optimization for logistics',
+      'Quantum cryptography & security',
+      'Quantum simulation & modeling',
+      'Quantum neural networks',
+      'Quantum annealing solutions',
+      'Hybrid classical-quantum systems',
+      'Quantum error correction'
+    ],
+    benefits: [
+      'Solve exponentially complex problems',
+      'Achieve quantum advantage in optimization',
+      'Enable unbreakable encryption',
+      'Accelerate drug discovery by 1000x'
+    ],
+    marketPrice: '$25,000-100,000/month',
+    setupTime: '8-12 weeks',
+    targetUsers: 'Pharmaceuticals, Finance, Defense, Research'
+  },
+  {
+    id: 5,
+    title: 'Autonomous Systems',
+    description: 'Self-driving vehicles, drones, and robotic systems with advanced AI for navigation and decision-making.',
+    icon: Car,
+    category: 'Autonomous Systems',
+    price: 'Starting at $8,500/month',
+    features: [
+      'Autonomous vehicle AI systems',
+      'Drone navigation & control',
+      'Robotic process automation',
+      'Predictive maintenance AI',
+      'Real-time decision making',
+      'Sensor fusion & processing',
+      'Path planning & optimization',
+      'Safety & compliance monitoring'
+    ],
+    benefits: [
+      'Reduce operational costs by 60%',
+      'Improve safety by 95%',
+      'Enable 24/7 autonomous operations',
+      'Increase efficiency by 300%'
+    ],
+    marketPrice: '$12,000-50,000/month',
+    setupTime: '6-10 weeks',
+    targetUsers: 'Logistics, Agriculture, Mining, Transportation'
+  },
+  {
+    id: 6,
+    title: 'Advanced Analytics & BI',
+    description: 'Intelligent data analytics, business intelligence, and predictive insights for data-driven decision making.',
+    icon: BarChart3,
+    category: 'Analytics',
+    price: 'Starting at $2,500/month',
+    features: [
+      'Predictive analytics & forecasting',
+      'Real-time data visualization',
+      'Automated report generation',
+      'Anomaly detection & alerting',
+      'Customer behavior analysis',
+      'Market trend prediction',
+      'ROI optimization insights',
+      'Custom dashboard creation'
+    ],
+    benefits: [
+      'Increase revenue by 25-40%',
+      'Reduce decision time by 80%',
+      'Improve forecast accuracy by 90%',
+      'Enable proactive business strategies'
+    ],
+    marketPrice: '$4,000-15,000/month',
+    setupTime: '3-5 weeks',
+    targetUsers: 'Retail, Finance, Marketing, Operations'
+  },
+  {
+    id: 7,
+    title: 'AI-Powered Cybersecurity',
+    description: 'Advanced threat detection, automated response, and intelligent security monitoring using AI algorithms.',
+    icon: Shield,
+    category: 'Cybersecurity',
+    price: 'Starting at $3,200/month',
+    features: [
+      'AI threat detection & prevention',
+      'Behavioral analysis & monitoring',
+      'Automated incident response',
+      'Malware & virus detection',
+      'Network anomaly detection',
+      'Phishing & fraud prevention',
+      'Security orchestration',
+      'Compliance monitoring'
+    ],
+    benefits: [
+      'Detect threats 10x faster',
+      'Reduce false positives by 85%',
+      'Prevent 99.9% of cyber attacks',
+      'Save $2M+ annually in breach costs'
+    ],
+    marketPrice: '$5,000-20,000/month',
+    setupTime: '4-6 weeks',
+    targetUsers: 'Finance, Healthcare, Government, Enterprise'
+  },
+  {
+    id: 8,
+    title: 'Conversational AI & Chatbots',
+    description: 'Intelligent virtual assistants, chatbots, and voice interfaces for customer service and automation.',
+    icon: Bot,
+    category: 'Conversational AI',
+    price: 'Starting at $1,800/month',
+    features: [
+      'Multi-channel chatbot deployment',
+      'Voice & speech recognition',
+      'Natural language understanding',
+      'Context-aware conversations',
+      'Multi-language support',
+      'Integration with CRM systems',
+      'Sentiment analysis & response',
+      'Human handoff capabilities'
+    ],
+    benefits: [
+      'Reduce support costs by 70%',
+      'Improve response time by 95%',
+      'Increase customer satisfaction by 40%',
+      'Handle 1000+ conversations simultaneously'
+    ],
+    marketPrice: '$3,000-8,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'E-commerce, Healthcare, Banking, Support'
+  },
+  {
+    id: 9,
+    title: 'AI Content Generation',
+    description: 'Automated content creation, copywriting, and creative AI for marketing, documentation, and media production.',
+    icon: FileText,
+    category: 'Content AI',
+    price: 'Starting at $1,500/month',
+    features: [
+      'Automated article & blog writing',
+      'Marketing copy generation',
+      'Social media content creation',
+      'Video script writing',
+      'Product description generation',
+      'Email campaign automation',
+      'SEO-optimized content',
+      'Multi-format content output'
+    ],
+    benefits: [
+      'Reduce content creation time by 90%',
+      'Increase content output by 500%',
+      'Improve SEO rankings by 60%',
+      'Save $50,000+ annually on content'
+    ],
+    marketPrice: '$2,500-6,000/month',
+    setupTime: '1-2 weeks',
+    targetUsers: 'Marketing, E-commerce, Media, Publishing'
+  },
+  {
+    id: 10,
+    title: 'AI-Powered Recommendation Engines',
+    description: 'Personalized recommendation systems for e-commerce, streaming, and content platforms using advanced ML algorithms.',
+    icon: Target,
+    category: 'Recommendation Systems',
+    price: 'Starting at $2,200/month',
+    features: [
+      'Personalized product recommendations',
+      'Content recommendation algorithms',
+      'Cross-selling & upselling AI',
+      'Real-time recommendation updates',
+      'A/B testing for recommendations',
+      'User behavior analysis',
+      'Collaborative filtering',
+      'Deep learning recommendations'
+    ],
+    benefits: [
+      'Increase sales by 30-50%',
+      'Improve click-through rates by 200%',
+      'Boost customer engagement by 80%',
+      'Reduce cart abandonment by 25%'
+    ],
+    marketPrice: '$3,500-10,000/month',
+    setupTime: '3-5 weeks',
+    targetUsers: 'E-commerce, Streaming, Media, Retail'
+  },
+  {
+    id: 11,
+    title: 'AI Process Automation',
+    description: 'Intelligent process automation using AI to streamline workflows, reduce manual tasks, and improve efficiency.',
+    icon: Zap,
+    category: 'Process Automation',
+    price: 'Starting at $2,000/month',
+    features: [
+      'Workflow automation & optimization',
+      'Document processing & extraction',
+      'Email & communication automation',
+      'Data entry & validation automation',
+      'Invoice & payment processing',
+      'Customer onboarding automation',
+      'Compliance & audit automation',
+      'Exception handling & escalation'
+    ],
+    benefits: [
+      'Reduce manual work by 80%',
+      'Improve process accuracy by 95%',
+      'Cut processing time by 70%',
+      'Save 20+ hours per week'
+    ],
+    marketPrice: '$3,000-8,000/month',
+    setupTime: '2-4 weeks',
+    targetUsers: 'Finance, HR, Operations, Legal'
+  },
+  {
+    id: 12,
+    title: 'AI-Powered Image & Video Processing',
+    description: 'Advanced image and video editing, enhancement, and manipulation using AI for creative and commercial applications.',
+    icon: Image,
+    category: 'Media AI',
+    price: 'Starting at $2,500/month',
+    features: [
+      'AI image enhancement & upscaling',
+      'Background removal & replacement',
+      'Video editing & post-production',
+      'Color correction & grading',
+      'Object removal & inpainting',
+      'Style transfer & filters',
+      'Video stabilization & enhancement',
+      'Batch processing capabilities'
+    ],
+    benefits: [
+      'Reduce editing time by 90%',
+      'Improve image quality by 300%',
+      'Enable bulk processing of media',
+      'Save $30,000+ on editing costs'
+    ],
+    marketPrice: '$4,000-12,000/month',
+    setupTime: '2-3 weeks',
+    targetUsers: 'Media, Marketing, Real Estate, E-commerce'
+  },
+  {
+    id: 13,
+    title: 'AI Voice & Speech Technology',
+    description: 'Advanced voice recognition, synthesis, and processing for applications in customer service, accessibility, and automation.',
+    icon: Mic,
+    category: 'Voice AI',
+    price: 'Starting at $1,800/month',
+    features: [
+      'Speech-to-text conversion',
+      'Text-to-speech synthesis',
+      'Voice cloning & customization',
+      'Multi-language voice support',
+      'Real-time voice translation',
+      'Voice biometrics & authentication',
+      'Voice command processing',
+      'Audio noise reduction'
+    ],
+    benefits: [
+      'Improve accessibility by 100%',
+      'Reduce call center costs by 60%',
+      'Enable hands-free operations',
+      'Support 50+ languages'
+    ],
+    marketPrice: '$3,000-7,000/month',
+    setupTime: '2-3 weeks',
+    targetUsers: 'Healthcare, Education, Customer Service, Accessibility'
+  },
+  {
+    id: 14,
+    title: 'AI-Powered Search & Discovery',
+    description: 'Intelligent search engines, semantic search, and content discovery systems using advanced AI algorithms.',
+    icon: Search,
+    category: 'Search AI',
+    price: 'Starting at $2,000/month',
+    features: [
+      'Semantic search capabilities',
+      'Natural language queries',
+      'Intelligent content ranking',
+      'Auto-complete & suggestions',
+      'Visual search functionality',
+      'Multi-modal search (text, image, voice)',
+      'Personalized search results',
+      'Search analytics & optimization'
+    ],
+    benefits: [
+      'Improve search accuracy by 85%',
+      'Increase user engagement by 60%',
+      'Reduce search time by 70%',
+      'Boost conversion rates by 40%'
+    ],
+    marketPrice: '$3,500-9,000/month',
+    setupTime: '3-4 weeks',
+    targetUsers: 'E-commerce, Knowledge Management, Research, Media'
+  },
+  {
+    id: 15,
+    title: 'AI Financial Analysis & Trading',
+    description: 'Intelligent financial modeling, algorithmic trading, risk assessment, and market analysis using AI.',
+    icon: TrendingUp,
+    category: 'Financial AI',
+    price: 'Starting at $5,000/month',
+    features: [
+      'Algorithmic trading strategies',
+      'Risk assessment & management',
+      'Market prediction & analysis',
+      'Fraud detection & prevention',
+      'Credit scoring & assessment',
+      'Portfolio optimization',
+      'Real-time market monitoring',
+      'Regulatory compliance automation'
+    ],
+    benefits: [
+      'Increase trading profits by 25-40%',
+      'Reduce risk exposure by 60%',
+      'Improve fraud detection by 95%',
+      'Save $100,000+ in manual analysis'
+    ],
+    marketPrice: '$8,000-25,000/month',
+    setupTime: '6-8 weeks',
+    targetUsers: 'Banking, Investment, Insurance, Fintech'
   }
 ];
 
@@ -157,7 +481,19 @@ const categories = [
   { name: "All", count: aiServices.length },
   { name: "Machine Learning", count: aiServices.filter(s => s.category === "Machine Learning").length },
   { name: "Computer Vision", count: aiServices.filter(s => s.category === "Computer Vision").length },
-  { name: "NLP", count: aiServices.filter(s => s.category === "NLP").length }
+  { name: "NLP", count: aiServices.filter(s => s.category === "NLP").length },
+  { name: "Quantum AI", count: aiServices.filter(s => s.category === "Quantum AI").length },
+  { name: "Autonomous Systems", count: aiServices.filter(s => s.category === "Autonomous Systems").length },
+  { name: "Analytics", count: aiServices.filter(s => s.category === "Analytics").length },
+  { name: "Cybersecurity", count: aiServices.filter(s => s.category === "Cybersecurity").length },
+  { name: "Conversational AI", count: aiServices.filter(s => s.category === "Conversational AI").length },
+  { name: "Content AI", count: aiServices.filter(s => s.category === "Content AI").length },
+  { name: "Recommendation Systems", count: aiServices.filter(s => s.category === "Recommendation Systems").length },
+  { name: "Process Automation", count: aiServices.filter(s => s.category === "Process Automation").length },
+  { name: "Media AI", count: aiServices.filter(s => s.category === "Media AI").length },
+  { name: "Voice AI", count: aiServices.filter(s => s.category === "Voice AI").length },
+  { name: "Search AI", count: aiServices.filter(s => s.category === "Search AI").length },
+  { name: "Financial AI", count: aiServices.filter(s => s.category === "Financial AI").length }
 ];
 
 export default function AIServicesPage() {

@@ -17,7 +17,7 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
 
 const services = [
   {
@@ -103,6 +103,286 @@ const services = [
       "24/7 System Support"
     ],
     price: "Starting at $800/month"
+  },
+  {
+    title: "Quantum Computing Services",
+    description: "Next-generation quantum computing solutions for complex problem solving and optimization",
+    icon: Cpu,
+    features: [
+      "Quantum algorithm development",
+      "Quantum optimization problems",
+      "Quantum cryptography implementation",
+      "Quantum simulation services",
+      "Hybrid classical-quantum systems",
+      "Quantum error correction"
+    ],
+    price: "Starting at $25,000/month"
+  },
+  {
+    title: "Edge Computing Solutions",
+    description: "Distributed computing infrastructure for real-time processing and low-latency applications",
+    icon: Globe,
+    features: [
+      "Edge server deployment",
+      "IoT data processing",
+      "Real-time analytics",
+      "Content delivery networks",
+      "Edge security & monitoring",
+      "5G network integration"
+    ],
+    price: "Starting at $3,500/month"
+  },
+  {
+    title: "Zero-Trust Architecture",
+    description: "Advanced security model that assumes no implicit trust and verifies every access request",
+    icon: Lock,
+    features: [
+      "Identity verification systems",
+      "Micro-segmentation",
+      "Continuous monitoring",
+      "Least privilege access",
+      "Multi-factor authentication",
+      "Behavioral analytics"
+    ],
+    price: "Starting at $4,200/month"
+  },
+  {
+    title: "Blockchain & DLT Services",
+    description: "Distributed ledger technology solutions for secure, transparent, and immutable data management",
+    icon: Network,
+    features: [
+      "Blockchain development",
+      "Smart contract creation",
+      "DeFi platform development",
+      "NFT marketplace solutions",
+      "Cryptocurrency integration",
+      "Consensus mechanism implementation"
+    ],
+    price: "Starting at $5,000/month"
+  },
+  {
+    title: "IoT Infrastructure Management",
+    description: "Comprehensive Internet of Things solutions for connected devices and data collection",
+    icon: Wifi,
+    features: [
+      "IoT device management",
+      "Sensor data collection",
+      "Real-time monitoring",
+      "Device security & encryption",
+      "Data analytics & insights",
+      "Remote device control"
+    ],
+    price: "Starting at $2,800/month"
+  },
+  {
+    title: "AI Infrastructure & MLOps",
+    description: "Machine learning infrastructure and operations for AI model deployment and management",
+    icon: Brain,
+    features: [
+      "ML pipeline automation",
+      "Model versioning & deployment",
+      "A/B testing frameworks",
+      "Model monitoring & drift detection",
+      "GPU cluster management",
+      "MLOps best practices"
+    ],
+    price: "Starting at $4,500/month"
+  },
+  {
+    title: "Data Center Services",
+    description: "Physical and virtual data center management with high availability and redundancy",
+    icon: Server,
+    features: [
+      "Data center design & setup",
+      "Power & cooling management",
+      "Redundancy & failover",
+      "Physical security measures",
+      "Environmental monitoring",
+      "Disaster recovery planning"
+    ],
+    price: "Starting at $6,000/month"
+  },
+  {
+    title: "Hybrid Cloud Solutions",
+    description: "Seamless integration between on-premises and cloud environments for optimal flexibility",
+    icon: Cloud,
+    features: [
+      "Hybrid cloud architecture",
+      "Data synchronization",
+      "Workload portability",
+      "Unified management console",
+      "Cost optimization",
+      "Security compliance"
+    ],
+    price: "Starting at $3,200/month"
+  },
+  {
+    title: "IT Compliance & Governance",
+    description: "Comprehensive compliance management for regulatory requirements and industry standards",
+    icon: Shield,
+    features: [
+      "HIPAA compliance",
+      "GDPR implementation",
+      "SOX compliance",
+      "PCI DSS certification",
+      "Audit preparation",
+      "Policy development"
+    ],
+    price: "Starting at $2,500/month"
+  },
+  {
+    title: "Disaster Recovery & Business Continuity",
+    description: "Comprehensive backup and recovery solutions to ensure business continuity during disruptions",
+    icon: HardDrive,
+    features: [
+      "Automated backup systems",
+      "Recovery time optimization",
+      "Business continuity planning",
+      "Ransomware protection",
+      "Data replication",
+      "Testing & validation"
+    ],
+    price: "Starting at $1,800/month"
+  },
+  {
+    title: "IT Asset Management",
+    description: "Complete lifecycle management of IT assets from procurement to disposal",
+    icon: Package,
+    features: [
+      "Asset inventory tracking",
+      "License management",
+      "Depreciation calculations",
+      "Procurement optimization",
+      "Asset disposal planning",
+      "Cost analysis & reporting"
+    ],
+    price: "Starting at $1,200/month"
+  },
+  {
+    title: "Remote Work Solutions",
+    description: "Secure and efficient remote work infrastructure and collaboration tools",
+    icon: Laptop,
+    features: [
+      "VPN & remote access",
+      "Virtual desktop infrastructure",
+      "Collaboration platforms",
+      "Mobile device management",
+      "Remote monitoring",
+      "Security policies"
+    ],
+    price: "Starting at $1,500/month"
+  },
+  {
+    title: "IT Consulting & Strategy",
+    description: "Strategic IT planning and consulting to align technology with business objectives",
+    icon: Settings,
+    features: [
+      "Technology roadmapping",
+      "Digital transformation",
+      "IT budget planning",
+      "Vendor evaluation",
+      "Technology assessment",
+      "Change management"
+    ],
+    price: "Starting at $200/hour"
+  },
+  {
+    title: "Performance Monitoring & Optimization",
+    description: "Continuous monitoring and optimization of IT systems for peak performance",
+    icon: Monitor,
+    features: [
+      "Real-time monitoring",
+      "Performance analytics",
+      "Capacity planning",
+      "Bottleneck identification",
+      "Automated optimization",
+      "Alert management"
+    ],
+    price: "Starting at $1,400/month"
+  },
+  {
+    title: "IT Training & Support",
+    description: "Comprehensive training programs and ongoing support for IT teams and end users",
+    icon: Users,
+    features: [
+      "Technical training programs",
+      "Certification preparation",
+      "End-user support",
+      "Documentation creation",
+      "Knowledge base management",
+      "Help desk services"
+    ],
+    price: "Starting at $100/hour"
+  },
+  {
+    title: "Green IT & Sustainability",
+    description: "Environmentally conscious IT solutions to reduce carbon footprint and energy consumption",
+    icon: TreePine,
+    features: [
+      "Energy-efficient hardware",
+      "Carbon footprint tracking",
+      "Green data centers",
+      "E-waste management",
+      "Renewable energy integration",
+      "Sustainability reporting"
+    ],
+    price: "Starting at $2,000/month"
+  },
+  {
+    title: "IT Security Operations Center (SOC)",
+    description: "24/7 security monitoring and incident response to protect against cyber threats",
+    icon: Shield,
+    features: [
+      "24/7 threat monitoring",
+      "Incident response",
+      "Threat intelligence",
+      "Security analytics",
+      "Vulnerability management",
+      "Compliance reporting"
+    ],
+    price: "Starting at $8,000/month"
+  },
+  {
+    title: "API Management & Integration",
+    description: "Comprehensive API lifecycle management and system integration services",
+    icon: Code,
+    features: [
+      "API gateway setup",
+      "API security & authentication",
+      "Rate limiting & throttling",
+      "API documentation",
+      "Third-party integrations",
+      "API analytics & monitoring"
+    ],
+    price: "Starting at $2,200/month"
+  },
+  {
+    title: "IT Procurement & Vendor Management",
+    description: "Strategic procurement of IT hardware, software, and services with vendor relationship management",
+    icon: ShoppingCart,
+    features: [
+      "Vendor evaluation & selection",
+      "Contract negotiation",
+      "License optimization",
+      "Cost analysis",
+      "Vendor performance monitoring",
+      "Procurement automation"
+    ],
+    price: "Starting at $1,000/month"
+  },
+  {
+    title: "IT Risk Management",
+    description: "Comprehensive risk assessment and mitigation strategies for IT infrastructure and operations",
+    icon: Shield,
+    features: [
+      "Risk assessment & analysis",
+      "Threat modeling",
+      "Vulnerability scanning",
+      "Risk mitigation planning",
+      "Insurance coordination",
+      "Risk reporting & monitoring"
+    ],
+    price: "Starting at $2,800/month"
   }
 ];
 

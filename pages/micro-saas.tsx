@@ -17,7 +17,7 @@ import {
   Shield,
   Globe
 } from 'lucide-react';
-import Layout from '../../components/Layout';
+import Layout from '../components/Layout';
 
 const microSaasSolutions = [
   {
@@ -103,6 +103,594 @@ const microSaasSolutions = [
       "Real-time Insights"
     ],
     price: "Starting at $2,500/month"
+  },
+  {
+    title: "Social Media Management",
+    description: "Comprehensive social media scheduling, analytics, and automation platform",
+    icon: Globe,
+    features: [
+      "Multi-platform posting",
+      "Content calendar",
+      "Analytics & insights",
+      "Team collaboration",
+      "Auto-scheduling",
+      "Engagement tracking"
+    ],
+    price: "Starting at $29/month"
+  },
+  {
+    title: "Email Marketing Automation",
+    description: "Advanced email marketing platform with automation and personalization",
+    icon: Mail,
+    features: [
+      "Drag-and-drop editor",
+      "Email automation",
+      "A/B testing",
+      "List segmentation",
+      "Analytics & reporting",
+      "Template library"
+    ],
+    price: "Starting at $19/month"
+  },
+  {
+    title: "Project Management Tool",
+    description: "Collaborative project management with task tracking and team communication",
+    icon: ClipboardList,
+    features: [
+      "Task management",
+      "Team collaboration",
+      "Time tracking",
+      "File sharing",
+      "Progress reporting",
+      "Mobile app"
+    ],
+    price: "Starting at $9/month"
+  },
+  {
+    title: "Customer Support Ticketing",
+    description: "Help desk and customer support management system",
+    icon: Users,
+    features: [
+      "Ticket management",
+      "Knowledge base",
+      "Live chat integration",
+      "SLA tracking",
+      "Customer portal",
+      "Reporting & analytics"
+    ],
+    price: "Starting at $15/month"
+  },
+  {
+    title: "Invoice & Billing System",
+    description: "Complete invoicing and payment processing solution for small businesses",
+    icon: DollarSign,
+    features: [
+      "Invoice creation",
+      "Payment processing",
+      "Recurring billing",
+      "Expense tracking",
+      "Tax calculations",
+      "Financial reporting"
+    ],
+    price: "Starting at $12/month"
+  },
+  {
+    title: "Inventory Management",
+    description: "Real-time inventory tracking and management system",
+    icon: Package,
+    features: [
+      "Stock tracking",
+      "Low stock alerts",
+      "Barcode scanning",
+      "Multi-location support",
+      "Purchase orders",
+      "Analytics dashboard"
+    ],
+    price: "Starting at $25/month"
+  },
+  {
+    title: "CRM & Lead Management",
+    description: "Customer relationship management and lead tracking system",
+    icon: Target,
+    features: [
+      "Contact management",
+      "Lead scoring",
+      "Sales pipeline",
+      "Email integration",
+      "Task automation",
+      "Performance metrics"
+    ],
+    price: "Starting at $20/month"
+  },
+  {
+    title: "Time Tracking & Timesheets",
+    description: "Employee time tracking and timesheet management solution",
+    icon: Clock,
+    features: [
+      "Time tracking",
+      "Timesheet approval",
+      "Project billing",
+      "Overtime calculation",
+      "Mobile time tracking",
+      "Payroll integration"
+    ],
+    price: "Starting at $8/month"
+  },
+  {
+    title: "Document Management System",
+    description: "Secure document storage, sharing, and collaboration platform",
+    icon: FileText,
+    features: [
+      "Document storage",
+      "Version control",
+      "Collaborative editing",
+      "Access permissions",
+      "Search functionality",
+      "Audit trails"
+    ],
+    price: "Starting at $10/month"
+  },
+  {
+    title: "Survey & Form Builder",
+    description: "Create and manage surveys, forms, and feedback collection",
+    icon: PieChart,
+    features: [
+      "Form builder",
+      "Survey templates",
+      "Response analytics",
+      "Conditional logic",
+      "Multi-language support",
+      "Data export"
+    ],
+    price: "Starting at $15/month"
+  },
+  {
+    title: "Appointment Scheduling",
+    description: "Online booking and appointment management system",
+    icon: Calendar,
+    features: [
+      "Online booking",
+      "Calendar sync",
+      "Email reminders",
+      "Payment processing",
+      "Staff management",
+      "Client portal"
+    ],
+    price: "Starting at $14/month"
+  },
+  {
+    title: "Password Manager",
+    description: "Secure password storage and management for teams",
+    icon: Lock,
+    features: [
+      "Password storage",
+      "Team sharing",
+      "Password generator",
+      "Security audit",
+      "Two-factor authentication",
+      "Breach monitoring"
+    ],
+    price: "Starting at $3/month"
+  },
+  {
+    title: "Website Analytics",
+    description: "Advanced website traffic analysis and visitor insights",
+    icon: BarChart3,
+    features: [
+      "Traffic analysis",
+      "Visitor behavior",
+      "Conversion tracking",
+      "Real-time data",
+      "Custom reports",
+      "Goal tracking"
+    ],
+    price: "Starting at $19/month"
+  },
+  {
+    title: "Team Communication",
+    description: "Internal team messaging and collaboration platform",
+    icon: MessageSquare,
+    features: [
+      "Instant messaging",
+      "File sharing",
+      "Video calls",
+      "Screen sharing",
+      "Message history",
+      "Mobile app"
+    ],
+    price: "Starting at $6/month"
+  },
+  {
+    title: "Expense Management",
+    description: "Employee expense tracking and reimbursement system",
+    icon: Receipt,
+    features: [
+      "Receipt scanning",
+      "Expense categorization",
+      "Approval workflows",
+      "Policy compliance",
+      "Reimbursement tracking",
+      "Tax reporting"
+    ],
+    price: "Starting at $8/month"
+  },
+  {
+    title: "HR Management System",
+    description: "Human resources management and employee onboarding platform",
+    icon: Users,
+    features: [
+      "Employee database",
+      "Onboarding workflows",
+      "Performance reviews",
+      "Leave management",
+      "Document storage",
+      "Compliance tracking"
+    ],
+    price: "Starting at $5/month"
+  },
+  {
+    title: "Content Management System",
+    description: "Website content management and publishing platform",
+    icon: FileText,
+    features: [
+      "Content editor",
+      "Media library",
+      "SEO optimization",
+      "Multi-user access",
+      "Version control",
+      "Publishing workflows"
+    ],
+    price: "Starting at $29/month"
+  },
+  {
+    title: "E-commerce Platform",
+    description: "Complete online store creation and management solution",
+    icon: ShoppingCart,
+    features: [
+      "Product catalog",
+      "Shopping cart",
+      "Payment processing",
+      "Order management",
+      "Inventory tracking",
+      "Analytics dashboard"
+    ],
+    price: "Starting at $29/month"
+  },
+  {
+    title: "Learning Management System",
+    description: "Online course creation and learning management platform",
+    icon: GraduationCap,
+    features: [
+      "Course creation",
+      "Student enrollment",
+      "Progress tracking",
+      "Certificates",
+      "Video hosting",
+      "Assessment tools"
+    ],
+    price: "Starting at $39/month"
+  },
+  {
+    title: "Event Management",
+    description: "Event planning, ticketing, and management platform",
+    icon: Calendar,
+    features: [
+      "Event creation",
+      "Ticket sales",
+      "Attendee management",
+      "Check-in system",
+      "Event analytics",
+      "Mobile app"
+    ],
+    price: "Starting at $19/month"
+  },
+  {
+    title: "Property Management",
+    description: "Real estate and property management software",
+    icon: Home,
+    features: [
+      "Property listings",
+      "Tenant management",
+      "Rent collection",
+      "Maintenance tracking",
+      "Financial reporting",
+      "Document storage"
+    ],
+    price: "Starting at $25/month"
+  },
+  {
+    title: "Restaurant POS System",
+    description: "Point of sale and restaurant management system",
+    icon: ShoppingCart,
+    features: [
+      "Order management",
+      "Menu management",
+      "Payment processing",
+      "Kitchen display",
+      "Inventory tracking",
+      "Sales reporting"
+    ],
+    price: "Starting at $69/month"
+  },
+  {
+    title: "Fitness Management",
+    description: "Gym and fitness center management platform",
+    icon: Heart,
+    features: [
+      "Member management",
+      "Class scheduling",
+      "Payment processing",
+      "Check-in system",
+      "Personal training",
+      "Mobile app"
+    ],
+    price: "Starting at $39/month"
+  },
+  {
+    title: "Legal Practice Management",
+    description: "Law firm management and case tracking system",
+    icon: Scale,
+    features: [
+      "Case management",
+      "Client database",
+      "Time tracking",
+      "Billing & invoicing",
+      "Document management",
+      "Court calendar"
+    ],
+    price: "Starting at $49/month"
+  },
+  {
+    title: "Medical Practice Management",
+    description: "Healthcare practice management and patient scheduling",
+    icon: Heart,
+    features: [
+      "Patient scheduling",
+      "Electronic health records",
+      "Billing & insurance",
+      "Appointment reminders",
+      "Prescription management",
+      "HIPAA compliance"
+    ],
+    price: "Starting at $99/month"
+  },
+  {
+    title: "Accounting Software",
+    description: "Small business accounting and bookkeeping solution",
+    icon: Calculator,
+    features: [
+      "Bookkeeping",
+      "Invoicing",
+      "Expense tracking",
+      "Tax preparation",
+      "Financial reporting",
+      "Bank reconciliation"
+    ],
+    price: "Starting at $15/month"
+  },
+  {
+    title: "Marketing Automation",
+    description: "Comprehensive marketing automation and lead nurturing platform",
+    icon: Target,
+    features: [
+      "Lead scoring",
+      "Email campaigns",
+      "Social media automation",
+      "Landing pages",
+      "A/B testing",
+      "Analytics & reporting"
+    ],
+    price: "Starting at $29/month"
+  },
+  {
+    title: "Customer Feedback System",
+    description: "Collect and analyze customer feedback and reviews",
+    icon: Star,
+    features: [
+      "Feedback collection",
+      "Review management",
+      "Sentiment analysis",
+      "Response automation",
+      "Analytics dashboard",
+      "Integration APIs"
+    ],
+    price: "Starting at $19/month"
+  },
+  {
+    title: "API Management Platform",
+    description: "API gateway and management solution for developers",
+    icon: Code,
+    features: [
+      "API gateway",
+      "Rate limiting",
+      "Authentication",
+      "Documentation",
+      "Analytics",
+      "Developer portal"
+    ],
+    price: "Starting at $99/month"
+  },
+  {
+    title: "Database as a Service",
+    description: "Managed database hosting and administration service",
+    icon: Database,
+    features: [
+      "Database hosting",
+      "Automated backups",
+      "Performance monitoring",
+      "Scaling",
+      "Security management",
+      "24/7 support"
+    ],
+    price: "Starting at $25/month"
+  },
+  {
+    title: "File Storage & Sharing",
+    description: "Secure cloud file storage and sharing platform",
+    icon: Cloud,
+    features: [
+      "File storage",
+      "Sharing & collaboration",
+      "Version control",
+      "Access permissions",
+      "Sync across devices",
+      "Mobile app"
+    ],
+    price: "Starting at $5/month"
+  },
+  {
+    title: "Video Conferencing",
+    description: "Professional video conferencing and webinar platform",
+    icon: Video,
+    features: [
+      "HD video calls",
+      "Screen sharing",
+      "Recording",
+      "Webinar hosting",
+      "Breakout rooms",
+      "Mobile app"
+    ],
+    price: "Starting at $14/month"
+  },
+  {
+    title: "Task Automation",
+    description: "Workflow automation and task management platform",
+    icon: Zap,
+    features: [
+      "Workflow builder",
+      "Task automation",
+      "Integration APIs",
+      "Conditional logic",
+      "Scheduling",
+      "Analytics"
+    ],
+    price: "Starting at $20/month"
+  },
+  {
+    title: "Code Repository",
+    description: "Git-based code repository and collaboration platform",
+    icon: Code,
+    features: [
+      "Git hosting",
+      "Code review",
+      "Issue tracking",
+      "CI/CD integration",
+      "Team collaboration",
+      "Security scanning"
+    ],
+    price: "Starting at $4/month"
+  },
+  {
+    title: "Monitoring & Alerts",
+    description: "Website and application monitoring with alerting system",
+    icon: Monitor,
+    features: [
+      "Uptime monitoring",
+      "Performance tracking",
+      "Alert notifications",
+      "Status pages",
+      "API monitoring",
+      "Mobile alerts"
+    ],
+    price: "Starting at $9/month"
+  },
+  {
+    title: "Backup & Recovery",
+    description: "Automated backup and disaster recovery solution",
+    icon: HardDrive,
+    features: [
+      "Automated backups",
+      "Disaster recovery",
+      "Version control",
+      "Cross-platform sync",
+      "Encryption",
+      "Restore testing"
+    ],
+    price: "Starting at $6/month"
+  },
+  {
+    title: "Security Scanning",
+    description: "Website and application security vulnerability scanning",
+    icon: Shield,
+    features: [
+      "Vulnerability scanning",
+      "Security reports",
+      "Compliance checking",
+      "Penetration testing",
+      "Threat monitoring",
+      "Remediation guidance"
+    ],
+    price: "Starting at $49/month"
+  },
+  {
+    title: "Load Testing",
+    description: "Performance and load testing for web applications",
+    icon: Zap,
+    features: [
+      "Load testing",
+      "Performance analysis",
+      "Stress testing",
+      "Real-time monitoring",
+      "Detailed reports",
+      "API testing"
+    ],
+    price: "Starting at $29/month"
+  },
+  {
+    title: "A/B Testing Platform",
+    description: "Website and application A/B testing and optimization",
+    icon: Target,
+    features: [
+      "A/B test creation",
+      "Statistical analysis",
+      "Conversion tracking",
+      "Multivariate testing",
+      "Real-time results",
+      "Integration APIs"
+    ],
+    price: "Starting at $39/month"
+  },
+  {
+    title: "Error Tracking",
+    description: "Application error monitoring and debugging platform",
+    icon: AlertTriangle,
+    features: [
+      "Error tracking",
+      "Stack traces",
+      "User context",
+      "Release tracking",
+      "Performance monitoring",
+      "Team notifications"
+    ],
+    price: "Starting at $7/month"
+  },
+  {
+    title: "Log Management",
+    description: "Centralized log collection, analysis, and monitoring",
+    icon: FileText,
+    features: [
+      "Log collection",
+      "Search & analysis",
+      "Real-time monitoring",
+      "Alerting",
+      "Dashboards",
+      "Retention policies"
+    ],
+    price: "Starting at $15/month"
+  },
+  {
+    title: "Performance Analytics",
+    description: "Application performance monitoring and optimization",
+    icon: BarChart3,
+    features: [
+      "Performance monitoring",
+      "User experience tracking",
+      "Database monitoring",
+      "Error tracking",
+      "Custom dashboards",
+      "Alerting"
+    ],
+    price: "Starting at $19/month"
   }
 ];
 
