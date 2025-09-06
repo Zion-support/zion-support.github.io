@@ -1,29 +1,26 @@
-import React, { useState } from "react",
-import Image from "next/image",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { useToast } from "@/hooks/use-toast",
-import axios from "axios",
+import React, { useState } from "react";
+import Image from "next/image";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import axios from "axios";
 import { Loader2 } from 'lucide-react'
-import { useTranslation } from "react-i18next",
-import {logErrorToProduction} from '@/utils/productionLogger',
-export function ITServiceRequestHero() {
-
-  const [name, setName] = useState(""),
-  const [email, setEmail] = useState(""),
-  const [phone, setPhone] = useState(""),
-  const [company, setCompany] = useState(""),
-  const [location, setLocation] = useState(""),
-  const [details, setDetails] = useState(""),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const { toast } = useToast(),
-  const { t } = useTranslation(),
+import { useTranslation } from "react-i18next";
+import {logErrorToProduction} from '@/utils/productionLogger';
+export function ITServiceRequestHero() { const [ name, setName ] = useState(""),
+  const [ email, setEmail ] = useState(""),
+  const [ phone, setPhone ] = useState(""),
+  const [ company, setCompany ] = useState(""),
+  const [ location, setLocation ] = useState(""),
+  const [ details, setDetails ] = useState(""),
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+  const { toast  } = useToast(),
+  const { t  } = useTranslation(),
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
-
     if (!name || !email || !location) {
       toast({
         title: "Missing Information",
@@ -62,8 +59,7 @@ export function ITServiceRequestHero() {
     } finally {
       setIsSubmitting(false)
     }
-  },
-
+  };
   return (
     <section
       className="py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a,_#020617)]"

@@ -1,12 +1,12 @@
 
-import { useState } from "react",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
+import { useState } from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 import { User, Mail, AtSign, GraduationCap } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Form,
   FormControl,
@@ -41,12 +41,11 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       case "talent":
         return "Talent",
       case "client":
-        return "Client",
+        return "Client";
       default:
         return "User"
     }
-  },
-
+  };
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">

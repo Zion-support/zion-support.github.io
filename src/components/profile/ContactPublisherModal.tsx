@@ -1,13 +1,13 @@
-import React from 'react',
-import FocusLock from 'react-focus-lock',
+import React from 'react';
+import FocusLock from 'react-focus-lock';
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle} from '@/components/ui/dialog',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Textarea } from '@/components/ui/textarea',
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import {
   Form,
   FormField,
@@ -15,14 +15,14 @@ import {
   FormLabel,
   FormControl,
   FormMessage} from '@/components/ui/form',
-import { useForm, type Resolver } from 'react-hook-form',
-import { yupResolver } from '@hookform/resolvers/yup',
-import * as yup from 'yup',
+import { useForm, type Resolver } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 import { SendIcon, Mail } from 'lucide-react'
-import api from '@/services/apiClient',
-import { toast } from '@/hooks/use-toast',
-import { useAuth } from '@/hooks/useAuth',
-import { LoginModal } from '@/components/auth/LoginModal',
+import api from '@/services/apiClient';
+import { toast } from '@/hooks/use-toast';
+import { useAuth } from '@/hooks/useAuth';
+import { LoginModal } from '@/components/auth/LoginModal';
 interface ContactPublisherModalProps {
   isOpen: boolean,
   onClose: () => void,
@@ -53,11 +53,10 @@ export function ContactPublisherModal({
   onClose,
   publisherName,
   publisherEmail,
-  productId}: ContactPublisherModalProps) {
-  const { user } = useAuth(),
-  const [isSubmitting, setIsSubmitting] = React.useState(false),
-  const [error, setError] = React.useState<string | null>(null),
-  const [loginOpen, setLoginOpen] = React.useState(false),
+  productId}: ContactPublisherModalProps) { const { user  } = useAuth(),
+  const [ isSubmitting, setIsSubmitting ] = React.useState(false),
+  const [ error, setError ] = React.useState<string | null>(null),
+  const [ loginOpen, setLoginOpen ] = React.useState(false),
 
   const form = useForm<FormValues>({
     resolver: yupResolver(schema) as Resolver<FormValues>,
@@ -88,11 +87,10 @@ export function ContactPublisherModal({
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
-      e.stopPropagation(),
+      e.stopPropagation();
       onClose()
     }
-  },
-
+  };
   return (
     <>
     <Dialog open={isOpen} onOpenChange={onClose}>

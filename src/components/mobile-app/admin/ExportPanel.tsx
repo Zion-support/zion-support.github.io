@@ -1,11 +1,11 @@
 
-import React from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
+import React from "react";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react'
-import { AppPlatform, AppMetadataValues } from "./MetadataManager",
-import { toast } from "sonner",
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+import { AppPlatform, AppMetadataValues } from "./MetadataManager";
+import { toast } from "sonner";
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
 
 interface ExportPanelProps {
@@ -18,7 +18,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
     try {
       let content: string,
       let fileName: string,
-      
       if (format === 'json') {
         content = JSON.stringify(metadata, null, 2),
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
@@ -36,8 +35,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
         content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join(),
         
         // Add keywords as additional rows
-        content += '\n\nKeywords:\n' + metadata.keywords.join(),
-        
+        content += '\n\nKeywords: \n' + metadata.keywords.join(),
         fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
       
@@ -101,4 +99,4 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       </CardContent>
     </Card>
   )
-},
+};

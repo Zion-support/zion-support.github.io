@@ -1,7 +1,7 @@
 
-import React from "react",
-import { ClickableBadge } from "@/components/ui/clickable-badge",
-import { Button } from "@/components/ui/button",
+import React from "react";
+import { ClickableBadge } from "@/components/ui/clickable-badge";
+import { Button } from "@/components/ui/button";
 import { X } from 'lucide-react'
 
 interface ActiveFiltersProps {
@@ -41,8 +41,7 @@ export function ActiveFilters({
     priceRange[0] !== 50 ||
     priceRange[1] !== 200,
   
-  if (!hasActiveFilters) return null,
-
+  if (!hasActiveFilters) return null;
   return (
     <div className="mb-6 flex flex-wrap gap-2 items-center">
       <span className="text-zion-slate-light text-sm">Active filters:</span>

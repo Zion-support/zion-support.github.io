@@ -1,5 +1,5 @@
 
-import React from "react",
+import React from "react";
 import {
   Table,
   TableBody,
@@ -7,9 +7,9 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Switch } from "@/components/ui/switch",
-import { toast } from "@/hooks/use-toast",
+import { Badge } from "@/components/ui/badge";
+import { Switch } from "@/components/ui/switch";
+import { toast } from "@/hooks/use-toast";
 import { InfoIcon } from 'lucide-react'
 import {
   Tooltip,
@@ -80,8 +80,7 @@ export function RoleManagement() {
     "Admin": "Full access to all features and settings",
     "Recruiter": "Can manage candidates and job postings",
     "Manager": "Can view candidates and create jobs",
-    "Viewer": "Read-only access to candidates"},
-
+    "Viewer": "Read-only access to candidates"};
   return (
     <div className="space-y-6">
       <div>

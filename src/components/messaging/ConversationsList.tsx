@@ -1,9 +1,9 @@
 
-import React, { useMemo } from 'react',
+import React, { useMemo } from 'react';
 import { User } from 'lucide-react'
-import { Conversation } from '@/types/messaging',
-import { ConversationItem } from './ConversationItem',
-import { FixedSizeList as List, ListChildComponentProps } from 'react-window',
+import { Conversation } from '@/types/messaging';
+import { ConversationItem } from './ConversationItem';
+import { FixedSizeList as List, ListChildComponentProps } from 'react-window';
 
 interface ConversationsListProps {
   conversations: Conversation[],
@@ -43,8 +43,7 @@ export function ConversationsList({
         />
       </div>
     )
-  },
-
+  };
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
       <div className="p-3 border-b border-zion-purple/20">

@@ -1,12 +1,12 @@
 
-import { Button } from "@/components/ui/button",
-import Link from "next/link",
-import { useState, useEffect } from "react",
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { useState, useEffect } from "react";
 import { X } from 'lucide-react'
 
 export function FloatingCTA() {
-  const [isVisible, setIsVisible] = useState(false),
-  const [isClosed, setIsClosed] = useState(false),
+  const [ isVisible, setIsVisible ] = useState(false),
+  const [ isClosed, setIsClosed ] = useState(false),
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,8 +31,7 @@ export function FloatingCTA() {
     setIsVisible(false)
   },
 
-  if (!isVisible) return null,
-
+  if (!isVisible) return null;
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">

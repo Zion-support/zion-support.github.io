@@ -1,15 +1,15 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
 import { 
   getTalentRateSuggestion,
   PricingSuggestion,
   TalentRateParams,
   trackPricingSuggestion
 } from "@/services/pricingSuggestionService",
-import { PricingSuggestionBox } from "./PricingSuggestionBox",
-import { useAuth } from "@/hooks/useAuth",
+import { PricingSuggestionBox } from "./PricingSuggestionBox";
+import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from 'lucide-react'
 
 interface TalentRateRecommenderProps {
@@ -25,10 +25,9 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   yearsExperience,
   location,
   onSuggestionApplied,
-  rateType}) => {
-  const [isLoading, setIsLoading] = useState(false),
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
-  const { user } = useAuth(),
+  rateType}) => { const [ isLoading, setIsLoading ] = useState(false),
+  const [ suggestion, setSuggestion ] = useState<PricingSuggestion | null>(null),
+  const { user  } = useAuth(),
 
   const generateSuggestion = async () => {
     if (skills.length === 0 || yearsExperience <= 0) {
@@ -95,4 +94,4 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
       </div>
     </div>
   )
-},
+};

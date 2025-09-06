@@ -64,7 +64,6 @@ const tsHelpers = {
   __extends: function(d: any, b: any) {
     if (typeof b !== "function" && b !== null)
       throw new TypeError("Class extends value " + String(b) + " is not a constructor or null"),
-    
     function __extends_helper(this: any) { this.constructor = d }
     d.prototype = b === null ? Object.create(b) : (__extends_helper.prototype = b.prototype, new (__extends_helper as any)())
   },
@@ -74,7 +73,7 @@ const tsHelpers = {
       for (var s, i = 1, n = arguments.length, i < n, i++) {
         s = arguments[i],
         for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-          t[p] = s[p]
+          t[ p ] = s[p]
       }
       return t
     }
@@ -83,13 +82,13 @@ const tsHelpers = {
   __rest: function (s: any, e: string[]) {
     let t: any = {},
     for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-      t[p] = s[p],
+      t[ p ] = s[p],
     if (s != null && typeof Object.getOwnPropertySymbols === "function") {
       const symbols = Object.getOwnPropertySymbols(s),
       for (let i = 0, i < symbols.length, i++) {
         const symbol = symbols[i],
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol))
-          t[symbol] = s[symbol]
+          t[ symbol ] = s[symbol]
       }
     }
     return t
@@ -115,11 +114,11 @@ const tsHelpers = {
 
 // Inject TypeScript helpers into global scope
 Object.keys(tsHelpers).forEach(helper => {
-  if (typeof (globalThis as any)[helper] === 'undefined') {
-    (globalThis as any)[helper] = (tsHelpers as any)[helper]
+  if (typeof (globalThis as any)[ helper ] = == 'undefined') {
+    (globalThis as any)[ helper ] = (tsHelpers as any)[helper]
   }
-  if (typeof (selfRef as any)[helper] === 'undefined') {
-    (selfRef as any)[helper] = (tsHelpers as any)[helper]
+  if (typeof (selfRef as any)[ helper ] = == 'undefined') {
+    (selfRef as any)[ helper ] = (tsHelpers as any)[helper]
   }
 }),
 
@@ -195,8 +194,8 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {
   
   // TypeScript helpers for Node.js
   Object.keys(tsHelpers).forEach(helper => {
-    if (typeof (global as any)[helper] === 'undefined') {
-      (global as any)[helper] = (tsHelpers as any)[helper]
+    if (typeof (global as any)[ helper ] = == 'undefined') {
+      (global as any)[ helper ] = (tsHelpers as any)[helper]
     }
   })
 }
@@ -212,8 +211,7 @@ export const verifyPolyfills = () => {
   
   console.log('Serverless polyfill verification:', checks),
   return Object.values(checks).every(Boolean)
-},
-
+};
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
   setTimeout(() => verifyPolyfills(), 100)

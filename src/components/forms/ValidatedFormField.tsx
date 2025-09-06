@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react',
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',
-import { Input } from '@/components/ui/input',
-import { Textarea } from '@/components/ui/textarea',
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',
-import { Checkbox } from '@/components/ui/checkbox',
-import { cn } from '@/lib/utils',
+import React, { useState, useEffect } from 'react';
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Checkbox } from '@/components/ui/checkbox';
+import { cn } from '@/lib/utils';
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
-import { Button } from '@/components/ui/button',
+import { Button } from '@/components/ui/button';
 interface ValidationRule {
   required?: boolean,
   minLength?: number,
@@ -43,9 +43,9 @@ export function ValidatedFormField({
   disabled = false,
   showValidIcon = true,
   debounceMs = 300}: ValidatedFormFieldProps) {
-  const [showPassword, setShowPassword] = useState(false),
-  const [validationState, setValidationState] = useState<'idle' | 'validating' | 'valid' | 'invalid'>('idle'),
-  const [debounceTimer, setDebounceTimer] = useState<NodeJS.Timeout | null>(null),
+  const [ showPassword, setShowPassword ] = useState(false),
+  const [ validationState, setValidationState ] = useState<'idle' | 'validating' | 'valid' | 'invalid'>('idle'),
+  const [ debounceTimer, setDebounceTimer ] = useState<NodeJS.Timeout | null>(null),
 
   const fieldValue = form.watch(name),
   const fieldError = form.formState.errors[name],
@@ -123,7 +123,7 @@ export function ValidatedFormField({
       case 'valid':
         return 'border-green-500 focus: border-green-500 focus:ring-green-500/20',
       case 'invalid':
-        return 'border-red-500 focus:border-red-500 focus:ring-red-500/20',
+        return 'border-red-500 focus: border-red-500 focus:ring-red-500/20',
       default:
         return ''
     }
@@ -305,7 +305,7 @@ export const validationPatterns = {
 export const commonValidations = {
   required: { required: true },
   email: { 
-    required: true, 
+    required: true,
     pattern: validationPatterns.email,
     custom: (value: string) => {
       if (value && !validationPatterns.email.test(value)) {
@@ -332,4 +332,4 @@ export const commonValidations = {
       }
       return null
     }
-  }}, 
+  }};

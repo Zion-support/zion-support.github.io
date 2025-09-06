@@ -1,15 +1,14 @@
 
-import React from "react",
-import { Button } from "@/components/ui/button",
+import React from "react";
+import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react'
-import { useSidebar } from "./sidebar-context",
-import { cn } from "@/lib/utils",
+import { useSidebar } from "./sidebar-context";
+import { cn } from "@/lib/utils";
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string
 }
 
-export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
-  const { open, toggleSidebar } = useSidebar(),
+export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) { const { open, toggleSidebar  } = useSidebar(),
 
   return (
     <Button

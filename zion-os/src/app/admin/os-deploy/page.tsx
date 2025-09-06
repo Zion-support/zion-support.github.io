@@ -15,21 +15,19 @@ export default function OSDeployPage() {
   // Mock feature keys and functions
   const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
   
-  const labelFor = (key: string) => {
-    const labels: { [key: string]: string } = {
+  const labelFor = (key: string) => { const labels: { [key: string]: string  } = {
       ai: 'AI Integration',
       blockchain: 'Blockchain Technology',
-      governance: 'Governance System',
+      governance: 'Governance System';
       treasury: 'Treasury Management'
     };
     return labels[key] || key;
   };
 
-  const getFeatureDescription = (key: string) => {
-    const descriptions: { [key: string]: string } = {
+  const getFeatureDescription = (key: string) => { const descriptions: { [key: string]: string  } = {
       ai: 'Advanced AI capabilities',
       blockchain: 'Blockchain infrastructure',
-      governance: 'Decentralized governance',
+      governance: 'Decentralized governance';
       treasury: 'Community treasury management'
     };
     return descriptions[key] || 'Feature description';

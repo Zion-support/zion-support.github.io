@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react',
-import Image from 'next/image',
-import { cn } from '@/lib/utils',
+import React, { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
+import { cn } from '@/lib/utils';
 interface OptimizedImageProps {
   src: string,
   alt: string,
@@ -35,9 +35,9 @@ export function OptimizedImage({
   lazy = true,
   ...props
 }: OptimizedImageProps) {
-  const [isLoading, setIsLoading] = useState(true),
-  const [hasError, setHasError] = useState(false),
-  const [isInView, setIsInView] = useState(!lazy || priority),
+  const [ isLoading, setIsLoading ] = useState(true),
+  const [ hasError, setHasError ] = useState(false),
+  const [ isInView, setIsInView ] = useState(!lazy || priority),
   const imgRef = useRef<HTMLDivElement>(null),
 
   // Intersection Observer for lazy loading
@@ -172,9 +172,8 @@ export function OptimizedImage({
 // Higher-order component for easy migration from regular img tags
 export function withImageOptimization<P extends { src: string, alt: string }>(
   Component: React.ComponentType<P>
-) {
-  return function OptimizedComponent(props: P) {
-    const { src, alt, ...otherProps } = props,
+) { return function OptimizedComponent(props: P) {
+    const { src, alt, ...otherProps  } = props,
     
     return (
       <OptimizedImage
@@ -201,7 +200,7 @@ export function getImageDimensions(src: string): Promise<{ width: number, height
   return new Promise((resolve, reject) => {
     const img = new window.Image(),
     img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight }),
-    img.onerror = reject,
+    img.onerror = reject;
     img.src = src
   })
 } 

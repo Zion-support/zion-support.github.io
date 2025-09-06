@@ -1,5 +1,5 @@
-import React from "react",
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
+import React from "react";
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Bot, Users, TrendingUp } from 'lucide-react'
 
 export default function AITalentMatchingPage() {
@@ -27,8 +27,7 @@ export default function AITalentMatchingPage() {
       name: "Raj Patel",
       role: "Startup Founder",
       text: "The quality of candidates has improved dramatically since using Zion's platform.",
-      avatar: "/placeholder.svg"}],
-
+      avatar: "/placeholder.svg"}];
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"

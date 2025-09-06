@@ -1,11 +1,11 @@
 
-import { useState, useEffect } from 'react',
-import { useRouter } from 'next/router',
-import { useAuth } from '@/hooks/useAuth',
-import { Button } from '@/components/ui/button',
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
-import { cn } from '@/lib/utils',
+import { cn } from '@/lib/utils';
 interface WizardStep {
   title: string,
   description: string,
@@ -13,7 +13,7 @@ interface WizardStep {
   action: {
     text: string,
     url: string
-  },
+  };
   skipText?: string
 }
 
@@ -24,10 +24,9 @@ interface OnboardingWizardProps {
   className?: string
 }
 
-export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
-  const [currentStep, setCurrentStep] = useState(0),
+export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) { const [ currentStep, setCurrentStep ] = useState(0),
   const router = useRouter(), // Changed from useNavigate to useRouter
-  const { user } = useAuth(),
+  const { user  } = useAuth(),
   
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
@@ -148,7 +147,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
               <div
                 key={index}
                 className={cn(
-                  "h-2 w-2 rounded-full mx-1",
+                  "h-2 w-2 rounded-full mx-1";
                   index === currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep

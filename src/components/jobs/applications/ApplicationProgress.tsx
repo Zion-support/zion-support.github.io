@@ -1,8 +1,8 @@
 
-import { ApplicationStatus } from "@/types/jobs",
-import { Progress } from "@/components/ui/progress",
+import { ApplicationStatus } from "@/types/jobs";
+import { Progress } from "@/components/ui/progress";
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import { cn } from "@/lib/utils";
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   className?: string
@@ -65,8 +65,7 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     rejected: 5},
 
   const currentRank = statusRank[current],
-  const statusRank_ = statusRank[status],
-
+  const statusRank_ = statusRank[status];
   if (currentRank < statusRank_) {
     // This step is complete
     return <CheckCircle2 className="h-4 w-4 text-green-500" />

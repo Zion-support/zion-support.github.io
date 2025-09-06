@@ -1,11 +1,11 @@
 
-import React, { useState } from "react",
-import { MobileHeader } from "@/mobile/components/common/MobileHeader",
-import { BottomNavigation } from "@/mobile/components/common/BottomNavigation",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Label } from "@/components/ui/label",
+import React, { useState } from "react";
+import { MobileHeader } from "@/mobile/components/common/MobileHeader";
+import { BottomNavigation } from "@/mobile/components/common/BottomNavigation";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import { 
   Select,
   SelectContent,
@@ -14,13 +14,13 @@ import {
   SelectValue 
 } from "@/components/ui/select",
 import { Zap, ChevronLeft, ChevronRight } from 'lucide-react'
-import { Badge } from "@/components/ui/badge",
-import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
 
 export function MobileJobPost() {
-  const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
+  const [ currentStep, setCurrentStep ] = useState<JobPostStep>("details"),
   
   const goToNextStep = () => {
     if (currentStep === "details") {
@@ -162,22 +162,20 @@ function DetailsStep() {
 }
 
 function RequirementsStep() {
-  const [skills, setSkills] = useState<string[]>([
+  const [ skills, setSkills ] = useState<string[]>([
     "React", "TypeScript", "Node.js"
   ]),
-  const [newSkill, setNewSkill] = useState(""),
+  const [ newSkill, setNewSkill ] = useState(""),
   
   const addSkill = () => {
     if (newSkill && !skills.includes(newSkill)) {
       setSkills([...skills, newSkill]),
       setNewSkill("")
     }
-  },
-  
+  };
   const removeSkill = (skill: string) => {
     setSkills(skills.filter(s => s !== skill))
-  },
-  
+  };
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>

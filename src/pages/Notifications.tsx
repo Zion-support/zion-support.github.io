@@ -1,17 +1,17 @@
-import React, { useState } from 'react',
-import { useNotifications } from '@/context/notifications/NotificationContext',
+import React, { useState } from 'react';
+import { useNotifications } from '@/context/notifications/NotificationContext';
 import {
   NotificationType,
   NotificationContextType} from '@/context/notifications',
-import { formatDistanceToNow } from 'date-fns',
+import { formatDistanceToNow } from 'date-fns';
 import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings, Package } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',
-import { Badge } from '@/components/ui/badge',
-import Skeleton from '@/components/ui/skeleton',
-import { SEO } from '@/components/SEO',
-import { useRouter } from 'next/router',
-import { cn } from '@/lib/utils',
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Badge } from '@/components/ui/badge';
+import Skeleton from '@/components/ui/skeleton';
+import { SEO } from '@/components/SEO';
+import { useRouter } from 'next/router';
+import { cn } from '@/lib/utils';
 const getNotificationIcon = (type: NotificationType,
   className: string = 'h-5 w-5') => {
   switch (type) {
@@ -164,8 +164,7 @@ const NotificationCard: React.FC<{
   )
 },
 
-export default function NotificationsPage() {
-  const {
+export default function NotificationsPage() { const {
     filteredNotifications,
     unreadCount,
     markAsRead,
@@ -173,8 +172,7 @@ export default function NotificationsPage() {
     dismissNotification,
     loading,
     filter,
-    setFilter} = useNotifications() as NotificationContextType,
-
+    setFilter } = useNotifications() as NotificationContextType;
   return (
     <>
       <SEO

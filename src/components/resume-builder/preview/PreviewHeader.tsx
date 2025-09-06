@@ -1,17 +1,17 @@
 
-import { Button } from '@/components/ui/button',
+import { Button } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link } from 'lucide-react'
-import { PdfExportButton } from '../PdfExportButton',
-import { Resume } from '@/types/resume',
-import { useState } from 'react',
-import { useIsMobile } from '@/hooks/use-mobile',
+import { PdfExportButton } from '../PdfExportButton';
+import { Resume } from '@/types/resume';
+import { useState } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 interface PreviewHeaderProps {
   resume: Resume,
   onBack: () => void
 }
 
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
-  const [isPrinting, setIsPrinting] = useState(false),
+  const [ isPrinting, setIsPrinting ] = useState(false),
   const isMobile = useIsMobile(),
 
   const handleBrowserPrint = () => {
@@ -48,8 +48,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
       document.head.removeChild(style),
       setIsPrinting(false)
     }, 1000)
-  },
-
+  };
   return (
     <div className={`flex ${isMobile ? 'flex-col' : 'justify-between'} items-${isMobile ? 'stretch' : 'center'} gap-3`}>
       <Button 

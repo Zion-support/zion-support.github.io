@@ -1,6 +1,6 @@
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReferralStats as ReferralStatsType } from "@/types/referrals",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ReferralStats as ReferralStatsType } from "@/types/referrals";
 import { Award, Share, Star, TrendingUp } from 'lucide-react'
 
 interface ReferralStatsProps {
@@ -29,8 +29,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       title: "Total Rewards",
       value: stats.totalRewards > 0 ? `$${stats.totalRewards.toFixed(2)}` : "-",
       icon: <Award className="h-5 w-5 text-muted-foreground" />,
-      description: "Credits earned from referrals"}],
-
+      description: "Credits earned from referrals"}];
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
       {statCards.map((card, i) => (

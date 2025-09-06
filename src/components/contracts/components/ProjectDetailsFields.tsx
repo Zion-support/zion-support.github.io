@@ -1,7 +1,7 @@
 
-import { format } from "date-fns",
+import { format } from "date-fns";
 import { CalendarIcon } from 'lucide-react'
-import { UseFormReturn, ControllerRenderProps } from "react-hook-form",
+import { UseFormReturn, ControllerRenderProps } from "react-hook-form";
 import { 
   FormField,
   FormItem, 
@@ -10,12 +10,12 @@ import {
   FormDescription, 
   FormMessage 
 } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Button } from "@/components/ui/button",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { Calendar } from "@/components/ui/calendar",
-import { ContractFormValues } from "./ContractForm",
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Calendar } from "@/components/ui/calendar";
+import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>
 }

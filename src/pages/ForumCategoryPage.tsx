@@ -1,21 +1,21 @@
-import { useState, useEffect } from "react",
-import Link from "next/link",
-import { useRouter } from "next/router",
-import { Suspense } from "react",
-import { Button } from "@/components/ui/button",
-import CreatePostButton from "@/components/community/CreatePostButton",
-import { Input } from "@/components/ui/input",
-import { SEO } from "@/components/SEO",
-import PostCard from "@/components/community/PostCard",
-import { PostListSkeleton } from "@/components/community/PostCardSkeleton",
-import { ForumCategoryInfo, ForumPost } from "@/types/community",
-import { usePostsByCategory } from "@/hooks/usePostsByCategory",
-import NotFound from "./NotFound",
-import { useAuth } from "@/hooks/useAuth",
-import { useCommunity } from "@/context",
-import { useToast } from "@/hooks/use-toast",
-import { useFollowedCategories } from "@/hooks/useFollowedCategories",
-import { logInfo } from '@/utils/productionLogger',
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { Suspense } from "react";
+import { Button } from "@/components/ui/button";
+import CreatePostButton from "@/components/community/CreatePostButton";
+import { Input } from "@/components/ui/input";
+import { SEO } from "@/components/SEO";
+import PostCard from "@/components/community/PostCard";
+import { PostListSkeleton } from "@/components/community/PostCardSkeleton";
+import { ForumCategoryInfo, ForumPost } from "@/types/community";
+import { usePostsByCategory } from "@/hooks/usePostsByCategory";
+import NotFound from "./NotFound";
+import { useAuth } from "@/hooks/useAuth";
+import { useCommunity } from "@/context";
+import { useToast } from "@/hooks/use-toast";
+import { useFollowedCategories } from "@/hooks/useFollowedCategories";
+import { logInfo } from '@/utils/productionLogger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
 
 // Mock category data
@@ -74,9 +74,8 @@ function CategoryContent({
   category: ForumCategoryInfo,
   IconComponent: React.ComponentType<any>,
   user: any
-}) {
-  const [searchQuery, setSearchQuery] = useState(""),
-  const { featuredPosts, recentPosts } = useCommunity(),
+}) { const [ searchQuery, setSearchQuery ] = useState(""),
+  const { featuredPosts, recentPosts  } = useCommunity(),
 
   // Filter posts by category from context data
   const categoryPosts = [
@@ -97,8 +96,8 @@ function CategoryContent({
     : categoryPosts,
 
   const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin'),
-  const { isFollowed, follow, unfollow } = useFollowedCategories(),
-  const { toast } = useToast(),
+  const { isFollowed, follow, unfollow  } = useFollowedCategories(),
+  const { toast  } = useToast(),
 
   const handleFollow = () => {
     if (!user) {
@@ -195,10 +194,9 @@ function CategoryContent({
   )
 }
 
-export default function ForumCategoryPage() {
-  const router = useRouter(),
-  const { categoryId } = router.query as { categoryId: string },
-  const { user } = useAuth(),
+export default function ForumCategoryPage() { const router = useRouter(),
+  const { categoryId  } = router.query as { categoryId: string },
+  const { user  } = useAuth(),
 
   // Check if the category exists and user has access
   const category = categoryId ? categoriesInfo[categoryId] : null,
@@ -215,8 +213,7 @@ export default function ForumCategoryPage() {
     if (categoryId && category) {
       logInfo('ForumCategoryPage - categoryId changed:', { data: categoryId })
     }
-  }, [categoryId, category]),
-
+  }, [categoryId, category]);
   if (!categoryId || !category) {
     return <NotFound />
   }

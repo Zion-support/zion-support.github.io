@@ -1,31 +1,30 @@
 
-import { useState, useEffect } from "react",
-import { useRouter } from "next/router",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/components/ui/use-toast",
-import { SEO } from "@/components/SEO",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { HireNowCTA } from "@/components/profile/HireNowCTA",
-import { logErrorToProduction } from '@/utils/productionLogger',
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/components/ui/use-toast";
+import { SEO } from "@/components/SEO";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { HireNowCTA } from "@/components/profile/HireNowCTA";
+import { logErrorToProduction } from '@/utils/productionLogger';
 import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
 
-export default function ProfilePage() {
-  // useParams may be untyped in this environment, so avoid passing a
+export default function ProfilePage() { // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
   const router = useRouter(),
   const profileId = router.query.profileId as string,
-  const [profileData, setProfileData] = useState<any>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [isError, setIsError] = useState(false),
+  const [ profileData, setProfileData ] = useState<any>(null),
+  const [ isLoading, setIsLoading ] = useState(true),
+  const [ isError, setIsError ] = useState(false),
 
   useEffect(() => {
     const fetchProfile = async () => {
       setIsLoading(true),
       setIsError(false),
       try {
-        const { data, error } = await supabase
+        const { data, error  } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
@@ -219,12 +218,12 @@ export default function ProfilePage() {
           </div>
 
           {/* Sidebar with HireNowCTA */}
-          <div className="col-span-12 lg:col-span-4 space-y-6">
+          <div className="col-span-12 lg: col-span-4 space-y-6">
             <HireNowCTA
               talentProfile={{
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
-                professional_title: profileData?.professional_title || '',
+                professional_title: profileData?.professional_title || '';
                 hourly_rate: profileData?.hourly_rate || 0
               }}
             />

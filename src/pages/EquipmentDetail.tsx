@@ -1,21 +1,21 @@
-import { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import { NextSeo } from '@/components/NextSeo',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
+import { NextSeo } from '@/components/NextSeo';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
-import { useAuth } from "@/hooks/useAuth",
-import { getStripe } from "@/utils/getStripe",
-import { useCart } from '@/context/CartContext',
-import { ImageWithRetry } from '@/components/ui/ImageWithRetry',
-import { equipmentListings } from '@/data/equipmentData',
-import { ProductListing } from '@/types/listings',
-import { motion } from 'framer-motion',
-import { useCurrency } from '@/hooks/useCurrency',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { toast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
+import { getStripe } from "@/utils/getStripe";
+import { useCart } from '@/context/CartContext';
+import { ImageWithRetry } from '@/components/ui/ImageWithRetry';
+import { equipmentListings } from '@/data/equipmentData';
+import { ProductListing } from '@/types/listings';
+import { motion } from 'framer-motion';
+import { useCurrency } from '@/hooks/useCurrency';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface EquipmentSpecification {
   name: string,
   value: string
@@ -58,7 +58,7 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
     inStock: item.availability === 'In Stock' || !item.availability,
     expectedShipping: item.availability || 'In Stock',
     specifications: (item.specifications || []).map((spec) => ({ 
-      name: spec, 
+      name: spec,
       value: '' 
     })),
     features: item.tags || [],
@@ -68,25 +68,23 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
 }
 
 // Build sample data from the shared equipment listings
-export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
-  equipmentListings.reduce((acc, item) => {
-    acc[item.id] = convertProductListingToEquipmentDetails(item),
+export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails  } = equipmentListings.reduce((acc, item) => {
+    acc[ item.id ] = convertProductListingToEquipmentDetails(item),
     return acc
   }, {} as { [key: string]: EquipmentDetails }),
 
-export default function EquipmentDetail() {
-  const router = useRouter(),
-  const { id } = router.query as { id?: string },
-  const { isAuthenticated, user } = useAuth(),
-  const { items, dispatch } = useCart(),
-  const { formatPrice } = useCurrency(),
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0),
-  const [quantity, setQuantity] = useState(1),
-  const [isAdding, setIsAdding] = useState(false),
-  const [loading, setLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
+export default function EquipmentDetail() { const router = useRouter(),
+  const { id  } = router.query as { id?: string },
+  const { isAuthenticated, user  } = useAuth(),
+  const { items, dispatch  } = useCart(),
+  const { formatPrice  } = useCurrency(),
+  const [ selectedImageIndex, setSelectedImageIndex ] = useState(0),
+  const [ quantity, setQuantity ] = useState(1),
+  const [ isAdding, setIsAdding ] = useState(false),
+  const [ loading, setLoading ] = useState(true),
+  const [ error, setError ] = useState<string | null>(null),
 
-  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>(),
+  const [ equipment, setEquipment ] = useState<EquipmentDetails | undefined>(),
 
   useEffect(() => {
     async function loadEquipment() {
@@ -253,7 +251,7 @@ export default function EquipmentDetail() {
         description={equipment.description}
         openGraph={{
           title: `${equipment.name} - Zion Marketplace`,
-          description: equipment.description,
+          description: equipment.description;
           images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined
         }}
       />

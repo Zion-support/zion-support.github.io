@@ -1,5 +1,5 @@
 
-import React, { useState } from "react",
+import React, { useState } from "react";
 import {
   Table,
   TableBody,
@@ -15,15 +15,15 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
 import { Trash, Mail, UserPlus } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
+import { toast } from "@/hooks/use-toast";
 export function TeamManagement() {
-  const [isAddingMember, setIsAddingMember] = useState(false),
-  const [newMemberEmail, setNewMemberEmail] = useState(""),
+  const [ isAddingMember, setIsAddingMember ] = useState(false),
+  const [ newMemberEmail, setNewMemberEmail ] = useState(""),
 
   // Mock team members data
   const teamMembers = [
@@ -86,8 +86,7 @@ export function TeamManagement() {
     toast({
       title: "Invitation resent",
       description: `A new invitation has been sent to ${memberEmail}`})
-  },
-
+  };
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">

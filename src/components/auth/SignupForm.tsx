@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react',
-import { useForm } from 'react-hook-form',
-import { zodResolver } from '@hookform/resolvers/zod',
-import { z } from 'zod',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Label } from '@/components/ui/label',
-import { useAuth } from '@/hooks/useAuth',
-import { toast } from '@/hooks/use-toast',
+import React, { useState, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
 import { CheckCircle, AlertCircle, Eye, EyeOff, Loader2 } from 'lucide-react'
-import { cn } from '@/lib/utils',
-import { fireEvent } from '@/lib/analytics',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { cn } from '@/lib/utils';
+import { fireEvent } from '@/lib/analytics';
+import {logErrorToProduction} from '@/utils/productionLogger';
 const signupSchema = z.object({
   name: z.string().min(2, 'Full Name must be at least 2 characters').max(50, 'Name must be less than 50 characters'),
   email: z.string().email('Please enter a valid email address').min(1, 'Email is required'),
@@ -42,11 +42,11 @@ interface FieldValidationState {
 }
 
 export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [showPassword, setShowPassword] = useState(false),
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false),
-  const [fieldStates, setFieldStates] = useState<Record<string, FieldValidationState>>({}),
-  const { signUp } = useAuth(),
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+  const [ showPassword, setShowPassword ] = useState(false),
+  const [ showConfirmPassword, setShowConfirmPassword ] = useState(false),
+  const [ fieldStates, setFieldStates ] = useState<Record<string, FieldValidationState>>({}),
+  const { signUp  } = useAuth(),
   
   const {
     register,
@@ -78,7 +78,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
           }
         })),
 
-        timeouts[fieldName] = setTimeout(async () => {
+        timeouts[ fieldName ] = setTimeout(async () => {
           const result = await trigger(typedFieldName),
           const error = errors[typedFieldName],
           
@@ -233,8 +233,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     } finally {
       setIsSubmitting(false)
     }
-  },
-
+  };
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       {/* Name Field */}
@@ -329,7 +328,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
           <div className="space-y-2">
             <div className="flex justify-between text-xs">
               <span>Password Strength</span>
-              <span className={cn('font-medium', 
+              <span className={cn('font-medium';
                 passwordStrength.strength >= 4 ? 'text-green-600' :
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'

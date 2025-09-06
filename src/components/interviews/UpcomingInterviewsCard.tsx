@@ -1,19 +1,17 @@
 
-import React, { useEffect, useState } from "react",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { useInterviews } from "@/hooks/useInterviews",
-import { Interview } from "@/types/interview",
-import { format, isPast, parseISO } from "date-fns",
-import Link from "next/link",
+import React, { useEffect, useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { useInterviews } from "@/hooks/useInterviews";
+import { Interview } from "@/types/interview";
+import { format, isPast, parseISO } from "date-fns";
+import Link from "next/link";
 import { Calendar, Clock, Video } from 'lucide-react'
-import { Avatar } from "@/components/ui/avatar",
-import {logErrorToProduction} from '@/utils/productionLogger',
-export function UpcomingInterviewsCard() {
-
-  const { fetchInterviews } = useInterviews(),
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
+import { Avatar } from "@/components/ui/avatar";
+import {logErrorToProduction} from '@/utils/productionLogger';
+export function UpcomingInterviewsCard() { const { fetchInterviews  } = useInterviews(),
+  const [ upcomingInterviews, setUpcomingInterviews ] = useState<Interview[]>([]),
+  const [ isLoading, setIsLoading ] = useState(true),
 
   useEffect(() => {
     const loadInterviews = async () => {
@@ -105,13 +103,11 @@ export function UpcomingInterviewsCard() {
             const interviewDate = parseISO(interview.scheduled_date),
             const formattedDate = format(interviewDate, 'EEE, MMM d'),
             const formattedTime = format(interviewDate, 'h: mm a'),
-            
             // Determine if interview is happening soon (within 30 minutes)
             const now = new Date(),
             const isStartingSoon = 
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
-              interviewDate.getTime() > now.getTime(),
-            
+              interviewDate.getTime() > now.getTime();
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">

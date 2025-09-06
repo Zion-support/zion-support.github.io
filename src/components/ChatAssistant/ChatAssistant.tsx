@@ -4,13 +4,13 @@ import React, {
   useRef,
   ReactNode,
   useContext} from 'react',
-import { AuthContext } from '../../context/auth/AuthContext',
-import { useDebounce } from '../../hooks/useDebounce',
-import { useLocalStorage } from '../../hooks/useLocalStorage',
-import { ChatMessage } from './ChatMessage',
-import { ChatInput } from './ChatInput',
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
-import { Button } from '@/components/ui/button',
+import { AuthContext } from '../../context/auth/AuthContext';
+import { useDebounce } from '../../hooks/useDebounce';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
+import { ChatMessage } from './ChatMessage';
+import { ChatInput } from './ChatInput';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react'
 
 export interface Message {
@@ -29,7 +29,7 @@ export interface ChatAssistantProps {
     name: string,
     avatarUrl?: string,
     role?: string
-  },
+  };
   conversationId?: string,
   initialMessages?: Message[],
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
@@ -52,21 +52,20 @@ export function ChatAssistant({
 
   // Hooks called unconditionally at the top
   const localStorageKey = `chatHistory-${recipient.id}`, // Key is always generated
-  const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage<
+  const [ storedGuestMessages, setStoredGuestMessages ] = useLocalStorage<
     Message[]
   >(isGuest ? localStorageKey : 'dummy-guest-key', // Use a dummy key if not guest to prevent LS write for logged-in users
     []),
-  const [displayGuestMessages, setDisplayGuestMessages] = useState<Message[]>([]),
-  const [loggedInMessages, setLoggedInMessages] =
-    useState<Message[]>(initialMessages),
+  const [ displayGuestMessages, setDisplayGuestMessages ] = useState<Message[]>([]),
+  const [ loggedInMessages, setLoggedInMessages ] = useState<Message[]>(initialMessages),
 
   const messagesEndRef = useRef<HTMLDivElement | null>(null),
-  const [pendingApiCallParams, setPendingApiCallParams] = useState<{
+  const [ pendingApiCallParams, setPendingApiCallParams ] = useState<{
     message: string,
     conversationId?: string
   } | null>(null),
-  const [showGuestModal, setShowGuestModal] = useState(false),
-  const [guestMessage, setGuestMessage] = useState<string | null>(null),
+  const [ showGuestModal, setShowGuestModal ] = useState(false),
+  const [ guestMessage, setGuestMessage ] = useState<string | null>(null),
 
   // Effect for guest user messages
   useEffect(() => {
@@ -132,7 +131,6 @@ export function ChatAssistant({
 
   const handleSendMessage = async (messageContent: string) => {
     if (!messageContent.trim()) return,
-
     if (!isGuest) {
       // Logged-in user
       const newMessage: Message = {
@@ -181,8 +179,7 @@ export function ChatAssistant({
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose]),
 
-  if (!isOpen) return null,
-
+  if (!isOpen) return null;
   return (
     <div
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"

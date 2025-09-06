@@ -1,21 +1,21 @@
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import Skeleton from "@/components/ui/skeleton",
+import React, { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import Skeleton from "@/components/ui/skeleton";
 import { Sparkles, ArrowRight } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { Badge } from "@/components/ui/badge",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { supabase } from "@/integrations/supabase/client";
+import { Badge } from "@/components/ui/badge";
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface GeneratedContent {
   description: string,
   tags: string[],
   suggestedPrice: {
     min: number,
     max: number
-  },
+  };
   keyPoints: string[]
 }
 
@@ -29,14 +29,13 @@ interface AIListingGeneratorProps {
   }
 }
 
-export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
-  const { toast } = useToast(),
-  const [title, setTitle] = useState(initialValues.title || ""),
-  const [category, setCategory] = useState(initialValues.category || ""),
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
-  const [isLoading, setIsLoading] = useState(false),
-  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) { const { toast  } = useToast(),
+  const [ title, setTitle ] = useState(initialValues.title || ""),
+  const [ category, setCategory ] = useState(initialValues.category || ""),
+  const [ keyFeatures, setKeyFeatures ] = useState(initialValues.keyFeatures || ""),
+  const [ targetAudience, setTargetAudience ] = useState(initialValues.targetAudience || ""),
+  const [ isLoading, setIsLoading ] = useState(false),
+  const [ generatedContent, setGeneratedContent ] = useState(null as GeneratedContent | null),
 
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
     switch(field) {
@@ -67,8 +66,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 
     setIsLoading(true),
     
-    try {
-      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
+    try { const { data, error  } = await supabase.functions.invoke('ai-listing-generator', {
         body: { title, category, keyFeatures, targetAudience }
       }),
 
@@ -105,8 +103,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: "The generated content has been applied to your listing."
       })
     }
-  },
-
+  };
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">

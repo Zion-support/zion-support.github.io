@@ -1,9 +1,9 @@
 
-import { useState } from "react",
+import { useState } from "react";
 import { Star } from 'lucide-react'
-import { useForm } from "react-hook-form",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
+import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Form,
   FormControl,
@@ -14,8 +14,8 @@ import {
 import {
   RadioGroup,
   RadioGroupItem} from "@/components/ui/radio-group",
-import { Switch } from "@/components/ui/switch",
-import { Review } from "@/types/reviews",
+import { Switch } from "@/components/ui/switch";
+import { Review } from "@/types/reviews";
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -30,7 +30,7 @@ interface ReviewFormProps {
   projectId: string,
   revieweeId: string,
   revieweeName: string,
-  onSubmit: (data: any) => Promise<boolean>, 
+  onSubmit: (data: any) => Promise<boolean>,
   defaultValues?: Review,
   isSubmitting: boolean
 }
@@ -42,7 +42,7 @@ export function ReviewForm({
   onSubmit,
   defaultValues,
   isSubmitting}: ReviewFormProps) {
-  const [hoveredStar, setHoveredStar] = useState<number>(0),
+  const [ hoveredStar, setHoveredStar ] = useState<number>(0),
   
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
@@ -126,7 +126,7 @@ export function ReviewForm({
           rules={{
             required: "Please provide feedback",
             minLength: {
-              value: 20,
+              value: 20;
               message: "Review must be at least 20 characters"}}}
           render={({ field }: { field: any }) => (
             <FormItem>

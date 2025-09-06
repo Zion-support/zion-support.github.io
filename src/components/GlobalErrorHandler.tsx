@@ -1,9 +1,9 @@
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react',
-import { toast } from '@/hooks/use-toast',
-import { Button } from '@/components/ui/button',
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import { toast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'
-import * as Sentry from '@sentry/nextjs',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import * as Sentry from '@sentry/nextjs';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorContextType {
   reportError: (error: Error, context?: any) => void,
   showRetryableError: (error: Error, retryAction?: () => void) => void,
@@ -19,7 +19,7 @@ interface GlobalErrorHandlerProps {
 }
 
 export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
-  const [retryCount, setRetryCount] = useState<Record<string, number>>({}),
+  const [ retryCount, setRetryCount ] = useState<Record<string, number>>({}),
 
   const reportError = useCallback((error: Error, context?: any) => {
     // Log to console for development
@@ -118,7 +118,6 @@ export function useGlobalErrorHandler(): ErrorContextType {
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
   const message = error.message.toLowerCase(),
-
   if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
     return "Unable to connect to our servers. Please check your internet connection."
   }
@@ -152,8 +151,7 @@ function getErrorMessage(error: Error): string {
 }
 
 // Utility hook for common error scenarios
-export function useErrorHandler() {
-  const { reportError, showRetryableError, showNetworkError, showAuthError } = useGlobalErrorHandler(),
+export function useErrorHandler() { const { reportError, showRetryableError, showNetworkError, showAuthError  } = useGlobalErrorHandler(),
 
   const handleApiError = useCallback((error: any, retryAction?: () => void) => {
     if (error.response?.status === 401 || error.response?.status === 403) {
@@ -185,7 +183,6 @@ export function useErrorHandler() {
       return result
     } catch (error: any) {
       reportError(error),
-      
       if (options?.onError) {
         options.onError(error)
       } else {
@@ -198,6 +195,6 @@ export function useErrorHandler() {
 
   return {
     reportError,
-    handleApiError,
+    handleApiError;
     handleAsyncOperation}
 } 

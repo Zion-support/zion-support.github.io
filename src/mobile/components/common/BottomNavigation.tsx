@@ -1,8 +1,8 @@
-import React from "react",
-import { useRouter } from "next/router",
-import Link from "next/link",
+import React from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
 import { Home, ShoppingBag, Users, User } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import { cn } from "@/lib/utils";
 export function BottomNavigation() {
   const router = useRouter(),
   
@@ -21,7 +21,7 @@ export function BottomNavigation() {
             key={item.path} 
             href={item.path}
             className={cn(
-              "flex flex-col items-center justify-center flex-1 py-1 px-2",
+              "flex flex-col items-center justify-center flex-1 py-1 px-2";
               isActive ? "text-primary" : "text-muted-foreground"
             )}
           >

@@ -1,19 +1,19 @@
-import { useState, useEffect } from 'react',
-import { useRouter } from 'next/router', // Changed from react-router-dom
-import { useFormik } from 'formik',
-import * as Yup from 'yup',
-import axios from 'axios',
-import Link from 'next/link',
-import { Input } from '@/components/ui/input',
-import { Button } from '@/components/ui/button',
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
-import { Alert, AlertDescription } from '@/components/ui/alert',
-import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter',
-import { AuthButtons } from '@/components/AuthButtons',
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router'; // Changed from react-router-dom
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import axios from 'axios';
+import Link from 'next/link';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter';
+import { AuthButtons } from '@/components/AuthButtons';
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
-import { toast } from '@/hooks/use-toast',
-import { AuthLayout } from '@/layout',
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+import { toast } from '@/hooks/use-toast';
+import { AuthLayout } from '@/layout';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
 
 const SignupSchema = Yup.object({
@@ -33,13 +33,13 @@ const SignupSchema = Yup.object({
 
 export default function Signup() {
   const router = useRouter(), // Changed from navigate
-  const [loading, setLoading] = useState(false),
-  const [errorMessage, setErrorMessage] = useState(''),
-  const [successMessage, setSuccessMessage] = useState(''),
-  const [emailVerificationRequired, setEmailVerificationRequired] = useState(false),
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
-  const [healthCheckLoading, setHealthCheckLoading] = useState(true),
-  const [healthCheckError, setHealthCheckError] = useState<string | null>(null),
+  const [ loading, setLoading ] = useState(false),
+  const [ errorMessage, setErrorMessage ] = useState(''),
+  const [ successMessage, setSuccessMessage ] = useState(''),
+  const [ emailVerificationRequired, setEmailVerificationRequired ] = useState(false),
+  const [ authServiceAvailable, setAuthServiceAvailable ] = useState(true),
+  const [ healthCheckLoading, setHealthCheckLoading ] = useState(true),
+  const [ healthCheckError, setHealthCheckError ] = useState<string | null>(null),
   
   // Check if this is a partner signup
   const isPartnerSignup = router.query.type === 'partner',
@@ -85,7 +85,7 @@ export default function Signup() {
     validationSchema: SignupSchema,
     onSubmit: async (values, { setErrors }) => {
       logInfo('Form submission started with:', { 
-        name: values.name, 
+        name: values.name,
         email: values.email,
         hasPassword: !!values.password,
         isPartnerSignup 
@@ -119,7 +119,7 @@ export default function Signup() {
         const res = await axios.post('/api/auth/register', requestData),
         
         logInfo('API response received:', { 
-          status: res.status, 
+          status: res.status,
           data: res.data 
         }),
         
@@ -450,7 +450,7 @@ export default function Signup() {
                 variant="ghost"
                 className="w-full text-sm"
                 onClick={() => {
-                  setEmailVerificationRequired(false),
+                  setEmailVerificationRequired(false);
                   setSuccessMessage('')
                 }}
               >

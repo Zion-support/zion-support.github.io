@@ -1,12 +1,12 @@
-import { useState } from "react",
-import { MatchResultItem } from "@/lib/ai-matchmaking",
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { useState } from "react";
+import { MatchResultItem } from "@/lib/ai-matchmaking";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
-import Skeleton from "@/components/ui/skeleton",
-import { cn } from "@/lib/utils",
+import Skeleton from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
 interface AIMatchingResultsProps {
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem) => void,
@@ -22,7 +22,7 @@ export function AIMatchingResults({
   projectDescription = "",
   serviceType: _serviceType = ""
 }: AIMatchingResultsProps) {
-  const [activeTab, setActiveTab] = useState("all"),
+  const [ activeTab, setActiveTab ] = useState("all"),
   
   // Group matches by category
   const categories = {
@@ -104,7 +104,7 @@ export function AIMatchingResults({
                   >
                     <div className="flex">
                       <div className={cn(
-                        "w-2", 
+                        "w-2";
                         match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
                         match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
                         "bg-green-500"

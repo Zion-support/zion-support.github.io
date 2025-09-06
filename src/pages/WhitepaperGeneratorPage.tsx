@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useCallback } from 'react',
-import { supabase } from '@/integrations/supabase/client',
-import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
-import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+import React, { useState, useEffect, useCallback } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';
+import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel'; // Import the new preview panel
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Trash2, Download, Share2 } from 'lucide-react'
-import { Send } from 'lucide-react', // Added Send icon
-import { toast } from "sonner",
-import { logErrorToProduction } from '@/utils/productionLogger',
+import { Send } from 'lucide-react'; // Added Send icon
+import { toast } from "sonner";
+import { logErrorToProduction } from '@/utils/productionLogger';
 interface WhitepaperSection {
   id: string,
   title: string,
@@ -39,32 +39,32 @@ const slugify = (text: string): string => {
 
 
 const WhitepaperGeneratorPage: React.FC = () => {
-  const [tokenName, setTokenName] = useState('My Awesome Token'),
-  const [tokenSupply, setTokenSupply] = useState<string>('1000000000'),
-  const [useCases, setUseCases] = useState('To facilitate transactions and reward users in our innovative freelance AI marketplace. It will be used for payments, staking for dispute resolution, and accessing premium features.'),
-  const [rewardsLogic, setRewardsLogic] = useState('Users earn tokens by completing projects and participating in platform governance. A percentage of transaction fees is burned, creating a deflationary pressure. Staking rewards are distributed weekly.'),
-  const [distributionBreakdown, setDistributionBreakdown] = useState(''),
-  const [governanceLogic, setGovernanceLogic] = useState('Token holders can vote on platform upgrades, fee structures, and policy changes. Staking tokens increases voting power. A decentralized council oversees proposal implementation.'),
-  const [legalDisclaimers, setLegalDisclaimers] = useState('This whitepaper is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any security. The token is a utility token and should not be considered an investment. Please consult with a legal professional in your jurisdiction.'),
+  const [ tokenName, setTokenName ] = useState('My Awesome Token'),
+  const [ tokenSupply, setTokenSupply ] = useState<string>('1000000000'),
+  const [ useCases, setUseCases ] = useState('To facilitate transactions and reward users in our innovative freelance AI marketplace. It will be used for payments, staking for dispute resolution, and accessing premium features.'),
+  const [ rewardsLogic, setRewardsLogic ] = useState('Users earn tokens by completing projects and participating in platform governance. A percentage of transaction fees is burned, creating a deflationary pressure. Staking rewards are distributed weekly.'),
+  const [ distributionBreakdown, setDistributionBreakdown ] = useState(''),
+  const [ governanceLogic, setGovernanceLogic ] = useState('Token holders can vote on platform upgrades, fee structures, and policy changes. Staking tokens increases voting power. A decentralized council oversees proposal implementation.'),
+  const [ legalDisclaimers, setLegalDisclaimers ] = useState('This whitepaper is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any security. The token is a utility token and should not be considered an investment. Please consult with a legal professional in your jurisdiction.'),
 
-  const [distributionData, setDistributionData] = useState<DistributionItem[]>([
+  const [ distributionData, setDistributionData ] = useState<DistributionItem[]>([
     { id: crypto.randomUUID(), name: 'Team & Advisors', percentage: '15' },
     { id: crypto.randomUUID(), name: 'Private Sale Investors', percentage: '20' },
     { id: crypto.randomUUID(), name: 'Ecosystem Development Fund', percentage: '35' },
     { id: crypto.randomUUID(), name: 'Community Rewards & Airdrops', percentage: '20' },
     { id: crypto.randomUUID(), name: 'Public Sale Allocation', percentage: '10' }]),
 
-  const [isLoading, setIsLoading] = useState(false),
-  const [isDownloading, setIsDownloading] = useState(false),
-  const [isSharing, setIsSharing] = useState(false),
-  const [isSubmittingToCounsel, setIsSubmittingToCounsel] = useState(false),
-  const [error, setError] = useState<string | null>(null),
-  const [shareableLink, setShareableLink] = useState<string | null>(null),
-  const [currentSharedWhitepaperId, setCurrentSharedWhitepaperId] = useState<string | null>(null), // For public/private toggle
-  const [currentSharedWhitepaperIsPublic, setCurrentSharedWhitepaperIsPublic] = useState<boolean | null>(null), // For public/private toggle
-  const [rawDraft, setRawDraft] = useState<string | null>(null),
-  const [sections, setSections] = useState<WhitepaperSection[]>([]),
-  const [showRawDraft, setShowRawDraft] = useState(false),
+  const [ isLoading, setIsLoading ] = useState(false),
+  const [ isDownloading, setIsDownloading ] = useState(false),
+  const [ isSharing, setIsSharing ] = useState(false),
+  const [ isSubmittingToCounsel, setIsSubmittingToCounsel ] = useState(false),
+  const [ error, setError ] = useState<string | null>(null),
+  const [ shareableLink, setShareableLink ] = useState<string | null>(null),
+  const [ currentSharedWhitepaperId, setCurrentSharedWhitepaperId ] = useState<string | null>(null), // For public/private toggle
+  const [ currentSharedWhitepaperIsPublic, setCurrentSharedWhitepaperIsPublic ] = useState<boolean | null>(null), // For public/private toggle
+  const [ rawDraft, setRawDraft ] = useState<string | null>(null),
+  const [ sections, setSections ] = useState<WhitepaperSection[]>([]),
+  const [ showRawDraft, setShowRawDraft ] = useState(false),
 
   const previewPanelRef = React.useRef<HTMLDivElement>(null),
 
@@ -146,7 +146,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
         apiPayload.distributionData = processedDistData
       }
 
-      const { data, error: funcError } = await supabase.functions.invoke('generate-whitepaper', {
+      const { data, error: funcError  } = await supabase.functions.invoke('generate-whitepaper', {
         body: apiPayload}),
 
       if (funcError) {
@@ -229,15 +229,14 @@ const WhitepaperGeneratorPage: React.FC = () => {
       return
     }
 
-    try {
-      // Temporarily ensure the entire preview panel content is visible for capture if it's scrollable internally.
+    try { // Temporarily ensure the entire preview panel content is visible for capture if it's scrollable internally.
       // This might involve temporarily changing styles, which is complex and error-prone.
       // A better approach for very long content is to paginate in jsPDF directly.
       // For now, we capture what's visible or rely on html2canvas's capabilities with scroll.
 
       const html2canvasModule = await import('html2canvas'),
       const html2canvas = html2canvasModule.default,
-      const { default: jsPDF } = await import('jspdf'),
+      const { default: jsPDF  } = await import('jspdf'),
 
       const canvas = await html2canvas(previewPanelRef.current, {
         scale: 2, // Increase scale for better resolution
@@ -297,7 +296,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
         sections,
         distributionChartData,
         distributionBreakdown},
-      const { data: response, error: funcError } = await supabase.functions.invoke('create-shared-whitepaper', {
+      const { data: response, error: funcError  } = await supabase.functions.invoke('create-shared-whitepaper', {
         body: whitepaperPayload}),
 
       if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),
@@ -328,9 +327,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
     const newPublicStatus = !currentSharedWhitepaperIsPublic,
 
     // For optimistic update: // setCurrentSharedWhitepaperIsPublic(newPublicStatus),
-
-    try {
-        const { data: response, error: funcError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {
+    try { const { data: response, error: funcError  } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {
             body: { whitepaperId: currentSharedWhitepaperId, isPublic: newPublicStatus }}),
         if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),
         if (!response) throw new Error('No response received from set-shared-whitepaper-public-status function'),
@@ -362,7 +359,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
         if (!linkToSubmit || !whitepaperIdToSubmit) {
             toast.info("Generating a shareable link first to submit to counsel..."),
             const whitepaperPayload = { tokenName, tokenSupply, sections, distributionChartData, distributionBreakdown },
-            const { data: linkResponse, error: linkFuncError } = await supabase.functions.invoke('create-shared-whitepaper', {
+            const { data: linkResponse, error: linkFuncError  } = await supabase.functions.invoke('create-shared-whitepaper', {
                 body: whitepaperPayload}),
             if (linkFuncError) throw new Error(`Failed to create link for counsel: ${linkFuncError.message}`),
             if (!linkResponse) throw new Error('No response received from create-shared-whitepaper function for counsel'),
@@ -377,9 +374,8 @@ const WhitepaperGeneratorPage: React.FC = () => {
         }
 
         // Ensure it's public before submitting, or handle as per requirements
-        if (currentSharedWhitepaperIsPublic === false) {
-            toast.info("Making whitepaper public before submitting to counsel..."),
-            const { data: statusResponse, error: statusError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {
+        if (currentSharedWhitepaperIsPublic === false) { toast.info("Making whitepaper public before submitting to counsel..."),
+            const { data: statusResponse, error: statusError  } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {
                 body: { whitepaperId: whitepaperIdToSubmit, isPublic: true }}),
             if (statusError) throw new Error(`Failed to make whitepaper public: ${statusError.message}`),
             if (!statusResponse) throw new Error('No response received from set-shared-whitepaper-public-status function'),
@@ -388,7 +384,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
         }
 
 
-        const { data: notifyResponse, error: notifyError } = await supabase.functions.invoke('notify-legal-team', {
+        const { data: notifyResponse, error: notifyError  } = await supabase.functions.invoke('notify-legal-team', {
             body: {
                 whitepaperId: whitepaperIdToSubmit,
                 sharableLink: linkToSubmit, // Corrected variable name
@@ -579,4 +575,4 @@ const WhitepaperGeneratorPage: React.FC = () => {
   )
 },
 
-export default WhitepaperGeneratorPage,
+export default WhitepaperGeneratorPage;

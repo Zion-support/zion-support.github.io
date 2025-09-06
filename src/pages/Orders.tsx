@@ -1,7 +1,7 @@
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
-import Link from 'next/link', // Changed from react-router-dom
-import { useAuth } from '@/hooks/useAuth',
-import { useGetOrdersQuery } from '@/hooks/useOrders',
+import Link from 'next/link'; // Changed from react-router-dom
+import { useAuth } from '@/hooks/useAuth';
+import { useGetOrdersQuery } from '@/hooks/useOrders';
 import {
   Table,
   TableBody,
@@ -9,15 +9,13 @@ import {
   TableHead,
   TableHeader,
   TableRow} from '@/components/ui/table',
-import { Badge } from '@/components/ui/badge',
-import Skeleton from '@/components/ui/skeleton',
-import { EmptyState } from '@/components/ui/empty-state',
-export default function OrdersPage() {
-  const { user } = useAuth(),
-  const { data: orders, isLoading } = useGetOrdersQuery(user?.id),
+import { Badge } from '@/components/ui/badge';
+import Skeleton from '@/components/ui/skeleton';
+import { EmptyState } from '@/components/ui/empty-state';
+export default function OrdersPage() { const { user  } = useAuth(),
+  const { data: orders, isLoading  } = useGetOrdersQuery(user?.id),
 
   const formatDate = (date: string) => new Date(date).toLocaleDateString(),
-
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'in_escrow':
@@ -42,8 +40,7 @@ export default function OrdersPage() {
       default:
         return status
     }
-  },
-
+  };
   return (
     <div className="container max-w-4xl py-10">
       <h1 className="text-3xl font-bold mb-6">Order History</h1>

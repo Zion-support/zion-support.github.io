@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react',
-import { useAuth } from '@/hooks/useAuth',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { Button } from '@/components/ui/button',
-import { Progress } from '@/components/ui/progress',
+import React, { useState, useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
 import { AlertTriangle, Package, Zap } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger',
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface BundleInfo {
   totalSize: number,
   gzippedSize: number,
@@ -21,8 +21,7 @@ interface ChunkInfo {
   cached: boolean
 }
 
-export function BundleAnalyzer() {
-  const { user } = useAuth(),
+export function BundleAnalyzer() { const { user  } = useAuth(),
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
   const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin,
 
@@ -30,11 +29,11 @@ export function BundleAnalyzer() {
     return null
   }
 
-  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null),
-  const [chunks, setChunks] = useState<ChunkInfo[]>([]),
-  const [isVisible, setIsVisible] = useState(false),
-  const [isCollecting, setIsCollecting] = useState(false),
-  const [shouldShow, setShouldShow] = useState(false),
+  const [ bundleInfo, setBundleInfo ] = useState<BundleInfo | null>(null),
+  const [ chunks, setChunks ] = useState<ChunkInfo[]>([]),
+  const [ isVisible, setIsVisible ] = useState(false),
+  const [ isCollecting, setIsCollecting ] = useState(false),
+  const [ shouldShow, setShouldShow ] = useState(false),
 
   useEffect(() => {
     // Only show in development or when explicitly enabled
@@ -67,7 +66,6 @@ export function BundleAnalyzer() {
       let totalSize = 0,
       let totalLoadTime = 0,
       const chunkData: ChunkInfo[] = [],
-
       scriptEntries.forEach(entry => {
         const size = entry.transferSize || entry.encodedBodySize || 0,
         const loadTime = entry.responseEnd - entry.requestStart,
@@ -123,8 +121,7 @@ export function BundleAnalyzer() {
     if (!current) {
       collectBundleInfo()
     }
-  },
-
+  };
   if (!shouldShow) {
     return null
   }

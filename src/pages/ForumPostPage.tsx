@@ -1,21 +1,21 @@
 
-import { useState } from "react",
-import Link from "next/link",
-import { useRouter } from "next/router",
-import { SEO } from "@/components/SEO",
-import { Button } from "@/components/ui/button",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-import { Alert, AlertDescription } from "@/components/ui/alert",
+import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { SEO } from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from 'lucide-react'
-import { formatDistanceToNow, format } from "date-fns",
-import { ForumPost, ForumReply } from "@/types/community",
-import { useAuth } from "@/hooks/useAuth",
-import ReplyCard from "@/components/community/ReplyCard",
-import ReplyForm from "@/components/community/ReplyForm",
-import { useToast } from "@/hooks/use-toast",
+import { formatDistanceToNow, format } from "date-fns";
+import { ForumPost, ForumReply } from "@/types/community";
+import { useAuth } from "@/hooks/useAuth";
+import ReplyCard from "@/components/community/ReplyCard";
+import ReplyForm from "@/components/community/ReplyForm";
+import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
@@ -88,16 +88,15 @@ const mockReplies: ForumReply[] = [
   }
 ],
 
-export default function ForumPostPage() {
-  // Using `useParams` without type arguments avoids issues when TypeScript
+export default function ForumPostPage() { // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
   // Cast the result instead to provide the expected shape.
   const router = useRouter(),
   const postId = router.query.postId as string,
-  const { user } = useAuth(),
-  const { toast } = useToast(),
-  const [post, setPost] = useState(mockPost),
-  const [replies, setReplies] = useState(mockReplies),
+  const { user  } = useAuth(),
+  const { toast  } = useToast(),
+  const [ post, setPost ] = useState(mockPost),
+  const [ replies, setReplies ] = useState(mockReplies),
   
   // Check if this is the user's own post
   const isAuthor = user?.id === post?.authorId,
@@ -242,8 +241,7 @@ export default function ForumPostPage() {
   },
   
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
-  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
-  
+  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a");
   return (
     <>
       <SEO

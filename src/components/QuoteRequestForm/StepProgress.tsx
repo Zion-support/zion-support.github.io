@@ -1,7 +1,7 @@
 
-import { QuoteRequestSteps } from "../QuoteRequestForm",
+import { QuoteRequestSteps } from "../QuoteRequestForm";
 import { CheckIcon } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import { cn } from "@/lib/utils";
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
 }
@@ -56,7 +56,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
               </div>
               <span 
                 className={cn(
-                  "text-xs mt-2 font-medium",
+                  "text-xs mt-2 font-medium";
                   status === "complete" ? "text-zion-cyan" : 
                   status === "current" ? "text-white" : 
                   "text-zion-slate-light"

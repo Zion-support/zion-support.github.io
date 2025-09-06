@@ -1,11 +1,11 @@
-import { useState } from 'react',
-import { useForm } from 'react-hook-form',
-import { zodResolver } from '@hookform/resolvers/zod',
-import { z } from 'zod',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Textarea } from '@/components/ui/textarea',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import {logErrorToProduction} from '@/utils/productionLogger';
 import {
   Form,
   FormControl,
@@ -14,9 +14,9 @@ import {
   FormLabel,
   FormMessage} from '@/components/ui/form',
 import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
-import { PortfolioProject } from '@/types/resume',
-import { usePortfolio } from '@/hooks/usePortfolio',
-import { useAuth } from '@/hooks/useAuth',
+import { PortfolioProject } from '@/types/resume';
+import { usePortfolio } from '@/hooks/usePortfolio';
+import { useAuth } from '@/hooks/useAuth';
 // Define schema for form validation
 const projectSchema = z.object({
   title: z.string().min(1, 'Project title is required'),
@@ -39,10 +39,9 @@ interface ProjectFormProps {
   onCancel: () => void
 }
 
-export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
-  const { user } = useAuth(),
-  const { addProject, updateProject } = usePortfolio(),
-  const [isLoading, setIsLoading] = useState(false),
+export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) { const { user  } = useAuth(),
+  const { addProject, updateProject  } = usePortfolio(),
+  const [ isLoading, setIsLoading ] = useState(false),
   const isEditing = !!project,
   
   const form = useForm<ProjectFormValues>({
@@ -59,7 +58,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
   
   const onSubmit = async (data: ProjectFormValues) => {
     if (!user) return,
-    
     setIsLoading(true),
     
     try {
@@ -83,7 +81,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       }
       
       if (success) {
-        onSuccess(),
+        onSuccess();
         form.reset()
       }
     } catch (error) {
@@ -91,8 +89,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     } finally {
       setIsLoading(false)
     }
-  },
-  
+  };
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">

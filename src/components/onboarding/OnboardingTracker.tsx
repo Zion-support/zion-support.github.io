@@ -1,9 +1,9 @@
 
-import React from "react",
+import React from "react";
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { Button } from "@/components/ui/button",
-import Link from "next/link",
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 export interface OnboardingStep {
   id: string,
   label: string,
@@ -24,8 +24,7 @@ export function OnboardingTracker({
   className 
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length,
-  const progress = Math.round((completedSteps / steps.length) * 100),
-
+  const progress = Math.round((completedSteps / steps.length) * 100);
   return (
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
       <div className="flex items-center justify-between mb-4">

@@ -1,7 +1,7 @@
-'use client',
+'use client';
 
-import Image from 'next/image',
-import { useState } from 'react',
+import Image from 'next/image';
+import { useState } from 'react';
 import { ImageIcon } from 'lucide-react'
 
 interface SafeImageProps {
@@ -26,8 +26,8 @@ export function SafeImage({
   priority = false,
   sizes,
   quality = 75}: SafeImageProps) {
-  const [hasError, setHasError] = useState(false),
-  const [currentSrc, setCurrentSrc] = useState(src),
+  const [ hasError, setHasError ] = useState(false),
+  const [ currentSrc, setCurrentSrc ] = useState(src),
 
   const handleError = () => {
     if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {
@@ -41,8 +41,7 @@ export function SafeImage({
     } else if (!hasError) {
       setHasError(true)
     }
-  },
-
+  };
   // If we have an error and no fallback, show a placeholder
   if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {
     return (

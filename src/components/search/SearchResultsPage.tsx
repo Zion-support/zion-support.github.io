@@ -1,17 +1,17 @@
-import React, { useState, useEffect, useMemo } from 'react',
-import { useRouter } from 'next/router',
+import React, { useState, useEffect, useMemo } from 'react';
+import { useRouter } from 'next/router';
 import { Search, Filter, X, SortAsc, SortDesc, GridIcon, List, Loader2 } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Badge } from '@/components/ui/badge',
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',
-import { Checkbox } from '@/components/ui/checkbox',
-import { Slider } from '@/components/ui/slider',
-import { Separator } from '@/components/ui/separator',
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet',
-import { EnhancedSearchInput } from './EnhancedSearchInput',
-import { generateSearchSuggestions } from '@/data/marketplaceData',
-import { logErrorToProduction, logInfo } from '@/utils/productionLogger',
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Badge } from '@/components/ui/badge';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Slider } from '@/components/ui/slider';
+import { Separator } from '@/components/ui/separator';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { EnhancedSearchInput } from './EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data/marketplaceData';
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
 
 interface SearchResult {
   id: string,
@@ -75,8 +75,8 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
 
 // Search Result Card Component
 const SearchResultCard: React.FC<{ 
-  result: SearchResult, 
-  searchTerm: string, 
+  result: SearchResult,
+  searchTerm: string,
   viewMode: 'grid' | 'list' 
 }> = ({ result, searchTerm, viewMode }) => {
   const router = useRouter(),
@@ -90,7 +90,6 @@ const SearchResultCard: React.FC<{
   const cardClass = viewMode === 'grid' 
     ? "bg-card border rounded-lg p-4 hover: shadow-lg transition-shadow cursor-pointer"
     : "bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4",
-
   return (
     <div onClick={handleClick} className={cardClass}>
       {result.image && (
@@ -176,8 +175,8 @@ const FilterSidebar: React.FC<{
 
   const handlePriceChange = (values: number[]) => {
     onFiltersChange({ 
-      ...filters, 
-      minPrice: values[0] ?? 0, 
+      ...filters,
+      minPrice: values[0] ?? 0,
       maxPrice: values[1] ?? 10000 
     })
   },
@@ -325,16 +324,16 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
 // Main Search Results Page Component
 export const SearchResultsPage: React.FC = () => {
   const router = useRouter(),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [results, setResults] = useState<SearchResult[]>([]),
-  const [loading, setLoading] = useState(false),
-  const [totalCount, setTotalCount] = useState(0),
-  const [currentPage, setCurrentPage] = useState(1),
-  const [hasMore, setHasMore] = useState(false),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [showFilters, setShowFilters] = useState(false),
+  const [ searchTerm, setSearchTerm ] = useState(''),
+  const [ results, setResults ] = useState<SearchResult[]>([]),
+  const [ loading, setLoading ] = useState(false),
+  const [ totalCount, setTotalCount ] = useState(0),
+  const [ currentPage, setCurrentPage ] = useState(1),
+  const [ hasMore, setHasMore ] = useState(false),
+  const [ viewMode, setViewMode ] = useState<'grid' | 'list'>('grid'),
+  const [ showFilters, setShowFilters ] = useState(false),
   
-  const [filters, setFilters] = useState<SearchFilters>({
+  const [ filters, setFilters ] = useState<SearchFilters>({
     types: [],
     category: '',
     minPrice: 0,
@@ -400,7 +399,6 @@ export const SearchResultsPage: React.FC = () => {
 
       const response = await fetch(`/api/search?${params}`),
       const data: SearchResponse = await response.json(),
-
       if (page === 1) {
         setResults(data.results)
       } else {
@@ -413,7 +411,7 @@ export const SearchResultsPage: React.FC = () => {
 
       logInfo('Search completed', { 
         term, 
-        resultCount: data.results.length, 
+        resultCount: data.results.length,
         totalCount: data.totalCount 
       })
     } catch (error) {
@@ -548,7 +546,7 @@ export const SearchResultsPage: React.FC = () => {
       {searchTerm && (
         <div className="flex gap-6">
           {/* Desktop Filters Sidebar */}
-          <div className="hidden lg:block w-64 flex-shrink-0">
+          <div className="hidden lg: block w-64 flex-shrink-0">
             <div className="bg-card border rounded-lg p-4 sticky top-4">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="font-semibold">Filters</h2>
@@ -633,4 +631,4 @@ export const SearchResultsPage: React.FC = () => {
   )
 },
 
-export default SearchResultsPage, 
+export default SearchResultsPage;

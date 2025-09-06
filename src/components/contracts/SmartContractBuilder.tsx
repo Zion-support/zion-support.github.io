@@ -1,16 +1,16 @@
-import { useState } from "react",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
+import { useState } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
 import { Save } from 'lucide-react'
-import { TalentProfile } from "@/types/talent",
-import { ContractForm, ContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",
-import { TemplateManager } from "./templates/TemplateManager",
-import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
-import { useSmartContracts } from "@/hooks/useSmartContracts",
-import { toast } from "sonner",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { TalentProfile } from "@/types/talent";
+import { ContractForm, ContractFormValues } from "./components/ContractForm";
+import { ContractPreview } from "./components/ContractPreview";
+import { TemplateManager } from "./templates/TemplateManager";
+import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts";
+import { useSmartContracts } from "@/hooks/useSmartContracts";
+import { toast } from "sonner";
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface SmartContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
@@ -25,21 +25,21 @@ export function SmartContractBuilder({
   talent,
   clientName,
   onContractGenerated}: SmartContractBuilderProps) {
-  const [activeTab, setActiveTab] = useState<string>("form"),
-  const [generatedContract, setGeneratedContract] = useState<string | null>(null),
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
+  const [ activeTab, setActiveTab ] = useState<string>("form"),
+  const [ generatedContract, setGeneratedContract ] = useState<string | null>(null),
+  const [ formValues, setFormValues ] = useState<ContractFormValues | undefined>(
     undefined
   ),
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
-  const [deployOptions, _setDeployOptions] = useState<DeploymentOptions>({
+  const [ templateManagerOpen, setTemplateManagerOpen ] = useState(false),
+  const [ deployOptions, _setDeployOptions ] = useState<DeploymentOptions>({
     network: 'ethereum',
     useEscrow: true,
     deployToChain: false
   }),
-  const [deployStatus, setDeployStatus] = useState<string>(''),
-  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),
+  const [ deployStatus, setDeployStatus ] = useState<string>(''),
+  const [ deploymentInfo, setDeploymentInfo ] = useState<SmartContractInfo | null>(null),
   
-  const { deploySmartContract } = useSmartContracts(),
+  const { deploySmartContract  } = useSmartContracts(),
 
   const handleLoadTemplate = (templateData: ContractFormValues) => {
     setFormValues(templateData)
@@ -78,8 +78,7 @@ export function SmartContractBuilder({
     }
     setGeneratedContract(contract),
     setActiveTab("preview")
-  },
-
+  };
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">

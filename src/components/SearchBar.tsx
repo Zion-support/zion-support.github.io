@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react',
-import { useRouter } from 'next/router',
+import React, { useState, useEffect, useRef } from 'react';
+import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react'
-import { Input } from '@/components/ui/input',
-import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions',
-import { fireEvent } from '@/lib/analytics',
-import { SearchSuggestion } from '@/types/search',
-import { slugify } from '@/lib/slugify',
-import { useDebounce } from '@/hooks/useDebounce',
-import { useOnClickOutside } from '@/hooks/useOnClickOutside',
+import { Input } from '@/components/ui/input';
+import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
+import { fireEvent } from '@/lib/analytics';
+import { SearchSuggestion } from '@/types/search';
+import { slugify } from '@/lib/slugify';
+import { useDebounce } from '@/hooks/useDebounce';
+import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 /**
  * SearchBar component props
  */
@@ -37,9 +37,9 @@ interface SearchBarProps {
  */
 export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
   const router = useRouter(),
-  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]),
-  const [focused, setFocused] = useState(false),
-  const [highlightedIndex, setHighlightedIndex] = useState(-1),
+  const [ suggestions, setSuggestions ] = useState<SearchSuggestion[]>([]),
+  const [ focused, setFocused ] = useState(false),
+  const [ highlightedIndex, setHighlightedIndex ] = useState(-1),
   const listId = 'searchbar-autocomplete-list',
   const debounced = useDebounce(value, 150),
   const inputRef = useRef<HTMLInputElement>(null),
@@ -169,7 +169,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
                 setFocused(false),
                 setHighlightedIndex(-1),
                 inputRef.current?.blur(),
-                break,
+                break;
               default: break
             }
           }}

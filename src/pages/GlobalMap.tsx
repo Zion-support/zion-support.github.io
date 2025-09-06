@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react',
-import { Header } from '@/components/Header',
-import { NextSeo } from '@/components/NextSeo',
+import React, { useEffect, useState } from 'react';
+import { Header } from '@/components/Header';
+import { NextSeo } from '@/components/NextSeo';
 import { Globe, MapPin } from 'lucide-react'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 interface Instance {
   id: number,
@@ -54,7 +54,7 @@ interface FeedItem {
 }
 
 export default function GlobalMapPage() {
-  const [feed, setFeed] = useState<FeedItem[]>([]),
+  const [ feed, setFeed ] = useState<FeedItem[]>([]),
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -86,9 +86,9 @@ export default function GlobalMapPage() {
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="relative" style={{ width, height }}>
             <Globe className="w-full h-full text-secondary" />
-            {INSTANCES.map((i) => {
-              const { x, y } = project(i.lat, i.lng),
-              const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
+            { INSTANCES.map((i) => {
+              const { x, y  } = project(i.lat, i.lng),
+              const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500';
               return (
                 <TooltipProvider key={i.id}>
                   <Tooltip>

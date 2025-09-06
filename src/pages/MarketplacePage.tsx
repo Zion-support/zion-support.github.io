@@ -1,20 +1,20 @@
-import { useRouter } from 'next/router',
-import { useState, useEffect, useCallback, useMemo } from 'react',
-import { useTranslation } from 'react-i18next',
-import { motion, AnimatePresence } from 'framer-motion',
+import { useRouter } from 'next/router';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react'
-import { NextSeo } from '@/components/NextSeo',
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
-import { ProductListing } from '@/types/listings',
-import { SkeletonCard } from '@/components/ui/skeleton',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { Card, CardContent, CardHeader } from '@/components/ui/card',
-import Spinner from '@/components/ui/spinner',
-import { MARKETPLACE_LISTINGS } from '@/data/listingData',
-import { INITIAL_MARKETPLACE_PRODUCTS } from '@/data/initialMarketplaceProducts',
-import { useCurrency } from '@/hooks/useCurrency',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { NextSeo } from '@/components/NextSeo';
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { ProductListing } from '@/types/listings';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { MARKETPLACE_LISTINGS } from '@/data/listingData';
+import { INITIAL_MARKETPLACE_PRODUCTS } from '@/data/initialMarketplaceProducts';
+import { useCurrency } from '@/hooks/useCurrency';
+import {logErrorToProduction} from '@/utils/productionLogger';
 // Market insights component
 const MarketplaceInsights = ({ stats }: { stats: any }) => (
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
@@ -74,16 +74,14 @@ const MarketplaceFilterControls = ({
       {showRecommended ? "All Products" : "Recommended"}
     </Button>
   </div>
-),
-
-import { useDispatch } from 'react-redux',
-import type { AppDispatch } from '@/store',
-import { addItem } from '@/store/cartSlice',
-import { useAuth } from '@/context/auth/AuthProvider',
-import { toast } from '@/hooks/use-toast',
+);
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem } from '@/store/cartSlice';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { toast } from '@/hooks/use-toast';
 // Product card
-const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: () => void, onAddToCart: () => void }) => {
-  const { formatPrice } = useCurrency(),
+const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: () => void, onAddToCart: () => void }) => { const { formatPrice  } = useCurrency(),
   return (
   <Card className="h-full hover:shadow-lg transition-shadow">
     <CardHeader className="pb-3">
@@ -144,14 +142,13 @@ const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number }) => (
 ),
 
 // Main component
-function MarketplacePageContent() {
-  const router = useRouter(),
-  const { t } = useTranslation(),
+function MarketplacePageContent() { const router = useRouter(),
+  const { t  } = useTranslation(),
   const dispatch = useDispatch<AppDispatch>(),
-  const { isAuthenticated } = useAuth(),
-  const [sortBy, setSortBy] = useState('newest'),
-  const [filterCategory, setFilterCategory] = useState(''),
-  const [showRecommended, setShowRecommended] = useState(false),
+  const { isAuthenticated  } = useAuth(),
+  const [ sortBy, setSortBy ] = useState('newest'),
+  const [ filterCategory, setFilterCategory ] = useState(''),
+  const [ showRecommended, setShowRecommended ] = useState(false),
 
   const fetchProducts = useCallback(async (page: number, limit: number) => {
     // Simulate API delay
@@ -206,8 +203,7 @@ function MarketplacePageContent() {
     }
   }, [sortBy, filterCategory, showRecommended]),
 
-  const {
-    items: products,
+  const { items: products,
     loading,
     error,
     hasMore,
@@ -217,7 +213,7 @@ function MarketplacePageContent() {
     refresh,
     scrollToTop,
     loadMore
-  } = useInfiniteScrollPagination(fetchProducts, 12),
+   } = useInfiniteScrollPagination(fetchProducts, 12),
 
   // Refresh when filters change
   useEffect(() => {
@@ -242,7 +238,7 @@ function MarketplacePageContent() {
     return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"]
   }, []),
 
-  const [showScrollTop, setShowScrollTop] = useState(false),
+  const [ showScrollTop, setShowScrollTop ] = useState(false),
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800),
     window.addEventListener('scroll', handleScroll),
@@ -364,7 +360,7 @@ function MarketplacePageContent() {
                     title: 'Added to cart',
                     description: `${item.title} has been added to your cart`,
                     action: {
-                      label: 'View Cart',
+                      label: 'View Cart';
                       onClick: () => router.push('/cart')}})
                 }}
               />

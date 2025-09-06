@@ -1,10 +1,10 @@
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-import Link from "next/link",
-import { TalentProfile } from "@/types/talent",
-import Image from 'next/image', // Import next/image
-import React, { useState } from 'react', // Import React and useState
+import Link from "next/link";
+import { TalentProfile } from "@/types/talent";
+import Image from 'next/image'; // Import next/image
+import React, { useState } from 'react'; // Import React and useState
 
 export interface TalentCardProps {
   talent: TalentProfile,
@@ -23,7 +23,7 @@ export function TalentCard({
   onToggleSave,
   isAuthenticated
 }: TalentCardProps) {
-  const [avatarError, setAvatarError] = useState(false),
+  const [ avatarError, setAvatarError ] = useState(false),
 
   const handleViewProfile = () => {
     if (onViewProfile) {
@@ -48,8 +48,7 @@ export function TalentCard({
   },
 
   const skills = talent.skills?.slice(0, 5) || [],
-  const talentNameInitial = talent.full_name?.charAt(0) || "T",
-
+  const talentNameInitial = talent.full_name?.charAt(0) || "T";
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>
       <div className="p-6">

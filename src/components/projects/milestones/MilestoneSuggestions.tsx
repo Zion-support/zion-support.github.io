@@ -1,11 +1,11 @@
 
-import React, { useState } from 'react',
-import { Button } from '@/components/ui/button',
-import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, Sparkles, Check } from 'lucide-react'
-import { Badge } from '@/components/ui/badge',
-import { format, parseISO } from 'date-fns',
+import { Badge } from '@/components/ui/badge';
+import { format, parseISO } from 'date-fns';
 
 interface MilestoneSuggestionsProps {
   projectName: string,
@@ -23,9 +23,8 @@ export function MilestoneSuggestions({
   endDate,
   projectType,
   onMilestonesGenerated
-}: MilestoneSuggestionsProps) {
-  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),
-  const [showSuggestions, setShowSuggestions] = useState(false),
+}: MilestoneSuggestionsProps) { const { generateMilestones, generatedMilestones, isGenerating  } = useMilestoneGenerator(),
+  const [ showSuggestions, setShowSuggestions ] = useState(false),
 
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
@@ -51,8 +50,7 @@ export function MilestoneSuggestions({
     } catch (error) {
       return dateString
     }
-  },
-
+  };
   return (
     <div className="space-y-4">
       {!showSuggestions && (

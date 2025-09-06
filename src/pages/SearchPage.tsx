@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react",
-import { useRouter } from 'next/router',
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { generateSearchSuggestions } from "@/data/marketplaceData",
-import { SearchSuggestion } from "@/types/search",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
+import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { generateSearchSuggestions } from "@/data/marketplaceData";
+import { SearchSuggestion } from "@/types/search";
+import {logErrorToProduction} from '@/utils/productionLogger';
 import {
   Tabs,
   TabsContent,
@@ -41,11 +41,10 @@ function highlight(text: string, term: string) {
 
 export default function SearchPage() {
   const router = useRouterReady(), // Use our custom hook
-  const [query, setQuery] = useState(""),
-  const [results, setResults] = useState<SearchResult[]>([]),
-  const [loading, setLoading] = useState(false),
+  const [ query, setQuery ] = useState(""),
+  const [ results, setResults ] = useState<SearchResult[]>([]),
+  const [ loading, setLoading ] = useState(false),
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
-
   // Force re-render and reset state when route changes
   const routeKey = useRouteChange(() => {
     setResults([]),
@@ -124,7 +123,7 @@ export default function SearchPage() {
             onChange={setQuery}
             onSelectSuggestion={(suggestion) => {
               const searchTerm = suggestion.text.trim(),
-              setQuery(searchTerm),
+              setQuery(searchTerm);
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
             }}
             searchSuggestions={suggestions}

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { Button } from '@/components/ui/button',
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react'
 
 interface HealthData {
@@ -16,7 +16,7 @@ interface HealthData {
     criticalErrors: number,
     responseTime: number,
     memoryUsage: number
-  },
+  };
   health: {
     status: string,
     score: number,
@@ -43,10 +43,10 @@ interface HealthData {
 }
 
 const HealthDashboard: React.FC = () => {
-  const [healthData, setHealthData] = useState<HealthData | null>(null),
-  const [loading, setLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
-  const [autoRefresh, setAutoRefresh] = useState(true),
+  const [ healthData, setHealthData ] = useState<HealthData | null>(null),
+  const [ loading, setLoading ] = useState(true),
+  const [ error, setError ] = useState<string | null>(null),
+  const [ autoRefresh, setAutoRefresh ] = useState(true),
 
   const fetchHealthData = async () => {
     try {
@@ -391,4 +391,4 @@ const HealthDashboard: React.FC = () => {
   )
 },
 
-export default HealthDashboard, 
+export default HealthDashboard;

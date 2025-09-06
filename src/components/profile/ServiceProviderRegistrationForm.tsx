@@ -1,15 +1,15 @@
-import React, { useState } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { useRouter } from "next/router",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Switch } from "@/components/ui/switch",
-import { Badge } from "@/components/ui/badge",
-import { Separator } from "@/components/ui/separator",
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger',
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { useRouter } from "next/router";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Switch } from "@/components/ui/switch";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Form,
   FormControl,
@@ -18,12 +18,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { toast } from "@/components/ui/use-toast";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 // Define form schema
 const serviceProfileSchema = z.object({
   name: z.string().min(2, "Full Name must be at least 2 characters long"),
@@ -39,14 +39,13 @@ const serviceProfileSchema = z.object({
 
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
 
-export function ServiceProviderRegistrationForm() {
-  const { user } = useAuth(),
+export function ServiceProviderRegistrationForm() { const { user  } = useAuth(),
   const router = useRouter(),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [serviceTags, setServiceTags] = useState<string[]>([]),
-  const [isGenerating, setIsGenerating] = useState(false),
-  const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),
-  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+  const [ serviceTags, setServiceTags ] = useState<string[]>([]),
+  const [ isGenerating, setIsGenerating ] = useState(false),
+  const [ generatedContent, setGeneratedContent ] = useState<{ summary: string, services: string[] } | null>(null),
+  const [ uploadedAvatar, setUploadedAvatar ] = useState<string | null>(null),
   
   // Initialize form with default values
   const form = useForm<ServiceFormValues>({
@@ -106,11 +105,10 @@ export function ServiceProviderRegistrationForm() {
       return
     }
 
-    try {
-      setIsGenerating(true),
+    try { setIsGenerating(true),
 
       // Call the Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke('service-profile-enhancer', {
+      const { data, error  } = await supabase.functions.invoke('service-profile-enhancer', {
         body: {
           providerData: {
             name: formData.name,
@@ -196,9 +194,8 @@ export function ServiceProviderRegistrationForm() {
       let finalSummary = values.bio,
       let finalServices = serviceTags,
       
-      if (values.enhancedProfile && !generatedContent) {
-        try {
-          const { data: aiData } = await supabase.functions.invoke('service-profile-enhancer', {
+      if (values.enhancedProfile && !generatedContent) { try {
+          const { data: aiData  } = await supabase.functions.invoke('service-profile-enhancer', {
             body: {
               providerData: {
                 name: values.name,
@@ -226,11 +223,11 @@ export function ServiceProviderRegistrationForm() {
       }
 
       // Get user email for notification
-      const { data: userData } = await supabase.auth.getUser(),
+      const { data: userData  } = await supabase.auth.getUser(),
       const userEmail = (userData as any).user?.email,
 
       // Create the service profile
-      const { data: profileData, error } = await supabase
+      const { data: profileData, error  } = await supabase
         .from('profiles')
         .update({
           display_name: values.name,
@@ -250,7 +247,7 @@ export function ServiceProviderRegistrationForm() {
       // (This assumes you have a service_profiles table in your database)
 
       /*
-      const { error: serviceError } = await supabase
+      const { error: serviceError  } = await supabase
         .from('service_profiles')
         .insert({
           user_id: user.id,
@@ -302,13 +299,12 @@ export function ServiceProviderRegistrationForm() {
       logErrorToProduction('Error creating profile:', { data: error }),
       toast({
         title: "Error Creating Profile",
-        description: error.message || "There was an error creating your profile. Please try again.",
+        description: error.message || "There was an error creating your profile. Please try again.";
         variant: "destructive"})
     } finally {
       setIsSubmitting(false)
     }
-  },
-
+  };
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">

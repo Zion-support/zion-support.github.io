@@ -1,9 +1,9 @@
 
-import { useState } from 'react',
-import { Button } from '@/components/ui/button',
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
-import { toast } from '@/hooks/use-toast',
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
+import { toast } from '@/hooks/use-toast';
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
   onEnhanced: (enhancedContent: string) => void,
@@ -22,10 +22,9 @@ export function AIEnhancementButton({
   variant = "ghost",
   size = "sm",
   contentLength = 10
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),
-  const [showActions, setShowActions] = useState(false),
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null),
+}: AIEnhancementButtonProps) { const { enhanceContent, isEnhancing  } = useAIContentEnhancer(),
+  const [ showActions, setShowActions ] = useState(false),
+  const [ generatedContent, setGeneratedContent ] = useState<string | null>(null),
   
   const handleEnhance = async () => {
     if ((!options.content || options.content.trim().length < contentLength) && 
@@ -64,8 +63,7 @@ export function AIEnhancementButton({
   const handleCancel = () => {
     setShowActions(false),
     setGeneratedContent(null)
-  },
-  
+  };
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">

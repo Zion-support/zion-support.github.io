@@ -1,27 +1,26 @@
 
-import React, { useState } from "react",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { Interview } from "@/types/interview",
-import { useAuth } from "@/hooks/useAuth",
-import { useInterviews } from "@/hooks/useInterviews",
-import { format, formatDistanceToNow, isPast, parseISO } from "date-fns",
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+import React, { useState } from "react";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Interview } from "@/types/interview";
+import { useAuth } from "@/hooks/useAuth";
+import { useInterviews } from "@/hooks/useInterviews";
+import { format, formatDistanceToNow, isPast, parseISO } from "date-fns";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { InterviewResponseForm } from "./InterviewResponseForm",
+import { toast } from "@/components/ui/use-toast";
+import { InterviewResponseForm } from "./InterviewResponseForm";
 interface InterviewCardProps {
   interview: Interview,
   onRefresh: () => Promise<void>
 }
 
-export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
-  const { user } = useAuth(),
-  const { respondToInterview, cancelInterview } = useInterviews(),
-  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false),
-  const [isLoading, setIsLoading] = useState(false),
+export function InterviewCard({ interview, onRefresh }: InterviewCardProps) { const { user  } = useAuth(),
+  const { respondToInterview, cancelInterview  } = useInterviews(),
+  const [ isResponseDialogOpen, setIsResponseDialogOpen ] = useState(false),
+  const [ isLoading, setIsLoading ] = useState(false),
   
   const isClient = user?.id === interview.client_id,
   const isTalent = user?.id === interview.talent_id,
@@ -30,12 +29,10 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   const interviewDate = parseISO(interview.scheduled_date),
   const formattedDate = format(interviewDate, 'EEEE, MMMM d'),
   const formattedTime = format(interviewDate, 'h: mm a'),
-
   // Calculate when interview ends
   const endTime = new Date(interviewDate),
   endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes),
   const formattedEndTime = format(endTime, 'h: mm a'),
-  
   const isInterviewPending = interview.status === 'requested',
   const isInterviewConfirmed = interview.status === 'confirmed',
   const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate.getTime() - 5 * 60000)), // 5 minutes before
@@ -52,7 +49,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading(true),
     const success = await respondToInterview(interview.id, { 
-      interview_id: interview.id, 
+      interview_id: interview.id,
       status 
     }),
     
@@ -120,8 +117,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
     } else {
       return interview.client_name || 'Client'
     }
-  },
-
+  };
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2 relative">

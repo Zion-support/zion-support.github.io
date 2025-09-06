@@ -1,5 +1,5 @@
 
-import React from "react",
+import React from "react";
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
 
 export const MobileFeatureShowcase: React.FC = () => {
@@ -60,4 +60,4 @@ export const MobileFeatureShowcase: React.FC = () => {
       </div>
     </section>
   )
-},
+};

@@ -1,28 +1,26 @@
 
-import React, { useEffect, useState } from 'react',
+import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react'
-import { useMessaging } from '@/context/MessagingContext',
-import { ProtectedRoute } from '@/components/ProtectedRoute',
-import { ConversationsList, ConversationDetailView } from '@/components/messaging',
-import { useIsMobile } from '@/hooks/use-mobile',
-import { toast } from 'sonner',
-import { Button } from '@/components/ui/button',
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
-import { useRouter } from 'next/router', // Changed from react-router-dom
-import {logErrorToProduction} from '@/utils/productionLogger',
-export default function MessagingInbox() {
-
-  const { 
+import { useMessaging } from '@/context/MessagingContext';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { ConversationsList, ConversationDetailView } from '@/components/messaging';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { toast } from 'sonner';
+import { Button } from '@/components/ui/button';
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
+import { useRouter } from 'next/router'; // Changed from react-router-dom
+import {logErrorToProduction} from '@/utils/productionLogger';
+export default function MessagingInbox() { const { 
     conversations,
     activeConversation, 
     setActiveConversation, 
     markAsRead,
     fetchConversations,
     isLoading
-  } = useMessaging(),
+   } = useMessaging(),
   const isMobile = useIsMobile(),
   const router = useRouter(), // Changed from navigate
-  const [activeCall, setActiveCall] = useState<string | null>(null),
+  const [ activeCall, setActiveCall ] = useState<string | null>(null),
   
   useEffect(() => {
     // Fetch conversations when component mounts
@@ -54,8 +52,7 @@ export default function MessagingInbox() {
     
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
-  },
-  
+  };
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">

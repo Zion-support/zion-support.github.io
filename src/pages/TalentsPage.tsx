@@ -1,16 +1,16 @@
-import { useRouter } from 'next/router',
-import { useState, useEffect, useCallback, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
+import { useRouter } from 'next/router';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
-import { generateAITalents, getTalentMarketStats, getRecommendedTalents } from '@/utils/talentAutoFeedAlgorithm',
-import { TALENT_PROFILES } from '@/data/talentData',
-import { TalentProfile } from '@/types/talent',
-import { SkeletonCard } from '@/components/ui/skeleton',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import Spinner from '@/components/ui/spinner',
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { generateAITalents, getTalentMarketStats, getRecommendedTalents } from '@/utils/talentAutoFeedAlgorithm';
+import { TALENT_PROFILES } from '@/data/talentData';
+import { TalentProfile } from '@/types/talent';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
 // Market insights component for talents
 const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
@@ -216,11 +216,11 @@ const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
 // Main enhanced talents page with infinite scroll
 export default function TalentsPage() {
   const router = useRouter(),
-  const [sortBy, setSortBy] = useState('newest'),
-  const [filterSpecialization, setFilterSpecialization] = useState(''),
-  const [filterAvailability, setFilterAvailability] = useState(''),
-  const [showRecommended, setShowRecommended] = useState(false),
-  const [totalGenerated, setTotalGenerated] = useState(0),
+  const [ sortBy, setSortBy ] = useState('newest'),
+  const [ filterSpecialization, setFilterSpecialization ] = useState(''),
+  const [ filterAvailability, setFilterAvailability ] = useState(''),
+  const [ showRecommended, setShowRecommended ] = useState(false),
+  const [ totalGenerated, setTotalGenerated ] = useState(0),
 
   // Fetch function for infinite scroll with AI talent generation
   const fetchTalents = useCallback(async (page: number, limit: number) => {
@@ -228,7 +228,6 @@ export default function TalentsPage() {
     await new Promise(resolve => setTimeout(resolve, 300)),
 
     let allTalents: TalentProfile[] = [],
-    
     // Start with existing talent profiles
     if (page === 1) {
       allTalents = [...TALENT_PROFILES]
@@ -289,8 +288,7 @@ export default function TalentsPage() {
   }, [sortBy, filterSpecialization, filterAvailability, showRecommended, totalGenerated]),
 
   // Use infinite scroll hook
-  const {
-    items: talents,
+  const { items: talents,
     loading,
     error,
     hasMore,
@@ -300,7 +298,7 @@ export default function TalentsPage() {
     refresh,
     scrollToTop,
     loadMore
-  } = useInfiniteScrollPagination(fetchTalents, 16),
+   } = useInfiniteScrollPagination(fetchTalents, 16),
 
   // Refresh when filters change
   useEffect(() => {
@@ -320,15 +318,14 @@ export default function TalentsPage() {
   }, [talents]),
 
   // Show scroll to top button
-  const [showScrollTop, setShowScrollTop] = useState(false),
+  const [ showScrollTop, setShowScrollTop ] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 800)
     },
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
-
+  }, []);
   // Loading state
   if (loading && talents.length === 0) {
     return (

@@ -1,16 +1,16 @@
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
+import React, { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { Loader, Sparkles } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { useForm } from "react-hook-form",
-import z from "zod",
-import { zodResolver } from "@hookform/resolvers/zod",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { supabase } from "@/integrations/supabase/client";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { useForm } from "react-hook-form";
+import z from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {logErrorToProduction} from '@/utils/productionLogger';
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   keyFeatures: z.string(),
@@ -22,9 +22,8 @@ interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void
 }
 
-export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
-  const { toast } = useToast(),
-  const [isLoading, setIsLoading] = useState(false),
+export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) { const { toast  } = useToast(),
+  const [ isLoading, setIsLoading ] = useState(false),
   
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -33,14 +32,12 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       keyFeatures: "",
       targetAudience: ""}}),
 
-  const handleSubmit = async (data: FormData) => {
-    setIsLoading(true),
-    
+  const handleSubmit = async (data: FormData) => { setIsLoading(true),
     try {
-      const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
+      const { data: response, error  } = await supabase.functions.invoke('generate-service-description', {
         body: { 
-          title: data.title, 
-          keyFeatures: data.keyFeatures, 
+          title: data.title,
+          keyFeatures: data.keyFeatures,
           targetAudience: data.targetAudience 
         }
       }),
@@ -65,14 +62,13 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       logErrorToProduction('Error generating description:', { data: error }),
       toast({
         title: "Generation Failed",
-        description: error instanceof Error ? error.message : "Failed to generate description. Please try again.",
+        description: error instanceof Error ? error.message : "Failed to generate description. Please try again.";
         variant: "destructive"
       })
     } finally {
       setIsLoading(false)
     }
-  },
-
+  };
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>

@@ -1,20 +1,19 @@
-import React, { useState } from 'react',
-import { useRouter } from 'next/router', // Changed from useParams
-import { Header } from '@/components/Header',
-import { SEO } from '@/components/SEO',
-import { Button } from '@/components/ui/button',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
+import React, { useState } from 'react';
+import { useRouter } from 'next/router'; // Changed from useParams
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react'
-import { VideoCallRoom } from '@/components/video/VideoCallRoom',
-import { toast } from 'sonner',
-export default function ProjectRoom() {
-  const router = useRouter(),
-  const { projectId: rawProjectId } = router.query,
+import { VideoCallRoom } from '@/components/video/VideoCallRoom';
+import { toast } from 'sonner';
+export default function ProjectRoom() { const router = useRouter(),
+  const { projectId: rawProjectId  } = router.query,
   const projectId = typeof rawProjectId === 'string' ? rawProjectId : '', // Ensure string, default to empty if not
-  const [activeTab, setActiveTab] = useState('chat'),
-  const [isInCall, setIsInCall] = useState(false),
-  const [callParticipants, setCallParticipants] = useState<Array<{
+  const [ activeTab, setActiveTab ] = useState('chat'),
+  const [ isInCall, setIsInCall ] = useState(false),
+  const [ callParticipants, setCallParticipants ] = useState<Array<{
     id: string,
     name: string,
     avatar?: string,
@@ -64,8 +63,7 @@ export default function ProjectRoom() {
       setCallParticipants(prev => [...prev, randomUser]),
       toast(`${randomUser.name} joined the call`)
     }
-  },
-  
+  };
   return (
     <>
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />

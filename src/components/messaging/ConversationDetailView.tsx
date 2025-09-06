@@ -1,23 +1,21 @@
 
-import React, { useState, useEffect, useRef } from 'react',
-import { format } from 'date-fns',
+import React, { useState, useEffect, useRef } from 'react';
+import { format } from 'date-fns';
 import { MessageSquare } from 'lucide-react'
-import { useMessaging } from '@/context/MessagingContext',
-import { Button } from '@/components/ui/button',
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
-import { AspectRatio } from '@/components/ui/aspect-ratio',
-import { useAuth } from '@/hooks/useAuth',
-import { MessageBubble } from './MessageBubble',
-import { DateDivider } from './DateDivider',
-export function ConversationDetailView() {
-  const { user } = useAuth(),
-  const { 
-    activeConversation,
+import { useMessaging } from '@/context/MessagingContext';
+import { Button } from '@/components/ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { useAuth } from '@/hooks/useAuth';
+import { MessageBubble } from './MessageBubble';
+import { DateDivider } from './DateDivider';
+export function ConversationDetailView() { const { user  } = useAuth(),
+  const { activeConversation,
     activeMessages, 
     sendMessage, 
     loadMessages
-  } = useMessaging(),
-  const [messageText, setMessageText] = useState(''),
+   } = useMessaging(),
+  const [ messageText, setMessageText ] = useState(''),
   const messagesEndRef = useRef<HTMLDivElement>(null),
   const inputRef = useRef<HTMLTextAreaElement | null>(null),
   
@@ -86,8 +84,7 @@ export function ConversationDetailView() {
   }),
   
   const hasContextData = activeConversation.context_data && 
-    (activeConversation.context_data.title || activeConversation.context_data.description),
-
+    (activeConversation.context_data.title || activeConversation.context_data.description);
   return (
     <div className="flex-1 flex flex-col h-full">
       {/* Header */}

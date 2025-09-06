@@ -1,11 +1,11 @@
 
-import React from "react",
-import { Card } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import React from "react";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Search } from 'lucide-react'
-import { Input } from "@/components/ui/input",
-import { cn } from "@/lib/utils",
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
 interface Conversation {
   id: string,
   name: string,
@@ -53,7 +53,7 @@ export function MobileConversationList({
           <div
             key={conversation.id}
             className={cn(
-              "px-4",
+              "px-4";
               activeConversation === conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation.id)}

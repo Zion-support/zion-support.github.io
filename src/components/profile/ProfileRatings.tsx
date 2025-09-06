@@ -1,11 +1,11 @@
 
-import { useState, useEffect } from "react",
+import { useState, useEffect } from "react";
 import { Star } from 'lucide-react'
-import { ReviewStats } from "@/components/reviews/ReviewStats",
-import { ReviewsList } from "@/components/reviews/ReviewsList",
-import { useReviews } from "@/hooks/useReviews",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { ReviewStats } from "@/components/reviews/ReviewStats";
+import { ReviewsList } from "@/components/reviews/ReviewsList";
+import { useReviews } from "@/hooks/useReviews";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 interface ProfileRatingsProps {
   userId: string,
@@ -13,9 +13,8 @@ interface ProfileRatingsProps {
   ratingCount?: number
 }
 
-export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {
-  const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews(),
-  const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({}),
+export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) { const { reviews, isLoading, fetchUserReviews, reportReview  } = useReviews(),
+  const [ ratingDistribution, setRatingDistribution ] = useState<Record<number, number>>({}),
   
   // Calculate rating distribution
   useEffect(() => {
@@ -24,7 +23,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
       
       reviews.forEach((review) => {
         if (review.rating >= 1 && review.rating <= 5) {
-          distribution[review.rating] = (distribution[review.rating] || 0) + 1
+          distribution[ review.rating ] = (distribution[review.rating] || 0) + 1
         }
       }),
       
@@ -35,8 +34,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   // Fetch reviews when component mounts
   useEffect(() => {
     fetchUserReviews(userId)
-  }, [userId]),
-  
+  }, [userId]);
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">

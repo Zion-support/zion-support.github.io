@@ -1,40 +1,39 @@
-import { useState } from 'react',
-import { Header } from '@/components/Header',
-import { SEO } from '@/components/SEO',
-import { GradientHeading } from '@/components/GradientHeading',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Textarea } from '@/components/ui/textarea',
-import { Card } from '@/components/ui/card',
-import { toast } from '@/components/ui/use-toast',
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger',
+import { useState } from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Card } from '@/components/ui/card';
+import { toast } from '@/components/ui/use-toast';
+import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger} from '@/components/ui/tooltip',
-import z from 'zod',
-import { ChatAssistant } from '@/components/ChatAssistant',
+import z from 'zod';
+import { ChatAssistant } from '@/components/ChatAssistant';
 import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
+  const [ formData, setFormData ] = useState({
     name: '',
     email: '',
     message: ''}),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [errors, setErrors] = useState<{
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+  const [ errors, setErrors ] = useState<{
     name?: string,
     email?: string,
     message?: string
   }>({}),
-  const [isChatOpen, setIsChatOpen] = useState(false),
-  const [submitted, setSubmitted] = useState(false),
+  const [ isChatOpen, setIsChatOpen ] = useState(false),
+  const [ submitted, setSubmitted ] = useState(false),
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target,
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => { const { name, value  } = e.target,
     setFormData((prev) => ({ ...prev, [name]: value })),
     setErrors((prev) => ({ ...prev, [name]: undefined }))
   },
@@ -152,8 +151,7 @@ export default function Contact() {
       logErrorToProduction('Error in AI chat', error),
       toast({
         title: 'Chat Error',
-        description:
-          'There was an error communicating with our AI assistant. Please try again.',
+        description: 'There was an error communicating with our AI assistant. Please try again.',
         variant: 'destructive'}),
       return Promise.resolve()
     }
@@ -430,7 +428,7 @@ export default function Contact() {
           recipient={{
             id: 'ai-assistant',
             name: 'AI Assistant',
-            avatarUrl: 'https://placehold.co/64x64?text=AI',
+            avatarUrl: 'https://placehold.co/64x64?text=AI';
             role: 'Support Bot'}}
           onSendMessage={handleSendMessage}
           starterQuestions={[

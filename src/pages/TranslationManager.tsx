@@ -1,32 +1,30 @@
-import React, { useState, useEffect } from 'react',
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/components/ui/use-toast",
-import { useTranslation } from "react-i18next",
+import React, { useState, useEffect } from 'react';
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { toast } from "@/components/ui/use-toast";
+import { useTranslation } from "react-i18next";
 import { AlertTriangle, Check, Globe, Search, Loader2 } from 'lucide-react'
-import { useIsMobile } from "@/hooks/use-mobile",
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
-import { useTranslationService } from "@/hooks/useTranslationService",
-import {logErrorToProduction} from '@/utils/productionLogger',
-export default function TranslationManager() {
-
-  const { t, i18n } = useTranslation(),
+import { useIsMobile } from "@/hooks/use-mobile";
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+import { useTranslationService } from "@/hooks/useTranslationService";
+import {logErrorToProduction} from '@/utils/productionLogger';
+export default function TranslationManager() { const { t, i18n  } = useTranslation(),
   const isMobile = useIsMobile(),
-  const { supportedLanguages } = useLanguage(),
-  const { translateContent, isTranslating } = useTranslationService(),
+  const { supportedLanguages  } = useLanguage(),
+  const { translateContent, isTranslating  } = useTranslationService(),
   
-  const [selectedNamespace, setSelectedNamespace] = useState("translation"),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [translations, setTranslations] = useState<Record<string, any>>({}),
-  const [filteredKeys, setFilteredKeys] = useState<string[]>([]),
-  const [editingKey, setEditingKey] = useState<string | null>(null),
-  const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({}),
-  const [isSaving, setIsSaving] = useState(false),
+  const [ selectedNamespace, setSelectedNamespace ] = useState("translation"),
+  const [ searchQuery, setSearchQuery ] = useState(""),
+  const [ translations, setTranslations ] = useState<Record<string, any>>({}),
+  const [ filteredKeys, setFilteredKeys ] = useState<string[]>([]),
+  const [ editingKey, setEditingKey ] = useState<string | null>(null),
+  const [ editedTranslations, setEditedTranslations ] = useState<Record<string, Record<SupportedLanguage, string>>>({}),
+  const [ isSaving, setIsSaving ] = useState(false),
   
   // Simulated translation data - in a real app, this would come from your backend
   useEffect(() => {
@@ -40,16 +38,16 @@ export default function TranslationManager() {
         const flattenObject = (obj: any, prefix = '') => {
           return Object.keys(obj).reduce((acc, key) => {
             const pre = prefix.length ? `${prefix}.` : '',
-            if (typeof obj[key] === 'object' && obj[key] !== null) {
+            if (typeof obj[ key ] = == 'object' && obj[key] !== null) {
               Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))
             } else {
-              acc[`${pre}${key}`] = obj[key]
+              acc[ `${pre}${key}` ] = obj[key]
             }
             return acc
           }, {} as Record<string, string>)
         },
         
-        currentTranslations[lang.code] = flattenObject(res)
+        currentTranslations[ lang.code ] = flattenObject(res)
       }
     }),
     
@@ -78,7 +76,6 @@ export default function TranslationManager() {
     
     const query = searchQuery.toLowerCase().trim(),
     const filtered: string[] = [],
-    
     // Search in keys and values
     Object.values(translations).forEach(langTranslations => {
       Object.entries(langTranslations).forEach(([key, value]) => {
@@ -96,11 +93,10 @@ export default function TranslationManager() {
   
   const handleEdit = (key: string) => {
     setEditingKey(key),
-    
     // Initialize edited translations for this key
     const initialEdits: Record<SupportedLanguage, string> = {} as Record<SupportedLanguage, string>,
     supportedLanguages.forEach(lang => {
-      initialEdits[lang.code] = translations[lang.code]?.[key] || ''
+      initialEdits[ lang.code ] = translations[lang.code]?.[key] || ''
     }),
     
     setEditedTranslations({
@@ -111,7 +107,6 @@ export default function TranslationManager() {
   
   const handleSave = (key: string) => {
     setIsSaving(true),
-    
     // In a real application, you would save these to your backend
     setTimeout(() => {
       // Update translations with edited values
@@ -119,9 +114,9 @@ export default function TranslationManager() {
       
       supportedLanguages.forEach(lang => {
         if (!updatedTranslations[lang.code]) {
-          updatedTranslations[lang.code] = {}
+          updatedTranslations[ lang.code ] = {}
         }
-        updatedTranslations[lang.code][key] = editedTranslations[key]?.[lang.code] || ''
+        updatedTranslations[lang.code][ key ] = editedTranslations[key]?.[lang.code] || ''
       }),
       
       setTranslations(updatedTranslations),
@@ -155,8 +150,7 @@ export default function TranslationManager() {
       return
     }
     
-    try {
-      const { translations: translatedText, error } = await translateContent(
+    try { const { translations: translatedText, error  } = await translateContent(
         sourceText, 
         'general', 
         sourceLanguage
@@ -206,8 +200,7 @@ export default function TranslationManager() {
     return supportedLanguages
       .map(lang => lang.code)
       .filter(lang => !translations[lang]?.[key])
-  },
-  
+  };
   return (
     <>
       <SEO 

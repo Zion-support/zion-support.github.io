@@ -1,18 +1,18 @@
-import { useRouter } from 'next/router',
-import { useState, useEffect, useCallback, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
+import { useRouter } from 'next/router';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
-import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment } from '@/utils/equipmentAutoFeedAlgorithm',
-import { ProductListing } from '@/types/listings',
-import { SkeletonCard } from '@/components/ui/skeleton',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import Spinner from '@/components/ui/spinner',
-import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary',
-import { useCurrency } from '@/hooks/useCurrency',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment } from '@/utils/equipmentAutoFeedAlgorithm';
+import { ProductListing } from '@/types/listings';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary';
+import { useCurrency } from '@/hooks/useCurrency';
+import {logErrorToProduction} from '@/utils/productionLogger';
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
@@ -185,8 +185,7 @@ const EquipmentFilterControls = ({
 ),
 
 // Equipment card
-const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
-  const { formatPrice } = useCurrency(),
+const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => { const { formatPrice  } = useCurrency(),
   return (
     <Card className="h-full hover:shadow-lg transition-shadow">
       <CardHeader className="pb-3">
@@ -263,9 +262,9 @@ function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error, r
 // Main component
 function EquipmentPageContent() {
   const router = useRouter(),
-  const [sortBy, setSortBy] = useState('newest'),
-  const [filterCategory, setFilterCategory] = useState(''),
-  const [showRecommended, setShowRecommended] = useState(false),
+  const [ sortBy, setSortBy ] = useState('newest'),
+  const [ filterCategory, setFilterCategory ] = useState(''),
+  const [ showRecommended, setShowRecommended ] = useState(false),
 
   // Generate a consistent seed based on current filters for deterministic data
   const dataSeed = useMemo(() => {
@@ -339,8 +338,7 @@ function EquipmentPageContent() {
     }
   }, [sortBy, filterCategory, showRecommended, dataSeed]),
 
-  const {
-    items: equipment,
+  const { items: equipment,
     loading,
     error,
     hasMore,
@@ -350,7 +348,7 @@ function EquipmentPageContent() {
     refresh,
     scrollToTop,
     loadMore
-  } = useInfiniteScrollPagination(fetchEquipment, 12),
+   } = useInfiniteScrollPagination(fetchEquipment, 12),
 
   // Refresh when filters change
   useEffect(() => {
@@ -371,13 +369,12 @@ function EquipmentPageContent() {
     return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"]
   }, []),
 
-  const [showScrollTop, setShowScrollTop] = useState(false),
+  const [ showScrollTop, setShowScrollTop ] = useState(false),
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800),
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
-
+  }, []);
   // Loading state
   if (loading && equipment.length === 0) {
     return (

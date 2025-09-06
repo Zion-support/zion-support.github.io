@@ -1,14 +1,14 @@
 
-import { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { z } from "zod",
+import { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm, ControllerRenderProps } from "react-hook-form";
+import { z } from "zod";
 import { LockKeyhole } from 'lucide-react'
 
-import { supabase } from "@/integrations/supabase/client",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+import { supabase } from "@/integrations/supabase/client";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Form,
   FormControl,
@@ -16,9 +16,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-import { toast } from "@/hooks/use-toast",
-import { cleanupAuthState } from "@/utils/authUtils",
-import { logErrorToProduction } from '@/utils/productionLogger',
+import { toast } from "@/hooks/use-toast";
+import { cleanupAuthState } from "@/utils/authUtils";
+import { logErrorToProduction } from '@/utils/productionLogger';
 // Form validation schema
 const updatePasswordSchema = z
   .object({
@@ -34,10 +34,10 @@ const updatePasswordSchema = z
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
 export default function UpdatePassword() {
-  const [isLoading, setIsLoading] = useState(false),
-  const [accessToken, setAccessToken] = useState<string | null>(null),
-  const [error, setError] = useState<string | null>(null),
-  const [success, setSuccess] = useState(false),
+  const [ isLoading, setIsLoading ] = useState(false),
+  const [ accessToken, setAccessToken ] = useState<string | null>(null),
+  const [ error, setError ] = useState<string | null>(null),
+  const [ success, setSuccess ] = useState(false),
   const router = useRouter(),
 
   // Initialize react-hook-form
@@ -78,7 +78,7 @@ export default function UpdatePassword() {
         refresh_token: ''}),
 
       // Update the password
-      const { error } = await supabase.auth.updateUser({
+      const { error  } = await supabase.auth.updateUser({
         password: data.password}),
 
       if (error) {
@@ -114,12 +114,11 @@ export default function UpdatePassword() {
   },
 
   const onInvalid = (errors: any) => {
-    const firstError = Object.keys(errors)[0] as keyof UpdatePasswordFormValues,
+    const firstError = Object.keys(errors)[0] as keyof UpdatePasswordFormValues;
     if (firstError) {
       form.setFocus(firstError)
     }
-  },
-
+  };
   return (
     <>
       <div className="flex min-h-screen bg-zion-blue">

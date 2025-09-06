@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
-import { Button } from "@/components/ui/button",
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
+import { Button } from "@/components/ui/button";
 import { Send } from 'lucide-react'
 
 interface ChatInputProps {
@@ -8,7 +8,7 @@ interface ChatInputProps {
 }
 
 export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
-  const [message, setMessage] = useState(''),
+  const [ message, setMessage ] = useState(''),
   const inputRef = useRef<HTMLTextAreaElement>(null),
 
   useEffect(() => {
@@ -32,8 +32,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         setMessage('')
       }
     }
-  },
-
+  };
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
       <textarea

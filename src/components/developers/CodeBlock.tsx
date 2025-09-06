@@ -1,7 +1,7 @@
 
-import { useState } from 'react',
+import { useState } from 'react';
 import { Check, Copy } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import { cn } from "@/lib/utils";
 interface CodeBlockProps {
   code: string,
   language?: string,
@@ -15,7 +15,7 @@ export function CodeBlock({
   showLineNumbers = false,
   className
 }: CodeBlockProps) {
-  const [copied, setCopied] = useState(false),
+  const [ copied, setCopied ] = useState(false),
 
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code),
@@ -61,4 +61,4 @@ export function CodeBlock({
   )
 }
 
-export default CodeBlock,
+export default CodeBlock;

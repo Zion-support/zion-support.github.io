@@ -1,7 +1,7 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
+import { toast } from "@/hooks/use-toast";
 interface ResourceItem {
   id: string,
   title: string,
@@ -69,8 +69,7 @@ export function PartnerResources() {
       title: "Download started",
       description: `Downloading ${resource.title}`,
       variant: "default"})
-  },
-
+  };
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">

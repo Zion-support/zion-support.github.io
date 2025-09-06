@@ -1,9 +1,9 @@
 
-import React, { useState, useEffect } from "react",
-import { safeStorage } from "@/utils/safeStorage",
+import React, { useState, useEffect } from "react";
+import { safeStorage } from "@/utils/safeStorage";
 import { X, ArrowRight } from 'lucide-react'
-import Link from "next/link",
-import { useIsMobile } from "@/hooks/use-mobile",
+import Link from "next/link";
+import { useIsMobile } from "@/hooks/use-mobile";
 interface SmartAppBannerProps {
   appName?: string,
   appIconSrc?: string,
@@ -19,7 +19,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   googlePlayUrl = "/download",
   delay = 1500
 }) => {
-  const [isVisible, setIsVisible] = useState(false),
+  const [ isVisible, setIsVisible ] = useState(false),
   const isMobile = useIsMobile(),
   
   useEffect(() => {
@@ -89,4 +89,4 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     </div>
   )
-},
+};

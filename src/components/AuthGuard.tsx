@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react',
-import { useRouter } from 'next/router',
-import { useAuth } from '@/hooks/useAuth',
-import { toast } from '@/hooks/use-toast',
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
 import { Loader2, Shield } from 'lucide-react'
 
 interface AuthGuardProps {
@@ -21,8 +21,7 @@ export function AuthGuard({
   redirectTo = '/auth/login',
   fallback,
   showToast = true,
-  allowGuest = false}: AuthGuardProps) {
-  const { user, isAuthenticated, isLoading } = useAuth(),
+  allowGuest = false}: AuthGuardProps) { const { user, isAuthenticated, isLoading  } = useAuth(),
   const router = useRouter(),
 
   useEffect(() => {
@@ -127,8 +126,7 @@ export function withAuthGuard<P extends object>(
 }
 
 // Hook for programmatic auth checks
-export function useAuthGuard() {
-  const { user, isAuthenticated, isLoading } = useAuth(),
+export function useAuthGuard() { const { user, isAuthenticated, isLoading  } = useAuth(),
   const router = useRouter(),
 
   const requireAuth = (options?: {
@@ -182,7 +180,6 @@ export function useAuthGuard() {
 
   const checkPermission = (permission: string): boolean => {
     if (!isAuthenticated || !user) return false,
-    
     // Simple permission check - can be extended based on your permission system
     // Use type assertion for extensibility, as permissions might be added to user type later
     const userPermissions = (user as any).permissions || [],
@@ -194,6 +191,6 @@ export function useAuthGuard() {
     requireRole,
     checkPermission,
     isAuthenticated,
-    user,
+    user;
     isLoading}
 }

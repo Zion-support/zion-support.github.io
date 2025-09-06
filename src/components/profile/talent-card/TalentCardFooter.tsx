@@ -1,21 +1,20 @@
-import React, { useState } from "react",
+import React, { useState } from "react";
 import { Star } from 'lucide-react'
-import { Button } from "@/components/ui/button",
+import { Button } from "@/components/ui/button";
 import { ExternalLink } from 'lucide-react'
-import { TalentProfile } from "@/types/talent",
-import { HireRequestModal } from "@/components/profile/hire-request",
-import { useAuthStatus } from "@/hooks/talent",
-import type { UserProfile } from "@/types/auth",
-import { useRouter } from 'next/router',
+import { TalentProfile } from "@/types/talent";
+import { HireRequestModal } from "@/components/profile/hire-request";
+import { useAuthStatus } from "@/hooks/talent";
+import type { UserProfile } from "@/types/auth";
+import { useRouter } from 'next/router';
 interface TalentCardFooterProps {
   profile: TalentProfile,
   onViewProfile: (id: string) => void,
   onRequestHire?: (profile: TalentProfile) => void
 }
 
-export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false),
-  const { userDetails } = useAuthStatus(),
+export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) { const [ isHireModalOpen, setIsHireModalOpen ] = useState(false),
+  const { userDetails  } = useAuthStatus(),
   const router = useRouter(),
 
   // Create a compatible UserProfile from UserDetails
@@ -36,7 +35,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
   // Handle request to hire
   const handleRequestHire = (e: React.MouseEvent) => {
     e.stopPropagation(),
-    
     if (onRequestHire) {
       onRequestHire(profile)
     } else {
@@ -48,7 +46,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
   // Handle view profile
   const handleViewProfile = (e: React.MouseEvent) => {
     e.stopPropagation(),
-    
     // Navigate to the talent profile page
     router.push(`/talent/${profile.id || ''}`),
     
@@ -56,8 +53,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     if (onViewProfile) {
       onViewProfile(profile.id || '')
     }
-  },
-
+  };
   return (
     <>
       <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">

@@ -1,8 +1,8 @@
-import Link from "next/link",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { useAuth } from "@/hooks/useAuth",
+import Link from "next/link";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
-import { ForumCategoryInfo } from "@/types/community",
+import { ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",
@@ -49,8 +49,7 @@ const iconMap = {
   Megaphone
 },
 
-export const ForumCategories = () => {
-  const { user } = useAuth(),
+export const ForumCategories = () => { const { user  } = useAuth(),
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
 
   const visibleCategories = categories.filter(
@@ -81,4 +80,4 @@ export const ForumCategories = () => {
   )
 },
 
-export default ForumCategories,
+export default ForumCategories;

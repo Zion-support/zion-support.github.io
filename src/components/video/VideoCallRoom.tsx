@@ -1,9 +1,9 @@
 
-import React, { useState } from 'react',
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import React, { useState } from 'react';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
 import './video-call.css',
 interface Participant {
@@ -35,11 +35,11 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   onToggleScreenShare,
   className 
 }) => {
-  const [isMuted, setIsMuted] = useState(false),
-  const [isVideoEnabled, setIsVideoEnabled] = useState(true),
-  const [isScreenSharing, setIsScreenSharing] = useState(false),
-  const [isAudioOnly, setIsAudioOnly] = useState(false),
-  const [callDuration, setCallDuration] = useState(0),
+  const [ isMuted, setIsMuted ] = useState(false),
+  const [ isVideoEnabled, setIsVideoEnabled ] = useState(true),
+  const [ isScreenSharing, setIsScreenSharing ] = useState(false),
+  const [ isAudioOnly, setIsAudioOnly ] = useState(false),
+  const [ callDuration, setCallDuration ] = useState(0),
 
   // Call duration timer
   React.useEffect(() => {
@@ -220,4 +220,4 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
       </CardContent>
     </Card>
   )
-},
+};

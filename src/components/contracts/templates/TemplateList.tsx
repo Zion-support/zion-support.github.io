@@ -1,14 +1,14 @@
 
-import { ContractTemplate } from "@/types/contracts",
-import { Button } from "@/components/ui/button",
+import { ContractTemplate } from "@/types/contracts";
+import { Button } from "@/components/ui/button";
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
-import { useContractTemplates } from "@/hooks/useContractTemplates",
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
-import { useAuth } from "@/hooks/useAuth",
+import { useContractTemplates } from "@/hooks/useContractTemplates";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { useAuth } from "@/hooks/useAuth";
 // useRouter replaces the old useLocation hook from react-router
-import { useRouter } from 'next/router',
+import { useRouter } from 'next/router';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -18,7 +18,7 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle} from "@/components/ui/alert-dialog",
-import { useState } from "react",
+import { useState } from "react";
 interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
@@ -31,10 +31,9 @@ export function TemplateList({
   isLoading,
   onSelect,
   onEdit
-}: TemplateListProps) {
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates(),
-  const { user } = useAuth(),
+}: TemplateListProps) { const [ templateToDelete, setTemplateToDelete ] = useState<string | null>(null),
+  const { deleteTemplate, setDefaultTemplate  } = useContractTemplates(),
+  const { user  } = useAuth(),
   const router = useRouter(),
 
   const handleDeleteClick = (templateId: string) => {
@@ -55,8 +54,7 @@ export function TemplateList({
       return
     }
     await setDefaultTemplate.mutateAsync(templateId)
-  },
-
+  };
   if (isLoading) {
     return (
       <div className="flex justify-center items-center py-8">

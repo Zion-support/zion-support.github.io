@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react",
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
-import { Input } from "@/components/ui/input",
-import { Card } from "@/components/ui/card",
+import { useEffect, useState } from "react";
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
+import { Input } from "@/components/ui/input";
+import { Card } from "@/components/ui/card";
 import { Search } from 'lucide-react'
-import { ListingScoreCard } from "@/components/ListingScoreCard",
-import { captureException } from "@/utils/sentry",
-import Skeleton from "@/components/ui/skeleton",
-import { useDebounce } from "@/hooks/useDebounce",
-import { useIsMounted } from "@/hooks/useIsMounted",
-import { z } from "zod",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { ListingScoreCard } from "@/components/ListingScoreCard";
+import { captureException } from "@/utils/sentry";
+import Skeleton from "@/components/ui/skeleton";
+import { useDebounce } from "@/hooks/useDebounce";
+import { useIsMounted } from "@/hooks/useIsMounted";
+import { z } from "zod";
+import {logErrorToProduction} from '@/utils/productionLogger';
 const listingSchema = z.object({
   id: z.string(),
   title: z.string(),
@@ -25,11 +25,11 @@ interface ServiceTypeStepProps {
 
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
-  const [searchQuery, setSearchQuery] = useState(""),
+  const [ searchQuery, setSearchQuery ] = useState(""),
   const debouncedQuery = useDebounce(searchQuery, 300),
-  const [listings, setListings] = useState<ListingItem[]>([]),
-  const [loading, setLoading] = useState(false),
-  const [error, setError] = useState<string | null>(null),
+  const [ listings, setListings ] = useState<ListingItem[]>([]),
+  const [ loading, setLoading ] = useState(false),
+  const [ error, setError ] = useState<string | null>(null),
   const isMounted = useIsMounted(),
 
   // Fetch services when the service type or query changes
@@ -106,8 +106,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     if (searchQuery.trim() === "") return true,
     return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
            item.category.toLowerCase().includes(searchQuery.toLowerCase())
-  }),
-
+  });
   return (
     <div className="space-y-6">
       <div>

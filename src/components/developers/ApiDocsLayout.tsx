@@ -1,11 +1,11 @@
 
-import { SearchSuggestion } from "@/types/search",
-import React, { useState } from "react",
-import Link from 'next/link',
-import { useRouter } from 'next/router',
+import { SearchSuggestion } from "@/types/search";
+import React, { useState } from "react";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Search } from 'lucide-react'
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { cn } from "@/lib/utils",
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { cn } from "@/lib/utils";
 import {
  getDocsSearchPath,
  docsSearchSuggestions
@@ -18,7 +18,7 @@ interface ApiDocsLayoutProps {
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   const router = useRouter(),
   const currentPath = router.pathname,
-  const [searchValue, setSearchValue] = useState(""),
+  const [ searchValue, setSearchValue ] = useState(""),
 
   const navigationItems = [
    { title: "Getting Started", path: "/developers/docs/getting-started" },
@@ -94,4 +94,4 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   )
 }
 
-export default ApiDocsLayout,
+export default ApiDocsLayout;

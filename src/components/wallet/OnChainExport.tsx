@@ -1,21 +1,20 @@
 
-import React, { useState } from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
+import React, { useState } from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger} from "@/components/ui/tooltip",
-import { useToast } from "@/hooks/use-toast",
-import { useAuth } from "@/hooks/useAuth",
-export function OnChainExport() {
-  const [isConnected, setIsConnected] = useState(false),
-  const [isExporting, setIsExporting] = useState(false),
-  const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),
-  const { toast } = useToast(),
-  const { user } = useAuth(),
+import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
+export function OnChainExport() { const [ isConnected, setIsConnected ] = useState(false),
+  const [ isExporting, setIsExporting ] = useState(false),
+  const [ exportStatus, setExportStatus ] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),
+  const { toast  } = useToast(),
+  const { user  } = useAuth(),
   
   const handleConnectWallet = async () => {
     try {
@@ -76,8 +75,7 @@ export function OnChainExport() {
     } finally {
       setIsExporting(false)
     }
-  },
-  
+  };
   return (
     <Card>
       <CardHeader>

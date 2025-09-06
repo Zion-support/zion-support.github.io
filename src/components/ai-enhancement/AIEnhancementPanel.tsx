@@ -1,11 +1,11 @@
 
-import React, { useState } from 'react',
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',
-import { Textarea } from '@/components/ui/textarea',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
+import React, { useState } from 'react';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 
 interface AIEnhancementPanelProps {
   title: string,
@@ -24,12 +24,12 @@ export function AIEnhancementPanel({
   showInstructions = true,
   initialContent = ''
 }: AIEnhancementPanelProps) {
-  const [options, setOptions] = useState<AIEnhancementOptions>({
+  const [ options, setOptions ] = useState<AIEnhancementOptions>({
     ...defaultOptions,
     content: initialContent || defaultOptions.content}),
-  const [generatedContent, setGeneratedContent] = useState<string>(''),
-  const [copied, setCopied] = useState(false),
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),
+  const [ generatedContent, setGeneratedContent ] = useState<string>(''),
+  const [ copied, setCopied ] = useState(false),
+  const { enhanceContent, isEnhancing  } = useAIContentEnhancer(),
 
   const handleGenerate = async () => {
     const result = await enhanceContent(options),
@@ -56,8 +56,7 @@ export function AIEnhancementPanel({
     navigator.clipboard.writeText(generatedContent),
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
-  },
-
+  };
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>

@@ -1,12 +1,12 @@
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { Loader2 } from 'lucide-react'
-import { useRouter } from 'next/router',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useRouter } from 'next/router';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface PaymentButtonProps {
   amount: number,
   serviceId: string,
@@ -24,9 +24,8 @@ export function PaymentButton({
   buttonText = "Purchase",
   className,
   onPaymentInitiated,
-  redirectUrl}: PaymentButtonProps) {
-  const [isProcessing, setIsProcessing] = useState(false),
-  const { isAuthenticated, user } = useAuth(),
+  redirectUrl}: PaymentButtonProps) { const [ isProcessing, setIsProcessing ] = useState(false),
+  const { isAuthenticated, user  } = useAuth(),
   const router = useRouter(),
   
   const handlePaymentClick = async () => {
@@ -48,7 +47,7 @@ export function PaymentButton({
       }
       
       // Call the create-checkout edge function
-      const { data, error } = await supabase.functions.invoke("create-checkout", {
+      const { data, error  } = await supabase.functions.invoke("create-checkout", {
         body: {
           amount,
           serviceId,
@@ -88,7 +87,7 @@ export function PaymentButton({
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
-        "relative min-w-[120px]",
+        "relative min-w-[120px]";
         className
       )}
     >

@@ -1,20 +1,19 @@
-import { useRef, useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
+import { useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { Copy, Download, Link, Plus } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
-import { useReferrals } from "@/hooks/useReferrals",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Label } from "@/components/ui/label",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { toast } from "@/hooks/use-toast";
+import { useReferrals } from "@/hooks/useReferrals";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-export function PartnerReferralLinks() {
-  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
-  const [isDialogOpen, setIsDialogOpen] = useState(false),
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),
-  const [customParam, setCustomParam] = useState<string>(""),
-  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
+export function PartnerReferralLinks() { const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia  } = useReferrals(),
+  const [ isDialogOpen, setIsDialogOpen ] = useState(false),
+  const [ selectedCampaign, setSelectedCampaign ] = useState<string>("default"),
+  const [ customParam, setCustomParam ] = useState<string>(""),
+  const [ generatedLinks, setGeneratedLinks ] = useState<{name: string, link: string}[]>([]),
   
   // Get the base referral link
   const baseLink = getReferralLink(),
@@ -73,8 +72,7 @@ export function PartnerReferralLinks() {
     document.body.appendChild(link),
     link.click(),
     document.body.removeChild(link)
-  },
-
+  };
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">

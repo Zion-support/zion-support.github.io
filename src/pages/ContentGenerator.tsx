@@ -1,33 +1,31 @@
-import React, { useState, useEffect } from 'react',
-import { Header } from "@/components/Header",
-import { Button } from "@/components/ui/button",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Textarea } from "@/components/ui/textarea",
-import { Input } from "@/components/ui/input",
-import { Switch } from "@/components/ui/switch",
-import { Label } from "@/components/ui/label",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { toast } from "sonner",
+import React, { useState, useEffect } from 'react';
+import { Header } from "@/components/Header";
+import { Button } from "@/components/ui/button";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { toast } from "sonner";
 import { Loader2 } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { ScrollArea } from "@/components/ui/scroll-area",
-import { useRouter } from 'next/router',
-import {logErrorToProduction} from '@/utils/productionLogger',
-export default function ContentGenerator() {
-
-  const { user, isLoading } = useAuth(),
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { useRouter } from 'next/router';
+import {logErrorToProduction} from '@/utils/productionLogger';
+export default function ContentGenerator() { const { user, isLoading  } = useAuth(),
   const router = useRouter(),
-  const [contentType, setContentType] = useState<'blog' | 'newsletter' | 'serviceDescription' | 'faq'>('blog'),
-  const [customPrompt, setCustomPrompt] = useState(''),
-  const [topic, setTopic] = useState(''),
-  const [keywords, setKeywords] = useState(''),
-  const [autoPublish, setAutoPublish] = useState(false),
-  const [includeImage, setIncludeImage] = useState(true),
-  const [isGenerating, setIsGenerating] = useState(false),
-  const [previewContent, setPreviewContent] = useState<any>(null),
-  const [testEmail, setTestEmail] = useState(''),
+  const [ contentType, setContentType ] = useState<'blog' | 'newsletter' | 'serviceDescription' | 'faq'>('blog'),
+  const [ customPrompt, setCustomPrompt ] = useState(''),
+  const [ topic, setTopic ] = useState(''),
+  const [ keywords, setKeywords ] = useState(''),
+  const [ autoPublish, setAutoPublish ] = useState(false),
+  const [ includeImage, setIncludeImage ] = useState(true),
+  const [ isGenerating, setIsGenerating ] = useState(false),
+  const [ previewContent, setPreviewContent ] = useState<any>(null),
+  const [ testEmail, setTestEmail ] = useState(''),
 
   useEffect(() => {
     if (!isLoading && !user) {
@@ -35,13 +33,12 @@ export default function ContentGenerator() {
     }
   }, [user, isLoading, router]),
 
-  const generateContent = async () => {
-    setIsGenerating(true),
+  const generateContent = async () => { setIsGenerating(true),
     setPreviewContent(null),
     
     try {
       const keywordsArray = keywords.split().map(k => k.trim()).filter(k => k.length > 0),
-      const { data, error } = await supabase.functions.invoke('generate-seo-content', {
+      const { data, error  } = await supabase.functions.invoke('generate-seo-content', {
         body: {
           contentType,
           userPrompt: customPrompt || topic, // Use customPrompt if available, else topic
@@ -76,8 +73,7 @@ export default function ContentGenerator() {
       return
     }
     
-    try {
-      const { data, error } = await supabase.functions.invoke('send-newsletter', {
+    try { const { data, error  } = await supabase.functions.invoke('send-newsletter', {
         body: {
           subject: previewContent.subject,
           previewText: previewContent.previewText,
@@ -94,8 +90,7 @@ export default function ContentGenerator() {
       logErrorToProduction('Error sending test newsletter:', { data: error }),
       toast.error("Failed to send test newsletter. Please try again.")
     }
-  },
-
+  };
   // Check if user is still loading
   if (isLoading) {
     return (

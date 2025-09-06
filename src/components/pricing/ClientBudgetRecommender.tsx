@@ -1,15 +1,15 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
 import { 
   getClientBudgetSuggestion,
   PricingSuggestion,
   ClientBudgetParams,
   trackPricingSuggestion
 } from "@/services/pricingSuggestionService",
-import { PricingSuggestionBox } from "./PricingSuggestionBox",
-import { useAuth } from "@/hooks/useAuth",
+import { PricingSuggestionBox } from "./PricingSuggestionBox";
+import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from 'lucide-react'
 
 interface ClientBudgetRecommenderProps {
@@ -27,10 +27,9 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   timeline,
   scope,
   experienceLevel,
-  onSuggestionApplied}) => {
-  const [isLoading, setIsLoading] = useState(false),
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
-  const { user } = useAuth(),
+  onSuggestionApplied}) => { const [ isLoading, setIsLoading ] = useState(false),
+  const [ suggestion, setSuggestion ] = useState<PricingSuggestion | null>(null),
+  const { user  } = useAuth(),
 
   const generateSuggestion = async () => {
     if (!jobTitle || !category) {
@@ -97,4 +96,4 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       </div>
     </div>
   )
-},
+};

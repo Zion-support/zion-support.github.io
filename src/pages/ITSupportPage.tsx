@@ -1,5 +1,5 @@
-import React from "react",
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
+import React from "react";
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 
 export default function ITSupportPage() {
@@ -27,8 +27,7 @@ export default function ITSupportPage() {
       name: "Carlos Diaz",
       role: "IT Lead",
       text: "Professional and responsive. Their technicians feel like an extension of our own team.",
-      avatar: "/placeholder.svg"}],
-
+      avatar: "/placeholder.svg"}];
   return (
     <ServiceLandingTemplate
       title="IT Support Services"

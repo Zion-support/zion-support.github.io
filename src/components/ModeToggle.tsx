@@ -3,16 +3,14 @@ import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { toast } from "@/hooks/use-toast"
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 // Use the ThemeProvider hook directly to ensure no conflicts
 import { useTheme } from "@/components/ThemeProvider"
 import { logIssue } from "@/utils/logIssue"
 import { useEffect, useState } from "react"
 
-export function ModeToggle() {
-
-  const { theme, toggleTheme } = useTheme(),
-  const [isClient, setIsClient] = useState(false),
+export function ModeToggle() { const { theme, toggleTheme  } = useTheme(),
+  const [ isClient, setIsClient ] = useState(false),
 
   // Ensure we're on the client side to avoid hydration mismatches
   useEffect(() => {
@@ -72,8 +70,7 @@ export function ModeToggle() {
         description: "Unable to change theme. Please try again.",
         variant: "destructive"})
     }
-  },
-
+  };
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
     return (

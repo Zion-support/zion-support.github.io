@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react',
-import { useRouter } from 'next/router', // Changed from useNavigate
-import Link from 'next/link',
-import { useAuth } from '@/hooks/useAuth',
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
-import { FilterSidebar } from '@/components/talent/FilterSidebar',
-import { TalentResults } from '@/components/talent/TalentResults',
-import { TalentSkeleton } from '@/components/talent/TalentSkeleton',
-import { ErrorBanner } from '@/components/talent/ErrorBanner',
-import ErrorBoundary from '@/components/GlobalErrorBoundary', // Import ErrorBoundary
-import { useTalentDirectory } from '@/hooks/useTalentDirectory',
-import { SORT_OPTIONS } from '@/data/sortOptions',
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router'; // Changed from useNavigate
+import Link from 'next/link';
+import { useAuth } from '@/hooks/useAuth';
+import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
+import { FilterSidebar } from '@/components/talent/FilterSidebar';
+import { TalentResults } from '@/components/talent/TalentResults';
+import { TalentSkeleton } from '@/components/talent/TalentSkeleton';
+import { ErrorBanner } from '@/components/talent/ErrorBanner';
+import ErrorBoundary from '@/components/GlobalErrorBoundary'; // Import ErrorBoundary
+import { useTalentDirectory } from '@/hooks/useTalentDirectory';
+import { SORT_OPTIONS } from '@/data/sortOptions';
 import { X } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import Image from 'next/image',
-import { TalentProfile } from '@/types/talent',
+import { Button } from '@/components/ui/button';
+import Image from 'next/image';
+import { TalentProfile } from '@/types/talent';
 import {
   Pagination,
   PaginationContent,
@@ -24,9 +24,9 @@ import {
 
 export default function TalentDirectory() {
   const router = useRouterReady(), // Use our custom hook
-  const [currentPage, setCurrentPage] = useState(1),
+  const [ currentPage, setCurrentPage ] = useState(1),
   const itemsPerPage = 10,
-  const [initialized, setInitialized] = useState(false),
+  const [ initialized, setInitialized ] = useState(false),
 
   // Force re-render and reset state when route changes
   const routeKey = useRouteChange(() => {
@@ -35,8 +35,7 @@ export default function TalentDirectory() {
   }),
 
   // Use our custom hook to manage state
-  const {
-    filteredTalents,
+  const { filteredTalents,
     total,
     isLoading,
     searchTerm,
@@ -63,9 +62,9 @@ export default function TalentDirectory() {
     toggleAvailability,
     toggleRegion,
     clearFilters,
-    toggleSection} = useTalentDirectory(currentPage, itemsPerPage),
+    toggleSection } = useTalentDirectory(currentPage, itemsPerPage),
 
-  const { user } = useAuth(),
+  const { user  } = useAuth(),
   const isAdmin = user?.userType === 'admin',
 
   useEffect(() => {
@@ -76,8 +75,7 @@ export default function TalentDirectory() {
   const paginatedTalents = filteredTalents,
 
   // Load filters from query parameters on first load
-  useEffect(() => {
-    if (!router.isReady || initialized) return,
+  useEffect(() => { if (!router.isReady || initialized) return,
     
     const {
       search,
@@ -89,7 +87,7 @@ export default function TalentDirectory() {
       expMin,
       expMax,
       sort,
-      page} = router.query as Record<string, string>,
+      page } = router.query as Record<string, string>,
 
     if (page) setCurrentPage(parseInt(page, 10) || 1),
     if (search) setSearchTerm(search),
@@ -170,10 +168,10 @@ export default function TalentDirectory() {
     selectedSkills.length === 0 &&
     selectedAvailability.length === 0 &&
     selectedRegions.length === 0 &&
-    priceRange[0] === 50 &&
-    priceRange[1] === 200 &&
-    experienceRange[0] === 0 &&
-    experienceRange[1] === 15
+    priceRange[ 0 ] = == 50 &&
+    priceRange[ 1 ] = == 200 &&
+    experienceRange[ 0 ] = == 0 &&
+    experienceRange[ 1 ] = == 15
   ) {
     return (
       <div key={pageKey} className="container mx-auto px-4 py-8">
@@ -325,7 +323,7 @@ export default function TalentDirectory() {
                         <PaginationNext
                           href={`?page=${currentPage + 1}`}
                           onClick={(e) => {
-                            e.preventDefault(),
+                            e.preventDefault();
                             setCurrentPage(
                               Math.min(totalPages, currentPage + 1)
                             )

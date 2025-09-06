@@ -1,18 +1,18 @@
-import React, { useState } from 'react',
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
-import { useRouter } from 'next/router',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { ProductListing } from "@/types/listings",
+import React, { useState } from 'react';
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import { useRouter } from 'next/router';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ProductListing } from "@/types/listings";
 import { DollarSign } from 'lucide-react'
-import { RatingStars } from "@/components/RatingStars",
-import { FavoriteButton } from "@/components/FavoriteButton",
-import { useDispatch } from 'react-redux',
-import type { AppDispatch } from '@/store',
-import { addItem } from '@/store/cartSlice',
-import { toast } from '@/hooks/use-toast',
-import { useCurrency } from '@/hooks/useCurrency',
-import Image from 'next/image', // Import next/image
+import { RatingStars } from "@/components/RatingStars";
+import { FavoriteButton } from "@/components/FavoriteButton";
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem } from '@/store/cartSlice';
+import { toast } from '@/hooks/use-toast';
+import { useCurrency } from '@/hooks/useCurrency';
+import Image from 'next/image'; // Import next/image
 
 interface ProductListingCardProps {
   listing: ProductListing,
@@ -26,16 +26,15 @@ const ProductListingCardComponent = ({
   view = 'grid',
   onRequestQuote,
   detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) => {
-  const isGrid = view === 'grid',
+}: ProductListingCardProps) => { const isGrid = view === 'grid',
   const router = useRouter(),
-  const [loading, setLoading] = useState(false),
-  const [imageSrc, setImageSrc] = useState(
+  const [ loading, setLoading ] = useState(false),
+  const [ imageSrc, setImageSrc ] = useState(
     listing.images && listing.images.length > 0 && listing.images[0]
     ? listing.images[0] 
     : '/placeholder.svg'
   ),
-  const [imageError, setImageError] = useState(false),
+  const [ imageError, setImageError ] = useState(false),
 
   const stockStatus =
     listing.stock === undefined
@@ -55,7 +54,7 @@ const ProductListingCardComponent = ({
       ? 'warning'
       : 'success',
     
-  const { formatPrice } = useCurrency(),
+  const { formatPrice  } = useCurrency(),
 
   const getPrice = () => {
     if (listing.price === null) return "Custom pricing",
@@ -287,4 +286,4 @@ const ProductListingCardComponent = ({
 },
 
 export const ProductListingCard = React.memo(ProductListingCardComponent),
-ProductListingCard.displayName = 'ProductListingCard',
+ProductListingCard.displayName = 'ProductListingCard';

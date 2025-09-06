@@ -6,7 +6,7 @@ import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
-import {logErrorToProduction} from '@/utils/productionLogger',
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface LoadingState {
   isLoading: boolean
   error: Error | null
@@ -119,7 +119,7 @@ const EnhancedError: React.FC<{
 
 // Network Status Hook
 const useNetworkStatus = () => {
-  const [isOnline, setIsOnline] = useState(true)
+  const [ isOnline, setIsOnline ] = useState(true)
 
   useEffect(() => {
     const updateOnlineStatus = () => setIsOnline(navigator.onLine)
@@ -149,14 +149,14 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   children,
   ...props
 }) => {
-  const [loadingState, setLoadingState] = useState<LoadingState>({
+  const [ loadingState, setLoadingState ] = useState<LoadingState>({
     isLoading: true,
     error: null,
     retryCount: 0,
     isOnline: true
   })
-  const [progress, setProgress] = useState(0)
-  const [DynamicComponent, setDynamicComponent] = useState<ComponentType<any> | null>(null)
+  const [ progress, setProgress ] = useState(0)
+  const [ DynamicComponent, setDynamicComponent ] = useState<ComponentType<any> | null>(null)
   const isOnline = useNetworkStatus()
 
   // Simulate loading progress for better UX
@@ -252,7 +252,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   if (loadingState.error) {
     if (errorFallback) {
       return React.createElement(errorFallback, { 
-        error: loadingState.error, 
+        error: loadingState.error,
         retry 
       })
     }
@@ -328,7 +328,7 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 // )
 
 // export const DynamicThreeComponent = createDynamicComponent(
-//   () => import('three').then(module => ({ default: module.WebGLRenderer })),
+//   () => import('three').then(module => ({ default: module.WebGLRenderer }));
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">

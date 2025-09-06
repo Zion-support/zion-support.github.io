@@ -1,8 +1,8 @@
-import { useState } from "react",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Button } from "@/components/ui/button",
-import CodeBlock from "./CodeBlock",
+import { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import CodeBlock from "./CodeBlock";
 interface Param {
   name: string,
   type: string,
@@ -16,11 +16,11 @@ interface ApiPlaygroundProps {
 }
 
 export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {
-  const [apiKey, setApiKey] = useState("demo_key_123"),
-  const [paramValues, setParamValues] = useState<Record<string, string>>({}),
-  const [body, setBody] = useState("{}"),
-  const [response, setResponse] = useState<string | null>(null),
-  const [loading, setLoading] = useState(false),
+  const [ apiKey, setApiKey ] = useState("demo_key_123"),
+  const [ paramValues, setParamValues ] = useState<Record<string, string>>({}),
+  const [ body, setBody ] = useState("{}"),
+  const [ response, setResponse ] = useState<string | null>(null),
+  const [ loading, setLoading ] = useState(false),
 
   const handleParamChange = (name: string, value: string) => {
     setParamValues((prev) => ({ ...prev, [name]: value }))
@@ -81,7 +81,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       setResponse(statusInfo + responseText)
     } catch (err: any) {
       let errorMessage = 'Request failed',
-      
       if (err.name === 'AbortError') {
         errorMessage = 'Request timed out (15s)'
       } else if (err.message?.includes('Failed to fetch')) {
@@ -125,4 +124,4 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
   )
 }
 
-export default ApiPlayground,
+export default ApiPlayground;

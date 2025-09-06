@@ -1,22 +1,22 @@
 
-import { useState } from "react",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/components/ui/use-toast",
-import z from "zod",
+import { useState } from "react";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { toast } from "@/components/ui/use-toast";
+import z from "zod";
 import { Mail } from 'lucide-react'
 
 export function ContactSection() {
-  const [formData, setFormData] = useState({
+  const [ formData, setFormData ] = useState({
     name: "",
     email: "",
     subject: "",
     message: ""}),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [submitted, setSubmitted] = useState(false),
-  const [errors, setErrors] = useState<{
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+  const [ submitted, setSubmitted ] = useState(false),
+  const [ errors, setErrors ] = useState<{
     name?: string,
     email?: string,
     subject?: string,
@@ -25,15 +25,13 @@ export function ContactSection() {
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target,
+  ) => { const { name, value  } = e.target,
     setFormData((prev) => ({ ...prev, [name]: value })),
     setErrors((prev) => ({ ...prev, [name]: undefined }))
   },
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
-
     const schema = z.object({
       name: z.string().min(2, "Name is required"),
       email: z.string().email("Enter a valid email"),
@@ -83,8 +81,7 @@ export function ContactSection() {
           description: err.message,
           variant: "destructive"})
       })
-  },
-
+  };
   return (
     <section className="py-20 bg-zion-blue" id="contact">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

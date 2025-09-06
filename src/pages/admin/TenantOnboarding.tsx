@@ -1,24 +1,23 @@
 
-import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { useAuth } from "@/hooks/useAuth",
-import { useRouter } from "next/router",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { toast } from "sonner",
-import { supabase } from "@/integrations/supabase/client",
-import { Switch } from "@/components/ui/switch",
-import { logErrorToProduction } from '@/utils/productionLogger',
-export default function TenantOnboarding() {
-  const { user } = useAuth(),
-  const [activeTab, setActiveTab] = useState("company"),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [formData, setFormData] = useState({
+import React, { useState } from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { useAuth } from "@/hooks/useAuth";
+import { useRouter } from "next/router";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
+import { Switch } from "@/components/ui/switch";
+import { logErrorToProduction } from '@/utils/productionLogger';
+export default function TenantOnboarding() { const { user  } = useAuth(),
+  const [ activeTab, setActiveTab ] = useState("company"),
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+  const [ formData, setFormData ] = useState({
     brand_name: "",
     subdomain: "",
     logo_url: "",
@@ -37,8 +36,7 @@ export default function TenantOnboarding() {
     return // Use router.push('/unauthorized') or redirect in getServerSideProps
   }
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target,
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => { const { name, value  } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
   },
   
@@ -66,7 +64,7 @@ export default function TenantOnboarding() {
       },
       
       // Submit to Supabase
-      const { data, error } = await supabase
+      const { data, error  } = await supabase
         .from('whitelabel_tenants')
         .insert({
           brand_name: formData.brand_name,
@@ -111,8 +109,7 @@ export default function TenantOnboarding() {
     } finally {
       setIsSubmitting(false)
     }
-  },
-
+  };
   return (
     <>
       <SEO 

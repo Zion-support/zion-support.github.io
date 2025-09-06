@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { Button } from '@/components/ui/button',
-import { Progress } from '@/components/ui/progress',
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
 import { Activity, Zap, Package, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, RefreshCw, BarChart3, Clock, Globe } from 'lucide-react'
-import { bundleMonitor } from '@/utils/bundleMonitor',
-import { logErrorToProduction, logInfo } from '@/utils/productionLogger',
+import { bundleMonitor } from '@/utils/bundleMonitor';
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
 
 interface PerformanceMetrics {
   bundleSize: number,
@@ -28,10 +28,10 @@ interface BundleChunk {
 }
 
 export function PerformanceDashboard() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
-  const [chunks, setChunks] = useState<BundleChunk[]>([]),
-  const [isLoading, setIsLoading] = useState(false),
-  const [lastUpdated, setLastUpdated] = useState<Date | null>(null),
+  const [ metrics, setMetrics ] = useState<PerformanceMetrics | null>(null),
+  const [ chunks, setChunks ] = useState<BundleChunk[]>([]),
+  const [ isLoading, setIsLoading ] = useState(false),
+  const [ lastUpdated, setLastUpdated ] = useState<Date | null>(null),
 
   const collectMetrics = async () => {
     try {
@@ -174,8 +174,7 @@ export function PerformanceDashboard() {
     const interval = setInterval(collectMetrics, 30000), // Update every 30 seconds
 
     return () => clearInterval(interval)
-  }, []),
-
+  }, []);
   return (
     <div className="space-y-6">
       {/* Header */}

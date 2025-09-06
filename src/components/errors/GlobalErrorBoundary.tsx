@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import * as Sentry from '@sentry/nextjs'
-import {logErrorToProduction} from '@/utils/productionLogger',
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorBoundaryState {
   hasError: boolean
   error: Error | null
@@ -386,7 +386,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 
 // Hook for programmatic error boundary
 export const useErrorBoundary = () => {
-  const [error, setError] = React.useState<Error | null>(null)
+  const [ error, setError ] = React.useState<Error | null>(null)
 
   React.useEffect(() => {
     if (error) {
@@ -403,7 +403,7 @@ export const useErrorBoundary = () => {
 
 // Higher-order component for adding error boundaries
 export const withErrorBoundary = <P extends object>(
-  Component: React.ComponentType<P>,
+  Component: React.ComponentType<P>;
   errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>
 ) => {
   const WrappedComponent = (props: P) => (

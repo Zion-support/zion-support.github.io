@@ -1,8 +1,8 @@
-import * as React from 'react',
+import * as React from 'react';
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import Link from 'next/link',
-import { useTranslation } from 'react-i18next',
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 export interface EmptyStateProps {
   type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading',
   title?: string,
@@ -10,7 +10,7 @@ export interface EmptyStateProps {
   action?: {
     label: string,
     onClick: () => void
-  },
+  };
   icon?: React.ReactNode
 }
 
@@ -54,8 +54,7 @@ export function EmptyState({
   description,
   action,
   icon
-}: EmptyStateProps) {
-  const { t } = useTranslation(),
+}: EmptyStateProps) { const { t  } = useTranslation(),
   const content = defaultContent[type],
   const displayTitle = title || content.title,
   const displayDescription = description || content.description,
@@ -120,7 +119,7 @@ export function ProductsEmptyState({
 }) {
   const action = onAddProduct
     ? { 
-        label: isAuthenticated ? 'Add Product' : 'Login to Add Product', 
+        label: isAuthenticated ? 'Add Product' : 'Login to Add Product',
         onClick: onAddProduct 
       }
     : onRetry
@@ -129,8 +128,7 @@ export function ProductsEmptyState({
 
   const customDescription = isAuthenticated 
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!",
-
+    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
   return (
     <EmptyState 
       type="products" 

@@ -1,10 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react',
-import Image from 'next/image',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ImageIcon, AlertTriangle } from 'lucide-react'
-import { cn } from '@/lib/utils',
-import { imageOptimization } from '@/utils/performance',
-import { logWarn } from '@/utils/productionLogger',
+import { cn } from '@/lib/utils';
+import { imageOptimization } from '@/utils/performance';
+import { logWarn } from '@/utils/productionLogger';
 interface OptimizedImageProps {
   src: string,
   alt: string,
@@ -64,15 +64,15 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   objectPosition = 'center',
   ...props
 }) => {
-  const [isLoading, setIsLoading] = useState(true),
-  const [hasError, setHasError] = useState(false),
-  const [isInView, setIsInView] = useState(!lazy || priority),
-  const [currentSrc, setCurrentSrc] = useState(src),
-  const [retries, setRetries] = useState(0),
-  const [loadProgress, setLoadProgress] = useState(0),
+  const [ isLoading, setIsLoading ] = useState(true),
+  const [ hasError, setHasError ] = useState(false),
+  const [ isInView, setIsInView ] = useState(!lazy || priority),
+  const [ currentSrc, setCurrentSrc ] = useState(src),
+  const [ retries, setRetries ] = useState(0),
+  const [ loadProgress, setLoadProgress ] = useState(0),
   const imgRef = useRef<HTMLImageElement>(null),
   const observerRef = useRef<IntersectionObserver>(),
-  const [metrics, setMetrics] = useState<ImageMetrics | null>(null),
+  const [ metrics, setMetrics ] = useState<ImageMetrics | null>(null),
   const loadStartTime = useRef<number>(0),
 
   // Intersection Observer for lazy loading
@@ -81,7 +81,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
     observerRef.current = new IntersectionObserver(
       (entries) => {
-        const [entry] = entries,
+        const [ entry ] = entries,
         if (entry && entry.isIntersecting) {
           setIsInView(true),
           observerRef.current?.disconnect()
@@ -323,7 +323,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
   className,
   onImageClick
 }) => {
-  const [loadedCount, setLoadedCount] = useState(0),
+  const [ loadedCount, setLoadedCount ] = useState(0),
 
   const handleImageLoad = () => {
     setLoadedCount(prev => prev + 1)
@@ -422,4 +422,4 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
       )}
     </div>
   )
-}, 
+};

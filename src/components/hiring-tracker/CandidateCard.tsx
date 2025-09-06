@@ -1,24 +1,24 @@
-import { useState } from "react",
+import { useState } from "react";
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
-import { Draggable } from "@/lib/dnd-stub",
-import { formatDistanceToNow } from "date-fns",
-import Link from "next/link",
-import { JobApplication } from "@/types/jobs",
-import { Card, CardContent } from "@/components/ui/card",
-import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
+import { Draggable } from "@/lib/dnd-stub";
+import { formatDistanceToNow } from "date-fns";
+import Link from "next/link";
+import { JobApplication } from "@/types/jobs";
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar"; // Renamed to avoid conflict
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
-import { toast } from "@/hooks/use-toast",
-import { HireConfirmationModal } from "./HireConfirmationModal",
-import Image from 'next/image', // Import next/image
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+import { toast } from "@/hooks/use-toast";
+import { HireConfirmationModal } from "./HireConfirmationModal";
+import Image from 'next/image'; // Import next/image
 
 interface CandidateCardProps {
   application: JobApplication,
@@ -26,10 +26,10 @@ interface CandidateCardProps {
 }
 
 export function CandidateCard({ application, index }: CandidateCardProps) {
-  const [showNotes, setShowNotes] = useState(false),
-  const [notes, setNotes] = useState(application.notes || ""),
-  const [showHireModal, setShowHireModal] = useState(false),
-  const [avatarError, setAvatarError] = useState(false),
+  const [ showNotes, setShowNotes ] = useState(false),
+  const [ notes, setNotes ] = useState(application.notes || ""),
+  const [ showHireModal, setShowHireModal ] = useState(false),
+  const [ avatarError, setAvatarError ] = useState(false),
 
   // Check if application is stalled (no activity for 7 days)
   const isStalled = application.updated_at && 
@@ -54,8 +54,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     })
   },
 
-  const candidateName = application.talent_profile?.full_name || "Candidate",
-  
+  const candidateName = application.talent_profile?.full_name || "Candidate";
   return (
     <>
       <Draggable draggableId={application.id} index={index}>

@@ -1,7 +1,7 @@
-import React, { useState } from 'react',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { Button } from '@/components/ui/button',
+import React, { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
 
 interface PerformanceMetrics {
@@ -21,7 +21,7 @@ interface Improvement {
 }
 
 const PerformanceDashboard: React.FC = () => {
-  const [metrics] = useState<PerformanceMetrics>({
+  const [ metrics ] = useState<PerformanceMetrics>({
     buildSize: '959 MB',
     pageCount: 166,
     loadTime: 1.2,
@@ -38,7 +38,7 @@ const PerformanceDashboard: React.FC = () => {
       category: 'ux'
     },
     {
-      id: '2', 
+      id: '2',
       title: 'Environment Validation System',
       description: 'Added comprehensive pre-build checks to prevent deployment with missing environment variables',
       status: 'completed',
@@ -218,4 +218,4 @@ const PerformanceDashboard: React.FC = () => {
   )
 },
 
-export default PerformanceDashboard, 
+export default PerformanceDashboard;

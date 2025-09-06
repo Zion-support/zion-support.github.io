@@ -1,12 +1,12 @@
 
-import { useState } from "react",
+import { useState } from "react";
 import { MessageSquare } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { ChatAssistant } from "@/components/ChatAssistant",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { Button } from "@/components/ui/button";
+import { ChatAssistant } from "@/components/ChatAssistant";
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function ChatAssistantTrigger() {
 
-  const [isOpen, setIsOpen] = useState(false),
+  const [ isOpen, setIsOpen ] = useState(false),
 
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
@@ -49,7 +49,7 @@ export function ChatAssistantTrigger() {
           recipient={{
             id: 'ai-assistant',
             name: 'AI Assistant',
-            avatarUrl: 'https://placehold.co/64x64?text=AI',
+            avatarUrl: 'https://placehold.co/64x64?text=AI';
             role: 'Virtual Assistant'
           }}
           onSendMessage={handleSendMessage}

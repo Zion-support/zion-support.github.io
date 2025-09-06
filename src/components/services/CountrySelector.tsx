@@ -1,8 +1,8 @@
 
-import { useState, useEffect } from "react",
+import { useState, useEffect } from "react";
 import { Globe } from 'lucide-react'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
 
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void,
@@ -10,7 +10,7 @@ interface CountrySelectorProps {
 }
 
 export function CountrySelector({ onCountryChange, selectedCountry }: CountrySelectorProps) {
-  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]),
+  const [ topCountries, setTopCountries ] = useState<CountryPricing[]>([]),
   
   // Set top/popular countries
   useEffect(() => {
@@ -25,8 +25,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
   const handleCountryChange = (countryName: string) => {
     const country = onsiteServicePricing.find(item => item.country === countryName) || null,
     onCountryChange(country)
-  },
-
+  };
   return (
     <div className="mb-6">
       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">

@@ -1,32 +1,31 @@
 
-import { useState } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { ChatWidget } from "@/components/ChatWidget",
-import { useRouter } from "next/router",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import Skeleton from "@/components/ui/skeleton",
-import ImageWithRetry from '@/components/ui/ImageWithRetry',
+import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { ChatWidget } from "@/components/ChatWidget";
+import { useRouter } from "next/router";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import Skeleton from "@/components/ui/skeleton";
+import ImageWithRetry from '@/components/ui/ImageWithRetry';
 import { Star, MessageSquare, Brain, Shield } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import Link from 'next/link',
-import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
-import { toast } from "@/hooks/use-toast",
-import { PaymentButton } from "@/components/transactions/PaymentButton",
-import { ProfileContact } from "@/components/profile/ProfileContact",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { useCurrency } from '@/hooks/useCurrency',
-export default function ListingDetail() {
-  // useParams may be untyped in this environment, so avoid passing a
+import { cn } from "@/lib/utils";
+import Link from 'next/link';
+import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
+import { toast } from "@/hooks/use-toast";
+import { PaymentButton } from "@/components/transactions/PaymentButton";
+import { ProfileContact } from "@/components/profile/ProfileContact";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { useCurrency } from '@/hooks/useCurrency';
+export default function ListingDetail() { // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
   const router = useRouter(),
   const id = router.query.id as string,
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0),
-  const [isLoading, setIsLoading] = useState(false),
-  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false),
-  const [isChatOpen, setIsChatOpen] = useState(false),
-  const { user } = useAuth(),
-  const { formatPrice } = useCurrency(),
+  const [ selectedImageIndex, setSelectedImageIndex ] = useState(0),
+  const [ isLoading, setIsLoading ] = useState(false),
+  const [ isContactDialogOpen, setIsContactDialogOpen ] = useState(false),
+  const [ isChatOpen, setIsChatOpen ] = useState(false),
+  const { user  } = useAuth(),
+  const { formatPrice  } = useCurrency(),
 
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
@@ -201,7 +200,7 @@ export default function ListingDetail() {
                       serviceId={listing.id}
                       providerId={listing.author.id}
                       buttonText="Buy Now"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white py-6"
                       onPaymentInitiated={() => {
                         toast({
                           title: "Payment Processing",
@@ -241,7 +240,7 @@ export default function ListingDetail() {
                           alt={listing.author.name}
                           className="object-cover"
                           onError={(e) => {
-                            const target = e.target as HTMLImageElement,
+                            const target = e.target as HTMLImageElement;
                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                           }}
                         />

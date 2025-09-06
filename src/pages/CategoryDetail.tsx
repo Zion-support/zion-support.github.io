@@ -1,16 +1,16 @@
-import { GradientHeading } from "@/components/GradientHeading",
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { useState, useEffect, useRef, Suspense } from "react",
+import { GradientHeading } from "@/components/GradientHeading";
+import { ProductListingCard } from "@/components/ProductListingCard";
+import { useState, useEffect, useRef, Suspense } from "react";
 import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react'
-import { MARKETPLACE_LISTINGS } from "@/data/listingData",
-import { ProductListing } from "@/types/listings",
-import { useRouter } from 'next/router',
-import Link from 'next/link',
-import { toast } from "@/hooks/use-toast",
-import { NextSeo } from '@/components/NextSeo',
-import { Header } from "@/components/Header",
-import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { MARKETPLACE_LISTINGS } from "@/data/listingData";
+import { ProductListing } from "@/types/listings";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { toast } from "@/hooks/use-toast";
+import { NextSeo } from '@/components/NextSeo';
+import { Header } from "@/components/Header";
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
+import {logErrorToProduction} from '@/utils/productionLogger';
 const AUTO_SERVICE_TITLES = [
   "AI-Powered Customer Support",
   "Cloud Infrastructure Management",
@@ -65,9 +65,9 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     router.push('/categories'),
     return null
   }
-  const [isLoading, setIsLoading] = useState(true),
-  const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
-  const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
+  const [ isLoading, setIsLoading ] = useState(true),
+  const [ listings, setListings ] = useState(MARKETPLACE_LISTINGS),
+  const [ category, setCategory ] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: "",
     description: "",
     icon: <Bot className="w-6 h-6" />
@@ -211,7 +211,6 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = listings.find(item => item.id === listingId),
-    
     if (listing) {
       toast({
         title: "Quote Requested",
@@ -235,8 +234,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     ? `${category.title} | Zion Marketplace`
     : 'Category | Zion Marketplace',
   const seoDescription =
-    category.description || 'Explore listings in this category.',
-
+    category.description || 'Explore listings in this category.';
   return (
     <>
       <NextSeo title={seoTitle} description={seoDescription} />

@@ -1,12 +1,12 @@
 
-import React from 'react',
-import { useForm } from 'react-hook-form',
-import { zodResolver } from '@hookform/resolvers/zod',
-import { z } from 'zod',
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
 import { CalendarIcon, Loader2 } from 'lucide-react'
-import { format } from 'date-fns',
-import { Button } from '@/components/ui/button',
-import { Calendar } from '@/components/ui/calendar',
+import { format } from 'date-fns';
+import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
 import {
   Form,
   FormControl,
@@ -14,14 +14,14 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from '@/components/ui/form',
-import { Input } from '@/components/ui/input',
-import { Textarea } from '@/components/ui/textarea',
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger} from '@/components/ui/popover',
-import { AIMilestoneGenerator } from './AIMilestoneGenerator',
-import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator',
+import { AIMilestoneGenerator } from './AIMilestoneGenerator';
+import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
 const formSchema = z.object({
   title: z.string().min(1, 'Title is required'),
   description: z.string().optional(),
@@ -91,11 +91,10 @@ export function AddMilestoneForm({
     onSubmit({
       title: milestone.title,
       description: milestone.description,
-      due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
+      due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined;
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
     })
-  },
-
+  };
   return (
     <div className="space-y-6">
       {/* AI Milestone Generator */}

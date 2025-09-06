@@ -1,20 +1,19 @@
-import { useState, useEffect, useCallback, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
-import { useRouter } from 'next/router',
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router';
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, Clock, Award } from 'lucide-react'
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
-import { generateITServices, getServicesMarketStats, getRecommendedServices } from '@/utils/servicesAutoFeedAlgorithm',
-import { ProductListing } from '@/types/listings',
-import { SkeletonCard } from '@/components/ui/skeleton',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import Spinner from '@/components/ui/spinner',
-import { SERVICES } from '@/data/servicesData',
-import { useCurrency } from '@/hooks/useCurrency',
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { generateITServices, getServicesMarketStats, getRecommendedServices } from '@/utils/servicesAutoFeedAlgorithm';
+import { ProductListing } from '@/types/listings';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { SERVICES } from '@/data/servicesData';
+import { useCurrency } from '@/hooks/useCurrency';
 // Initial services from existing data
 const INITIAL_SERVICES: ProductListing[] = SERVICES,
-
 // Market insights component
 const ServicesMarketInsights = ({ stats }: { stats: any }) => (
   <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
@@ -82,8 +81,7 @@ const ServiceFilterControls = ({
 ),
 
 // Service card
-const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onViewDetails: () => void }) => {
-  const { formatPrice } = useCurrency(),
+const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onViewDetails: () => void }) => { const { formatPrice  } = useCurrency(),
   return (
   <Card className="h-full hover:shadow-lg transition-shadow">
     <CardHeader className="pb-3">
@@ -136,16 +134,15 @@ const ServicesLoadingGrid = ({ count = 8 }: { count?: number }) => (
 // Main component
 export default function ServicesPage() {
   const router = useRouter(),
-  const [sortBy, setSortBy] = useState('newest'),
-  const [filterCategory, setFilterCategory] = useState(''),
-  const [showRecommended, setShowRecommended] = useState(false),
-  const [totalGenerated, setTotalGenerated] = useState(0),
+  const [ sortBy, setSortBy ] = useState('newest'),
+  const [ filterCategory, setFilterCategory ] = useState(''),
+  const [ showRecommended, setShowRecommended ] = useState(false),
+  const [ totalGenerated, setTotalGenerated ] = useState(0),
 
   const fetchServices = useCallback(async (page: number, limit: number) => {
     await new Promise(resolve => setTimeout(resolve, 400)),
 
     let allServices: ProductListing[] = [],
-    
     if (page === 1) {
       allServices = [...INITIAL_SERVICES]
     }
@@ -190,8 +187,7 @@ export default function ServicesPage() {
     }
   }, [sortBy, filterCategory, showRecommended, totalGenerated]),
 
-  const {
-    items: services,
+  const { items: services,
     loading,
     error,
     hasMore,
@@ -200,7 +196,7 @@ export default function ServicesPage() {
     scrollToTop,
     refresh,
     total
-  } = useInfiniteScrollPagination(fetchServices, 12),
+   } = useInfiniteScrollPagination(fetchServices, 12),
 
   useEffect(() => {
     refresh(),
@@ -216,13 +212,12 @@ export default function ServicesPage() {
     return Array.from(new Set(services.map(s => s.category).filter(Boolean)))
   }, [services]),
 
-  const [showScrollTop, setShowScrollTop] = useState(false),
+  const [ showScrollTop, setShowScrollTop ] = useState(false),
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800),
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
-
+  }, []);
   if (loading && services.length === 0) {
     return (
       <div className="container py-8">

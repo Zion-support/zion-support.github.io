@@ -1,20 +1,19 @@
-import { Project } from '@/types/projects',
-import { useState } from "react",
+import { Project } from '@/types/projects';
+import { useState } from "react";
 import { Star } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReviewsList } from "@/components/reviews/ReviewsList",
-import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
-import { useReviews } from "@/hooks/useReviews",
-import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ReviewsList } from "@/components/reviews/ReviewsList";
+import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";
+import { useReviews } from "@/hooks/useReviews";
+import { useAuth } from "@/hooks/useAuth";
 interface ProjectReviewSectionProps {
   project: Project
 }
 
-export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
-  const { user } = useAuth(),
-  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
+export function ProjectReviewSection({ project }: ProjectReviewSectionProps) { const { user  } = useAuth(),
+  const { reviews, userReview, isLoading, reportReview  } = useReviews(project.id),
+  const [ isReviewModalOpen, setIsReviewModalOpen ] = useState(false),
   
   const isCompleted = project.status === "completed",
   const isClient = user?.id === project.client_id,
@@ -30,8 +29,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     : clientProfile?.full_name || "Client",
 
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
-  const hasLeftReview = userReview != null,
-  
+  const hasLeftReview = userReview != null;
   return (
     <Card className="mt-6">
       <CardHeader>

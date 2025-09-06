@@ -1,6 +1,6 @@
 
-import { Availability } from "@/types/profile",
-import { Badge } from "@/components/ui/badge",
+import { Availability } from "@/types/profile";
+import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Check } from 'lucide-react'
 
 interface ProfileAvailabilityProps {
@@ -24,8 +24,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       case 'unavailable': return 'Currently Unavailable',
       default: return ''
     }
-  },
-
+  };
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Availability</h3>

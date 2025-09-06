@@ -1,10 +1,10 @@
-import React, { useMemo } from "react",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { cn } from "@/lib/utils",
-import { format } from "date-fns",
+import React, { useMemo } from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { cn } from "@/lib/utils";
+import { format } from "date-fns";
 // Use the wrapper hook so TypeScript properly infers the return type
 // from the ThemeProvider context
-import { useTheme } from "@/hooks/useTheme",
+import { useTheme } from "@/hooks/useTheme";
 interface ChatMessageProps {
   message: string,
   isUser: boolean,
@@ -14,8 +14,7 @@ interface ChatMessageProps {
 export const ChatMessage: React.FC<ChatMessageProps> = ({
   message,
   isUser,
-  timestamp}: ChatMessageProps) => {
-  const { theme } = useTheme(),
+  timestamp}: ChatMessageProps) => { const { theme  } = useTheme(),
   
   // Memoise the sanitized + formatted HTML so we don't create a new object on every render –
   // this avoids the `react/jsx-no-constructed-context-values` & `react/jsx-no-bind` warnings.
@@ -91,13 +90,11 @@ function formatMessageWithLinks(message: string): string {
     urlRegex,
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
   ),
-
   // Replace help-center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g,
   formattedMessage = formattedMessage.replace(
     helpCenterRegex,
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
-  ),
-
+  );
   return formattedMessage
 }

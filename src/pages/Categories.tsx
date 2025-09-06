@@ -1,12 +1,12 @@
-import useSWR from 'swr',
-import { CategoryCard } from "@/components/CategoryCard",
-import { GradientHeading } from "@/components/GradientHeading",
-import { SkeletonCard } from '@/components/ui',
-import ErrorBoundary from "@/components/GlobalErrorBoundary",
+import useSWR from 'swr';
+import { CategoryCard } from "@/components/CategoryCard";
+import { GradientHeading } from "@/components/GradientHeading";
+import { SkeletonCard } from '@/components/ui';
+import ErrorBoundary from "@/components/GlobalErrorBoundary";
 import { Folder } from 'lucide-react'
-import { CATEGORIES } from '@/data/categories',
-import { NextSeo } from '@/components/NextSeo',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { CATEGORIES } from '@/data/categories';
+import { NextSeo } from '@/components/NextSeo';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface CategoryType {
   id: string,
   name: string,
@@ -33,12 +33,10 @@ export interface CategoriesProps {
   categories?: CategoryType[]
 }
 
-export default function Categories({ categories: initialCategories = [] }: CategoriesProps) {
-  const { data, error } = useSWR<CategoryType[]>('/api/categories', fetcher, {
+export default function Categories({ categories: initialCategories = [] }: CategoriesProps) { const { data, error  } = useSWR<CategoryType[]>('/api/categories', fetcher, {
     fallbackData: initialCategories}),
   const categories = data || [],
-  const isLoading = !data && !error,
-
+  const isLoading = !data && !error;
   return (
     <>
       <NextSeo

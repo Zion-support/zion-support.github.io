@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Card, CardContent } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { cn } from '@/lib/utils',
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { cn } from '@/lib/utils';
 // Enhanced loading spinner with different variants
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl',
@@ -58,7 +58,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
   showProgress = true,
   onComplete
 }) => {
-  const [activeStep, setActiveStep] = useState(0),
+  const [ activeStep, setActiveStep ] = useState(0),
   const progress = ((activeStep + 1) / steps.length) * 100,
 
   useEffect(() => {
@@ -181,9 +181,9 @@ interface ErrorStateProps {
   title?: string,
   description?: string,
   action?: {
-    label: string,
+    label: string;
     onClick: () => void
-  },
+  };
   secondaryAction?: {
     label: string,
     onClick: () => void
@@ -209,7 +209,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
   onRetry,
   className
 }) => {
-  const [isOnline, setIsOnline] = useState(true),
+  const [ isOnline, setIsOnline ] = useState(true),
 
   useEffect(() => {
     const handleOnline = () => setIsOnline(true),
@@ -255,8 +255,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
           description: description || 'You don\'t have permission to access this resource.',
           color: 'text-red-500'
         },
-      default:
-        return {
+      default: return {
           icon: AlertTriangle,
           title: title || 'Something went wrong',
           description: description || 'An unexpected error occurred. Please try again.',
@@ -439,4 +438,4 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
       )}
     </div>
   )
-}, 
+};

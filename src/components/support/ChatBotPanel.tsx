@@ -1,16 +1,16 @@
 
-import React, { useState, useRef, useEffect } from "react",
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { ScrollArea } from "@/components/ui/scroll-area",
-import { Separator } from "@/components/ui/separator",
-import { toast } from "@/components/ui/use-toast",
-import { cn } from "@/lib/utils",
-import { ChatMessage } from "./ChatMessage",
-import { QuickReplyButton } from "./QuickReplyButton",
+import React, { useState, useRef, useEffect } from "react";
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Separator } from "@/components/ui/separator";
+import { toast } from "@/components/ui/use-toast";
+import { cn } from "@/lib/utils";
+import { ChatMessage } from "./ChatMessage";
+import { QuickReplyButton } from "./QuickReplyButton";
 import { Send, Loader2 } from 'lucide-react'
-import { useTheme } from "@/hooks/useTheme",
+import { useTheme } from "@/hooks/useTheme";
 // Define suggested quick replies
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" },
@@ -25,18 +25,18 @@ type Message = {
 },
 
 export function ChatBotPanel() {
-  const [messages, setMessages] = useState<Message[]>([
+  const [ messages, setMessages ] = useState<Message[]>([
     {
       id: "welcome",
       content: "Hi! How can I help you?",
       sender: "bot",
       timestamp: new Date()}]),
-  const [inputValue, setInputValue] = useState(""),
-  const [isLoading, setIsLoading] = useState(false),
-  const [failedAttempts, setFailedAttempts] = useState(0),
+  const [ inputValue, setInputValue ] = useState(""),
+  const [ isLoading, setIsLoading ] = useState(false),
+  const [ failedAttempts, setFailedAttempts ] = useState(0),
   const scrollAreaRef = useRef<HTMLDivElement>(null),
   const inputRef = useRef<HTMLInputElement>(null),
-  const { theme } = useTheme(),
+  const { theme  } = useTheme(),
 
   // Auto-scroll to bottom when messages change
   useEffect(() => {
@@ -54,7 +54,6 @@ export function ChatBotPanel() {
 
   const handleSendMessage = async (text: string = inputValue) => {
     if (!text.trim()) return,
-    
     const userMessage: Message = {
       id: `user-${Date.now()}`,
       content: text,
@@ -139,8 +138,7 @@ export function ChatBotPanel() {
   const suggestEscalation = () => {
     const escalationMessage: Message = {
       id: `bot-escalation-${Date.now()}`,
-      content: 
-        "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
+      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
       sender: "bot",
       timestamp: new Date()},
     
@@ -280,7 +278,7 @@ export function ChatBotPanel() {
       )}>
         <form 
           onSubmit={(e) => {
-            e.preventDefault(),
+            e.preventDefault();
             handleSendMessage()
           }}
           className="flex items-center gap-2"
@@ -291,7 +289,7 @@ export function ChatBotPanel() {
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="Type your question..."
             className={cn(
-              "flex-1",
+              "flex-1";
               theme === "dark" 
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" 
                 : "bg-white border-gray-200"

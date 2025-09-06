@@ -1,14 +1,14 @@
 
-import { useState } from "react",
-import { useRouter } from 'next/router',
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
+import { useState } from "react";
+import { useRouter } from 'next/router';
+import { useForm, ControllerRenderProps } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 import { LogIn, User, Eye, EyeOff } from 'lucide-react'
-import { fireEvent } from '@/lib/analytics',
-import { useAuth } from "@/context/auth/AuthProvider",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+import { fireEvent } from '@/lib/analytics';
+import { useAuth } from "@/context/auth/AuthProvider";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Form,
   FormControl,
@@ -16,9 +16,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import Link from "next/link",
-import { Checkbox } from "@/components/ui/checkbox",
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import Link from "next/link";
+import { Checkbox } from "@/components/ui/checkbox";
 // Form validation schema
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
@@ -28,12 +28,11 @@ const loginSchema = z.object({
 
 type LoginFormValues = z.infer<typeof loginSchema>,
 
-export function LoginForm() {
-  const { isLoading, login } = useAuth(),
-  const [showPassword, setShowPassword] = useState(false),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [isResending, setIsResending] = useState(false),
-  const [verificationMessage, setVerificationMessage] = useState(''),
+export function LoginForm() { const { isLoading, login  } = useAuth(),
+  const [ showPassword, setShowPassword ] = useState(false),
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+  const [ isResending, setIsResending ] = useState(false),
+  const [ verificationMessage, setVerificationMessage ] = useState(''),
   const router = useRouter(),
   
   const form = useForm<LoginFormValues>({
@@ -45,7 +44,6 @@ export function LoginForm() {
 
   const onSubmit = async (data: LoginFormValues) => {
     if (isSubmitting) return,
-
     try {
       setIsSubmitting(true),
       // Pass email and password to the login function
@@ -102,8 +100,7 @@ export function LoginForm() {
       return
     }
     router.push(`/verify-status?email=${encodeURIComponent(email)}`)
-  },
-
+  };
   return (
     <Form {...form}>
       {form.formState.errors.root && (
@@ -113,7 +110,7 @@ export function LoginForm() {
       )}
       <form
         onSubmit={form.handleSubmit(onSubmit, (errors) => {
-          const firstError = Object.keys(errors)[0] as keyof LoginFormValues,
+          const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
           if (firstError) {
             form.setFocus(firstError)
           }

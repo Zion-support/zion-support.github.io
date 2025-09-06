@@ -1,12 +1,12 @@
-import { useState } from "react",
-import { toast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { AIMatchingResults } from "@/components/AIMatchingResults",
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
-import { Textarea } from "@/components/ui/textarea",
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { AIMatchingResults } from "@/components/AIMatchingResults";
+import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
+import { Textarea } from "@/components/ui/textarea";
 import { Sparkles, Search } from 'lucide-react'
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
 
 interface AIMatchmakerProps {
@@ -16,10 +16,10 @@ interface AIMatchmakerProps {
 }
 
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
-  const [query, setQuery] = useState(""),
-  const [isMatchmaking, setIsMatchmaking] = useState(false),
-  const [matches, setMatches] = useState([] as MatchResult[]),
-  const [hasSearched, setHasSearched] = useState(false),
+  const [ query, setQuery ] = useState(""),
+  const [ isMatchmaking, setIsMatchmaking ] = useState(false),
+  const [ matches, setMatches ] = useState([] as MatchResult[]),
+  const [ hasSearched, setHasSearched ] = useState(false),
 
   const handleSearch = async () => {
     if (!query.trim()) {
@@ -73,8 +73,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   },
   
   // Extract just the items from each MatchResult
-  const matchItems = matches.map(match => match.item),
-  
+  const matchItems = matches.map(match => match.item);
   return (
     <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className || ""}`}>
       <CardHeader className="pb-2">

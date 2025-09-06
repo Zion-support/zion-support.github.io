@@ -1,9 +1,9 @@
 
-import React from "react",
+import React from "react";
 import { Heart } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useToast } from "@/hooks/use-toast",
-import { useRouter } from 'next/router',
+import { cn } from "@/lib/utils";
+import { useToast } from "@/hooks/use-toast";
+import { useRouter } from 'next/router';
 interface TalentCardSaveButtonProps {
   profileId: string,
   profileName: string,
@@ -18,16 +18,14 @@ export function TalentCardSaveButton({
   isSaved,
   onToggleSave,
   isAuthenticated
-}: TalentCardSaveButtonProps) {
-  const { toast } = useToast(),
+}: TalentCardSaveButtonProps) { const { toast  } = useToast(),
   const router = useRouter(),
   // Using router.asPath for current path
-  const [localIsSaved, setLocalIsSaved] = React.useState(isSaved),
+  const [ localIsSaved, setLocalIsSaved ] = React.useState(isSaved),
   
   // Handle save toggle
   const handleSaveToggle = (e: React.MouseEvent) => {
     e.stopPropagation(),
-
     if (!isAuthenticated) {
       toast({
         title: "Authentication required",
@@ -61,7 +59,7 @@ export function TalentCardSaveButton({
     >
       <Heart 
         className={cn(
-          "h-4 w-4 transition-colors", 
+          "h-4 w-4 transition-colors";
           localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
         )} 
       />

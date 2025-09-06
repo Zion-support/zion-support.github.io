@@ -1,5 +1,5 @@
 
-import React from "react",
+import React from "react";
 import { Quote } from 'lucide-react'
 import {
   Carousel,
@@ -26,8 +26,7 @@ const testimonials = [
     author: "Elena Rodriguez",
     title: "CTO",
     company: "FutureTech Systems",
-    image: "/placeholder.svg"}],
-
+    image: "/placeholder.svg"}];
 export function EnterpriseTestimonials() {
   return (
     <section id="testimonials" className="py-20 px-4 md:px-6">

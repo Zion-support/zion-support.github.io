@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useRef, useMemo } from "react",
-import { useTranslation } from "react-i18next",
+import React, { useState, useEffect, useRef, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { Search, X } from 'lucide-react'
-import { Input } from "@/components/ui/input",
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
-import { SearchSuggestion } from "@/types/search",
-import { useDebounce } from "@/hooks/useDebounce",
-import { useRouter } from "next/router",
-import { slugify } from "@/lib/slugify",
-import { debounce } from "lodash",
-import { logInfo, logWarn } from '@/utils/productionLogger',
+import { Input } from "@/components/ui/input";
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
+import { SearchSuggestion } from "@/types/search";
+import { useDebounce } from "@/hooks/useDebounce";
+import { useRouter } from "next/router";
+import { slugify } from "@/lib/slugify";
+import { debounce } from "lodash";
+import { logInfo, logWarn } from '@/utils/productionLogger';
 
 
 interface EnhancedSearchInputProps {
@@ -33,17 +33,16 @@ export function EnhancedSearchInput({
   onSelectSuggestion,
   placeholder = "Search...",
   searchSuggestions
-}: EnhancedSearchInputProps) {
-  const [isFocused, setIsFocused] = useState(false),
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),
-  const [highlightedIndex, setHighlightedIndex] = useState<number>(-1),
+}: EnhancedSearchInputProps) { const [ isFocused, setIsFocused ] = useState(false),
+  const [ filteredSuggestions, setFilteredSuggestions ] = useState<SearchSuggestion[]>([]),
+  const [ highlightedIndex, setHighlightedIndex ] = useState<number>(-1),
   const inputRef = useRef<HTMLInputElement>(null),
   const containerRef = useRef<HTMLDivElement>(null),
-  const [valueOnFocus, setValueOnFocus] = useState<string | null>(null),
-  const [enterHandledPostFocus, setEnterHandledPostFocus] = useState(false),
-  const { t } = useTranslation(),
-  const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([]),
-  const [loading, setLoading] = useState(false),
+  const [ valueOnFocus, setValueOnFocus ] = useState<string | null>(null),
+  const [ enterHandledPostFocus, setEnterHandledPostFocus ] = useState(false),
+  const { t  } = useTranslation(),
+  const [ apiSuggestions, setApiSuggestions ] = useState<SearchSuggestion[]>([]),
+  const [ loading, setLoading ] = useState(false),
 
   const debounced = useDebounce(value, 200),
 
@@ -233,7 +232,7 @@ export function EnhancedSearchInput({
           onBlur={(e) => {
             const relatedTarget = e.relatedTarget as HTMLElement,
             if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {
-              setIsFocused(false),
+              setIsFocused(false);
               setHighlightedIndex(-1)
             }
             setValueOnFocus(null)

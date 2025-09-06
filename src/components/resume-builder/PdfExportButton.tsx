@@ -1,6 +1,6 @@
-import { useState } from 'react',
-import { Button } from '@/components/ui/button',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import {logErrorToProduction} from '@/utils/productionLogger';
 import { 
   DropdownMenu,
   DropdownMenuContent,
@@ -13,19 +13,19 @@ import {
   DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu',
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download } from 'lucide-react'
-import { Resume } from '@/types/resume',
-import { exportResumeToPDF, ExportOptions } from '@/utils/pdfExport',
-import { toast } from '@/hooks/use-toast',
-import { FontFamily } from '@/utils/pdf/fontConfig',
+import { Resume } from '@/types/resume';
+import { exportResumeToPDF, ExportOptions } from '@/utils/pdfExport';
+import { toast } from '@/hooks/use-toast';
+import { FontFamily } from '@/utils/pdf/fontConfig';
 interface PdfExportButtonProps {
   resume: Resume
 }
 
 export function PdfExportButton({ resume }: PdfExportButtonProps) {
-  const [isExporting, setIsExporting] = useState(false),
-  const [theme, setTheme] = useState<'light' | 'dark'>('light'),
-  const [includePortfolio, setIncludePortfolio] = useState(true),
-  const [fontFamily, setFontFamily] = useState<FontFamily>('default'),
+  const [ isExporting, setIsExporting ] = useState(false),
+  const [ theme, setTheme ] = useState<'light' | 'dark'>('light'),
+  const [ includePortfolio, setIncludePortfolio ] = useState(true),
+  const [ fontFamily, setFontFamily ] = useState<FontFamily>('default'),
 
   const handleExport = async () => {
     if (isExporting) return,
@@ -67,8 +67,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
     } finally {
       setIsExporting(false)
     }
-  },
-
+  };
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

@@ -1,19 +1,18 @@
-import React, { useState } from 'react',
+import React, { useState } from 'react';
 import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth',
-import { usePoints } from '@/hooks/usePoints',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { ScrollArea } from '@/components/ui/scroll-area',
-import { formatDistanceToNow } from 'date-fns',
-import Link from 'next/link',
-import { LoginModal } from '@/components/auth/LoginModal',
-export default function PointsPage() {
-  const { isAuthenticated, user } = useAuth(),
-  const { ledger, balance, loading, fetchLedger } = usePoints(),
-  const [loginOpen, setLoginOpen] = useState(false),
-  const [redeeming, setRedeeming] = useState(false),
+import { useAuth } from '@/hooks/useAuth';
+import { usePoints } from '@/hooks/usePoints';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { formatDistanceToNow } from 'date-fns';
+import Link from 'next/link';
+import { LoginModal } from '@/components/auth/LoginModal';
+export default function PointsPage() { const { isAuthenticated, user  } = useAuth(),
+  const { ledger, balance, loading, fetchLedger  } = usePoints(),
+  const [ loginOpen, setLoginOpen ] = useState(false),
+  const [ redeeming, setRedeeming ] = useState(false),
 
   async function handleRedeem(reward: { id: string, cost: number, title: string }) {
     if (!user?.id) return,
@@ -67,8 +66,7 @@ export default function PointsPage() {
     { id: 'swag', title: 'Zion Swag Pack', cost: 1500, category: 'Merchandise' },
     { id: 'coupon25', title: '$25 Off Coupon', cost: 2000, category: 'Discount' },
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
-  ],
-
+  ];
   if (!isAuthenticated) {
     return (
       <>
@@ -255,7 +253,7 @@ export default function PointsPage() {
                       variant="outline"
                       className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
                     >
-                      {entry.delta >= 0 ? '+' : ''}
+                      {entry.delta >= 0 ? '' : ''}
                       {entry.delta} pts
                     </Badge>
                   </div>

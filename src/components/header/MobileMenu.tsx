@@ -1,11 +1,11 @@
-import Link from 'next/link',
-import { useRouter } from 'next/router',
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react'
-import { cn } from '@/lib/utils',
-import { useAuth } from '@/hooks/useAuth',
-import { Button } from '@/components/ui/button',
-import { ModeToggle } from '@/components/ModeToggle',
-import { useTranslation } from 'react-i18next',
+import { cn } from '@/lib/utils';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { ModeToggle } from '@/components/ModeToggle';
+import { useTranslation } from 'react-i18next';
 export interface MobileMenuProps {
   unreadCount?: number,
   onClose: () => void,
@@ -26,11 +26,10 @@ function isProtectedRoute(href: string): boolean {
   return protectedRoutes.some(route => href.startsWith(route))
 }
 
-export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileMenuProps) {
-  const router = useRouter(),
-  const { user } = useAuth(),
+export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileMenuProps) { const router = useRouter(),
+  const { user  } = useAuth(),
   const isAuthenticated = !!user,
-  const { t } = useTranslation(),
+  const { t  } = useTranslation(),
 
   const baseItems = [
     {
@@ -104,10 +103,10 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
             href={item.href}
             aria-label={item.name}
             className={cn(
-              'flex items-center px-6 py-3 text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
+              'flex items-center px-6 py-3 text-base font-medium focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary',
               item.matches(router.pathname)
                 ? 'bg-primary/20 text-primary border-l-4 border-primary'
-                : 'text-foreground hover:bg-primary/10 hover:text-primary',
+                : 'text-foreground hover: bg-primary/10 hover:text-primary',
             )}
             onClick={(e) => {
               const routeIsProtected = item.authRequired || isProtectedRoute(item.href),
@@ -115,7 +114,7 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
                 e.preventDefault(),
                 // Update URL to include returnTo, then open modal
                 router.push({ pathname: '/auth/login', query: { returnTo: item.href } }, undefined, { shallow: true }),
-                openLoginModal(item.href),
+                openLoginModal(item.href);
                 // It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.
                 // Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay.
               }

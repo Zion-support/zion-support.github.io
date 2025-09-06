@@ -1,8 +1,8 @@
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Checkbox } from "@/components/ui/checkbox",
-import { SkillsFilterProps } from "@/types/filters",
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { SkillsFilterProps } from "@/types/filters";
 // Common skills in AI and tech
 const POPULAR_SKILLS = [
   "Machine Learning",
@@ -21,8 +21,7 @@ const POPULAR_SKILLS = [
   "TypeScript",
   "DevOps",
   "Security"
-],
-
+];
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">

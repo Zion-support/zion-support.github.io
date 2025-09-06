@@ -1,6 +1,6 @@
 
-import React, { useState } from "react",
-import { Control, UseFormSetValue } from "react-hook-form",
+import React, { useState } from "react";
+import { Control, UseFormSetValue } from "react-hook-form";
 import {
   FormField,
   FormItem,
@@ -9,9 +9,9 @@ import {
   FormDescription,
   FormMessage
 } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
-import { Card, CardContent } from "@/components/ui/card",
+import { Input } from "@/components/ui/input";
+import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
+import { Card, CardContent } from "@/components/ui/card";
 
 interface RateOptimizationSectionProps {
   control: Control<any>,
@@ -71,4 +71,4 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
       </Card>
     </div>
   )
-},
+};

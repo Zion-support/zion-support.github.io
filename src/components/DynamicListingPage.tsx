@@ -1,24 +1,24 @@
-import { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import { GradientHeading } from "@/components/GradientHeading",
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+import { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
+import { GradientHeading } from "@/components/GradientHeading";
+import { ProductListingCard } from "@/components/ProductListingCard";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Select,
   SelectValue,
   SelectTrigger,
   SelectContent,
   SelectItem} from "@/components/ui/select",
-import { Checkbox } from "@/components/ui/checkbox",
-import Skeleton from "react-loading-skeleton",
+import { Checkbox } from "@/components/ui/checkbox";
+import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css",
-import { Slider } from "@/components/ui/slider",
-import { ProductListing, ListingView } from "@/types/listings",
+import { Slider } from "@/components/ui/slider";
+import { ProductListing, ListingView } from "@/types/listings";
 import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
-import { captureException } from "@/utils/sentry",
+import { toast } from "@/hooks/use-toast";
+import { captureException } from "@/utils/sentry";
 interface PriceRange {
   min: number,
   max: number
@@ -46,8 +46,8 @@ export function DynamicListingPage({
   initialPrice = { min: 0, max: 10000 },
   detailBasePath = "/marketplace/listing"}: DynamicListingPageProps) {
   const router = useRouter(),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]),
+  const [ searchQuery, setSearchQuery ] = useState(""),
+  const [ selectedCategories, setSelectedCategories ] = useState<string[]>([]),
   const toggleCategory = (category: string) => {
     setSelectedCategories(prev =>
       prev.includes(category)
@@ -56,7 +56,7 @@ export function DynamicListingPage({
     )
   },
   const clearCategories = () => setSelectedCategories([]),
-  const [view, setView] = useState<ListingView>("grid"),
+  const [ view, setView ] = useState<ListingView>("grid"),
   const isGrid = view === "grid",
   // Swap icons to match action
   const ToggleViewIcon = isGrid ? (
@@ -64,16 +64,16 @@ export function DynamicListingPage({
   ) : (
     <LayoutGrid className="h-4 w-4" />
   ),
-  const [isLoading, setIsLoading] = useState(false),
-  const [priceRange, setPriceRange] = useState<PriceRange>({
+  const [ isLoading, setIsLoading ] = useState(false),
+  const [ priceRange, setPriceRange ] = useState<PriceRange>({
     min: 0,
     max: 10000}),
 
-  const [selectedRating, setSelectedRating] = useState<number | null>(null),
-  const [selectedBrand, setSelectedBrand] = useState("all"),
-  const [specQuery, setSpecQuery] = useState(""),
-  const [selectedAvailability, setSelectedAvailability] = useState("all"),
-  const [sortOption, setSortOption] = useState("newest"),
+  const [ selectedRating, setSelectedRating ] = useState<number | null>(null),
+  const [ selectedBrand, setSelectedBrand ] = useState("all"),
+  const [ specQuery, setSpecQuery ] = useState(""),
+  const [ selectedAvailability, setSelectedAvailability ] = useState("all"),
+  const [ sortOption, setSortOption ] = useState("newest"),
 
   const brandOptions = Array.from(
     new Set(allListings.map((l) => l.brand).filter(Boolean)),
@@ -91,12 +91,12 @@ export function DynamicListingPage({
     }
   }, [allListings]),
 
-  const [currentPriceFilter, setCurrentPriceFilter] = useState<
+  const [ currentPriceFilter, setCurrentPriceFilter ] = useState<
     [number, number]
   >([0, initialPrice.max]),
 
   const handleSliderChange = (values: number[]) => {
-    const [min, max] = values.map(Number),
+    const [ min, max ] = values.map(Number),
     if (min == null || max == null || isNaN(min) || isNaN(max)) return,
     setCurrentPriceFilter([min, max])
   },
@@ -177,7 +177,6 @@ export function DynamicListingPage({
 
   const handleRequestQuote = (listingId: string) => {
     setIsLoading(true),
-
     const listing = allListings.find((item) => item.id === listingId),
 
     setTimeout(() => {
@@ -511,7 +510,7 @@ export function DynamicListingPage({
                     setCurrentPriceFilter([0, priceRange.max]),
                     setSelectedRating(null),
                     setSelectedBrand("all"),
-                    setSpecQuery(""),
+                    setSpecQuery("");
                     setSelectedAvailability("all")
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"

@@ -1,11 +1,11 @@
 
-import React, { useState } from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
+import React, { useState } from "react";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Plus, Trash2 } from 'lucide-react'
-import { AppPlatform } from "./MetadataManager",
+import { AppPlatform } from "./MetadataManager";
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
@@ -18,7 +18,7 @@ type ChangelogEntry = {
 },
 
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) => {
-  const [entries, setEntries] = useState<ChangelogEntry[]>([
+  const [ entries, setEntries ] = useState<ChangelogEntry[]>([
     {
       id: "1",
       version: "1.0.0",
@@ -27,7 +27,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     }
   ]),
   
-  const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry, "id">>({
+  const [ newEntry, setNewEntry ] = useState<Omit<ChangelogEntry, "id">>({
     version: "",
     date: new Date().toISOString().split('T')[0] || new Date().toLocaleDateString('en-CA'),
     changes: ""
@@ -53,11 +53,9 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     setEntries(entries.filter(entry => entry.id !== id))
   },
   
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target,
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => { const { name, value  } = e.target,
     setNewEntry(prev => ({ ...prev, [name]: value }))
-  },
-  
+  };
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -129,4 +127,4 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
       </CardContent>
     </Card>
   )
-},
+};

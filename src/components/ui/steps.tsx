@@ -1,6 +1,6 @@
 
-import React from "react",
-import { cn } from "@/lib/utils",
+import React from "react";
+import { cn } from "@/lib/utils";
 import { CheckIcon } from 'lucide-react'
 
 interface StepProps {
@@ -78,8 +78,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           
           let status: "incomplete" | "current" | "complete" = "incomplete",
           if (index < currentStep) status = "complete",
-          if (index === currentStep) status = "current",
-          
+          if (index === currentStep) status = "current";
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}

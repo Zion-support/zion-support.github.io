@@ -1,7 +1,7 @@
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from 'lucide-react'
-import Image from "next/image",
+import Image from "next/image";
 interface ServiceDetailsProps {
   country: string
 }
@@ -57,14 +57,10 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
     
     const timezone = timeZones[country] || timeZones["default"] || "Local timezone",
     
-    return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
-           `Response times are typically within 4 hours for metropolitan areas. ` +
-           `Please have site access permissions and contact details ready for our technicians. ` +
-           `For remote locations, additional travel fees may apply.`
+    return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ``Response times are typically within 4 hours for metropolitan areas. ``Please have site access permissions and contact details ready for our technicians. ``For remote locations, additional travel fees may apply.`
   },
   
-  const datacenters = getDatacenters(country),
-  
+  const datacenters = getDatacenters(country);
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>

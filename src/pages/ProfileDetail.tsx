@@ -1,23 +1,23 @@
-import { useState, useEffect } from "react",
-import { useRouter } from "next/router",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-import { SEO } from "@/components/SEO",
-import { Header } from "@/components/Header",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+import { SEO } from "@/components/SEO";
+import { Header } from "@/components/Header";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
-import { HireNowCTA } from "@/components/profile/HireNowCTA",
+import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
   const router = useRouter(),
   const profileId = router.query.profileId as string,
-  const [profileData, setProfileData] = useState<any>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
+  const [ profileData, setProfileData ] = useState<any>(null),
+  const [ isLoading, setIsLoading ] = useState(true),
+  const [ error, setError ] = useState<string | null>(null),
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -29,7 +29,7 @@ export default function ProfileDetail() {
           return
         }
 
-        const { data, error } = await supabase
+        const { data, error  } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
@@ -214,12 +214,12 @@ export default function ProfileDetail() {
           </div>
 
           {/* Sidebar with HireNowCTA */}
-          <div className="col-span-4 lg:col-span-1">
+          <div className="col-span-4 lg: col-span-1">
             <HireNowCTA
               talentProfile={{
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
-                professional_title: profileData?.professional_title || '',
+                professional_title: profileData?.professional_title || '';
                 hourly_rate: profileData?.hourly_rate || 0
               }}
             />

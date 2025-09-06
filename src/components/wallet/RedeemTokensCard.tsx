@@ -1,8 +1,8 @@
 
-import React, { useState } from "react",
-import { useWallet } from "@/hooks/useWallet",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
+import React, { useState } from "react";
+import { useWallet } from "@/hooks/useWallet";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
 import {
   Dialog,
@@ -44,17 +44,14 @@ const REWARD_OPTIONS: RewardOption[] = [
   }
 ],
 
-export function RedeemTokensCard() {
-  const { wallet, spendTokens } = useWallet(),
-  const [open, setOpen] = useState(false),
+export function RedeemTokensCard() { const { wallet, spendTokens  } = useWallet(),
+  const [ open, setOpen ] = useState(false),
 
   const handleRedeem = async (option: RewardOption) => {
     if (!wallet || wallet.balance < option.cost) return,
-    
-    await spendTokens(option.cost, `Redeemed: ${option.title}`),
+    await spendTokens(option.cost, `Redeemed: ${option.title}`);
     setOpen(false)
-  },
-
+  };
   return (
     <Card>
       <CardHeader>

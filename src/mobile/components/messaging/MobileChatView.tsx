@@ -1,12 +1,12 @@
 
-import React, { useState } from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+import React, { useState } from "react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useRouter } from 'next/router',
-import { toast } from "sonner",
+import { cn } from "@/lib/utils";
+import { useRouter } from 'next/router';
+import { toast } from "sonner";
 interface Message {
   id: string,
   content: string,
@@ -23,14 +23,14 @@ interface MobileChatViewProps {
     name: string,
     avatar?: string,
     status?: string
-  },
+  };
   messages: Message[],
   onBack: () => void,
   onSendMessage: (content: string) => void
 }
 
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
-  const [newMessage, setNewMessage] = useState(""),
+  const [ newMessage, setNewMessage ] = useState(""),
   const router = useRouter(),
   
   const handleSend = () => {
@@ -138,7 +138,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             >
               <p>{message.content}</p>
               <div className={cn(
-                "text-xs mt-1 flex justify-end",
+                "text-xs mt-1 flex justify-end";
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>
                 {message.timestamp}

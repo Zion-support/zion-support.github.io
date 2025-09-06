@@ -1,5 +1,5 @@
 
-import { GradientHeading } from "./GradientHeading",
+import { GradientHeading } from "./GradientHeading";
 import {
   Accordion,
   AccordionContent,
@@ -39,8 +39,7 @@ const faqs = [
   {
     question: "How do I contact support?",
     answer:
-      "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime."}],
-
+      "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime."}];
 export function FaqSection() {
   return (
     <section className="py-20 bg-zion-blue" id="faq">

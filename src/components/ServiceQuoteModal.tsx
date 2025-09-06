@@ -1,20 +1,20 @@
-import { useState } from 'react',
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Label } from "@/components/ui/label",
-import { Slider } from "@/components/ui/slider",
-import { Calendar } from "@/components/ui/calendar",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { format } from "date-fns",
+import { useState } from 'react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import { Slider } from "@/components/ui/slider";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { format } from "date-fns";
 import { CalendarIcon } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { ProductListing } from "@/types/listings",
-import { toast } from '@/hooks/use-toast',
-import { supabase } from "@/integrations/supabase/client",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { cn } from "@/lib/utils";
+import { ProductListing } from "@/types/listings";
+import { toast } from '@/hooks/use-toast';
+import { supabase } from "@/integrations/supabase/client";
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface ServiceQuoteModalProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,
@@ -35,28 +35,26 @@ const TIMELINE_OPTIONS = [
   { label: "6+ months", value: "6+months" }],
 
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
-  const [formData, setFormData] = useState({
+  const [ formData, setFormData ] = useState({
     description: '',
     email: '',
     budget: BUDGET_RANGES[0]?.value || '0-5000',
     timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'}),
-  const [startDate, setStartDate] = useState<Date | undefined>(new Date()),
-  const [endDate, setEndDate] = useState<Date | undefined>(undefined),
-  const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details'),
-  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [ startDate, setStartDate ] = useState<Date | undefined>(new Date()),
+  const [ endDate, setEndDate ] = useState<Date | undefined>(undefined),
+  const [ currentStep, setCurrentStep ] = useState<'details' | 'timeline' | 'contact'>('details'),
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target,
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => { const { name, value  } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
   },
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(),
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => { e.preventDefault(),
     setIsSubmitting(true),
 
     try {
       // Call Supabase function to process the quote
-      const { data, error } = await supabase.functions.invoke('process-quote', {
+      const { data, error  } = await supabase.functions.invoke('process-quote', {
         body: {
           service: service ? {
             id: service.id,
@@ -217,7 +215,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                       <Button
                         variant={"outline"}
                         className={cn(
-                          "justify-start text-left font-normal w-full",
+                          "justify-start text-left font-normal w-full";
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}
                       >

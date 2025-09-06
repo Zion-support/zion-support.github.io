@@ -1,16 +1,15 @@
 
-import React, { useEffect, useState } from "react",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { ClickableBadge } from "@/components/ui/clickable-badge",
+import React, { useEffect, useState } from "react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { PlusCircle, Save, Trash } from 'lucide-react'
-import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { toast } from "sonner",
-export function WebhookManager() {
-  const { 
+import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { toast } from "sonner";
+export function WebhookManager() { const { 
     webhooks,
     loading, 
     error,
@@ -20,9 +19,9 @@ export function WebhookManager() {
     toggleWebhook,
     deleteWebhook,
     testWebhook
-  } = useWebhooks(),
+   } = useWebhooks(),
   
-  const [newWebhook, setNewWebhook] = useState({
+  const [ newWebhook, setNewWebhook ] = useState({
     name: "",
     url: "",
     selectedEvent: "" as WebhookEventType,
@@ -88,8 +87,7 @@ export function WebhookManager() {
   
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)
-  },
-  
+  };
   return (
     <div className="space-y-8">
       <Card>

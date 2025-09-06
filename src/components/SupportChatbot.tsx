@@ -1,8 +1,8 @@
-import { useState, useRef, useEffect } from 'react',
+import { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { ChatMessage, ChatInput } from '@/components/ChatAssistant',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { Button } from '@/components/ui/button';
+import { ChatMessage, ChatInput } from '@/components/ChatAssistant';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
 // Fallback responses when API is unavailable
@@ -15,10 +15,10 @@ const FALLBACK_RESPONSES = [
 ],
 
 export function SupportChatbot() {
-  const [open, setOpen] = useState(false),
-  const [messages, setMessages] = useState<Msg[]>([]),
-  const [loading, setLoading] = useState(false),
-  const [typing, setTyping] = useState(false),
+  const [ open, setOpen ] = useState(false),
+  const [ messages, setMessages ] = useState<Msg[]>([]),
+  const [ loading, setLoading ] = useState(false),
+  const [ typing, setTyping ] = useState(false),
   const endRef = useRef<HTMLDivElement | null>(null),
 
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth' }) }, [messages]),
@@ -104,8 +104,8 @@ export function SupportChatbot() {
       // Provide a helpful fallback response instead of generic error
       const fallbackResponse = FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.",
       const errorMsg: Msg = { 
-        id: Date.now().toString() + '-e', 
-        role: 'assistant', 
+        id: Date.now().toString() + '-e',
+        role: 'assistant',
         message: fallbackResponse
       },
       setMessages(prev => [...prev, errorMsg])
@@ -113,8 +113,7 @@ export function SupportChatbot() {
       setLoading(false),
       setTyping(false)
     }
-  },
-
+  };
   if (!open) {
     return (
       <Button 

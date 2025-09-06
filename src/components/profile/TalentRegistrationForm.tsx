@@ -1,14 +1,14 @@
-import React, { useState } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Switch } from "@/components/ui/switch",
-import { Badge } from "@/components/ui/badge",
-import { Separator } from "@/components/ui/separator",
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger',
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Switch } from "@/components/ui/switch";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Form,
   FormControl,
@@ -17,12 +17,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { useAuth } from "@/hooks/useAuth",
+import { toast } from "@/components/ui/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useAuth } from "@/hooks/useAuth";
 // Define form schema
 const talentProfileSchema = z.object({
   name: z.string().min(2, "Full Name must be at least 2 characters long"),
@@ -52,14 +52,13 @@ interface EnhancedProfile {
   categorizedSkills: CategorizedSkills
 }
 
-export function TalentRegistrationForm() {
-  // Remove the useToast() hook since we're importing the toast function directly
-  const { user } = useAuth(),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [skillTags, setSkillTags] = useState<string[]>([]),
-  const [isGenerating, setIsGenerating] = useState(false),
-  const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),
-  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
+export function TalentRegistrationForm() { // Remove the useToast() hook since we're importing the toast function directly
+  const { user  } = useAuth(),
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+  const [ skillTags, setSkillTags ] = useState<string[]>([]),
+  const [ isGenerating, setIsGenerating ] = useState(false),
+  const [ generatedContent, setGeneratedContent ] = useState<EnhancedProfile | null>(null),
+  const [ uploadedAvatar, setUploadedAvatar ] = useState<string | null>(null),
   
   // Initialize form with default values
   const form = useForm<TalentFormValues>({
@@ -118,11 +117,10 @@ export function TalentRegistrationForm() {
       return
     }
 
-    try {
-      setIsGenerating(true),
+    try { setIsGenerating(true),
 
       // Call the Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
+      const { data, error  } = await supabase.functions.invoke('talent-profile-enhancer', {
         body: {
           talentData: {
             name: formData.name,
@@ -183,7 +181,6 @@ export function TalentRegistrationForm() {
       // Extract all skills from categorized skills and properly type cast them
       const allCategorizedSkills = generatedContent.categorizedSkills,
       const newSkills: string[] = [],
-      
       // Safely extract and flatten skills from each category
       Object.values(allCategorizedSkills).forEach(categorySkills => {
         if (Array.isArray(categorySkills)) {
@@ -205,10 +202,10 @@ export function TalentRegistrationForm() {
   const getCategoryColor = (category: CategoryType) => {
     switch (category) {
       case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500',
-      case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500',
-      case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500',
-      case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500',
-      case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500',
+      case 'devops': return 'bg-green-500/20 hover: bg-green-500/30 text-green-500',
+      case 'platforms': return 'bg-amber-500/20 hover: bg-amber-500/30 text-amber-500',
+      case 'softSkills': return 'bg-purple-500/20 hover: bg-purple-500/30 text-purple-500',
+      case 'other': return 'bg-gray-500/20 hover: bg-gray-500/30 text-gray-500',
       default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
     }
   },
@@ -260,9 +257,8 @@ export function TalentRegistrationForm() {
       let finalSummary = "",
       let finalSkills = skillTags,
       
-      if (values.enhancedProfile && !generatedContent) {
-        try {
-          const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {
+      if (values.enhancedProfile && !generatedContent) { try {
+          const { data: aiData  } = await supabase.functions.invoke('talent-profile-enhancer', {
             body: {
               talentData: {
                 name: values.name,
@@ -279,7 +275,6 @@ export function TalentRegistrationForm() {
             // Safely merge AI suggested skills with user-provided skills
             const categorizedSkills = (aiData as EnhancedProfile).categorizedSkills,
             const aiSkills: string[] = [],
-            
             // Extract skills from each category and ensure they're strings
             Object.values(categorizedSkills).forEach(categorySkills => {
               if (Array.isArray(categorySkills)) {
@@ -304,7 +299,7 @@ export function TalentRegistrationForm() {
       }
 
       // Get user email for notification
-      const { data: userData } = await supabase.auth.getUser(),
+      const { data: userData  } = await supabase.auth.getUser(),
       const userEmail = (userData as any).user?.email,
 
       // Create the talent profile
@@ -324,7 +319,7 @@ export function TalentRegistrationForm() {
 
       // Here would be the actual code to save the profile to Supabase
       /*
-      const { error } = await supabase
+      const { error  } = await supabase
         .from('talent_profiles')
         .insert({
           user_id: user.id,
@@ -347,11 +342,10 @@ export function TalentRegistrationForm() {
       toast({
         title: "Error Creating Profile",
         description: error.message || "There was an error creating your profile. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"});
       setIsSubmitting(false)
     }
-  },
-
+  };
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">

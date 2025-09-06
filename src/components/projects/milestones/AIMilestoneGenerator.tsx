@@ -1,16 +1,16 @@
 
-import React, { useState } from 'react',
-import { Button } from '@/components/ui/button',
-import { Card, CardContent } from '@/components/ui/card',
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger} from '@/components/ui/accordion',
 import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react'
-import { format, parseISO } from 'date-fns',
-import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',
-import { Badge } from '@/components/ui/badge',
+import { format, parseISO } from 'date-fns';
+import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
+import { Badge } from '@/components/ui/badge';
 interface AIMilestoneGeneratorProps {
   scope: string,
   startDate: string,
@@ -27,9 +27,8 @@ export function AIMilestoneGenerator({
   projectType,
   onAddMilestones,
   onAddMilestone
-}: AIMilestoneGeneratorProps) {
-  const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator(),
-  const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({}),
+}: AIMilestoneGeneratorProps) { const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones  } = useMilestoneGenerator(),
+  const [ selectedMilestones, setSelectedMilestones ] = useState<Record<string, boolean>>({}),
 
   const handleGenerateMilestones = async () => {
     if (!scope || !startDate || !projectType) {
@@ -47,7 +46,7 @@ export function AIMilestoneGenerator({
     // Initially select all milestones
     const initialSelection: Record<number, boolean> = {},
     generatedMilestones.forEach((_, index: number) => {
-      initialSelection[index] = true
+      initialSelection[ index ] = true
     }),
     setSelectedMilestones(initialSelection)
   },
@@ -148,7 +147,7 @@ export function AIMilestoneGenerator({
                       variant="ghost"
                       size="sm"
                       onClick={(e) => {
-                        e.stopPropagation(),
+                        e.stopPropagation();
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"

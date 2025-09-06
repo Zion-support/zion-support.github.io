@@ -1,11 +1,11 @@
-import React, { useState } from "react",
+import React, { useState } from "react";
 import { MessageCircle } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Avatar, AvatarFallback } from "@/components/ui/avatar",
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 interface DiscussionPost {
   id: number,
   author: string,
@@ -30,10 +30,10 @@ const initialPosts: DiscussionPost[] = [
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
 
 export const CommunityDiscussion: React.FC = () => {
-  const [posts, setPosts] = useState(initialPosts),
-  const [showNew, setShowNew] = useState(false),
-  const [newTitle, setNewTitle] = useState(""),
-  const [newBody, setNewBody] = useState(""),
+  const [ posts, setPosts ] = useState(initialPosts),
+  const [ showNew, setShowNew ] = useState(false),
+  const [ newTitle, setNewTitle ] = useState(""),
+  const [ newBody, setNewBody ] = useState(""),
 
   const handleAddPost = () => {
     if (!newTitle.trim() || !newBody.trim()) return,
@@ -141,4 +141,4 @@ export const CommunityDiscussion: React.FC = () => {
       </div>
     </div>
   )
-},
+};
