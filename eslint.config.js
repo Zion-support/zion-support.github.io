@@ -5,6 +5,9 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 
 export default [
+
+  js.configs.recommended,
+
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -101,10 +104,22 @@ export default [
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+
+      ...next.configs.recommended.rules,
       'no-unused-vars': 'warn',
       'no-console': 'warn',
+      'prefer-const': 'error',
+      'no-var': 'error',
       'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
+      'react/react-in-jsx-scope': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn'
+    },
+    settings: {
+      react: {
+        version: 'detect'
+      }
+
     }
   },
   {
