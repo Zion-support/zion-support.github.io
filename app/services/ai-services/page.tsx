@@ -1,11 +1,13 @@
 
 
+
 export const metadata = { 
   title: 'AI Services | Zion Tech Group',
   description: 'Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.',
   keywords: 'AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting'
 
 };
+
 
 export default function AIPage() {
   return (
@@ -769,6 +771,7 @@ function Plan({ name, price, features, popular }: {
 
 function CTASection() {
   return (
+
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
       <h3 className="text-2xl font-bold text-gray-900 mb-4">
         Ready to Transform Your Business with AI?
@@ -806,5 +809,6 @@ function CTASection() {
 }
 
 }
+
 
 

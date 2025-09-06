@@ -1,9 +1,11 @@
 
 
+
 export const metadata = { 
   title: 'Micro SaaS Development | Zion Tech Group',
   description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
   keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'
+
 
 };
 
@@ -573,6 +575,15 @@ function CTASection() {
   );
 }
 
-}
 
+function Plan({ name, price, features }: { name: string; price: string; features: string[] }) {
+  return (
+    <div style={{border: '1px solid #e5e7eb', borderRadius: 12, padding: 16}}>
+      <h4 style={{fontWeight: 700}}>{name}</h4>
+      <div style={{color: '#111827', fontWeight: 800, marginTop: 4}}>{price}</div>
+      <ul style={{paddingLeft: 18, color: '#4b5563', marginTop: 8}}>{features.map(f => (<li key={f} style={{listStyle: 'disc'}}>{f}</li>))}</ul>
+      <a href="tel:+13024640950" style={{display: 'inline-block', marginTop: 12, padding: '8px 16px', backgroundColor: '#3b82f6', color: 'white', textDecoration: 'none', borderRadius: 6}}>Call +1 302 464 0950</a>
+    </div>
+  );
+}
 
