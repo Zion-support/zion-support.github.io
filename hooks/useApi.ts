@@ -38,10 +38,10 @@ export function useApi<T>(
     }
   }, [fetchData, options.immediate]);
 
-  return {
-    data;
-    loading;
-    error;
-    refetch: fetchData;
-  };
+
+    fetchData();
+  }, [url, options]);
+
+  return state;
+
 }

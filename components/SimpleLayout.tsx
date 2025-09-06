@@ -1,14 +1,19 @@
-<<<<<<< HEAD
-import React from 'react';
+
+import React, { ReactNode } from 'react';
 import Head from 'next/head';
 
 interface SimpleLayoutProps {
-  title: string,
+  children: ReactNode;
+  title?: string;
   description?: string;
-  children: React.ReactNode,
 }
 
-export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {
+const SimpleLayout: React.FC<SimpleLayoutProps> = ({ 
+  children, 
+  title = 'Zion Tech Group', 
+  description = 'Technology Solutions for Modern Businesses' 
+}) => {
+
   return (
     <>
       <Head>
@@ -18,10 +23,14 @@ export default function SimpleLayout({ title, description, children }: SimpleLay
       {children}
     </>
   );
-}
-=======
+
         {description && <meta name="description" content={description} />};
       {children};
     </>)
 };
->>>>>>> pr-11992
+
+=======
+};
+
+export default SimpleLayout;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-8bf8

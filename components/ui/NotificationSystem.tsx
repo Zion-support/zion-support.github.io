@@ -1,23 +1,16 @@
-<<<<<<< HEAD
-import React from 'react';
 
-interface Notification {
-  id: string,
-  type: 'success' | 'error' | 'warning' | 'info',
-  message: string,
-  title?: string;
-}
+  notifications: Notification[];
+  onDismiss?: (id: string) => void;
 
-interface NotificationSystemProps {
-  notifications: Notification[],
-  onDismiss?: (id: string) => void,
   className?: string;
 }
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({
-  notifications;
-  onDismiss;
-  className;
+
+  notifications,
+  onDismiss,
+  className = '',
+
 }) => {
   const getNotificationStyles = (type: Notification['type']) => {
     switch (type) {
