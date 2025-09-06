@@ -40,9 +40,7 @@ function App() {
             </Routes>
           </main>
           <Footer />
-=======
           <PerformanceMonitor />
->>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
         </div>
       </Router>
     </ErrorBoundary>
