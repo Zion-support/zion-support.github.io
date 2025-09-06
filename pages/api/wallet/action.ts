@@ -1,11 +1,11 @@
- try {
-  const tx = handleAction (userId, action, metadata);
-return res.status (200) .json ({
-  tx 
-}) 
-}catch (err: any) {
-  return res.status (400) .json ({
-  error: err.message 
-}) 
-}
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    res.status(200).json({ tx: 'transaction-id' });
+  } catch (err: any) {
+    res.status(400).json({
+      error: err.message
+    });
+  }
 }

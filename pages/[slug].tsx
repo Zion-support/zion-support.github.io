@@ -83,10 +83,10 @@ function getAllServices(): Service[] {
     .concat(curatedMarketServices as Service[])
     .concat(new2025Services as unknown as Service[])
 		.concat(marketValidatedServices as unknown as Service[]);
-		.concat(moreRealServices2025 as unknown as Service[]);
-		.concat(verified2025Additions as unknown as Service[]);
-		.concat(realServicesQ12025 as unknown as Service[]);
-		.concat(realEnterpriseServices2025 as unknown as Service[]);
+		.concat(moreRealServices2025 as unknown as Service[])
+		.concat(verified2025Additions as unknown as Service[])
+		.concat(realServicesQ12025 as unknown as Service[])
+		.concat(realEnterpriseServices2025 as unknown as Service[])
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[]);
 		.concat(realMarketAugmentations2025 as unknown as Service[]);
 		.concat(additionalLiveServices2025 as unknown as Service[]);
