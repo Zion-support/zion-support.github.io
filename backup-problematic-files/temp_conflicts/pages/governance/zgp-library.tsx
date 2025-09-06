@@ -1,9 +1,4 @@
-import React from 'react',;
-import Head from 'next/head',;
-;
-export default function ZGPLibraryPage() {;
-  return (;
-    <>;
+import React from 'react',import Head from 'next/head',export default function ZGPLibraryPage() {return (<>;
       <Head>;
         <title>ZGP Library - Zion Tech Group</title>;
         <meta name="description" content="Zion Governance Protocol Library" />;
@@ -17,5 +12,4 @@ export default function ZGPLibraryPage() {;
         </div>;
       </div>;
     </>;
-  );
-}
+  )}

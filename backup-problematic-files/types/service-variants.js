@@ -1,6 +1,4 @@
-// Analytics utility
-export const Analytics = () => {
-  // Implementation here
+// Analytics utility;
+export const Analytics = () => {// Implementation here;
   return null;
-};
-
+}

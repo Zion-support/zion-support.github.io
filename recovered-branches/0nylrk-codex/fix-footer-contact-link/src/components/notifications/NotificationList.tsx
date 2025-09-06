@@ -1,3 +1,46 @@
+
+import React from 'react';
+import { ScrollArea   } from '@/components/ui/scroll-area';
+import { Skeleton   } from '@/components/ui/skeleton';
+import { Button   } from '@/components/ui/button';
+import { NotificationItem   } from './NotificationItem';
+import { Notification  } from '@/context/notifications';
+interface NotificationListProps  {loading: boolean,error: string | null,notifications: Notification[],onMarkAsRead: (id: string) => Promise<void>,onDismiss: (id: string) => Promise<void>,onRetry: () => void;
+}export const NotificationList: React.FC<NotificationListProps> = ({loading;
+  error;
+  notifications;
+  onMarkAsRead;import React from 'react',onMarkAsRead;import React from 'react',import { ScrollArea } from '@/components/ui/scroll-area',import { Skeleton } from '@/components/ui/skeleton',import { Button } from '@/components/ui/button',import { NotificationItem } from './NotificationItem',import { Notification } from '@/context/notifications',interface NotificationListProps  {loading: boolean,error: string | null,notifications: Notification[],onMarkAsRead: (id: string) => Promise<void>,onDismiss: (id: string) => Promise<void>,onRetry: () => void;
+}loading: boolean;
+  error: string | null;
+  notifications: Notification[];
+  onMarkAsRead: (id: string) => Promise<void>;
+  onDismiss: (id: string) => Promise<void>;
+  onRetry: () => void;
+}
+export const NotificationList: React.FC<NotificationListProps> = ({import { ScrollArea } from '@/components / ui / scroll - area';
+import { Skeleton } from '@/components / ui / skeleton';
+import { Button } from '@/components / ui / button';
+import { NotificationItem } from './NotificationItem';
+import { Notification } from '@/context / notifications';
+interface NotificationListProps  {loading: boolean,error: string | null,notifications: Notification[],onMarkAsRead: (id: string) => Promise < void>,on_dismiss: (id: string) => Promise < void>,on_retry: () => void;
+}
+export const NotificationList: React.FC < NotificationListProps> = ({loading;
+  error;
+  notifications;
+  onMarkAsRead;onDismiss;
+  loading,error,notifications,onMarkAsRead,onRetry;
+  on_dismiss,on_retry;on_dismiss,on_retry;onRetry;
+  on_dismiss,on_retry;
+  on_dismiss,on_retry;
+}) => {return (<ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
+      {error ? (onDismiss,onRetry;
+}) => {return (interface NotificationListProps  {loading:boolean,error:string | null,notifications:Notification[],onMarkAsRead:(id:string) => Promise<void>,onDismiss:(id:string) => Promise<void>,onRetry:() => void;
+}export const NotificationList:React.FC<NotificationListProps> = ({loading,error,notifications,onMarkAsRead,onDismiss,onRetry;
+}) => {return (<ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">;
+      {error ? (<div className="p-8 text-center text-amber-500">;
+          <p>{error}</p>;className="mt-2";
+
+
   loading: boolean,
   error: string | null,
   notifications: Notification[],
@@ -11,6 +54,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
   error;
   notifications;
   onMarkAsRead;
+
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
@@ -36,10 +80,26 @@ interface NotificationListProps {;
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
+
+import {ScrollArea} from '@/components/ui/scroll-area';
+import {Skeleton} from '@/components/ui/skeleton';
+import {Button} from '@/components/ui/button';
+import {NotificationItem} from './NotificationItem';
+import {Notification} from '@/context/notifications';
+interface NotificationListProps {;
+  loading: boolean,;
+  error: string | null,;
+  notifications: Notification[],;
+  onMarkAsRead: (id: string) => Promise<void>,;
+  onDismiss: (id: string) => Promise<void>,;
+  onRetry: () => void;
+}
+
+export const NotificationList: React.FC<NotificationListProps> = ({;
+
 import {ScrollArea} from '@/components / ui / scroll - area';
 import {Skeleton} from '@/components / ui / skeleton';
 import {Button} from '@/components / ui / button';
-import {NotificationItem} from './NotificationItem';
 import {Notification} from '@/context / notifications';
 interface NotificationListProps {
   loading: boolean,
@@ -54,10 +114,15 @@ export const NotificationList: React.FC < NotificationListProps> = ({
   error;
   notifications;
   onMarkAsRead;
+
+
   loading,
   error,
   notifications,
   onMarkAsRead,
+
+  onDismiss,
+
   onRetry
   on_dismiss,
   on_retry;
@@ -67,6 +132,7 @@ export const NotificationList: React.FC < NotificationListProps> = ({
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
+
   onDismiss,;
   onRetry;
 }) => {;
@@ -75,11 +141,44 @@ export const NotificationList: React.FC < NotificationListProps> = ({
       {error ? (;
         <div className="p-8 text-center text-amber-500">;
           <p>{error}</p>;
+          <Button
+            variant="outline" 
+            size="sm" 
+
             className="mt-2"
             onClick={onRetry}>;
             Try Again;
           </Button>;
         </div>;
+      ) : loading ? (<Button ;
+            variant="outline" ;
+            size="sm" ;
+            className="mt-2";
+            onClick={onRetry}
+          >;
+            Try Again;
+          </Button>;
+        </div>;
+      ) :loading ? (<div className="p-4 space-y-4">;
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
+        </div>;) : notifications && notifications.length === 0 ? (<div className="p-8 text-center text-zion-slate-light">;
+          <p>No notifications yet</p>;
+        </div>;
+      ) : (notifications && notifications.map((notification) => (<NotificationItem;
+            key={notification && notification.id}) :notifications.length === 0 ? (<div className="p-8 text-center text-zion-slate-light">;
+          <p>No notifications yet</p>;
+        </div>;
+      ) :(notifications.map((notification) => (<NotificationItem;
+            key={notification.id}notification={notification}
+            onMarkAsRead={onMarkAsRead}
+            onDismiss={onDismiss}
+          />;
+        )))}
+}</ScrollArea>;
+  )</ScrollArea>;
+  )}<div className="p - 8 text - center text - amber - 500">;
       ) : loading ? (;
         <div className="p-4 space-y-4">;
           <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
@@ -104,6 +203,7 @@ export const NotificationList: React.FC < NotificationListProps> = ({
 
     </ScrollArea>;
   );
+
     </ScrollArea>;
   );
 
@@ -119,6 +219,13 @@ export const NotificationList: React.FC < NotificationListProps> = ({
           >;
             Try Again;
           </Button>;
+        </div>) : loading ? (<div className="p - 4 space - y-4">;
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
+        </div>) : notifications.length === 0 ? (<div className="p - 8 text - center text - zion - slate - light">;
+          <p > No notifications yet</p>;
+        </div>) : (notifications.map ((notification) => (<NotificationItem;
         </div>) : loading ? (
         <div className="p - 4 space - y-4">;
           <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
@@ -135,6 +242,34 @@ export const NotificationList: React.FC < NotificationListProps> = ({
             onMarkAsRead={onMarkAsRead}
             on_dismiss={on_dismiss}
           />)))}
+    </ScrollArea>)}</ScrollArea>;
+  )},{error ? (<div className="p-8 text-center text-amber-500" > <p> {error;
+}</p> <Button > Try Again </Button> </div>) : loading ? (<div className="p-4 space-y-4" > <Skeleton className="h-12 w-full bg-zion-blue-dark/50" /> <Skeleton className="h-12 w-full bg-zion-blue-dark/50" /> <Skeleton className="h-12 w-full bg-zion-blue-dark/50" /> </div>) : notifications.length === 0 ? (<div className="p-8 text-center text-zion-slate-light" > <p>No notifications yet</p> </div>) : (notifications.map ( (notification) => (<NotificationItem key= {notification.id;
+}notification= {notification;
+}onMarkAsRead= {onMarkAsRead;
+}onDismiss= {onDismiss;
+}/>) ) )}</ScrollArea>)}onDismiss,onRetry;
+}) => {return (<ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">;
+      {error ? (<div className="p-8 text-center text-amber-500">;
+          <p>{error}</p>;
+          <Button;
+            variant="outline";
+            size="sm";
+            className="mt-2";
+            onClick={onRetry}
+          >;
+            Try Again;
+          </Button>;
+        </div>;
+      ) : loading ? (<div className="p-4 space-y-4">;
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
+        </div>;
+      ) : notifications.length === 0 ? (<div className="p-8 text-center text-zion-slate-light">;
+          <p>No notifications yet</p>;
+        </div>;
+      ) : (notifications.map((notification) => (<NotificationItem;
     </ScrollArea>);
 }
 ;
@@ -188,6 +323,16 @@ export const NotificationList: React.FC < NotificationListProps> = ({
             notification={notification}
             onMarkAsRead={onMarkAsRead}
             onDismiss={onDismiss}
+          />;
+        )))}
+    </ScrollArea>;
+  )}</ScrollArea>;
+  )</ScrollArea>;
+  )}error;
+  notifications;
+  onMarkAsRead;  on_dismiss,on_retry;
+}) => {return (<ScrollArea className="flex - 1 overflow - y-auto max-h-[350px]">;
+      {error ? (
           />
         ))
       )}

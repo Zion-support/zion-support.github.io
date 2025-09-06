@@ -1,3 +1,47 @@
+
+import React from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { FileText, Plus, Users, Search, Calendar } from 'lucide-react';
+import React from "react",import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { Button  } from '@/components/ui/button';
+import { FileText, Plus, Users, Search, Calendar  } from 'lucide-react';
+import { Button } from "@/components/ui/button",import { FileText, Plus, Users, Search, Calendar } from "lucide-react",export function QuickActions() {const actions = [;
+    {id: "post-job",label: "Post New Job",icon: <FileText className="h-5 w-5 mr-2" />,description: "Create a new job posting",color: "bg-blue-100 dark:bg-blue-900/20";
+    }color: "bg-blue-100 dark:bg-blue-900/20";
+    }
+    },color: "bg-blue-100 dark:bg-blue-900/20";
+    }
+    },{id: "add-member";
+      label: "Add Team Member";
+      icon: <Plus className="h-5 w-5 mr-2" />;
+      description: "Invite someone to your team";
+      color: "bg-green-100 dark:bg-green-900/20";
+    }}
+    },{id: "find-talent";
+      label: "Find Talent";
+      icon: <Search className="h-5 w-5 mr-2" />;
+      description: "Search the talent pool";
+      color: "bg-purple-100 dark:bg-purple-900/20";
+    }}
+    },id: "post-job",label: "Post New Job",icon: <FileText className="h-5 w-5 mr-2" />,description: "Create a new job posting",      color: "bg-blue-100 dark:bg-blue-900/20";
+    }
+    },{id: "schedule";
+      label: "Schedule Interview";
+      icon: <Calendar className="h-5 w-5 mr-2" />;
+      description: "Set up candidate interviews";
+      color: "bg-amber-100 dark:bg-amber-900/20";
+export function QuickActions() {const actions = [;
+    {id: "post-job",label: "Post New Job",icon: <FileText className="h-5 w-5 mr-2" />,description: "Create a new job posting",color: "bg-blue-100 dark:bg-blue-900/20";
+    },{id: "add-member",label: "Add Team Member",icon: <Plus className="h-5 w-5 mr-2" />,description: "Invite someone to your team",color: "bg-green-100 dark:bg-green-900/20";
+    },{id: "find-talent",label: "Find Talent",icon: <Search className="h-5 w-5 mr-2" />,description: "Search the talent pool",color: "bg-purple-100 dark:bg-purple-900/20";
+    },{id: "schedule",label: "Schedule Interview",icon: <Calendar className="h-5 w-5 mr-2" />,description: "Set up candidate interviews";
+      color: "bg-amber-100 dark:bg-amber-900/20";
+    }
+  ];
+  return (<Card>;
+
+
+
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -13,10 +57,14 @@ export function QuickActions() {
 
   const actions = [
     {
+
+
       id: "post-job",
       label: "Post New Job",
       icon: <FileText className="h-5 w-5 mr-2" />,
       description: "Create a new job posting",
+
+
       color: "bg-blue-100 dark:bg-blue-900/20";
     };
       color: "bg-blue-100 dark:bg-blue-900/20"
@@ -33,12 +81,22 @@ export function QuickActions() {
       icon: <Plus className="h-5 w-5 mr-2" />
       description: "Invite someone to your team"
       color: "bg-green-100 dark:bg-green-900/20"
+
+
+    },
+
+
     {
       id: "find-talent"
       label: "Find Talent"
       icon: <Search className="h-5 w-5 mr-2" />
       description: "Search the talent pool"
       color: "bg-purple-100 dark:bg-purple-900/20"
+
+
+    },
+
+
     {
       id: "schedule"
       label: "Schedule Interview"
@@ -89,10 +147,9 @@ export function QuickActions() {;
       </CardHeader>;
       <CardContent>;
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
-          {actions && actions.map(action => (;
-            <Button
+          {actions && actions.map(action => (<Button;
               key={action && action.id}
-              variant="outline" 
+              variant="outline";
               className={`h-auto justify-start p-4 ${action && action.color}`}>;
               <div className="flex flex-col items-start text-left">;
                 <div className="flex items-center">;
@@ -101,14 +158,32 @@ export function QuickActions() {;
                 </div>;
                 <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
               </div>;
+                <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;              </div>;
             </Button>;
           ))}
         </div>;
       </CardContent>;
     </Card>;
+  )}
+import React from './react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
+import { Button  } from '@/components / ui / button';
+import { FileText, Plus, Users, Search, Calendar  } from './lucide-react';
+export /**;
+ * QuickActions - Function description;
+ */;
+function QuickActions() {const actions = [;
+    {id: "post - job",label: "Post New Job",icon: <FileText className="h - 5 w - 5 mr - 2" />,description: "Create a new job posting",color: "bg - blue - 100 dark:bg - blue - 900 / 20";
+    }
+    {id: "add - member",label: "Add Team Member",icon: <Plus className="h - 5 w - 5 mr - 2" />,description: "Invite someone to your team",color: "bg - green - 100 dark:bg - green - 900 / 20";
+    }
+    {id: "find - talent",label: "Find Talent",icon: <Search className="h - 5 w - 5 mr - 2" />,description: "Search the talent pool",color: "bg - purple - 100 dark:bg - purple - 900 / 20";
+    }
+    {id: "schedule",label: "Schedule Interview",icon: <Calendar className="h - 5 w - 5 mr - 2" />,description: "Set up candidate interviews",color: "bg - amber - 100 dark:bg - amber - 900 / 20";
+    }
+  ];return (<Card>;
   );
 }
-import React from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { FileText, Plus, Users, Search, Calendar } from './lucide-react';
@@ -148,6 +223,7 @@ function QuickActions() {
   ];
 ;
   return (
+
     <Card>;
       <CardHeader>;
         <CardTitle>Quick Actions</CardTitle>;
@@ -155,12 +231,25 @@ function QuickActions() {
       </CardHeader>;
       <CardContent>;
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
+          {actions && actions.map(action => (;
+            <Button
+              key={action && action.id}
+              variant="outline" 
+              className={`h-auto justify-start p-4 ${action && action.color}`}>;
+              <div className="flex flex-col items-start text-left">;
+                <div className="flex items-center">;
+                  {action && action.icon}
+                  <span>{action && action.label}</span>;
+                </div>;
+                <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
               </div>;
             </Button>;
           ))}
         </div>;
       </CardContent>;
     </Card>;
+  );
+}
     <Card>;
       <CardHeader>;
         <CardTitle > Quick Actions</CardTitle>;
@@ -168,6 +257,7 @@ function QuickActions() {
       </CardHeader>;
       <CardContent>;
         <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 4">;
+          {actions.map (action => (<Button;
           {actions.map (action => (
             <Button;
               key={action.id}
@@ -176,7 +266,21 @@ function QuickActions() {
             >;
               <div className="flex flex - col items - start text - left">;
                 <div className="flex items - center">;
+                  {action.icon}<div className="grid grid - cols - 1 sm:grid - cols - 2 gap-4">;
+          {actions.map (action => ({actions.map(action => (<span>{action.label}</span>;
+                </div>;
+                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>;
+              </div>;
+            </Button>;
+          ))}
+        </div>;
+      </CardContent>;
+    </Card>;
+  ))}
+ const actions = [ {return (<Card> <CardHeader> <CardTitle>Quick Actions</CardTitle> <CardDescription>Fast access to common tasks</CardDescription> </CardHeader> <CardContent> </div> </Button>) )}</div> </CardContent> </Card>)}
+}}
                   {action.icon}
+
 
                   <span>{action.label}</span>
                 </div>
@@ -185,15 +289,18 @@ function QuickActions() {
             </Button>
 
 
+
           ))}
         </div>
       </CardContent>
     </Card>
   )
+}
   ),;}
  const actions = [ {
   return (<Card> <CardHeader> <CardTitle>Quick Actions</CardTitle> <CardDescription>Fast access to common tasks</CardDescription> </CardHeader> <CardContent> </div> </Button>) ) 
 }</div> </CardContent> </Card>) 
+}
 }
 }
 }

@@ -1,11 +1,6 @@
 import React from 'react';
-
-const MobileAppPage = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>MobileAppPage</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
+const MobileAppPage = ({ className }) => {return (<div className={className || ''}>;
+      <h1>MobileAppPage</h1>;
+      <p>This component is under development.</p>;
+    </div>;
+  )}

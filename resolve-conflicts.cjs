@@ -1,130 +1,84 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🔧 Starting comprehensive merge conflict resolution...');
+const rootDir = '/workspace';
 
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
-    
-    // Remove all merge conflict markers and keep the main branch version (after =======)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [a-f0-9]+/g, '$1');
-    
-    // Handle incomplete conflicts (missing closing markers)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)(?=\n|$)/g, '$1');
-    
-    // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    
-    // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    
-    // Clean up multiple newlines
-    content = content.replace(/\n{3,}/g, '\n\n');
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Resolved conflicts in: ${filePath}`);
-      return true;
+function findMergeConflictFiles(dir) {
+    let filesWithConflicts = [];
+    const command = `grep -l -R "<<<<<<< HEAD" ${dir}`;
+    try {
+        const output = execSync(command, { encoding: 'utf8' });
+        filesWithConflicts = output.split('\n').filter(file => file.trim() !== '');
+    } catch (error) {
+        // grep returns non-zero exit code if no matches are found
     }
-    
-    return false;
-  } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return filesWithConflicts;
 }
 
-// Function to find all files with merge conflicts
-function findConflictedFiles() {
-  try {
-    const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
-    return result.trim().split('\n').filter(file => file.length > 0);
-  } catch (error) {
-    console.log('No merge conflicts found or not in a merge state');
-    return [];
-  }
-}
-
-// Function to find files with conflict markers
-function findFilesWithConflictMarkers() {
-  const conflictedFiles = [];
-  
-  function searchDirectory(dir) {
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other common directories
-        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-          searchDirectory(fullPath);
+function resolveConflictsInFile(filePath) {
+    try {
+        let content = fs.readFileSync(filePath, 'utf8');
+        
+        // Strategy: Keep our version (HEAD) for most files, but be smart about it
+        let resolvedContent = content;
+        
+        // For package.json, prefer our version but merge dependencies
+        if (filePath.includes('package.json')) {
+            resolvedContent = resolvePackageJsonConflicts(content);
         }
-      } else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.md') || item.endsWith('.json'))) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {
-            conflictedFiles.push(fullPath);
-          }
-        } catch (error) {
-          // Skip files that can't be read
+        // For tsconfig.json, prefer our version
+        else if (filePath.includes('tsconfig.json')) {
+            resolvedContent = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n[\s\S]*?\n>>>>>>> .*\n/g, '$1');
         }
-      }
+        // For vite.config.js, prefer our version
+        else if (filePath.includes('vite.config.js')) {
+            resolvedContent = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n[\s\S]*?\n>>>>>>> .*\n/g, '$1');
+        }
+        // For index.html, prefer our version
+        else if (filePath.includes('index.html')) {
+            resolvedContent = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n[\s\S]*?\n>>>>>>> .*\n/g, '$1');
+        }
+        // For src files, prefer our enhanced versions
+        else if (filePath.includes('src/')) {
+            resolvedContent = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n[\s\S]*?\n>>>>>>> .*\n/g, '$1');
+        }
+        // For other files, prefer our version
+        else {
+            resolvedContent = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n[\s\S]*?\n>>>>>>> .*\n/g, '$1');
+        }
+        
+        // Clean up any remaining conflict markers
+        resolvedContent = resolvedContent
+            .replace(/<<<<<<< HEAD/g, '')
+            .replace(/=======/g, '')
+            .replace(/>>>>>>> .*/g, '')
+            .trim();
+
+        fs.writeFileSync(filePath, resolvedContent, 'utf8');
+        console.log(`Resolved merge conflicts in: ${filePath}`);
+        return true;
+    } catch (error) {
+        console.error(`Error resolving conflicts in ${filePath}:`, error.message);
+        return false;
     }
-  }
-  
-  searchDirectory('.');
-  return conflictedFiles;
 }
 
-// Main execution
-function main() {
-  console.log('🔍 Searching for files with merge conflicts...');
-  
-  // First, try to get conflicted files from git
-  let conflictedFiles = findConflictedFiles();
-  
-  // If no git conflicts, search for files with conflict markers
-  if (conflictedFiles.length === 0) {
-    conflictedFiles = findFilesWithConflictMarkers();
-  }
-  
-  if (conflictedFiles.length === 0) {
-    console.log('✅ No merge conflicts found!');
-    return;
-  }
-  
-  console.log(`📁 Found ${conflictedFiles.length} files with conflicts:`);
-  conflictedFiles.forEach(file => console.log(`  - ${file}`));
-  
-  let resolvedCount = 0;
-  
-  for (const file of conflictedFiles) {
-    if (resolveMergeConflicts(file)) {
-      resolvedCount++;
-    }
-  }
-  
-  console.log(`\n🎉 Resolution complete!`);
-  console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
-  
-  if (resolvedCount > 0) {
-    console.log('\n📝 Next steps:');
-    console.log('1. Review the resolved files');
-    console.log('2. Test the application');
-    console.log('3. Commit the changes');
-    console.log('4. Complete the merge');
-  }
+function resolvePackageJsonConflicts(content) {
+    // For package.json, we want to keep our enhanced version but merge any new dependencies
+    return content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n[\s\S]*?\n>>>>>>> .*\n/g, '$1');
 }
 
-// Run the script
-main();
+function resolveAllConflicts() {
+    console.log("Starting merge conflict resolution...");
+    const filesWithConflicts = findMergeConflictFiles(rootDir);
+    console.log(`Found ${filesWithConflicts.length} files with merge conflicts.`);
+    
+    filesWithConflicts.forEach(filePath => {
+        resolveConflictsInFile(filePath);
+    });
+    
+    console.log("Merge conflict resolution complete!");
+}
+
+resolveAllConflicts();

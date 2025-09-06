@@ -1,4 +1,11 @@
 
+;
+export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",export interface MilestoneSuggestionInput  {scopeOfWork: string,export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",export interface MilestoneSuggestionInput  {scopeOfWork: string,export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",export interface MilestoneSuggestionInput  {scopeOfWork: string,startDateIso: string, // ISO 8601;
+  endDateIso: string,   // ISO 8601;
+  project_type: ProjectType;
+}export interface SuggestedMilestoneItem  {title: string,description: string,export interface SuggestedMilestoneItem  {title: string,description: string,export interface SuggestedMilestoneItem  {title: string,description: string,suggestedDueDateIso: string;
+}  suggestedDueDateIso: string;
+
 export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",
 export interface MilestoneSuggestionInput {
   scopeOfWork: string,
@@ -16,6 +23,7 @@ export interface MilestoneSuggestionInput {
   project_type: ProjectType;
 }
 
+
 export interface SuggestedMilestoneItem {
   title: string,
   description: string,
@@ -25,6 +33,7 @@ export interface SuggestedMilestoneItem {
 export interface SuggestedMilestoneItem {;
   title: string,;
   description: string,;
+
 export interface SuggestedMilestoneItem {
   title: string,
   description: string,
@@ -32,7 +41,17 @@ export interface SuggestedMilestoneItem {
   suggestedDueDateIso: string;
   estimatedEffortHours: number, // estimated hours;
   tags?: string[], // e.g., ["AI Suggested"];
+}export interface MilestoneSuggestionResponse  {milestones: SuggestedMilestoneItem[];
+}export interface MilestoneSuggestionResponse  {milestones: SuggestedMilestoneItem[];export interface MilestoneSuggestionResponse  {milestones: SuggestedMilestoneItem[];
 }
+export interface MilestoneSuggestionResponse  {milestones: SuggestedMilestoneItem[];
+}export interface MilestoneSuggestionResponse  {milestones: SuggestedMilestoneItem[];
+}
+
+export interface MilestoneSuggestionResponse {
+  milestones: SuggestedMilestoneItem[];
+}
+
 export interface MilestoneSuggestionResponse {
   milestones: SuggestedMilestoneItem[];
 }
@@ -43,6 +62,19 @@ export interface MilestoneSuggestionResponse {;
   milestones: SuggestedMilestoneItem[];
 
 }
+;
+export interface SuggestedMilestoneItem {;
+  title:string,;
+  description:string,;
+  suggestedDueDateIso:string,;
+  estimatedEffortHours:number, // estimated hours;
+  tags?:string[], // e.g., ["AI Suggested"];
+}
+;
+export interface MilestoneSuggestionResponse {;
+  milestones:SuggestedMilestoneItem[];
+}
+export interface MilestoneSuggestionResponse {milestones: SuggestedMilestoneItem[];
 ;
 export interface MilestoneSuggestionResponse {;
   milestones: SuggestedMilestoneItem[];

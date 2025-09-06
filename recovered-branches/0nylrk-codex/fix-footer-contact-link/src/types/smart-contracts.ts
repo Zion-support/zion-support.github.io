@@ -1,3 +1,4 @@
+export type BlockchainNetwork = "ethereum" | "polygon" | "none";export interface SmartContractInfo  {export interface SmartContractInfo  {export interface SmartContractInfo  {id: string;
 export type BlockchainNetwork = "ethereum" | "polygon" | "none";
 
 
@@ -11,6 +12,12 @@ export interface SmartContractInfo {;
   deployedAddress?: string;
   contractType: "escrow" | "milestone" | "simpleAgreement";
   metadataUrl?: string;
+  createdAt: string;createdBy: string;
+  status: "draft" | "deployed" | "executed" | "cancelled";
+}export interface EscrowContractDetails  {}
+export interface EscrowContractDetails  {export interface EscrowContractDetails  {client: string;
+  createdBy: string;
+  status: 'draft' | 'deployed' | 'executed' | 'cancelled';export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';}export interface EscrowContractDetails  {export interface EscrowContractDetails  {export interface EscrowContractDetails  {talent: string;
   createdAt: string;
   createdBy: string;
   status: "draft" | "deployed" | "executed" | "cancelled";
@@ -30,7 +37,25 @@ export interface EscrowContractDetails {;
   deliverables: string;
   completionDeadline: string;
   arbitrator?: string;
+}export interface DeploymentOptions  {completionDeadline: string;
+  arbitrator?: string;
 }
+export interface DeploymentOptions  {export interface DeploymentOptions  {network: BlockchainNetwork;
+  walletAddress?: string;
+  useEscrow: boolean;
+  deployToChain: boolean;}
+export interface DeploymentOptions  {network: BlockchainNetwork;
+  walletAddress?: string;
+  useEscrow: boolean;
+  deployToChain: boolean;
+  arbitrator?: string;}
+export interface DeploymentOptions  {network: BlockchainNetwork;
+  wallet_address?: string;
+  use_escrow: boolean,deployToChain: boolean;}arbitrator?: string;
+}  arbitrator?: string;
+}export interface DeploymentOptions  {network: BlockchainNetwork,walletAddress?: string,useEscrow: boolean;
+  deployToChain: boolean;
+}}
 
 
 

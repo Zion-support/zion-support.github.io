@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "es6"],
     "target": "ES2020",
     "lib": [
       "dom",
@@ -15,8 +17,13 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
+<<<<<<< HEAD
+=======
+    "module": "esnext",
+>>>>>>> 157aff07b859488146569974cc7382910d9762e2
     "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -41,6 +48,43 @@
     },
     "allowSyntheticDefaultImports": true
   },
+<<<<<<< HEAD
+=======
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "apps",
+    "temp_conflicts",
+    "pages_backup*",
+    "pages.*",
+    "pages-*",
+    "pages_disabled*",
+    "pages.disabled*",
+    "pages.broken*",
+    "pages.corrupted*",
+    "pages.old*",
+    "pages._*",
+    "pages.__*",
+    "backup-pages",
+    "src.pages.disabled",
+    "lib_backup*",
+    "src_backup*",
+    "corrupted-files-backup*",
+    "performance-reports*",
+    "log-analysis-reports*",
+    "link-reports*",
+    "lint-target*",
+    "monitoring*",
+    "pm2-automation*",
+    "automation/logs*",
+    "automation/backup*"
+  ]
+>>>>>>> 157aff07b859488146569974cc7382910d9762e2
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

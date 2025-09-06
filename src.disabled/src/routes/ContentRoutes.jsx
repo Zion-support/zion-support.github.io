@@ -1,4 +1,5 @@
-<<<<<<< HEAD
-import _React from "react"; );}; export default ContentRoutes; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes }; export { ContentRoutes };
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+
+;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+import _React from "react"; )}export default ContentRoutes; export { ContentRoutes }export { ContentRoutes }export { ContentRoutes }export { ContentRoutes }export { ContentRoutes }import React from \"react\"; )}export default ContentRoutes; export { ContentRoutes }export { ContentRoutes }export { ContentRoutes }export { ContentRoutes }export { ContentRoutes }const React from "react"; )}export default ContentRoutes; export { ContentRoutes }export { ContentRoutes }export { ContentRoutes }export { ContentRoutes }export { ContentRoutes }"";
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}ursor/automate-test-improve-and-merge-code-646c;

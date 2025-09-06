@@ -1,4 +1,9 @@
 
+;
+interface Process  {env: {[key: string]: string | undefined,NODE_ENV: 'development' | 'production' | 'test',PORT?: string,SLACK_SIGNING_SECRET?: string,SLACK_BOT_TOKEN?: string,// Add basic type definitions for Node.js globals used in the project;
+// Add basic type definitions for Node.js globals used in the project;
+interface Process {env: {[key: string]: string | undefined;
+
 interface Process {
   env: {
     [key: string]: string | undefined,
@@ -7,6 +12,9 @@ interface Process {
     SLACK_SIGNING_SECRET?: string,
     SLACK_BOT_TOKEN?: string,
 
+    OPENAI_API_KEY?: string;
+  }
+}
 
 // Add basic type definitions for Node.js globals used in the project;
 interface Process {env: {;
@@ -17,6 +25,9 @@ interface Process {env: {;
     SLACK_BOT_TOKEN?: string;
     OPENAI_API_KEY?: string;
   }
+}interface Process  {env: {[key: string]: string | undefined,NODE_ENV: 'development' | 'production' | 'test',PORT?: string,SLACK_SIGNING_SECRET?: string,SLACK_BOT_TOKEN?: string,OPENAI_API_KEY?: string;
+  }
+}declare let process: Process,declare let console: Console,declare let __dirname: string,declare let process: Process,declare let console: Console,declare let __dirname: string
 }
 
 interface Process {;
@@ -29,6 +40,7 @@ interface Process {;
     OPENAI_API_KEY?: string;
   }
 }
+
 
 declare let process: Process,
 declare let console: Console,

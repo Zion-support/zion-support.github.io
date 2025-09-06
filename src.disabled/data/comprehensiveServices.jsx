@@ -1,15 +1,22 @@
 import React from 'react';
+interface ComprehensiveServicesProps  {// Add props here as needed;
+}
+export default function ComprehensiveServices() {return (<div>;
+      <h1>ComprehensiveServices</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  )
 interface ComprehensiveServicesProps {
   // Add props here as needed
 }
-export default function ComprehensiveServices({ }: ComprehensiveServicesProps) {
+export default function ComprehensiveServices({}: ComprehensiveServicesProps) {
   return (
     <div>
       <h1>ComprehensiveServices</h1>
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+
+}
+

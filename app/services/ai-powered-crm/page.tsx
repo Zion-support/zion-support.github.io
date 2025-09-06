@@ -1,5 +1,671 @@
 import React from 'react';
 import Link from 'next/link';
+export const metadata = {title: 'AI-Powered CRM Platform | Zion Tech Group',description: 'Revolutionary CRM with AI-driven insights, predictive analytics, and automated lead scoring. Boost sales by 40% with intelligent customer relationship management.',keywords: 'AI CRM, customer relationship management, sales automation, lead scoring, predictive analytics, sales intelligence';
+  title: "AI-Powered CRM Platform | Zion Tech Group",description:;
+    "Revolutionary CRM with AI automation, predictive analytics, and intelligent lead scoring. Boost sales by 40% with our advanced customer relationship management platform.",keywords:;
+    "AI CRM, customer relationship management, sales automation, lead scoring, predictive analytics, sales intelligence",ursor/automate-test-improve-and-merge-code-646c;
+  description: 'Revolutionary CRM with AI-powered lead scoring, automated follow-ups, predictive analytics, and intelligent sales insights. Boost conversion rates by 40% with our smart CRM solution.',keywords: 'AI CRM, customer relationship management, lead scoring, sales automation, predictive analytics, sales intelligence';
+  title: 'AI-Powered CRM | Zion Tech Group',description: 'Revolutionary AI-powered CRM platform that automates customer interactions, predicts sales opportunities, and delivers personalized experiences at scale.',keywords: 'AI CRM, customer relationship management, sales automation, lead scoring, customer insights, AI-powered sales';
+}export default function AIPoweredCRMPage() {return (<div className="space-y-16">;
+      {/* Hero Section */}
+      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">;
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">;
+          AI-Powered CRM;
+        </h1>;
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
+          Revolutionize your sales process with intelligent CRM that learns from your data, predicts customer behavior,and automates follow-ups. Boost sales by 40% with AI-driven insights and automation.;
+        </p>;
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+          <a;
+            href="mailto:kleber@ziontechgroup.com?subject=AI CRM Platform Demo";
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors";
+          >;
+            Request Demo;
+          Transform your sales process with intelligent automation, predictive analytics, and AI-driven insights.;
+          Boost conversion rates by 40% and accelerate revenue growth.;
+          Transform your customer relationships with our AI-powered CRM platform.;
+          Automate interactions, predict opportunities, and deliver personalized;
+          experiences at scale.;
+        </p>;
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+          <Link;
+            href="/contact";
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors";
+          >;
+            Get Started;
+          </Link>;
+          <Link;
+            href="#demo";
+            className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors";
+          >;
+            Watch Demo;
+          </Link>;
+        </div>;
+      </section>;
+      {/* Key Features */}
+      <section className="py-12">;
+        <div className="text-center mb-12">;
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">AI-Powered Features</h2>;
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
+            Leverage cutting-edge AI technology to automate and optimize your sales processes.;
+          </p>;
+        </div>;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+          <FeatureCard;
+            icon="🎯";
+            title="Intelligent Lead Scoring";
+            description="AI-powered lead qualification with 95% accuracy";
+            benefits={[;
+              "Predictive customer lifetime value analysis","Automated lead nurturing sequences","Real-time conversion probability scoring","Behavioral pattern recognition";
+            ]}
+          />;
+          <FeatureCard;
+            icon="🤖";
+            title="Smart Sales Automation";
+            description="Automated follow-up sequences based on behavior";
+            benefits={[;
+              "AI-generated personalized email campaigns","Intelligent meeting scheduling and reminders","Dynamic pricing optimization","Automated task assignment";
+            ]}
+          />;
+          <FeatureCard;
+            icon="📊";
+            title="Predictive Analytics";
+            description="Advanced forecasting with machine learning";
+            benefits={[;
+              "Churn prediction and prevention strategies","Revenue optimization recommendations","Customer segmentation and targeting","Sales pipeline forecasting";
+            ]}
+          />;
+          <FeatureCard;
+            icon="💡";
+            title="Sales Intelligence";
+            description="Real-time customer insights and behavior tracking";
+            benefits={[;
+              "Competitive analysis and market intelligence","Performance analytics and reporting","Custom dashboard and KPI monitoring","AI-powered sales coaching";
+            ]}
+          />;
+          <FeatureCard;
+            icon="🔄";
+            title="Workflow Automation";
+            description="Streamline repetitive tasks and processes";
+            benefits={[;
+              "Automated data entry and updates","Smart document generation","Integration with existing tools","Custom workflow creation";
+            ]}
+          />;
+          <FeatureCard;
+            icon="📱";
+            title="Mobile-First Design";
+            description="Access your CRM anywhere, anytime";
+            benefits={[;
+              "Native mobile applications","Offline data synchronization","Push notifications and alerts","Voice-to-text data entry";
+            ]}
+          />;
+        </div>;
+      </section>;
+      {/* Pricing */}
+      <section className="py-12 bg-gray-50 rounded-lg">;
+        <div className="text-center mb-12">;
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>;
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
+            Choose the plan that fits your business needs. All plans include our core AI features.;
+          </p>;
+        </div>;
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">;
+          <PricingTier;
+            name="Starter";
+            price="$99";
+            period="month";
+            description="Perfect for small teams getting started with AI CRM";
+            features={[;
+              "Up to 1,000 contacts","Basic AI lead scoring","Email automation","Standard support","Mobile app access";
+            ]}
+          />;
+          <PricingTier;
+            name="Professional";
+            price="$299";
+            period="month";
+            description="Ideal for growing businesses with advanced needs";
+            features={[;
+              "Up to 10,000 contacts","Advanced AI analytics","Custom workflows","Priority support","API access","Advanced reporting";
+            ]}
+            popular={true}
+          />;
+          <PricingTier;
+            name="Enterprise";
+            price="$999";
+            period="month";
+            description="Complete solution for large organizations";
+            features={[;
+              "Unlimited contacts","Full AI suite","Custom integrations","Dedicated support","White-label options","Advanced security";
+            ]}
+          />;
+        </div>;
+      </section>;
+      {/* Testimonials */}
+      <section className="py-12">;
+        <div className="text-center mb-12">;
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>;
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
+            See how AI-powered CRM has transformed businesses across industries.;
+          </p>;
+        </div>;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+          <TestimonialCard;
+            quote="The AI lead scoring has increased our conversion rates by 40%. It's like having a sales expert working 24/7.";
+            author="Sarah Johnson";
+            role="Sales Director";
+            company="TechCorp Solutions";
+          />;
+          <TestimonialCard;
+            quote="The predictive analytics helped us identify high-value prospects we would have missed. ROI increased by 300%.";
+            author="Michael Chen";
+            role="VP of Sales";
+            company="GrowthTech Inc";
+          />;
+          <TestimonialCard;
+            quote="Automation features saved us 20 hours per week. Our team can now focus on building relationships instead of data entry.";
+            author="Emily Rodriguez";
+            role="Sales Manager";
+            company="InnovateLabs";
+          />;
+        </div>;
+      </section>;
+function Item() {return (<div style={{ border: '1px solid #e5e7eb', borderRadius: 12, padding: 16 }}>;
+      <h3 style={{ fontWeight: 700 }}>{title}</h3>;
+      <ul style={{ paddingLeft: 18, color: '#4b5563' }}>{details.map(d => (<li key={d} style={{ listStyle: 'disc' }}>{d}</li>))}</ul>;
+    <div className="space-y-16">;
+      {/* Hero Section */}
+      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">;
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">;
+          AI-Powered CRM Platform;
+        </h1>;
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
+          Revolutionize your sales process with our intelligent CRM that uses AI;
+          to predict customer behavior, automate follow-ups, and maximize;
+          conversion rates. Trusted by 200+ sales teams worldwide.;
+        </p>;
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+          <a;
+            href="mailto:kleber@ziontechgroup.com?subject=AI CRM Platform Inquiry";
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors";
+          >;
+            Get Free Demo;
+ursor/automate-test-improve-and-merge-code-646c;
+          </a>;
+          <a;
+            href="tel:+13024640950";
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors";
+          >;
+            Call +1 302 464 0950;
+          </a>;
+        </div>;
+      </section>;
+      {/* Key Features */}
+      <section className="py-12">;
+        <div className="text-center mb-12">;
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">;
+            Revolutionary AI Features;
+          </h2>;
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
+            Our AI-powered CRM goes beyond traditional customer management with intelligent automation and predictive insights.;
+            Our AI-powered CRM goes beyond traditional customer management with;
+            intelligent automation and predictive insights.;
+ursor/automate-test-improve-and-merge-code-646c;
+          </p>;
+        </div>;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+          <FeatureCard;
+ursor/automate-test-improve-and-merge-code-646c;
+            icon="🧠";
+            title="AI Lead Scoring";
+            description="Automatically score leads based on 50+ behavioral and demographic factors with 95% accuracy";
+            benefits={[;
+              "Real-time lead scoring","Behavioral analysis","Conversion prediction","Priority recommendations","Custom scoring models";
+            ]}
+          />;
+          <FeatureCard;
+            icon="📊";
+            title="Predictive Analytics";
+            description="Forecast sales outcomes, identify upsell opportunities, and predict customer churn with advanced AI models.";
+            ]}
+          />;
+          <FeatureCard;
+            icon="📈";
+            title="Predictive Analytics";
+            description="Forecast sales trends, customer lifetime value, and churn risk with advanced machine learning";
+ursor/automate-test-improve-and-merge-code-646c;
+            benefits={[;
+              "Sales forecasting","Churn prediction","Revenue optimization","Market trend analysis";
+            ]}
+          />;
+          <FeatureCard;
+            icon="🤖";
+            title="Smart Automation";
+            description="Automate follow-ups, email sequences, and task assignments based on customer behavior patterns";
+            benefits={[;
+              "Smart email sequences","Response-based automation","Optimal timing detection","Personalized content","A/B testing automation";
+              "Auto follow-up sequences","Task automation","Email personalization","Workflow optimization",ursor/automate-test-improve-and-merge-code-646c;
+            ]}
+          />;
+          <FeatureCard;
+            icon="💬";
+            title="Conversation Intelligence";
+            description="Analyze call recordings, emails, and meetings to extract insights and improve sales performance.";
+            benefits={[;
+              "Call transcription & analysis","Sentiment analysis","Key phrase detection","Coaching recommendations","Performance insights";
+            ]}
+          />;
+          <FeatureCard;
+            icon="🎯";
+            title="Smart Segmentation";
+            description="Automatically segment customers based on behavior, preferences, and predicted lifetime value.";
+            benefits={[;
+              "Dynamic segmentation","Behavioral clustering","Value-based grouping","Custom segment rules","Real-time updates";
+            ]}
+          />;
+          <FeatureCard;
+            icon="📈";
+            title="Performance Optimization";
+            description="AI-driven recommendations to improve sales processes, team performance, and customer satisfaction.";
+            benefits={[;
+              "Process optimization","Team performance insights","Best practice recommendations","ROI tracking","Success metrics";
+            title="AI Chat Assistant";
+            description="Intelligent chatbot that handles customer inquiries and qualifies leads 24/7";
+            benefits={[;
+              "24/7 customer support","Lead qualification","Natural language processing","Multi-channel support";
+            ]}
+          />;
+          <FeatureCard;
+            icon="📊";
+            title="Advanced Analytics";
+            description="Comprehensive dashboards with AI insights, performance metrics, and actionable recommendations";
+            benefits={[;
+              "Real-time dashboards","Performance tracking","ROI analysis","Custom reporting";
+            ]}
+          />;
+          <FeatureCard;
+            icon="🔗";
+            title="Seamless Integrations";
+            description="Connect with 100+ tools including email, calendar, social media, and marketing platforms";
+            benefits={[;
+              "Email integration","Calendar sync","Social media tools","Marketing automation",ursor/automate-test-improve-and-merge-code-646c;
+            ]}
+          />;
+        </div>;
+      </section>;
+      {/* ROI Section */}
+      <section className="py-12 bg-gray-50 rounded-lg">;
+        <div className="text-center mb-12">;
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Results</h2>;
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
+            Our AI-powered CRM delivers measurable improvements across all key sales metrics.;
+          </p>;
+        </div>;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+          <div className="text-center">;
+            <div className="text-4xl font-bold text-green-600 mb-2">40%</div>;
+            <div className="text-lg font-semibold text-gray-900 mb-1">Increase in Sales</div>;
+            <div className="text-sm text-gray-600">Average improvement in sales performance</div>;
+          </div>;
+          <div className="text-center">;
+            <div className="text-4xl font-bold text-blue-600 mb-2">60%</div>;
+            <div className="text-lg font-semibold text-gray-900 mb-1">Faster Lead Response</div>;
+            <div className="text-sm text-gray-600">Reduction in response time to leads</div>;
+          </div>;
+          <div className="text-center">;
+            <div className="text-4xl font-bold text-purple-600 mb-2">35%</div>;
+            <div className="text-lg font-semibold text-gray-900 mb-1">Higher Conversion</div>;
+            <div className="text-sm text-gray-600">Improvement in lead-to-customer conversion</div>;
+          </div>;
+          <div className="text-center">;
+            <div className="text-4xl font-bold text-orange-600 mb-2">50%</div>;
+            <div className="text-lg font-semibold text-gray-900 mb-1">Time Saved</div>;
+            <div className="text-sm text-gray-600">Reduction in manual administrative tasks</div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* Pricing */}
+      <section className="py-12">;
+        <div className="text-center mb-12">;
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Pricing Plans</h2>;
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
+            Choose the plan that fits your team size and business needs. All plans include our core AI features.;
+          </p>;
+        </div>;
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">;
+          <PricingTier;
+            name="Starter";
+            price="$99";
+            period="user/month";
+      {/* Pricing */}
+      <section className="py-12 bg-gray-50 rounded-lg">;
+        <div className="text-center mb-12">;
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">;
+            Transparent Pricing;
+          </h2>;
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
+            Choose the plan that fits your team size and business needs. All;
+            plans include our core AI features.;
+          </p>;
+        </div>;
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">;
+          <PricingCard;
+            name="Starter";
+            price="$99";
+            period="per user/month";
+ursor/automate-test-improve-and-merge-code-646c;
+            description="Perfect for small teams getting started with AI CRM";
+            features={[;
+              "Up to 5 users","AI lead scoring","Basic automation","Email integration","Mobile app access","Standard support";
+            ]}
+          />;
+          <PricingTier;
+            name="Professional";
+            price="$199";
+            period="user/month";
+            description="Most popular for growing sales teams";
+            features={[;
+              "Up to 25 users","Advanced AI features","Predictive analytics","Conversation intelligence","Custom integrations","Priority support","Advanced reporting";
+            ]}
+            popular={true}
+          />;
+          <PricingTier;
+            name="Enterprise";
+            price="$399";
+            period="user/month";
+            description="For large organizations with complex needs";
+            features={[;
+              "Unlimited users","Full AI suite","Mobile app","Email support";
+            ]}
+            cta="Start Free Trial";
+            popular={false}
+          />;
+          <PricingCard;
+            name="Professional";
+            price="$199";
+            period="per user/month";
+            description="Most popular for growing sales teams";
+            features={[;
+              "Up to 25 users","All AI features","Advanced analytics","Custom integrations","Priority support","API access","Advanced automation";
+            ]}
+            cta="Start Free Trial";
+            popular={true}
+          />;
+          <PricingCard;
+            name="Enterprise";
+            price="$399";
+            period="per user/month";
+            description="For large organizations with complex needs";
+            features={[;
+              "Unlimited users",ursor/automate-test-improve-and-merge-code-646c;
+              "Custom AI models","Dedicated support","White-label options","Advanced security","Custom development";
+              "Custom development","SLA guarantee";
+            ]}
+            cta="Contact Sales";
+            popular={false}
+          />;
+        </div>;
+      </section>;
+      {/* Success Stories */}
+      <section className="py-12">;
+        <div className="text-center mb-12">;
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">;
+            Proven Results;
+          </h2>;
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
+            See how our AI-powered CRM has transformed sales performance for;
+            businesses across industries.;
+          </p>;
+        </div>;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+          <CaseStudy;
+            company="TechStart Inc.";
+            industry="SaaS";
+            result="40% increase in conversion rates";
+            description="Implemented AI lead scoring and automated follow-ups, resulting in 40% higher conversion rates and 60% time savings for sales team.";
+            metrics={[;
+              "40% conversion increase","60% time savings","25% revenue growth";
+            ]}
+          />;
+          <CaseStudy;
+            company="Global Manufacturing Co.";
+            industry="Manufacturing";
+            result="35% improvement in sales forecasting";
+            description="Used predictive analytics to improve sales forecasting accuracy and optimize inventory management across multiple regions.";
+            metrics={[;
+              "35% forecast accuracy","20% inventory reduction","30% cost savings";
+            ]}
+          />;
+          <CaseStudy;
+            company="Financial Services Ltd.";
+            industry="Finance";
+            result="50% faster lead qualification";
+            description="Deployed AI chatbot and automated lead qualification, reducing response time and improving customer satisfaction scores.";
+            metrics={[;
+              "50% faster qualification","90% customer satisfaction","45% lead quality improvement",ursor/automate-test-improve-and-merge-code-646c;
+            ]}
+          />;
+        </div>;
+      </section>;
+      {/* Integration Section */}
+      <section className="py-12 bg-gray-50 rounded-lg">;
+        <div className="text-center mb-12">;
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Seamless Integrations</h2>;
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
+            Connect with your existing tools and workflows for a unified sales experience.;
+      {/* Technology Stack */}
+      <section className="py-12 bg-gray-50 rounded-lg">;
+        <div className="text-center mb-12">;
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">;
+            Built with Modern Technology;
+          </h2>;
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
+            Our AI CRM is built on enterprise-grade infrastructure with;
+            cutting-edge AI and machine learning technologies.;
+ursor/automate-test-improve-and-merge-code-646c;
+          </p>;
+        </div>;
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">;
+          {[;
+            { name: "Salesforce", icon: "☁️" },{ name: "HubSpot", icon: "🟠" },{ name: "Slack", icon: "💬" },{ name: "Microsoft Teams", icon: "🔵" },{ name: "Gmail", icon: "📧" },{ name: "Outlook", icon: "📮" },{ name: "Zoom", icon: "📹" },{ name: "Calendly", icon: "📅" },{ name: "Stripe", icon: "💳" },{ name: "QuickBooks", icon: "📊" },{ name: "Mailchimp", icon: "📬" },{ name: "Zapier", icon: "⚡" }
+          ].map((integration, index) => (<div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">;
+              <div className="text-2xl mb-2">{integration.icon}</div>;
+              <h3 className="font-semibold text-gray-900 text-sm">{integration.name}</h3>;
+            {name: "OpenAI GPT-4",icon: "🧠",description: "AI language processing";
+            },{ name: "TensorFlow", icon: "⚡", description: "Machine learning" },{ name: "PostgreSQL", icon: "🐘", description: "Database" },{ name: "Redis", icon: "🔴", description: "Caching" },{ name: "AWS", icon: "☁️", description: "Cloud infrastructure" },{ name: "Docker", icon: "🐳", description: "Containerization" },{ name: "Kubernetes", icon: "⚙️", description: "Orchestration" },{ name: "React", icon: "⚛️", description: "Frontend" },{ name: "Node.js", icon: "🟢", description: "Backend" },{ name: "MongoDB", icon: "🍃", description: "Document store" },{ name: "Elasticsearch", icon: "🔍", description: "Search engine" },{ name: "Stripe", icon: "💳", description: "Payments" }
+          ].map((tech, index) => (<div;
+              key={index}
+              className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200";
+            >;
+              <div className="text-2xl mb-2">{tech.icon}</div>;
+              <h3 className="font-semibold text-gray-900 mb-1">{tech.name}</h3>;
+              <p className="text-xs text-gray-600">{tech.description}</p>;
+ursor/automate-test-improve-and-merge-code-646c;
+            </div>;
+          ))}
+        </div>;
+      </section>;
+      {/* Contact CTA */}
+      <section className="py-12 bg-blue-600 rounded-lg text-white text-center">;
+        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Sales Process?</h2>;
+        <p className="text-xl mb-8 max-w-2xl mx-auto">;
+          Join hundreds of companies already using our AI-powered CRM to boost sales and improve customer relationships.;
+        </p>;
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+          <a;
+            href="mailto:kleber@ziontechgroup.com?subject=AI CRM Platform Inquiry";
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors";
+          >;
+            Start Free Trial;
+        <h2 className="text-3xl font-bold mb-4">;
+          Ready to Transform Your Sales Process?;
+        </h2>;
+        <p className="text-xl mb-8 max-w-2xl mx-auto">;
+          Join thousands of businesses using our AI-powered CRM to boost sales and accelerate growth.;
+        </p>;
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+          <a;
+            href="mailto:kleber@ziontechgroup.com?subject=AI CRM Platform Demo Request";
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors";
+          >;
+            Schedule Demo;
+ursor/automate-test-improve-and-merge-code-646c;
+          </a>;
+          <a;
+            href="tel:+13024640950";
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors";
+          >;
+            Call +1 302 464 0950;
+          </a>;
+          <a;
+            href="mailto:kleber@ziontechgroup.com?subject=AI CRM Demo Request";
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors";
+          >;
+            Get Free Demo;
+          </a>;
+        </div>;
+        <div className="mt-8 text-sm">;
+          <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>;
+          <p>📧 kleber@ziontechgroup.com</p>;
+        </div>;
+      </section>;
+          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
+          <p>Email: kleber@ziontechgroup.com</p>;
+        </div>;
+      </section>;
+    </div>;
+  )}function Pricing() {function FeatureCard() {return (<div style={{ marginTop: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>;
+      <Plan;
+        name="Starter CRM";
+        price="$2,500/month";
+        features={[;
+          'Up to 1,000 contacts','Basic AI lead scoring','Email automation','Standard analytics','Email support';
+        ]}
+      />;
+      <Plan;
+        name="Professional CRM";
+        price="$5,000/month";
+        features={[;
+          'Up to 10,000 contacts','Advanced AI predictions','Custom automation workflows','Advanced analytics & reporting','Priority support','API integrations';
+        ]}
+      />;
+      <Plan;
+        name="Enterprise CRM";
+        price="$12,000/month";
+        features={[;
+          'Unlimited contacts','Full AI suite','Custom AI model training','White-label solution','Dedicated support','Custom integrations','SLA guarantee';
+        ]}
+      />;
+    </div>;
+  )}function Plan() {return (<div style={{ border: '1px solid #e5e7eb', borderRadius: 12, padding: 16 }}>;
+      <h4 style={{ fontWeight: 700 }}>{name}</h4>;
+      <div style={{ color: '#111827', fontWeight: 800, marginTop: 4, fontSize: 18 }}>{price}</div>;
+      <ul style={{ paddingLeft: 18, color: '#4b5563', marginTop: 8 }}>{features.map(f => (<li key={f} style={{ listStyle: 'disc' }}>{f}</li>))}</ul>;
+      <a href="tel:+13024640950" style={{ display: 'inline-block', marginTop: 12, padding: '8px 16px', backgroundColor: '#3b82f6', color: 'white', textDecoration: 'none', borderRadius: 6 }}>Call +1 302 464 0950</a>;
+    </div>;
+  )}
+function PricingCard() {return (<div;
+      className={`relative p-8 rounded-lg border-2 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"} shadow-lg`}
+    >;
+      {popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
+          <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">;
+            Most Popular;
+          </span>;
+        </div>;
+      )}
+      <div className="text-center mb-6">;
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>;
+        <div className="text-4xl font-bold text-blue-600 mb-2">;
+          {price}
+          <span className="text-lg text-gray-500 font-normal">/{period}</span>;
+        </div>;
+        <p className="text-gray-600">{description}</p>;
+      </div>;
+      <ul className="space-y-3 mb-8">;
+        {features.map((feature, index) => (<li key={index} className="flex items-center">;
+            <svg;
+              className="w-5 h-5 text-green-500 mr-3";
+              fill="currentColor";
+              viewBox="0 0 20 20";
+            >;
+              <path;
+                fillRule="evenodd";
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z";
+                clipRule="evenodd";
+              />;
+            </svg>;
+            <span className="text-gray-700">{feature}</span>;
+          </li>;
+        ))}
+      </ul>;
+      <a;
+        href="mailto:kleber@ziontechgroup.com?subject=AI CRM Platform - {name} Plan";
+        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${popular;
+            ? "bg-blue-600 text-white hover:bg-blue-700";
+            : "bg-gray-900 text-white hover:bg-gray-800";
+        }`}
+      >;
+        {cta}
+      </a>;
+    </div>;
+  )}function CaseStudy() {return (<div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">;
+      <div className="flex items-center justify-between mb-4">;
+        <h3 className="text-xl font-semibold text-gray-900">{company}</h3>;
+        <span className="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">;
+          {industry}
+        </span>;
+      </div>;
+      <p className="text-gray-600 mb-4">{description}</p>;
+      <div className="space-y-2">;
+        <div className="text-sm">;
+          <span className="font-semibold text-green-600">Result: </span>;
+          <span className="text-gray-700">{result}</span>;
+        </div>;
+        <div className="flex flex-wrap gap-1">;
+          {metrics.map((metric, index) => (<span;
+              key={index}
+              className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded";
+            >;
+              {metric}
+            </span>;
+          ))}
+        </div>;
+      </div>;
+ursor/automate-test-improve-and-merge-code-646c;
+    </div>;
+  )}{/* CTA Section */}
+      <section className="py-12 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-lg text-white">;
+        <div className="text-center">;
+          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Sales Process?</h2>;
+          <p className="text-xl mb-8 max-w-2xl mx-auto">;
+            Join hundreds of businesses already using AI to accelerate their sales growth.;
+            Get started with a free consultation today.;
+          </p>;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+            <a;
+              href="tel:+13024640950";
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors";
+            >;
+              Call +1 302 464 0950;
+            </a>;
+            <a;
+              href="mailto:kleber@ziontechgroup.com?subject=AI CRM Demo Request";
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors";
+            >;
+              Schedule Demo;
+            </a>;
+          </div>;
+          <div className="mt-8 text-sm">;
+            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>;
+            <p>📧 kleber@ziontechgroup.com</p>;
+          </div>;
+          <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>;
+        </div>;
+      </section>;
+    </div>;
+  )}
+import FeatureCard from '../../components/FeatureCard';
+import PricingTier from '../../components/PricingTier';
+import TestimonialCard from '../../components/TestimonialCard';
 
 export const metadata = {
   title: 'AI-Powered CRM Platform | Zion Tech Group',
@@ -7,322 +673,17 @@ export const metadata = {
   keywords: 'AI CRM, customer relationship management, lead scoring, sales automation, predictive analytics, sales intelligence'
 };
 
-interface FeatureCardProps {
-  icon: string;
-  title: string;
-  description: string;
-  benefits: string[];
-}
-
-function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {
-  return (
-    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
-      <div className="text-3xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-2">
-        {benefits.map((benefit, index) => (
-          <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-            {benefit}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function PricingTier({ 
-  name, 
-  price, 
-  period, 
-  description, 
-  features, 
-  popular = false 
-}: { 
-  name: string; 
-  price: string; 
-  period: string; 
-  description: string; 
-  features: string[]; 
-  popular?: boolean; 
-}) {
-  return (
-    <div className={`relative p-8 bg-white rounded-xl border-2 ${popular ? 'border-blue-500' : 'border-gray-200'} hover:shadow-lg transition-shadow`}>
-      {popular && (
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-            Most Popular
-          </span>
-        </div>
-      )}
-      <div className="text-center mb-6">
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
-        <div className="text-4xl font-bold text-blue-600 mb-2">
-          {price}
-          <span className="text-lg text-gray-500 font-normal">/{period}</span>
-        </div>
-        <p className="text-gray-600">{description}</p>
-      </div>
-      <ul className="space-y-3 mb-8">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-gray-700">
-            <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-            </svg>
-            {feature}
-          </li>
-        ))}
-      </ul>
-      <a
-        href="tel:+13024640950"
-        className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
-          popular 
-            ? 'bg-blue-600 text-white hover:bg-blue-700' 
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-        }`}
-      >
-        Get Started
-      </a>
-    </div>
-  );
-}
-
-function TestimonialCard({ 
-  quote, 
-  author, 
-  role, 
-  company 
-}: { 
-  quote: string; 
-  author: string; 
-  role: string; 
-  company: string; 
-}) {
-  return (
-    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-      <p className="text-gray-700 mb-4 italic">"{quote}"</p>
-      <div className="flex items-center">
-        <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
-          <span className="text-blue-600 font-semibold">{author.charAt(0)}</span>
-        </div>
-        <div>
-          <div className="font-semibold text-gray-900">{author}</div>
-          <div className="text-sm text-gray-600">{role}</div>
-          <div className="text-sm text-gray-500">{company}</div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function AIPoweredCRMPage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
+      <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-blue-100 rounded-lg">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           AI-Powered CRM Platform
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
           Transform your sales process with intelligent automation, predictive analytics, and AI-driven insights. 
-          Boost conversion rates by 40% and accelerate revenue growth.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI CRM Inquiry"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Get Free Demo
-          </a>
-        </div>
-      </section>
-
-      {/* Key Features */}
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">AI-Powered Features</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Leverage cutting-edge AI technology to automate and optimize your sales processes.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <FeatureCard
-            icon="🎯"
-            title="Intelligent Lead Scoring"
-            description="AI-powered lead qualification with 95% accuracy"
-            benefits={[
-              "Predictive customer lifetime value analysis",
-              "Automated lead nurturing sequences",
-              "Real-time conversion probability scoring",
-              "Behavioral pattern recognition"
-            ]}
-          />
-          <FeatureCard
-            icon="🤖"
-            title="Smart Sales Automation"
-            description="Automated follow-up sequences based on behavior"
-            benefits={[
-              "AI-generated personalized email campaigns",
-              "Intelligent meeting scheduling and reminders",
-              "Dynamic pricing optimization",
-              "Automated task assignment"
-            ]}
-          />
-          <FeatureCard
-            icon="📊"
-            title="Predictive Analytics"
-            description="Advanced forecasting with machine learning"
-            benefits={[
-              "Churn prediction and prevention strategies",
-              "Revenue optimization recommendations",
-              "Customer segmentation and targeting",
-              "Sales pipeline forecasting"
-            ]}
-          />
-          <FeatureCard
-            icon="💡"
-            title="Sales Intelligence"
-            description="Real-time customer insights and behavior tracking"
-            benefits={[
-              "Competitive analysis and market intelligence",
-              "Performance analytics and reporting",
-              "Custom dashboard and KPI monitoring",
-              "AI-powered sales coaching"
-            ]}
-          />
-          <FeatureCard
-            icon="🔄"
-            title="Workflow Automation"
-            description="Streamline repetitive tasks and processes"
-            benefits={[
-              "Automated data entry and updates",
-              "Smart document generation",
-              "Integration with existing tools",
-              "Custom workflow creation"
-            ]}
-          />
-          <FeatureCard
-            icon="📱"
-            title="Mobile-First Design"
-            description="Access your CRM anywhere, anytime"
-            benefits={[
-              "Native mobile applications",
-              "Offline data synchronization",
-              "Push notifications and alerts",
-              "Voice-to-text data entry"
-            ]}
-          />
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that fits your business needs. All plans include our core AI features.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <PricingTier
-            name="Starter"
-            price="$99"
-            period="month"
-            description="Perfect for small teams getting started with AI CRM"
-            features={[
-              "Up to 1,000 contacts",
-              "Basic AI lead scoring",
-              "Email automation",
-              "Standard support",
-              "Mobile app access"
-            ]}
-          />
-          <PricingTier
-            name="Professional"
-            price="$299"
-            period="month"
-            description="Ideal for growing businesses with advanced needs"
-            features={[
-              "Up to 10,000 contacts",
-              "Advanced AI analytics",
-              "Custom workflows",
-              "Priority support",
-              "API access",
-              "Advanced reporting"
-            ]}
-            popular={true}
-          />
-          <PricingTier
-            name="Enterprise"
-            price="$999"
-            period="month"
-            description="Complete solution for large organizations"
-            features={[
-              "Unlimited contacts",
-              "Full AI suite",
-              "Custom integrations",
-              "Dedicated support",
-              "White-label options",
-              "Advanced security"
-            ]}
-          />
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            See how AI-powered CRM has transformed businesses across industries.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <TestimonialCard
-            quote="The AI lead scoring has increased our conversion rates by 40%. It's like having a sales expert working 24/7."
-            author="Sarah Johnson"
-            role="Sales Director"
-            company="TechCorp Solutions"
-          />
-          <TestimonialCard
-            quote="The predictive analytics helped us identify high-value prospects we would have missed. ROI increased by 300%."
-            author="Michael Chen"
-            role="VP of Sales"
-            company="GrowthTech Inc"
-          />
-          <TestimonialCard
-            quote="Automation features saved us 20 hours per week. Our team can now focus on building relationships instead of data entry."
-            author="Emily Rodriguez"
-            role="Sales Manager"
-            company="InnovateLabs"
-          />
-        </div>
-      </section>
-
-<<<<<<< HEAD
-function Item({ title, details }: { title: string; details: string[] }) {
-  return (
-    <div style={{ border: '1px solid #e5e7eb', borderRadius: 12, padding: 16 }}>
-      <h3 style={{ fontWeight: 700 }}>{title}</h3>
-      <ul style={{ paddingLeft: 18, color: '#4b5563' }}>{details.map(d => (<li key={d} style={{ listStyle: 'disc' }}>{d}</li>))}</ul>
-=======
-    <div className="space-y-16">
-      {/* Hero Section */}
-      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          AI-Powered CRM Platform
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Revolutionize your sales process with our intelligent CRM that uses AI
-          to predict customer behavior, automate follow-ups, and maximize
-          conversion rates. Trusted by 200+ sales teams worldwide.
+          Our CRM platform increases conversion rates by 40% and reduces sales cycle time by 60%.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -343,80 +704,47 @@ function Item({ title, details }: { title: string; details: string[] }) {
       {/* Key Features */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Revolutionary AI Features
-          </h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Revolutionary AI Features</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI-powered CRM goes beyond traditional customer management with
-            intelligent automation and predictive insights.
+            Our AI-powered CRM goes beyond traditional customer management to provide intelligent insights and automation.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard
-            icon="🧠"
+            icon="🎯"
             title="AI Lead Scoring"
-            description="Automatically score leads based on 50+ behavioral and demographic factors with 95% accuracy"
-            benefits={[
-              "Real-time lead scoring",
-              "Behavioral analysis",
-              "Conversion prediction",
-              "Priority recommendations",
-            ]}
-          />
-          <FeatureCard
-            icon="📈"
-            title="Predictive Analytics"
-            description="Forecast sales trends, customer lifetime value, and churn risk with advanced machine learning"
-            benefits={[
-              "Sales forecasting",
-              "Churn prediction",
-              "Revenue optimization",
-              "Market trend analysis",
-            ]}
+            description="Machine learning algorithms analyze customer behavior, engagement patterns, and demographic data to score leads with 95% accuracy. Features real-time lead prioritization, behavioral pattern analysis, and custom scoring models."
+            color="blue"
           />
           <FeatureCard
             icon="🤖"
-            title="Smart Automation"
-            description="Automate follow-ups, email sequences, and task assignments based on customer behavior patterns"
-            benefits={[
-              "Auto follow-up sequences",
-              "Task automation",
-              "Email personalization",
-              "Workflow optimization",
-            ]}
+            title="Automated Follow-ups"
+            description="AI-powered email sequences and call scheduling based on customer behavior and optimal timing predictions. Includes personalized email sequences, multi-channel automation, and A/B testing for optimization."
+            color="purple"
+          />
+          <FeatureCard
+            icon="📊"
+            title="Predictive Analytics"
+            description="Advanced analytics predict customer lifetime value, churn risk, and sales opportunities with actionable insights. Delivers churn prediction with 90% accuracy, lifetime value forecasting, and revenue forecasting."
+            color="green"
           />
           <FeatureCard
             icon="💬"
             title="AI Chat Assistant"
-            description="Intelligent chatbot that handles customer inquiries and qualifies leads 24/7"
-            benefits={[
-              "24/7 customer support",
-              "Lead qualification",
-              "Natural language processing",
-              "Multi-channel support",
-            ]}
+            description="Intelligent chatbot handles initial customer inquiries, qualifies leads, and schedules meetings automatically. Provides 24/7 customer support, lead qualification, and multi-language support."
+            color="red"
           />
           <FeatureCard
-            icon="📊"
-            title="Advanced Analytics"
-            description="Comprehensive dashboards with AI insights, performance metrics, and actionable recommendations"
-            benefits={[
-              "Real-time dashboards",
-              "Performance tracking",
-              "ROI analysis",
-              "Custom reporting",
-            ]}
+            icon="📈"
+            title="Sales Intelligence"
+            description="AI analyzes sales calls, emails, and meetings to provide insights on customer sentiment and deal progression. Includes call sentiment analysis, deal progression tracking, and performance insights."
+            color="yellow"
           />
           <FeatureCard
-            icon="🔗"
-            title="Seamless Integrations"
-            description="Connect with 100+ tools including email, calendar, social media, and marketing platforms"
-            benefits={[
-              "Email integration",
-              "Calendar sync",
-              "Social media tools",
-              "Marketing automation",
-            ]}
+            icon="🔄"
+            title="Workflow Automation"
+            description="Smart automation handles repetitive tasks, data entry, and follow-up processes to increase team productivity. Features task automation, data synchronization, and process optimization."
+            color="indigo"
           />
         </div>
       </section>
@@ -424,64 +752,64 @@ function Item({ title, details }: { title: string; details: string[] }) {
       {/* Pricing */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Transparent Pricing
-          </h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that fits your team size and business needs. All
-            plans include our core AI features.
+            Choose the plan that fits your business size and needs. All plans include our core AI features.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <PricingCard
+          <PricingTier
             name="Starter"
-            price="$99"
-            period="per user/month"
-            description="Perfect for small teams getting started with AI CRM"
+            price="$299"
+            period="per month"
+            description="Perfect for small teams and startups"
             features={[
-              "Up to 5 users",
+              "Up to 1,000 contacts",
               "AI lead scoring",
               "Basic automation",
               "Email integration",
-              "Mobile app",
-              "Email support",
+              "Mobile app access",
+              "Email support"
             ]}
-            cta="Start Free Trial"
-            popular={false}
+            isPopular={false}
+            buttonText="Get Started"
+            buttonHref="mailto:kleber@ziontechgroup.com?subject=AI CRM Platform - Starter Plan"
           />
-          <PricingCard
+          <PricingTier
             name="Professional"
-            price="$199"
-            period="per user/month"
-            description="Most popular for growing sales teams"
+            price="$599"
+            period="per month"
+            description="Most popular for growing businesses"
             features={[
-              "Up to 25 users",
-              "All AI features",
-              "Advanced analytics",
-              "Custom integrations",
-              "Priority support",
+              "Up to 10,000 contacts",
+              "Advanced AI features",
+              "Predictive analytics",
+              "Custom workflows",
               "API access",
-              "Advanced automation",
+              "Priority support",
+              "Advanced reporting"
             ]}
-            cta="Start Free Trial"
-            popular={true}
+            isPopular={true}
+            buttonText="Get Started"
+            buttonHref="mailto:kleber@ziontechgroup.com?subject=AI CRM Platform - Professional Plan"
           />
-          <PricingCard
+          <PricingTier
             name="Enterprise"
-            price="$399"
-            period="per user/month"
-            description="For large organizations with complex needs"
+            price="$1,299"
+            period="per month"
+            description="For large organizations"
             features={[
-              "Unlimited users",
+              "Unlimited contacts",
+              "All AI features",
               "Custom AI models",
-              "Dedicated support",
               "White-label options",
-              "Advanced security",
-              "Custom development",
-              "SLA guarantee",
+              "Dedicated support",
+              "Custom integrations",
+              "SLA guarantee"
             ]}
-            cta="Contact Sales"
-            popular={false}
+            isPopular={false}
+            buttonText="Get Started"
+            buttonHref="mailto:kleber@ziontechgroup.com?subject=AI CRM Platform - Enterprise Plan"
           />
         </div>
       </section>
@@ -489,85 +817,120 @@ function Item({ title, details }: { title: string; details: string[] }) {
       {/* Success Stories */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Proven Results
-          </h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Results</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            See how our AI-powered CRM has transformed sales performance for
-            businesses across industries.
+            See how our AI-powered CRM has transformed businesses across industries.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <CaseStudy
-            company="TechStart Inc."
-            industry="SaaS"
-            result="40% increase in conversion rates"
-            description="Implemented AI lead scoring and automated follow-ups, resulting in 40% higher conversion rates and 60% time savings for sales team."
-            metrics={[
-              "40% conversion increase",
-              "60% time savings",
-              "25% revenue growth",
-            ]}
-          />
-          <CaseStudy
-            company="Global Manufacturing Co."
-            industry="Manufacturing"
-            result="35% improvement in sales forecasting"
-            description="Used predictive analytics to improve sales forecasting accuracy and optimize inventory management across multiple regions."
-            metrics={[
-              "35% forecast accuracy",
-              "20% inventory reduction",
-              "30% cost savings",
-            ]}
-          />
-          <CaseStudy
-            company="Financial Services Ltd."
-            industry="Finance"
-            result="50% faster lead qualification"
-            description="Deployed AI chatbot and automated lead qualification, reducing response time and improving customer satisfaction scores."
-            metrics={[
-              "50% faster qualification",
-              "90% customer satisfaction",
-              "45% lead quality improvement",
-            ]}
-          />
+          <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xl font-semibold text-gray-900">TechStart Inc.</h3>
+              <span className="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">SaaS</span>
+            </div>
+            <p className="text-gray-600 mb-4">Implemented AI lead scoring and automated follow-ups, resulting in 40% higher conversion rates and 50% reduction in sales cycle time.</p>
+            <div className="space-y-2">
+              <div className="text-sm">
+                <span className="font-semibold text-green-600">Result: </span>
+                <span className="text-gray-700">40% increase in conversion rates</span>
+              </div>
+              <div className="space-y-1">
+                <div className="text-sm text-gray-600 flex items-center">
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>
+                  40% conversion increase
+                </div>
+                <div className="text-sm text-gray-600 flex items-center">
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>
+                  50% faster sales cycle
+                </div>
+                <div className="text-sm text-gray-600 flex items-center">
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>
+                  60% more qualified leads
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xl font-semibold text-gray-900">RetailCorp</h3>
+              <span className="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">E-commerce</span>
+            </div>
+            <p className="text-gray-600 mb-4">Used predictive analytics to identify at-risk customers and implemented targeted retention campaigns.</p>
+            <div className="space-y-2">
+              <div className="text-sm">
+                <span className="font-semibold text-green-600">Result: </span>
+                <span className="text-gray-700">35% boost in customer retention</span>
+              </div>
+              <div className="space-y-1">
+                <div className="text-sm text-gray-600 flex items-center">
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>
+                  35% retention boost
+                </div>
+                <div className="text-sm text-gray-600 flex items-center">
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>
+                  25% increase in LTV
+                </div>
+                <div className="text-sm text-gray-600 flex items-center">
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>
+                  45% reduction in churn
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xl font-semibold text-gray-900">FinancePro</h3>
+              <span className="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Financial Services</span>
+            </div>
+            <p className="text-gray-600 mb-4">Deployed AI-powered sales intelligence and workflow automation to streamline their sales process.</p>
+            <div className="space-y-2">
+              <div className="text-sm">
+                <span className="font-semibold text-green-600">Result: </span>
+                <span className="text-gray-700">60% improvement in sales efficiency</span>
+              </div>
+              <div className="space-y-1">
+                <div className="text-sm text-gray-600 flex items-center">
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>
+                  60% efficiency gain
+                </div>
+                <div className="text-sm text-gray-600 flex items-center">
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>
+                  30% more deals closed
+                </div>
+                <div className="text-sm text-gray-600 flex items-center">
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>
+                  80% time saved on admin
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Technology Stack */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Built with Modern Technology
-          </h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Built with Modern Technology</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI CRM is built on enterprise-grade infrastructure with
-            cutting-edge AI and machine learning technologies.
+            Our platform is built on enterprise-grade technology for reliability, security, and scalability.
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {[
-            {
-              name: "OpenAI GPT-4",
-              icon: "🧠",
-              description: "AI language processing",
-            },
-            { name: "TensorFlow", icon: "⚡", description: "Machine learning" },
-            { name: "PostgreSQL", icon: "🐘", description: "Database" },
-            { name: "Redis", icon: "🔴", description: "Caching" },
-            { name: "AWS", icon: "☁️", description: "Cloud infrastructure" },
+            { name: "React", icon: "⚛️", description: "Frontend framework" },
+            { name: "Node.js", icon: "🟢", description: "Backend runtime" },
+            { name: "PostgreSQL", icon: "🐘", description: "Primary database" },
+            { name: "Redis", icon: "🔴", description: "Caching layer" },
+            { name: "OpenAI GPT-4", icon: "🧠", description: "AI engine" },
+            { name: "AWS", icon: "☁️", description: "Cloud platform" },
             { name: "Docker", icon: "🐳", description: "Containerization" },
             { name: "Kubernetes", icon: "⚙️", description: "Orchestration" },
-            { name: "React", icon: "⚛️", description: "Frontend" },
-            { name: "Node.js", icon: "🟢", description: "Backend" },
+            { name: "Stripe", icon: "💳", description: "Payment processing" },
+            { name: "Twilio", icon: "📱", description: "Communication" },
             { name: "MongoDB", icon: "🍃", description: "Document store" },
-            { name: "Elasticsearch", icon: "🔍", description: "Search engine" },
-            { name: "Stripe", icon: "💳", description: "Payments" },
+            { name: "Elasticsearch", icon: "🔍", description: "Search engine" }
           ].map((tech, index) => (
-            <div
-              key={index}
-              className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200"
-            >
+            <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
               <div className="text-2xl mb-2">{tech.icon}</div>
               <h3 className="font-semibold text-gray-900 mb-1">{tech.name}</h3>
               <p className="text-xs text-gray-600">{tech.description}</p>
@@ -578,19 +941,16 @@ function Item({ title, details }: { title: string; details: string[] }) {
 
       {/* Contact CTA */}
       <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">
-          Ready to Transform Your Sales Process?
-        </h2>
+        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Sales Process?</h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Join 200+ companies using our AI-powered CRM to boost sales
-          performance and customer satisfaction.
+          Join 500+ companies using our AI-powered CRM to boost sales performance and customer satisfaction.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="mailto:kleber@ziontechgroup.com?subject=AI CRM Platform Demo Request"
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Schedule Demo
+            Schedule Free Demo
           </a>
           <a
             href="tel:+13024640950"
@@ -602,219 +962,6 @@ function Item({ title, details }: { title: string; details: string[] }) {
         <div className="mt-8 text-sm">
           <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
           <p>Email: kleber@ziontechgroup.com</p>
-        </div>
-      </section>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-    </div>
-  );
-}
-
-<<<<<<< HEAD
-function Pricing() {
-=======
-function FeatureCard({
-  icon,
-  title,
-  description,
-  benefits,
-}: {
-  icon: string;
-  title: string;
-  description: string;
-  benefits: string[];
-}) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-  return (
-    <div style={{ marginTop: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
-      <Plan
-        name="Starter CRM"
-        price="$2,500/month"
-        features={[
-          'Up to 1,000 contacts',
-          'Basic AI lead scoring',
-          'Email automation',
-          'Standard analytics',
-          'Email support',
-        ]}
-      />
-      <Plan
-        name="Professional CRM"
-        price="$5,000/month"
-        features={[
-          'Up to 10,000 contacts',
-          'Advanced AI predictions',
-          'Custom automation workflows',
-          'Advanced analytics & reporting',
-          'Priority support',
-          'API integrations',
-        ]}
-      />
-      <Plan
-        name="Enterprise CRM"
-        price="$12,000/month"
-        features={[
-          'Unlimited contacts',
-          'Full AI suite',
-          'Custom AI model training',
-          'White-label solution',
-          'Dedicated support',
-          'Custom integrations',
-          'SLA guarantee',
-        ]}
-      />
-    </div>
-  );
-}
-
-<<<<<<< HEAD
-function Plan({ name, price, features }: { name: string; price: string; features: string[] }) {
-  return (
-    <div style={{ border: '1px solid #e5e7eb', borderRadius: 12, padding: 16 }}>
-      <h4 style={{ fontWeight: 700 }}>{name}</h4>
-      <div style={{ color: '#111827', fontWeight: 800, marginTop: 4, fontSize: 18 }}>{price}</div>
-      <ul style={{ paddingLeft: 18, color: '#4b5563', marginTop: 8 }}>{features.map(f => (<li key={f} style={{ listStyle: 'disc' }}>{f}</li>))}</ul>
-      <a href="tel:+13024640950" style={{ display: 'inline-block', marginTop: 12, padding: '8px 16px', backgroundColor: '#3b82f6', color: 'white', textDecoration: 'none', borderRadius: 6 }}>Call +1 302 464 0950</a>
-    </div>
-  );
-}
-=======
-function PricingCard({
-  name,
-  price,
-  period,
-  description,
-  features,
-  cta,
-  popular,
-}: {
-  name: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  cta: string;
-  popular: boolean;
-}) {
-  return (
-    <div
-      className={`relative p-8 rounded-lg border-2 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200 bg-white"} shadow-lg`}
-    >
-      {popular && (
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-            Most Popular
-          </span>
-        </div>
-      )}
-      <div className="text-center mb-6">
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
-        <div className="text-4xl font-bold text-blue-600 mb-2">
-          {price}
-          <span className="text-lg text-gray-500 font-normal">/{period}</span>
-        </div>
-        <p className="text-gray-600">{description}</p>
-      </div>
-      <ul className="space-y-3 mb-8">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center">
-            <svg
-              className="w-5 h-5 text-green-500 mr-3"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fillRule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <span className="text-gray-700">{feature}</span>
-          </li>
-        ))}
-      </ul>
-      <a
-        href="mailto:kleber@ziontechgroup.com?subject=AI CRM Platform - {name} Plan"
-        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-          popular
-            ? "bg-blue-600 text-white hover:bg-blue-700"
-            : "bg-gray-900 text-white hover:bg-gray-800"
-        }`}
-      >
-        {cta}
-      </a>
-    </div>
-  );
-}
-
-function CaseStudy({
-  company,
-  industry,
-  result,
-  description,
-  metrics,
-}: {
-  company: string;
-  industry: string;
-  result: string;
-  description: string;
-  metrics: string[];
-}) {
-  return (
-    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-xl font-semibold text-gray-900">{company}</h3>
-        <span className="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">
-          {industry}
-        </span>
-      </div>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="space-y-2">
-        <div className="text-sm">
-          <span className="font-semibold text-green-600">Result: </span>
-          <span className="text-gray-700">{result}</span>
-        </div>
-        <div className="flex flex-wrap gap-1">
-          {metrics.map((metric, index) => (
-            <span
-              key={index}
-              className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded"
-            >
-              {metric}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-      {/* CTA Section */}
-      <section className="py-12 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-lg text-white">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Sales Process?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join hundreds of businesses already using AI to accelerate their sales growth. 
-            Get started with a free consultation today.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Call +1 302 464 0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com?subject=AI CRM Demo Request"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              Schedule Demo
-            </a>
-          </div>
-          <div className="mt-8 text-sm">
-            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-            <p>📧 kleber@ziontechgroup.com</p>
-          </div>
         </div>
       </section>
     </div>

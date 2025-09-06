@@ -1,70 +1,8 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
-import {;
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,;
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,;
-  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,;
-  Building, Factory, Camera, Video, Music, Gamepad2;
-} from 'lucide-react',;
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',;
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',;
-import { futuristic2028Services } from '../data/2028-futuristic-innovations',;
-import { emergingTech2028Services } from '../data/2028-emerging-tech-services',;
-const contactInfo = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com';
-},;
-const serviceCategories = [;
-  {;
-    title: ' 2028 Futuristic Innovations',;
-    description: 'Beyond the future of technology',;
-    icon: Rocket,;
-    color: 'from-violet-600 to-purple-600',;
-    services: futuristic2028Services.slice(0, 4);
-  },;
-  {;
-    title: ' Smart City & Infrastructure',;
-    description: 'Intelligent urban solutions',;
-    icon: Building,;
-    color: 'from-blue-600 to-cyan-600',;
-    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0, 4);
-  },;
-  {;
-    title: ' Quantum & Advanced Tech',;
-    description: 'Quantum computing and beyond',;
-    icon: Atom,;
-    color: 'from-indigo-600 to-blue-600',;
-    services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4);
-  },;
-  {;
-    title: ' AI & Machine Learning',;
-    description: 'Next-generation AI solutions',;
-    icon: Brain,;
-    color: 'from-emerald-600 to-teal-600',;
-    services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4);
-  },;
-  {;
-    title: ' Blockchain & Web3',;
-    description: 'Decentralized solutions',;
-    icon: Globe,;
-    color: 'from-orange-600 to-red-600',;
-    services: emergingTech2028Services.filter(s => s.category.includes('Blockchain')).slice(0, 4);
-  },;
-  {;
-    title: ' Autonomous & Mobility',;
-    description: 'Self-driving and mobility solutions',;
-    icon: Car,;
-    color: 'from-red-600 to-pink-600',;
-    services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4);
-  }
-],;
-export default function ServicesShowcase2028() {;
-  return (;
-    <>;
+import React from 'react',import Head from 'next/head',import Link from 'next/link',import { motion } from 'framer-motion',import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,Building, Factory, Camera, Video, Music, Gamepad2;
+} from 'lucide-react',import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',import { futuristic2028Services } from '../data/2028-futuristic-innovations',import { emergingTech2028Services } from '../data/2028-emerging-tech-services',const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
+},const serviceCategories = [;
+  {title: ' 2028 Futuristic Innovations',,description: 'Beyond the future of technology',icon: Rocket,color: 'from-violet-600 to-purple-600',services: futuristic2028Services.slice(0, 4)},{title: ' Smart City & Infrastructure',,description: 'Intelligent urban solutions',icon: Building,color: 'from-blue-600 to-cyan-600',services: emergingTech2028Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0, 4)},{title: ' Quantum & Advanced Tech',,description: 'Quantum computing and beyond',icon: Atom,color: 'from-indigo-600 to-blue-600',services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4)},{title: ' AI & Machine Learning',,description: 'Next-generation AI solutions',icon: Brain,color: 'from-emerald-600 to-teal-600',services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)},{title: ' Blockchain & Web3',,description: 'Decentralized solutions',icon: Globe,color: 'from-orange-600 to-red-600',services: emergingTech2028Services.filter(s => s.category.includes('Blockchain')).slice(0, 4)},{title: ' Autonomous & Mobility',,description: 'Self-driving and mobility solutions',icon: Car,color: 'from-red-600 to-pink-600',services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4)}
+],export default function ServicesShowcase2028() {return (<>;
       <Head>;
         <title>2028 Futuristic Services Showcase - Zion Tech Group</title>;
         <meta name="description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations. Transform your business with next-generation technology." />;
@@ -89,43 +27,39 @@ export default function ServicesShowcase2028() {;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
-          >
-            <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm">
-              <Sparkles className="w-4 h-4" />
-              <span>2028 Future Technology</span>
-            </div>
-
-            <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-                Futuristic
-              </span>
-              <br />
-              <span className="text-white">Services</span>
-            </h1>
-
-            <p className="text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed">
-              Experience the future of technology with our cutting-edge 2028 services. 
-              From AI consciousness to quantum internet, we're building tomorrow's solutions today.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <Link
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"
-              >
-                <span>Get Started</span>
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <Link
-                href="/revolutionary-2028-pricing"
-                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
-              >
-                <span>View Pricing</span>
-                <DollarSign className="w-5 h-5" />
-              </a>
-            </div>
-
+            className="space-y-8";
+          >;
+            <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm">;
+              <Sparkles className="w-4 h-4" />;
+              <span>2028 Future Technology</span>;
+            </div>;
+            <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">;
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">;
+                Futuristic;
+              </span>;
+              <br />;
+              <span className="text-white">Services</span>;
+            </h1>;
+            <p className="text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed">;
+              Experience the future of technology with our cutting-edge 2028 services.;
+              From AI consciousness to quantum internet, we're building tomorrow's solutions today.;
+            </p>;
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
+              <Link;
+                href="/contact";
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2";
+              >;
+                <span>Get Started</span>;
+                <ArrowRight className="w-5 h-5" />;
+              </a>;
+              <Link;
+                href="/revolutionary-2028-pricing";
+                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2";
+              >;
+                <span>View Pricing</span>;
+                <DollarSign className="w-5 h-5" />;
+              </a>;
+            </div>;
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-16">;
               <div className="text-center">;
@@ -161,8 +95,7 @@ export default function ServicesShowcase2028() {;
             </p>;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {serviceCategories.map((category, index) => (;
-              <motion.div;
+            {serviceCategories.map((category, index) => (<motion.div;
                 key={category.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -179,8 +112,7 @@ export default function ServicesShowcase2028() {;
                     <h3 className="text-2xl font-bold text-white mb-3">{category.title}</h3>;
                     <p className="text-purple-300 mb-6">{category.description}</p>;
                     <div className="space-y-3 mb-6">;
-                      {category.services.slice(0, 3).map((service) => (;
-                        <div key={service.id} className="flex items-center space-x-3">;
+                      {category.services.slice(0, 3).map((service) => (<div key={service.id} className="flex items-center space-x-3">;
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />;
                           <span className="text-purple-200 text-sm">{service.name}</span>;
                         </div>;
@@ -188,14 +120,14 @@ export default function ServicesShowcase2028() {;
                     </div>;
                     <Link;
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
-                      className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group"
-                    >
-                      <span>Explore More</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
+                      className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group";
+                    >;
+                      <span>Explore More</span>;
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />;
+                    </a>;
+                  </div>;
+                </div>;
+              </motion.div>;
             ))}
           </div>;
         </div>;
@@ -212,8 +144,7 @@ export default function ServicesShowcase2028() {;
             </p>;
           </div>;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {futuristic2028Services.slice(0, 6).map((service, index) => (;
-              <motion.div;
+            {futuristic2028Services.slice(0, 6).map((service, index) => (<motion.div;
                 key={service.id}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -249,18 +180,18 @@ export default function ServicesShowcase2028() {;
                     <div className="flex items-center justify-between">;
                       <Link;
                         href={service.link}
-                        className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                      >
-                        Learn More
-                      </a>
-                      <div className="text-right">
-                        <div className="text-sm text-purple-300">Setup Time</div>
-                        <div className="text-white font-medium">{service.setupTime}</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+                        className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105";
+                      >;
+                        Learn More;
+                      </a>;
+                      <div className="text-right">;
+                        <div className="text-sm text-purple-300">Setup Time</div>;
+                        <div className="text-white font-medium">{service.setupTime}</div>;
+                      </div>;
+                    </div>;
+                  </div>;
+                </div>;
+              </motion.div>;
             ))}
           </div>;
         </div>;
@@ -336,52 +267,48 @@ export default function ServicesShowcase2028() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-8"
-          >
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-              Ready to <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Transform</span> Your Business?
-            </h2>
-            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-              Join hundreds of forward-thinking companies already leveraging our futuristic services 
-              to gain competitive advantages and drive innovation.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <Link
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"
-              >
-                <span>Start Your Journey</span>
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <Link
-                href="/case-studies"
-                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
-              >
-                <span>View Case Studies</span>
-                <TrendingUp className="w-5 h-5" />
-              </a>
-            </div>
-
-            <div className="flex items-center justify-center space-x-8 text-purple-300">
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-green-400" />
-                <span>30-Day Free Trial</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-green-400" />
-                <span>24/7 Expert Support</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-green-400" />
-                <span>Money-Back Guarantee</span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      <UltraFuturisticFooter2028 />
-    </>
-  )
-}
+            className="space-y-8";
+          >;
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
+              Ready to <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Transform</span> Your Business?;
+            </h2>;
+            <p className="text-xl text-purple-200 max-w-3xl mx-auto">;
+              Join hundreds of forward-thinking companies already leveraging our futuristic services;
+              to gain competitive advantages and drive innovation.;
+            </p>;
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
+              <Link;
+                href="/contact";
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2";
+              >;
+                <span>Start Your Journey</span>;
+                <ArrowRight className="w-5 h-5" />;
+              </a>;
+              <Link;
+                href="/case-studies";
+                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2";
+              >;
+                <span>View Case Studies</span>;
+                <TrendingUp className="w-5 h-5" />;
+              </a>;
+            </div>;
+            <div className="flex items-center justify-center space-x-8 text-purple-300">;
+              <div className="flex items-center space-x-2">;
+                <CheckCircle className="w-5 h-5 text-green-400" />;
+                <span>30-Day Free Trial</span>;
+              </div>;
+              <div className="flex items-center space-x-2">;
+                <CheckCircle className="w-5 h-5 text-green-400" />;
+                <span>24/7 Expert Support</span>;
+              </div>;
+              <div className="flex items-center space-x-2">;
+                <CheckCircle className="w-5 h-5 text-green-400" />;
+                <span>Money-Back Guarantee</span>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <UltraFuturisticFooter2028 />;
+    </>;
+  )}

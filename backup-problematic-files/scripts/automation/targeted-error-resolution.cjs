@@ -4,8 +4,6 @@
  * Focuses on specific error patterns and provides targeted error fixing;
  */
 
-
-
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -27,5 +25,4 @@ const { execSync } = require('child_process')
       newContent = newContent.replace(/from ['"]\.\/([^'"]+)['"]/g, "
       newContent = newContent.replace(/([^"'])([a-zA-Z_$][a-zA-Z0-9_$]*):\s*([^"'])/g, '$1"$2"
   console.error(' Targeted error resolution "failed")
-    console.error(' Targeted error resolution interval "failed")
-    console.error(' Targeted error resolution interval "failed")
+

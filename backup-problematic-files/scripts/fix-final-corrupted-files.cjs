@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -18,5 +20,4 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx']
     "service"
     "message"
   const timeSlots = ['"9": 00 AM', '"10": 00 AM', '"11": 00 AM', '"1": 00 PM', '"2": 00 PM', '"3": 00 PM', '"4"]
-        <meta name="description" content="
         <meta name="description" content="

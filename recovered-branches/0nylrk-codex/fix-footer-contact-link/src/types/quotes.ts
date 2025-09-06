@@ -1,13 +1,38 @@
+
+;
 export type ServiceType = "service" | "talent" | "equipment" | "";
 export type ServiceCategory = string;
 export type TimelineType = "fixed" | "flexible";
+export type BudgetType = "fixed" | "hourly" | "range";export interface ListingItem  {id: string;
 export type BudgetType = "fixed" | "hourly" | "range";
+
 export interface ListingItem {
   id: string;
   title: string;
-  category: string
-  image?: string
+  category: string;
+  image?: string;
+}export interface ListingItem  {export interface ListingItem  {id: string;
+  title: string;
+  category: string;
+  image?: string;
+}export interface ContactInfo  {name: string;
+  email: string;
+  phone: string;
+  company: string;
+}phone: string,company: string;
 }
+export interface Budget  {export interface ContactInfo  {export interface ListingItem  {id: string;
+  title: string;
+  category: string,image?: string;
+}export interface ContactInfo  {name: string;
+  email: string;
+  phone: string;
+  company: string;
+}export interface ListingItem  {amount: number;
+  maxAmount?: number;
+  type: BudgetType;
+}export interface QuoteFormData  {serviceType: ServiceType;
+
 ;
 export interface ListingItem {
 
@@ -46,6 +71,19 @@ export interface QuoteFormData {;
   projectName: string;
   projectDescription: string;
   startDate?: Date;
+  endDate?: Date;timeline: TimelineType;
+  budget: Budget;
+  contactInfo: ContactInfo;
+}export type QuoteStatus =;
+  | "new";
+  | "in_review";
+  | "accepted";
+  | "responded";
+  | "closed";
+  | "archived";export interface QuoteRequest  {export interface QuoteRequest  {export interface QuoteRequest  {timeline: TimelineType;
+export interface QuoteRequest  {id: string;
+  endDate?: Date;  timeline: TimelineType;
+export interface QuoteRequest  {export interface QuoteRequest  {talent_id: string;
   endDate?: Date;
   timeline: TimelineType;
   budget: Budget;
@@ -67,6 +105,8 @@ export interface QuoteRequest {;
 
   timeline: TimelineType;
 export interface QuoteRequest {
+
+export interface QuoteRequest {;
   id: string;
   talent_id: string;
   talent_name?: string;
@@ -87,4 +127,5 @@ export interface QuoteRequest {
   replied_at?: string;
   created_at: string;
   updated_at: string;
+}
 }

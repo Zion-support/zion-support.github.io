@@ -1,169 +1,44 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Card from '../components/ui/Card',;
-import Button from '../components/ui/Button',;
-import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react',;
-;
-export default function DevOpsAutomationPage() {;
-  const features = [;
-    {;
-      icon:<GitBranch className="w-6 h-6" />,;
-      title:'CI/CD Pipelines',;
-      description:'Automated build, test, and deployment workflows',;
-      color:'bg-gradient-to-br from-blue-500 to-cyan-600';
-    },;
-    {;
-      icon:<Zap className="w-6 h-6" />,;
-      title:'Infrastructure as Code',;
-      description:'Terraform, CloudFormation, and Kubernetes automation',;
-      color:'bg-gradient-to-br from-green-500 to-emerald-600';
-    },;
-    {;
-      icon:<Shield className="w-6 h-6" />,;
-      title:'Security Automation',;
-      description:'Automated security scanning and compliance checks',;
-      color:'bg-gradient-to-br from-purple-500 to-indigo-600';
-    },;
-    {;
-      icon:<BarChart3 className="w-6 h-6" />,;
-      title:'Performance Monitoring',;
-      description:'Real-time performance insights and optimization',;
-      color:'bg-gradient-to-br from-orange-500 to-red-600';
+import React from 'react',import Head from 'next/head',import Card from '../components/ui/Card',import Button from '../components/ui/Button',import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react',export default function DevOpsAutomationPage() {const features = [;
+    {icon:<GitBranch className="w-6 h-6" />,title:'CI/CD Pipelines',,description:'Automated build, test, and deployment workflows',color:'bg-gradient-to-br from-blue-500 to-cyan-600';
+    },{icon:<Zap className="w-6 h-6" />,title:'Infrastructure as Code',,description:'Terraform, CloudFormation, and Kubernetes automation',color:'bg-gradient-to-br from-green-500 to-emerald-600';
+    },{icon:<Shield className="w-6 h-6" />,title:'Security Automation',,description:'Automated security scanning and compliance checks',color:'bg-gradient-to-br from-purple-500 to-indigo-600';
+    },{icon:<BarChart3 className="w-6 h-6" />,title:'Performance Monitoring',,description:'Real-time performance insights and optimization',color:'bg-gradient-to-br from-orange-500 to-red-600';
     }
-  ],;
-;
-  const pricingPlans = [;
-    {;
-      name:'Starter',;
-      price:'$39',;
-      period:'/month',;
-      description:'Perfect for small teams and startups',;
-      features:[;
-        'Up to 5 repositoriesBasic CI/CD pipelines',;
-        'GitHub integrationEmail notifications',;
-        'Basic security scanningCommunity support';
-      ],;
-      popular:false,;
-      cta:'Start Free Trial',;
-      color:'border-gray-600 hover:border-blue-500';
-    },;
-    {;
-      name:'Professional',;
-      price:'$129',;
-      period:'/month',;
-      description:'Ideal for growing development teams',;
-      features:[;
-        'Up to 25 repositoriesAdvanced CI/CD workflows',;
-        'Multi-cloud deploymentSlack & Teams integration',;
-        'Advanced security suitePriority support',;
-        'Custom pipelinesTeam collaboration';
-      ],;
-      popular:true,;
-      cta:'Start Free Trial',;
-      color:'border-blue-500 hover:border-blue-400';
-    },;
-    {;
-      name:'Enterprise',;
-      price:'$399',;
-      period:'/month',;
-      description:'For large-scale development operations',;
-      features:[;
-        'Unlimited repositoriesEnterprise CI/CD',;
-        'Advanced IaC automationCustom integrations',;
-        '24/7 dedicated supportSLA guarantees',;
-        'On-premise optionsCustom security policies';
-      ],;
-      popular:false,;
-      cta:'Contact Sales',;
-      color:'border-gray-600 hover:border-blue-500';
+  ],const pricingPlans = [;
+    {name:'Starter',price:'$39',period:'/month',,description:'Perfect for small teams and startups',features:[;
+        'Up to 5 repositoriesBasic CI/CD pipelines','GitHub integrationEmail notifications','Basic security scanningCommunity support';
+      ],popular:false,cta:'Start Free Trial',color:'border-gray-600 hover:border-blue-500';
+    },{name:'Professional',price:'$129',period:'/month',,description:'Ideal for growing development teams',features:[;
+        'Up to 25 repositoriesAdvanced CI/CD workflows','Multi-cloud deploymentSlack & Teams integration','Advanced security suitePriority support','Custom pipelinesTeam collaboration';
+      ],popular:true,cta:'Start Free Trial',color:'border-blue-500 hover:border-blue-400';
+    },{name:'Enterprise',price:'$399',period:'/month',,description:'For large-scale development operations',features:[;
+        'Unlimited repositoriesEnterprise CI/CD','Advanced IaC automationCustom integrations','24/7 dedicated supportSLA guarantees','On-premise optionsCustom security policies';
+      ],popular:false,cta:'Contact Sales',color:'border-gray-600 hover:border-blue-500';
     }
-  ],;
-;
-  const marketComparison = [;
-    {;
-      competitor:'GitHub Actions',;
-      pricing:'Free + $0.008/min',;
-      repositories:'Unlimited',;
-      rating:'4.6/5',;
-      pros:['GitHub nativeGood free tier'],;
-      cons:['Expensive for teamsLimited features'];
-    },;
-    {;
-      competitor:'GitLab CI/CD',;
-      pricing:'$19/user/month',;
-      repositories:'Unlimited',;
-      rating:'4.4/5',;
-      pros:['Integrated platformGood CI/CD'],;
-      cons:['User-based pricingLimited integrations'];
-    },;
-    {;
-      competitor:'Jenkins',;
-      pricing:'Free',;
-      repositories:'Unlimited',;
-      rating:'4.2/5',;
-      pros:['Completely freeHighly customizable'],;
-      cons:['Requires maintenanceNo managed service'];
+  ],const marketComparison = [;
+    {competitor:'GitHub Actions',pricing:'Free + $0.008/min',repositories:'Unlimited',rating:'4.6/5',pros:['GitHub nativeGood free tier'],cons:['Expensive for teamsLimited features'];
+    },{competitor:'GitLab CI/CD',pricing:'$19/user/month',repositories:'Unlimited',rating:'4.4/5',pros:['Integrated platformGood CI/CD'],cons:['User-based pricingLimited integrations'];
+    },{competitor:'Jenkins',pricing:'Free',repositories:'Unlimited',rating:'4.2/5',pros:['Completely freeHighly customizable'],cons:['Requires maintenanceNo managed service'];
     }
-  ],;
-;
-  const testimonials = [;
-    {;
-      name:'Michael Chen',;
-      role:'DevOps Lead',;
-      company:'TechStart Inc.',;
-      content:'Zion DevOps reduced our deployment time from 2 hours to 15 minutes. The automation is incredible and the pricing is fair.',;
-      rating:5;
-    },;
-    {;
-      name:'Sarah Johnson',;
-      role:'Engineering Manager',;
-      company:'CloudWorks',;
-      content:'We switched from GitHub Actions to Zion and saved $200/month while getting better automation features.',;
-      rating:5;
-    },;
-    {;
-      name:'Robert Davis',;
-      role:'Site Reliability Engineer',;
-      company:'ScaleTech',;
-      content:'The infrastructure automation features are game-changing. We can now deploy to multiple clouds with a single click.',;
-      rating:5;
+  ],const testimonials = [;
+    {name:'Michael Chen',role:'DevOps Lead',company:'TechStart Inc.',content:'Zion DevOps reduced our deployment time from 2 hours to 15 minutes. The automation is incredible and the pricing is fair.',rating:5;
+    },{name:'Sarah Johnson',role:'Engineering Manager',company:'CloudWorks',content:'We switched from GitHub Actions to Zion and saved $200/month while getting better automation features.',rating:5;
+    },{name:'Robert Davis',role:'Site Reliability Engineer',company:'ScaleTech',content:'The infrastructure automation features are game-changing. We can now deploy to multiple clouds with a single click.',rating:5;
     }
-  ],;
-;
-  const automationExamples = [;
-    {;
-      title:'Automated Testing',;
-      description:'Run comprehensive test suites on every commit',;
-      color:'from-green-500 to-emerald-600';
-    },;
-    {;
-      title:'Security Scanning',;
-      description:'Automated vulnerability detection and compliance checks',;
-      color:'from-red-500 to-pink-600';
-    },;
-    {;
-      title:'Deployment Automation',;
-      description:'Zero-downtime deployments with rollback capabilities',;
-      color:'from-blue-500 to-cyan-600';
-    },;
-    {;
-      title:'Infrastructure Management',;
-      description:'Automated scaling and resource optimization',;
-      color:'from-purple-500 to-indigo-600';
+  ],const automationExamples = [;
+    {title:'Automated Testing',,description:'Run comprehensive test suites on every commit',color:'from-green-500 to-emerald-600';
+    },{title:'Security Scanning',,description:'Automated vulnerability detection and compliance checks',color:'from-red-500 to-pink-600';
+    },{title:'Deployment Automation',,description:'Zero-downtime deployments with rollback capabilities',color:'from-blue-500 to-cyan-600';
+    },{title:'Infrastructure Management',,description:'Automated scaling and resource optimization',color:'from-purple-500 to-indigo-600';
     }
-  ],;
-;
-  return (;
-    <>;
+  ],return (<>;
       <Head>;
         <title>DevOps Automation - Zion Tech Group | Professional CI/CD & Infrastructure Automation</title>;
         <meta name="description" content="Professional DevOps automation platform with CI/CD, infrastructure as code, and security automation. Plans starting at $39/month." />;
         <meta property="og:title" content="DevOps Automation - Zion Tech Group" />;
         <meta property="og:description" content="Professional DevOps automation starting at $39/month. CI/CD pipelines, infrastructure as code, and security automation." />;
         <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;
-;
-      <div className="min-h-screen bg-black">;
+      </Head>;<div className="min-h-screen bg-black">;
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
@@ -177,8 +52,7 @@ export default function DevOpsAutomationPage() {;
               DevOps Automation;
             </h1>;
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">;
-              Streamline your development workflow with automated CI/CD pipelines, infrastructure as code, ;
-              and intelligent security automation. Deploy faster, safer, and more reliably.;
+              Streamline your development workflow with automated CI/CD pipelines, infrastructure as code,and intelligent security automation. Deploy faster, safer, and more reliably.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Button;
@@ -199,9 +73,7 @@ export default function DevOpsAutomationPage() {;
               </Button>;
             </div>;
           </div>;
-        </section>;
-;
-        {/* Features Section */}
+        </section>;{/* Features Section */}
         <section className="py-24 bg-gray-900">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center mb-20">;
@@ -213,8 +85,7 @@ export default function DevOpsAutomationPage() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {features.map((feature, index) => (;
-                <Card;
+              {features.map((feature, index) => (<Card;
                   key={index}
                   className="text-center group hover:scale-105 transition-transform duration-300";
                 >;
@@ -227,9 +98,7 @@ export default function DevOpsAutomationPage() {;
               ))}
             </div>;
           </div>;
-        </section>;
-;
-        {/* Automation Examples Section */}
+        </section>;{/* Automation Examples Section */}
         <section className="py-24 bg-gray-800">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center mb-20">;
@@ -241,8 +110,7 @@ export default function DevOpsAutomationPage() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {automationExamples.map((example, index) => (;
-                <Card;
+              {automationExamples.map((example, index) => (<Card;
                   key={index}
                   className="text-center group hover:scale-105 transition-transform duration-300";
                 >;
@@ -255,9 +123,7 @@ export default function DevOpsAutomationPage() {;
               ))}
             </div>;
           </div>;
-        </section>;
-;
-        {/* Pricing Section */}
+        </section>;{/* Pricing Section */}
         <section id="pricing" className="py-24 bg-gray-900">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center mb-20">;
@@ -269,15 +135,12 @@ export default function DevOpsAutomationPage() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              {pricingPlans.map((plan, index) => (;
-                <Card;
+              {pricingPlans.map((plan, index) => (<Card;
                   key={index}
-                  className={`relative p-8 ${plan.color} transition-all duration-300 hover:scale-105 ${;
-                    plan.popular ? 'ring-2 ring-blue-500' :'';
+                  className={`relative p-8 ${plan.color} transition-all duration-300 hover:scale-105 ${plan.popular ? 'ring-2 ring-blue-500' :'';
                   }`}
                 >;
-                  {plan.popular && (;
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
+                  {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
                       <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">;
                         Most Popular;
                       </span>;
@@ -291,8 +154,7 @@ export default function DevOpsAutomationPage() {;
                     </div>;
                     <p className="text-gray-300 mb-8">{plan.description}</p>;
                     <ul className="text-left space-y-3 mb-8">;
-                      {plan.features.map((feature, featureIndex) => (;
-                        <li key={featureIndex} className="flex items-center text-gray-300">;
+                      {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-gray-300">;
                           <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />;
                           {feature}
                         </li>;
@@ -302,8 +164,7 @@ export default function DevOpsAutomationPage() {;
                       href={plan.name === 'Enterprise' ? '/contact' :'#signup'}
                       variant={plan.popular ? 'primary' :'outline'}
                       size="lg";
-                      className={`w-full ${;
-                        plan.popular ;
+                      className={`w-full ${plan.popular ;
                           ? 'bg-blue-600 hover:bg-blue-700 text-white' ;
                           :'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white';
                       }`}
@@ -315,9 +176,7 @@ export default function DevOpsAutomationPage() {;
               ))}
             </div>;
           </div>;
-        </section>;
-;
-        {/* Market Comparison Section */}
+        </section>;{/* Market Comparison Section */}
         <section className="py-24 bg-gray-800">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center mb-20">;
@@ -329,17 +188,13 @@ export default function DevOpsAutomationPage() {;
               </p>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              {marketComparison.map((competitor, index) => (;
-                <Card key={index} className="p-6">;
+              {marketComparison.map((competitor, index) => (<Card key={index} className="p-6">;
                   <div className="text-center mb-6">;
                     <h3 className="text-xl font-bold text-white mb-2">{competitor.competitor}</h3>;
                     <div className="flex items-center justify-center mb-2">;
-                      {[...Array(5)].map((_, i) => (;
-                        <Star;
+                      {[...Array(5)].map((_, i) => (<Star;
                           key={i}
-                          className={`w-5 h-5 ${;
-                            i < Math.floor(parseFloat(competitor.rating));
-                              ? 'text-yellow-400 fill-current';
+                          className={`w-5 h-5 ${i < Math.floor(parseFloat(competitor.rating))? 'text-yellow-400 fill-current';
                               :'text-gray-400';
                           }`}
                         />;
@@ -355,8 +210,7 @@ export default function DevOpsAutomationPage() {;
                     <div>;
                       <p className="text-sm font-medium text-green-400 mb-1">Pros:</p>;
                       <ul className="text-sm text-gray-300 space-y-1">;
-                        {competitor.pros.map((pro, proIndex) => (;
-                          <li key={proIndex} className="flex items-center">;
+                        {competitor.pros.map((pro, proIndex) => (<li key={proIndex} className="flex items-center">;
                             <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
                             {pro}
                           </li>;
@@ -366,8 +220,7 @@ export default function DevOpsAutomationPage() {;
                     <div>;
                       <p className="text-sm font-medium text-red-400 mb-1">Cons:</p>;
                       <ul className="text-sm text-gray-300 space-y-1">;
-                        {competitor.cons.map((con, conIndex) => (;
-                          <li key={conIndex} className="flex items-center">;
+                        {competitor.cons.map((con, conIndex) => (<li key={conIndex} className="flex items-center">;
                             {con}
                           </li>;
                         ))}
@@ -378,9 +231,7 @@ export default function DevOpsAutomationPage() {;
               ))}
             </div>;
           </div>;
-        </section>;
-;
-        {/* Testimonials Section */}
+        </section>;{/* Testimonials Section */}
         <section className="py-24 bg-gray-900">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center mb-20">;
@@ -389,11 +240,9 @@ export default function DevOpsAutomationPage() {;
               </h2>;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              {testimonials.map((testimonial, index) => (;
-                <Card key={index} className="p-6">;
+              {testimonials.map((testimonial, index) => (<Card key={index} className="p-6">;
                   <div className="flex items-center mb-4">;
-                    {[...Array(testimonial.rating)].map((_, i) => (;
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
+                    {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
                     ))}
                   </div>;
                   <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>;
@@ -406,9 +255,7 @@ export default function DevOpsAutomationPage() {;
               ))}
             </div>;
           </div>;
-        </section>;
-;
-        {/* CTA Section */}
+        </section>;{/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-600">;
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">;
@@ -439,5 +286,4 @@ export default function DevOpsAutomationPage() {;
         </section>;
       </div>;
     </>;
-  );
-}
+  )}

@@ -1,3 +1,22 @@
+
+import React from 'react';
+import { cn  } from '@/lib/utils';
+interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement>  {className?: string;
+  children?: React.ReactNode;
+}export function SidebarGroup() {return (<div className={cn("mb-4", className)} {...props}>;
+      {children}
+    </div>;
+  )}export function SidebarGroup() {return (<div className={cn("mb-4", className)} {...props}>;
+      {children}<div className={cn("mb-4", className)} {...props}>;
+      {children}interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement>  {className?: string,children?: React.ReactNode;
+import React from "react",import { cn } from "@/lib/utils",import { cn } from '@/lib/utils';
+interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement>  {className?: string;
+  children?: React && React.ReactNode;
+}
+  )}
+  ))interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement>  {className?: string;
+  children?: React.ReactNode;
+}export function SidebarGroup() {return (}<div className={cn("mb-4", className)} {...props}>;
 import React from "react";
 import { cn } from "@/lib/utils";
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -5,8 +24,28 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
+export function SidebarGroup({
+  className,
+  children,
+  ...props
+}: SidebarGroupProps) {
+  return (
+
+    <div className={cn("mb-4", className)} {...props}>
+      {children}
+    </div>
+  );
+}
+;
+export function SidebarGroup({ className, children, ...props }: SidebarGroupProps) {;
+  return (;
+
     <div className={cn("mb-4", className)} {...props}>;
       {children}
+
+    </div>;
+  );
+}
 
 }
 
@@ -16,17 +55,16 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
     <div className={cn("mb-4", className)} {...props}>;
       {children}
 import React from './react';
-import { cn  } from '@/lib / utils';
-interface SidebarGroupProps extends React.HTMLAttributes < HTMLDivElement> {
-  class_name?: string;
+import { cn   } from '@/lib / utils';
+interface SidebarGroupProps extends React.HTMLAttributes < HTMLDivElement>  {class_name?: string;
   children?: React.ReactNode;
 }
-export /**
- * SidebarGroup - Function description
- */
-function SidebarGroup() {
-  return (
-    <div className={cn ("mb - 4", class_name)} {...props}>;
+export /**;
+ * SidebarGroup - Function description;
+ */;
+function SidebarGroup() {return (<div className={cn ("mb - 4", class_name)} {...props}>;
       {children}
+    </div>)}
     </div>);
 }
+;

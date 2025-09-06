@@ -1,79 +1,35 @@
 
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { store } from "../../../../../../utils/data/enterpriseStore";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const { companyId } = req.query;
+;
+ursor/fix-website-loading-errors-and-merge-6662;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { store  } from '../../../../../../utils/data/enterpriseStore';
+export default function handler() {const { companyId } = req.query;
   }
-  const invoices = store && store.listInvoices(companyId);
-  return res && res.status(200).json(invoices);
-}
+  const invoices = store && store.listInvoices(companyId)return res && res.status(200).json(invoices)}
 import type { NextApiRequest, NextApiResponse } from './next';
-import { store  } from '../../../../../../utils / data / enterprise_store';
-export default /**
- * handler - Function description
- */
-function handler() {
-  const { company_id } = req.query;
-  // Check condition
-if ( {) {
-  $2
+import { store   } from '../../../../../../utils / data / enterprise_store';
+export default /**;
+ * handler - Function description;
+ */;
+function handler() {const { company_id } = req.query;
+  // Check condition;
+if ( {) {$2;
 }
-    return res.status (400).json ({ error: "company_id required" });
-  }
-  const invoices = store.list_invoices (company_id);
-  return res.status (200).json (invoices);
-}
-import type { NextApiRequest, NextApiResponse } from 'next';
+    return res.status (400).json ({ error: "company_id required" })}
+  const invoices = store.list_invoices (company_id)return res.status (200).json (invoices)}
 import { store } from '[^']*';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-import type { NextApiRequest, NextApiResponse } from "next";
-import { store } from "../../../../../../utils/data/enterpriseStore";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const { companyId } = req.query;
-
-  if (!companyId |typeof companyId !== "string") {
-    return res.status(400).json({ error: "companyId required" });
-  }
-  const invoices = store.listInvoices(companyId);
-  return res.status(200).json(invoices);
+export default function handler() {export default function handler() {const { companyId }  = req.query;if (!companyId |typeof companyId !== "string") {return res.status(400).json({ error: "companyId required" })}
+  const invoices = store.listInvoices(companyId)return res.status(200).json(invoices)}
+export default function handler() {res.status(200).json({ invoices: [] })export default function handler() {try {const { companyId } = req.query;
+  if (!companyId || typeof companyId !== 'string') {return res.status(400).json({ error: 'companyId required' })} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ invoices: [] });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { store } from '../../../../../../utils/data/enterpriseStore';
-export default function handler(req, res) {
-  try {
-  const { companyId } = req.query;
-  if (!companyId || typeof companyId !== 'string') {;
-    return res.status(400).json({ error: 'companyId required' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+  const invoices = store.listInvoices(companyId)return res.status(200).json(invoices)} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
-  const invoices = store.listInvoices(companyId);
-  return res.status(200).json(invoices);
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+ursor/fix-website-loading-errors-and-merge-6662;
+  if (!companyId || typeof companyId !== 'string') {return res.status(400).json({ error: 'companyId required' })}
+  const invoices = null;
+  return res.status(200).json(invoices)}

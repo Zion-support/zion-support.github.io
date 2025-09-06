@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -19,51 +20,38 @@ import React from 'react';
               {/* Connection Line */}
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-gray-300 to-transparent transform translate-x-4 z-0" />
+=======
+import { FileText, Search, Handshake, Check  } from 'lucide-react';
+const HowItWorksSection: React.FC = () => {const steps = [;
+    {number: '01',title: 'Consultation',description: 'We start with a detailed consultation to understand your business needs and challenges.',icon: <FileText className="w-8 h-8" />;
+    },{number: '02',title: 'Strategy & Planning',description: 'Our experts develop a customized strategy and implementation plan tailored to your goals.',icon: <Search className="w-8 h-8" />;
+    },{number: '03',title: 'Implementation',description: 'We implement the solution with minimal disruption to your existing operations.',icon: <Handshake className="w-8 h-8" />;
+    },{number: '04',title: 'Support & Optimization',description: 'Ongoing support and continuous optimization to ensure maximum value and performance.',icon: <Check className="w-8 h-8" />;
+    }
+  ];return (<section className="py-16 px-4 bg-white">;
+      <div className="container mx-auto max-w-6xl">;
+        <div className="text-center mb-16">;
+          <h2 className="text-4xl font-bold mb-4">How It Works</h2>;
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">;
+            Our proven process ensures successful implementation and maximum value from your investment.;
+          </p>;
+        </div>;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+          {steps.map((step, index) => (<div key={index} className="text-center relative">;
+              <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">;
+                {step.number}
+              </div>;
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">;
+                {step.icon}
+              </div>;
+              <h3 className="text-xl font-semibold mb-3">{step.title}</h3>;
+              <p className="text-gray-600">{step.description}</p>;
+              {index < steps.length - 1 && (<div className="hidden lg:block absolute top-8 left-1/2 w-full h-0.5 bg-gray-300 transform translate-x-8"></div>;
+>>>>>>> 157aff07b859488146569974cc7382910d9762e2
               )}
-              
-              <div className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 border border-gray-100">
-                {/* Step Number */}
-                <div className="absolute -top-4 left-8 bg-white border-2 border-gray-200 rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold text-gray-600">
-                  {index + 1}
-                </div>
-                
-                {/* Icon */}
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${step.bgColor} flex items-center justify-center text-white mb-6`}>
-                  {step.icon}
-                </div>
-                
-                {/* Content */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {step.description}
-                </p>
-                
-                {/* Details */}
-                <ul className="space-y-2 mb-4">
-                  {step.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-center text-sm text-gray-500">
-                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2" />
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
-                
-                {/* Stats */}
-                <div className="border-t border-gray-100 pt-4">
-                  <div className="flex justify-between items-center text-sm">
-                    <span className="text-gray-500">Duration:</span>
-                    <span className="font-semibold text-gray-700">{step.duration}</span>
-                  </div>
-                  <div className="flex justify-between items-center text-sm mt-1">
-                    <span className="text-gray-500">Success Rate:</span>
-                    <span className="font-semibold text-green-600">{step.success}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </div>;
           ))}
+<<<<<<< HEAD
         </div>
 
         {/* CTA Section */}
@@ -88,3 +76,25 @@ import React from 'react';
   );
 };
 
+=======
+        </div>;
+        <div className="mt-16 text-center">;
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">;
+            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>;
+            <p className="text-xl mb-6 opacity-90">;
+              Join hundreds of companies that trust Zion Tech for their technology needs.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">;
+                Start Your Project;
+              </button>;
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">;
+                Schedule a Demo;
+              </button>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </section>;
+  )}export default HowItWorksSection;
+>>>>>>> 157aff07b859488146569974cc7382910d9762e2

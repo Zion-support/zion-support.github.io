@@ -1,48 +1,33 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }return this.props.children;
   }
 }
 import React from 'react';
+interface VideoCallProps  {// Add props here as needed;
+}export default function VideoCall() {return (<div>;
+      <h1>VideoCall</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  )}
+:src.pages.disabled/VideoCall.jsx;
 interface VideoCallProps {
   // Add props here as needed
-export default function VideoCall({ }: VideoCallProps) {
+
+
+}
+
+export default function VideoCall({}: VideoCallProps) {
   return (
     <div>
       <h1>VideoCall</h1>
       <p>This component is currently under development.</p>
     </div>
   );
-:src.pages.disabled/VideoCall.jsx
-}
-}
-}
-}
-}
-}
 
 
 
-
-
+}
 
 :src.pages.disabled/VideoCall.jsx
 }
@@ -50,3 +35,19 @@ export default function VideoCall({ }: VideoCallProps) {
 }
 }
 }
+}:src.pages.disabled/VideoCall.jsx;
+:temp_exclude/src.pages.disabled/VideoCall.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/VideoCall.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/VideoCall.jsx;

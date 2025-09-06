@@ -1,21 +1,28 @@
-<<<<<<< HEAD
-' \''\'";\";
+" """";";'"'"
 
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+' \''\'";\";" """";";'"'";
 ' \''\'";\";
+" """";";'"'";
+ursor/automate-test-improve-and-merge-code-646c;
+" """";";'"'";
+" """";";'"'";
 ' \''\'";\";
-:src.disabled/components/ServicesOverview.js.jsx
+" """";";'"'";
+ursor/automate-test-improve-and-merge-code-646c;
+' \''\'";\";' \''\'";\";
 ' \''\'";\";
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+:src.disabled/components/ServicesOverview.js.jsx;
 ' \''\'";\";
-:temp_exclude/src.disabled/components/ServicesOverview.js.jsx
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+' \''\'";\";
+:temp_exclude/src.disabled/components/ServicesOverview.js.jsx;
+' \''\'";\";
+" """";";'"'";
+" """";";'"'";
+' \''\'";\";
+" """";";'"'";
+" """";";'"'"
+" """";";'"'"
 ' \''\'";\";
 " """";";'"'"
-<<<<<<< HEAD
-=======
-" """";";'"'"
-' \''\'";\";
-" """";";'"'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

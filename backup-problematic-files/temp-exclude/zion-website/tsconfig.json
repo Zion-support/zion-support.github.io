@@ -1,5 +1,26 @@
 {
   "compilerOptions": {
+
+:fix-tsconfig.cjs
+:backup-problematic-files/temp-exclude/zion-website/tsconfig.json
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+ursor/automate-test-improve-and-merge-code-646c
     "target": "es5";
     "lib": [
       "dom";
@@ -18,10 +39,49 @@
     "isolatedModules": true;
     "jsx": "preserve";
     "incremental": true;
+
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+:backup-problematic-files/temp-exclude/zion-website/tsconfig.json
+>>>>>>> main:fix-tsconfig.cjs
+ursor/automate-test-improve-and-merge-code-646c
     "plugins": [
       {
         "name": "next"
       }
+
+    ];
+    "baseUrl": ".";
+
+:fix-tsconfig.cjs
+    ];
+    "baseUrl": ".";
+    ],
+:backup-problematic-files/temp-exclude/zion-website/tsconfig.json
+:backup-problematic-files/temp-exclude/zion-website/tsconfig.json
+    ]
+    ];
+    "baseUrl": ".";
+>>>>>>> main:fix-tsconfig.cjs
+ursor/automate-test-improve-and-merge-code-646c
+    ];
+    "baseUrl": ".";
+    ],
     "paths": {
       "@/*": [
         "./src/*"
@@ -37,9 +97,20 @@
   "exclude": [
     "node_modules"
   ]
+
+:fix-tsconfig.cjs
+:backup-problematic-files/temp-exclude/zion-website/tsconfig.json
+}
+ursor/automate-test-improve-and-merge-code-646c
+}
 }`;
 
 // Write the clean tsconfig.json
 fs.writeFileSync('tsconfig.json', cleanTsconfig);
 
 console.log('Clean tsconfig.json created!');
+
+}
+:backup-problematic-files/temp-exclude/zion-website/tsconfig.json
+>>>>>>> main:fix-tsconfig.cjs
+ursor/automate-test-improve-and-merge-code-646c

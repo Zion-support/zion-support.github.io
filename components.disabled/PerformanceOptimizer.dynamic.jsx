@@ -1,18 +1,37 @@
-const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{'; loading: () => <p>Loading...</p,>,}) export: 'default PerformanceOptimizer' ,'
+const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{'; loading: () => <p>Loading...</p,>}) export: 'default PerformanceOptimizer' ,';
+</p>';
+</p>';
+</p>';
+</p>';
+ursor/automate-test-improve-and-merge-code-646c;
+const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{'; loading: () => <p>Loading...</p,>}) export: 'default PerformanceOptimizer' ,';
+</p>';
+</p>';
+</p>';
+</p>';
+</p>';
+</p>';
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/automate-test-improve-and-merge-code-646c;
+</p>';
+</p>';
+</p>';
+</p>';
+ursor/automate-test-improve-and-merge-code-646c;
+</p>';
+</p>';
+</p>';
+const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{'; loading: () => <p>Loading...</p,>}) export: 'default PerformanceOptimizer' ,'
 </p>'
 </p>'
-<<<<<<< HEAD
 </p>'
 
 
 </p>'
-</p>'
-</p>'
-=======
 
 
 </p>'
 
 </p>'
 </p>'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+</p>'
