@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-=======
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default defineConfig({
   plugins: [react()],
@@ -36,14 +31,15 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
-<<<<<<< HEAD
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './'),
+      '@/components': path.resolve(__dirname, './components'),
+      '@/lib': path.resolve(__dirname, './lib'),
+      '@/utils': path.resolve(__dirname, './utils'),
+      '@/hooks': path.resolve(__dirname, './hooks'),
+      '@/types': path.resolve(__dirname, './types')
+    }
   }
-});
-=======
-  },
-  server: {
-    port: 3000,
-    open: true,
-  },
 })
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
