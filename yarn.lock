@@ -2141,42 +2141,10 @@
   dependencies:
     webpack-bundle-analyzer "4.7.0"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9e1e
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
 "@next/env@15.5.2":
   version "15.5.2"
   resolved "https://registry.npmjs.org/@next/env/-/env-15.5.2.tgz"
   integrity sha512-Qe06ew4zt12LeO6N7j8/nULSOe3fMXE4dM6xgpBQNvdzyK1sv5y4oAP3bq4LamrvGCZtmRYnW8URFCeX5nFgGg==
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> main
-"@next/env@14.2.32":
-  version "14.2.32"
-  resolved "https://registry.npmjs.org/@next/env/-/env-14.2.32.tgz"
-  integrity sha512-n9mQdigI6iZ/DF6pCTwMKeWgF2e8lg7qgt5M7HXMLtyhZYMnf/u905M18sSpPmHL9MKp9JHo56C6jrD2EvWxng==
->>>>>>> b5606b5ed4a293e410649915eb139bcf35adbc01
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9e1e
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
 
 "@next/eslint-plugin-next@^15.5.2":
   version "15.5.2"
@@ -2192,33 +2160,7 @@
   dependencies:
     glob "10.3.10"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 "@next/swc-linux-x64-gnu@^15.5.2", "@next/swc-linux-x64-gnu@15.5.2":
-=======
-<<<<<<< HEAD
-"@next/swc-linux-x64-gnu@^14.2.32", "@next/swc-linux-x64-gnu@14.2.32":
-  version "14.2.32"
-  resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-14.2.32.tgz"
-  integrity sha512-7S1GY4TdnlGVIdeXXKQdDkfDysoIVFMD0lJuVVMeb3eoVjrknQ0JNN7wFlhCvea0hEk0Sd4D1hedVChDKfV2jw==
-=======
-<<<<<<< HEAD
-"@next/swc-linux-x64-gnu@^15.5.2", "@next/swc-linux-x64-gnu@14.2.32":
-=======
-"@next/swc-linux-x64-gnu@^15.5.2", "@next/swc-linux-x64-gnu@15.5.2":
->>>>>>> main
->>>>>>> b5606b5ed4a293e410649915eb139bcf35adbc01
-=======
-"@next/swc-linux-x64-gnu@^15.5.2", "@next/swc-linux-x64-gnu@15.5.2":
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-"@next/swc-linux-x64-gnu@^15.5.2", "@next/swc-linux-x64-gnu@15.5.2":
->>>>>>> cursor/expand-services-advertise-and-build-project-9e1e
-=======
-"@next/swc-linux-x64-gnu@^15.5.2", "@next/swc-linux-x64-gnu@15.5.2":
->>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
   version "15.5.2"
   resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-15.5.2.tgz"
   integrity sha512-o1RV/KOODQh6dM6ZRJGZbc+MOAHww33Vbs5JC9Mp1gDk8cpEO+cYC/l7rweiEalkSm5/1WGa4zY7xrNwObN4+Q==
@@ -3142,11 +3084,7 @@
   resolved "https://registry.npmjs.org/@radix-ui/rect/-/rect-1.1.1.tgz"
   integrity sha512-HPwpGIzkl28mWyZqG52jiqDJ12waP11Pa1lGoiyUkIEuMLBP0oeK/C89esbXrxsky5we7dfd8U58nm0SgAWpVw==
 
-<<<<<<< HEAD
-"@reduxjs/toolkit@^2.8.2":
-=======
 "@reduxjs/toolkit@^2.9.0":
->>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
   version "2.9.0"
   resolved "https://registry.npmjs.org/@reduxjs/toolkit/-/toolkit-2.9.0.tgz"
   integrity sha512-fSfQlSRu9Z5yBkvsNhYF2rPS8cGXn/TZVrlwN1948QyZ8xMZ0JvP50S2acZNaf+o63u6aEeMjipFyksjIcWrog==
@@ -3297,17 +3235,10 @@
   resolved "https://registry.npmjs.org/@standard-schema/utils/-/utils-0.3.0.tgz"
   integrity sha512-e7Mew686owMaPJVNNLs55PUvgz371nKgwsc4vxE49zsODpJEnxgxRo2y/OKrqueavXgZNMDVj3DdHFlaSAeU8g==
 
-<<<<<<< HEAD
-"@stripe/stripe-js@^2.3.0":
-  version "2.4.0"
-  resolved "https://registry.npmjs.org/@stripe/stripe-js/-/stripe-js-2.4.0.tgz"
-  integrity sha512-WFkQx1mbs2b5+7looI9IV1BLa3bIApuN3ehp9FP58xGg7KL9hCHDECgW3BwO9l9L+xBPVAD7Yjn1EhGe6EDTeA==
-=======
 "@stripe/stripe-js@^7.9.0":
   version "7.9.0"
   resolved "https://registry.npmjs.org/@stripe/stripe-js/-/stripe-js-7.9.0.tgz"
   integrity sha512-ggs5k+/0FUJcIgNY08aZTqpBTtbExkJMYMLSMwyucrhtWexVOEY1KJmhBsxf+E/Q15f5rbwBpj+t0t2AW2oCsQ==
->>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
 
 "@supabase/auth-js@2.71.1":
   version "2.71.1"
@@ -3628,46 +3559,6 @@
   resolved "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> main
-"@types/mongodb@^4.0.6":
-  version "4.0.6"
-  resolved "https://registry.npmjs.org/@types/mongodb/-/mongodb-4.0.6.tgz"
-  integrity sha512-XTbn1Z1j7fHzC1Vkd9LYO48lO2C581r+oRCi/KNzcTHIri7hEaya8r9vxoHJiKr+oeUWVK69+9xr84Mp+aReaw==
-  dependencies:
-    mongodb "*"
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> main
->>>>>>> b5606b5ed4a293e410649915eb139bcf35adbc01
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9e1e
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
 "@types/mysql@2.15.26":
   version "2.15.26"
   resolved "https://registry.npmjs.org/@types/mysql/-/mysql-2.15.26.tgz"
@@ -3675,65 +3566,12 @@
   dependencies:
     "@types/node" "*"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9e1e
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
 "@types/node@*", "@types/node@>=13.7.0":
   version "24.3.1"
   resolved "https://registry.npmjs.org/@types/node/-/node-24.3.1.tgz"
   integrity sha512-3vXmQDXy+woz+gnrTvuvNrPzekOi+Ds0ReMxw0LzBiK3a+1k0kQn9f2NWk+lgD4rJehFUmYy2gMhJ2ZI+7YP9g==
   dependencies:
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "@types/next" "*"
-    "@types/node" "*"
-    "@types/react" "*"
-    "@types/react-loadable" "*"
-
-"@types/next@*", "@types/next@^8.0.7":
-  version "8.0.7"
-  resolved "https://registry.npmjs.org/@types/next/-/next-8.0.7.tgz"
-  integrity sha512-I/Gcj1YfOFmpBBX5XgBP1t1wKcFS0TGk8ytW99ujjvCp8U31QuKqM3fvvGb7+Hf1CJt3BAAgzGT0aCigqO5opQ==
-  dependencies:
-    "@types/next-server" "*"
-    "@types/node" "*"
-    "@types/node-fetch" "*"
-    "@types/react" "*"
-
-"@types/node-cron@^3.0.11":
-  version "3.0.11"
-  resolved "https://registry.npmjs.org/@types/node-cron/-/node-cron-3.0.11.tgz"
-  integrity sha512-0ikrnug3/IyneSHqCBeslAhlK2aBfYek1fGo4bP4QnZPmiqSGRK+Oy7ZMisLWkesffJvQ1cqAcBnJC+8+nxIAg==
-
-"@types/node-fetch@*":
-  version "2.6.13"
-  resolved "https://registry.npmjs.org/@types/node-fetch/-/node-fetch-2.6.13.tgz"
-  integrity sha512-QGpRVpzSaUs30JBSGPjOg4Uveu384erbHBoT1zeONvyCfwQxIkUshLAOqN/k9EjGviPRmWTTe6aH2qySWKTVSw==
-  dependencies:
-    "@types/node" "*"
-    form-data "^4.0.4"
-
-"@types/node@*", "@types/node@^18.0.0", "@types/node@>=13.7.0":
->>>>>>> b5606b5ed4a293e410649915eb139bcf35adbc01
-=======
-"@types/node@*", "@types/node@>=13.7.0":
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-  version "18.19.124"
-  resolved "https://registry.npmjs.org/@types/node/-/node-18.19.124.tgz"
-  integrity sha512-hY4YWZFLs3ku6D2Gqo3RchTd9VRCcrjqp/I0mmohYeUVA5Y8eCXKJEasHxLAJVZRJuQogfd1GiJ9lgogBgKeuQ==
-  dependencies:
-    undici-types "~5.26.4"
-=======
     undici-types "~7.10.0"
->>>>>>> cursor/expand-services-advertise-and-build-project-9e1e
-=======
-    undici-types "~7.10.0"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
 
 "@types/pg-pool@2.0.6":
   version "2.0.6"
@@ -3773,65 +3611,11 @@
     "@types/react" "*"
     date-fns "^3.3.1"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9e1e
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
 "@types/react@*":
   version "19.1.12"
   resolved "https://registry.npmjs.org/@types/react/-/react-19.1.12.tgz"
   integrity sha512-cMoR+FoAf/Jyq6+Df2/Z41jISvGZZ2eTlnsaJRptmZ76Caldwy1odD4xTr/gNV9VLj0AWgg/nmkevIyUfIIq5w==
   dependencies:
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "@types/react" "*"
-    "@types/webpack" "^4"
-
-"@types/react-router-dom@^5.3.3":
-  version "5.3.3"
-  resolved "https://registry.npmjs.org/@types/react-router-dom/-/react-router-dom-5.3.3.tgz"
-  integrity sha512-kpqnYK4wcdm5UaWI3fLcELopqLrHgLqNsdpHauzlQktfkHL3npOSwtj1Uz9oKBAzs7lFtVkV8j83voAz2D8fhw==
-  dependencies:
-    "@types/history" "^4.7.11"
-    "@types/react" "*"
-    "@types/react-router" "*"
-
-"@types/react-router@*":
-  version "5.1.20"
-  resolved "https://registry.npmjs.org/@types/react-router/-/react-router-5.1.20.tgz"
-  integrity sha512-jGjmu/ZqS7FjSH6owMcD5qpq19+1RS9DeVRqfl1FeBMxTDQAGwlMWOcs52NDoXaNKyG3d1cYQFMs9rCrb88o9Q==
-  dependencies:
-    "@types/history" "^4.7.11"
-    "@types/react" "*"
-
-"@types/react@*", "@types/react@^18.3.24":
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> main
->>>>>>> b5606b5ed4a293e410649915eb139bcf35adbc01
-=======
-"@types/react@*":
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-  version "18.3.24"
-  resolved "https://registry.npmjs.org/@types/react/-/react-18.3.24.tgz"
-  integrity sha512-0dLEBsA1kI3OezMBF8nSsb7Nk19ZnsyE1LLhB8r27KbgU5H4pvuqZLdtE+aUkJVoXgTVuA+iLIwmZ0TuK4tx6A==
-  dependencies:
-    "@types/prop-types" "*"
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9e1e
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
     csstype "^3.0.2"
 
 "@types/shimmer@^1.2.0":
@@ -4591,26 +4375,7 @@ buffer@4.9.2:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
     isarray "^1.0.0"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-busboy@1.6.0:
-  version "1.6.0"
-  resolved "https://registry.npmjs.org/busboy/-/busboy-1.6.0.tgz"
-  integrity sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==
-  dependencies:
-    streamsearch "^1.1.0"
-=======
->>>>>>> main
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9e1e
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 bytes@^3.1.2, bytes@3.1.2:
   version "3.1.2"
   resolved "https://registry.npmjs.org/bytes/-/bytes-3.1.2.tgz"
@@ -8368,35 +8133,7 @@ mongodb-connection-string-url@^3.0.0:
     "@types/whatwg-url" "^11.0.2"
     whatwg-url "^14.1.0 || ^13.0.0"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 mongodb@^6.19.0:
-=======
-<<<<<<< HEAD
-mongodb@*, mongodb@^6.19.0:
-=======
-<<<<<<< HEAD
-mongodb@*, mongodb@^6.19.0:
-=======
-<<<<<<< HEAD
-mongodb@^6.19.0:
-=======
-mongodb@*, mongodb@^6.19.0:
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> main
->>>>>>> main
->>>>>>> b5606b5ed4a293e410649915eb139bcf35adbc01
-=======
-mongodb@^6.19.0:
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-mongodb@^6.19.0:
->>>>>>> cursor/expand-services-advertise-and-build-project-9e1e
-=======
-mongodb@^6.19.0:
->>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
   version "6.19.0"
   resolved "https://registry.npmjs.org/mongodb/-/mongodb-6.19.0.tgz"
   integrity sha512-H3GtYujOJdeKIMLKBT9PwlDhGrQfplABNF1G904w6r5ZXKWyv77aB0X9B+rhmaAwjtllHzaEkvi9mkGVZxs2Bw==
@@ -10357,31 +10094,6 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
   resolved "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
-source-map@^0.7.3:
-  version "0.7.6"
-  resolved "https://registry.npmjs.org/source-map/-/source-map-0.7.6.tgz"
-  integrity sha512-i5uvt8C3ikiWeNZSVZNWcfZPItFQOsYTUAOkcUPGd8DqDy1uOUikjt5dG+uRlwyvR108Fb9DOd4GvXfT0N2/uQ==
-
->>>>>>> b5606b5ed4a293e410649915eb139bcf35adbc01
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9e1e
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
 sparse-bitfield@^3.0.3:
   version "3.0.3"
   resolved "https://registry.npmjs.org/sparse-bitfield/-/sparse-bitfield-3.0.3.tgz"

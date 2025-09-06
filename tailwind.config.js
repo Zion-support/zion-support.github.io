@@ -129,12 +129,6 @@ module.exports = {
         '4xl': '2rem',
         '5xl': '2.5rem'
       },
-<<<<<<< HEAD
-=======
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-      },
->>>>>>> cursor/fix-lint-push-and-merge-to-main-745c
     },
   },
   plugins: [
