@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
 import Footer from '../components/Footer';
@@ -19,8 +19,8 @@ import {
   Target
 } from 'lucide-react';
 
-const Home: React.FC = () => {
-  const features = [
+const Home: React.FC = memo(() => {
+  const features = useMemo(() => [
     {
       icon: <Zap className="h-8 w-8 text-blue-500" />,
       title: 'AI-Powered Solutions',
@@ -41,9 +41,9 @@ const Home: React.FC = () => {
       title: 'Innovation First',
       description: 'Stay ahead with our continuous innovation and cutting-edge technology solutions.',
     },
-  ];
+  ], []);
 
-  const services = [
+  const services = useMemo(() => [
     {
       title: 'AI Development',
       description: 'Custom AI solutions tailored to your business needs',
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
       description: 'Transform your data into actionable insights',
       features: ['Business Intelligence', 'Predictive Analytics', 'Real-time Dashboards'],
     },
-  ];
+  ], []);
 
   const testimonials = [
     {
@@ -236,6 +236,8 @@ const Home: React.FC = () => {
       <Footer />
     </div>
   );
-};
+});
+
+Home.displayName = 'Home';
 
 export default Home;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
@@ -6,13 +6,13 @@ interface HeaderProps {
   onMenuClick: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
+const Header: React.FC<HeaderProps> = memo(({ onMenuClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen(prev => !prev);
     onMenuClick();
-  };
+  }, [onMenuClick]);
 
   return (
     <header className="bg-gray-900 text-white shadow-lg fixed w-full top-0 z-40">
@@ -60,4 +60,8 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
       </div>
     </header>
   );
-};
+});
+
+Header.displayName = 'Header';
+
+export { Header };
