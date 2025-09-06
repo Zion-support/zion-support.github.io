@@ -1,14 +1,14 @@
 {
-  "greeting": "Olá, {{name}}!",
+  "greeting": "Ol, {{name}}!",
   "nav": {
-    "home": "Início",
+    "home": "Incio",
     "marketplace": "Mercado",
-    "marketplace_overview": "Visão geral",
+    "marketplace_overview": "Viso geral",
     "categories": "Categorias",
     "talent": "Talentos",
     "equipment": "Equipamentos",
     "community": "Comunidade",
-    "community_overview": "Visão geral",
+    "community_overview": "Viso geral",
     "blog": "Blog",
     "partners": "Parceiros",
     "resources": "Recursos",

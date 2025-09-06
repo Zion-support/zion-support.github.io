@@ -2,275 +2,205 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-class AIIntelligentCodeAnalyzer {
+class AICodeAnalyzer {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.analysisResults = [];
-    this.issues = [];
-    this.recommendations = [];
+    this.analysisResults = {
+      timestamp: new Date().toISOString(),
+      filesAnalyzed: 0,
+      issuesFound: 0,
+      recommendations: [],
+      metrics: {
+        complexity: 0,
+        maintainability: 0,
+        testCoverage: 0
+      }
+    };
   }
 
-  log(message) {
-    console.log(`[${new Date().toISOString()}] [AI-ANALYZER] ${message}`);
-  }
-
-  async analyzeCodeQuality() {
-    this.log('🔍 Analyzing code quality...');
+  async analyzeCodebase() {
+    console.log('🤖 Starting AI Code Analysis...');
     
     try {
-      // Run ESLint analysis
-      const lintResult = execSync('npm run lint', { 
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
+      const srcDir = path.join(process.cwd(), 'src');
+      const pagesDir = path.join(process.cwd(), 'pages');
+      const componentsDir = path.join(process.cwd(), 'components');
       
-      this.analysisResults.push({
-        type: 'linting',
-        status: 'passed',
-        details: 'No linting errors found'
-      });
+      const directories = [srcDir, pagesDir, componentsDir].filter(dir => fs.existsSync(dir));
       
-    } catch (error) {
-      this.issues.push({
-        type: 'linting',
-        severity: 'warning',
-        message: 'Linting issues detected',
-        details: error.message
-      });
-    }
-  }
-
-  async analyzeTypeScript() {
-    this.log('📝 Analyzing TypeScript...');
-    
-    try {
-      // Run TypeScript check
-      execSync('npm run type-check', { 
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
-      
-      this.analysisResults.push({
-        type: 'typescript',
-        status: 'passed',
-        details: 'No TypeScript errors found'
-      });
-      
-    } catch (error) {
-      this.issues.push({
-        type: 'typescript',
-        severity: 'error',
-        message: 'TypeScript errors detected',
-        details: error.message
-      });
-    }
-  }
-
-  async analyzePerformance() {
-    this.log('⚡ Analyzing performance...');
-    
-    try {
-      // Check for performance anti-patterns
-      const srcFiles = this.findSourceFiles();
-      let performanceIssues = 0;
-      
-      for (const file of srcFiles) {
-        const content = fs.readFileSync(file, 'utf8');
-        
-        // Check for common performance issues
-        if (content.includes('useEffect(() => {}, [])') && content.includes('setState')) {
-          performanceIssues++;
-          this.issues.push({
-            type: 'performance',
-            severity: 'warning',
-            message: 'Potential infinite re-render in useEffect',
-            file: file
-          });
-        }
-        
-        if (content.includes('console.log') || content.includes('console.warn')) {
-          performanceIssues++;
-          this.issues.push({
-            type: 'performance',
-            severity: 'info',
-            message: 'Console statements found (remove in production)',
-            file: file
-          });
-        }
+      for (const dir of directories) {
+        await this.analyzeDirectory(dir);
       }
       
-      this.analysisResults.push({
-        type: 'performance',
-        status: performanceIssues === 0 ? 'passed' : 'issues_found',
-        details: `Found ${performanceIssues} performance issues`
-      });
+      this.generateReport();
+      console.log('✅ AI Code Analysis completed');
       
     } catch (error) {
-      this.log(`❌ Performance analysis failed: ${error.message}`);
+      console.error('❌ AI Code Analysis failed:', error.message);
     }
   }
 
-  async analyzeSecurity() {
-    this.log('🔒 Analyzing security...');
+  async analyzeDirectory(dir) {
+    const files = fs.readdirSync(dir, { withFileTypes: true });
     
-    try {
-      // Check for security vulnerabilities
-      const srcFiles = this.findSourceFiles();
-      let securityIssues = 0;
+    for (const file of files) {
+      const filePath = path.join(dir, file.name);
       
-      for (const file of srcFiles) {
-        const content = fs.readFileSync(file, 'utf8');
-        
-        // Check for dangerous patterns
-        if (content.includes('dangerouslySetInnerHTML')) {
-          securityIssues++;
-          this.issues.push({
-            type: 'security',
-            severity: 'warning',
-            message: 'dangerouslySetInnerHTML usage detected',
-            file: file
-          });
-        }
-        
-        if (content.includes('eval(') || content.includes('Function(')) {
-          securityIssues++;
-          this.issues.push({
-            type: 'security',
-            severity: 'error',
-            message: 'Dangerous code execution patterns detected',
-            file: file
-          });
-        }
-      }
-      
-      this.analysisResults.push({
-        type: 'security',
-        status: securityIssues === 0 ? 'passed' : 'issues_found',
-        details: `Found ${securityIssues} security issues`
-      });
-      
-    } catch (error) {
-      this.log(`❌ Security analysis failed: ${error.message}`);
-    }
-  }
-
-  findSourceFiles() {
-    const srcFiles = [];
-    const srcDir = path.join(this.projectRoot, 'src');
-    const pagesDir = path.join(this.projectRoot, 'pages');
-    const componentsDir = path.join(this.projectRoot, 'components');
-    
-    const dirs = [srcDir, pagesDir, componentsDir].filter(dir => fs.existsSync(dir));
-    
-    for (const dir of dirs) {
-      this.findFilesRecursively(dir, srcFiles);
-    }
-    
-    return srcFiles.filter(file => 
-      /\.(ts|tsx|js|jsx)$/.test(file) && 
-      !file.includes('node_modules') &&
-      !file.includes('.next')
-    );
-  }
-
-  findFilesRecursively(dir, files) {
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        this.findFilesRecursively(fullPath, files);
-      } else if (/\.(ts|tsx|js|jsx)$/.test(item)) {
-        files.push(fullPath);
+      if (file.isDirectory()) {
+        await this.analyzeDirectory(filePath);
+      } else if (this.isCodeFile(file.name)) {
+        await this.analyzeFile(filePath);
       }
     }
   }
 
-  generateRecommendations() {
-    this.log('💡 Generating recommendations...');
+  isCodeFile(filename) {
+    const extensions = ['.js', '.jsx', '.ts', '.tsx', '.cjs', '.mjs'];
+    return extensions.some(ext => filename.endsWith(ext));
+  }
+
+  async analyzeFile(filePath) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      this.analysisResults.filesAnalyzed++;
+      
+      // Basic analysis
+      const lines = content.split('\n');
+      const complexity = this.calculateComplexity(content);
+      const maintainability = this.calculateMaintainability(content);
+      
+      this.analysisResults.metrics.complexity += complexity;
+      this.analysisResults.metrics.maintainability += maintainability;
+      
+      // Check for common issues
+      this.checkForIssues(content, filePath);
+      
+    } catch (error) {
+      console.warn(`Warning: Could not analyze ${filePath}: ${error.message}`);
+    }
+  }
+
+  calculateComplexity(content) {
+    const complexityKeywords = ['if', 'else', 'for', 'while', 'switch', 'case', 'catch', 'try'];
+    let complexity = 1; // Base complexity
     
-    // Generate recommendations based on analysis
-    if (this.issues.length > 0) {
-      this.recommendations.push({
-        priority: 'high',
-        category: 'code_quality',
-        message: 'Address the identified issues to improve code quality',
-        action: 'Review and fix the issues listed in the analysis report'
+    complexityKeywords.forEach(keyword => {
+      const regex = new RegExp(`\\b${keyword}\\b`, 'g');
+      const matches = content.match(regex);
+      if (matches) {
+        complexity += matches.length;
+      }
+    });
+    
+    return complexity;
+  }
+
+  calculateMaintainability(content) {
+    const lines = content.split('\n');
+    const totalLines = lines.length;
+    const commentLines = lines.filter(line => 
+      line.trim().startsWith('//') || 
+      line.trim().startsWith('/*') || 
+      line.trim().startsWith('*')
+    ).length;
+    
+    const commentRatio = commentLines / totalLines;
+    return Math.min(100, commentRatio * 100);
+  }
+
+  checkForIssues(content, filePath) {
+    const issues = [];
+    
+    // Check for console.log statements
+    if (content.includes('console.log')) {
+      issues.push({
+        type: 'warning',
+        message: 'Console.log statements found',
+        file: filePath
       });
     }
     
-    // Performance recommendations
-    const performanceIssues = this.issues.filter(issue => issue.type === 'performance');
-    if (performanceIssues.length > 0) {
-      this.recommendations.push({
-        priority: 'medium',
-        category: 'performance',
-        message: 'Optimize performance by addressing performance issues',
-        action: 'Review performance issues and implement optimizations'
+    // Check for TODO comments
+    if (content.includes('TODO') || content.includes('FIXME')) {
+      issues.push({
+        type: 'info',
+        message: 'TODO/FIXME comments found',
+        file: filePath
       });
     }
     
-    // Security recommendations
-    const securityIssues = this.issues.filter(issue => issue.type === 'security');
-    if (securityIssues.length > 0) {
-      this.recommendations.push({
-        priority: 'high',
-        category: 'security',
-        message: 'Address security vulnerabilities immediately',
-        action: 'Review and fix security issues to prevent vulnerabilities'
+    // Check for long functions
+    const functions = content.match(/function\s+\w+\s*\([^)]*\)\s*\{/g);
+    if (functions) {
+      functions.forEach(func => {
+        const funcStart = content.indexOf(func);
+        const funcEnd = this.findMatchingBrace(content, funcStart + func.length - 1);
+        const funcLength = funcEnd - funcStart;
+        
+        if (funcLength > 1000) {
+          issues.push({
+            type: 'warning',
+            message: 'Long function detected',
+            file: filePath,
+            line: content.substring(0, funcStart).split('\n').length
+          });
+        }
       });
     }
+    
+    this.analysisResults.issuesFound += issues.length;
+    this.analysisResults.recommendations.push(...issues);
+  }
+
+  findMatchingBrace(content, startIndex) {
+    let braceCount = 0;
+    let i = startIndex;
+    
+    while (i < content.length) {
+      if (content[i] === '{') {
+        braceCount++;
+      } else if (content[i] === '}') {
+        braceCount--;
+        if (braceCount === 0) {
+          return i;
+        }
+      }
+      i++;
+    }
+    
+    return content.length;
   }
 
   generateReport() {
+    const avgComplexity = this.analysisResults.metrics.complexity / this.analysisResults.filesAnalyzed;
+    const avgMaintainability = this.analysisResults.metrics.maintainability / this.analysisResults.filesAnalyzed;
+    
     const report = {
-      timestamp: new Date().toISOString(),
-      analysisResults: this.analysisResults,
-      issues: this.issues,
-      recommendations: this.recommendations,
+      ...this.analysisResults,
+      metrics: {
+        ...this.analysisResults.metrics,
+        averageComplexity: avgComplexity,
+        averageMaintainability: avgMaintainability
+      },
       summary: {
-        totalIssues: this.issues.length,
-        criticalIssues: this.issues.filter(i => i.severity === 'error').length,
-        warnings: this.issues.filter(i => i.severity === 'warning').length,
-        info: this.issues.filter(i => i.severity === 'info').length,
-        totalRecommendations: this.recommendations.length
+        totalFiles: this.analysisResults.filesAnalyzed,
+        totalIssues: this.analysisResults.issuesFound,
+        codeQuality: avgMaintainability > 50 ? 'Good' : 'Needs Improvement'
       }
     };
-
-    const reportPath = path.join(this.projectRoot, 'ai-code-analysis-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Analysis report saved to: ${reportPath}`);
     
-    return report;
-  }
-
-  async run() {
-    this.log('🚀 Starting AI Intelligent Code Analysis...');
+    const reportFile = path.join(__dirname, 'reports', 'ai-code-analysis.json');
+    fs.mkdirSync(path.dirname(reportFile), { recursive: true });
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    try {
-      await this.analyzeCodeQuality();
-      await this.analyzeTypeScript();
-      await this.analyzePerformance();
-      await this.analyzeSecurity();
-      
-      this.generateRecommendations();
-      const report = this.generateReport();
-      
-      this.log('✅ AI Code Analysis completed!');
-      this.log(`📈 Found ${report.summary.totalIssues} issues and ${report.summary.totalRecommendations} recommendations`);
-      
-      return report;
-    } catch (error) {
-      this.log(`❌ AI Code Analysis failed: ${error.message}`);
-      throw error;
-    }
+    console.log(`📊 Analysis report saved to: ${reportFile}`);
   }
 }
 
-// Run the analyzer
-const analyzer = new AIIntelligentCodeAnalyzer();
-analyzer.run().catch(console.error);
+// Run if called directly
+if (require.main === module) {
+  const analyzer = new AICodeAnalyzer();
+  analyzer.analyzeCodebase().catch(console.error);
+}
+
+module.exports = AICodeAnalyzer;

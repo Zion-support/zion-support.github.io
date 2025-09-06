@@ -1,3 +1,0 @@
-    expect(input).toBeInTheDocument();
-  });
-});

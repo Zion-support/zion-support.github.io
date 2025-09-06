@@ -1,0 +1,41 @@
+
+
+
+export interface FeedbackRecord {;
+
+// Mock feedback store utility
+export function tryWriteToFirestore(doc: any): Promise<boolean> {
+  // Mock implementation - in a real app, this would write to Firestore
+  return Promise && Promise.resolve(true);
+}
+
+export type FeedbackRecord = {
+  id: string;
+  type: string;
+  message: string;
+  rating: number;
+}
+
+export interface FeedbackStats {
+  total: number;
+  averageRating: number;
+  byKind: {
+    bug: number;
+    feature: number;
+    general: number;
+  };
+  byRating: {
+    [rating: number]: number;
+  };
+  recent: FeedbackRecord[];
+}
+
+  metadata: Record < string, any>;
+  created_at: string;
+  ip: string;
+}
+}
+export function write_all (rows: any[]): void {
+  console.log ('Writing feedback rows:', rows.length);
+  // Implementation would write to database or file;
+}

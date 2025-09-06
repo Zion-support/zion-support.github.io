@@ -3,6 +3,7 @@
  * SEO Optimizer
  * Automatically optimizes SEO for the application
  */
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -127,10 +128,16 @@ class SEOOptimizer {
   }
 }
 
+
 // Run if called directly
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
   optimizer.start().catch(console.error);
 }
+module.exports = SEOOptimizer;
 
 module.exports = SEOOptimizer;
+
+// Run SEO optimization
+const optimizer = new SEOOptimizer();
+optimizer.optimize().catch(console.error);

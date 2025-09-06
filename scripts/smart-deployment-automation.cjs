@@ -1,6 +1,3 @@
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
 const { execSync } = require('child_process')
 console.log(' Starting Smart Deployment Automation...')
   "environment"
@@ -39,4 +36,3 @@ console.log(' Starting Smart Deployment Automation...')
     "logsDirectory"
     "applicationStatus"
     const pm2List = execSync('pm2 list --json', { "encoding"})
-  console.log('� Application should be running on "http")

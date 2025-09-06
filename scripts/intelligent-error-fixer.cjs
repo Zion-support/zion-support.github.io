@@ -1,6 +1,3 @@
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
 const { execSync } = require('child_process')
       "status"
         "status"
@@ -34,4 +31,3 @@ const { execSync } = require('child_process')
           "type"
           "type"
     console.log('\n Error Fixing "Summary")
-    console.error('Error fixing "failed")

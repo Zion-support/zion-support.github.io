@@ -1,0 +1,89 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import Link from \'next/link\'; import Head from \'next/head\'; export default function Infrastructure() { return ( <> <Head> <title>IT Infrastructure Services - Zion Tech Group</title> <meta name=\"description\" content=\"Comprehensive IT infrastructure solutions including network design,server management,and system administration.\" /> <meta name=\"keywords\" content=\"IT infrastructure,network design,server management,system administration,data center\" /> <link rel=\"canonical\" href=\""https\": </Head> <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\"> <div className=\"max-w-6xl mx-auto px-4 py-16\"> <div className=\"text-center mb-12\"> <h1 className=\"text-4xl md:text-5xl font-bold mb-6\">IT Infrastructure Services</h1> <p className=\"text-xl text-slate-300 max-w-3xl mx-auto\"> Build and maintain robust IT infrastructure for your business </p> </div> <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12\"> <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\"> <h3 className=\"text-xl font-bold mb-4 text-blue-400\">Network Design</h3> <p className=\"text-slate-300 mb-4\">Design and implement secure network infrastructure</p> <ul className=\"text-slate-400 space-y-2\"> <li>• Network architecture</li> <li>• Security implementation</li> <li>• Performance optimization</li> <li>• Scalability planning</li> </ul> </div> <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\"> <h3 className=\"text-xl font-bold mb-4 text-green-400\">Server Management</h3> <p className=\"text-slate-300 mb-4\">Comprehensive server administration and maintenance</p> <ul className=\"text-slate-400 space-y-2\"> <li>• Server deployment</li> <li>• Performance monitoring</li> <li>• Backup solutions</li> <li>• Disaster recovery</li> </ul> </div> <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\"> <h3 className=\"text-xl font-bold mb-4 text-purple-400\">Data Center Solutions</h3> <p className=\"text-slate-300 mb-4\">Complete data center design and management</p> <ul className=\"text-slate-400 space-y-2\"> <li>• Data center design</li> <li>• Power management</li> <li>• Cooling solutions</li> <li>• Security systems</li> </ul> </div> </div> <div className=\"text-center\"> <Link href=\"/contact\" className=\"px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors mr-4\"> Design Infrastructure </Link> <Link href=\"/services\" className=\"px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors\"> View All Services </Link> </div> </div> </main> </> )}
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from 'react';
+interface InfrastructureProps {;
+  // Add props here as needed;
+<<<<<<< HEAD
+=======
+
+import Link from \'next/link\'; import Head from \'next/head\'; export default function Infrastructure() { return ( <> <Head> <title>IT Infrastructure Services - Zion Tech Group</title> <meta name=\"description\" content=\"Comprehensive IT infrastructure solutions including network design,server management,and system administration.\" /> <meta name=\"keywords\" content=\"IT infrastructure,network design,server management,system administration,data center\" /> <link rel=\"canonical\" href=\""https\": </Head> <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\"> <div className=\"max-w-6xl mx-auto px-4 py-16\"> <div className=\"text-center mb-12\"> <h1 className=\"text-4xl md:text-5xl font-bold mb-6\">IT Infrastructure Services</h1> <p className=\"text-xl text-slate-300 max-w-3xl mx-auto\"> Build and maintain robust IT infrastructure for your business </p> </div> <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12\"> <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\"> <h3 className=\"text-xl font-bold mb-4 text-blue-400\">Network Design</h3> <p className=\"text-slate-300 mb-4\">Design and implement secure network infrastructure</p> <ul className=\"text-slate-400 space-y-2\"> <li>• Network architecture</li> <li>• Security implementation</li> <li>• Performance optimization</li> <li>• Scalability planning</li> </ul> </div> <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\"> <h3 className=\"text-xl font-bold mb-4 text-green-400\">Server Management</h3> <p className=\"text-slate-300 mb-4\">Comprehensive server administration and maintenance</p> <ul className=\"text-slate-400 space-y-2\"> <li>• Server deployment</li> <li>• Performance monitoring</li> <li>• Backup solutions</li> <li>• Disaster recovery</li> </ul> </div> <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\"> <h3 className=\"text-xl font-bold mb-4 text-purple-400\">Data Center Solutions</h3> <p className=\"text-slate-300 mb-4\">Complete data center design and management</p> <ul className=\"text-slate-400 space-y-2\"> <li>• Data center design</li> <li>• Power management</li> <li>• Cooling solutions</li> <li>• Security systems</li> </ul> </div> </div> <div className=\"text-center\"> <Link href=\"/contact\" className=\"px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors mr-4\"> Design Infrastructure </Link> <Link href=\"/services\" className=\"px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors\"> View All Services </Link> </div> </div> </main> </> )}
+
+
+
+import Link from \'next/link\'; import Head from \'next/head\'; export default function Infrastructure() { return ( <> <Head> <title>IT Infrastructure Services - Zion Tech Group</title> <meta name=\"description\" content=\"Comprehensive IT infrastructure solutions including network design,server management,and system administration.\" /> <meta name=\"keywords\" content=\"IT infrastructure,network design,server management,system administration,data center\" /> <link rel=\"canonical\" href=\""https\": </Head> <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\"> <div className=\"max-w-6xl mx-auto px-4 py-16\"> <div className=\"text-center mb-12\"> <h1 className=\"text-4xl md:text-5xl font-bold mb-6\">IT Infrastructure Services</h1> <p className=\"text-xl text-slate-300 max-w-3xl mx-auto\"> Build and maintain robust IT infrastructure for your business </p> </div> <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12\"> <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\"> <h3 className=\"text-xl font-bold mb-4 text-blue-400\">Network Design</h3> <p className=\"text-slate-300 mb-4\">Design and implement secure network infrastructure</p> <ul className=\"text-slate-400 space-y-2\"> <li>• Network architecture</li> <li>• Security implementation</li> <li>• Performance optimization</li> <li>• Scalability planning</li> </ul> </div> <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\"> <h3 className=\"text-xl font-bold mb-4 text-green-400\">Server Management</h3> <p className=\"text-slate-300 mb-4\">Comprehensive server administration and maintenance</p> <ul className=\"text-slate-400 space-y-2\"> <li>• Server deployment</li> <li>• Performance monitoring</li> <li>• Backup solutions</li> <li>• Disaster recovery</li> </ul> </div> <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\"> <h3 className=\"text-xl font-bold mb-4 text-purple-400\">Data Center Solutions</h3> <p className=\"text-slate-300 mb-4\">Complete data center design and management</p> <ul className=\"text-slate-400 space-y-2\"> <li>• Data center design</li> <li>• Power management</li> <li>• Cooling solutions</li> <li>• Security systems</li> </ul> </div> </div> <div className=\"text-center\"> <Link href=\"/contact\" className=\"px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors mr-4\"> Design Infrastructure </Link> <Link href=\"/services\" className=\"px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors\"> View All Services </Link> </div> </div> </main> </> )}
+import Link from \'next/link\'; import Head from \'next/head\'; export default function Infrastructure() { return ( <> <Head> <title>IT Infrastructure Services - Zion Tech Group</title> <meta name=\"description\" content=\"Comprehensive IT infrastructure solutions including network design,server management,and system administration.\" /> <meta name=\"keywords\" content=\"IT infrastructure,network design,server management,system administration,data center\" /> <link rel=\"canonical\" href=\""https\": </Head> <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\"> <div className=\"max-w-6xl mx-auto px-4 py-16\"> <div className=\"text-center mb-12\"> <h1 className=\"text-4xl md:text-5xl font-bold mb-6\">IT Infrastructure Services</h1> <p className=\"text-xl text-slate-300 max-w-3xl mx-auto\"> Build and maintain robust IT infrastructure for your business </p> </div> <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12\"> <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\"> <h3 className=\"text-xl font-bold mb-4 text-blue-400\">Network Design</h3> <p className=\"text-slate-300 mb-4\">Design and implement secure network infrastructure</p> <ul className=\"text-slate-400 space-y-2\"> <li>• Network architecture</li> <li>• Security implementation</li> <li>• Performance optimization</li> <li>• Scalability planning</li> </ul> </div> <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\"> <h3 className=\"text-xl font-bold mb-4 text-green-400\">Server Management</h3> <p className=\"text-slate-300 mb-4\">Comprehensive server administration and maintenance</p> <ul className=\"text-slate-400 space-y-2\"> <li>• Server deployment</li> <li>• Performance monitoring</li> <li>• Backup solutions</li> <li>• Disaster recovery</li> </ul> </div> <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\"> <h3 className=\"text-xl font-bold mb-4 text-purple-400\">Data Center Solutions</h3> <p className=\"text-slate-300 mb-4\">Complete data center design and management</p> <ul className=\"text-slate-400 space-y-2\"> <li>• Data center design</li> <li>• Power management</li> <li>• Cooling solutions</li> <li>• Security systems</li> </ul> </div> </div> <div className=\"text-center\"> <Link href=\"/contact\" className=\"px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors mr-4\"> Design Infrastructure </Link> <Link href=\"/services\" className=\"px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors\"> View All Services </Link> </div> </div> </main> </> )}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+import Link from \'next/link\'; import Head from \'next/head\'; export default function Infrastructure() { return ( <> <Head> <title>IT Infrastructure Services - Zion Tech Group</title> <meta name=\"description\" content=\"Comprehensive IT infrastructure solutions including network design,server management,and system administration.\" /> <meta name=\"keywords\" content=\"IT infrastructure,network design,server management,system administration,data center\" /> <link rel=\"canonical\" href=\""https\": </Head> <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\"> <div className=\"max-w-6xl mx-auto px-4 py-16\"> <div className=\"text-center mb-12\"> <h1 className=\"text-4xl md:text-5xl font-bold mb-6\">IT Infrastructure Services</h1> <p className=\"text-xl text-slate-300 max-w-3xl mx-auto\"> Build and maintain robust IT infrastructure for your business </p> </div> <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12\"> <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\"> <h3 className=\"text-xl font-bold mb-4 text-blue-400\">Network Design</h3> <p className=\"text-slate-300 mb-4\">Design and implement secure network infrastructure</p> <ul className=\"text-slate-400 space-y-2\"> <li>• Network architecture</li> <li>• Security implementation</li> <li>• Performance optimization</li> <li>• Scalability planning</li> </ul> </div> <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\"> <h3 className=\"text-xl font-bold mb-4 text-green-400\">Server Management</h3> <p className=\"text-slate-300 mb-4\">Comprehensive server administration and maintenance</p> <ul className=\"text-slate-400 space-y-2\"> <li>• Server deployment</li> <li>• Performance monitoring</li> <li>• Backup solutions</li> <li>• Disaster recovery</li> </ul> </div> <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\"> <h3 className=\"text-xl font-bold mb-4 text-purple-400\">Data Center Solutions</h3> <p className=\"text-slate-300 mb-4\">Complete data center design and management</p> <ul className=\"text-slate-400 space-y-2\"> <li>• Data center design</li> <li>• Power management</li> <li>• Cooling solutions</li> <li>• Security systems</li> </ul> </div> </div> <div className=\"text-center\"> <Link href=\"/contact\" className=\"px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors mr-4\"> Design Infrastructure </Link> <Link href=\"/services\" className=\"px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors\"> View All Services </Link> </div> </div> </main> </> )}
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from 'react';
+interface InfrastructureProps {
+  // Add props here as needed
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}
+
+<<<<<<< HEAD
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+export default function Infrastructure({ }: InfrastructureProps) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+export default function Infrastructure(): any ({ }: InfrastructureProps) {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  return (
+    <div>;
+      <h1>Infrastructure</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  );
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+}
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

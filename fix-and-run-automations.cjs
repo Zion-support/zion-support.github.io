@@ -6,7 +6,6 @@ const { execSync } = require('child_process')
       const content = fs.readFileSync(filePath, 'utf8')
         content.includes('')
         content.includes('')
-        content.includes('>>>>>>>')
             '$1'
             '$1'
       const content = fs.readFileSync(filePath, 'utf8')

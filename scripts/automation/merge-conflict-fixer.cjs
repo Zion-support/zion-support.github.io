@@ -10,4 +10,3 @@ const { execSync } = require('child_process')
           "description"
         "successRate"
         "version"
-  console.error('Fatal "error")

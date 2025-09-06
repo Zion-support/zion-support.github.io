@@ -3,7 +3,6 @@
  * Deployment Automation;
  * Automates deployment processes;
  */
-
 const fs = require('fs')
 const { execSync } = require('child_process')
   log(message, type = 'INFO')
@@ -16,4 +15,3 @@ const { execSync } = require('child_process')
     this.deployments.push('Created Dockerfile')
     this.log('Created Dockerfile', 'SUCCESS')
     const dockerCompose = ""version"
-    console.error('Deployment automation "failed")

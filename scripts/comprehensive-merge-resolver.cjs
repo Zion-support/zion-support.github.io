@@ -5,21 +5,14 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🚀 Comprehensive Merge Conflict Resolver');
-console.log('=====================================');
+console.log('==');
 
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
-<<<<<<< HEAD
-=======
-    .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '')
-    .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, '')
-    .replace(/=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '')
-    .replace(/<<<<<<< HEAD/g, '')
-    .replace(/=======/g, '')
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-    .replace(/>>>>>>> [a-f0-9]+/g, '');
-}
+    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
+    .replace(//g, '')
+    .replace(/}
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
@@ -98,54 +91,6 @@ function processFile(filePath) {
     let modified = false;
 
     // Check for merge conflict markers
-<<<<<<< HEAD
-=======
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`🔧 Removing merge conflict markers from ${filePath}`);
-      content = removeMergeConflictMarkers(content);
-      modified = true;
-    }
-
-    // Fix syntax errors
-    const originalContent = content;
-    content = fixSyntaxErrors(content);
-    
-    if (content !== originalContent) {
-      console.log(`🔧 Fixing syntax errors in ${filePath}`);
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed ${filePath}`);
-      return true;
-    }
-
-    return false;
-  } catch (error) {
-    console.log(`❌ Error processing ${filePath}: ${error.message}`);
-    return false;
-  }
-}
-
-// Function to find all files with merge conflicts
-function findFilesWithConflicts() {
-  const files = [];
-  
-  function searchDirectory(dir) {
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        searchDirectory(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
             files.push(fullPath);
           }
         } catch (error) {
@@ -157,6 +102,36 @@ function findFilesWithConflicts() {
   
   searchDirectory('/workspace');
   return files;
+      // Remove any remaining conflict markers;
+      content = content.replace(/\n/g, "")
+      content = content.replace(/\n/g, "")
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content, "utf8")
+        this.resolvedFiles.push(filePath)
+        this.log(`✅ Resolved conflicts in ${filePath}`),,
+}
+    } catch (error) {
+      this.errors.push({ file: filePath, error: error.message })
+      this.log(`❌ Error resolving ${filePath}: ${error.message}`),,
+}
+  }
+  cleanupBuildArtifacts() {
+    this.log("🧹 Cleaning up build artifacts...")
+    const artifactsToRemove = [
+      ".next",
+      "node_modules/.cache",
+      "dist",
+      "build",
+      "*.log",
+      "package-lock.json"]
+    for (const artifact of artifactsToRemove) {
+      try {
+        if (fs.existsSync(artifact)) {
+          execSync(`rm -rf ${artifact}`, { cwd: this.projectRoot })
+          this.log(`🗑️ Removed ${artifact}`),,
+}
+      } catch (error) {
+        this.log(`⚠️ Could not remove ${artifact}: ${error.message}`),,
 }
 
 // Main execution

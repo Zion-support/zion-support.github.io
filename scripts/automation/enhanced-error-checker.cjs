@@ -2,7 +2,6 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-
 class EnhancedErrorChecker {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -49,4 +48,3 @@ class EnhancedErrorChecker {}
 if (require.main === module) {}
   const checker = new EnhancedErrorChecker();
   checker.run().catch(console.error)};
-module.exports = EnhancedErrorChecker;

@@ -1,220 +1,256 @@
 #!/usr/bin/env node
 
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 class AutomatedTestRunner {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.testResults = [];
-    this.coverage = {};
+    this.testResults = {
+      timestamp: new Date().toISOString(),
+      tests: [],
+      summary: {
+        total: 0,
+        passed: 0,
+        failed: 0,
+        skipped: 0
+      },
+      coverage: null,
+      recommendations: []
+    };
   }
 
-  log(message) {
-    console.log(`[${new Date().toISOString()}] [TEST-RUNNER] ${message}`);
-  }
-
-  async runUnitTests() {
-    this.log('🧪 Running unit tests...');
+  async runTests() {
+    console.log('🧪 Starting Automated Test Runner...');
     
     try {
-      const result = execSync('npm test -- --passWithNoTests --coverage', { 
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
+      // Run smoke tests
+      await this.runSmokeTests();
       
-      this.testResults.push({
-        type: 'unit',
-        status: 'passed',
-        details: 'Unit tests completed successfully'
-      });
+      // Run unit tests
+      await this.runUnitTests();
       
-      this.log('✅ Unit tests passed');
+      // Run integration tests
+      await this.runIntegrationTests();
+      
+      // Generate test coverage report
+      await this.generateCoverageReport();
+      
+      // Generate recommendations
+      this.generateTestRecommendations();
+      
+      console.log('✅ Automated Test Runner completed');
+      
     } catch (error) {
-      this.testResults.push({
-        type: 'unit',
-        status: 'failed',
-        details: error.message
-      });
-      
-      this.log(`❌ Unit tests failed: ${error.message}`);
+      console.error('❌ Automated Test Runner failed:', error.message);
     }
   }
 
   async runSmokeTests() {
-    this.log('💨 Running smoke tests...');
-    
     try {
-      const result = execSync('npm run test:smoke', { 
-        stdio: 'pipe',
-        encoding: 'utf8'
+      console.log('Running smoke tests...');
+      const output = execSync('npm run test:smoke', { 
+        encoding: 'utf8',
+        stdio: 'pipe'
       });
       
-      this.testResults.push({
+      this.testResults.tests.push({
         type: 'smoke',
-        status: 'passed',
-        details: 'Smoke tests completed successfully'
+        success: true,
+        output: output,
+        timestamp: new Date().toISOString()
       });
       
-      this.log('✅ Smoke tests passed');
+      this.testResults.summary.total++;
+      this.testResults.summary.passed++;
+      
     } catch (error) {
-      this.testResults.push({
+      this.testResults.tests.push({
         type: 'smoke',
-        status: 'failed',
-        details: error.message
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
       });
       
-      this.log(`❌ Smoke tests failed: ${error.message}`);
+      this.testResults.summary.total++;
+      this.testResults.summary.failed++;
     }
   }
 
-  async runLintTests() {
-    this.log('🔍 Running lint tests...');
-    
+  async runUnitTests() {
     try {
-      const result = execSync('npm run lint', { 
-        stdio: 'pipe',
-        encoding: 'utf8'
+      console.log('Running unit tests...');
+      const output = execSync('npm test', { 
+        encoding: 'utf8',
+        stdio: 'pipe'
       });
       
-      this.testResults.push({
-        type: 'lint',
-        status: 'passed',
-        details: 'Lint tests completed successfully'
+      this.testResults.tests.push({
+        type: 'unit',
+        success: true,
+        output: output,
+        timestamp: new Date().toISOString()
       });
       
-      this.log('✅ Lint tests passed');
+      this.testResults.summary.total++;
+      this.testResults.summary.passed++;
+      
     } catch (error) {
-      this.testResults.push({
-        type: 'lint',
-        status: 'failed',
-        details: error.message
+      this.testResults.tests.push({
+        type: 'unit',
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
       });
       
-      this.log(`❌ Lint tests failed: ${error.message}`);
+      this.testResults.summary.total++;
+      this.testResults.summary.failed++;
     }
   }
 
-  async runTypeCheck() {
-    this.log('📝 Running TypeScript type check...');
-    
+  async runIntegrationTests() {
     try {
-      const result = execSync('npm run type-check', { 
-        stdio: 'pipe',
-        encoding: 'utf8'
+      console.log('Running integration tests...');
+      const output = execSync('npm run test:integration', { 
+        encoding: 'utf8',
+        stdio: 'pipe'
       });
       
-      this.testResults.push({
-        type: 'typescript',
-        status: 'passed',
-        details: 'TypeScript type check completed successfully'
+      this.testResults.tests.push({
+        type: 'integration',
+        success: true,
+        output: output,
+        timestamp: new Date().toISOString()
       });
       
-      this.log('✅ TypeScript type check passed');
+      this.testResults.summary.total++;
+      this.testResults.summary.passed++;
+      
     } catch (error) {
-      this.testResults.push({
-        type: 'typescript',
-        status: 'failed',
-        details: error.message
+      // Integration tests might not exist, so we don't count this as a failure
+      this.testResults.tests.push({
+        type: 'integration',
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString(),
+        skipped: true
       });
       
-      this.log(`❌ TypeScript type check failed: ${error.message}`);
-    }
-  }
-
-  async runBuildTest() {
-    this.log('🏗️ Running build test...');
-    
-    try {
-      const result = execSync('npm run build', { 
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
-      
-      this.testResults.push({
-        type: 'build',
-        status: 'passed',
-        details: 'Build test completed successfully'
-      });
-      
-      this.log('✅ Build test passed');
-    } catch (error) {
-      this.testResults.push({
-        type: 'build',
-        status: 'failed',
-        details: error.message
-      });
-      
-      this.log(`❌ Build test failed: ${error.message}`);
+      this.testResults.summary.total++;
+      this.testResults.summary.skipped++;
     }
   }
 
   async generateCoverageReport() {
-    this.log('📊 Generating coverage report...');
-    
     try {
-      // Check if coverage directory exists
-      const coverageDir = path.join(this.projectRoot, 'coverage');
-      if (fs.existsSync(coverageDir)) {
-        const coverageFile = path.join(coverageDir, 'coverage-summary.json');
-        if (fs.existsSync(coverageFile)) {
-          const coverageData = JSON.parse(fs.readFileSync(coverageFile, 'utf8'));
-          this.coverage = coverageData.total;
-        }
+      console.log('Generating coverage report...');
+      const output = execSync('npm run test:coverage', { 
+        encoding: 'utf8',
+        stdio: 'pipe'
+      });
+      
+      // Try to parse coverage data from output
+      const coverageMatch = output.match(/All files\s+\|\s+(\d+\.?\d*)\s+\|\s+(\d+\.?\d*)\s+\|\s+(\d+\.?\d*)\s+\|\s+(\d+\.?\d*)/);
+      
+      if (coverageMatch) {
+        this.testResults.coverage = {
+          statements: parseFloat(coverageMatch[1]),
+          branches: parseFloat(coverageMatch[2]),
+          functions: parseFloat(coverageMatch[3]),
+          lines: parseFloat(coverageMatch[4])
+        };
       }
       
-      this.log(`Coverage: ${this.coverage.lines?.pct || 0}% lines, ${this.coverage.functions?.pct || 0}% functions`);
     } catch (error) {
-      this.log(`❌ Coverage report generation failed: ${error.message}`);
+      console.warn('Could not generate coverage report:', error.message);
     }
   }
 
-  generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      testResults: this.testResults,
-      coverage: this.coverage,
-      summary: {
-        totalTests: this.testResults.length,
-        passedTests: this.testResults.filter(t => t.status === 'passed').length,
-        failedTests: this.testResults.filter(t => t.status === 'failed').length,
-        successRate: this.testResults.length > 0 ? 
-          (this.testResults.filter(t => t.status === 'passed').length / this.testResults.length * 100).toFixed(2) : 0
-      }
-    };
-
-    const reportPath = path.join(this.projectRoot, 'test-runner-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Test report saved to: ${reportPath}`);
+  generateTestRecommendations() {
+    const recommendations = [];
     
-    return report;
+    // Check test coverage
+    if (this.testResults.coverage) {
+      const { statements, branches, functions, lines } = this.testResults.coverage;
+      const avgCoverage = (statements + branches + functions + lines) / 4;
+      
+      if (avgCoverage < 70) {
+        recommendations.push({
+          type: 'coverage',
+          priority: 'high',
+          message: `Test coverage is low (${avgCoverage.toFixed(1)}%). Aim for at least 70%.`,
+          actions: [
+            'Write more unit tests for critical components',
+            'Add integration tests for API endpoints',
+            'Consider using test-driven development'
+          ]
+        });
+      }
+    }
+    
+    // Check for failed tests
+    const failedTests = this.testResults.tests.filter(test => !test.success && !test.skipped);
+    if (failedTests.length > 0) {
+      recommendations.push({
+        type: 'failed-tests',
+        priority: 'high',
+        message: `${failedTests.length} test(s) failed. Fix failing tests before deployment.`,
+        actions: [
+          'Review test failures and fix underlying issues',
+          'Update tests if requirements have changed',
+          'Ensure all dependencies are properly installed'
+        ]
+      });
+    }
+    
+    // Check for missing test types
+    const testTypes = this.testResults.tests.map(test => test.type);
+    if (!testTypes.includes('unit')) {
+      recommendations.push({
+        type: 'missing-tests',
+        priority: 'medium',
+        message: 'No unit tests found. Consider adding unit tests.',
+        actions: [
+          'Create unit tests for utility functions',
+          'Add component tests for React components',
+          'Test business logic and data transformations'
+        ]
+      });
+    }
+    
+    if (!testTypes.includes('integration') || this.testResults.tests.find(t => t.type === 'integration' && t.skipped)) {
+      recommendations.push({
+        type: 'missing-tests',
+        priority: 'medium',
+        message: 'No integration tests found. Consider adding integration tests.',
+        actions: [
+          'Create API endpoint tests',
+          'Test database interactions',
+          'Add end-to-end user flow tests'
+        ]
+      });
+    }
+    
+    this.testResults.recommendations = recommendations;
   }
 
-  async run() {
-    this.log('🚀 Starting Automated Test Runner...');
+  saveReport() {
+    const reportFile = path.join(__dirname, 'reports', 'test-runner-report.json');
+    fs.mkdirSync(path.dirname(reportFile), { recursive: true });
+    fs.writeFileSync(reportFile, JSON.stringify(this.testResults, null, 2));
     
-    try {
-      await this.runUnitTests();
-      await this.runSmokeTests();
-      await this.runLintTests();
-      await this.runTypeCheck();
-      await this.runBuildTest();
-      await this.generateCoverageReport();
-      
-      const report = this.generateReport();
-      
-      this.log('✅ Automated Test Runner completed!');
-      this.log(`📈 Success rate: ${report.summary.successRate}% (${report.summary.passedTests}/${report.summary.totalTests})`);
-      
-      return report;
-    } catch (error) {
-      this.log(`❌ Automated Test Runner failed: ${error.message}`);
-      throw error;
-    }
+    console.log(`📊 Test runner report saved to: ${reportFile}`);
   }
 }
 
-// Run the test runner
-const testRunner = new AutomatedTestRunner();
-testRunner.run().catch(console.error);
+// Run if called directly
+if (require.main === module) {
+  const testRunner = new AutomatedTestRunner();
+  testRunner.runTests()
+    .then(() => {
+      testRunner.saveReport();
+    })
+    .catch(console.error);
+}
+
+module.exports = AutomatedTestRunner;

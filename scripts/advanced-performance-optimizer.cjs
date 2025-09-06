@@ -1,6 +1,3 @@
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
 const { execSync } = require('child_process')
       "status"
         "status"
@@ -29,4 +26,3 @@ const { execSync } = require('child_process')
           "missing"
       "status"
     console.log('\n Performance Optimization "Summary")
-    console.error('Performance optimization "failed")

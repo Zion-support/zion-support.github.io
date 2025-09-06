@@ -3,7 +3,6 @@
  * Comprehensive Test Suite;
  * Runs all tests, checks, and validations for the application;
  */
-
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -48,4 +47,3 @@ const path = require('path')
         "name"
         "command": 'grep -r "aria-" --include="*.tsx" --include="*.jsx"
         "description"
-      this.log(` Test suite "failed"`)

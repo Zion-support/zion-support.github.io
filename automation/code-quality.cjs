@@ -1,42 +1,47 @@
+}},
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+// Code quality checks
+const qualityChecks = [{
+    "name": 'TypeScript Type Checking',
+    "action": () => {
+      try {
+        execSync('npx tsc --noEmit', { "stdio": 'pipe' });
+      } catch (error) {
+      }
+    },
+  },
     }},
   {
     "name": 'ESLint Code Analysis',
     "action": () => {
-      
       try {
         execSync('npx eslint . --ext .ts,.tsx,.js,.jsx', { "stdio": 'pipe' });
-        
       } catch (error) {
-        
       }
     }},
   {
     "name": 'Prettier Code Formatting',
     "action": () => {
-      
       try {
         execSync('npx prettier --check .', { "stdio": 'pipe' });
-        
       } catch (error) {
-        
       }
     }},
   {
     "name": 'Code Complexity Analysis',
     "action": () => {
-      
       const pagesDir = path.join(process.cwd(), 'pages');
       const componentsDir = path.join(process.cwd(), 'components');
-
       let totalLines = 0;
       let totalFiles = 0;
-
       [pagesDir, componentsDir].forEach(dir => {
         if (fs.existsSync(dir)) {
           const files = fs
             .readdirSync(dir, { "recursive": true })
             .filter(file => file.endsWith('.tsx') || file.endsWith('.ts'));
-
           files.forEach(file => {
             const filePath = path.join(dir, file);
             const content = fs.readFileSync(filePath, 'utf8');
@@ -46,16 +51,18 @@
           });
         }
       });
-
       const avgLinesPerFile =
         totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0;
+      console.log(`Average lines per file: ${avgLinesPerFile}`);
+      console.log(`Total files analyzed: ${totalFiles}`);
+    },
+  },
       
       
     }},
   {
     "name": 'Import/Export Analysis',
     "action": () => {
-      
       const pagesDir = path.join(process.cwd(), 'pages');
       if (fs.existsSync(pagesDir)) {
         const pages = fs
@@ -63,12 +70,16 @@
           .filter(file => file.endsWith('.tsx'));
         let importCount = 0;
         let exportCount = 0;
-
         pages.forEach(page => {
           const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
           importCount += (content.match(/^import\s+/gm) || []).length;
           exportCount += (content.match(/^export\s+/gm) || []).length;
         });
+        console.log(`Total imports: ${importCount}`);
+        console.log(`Total exports: ${exportCount}`);
+      }
+    },
+  },
 
         
         
@@ -77,19 +88,16 @@
   {
     "name": 'Dead Code Detection',
     "action": () => {
-      
       const pagesDir = path.join(process.cwd(), 'pages');
       if (fs.existsSync(pagesDir)) {
         const pages = fs
           .readdirSync(pagesDir)
           .filter(file => file.endsWith('.tsx'));
         let unusedImports = 0;
-
         pages.forEach(page => {
           const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
           const imports =
             content.match(/^import\s+.*from\s+['"][^'"]+['"]/gm) || [];
-
           imports.forEach(importLine => {
             const importName = importLine.match(/import\s+{([^}]+)}/);
             if (importName) {
@@ -105,53 +113,54 @@
             }
           });
         });
+        console.log(`Potential unused imports: ${unusedImports}`);
+      }
+    },
+  },
 
         
       }
     }},
 ];
-
 // Run quality checks
 let successCount = 0;
 let totalCount = qualityChecks.length;
-
 for (const check of qualityChecks) {
   try {
-    
     check.action();
-    
     successCount++;
   } catch (error) {
-    
   }
 }
-
-
-
-
 // Generate quality report
 const report = {
   "timestamp": new Date().toISOString(),
   "checks": qualityChecks.map(check => ({
     name: check.name,
+    status: 'completed',
+  })),
+  summary: {
+    total: totalCount,
+    successful: successCount,
+    failed: totalCount - successCount,
+  },
+};
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
 
+
+
+
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
 }
-
 const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -167,4 +176,7 @@ console.log(' Code Quality Checker Starting...\n')
     "name"
     "name"
             content.match(/^import\s+.*from\s+['"][^'')]
+    "status"
+    "status"
+    "status"
     "status"

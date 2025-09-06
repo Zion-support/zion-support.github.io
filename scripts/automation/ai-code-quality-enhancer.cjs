@@ -14,7 +14,6 @@ const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
 const crypto = require("crypto");
-
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();
@@ -62,7 +61,6 @@ class $1 {}
   pattern: /any\s*:/g", ""improvement": "Replace any with proper types"", ""priority": "HIGH"", "}", "{}
   "pattern": /:\s*string\s*\|\s*""undefined/g""", ""improvement": Use optional properties (?) instead of union with undefined"", ""priority": "MEDIUM"", "}", "{}
   "pattern": /as\s+""any/g""", ""improvement": "Avoid type assertions to any"", ""priority": "HIGH"", "}", ""],
-
     // AI Pattern Recognition Rules;
     this.qualityPatterns = {}
   "performance": [{}]
@@ -108,7 +106,6 @@ class $1 {}
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
-
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
 ;
   async analyzeCodeQuality() {}
@@ -118,10 +115,8 @@ class $1 {}
     try {}
   async analyzeCodeQuality() {}
   this.log("🤖 Starting AI-powered code quality analysis...");
-
     const improvements = [];
     const patterns = [];
-
     try {}
   // 1. Analyze source files for quality patterns;
       const sourceAnalysis = await this.analyzeSourceFiles();
@@ -169,18 +164,15 @@ class $1 {}
   try {}
   const content = fs.readFileSync(file, "utf8");
     const sourceDir = path.join(this.projectRoot, "src");
-
     if (!fs.existsSync(sourceDir)) {}
   return { improvements, patterns };
     };
 ;
     const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js"]);
-
     for (const file of files) {}
   try {}
   const content = fs.readFileSync(file, "utf8");
         const fileAnalysis = this.analyzeFileContent(content, file);
-
         if (fileAnalysis.improvements.length > 0) {}
   improvements.push(...fileAnalysis.improvements)};
 ;
@@ -211,7 +203,6 @@ class $1 {}
             "timestamp": new Date().toISOString()};
 ;
           improvements.push(improvement);
-
           patterns.push({})
   "pattern": rule.pattern.source,
             category,
@@ -223,20 +214,17 @@ class $1 {}
     // Additional intelligent analysis;
     const additionalIssues = this.findAdditionalQualityIssues(;)
       content,
-
     // Additional intelligent analysis;
     const additionalIssues = this.findAdditionalQualityIssues(;)
       content,
       filePath;
     );
     improvements.push(...additionalIssues);
-
     return { improvements, patterns };
   };
 ;
   findAdditionalQualityIssues(content, filePath) {}
   const issues = [];
-
     // Check for large components (more than 200 lines);
     const lines = content.split("\n");
     if (lines.length > 200) {}
@@ -280,7 +268,6 @@ class $1 {}
   calculateJSXNesting(content) {}
   let maxNesting = 0;
     let currentNesting = 0;
-
     for (const char of content) {}
   if (char === "<" && content[content.indexOf(char) + 1] !== "/") {}
   currentNesting++;
@@ -301,14 +288,12 @@ class $1 {}
   const importContent = match.match(/import\s+{([^}]+)}\s+from/);
         return importContent;
           ? importContent[1].split(",").map(i => i.trim());
-
   findUnusedImports(content, filePath) {}
   // This is a simplified check - in a real implementation, you"d use TypeScript compiler API;
     const importMatches = content.match(;)
       /import\s+{([^}]+)}\s+from\s+["][^"]+[""]/g;
     );
     if (!importMatches) return [];
-
     const imports = importMatches;
       .map(match => {})
   const importContent = match.match(/import\s+{([^}]+)}\s+from/);
@@ -324,16 +309,13 @@ class $1 {}
         !content.includes(importName) ||content.indexOf(importName) === content.indexOf(`import {${imp}}`);
       )}
 });
-
     return unused};
 ;
   findLineNumbers(content, pattern) {}
   const lines = content.split("\n");
-
   findLineNumbers(content, pattern) {}
   const lines = content.split("\n");
     const lineNumbers = [];
-
     for (let i = 0; i < lines.length; i++) {}
   if (pattern.test(lines[i])) {}
   lineNumbers.push(i + 1)};
@@ -349,11 +331,9 @@ class $1 {}
     };
 ;
     const componentFiles = this.getAllFiles(componentsDir, [".tsx", ".ts", ".jsx", ".js", "]);
-
     for (const file of componentFiles) {}
   try {}
   const content = fs.readFileSync(file, "utf8");
-
         // Check component naming convention;
         const fileName = path.basename(file, path.extname(file));
         if (!/^[A-Z]/.test(fileName)) {}
@@ -392,13 +372,11 @@ class $1 {}
     const sourceDir = path.join(this.projectRoot, "src");
     if (!fs.existsSync(sourceDir)) {}
   const sourceDir = path.join(this.projectRoot, "src");
-
     if (!fs.existsSync(sourceDir)) {}
   return { improvements };
     };
 ;
     const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js"]);
-
     for (const file of files) {}
   try {}
   const content = fs.readFileSync(file, "utf8");
@@ -445,13 +423,11 @@ class $1 {}
     const sourceDir = path.join(this.projectRoot, "src");
     if (!fs.existsSync(sourceDir)) {}
   const sourceDir = path.join(this.projectRoot, "src");
-
     if (!fs.existsSync(sourceDir)) {}
   return { improvements };
     };
 ;
     const files = this.getAllFiles(sourceDir, [".tsx", ".ts", ".jsx", ".js"]);
-
     for (const file of files) {}
   try {}
   const content = fs.readFileSync(file, "utf8");
@@ -537,7 +513,6 @@ class $1 {}
         "actions": priorities.MEDIUM.map(imp => imp.improvement),
         "estimatedTime": "4-8 hours",
         "impact": "Low - affects code quality and developer experience",
-
     // Critical priority recommendations;
     if (priorities.CRITICAL && priorities.CRITICAL.length > 0) {}
   recommendations.push({})
@@ -577,7 +552,6 @@ class $1 {}
           imp.pattern;
         );
     );
-
     for (const fix of safeFixes) {}
   try {}
   const success = await this.applyFix(fix);
@@ -597,7 +571,6 @@ class $1 {}
   try {}
   const content = fs.readFileSync(improvement.file, `utf8");
       let newContent = content;
-
       switch (improvement.pattern) {}
   case "unused-imports":;
           // Remove unused imports (simplified);
@@ -673,12 +646,10 @@ class $1 {}
       // Commit with descriptive messageconst commitMessage = `🤖 AI Code Quality "Improvements": ${appliedFixes.length} automatic fixes applied`;execSync(`git commit -m ${commitMessage}`, {`})
   "cwd": this.projectRoot,
         "stdio": "pipe",
-
     try {}
   // Stage all changes;
       execSync("git add .", { "cwd": this.projectRoot, "stdio": "pipe" }
 });
-
       // Commit with descriptive messageconst commitMessage = `🤖 AI Code Quality "Improvements": ${appliedFixes.length} automatic fixes applied`;execSync(`git commit -m "${commitMessage}"`, {`})
   "cwd": this.projectRoot,
         "stdio": "pipe'}
@@ -688,9 +659,7 @@ this.log(`Committed ${appliedFixes.length} AI improvements`, "INFO")} catch (err
 ;
   getAllFiles(dir, extensions) {}
   const files = [];
-
     if (!fs.existsSync(dir)) return files;
-
     const items = fs.readdirSync(dir);
     for (const item of items) {}
   const fullPath = path.join(dir, "item);
@@ -719,4 +688,3 @@ if (require.main === module) {}
   const enhancer = new AICodeQualityEnhancer();
   enhancer.run()};
 ;
-module.exports = AICodeQualityEnhancer;
