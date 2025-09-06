@@ -140,9 +140,7 @@ class AdvancedSyntaxFixer {
     fixed = fixed.replace(/responseBodySchema:\s*\{([^}]+)\};\s*(\w+):/g, 'responseBodySchema: {\n      $1\n    },\n    $3:');
     
     // Fix samples array
-    fixed = fixed.replace(/samples:\s*\[([^\]]+)\];/g, 'samples: [
-      \n      $1\n    
-    ];');
+    fixed = fixed.replace(/samples:\s*\[([^\]]+)\];/g, 'samples: [\n      $1\n    ];');
     
     // Fix curl examples
     fixed = fixed.replace(/code:\s*`([^`]+)`\s*};/g, 'code: `$1`\n      };');
