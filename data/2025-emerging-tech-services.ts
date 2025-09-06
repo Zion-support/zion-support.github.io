@@ -490,4 +490,4 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     const price = parseInt(service.price.monthly.toString()) || 0,
     return price >= minPrice && price <= maxPrice
   })
-},
+},;

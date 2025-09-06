@@ -1,6 +1,6 @@
-import fs from 'fs',
-import path from 'path',
-import type { GetStaticProps } from 'next',
+import fs from 'fs',;
+import path from 'path',;
+import type { GetStaticProps } from 'next',;
 interface Report {
   generatedAt: string,
   commits: { last7d: number, last30d: number },
@@ -54,4 +54,4 @@ export default function RepoHealth({ report }: Props) {
       </section>
     </div>
   )
-}
+};

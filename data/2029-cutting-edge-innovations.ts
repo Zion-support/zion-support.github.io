@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface CuttingEdge2029Service {
   id: string,
   name: string,
@@ -258,4 +258,4 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     rating: 4.8,
     reviews: 23
   }
-],
+],;

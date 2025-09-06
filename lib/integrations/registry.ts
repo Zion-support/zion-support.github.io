@@ -1,4 +1,4 @@
-import { IntegrationProviderMeta } from './types',
+import { IntegrationProviderMeta } from './types',;
 export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
   { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },
@@ -11,4 +11,4 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id)
-}
+};

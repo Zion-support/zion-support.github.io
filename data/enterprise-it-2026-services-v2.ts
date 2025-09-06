@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {
   id: string,
   name: string,
@@ -445,4 +445,4 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.9,
     reviews: 180
   }
-],
+],;

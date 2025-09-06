@@ -347,4 +347,4 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'],
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']
   }
-],
+],;

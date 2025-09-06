@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react',
-import { motion } from 'framer-motion',
+import React, { useEffect, useRef } from 'react',;
+import { motion } from 'framer-motion',;
 interface UltraAdvancedFuturisticBackgroundProps {
   children: React.ReactNode,
   intensity?: 'low' | 'medium' | 'high' | 'extreme',
@@ -306,4 +306,4 @@ export default function UltraAdvancedFuturisticBackground({
       {children}
     </div>
   )
-}
+};

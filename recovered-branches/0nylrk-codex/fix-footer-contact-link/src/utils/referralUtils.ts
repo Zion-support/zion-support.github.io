@@ -1,4 +1,4 @@
-import { format } from 'date-fns',
+import { format } from 'date-fns',;
 /**
  * Formats a date for display in the referral system
  * @param date Date or string to format
@@ -65,3 +65,4 @@ export async function trackReferral(userId: string, email: string) {
     console.error('Error tracking referral:', error)
   }
 }
+;

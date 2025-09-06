@@ -1,7 +1,7 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, 
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, 
@@ -11,8 +11,8 @@ import {
   Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon,
   Wifi, Building, Cpu as CpuIcon
 } from 'lucide-react',
-import Layout from '../components/layout/Layout',
-import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services',
+import Layout from '../components/layout/Layout',;
+import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services',;
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -414,4 +414,4 @@ export default function AdvancedITInfrastructureServices() {
       </section>
     </Layout>
   )
-}
+};

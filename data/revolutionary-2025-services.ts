@@ -38,4 +38,4 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+],;

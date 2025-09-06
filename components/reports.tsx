@@ -1,6 +1,6 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
 import { 
   FileText,
   Download, 
@@ -19,7 +19,7 @@ import {
   Clock,
   Award
 } from 'lucide-react',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 const ReportsPage: React.FC = () => {
   const reports = [
     {
@@ -377,4 +377,4 @@ const ReportsPage: React.FC = () => {
   )
 },
 
-export default ReportsPage,
+export default ReportsPage,;

@@ -1,8 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc',
-import type { KycProfile, KycRole } from '../../../utils/kyc',
-import fs from 'fs',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc',;
+import type { KycProfile, KycRole } from '../../../utils/kyc',;
+import fs from 'fs',;
+import path from 'path',;
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),
 const FILE = path.join(DATA_DIR, 'profiles.json'),
 
@@ -60,4 +60,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     profile,
     requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role)})
-}
+};

@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react",
-import { AppLayout } from "@/layout/AppLayout",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
+import React, { useState, useEffect } from "react",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { SEO } from "@/components/SEO",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Button } from "@/components/ui/button",;
+import { toast } from "@/hooks/use-toast",;
+import { supabase } from "@/integrations/supabase/client",;
 import { FraudFlag, FraudStats } from "@/types/fraud",
-
+;
 // Import refactored components
 import {
   FraudStatsCards,
@@ -231,3 +231,4 @@ export default function FraudDetection() {
     </AppLayout>
   )
 }
+;

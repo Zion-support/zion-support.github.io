@@ -1,7 +1,7 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
@@ -9,10 +9,10 @@ import {
   Building, Factory, Camera, Video, Music, Gamepad2,
   Crown, Award, Target, Users, Clock, Globe2
 } from 'lucide-react',
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',
-import { futuristic2028Services } from '../data/2028-futuristic-innovations',
-import { emergingTech2028Services } from '../data/2028-emerging-tech-services',
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',;
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',;
+import { futuristic2028Services } from '../data/2028-futuristic-innovations',;
+import { emergingTech2028Services } from '../data/2028-emerging-tech-services',;
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -439,4 +439,4 @@ export default function Revolutionary2028Pricing() {
       <UltraFuturisticFooter2028 />
     </>
   )
-}
+};

@@ -1,13 +1,13 @@
 
-import React from "react",
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-import { CodeBlock } from "@/components/developers/CodeBlock",
+import React from "react",;
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
+import { CodeBlock } from "@/components/developers/CodeBlock",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-
+;
 export function ApiSampleCode() {
   // JavaScript example with Axios
-  const jsAxiosExample = `// Using Axios with JavaScript
-import axios from 'axios',
+  const jsAxiosExample = `// Using Axios with JavaScript;
+import axios from 'axios',;
 // Configure Axios with the base URL and headers
 const api = axios.create({
   baseURL: 'https://api.zionai.com/v1',
@@ -143,8 +143,8 @@ if __name__ == "__main__":
         print(f"Error: {e}")`,
 
   // Node.js example with fetch
-  const nodeFetchExample = `// Using node-fetch with Node.js
-import fetch from 'node-fetch',
+  const nodeFetchExample = `// Using node-fetch with Node.js;
+import fetch from 'node-fetch',;
 const API_KEY = 'YOUR_API_KEY',
 const BASE_URL = 'https: //api.zionai.com/v1',
 
@@ -297,3 +297,4 @@ main(),`,
 }
 
 export default ApiSampleCode,
+;

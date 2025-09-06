@@ -521,5 +521,5 @@ const EnhancedServicesShowcase2025: React.FC = () => {
     </div>
   )
 },
-
+;
 export default EnhancedServicesShowcase2025;

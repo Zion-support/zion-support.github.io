@@ -1,9 +1,9 @@
 
-import { Button } from "@/components/ui/button",
-import Link from "next/link",
-import { useState, useEffect } from "react",
+import { Button } from "@/components/ui/button",;
+import Link from "next/link",;
+import { useState, useEffect } from "react",;
 import { X } from 'lucide-react'
-
+;
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false),
   const [isClosed, setIsClosed] = useState(false),
@@ -61,3 +61,4 @@ export function FloatingCTA() {
     </div>
   )
 }
+;

@@ -71,3 +71,4 @@ export const disputeReasonLabels: Record<DisputeReason, string> = {
   payment: 'Payment Dispute',
   contract_terms: 'Contract Terms Disagreement',
   other: 'Other Issue'},
+;

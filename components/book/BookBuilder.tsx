@@ -1,8 +1,8 @@
-import React, { useMemo, useState } from 'react',
-import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } from 'lucide-react',
-import { buildPrintableHtml } from '../../utils/export/buildHtml',
-import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes',
-import { defaultChapters } from '../../utils/book/defaultOutline',
+import React, { useMemo, useState } from 'react',;
+import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } from 'lucide-react',;
+import { buildPrintableHtml } from '../../utils/export/buildHtml',;
+import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes',;
+import { defaultChapters } from '../../utils/book/defaultOutline',;
 const initialProject: BookProject = {
   meta: {
     title: 'Zion OS: Building the Civilization Protocol',
@@ -266,4 +266,4 @@ export default function BookBuilder() {
       </section>
     </div>
   )
-}
+};

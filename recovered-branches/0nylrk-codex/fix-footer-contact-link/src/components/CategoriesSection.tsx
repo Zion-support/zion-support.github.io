@@ -1,8 +1,8 @@
 
-import { GradientHeading } from "./GradientHeading",
-import { Link } from "react-router-dom",
+import { GradientHeading } from "./GradientHeading",;
+import { Link } from "react-router-dom",;
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
-
+;
 const categories = [
   {
     title: "Services",
@@ -100,3 +100,4 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
     </section>
   )
 }
+;

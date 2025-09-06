@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react',
+import React, { useEffect, useState } from 'react',;
 import { connectMetaMask, getAccounts } from '../../utils/wallet',
-
+;
 export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support',
 
 export default function UseTokensModal({
@@ -93,4 +93,4 @@ export default function UseTokensModal({
       </div>
     </div>
   )
-}
+};

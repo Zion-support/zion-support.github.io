@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react',;
 type ProgressBarProps = { value: number },
 
 export default function ProgressBar({ value }: ProgressBarProps) {
@@ -8,4 +8,4 @@ export default function ProgressBar({ value }: ProgressBarProps) {
       <div className="h-3 bg-blue-600 rounded" style={{ width: `${pct}%` }} />
     </div>
   )
-}
+};

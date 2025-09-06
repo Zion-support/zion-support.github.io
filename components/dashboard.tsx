@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react',
-
+;
 export default function Dashboard() {
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams(),
   const tenantId = params.get('tenantId') || '',
@@ -62,3 +62,4 @@ export default function Dashboard() {
     </div>
   )
 }
+;

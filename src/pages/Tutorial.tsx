@@ -1,11 +1,11 @@
-import Link from "next/link",
-import { useRouter } from "next/router",
-import { TUTORIALS } from "@/data/tutorials",
-import { SEO } from "@/components/SEO",
-import { Button } from "@/components/ui/button",
-import { ArrowLeft } from 'lucide-react'
-import ReactMarkdown from "react-markdown",
-import type { Tutorial as TutorialType } from "@/types/tutorial",
+import Link from "next/link",;
+import { useRouter } from "next/router",;
+import { TUTORIALS } from "@/data/tutorials",;
+import { SEO } from "@/components/SEO",;
+import { Button } from "@/components/ui/button",;
+import { ArrowLeft } from 'lucide-react';
+import ReactMarkdown from "react-markdown",;
+import type { Tutorial as TutorialType } from "@/types/tutorial",;
 interface TutorialPageProps {
   tutorial?: TutorialType
 }
@@ -51,3 +51,4 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
     </>
   )
 }
+;

@@ -1,9 +1,9 @@
-import React from 'react',
-import Head from 'next/head',
-import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react',
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
+import React from 'react',;
+import Head from 'next/head',;
+import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react',;
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',;
+import Card from '../components/ui/Card',;
+import Button from '../components/ui/Button',;
 export default function AIEvalsPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
@@ -84,4 +84,4 @@ export default function AIEvalsPage() {
 			</section>
 		</QuantumHolographicMatrixBackground>
 	)
-}
+};

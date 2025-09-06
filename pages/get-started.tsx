@@ -1,5 +1,5 @@
-import React, { useState } from 'react',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react',;
+import { motion } from 'framer-motion',;
 import { 
   Rocket, CheckCircle, ArrowRight, Brain, Atom, 
   Shield, Zap, Users, Clock, Target, Star,
@@ -471,3 +471,4 @@ export default function GetStarted() {
     </div>
   )
 }
+;

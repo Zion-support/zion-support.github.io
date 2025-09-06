@@ -1,6 +1,6 @@
-import fs from 'fs',
-import path from 'path',
-import type { GetStaticProps } from 'next',
+import fs from 'fs',;
+import path from 'path',;
+import type { GetStaticProps } from 'next',;
 type Item = { source: string, title: string, url: string, date?: string, summary?: string },
 
 type Props = { items: Item[] },
@@ -40,4 +40,4 @@ export default function InnovationDigest({ items }: Props) {
       </ul>
     </div>
   )
-}
+};

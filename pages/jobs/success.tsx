@@ -1,4 +1,4 @@
-import Link from 'next/link',
+import Link from 'next/link',;
 export default function JobSuccessPage() {
   return (
     <div className="max-w-xl text-center mx-auto py-16">

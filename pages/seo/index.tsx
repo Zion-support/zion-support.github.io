@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react',;
 export default function SEOIndex() {
   const [slugs, setSlugs] = React.useState<string[]>([]),
 
@@ -21,4 +21,4 @@ export default function SEOIndex() {
       )}
     </div>
   )
-}
+};

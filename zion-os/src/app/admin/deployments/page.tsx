@@ -4,7 +4,7 @@ import { Rocket, CheckCircle, Clock, AlertCircle, XCircle } from 'lucide-react';
 
 const getStatusColor = (status: string) => {
   switch (status) {
-    case 'active':
+    case 'active':;
       return 'text-green-400';
     case 'pending':
       return 'text-yellow-400';
@@ -22,13 +22,13 @@ export default function DeploymentsPage() {
   const filter = 'all'; // This should be managed with state
   
   const filteredDeployments = deployments.filter(deployment => filter === 'all' || deployment.status === filter);
-  const getStatusCount = (status: string) => {
+  const getStatusCount = (status: string) => {;
     return deployments.filter(d => d.status === status).length;
   };
 
   const getStatusIcon = (status: string) => {
     switch (status) {
-      case 'active':
+      case 'active':;
         return <CheckCircle className="w-4 h-4 text-green-400" />;
       case 'pending':
         return <Clock className="w-4 h-4 text-yellow-400" />;
@@ -42,16 +42,16 @@ export default function DeploymentsPage() {
   };
 
   const getVerticalIcon = (_vertical: string) => {
-    // Return appropriate icon based on vertical
+    // Return appropriate icon based on vertical;
     return <div className="w-6 h-6 bg-blue-500 rounded" />;
   };
 
-  const formatDate = (date: string) => {
+  const formatDate = (date: string) => {;
     return new Date(date).toLocaleDateString();
   };
 
   const setFilter = (_newFilter: string) => {
-    // This should be managed with state
+    // This should be managed with state;
   };
 
   return (

@@ -1,6 +1,6 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
 import { 
   Newspaper,
   Calendar, 
@@ -16,7 +16,7 @@ import {
   Atom,
   Zap
 } from 'lucide-react',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 const NewsPage: React.FC = () => {
   const newsArticles = [
     {
@@ -196,9 +196,9 @@ const NewsPage: React.FC = () => {
       month: 'long', 
       day: 'numeric' 
     })
-  },
-import React from 'react',
-import SEO from '../components/SEO',
+  },;
+import React from 'react',;
+import SEO from '../components/SEO',;
 export default function NewsPage() {
   return (
     <UltraAdvancedFuturisticBackground>
@@ -246,16 +246,16 @@ export default function NewsPage() {
                     category === "All News"
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
-import React, { useState } from 'react',
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react',;
+import React from 'react',;
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
 import { 
   Newspaper, Globe, Award, Users, Rocket, Brain, 
   ArrowRight, ExternalLink, Calendar, Tag, Star
 } from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter',
+import EnhancedNavigation from '../components/EnhancedNavigation',;
+import EnhancedFooter from '../components/EnhancedFooter',;
 export default function NewsPage() {
   const newsItems = [
     {
@@ -1102,3 +1102,4 @@ export default function NewsPage() {
     </div>
   )
 }
+;

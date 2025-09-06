@@ -1,13 +1,13 @@
-import React from 'react',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import { motion } from 'framer-motion',;
 import { 
   Mail, Phone, MapPin, Globe, 
   Twitter, Linkedin, Github, 
   ArrowUp, Crown, Zap, Brain, Rocket,
   Shield, Users, BookOpen, Briefcase, Atom
 } from 'lucide-react',
-import Link from 'next/link',
-import { AnimatePresence } from 'framer-motion',
+import Link from 'next/link',;
+import { AnimatePresence } from 'framer-motion',;
 interface FooterLink {
   label: string,
   href: string,
@@ -396,4 +396,4 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   )
 },
 
-export default UltraAdvancedFuturisticFooter2025,
+export default UltraAdvancedFuturisticFooter2025,;

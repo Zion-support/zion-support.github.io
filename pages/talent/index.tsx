@@ -1,9 +1,9 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import { useMemo, useState } from 'react',
-import Pagination from '../../components/ui/Pagination',
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+import { useMemo, useState } from 'react',;
+import Pagination from '../../components/ui/Pagination',;
 import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges',
-
+;
 interface Talent {
   id: string,
   name: string,
@@ -61,4 +61,4 @@ const TalentDirectory: NextPage = () => {
   )
 },
 
-export default TalentDirectory,
+export default TalentDirectory,;

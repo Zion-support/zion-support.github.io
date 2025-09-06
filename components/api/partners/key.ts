@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from "next",
-import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth",
-import { v4 as uuidv4 } from "uuid",
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth",;
+import { v4 as uuidv4 } from "uuid",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST"),
@@ -27,4 +27,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   keys.push(newKey as any),
   await saveApiKeys(keys),
   return res.status(201).json({ apiKey: newKey.key })
-}
+};

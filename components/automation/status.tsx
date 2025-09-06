@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react',
-
+;
 export default function AutomationStatusPage() {
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null),
 
@@ -24,4 +24,4 @@ export default function AutomationStatusPage() {
       )}
     </div>
   )
-}
+};

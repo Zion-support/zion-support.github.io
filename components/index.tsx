@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react',
-import Head from 'next/head',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState, useEffect } from 'react',;
+import Head from 'next/head',;
+import { motion, AnimatePresence } from 'framer-motion',;
 import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
 } from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter',
-import EnhancedContactForm from '../components/EnhancedContactForm',
-import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase',
-import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection',
+import EnhancedNavigation from '../components/EnhancedNavigation',;
+import EnhancedFooter from '../components/EnhancedFooter',;
+import EnhancedContactForm from '../components/EnhancedContactForm',;
+import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase',;
+import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection',;
 export default function HomePage() {
   const [currentFeature, setCurrentFeature] = useState(0),
   const [isVisible, setIsVisible] = useState(false),
@@ -347,3 +347,4 @@ export default function HomePage() {
     </div>
   )
 }
+;

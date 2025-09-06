@@ -1,7 +1,7 @@
-import { useRouter } from 'next/router',
-import React, { useEffect, useMemo, useState } from 'react',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-import { useCurrentUser } from '../../utils/auth',
+import { useRouter } from 'next/router',;
+import React, { useEffect, useMemo, useState } from 'react',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+import { useCurrentUser } from '../../utils/auth',;
 const REASONS = [
   'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const,
 
@@ -111,4 +111,4 @@ function toBase64(file: File): Promise<string> {
     reader.onerror = reject,
     reader.readAsDataURL(file)
   })
-}
+};

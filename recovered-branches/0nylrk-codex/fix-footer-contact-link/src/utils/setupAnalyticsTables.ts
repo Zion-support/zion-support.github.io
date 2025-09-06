@@ -1,5 +1,5 @@
 
-import { supabase } from '@/integrations/supabase/client',
+import { supabase } from '@/integrations/supabase/client',;
 export async function ensureAnalyticsTablesExist() {
   try {
     // Check if analytics_events table exists
@@ -87,3 +87,4 @@ async function createAnalyticsTables() {
     // Tables creation failed, but we can still continue
   }
 }
+;

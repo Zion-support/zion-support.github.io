@@ -1,6 +1,6 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore
-import data from '../../data/remote-roles.json',
+import data from '../../data/remote-roles.json',;
 export default function RemoteRolesPage() {
   const items: any[] = (data?.items || []).slice(0, 60),
   return (
@@ -21,4 +21,4 @@ export default function RemoteRolesPage() {
       </div>
     </EnhancedLayout>
   )
-}
+};

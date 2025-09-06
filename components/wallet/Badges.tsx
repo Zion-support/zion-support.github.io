@@ -1,4 +1,4 @@
-import React from "react",
+import React from "react",;
 export type Badge = {
   id: string,
   label: string,
@@ -41,4 +41,4 @@ export default function Badges({ balance }: { balance: number }) {
       )}
     </div>
   )
-}
+};

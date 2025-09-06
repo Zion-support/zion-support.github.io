@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react',
-
+;
 type UserRole = 'talent' | 'client',
 
 type AuthContextType = {
@@ -36,4 +36,4 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
 export function useAuth() {
   return useContext(AuthContext)
-}
+};

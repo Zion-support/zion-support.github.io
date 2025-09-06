@@ -1,6 +1,6 @@
-import fs from 'fs',
-import path from 'path',
-import type { GetStaticProps } from 'next',
+import fs from 'fs',;
+import path from 'path',;
+import type { GetStaticProps } from 'next',;
 type Item = { source: string, name: string, url: string, description?: string, downloads?: number },
 
 type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } },
@@ -71,4 +71,4 @@ export default function TechRadar({ pypi, crates, github }: Props) {
       ))}
     </div>
   )
-}
+};

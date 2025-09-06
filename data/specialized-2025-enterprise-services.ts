@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface SpecializedEnterpriseService {
   id: string,
   name: string,
@@ -381,4 +381,4 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   }
 ],
 
-export default specializedEnterpriseServices,
+export default specializedEnterpriseServices,;

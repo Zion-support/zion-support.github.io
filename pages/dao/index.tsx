@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react',
-
+;
 type Holder = { address: string, amount: string },
 
 type Metrics = {
@@ -102,4 +102,4 @@ export default function DaoMetrics() {
       </section>
     </div>
   )
-}
+};

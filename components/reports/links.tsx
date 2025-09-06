@@ -1,4 +1,4 @@
-import { useEffect } from 'react',
+import { useEffect } from 'react',;
 export default function LinksReportRedirect() {
   useEffect(() => {
     if (typeof window !== 'undefined') {

@@ -1,7 +1,7 @@
-import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
-import { Button } from "@/components/ui/button",
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
+import { Button } from "@/components/ui/button",;
 import { Send } from 'lucide-react'
-
+;
 interface ChatInputProps {
   onSend: (message: string) => void,
   disabled?: boolean
@@ -55,4 +55,4 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
       </Button>
     </form>
   )
-}
+};

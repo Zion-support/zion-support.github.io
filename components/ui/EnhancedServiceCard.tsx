@@ -1,7 +1,7 @@
-import React from 'react',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import { motion } from 'framer-motion',;
 import { Star, ExternalLink, ArrowRight, TrendingUp, Users, Clock, Shield, Zap } from 'lucide-react',
-
+;
 interface EnhancedServiceCardProps {
   service: {
     id: string,
@@ -255,4 +255,4 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) =>
   )
 },
 
-export default EnhancedServiceCard,
+export default EnhancedServiceCard,;

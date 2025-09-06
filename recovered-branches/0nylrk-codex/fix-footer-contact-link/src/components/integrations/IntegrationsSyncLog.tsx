@@ -1,6 +1,6 @@
 
-import React from "react",
-import { Card } from "@/components/ui/card",
+import React from "react",;
+import { Card } from "@/components/ui/card",;
 import {
   Table,
   TableBody,
@@ -8,7 +8,7 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
+import { Badge } from "@/components/ui/badge",;
 // Sample data for integration sync logs
 const syncLogs = [
   {
@@ -97,3 +97,4 @@ export function IntegrationsSyncLog() {
     </Card>
   )
 }
+;

@@ -1,7 +1,7 @@
-import React from 'react',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import { motion } from 'framer-motion',;
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react',
-
+;
 interface QuantumHolographicCardProps {
   service: {
     id: string,
@@ -282,4 +282,4 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
   )
 },
 
-export default QuantumHolographicCard,
+export default QuantumHolographicCard,;

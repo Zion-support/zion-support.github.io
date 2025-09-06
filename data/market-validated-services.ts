@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface MarketValidatedService {
 	id: string,
 	name: string,
@@ -408,3 +408,4 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		contactInfo
 	}],
 
+;

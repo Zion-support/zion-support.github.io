@@ -1,8 +1,8 @@
-import React from 'react',
-import Head from 'next/head',
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',
+import React from 'react',;
+import Head from 'next/head',;
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',;
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
-
+;
 export default function AIEvalsPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
@@ -79,4 +79,4 @@ export default function AIEvalsPage() {
 			</div>
 		</QuantumHolographicMatrixBackground>
 	)
-}
+};

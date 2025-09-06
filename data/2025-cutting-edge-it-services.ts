@@ -204,4 +204,4 @@ export const cuttingEdgeITServices2025 = [
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
   }
-],
+],;

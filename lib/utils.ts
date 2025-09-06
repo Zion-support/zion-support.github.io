@@ -39,7 +39,7 @@ export function debounce<T extends (...args: any[]) => any>(
   wait: number
 ): (...args: Parameters<T>) => void {
   let timeout: ReturnType<typeof setTimeout>;
-  return (..._args: Parameters<T>) => {
+  return (..._args: Parameters<T>) => {;
     clearTimeout(timeout);
     timeout = setTimeout(() => func(..._args), wait);
   };
@@ -51,7 +51,7 @@ export function throttle<T extends (...args: any[]) => any>(
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
   return (..._args: Parameters<T>) => {
-    if (!inThrottle) {
+    if (!inThrottle) {;
       func(..._args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);

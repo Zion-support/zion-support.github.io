@@ -1,7 +1,7 @@
-import { useState } from 'react',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-import { useRouter } from 'next/router',
-import type { GrantCategory } from '../../types/grants',
+import { useState } from 'react',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+import { useRouter } from 'next/router',;
+import type { GrantCategory } from '../../types/grants',;
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 
 export default function ApplyGrantPage() {
@@ -113,4 +113,4 @@ export default function ApplyGrantPage() {
       </div>
     </EnhancedLayout>
   )
-}
+};

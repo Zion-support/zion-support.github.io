@@ -261,4 +261,4 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     rating: 4.7,
     reviews: 1400
   }
-],
+],;

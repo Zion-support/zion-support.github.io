@@ -1,7 +1,7 @@
 
-import { GradientHeading } from "@/components/GradientHeading",
+import { GradientHeading } from "@/components/GradientHeading",;
 import { Clock, Map, DollarSign } from "lucide-react",
-
+;
 export function PageHero() {
   return (
     <div className="text-center mb-12">

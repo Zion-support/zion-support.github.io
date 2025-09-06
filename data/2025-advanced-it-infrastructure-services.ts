@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedITInfrastructureService {
   id: string,
   name: string,
@@ -638,4 +638,4 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4.7,
     reviews: 24
   }
-],
+],;

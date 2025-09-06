@@ -1,5 +1,5 @@
-import React from 'react',
-import type { BlogAuthor } from '@/types/blog',
+import React from 'react',;
+import type { BlogAuthor } from '@/types/blog',;
 interface AuthorBioProps {
   author: BlogAuthor
 }
@@ -25,3 +25,4 @@ export function AuthorBio({ author }: AuthorBioProps) {
     </div>
   )
 }
+;

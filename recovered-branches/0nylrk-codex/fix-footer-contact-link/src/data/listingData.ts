@@ -1,6 +1,6 @@
 
-import { ProductListing } from "@/types/listings",
-import { SearchSuggestion } from "@/types/search",
+import { ProductListing } from "@/types/listings",;
+import { SearchSuggestion } from "@/types/search",;
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
@@ -173,3 +173,4 @@ export const generateFilterOptions = () => {
 
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0)),
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0)),
+;

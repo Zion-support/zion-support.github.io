@@ -2081,3 +2081,4 @@ export const serviceCategories = [
   'Customer Service & SupportSupply Chain & LogisticsHuman ResourcesLegal TechnologySales & MarketingBlockchain & Web3IoT & Edge ComputingCloud & Infrastructure',
   'Video & MediaSEO & Digital MarketingAutomation & RoboticsEdge ComputingPredictive Analytics'
 ],
+;

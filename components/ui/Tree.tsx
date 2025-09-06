@@ -1,5 +1,5 @@
 import React, { useState } from "react",
-
+;
 export interface TreeNode {
   name: string,
   path: string,
@@ -76,4 +76,4 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
   )
 }
 
-export default Tree,
+export default Tree,;

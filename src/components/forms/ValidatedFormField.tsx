@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react',
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',
-import { Input } from '@/components/ui/input',
-import { Textarea } from '@/components/ui/textarea',
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',
-import { Checkbox } from '@/components/ui/checkbox',
-import { cn } from '@/lib/utils',
-import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
-import { Button } from '@/components/ui/button',
+import React, { useState, useEffect } from 'react',;
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
+import { Input } from '@/components/ui/input',;
+import { Textarea } from '@/components/ui/textarea',;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',;
+import { Checkbox } from '@/components/ui/checkbox',;
+import { cn } from '@/lib/utils',;
+import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
 interface ValidationRule {
   required?: boolean,
   minLength?: number,
@@ -332,4 +332,4 @@ export const commonValidations = {
       }
       return null
     }
-  }}, 
+  }}, ;

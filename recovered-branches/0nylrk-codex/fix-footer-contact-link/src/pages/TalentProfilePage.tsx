@@ -1,20 +1,20 @@
 
-import React, { useState, useEffect } from "react",
-import { useParams, useNavigate } from "react-router-dom",
-import { TalentProfile } from "@/components/profile/TalentProfile",
-import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
-import { ProfileErrorState } from "@/components/profile/ProfileErrorState",
-import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton",
-import { useTalentProfile } from "@/hooks/useTalentProfile",
-import { HireRequestModal } from "@/components/profile/hire-request",
-import { useAuthStatus } from "@/hooks/talent",
-import { MessageTalentModal } from "@/components/messaging/MessageTalentModal",
-import { StickyAction } from "@/components/ui/sticky-action",
-import { Handshake, MessageSquare } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { useAuth } from "@/hooks/useAuth",
-import { UserProfile } from "@/types/auth",
-import { toast } from "@/hooks/use-toast",
+import React, { useState, useEffect } from "react",;
+import { useParams, useNavigate } from "react-router-dom",;
+import { TalentProfile } from "@/components/profile/TalentProfile",;
+import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",;
+import { ProfileErrorState } from "@/components/profile/ProfileErrorState",;
+import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton",;
+import { useTalentProfile } from "@/hooks/useTalentProfile",;
+import { HireRequestModal } from "@/components/profile/hire-request",;
+import { useAuthStatus } from "@/hooks/talent",;
+import { MessageTalentModal } from "@/components/messaging/MessageTalentModal",;
+import { StickyAction } from "@/components/ui/sticky-action",;
+import { Handshake, MessageSquare } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { useAuth } from "@/hooks/useAuth",;
+import { UserProfile } from "@/types/auth",;
+import { toast } from "@/hooks/use-toast",;
 export default function TalentProfilePage() {
   // Cast to specify the expected route param type since useParams may be untyped
   const { id } = useParams() as { id?: string },
@@ -137,3 +137,4 @@ export default function TalentProfilePage() {
     </div>
   )
 }
+;

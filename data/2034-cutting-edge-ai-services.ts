@@ -58,4 +58,4 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		link: 'https://ziontechgroup.com/services/ai-creative-studio',
 		realService: true
 	}
-],
+],;

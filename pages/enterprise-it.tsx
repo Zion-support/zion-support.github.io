@@ -1,8 +1,8 @@
-import React from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout',
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
 import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
-
+;
 export default function EnterpriseITPage() {
   const features = [
     'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'],
@@ -61,4 +61,4 @@ export default function EnterpriseITPage() {
       </div>
     </Layout>
   )
-}
+};

@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react",
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
-import { Input } from "@/components/ui/input",
-import { Card } from "@/components/ui/card",
-import { Search } from 'lucide-react'
-import { ListingScoreCard } from "@/components/ListingScoreCard",
-import { captureException } from "@/utils/sentry",
-import Skeleton from "@/components/ui/skeleton",
-import { useDebounce } from "@/hooks/useDebounce",
-import { useIsMounted } from "@/hooks/useIsMounted",
-import { z } from "zod",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useEffect, useState } from "react",;
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
+import { Input } from "@/components/ui/input",;
+import { Card } from "@/components/ui/card",;
+import { Search } from 'lucide-react';
+import { ListingScoreCard } from "@/components/ListingScoreCard",;
+import { captureException } from "@/utils/sentry",;
+import Skeleton from "@/components/ui/skeleton",;
+import { useDebounce } from "@/hooks/useDebounce",;
+import { useIsMounted } from "@/hooks/useIsMounted",;
+import { z } from "zod",;
+import {logErrorToProduction} from '@/utils/productionLogger',;
 const listingSchema = z.object({
   id: z.string(),
   title: z.string(),
@@ -207,3 +207,4 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     </div>
   )
 }
+;

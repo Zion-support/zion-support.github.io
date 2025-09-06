@@ -1,9 +1,9 @@
-import React from 'react',
-import Head from 'next/head',
-import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
+import React from 'react',;
+import Head from 'next/head',;
+import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react',;
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
+import Card from '../components/ui/Card',;
+import Button from '../components/ui/Button',;
 export default function AIGuardrailsPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
@@ -83,4 +83,4 @@ export default function AIGuardrailsPage() {
 			</section>
 		</UltraAdvancedFuturisticBackground>
 	)
-}
+};

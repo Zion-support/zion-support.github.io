@@ -1,7 +1,7 @@
 
-import React from "react",
+import React from "react",;
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
-
+;
 interface BadgeEarnedProps {
   badge: BadgeKey,
   size?: number,
@@ -52,3 +52,4 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
     </div>
   )
 },
+;

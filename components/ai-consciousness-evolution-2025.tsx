@@ -581,4 +581,4 @@ export default function AIConsciousnessEvolution2025() {
       </section>
     </Layout>
   )
-}
+};

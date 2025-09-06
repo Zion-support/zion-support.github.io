@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react',
-import type { GetStaticProps } from 'next',
-import content from '../../../data/docs/content.json',
+import React, { useEffect } from 'react',;
+import type { GetStaticProps } from 'next',;
+import content from '../../../data/docs/content.json',;
 export type Section = {
   id: string,
   title: string,
@@ -45,4 +45,4 @@ export default function PrintDocs({ docs }: PageProps) {
       </div>
     </div>
   )
-}
+};

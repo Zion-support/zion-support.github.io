@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react',
-import SEO from '../components/SEO',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState, useEffect } from 'react',;
+import SEO from '../components/SEO',;
+import { motion, AnimatePresence } from 'framer-motion',;
 import {
   Search, Grid, List, Star, CheckCircle, ArrowRight, Check,
   Brain, Atom, Shield, Building, Globe,
@@ -8,9 +8,9 @@ import {
 } from 'lucide-react',
 
 // Import our new service data
-import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion',
-import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion',
-import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure',
+import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion',;
+import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion',;
+import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure',;
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -593,4 +593,4 @@ export default function AdvancedServicesShowcase() {
       </div>
     </div>
   )
-}
+};

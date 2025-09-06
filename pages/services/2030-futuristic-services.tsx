@@ -1,16 +1,16 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin } from 'lucide-react',
-import UltraFuturisticBackground2031 from '../../components/ui/UltraFuturisticBackground2031',
-import UltraFuturisticNavigation2031 from '../../components/layout/UltraFuturisticNavigation2031',
-import UltraFuturisticFooter2030 from '../../components/layout/UltraFuturisticFooter2030',
-import { futuristicAIServices2030 } from '../../data/2030-futuristic-ai-services',
-import { quantumEmergingTechServices2030 } from '../../data/2030-quantum-emerging-tech',
-import { enterpriseITSolutions2030 } from '../../data/2030-enterprise-it-solutions',
-import { spaceMetaverseTechServices2030 } from '../../data/2030-space-metaverse-tech',
-import { innovativeMicroSaasServices2030 } from '../../data/2030-innovative-micro-saas',
-import { researchDevelopmentServices2030 } from '../../data/2030-research-development',
+import React from 'react',;
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
+import { ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin } from 'lucide-react',;
+import UltraFuturisticBackground2031 from '../../components/ui/UltraFuturisticBackground2031',;
+import UltraFuturisticNavigation2031 from '../../components/layout/UltraFuturisticNavigation2031',;
+import UltraFuturisticFooter2030 from '../../components/layout/UltraFuturisticFooter2030',;
+import { futuristicAIServices2030 } from '../../data/2030-futuristic-ai-services',;
+import { quantumEmergingTechServices2030 } from '../../data/2030-quantum-emerging-tech',;
+import { enterpriseITSolutions2030 } from '../../data/2030-enterprise-it-solutions',;
+import { spaceMetaverseTechServices2030 } from '../../data/2030-space-metaverse-tech',;
+import { innovativeMicroSaasServices2030 } from '../../data/2030-innovative-micro-saas',;
+import { researchDevelopmentServices2030 } from '../../data/2030-research-development',;
 export default function FuturisticServices2030Page() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -321,4 +321,4 @@ export default function FuturisticServices2030Page() {
       </UltraFuturisticBackground2031>
     </>
   )
-}
+};

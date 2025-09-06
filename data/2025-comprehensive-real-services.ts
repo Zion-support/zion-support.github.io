@@ -399,4 +399,4 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.9,
     reviews: 520
   }
-],
+],;

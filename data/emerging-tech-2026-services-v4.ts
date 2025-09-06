@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026ServiceV4 {
   id: string,
   name: string,
@@ -400,4 +400,4 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     rating: 4.8,
     reviews: 25
   }
-],
+],;

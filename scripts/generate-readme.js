@@ -113,4 +113,4 @@ if (require.main === module) {
   generateReadme()
 }
 
-module.exports = { generateReadme },
+module.exports = { generateReadme },;

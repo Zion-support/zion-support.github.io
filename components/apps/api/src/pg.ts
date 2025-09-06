@@ -1,5 +1,5 @@
 import { Pool, PoolClient } from 'pg',
-
+;
 let pool: Pool | null = null,
 
 export function getPool(): Pool {
@@ -23,4 +23,4 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
   } finally {
     client.release()
   }
-}
+};

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react',
-
+;
 export default function Reports() {
   const [uptime, setUptime] = useState<any[]>([]),
   const [seo, setSeo] = useState<any>({}),
@@ -65,4 +65,4 @@ export default function Reports() {
       </section>
     </div>
   )
-}
+};

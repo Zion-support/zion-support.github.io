@@ -1,9 +1,9 @@
 
-import React from 'react',
-import { Navigate } from 'react-router-dom',
-import { useAuth } from '@/hooks/useAuth',
-import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',
-import { useWhitelabel } from '@/context/WhitelabelContext',
+import React from 'react',;
+import { Navigate } from 'react-router-dom',;
+import { useAuth } from '@/hooks/useAuth',;
+import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',;
+import { useWhitelabel } from '@/context/WhitelabelContext',;
 export interface ProtectedRouteProps {
   children: React.ReactNode,
   adminOnly?: boolean,
@@ -53,3 +53,4 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 },
 
 export default ProtectedRoute,
+;

@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { getFraudStore } from '../../../../utils/fraud/store',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { getFraudStore } from '../../../../utils/fraud/store',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     res.status(405).json({ error: 'Method not allowed' }),
@@ -9,4 +9,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const store = getFraudStore(),
   const report = await store.generateMonthlyReport(month),
   res.status(200).json(report)
-}
+};

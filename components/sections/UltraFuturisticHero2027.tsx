@@ -1,6 +1,6 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Target, Cpu, Database, Cloud, Lock, ArrowRight, 
@@ -219,4 +219,4 @@ export default function UltraFuturisticHero2027() {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none" />
     </section>
   )
-}
+};

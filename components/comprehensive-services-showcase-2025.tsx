@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState, useEffect } from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import { motion, AnimatePresence } from 'framer-motion',;
 import { 
   Search, Filter, Grid3X3, List, 
   Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings,
@@ -10,10 +10,10 @@ import {
 } from 'lucide-react',
 
 // Import service data
-import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services',
-import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced',
-import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced',
-import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services',
+import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services',;
+import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced',;
+import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced',;
+import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services',;
 interface Service {
   id: string,
   name: string,
@@ -585,3 +585,4 @@ export default function ComprehensiveServicesShowcase2025() {
     </Layout>
   )
 }
+;

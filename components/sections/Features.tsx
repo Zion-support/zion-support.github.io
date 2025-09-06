@@ -1,6 +1,6 @@
-import React from 'react',
-import Card from '../ui/Card',
-import { Zap } from 'lucide-react',
+import React from 'react',;
+import Card from '../ui/Card',;
+import { Zap } from 'lucide-react',;
 interface Feature {
   icon: React.ReactNode,
   title: string,
@@ -73,4 +73,4 @@ const Features: React.FC<FeaturesProps> = ({
   )
 },
 
-export default Features,
+export default Features,;

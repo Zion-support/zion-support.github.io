@@ -1,7 +1,7 @@
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { HelpCategory } from "./types",
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { HelpCategory } from "./types",;
 interface HelpCategoryListProps {
   categories: HelpCategory[],
   onCategorySelect: (categoryId: string) => void,
@@ -59,3 +59,4 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
     </div>
   )
 }
+;

@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { AccessToken } from 'livekit-server-sdk',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { AccessToken } from 'livekit-server-sdk',;
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '',
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || '',
 const LIVEKIT_HOST = process.env.LIVEKIT_HOST || '',
@@ -42,4 +42,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error('Token error', err),
     return res.status(500).json({ error: 'Failed to create token' })
   }
-}
+};

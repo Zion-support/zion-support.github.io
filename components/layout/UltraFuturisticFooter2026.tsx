@@ -1,6 +1,6 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
 import { 
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, 
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap,
@@ -309,4 +309,4 @@ export default function UltraFuturisticFooter2026() {
       </div>
     </footer>
   )
-}
+};

@@ -212,4 +212,4 @@ export default function ProposalGenerator() {
       </div>
     </div>
   )
-}
+};

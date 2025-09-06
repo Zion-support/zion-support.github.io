@@ -1,6 +1,6 @@
 
-import { useState, useEffect } from "react",
-import { Company } from "@/components/enterprise/workspace/CompanyDashboard",
+import { useState, useEffect } from "react",;
+import { Company } from "@/components/enterprise/workspace/CompanyDashboard",;
 export function useCompanyWorkspace(companySlug?: string) {
   const [company, setCompany] = useState<Company | null>(null),
   const [isLoading, setIsLoading] = useState(true),
@@ -51,3 +51,4 @@ export function useCompanyWorkspace(companySlug?: string) {
 
   return { company, isLoading, error }
 }
+;

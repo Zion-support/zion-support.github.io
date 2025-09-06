@@ -1,5 +1,5 @@
 
-import React from "react",
+import React from "react",;
 import {
   Table,
   TableBody,
@@ -7,11 +7,11 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { Download, FileText, Search } from "lucide-react",
-import { Input } from "@/components/ui/input",
-import { toast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { Download, FileText, Search } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { toast } from "@/hooks/use-toast",;
 export function InvoiceHistory() {
   // Mock invoice data
   const invoices = [
@@ -146,3 +146,4 @@ export function InvoiceHistory() {
     </div>
   )
 }
+;

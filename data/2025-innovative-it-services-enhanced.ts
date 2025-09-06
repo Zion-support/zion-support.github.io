@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeITService2025 {
   id: string,
   name: string,
@@ -1075,4 +1075,4 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.8,
     reviews: 52
   }
-],
+],;

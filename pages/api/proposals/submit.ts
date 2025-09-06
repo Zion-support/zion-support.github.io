@@ -1,8 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import nodemailer from 'nodemailer',
-import crypto from 'crypto',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import nodemailer from 'nodemailer',;
+import crypto from 'crypto',;
 import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals',
-
+;
 async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {
   const host = process.env.EMAIL_HOST,
   const port = Number(process.env.EMAIL_PORT || 587),
@@ -43,4 +43,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Submission failed' })
   }
-}
+};

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface RealMarketService {
   id: string,
   name: string,
@@ -2175,4 +2175,4 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.6,
     reviews: 36
   }
-],
+],;

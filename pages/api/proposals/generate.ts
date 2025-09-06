@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { OpenAI } from 'openai',
-import { createProposal } from '../../../utils/data/proposals',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { OpenAI } from 'openai',;
+import { createProposal } from '../../../utils/data/proposals',;
 const SYSTEM_PROMPT = `You are a policy and development proposal writer for global institutions (UN, World Bank, ILO, etc.). Write clear, structured proposals with measurable outcomes, SDG alignment, implementation roadmap, governance, monitoring & evaluation, and risk mitigation.`,
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -44,4 +44,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Failed to generate proposal' })
   }
-}
+};

@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next',;
 const bwipjs = require('bwip-js'),
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -20,4 +20,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Failed to render barcode' })
   }
-}
+};

@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react',
-import { motion } from 'framer-motion',
+import React, { useEffect, useRef } from 'react',;
+import { motion } from 'framer-motion',;
 export default function UltraFuturisticBackground2035() {
   const canvasRef = useRef<HTMLCanvasElement>(null),
 
@@ -351,4 +351,4 @@ export default function UltraFuturisticBackground2035() {
       </div>
     </>
   )
-}
+};

@@ -1,8 +1,8 @@
 
-import React, { useState, useEffect } from "react",
-import { safeStorage } from "@/utils/safeStorage",
-import { X } from 'lucide-react'
-import { useIsMobile } from "@/hooks/use-mobile",
+import React, { useState, useEffect } from "react",;
+import { safeStorage } from "@/utils/safeStorage",;
+import { X } from 'lucide-react';
+import { useIsMobile } from "@/hooks/use-mobile",;
 export const AppStoreBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
   const isMobile = useIsMobile(),
@@ -55,3 +55,4 @@ export const AppStoreBanner: React.FC = () => {
     </div>
   )
 },
+;

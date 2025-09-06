@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react',
-import Link from 'next/link',
-import { useRole } from '../context/RoleContext',
+import React, { useEffect, useState } from 'react',;
+import Link from 'next/link',;
+import { useRole } from '../context/RoleContext',;
 export default function OnboardingWizard() {
   const { role, setRole } = useRole(),
   const [open, setOpen] = useState(false),
@@ -72,4 +72,4 @@ export default function OnboardingWizard() {
       </div>
     </div>
   )
-}
+};

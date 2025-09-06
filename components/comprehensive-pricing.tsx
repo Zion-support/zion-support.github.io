@@ -1,13 +1,13 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react',
-import Button from '../components/ui/Button',
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',
-import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '../data/revolutionary-micro-saas-services',
-import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services',
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react',;
+import Button from '../components/ui/Button',;
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',;
+import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '../data/revolutionary-micro-saas-services',;
+import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services',;
 import { motion, AnimatePresence } from 'framer-motion',
-
+;
 export default function ComprehensivePricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All'),
   const [priceRange, setPriceRange] = useState('All'),
@@ -649,4 +649,4 @@ export default function ComprehensivePricingPage() {
       </div>
     </UltraFuturisticBackground>
   )
-}
+};

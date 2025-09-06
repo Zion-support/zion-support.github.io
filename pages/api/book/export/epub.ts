@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { randomUUID } from 'crypto',
-import { promises as fs } from 'fs',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { randomUUID } from 'crypto',;
+import { promises as fs } from 'fs',;
 const Epub = require('epub-gen'),
 
 export const config = {
@@ -55,4 +55,4 @@ function escapeHtml(s: string): string {
     .replace(/>/g, '&gt,')
     .replace(/"/g, '&quot,')
     .replace(/'/g, '&#039,')
-}
+};

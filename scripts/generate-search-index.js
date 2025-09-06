@@ -102,4 +102,4 @@ if (require.main === module) {
   generateSearchIndex()
 }
 
-module.exports = { generateSearchIndex },
+module.exports = { generateSearchIndex },;

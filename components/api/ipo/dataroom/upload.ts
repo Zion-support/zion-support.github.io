@@ -1,9 +1,9 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import formidable from 'formidable',
-import fs from 'fs',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import formidable from 'formidable',;
+import fs from 'fs',;
+import path from 'path',;
 import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage',
-
+;
 export const config = { api: { bodyParser: false } },
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -23,4 +23,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     appendAuditLog({ type: 'file_upload', section, name: path.basename(targetPath) }),
     res.status(200).json({ ok: true })
   })
-}
+};

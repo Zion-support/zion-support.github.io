@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
-import { ensureAdminFromApi } from '../../../../utils/auth',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+import { ensureAdminFromApi } from '../../../../utils/auth',;
 type EventRow = {
   name: string,
   page?: string,
@@ -79,5 +79,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 })),
 
-  res.status(200).json({ pagesMostUsed, events, line, funnel })
-}
+  res.status(200).json({ pagesMostUsed, events, line, funnel });
+};

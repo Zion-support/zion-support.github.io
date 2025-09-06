@@ -270,3 +270,4 @@ export const PERFORMANCE_MONITOR_PRICING = {
     ]
   }
 },
+;

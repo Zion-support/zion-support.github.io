@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from 'react',
-import Head from 'next/head',
+import { useEffect, useMemo, useState } from 'react',;
+import Head from 'next/head',;
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
 interface ConnectionMap { [providerId: string]: any }
 
@@ -190,4 +190,4 @@ function ManualOverrideForm() {
       </div>
     </div>
   )
-}
+};

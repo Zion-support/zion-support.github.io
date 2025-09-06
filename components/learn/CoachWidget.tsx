@@ -1,5 +1,5 @@
 import React, { useState } from 'react',
-
+;
 export default function CoachWidget() {
   const [input, setInput] = useState(''),
   const [reply, setReply] = useState<string | null>(null),
@@ -31,4 +31,4 @@ export default function CoachWidget() {
       {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
     </div>
   )
-}
+};

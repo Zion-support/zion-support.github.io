@@ -21,5 +21,5 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
     </div>
   )
 },
-
+;
 export default ReviewSummary;

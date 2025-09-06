@@ -1,8 +1,8 @@
 
-import { Button } from "./ui/button",
-import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
-import { toast } from "./ui/use-toast",
-import { useTranslation } from 'react-i18next',
+import { Button } from "./ui/button",;
+import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
+import { toast } from "./ui/use-toast",;
+import { useTranslation } from 'react-i18next',;
 export function SocialShareSection() {
   const { t } = useTranslation(),
   
@@ -96,3 +96,4 @@ export function SocialShareSection() {
     </section>
   )
 }
+;

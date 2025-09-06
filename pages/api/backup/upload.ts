@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next',;
 import { Web3Storage, File } from 'web3.storage',
-
+;
 const TOKEN = process.env.WEB3_STORAGE_TOKEN || '',
 
 export const config = { api: { bodyParser: { sizeLimit: '2mb' } } },
@@ -17,4 +17,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(500).json({ error: e?.message || 'Backup failed' })
   }
-}
+};

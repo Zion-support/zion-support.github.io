@@ -1,9 +1,9 @@
-import { useNavigate } from "react-router-dom",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { ProductListing } from "@/types/listings",
+import { useNavigate } from "react-router-dom",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { ProductListing } from "@/types/listings",;
 import { Star, DollarSign } from "lucide-react",
-
+;
 interface ProductListingCardProps {
   listing: ProductListing,
   view?: 'grid' | 'list',
@@ -157,4 +157,4 @@ export function ProductListingCard({
       </div>
     </div>
   )
-}
+};

@@ -40,4 +40,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 }),
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201),
   return res.status(201).json({ id: record.id })
-}
+};

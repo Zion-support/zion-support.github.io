@@ -1,7 +1,7 @@
-import React from 'react',
-import Link from 'next/link',
+import React from 'react',;
+import Link from 'next/link',;
 import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react',
-
+;
 export default function FuturisticFooter() {
   const currentYear = new Date().getFullYear(),
   
@@ -187,4 +187,4 @@ export default function FuturisticFooter() {
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
   )
-}
+};

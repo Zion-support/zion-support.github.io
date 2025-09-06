@@ -1,6 +1,6 @@
 
-import { useState } from "react",
-import { useForm } from "react-hook-form",
+import { useState } from "react",;
+import { useForm } from "react-hook-form",;
 import { 
   Card,
   CardContent,
@@ -16,10 +16,10 @@ import {
   FormLabel,
   FormMessage
 } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { ForumCategory } from "@/types/community",
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { ForumCategory } from "@/types/community",;
 interface PostFormValues {
   title: string,
   content: string,
@@ -148,3 +148,4 @@ export const PostForm = ({
 },
 
 export default PostForm,
+;

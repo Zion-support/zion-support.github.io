@@ -1,8 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { v4 as uuidv4 } from 'uuid',
-import { readJsonFile, writeJsonFile } from '../../utils/db',
-import type { Job } from '../../utils/types',
-import { rateLimit } from '../../utils/rateLimit',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { v4 as uuidv4 } from 'uuid',;
+import { readJsonFile, writeJsonFile } from '../../utils/db',;
+import type { Job } from '../../utils/types',;
+import { rateLimit } from '../../utils/rateLimit',;
 const FILE = 'jobs.json',
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -64,4 +64,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.setHeader('AllowGET, POST'),
   res.status(405).end('Method Not Allowed')
-}
+};

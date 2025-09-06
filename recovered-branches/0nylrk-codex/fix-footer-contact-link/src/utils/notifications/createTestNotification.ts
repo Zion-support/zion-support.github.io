@@ -1,6 +1,6 @@
 
-import { NotificationType } from './types',
-import { createNotification } from './createNotification',
+import { NotificationType } from './types',;
+import { createNotification } from './createNotification',;
 /**
  * Demo function to create test notifications for the current user
  */
@@ -35,3 +35,4 @@ export async function createTestNotification(userId: string) {
     actionText: actions[randomType].text
   })
 }
+;

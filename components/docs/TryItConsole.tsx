@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react',
-
+;
 interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
   path: string, // full URL or relative
@@ -68,4 +68,4 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
       </div>
     </div>
   )
-}
+};

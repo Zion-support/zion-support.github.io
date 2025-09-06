@@ -1,21 +1,21 @@
-import React, { useState } from 'react',
-import { useMessaging } from '@/context/MessagingContext',
-import Link from 'next/link',
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation',
-import { Logo } from '@/components/header/Logo',
-import { useTranslation } from 'react-i18next',
-import { Menu, X } from 'lucide-react'
-import { MobileMenu } from '@/components/header/MobileMenu',
-import { useIsMobile } from '@/hooks/use-mobile',
-import { MobileBottomNav } from '@/components/header/MobileBottomNav',
-import { PointsBadge } from '@/components/loyalty/PointsBadge',
-import { LoginModal } from '@/components/auth/LoginModal',
-import { useAuth } from '@/hooks/useAuth',
-import { UserMenu } from '@/components/header/UserMenu',
-import { useSelector } from 'react-redux',
-import type { RootState } from '@/store',
+import React, { useState } from 'react',;
+import { useMessaging } from '@/context/MessagingContext',;
+import Link from 'next/link',;
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation',;
+import { Logo } from '@/components/header/Logo',;
+import { useTranslation } from 'react-i18next',;
+import { Menu, X } from 'lucide-react';
+import { MobileMenu } from '@/components/header/MobileMenu',;
+import { useIsMobile } from '@/hooks/use-mobile',;
+import { MobileBottomNav } from '@/components/header/MobileBottomNav',;
+import { PointsBadge } from '@/components/loyalty/PointsBadge',;
+import { LoginModal } from '@/components/auth/LoginModal',;
+import { useAuth } from '@/hooks/useAuth',;
+import { UserMenu } from '@/components/header/UserMenu',;
+import { useSelector } from 'react-redux',;
+import type { RootState } from '@/store',;
 import { cn } from '@/lib/utils', // Import cn utility
-import { useRouter } from 'next/router',
+import { useRouter } from 'next/router',;
 export function AppHeader() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
@@ -139,3 +139,4 @@ export function AppHeader() {
     </>
   )
 }
+;

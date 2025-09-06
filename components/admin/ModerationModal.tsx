@@ -1,5 +1,5 @@
 import React, { useState } from 'react',
-
+;
 export type ModerationModalProps = {
   flag: any | null,
   onClose: () => void,
@@ -67,4 +67,4 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
       </div>
     </div>
   )
-}
+};

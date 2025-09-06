@@ -1,4 +1,4 @@
-import OpenAI from 'openai',
+import OpenAI from 'openai',;
 type OpenAIClient = OpenAI,
 
 export function createOpenAIClient(apiKey: string): OpenAIClient {
@@ -16,4 +16,4 @@ Add responsibilities, requirements, and benefits in bullet points.`,
     input: prompt
   }),
   return completion.output_text
-}
+};

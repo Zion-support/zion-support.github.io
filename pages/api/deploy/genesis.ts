@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
-
+;
 function summarizeModules(modules: Record<string, boolean>, bonus: Record<string, boolean>) {
   const active = [
     ...Object.entries(modules).filter(([, v]) => v).map(([k]) => `/${k}`),
@@ -85,4 +85,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal error' })
   }
-}
+};

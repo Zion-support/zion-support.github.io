@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react',
-import { motion } from 'framer-motion',
+import React, { useEffect, useRef } from 'react',;
+import { motion } from 'framer-motion',;
 interface EnhancedFuturisticBackgroundProps {
   children: React.ReactNode,
   className?: string,
@@ -334,4 +334,4 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
   )
 },
 
-export default EnhancedFuturisticBackground,
+export default EnhancedFuturisticBackground,;

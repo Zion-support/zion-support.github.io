@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react',
-import CourseCard, { Course } from '../../components/learn/CourseCard',
-import FilterBar from '../../components/learn/FilterBar',
+import { useEffect, useState } from 'react',;
+import CourseCard, { Course } from '../../components/learn/CourseCard',;
+import FilterBar from '../../components/learn/FilterBar',;
 export default function LearnMarketplace() {
   const [filters, setFilters] = useState({ category: '', level: '', isFree: '' }),
   const [courses, setCourses] = useState<Course[]>([]),
@@ -43,4 +43,4 @@ export default function LearnMarketplace() {
       )}
     </div>
   )
-}
+};

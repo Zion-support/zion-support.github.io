@@ -1,6 +1,6 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Award } from "lucide-react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Award } from "lucide-react",;
 interface LeaderboardEntry {
   rank: number,
   name: string,
@@ -59,3 +59,4 @@ export function ReferralLeaderboard() {
     </Card>
   )
 }
+;

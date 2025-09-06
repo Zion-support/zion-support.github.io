@@ -1,7 +1,7 @@
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Referral, ReferralStatus } from "@/types/referrals",
-import { Badge } from "@/components/ui/badge",
-import { formatDate } from "@/utils/referralUtils",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
+import { Referral, ReferralStatus } from "@/types/referrals",;
+import { Badge } from "@/components/ui/badge",;
+import { formatDate } from "@/utils/referralUtils",;
 interface ReferralTableProps {
   referrals: Referral[],
   isLoading: boolean
@@ -83,3 +83,4 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
     </Table>
   )
 }
+;

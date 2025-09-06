@@ -61,7 +61,7 @@ const AnimatedBackground: React.FC = () => {
           backgroundSize: '50px 50px',
         }}
       />
-    </div>
+    </div>;
   );
 };
 

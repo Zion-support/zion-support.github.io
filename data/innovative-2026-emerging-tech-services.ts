@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026EmergingTechService {
   id: string,
   name: string,
@@ -327,4 +327,4 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     const price = parseInt(service.price.replace('$', '').replace(, '')),
     return price >= minPrice && price <= maxPrice
   })
-},
+},;

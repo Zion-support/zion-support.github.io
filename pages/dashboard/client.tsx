@@ -1,7 +1,7 @@
-import EnhancedCard from '../../components/ui/EnhancedCard',
-import EnhancedButton from '../../components/ui/EnhancedButton',
+import EnhancedCard from '../../components/ui/EnhancedCard',;
+import EnhancedButton from '../../components/ui/EnhancedButton',;
 import { useEffect, useState } from 'react',
-
+;
 const STEPS = [
   { key: 'job', label: 'Job posted' },
   { key: 'invite', label: 'First invite sent' },
@@ -61,4 +61,4 @@ export default function ClientDashboard() {
       </EnhancedCard>
     </div>
   )
-}
+};

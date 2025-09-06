@@ -1,7 +1,7 @@
 
-import React from 'react',
+import React from 'react',;
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs',
-
+;
 export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system',
 
 interface NotificationFilterProps {
@@ -30,3 +30,4 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
     </div>
   )
 },
+;

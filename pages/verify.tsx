@@ -1,8 +1,8 @@
-import React, { useEffect, useMemo, useState } from 'react',
-import Head from 'next/head',
-import { getBadgeLabels } from '../utils/kyc',
-import type { KycProfile, KycRole, KycDocumentMeta } from '../utils/kyc',
-import { VerifiedBadge } from '../components/ui/VerifiedBadge',
+import React, { useEffect, useMemo, useState } from 'react',;
+import Head from 'next/head',;
+import { getBadgeLabels } from '../utils/kyc',;
+import type { KycProfile, KycRole, KycDocumentMeta } from '../utils/kyc',;
+import { VerifiedBadge } from '../components/ui/VerifiedBadge',;
 export default function VerifyPage() {
   const [userId, setUserId] = useState<string>('demo-user'),
   const [role, setRole] = useState<KycRole>('client'),
@@ -191,4 +191,4 @@ export default function VerifyPage() {
       </main>
     </>
   )
-}
+};

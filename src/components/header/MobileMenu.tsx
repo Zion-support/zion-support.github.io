@@ -1,11 +1,11 @@
-import Link from 'next/link',
-import { useRouter } from 'next/router',
-import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react'
-import { cn } from '@/lib/utils',
-import { useAuth } from '@/hooks/useAuth',
-import { Button } from '@/components/ui/button',
-import { ModeToggle } from '@/components/ModeToggle',
-import { useTranslation } from 'react-i18next',
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
+import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react';
+import { cn } from '@/lib/utils',;
+import { useAuth } from '@/hooks/useAuth',;
+import { Button } from '@/components/ui/button',;
+import { ModeToggle } from '@/components/ModeToggle',;
+import { useTranslation } from 'react-i18next',;
 export interface MobileMenuProps {
   unreadCount?: number,
   onClose: () => void,
@@ -140,3 +140,4 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
     </div>
   )
 }
+;

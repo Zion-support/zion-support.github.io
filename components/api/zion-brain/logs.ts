@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { readLogs } from '@/utils/zionBrain',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { readLogs } from '@/utils/zionBrain',;
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] || req.query.token,
   const superToken = process.env.SUPERADMIN_TOKEN,
@@ -24,4 +24,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length })
-}
+};

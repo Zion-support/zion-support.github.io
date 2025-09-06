@@ -1,6 +1,6 @@
 
-import { useState, useEffect } from 'react',
-import { Resume } from '@/types/resume',
+import { useState, useEffect } from 'react',;
+import { Resume } from '@/types/resume',;
 export const useResumeProgress = (resume: Resume | null) => {
   const [progress, setProgress] = useState(0),
   
@@ -42,3 +42,4 @@ export const useResumeProgress = (resume: Resume | null) => {
 
   return progress
 },
+;

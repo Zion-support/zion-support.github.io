@@ -1,6 +1,6 @@
-import React, { useState } from 'react',
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState } from 'react',;
+import Link from 'next/link',;
+import { motion, AnimatePresence } from 'framer-motion',;
 import { 
   Menu, X, Search, ChevronDown, ChevronRight,
   Home, Users, Settings, HelpCircle, Mail, Phone, MapPin,
@@ -348,4 +348,4 @@ export default function UltraFuturisticNavigation2029V2() {
       </AnimatePresence>
     </nav>
   )
-}
+};

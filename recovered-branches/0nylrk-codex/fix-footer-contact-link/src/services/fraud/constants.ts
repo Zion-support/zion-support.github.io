@@ -26,3 +26,4 @@ export const suspiciousEmailDomains = [
   "guerrillamail",
   "10minutemail"
 ],
+;

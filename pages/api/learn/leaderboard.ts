@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -18,4 +18,4 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to load leaderboard' })
   }
-}
+};

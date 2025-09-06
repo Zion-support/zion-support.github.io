@@ -1,6 +1,6 @@
-import React from 'react',
+import React from 'react',;
 import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react',
-
+;
 interface Testimonial {
   id: string,
   name: string,
@@ -227,4 +227,4 @@ const EnhancedTestimonialsSection: React.FC = () => {
   )
 },
 
-export default EnhancedTestimonialsSection,
+export default EnhancedTestimonialsSection,;

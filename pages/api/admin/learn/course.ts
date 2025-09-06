@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -25,5 +25,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ ok: true, course: body })
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to save course' })
-  }
-}
+  };
+};

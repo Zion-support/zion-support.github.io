@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react',
-
+;
 export default function PrivacySettingsPage() {
   const [userId, setUserId] = useState(''),
   const [optOut, setOptOut] = useState(false),
@@ -61,4 +61,4 @@ export default function PrivacySettingsPage() {
       </div>
     </div>
   )
-}
+};

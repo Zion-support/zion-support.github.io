@@ -1,7 +1,7 @@
-import React from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
+import React from 'react',;
+import Head from 'next/head',;
+import Card from '../components/ui/Card',;
+import Button from '../components/ui/Button',;
 import { 
   Brain,
   Monitor, 
@@ -479,4 +479,4 @@ export default function MicroSaasServicesPage() {
       </section>
     </>
   )
-}
+};

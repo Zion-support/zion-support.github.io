@@ -1,4 +1,4 @@
-import { Project } from "@/types/projects",
+import { Project } from "@/types/projects",;
 export const PROJECTS: Project[] = [
   {
     id: "project-1",
@@ -21,3 +21,4 @@ export const PROJECTS: Project[] = [
     }
   }
 ],
+;

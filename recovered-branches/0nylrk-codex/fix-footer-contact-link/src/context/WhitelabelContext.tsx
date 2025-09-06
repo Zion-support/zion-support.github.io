@@ -1,7 +1,7 @@
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react',
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react',;
 import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant',
-
+;
 export interface WhitelabelContextType {
   isWhitelabel: boolean,
   primaryColor: string,
@@ -73,3 +73,4 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
   )
 },
 
+;

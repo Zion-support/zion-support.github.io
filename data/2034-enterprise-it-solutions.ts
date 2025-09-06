@@ -118,4 +118,4 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',
 		realService: true
 	}
-],
+],;

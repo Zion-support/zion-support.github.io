@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { authenticateRequest } from '@/utils/auth',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { authenticateRequest } from '@/utils/auth',;
 import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant',
-
+;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'GET').toUpperCase(),
 
@@ -36,4 +36,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   return res.status(405).json({ error: 'Method not allowed' })
-}
+};

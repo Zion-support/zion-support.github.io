@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
-
+;
 interface TextAnalysisResult {
   text: string,
   statistics: {
@@ -195,4 +195,4 @@ export default async function handler(
     console.error('Text analysis error:', error),
     res.status(500).json({ error: 'Internal server error' })
   }
-}
+};

@@ -1,5 +1,5 @@
-import React, { useState } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState } from 'react',;
+import { motion, AnimatePresence } from 'framer-motion',;
 import { 
   ArrowRight, ExternalLink, Star, TrendingUp, 
   Users, Zap, Shield, Clock, Check, Brain,
@@ -292,4 +292,4 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
   )
 },
 
-export default UltraAdvancedServiceCard,
+export default UltraAdvancedServiceCard,;

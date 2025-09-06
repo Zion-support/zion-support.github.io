@@ -1,6 +1,6 @@
 
-import React from "react",
-import { Badge } from "@/components/ui/badge",
+import React from "react",;
+import { Badge } from "@/components/ui/badge",;
 import { 
   Select,
   SelectContent, 
@@ -8,7 +8,7 @@ import {
   SelectTrigger, 
   SelectValue 
 } from "@/components/ui/select",
-import type { QuoteStatus } from "@/types/quotes",
+import type { QuoteStatus } from "@/types/quotes",;
 type RequestsHeaderProps = {
   unreadCount: number,
   statusFilter: QuoteStatus | 'all',
@@ -75,3 +75,4 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
     </div>
   )
 },
+;

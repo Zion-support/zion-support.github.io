@@ -17,4 +17,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const text = await generateText(prompt, 'You are an expert technical recruiter. Output strictly valid JSON.'),
   return res.status(200).json({ results: text })
-}
+};

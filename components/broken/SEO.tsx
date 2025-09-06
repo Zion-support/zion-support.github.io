@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react',
-import Head from 'next/head',
+import React, { useEffect } from 'react',;
+import Head from 'next/head',;
 interface SEOProps {
   title?: string,
   description?: string,
@@ -180,4 +180,4 @@ const SEO: React.FC<SEOProps> = ({
   )
 },
 
-export default SEO,
+export default SEO,;

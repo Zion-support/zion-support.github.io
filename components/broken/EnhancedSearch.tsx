@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState, useEffect, useCallback, useMemo } from 'react',;
+import { motion, AnimatePresence } from 'framer-motion',;
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react',
-
+;
 interface SearchResult {
   id: string,
   name: string,
@@ -447,4 +447,4 @@ function debounce<T extends (...args: any[]) => any>(
   }
 }
 
-export default EnhancedSearch,
+export default EnhancedSearch,;

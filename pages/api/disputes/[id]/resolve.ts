@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { getDisputeById, upsertDispute } from '../../../../utils/fsdb',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { getDisputeById, upsertDispute } from '../../../../utils/fsdb',;
 import { parseUserFromRequest, ensureAdmin } from '../../../../utils/auth',
-
+;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query,
   if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' }),
@@ -32,4 +32,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.setHeader('AllowPOST'),
   return res.status(405).end('Method Not Allowed')
-}
+};

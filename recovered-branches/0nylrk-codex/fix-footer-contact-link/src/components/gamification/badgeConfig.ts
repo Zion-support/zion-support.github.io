@@ -1,5 +1,5 @@
 
-import { LucideIcon } from "lucide-react",
+import { LucideIcon } from "lucide-react",;
 import {
   BadgeCheck, // publishing a listing
   Award,      // top contributor
@@ -79,3 +79,4 @@ export const badgeList: BadgeMeta[] = [
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key),
 
+;

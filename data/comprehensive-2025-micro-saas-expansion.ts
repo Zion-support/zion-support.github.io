@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface ComprehensiveMicroSaasService {
   id: string,
   name: string,
@@ -437,4 +437,4 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     capabilities: ['Multi-system coordinationAI optimizationSafety monitoringPerformance analytics'],
     marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
   }
-],
+],;

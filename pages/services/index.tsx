@@ -1,29 +1,29 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground',
-import Card from '../../components/ui/Card',
-import Link from 'next/link',
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services',
-import { additionalEnhancedServices } from '../../data/additional-real-services',
-import { extraServices } from '../../data/extra-services',
-import { newlyAddedServices } from '../../data/newly-added-services',
-import { curatedMarketServices } from '../../data/curated-market-services',
-import { realMarketServices } from '../../data/real-market-services',
-import { new2025Services } from '../../data/new-2025-services',
-import { marketValidatedServices } from '../../data/market-validated-services',
-import { moreRealServices2025 } from '../../data/more-real-services-2025',
-import { realOperationalServices } from '../../data/real-operational-services',
-import { verified2025Additions } from '../../data/verified-2025-additions',
-import { realServicesQ12025 } from '../../data/real-services-q1-2025'
-import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025',
-import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025',
-import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2',
-import { additionalLiveServices2025 } from '../../data/additional-live-services-2025',
-import { real2025Q2Additions } from '../../data/real-2025-q2-additions',
-import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3',
-import { realServicesQ22025 } from '../../data/real-services-q2-2025',
-import { realServicesQ32025 } from '../../data/real-services-q3-2025',
-import { realServicesQ42025 } from '../../data/real-services-q4-2025',
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground',;
+import Card from '../../components/ui/Card',;
+import Link from 'next/link',;
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services',;
+import { additionalEnhancedServices } from '../../data/additional-real-services',;
+import { extraServices } from '../../data/extra-services',;
+import { newlyAddedServices } from '../../data/newly-added-services',;
+import { curatedMarketServices } from '../../data/curated-market-services',;
+import { realMarketServices } from '../../data/real-market-services',;
+import { new2025Services } from '../../data/new-2025-services',;
+import { marketValidatedServices } from '../../data/market-validated-services',;
+import { moreRealServices2025 } from '../../data/more-real-services-2025',;
+import { realOperationalServices } from '../../data/real-operational-services',;
+import { verified2025Additions } from '../../data/verified-2025-additions',;
+import { realServicesQ12025 } from '../../data/real-services-q1-2025';
+import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025',;
+import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025',;
+import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2',;
+import { additionalLiveServices2025 } from '../../data/additional-live-services-2025',;
+import { real2025Q2Additions } from '../../data/real-2025-q2-additions',;
+import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3',;
+import { realServicesQ22025 } from '../../data/real-services-q2-2025',;
+import { realServicesQ32025 } from '../../data/real-services-q3-2025',;
+import { realServicesQ42025 } from '../../data/real-services-q4-2025',;
 // Define a common service interface
 interface Service {
   id?: string,
@@ -507,3 +507,4 @@ export default function ServicesIndexPage() {
     </div>
   )
 }
+;

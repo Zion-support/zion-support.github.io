@@ -1,11 +1,11 @@
 
-import { useState } from "react",
-import { BookOpen, Code, Copy, Terminal } from "lucide-react",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { Badge } from "@/components/ui/badge",
-import CodeBlock from "./CodeBlock",
+import { useState } from "react",;
+import { BookOpen, Code, Copy, Terminal } from "lucide-react",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+import { Badge } from "@/components/ui/badge",;
+import CodeBlock from "./CodeBlock",;
 export function ApiDocumentation() {
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
@@ -574,8 +574,8 @@ print(data)`
                 This signature is an HMAC SHA-256 hash of the request body using your webhook secret as the key.
               </p>
               
-              <CodeBlock
-                code={`import crypto from 'crypto',
+              <CodeBlock;
+                code={`import crypto from 'crypto',;
 // Function to verify webhook signature
 function verifyWebhookSignature(payload, signature, secret) {
   const hmac = crypto.createHmac('sha256', secret),
@@ -868,3 +868,4 @@ function EndpointSection({
   )
 }
 
+;

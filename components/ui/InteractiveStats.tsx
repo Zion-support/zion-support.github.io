@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react',
-
+;
 function useCounter(target: number, durationMs: number) {
   const [value, setValue] = useState(0),
   useEffect(() => {
@@ -39,4 +39,4 @@ function Stat({ label, value, suffix = '' }: { label: string, value: number, suf
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
     </div>
   )
-}
+};

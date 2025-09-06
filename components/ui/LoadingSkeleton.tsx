@@ -1,5 +1,5 @@
-import React from 'react',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import { motion } from 'framer-motion',;
 interface SkeletonProps {
   className?: string,
   height?: string,
@@ -89,4 +89,4 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
   )
 },
 
-export default Skeleton,
+export default Skeleton,;

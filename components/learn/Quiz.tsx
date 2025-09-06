@@ -1,5 +1,5 @@
 import React, { useState } from 'react',
-
+;
 type Question = {
   id: string,
   question: string,
@@ -56,4 +56,4 @@ export default function Quiz({ questions, onComplete }: Props) {
       {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
     </div>
   )
-}
+};

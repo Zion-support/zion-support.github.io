@@ -1,5 +1,5 @@
 import React, { useState } from 'react',
-
+;
 interface Props {
   samples: { language: 'curl' | 'javascript' | 'python', code: string }[]
 }
@@ -31,4 +31,4 @@ export default function CodeSamples({ samples }: Props) {
       </pre>
     </div>
   )
-}
+};

@@ -1,9 +1,9 @@
-import React from 'react',
-import Head from 'next/head',
-import { Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import Button from '../components/ui/Button',
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
+import React from 'react',;
+import Head from 'next/head',;
+import { Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react',;
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
+import Button from '../components/ui/Button',;
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
 export default function QuantumAICognitivePage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-cognitive')),
 
@@ -85,3 +85,4 @@ export default function QuantumAICognitivePage() {
   )
 }
 
+;

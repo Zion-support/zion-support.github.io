@@ -23,7 +23,7 @@ const InteractiveNavigation = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </nav>;
   );
 };
 

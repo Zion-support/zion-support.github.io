@@ -1,5 +1,5 @@
-import React, { useState } from 'react',
-import { useAutoTranslate } from '../../hooks/useAutoTranslate',
+import React, { useState } from 'react',;
+import { useAutoTranslate } from '../../hooks/useAutoTranslate',;
 const defaultTargets = ['enptesar'],
 
 export default function TranslationPreview() {
@@ -29,4 +29,4 @@ export default function TranslationPreview() {
       </div>
     </div>
   )
-}
+};

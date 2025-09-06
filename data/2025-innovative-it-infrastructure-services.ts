@@ -204,4 +204,4 @@ export const innovativeITInfrastructureServices2025 = [
     integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'],
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations']
   }
-],
+],;

@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { CHAINS } from '../../../utils/chains',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { CHAINS } from '../../../utils/chains',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
   const { region, stakeUsd } = req.body || {},
@@ -24,4 +24,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const ranked = candidates.map((k) => ({ key: k, chain: (CHAINS as any)[k] })),
   res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
-}
+};

@@ -1,6 +1,6 @@
-import type { GetServerSideProps } from 'next',
-import { FormEvent, useEffect, useState } from 'react',
-import type { Vendor } from '../utils/vendor-types',
+import type { GetServerSideProps } from 'next',;
+import { FormEvent, useEffect, useState } from 'react',;
+import type { Vendor } from '../utils/vendor-types',;
 type Props = { vendor: Vendor | null },
 
 export default function AgencyDashboardPage({ vendor }: Props) {
@@ -144,4 +144,4 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { listVendors } = await import('../utils/vendor-store'),
   const vendor = listVendors()[0] || null, // tie to auth later
   return { props: { vendor } }
-},
+},;

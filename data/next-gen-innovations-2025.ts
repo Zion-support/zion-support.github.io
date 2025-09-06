@@ -38,4 +38,4 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+],;

@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { useState } from "react",
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { useState } from "react",;
 export function NewsletterForm() {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -46,4 +46,4 @@ export function NewsletterForm() {
       )}
     </div>
   )
-}
+};

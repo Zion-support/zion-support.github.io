@@ -416,5 +416,5 @@ const SolutionsPage: React.FC = () => {
     </Layout>
   )
 },
-
+;
 export default Solutions;

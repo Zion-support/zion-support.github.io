@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface SpecializedEmergingTechService {
   id: string,
   name: string,
@@ -351,4 +351,4 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'],
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
   }
-],
+],;

@@ -372,4 +372,4 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number, maxP
     const price = parseInt(solution.price.replace('$', '')),
     return price >= minPrice && price <= maxPrice
   })
-},
+},;

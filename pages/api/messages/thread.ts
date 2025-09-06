@@ -1,7 +1,7 @@
-import { NextApiRequest, NextApiResponse } from 'next',
-import { requireUser } from '../../../utils/auth',
+import { NextApiRequest, NextApiResponse } from 'next',;
+import { requireUser } from '../../../utils/auth',;
 import { getConversationById, getMessages, sendMessage } from '../../../utils/messaging/storage',
-
+;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res),
   if (!user) return,
@@ -31,4 +31,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } else {
     res.status(405).json({ error: 'Method not allowed' })
   }
-}
+};

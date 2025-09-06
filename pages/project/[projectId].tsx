@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react",
-import { useRouter } from "next/router",
-import FeedbackModal from "../../components/ui/FeedbackModal",
+import { useEffect, useState } from "react",;
+import { useRouter } from "next/router",;
+import FeedbackModal from "../../components/ui/FeedbackModal",;
 export default function ProjectPage() {
   const router = useRouter(),
   const { projectId } = router.query as { projectId?: string },
@@ -157,4 +157,4 @@ export default function ProjectPage() {
       />
     </div>
   )
-}
+};

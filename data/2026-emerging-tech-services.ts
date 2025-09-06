@@ -333,4 +333,4 @@ export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPri
     const price = parseInt(service.price.replace('$', '')),
     return price >= minPrice && price <= maxPrice
   })
-},
+},;

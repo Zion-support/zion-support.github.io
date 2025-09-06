@@ -1,4 +1,4 @@
-import { ApiDocsSpec } from './types',
+import { ApiDocsSpec } from './types',;
 const baseUrl = 'https: //api.zion.os',
 
 const v1: ApiDocsSpec = {
@@ -193,4 +193,4 @@ const v1: ApiDocsSpec = {
             { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/nation/stats', headers={'Authorization':'Bearer <token>'}).json()` }],
           versions: ['v1']}]}]},
 
-export default v1,
+export default v1,;

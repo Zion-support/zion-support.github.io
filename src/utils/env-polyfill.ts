@@ -78,4 +78,4 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
 
 console.log('✅ Environment polyfill loaded successfully'),
 
-export default safeEnv,
+export default safeEnv,;

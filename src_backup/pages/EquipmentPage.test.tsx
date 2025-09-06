@@ -1,6 +1,6 @@
-import React, { useState } from 'react',
-import { Link } from 'react-router-dom',
-import { SERVICE_CATEGORIES } from '@/data/servicesData',
+import React, { useState } from 'react',;
+import { Link } from 'react-router-dom',;
+import { SERVICE_CATEGORIES } from '@/data/servicesData',;
 export function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -427,4 +427,4 @@ export function ContactPage() {
       </div>
     </div>
   )
-}
+};

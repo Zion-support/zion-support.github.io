@@ -1,8 +1,8 @@
-import React from 'react',
-import Head from 'next/head',
+import React from 'react',;
+import Head from 'next/head',;
 import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react',
 
-
+;
 export default function CloudPlatformPage() {
   const features = [
     {
@@ -171,4 +171,4 @@ export default function CloudPlatformPage() {
       </div>
     </>
   )
-}
+};

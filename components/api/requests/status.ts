@@ -26,4 +26,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   items[idx] = { ...items[idx], status, updatedAt: new Date().toISOString() },
   writeAll(items),
   res.status(200).json({ ok: true })
-}
+};

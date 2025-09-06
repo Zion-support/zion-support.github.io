@@ -1,9 +1,9 @@
 
-import { useState, useEffect } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes",
-import { toast } from "sonner",
+import { useState, useEffect } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes",;
+import { toast } from "sonner",;
 export function useDisputes() {
   const { user } = useAuth(),
   const [disputes, setDisputes] = useState<Dispute[]>([]),
@@ -264,3 +264,4 @@ export function useDisputes() {
     addDisputeMessage
   }
 }
+;

@@ -810,4 +810,4 @@ export default function RevolutionaryServicesPage() {
       </div>
     </UltraFuturisticBackground>
   )
-}
+};

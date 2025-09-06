@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState, useEffect, useRef } from 'react',;
+import { motion, AnimatePresence } from 'framer-motion',;
 import { 
   Smartphone, Tablet, Monitor, RotateCcw, 
   Wifi, WifiOff, Signal, SignalHigh, 
@@ -605,4 +605,4 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   )
 },
 
-export default MobileOptimizer,
+export default MobileOptimizer,;

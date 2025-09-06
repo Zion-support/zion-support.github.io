@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import OpenAI from 'openai',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import OpenAI from 'openai',;
 export type AnalyzeRequestBody = {
   operatorPrompt: string,
   context?: Record<string, unknown>
@@ -53,4 +53,4 @@ export default async function handler(
     console.error('Analyze API error', error?.message || error),
     return res.status(500).json({ error: 'Failed to generate analysis' })
   }
-}
+};

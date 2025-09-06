@@ -1,9 +1,9 @@
-import { useEffect, useMemo, useState } from 'react',
-import { useRouter } from 'next/router',
-import ProgressBar from '../../components/learn/ProgressBar',
-import Quiz from '../../components/learn/Quiz',
-import CertificatePreview from '../../components/learn/CertificatePreview',
-import CoachWidget from '../../components/learn/CoachWidget',
+import { useEffect, useMemo, useState } from 'react',;
+import { useRouter } from 'next/router',;
+import ProgressBar from '../../components/learn/ProgressBar',;
+import Quiz from '../../components/learn/Quiz',;
+import CertificatePreview from '../../components/learn/CertificatePreview',;
+import CoachWidget from '../../components/learn/CoachWidget',;
 export default function CourseView() {
   const router = useRouter(),
   const { courseId } = router.query as { courseId: string },
@@ -128,4 +128,4 @@ export default function CourseView() {
       </div>
     </div>
   )
-}
+};

@@ -261,4 +261,4 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     rating: 4.8,
     reviews: 1900
   }
-],
+],;

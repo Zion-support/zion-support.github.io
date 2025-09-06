@@ -11,7 +11,7 @@ const Profile = () => {
           This is a placeholder profile page.
         </p>
       </div>
-    </div>
+    </div>;
   );
 };
 

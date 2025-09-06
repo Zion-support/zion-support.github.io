@@ -83,5 +83,5 @@ const EnhancedNavigation = () => {
     </nav>
   )
 },
-
+;
 export default EnhancedNavigation;

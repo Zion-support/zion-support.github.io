@@ -1,9 +1,9 @@
-import { createClient } from '@supabase/supabase-js',
-import fs from 'fs/promises',
-import { createReadStream } from 'fs',
-import path from 'path',
-import FormData from 'form-data',
-import fetch from 'node-fetch',
+import { createClient } from '@supabase/supabase-js',;
+import fs from 'fs/promises',;
+import { createReadStream } from 'fs',;
+import path from 'path',;
+import FormData from 'form-data',;
+import fetch from 'node-fetch',;
 const {
   SUPABASE_URL,
   SUPABASE_SERVICE_ROLE_KEY,
@@ -114,3 +114,4 @@ async function main() {
 main().catch((err) => {
   console.error('Training workflow failed', err)
 }),
+;

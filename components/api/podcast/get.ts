@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),
 
 function ensureStorage() {
@@ -16,4 +16,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const episode = episodes.find((e) => e.id === id),
   if (!episode) return res.status(404).json({ error: 'Not found' }),
   return res.status(200).json({ episode })
-}
+};

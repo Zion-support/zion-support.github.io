@@ -1,9 +1,9 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import Card from '../components/ui/Card',;
+import Button from '../components/ui/Button',;
 import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react',
-
+;
 export default function APIRateLimiterPage() {
   const [endpoint, setEndpoint] = useState(''),
   const [rateLimit, setRateLimit] = useState('100'),
@@ -546,4 +546,4 @@ print('Rate Limit Info:', {
       </section>
     </>
   )
-}
+};

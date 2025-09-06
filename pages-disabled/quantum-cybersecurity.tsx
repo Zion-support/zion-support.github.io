@@ -1,12 +1,12 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
 import { 
   Shield, Lock, Eye, AlertTriangle, Zap, Cpu, 
   Database, Globe, ArrowRight, CheckCircle, Star, Users
 } from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter',
+import EnhancedNavigation from '../components/EnhancedNavigation',;
+import EnhancedFooter from '../components/EnhancedFooter',;
 export default function QuantumCybersecurityPage() {
   const features = [
     {
@@ -474,4 +474,4 @@ export default function QuantumCybersecurityPage() {
       <EnhancedFooter />
     </>
   )
-}
+};

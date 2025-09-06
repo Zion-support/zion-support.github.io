@@ -1,7 +1,7 @@
-import React from 'react',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import { motion } from 'framer-motion',;
 import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react',
-
+;
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -60,3 +60,4 @@ export default function NeoFuturisticFooter() {
   )
 }
 
+;

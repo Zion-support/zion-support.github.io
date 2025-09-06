@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface ComprehensiveInnovativeService {
   id: string,
   name: string,
@@ -475,4 +475,4 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
   }
 ],
 
-export default comprehensiveInnovativeServices,
+export default comprehensiveInnovativeServices,;

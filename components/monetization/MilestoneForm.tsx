@@ -1,5 +1,5 @@
 import React, { useState } from 'react',
-
+;
 type Props = {
   onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
 },
@@ -91,4 +91,4 @@ export default function MilestoneForm({ onSubmit }: Props) {
       </button>
     </form>
   )
-}
+};

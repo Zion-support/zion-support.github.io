@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import OpenAI from 'openai',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import OpenAI from 'openai',;
 export type GenerateServiceDescriptionRequest = {
   title: string,
   keyFeatures: string[],
@@ -78,4 +78,4 @@ Requirements:
     console.error('OpenAI generation error:', error),
     return res.status(500).json({ error: 'Failed to generate description' })
   }
-}
+};

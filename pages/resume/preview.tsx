@@ -1,8 +1,8 @@
-import { GetServerSideProps } from 'next',
-import React, { useMemo, useRef, useState } from 'react',
-import PdfExportButton from '../../components/ui/PdfExportButton',
-import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview',
-import { createServerClient } from '../../utils/supabase/server',
+import { GetServerSideProps } from 'next',;
+import React, { useMemo, useRef, useState } from 'react',;
+import PdfExportButton from '../../components/ui/PdfExportButton',;
+import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview',;
+import { createServerClient } from '../../utils/supabase/server',;
 export type ResumePreviewPageProps = {
   initialData: ResumeData,
   versions?: Array<{ id: string, label: string, data: ResumeData }>
@@ -98,4 +98,4 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const versions = [] as Array<{ id: string, label: string, data: ResumeData }>,
 
   return { props: { initialData, versions } }
-},
+},;

@@ -1,6 +1,6 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore
-import data from '../../data/npm-trends.json',
+import data from '../../data/npm-trends.json',;
 export default function NpmTrendsPage() {
   const items: any[] = (data?.items || []).slice(0, 50),
   return (
@@ -22,4 +22,4 @@ export default function NpmTrendsPage() {
       </div>
     </EnhancedLayout>
   )
-}
+};

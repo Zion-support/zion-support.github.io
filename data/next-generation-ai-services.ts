@@ -489,4 +489,4 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4.7,
     reviews: 125
   }
-],
+],;

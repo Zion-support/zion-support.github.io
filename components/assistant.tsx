@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react',
-
+;
 interface Message { role: 'user' | 'assistant', content: string }
 
 export default function Assistant() {
@@ -53,4 +53,4 @@ export default function Assistant() {
       </form>
     </div>
   )
-}
+};

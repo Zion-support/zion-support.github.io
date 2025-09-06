@@ -1,10 +1,10 @@
 
-import { useState, useEffect } from 'react',
-import { supabase } from '@/integrations/supabase/client',
-import { useAuth } from '@/hooks/useAuth',
-import { toast } from 'sonner',
+import { useState, useEffect } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { useAuth } from '@/hooks/useAuth',;
+import { toast } from 'sonner',;
 import { Milestone, MilestoneActivity } from './types',
-
+;
 export const useLoadMilestones = (projectId?: string) => {
   const { user } = useAuth(),
   const [milestones, setMilestones] = useState<Milestone[]>([]),
@@ -75,3 +75,4 @@ export const useLoadMilestones = (projectId?: string) => {
     refetch: fetchMilestones
   }
 },
+;

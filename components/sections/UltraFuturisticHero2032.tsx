@@ -1,6 +1,6 @@
-import React from 'react',
-import { motion } from 'framer-motion',
-import Link from 'next/link',
+import React from 'react',;
+import { motion } from 'framer-motion',;
+import Link from 'next/link',;
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, Star, ArrowRight, Play, CheckCircle,
@@ -276,4 +276,4 @@ export default function UltraFuturisticHero2032() {
       </motion.div>
     </section>
   )
-}
+};

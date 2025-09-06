@@ -28,4 +28,4 @@ exports.handler = async () => {
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 
   return { statusCode: 200, body: logs.join('\n') }
-},
+},;

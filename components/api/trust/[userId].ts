@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { computeTrustScore } from '../../../utils/trust/compute',
-import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust',
-import { supabase } from '../../../utils/supabase/client',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { computeTrustScore } from '../../../utils/trust/compute',;
+import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust',;
+import { supabase } from '../../../utils/supabase/client',;
 async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel'], reasonSummary: string }> {
   const apiKey = process.env.OPENAI_API_KEY,
   if (!apiKey) {
@@ -111,4 +111,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.setHeader('AllowGET, POST'),
   return res.status(405).json({ error: 'Method not allowed' })
-}
+};

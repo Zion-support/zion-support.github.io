@@ -1,7 +1,7 @@
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Check, X } from "lucide-react",
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Check, X } from "lucide-react",;
 import {
   Table,
   TableBody,
@@ -9,7 +9,7 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
+import { Badge } from "@/components/ui/badge",;
 export function EnterprisePricingTable() {
   const plans = [
     {
@@ -133,3 +133,4 @@ export function EnterprisePricingTable() {
     </section>
   )
 }
+;

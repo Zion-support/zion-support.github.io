@@ -1,5 +1,5 @@
-import React from 'react',
-import SEO from '../components/SEO',
+import React from 'react',;
+import SEO from '../components/SEO',;
 const ext = (url: string) => (
 	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>
 ),
@@ -414,3 +414,4 @@ export default function ServicesAdvertisingPage() {
     </UltraAdvancedFuturisticBackground>
   )
 }
+;

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface AIAutonomousEcosystem2030 {
   id: string,
   name: string,
@@ -303,4 +303,4 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     rating: 4.9,
     reviews: 12
   }
-],
+],;

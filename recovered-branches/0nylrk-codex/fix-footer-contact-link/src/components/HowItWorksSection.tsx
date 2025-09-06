@@ -1,7 +1,7 @@
 
-import { GradientHeading } from "./GradientHeading",
+import { GradientHeading } from "./GradientHeading",;
 import { Check, Handshake, Search, Send } from "lucide-react",
-
+;
 const steps = [
   {
     title: "Post",
@@ -72,3 +72,4 @@ export function HowItWorksSection() {
     </section>
   )
 }
+;

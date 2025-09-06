@@ -1,10 +1,10 @@
-import Fastify from 'fastify',
-import cors from '@fastify/cors',
-import rateLimit from '@fastify/rate-limit',
-import dotenv from 'dotenv',
-import { createOpenAIClient, generateJobPost } from './openai.js',
+import Fastify from 'fastify',;
+import cors from '@fastify/cors',;
+import rateLimit from '@fastify/rate-limit',;
+import dotenv from 'dotenv',;
+import { createOpenAIClient, generateJobPost } from './openai.js',;
 import { getPool, withUser } from './pg.js',
-
+;
 dotenv.config(),
 
 const app = Fastify({ logger: true }),
@@ -103,4 +103,4 @@ const port = Number(process.env.API_PORT || 4000),
 app.listen({ port, host: '0.0.0.0' }).catch((err) => {
   app.log.error(err),
   process.exit(1)
-}),
+}),;

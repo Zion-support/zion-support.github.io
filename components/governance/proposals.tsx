@@ -1,6 +1,6 @@
-import fs from 'fs'
+import fs from 'fs';
 import path from 'path'
-
+;
 export async function getStaticProps(){
   try{
     const p = path.join(process.cwd(),'datagovernanceproposals.json')
@@ -28,4 +28,4 @@ export default function Proposals({ data }: { data: { updatedAt: string|null, pr
       </ul>
     </div>
   )
-}
+};

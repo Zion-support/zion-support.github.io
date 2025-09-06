@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { readJson, writeJson } from '../../../utils/fsDb',
-import { tagOperatorSession } from '../../../utils/operator',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { readJson, writeJson } from '../../../utils/fsDb',;
+import { tagOperatorSession } from '../../../utils/operator',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
   const { sessionId, reason, tag } = req.body as { sessionId: string, reason?: string, tag?: string },
@@ -15,4 +15,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await tagOperatorSession(sessionId, tag ?? 'escalate'),
 
   return res.status(200).json({ ok: true, id })
-}
+};

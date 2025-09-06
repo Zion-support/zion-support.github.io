@@ -1,7 +1,7 @@
-import EnhancedCard from '../../components/ui/EnhancedCard',
-import EnhancedButton from '../../components/ui/EnhancedButton',
+import EnhancedCard from '../../components/ui/EnhancedCard',;
+import EnhancedButton from '../../components/ui/EnhancedButton',;
 import { useEffect, useState } from 'react',
-
+;
 const STEPS = [
   { key: 'profile', label: 'Profile completed' },
   { key: 'skills', label: 'Skills added' },
@@ -63,4 +63,4 @@ export default function TalentDashboard() {
       </EnhancedCard>
     </div>
   )
-}
+};

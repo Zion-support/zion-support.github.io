@@ -1,14 +1,14 @@
 
-import React, { useState } from "react",
-import { useQuery } from "@tanstack/react-query",
-import { supabase } from "@/integrations/supabase/client",
-import { AnalyticsContainer } from "@/components/analytics/AnalyticsContainer",
-import { AnalyticsSummary } from "@/components/analytics/AnalyticsSummary",
-import { PageViewsTable } from "@/components/analytics/PageViewsTable",
-import { UserBehaviorStats } from "@/components/analytics/UserBehaviorStats",
-import { PageViewsChart } from "@/components/analytics/PageViewsChart",
-import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart",
-import { ExportPanel } from "@/components/analytics/ExportPanel",
+import React, { useState } from "react",;
+import { useQuery } from "@tanstack/react-query",;
+import { supabase } from "@/integrations/supabase/client",;
+import { AnalyticsContainer } from "@/components/analytics/AnalyticsContainer",;
+import { AnalyticsSummary } from "@/components/analytics/AnalyticsSummary",;
+import { PageViewsTable } from "@/components/analytics/PageViewsTable",;
+import { UserBehaviorStats } from "@/components/analytics/UserBehaviorStats",;
+import { PageViewsChart } from "@/components/analytics/PageViewsChart",;
+import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart",;
+import { ExportPanel } from "@/components/analytics/ExportPanel",;
 export default function Analytics() {
   const [timeRange, setTimeRange] = useState('30d'),
   
@@ -136,3 +136,4 @@ export default function Analytics() {
     </AnalyticsContainer>
   )
 }
+;

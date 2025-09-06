@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthroughServiceV2 {
   id: string,
   name: string,
@@ -310,4 +310,4 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     rating: 5.0,
     reviews: 2
   }
-],
+],;

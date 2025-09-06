@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react',
-
+;
 export default function InternationalProposals() {
   const [items, setItems] = useState<any[]>([]),
   const [loading, setLoading] = useState(true),
@@ -54,4 +54,4 @@ export default function InternationalProposals() {
       )}
     </div>
   )
-}
+};

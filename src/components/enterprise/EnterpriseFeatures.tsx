@@ -1,7 +1,7 @@
 
-import React from "react",
+import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
-
+;
 const features = [
   {
     title: "Private Hiring Portal",
@@ -59,3 +59,4 @@ export function EnterpriseFeatures() {
     </section>
   )
 }
+;

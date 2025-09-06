@@ -1,8 +1,8 @@
 'use client',
 
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
 import { 
   Brain,
   Cloud, 
@@ -210,4 +210,4 @@ const ServicesSection: React.FC = () => {
   )
 },
 
-export default ServicesSection,
+export default ServicesSection,;

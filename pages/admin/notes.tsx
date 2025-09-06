@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react',
-
+;
 type Note = {
   id: string,
   targetType: string,
@@ -56,4 +56,4 @@ export default function AdminNotesConsole() {
       )}
     </div>
   )
-}
+};

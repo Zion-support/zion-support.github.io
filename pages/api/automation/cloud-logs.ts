@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
 async function fetchFromGitHub(): Promise<any[]> {
   try {
     const repoUrl = require('../../../package.json').repository?.url || '',
@@ -56,4 +56,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const remote = await fetchFromGitHub(),
   return res.status(200).json({ logs: remote })
-}
+};

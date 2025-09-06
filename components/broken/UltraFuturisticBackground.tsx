@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react',
-import { motion } from 'framer-motion',
+import React, { useEffect, useRef } from 'react',;
+import { motion } from 'framer-motion',;
 const UltraFuturisticBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
 
@@ -313,4 +313,4 @@ const UltraFuturisticBackground: React.FC = () => {
   )
 },
 
-export default UltraFuturisticBackground,
+export default UltraFuturisticBackground,;

@@ -1,6 +1,6 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+import Link from 'next/link',;
 const AiConsultingChat: NextPage = () => {
   return (
     <div>
@@ -18,4 +18,4 @@ const AiConsultingChat: NextPage = () => {
   )
 },
 
-export default AiConsultingChat,
+export default AiConsultingChat,;

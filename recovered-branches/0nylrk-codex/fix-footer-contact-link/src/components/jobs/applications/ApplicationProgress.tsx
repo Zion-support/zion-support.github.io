@@ -1,8 +1,8 @@
 
-import { ApplicationStatus } from "@/types/jobs",
-import { Progress } from "@/components/ui/progress",
-import { CheckCircle2, Circle, CircleDot } from "lucide-react",
-import { cn } from "@/lib/utils",
+import { ApplicationStatus } from "@/types/jobs",;
+import { Progress } from "@/components/ui/progress",;
+import { CheckCircle2, Circle, CircleDot } from "lucide-react",;
+import { cn } from "@/lib/utils",;
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   className?: string
@@ -78,3 +78,4 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
   }
 }
+;

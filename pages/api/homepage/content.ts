@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
 async function fetchFromGitHub(): Promise<any | null> {
   try {
     const pkg = require('../../../package.json'),
@@ -39,4 +39,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(500).json({ error: e.message || 'Internal error' })
   }
-}
+};

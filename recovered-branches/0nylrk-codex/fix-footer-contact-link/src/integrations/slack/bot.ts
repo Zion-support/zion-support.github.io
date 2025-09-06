@@ -101,3 +101,4 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
 })(),
 
 export default app,
+;

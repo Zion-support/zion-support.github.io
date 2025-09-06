@@ -38,4 +38,4 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+],;

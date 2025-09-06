@@ -18,7 +18,7 @@ export function useApi<T>(
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchData = useCallback(async () => {
+  const fetchData = useCallback(async () => {;
     setLoading(true);
     setError(null);
     

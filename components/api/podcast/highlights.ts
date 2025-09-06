@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),
 
 function ensureStorage() {
@@ -29,4 +29,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8'),
 
   return res.status(200).json({ episode })
-}
+};

@@ -1,7 +1,7 @@
-import React from 'react',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import { motion } from 'framer-motion',;
 import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 'lucide-react',
-
+;
 interface ServiceCardProps {
   service: {
     id: string,
@@ -268,4 +268,4 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
   )
 },
 
-export default UltraFuturisticServiceCardV2,
+export default UltraFuturisticServiceCardV2,;

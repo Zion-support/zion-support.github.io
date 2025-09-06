@@ -57,7 +57,7 @@ const nextConfig = {
           '**/performance-*.md',
           '**/performance-*.txt'
         ],
-        poll: 1000,
+        poll: 1000,;
         aggregateTimeout: 300};
     }
     return config;

@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useCallback } from 'react',
-import { motion } from 'framer-motion',
+import React, { useEffect, useState, useCallback } from 'react',;
+import { motion } from 'framer-motion',;
 import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react',
-
+;
 interface PerformanceMetrics {
   loadTime: number,
   firstContentfulPaint: number,
@@ -360,3 +360,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
 },
 
 export default PerformanceOptimizer,
+;

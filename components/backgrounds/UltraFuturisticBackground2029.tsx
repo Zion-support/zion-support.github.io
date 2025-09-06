@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react',
-import { motion } from 'framer-motion',
+import React, { useEffect, useRef } from 'react',;
+import { motion } from 'framer-motion',;
 interface Particle {
   x: number,
   y: number,
@@ -398,4 +398,4 @@ export default function UltraFuturisticBackground2029() {
       </div>
     </div>
   )
-}
+};

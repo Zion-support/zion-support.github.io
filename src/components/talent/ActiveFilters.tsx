@@ -1,9 +1,9 @@
 
-import React from "react",
-import { ClickableBadge } from "@/components/ui/clickable-badge",
-import { Button } from "@/components/ui/button",
+import React from "react",;
+import { ClickableBadge } from "@/components/ui/clickable-badge",;
+import { Button } from "@/components/ui/button",;
 import { X } from 'lucide-react'
-
+;
 interface ActiveFiltersProps {
   selectedSkills: string[],
   toggleSkill: (skill: string) => void,
@@ -113,3 +113,4 @@ export function ActiveFilters({
     </div>
   )
 }
+;

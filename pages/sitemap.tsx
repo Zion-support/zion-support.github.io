@@ -1,13 +1,13 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
 import { 
   Home, Search, Rocket, FileText, Users, Mail, Map, 
   ArrowRight, ExternalLink, ChevronRight, Globe, Building
 } from 'lucide-react',
-import SmartHeader from '../components/SmartHeader',
-import SmartFooter from '../components/SmartFooter',
+import SmartHeader from '../components/SmartHeader',;
+import SmartFooter from '../components/SmartFooter',;
 export default function SitemapPage() {
   const mainPages = [
     { href: '/', label: '🏠 Home', description: 'Main landing page with company overview and featured services' },
@@ -421,3 +421,4 @@ export default function SitemapPage() {
     </div>
   )
 }
+;

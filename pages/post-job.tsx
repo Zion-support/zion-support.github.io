@@ -1,5 +1,5 @@
-import { useState } from 'react',
-import { useRouter } from 'next/router',
+import { useState } from 'react',;
+import { useRouter } from 'next/router',;
 export default function PostJobPage() {
   const router = useRouter(),
   const [title, setTitle] = useState(''),
@@ -98,4 +98,4 @@ export default function PostJobPage() {
       </form>
     </div>
   )
-}
+};

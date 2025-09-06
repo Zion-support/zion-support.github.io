@@ -59,4 +59,4 @@ export default function Web3LoginButton() {
       {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
     </>
   )
-}
+};

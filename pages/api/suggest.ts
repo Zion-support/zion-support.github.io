@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
-
+;
 const SAMPLE_QUERIES = [
   'React developers under $50/hrPart-time DevOps jobs in LATAMLLM engineers with RAG experienceSecurity projects with Zero TrustNext.js freelancers in Berlin'
 ],
@@ -20,4 +20,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) })
-}
+};

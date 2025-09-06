@@ -1,6 +1,6 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
 import { 
   Search, Filter, Star, CheckCircle, ArrowRight, 
   Brain, Atom, Shield, Rocket, Target, Microscope,
@@ -8,18 +8,18 @@ import {
   Zap, Globe, Cpu, Database, Lock, Cloud,
   Stethoscope, GraduationCap, Leaf, Truck
 } from 'lucide-react',
-import Layout from '../components/layout/Layout',
+import Layout from '../components/layout/Layout',;
 // Import all the new 2025 innovative service data
-import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services',
-import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services',
-import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services',
-import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services',
-import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services',
+import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services',;
+import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services',;
+import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services',;
+import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services',;
+import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services',;
 // Import existing services for comprehensive coverage
-import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services',
-import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services',
-import { innovativeITServices2025 } from '../data/2025-innovative-it-services',
-import { emergingTechServices2025 } from '../data/2025-emerging-tech-services',
+import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services',;
+import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services',;
+import { innovativeITServices2025 } from '../data/2025-innovative-it-services',;
+import { emergingTechServices2025 } from '../data/2025-emerging-tech-services',;
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -438,3 +438,4 @@ export default function InnovativeServicesShowcase2025() {
     </Layout>
   )
 }
+;

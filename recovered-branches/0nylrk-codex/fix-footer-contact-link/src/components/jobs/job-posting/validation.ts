@@ -1,5 +1,5 @@
 
-import { z } from "zod",
+import { z } from "zod",;
 export const jobSchema = z.object({
   title: z.string().min(3, {
     message: "Title must be at least 3 characters."}),
@@ -27,3 +27,4 @@ export const jobSchema = z.object({
     message: "Please enter a valid URL."}).optional()}),
 
 export type JobSchemaType = z.infer<typeof jobSchema>,
+;

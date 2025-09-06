@@ -1,13 +1,13 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { IntegrationCards } from "./IntegrationCards",
-import { ZapierIntegration } from "./ZapierIntegration",
-import { Badge } from "@/components/ui/badge",
-import { WebhookManager } from "./WebhookManager",
-import { IntegrationsSyncLog } from "./IntegrationsSyncLog",
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { IntegrationCards } from "./IntegrationCards",;
+import { ZapierIntegration } from "./ZapierIntegration",;
+import { Badge } from "@/components/ui/badge",;
+import { WebhookManager } from "./WebhookManager",;
+import { IntegrationsSyncLog } from "./IntegrationsSyncLog",;
 export function IntegrationsHub() {
   const [activeTab, setActiveTab] = useState("marketplace"),
   
@@ -134,3 +134,4 @@ export function IntegrationsHub() {
     </div>
   )
 }
+;

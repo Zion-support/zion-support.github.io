@@ -1,8 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { createDispute, readAllDisputes } from '../../../utils/fsdb',
-import { parseUserFromRequest } from '../../../utils/auth',
-import { DisputeCase, DisputeReason } from '../../../types/disputes',
-import { generateCaseId } from '../../../utils/fsdb',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { createDispute, readAllDisputes } from '../../../utils/fsdb',;
+import { parseUserFromRequest } from '../../../utils/auth',;
+import { DisputeCase, DisputeReason } from '../../../types/disputes',;
+import { generateCaseId } from '../../../utils/fsdb',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req),
 
@@ -54,4 +54,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.setHeader('AllowGET,POST'),
   return res.status(405).end('Method Not Allowed')
-}
+};

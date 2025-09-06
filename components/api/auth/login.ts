@@ -15,4 +15,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const cookie = createSessionCookie({ email, role: result.role, twofaVerified: true }),
   res.setHeader('Set-Cookie', cookie),
   return res.status(200).json({ ok: true })
-}
+};

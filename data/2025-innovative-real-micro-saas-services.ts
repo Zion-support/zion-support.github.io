@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface EnhancedRealMicroSaasService {
   id: string,
   name: string,
@@ -490,4 +490,4 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4.7,
     reviews: 20
   }
-],
+],;

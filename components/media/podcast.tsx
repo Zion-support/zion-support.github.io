@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react',
-import Link from 'next/link',
+import React, { useEffect, useState } from 'react',;
+import Link from 'next/link',;
 type EpisodeListItem = {
   id: string,
   title: string,
@@ -77,3 +77,4 @@ export default function PodcastIndexPage() {
     </div>
   )
 }
+;

@@ -1,6 +1,6 @@
 
-import { cn } from "@/lib/utils",
-import React from "react",
+import { cn } from "@/lib/utils",;
+import React from "react",;
 interface GradientHeadingProps {
   children: React.ReactNode,
   className?: string,
@@ -21,3 +21,4 @@ export function GradientHeading({ children, className, level = "h2" }: GradientH
     </Tag>
   )
 }
+;

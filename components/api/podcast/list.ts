@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),
 
 function ensureStorage() {
@@ -20,4 +20,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     summary: e.bestQuote || '',
     audio: e.audio || {}})),
   return res.status(200).json({ episodes: simplified })
-}
+};

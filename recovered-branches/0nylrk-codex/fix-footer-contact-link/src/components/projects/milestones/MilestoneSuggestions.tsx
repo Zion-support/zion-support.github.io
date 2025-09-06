@@ -1,12 +1,12 @@
 
-import React, { useState } from 'react',
-import { Button } from '@/components/ui/button',
-import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Loader2, Sparkles, Check } from 'lucide-react',
-import { Badge } from '@/components/ui/badge',
+import React, { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Loader2, Sparkles, Check } from 'lucide-react',;
+import { Badge } from '@/components/ui/badge',;
 import { format, parseISO } from 'date-fns',
-
+;
 interface MilestoneSuggestionsProps {
   projectName: string,
   scopeSummary: string,
@@ -117,3 +117,4 @@ export function MilestoneSuggestions({
     </div>
   )
 }
+;

@@ -1,13 +1,13 @@
 
-import { useState } from "react",
-import { useContractTemplates } from "@/hooks/useContractTemplates",
-import { ContractTemplate } from "@/types/contracts",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { TemplateList } from "./TemplateList",
-import { TemplateSaveForm } from "./TemplateSaveForm",
-import { ContractFormValues } from "@/components/contracts/components/ContractForm",
-import { useToast } from "@/hooks/use-toast",
+import { useState } from "react",;
+import { useContractTemplates } from "@/hooks/useContractTemplates",;
+import { ContractTemplate } from "@/types/contracts",;
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
+import { Button } from "@/components/ui/button",;
+import { TemplateList } from "./TemplateList",;
+import { TemplateSaveForm } from "./TemplateSaveForm",;
+import { ContractFormValues } from "@/components/contracts/components/ContractForm",;
+import { useToast } from "@/hooks/use-toast",;
 interface TemplateManagerProps {
   isOpen: boolean,
   onClose: () => void,
@@ -87,3 +87,4 @@ export function TemplateManager({
     </Dialog>
   )
 }
+;

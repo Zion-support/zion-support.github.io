@@ -1,15 +1,15 @@
 
-import React, { useState } from 'react',
-import { useParams } from 'react-router-dom',
-import { Header } from '@/components/Header',
-import { Footer } from '@/components/Footer',
-import { SEO } from '@/components/SEO',
-import { Button } from '@/components/ui/button',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
-import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react',
-import { VideoCallRoom } from '@/components/video/VideoCallRoom',
-import { toast } from 'sonner',
+import React, { useState } from 'react',;
+import { useParams } from 'react-router-dom',;
+import { Header } from '@/components/Header',;
+import { Footer } from '@/components/Footer',;
+import { SEO } from '@/components/SEO',;
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react',;
+import { VideoCallRoom } from '@/components/video/VideoCallRoom',;
+import { toast } from 'sonner',;
 export default function ProjectRoom() {
   const { projectId } = useParams() as { projectId: string },
   const [activeTab, setActiveTab] = useState('chat'),
@@ -234,3 +234,4 @@ export default function ProjectRoom() {
     </>
   )
 }
+;

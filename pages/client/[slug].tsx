@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react',
-import type { NextPage, GetServerSideProps } from 'next',
-import ReviewSummary from '../../components/reviews/ReviewSummary',
-import ReviewCard from '../../components/reviews/ReviewCard',
+import React, { useEffect, useState } from 'react',;
+import type { NextPage, GetServerSideProps } from 'next',;
+import ReviewSummary from '../../components/reviews/ReviewSummary',;
+import ReviewCard from '../../components/reviews/ReviewCard',;
 import type { PublicReview, ReviewsSummary } from '../../types/reviews',
-
+;
 type Props = { clientId: string },
 
 const ClientPage: NextPage<Props> = ({ clientId }) => {
@@ -42,4 +42,4 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return { props: { clientId: slug } }
 },
 
-export default ClientPage,
+export default ClientPage,;

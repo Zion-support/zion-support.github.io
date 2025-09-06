@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react',
-
+;
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([]),
 
@@ -51,4 +51,4 @@ export default function CloudAutomationHub() {
       </div>
     </div>
   )
-}
+};

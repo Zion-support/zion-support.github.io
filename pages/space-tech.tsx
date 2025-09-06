@@ -1,8 +1,8 @@
-import React from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout',
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
 import { Satellite, CheckCircle, Globe2 } from 'lucide-react',
-
+;
 export default function SpaceTechPage() {
   const features = [
     'Mission control dashboards and telemetry pipelinesSatellite operations playbooks and anomaly responseGround station integrations and data delivery SLAsSecure communications and zero-trust segmentation'],
@@ -50,4 +50,4 @@ export default function SpaceTechPage() {
       </div>
     </Layout>
   )
-}
+};

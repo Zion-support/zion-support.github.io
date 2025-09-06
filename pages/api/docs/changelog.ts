@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
 const filePath = path.join(process.cwd(), 'dataapi-docschangelog.json'),
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -29,4 +29,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader('AllowGET, POST'),
   res.status(405).end('Method Not Allowed')
-}
+};

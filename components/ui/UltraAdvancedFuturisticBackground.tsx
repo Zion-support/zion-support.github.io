@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react',
-
+;
 interface UltraAdvancedFuturisticBackgroundProps {
   intensity?: 'low' | 'medium' | 'high',
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic' | 'quantum-ai',
@@ -310,4 +310,4 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
   )
 },
 
-export default UltraAdvancedFuturisticBackground,
+export default UltraAdvancedFuturisticBackground,;

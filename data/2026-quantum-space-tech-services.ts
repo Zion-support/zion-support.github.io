@@ -38,4 +38,4 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+],;

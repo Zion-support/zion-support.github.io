@@ -1,5 +1,5 @@
-import React, { useEffect, useMemo, useState } from 'react',
-import Head from 'next/head',
+import React, { useEffect, useMemo, useState } from 'react',;
+import Head from 'next/head',;
 export default function AccountSettingsPage() {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false),
@@ -157,4 +157,4 @@ export default function AccountSettingsPage() {
       </div>
     </>
   )
-}
+};

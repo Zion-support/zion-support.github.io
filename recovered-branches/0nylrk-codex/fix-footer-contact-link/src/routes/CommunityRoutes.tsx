@@ -1,12 +1,12 @@
-import { Fragment } from "react",
-import { Route, Routes } from "react-router-dom",
-import { ProtectedRoute } from "../components/ProtectedRoute",
-import CommunityPage from "../pages/CommunityPage",
-import ForumCategoryPage from "../pages/ForumCategoryPage",
-import ForumPostPage from "../pages/ForumPostPage",
-import CreatePostPage from "../pages/CreatePostPage",
-import EditPostPage from "../pages/EditPostPage",
-import CommunityProfilePage from "../pages/CommunityProfilePage",
+import { Fragment } from "react",;
+import { Route, Routes } from "react-router-dom",;
+import { ProtectedRoute } from "../components/ProtectedRoute",;
+import CommunityPage from "../pages/CommunityPage",;
+import ForumCategoryPage from "../pages/ForumCategoryPage",;
+import ForumPostPage from "../pages/ForumPostPage",;
+import CreatePostPage from "../pages/CreatePostPage",;
+import EditPostPage from "../pages/EditPostPage",;
+import CommunityProfilePage from "../pages/CommunityProfilePage",;
 const CommunityRoutes = () => {
   return (
     <Routes>
@@ -38,4 +38,4 @@ const CommunityRoutes = () => {
   )
 },
 
-export default CommunityRoutes,
+export default CommunityRoutes,;

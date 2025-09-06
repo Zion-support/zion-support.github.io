@@ -1,5 +1,5 @@
 
-import { useState } from 'react',
+import { useState } from 'react',;
 export function useAuthStatus() {
   // Mock authenticated status
   const [isAuthenticated, setIsAuthenticated] = useState(false),
@@ -42,3 +42,4 @@ export function useAuthStatus() {
     toggleAuth
   }
 }
+;

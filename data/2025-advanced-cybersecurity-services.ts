@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedCybersecurityService {
   id: string,
   name: string,
@@ -265,4 +265,4 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.7,
     reviews: 21
   }
-],
+],;

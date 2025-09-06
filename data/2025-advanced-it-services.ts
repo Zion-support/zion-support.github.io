@@ -229,4 +229,4 @@ export const advancedITServices2025 = [
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
-],
+],;

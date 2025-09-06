@@ -1,8 +1,8 @@
 
-import React, { useEffect, useState } from "react",
-import { cn } from "@/lib/utils",
+import React, { useEffect, useState } from "react",;
+import { cn } from "@/lib/utils",;
 import { motion, AnimatePresence } from "framer-motion",
-
+;
 interface StickyActionProps {
   className?: string,
   children: React.ReactNode,
@@ -60,3 +60,4 @@ export function StickyAction({
     </AnimatePresence>
   )
 }
+;

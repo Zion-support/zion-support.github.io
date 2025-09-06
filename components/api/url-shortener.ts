@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
-
+;
 interface ShortUrl {
   id: string,
   originalUrl: string,
@@ -147,4 +147,4 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
       permanent: false
     }
   }
-}
+};

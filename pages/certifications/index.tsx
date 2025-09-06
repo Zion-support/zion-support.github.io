@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react',
-import CertificatePreview from '../../components/learn/CertificatePreview',
+import { useEffect, useState } from 'react',;
+import CertificatePreview from '../../components/learn/CertificatePreview',;
 export default function Certifications() {
   const [leaderboard, setLeaderboard] = useState<any[]>([]),
 
@@ -32,4 +32,4 @@ export default function Certifications() {
       </div>
     </div>
   )
-}
+};

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseITBreakthroughService2029 {
   id: string,
   name: string,
@@ -213,4 +213,4 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     rating: 4.9,
     reviews: 95
   }
-],
+],;

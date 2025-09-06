@@ -31,4 +31,4 @@ module.exports = MCPClientIntegration,
 if (require.main === module) {
   const client = new MCPClientIntegration(),
   client.connect()
-}
+};

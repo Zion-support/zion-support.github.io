@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import { mkdirSync, existsSync } from 'node: fs',
-import { resolve } from 'node: path',
-import sharp from 'sharp',
+import { mkdirSync, existsSync } from 'node: fs',;
+import { resolve } from 'node: path',;
+import sharp from 'sharp',;
 const root = new URL('.',
 import.meta.url).pathname,
 const svgPath = resolve(root, '../assets/zion.svg'),
@@ -15,4 +15,4 @@ for (const size of sizes) {
   await sharp(svgPath).resize(size, size).png().toFile(out),
   // eslint-disable-next-line no-console
   console.log('generated', out)
-}
+};

@@ -1,6 +1,6 @@
 
-import { useState } from 'react',
-import { supabase } from '@/integrations/supabase/client',
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
 export interface TalentProfileData {
   name: string,
   title: string,
@@ -55,3 +55,4 @@ export function useTalentProfileEnhancer() {
     error
   }
 }
+;

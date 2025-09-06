@@ -1,5 +1,5 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react',
-import { X } from 'lucide-react',
+import React, { useEffect, useMemo, useRef, useState } from 'react',;
+import { X } from 'lucide-react',;
 type ChatMessage = {
   role: 'user' | 'assistant' | 'system',
   content: string,
@@ -209,4 +209,4 @@ export default function ChatWidget() {
       )}
     </div>
   )
-}
+};

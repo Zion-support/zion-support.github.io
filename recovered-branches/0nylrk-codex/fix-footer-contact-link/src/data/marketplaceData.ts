@@ -1,7 +1,7 @@
 
-import { ProductListing } from "@/types/listings",
+import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",
-
+;
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
@@ -342,3 +342,4 @@ export const generateFilterOptions = (): FilterOptions => {
 
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0)),
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0)),
+;

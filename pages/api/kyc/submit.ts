@@ -1,9 +1,9 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import type { KycProfile } from '../../../utils/kyc',
-import { validateKycSubmission } from '../../../utils/kyc',
-import { getAmlProvider } from '../../../utils/aml',
-import fs from 'fs',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import type { KycProfile } from '../../../utils/kyc',;
+import { validateKycSubmission } from '../../../utils/kyc',;
+import { getAmlProvider } from '../../../utils/aml',;
+import fs from 'fs',;
+import path from 'path',;
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),
 const FILE = path.join(DATA_DIR, 'profiles.json'),
 
@@ -75,4 +75,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   save(db),
 
   res.status(200).json({ ok: true, profile, aml: amlResult })
-}
+};

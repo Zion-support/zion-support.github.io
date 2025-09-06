@@ -1,7 +1,7 @@
 
-import React from "react",
+import React from "react",;
 import { Star } from 'lucide-react'
-
+;
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
@@ -52,3 +52,4 @@ export const CommunityTrust: React.FC = () => {
     </section>
   )
 },
+;

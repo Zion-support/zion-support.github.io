@@ -1,7 +1,7 @@
-import React, { ReactNode } from "react",
-import { cn } from "@/lib/utils",
-import { slugify } from "@/lib/slugify",
-import { Link } from "react-router-dom",
+import React, { ReactNode } from "react",;
+import { cn } from "@/lib/utils",;
+import { slugify } from "@/lib/slugify",;
+import { Link } from "react-router-dom",;
 interface CategoryCardProps {
   title: string,
   description: string,
@@ -44,4 +44,4 @@ export function CategoryCard({ title, description, icon, color, count, className
       )}
     </Link>
   )
-}
+};

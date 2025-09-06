@@ -1,7 +1,7 @@
 
-import { useState } from 'react',
-import { supabase } from '@/integrations/supabase/client',
-import { toast } from 'sonner',
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { toast } from 'sonner',;
 export interface MilestoneInput {
   scope: string,
   startDate: string,
@@ -57,3 +57,4 @@ export function useMilestoneGenerator() {
     isGenerating,
     clearGeneratedMilestones}
 }
+;

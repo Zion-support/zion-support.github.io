@@ -1,6 +1,6 @@
-import React, { useState } from 'react',
-import Layout from './layout/Layout',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react',;
+import Layout from './layout/Layout',;
+import { motion } from 'framer-motion',;
 import { 
   ArrowRight,
   Star, 
@@ -23,11 +23,11 @@ import {
   Award,
   Clock
 } from 'lucide-react',
-import Link from 'next/link',
-import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026',
-import { innovative2041MicroSaasServices } from '../data/innovative-2041-micro-saas-services',
-import { innovative2041ITServices } from '../data/innovative-2041-it-services',
-import { innovative2041AIServices } from '../data/innovative-2041-ai-services',
+import Link from 'next/link',;
+import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026',;
+import { innovative2041MicroSaasServices } from '../data/innovative-2041-micro-saas-services',;
+import { innovative2041ITServices } from '../data/innovative-2041-it-services',;
+import { innovative2041AIServices } from '../data/innovative-2041-ai-services',;
 const Homepage2041: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState(''),
 
@@ -373,4 +373,4 @@ const Homepage2041: React.FC = () => {
   )
 },
 
-export default Homepage2041,
+export default Homepage2041,;

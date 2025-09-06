@@ -3,11 +3,11 @@ import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
 
-const EnhancedFooter: React.FC = () => {
+const EnhancedFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear();
 =======
-import React from 'react',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import { motion } from 'framer-motion',;
 import { 
   Phone, Mail, MapPin, Globe, 
   Twitter, Linkedin, Facebook, Instagram,
@@ -85,7 +85,7 @@ export default function EnhancedFooter() {
     { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
     { name: 'Micro SaaS', href: '/micro-saas' },
     { name: 'Security', href: '/security' },
-    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Case Studies', href: '/case-studies' },;
   ];
 
   const company = [
@@ -93,20 +93,20 @@ export default function EnhancedFooter() {
     { name: 'Our Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
     { name: 'News', href: '/news' },
-    { name: 'Partners', href: '/partners' },
+    { name: 'Partners', href: '/partners' },;
   ];
 
   const resources = [
     { name: 'Blog', href: '/blog' },
     { name: 'Documentation', href: '/docs' },
     { name: 'Support', href: '/support' },
-    { name: 'FAQ', href: '/faq' },
+    { name: 'FAQ', href: '/faq' },;
   ];
 
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github },
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github },;
   ];
 
   return (
@@ -395,7 +395,7 @@ export default function EnhancedFooter() {
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-sm">
+            <p className="text-gray-300 text-sm">;
               &copy; {currentYear} Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">

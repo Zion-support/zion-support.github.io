@@ -1,6 +1,6 @@
 
-import React from 'react',
-import { MobileApp } from './MobileApp',
+import React from 'react',;
+import { MobileApp } from './MobileApp',;
 export { MobileApp },
 
 // Export all mobile components for potential reuse in other projects

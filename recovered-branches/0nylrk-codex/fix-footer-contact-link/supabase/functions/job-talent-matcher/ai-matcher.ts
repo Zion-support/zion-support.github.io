@@ -1,6 +1,6 @@
 
 import { JobData, TalentProfile, MatchResult } from "./types.ts",
-
+;
 // Get openAI API key from environment variables
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",
 
@@ -180,3 +180,4 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
   .sort((a, b) => b.score - a.score) // Sort by score (highest first)
   .slice(0, 5), // Get top 5 matches
 }
+;

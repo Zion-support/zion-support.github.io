@@ -1,7 +1,7 @@
-import { useRouter } from 'next/router',
-import useSWR from 'swr',
+import { useRouter } from 'next/router',;
+import useSWR from 'swr',;
 import { useEffect, useState } from 'react',
-
+;
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
 
 export default function EditJobPage() {
@@ -52,4 +52,4 @@ export default function EditJobPage() {
       </div>
     </div>
   )
-}
+};

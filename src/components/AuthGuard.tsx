@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react',
-import { useRouter } from 'next/router',
-import { useAuth } from '@/hooks/useAuth',
-import { toast } from '@/hooks/use-toast',
+import React, { useEffect } from 'react',;
+import { useRouter } from 'next/router',;
+import { useAuth } from '@/hooks/useAuth',;
+import { toast } from '@/hooks/use-toast',;
 import { Loader2, Shield } from 'lucide-react'
-
+;
 interface AuthGuardProps {
   children: React.ReactNode,
   requireAuth?: boolean,
@@ -197,3 +197,4 @@ export function useAuthGuard() {
     user,
     isLoading}
 }
+;

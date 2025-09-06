@@ -1,5 +1,5 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
 const SustainableTechnologyPractices: NextPage = () => {
   return (
     <div>
@@ -16,4 +16,4 @@ const SustainableTechnologyPractices: NextPage = () => {
   )
 },
 
-export default SustainableTechnologyPractices,
+export default SustainableTechnologyPractices,;

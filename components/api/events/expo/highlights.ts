@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { agendaItems } from '../../../../data/expo/agenda',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { agendaItems } from '../../../../data/expo/agenda',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const top = agendaItems.slice(0, 3),
@@ -19,4 +19,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(500).json({ error: e.message || 'Failed to generate highlights' })
   }
-}
+};

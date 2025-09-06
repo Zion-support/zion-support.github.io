@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { store } from '../../../../../utils/data/enterpriseStore',
-import type { EnterpriseRole } from '../../../../../utils/types/enterprise',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { store } from '../../../../../utils/data/enterpriseStore',;
+import type { EnterpriseRole } from '../../../../../utils/types/enterprise',;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { companyId } = req.query,
   if (!companyId || typeof companyId !== 'string') {
@@ -36,4 +36,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   return res.status(405).json({ error: 'method_not_allowed' })
-}
+};

@@ -1,6 +1,6 @@
 
-import { useFetchResume } from './useFetchResume',
-import { useResumeActions } from './useResumeActions',
+import { useFetchResume } from './useFetchResume',;
+import { useResumeActions } from './useResumeActions',;
 export function useResumeBasic() {
   const fetchResumeOperations = useFetchResume(),
   const resumeActions = useResumeActions(),
@@ -17,3 +17,4 @@ export function useResumeBasic() {
     updateBasicInfo: resumeActions.updateBasicInfo,
     setActiveResume: resumeActions.setActiveResume}
 }
+;

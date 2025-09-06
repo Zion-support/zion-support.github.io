@@ -63,4 +63,4 @@ document.getElementById('signIn').addEventListener('click', async () => {
   const id = crypto.randomUUID(),
   setUserId(id),
   document.getElementById('result').textContent = 'Signed in (local).'
-}),
+}),;

@@ -1,7 +1,7 @@
-import React from 'react',
-import type { NextPage, GetServerSideProps } from 'next',
-import ReviewForm from '../../components/reviews/ReviewForm',
-import { findProjectById } from '../../utils/dataStore',
+import React from 'react',;
+import type { NextPage, GetServerSideProps } from 'next',;
+import ReviewForm from '../../components/reviews/ReviewForm',;
+import { findProjectById } from '../../utils/dataStore',;
 type Props = {
   projectId: string,
   fromRole: 'client' | 'talent',
@@ -50,4 +50,4 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return { props: { projectId, fromRole: role, fromId, valid, reason: valid ? null : 'Invalid reviewer for this project' } } as any
 },
 
-export default ReviewSubmitPage,
+export default ReviewSubmitPage,;

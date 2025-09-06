@@ -273,4 +273,4 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     marketSize: '$35B autonomous vehicle market',
     growthRate: '75% annually'
   }
-],
+],;

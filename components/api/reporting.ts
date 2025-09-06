@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { authenticateRequest } from '@/utils/auth',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { authenticateRequest } from '@/utils/auth',;
 import { readJsonFile, updateJsonFile } from '@/utils/fileDb',
-
+;
 interface ReportingData {
   byTenant: Record<string, {
     funnel: { stage: string, count: number }[],
@@ -41,4 +41,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   return res.status(405).json({ error: 'Method not allowed' })
-}
+};

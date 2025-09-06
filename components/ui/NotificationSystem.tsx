@@ -21,7 +21,7 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
 }) => {
   const getNotificationStyles = (type: Notification['type']) => {
     switch (type) {
-      case 'success':
+      case 'success':;
         return 'bg-green-50 border-green-200 text-green-800';
       case 'error':
         return 'bg-red-50 border-red-200 text-red-800';
@@ -47,9 +47,9 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
             {onDismiss && (,
               <button,
                 onClick={() => onDismiss(notification.id)},
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react',
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react',;
 import { AnimatePresence, motion } from 'framer-motion',
-
+;
 export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' },
 
 type NotificationContextValue = {
@@ -102,7 +102,7 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
         </div>
 <<<<<<< HEAD
       ))}
-    </div>
+    </div>;
   );
 };
 

@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs-extra',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs-extra',;
+import path from 'path',;
 const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json'),
 
 async function ensureStore() {
@@ -35,4 +35,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(201).json(item)
   }
   res.status(405).json({ error: 'Method not allowed' })
-}
+};

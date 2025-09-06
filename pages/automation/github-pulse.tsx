@@ -1,6 +1,6 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore
-import data from '../../data/github-pulse.json',
+import data from '../../data/github-pulse.json',;
 export default function GithubPulsePage() {
   const repo = data?.repo || {},
   const last24h = data?.last24h || {},
@@ -29,4 +29,4 @@ function Metric({ label, value }: { label: string, value: any }) {
       <div className="text-lg font-semibold">{value ?? '—'}</div>
     </div>
   )
-}
+};

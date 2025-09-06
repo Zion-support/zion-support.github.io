@@ -1,11 +1,11 @@
 
-import { useState } from 'react',
-import { useForm } from 'react-hook-form',
-import { zodResolver } from '@hookform/resolvers/zod',
-import { z } from 'zod',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Textarea } from '@/components/ui/textarea',
+import { useState } from 'react',;
+import { useForm } from 'react-hook-form',;
+import { zodResolver } from '@hookform/resolvers/zod',;
+import { z } from 'zod',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Textarea } from '@/components/ui/textarea',;
 import {
   Form,
   FormControl,
@@ -13,10 +13,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from '@/components/ui/form',
-import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react',
-import { PortfolioProject } from '@/types/resume',
-import { usePortfolio } from '@/hooks/usePortfolio',
-import { useAuth } from '@/hooks/useAuth',
+import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react',;
+import { PortfolioProject } from '@/types/resume',;
+import { usePortfolio } from '@/hooks/usePortfolio',;
+import { useAuth } from '@/hooks/useAuth',;
 // Define schema for form validation
 const projectSchema = z.object({
   title: z.string().min(1, 'Project title is required'),
@@ -210,3 +210,4 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     </Form>
   )
 }
+;

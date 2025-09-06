@@ -37,7 +37,7 @@ export const defaultSEO = {
       name: 'msapplication-TileColor',
       content: '#1e40af',
     },
-  ],
+  ],;
 };
 
 export default defaultSEO;

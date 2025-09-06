@@ -1,6 +1,6 @@
-import EnhancedLayout from '../components/layout/EnhancedLayout',
+import EnhancedLayout from '../components/layout/EnhancedLayout',;
 import { Bot, Globe2, MonitorSmartphone } from 'lucide-react',
-
+;
 export default function FeaturesPage() {
   return (
     <EnhancedLayout>

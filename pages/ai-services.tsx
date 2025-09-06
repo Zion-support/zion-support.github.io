@@ -1,8 +1,8 @@
-import Link from 'next/link',
-import Head from 'next/head',
-import { useState, useEffect } from 'react',
-import { ContactInfo } from '../types',
-import ErrorBoundary from '../components/ErrorBoundary',
+import Link from 'next/link',;
+import Head from 'next/head',;
+import { useState, useEffect } from 'react',;
+import { ContactInfo } from '../types',;
+import ErrorBoundary from '../components/ErrorBoundary',;
 export default function AIServices() {
   const [isLoaded, setIsLoaded] = useState(false),
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -353,10 +353,10 @@ export default function AIServices() {
       </ErrorBoundary>
     </>
   )
-}
-import SEO from '../components/SEO',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import Link from 'next/link',
+};
+import SEO from '../components/SEO',;
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
+import Link from 'next/link',;
 export default function AIServicesPage() {
   return (
     <UltraAdvancedFuturisticBackground>

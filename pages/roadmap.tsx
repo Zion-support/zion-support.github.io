@@ -1,6 +1,6 @@
-import Head from 'next/head',
+import Head from 'next/head',;
 import React, { useMemo, useState } from 'react',
-
+;
 type RoadmapInputs = {
   milestones: string,
   keywords: string,
@@ -222,4 +222,4 @@ export default function RoadmapPage(): JSX.Element {
       </main>
     </>
   )
-}
+};

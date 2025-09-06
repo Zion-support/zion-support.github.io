@@ -25,4 +25,4 @@ export const TALENT_PROFILES = [
     originalLanguage: 'en',
     translations: {}
   }
-],
+],;

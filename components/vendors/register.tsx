@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react',
-
+;
 export default function VendorRegisterPage() {
   const [loading, setLoading] = useState(false),
   const [message, setMessage] = useState<string | null>(null),
@@ -77,4 +77,4 @@ export default function VendorRegisterPage() {
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
   )
-}
+};

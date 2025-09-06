@@ -54,4 +54,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   existing.updatedAt = new Date().toISOString(),
   writeGrant(existing),
   res.status(200).json({ record: existing })
-}
+};

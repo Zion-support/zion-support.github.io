@@ -1,5 +1,5 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
 const AutomationStatus: NextPage = () => {
   return (
     <div>
@@ -16,4 +16,4 @@ const AutomationStatus: NextPage = () => {
   )
 },
 
-export default AutomationStatus,
+export default AutomationStatus,;

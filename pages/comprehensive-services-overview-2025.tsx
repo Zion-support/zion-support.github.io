@@ -1,13 +1,13 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import { motion, AnimatePresence } from 'framer-motion',;
 import { 
   Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom,
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown, Search,
   Filter, Grid, List, BarChart3, DollarSign, Target as TargetIcon
 } from 'lucide-react',
-import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion',
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025',
+import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion',;
+import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025',;
 export default function ComprehensiveServicesOverviewPage() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
@@ -452,4 +452,4 @@ export default function ComprehensiveServicesOverviewPage() {
       </div>
     </>
   )
-}
+};

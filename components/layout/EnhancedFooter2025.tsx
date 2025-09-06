@@ -1,6 +1,6 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
 import { 
   Phone, Mail, MapPin, Star, ArrowRight,
   Brain, Atom, Shield, Rocket, Target, Microscope,
@@ -291,4 +291,4 @@ const EnhancedFooter2025: React.FC = () => {
   )
 },
 
-export default EnhancedFooter2025,
+export default EnhancedFooter2025,;

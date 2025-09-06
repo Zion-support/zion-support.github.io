@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react',
-
+;
 export type UserRole = 'client' | 'talent',
 
 type RoleContextValue = {
@@ -38,4 +38,4 @@ export function useRole(): RoleContextValue {
   const ctx = useContext(RoleContext),
   if (!ctx) throw new Error('useRole must be used within RoleProvider'),
   return ctx
-}
+};

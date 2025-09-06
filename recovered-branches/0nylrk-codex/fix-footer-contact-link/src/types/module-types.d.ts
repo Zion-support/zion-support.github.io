@@ -5,7 +5,7 @@ declare module 'vitest/config' {
 }
 
 declare module '@vitejs/plugin-react-swc' {
-  import { Plugin } from 'vite',
+  import { Plugin } from 'vite',;
   export default function reactSWC(): Plugin
 }
 
@@ -16,6 +16,6 @@ declare module 'path' {
 }
 
 declare module 'lovable-tagger' {
-  import { Plugin } from 'vite',
+  import { Plugin } from 'vite',;
   export function componentTagger(): Plugin
 }

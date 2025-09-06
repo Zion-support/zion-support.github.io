@@ -35,4 +35,4 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
   return resp.json()
 }
 
-module.exports = { upsertFile },
+module.exports = { upsertFile },;

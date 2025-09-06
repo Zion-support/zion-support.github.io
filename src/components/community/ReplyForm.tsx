@@ -1,8 +1,8 @@
 
-import { useState } from "react",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
+import { useState } from "react",;
+import { useForm, ControllerRenderProps } from "react-hook-form",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
 import {
   Form,
   FormControl,
@@ -11,7 +11,7 @@ import {
   FormMessage
 } from "@/components/ui/form",
 import { Card, CardContent } from "@/components/ui/card",
-
+;
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>,
   parentId?: string
@@ -73,3 +73,4 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
 },
 
 export default ReplyForm,
+;

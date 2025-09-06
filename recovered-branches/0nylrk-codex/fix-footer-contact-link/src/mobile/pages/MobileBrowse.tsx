@@ -1,11 +1,11 @@
 
-import React, { useState } from "react",
-import { MobileHeader } from "../components/common/MobileHeader",
-import { BottomNavigation } from "../components/common/BottomNavigation",
-import { BrowseFilters } from "../components/browse/BrowseFilters",
-import { BrowseCards } from "../components/browse/BrowseCards",
-import { Button } from "@/components/ui/button",
-import { useAuth } from "@/hooks/useAuth",
+import React, { useState } from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
+import { BrowseFilters } from "../components/browse/BrowseFilters",;
+import { BrowseCards } from "../components/browse/BrowseCards",;
+import { Button } from "@/components/ui/button",;
+import { useAuth } from "@/hooks/useAuth",;
 // Mock data for demonstration
 const jobsData = [
   {
@@ -129,3 +129,4 @@ export function MobileBrowse() {
     </div>
   )
 }
+;

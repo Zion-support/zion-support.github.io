@@ -449,4 +449,4 @@ export default function AiToolsPage() {
       </section>
     </>
   )
-}
+};

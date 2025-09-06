@@ -1,8 +1,8 @@
-import React, { useState } from 'react',
-import { motion } from 'framer-motion',
-import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles } from 'lucide-react',
-import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard',
-import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations',
+import React, { useState } from 'react',;
+import { motion } from 'framer-motion',;
+import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles } from 'lucide-react',;
+import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard',;
+import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations',;
 type Service = CuttingEdgeInnovation2029 | any,
 
 interface UltraFuturistic2029ServiceShowcaseProps {
@@ -247,4 +247,4 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
   )
 },
 
-export default UltraFuturistic2029ServiceShowcase,
+export default UltraFuturistic2029ServiceShowcase,;

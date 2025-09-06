@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface NextGenAIService2026 {
   id: string,
   name: string,
@@ -238,4 +238,4 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     rating: 4.7,
     reviews: 445
   }
-],
+],;

@@ -254,4 +254,4 @@ export const real2027Q3Additions = [
     realService: true,
     roi: 'Prevent high-severity API incidents and cut MTTR.'
   }
-],
+],;

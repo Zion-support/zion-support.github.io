@@ -1,7 +1,7 @@
-import React, { useState } from 'react',
-import SEO from '../components/SEO',
-import Layout from '../components/layout/Layout',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react',;
+import SEO from '../components/SEO',;
+import Layout from '../components/layout/Layout',;
+import { motion } from 'framer-motion',;
 import { 
   GraduationCap, Users, Clock, Award, BookOpen, Video, 
   Headphones, Code, Brain, Atom, Rocket, Shield, Zap,
@@ -714,3 +714,4 @@ export default function TrainingPage() {
 },
 
 export default Training,
+;

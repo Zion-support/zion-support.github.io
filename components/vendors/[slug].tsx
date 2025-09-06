@@ -1,6 +1,6 @@
-import type { GetServerSideProps } from 'next',
-import { FormEvent, useState } from 'react',
-import type { Vendor } from '../../utils/vendor-types',
+import type { GetServerSideProps } from 'next',;
+import { FormEvent, useState } from 'react',;
+import type { Vendor } from '../../utils/vendor-types',;
 type Props = { vendor: Vendor | null },
 
 export default function VendorProfilePage({ vendor }: Props) {
@@ -112,4 +112,4 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const { getVendorBySlug } = await import('../../utils/vendor-store'),
   const vendor = slug ? getVendorBySlug(slug) || null : null,
   return { props: { vendor } }
-},
+},;

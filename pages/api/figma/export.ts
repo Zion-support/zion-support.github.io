@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import JSZip from 'jszip'
+import type { NextApiRequest, NextApiResponse } from 'next';
+import JSZip from 'jszip';
 import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../../utils/design-map'
-
+;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const kit = (req.query.kit as string) || 'tailwind'
@@ -30,4 +30,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Export failed' })
   }
-}
+};

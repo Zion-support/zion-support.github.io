@@ -1,8 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { v4 as uuidv4 } from 'uuid',
-import { readJsonFile, writeJsonFile } from '../../utils/db',
-import type { Conversation, Message } from '../../utils/types',
-import { rateLimit } from '../../utils/rateLimit',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { v4 as uuidv4 } from 'uuid',;
+import { readJsonFile, writeJsonFile } from '../../utils/db',;
+import type { Conversation, Message } from '../../utils/types',;
+import { rateLimit } from '../../utils/rateLimit',;
 const FILE = 'conversations.json',
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -54,4 +54,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader('AllowGET, POST'),
   res.status(405).end('Method Not Allowed')
-}
+};

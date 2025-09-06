@@ -1,6 +1,6 @@
-import React, { useRef } from 'react',
+import React, { useRef } from 'react',;
 import { motion, useInView } from 'framer-motion',
-
+;
 interface LazySectionProps {
   children: React.ReactNode,
   className?: string,
@@ -62,4 +62,4 @@ export const LazySection: React.FC<LazySectionProps> = ({
   )
 },
 
-export default LazySection,
+export default LazySection,;

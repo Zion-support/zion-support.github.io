@@ -1,27 +1,27 @@
-import { useRouter } from 'next/router',
-import { useApiErrorHandling } from '@/hooks/useApiErrorHandling',
-import ProductCard from '@/components/ProductCard',
-import { useState, useEffect, useCallback, useMemo, useRef } from 'react',
-import { useTranslation } from 'react-i18next',
-import { motion, AnimatePresence } from 'framer-motion',
-import { AuthModal } from '@/components/auth/AuthModal',
-import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star } from 'lucide-react'
-import { SkeletonCard } from '@/components/ui/skeleton',
-import { ErrorState } from '@/components/jobs/applications/ErrorState',
-import { ProductsEmptyState } from '@/components/marketplace/EmptyState',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { Card, CardContent } from '@/components/ui/card',
-import Spinner from '@/components/ui/spinner',
-import { ProductListing } from '@/types/listings',
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
-import { useToast } from '@/hooks/use-toast',
-import { useAuth } from '@/context/auth/AuthProvider',
-import { MARKETPLACE_LISTINGS } from '@/data/listingData',
-import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData',
+import { useRouter } from 'next/router',;
+import { useApiErrorHandling } from '@/hooks/useApiErrorHandling',;
+import ProductCard from '@/components/ProductCard',;
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react',;
+import { useTranslation } from 'react-i18next',;
+import { motion, AnimatePresence } from 'framer-motion',;
+import { AuthModal } from '@/components/auth/AuthModal',;
+import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star } from 'lucide-react';
+import { SkeletonCard } from '@/components/ui/skeleton',;
+import { ErrorState } from '@/components/jobs/applications/ErrorState',;
+import { ProductsEmptyState } from '@/components/marketplace/EmptyState',;
+import { Button } from '@/components/ui/button',;
+import { Badge } from '@/components/ui/badge',;
+import { Card, CardContent } from '@/components/ui/card',;
+import Spinner from '@/components/ui/spinner',;
+import { ProductListing } from '@/types/listings',;
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',;
+import { useToast } from '@/hooks/use-toast',;
+import { useAuth } from '@/context/auth/AuthProvider',;
+import { MARKETPLACE_LISTINGS } from '@/data/listingData',;
+import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData',;
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
-
+;
 /**
  * Marketplace component props
  */
@@ -701,3 +701,4 @@ export default function Marketplace() {
     </div>
   )
 }
+;

@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import OpenAI from 'openai',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import OpenAI from 'openai',;
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 
 // In-memory simple rate limiter (per IP)
@@ -62,4 +62,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error('Operator error', err),
     return res.status(500).json({ error: 'Internal Server Error' })
   }
-}
+};

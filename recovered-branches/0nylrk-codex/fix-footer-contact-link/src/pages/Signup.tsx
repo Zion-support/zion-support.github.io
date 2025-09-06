@@ -1,15 +1,15 @@
 
-import { useState } from "react",
-import { Link, Navigate } from "react-router-dom",
-import { useForm, type UseFormReturn } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
+import { useState } from "react",;
+import { Link, Navigate } from "react-router-dom",;
+import { useForm, type UseFormReturn } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
-
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Checkbox } from "@/components/ui/checkbox",
+;
+import { useAuth } from "@/hooks/useAuth",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Checkbox } from "@/components/ui/checkbox",;
 import {
   Form,
   FormControl,
@@ -17,8 +17,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
 // Form validation schema
 const signupSchema = z
   .object({
@@ -329,3 +329,4 @@ export default function Signup() {
     </>
   )
 }
+;

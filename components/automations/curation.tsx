@@ -1,6 +1,6 @@
-import React from "react",
-import fs from "fs",
-import path from "path",
+import React from "react",;
+import fs from "fs",;
+import path from "path",;
 type Experiment = {
   title: string,
   hypothesis?: string,
@@ -70,4 +70,4 @@ export async function getStaticProps() {
         items: []},
       revalidate: 300}
   }
-}
+};

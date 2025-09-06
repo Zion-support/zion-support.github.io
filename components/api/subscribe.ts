@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { supabase } from '../../utils/supabase/client',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { supabase } from '../../utils/supabase/client',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed'),
   const { email } = req.body || {},
@@ -34,4 +34,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(500).send(e?.message || 'Unexpected error')
   }
-}
+};

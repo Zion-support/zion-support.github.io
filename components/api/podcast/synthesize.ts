@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
-import axios from 'axios',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+import axios from 'axios',;
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),
 const PUBLIC_DIR = path.join(process.cwd(), 'publicpodcast'),
 
@@ -78,4 +78,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error(error),
     return res.status(500).json({ error: error?.message || 'Synthesis failed' })
   }
-}
+};

@@ -1,6 +1,6 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
 export default function CaseStudyPage() {
   const caseStudy = {
     id: 'ai-automation-manufacturing',
@@ -125,4 +125,4 @@ export default function CaseStudyPage() {
       </div>
     </>
   )
-}
+};

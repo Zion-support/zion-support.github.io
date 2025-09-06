@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState, useEffect } from 'react',;
+import Link from 'next/link',;
+import { motion, AnimatePresence } from 'framer-motion',;
 import { 
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen,
@@ -546,4 +546,4 @@ const UltraFuturisticNavigation2035: React.FC = () => {
   )
 },
 
-export default UltraFuturisticNavigation2035,
+export default UltraFuturisticNavigation2035,;

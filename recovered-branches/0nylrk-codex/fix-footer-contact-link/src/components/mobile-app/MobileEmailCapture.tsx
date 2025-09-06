@@ -1,7 +1,7 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
 export const MobileEmailCapture: React.FC = () => {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -67,3 +67,4 @@ export const MobileEmailCapture: React.FC = () => {
     </section>
   )
 },
+;

@@ -14,4 +14,4 @@ for (const size of sizes) {
   await sharp(svgPath).resize(size, size).png().toFile(out),
   // eslint-disable-next-line no-console
   console.log('generated', out)
-}
+};

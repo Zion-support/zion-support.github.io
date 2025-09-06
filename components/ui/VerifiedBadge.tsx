@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react',;
 export function VerifiedBadge({ labels }: { labels: string[] }) {
   if (!labels || labels.length === 0) return null,
   return (

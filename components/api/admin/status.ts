@@ -1,8 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
 import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth',
-
+;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req),
   const internal = isInternalAgentRequest(req),
@@ -23,4 +23,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     : { items: [], updatedAt: null },
 
   res.status(200).json({ status, insights })
-}
+};

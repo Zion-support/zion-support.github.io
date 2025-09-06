@@ -1,5 +1,5 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
 const DataAnalyticsImplementation: NextPage = () => {
   return (
     <div>
@@ -16,4 +16,4 @@ const DataAnalyticsImplementation: NextPage = () => {
   )
 },
 
-export default DataAnalyticsImplementation,
+export default DataAnalyticsImplementation,;

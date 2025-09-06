@@ -1,4 +1,4 @@
-import React, { useState } from 'react',
+import React, { useState } from 'react',;
 import { 
   SERVICE_CATEGORIES,
   ALL_SERVICES, 
@@ -10,7 +10,7 @@ import {
   CLOUD_SOLUTIONS
 } from '@/data/servicesData',
 import { ServiceCategory, ServiceSolution } from '@/types/services',
-
+;
 export function ServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [searchTerm, setSearchTerm] = useState(''),
@@ -441,4 +441,4 @@ function ServiceCard({ service }: ServiceCardProps) {
       </div>
     </div>
   )
-}
+};

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface NextGenAIService {
   id: string,
   name: string,
@@ -801,4 +801,4 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 34
   }
-],
+],;

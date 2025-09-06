@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { createServerClient } from '../../../utils/supabase/server',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { createServerClient } from '../../../utils/supabase/server',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const supabase = createServerClient(),
@@ -56,4 +56,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         { label: 'Invite', value: 2 },
         { label: 'Hire', value: 2 }]})
   }
-}
+};

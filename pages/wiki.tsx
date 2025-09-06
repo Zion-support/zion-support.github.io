@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react',
+import React, { useMemo, useState } from 'react',;
 import {
   generateZionWiki,
   buildMarkdownFromWiki,
@@ -93,4 +93,4 @@ export default function WikiPage() {
       </article>
     </div>
   )
-}
+};

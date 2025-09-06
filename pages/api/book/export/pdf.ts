@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import puppeteer from 'puppeteer',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import puppeteer from 'puppeteer',;
 export const config = {
   api: {
     bodyParser: {
@@ -34,4 +34,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try { await browser.close() } catch {}
     res.status(500).json({ error: e?.message || 'Failed to render PDF' })
   }
-}
+};

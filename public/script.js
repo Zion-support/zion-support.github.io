@@ -388,4 +388,4 @@ document.addEventListener('click', function(e) {
 }),
 
 // Log performance when page is fully loaded
-window.addEventListener('load', logPerformance),
+window.addEventListener('load', logPerformance),;

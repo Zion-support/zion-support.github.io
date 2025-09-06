@@ -1,10 +1,10 @@
 
-import React from "react",
-import { Slider } from "@/components/ui/slider",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { toast } from "@/hooks/use-toast",
+import React from "react",;
+import { Slider } from "@/components/ui/slider",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { toast } from "@/hooks/use-toast",;
 import {
   Card,
   CardContent,
@@ -12,8 +12,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle} from "@/components/ui/card",
-import { Sparkles } from "lucide-react",
-import { Progress } from "@/components/ui/progress",
+import { Sparkles } from "lucide-react",;
+import { Progress } from "@/components/ui/progress",;
 export function UsageStats() {
   const handleSaveChanges = () => {
     toast({
@@ -176,3 +176,4 @@ export function UsageStats() {
     </div>
   )
 }
+;

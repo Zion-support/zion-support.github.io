@@ -1,14 +1,14 @@
 
-import React, { useState } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Switch } from "@/components/ui/switch",
-import { Badge } from "@/components/ui/badge",
-import { Separator } from "@/components/ui/separator",
+import React, { useState } from "react",;
+import { useForm } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Switch } from "@/components/ui/switch",;
+import { Badge } from "@/components/ui/badge",;
+import { Separator } from "@/components/ui/separator",;
 import {
   Form,
   FormControl,
@@ -17,12 +17,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react",
-import { toast } from "@/components/ui/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { useAuth } from "@/hooks/useAuth",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react",;
+import { toast } from "@/components/ui/use-toast",;
+import { supabase } from "@/integrations/supabase/client",;
+import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { useAuth } from "@/hooks/useAuth",;
 // Define form schema
 const serviceProfileSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters long"),
@@ -725,3 +725,4 @@ export function ServiceProviderRegistrationForm() {
     </div>
   )
 }
+;

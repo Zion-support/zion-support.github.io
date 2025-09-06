@@ -1,7 +1,7 @@
 
 // Email analysis functionality
-import { suspiciousEmailDomains } from './constants',
-import { EmailAnalysisResult } from './types',
+import { suspiciousEmailDomains } from './constants',;
+import { EmailAnalysisResult } from './types',;
 /**
  * Analyzes email for suspicious patterns
  */
@@ -24,3 +24,4 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {
     reasons
   }
 },
+;

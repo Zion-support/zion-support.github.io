@@ -1,8 +1,8 @@
-import React, { useMemo, useState } from 'react'
-import { useUser } from '../../providers/UserProvider'
-import { useToast } from '../ui/ToastProvider'
+import React, { useMemo, useState } from 'react';
+import { useUser } from '../../providers/UserProvider';
+import { useToast } from '../ui/ToastProvider';
 import Link from 'next/link'
-
+;
 export default function OnboardingWizard() {
   const { user, completeOnboarding, setUser } = useUser()
   const { addToast } = useToast()
@@ -76,4 +76,4 @@ export default function OnboardingWizard() {
       </div>
     </div>
   )
-}
+};

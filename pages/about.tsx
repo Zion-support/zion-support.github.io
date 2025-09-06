@@ -1,6 +1,6 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
 import { 
 const AboutPage: React.FC = () => {
   const values = [
@@ -43,9 +43,9 @@ const AboutPage: React.FC = () => {
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon,
   ArrowRight, ChevronRight, MapPin, Mail, Phone, Globe as GlobeIcon
-} from 'lucide-react',
-import SmartHeader from '../components/SmartHeader',
-import SmartFooter from '../components/SmartFooter',
+} from 'lucide-react',;
+import SmartHeader from '../components/SmartHeader',;
+import SmartFooter from '../components/SmartFooter',;
 export default function AboutPage() {
   const stats = [
     { number: '500+', label: 'Projects Delivered', icon: CheckCircle, color: 'from-blue-500 to-cyan-500' },
@@ -153,10 +153,10 @@ export default function AboutPage() {
       description: 'Continuing to push boundaries with autonomous AI systems and consciousness technology.'
     }
   ],
-
-import React from 'react',
-import Head from 'next/head',
-import Button from '../components/ui/Button',
+;
+import React from 'react',;
+import Head from 'next/head',;
+import Button from '../components/ui/Button',;
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">

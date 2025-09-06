@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026MicroSaasService {
   id: string,
   name: string,
@@ -490,4 +490,4 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.8,
     reviews: 500
   }
-],
+],;

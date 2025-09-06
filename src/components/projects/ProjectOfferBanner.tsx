@@ -1,11 +1,11 @@
 
-import { useEffect, useState } from "react",
-import { useRouter } from 'next/router',
-import { Bell, Calendar, X } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { useProjects } from "@/hooks/useProjects",
-import { Project } from "@/types/projects",
+import { useEffect, useState } from "react",;
+import { useRouter } from 'next/router',;
+import { Bell, Calendar, X } from 'lucide-react';
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { useProjects } from "@/hooks/useProjects",;
+import { Project } from "@/types/projects",;
 export function ProjectOfferBanner() {
   const router = useRouter(),
   const { projects, isLoading } = useProjects(),
@@ -77,3 +77,4 @@ export function ProjectOfferBanner() {
     </div>
   )
 }
+;

@@ -1,6 +1,6 @@
-import Head from 'next/head',
-import Link from 'next/link',
-import CharterGenerator from '../components/foundation/CharterGenerator',
+import Head from 'next/head',;
+import Link from 'next/link',;
+import CharterGenerator from '../components/foundation/CharterGenerator',;
 export default function FoundationPage() {
   return (
     <>

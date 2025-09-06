@@ -12,5 +12,5 @@ const EnhancedLayout = ({ children }) => {
     </div>
   )
 },
-
+;
 export default EnhancedLayout;

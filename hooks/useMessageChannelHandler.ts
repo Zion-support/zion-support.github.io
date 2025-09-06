@@ -33,7 +33,7 @@ export function useMessageChannelHandler({
 }: MessageChannelHandlerProps = {}) {
   const handleMessage = useCallback((event: MessageEvent<unknown>) => {
     try {
-      if (onMessage) {
+      if (onMessage) {;
         onMessage(event.data);
       }
     } catch (error) {

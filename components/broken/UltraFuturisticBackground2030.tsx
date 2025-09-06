@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react',
-import { motion } from 'framer-motion',
+import React, { useEffect, useRef } from 'react',;
+import { motion } from 'framer-motion',;
 interface UltraFuturisticBackground2030Props {
   children: React.ReactNode
 }
@@ -259,4 +259,4 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
   )
 },
 
-export default UltraFuturisticBackground2030,
+export default UltraFuturisticBackground2030,;

@@ -22,4 +22,4 @@ exports.handler = async () => {
   step('components:catalog', () => runNode('automation/components-catalog.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
   return { statusCode: 200, body: logs.join('\n') }
-},
+},;

@@ -69,7 +69,7 @@ export default function App(): JSX.Element {
   const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setTimeout(() => {;
       setIsLoading(false);
     }, 1000);
 
@@ -124,7 +124,7 @@ export default function App(): JSX.Element {
       features: ['Custom Software Development', 'System Integration', 'Digital Transformation', 'Process Automation'],
       href: '/enterprise',
       color: 'indigo'
-    }
+    };
   ];
 
   const testimonials: Testimonial[] = [
@@ -145,14 +145,14 @@ export default function App(): JSX.Element {
       company: 'Enterprise Solutions Ltd.',
       content: 'Outstanding IT services and cloud solutions. They delivered on time and within budget.',
       rating: 5
-    }
+    };
   ];
 
   const stats = [
     { label: 'Micro SaaS Products', value: '150+', icon: Code },
     { label: 'AI Services', value: '100+', icon: Cpu },
     { label: 'IT Solutions', value: '100+', icon: Cloud },
-    { label: 'Happy Clients', value: '500+', icon: Users }
+    { label: 'Happy Clients', value: '500+', icon: Users };
   ];
 
   if (isLoading) {

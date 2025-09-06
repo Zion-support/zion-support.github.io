@@ -1,5 +1,5 @@
-import React from 'react',
-import Link from 'next/link',
+import React from 'react',;
+import Link from 'next/link',;
 import { 
   Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, 
   Shield, Users, Briefcase, BookOpen, MessageCircle, 
@@ -282,4 +282,4 @@ export default function UltraFuturisticFooter2028() {
       </div>
     </footer>
   )
-}
+};

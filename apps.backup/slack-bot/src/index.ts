@@ -74,4 +74,4 @@ app.command('/zion', async ({ command, ack, respond }) => {
   await app.start(port),
   // eslint-disable-next-line no-console
   console.log(`⚡️ Zion Slack bot running on port ${port}`)
-})(),
+})(),;

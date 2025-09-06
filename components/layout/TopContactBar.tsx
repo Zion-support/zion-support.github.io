@@ -1,5 +1,5 @@
-import React, { useState } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState } from 'react',;
+import { motion, AnimatePresence } from 'framer-motion',;
 import { 
   Phone, Mail, MapPin, Globe, 
   Clock, ChevronDown, ChevronUp,
@@ -253,3 +253,4 @@ export default function TopContactBar() {
   )
 }
 
+;

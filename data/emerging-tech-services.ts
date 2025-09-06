@@ -528,4 +528,4 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.8,
     reviews: 28
   }
-],
+],;

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026AIService {
   id: string,
   name: string,
@@ -265,4 +265,4 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     rating: 4.8,
     reviews: 950
   }
-],
+],;

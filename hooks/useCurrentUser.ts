@@ -1,4 +1,4 @@
-import useSWR from 'swr',
+import useSWR from 'swr',;
 const fetcher = (url: string) => fetch(url).then((r) => (r.ok ? r.json() : null)),
 
 export function useCurrentUser() {
@@ -8,4 +8,4 @@ export function useCurrentUser() {
     loading: !data && !error,
     error,
     mutate}
-}
+};

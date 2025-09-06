@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { readState, writeState } from '../../../../lib/integrations/fileStore',
-import { crm } from '../../../../lib/integrations/connectors',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { readState, writeState } from '../../../../lib/integrations/fileStore',;
+import { crm } from '../../../../lib/integrations/connectors',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
   const { resume } = req.body as { resume?: Record<string, any> },
@@ -15,4 +15,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     results.push({ providerId: conn.providerId, ok: true })
   }
   res.status(200).json({ ok: true, results })
-}
+};

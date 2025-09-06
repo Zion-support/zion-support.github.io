@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react',
-
+;
 export default function ServiceDescriptionGeneratorPage() {
   const [title, setTitle] = useState(''),
   const [targetAudience, setTargetAudience] = useState(''),
@@ -171,4 +171,4 @@ export default function ServiceDescriptionGeneratorPage() {
       )}
     </div>
   )
-}
+};

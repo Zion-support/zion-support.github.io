@@ -1,10 +1,10 @@
 
-import React from "react",
-import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { useAuth } from "@/hooks/useAuth",
-import { Navigate } from "react-router-dom",
+import React from "react",;
+import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
 export default function TalentOnboarding() {
   const { user, isLoading } = useAuth(),
 
@@ -33,3 +33,4 @@ export default function TalentOnboarding() {
     </>
   )
 }
+;

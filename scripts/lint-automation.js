@@ -36,7 +36,7 @@ class LintAutomation {
       const result = execSync('npm run lint:fix', { 
         encoding: 'utf8', 
         cwd: process.cwd(),
-        stdio: 'pipe'
+        stdio: 'pipe';
       });
       
       this.fixedCount++;

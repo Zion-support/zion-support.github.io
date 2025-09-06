@@ -1,14 +1,14 @@
-import React, { useState } from 'react',
-import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth',
-import { usePoints } from '@/hooks/usePoints',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { ScrollArea } from '@/components/ui/scroll-area',
-import { formatDistanceToNow } from 'date-fns',
-import Link from 'next/link',
-import { LoginModal } from '@/components/auth/LoginModal',
+import React, { useState } from 'react',;
+import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth',;
+import { usePoints } from '@/hooks/usePoints',;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Button } from '@/components/ui/button',;
+import { Badge } from '@/components/ui/badge',;
+import { ScrollArea } from '@/components/ui/scroll-area',;
+import { formatDistanceToNow } from 'date-fns',;
+import Link from 'next/link',;
+import { LoginModal } from '@/components/auth/LoginModal',;
 export default function PointsPage() {
   const { isAuthenticated, user } = useAuth(),
   const { ledger, balance, loading, fetchLedger } = usePoints(),
@@ -286,3 +286,4 @@ export default function PointsPage() {
     </div>
   )
 }
+;

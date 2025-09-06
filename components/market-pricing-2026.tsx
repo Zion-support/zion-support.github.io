@@ -1,12 +1,12 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award } from 'lucide-react',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',
-import { revolutionary2026Services } from '../data/revolutionary-2026-services',
-import { emergingTech2026Services } from '../data/emerging-tech-2026-services',
-import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services',
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
+import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award } from 'lucide-react',;
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
+import { revolutionary2026Services } from '../data/revolutionary-2026-services',;
+import { emergingTech2026Services } from '../data/emerging-tech-2026-services',;
+import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services',;
 export default function MarketPricing2026() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [priceRange, setPriceRange] = useState('all'),
@@ -455,4 +455,4 @@ export default function MarketPricing2026() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-}
+};

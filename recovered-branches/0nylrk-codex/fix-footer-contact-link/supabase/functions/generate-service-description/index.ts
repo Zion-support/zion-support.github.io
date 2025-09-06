@@ -1,7 +1,7 @@
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
-
+;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -70,3 +70,4 @@ The description should: 1. Be approximately 200-300 words
     )
   }
 }),
+;

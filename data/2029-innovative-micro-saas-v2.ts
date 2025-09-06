@@ -289,4 +289,4 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       "Workforce planning"
     ]
   }
-],
+],;

@@ -1,7 +1,7 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import { motion } from 'framer-motion',;
 import { 
   Users, Rocket, Brain, Globe, Award, Zap, 
   Heart, Star, ArrowRight, CheckCircle, Briefcase
@@ -308,3 +308,4 @@ export default function Careers() {
 },
 
 export default CareersPage,
+;

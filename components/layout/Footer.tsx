@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const Footer: React.FC = () => {;
   const currentYear = new Date().getFullYear();
 
   const services = [
@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
     { name: 'Blockchain Solutions', href: '/services/blockchain' },
     { name: 'IoT Platforms', href: '/services/iot-platforms' },
     { name: 'Data Analytics', href: '/services/data-analytics' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity' },;
   ];
 
   const company = [
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
     { name: 'Careers', href: '/careers' },
     { name: 'News & Updates', href: '/blog' },
     { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Terms of Service', href: '/terms' },;
   ];
 
   const resources = [
@@ -30,13 +30,13 @@ const Footer: React.FC = () => {
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Documentation', href: '/docs' },
     { name: 'Support', href: '/support' },
-    { name: 'FAQ', href: '/faq' },
+    { name: 'FAQ', href: '/faq' },;
   ];
 
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github },
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github },;
   ];
 
   return (

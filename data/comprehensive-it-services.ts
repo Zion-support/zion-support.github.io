@@ -483,4 +483,4 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     rating: 4.9,
     reviews: 156
   }
-],
+],;

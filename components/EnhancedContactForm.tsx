@@ -320,5 +320,5 @@ const EnhancedContactForm: React.FC = () => {
     </section>
   )
 },
-
+;
 export default EnhancedContactForm;

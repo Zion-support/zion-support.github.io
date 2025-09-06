@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react',
-import { motion } from 'framer-motion',
+import React, { useEffect, useRef } from 'react',;
+import { motion } from 'framer-motion',;
 interface UltraFuturisticBackground2028Props {
   children: React.ReactNode
 }
@@ -277,4 +277,4 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none" style={{ zIndex: 5 }} />
     </div>
   )
-}
+};

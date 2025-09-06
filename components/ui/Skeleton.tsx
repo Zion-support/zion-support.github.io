@@ -1,5 +1,5 @@
 import React from 'react'
-
+;
 export type SkeletonProps = {
   className?: string
 }

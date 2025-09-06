@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
-
+;
 interface EmailValidationResult {
   email: string,
   isValid: boolean,
@@ -98,4 +98,4 @@ export default async function handler(
     console.error('Email validation error:', error),
     res.status(500).json({ error: 'Internal server error' })
   }
-}
+};

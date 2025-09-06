@@ -1,5 +1,5 @@
 
-import { Helmet } from "react-helmet-async",
+import { Helmet } from "react-helmet-async",;
 interface SEOProps {
   title: string,
   description: string,
@@ -50,3 +50,4 @@ export function SEO({
     </Helmet>
   )
 }
+;

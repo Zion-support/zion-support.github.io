@@ -3,7 +3,7 @@
 import React from 'react';
 
 export default function OSDeployPage() {
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = (e: React.FormEvent) => {;
     e.preventDefault();
     // Handle form submission
   };
@@ -20,7 +20,7 @@ export default function OSDeployPage() {
       ai: 'AI Integration',
       blockchain: 'Blockchain Technology',
       governance: 'Governance System',
-      treasury: 'Treasury Management'
+      treasury: 'Treasury Management';
     };
     return labels[key] || key;
   };
@@ -30,7 +30,7 @@ export default function OSDeployPage() {
       ai: 'Advanced AI capabilities',
       blockchain: 'Blockchain infrastructure',
       governance: 'Decentralized governance',
-      treasury: 'Community treasury management'
+      treasury: 'Community treasury management';
     };
     return descriptions[key] || 'Feature description';
   };

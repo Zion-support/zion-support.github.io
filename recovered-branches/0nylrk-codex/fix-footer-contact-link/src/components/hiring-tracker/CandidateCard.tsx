@@ -1,13 +1,13 @@
 
-import { useState } from "react",
-import { Draggable } from "react-beautiful-dnd",
-import { formatDistanceToNow } from "date-fns",
-import { Link } from "react-router-dom",
-import { JobApplication } from "@/types/jobs",
-import { Card, CardContent } from "@/components/ui/card",
-import { Avatar } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
+import { useState } from "react",;
+import { Draggable } from "react-beautiful-dnd",;
+import { formatDistanceToNow } from "date-fns",;
+import { Link } from "react-router-dom",;
+import { JobApplication } from "@/types/jobs",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Avatar } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
 import { 
   MessageSquare,
   User, 
@@ -22,9 +22,9 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
-import { toast } from "@/hooks/use-toast",
-import { HireConfirmationModal } from "./HireConfirmationModal",
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",;
+import { toast } from "@/hooks/use-toast",;
+import { HireConfirmationModal } from "./HireConfirmationModal",;
 interface CandidateCardProps {
   application: JobApplication,
   index: number
@@ -212,3 +212,4 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     </>
   )
 }
+;

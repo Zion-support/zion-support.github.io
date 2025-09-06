@@ -204,4 +204,4 @@ export const cuttingEdgeAIServices2025 = [
     integrations: ['Creative softwareDesign toolsMarketing platformsContent management systemsCollaboration tools'],
     compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection']
   }
-],
+],;

@@ -1,21 +1,21 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
 import { 
   Check, Star, Users, TrendingUp, DollarSign, Clock, 
   Shield, Zap, Rocket, Brain, Atom, Globe, Target,
   ArrowRight, Phone, Mail, MapPin, ExternalLink
 } from 'lucide-react',
-import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',;
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',;
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',;
 // Import all service data
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
-import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services',
-import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations',
-import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations',
-import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas',
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
+import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services',;
+import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations',;
+import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations',;
+import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas',;
 export default function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All'),
   const [selectedPriceRange, setSelectedPriceRange] = useState('All'),
@@ -414,3 +414,4 @@ export default function PricingPage() {
     </UltraFuturisticBackground2029>
   )
 }
+;

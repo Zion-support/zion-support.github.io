@@ -86,3 +86,4 @@ export const timeAgo = (date: Date | string | number): string => {
   
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`
 },
+;

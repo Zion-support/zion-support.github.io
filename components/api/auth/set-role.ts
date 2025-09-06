@@ -20,4 +20,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   headers['Set-Cookie'] = cookies.join(),
   res.writeHead(302, { ...headers, Location: '/' }),
   res.end()
-}
+};

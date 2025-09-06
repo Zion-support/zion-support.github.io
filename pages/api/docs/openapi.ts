@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import v1 from '../../../data/api-docs/v1',
-import { EndpointSpec } from '../../../data/api-docs/types',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import v1 from '../../../data/api-docs/v1',;
+import { EndpointSpec } from '../../../data/api-docs/types',;
 function toOpenApi() {
   const paths: Record<string, any> = {},
   v1.sections.forEach((section) => {
@@ -31,4 +31,4 @@ function toOpenApi() {
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Typeapplication/json'),
   res.status(200).json(toOpenApi())
-}
+};

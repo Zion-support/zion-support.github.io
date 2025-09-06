@@ -1,13 +1,13 @@
-import React, { useState, useMemo } from 'react',
-import Head from 'next/head',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState, useMemo } from 'react',;
+import Head from 'next/head',;
+import { motion, AnimatePresence } from 'framer-motion',;
 import { Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSquare, Globe } from 'lucide-react',
 
-
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground',
-import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services',
-import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services',
-import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas',
+;
+import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground',;
+import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services',;
+import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services',;
+import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas',;
 export default function Revolutionary2027ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
@@ -422,4 +422,4 @@ export default function Revolutionary2027ServicesShowcase() {
       </section>
     </UltraQuantumHolographicBackground>
   )
-}
+};

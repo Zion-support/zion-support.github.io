@@ -43,5 +43,5 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
     </div>
   )
 },
-
+;
 export default ReviewCard;

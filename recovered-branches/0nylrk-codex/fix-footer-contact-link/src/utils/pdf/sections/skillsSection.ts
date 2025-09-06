@@ -1,7 +1,7 @@
 
-import { jsPDF } from 'jspdf',
-import { Skill } from '@/types/resume',
-import { PdfThemeColors } from '../themeConfig',
+import { jsPDF } from 'jspdf',;
+import { Skill } from '@/types/resume',;
+import { PdfThemeColors } from '../themeConfig',;
 export function addSkillsSection(
   doc: jsPDF,
   skills: Skill[],
@@ -48,3 +48,4 @@ export function addSkillsSection(
   
   return yPos + 5
 }
+;

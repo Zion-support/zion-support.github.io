@@ -1,12 +1,12 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
 import { 
   TrendingUp, Brain, Shield, Zap, Target, 
   BarChart3, Cpu, Globe, Users, Award,
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
 } from 'lucide-react',
-import Layout from '../components/layout/Layout',
+import Layout from '../components/layout/Layout',;
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -282,4 +282,4 @@ export default function QuantumTradingAlgorithm() {
       </section>
     </Layout>
   )
-}
+};

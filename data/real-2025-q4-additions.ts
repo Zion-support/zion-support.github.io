@@ -632,4 +632,4 @@ export const real2025Q4Additions = [
     rating: 4.6,
     reviews: 9
   }
-],
+],;

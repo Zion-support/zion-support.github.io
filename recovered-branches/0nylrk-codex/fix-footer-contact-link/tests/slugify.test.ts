@@ -1,5 +1,5 @@
-import { slugify } from '@/lib/slugify',
-import { unslugify } from '@/lib/slugify',
+import { slugify } from '@/lib/slugify',;
+import { unslugify } from '@/lib/slugify',;
 it('removes accents from strings', () => {
   expect(slugify('Crème Brûlée')).toBe('creme-brulee')
 }),

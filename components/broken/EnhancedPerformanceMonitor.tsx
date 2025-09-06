@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState, useEffect, useCallback } from 'react',;
+import { motion, AnimatePresence } from 'framer-motion',;
 import { 
   Activity,
   AlertTriangle, 
@@ -411,4 +411,4 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   )
 },
 
-export default EnhancedPerformanceMonitor,
+export default EnhancedPerformanceMonitor,;

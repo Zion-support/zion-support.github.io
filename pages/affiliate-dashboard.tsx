@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react',
-
+;
 function getRefCode(): string {
   if (typeof window === 'undefined') return '',
   return localStorage.getItem('ref_code') || ''
@@ -87,4 +87,4 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-2xl font-semibold">{value}</div>
     </div>
   )
-}
+};

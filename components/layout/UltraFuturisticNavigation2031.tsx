@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState, useEffect } from 'react',;
+import Link from 'next/link',;
+import { motion, AnimatePresence } from 'framer-motion',;
 import { 
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
@@ -362,4 +362,4 @@ export default function UltraFuturisticNavigation2031() {
       <div className="h-32 lg: h-40"></div>
     </>
   )
-}
+};

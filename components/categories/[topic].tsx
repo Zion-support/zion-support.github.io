@@ -1,10 +1,10 @@
-import type { GetServerSideProps, NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
-import { BlogPost } from '@/utils/types/blog',
-import PageShareButtons from '@/components/blog/PageShareButtons',
-import { listPublishedPosts } from '@/utils/data/blogStore',
-import BlogCard from '@/components/blog/BlogCard',
+import type { GetServerSideProps, NextPage } from 'next',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { BlogPost } from '@/utils/types/blog',;
+import PageShareButtons from '@/components/blog/PageShareButtons',;
+import { listPublishedPosts } from '@/utils/data/blogStore',;
+import BlogCard from '@/components/blog/BlogCard',;
 type Props = { topic: string, posts: BlogPost[] },
 
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
@@ -49,4 +49,4 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return { props: { topic, posts } }
 },
 
-export default TopicPage,
+export default TopicPage,;

@@ -38,4 +38,4 @@ export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-],
+],;

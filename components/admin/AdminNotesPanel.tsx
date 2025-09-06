@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react',
-
+;
 export type AdminNotesPanelProps = {
   targetType: string, // e.g., 'user' | 'listing'
   targetId: string,   // unique identifier for the target
@@ -110,4 +110,4 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       </div>
     </div>
   )
-}
+};

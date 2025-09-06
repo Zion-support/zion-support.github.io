@@ -13,4 +13,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e) {
     return res.status(500).json({ error: "Failed to load certifications" })
   }
-}
+};

@@ -1,8 +1,8 @@
-import { useState } from 'react',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Label } from '@/components/ui/label',
-import { Textarea } from '@/components/ui/textarea',
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Label } from '@/components/ui/label',;
+import { Textarea } from '@/components/ui/textarea',;
 import {
   Dialog,
   DialogContent,
@@ -10,8 +10,8 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle} from '@/components/ui/dialog',
-import { User, Mail, MapPin, CreditCard } from 'lucide-react'
-import { isProdDomain } from '@/utils/getStripe',
+import { User, Mail, MapPin, CreditCard } from 'lucide-react';
+import { isProdDomain } from '@/utils/getStripe',;
 interface GuestCheckoutModalProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,
@@ -128,3 +128,4 @@ export default function GuestCheckoutModal({
     </Dialog>
   )
 }
+;

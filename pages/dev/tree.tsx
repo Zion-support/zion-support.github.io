@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react",
+import React, { useEffect, useState } from "react",;
 import Tree, { TreeNode } from "../../components/ui/Tree",
-
+;
 interface ApiResponse {
   nodes: TreeNode[],
   status: { gitConnected: boolean, gitBranch?: string }
@@ -90,4 +90,4 @@ export default function DevTreePage() {
       )}
     </div>
   )
-}
+};

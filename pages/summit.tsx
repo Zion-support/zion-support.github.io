@@ -1,5 +1,5 @@
-import Head from 'next/head',
-import React from 'react',
+import Head from 'next/head',;
+import React from 'react',;
 type Speaker = {
   name: string,
   title: string,
@@ -296,4 +296,4 @@ export default function SummitPage() {
       </section>
     </>
   )
-}
+};

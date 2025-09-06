@@ -1,9 +1,9 @@
-import * as React from "react"
-import * as ToastPrimitives from "@radix-ui/react-toast"
-import { cva, type VariantProps } from "class-variance-authority"
-import { X } from 'lucide-react'
-import { cn } from "@/lib/utils"
-import { logInfo } from '@/utils/productionLogger',
+import * as React from "react";
+import * as ToastPrimitives from "@radix-ui/react-toast";
+import { cva, type VariantProps } from "class-variance-authority";
+import { X } from 'lucide-react';
+import { cn } from "@/lib/utils";
+import { logInfo } from '@/utils/productionLogger',;
 const ToastProvider = ToastPrimitives.Provider
 
 const ToastViewport = React.forwardRef<
@@ -132,4 +132,4 @@ export {
 //       logInfo('Toast:', { data: props })
 //     },
 //   }
-// }
+// };

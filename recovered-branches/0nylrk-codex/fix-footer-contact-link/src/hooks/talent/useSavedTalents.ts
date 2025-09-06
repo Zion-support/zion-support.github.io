@@ -1,9 +1,9 @@
 
-import { useState, useEffect } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
-import { toast } from "@/hooks/use-toast",
-import { useAuthStatus } from "@/hooks/talent",
+import { useState, useEffect } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { TalentProfile } from "@/types/talent",;
+import { toast } from "@/hooks/use-toast",;
+import { useAuthStatus } from "@/hooks/talent",;
 export function useSavedTalents() {
   const { isAuthenticated, userDetails } = useAuthStatus(),
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
@@ -132,3 +132,4 @@ export function useSavedTalents() {
     isTalentSaved
   }
 }
+;

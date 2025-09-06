@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechService2025 {
   id: string,
   name: string,
@@ -670,4 +670,4 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 11
   }
-],
+],;

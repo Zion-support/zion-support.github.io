@@ -1,9 +1,9 @@
-import { useState } from 'react',
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',
-import { quoteRequestService } from '@/services/quoteRequestService',
-import { useAuth } from '@/hooks/useAuth',
-import type { QuoteRequest, QuoteStatus } from '@/types/quotes',
-import { useToast } from '@/hooks/use-toast',
+import { useState } from 'react',;
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
+import { quoteRequestService } from '@/services/quoteRequestService',;
+import { useAuth } from '@/hooks/useAuth',;
+import type { QuoteRequest, QuoteStatus } from '@/types/quotes',;
+import { useToast } from '@/hooks/use-toast',;
 export const useTalentQuotes = () => {
   const { user } = useAuth(),
   const { toast } = useToast(),
@@ -107,4 +107,4 @@ export const useTalentQuotes = () => {
       updateStatusMutation.mutate({ id, status: 'responded' }),
     toggleArchive: (id: string, isArchived: boolean) => 
       toggleArchiveMutation.mutate({ id, isArchived })}
-},
+},;

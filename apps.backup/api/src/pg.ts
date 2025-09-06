@@ -21,4 +21,4 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
   } finally {
     client.release()
   }
-}
+};

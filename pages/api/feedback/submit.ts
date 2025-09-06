@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
 const DATA_DIR = path.join(process.cwd(), 'data'),
 const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json'),
 
@@ -37,4 +37,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   rows.push(entry),
   writeAll(rows),
   return res.status(200).json({ ok: true })
-}
+};

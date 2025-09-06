@@ -53,7 +53,7 @@ class ApiClient {
         headers: {
           'Content-Type': 'application/json',
           ...fetchOptions.headers,
-        },
+        },;
       });
 
       clearTimeout(timeoutId);

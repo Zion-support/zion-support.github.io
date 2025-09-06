@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next',
+import { GetServerSideProps } from 'next',;
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
@@ -6,4 +6,4 @@ export const getServerSideProps: GetServerSideProps = async () => {
       permanent: false}}
 },
 
-export default function ResumeIndex() { return null }
+export default function ResumeIndex() { return null };

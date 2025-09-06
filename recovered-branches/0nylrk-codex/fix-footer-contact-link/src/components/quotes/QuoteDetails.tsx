@@ -1,5 +1,5 @@
 
-import React from "react",
+import React from "react",;
 import { 
   Dialog,
   DialogContent, 
@@ -7,13 +7,13 @@ import {
   DialogTitle, 
   DialogDescription 
 } from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-import { QuoteStatusBadge } from "./QuoteStatusBadge",
-import type { QuoteRequest } from "@/types/quotes",
-import { format } from "date-fns",
+import { Button } from "@/components/ui/button",;
+import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Separator } from "@/components/ui/separator",;
+import { QuoteStatusBadge } from "./QuoteStatusBadge",;
+import type { QuoteRequest } from "@/types/quotes",;
+import { format } from "date-fns",;
 interface QuoteDetailsProps {
   quote: QuoteRequest | null,
   isOpen: boolean,
@@ -113,3 +113,4 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     </Dialog>
   )
 },
+;

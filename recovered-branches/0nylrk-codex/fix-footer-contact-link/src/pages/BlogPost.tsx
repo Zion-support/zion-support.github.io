@@ -1,14 +1,14 @@
 
-import { useState, useEffect } from "react",
-import { useParams, Link, useNavigate } from "react-router-dom",
-import { SEO } from "@/components/SEO",
-import { Button } from "@/components/ui/button",
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react",
-import type { BlogPost as BlogPostType } from "@/types/blog",
-import { Separator } from "@/components/ui/separator",
-import { AppLayout } from "@/layout/AppLayout",
+import { useState, useEffect } from "react",;
+import { useParams, Link, useNavigate } from "react-router-dom",;
+import { SEO } from "@/components/SEO",;
+import { Button } from "@/components/ui/button",;
+import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react",;
+import type { BlogPost as BlogPostType } from "@/types/blog",;
+import { Separator } from "@/components/ui/separator",;
+import { AppLayout } from "@/layout/AppLayout",;
 // Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts",
+import { BLOG_POSTS } from "@/data/blog-posts",;
 export default function BlogPost() {
   const { slug } = useParams() as { slug: string },
   const navigate = useNavigate(),
@@ -264,3 +264,4 @@ export default function BlogPost() {
     </AppLayout>
   )
 }
+;

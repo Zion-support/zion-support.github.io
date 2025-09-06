@@ -2,7 +2,7 @@
 // ZionGPT Utility Functions
 // This file handles interaction with the fine-tuned ZionGPT model
 
-import { supabase } from '@/integrations/supabase/client',
+import { supabase } from '@/integrations/supabase/client',;
 export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo',
 
 export type ZionGPTUsage = {
@@ -131,3 +131,4 @@ export async function callZionGPT({
     throw error
   }
 }
+;

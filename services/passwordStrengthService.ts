@@ -360,3 +360,4 @@ export const passwordStrengthService = new PasswordStrengthService(),
 
 // Export the class for custom instances
 export { PasswordStrengthService },
+;

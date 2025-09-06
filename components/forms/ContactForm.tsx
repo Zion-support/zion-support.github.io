@@ -1,9 +1,9 @@
 'use client',
 
-import React, { useState } from 'react',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react',;
+import { motion } from 'framer-motion',;
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react',
-
+;
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -341,4 +341,4 @@ const ContactForm: React.FC = () => {
   )
 },
 
-export default ContactForm,
+export default ContactForm,;

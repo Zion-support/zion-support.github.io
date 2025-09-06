@@ -1,5 +1,5 @@
-import { useState } from "react",
-import FeedbackModal from "../../components/ui/FeedbackModal",
+import { useState } from "react",;
+import FeedbackModal from "../../components/ui/FeedbackModal",;
 export default function ClientHirePage() {
   const [talentSlug, setTalentSlug] = useState("ava-chen"),
   const [startDateIso, setStartDateIso] = useState<string>(new Date().toISOString().slice(0, 10)),
@@ -106,4 +106,4 @@ export default function ClientHirePage() {
       />
     </div>
   )
-}
+};

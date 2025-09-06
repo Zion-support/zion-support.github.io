@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
 const p = path.join(process.cwd(), 'dataopsuptime-log.json'),
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -11,4 +11,4 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Failed to read uptime log' })
   }
-}
+};

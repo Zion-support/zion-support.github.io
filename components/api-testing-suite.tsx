@@ -465,4 +465,4 @@ export default function APITestingSuitePage() {
       </section>
     </>
   )
-}
+};

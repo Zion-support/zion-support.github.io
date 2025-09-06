@@ -41,14 +41,14 @@ const Home: React.FC = () => {
       title: "Digital Transformation",
       description: "Modernize your organization with our comprehensive digital transformation strategies.",
       features: ["Process Automation", "Data Analytics", "Workflow Optimization", "Change Management"]
-    }
+    };
   ];
 
   const stats = [
     { number: "500+", label: "Projects Completed" },
     { number: "99.9%", label: "Uptime Guarantee" },
     { number: "24/7", label: "Support Available" },
-    { number: "50+", label: "Expert Team Members" }
+    { number: "50+", label: "Expert Team Members" };
   ];
 
   const testimonials = [
@@ -69,7 +69,7 @@ const Home: React.FC = () => {
       role: "VP Engineering, DataFlow",
       content: "The cloud migration was seamless. Our applications now run 50% faster with better reliability.",
       rating: 5
-    }
+    };
   ];
 
   return (

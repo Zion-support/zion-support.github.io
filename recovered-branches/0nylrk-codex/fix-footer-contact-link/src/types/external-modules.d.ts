@@ -26,7 +26,7 @@ declare module 'react-day-picker' {
 }
 declare module 'sonner',
 declare module 'lucide-react' {
-  import { FC, SVGProps } from 'react',
+  import { FC, SVGProps } from 'react',;
   export type LucideProps = SVGProps<SVGSVGElement>,
   export type LucideIcon = FC<LucideProps>,
 
@@ -267,8 +267,8 @@ declare module 'i18next',
 declare module 'i18next-browser-languagedetector',
 declare module 'react-helmet-async',
 declare module 'react-hook-form' {
-  import type { ComponentType, ReactElement, ReactNode } from 'react'
-
+  import type { ComponentType, ReactElement, ReactNode } from 'react';
+;
   // Minimal generic typings to satisfy local usage without full type defs
   export type FieldValues = Record<string, any>
   export type FieldPath<TFieldValues extends FieldValues> =
@@ -329,3 +329,4 @@ declare module 'ws',
 declare module 'recharts',
 declare module 'next-themes',
 declare module 'tailwind-merge',
+;

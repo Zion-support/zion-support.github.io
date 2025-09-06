@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import jwt from 'jsonwebtoken',
-import { ethers } from 'ethers',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import jwt from 'jsonwebtoken',;
+import { ethers } from 'ethers',;
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me',
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -24,4 +24,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(500).json({ error: e?.message || 'Verify failed' })
   }
-}
+};

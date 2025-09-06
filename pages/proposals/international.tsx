@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import React, { useEffect, useState } from 'react',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 type ProposalListItem = {
   id: string,
   title: string,
@@ -60,4 +60,4 @@ export default function InternationalProposalsPage() {
       </div>
     </EnhancedLayout>
   )
-}
+};

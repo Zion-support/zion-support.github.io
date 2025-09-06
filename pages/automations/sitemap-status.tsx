@@ -1,6 +1,6 @@
-import type { NextPage, GetServerSideProps } from 'next',
-import fs from 'fs',
-import path from 'path',
+import type { NextPage, GetServerSideProps } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
 type Props = { urlCount: number },
 
 const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
@@ -25,4 +25,4 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return { props: { urlCount } }
 },
 
-export default SitemapStatus,
+export default SitemapStatus,;

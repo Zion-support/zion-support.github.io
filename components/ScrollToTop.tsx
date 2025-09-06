@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react',
-
+;
 const ScrollToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
 
@@ -50,4 +50,4 @@ const ScrollToTop: React.FC = () => {
   )
 },
 
-export default ScrollToTop,
+export default ScrollToTop,;

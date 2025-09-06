@@ -1,9 +1,9 @@
-import React from 'react',
-import Head from 'next/head',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import Button from '../components/ui/Button',
+import React from 'react',;
+import Head from 'next/head',;
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
+import Button from '../components/ui/Button',;
 import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react',
-
+;
 export default function QuantumServicesPage() {
   const features = [
     'Quantum-inspired optimization & annealing strategiesHybrid quantum-classical pipelines (QAOA, VQE) where applicableQuantum-safe cryptography assessments and roadmapsR&D ideation for quantum-ready workloads'],
@@ -68,4 +68,4 @@ export default function QuantumServicesPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-}
+};

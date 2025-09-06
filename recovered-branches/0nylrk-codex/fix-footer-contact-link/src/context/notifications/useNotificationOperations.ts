@@ -1,7 +1,7 @@
-import { useState, useCallback } from 'react',
-import { supabase } from '@/integrations/supabase/client',
+import { useState, useCallback } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
 import { Notification, FilterType, NotificationContextType } from './types',
-
+;
 export const useNotificationOperations = (userId?: string): NotificationContextType => {
   const [notifications, setNotifications] = useState<Notification[]>([]),
   const [loading, setLoading] = useState(false),
@@ -105,4 +105,4 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     dismissNotification,
     setFilter,
     fetchNotifications}
-},
+},;

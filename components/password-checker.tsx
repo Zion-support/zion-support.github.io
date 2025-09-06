@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
+import React, { useState, useEffect } from 'react',;
+import Head from 'next/head',;
+import Card from '../components/ui/Card',;
+import Button from '../components/ui/Button',;
 import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react',
-
+;
 export default function PasswordCheckerPage() {
   const [password, setPassword] = useState(''),
   const [showPassword, setShowPassword] = useState(false),
@@ -520,4 +520,4 @@ export default function PasswordCheckerPage() {
       </section>
     </>
   )
-}
+};

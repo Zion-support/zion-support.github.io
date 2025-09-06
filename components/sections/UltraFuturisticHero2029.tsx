@@ -1,7 +1,7 @@
-import React from 'react',
-import { motion } from 'framer-motion',
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom, Rocket, Target, Shield, Cpu, Globe, Sparkles } from 'lucide-react',
-import Link from 'next/link',
+import React from 'react',;
+import { motion } from 'framer-motion',;
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom, Rocket, Target, Shield, Cpu, Globe, Sparkles } from 'lucide-react',;
+import Link from 'next/link',;
 export default function UltraFuturisticHero2029() {
   const features = [
     { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-violet-500 to-purple-600' },
@@ -198,4 +198,4 @@ export default function UltraFuturisticHero2029() {
       />
     </section>
   )
-}
+};

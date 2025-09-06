@@ -171,4 +171,4 @@ export const advancedMicroSaasExpansion2025V2 = [
     ]
 
   }
-],
+],;

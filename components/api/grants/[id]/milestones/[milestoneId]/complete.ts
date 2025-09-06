@@ -60,4 +60,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   writeGrant(existing),
   res.status(200).json({ record: existing })
-}
+};

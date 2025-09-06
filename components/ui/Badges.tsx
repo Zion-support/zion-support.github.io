@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react',;
 export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
   const colorMap = {
     Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',
@@ -17,4 +17,4 @@ export function MicroTestimonial({ quote, author }: { quote: string, author: str
       <figcaption className="mt-2 font-medium opacity-80">— {author}</figcaption>
     </figure>
   )
-}
+};

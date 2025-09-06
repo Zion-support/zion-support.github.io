@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
-
+;
 const memoryStore: { q: string, ts: number }[] = [],
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -17,4 +17,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ ok: true, top, total: memoryStore.length })
   }
   return res.status(405).end()
-}
+};

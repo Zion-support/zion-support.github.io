@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechInnovation {
   id: string,
   name: string,
@@ -473,4 +473,4 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     ],
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
   }
-],
+],;

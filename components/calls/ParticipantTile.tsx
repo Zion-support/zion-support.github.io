@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react',
+import React, { useEffect, useRef } from 'react',;
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client',
-
+;
 type Props = {
   participant: RemoteParticipant | LocalParticipant,
   isLocal?: boolean,
@@ -52,4 +52,4 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       </div>
     </div>
   )
-}
+};

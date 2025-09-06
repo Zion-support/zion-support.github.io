@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasService2026 {
   id: string,
   name: string,
@@ -412,4 +412,4 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number,
     const price = parseInt(service.price.replace('$', '')),
     return price >= minPrice && price <= maxPrice
   })
-},
+},;

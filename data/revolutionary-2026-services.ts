@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface Revolutionary2026Service {
   id: string,
   name: string,
@@ -670,4 +670,4 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.8,
     reviews: 25
   }
-],
+],;

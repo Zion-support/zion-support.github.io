@@ -1,6 +1,6 @@
 
-import { supabase } from "@/integrations/supabase/client",
-import type { UserDetails } from "@/types/auth",
+import { supabase } from "@/integrations/supabase/client",;
+import type { UserDetails } from "@/types/auth",;
 /**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
@@ -73,3 +73,4 @@ export const checkNewRegistration = async (user: UserDetails) => {
     console.error("Error checking or scheduling welcome email:", error)
   }
 },
+;

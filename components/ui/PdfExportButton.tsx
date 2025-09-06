@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react',;
 export type PdfExportButtonProps = {
   targetRef: React.RefObject<HTMLDivElement>,
   fileName?: string,
@@ -32,4 +32,4 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
       Download as PDF
     </button>
   )
-}
+};

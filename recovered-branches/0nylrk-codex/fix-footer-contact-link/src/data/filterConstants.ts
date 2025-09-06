@@ -23,3 +23,4 @@ export const REGIONS = [
   "Middle East",
   "Africa"
 ],
+;

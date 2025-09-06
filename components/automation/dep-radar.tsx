@@ -1,5 +1,5 @@
-import fs from 'fs',
-import path from 'path',
+import fs from 'fs',;
+import path from 'path',;
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
 
 export async function getServerSideProps() {
@@ -48,4 +48,4 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
       )}
     </div>
   )
-}
+};

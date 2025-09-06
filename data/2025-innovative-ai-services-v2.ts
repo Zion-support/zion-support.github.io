@@ -273,4 +273,4 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     marketSize: '$15B AI governance market',
     growthRate: '28% annually'
   }
-],
+],;

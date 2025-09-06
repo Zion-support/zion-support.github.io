@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
       email: 'john@example.com',
       role: 'user',
       onboardingCompleted: true,
-      preferences
+      preferences;
     };
 
     return NextResponse.json({

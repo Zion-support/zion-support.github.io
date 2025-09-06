@@ -1,6 +1,6 @@
 
-import { Badge } from "@/components/ui/badge",
-import { QuoteStatus } from "@/types/quotes",
+import { Badge } from "@/components/ui/badge",;
+import { QuoteStatus } from "@/types/quotes",;
 const statusConfig: Record<QuoteStatus, { label: string, className: string }> = {
   new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },
   in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },
@@ -22,3 +22,4 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
     </Badge>
   )
 },
+;

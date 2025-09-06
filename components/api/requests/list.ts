@@ -10,4 +10,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch {
     res.status(200).json({ items: [] })
   }
-}
+};

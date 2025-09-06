@@ -1,8 +1,8 @@
-import { useRouter } from 'next/router',
-import useSWR from 'swr',
-import React, { useMemo, useState } from 'react',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-import { useCurrentUser } from '../../utils/auth',
+import { useRouter } from 'next/router',;
+import useSWR from 'swr',;
+import React, { useMemo, useState } from 'react',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+import { useCurrentUser } from '../../utils/auth',;
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
 export default function DisputeDetailPage() {
@@ -163,4 +163,4 @@ export default function DisputeDetailPage() {
       )}
     </EnhancedLayout>
   )
-}
+};

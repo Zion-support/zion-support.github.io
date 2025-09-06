@@ -475,4 +475,4 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     rating: 4.9,
     reviews: 189
   }
-],
+],;

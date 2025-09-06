@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedLogisticsSupplyChainSolution2025 {
   id: string,
   name: string,
@@ -256,4 +256,4 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     rating: 4.8,
     reviews: 112
   }
-],
+],;

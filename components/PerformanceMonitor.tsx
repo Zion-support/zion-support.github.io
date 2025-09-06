@@ -50,10 +50,10 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
-    // Only run on client side
+    // Only run on client side;
     if (typeof window === 'undefined' || typeof window.performance === 'undefined') return;
 
-    const measurePerformance = () => {
+    const measurePerformance = () => {;
       const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = window.performance.getEntriesByType('paint');
       
@@ -70,7 +70,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         // Resource timing
         resourceCount: window.performance.getEntriesByType('resource').length,
         
-        // Memory usage (if available)
+        // Memory usage (if available);
         memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory ? {
           used: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
           total: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.totalJSHeapSize,

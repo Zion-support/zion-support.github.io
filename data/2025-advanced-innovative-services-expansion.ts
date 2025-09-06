@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {
   id: string,
   name: string,
@@ -520,4 +520,4 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     ],
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
   }
-],
+],;

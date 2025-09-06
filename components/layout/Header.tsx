@@ -5,7 +5,7 @@ import {
   Menu,
   X,
 } from 'lucide-react';
-const Header: React.FC = () => {
+const Header: React.FC = () => {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 
@@ -16,7 +16,7 @@ const Header: React.FC = () => {
     { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact', href: '/contact' },;
   ];
 =======
     { name: 'Resources', href: '/resources' },

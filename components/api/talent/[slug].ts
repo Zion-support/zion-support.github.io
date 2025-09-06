@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { supabase as supabaseClient } from '@/utils/supabase/client',
-import { TALENT_PROFILES as LOCAL } from '@/data/talent',
-import type { TalentProfile } from '@/utils/types/talent',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { supabase as supabaseClient } from '@/utils/supabase/client',;
+import { TALENT_PROFILES as LOCAL } from '@/data/talent',;
+import type { TalentProfile } from '@/utils/types/talent',;
 const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
 
 function applyTranslations(item: TalentProfile, lang?: string) {
@@ -36,4 +36,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(500).json({ error: e.message })
   }
-}
+};

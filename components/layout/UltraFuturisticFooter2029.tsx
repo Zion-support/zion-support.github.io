@@ -1,6 +1,6 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
 import { 
   Phone, Mail, MapPin, Globe, ArrowRight, Star, 
   Rocket, Brain, Atom, Building, Briefcase, Microscope,
@@ -299,4 +299,4 @@ const UltraFuturisticFooter2029 = () => {
   )
 },
 
-export default UltraFuturisticFooter2029,
+export default UltraFuturisticFooter2029,;

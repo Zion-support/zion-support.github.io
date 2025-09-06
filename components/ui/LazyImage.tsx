@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react',
-import { motion } from 'framer-motion',
+import React, { useEffect, useRef, useState } from 'react',;
+import { motion } from 'framer-motion',;
 interface LazyImageProps {
   src: string,
   alt: string,
@@ -76,4 +76,4 @@ export const LazyImage: React.FC<LazyImageProps> = ({
   )
 },
 
-export default LazyImage,
+export default LazyImage,;

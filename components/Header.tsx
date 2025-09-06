@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const Header: React.FC = () => {
+const Header: React.FC = () => {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -48,7 +48,7 @@ const Header: React.FC = () => {
       description: 'Speed and efficiency improvements',
       href: '/services/performance',
       icon: Zap
-    }
+    };
   ];
 
   const solutionsDropdown = [
@@ -75,7 +75,7 @@ const Header: React.FC = () => {
       description: 'Learning management systems',
       href: '/solutions/education',
       icon: GraduationCap
-    }
+    };
   ];
 
   const industriesDropdown = [
@@ -84,7 +84,7 @@ const Header: React.FC = () => {
     { name: 'Finance', href: '/industries/finance', icon: CreditCard },
     { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
     { name: 'Education', href: '/industries/education', icon: GraduationCap },
-    { name: 'Retail', href: '/industries/retail', icon: ShoppingCart }
+    { name: 'Retail', href: '/industries/retail', icon: ShoppingCart };
   ];
 
   const navigation = [
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
     { name: 'Services', href: '/services' },
     { name: 'Solutions', href: '/solutions' },
     { name: 'Industries', href: '/industries' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Contact', href: '/contact' };
   ];
 
   return (

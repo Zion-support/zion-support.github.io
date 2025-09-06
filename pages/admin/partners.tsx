@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react',
-
+;
 export default function AdminPartners() {
   const [partners, setPartners] = useState<any[]>([]),
   const [selected, setSelected] = useState<string>(''),
@@ -89,4 +89,4 @@ export default function AdminPartners() {
       )}
     </div>
   )
-}
+};

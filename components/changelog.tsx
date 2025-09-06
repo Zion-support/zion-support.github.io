@@ -33,4 +33,4 @@ export async function getStaticProps() {
   } catch {
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
   }
-}
+};

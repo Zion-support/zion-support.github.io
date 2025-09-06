@@ -1,6 +1,6 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore
-import data from '../../data/arxiv-research.json',
+import data from '../../data/arxiv-research.json',;
 export default function ArxivResearchPage() {
   const items: any[] = (data?.items || []).slice(0, 40),
   return (
@@ -22,4 +22,4 @@ export default function ArxivResearchPage() {
       </div>
     </EnhancedLayout>
   )
-}
+};

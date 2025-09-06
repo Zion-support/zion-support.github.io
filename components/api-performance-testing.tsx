@@ -1,7 +1,7 @@
-import React from 'react',
-import SEO from '../components/SEO',
+import React from 'react',;
+import SEO from '../components/SEO',;
 import { Check, ExternalLink } from 'lucide-react',
-
+;
 export default function ApiPerformanceTestingPage() {
 	const features = [
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
@@ -36,4 +36,4 @@ export default function ApiPerformanceTestingPage() {
 			</main>
 		</>
 	)
-}
+};

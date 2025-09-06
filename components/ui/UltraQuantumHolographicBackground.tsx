@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react',
-import { motion } from 'framer-motion',
+import React, { useEffect, useRef, useState } from 'react',;
+import { motion } from 'framer-motion',;
 interface UltraQuantumHolographicBackgroundProps {
   children: React.ReactNode,
   intensity?: 'low' | 'medium' | 'high' | 'ultra',
@@ -396,4 +396,4 @@ export default function UltraQuantumHolographicBackground({
       </div>
     </div>
   )
-}
+};

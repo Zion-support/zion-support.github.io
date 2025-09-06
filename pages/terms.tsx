@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react',;
       ]
     },
     {
@@ -11,11 +11,11 @@ import React from 'react',
       title: 'Cybersecurity Services',
       terms: [
         'Security assessments are conducted according to industry standardsVulnerability reports are confidential and must not be sharedPenetration testing requires written authorizationIncident response follows our established protocols'
-import Layout from '../components/layout/Layout',
-import SEOOptimizer from '../components/SEOOptimizer',
-import AnalyticsTracker from '../components/AnalyticsTracker',
-import ErrorBoundary from '../components/ErrorBoundary',
-import { motion } from 'framer-motion',
+import Layout from '../components/layout/Layout',;
+import SEOOptimizer from '../components/SEOOptimizer',;
+import AnalyticsTracker from '../components/AnalyticsTracker',;
+import ErrorBoundary from '../components/ErrorBoundary',;
+import { motion } from 'framer-motion',;
 import { 
   FileText, Shield, AlertTriangle, CheckCircle, 
   User, Lock, Globe, Scale, Clock, Mail
@@ -59,8 +59,8 @@ const TermsPage: React.FC = () => {
     }
   ],
 
-  const prohibitedActivities = [
-import { motion } from 'framer-motion',
+  const prohibitedActivities = [;
+import { motion } from 'framer-motion',;
 import { 
   FileText, Shield, CheckCircle, AlertTriangle, 
   Globe, Calendar, Scale, Users, ArrowRight,
@@ -77,9 +77,9 @@ import {
         </div>
       </section>
 
-import { motion } from 'framer-motion',
-import { Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle } from 'lucide-react',
-import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',;
+import { Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle } from 'lucide-react',;
+import Layout from '../components/layout/Layout',;
 const Terms: React.FC = () => {
   const sections = [
     {
@@ -137,11 +137,11 @@ const Terms: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-black via-purple-900 to-blue-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-import { motion } from 'framer-motion',
-import { FileText, Scale, Shield, Clock, CheckCircle, AlertTriangle } from 'lucide-react',
-import Layout from '../components/layout/Layout',
-import SEO from '../components/SEO',
+          <div className="max-w-7xl mx-auto text-center">;
+import { motion } from 'framer-motion',;
+import { FileText, Scale, Shield, Clock, CheckCircle, AlertTriangle } from 'lucide-react',;
+import Layout from '../components/layout/Layout',;
+import SEO from '../components/SEO',;
 const termsSections = [
   {
     title: 'Acceptance of Terms',
@@ -1399,3 +1399,4 @@ export default Terms,
 },
 
 export default TermsPage,
+;

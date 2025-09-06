@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface Revolutionary2025ITService {
   id: string,
   name: string,
@@ -428,4 +428,4 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
   }
 ],
 
-export default revolutionary2025ITServices,
+export default revolutionary2025ITServices,;

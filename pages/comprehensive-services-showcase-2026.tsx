@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react',
-import { motion } from 'framer-motion',
-import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion',
-import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions',
-import { emergingTechServices2026 } from '../data/2026-emerging-tech-services',
+import React, { useState, useEffect } from 'react',;
+import { motion } from 'framer-motion',;
+import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion',;
+import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions',;
+import { emergingTechServices2026 } from '../data/2026-emerging-tech-services',;
 import { 
   Search, Filter, Star, Users, TrendingUp, 
   Clock, Zap, Shield, Cloud, Brain, 
@@ -412,4 +412,4 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
   )
 },
 
-export default ComprehensiveServicesShowcase2026,
+export default ComprehensiveServicesShowcase2026,;

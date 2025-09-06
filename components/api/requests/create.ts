@@ -67,4 +67,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // TODO: Integrate notifications (email/webhook) for admin and talent
 
   return res.status(200).json({ id, status: 'ok' })
-}
+};

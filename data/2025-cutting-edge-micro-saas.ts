@@ -204,4 +204,4 @@ export const cuttingEdgeMicroSaasServices2025 = [
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'],
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
   }
-],
+],;

@@ -470,4 +470,4 @@ export default function CuttingEdgeServicesShowcase2025() {
       </Layout>
     </>
   )
-}
+};

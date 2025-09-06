@@ -1,9 +1,9 @@
 
-import { format } from "date-fns",
-import { JobApplication } from "@/types/jobs",
-import { Avatar } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { ClickableBadge } from "@/components/ui/clickable-badge",
+import { format } from "date-fns",;
+import { JobApplication } from "@/types/jobs",;
+import { Avatar } from "@/components/ui/avatar",;
+import { Badge } from "@/components/ui/badge",;
+import { ClickableBadge } from "@/components/ui/clickable-badge",;
 import { 
   Table,
   TableBody,
@@ -12,12 +12,12 @@ import {
   TableHeader,
   TableRow
 } from "@/components/ui/table",
-import { ApplicationActions } from "./ApplicationActions",
-import { StatusBadge } from "./StatusBadge",
-import { Briefcase, User } from "lucide-react",
-import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",
-import { useState } from "react",
-import { toast } from "@/hooks/use-toast",
+import { ApplicationActions } from "./ApplicationActions",;
+import { StatusBadge } from "./StatusBadge",;
+import { Briefcase, User } from "lucide-react",;
+import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",;
+import { useState } from "react",;
+import { toast } from "@/hooks/use-toast",;
 interface ApplicationsTableProps {
   applications: JobApplication[],
   processingId: string | null,
@@ -139,3 +139,4 @@ export function ApplicationsTable({
     </>
   )
 }
+;

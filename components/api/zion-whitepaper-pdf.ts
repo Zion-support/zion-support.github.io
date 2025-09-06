@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import PDFDocument from 'pdfkit',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import PDFDocument from 'pdfkit',;
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper',
-
+;
 function writeSection(doc: PDFDocument, title: string, content: string) {
   doc.addPage(),
   doc.fontSize(20).fillColor('#111111').text(title, { underline: true }),
@@ -42,4 +42,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'),
 
   doc.end()
-}
+};

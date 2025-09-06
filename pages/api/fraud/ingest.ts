@@ -1,10 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { evaluateHeuristics } from '../../../utils/fraud/heuristics',
-import { classifyWithGPT } from '../../../utils/fraud/gpt',
-import { getFraudStore, newEvent } from '../../../utils/fraud/store',
-import { extractClientIp } from '../../../utils/ip',
-import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types',
-import { sendWarningEmail } from '../../../utils/email',
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { evaluateHeuristics } from '../../../utils/fraud/heuristics',;
+import { classifyWithGPT } from '../../../utils/fraud/gpt',;
+import { getFraudStore, newEvent } from '../../../utils/fraud/store',;
+import { extractClientIp } from '../../../utils/ip',;
+import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types',;
+import { sendWarningEmail } from '../../../utils/email',;
 const allowedSources: MonitoredSource[] = ['signupjob_postmessagequotereview'],
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -79,4 +79,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
   }
-}
+};

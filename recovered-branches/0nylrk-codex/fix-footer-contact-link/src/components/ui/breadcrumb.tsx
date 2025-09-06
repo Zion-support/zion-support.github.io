@@ -1,10 +1,10 @@
 
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
+import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
 import { ChevronRight } from "lucide-react"
- 
+ ;
 import { cn } from "@/lib/utils"
- 
+ ;
 const Breadcrumb = React.forwardRef<
   HTMLElement,
   React.ComponentPropsWithoutRef<"nav"> & {
@@ -103,3 +103,4 @@ export {
   BreadcrumbLink,
   BreadcrumbSeparator,
   BreadcrumbEllipsis}
+;

@@ -1,9 +1,9 @@
 'use client',
 
-import Image from 'next/image',
-import { useState } from 'react',
+import Image from 'next/image',;
+import { useState } from 'react',;
 import { ImageIcon } from 'lucide-react'
-
+;
 interface SafeImageProps {
   src: string,
   alt: string,
@@ -70,4 +70,4 @@ export function SafeImage({
       unoptimized={hasError}
     />
   )
-} 
+} ;

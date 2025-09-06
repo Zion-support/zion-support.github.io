@@ -798,4 +798,4 @@ export const newInnovativeServices = [
     rating: 4.9,
     reviews: 6
   }
-],
+],;

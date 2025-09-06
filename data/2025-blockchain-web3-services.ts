@@ -261,4 +261,4 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     rating: 4.6,
     reviews: 18000
   }
-],
+],;

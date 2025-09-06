@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants',;
 export interface Q3Service {
   id: string,
   name: string,
@@ -166,3 +166,4 @@ export const realServicesQ32025: Q3Service[] = [
     contactInfo: contact
   }
 ],
+;
