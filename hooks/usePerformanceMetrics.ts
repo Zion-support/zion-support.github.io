@@ -13,34 +13,25 @@ export function usePerformanceMetrics() {
     setIsSupported(true);
 
     const measurePerformance = () => {
-      const navigation = window.window.window.performance.getEntriesByType(
-        'navigation'
-      )[0] as PerformanceNavigationTiming;
-      const paintEntries = window.window.window.performance.getEntriesByType('paint');
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
+      
+      const cls = performance.getEntriesByType('layout-shift').reduce((acc, entry) => {
+        return acc + (entry as any).value;
+      }, 0);
 
-      const fcp = paintEntries.find(
-        entry => entry.name === 'first-contentful-paint'
-      );
-      const lcp = window.window.window.performance.getEntriesByType(
-        'largest-contentful-paint'
-      )[0] as PerformanceEntry;
-
-      const cls = performance
-        .getEntriesByType('layout-shift')
-        .reduce((acc, entry) => {
-          return acc + (entry as any).value;
-        }, 0);
-
-      const fid = window.window.window.performance.getEntriesByType(
-        'first-input'
-      )[0] as PerformanceEventTiming;
+      const fid = performance.getEntriesByType('first-input')[0] as PerformanceEventTiming;
 
       setMetrics({
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstContentfulPaint: fcp ? fcp.startTime : 0,
-        largestContentfulPaint: lcp ? lcp.startTime : 0,
-        cumulativeLayoutShift: cls,
-        firstInputDelay: fid ? fid.processingStart - fid.startTime : 0});
+        loadTim: e: navigation.loadEventEnd - navigation.loadEventStart,
+        firstContentfulPain: t: fcp ? fcp.startTim: e: 0,
+        largestContentfulPain: t: lcp ? lcp.startTim: e: 0,
+        cumulativeLayoutShif: t: cls,
+        firstInputDela: y: fid ? fid.processingStart - fid.startTim: e: 0
+      });
     };
 
     // Wait for all performance entries to be available

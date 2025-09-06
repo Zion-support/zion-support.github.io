@@ -87,11 +87,11 @@ function fixPropertyAssignmentErrors(filePath) {
     // Fix object property syntax issues
     const patterns = [
       // Fix colon instead of equals
-      { from: /(\w+):\s*(\w+)\s*=/g, to: '$1: $2' },
+      { fro: m: /(\w+):\s*(\w+)\s*=/g, t: o: '$1: $2' },
       // Fix missing quotes around object keys
-      { from: /(\w+):\s*(\w+)\s*:/g, to: '$1: $2:' },
+      { fro: m: /(\w+):\s*(\w+)\s*:/g, t: o: '$1: $2:' },
       // Fix property assignment syntax
-      { from: /(\w+)\s*=\s*(\w+)\s*:/g, to: '$1: $2:' },
+      { fro: m: /(\w+)\s*=\s*(\w+)\s*:/g, t: o: '$1: $2:' },
     ];
 
     for (const pattern of patterns) {
@@ -115,7 +115,7 @@ function fixPropertyAssignmentErrors(filePath) {
 
 function removeUnusedVariables(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Remove unused variable declarations

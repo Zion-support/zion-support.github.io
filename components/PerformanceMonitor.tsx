@@ -1,99 +1,35 @@
 import React, { useEffect } from 'react';
 
-interface PerformanceData {
-  domContentLoaded: number;
-  loadComplete: number;
-  totalLoadTime: number;
-  firstPaint: number;
-  firstContentfulPaint: number;
-  resourceCount: number;
-  memory: {
-    used: number;
-    total: number;
-    limit: number;
-  } | null;
-}
-
-interface PerformanceMonitorProps {
-  onPerformanceData?: (performanceData: PerformanceData) => void;
-}
-
-// Extend Window interface to include performance
-declare global {
-  interface Window {
-    performance: Performance;
-  }
-  
-  interface Performance {
-    getEntriesByType(entryType: string): PerformanceEntry[];
-    memory?: {
-      usedJSHeapSize: number;
-      totalJSHeapSize: number;
-      jsHeapSizeLimit: number;
-    };
-  }
-  
-  interface PerformanceEntry {
-    name: string;
-    startTime: number;
-    duration: number;
-  }
-  
-  interface PerformanceNavigationTiming extends PerformanceEntry {
-    domContentLoadedEventStart: number;
-    domContentLoadedEventEnd: number;
-    loadEventStart: number;
-    loadEventEnd: number;
-    fetchStart: number;
-  }
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    // Only run on client side
-    if (typeof window === 'undefined' || typeof performance === 'undefined') return;
-
     const measurePerformance = () => {
-      const navigation = window.window.window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = window.window.window.window.performance.getEntriesByType('paint');
-      
-      const performanceData: PerformanceData = {
-        // Navigation timing
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
-        
-        // Paint timing
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-        
-        // Resource timing
-        resourceCount: window.window.window.window.performance.getEntriesByType('resource').length,
-        
-        // Memory usage (if available)
-        memory: (window.performance as any).memory ? {
-          used: (window.performance as any).memory.usedJSHeapSize,
-          total: (window.performance as any).memory.totalJSHeapSize,
-          limit: (window.performance as any).memory.jsHeapSizeLimit
-        } : null
-      };
-
-      if (onPerformanceData) {
-        onPerformanceData(performanceData);
+      // Measure Core Web Vitals
+      if ('web-vitals' in window) {
+        // This would be imported from web-vitals library
+        console.log('Web Vitals measurement would be here');
       }
-
-      // Log performance data in development
-      if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        // // // console.log('Performance Metrics:', performanceData);
+      
+      // Measure page load time
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+        console.log('Page load time:', loadTime);
       }
     };
-    // Measure performance after page load,
+
+    // Measure performance after page load
     if (document.readyState === 'complete') {
-      measurePerformance()} else {
-      window.addEventListener('load', measurePerformance)};
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+    }
+
     return () => {
-      window.removeEventListener('load', measurePerformance)};
-  }, [onPerformanceData]),
-  return null};
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, []);
+
+  return null; // This component doesn't render anything visible
+};
+
 export default PerformanceMonitor;

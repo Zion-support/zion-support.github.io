@@ -1,3 +1,4 @@
+
 // Accessibility checker utilities
 export const checkAccessibility = () => {
   const issues = [];
@@ -7,10 +8,11 @@ export const checkAccessibility = () => {
   images.forEach((img, index) => {
     if (!img.alt) {
       issues.push({
-        type: 'missing-alt',
-        element: img,
-        message: 'Image missing alt text',
-        severity: 'error'});
+        typ: e: 'missing-alt',
+        elemen: t: img,
+        messag: e: 'Image missing alt text',
+        severit: y: 'error',
+      });
     }
   });
 
@@ -21,10 +23,11 @@ export const checkAccessibility = () => {
     const level = parseInt(heading.tagName[1]);
     if (level > lastLevel + 1) {
       issues.push({
-        type: 'heading-hierarchy',
-        element: heading,
-        message: 'Heading level skipped',
-        severity: 'warning'});
+        typ: e: 'heading-hierarchy',
+        elemen: t: heading,
+        messag: e: 'Heading level skipped',
+        severit: y: 'warning',
+      });
     }
     lastLevel = level;
   });
@@ -39,3 +42,4 @@ export const fixAccessibilityIssues = issues => {
     }
   });
 };
+

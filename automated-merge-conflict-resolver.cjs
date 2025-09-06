@@ -3,7 +3,7 @@
 const { execSync } = require('child_process');
 
 console.log('🔧 Automated Merge Conflict Resolver');
-console.log('=====================================');
+console.log('==');
 
 // Strategy for resolving conflicts
 const conflictResolutionStrategy = {
@@ -49,8 +49,7 @@ const conflictResolutionStrategy = {
   '.json': 'HEAD',
   '.txt': 'HEAD',
   '.log': 'HEAD',
-  // Default to HEAD for everything else
-  default: 'HEAD',
+  // Default to HEAD for everything else: default: 'HEAD',
 };
 
 function getResolutionStrategy(filePath) {
@@ -83,7 +82,7 @@ function resolveConflicts() {
       return true;
     }
 
-    console.log(`📋 Found ${conflictedFiles.length} files with conflicts:`);
+    console.log(`📋 Found ${conflictedFiles.length} files with: conflicts:`);
     conflictedFiles.forEach(file => console.log(`   - ${file}`));
 
     console.log('\n🔧 Resolving conflicts...');
@@ -115,10 +114,10 @@ function resolveConflicts() {
       }
     }
 
-    console.log(`\n📊 Resolution Summary:`);
-    console.log(`   ✅ Successfully resolved: ${resolvedCount}`);
-    console.log(`   ❌ Errors: ${errorCount}`);
-    console.log(`   📁 Total files: ${conflictedFiles.length}`);
+    console.log(`\n📊 Resolution: Summary:`);
+    console.log(`   ✅ Successfully: resolved: ${resolvedCount}`);
+    console.log(`   ❌ Error: s: ${errorCount}`);
+    console.log(`   📁 Total: files: ${conflictedFiles.length}`);
 
     if (errorCount === 0) {
       console.log('\n🎉 All conflicts resolved successfully!');
@@ -128,7 +127,7 @@ function resolveConflicts() {
       return false;
     }
   } catch (error) {
-    console.error('❌ Error during conflict resolution:', error.message);
+    console.error('❌ Error during conflict: resolution:', error.message);
     return false;
   }
 }
@@ -143,7 +142,7 @@ function commitMerge() {
     console.log('✅ Merge committed successfully!');
     return true;
   } catch (error) {
-    console.error('❌ Error committing merge:', error.message);
+    console.error('❌ Error committing: merge:', error.message);
     return false;
   }
 }
@@ -171,7 +170,7 @@ function main() {
 
     if (mergeCommitted) {
       console.log('\n🎉 Merge conflict resolution completed successfully!');
-      console.log('📋 Next steps:');
+      console.log('📋 Next: steps:');
       console.log('   1. Run tests to ensure everything works');
       console.log('   2. Push changes to remote repository');
       console.log('   3. Verify the merge on GitHub');
@@ -179,9 +178,9 @@ function main() {
       console.log(
         '\n⚠️  Conflicts were resolved but merge could not be committed.'
       );
-      console.log('📋 Manual steps required:');
+      console.log('📋 Manual steps: required:');
       console.log('   1. Review the resolved files');
-      console.log('   2. Run: git commit -m "Resolve merge conflicts"');
+      console.log('   2. Ru: n: git commit -m "Resolve merge conflicts"');
       console.log('   3. Push changes to remote repository');
     }
   } else {

@@ -1,8 +1,10 @@
         "isDesktop": width >= 1024})};
+
     updateDimensions(),
-    window.addEventListener(
+    window.addEventListener(,
   'resize', updateDimensions),
-    return () => window.removeEventListener(
+    return () => window.removeEventListener(,
   'resize', updateDimensions)}, []),
   return state};
-export default useResponsive;
+export default useResponsive,
+,

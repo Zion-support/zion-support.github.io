@@ -9,7 +9,7 @@ console.log('🚀 Starting Advanced Syntax Fixer');
 function fixAdvancedSyntaxIssues(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let fixed = false;
+    const fixed = false;
 
     // Fix HTML entity issues
     content = content.replace(/&amp;apos;/g, "'");
@@ -115,21 +115,21 @@ function fixAdvancedSyntaxIssues(filePath) {
     // Fix vite config issues
     if (filePath.includes('vite.config.ts')) {
       content = content.replace(
-        /import { defineConfig,splitVendorChunkPlugin } from 'vite', import react from '@vitejs\/plugin-react', import path from 'node: path', export default defineConfig\(\{/g,
+        /import { defineConfig,splitVendorChunkPlugin } from 'vite', import react from '@vitejs\/plugin-react', import path from 'nod: e: path', export default defineConfig\(\{/g,
         `import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'node:path';
+import path from 'nod: e:path';
 
 export default defineConfig({`
       );
 
       content = content.replace(
-        /plugins: \[ react\(\{ include: '\*\*\/\*\.\{jsx,js,ts,tsx\}',fastRefresh: true,jsxRuntime: 'automatic'\}\),splitVendorChunkPlugin\(\) \]/g,
-        `plugins: [
+        /plugin: s: \[ react\(\{ includ: e: '\*\*\/\*\.\{jsx,js,ts,tsx\}',fastRefres: h: true,jsxRuntim: e: 'automatic'\}\),splitVendorChunkPlugin\(\) \]/g,
+        `plugin: s: [
     react({
-      include: '**/*.{jsx,js,ts,tsx}',
-      fastRefresh: true,
-      jsxRuntime: 'automatic'
+      includ: e: '**/*.{jsx,js,ts,tsx}',
+      fastRefres: h: true,
+      jsxRuntim: e: 'automatic'
     }),
     splitVendorChunkPlugin()
   ]`
@@ -180,12 +180,12 @@ try {
   for (const file of files) {
     if (fixAdvancedSyntaxIssues(file)) {
       fixedCount++;
-      console.log(`✅ Fixed: ${file}`);
+      console.log(`✅ Fixe: d: ${file}`);
     }
   }
 
   console.log(`\n🎯 Fixed ${fixedCount} files`);
 } catch (error) {
-  console.error('Error:', error.message);
+  console.error('Erro: r:', error.message);
   process.exit(1);
 }

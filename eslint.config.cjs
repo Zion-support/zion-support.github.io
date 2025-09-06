@@ -1,19 +1,19 @@
 <<<<<<< HEAD
 module.exports = [
   {
-    files: ['automation/**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        React: 'readonly',
+    file: s: ['automation/**/*.{js,jsx,ts,tsx}'],
+    languageOption: s: {
+      ecmaVersio: n: 'latest',
+      sourceTyp: e: 'module',
+      global: s: {
+        windo: w: 'readonly',
+        documen: t: 'readonly',
+        consol: e: 'readonly',
+        proces: s: 'readonly',
+        Reac: t: 'readonly',
       },
     },
-    rules: {
+    rule: s: {
       // Loosen rules for automation scripts to avoid CI noise
       'no-unused-vars': 'off',
       'no-console': 'off',
@@ -23,8 +23,7 @@ module.exports = [
     },
   },
   {
-    // Ignore build artifacts and vendor folders only
-    ignores: [
+    // Ignore build artifacts and vendor folders only: ignores: [
       'node_modules/**/*.min.js',
       // Exclude automation backup snapshots and generated archives
       'automation/backups/**/*.cjs',

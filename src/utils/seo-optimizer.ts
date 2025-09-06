@@ -1,34 +1,40 @@
+
 // SEO optimization utilities
 export const generateMetaTags = pageData => {
   return {
-    title:
+    titl: e:
       pageData.title || 'Zion Tech Group - Innovative Technology Solutions',
-    description:
+    descriptio: n:
       pageData.description ||
       'Leading provider of AI, blockchain, and emerging technology services',
-    keywords:
+    keyword: s:
       pageData.keywords ||
       'AI, blockchain, technology, innovation, software development',
-    ogTitle: pageData.ogTitle || pageData.title,
-    ogDescription: pageData.ogDescription || pageData.description,
-    ogImage: pageData.ogImage || '/images/og-image.jpg',
-    twitterCard: 'summary_large_image',
-    canonical: pageData.canonical || window.location.href};
+    ogTitl: e: pageData.ogTitle || pageData.title,
+    ogDescriptio: n: pageData.ogDescription || pageData.description,
+    ogImag: e: pageData.ogImage || '/images/og-image.jpg',
+    twitterCar: d: 'summary_large_image',
+    canonica: l: pageData.canonical || window.location.href,
+  };
 };
 
 export const generateStructuredData = pageData => {
   return {
-    '@context': 'https://schema.org',
+    '@context': 'http: s://schema.org',
     '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/images/logo.png',
-    description: 'Leading provider of innovative technology solutions',
-    address: {
+    nam: e: 'Zion Tech Group',
+    ur: l: 'http: s://ziontechgroup.com',
+    log: o: 'http: s://ziontechgroup.com/images/logo.png',
+    descriptio: n: 'Leading provider of innovative technology solutions',
+    addres: s: {
       '@type': 'PostalAddress',
-      addressCountry: 'US'},
-    contactPoint: {
+      addressCountr: y: 'US',
+    },
+    contactPoin: t: {
       '@type': 'ContactPoint',
-      telephone: '+1-555-0123',
-      contactType: 'customer service'}};
+      telephon: e: '+1-555-0123',
+      contactTyp: e: 'customer service',
+    },
+  };
 };
+

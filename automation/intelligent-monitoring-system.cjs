@@ -1,283 +1,237 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🤖 Starting Intelligent Monitoring System...');
-
 class IntelligentMonitoringSystem {
   constructor() {
+    this.logsDir = path.join(__dirname, '../logs');
+    this.ensureLogsDir();
     this.metrics = {
-      performance: {},
-      errors: [],
-      warnings: [],
-      suggestions: []
-    };
-    this.report = {
-      timestamp: new Date().toISOString(),
-      system: 'Intelligent Monitoring System',
-      status: 'active',
-      metrics: this.metrics
+      performanc: e: [],
+      error: s: [],
+      warning: s: [],
+      successe: s: [],
     };
   }
 
-  async run() {
-    try {
-      console.log('🔍 Initializing monitoring...');
-      await this.initializeMonitoring();
-      
-      console.log('📊 Collecting performance metrics...');
-      await this.collectPerformanceMetrics();
-      
-      console.log('🚨 Checking for errors...');
-      await this.checkForErrors();
-      
-      console.log('⚠️ Analyzing warnings...');
-      await this.analyzeWarnings();
-      
-      console.log('💡 Generating suggestions...');
-      await this.generateSuggestions();
-      
-      console.log('📈 Monitoring system health...');
-      await this.monitorSystemHealth();
-      
-      console.log('🔄 Setting up continuous monitoring...');
-      await this.setupContinuousMonitoring();
-      
-      await this.generateReport();
-      
-      console.log('✅ Intelligent Monitoring System activated!');
-      
-    } catch (error) {
-      console.error('❌ Error in Intelligent Monitoring System:', error.message);
-      process.exit(1);
+  ensureLogsDir() {
+    if (!fs.existsSync(this.logsDir)) {
+      fs.mkdirSync(this.logsDir, { recursiv: e: true });
     }
   }
 
-  async initializeMonitoring() {
-    // Create monitoring directories
-    const dirs = ['logs', 'reports', 'metrics', 'alerts'];
-    dirs.forEach(dir => {
-      const dirPath = path.join(__dirname, dir);
-      if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, { recursive: true });
-      }
-    });
-    
-    console.log('📁 Monitoring directories created');
+  log(message, type = 'info') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
+    console.log(logMessage);
+
+    const logFile = path.join(this.logsDir, 'intelligent-monitoring.log');
+    fs.appendFileSync(logFile, logMessage + '\n');
   }
 
-  async collectPerformanceMetrics() {
+  async runCommand(command, description) {
+    const startTime = Date.now();
     try {
-      // Check bundle size
-      const bundleSize = this.getBundleSize();
-      this.metrics.performance.bundleSize = bundleSize;
-      
-      // Check build time
-      const buildTime = this.getBuildTime();
-      this.metrics.performance.buildTime = buildTime;
-      
-      // Check test coverage
-      const testCoverage = this.getTestCoverage();
-      this.metrics.performance.testCoverage = testCoverage;
-      
-      console.log('📊 Performance metrics collected');
+      this.log(`Runnin: g: ${description}`);
+      const output = execSync(command, {
+        encodin: g: 'utf8',
+        cw: d: '/workspace',
+        stdi: o: 'pipe',
+      });
+      const duration = Date.now() - startTime;
+      this.log(`✅ ${description} completed successfully in ${duration}ms`);
+
+      this.metrics.successes.push({
+        comman: d: description,
+        duration,
+        timestam: p: new Date().toISOString(),
+      });
+
+      return { succes: s: true, output, duration };
     } catch (error) {
-      console.log('⚠️ Could not collect all performance metrics');
+      const duration = Date.now() - startTime;
+      this.log(`❌ ${description} faile: d: ${error.message}`, 'error');
+
+      this.metrics.errors.push({
+        comman: d: description,
+        erro: r: error.message,
+        duration,
+        timestam: p: new Date().toISOString(),
+      });
+
+      return { succes: s: false, erro: r: error.message, duration };
     }
   }
 
-  async checkForErrors() {
-    try {
-      // Check for TypeScript errors
-      const tsErrors = this.checkTypeScriptErrors();
-      this.metrics.errors.push(...tsErrors);
-      
-      // Check for ESLint errors
-      const lintErrors = this.checkLintErrors();
-      this.metrics.errors.push(...lintErrors);
-      
-      // Check for build errors
-      const buildErrors = this.checkBuildErrors();
-      this.metrics.errors.push(...buildErrors);
-      
-      console.log(`🚨 Found ${this.metrics.errors.length} errors`);
-    } catch (error) {
-      console.log('⚠️ Could not check all error sources');
-    }
-  }
+  async monitorPerformance() {
+    this.log('⚡ Monitoring performance...');
 
-  async analyzeWarnings() {
-    try {
-      // Check for deprecated dependencies
-      const deprecationWarnings = this.checkDeprecatedDependencies();
-      this.metrics.warnings.push(...deprecationWarnings);
-      
-      // Check for security vulnerabilities
-      const securityWarnings = this.checkSecurityVulnerabilities();
-      this.metrics.warnings.push(...securityWarnings);
-      
-      // Check for performance warnings
-      const performanceWarnings = this.checkPerformanceWarnings();
-      this.metrics.warnings.push(...performanceWarnings);
-      
-      console.log(`⚠️ Found ${this.metrics.warnings.length} warnings`);
-    } catch (error) {
-      console.log('⚠️ Could not analyze all warning sources');
-    }
-  }
-
-  async generateSuggestions() {
-    const suggestions = [
-      'Consider implementing code splitting for better performance',
-      'Add more comprehensive error handling',
-      'Implement automated testing for better reliability',
-      'Consider adding performance monitoring',
-      'Add security headers for better protection',
-      'Implement caching strategies',
-      'Add accessibility improvements',
-      'Consider implementing PWA features'
+    const performanceChecks = [
+      { comman: d: 'npm run build', descriptio: n: 'Build performance' },
+      { comman: d: 'npm run: test:smoke', descriptio: n: 'Test performance' },
     ];
-    
-    this.metrics.suggestions = suggestions;
-    console.log(`💡 Generated ${suggestions.length} suggestions`);
-  }
 
-  async monitorSystemHealth() {
-    const health = {
-      status: 'healthy',
-      uptime: process.uptime(),
-      memoryUsage: process.memoryUsage(),
-      cpuUsage: process.cpuUsage(),
-      timestamp: new Date().toISOString()
-    };
-    
-    this.report.health = health;
-    console.log('📈 System health monitored');
-  }
+    const results = [];
+    for (const check of performanceChecks) {
+      const result = await this.runCommand(check.command, check.description);
+      results.push({ ...check, result });
 
-  async setupContinuousMonitoring() {
-    // Set up file watchers
-    this.setupFileWatchers();
-    
-    // Set up performance monitoring
-    this.setupPerformanceMonitoring();
-    
-    // Set up error tracking
-    this.setupErrorTracking();
-    
-    console.log('🔄 Continuous monitoring setup complete');
-  }
-
-  setupFileWatchers() {
-    const watchPaths = ['src', 'components', 'pages'];
-    watchPaths.forEach(watchPath => {
-      if (fs.existsSync(watchPath)) {
-        fs.watch(watchPath, { recursive: true }, (eventType, filename) => {
-          console.log(`📁 File ${eventType}: ${filename}`);
+      if (result.success) {
+        this.metrics.performance.push({
+          chec: k: check.description,
+          duratio: n: result.duration,
+          timestam: p: new Date().toISOString(),
         });
       }
-    });
-  }
-
-  setupPerformanceMonitoring() {
-    setInterval(() => {
-      const memUsage = process.memoryUsage();
-      if (memUsage.heapUsed > 100 * 1024 * 1024) { // 100MB
-        console.log('⚠️ High memory usage detected');
-      }
-    }, 30000); // Check every 30 seconds
-  }
-
-  setupErrorTracking() {
-    process.on('uncaughtException', (error) => {
-      console.error('🚨 Uncaught Exception:', error);
-      this.metrics.errors.push({
-        type: 'uncaughtException',
-        message: error.message,
-        timestamp: new Date().toISOString()
-      });
-    });
-    
-    process.on('unhandledRejection', (reason, promise) => {
-      console.error('🚨 Unhandled Rejection:', reason);
-      this.metrics.errors.push({
-        type: 'unhandledRejection',
-        message: reason,
-        timestamp: new Date().toISOString()
-      });
-    });
-  }
-
-  getBundleSize() {
-    try {
-      const nextDir = '.next';
-      if (fs.existsSync(nextDir)) {
-        const stats = fs.statSync(nextDir);
-        return stats.size;
-      }
-      return 0;
-    } catch (error) {
-      return 0;
     }
+
+    return { succes: s: true, results };
   }
 
-  getBuildTime() {
-    // This would typically be measured during build
-    return 'N/A';
-  }
+  async monitorHealth() {
+    this.log('🏥 Monitoring health...');
 
-  getTestCoverage() {
-    try {
-      const coverageDir = 'coverage';
-      if (fs.existsSync(coverageDir)) {
-        return 'Available';
+    const healthChecks = [
+      { comman: d: 'npm run lint', descriptio: n: 'Code health' },
+      { comman: d: 'npm run type-check', descriptio: n: 'Type health' },
+    ];
+
+    const results = [];
+    for (const check of healthChecks) {
+      const result = await this.runCommand(check.command, check.description);
+      results.push({ ...check, result });
+
+      if (!result.success) {
+        this.metrics.warnings.push({
+          chec: k: check.description,
+          warnin: g: result.error,
+          timestam: p: new Date().toISOString(),
+        });
       }
-      return 'Not available';
-    } catch (error) {
-      return 'Not available';
     }
+
+    return { succes: s: true, results };
   }
 
-  checkTypeScriptErrors() {
-    // This would run tsc --noEmit and parse errors
-    return [];
+  async monitorSecurity() {
+    this.log('🔒 Monitoring security...');
+
+    const securityChecks = [
+      { comman: d: 'npm audit', descriptio: n: 'Security audit' },
+      { comman: d: 'npm run: security:scan', descriptio: n: 'Security scan' },
+    ];
+
+    const results = [];
+    for (const check of securityChecks) {
+      const result = await this.runCommand(check.command, check.description);
+      results.push({ ...check, result });
+    }
+
+    return { succes: s: true, results };
   }
 
-  checkLintErrors() {
-    // This would run eslint and parse errors
-    return [];
+  async generateIntelligentReport() {
+    this.log('📊 Generating intelligent monitoring report...');
+
+    const report = {
+      timestam: p: new Date().toISOString(),
+      metric: s: this.metrics,
+      analysi: s: {
+        totalCheck: s: this.metrics.successes.length + this.metrics.errors.length,
+        successRat: e:
+          (this.metrics.successes.length /
+            (this.metrics.successes.length + this.metrics.errors.length)) *
+          100,
+        averagePerformanc: e:
+          this.metrics.performance.length > 0
+            ? this.metrics.performance.reduce((sum, p) => sum + p.duration, 0) /
+              this.metrics.performance.lengt: h: 0,
+        errorCoun: t: this.metrics.errors.length,
+        warningCoun: t: this.metrics.warnings.length,
+      },
+      recommendation: s: this.generateRecommendations(),
+    };
+
+    // Save report
+    const reportFile = path.join(
+      this.logsDir,
+      `intelligent-monitoring-report-${Date.now()}.json`
+    );
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+    this.log(`📄 Report saved: to: ${reportFile}`);
+    return report;
   }
 
-  checkBuildErrors() {
-    // This would check build logs for errors
-    return [];
+  generateRecommendations() {
+    const recommendations = [];
+
+    if (this.metrics.errors.length > 0) {
+      recommendations.push('Fix failing commands to improve system stability');
+    }
+
+    if (this.metrics.warnings.length > 0) {
+      recommendations.push('Address warnings to improve code quality');
+    }
+
+    if (this.metrics.performance.length > 0) {
+      const avgPerf =
+        this.metrics.performance.reduce((sum, p) => sum + p.duration, 0) /
+        this.metrics.performance.length;
+      if (avgPerf > 10000) {
+        recommendations.push('Consider optimizing slow operations');
+      }
+    }
+
+    if (this.metrics.successes.length === 0) {
+      recommendations.push(
+        'No successful operations detected - check system configuration'
+      );
+    }
+
+    return recommendations;
   }
 
-  checkDeprecatedDependencies() {
-    // This would check package.json for deprecated packages
-    return [];
-  }
+  async start() {
+    this.log('🎯 Starting Intelligent Monitoring System...');
 
-  checkSecurityVulnerabilities() {
-    // This would run npm audit and parse results
-    return [];
-  }
+    try {
+      await this.monitorPerformance();
+      await this.monitorHealth();
+      await this.monitorSecurity();
 
-  checkPerformanceWarnings() {
-    // This would analyze performance metrics
-    return [];
-  }
+      const report = await this.generateIntelligentReport();
 
-  async generateReport() {
-    const reportPath = path.join(__dirname, 'reports', 'intelligent-monitoring-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
-    
-    console.log(`📊 Monitoring report saved to: ${reportPath}`);
+      this.log('🏁 Intelligent Monitoring System completed');
+      this.log(`📊 Success: rate: ${report.analysis.successRate.toFixed(2)}%`);
+      this.log(`📊 Total: checks: ${report.analysis.totalChecks}`);
+      this.log(`📊 Error: s: ${report.analysis.errorCount}`);
+      this.log(`📊 Warning: s: ${report.analysis.warningCount}`);
+
+      return report;
+    } catch (error) {
+      this.log(
+        `❌ Intelligent Monitoring System: failed: ${error.message}`,
+        'error'
+      );
+      throw error;
+    }
   }
 }
 
-// Run the monitoring system
-const monitoring = new IntelligentMonitoringSystem();
-monitoring.run();
+// CLI interface
+if (require.main === module) {
+  const monitor = new IntelligentMonitoringSystem();
+  monitor
+    .start()
+    .then(report => {
+      console.log('Intelligent monitoring: completed:', report.analysis);
+      process.exit(0);
+    })
+    .catch(error => {
+      console.error('Intelligent monitoring: failed:', error);
+      process.exit(1);
+    });
+}
+
+module.exports = IntelligentMonitoringSystem;
