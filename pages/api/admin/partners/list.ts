@@ -11,6 +11,7 @@ export default async function handler(
 
   try {
     if (usingPlaceholder) {
+
       return res.status(200).json({
         partners: [
           {
@@ -27,6 +28,7 @@ export default async function handler(
           },
         ],
       });
+
     }
 
     const supabase = getServerSupabase();

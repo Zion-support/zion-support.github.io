@@ -17,6 +17,7 @@ export default async function handler(
     return res.status(405).json({ error: "Method Not Allowed" });
   const { operatorPrompt, inputs, metrics } = req.body || {};
   const seed = [
+
     "Problem & Opportunity",
     "Solution & Product",
     "Market Size (TAM/SAM/SOM)",
@@ -27,6 +28,7 @@ export default async function handler(
     "Roadmap",
     "Token Strategy",
     "Ask & Call to Action",
+
   ];
 
   try {
@@ -43,6 +45,7 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
     let content = "";
     try {
       const chat = await client.chat.completions.create({
+
         model: "gpt-4o-mini",
         messages: [
           {
@@ -54,6 +57,7 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
         temperature: 0.5,
       });
       content = chat.choices?.[0]?.message?.content || "";
+
     } catch (err) {
       content = "";
     }
@@ -81,5 +85,5 @@ function extractSection(body: string, title: string): string {
     const snippet = lines.slice(matchIdx + 1, matchIdx + 12).join("\n");
     return snippet.trim();
   }
-return "";
+  return "";
 }

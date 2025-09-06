@@ -1,3 +1,4 @@
+
 export interface TokenTransaction {
   id: string;
   userId: string;
@@ -45,3 +46,4 @@ export function setConfig(
   // Update the configuration
   Object.assign(current, partial);
 }
+

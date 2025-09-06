@@ -1,3 +1,4 @@
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export interface User {
@@ -91,3 +92,4 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
     return null;
   }
 }
+

@@ -14,7 +14,14 @@ class AdvancedAppImprovementSuite {
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+    }  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}`;
+    console.log(logMessage);
+    fs.appendFileSync(this.logFile, logMessage + "\n");
+
   }
 
   log(message) {
@@ -245,8 +252,8 @@ class AdvancedAppImprovementSuite {
       return results;
     } catch (error) {
       this.log(`Advanced App Improvement Suite failed: ${error.message}`);
-      throw error;
-    }
+      throw error;    }
+
   }
 }
 

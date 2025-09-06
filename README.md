@@ -1,34 +1,58 @@
-# Zion Tech Group
+# Zion Tech Group - Comprehensive Automation Suite
 
-AI & Technology Solutions for the modern world.
+## Overview
+This project includes a comprehensive automation suite for testing, building, and deploying applications.
 
 ## Features
+- Automated testing with Jest and React Testing Library
+- ESLint and Prettier for code quality
+- TypeScript support
+- Performance optimization
+- Security auditing
+- Automated deployment
 
-- AI Services
-- IT Services  
-- Cloud Solutions
-- Cybersecurity
-- Data Analytics
-- Digital Transformation
+## Scripts
+
+### Testing
+- `npm run test` - Run all tests
+- `npm run test:smoke` - Run smoke tests
+- `npm run test:watch` - Run tests in watch mode
+
+### Building
+- `npm run build` - Build the application
+- `npm run dev` - Start development server
+
+### Code Quality
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint issues
+- `npm run format` - Format code with Prettier
+
+### Automation
+- `npm run automation:all` - Run all automation scripts
+- `npm run automation:master` - Run master automation orchestrator
 
 ## Getting Started
 
-```bash
-npm install
-npm run dev
-```
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Build
+2. Run tests:
+   ```bash
+   npm run test:smoke
+   ```
 
-```bash
-npm run build
-```
+3. Start development server:
+   ```bash
+   npm run dev
+   ```
 
-## Testing
+## Automation Reports
+All automation reports are saved in the `automation-reports/` directory.
 
-```bash
-npm run test:smoke
-```
+## Contributing
+Please ensure all tests pass and code is properly formatted before submitting pull requests.
 
 ## License
 

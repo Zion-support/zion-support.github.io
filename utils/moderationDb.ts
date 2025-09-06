@@ -1,3 +1,4 @@
+
 export interface ModerationFlag {
   id: string;
   contentId: string;
@@ -49,3 +50,4 @@ export async function updateFlagStatus(
   await upsertFlag(flag);
   return flag;
 }
+

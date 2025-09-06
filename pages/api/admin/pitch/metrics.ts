@@ -13,6 +13,7 @@ export default async function handler(
     mrr: 82000,
     yoyGrowth: 1.85,
     completedProjects: 3275,
+
     globalReach: ["USEUAPACLATAM"],
     funnel: [
       { stage: "Visitors", value: 250000 },
@@ -30,6 +31,7 @@ export default async function handler(
         summary: "AI catalog enrichment, 9% revenue lift in A/B",
       },
     ],
+
   };
 
 res.status(200).json(data);

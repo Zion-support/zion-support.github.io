@@ -21,7 +21,7 @@ export default function ReportProblemButton({
         Report a Problem
       </a>
     </Link>
-);
+  );
 }
 export default function ReportProblemButton({
   projectId,

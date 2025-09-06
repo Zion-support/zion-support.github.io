@@ -21,9 +21,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     page,
     userType,
     properties,
+
     at: at && typeof at === 'string' ? at : nowIso,
     ua: req.headers['user-agent'] || '',
 ip: (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '') as string},
+
 
   try {
     ensureLogFile(),

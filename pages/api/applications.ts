@@ -40,10 +40,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       jobId: String(jobId),
       talentSlug: String(talentSlug),
       status: action === 'apply' ? 'applied' : 'skipped',
+
 createdAtIso: now},
     apps.push(app),
     writeJsonFile<Application[]>(FILE, apps),
     res.status(201).json({ application: app }),
+
     return
   }
 
