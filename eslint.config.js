@@ -1,6 +1,7 @@
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 
@@ -58,6 +59,7 @@ export default [
         AbortController: 'readonly',
         Performance: 'readonly',
         PerformanceNavigationTiming: 'readonly',
+        HTMLElement: 'readonly',
         __dirname: 'readonly',
         __filename: 'readonly',
         exports: 'readonly'
@@ -70,7 +72,8 @@ export default [
     },
     plugins: {
       react,
-      'react-hooks': reactHooks
+      'react-hooks': reactHooks,
+      'jsx-a11y': jsxA11y
     },
     settings: {
       react: {
@@ -81,6 +84,7 @@ export default [
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'react/prop-types': 'off',
@@ -151,17 +155,30 @@ export default [
       }
     },
     plugins: {
+<<<<<<< HEAD
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks,
       '@next/next': next
+=======
+      '@typescript-eslint': tseslint,
+      react,
+      'react-hooks': reactHooks,
+      'jsx-a11y': jsxA11y
+>>>>>>> cursor/automate-test-improve-and-merge-code-de7e
     },
     rules: {
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+<<<<<<< HEAD
       ...next.configs.recommended.rules,
       'no-unused-vars': 'warn',
+=======
+      ...jsxA11y.configs.recommended.rules,
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+>>>>>>> cursor/automate-test-improve-and-merge-code-de7e
       'no-console': 'warn',
       'prefer-const': 'error',
       'no-var': 'error',
