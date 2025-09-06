@@ -7,9 +7,9 @@ import { useState } from 'react';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { use_form } from 'react - hook - form';
 import { z } from 'zod';
-import { WorkExperience } from '@/types / resume';
-import { Button } from '@/components / ui / button';
-import { Calendar } from '@/components / ui / calendar';
+import { WorkExperience } from '@/types/ resume';
+import { Button } from '@/components/ui/ button';
+import { Calendar } from '@/components/ui/ calendar';
 import {
   Form,
   FormControl,
@@ -17,15 +17,15 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components / ui / form';
-import { Input } from '@/components / ui / input';
+} from '@/components/ui/ form';
+import { Input } from '@/components/ui/ input';
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@/components / ui / popover';
-import { Textarea } from '@/components / ui / textarea';
+} from '@/components/ui/ popover';
+import { Textarea } from '@/components/ui/ textarea';
 import { cn } from '@/lib / utils';
-import { Switch } from '@/components / ui / switch';
+import { Switch } from '@/components/ui/ switch';
 import { format } from 'date - fns';
 
       company_name: initialData?.company_name || "",
@@ -69,8 +69,8 @@ import { cn } from "@/lib/utils",;
 import { Switch } from "@/components/ui/switch",;
 import { format } from "date-fns",;
 import { CalendarIcon, Loader2 } from 'lucide-react';
-import { AIEnhancementButton } from '@/components / ai - enhancement / AIEnhancementButton';
-import { AIEnhancementDialog } from '@/components / ai - enhancement / AIEnhancementDialog';
+import { AIEnhancementButton } from '@/components/ ai - enhancement / AIEnhancementButton';
+import { AIEnhancementDialog } from '@/components/ ai - enhancement / AIEnhancementDialog';
 // Define form schema;
 const form_schema = z.object ({
   company_name: z.string ().min (1, 'Company name is required'),

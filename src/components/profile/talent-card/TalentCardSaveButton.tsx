@@ -96,8 +96,8 @@ export function TalentCardSaveButton(): any ({;
 import React from 'react';
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib / utils';
-import { use_toast } from '@/hooks / use - toast';
-import { use_router } from 'next / router';
+import { use_toast } from '@/hooks/ use - toast';
+import { use_router } from 'next/router';
 interface TalentCardSaveButtonProps {
   profile_id: string;
   profile_name: string;

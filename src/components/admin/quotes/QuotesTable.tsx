@@ -76,15 +76,15 @@ import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import {
   TableHead,
   TableHeader,
   TableRow;
-} from '@/components / ui / table'; import { Button  } from '@/components / ui / button';
+} from '@/components/ui/ table'; import { Button  } from '@/components/ui/ button';
 import {
   DropdownMenu;
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger;
-} from '@/components / ui / dropdown - menu'; import { QuoteStatusBadge  } from '@/components / quotes / QuoteStatusBadge';
-import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
-import { format_date } from '@/utils / date_utils';
+} from '@/components/ui/ dropdown - menu'; import { QuoteStatusBadge  } from '@/components/ quotes / QuoteStatusBadge';
+import type { QuoteRequest, QuoteStatus } from "@/types/ quotes";
+import { format_date } from '@/utils/ date_utils';
 interface QuotesTableProps {
   quotes: QuoteRequest[],
   is_archived?: boolean;

@@ -15,7 +15,7 @@
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
-import { log_info } from '@/utils / production_logger';
+import { log_info } from '@/utils/ production_logger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 // Mock category data;
 const categories_info: Record < string, ForumCategoryInfo> = {

@@ -74,10 +74,10 @@ import { use_form, type ControllerRenderProps } from 'react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { z } from 'zod';
 import { Loader2 } from 'lucide-react';
-import { ContractFormValues } from '@/components / contracts / components / ContractForm';
-import { ContractTemplate } from '@/types / contracts';
-import { useContractTemplates } from '@/hooks / useContractTemplates';
-import { Button } from '@/components / ui / button';
+import { ContractFormValues } from '@/components/ contracts / components / ContractForm';
+import { ContractTemplate } from '@/types/ contracts';
+import { useContractTemplates } from '@/hooks/ useContractTemplates';
+import { Button } from '@/components/ui/ button';
 import {
   Form,
   FormControl,
@@ -85,9 +85,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components / ui / form';
-import { Input } from '@/components / ui / input';
-import { Switch } from '@/components / ui / switch';
+} from '@/components/ui/ form';
+import { Input } from '@/components/ui/ input';
+import { Switch } from '@/components/ui/ switch';
 const form_schema = z.object ({
   title: z.string ().min (1, 'Title is required'),
   is_default: z.boolean (),

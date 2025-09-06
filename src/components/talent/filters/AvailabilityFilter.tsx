@@ -16,8 +16,8 @@ return (
         )}
 
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Checkbox } from '@/components / ui / checkbox';
-import { AvailabilityFilterProps } from '@/types / filters';
+import { Checkbox } from '@/components/ui/ checkbox';
+import { AvailabilityFilterProps } from '@/types/ filters';
 const AVAILABILITY_OPTIONS = [;
   { id: 'full_time', label: 'Full - time' },
   { id: 'part_time', label: 'Part - time' },
@@ -134,8 +134,8 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 checked={selected_availability.includes (option.id)}
                 onCheckedChange={() => toggle_availability (option.id)}
             <div key={option.id} className="flex items - center">;
-import { Checkbox  } from '@/components / ui / checkbox';
-import { AvailabilityFilterProps  } from '@/types / filters';
+import { Checkbox  } from '@/components/ui/ checkbox';
+import { AvailabilityFilterProps  } from '@/types/ filters';
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full - time" },
   { id: "part_time", label: "Part - time" },

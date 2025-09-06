@@ -40,27 +40,27 @@ import { CartDrawer  } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
 
 import { useState } from 'react';
-import { log_debug, logErrorToProduction } from '@/utils / production_logger';
+import { log_debug, logErrorToProduction } from '@/utils/ production_logger';
 import Link from 'next / link';
-import { use_router } from 'next / router';
-import { Logo } from '@/components / header / Logo';
-import { PointsBadge } from '@/components / loyalty / PointsBadge';
-import { UserMenu } from '@/components / header / UserMenu';
-import { LanguageSelector } from '@/components / header / LanguageSelector';
-import { ModeToggle } from '@/components / ModeToggle';
-import { use_auth } from '@/hooks / use_auth';
-import { useIsMobile } from '@/hooks / use - mobile';
+import { use_router } from 'next/router';
+import { Logo } from '@/components/ header / Logo';
+import { PointsBadge } from '@/components/ loyalty / PointsBadge';
+import { UserMenu } from '@/components/ header / UserMenu';
+import { LanguageSelector } from '@/components/ header / LanguageSelector';
+import { ModeToggle } from '@/components/ ModeToggle';
+import { use_auth } from '@/hooks/ use_auth';
+import { useIsMobile } from '@/hooks/ use - mobile';
 import { use_messaging } from '@/context / MessagingContext';
-import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';
+import { EnhancedSearchInput } from '@/components/ search / EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data / marketplace_data';
 import { slugify } from '@/lib / slugify';
-import { ResponsiveNavigation } from '@/components / navigation / ResponsiveNavigation';
-import { MobileMenu } from '@/components / header / MobileMenu';
-import { MobileBottomNav } from '@/components / header / MobileBottomNav';
+import { ResponsiveNavigation } from '@/components/ navigation / ResponsiveNavigation';
+import { MobileMenu } from '@/components/ header / MobileMenu';
+import { MobileBottomNav } from '@/components/ header / MobileBottomNav';
 import { Menu, X } from 'lucide-react';
 import { use_translation } from 'react - i18next';
-import { CartDrawer } from '@/components / cart / CartDrawer';
-import { LoginModal } from '@/components / auth / LoginModal';
+import { CartDrawer } from '@/components/ cart / CartDrawer';
+import { LoginModal } from '@/components/ auth / LoginModal';
 export /**
  * PrimaryNav - Function description
  */

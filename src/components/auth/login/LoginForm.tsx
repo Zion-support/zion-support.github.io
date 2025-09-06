@@ -6,22 +6,22 @@ import { fireEvent  } from '@/lib/analytics';
 import { useAuth } from "@/context/auth/AuthProvider",
 
 import { useState } from 'react';
-import { use_router } from 'next / router';
+import { use_router } from 'next/router';
 import { use_form, ControllerRenderProps } from 'react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { z } from 'zod';
 import { LogIn, User, Eye, EyeOff } from 'lucide-react';
 import { fire_event } from '@/lib / analytics';
 import { use_auth } from '@/context / auth / AuthProvider';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
+import { Button } from '@/components/ui/ button';
+import { Input } from '@/components/ui/ input';
 import { useState  } from './react';
 import { use_form, ControllerRenderProps  } from './react - hook - form';
 import { zod_resolver  } from '@hookform / resolvers / zod';
 import { z  } from './zod';
 import { use_auth  } from '@/context / auth / AuthProvider';
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
+import { Button  } from '@/components/ui/ button';
+import { Input  } from '@/components/ui/ input';
 import {
   Form,
   FormControl,
@@ -29,10 +29,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components / ui / form';
-import { Alert, AlertDescription } from '@/components / ui / alert';
+} from '@/components/ui/ form';
+import { Alert, AlertDescription } from '@/components/ui/ alert';
 import Link from 'next / link';
-import { Checkbox } from '@/components / ui / checkbox';// Form validation schema;
+import { Checkbox } from '@/components/ui/ checkbox';// Form validation schema;
 const login_schema = z.object ({
   email: z;
     .string ();

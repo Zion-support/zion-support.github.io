@@ -1,49 +1,8 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
-=======
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Menu, X, Search } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
-import SearchModal from './SearchModal';
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-
-const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-
-  // Keyboard shortcut for search (Ctrl+K)
-  React.useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-        e.preventDefault();
-        setIsSearchOpen(true);
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  const navigation = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Contact", href: "/contact" },
-    { name: "Pricing", href: "/pricing" },
-  ];
-
-=======
->>>>>>> main
 import Button from './Button';
+import ThemeToggle from './ThemeToggle';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -66,10 +25,25 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
-            <Link to="/about" className="hover:text-blue-400 transition-colors">About</Link>
-            <Link to="/services" className="hover:text-blue-400 transition-colors">Services</Link>
-            <Link to="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+              Home
+            </Link>
+            <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+              Services
+            </Link>
+            <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">
+              Pricing
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+              About
+            </Link>
+            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+              Contact
+            </Link>
+            <ThemeToggle />
+            <Button variant="outline" size="small">
+              Get Started
+            </Button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -84,15 +58,29 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-700">
+          <div className="md:hidden py-4 border-t border-slate-700">
             <nav className="flex flex-col space-y-4">
-              <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
-              <Link to="/about" className="hover:text-blue-400 transition-colors">About</Link>
-              <Link to="/services" className="hover:text-blue-400 transition-colors">Services</Link>
-              <Link to="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
-              <Button variant="primary" size="small" className="w-full">
-                Get Started
-              </Button>
+              <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                Home
+              </Link>
+              <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                Services
+              </Link>
+              <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">
+                Pricing
+              </Link>
+              <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                About
+              </Link>
+              <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+                Contact
+              </Link>
+              <div className="flex items-center justify-center space-x-4">
+                <ThemeToggle />
+                <Button variant="outline" size="small" className="flex-1">
+                  Get Started
+                </Button>
+              </div>
             </nav>
           </div>
         )}
@@ -101,16 +89,4 @@ const Header: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Header;
-=======
-<<<<<<< HEAD
-export default Header;
-=======
-<<<<<<< HEAD
-export default Header;
-=======
-export default Header;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main

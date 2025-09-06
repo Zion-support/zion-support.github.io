@@ -11,11 +11,11 @@ reportError: (error: Error, context?: any) => void;
   useCallback,
   ReactNode,
 } from 'react';
-import { toast } from '@/hooks / use - toast';
-import { Button } from '@/components / ui / button';
+import { toast } from '@/hooks/ use - toast';
+import { Button } from '@/components/ui/ button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
 import * as Sentry from '@sentry / nextjs';
-import { logErrorToProduction } from '@/utils / production_logger';
+import { logErrorToProduction } from '@/utils/ production_logger';
 interface ErrorContextType {
   report_error: (error: Error, context?: any) => void;
   showRetryableError: (error: Error, retry_action?: () => void) => void;

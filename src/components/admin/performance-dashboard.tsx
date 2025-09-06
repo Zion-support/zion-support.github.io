@@ -24,10 +24,10 @@ interface PerformanceMetrics {;
   performanceScore: number;
   chunkCount: number;
 import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { Progress } from '@/components / ui / progress';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/ card';
+import { Badge } from '@/components/ui/ badge';
+import { Button } from '@/components/ui/ button';
+import { Progress } from '@/components/ui/ progress';
 import {
   Activity,
   Zap,
@@ -41,8 +41,8 @@ import {
   Clock,
   Globe,
 } from 'lucide-react';
-import { bundle_monitor } from '@/utils / bundle_monitor';
-import { logErrorToProduction, log_info } from '@/utils / production_logger';
+import { bundle_monitor } from '@/utils/ bundle_monitor';
+import { logErrorToProduction, log_info } from '@/utils/ production_logger';
 interface PerformanceMetrics {
   bundle_size: number;
   load_time: number;

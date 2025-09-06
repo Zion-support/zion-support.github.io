@@ -351,7 +351,7 @@ export function EnterprisePricingTable() {;
 }
 
 import React from 'react';
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import { Check, X } from 'lucide-react';
 import {  Table,  Table,
   TableBody,
@@ -359,10 +359,10 @@ import {  Table,  Table,
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components / ui / table';
-import { Badge } from '@/components / ui / badge';
-  TableRow} from "@/components / ui / table",
-import { Badge  } from '@/components / ui / badge';
+} from '@/components/ui/ table';
+import { Badge } from '@/components/ui/ badge';
+  TableRow} from "@/components/ui/ table",
+import { Badge  } from '@/components/ui/ badge';
 export /**
  * EnterprisePricingTable - Function description
  */

@@ -113,9 +113,9 @@ export function MobileFilterBar({;
 
 
 import React from 'react';
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import { Search, Sliders } from 'lucide-react';
-import { Input } from '@/components / ui / input';
+import { Input } from '@/components/ui/ input';
 interface MobileFilterBarProps {
   search_term: string;
   setSearchTerm: (value: string) => void;

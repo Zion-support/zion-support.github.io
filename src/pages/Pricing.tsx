@@ -1,136 +1,105 @@
-import React from "react";
-
-// PricingCard component
-const PricingCard = ({ 
-  name, 
-  price, 
-  period, 
-  description, 
-  features, 
-  isPopular 
-}: { 
-  name: string; 
-  price: string; 
-  period: string; 
-  description: string; 
-  features: string[]; 
-  isPopular: boolean; 
-}) => (
-  <div className={`relative bg-white p-8 rounded-lg shadow-lg ${isPopular ? 'ring-2 ring-blue-500' : ''}`}>
-    {isPopular && (
-      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-        <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-          Most Popular
-        </span>
-      </div>
-    )}
-    <div className="text-center mb-6">
-      <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
-      <div className="text-4xl font-bold text-gray-900 mb-1">
-        {price}
-        <span className="text-lg font-normal text-gray-600">/{period}</span>
-      </div>
-      <p className="text-gray-600">{description}</p>
-    </div>
-    <ul className="space-y-3 mb-8">
-      {features.map((feature, index) => (
-        <li key={index} className="flex items-center">
-          <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-          </svg>
-          <span className="text-gray-600">{feature}</span>
-        </li>
-      ))}
-    </ul>
-    <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-      isPopular 
-        ? 'bg-blue-600 text-white hover:bg-blue-700' 
-        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-    }`}>
-      Get Started
-    </button>
-  </div>
-);
+import React from 'react';
+import Button from '../components/Button';
 
 const Pricing: React.FC = () => {
+  const pricingTiers = [
+    {
+      name: 'Basic',
+      price: '$29',
+      frequency: '/month',
+      features: [
+        '5 AI Models',
+        '1000 API Calls',
+        'Basic Analytics',
+        'Email Support',
+      ],
+      buttonText: 'Start Free Trial',
+      highlight: false,
+    },
+    {
+      name: 'Pro',
+      price: '$99',
+      frequency: '/month',
+      features: [
+        '20 AI Models',
+        '10000 API Calls',
+        'Advanced Analytics',
+        'Priority Support',
+        'Custom Integrations',
+      ],
+      buttonText: 'Get Started',
+      highlight: true,
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      frequency: '',
+      features: [
+        'Unlimited AI Models',
+        'Unlimited API Calls',
+        'Dedicated Support',
+        'On-premise Deployment',
+        'SLA Guarantee',
+      ],
+      buttonText: 'Contact Sales',
+      highlight: false,
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-white py-20">
-      <div className="container mx-auto px-4">
+    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen pt-20">
+      <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Pricing Plans
+          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
+            Flexible Pricing Plans
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose the perfect plan for your business needs. All plans include our core services with flexible options.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
+            Choose the plan that best fits your business needs, from startups to large enterprises.
           </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <PricingCard
-            name="Starter"
-            price="$2,500"
-            period="month"
-            description="Perfect for small businesses getting started with AI and automation"
-            features={[
-              "Basic AI services",
-              "Micro SaaS development",
-              "IT support",
-              "Email support",
-              "Monthly reports"
-            ]}
-            isPopular={false}
-          />
-          <PricingCard
-            name="Professional"
-            price="$7,500"
-            period="month"
-            description="Ideal for growing businesses that need advanced AI and automation"
-            features={[
-              "Advanced AI services",
-              "Custom micro SaaS",
-              "Full IT services",
-              "Priority support",
-              "Weekly reports",
-              "API access"
-            ]}
-            isPopular={true}
-          />
-          <PricingCard
-            name="Enterprise"
-            price="$25,000"
-            period="month"
-            description="Complete solution for large enterprises with complex needs"
-            features={[
-              "Full AI suite",
-              "White-label solutions",
-              "Dedicated team",
-              "24/7 support",
-              "Custom integrations",
-              "SLA guarantee"
-            ]}
-            isPopular={false}
-          />
         </div>
 
-        <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Ready to Get Started?</h2>
-          <p className="text-gray-600 mb-8">
-            Contact us today to discuss your specific needs and get a custom quote.
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {pricingTiers.map((tier, index) => (
+            <div
+              key={index}
+              className={`bg-slate-800 rounded-lg shadow-lg p-8 border ${
+                tier.highlight ? 'border-blue-500 transform scale-105' : 'border-slate-700'
+              } transition-all duration-300 hover:shadow-2xl`}
+            >
+              <h2 className="text-3xl font-bold mb-4 text-white">{tier.name}</h2>
+              <p className="text-5xl font-extrabold text-blue-500 mb-6">
+                {tier.price}
+                {tier.frequency && <span className="text-xl text-gray-400">{tier.frequency}</span>}
+              </p>
+              <ul className="text-gray-300 text-lg mb-8 space-y-3">
+                {tier.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center">
+                    <svg className="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Button variant={tier.highlight ? 'primary' : 'outline'} size="large" className="w-full">
+                {tier.buttonText}
+              </Button>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <h2 className="text-4xl font-bold mb-8">Need a Custom Solution?</h2>
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-8">
+            For unique requirements or large-scale deployments, our enterprise solutions are tailored to your specific needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Call +1 302 464 0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-            >
-              Email Us
-            </a>
-          </div>
+          <Button variant="primary" size="large">
+            Contact Sales
+          </Button>
         </div>
       </div>
     </div>

@@ -8,16 +8,16 @@ import { ChatMessage } from "./ChatMessage",
 import { QuickReplyButton } from "./QuickReplyButton";
 
 import React, { useState, useRef, useEffect } from './react';
-import { log_debug, logErrorToProduction } from '@/utils / production_logger';
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
-import { ScrollArea  } from '@/components / ui / scroll - area';
-import { Separator  } from '@/components / ui / separator';
-import { toast  } from '@/components / ui / use - toast';
+import { log_debug, logErrorToProduction } from '@/utils/ production_logger';
+import { Button  } from '@/components/ui/ button';
+import { Input  } from '@/components/ui/ input';
+import { ScrollArea  } from '@/components/ui/ scroll - area';
+import { Separator  } from '@/components/ui/ separator';
+import { toast  } from '@/components/ui/ use - toast';
 import { cn  } from '@/lib / utils';
 import { ChatMessage  } from './ChatMessage';
 import { QuickReplyButton  } from './QuickReplyButton';
-import { Send, Loader2 } from 'lucide-react'import { use_theme  } from '@/hooks / use_theme';
+import { Send, Loader2 } from 'lucide-react'import { use_theme  } from '@/hooks/ use_theme';
 // Define suggested quick replies;
 const QUICK_REPLIES = [;
   { id: "hire", text: "How do I hire?" },

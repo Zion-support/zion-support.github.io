@@ -143,9 +143,9 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-reac
   // SidebarMenuButton, // Removed;
   // SidebarGroupLabel, // Not needed;
   // SidebarGroupContent, // Not needed;
-} from '@/components / ui / sidebar';
+} from '@/components/ui/ sidebar';
   // SidebarGroupContent, // Not needed;
-} from "@/components / ui / sidebar";
+} from "@/components/ui/ sidebar";
   Sidebar;
   SidebarContent;
   SidebarGroup;
@@ -154,7 +154,7 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-reac
   // SidebarMenuButton, // Removed;
   // SidebarGroupLabel, // Not needed;
   // SidebarGroupContent, // Not needed;
-} from "@/components / ui / sidebar";
+} from "@/components/ui/ sidebar";
 export /**
  * AppSidebar - Function description
  */

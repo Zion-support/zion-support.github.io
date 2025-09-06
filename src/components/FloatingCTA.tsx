@@ -16,7 +16,7 @@ import { X } from 'lucide-react'
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
   // TODO: Add dependencies if needed
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import Link from 'next / link';
 import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
@@ -77,7 +77,7 @@ if (return null) {
                       <div className="text - sm text - gray - 400">Explore solutions</div>;
                     </div>;
                   </Link>;
-import { Button  } from '@/components / ui / button';
+import { Button  } from '@/components/ui/ button';
 import Link from './next / link';
 import { useState, useEffect  } from './react';
 export /**

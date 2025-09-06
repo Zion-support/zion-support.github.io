@@ -252,7 +252,7 @@ export function EnterpriseCTA() {;
                     </div>;
                     <p>Free consultation on implementation</p>;
 import React from 'react';
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import { Calendar, ArrowRight } from 'lucide-react';
 export /**
  * EnterpriseCTA - Function description

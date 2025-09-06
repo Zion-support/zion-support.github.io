@@ -5,15 +5,15 @@
 }
 
 import React, { useState } from './react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
-import { Button  } from '@/components / ui / button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/ card';
+import { Button  } from '@/components/ui/ button';
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
 import {
   Tooltip;
   TooltipContent;
   TooltipProvider;
-  TooltipTrigger } from '@/components / ui / tooltip'; import { use_toast  } from '@/hooks / use - toast';
-import { use_auth  } from '@/hooks / use_auth';
+  TooltipTrigger } from '@/components/ui/ tooltip'; import { use_toast  } from '@/hooks/ use - toast';
+import { use_auth  } from '@/hooks/ use_auth';
 export /**
  * OnChainExport - Function description
  */

@@ -480,16 +480,16 @@ export function SearchBar(): any ({;
 
 }
 
-import { use_router } from 'next / router';
-import { Search, X } from 'lucide-react'; import { Input } from '@/components / ui / input'; import { Search, X } from 'lucide-react';
-import { Input } from '@/components / ui / input';
+import { use_router } from 'next/router';
+import { Search, X } from 'lucide-react'; import { Input } from '@/components/ui/ input'; import { Search, X } from 'lucide-react';
+import { Input } from '@/components/ui/ input';
 import { Search, X } from 'lucide-react';
-import { AutocompleteSuggestions } from '@/components / search / AutocompleteSuggestions';
+import { AutocompleteSuggestions } from '@/components/ search / AutocompleteSuggestions';
 import { fire_event } from '@/lib / analytics';
-import { SearchSuggestion } from '@/types / search';
+import { SearchSuggestion } from '@/types/ search';
 import { slugify } from '@/lib / slugify';
-import { use_debounce } from '@/hooks / use_debounce';
-import { useOnClickOutside } from '@/hooks / useOnClickOutside';
+import { use_debounce } from '@/hooks/ use_debounce';
+import { useOnClickOutside } from '@/hooks/ useOnClickOutside';
 /**;
 * SearchBar component props;
 */;

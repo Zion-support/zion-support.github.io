@@ -9,11 +9,11 @@ import {
   Clipboard,;
 
 } from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components/ui/ button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/ card';
+import { Badge } from '@/components/ui/ badge';
 import * as Sentry from '@sentry / nextjs';
-import { logErrorToProduction } from '@/utils / production_logger';
+import { logErrorToProduction } from '@/utils/ production_logger';
 interface ErrorBoundaryState {
   has_error: boolean;
   error: Error | null;

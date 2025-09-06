@@ -83,10 +83,10 @@ export const DynamicVirtualList = dynamic (
 
 );
 // Usage examples:;
-// Replace: import Chart from '../components / charts / Chart';// With: import { DynamicChart as Chart } from '@/utils / dynamic_components';
-// With: import { DynamicChart as Chart } from '@/utils / dynamic_components';
+// Replace: import Chart from '../components / charts / Chart';// With: import { DynamicChart as Chart } from '@/utils/ dynamic_components';
+// With: import { DynamicChart as Chart } from '@/utils/ dynamic_components';
 // Usage examples: // Replace: import Chart from '../components / charts / Chart';
-// With: import { DynamicChart as Chart } from '@/utils / dynamic_components';
+// With: import { DynamicChart as Chart } from '@/utils/ dynamic_components';
 
 
 import React from 'react',

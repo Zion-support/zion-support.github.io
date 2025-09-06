@@ -21,9 +21,9 @@ interface MobileChatViewProps {;
 
 
 import React, { useState } from 'react';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/ avatar';
+import { Button } from '@/components/ui/ button';
+import { Input } from '@/components/ui/ input';
 import {
   Send,
   PaperclipIcon,
@@ -33,7 +33,7 @@ import {
   Phone,
 } from 'lucide-react';
 import { cn } from '@/lib / utils';
-import { use_router } from 'next / router';
+import { use_router } from 'next/router';
 import { toast } from 'sonner';
 interface Message {
   id: string;

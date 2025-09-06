@@ -162,9 +162,9 @@ export function AdminHeader() {;
           <Button variant="outline" size="sm" className="gap-2">;
             <Download className="h-4 w-4" />;
 import React from 'react';
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import { Download, Settings } from 'lucide-react';
-import { useCompanyWorkspace } from '@/hooks / useCompanyWorkspace';
+import { useCompanyWorkspace } from '@/hooks/ useCompanyWorkspace';
 export /**
  * AdminHeader - Function description
  */

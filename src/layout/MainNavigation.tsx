@@ -4,12 +4,12 @@ interface MainNavigationProps {
   className?: string
 
 import Link from 'next / link';
-import { use_router } from 'next / router';
+import { use_router } from 'next/router';
 import { useState } from 'react';
 import { cn } from '@/lib / utils';
-import { use_auth } from '@/hooks / use_auth';
+import { use_auth } from '@/hooks/ use_auth';
 import { use_translation } from 'react - i18next';
-import { use_favorites } from '@/hooks / use_favorites';
+import { use_favorites } from '@/hooks/ use_favorites';
 import { use_cart } from '@/context / CartContext';
 import {
   Heart,
@@ -18,15 +18,15 @@ import {
   ShoppingCart,
   Wallet,
 } from 'lucide-react';
-import { LanguageSelector } from '@/components / header / LanguageSelector';
+import { LanguageSelector } from '@/components/ header / LanguageSelector';
   HoverCard,
   HoverCardTrigger,
   HoverCardContent,
-} from '@/components / ui / hover - card';
-import { MiniCartPreview } from '@/components / cart / MiniCartPreview';
-import { LoginModal } from '@/components / auth / LoginModal'; import { LanguageSelector } from '@/components / header / LanguageSelector';
-import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components / ui / hover - card';
-import { LoginModal } from '@/components / auth / LoginModal';
+} from '@/components/ui/ hover - card';
+import { MiniCartPreview } from '@/components/ cart / MiniCartPreview';
+import { LoginModal } from '@/components/ auth / LoginModal'; import { LanguageSelector } from '@/components/ header / LanguageSelector';
+import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/ hover - card';
+import { LoginModal } from '@/components/ auth / LoginModal';
 interface MainNavigationProps {
   is_admin?: boolean,
   unread_count?: number,

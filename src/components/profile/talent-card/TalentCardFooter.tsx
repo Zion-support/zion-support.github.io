@@ -104,7 +104,7 @@
 
 
 
-import { use_router } from 'next / router';
+import { use_router } from 'next/router';
 interface TalentCardFooterProps {
   profile: TalentProfile,
   onViewProfile: (id: string, ) => void,

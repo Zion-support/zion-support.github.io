@@ -1,197 +1,94 @@
-<<<<<<< HEAD
 import React from 'react';
 import Card from '../components/Card';
 
 const About: React.FC = () => {
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white pt-20">
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-=======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import Card from '../components/Card';
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl font-extrabold mb-8 text-center">About Zion Tech Group</h1>
+          
+          <Card className="mb-8">
+            <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
+            <p className="text-lg text-gray-300 mb-6">
+              We are dedicated to delivering cutting-edge technology solutions that transform businesses 
+              and drive innovation. Our mission is to empower organizations with the tools and expertise 
+              they need to thrive in the digital age.
+            </p>
+            <p className="text-lg text-gray-300">
+              Through our comprehensive suite of AI, cybersecurity, cloud infrastructure, and digital 
+              transformation services, we help companies stay ahead of the curve and achieve their goals.
+            </p>
+          </Card>
 
-const About: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('mission');
+          <Card className="mb-8">
+            <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
+            <p className="text-lg text-gray-300">
+              To be the leading provider of technology solutions that shape the future of business. 
+              We envision a world where technology seamlessly integrates with human potential to create 
+              unprecedented opportunities for growth and innovation.
+            </p>
+          </Card>
 
-  const teamMembers = [
-    {
-      name: 'Dr. Sarah Chen',
-      role: 'Chief Technology Officer',
-      expertise: 'AI & Machine Learning',
-      image: '👩‍💼',
-      description: 'Leading our AI initiatives with 15+ years of experience in machine learning and data science.',
-    },
-    {
-      name: 'Michael Rodriguez',
-      role: 'Head of Engineering',
-      expertise: 'Cloud Architecture',
-      image: '👨‍💻',
-      description: 'Expert in scalable cloud solutions and microservices architecture with a track record of successful enterprise deployments.',
-    },
-    {
-      name: 'Emily Johnson',
-      role: 'Security Director',
-      expertise: 'Cybersecurity',
-      image: '👩‍🔬',
-      description: 'Cybersecurity specialist ensuring our solutions meet the highest security standards and compliance requirements.',
-    },
-    {
-      name: 'David Kim',
-      role: 'Product Manager',
-      expertise: 'Digital Transformation',
-      image: '👨‍💼',
-      description: 'Driving product strategy and digital transformation initiatives for our enterprise clients.',
-    },
-  ];
+          <Card className="mb-8">
+            <h2 className="text-3xl font-bold mb-6">Our Values</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="text-xl font-semibold mb-3 text-blue-400">Innovation</h3>
+                <p className="text-gray-300">
+                  We constantly push the boundaries of what's possible with technology.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-3 text-blue-400">Excellence</h3>
+                <p className="text-gray-300">
+                  We deliver the highest quality solutions that exceed expectations.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-3 text-blue-400">Integrity</h3>
+                <p className="text-gray-300">
+                  We maintain the highest ethical standards in all our interactions.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-3 text-blue-400">Collaboration</h3>
+                <p className="text-gray-300">
+                  We work closely with our clients to achieve shared success.
+                </p>
+              </div>
+            </div>
+          </Card>
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut',
-      },
-    },
-  };
-
-  return (
-    <motion.div
-      className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <div className="container mx-auto px-4 py-16">
-        <motion.div className="text-center mb-16" variants={itemVariants}>
->>>>>>> main
-          <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            About Zion Tech Group
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-            We are a leading technology company specializing in AI solutions, cybersecurity, 
-            and cloud infrastructure. Our mission is to transform businesses through 
-            innovative technology solutions.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <Card
-            title="Our Mission"
-            description="To empower businesses with cutting-edge AI and technology solutions that drive innovation, efficiency, and growth in the digital age."
-          />
-          <Card
-            title="Our Vision"
-            description="To be the global leader in AI-powered technology solutions, transforming industries and creating a smarter, more connected world."
-          />
-          <Card
-            title="Our Values"
-            description="We maintain the highest standards in everything we do, from our code quality to our customer service and support."
-          />
+          <Card>
+            <h2 className="text-3xl font-bold mb-6">Why Choose Us?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="text-4xl mb-4">🚀</div>
+                <h3 className="text-xl font-semibold mb-3">Fast Delivery</h3>
+                <p className="text-gray-300">
+                  We deliver solutions quickly without compromising quality.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4">🔒</div>
+                <h3 className="text-xl font-semibold mb-3">Secure & Reliable</h3>
+                <p className="text-gray-300">
+                  Your data and systems are protected with enterprise-grade security.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4">💡</div>
+                <h3 className="text-xl font-semibold mb-3">Innovative Solutions</h3>
+                <p className="text-gray-300">
+                  We leverage the latest technologies to solve complex problems.
+                </p>
+              </div>
+            </div>
+          </Card>
         </div>
       </div>
     </div>
-=======
-            We are a leading technology company specializing in AI solutions, cybersecurity,
-            and cloud infrastructure. Our mission is to transform businesses through
-            innovative technology solutions.
-          </p>
-        </motion.div>
-
-        {/* Tab Navigation */}
-        <motion.div className="flex flex-wrap justify-center mb-12" variants={itemVariants}>
-          {[
-            { id: 'mission', label: 'Our Mission' },
-            { id: 'team', label: 'Our Team' },
-            { id: 'values', label: 'Our Values' },
-          ].map(tab => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-3 mx-2 mb-2 rounded-lg transition-all duration-300 ${
-                activeTab === tab.id
-                  ? 'bg-cyan-600 text-white'
-                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </motion.div>
-
-        {/* Tab Content */}
-        <motion.div className="max-w-6xl mx-auto" variants={itemVariants}>
-          {activeTab === 'mission' && (
-            <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8" variants={itemVariants}>
-              <Card
-                title="Our Mission"
-                description="To empower businesses with cutting-edge AI and technology solutions that drive innovation, efficiency, and growth in the digital age."
-                icon="🎯"
-              />
-              <Card
-                title="Our Vision"
-                description="To be the global leader in AI-powered technology solutions, transforming industries and creating a smarter, more connected world."
-                icon="🚀"
-              />
-            </motion.div>
-          )}
-
-          {activeTab === 'team' && (
-            <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={itemVariants}>
-              {teamMembers.map((member, index) => (
-                <Card
-                  key={index}
-                  title={member.name}
-                  description={member.description}
-                  icon={member.image}
-                  className="text-center"
-                >
-                  <div className="mt-4">
-                    <p className="text-cyan-400 font-semibold">{member.role}</p>
-                    <p className="text-sm text-gray-400">{member.expertise}</p>
-                  </div>
-                </Card>
-              ))}
-            </motion.div>
-          )}
-
-          {activeTab === 'values' && (
-            <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8" variants={itemVariants}>
-              <Card
-                title="Innovation"
-                description="We constantly push the boundaries of what's possible with technology, always seeking new and better ways to solve complex problems."
-                icon="💡"
-              />
-              <Card
-                title="Excellence"
-                description="We maintain the highest standards in everything we do, from our code quality to our customer service and support."
-                icon="⭐"
-              />
-              <Card
-                title="Integrity"
-                description="We conduct business with honesty, transparency, and ethical practices, building trust with our clients and partners."
-                icon="🤝"
-              />
-            </motion.div>
-          )}
-        </motion.div>
-      </div>
-    </motion.div>
->>>>>>> main
   );
 };
 

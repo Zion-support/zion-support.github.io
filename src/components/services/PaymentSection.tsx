@@ -12,9 +12,9 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
         "You'll be redirected to our secure payment portal momentarily."
     })
 import { MapPin } from 'lucide-react';
-import { PaymentButton } from '@/components / transactions / PaymentButton';
+import { PaymentButton } from '@/components/ transactions / PaymentButton';
 import { CountryPricing } from '@/data / onsiteServicePricing';
-import { toast } from '@/hooks / use - toast';
+import { toast } from '@/hooks/ use - toast';
 interface PaymentSectionProps {
   selected_country: CountryPricing;
 export /**

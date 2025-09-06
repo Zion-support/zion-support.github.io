@@ -57,7 +57,7 @@ import { generateSearchSuggestions } from '@/data/marketplaceData';
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
 interface SearchResult {;
 import React, { useState, useEffect, useMemo } from 'react';
-import { use_router } from 'next / router';
+import { use_router } from 'next/router';
 import {
   Search,
   Filter,
@@ -68,27 +68,27 @@ import {
   List,
   Loader2,
 } from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components/ui/ button';
+import { Input } from '@/components/ui/ input';
+import { Badge } from '@/components/ui/ badge';
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components / ui / select';
-import { Checkbox } from '@/components / ui / checkbox';
-import { Slider } from '@/components / ui / slider';
-import { Separator } from '@/components / ui / separator';
+} from '@/components/ui/ select';
+import { Checkbox } from '@/components/ui/ checkbox';
+import { Slider } from '@/components/ui/ slider';
+import { Separator } from '@/components/ui/ separator';
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@/components / ui / sheet';
+} from '@/components/ui/ sheet';
 import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data / marketplace_data';
-import { logErrorToProduction, log_info } from '@/utils / production_logger';
+import { logErrorToProduction, log_info } from '@/utils/ production_logger';
 interface SearchResult {
   id: string;
   title: string;

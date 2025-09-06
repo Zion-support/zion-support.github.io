@@ -520,11 +520,11 @@ export function FooterNewsletter():React.ReactElement {;
 } ;
 
 import React, { useState, useRef } from 'react';
-import { Input } from '@/components / ui / input';
-import { Button } from '@/components / ui / button';
-import { use_toast } from '@/hooks / use - toast';
+import { Input } from '@/components/ui/ input';
+import { Button } from '@/components/ui/ button';
+import { use_toast } from '@/hooks/ use - toast';
 import { Loader2 } from 'lucide-react';
-import { logErrorToProduction } from '@/utils / production_logger';
+import { logErrorToProduction } from '@/utils/ production_logger';
 export function FooterNewsletter (): React.ReactElement {
   const [email, set_email] = useState ('');
   const [honeypot, set_honeypot] = useState ('');

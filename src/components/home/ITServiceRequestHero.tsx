@@ -90,15 +90,15 @@ export function ITServiceRequestHero() {;
 
 import React, { useState } from 'react';
 import Image from 'next / image';
-import { GradientHeading } from '@/components / GradientHeading';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Textarea } from '@/components / ui / textarea';
-import { use_toast } from '@/hooks / use - toast';
+import { GradientHeading } from '@/components/ GradientHeading';
+import { Button } from '@/components/ui/ button';
+import { Input } from '@/components/ui/ input';
+import { Textarea } from '@/components/ui/ textarea';
+import { use_toast } from '@/hooks/ use - toast';
 import axios from 'axios';
 import { Loader2 } from 'lucide-react';
 import { use_translation } from 'react - i18next';
-import { logErrorToProduction } from '@/utils / production_logger'; export /**
+import { logErrorToProduction } from '@/utils/ production_logger'; export /**
  * ITServiceRequestHero - Function description
  */
 function ITServiceRequestHero() { export function ITServiceRequestHero (...args[]):  {

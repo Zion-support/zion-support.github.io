@@ -18,8 +18,8 @@ return (
             aria - label='Hourly rate range'            value={[price_range[0], price_range[1]]}
         <div className="mt - 6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
-import { Slider  } from '@/components / ui / slider';
-import { PriceFilterProps  } from '@/types / filters';
+import { Slider  } from '@/components/ui/ slider';
+import { PriceFilterProps  } from '@/types/ filters';
 export /**
  * PriceFilter - Function description
  */

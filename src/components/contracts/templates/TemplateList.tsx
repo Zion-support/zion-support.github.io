@@ -44,7 +44,7 @@ import { useAuth } from "@/hooks/useAuth"
 
 
 // use_router replaces the old use_location hook from react - router;
-import { use_router } from 'next / router';
+import { use_router } from 'next/router';
 import {
   AlertDialog;
   AlertDialogAction;
@@ -53,15 +53,15 @@ import {
   AlertDialogDescription;
   AlertDialogFooter;
   AlertDialogHeader;
-  AlertDialogTitle } from '@/components / ui / alert - dialog';
-import { ContractTemplate  } from '@/types / contracts';
-import { Button  } from '@/components / ui / button';
+  AlertDialogTitle } from '@/components/ui/ alert - dialog';
+import { ContractTemplate  } from '@/types/ contracts';
+import { Button  } from '@/components/ui/ button';
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react';
-import { useContractTemplates  } from '@/hooks / useContractTemplates';
-import { Card, CardContent  } from '@/components / ui / card';
-import { Separator  } from '@/components / ui / separator';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components / ui / tooltip';
-import { use_auth  } from '@/hooks / use_auth';
+import { useContractTemplates  } from '@/hooks/ useContractTemplates';
+import { Card, CardContent  } from '@/components/ui/ card';
+import { Separator  } from '@/components/ui/ separator';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components/ui/ tooltip';
+import { use_auth  } from '@/hooks/ use_auth';
 // use_router replaces the old use_location hook from react - router;
   AlertDialog,
   AlertDialogAction,
@@ -70,7 +70,7 @@ import { use_auth  } from '@/hooks / use_auth';
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-  AlertDialogTitle} from "@/components / ui / alert - dialog",
+  AlertDialogTitle} from "@/components/ui/ alert - dialog",
 import { useState  } from './react';
 interface TemplateListProps {
   templates: ContractTemplate[],

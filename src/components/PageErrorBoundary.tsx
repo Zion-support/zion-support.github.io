@@ -26,11 +26,11 @@ import React from 'react';
 import Link from 'next / link';
 import { ErrorBoundary, FallbackProps } from 'react - error - boundary';
 import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react';
-import { logErrorToProduction } from '@/utils / production_logger';
+import { logErrorToProduction } from '@/utils/ production_logger';
 import {
   log_info,
   logErrorToProduction as prodLogError,
-} from '@/utils / production_logger';
+} from '@/utils/ production_logger';
 interface PageErrorFallbackProps extends FallbackProps {
   page_name?: string;
 /**

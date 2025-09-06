@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import { Facebook } from 'lucide-react';
 import { sign_in } from 'next - auth / react';
 type Provider = 'google' | 'github' | 'facebook' | 'credentials';

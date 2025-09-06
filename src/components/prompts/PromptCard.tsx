@@ -45,8 +45,8 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
 
 import { useState } from 'react';
 import { Copy, Send } from 'lucide-react';
-import type { Prompt } from '@/types / prompts';
-import { Button } from '@/components / ui / button';
+import type { Prompt } from '@/types/ prompts';
+import { Button } from '@/components/ui/ button';
 interface PromptCardProps {
   prompt: Prompt;
 export /**

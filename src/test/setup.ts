@@ -100,7 +100,7 @@ beforeAll(() => {
       typeof args[0] === 'string' &&
       (args[0].includes('Warning:') |args[0].includes('Deprecated:'))
 // Test setup file for Jest;
-import '@testing - library / jest - dom';
+import '@testing-library/jest-dom';
 // Mock window.match_media;
 Object.define_property (window, 'match_media', {
   writable: true,

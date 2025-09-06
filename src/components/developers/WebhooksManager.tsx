@@ -27,15 +27,15 @@ import {
   Webhook,
   X,
 } from 'lucide-react';
-import { use_webhooks, type WebhookEventType } from '@/hooks / use_webhooks';
-import { Button } from '@/components / ui / button';
+import { use_webhooks, type WebhookEventType } from '@/hooks/ use_webhooks';
+import { Button } from '@/components/ui/ button';
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+} from '@/components/ui/ card';
   Dialog,
   DialogContent,
   DialogDescription,
@@ -43,17 +43,17 @@ import { Button } from '@/components / ui / button';
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components / ui / dialog';
-import { Input } from '@/components / ui / input';
-import { Checkbox } from '@/components / ui / checkbox';
-import { Label } from '@/components / ui / label';
-import { Badge } from '@/components / ui / badge';
-import { Switch } from '@/components / ui / switch';
+} from '@/components/ui/ dialog';
+import { Input } from '@/components/ui/ input';
+import { Checkbox } from '@/components/ui/ checkbox';
+import { Label } from '@/components/ui/ label';
+import { Badge } from '@/components/ui/ badge';
+import { Switch } from '@/components/ui/ switch';
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components / ui / dropdown - menu';
+} from '@/components/ui/ dropdown - menu';
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -62,26 +62,26 @@ import { Switch } from '@/components / ui / switch';
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from '@/components / ui / alert - dialog';
-import { ScrollArea } from '@/components / ui / scroll - area';
+} from '@/components/ui/ alert - dialog';
+import { ScrollArea } from '@/components/ui/ scroll - area';
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components / ui / select';
-import { Button  } from '@/components / ui / button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger  } from '@/components / ui / dialog';
-import { Input  } from '@/components / ui / input';
-import { Checkbox  } from '@/components / ui / checkbox';
-import { Label  } from '@/components / ui / label';
-import { Badge  } from '@/components / ui / badge';
-import { Switch  } from '@/components / ui / switch';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger  } from '@/components / ui / dropdown - menu';
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle  } from '@/components / ui / alert - dialog';
-import { ScrollArea  } from '@/components / ui / scroll - area';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components / ui / select';
+} from '@/components/ui/ select';
+import { Button  } from '@/components/ui/ button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components/ui/ card';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger  } from '@/components/ui/ dialog';
+import { Input  } from '@/components/ui/ input';
+import { Checkbox  } from '@/components/ui/ checkbox';
+import { Label  } from '@/components/ui/ label';
+import { Badge  } from '@/components/ui/ badge';
+import { Switch  } from '@/components/ui/ switch';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger  } from '@/components/ui/ dropdown - menu';
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle  } from '@/components/ui/ alert - dialog';
+import { ScrollArea  } from '@/components/ui/ scroll - area';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/ select';
 export /**
  * WebhooksManager - Function description
  */

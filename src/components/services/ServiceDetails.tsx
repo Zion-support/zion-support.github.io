@@ -10,7 +10,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+} from '@/components/ui/ card';
 import { Server, Clock, MapPin } from 'lucide-react';
 import Image from 'next / image';
 interface ServiceDetailsProps {

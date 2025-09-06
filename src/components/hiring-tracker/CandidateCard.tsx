@@ -365,11 +365,11 @@ import { useState } from 'react';
 import { Draggable } from '@/lib / dnd - stub';
 import { formatDistanceToNow } from 'date - fns';
 import Link from 'next / link';
-import { JobApplication } from '@/types / jobs';
-import { Card, CardContent } from '@/components / ui / card';
-import { Avatar as AvatarPrimitive } from '@/components / ui / avatar'; // Renamed to avoid conflict;
-import { Button } from '@/components / ui / button';
-import { Textarea } from '@/components / ui / textarea';
+import { JobApplication } from '@/types/ jobs';
+import { Card, CardContent } from '@/components/ui/ card';
+import { Avatar as AvatarPrimitive } from '@/components/ui/ avatar'; // Renamed to avoid conflict;
+import { Button } from '@/components/ui/ button';
+import { Textarea } from '@/components/ui/ textarea';
 import {
   MessageSquare,
   User,
@@ -383,19 +383,19 @@ import {
 import { Draggable  } from '@/lib / dnd - stub';
 import { formatDistanceToNow  } from './date - fns';
 import Link from './next / link';
-import { JobApplication  } from '@/types / jobs';
-import { Card, CardContent  } from '@/components / ui / card';
-import { Avatar as AvatarPrimitive  } from '@/components / ui / avatar';, // Renamed to avoid conflict;
-import { Button  } from '@/components / ui / button';
-import { Textarea  } from '@/components / ui / textarea';
+import { JobApplication  } from '@/types/ jobs';
+import { Card, CardContent  } from '@/components/ui/ card';
+import { Avatar as AvatarPrimitive  } from '@/components/ui/ avatar';, // Renamed to avoid conflict;
+import { Button  } from '@/components/ui/ button';
+import { Textarea  } from '@/components/ui/ textarea';
 import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react';
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components / ui / dropdown - menu';
-import { ScoreBadge } from '@/components / jobs / applications / ScoreBadge';
-import { toast } from '@/hooks / use - toast';
+} from '@/components/ui/ dropdown - menu';
+import { ScoreBadge } from '@/components/ jobs / applications / ScoreBadge';
+import { toast } from '@/hooks/ use - toast';
 import { HireConfirmationModal } from './HireConfirmationModal';
 import Image from 'next / image'; // Import next / image;
 interface CandidateCardProps {

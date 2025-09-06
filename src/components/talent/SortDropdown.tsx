@@ -93,7 +93,7 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
   DropdownMenu;
   DropdownMenuContent;
   DropdownMenuItem;
-  DropdownMenuTrigger } from '@/components / ui / dropdown - menu';
+  DropdownMenuTrigger } from '@/components/ui/ dropdown - menu';
 interface SortDropdownProps {
   sort_option: string,
   setSortOption: (option: string) => void;

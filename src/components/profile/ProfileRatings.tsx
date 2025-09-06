@@ -212,11 +212,11 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 
 import { useState, useEffect } from 'react';
 import { Star } from 'lucide-react';
-import { ReviewStats } from '@/components / reviews / ReviewStats';
-import { ReviewsList } from '@/components / reviews / ReviewsList';
-import { use_reviews } from '@/hooks / use_reviews';
-import { Button } from '@/components / ui / button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { ReviewStats } from '@/components/ reviews / ReviewStats';
+import { ReviewsList } from '@/components/ reviews / ReviewsList';
+import { use_reviews } from '@/hooks/ use_reviews';
+import { Button } from '@/components/ui/ button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/ tabs';
 interface ProfileRatingsProps {
   user_id: string;
 average_rating?: number;

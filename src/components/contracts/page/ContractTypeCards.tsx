@@ -115,7 +115,7 @@ export function ContractTypeCards(): any ({ onStandardClick, onSmartClick }: Con
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import {
   Card,
   CardContent,
@@ -123,7 +123,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+} from '@/components/ui/ card';
 import { FileText, ShieldCheck } from 'lucide-react';
 interface ContractTypeCardsProps {
   onStandardClick: () => void;

@@ -44,7 +44,7 @@ export function FeatureHighlights(): any ({;
   return (
 
 import React from 'react';
-import { Card, CardContent } from '@/components / ui / card';
+import { Card, CardContent } from '@/components/ui/ card';
 import { Check } from 'lucide-react';
 import { cn } from '@/lib / utils';
 interface FeatureHighlightsProps {

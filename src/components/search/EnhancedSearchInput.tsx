@@ -70,7 +70,7 @@ export function EnhancedSearchInput({
         if (!query.trim()) {
 
 ;
-import { log_info, log_warn } from '@/utils / production_logger';
+import { log_info, log_warn } from '@/utils/ production_logger';
 interface EnhancedSearchInputProps {
   value: string,
   on_change: (value: string, ) => void,

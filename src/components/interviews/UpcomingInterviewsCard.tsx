@@ -68,8 +68,8 @@ import { Interview } from "@/types/interview",;
 import { format, isPast, parseISO } from "date-fns",;
 import Link from "next/link",;
 import { Calendar, Clock, Video } from 'lucide-react';
-import { Avatar } from '@/components / ui / avatar';
-import { logErrorToProduction } from '@/utils / production_logger';
+import { Avatar } from '@/components/ui/ avatar';
+import { logErrorToProduction } from '@/utils/ production_logger';
 export /**
  * UpcomingInterviewsCard - Function description
  */

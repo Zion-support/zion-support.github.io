@@ -285,15 +285,15 @@ export function ClientDashboard() {;
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">;
                     <UserCheck className="h-4 w-4" />;
 import React from 'react';
-import { Card, CardContent } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
+import { Card, CardContent } from '@/components/ui/ card';
+import { Button } from '@/components/ui/ button';
+import { Badge } from '@/components/ui/ badge';
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
 import Link from 'next / link';
 import React from './react';
-import { Card, CardContent  } from '@/components / ui / card';
-import { Button  } from '@/components / ui / button';
-import { Badge  } from '@/components / ui / badge';
+import { Card, CardContent  } from '@/components/ui/ card';
+import { Button  } from '@/components/ui/ button';
+import { Badge  } from '@/components/ui/ badge';
 import Link from './next / link';
 export /**
  * ClientDashboard - Function description

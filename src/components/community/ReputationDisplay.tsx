@@ -69,7 +69,7 @@ export const ReputationDisplay = ({
       icon: "w-5 h-5"
       progress: "h-3"
 import { Trophy } from 'lucide-react';
-import { Progress } from '@/components / ui / progress';
+import { Progress } from '@/components/ui/ progress';
 interface ReputationDisplayProps {
   reputation: number;
   size?: 'sm' | 'md' | 'lg';

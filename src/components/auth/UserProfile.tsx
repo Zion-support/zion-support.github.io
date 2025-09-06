@@ -1,9 +1,9 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import {supabase} from '@/utils / supabase / client';
-import {Button} from '@/components / ui / button';
-import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
-import {Badge} from '@/components / ui / badge';
+import {supabase} from '@/utils/ supabase / client';
+import {Button} from '@/components/ui/ button';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/ card';
+import {Badge} from '@/components/ui/ badge';
 import {User, LogOut, LogIn} from 'lucide-react';
 import {use_router} from 'next / navigation';
 import type {

@@ -277,7 +277,7 @@ export function FilterSidebar({;
           }
 
 import React from 'react';
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import { Filter } from 'lucide-react';
 import { SearchFilter } from './filters / SearchFilter';
 import { SortFilter } from './filters / SortFilter';
@@ -286,7 +286,7 @@ import { AvailabilityFilter } from './filters / AvailabilityFilter';
 import { RegionFilter } from './filters / RegionFilter';
 import { ExperienceFilter } from './filters / ExperienceFilter';
 import { PriceFilter } from './filters / PriceFilter';
-import { FilterSidebarProps } from '@/types / filters';
+import { FilterSidebarProps } from '@/types/ filters';
 export /**
  * FilterSidebar - Function description
  */

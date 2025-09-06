@@ -9,15 +9,15 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components / ui / table';
-import { Badge } from '@/components / ui / badge';
-import { Switch } from '@/components / ui / switch';
-import { toast } from '@/hooks / use - toast'; import { InfoIcon } from 'lucide-react';
+} from '@/components/ui/ table';
+import { Badge } from '@/components/ui/ badge';
+import { Switch } from '@/components/ui/ switch';
+import { toast } from '@/hooks/ use - toast'; import { InfoIcon } from 'lucide-react';
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components / ui / tooltip';
+} from '@/components/ui/ tooltip';
 export /**
  * RoleManagement - Function description
  */

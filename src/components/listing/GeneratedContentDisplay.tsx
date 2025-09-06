@@ -130,8 +130,8 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 
             ))}
 import React from 'react';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components/ui/ button';
+import { Badge } from '@/components/ui/ badge';
 import { ArrowRight } from 'lucide-react';
 import {
   Card,
@@ -139,7 +139,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+} from '@/components/ui/ card';
 interface GeneratedContent {
   description: string;
 tags: string[];

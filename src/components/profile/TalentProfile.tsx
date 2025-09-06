@@ -99,7 +99,7 @@ export function TalentProfile(): any ({;
 
 import React from 'react';
 import { Handshake, MessageSquare, Star } from 'lucide-react';
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import { HireNowCTA } from './HireNowCTA';
 import { ProfileHero } from './ProfileHero';
 import { ProfileSkills } from './ProfileSkills';
@@ -108,9 +108,9 @@ import { ProfileProjects } from './ProfileProjects';
 import { ProfileAvailability } from './ProfileAvailability';
 import { ProfileContact } from './ProfileContact';
 import { ProfileRatings } from './ProfileRatings';
-import { TalentProfile as TalentProfileType } from '@/types / talent';
-import { use_auth } from '@/hooks / use_auth';
-import { Availability } from '@/types / profile';
+import { TalentProfile as TalentProfileType } from '@/types/ talent';
+import { use_auth } from '@/hooks/ use_auth';
+import { Availability } from '@/types/ profile';
 interface TalentProfileProps {
   profile: TalentProfileType;
   onRequestHire: () => void;

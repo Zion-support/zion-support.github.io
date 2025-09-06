@@ -46,14 +46,14 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       // Set empty matches to show no results found UI
       setMatches([])
 import { useState } from 'react';
-import { toast } from '@/hooks / use - toast';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { AIMatchingResults } from '@/components / AIMatchingResults';
+import { toast } from '@/hooks/ use - toast';
+import { Button } from '@/components/ui/ button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/ card';
+import { AIMatchingResults } from '@/components/ AIMatchingResults';
 import { find_matches, MatchResult } from '@/lib / ai - matchmaking';
-import { Textarea } from '@/components / ui / textarea';
+import { Textarea } from '@/components/ui/ textarea';
 import { Sparkles, Search } from 'lucide-react';
-import { log_info, logErrorToProduction } from '@/utils / production_logger';
+import { log_info, logErrorToProduction } from '@/utils/ production_logger';
 interface AIMatchmakerProps {
   service_type?: string;
 onMatchSelect?: (match: any) => void;
@@ -74,7 +74,7 @@ service_type;
 toast ({
   //Set empty matches to show no results found UI set_matches ([]);
 }finally {
-  setIsMatchmaking (false) ; import { log_info, logErrorToProduction } from '@/utils / production_logger';
+  setIsMatchmaking (false) ; import { log_info, logErrorToProduction } from '@/utils/ production_logger';
 interface AIMatchmakerProps {
   service_type?: string,
   onMatchSelect?: (match: any, ) => void,

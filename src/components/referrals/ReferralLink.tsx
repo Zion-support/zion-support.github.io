@@ -15,7 +15,7 @@ export function ReferralLink({
     setTimeout(() => setCopied(false), 2000)
 
 import { useState } from 'react';
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import {
   Card,
   CardContent,
@@ -23,8 +23,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
-import { Input } from '@/components / ui / input';
+} from '@/components/ui/ card';
+import { Input } from '@/components/ui/ input';
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react';
 interface ReferralLinkProps {
   referral_link: string;

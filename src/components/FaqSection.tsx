@@ -187,7 +187,7 @@ import { GradientHeading } from './GradientHeading';
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components / ui / accordion';
+} from '@/components/ui/ accordion';
 import { FileText } from 'lucide-react';
 const faqs = [;
   {
@@ -269,8 +269,8 @@ import {
   Accordion;
   AccordionContent;
   AccordionItem;
-  AccordionTrigger } from '@/components / ui / accordion';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components / ui / accordion';
+  AccordionTrigger } from '@/components/ui/ accordion';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/ accordion';
 const faqs = [;
   {
 

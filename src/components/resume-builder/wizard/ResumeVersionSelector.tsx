@@ -33,18 +33,18 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@/components / ui / dropdown - menu';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
+} from '@/components/ui/ dropdown - menu';
+import { Button } from '@/components/ui/ button';
+import { Input } from '@/components/ui/ input';
   Dialog,
   DialogContent,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@/components / ui / dialog';
+} from '@/components/ui/ dialog';
 import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react';
-import { Resume } from '@/types / resume';
-import { use_resume } from '@/hooks / use_resume';
+import { Resume } from '@/types/ resume';
+import { use_resume } from '@/hooks/ use_resume';
 interface ResumeVersionSelectorProps {
   current_resume: Resume;
   onResumeChange: (resume_id: string) => void;

@@ -98,14 +98,14 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
+} from '@/components/ui/ card';
+import { Badge } from '@/components/ui/ badge';
+import { Button } from '@/components/ui/ button';
 import { format } from 'date - fns';
 import { Check, ArrowDown, X } from 'lucide-react';
-import { useDisputeCheck } from '@/hooks / useDisputeCheck';
-import { DisputeStatusBadge } from '@/components / disputes / DisputeStatusBadge';
-import { RaiseDisputeButton } from '@/components / disputes / RaiseDisputeButton';
+import { useDisputeCheck } from '@/hooks/ useDisputeCheck';
+import { DisputeStatusBadge } from '@/components/ disputes / DisputeStatusBadge';
+import { RaiseDisputeButton } from '@/components/ disputes / RaiseDisputeButton';
 interface MilestoneCardProps {
   id: string;
   project_id: string;
@@ -116,9 +116,9 @@ interface MilestoneCardProps {
   due_date?: string;
   on_approve?: (id: string) => Promise < void>;
   on_reject?: (id: string) => Promise < void>; import React from 'react';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
-import { Badge  } from '@/components / ui / badge';
-import { Button  } from '@/components / ui / button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/ card';
+import { Badge  } from '@/components/ui/ badge';
+import { Button  } from '@/components/ui/ button';
 interface MilestoneCardProps {
   id: string,
   project_id: string,

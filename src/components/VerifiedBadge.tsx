@@ -28,7 +28,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components / ui / tooltip';
+} from '@/components/ui/ tooltip';
 interface VerifiedBadgeProps {
   verified: boolean;
   size?: 'sm' | 'md' | 'lg';
@@ -47,7 +47,7 @@ if (return null) {
     md: 'h - 4 w - 4',
     lg: 'h - 5 w - 5',
   }
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/ tooltip';
 interface VerifiedBadgeProps {
 
   verified: boolean,

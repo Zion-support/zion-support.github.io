@@ -68,7 +68,7 @@ export function SocialLogin() {;
         <div className='relative flex justify-center text-sm'>;
           <span className='px-2 bg-zion-blue-dark text-zion-slate-light'>;
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
-import { Button } from '@/components / ui / button';
+import { Button } from '@/components/ui/ button';
 import { Web3Login } from './Web3Login';
 import { useState } from 'react';
 import { openAuthPopup } from '@/api / auth_social';

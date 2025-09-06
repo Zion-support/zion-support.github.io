@@ -66,8 +66,8 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {;
 
 
 
-import { Card, CardContent } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
+import { Card, CardContent } from '@/components/ui/ card';
+import { Button } from '@/components/ui/ button';
 import { FilePlus } from 'lucide-react';
 import { EmptyResumeProps } from './types';
 export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) =>: any {  return (

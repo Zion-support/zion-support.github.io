@@ -37,11 +37,11 @@ export function Web3Login() {;
         description: error.message |"Failed to connect wallet. Please try again."})
       logErrorToProduction('Web3 login error:', { data: error })
 import { useState  } from './react';
-import { Button  } from '@/components / ui / button';
-import { use_auth  } from '@/hooks / use_auth';
+import { Button  } from '@/components/ui/ button';
+import { use_auth  } from '@/hooks/ use_auth';
 import { use_wallet as useAppWallet  } from '../../../context / WalletContext.tsx';, // Renamed to avoid conflict if use_wallet hook is defined locally;
 import { Wallet } from 'lucide-react'import { toast  } from './sonner';
-import {logErrorToProduction} from '@/utils / production_logger';
+import {logErrorToProduction} from '@/utils/ production_logger';
 export /**
  * Web3Login - Function description
  */

@@ -152,9 +152,9 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-} from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
+} from '@/components/ui/ card';
+import { Button } from '@/components/ui/ button';
+import { Badge } from '@/components/ui/ badge';
   ChevronRight,
   FileText,
   Image,
@@ -164,9 +164,9 @@ import { Badge } from '@/components / ui / badge';
 } from 'lucide-react';
 import Link from 'next / link';
 import React from './react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components / ui / card';
-import { Button  } from '@/components / ui / button';
-import { Badge  } from '@/components / ui / badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/ card';
+import { Button  } from '@/components/ui/ button';
+import { Badge  } from '@/components/ui/ badge';
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react';
 import Link from "next/link";
 export function TalentDashboard() {;

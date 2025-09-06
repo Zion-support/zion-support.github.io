@@ -4,7 +4,7 @@ import { Trophy } from 'lucide-react'
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components / ui / card';
+} from '@/components/ui/ card';
 import { Trophy } from 'lucide-react';
 export interface LeaderboardEntry {
 
