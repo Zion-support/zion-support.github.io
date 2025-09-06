@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { SEO } from "@/components/SEO",
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable",
@@ -83,8 +84,14 @@ function ReviewsModerationContent() {;
       setReviews([]);
 
 
+=======
+import React from "react";
+import MainLayout from "../../components/layout/MainLayout";
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 
+const ReviewsModeration: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -250,9 +257,18 @@ function ReviewsModerationContent() {;
   )
 =======
 
+=======
+    <MainLayout title="Reviews Moderation - Zion Tech Group" description="Moderate and manage user reviews.">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Reviews Moderation</h1>
+        <p className="text-lg">This is the Reviews Moderation page. Content coming soon.</p>
+      </div>
+    </MainLayout>
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
   );
-}
+};
 
+<<<<<<< HEAD
 
 export default function ReviewsModeration() {
       <SEO;
@@ -369,3 +385,6 @@ export default function ReviewsModeration() {;
   );
 }
 ;
+=======
+export default ReviewsModeration;
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115

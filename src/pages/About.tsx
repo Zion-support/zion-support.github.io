@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -482,12 +483,16 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 import ScrollAnimation from '../components/ScrollAnimation';
+=======
+import React from "react";
+import MainLayout from "../components/layout/MainLayout";
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 
 const About: React.FC = () => {
-<<<<<<< HEAD
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
+    <MainLayout title="About Us - Zion Tech Group" description="Learn about our mission to transform businesses through innovative technology solutions.">
       <div className="container mx-auto px-4 py-16">
+<<<<<<< HEAD
         <div className="text-center mb-16">
 =======
 import React, { useState } from 'react';
@@ -830,99 +835,12 @@ const About: React.FC = () => {
 
         <Footer />
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-      </div>
-<<<<<<< HEAD
-    </div>
 =======
-            We are a leading technology company specializing in AI solutions, cybersecurity,
-            and cloud infrastructure. Our mission is to transform businesses through
-            innovative technology solutions.
-          </p>
-        </motion.div>
-
-        {/* Tab Navigation */}
-        <motion.div className="flex flex-wrap justify-center mb-12" variants={itemVariants}>
-          {[
-            { id: 'mission', label: 'Our Mission' },
-            { id: 'team', label: 'Our Team' },
-            { id: 'values', label: 'Our Values' },
-          ].map(tab => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-3 mx-2 mb-2 rounded-lg transition-all duration-300 ${
-                activeTab === tab.id
-                  ? 'bg-cyan-600 text-white'
-                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </motion.div>
-
-        {/* Tab Content */}
-        <motion.div className="max-w-6xl mx-auto" variants={itemVariants}>
-          {activeTab === 'mission' && (
-            <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8" variants={itemVariants}>
-              <Card
-                title="Our Mission"
-                description="To empower businesses with cutting-edge AI and technology solutions that drive innovation, efficiency, and growth in the digital age."
-                icon="🎯"
-              />
-              <Card
-                title="Our Vision"
-                description="To be the global leader in AI-powered technology solutions, transforming industries and creating a smarter, more connected world."
-                icon="🚀"
-              />
-            </motion.div>
-          )}
-
-          {activeTab === 'team' && (
-            <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={itemVariants}>
-              {teamMembers.map((member, index) => (
-                <Card
-                  key={index}
-                  title={member.name}
-                  description={member.description}
-                  icon={member.image}
-                  className="text-center"
-                >
-                  <div className="mt-4">
-                    <p className="text-cyan-400 font-semibold">{member.role}</p>
-                    <p className="text-sm text-gray-400">{member.expertise}</p>
-                  </div>
-                </Card>
-              ))}
-            </motion.div>
-          )}
-
-          {activeTab === 'values' && (
-            <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8" variants={itemVariants}>
-              <Card
-                title="Innovation"
-                description="We constantly push the boundaries of what's possible with technology, always seeking new and better ways to solve complex problems."
-                icon="💡"
-              />
-              <Card
-                title="Excellence"
-                description="We maintain the highest standards in everything we do, from our code quality to our customer service and support."
-                icon="⭐"
-              />
-              <Card
-                title="Integrity"
-                description="We conduct business with honesty, transparency, and ethical practices, building trust with our clients and partners."
-                icon="🤝"
-              />
-            </motion.div>
-          )}
-        </motion.div>
+        <h1 className="text-4xl font-bold mb-8">About Us</h1>
+        <p className="text-lg">This is the About page. Content coming soon.</p>
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
       </div>
-    </motion.div>
->>>>>>> main
-=======
-    </>
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
+    </MainLayout>
   );
 };
 

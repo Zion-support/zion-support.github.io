@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Header() {
@@ -10,142 +11,104 @@ export default function Header() {
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Menu, X } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
-=======
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Menu, X, Search } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
-import SearchModal from './SearchModal';
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-
-  // Keyboard shortcut for search (Ctrl+K)
-  React.useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-        e.preventDefault();
-        setIsSearchOpen(true);
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const navigation = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Contact", href: "/contact" },
-    { name: "Pricing", href: "/pricing" },
+    {
+      name: 'Home',
+      href: '/',
+    },
+    {
+      name: 'Services',
+      href: '/services',
+      dropdown: [
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'All Services', href: '/services' },
+      ]
+    },
+    {
+      name: 'About',
+      href: '/about',
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+    },
   ];
-
-=======
->>>>>>> main
-import Button from './Button';
-=======
-import { Menu, X, ChevronDown } from 'lucide-react';
-import { Button } from './ui/Button';
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
-
-interface HeaderProps {
-  onMenuClick?: () => void;
-}
-
-const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    onMenuClick?.();
   };
 
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
+  const toggleDropdown = (itemName: string) => {
+    setActiveDropdown(activeDropdown === itemName ? null : itemName);
   };
-
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { 
-      name: 'Services', 
-      href: '/services',
-      children: [
-        { name: 'AI Services', href: '/services/ai-services' },
-        { name: 'IT Services', href: '/services/it-services' },
-        { name: 'Micro SaaS', href: '/services/micro-saas' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
-        { name: 'Mobile Development', href: '/services/mobile-development' },
-      ]
-    },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Contact', href: '/contact' },
-  ];
 
   return (
-    <header className="bg-white/95 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <header className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center">
-              <div className="h-8 w-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">Z</span>
-              </div>
-              <span className="ml-2 text-xl font-bold text-gray-900">Zion Tech Group</span>
-            </Link>
-          </div>
+          <Link to="/" className="text-2xl font-bold text-blue-600">
+            Zion Tech Group
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative">
-                {item.children ? (
-                  <div className="relative group">
-                    <button
-                      onClick={toggleServices}
-                      className="flex items-center text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
-                    >
-                      {item.name}
-                      <ChevronDown className="ml-1 h-4 w-4" />
-                    </button>
-                    {isServicesOpen && (
-                      <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            to={child.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600"
-                            onClick={() => setIsServicesOpen(false)}
-                          >
-                            {child.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
+                {item.dropdown ? (
+                  <div
+                    className="flex items-center space-x-1 cursor-pointer text-gray-700 hover:text-blue-600 transition-colors"
+                    onMouseEnter={() => setActiveDropdown(item.name)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
+                    <span>{item.name}</span>
+                    <ChevronDown className="w-4 h-4" />
                   </div>
                 ) : (
                   <Link
                     to={item.href}
-                    className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
+                    className="text-gray-700 hover:text-blue-600 transition-colors"
                   >
                     {item.name}
                   </Link>
+                )}
+
+                {/* Dropdown Menu */}
+                {item.dropdown && (
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50"
+                        onMouseEnter={() => setActiveDropdown(item.name)}
+                        onMouseLeave={() => setActiveDropdown(null)}
+                      >
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.href}
+                            className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 )}
               </div>
             ))}
@@ -218,25 +181,27 @@ const Header = () => {
           </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 
-          {/* Desktop CTA */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" asChild>
-              <Link to="/contact">Get Started</Link>
-            </Button>
+          {/* CTA Button */}
+          <div className="hidden md:block">
+            <Link
+              to="/contact"
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+            </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-gray-700 hover:text-blue-600 p-2"
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
 
         {/* Mobile Navigation */}
+<<<<<<< HEAD
         {isMenuOpen && (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -260,50 +225,76 @@ const Header = () => {
                       <button
                         onClick={toggleServices}
                         className="flex items-center justify-between w-full text-gray-700 hover:text-blue-600 px-3 py-2 text-base font-medium"
+=======
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="md:hidden border-t border-gray-200"
+            >
+              <nav className="py-4 space-y-2">
+                {navigation.map((item) => (
+                  <div key={item.name}>
+                    {item.dropdown ? (
+                      <div>
+                        <button
+                          onClick={() => toggleDropdown(item.name)}
+                          className="flex items-center justify-between w-full px-4 py-2 text-left text-gray-700 hover:text-blue-600 transition-colors"
+                        >
+                          <span>{item.name}</span>
+                          <ChevronDown className="w-4 h-4" />
+                        </button>
+                        {activeDropdown === item.name && (
+                          <div className="pl-4 space-y-2">
+                            {item.dropdown.map((dropdownItem) => (
+                              <Link
+                                key={dropdownItem.name}
+                                to={dropdownItem.href}
+                                className="block px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                {dropdownItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <Link
+                        to={item.href}
+                        className="block px-4 py-2 text-gray-700 hover:text-blue-600 transition-colors"
+                        onClick={() => setIsMenuOpen(false)}
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
                       >
                         {item.name}
-                        <ChevronDown className="h-4 w-4" />
-                      </button>
-                      {isServicesOpen && (
-                        <div className="pl-4 space-y-1">
-                          {item.children.map((child) => (
-                            <Link
-                              key={child.name}
-                              to={child.href}
-                              className="block text-gray-600 hover:text-blue-600 px-3 py-2 text-sm"
-                              onClick={() => {
-                                setIsServicesOpen(false);
-                                setIsMenuOpen(false);
-                              }}
-                            >
-                              {child.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  )}
-                </div>
-              ))}
-              <div className="pt-4">
-                <Button variant="outline" className="w-full" asChild>
-                  <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                      </Link>
+                    )}
+                  </div>
+                ))}
+                <div className="px-4 pt-4">
+                  <Link
+                    to="/contact"
+                    className="block w-full bg-blue-600 text-white px-6 py-2 rounded-lg text-center hover:bg-blue-700 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     Get Started
                   </Link>
+<<<<<<< HEAD
                 </Button>
               </div>
             </div>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           </div>
         )}
+=======
+                </div>
+              </nav>
+            </motion.div>
+          )}
+        </AnimatePresence>
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
       </div>
 <<<<<<< HEAD
 
@@ -716,6 +707,7 @@ export default Header;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Header;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-eb86
 =======
@@ -733,3 +725,6 @@ export default Header;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+export default Header;
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115

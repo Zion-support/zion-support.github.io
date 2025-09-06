@@ -31,38 +31,35 @@ interface LoadingSpinnerProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   className = '' 
-=======
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  text = 'Loading...',
-  className = '',
->>>>>>> main
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-    lg: 'w-12 h-12',
+    lg: 'w-12 h-12'
   };
 
   return (
-    <div className={`flex items-center justify-center ${className}`}>
-      <div
-        className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-blue-600`}
-        role="status"
-        aria-label="Loading"
-      >
-        <span className="sr-only">Loading...</span>
-      </div>
+    <div className={`flex justify-center items-center ${className}`}>
+      <div 
+        className={`${sizeClasses[size]} border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin`}
+      />
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default LoadingSpinner;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+export default LoadingSpinner;
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115

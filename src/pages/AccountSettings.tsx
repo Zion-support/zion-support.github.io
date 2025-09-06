@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from 'react',;
 import { useLocalStorage } from '@/hooks',;
@@ -173,8 +174,14 @@ export default function AccountSettings() {
       toast.error(error.message || "Failed to connect wallet");
     }
   },
+=======
+import React from "react";
+import MainLayout from "../components/layout/MainLayout";
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 
+const AccountSettings: React.FC = () => {
   return (
+<<<<<<< HEAD
 
 
 
@@ -838,3 +845,15 @@ export default function AccountSettings() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
+=======
+    <MainLayout title="Account Settings - Zion Tech Group" description="Manage your account settings and preferences.">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Account Settings</h1>
+        <p className="text-lg">This is the Account Settings page. Content coming soon.</p>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default AccountSettings;
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115

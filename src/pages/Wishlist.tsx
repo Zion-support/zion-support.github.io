@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useFavorites } from '@/hooks/useFavorites',;
 import { X } from 'lucide-react';
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData',;
@@ -139,3 +140,20 @@ export default function WishlistPage() {;
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+import React from "react";
+import MainLayout from "../components/layout/MainLayout";
+
+const Wishlist: React.FC = () => {
+  return (
+    <MainLayout title="Wishlist - Zion Tech Group" description="Save your favorite services and solutions.">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Wishlist</h1>
+        <p className="text-lg">This is the Wishlist page. Content coming soon.</p>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Wishlist;
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115

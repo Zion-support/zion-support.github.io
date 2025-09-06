@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 
@@ -354,10 +355,23 @@ function EquipmentPageContent() {;
           <p className="text-muted-foreground text-lg">Professional hardware for modern IT infrastructure</p>
         </motion.div>
         <EquipmentLoadingGrid />
-      </div>
-    )
-  }
+=======
+import React from "react";
+import MainLayout from "../components/layout/MainLayout";
 
+const EquipmentPage: React.FC = () => {
+  return (
+    <MainLayout title="Equipment - Zion Tech Group" description="Professional equipment and technology solutions.">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Equipment</h1>
+        <p className="text-lg">This is the Equipment page. Content coming soon.</p>
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+      </div>
+    </MainLayout>
+  );
+};
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -595,3 +609,6 @@ function EquipmentPage() {
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export default EquipmentPage;
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115

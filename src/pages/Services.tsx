@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -367,96 +368,14 @@ import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 import ScrollAnimation from '../components/ScrollAnimation';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
+=======
+import React from "react";
+import MainLayout from "../components/layout/MainLayout";
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 
 const Services: React.FC = () => {
-  const services = [
-    {
-      icon: <Code className="w-12 h-12" />,
-      title: 'AI Services',
-      description: 'Custom AI solutions powered by machine learning and deep learning technologies',
-      features: [
-        'Machine Learning Models',
-        'Natural Language Processing',
-        'Computer Vision',
-        'Predictive Analytics',
-        'AI Chatbots',
-        'Process Automation'
-      ],
-      href: '/services/ai-services'
-    },
-    {
-      icon: <Database className="w-12 h-12" />,
-      title: 'IT Services',
-      description: 'Comprehensive IT infrastructure and digital transformation solutions',
-      features: [
-        'System Architecture',
-        'Database Design',
-        'API Development',
-        'Legacy System Migration',
-        'Performance Optimization',
-        'Technical Consulting'
-      ],
-      href: '/services/it-services'
-    },
-    {
-      icon: <Smartphone className="w-12 h-12" />,
-      title: 'Micro SaaS',
-      description: 'Scalable software-as-a-service solutions for growing businesses',
-      features: [
-        'SaaS Architecture',
-        'Multi-tenancy',
-        'Subscription Management',
-        'Payment Integration',
-        'User Management',
-        'Analytics Dashboard'
-      ],
-      href: '/services/micro-saas'
-    },
-    {
-      icon: <Shield className="w-12 h-12" />,
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions to protect your digital assets',
-      features: [
-        'Security Audits',
-        'Penetration Testing',
-        'Compliance Management',
-        'Threat Detection',
-        'Data Encryption',
-        'Security Training'
-      ],
-      href: '/services/cybersecurity'
-    },
-    {
-      icon: <Cloud className="w-12 h-12" />,
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and migration services',
-      features: [
-        'Cloud Migration',
-        'Infrastructure as Code',
-        'Container Orchestration',
-        'Auto-scaling',
-        'Disaster Recovery',
-        'Cost Optimization'
-      ],
-      href: '/services/cloud-solutions'
-    },
-    {
-      icon: <Globe className="w-12 h-12" />,
-      title: 'Data Analytics',
-      description: 'Transform data into actionable insights with advanced analytics',
-      features: [
-        'Business Intelligence',
-        'Real-time Dashboards',
-        'Data Visualization',
-        'ETL Pipelines',
-        'Machine Learning Models',
-        'Custom Reports'
-      ],
-      href: '/services/data-analytics'
-    }
-  ];
-
   return (
+<<<<<<< HEAD
     <>
       <SEO
         title="Our Services - Zion Tech Group"
@@ -988,11 +907,18 @@ const Services = () => {
         <Footer />
 >>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    <MainLayout title="Services - Zion Tech Group" description="Comprehensive technology services for your business.">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Our Services</h1>
+        <p className="text-lg">This is the Services page. Content coming soon.</p>
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
       </div>
-    </>
+    </MainLayout>
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 function ServiceCard({
@@ -1039,3 +965,6 @@ export default Services;
 export default Services;
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+export default Services;
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115

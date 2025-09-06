@@ -47,10 +47,10 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 =======
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
-<<<<<<< HEAD
 
 // NOTE: This file should not be edited
 // see https://nextjs.org/docs/pages/building-your-application/configuring/typescript for more information.
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -61,3 +61,5 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 // see https://nextjs.org/docs/pages/api-reference/config/typescript for more information.
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115

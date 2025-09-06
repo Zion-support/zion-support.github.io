@@ -1,11 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
+=======
+import React from "react";
+import MainLayout from "../components/layout/MainLayout";
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 
-import Link from 'next / link'; // Changed from react-router-dom;
-import { use_auth } from '@/hooks / use_auth';
-import { useGetOrdersQuery } from '@/hooks / use_orders';
+const Orders: React.FC = () => {
+  return (
+    <MainLayout title="Orders - Zion Tech Group" description="Manage your orders and track their status.">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Orders</h1>
+        <p className="text-lg">This is the Orders page. Content coming soon.</p>
+      </div>
+    </MainLayout>
+  );
+};
 
+<<<<<<< HEAD
 import {
 
   Table
@@ -308,3 +321,6 @@ function OrdersPage() {
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export default Orders;
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115

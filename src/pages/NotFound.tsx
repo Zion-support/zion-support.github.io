@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 
@@ -24,15 +25,15 @@ import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+import React from "react";
+import MainLayout from "../components/layout/MainLayout";
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const NotFound: React.FC = () => {
-=======
-import React from "react";
-import { Link } from "react-router-dom";
-const NotFound = () => {
->>>>>>> main
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -187,12 +188,22 @@ const NotFound = () => {
 
         <Footer />
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    <MainLayout title="404 - Page Not Found - Zion Tech Group" description="The page you're looking for doesn't exist.">
+      <div className="container mx-auto px-4 py-16 text-center">
+        <h1 className="text-6xl font-bold mb-8">404</h1>
+        <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>
+        <p className="text-lg mb-8">The page you're looking for doesn't exist.</p>
+        <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700">
+          Go Home
+        </a>
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
       </div>
-    </>
+    </MainLayout>
   );
 };
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -238,3 +249,6 @@ export default NotFound;
 export default NotFound;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+export default NotFound;
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115

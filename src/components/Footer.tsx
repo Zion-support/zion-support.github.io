@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { FooterNewsletter } from "@/components/FooterNewsletter",
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
 import Link from "next/link", // Changed from react-router-dom
@@ -23,31 +24,28 @@ function resolveUrl(envVar: string | undefined, fallback: string) {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-import React from 'react';
 =======
-<<<<<<< HEAD
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 import React from 'react';
-
-export default function Footer() {
-  return (
-    <footer className="bg-gray-800 text-white py-8 mt-auto">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-import { FooterNewsletter } from '@/components/FooterNewsletter';
+import { Link } from 'react-router-dom';
 import { 
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
   Twitter,
   Linkedin,
-  Facebook,
   Instagram,
+<<<<<<< HEAD
   Github,
   ChevronUp,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+} from "lucide-react";
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 
 const TWITTER_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_TWITTER_URL,
@@ -73,6 +71,7 @@ const GITHUB_URL = resolveUrl(
 <<<<<<< HEAD
 export function Footer() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <footer className="bg-card border-t border-primary/20 pt-12 pb-8">
@@ -324,115 +323,65 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+=======
+    <footer className="bg-gray-900 text-white py-12">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center mb-4">
-              <div className="h-8 w-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">Z</span>
-              </div>
-              <span className="ml-2 text-xl font-bold">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-400 mb-6 max-w-md">
-              Leading provider of AI-powered technology solutions and enterprise services. 
-              Transform your business with cutting-edge innovation.
+          <div className="col-span-1 md:col-span-2">
+            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-6">
+              Leading technology solutions provider specializing in AI, cybersecurity, and cloud infrastructure.
             </p>
-            <div className="space-y-2">
-              <div className="flex items-center text-gray-400">
-                <Mail className="h-4 w-4 mr-2" />
-                <span>contact@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center text-gray-400">
-                <Phone className="h-4 w-4 mr-2" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center text-gray-400">
-                <MapPin className="h-4 w-4 mr-2" />
-                <span>San Francisco, CA</span>
-              </div>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Facebook className="w-6 h-6" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter className="w-6 h-6" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="w-6 h-6" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Instagram className="w-6 h-6" />
+              </a>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              {services.map((service) => (
-                <li key={service.name}>
-                  <Link
-                    to={service.href}
-                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
-                  >
-                    {service.name}
-                    <ArrowRight className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
-                </li>
-              ))}
+              <li><Link to="/ai-services" className="text-gray-300 hover:text-white transition-colors">AI Services</Link></li>
+              <li><Link to="/it-services" className="text-gray-300 hover:text-white transition-colors">IT Services</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">All Services</Link></li>
+              <li><Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</Link></li>
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              {company.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    to={item.href}
-                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
-                  >
-                    {item.name}
-                    <ArrowRight className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Support</h3>
-            <ul className="space-y-2">
-              {support.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    to={item.href}
-                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
-                  >
-                    {item.name}
-                    <ArrowRight className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="border-t border-slate-700 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © 2024 Zion Tech Group. All rights reserved.
-=======
-        {/* Newsletter Signup */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="max-w-md">
-            <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
-            <p className="text-gray-400 mb-4">
-              Get the latest news and updates from Zion Tech Group.
-            </p>
-            <div className="flex">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-r-md transition-colors">
-                Subscribe
-              </button>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-3">
+              <div className="flex items-center">
+                <Phone className="w-5 h-5 mr-3 text-blue-400" />
+                <span className="text-gray-300">+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center">
+                <Mail className="w-5 h-5 mr-3 text-blue-400" />
+                <span className="text-gray-300">info@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="w-5 h-5 mr-3 text-blue-400" />
+                <span className="text-gray-300">123 Tech Street, Innovation City</span>
+              </div>
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
@@ -502,6 +451,12 @@ const Footer: React.FC = () => {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p className="text-gray-400">
+            © 2024 Zion Tech Group. All rights reserved.
+          </p>
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
         </div>
 
         <div className="mt-12 pt-8 border-t border-primary/20">

@@ -1,24 +1,15 @@
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+import React from "react";
+import MainLayout from "../components/layout/MainLayout";
 
-const Profile = () => {
+const Profile: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">
-          Profile
-        </h1>
-        <p className="text-gray-600">
-          This is a placeholder profile page.
-        </p>
+    <MainLayout title="Profile - Zion Tech Group" description="Manage your profile and account settings.">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Profile</h1>
+        <p className="text-lg">This is the Profile page. Content coming soon.</p>
       </div>
-    </div>
+    </MainLayout>
   );
 };
 
->>>>>>> main
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 export default Profile;

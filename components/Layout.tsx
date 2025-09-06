@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 import React from 'react';
 import Head from 'next/head';
 
@@ -14,6 +17,7 @@ interface LayoutProps {
 }
 
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 <<<<<<< HEAD
@@ -244,12 +248,13 @@ export default function Layout({
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
 >>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
+=======
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-<<<<<<< HEAD
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -258,6 +263,7 @@ export default function Layout({
       </div>
     </>
   );
+<<<<<<< HEAD
 }
 =======
         <meta name="keywords" content={keywords} />
@@ -320,3 +326,6 @@ export default Layout;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+}
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115

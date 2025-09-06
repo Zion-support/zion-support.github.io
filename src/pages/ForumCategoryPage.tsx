@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -309,8 +310,23 @@ function CategoryContent({;
   const IconComponent = category ? iconMap[category && category.icon as keyof typeof iconMap] : null;
 
 }
-  );
+=======
+import React from "react";
+import MainLayout from "../components/layout/MainLayout";
 
+const ForumCategoryPage: React.FC = () => {
+  return (
+    <MainLayout title="Forum - Zion Tech Group" description="Community forum for discussions and support.">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Forum</h1>
+        <p className="text-lg">This is the Forum page. Content coming soon.</p>
+      </div>
+    </MainLayout>
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+  );
+};
+
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -437,3 +453,6 @@ export default function ForumCategoryPage() {;
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+=======
+export default ForumCategoryPage;
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -127,97 +128,14 @@ const Home = () => {
       features: ['React/Next.js', 'Node.js', 'TypeScript', 'Progressive Web Apps'],
       color: 'from-cyan-500 to-blue-600'
 =======
+=======
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
 import React from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { 
-  ArrowRight, 
-  Code, 
-  Database, 
-  Smartphone, 
-  Shield, 
-  Cloud, 
-  Globe, 
-  Zap, 
-  Users, 
-  Award, 
-  Star,
-  CheckCircle
-} from "lucide-react";
-import { Card } from "../components/ui/Card";
-import { Button } from "../components/ui/Button";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import SEO from "../components/SEO";
-import ParticleBackground from "../components/ParticleBackground";
-import TypingAnimation from "../components/TypingAnimation";
-import ScrollAnimation from "../components/ScrollAnimation";
-import ParallaxSection from "../components/ParallaxSection";
-import Testimonials from "../components/Testimonials";
-import BlogSection from "../components/BlogSection";
-
-// Track scroll depth function
-const trackScrollDepth = (depth: number) => {
-  console.log(`Scroll depth: ${depth}%`);
-  // Add analytics tracking here
-};
-
-// Track button click function
-const trackButtonClick = (action: string, section: string) => {
-  console.log(`Button clicked: ${action} in ${section}`);
-  // Add analytics tracking here
-};
+import MainLayout from "../components/layout/MainLayout";
 
 const Home: React.FC = () => {
-  const services = [
-    {
-      icon: <Code className="w-8 h-8" />,
-      title: "AI Services",
-      description: "Custom AI solutions powered by machine learning and deep learning technologies",
-      href: "/services/ai-services"
-    },
-    {
-      icon: <Database className="w-8 h-8" />,
-      title: "IT Services",
-      description: "Comprehensive IT infrastructure and digital transformation solutions",
-      href: "/services/it-services"
-    },
-    {
-      icon: <Smartphone className="w-8 h-8" />,
-      title: "Micro SaaS",
-      description: "Scalable software-as-a-service solutions for growing businesses",
-      href: "/services/micro-saas"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Cybersecurity",
-      description: "Advanced security solutions to protect your digital assets",
-      href: "/services/cybersecurity"
-    },
-    {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and migration services",
-      href: "/services/cloud-solutions"
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Data Analytics",
-      description: "Transform data into actionable insights with advanced analytics",
-      href: "/services/data-analytics"
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
-    }
-  ];
-
-  const stats = [
-<<<<<<< HEAD
-    { number: '500+', label: 'Projects Completed' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' },
-    { number: '50+', label: 'Expert Team Members' },
-  ];
-
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
@@ -979,6 +897,14 @@ const Home: React.FC = () => {
     </>
 >>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    <MainLayout title="Home - Zion Tech Group" description="Leading AI & Technology Solutions for a Smarter Future.">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Welcome to Zion Tech Group</h1>
+        <p className="text-lg">This is the Home page. Content coming soon.</p>
+      </div>
+    </MainLayout>
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
   );
 };
 

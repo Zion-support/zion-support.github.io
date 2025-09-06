@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { SEO } from '@/components/SEO',;
@@ -610,15 +611,16 @@ const Contact = () => {
     }, 2000);
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <SEOHead
-        title="Contact Us - Zion Tech Group"
-        description="Get in touch with our team for AI and technology solutions. We're here to help transform your business."
-        keywords="contact, support, AI solutions, technology consulting"
-      />
+=======
+import React from "react";
+import MainLayout from "../components/layout/MainLayout";
 
+const Contact: React.FC = () => {
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+  return (
+    <MainLayout title="Contact Us - Zion Tech Group" description="Get in touch with our team for your technology needs.">
       <div className="container mx-auto px-4 py-16">
+<<<<<<< HEAD
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Get In Touch
@@ -1162,6 +1164,12 @@ const Contact: React.FC = () => {
 =======
     </>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+        <h1 className="text-4xl font-bold mb-8">Contact Us</h1>
+        <p className="text-lg">This is the Contact page. Content coming soon.</p>
+      </div>
+    </MainLayout>
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
   );
 };
 

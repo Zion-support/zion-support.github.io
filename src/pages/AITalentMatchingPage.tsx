@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default function AITalentMatchingPage() {;
   const benefits = [;
@@ -220,8 +221,23 @@ export default function AITalentMatchingPage() {;
       stats={stats}
 
     />;
-  );
+=======
+import React from "react";
+import MainLayout from "../components/layout/MainLayout";
 
+const AITalentMatchingPage: React.FC = () => {
+  return (
+    <MainLayout title="AI Talent Matching - Zion Tech Group" description="Find the perfect talent with our AI-powered matching system.">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">AI Talent Matching</h1>
+        <p className="text-lg">This is the AI Talent Matching page. Content coming soon.</p>
+      </div>
+    </MainLayout>
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+  );
+};
+
+<<<<<<< HEAD
       cta_text="Start Matching Talent";
       cta_link="/contact";
     />);
@@ -230,3 +246,6 @@ export default function AITalentMatchingPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
+=======
+export default AITalentMatchingPage;
+>>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
