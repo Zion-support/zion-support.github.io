@@ -141,9 +141,9 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   fallback;
   errorFallback;
   loadingComponent;
-  enableRetry = true;
-  maxRetries = 3;
-  prefetch = false;
+  enableRetry = true,
+  maxRetries = 3,
+  prefetch = false,
   className;
   children;
   ...props
@@ -190,7 +190,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
 
     } catch (error) {
       logErrorToProduction('Dynamic component loading failed:', { data: error })
-      setLoadingState(prev => ({
+      setLoadingState(prev = > ({
         ...prev,
         isLoading: false,
         error: error as Error,
@@ -315,19 +315,19 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 // Note: These are examples - uncomment and install types as needed
 
 // export const DynamicChartComponent = createDynamicComponent(
-//   () => import('recharts').then(module => ({ default: module.LineChart })),
+//   () => import('recharts').then(module => ({ default: module.LineChart }));
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
 //         <span className="text-muted-foreground">Loading chart...</span>
 //       </div>
-//     ),
+//     );
 //     prefetch: true
 //   }
 // )
 
 // export const DynamicThreeComponent = createDynamicComponent(
-//   () => import('three').then(module => ({ default: module.WebGLRenderer })),
+//   () => import('three').then(module => ({ default: module.WebGLRenderer }));
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">

@@ -6,10 +6,10 @@ import { TalentProfile } from "@/types/talent";
 
 export interface TalentCardProps {
   talent: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire: (talent: TalentProfile) => void,
+  onViewProfile: (id: string) => void;
+  onRequestHire: (talent: TalentProfile) => void;
   isSaved: boolean,
-  onToggleSave: (id: string, isSaved: boolean) => void,
+  onToggleSave: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean
 }
 
@@ -28,14 +28,14 @@ export function TalentCard({
     }
   };
   const handleRequestHire = (e: React.MouseEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     e.stopPropagation();
     if (onRequestHire) {
       onRequestHire(talent)
     }
   };
   const handleToggleSave = (e: React.MouseEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     e.stopPropagation();
     if (onToggleSave) {
       onToggleSave(talent.id, !isSaved)

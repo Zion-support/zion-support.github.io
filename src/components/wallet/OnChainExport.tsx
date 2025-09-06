@@ -20,15 +20,15 @@ export function OnChainExport() {
           title: "Wallet not detected",
           description: "Please install MetaMask or another Ethereum wallet to use this feature",
           variant: "destructive"
-        }),
+        });
         return
       }
       
       // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
-      const address = accounts[0];
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+      const address = accounts[0],
       // Sign message to verify ownership
-      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,
+      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
       await ethereum.request({
         method: 'personal_sign',
         params: [address, message]
@@ -44,7 +44,7 @@ export function OnChainExport() {
         variant: "destructive"
       })
     }
-  },
+  };
   const handleExportTokens = async () => {
     setIsExporting(true);
     setExportStatus('processing');
@@ -56,7 +56,7 @@ export function OnChainExport() {
         title: "Tokens exported",
         description: "Your ZION$ tokens have been exported to your wallet"})
     } catch (error: any) {
-      setExportStatus('error'),
+      setExportStatus('error');
       toast({
         title: "Export failed",
         description: error.message || "Could not export tokens",
@@ -65,7 +65,7 @@ export function OnChainExport() {
     } finally {
       setIsExporting(false)
     }
-  },
+  };
   return (
     <Card>
       <CardHeader>

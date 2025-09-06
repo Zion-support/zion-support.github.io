@@ -45,13 +45,13 @@ export function TeamManagement() {
       toast({
         title: "Email required",
         description: "Please enter an email address for the new team member.",
-        variant: "destructive"}),
+        variant: "destructive"});
       return
     }
 
     toast({
       title: "Invitation sent",
-      description: `An invitation has been sent to ${newMemberEmail}`}),
+      description: `An invitation has been sent to ${newMemberEmail}`});
     setNewMemberEmail("");
     setIsAddingMember(false)
   };
@@ -60,13 +60,13 @@ export function TeamManagement() {
     toast({
       title: "Team member removed",
       description: "The team member has been removed from your workspace."})
-  },
+  };
   const handleResendInvite = (memberEmail: string) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
       title: "Invitation resent",
       description: `A new invitation has been sent to ${memberEmail}`})
-  },
+  };
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">

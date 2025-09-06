@@ -20,46 +20,46 @@ interface CategoryType {
 const getDefaultCategories = (t: any) => [
   {
     id: "services",
-    name: t('categories.services'),
-    description: t('categories.services_desc'),
+    name: t('categories.services');
+    description: t('categories.services_desc');
     iconName: "Briefcase", // Corresponds to lucide icon name
     link: "/services",
     color: "from-purple-500 to-indigo-600", // Keep color for styling
   };
   {
     id: "talents",
-    name: t('categories.talents'),
-    description: t('categories.talents_desc'),
+    name: t('categories.talents');
+    description: t('categories.talents_desc');
     iconName: "Users",
     link: "/talent",
     color: "from-cyan-500 to-blue-600"},
   {
     id: "equipment",
-    name: t('categories.equipment'),
-    description: t('categories.equipment_desc'),
+    name: t('categories.equipment');
+    description: t('categories.equipment_desc');
     iconName: "HardDrive",
     link: "/equipment",
     color: "from-amber-500 to-orange-600"},
   {
     id: "innovation",
-    name: t('categories.innovation'),
-    description: t('categories.innovation_desc'),
+    name: t('categories.innovation');
+    description: t('categories.innovation_desc');
     iconName: "Lightbulb",
     link: "/innovation",
     color: "from-emerald-500 to-green-600"}],
 // Helper to get icon component from name
 const getIcon = (iconName?: string) => {
   switch (iconName) {
-    case "Briefcase": return <Briefcase className="w-10 h-10" />;
-    case "Users": return <Users className="w-10 h-10" />;
-    case "HardDrive": return <HardDrive className="w-10 h-10" />;
-    case "Lightbulb": return <Lightbulb className="w-10 h-10" />;
-    default: return <HelpCircle className="w-10 h-10" />, // Default icon
+    case "Briefcase": return <Briefcase className = "w-10 h-10" />,
+    case "Users": return <Users className = "w-10 h-10" />,
+    case "HardDrive": return <HardDrive className = "w-10 h-10" />,
+    case "Lightbulb": return <Lightbulb className = "w-10 h-10" />,
+    default: return <HelpCircle className = "w-10 h-10" />, // Default icon
   }
 };
 const getSpecialServices = (t: any) => [
   {
-    title: t('categories.it_onsite_services'),
+    title: t('categories.it_onsite_services');
     link: "/it-onsite-services"
   }
 ],
@@ -71,7 +71,7 @@ interface CategoriesSectionProps {
 }
 
 export function CategoriesSection({
-  showTitle = true;
+  showTitle = true,
   className;
   style;
   categories: fetchedCategories, // Rename prop for clarity
@@ -84,14 +84,14 @@ export function CategoriesSection({
         id: cat.id,
         title: cat.name, // Map name to title
         description: cat.description || "No description available.",
-        icon: getIcon(cat.iconName), // Get icon component
+        icon: getIcon(cat.iconName); // Get icon component
         link: cat.link || `/category/${cat.id}`, // Construct link if not provided
         // Assign a default color or implement logic to assign colors
-        color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
-    : defaultCategories.map(cat => ({
+        color: defaultCategories.find(dc = > dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
+    : defaultCategories.map(cat = > ({
         ...cat,
         title: cat.name,
-        icon: getIcon(cat.iconName)})),
+        icon: getIcon(cat.iconName)}));
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
     return (

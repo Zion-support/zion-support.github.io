@@ -12,8 +12,8 @@ interface NotificationListProps {
   loading: boolean,
   error: string | null,
   notifications: Notification[],
-  onMarkAsRead: (id: string) => Promise<void>,
-  onDismiss: (id: string) => Promise<void>,
+  onMarkAsRead: (id: string) => Promise<void>;
+  onDismiss: (id: string) => Promise<void>;
   onRetry: () => void
 }
 
@@ -67,4 +67,4 @@ export const NotificationList: React.FC<NotificationListProps> = ({
       )}
     </ScrollArea>
   )
-},
+};

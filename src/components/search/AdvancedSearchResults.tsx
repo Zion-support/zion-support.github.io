@@ -149,7 +149,7 @@ const SearchResultCard: React.FC<{
 // Filter Sidebar Component
 const FilterSidebar: React.FC<{
   filters: SearchFilters,
-  onFiltersChange: (filters: SearchFilters) => void,
+  onFiltersChange: (filters: SearchFilters) => void;
   availableCategories: string[]
 }> = ({ filters, onFiltersChange, availableCategories }) => {
   const typeOptions = [
@@ -163,14 +163,14 @@ const FilterSidebar: React.FC<{
       ? [...filters.types, typeId]
       : filters.types.filter(t => t !== typeId);
     onFiltersChange({ ...filters, types: newTypes })
-  },
+  };
   const handlePriceChange = (values: number[]) => {
     onFiltersChange({ 
-      ...filters,
+      ...filters;
       minPrice: values[0] ?? 0,
       maxPrice: values[1] ?? 10000 
     })
-  },
+  };
   return (
     <div className="space-y-6">
       <div>
@@ -254,14 +254,14 @@ const FilterSidebar: React.FC<{
       </div>
     </div>
   )
-},
+};
 // No Results Component
 const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string) => void }> = ({ 
-  searchTerm,
+  searchTerm;
   onNewSearch 
 }) => {
   const suggestions = [
-    "AI & Machine Learning";
+    "AI & Machine Learning",
     "Web Development";
     "Mobile App Development";
     "Data Analysis";
@@ -307,10 +307,10 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
       </div>
     </div>
   )
-},
+};
 // Main Search Results Page Component
 export const AdvancedSearchResults: React.FC = () => {
-  const router = useRouter(),
+  const router = useRouter();
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
@@ -326,7 +326,7 @@ export const AdvancedSearchResults: React.FC = () => {
     maxPrice: 10000,
     minRating: 0,
     sort: 'relevance'
-  }),
+  });
   const suggestions = generateSearchSuggestions();
   // Extract available categories from results for filter
   const availableCategories = useMemo(() => {
@@ -339,7 +339,7 @@ export const AdvancedSearchResults: React.FC = () => {
   // Sync search term with URL
   useEffect(() => {
     if (router.isReady && router.query.q) {
-      const urlTerm = router.query.q as string;
+      const urlTerm = router.query.q as string,
       setSearchTerm(urlTerm)
     }
   }, [router.isReady, router.query.q]);
@@ -353,12 +353,12 @@ export const AdvancedSearchResults: React.FC = () => {
 
     setLoading(true);
     try {
-      const searchFilters = newFilters || filters;
+      const searchFilters = newFilters || filters,
       const params = new URLSearchParams({
         query: term,
-        page: page.toString(),
+        page: page.toString();
         limit: '20'
-      }),
+      });
       if (searchFilters.types.length > 0) {
         params.append('type', searchFilters.types.join())
       }
@@ -379,7 +379,7 @@ export const AdvancedSearchResults: React.FC = () => {
       }
 
       const response = await fetch(`/api/search?${params}`);
-      const data: SearchResponse = await response.json(),
+      const data: SearchResponse = await response.json();
       if (page === 1) {
         setResults(data.results)
       } else {
@@ -395,7 +395,7 @@ export const AdvancedSearchResults: React.FC = () => {
         totalCount: data.totalCount 
       })
     } catch (error) {
-      logErrorToProduction('Search failed', { data: error }),
+      logErrorToProduction('Search failed', { data: error });
       setResults([]);
       setTotalCount(0)
     } finally {
@@ -411,13 +411,13 @@ export const AdvancedSearchResults: React.FC = () => {
   }, [searchTerm, filters]);
   // Handle search input
   const handleSearch = (term: string) => {
-    setSearchTerm(term),
+    setSearchTerm(term);
     router.push(`/search?q=${encodeURIComponent(term)}`, undefined, { shallow: true })
-  },
+  };
   // Handle filter changes
   const handleFiltersChange = (newFilters: SearchFilters) => {
     setFilters(newFilters)
-  },
+  };
   // Load more results
   const loadMore = () => {
     if (hasMore && !loading) {
@@ -603,5 +603,5 @@ export const AdvancedSearchResults: React.FC = () => {
       )}
     </div>
   )
-},
+};
 export default AdvancedSearchResults;

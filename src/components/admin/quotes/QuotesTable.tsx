@@ -8,15 +8,15 @@ interface QuotesTableProps {
   quotes: QuoteRequest[],
   isArchived?: boolean;
   isLoading: boolean,
-  updateStatus: (id: string, status: QuoteStatus) => void,
-  toggleArchive: (id: string, isArchived: boolean) => void,
-  deleteQuote: (id: string) => void,
+  updateStatus: (id: string, status: QuoteStatus) => void;
+  toggleArchive: (id: string, isArchived: boolean) => void;
+  deleteQuote: (id: string) => void;
   onViewDetails: (quote: QuoteRequest) => void
 }
 
 export const QuotesTable: React.FC<QuotesTableProps> = ({
   quotes,
-  isArchived = false;
+  isArchived = false,
   isLoading;
   updateStatus;
   toggleArchive;

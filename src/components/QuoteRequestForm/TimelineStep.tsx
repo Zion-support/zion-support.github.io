@@ -14,7 +14,7 @@ interface TimelineStepProps {
 
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
-    <div className="space-y-6">
+    <div className = "space-y-6">
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">When do you need this?</h3>
         
@@ -40,13 +40,13 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
               }`}
               onClick={() => updateFormData({ timeline: "flexible" })}
             >
-              <h4 className="font-medium text-white">Flexible Timeline</h4>
+              <h4 className = "font-medium text-white">Flexible Timeline</h4>
               <p className="text-sm text-zion-slate-light">I'm flexible on the timing</p>
             </div>
           </div>
           
           {formData.timeline === "fixed" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-4 mt-6">
               <div>
                 <Label className="block mb-2 text-zion-slate-light">Start Date</Label>
                 <Popover>
@@ -68,7 +68,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                       selected={formData.startDate}
                       onSelect={(date) => updateFormData({ startDate: date })}
                       initialFocus
-                      className="p-3 pointer-events-auto"
+                      className = "p-3 pointer-events-auto"
                     />
                   </PopoverContent>
                 </Popover>
@@ -81,7 +81,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                     <Button
                       variant="outline"
                       className={cn(
-                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
+                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover: bg-zion-blue-dark",
                         !formData.endDate && "text-zion-slate-light"
                       )}
                     >

@@ -14,7 +14,7 @@ interface SearchResult {
 }
 
 function highlight(text: string, term: string) {
-  if (!term) return text,
+  if (!term) return text;
   const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const regex = new RegExp(`(${escaped})`, "gi");
   const parts = text.split(regex);
@@ -34,11 +34,11 @@ function highlight(text: string, term: string) {
 }
 
 export default function SearchPage() {
-  const router = useRouterReady(), // Use our custom hook
+  const router = useRouterReady(); // Use our custom hook
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions();
   // Force re-render and reset state when route changes
   const routeKey = useRouteChange(() => {
     setResults([]);
@@ -72,7 +72,7 @@ export default function SearchPage() {
 
   const fetchResults = async (term: string) => {
     if (!term.trim()) {
-      setResults([]),
+      setResults([]);
       return
     }
 
@@ -87,20 +87,20 @@ export default function SearchPage() {
         logErrorToProduction('Search API response structure is not as expected:', { data: data })
       }
     } catch (error) {
-      logErrorToProduction('Search failed:', { data: error }),
+      logErrorToProduction('Search failed:', { data: error });
       setResults([])
     } finally {
       setLoading(false)
     }
   };
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     if (query.trim()) {
       router.push(`/search?q=${encodeURIComponent(query.trim())}`)
     }
   };
   // Add key prop to force re-render when route changes
-  const pageKey = `search-${routeKey}-${router.asPath}`;
+  const pageKey = `search-${routeKey}-${router.asPath}`,
   return (
     <div key={pageKey}>
       <main className="container mx-auto px-4 py-8">

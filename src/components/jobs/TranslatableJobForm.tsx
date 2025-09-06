@@ -11,8 +11,8 @@ import { useTranslationService } from "@/hooks/useTranslationService";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { toast } from "@/components/ui/use-toast";
 interface TranslatableJobFormProps {
-  onSubmit: (formData: any) => void,
-  isSubmitting?: boolean
+  onSubmit: (formData: any) => void;
+  isSubmitting?: boolean;
 }
 
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
@@ -26,19 +26,20 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     es: "",
     fr: "",
     pt: "",
-    ar: ""}),
+    ar: ""
+  });
   const [description, setDescription] = useState<Record<SupportedLanguage, string>>({
     en: "",
     es: "",
     fr: "",
     pt: "",
-    ar: ""}),
+    ar: ""});
   const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({
     en: "",
     es: "",
     fr: "",
     pt: "",
-    ar: ""}),
+    ar: ""});
   const [budget, setBudget] = useState("");
   const [deadline, setDeadline] = useState("");
   // Handle text changes
@@ -53,7 +54,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   };
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     // Complete any missing translations with auto-translation
     await ensureAllTranslations();
     onSubmit({
@@ -73,29 +74,29 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   // Auto translate function
   const autoTranslate = async (field: 'title' | 'description' | 'requirements') => {
     let sourceLanguage: SupportedLanguage = 'en',
-    let content = '';
+    let content = '',
     // Find first non-empty content to translate
-    for (const lang of supportedLanguages.map(l => l.code)) {
+    for (const lang of supportedLanguages.map(l = > l.code)) {
       if (field === 'title' && title[lang]) {
-        content = title[lang];
-        sourceLanguage = lang;
+        content = title[lang],
+        sourceLanguage = lang,
         break
-      } else if (field === 'description' && description[lang]) {
-        content = description[lang];
-        sourceLanguage = lang;
+      } else if (field = == 'description' && description[lang]) {
+        content = description[lang],
+        sourceLanguage = lang,
         break
-      } else if (field === 'requirements' && requirements[lang]) {
-        content = requirements[lang];
-        sourceLanguage = lang;
+      } else if (field = == 'requirements' && requirements[lang]) {
+        content = requirements[lang],
+        sourceLanguage = lang,
         break
       }
     }
     
     if (!content) {
       toast({
-        title: t('translation.no_content'),
-        description: t('translation.add_content_first'),
-        variant: "destructive"}),
+        title: t('translation.no_content');
+        description: t('translation.add_content_first');
+        variant: "destructive"});
       return
     }
     
@@ -103,9 +104,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       const { translations, error } = await translateContent(content, 'job', sourceLanguage);
       if (error) {
         toast({
-          title: t('translation.translation_failed'),
+          title: t('translation.translation_failed');
           description: error,
-          variant: "destructive"}),
+          variant: "destructive"});
         return
       }
       
@@ -118,19 +119,19 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       }
       
       toast({
-        title: t('translation.translation_success'),
+        title: t('translation.translation_success');
         description: t('translation.content_translated')})
     } catch (error) {
-      logErrorToProduction('Error translating ${field}:', { data: error }),
+      logErrorToProduction('Error translating ${field}:', { data: error });
       toast({
-        title: t('translation.translation_failed'),
-        description: error instanceof Error ? error.message : t('translation.unknown_error'),
+        title: t('translation.translation_failed');
+        description: error instanceof Error ? error.message : t('translation.unknown_error');
         variant: "destructive"})
     }
-  },
+  };
   // Ensure all translations are available
   const ensureAllTranslations = async () => {
-    const promises = [];
+    const promises = [],
     if (!title.en && !title.es && !title.fr && !title.pt && !title.ar) return;
     if (!description.en && !description.es && !description.fr && !description.pt && !description.ar) return;
     // Title translations

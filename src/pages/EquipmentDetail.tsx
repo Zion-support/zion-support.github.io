@@ -49,17 +49,17 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
     brand: item.brand || 'Unknown',
     category: item.category,
     subcategory: item.subcategory,
-    images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'],
+    images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto = format&fit=crop&w=800&h=500'],
     price: item.price || 0,
     currency: item.currency || '$',
     rating: item.rating,
     reviewCount: item.reviewCount,
-    inStock: item.availability === 'In Stock' || !item.availability,
+    inStock: item.availability = == 'In Stock' || !item.availability,
     expectedShipping: item.availability || 'In Stock',
     specifications: (item.specifications || []).map((spec) => ({ 
       name: spec,
       value: '' 
-    })),
+    }));
     features: item.tags || [],
     warranty: '1 Year Manufacturer Warranty',
     returnPolicy: '30-day return policy'
@@ -71,7 +71,7 @@ export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
   equipmentListings.reduce((acc, item) => {
     acc[item.id] = convertProductListingToEquipmentDetails(item);
     return acc
-  }, {} as { [key: string]: EquipmentDetails }),
+  }, {} as { [key: string]: EquipmentDetails });
 export default function EquipmentDetail() {
   const router = useRouter();
   const { id } = router.query as { id?: string };
@@ -96,7 +96,7 @@ export default function EquipmentDetail() {
         setLoading(true);
         setError(null);
         // Try to find in static data first
-        const equipmentFromSample = SAMPLE_EQUIPMENT[id];
+        const equipmentFromSample = SAMPLE_EQUIPMENT[id],
         if (equipmentFromSample) {
           setEquipment(equipmentFromSample);
           setLoading(false);
@@ -106,7 +106,7 @@ export default function EquipmentDetail() {
         // Try to get from sessionStorage (for dynamically generated equipment)
         if (typeof window !== 'undefined') {
           try {
-            const stored = sessionStorage.getItem(`equipment: ${id}`),
+            const stored = sessionStorage.getItem(`equipment: ${id}`);
             if (stored) {
               const storedData = JSON.parse(stored);
               // Check if it's already in EquipmentDetails format or needs conversion
@@ -132,7 +132,7 @@ export default function EquipmentDetail() {
         setError('Equipment not found');
         setLoading(false)
       } catch (error) {
-        logErrorToProduction('Error loading equipment:', { data: error }),
+        logErrorToProduction('Error loading equipment:', { data: error });
         setError('Failed to load equipment details');
         setLoading(false)
       }
@@ -145,7 +145,7 @@ export default function EquipmentDetail() {
       toast({
         title: "Authentication Required",
         description: "Please log in to add items to cart",
-        variant: "destructive"}),
+        variant: "destructive"});
       return
     }
 
@@ -169,7 +169,7 @@ export default function EquipmentDetail() {
     } finally {
       setIsAdding(false)
     }
-  },
+  };
   const inCart = items.some(item => item.id === equipment?.id);
   // Loading state
   if (loading) {
@@ -239,7 +239,7 @@ export default function EquipmentDetail() {
   return (
     <>
       <NextSeo
-        title={`${equipment.name} - Zion Marketplace`}
+        title = {`${equipment.name} - Zion Marketplace`}
         description={equipment.description}
         openGraph={{
           title: `${equipment.name} - Zion Marketplace`,

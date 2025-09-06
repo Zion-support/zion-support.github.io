@@ -26,7 +26,7 @@ const PerformanceDashboard: React.FC = () => {
     pageCount: 166,
     loadTime: 1.2,
     healthStatus: 'healthy'
-  }),
+  });
   const improvements: Improvement[] = [
     {
       id: '1',
@@ -79,15 +79,15 @@ const PerformanceDashboard: React.FC = () => {
   ],
   const getStatusIcon = (status: string) => {
     switch (status) {
-      case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />,
-      case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />;
-      case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />;
-      default: return <AlertCircle className="h-4 w-4 text-gray-500" />
+      case 'completed': return <CheckCircle className = "h-4 w-4 text-green-500" />,
+      case 'in-progress': return <AlertCircle className = "h-4 w-4 text-yellow-500" />,
+      case 'planned': return <TrendingUp className = "h-4 w-4 text-blue-500" />,
+      default: return <AlertCircle className = "h-4 w-4 text-gray-500" />
     }
   },
   const getImpactColor = (impact: string) => {
     switch (impact) {
-      case 'high': return 'bg-red-100 text-red-800',
+      case 'high': return 'bg-red-100 text-red-800';
       case 'medium': return 'bg-yellow-100 text-yellow-800';
       case 'low': return 'bg-green-100 text-green-800';
       default: return 'bg-gray-100 text-gray-800'
@@ -95,11 +95,11 @@ const PerformanceDashboard: React.FC = () => {
   },
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'performance': return <Zap className="h-4 w-4" />,
-      case 'security': return <Shield className="h-4 w-4" />;
-      case 'ux': return <Search className="h-4 w-4" />;
-      case 'build': return <TrendingUp className="h-4 w-4" />;
-      default: return <CheckCircle className="h-4 w-4" />
+      case 'performance': return <Zap className = "h-4 w-4" />,
+      case 'security': return <Shield className = "h-4 w-4" />,
+      case 'ux': return <Search className = "h-4 w-4" />,
+      case 'build': return <TrendingUp className = "h-4 w-4" />,
+      default: return <CheckCircle className = "h-4 w-4" />
     }
   },
   const completedImprovements = improvements.filter(imp => imp.status === 'completed');
@@ -210,5 +210,5 @@ const PerformanceDashboard: React.FC = () => {
       </div>
     </div>
   )
-},
+};
 export default PerformanceDashboard;

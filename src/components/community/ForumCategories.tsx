@@ -41,7 +41,7 @@ const categories: ForumCategoryInfo[] = [
   }
 ],
 const iconMap = {
-  Briefcase;
+  Briefcase,
   MessageSquare;
   Code;
   FileText;
@@ -49,7 +49,7 @@ const iconMap = {
 };
 export const ForumCategories = () => {
   const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
   const visibleCategories = categories.filter(
     category => !category.adminOnly || isAdmin
   );
@@ -75,5 +75,5 @@ export const ForumCategories = () => {
       })}
     </div>
   )
-},
+};
 export default ForumCategories;

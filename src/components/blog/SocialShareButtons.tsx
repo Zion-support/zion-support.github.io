@@ -8,11 +8,11 @@ interface SocialShareButtonsProps {
 
 export function SocialShareButtons({ title }: SocialShareButtonsProps) {
   const shareUrl =
-    typeof window !== 'undefined' ? encodeURIComponent(window.location.href) : '',
+    typeof window !== 'undefined' ? encodeURIComponent(window.location.href) : '';
   const shareText = encodeURIComponent(title);
   const shareToTwitter = () => {
     window.open(
-      `https: //twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`,
+      `https: //twitter.com/intent/tweet?url = ${shareUrl}&text=${shareText}`,
       '_blank'
     )
   };

@@ -21,11 +21,10 @@ function TalentDashboardContent() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
   const onboardingStatus = useOnboardingStatus();
-  const showAdvanced =
-    onboardingStatus.profileCompleted &&
+  const showAdvanced = onboardingStatus.profileCompleted &&
     onboardingStatus.skillsAdded &&
     onboardingStatus.availabilitySet &&
-    onboardingStatus.matchReceived;
+    onboardingStatus.matchReceived,
   return (
     <>
       <SEO 

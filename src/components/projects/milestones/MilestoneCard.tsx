@@ -16,12 +16,12 @@ interface MilestoneCardProps {
   amount: number,
   status: string,
   dueDate?: string;
-  onApprove?: (id: string) => Promise<void>,
+  onApprove?: (id: string) => Promise<void>;
   onReject?: (id: string) => Promise<void>
 }
 
 export function MilestoneCard({ 
-  id,
+  id;
   projectId;
   title;
   description;

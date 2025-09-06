@@ -39,16 +39,16 @@ interface ProjectViewProps {
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   const router = useRouter();
   const startProjectCall = () => {
-    const roomId = `project-${project.id}`;
+    const roomId = `project-${project.id}`,
     toast.success("Starting project call", {
       description: "Initializing video connection..."
-    }),
+    });
     router.push(`/call/${roomId}`)
   };
   const messageClient = () => {
     toast.info("Opening message thread with client", {
       description: `Messaging ${project.client.name}...`
-    }),
+    });
     // Navigate to messaging with this client
   };
   return (

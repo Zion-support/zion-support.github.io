@@ -16,7 +16,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   for (const category of HELP_CATEGORIES) {
     const found = category.articles.find(a => a.id === articleId);
     if (found) {
-      article = found;
+      article = found,
       break
     }
   }
@@ -26,14 +26,14 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   }
   
   const handleFeedback = (type: "helpful" | "not-helpful") => {
-    setFeedbackGiven(type),
+    setFeedbackGiven(type);
     // In a real implementation, this would send feedback to the server
     toast({
       title: "Thank you for your feedback!",
       description: type === "helpful" 
         ? "We're glad this article was helpful." 
         : "We'll work on improving this article."})
-  },
+  };
   return (
     <div>
       <Card className="p-6">

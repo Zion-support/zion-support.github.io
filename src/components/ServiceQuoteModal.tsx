@@ -16,7 +16,7 @@ import { toast } from '@/hooks/use-toast';
 import { supabase } from "@/integrations/supabase/client";
 interface ServiceQuoteModalProps {
   open: boolean,
-  onOpenChange: (open: boolean) => void,
+  onOpenChange: (open: boolean) => void;
   service: ProductListing | null
 }
 
@@ -36,7 +36,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     description: '',
     email: '',
     budget: BUDGET_RANGES[0]?.value || '0-5000',
-    timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'}),
+    timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'});
   const [startDate, setStartDate] = useState<Date | undefined>(new Date());
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
@@ -46,7 +46,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     setFormData(prev => ({ ...prev, [name]: value }))
   };
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(),
+    e.preventDefault();
     setIsSubmitting(true);
     try {
       // Call Supabase function to process the quote
@@ -58,33 +58,33 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
             category: service.category} : null,
           quoteDetails: {
             ...formData,
-            startDate: startDate?.toISOString(),
+            startDate: startDate?.toISOString();
             endDate: endDate?.toISOString()}
         }
-      }),
+      });
       if (error) throw error;
       // Show success message
       toast({
         title: "Quote Request Submitted!",
-        description: "We've sent your request to the service provider. They will contact you soon."}),
+        description: "We've sent your request to the service provider. They will contact you soon."});
       // Close the modal and reset form
       onOpenChange(false);
       setFormData({
         description: '',
         email: '',
         budget: BUDGET_RANGES[0]?.value || '0-5000',
-        timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'}),
+        timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'});
       setStartDate(new Date());
       setEndDate(undefined);
       setCurrentStep('details')
     } catch (error) {
-      logErrorToProduction('Error submitting quote:', { data: error }),
+      logErrorToProduction('Error submitting quote:', { data: error });
       toast({
         title: "Error",
         description: "There was an error submitting your quote request. Please try again.",
         variant: "destructive"})
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false);
     }
   };
   const nextStep = () => {
@@ -157,7 +157,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   value={formData.timeframe}
                   onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}
                 >
-                  <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
+                  <SelectTrigger className = "bg-zion-blue-dark border-zion-blue-light text-white">
                     <SelectValue placeholder="Select your timeline" />
                   </SelectTrigger>
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
@@ -170,7 +170,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 </Select>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className = "grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label className="text-white">Expected Start Date</Label>
                   <Popover>
@@ -186,7 +186,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                         {startDate ? format(startDate, "PPP") : <span>Pick a date</span>}
                       </Button>
                     </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">
+                    <PopoverContent className = "w-auto p-0 bg-zion-blue-dark border-zion-blue-light">
                       <Calendar
                         mode="single"
                         selected={startDate}
@@ -205,7 +205,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                       <Button
                         variant={"outline"}
                         className={cn(
-                          "justify-start text-left font-normal w-full";
+                          "justify-start text-left font-normal w-full",
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}
                       >

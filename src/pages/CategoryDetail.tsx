@@ -11,7 +11,7 @@ import { NextSeo } from '@/components/NextSeo';
 import { Header } from "@/components/Header";
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
 const AUTO_SERVICE_TITLES = [
-  "AI-Powered Customer Support";
+  "AI-Powered Customer Support",
   "Cloud Infrastructure Management";
   "Predictive Analytics Consulting";
   "Cybersecurity Automation Suite";
@@ -22,8 +22,8 @@ const AUTO_SERVICE_TITLES = [
 ];
 function generateInnovationListing(index: number): ProductListing {
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service',
-  const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
-  const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
+  const price = Math.floor(Math.random() * 9500) + 500; // $500 - $10,000
+  const rating = Math.floor(Math.random() * 2) + 4; // 4-5 stars
   const reviewCount = Math.floor(Math.random() * 50) + 10;
   return {
     id: `innovation-auto-${index}`,
@@ -38,7 +38,7 @@ function generateInnovationListing(index: number): ProductListing {
       id: "autogen"
     },
     images: ["https://source.unsplash.com/random/800x500?technology"],
-    createdAt: new Date().toISOString(),
+    createdAt: new Date().toISOString();
     rating;
     reviewCount;
     location: "Global",
@@ -52,10 +52,10 @@ interface CategoryDetailProps {
 }
 
 export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps = {}) {
-  const router = useRouter(),
+  const router = useRouter();
   // Get slug from Next.js router query params
-  const params = router.query as { slug?: string };
-  const slug = slugProp ?? params.slug;
+  const params = router.query as { slug?: string },
+  const slug = slugProp ?? params.slug,
   // Redirect to categories list if slug is missing
   if (!slug) {
     router.push('/categories');
@@ -67,69 +67,69 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     title: "",
     description: "",
     icon: <Bot className="w-6 h-6" />
-  }),
+  });
   const innovationCounterRef = useRef(0);
   // Map of category slugs to their display data
   const categoryData = {
     'services': {
       title: "Services",
       description: "On-demand IT support, consulting, development, and more";
-      icon: <Briefcase className="w-6 h-6" />
+      icon: <Briefcase className = "w-6 h-6" />
     },
     'talents': {
       title: "Talents",
       description: "Connect with AI experts, developers, and tech specialists";
-      icon: <Brain className="w-6 h-6" />
+      icon: <Brain className = "w-6 h-6" />
     },
     'equipment': {
       title: "Equipment",
       description: "Rent or buy specialized hardware, servers, and devices";
-      icon: <Code className="w-6 h-6" />
+      icon: <Code className = "w-6 h-6" />
     },
     'innovation': {
       title: "Innovation",
       description: "Discover cutting-edge solutions and tech breakthroughs",
-      icon: <Bot className="w-6 h-6" />
+      icon: <Bot className = "w-6 h-6" />
     },
     'ai-models-apis': {
       title: "AI Models & APIs",
       description: "Access cutting-edge AI models with easy integration",
-      icon: <Brain className="w-6 h-6" />
+      icon: <Brain className = "w-6 h-6" />
     },
     'content-creation': {
       title: "Content Creation",
       description: "Generate high-quality content for your projects",
-      icon: <PenLine className="w-6 h-6" />
+      icon: <PenLine className = "w-6 h-6" />
     },
     'data-analysis': {
       title: "Data Analysis",
       description: "Extract insights from complex datasets",
-      icon: <BarChart className="w-6 h-6" />
+      icon: <BarChart className = "w-6 h-6" />
     },
     'computer-vision': {
       title: "Computer Vision",
       description: "Image and video processing solutions",
-      icon: <Eye className="w-6 h-6" />
+      icon: <Eye className = "w-6 h-6" />
     },
     'virtual-assistants': {
       title: "Virtual Assistants",
       description: "Intelligent automation for your workflow",
-      icon: <Bot className="w-6 h-6" />
+      icon: <Bot className = "w-6 h-6" />
     },
     'voice-speech': {
       title: "Voice & Speech",
       description: "Speech recognition and synthesis tools",
-      icon: <Mic className="w-6 h-6" />
+      icon: <Mic className = "w-6 h-6" />
     },
     'developer-tools': {
       title: "Developer Tools",
       description: "AI-powered coding assistance and automation",
-      icon: <Code className="w-6 h-6" />
+      icon: <Code className = "w-6 h-6" />
     },
     'business-solutions': {
       title: "Business Solutions",
       description: "Enterprise AI integrations and services",
-      icon: <Briefcase className="w-6 h-6" />
+      icon: <Briefcase className = "w-6 h-6" />
     }
   },
   useEffect(() => {
@@ -141,13 +141,13 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
           title: slug
             ?.split('-')
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ') || 'Category',
+            .join(' ') || 'Category';
           description: 'Explore our collection in this category',
-          icon: <Bot className="w-6 h-6" />},
+          icon: <Bot className = "w-6 h-6" />},
         setCategory(currentCategory);
-        innovationCounterRef.current = 0;
+        innovationCounterRef.current = 0,
         // Filter listings by category
-        const categoryTitle = currentCategory.title;
+        const categoryTitle = currentCategory.title,
         const filteredListings = MARKETPLACE_LISTINGS.filter(
           (listing) => listing.category.toLowerCase() === categoryTitle.toLowerCase()
         );
@@ -160,9 +160,9 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
                 .map((_, index) => ({
                   id: `${slug}-${index}`,
                   title: `${currentCategory.title} Product ${index + 1}`,
-                  description: `A great ${currentCategory.title.toLowerCase()} solution for your needs.`,
+                  description: `A great ${currentCategory.title.toLowerCase()} solution for your needs.`;
                   category: currentCategory.title,
-                  price: Math.floor(Math.random() * 500) + 50,
+                  price: Math.floor(Math.random() * 500) + 50;
                   currency: '$',
                   tags: [`${slug}`, 'aitool'];
                   author: {
@@ -170,12 +170,12 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
                     id: `author-${index + 1}`,
                     avatarUrl: undefined},
                   images: [`/placeholder.svg`],
-                  createdAt: new Date().toISOString(),
-                  rating: Math.floor(Math.random() * 5) + 1,
-                  reviewCount: Math.floor(Math.random() * 100)})),
+                  createdAt: new Date().toISOString();
+                  rating: Math.floor(Math.random() * 5) + 1;
+                  reviewCount: Math.floor(Math.random() * 100)}));
         setListings(listingsToShow)
       } catch (err) {
-        logErrorToProduction('Category load error:', { data: err }),
+        logErrorToProduction('Category load error:', { data: err });
         toast({ title: 'Error', description: 'Failed to load category' })
       } finally {
         setIsLoading(false)
@@ -197,12 +197,12 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
   }, [slug]);
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
-    const listing = listings.find(item => item.id === listingId),
+    const listing = listings.find(item => item.id === listingId);
     if (listing) {
       toast({
         title: "Quote Requested",
         description: `Your quote request for ${listing.title} has been sent.`
-      }),
+      });
       // Navigate to the quote request page with the listing information
       const queryParams = new URLSearchParams({
         serviceType: listing.category,
@@ -210,15 +210,14 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
         itemTitle: listing.title,
         itemCategory: listing.category,
         ...(listing.images?.[0] && { itemImage: listing.images[0] })
-      }),
+      });
       router.push(`/request-quote?${queryParams.toString()}`)
     }
   };
   const seoTitle = category.title
     ? `${category.title} | Zion Marketplace`
-    : 'Category | Zion Marketplace';
-  const seoDescription =
-    category.description || 'Explore listings in this category.';
+    : 'Category | Zion Marketplace',
+  const seoDescription = category.description || 'Explore listings in this category.',
   return (
     <>
       <NextSeo title={seoTitle} description={seoDescription} />

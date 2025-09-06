@@ -7,10 +7,10 @@ import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from 'lucide
 import type { QuoteRequest } from "@/types/quotes";
 type QuoteRequestCardProps = {
   quote: QuoteRequest,
-  onViewDetails: (quote: QuoteRequest) => void,
-  onMarkAsResponded?: (id: string) => void,
+  onViewDetails: (quote: QuoteRequest) => void;
+  onMarkAsResponded?: (id: string) => void;
   onToggleArchive: (id: string, isArchived: boolean) => void
-},
+};
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   quote,
   onViewDetails;

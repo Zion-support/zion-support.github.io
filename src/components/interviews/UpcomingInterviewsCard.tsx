@@ -35,7 +35,7 @@ export function UpcomingInterviewsCard() {
       } finally {
         setIsLoading(false)
       }
-    },
+    };
     loadInterviews()
   }, []);
   if (isLoading) {
@@ -99,7 +99,7 @@ export function UpcomingInterviewsCard() {
           {upcomingInterviews.map(interview => {
             const interviewDate = parseISO(interview.scheduled_date);
             const formattedDate = format(interviewDate, 'EEE, MMM d');
-            const formattedTime = format(interviewDate, 'h: mm a'),
+            const formattedTime = format(interviewDate, 'h: mm a');
             // Determine if interview is happening soon (within 30 minutes)
             const now = new Date();
             const isStartingSoon = 

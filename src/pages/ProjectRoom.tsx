@@ -10,7 +10,7 @@ import { toast } from 'sonner';
 export default function ProjectRoom() {
   const router = useRouter();
   const { projectId: rawProjectId } = router.query,
-  const projectId = typeof rawProjectId === 'string' ? rawProjectId : '', // Ensure string, default to empty if not
+  const projectId = typeof rawProjectId === 'string' ? rawProjectId: '', // Ensure string, default to empty if not
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState<Array<{
@@ -29,12 +29,12 @@ export default function ProjectRoom() {
       isVideoEnabled: true,
       isMuted: false
     }
-  ]),
+  ]);
   const startVideoCall = () => {
     setIsInCall(true);
     toast.success("Video call started", {
       description: "Others can join with the project room link"
-    }),
+    });
     // Switch to video tab if not already there
     if (activeTab !== 'video') {
       setActiveTab('video')
@@ -45,7 +45,7 @@ export default function ProjectRoom() {
     toast.info("Video call ended", {
       description: "Call duration and participants will be logged"
     })
-  },
+  };
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service
     const mockUsers = [

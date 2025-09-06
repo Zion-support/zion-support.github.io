@@ -56,7 +56,7 @@ export function WebhooksManager() {
     await toggleWebhook(webhookId, !currentStatus)
   };
   const handleDeleteWebhook = async (webhookId: string) => {
-    await deleteWebhook(webhookId),
+    await deleteWebhook(webhookId);
     setShowDeleteConfirm(null)
   };
   const handleTestWebhook = async (webhookId: string) => {
@@ -181,7 +181,7 @@ export function WebhooksManager() {
               
               <DialogFooter>
                 <Button variant="outline" onClick={() => {
-                  setShowCreateDialog(false),
+                  setShowCreateDialog(false);
                   resetWebhookForm()
                 }}>
                   Cancel
@@ -294,7 +294,7 @@ export function WebhooksManager() {
         open={showTestDialog !== null} 
         onOpenChange={(open) => {
           if (!open) {
-            setShowTestDialog(null),
+            setShowTestDialog(null);
             setTestEventType('new_application');
             if (showTestResult) {
               setShowTestResult(false);

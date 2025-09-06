@@ -20,7 +20,7 @@ interface OnboardingTrackerProps {
 
 export function OnboardingTracker({ 
   steps;
-  title = "Complete Your Profile";
+  title = "Complete Your Profile",
   className 
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length;

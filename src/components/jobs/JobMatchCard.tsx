@@ -17,13 +17,13 @@ interface JobMatchProps {
   category: string,
   matchPercent: number,
   skills: string[],
-  onApply?: (matchId: string) => void,
-  onViewDetails?: (matchId: string) => void,
+  onApply?: (matchId: string) => void;
+  onViewDetails?: (matchId: string) => void;
   onInvite?: (matchId: string) => void
 }
 
 export function JobMatchCard({ 
-  matchId,
+  matchId;
   talentId;
   name;
   title;

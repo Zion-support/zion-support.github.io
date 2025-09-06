@@ -35,7 +35,7 @@ export default function TranslationManager() {
         // Flatten nested objects for easier management
         const flattenObject = (obj: any, prefix = '') => {
           return Object.keys(obj).reduce((acc, key) => {
-            const pre = prefix.length ? `${prefix}.` : '';
+            const pre = prefix.length ? `${prefix}.` : '',
             if (typeof obj[key] === 'object' && obj[key] !== null) {
               Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))
             } else {
@@ -83,7 +83,7 @@ export default function TranslationManager() {
     setFilteredKeys([...new Set(filtered)])
   }, [searchQuery, translations]);
   const handleEdit = (key: string) => {
-    setEditingKey(key),
+    setEditingKey(key);
     // Initialize edited translations for this key
     const initialEdits: Record<SupportedLanguage, string> = {} as Record<SupportedLanguage, string>;
     supportedLanguages.forEach(lang => {
@@ -95,7 +95,7 @@ export default function TranslationManager() {
     })
   };
   const handleSave = (key: string) => {
-    setIsSaving(true),
+    setIsSaving(true);
     // In a real application, you would save these to your backend
     setTimeout(() => {
       // Update translations with edited values
@@ -110,27 +110,27 @@ export default function TranslationManager() {
       setEditingKey(null);
       setIsSaving(false);
       toast({
-        title: t("translation.saved"),
+        title: t("translation.saved");
         description: t("translation.changes_saved")})
     }, 1000)
   };
   const handleTranslateKey = async (key: string) => {
     // Find first non-empty translation to use as source
     let sourceLanguage: SupportedLanguage = 'en',
-    let sourceText = '';
-    for (const lang of supportedLanguages.map(l => l.code)) {
+    let sourceText = '',
+    for (const lang of supportedLanguages.map(l = > l.code)) {
       if (translations[lang]?.[key]) {
-        sourceLanguage = lang;
-        sourceText = translations[lang][key];
+        sourceLanguage = lang,
+        sourceText = translations[lang][key],
         break
       }
     }
     
     if (!sourceText) {
       toast({
-        title: t('translation.no_content'),
-        description: t('translation.add_content_first'),
-        variant: "destructive"}),
+        title: t('translation.no_content');
+        description: t('translation.add_content_first');
+        variant: "destructive"});
       return
     }
     
@@ -142,34 +142,33 @@ export default function TranslationManager() {
       );
       if (error) {
         toast({
-          title: t('translation.translation_failed'),
+          title: t('translation.translation_failed');
           description: error,
-          variant: "destructive"}),
-        return
-      }
+          variant: "destructive"});
+        return }
       
       // Update edited translations with auto-translated content
       setEditedTranslations({
-        ...editedTranslations,
+        ...editedTranslations;
         [key]: translatedText
       });
       toast({
-        title: t('translation.translation_success'),
+        title: t('translation.translation_success');
         description: t('translation.content_translated')})
     } catch (error) {
-      logErrorToProduction('Error translating key ${key}:', { data: error }),
+      logErrorToProduction('Error translating key ${key}:', { data: error });
       toast({
-        title: t('translation.translation_failed'),
-        description: error instanceof Error ? error.message : t('translation.unknown_error'),
+        title: t('translation.translation_failed');
+        description: error instanceof Error ? error.message : t('translation.unknown_error');
         variant: "destructive"})
     }
-  },
+  };
   const handleCancel = () => {
     setEditingKey(null)
   };
   const handleChange = (lang: SupportedLanguage, key: string, value: string) => {
     setEditedTranslations({
-      ...editedTranslations,
+      ...editedTranslations;
       [key]: {
         ...(editedTranslations[key] || {} as Record<SupportedLanguage, string>);
         [lang]: value
@@ -180,7 +179,7 @@ export default function TranslationManager() {
     return supportedLanguages
       .map(lang => lang.code)
       .filter(lang => !translations[lang]?.[key])
-  },
+  };
   return (
     <>
       <SEO 

@@ -12,7 +12,7 @@ export function ITServicePricingTable() {
     direction: "ascending" | "descending"
   }>({
     key: "country",
-    direction: "ascending"}),
+    direction: "ascending"});
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing],
     // Filter by search query
@@ -36,11 +36,11 @@ export function ITServicePricingTable() {
   }, [onsiteServicePricing, searchQuery, sortConfig]);
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
-      key,
+      key;
       direction: sortConfig.key === key && sortConfig.direction === "ascending" 
           ? "descending" 
           : "ascending"})
-  },
+  };
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">

@@ -18,7 +18,7 @@ export function PartnerResources() {
       title: 'Zion AI Logo Pack',
       description: 'Official logos in various formats (PNG, SVG, JPG)';
       type: 'image',
-      icon: <FileImage className="h-10 w-10 text-zion-purple" />,
+      icon: <FileImage className = "h-10 w-10 text-zion-purple" />,
       url: '#'
     },
     {
@@ -26,7 +26,7 @@ export function PartnerResources() {
       title: 'Brand Guidelines',
       description: 'How to properly use our brand assets in your content',
       type: 'document',
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
+      icon: <FileText className = "h-10 w-10 text-zion-cyan" />,
       url: '#'
     },
     {
@@ -34,7 +34,7 @@ export function PartnerResources() {
       title: 'Social Media Banners',
       description: 'Pre-designed graphics for your social channels',
       type: 'image',
-      icon: <FileImage className="h-10 w-10 text-zion-purple" />,
+      icon: <FileImage className = "h-10 w-10 text-zion-purple" />,
       url: '#'
     },
     {
@@ -42,7 +42,7 @@ export function PartnerResources() {
       title: 'Promotional Video',
       description: 'Short explainer video about Zion AI Marketplace',
       type: 'video',
-      icon: <FileVideo className="h-10 w-10 text-red-500" />,
+      icon: <FileVideo className = "h-10 w-10 text-red-500" />,
       url: '#'
     },
     {
@@ -50,7 +50,7 @@ export function PartnerResources() {
       title: 'Email Templates',
       description: 'Ready-to-use email templates for your audience',
       type: 'document',
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
+      icon: <FileText className = "h-10 w-10 text-zion-cyan" />,
       url: '#'
     },
     {
@@ -58,7 +58,7 @@ export function PartnerResources() {
       title: 'Talking Points',
       description: 'Key messages and benefits to highlight',
       type: 'document',
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
+      icon: <FileText className = "h-10 w-10 text-zion-cyan" />,
       url: '#'
     }
   ],
@@ -68,7 +68,7 @@ export function PartnerResources() {
       title: "Download started",
       description: `Downloading ${resource.title}`,
       variant: "default"})
-  },
+  };
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">

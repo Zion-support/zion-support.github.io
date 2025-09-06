@@ -5,12 +5,12 @@ import { Search, Sliders } from 'lucide-react'
 import { Input } from "@/components/ui/input";
 interface MobileFilterBarProps {
   searchTerm: string,
-  setSearchTerm: (value: string) => void,
+  setSearchTerm: (value: string) => void;
   setIsMobileFilterOpen: (isOpen: boolean) => void
 }
 
 export function MobileFilterBar({ 
-  searchTerm,
+  searchTerm;
   setSearchTerm;
   setIsMobileFilterOpen 
 }: MobileFilterBarProps) {

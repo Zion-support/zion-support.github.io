@@ -26,7 +26,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
           .from("jobs")
           .select("*")
           .eq("client_id", user.id)
-          .order("created_at", { ascending: false }),
+          .order("created_at", { ascending: false });
         if (filter) {
           query = query.eq("status", filter)
         }
@@ -39,7 +39,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
       } finally {
         setIsLoading(false)
       }
-    },
+    };
     fetchJobs()
   }, [user, filter]);
   if (isLoading) {
@@ -68,7 +68,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
 
   const getStatusColor = (status: JobStatus) => {
     switch (status) {
-      case "new": return "bg-blue-100 text-blue-800",
+      case "new": return "bg-blue-100 text-blue-800";
       case "in_progress":
         return "bg-yellow-100 text-yellow-800";
       case "filled":

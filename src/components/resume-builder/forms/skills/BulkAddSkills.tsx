@@ -21,7 +21,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
     setError(null);
     try {
       const enhancedContent = await enhanceContent(
-        bulkSkills;
+        bulkSkills,
         'skill-categorization'
       );
       if (enhancedContent) {
@@ -41,7 +41,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
           }
           
           // Reset the form and bulk input
-          setBulkSkills(''),
+          setBulkSkills('');
           // Refresh the skills
           await onSuccess()
         } catch (err) {
@@ -51,7 +51,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
     } catch (err: any) {
       setError(err.message || 'Failed to categorize skills')
     }
-  },
+  };
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
@@ -87,4 +87,4 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
       </div>
     </div>
   )
-},
+};

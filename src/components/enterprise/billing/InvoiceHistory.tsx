@@ -49,15 +49,15 @@ export function InvoiceHistory() {
     toast({
       title: "Downloading invoice",
       description: `Downloading invoice ${invoiceId} as PDF.`})
-  },
+  };
   const getBadgeForStatus = (status: string) => {
     switch (status) {
-      case "paid": return <Badge className="bg-green-500">Paid</Badge>,
+      case "paid": return <Badge className = "bg-green-500">Paid</Badge>,
       case "pending":
-        return <Badge variant="outline">Pending</Badge>;
+        return <Badge variant = "outline">Pending</Badge>,
       case "overdue":
-        return <Badge variant="destructive">Overdue</Badge>;
-      default: return <Badge variant="outline">{status}</Badge>
+        return <Badge variant = "destructive">Overdue</Badge>,
+      default: return <Badge variant = "outline">{status}</Badge>
     }
   },
   return (

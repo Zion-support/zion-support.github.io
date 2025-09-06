@@ -11,7 +11,7 @@ export function UsageStats() {
     toast({
       title: "Limits updated",
       description: "The new usage limits have been saved successfully."})
-  },
+  };
   return (
     <div className="space-y-8">
       <div>

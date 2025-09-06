@@ -19,7 +19,7 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
     <div className="flex flex-wrap gap-2">
       {badges.map((badge) => {
         // Get the correct icon component based on the badge's icon name
-        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
         return (
           <TooltipProvider key={badge.id}>
             <Tooltip>
@@ -46,5 +46,5 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
       })}
     </div>
   )
-},
+};
 export default UserBadges;

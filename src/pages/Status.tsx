@@ -18,26 +18,26 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
     status: "operational",
     description: "Product listings and search functionality",
     lastChecked: new Date().toISOString()
-  },
+  };
   {
     name: "Authentication Service",
     status: "operational",
     description: "User login and registration",
     lastChecked: new Date().toISOString()
-  },
+  };
   {
     name: "Payment Processing",
     status: "operational",
     description: "Checkout and payment handling",
     lastChecked: new Date().toISOString()
-  },
+  };
   {
     name: "Talent Directory",
     status: "operational",
     description: "AI talent profiles and matching",
     lastChecked: new Date().toISOString()
   }
-],
+];
 export default function Status() {
   const [externalStatusLoaded, setExternalStatusLoaded] = useState(false);
   const [showFallback, setShowFallback] = useState(false);
@@ -71,20 +71,20 @@ export default function Status() {
   const getStatusIcon = (status: ServiceStatus['status']) => {
     switch (status) {
       case 'operational':
-        return <CheckCircle className="h-5 w-5 text-green-500" />,
+        return <CheckCircle className = "h-5 w-5 text-green-500" />,
       case 'degraded':
-        return <Clock className="h-5 w-5 text-yellow-500" />;
+        return <Clock className = "h-5 w-5 text-yellow-500" />,
       case 'outage':
-        return <AlertCircle className="h-5 w-5 text-red-500" />;
+        return <AlertCircle className = "h-5 w-5 text-red-500" />,
       case 'maintenance':
-        return <Clock className="h-5 w-5 text-blue-500" />;
-      default: return <AlertCircle className="h-5 w-5 text-gray-500" />
+        return <Clock className = "h-5 w-5 text-blue-500" />,
+      default: return <AlertCircle className = "h-5 w-5 text-gray-500" />
     }
   },
   const getStatusText = (status: ServiceStatus['status']) => {
     switch (status) {
       case 'operational':
-        return 'Operational',
+        return 'Operational';
       case 'degraded':
         return 'Degraded Performance';
       case 'outage':
@@ -97,7 +97,7 @@ export default function Status() {
   const getStatusColor = (status: ServiceStatus['status']) => {
     switch (status) {
       case 'operational':
-        return 'text-green-500',
+        return 'text-green-500';
       case 'degraded':
         return 'text-yellow-500';
       case 'outage':
@@ -108,7 +108,7 @@ export default function Status() {
     }
   },
   const formatUptime = (seconds: number) => {
-    const days = Math.floor(seconds / 86400),
+    const days = Math.floor(seconds / 86400);
     const hours = Math.floor((seconds % 86400) / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
     const parts: string[] = [],

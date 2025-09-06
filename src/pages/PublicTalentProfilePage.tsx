@@ -15,7 +15,7 @@ export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
   const router = useRouter();
-  const profileId = router.query.profileId as string;
+  const profileId = router.query.profileId as string,
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
@@ -35,7 +35,7 @@ export default function ProfilePage() {
 
         setProfileData(data)
       } catch (error) {
-        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
+        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' });
         setIsError(true);
         toast({
           title: "Error",
@@ -44,7 +44,7 @@ export default function ProfilePage() {
       } finally {
         setIsLoading(false)
       }
-    },
+    };
     if (profileId) {
       fetchProfile()
     }
@@ -215,7 +215,7 @@ export default function ProfilePage() {
           </div>
 
           {/* Sidebar with HireNowCTA */}
-          <div className="col-span-12 lg:col-span-4 space-y-6">
+          <div className = "col-span-12 lg: col-span-4 space-y-6">
             <HireNowCTA
               talentProfile={{
                 id: profileData?.id || '',

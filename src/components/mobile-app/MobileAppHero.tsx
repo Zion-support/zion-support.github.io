@@ -47,4 +47,4 @@ export const MobileAppHero: React.FC = () => {
       </div>
     </section>
   )
-},
+};

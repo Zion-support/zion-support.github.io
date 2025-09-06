@@ -8,15 +8,15 @@ import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmat
 interface ApplicationsTableProps {
   applications: JobApplication[],
   processingId: string | null,
-  onViewApplication: (applicationId: string) => Promise<void>,
-  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,
+  onViewApplication: (applicationId: string) => Promise<void>;
+  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
   onViewScore: (application: JobApplication) => void
 }
 
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = ({ application }: { application: JobApplication }) => {
   const [avatarError, setAvatarError] = useState(false);
-  const talentName = application.talent_profile?.full_name || "Candidate";
+  const talentName = application.talent_profile?.full_name || "Candidate",
   return (
     <AvatarPrimitive className="h-8 w-8"> {/* Using Renamed AvatarPrimitive */}
       {application.talent_profile?.profile_picture_url && !avatarError ? (
@@ -45,7 +45,7 @@ export function ApplicationsTable({
   const [hireModalOpen, setHireModalOpen] = useState(false);
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
   const handleHireClick = (application: JobApplication) => {
-    setSelectedApplication(application),
+    setSelectedApplication(application);
     setHireModalOpen(true)
   };
   const handleHireConfirmed = () => {
@@ -53,7 +53,7 @@ export function ApplicationsTable({
       title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
     })
-  },
+  };
   return (
     <>
       <div className="rounded-md border">

@@ -13,9 +13,9 @@ interface ChunkErrorStats {
 
 class ChunkErrorHandler {
   private errorStats: Map<string, ChunkErrorStats> = new Map();
-  private readonly MAX_RETRIES = 3;
+  private readonly MAX_RETRIES = 3,
   private readonly RETRY_DELAY = 1000, // 1 second
-  private readonly CACHE_CLEAR_THRESHOLD = 2;
+  private readonly CACHE_CLEAR_THRESHOLD = 2,
   constructor() {
     this.initializeGlobalHandlers()
   }
@@ -51,10 +51,10 @@ class ChunkErrorHandler {
   private isChunkError(error: any, filename?: string): boolean {
     if (!error) return false;
     const errorMessage = error.message || String(error);
-    const errorName = error.name || '';
+    const errorName = error.name || '',
     const chunkErrorPatterns = [
       'ChunkLoadErrorLoading chunkFailed to fetch dynamically imported moduleFailed to importchunk-vendors-'
-    ];
+    ],
     return chunkErrorPatterns.some(pattern => 
       errorMessage.includes(pattern) || 
       errorName.includes(pattern) ||
@@ -63,7 +63,7 @@ class ChunkErrorHandler {
   }
 
   private async handleChunkError(error: Error, context: { filename?: string, source: string }): Promise<void> {
-    const sessionKey = this.getSessionKey(),
+    const sessionKey = this.getSessionKey();
     const stats = this.getOrCreateErrorStats(sessionKey);
     stats.errorCount++;
     stats.lastErrorTime = Date.now();
@@ -75,7 +75,7 @@ class ChunkErrorHandler {
       filename: context.filename,
       userAgent: navigator.userAgent,
       url: window.location.href
-    }),
+    });
     // Attempt recovery based on error count
     if (stats.errorCount <= this.MAX_RETRIES) {
       await this.attemptRecovery(stats.errorCount, context)
@@ -89,19 +89,19 @@ class ChunkErrorHandler {
       context: 'chunkErrorRecovery',
       attemptNumber;
       recoveryMethod: this.getRecoveryMethod(attemptNumber)
-    }),
+    });
     switch (attemptNumber) {
       case 1: // First attempt: Simple retry after short delay
-        await this.delay(this.RETRY_DELAY),
+        await this.delay(this.RETRY_DELAY);
         this.reloadPage();
         break;
       case 2: // Second attempt: Clear caches and retry
-        await this.clearCaches(),
+        await this.clearCaches();
         await this.delay(this.RETRY_DELAY * 2);
         this.reloadPage();
         break;
       case 3: // Third attempt: Hard refresh with cache bypass
-        this.hardRefresh(),
+        this.hardRefresh();
         break;
       default: this.showFatalErrorMessage()
     }
@@ -120,14 +120,14 @@ class ChunkErrorHandler {
     try {
       // Clear service worker caches
       if ('caches' in window) {
-        const cacheNames = await caches.keys(),
+        const cacheNames = await caches.keys();
         await Promise.all(
-          cacheNames.map(cacheName => caches.delete(cacheName))
+          cacheNames.map(cacheName = > caches.delete(cacheName))
         )
       }
 
       // Clear localStorage items that might be stale
-      const keysToRemove = ['__NEXT_ROUTER_STATE____NEXT_ROUTE_INFO__'];
+      const keysToRemove = ['__NEXT_ROUTER_STATE____NEXT_ROUTE_INFO__'],
       keysToRemove.forEach(key => {
         try {
           localStorage.removeItem(key)
@@ -159,7 +159,7 @@ class ChunkErrorHandler {
 
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
-    const errorDiv = document.createElement('div'),
+    const errorDiv = document.createElement('div');
     errorDiv.style.cssText = `
       position: fixed,
       top: 0,
@@ -181,7 +181,7 @@ class ChunkErrorHandler {
           We're having trouble loading some parts of the application. 
           This might be due to a poor network connection or a temporary server issue.
         </p>
-        <button onclick="window.location.reload()" style="
+        <button onclick = "window.location.reload()" style = "
           background: #0070f3,
           color: white,
           border: none,
@@ -193,7 +193,7 @@ class ChunkErrorHandler {
         ">
           Try Again
         </button>
-        <button onclick="window.location.href='/'" style="
+        <button onclick = "window.location.href='/'" style="
           background: #666,
           color: white,
           border: none,
@@ -238,7 +238,7 @@ class ChunkErrorHandler {
 
   // Public method to check if we're in a chunk error state
   public isInErrorState(): boolean {
-    const sessionKey = this.getSessionKey(),
+    const sessionKey = this.getSessionKey();
     const stats = this.errorStats.get(sessionKey);
     return stats ? stats.errorCount > 0 : false
   }

@@ -6,7 +6,7 @@ import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContent
 import { toast } from '@/hooks/use-toast';
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
-  onEnhanced: (enhancedContent: string) => void,
+  onEnhanced: (enhancedContent: string) => void;
   buttonText?: string;
   className?: string;
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
@@ -17,10 +17,10 @@ interface AIEnhancementButtonProps {
 export function AIEnhancementButton({
   options;
   onEnhanced;
-  buttonText = "Enhance with AI";
+  buttonText = "Enhance with AI",
   className;
-  variant = "ghost";
-  size = "sm";
+  variant = "ghost",
+  size = "sm",
   contentLength = 10
 }: AIEnhancementButtonProps) {
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
@@ -33,7 +33,7 @@ export function AIEnhancementButton({
         title: "Not enough content",
         description: `Please enter at least ${contentLength} characters before enhancing.`,
         variant: "destructive"
-      }),
+      });
       return
     }
     
@@ -52,7 +52,7 @@ export function AIEnhancementButton({
         title: "Content applied",
         description: "AI-enhanced content has been applied."})
     }
-  },
+  };
   const handleRegenerate = async () => {
     await handleEnhance()
   };

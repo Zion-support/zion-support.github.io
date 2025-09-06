@@ -22,14 +22,13 @@ function ClientDashboardContent() {
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
   const onboardingStatus = useOnboardingStatus();
-  const showAdvanced =
-    onboardingStatus.jobPosted &&
+  const showAdvanced = onboardingStatus.jobPosted &&
     onboardingStatus.inviteSent &&
-    onboardingStatus.responseReceived;
+    onboardingStatus.responseReceived,
   // Set the first job as selected when jobs are loaded (if any)
   useEffect(() => {
     if (jobs.length > 0 && !selectedJobId) {
-      const firstJob = jobs[0];
+      const firstJob = jobs[0],
       if (firstJob) {
         setSelectedJobId(firstJob.id);
         setSelectedJobTitle(firstJob.title)
@@ -37,7 +36,7 @@ function ClientDashboardContent() {
     }
   }, [jobs, selectedJobId]);
   const handleJobSelect = (jobId: string, jobTitle: string) => {
-    setSelectedJobId(jobId),
+    setSelectedJobId(jobId);
     setSelectedJobTitle(jobTitle)
   };
   return (

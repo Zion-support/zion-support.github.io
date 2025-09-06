@@ -17,21 +17,21 @@ export function Step({
   className}: StepProps) {
   return (
     <li
-      className={cn(
-        "relative flex items-center";
+      className = {cn(
+        "relative flex items-center",
         {
-          "opacity-60": status === "incomplete"};
+          "opacity-60": status = == "incomplete"},
         className
       )}
     >
       <div
-        className={cn(
-          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium";
+        className = {cn(
+          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",
           {
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
-              status === "incomplete";
+              status = == "incomplete",
             "bg-zion-blue border-zion-cyan text-white":
-              status === "current";
+              status = == "current",
             "bg-zion-purple border-zion-purple text-white":
               status === "complete"}
         )}
@@ -48,7 +48,7 @@ export function Step({
       <div className="ml-4 min-w-0">
         <h3
           className={cn("text-sm font-medium", {
-            "text-zion-slate-light": status === "incomplete";
+            "text-zion-slate-light": status = == "incomplete",
             "text-white": status === "current" || status === "complete"})}
         >
           {label}
@@ -75,8 +75,8 @@ export function Steps({ currentStep, className, children }: StepsProps) {
         {React.Children.map(childrenArray, (child, index) => {
           if (!React.isValidElement(child)) return null;
           let status: "incomplete" | "current" | "complete" = "incomplete",
-          if (index < currentStep) status = "complete";
-          if (index === currentStep) status = "current";
+          if (index < currentStep) status = "complete",
+          if (index = == currentStep) status = "current",
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}

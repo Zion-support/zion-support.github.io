@@ -27,10 +27,10 @@ export function DisputeDetail() {
   const [isSending, setIsSending] = useState(false);
   const [resolution, setResolution] = useState<{ summary: string, resolution_type: ResolutionType }>({
   summary: "",
-  resolution_type: "compromise"}),
+  resolution_type: "compromise"});
   const [activeTab, setActiveTab] = useState("overview");
   // Check if user is admin (placeholder - implement proper admin check)
-  const isAdmin = user?.userType === "admin";
+  const isAdmin = user?.userType === "admin",
   useEffect(() => {
     if (!disputeId) return;
     const loadDisputeData = async () => {
@@ -46,7 +46,7 @@ export function DisputeDetail() {
         const messagesData = await getDisputeMessages(disputeId);
         setMessages(messagesData)
       } catch (error) {
-        logErrorToProduction('Error loading dispute data:', { data: error }),
+        logErrorToProduction('Error loading dispute data:', { data: error });
         toast.error("Failed to load dispute")
       } finally {
         setIsLoading(false)
@@ -55,7 +55,7 @@ export function DisputeDetail() {
     loadDisputeData()
   }, [disputeId, getDisputeById, getDisputeMessages, router]);
   const handleStatusChange = async (status: DisputeStatus) => {
-    if (!disputeId) return,
+    if (!disputeId) return;
     const success = await updateDisputeStatus(disputeId, status);
     if (success) {
       // Update the dispute object with the new status
@@ -63,7 +63,7 @@ export function DisputeDetail() {
     } else {
       toast.error("Failed to update dispute status")
     }
-  },
+  };
   const handleResolveDispute = async () => {
     if (!disputeId) return;
     if (!resolution.summary) {
@@ -73,7 +73,7 @@ export function DisputeDetail() {
     
     const success = await resolveDispute(disputeId, {
       summary: resolution.summary,
-      resolution_type: (resolution.resolution_type as ResolutionType) || "compromise"}),
+      resolution_type: (resolution.resolution_type as ResolutionType) || "compromise"});
     if (success && dispute) {
       setDispute({
         ...dispute,
@@ -83,7 +83,7 @@ export function DisputeDetail() {
     } else {
       toast.error("Failed to resolve dispute")
     }
-  },
+  };
   const handleSendMessage = async () => {
     if (!disputeId || !message.trim()) return;
     setIsSending(true);
@@ -100,7 +100,7 @@ export function DisputeDetail() {
     } finally {
       setIsSending(false)
     }
-  },
+  };
   if (isLoading) {
     return (
       <div className="p-8 text-center">
@@ -123,9 +123,9 @@ export function DisputeDetail() {
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
-      case "open": return "default",
+      case "open": return "default";
       case "under_review": return "secondary";
-      case "resolved": return "outline", // Changed from "success" to "outline"
+      case "resolved": return "outline"; // Changed from "success" to "outline"
       case "closed": return "outline";
       default: return "default"
     }

@@ -16,7 +16,7 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
   const [subject, setSubject] = useState("");
   const [isSending, setIsSending] = useState(false);
   const handleSendMessage = (e: React.FormEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     setIsSending(true);
     // Here would be the actual API call to send the message
     setTimeout(() => {

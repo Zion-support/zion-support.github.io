@@ -13,7 +13,7 @@ interface ProjectActionsProps {
 }
 
 export function ProjectActions({
-  projectId,
+  projectId;
   isUnderDispute;
   disputeId;
   isTalent;

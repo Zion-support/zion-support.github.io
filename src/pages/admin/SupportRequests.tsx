@@ -125,7 +125,7 @@ export default function SupportRequests() {
   const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
   const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
-  const totalCount = MOCK_SUPPORT_REQUESTS.length;
+  const totalCount = MOCK_SUPPORT_REQUESTS.length,
   const resetFilters = () => {
     setSearchQuery("");
     setStatusFilter(null);

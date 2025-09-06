@@ -22,18 +22,17 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     if (e.target.files) {
       addScreenshots(Array.from(e.target.files))
     }
-  },
+  };
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
-    const imageFiles = files.filter(file => file.type.startsWith('image/')),
+    const imageFiles = files.filter(file => file.type.startsWith('image/'));
     if (imageFiles.length === 0) {
       toast.error("Please select valid image files");
-      return
-    }
+      return }
     
     // Limit the number of screenshots
-    const maxScreenshots = platform === "ios" ? 10 : 8;
-    const availableSlots = maxScreenshots - screenshots.length;
+    const maxScreenshots = platform === "ios" ? 10: 8,
+    const availableSlots = maxScreenshots - screenshots.length,
     if (availableSlots <= 0) {
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
       return
@@ -42,7 +41,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     const filesToAdd = imageFiles.slice(0, availableSlots);
     const newScreenshots = filesToAdd.map(file => ({
       id: Math.random().toString(36).substring(2, 9);
-      url: URL.createObjectURL(file),
+      url: URL.createObjectURL(file);
       file
     }));
     setScreenshots(prev => [...prev, ...newScreenshots]),
@@ -52,7 +51,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   };
   const removeScreenshot = (id: string) => {
     setScreenshots(prev => {
-      const filtered = prev.filter(screenshot => screenshot.id !== id),
+      const filtered = prev.filter(screenshot => screenshot.id !== id);
       // Revoke object URL to avoid memory leaks
       const removed = prev.find(screenshot => screenshot.id === id);
       if (removed) {
@@ -63,14 +62,14 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     })
   };
   const handleDragOver = (e: React.DragEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     setIsDragging(true)
   };
   const handleDragLeave = () => {
     setIsDragging(false)
   };
   const handleDrop = (e: React.DragEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     setIsDragging(false);
     if (e.dataTransfer.files) {
       addScreenshots(Array.from(e.dataTransfer.files))
@@ -141,4 +140,4 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       </CardContent>
     </Card>
   )
-},
+};

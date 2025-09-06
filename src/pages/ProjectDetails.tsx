@@ -42,7 +42,7 @@ function ProjectDetailsContent() {
         toast({
           title: "Project not found",
           description: "The requested project could not be found.",
-          variant: "destructive"}),
+          variant: "destructive"});
         router.push("/dashboard")
       }
       
@@ -60,17 +60,17 @@ function ProjectDetailsContent() {
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
         .eq("project_id", projectId)
-        .order("created_at", { ascending: false }),
+        .order("created_at", { ascending: false });
       if (error) throw error;
       setNotes(data || [])
     } catch (err: any) {
-      logErrorToProduction('Error fetching project notes:', { data: err }),
+      logErrorToProduction('Error fetching project notes:', { data: err });
       toast({
         title: "Failed to load notes",
         description: err.message || "An error occurred while loading project notes.",
         variant: "destructive"})
     }
-  },
+  };
   const handleSubmitNote = async () => {
     if (!newNote.trim() || !project || !user) return;
     setIsSubmittingNote(true);
@@ -81,7 +81,7 @@ function ProjectDetailsContent() {
           project_id: project.id,
           user_id: user.id,
           content: newNote})
-        .select(),
+        .select();
       if (error) throw error;
       // Refresh notes
       fetchProjectNotes(project.id);
@@ -90,7 +90,7 @@ function ProjectDetailsContent() {
         title: "Note added",
         description: "Your note has been added to the project."})
     } catch (err: any) {
-      logErrorToProduction('Error adding note:', { data: err }),
+      logErrorToProduction('Error adding note:', { data: err });
       toast({
         title: "Failed to add note",
         description: err.message || "An error occurred while adding note.",
@@ -98,14 +98,14 @@ function ProjectDetailsContent() {
     } finally {
       setIsSubmittingNote(false)
     }
-  },
+  };
   const handleStatusChange = async (newStatus: ProjectStatus) => {
-    if (!project) return,
+    if (!project) return;
     const success = await updateProjectStatus(project.id, newStatus);
     if (success) {
       setProject({
         ...project,
-        status: newStatus}),
+        status: newStatus});
       // If offer was accepted, show a special toast
       if (newStatus === "offer_accepted") {
         toast({
@@ -113,26 +113,26 @@ function ProjectDetailsContent() {
           description: "The project is now in progress. Congratulations!"})
       }
     }
-  },
+  };
   const getStatusBadge = (status: ProjectStatus) => {
     switch (status) {
-      case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,
+      case "offer_sent": return <Badge variant = "outline">Offer Sent</Badge>,
       case "offer_accepted":
-        return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;
+        return <Badge className = "bg-green-100 text-green-800">Offer Accepted</Badge>,
       case "changes_requested":
-        return <Badge variant="secondary">Changes Requested</Badge>;
+        return <Badge variant = "secondary">Changes Requested</Badge>,
       case "in_progress":
-        return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>;
+        return <Badge className = "bg-blue-100 text-blue-800">In Progress</Badge>,
       case "completed":
-        return <Badge variant="default">Completed</Badge>;
+        return <Badge variant = "default">Completed</Badge>,
       case "canceled":
-        return <Badge variant="destructive">Canceled</Badge>;
-      default: return <Badge variant="outline">{status}</Badge>
+        return <Badge variant = "destructive">Canceled</Badge>,
+      default: return <Badge variant = "outline">{status}</Badge>
     }
   },
   if (isLoading) {
     return (
-      <div className="container mx-auto py-8">
+      <div className = "container mx-auto py-8">
         <div className="flex justify-center items-center h-64">
           <div className="text-center">
             <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4"></div>
@@ -164,13 +164,13 @@ function ProjectDetailsContent() {
   
   // Check if user is either the client or the talent
   const isClient = user?.id === project.client_id,
-  const isTalent = user?.id === project.talent_id;
+  const isTalent = user?.id === project.talent_id,
   if (!isClient && !isTalent) {
     router.push("/unauthorized");
     return null
   }
   
-  const isOfferPending = project.status === "offer_sent";
+  const isOfferPending = project.status === "offer_sent",
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
   return (

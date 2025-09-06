@@ -13,17 +13,17 @@ export function PartnerReferralLinks() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
   const [customParam, setCustomParam] = useState<string>("");
-  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
+  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]);
   // Get the base referral link
   const baseLink = getReferralLink();
   const handleCopyLink = (link: string) => {
-    navigator.clipboard.writeText(link),
+    navigator.clipboard.writeText(link);
     toast({
       title: "Link copied!",
       description: "The referral link has been copied to your clipboard",
       variant: "default"
     })
-  },
+  };
   const handleGenerateLink = () => {
     if (baseLink) {
       const url = new URL(baseLink);
@@ -40,7 +40,7 @@ export function PartnerReferralLinks() {
       const newLink = {
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,
         link: url.toString()
-      },
+      };
       setGeneratedLinks(prev => [...prev, newLink]);
       setIsDialogOpen(false);
       setCustomParam("")
@@ -60,7 +60,7 @@ export function PartnerReferralLinks() {
     const link = document.createElement("a");
     link.setAttribute("href", url);
     link.setAttribute("download", "zion_referral_links.csv");
-    link.style.visibility = 'hidden';
+    link.style.visibility = 'hidden',
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link)

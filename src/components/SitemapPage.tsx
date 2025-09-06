@@ -8,7 +8,7 @@ import { SEO } from './SEO';
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'};
-const resolvePath = (path: string): string => pathMap[path] ?? path,
+const resolvePath = (path: string): string = > pathMap[path] ?? path,
 export const SitemapPage: React.FC = () => {
   return (
     <>

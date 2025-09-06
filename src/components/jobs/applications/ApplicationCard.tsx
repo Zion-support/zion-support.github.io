@@ -37,7 +37,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           <Button variant="secondary" size="sm" className="bg-green-100 text-green-800 hover: bg-green-200 hover:text-green-900">
             <FileText className="h-4 w-4 mr-1" /> View Offer
           </Button>
-        ),
+        );
       case "rejected":
         return (
           <Button variant="outline" size="sm">

@@ -74,12 +74,12 @@ const HealthDashboard: React.FC = () => {
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'healthy':
-        return <CheckCircle className="w-5 h-5 text-green-500" />,
+        return <CheckCircle className = "w-5 h-5 text-green-500" />,
       case 'warning':
-        return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
+        return <AlertTriangle className = "w-5 h-5 text-yellow-500" />,
       case 'critical':
-        return <XCircle className="w-5 h-5 text-red-500" />;
-      default: return <Activity className="w-5 h-5 text-gray-500" />
+        return <XCircle className = "w-5 h-5 text-red-500" />,
+      default: return <Activity className = "w-5 h-5 text-gray-500" />
     }
   },
   const getStatusBadge = (status: string) => {
@@ -92,13 +92,13 @@ const HealthDashboard: React.FC = () => {
     )
   };
   const formatUptime = (seconds: number) => {
-    const hours = Math.floor(seconds / 3600),
+    const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
     return `${hours}h ${minutes}m`
   };
   const formatBytes = (bytes: number) => {
     return `${bytes.toFixed(1)} MB`
-  },
+  };
   if (loading) {
     return (
       <div className="flex items-center justify-center p-8">
@@ -123,7 +123,7 @@ const HealthDashboard: React.FC = () => {
     )
   }
 
-  if (!healthData) return null,
+  if (!healthData) return null;
   return (
     <div className="space-y-6">
       {/* Header */}

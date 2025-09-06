@@ -11,8 +11,8 @@ import { useAuth } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
 export interface TalentCardProps {
   talent: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire: (talent: TalentProfile) => void,
+  onViewProfile: (id: string) => void;
+  onRequestHire: (talent: TalentProfile) => void;
   isAuthenticated: boolean
 }
 
@@ -32,7 +32,7 @@ const TalentCardComponent = ({
     }
   };
   const handleRequestHire = (e: React.MouseEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     e.stopPropagation();
     if (onRequestHire) {
       onRequestHire(talent)
@@ -146,7 +146,7 @@ const TalentCardComponent = ({
               size="sm"
               variant="ghost"
               onClick={(e) => {
-                e.stopPropagation(),
+                e.stopPropagation();
                 handleViewProfile()
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
@@ -158,6 +158,6 @@ const TalentCardComponent = ({
       </div>
     </Card>
   )
-},
+};
 export const TalentCard = React.memo(TalentCardComponent);
-TalentCard.displayName = 'TalentCard';
+TalentCard.displayName = 'TalentCard',

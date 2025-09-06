@@ -28,7 +28,7 @@ export function ChatBotPanel() {
       id: "welcome",
       content: "Hi! How can I help you?",
       sender: "bot",
-      timestamp: new Date()}]),
+      timestamp: new Date()}]);
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [failedAttempts, setFailedAttempts] = useState(0);
@@ -48,12 +48,12 @@ export function ChatBotPanel() {
     }
   }, []);
   const handleSendMessage = async (text: string = inputValue) => {
-    if (!text.trim()) return,
+    if (!text.trim()) return;
     const userMessage: Message = {
-      id: `user-${Date.now()}`,
+      id: `user-${Date.now()}`;
       content: text,
       sender: "user",
-      timestamp: new Date()},
+      timestamp: new Date()};
     setMessages((prev) => [...prev, userMessage]);
     setInputValue("");
     setIsLoading(true);
@@ -61,10 +61,10 @@ export function ChatBotPanel() {
       // Call the OpenAI-powered support function
       const response = await sendToAIAssistant(text);
       const botMessage: Message = {
-        id: `bot-${Date.now()}`,
+        id: `bot-${Date.now()}`;
         content: response.message || "Sorry, I couldn't process your request. Please try again.";
         sender: "bot",
-        timestamp: new Date()},
+        timestamp: new Date()};
       setMessages((prev) => [...prev, botMessage]);
       // Check if the request was successful
       if (!response.success) {
@@ -78,11 +78,11 @@ export function ChatBotPanel() {
         setFailedAttempts(0)
       }
     } catch (error) {
-      logErrorToProduction("Error in AI chat", error as Error, { component: 'ChatBotPanel' }),
+      logErrorToProduction("Error in AI chat", error as Error, { component: 'ChatBotPanel' });
       toast({
         variant: "destructive",
         title: "Communication Error",
-        description: "We're having trouble connecting to our support service."}),
+        description: "We're having trouble connecting to our support service."});
       setFailedAttempts((prev) => prev + 1);
       if (failedAttempts >= 2) {
         suggestEscalation()
@@ -99,7 +99,7 @@ export function ChatBotPanel() {
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
-        })}),
+        })});
       if (!response.ok) {
         return {
           success: false,
@@ -107,13 +107,13 @@ export function ChatBotPanel() {
         }
       }
       
-      const data = await response.json(),
+      const data = await response.json();
       return {
         success: true,
         message: data.message
       }
     } catch (error) {
-      logErrorToProduction("Error calling Supabase AI chat function", error as Error, { component: 'ChatBotPanel', functionName: 'ai-chat' }),
+      logErrorToProduction("Error calling Supabase AI chat function", error as Error, { component: 'ChatBotPanel', functionName: 'ai-chat' });
       return {
         success: false,
         message: "I'm experiencing technical difficulties. Please try again later."
@@ -122,10 +122,10 @@ export function ChatBotPanel() {
   },
   const suggestEscalation = () => {
     const escalationMessage: Message = {
-      id: `bot-escalation-${Date.now()}`,
+      id: `bot-escalation-${Date.now()}`;
       content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
       sender: "bot",
-      timestamp: new Date()},
+      timestamp: new Date()};
     setMessages((prev) => [...prev, escalationMessage]);
     // Log this interaction for the support team
     logSupportEscalation()
@@ -135,58 +135,58 @@ export function ChatBotPanel() {
       // Send the conversation to the backend for logging
       // This would be implemented in a real system
       logDebug("Support escalation triggered", {
-        conversationHistory: messages.map(m => ({
+        conversationHistory: messages.map(m = > ({
           content: m.content,
           sender: m.sender,
           timestamp: m.timestamp
-        })),
+        }));
         component: 'ChatBotPanel'
       })
     } catch (error) {
       logErrorToProduction("Failed to log support escalation", error as Error, { component: 'ChatBotPanel' })
     }
-  },
+  };
   const handleQuickReply = (text: string) => {
     handleSendMessage(text)
-  },
+  };
   const handleEscalateToLiveAgent = () => {
     setMessages((prev) => [
-      ...prev,
+      ...prev;
       {
-        id: `user-${Date.now()}`,
+        id: `user-${Date.now()}`;
         content: "I'd like to speak with a human agent",
         sender: "user",
         timestamp: new Date()
-      },
+      };
       {
-        id: `bot-${Date.now()}`,
+        id: `bot-${Date.now()}`;
         content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.";
         sender: "bot",
         timestamp: new Date()
       }
-    ]),
+    ]);
     // In a real implementation, this would trigger a live chat request
     toast({
       title: "Support request submitted",
       description: "A support agent will be with you shortly."})
-  },
+  };
   const handleEmailSupport = () => {
     setMessages((prev) => [
-      ...prev,
+      ...prev;
       {
-        id: `user-${Date.now()}`,
+        id: `user-${Date.now()}`;
         content: "I'd like to email support",
         sender: "user",
         timestamp: new Date()
-      },
+      };
       {
-        id: `bot-${Date.now()}`,
+        id: `bot-${Date.now()}`;
         content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours.",
         sender: "bot",
         timestamp: new Date()
       }
     ])
-  },
+  };
   return (
     <div className="flex flex-col h-full">
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
@@ -249,7 +249,7 @@ export function ChatBotPanel() {
         </div>
       )}
       
-      <div className={cn(
+      <div className = {cn(
         "p-4 border-t",
         theme === "dark" ? "border-zion-blue-light" : "border-gray-200"
       )}>
@@ -258,13 +258,13 @@ export function ChatBotPanel() {
             e.preventDefault();
             handleSendMessage()
           }}
-          className="flex items-center gap-2"
+          className = "flex items-center gap-2"
         >
           <Input
             ref={inputRef}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            placeholder="Type your question..."
+            placeholder = "Type your question..."
             className={cn(
               "flex-1",
               theme === "dark" 

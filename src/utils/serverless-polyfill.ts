@@ -27,7 +27,7 @@ declare global {
 }
 
 // CRITICAL: Self polyfill - must be first
-if (typeof self === 'undefined') {
+if (typeof self = == 'undefined') {
   if (typeof global !== 'undefined') {
     (global as any).self = global,
     if (typeof globalThis !== 'undefined') {
@@ -62,14 +62,14 @@ if (typeof webpackChunk_N_E === 'undefined') {
 const tsHelpers = {
   __extends: function(d: any, b: any) {
     if (typeof b !== "function" && b !== null)
-      throw new TypeError("Class extends value " + String(b) + " is not a constructor or null"),
+      throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
     function __extends_helper(this: any) { this.constructor = d }
     d.prototype = b === null ? Object.create(b) : (__extends_helper.prototype = b.prototype, new (__extends_helper as any)())
   };
   __assign: function() {
     return Object.assign || function (t: any) {
       for (var s, i = 1, n = arguments.length, i < n, i++) {
-        s = arguments[i];
+        s = arguments[i],
         for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p))
           t[p] = s[p]
       }
@@ -83,7 +83,7 @@ const tsHelpers = {
     if (s != null && typeof Object.getOwnPropertySymbols === "function") {
       const symbols = Object.getOwnPropertySymbols(s);
       for (let i = 0, i < symbols.length, i++) {
-        const symbol = symbols[i];
+        const symbol = symbols[i],
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol))
           t[symbol] = s[symbol]
       }
@@ -118,8 +118,8 @@ Object.keys(tsHelpers).forEach(helper => {
 // Error prevention for common webpack issues
 try {
   // Prevent webpack chunk loading errors
-  if (selfRef.webpackChunk_N_E && typeof selfRef.webpackChunk_N_E.push === 'function') {
-    const originalPush = selfRef.webpackChunk_N_E.push;
+  if (selfRef.webpackChunk_N_E && typeof selfRef.webpackChunk_N_E.push = == 'function') {
+    const originalPush = selfRef.webpackChunk_N_E.push,
     selfRef.webpackChunk_N_E.push = function(chunk: any) {
       try {
         return originalPush.call(this, chunk)
@@ -135,7 +135,7 @@ try {
 
 // Global error suppression for common serverless issues
 if (typeof window !== 'undefined') {
-  const originalOnError = window.onerror;
+  const originalOnError = window.onerror,
   window.onerror = function(message, source, lineno, colno, error) {
     // Suppress specific known errors that don't affect functionality
     if (typeof message === 'string') {
@@ -144,7 +144,7 @@ if (typeof window !== 'undefined') {
           message.includes('self is not defined') ||
           message.includes('__extends') ||
           message.includes('getInitialProps')) {
-        return true, // Suppress error
+        return true; // Suppress error
       }
     }
     
@@ -154,7 +154,7 @@ if (typeof window !== 'undefined') {
     }
     return false
   };
-  const originalOnUnhandledRejection = window.onunhandledrejection;
+  const originalOnUnhandledRejection = window.onunhandledrejection,
   window.onunhandledrejection = function(event) {
     // Suppress specific promise rejection errors
     if (event.reason && typeof event.reason.message === 'string') {
@@ -162,8 +162,7 @@ if (typeof window !== 'undefined') {
           event.reason.message.includes('Cannot destructure property') ||
           event.reason.message.includes('self is not defined')) {
         event.preventDefault();
-        return
-      }
+        return }
     }
     
     // Call original handler for other rejections
@@ -196,7 +195,7 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {
 export const verifyPolyfills = () => {
   const checks = {
     selfDefined: typeof self !== 'undefined',
-    webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),
+    webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined');
     tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
   },

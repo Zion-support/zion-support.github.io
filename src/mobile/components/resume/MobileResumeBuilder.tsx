@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
 
-type ResumeStep = "basics" | "experience" | "education" | "skills";
+type ResumeStep = "basics" | "experience" | "education" | "skills",
 export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
   const renderStepContent = () => {
@@ -105,14 +105,14 @@ function BasicsStep() {
 }
 
 function ExperienceStep() {
-  const [experiences, setExperiences] = useState([{ id: '1' }]),
+  const [experiences, setExperiences] = useState([{ id: '1' }]);
   const addExperience = () => {
     const newId = (experiences.length + 1).toString();
     setExperiences([...experiences, { id: newId }])
-  },
+  };
   const removeExperience = (id: string) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
-  },
+  };
   return (
     <div className="space-y-4">
       {experiences.map((exp, index) => (
@@ -174,14 +174,14 @@ function ExperienceStep() {
 }
 
 function EducationStep() {
-  const [educations, setEducations] = useState([{ id: '1' }]),
+  const [educations, setEducations] = useState([{ id: '1' }]);
   const addEducation = () => {
     const newId = (educations.length + 1).toString();
     setEducations([...educations, { id: newId }])
-  },
+  };
   const removeEducation = (id: string) => {
     setEducations(educations.filter(edu => edu.id !== id))
-  },
+  };
   return (
     <div className="space-y-4">
       {educations.map((edu, index) => (
@@ -241,14 +241,14 @@ function EducationStep() {
 function SkillsStep() {
   const [skills, setSkills] = useState([
     { id: '1', name: "", proficiency: "beginner" }
-  ]),
+  ]);
   const addSkill = () => {
     const newId = (skills.length + 1).toString();
     setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }])
-  },
+  };
   const removeSkill = (id: string) => {
     setSkills(skills.filter(skill => skill.id !== id))
-  },
+  };
   const updateSkill = (id: string, field: string, value: string) => {
     setSkills(skills.map(skill => 
       skill.id === id ? { ...skill, [field]: value } : skill

@@ -142,10 +142,10 @@ export default function PageErrorBoundary({
       errorBoundary: 'PageErrorBoundary',
       timestamp: new Date().toISOString()
     })
-  },
+  };
   const FallbackComponent = fallback || ((props: FallbackProps) => (
     <PageErrorFallback {...props} pageName={pageName} />
-  )),
+  ));
   return (
     <ErrorBoundary
       FallbackComponent={FallbackComponent}

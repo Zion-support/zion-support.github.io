@@ -14,7 +14,7 @@ interface ReviewsModerationTableProps {
 }
 
 export function ReviewsModerationTable({
-  reviews,
+  reviews;
   isLoading;
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null);
@@ -36,7 +36,7 @@ export function ReviewsModerationTable({
     onSuccess: (data) => {
       toast({
         title: "Review updated",
-        description: `Review has been ${data.status}.`}),
+        description: `Review has been ${data.status}.`});
       onRefresh();
       setViewDetailsOpen(false)
     };
@@ -45,14 +45,14 @@ export function ReviewsModerationTable({
         title: "Error",
         description: `Failed to update review: ${error.message}`,
         variant: "destructive"})
-    }}),
+    }});
   const getInitials = (name: string) => {
     return name
       .split(" ")
       .map((n) => n[0])
       .join("")
       .toUpperCase()
-  },
+  };
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -77,12 +77,12 @@ export function ReviewsModerationTable({
 
   const handleApprove = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "approved" })
-  },
+  };
   const handleReject = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "rejected" })
-  },
+  };
   const handleViewDetails = (review: Review) => {
-    setSelectedReview(review),
+    setSelectedReview(review);
     setViewDetailsOpen(true)
   };
   const renderStars = (rating: number) => {

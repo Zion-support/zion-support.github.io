@@ -9,10 +9,10 @@ interface AuthButtonsProps {
 export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }: AuthButtonsProps) {
   const [loadingProvider, setLoadingProvider] = useState<string | null>(null);
   const handleSignIn = async (provider: Provider) => {
-    setLoadingProvider(provider),
+    setLoadingProvider(provider);
     await signIn(provider)
   };
-  const gridCols = `grid-cols-${providers.length}`;
+  const gridCols = `grid-cols-${providers.length}`,
   return (
     <div className={`mt-6 grid ${gridCols} gap-3`}>
       {providers.includes('google') && (

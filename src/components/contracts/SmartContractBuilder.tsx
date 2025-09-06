@@ -12,14 +12,14 @@ import { useSmartContracts } from "@/hooks/useSmartContracts";
 import { toast } from "sonner";
 interface SmartContractBuilderProps {
   isOpen: boolean,
-  onClose: () => void,
+  onClose: () => void;
   talent: TalentProfile,
   clientName: string,
   onContractGenerated?: (contractContent: string) => void
 }
 
 export function SmartContractBuilder({
-  isOpen,
+  isOpen;
   onClose;
   talent;
   clientName;
@@ -34,13 +34,13 @@ export function SmartContractBuilder({
     network: 'ethereum',
     useEscrow: true,
     deployToChain: false
-  }),
+  });
   const [deployStatus, setDeployStatus] = useState<string>('');
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
   const { deploySmartContract } = useSmartContracts();
   const handleLoadTemplate = (templateData: ContractFormValues) => {
     setFormValues(templateData)
-  },
+  };
   // Convert ContractFormValues to contract content string
   
   const handleDeployContract = async () => {
@@ -57,7 +57,7 @@ export function SmartContractBuilder({
         toast.error("Failed to deploy smart contract")
       }
     } catch (error) {
-      logErrorToProduction('Error deploying contract:', { data: error }),
+      logErrorToProduction('Error deploying contract:', { data: error });
       setDeployStatus('error');
       toast.error("Failed to deploy smart contract")
     }

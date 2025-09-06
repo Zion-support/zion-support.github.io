@@ -15,7 +15,7 @@ import { CertificationFormValues, certificationSchema } from './types';
 interface CertificationsFormProps {
   resumeId: string,
   certifications: Certification[],
-  onComplete: () => void,
+  onComplete: () => void;
   onBack: () => void
 }
 
@@ -25,22 +25,22 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
   const [error, setError] = useState<string | null>(null);
   // Helper function to format dates as strings for form inputs
   const formatDateValue = (dateValue: string | Date | undefined): string => {
-    if (!dateValue) return '',
+    if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue;
     return format(dateValue, 'yyyy-MM-dd')
   };
   const form = useForm<CertificationFormValues>({
-    resolver: zodResolver(certificationSchema),
+    resolver: zodResolver(certificationSchema);
     defaultValues: {
       name: '',
       issuing_organization: '',
       issue_date: '',
       expiration_date: '',
       credential_id: '',
-      credential_url: ''}}),
+      credential_url: ''}});
   const handleAddOrUpdate = async (data: CertificationFormValues) => {
     try {
-      setError(null),
+      setError(null);
       let success;
       const certData: Certification = {
         name: data.name,
@@ -62,25 +62,25 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
           issue_date: '',
           expiration_date: '',
           credential_id: '',
-          credential_url: ''}),
+          credential_url: ''});
         setEditingId(null)
       }
     } catch (err: any) {
       setError(err.message || 'An error occurred')
     }
-  },
+  };
   const handleEdit = (cert: Certification) => {
-    setEditingId(cert.id!),
+    setEditingId(cert.id!);
     form.reset({
       ...cert,
-      issue_date: formatDateValue(cert.issue_date),
+      issue_date: formatDateValue(cert.issue_date);
       expiration_date: formatDateValue(cert.expiration_date)})
-  },
+  };
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this certification?')) {
       await deleteCertification(id)
     }
-  },
+  };
   return (
     <div className="space-y-6">
       <div>
@@ -115,7 +115,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                 variant="outline"
                 onClick={() => {
                   if (editingId) {
-                    setEditingId(null),
+                    setEditingId(null);
                     form.reset({
                       name: '',
                       issuing_organization: '',

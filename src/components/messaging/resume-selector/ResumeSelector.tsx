@@ -30,7 +30,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       } finally {
         setIsLoading(false)
       }
-    },
+    };
     loadResumes()
   }, [fetchResume]);
   // Update resume options when resume data changes
@@ -52,7 +52,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   }, [resume, selectedOption, onResumeSelected]);
   // Handle radio option change
   const handleOptionChange = (value: 'recent' | 'select' | 'upload') => {
-    setSelectedOption(value),
+    setSelectedOption(value);
     if (value === 'recent' && resumeOptions.length > 0 && resumeOptions[0]) {
       setSelectedResume(resumeOptions[0]);
       onResumeSelected(resumeOptions[0])
@@ -65,7 +65,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   };
   // Handle resume selection change
   const handleResumeSelect = (resumeId: string) => {
-    const selected = resumeOptions.find(opt => opt.id === resumeId),
+    const selected = resumeOptions.find(opt => opt.id === resumeId);
     if (selected) {
       setSelectedResume(selected);
       onResumeSelected(selected)
@@ -81,9 +81,8 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
           title: "Invalid file type",
           description: "Please upload a PDF file",
           variant: "destructive"
-        }),
-        return
-      }
+        });
+        return }
       
       // Create a custom resume option
       const customOption: ResumeOption = {
@@ -109,8 +108,8 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       // Create download link
       const url = URL.createObjectURL(pdfBlob);
       const link = document.createElement('a');
-      link.href = url;
-      link.download = `${selectedResume.title || 'Resume'}.pdf`;
+      link.href = url,
+      link.download = `${selectedResume.title || 'Resume'}.pdf`,
       document.body.appendChild(link);
       link.click();
       // Clean up
@@ -120,7 +119,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         title: "Success!",
         description: "Your resume has been downloaded."})
     } catch (error) {
-      logErrorToProduction('Error downloading PDF:', { data: error }),
+      logErrorToProduction('Error downloading PDF:', { data: error });
       toast({
         title: "Download failed",
         description: "There was an error downloading your resume.",
@@ -129,7 +128,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
     } finally {
       setIsLoading(false)
     }
-  },
+  };
   // Handle "Generate Resume Now" button
   const handleGenerateResume = () => {
     window.open('/dashboard/talent/portfolio_blank')

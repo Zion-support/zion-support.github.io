@@ -20,34 +20,34 @@ const formSchema = z.object({
   company_name: z.string().min(1, "Company name is required");
   role_title: z.string().min(1, "Role title is required");
   start_date: z.date({
-    required_error: "Start date is required"}),
-  end_date: z.date().optional(),
-  is_current: z.boolean().default(false),
-  description: z.string().optional(),
-  location: z.string().optional()}),
-type FormValues = z.infer<typeof formSchema>;
+    required_error: "Start date is required"});
+  end_date: z.date().optional();
+  is_current: z.boolean().default(false);
+  description: z.string().optional();
+  location: z.string().optional()});
+type FormValues = z.infer<typeof formSchema>,
 interface WorkExperienceItemFormProps {
   initialData?: WorkExperience;
-  onSubmit: (data: WorkExperience) => Promise<void>,
+  onSubmit: (data: WorkExperience) => Promise<void>;
   onCancel: () => void
 }
 
 export function WorkExperienceItemForm({
-  initialData,
+  initialData;
   onSubmit;
   onCancel}: WorkExperienceItemFormProps) {
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
   // Set up form
   const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(formSchema);
     defaultValues: {
       company_name: initialData?.company_name || "",
       role_title: initialData?.role_title || "",
-      start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
-      end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
+      start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date();
+      end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined;
       is_current: initialData?.is_current || false,
       description: initialData?.description || "",
-      location: initialData?.location || ""}}),
+      location: initialData?.location || ""}});
   const { isSubmitting } = form.formState;
   const watchIsCurrent = form.watch("is_current");
   const watchRoleTitle = form.watch("role_title");
@@ -67,7 +67,7 @@ export function WorkExperienceItemForm({
     await onSubmit(workExperience)
   };
   const handleAIEnhancement = (content: string) => {
-    form.setValue("description", content, { shouldDirty: true }),
+    form.setValue("description", content, { shouldDirty: true });
     setIsEnhancementDialogOpen(false)
   };
   return (
@@ -120,7 +120,7 @@ export function WorkExperienceItemForm({
             />
             
             <FormField
-              control={form.control}
+              control = {form.control}
               name="is_current"
               render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-col">
@@ -147,7 +147,7 @@ export function WorkExperienceItemForm({
               control={form.control}
               name="start_date"
               render={({ field }: { field: any }) => (
-                <FormItem className="flex flex-col">
+                <FormItem className = "flex flex-col">
                   <FormLabel>Start Date</FormLabel>
                   <Popover>
                     <PopoverTrigger asChild>
@@ -164,7 +164,7 @@ export function WorkExperienceItemForm({
                           ) : (
                             <span>Select date</span>
                           )}
-                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />
+                          <CalendarIcon className = "ml-auto h-4 w-4 opacity-50" aria-hidden="true" />
                         </Button>
                       </FormControl>
                     </PopoverTrigger>
@@ -190,7 +190,7 @@ export function WorkExperienceItemForm({
                 control={form.control}
                 name="end_date"
                 render={({ field }: { field: any }) => (
-                  <FormItem className="flex flex-col">
+                  <FormItem className = "flex flex-col">
                     <FormLabel>End Date</FormLabel>
                     <Popover>
                       <PopoverTrigger asChild>
@@ -236,7 +236,7 @@ export function WorkExperienceItemForm({
             name="description"
             render={({ field }: { field: any }) => (
               <FormItem>
-                <div className="flex justify-between items-center">
+                <div className = "flex justify-between items-center">
                   <FormLabel>Description</FormLabel>
                   <div className="flex gap-2">
                     <AIEnhancementButton
@@ -262,7 +262,7 @@ export function WorkExperienceItemForm({
                 <FormControl>
                   <Textarea
                     placeholder="Describe your responsibilities, achievements, and skills used in this role..."
-                    className="min-h-[150px]"
+                    className = "min-h-[150px]"
                     {...field}
                   />
                 </FormControl>
@@ -293,10 +293,10 @@ export function WorkExperienceItemForm({
         title="Enhance Work Experience Description"
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
-        onApply={handleAIEnhancement}
+        onApply = {handleAIEnhancement}
         defaultOptions={{
           enhancementType: "work-description",
-          content: form.getValues("description") || "",
+          content: form.getValues("description") || "";
           context: `${watchRoleTitle} at ${watchCompanyName}`}}
         initialContent={form.getValues("description") || ""}
       />

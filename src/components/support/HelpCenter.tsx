@@ -14,12 +14,12 @@ export default function HelpCenter() {
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const handleCategorySelect = (categoryId: string) => {
-    setSelectedCategory(categoryId),
+    setSelectedCategory(categoryId);
     setSelectedArticle(null)
   };
   const handleArticleSelect = (articleId: string) => {
     setSelectedArticle(articleId)
-  },
+  };
   const handleBackToCategories = () => {
     setSelectedCategory(null);
     setSelectedArticle(null)

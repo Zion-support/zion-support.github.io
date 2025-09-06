@@ -10,7 +10,7 @@ interface UserTypeOption {
 }
 
 interface UserTypeSelectionProps {
-  onSelect: (userType: "serviceProvider" | "talent" | "client") => void,
+  onSelect: (userType: "serviceProvider" | "talent" | "client") => void;
   selectedType: string | null
 }
 
@@ -36,7 +36,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
     }
   ],
   return (
-    <div className="space-y-6">
+    <div className = "space-y-6">
       <div className="text-center mb-6">
         <h3 className="text-2xl font-bold text-white">Choose your role</h3>
         <p className="text-zion-slate-light mt-2">
@@ -47,7 +47,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       <div className="grid gap-4 md: grid-cols-3">
         {userTypes.map((type) => {
           const Icon = type.icon,
-          const isSelected = selectedType === type.id;
+          const isSelected = selectedType === type.id,
           return (
             <Button
               key={type.id}

@@ -11,14 +11,14 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
 export function ClickableBadge({
   children;
   className;
-  variant = "default";
+  variant = "default",
   onRemove;
   ...props
 }: ClickableBadgeProps) {
   return (
     <div
       className={cn(
-        badgeVariants({ variant }),
+        badgeVariants({ variant });
         "group flex items-center gap-1";
         onRemove && "pl-2.5 pr-1.5 py-1";
         className
@@ -28,9 +28,9 @@ export function ClickableBadge({
       <span>{children}</span>
       {onRemove && (
         <button
-          type="button"
+          type = "button"
           onClick={(e) => {
-            e.stopPropagation(),
+            e.stopPropagation();
             onRemove()
           }}
           className="ml-1 rounded-full p-0.5 hover:bg-background/20"

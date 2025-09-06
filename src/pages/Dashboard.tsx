@@ -13,19 +13,19 @@ import { EmptyState } from "@/components/ui/empty-state";
 import Link from 'next/link';
 // Lazy load heavy components to prevent router abort
 const CommunityDiscussion = dynamic(() => import("@/components/CommunityDiscussion").then(mod => ({ default: mod.CommunityDiscussion })), {
-  loading: () => <div className="h-32 bg-zion-blue-light rounded animate-pulse" />,
-  ssr: false}),
+  loading: () => <div className = "h-32 bg-zion-blue-light rounded animate-pulse" />,
+  ssr: false});
 const PointsBadge = dynamic(() => import('@/components/loyalty/PointsBadge').then(mod => ({ default: mod.PointsBadge })), {
-  loading: () => <span className="text-zion-cyan font-medium">Loading...</span>,
-  ssr: false}),
+  loading: () => <span className = "text-zion-cyan font-medium">Loading...</span>,
+  ssr: false});
 const ApiKeysManager = dynamic(() => import('@/components/developers/ApiKeysManager').then(mod => ({ default: mod.ApiKeysManager })), {
-  loading: () => <div className="h-24 bg-zion-blue-light rounded animate-pulse" />,
-  ssr: false}),
+  loading: () => <div className = "h-24 bg-zion-blue-light rounded animate-pulse" />,
+  ssr: false});
 const NotificationBell = dynamic(() => import("@/components/NotificationBell").then(mod => ({ default: mod.NotificationBell })), {
-  loading: () => <Bell size={16} className="text-zion-cyan" />,
-  ssr: false}),
+  loading: () => <Bell size = {16} className="text-zion-cyan" />,
+  ssr: false});
 const GuidedTour = dynamic(() => import("@/components/onboarding/GuidedTour").then(mod => ({ default: mod.GuidedTour })), {
-  ssr: false}),
+  ssr: false});
 // Lazy load notification functions
 const loadNotificationFunctions = () => import("@/utils/notifications");
 export default function Dashboard() {
@@ -33,13 +33,13 @@ export default function Dashboard() {
   const { user, loading } = useRequireAuth(), // This will handle authentication and redirects
   const { toast } = useToast();
   // Add safe checks for user ID to prevent premature API calls
-  const userId = user?.id;
-  const { data: orders = [], isLoading: ordersLoading } = useGetOrdersQuery(userId),
+  const userId = user?.id,
+  const { data: orders = [], isLoading: ordersLoading } = useGetOrdersQuery(userId);
   const { favorites } = useFavorites();
   // Type assertion to work around Supabase User type limitations
-  const userWithExtendedProps = user as any;
-  const userType = userWithExtendedProps?.userType || user?.user_metadata?.userType || 'talent';
-  const roleForTour = userType === 'client' || userType === 'admin' ? 'client' : 'talent';
+  const userWithExtendedProps = user as any,
+  const userType = userWithExtendedProps?.userType || user?.user_metadata?.userType || 'talent',
+  const roleForTour = userType === 'client' || userType === 'admin' ? 'client' : 'talent',
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -65,7 +65,7 @@ export default function Dashboard() {
 
   const handleTestNotification = async () => {
     try {
-      const { createTestNotification } = await loadNotificationFunctions(),
+      const { createTestNotification } = await loadNotificationFunctions();
       const result = await createTestNotification(user?.id ?? "");
       if (result.success) {
         toast({
@@ -83,7 +83,7 @@ export default function Dashboard() {
         description: "Please try again",
         variant: "destructive"})
     }
-  },
+  };
   return (
     <>
       <Header />
@@ -161,12 +161,12 @@ export default function Dashboard() {
                       variant="outline"
                       onClick={async () => {
                         try {
-                          const { createOnboardingNotification } = await loadNotificationFunctions(),
+                          const { createOnboardingNotification } = await loadNotificationFunctions();
                           await createOnboardingNotification({
                             userId: user?.id ?? "",
                             missingMilestone: 'profile_completed',
                             userRole: roleForTour
-                          }),
+                          });
                           toast({
                             title: "Onboarding notification sent",
                             description: "Check your notification center"
@@ -188,14 +188,14 @@ export default function Dashboard() {
                       variant="outline"
                       onClick={async () => {
                         try {
-                          const { createSystemNotification } = await loadNotificationFunctions(),
+                          const { createSystemNotification } = await loadNotificationFunctions();
                           await createSystemNotification({
                             userId: user?.id ?? "",
                             title: "New Feature Available!",
                             message: "We've added a new notification center to help you stay updated with important information.",
                             actionUrl: "/notifications",
                             actionText: "Explore Now"
-                          }),
+                          });
                           toast({
                             title: "System notification sent",
                             description: "Check your notification center"

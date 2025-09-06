@@ -19,7 +19,7 @@ export function IntegrationCard({
   title;
   description;
   icon;
-  status = "disconnected";
+  status = "disconnected",
   href;
   onConnect}: IntegrationCardProps) {
   return (

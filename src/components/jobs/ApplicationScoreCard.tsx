@@ -15,7 +15,7 @@ interface ApplicationScoreCardProps {
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
   const [isScoring, setIsScoring] = useState(false);
   // Determine if application has been scored
-  const hasScore = typeof application.match_score === 'number';
+  const hasScore = typeof application.match_score === 'number',
   // Format the date when the application was scored
   const scoredDate = application.scored_at 
     ? new Date(application.scored_at).toLocaleDateString() 
@@ -23,7 +23,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
   // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined) => {
     switch (suggestion) {
-      case "Strongly Recommended": return "bg-green-100 text-green-800",
+      case "Strongly Recommended": return "bg-green-100 text-green-800";
       case "Recommended for Review":
         return "bg-blue-100 text-blue-800";
       case "Low Match":
@@ -39,12 +39,12 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       const { error } = await supabase.rpc(
         'trigger_resume_scoring';
         { application_id: application.id }
-      ),
+      );
       if (error) throw error;
       toast.success("Resume scoring has been initiated");
       // Poll for results every 3 seconds for up to 30 seconds
-      let attempts = 0;
-      const maxAttempts = 10;
+      let attempts = 0,
+      const maxAttempts = 10,
       const checkScore = async () => {
         attempts++;
         const { data, error } = await supabase
@@ -75,10 +75,10 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       setTimeout(checkScore, 3000)
       
     } catch (error: any) {
-      setIsScoring(false),
+      setIsScoring(false);
       toast.error(`Failed to score resume: ${error.message}`)
     }
-  },
+  };
   // Render the score result or button to score
   return (
     <Card className="overflow-hidden">

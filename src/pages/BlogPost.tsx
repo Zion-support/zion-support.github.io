@@ -40,7 +40,7 @@ export default function BlogPost() {
         setIsLoading(false);
         return
       } catch (err) {
-        logErrorToProduction('Failed to fetch blog post', { data: err }),
+        logErrorToProduction('Failed to fetch blog post', { data: err });
         setError('Failed to load article')
       }
 
@@ -91,16 +91,16 @@ export default function BlogPost() {
 
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
-    if (!post) return '',
+    if (!post) return '';
     const url = encodeURIComponent(window.location.href);
     const title = encodeURIComponent(post.title);
     switch (platform) {
       case 'facebook':
-        return `https: //www.facebook.com/sharer/sharer.php?u=${url}`,
+        return `https: //www.facebook.com/sharer/sharer.php?u = ${url}`,
       case 'twitter':
-        return `https: //twitter.com/intent/tweet?url=${url}&text=${title}`,
+        return `https: //twitter.com/intent/tweet?url = ${url}&text=${title}`,
       case 'linkedin':
-        return `https: //www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`,
+        return `https: //www.linkedin.com/shareArticle?mini = true&url=${url}&title=${title}`,
       default: return '#'
     }
   },

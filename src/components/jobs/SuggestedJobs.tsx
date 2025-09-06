@@ -6,18 +6,18 @@ import { useJobSuggestions } from "@/hooks/useJobSuggestions";
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
 interface SuggestedJobsProps {
-  talentId?: string
+  talentId?: string;
 }
 
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth();
-  const currentTalentId = talentId || user?.id;
+  const currentTalentId = talentId || user?.id,
   const { 
-    isLoading;
-    updateJobMatchStatus;
+    isLoading,
+    updateJobMatchStatus,
     categorizedMatches: { 
       newMatches,
-      viewedMatches;
+      viewedMatches,
       appliedMatches 
     } 
   } = useJobSuggestions(currentTalentId);

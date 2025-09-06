@@ -16,8 +16,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required");
   password: z.string().min(6, "Password must be at least 6 characters");
-  rememberMe: z.boolean()}),
-type LoginFormValues = z.infer<typeof loginSchema>;
+  rememberMe: z.boolean()});
+type LoginFormValues = z.infer<typeof loginSchema>,
 export function LoginForm() {
   const { isLoading, login } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
@@ -26,13 +26,13 @@ export function LoginForm() {
   const [verificationMessage, setVerificationMessage] = useState('');
   const router = useRouter();
   const form = useForm<LoginFormValues>({
-    resolver: zodResolver(loginSchema) as any,
+    resolver: zodResolver(loginSchema) as any;
     defaultValues: {
       email: "",
       password: "",
-      rememberMe: false}}),
+      rememberMe: false}});
   const onSubmit = async (data: LoginFormValues) => {
-    if (isSubmitting) return,
+    if (isSubmitting) return;
     try {
       setIsSubmitting(true);
       // Pass email and password to the login function
@@ -51,13 +51,13 @@ export function LoginForm() {
         fireEvent('login', { method: 'email' })
       }
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false);
     }
   };
   const handleResendEmail = async () => {
     const email = form.getValues('email');
     if (!email) {
-      form.setError('root', { message: 'Please enter your email address.' }),
+      form.setError('root', { message: 'Please enter your email address.' });
       return
     }
     setIsResending(true);
@@ -67,7 +67,7 @@ export function LoginForm() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
-      }),
+      });
       const data = await response.json();
       if (response.ok) {
         setVerificationMessage('Verification email sent. Please check your inbox.')
@@ -83,7 +83,7 @@ export function LoginForm() {
   const handleCheckStatus = () => {
     const email = form.getValues('email');
     if (!email) {
-      form.setError('root', { message: 'Please enter your email address.' }),
+      form.setError('root', { message: 'Please enter your email address.' });
       return
     }
     router.push(`/verify-status?email=${encodeURIComponent(email)}`)

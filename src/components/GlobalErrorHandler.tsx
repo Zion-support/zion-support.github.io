@@ -6,12 +6,12 @@ import * as Sentry from '@sentry/nextjs';
 interface ErrorContextType {
   reportError: (error: Error, context?: any) => void;
   showRetryableError: (error: Error, retryAction?: () => void) => void;
-  showNetworkError: (retryAction?: () => void) => void,
-  showAuthError: (loginAction?: () => void) => void,
+  showNetworkError: (retryAction?: () => void) => void;
+  showAuthError: (loginAction?: () => void) => void;
   clearAllErrors: () => void
 }
 
-const ErrorContext = createContext<ErrorContextType | null>(null),
+const ErrorContext = createContext<ErrorContextType | null>(null);
 interface GlobalErrorHandlerProps {
   children: ReactNode
 }
@@ -36,18 +36,18 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     }
   }, []);
   const showRetryableError = useCallback((error: Error, retryAction?: () => void) => {
-    const errorKey = error.message;
-    const currentRetryCount = retryCount[errorKey] || 0;
-    reportError(error, { retryCount: currentRetryCount }),
+    const errorKey = error.message,
+    const currentRetryCount = retryCount[errorKey] || 0,
+    reportError(error, { retryCount: currentRetryCount });
     // Show user-friendly error message with retry option
     toast({
       title: "Something went wrong",
-      description: getErrorMessage(error),
+      description: getErrorMessage(error);
       variant: "destructive",
       action: retryAction ? {
         label: "Try Again",
         onClick: () => {
-          setRetryCount(prev => ({
+          setRetryCount(prev = > ({
             ...prev,
             [errorKey]: currentRetryCount + 1
           }));
@@ -56,7 +56,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
       } : undefined})
   }, [retryCount, reportError]);
   const showNetworkError = useCallback((retryAction?: () => void) => {
-    const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true;
+    const isOnline = typeof navigator !== 'undefined' ? navigator.onLine: true,
     toast({
       title: isOnline ? "Connection Issue" : "No Internet Connection",
       description: isOnline 
@@ -105,7 +105,7 @@ export function useGlobalErrorHandler(): ErrorContextType {
 
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
-  const message = error.message.toLowerCase(),
+  const message = error.message.toLowerCase();
   if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
     return "Unable to connect to our servers. Please check your internet connection."
   }
@@ -151,9 +151,9 @@ export function useErrorHandler() {
     }
   }, [showRetryableError, showNetworkError, showAuthError]);
   const handleAsyncOperation = useCallback(async <T>(
-    operation: () => Promise<T>,
+    operation: () => Promise<T>;
     options?: {
-      onError?: (error: Error) => void,
+      onError?: (error: Error) => void;
       retryAction?: () => void;
       successMessage?: string
     }
@@ -168,7 +168,7 @@ export function useErrorHandler() {
       
       return result
     } catch (error: any) {
-      reportError(error),
+      reportError(error);
       if (options?.onError) {
         options.onError(error)
       } else {

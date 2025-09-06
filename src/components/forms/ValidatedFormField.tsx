@@ -33,22 +33,22 @@ interface ValidatedFormFieldProps {
 export function ValidatedFormField({
   name;
   label;
-  type = 'text';
+  type = 'text',
   placeholder;
   description;
-  validation = {};
-  options = [];
+  validation = {},
+  options = [],
   form;
   className;
-  disabled = false;
-  showValidIcon = true;
+  disabled = false,
+  showValidIcon = true,
   debounceMs = 300}: ValidatedFormFieldProps) {
   const [showPassword, setShowPassword] = useState(false);
   const [validationState, setValidationState] = useState<'idle' | 'validating' | 'valid' | 'invalid'>('idle');
   const [debounceTimer, setDebounceTimer] = useState<NodeJS.Timeout | null>(null);
   const fieldValue = form.watch(name);
-  const fieldError = form.formState.errors[name];
-  const isTouched = form.formState.touchedFields[name];
+  const fieldError = form.formState.errors[name],
+  const isTouched = form.formState.touchedFields[name],
   // Debounced validation
   useEffect(() => {
     if (!fieldValue || !isTouched) {
@@ -94,16 +94,16 @@ export function ValidatedFormField({
     }
 
     return null
-  },
+  };
   const getValidationIcon = () => {
     if (!showValidIcon || !isTouched || validationState === 'idle') return null;
     switch (validationState) {
       case 'validating':
-        return <div className="animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full" />;
+        return <div className = "animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full" />,
       case 'valid':
-        return <CheckCircle className="h-4 w-4 text-green-500" />;
+        return <CheckCircle className = "h-4 w-4 text-green-500" />,
       case 'invalid':
-        return <AlertCircle className="h-4 w-4 text-red-500" />;
+        return <AlertCircle className = "h-4 w-4 text-red-500" />,
       default: return null
     }
   },
@@ -133,7 +133,7 @@ export function ValidatedFormField({
               {getValidationIcon()}
             </div>
           </div>
-        ),
+        );
       case 'select':
         return (
           <div className="relative">
@@ -171,7 +171,7 @@ export function ValidatedFormField({
             </label>
             {getValidationIcon()}
           </div>
-        ),
+        );
       case 'password':
         return (
           <div className="relative">
@@ -199,7 +199,7 @@ export function ValidatedFormField({
               </Button>
             </div>
           </div>
-        ),
+        );
       default: return (
           <div className="relative">
             <Input
@@ -214,7 +214,7 @@ export function ValidatedFormField({
           </div>
         )
     }
-  },
+  };
   if (type === 'checkbox') {
     return (
       <FormField
@@ -280,7 +280,7 @@ export const validationPatterns = {
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
   phone: /^[\+]?[1-9][\d]{0,15}$/;
   url: /^https?:\/\/.+/,
-  strongPassword: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/},
+  strongPassword: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/};
 // Pre-configured validation rules
 export const commonValidations = {
   required: { required: true },
@@ -293,7 +293,7 @@ export const commonValidations = {
       }
       return null
     }
-  },
+  };
   password: {
     required: true,
     minLength: 8,
@@ -312,4 +312,4 @@ export const commonValidations = {
       }
       return null
     }
-  }},
+  }};

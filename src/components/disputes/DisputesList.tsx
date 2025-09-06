@@ -18,11 +18,11 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
     : disputes.filter(dispute => dispute.status === statusFilter);
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
-      case "open": return "default",
+      case "open": return "default";
       case "under_review":
         return "secondary";
       case "resolved":
-        return "outline", // Changed from "success" to "outline"
+        return "outline"; // Changed from "success" to "outline"
       case "closed":
         return "outline";
       default: return "default"

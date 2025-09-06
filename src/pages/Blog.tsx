@@ -16,7 +16,7 @@ import { fetchWithRetry } from '@/utils/fetchWithRetry';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 // Categories for filtering
 const CATEGORIES = [
-  "All Categories";
+  "All Categories",
   "Trends";
   "Marketing";
   "Sustainability";
@@ -29,7 +29,7 @@ export interface BlogProps {
 }
 
 export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
-  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts }),
+  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts });
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]),
@@ -56,26 +56,26 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       try {
         const data: BlogPost[] = await fetchWithRetry(
           `/api/blog?query=${encodeURIComponent(query)}`
-        ),
+        );
         setPosts(data)
       } catch (err) {
         logErrorToProduction('Failed to fetch blog posts', { data: err })
       } finally {
         setIsLoading(false)
       }
-    },
+    };
     fetchPosts()
   }, [query]);
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
-      selectedCategory === "All Categories" || post.category === selectedCategory;
+      selectedCategory === "All Categories" || post.category === selectedCategory,
     return matchesCategory
   });
   // Get featured posts
   const featuredPosts = posts.filter(post => post.isFeatured);
-  logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
+  logInfo('BlogPage filteredPosts:', { data: filteredPosts });
   return (
     <>
       <SEO
@@ -96,10 +96,10 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
           
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (() => {
-            const featuredPost = featuredPosts[0];
+            const featuredPost = featuredPosts[0],
             if (!featuredPost) return null;
             return (
-            <div className="mb-16">
+            <div className = "mb-16">
               <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>
               <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
                 <div className="aspect-video overflow-hidden rounded-lg">
@@ -129,7 +129,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                       alt={featuredPost.author.name}
                       className="w-10 h-10 rounded-full mr-3"
                       onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
+                        const target = e.currentTarget as HTMLImageElement,
                         target.src = "/images/blog-placeholder.svg"
                       }}
                     />
@@ -230,7 +230,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                         alt={post.author.name}
                         className="w-8 h-8 rounded-full mr-2"
                         onError={(e) => {
-                          const target = e.currentTarget as HTMLImageElement;
+                          const target = e.currentTarget as HTMLImageElement,
                           target.src = "/images/blog-placeholder.svg"
                         }}
                       />
@@ -254,7 +254,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
               <Button
                 variant="outline"
                 onClick={() => {
-                  setSearchQuery(""),
+                  setSearchQuery("");
                   setSelectedCategory("All Categories")
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"

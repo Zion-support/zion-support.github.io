@@ -41,10 +41,10 @@ const ServicesMarketInsights = ({ stats }: { stats: any }) => (
       </div>
     </CardContent>
   </Card>
-),
+);
 // Filter controls
 const ServiceFilterControls = ({
-  sortBy;
+  sortBy,
   setSortBy;
   filterCategory;
   setFilterCategory;
@@ -77,10 +77,10 @@ const ServiceFilterControls = ({
       {showRecommended ? "All Services" : "Recommended"}
     </Button>
   </div>
-),
+);
 // Service card
 const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onViewDetails: () => void }) => {
-  const { formatPrice } = useCurrency(),
+  const { formatPrice } = useCurrency();
   return (
   <Card className="h-full hover: shadow-lg transition-shadow">
     <CardHeader className="pb-3">
@@ -121,7 +121,7 @@ const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onVi
     </CardHeader>
   </Card>
 )
-},
+};
 // Loading grid
 const ServicesLoadingGrid = ({ count = 8 }: { count?: number }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -138,15 +138,15 @@ export default function ServicesPage() {
   const fetchServices = useCallback(async (page: number, limit: number) => {
     await new Promise(resolve => setTimeout(resolve, 400));
     let allServices: ProductListing[] = [],
-    if (page === 1) {
+    if (page = == 1) {
       allServices = [...INITIAL_SERVICES]
     }
     
-    const startId = INITIAL_SERVICES.length + (page - 1) * limit + totalGenerated,
+    const startId = INITIAL_SERVICES.length + (page - 1) * limit + totalGenerated;
     const newServices = generateITServices(limit, startId);
     setTotalGenerated(prev => prev + newServices.length);
     allServices = [...allServices, ...newServices],
-    let filteredServices = allServices;
+    let filteredServices = allServices,
     if (filterCategory) {
       filteredServices = filteredServices.filter(s => s.category === filterCategory)
     }
@@ -167,9 +167,9 @@ export default function ServicesPage() {
           return (b.aiScore || 0) - (a.aiScore || 0);
         default: return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
       }
-    }),
+    });
     const startIndex = (page - 1) * limit;
-    const endIndex = startIndex + limit;
+    const endIndex = startIndex + limit,
     const items = filteredServices.slice(startIndex, endIndex);
     return {
       items;

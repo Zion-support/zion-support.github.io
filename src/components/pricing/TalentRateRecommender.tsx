@@ -9,7 +9,7 @@ interface TalentRateRecommenderProps {
   skills: string[],
   yearsExperience: number,
   location?: string;
-  onSuggestionApplied: (value: number) => void,
+  onSuggestionApplied: (value: number) => void;
   rateType: "hourly" | "fixed"
 }
 
@@ -40,7 +40,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
     } finally {
       setIsLoading(false)
     }
-  },
+  };
   const handleApplySuggestion = () => {
     if (suggestion) {
       // We'll use the middle of the range as the suggested rate
@@ -58,7 +58,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
         })
       }
     }
-  },
+  };
   return (
     <div className="space-y-4">
       <div>

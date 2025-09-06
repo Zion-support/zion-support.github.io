@@ -9,7 +9,7 @@ import Skeleton from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 interface AIMatchingResultsProps {
   matches: MatchResultItem[],
-  onSelectMatch?: (match: MatchResultItem) => void,
+  onSelectMatch?: (match: MatchResultItem) => void;
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string
@@ -18,21 +18,21 @@ interface AIMatchingResultsProps {
 export function AIMatchingResults({
   matches;
   onSelectMatch;
-  isLoading = false;
-  projectDescription = "";
+  isLoading = false,
+  projectDescription = "",
   serviceType: _serviceType = ""
 }: AIMatchingResultsProps) {
   const [activeTab, setActiveTab] = useState("all");
   // Group matches by category
   const categories = {
     all: matches,
-    talent: matches.filter(match => match.category.toLowerCase().includes("talent")),
-    services: matches.filter(match => match.category.toLowerCase().includes("service")),
+    talent: matches.filter(match => match.category.toLowerCase().includes("talent"));
+    services: matches.filter(match => match.category.toLowerCase().includes("service"));
     equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
-  },
+  };
   // Get the icon for a category
   const getCategoryIcon = (category: string) => {
-    const lowerCategory = category.toLowerCase(),
+    const lowerCategory = category.toLowerCase();
     if (lowerCategory.includes("talent")) return User;
     if (lowerCategory.includes("equipment")) return Monitor;
     return BriefcaseIcon
@@ -99,7 +99,7 @@ export function AIMatchingResults({
                     className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover: border-zion-purple/50 cursor-pointer"
                     onClick={() => onSelectMatch && onSelectMatch(match)}
                   >
-                    <div className="flex">
+                    <div className = "flex">
                       <div className={cn(
                         "w-2",
                         match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 

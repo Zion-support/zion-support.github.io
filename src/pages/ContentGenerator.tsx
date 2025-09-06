@@ -47,12 +47,12 @@ export default function ContentGenerator() {
           autoPublish;
           includeImage: contentType === 'blog' ? includeImage : false
         }
-      }),
+      });
       if (error) throw error;
       setPreviewContent(data), // Expecting { generatedContent: "..." }
       toast.success(`Content for "${contentType}" generated successfully!`)
     } catch (error) {
-      logErrorToProduction('Error generating content:', { data: error }),
+      logErrorToProduction('Error generating content:', { data: error });
       toast.error("Failed to generate content. Please try again.")
     } finally {
       setIsGenerating(false)
@@ -82,7 +82,7 @@ export default function ContentGenerator() {
       if (error) throw error;
       toast.success(`Test newsletter sent to ${testEmail}!`)
     } catch (error) {
-      logErrorToProduction('Error sending test newsletter:', { data: error }),
+      logErrorToProduction('Error sending test newsletter:', { data: error });
       toast.error("Failed to send test newsletter. Please try again.")
     }
   };

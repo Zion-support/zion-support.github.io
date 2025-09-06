@@ -198,4 +198,4 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
   )
 }
 
-export default AuthConfigurationError,
+export default AuthConfigurationError;

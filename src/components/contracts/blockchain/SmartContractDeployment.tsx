@@ -11,7 +11,7 @@ import { Loader2, ShieldCheck, Download } from 'lucide-react'
 import { toast } from "sonner";
 interface SmartContractDeploymentProps {
   solidityCode: string,
-  onDeploy: (options: DeploymentOptions) => Promise<void>,
+  onDeploy: (options: DeploymentOptions) => Promise<void>;
   isDeploying: boolean
 }
 
@@ -25,7 +25,7 @@ export function SmartContractDeployment({
     useEscrow: true,
     deployToChain: false,
     walletAddress: ''
-  }),
+  });
   const handleDeployContract = async () => {
     if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {
       toast.error("Please enter a wallet address for blockchain deployment");
@@ -37,15 +37,15 @@ export function SmartContractDeployment({
     } catch (error) {
       logErrorToProduction('Deployment error:', { data: error })
     }
-  },
+  };
   const handleDownloadSolidity = () => {
     // Create a blob from the Solidity code
-    const blob = new Blob([solidityCode], { type: 'text/plain' }),
+    const blob = new Blob([solidityCode], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     // Create a temporary anchor to trigger download
     const a = document.createElement('a');
-    a.href = url;
-    a.download = 'ZionContract.sol';
+    a.href = url,
+    a.download = 'ZionContract.sol',
     document.body.appendChild(a);
     a.click();
     // Clean up
@@ -73,7 +73,7 @@ export function SmartContractDeployment({
               aria-label="Deploy to blockchain"
               checked={deploymentOptions.deployToChain}
               onCheckedChange={(checked) => setDeploymentOptions({
-                ...deploymentOptions,
+                ...deploymentOptions;
                 deployToChain: checked
               })}
             />
@@ -87,7 +87,7 @@ export function SmartContractDeployment({
                 <RadioGroup 
                   defaultValue={deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({
-                    ...deploymentOptions,
+                    ...deploymentOptions;
                     network: value as BlockchainNetwork
                   })}
                   className="flex flex-col space-y-1"
@@ -103,14 +103,14 @@ export function SmartContractDeployment({
                 </RadioGroup>
               </div>
               
-              <div className="space-y-2">
+              <div className = "space-y-2">
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>
                 <Input 
                   id="wallet-address" 
                   placeholder="0x..." 
                   value={deploymentOptions.walletAddress || ''}
                   onChange={(e) => setDeploymentOptions({
-                    ...deploymentOptions,
+                    ...deploymentOptions;
                     walletAddress: e.target.value
                   })}
                 />
@@ -122,7 +122,7 @@ export function SmartContractDeployment({
                   aria-label="Use escrow"
                   checked={deploymentOptions.useEscrow}
                   onCheckedChange={(checked) => setDeploymentOptions({
-                    ...deploymentOptions,
+                    ...deploymentOptions;
                     useEscrow: checked
                   })}
                 />

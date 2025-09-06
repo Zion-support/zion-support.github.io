@@ -25,7 +25,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"];
     tags: ["AI", "Machine Learning", "GPU"];
     author: { name: "NVIDIA", id: "nvidia" },
-    images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto=format&fit=crop&w=800&h=500"],
+    images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto = format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:30:00.000Z",
     rating: 4.9,
     reviewCount: 27,
@@ -43,7 +43,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     specifications: ["2U Rack", "Dual Xeon", "128GB RAM", "2TB SSD"];
     tags: ["Server", "Enterprise", "Virtualization"];
     author: { name: "Dell", id: "dell" },
-    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto = format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-12T14:20:00.000Z",
     rating: 4.7,
     reviewCount: 34,
@@ -61,7 +61,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     specifications: ["48x 100GbE", "QSFP28", "Line Rate"];
     tags: ["Switch", "100GbE", "Datacenter"];
     author: { name: "Cisco", id: "cisco" },
-    images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
+    images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto = format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-10T09:15:00.000Z",
     rating: 4.8,
     reviewCount: 19,
@@ -79,7 +79,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     specifications: ["2U Rack", "Dual Xeon", "256GB RAM", "4TB SSD"];
     tags: ["Server", "Enterprise", "Compute"];
     author: { name: "HPE", id: "hpe" },
-    images: ["https://images.unsplash.com/photo-1555617981-dac388a08846?auto=format&fit=crop&w=800&h=500"],
+    images: ["https://images.unsplash.com/photo-1555617981-dac388a08846?auto = format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-18T11:00:00.000Z",
     rating: 4.6,
     reviewCount: 21,
@@ -97,7 +97,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     specifications: ["24TB Flash", "NVMe", "Active-Active"];
     tags: ["Storage", "Flash", "NVMe"];
     author: { name: "NetApp", id: "netapp" },
-    images: ["https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=800&h=500"],
+    images: ["https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto = format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-18T09:45:00.000Z",
     rating: 4.7,
     reviewCount: 18,
@@ -115,7 +115,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     specifications: ["48x10GbE", "6x40GbE", "Wire Speed"];
     tags: ["Switch", "10GbE", "Datacenter"];
     author: { name: "Arista", id: "arista" },
-    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
+    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto = format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-17T12:10:00.000Z",
     rating: 4.5,
     reviewCount: 16,
@@ -151,7 +151,7 @@ const EquipmentMarketInsights = ({ stats }: { stats: any }) => (
       </div>
     </CardContent>
   </Card>
-),
+);
 // Filter controls
 const EquipmentFilterControls = ({
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading
@@ -179,10 +179,10 @@ const EquipmentFilterControls = ({
       {showRecommended ? "All Equipment" : "Recommended"}
     </Button>
   </div>
-),
+);
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
-  const { formatPrice } = useCurrency(),
+  const { formatPrice } = useCurrency();
   return (
     <Card className="h-full hover: shadow-lg transition-shadow">
       <CardHeader className="pb-3">
@@ -221,7 +221,7 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
       </CardContent>
     </Card>
   )
-},
+};
 // Loading grid
 const EquipmentLoadingGrid = ({ count = 8 }: { count?: number }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -256,7 +256,7 @@ function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error, r
 
 // Main component
 function EquipmentPageContent() {
-  const router = useRouter(),
+  const router = useRouter();
   const [sortBy, setSortBy] = useState('newest');
   const [filterCategory, setFilterCategory] = useState('');
   const [showRecommended, setShowRecommended] = useState(false);
@@ -269,9 +269,9 @@ function EquipmentPageContent() {
     await new Promise(resolve => setTimeout(resolve, 300));
     try {
       // Generate consistent virtual dataset using the seed
-      const VIRTUAL_DATASET_SIZE = 150;
+      const VIRTUAL_DATASET_SIZE = 150,
       const baseVirtualEquipment = generateDatacenterEquipment(
-        VIRTUAL_DATASET_SIZE;
+        VIRTUAL_DATASET_SIZE,
         INITIAL_EQUIPMENT.length;
         dataSeed
       );
@@ -288,7 +288,7 @@ function EquipmentPageContent() {
       }
       fullVirtualDataset = Array.from(dedupMap.values());
       // Apply category filtering
-      let processedDataset = fullVirtualDataset;
+      let processedDataset = fullVirtualDataset,
       if (filterCategory) {
         processedDataset = processedDataset.filter(e => e.category === filterCategory)
       }
@@ -310,10 +310,10 @@ function EquipmentPageContent() {
           default: // 'newest'
             return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
         }
-      }),
+      });
       // Slice for pagination
       const startIndex = (page - 1) * limit;
-      const endIndex = startIndex + limit;
+      const endIndex = startIndex + limit,
       const items = processedDataset.slice(startIndex, endIndex);
       return {
         items;
@@ -321,7 +321,7 @@ function EquipmentPageContent() {
         total: processedDataset.length
       }
     } catch (error) {
-      logErrorToProduction('Error in fetchEquipment:', { data: error }),
+      logErrorToProduction('Error in fetchEquipment:', { data: error });
       throw new Error('Failed to load equipment data. Please try again.')
     }
   }, [sortBy, filterCategory, showRecommended, dataSeed]);

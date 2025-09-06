@@ -13,9 +13,9 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { TalentProfile } from '@/types/talent';
 export default function TalentDirectory() {
-  const router = useRouterReady(), // Use our custom hook
+  const router = useRouterReady(); // Use our custom hook
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const itemsPerPage = 10,
   const [initialized, setInitialized] = useState(false);
   // Force re-render and reset state when route changes
   const routeKey = useRouteChange(() => {
@@ -53,12 +53,12 @@ export default function TalentDirectory() {
     clearFilters;
     toggleSection} = useTalentDirectory(currentPage, itemsPerPage);
   const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin';
+  const isAdmin = user?.userType === 'admin',
   useEffect(() => {
     setCurrentPage(1)
   }, [filteredTalents, total]);
   const totalPages = Math.ceil(total / itemsPerPage);
-  const paginatedTalents = filteredTalents;
+  const paginatedTalents = filteredTalents,
   // Load filters from query parameters on first load
   useEffect(() => {
     if (!router.isReady || initialized) return;
@@ -92,7 +92,7 @@ export default function TalentDirectory() {
   useEffect(() => {
     if (!initialized || !router.isReady) return;
     const query: Record<string, string> = {};
-    if (searchTerm) query.search = searchTerm;
+    if (searchTerm) query.search = searchTerm,
     if (selectedSkills.length) query.skills = selectedSkills.join();
     if (selectedAvailability.length)
       query.availability = selectedAvailability.join();
@@ -105,7 +105,7 @@ export default function TalentDirectory() {
       query.expMin = String(experienceRange[0]);
       query.expMax = String(experienceRange[1])
     }
-    if (sortOption !== 'relevance') query.sort = sortOption;
+    if (sortOption !== 'relevance') query.sort = sortOption,
     if (currentPage > 1) query.page = String(currentPage);
     router.replace({ pathname: router.pathname, query }, undefined, {
       shallow: true})
@@ -122,15 +122,15 @@ export default function TalentDirectory() {
     initialized]), // Fixed dependencies
 
   const handleRequestHire = (talent: TalentProfile) => {
-    setSelectedTalent(talent),
+    setSelectedTalent(talent);
     setIsHireModalOpen(true)
   };
   const viewProfile = (id: string) => {
     // Navigate to the talent profile page
-    router.push(`/talent/${id}`), // Changed to router.push
+    router.push(`/talent/${id}`); // Changed to router.push
   };
   // Add key prop to force re-render when route changes
-  const pageKey = `talent-directory-${routeKey}-${router.asPath}`;
+  const pageKey = `talent-directory-${routeKey}-${router.asPath}`,
   if (isLoading) {
     return (
       <div key={pageKey} className="container mx-auto px-4 py-8">
@@ -201,7 +201,7 @@ export default function TalentDirectory() {
           </div>
           {isAdmin && (
             <Link
-              href="/create-talent-profile"
+              href = "/create-talent-profile"
               className="bg-zion-purple text-white px-4 py-2 rounded hover: bg-zion-purple-dark"
             >
               Add Talent
@@ -238,8 +238,8 @@ export default function TalentDirectory() {
           <div className="lg:hidden mb-4">
             <Button
               onClick={() => setIsMobileFilterOpen(true)}
-              variant="outline"
-              className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light"
+              variant = "outline"
+              className="w-full border-zion-blue-light text-zion-purple hover: bg-zion-blue-light"
             >
               Filter & Sort
             </Button>

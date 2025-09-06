@@ -62,11 +62,11 @@ export default function SavedTalentsPage() {
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
             (item: any) => item.talent_profile as unknown as TalentProfile
-          ),
+          );
           setSavedTalents(talentProfiles)
         }
       } catch (error) {
-        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching saved talents' }),
+        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching saved talents' });
         toast({
           title: "Error",
           description: "Failed to load saved talents. Please try again later.",
@@ -74,22 +74,22 @@ export default function SavedTalentsPage() {
       } finally {
         setIsLoading(false)
       }
-    },
+    };
     fetchSavedTalents()
   }, [user]);
   const handleViewProfile = (talentId: string) => {
     router.push(`/talent/${talentId}`)
-  },
+  };
   const handleRequestHire = (talent: TalentProfile) => {
-    logInfo('Request to hire:', { data: talent }),
+    logInfo('Request to hire:', { data: talent });
     toast({
       title: "Hire Request Sent",
       description: `A hire request has been sent to ${talent.full_name}.`})
-  },
+  };
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
     try {
       if (!user) {
-        logWarn("User not authenticated."),
+        logWarn("User not authenticated.");
         return
       }
   
@@ -114,7 +114,7 @@ export default function SavedTalentsPage() {
         // Add to saved talents
         const { error } = await supabase
           .from('saved_talents')
-          .insert([{ user_id: user.id, talent_id: talentId }]),
+          .insert([{ user_id: user.id, talent_id: talentId }]);
         if (error) {
           throw error
         }
@@ -126,11 +126,11 @@ export default function SavedTalentsPage() {
           .eq('id', talentId)
           .single();
         if (talentError) {
-          logErrorToProduction(talentError instanceof Error ? talentError.message : String(talentError), talentError instanceof Error ? talentError : undefined, { message: 'Error fetching talent profile' }),
+          logErrorToProduction(talentError instanceof Error ? talentError.message : String(talentError), talentError instanceof Error ? talentError : undefined, { message: 'Error fetching talent profile' });
           toast({
             title: "Error",
             description: "Failed to update saved talents. Please try again later.",
-            variant: "destructive"}),
+            variant: "destructive"});
           return
         }
   
@@ -142,13 +142,13 @@ export default function SavedTalentsPage() {
         }
       }
     } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error toggling saved talent' }),
+      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error toggling saved talent' });
       toast({
         title: "Error",
         description: "Failed to update saved talents. Please try again later.",
         variant: "destructive"})
     }
-  },
+  };
   return (
     <>
       <SEO

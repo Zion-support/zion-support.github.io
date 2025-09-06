@@ -10,15 +10,15 @@ interface QuickAction {
   label: string,
   description: string,
   icon: React.ReactNode,
-  action: () => void,
+  action: () => void;
   category: 'performance' | 'development' | 'maintenance',
   dangerous?: boolean
 }
 
 export function QuickActions() {
   const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
+  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin,
   if (!isAllowed) {
     return null
   }
@@ -26,7 +26,7 @@ export function QuickActions() {
   const [isVisible, setIsVisible] = useState(false);
   const [isProcessing, setIsProcessing] = useState<string | null>(null);
   const executeAction = async (actionId: string, action: () => void) => {
-    setIsProcessing(actionId),
+    setIsProcessing(actionId);
     try {
       await action()
     } catch (error) {
@@ -34,34 +34,34 @@ export function QuickActions() {
     } finally {
       setIsProcessing(null)
     }
-  },
+  };
   const actions: QuickAction[] = [
     // Performance Actions
     {
       id: 'enable-performance-monitor',
       label: 'Enable Performance Monitor',
       description: 'Show real-time performance metrics',
-      icon: <Activity className="w-4 h-4" />,
+      icon: <Activity className = "w-4 h-4" />,
       category: 'performance',
       action: () => {
-        localStorage.setItem('performance-monitoringtrue'),
+        localStorage.setItem('performance-monitoringtrue');
         window.location.reload()
       }};
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
       description: 'Monitor bundle size and chunks',
-      icon: <Package className="w-4 h-4" />,
+      icon: <Package className = "w-4 h-4" />,
       category: 'performance',
       action: () => {
-        localStorage.setItem('bundle-analyzertrue'),
+        localStorage.setItem('bundle-analyzertrue');
         window.location.reload()
       }};
     {
       id: 'clear-cache',
       label: 'Clear Cache',
       description: 'Clear browser cache and storage',
-      icon: <Trash2 className="w-4 h-4" />,
+      icon: <Trash2 className = "w-4 h-4" />,
       category: 'maintenance',
       dangerous: true,
       action: () => {
@@ -70,7 +70,7 @@ export function QuickActions() {
             names.forEach(name => caches.delete(name))
           })
         }
-        localStorage.clear(),
+        localStorage.clear();
         sessionStorage.clear();
         window.location.reload()
       }};
@@ -78,7 +78,7 @@ export function QuickActions() {
       id: 'preload-critical-resources',
       label: 'Preload Critical Resources',
       description: 'Preload fonts, images, and critical assets';
-      icon: <Zap className="w-4 h-4" />,
+      icon: <Zap className = "w-4 h-4" />,
       category: 'performance',
       action: () => {
         // Preload critical fonts
@@ -87,22 +87,22 @@ export function QuickActions() {
         ],
         criticalFonts.forEach(font => {
           const link = document.createElement('link');
-          link.rel = 'preload';
-          link.as = 'font';
-          link.type = 'font/woff2';
-          link.crossOrigin = 'anonymous';
-          link.href = font;
+          link.rel = 'preload',
+          link.as = 'font',
+          link.type = 'font/woff2',
+          link.crossOrigin = 'anonymous',
+          link.href = font,
           document.head.appendChild(link)
         });
         // Preload critical images
         const criticalImages = [
           '/logos/zion-logo.png/images/hero-bg.webp'
-        ];
+        ],
         criticalImages.forEach(img => {
           const link = document.createElement('link');
-          link.rel = 'preload';
-          link.as = 'image';
-          link.href = img;
+          link.rel = 'preload',
+          link.as = 'image',
+          link.href = img,
           document.head.appendChild(link)
         })
       }};
@@ -110,14 +110,14 @@ export function QuickActions() {
       id: 'download-performance-report',
       label: 'Download Performance Report',
       description: 'Export current performance metrics',
-      icon: <Download className="w-4 h-4" />,
+      icon: <Download className = "w-4 h-4" />,
       category: 'development',
       action: () => {
         const metrics = {
-          timestamp: new Date().toISOString(),
-          performance: performance.getEntriesByType('navigation')[0],
+          timestamp: new Date().toISOString();
+          performance: performance.getEntriesByType('navigation')[0];
           resources: performance.getEntriesByType('resource').slice(0, 20);
-          memory: (performance as any).memory || {},
+          memory: (performance as any).memory || {};
           userAgent: navigator.userAgent,
           screen: {
             width: screen.width,
@@ -127,10 +127,10 @@ export function QuickActions() {
         },
         const blob = new Blob([JSON.stringify(metrics, null, 2)], {
           type: 'application/json'
-        }),
+        });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
-        a.href = url;
+        a.href = url,
         a.download = `performance-report-${Date.now()}.json`;
         document.body.appendChild(a);
         a.click();
@@ -141,25 +141,25 @@ export function QuickActions() {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
       description: 'Trigger an error to test Sentry integration',
-      icon: <Monitor className="w-4 h-4" />,
+      icon: <Monitor className = "w-4 h-4" />,
       category: 'development',
       dangerous: true,
       action: () => {
         throw new Error('Test error for Sentry integration - this is intentional!')
-      }},
+      }};
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
       description: 'Force reload with cache bypass',
-      icon: <RefreshCw className="w-4 h-4" />,
+      icon: <RefreshCw className = "w-4 h-4" />,
       category: 'maintenance',
       action: () => {
         window.location.reload()
-      }}],
+      }}];
   const categorizedActions = {
-    performance: actions.filter(a => a.category === 'performance'),
-    development: actions.filter(a => a.category === 'development'),
-    maintenance: actions.filter(a => a.category === 'maintenance')},
+    performance: actions.filter(a => a.category === 'performance');
+    development: actions.filter(a => a.category === 'development');
+    maintenance: actions.filter(a => a.category === 'maintenance')};
   const categoryColors = {
     performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
     development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',

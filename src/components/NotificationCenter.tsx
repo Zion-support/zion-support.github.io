@@ -8,7 +8,7 @@ import { useEnqueueSnackbar } from '@/context';
 import { FilterType } from '@/components/notifications/NotificationFilter';
 export const NotificationCenter: React.FC = () => {
   const { 
-    filteredNotifications,
+    filteredNotifications;
     unreadCount;
     markAsRead;
     markAllAsRead;
@@ -30,13 +30,13 @@ export const NotificationCenter: React.FC = () => {
           await fetchNotifications();
           setError(null)
         } catch (err) {
-          logErrorToProduction('Failed to fetch notifications:', { data: err }),
+          logErrorToProduction('Failed to fetch notifications:', { data: err });
           setError("Couldn't load notifications");
           enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' })
         } finally {
           setLoadedOnce(true)
         }
-      },
+      };
       loadNotifications()
     }
   }, [open, loadedOnce, fetchNotifications]);
@@ -45,13 +45,13 @@ export const NotificationCenter: React.FC = () => {
       await markAllAsRead();
       enqueueSnackbar("All notifications marked as read", { variant: 'success' })
     } catch (err) {
-      logErrorToProduction('Failed to mark notifications as read:', { data: err }),
+      logErrorToProduction('Failed to mark notifications as read:', { data: err });
       enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' })
     }
-  },
+  };
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
-  },
+  };
   return (
     <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
       <PopoverTrigger asChild>

@@ -16,7 +16,7 @@ export function SignUpForm() {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-    name: ""}),
+    name: ""});
   const [isLoading, setIsLoading] = useState(false);
   const [signupMode, setSignupMode] = useState(true);
   const [error, setError] = useState("");
@@ -29,12 +29,12 @@ export function SignUpForm() {
     setFieldErrors(prev => ({ ...prev, [name]: "" }))
   };
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     setError("");
     setFieldErrors({});
     setIsLoading(true);
     const errors: { email?: string, password?: string, name?: string } = {};
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/;
     if (signupMode && !formData.name.trim()) {
       errors.name = 'Full name is required'
@@ -55,14 +55,13 @@ export function SignUpForm() {
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors);
       setIsLoading(false);
-      return
-    }
+      return }
     
     try {
-      setShowVerificationMessage(false), // Reset verification message
+      setShowVerificationMessage(false); // Reset verification message
       if (signupMode) {
         const result = await signUp(formData.email, formData.password, {
-          name: formData.name}),
+          name: formData.name});
         if (result?.error) {
           throw new Error(result.error as any), // Cast to any if type is AuthError
         }
@@ -82,7 +81,7 @@ export function SignUpForm() {
         router.push("/mobile")
       }
     } catch (err: any) {
-      logErrorToProduction('Signup/Login error:', { data: err }),
+      logErrorToProduction('Signup/Login error:', { data: err });
       setError(err.message || 'An unexpected error occurred. Please try again.')
     } finally {
       setIsLoading(false)
@@ -94,7 +93,7 @@ export function SignUpForm() {
     } catch (err: any) {
       setError(err.message)
     }
-  },
+  };
   return (
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">

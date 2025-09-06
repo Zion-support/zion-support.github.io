@@ -8,21 +8,21 @@ import { CountryPricing } from '@/data/onsiteServicePricing';
 interface CountryTabsProps {
   popularCountries: string[],
   filteredCountries: CountryPricing[],
-  handleCountrySelect: (country: CountryPricing) => void,
-  onQuote?: (country: CountryPricing) => void,
+  handleCountrySelect: (country: CountryPricing) => void;
+  onQuote?: (country: CountryPricing) => void;
   searchQuery: string,
   setSearchQuery: (query: string) => void
 }
 
 export function CountryTabs({
-  popularCountries,
+  popularCountries;
   filteredCountries;
   handleCountrySelect;
   onQuote;
   searchQuery;
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1);
-  const countriesPerPage = 50;
+  const countriesPerPage = 50,
   useEffect(() => {
     setCurrentPage(1)
   }, [searchQuery]);
@@ -104,7 +104,7 @@ export function CountryTabs({
                   <PaginationPrevious
                     href={`?page=${currentPage - 1}`}
                     onClick={(e) => {
-                      e.preventDefault(),
+                      e.preventDefault();
                       setCurrentPage(Math.max(1, currentPage - 1))
                     }}
                   />

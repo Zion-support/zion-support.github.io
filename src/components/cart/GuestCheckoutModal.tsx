@@ -7,19 +7,19 @@ import { User, Mail, MapPin, CreditCard } from 'lucide-react'
 import { isProdDomain } from '@/utils/getStripe';
 interface GuestCheckoutModalProps {
   open: boolean,
-  onOpenChange: (open: boolean) => void,
+  onOpenChange: (open: boolean) => void;
   onSubmit: (details: { email: string, address: string }) => void
 }
 
 export default function GuestCheckoutModal({
-  open,
+  open;
   onOpenChange;
   onSubmit}: GuestCheckoutModalProps) {
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     if (!email || !address) {
       alert('Please fill in all required fields');
       return

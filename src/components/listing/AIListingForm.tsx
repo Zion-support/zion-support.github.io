@@ -12,7 +12,7 @@ interface AIListingFormProps {
     category: string,
     keyFeatures: string,
     targetAudience: string
-  }) => void,
+  }) => void;
   isLoading: boolean,
   initialValues?: {
     title?: string;
@@ -34,7 +34,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         title: "Missing required fields",
         description: "Please provide at least a title and category.",
         variant: "destructive"
-      }),
+      });
       return
     }
 

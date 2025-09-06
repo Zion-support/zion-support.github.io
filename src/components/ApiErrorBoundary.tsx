@@ -21,7 +21,7 @@ interface ApiErrorBoundaryState {
 export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorBoundaryState> {
   private retryTimeoutId: NodeJS.Timeout | null = null,
   constructor(props: ApiErrorBoundaryProps) {
-    super(props),
+    super(props);
     this.state = {
       hasError: false,
       error: null,
@@ -39,7 +39,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
   componentDidCatch(error: Error, errorInfo: any) {
     // Log to Sentry
     Sentry.withScope((scope) => {
-      scope.setTag('errorBoundaryApiErrorBoundary'),
+      scope.setTag('errorBoundaryApiErrorBoundary');
       scope.setContext('errorInfo', errorInfo);
       scope.setLevel('error');
       Sentry.captureException(error)
@@ -69,7 +69,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
   }
 
   handleOnline = () => {
-    this.setState({ isOnline: true }),
+    this.setState({ isOnline: true });
     // Auto-retry when coming back online
     if (this.state.hasError) {
       this.handleRetry()
@@ -77,9 +77,9 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
   };
   handleOffline = () => {
     this.setState({ isOnline: false })
-  },
+  };
   handleRetry = async () => {
-    this.setState({ isRetrying: true }),
+    this.setState({ isRetrying: true });
     try {
       // Invalidate all queries to force refetch
       if (this.props.queryClient) {
@@ -96,11 +96,11 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
           isRetrying: false})
       }, 500)
     } catch (retryError) {
-      logErrorToProduction('Retry failed:', { data: retryError }),
+      logErrorToProduction('Retry failed:', { data: retryError });
       Sentry.captureException(retryError);
       this.setState({ isRetrying: false })
     }
-  },
+  };
   render() {
     if (this.state.hasError) {
       // Check if it's a network-related error
@@ -199,7 +199,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
 export const useApiErrorHandler = () => {
   const handleApiError = (error: Error) => {
     Sentry.withScope((scope) => {
-      scope.setTag('sourceuseApiErrorHandler'),
+      scope.setTag('sourceuseApiErrorHandler');
       scope.setLevel('error');
       Sentry.captureException(error)
     })

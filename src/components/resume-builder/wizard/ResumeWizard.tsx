@@ -36,7 +36,7 @@ export function ResumeWizard() {
     }
   }, [user, fetchResume]);
   const handleCreateNewResume = async (title: string) => {
-    const resumeId = await createResume({ title: title.trim() }),
+    const resumeId = await createResume({ title: title.trim() });
     if (resumeId) {
       await fetchResume(resumeId);
       setShowNewResumeForm(false)
@@ -45,7 +45,7 @@ export function ResumeWizard() {
   const nextStep = () => {
     const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
     if (currentIndex < RESUME_STEPS.length - 1) {
-      const nextStep = RESUME_STEPS[currentIndex + 1];
+      const nextStep = RESUME_STEPS[currentIndex + 1],
       if (nextStep) {
         setActiveTab(nextStep.id)
       }
@@ -54,7 +54,7 @@ export function ResumeWizard() {
   const prevStep = () => {
     const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
     if (currentIndex > 0) {
-      const prevStep = RESUME_STEPS[currentIndex - 1];
+      const prevStep = RESUME_STEPS[currentIndex - 1],
       if (prevStep) {
         setActiveTab(prevStep.id)
       }
@@ -62,7 +62,7 @@ export function ResumeWizard() {
   };
   const handleResumeChange = (resumeId: string) => {
     fetchResume(resumeId)
-  },
+  };
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">

@@ -28,9 +28,9 @@ export default function TenantOnboarding() {
     industry: "",
     custom_domain: "",
     is_co_branded: true
-  }),
+  });
   // Check if user has admin role
-  const isAdmin = user?.role === "admin";
+  const isAdmin = user?.role === "admin",
   if (!isAdmin) {
     return // Use router.push('/unauthorized') or redirect in getServerSideProps
   }
@@ -46,7 +46,7 @@ export default function TenantOnboarding() {
     setFormData(prev => ({ ...prev, [name]: checked }))
   };
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     setIsSubmitting(true);
     try {
       // Generate subdomain if not provided
@@ -78,7 +78,7 @@ export default function TenantOnboarding() {
       if (error) throw error;
       toast.success("Tenant created successfully!", {
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
-      }),
+      });
       // Reset form
       setFormData({
         brand_name: "",
@@ -93,12 +93,12 @@ export default function TenantOnboarding() {
       })
       
     } catch (error: any) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error creating tenant' }),
+      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error creating tenant' });
       toast.error("Failed to create tenant", {
         description: error.message
       })
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false);
     }
   };
   return (

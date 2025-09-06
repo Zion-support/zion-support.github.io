@@ -61,7 +61,7 @@ export function RoleManagement() {
     toast({
       title: "Permission updated",
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
-  },
+  };
   const roleDescriptions: Record<string, string> = {
     "Admin": "Full access to all features and settings";
     "Recruiter": "Can manage candidates and job postings";

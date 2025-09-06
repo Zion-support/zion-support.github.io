@@ -12,24 +12,24 @@ import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters");
-  keyFeatures: z.string(),
-  targetAudience: z.string()}),
-type FormData = z.infer<typeof formSchema>;
+  keyFeatures: z.string();
+  targetAudience: z.string()});
+type FormData = z.infer<typeof formSchema>,
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void
 }
 
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
-  const { toast } = useToast(),
+  const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const form = useForm<FormData>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(formSchema);
     defaultValues: {
       title: "",
       keyFeatures: "",
-      targetAudience: ""}}),
+      targetAudience: ""}});
   const handleSubmit = async (data: FormData) => {
-    setIsLoading(true),
+    setIsLoading(true);
     try {
       const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
         body: { 
@@ -37,7 +37,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
           keyFeatures: data.keyFeatures,
           targetAudience: data.targetAudience 
         }
-      }),
+      });
       if (error) {
         throw new Error(error.message)
       }
@@ -46,14 +46,14 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
         throw new Error((response as any).error)
       }
 
-      const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.";
+      const description = response ? (response as any).description: "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.",
       onDescriptionGenerated(description);
       toast({
         title: "Description Generated",
         description: "Your professional service description has been created."
       })
     } catch (error) {
-      logErrorToProduction('Error generating description:', { data: error }),
+      logErrorToProduction('Error generating description:', { data: error });
       toast({
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate description. Please try again.",
@@ -62,7 +62,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     } finally {
       setIsLoading(false)
     }
-  },
+  };
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>

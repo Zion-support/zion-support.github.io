@@ -7,13 +7,13 @@ import { Search, Filter } from 'lucide-react'
 
 interface FraudFiltersProps {
   searchQuery: string,
-  setSearchQuery: (value: string) => void,
+  setSearchQuery: (value: string) => void;
   statusFilter: string | null,
-  setStatusFilter: (value: string | null) => void,
+  setStatusFilter: (value: string | null) => void;
   severityFilter: string | null,
-  setSeverityFilter: (value: string | null) => void,
+  setSeverityFilter: (value: string | null) => void;
   contentTypeFilter: string | null,
-  setContentTypeFilter: (value: string | null) => void,
+  setContentTypeFilter: (value: string | null) => void;
   resetFilters: () => void
 }
 
@@ -83,4 +83,4 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       </Button>
     </div>
   )
-},
+};

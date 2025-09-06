@@ -24,15 +24,15 @@ export function OptimizedImage({
   width;
   height;
   className;
-  priority = false;
-  placeholder = 'empty';
+  priority = false,
+  placeholder = 'empty',
   blurDataURL;
-  quality = 75;
+  quality = 75,
   sizes;
   onLoad;
   onError;
   fallbackSrc;
-  lazy = true;
+  lazy = true,
   ...props
 }: OptimizedImageProps) {
   const [isLoading, setIsLoading] = useState(true);
@@ -93,7 +93,7 @@ export function OptimizedImage({
         <rect width="100%" height="100%" fill="url(#grad)" />
       </svg>`
     ).toString('base64')}`
-  },
+  };
   return (
     <div
       ref={imgRef}
@@ -102,16 +102,16 @@ export function OptimizedImage({
     >
       {isInView && !hasError && (
         <Image
-          src={getOptimizedSrc(src)}
+          src = {getOptimizedSrc(src)}
           alt={alt}
           width={width}
           height={height}
           priority={priority}
           blurDataURL={placeholder === 'blur' ? generateBlurDataURL() : undefined}
-          onLoad={handleLoad}
+          onLoad = {handleLoad}
           onError={handleError}
           className={cn(
-            'transition-opacity duration-300';
+            'transition-opacity duration-300',
             isLoading ? 'opacity-0' : 'opacity-100'
           )}
           {...props}
@@ -165,7 +165,7 @@ export function withImageOptimization<P extends { src: string, alt: string }>(
   Component: React.ComponentType<P>
 ) {
   return function OptimizedComponent(props: P) {
-    const { src, alt, ...otherProps } = props,
+    const { src, alt, ...otherProps } = props;
     return (
       <OptimizedImage
         src={src}
@@ -181,7 +181,7 @@ export function preloadImage(src: string): Promise<void> {
   return new Promise((resolve, reject) => {
     const img = new window.Image();
     img.onload = () => resolve();
-    img.onerror = reject;
+    img.onerror = reject,
     img.src = src
   })
 }
@@ -190,8 +190,8 @@ export function preloadImage(src: string): Promise<void> {
 export function getImageDimensions(src: string): Promise<{ width: number, height: number }> {
   return new Promise((resolve, reject) => {
     const img = new window.Image();
-    img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight }),
-    img.onerror = reject;
+    img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
+    img.onerror = reject,
     img.src = src
   })
 } 

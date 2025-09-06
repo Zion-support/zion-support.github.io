@@ -42,7 +42,7 @@ const MarketplaceInsights = ({ stats }: { stats: any }) => (
       </div>
     </CardContent>
   </Card>
-),
+);
 // Filter controls
 const MarketplaceFilterControls = ({
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading
@@ -72,7 +72,7 @@ const MarketplaceFilterControls = ({
       {showRecommended ? "All Products" : "Recommended"}
     </Button>
   </div>
-),
+);
 import { useDispatch } from 'react-redux';
 import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
@@ -80,7 +80,7 @@ import { useAuth } from '@/context/auth/AuthProvider';
 import { toast } from '@/hooks/use-toast';
 // Product card
 const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: () => void, onAddToCart: () => void }) => {
-  const { formatPrice } = useCurrency(),
+  const { formatPrice } = useCurrency();
   return (
   <Card className="h-full hover: shadow-lg transition-shadow">
     <CardHeader className="pb-3">
@@ -131,7 +131,7 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
     </CardContent>
   </Card>
   )
-},
+};
 // Loading grid
 const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -154,7 +154,7 @@ function MarketplacePageContent() {
       // Combine initial products with marketplace listings
       const fullDataset: ProductListing[] = [...INITIAL_MARKETPLACE_PRODUCTS, ...MARKETPLACE_LISTINGS],
       // Apply category filtering
-      let processedDataset = fullDataset;
+      let processedDataset = fullDataset,
       if (filterCategory) {
         processedDataset = processedDataset.filter(p => p.category === filterCategory)
       }
@@ -180,10 +180,10 @@ function MarketplacePageContent() {
           default: // 'newest'
             return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
         }
-      }),
+      });
       // Slice for pagination
       const startIndex = (page - 1) * limit;
-      const endIndex = startIndex + limit;
+      const endIndex = startIndex + limit,
       const items = processedDataset.slice(startIndex, endIndex);
       return {
         items;
@@ -191,7 +191,7 @@ function MarketplacePageContent() {
         total: processedDataset.length
       }
     } catch (error) {
-      logErrorToProduction('Error in fetchProducts:', { data: error }),
+      logErrorToProduction('Error in fetchProducts:', { data: error });
       throw new Error('Failed to load marketplace data. Please try again.')
     }
   }, [sortBy, filterCategory, showRecommended]);
@@ -342,7 +342,7 @@ function MarketplacePageContent() {
                   router.push(`/marketplace/listing/${item.id}`)
                 }}
                 onAddToCart={() => {
-                  dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 })),
+                  dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 }));
                   toast({
                     title: 'Added to cart',
                     description: `${item.title} has been added to your cart`,

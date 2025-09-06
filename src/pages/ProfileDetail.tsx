@@ -14,7 +14,7 @@ export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
   const router = useRouter();
-  const profileId = router.query.profileId as string;
+  const profileId = router.query.profileId as string,
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -44,7 +44,7 @@ export default function ProfileDetail() {
 
         setProfileData(data)
       } catch (err: any) {
-        setError(err.message || "Failed to fetch profile."),
+        setError(err.message || "Failed to fetch profile.");
         toast({
           title: "Error",
           description: err.message || "Failed to fetch profile.",
@@ -52,7 +52,7 @@ export default function ProfileDetail() {
       } finally {
         setIsLoading(false)
       }
-    },
+    };
     fetchProfile()
   }, [profileId]);
   if (isLoading) {
@@ -210,7 +210,7 @@ export default function ProfileDetail() {
           </div>
 
           {/* Sidebar with HireNowCTA */}
-          <div className="col-span-4 lg:col-span-1">
+          <div className = "col-span-4 lg: col-span-1">
             <HireNowCTA
               talentProfile={{
                 id: profileData?.id || '',

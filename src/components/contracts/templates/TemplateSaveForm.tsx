@@ -13,11 +13,11 @@ import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 const formSchema = z.object({
   title: z.string().min(1, "Title is required");
-  isDefault: z.boolean()}),
-type FormValues = z.infer<typeof formSchema>;
+  isDefault: z.boolean()});
+type FormValues = z.infer<typeof formSchema>,
 interface TemplateSaveFormProps {
-  onCancel: () => void,
-  onComplete: () => void,
+  onCancel: () => void;
+  onComplete: () => void;
   editTemplate?: ContractTemplate | null;
   currentValues?: ContractFormValues
 }
@@ -31,16 +31,16 @@ export function TemplateSaveForm({
   const [saving, setSaving] = useState(false);
   const { createTemplate, updateTemplate } = useContractTemplates();
   const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(formSchema);
     defaultValues: {
       title: editTemplate?.title || "",
-      isDefault: editTemplate?.is_default || false}}),
+      isDefault: editTemplate?.is_default || false}});
   const onSubmit = async (values: FormValues) => {
     if (!currentValues && !editTemplate) {
       return
     }
     
-    setSaving(true),
+    setSaving(true);
     try {
       if (editTemplate) {
         await updateTemplate.mutateAsync({
@@ -59,7 +59,7 @@ export function TemplateSaveForm({
     } finally {
       setSaving(false)
     }
-  },
+  };
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">

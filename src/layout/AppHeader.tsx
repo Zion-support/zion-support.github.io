@@ -22,9 +22,9 @@ export function AppHeader() {
   const isMobile = useIsMobile();
   const { t } = useTranslation();
   const { user } = useAuth();
-  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn),
+  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
   const router = useRouter();
-  const showTagline = router.pathname === '/';
+  const showTagline = router.pathname === '/',
   // Messaging context (unread message count)
   const { unreadCount } = useMessaging();
   const openLoginModal = (returnToPath?: string) => {
@@ -37,9 +37,9 @@ export function AppHeader() {
   return (
     <>
       <header
-        style={{ "--nav-height": "64px" } as React.CSSProperties}
+        style = {{ "--nav-height": "64px" } as React.CSSProperties}
         className={cn(
-          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground";
+          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
           { "bg-red-500": mobileMenuOpen }
         )}
       >
@@ -82,11 +82,11 @@ export function AppHeader() {
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
-                  e.preventDefault(),
+                  e.preventDefault();
                   // For the main login link, we might not have a specific returnTo beyond current page;
                   // or we could default to dashboard.
                   // For consistency with how sub-menus now set it:
-                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true }),
+                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true });
                   openLoginModal(router.asPath)
                 }}
               >

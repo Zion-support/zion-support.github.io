@@ -7,15 +7,15 @@ export default function AITalentMatchingPage() {
     {
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
-      icon: <Bot className="h-8 w-8" />},
+      icon: <Bot className = "h-8 w-8" />},
     {
       title: "Streamlined Hiring Workflow",
       description: "Automated screening and ranking saves your team valuable time.",
-      icon: <Users className="h-8 w-8" />},
+      icon: <Users className = "h-8 w-8" />},
     {
       title: "Scalable Talent Pools",
       description: "Access a global network of vetted professionals ready for your projects.",
-      icon: <TrendingUp className="h-8 w-8" />}],
+      icon: <TrendingUp className = "h-8 w-8" />}],
   const testimonials = [
     {
       name: "Emily Stone",

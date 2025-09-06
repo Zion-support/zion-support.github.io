@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { CheckCircle2 } from 'lucide-react'
 import { useTranslation } from 'react-i18next';
 export default function PaymentSuccess() {
-  const router = useRouter(), // Changed from navigate
+  const router = useRouter(); // Changed from navigate
   const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">

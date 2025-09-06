@@ -14,7 +14,7 @@ interface ModelVersionData extends ModelConfig {
 export function ZionGPTModelManager() {
   const [models, setModels] = useState<ModelVersionData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),
+  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({});
   // Fetch model data on component mount
   useEffect(() => {
     fetchModels()
@@ -25,7 +25,7 @@ export function ZionGPTModelManager() {
       const { data, error } = await supabase
         .from('model_versions')
         .select('*')
-        .order('createdAt', { ascending: false }),
+        .order('createdAt', { ascending: false });
       if (error) throw error;
       // Map the data to our component state
       setModels(data.map((model: any) => ({
@@ -43,14 +43,14 @@ export function ZionGPTModelManager() {
     } finally {
       setIsLoading(false)
     }
-  },
+  };
   const checkTrainingStatus = async (modelId: string) => {
     try {
       setActiveJobs(prev => ({ ...prev, [modelId]: true }));
       // Call an edge function that checks the OpenAI fine-tuning job status
       const { data, error } = await supabase.functions.invoke('check-training-status', {
         body: { modelId }
-      }),
+      });
       if (error) throw error;
       // Update the local model status
       setModels(prev => 
@@ -59,13 +59,13 @@ export function ZionGPTModelManager() {
             ? { ...model, trainingStatus: (data as any)?.status || 'failed', errorMessage: (data as any)?.error || 'Unknown error' } 
             : model
         )
-      ),
+      );
       // Also update in the database
       await supabase
         .from('model_versions')
         .update({
-          training_status: (data as any)?.status || 'failed',
-          error_message: (data as any)?.error || 'Unknown error',
+          training_status: (data as any)?.status || 'failed';
+          error_message: (data as any)?.error || 'Unknown error';
           // If training succeeded, automatically set to active
           ...((data as any)?.status === 'succeeded' ? { active: true } : {})
         })
@@ -97,7 +97,7 @@ export function ZionGPTModelManager() {
     } catch (error) {
       logErrorToProduction('Error toggling model active state:', { data: error })
     }
-  },
+  };
   return (
     <Card className="w-full">
       <CardHeader className="flex flex-row items-center justify-between">

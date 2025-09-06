@@ -12,46 +12,46 @@ export function TeamActivity() {
       user: "Alex Johnson",
       action: "Posted a job",
       target: "Senior AI Engineer",
-      timestamp: new Date(Date.now() - 1000 * 60 * 30),
+      timestamp: new Date(Date.now() - 1000 * 60 * 30);
       category: "jobs"},
     {
       id: 2,
       user: "Jamie Smith",
       action: "Contacted candidate",
       target: "Michael Chen",
-      timestamp: new Date(Date.now() - 1000 * 60 * 120),
+      timestamp: new Date(Date.now() - 1000 * 60 * 120);
       category: "candidates"},
     {
       id: 3,
       user: "Sam Williams",
       action: "Updated job",
       target: "Frontend Developer",
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 5),
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 5);
       category: "jobs"},
     {
       id: 4,
       user: "Alex Johnson",
       action: "Added team member",
       target: "Chris Rodriguez",
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24),
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24);
       category: "team"},
     {
       id: 5,
       user: "Taylor Brown",
       action: "Viewed candidate profile",
       target: "Sarah Kim",
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2),
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2);
       category: "candidates"},
     {
       id: 6,
       user: "Jamie Smith",
       action: "Updated budget",
       target: "Monthly spending cap",
-      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3);
       category: "billing"}],
   // Function to format the date in a readable way
   const formatDate = (date: Date) => {
-    const now = new Date(),
+    const now = new Date();
     const diffMs = now.getTime() - date.getTime();
     const diffMins = Math.floor(diffMs / (1000 * 60));
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
@@ -73,8 +73,8 @@ export function TeamActivity() {
       team: { variant: "secondary" },
       billing: { variant: "destructive" }},
     const style = categoryStyles[category] || { variant: "default" as const },
-    return <Badge variant={style.variant}>{category}</Badge>
-  };
+    return <Badge variant = {style.variant}>{category}</Badge>
+  },
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">

@@ -7,8 +7,8 @@ import { Resume } from '@/types/resume';
 interface SelectResumeSectionProps {
   resumeOptions: ResumeOption[],
   selectedResume: ResumeOption | null,
-  handleResumeSelect: (resumeId: string) => void,
-  handleDownloadResume: () => void,
+  handleResumeSelect: (resumeId: string) => void;
+  handleDownloadResume: () => void;
   isLoading: boolean
 }
 

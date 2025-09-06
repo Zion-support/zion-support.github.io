@@ -10,22 +10,22 @@ export const MobileFeatureShowcase: React.FC = () => {
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
     },
     {
-      icon: <Star className="h-8 w-8 text-zion-purple" />,
+      icon: <Star className = "h-8 w-8 text-zion-purple" />,
       title: "AI-Match Instantly",
       description: "Get matched with the perfect talent or jobs using our advanced AI algorithm."
     },
     {
-      icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />,
+      icon: <CheckCircle className = "h-8 w-8 text-zion-cyan" />,
       title: "Track Milestones",
       description: "Monitor project progress and approve milestones directly from your phone."
     },
     {
-      icon: <Mail className="h-8 w-8 text-zion-purple" />,
+      icon: <Mail className = "h-8 w-8 text-zion-purple" />,
       title: "Instant Messaging",
       description: "Chat with candidates or clients and receive notifications in real-time."
     },
     {
-      icon: <Smartphone className="h-8 w-8 text-zion-cyan" />,
+      icon: <Smartphone className = "h-8 w-8 text-zion-cyan" />,
       title: "Biometric Security",
       description: "Login quickly and securely with Face ID or Touch ID on supported devices."
     }
@@ -59,4 +59,4 @@ export const MobileFeatureShowcase: React.FC = () => {
       </div>
     </section>
   )
-},
+};

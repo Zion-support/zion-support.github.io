@@ -13,21 +13,21 @@ interface AppStoreButtonsProps {
 
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
   className,
-  appStoreUrl = "#";
-  googlePlayUrl = "#";
+  appStoreUrl = "#",
+  googlePlayUrl = "#",
   onAppStoreClick;
   onGooglePlayClick
 }) => {
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!appStoreUrl || appStoreUrl === "#") {
-      e.preventDefault(),
+      e.preventDefault();
       logInfo("App Store download clicked");
       onAppStoreClick?.()
     }
   };
   const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!googlePlayUrl || googlePlayUrl === "#") {
-      e.preventDefault(),
+      e.preventDefault();
       logInfo("Google Play download clicked");
       onGooglePlayClick?.()
     }
@@ -76,4 +76,4 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
       </a>
     </div>
   )
-},
+};

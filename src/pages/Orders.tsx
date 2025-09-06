@@ -5,7 +5,7 @@ import { EmptyState } from '@/components/ui/empty-state';
 export default function OrdersPage() {
   const { user } = useAuth();
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
-  const formatDate = (date: string) => new Date(date).toLocaleDateString(),
+  const formatDate = (date: string) => new Date(date).toLocaleDateString();
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'in_escrow':
@@ -13,7 +13,7 @@ export default function OrdersPage() {
           <Badge variant="warning" className="flex items-center gap-1">
             <Clock className="h-3 w-3" /> In Escrow
           </Badge>
-        ),
+        );
       case 'released':
       case 'completed':
         return (

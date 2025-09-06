@@ -17,7 +17,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''}),
+    message: ''});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<{
     name?: string;
@@ -32,15 +32,15 @@ export default function Contact() {
     setErrors((prev) => ({ ...prev, [name]: undefined }))
   };
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     logInfo('[ContactForm] handleSubmit triggered.');
-    logInfo('[ContactForm] formData:', { data: formData }),
+    logInfo('[ContactForm] formData:', { data: formData });
     const schema = z.object({
       name: z.string().min(2, 'Name must be at least 2 characters');
-      email: z.string().email('Invalid email address'),
+      email: z.string().email('Invalid email address');
       message: z.string().min(10, 'Message must be at least 10 characters')});
     const result = schema.safeParse(formData);
-    logInfo('[ContactForm] Zod validation result:', { data: result }),
+    logInfo('[ContactForm] Zod validation result:', { data: result });
     if (!result.success) {
       const fieldErrors: Record<string, string> = {};
       for (const err of result.error.errors) {
@@ -49,12 +49,12 @@ export default function Contact() {
         }
       }
       setErrors(fieldErrors);
-      const validationErrorMsg = result.error.errors[0]?.message || 'Please check your form and try again';
-      logWarn('[ContactForm] Validation failed:', { data: { validationErrorMsg, fieldErrors: result.error.flatten().fieldErrors } }),
+      const validationErrorMsg = result.error.errors[0]?.message || 'Please check your form and try again',
+      logWarn('[ContactForm] Validation failed:', { data: { validationErrorMsg, fieldErrors: result.error.flatten().fieldErrors } });
       toast({
         title: 'Form Validation Error',
         description: validationErrorMsg,
-        variant: 'destructive'}),
+        variant: 'destructive'});
       return
     }
 
@@ -67,11 +67,11 @@ export default function Contact() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)})
         .then(async (res) => {
-          logInfo('[ContactForm] API response status:', { data: res.status }),
-          const responseBody = await res.text(), // Read as text first to avoid JSON parse error if not JSON
-          logInfo('[ContactForm] API response body:', { data: responseBody }),
+          logInfo('[ContactForm] API response status:', { data: res.status });
+          const responseBody = await res.text(); // Read as text first to avoid JSON parse error if not JSON
+          logInfo('[ContactForm] API response body:', { data: responseBody });
           // Note: setIsSubmitting(false) is called within then/catch of the promise.
-          // If fetch itself or .then/.catch structure has a synchronous error,
+          // If fetch itself or .then/.catch structure has a synchronous error;
           // the outer try/catch will handle it.
 
           if (!res.ok) {
@@ -81,7 +81,7 @@ export default function Contact() {
             } catch (parseError) {
               logWarn('[ContactForm] Could not parse error response as JSON.', { data: parseError })
             }
-            logErrorToProduction('[ContactForm] API error response:', { data: errorData }),
+            logErrorToProduction('[ContactForm] API error response:', { data: errorData });
             // This throw will be caught by the .catch block below
             throw new Error(errorData.error || 'Failed to send message')
           }
@@ -90,14 +90,14 @@ export default function Contact() {
           logInfo('[ContactForm] Message submission successful.');
           toast({
             title: 'Message Sent',
-            description: "We've received your message and will get back to you soon."}),
+            description: "We've received your message and will get back to you soon."});
           setSubmitted(true);
           setTimeout(() => setSubmitted(false), 2000);
           setFormData({ name: '', email: '', message: '' })
         })
         .catch((err) => {
           // This catches errors from the fetch promise (network, res.ok is false, or manual throw)
-          logErrorToProduction('[ContactForm] Fetch promise chain error:', { data: err }),
+          logErrorToProduction('[ContactForm] Fetch promise chain error:', { data: err });
           setIsSubmitting(false);
           toast({
             title: 'Submission Error',
@@ -107,25 +107,25 @@ export default function Contact() {
     } catch (error) {
       // This catches synchronous errors that might occur when initiating fetch or in its direct vicinity
       // if not caught by the promise's .catch (less common for typical fetch issues but good for safety)
-      logErrorToProduction('[ContactForm] Synchronous error during fetch initiation or processing:', { data: error }),
+      logErrorToProduction('[ContactForm] Synchronous error during fetch initiation or processing:', { data: error });
       setIsSubmitting(false);
       toast({
         title: 'Critical Submission Error',
         description: error instanceof Error ? error.message : 'An unexpected critical error occurred.',
         variant: 'destructive'})
     }
-  },
+  };
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch(
-        'https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat',
+        'https: //ziontechgroup.functions.supabase.co/functions/v1/ai-chat',
         {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'},
           body: JSON.stringify({
-            messages: [{ role: 'user', content: message }]})},
+            messages: [{ role: 'user', content: message }]})};
       );
       if (!response.ok) {
         throw new Error('Failed to get response from AI assistant')
@@ -137,7 +137,7 @@ export default function Contact() {
       toast({
         title: 'Chat Error',
         description: 'There was an error communicating with our AI assistant. Please try again.',
-        variant: 'destructive'}),
+        variant: 'destructive'});
       return Promise.resolve()
     }
   };
@@ -408,10 +408,10 @@ export default function Contact() {
         <ChatAssistant
           isOpen={isChatOpen}
           onClose={() => setIsChatOpen(false)}
-          recipient={{
+          recipient = {{
             id: 'ai-assistant',
             name: 'AI Assistant',
-            avatarUrl: 'https://placehold.co/64x64?text=AI',
+            avatarUrl: 'https://placehold.co/64x64?text = AI',
             role: 'Support Bot'}}
           onSendMessage={handleSendMessage}
           starterQuestions={[

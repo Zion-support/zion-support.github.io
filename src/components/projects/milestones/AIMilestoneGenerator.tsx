@@ -11,12 +11,12 @@ interface AIMilestoneGeneratorProps {
   startDate: string,
   endDate: string | null,
   projectType: string,
-  onAddMilestones: (milestones: GeneratedMilestone[]) => void,
+  onAddMilestones: (milestones: GeneratedMilestone[]) => void;
   onAddMilestone: (milestone: GeneratedMilestone) => void
 }
 
 export function AIMilestoneGenerator({
-  scope,
+  scope;
   startDate;
   endDate;
   projectType;
@@ -27,8 +27,7 @@ export function AIMilestoneGenerator({
   const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({});
   const handleGenerateMilestones = async () => {
     if (!scope || !startDate || !projectType) {
-      return
-    }
+      return }
 
     const input: MilestoneInput = {
       scope,
@@ -41,7 +40,7 @@ export function AIMilestoneGenerator({
     const initialSelection: Record<number, boolean> = {};
     generatedMilestones.forEach((_, index: number) => {
       initialSelection[index] = true
-    }),
+    });
     setSelectedMilestones(initialSelection)
   };
   const handleAddToProject = () => {
@@ -53,14 +52,14 @@ export function AIMilestoneGenerator({
     setSelectedMilestones({})
   };
   const toggleMilestoneSelection = (index: number) => {
-    setSelectedMilestones(prev => ({
+    setSelectedMilestones(prev = > ({
       ...prev,
       [index]: !prev[index]
     }))
   };
   const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
     onAddMilestone(milestone)
-  },
+  };
   const formatDate = (dateString: string) => {
     try {
       return format(parseISO(dateString), 'MMM dd, yyyy')
@@ -135,7 +134,7 @@ export function AIMilestoneGenerator({
                       variant="ghost"
                       size="sm"
                       onClick={(e) => {
-                        e.stopPropagation(),
+                        e.stopPropagation();
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"

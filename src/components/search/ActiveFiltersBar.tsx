@@ -13,8 +13,8 @@ interface SearchFilters {
 
 interface ActiveFiltersBarProps {
   filters: SearchFilters,
-  onFiltersChange: (filters: SearchFilters) => void,
-  onClearAll: () => void,
+  onFiltersChange: (filters: SearchFilters) => void;
+  onClearAll: () => void;
   className?: string
 }
 
@@ -39,7 +39,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       label: 'Type',
       value: labels[type] || type
     })
-  }),
+  });
   // Add category filter
   if (filters.category) {
     activeFilters.push({
@@ -95,7 +95,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
     } else if (filterKey === 'sort') {
       onFiltersChange({ ...filters, sort: 'relevance' })
     }
-  },
+  };
   if (activeFilters.length === 0) {
     return null
   }
@@ -135,5 +135,5 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       </Button>
     </div>
   )
-},
+};
 export default ActiveFiltersBar;

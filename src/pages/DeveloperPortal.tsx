@@ -15,7 +15,7 @@ interface TabDefinition {
 }
 
 export function DeveloperPortal() {
-  const { user } = useAuth(),
+  const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation");
   // Define the tabs
   const tabs: TabDefinition[] = [
@@ -39,7 +39,7 @@ export function DeveloperPortal() {
       <div className="border-b border-zinc-800 mb-8">
         <div className="flex flex-wrap -mb-px">
           {tabs.map((tab) => {
-            const Icon = tab.icon;
+            const Icon = tab.icon,
             return (
               <button
                 key={tab.id}

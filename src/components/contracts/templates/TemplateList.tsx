@@ -13,12 +13,12 @@ import { useState } from "react";
 interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
-  onSelect: (template: ContractTemplate) => void,
+  onSelect: (template: ContractTemplate) => void;
   onEdit: (template: ContractTemplate) => void
 }
 
 export function TemplateList({
-  templates,
+  templates;
   isLoading;
   onSelect;
   onEdit
@@ -29,7 +29,7 @@ export function TemplateList({
   const router = useRouter();
   const handleDeleteClick = (templateId: string) => {
     setTemplateToDelete(templateId)
-  },
+  };
   const handleDeleteConfirm = async () => {
     if (templateToDelete) {
       await deleteTemplate.mutateAsync(templateToDelete);

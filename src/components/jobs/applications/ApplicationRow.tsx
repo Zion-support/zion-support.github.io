@@ -10,20 +10,20 @@ import { ApplicationActions } from "./ApplicationActions";
 interface ApplicationRowProps {
   application: JobApplication,
   processingId: string | null,
-  onViewApplication: (applicationId: string) => Promise<void>,
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,
+  onViewApplication: (applicationId: string) => Promise<void>;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
   onViewScore: (application: JobApplication) => void
 }
 
 export function ApplicationRow({
-  application,
+  application;
   processingId;
   onViewApplication;
   onStatusChange;
   onViewScore
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false);
-  const talentName = application.talent_profile?.full_name || "Unknown";
+  const talentName = application.talent_profile?.full_name || "Unknown",
   return (
     <TableRow key={application.id}>
       <TableCell>

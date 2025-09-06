@@ -60,13 +60,13 @@ export function ApiDocumentation() {
               description="List all available jobs with optional filtering."
               note=""
               params={[
-                { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
-                { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
+                { name: "page", type: "integer", description: "Page number for pagination (default: 1)" };
+                { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" };
                 { name: "category", type: "string", description: "Filter by job category" },
-                { name: "skills", type: "string[]", description: "Filter by required skills (comma-separated)" },
+                { name: "skills", type: "string[]", description: "Filter by required skills (comma-separated)" };
                 { name: "status", type: "string", description: "Filter by job status (new, active, closed)" }
               ]}
-              codeExamples={{
+              codeExamples = {{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs?limit=10&category=development" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
@@ -75,7 +75,7 @@ export function ApiDocumentation() {
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-}),
+});
 const data = await response.json();
 logInfo(data),`;
                 python: `import requests
@@ -87,13 +87,13 @@ headers = {
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/jobs',
     params={'limit': 10, 'category': 'development'};
-    headers=headers
+    headers = headers
 )
 
 data = response.json()
 print(data)`
               }}
-              responseExamples={{
+              responseExamples = {{
                 success: `{
   "data": [
     {
@@ -129,7 +129,7 @@ print(data)`
               params={[
                 { name: "id", type: "string", description: "The job ID", required: true }
               ]}
-              codeExamples={{
+              codeExamples = {{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
@@ -139,7 +139,7 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-}),
+});
 const data = await response.json();
 logInfo(data),`;
                 python: `import requests
@@ -151,13 +151,13 @@ headers = {
 job_id = 'job_abc123'
 response = requests.get(
     f'https://api.ziontechgroup.com/v1/jobs/{job_id}',
-    headers=headers
+    headers = headers
 )
 
 data = response.json()
 print(data)`
               }}
-              responseExamples={{
+              responseExamples = {{
                 success: `{
   "data": {
     "id": "job_abc123",
@@ -192,10 +192,10 @@ print(data)`
                 { name: "skills", type: "string[]", description: "Required skills", required: true },
                 { name: "budget.min", type: "number", description: "Minimum budget" },
                 { name: "budget.max", type: "number", description: "Maximum budget" },
-                { name: "budget.currency", type: "string", description: "Currency code (default: USD)" },
+                { name: "budget.currency", type: "string", description: "Currency code (default: USD)" };
                 { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
               ]}
-              codeExamples={{
+              codeExamples = {{
                 curl: `curl -X POST "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
@@ -228,7 +228,7 @@ print(data)`
     },
     deadline: '2025-06-30T23:59:59Z'
   })
-}),
+});
 const data = await response.json();
 logInfo(data),`;
                 python: `import requests
@@ -250,14 +250,14 @@ payload = {
 
 response = requests.post(
     'https://api.ziontechgroup.com/v1/jobs',
-    headers=headers;
-    data=json.dumps(payload)
+    headers = headers,
+    data = json.dumps(payload)
 )
 
 data = response.json()
 print(data)`
               }}
-              responseExamples={{
+              responseExamples = {{
                 success: `{
   "data": {
     "id": "job_def456",
@@ -287,9 +287,9 @@ print(data)`
               description="List talent profiles with optional filtering."
               note=""
               params={[
-                { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
-                { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
-                { name: "skills", type: "string[]", description: "Filter by skills (comma-separated)" },
+                { name: "page", type: "integer", description: "Page number for pagination (default: 1)" };
+                { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" };
+                { name: "skills", type: "string[]", description: "Filter by skills (comma-separated)" };
                 { name: "availability", type: "string", description: "Filter by availability status" }
               ]}
               codeExamples={{
@@ -301,7 +301,7 @@ print(data)`
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-}),
+});
 const data = await response.json();
 logInfo(data),`;
                 python: `import requests
@@ -313,13 +313,13 @@ headers = {
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/talent',
     params={'skills': 'react,typescript'};
-    headers=headers
+    headers = headers
 )
 
 data = response.json()
 print(data)`
               }}
-              responseExamples={{
+              responseExamples = {{
                 success: `{
   "data": [
     {
@@ -349,7 +349,7 @@ print(data)`
               params={[
                 { name: "id", type: "string", description: "The talent ID", required: true }
               ]}
-              codeExamples={{
+              codeExamples = {{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talent_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
@@ -359,7 +359,7 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talent
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-}),
+});
 const data = await response.json();
 logInfo(data),`;
                 python: `import requests
@@ -371,13 +371,13 @@ headers = {
 talent_id = 'talent_abc123'
 response = requests.get(
     f'https://api.ziontechgroup.com/v1/talent/{talent_id}',
-    headers=headers
+    headers = headers
 )
 
 data = response.json()
 print(data)`
               }}
-              responseExamples={{
+              responseExamples = {{
                 success: `{
   "data": {
     "id": "talent_abc123",
@@ -427,7 +427,7 @@ print(data)`
                 { name: "requester_name", type: "string", description: "Name of the requester", required: true },
                 { name: "requester_email", type: "string", description: "Email of the requester", required: true }
               ]}
-              codeExamples={{
+              codeExamples = {{
                 curl: `curl -X POST "https://api.ziontechgroup.com/v1/quotes" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
@@ -458,7 +458,7 @@ print(data)`
     requester_name: 'John Doe',
     requester_email: 'john@example.com'
   })
-}),
+});
 const data = await response.json();
 logInfo(data),`;
                 python: `import requests
@@ -476,14 +476,14 @@ payload = {
 
 response = requests.post(
     'https: //api.ziontechgroup.com/v1/quotes',
-    headers=headers;
-    data=json.dumps(payload)
+    headers = headers,
+    data = json.dumps(payload)
 )
 
 data = response.json()
 print(data)`
               }}
-              responseExamples={{
+              responseExamples = {{
                 success: `{
   "data": {
     "id": "quote_def456",
@@ -511,11 +511,11 @@ print(data)`
               description="List quote requests that you've created."
               note=""
               params={[
-                { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
-                { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
+                { name: "page", type: "integer", description: "Page number for pagination (default: 1)" };
+                { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" };
                 { name: "status", type: "string", description: "Filter by status (new, viewed, replied, archived)" }
               ]}
-              codeExamples={{
+              codeExamples = {{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/quotes" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
@@ -524,7 +524,7 @@ print(data)`
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-}),
+});
 const data = await response.json();
 logInfo(data),`;
                 python: `import requests
@@ -535,13 +535,13 @@ headers = {
 
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/quotes',
-    headers=headers
+    headers = headers
 )
 
 data = response.json()
 print(data)`
               }}
-              responseExamples={{
+              responseExamples = {{
                 success: `{
   "data": [
     {
@@ -578,12 +578,12 @@ print(data)`
               <p className="text-zinc-400 mb-4">
                 When you create a webhook, you can optionally provide a secret key.
                 If a secret is provided, each webhook request will include a signature in the
-                <code className="bg-zinc-800 px-1 py-0.5 rounded">X-Zion-Signature</code> header.
+                <code className = "bg-zinc-800 px-1 py-0.5 rounded">X-Zion-Signature</code> header.
                 This signature is an HMAC SHA-256 hash of the request body using your webhook secret as the key.
               </p>
               
               <CodeBlock
-                code={`import crypto from 'crypto';
+                code={`import crypto from 'crypto',
 // Function to verify webhook signature
 function verifyWebhookSignature(payload, signature, secret) {
   const hmac = crypto.createHmac('sha256', secret);
@@ -596,20 +596,20 @@ function verifyWebhookSignature(payload, signature, secret) {
 
 // Example usage in Express.js
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
-  const signature = req.headers['x-zion-signature'];
+  const signature = req.headers['x-zion-signature'],
   const payload = req.body.toString();
-  const webhookSecret = process.env.WEBHOOK_SECRET;
+  const webhookSecret = process.env.WEBHOOK_SECRET,
   if (!verifyWebhookSignature(payload, signature, webhookSecret)) {
     return res.status(401).send('Invalid signature')
   }
   
   // Process the webhook event
   const event = JSON.parse(payload);
-  logInfo('Received valid webhook:', { data: event }),
+  logInfo('Received valid webhook:', { data: event });
   // Respond to acknowledge receipt
   res.status(200).send('Webhook received')
 }),`}
-                language="javascript"
+                language = "javascript"
                 showLineNumbers={true}
               />
               
@@ -702,7 +702,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                     <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">403 Forbidden</code></td>
                     <td className="py-2 px-4">The request is understood, but it has been refused or access is not allowed.</td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
+                  <tr className = "border-b border-zinc-800">
                     <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">404 Not Found</code></td>
                     <td className="py-2 px-4">The requested resource does not exist.</td>
                   </tr>
@@ -766,11 +766,11 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 
 // Helper component for API endpoint documentation
 function EndpointSection({
-  method,
+  method;
   endpoint;
   description;
   note;
-  params = [];
+  params = [],
   codeExamples;
   responseExamples
 }: EndpointSectionProps) {

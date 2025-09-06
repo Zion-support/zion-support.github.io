@@ -20,7 +20,7 @@ interface ReviewFormProps {
   projectId: string,
   revieweeId: string,
   revieweeName: string,
-  onSubmit: (data: any) => Promise<boolean>,
+  onSubmit: (data: any) => Promise<boolean>;
   defaultValues?: Review;
   isSubmitting: boolean
 }
@@ -49,7 +49,7 @@ export function ReviewForm({
       timeliness_rating: undefined,
       would_work_again: undefined,
       is_anonymous: false}
-  }),
+  });
   const handleSubmit = async (values: ReviewFormValues) => {
     const formattedData = {
       ...values,
@@ -106,7 +106,7 @@ export function ReviewForm({
         
         {/* Review Text */}
         <FormField
-          control={form.control}
+          control = {form.control}
           name="review_text"
           rules={{
             required: "Please provide feedback",

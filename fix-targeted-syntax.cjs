@@ -4,32 +4,57 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-// Common syntax fixes
+// Targeted syntax fixes based on actual patterns found
 const fixes = [
-  // Fix interface properties - add semicolons
+  // Fix missing semicolons in interface properties
   {
     pattern: /(\w+)\s*:\s*([^,;]+),(\s*\/\/[^\n]*)?$/gm,
     replacement: '$1: $2;$3'
   },
-  // Fix object properties - add semicolons
+  // Fix missing semicolons in object properties
   {
     pattern: /(\w+)\s*:\s*([^,;]+),(\s*\/\/[^\n]*)?$/gm,
     replacement: '$1: $2;$3'
   },
-  // Fix function parameters - add commas
+  // Fix missing semicolons in type definitions
+  {
+    pattern: /(\w+)\s*:\s*([^,;]+),(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2;$3'
+  },
+  // Fix missing semicolons in function parameters
   {
     pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
     replacement: '$1 = $2,$3'
   },
-  // Fix missing semicolons after return statements
+  // Fix missing semicolons in object destructuring
   {
-    pattern: /return\s+([^;]+),(\s*\/\/[^\n]*)?$/gm,
-    replacement: 'return $1;$2'
+    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2,$3'
   },
-  // Fix missing semicolons after variable declarations
+  // Fix missing semicolons in array destructuring
   {
-    pattern: /(\w+)\s*=\s*([^,;]+),(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1 = $2;$3'
+    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1 = $2,$3'
+  },
+  // Fix missing semicolons in function calls
+  {
+    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1 = $2,$3'
+  },
+  // Fix missing semicolons in object properties
+  {
+    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2,$3'
+  },
+  // Fix missing semicolons in interface properties
+  {
+    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2,$3'
+  },
+  // Fix missing semicolons in type definitions
+  {
+    pattern: /(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2,$3'
   }
 ];
 

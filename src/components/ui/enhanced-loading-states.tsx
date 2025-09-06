@@ -16,9 +16,9 @@ interface LoadingSpinnerProps {
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
-  variant = 'default';
+  variant = 'default',
   className;
-  showText = false;
+  showText = false,
   text = 'Loading...'
 }) => {
   const sizeClasses = {
@@ -51,8 +51,8 @@ interface ProgressiveLoadingProps {
 
 export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
   steps,
-  currentStep = 0;
-  showProgress = true;
+  currentStep = 0,
+  showProgress = true,
   onComplete
 }) => {
   const [activeStep, setActiveStep] = useState(0);
@@ -83,9 +83,9 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
       <div className="space-y-2">
         {steps.map((step, index) => (
           <motion.div
-            key={step.id}
+            key = {step.id}
             className={cn(
-              'flex items-center gap-3 p-2 rounded-md';
+              'flex items-center gap-3 p-2 rounded-md',
               index === activeStep ? 'bg-primary/10' : 'opacity-50'
             )}
             initial={{ opacity: 0, x: -20 }}
@@ -107,7 +107,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
       </div>
     </div>
   )
-},
+};
 // Enhanced skeleton loader
 interface SkeletonProps {
   className?: string;
@@ -118,11 +118,11 @@ interface SkeletonProps {
 
 export const Skeleton: React.FC<SkeletonProps> = ({
   className,
-  variant = 'rectangular';
-  animation = 'pulse';
+  variant = 'rectangular',
+  animation = 'pulse',
   lines = 1
 }) => {
-  const baseClasses = 'bg-muted rounded';
+  const baseClasses = 'bg-muted rounded',
   const variantClasses = {
     text: 'h-4 w-full',
     circular: 'h-12 w-12 rounded-full',
@@ -139,12 +139,12 @@ export const Skeleton: React.FC<SkeletonProps> = ({
       <div className="space-y-2">
         {Array.from({ length: lines }).map((_, i) => (
           <div
-            key={i}
+            key = {i}
             className={cn(
-              baseClasses;
+              baseClasses,
               variantClasses.text;
               animationClasses[animation];
-              i === lines - 1 ? 'w-3/4' : 'w-full';
+              i = == lines - 1 ? 'w-3/4' : 'w-full',
               className
             )}
           />
@@ -155,8 +155,8 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 
   return (
     <div
-      className={cn(
-        baseClasses;
+      className = {cn(
+        baseClasses,
         variantClasses[variant];
         animationClasses[animation];
         className
@@ -172,11 +172,11 @@ interface ErrorStateProps {
   action?: {
     label: string,
     onClick: () => void
-  },
+  };
   secondaryAction?: {
     label: string,
     onClick: () => void
-  },
+  };
   variant?: 'network' | 'generic' | 'timeout' | 'permission';
   showRetry?: boolean;
   retryCount?: number;
@@ -191,10 +191,10 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
   description;
   action;
   secondaryAction;
-  variant = 'generic';
-  showRetry = true;
-  retryCount = 0;
-  maxRetries = 3;
+  variant = 'generic',
+  showRetry = true,
+  retryCount = 0,
+  maxRetries = 3,
   onRetry;
   className
 }) => {
@@ -219,11 +219,11 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
       case 'network':
         return {
           icon: isOnline ? Wifi : WifiOff,
-          title: title || (isOnline ? 'Connection Error' : 'No Internet Connection'),
+          title: title || (isOnline ? 'Connection Error' : 'No Internet Connection');
           description: description || (isOnline 
             ? 'Unable to connect to our servers. Please check your connection.'
             : 'You appear to be offline. Please check your internet connection.'
-          ),
+          );
           color: 'text-orange-500'
         },
       case 'timeout':
@@ -249,8 +249,8 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
     }
   },
   const config = getErrorConfig();
-  const Icon = config.icon;
-  const canRetry = showRetry && onRetry && retryCount < maxRetries;
+  const Icon = config.icon,
+  const canRetry = showRetry && onRetry && retryCount < maxRetries,
   return (
     <Card className={cn('border-destructive/20', className)}>
       <CardContent className="p-8 text-center">
@@ -271,7 +271,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
                 Error Details (Development)
               </summary>
               <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto">
-                {typeof error === 'string' ? error : error.message}
+                {typeof error === 'string' ? error: error.message}
               </pre>
             </details>
           )}
@@ -307,7 +307,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
       </CardContent>
     </Card>
   )
-},
+};
 // Loading state for lists/grids
 interface LoadingGridProps {
   count?: number;
@@ -318,8 +318,8 @@ interface LoadingGridProps {
 
 export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8,
-  columns = 4;
-  variant = 'card';
+  columns = 4,
+  variant = 'card',
   className
 }) => {
   const gridClasses = {
@@ -390,7 +390,7 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   className
 }) => {
   const getPerformanceColor = (time: number) => {
-    if (time < 100) return 'text-green-500',
+    if (time < 100) return 'text-green-500';
     if (time < 300) return 'text-yellow-500';
     return 'text-red-500'
   };

@@ -19,8 +19,8 @@ export default function OrderDetailPage() {
     const blob = await generateInvoicePdf(order);
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
-    link.href = url;
-    link.download = `invoice-${order.orderId}.pdf`;
+    link.href = url,
+    link.download = `invoice-${order.orderId}.pdf`,
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -35,22 +35,22 @@ export default function OrderDetailPage() {
           subject: `Receipt for order ${order.orderId}`,
           html: `<p>Thank you for your purchase. Total ${order.total}.</p>`
         }
-      }),
+      });
       toast({ title: 'Receipt sent!' })
     } catch (err) {
       toast({ title: 'Failed to send receipt', variant: 'destructive' })
     }
-  },
+  };
   const handleCopySummary = async () => {
     if (!order) return;
     const summary = [
-      `Order #${order.orderId}`;
-      `Date: ${new Date(order.date).toLocaleDateString()}`,
+      `Order #${order.orderId}`,
+      `Date: ${new Date(order.date).toLocaleDateString()}`;
       '';
       'Items: ',
       ...order.items.map((i) => `${i.name} x${i.quantity} - $${i.price.toFixed(2)}`),
       '';
-      `Total: $${order.total.toFixed(2)}`,
+      `Total: $${order.total.toFixed(2)}`;
       '';
       'Shipping Address: ',
       order.shippingAddress.name;

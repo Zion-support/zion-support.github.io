@@ -10,14 +10,14 @@ import { TemplateManager } from "./templates/TemplateManager";
 import { SmartContractBuilder } from "./SmartContractBuilder";
 interface ContractBuilderProps {
   isOpen: boolean,
-  onClose: () => void,
+  onClose: () => void;
   talent: TalentProfile,
   clientName: string,
   onContractGenerated?: (contractContent: string) => void
 }
 
 export function ContractBuilder({
-  isOpen,
+  isOpen;
   onClose;
   talent;
   clientName;
@@ -32,9 +32,9 @@ export function ContractBuilder({
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
   const handleLoadTemplate = (templateData: ContractFormValues) => {
     setFormValues(templateData)
-  },
+  };
   const handleContractGenerated = (contract: string) => {
-    setGeneratedContract(contract),
+    setGeneratedContract(contract);
     setActiveTab("preview");
     if (onContractGenerated) {
       onContractGenerated(contract)

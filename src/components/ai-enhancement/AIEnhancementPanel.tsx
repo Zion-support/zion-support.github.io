@@ -9,7 +9,7 @@ import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContent
 interface AIEnhancementPanelProps {
   title: string,
   defaultOptions: AIEnhancementOptions,
-  onApply: (content: string) => void,
+  onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string
@@ -20,12 +20,12 @@ export function AIEnhancementPanel({
   defaultOptions;
   onApply;
   onClose;
-  showInstructions = true;
+  showInstructions = true,
   initialContent = ''
 }: AIEnhancementPanelProps) {
   const [options, setOptions] = useState<AIEnhancementOptions>({
     ...defaultOptions,
-    content: initialContent || defaultOptions.content}),
+    content: initialContent || defaultOptions.content});
   const [generatedContent, setGeneratedContent] = useState<string>('');
   const [copied, setCopied] = useState(false);
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
@@ -40,7 +40,7 @@ export function AIEnhancementPanel({
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
-      ...options,
+      ...options;
       [field]: e.target.value})
   };
   const handleApply = () => {

@@ -18,7 +18,7 @@ export function ProjectOfferBanner() {
     }
   }, [projects, isLoading]);
   const handleDismiss = (projectId: string, e: React.MouseEvent) => {
-    e.stopPropagation(),
+    e.stopPropagation();
     setDismissed(prev => {
       const updated = new Set(prev);
       updated.add(projectId);
@@ -27,7 +27,7 @@ export function ProjectOfferBanner() {
   };
   const handleViewOffer = (projectId: string) => {
     router.push(`/project/${projectId}`)
-  },
+  };
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {
     return null
   }

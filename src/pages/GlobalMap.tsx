@@ -63,10 +63,10 @@ export default function GlobalMapPage() {
     }, 5000);
     return () => clearInterval(interval)
   }, []);
-  const width = 800;
-  const height = 400;
+  const width = 800,
+  const height = 400,
   function project(lat: number, lng: number) {
-    const x = ((lng + 180) / 360) * width,
+    const x = ((lng + 180) / 360) * width;
     const y = ((90 - lat) / 180) * height;
     return { x, y }
   }
@@ -83,7 +83,7 @@ export default function GlobalMapPage() {
             <Globe className="w-full h-full text-secondary" />
             {INSTANCES.map((i) => {
               const { x, y } = project(i.lat, i.lng);
-              const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500';
+              const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
               return (
                 <TooltipProvider key={i.id}>
                   <Tooltip>

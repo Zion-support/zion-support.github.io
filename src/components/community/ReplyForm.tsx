@@ -4,7 +4,7 @@ import { useForm, ControllerRenderProps } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 interface ReplyFormProps {
-  onSubmit: (content: string) => Promise<void>,
+  onSubmit: (content: string) => Promise<void>;
   parentId?: string
 }
 
@@ -18,9 +18,9 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
     defaultValues: {
       content: ""
     }
-  }),
+  });
   const handleSubmit = async (values: ReplyFormValues) => {
-    setIsSubmitting(true),
+    setIsSubmitting(true);
     try {
       await onSubmit(values.content);
       form.reset()
@@ -58,5 +58,5 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
       </CardContent>
     </Card>
   )
-},
+};
 export default ReplyForm;

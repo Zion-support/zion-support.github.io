@@ -34,9 +34,9 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       const params: ClientBudgetParams = {
         jobTitle,
         category};
-      if (timeline) params.timeline = timeline;
-      if (scope) params.scope = scope;
-      if (experienceLevel) params.experienceLevel = experienceLevel;
+      if (timeline) params.timeline = timeline,
+      if (scope) params.scope = scope,
+      if (experienceLevel) params.experienceLevel = experienceLevel,
       const result = await getClientBudgetSuggestion(params);
       setSuggestion(result)
     } catch (error) {
@@ -44,7 +44,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     } finally {
       setIsLoading(false)
     }
-  },
+  };
   const handleApplySuggestion = () => {
     if (suggestion) {
       onSuggestionApplied(suggestion.minRate, suggestion.maxRate);
@@ -59,7 +59,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
         })
       }
     }
-  },
+  };
   return (
     <div className="space-y-4">
       <div>

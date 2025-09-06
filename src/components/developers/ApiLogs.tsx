@@ -22,7 +22,7 @@ export function ApiLogs() {
   // Helper to format the timestamp
   const formatTimestamp = (timestamp: string) => {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
-  },
+  };
   // Helper to get badge color based on status code
   const getStatusBadge = (statusCode: number) => {
     if (statusCode >= 200 && statusCode < 300) {
@@ -30,15 +30,15 @@ export function ApiLogs() {
     } else if (statusCode >= 400 && statusCode < 500) {
       return <Badge className="bg-amber-700">Client Error</Badge>
     } else if (statusCode >= 500) {
-      return <Badge className="bg-red-700">Server Error</Badge>
+      return <Badge className = "bg-red-700">Server Error</Badge>
     } else {
       return <Badge className="bg-blue-700">Other</Badge>
     }
   },
   // Calculate pagination info
   const totalPages = Math.ceil(totalLogs / pageSize);
-  const hasNextPage = currentPage < totalPages - 1;
-  const hasPrevPage = currentPage > 0;
+  const hasNextPage = currentPage < totalPages - 1,
+  const hasPrevPage = currentPage > 0,
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>

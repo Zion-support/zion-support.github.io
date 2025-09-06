@@ -12,7 +12,7 @@ import { ResumeTab } from "./ResumeTab";
 import { Job } from "./types";
 interface ApplyFormProps {
   job: Job,
-  onClose: () => void,
+  onClose: () => void;
   onApplySuccess?: (jobId: string) => Promise<void>
 }
 
@@ -28,7 +28,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
   const handleResumeSelected = (resume: ResumeOption) => {
-    setSelectedResume(resume),
+    setSelectedResume(resume);
     setSelectedResumeId(resume.id)
   };
   const handleApply = async () => {
@@ -37,7 +37,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         title: "Message required",
         description: "Please enter a message before applying.",
         variant: "destructive"
-      }),
+      });
       return
     }
     
@@ -45,11 +45,10 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       setIsSubmitting(true);
       // First submit the application to the job applications table
       const applicationSuccess = await applyToJob(
-        job.id;
+        job.id,
         message;
-        selectedResume && selectedResume.type === 'ai_resume'
-          ? selectedResumeId || undefined
-          : undefined;
+        selectedResume && selectedResume.type = == 'ai_resume'
+          ? selectedResumeId || undefined: undefined,
         selectedResume && selectedResume.type === 'custom_upload'
           ? selectedResume.file
           : undefined
@@ -59,7 +58,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       }
       
       // Format message with proposal link if provided
-      let fullMessage = message;
+      let fullMessage = message,
       if (proposalLink) {
         fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`
       }
@@ -94,17 +93,17 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       
       toast({
         title: "Application sent",
-        description: `Your application for "${job.title}" has been sent.`}),
+        description: `Your application for "${job.title}" has been sent.`});
       onClose()
     } catch (error) {
-      logErrorToProduction('Failed to send application:', { data: error }),
+      logErrorToProduction('Failed to send application:', { data: error });
       toast({
         title: "Application failed",
         description: "There was an error sending your application. Please try again.",
         variant: "destructive"
       })
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false);
     }
   };
   return (

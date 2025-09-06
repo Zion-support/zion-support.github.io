@@ -7,15 +7,15 @@ import { Globe, Server, Clock, MapPin, Check } from 'lucide-react'
 import { CountryPricing } from "@/data/onsiteServicePricing";
 interface CountryServiceCardProps {
   country: CountryPricing,
-  onSelect: (country: CountryPricing) => void,
-  onQuote?: (country: CountryPricing) => void,
+  onSelect: (country: CountryPricing) => void;
+  onQuote?: (country: CountryPricing) => void;
   isPopular?: boolean
 }
 
 export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
   const getRegionEmoji = (countryName: string | undefined): string => {
-    if (!countryName) return "🌐",
+    if (!countryName) return "🌐";
     const emojiMap: Record<string, string> = {
       "United States": "🇺🇸";
       "United Kingdom": "🇬🇧";
@@ -38,7 +38,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
   };
   // Get response time estimate based on country
   const getResponseTime = (countryName: string | undefined): string => {
-    if (!countryName) return "8-24 hours",
+    if (!countryName) return "8-24 hours";
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
     if (tier1.includes(countryName)) {

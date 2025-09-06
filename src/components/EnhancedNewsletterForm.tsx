@@ -9,13 +9,13 @@ export function EnhancedNewsletterForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
   const lastSubmit = useRef(0);
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     const now = Date.now();
     if (now - lastSubmit.current < 1000) return;
-    lastSubmit.current = now;
+    lastSubmit.current = now,
     const trimmed = email.trim();
     if (!EMAIL_REGEX.test(trimmed)) {
       toast.error("Invalid email");
@@ -27,7 +27,7 @@ export function EnhancedNewsletterForm() {
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed })}),
+        body: JSON.stringify({ email: trimmed })});
       const data = await res.json().catch(() => ({}));
       if (res.ok) {
         // Handle different success statuses
@@ -40,11 +40,11 @@ export function EnhancedNewsletterForm() {
         setEmail("")
       } else {
         // Handle error responses
-        logErrorToProduction('Newsletter subscription failed:', { data: data }),
+        logErrorToProduction('Newsletter subscription failed:', { data: data });
         toast.error(data.error || "Subscription failed. Please try again.")
       }
     } catch (err: any) {
-      logErrorToProduction('Newsletter subscription error:', { data: err }),
+      logErrorToProduction('Newsletter subscription error:', { data: err });
       toast.error("Unable to subscribe right now. Please try again later.")
     } finally {
       setIsSubmitting(false);

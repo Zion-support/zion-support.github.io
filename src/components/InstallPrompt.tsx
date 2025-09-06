@@ -34,14 +34,14 @@ export const InstallPrompt: React.FC = () => {
     }
 
     const handler = (e: BeforeInstallPromptEvent) => {
-      e.preventDefault(),
+      e.preventDefault();
       safeSessionStorage.setItem(SHOWN_KEY, 'true');
       setPromptEvent(e);
       setVisible(true)
     };
     const handleAppInstalled = () => {
       if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('eventpwa_install_success'), // More specific event for install success
+        (window as any).gtag('eventpwa_install_success'); // More specific event for install success
       }
       setVisible(false), // Hide prompt once installed
       setPromptEvent(null)
@@ -104,5 +104,5 @@ export const InstallPrompt: React.FC = () => {
       </div>
     </>
   )
-},
+};
 export default InstallPrompt;

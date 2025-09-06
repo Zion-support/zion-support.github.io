@@ -16,10 +16,10 @@ interface PostCardProps {
 }
 
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
-  logInfo('PostCardComponent rendering with post:', { data: post ? post.id : 'NO POST' }),
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
+  logInfo('PostCardComponent rendering with post:', { data: post ? post.id : 'NO POST' });
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
   return (
-    <Card data-testid="post-card" className={cn(
+    <Card data-testid = "post-card" className={cn(
       "transition-shadow hover: shadow-md",
       post.isPinned && "border-zion-purple/50";
       post.isFeatured && "bg-zion-purple/5"
@@ -91,7 +91,7 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
       </CardFooter>
     </Card>
   )
-},
+};
 export const PostCard = React.memo(PostCardComponent);
-PostCard.displayName = 'PostCard';
+PostCard.displayName = 'PostCard',
 export default PostCard;

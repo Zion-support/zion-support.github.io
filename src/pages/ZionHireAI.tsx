@@ -24,7 +24,7 @@ export default function ZionHireAI() {
           className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24"
           style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}}
         >
-          <div className="container mx-auto px-4 md: px-6">
+          <div className = "container mx-auto px-4 md: px-6">
             <div className="grid gap-6 md:grid-cols-2 items-center">
               <div className="space-y-4">
                 <h1 className="text-3xl md:text-5xl font-bold tracking-tighter text-white">
@@ -34,7 +34,7 @@ export default function ZionHireAI() {
                   Empower your team with AI-driven talent acquisition. Streamline your hiring process,
                   improve candidate matches, and enhance the applicant experience.
                 </p>
-                <div className="flex flex-col sm: flex-row gap-3 pt-4">
+                <div className = "flex flex-col sm: flex-row gap-3 pt-4">
                   <Button 
                     size="lg" 
                     className="bg-zion-purple hover:bg-zion-purple-light text-white"
@@ -80,7 +80,7 @@ export default function ZionHireAI() {
               </p>
             </div>
             
-            <div className="grid gap-6 md: grid-cols-2 lg:grid-cols-3">
+            <div className = "grid gap-6 md: grid-cols-2 lg:grid-cols-3">
               <Card className="bg-card border border-border">
                 <CardHeader>
                   <Briefcase className="h-10 w-10 text-zion-purple mb-2" />

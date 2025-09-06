@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 // Placeholder for user context/role checking
 // In a real app, this would come from an auth context
 const useAuth = () => {
-    // const { user } = useUserContext(), // Example from a real app
+    // const { user } = useUserContext(); // Example from a real app
     // return { isAdmin: user?.role === 'admin', isAuthenticated: !!user },
     return { isAdmin: false, isAuthenticated: false }, // Default to non-admin, not authenticated for this example
 };
@@ -19,9 +19,9 @@ interface SharedWhitepaper {
 }
 
 const WhitepaperViewPage: React.FC = () => {
-  const router = useRouter(),
+  const router = useRouter();
   const { id: rawId } = router.query,
-  const id = typeof rawId === 'string' ? rawId : undefined;
+  const id = typeof rawId === 'string' ? rawId: undefined,
   const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -38,8 +38,8 @@ const WhitepaperViewPage: React.FC = () => {
       setError(null);
       try {
         const { data: responseData, error: funcError } = await supabase.functions.invoke('get-shared-whitepaper', {
-          body: { id }}),
-        if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),
+          body: { id }});
+        if (funcError) throw new Error(`Supabase function error: ${funcError.message}`);
         if (responseData && (responseData as any).error) throw new Error((responseData as any).error);
         if (!responseData || !(responseData as any).whitepaper_data) {
           throw new Error('Shared whitepaper not found or data is invalid.')
@@ -48,7 +48,7 @@ const WhitepaperViewPage: React.FC = () => {
         setSharedData(responseData as SharedWhitepaper)
 
       } catch (e: any) {
-        logErrorToProduction('Error fetching shared whitepaper:', { data: e }),
+        logErrorToProduction('Error fetching shared whitepaper:', { data: e });
         setError(e.message || 'An unexpected error occurred.')
       } finally {
         setLoading(false)
@@ -118,5 +118,5 @@ const WhitepaperViewPage: React.FC = () => {
       />
     </div>
   )
-},
+};
 export default WhitepaperViewPage;

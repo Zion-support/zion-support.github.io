@@ -9,7 +9,7 @@ export function SocialLogin() {
   const handleGoogle = () => {
     setIsLoading(true);
     window.location.href = '/auth/google'
-  };
+  },
   return (
     <div className="mt-6">
       <div className="relative">

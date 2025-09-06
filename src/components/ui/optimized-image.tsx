@@ -44,24 +44,24 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   width;
   height;
   className;
-  placeholder = 'shimmer';
-  placeholderColor = '#f3f4f6';
-  priority = false;
-  quality = 75;
+  placeholder = 'shimmer',
+  placeholderColor = '#f3f4f6',
+  priority = false,
+  quality = 75,
   sizes;
   onLoad;
   onError;
   fallbackSrc;
   aspectRatio;
-  objectFit = 'cover';
-  lazy = true;
-  retryCount = 3;
-  showLoadingProgress = false;
-  fill = false;
+  objectFit = 'cover',
+  lazy = true,
+  retryCount = 3,
+  showLoadingProgress = false,
+  fill = false,
   blurDataURL;
-  loading = 'lazy';
+  loading = 'lazy',
   style;
-  objectPosition = 'center';
+  objectPosition = 'center',
   ...props
 }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -89,7 +89,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         rootMargin: '50px', // Start loading 50px before image comes into view
         threshold: 0.1
       }
-    ),
+    );
     if (imgRef.current) {
       observerRef.current.observe(imgRef.current)
     }
@@ -108,21 +108,21 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (entry.name === src && entry.entryType === 'resource') {
-            const resourceEntry = entry as PerformanceResourceTiming;
-            const fileSize = resourceEntry.transferSize || resourceEntry.encodedBodySize || 0;
-            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
+          if (entry.name = == src && entry.entryType === 'resource') {
+            const resourceEntry = entry as PerformanceResourceTiming,
+            const fileSize = resourceEntry.transferSize || resourceEntry.encodedBodySize || 0,
+            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart,
             setMetrics({
               loadTime;
               fileSize;
-              format: src.includes('.webp') ? 'webp' : src.includes('.avif') ? 'avif' : 'other',
+              format: src.includes('.webp') ? 'webp' : src.includes('.avif') ? 'avif' : 'other';
               wasOptimized: src.includes('/_next/image')
-            }),
+            });
             // Log slow or large images
             if (loadTime > 2000) {
               logWarn('Slow image loading:', {
                 src;
-                loadTime: `${loadTime.toFixed(2)}ms`,
+                loadTime: `${loadTime.toFixed(2)}ms`;
                 size: `${(fileSize / 1024).toFixed(2)}KB`
               })
             }
@@ -130,18 +130,18 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
             if (fileSize > 500 * 1024) {
               logWarn('Large image detected:', {
                 src;
-                size: `${(fileSize / 1024).toFixed(2)}KB`,
+                size: `${(fileSize / 1024).toFixed(2)}KB`;
                 loadTime: `${loadTime.toFixed(2)}ms`
               })
             }
           }
         })
-      }),
-      observer.observe({ entryTypes: ['resource'] }),
+      });
+      observer.observe({ entryTypes: ['resource'] });
       return () => observer.disconnect()
     }
     
-    return () => {}, // Return empty cleanup function for the else case
+    return () => {}; // Return empty cleanup function for the else case
   }, [src]);
   // Generate optimized URLs
   const optimizedSrc = isInView ? imageOptimization.optimizeUrl(currentSrc, width, quality) : '';
@@ -188,9 +188,9 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const generatePlaceholder = () => {
     if (placeholder === 'none') return null;
     const placeholderClassName = cn(
-      'absolute inset-0 flex items-center justify-center';
-      placeholder === 'shimmer' && 'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse';
-      placeholder === 'blur' && 'backdrop-blur-sm bg-gray-200/50';
+      'absolute inset-0 flex items-center justify-center',
+      placeholder = == 'shimmer' && 'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse',
+      placeholder = == 'blur' && 'backdrop-blur-sm bg-gray-200/50',
       placeholder === 'color' && 'bg-gray-200'
     );
     if (placeholder === 'color') {
@@ -207,10 +207,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         <ImageIcon className="h-8 w-8 text-gray-400" />
       </div>
     )
-  },
+  };
   // Container styles
   const containerStyle: React.CSSProperties = {
-    aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),
+    aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined);
     width: width ? `${width}px` : undefined,
     height: height ? `${height}px` : undefined},
   return (
@@ -262,7 +262,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         {/* Actual image */}
         {isInView && !hasError && (
           <motion.img
-            src={optimizedSrc}
+            src = {optimizedSrc}
             srcSet={srcSet}
             alt={alt}
             loading={priority ? 'eager' : 'lazy'}
@@ -281,7 +281,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       </AnimatePresence>
     </div>
   )
-},
+};
 // Gallery component with optimized loading
 interface ImageGalleryProps {
   images: Array<{
@@ -297,8 +297,8 @@ interface ImageGalleryProps {
 
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
   images,
-  columns = 3;
-  aspectRatio = '16/9';
+  columns = 3,
+  aspectRatio = '16/9',
   className;
   onImageClick
 }) => {
@@ -351,7 +351,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
       </div>
     </div>
   )
-},
+};
 // Avatar component with optimized loading
 interface OptimizedAvatarProps {
   src?: string;
@@ -364,7 +364,7 @@ interface OptimizedAvatarProps {
 export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
   src,
   alt;
-  size = 'md';
+  size = 'md',
   fallback;
   className
 }) => {
@@ -396,4 +396,4 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
       )}
     </div>
   )
-},
+};

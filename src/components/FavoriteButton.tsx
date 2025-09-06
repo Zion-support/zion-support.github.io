@@ -15,7 +15,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
   const { isAuthenticated } = useAuth();
   const [loginOpen, setLoginOpen] = React.useState(false);
   const handleClick = (e: React.MouseEvent) => {
-    e.stopPropagation(),
+    e.stopPropagation();
     if (!isAuthenticated) {
       setLoginOpen(true);
       return
@@ -29,7 +29,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
       description: wasWishlisted 
         ? "Item has been removed from your wishlist" 
         : "Item has been added to your wishlist"})
-  },
+  };
   const active = isWishlisted(itemId);
   return (
     <>
@@ -37,16 +37,16 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
         <Tooltip>
           <TooltipTrigger asChild>
             <button
-              className={cn(
+              className = {cn(
                 'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover: bg-zion-blue-light/30 transition-colors',
                 className
               )}
-              onClick={handleClick}
+              onClick = {handleClick}
               aria-label={active ? 'Remove from favorites' : 'Save to favorites'}
             >
               <Heart
                 className={cn(
-                  'h-4 w-4 transition-transform duration-200';
+                  'h-4 w-4 transition-transform duration-200',
                   active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate'
                 )}
               />

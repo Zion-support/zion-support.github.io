@@ -19,7 +19,7 @@ import { toast } from "@/components/ui/use-toast";
 import { useInterviews } from "@/hooks/useInterviews";
 interface InterviewRequestFormProps {
   talent: TalentProfile,
-  onClose: () => void,
+  onClose: () => void;
   userDetails?: UserProfile
 }
 
@@ -27,30 +27,30 @@ const formSchema = z.object({
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
     message: "Interview date must be in the future"
-  }),
+  });
   time: z.string().min(1, "Please select a time for the interview.");
   duration: z.string().min(1, "Please select the interview duration.");
   platform: z.string().min(1, "Please select a meeting platform.");
-  meetingLink: z.string().optional(),
+  meetingLink: z.string().optional();
   title: z.string().min(3, "Please provide a brief title for the interview.");
-  notes: z.string().optional()}),
+  notes: z.string().optional()});
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(formSchema);
     defaultValues: {
       title: `Interview with ${talent.full_name}`,
       duration: "30",
       platform: "zoom",
       notes: "",
-      meetingLink: ""}}),
+      meetingLink: ""}});
   async function onSubmit(values: z.infer<typeof formSchema>) {
     if (!userDetails?.id) {
       toast({
         title: "Authentication required",
         description: "Please log in to schedule an interview",
-        variant: "destructive"}),
+        variant: "destructive"});
       return
     }
 
@@ -64,26 +64,26 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       await requestInterview({
         talent_id: talent.id,
         client_id: userDetails.id,
-        scheduled_date: scheduledDate.toISOString(),
+        scheduled_date: scheduledDate.toISOString();
         duration_minutes: durationMinutes,
         notes: values.notes,
         meeting_platform: values.platform as any,
         meeting_link: values.meetingLink,
         interview_type: "video",
         title: values.title
-      }),
+      });
       toast({
         title: "Interview requested",
-        description: `Your interview request with ${talent.full_name} has been sent.`}),
+        description: `Your interview request with ${talent.full_name} has been sent.`});
       onClose()
     } catch (error) {
-      logErrorToProduction('Failed to schedule interview:', { data: error }),
+      logErrorToProduction('Failed to schedule interview:', { data: error });
       toast({
         title: "Failed to schedule interview",
         description: "An error occurred while scheduling the interview. Please try again.",
         variant: "destructive"})
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false);
     }
   }
 
@@ -130,7 +130,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             control={form.control}
             name="date"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "date"> }) => (
-              <FormItem className="flex flex-col">
+              <FormItem className = "flex flex-col">
                 <FormLabel>Date</FormLabel>
                 <Popover>
                   <PopoverTrigger asChild>
@@ -138,7 +138,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       <Button
                         variant="outline"
                         className={cn(
-                          "w-full pl-3 text-left font-normal";
+                          "w-full pl-3 text-left font-normal",
                           !field.value && "text-muted-foreground"
                         )}
                       >

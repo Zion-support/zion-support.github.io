@@ -26,14 +26,14 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
         e.currentTarget.value = ""
       }
     }
-  };
+  },
   const removeKeyword = (keyword: string) => {
     setValue(
-      "keywords",
+      "keywords";
       keywords.filter((k) => k !== keyword)
     )
   };
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
+  const maxDescriptionLength = platform === "ios" ? 4000: 4000,
   const longDescription = watch("longDescription");
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
@@ -153,4 +153,4 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       </CardContent>
     </Card>
   )
-},
+};

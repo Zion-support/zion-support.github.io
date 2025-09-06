@@ -8,8 +8,8 @@ import { ModeToggle } from '@/components/ModeToggle';
 import { useTranslation } from 'react-i18next';
 export interface MobileMenuProps {
   unreadCount?: number;
-  onClose: () => void,
-  openLoginModal: (returnToPath: string) => void, // Added from plan
+  onClose: () => void;
+  openLoginModal: (returnToPath: string) => void; // Added from plan
 }
 
 // Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts
@@ -28,14 +28,14 @@ function isProtectedRoute(href: string): boolean {
 export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileMenuProps) {
   const router = useRouter();
   const { user } = useAuth();
-  const isAuthenticated = !!user;
+  const isAuthenticated = !!user,
   const { t } = useTranslation();
   const baseItems = [
     {
       key: 'home',
       href: '/',
       icon: Home,
-      matches: (path: string) => path === '/'},
+      matches: (path: string) => path = == '/'},
     {
       key: 'explore',
       href: '/talent',
@@ -43,36 +43,36 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       matches: (path: string) =>
         path.startsWith('/talent') ||
         path.startsWith('/categories') ||
-        path.startsWith('/marketplace')},
+        path.startsWith('/marketplace')};
     {
       key: 'community',
       href: '/community',
       icon: MessageCircle,
       matches: (path: string) =>
-        path.startsWith('/community') || path.startsWith('/forum')},
+        path.startsWith('/community') || path.startsWith('/forum')};
     {
       key: 'post_job',
       href: '/post-job',
       icon: BriefcaseIcon,
-      matches: (path: string) => path.startsWith('/post-job'),
+      matches: (path: string) => path.startsWith('/post-job');
       authRequired: true},
     {
       key: 'messages',
       href: '/messages',
       icon: MessageSquare,
       matches: (path: string) =>
-        path.startsWith('/messages') || path.startsWith('/inbox'),
+        path.startsWith('/messages') || path.startsWith('/inbox');
       badge: unreadCount,
       authRequired: true},
     {
       key: 'dashboard',
       href: '/dashboard',
       icon: User,
-      matches: (path: string) => path.startsWith('/dashboard'),
+      matches: (path: string) => path.startsWith('/dashboard');
       authRequired: true}],
   const navItems = baseItems.map((item) => ({
-    ...item,
-    name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)})),
+    ...item;
+    name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)}));
   // Filter items based on auth status
   const visibleItems = navItems.filter(
     (item) => !item.authRequired || (item.authRequired && isAuthenticated);
@@ -95,7 +95,7 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       <nav className="space-y-1">
         {visibleItems.map((item) => (
           <Link
-            key={item.name}
+            key = {item.name}
             href={item.href}
             aria-label={item.name}
             className={cn(
@@ -109,7 +109,7 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
               if (!isAuthenticated && routeIsProtected) {
                 e.preventDefault();
                 // Update URL to include returnTo, then open modal
-                router.push({ pathname: '/auth/login', query: { returnTo: item.href } }, undefined, { shallow: true }),
+                router.push({ pathname: '/auth/login', query: { returnTo: item.href } }, undefined, { shallow: true });
                 openLoginModal(item.href);
                 // It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.
                 // Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay.

@@ -44,13 +44,13 @@ export function TransactionHistory() {
   const { data: transactions, isLoading, error, refetch } = useQuery({
     queryKey: ['transactions', user?.id, filter];
     queryFn: async () => {
-      if (!user) return [],
+      if (!user) return [];
       // Build the query based on filters
       let query = supabase
         .from('transactions')
         .select(`
           *;
-          provider: profiles!provider_id(display_name),
+          provider: profiles!provider_id(display_name);
           service:services(title)
         `)
         .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`);
@@ -62,12 +62,12 @@ export function TransactionHistory() {
         query = query.eq('in_escrow', true)
       }
       
-      query = query.order('created_at', { ascending: false }),
+      query = query.order('created_at', { ascending: false });
       const { data, error } = await query;
       if (error) throw error;
       return data as Transaction[]
     };
-    enabled: !!user}),
+    enabled: !!user});
   const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
     try {
       const { data, error } = await supabase.functions.invoke('manage-transaction', {
@@ -76,16 +76,16 @@ export function TransactionHistory() {
       if (error) throw error;
       toast({
         title: "Success",
-        description: (data as any)?.message || "Transaction updated successfully"}),
+        description: (data as any)?.message || "Transaction updated successfully"});
       refetch()
     } catch (error) {
-      logErrorToProduction('Error managing transaction:', { data: error }),
+      logErrorToProduction('Error managing transaction:', { data: error });
       toast({
         title: "Error",
         description: error instanceof Error ? error.message : "Failed to update transaction",
         variant: "destructive"})
     }
-  },
+  };
   const getStatusBadge = (status: string, inEscrow: boolean) => {
     switch(status) {
       case 'in_escrow':
@@ -93,7 +93,7 @@ export function TransactionHistory() {
           <Badge variant="outline" className="bg-yellow-500/20 text-yellow-500 border-yellow-500">
             <Clock className="w-3 h-3 mr-1" /> In Escrow
           </Badge>
-        ),
+        );
       case 'pending':
         return inEscrow ? (
           <Badge variant="outline" className="bg-yellow-500/20 text-yellow-500 border-yellow-500">
@@ -140,11 +140,11 @@ export function TransactionHistory() {
           </Badge>
         )
     }
-  },
+  };
   const { formatPrice } = useCurrency();
   const formatCurrency = (amount: number) => {
     return formatPrice(amount)
-  },
+  };
   if (error) {
     return (
       <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">
@@ -205,7 +205,7 @@ export function TransactionHistory() {
         
         {isLoading ? (
           Array(3).fill(0).map((_, i) => (
-            <div key={i} className="mb-4">
+            <div key = {i} className="mb-4">
               <Card className="bg-zion-blue-dark border-zion-blue-light">
                 <CardHeader className="pb-2">
                   <Skeleton className="h-6 w-3/4 bg-zion-blue-light" />
@@ -227,16 +227,15 @@ export function TransactionHistory() {
         ) : transactions && transactions.length > 0 ? (
           <div className="space-y-4">
             {transactions.map((transaction) => {
-              const isClient = user?.id === transaction.user_id;
-              const isPending =
-                transaction.status === 'pending' || transaction.status === 'in_escrow';
-              const isInEscrow = transaction.in_escrow;
-              const canRelease = !isClient && isPending && isInEscrow;
-              const canCancel = isClient && isPending;
-              const canRefund = isClient && transaction.status === 'released';
+              const isClient = user?.id === transaction.user_id,
+              const isPending = transaction.status === 'pending' || transaction.status === 'in_escrow',
+              const isInEscrow = transaction.in_escrow,
+              const canRelease = !isClient && isPending && isInEscrow,
+              const canCancel = isClient && isPending,
+              const canRefund = isClient && transaction.status === 'released',
               const counterpartyName = isClient 
                 ? transaction.provider?.display_name || 'Service Provider' 
-                : 'Client';
+                : 'Client',
               return (
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
                   <CardHeader className="pb-3">

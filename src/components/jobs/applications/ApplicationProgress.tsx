@@ -61,8 +61,8 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     interview: 4,
     hired: 5,
     rejected: 5},
-  const currentRank = statusRank[current];
-  const statusRank_ = statusRank[status];
+  const currentRank = statusRank[current],
+  const statusRank_ = statusRank[status],
   if (currentRank < statusRank_) {
     // This step is complete
     return <CheckCircle2 className="h-4 w-4 text-green-500" />

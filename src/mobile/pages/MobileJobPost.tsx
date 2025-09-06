@@ -156,7 +156,7 @@ function RequirementsStep() {
   };
   const removeSkill = (skill: string) => {
     setSkills(skills.filter(s => s !== skill))
-  },
+  };
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>

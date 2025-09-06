@@ -103,4 +103,4 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
       </DialogContent>
     </Dialog>
   )
-},
+};

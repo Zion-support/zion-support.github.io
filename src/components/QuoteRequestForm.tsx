@@ -17,8 +17,8 @@ import { QuoteFormData } from "@/types/quotes";
 import { Sparkles, Loader2 } from 'lucide-react'
 import { z } from "zod";
 const serviceStepSchema = z.object({
-  serviceType: z.string().min(1),
-  specificItem: z.object({ id: z.string() })}),
+  serviceType: z.string().min(1);
+  specificItem: z.object({ id: z.string() })});
 export function QuoteRequestForm() {
   const router = useRouter();
   const { toast } = useToast();
@@ -45,9 +45,9 @@ export function QuoteRequestForm() {
       phone: "",
       company: ""
     }
-  }),
+  });
   const updateFormData = (data: Partial<QuoteFormData>) => {
-    setFormData(prev => ({
+    setFormData(prev = > ({
       ...prev,
       ...data
     }))
@@ -57,12 +57,12 @@ export function QuoteRequestForm() {
       case "service": {
         const result = serviceStepSchema.safeParse({
           serviceType: formData.serviceType,
-          specificItem: formData.specificItem}),
+          specificItem: formData.specificItem});
         if (!result.success) {
           toast({
             title: "Service Required",
             description: "Please select a service before continuing.",
-            variant: "destructive"}),
+            variant: "destructive"});
           return
         }
         setCurrentStep("details");
@@ -99,12 +99,12 @@ export function QuoteRequestForm() {
     setIsSubmitting(true);
     try {
       // In a real application, you would send the data to your backend
-      logDebug("Submitting form data:", { data: formData }),
+      logDebug("Submitting form data:", { data: formData });
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
       toast({
         title: "Quote Request Submitted",
-        description: "We've received your request and will get back to you soon."}),
+        description: "We've received your request and will get back to you soon."});
       // Redirect to confirmation page or homepage
       router.push("/")
     } catch (error) {
@@ -113,16 +113,16 @@ export function QuoteRequestForm() {
         description: "There was an error submitting your request. Please try again.",
         variant: "destructive"})
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false);
     }
   };
   const handleAutoFill = async (description: string) => {
-    setAutoFillLoading(true),
+    setAutoFillLoading(true);
     try {
       const res = await fetch("/api/openai/match", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ projectDescription: description })}),
+        body: JSON.stringify({ projectDescription: description })});
       if (!res.ok) throw new Error("Request failed");
       const { category, itemId, timeline, budget } = await res.json();
       updateFormData({
@@ -137,7 +137,7 @@ export function QuoteRequestForm() {
       setCurrentStep("summary");
       setAutoFillOpen(false)
     } catch (err) {
-      logErrorToProduction("Auto-fill API error", err as Error, { component: 'QuoteRequestForm', projectDescription: description }),
+      logErrorToProduction("Auto-fill API error", err as Error, { component: 'QuoteRequestForm', projectDescription: description });
       toast({
         title: "Auto-fill Failed",
         description: "We couldn't process your request. Please try again.",
@@ -145,19 +145,19 @@ export function QuoteRequestForm() {
     } finally {
       setAutoFillLoading(false)
     }
-  },
+  };
   const renderStepContent = () => {
     switch (currentStep) {
       case "service":
-        return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />;
+        return <ServiceTypeStep formData = {formData} updateFormData={updateFormData} />,
       case "details":
-        return <ProjectDetailsStep formData={formData} updateFormData={updateFormData} />;
+        return <ProjectDetailsStep formData = {formData} updateFormData={updateFormData} />,
       case "timeline":
-        return <TimelineStep formData={formData} updateFormData={updateFormData} />;
+        return <TimelineStep formData = {formData} updateFormData={updateFormData} />,
       case "budget":
-        return <BudgetStep formData={formData} updateFormData={updateFormData} />;
+        return <BudgetStep formData = {formData} updateFormData={updateFormData} />,
       case "summary":
-        return <SummaryStep formData={formData} updateFormData={updateFormData} />;
+        return <SummaryStep formData = {formData} updateFormData={updateFormData} />,
       default: return null
     }
   },

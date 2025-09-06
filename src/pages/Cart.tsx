@@ -21,7 +21,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 export default function CartPage() {
   const { t } = useTranslation();
-  const items = useSelector((s: RootState) => s.cart.items),
+  const items = useSelector((s: RootState) => s.cart.items);
   const dispatch = useDispatch<AppDispatch>();
   const { user, isAuthenticated } = useAuth();
   const [loading, setLoading] = useState(false);
@@ -29,25 +29,25 @@ export default function CartPage() {
   const { toggle: toggleWishlist, isWishlisted } = useWishlist();
   const updateQuantity = (id: string, qty: number) => {
     dispatch(updateQuantityAction({ id, quantity: qty }))
-  },
+  };
   const removeItem = (id: string) => {
-    const item = items.find(i => i.id === id),
+    const item = items.find(i => i.id === id);
     dispatch(removeItemAction(id));
     if (item) {
       toast({
         title: "Item removed",
         description: `${item.name} has been removed from your cart`})
     }
-  },
+  };
   const saveForLater = (id: string, name: string) => {
-    const wasWishlisted = isWishlisted(id),
+    const wasWishlisted = isWishlisted(id);
     toggleWishlist(id);
     toast({
       title: wasWishlisted ? 'Removed from wishlist' : 'Added to wishlist',
       description: wasWishlisted
         ? `${name} has been removed from your wishlist`
         : `${name} has been added to your wishlist`})
-  },
+  };
   const handleCheckout = async (details?: { email?: string, address?: string }) => {
     setLoading(true);
     try {
@@ -56,13 +56,13 @@ export default function CartPage() {
       const { data } = await axios.post('/api/checkout-session', {
         cartItems: items,
         customer_email: details?.email || user?.email,
-        shipping_address: details?.address}),
-      const sessionId = data.sessionId as string | undefined;
+        shipping_address: details?.address});
+      const sessionId = data.sessionId as string | undefined,
       if (!sessionId) throw new Error('Session ID missing in response');
       const { error } = await stripe.redirectToCheckout({ sessionId });
       if (error) logErrorToProduction('Stripe redirect error:', { data: error.message })
     } catch (err: any) {
-      logErrorToProduction('Checkout error:', { data: err }),
+      logErrorToProduction('Checkout error:', { data: err });
       alert(err.message || 'Checkout failed')
     } finally {
       setLoading(false)
@@ -82,8 +82,8 @@ export default function CartPage() {
   const hasPhysicalItems = items.some(item => 
     !item.type || item.type === 'physical' // Default to physical if type not specified
   );
-  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0;
-  const total = subtotal + tax + shipping;
+  const shipping = hasPhysicalItems && subtotal <= 100 ? 15: 0,
+  const total = subtotal + tax + shipping,
   // Empty cart state
   if (items.length === 0) {
     return (

@@ -3,12 +3,12 @@ import Link from "next/link";
 interface ApplicationActionsProps {
   application: JobApplication,
   processingId: string | null,
-  onViewApplication: (applicationId: string) => Promise<void>,
+  onViewApplication: (applicationId: string) => Promise<void>;
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
 
 export function ApplicationActions({
-  application,
+  application;
   processingId;
   onViewApplication;
   onStatusChange

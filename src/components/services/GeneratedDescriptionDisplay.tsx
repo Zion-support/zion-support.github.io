@@ -12,7 +12,7 @@ interface GeneratedDescriptionDisplayProps {
 }
 
 export function GeneratedDescriptionDisplay({ 
-  description,
+  description;
   onSave 
 }: GeneratedDescriptionDisplayProps) {
   const { toast } = useToast();
@@ -25,7 +25,7 @@ export function GeneratedDescriptionDisplay({
       title: "Description Saved",
       description: "Your edited description has been saved."
     })
-  },
+  };
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>

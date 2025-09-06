@@ -16,11 +16,11 @@ interface AuthGuardProps {
 
 export function AuthGuard({
   children;
-  requireAuth = true;
+  requireAuth = true,
   requireRole;
-  redirectTo = '/auth/login';
+  redirectTo = '/auth/login',
   fallback;
-  showToast = true;
+  showToast = true,
   allowGuest = false}: AuthGuardProps) {
   const { user, isAuthenticated, isLoading } = useAuth();
   const router = useRouter();
@@ -36,23 +36,22 @@ export function AuthGuard({
           variant: "destructive"})
       }
 
-      const returnTo = encodeURIComponent(router.asPath),
+      const returnTo = encodeURIComponent(router.asPath);
       router.push(`${redirectTo}?returnTo=${returnTo}`);
-      return
-    }
+      return }
 
     // If specific roles are required
     if (requireRole && isAuthenticated && user) {
-      const userRoles = user.role ? [user.role] : [];
+      const userRoles = user.role ? [user.role] : [],
       const hasRequiredRole = requireRole.some(role => userRoles.includes(role));
       if (!hasRequiredRole) {
         if (showToast) {
           toast({
             title: "Access Denied",
-            description: `This feature requires ${requireRole.join(' or ')} privileges.`,
+            description: `This feature requires ${requireRole.join(' or ')} privileges.`;
             variant: "destructive"})
         }
-        router.push('/dashboard'), // Redirect to dashboard instead of login
+        router.push('/dashboard'); // Redirect to dashboard instead of login
         return
       }
     }
@@ -126,14 +125,14 @@ export function useAuthGuard() {
   const { user, isAuthenticated, isLoading } = useAuth();
   const router = useRouter();
   const requireAuth = (options?: {
-    redirectTo?: string;
+    redirectTo?: string,
     showToast?: boolean;
     returnUrl?: string
   }) => {
     if (isLoading) return false;
     if (!isAuthenticated) {
-      const redirectTo = options?.redirectTo || '/login';
-      const returnUrl = options?.returnUrl || router.asPath;
+      const redirectTo = options?.redirectTo || '/login',
+      const returnUrl = options?.returnUrl || router.asPath,
       if (options?.showToast !== false) {
         toast({
           title: "Authentication Required",
@@ -141,7 +140,7 @@ export function useAuthGuard() {
           variant: "destructive"})
       }
 
-      router.push(`${redirectTo}?returnTo=${encodeURIComponent(returnUrl)}`),
+      router.push(`${redirectTo}?returnTo=${encodeURIComponent(returnUrl)}`);
       return false
     }
 
@@ -151,25 +150,25 @@ export function useAuthGuard() {
     showToast?: boolean;
     redirectTo?: string
   }) => {
-    if (!requireAuth({ showToast: false })) return false,
-    const userRoles = user?.role ? [user.role] : [];
+    if (!requireAuth({ showToast: false })) return false;
+    const userRoles = user?.role ? [user.role] : [],
     const hasRequiredRole = roles.some(role => userRoles.includes(role));
     if (!hasRequiredRole) {
       if (options?.showToast !== false) {
         toast({
           title: "Access Denied",
-          description: `This feature requires ${roles.join(' or ')} privileges.`,
+          description: `This feature requires ${roles.join(' or ')} privileges.`;
           variant: "destructive"})
       }
 
-      router.push(options?.redirectTo || '/dashboard'),
+      router.push(options?.redirectTo || '/dashboard');
       return false
     }
 
     return true
   };
   const checkPermission = (permission: string): boolean => {
-    if (!isAuthenticated || !user) return false,
+    if (!isAuthenticated || !user) return false;
     // Simple permission check - can be extended based on your permission system
     // Use type assertion for extensibility, as permissions might be added to user type later
     const userPermissions = (user as any).permissions || [];

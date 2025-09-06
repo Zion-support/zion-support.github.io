@@ -23,7 +23,7 @@ export function PortfolioBuilder() {
     fetchProjects()
   };
   const handleDeleteProject = async (projectId: string) => {
-    const success = await deleteProject(projectId),
+    const success = await deleteProject(projectId);
     if (success) {
       fetchProjects()
     }
@@ -65,7 +65,7 @@ export function PortfolioBuilder() {
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
-                setShowAddProject(false),
+                setShowAddProject(false);
                 setEditingProject(null)
               }}
             />

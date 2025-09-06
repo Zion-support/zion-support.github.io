@@ -11,12 +11,12 @@ import { AIMilestoneGenerator } from './AIMilestoneGenerator';
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
 const formSchema = z.object({
   title: z.string().min(1, 'Title is required');
-  description: z.string().optional(),
-  due_date: z.date().optional(),
+  description: z.string().optional();
+  due_date: z.date().optional();
   amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')});
-type MilestoneFormValues = z.infer<typeof formSchema>;
+type MilestoneFormValues = z.infer<typeof formSchema>,
 interface AddMilestoneFormProps {
-  onSubmit: (data: MilestoneFormValues) => void,
+  onSubmit: (data: MilestoneFormValues) => void;
   isSubmitting: boolean,
   onCancel?: () => void;
   projectScope?: string;
@@ -29,42 +29,41 @@ export function AddMilestoneForm({
   onSubmit;
   isSubmitting;
   onCancel;
-  projectScope = '';
-  projectStartDate = '';
-  projectEndDate = '';
+  projectScope = '',
+  projectStartDate = '',
+  projectEndDate = '',
   projectType = 'Other'
 }: AddMilestoneFormProps) {
   const form = useForm<MilestoneFormValues>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(formSchema);
     defaultValues: {
       title: '',
       description: '',
-      amount: 0}}),
+      amount: 0}});
   const handleSubmit = (values: MilestoneFormValues) => {
-    onSubmit(values),
+    onSubmit(values);
     form.reset()
   };
   const handleAddMilestones = (milestones: GeneratedMilestone[]) => {
     // If there's only one milestone, submit it directly
-    if (milestones.length === 1) {
-      const milestone = milestones[0];
+    if (milestones.length = == 1) {
+      const milestone = milestones[0],
       if (milestone) {
         onSubmit({
           title: milestone.title,
           description: milestone.description,
-          due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
+          due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined;
           amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
         });
-        return
-      }
+        return }
     }
 
     // If there are multiple milestones, submit them one by one
-    milestones.forEach(milestone => {
+    milestones.forEach(milestone = > {
       onSubmit({
         title: milestone.title,
         description: milestone.description,
-        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
+        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       })
     })
@@ -73,7 +72,7 @@ export function AddMilestoneForm({
     onSubmit({
       title: milestone.title,
       description: milestone.description,
-      due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
+      due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined;
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
     })
   };

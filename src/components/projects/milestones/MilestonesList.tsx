@@ -14,12 +14,12 @@ interface MilestonesListProps {
   activities: Record<string, MilestoneActivity[]>;
   isLoading: boolean,
   isClient: boolean,
-  onCreateMilestone: (data: any) => Promise<Milestone | null>,
+  onCreateMilestone: (data: any) => Promise<Milestone | null>;
   onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
-  onDeleteMilestone: (id: string) => Promise<boolean>,
-  onUploadDeliverable: (id: string, file: File) => Promise<any>,
+  onDeleteMilestone: (id: string) => Promise<boolean>;
+  onUploadDeliverable: (id: string, file: File) => Promise<any>;
   isSubmitting: boolean,
-  onApprove?: (id: string) => Promise<void>,
+  onApprove?: (id: string) => Promise<void>;
   onReject?: (id: string) => Promise<void>
 }
 
@@ -38,7 +38,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 }) => {
   const [showAddForm, setShowAddForm] = useState(false);
   const handleSubmit = async (data: any) => {
-    await onCreateMilestone(data),
+    await onCreateMilestone(data);
     setShowAddForm(false)
   };
   if (isLoading) {
@@ -60,7 +60,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
-        icon={<span className="text-3xl">📊</span>}
+        icon = {<span className="text-3xl">📊</span>}
         title="No Milestones Yet"
         description={isClient ? 
           "Break down the project into manageable milestones to track progress and payments." : 
@@ -117,4 +117,4 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       </div>
     </div>
   )
-},
+};

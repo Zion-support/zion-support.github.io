@@ -64,13 +64,13 @@ export function CategoryListingPage({
     safeStorage.setItem('category_selected_filter', selectedFilter)
   }, [selectedFilter]);
   useEffect(() => {
-    let mounted = true;
+    let mounted = true,
     setIsLoading(true);
     const timeout = setTimeout(() => {
       if (mounted) setIsLoading(false)
     }, 300);
     return () => {
-      mounted = false;
+      mounted = false,
       clearTimeout(timeout)
     }
   }, [searchQuery, selectedSort, selectedFilter]);
@@ -107,7 +107,7 @@ export function CategoryListingPage({
           return b.title.localeCompare(a.title);
         default: return 0
       }
-    }),
+    });
   return (
     <>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -212,7 +212,7 @@ export function CategoryListingPage({
                 <Button
                   variant="outline"
                   onClick={() => {
-                    setSearchQuery(""),
+                    setSearchQuery("");
                     setSelectedFilter(filterOptions[0]?.value || 'all')
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"

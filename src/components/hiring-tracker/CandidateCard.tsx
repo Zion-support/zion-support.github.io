@@ -27,7 +27,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     toast({
       title: "Notes saved",
       description: "Your notes have been saved"
-    }),
+    });
     setShowNotes(false)
   };
   const handleHireConfirmed = () => {
@@ -36,8 +36,8 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
       title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
     })
-  },
-  const candidateName = application.talent_profile?.full_name || "Candidate";
+  };
+  const candidateName = application.talent_profile?.full_name || "Candidate",
   return (
     <>
       <Draggable draggableId={application.id} index={index}>

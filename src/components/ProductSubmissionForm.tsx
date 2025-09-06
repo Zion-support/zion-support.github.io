@@ -21,14 +21,14 @@ const productSchema = z.object({
   price: z
     .string()
     .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
-      message: "Price must be a valid number"}),
+      message: "Price must be a valid number"});
   category: z.string().min(1, "Please select a category");
-  image: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
-  video: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
-  model: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
-  tags: z.string().optional()}),
+  image: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional();
+  video: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional();
+  model: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional();
+  tags: z.string().optional()});
 // Type for our form values
-type ProductFormValues = z.infer<typeof productSchema>;
+type ProductFormValues = z.infer<typeof productSchema>,
 export function ProductSubmissionForm() {
   const { user } = useAuth();
   const { toast } = useToast();
@@ -38,7 +38,7 @@ export function ProductSubmissionForm() {
   const [activeTab, setActiveTab] = React.useState("manual");
   // Initialize the form
   const form = useForm<ProductFormValues>({
-    resolver: zodResolver(productSchema),
+    resolver: zodResolver(productSchema);
     defaultValues: {
       title: "",
       description: "",
@@ -46,7 +46,7 @@ export function ProductSubmissionForm() {
       category: "",
       video: undefined,
       model: undefined,
-      tags: ""}}),
+      tags: ""}});
   // Handle image upload preview
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0],
@@ -87,7 +87,7 @@ export function ProductSubmissionForm() {
       toast({
         title: "Authentication Required",
         description: "You must be logged in to publish products",
-        variant: "destructive"}),
+        variant: "destructive"});
       return
     }
 
@@ -97,19 +97,19 @@ export function ProductSubmissionForm() {
       const productData = {
         title: values.title,
         description: values.description,
-        price: parseFloat(values.price),
+        price: parseFloat(values.price);
         category: values.category,
         currency: "USD", // Default currency
-        tags: values.tags ? values.tags.split().map(tag => tag.trim()) : [],
+        tags: values.tags ? values.tags.split().map(tag => tag.trim()) : [];
         author: {
           name: user.displayName || "Anonymous Creator",
           id: user.id},
-        createdAt: new Date().toISOString()},
+        createdAt: new Date().toISOString()};
       const { data: productRecord, error: productError } = await supabase
         .from('product_listings')
         .insert([productData])
         .select('id')
-        .single(),
+        .single();
       if (productError) {
         throw new Error(productError.message)
       }
@@ -117,7 +117,7 @@ export function ProductSubmissionForm() {
       let imagePublicUrl: string | undefined,
       // If we have an image, upload it
       if (values.image) {
-        const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
+        const imagePath = `product_images/${productRecord.id}/${values.image.name}`,
         const { error: uploadError } = await supabase.storage
           .from('products')
           .upload(imagePath, values.image);
@@ -128,8 +128,8 @@ export function ProductSubmissionForm() {
         // Get the public URL for the image
         const { data: publicUrlData } = supabase.storage
           .from('products')
-          .getPublicUrl(imagePath),
-        imagePublicUrl = publicUrlData.publicUrl;
+          .getPublicUrl(imagePath);
+        imagePublicUrl = publicUrlData.publicUrl,
         // Update the product with the image URL
         const { error: updateError } = await supabase
           .from('product_listings')
@@ -144,7 +144,7 @@ export function ProductSubmissionForm() {
 
       // Upload video if provided
       if (values.video) {
-        const videoPath = `product_videos/${productRecord.id}/${values.video.name}`;
+        const videoPath = `product_videos/${productRecord.id}/${values.video.name}`,
         const { error: uploadError } = await supabase.storage
           .from('products')
           .upload(videoPath, values.video);
@@ -154,7 +154,7 @@ export function ProductSubmissionForm() {
 
         const { data: publicUrlData } = supabase.storage
           .from('products')
-          .getPublicUrl(videoPath),
+          .getPublicUrl(videoPath);
         const { error: updateError } = await supabase
           .from('product_listings')
           .update({ video_url: publicUrlData.publicUrl })
@@ -166,7 +166,7 @@ export function ProductSubmissionForm() {
 
       // Upload model if provided
       if (values.model) {
-        const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
+        const modelPath = `product_models/${productRecord.id}/${values.model.name}`,
         const { error: uploadError } = await supabase.storage
           .from('products')
           .upload(modelPath, values.model);
@@ -176,7 +176,7 @@ export function ProductSubmissionForm() {
 
         const { data: publicUrlData } = supabase.storage
           .from('products')
-          .getPublicUrl(modelPath),
+          .getPublicUrl(modelPath);
         const { error: updateError } = await supabase
           .from('product_listings')
           .update({ model_url: publicUrlData.publicUrl })
@@ -203,7 +203,7 @@ export function ProductSubmissionForm() {
       // Show success message
       toast({
         title: "Product Published!",
-        description: "Your product has been successfully published on Zion."}),
+        description: "Your product has been successfully published on Zion."});
       // Redirect to product page
       router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
@@ -212,7 +212,7 @@ export function ProductSubmissionForm() {
         description: error instanceof Error ? error.message : "An unknown error occurred",
         variant: "destructive"})
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false);
     }
   };
   return (
@@ -365,9 +365,9 @@ export function ProductSubmissionForm() {
                           alt="Product image preview"
                           width={600} // Example width, adjust as needed
                           height={400} // Example height, adjust as needed
-                          className="w-full h-full object-cover"
+                          className = "w-full h-full object-cover"
                           priority={false} // Preview images are not LCP
-                          // `sizes` might not be strictly necessary for a preview of this nature;
+                          // `sizes` might not be strictly necessary for a preview of this nature,
                           // but can be added if responsive behavior is critical here.
                           // For local object URLs, optimization via loader won't occur.
                         />
@@ -429,7 +429,7 @@ export function ProductSubmissionForm() {
         <AIListingGenerator 
           onApplyGenerated={handleApplyGenerated}
           initialValues={{
-            title: form.getValues("title"),
+            title: form.getValues("title");
             category: form.getValues("category")
           }}
         />

@@ -24,22 +24,22 @@ const serviceProfileSchema = z.object({
   location: z.string().min(2, "Location is required");
   services: z.string().min(2, "Enter at least one service");
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-    message: "Rate must be a number"}),
+    message: "Rate must be a number"});
   availability: z.enum(["available", "limited", "unavailable"]);
-  enhancedProfile: z.boolean().transform(val => !!val),
-  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()}),
-type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
+  enhancedProfile: z.boolean().transform(val => !!val);
+  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()});
+type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
 export function ServiceProviderRegistrationForm() {
   const { user } = useAuth();
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [serviceTags, setServiceTags] = useState<string[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),
+  const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null);
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
   // Initialize form with default values
   const form = useForm<ServiceFormValues>({
-    resolver: zodResolver(serviceProfileSchema) as any,
+    resolver: zodResolver(serviceProfileSchema) as any;
     defaultValues: {
       name: user?.displayName || "",
       title: "",
@@ -49,7 +49,7 @@ export function ServiceProviderRegistrationForm() {
       hourlyRate: "",
       availability: "available",
       enhancedProfile: false,
-      website: ""}}),
+      website: ""}});
   // Handle adding service tags
   const handleAddService = () => {
     const serviceInput = form.getValues("services");
@@ -61,11 +61,11 @@ export function ServiceProviderRegistrationForm() {
   // Handle removing service tags
   const handleRemoveService = (service: string) => {
     setServiceTags(serviceTags.filter((s) => s !== service))
-  },
+  };
   // Handle key press in services input (add on enter)
   const handleServiceKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
-      e.preventDefault(),
+      e.preventDefault();
       handleAddService()
     }
   };
@@ -86,7 +86,7 @@ export function ServiceProviderRegistrationForm() {
     if (!formData.bio || formData.bio.length < 20) {
       toast({
         title: "More information needed",
-        description: "Please provide at least a detailed bio before generating enhanced content."}),
+        description: "Please provide at least a detailed bio before generating enhanced content."});
       return
     }
 
@@ -103,20 +103,20 @@ export function ServiceProviderRegistrationForm() {
             location: formData.location
           }
         }
-      }),
+      });
       if (error) {
         throw new Error(error.message)
       }
 
       // Check if data exists before type assertion
       if (data && typeof data === 'object') {
-        setGeneratedContent(data as { summary: string, services: string[] }),
+        setGeneratedContent(data as { summary: string, services: string[] });
         toast({
           title: "Enhanced Profile Generated",
           description: "AI has created a professional bio and suggested additional services for your profile."})
       } else {
         // Fallback for mock/development mode
-        logWarn('Mock AI response - using fallback content'),
+        logWarn('Mock AI response - using fallback content');
         setGeneratedContent({
           summary: "Professional service provider with expertise in delivering high-quality solutions.",
           services: ["Consulting", "Project Management", "Technical Support"]
@@ -127,7 +127,7 @@ export function ServiceProviderRegistrationForm() {
       }
       
     } catch (error: any) {
-      logErrorToProduction('Error generating enhanced profile:', { data: error }),
+      logErrorToProduction('Error generating enhanced profile:', { data: error });
       toast({
         title: "Generation failed",
         description: error.message || "There was an error generating your enhanced profile. Please try again.",
@@ -135,7 +135,7 @@ export function ServiceProviderRegistrationForm() {
     } finally {
       setIsGenerating(false)
     }
-  },
+  };
   // Apply generated content to form
   const applyGeneratedContent = () => {
     if (generatedContent) {
@@ -156,7 +156,7 @@ export function ServiceProviderRegistrationForm() {
       toast({
         title: "Services required",
         description: "Please add at least one service to your profile.",
-        variant: "destructive"}),
+        variant: "destructive"});
       return
     }
 
@@ -168,8 +168,8 @@ export function ServiceProviderRegistrationForm() {
       }
       
       // Enhance profile if not already done
-      let finalSummary = values.bio;
-      let finalServices = serviceTags;
+      let finalSummary = values.bio,
+      let finalServices = serviceTags,
       if (values.enhancedProfile && !generatedContent) {
         try {
           const { data: aiData } = await supabase.functions.invoke('service-profile-enhancer', {
@@ -182,7 +182,7 @@ export function ServiceProviderRegistrationForm() {
                 location: values.location
               }
             }
-          }),
+          });
           if (aiData) {
             finalSummary = (aiData as any).summary || values.bio;
             // Merge AI suggested services with user-provided services
@@ -190,16 +190,16 @@ export function ServiceProviderRegistrationForm() {
             finalServices = [...new Set([...serviceTags, ...aiServices])]
           }
         } catch (error) {
-          logErrorToProduction('Error enhancing profile:', { data: error }),
+          logErrorToProduction('Error enhancing profile:', { data: error });
           // Continue with submission even if enhancement fails
         }
       } else if (generatedContent) {
-        finalSummary = generatedContent.summary;
+        finalSummary = generatedContent.summary,
         finalServices = [...new Set([...serviceTags, ...generatedContent.services])]
       }
 
       // Get user email for notification
-      const { data: userData } = await supabase.auth.getUser(),
+      const { data: userData } = await supabase.auth.getUser();
       const userEmail = (userData as any).user?.email;
       // Create the service profile
       const { data: profileData, error } = await supabase
@@ -209,7 +209,7 @@ export function ServiceProviderRegistrationForm() {
           bio: finalSummary,
           user_type: "creator", // Set as service provider
           profile_complete: true,
-          updated_at: new Date().toISOString(),
+          updated_at: new Date().toISOString();
           headline: values.title,
           // Additional fields that might be in profiles table
         })
@@ -225,10 +225,10 @@ export function ServiceProviderRegistrationForm() {
         .insert({
           user_id: user.id,
           services: finalServices,
-          hourly_rate: Number(values.hourlyRate),
+          hourly_rate: Number(values.hourlyRate);
           availability_status: values.availability,
           location: values.location,
-          website: values.website || null}),
+          website: values.website || null});
       if (serviceError) throw serviceError;
       */
 
@@ -253,27 +253,27 @@ export function ServiceProviderRegistrationForm() {
             }
           })
         } catch (emailError) {
-          logErrorToProduction('Failed to send notification email:', { data: emailError }),
+          logErrorToProduction('Failed to send notification email:', { data: emailError });
           // Continue with submission even if email fails
         }
       }
       
       toast({
         title: "Profile Created Successfully",
-        description: "Your service provider profile has been published and is now visible in the directory."}),
+        description: "Your service provider profile has been published and is now visible in the directory."});
       // Redirect to service provider dashboard or profile page
       setTimeout(() => {
         router.push('/service-dashboard')
       }, 1500)
       
     } catch (error: any) {
-      logErrorToProduction('Error creating profile:', { data: error }),
+      logErrorToProduction('Error creating profile:', { data: error });
       toast({
         title: "Error Creating Profile",
         description: error.message || "There was an error creating your profile. Please try again.",
         variant: "destructive"})
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false);
     }
   };
   return (

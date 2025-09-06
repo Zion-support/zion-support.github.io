@@ -57,7 +57,7 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
   }
 },
 const iconMap = {
-  "Briefcase": Briefcase;
+  "Briefcase": Briefcase,
   "MessageSquare": MessageSquare;
   "Code": Code;
   "FileText": FileText;
@@ -77,7 +77,7 @@ function CategoryContent({
   const { featuredPosts, recentPosts } = useCommunity();
   // Filter posts by category from context data
   const categoryPosts = [
-    ...featuredPosts.filter(post => post.categoryId === categoryId),
+    ...featuredPosts.filter(post => post.categoryId === categoryId);
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self) => 
     // Remove duplicates by id
@@ -96,7 +96,7 @@ function CategoryContent({
   const { toast } = useToast();
   const handleFollow = () => {
     if (!user) {
-      toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
+      toast({ title: 'Login required', description: 'Please sign in to follow this category' });
       return
     }
     if (isFollowed(categoryId)) {
@@ -105,9 +105,9 @@ function CategoryContent({
       follow(categoryId)
     }
   };
-  logInfo('CategoryContent - categoryId:', { data: categoryId }),
-  logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),
-  logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),
+  logInfo('CategoryContent - categoryId:', { data: categoryId });
+  logInfo('CategoryContent - categoryPosts:', { data: categoryPosts });
+  logInfo('CategoryContent - filteredPosts:', { data: filteredPosts });
   return (
     <div className="container py-8">
       <div className="flex items-center gap-3 mb-6">
@@ -188,12 +188,12 @@ function CategoryContent({
 }
 
 export default function ForumCategoryPage() {
-  const router = useRouter(),
+  const router = useRouter();
   const { categoryId } = router.query as { categoryId: string },
   const { user } = useAuth();
   // Check if the category exists and user has access
-  const category = categoryId ? categoriesInfo[categoryId] : null;
-  const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null;
+  const category = categoryId ? categoriesInfo[categoryId] : null,
+  const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null,
   // Check access for admin-only categories
   const hasAccess = category && (
     !category.adminOnly || 

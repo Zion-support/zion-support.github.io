@@ -19,9 +19,9 @@ export function SafeImage({
   alt;
   width;
   height;
-  className = '';
+  className = '',
   fallbackSrc;
-  priority = false;
+  priority = false,
   sizes;
   quality = 75}: SafeImageProps) {
   const [hasError, setHasError] = useState(false);
@@ -32,7 +32,7 @@ export function SafeImage({
       setHasError(true)
     } else if (!hasError && src.startsWith('/')) {
       // Try serving the image directly through our custom API route
-      const fallbackUrl = `/api/image${src}`;
+      const fallbackUrl = `/api/image${src}`,
       setCurrentSrc(fallbackUrl);
       setHasError(true)
     } else if (!hasError) {

@@ -18,7 +18,7 @@ export interface Message {
 
 export interface ChatAssistantProps {
   isOpen: boolean,
-  onClose: () => void,
+  onClose: () => void;
   recipient: {
     id: string,
     name: string,
@@ -38,17 +38,17 @@ export function ChatAssistant({
   onClose;
   recipient;
   conversationId;
-  initialMessages = [];
+  initialMessages = [],
   onSendMessage;
   contextHeader;
   starterQuestions = []}: ChatAssistantProps) {
   const auth = useContext(AuthContext);
-  const isGuest = !auth?.isAuthenticated;
+  const isGuest = !auth?.isAuthenticated,
   // Hooks called unconditionally at the top
   const localStorageKey = `chatHistory-${recipient.id}`, // Key is always generated
   const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage<
     Message[]
-  >(isGuest ? localStorageKey : 'dummy-guest-key', // Use a dummy key if not guest to prevent LS write for logged-in users
+  >(isGuest ? localStorageKey: 'dummy-guest-key', // Use a dummy key if not guest to prevent LS write for logged-in users
     []);
   const [displayGuestMessages, setDisplayGuestMessages] = useState<Message[]>([]);
   const [loggedInMessages, setLoggedInMessages] =
@@ -65,7 +65,7 @@ export function ChatAssistant({
     if (isGuest) {
       // Priority: initialMessages prop > localStorage > empty array
       if (initialMessages && initialMessages.length > 0) {
-        setDisplayGuestMessages(initialMessages),
+        setDisplayGuestMessages(initialMessages);
         setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided
       } else {
         setDisplayGuestMessages(storedGuestMessages)
@@ -85,9 +85,9 @@ export function ChatAssistant({
     }
   }, [isGuest, initialMessages, recipient.id]);
   // Determine currentMessages and setCurrentMessages based on isGuest
-  const currentMessages = isGuest ? displayGuestMessages : loggedInMessages;
+  const currentMessages = isGuest ? displayGuestMessages: loggedInMessages,
   const setCurrentMessages = (
-    valueOrFn: Message[] | ((val: Message[]) => Message[]),
+    valueOrFn: Message[] | ((val: Message[]) => Message[]);
   ) => {
     if (isGuest) {
       const newMessages =
@@ -115,16 +115,16 @@ export function ChatAssistant({
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  },
+  };
   const handleSendMessage = async (messageContent: string) => {
-    if (!messageContent.trim()) return,
+    if (!messageContent.trim()) return;
     if (!isGuest) {
       // Logged-in user
       const newMessage: Message = {
-        id: Date.now().toString(),
+        id: Date.now().toString();
         role: 'user',
         message: messageContent,
-        timestamp: new Date()},
+        timestamp: new Date()};
       setCurrentMessages((prev: Message[]) => [...prev, newMessage]);
       setPendingApiCallParams({ message: messageContent, conversationId })
     } else {
@@ -136,10 +136,10 @@ export function ChatAssistant({
   const handleModalSendConfirm = () => {
     if (!guestMessage) return;
     const newMessage: Message = {
-      id: Date.now().toString(),
+      id: Date.now().toString();
       role: 'user',
       message: guestMessage,
-      timestamp: new Date()},
+      timestamp: new Date()};
     setCurrentMessages((prev: Message[]) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages
     setPendingApiCallParams({ message: guestMessage, conversationId });
     setShowGuestModal(false);
@@ -153,7 +153,7 @@ export function ChatAssistant({
     if (!isOpen) return;
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        e.preventDefault(),
+        e.preventDefault();
         onClose()
       }
     };

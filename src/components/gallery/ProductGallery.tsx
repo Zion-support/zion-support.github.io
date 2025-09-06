@@ -16,7 +16,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
   const [selected, setSelected] = useState(0);
   const [zoomOpen, setZoomOpen] = useState(false);
   const [zoomed, setZoomed] = useState(false);
-  const poster = images[0];
+  const poster = images[0],
   return (
     <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }}>
       <Tabs defaultValue="images" className="w-full">

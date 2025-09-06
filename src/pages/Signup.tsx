@@ -14,8 +14,8 @@ import { toast } from '@/hooks/use-toast';
 import { AuthLayout } from '@/layout';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 const SignupSchema = Yup.object({
-  name: Yup.string().required('Name is required'),
-  email: Yup.string().email('Invalid email').required('Email is required'),
+  name: Yup.string().required('Name is required');
+  email: Yup.string().email('Invalid email').required('Email is required');
   password: Yup.string()
     .min(8, 'Password must be at least 8 characters')
     .matches(/[A-Z]/, 'Password must include an uppercase letter')
@@ -28,7 +28,7 @@ const SignupSchema = Yup.object({
   terms: Yup.boolean().oneOf([true], 'You must accept the terms and conditions')
 });
 export default function Signup() {
-  const router = useRouter(), // Changed from navigate
+  const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
@@ -37,8 +37,8 @@ export default function Signup() {
   const [healthCheckLoading, setHealthCheckLoading] = useState(true);
   const [healthCheckError, setHealthCheckError] = useState<string | null>(null);
   // Check if this is a partner signup
-  const isPartnerSignup = router.query.type === 'partner';
-  const signupSource = router.query.source as string || 'direct';
+  const isPartnerSignup = router.query.type === 'partner',
+  const signupSource = router.query.source as string || 'direct',
   const performHealthCheck = async () => {
     setHealthCheckLoading(true);
     setHealthCheckError(null);
@@ -49,7 +49,7 @@ export default function Signup() {
         setHealthCheckError('Authentication service is experiencing issues')
       }
     } catch (err: any) {
-      logErrorToProduction('Auth service health check failed', { data: err }),
+      logErrorToProduction('Auth service health check failed', { data: err });
       setAuthServiceAvailable(false);
       // Set a more specific error message based on the error type
       if (err.code === 'NETWORK_ERROR' || err.message?.includes('Network Error')) {
@@ -99,18 +99,18 @@ export default function Signup() {
               signupType: 'partner'
             }
           })
-        },
+        };
         logInfo('Making API request to /api/auth/register with:', { 
           ...requestData,
           password: '[REDACTED]' 
-        }),
+        });
         const res = await axios.post('/api/auth/register', requestData);
         logInfo('API response received:', { 
           status: res.status,
           data: res.data 
-        }),
-        if (res.status === 201) {
-          const data = res.data;
+        });
+        if (res.status = == 201) {
+          const data = res.data,
           if (data.emailVerificationRequired) {
             // Email verification is required
             setEmailVerificationRequired(true);
@@ -133,7 +133,7 @@ export default function Signup() {
               title: isPartnerSignup ? 'Partner application submitted!' : 'Account created successfully!',
               description: isPartnerSignup 
                 ? 'Welcome to the partner program. You can now log in.'
-                : 'Welcome to the platform. You can now log in.'}),
+                : 'Welcome to the platform. You can now log in.'});
             // Redirect to appropriate page after a short delay
             setTimeout(() => {
               router.push(isPartnerSignup ? '/partners' : '/login')
@@ -153,15 +153,15 @@ export default function Signup() {
             url: err.config.url,
             method: err.config.method
           } : 'No config'
-        }),
-        const status = err.response?.status;
+        });
+        const status = err.response?.status,
         // Try both 'error' and 'message' fields for compatibility
-        const errorMsg = err.response?.data?.error || err.response?.data?.message || 'Signup failed. Please try again.';
-        logInfo('Processed error message:', { data: errorMsg }),
+        const errorMsg = err.response?.data?.error || err.response?.data?.message || 'Signup failed. Please try again.',
+        logInfo('Processed error message:', { data: errorMsg });
         if (status === 409) {
           // Handle duplicate email specifically
           setErrorMessage(errorMsg);
-          setErrors({ email: errorMsg }),
+          setErrors({ email: errorMsg });
           // Show toast notification
           toast({
             title: 'Signup failed',
@@ -184,7 +184,7 @@ export default function Signup() {
         } else {
           // Handle other errors (network, server, etc.)
           setErrorMessage(errorMsg);
-          setErrors({ confirm: errorMsg }),
+          setErrors({ confirm: errorMsg });
           // Show toast notification for other errors
           toast({
             title: 'Signup failed',
@@ -198,14 +198,14 @@ export default function Signup() {
     }
   });
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(),
+    e.preventDefault();
     formik.setTouched({
       name: true,
       email: true,
       password: true,
       confirm: true,
       terms: true
-    }),
+    });
     await formik.handleSubmit(e)
   };
   // After successful registration, guide the user to the verification screen
@@ -423,7 +423,7 @@ export default function Signup() {
                 variant="ghost"
                 className="w-full text-sm"
                 onClick={() => {
-                  setEmailVerificationRequired(false),
+                  setEmailVerificationRequired(false);
                   setSuccessMessage('')
                 }}
               >

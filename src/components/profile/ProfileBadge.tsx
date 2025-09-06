@@ -27,8 +27,8 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       colors: "bg-purple-500/20 text-purple-400"}},
   const { icon: Icon, text, colors } = badgeConfig[type];
   return (
-    <div className={cn(
-      "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium";
+    <div className = {cn(
+      "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium",
       colors;
       className
     )}>

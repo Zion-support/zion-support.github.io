@@ -15,11 +15,11 @@ interface MobileBottomNavProps {
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const router = useRouter();
   const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const { items: wishlistItems } = useWishlist(), // Renamed to avoid conflict
-  const favoritesCount = wishlistItems.length;
-  const cartContextValue = useCart(), // Call hook at top level
-  let cartCount = 0;
+  const isAuthenticated = !!user,
+  const { items: wishlistItems } = useWishlist(); // Renamed to avoid conflict
+  const favoritesCount = wishlistItems.length,
+  const cartContextValue = useCart(); // Call hook at top level
+  let cartCount = 0,
   if (cartContextValue && cartContextValue.items) {
     cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0)
   } else {
@@ -31,25 +31,25 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       name: "Home",
       href: "/",
       icon: Home,
-      matches: (path: string) => path === "/"
+      matches: (path: string) => path = == "/"
     },
     {
       name: "Browse",
       href: "/talent",
       icon: Search,
       matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
-    },
+    };
     {
       name: "Community",
       href: "/community",
       icon: MessageCircle,
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
-    },
+    };
     {
       name: "Wishlist",
       href: "/wishlist",
       icon: Heart,
-      matches: (path: string) => path.startsWith("/wishlist"),
+      matches: (path: string) => path.startsWith("/wishlist");
       badge: favoritesCount,
       authRequired: true
     },
@@ -57,7 +57,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       name: "Messages",
       href: "/messages",
       icon: MessageSquare,
-      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
+      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox");
       badge: unreadCount,
       authRequired: true
     },
@@ -65,14 +65,14 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       name: "Cart",
       href: "/cart",
       icon: ShoppingCart,
-      matches: (path: string) => path.startsWith("/cart"),
+      matches: (path: string) => path.startsWith("/cart");
       badge: cartCount
     },
     {
       name: "Dashboard",
       href: "/dashboard",
       icon: User,
-      matches: (path: string) => path.startsWith("/dashboard"),
+      matches: (path: string) => path.startsWith("/dashboard");
       authRequired: true
     }
   ],
@@ -81,7 +81,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
     !item.authRequired || (item.authRequired && isAuthenticated)
   );
   return (
-    <nav className="md: hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">
+    <nav className = "md: hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">
       <div className="flex justify-around items-center h-16">
         {visibleItems.map(item => (
           <Link

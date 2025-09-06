@@ -31,7 +31,7 @@ export function ConversationDetailView() {
   }, [activeMessages]);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  },
+  };
   const send = async () => {
     if (!messageText.trim() || !activeConversation) return;
     await sendMessage(activeConversation.id, messageText);
@@ -39,12 +39,12 @@ export function ConversationDetailView() {
     inputRef.current?.focus()
   };
   const handleSendMessage = async (e: React.FormEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     await send()
   };
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault(),
+      e.preventDefault();
       send()
     }
   };
@@ -73,7 +73,7 @@ export function ConversationDetailView() {
         messages: [message]
       })
     }
-  }),
+  });
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description);
   return (

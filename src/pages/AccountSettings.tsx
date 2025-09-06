@@ -31,7 +31,7 @@ export default function AccountSettings() {
         logInfo('Saved settings', { displayWeb3, didHandle, enableBackup });
         toast.success('Account settings updated successfully')
       } catch (e) {
-        logErrorToProduction('Failed to save settings', { data: e }),
+        logErrorToProduction('Failed to save settings', { data: e });
         toast.error('Failed to save settings')
       } finally {
         setIsSubmitting(false);
@@ -48,10 +48,10 @@ export default function AccountSettings() {
       }
       
       // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
-      const address = accounts[0];
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+      const address = accounts[0],
       // Sign message to verify ownership
-      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,
+      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
       await ethereum.request({
         method: 'personal_sign',
         params: [address, message]
@@ -71,7 +71,7 @@ export default function AccountSettings() {
     } catch (error: any) {
       toast.error(error.message || 'Failed to connect wallet')
     }
-  },
+  };
   return (
     <>
       <SEO title="Account Settings" description="Manage your account" />

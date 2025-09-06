@@ -9,10 +9,10 @@ interface EmptyStateProps {
 }
 
 export function EmptyState({ 
-  text = "No items available";
+  text = "No items available",
   description;
   onRetry;
-  showRetry = false;
+  showRetry = false,
   icon
 }: EmptyStateProps) {
   return (

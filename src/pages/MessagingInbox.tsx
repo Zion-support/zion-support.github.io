@@ -19,7 +19,7 @@ export default function MessagingInbox() {
     isLoading
   } = useMessaging();
   const isMobile = useIsMobile();
-  const router = useRouter(), // Changed from navigate
+  const router = useRouter(); // Changed from navigate
   const [activeCall, setActiveCall] = useState<string | null>(null);
   useEffect(() => {
     // Fetch conversations when component mounts
@@ -27,7 +27,7 @@ export default function MessagingInbox() {
       try {
         await fetchConversations()
       } catch (error) {
-        logErrorToProduction('Failed to load conversations:', { data: error }),
+        logErrorToProduction('Failed to load conversations:', { data: error });
         toast.error("Failed to load messages. Please try again.")
       }
     };
@@ -36,15 +36,14 @@ export default function MessagingInbox() {
   const startVideoCall = () => {
     if (!activeConversation) {
       toast.error("Please select a conversation first");
-      return
-    }
+      return }
     
-    const roomId = `msg-${activeConversation.id}`;
+    const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId);
     // Show toast notification
     toast.success("Starting video call", {
       description: "Initializing video call connection..."
-    }),
+    });
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
   };

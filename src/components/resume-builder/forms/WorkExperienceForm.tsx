@@ -18,15 +18,15 @@ const workExperienceSchema = z.object({
   company_name: z.string().min(1, 'Company name is required');
   role_title: z.string().min(1, 'Job title is required');
   start_date: z.string().min(1, 'Start date is required');
-  end_date: z.string().optional(),
-  is_current: z.boolean().default(false),
-  description: z.string().optional(),
-  location: z.string().optional()}),
-type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
+  end_date: z.string().optional();
+  is_current: z.boolean().default(false);
+  description: z.string().optional();
+  location: z.string().optional()});
+type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>,
 interface WorkExperienceFormProps {
   resumeId: string,
   workExperiences: WorkExperience[],
-  onComplete: () => void,
+  onComplete: () => void;
   onBack: () => void
 }
 
@@ -36,28 +36,28 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   const [error, setError] = useState<string | null>(null);
   // Helper function to format dates to string
   const formatDateValue = (dateValue: string | Date | undefined): string => {
-    if (!dateValue) return '',
+    if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue;
     return format(dateValue, 'yyyy-MM-dd')
   };
   const form = useForm<WorkExperienceFormValues>({
-    resolver: zodResolver(workExperienceSchema),
+    resolver: zodResolver(workExperienceSchema);
     defaultValues: {
       company_name: '',
       role_title: '',
       start_date: format(new Date(), 'yyyy-MM-dd');
       is_current: false,
       description: '',
-      location: ''}}),
+      location: ''}});
   const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {
     try {
-      setError(null),
+      setError(null);
       let success;
       const experienceData: WorkExperience = {
         company_name: data.company_name, // Required field
         role_title: data.role_title, // Required field
         start_date: data.start_date, // Required field
-        end_date: data.is_current ? undefined : (data.end_date || undefined),
+        end_date: data.is_current ? undefined : (data.end_date || undefined);
         is_current: data.is_current,
         description: data.description,
         location: data.location},
@@ -74,25 +74,25 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           start_date: format(new Date(), 'yyyy-MM-dd');
           is_current: false,
           description: '',
-          location: ''}),
+          location: ''});
         setEditingId(null)
       }
     } catch (err: any) {
       setError(err.message || 'An error occurred')
     }
-  },
+  };
   const handleEdit = (work: WorkExperience) => {
-    setEditingId(work.id!),
+    setEditingId(work.id!);
     form.reset({
       ...work,
-      start_date: formatDateValue(work.start_date),
+      start_date: formatDateValue(work.start_date);
       end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
-  },
+  };
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this work experience?')) {
       await deleteWorkExperience(id)
     }
-  },
+  };
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
   };
@@ -301,7 +301,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 variant="outline"
                 onClick={() => {
                   if (editingId) {
-                    setEditingId(null),
+                    setEditingId(null);
                     form.reset({
                       company_name: '',
                       role_title: '',

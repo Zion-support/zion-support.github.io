@@ -16,13 +16,13 @@ import { Education } from '@/types/resume';
 const educationSchema = z.object({
   institution: z.string().min(1, 'Institution is required');
   degree: z.string().min(1, 'Degree is required');
-  field_of_study: z.string().optional(),
+  field_of_study: z.string().optional();
   start_date: z.string().min(1, 'Start date is required');
-  end_date: z.string().optional(),
-  is_current: z.boolean().default(false),
-  description: z.string().optional(),
-  location: z.string().optional()}),
-type EducationFormValues = z.infer<typeof educationSchema>;
+  end_date: z.string().optional();
+  is_current: z.boolean().default(false);
+  description: z.string().optional();
+  location: z.string().optional()});
+type EducationFormValues = z.infer<typeof educationSchema>,
 export function EducationFormFields({ 
   isEditing;
   onSubmit;
@@ -31,7 +31,7 @@ export function EducationFormFields({
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const form = useForm<EducationFormValues>({
-    resolver: zodResolver(educationSchema),
+    resolver: zodResolver(educationSchema);
     defaultValues: {
       institution: '',
       degree: '',
@@ -39,9 +39,9 @@ export function EducationFormFields({
       start_date: format(new Date(), 'yyyy-MM-dd');
       is_current: false,
       description: '',
-      location: ''}}),
+      location: ''}});
   const handleSubmit = async (data: EducationFormValues) => {
-    setIsLoading(true),
+    setIsLoading(true);
     setError(null);
     try {
       await onSubmit(data)
@@ -50,7 +50,7 @@ export function EducationFormFields({
     } finally {
       setIsLoading(false)
     }
-  },
+  };
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">

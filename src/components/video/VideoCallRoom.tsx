@@ -20,15 +20,15 @@ interface VideoCallRoomProps {
   roomId: string,
   participants?: Participant[];
   onLeave?: () => void;
-  onToggleMute?: (isMuted: boolean) => void,
-  onToggleVideo?: (isEnabled: boolean) => void,
-  onToggleScreenShare?: (isSharing: boolean) => void,
+  onToggleMute?: (isMuted: boolean) => void;
+  onToggleVideo?: (isEnabled: boolean) => void;
+  onToggleScreenShare?: (isSharing: boolean) => void;
   className?: string
 }
 
 export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ 
   roomId,
-  participants = [];
+  participants = [],
   onLeave;
   onToggleMute;
   onToggleVideo;
@@ -48,20 +48,20 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     return () => clearInterval(timer)
   }, []);
   const formatDuration = (seconds: number) => {
-    const hrs = Math.floor(seconds / 3600),
+    const hrs = Math.floor(seconds / 3600);
     const mins = Math.floor((seconds % 3600) / 60);
-    const secs = seconds % 60;
+    const secs = seconds % 60,
     return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`
   };
   const handleToggleMute = () => {
-    const newMuteState = !isMuted;
+    const newMuteState = !isMuted,
     setIsMuted(newMuteState);
     if (onToggleMute) {
       onToggleMute(newMuteState)
     }
   };
   const handleToggleVideo = () => {
-    const newVideoState = !isVideoEnabled;
+    const newVideoState = !isVideoEnabled,
     setIsVideoEnabled(newVideoState);
     if (onToggleVideo) {
       onToggleVideo(newVideoState)
@@ -73,7 +73,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     }
   };
   const handleToggleScreenShare = () => {
-    const newScreenShareState = !isScreenSharing;
+    const newScreenShareState = !isScreenSharing,
     setIsScreenSharing(newScreenShareState);
     if (onToggleScreenShare) {
       onToggleScreenShare(newScreenShareState)
@@ -210,4 +210,4 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
       </CardContent>
     </Card>
   )
-},
+};

@@ -10,7 +10,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
 interface ContactPublisherModalProps {
   isOpen: boolean,
-  onClose: () => void,
+  onClose: () => void;
   publisherName: string,
   publisherEmail?: string;
   productId?: string
@@ -42,9 +42,9 @@ export function ContactPublisherModal({
   const [error, setError] = React.useState<string | null>(null);
   const [loginOpen, setLoginOpen] = React.useState(false);
   const form = useForm<FormValues>({
-    resolver: yupResolver(schema) as Resolver<FormValues>,
+    resolver: yupResolver(schema) as Resolver<FormValues>;
     mode: 'onChange',
-    defaultValues: { subject: '', message: '' }}),
+    defaultValues: { subject: '', message: '' }});
   const handleSend = async () => {
     if (!user) {
       setLoginOpen(true);
@@ -58,7 +58,7 @@ export function ContactPublisherModal({
         productId;
         subject: values.subject,
         body: values.message,
-        fromUser: user.id}),
+        fromUser: user.id});
       toast.success('Message sent');
       form.reset();
       onClose()
@@ -68,7 +68,7 @@ export function ContactPublisherModal({
   };
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
-      e.stopPropagation(),
+      e.stopPropagation();
       onClose()
     }
   };

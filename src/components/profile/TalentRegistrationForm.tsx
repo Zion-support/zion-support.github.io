@@ -23,11 +23,11 @@ const talentProfileSchema = z.object({
   location: z.string().min(2, "Location is required");
   skills: z.string().min(2, "Enter at least one skill");
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-    message: "Hourly rate must be a number"}),
+    message: "Hourly rate must be a number"});
   availability: z.enum(["available", "limited", "unavailable"]);
-  enhancedProfile: z.boolean().default(true)}),
-type TalentFormValues = z.infer<typeof talentProfileSchema>;
-type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other';
+  enhancedProfile: z.boolean().default(true)});
+type TalentFormValues = z.infer<typeof talentProfileSchema>,
+type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
 interface CategorizedSkills {
   programming: string[],
   devops: string[],
@@ -43,7 +43,7 @@ interface EnhancedProfile {
 
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
-  const { user } = useAuth(),
+  const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [skillTags, setSkillTags] = useState<string[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
@@ -51,7 +51,7 @@ export function TalentRegistrationForm() {
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
   // Initialize form with default values
   const form = useForm<TalentFormValues>({
-    resolver: zodResolver(talentProfileSchema) as any,
+    resolver: zodResolver(talentProfileSchema) as any;
     defaultValues: {
       name: user?.displayName || "",
       title: "",
@@ -60,7 +60,7 @@ export function TalentRegistrationForm() {
       skills: "",
       hourlyRate: "",
       availability: "available",
-      enhancedProfile: true}}),
+      enhancedProfile: true}});
   // Handle adding skill tags
   const handleAddSkill = () => {
     const skillInput = form.getValues("skills");
@@ -72,11 +72,11 @@ export function TalentRegistrationForm() {
   // Handle removing skill tags
   const handleRemoveSkill = (skill: string) => {
     setSkillTags(skillTags.filter((s) => s !== skill))
-  },
+  };
   // Handle key press in skills input (add on enter)
   const handleSkillKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
-      e.preventDefault(),
+      e.preventDefault();
       handleAddSkill()
     }
   };
@@ -97,7 +97,7 @@ export function TalentRegistrationForm() {
     if (!formData.bio || formData.bio.length < 20) {
       toast({
         title: "More information needed",
-        description: "Please provide at least a detailed bio before generating enhanced content."}),
+        description: "Please provide at least a detailed bio before generating enhanced content."});
       return
     }
 
@@ -114,7 +114,7 @@ export function TalentRegistrationForm() {
             location: formData.location
           }
         }
-      }),
+      });
       if (error) {
         throw new Error(error.message)
       }
@@ -127,7 +127,7 @@ export function TalentRegistrationForm() {
           description: "AI has created a professional bio and suggested additional skills for your profile."})
       } else {
         // Fallback for mock/development mode
-        logWarn('Mock AI response - using fallback content'),
+        logWarn('Mock AI response - using fallback content');
         setGeneratedContent({
           summary: "Experienced professional with expertise in modern technologies and best practices.",
           categorizedSkills: {
@@ -144,7 +144,7 @@ export function TalentRegistrationForm() {
       }
       
     } catch (error: any) {
-      logErrorToProduction('Error generating enhanced profile:', { data: error }),
+      logErrorToProduction('Error generating enhanced profile:', { data: error });
       toast({
         title: "Generation failed",
         description: error.message || "There was an error generating your enhanced profile. Please try again.",
@@ -152,13 +152,13 @@ export function TalentRegistrationForm() {
     } finally {
       setIsGenerating(false)
     }
-  },
+  };
   // Apply generated content to form
   const applyGeneratedContent = () => {
     if (generatedContent) {
       form.setValue("bio", generatedContent.summary);
       // Extract all skills from categorized skills and properly type cast them
-      const allCategorizedSkills = generatedContent.categorizedSkills;
+      const allCategorizedSkills = generatedContent.categorizedSkills,
       const newSkills: string[] = [],
       // Safely extract and flatten skills from each category
       Object.values(allCategorizedSkills).forEach(categorySkills => {
@@ -209,14 +209,14 @@ export function TalentRegistrationForm() {
     } catch (error) {
       logErrorToProduction('Failed to send notification email:', { data: error })
     }
-  },
+  };
   // Handle form submission
   const onSubmit = async (values: TalentFormValues) => {
     if (skillTags.length === 0) {
       toast({
         title: "Skills required",
         description: "Please add at least one skill to your profile.",
-        variant: "destructive"}),
+        variant: "destructive"});
       return
     }
 
@@ -228,8 +228,8 @@ export function TalentRegistrationForm() {
       }
       
       // Enhance profile if not already done
-      let finalSummary = "";
-      let finalSkills = skillTags;
+      let finalSummary = "",
+      let finalSkills = skillTags,
       if (values.enhancedProfile && !generatedContent) {
         try {
           const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {
@@ -242,7 +242,7 @@ export function TalentRegistrationForm() {
                 location: values.location
               }
             }
-          }),
+          });
           if (aiData) {
             finalSummary = (aiData as EnhancedProfile).summary;
             // Safely merge AI suggested skills with user-provided skills
@@ -262,7 +262,7 @@ export function TalentRegistrationForm() {
             finalSkills = [...new Set([...skillTags, ...aiSkills])]
           }
         } catch (error) {
-          logErrorToProduction('Error enhancing profile:', { data: error }),
+          logErrorToProduction('Error enhancing profile:', { data: error });
           // Continue with submission even if enhancement fails
           finalSummary = ""
         }
@@ -271,14 +271,14 @@ export function TalentRegistrationForm() {
       }
 
       // Get user email for notification
-      const { data: userData } = await supabase.auth.getUser(),
+      const { data: userData } = await supabase.auth.getUser();
       const userEmail = (userData as any).user?.email;
       // Create the talent profile
       // In a real implementation, this would save to Supabase
       setTimeout(() => {
         toast({
           title: "Profile Created Successfully",
-          description: "Your talent profile has been published and is now visible in the directory."}),
+          description: "Your talent profile has been published and is now visible in the directory."});
         // Send notification email if we have user email
         if (userEmail && values.enhancedProfile && user?.id) {
           sendEnhancementNotification(user.id, userEmail)
@@ -297,8 +297,8 @@ export function TalentRegistrationForm() {
           bio: values.bio,
           summary: finalSummary,
           location: values.location,
-          skills: finalSkills.map(name => ({ name, level: 4 })), // Default skill level
-          hourly_rate: Number(values.hourlyRate),
+          skills: finalSkills.map(name => ({ name, level: 4 })); // Default skill level
+          hourly_rate: Number(values.hourlyRate);
           availability_status: values.availability,
           // Other fields would be handled here
         });
@@ -306,11 +306,11 @@ export function TalentRegistrationForm() {
       */
 
     } catch (error: any) {
-      logErrorToProduction('Error creating profile:', { data: error }),
+      logErrorToProduction('Error creating profile:', { data: error });
       toast({
         title: "Error Creating Profile",
         description: error.message || "There was an error creating your profile. Please try again.",
-        variant: "destructive"}),
+        variant: "destructive"});
       setIsSubmitting(false);
     }
   };

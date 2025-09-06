@@ -24,13 +24,13 @@ export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
   const { user } = useAuth();
-  const isLoggedIn = !!user;
+  const isLoggedIn = !!user,
   const isMobile = useIsMobile();
   const { t } = useTranslation();
   const router = useRouter();
   const [query, setQuery] = useState('');
   const suggestions = generateSearchSuggestions();
-  let unreadCount = 0;
+  let unreadCount = 0,
   try {
     const messaging = useMessaging();
     unreadCount = messaging.unreadCount
@@ -39,16 +39,16 @@ export function PrimaryNav() {
   }
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     const trimmed = query.trim();
     if (trimmed) {
-      logDebug('PrimaryNav search submit:', { query: trimmed }),
+      logDebug('PrimaryNav search submit:', { query: trimmed });
       router
         .push(`/search?q=${encodeURIComponent(trimmed)}`)
         .then(() => setQuery(''))
         .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }))
     }
-  },
+  };
   return (
     <>
       <header
@@ -73,7 +73,7 @@ export function PrimaryNav() {
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(sugg) => {
-                  logDebug('PrimaryNav search suggestion selected:', { suggestion: sugg }),
+                  logDebug('PrimaryNav search suggestion selected:', { suggestion: sugg });
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
@@ -88,7 +88,7 @@ export function PrimaryNav() {
                     // Default: search results page with query parameter
                     router.push(`/search?q=${encodeURIComponent(sugg.text)}`)
                   }
-                  setQuery(''),
+                  setQuery('');
                   // Track analytics event
                   if (typeof window !== 'undefined' && window.gtag) {
                     window.gtag('eventsearch_suggestion_click', {
@@ -123,7 +123,7 @@ export function PrimaryNav() {
                     className="text-sm hover: text-primary whitespace-nowrap"
                     data-testid="login-link"
                     onClick={(e) => {
-                      e.preventDefault(),
+                      e.preventDefault();
                       setLoginOpen(true)
                     }}
                   >
@@ -151,7 +151,7 @@ export function PrimaryNav() {
                 className="text-sm hover:text-primary"
                 data-testid="login-link"
                 onClick={(e) => {
-                  e.preventDefault(),
+                  e.preventDefault();
                   setLoginOpen(true)
                 }}
               >

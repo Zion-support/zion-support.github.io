@@ -13,7 +13,7 @@ interface State {
 
 export class EquipmentErrorBoundary extends React.Component<Props, State> {
   constructor(props: Props) {
-    super(props),
+    super(props);
     this.state = { hasError: false }
   }
 

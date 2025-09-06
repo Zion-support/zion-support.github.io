@@ -37,24 +37,24 @@ const getNotificationIcon = (type: NotificationType,
 const getNotificationTypeBadge = (type: NotificationType) => {
   switch (type) {
     case 'message':
-      return <Badge className="bg-blue-500">Message</Badge>,
+      return <Badge className = "bg-blue-500">Message</Badge>,
     case 'quote_request':
-      return <Badge className="bg-purple-500">Quote Request</Badge>;
+      return <Badge className = "bg-purple-500">Quote Request</Badge>,
     case 'booking_confirmation':
-      return <Badge className="bg-green-500">Booking</Badge>;
+      return <Badge className = "bg-green-500">Booking</Badge>,
     case 'hire_request':
-      return <Badge className="bg-zion-purple">Hire Request</Badge>;
+      return <Badge className = "bg-zion-purple">Hire Request</Badge>,
     case 'onboarding':
-      return <Badge className="bg-zion-cyan">Onboarding</Badge>;
+      return <Badge className = "bg-zion-cyan">Onboarding</Badge>,
     case 'system':
-      return <Badge className="bg-yellow-500">System</Badge>;
+      return <Badge className = "bg-yellow-500">System</Badge>,
     case 'project_update':
-      return <Badge className="bg-indigo-500">Project</Badge>;
+      return <Badge className = "bg-indigo-500">Project</Badge>,
     case 'milestone_complete':
-      return <Badge className="bg-green-500">Milestone</Badge>;
+      return <Badge className = "bg-green-500">Milestone</Badge>,
     case 'order_status':
-      return <Badge className="bg-orange-500">Order</Badge>;
-    default: return <Badge variant="outline">Notification</Badge>
+      return <Badge className = "bg-orange-500">Order</Badge>,
+    default: return <Badge variant = "outline">Notification</Badge>
   }
 },
 const NotificationCard: React.FC<{
@@ -68,7 +68,7 @@ const NotificationCard: React.FC<{
     action_url?: string;
     action_text?: string
   };
-  onMarkAsRead: (id: string) => Promise<void>,
+  onMarkAsRead: (id: string) => Promise<void>;
   onDismiss: (id: string) => Promise<void>
 }> = ({ notification, onMarkAsRead, onDismiss }) => {
   const router = useRouter();
@@ -82,8 +82,8 @@ const NotificationCard: React.FC<{
     }
   };
   return (<div
-      className={cn(
-        'border rounded-lg shadow-sm p-4 mb-3 group transition-colors';
+      className = {cn(
+        'border rounded-lg shadow-sm p-4 mb-3 group transition-colors',
         notification.read
           ? 'border-zion-blue-light bg-zion-blue-dark/10'
           : 'border-zion-cyan bg-zion-blue-dark/30')}
@@ -154,7 +154,7 @@ const NotificationCard: React.FC<{
       </div>
     </div>
   )
-},
+};
 export default function NotificationsPage() {
   const {
     filteredNotifications;

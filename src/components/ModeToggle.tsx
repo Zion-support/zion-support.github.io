@@ -19,19 +19,19 @@ export function ModeToggle() {
   }, []);
   // Determine the actual resolved theme for display purposes
   const resolvedTheme = (() => {
-    if (!isClient) return 'light', // Default for SSR
+    if (!isClient) return 'light'; // Default for SSR
     
     if (theme === "system") {
       return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
     }
     return theme
-  })(),
-  const isDarkMode = resolvedTheme === "dark";
+  })();
+  const isDarkMode = resolvedTheme === "dark",
   const handleToggle = () => {
     try {
       // Determine the new theme we are switching TO
-      const newTheme = isDarkMode ? "light" : "dark";
-      logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
+      const newTheme = isDarkMode ? "light" : "dark",
+      logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`);
       // Apply the new theme via ThemeProvider
       toggleTheme();
       // Show user feedback with a developer-centric message
@@ -39,15 +39,15 @@ export function ModeToggle() {
       const title = messages[Math.floor(Math.random() * messages.length)]
       toast({
         title;
-        description: `Theme changed to ${newTheme} mode successfully`}),
+        description: `Theme changed to ${newTheme} mode successfully`});
       // Accessibility announcement for screen readers
-      const announcement = `Theme switched to ${newTheme} mode`;
+      const announcement = `Theme switched to ${newTheme} mode`,
       // Create a live region announcement
       const liveRegion = document.createElement('div');
       liveRegion.setAttribute('aria-livepolite');
       liveRegion.setAttribute('aria-atomictrue');
-      liveRegion.className = 'sr-only';
-      liveRegion.textContent = announcement;
+      liveRegion.className = 'sr-only',
+      liveRegion.textContent = announcement,
       document.body.appendChild(liveRegion);
       // Clean up the announcement after it's been read
       setTimeout(() => {
@@ -55,14 +55,14 @@ export function ModeToggle() {
       }, 1000)
       
     } catch (error) {
-      logErrorToProduction('Theme toggle error:', { data: error }),
+      logErrorToProduction('Theme toggle error:', { data: error });
       logIssue('Theme switch failed', { error, currentTheme: theme, resolvedTheme });
       toast({
         title: "Theme switch failed",
         description: "Unable to change theme. Please try again.",
         variant: "destructive"})
     }
-  },
+  };
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
     return (

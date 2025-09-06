@@ -36,7 +36,7 @@ export function SupportChatbot() {
           stream: true,
           messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text }]
         })
-      }),
+      });
       // If Supabase function fails, try local API fallback
       if (!res.ok) {
         res = await fetch('/api/kb-chat', {
@@ -45,24 +45,24 @@ export function SupportChatbot() {
           body: JSON.stringify({
             messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text }]
           })
-        }),
-        if (!res.ok) throw new Error(`API error: ${res.status}`),
+        });
+        if (!res.ok) throw new Error(`API error: ${res.status}`);
         const data = await res.json().catch(() => ({}));
-        const message = data.message || data.choices?.[0]?.message?.content || data.choices?.[0]?.text || data.completion || '';
+        const message = data.message || data.choices?.[0]?.message?.content || data.choices?.[0]?.text || data.completion || '',
         const finalMsg = message.trim() ||
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.");
         setMessages(prev => [...prev, { id: Date.now().toString() + '-a', role: 'assistant', message: finalMsg }])
       } else if (res.body) {
-        const botId = Date.now().toString() + '-a',
-        setMessages(prev => [...prev, { id: botId, role: 'assistant', message: '' }]),
+        const botId = Date.now().toString() + '-a';
+        setMessages(prev => [...prev, { id: botId, role: 'assistant', message: '' }]);
         const reader = res.body.getReader();
         const decoder = new TextDecoder();
-        let done = false;
-        let buffer = '';
-        let accumulated = '';
+        let done = false,
+        let buffer = '',
+        let accumulated = '',
         while (!done) {
           const result = await reader.read();
-          done = result.done;
+          done = result.done,
           buffer += decoder.decode(result.value || new Uint8Array());
           const lines = buffer.split('\n');
           for (let i = 0, i < lines.length - 1, i++) {
@@ -70,13 +70,13 @@ export function SupportChatbot() {
             if (!line) continue;
             if (line.startsWith('data:')) {
               line = line.replace(/^data:\s*/, '');
-              if (line === '[DONE]') {
-                done = true;
+              if (line = == '[DONE]') {
+                done = true,
                 break
               }
               try {
                 const json = JSON.parse(line);
-                const token = json.choices?.[0]?.delta?.content || json.choices?.[0]?.text || '';
+                const token = json.choices?.[0]?.delta?.content || json.choices?.[0]?.text || '',
                 if (token) {
                   accumulated += token;
                   setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m))
@@ -89,15 +89,15 @@ export function SupportChatbot() {
           buffer = lines[lines.length - 1] || ''
         }
         const final = accumulated.trim() ||
-          (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
+          (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.");
         setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m))
       }
     } catch (err) {
-      logErrorToProduction('Chatbot error:', { data: err }),
+      logErrorToProduction('Chatbot error:', { data: err });
       // Provide a helpful fallback response instead of generic error
       const fallbackResponse = FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
       const errorMsg: Msg = { 
-        id: Date.now().toString() + '-e',
+        id: Date.now().toString() + '-e';
         role: 'assistant',
         message: fallbackResponse
       },

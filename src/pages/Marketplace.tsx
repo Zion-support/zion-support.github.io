@@ -55,28 +55,28 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
       </div>
     </CardContent>
   </Card>
-),
+);
 // Filter and sort controls
 const FilterControls: React.FC<{
   sortBy: string,
-  setSortBy: (sort: string) => void,
+  setSortBy: (sort: string) => void;
   filterCategory: string,
-  setFilterCategory: (category: string) => void,
+  setFilterCategory: (category: string) => void;
   categories: string[],
   priceRange: [number, number];
   setPriceRange: (range: [number, number]) => void;
   minAiScore: number,
-  setMinAiScore: (score: number) => void,
+  setMinAiScore: (score: number) => void;
   minRating: number,
-  setMinRating: (rating: number) => void,
+  setMinRating: (rating: number) => void;
   filterAvailability: string,
-  setFilterAvailability: (value: string) => void,
+  setFilterAvailability: (value: string) => void;
   availabilityOptions: string[],
   filterLocation: string,
-  setFilterLocation: (value: string) => void,
+  setFilterLocation: (value: string) => void;
   locations: string[],
   showRecommended: boolean,
-  setShowRecommended: (show: boolean) => void,
+  setShowRecommended: (show: boolean) => void;
   loading: boolean
 }> = ({
   sortBy,
@@ -229,7 +229,7 @@ export default function Marketplace() {
   const { toast } = useToast();
   const { isAuthenticated, user } = useAuth();
   const firstRenderRef = useRef(true);
-  const isRefreshingAfterFilterChange = useRef(false), // New ref to track refresh state
+  const isRefreshingAfterFilterChange = useRef(false); // New ref to track refresh state
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [sortBy, setSortBy] = useState('newest');
   const [filterCategory, setFilterCategory] = useState('');
@@ -243,7 +243,7 @@ export default function Marketplace() {
   // Handle Add Product button with authentication check
   const handleAddProduct = useCallback(() => {
     if (!isAuthenticated) {
-      setIsAuthModalOpen(true), // Use the new auth modal
+      setIsAuthModalOpen(true); // Use the new auth modal
       return
     }
 
@@ -252,7 +252,7 @@ export default function Marketplace() {
       toast({
         title: "Admin Access Required",
         description: "Only administrators can add products to the marketplace. Please contact an administrator.",
-        variant: "destructive"}),
+        variant: "destructive"});
       return
     }
 
@@ -265,12 +265,12 @@ export default function Marketplace() {
     try {
       // Use static marketplace listings data for now (compatible with ProductListing type)
       const params = {
-        page;
+        page,
         limit;
-        ...(filterCategory && { category: filterCategory }),
+        ...(filterCategory && { category: filterCategory });
         sort: sortBy
       },
-      logInfo('Marketplace.tsx: Fetching products using static data with params:', { data: params }),
+      logInfo('Marketplace.tsx: Fetching products using static data with params:', { data: params });
       // Use static data that's already of type ProductListing[]
       let items: ProductListing[] = [...MARKETPLACE_LISTINGS],
       // Apply category filter from params
@@ -284,9 +284,9 @@ export default function Marketplace() {
       }
 
       items = items.filter((p) => {
-        const price = p.price || 0;
-        const ai = p.aiScore || 0;
-        const rating = p.rating || 0;
+        const price = p.price || 0,
+        const ai = p.aiScore || 0,
+        const rating = p.rating || 0,
         const location = (p.location || '').toLowerCase();
         const availability = (p.availability || '').toLowerCase();
         return (
@@ -312,19 +312,19 @@ export default function Marketplace() {
             return (b.aiScore || 0) - (a.aiScore || 0);
           case 'newest':
           default: // Ensure createdAt exists and is a valid date string before parsing
-            const timeA = a.createdAt ? new Date(a.createdAt).getTime() : 0,
+            const timeA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
             const timeB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
             // Handle NaN cases that might arise from invalid date strings
             if (isNaN(timeB) && isNaN(timeA)) return 0, // Both invalid, treat as equal
             if (isNaN(timeB)) return -1, // b is invalid, a comes first (appears newer)
             if (isNaN(timeA)) return 1,  // a is invalid, b comes first
 
-            return timeB - timeA, // Both valid, sort by time
+            return timeB - timeA; // Both valid, sort by time
         }
       });
       // Apply pagination
       const startIndex = (page - 1) * limit;
-      const endIndex = startIndex + limit;
+      const endIndex = startIndex + limit,
       const paginatedItems = items.slice(startIndex, endIndex);
       return {
         items: paginatedItems,
@@ -333,7 +333,7 @@ export default function Marketplace() {
       }
     } catch (err: any) {
       // Log the error and allow useInfiniteScrollPagination to handle it
-      logErrorToProduction('Error in Marketplace fetchProducts:', { data: err }),
+      logErrorToProduction('Error in Marketplace fetchProducts:', { data: err });
       // Show more specific error messages based on the error type
       if (err.response?.status === 403) {
         logErrorToProduction("403 Forbidden error - authentication issue");
@@ -345,7 +345,7 @@ export default function Marketplace() {
           description: "The marketplace is temporarily unavailable. Please try again later.",
           variant: "destructive"})
       } else {
-        handleApiError(err), // This might show a toast or log to Sentry
+        handleApiError(err); // This might show a toast or log to Sentry
       }
       
       throw err, // Re-throw to let useInfiniteScrollPagination know about the failure
@@ -366,7 +366,7 @@ export default function Marketplace() {
   // Effect to refresh data when filters change
   useEffect(() => {
     if (firstRenderRef.current) {
-      firstRenderRef.current = false;
+      firstRenderRef.current = false,
       // On initial mount, useInfiniteScrollPagination handles the first load.
       // We don't want to call refresh() here immediately if it's the very first render
       // unless specifically needed. The new effect below handles re-mounts.
@@ -568,7 +568,7 @@ export default function Marketplace() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }}
-              whileHover={{ scale: 1.02 }}
+              whileHover = {{ scale: 1.02 }}
               className="relative group"
             >
               <ProductCard
@@ -591,17 +591,17 @@ export default function Marketplace() {
                 }}
                 onBuy={async () => {
                   if (!isAuthenticated) {
-                    setIsAuthModalOpen(true),
+                    setIsAuthModalOpen(true);
                     return, // Stop further execution
                   }
                   try {
                     await router.push(`/checkout/${product.id}`)
                   } catch (error) {
-                    logErrorToProduction('Failed to navigate to checkout:', { data: error }),
+                    logErrorToProduction('Failed to navigate to checkout:', { data: error });
                     toast({
                       title: "Navigation Error",
                       description: "Could not navigate to checkout. Please try again.",
-                      variant: "destructive"}),
+                      variant: "destructive"});
                     // Re-throw to allow ProductCard's catch to also run if needed;
                     // though ProductCard will reset its state in .finally() regardless.
                     throw error

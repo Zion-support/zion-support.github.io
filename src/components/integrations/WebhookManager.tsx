@@ -27,7 +27,7 @@ export function WebhookManager() {
     selectedEvent: "" as WebhookEventType,
     eventTypes: [] as WebhookEventType[],
     secret: ""
-  }),
+  });
   const eventOptions: { value: WebhookEventType, label: string }[] = [
     { value: "new_application", label: "New Application Received" },
     { value: "quote_received", label: "Quote Request Received" },
@@ -41,21 +41,20 @@ export function WebhookManager() {
     if (!newWebhook.selectedEvent) return;
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added");
-      return
-    }
+      return }
     
     setNewWebhook({
-      ...newWebhook,
+      ...newWebhook;
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent];
       selectedEvent: "" as WebhookEventType
     })
-  },
+  };
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
-      ...newWebhook,
+      ...newWebhook;
       eventTypes: newWebhook.eventTypes.filter(e => e !== event)
     })
-  },
+  };
   const handleCreateWebhook = async () => {
     if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
       toast.error("Please fill in all required fields");
@@ -76,7 +75,7 @@ export function WebhookManager() {
       eventTypes: [],
       secret: ""
     })
-  },
+  };
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)
   };

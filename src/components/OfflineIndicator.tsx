@@ -6,7 +6,7 @@ export const OfflineIndicator = () => {
   const [showOfflineAlert, setShowOfflineAlert] = useState(false);
   useEffect(() => {
     const updateOnlineStatus = () => {
-      const online = navigator.onLine;
+      const online = navigator.onLine,
       setIsOnline(online);
       if (!online) {
         setShowOfflineAlert(true)

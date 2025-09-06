@@ -43,18 +43,18 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
       </div>
     </CardContent>
   </Card>
-),
+);
 // Filter and sort controls for talents
 const TalentFilterControls: React.FC<{
   sortBy: string,
-  setSortBy: (sort: string) => void,
+  setSortBy: (sort: string) => void;
   filterSpecialization: string,
-  setFilterSpecialization: (spec: string) => void,
+  setFilterSpecialization: (spec: string) => void;
   filterAvailability: string,
-  setFilterAvailability: (avail: string) => void,
+  setFilterAvailability: (avail: string) => void;
   specializations: string[],
   showRecommended: boolean,
-  setShowRecommended: (show: boolean) => void,
+  setShowRecommended: (show: boolean) => void;
   loading: boolean
 }> = ({
   sortBy,
@@ -125,7 +125,7 @@ const TalentFilterControls: React.FC<{
       {showRecommended ? "All Talents" : "Recommended"}
     </Button>
   </div>
-),
+);
 // Talent card component
 const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ talent, onHire }) => (
   <Card className="h-full hover:shadow-lg transition-shadow">
@@ -223,17 +223,17 @@ export default function TalentsPage() {
     await new Promise(resolve => setTimeout(resolve, 300));
     let allTalents: TalentProfile[] = [],
     // Start with existing talent profiles
-    if (page === 1) {
+    if (page = == 1) {
       allTalents = [...TALENT_PROFILES]
     }
     
     // Generate new AI/IT talents using the auto-feed algorithm
-    const startId = TALENT_PROFILES.length + (page - 1) * limit + totalGenerated,
+    const startId = TALENT_PROFILES.length + (page - 1) * limit + totalGenerated;
     const newTalents = generateAITalents(limit, startId);
     setTotalGenerated(prev => prev + newTalents.length);
     allTalents = [...allTalents, ...newTalents],
     // Apply filters
-    let filteredTalents = allTalents;
+    let filteredTalents = allTalents,
     if (filterSpecialization) {
       filteredTalents = filteredTalents.filter(t => 
         t.professional_title?.toLowerCase().includes(filterSpecialization.toLowerCase())
@@ -264,10 +264,10 @@ export default function TalentsPage() {
         case 'newest':
         default: return new Date(b.id || '').getTime() - new Date(a.id || '').getTime()
       }
-    }),
+    });
     // Paginate results
     const startIndex = (page - 1) * limit;
-    const endIndex = startIndex + limit;
+    const endIndex = startIndex + limit,
     const items = filteredTalents.slice(startIndex, endIndex);
     return {
       items;

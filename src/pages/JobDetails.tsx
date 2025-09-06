@@ -26,16 +26,16 @@ interface Job {
 }
 
 export default function JobDetails() {
-  const router = useRouter(), // Init router
+  const router = useRouter(); // Init router
   const { jobId: rawJobId } = router.query, // Get jobId from query
-  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
+  const jobId = typeof rawJobId === 'string' ? rawJobId: undefined,
   const { job, isLoading, error } = useJobDetails(jobId) as { job: Job | undefined, isLoading: boolean, error: any },
   const { user, isAuthenticated } = useAuth();
   // navigate is now router
   const { isWhitelabel, brandName } = useWhitelabel();
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
   const formatBudget = (budget: any) => {
-    if (!budget) return "Not specified",
+    if (!budget) return "Not specified";
     return `$${budget.min} - $${budget.max}`
   };
   if (isLoading) {
@@ -58,7 +58,7 @@ export default function JobDetails() {
   const handleApply = () => {
     if (!isAuthenticated) {
       toast.error("Please log in to apply for this job");
-      router.push(`/login?redirect=${encodeURIComponent(`/jobs/${jobId || ''}`)}`), // Added null check for jobId
+      router.push(`/login?redirect = ${encodeURIComponent(`/jobs/${jobId || ''}`)}`); // Added null check for jobId
       return
     }
 
@@ -70,10 +70,10 @@ export default function JobDetails() {
     setIsApplyModalOpen(true)
   };
   const handleApplySuccess = async (appliedJobId: string) => {
-    toast.success("Application submitted successfully!"),
+    toast.success("Application submitted successfully!");
     setIsApplyModalOpen(false)
   };
-  const isOwnJob = user?.id === job.client_id;
+  const isOwnJob = user?.id === job.client_id,
   return (
     <>
       <SEO 
@@ -182,12 +182,12 @@ export default function JobDetails() {
       {/* Job application modal */}
       {job && (
         <ApplyToJobModal
-          job={{
+          job = {{
             id: job.id,
             title: job.title,
             description: job.description,
             company_name: job.company_name ?? "Company",
-            budget: formatBudget(job.budget),
+            budget: formatBudget(job.budget);
             client_id: job.client_id}}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}

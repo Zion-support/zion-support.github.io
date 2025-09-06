@@ -10,10 +10,10 @@ import { useDebounce } from "@/hooks/useDebounce";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { z } from "zod";
 const listingSchema = z.object({
-  id: z.string(),
-  title: z.string(),
-  category: z.string(),
-  image: z.string().optional()}),
+  id: z.string();
+  title: z.string();
+  category: z.string();
+  image: z.string().optional()});
 const listingsSchema = z.array(listingSchema);
 interface ServiceTypeStepProps {
   formData: QuoteFormData,
@@ -41,7 +41,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       const url = `/api/public/services?category=${encodeURIComponent(
         formData.serviceType
       )}&q=${encodeURIComponent(debouncedQuery)}`;
-      const maxRetries = 3;
+      const maxRetries = 3,
       for (let attempt = 0, attempt < maxRetries, attempt++) {
         try {
           const response = await fetch(url);
@@ -62,7 +62,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
               captureException(err)
             }
             if (isMounted.current) {
-              setListings([]),
+              setListings([]);
               setError('Failed to load services')
             }
           } else {
@@ -77,15 +77,15 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
   }, [formData.serviceType, debouncedQuery, isMounted]);
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type })
-  },
+  };
   const handleItemSelect = (item: ListingItem) => {
     updateFormData({ 
       specificItem: item,
       serviceCategory: item.category,
       serviceType: item.category.toLowerCase() as ServiceType
     })
-  },
-  const sourceListings = listings;
+  };
+  const sourceListings = listings,
   const filteredListings = sourceListings.filter(item => {
     // Filter by category only when a service type has been selected
     if (formData.serviceType !== "") {

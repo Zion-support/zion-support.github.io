@@ -27,11 +27,11 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
   const sendRequest = async () => {
     // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
     const baseUrl = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? window.location.origin : '');
-    let url = `${baseUrl}${path}`;
+    let url = `${baseUrl}${path}`,
     const searchParams = new URLSearchParams();
-    if (method === "GET" || method === "DELETE") {
+    if (method = == "GET" || method === "DELETE") {
       params.forEach((p) => {
-        const val = paramValues[p.name];
+        const val = paramValues[p.name],
         if (val) searchParams.append(p.name, val)
       });
       const query = searchParams.toString();
@@ -44,7 +44,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json"};
       // Add timeout to prevent hanging
-      signal: AbortSignal.timeout(15000)},
+      signal: AbortSignal.timeout(15000)};
     if (method !== "GET" && method !== "DELETE") {
       try {
         options.body = JSON.stringify(JSON.parse(body))
@@ -71,7 +71,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       }
 
       // Format the response with status information
-      const statusInfo = `HTTP ${res.status} ${res.statusText}\n\n`;
+      const statusInfo = `HTTP ${res.status} ${res.statusText}\n\n`,
       setResponse(statusInfo + responseText)
     } catch (err: any) {
       let errorMessage = 'Request failed',
@@ -87,7 +87,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
     } finally {
       setLoading(false)
     }
-  },
+  };
   return (
     <div className="space-y-4">
       <Input
@@ -117,4 +117,4 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
   )
 }
 
-export default ApiPlayground,
+export default ApiPlayground;

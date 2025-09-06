@@ -12,14 +12,14 @@ import { FileText } from 'lucide-react'
 
 const formSchema = z.object({
   reason_code: z.string()
-    .min(1, { message: "Please select a reason for the dispute" }),
+    .min(1, { message: "Please select a reason for the dispute" });
   description: z.string()
-    .min(20, { message: "Description must be at least 20 characters" }),
-  attachments: z.array(z.any()).optional()}),
+    .min(20, { message: "Description must be at least 20 characters" });
+  attachments: z.array(z.any()).optional()});
 type DisputeFormProps = {
   projectId: string,
   milestoneId?: string;
-  onDisputeCreated?: (disputeId: string) => void,
+  onDisputeCreated?: (disputeId: string) => void;
   onCancel?: () => void
 };
 export function DisputeForm({ 
@@ -32,14 +32,14 @@ export function DisputeForm({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [files, setFiles] = useState<File[]>([]);
   const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(formSchema);
     defaultValues: {
       reason_code: "",
       description: "",
-      attachments: []}}),
+      attachments: []}});
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      const newFiles = Array.from(e.target.files),
+      const newFiles = Array.from(e.target.files);
       setFiles(prev => [...prev, ...newFiles]),
       form.setValue("attachments", [...files, ...newFiles])
     }
@@ -52,12 +52,12 @@ export function DisputeForm({
   };
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      setIsSubmitting(true),
+      setIsSubmitting(true);
       const dispute = await createDispute({
         project_id: projectId,
         milestone_id: milestoneId,
         reason_code: values.reason_code,
-        description: values.description}),
+        description: values.description});
       if (dispute && dispute.id) {
         // Future enhancement: Upload attachments
         // For now we just log the files that would be uploaded
@@ -65,13 +65,13 @@ export function DisputeForm({
           // logInfo(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }
         
-        toast.success("Your dispute has been submitted"),
+        toast.success("Your dispute has been submitted");
         if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
         }
       }
     } catch (error) {
-      logErrorToProduction('Error submitting dispute:', { data: error }),
+      logErrorToProduction('Error submitting dispute:', { data: error });
       toast.error("Failed to submit dispute. Please try again.")
     } finally {
       setIsSubmitting(false);

@@ -14,39 +14,39 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
   const { t } = useTranslation();
   const quickLinks = [
     {
-      title: t('home.tool_ai_matcher'),
-      description: t('home.tool_ai_matcher_desc'),
-      icon: <Search className="h-6 w-6 text-zion-cyan" />,
+      title: t('home.tool_ai_matcher');
+      description: t('home.tool_ai_matcher_desc');
+      icon: <Search className = "h-6 w-6 text-zion-cyan" />,
       link: "/marketplace"
     },
     {
-      title: t('home.tool_talent'),
-      description: t('home.tool_talent_desc'),
-      icon: <Users className="h-6 w-6 text-zion-purple" />,
+      title: t('home.tool_talent');
+      description: t('home.tool_talent_desc');
+      icon: <Users className = "h-6 w-6 text-zion-purple" />,
       link: "/talent"
     },
     {
-      title: t('home.tool_services'),
-      description: t('home.tool_services_desc'),
-      icon: <Briefcase className="h-6 w-6 text-zion-cyan" />,
+      title: t('home.tool_services');
+      description: t('home.tool_services_desc');
+      icon: <Briefcase className = "h-6 w-6 text-zion-cyan" />,
       link: "/services"
     },
     {
-      title: t('home.tool_equipment'),
-      description: t('home.tool_equipment_desc'),
-      icon: <Settings className="h-6 w-6 text-zion-purple" />,
+      title: t('home.tool_equipment');
+      description: t('home.tool_equipment_desc');
+      icon: <Settings className = "h-6 w-6 text-zion-purple" />,
       link: "/equipment"
     },
     {
-      title: t('nav.community'),
-      description: t('home.tool_chat_desc'),
-      icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />,
+      title: t('nav.community');
+      description: t('home.tool_chat_desc');
+      icon: <MessageSquare className = "h-6 w-6 text-zion-cyan" />,
       link: "/community"
     },
     {
-      title: t('home.tool_mobile_appMobile App'),
-      description: t('home.tool_mobile_app_descZion on the go'),
-      icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
+      title: t('home.tool_mobile_appMobile App');
+      description: t('home.tool_mobile_app_descZion on the go');
+      icon: <Smartphone className = "h-6 w-6 text-zion-purple" />,
       link: "/mobile-launch"
     }
   ],
@@ -86,4 +86,4 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
   )
 }
 
-export default QuickAccess,
+export default QuickAccess;

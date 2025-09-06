@@ -28,22 +28,20 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
   const [imageError, setImageError] = useState(false);
   const [isRedirecting, setIsRedirecting] = useState(false), // Added for loading state
   const router = useRouter();
-  const stockStatus =
-    product.stock === undefined
+  const stockStatus = product.stock === undefined
       ? 'In stock'
       : product.stock <= 0
       ? 'Out of stock'
       : product.stock <= 5
       ? 'Low stock'
-      : 'In stock';
-  const stockVariant =
-    product.stock === undefined
+      : 'In stock',
+  const stockVariant = product.stock === undefined
       ? 'success'
       : product.stock <= 0
       ? 'destructive'
       : product.stock <= 5
       ? 'warning'
-      : 'success';
+      : 'success',
   // Reset redirecting state if component unmounts (e.g., navigation cancelled by user)
   useEffect(() => {
     return () => {
@@ -52,7 +50,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
   }, []);
   if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
     captureException(new Error('Invalid product data received by ProductCard'), {
-      extra: { product }}),
+      extra: { product }});
     return (
       <div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">
         <p className="text-destructive text-sm">Product information unavailable.</p>
@@ -62,40 +60,40 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
     )
   }
 
-  const active = isWishlisted(product.id),
+  const active = isWishlisted(product.id);
   const dispatch = useDispatch<AppDispatch>();
   // Title is now guaranteed to be a non-empty string by the check above.
-  const productTitle = product.title;
+  const productTitle = product.title,
   const addToCart = () => {
     if (!isAuthenticated) {
       toast({
         title: 'Login Required',
         description: 'Please log in to add items to your cart.',
-        variant: 'destructive'}),
+        variant: 'destructive'});
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`);
       return
     }
-    dispatch(addItem({ id: product.id, title: productTitle, price: product.price ?? 0 })),
+    dispatch(addItem({ id: product.id, title: productTitle, price: product.price ?? 0 }));
     toast({
       title: 'Added to cart',
       description: `${productTitle} has been added to your cart`,
       action: {
         label: 'View Cart',
         onClick: () => router.push('/cart')}})
-  },
+  };
   const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
-  const imageAltText = productTitle;
+  const imageAltText = productTitle,
   const handleImageError = (error: any) => {
     if (!imageError) {
-      setImageError(true),
+      setImageError(true);
       captureException(error, {
         product: product.id,
         imageUrl})
     }
   };
-  const isMobile = useMediaQuery('(max-width: 768px)'),
-  const isTablet = useMediaQuery('(max-width: 1200px)'),
-  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
+  const isMobile = useMediaQuery('(max-width: 768px)');
+  const isTablet = useMediaQuery('(max-width: 1200px)');
+  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw',
   return (
     <div className="relative border rounded-lg bg-card p-4" data-testid="product-card">
       <button
@@ -170,7 +168,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
               <TooltipTrigger asChild>
                 <Button
                   onClick={(e) => {
-                    e.stopPropagation(),
+                    e.stopPropagation();
                     if (onBuy) {
                       setIsRedirecting(true);
                       onBuy()

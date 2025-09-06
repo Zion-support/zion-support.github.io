@@ -20,12 +20,12 @@ export function ITServiceRequestHero() {
   const { toast } = useToast();
   const { t } = useTranslation();
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     if (!name || !email || !location) {
       toast({
         title: "Missing Information",
         description: "Name, email and location are required.";
-        variant: "destructive"}),
+        variant: "destructive"});
       return
     }
 
@@ -41,7 +41,7 @@ export function ITServiceRequestHero() {
       if (res.status === 200) {
         toast({
           title: "Request received",
-          description: "We've received your request. Our team will reach out shortly."}),
+          description: "We've received your request. Our team will reach out shortly."});
         setName("");
         setEmail("");
         setPhone("");
@@ -50,13 +50,13 @@ export function ITServiceRequestHero() {
         setDetails("")
       }
     } catch (err: any) {
-      logErrorToProduction(err),
+      logErrorToProduction(err);
       toast({
         title: "Submission Failed",
         description: "There was an error submitting your request.",
         variant: "destructive"})
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false);
     }
   };
   return (

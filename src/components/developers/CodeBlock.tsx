@@ -11,8 +11,8 @@ interface CodeBlockProps {
 
 export function CodeBlock({ 
   code;
-  language = 'bash';
-  showLineNumbers = false;
+  language = 'bash',
+  showLineNumbers = false,
   className
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
@@ -24,12 +24,12 @@ export function CodeBlock({
     }, 2000)
   };
   return (
-    <div className={cn(
-      "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto";
+    <div className = {cn(
+      "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto",
       className
     )}>
-      <pre className={cn(
-        "p-4 overflow-auto";
+      <pre className = {cn(
+        "p-4 overflow-auto",
         showLineNumbers && "pl-12 relative"
       )}>
         {showLineNumbers && (
@@ -59,4 +59,4 @@ export function CodeBlock({
   )
 }
 
-export default CodeBlock,
+export default CodeBlock;

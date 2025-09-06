@@ -21,9 +21,9 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
       } else {
         // Convert object to CSV format
-        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
+        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'],
         const values = [
-          metadata.appTitle;
+          metadata.appTitle,
           metadata.shortDescription;
           metadata.longDescription;
           metadata.version;
@@ -31,28 +31,28 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
         ];
         content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
         // Add keywords as additional rows
-        content += '\n\nKeywords: \n' + metadata.keywords.join(),
+        content += '\n\nKeywords: \n' + metadata.keywords.join();
         fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
       
       // Create download link
-      const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' }),
+      const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' });
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
-      link.href = url;
-      link.download = fileName;
+      link.href = url,
+      link.download = fileName,
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
       URL.revokeObjectURL(url);
       toast.success(`Exported ${format.toUpperCase()} file successfully`)
     } catch (error) {
-      logErrorToProduction('Export failed:', { data: error }),
+      logErrorToProduction('Export failed:', { data: error });
       toast.error(`Failed to export ${format.toUpperCase()} file`)
     }
   };
   const trackAnalytics = () => {
-    logInfo("Tracking app installation analytics..."),
+    logInfo("Tracking app installation analytics...");
     toast.success("Analytics tracking enabled")
   };
   return (
@@ -92,4 +92,4 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
       </CardContent>
     </Card>
   )
-},
+};

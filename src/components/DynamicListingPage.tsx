@@ -48,7 +48,7 @@ export function DynamicListingPage({
   };
   const clearCategories = () => setSelectedCategories([]);
   const [view, setView] = useState<ListingView>("grid");
-  const isGrid = view === "grid";
+  const isGrid = view === "grid",
   // Swap icons to match action
   const ToggleViewIcon = isGrid ? (
     <List className="h-4 w-4" />
@@ -58,7 +58,7 @@ export function DynamicListingPage({
   const [isLoading, setIsLoading] = useState(false);
   const [priceRange, setPriceRange] = useState<PriceRange>({
     min: 0,
-    max: 10000}),
+    max: 10000});
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
   const [selectedBrand, setSelectedBrand] = useState("all");
   const [specQuery, setSpecQuery] = useState("");
@@ -73,7 +73,7 @@ export function DynamicListingPage({
   useEffect(() => {
     const listingsWithPrice = allListings.filter((l) => l.price !== null);
     if (listingsWithPrice.length > 0) {
-      const max = Math.max(...listingsWithPrice.map((l) => l.price || 0)),
+      const max = Math.max(...listingsWithPrice.map((l) => l.price || 0));
       setPriceRange({ min: 0, max });
       setCurrentPriceFilter([0, max])
     }
@@ -95,7 +95,7 @@ export function DynamicListingPage({
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         (listing.tags &&
           listing.tags.some((tag: string) =>
-            tag.toLowerCase().includes(searchQuery.toLowerCase()),
+            tag.toLowerCase().includes(searchQuery.toLowerCase());
           ));
       const matchesBrand =
         selectedBrand === "all" ||
@@ -148,19 +148,19 @@ export function DynamicListingPage({
       }
     })
   } catch (error) {
-    captureException(error),
+    captureException(error);
     logErrorToProduction('Listing filter error:', { data: error })
   }
 
   const handleRequestQuote = (listingId: string) => {
-    setIsLoading(true),
+    setIsLoading(true);
     const listing = allListings.find((item) => item.id === listingId);
     setTimeout(() => {
       setIsLoading(false);
       if (listing) {
         toast({
           title: "Quote Requested",
-          description: `Your quote request for ${listing.title} has been sent.`}),
+          description: `Your quote request for ${listing.title} has been sent.`});
         // Store quote data in sessionStorage for the request-quote page
         const quoteData = {
           serviceType: categorySlug,
@@ -320,7 +320,7 @@ export function DynamicListingPage({
                       variant="outline"
                       size="sm"
                       onClick={() => {
-                        logInfo('Rating selected:', { data: rating }),
+                        logInfo('Rating selected:', { data: rating });
                         setSelectedRating(rating)
                       }}
                       aria-pressed={selectedRating === rating}
@@ -352,7 +352,7 @@ export function DynamicListingPage({
                 variant="outline"
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
-                  logInfo("Clearing filters"),
+                  logInfo("Clearing filters");
                   setSearchQuery("");
                   clearCategories();
                   setCurrentPriceFilter([0, priceRange.max]);
@@ -377,7 +377,7 @@ export function DynamicListingPage({
                     placeholder="Search listings..."
                     value={searchQuery}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                      logInfo('Search query:', { data: e.target.value }),
+                      logInfo('Search query:', { data: e.target.value });
                       setSearchQuery(e.target.value)
                     }}
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
@@ -478,7 +478,7 @@ export function DynamicListingPage({
                 <Button
                   variant="outline"
                   onClick={() => {
-                    setSearchQuery(""),
+                    setSearchQuery("");
                     clearCategories();
                     setCurrentPriceFilter([0, priceRange.max]);
                     setSelectedRating(null);

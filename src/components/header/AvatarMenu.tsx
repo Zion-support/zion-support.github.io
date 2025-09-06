@@ -59,5 +59,5 @@ export const AvatarMenu: React.FC = () => {
       </DropdownMenuContent>
     </DropdownMenu>
   )
-},
+};
 export default AvatarMenu;

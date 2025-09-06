@@ -58,7 +58,7 @@ export default function PartnerManager() {
       const { data, error } = await supabase
         .from('partner_profiles')
         .select('*')
-        .order('created_at', { ascending: false }),
+        .order('created_at', { ascending: false });
       if (error) throw error;
       // If no data is returned, use mock data
       if (!data || data.length === 0) {
@@ -68,7 +68,7 @@ export default function PartnerManager() {
             user_id: 'user1',
             name: 'AI Bytes',
             status: 'pending',
-            created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
+            created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString();
             niche: 'AI Tutorials',
             audience_size: '10k-50k',
             social_media: { twitter: '@aibytes', youtube: 'AI Bytes' },
@@ -83,7 +83,7 @@ export default function PartnerManager() {
             user_id: 'user2',
             name: 'ML Academy',
             status: 'approved',
-            created_at: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000).toISOString(),
+            created_at: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000).toISOString();
             niche: 'Machine Learning Education',
             audience_size: 'over100k',
             social_media: { twitter: '@mlacademy', youtube: 'ML Academy' },
@@ -98,7 +98,7 @@ export default function PartnerManager() {
             user_id: 'user3',
             name: 'Tech Insights',
             status: 'rejected',
-            created_at: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(),
+            created_at: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString();
             niche: 'Technology News',
             audience_size: '1k-10k',
             social_media: { twitter: '@techinsights' },
@@ -113,7 +113,7 @@ export default function PartnerManager() {
             user_id: 'user4',
             name: 'CodeMaster',
             status: 'approved',
-            created_at: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(),
+            created_at: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString();
             niche: 'Coding Tutorials',
             audience_size: '50k-100k',
             social_media: { youtube: 'CodeMaster', linkedin: 'codemaster' },
@@ -128,7 +128,7 @@ export default function PartnerManager() {
             user_id: 'user5',
             name: 'AI Daily',
             status: 'pending',
-            created_at: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(),
+            created_at: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString();
             niche: 'AI News',
             audience_size: '10k-50k',
             social_media: { twitter: '@aidaily', instagram: '@aidailynews' },
@@ -146,7 +146,7 @@ export default function PartnerManager() {
         filterPartners(data as PartnerProfile[], activeTab, searchQuery)
       }
     } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching partners' }),
+      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching partners' });
       toast({
         title: "Error",
         description: "Failed to load partner data",
@@ -154,7 +154,7 @@ export default function PartnerManager() {
     } finally {
       setIsLoading(false)
     }
-  },
+  };
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
     let filtered = partners,
     // Filter by status
@@ -176,19 +176,19 @@ export default function PartnerManager() {
     setFilteredPartners(filtered)
   };
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value),
+    setSearchQuery(e.target.value);
     filterPartners(partners, activeTab, e.target.value)
   };
   const handleTabChange = (value: string) => {
-    setActiveTab(value),
+    setActiveTab(value);
     filterPartners(partners, value, searchQuery)
   };
   const handleViewDetails = (partner: PartnerProfile) => {
-    setSelectedPartner(partner),
+    setSelectedPartner(partner);
     setIsDetailsOpen(true)
   };
   const handleOpenSettings = (partner: PartnerProfile) => {
-    setSelectedPartner(partner),
+    setSelectedPartner(partner);
     setCommissionRate(partner.commission_rate || 25);
     setIsSettingsOpen(true)
   };
@@ -204,46 +204,46 @@ export default function PartnerManager() {
         searchQuery
       );
       toast({
-        title: status === 'approved' ? "Partner Approved" : "Partner Rejected",
+        title: status = == 'approved' ? "Partner Approved" : "Partner Rejected",
         description: `The partner has been ${status}.`,
-        variant: status === 'approved' ? "default" : "destructive"}),
+        variant: status === 'approved' ? "default" : "destructive"});
       // Close the dialog if open
       if (isDetailsOpen && selectedPartner?.id === partnerId) {
         setIsDetailsOpen(false)
       }
     } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner status' }),
+      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner status' });
       toast({
         title: "Error",
         description: "Failed to update partner status",
         variant: "destructive"})
     }
-  },
+  };
   const handleSaveSettings = async () => {
     if (!selectedPartner) return;
     try {
       // Update commission rate
       setPartners(partners.map(p => 
         p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
-      )),
+      ));
       filterPartners(
-        partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p),
+        partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p);
         activeTab;
         searchQuery
       );
       toast({
         title: "Settings Updated",
         description: "Partner settings have been updated successfully.",
-        variant: "default"}),
+        variant: "default"});
       setIsSettingsOpen(false)
     } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner settings' }),
+      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner settings' });
       toast({
         title: "Error",
         description: "Failed to update partner settings",
         variant: "destructive"})
     }
-  },
+  };
   const getAudienceSizeLabel = (size: string) => {
     switch (size) {
       case 'under1k': return 'Under 1,000';
@@ -257,16 +257,16 @@ export default function PartnerManager() {
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
-        return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>,
+        return <Badge variant = "outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>,
       case 'approved':
-        return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>;
+        return <Badge variant = "outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>,
       case 'rejected':
-        return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>;
-      default: return <Badge variant="outline">{status}</Badge>
+        return <Badge variant = "outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,
+      default: return <Badge variant = "outline">{status}</Badge>
     }
   },
   const getFraudFlagBadge = (flags: number = 0) => {
-    if (flags === 0) return null,
+    if (flags === 0) return null;
     return (
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
         <Flag className="h-3 w-3" />
@@ -577,15 +577,15 @@ export default function PartnerManager() {
 interface PartnerTableProps {
   partners: PartnerProfile[],
   isLoading: boolean,
-  onViewDetails: (partner: PartnerProfile) => void,
-  onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void,
-  onOpenSettings: (partner: PartnerProfile) => void,
-  getStatusBadge: (status: string) => JSX.Element,
+  onViewDetails: (partner: PartnerProfile) => void;
+  onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void;
+  onOpenSettings: (partner: PartnerProfile) => void;
+  getStatusBadge: (status: string) => JSX.Element;
   getFraudFlagBadge: (flags?: number) => JSX.Element | null
 }
 
 function PartnerTable({ 
-  partners,
+  partners;
   isLoading;
   onViewDetails;
   onUpdateStatus;

@@ -11,8 +11,8 @@ import { useAuth } from '@/hooks/useAuth';
 
 export default function WishlistPage() {
   const { favorites, loading, toggleFavorite } = useFavorites();
-  const { user, isLoading: isAuthLoading } = useAuth(), // Added isAuthLoading
-  const router = useRouter(), // Changed from navigate
+  const { user, isLoading: isAuthLoading } = useAuth(); // Added isAuthLoading
+  const router = useRouter(); // Changed from navigate
 
   useEffect(() => {
     // Redirect if not authenticated and auth loading is complete
@@ -21,7 +21,7 @@ export default function WishlistPage() {
     }
   }, [user, isAuthLoading, router]);
   if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
-    return null, // Or a loading spinner
+    return null; // Or a loading spinner
   }
 
   const { items, dispatch } = useCart();
@@ -35,7 +35,7 @@ export default function WishlistPage() {
         price: item.price || 0,
         quantity: 1
       }
-    }),
+    });
     toast.success(`1× ${item.title || 'Item'} added`)
   };
   const productMap = MARKETPLACE_LISTINGS.reduce<Record<string, any>>((acc, p) => {
@@ -52,7 +52,7 @@ export default function WishlistPage() {
       new Date(a.created_at || '').getTime()
   );
   return (
-    <div className="container py-8">
+    <div className = "container py-8">
       <h1 className="text-3xl font-bold mb-6">Wishlist</h1>
       {loading ? (
         <p>Loading...</p>
@@ -86,7 +86,7 @@ export default function WishlistPage() {
                 </div>
               ) : null
             }
-            const item = productMap[fav.item_id];
+            const item = productMap[fav.item_id],
             return item ? (
               <div key={fav.item_id} className="relative">
                 <button

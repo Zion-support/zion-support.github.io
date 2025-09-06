@@ -29,8 +29,8 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
       // Create download link and trigger download
       const url = URL.createObjectURL(pdfBlob);
       const link = document.createElement('a');
-      link.href = url;
-      link.download = `${resume.basic_info.title || 'Resume'}.pdf`;
+      link.href = url,
+      link.download = `${resume.basic_info.title || 'Resume'}.pdf`,
       document.body.appendChild(link);
       link.click();
       // Clean up
@@ -40,7 +40,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
         title: "Success!",
         description: "Your resume has been downloaded as a PDF."})
     } catch (error) {
-      logErrorToProduction('Error exporting PDF:', { data: error }),
+      logErrorToProduction('Error exporting PDF:', { data: error });
       toast({
         title: "Export failed",
         description: "There was an error exporting your resume to PDF.",
@@ -49,7 +49,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
     } finally {
       setIsExporting(false)
     }
-  },
+  };
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

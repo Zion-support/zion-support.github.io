@@ -16,7 +16,7 @@ interface MilestoneSuggestionsProps {
 }
 
 export function MilestoneSuggestions({
-  projectName,
+  projectName;
   scopeSummary;
   startDate;
   endDate;
@@ -28,8 +28,8 @@ export function MilestoneSuggestions({
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
       scope: `${projectName}: ${scopeSummary}`,
-      startDate: startDate.toISOString(),
-      endDate: endDate ? endDate.toISOString() : null,
+      startDate: startDate.toISOString();
+      endDate: endDate ? endDate.toISOString() : null;
       projectType: projectType || "Other"
     },
     const milestones = await generateMilestones(input);

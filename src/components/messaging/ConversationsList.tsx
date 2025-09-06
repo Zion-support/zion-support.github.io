@@ -7,22 +7,22 @@ import { FixedSizeList as List, ListChildComponentProps } from 'react-window';
 interface ConversationsListProps {
   conversations: Conversation[],
   activeConversation: Conversation | null,
-  setActiveConversation: (conversation: Conversation) => void,
+  setActiveConversation: (conversation: Conversation) => void;
   markAsRead: (conversationId: string) => Promise<void>
 }
 
 export function ConversationsList({
-  conversations,
+  conversations;
   activeConversation;
   setActiveConversation;
   markAsRead
 }: ConversationsListProps) {
-  const itemSize = 80;
+  const itemSize = 80,
   const listHeight = useMemo(() => {
     return Math.min(conversations.length * itemSize, 600)
   }, [conversations.length]);
   const Row = ({ index, style }: ListChildComponentProps) => {
-    const conversation = conversations[index];
+    const conversation = conversations[index],
     if (!conversation) {
       return <div style={style} />
     }

@@ -78,7 +78,7 @@ function InterviewsContent() {
           </div>
         </div>
       ))
-  },
+  };
   return (
     <>
       <SEO 

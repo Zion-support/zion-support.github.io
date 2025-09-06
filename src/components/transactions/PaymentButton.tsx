@@ -20,7 +20,7 @@ export function PaymentButton({
   amount;
   serviceId;
   providerId;
-  buttonText = "Purchase";
+  buttonText = "Purchase",
   className;
   onPaymentInitiated;
   redirectUrl}: PaymentButtonProps) {
@@ -31,7 +31,7 @@ export function PaymentButton({
     if (!isAuthenticated) {
       toast({
         title: "Authentication required",
-        description: "Please sign in to make a purchase."}),
+        description: "Please sign in to make a purchase."});
       const returnTo = encodeURIComponent(`/checkout?sku=${serviceId}`);
       router.push(`/auth/login?returnTo=${returnTo}`);
       return
@@ -51,7 +51,7 @@ export function PaymentButton({
           providerId;
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
-          cancelUrl: window.location.href}}),
+          cancelUrl: window.location.href}});
       if (error) {
         throw error
       }
@@ -65,7 +65,7 @@ export function PaymentButton({
       }
       
     } catch (error) {
-      logErrorToProduction('Payment error:', { data: error }),
+      logErrorToProduction('Payment error:', { data: error });
       toast({
         title: "Payment error",
         description: "There was a problem initiating your payment. Please try again.",
@@ -79,10 +79,10 @@ export function PaymentButton({
   };
   return (
     <Button
-      onClick={handlePaymentClick}
+      onClick = {handlePaymentClick}
       disabled={isProcessing}
       className={cn(
-        "relative min-w-[120px]";
+        "relative min-w-[120px]",
         className
       )}
     >

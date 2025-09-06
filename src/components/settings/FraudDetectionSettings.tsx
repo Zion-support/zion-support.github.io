@@ -24,7 +24,7 @@ export function FraudDetectionSettings() {
         title: "Settings saved",
         description: "Your fraud detection preferences have been updated."})
     } catch (error) {
-      logErrorToProduction('Error saving preferences:', { data: error }),
+      logErrorToProduction('Error saving preferences:', { data: error });
       toast({
         title: "Error",
         description: "Failed to save your preferences. Please try again.",
@@ -32,7 +32,7 @@ export function FraudDetectionSettings() {
     } finally {
       setIsSaving(false)
     }
-  },
+  };
   return (
     <Card className="mb-8">
       <CardHeader className="space-y-1">

@@ -1,13 +1,12 @@
 
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react'
 
-export type BadgeKey =
-  | "first_listing"
+export type BadgeKey = | "first_listing"
   | "top_contributor"
   | "profile_complete"
   | "featured_creator"
   | "first_action"
-  | "monetized";
+  | "monetized",
 export interface BadgeMeta {
   key: BadgeKey,
   name: string,
@@ -67,4 +66,4 @@ export const badgeList: BadgeMeta[] = [
     bg: "#F2FCE2",    // Soft Green
   }];
 export const getBadgeMeta = (key: BadgeKey) =>
-  badgeList.find((b) => b.key === key),
+  badgeList.find((b) => b.key === key);

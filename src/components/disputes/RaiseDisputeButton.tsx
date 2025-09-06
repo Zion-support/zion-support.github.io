@@ -16,14 +16,14 @@ interface RaiseDisputeButtonProps {
 export function RaiseDisputeButton({ 
   projectId;
   milestoneId;
-  variant = "outline";
+  variant = "outline",
   size;
   className 
 }: RaiseDisputeButtonProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const router = useRouter();
   const handleDisputeCreated = (disputeId: string) => {
-    setIsDialogOpen(false),
+    setIsDialogOpen(false);
     router.push(`/dashboard/disputes/${disputeId}`)
   };
   return (

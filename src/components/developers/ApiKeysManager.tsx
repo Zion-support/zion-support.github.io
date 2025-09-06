@@ -43,11 +43,11 @@ export function ApiKeysManager() {
     setSelectedScopes([])
   };
   const handleRegenerateKey = async (keyId: string) => {
-    await regenerateApiKey(keyId),
+    await regenerateApiKey(keyId);
     setShowRegenerateConfirm(null)
   };
   const handleRevokeKey = async (keyId: string) => {
-    await revokeApiKey(keyId),
+    await revokeApiKey(keyId);
     setShowDeleteConfirm(null)
   };
   // Scope options
@@ -66,7 +66,7 @@ export function ApiKeysManager() {
     )
   };
   const getExampleCode = (key: string) => {
-    return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
+    return `curl -X GET "https: //api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
   -H "Content-Type: application/json"`
   },

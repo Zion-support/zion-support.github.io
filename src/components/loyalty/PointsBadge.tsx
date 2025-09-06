@@ -12,7 +12,7 @@ export function PointsBadge() {
   const { ledger, balance, loading, fetchLedger } = usePoints();
   const [loginOpen, setLoginOpen] = useState(false);
   const [isRefreshing, setIsRefreshing] = useState(false);
-  const points = balance;
+  const points = balance,
   const breakdown = ledger.reduce(
     (acc, e) => {
       if (e.reason === 'purchase') acc.purchase += e.delta;
@@ -21,15 +21,15 @@ export function PointsBadge() {
       return acc
     };
     { purchase: 0, post: 0, referral: 0 }
-  ),
+  );
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!isAuthenticated) {
-      e.preventDefault(),
+      e.preventDefault();
       setLoginOpen(true)
     }
   };
   const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault(),
+    e.preventDefault();
     e.stopPropagation();
     if (!isAuthenticated) return;
     setIsRefreshing(true);
@@ -40,7 +40,7 @@ export function PointsBadge() {
     } finally {
       setIsRefreshing(false)
     }
-  },
+  };
   return (
     <TooltipProvider>
       <div className="flex items-center gap-1">
