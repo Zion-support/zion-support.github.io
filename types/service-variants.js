@@ -1,5 +1,5 @@
 <<<<<<< HEAD
 module.exports = {}
 =======
-module.exports = {},;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+module.exports = {},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,6 +1,8 @@
+<<<<<<< HEAD
 /* eslint-env serviceworker */
 // Comprehensive service worker for caching and offline support
 const CACHE_NAME = 'zion-tech-group-v2';
+<<<<<<< HEAD
 const urlsToCache = ['/'
   '/services'
   '/contact'
@@ -12,72 +14,83 @@ const urlsToCache = ['/'
   '/_next/static/'
   '/favicon.ico'
   '/manifest.json'
+=======
+=======
+/* eslint - env serviceworker */;
+// Comprehensive service worker for caching and offline support;
+const CACHE_NAME = 'zion - tech - group - v2';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+const urlsToCache = ['/',
+  '/services',
+  '/contact',
+  '/pricing',
+  '/about',
+<<<<<<< HEAD
+  '/ai-services',
+  '/it-services',
+  '/micro-saas',
+  '/_next/static/',
+  '/favicon && favicon.ico',
+  '/manifest && manifest.json',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 // Install event - cache resources
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(urlsToCache)})
+self && self.addEventListener('install', (event) => {
+  event && event.waitUntil(
+    caches && caches.open(CACHE_NAME).then((cache) => {
+      return cache && cache.addAll(urlsToCache)})
   );
   // Force the waiting service worker to become the active service worker
-  self.skipWaiting()});
+  self && self.skipWaiting()});
 // Fetch event - serve from cache when offline
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((response) => {
+self && self.addEventListener('fetch', (event) => {
+  event && event.respondWith(
+    caches && caches.match(event && event.request).then((response) => {
       if (response) {
         return response}
-      const fetchRequest = event.request.clone();
+      const fetchRequest = event && event.request.clone();
       return fetch(fetchRequest)
         .then((networkResponse) => {
+<<<<<<< HEAD
           if (!networkResponse |networkResponse.status !== 200 |networkResponse.type !== 'basic') {
+=======
+          if (!networkResponse || networkResponse && networkResponse.status !== 200 || networkResponse && networkResponse.type !== 'basic') {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             return networkResponse}
-          const responseToCache = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseToCache)});
+          const responseToCache = networkResponse && networkResponse.clone();
+          caches && caches.open(CACHE_NAME).then((cache) => {
+            cache && cache.put(event && event.request, responseToCache)});
           return networkResponse})
-        .catch(() => caches.match('/offline.html'))})
+        .catch(() => caches && caches.match('/offline && offline.html'))})
   )});
 // Activate event - clean up old caches
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
+self && self.addEventListener('activate', (event) => {
+  event && event.waitUntil(
+    caches && caches.keys().then((cacheNames) => {
+      return Promise && Promise.all(
+        cacheNames && cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
-            return caches.delete(cacheName)}
-          return Promise.resolve()})
+            return caches && caches.delete(cacheName)}
+          return Promise && Promise.resolve()})
       )})
   );
   // Ensure the service worker takes control of all clients immediately
+<<<<<<< HEAD
   self.clients.claim()});
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
 const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
 const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
 <<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
-const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
-const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
 =======
 const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 =======
 <<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
@@ -85,19 +98,12 @@ const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','
 const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
 =======
 const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
 const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
 const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 >>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse |networkResponse.status !== 200 |networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
 const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse |networkResponse.status !== 200 |networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
@@ -105,8 +111,108 @@ const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','
 const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse |networkResponse.status !== 200 |networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
 const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse |networkResponse.status !== 200 |networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
 const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon.ico','/manifest.json',]; self.addEventListener('install',(event) => { event.waitUntil( caches.open(CACHE_NAME).then((cache) => { return cache.addAll(urlsToCache)}) ); self.skipWaiting()}); self.addEventListener('fetch',(event) => { event.respondWith( caches.match(event.request).then((response) => { if (response) { return response} const fetchRequest = event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse |networkResponse.status !== 200 |networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(event.request,responseToCache)}); return networkResponse}) .catch(() => caches.match('/offline.html'))}) )}); self.addEventListener('activate',(event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches.delete(cacheName)} return Promise.resolve()}) )}) ); self.clients.claim()});
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+  self && self.clients.claim()});
+const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon && favicon.ico','/manifest && manifest.json',]; self && self.addEventListener('install',(event) => { event && event.waitUntil( caches && caches.open(CACHE_NAME).then((cache) => { return cache && cache.addAll(urlsToCache)}) ); self && self.skipWaiting()}); self && self.addEventListener('fetch',(event) => { event && event.respondWith( caches && caches.match(event && event.request).then((response) => { if (response) { return response} const fetchRequest = event && event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse && networkResponse.status !== 200 || networkResponse && networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse && networkResponse.clone(); caches && caches.open(CACHE_NAME).then((cache) => { cache && cache.put(event && event.request,responseToCache)}); return networkResponse}) .catch(() => caches && caches.match('/offline && offline.html'))}) )}); self && self.addEventListener('activate',(event) => { event && event.waitUntil( caches && caches.keys().then((cacheNames) => { return Promise && Promise.all( cacheNames && cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches && caches.delete(cacheName)} return Promise && Promise.resolve()}) )}) ); self && self.clients.claim()});
+const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon && favicon.ico','/manifest && manifest.json',]; self && self.addEventListener('install',(event) => { event && event.waitUntil( caches && caches.open(CACHE_NAME).then((cache) => { return cache && cache.addAll(urlsToCache)}) ); self && self.skipWaiting()}); self && self.addEventListener('fetch',(event) => { event && event.respondWith( caches && caches.match(event && event.request).then((response) => { if (response) { return response} const fetchRequest = event && event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse && networkResponse.status !== 200 || networkResponse && networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse && networkResponse.clone(); caches && caches.open(CACHE_NAME).then((cache) => { cache && cache.put(event && event.request,responseToCache)}); return networkResponse}) .catch(() => caches && caches.match('/offline && offline.html'))}) )}); self && self.addEventListener('activate',(event) => { event && event.waitUntil( caches && caches.keys().then((cacheNames) => { return Promise && Promise.all( cacheNames && cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches && caches.delete(cacheName)} return Promise && Promise.resolve()}) )}) ); self && self.clients.claim()});
+const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon && favicon.ico','/manifest && manifest.json',]; self && self.addEventListener('install',(event) => { event && event.waitUntil( caches && caches.open(CACHE_NAME).then((cache) => { return cache && cache.addAll(urlsToCache)}) ); self && self.skipWaiting()}); self && self.addEventListener('fetch',(event) => { event && event.respondWith( caches && caches.match(event && event.request).then((response) => { if (response) { return response} const fetchRequest = event && event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse && networkResponse.status !== 200 || networkResponse && networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse && networkResponse.clone(); caches && caches.open(CACHE_NAME).then((cache) => { cache && cache.put(event && event.request,responseToCache)}); return networkResponse}) .catch(() => caches && caches.match('/offline && offline.html'))}) )}); self && self.addEventListener('activate',(event) => { event && event.waitUntil( caches && caches.keys().then((cacheNames) => { return Promise && Promise.all( cacheNames && cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches && caches.delete(cacheName)} return Promise && Promise.resolve()}) )}) ); self && self.clients.claim()});
+const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon && favicon.ico','/manifest && manifest.json',]; self && self.addEventListener('install',(event) => { event && event.waitUntil( caches && caches.open(CACHE_NAME).then((cache) => { return cache && cache.addAll(urlsToCache)}) ); self && self.skipWaiting()}); self && self.addEventListener('fetch',(event) => { event && event.respondWith( caches && caches.match(event && event.request).then((response) => { if (response) { return response} const fetchRequest = event && event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse && networkResponse.status !== 200 || networkResponse && networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse && networkResponse.clone(); caches && caches.open(CACHE_NAME).then((cache) => { cache && cache.put(event && event.request,responseToCache)}); return networkResponse}) .catch(() => caches && caches.match('/offline && offline.html'))}) )}); self && self.addEventListener('activate',(event) => { event && event.waitUntil( caches && caches.keys().then((cacheNames) => { return Promise && Promise.all( cacheNames && cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches && caches.delete(cacheName)} return Promise && Promise.resolve()}) )}) ); self && self.clients.claim()});
+const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon && favicon.ico','/manifest && manifest.json',]; self && self.addEventListener('install',(event) => { event && event.waitUntil( caches && caches.open(CACHE_NAME).then((cache) => { return cache && cache.addAll(urlsToCache)}) ); self && self.skipWaiting()}); self && self.addEventListener('fetch',(event) => { event && event.respondWith( caches && caches.match(event && event.request).then((response) => { if (response) { return response} const fetchRequest = event && event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse && networkResponse.status !== 200 || networkResponse && networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse && networkResponse.clone(); caches && caches.open(CACHE_NAME).then((cache) => { cache && cache.put(event && event.request,responseToCache)}); return networkResponse}) .catch(() => caches && caches.match('/offline && offline.html'))}) )}); self && self.addEventListener('activate',(event) => { event && event.waitUntil( caches && caches.keys().then((cacheNames) => { return Promise && Promise.all( cacheNames && cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches && caches.delete(cacheName)} return Promise && Promise.resolve()}) )}) ); self && self.clients.claim()});
+const CACHE_NAME = 'zion-tech-group-v2'; const urlsToCache = [ '/','/services','/contact','/pricing','/about','/ai-services','/it-services','/micro-saas','/_next/static/','/favicon && favicon.ico','/manifest && manifest.json',]; self && self.addEventListener('install',(event) => { event && event.waitUntil( caches && caches.open(CACHE_NAME).then((cache) => { return cache && cache.addAll(urlsToCache)}) ); self && self.skipWaiting()}); self && self.addEventListener('fetch',(event) => { event && event.respondWith( caches && caches.match(event && event.request).then((response) => { if (response) { return response} const fetchRequest = event && event.request.clone(); return fetch(fetchRequest) .then((networkResponse) => { if (!networkResponse || networkResponse && networkResponse.status !== 200 || networkResponse && networkResponse.type !== 'basic') { return networkResponse} const responseToCache = networkResponse && networkResponse.clone(); caches && caches.open(CACHE_NAME).then((cache) => { cache && cache.put(event && event.request,responseToCache)}); return networkResponse}) .catch(() => caches && caches.match('/offline && offline.html'))}) )}); self && self.addEventListener('activate',(event) => { event && event.waitUntil( caches && caches.keys().then((cacheNames) => { return Promise && Promise.all( cacheNames && cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { return caches && caches.delete(cacheName)} return Promise && Promise.resolve()}) )}) ); self && self.clients.claim()});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  '/ai - services',
+  '/it - services',
+  '/micro - saas',
+  '/_next / static/',
+  '/favicon.ico',
+  '/manifest.json',
+];
+// Install event - cache resources;
+self.addEventListener ('install', (event) => {
+  event.wait_until (
+    caches.open (CACHE_NAME).then ((cache) => {
+      return cache.add_all (urlsToCache)}));
+  // Force the waiting service worker to become the active service worker;
+  self.skip_waiting ()});
+// Fetch event - serve from cache when offline;
+self.addEventListener ('fetch', (event) => {
+  event.respond_with (
+    caches.match (event.request).then ((response) => {
+      // Check condition
+if ( {) {
+  $2
+}
+        return response}
+      const fetch_request = event.request.clone ();
+      return fetch (fetch_request);
+        .then ((network_response) => {
+          // Check condition
+if ( {) {
+  $2
+}
+            return network_response}
+          const responseToCache = network_response.clone ();
+          caches.open (CACHE_NAME).then ((cache) => {
+            cache.put (event.request, responseToCache)});
+          return network_response});
+        .catch (() => caches.match ('/offline.html'))}))});
+// Activate event - clean up old caches;
+self.addEventListener ('activate', (event) => {
+  event.wait_until (
+    caches.keys ().then ((cache_names) => {
+      return Promise.all (
+        cache_names.map ((cache_name) => {
+          // Check condition
+if ( {) {
+  $2
+}
+            return caches.delete (cache_name)}
+          return Promise.resolve ()}))}));
+  // Ensure the service worker takes control of all clients immediately;
+  self.clients.claim ()});
+const CACHE_NAME = 'zion - tech - group - v2'; const urlsToCache = [ '/', '/services', '/contact', '/pricing', '/about', '/ai - services', '/it - services', '/micro - saas', '/_next / static/', '/favicon.ico', '/manifest.json', ]; self.addEventListener ('install', (event) => { event.wait_until ( caches.open (CACHE_NAME).then ((cache) => { return cache.add_all (urlsToCache)}) ); self.skip_waiting ()}); self.addEventListener ('fetch', (event) => { event.respond_with ( caches.match (event.request).then ((response) => { if ( { return response} const fetch_request = event.request.clone ()) {
+  $2
+} return fetch (fetch_request) .then ((network_response) => { if ( { return network_response} const responseToCache = network_response.clone ()) {
+  $2
+} caches.open (CACHE_NAME).then ((cache) => { cache.put (event.request, responseToCache)}); return network_response}) .catch (() => caches.match ('/offline.html'))}) )}); self.addEventListener ('activate', (event) => { event.wait_until ( caches.keys ().then ((cache_names) => { return Promise.all ( cache_names.map ((cache_name) => { if ( { return caches.delete (cache_name)} return Promise.resolve ()}) )}) )) {
+  $2
+} self.clients.claim ()});
+const CACHE_NAME = 'zion - tech - group - v2'; const urlsToCache = [ '/', '/services', '/contact', '/pricing', '/about', '/ai - services', '/it - services', '/micro - saas', '/_next / static/', '/favicon.ico', '/manifest.json', ]; self.addEventListener ('install', (event) => { event.wait_until ( caches.open (CACHE_NAME).then ((cache) => { return cache.add_all (urlsToCache)}) ); self.skip_waiting ()}); self.addEventListener ('fetch', (event) => { event.respond_with ( caches.match (event.request).then ((response) => { if ( { return response} const fetch_request = event.request.clone ()) {
+  $2
+} return fetch (fetch_request) .then ((network_response) => { if ( { return network_response} const responseToCache = network_response.clone ()) {
+  $2
+} caches.open (CACHE_NAME).then ((cache) => { cache.put (event.request, responseToCache)}); return network_response}) .catch (() => caches.match ('/offline.html'))}) )}); self.addEventListener ('activate', (event) => { event.wait_until ( caches.keys ().then ((cache_names) => { return Promise.all ( cache_names.map ((cache_name) => { if ( { return caches.delete (cache_name)} return Promise.resolve ()}) )}) )) {
+  $2
+} self.clients.claim ()});
+const CACHE_NAME = 'zion - tech - group - v2'; const urlsToCache = [ '/', '/services', '/contact', '/pricing', '/about', '/ai - services', '/it - services', '/micro - saas', '/_next / static/', '/favicon.ico', '/manifest.json', ]; self.addEventListener ('install', (event) => { event.wait_until ( caches.open (CACHE_NAME).then ((cache) => { return cache.add_all (urlsToCache)}) ); self.skip_waiting ()}); self.addEventListener ('fetch', (event) => { event.respond_with ( caches.match (event.request).then ((response) => { if ( { return response} const fetch_request = event.request.clone ()) {
+  $2
+} return fetch (fetch_request) .then ((network_response) => { if ( { return network_response} const responseToCache = network_response.clone ()) {
+  $2
+} caches.open (CACHE_NAME).then ((cache) => { cache.put (event.request, responseToCache)}); return network_response}) .catch (() => caches.match ('/offline.html'))}) )}); self.addEventListener ('activate', (event) => { event.wait_until ( caches.keys ().then ((cache_names) => { return Promise.all ( cache_names.map ((cache_name) => { if ( { return caches.delete (cache_name)} return Promise.resolve ()}) )}) )) {
+  $2
+} self.clients.claim ()});
+const CACHE_NAME = 'zion - tech - group - v2'; const urlsToCache = [ '/', '/services', '/contact', '/pricing', '/about', '/ai - services', '/it - services', '/micro - saas', '/_next / static/', '/favicon.ico', '/manifest.json', ]; self.addEventListener ('install', (event) => { event.wait_until ( caches.open (CACHE_NAME).then ((cache) => { return cache.add_all (urlsToCache)}) ); self.skip_waiting ()}); self.addEventListener ('fetch', (event) => { event.respond_with ( caches.match (event.request).then ((response) => { if ( { return response} const fetch_request = event.request.clone ()) {
+  $2
+} return fetch (fetch_request) .then ((network_response) => { if ( { return network_response} const responseToCache = network_response.clone ()) {
+  $2
+} caches.open (CACHE_NAME).then ((cache) => { cache.put (event.request, responseToCache)}); return network_response}) .catch (() => caches.match ('/offline.html'))}) )}); self.addEventListener ('activate', (event) => { event.wait_until ( caches.keys ().then ((cache_names) => { return Promise.all ( cache_names.map ((cache_name) => { if ( { return caches.delete (cache_name)} return Promise.resolve ()}) )}) )) {
+  $2
+} self.clients.claim ()});
+const CACHE_NAME = 'zion - tech - group - v2'; const urlsToCache = [ '/', '/services', '/contact', '/pricing', '/about', '/ai - services', '/it - services', '/micro - saas', '/_next / static/', '/favicon.ico', '/manifest.json', ]; self.addEventListener ('install', (event) => { event.wait_until ( caches.open (CACHE_NAME).then ((cache) => { return cache.add_all (urlsToCache)}) ); self.skip_waiting ()}); self.addEventListener ('fetch', (event) => { event.respond_with ( caches.match (event.request).then ((response) => { if ( { return response} const fetch_request = event.request.clone ()) {
+  $2
+} return fetch (fetch_request) .then ((network_response) => { if ( { return network_response} const responseToCache = network_response.clone ()) {
+  $2
+} caches.open (CACHE_NAME).then ((cache) => { cache.put (event.request, responseToCache)}); return network_response}) .catch (() => caches.match ('/offline.html'))}) )}); self.addEventListener ('activate', (event) => { event.wait_until ( caches.keys ().then ((cache_names) => { return Promise.all ( cache_names.map ((cache_name) => { if ( { return caches.delete (cache_name)} return Promise.resolve ()}) )}) )) {
+  $2
+} self.clients.claim ()});
+const CACHE_NAME = 'zion - tech - group - v2'; const urlsToCache = [ '/', '/services', '/contact', '/pricing', '/about', '/ai - services', '/it - services', '/micro - saas', '/_next / static/', '/favicon.ico', '/manifest.json', ]; self.addEventListener ('install', (event) => { event.wait_until ( caches.open (CACHE_NAME).then ((cache) => { return cache.add_all (urlsToCache)}) ); self.skip_waiting ()}); self.addEventListener ('fetch', (event) => { event.respond_with ( caches.match (event.request).then ((response) => { if ( { return response} const fetch_request = event.request.clone ()) {
+  $2
+} return fetch (fetch_request) .then ((network_response) => { if ( { return network_response} const responseToCache = network_response.clone ()) {
+  $2
+} caches.open (CACHE_NAME).then ((cache) => { cache.put (event.request, responseToCache)}); return network_response}) .catch (() => caches.match ('/offline.html'))}) )}); self.addEventListener ('activate', (event) => { event.wait_until ( caches.keys ().then ((cache_names) => { return Promise.all ( cache_names.map ((cache_name) => { if ( { return caches.delete (cache_name)} return Promise.resolve ()}) )}) )) {
+  $2
+} self.clients.claim ()});
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

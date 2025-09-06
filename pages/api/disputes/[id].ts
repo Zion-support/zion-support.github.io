@@ -1,109 +1,123 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
 import {
   parseUserFromRequest
   ensureInvolvedOrAdmin
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getDisputeById } from "../../../utils/fsdb";
-import {
-  parseUserFromRequest,
-  ensureInvolvedOrAdmin,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "../../../utils/auth";
 export default async function handler(
-<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const { id } = req.query;
+  const { id } = req && req.query;
   if (typeof id !== "string")
+<<<<<<< HEAD
     return res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
   if (req.method === "GET") {
+=======
+    return res && res.status(400).json({ error: "Invalid id" });
+
+<<<<<<< HEAD
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getDisputeById } from '../../../utils/fsdb';
+import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../utils/auth';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req.query;
+  if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  const user = parseUserFromRequest(req);
+
+  if (req && req.method === "GET") {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const dispute = await getDisputeById(id);
-    if (!dispute) return res.status(404).json({ error: "Dispute not found" });
+    if (!dispute) return res && res.status(404).json({ error: "Dispute not found" });
     try {
-      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      ensureInvolvedOrAdmin(user, dispute && dispute.clientUserId, dispute && dispute.talentUserId);
     } catch (e: any) {
+<<<<<<< HEAD
       return res.status(e.statusCode |403).json({ error: "Forbidden" });
+=======
+      return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
+<<<<<<< HEAD
     }
-    return res.status(200).json({ dispute });
+    return res && res.status(200).json({ dispute });
   }
+
+  res && res.setHeader("Allow", "GET");
+  return res && res.status(405).end("Method Not Allowed");
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
+    } catch (e: any) {
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+    }
+    return res && res.status(200).json({ dispute });
+  }
+<<<<<<< HEAD
   res.setHeader("Allow", "GET");
   return res.status(405).end("Method Not Allowed");
+=======
+
+  res && res.setHeader("Allow", "GET");
+  return res && res.status(405).end("Method Not Allowed");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 <<<<<<< HEAD
 
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Allow', ['GET']);
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getDisputeById } from '../../../utils/fsdb';
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../utils/auth';
-export default async function handler(req, res) {
-  try {
-  const { id } = req.query;
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
-    } catch (error) {
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    return res.status(200).json({ dispute });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+import type { NextApiRequest, NextApiResponse } from './next';
+import { getDisputeById  } from '../../../utils / fsdb';
+import {
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,
+} from '../../../utils / auth';
 ;
-  res.setHeader('AllowGET');
-  return res.status(405).end('Method Not Allowed');
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const { id } = req.query;
+  if (
+    return res.status (400).json ({ error: "Invalid id" })) {
+  $2
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+  const user = parseUserFromRequest (req);
+;
+  // Check condition
+if ( {) {
+  $2
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    const dispute = await getDisputeById (id);
+    if (return res.status (404).json ({ error: "Dispute not found" })) {
+  $2
+}
+    try {
+      ensureInvolvedOrAdmin (user, dispute.clientUserId, dispute.talentUserId);
+    } catch (e: any) {
+      return res.status (e.status_code || 403).json ({ error: "Forbidden" });
+    }
+    return res.status (200).json ({ dispute });
+  }
+  res.set_header ("Allow", "GET");
+  return res.status (405).end ("Method Not Allowed");
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

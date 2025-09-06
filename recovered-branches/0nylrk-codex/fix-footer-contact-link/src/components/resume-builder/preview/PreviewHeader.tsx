@@ -1,5 +1,5 @@
-
 <<<<<<< HEAD
+
 <<<<<<< HEAD
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link  } from 'lucide-react';
@@ -7,6 +7,11 @@ import { PdfExportButton  } from '../PdfExportButton';
 import { Resume  } from '@/types/resume';
 import { useState  } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
+interface PreviewHeaderProps {
+  resume: Resume;
+  onBack: () => void
+}
+export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
 =======
 import {Button} from '@/components/ui/button';
 import {ArrowLeft, FileText, Link} from 'lucide-react';
@@ -14,19 +19,16 @@ import {PdfExportButton} from '../PdfExportButton';
 import {Resume} from '@/types/resume';
 import {useState} from 'react';
 import {useIsMobile} from '@/hooks/use-mobile';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-interface PreviewHeaderProps {
-  resume: Resume;
-  onBack: () => void
+interface PreviewHeaderProps {;
+  resume: Resume,;
+  onBack: () => void;
 }
-<<<<<<< HEAD
-export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
-=======
 
-export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function PreviewHeader(): any ({ resume, onBack }: PreviewHeaderProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [isPrinting, setIsPrinting] = useState(false);
 
+<<<<<<< HEAD
   const isMobile = useIsMobile();
   const handleBrowserPrint = () => {
     setIsPrinting(true);
@@ -37,51 +39,81 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         body * {
           visibility: hidden
 =======
-import { Button } from '@/components/ui/button',;
-import { ArrowLeft, FileText, Link } from 'lucide-react',;
-import { PdfExportButton } from '../PdfExportButton',;
-import { Resume } from '@/types/resume',;
-import { useState } from 'react',;
-import { useIsMobile } from '@/hooks/use-mobile',;
-interface PreviewHeaderProps {;
-  resume: Resume,;
-  onBack: () => void;
-}
-;
-export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
-  const [isPrinting, setIsPrinting] = useState(false),;
-  const isMobile = useIsMobile(),;
   const handleBrowserPrint = () => {;
-    setIsPrinting(true),;
+    setIsPrinting(true);
+
     // Inject print-specific CSS only for the duration of printing;
-    const style = document.createElement('style'),;
-    style.innerHTML = `;
+    const style = document && document.createElement('style');
+    style && style.innerHTML = `;
       @media print {;
         body * {;
           visibility: hidden;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        }
+        .print-section, .print-section * {;
+          visibility: visible;
+        }
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        }
-        .print-section, .print-section * {
-          visibility: visible
-        }
         .print-section {
           position: absolute
           left: 0
           top: 0
           width: 100%
+=======
+        .print-section {;
+          position: absolute,;
+          left: 0,;
+          top: 0,;
+          width: 100%;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }
-        .no-print {
-          display: none !important
+        .no-print {;
+=======
+import { Button  } from '@/components / ui / button';
+import { ArrowLeft, FileText, Link  } from './lucide-react';
+import { PdfExportButton  } from '../PdfExportButton';
+import { Resume  } from '@/types / resume';
+import { useState  } from './react';
+import { useIsMobile  } from '@/hooks / use - mobile';
+interface PreviewHeaderProps {
+  resume: Resume;
+  on_back: () => void;
+}
+export /**
+ * PreviewHeader - Function description
+ */
+function PreviewHeader() {
+  const [is_printing, setIsPrinting] = useState (false);
+  const is_mobile = useIsMobile ();
+;
+  const handleBrowserPrint = () =>: any {
+    setIsPrinting (true);
+;
+    // Inject print - specific CSS only for the duration of printing;
+    const style = document.create_element ("style");
+    style.innerHTML = `;
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        .print - section, .print - section * {
+          visibility: visible;
+        }
+        .print - section {
+          position: absolute,
+          left: 0,
+          top: 0,
+          width: 100%;
+        }
+        .no - print {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          display: none !important;
         }
       }
-<<<<<<< HEAD
     `;
-    document.head.appendChild(style);
 <<<<<<< HEAD
+<<<<<<< HEAD
+    document.head.appendChild(style);
     // Trigger print dialog
     window.print();
     // Remove the temporary style element after printing
@@ -90,26 +122,6 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
       setIsPrinting(false);
     }, 1000);
   }
-=======
-    `,
-    document.head.appendChild(style),
-=======
-=======
-    `,
-    document.head.appendChild(style),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    
-    // Trigger print dialog
-    window.print(),
-    
-    // Remove the temporary style element after printing
-    setTimeout(() => {
-      document.head.removeChild(style),
-      setIsPrinting(false)
-    }, 1000)
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div
@@ -119,7 +131,6 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         <ArrowLeft className="h-4 w-4" />
         Back
       </Button>
-<<<<<<< HEAD
       <div
         className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}
       >
@@ -127,13 +138,6 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         <Button
           variant="outline"
           onClick={handleBrowserPrint}
-=======
-      <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
-        <PdfExportButton resume={resume} />
-        <Button 
-          variant="outline" 
-          onClick={handleBrowserPrint} 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           disabled={isPrinting}
           className="gap-2"
         >
@@ -146,11 +150,91 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         </Button>
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
 =======
-  )
+    document && document.head.appendChild(style);
+
+    // Trigger print dialog;
+    window && window.print();
+
+    // Remove the temporary style element after printing;
+    setTimeout(() => {;
+      document && document.head.removeChild(style);
+      setIsPrinting(false);
+    }, 1000);
+  };
+
+  return (
+    <div className={`flex ${isMobile ? 'flex-col' : 'justify-between'} items-${isMobile ? 'stretch' : 'center'} gap-3`}>;
+      <Button
+        variant="outline" 
+        onClick={onBack} 
+        className="gap-2 no-print">;
+        <ArrowLeft className="h-4 w-4" />;
+        Back;
+      </Button>;
+
+      <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>;
+        <PdfExportButton resume={resume} />;
+
+        <Button
+          variant="outline" 
+          onClick={handleBrowserPrint} 
+          disabled={isPrinting}
+          className="gap-2">;
+          <FileText className="h-4 w-4" />;
+          Print;
+        </Button>;
+
+        <Button variant="outline" className="gap-2">;
+          <Link className="h-4 w-4" />;
+          Add to Profile;
+        </Button>;
+      </div>;
+    </div>;
+  );
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    document.head.append_child (style);
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    // Trigger print dialog;
+    window.print ();
+;
+    // Remove the temporary style element after printing;
+    set_timeout (() => {
+      document.head.remove_child (style);
+      setIsPrinting (false);
+    }, 1000);
+  }
+;
+  return (
+    <div;
+      className={`flex ${is_mobile ? "flex - col" : "justify - between"} items-${is_mobile ? "stretch" : "center"} gap - 3`}
+    >;
+      <Button variant="outline" on_click={on_back} className="gap - 2 no - print">;
+        <ArrowLeft className="h - 4 w - 4" />;
+        Back;
+      </Button>;
+      <div;
+        className={`flex ${is_mobile ? "flex - col" : "flex - row"} space-${is_mobile ? "y - 2" : "x - 2"} no - print`}
+      >;
+        <PdfExportButton resume={resume} />;
+        <Button;
+          variant="outline";
+          on_click={handleBrowserPrint}
+          disabled={is_printing}
+          className="gap - 2";
+        >;
+          <FileText className="h - 4 w - 4" />;
+          Print;
+        </Button>;
+        <Button variant="outline" className="gap - 2">;
+          <Link className="h - 4 w - 4" />;
+          Add to Profile;
+        </Button>;
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

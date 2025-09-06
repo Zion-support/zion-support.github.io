@@ -1,15 +1,21 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 const AutomationsIndex: NextPage = () => {
   const items = [
-<<<<<<< HEAD
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' }
     { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }]
 =======
-    { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+const AutomationsIndex: NextPage = () => {
+  const items = [
+    { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' };
     { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <main className="space-y-6">
       <h1 className="text-3xl font-bold">Autonomous Automations</h1>
@@ -22,31 +28,40 @@ const AutomationsIndex: NextPage = () => {
               <p className="text-sm text-gray-600 mt-1">{it.desc}</p>
             </div>
           </Link>
-<<<<<<< HEAD
         ))}
       </div>
     </main>
   )
 }
 export default AutomationsIndex;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
-<<<<<<< HEAD
 =======
-export default AutomationsIndex,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
-        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+import type { NextPage } from 'next',
+import Link from 'next / link',
+const AutomationsIndex: NextPage = () => {
+  const items = [;
+    { href: '/automations / top - talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
+    { href: '/automations / sitemap - status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
+  return (
+    <main className="space - y-6">;
+      <h1 className="text - 3xl font - bold">Autonomous Automations</h1>;
+      <p className="text - gray - 600">These run in the cloud on a schedule, with no human interaction.</p>;
+      <div className="grid md:grid - cols - 2 gap - 4">;
+        {items.map ((it) => (
+          <Link key={it.href} href={it.href}>;
+            <div className="enhanced - card hover:shadow - lg cursor - pointer">;
+              <h2 className="text - xl font - semibold">{it.title}</h2>;
+              <p className="text - sm text - gray - 600 mt - 1">{it.desc}</p>;
+            </div>;
+          </Link>))}
       </div>;
-    </main>;
-  );
-},;
-export default AutomationsIndex;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    </main>);
+},
+export default AutomationsIndex,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

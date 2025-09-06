@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 export default function AICustomerService() {
@@ -19,37 +20,32 @@ export default function AICustomerService() {
 <<<<<<< HEAD
 }
 =======
-import React from 'react';
-import Head from 'next/head';
-export default function AICustomerService(req, res) {
-  try {
-  return (;
+}
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import React from 'react',
+import Head from 'next / head',
+export default /**
+ * AICustomerService - Function description
+ */
+function AICustomerService() {
+  return (
     <>;
       <Head>;
-        <title>AI Customer Service | Zion Tech Group</title>;
-        <meta name="description" content="AI-powered customer service automation: chat, voice, support workflows, and analytics." />;
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-customer-service" />;
+        <title > AI Customer Service | Zion Tech Group</title>;
+        <meta name="description" content="AI - powered customer service automation: chat, voice, support workflows, and analytics." />;
+        <link rel="canonical" href="https: //ziontechgroup.com / ai - customer - service" />;
       </Head>;
-      <div className="min-h-screen bg-black text-white">;
-        <section className="container mx-auto px-4 py-20">;
-          <h1 className="text-4xl font-bold mb-6">AI Customer Service</h1>;
-          <p className="text-gray-300">Automate and augment customer support experiences with AI agents and analytics.</p>;
+      <div className="min - h-screen bg - black text - white">;
+        <section className="container mx - auto px - 4 py - 20">;
+          <h1 className="text - 4xl font - bold mb - 6">AI Customer Service</h1>;
+          <p className="text - gray - 300">Automate and augment customer support experiences with AI agents and analytics.</p>;
         </section>;
       </div>;
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+    </>);
 }
-<<<<<<< HEAD
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

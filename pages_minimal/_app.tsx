@@ -1,7 +1,14 @@
-:pages_minimal/_app.tsx
-export default function App({ Component, pageProps }: AppProps) {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+:pages_minimal/_app && _app.tsx;
+export default function App(): any ({ Component, pageProps }: AppProps) {;
   return <Component {...pageProps} />;
 }
+<<<<<<< HEAD
+=======
 
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
@@ -9,7 +16,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
 }
 
-<<<<<<< HEAD
 export default MyApp;
 
 import type { AppProps } from 'next/app';
@@ -20,7 +26,23 @@ function MyApp({ Component, pageProps }: AppProps) {
 export default MyApp
 
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+:pages_minimal / _app.tsx;
+export default /**
+ * App - Function description
+ */
+function App() {
+  return <Component {...page_props} />;
+}
+import type { AppProps } from 'next / app',
+import '../styles / globals.css',
+/**
+ * MyApp - Function description
+ */
+function MyApp() {
+  return <Component {...page_props} />;
+}
 export default MyApp,
-;
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

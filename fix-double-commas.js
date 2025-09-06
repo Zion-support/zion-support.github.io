@@ -1,9 +1,10 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from "fs";
 import path from "path";
 function fixDoubleCommas(filePath) {
   try {
-    const content = fs.readFileSync(filePath, "utf8");
+    const content = fs && fs.readFileSync(filePath, "utf8");
     let modified = false;
 <<<<<<< HEAD
     // Fix double commas in import statements
@@ -12,20 +13,50 @@ function fixDoubleCommas(filePath) {
     // Fix double commas in import statements;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const doubleCommaRegex = /,\s*,/g;
+<<<<<<< HEAD
     const fixedContent = content.replace(doubleCommaRegex, ",");
+=======
+    const fixedContent = content && content.replace(doubleCommaRegex, ",");
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (fixedContent !== content) {
-      fs.writeFileSync(filePath, fixedContent, "utf8");
+      fs && fs.writeFileSync(filePath, fixedContent, "utf8");
+=======
+#!/usr / bin / env node;
+import fs from './fs';
+import path from './path';
+;
+/**
+ * fixDoubleCommas - Function description
+ */
+function fixDoubleCommas() {
+  try {
+    const content = fs.readFileSync (file_path, "utf8");
+    let modified = false;
+;
+    // Fix double commas in import statements;
+    const doubleCommaRegex = /, \s*, /g;
+    const fixed_content = content.replace (doubleCommaRegex, ", ");
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      fs.writeFileSync (file_path, fixed_content, "utf8");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       modified = true;
     }
     return modified;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+<<<<<<< HEAD
+    console && console.error(`Error processing ${filePath}:`, error && error.message);
     return false;
   }
 }
 function findFilesWithDoubleCommas(dir) {
   const files = [];
   function traverse(currentDir) {
+<<<<<<< HEAD
     const items = fs.readdirSync(currentDir);
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
@@ -45,30 +76,128 @@ function findFilesWithDoubleCommas(dir) {
             "backup-merge-conflicts"
             "apps"
             "temp_exclude"
+=======
+    const items = fs && fs.readdirSync(currentDir);
+
+    for (const item of items) {
+      const fullPath = path && path.join(currentDir, item);
+      const stat = fs && fs.statSync(fullPath);
+
+      if (stat && stat.isDirectory()) {
+        // Skip certain directories
+        if (
+          [
+            "node_modules",
+            ".git",
+            ".next",
+            "dist",
+            "build",
+            "out",
+            "ai-optimization-backups",
+            "apps && apps.backup",
+            "backup-merge-conflicts",
+            "apps",
+            "temp_exclude",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           ].includes(item)
         ) {
           continue;
         }
         traverse(fullPath);
-      } else if (stat.isFile()) {
-        const ext = path.extname(item);
+      } else if (stat && stat.isFile()) {
+        const ext = path && path.extname(item);
         if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {
-          files.push(fullPath);
+          files && files.push(fullPath);
+=======
+    console.error (`Error processing ${file_path}:`, error.message);
+    return false;
+  }
+}
+/**
+ * findFilesWithDoubleCommas - Function description
+ */
+function findFilesWithDoubleCommas() {
+  const files = [];
+;
+  /**
+ * traverse - Function description
+ */
+function traverse() {
+    const items = fs.readdir_sync (current_dir);
+;
+    for (const item of items) {
+      const full_path = path.join (current_dir, item);
+      const stat = fs.stat_sync (full_path);
+;
+      if () {) {
+  $2
+}
+        // Skip certain directories;
+        // Check condition
+if (
+        ) {) {
+  $2
+}
+          continue;
+        }
+        traverse (full_path);
+      } else if () {) {
+  $2
+}
+        const ext = path.extname (item);
+        if () {) {
+  $2
+}
+          files.push (full_path);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       }
     }
   }
+<<<<<<< HEAD
   traverse(dir);
   return files;
 }
 // Main execution
 const files = findFilesWithDoubleCommas(".");
 let fixedCount = 0;
+<<<<<<< HEAD
 console.log(`Found ${files.length} files to check for double commas...`);
+=======
+
+console && console.log(`Found ${files && files.length} files to check for double commas...`);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 for (const file of files) {
   if (fixDoubleCommas(file)) {
     fixedCount++;
-    console.log(`Fixed double commas in: ${file}`);
+    console && console.log(`Fixed double commas in: ${file}`);
   }
 }
+<<<<<<< HEAD
 console.log(`\nFixed double commas in ${fixedCount} files.`);
+=======
+
+console && console.log(`\nFixed double commas in ${fixedCount} files.`);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  traverse (dir);
+  return files;
+}
+// Main execution;
+const files = findFilesWithDoubleCommas (".");
+let fixed_count = 0;
+;
+console.log (`Found ${files.length} files to check for double commas...`);
+;
+for (const file of files) {
+  if () {) {
+  $2
+}
+    fixed_count++;
+    console.log (`Fixed double commas in: ${file}`);
+  }
+}
+console.log (`\n_fixed double commas in ${fixed_count} files.`);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

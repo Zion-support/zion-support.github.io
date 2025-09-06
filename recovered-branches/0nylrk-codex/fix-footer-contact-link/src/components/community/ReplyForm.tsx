@@ -2,177 +2,172 @@
 
 import { useState } from "react",
 import { useForm } from "react-hook-form",
-=======
-import { useState } from "react";
-import { useForm } from "react-hook-form";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import {
 <<<<<<< HEAD
+import {
 
   Form
   FormControl
   FormField
   FormItem
   FormMessage
+} from "@/components/ui/form";
+
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+interface ReplyFormProps {
 =======
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormMessage,;
+} from "@/components/ui/form";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+
+interface ReplyFormProps {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  onSubmit: (content: string) => Promise<void>;
+  parentId?: string
+}
+<<<<<<< HEAD
+=======
+import { useState  } from './react';
+import { use_form  } from './react - hook - form';
+import { Button  } from '@/components / ui / button';
+import { Textarea  } from '@/components / ui / textarea';
+import {
   Form,
   FormControl,
   FormField,
   FormItem,
-FormMessage,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-} from "@/components/ui/form";
-
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-<<<<<<< HEAD
+  FormMessage,
+} from '@/components / ui / form';
+import { Card, CardContent, CardFooter  } from '@/components / ui / card';
 interface ReplyFormProps {
-  onSubmit: (content: string) => Promise<void>;
-  parentId?: string
+  on_submit: (content: string) => Promise < void>;
+  parent_id?: string;
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface ReplyFormValues {
+=======
+
+interface ReplyFormValues {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   content: string;
 }
+<<<<<<< HEAD
 
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
   const form = useForm<ReplyFormValues>({
     defaultValues: {
       content: ""
     }
   });
   const handleSubmit = async (values: ReplyFormValues) => {
-    setIsSubmitting(true);
-    try {
-      (await onSubmit(values.content), form.reset());
-    } finally {
-      setIsSubmitting(false);
-    }
-<<<<<<< HEAD
-  }
-=======
-  };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
-import { useState } from "react",
-import { useForm } from "react-hook-form",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage
-} from "@/components/ui/form",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-
-interface ReplyFormProps {
-  onSubmit: (content: string) => Promise<void>,
-  parentId?: string
-import { useState } from "react",;
-import { useForm } from "react-hook-form",;
-import { Button } from "@/components/ui/button",;
-import { Textarea } from "@/components/ui/textarea",;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormMessage;
-} from "@/components/ui/form",;
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;
-interface ReplyFormProps {;
-  onSubmit: (content: string) => Promise<void>,;
-  parentId?: string;
-}
-;
-interface ReplyFormValues {;
-  content: string;
-}
-;
-export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
   const form = useForm<ReplyFormValues>({;
     defaultValues: {;
-      content: "";
-    }
-  }),;
+      content: "",;
+    },;
+  });
+
   const handleSubmit = async (values: ReplyFormValues) => {;
-    setIsSubmitting(true),;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    setIsSubmitting(true);
     try {;
-      await onSubmit(values.content),;
-      form.reset();
+      (await onSubmit(values && values.content), form && form.reset());
     } finally {;
       setIsSubmitting(false);
     }
-  },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
   return (
-    <Card>
-      <CardContent className="pt-6">
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleSubmit)}>
+    <Card>;
+      <CardContent className="pt-6">;
+        <Form {...form}>;
+          <form onSubmit={form && form.handleSubmit(handleSubmit)}>;
             <FormField
-              control={form.control}
+              control={form && form.control}
               name="content"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormControl>;
                     <Textarea
-<<<<<<< HEAD
+=======
+export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
+  const [is_submitting, setIsSubmitting] = useState (false);
+;
+  const form = use_form < ReplyFormValues>({
+    default_values: {
+      content: "",
+    },
+  });
+;
+  const handle_submit = async (values: ReplyFormValues) => {
+    setIsSubmitting (true);
+    try {
+      (await on_submit (values.content), form.reset ());
+    } finally {
+      setIsSubmitting (false);
+    }
+  }
+;
+  return (
+    <Card>;
+      <CardContent className="pt - 6">;
+        <Form {...form}>;
+          <form on_submit={form.handle_submit (handle_submit)}>;
+            <FormField;
+              control={form.control}
+              name="content";
+              render={({ field }) => (
+                <FormItem>;
+                  <FormControl>;
+                    <Textarea;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       placeholder={
-                        parentId
-                          ? "Write your reply..."
-                          : "Join the discussion..."
+                        parent_id;
+                          ? "Write your reply...";
+                          : "Join the discussion...";
                       }
-=======
-                      placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                      className="min-h-[100px] resize-y"
+                      className="min - h-[100px] resize - y";
                       {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <div className="mt-4 flex justify-end">
-              <Button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Post Reply"}
-              </Button>
-            </div>
-          </form>
-        </Form>
-      </CardContent>
-    </Card>
+                    />;
+                  </FormControl>;
+                  <FormMessage />;
 <<<<<<< HEAD
+                </FormItem>;
+              )}
+            />;
+            <div className="mt-4 flex justify-end">;
+              <Button type="submit" disabled={isSubmitting}>;
+                {isSubmitting ? "Submitting..." : "Post Reply"}
+=======
+                </FormItem>)}
+            />;
+            <div className="mt - 4 flex justify - end">;
+              <Button type="submit" disabled={is_submitting}>;
+                {is_submitting ? "Submitting..." : "Post Reply"}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              </Button>;
+            </div>;
+          </form>;
+        </Form>;
+      </CardContent>;
+<<<<<<< HEAD
+    </Card>;
   );
 }
 export default ReplyForm;
 
 =======
-  )
-},
-
-<<<<<<< HEAD
-export default ReplyForm,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
+    </Card>);
+}
+;
 export default ReplyForm;
-=======
-export default ReplyForm,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

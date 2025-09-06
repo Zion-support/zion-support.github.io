@@ -1,10 +1,10 @@
 <<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
-import React from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import React from 'react';
+<<<<<<< HEAD
 import { Heart } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
@@ -18,26 +18,34 @@ import {
   TooltipProvider
   TooltipTrigger
 } from '@/components/ui/tooltip'
+=======
+import { Heart } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { useWishlist } from '@/hooks/useWishlist';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
+import { LoginModal } from '@/components/auth/LoginModal';
+import {;
+  Tooltip,;
+  TooltipContent,;
+  TooltipProvider,;
+  TooltipTrigger,;
+} from '@/components/ui/tooltip';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-interface FavoriteButtonProps {
+interface FavoriteButtonProps {;
   itemId: string;
+<<<<<<< HEAD
   className?: string
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
-<<<<<<< HEAD
 
   const { isWishlisted, toggle } = useWishlist()
   const { isAuthenticated } = useAuth()
   const [loginOpen, setLoginOpen] = React.useState(false)
   const handleClick = (e: React.MouseEvent) => {
-=======
-  const { isWishlisted, toggle } = useWishlist();
-  const { isAuthenticated } = useAuth();
-  const [loginOpen, setLoginOpen] = React.useState(false);
-  const handleClick = (e: React.MouseEvent) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     e.stopPropagation();    if (!isAuthenticated) {
       setLoginOpen(true)
-      return;
+      return
     }
     const wasWishlisted = isWishlisted(itemId)
     toggle(itemId)
@@ -51,80 +59,99 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
   }
   const active = isWishlisted(itemId)
 =======
-<<<<<<< HEAD
-=======
-import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { Heart } from 'lucide-react';
-import { cn } from '@/lib/utils',;
-import { useWishlist } from '@/hooks/useWishlist',;
-import { useAuth } from '@/hooks/useAuth',;
-import { toast } from '@/hooks/use-toast',;
-import { LoginModal } from '@/components/auth/LoginModal',;
-import {;
-  Tooltip,;
-  TooltipContent,;
-  TooltipProvider,;
-  TooltipTrigger} from '@/components/ui/tooltip',;
-interface FavoriteButtonProps {;
-  itemId: string,;
   className?: string;
-}
-;
-export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
-  const { isWishlisted, toggle } = useWishlist(),;
-  const { isAuthenticated } = useAuth(),;
-  const [loginOpen, setLoginOpen] = React.useState(false),;
-  const handleClick = (e: React.MouseEvent) => {;
-    e.stopPropagation(),;
-    if (!isAuthenticated) {;
-      setLoginOpen(true),;
+export function FavoriteButton(): any ({ itemId, className }: FavoriteButtonProps) {;
+  const { isWishlisted, toggle } = useWishlist();
+  const { isAuthenticated } = useAuth();
+  const [loginOpen, setLoginOpen] = React && React.useState(false);
+
+  const handleClick = (e: React && React.MouseEvent) => {;
+    e && e.stopPropagation();    if (!isAuthenticated) {;
+      setLoginOpen(true);
       return;
     }
-    
-    const wasWishlisted = isWishlisted(itemId),
-    toggle(itemId),
-    
-    // Provide feedback
-    toast({
-      title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",
-      description: wasWishlisted 
-        ? "Item has been removed from your wishlist" 
-        : "Item has been added to your wishlist"})
-  },
 
-  const active = isWishlisted(itemId),
+    const wasWishlisted = isWishlisted(itemId);
+    toggle(itemId);
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    // Provide feedback;
+    toast({;
+      title: wasWishlisted ? 'Removed from wishlist' : 'Added to wishlist',;
+      description: wasWishlisted;
+        ? 'Item has been removed from your wishlist';
+        : 'Item has been added to your wishlist',;
+    });
+  };
+
+  const active = isWishlisted(itemId);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from 'react';
+import { Heart } from 'lucide-react';
+import { cn } from '@/lib / utils';
+import { use_wishlist } from '@/hooks / use_wishlist';
+import { use_auth } from '@/hooks / use_auth';
+import { toast } from '@/hooks / use - toast';
+import { LoginModal } from '@/components / auth / LoginModal';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components / ui / tooltip';
+interface FavoriteButtonProps {
+  item_id: string;
+  class_name?: string;
+export /**
+ * FavoriteButton - Function description
+ */
+function FavoriteButton() {
+  const { is_wishlisted, toggle } = use_wishlist ();
+  const { is_authenticated } = use_auth ();
+  const [login_open, setLoginOpen] = React.useState (false);
+  const handle_click = (e: React.MouseEvent) =>: any {
+    e.stop_propagation ();    // Check condition
+if ( {) {
+  $2
+}
+      setLoginOpen (true);
+      return;
+    }
+    const was_wishlisted = is_wishlisted (item_id);
+    toggle (item_id);
+    // Provide feedback;
+    toast ({
+      title: was_wishlisted ? 'Removed from wishlist' : 'Added to wishlist',
+      description: was_wishlisted;
+        ? 'Item has been removed from your wishlist';
+        : 'Item has been added to your wishlist',
+    });
+  }
+  const active = is_wishlisted (item_id);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
-    <>
-      <TooltipProvider>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <button
+    <>;
+      <TooltipProvider>;
+        <Tooltip>;
 <<<<<<< HEAD
+          <TooltipTrigger asChild>;
+            <button
               className = {cn(
                 'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors'
                 className
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
               onClick={handleClick}
               aria-label={
                 active ? 'Remove from favorites' : 'Save to favorites'
-              }            >
+              }             aria-label="Button">;
               <Heart
                 className = {cn(
                   'h-4 w-4 transition-transform duration-200'
                   active
                     ? 'fill-red-500 text-red-500 scale-110'
                     : 'text-zion-slate'
+<<<<<<< HEAD
                 )}              />
 
             </button>
@@ -139,6 +166,21 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
       // Add to favorites`
       // console.log(`Added ${itemType} ${itemId} to favorites`)}  }
   return ()
+=======
+                )}              />;
+            </button>;
+          </TooltipTrigger>;
+          {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
+        </Tooltip>;
+      </TooltipProvider>;
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+    </>;
+  );
+}
+      // Add to favorites`;
+      // console && console.log(`Added ${itemType} ${itemId} to favorites`)}  };
+  return ();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     <button
       onClick = {handleToggleFavorite}`
       className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${isFavorited'
@@ -146,7 +188,11 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
           : 'bg-zion-blue-dark/80 hover:bg-zion-cyan text-white'`
 } ${className}`}
       aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
+<<<<<<< HEAD
     >
+=======
+     aria-label="Button">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <Heart`
         className={`w-4 h-4 transition-all duration-300 ${
           isFavorited ? 'fill-current' : ''`
@@ -160,57 +206,57 @@ className: {`w-4 h-4 transition-all duration-300 ${
     </button>;) }
 '`
 }
-<<<<<<< HEAD
 =======
-              className={cn(
-                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors',
-                className
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
-;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-;
-    const wasWishlisted = isWishlisted(itemId),;
-    toggle(itemId),;
-    // Provide feedback;
-    toast({;
-      title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",;
-      description: wasWishlisted;
-        ? "Item has been removed from your wishlist";
-        : "Item has been added to your wishlist"});
-  },;
-  const active = isWishlisted(itemId),;
-  return (;
-    <>;
-      <TooltipProvider>;
-        <Tooltip>;
-          <TooltipTrigger asChild>;
+          <TooltipTrigger as_child>;
             <button;
-              className={cn(;
-                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors';
-                className;
-              )}
-              onClick={handleClick}
-              aria-label={active ? 'Remove from favorites' : 'Save to favorites'}
-            >;
+              class_name = {cn (
+                'absolute top - 2 right - 2 z - 10 p - 2 rounded - full bg - zion - blue - dark / 80 hover:bg - zion - blue - light / 30 transition - colors',
+                class_name)}
+              on_click={handle_click}
+              aria - label={
+                active ? 'Remove from favorites' : 'Save to favorites';
+              }            >;
               <Heart;
-                className={cn(;
-                  'h-4 w-4 transition-transform duration-200';
-                  active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate';
-                )}
-              />;
+                class_name = {cn (
+                  'h - 4 w - 4 transition - transform duration - 200',
+                  active;
+                    ? 'fill - red - 500 text - red - 500 scale - 110';
+                    : 'text - zion - slate')}              />;
             </button>;
           </TooltipTrigger>;
-          {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
+          {!is_authenticated && <TooltipContent > Login required</TooltipContent>}
         </Tooltip>;
       </TooltipProvider>;
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
-    </>;
-  );
+      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
+    </>);
 }
-;
+      // Add to favorites`;
+      // console.log (`Added ${item_type} ${item_id} to favorites`)}  }
+  return ();
+    <button;
+      on_click = {handleToggleFavorite}`;
+      className={`absolute top - 2 right - 2 p - 2 rounded - full transition - all duration - 300 ${is_favorited';
+          ? 'bg - red - 500 hover:bg - red - 600 text - white'';
+          : 'bg - zion - blue - dark / 80 hover:bg - zion - cyan text - white'`;
+} ${class_name}`}
+      aria - label={is_favorited ? 'Remove from favorites' : 'Add to favorites'}
+    >;
+      <Heart`;
+        className={`w - 4 h - 4 transition - all duration - 300 ${
+          is_favorited ? 'fill - current' : ''`;
+}`}
+      />    </button>)}`;
+class_name: {`w - 4 h - 4 transition - all duration - 300 ${
+          is_favorited ? 'fill - current' : '';`;
+}`}
+      />;
+    </button>) }
+'`;
+}
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

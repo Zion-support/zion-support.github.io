@@ -1,8 +1,9 @@
 <<<<<<< HEAD
-
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { logErrorToProduction } from '@/utils/productionLogger'
@@ -14,50 +15,19 @@ import {
 } from '@/services/pricingSuggestionService'
 import { PricingSuggestionBox } from './PricingSuggestionBox'
 import { useAuth } from '@/hooks/useAuth'
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import {logErrorToProduction} from '@/utils/productionLogger',
-import { 
-  getClientBudgetSuggestion,
-  PricingSuggestion,
-  ClientBudgetParams,
-  trackPricingSuggestion
-} from "@/services/pricingSuggestionService",
-import { PricingSuggestionBox } from "./PricingSuggestionBox",
-import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Sparkles } from 'lucide-react'
 interface ClientBudgetRecommenderProps {
-<<<<<<< HEAD
-  jobTitle: string
-  category: string
-  timeline?: string
-  scope?: string;
-  experienceLevel?: string;
-  onSuggestionApplied: (minValue: number, maxValue: number) => void;interface ClientBudgetRecommenderProps {
-<<<<<<< HEAD
   jobTitle: string
   category: string
   timeline?: string
   scope?: string
   experienceLevel?: string
-=======
-  jobTitle: string,
-  category: string,
-  timeline?: string,
-  scope?: string,
-  experienceLevel?: string,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  onSuggestionApplied: (minValue: number, maxValue: number) => void;interface ClientBudgetRecommenderProps {
+  jobTitle: string
+  category: string
+  timeline?: string
+  scope?: string
+  experienceLevel?: string
   onSuggestionApplied: (minValue: number, maxValue: number,) => void
 }
 export const ClientBudgetRecommender: React.FC<
@@ -74,43 +44,102 @@ export const ClientBudgetRecommender: React.FC<
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null)
   const { user } = useAuth()
   const generateSuggestion = async () => {
-<<<<<<< HEAD
     if (!jobTitle |!category) {
       return
-=======
-    if (!jobTitle || !category) {
-      return;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     setIsLoading(true)
     try {
       const params: ClientBudgetParams = {
-<<<<<<< HEAD
         jobTitle
         category
-=======
-        jobTitle,;
-        category;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       };        jobTitle
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components / ui / button';
+import { logErrorToProduction } from '@/utils / production_logger';
+import {
+  getClientBudgetSuggestion,
+  PricingSuggestion,
+  ClientBudgetParams,
+  trackPricingSuggestion,
+} from '@/services / pricingSuggestionService';
+import { PricingSuggestionBox } from './PricingSuggestionBox';
+import { use_auth } from '@/hooks / use_auth';
+import { Sparkles } from 'lucide-react';
+interface ClientBudgetRecommenderProps {
+  job_title: string;
+  category: string;
+  timeline?: string;
+  scope?: string;
+  experience_level?: string;
+  onSuggestionApplied: (min_value: number, max_value: number) => void;interface ClientBudgetRecommenderProps {
+  job_title: string,
+  category: string,
+  timeline?: string,
+  scope?: string,
+  experience_level?: string,
+  onSuggestionApplied: (min_value: number, max_value: number, ) => void;
+}
+export const ClientBudgetRecommender: React.FC<;
+  ClientBudgetRecommenderProps;
+> = ({
+  job_title,
+  category,
+  timeline,
+  scope,
+  experience_level,
+  onSuggestionApplied,
+}) => {
+  const [is_loading, setIsLoading] = useState (false);
+  const [suggestion, set_suggestion] = useState < PricingSuggestion | null>(null);
+  const { user } = use_auth ();
+  const generate_suggestion = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      return;
+    }
+    setIsLoading (true);
+    try {
+      const params: ClientBudgetParams = {
+        job_title,
+        category,
+      }        job_title;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         category}
-      if (timeline) params.timeline = timeline
-      if (scope) params.scope = scope
-      if (experienceLevel) params.experienceLevel = experienceLevel
-      const result = await getClientBudgetSuggestion(params)
-      setSuggestion(result)
+      // Check condition
+if (params.timeline = timeline) {
+  $2
+}
+      // Check condition
+if (params.scope = scope) {
+  $2
+}
+      // Check condition
+if (params.experience_level = experience_level) {
+  $2
+}
+      const result = await getClientBudgetSuggestion (params);
+      set_suggestion (result);
     } catch (error) {
+<<<<<<< HEAD
       logErrorToProduction('Error generating budget suggestion:', {
         data: error
       })
+=======
+      logErrorToProduction ('Error generating budget suggestion:', {
+        data: error,
+      });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
   }
+<<<<<<< HEAD
   const handleApplySuggestion = () => {
     if (suggestion) {
       onSuggestionApplied(suggestion.minRate, suggestion.maxRate)
-<<<<<<< HEAD
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
@@ -118,152 +147,184 @@ export const ClientBudgetRecommender: React.FC<
           suggestionType: 'client'
           suggestedMin: suggestion.minRate
           suggestedMax: suggestion.maxRate
+          accepted: true
+        })
 =======
-  jobTitle: string,
-  category: string,
-  timeline?: string,
-  scope?: string,
-  experienceLevel?: string,
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  onSuggestionApplied: (minValue: number, maxValue: number) => void
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import {logErrorToProduction} from '@/utils/productionLogger',;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { logErrorToProduction } from '@/utils/productionLogger';
 import {;
   getClientBudgetSuggestion,;
   PricingSuggestion,;
   ClientBudgetParams,;
-  trackPricingSuggestion;
-} from "@/services/pricingSuggestionService",;
-import { PricingSuggestionBox } from "./PricingSuggestionBox",;
-import { useAuth } from "@/hooks/useAuth",;
+  trackPricingSuggestion,;
+} from '@/services/pricingSuggestionService';
+import { PricingSuggestionBox } from './PricingSuggestionBox';
+import { useAuth } from '@/hooks/useAuth';
 import { Sparkles } from 'lucide-react';
+
 interface ClientBudgetRecommenderProps {;
+  jobTitle: string;
+  category: string;
+  timeline?: string;
+  scope?: string;
+  experienceLevel?: string;
+  onSuggestionApplied: (minValue: number, maxValue: number) => void;interface ClientBudgetRecommenderProps {;
   jobTitle: string,;
   category: string,;
   timeline?: string,;
   scope?: string,;
   experienceLevel?: string,;
-  onSuggestionApplied: (minValue: number, maxValue: number) => void;
+  onSuggestionApplied: (minValue: number, maxValue: number,) => void;
 }
-;
-export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
+
+export const ClientBudgetRecommender: React.FC<;
+  ClientBudgetRecommenderProps;
+> = ({;
   jobTitle,;
   category,;
   timeline,;
   scope,;
   experienceLevel,;
-  onSuggestionApplied}) => {;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),;
-  const { user } = useAuth(),;
+  onSuggestionApplied,;
+}) => {;
+  const [isLoading, setIsLoading] = useState(false);
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
+  const { user } = useAuth();
   const generateSuggestion = async () => {;
     if (!jobTitle || !category) {;
       return;
     }
-;
-    setIsLoading(true),;
+
+    setIsLoading(true);
     try {;
       const params: ClientBudgetParams = {;
         jobTitle,;
-        category},;
-      if (timeline) params.timeline = timeline,;
-      if (scope) params.scope = scope,;
-      if (experienceLevel) params.experienceLevel = experienceLevel,;
-      const result = await getClientBudgetSuggestion(params),;
+        category,;
+      };        jobTitle;
+        category};
+
+      if (timeline) params && params.timeline = timeline;
+      if (scope) params && params.scope = scope;
+      if (experienceLevel) params && params.experienceLevel = experienceLevel;
+
+      const result = await getClientBudgetSuggestion(params);
       setSuggestion(result);
     } catch (error) {;
-      logErrorToProduction('Error generating budget suggestion:', { data: error });
+      logErrorToProduction('Error generating budget suggestion:', {;
+        data: error,;
+      });
     } finally {;
       setIsLoading(false);
     }
-  },
+  };
 
-  const handleApplySuggestion = () => {
-    if (suggestion) {
-      onSuggestionApplied(suggestion.minRate, suggestion.maxRate),
-      
-<<<<<<< HEAD
+  const handleApplySuggestion = () => {;
+    if (suggestion) {;
+      onSuggestionApplied(suggestion && suggestion.minRate, suggestion && suggestion.maxRate);
+
+      // Track this suggestion application;
+      if (user && user.id) {;
+        trackPricingSuggestion({;
+          userId: user.id,;
+          suggestionType: 'client',;
+          suggestedMin: suggestion && suggestion.minRate,;
+          suggestedMax: suggestion && suggestion.maxRate,;
+          accepted: true,;
+        });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      // Track this suggestion application
-      if (user && user.id) {
-        trackPricingSuggestion({
-          userId: user.id,
-          suggestionType: "client",
-          suggestedMin: suggestion.minRate,
-          suggestedMax: suggestion.maxRate,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
+  const handleApplySuggestion = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      onSuggestionApplied (suggestion.min_rate, suggestion.max_rate);
+      // Track this suggestion application;
+      // Check condition
+if ( {) {
+  $2
+}
+        trackPricingSuggestion ({
+          user_id: user.id,
+          suggestion_type: 'client',
+          suggested_min: suggestion.min_rate,
+          suggested_max: suggestion.max_rate,
           accepted: true,
-        })
+        });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          accepted: true
-        })
-      }
-    }
-<<<<<<< HEAD
-  }
-=======
-  },
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
-    <div className="space-y-4">
-      <div>
-        {!suggestion && !isLoading ? (
-          <Button
 <<<<<<< HEAD
+    <div className='space-y-4'>;
+      <div>;
+        {!suggestion && !isLoading ? (;
+          <Button
             type='button'
             variant='outline'
             onClick={generateSuggestion}
+<<<<<<< HEAD
             disabled={!jobTitle |!category}
             className='w-full'          >
             <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation
-=======
-            type="button"
-            variant="outline"
-            onClick={generateSuggestion}
-            disabled={!jobTitle || !category}
-            className="w-full"
-          >
-            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </Button>
         ) : (
+=======
+            disabled={!jobTitle || !category}
+            className='w-full'>;
+            <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation;
+          </Button>;
+        ) : (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <PricingSuggestionBox
+=======
+    <div className='space - y-4'>;
+      <div>;
+        {!suggestion && !is_loading ? (
+          <Button;
+            type='button';
+            variant='outline';
+            on_click={generate_suggestion}
+            disabled={!job_title || !category}
+            className='w - full'          >;
+            <Sparkles className='h - 4 w - 4 mr - 2' /> Get Budget Recommendation;
+          </Button>) : (
+          <PricingSuggestionBox;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             suggestion={suggestion}
-            isLoading={isLoading}
+            is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
 <<<<<<< HEAD
-            rateType='hourly'          />
+            rateType='hourly'          />;
         )}
+<<<<<<< HEAD
       </div>
     </div>
   )
+=======
+            rate_type='hourly'          />)}
+      </div>;
+    </div>);
 }
-if (scope) params.scope = scope
-if (experienceLevel) params.experienceLevel = experienceLevel
-//Track this suggestion application if (user && user.id) {
+// Check condition
+if (params.scope = scope) {
+  $2
+}
+// Check condition
+if (params.experience_level = experience_level) {
+  $2
+}
+//Track this suggestion application // Check condition
+if ( {) {
+  $2
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
   trackPricingSuggestion ({
 }
+<<<<<<< HEAD
 return (<div className="space-y-4" > <div> {"
   !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={
   generateSuggestion "
@@ -271,22 +332,44 @@ return (<div className="space-y-4" > <div> {"
 }</div> </div>)
 }
 '"  )
-<<<<<<< HEAD
 }
 
 =======
-},
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-            rateType="hourly"
-          />
-        )}
       </div>;
     </div>;
   );
 };
+if (scope) params && params.scope = scope;
+if (experienceLevel) params && params.experienceLevel = experienceLevel;
+//Track this suggestion application if (user && user.id) {;
+  trackPricingSuggestion ({;
+
+
+};
+return (<div className="space-y-4" > <div> {";
+  !suggestion && !isLoading ? (<Buttontype="button" variant="outline" onClick={
+  generateSuggestion "
+}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) ;
+}</div> </div>) ;
+};
+'"  );
+},;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+return (<div className="space - y-4" > <div> {";
+  !suggestion && !is_loading ? (<Button type="button" variant="outline" on_click={
+  generate_suggestion ";
+}> <Sparkles className="h - 4 w - 4 mr - 2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />);
+}</div> </div>);
+}
+'"  );
+},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

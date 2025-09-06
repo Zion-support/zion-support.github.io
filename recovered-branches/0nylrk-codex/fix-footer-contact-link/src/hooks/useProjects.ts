@@ -1,133 +1,164 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {supabase} from "@/integrations/supabase/client";
-import {useAuth} from "@/hooks/useAuth";
-import {Project, ProjectStatus} from "@/types/projects";
-import {toast} from "sonner";
-export function useProjects() {;
-  const { user } = useAuth();
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
 import { Project, ProjectStatus } from "@/types/projects";
 import { toast } from "sonner";
 export function useProjects() {
   const { user } = useAuth();
   const [projects, setProjects] = useState<Project[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-=======
-import { Project, ProjectStatus } from "@/types/projects",
-import { toast } from "sonner",
-export function useProjects() {
-  const { user } = useAuth(),
-  const [projects, setProjects] = useState<Project[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const [error, setError] = useState<string | null>(null);
   const fetchProjects = async () => {
     if (!user) {
-      setIsLoading(false),
+      setIsLoading(false);
       return
     }
     try {
-<<<<<<< HEAD
       setIsLoading(true);
-=======
-      setIsLoading(true),
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Build the query based on user type
       // For clients, get projects they created
       // For talents, get projects they're hired for
       let query = supabase
         .from("projects")
         .select(`
-<<<<<<< HEAD
           *;
           job:jobs(title, description);
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url: avatar_url)
           client_profile:profiles!client_id(display_name, avatar_url)
         `)
         .order("created_at", { ascending: false });
+<<<<<<< HEAD
       if (user.userType === "jobSeeker" |user.userType === "creator") {
-=======
-          *,
-          job:jobs(title, description),
-          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url),
-          client_profile:profiles!client_id(display_name, avatar_url)
-        `)
-        .order("created_at", { ascending: false }),
-      
-      if (user.userType === "jobSeeker" || user.userType === "creator") {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         query = query.eq("talent_id", user.id)
       } else if (user.userType === "employer" |user.userType === "buyer") {
         query = query.eq("client_id", user.id)
-      }
-<<<<<<< HEAD
-      const { data, error: fetchError } = await query;
-      if (fetchError) throw fetchError;
 =======
       
-      const { data, error: fetchError } = await query,
-      
-      if (fetchError) throw fetchError,
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      if (user && user.userType === "jobSeeker" || user && user.userType === "creator") {
+        query = query && query.eq("talent_id", user && user.id)
+      } else if (user && user.userType === "employer" || user && user.userType === "buyer") {
+        query = query && query.eq("client_id", user && user.id)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      }
+      const { data, error: fetchError } = await query;
+      if (fetchError) throw fetchError;
       // Transform the data to match our project types
-      const transformedData = data.map((project: any) => ({
-        ...project,
+      const transformedData = data && data.map((project: any) => ({
+=======
+import { useState, useEffect } from './react';
+import { supabase } from '@/integrations / supabase / client';
+import { use_auth } from '@/hooks / use_auth';
+import { Project, ProjectStatus } from '@/types / projects';
+import { toast } from './sonner';
+export /**
+ * use_projects - Function description
+ */
+function use_projects() {
+  const { user } = use_auth ();
+  const [projects, set_projects] = useState < Project[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+  const [error, set_error] = useState < string | null>(null);
+;
+  const fetch_projects = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      setIsLoading (false);
+      return;
+    }
+    try {
+      setIsLoading (true);
+;
+      // Build the query based on user type;
+      // For clients, get projects they created;
+      // For talents, get projects they're hired for;
+      let query = supabase;
+        .from ("projects");
+        .select (`;
+          *;
+          job:jobs (title, description);
+          talent_profile:profiles ! talent_id (display_name:display_name, professional_title:bio, profile_picture_url: avatar_url),
+          client_profile:profiles ! client_id (display_name, avatar_url);
+        `);
+        .order ("created_at", { ascending: false });
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        query = query.eq ("talent_id", user.id);
+      } else // Check condition
+if ( {) {
+  $2
+}
+        query = query.eq ("client_id", user.id);
+      }
+      const { data, error: fetch_error } = await query;
+;
+      // Check condition
+if (throw fetch_error) {
+  $2
+}
+      // Transform the data to match our project types;
+      const transformed_data = data.map ((project: any) => ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        ...project;
+<<<<<<< HEAD
         talent_profile: project.talent_profile ? {
+<<<<<<< HEAD
           ...project.talent_profile
           full_name: project.talent_profile.display_name
+=======
+        talent_profile: project && project.talent_profile ? {
+          ...project && project.talent_profile,
+          full_name: project && project.talent_profile.display_name
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         } : undefined
-<<<<<<< HEAD
       }));
       setProjects(transformedData as Project[]);
       setError(null)
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error fetching projects:", err);
       setError("Failed to fetch projects: " + err.message)
-=======
-      })),
-      
-      setProjects(transformedData as Project[]),
-      setError(null)
-    } catch (err: any) {
-      console.error("Error fetching projects:", err),
-      setError("Failed to fetch projects: " + err.message),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast.error("Failed to fetch projects")
-    } finally {
-      setIsLoading(false)
-    }
-<<<<<<< HEAD
-  }
 =======
-  },
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  const getProjectById = async (projectId: string): Promise<Project | null> => {
-    try {
-      const { data, error } = await supabase
-        .from("projects")
-        .select(`
+      console && console.error("Error fetching projects:", err);
+      setError("Failed to fetch projects: " + err && err.message),
+      toast && toast.error("Failed to fetch projects")
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+          ...project.talent_profile,
+          full_name: project.talent_profile.display_name;
+        } : undefined;
+      }));
+;
+      set_projects (transformed_data as Project[]);
+      set_error (null);
+    } catch (err: any) {
+      console.error ("Error fetching projects:", err);
+      set_error ("Failed to fetch projects: " + err.message),
+      toast.error ("Failed to fetch projects");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } finally {
+      setIsLoading (false);
+    }
+  }
 <<<<<<< HEAD
+  const getProjectById = async (projectId: string): Promise<Project | null> => {
+=======
+;
+  const getProjectById = async (project_id: string): Promise < Project | null> => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    try {
+      const { data, error } = await supabase;
+        .from ("projects");
+        .select (`;
           *;
+<<<<<<< HEAD
           job:jobs(title, description);
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url: avatar_url)
           client_profile:profiles!client_id(display_name, avatar_url)
@@ -135,74 +166,68 @@ export function useProjects() {
         .eq("id", projectId)
         .single();
       if (error) throw error;
-=======
-          *,
-          job:jobs(title, description),
-          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url),
-          client_profile:profiles!client_id(display_name, avatar_url)
-        `)
-        .eq("id", projectId)
-        .single(),
-      
-      if (error) throw error,
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Transform the data to match our project types
       const transformedProject = {
-        ...data,
+=======
+          job:jobs (title, description);
+          talent_profile:profiles ! talent_id (display_name:display_name, professional_title:bio, profile_picture_url: avatar_url),
+          client_profile:profiles ! client_id (display_name, avatar_url);
+        `);
+        .eq ("id", project_id);
+        .single ();
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Transform the data to match our project types;
+      const transformed_project = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        ...data;
+<<<<<<< HEAD
         talent_profile: data.talent_profile ? {
+<<<<<<< HEAD
           ...data.talent_profile
           full_name: data.talent_profile.display_name
-        } : undefined
-<<<<<<< HEAD
-      }
 =======
-      },
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        talent_profile: data && data.talent_profile ? {
+          ...data && data.talent_profile,
+          full_name: data && data.talent_profile.display_name
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        } : undefined
+      }
       return transformedProject as Project
     } catch (err: any) {
-      console.error("Error fetching project:", err),
-      toast.error("Failed to fetch project details"),
+      console && console.error("Error fetching project:", err);
+      toast && toast.error("Failed to fetch project details");
       return null
     }
-<<<<<<< HEAD
   }
-=======
-  },
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const updateProjectStatus = async (projectId: string, status: ProjectStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("projects")
         .update({ status })
-<<<<<<< HEAD
         .eq("id", projectId);
       if (error) throw error;
-=======
-        .eq("id", projectId),
-      
-      if (error) throw error,
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Update the local state
+<<<<<<< HEAD
       setProjects(prev =>
         prev.map(project => project.id === projectId ? { ...project, status } : project)
-<<<<<<< HEAD
       );
       toast.success(`Project status updated to ${status}`);
 =======
-      ),
+      setProjects(prev => 
+        prev && prev.map(project => project && project.id === projectId ? { ...project, status } : project)
+      );
       
-      toast.success(`Project status updated to ${status}`),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      toast && toast.success(`Project status updated to ${status}`);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return true
     } catch (err: any) {
-      console.error("Error updating project status:", err),
-      toast.error("Failed to update project status"),
+      console && console.error("Error updating project status:", err);
+      toast && toast.error("Failed to update project status");
       return false
-<<<<<<< HEAD
     }
   }
   // Fetch projects when component mounts or user changes
@@ -211,135 +236,68 @@ export function useProjects() {
       fetchProjects()
     }
   }, [user]);
+=======
+          ...data.talent_profile,
+          full_name: data.talent_profile.display_name;
+        } : undefined;
+      }
+;
+      return transformed_project as Project;
+    } catch (err: any) {
+      console.error ("Error fetching project:", err);
+      toast.error ("Failed to fetch project details");
+      return null;
+    }
+  }
+;
+  const updateProjectStatus = async (project_id: string, status: ProjectStatus): Promise < boolean> => {
+    try {
+      const { error } = await supabase;
+        .from ("projects");
+        .update ({ status });
+        .eq ("id", project_id);
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Update the local state;
+      set_projects (prev =>;
+        prev.map (project => project.id === project_id ? { ...project, status } : project));
+;
+      toast.success (`Project status updated to ${status}`);
+      return true;
+    } catch (err: any) {
+      console.error ("Error updating project status:", err);
+      toast.error ("Failed to update project status");
+      return false;
+    }
+  }
+;
+  // Fetch projects when component mounts or user changes;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      fetch_projects ();
+    }
+  }, [user]);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     projects;
-    isLoading;
+    is_loading;
     error;
+<<<<<<< HEAD
     refetch: fetchProjects;
     getProjectById
 
     updateProjectStatus
 =======
-import { useState, useEffect } from "react",;
-import { supabase } from "@/integrations/supabase/client",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Project, ProjectStatus } from "@/types/projects",;
-import { toast } from "sonner",;
-export function useProjects() {;
-  const { user } = useAuth(),;
-  const [projects, setProjects] = useState<Project[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [error, setError] = useState<string | null>(null),;
-  const fetchProjects = async () => {;
-    if (!user) {;
-      setIsLoading(false),;
-      return;
-    }
-;
-    try {;
-      setIsLoading(true),;
-      // Build the query based on user type;
-      // For clients, get projects they created;
-      // For talents, get projects they're hired for;
-      let query = supabase;
-        .from("projects");
-        .select(`;
-          *,;
-          job:jobs(title, description),;
-          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url),;
-          client_profile:profiles!client_id(display_name, avatar_url);
-        `);
-        .order("created_at", { ascending: false }),;
-      if (user.userType === "jobSeeker" || user.userType === "creator") {;
-        query = query.eq("talent_id", user.id);
-      } else if (user.userType === "employer" || user.userType === "buyer") {;
-        query = query.eq("client_id", user.id);
-      }
-;
-      const { data, error: fetchError } = await query,;
-      if (fetchError) throw fetchError,;
-      // Transform the data to match our project types;
-      const transformedData = data.map((project: any) => ({;
-        ...project,;
-        talent_profile: project.talent_profile ? {;
-          ...project.talent_profile,;
-          full_name: project.talent_profile.display_name;
-        } : undefined;
-      })),;
-      setProjects(transformedData as Project[]),;
-      setError(null);
-    } catch (err: any) {;
-      console.error("Error fetching projects:", err),;
-      setError("Failed to fetch projects: " + err.message),;
-      toast.error("Failed to fetch projects");
-    } finally {;
-      setIsLoading(false);
-    }
-  },;
-  const getProjectById = async (projectId: string): Promise<Project | null> => {;
-    try {;
-      const { data, error } = await supabase;
-        .from("projects");
-        .select(`;
-          *,;
-          job:jobs(title, description),;
-          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url),;
-          client_profile:profiles!client_id(display_name, avatar_url);
-        `);
-        .eq("id", projectId);
-        .single(),;
-      if (error) throw error,;
-      // Transform the data to match our project types;
-      const transformedProject = {;
-        ...data,;
-        talent_profile: data.talent_profile ? {;
-          ...data.talent_profile,;
-          full_name: data.talent_profile.display_name;
-        } : undefined;
-      },;
-      return transformedProject as Project;
-    } catch (err: any) {;
-      console.error("Error fetching project:", err),;
-      toast.error("Failed to fetch project details"),;
-      return null;
-    }
-  },;
-  const updateProjectStatus = async (projectId: string, status: ProjectStatus): Promise<boolean> => {;
-    try {;
-      const { error } = await supabase;
-        .from("projects");
-        .update({ status });
-        .eq("id", projectId),;
-      if (error) throw error,;
-      // Update the local state;
-      setProjects(prev =>;
-        prev.map(project => project.id === projectId ? { ...project, status } : project);
-      ),;
-      toast.success(`Project status updated to ${status}`),;
-      return true;
-    } catch (err: any) {;
-      console.error("Error updating project status:", err),;
-      toast.error("Failed to update project status"),;
-      return false;
-    }
-  },;
-  // Fetch projects when component mounts or user changes;
-  useEffect(() => {;
-    if (user) {;
-      fetchProjects();
-    }
-  }, [user]),;
-  return {;
-    projects,;
-    isLoading,;
-    error,;
-    refetch: fetchProjects;
-    getProjectById;
+    refetch: fetch_projects;
+    getProjectById,
     updateProjectStatus;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 // Sort options for talent directory
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export const SORT_OPTIONS = [
-<<<<<<< HEAD
   { value: 'relevance', label: 'Relevance' }
   { value: 'rating', label: 'Highest Rating' }
   { value: 'experience', label: 'Most Experienced' }
@@ -11,30 +16,31 @@ export const SORT_OPTIONS = [
   { value: 'rating', label: 'Highest Rating' }
   { value: 'experience', label: 'Most Experienced' }
   { value: 'price-low', label: 'Price: Low to High' }
+  { value: 'price-high', label: 'Price: High to Low' }
+<<<<<<< HEAD
+
 =======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+// Sort options for talent directory;
+export const SORT_OPTIONS = [;
   { value: 'relevance', label: 'Relevance' },
   { value: 'rating', label: 'Highest Rating' },
   { value: 'experience', label: 'Most Experienced' },
-  { value: 'price-low', label: 'Price: Low to High' },;
+<<<<<<< HEAD
+  { value: 'price-low', label: 'Price: Low to High' },
   { value: 'price-high', label: 'Price: High to Low' },];  { value: 'relevance', label: 'Relevance' };
   { value: 'rating', label: 'Highest Rating' };
   { value: 'experience', label: 'Most Experienced' };
   { value: 'price-low', label: 'Price: Low to High' };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   { value: 'price-high', label: 'Price: High to Low' }
-
 =======
-
-// Sort options for talent directory;
-export const SORT_OPTIONS = [;
-  { value: 'relevance', label: 'Relevance' },;
-  { value: 'rating', label: 'Highest Rating' },;
-  { value: 'experience', label: 'Most Experienced' },;
-  { value: 'price-low', label: 'Price: Low to High' },;
-  { value: 'price-high', label: 'Price: High to Low' }
-];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  { value: 'price - low', label: 'Price: Low to High' },
+  { value: 'price - high', label: 'Price: High to Low' }, ];  { value: 'relevance', label: 'Relevance' }
+  { value: 'rating', label: 'Highest Rating' }
+  { value: 'experience', label: 'Most Experienced' }
+  { value: 'price - low', label: 'Price: Low to High' }
+  { value: 'price - high', label: 'Price: High to Low' }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

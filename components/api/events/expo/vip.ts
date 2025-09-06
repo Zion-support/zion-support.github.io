@@ -1,39 +1,72 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const allowlist = new Set<string>(
+<<<<<<< HEAD
   [(process.env.EXPO_VIP_ADDRESS |'').toLowerCase()].filter(Boolean)
+=======
+  [(process && process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 );
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-<<<<<<< HEAD
 ) {
+<<<<<<< HEAD
   const address = String(req.query.address |'').toLowerCase();
   if (!address) return res.status(400).json({ allowed: false });
   res.status(200).json({ allowed: allowlist.has(address) });
+=======
+const allowlist = new Set<string>([(process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean));
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const address = String(req.query.address |'').toLowerCase();
-=======
-) {;
-  const address = String(req.query.address || '').toLowerCase();
-  if (!address) return res.status(400).json({ allowed: false });
-  res.status(200).json({ allowed: allowlist.has(address) });
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const address = String(req.query.address || '').toLowerCase();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!address) return res.status(400).json({ allowed: false });
 
   res.status(200).json({ allowed: allowlist.has(address) })
-<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
+  try {
+  const address = String(req && req.query.address || '').toLowerCase();
+  if (!address) return res && res.status(400).json({ allowed: false });
+  res && res.status(200).json({ allowed: allowlist && allowlist.has(address) });
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+  const address = String(req && req.query.address || '').toLowerCase();
+  if (!address) return res && res.status(400).json({ allowed: false });
+  res && res.status(200).json({ allowed: allowlist && allowlist.has(address) })
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
-<<<<<<< HEAD
-
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+const allowlist = new Set < string>(
+  [(process.env.EXPO_VIP_ADDRESS || '').toLowerCase ()].filter (Boolean));
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const address = String (req.query.address || '').toLowerCase ();
+  if (return res.status (400).json ({ allowed: false })) {
+  $2
 }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  res.status (200).json ({ allowed: allowlist.has (address) });
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const address = String (req.query.address || '').toLowerCase ();
+  if (return res.status (400).json ({ allowed: false })) {
+  $2
+}
+  res.status (200).json ({ allowed: allowlist.has (address) });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

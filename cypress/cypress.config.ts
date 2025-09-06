@@ -1,49 +1,66 @@
 <<<<<<< HEAD
 import { defineConfig } from 'cypress';
+
 export default defineConfig({
+=======
+import { define_config } from 'cypress';
+export default define_config ({
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   e2e: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     baseUrl: 'http://localhost:3000', // Standard Next.js port
 
     supportFile: 'cypress/support/e2e.ts'
+=======
+    baseUrl: 'http://localhost:3000', // Standard Next && Next.js port
+    supportFile: 'cypress/support/e2e && e2e.ts',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
+        if (browser && browser.family === 'chromium') {
+          launchOptions && launchOptions.args.push('--disable-ipv6');
 =======
-import { defineConfig } from 'cypress',;
-export default defineConfig({;
-  e2e: {;
-    baseUrl: 'http://localhost:3000', // Standard Next.js port;
-    supportFile: 'cypress/support/e2e.ts',;
-    experimentalModifyObstructiveThirdPartyCode: true,;
-    // Disable IPv6 in Chromium-based browsers to avoid socket errors;
-    setupNodeEvents(on, config) {;
-      on('before:browser:launch', (browser = {}, launchOptions) => {;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-        if (browser.family === 'chromium') {;
-          launchOptions.args.push('--disable-ipv6');
+    base_url: 'http://localhost:3000', // Standard Next.js port;
+    support_file: 'cypress / support / e2e.ts',
+    experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium - based browsers to avoid socket errors;
+    setupNodeEvents (on, config) {
+      on ('before:browser:launch', (browser = {}, launch_options) => {
+        // Check condition
+if ( {) {
+  $2
+}
+          launch_options.args.push ('--disable - ipv6');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
-        return launchOptions;
-<<<<<<< HEAD
-      });export default defineConfig({
+        return launch_options;
+      });export default define_config ({
   e2e: {
+<<<<<<< HEAD
 <<<<<<< HEAD
     baseUrl: 'http://localhost:3000', // Standard Next.js port
 
-=======
-    baseUrl: 'http://localhost:3000', // Standard Next.js port;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     supportFile: 'cypress/support/e2e.ts';
+=======
+    baseUrl: 'http://localhost:3000', // Standard Next && Next.js port
+    supportFile: 'cypress/support/e2e && e2e.ts';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
 
       on('before:browser:launch', (browser = {}, launchOptions) => {
-        if (browser.family === 'chromium') {
-          launchOptions.args.push('--disable-ipv6');        }
+        if (browser && browser.family === 'chromium') {
+          launchOptions && launchOptions.args.push('--disable-ipv6');        }
         return launchOptions
       })
     }
     env: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
       CYPRESS_TEST_USER_EMAIL: process.env.CYPRESS_TEST_USER_EMAIL |'localtest@example.com';
       CYPRESS_TEST_USER_PASSWORD: process.env.CYPRESS_TEST_USER_PASSWORD |'localpassword123';
       CYPRESS_TEST_USER_DISPLAY_NAME: process.env.CYPRESS_TEST_USER_DISPLAY_NAME |'Local Test User';
@@ -51,16 +68,37 @@ export default defineConfig({;
       EXISTING_USER_PASSWORD: process.env.EXISTING_USER_PASSWORD |'password123';
       TEST_USER_NAME: process.env.TEST_USER_NAME |'Test User'
       STRIPE_TEST_CARD: process.env.STRIPE_TEST_CARD |'4242424242424242'}
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      CYPRESS_TEST_USER_EMAIL: process && process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example && example.com';
+      CYPRESS_TEST_USER_PASSWORD: process && process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123';
+      CYPRESS_TEST_USER_DISPLAY_NAME: process && process.env.CYPRESS_TEST_USER_DISPLAY_NAME || 'Local Test User';
+      EXISTING_USER_EMAIL: process && process.env.EXISTING_USER_EMAIL || 'existing@test && test.com';
+      EXISTING_USER_PASSWORD: process && process.env.EXISTING_USER_PASSWORD || 'password123';
+      TEST_USER_NAME: process && process.env.TEST_USER_NAME || 'Test User',
+      STRIPE_TEST_CARD: process && process.env.STRIPE_TEST_CARD || '4242424242424242'};
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     defaultCommandTimeout: 10000
   }
   reporter: 'junit'
   reporterOptions: {
+<<<<<<< HEAD
+    mochaFile: 'cypress/results/junit-[hash].xml',
+    toConsole: true,
+  },
+    },
+=======
     mochaFile: 'cypress/results/junit-[hash].xml'
     toConsole: true
   }
     }
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     env: {
       CYPRESS_TEST_USER_EMAIL:
+<<<<<<< HEAD
         process.env.CYPRESS_TEST_USER_EMAIL |'localtest@example.com'
       CYPRESS_TEST_USER_PASSWORD:
         process.env.CYPRESS_TEST_USER_PASSWORD |'localpassword123'
@@ -76,52 +114,115 @@ export default defineConfig({;
     defaultCommandTimeout: 10000
   }
   reporter: 'junit'
+=======
+        process && process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example && example.com',
+      CYPRESS_TEST_USER_PASSWORD:
+        process && process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123',
+      CYPRESS_TEST_USER_DISPLAY_NAME:
+        process && process.env.CYPRESS_TEST_USER_DISPLAY_NAME || 'Local Test User',
+      EXISTING_USER_EMAIL:
+        process && process.env.EXISTING_USER_EMAIL || 'existing@test && test.com',
+      EXISTING_USER_PASSWORD:
+        process && process.env.EXISTING_USER_PASSWORD || 'password123',
+      TEST_USER_NAME: process && process.env.TEST_USER_NAME || 'Test User',
+      STRIPE_TEST_CARD: process && process.env.STRIPE_TEST_CARD || '4242424242424242',
+    },
+    defaultCommandTimeout: 10000,
+  },
+  reporter: 'junit',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml'
     toConsole: true
   },});    mochaFile: 'cypress/results/junit-[hash].xml';
+=======
+    baseUrl: 'http://localhost:3000', // Standard Next.js port
+    supportFile: 'cypress/support/e2e.ts', experimentalModifyObstructiveThirdPartyCode: true,
+    // Disable IPv6 in Chromium-based browsers to avoid socket errors
+    setupNodeEvents(on, config) {
+      on('before:browser:launch', (browser = {}, launchOptions) => {
+        if (browser.family === 'chromium') {
+          launchOptions.args.push('--disable-ipv6')
+        }
+        return launchOptions
+      })
+    };
+    env: {
+      
+      CYPRESS_TEST_USER_EMAIL: process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com', CYPRESS_TEST_USER_PASSWORD: process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123',
+      CYPRESS_TEST_USER_DISPLAY_NAME: process.env.CYPRESS_TEST_USER_DISPLAY_NAME || 'Local Test User', EXISTING_USER_EMAIL: process.env.EXISTING_USER_EMAIL || 'existing@test.com',
+      EXISTING_USER_PASSWORD: process.env.EXISTING_USER_PASSWORD || 'password123', TEST_USER_NAME: process.env.TEST_USER_NAME || 'Test User',
+      STRIPE_TEST_CARD: process.env.STRIPE_TEST_CARD || '4242424242424242'
+    },
+    defaultCommandTimeout: 10000
+  };
+  reporter: 'junit',
+  reporterOptions: {
+    mochaFile: 'cypress/results/junit-[hash].xml',
+<<<<<<< HEAD
+    toConsole: true,
+  },});    mochaFile: 'cypress/results/junit-[hash].xml';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     toConsole: true
   }
 });
-<<<<<<< HEAD
 
 =======
-import { defineConfig } from 'cypress',;
-export default defineConfig({;
-  e2e: {;
-    baseUrl: 'http://localhost:3000', // Standard Next.js port;
-    supportFile: 'cypress/support/e2e.ts',;
-    experimentalModifyObstructiveThirdPartyCode: true,;
-    // Disable IPv6 in Chromium-based browsers to avoid socket errors;
-    setupNodeEvents(on, config) {;
-      on('before:browser:launch', (browser = {}, launchOptions) => {;
-        if (browser.family === 'chromium') {;
-          launchOptions.args.push('--disable-ipv6');
-        }
-        return launchOptions;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    base_url: 'http://localhost:3000', // Standard Next.js port;
+    support_file: 'cypress / support / e2e.ts';
+    experimentalModifyObstructiveThirdPartyCode: true;
+    // Disable IPv6 in Chromium - based browsers to avoid socket errors;
+    setupNodeEvents (on, config) {
+      on ('before:browser:launch', (browser = {}, launch_options) => {
+        // Check condition
+if ( {) {
+  $2
+}
+          launch_options.args.push ('--disable - ipv6');        }
+        return launch_options;
       });
-    },;
-    env: {;
-      CYPRESS_TEST_USER_EMAIL: process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com',;
-      CYPRESS_TEST_USER_PASSWORD: process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123',;
-      CYPRESS_TEST_USER_DISPLAY_NAME: process.env.CYPRESS_TEST_USER_DISPLAY_NAME || 'Local Test User',;
-      EXISTING_USER_EMAIL: process.env.EXISTING_USER_EMAIL || 'existing@test.com',;
-      EXISTING_USER_PASSWORD: process.env.EXISTING_USER_PASSWORD || 'password123',;
-      TEST_USER_NAME: process.env.TEST_USER_NAME || 'Test User',;
-      STRIPE_TEST_CARD: process.env.STRIPE_TEST_CARD || '4242424242424242'},;
+    }
+    env: {
+      CYPRESS_TEST_USER_EMAIL: process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com';
+      CYPRESS_TEST_USER_PASSWORD: process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123';
+      CYPRESS_TEST_USER_DISPLAY_NAME: process.env.CYPRESS_TEST_USER_DISPLAY_NAME || 'Local Test User';
+      EXISTING_USER_EMAIL: process.env.EXISTING_USER_EMAIL || 'existing@test.com';
+      EXISTING_USER_PASSWORD: process.env.EXISTING_USER_PASSWORD || 'password123';
+      TEST_USER_NAME: process.env.TEST_USER_NAME || 'Test User',
+      STRIPE_TEST_CARD: process.env.STRIPE_TEST_CARD || '4242424242424242'}
     defaultCommandTimeout: 10000;
-  },;
-  reporter: 'junit',;
-  reporterOptions: {;
-    mochaFile: 'cypress/results/junit-[hash].xml';
-    toConsole: true;
+  }
+  reporter: 'junit',
+  reporter_options: {
+    mocha_file: 'cypress / results / junit-[hash].xml',
+    to_console: true,
+  },
+    },
+    env: {
+      CYPRESS_TEST_USER_EMAIL:;
+        process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com',
+      CYPRESS_TEST_USER_PASSWORD:;
+        process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123',
+      CYPRESS_TEST_USER_DISPLAY_NAME:;
+        process.env.CYPRESS_TEST_USER_DISPLAY_NAME || 'Local Test User',
+      EXISTING_USER_EMAIL:;
+        process.env.EXISTING_USER_EMAIL || 'existing@test.com',
+      EXISTING_USER_PASSWORD:;
+        process.env.EXISTING_USER_PASSWORD || 'password123',
+      TEST_USER_NAME: process.env.TEST_USER_NAME || 'Test User',
+      STRIPE_TEST_CARD: process.env.STRIPE_TEST_CARD || '4242424242424242',
+    },
+    defaultCommandTimeout: 10000,
+  },
+  reporter: 'junit',
+  reporter_options: {
+    mocha_file: 'cypress / results / junit-[hash].xml',
+    to_console: true,
+  }, });    mocha_file: 'cypress / results / junit-[hash].xml';
+    to_console: true;
   }
 });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

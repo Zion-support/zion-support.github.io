@@ -1,18 +1,9 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
-import {AspectRatio} from "@/components/ui/aspect-ratio";
-import {Badge} from "@/components/ui/badge";
-import {Star} from "lucide-react";
-import {cn} from "@/lib/utils";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 import { Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 interface ProfileHeroProps {
@@ -20,36 +11,30 @@ interface ProfileHeroProps {
   name: string
   title: string
 
+=======
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+import {AspectRatio} from "@/components/ui/aspect-ratio";
+import {Badge} from "@/components/ui/badge";
+import {Star} from "lucide-react";
+import {cn} from "@/lib/utils";
+interface ProfileHeroProps {;
+  name: string,;
+  title: string,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   avatarUrl?: string;
   coverImageUrl?: string;
   location?: string;
   rating?: number;
   reviewCount?: number;
   aiScore?: number;
-=======
-import { Star } from "lucide-react",
-import { cn } from "@/lib/utils",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-interface ProfileHeroProps {
-  name: string,
-  title: string,
-  avatarUrl?: string,
-  coverImageUrl?: string,
-  location?: string,
-  rating?: number,
-  reviewCount?: number,
-  aiScore?: number,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  profileType: 'service' | 'talent'
+  profileType: 'service' | 'talent';
 }
 <<<<<<< HEAD
+export function ProfileHero({
 =======
 
-<<<<<<< HEAD
-export function ProfileHero({;
+export function ProfileHero(): any ({;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   name;
   title;
   avatarUrl;
@@ -58,21 +43,10 @@ export function ProfileHero({;
   rating;
   reviewCount;
   aiScore;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export function ProfileHero({
-  name,
-  title,
-  avatarUrl,
-  coverImageUrl,
-  location,
-  rating,
-  reviewCount,
-  aiScore,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  profileType
-}: ProfileHeroProps) {
+  profileType;
+}: ProfileHeroProps) {;
   return (
+<<<<<<< HEAD
 
     <div className="w-full overflow-hidden">
       <div className="relative">
@@ -94,62 +68,6 @@ export function ProfileHero({
                 <AvatarImage src={avatarUrl} alt={name} />
               ) : (
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
-<<<<<<< HEAD
-=======
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
-import { AspectRatio } from "@/components/ui/aspect-ratio",;
-import { Badge } from "@/components/ui/badge",;
-import { Star } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-interface ProfileHeroProps {;
-  name: string,;
-  title: string,;
-  avatarUrl?: string,;
-  coverImageUrl?: string,;
-  location?: string,;
-  rating?: number,;
-  reviewCount?: number,;
-  aiScore?: number,;
-  profileType: 'service' | 'talent';
-}
-;
-export function ProfileHero({;
-  name,;
-  title,;
-  avatarUrl,;
-  coverImageUrl,;
-  location,;
-  rating,;
-  reviewCount,;
-  aiScore;
-  profileType;
-}: ProfileHeroProps) {;
-  return (;
-    <div className="w-full overflow-hidden">;
-      <div className="relative">;
-        <AspectRatio ratio={3/1} className="bg-zion-blue-light">;
-          {coverImageUrl ? (;
-            <img;
-              src={coverImageUrl} ;
-              alt={`${name} cover`} ;
-              className="w-full h-full object-cover";
-            />;
-          ) : (;
-            <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />;
-          )}
-        </AspectRatio>;
-        <div className="container px-4 md:px-6">;
-          <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">;
-            <Avatar className="h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30">;
-              {avatarUrl ? (;
-                <AvatarImage src={avatarUrl} alt={name} />;
-              ) : (;
-                <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               )}
@@ -160,22 +78,47 @@ export function ProfileHero({;
                 <Badge
                   variant="outline"
                   className={cn(
-<<<<<<< HEAD
                     "ml-2 border-zion-purple/50 text-zion-cyan";
-<<<<<<< HEAD
 
 =======
-                    "ml-2 border-zion-purple/50 text-zion-cyan",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-                    "ml-2 border-zion-purple/50 text-zion-cyan",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    <div className="w-full overflow-hidden">;
+      <div className="relative">;
+        <AspectRatio ratio={3/1} className="bg-zion-blue-light">;
+          {coverImageUrl ? (;
+            <img
+              src={coverImageUrl} 
+              alt={`${name} cover`} 
+              className="w-full h-full object-cover" 
+            />;
+          ) : (;
+            <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />;
+          )}
+        </AspectRatio>;
+
+        <div className="container px-4 md:px-6">;
+          <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">;
+            <Avatar className="h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30">;
+              {avatarUrl ? (;
+                <AvatarImage src={avatarUrl} alt={name} />;
+              ) : (;
+                <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;
+                  {name && name.substring(0, 2).toUpperCase()}
+                </AvatarFallback>;
+              )}
+            </Avatar>;
+
+            <div className="mt-4 md:mt-0 md:ml-6 md:mb-1">;
+              <div className="flex flex-wrap items-center gap-2 mb-1">;
+                <h1 className="text-2xl md:text-3xl font-bold text-white">{name}</h1>;
+                <Badge
+                  variant="outline" 
+                  className={cn(
+                    "ml-2 border-zion-purple/50 text-zion-cyan"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
-                  )}
-                >
+                  )}>;
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
+<<<<<<< HEAD
                 </Badge>
               </div>
               <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>
@@ -189,21 +132,28 @@ export function ProfileHero({;
                     <span className="text-white font-medium">{rating.toFixed(1)}</span>
                     {reviewCount && (
                       <span className="text-zion-slate-light text-sm">({reviewCount})</span>
+=======
+                </Badge>;
+              </div>;
+
+              <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>;
+
+              <div className="flex flex-wrap items-center gap-3 mt-2">;
+                {location && (;
+                  <span className="text-sm text-zion-slate-light">{location}</span>;
+                )}
+
+                {rating && (;
+                  <div className="flex items-center gap-1">;
+                    <Star className="w-4 h-4 fill-zion-cyan text-zion-cyan" />;
+                    <span className="text-white font-medium">{rating && rating.toFixed(1)}</span>;
+                    {reviewCount && (;
+                      <span className="text-zion-slate-light text-sm">({reviewCount})</span>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     )}
-<<<<<<< HEAD
-                  </div>
-<<<<<<< HEAD
-                )}
-=======
                   </div>;
-=======
-=======
-                  </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
-                
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
                 {aiScore && (
                   <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">
                     AI Match: {aiScore}%
@@ -217,3 +167,94 @@ export function ProfileHero({;
     </div>
   )
 }
+=======
+
+                {aiScore && (;
+                  <div className="px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">;
+                    AI Match: {aiScore}%;
+                  </div>;
+                )}
+=======
+import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
+import { AspectRatio } from '@/components / ui / aspect - ratio';
+import { Badge } from '@/components / ui / badge';
+import { Star } from './lucide-react';
+import { cn } from '@/lib / utils';
+interface ProfileHeroProps {
+  name: string,
+  title: string,
+  avatar_url?: string;
+  coverImageUrl?: string;
+  location?: string;
+  rating?: number;
+  review_count?: number;
+  ai_score?: number;
+  profile_type: 'service' | 'talent';
+}
+export /**
+ * ProfileHero - Function description
+ */
+function ProfileHero() {
+  return (
+    <div className="w - full overflow - hidden">;
+      <div className="relative">;
+        <AspectRatio ratio={3 / 1} className="bg - zion - blue - light">;
+          {coverImageUrl ? (
+            <img;
+              src={coverImageUrl}
+              alt={`${name} cover`}
+              className="w - full h - full object - cover";
+            />) : (
+            <div className="w - full h - full bg - gradient - to - r from - zion - blue via - zion - blue - light to - zion - blue - dark" />)}
+        </AspectRatio>;
+        <div className="container px - 4 md:px - 6">;
+          <div className="flex flex - col md:flex - row md:items - end -mt - 16 md:-mt - 20 relative z - 10 mb - 6 md:mb - 10">;
+            <Avatar className="h - 24 w - 24 md:h - 32 md:w - 32 border - 4 border - zion - blue - dark ring - 2 ring - zion - purple / 30">;
+              {avatar_url ? (
+                <AvatarImage src={avatar_url} alt={name} />) : (
+                <AvatarFallback className="bg - zion - purple / 20 text - zion - cyan text - xl">;
+                  {name.substring (0, 2).toUpperCase ()}
+                </AvatarFallback>)}
+            </Avatar>;
+            <div className="mt - 4 md:mt - 0 md:ml - 6 md:mb - 1">;
+              <div className="flex flex - wrap items - center gap - 2 mb - 1">;
+                <h1 className="text - 2xl md:text - 3xl font - bold text - white">{name}</h1>;
+                <Badge;
+                  variant="outline";
+                  className={cn (
+                    "ml - 2 border - zion - purple / 50 text - zion - cyan";
+                    profile_type === 'service' ? "bg - zion - purple / 10" : "bg - zion - cyan / 10")}
+                >;
+                  {profile_type === 'service' ? 'Service Provider' : 'Talent'}
+                </Badge>;
+              </div>;
+              <h2 className="text - lg md:text - xl text - zion - slate - light mb - 1">{title}</h2>;
+              <div className="flex flex - wrap items - center gap - 3 mt - 2">;
+                {location && (
+                  <span className="text - sm text - zion - slate - light">{location}</span>)}
+                {rating && (
+                  <div className="flex items - center gap - 1">;
+                    <Star className="w - 4 h - 4 fill - zion - cyan text - zion - cyan" />;
+                    <span className="text - white font - medium">{rating.to_fixed (1)}</span>;
+                    {review_count && (
+                      <span className="text - zion - slate - light text - sm">({review_count})</span>)}
+                  </div>)}
+                {ai_score && (
+                  <div className="px - 2 py - 0.5 rounded bg - zion - purple / 20 text - xs font - medium text - zion - cyan">;
+                    AI Match: {ai_score}%;
+                  </div>)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+<<<<<<< HEAD
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

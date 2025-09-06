@@ -1,26 +1,57 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import React from "react";
-type EnhancedLoadingProps = {
+type EnhancedLoadingProps = {;
   lines?: number;
 }
 
-export default function EnhancedLoading({ lines = 3 }: EnhancedLoadingProps) {
+export default function EnhancedLoading(): any ({ lines = 3 }: EnhancedLoadingProps) {;
   return (
-    <div className="space-y-2">
-      {Array.from({ length: lines }).map((_, idx) => (
-        <div key={idx} className="skeleton h-4 rounded" />
+    <div className="space-y-2">;
+      {Array && Array.from({ length: lines }).map((_, idx) => (;
+        <div key={idx} className="skeleton h-4 rounded" />;
       ))}
-<<<<<<< HEAD
     </div>;
-=======
-    </div>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
-<<<<<<< HEAD
-}
 =======
+import React from './react';
+type EnhancedLoadingProps = {
+  lines?: number;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+;
+export default /**
+ * EnhancedLoading - Function description
+ */
+function EnhancedLoading() {
+  return (
+    <div className="space - y-2">;
+      {Array.from ({ length: lines }).map ((_, idx) => (
+        <div key={idx} className="skeleton h - 4 rounded" />))}
+    </div>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}

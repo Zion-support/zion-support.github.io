@@ -1,12 +1,6 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST')
@@ -22,7 +16,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const resp = await openai.chat.completions.create({
         model: 'gpt-4o-mini'
         messages: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
           { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+          { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           { role: 'user', content: String(prompt) }
         ]
       })
@@ -32,106 +33,58 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     // Fallback without API key
     return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' })
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message ?? 'Coach error' })
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
 <<<<<<< HEAD
 =======
-=======
-  };
-};
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default async function handler(req, res) {
+    res.set_header ('AllowPOST'),
+    return res.status (405).end ('Method Not Allowed');
+  }
+  const { prompt } = req.body || {},
+  if (return res.status (400).json ({ error: 'prompt required' }), ) {
+  $2
+}
   try {
-  if (req.method !== '$1') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).end('Method Not Allowed');
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+    const api_key = process.env.OPENAI_API_KEY,
+    // Check condition
+if ( {) {
+  $2
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  const { prompt } = req.body || {};
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-          { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' },;
-          { role: 'user', content: String(prompt)   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+      const { OpenAI } = await import ('openai'),
+      const openai = new OpenAI ({ api_key }),
+      const resp = await openai.chat.completions.create ({
+        model: 'gpt - 4o - mini',
+        messages: [;
+          { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' },
+          { role: 'user', content: String (prompt) }
         ];
-      });
-      const text = resp.choices?.[0]?.message?.content || 'No response';
-      return res.status(200).json({ text });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
+      }),
+      const text = resp.choices?.[0]?.message?.content || 'No response',
+      return res.status (200).json ({ text });
+    }
     // Fallback without API key;
-    return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' });
-  } catch (error) {
-    return res.status(500).json({ error: e?.message ?? 'Coach error' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status (200).json ({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  } catch (e: any) {
+    return res.status (500).json ({ error: e?.message ?? 'Coach error' });
   }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  }
+<<<<<<< HEAD
 }
 =======
-  }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

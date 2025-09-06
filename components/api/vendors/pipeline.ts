@@ -1,35 +1,46 @@
 <<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from "next";
+import { listPipelineForVendor } from "../../../utils/vendor-store";
+=======
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { listPipelineForVendor } from '../../../utils/vendor-store';
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const vendorId = String(req.query.vendorId |"");
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { listPipelineForVendor } from "../../../utils/vendor-store";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const vendorId = String(req.query.vendorId || "");
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!vendorId) return res.status(400).json({ error: "vendorId required" });
+=======
+  const vendorId = String(req && req.query.vendorId || "");
+  if (!vendorId) return res && res.status(400).json({ error: "vendorId required" });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const items = listPipelineForVendor(vendorId);
-  res.status(200).json({ items });
-  res.status(200).json({ items });
+  res && res.status(200).json({ items });
+  res && res.status(200).json({ items });
 }
-<<<<<<< HEAD
-=======
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { listPipelineForVendor } from '../../../utils/vendor-store';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 =======
   const vendorId = String(req.query.vendorId || '');
   if (!vendorId) return res.status(400).json({ error: 'vendorId required' });
   const items = listPipelineForVendor(vendorId);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  res.status(200).json({ items })
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import type { NextApiRequest, NextApiResponse } from './next';
+import { listPipelineForVendor  } from '../../../utils / vendor - store';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  const vendor_id = String (req.query.vendor_id || "");
+  if (return res.status (400).json ({ error: "vendor_id required" })) {
+  $2
+}
+  const items = listPipelineForVendor (vendor_id);
+  res.status (200).json ({ items });
+  res.status (200).json ({ items });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

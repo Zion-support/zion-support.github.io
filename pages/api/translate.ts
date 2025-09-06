@@ -1,13 +1,13 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import OpenAI from 'openai';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import OpenAI from 'openai',;
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -29,10 +29,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const completion = await openai.chat.completions.create({
         model: 'gpt-4o-mini'
         messages: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
           { role: 'system', content: system }
           { role: 'user', content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}` }]
         temperature: 0.2})
       const translated = completion.choices?.[0]?.message?.content?.trim() |''
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+          { role: 'system', content: system },
+          { role: 'user', content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}` }
+        ],
+        temperature: 0.2
+      });
+      const translated = completion.choices?.[0]?.message?.content?.trim() || '';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       results[lng] = translated
     }
     return res.status(200).json(results)
@@ -40,105 +52,55 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error('Translation error', err)
 
     return res.status(500).json({ error: 'Translation failed' })
+  }
+<<<<<<< HEAD
+}
 <<<<<<< HEAD
 =======
 =======
-  };
-};
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
-import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ translation: 'Translated content' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-export default async function handler(req, res) {
-  try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  const { text, targets } = req.body as { text: string, targets: string[] },;
-  if (!text || !Array.isArray(targets) || targets.length === 0) {;
-    return res.status(400).json({ error: 'Invalid input' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+import type { NextApiRequest, NextApiResponse } from 'next',
+import OpenAI from 'openai',
+const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
+  $2
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+  const { text, targets } = req.body as { text: string, targets: string[] },
+  // Check condition
+if (|| targets.length === 0) {) {
+  $2
 }
-;
+    return res.status (400).json ({ error: 'Invalid input' });
+  }
   try {
-    const system = 'You are a professional localization specialist. Maintain meaning, tone, and formatting. Output only the translated text.',;
-    const results: Record<string, string> = {};
-    for (const lng of targets) {;
-      const langName = (;
-        lng.startsWith('pt') ? 'Portuguese' :;
-        lng.startsWith('es') ? 'Spanish' :;
-        lng.startsWith('ar') ? 'Arabic' :;
-        'English';
-      );
-      const completion = await openai.chat.completions.create({;
-        model: 'gpt-4o-mini';
+    const system = 'You are a professional localization specialist. Maintain meaning, tone, and formatting. Output only the translated text.',
+    const results: Record < string, string> = {},
+    for (const lng of targets) {
+      const lang_name = (
+        lng.starts_with ('pt') ? 'Portuguese' :;
+        lng.starts_with ('es') ? 'Spanish' :;
+        lng.starts_with ('ar') ? 'Arabic' :;
+        'English'),
+      const completion = await openai.chat.completions.create ({
+        model: 'gpt - 4o - mini',
         messages: [;
-          { role: 'system', content: system },;
-          { role: 'user', content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}` }],;
-        temperature: 0.2});
-      const translated = completion.choices?.[0]?.message?.content?.trim() || '';
+          { role: 'system', content: system },
+          { role: 'user', content: `Translate this into ${lang_name} in a business - appropriate tone.\n\n${text}` }],
+        temperature: 0.2}),
+      const translated = completion.choices?.[0]?.message?.content?.trim () || '',
       results[lng] = translated;
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    }
+    return res.status (200).json (results);
+  } catch (err: any) {
+    console.error ('Translation error', err),
+    return res.status (500).json ({ error: 'Translation failed' });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    return res.status(200).json(results);
-  } catch (error) {
-    console.error('Translation error', err);
-    return res.status(500).json({ error: 'Translation failed' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  }
-}
-=======
-  }
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
