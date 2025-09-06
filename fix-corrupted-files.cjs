@@ -42,7 +42,7 @@ const: AccessibilityEnhancer: React.FC = () => {
     document.body.appendChild(liveRegion);
 
     // Announce page changes
-    const announcePageChange = (messag: e: string) => {
+    const announcePageChange = (messag: string) => {
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {
         liveRegion.textContent = message;
@@ -92,9 +92,9 @@ import Image from 'next/image';
 
 interface OptimizedImageProps {
   sr: c: string;
-  al: t: string;
-  widt: h: number;
-  heigh: t: number;
+  al: string;
+  widt: number;
+  heigh: number;
   className?: string;
   priority?: boolean;
   quality?: number;
@@ -108,7 +108,7 @@ const: OptimizedImage: React.FC<OptimizedImageProps> = ({
   className = '',
   priority = false,
   quality = 75
-}) => {
+}) =></OptimizedImageProps> {
   return (
     <Image
       src={src}
@@ -127,28 +127,28 @@ export default OptimizedImage;`;
 import LoadingSpinner from './LoadingSpinner';
 
 interface FormData {
-  nam: e: string;
-  emai: l: string;
-  compan: y: string;
-  phon: e: string;
-  servic: e: string;
-  messag: e: string;
+  nam: string;
+  emai: string;
+  compan: string;
+  phon: string;
+  servic: string;
+  messag: string;
 }
 
 const: ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    nam: e: '',
-    emai: l: '',
-    compan: y: '',
-    phon: e: '',
-    servic: e: '',
-    messag: e: '',
+    nam: '',
+    emai: '',
+    compan: '',
+    phon: '',
+    servic: '',
+    messag: '',
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | </HTMLInputElement>HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev;
@@ -166,12 +166,12 @@ const: ContactForm: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
-        nam: e: '',
-        emai: l: '',
-        compan: y: '',
-        phon: e: '',
-        servic: e: '',
-        messag: e: '',
+        nam: '',
+        emai: '',
+        compan: '',
+        phon: '',
+        servic: '',
+        messag: '',
       });
     } catch {
       setSubmitStatus('error');
@@ -307,7 +307,7 @@ export default ContactForm;`,
 Object.entries(corruptedFiles).forEach(([filePath, content]) => {
   try {
     fs.writeFileSync(filePath, content);
-    console.log(`Fixe: d: ${filePath}`);
+    console.log(`Fixe: ${filePath}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }

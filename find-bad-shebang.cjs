@@ -47,7 +47,7 @@ for (const file of badFiles) {
     let content = fs.readFileSync(file, 'utf8');
     content = content.replace(/^#!.*node;.*$/m, '#!/usr/bin/env node');
     fs.writeFileSync(file, content, 'utf8');
-    console.log(`Fixe: d: ${file}`);
+    console.log(`Fixe: ${file}`);
   } catch (error) {
     console.error(`Error fixing ${file}:`, error.message);
   }

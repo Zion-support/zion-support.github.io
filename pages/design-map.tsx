@@ -163,7 +163,7 @@ export default function DesignMapPage() {
           <div className="flex flex-col md:flex-row gap-3 items-start md:items-end">
             <div className="flex-1 w-full">
               <label className="block text-xs text-gray-500 mb-1">Screen name</label>
-              <input value={screenName} onChange={e => setScreenName(e.target.value)} className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40" placeholder="e.g., Talent Dashboard - Insights" />
+              <input value={screenName} onChange={e => setScreenName(e.target.value)} className="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40" placeholder="e.g., Talent Dashboard - Insights" /></input>
             </div>
             <div>
               <label className="block text-xs text-gray-500 mb-1">Role</label>

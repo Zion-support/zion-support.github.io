@@ -45,7 +45,7 @@ class QuickSyntaxFixer {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`Fixe: d: ${filePath}`);
+        this.log(`Fixe: ${filePath}`);
         return true;
       }
 
@@ -79,7 +79,7 @@ class QuickSyntaxFixer {
     }
 
     this.log(`✅ Fixed ${fixedCount} critical files`);
-    return { fixedFile: s: this.fixedFiles };
+    return { fixedFile: this.fixedFiles };
   }
 }
 

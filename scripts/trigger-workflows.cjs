@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+</name>#!/usr/bin/env node
 
 /**
  * Trigger GitHub Workflows

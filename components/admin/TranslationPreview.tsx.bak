@@ -38,7 +38,7 @@ export default function TranslationPreview() {
         placeholder="Enter text to translate..."
         value={text}
         onChange={(e) => setText(e.target.value)}
-      />
+      /></textarea>
       <div className="text-sm text-gray-500">{loading ? 'Translating…' : error ? `Error: ${error}` : 'Ready'}</div>
       <div className="grid md:grid-cols-2 gap-4">
         {targets.map((lng) => (

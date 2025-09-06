@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+</names>#!/usr/bin/env node
 
 /**
  * PM2 Resurrect Hook
