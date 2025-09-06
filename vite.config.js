@@ -1,7 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+<<<<<<< HEAD
 import path from 'path';
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
 export default defineConfig({
   plugins: [react()],
   server: {

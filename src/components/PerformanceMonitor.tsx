@@ -1,10 +1,29 @@
+<<<<<<< HEAD
 import React from 'react';
 export default function PerformanceMonitor() {
+=======
+import React, { useEffect, useState } from 'react';
+import { Activity } from 'lucide-react';
+
+export const PerformanceMonitor: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Only show in development mode
+    if (import.meta.env.DEV) {
+      setIsVisible(true);
+    }
+  }, []);
+
+  if (!isVisible) return null;
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
   return (
     <div className="performance-monitor">
       <p>Performance Monitor</p>
     </div>
   );
+<<<<<<< HEAD
 }
         }
       }
@@ -64,3 +83,6 @@ export default function PerformanceMonitor() {
 
 import React from 'react';
 ;
+=======
+};
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Button from './components/Button'
@@ -8,6 +9,15 @@ import Footer from './components/Footer'
 import About from './pages/About'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
+=======
+import React, { Suspense, lazy, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import ErrorBoundary from './components/ErrorBoundary';
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
 
 const Home = () => (
   <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -57,6 +67,7 @@ const Home = () => (
   </div>
 )
 
+<<<<<<< HEAD
 function App() {
   return (
     <Router>
@@ -77,3 +88,36 @@ function App() {
 }
 
 export default App;
+=======
+const App = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  return (
+    <ErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+          <Header />
+          <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+          
+          <main className="pt-20">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </Suspense>
+          </main>
+          
+          <Footer />
+          <PerformanceMonitor />
+        </div>
+      </Router>
+    </ErrorBoundary>
+  );
+};
+
+export default App;
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140

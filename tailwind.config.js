@@ -4,18 +4,34 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+<<<<<<< HEAD
     './src/**/*.{js,ts,jsx,tsx}'
+=======
+    './src/**/*.{js,ts,jsx,tsx}',
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
   ],
   theme: {
     extend: {
       colors: {
         primary: {
           50: '#eff6ff',
+<<<<<<< HEAD
+=======
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
           500: '#3b82f6',
           600: '#2563eb',
           700: '#1d4ed8',
           800: '#1e40af',
+<<<<<<< HEAD
           900: '#1e3a8a'
+=======
+          900: '#1e3a8a',
+          950: '#172554',
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
         },
         gray: {
           50: '#f9fafb',
@@ -33,7 +49,11 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+<<<<<<< HEAD
         mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+=======
+        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
@@ -42,11 +62,16 @@ module.exports = {
         'float': 'float 6s ease-in-out infinite',
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'bounce-slow': 'bounce 3s infinite',
+<<<<<<< HEAD
         'spin-slow': 'spin 8s linear infinite'
+=======
+        'spin-slow': 'spin 8s linear infinite',
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
+<<<<<<< HEAD
           '100%': { opacity: '1' }
         },
         slideUp: {
@@ -61,26 +86,62 @@ module.exports = {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-20px)' }
         }
+=======
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' },
+        },
+        scaleIn: {
+          '0%': { transform: 'scale(0)' },
+          '100%': { transform: 'scale(1)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
       },
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
+<<<<<<< HEAD
         '128': '32rem'
       },
       borderRadius: {
         '4xl': '2rem',
         '5xl': '2.5rem'
+=======
+        '128': '32rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+        '5xl': '2.5rem',
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
       },
       boxShadow: {
         'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
         'glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)',
+<<<<<<< HEAD
         'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)'
       }
     }
+=======
+        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)',
+      },
+    },
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
   },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
+<<<<<<< HEAD
     require('@tailwindcss/aspect-ratio')
   ]
 };
+=======
+    require('@tailwindcss/aspect-ratio'),
+  ],
+};
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
