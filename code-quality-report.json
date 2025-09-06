@@ -1,28 +1,31 @@
 {
-  "timestamp": "2025-09-05T00:20:16.317Z",
-  "checks": [
+  "timestamp": "2025-09-06T04:25:47.740Z",
+  "stats": {
+    "totalFiles": 8,
+    "totalLines": 137,
+    "functions": 7,
+    "classes": 0,
+    "comments": 5
+  },
+  "issues": [
     {
-      "name": "ziontechgroup-site",
-      "status": "valid",
-      "version": "1.0.0"
+      "file": "/workspace/src/config/seo.js",
+      "line": 4,
+      "type": "long_line",
+      "message": "Line exceeds 120 characters"
     },
     {
-      "name": "node_modules",
-      "status": "missing"
-    },
-    {
-      "name": "tsconfig.json",
-      "status": "exists"
-    },
-    {
-      "name": "eslint-config",
-      "status": "exists",
-      "file": ".eslintrc.js"
-    },
-    {
-      "name": "prettier-config",
-      "status": "exists",
-      "file": ".prettierrc"
+      "file": "/workspace/src/config/seo.js",
+      "line": 5,
+      "type": "long_line",
+      "message": "Line exceeds 120 characters"
     }
+  ],
+  "qualityScore": 96,
+  "recommendations": [
+    "Consider breaking down long functions",
+    "Add more comments to complex code",
+    "Remove console.log statements from production code",
+    "Consider using TypeScript for better type safety"
   ]
 }

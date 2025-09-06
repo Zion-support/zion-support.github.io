@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -143,4 +144,5 @@ try {
 } catch (error) {
   console.error('Script error:', error);
   process.exit(1);
+
 }
