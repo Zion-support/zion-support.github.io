@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 }
@@ -9,14 +5,6 @@
 
 export default function SecurityAudit({ report }: Props) {
 };
-<<<<<<< HEAD
-</pre> </div>) ;
-export default function SecurityAudit(): any ({ report }: Props) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 </pre> </div>)
  
 };
@@ -24,7 +12,6 @@ export default function SecurityAudit(): any ({ report }: Props) {;
 
 
 export default function SecurityAudit({ report }: Props) {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-4">
       <header className="space-y-1">
@@ -35,10 +22,6 @@ export default function SecurityAudit({ report }: Props) {
       {report.generatedAt && (
         <div className="text-sm text-gray-500">Generated at: {new Date(report.generatedAt).toLocaleString()}</div>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
     </div>;
@@ -46,28 +29,16 @@ export default function SecurityAudit({ report }: Props) {
 
 );
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">;
 {JSON && JSON.stringify(report, null, 2)}
       </pre>;
     </div>;
   );
 }
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   );
 }
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 </pre> </div>);
 export default /**
@@ -88,10 +59,6 @@ function SecurityAudit() {
       </pre>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 </pre> </div>)
@@ -121,6 +88,3 @@ export default function SecurityAudit({ report }: Props) {
 }
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

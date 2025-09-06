@@ -1,32 +1,3 @@
-# Zion Tech Group - Technology Solutions Platform
-
-<<<<<<< HEAD
-A modern, responsive website built with React, TypeScript, and Vite, showcasing Zion Tech Group's comprehensive technology solutions.
-
-## 🚀 Features
-
-- **Modern React Architecture** - Built with React 18, TypeScript, and Vite
-- **Responsive Design** - Mobile-first approach with Tailwind CSS
-- **SEO Optimized** - Comprehensive meta tags and structured data
-- **Performance Optimized** - Fast loading with code splitting and optimization
-- **Accessibility** - WCAG compliant with proper ARIA labels
-- **Toast Notifications** - User-friendly feedback system
-- **Loading States** - Enhanced UX with loading indicators
-- **Error Boundaries** - Graceful error handling
-
-## 🛠️ Tech Stack
-
-- **Frontend**: React 18, TypeScript, Vite
-- **Styling**: Tailwind CSS, Custom CSS
-- **Routing**: React Router DOM
-- **Icons**: Lucide React
-- **SEO**: React Helmet Async
-- **Animations**: Framer Motion
-- **Build Tool**: Vite with ESBuild
-- **Package Manager**: npm
-
-## 📦 Installation
-=======
 A modern, responsive website built with Next.js showcasing comprehensive technology services including AI, IT solutions, micro SaaS development, and more.
 
 ## 🚀 Features
@@ -83,7 +54,6 @@ A modern, responsive website built with Next.js showcasing comprehensive technol
 - E-commerce Solutions
 
 ## 🚀 Getting Started
->>>>>>> main
 
 1. Clone the repository:
 ```bash
@@ -91,32 +61,18 @@ git clone https://github.com/Zion-Holdings/zion.app.git
 cd zion.app
 ```
 
-<<<<<<< HEAD
 2. Install dependencies:
 ```bash
 npm install
 ```
-=======
 - Node.js 18+
 - npm or yarn
->>>>>>> main
 
 3. Start the development server:
 ```bash
 npm run dev
 ```
 
-<<<<<<< HEAD
-4. Open your browser and navigate to `http://localhost:3000`
-
-## 🏗️ Build for Production
-
-```bash
-npm run build
-```
-
-The built files will be in the `dist` directory, ready for deployment.
-=======
 1. Clone the repository:
 
 ```bash
@@ -144,12 +100,10 @@ npm run dev
 npm run build
 npm start
 ```
->>>>>>> main
 
 ## 📁 Project Structure
 
 ```
-<<<<<<< HEAD
 src/
 ├── components/          # Reusable UI components
 │   ├── Button.tsx      # Enhanced button component
@@ -198,7 +152,6 @@ Interactive service display cards with:
 - Icon support
 - Responsive design
 
-=======
 ├── pages/                 # Next.js pages
 │   ├── index.tsx         # Homepage
 │   ├── about.tsx         # About page
@@ -215,14 +168,12 @@ Interactive service display cards with:
 └── package.json         # Dependencies and scripts
 ```
 
->>>>>>> main
 ## 🔧 Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
-<<<<<<< HEAD
 - `npm run type-check` - Run TypeScript checks
 
 ## 🌐 Deployment
@@ -271,7 +222,6 @@ The project is configured for deployment on:
 - **Twitter Cards** - Twitter sharing optimization
 - **Sitemap** - Automatic sitemap generation
 - **Robots.txt** - Search engine directives
-=======
 - `npm run lint:fix` - Fix ESLint errors
 
 ## 🎨 Design System
@@ -316,12 +266,14 @@ The project uses a consistent design system with:
 - Lazy loading
 - Bundle analysis
 - Performance monitoring
->>>>>>> main
 
 ## 🤝 Contributing
 
 1. Fork the repository
-<<<<<<< HEAD
+- All contributors and supporters
+
+---
+
 2. Create a feature branch
 3. Make your changes
 4. Add tests if applicable
@@ -352,7 +304,6 @@ We provide comprehensive technology solutions to help businesses transform and s
 ---
 
 Built with ❤️ by the Zion Tech Group team
-=======
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
@@ -378,4 +329,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 Built with ❤️ by the Zion Tech Group team
->>>>>>> main
+**Built with ❤️ by the Zion Tech Group team**

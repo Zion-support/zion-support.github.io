@@ -9,3 +9,6 @@ export default function ModernNavigation({ }: ModernNavigationProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+}
+}
+}

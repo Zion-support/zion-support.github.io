@@ -1,55 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-  FormField,
-
-<<<<<<< HEAD
-interface ContactFieldsProps {
-  control: Control < BasicInfoFormData>;
-}
-
-=======
-
-
-=======
-<<<<<<< HEAD
-
-
-interface ContactFieldsProps {
-  control: Control < BasicInfoFormData>;
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Control} from "react-hook-form";
-import {BasicInfoFormData} from "./schema";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Control } from "react-hook-form",
-import { BasicInfoFormData } from "./schema",
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   FormField,
   FormItem,
@@ -65,15 +13,25 @@ interface ContactFieldsProps {
 }
 
 
-<<<<<<< HEAD
-interface ContactFieldsProps {
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Control } from "react-hook-form",
+import { BasicInfoFormData } from "./schema",
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+interface ContactFieldsProps {
+  control: Control<BasicInfoFormData>;
+}
+
+
 
 interface ContactFieldsProps {
   control: Control<BasicInfoFormData>;
@@ -102,20 +60,11 @@ function ContactFields() {
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Location</FormLabel>;
-<<<<<<< HEAD
-
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Control } from "react-hook-form",;
-<<<<<<< HEAD
-import { BasicInfoFormData } from "./schema";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ContactFieldsProps {;
   control: Control<BasicInfoFormData>;
 }
 
 export function ContactFields(): any ({ control }: ContactFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
       <FormField
@@ -135,7 +84,6 @@ function ContactFields() {
           <FormItem>;
             <FormLabel > Location</FormLabel>;
 
-=======
 import { BasicInfoFormData } from "./schema",;
 ;
 interface ContactFieldsProps {;
@@ -151,26 +99,10 @@ export function ContactFields({ control } ContactFieldsProps) {;
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Location</FormLabel>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <FormControl>;
               <Input placeholder="San Francisco, CA" {...field} />;
             </FormControl>;
             <FormMessage />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Location</FormLabel>
-            <FormControl>
-              <Input placeholder="San Francisco, CA" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
         )}
@@ -181,58 +113,15 @@ export function ContactFields({ control } ContactFieldsProps) {;
       <FormField
         control={control}
         name="website"
-<<<<<<< HEAD
-=======
-          </FormItem>;
-        )}
-      />;
-;
-      <FormField;
-        control={control}
-        name="website";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Website</FormLabel>;
             <FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Input placeholder="https://yourwebsite && yourwebsite.com" {...field} />;
-=======
-              <Input placeholder="https://yourwebsite.com" {...field} />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-              <Input placeholder="https://yourwebsite && yourwebsite.com" {...field} />;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </FormControl>;
             <FormMessage />;
           </FormItem>;
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="website";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Website</FormLabel>;
-            <FormControl>;
-              <Input placeholder="https://yourwebsite.com" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-      <FormField;
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         control={control}
         name="linkedin";
         render={({ field }) => (
@@ -242,101 +131,20 @@ export function ContactFields({ control } ContactFieldsProps) {;
               <Input;
                 placeholder="https://linkedin.com / in / username";
                 {...field}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      />;
-
-      <FormField
-        control={control}
-        name="linkedin"
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>LinkedIn</FormLabel>;
-            <FormControl>;
-              <Input placeholder="https://linkedin && linkedin.com/in/username" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>;
-        )}
-      />;
-
-
-      <FormField
-        control={control}
-        name="github"
-=======
-      />;
-      <FormField
-        control={control}
-        name="linkedin"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>LinkedIn</FormLabel>
-            <FormControl>
-              <Input
-                placeholder="https://linkedin.com/in/username"
-                {...field}
-              />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />;
-;
-      <FormField;
-        control={control}
-        name="github";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>GitHub</FormLabel>;
             <FormControl>;
-<<<<<<< HEAD
-              <Input placeholder="https://github && github.com/username" {...field} />;
-=======
-              <Input placeholder="https://github.com/username" {...field} />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </FormControl>;
             <FormMessage />;
           </FormItem>;
         )}
-<<<<<<< HEAD
-
-      />;
-    </div>;
+      />
+    </div>
   );
-}
-
-=======
-              />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="github";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > GitHub</FormLabel>;
-            <FormControl>;
-              <Input placeholder="https://github.com / username" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  )
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       />
     </div>
   );
@@ -412,9 +220,6 @@ export function ContactFields({ control } ContactFieldsProps) {;
   )
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 ;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

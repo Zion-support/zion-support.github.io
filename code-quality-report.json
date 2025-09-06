@@ -1022,7 +1022,6 @@
       "type": "any",
       "message": "TypeScript any type used - consider more specific typing"
     }
-<<<<<<< HEAD
   ],
   "summary": {
     "consoleLogs": 8,
@@ -1030,7 +1029,5 @@
     "anyTypes": 193
   }
 }
-=======
   ]
 }
->>>>>>> main

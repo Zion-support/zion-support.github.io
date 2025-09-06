@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/api.tsx
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
@@ -22,24 +21,7 @@ export default function APIPage() {
             </div>
           </div>
         </section>
-=======
-import MainLayout from '../components/layout/MainLayout';
-
-const Page = () => {
-  return (
-    <MainLayout
-      title="API Documentation - Zion Tech Group"
-      description="API documentation for Zion Tech Group services"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">API Documentation</h1>
-          <p className="text-xl text-gray-600">This is a placeholder for the API documentation.</p>
-        </div>
->>>>>>> main:pages/docs/api.tsx
       </div>
-    </MainLayout>
+    </Layout>
   );
-};
-
-export default Page;
+}

@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-09-06T17:32:48.376Z",
   "duration": "64s",
   "results": {
@@ -13,7 +12,6 @@
     },
     "builds": {
       "success": true,
-=======
   "timestamp": "2025-09-05T15:52:31.442Z",
   "totalDuration": 19528,
   "successfulPhases": 3,
@@ -22,32 +20,10 @@
     "syntaxFixes": {
       "success": true,
       "duration": 1,
->>>>>>> main
       "errors": []
     },
     "linting": {
       "success": false,
-<<<<<<< HEAD
-      "errors": [
-        "spawnSync /bin/sh ETIMEDOUT"
-      ]
-    },
-    "security": {
-      "issues": [],
-      "fixed": 0
-    },
-    "improvements": [
-      "Created performance monitoring script"
-    ]
-  },
-  "summary": {
-    "testsPassed": 0,
-    "testsFailed": 2,
-    "buildSuccess": true,
-    "lintingSuccess": false,
-    "securityIssuesFixed": 0,
-    "improvementsCreated": 1
-=======
       "duration": 1802,
       "errors": [
         "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:6058) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.34.0\n\nA configuration object specifies rule \"@typescript-eslint/no-unused-vars\", but could not find plugin \"@typescript-eslint\".\n\nCommon causes of this problem include:\n\n1. The \"@typescript-eslint\" plugin is not defined in your configuration file.\n2. The \"@typescript-eslint\" plugin is not defined within the same configuration object in which the \"@typescript-eslint/no-unused-vars\" rule is applied.\n\n"
@@ -86,6 +62,5 @@
       "duration": 5292,
       "errors": []
     }
->>>>>>> main
   }
 }

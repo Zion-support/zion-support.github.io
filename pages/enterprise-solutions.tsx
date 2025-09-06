@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Link from 'next/link';
-import MainLayout from '../src/components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import { BarChart3,Building2,Database,Server,Shield,Users,CheckCircle,ArrowRight } from 'lucide-react';
 

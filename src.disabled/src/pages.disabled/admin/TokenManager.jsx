@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-=======
 import React from 'react';
 interface TokenManagerProps {
   // Add props here as needed
@@ -18,4 +10,3 @@ export default function TokenManager({ }: TokenManagerProps) {
     </div>
   );
 }
->>>>>>> main

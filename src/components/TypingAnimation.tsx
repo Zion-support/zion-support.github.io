@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 
 interface TypingAnimationProps {
   text: string;
@@ -16,7 +15,7 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
   delay = 0,
   className = '',
   showCursor = true,
-  onComplete
+  onComplete,
 }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,35 +33,13 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
       setIsComplete(true);
       onComplete?.();
     }
-  }, [currentIndex, text, speed, isComplete, onComplete]);
-
-  useEffect(() => {
-    if (delay > 0) {
-      const timeout = setTimeout(() => {
-        setCurrentIndex(0);
-      }, delay);
-      return () => clearTimeout(timeout);
-    }
-  }, [delay]);
+  }, [currentIndex, text, speed, onComplete, isComplete]);
 
   return (
-    <motion.span
-      className={className}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <span className={className}>
       {displayedText}
-      {showCursor && (
-        <motion.span
-          animate={{ opacity: [1, 0, 1] }}
-          transition={{ duration: 0.8, repeat: Infinity }}
-          className="ml-1"
-        >
-          |
-        </motion.span>
-      )}
-    </motion.span>
+      {showCursor && <span className="animate-pulse">|</span>}
+    </span>
   );
 };
 

@@ -1,48 +1,3 @@
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-
-import {
-
-import {;
-  Bell,;
-  FileText,;
-  Home,;
-  Mail,;
-  Search,;
-  Settings,;
-=======
-
-=======
-import {
-
-
-
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
-import {
-
-  Bell
-  FileText
-  Home
-  Mail
-  Search
-  Settings
-  Users
-} from "lucide-react";
-import {
-  Sidebar
-  SidebarContent
-  SidebarGroup
-  SidebarMenu
-  SidebarMenuItem
-  SidebarMenuButton
-  SidebarGroupLabel
-  SidebarGroupContent
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Bell,
   FileText,
   Home,
@@ -50,14 +5,6 @@ import {
   Search,
   Settings,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Users,;
-} from "lucide-react";
-=======
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   Bell,
   FileText,
   Home,
@@ -66,7 +13,6 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-reac
   Settings,
   Users,;
 } from "lucide-react";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   Sidebar,;
   SidebarContent,;
@@ -75,26 +21,10 @@ import {;
   SidebarMenuItem,;
   SidebarMenuButton,;
   SidebarGroupLabel,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  SidebarGroupContent,;
-
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "@/components/ui/sidebar";
 
 export function AppSidebar() {;
   return (
-<<<<<<< HEAD
-
-
-        
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 } from "@/components/ui/sidebar";
 export function AppSidebar() {;
   return (
@@ -148,9 +78,6 @@ import {
 
         
         
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -160,15 +87,7 @@ import {
                   <a href="/publish">
                     <FileText size={16} />
                     <span>My Content</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </a>
-=======
                   </Link>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                  </Link>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -176,37 +95,18 @@ import {
                   <a href="/analytics">
                     <Search size={16} />
                     <span>Analytics</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </a>
-=======
                   </Link>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                  </Link>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
         
         
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -216,15 +116,7 @@ import {
                   <a href="/profile">
                     <Users size={16} />
                     <span>Profile</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </a>
-=======
                   </Link>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                  </Link>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -232,28 +124,13 @@ import {
                   <a href="/settings">
                     <Settings size={16} />
                     <span>Settings</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </a>
-=======
                   </Link>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                  </Link>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    </Sidebar>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
   )
@@ -269,14 +146,6 @@ import {;
   SidebarGroupContent} from "@/components/ui/sidebar";
 export function AppSidebar() {;
   return (;
-<<<<<<< HEAD
-  SidebarGroupContent} from "@/components/ui/sidebar",;
-;
-export function AppSidebar() {;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Sidebar>;
       <SidebarContent>;
         <SidebarGroup>;
@@ -285,189 +154,34 @@ export function AppSidebar() {;
             <SidebarMenu>;
               <SidebarMenuItem>;
                 <SidebarMenuButton asChild>;
-<<<<<<< HEAD
-                  <a href="/creator-dashboard">;
-                    <Home size={16} />;
-                    <span>Home</span>;
-<<<<<<< HEAD
-=======
-  Bell,
-  FileText,
-  Home,
-  Mail,
-  Search,
-  Settings,
-  Users,
-} from './lucide-react';
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarMenu,
-  SidebarMenuItem,
-  SidebarMenuButton,
-  SidebarGroupLabel,
-  SidebarGroupContent,
-} from '@/components / ui / sidebar';
-;
-export /**
- * AppSidebar - Function description
- */
-function AppSidebar() {
-  return (
-    <Sidebar>;
-      <SidebarContent>;
-        <SidebarGroup>;
-          <SidebarGroupLabel > Dashboard</SidebarGroupLabel>;
-          <SidebarGroupContent>;
-            <SidebarMenu>;
-              <SidebarMenuItem>;
-                <SidebarMenuButton as_child>;
-                  <a href="/creator - dashboard">;
-                    <Home size={16} />;
-                    <span > Home</span>;
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                <SidebarMenuButton as_child>;
-                  <a href="/messaging">;
-                    <Mail size={16} />;
-                    <span > Messages</span>;
-
-=======
-                <SidebarMenuButton asChild>;
-                  <a href="/messaging">;
-                    <Mail size={16} />;
-                    <span>Messages</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
-<<<<<<< HEAD
-
-                <SidebarMenuButton as_child>;
-                  <a href="/notifications">;
-                    <Bell size={16} />;
-                    <span > Notifications</span>;
-
-=======
-                <SidebarMenuButton asChild>;
-                  <a href="/notifications">;
-                    <Bell size={16} />;
-                    <span>Notifications</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
             </SidebarMenu>;
           </SidebarGroupContent>;
         </SidebarGroup>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <SidebarGroup>;
-          <SidebarGroupLabel > Content</SidebarGroupLabel>;
-          <SidebarGroupContent>;
-            <SidebarMenu>;
-              <SidebarMenuItem>;
-                <SidebarMenuButton as_child>;
-                  <a href="/publish">;
-                    <FileText size={16} />;
-                    <span > My Content</span>;
-
-=======
-        ;
-        <SidebarGroup>;
-          <SidebarGroupLabel>Content</SidebarGroupLabel>;
-          <SidebarGroupContent>;
-            <SidebarMenu>;
-              <SidebarMenuItem>;
-                <SidebarMenuButton asChild>;
-                  <a href="/publish">;
-                    <FileText size={16} />;
-                    <span>My Content</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                <SidebarMenuButton as_child>;
-                  <a href="/analytics">;
-                    <Search size={16} />;
-                    <span > Analytics</span>;
-
-=======
-                <SidebarMenuButton asChild>;
-                  <a href="/analytics">;
-                    <Search size={16} />;
-                    <span>Analytics</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
             </SidebarMenu>;
           </SidebarGroupContent>;
         </SidebarGroup>;
-<<<<<<< HEAD
-
-        <SidebarGroup>;
-          <SidebarGroupLabel > Settings</SidebarGroupLabel>;
-          <SidebarGroupContent>;
-            <SidebarMenu>;
-              <SidebarMenuItem>;
-                <SidebarMenuButton as_child>;
-                  <a href="/profile">;
-                    <Users size={16} />;
-                    <span > Profile</span>;
-
-=======
-        ;
-        <SidebarGroup>;
-          <SidebarGroupLabel>Settings</SidebarGroupLabel>;
-          <SidebarGroupContent>;
-            <SidebarMenu>;
-              <SidebarMenuItem>;
-                <SidebarMenuButton asChild>;
-                  <a href="/profile">;
-                    <Users size={16} />;
-                    <span>Profile</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
-<<<<<<< HEAD
-
-                <SidebarMenuButton as_child>;
-                  <a href="/settings">;
-                    <Settings size={16} />;
-                    <span > Settings</span>;
-
-=======
-                <SidebarMenuButton asChild>;
-                  <a href="/settings">;
-                    <Settings size={16} />;
-                    <span>Settings</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
@@ -475,23 +189,13 @@ function AppSidebar() {
           </SidebarGroupContent>;
         </SidebarGroup>;
       </SidebarContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     </Sidebar>
 
 
     </Sidebar>;
   );
-<<<<<<< HEAD
-=======
-    </Sidebar>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-=======
     </Sidebar>);
 }
     </Sidebar>);
@@ -514,9 +218,6 @@ return (<Sidebar> <SidebarContent> <SidebarGroup> <SidebarGroupLabel>Dashboard</
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   );
 }
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

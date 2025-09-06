@@ -1,24 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/pages_disabled/accessibility.tsx
-import React from 'react';
-=======
-import * as React from 'react';
-import MainLayout from '../components/layout/MainLayout';
-import {
-  Eye, 
-  Ear, 
-  Hand, 
-  Brain, 
-  CheckCircle, 
-  AlertTriangle,
-  Globe,
-  Users,
-  Award,
-  Target,
-  Heart,
-  FileText,
-  Settings
-} from 'lucide-react';
->>>>>>> main:pages_disabled/accessibility.tsx
 
 interface AccessibilityProps {
   className?: string;

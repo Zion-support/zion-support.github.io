@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
 
 interface ParallaxSectionProps {
   children: React.ReactNode;
@@ -12,42 +11,64 @@ const ParallaxSection: React.FC<ParallaxSectionProps> = ({
   children,
   speed = 0.5,
   className = '',
-  direction = 'up'
+  direction = 'up',
 }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"]
-  });
+  const elementRef = useRef<HTMLDivElement>(null);
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (elementRef.current) {
+        const rect = elementRef.current.getBoundingClientRect();
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -speed;
+        
+        switch (direction) {
+          case 'up':
+            setOffset(rate);
+            break;
+          case 'down':
+            setOffset(-rate);
+            break;
+          case 'left':
+            setOffset(rate);
+            break;
+          case 'right':
+            setOffset(-rate);
+            break;
+          default:
+            setOffset(rate);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [speed, direction]);
 
   const getTransform = () => {
-    const baseTransform = scrollYProgress.get() * 100 * speed;
-    
     switch (direction) {
       case 'up':
-        return useTransform(scrollYProgress, [0, 1], [100 * speed, -100 * speed]);
       case 'down':
-        return useTransform(scrollYProgress, [0, 1], [-100 * speed, 100 * speed]);
+        return `translateY(${offset}px)`;
       case 'left':
-        return useTransform(scrollYProgress, [0, 1], [100 * speed, -100 * speed]);
       case 'right':
-        return useTransform(scrollYProgress, [0, 1], [-100 * speed, 100 * speed]);
+        return `translateX(${offset}px)`;
       default:
-        return useTransform(scrollYProgress, [0, 1], [100 * speed, -100 * speed]);
+        return `translateY(${offset}px)`;
     }
   };
 
-  const y = direction === 'up' || direction === 'down' ? getTransform() : 0;
-  const x = direction === 'left' || direction === 'right' ? getTransform() : 0;
-
   return (
-    <motion.div
-      ref={ref}
-      style={{ y, x }}
+    <div
+      ref={elementRef}
       className={className}
+      style={{
+        transform: getTransform(),
+      }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 };
 

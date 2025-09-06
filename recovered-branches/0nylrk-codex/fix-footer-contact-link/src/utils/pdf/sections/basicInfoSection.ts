@@ -1,51 +1,16 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { jsPDF  } from 'jspdf';
 import { ResumeBasicInfo  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addBasicInfoSection(
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {jsPDF} from 'jspdf';
 import {ResumeBasicInfo} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addBasicInfoSection(;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   doc: jsPDF;
   basicInfo: ResumeBasicInfo;
   colors: PdfThemeColors
 ): number {
   // Add header with name and title
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  doc && doc.setFontSize(24);
-  doc && doc.setTextColor(colors && colors.heading),
-  doc && doc.text(basicInfo && basicInfo.title || 'Resume', 20, 20);
-  
-  let yPos = 30;
-  
-  if (basicInfo && basicInfo.headline) {
-    doc && doc.setFontSize(14);
-    doc && doc.setTextColor(colors && colors.subheading);
-    doc && doc.text(basicInfo && basicInfo.headline, 20, yPos);
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     yPos += 5
   }
   // Add horizontal line divider
@@ -54,11 +19,6 @@ export function addBasicInfoSection(;
   doc && doc.line(20, yPos, 190, yPos);
   yPos += 10;
   // Add summary if available
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     yPos += 5
   }
   // Add horizontal line divider
@@ -133,9 +93,6 @@ export function addBasicInfoSection(;
     const summaryLines = doc && doc.splitTextToSize(basicInfo && basicInfo.summary, 170);
     doc && doc.text(summaryLines, 20, yPos);
     yPos += (summaryLines && summaryLines.length * 6) + 10
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   return yPos
 import {jsPDF} from 'jspdf';
@@ -181,11 +138,7 @@ if ( {) {
     y_pos += (summary_lines.length * 6) + 10;
   }
   return y_pos;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-=======
 }
 
 import { jsPDF } from 'jspdf',;
@@ -238,7 +191,4 @@ yPos += 10;
   }
   return yPos
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

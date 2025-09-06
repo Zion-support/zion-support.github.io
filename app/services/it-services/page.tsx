@@ -1,385 +1,71 @@
 import React from 'react';
-import Link from 'next/link';
 
 export const metadata = {
-  title: 'IT Services | Zion Tech Group',
-  description: 'Comprehensive IT solutions including cloud migration, DevOps, cybersecurity, and infrastructure management. 24/7 support with 99.9% uptime guarantee. Starting at $3,000/month.',
-  keywords: 'IT services, cloud migration, DevOps, cybersecurity, infrastructure management, IT consulting, system administration'
+  title: 'IT Services & Solutions | Zion Tech Group',
+  description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and enterprise solutions. 24/7 support with 99.9% uptime guarantee.',
+  keywords: 'IT services, cloud migration, DevOps, cybersecurity, infrastructure management, enterprise IT, cloud consulting, SRE'
 };
 
-export default function ITServicesPage() {
-  return (
-    <div className="space-y-16">
-      {/* Hero Section */}
-      <section className="text-center py-16 bg-gradient-to-br from-gray-50 to-blue-100 rounded-lg">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          IT Services & Solutions
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Comprehensive IT solutions to modernize your infrastructure, enhance security, and optimize performance. From cloud migration to 24/7 support, we keep your systems running smoothly.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=IT Services Consultation"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Get Free Consultation
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-        </div>
-      </section>
-
-      {/* Service Categories */}
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our IT Service Categories</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            End-to-end IT solutions designed to keep your business running efficiently and securely.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ServiceCategoryCard
-            icon="☁️"
-            title="Cloud Services"
-            description="Complete cloud migration, optimization, and management solutions"
-            services={[
-              "AWS/Azure/GCP Migration",
-              "Cloud Architecture Design",
-              "Cost Optimization",
-              "Multi-Cloud Strategy",
-              "Cloud Security",
-              "Disaster Recovery"
-            ]}
-            pricing="From $2,500/month"
-          />
-          <ServiceCategoryCard
-            icon="🔧"
-            title="DevOps & CI/CD"
-            description="Automated deployment pipelines and infrastructure as code"
-            services={[
-              "CI/CD Pipeline Setup",
-              "Infrastructure as Code",
-              "Container Orchestration",
-              "Monitoring & Logging",
-              "Automated Testing",
-              "Release Management"
-            ]}
-            pricing="From $3,000/month"
-          />
-          <ServiceCategoryCard
-            icon="🔒"
-            title="Cybersecurity"
-            description="Comprehensive security solutions to protect your business"
-            services={[
-              "Security Assessment",
-              "Penetration Testing",
-              "Vulnerability Management",
-              "Incident Response",
-              "Compliance Auditing",
-              "Security Training"
-            ]}
-            pricing="From $2,000/month"
-          />
-          <ServiceCategoryCard
-            icon="🖥️"
-            title="Infrastructure Management"
-            description="Complete infrastructure setup, monitoring, and maintenance"
-            services={[
-              "Server Management",
-              "Network Design",
-              "Database Administration",
-              "Backup Solutions",
-              "Performance Optimization",
-              "Hardware Procurement"
-            ]}
-            pricing="From $1,500/month"
-          />
-          <ServiceCategoryCard
-            icon="📱"
-            title="Help Desk & Support"
-            description="24/7 technical support and help desk services"
-            services={[
-              "24/7 Support Desk",
-              "Remote Support",
-              "User Training",
-              "Issue Resolution",
-              "Knowledge Base",
-              "SLA Management"
-            ]}
-            pricing="From $1,000/month"
-          />
-          <ServiceCategoryCard
-            icon="📊"
-            title="IT Consulting"
-            description="Strategic IT planning and technology roadmaps"
-            services={[
-              "IT Strategy Planning",
-              "Technology Assessment",
-              "Digital Transformation",
-              "Vendor Management",
-              "Budget Planning",
-              "ROI Analysis"
-            ]}
-            pricing="From $200/hour"
-          />
-        </div>
-      </section>
-
-      {/* Pricing Plans */}
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">IT Service Plans</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Flexible IT service plans designed to meet your specific needs and budget.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <ITPricingCard
-            name="Essential"
-            price="$3,000"
-            period="month"
-            description="Perfect for small businesses and startups"
-            features={[
-              "Basic infrastructure monitoring",
-              "Email support (8x5)",
-              "Monthly security updates",
-              "Backup management",
-              "Basic cloud services",
-              "Quarterly reviews"
-            ]}
-            cta="Get Started"
-            popular={false}
-          />
-          <ITPricingCard
-            name="Professional"
-            price="$7,500"
-            period="month"
-            description="Most popular for growing businesses"
-            features={[
-              "Advanced monitoring & alerting",
-              "Priority support (24x7)",
-              "Weekly security updates",
-              "Automated backups",
-              "Cloud optimization",
-              "Monthly reviews",
-              "DevOps support"
-            ]}
-            cta="Get Started"
-            popular={true}
-          />
-          <ITPricingCard
-            name="Enterprise"
-            price="$15,000"
-            period="month"
-            description="For large organizations with complex needs"
-            features={[
-              "Comprehensive monitoring",
-              "Dedicated support team",
-              "Real-time security updates",
-              "Disaster recovery",
-              "Multi-cloud management",
-              "Weekly reviews",
-              "Custom solutions"
-            ]}
-            cta="Contact Sales"
-            popular={false}
-          />
-        </div>
-      </section>
-
-      {/* Technology Stack */}
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Technology Expertise</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We work with the latest technologies and tools to deliver cutting-edge IT solutions.
-          </p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-          {[
-            { name: "AWS", icon: "☁️", category: "Cloud" },
-            { name: "Azure", icon: "🔵", category: "Cloud" },
-            { name: "Google Cloud", icon: "🌐", category: "Cloud" },
-            { name: "Docker", icon: "🐳", category: "Containers" },
-            { name: "Kubernetes", icon: "⚙️", category: "Orchestration" },
-            { name: "Terraform", icon: "🏗️", category: "IaC" },
-            { name: "Jenkins", icon: "🔧", category: "CI/CD" },
-            { name: "GitLab", icon: "🦊", category: "DevOps" },
-            { name: "Ansible", icon: "🤖", category: "Automation" },
-            { name: "Prometheus", icon: "📊", category: "Monitoring" },
-            { name: "Grafana", icon: "📈", category: "Visualization" },
-            { name: "ELK Stack", icon: "🔍", category: "Logging" }
-          ].map((tech, index) => (
-            <TechCard key={index} name={tech.name} icon={tech.icon} category={tech.category} />
-          ))}
-        </div>
-      </section>
-
-      {/* Success Metrics */}
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven IT Results</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our IT services deliver measurable improvements in system reliability, security, and performance.
-          </p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <MetricCard
-            number="99.9%"
-            label="Uptime Guarantee"
-            description="System availability and reliability"
-          />
-          <MetricCard
-            number="50%"
-            label="Cost Reduction"
-            description="Average IT cost savings for clients"
-          />
-          <MetricCard
-            number="24/7"
-            label="Support Coverage"
-            description="Round-the-clock technical support"
-          />
-          <MetricCard
-            number="100%"
-            label="Security Compliance"
-            description="Clients meeting security standards"
-          />
-        </div>
-      </section>
-
-      {/* Case Studies */}
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            See how we've helped businesses transform their IT infrastructure and operations.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <CaseStudyCard
-            company="E-commerce Platform"
-            challenge="Legacy infrastructure causing frequent outages"
-            solution="Complete cloud migration to AWS with auto-scaling"
-            result="99.9% uptime, 60% cost reduction"
-            industry="E-commerce"
-          />
-          <CaseStudyCard
-            company="Financial Services"
-            challenge="Security compliance and data protection"
-            solution="Comprehensive security audit and implementation"
-            result="100% compliance, zero security incidents"
-            industry="Finance"
-          />
-          <CaseStudyCard
-            company="Healthcare Provider"
-            challenge="HIPAA compliance and system integration"
-            solution="Secure cloud infrastructure with compliance monitoring"
-            result="HIPAA compliant, 40% efficiency gain"
-            industry="Healthcare"
-          />
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our IT Service Process</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            A proven methodology to ensure successful IT implementations and ongoing support.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <ProcessStep
-            step="1"
-            title="Assessment"
-            description="Comprehensive analysis of your current IT infrastructure and requirements"
-          />
-          <ProcessStep
-            step="2"
-            title="Planning"
-            description="Detailed project plan with timelines, milestones, and resource allocation"
-          />
-          <ProcessStep
-            step="3"
-            title="Implementation"
-            description="Careful execution of the plan with minimal disruption to your business"
-          />
-          <ProcessStep
-            step="4"
-            title="Support"
-            description="Ongoing monitoring, maintenance, and support to ensure optimal performance"
-          />
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Modernize Your IT Infrastructure?</h2>
-        <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Let our expert team help you build a robust, secure, and scalable IT environment.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=IT Services - Free Consultation"
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Get Free Consultation
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-        </div>
-        <div className="mt-8 text-sm">
-          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-          <p>Email: kleber@ziontechgroup.com</p>
-        </div>
-      </section>
-    </div>
-  );
-}
-
-function ServiceCategoryCard({ icon, title, description, services, pricing }: {
-  icon: string;
+interface ITServiceProps {
   title: string;
   description: string;
-  services: string[];
-  pricing: string;
-}) {
+  price: string;
+  features: string[];
+  benefits: string[];
+  icon: string;
+  href: string;
+}
+
+function ITService({ title, description, price, features, benefits, icon, href }: ITServiceProps) {
   return (
-    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+    <a
+      href={href}
+      className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 hover:border-blue-300"
+    >
+      <div className="flex items-center mb-4">
+        <span className="text-3xl mr-4">{icon}</span>
+        <div>
+          <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
+          <div className="text-lg font-bold text-blue-600">{price}</div>
+        </div>
+      </div>
       <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-2 mb-4">
-        {services.map((service, index) => (
-          <li key={index} className="text-sm text-gray-600 flex items-center">
-            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-            {service}
-          </li>
-        ))}
-      </ul>
-      <div className="text-lg font-semibold text-blue-600">{pricing}</div>
-    </div>
+      <div className="mb-4">
+        <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
+        <ul className="space-y-1">
+          {features.map((feature, index) => (
+            <li key={index} className="text-sm text-gray-600 flex items-center">
+              <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+              {feature}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h4 className="text-sm font-semibold text-gray-900 mb-2">Benefits:</h4>
+        <div className="flex flex-wrap gap-1">
+          {benefits.map((benefit, index) => (
+            <span key={index} className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">
+              {benefit}
+            </span>
+          ))}
+        </div>
+      </div>
+    </a>
   );
 }
 
-function ITPricingCard({ name, price, period, description, features, cta, popular }: {
+interface PricingTierProps {
   name: string;
   price: string;
   period: string;
   description: string;
   features: string[];
+  popular?: boolean;
   cta: string;
-  popular: boolean;
-}) {
+}
+
+function PricingTier({ name, price, period, description, features, popular = false, cta }: PricingTierProps) {
   return (
     <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} shadow-lg`}>
       {popular && (
@@ -421,82 +107,375 @@ function ITPricingCard({ name, price, period, description, features, cta, popula
   );
 }
 
-function TechCard({ name, icon, category }: {
-  name: string;
-  icon: string;
-  category: string;
-}) {
+export default function ITServicesPage() {
   return (
-    <div className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-      <div className="text-2xl mb-2">{icon}</div>
-      <h3 className="font-semibold text-gray-900 mb-1">{name}</h3>
-      <p className="text-xs text-gray-600">{category}</p>
-    </div>
-  );
-}
+    <div className="space-y-16">
+      {/* Hero Section */}
+      <section className="text-center py-16 bg-gradient-to-br from-green-50 to-blue-100 rounded-lg">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          IT Services & Solutions
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Complete IT infrastructure, cloud solutions, and digital transformation services to modernize your business operations. 24/7 support with 99.9% uptime guarantee.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=IT Services Consultation"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get Free IT Consultation
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+        </div>
+      </section>
 
-function MetricCard({ number, label, description }: {
-  number: string;
-  label: string;
-  description: string;
-}) {
-  return (
-    <div className="text-center p-6 bg-white rounded-lg shadow-md border border-gray-200">
-      <div className="text-4xl font-bold text-blue-600 mb-2">{number}</div>
-      <div className="text-lg font-semibold text-gray-900 mb-1">{label}</div>
-      <div className="text-sm text-gray-600">{description}</div>
-    </div>
-  );
-}
+      {/* IT Services Grid */}
+      <section className="py-12">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our IT Services</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Comprehensive IT solutions to keep your business running smoothly and securely.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ITService
+            title="Cloud Migration & Optimization"
+            description="Seamless migration to AWS, Azure, or Google Cloud with zero downtime and cost optimization"
+            price="Starting at $5,000"
+            features={[
+              "Infrastructure assessment",
+              "Migration planning & execution",
+              "Data migration & validation",
+              "Application modernization",
+              "Cost optimization analysis"
+            ]}
+            benefits={["Reduced Costs", "Better Scalability", "Enhanced Security", "Improved Performance"]}
+            icon="☁️"
+            href="/services/cloud-migration"
+          />
+          <ITService
+            title="DevOps & CI/CD Implementation"
+            description="Automated deployment pipelines, infrastructure as code, and continuous integration"
+            price="Starting at $3,000"
+            features={[
+              "CI/CD pipeline setup",
+              "Infrastructure as code",
+              "Container orchestration",
+              "Automated testing",
+              "Monitoring & alerting"
+            ]}
+            benefits={["Faster Deployments", "Reduced Errors", "Better Collaboration", "Automated Testing"]}
+            icon="⚙️"
+            href="/services/ci-cd-pipeline-builder"
+          />
+          <ITService
+            title="Cybersecurity Suite"
+            description="Comprehensive security assessment, implementation, and ongoing monitoring"
+            price="Starting at $2,000"
+            features={[
+              "Security assessment & audit",
+              "Penetration testing",
+              "Vulnerability scanning",
+              "Compliance management",
+              "Security training & awareness"
+            ]}
+            benefits={["Enhanced Security", "Compliance", "Risk Reduction", "Peace of Mind"]}
+            icon="🔒"
+            href="/services/cybersecurity-suite"
+          />
+          <ITService
+            title="Mobile App Development"
+            description="Native and cross-platform mobile app development for iOS and Android"
+            price="Starting at $5,000"
+            features={[
+              "iOS & Android development",
+              "Cross-platform solutions",
+              "App store optimization",
+              "Push notifications",
+              "Analytics integration"
+            ]}
+            benefits={["Mobile Presence", "User Engagement", "Revenue Growth", "Brand Visibility"]}
+            icon="📱"
+            href="/services/mobile-development"
+          />
+          <ITService
+            title="API Development & Integration"
+            description="RESTful APIs, GraphQL, and microservices architecture for modern applications"
+            price="Starting at $2,000"
+            features={[
+              "RESTful API design",
+              "GraphQL implementation",
+              "Microservices architecture",
+              "API documentation",
+              "Performance optimization"
+            ]}
+            benefits={["Better Integration", "Scalability", "Developer Experience", "Future-Proof"]}
+            icon="🔗"
+            href="/services/api-testing-suite"
+          />
+          <ITService
+            title="Database Solutions"
+            description="Database design, optimization, migration, and management services"
+            price="Starting at $1,500"
+            features={[
+              "Database design & architecture",
+              "Performance optimization",
+              "Data migration",
+              "Backup & recovery",
+              "Monitoring & maintenance"
+            ]}
+            benefits={["Better Performance", "Data Security", "Scalability", "Reliability"]}
+            icon="🗄️"
+            href="/services/data-analytics"
+          />
+          <ITService
+            title="Network Infrastructure"
+            description="Network design, implementation, and management for optimal connectivity and security"
+            price="Starting at $3,500"
+            features={[
+              "Network design & planning",
+              "Firewall configuration",
+              "VPN setup",
+              "Network monitoring",
+              "Security hardening"
+            ]}
+            benefits={["Better Connectivity", "Enhanced Security", "Improved Performance", "Reliability"]}
+            icon="🌐"
+            href="/services/network-infrastructure"
+          />
+          <ITService
+            title="IT Support & Helpdesk"
+            description="24/7 technical support and helpdesk services for your business operations"
+            price="Starting at $1,200"
+            features={[
+              "24/7 technical support",
+              "Remote assistance",
+              "Issue tracking & resolution",
+              "User training",
+              "Knowledge base management"
+            ]}
+            benefits={["24/7 Support", "Quick Resolution", "User Satisfaction", "Reduced Downtime"]}
+            icon="🎧"
+            href="/services/helpdesk-platform"
+          />
+          <ITService
+            title="Disaster Recovery & Backup"
+            description="Comprehensive backup solutions and disaster recovery planning to protect your data"
+            price="Starting at $2,500"
+            features={[
+              "Backup strategy design",
+              "Automated backup systems",
+              "Disaster recovery planning",
+              "Data replication",
+              "Recovery testing"
+            ]}
+            benefits={["Data Protection", "Business Continuity", "Risk Mitigation", "Peace of Mind"]}
+            icon="💾"
+            href="/services/disaster-recovery"
+          />
+        </div>
+      </section>
 
-function CaseStudyCard({ company, challenge, solution, result, industry }: {
-  company: string;
-  challenge: string;
-  solution: string;
-  result: string;
-  industry: string;
-}) {
-  return (
-    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-      <div className="flex items-center mb-4">
-        <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-          <span className="text-blue-600 font-bold text-lg">{company.charAt(0)}</span>
+      {/* Technology Stack */}
+      <section className="py-12 bg-gray-50 rounded-lg">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Technology Expertise</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            We work with the latest technologies and frameworks to deliver cutting-edge solutions.
+          </p>
         </div>
-        <div>
-          <h4 className="font-semibold text-gray-900">{company}</h4>
-          <p className="text-sm text-gray-600">{industry}</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          {[
+            { name: "AWS", icon: "☁️", description: "Cloud platform" },
+            { name: "Azure", icon: "🔵", description: "Microsoft cloud" },
+            { name: "Google Cloud", icon: "🌐", description: "Google platform" },
+            { name: "Docker", icon: "🐳", description: "Containerization" },
+            { name: "Kubernetes", icon: "⚙️", description: "Orchestration" },
+            { name: "Terraform", icon: "🏗️", description: "Infrastructure" },
+            { name: "Jenkins", icon: "🔧", description: "CI/CD" },
+            { name: "GitLab", icon: "🦊", description: "DevOps platform" },
+            { name: "MongoDB", icon: "🍃", description: "NoSQL database" },
+            { name: "PostgreSQL", icon: "🐘", description: "SQL database" },
+            { name: "Redis", icon: "🔴", description: "Caching" },
+            { name: "Elasticsearch", icon: "🔍", description: "Search engine" }
+          ].map((tech, index) => (
+            <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
+              <div className="text-2xl mb-2">{tech.icon}</div>
+              <h3 className="font-semibold text-gray-900 mb-1">{tech.name}</h3>
+              <p className="text-xs text-gray-600">{tech.description}</p>
+            </div>
+          ))}
         </div>
-      </div>
-      <div className="space-y-3">
-        <div>
-          <h5 className="font-semibold text-gray-900 mb-1">Challenge:</h5>
-          <p className="text-sm text-gray-600">{challenge}</p>
-        </div>
-        <div>
-          <h5 className="font-semibold text-gray-900 mb-1">Solution:</h5>
-          <p className="text-sm text-gray-600">{solution}</p>
-        </div>
-        <div>
-          <h5 className="font-semibold text-gray-900 mb-1">Result:</h5>
-          <p className="text-sm text-green-600 font-semibold">{result}</p>
-        </div>
-      </div>
-    </div>
-  );
-}
+      </section>
 
-function ProcessStep({ step, title, description }: {
-  step: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="text-center">
-      <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-        {step}
-      </div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      {/* Process */}
+      <section className="py-12">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our IT Process</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            We follow a systematic approach to ensure your IT infrastructure is robust, secure, and scalable.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            {
+              step: "01",
+              title: "Assessment & Planning",
+              description: "We analyze your current IT infrastructure and create a comprehensive improvement plan."
+            },
+            {
+              step: "02",
+              title: "Design & Architecture",
+              description: "Our experts design a scalable and secure IT architecture tailored to your needs."
+            },
+            {
+              step: "03",
+              title: "Implementation",
+              description: "We implement the solution with minimal disruption to your business operations."
+            },
+            {
+              step: "04",
+              title: "Monitoring & Support",
+              description: "Ongoing monitoring, maintenance, and support to ensure optimal performance."
+            }
+          ].map((phase, index) => (
+            <div key={index} className="text-center">
+              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                {phase.step}
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">{phase.title}</h3>
+              <p className="text-gray-600">{phase.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-12 bg-gray-50 rounded-lg">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">IT Services Pricing</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Transparent pricing for all IT services. Choose the plan that fits your needs and budget.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <PricingTier
+            name="Basic"
+            price="$2,000"
+            period="month"
+            description="Essential IT services for small businesses"
+            features={[
+              "Basic cloud setup",
+              "Email & office solutions",
+              "Basic security measures",
+              "Monthly maintenance",
+              "Email support"
+            ]}
+            cta="Get Started"
+          />
+          <PricingTier
+            name="Professional"
+            price="$8,000"
+            period="month"
+            description="Most popular for growing businesses"
+            features={[
+              "Advanced cloud solutions",
+              "DevOps implementation",
+              "Security monitoring",
+              "24/7 support",
+              "Performance optimization",
+              "Backup & recovery"
+            ]}
+            popular={true}
+            cta="Get Started"
+          />
+          <PricingTier
+            name="Enterprise"
+            price="$25,000"
+            period="month"
+            description="Complete IT transformation for large organizations"
+            features={[
+              "Custom infrastructure design",
+              "Dedicated IT team",
+              "Advanced security suite",
+              "SLA guarantee",
+              "Custom integrations",
+              "White-label solutions"
+            ]}
+            cta="Contact Sales"
+          />
+        </div>
+      </section>
+
+      {/* Success Stories */}
+      <section className="py-12">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            See how we've helped businesses transform their IT infrastructure and operations.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            {
+              company: "E-commerce Platform",
+              industry: "Retail",
+              result: "99.9% uptime achieved",
+              description: "Migrated to AWS cloud infrastructure, achieving 99.9% uptime and reducing operational costs by 40% while improving performance."
+            },
+            {
+              company: "SaaS Startup",
+              industry: "Technology",
+              result: "50% faster deployments",
+              description: "Implemented DevOps practices and CI/CD pipelines, reducing deployment time from 4 hours to 2 hours and eliminating deployment errors."
+            },
+            {
+              company: "Financial Services",
+              industry: "Finance",
+              result: "Zero security incidents",
+              description: "Enhanced cybersecurity posture with comprehensive security suite, achieving zero security incidents and full compliance with financial regulations."
+            }
+          ].map((story, index) => (
+            <div key={index} className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+              <div className="text-sm text-blue-600 font-semibold mb-2">{story.industry}</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">{story.company}</h3>
+              <p className="text-gray-600 mb-4">{story.description}</p>
+              <div className="text-2xl font-bold text-green-600">{story.result}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
+        <h2 className="text-3xl font-bold mb-4">Ready to Modernize Your IT Infrastructure?</h2>
+        <p className="text-xl mb-8 max-w-2xl mx-auto">
+          Let's discuss how we can help transform your IT infrastructure and drive business growth.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=IT Services Project Inquiry"
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            Start Your IT Transformation
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+        </div>
+        <div className="mt-8 text-sm">
+          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+          <p>Email: kleber@ziontechgroup.com</p>
+        </div>
+      </section>
     </div>
   );
 }

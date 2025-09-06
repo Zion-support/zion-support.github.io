@@ -9,6 +9,6 @@ export function useToast() {
   const showToast = (message: string, options?: ToastOptions) => {
     return toast(message, options);
   };
-  
+
   return { toast: showToast };
 }

@@ -1,12 +1,15 @@
-<<<<<<< HEAD
-=======
+import { NextRequest, NextResponse } from "next/server";
+import { getServerSession } from "next-auth";
+import { prisma } from "@/lib/prisma";
+export async function POST(request: NextRequest) {
+  try {
+    const session = await getServerSession();
 
 
       {
-        message: 'Onboarding completed successfully'
+        message: "Onboarding completed successfully",
         user: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           id: updatedUser && updatedUser.id,
           name: updatedUser && updatedUser.name,
           email: updatedUser && updatedUser.email,
@@ -14,13 +17,13 @@
           onboardingCompleted: updatedUser && updatedUser.onboardingCompleted,
         },
       },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    console.error("Onboarding completion error:", error);
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 },
     console && console.error('Onboarding completion error:', error);
     return NextResponse && NextResponse.json(
           id: updated_user.id,
@@ -42,10 +45,6 @@
 
       { error: 'Internal server error' },
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;
@@ -79,19 +78,6 @@ export async function POST(request: NextRequest) {;
     console.error("Onboarding completion error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
-<<<<<<< HEAD
-      {
-        message: 'Onboarding completed successfully'
-        user: {
-      { error: 'Internal server error' },
-      { status: 500 }
-    );
-  }
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       { status: 500 }
     );
   }
@@ -123,7 +109,6 @@ export async function POST(request: NextRequest) { try {
     return NextResponse.json(
       { error: 'Failed to complete onboarding' },
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       { status: 500 }
     );
   }

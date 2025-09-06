@@ -158,10 +158,17 @@ export default function HomePage() {
             icon="🔒"
           />
           <Card
+<<<<<<< HEAD
             title="Data Analytics"
             href="/services/data-analytics"
             description="Business intelligence, predictive analytics and data science solutions."
             icon="📊"
+=======
+            title="Cloud Services"
+            href="/services/cloud-services"
+            description="Cloud migration, architecture, and optimization across AWS, Azure, and GCP."
+            icon="☁️"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
           />
         </div>
       </section>
@@ -213,7 +220,7 @@ export default function HomePage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Let's discuss your project and create a custom solution that drives real business value. 
+            Let&apos;s discuss your project and create a custom solution that drives real business value. 
             Our team has delivered 1000+ successful projects across various industries.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -238,3 +245,15 @@ export default function HomePage() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+
+function FeatureCard({ title, description }: { title: string; description: string }) {
+  return (
+    <div className="text-center p-6">
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

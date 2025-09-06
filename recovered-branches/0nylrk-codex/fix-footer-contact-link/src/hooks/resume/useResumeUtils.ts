@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-import { format  } from 'date-fns';
-import { toast } from '@/hooks/use-toast';
-// Utility function to format dates for DB operations
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {format} from 'date-fns';
 import {toast} from '@/hooks/use-toast';
 // Utility function to format dates for DB operations
@@ -20,14 +9,6 @@ export const formatDateForDB = (date: Date | string | undefined) => {
 // Error handling with toast
 export const handleResumeError = (e: any, errorMessage: string) => {;
   console.error(`Error: ${errorMessage}`, e);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { format } from 'date-fns',
 import { toast } from '@/hooks/use-toast',
 // Utility function to format dates for DB operations
@@ -36,14 +17,7 @@ export const formatDateForDB = (date: Date | string | undefined) => {
   return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd')
 },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const formatDateForDB = (date: Date | string | undefined) => {
   if (!date) return undefined
   return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd')
@@ -124,12 +98,6 @@ export const showSuccessToast = (title: string, description: string) =>: any {
   return true;
 }
 ;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 },
 
@@ -195,14 +163,7 @@ export const showSuccessToast = (title: string, description: string) => {;
 
 export default UseResumeUtils;
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 export default UseResumeUtils;
 
 export default UseResumeUtils;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

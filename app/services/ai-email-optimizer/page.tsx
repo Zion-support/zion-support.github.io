@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 
 export const metadata = {
@@ -261,13 +262,31 @@ export default function AIEmailOptimizerPage() {
 }
 
 function FeatureCard({ icon, title, description, benefits }: {
+=======
+
+export const metadata = {
+  title: 'AI Email Optimizer | Zion Tech Group',
+  description: 'AI-powered email marketing platform with smart subject lines, content personalization, and automated A/B testing. Increase open rates by 40% with our intelligent email optimization.',
+  keywords: 'AI email marketing, email optimization, subject line generator, email personalization, A/B testing, email analytics'
+};
+
+interface FeatureCardProps {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   icon: string;
   title: string;
   description: string;
   benefits: string[];
+<<<<<<< HEAD
 }) {
   return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+=======
+}
+
+function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
@@ -283,15 +302,27 @@ function FeatureCard({ icon, title, description, benefits }: {
   );
 }
 
+<<<<<<< HEAD
 function PricingCard({ name, price, period, description, features, cta, popular }: {
+=======
+interface PricingTierProps {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   name: string;
   price: string;
   period: string;
   description: string;
   features: string[];
+<<<<<<< HEAD
   cta: string;
   popular: boolean;
 }) {
+=======
+  popular?: boolean;
+  cta: string;
+}
+
+function PricingTier({ name, price, period, description, features, popular = false, cta }: PricingTierProps) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   return (
     <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} shadow-lg`}>
       {popular && (
@@ -333,6 +364,7 @@ function PricingCard({ name, price, period, description, features, cta, popular 
   );
 }
 
+<<<<<<< HEAD
 function TestimonialCard({ company, result, description, industry }: {
   company: string;
   result: string;
@@ -368,6 +400,282 @@ function StepCard({ step, title, description }: {
       </div>
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600">{description}</p>
+=======
+export default function AIEmailOptimizerPage() {
+  return (
+    <div className="space-y-16">
+      {/* Hero Section */}
+      <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-blue-100 rounded-lg">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          AI Email Optimizer Pro
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Transform your email marketing with AI-powered optimization. Increase open rates by 40%, boost engagement, and automate your entire email strategy.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=AI Email Optimizer Demo"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get Free Demo
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+        </div>
+      </section>
+
+      {/* Key Features */}
+      <section className="py-12">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Powerful AI Features</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Our AI email optimizer uses advanced machine learning to maximize your email marketing performance.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <FeatureCard
+            icon="🎯"
+            title="Smart Subject Line Generator"
+            description="AI generates compelling subject lines that increase open rates by analyzing your audience and industry trends"
+            benefits={[
+              "40% higher open rates",
+              "A/B testing automation",
+              "Industry-specific optimization",
+              "Emotional tone analysis",
+              "Length optimization"
+            ]}
+          />
+          <FeatureCard
+            icon="📝"
+            title="Content Personalization"
+            description="Automatically personalize email content based on user behavior, preferences, and demographics"
+            benefits={[
+              "Dynamic content insertion",
+              "Behavior-based targeting",
+              "Demographic personalization",
+              "Purchase history analysis",
+              "Real-time customization"
+            ]}
+          />
+          <FeatureCard
+            icon="⏰"
+            title="Optimal Send Time AI"
+            description="AI determines the best time to send emails to each subscriber for maximum engagement"
+            benefits={[
+              "Individual send time optimization",
+              "Time zone consideration",
+              "Engagement pattern analysis",
+              "Industry-specific timing",
+              "Continuous learning"
+            ]}
+          />
+          <FeatureCard
+            icon="📊"
+            title="Advanced Analytics"
+            description="Comprehensive analytics dashboard with AI insights and performance predictions"
+            benefits={[
+              "Real-time performance tracking",
+              "Predictive analytics",
+              "ROI optimization",
+              "Audience insights",
+              "Campaign comparison"
+            ]}
+          />
+          <FeatureCard
+            icon="🔄"
+            title="Automated A/B Testing"
+            description="Continuously test and optimize email elements with AI-powered testing strategies"
+            benefits={[
+              "Multi-variant testing",
+              "Statistical significance",
+              "Automatic winner selection",
+              "Continuous optimization",
+              "Performance tracking"
+            ]}
+          />
+          <FeatureCard
+            icon="🎨"
+            title="Design Optimization"
+            description="AI analyzes and suggests design improvements for better visual appeal and engagement"
+            benefits={[
+              "Layout optimization",
+              "Color scheme analysis",
+              "Image placement suggestions",
+              "Mobile responsiveness",
+              "Brand consistency"
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-12 bg-gray-50 rounded-lg">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Our AI email optimizer works in three simple steps to transform your email marketing.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="text-center">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              1
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Connect & Analyze</h3>
+            <p className="text-gray-600">
+              Connect your email platform and our AI analyzes your historical data, audience behavior, and industry benchmarks.
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              2
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Optimization</h3>
+            <p className="text-gray-600">
+              Our AI automatically optimizes subject lines, content, send times, and design elements for maximum engagement.
+            </p>
+          </div>
+          <div className="text-center">
+            <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              3
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Measure & Improve</h3>
+            <p className="text-gray-600">
+              Track performance with detailed analytics and watch as our AI continuously improves your email campaigns.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-12">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Pricing Plans</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Choose the plan that fits your email marketing needs. All plans include our core AI features.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <PricingTier
+            name="Starter"
+            price="$99"
+            period="month"
+            description="Perfect for small businesses and startups"
+            features={[
+              "Up to 10,000 emails/month",
+              "AI subject line generation",
+              "Basic personalization",
+              "Email analytics",
+              "A/B testing (2 variants)",
+              "Email support"
+            ]}
+            cta="Start Free Trial"
+          />
+          <PricingTier
+            name="Professional"
+            price="$299"
+            period="month"
+            description="Most popular for growing businesses"
+            features={[
+              "Up to 50,000 emails/month",
+              "Advanced AI optimization",
+              "Full personalization suite",
+              "Advanced analytics",
+              "A/B testing (5 variants)",
+              "Optimal send time AI",
+              "Priority support"
+            ]}
+            popular={true}
+            cta="Start Free Trial"
+          />
+          <PricingTier
+            name="Enterprise"
+            price="$799"
+            period="month"
+            description="For large organizations and agencies"
+            features={[
+              "Unlimited emails",
+              "Custom AI models",
+              "White-label solution",
+              "Advanced reporting",
+              "Unlimited A/B testing",
+              "Dedicated account manager",
+              "24/7 phone support"
+            ]}
+            cta="Contact Sales"
+          />
+        </div>
+      </section>
+
+      {/* Success Stories */}
+      <section className="py-12 bg-gray-50 rounded-lg">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            See how businesses have transformed their email marketing with our AI optimizer.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            {
+              company: "E-commerce Store",
+              industry: "Retail",
+              result: "45% increase in open rates",
+              description: "Increased email revenue by $50K monthly with AI-optimized subject lines and personalized content."
+            },
+            {
+              company: "SaaS Platform",
+              industry: "Technology",
+              result: "60% higher click-through rates",
+              description: "Boosted user engagement and reduced churn by 30% with personalized email sequences."
+            },
+            {
+              company: "Marketing Agency",
+              industry: "Services",
+              result: "3x ROI improvement",
+              description: "Improved client email campaigns by 200% using our AI optimization tools."
+            }
+          ].map((story, index) => (
+            <div key={index} className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+              <div className="text-sm text-blue-600 font-semibold mb-2">{story.industry}</div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">{story.company}</h3>
+              <p className="text-gray-600 mb-4">{story.description}</p>
+              <div className="text-2xl font-bold text-green-600">{story.result}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
+        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Email Marketing?</h2>
+        <p className="text-xl mb-8 max-w-2xl mx-auto">
+          Start your free trial today and see how AI can revolutionize your email campaigns.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:kleber@ziontechgroup.com?subject=AI Email Optimizer Free Trial"
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            Start Free Trial
+          </a>
+          <a
+            href="tel:+13024640950"
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+        </div>
+        <div className="mt-8 text-sm">
+          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+          <p>Email: kleber@ziontechgroup.com</p>
+        </div>
+      </section>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     </div>
   );
 }

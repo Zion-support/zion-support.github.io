@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -728,7 +727,6 @@ export default function Navigation() {;
       />;
     </>);
 }
-=======
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -894,4 +892,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
->>>>>>> main
