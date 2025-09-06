@@ -14,9 +14,15 @@ interface ToastProps {
 <<<<<<< HEAD
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
 export interface Toast {
+<<<<<<< HEAD
   id: string
   type: ToastType
   title: string
+=======
+  id: string,
+  type: ToastType,
+  title: string,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   message?: string;
   duration?: number
 }
@@ -25,6 +31,10 @@ interface ToastProps {
   onRemove: (id: string) => void
 }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
@@ -57,12 +67,19 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         return <Info className="w-5 h-5 text-blue-400" />;
       default: return <Info className="w-5 h-5 text-blue-400" />
     }
+<<<<<<< HEAD
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         return <Info className='w-5 h-5 text-blue-400' />;    }
 
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   };
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -134,7 +151,11 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
 
           )}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
         <button
           onClick={() => {
@@ -179,8 +200,13 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({
         {toasts.map(toast => (          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
       </AnimatePresence>
+<<<<<<< HEAD
     </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </div>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );};          }}
           className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200"
         >
@@ -203,7 +229,21 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({
       </div>
     </motion.div>
   )
+<<<<<<< HEAD
 }
+=======
+};
+=======
+    </div>
+  );};
+
+          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
+        ))}
+      </AnimatePresence>
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ToastContainerProps {
   toasts: Toast[]
   onRemove: (id: string) => void
@@ -213,18 +253,21 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
     <div className="fixed top-4 right-4 z-50 space-y-3">
       <AnimatePresence>
         {toasts.map((toast) => (
+<<<<<<< HEAD
 =======
   );};
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
       </AnimatePresence>
-    </div>
+    </div>;
   );  )
 }
 // Hook for managing toasts
-export const useToast = () => {
+export const useToast = () => {;
   const [toasts, setToasts] = useState<Toast[]>([]);
   const addToast = (toast: Omit<Toast, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);

@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {Link, useNavigate, useSearchParams} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {Button} from "@/components/ui/button";
+import PostForm from "@/components/community/PostForm";
+import {useToast} from "@/hooks/use-toast";
+import {ForumCategory} from "@/types/community";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useSearchParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -11,7 +24,11 @@ import { ForumCategory } from "@/types/community";
 =======
 import { useToast } from "@/hooks/use-toast",
 import { ForumCategory } from "@/types/community",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface PostFormValues {
 
   title: string
@@ -20,6 +37,16 @@ interface PostFormValues {
 
   tags: string
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export default function CreatePostPage() {;
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [searchParams] = useSearchParams();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function CreatePostPage() {
 <<<<<<< HEAD
 
@@ -35,6 +62,7 @@ export default function CreatePostPage() {
   const navigate = useNavigate(),
   const { toast } = useToast(),
   const [searchParams] = useSearchParams(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   // Get category from URL query params if available
   const initialCategory = searchParams.get("category") as ForumCategory | null,
@@ -168,4 +196,8 @@ export default function CreatePostPage() {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

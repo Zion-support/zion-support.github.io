@@ -501,6 +501,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
     description:
       'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.'
     features: [
+<<<<<<< HEAD
       'Managed vector DB'
       'Ingestion pipelines'
       'Metadata filters'
@@ -518,6 +519,24 @@ export const marketValidatedServices: MarketValidatedService[] = [
 ];import { ServiceVariant  } from "../types/service-variants";
 
 export interface MarketValidatedService {
+=======
+      'Managed vector DB',
+      'Ingestion pipelines',
+      'Metadata filters',
+      'Access controls',
+    ],
+    category: 'AI & Search',
+    link: 'https://ziontechgroup.com/vector-search-starter',
+    variant: 'quantum',
+    rating: 4.6,
+    customers: 410,
+    trialDays: 14,
+    setupTime: '2 hours',
+    contactInfo,
+  },;
+];import { ServiceVariant  } from "../types/service-variants";
+export interface MarketValidatedService {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	id: string;
 	name: string;
 	tagline: string;
@@ -1275,6 +1294,23 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		rating: 4.5,
 		customers: 420,
 		trialDays: 14,
+<<<<<<< HEAD
+		setupTime: "30 minutes",;
+		contactInfo;,
+},
+	// AI Channels;
+	{;
+		id: "ai-phone-agent",
+		name: "AI Phone Agent",
+		tagline: "Voice IVR and call handling with CRM handoff",
+		price: "$129",
+		period: "/month",
+		description: "Handle inbound calls with a natural AI voice, route to agents, and sync transcripts with your CRM.",
+		features["Natural TTS/ASR", "Routing & handoff", "CRM sync", "Analytics"],
+		category: "AI & Assistants",
+		link: "https://ziontechgroup.com/ai-phone-agent",
+		variant: "quantum-holographic-advanced",
+=======
 		setupTime: '30 minutes',
 		contactInfo
 	},
@@ -1291,6 +1327,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		category: 'AI & Assistants',
 		link: 'https://ziontechgroup.com/ai-phone-agent',
 		variant: 'quantum-holographic-advanced',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 		rating: 4.6,
 		customers: 380,
 		trialDays: 7,
@@ -1319,3 +1356,10 @@ export const marketValidatedServices: MarketValidatedService[] = [
 	}
 ];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

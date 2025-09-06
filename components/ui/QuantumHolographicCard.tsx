@@ -2,6 +2,7 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
   Star
   Zap
   Shield
@@ -12,6 +13,18 @@ import {
   Users
   Clock
   DollarSign;
+=======
+  Star,
+  Zap,
+  Shield,
+  TrendingUp,
+  ArrowRight,
+  ExternalLink,
+  Check,
+  Users,
+  Clock,;
+  DollarSign,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
 interface QuantumHolographicCardProps {
@@ -170,7 +183,13 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
                 whileTap={{ scale: 0.95 }}
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  }
+=======
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  };
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <motion.div
       className={`relative group cursor-pointer ${className}`}
@@ -218,15 +237,22 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
             )}
           </div>
 =======
+<<<<<<< HEAD
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <span>Popular</span>
 
               </motion.div>
             )}
           </div>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Price and trial */}
           <div className='flex items-center justify-between mb-4'>
             <div className='flex items-center space-x-2'>
@@ -327,7 +353,11 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
                   <span>{feature}</span>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </motion.div>
               ))}
             </div>
@@ -335,7 +365,11 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Market data */}
           <div className='bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30'>
             <div className='flex items-center justify-between mb-2'>
@@ -413,14 +447,22 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
           {/* ROI and competitors */}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </div>
           </div>
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* CTA Button */}
           <motion.a
             href={service.link}
@@ -428,7 +470,11 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -466,7 +512,13 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
       </div>
     </motion.div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default QuantumHolographicCard;  )
 }
 export default QuantumHolographicCard;
@@ -474,4 +526,10 @@ export default QuantumHolographicCard;
 <<<<<<< HEAD
 =======
 export default QuantumHolographicCard;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default QuantumHolographicCard;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

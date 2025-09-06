@@ -45,7 +45,7 @@ import {
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   BarChart3,
-  Search,
+  Search,;
 } from "lucide-react";
 import SearchModal from "./SearchModal";
 =======
@@ -63,6 +63,7 @@ import SearchModal from './SearchModal';
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
+<<<<<<< HEAD
 =======
 import React, { useState } from "react";
 import Link from "next/link";
@@ -102,6 +103,9 @@ import SearchModal from "./SearchModal";
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function Navigation() {
+=======
+export default function Navigation() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -531,6 +535,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -544,6 +549,8 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <button

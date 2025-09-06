@@ -44,11 +44,20 @@ import { ServiceVariant } from '../types/service-variants';
 
   reviews: number;
 const contact = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',}
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
+=======
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',};
+
+export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -65,6 +74,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     description:
       'An advanced AI system that autonomously analyzes, optimizes, and executes business processes across all departments. Continuously learns and improves without human oversight.'
     features: [
+<<<<<<< HEAD
       'Autonomous process discovery and mapping'
       'Real-time optimization algorithms'
       'Cross-departmental coordination'
@@ -83,6 +93,26 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     link: 'https://ziontechgroup.com/ai-autonomous-business-processor'
     marketPosition:
       'First autonomous business processor; competes with traditional BPM tools like Pega and Appian.'
+=======
+      'Autonomous process discovery and mapping',
+      'Real-time optimization algorithms',
+      'Cross-departmental coordination',
+      'Predictive maintenance scheduling',
+      'Resource allocation optimization',
+      'Performance analytics dashboard',
+      'Automated decision making',
+      'Process improvement suggestions',
+      'Integration with existing systems',
+      '24/7 autonomous operation',
+    ],
+    popular: true,
+    icon: '🤖',
+    color: 'from-cyan-600 to-blue-700',
+    textColor: 'text-cyan-400',
+    link: 'https://ziontechgroup.com/ai-autonomous-business-processor',
+    marketPosition:;
+      'First autonomous business processor; competes with traditional BPM tools like Pega and Appian.',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     targetAudience: [
       'Enterprise companies'
       'manufacturing'
@@ -405,9 +435,12 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     customers: 198;
     rating: 4.9
     reviews: 267
+<<<<<<< HEAD
   }
 ];
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedAIAutomationService {;
@@ -647,6 +680,10 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     customers: 198,;
     rating: 4.9;
     reviews: 267;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

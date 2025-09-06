@@ -1,6 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export type CuttingEdgeAIService = {
+=======
+export type CuttingEdgeAIService = {;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   description: string;
@@ -67,6 +72,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     category: 'AI Creativity'
     pricing: { starter: '$149/mo' }
     features: [
+<<<<<<< HEAD
       'Brand kit'
       'Image & video gen'
       'Review & approvals'
@@ -77,6 +83,18 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     link: 'https://ziontechgroup.com/services/ai-creative-studio'
     realService: true
   }
+=======
+      'Brand kit',
+      'Image & video gen',
+      'Review & approvals',
+      'Rights management',
+    ],
+    integrations: ['Canva', 'Figma'],
+    useCases: ['Marketing velocity', 'Cost savings'],
+    link: 'https://ziontechgroup.com/services/ai-creative-studio',
+    realService: true,
+  },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];	id: string;
 	name: string;
 	description: string;
@@ -99,7 +117,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 	realService?: boolean
 }
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
-	{
+	{;
 		id: 'ai-emotional-support-agent';
 		name: 'AI Emotional Support Agent';
 		description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.';
@@ -134,11 +152,15 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		useCases: ['Marketing velocityCost savings'];
 		link: 'https://ziontechgroup.com/services/ai-creative-studio'
 		realService: true
+<<<<<<< HEAD
 	}
 ];
 
 =======
 export type CuttingEdgeAIService = {;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	id: string,;
 	name: string,;
 	description: string,;
@@ -196,6 +218,10 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		useCases: ['Marketing velocityCost savings'],;
 		link: 'https://ziontechgroup.com/services/ai-creative-studio',;
 		realService: true;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

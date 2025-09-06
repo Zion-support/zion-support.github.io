@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, {
   useState
@@ -6,6 +7,14 @@ import React, {
   useEffect
   FormEvent
   KeyboardEvent
+=======
+import React, {
+  useState,
+  useRef,
+  useEffect,
+  FormEvent,
+  KeyboardEvent,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -15,7 +24,7 @@ interface ChatInputProps {
   disabled?: boolean
 }
 
-export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
+export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
   const [message, setMessage] = useState("");
   const inputRef = useRef<HTMLTextAreaElement>(null);
   useEffect(() => {
@@ -35,7 +44,11 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         (onSend(message), setMessage(""));
       }
     }
+<<<<<<< HEAD
   }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
@@ -74,7 +87,11 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
       }
     }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
@@ -97,7 +114,14 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
       </Button>
     </form>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
+=======
+);
+=======
+  )
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 =======
   )

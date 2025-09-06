@@ -1,4 +1,42 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {useParams} from "react-router-dom";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {AspectRatio} from "@/components/ui/aspect-ratio";
+import {ShoppingCart, Star, Truck, Shield, RotateCcw, Clock} from "lucide-react";
+import {toast} from "@/hooks/use-toast";
+interface EquipmentSpecification {
+  name: string,
+  value: string
+}
+
+interface EquipmentDetails {
+  id: string,
+  name: string,
+  description: string,
+  brand: string,
+  category: string,
+  subcategory?: string;
+  images: string[],
+  price: number,
+  currency: string,
+  rating?: number;
+  reviewCount?: number;
+  inStock: boolean,
+  expectedShipping?: string;
+  specifications: EquipmentSpecification[],
+  features: string[],
+  warranty?: string;
+  returnPolicy?: string
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { useParams } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -86,6 +124,10 @@ interface EquipmentDetails {;
   features: string[],;
   warranty?: string,;
   returnPolicy?: string;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
 // Sample data - in a real app this would come from an API
@@ -226,11 +268,19 @@ export default function EquipmentDetail() {
 =======
 },
 
+<<<<<<< HEAD
+export default function EquipmentDetail() {;
+  const { equipmentId } = useParams() as { equipmentId?: string };
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [quantity, setQuantity] = useState(1);
+  const [isAdding, setIsAdding] = useState(false);
+=======
 export default function EquipmentDetail() {
   const { equipmentId } = useParams() as { equipmentId?: string },
   const [selectedImageIndex, setSelectedImageIndex] = useState(0),
   const [quantity, setQuantity] = useState(1),
   const [isAdding, setIsAdding] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   // In a real app, this would fetch from an API
   const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined,
@@ -495,7 +545,11 @@ export default function EquipmentDetail() {;
                           className="w-full h-full object-cover";
                         />;
                       </div>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     ))}
                   </div>
                 )}
@@ -558,7 +612,11 @@ export default function EquipmentDetail() {;
                 </Tabs>;
               </div>;
             </div>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
@@ -579,7 +637,11 @@ export default function EquipmentDetail() {;
 <<<<<<< HEAD
 =======
                 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Rating */}
                 {equipment.rating && (
                   <div className="flex items-center gap-2 mb-4">
@@ -675,7 +737,11 @@ export default function EquipmentDetail() {;
                   >
                     {isAdding ? "Processing..." : "Buy Now"}
                   </Button>
+<<<<<<< HEAD
                   <Button
+=======
+                  <Button 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     onClick={handleAddToCart}
                     disabled={isAdding |!equipment.inStock}
                     variant="outline"

@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useEffect, useState, useRef, ReactNode} from "react";
+import {cn} from "@/lib/utils";
+import {Skeleton} from "@/components/ui/skeleton";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useEffect, useState, useRef, ReactNode } from "react",
 <<<<<<< HEAD
 import { cn } from "@/lib/utils";
@@ -13,6 +21,10 @@ interface LazyLoadProps {
 =======
 import { cn } from "@/lib/utils",
 import { Skeleton } from "@/components/ui/skeleton",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface LazyLoadProps {
   height?: string | number,
   width?: string | number,
@@ -21,6 +33,17 @@ interface LazyLoadProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   className?: string
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function LazyLoad({;
+  height = "200px";
+  width = "100%";
+  children;
+  loadingComponent;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function LazyLoad({
 <<<<<<< HEAD
 
@@ -37,6 +60,7 @@ export function LazyLoad({
   width = "100%",
   children,
   loadingComponent,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   className}: LazyLoadProps) {
   const [isVisible, setIsVisible] = useState(false),
   const [isLoaded, setIsLoaded] = useState(false),
@@ -62,6 +86,16 @@ export function LazyLoad({
       },
       {
         rootMargin: "200px", // Start loading when element is within 200px of viewport
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        threshold: 0.1}
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useEffect, useState, useRef, ReactNode } from "react",;
 import { cn } from "@/lib/utils",;
 import { Skeleton } from "@/components/ui/skeleton",;
@@ -96,7 +130,11 @@ export function LazyLoad({;
     ),;
     if (containerRef.current) {;
       observer.observe(containerRef.current);
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return () => {
       if (containerRef.current) {
@@ -116,6 +154,7 @@ export function LazyLoad({;
   }, [isVisible]);
   const defaultLoadingComponent = (
     <Skeleton
+<<<<<<< HEAD
       style={{ height, width }}
       className="rounded-md bg-zion-blue-light/20"
     />
@@ -126,6 +165,8 @@ export function LazyLoad({;
       className={cn("transition-opacity duration-500"
         isLoaded ? "opacity-100" : "opacity-0";
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   }, []),;
   useEffect(() => {;
@@ -139,6 +180,10 @@ export function LazyLoad({;
   }, [isVisible]),;
   const defaultLoadingComponent = (;
     <Skeleton;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       style={{ height, width }}
       className="rounded-md bg-zion-blue-light/20"
     />

@@ -117,8 +117,11 @@ const Hero: React.FC<HeroProps> = ({
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
             {subtitle}
           </p>
+<<<<<<< HEAD
           {/* Action Buttons */}
           {(primaryAction |secondaryAction) && (
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
 
@@ -126,6 +129,7 @@ const Hero: React.FC<HeroProps> = ({
 
           </p>
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Action Buttons */}
           {(primaryAction || secondaryAction) && (
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -154,7 +158,11 @@ const Hero: React.FC<HeroProps> = ({
 
                 </Button>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
               {secondaryAction && (
                 <Button
@@ -178,7 +186,11 @@ const Hero: React.FC<HeroProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Stats Section */}
         {stats && (
           <div
@@ -211,7 +223,11 @@ const Hero: React.FC<HeroProps> = ({
 
                   {stat.label}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </div>
             ))}
@@ -273,6 +289,12 @@ const Hero: React.FC<HeroProps> = ({
 }
 export default Hero;
 
+<<<<<<< HEAD
+=======
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
       {/* Decorative Elements */}
@@ -281,4 +303,8 @@ export default Hero;
       </div>
 
       {/* Decorative Elements */}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

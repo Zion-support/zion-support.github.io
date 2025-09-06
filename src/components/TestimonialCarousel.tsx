@@ -1,4 +1,28 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import {  Carousel,  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel'
+import { Card, CardContent, CardFooter } from '@/components/ui/card'
+import { Avatar } from '@/components/ui/avatar'
+import { Button } from '@/components/ui/button'
+import { Quote } from 'lucide-react'
+import Link from 'next/link'
+import Image from 'next/image'
+import { CASE_STUDIES } from '@/data/case-studies'
+const testimonials = CASE_STUDIES
+  CarouselPrevious} from "@/components/ui/carousel",
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { Avatar } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import Image from "next/image"
+import { CASE_STUDIES } from "@/data/case-studies"
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import {  Carousel,
   Carousel,
@@ -16,6 +40,10 @@ import { Quote } from 'lucide-react'
 import Link from "next/link",
 import Image from "next/image",
 import { CASE_STUDIES } from "@/data/case-studies",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const testimonials = CASE_STUDIES,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
@@ -53,6 +81,7 @@ export function TestimonialCarousel() {
         </div>
 <<<<<<< HEAD
         <div className='max-w-5xl mx-auto px-8'>
+<<<<<<< HEAD
           <Carousel
             opts={{
               align: 'start'
@@ -69,8 +98,11 @@ export function TestimonialCarousel() {
                       <div className='flex-shrink-0 flex flex-col items-center'>
                         <Avatar className='h-20 w-20 border-2 border-zion-cyan mb-3'>                          <Image              {testimonials.map((testimonial, index) => (
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
         
         <div className="max-w-5xl mx-auto px-8">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <Carousel
             opts={{
               align: "start",
@@ -79,7 +111,18 @@ export function TestimonialCarousel() {
           >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+                <CarouselItem key={index} className='md:basis-1/1 lg:basis-1/1'>
+                  <Card className='bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col'>
+                    <CardContent className='p-8 flex flex-col md:flex-row gap-6 flex-1'>
+                      <div className='flex-shrink-0 flex flex-col items-center'>
+                        <Avatar className='h-20 w-20 border-2 border-zion-cyan mb-3'>                          <Image              {testimonials.map((testimonial, index) => (
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                   <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col">
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">
@@ -127,7 +170,11 @@ export function TestimonialCarousel() {;
                       <div className="flex-shrink-0 flex flex-col items-center">;
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">;
                           <Image;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             src={testimonial.avatar}
                             alt={testimonial.author}
                             width={80}
@@ -137,7 +184,11 @@ export function TestimonialCarousel() {;
 =======
                             loading="lazy"
                           />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </Avatar>
                         <div className="text-center md:text-left">
                           <p className="font-bold text-zion-cyan">{testimonial.author}</p>
@@ -157,7 +208,11 @@ export function TestimonialCarousel() {;
                         </div>
                       </div>
 =======
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-4">
                           <Image
@@ -176,7 +231,11 @@ export function TestimonialCarousel() {;
                             loading="lazy"
                           />
                           <span className="text-white font-semibold">{testimonial.company}</span>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
                         <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />
                         <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>
@@ -203,7 +262,11 @@ export function TestimonialCarousel() {;
                       </div>
                     </CardContent>
 =======
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <CardFooter className="p-6 pt-0">
                       <Button variant="link" className="text-zion-cyan p-0" asChild>
                         <Link href={`/case-studies/${testimonial.slug}`}>Read Case Study →</Link>
@@ -219,18 +282,31 @@ export function TestimonialCarousel() {;
               <CarouselNext className='relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />            </div>            <div className="flex justify-center mt-8 gap-2">
 =======
             <div className="flex justify-center mt-8 gap-2">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
             </div>
           </Carousel>
         </div>
+<<<<<<< HEAD
+      </div>;
+    </section>;
+  );
+};
+=======
       </div>
     </section>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             className="h-8 w-auto";
                             loading="lazy";
                           />;
@@ -260,4 +336,8 @@ export function TestimonialCarousel() {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

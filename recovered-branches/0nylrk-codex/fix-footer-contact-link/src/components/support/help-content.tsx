@@ -14,6 +14,10 @@ import {
   Calendar, 
   Briefcase 
 } from "lucide-react",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const HELP_CATEGORIES: HelpCategory[] = [
@@ -33,8 +37,13 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       }
 =======
         id: "create-account",
+<<<<<<< HEAD
+        title: "Creating your account",;
+        content: "Welcome to Zion AI Marketplace! This guide will walk you through the process of creating and setting up your account.\n\nTo create a new account on Zion AI Marketplace:\n\n1. Click on the 'Sign Up' button in the top-right corner of the homepage\n2. Enter your email address and create a strong password\n3. Select your account type (Client or Talent)\n4. Verify your email address by clicking the link sent to your inbox\n5. Complete your profile information\n\nOnce your account is created, you'll have access to the marketplace and can start browsing or listing services based on your account type.";
+=======
         title: "Creating your account",
         content: "Welcome to Zion AI Marketplace! This guide will walk you through the process of creating and setting up your account.\n\nTo create a new account on Zion AI Marketplace:\n\n1. Click on the 'Sign Up' button in the top-right corner of the homepage\n2. Enter your email address and create a strong password\n3. Select your account type (Client or Talent)\n4. Verify your email address by clicking the link sent to your inbox\n5. Complete your profile information\n\nOnce your account is created, you'll have access to the marketplace and can start browsing or listing services based on your account type.",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         lastUpdated: "2023-11-15",
         tags: ["account", "registration", "setup"]
       },
@@ -290,6 +299,16 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         id: "dispute-prevention",
         title: "Tips for preventing disputes",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.";
+        lastUpdated: "2023-12-05",
+        tags: ["prevention", "best practices", "communication"]
+      }
+    ]
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.",
         lastUpdated: "2023-12-05",
         tags: ["prevention", "best practices", "communication"]
@@ -454,6 +473,10 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         tags: ["prevention", "best practices", "communication"];
       }
     ];
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

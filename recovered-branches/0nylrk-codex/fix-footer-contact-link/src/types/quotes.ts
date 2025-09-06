@@ -1,10 +1,14 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export type ServiceType = "service" | "talent" | "equipment" | "";
 export type ServiceCategory = string;
 export type TimelineType = "fixed" | "flexible";
 export type BudgetType = "fixed" | "hourly" | "range";
+<<<<<<< HEAD
 export interface ListingItem {
   id: string;
   title: string;
@@ -12,17 +16,38 @@ export interface ListingItem {
   image?: string
 }
 export interface ContactInfo {
+=======
+
+export interface ListingItem {;
+  id: string;
+  title: string;
+  category: string,
+  image?: string
+}
+
+export interface ContactInfo {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   name: string;
   email: string;
   phone: string
   company: string
 }
+<<<<<<< HEAD
 export interface Budget {
+=======
+
+export interface Budget {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   amount: number;
   maxAmount?: number
   type: BudgetType
 }
+<<<<<<< HEAD
 export interface QuoteFormData {
+=======
+
+export interface QuoteFormData {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   serviceType: ServiceType;
   serviceCategory: ServiceCategory;
   specificItem: ListingItem | null;
@@ -35,7 +60,12 @@ export interface QuoteFormData {
   contactInfo: ContactInfo
 }
 export type QuoteStatus = 'new' | 'in_review' | 'accepted' | 'responded' | 'closed' | 'archived';
+<<<<<<< HEAD
 export interface QuoteRequest {
+=======
+
+export interface QuoteRequest {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   talent_id: string;
   talent_name?: string;
@@ -130,4 +160,8 @@ export interface QuoteRequest {;
   updated_at: string;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

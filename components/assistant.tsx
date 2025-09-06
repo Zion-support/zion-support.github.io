@@ -10,11 +10,21 @@ interface Message {
 export default function Assistant() {
   const params =
     typeof window !== 'undefined'
+<<<<<<< HEAD
       ? new URLSearchParams(window.location.search)
       : new URLSearchParams();  const tenantId = params.get('tenantId') |'';
   const brand = params.get('brand') |'Zion AI';
   const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
 export default function Assistant() {
+=======
+      ? new URLSearchParams(window.location.search);
+      : new URLSearchParams();  const tenantId = params.get('tenantId') || '';
+  const brand = params.get('brand') || 'Zion AI';
+
+  const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
+
+export default function Assistant() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
   const tenantId = params.get('tenantId') |'';
   const brand = params.get('brand') |'Zion AI';
@@ -141,6 +151,14 @@ export default function Assistant() {
     </div>
 );
 }
+<<<<<<< HEAD
 =======
   );
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

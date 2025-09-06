@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
@@ -10,6 +11,13 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Badge } from "@/components/ui/badge";
 import { X } from 'lucide-react'
 
+=======
+<<<<<<< HEAD
+import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
@@ -25,10 +33,10 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       if (value && !keywords.includes(value)) {
         setValue("keywords", [...keywords, value])
         e.currentTarget.value = ""
-      }
-    }
-  }
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000
+      };
+    };
+  };
+  const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
 };  const removeKeyword = (keyword: string,) => {
     setValue(
       "keywords"
@@ -150,11 +158,20 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 }
+=======
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 =======
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Badge } from "@/components/ui/badge",
 import { X } from 'lucide-react'
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

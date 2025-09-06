@@ -1,4 +1,20 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { formatDistanceToNow } from "date-fns"
+import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { ForumReply } from "@/types/community"
+import { cn } from "@/lib/utils"
+interface ReplyCardProps {
+  reply: ForumReply,
+  onMarkAnswer?: () => void
+  canMarkAnswer?: boolean
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
@@ -33,22 +49,48 @@ interface ReplyCardProps {
   reply: ForumReply,
   onMarkAnswer?: () => void,
   canMarkAnswer?: boolean,
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   className?: string
 }
 
 export const ReplyCard = ({ 
+<<<<<<< HEAD
   reply,
   onMarkAnswer, 
   canMarkAnswer = false,
+=======
+<<<<<<< HEAD
+  reply
+  onMarkAnswer, 
+  canMarkAnswer = false
+=======
+  reply,
+  onMarkAnswer, 
+  canMarkAnswer = false,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   className
 }: ReplyCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true }),
 
   return (
     <Card className={cn(
+<<<<<<< HEAD
       "transition-shadow",
       reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+      "transition-shadow"
+      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20"
+=======
+      "transition-shadow",
+      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       className
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
@@ -105,7 +147,11 @@ export const ReplyCard = ({;
             </span>;
             {reply.authorRole && (;
               <Badge variant="outline" className="ml-2 text-xs">;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {reply.authorRole}
               </Badge>
             )}
@@ -127,7 +173,11 @@ export const ReplyCard = ({;
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <CardFooter className="flex justify-between">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="sm" className="px-2">
@@ -146,6 +196,7 @@ export const ReplyCard = ({;
           </Button>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
       </CardFooter>
     </Card>
   )
@@ -154,8 +205,18 @@ export default ReplyCard
 
 =======
       </CardFooter>;
+=======
+      </CardFooter>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </Card>;
   );
 };
+<<<<<<< HEAD
 export default ReplyCard;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default ReplyCard;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

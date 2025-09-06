@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {formatDistanceToNow} from "date-fns";
+import {ThumbsUp, ThumbsDown, CheckCircle} from "@/components/icons";
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {ForumReply} from "@/types/community";
+import {cn} from "@/lib/utils";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
@@ -24,6 +37,10 @@ export const ReplyCard = ({
 =======
 import { ForumReply } from "@/types/community",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ReplyCardProps {
   reply: ForumReply,
   onMarkAnswer?: () => void,
@@ -31,8 +48,13 @@ interface ReplyCardProps {
   className?: string
 }
 
+<<<<<<< HEAD
+export const ReplyCard = ({ ;
+  reply;
+=======
 export const ReplyCard = ({ 
   reply,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onMarkAnswer, 
   canMarkAnswer = false,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -104,7 +126,11 @@ export const ReplyCard = ({;
             </span>;
             {reply.authorRole && (;
               <Badge variant="outline" className="ml-2 text-xs">;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {reply.authorRole}
               </Badge>
             )}
@@ -152,5 +178,9 @@ export default ReplyCard;
     </Card>;
   );
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ReplyCard;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

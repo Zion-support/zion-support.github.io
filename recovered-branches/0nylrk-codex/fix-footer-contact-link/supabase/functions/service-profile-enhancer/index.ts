@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
 interface ServiceProfileData {
   name: string;
@@ -10,6 +11,12 @@ interface ServiceProfileData {
 
 =======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+=======
+import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
+=======
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ServiceProfileData {
   name: string,
   title: string,
@@ -88,6 +95,10 @@ serve(async (req) => {;
         { headers, status: 400 }
       );
     }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Get OpenAI API key from environment
@@ -106,7 +117,11 @@ serve(async (req) => {;
       return new Response(;
         JSON.stringify({;
           error: "OpenAI API key not configured"}),;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         { headers, status: 500 }
       )
     }
@@ -181,7 +196,12 @@ serve(async (req) => {;
       return new Response(
         JSON.stringify({
 <<<<<<< HEAD
+<<<<<<< HEAD
           error: "Failed to generate enhanced profile content"
+=======
+          error: "Failed to generate enhanced profile content",
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           details: responseData});
         { headers, status: 500 }
       )
@@ -194,7 +214,10 @@ serve(async (req) => {;
           summary: parsedContent.summary
           services: parsedContent.services});
 =======
+<<<<<<< HEAD
           error: "Failed to generate enhanced profile content",
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           details: responseData}),
     ${providerData.services && providerData.services.length > 0;
       ? `Current Services: ${providerData.services.join(", ")}`;
@@ -241,7 +264,11 @@ serve(async (req) => {;
         JSON.stringify({;
           summary: parsedContent.summary,;
           services: parsedContent.services}),;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         { headers, status: 200 }
       )
     } catch (error) {
@@ -249,10 +276,17 @@ serve(async (req) => {;
       return new Response(
         JSON.stringify({
 <<<<<<< HEAD
+<<<<<<< HEAD
           error: "Failed to parse AI response"
           raw: responseData.choices[0]?.message?.content});
 =======
           error: "Failed to parse AI response",
+=======
+          error: "Failed to parse AI response",
+<<<<<<< HEAD
+          raw: responseData.choices[0]?.message?.content});
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           raw: responseData.choices[0]?.message?.content}),
       );
     } catch (error) {;
@@ -261,7 +295,11 @@ serve(async (req) => {;
         JSON.stringify({;
           error: "Failed to parse AI response",;
           raw: responseData.choices[0]?.message?.content}),;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         { headers, status: 500 }
       )
     }
@@ -283,6 +321,11 @@ serve(async (req) => {;
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*"}, 
         status: 500 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   } catch (error) {;
     console.error("Function error:", error),;
     return new Response(;
@@ -293,7 +336,11 @@ serve(async (req) => {;
           "Content-Type": "application/json",;
           "Access-Control-Allow-Origin": "*"},;
         status: 500;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     )
   }

@@ -1,10 +1,19 @@
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { TALENT_PROFILES } from "@/data/talentData",
 <<<<<<< HEAD
 import { JOB_POSTS } from "@/data/jobsData";
 import { PROJECTS } from "@/data/projectsData";
 export interface SearchResult {
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {TALENT_PROFILES} from "@/data/talentData";
+import {JOB_POSTS} from "@/data/jobsData";
+import {PROJECTS} from "@/data/projectsData";
+export interface SearchResult {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   type: "talent" | "job" | "project";
 
@@ -19,10 +28,20 @@ interface SearchFilters {
   budget?: { min: number, max: number } | null;
   availability?: string | null
 }
+<<<<<<< HEAD
 export function useAISearch() {
   const [results, setResults] = useState<SearchResult[]>([]),
   const [loading, setLoading] = useState(false);
 =======
+=======
+
+export function useAISearch() {;
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [loading, setLoading] = useState(false);
+=======
+import { useState } from "react",
+import { TALENT_PROFILES } from "@/data/talentData",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { JOB_POSTS } from "@/data/jobsData",
 import { PROJECTS } from "@/data/projectsData",
 export interface SearchResult {
@@ -52,7 +71,11 @@ interface SearchFilters {;
 export function useAISearch() {
   const [results, setResults] = useState<SearchResult[]>([]),
   const [loading, setLoading] = useState(false),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const search = async (query: string) => {
     setLoading(true),
@@ -118,8 +141,11 @@ export function useAISearch() {
     }
   }
 
+<<<<<<< HEAD
   return { results, loading, search }
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
 export function useAISearch() {;
@@ -173,6 +199,10 @@ export function useAISearch() {;
       setLoading(false);
     }
   };
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return { results, loading, search }
 }
 ;

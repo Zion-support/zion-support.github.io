@@ -6,20 +6,25 @@ function fixImportSyntax(filePath) {
     let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
     // Fix semicolons in import statements
-    const importSemicolonRegex =
+    const importSemicolonRegex =;
       /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
     content = content.replace(importSemicolonRegex, (match, imports) => {
-      // Replace semicolons with commas in import lists
+      // Replace semicolons with commas in import lists;
       const fixedImports = imports.replace(/;/g, ",");
       return match.replace(imports, fixedImports);
     });
+<<<<<<< HEAD
     // Fix missing commas in import statements
+=======
+
+    // Fix missing commas in import statements;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
     content = content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items
       const fixedImports = imports
         .split(/\s+/)
-        .filter((item) => item.trim())
+        .filter((item) => item.trim());
         .join(", ");
       return match.replace(imports, fixedImports);
     });

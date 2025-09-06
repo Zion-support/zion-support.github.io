@@ -1,10 +1,18 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
+=======
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 =======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -20,6 +28,10 @@ interface ContentGenerationRequest {
   topic?: string;
   autoPublish?: boolean
   includeImage?: boolean
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 interface GeneratedBlogContent {
   title: string;
@@ -35,12 +47,17 @@ interface GeneratedNewsletterContent {
   body: string
   cta: string
 }
+<<<<<<< HEAD
 =======
   contentType: 'blog' | 'newsletter',
   prompt?: string,
   topic?: string,
   autoPublish?: boolean,
   includeImage?: boolean
+=======
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -70,7 +87,11 @@ interface GeneratedNewsletterContent {;
   cta: string;
 }
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -215,6 +236,19 @@ serve(async (req) => {
             { 
               role: "user", 
               content: `Create a DALL-E prompt for a thumbnail image for this blog post title: "${generatedContent.title}"` 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            }
+          ];
+          temperature: 0.7,
+          max_tokens: 100})});
+      
+      const imagePromptData = await imagePromptResponse.json();
+      generatedContent.imagePrompt = imagePromptData.choices[0].message.content
+    }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 serve(async (req) => {;
   // Handle CORS preflight requests;
@@ -297,6 +331,10 @@ serve(async (req) => {;
       const imagePromptData = await imagePromptResponse.json(),;
       generatedContent.imagePrompt = imagePromptData.choices[0].message.content;
     }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     // If autoPublish is true, save the content to the database
     if (autoPublish && contentType === 'blog') {
@@ -439,6 +477,11 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
     // If autoPublish is true, save the content to the database;
     if (autoPublish && contentType === 'blog') {;
@@ -516,6 +559,10 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

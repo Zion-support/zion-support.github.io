@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 export type MediaBundle = 'general' | 'web3' | 'institutional';
 export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale';
-export interface MediaGenerationResponse {
+export interface MediaGenerationResponse {;
   ok: boolean;
   text?: string;
   error?: string
@@ -9,9 +9,16 @@ export interface MediaGenerationResponse {
 export async function generateMediaContent(request: MediaGenerationRequest): Promise<MediaGenerationResponse> {
   // Mock implementation - in production, this would call OpenAI or other AI service
   return {
+<<<<<<< HEAD
     ok: true
     text: `Mock ${request.type} for ${request.companyName} on ${request.date}`
   }
+=======
+    ok: true,
+    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`;
+  };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
@@ -27,11 +34,19 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
       content: `# Privacy Policy\n\nWe respect your privacy. Replace with counsel-approved language.`
     }
     {
+<<<<<<< HEAD
       path: ''
       filename: 'legal/jurisdictional-disclosures.md'
       type: 'text'
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
     }
+=======
+      path: '',
+      filename: 'legal/jurisdictional-disclosures.md',
+      type: 'text',
+      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
+    },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const web3Extras: MediaAsset[] = [
     {
@@ -50,8 +65,13 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   if (kind === 'web3') return [...base, ...web3Extras];
   return base;
 export function buildPressRelease(
+<<<<<<< HEAD
   type: PressReleaseType
   params: {
+=======
+  type: PressReleaseType,
+  params: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     companyName: string;
     date: string;
     raiseAmount?: string;
@@ -69,7 +89,7 @@ export function buildPressRelease(
   }
   return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\nAbout ${params.companyName}:\n${boilerplate}`;
 export function buildTimeline(startDate: Date) {
-  const addDays = (d: Date, days: number) =>
+  const addDays = (d: Date, days: number) =>;
     new Date(d.getFullYear(), d.getMonth(), d.getDate() + days);
   const fmt = (d: Date) => d.toISOString().substring(0, 10);
   return [
@@ -86,5 +106,15 @@ function titleCase(s: string) {
     /\w\S*/g
     w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
   );}
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react';
 <<<<<<< HEAD
 import { QueryClient  } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
 import { Button  } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
+=======
+<<<<<<< HEAD
+import React, { Component, ReactNode } from 'react'
+import { QueryClient } from '@tanstack/react-query'
+import * as Sentry from '@sentry/nextjs'
+import { Button } from '@/components/ui/button'
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { RefreshCw, WifiOff } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface ApiErrorBoundaryProps {
@@ -118,16 +127,28 @@ export class ApiErrorBoundary extends Component<
   render() {
     if (this.state.hasError) {
       // Check if it's a network-related error
+<<<<<<< HEAD
       const isNetworkError =
         this.state.error?.message?.includes('fetch') |
         this.state.error?.message?.includes('network') |
         this.state.error?.message?.includes('timeout') |
+=======
+      const isNetworkError = null;
+        this.state.error?.message?.includes('fetch') ||
+        this.state.error?.message?.includes('network') ||
+        this.state.error?.message?.includes('timeout') ||
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         !this.state.isOnline
       // Use custom fallback if provided
       if (this.props.fallback) {
         return this.props.fallback
+<<<<<<< HEAD
       }
 =======
+=======
+=======
+import React, { Component, ReactNode } from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { QueryClient } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
 import { Button } from '@/components/ui/button';
@@ -241,6 +262,10 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
       // Use custom fallback if provided;
       if (this.props.fallback) {;
         return this.props.fallback;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -264,7 +289,11 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 )}
                 <AlertTitle>;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -293,7 +322,11 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 disabled={this.state.isRetrying}
                 className="w-full"
               >
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
@@ -316,7 +349,11 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 onClick={() => window.location.reload()}
                 className="w-full"
               >
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Reload Page
               </Button>
             </div>
@@ -335,7 +372,11 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 <pre className='mt-2 whitespace-pre-wrap break-all'>
 =======
                 <pre className="mt-2 whitespace-pre-wrap break-all">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
@@ -360,10 +401,15 @@ export const useApiErrorHandler = () => {
   return { handleApiError }
 }
   return { handleApiError }
+<<<<<<< HEAD
 }
   return { handleApiError }
 }
 
+=======
+}, ;
+  return { handleApiError };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           </div>;
         </div>;
@@ -384,5 +430,10 @@ export const useApiErrorHandler = () => {;
     });
   };
   return { handleApiError }
+<<<<<<< HEAD
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

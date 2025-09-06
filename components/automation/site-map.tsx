@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
 =======
@@ -8,6 +9,16 @@
 import path from 'path';
 type RouteInfo = { path: string, lastModified: string }
 export async function getServerSideProps() {
+=======
+<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
+=======
+ <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}</tbody> </table> </div> </div>) import fs from 'fs';
+import path from 'path';
+type RouteInfo = { path: string, lastModified: string },
+export async function getServerSideProps() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const file = path.join(process.cwd(), 'datasite-map.json');
   let routes: RouteInfo[] = [];  let generatedAt = '';
   try {
@@ -51,8 +62,12 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
           </tbody>
         </table>
       </div>
+<<<<<<< HEAD
     </div>
 <<<<<<< HEAD
+=======
+    </div>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 );
 }
 =======

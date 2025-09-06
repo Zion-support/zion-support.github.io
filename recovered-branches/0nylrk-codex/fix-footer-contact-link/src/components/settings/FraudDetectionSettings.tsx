@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Switch  } from '@/components/ui/switch';
 import { Button  } from '@/components/ui/button';
@@ -29,11 +30,24 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 
 export function FraudDetectionSettings() {
+=======
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
+import {Switch} from '@/components/ui/switch';
+import {Button} from '@/components/ui/button';
+import {Label} from '@/components/ui/label';
+import {ShieldAlert, Info} from 'lucide-react';
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
+import {toast} from '@/hooks/use-toast';
+import {supabase} from '@/integrations/supabase/client';
+import {useAuth} from '@/hooks/useAuth';
+export function FraudDetectionSettings() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
+<<<<<<< HEAD
 
   const handleSavePreferences = async () => {
     if (!user?.id) return;
@@ -42,6 +56,8 @@ export function FraudDetectionSettings() {
       // In a real implementation, we would save these preferences to the database
       // For now, we'll just simulate a successful save
       await new Promise((resolve) => setTimeout(resolve, 1000));
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
@@ -63,6 +79,7 @@ export function FraudDetectionSettings() {
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true),
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true),
   const [isSaving, setIsSaving] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const handleSavePreferences = async () => {
     if (!user?.id) return,
@@ -200,10 +217,17 @@ export function FraudDetectionSettings() {
       </CardContent>
     </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
 =======
   )
+=======
+  )
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Switch } from '@/components/ui/switch',;
@@ -343,4 +367,8 @@ export function FraudDetectionSettings() {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

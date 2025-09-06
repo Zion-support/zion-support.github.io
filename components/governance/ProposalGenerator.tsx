@@ -4,9 +4,14 @@ import EnhancedLayout from '../layout/EnhancedLayout';
 export type ProposalType =
   | 'Workforce Dev'
   | 'AI Ethics'
-  | 'Digital ID'
+  | 'Digital ID';
   | 'Education';
+<<<<<<< HEAD
 export type ProposalForm = {
+=======
+
+export type ProposalForm = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   targetInstitution: string;
   type: ProposalType;
   regionalScope: string;
@@ -14,11 +19,19 @@ export type ProposalForm = {
   supportingMultiverses: string;
   language?: string;
   customPrompt?: string;};export type ProposalForm = {
+<<<<<<< HEAD
   targetInstitution: string
   type: ProposalType
   regionalScope: string
   budgetOrGoals: string
   supportingMultiverses: string
+=======
+  targetInstitution: string,
+  type: ProposalType,
+  regionalScope: string,
+  budgetOrGoals: string,
+  supportingMultiverses: string,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   language?: string;
   customPrompt?: string
 }
@@ -31,7 +44,11 @@ export default function ProposalGenerator() {
     supportingMultiverses: ''
     language: 'English'
     customPrompt:
+<<<<<<< HEAD
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
+=======
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
@@ -84,7 +101,11 @@ export default function ProposalGenerator() {
 =======
       setIsGenerating(false);    }
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 <<<<<<< HEAD
@@ -120,12 +141,19 @@ export default function ProposalGenerator() {
       console.error(e);
       setStatusMessage('Export failed')
     }
+<<<<<<< HEAD
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       setStatusMessage('Export failed');    }
 
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -152,12 +180,24 @@ export default function ProposalGenerator() {
   return (
     <div className='space-y-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className='space-y-4'>      const data = await res.json();
       setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
     } catch (e) {
       console.error(e);
+<<<<<<< HEAD
 
       setStatusMessage('Submission failed')
+=======
+      setStatusMessage('Submission failed')
+=======
+        <div className='space-y-4'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
   return (
@@ -320,7 +360,11 @@ export default function ProposalGenerator() {
 =======
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               onClick={handleGenerate}
               disabled={isGenerating}
             >
@@ -394,7 +438,11 @@ export default function ProposalGenerator() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             </div>
           )}
@@ -414,7 +462,15 @@ export default function ProposalGenerator() {
     </div>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
 =======
   );
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

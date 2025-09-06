@@ -1,9 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ...realMicroSaasServices2025;
 =======
  ...realMicroSaasServices2025;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+...realMicroSaasServices2025;
+=======
+ ...realMicroSaasServices2025;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ...innovativeAIServices2025;
 ...innovativeITServices2025;
 ...emergingTechServices2025;
@@ -63,6 +70,7 @@ and micro SAAS services designed to transform your business and drive innovation
   {
 <<<<<<< HEAD
   opacity: 1, y: 0
+<<<<<<< HEAD
 }transition= {
   {
   duration: 0.8, delay: 0.8
@@ -77,6 +85,11 @@ and micro SAAS services designed to transform your business and drive innovation
 }</div>)
 =======
   opacity: 1, y: 0 
+=======
+=======
+  opacity: 1, y: 0 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 }transition= {
   {
@@ -239,7 +252,11 @@ and micro SAAS services designed to transform your business and drive innovation
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Enhanced Search and Filters */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -349,7 +366,11 @@ and micro SAAS services designed to transform your business and drive innovation
 <<<<<<< HEAD
 =======
               
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
@@ -364,7 +385,11 @@ and micro SAAS services designed to transform your business and drive innovation
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Enhanced Category Overview */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -421,7 +446,11 @@ and micro SAAS services designed to transform your business and drive innovation
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Services Grid/List */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -464,7 +493,11 @@ and micro SAAS services designed to transform your business and drive innovation
 <<<<<<< HEAD
 =======
                         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {/* Service Icon */}
                         <div className="text-4xl mb-4">{service.icon}</div>
                       </div>
@@ -498,7 +531,11 @@ and micro SAAS services designed to transform your business and drive innovation
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {/* Enhanced Price */}
                       <div className="mb-6 relative z-10">
                         <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-2xl p-4">
@@ -522,7 +559,11 @@ and micro SAAS services designed to transform your business and drive innovation
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {/* Enhanced Stats */}
                       <div className="grid grid-cols-3 gap-3 mb-6 text-center relative z-10">
                         <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50 group-hover:border-cyan-500/30 transition-colors duration-300">
@@ -584,7 +625,11 @@ and micro SAAS services designed to transform your business and drive innovation
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {/* Pricing & Stats */}
                         <div className="lg:w-48 space-y-4">
                           <div className="text-center">
@@ -619,7 +664,11 @@ and micro SAAS services designed to transform your business and drive innovation
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Enhanced CTA Section */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}

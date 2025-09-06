@@ -3,6 +3,7 @@ import { motion  } from 'framer-motion';
 import Link from 'next/link';
 
 import {
+<<<<<<< HEAD
   ArrowRight
   Star
   TrendingUp
@@ -15,6 +16,20 @@ import {
   Phone
   Mail
   MapPin;
+=======
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Rocket,
+  Globe,
+  Sparkles,
+  CheckCircle,
+  Phone,
+  Mail,;
+  MapPin,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
@@ -22,7 +37,7 @@ import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-d
 export default function UltraAdvancedHero2026() {
   const totalServices =
     aiAutonomousServices2026.length +
-    quantumSpaceTechServices2026.length +
+    quantumSpaceTechServices2026.length +;
     metaverseDigitalRealityServices2026.length;
   const contactInfo = {
     phone: '+1 302 464 0950'
@@ -30,7 +45,7 @@ export default function UltraAdvancedHero2026() {
     address: '364 E Main St STE 1008 Middletown DE 19709',  };import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
-export default function UltraAdvancedHero2026() {
+export default function UltraAdvancedHero2026() {;
   const totalServices = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length;
   const contactInfo = {
     phone: '+1 302 464 0950'
@@ -100,7 +115,11 @@ export default function UltraAdvancedHero2026() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Main Heading */}
           <motion.h1
             variants={itemVariants}
@@ -115,7 +134,11 @@ export default function UltraAdvancedHero2026() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Subheading */}
           <motion.p
             variants={itemVariants}
@@ -132,7 +155,11 @@ export default function UltraAdvancedHero2026() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Service Statistics */}
           <motion.div
             variants={itemVariants}
@@ -256,7 +283,11 @@ export default function UltraAdvancedHero2026() {
 
           {/* Key Benefits */}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>
               <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
@@ -310,7 +341,11 @@ export default function UltraAdvancedHero2026() {
               Explore All Services
               <ArrowRight className="w-6 h-6 ml-3" />
             </Link>
+<<<<<<< HEAD
             <Link
+=======
+            <Link 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               href="/contact"
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >
@@ -319,14 +354,22 @@ export default function UltraAdvancedHero2026() {
 
           {/* Call to Action Buttons */}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Get Started Today
             </Link>
           </motion.div>
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Contact Information */}
           <motion.div
             variants={itemVariants}
@@ -399,7 +442,11 @@ export default function UltraAdvancedHero2026() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Trust Indicators */}
           <motion.div
             variants={itemVariants}
@@ -538,4 +585,8 @@ export default function UltraAdvancedHero2026() {
 }
 =======
   );
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

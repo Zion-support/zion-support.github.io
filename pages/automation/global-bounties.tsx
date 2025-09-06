@@ -23,7 +23,18 @@ export default function GlobalBountiesPage() {
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
                 {it.repo} · {it.language} · {new Date(it.created_at).toLocaleString()}
               </div>
+<<<<<<< HEAD
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels |[]).join(', ')}</div>
+=======
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels || []).join(', ')}</div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                 {it.title  } catch (error) {
     console.error("Error:", error);
@@ -54,4 +65,9 @@ export default function GlobalBountiesPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

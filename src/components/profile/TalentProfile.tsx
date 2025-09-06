@@ -1,5 +1,26 @@
 <<<<<<< HEAD
 import React from 'react'
+<<<<<<< HEAD
+=======
+import { Handshake, MessageSquare, Star } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { HireNowCTA } from './HireNowCTA'
+import { ProfileHero } from './ProfileHero'
+import { ProfileSkills } from './ProfileSkills'
+import { ProfileExperience } from './ProfileExperience'
+import { ProfileProjects } from './ProfileProjects'
+import { ProfileAvailability } from './ProfileAvailability'
+import { ProfileContact } from './ProfileContact'
+import { ProfileRatings } from './ProfileRatings'
+import { TalentProfile as TalentProfileType } from '@/types/talent'
+import { useAuth } from '@/hooks/useAuth'
+import { Availability } from '@/types/profile'
+interface TalentProfileProps {
+  profile: TalentProfileType
+  onRequestHire: () => void
+  onMessageTalent?: () => void
+export function TalentProfile({
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
 import React from "react",
@@ -40,13 +61,22 @@ interface TalentProfileProps {
 }
 
 export function TalentProfile({ 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   profile,
   onRequestHire,
   onMessageTalent
 }: TalentProfileProps) {
+<<<<<<< HEAD
   const { isAuthenticated } = useAuth(),
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  const { isAuthenticated } = useAuth()
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Create proper availability object from talent profile
 
   const availability: Availability = {
@@ -60,13 +90,13 @@ export function TalentProfile({
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
   }
   // Create proper skills array for ProfileSkills component
-  const skillsArray =
+  const skillsArray = null;
     profile.skills?.map(skill => ({
       name: skill
       level: 3, // Default level since we don't have this data
     })) |[]
   // Create proper projects array for ProfileProjects component
-  const projectsArray =
+  const projectsArray = null;
     profile.key_projects?.map((proj, i) => ({
       id: `project-${i}`
       title: proj.title
@@ -87,6 +117,13 @@ export function TalentProfile({
       {/* Main content area */}
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8'>
 =======
+<<<<<<< HEAD
+=======
+  const { isAuthenticated } = useAuth(),
+  
+  // Create proper availability object from talent profile
+  const availability: Availability = {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     status: profile.availability_type === 'full_time' ? 'available' : 
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable',
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
@@ -165,7 +202,11 @@ export function TalentProfile({;
       />;
       {/* Main content area */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Left Column - Skills & Info */}
         <div className="space-y-8">
           <ProfileSkills skills={skillsArray} />
@@ -234,7 +275,11 @@ export function TalentProfile({;
               ratingCount={profile.rating_count}
             />;
           </div>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Hire Now CTA */}
           {isAuthenticated && (
             <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">
@@ -280,7 +325,11 @@ export function TalentProfile({;
                       onClick={onMessageTalent}
                     >
                       <MessageSquare className="mr-2 h-5 w-5" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       Message
                     </Button>
                   )}
@@ -290,9 +339,10 @@ export function TalentProfile({;
           )}
 <<<<<<< HEAD
         </div>
-      </div>
-    </div>
-  )
+      </div>;
+    </div>;
+  );
+};
 }
 =======
         </div>;
@@ -301,4 +351,8 @@ export function TalentProfile({;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

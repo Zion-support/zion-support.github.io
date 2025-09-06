@@ -10,6 +10,7 @@ context ? `Context: $ {
 }` : undefined] .filter (Boolean) .join ('\n');
 const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
+<<<<<<< HEAD
   role: 'system', content: system
 }
 export type AnalyzeResponse = {
@@ -22,11 +23,28 @@ export type AnalyzeRequestBody = {
 export type AnalyzeResponse = {
   analysis: string
 }
+=======
+  role: 'system', content: system 
+};
+
+export type AnalyzeResponse = {;
+  analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+export type AnalyzeRequestBody = {
+  operatorPrompt: string,
+  context?: Record<string, unknown>;
+};
+
+export type AnalyzeResponse = {
+  analysis: string;
+};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<AnalyzeResponse | { error: string }>
 ) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }
   const { operatorPrompt, context } = (req.body |{}) as AnalyzeRequestBody;
   if (!operatorPrompt |typeof operatorPrompt !== 'string') {
@@ -77,7 +95,13 @@ export default async function handler(
 
     return res.status(500).json({ error: 'Failed to generate analysis' })
 }
+<<<<<<< HEAD
 }
 =======
   }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

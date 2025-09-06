@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
   Zap
   Clock
   TrendingUp
@@ -10,6 +11,16 @@ import {
   Cpu
   Database
   Network;
+=======
+  Zap,
+  Clock,
+  TrendingUp,
+  Activity,
+  Gauge,
+  Cpu,
+  Database,;
+  Network,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
 interface PerformanceMetrics {
@@ -380,7 +391,11 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
 
       </div>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Metrics Display */}
       {showMetrics && (
         <motion.div
@@ -392,7 +407,11 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
 =======
 
         >
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -442,16 +461,27 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
       )}
 <<<<<<< HEAD
       {/* Optimization Controls */}
+<<<<<<< HEAD
       <div className='space-y-3'>        <button      <div className="space-y-3">
         <button
 =======
 
       {/* Optimization Controls */}
+=======
+<<<<<<< HEAD
+      <div className='space-y-3'>        <button      <div className="space-y-3">
+        <button
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className='space-y-3'>        <button
 
         <button
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
@@ -489,7 +519,11 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
         )}
       </div>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Performance Tips */}
       <div className='mt-6 pt-4 border-t border-white/10'>
         <h4 className='text-sm font-semibold text-white/80 mb-3'>
@@ -502,7 +536,11 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
 =======
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
           <li>• Minimize CSS and JavaScript bundles</li>
@@ -525,6 +563,11 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
       {criticalCSS && (;
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
       )}
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 {/* Preload critical resources */}
       {preloadImages.map((image, index) => (;
         <link;
@@ -632,4 +675,10 @@ export default PerformanceOptimizer;
 };export default PerformanceOptimizer;
 
 export default PerformanceOptimizer;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default PerformanceOptimizer;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

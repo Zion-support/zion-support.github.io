@@ -1,9 +1,17 @@
 <<<<<<< HEAD:components/reviews/StarRating.tsx
+<<<<<<< HEAD
+=======
+> <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 <<<<<<< HEAD:backup-problematic-files/reviews/StarRating.tsx
 import React, { useState } from 'react',
 =======
  > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/StarRating.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }) 
 }</div>) 
 };
@@ -14,6 +22,7 @@ import React, { useState } from 'react',
 }</div>)
 }
 export const StarRating: React.FC<Props> = ({
+<<<<<<< HEAD
   value
   onChange
   size = 24
@@ -26,6 +35,18 @@ type Props = {
 =======
 >>>>>>> main:components/reviews/StarRating.tsx
 
+=======
+  value,
+  onChange,
+  size = 24,
+  readOnly,;
+}) => {  const [hovered, setHovered] = useState<number | null>(null);import React, { useState } from 'react';
+<<<<<<< HEAD:components/reviews/StarRating.tsx
+=======
+>>>>>>> main:components/reviews/StarRating.tsx
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/StarRating.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Props = {
   value: number,
   onChange: (val: number) => void,
@@ -55,6 +76,10 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
   readOnly?: boolean
 }
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const stars = [1, 2, 3, 4, 5];
   return (
     <div className='flex items-center gap-1'>
@@ -68,7 +93,11 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
 <<<<<<< HEAD:components/reviews/StarRating.tsx
 =======
 >>>>>>> main:components/reviews/StarRating.tsx
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/StarRating.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/StarRating.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
             aria-label={`${star} star`}
@@ -122,13 +151,23 @@ export default StarRating;              width={size}
 };
 export default StarRating;
 =======
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/StarRating.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/StarRating.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>
   )
 }
 export default StarRating;
 <<<<<<< HEAD:components/reviews/StarRating.tsx
+<<<<<<< HEAD
 
 =======
 >>>>>>> main:components/reviews/StarRating.tsx
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/StarRating.tsx
+=======
+=======
+>>>>>>> main:components/reviews/StarRating.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/StarRating.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

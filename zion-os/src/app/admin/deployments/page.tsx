@@ -2,6 +2,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import {
+<<<<<<< HEAD
   Rocket
   Clock
   CheckCircle
@@ -24,6 +25,30 @@ import {
   Pause
   StopCircle
   MapPin
+=======
+  Rocket,
+  Clock,
+  CheckCircle,
+  AlertCircle,
+  Play,
+  Eye,
+  Settings,
+  Globe,
+  Activity,
+  Calendar,
+  User,
+  Building2,
+  Shield,
+  TrendingUp,
+  Users,
+  Zap,
+  Sparkles,
+  ArrowRight,
+  RefreshCw,
+  Pause,
+  StopCircle,
+  MapPin,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 interface Deployment {
   id: string;
@@ -84,7 +109,12 @@ const mockDeployments: Deployment[] = [
     country: 'Singapore'
   }
 ];
+<<<<<<< HEAD
 export default function DeploymentsPage() {
+=======
+
+export default function DeploymentsPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [deployments, setDeployments] = useState<Deployment[]>(mockDeployments);
   const [filter, setFilter] = useState<
     'all' | 'pending' | 'deploying' | 'completed' | 'failed'
@@ -557,7 +587,11 @@ export default function DeploymentsPage() {;
           >;
             {label} ({count});
           </button>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ))}
       </div>
       {/* Deployments Grid */}
@@ -685,7 +719,11 @@ export default function DeploymentsPage() {;
                     ></div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             </div>
             {/* Deployment Details */}
@@ -696,12 +734,21 @@ export default function DeploymentsPage() {;
                 <div className='flex items-center gap-2 text-white/70'>
                   <Globe className='w-4 h-4' />
                   <span className='font-mono'>
+<<<<<<< HEAD
                     {deployment.domain |
                       deployment.subdomain |
                       'No domain set'}
                   </span>
                 </div>
                 {(deployment.region |deployment.country) && (
+=======
+                    {deployment.domain ||
+                      deployment.subdomain ||
+                      'No domain set'}
+                  </span>
+                </div>
+                {(deployment.region || deployment.country) && (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div className='flex items-center gap-2 text-white/70'>
                     <MapPin className='w-4 h-4' />
                     <span>
@@ -713,10 +760,17 @@ export default function DeploymentsPage() {;
                 <div className="flex items-center gap-2 text-white/70">
                   <span>🌐</span>
                   <span className="font-mono">
+<<<<<<< HEAD
                     {deployment.domain |deployment.subdomain |'No domain set'}
                   </span>
                 </div>
                 {(deployment.region |deployment.country) && (
+=======
+                    {deployment.domain || deployment.subdomain || 'No domain set'}
+                  </span>
+                </div>
+                {(deployment.region || deployment.country) && (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div className="flex items-center gap-2 text-white/70">
                     <span>📍</span>
                     <span>{deployment.region} {deployment.country}</span>
@@ -736,7 +790,11 @@ export default function DeploymentsPage() {;
                     <MapPin className="w-4 h-4" />;
                     <span>{[deployment.region, deployment.country].filter(Boolean).join()}</span>;
                   </div>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
               </div>
               {/* Features */}
@@ -779,7 +837,11 @@ export default function DeploymentsPage() {;
                     <span className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">;
                       +{deployment.features.length - 4} more;
                     </span>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   )}
                 </div>
               </div>
@@ -812,7 +874,11 @@ export default function DeploymentsPage() {;
                     <RefreshCw className="w-3 h-3" />;
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>;
                   </div>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
               </div>
             </div>
@@ -925,7 +991,11 @@ export default function DeploymentsPage() {;
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ))}
       </div>
       {/* Empty State */}
@@ -1016,8 +1086,11 @@ export default function DeploymentsPage() {;
     </div>
   );      )}
     </div>
+<<<<<<< HEAD
   );
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       {filteredDeployments.length === 0 && (;
         <div className="text-center py-16">;
@@ -1043,6 +1116,10 @@ export default function DeploymentsPage() {;
         </div>;
       )}
     </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

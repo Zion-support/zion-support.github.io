@@ -194,7 +194,11 @@ import {
   SleepyFace2,
   YawningFace2,
 <<<<<<< HEAD
+<<<<<<< HEAD
   DizzyFace2,
+=======
+  DizzyFace2,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 =======
   DizzyFace2
@@ -385,8 +389,13 @@ import {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function LoginPage() {
   const [formData, setFormData] = useState({
+<<<<<<< HEAD
     email: ""
     password: ""
+=======
+    email: "",
+    password: "",;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);

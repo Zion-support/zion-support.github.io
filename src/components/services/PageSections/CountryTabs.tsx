@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
+=======
+import { useState, useEffect } from 'react'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Search } from 'lucide-react'
 
 import { Input } from '@/components/ui/input'
@@ -15,6 +19,16 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { CountryServiceCard } from '@/components/services/CountryServiceCard'
 import { CountryPricing } from '@/data/onsiteServicePricing'
+<<<<<<< HEAD
+=======
+interface CountryTabsProps {
+  popularCountries: string[]
+  filteredCountries: CountryPricing[]
+  handleCountrySelect: (country: CountryPricing) => void
+  onQuote?: (country: CountryPricing) => void
+  searchQuery: string
+  setSearchQuery: (query: string) => void
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState, useEffect } from 'react',;
 import { Search } from 'lucide-react';
@@ -40,6 +54,7 @@ interface CountryTabsProps {;
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
 interface CountryTabsProps {
   popularCountries: string[];
   filteredCountries: CountryPricing[];
@@ -56,6 +71,17 @@ export function CountryTabs({
   onQuote
   searchQuery
   setSearchQuery
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export function CountryTabs({
+  popularCountries,
+  filteredCountries,
+  handleCountrySelect,
+  onQuote,
+  searchQuery,
+<<<<<<< HEAD
+  setSearchQuery,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1)
   const countriesPerPage = 50
@@ -63,12 +89,20 @@ export function CountryTabs({
     setCurrentPage(1)
   }, [searchQuery])
   const totalPages = Math.ceil(filteredCountries.length / countriesPerPage)
+<<<<<<< HEAD
 =======
   popularCountries,
   filteredCountries,
   handleCountrySelect,
   onQuote,
   searchQuery,
+=======
+  const paginatedCountries = filteredCountries.slice(
+    (currentPage - 1) * countriesPerPage,
+    currentPage * countriesPerPage
+  )
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1),
   const countriesPerPage = 50,
@@ -86,7 +120,11 @@ export function CountryTabs({
   )
 =======
   ),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Tabs defaultValue="featured" className="w-full">
       <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">
@@ -109,7 +147,11 @@ export function CountryTabs({
       <TabsContent value="featured" className="mt-0">
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-white text-center">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Featured Service Locations
           </h2>
           <p className="text-zion-slate-light text-center mt-2">
@@ -190,7 +232,11 @@ export function CountryTabs({
               onQuote={onQuote}
               isPopular={popularCountries.includes(country.country)}
             />;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           ))}
         </div>
         {totalPages > 1 && (
@@ -204,11 +250,18 @@ export function CountryTabs({
                     onClick={e => {
                       e.preventDefault()
                       setCurrentPage(Math.max(1, currentPage - 1))
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                     onClick={(e) => {;
                       e.preventDefault(),;
                       setCurrentPage(Math.max(1, currentPage - 1));
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     }}
                   />;
                 </PaginationItem>;
@@ -218,6 +271,17 @@ export function CountryTabs({
                       <PaginationButton;
                         page={page}
                         isActive={page === currentPage}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                        onClick={e => {
+                          e.preventDefault()
+                          setCurrentPage(page) }}
+                      />
+                    </PaginationItem>
+                  )
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         onClick={(e) => {;
                           e.preventDefault();
                           setCurrentPage(page);
@@ -225,15 +289,26 @@ export function CountryTabs({
                       />;
                     </PaginationItem>;
                   );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
                 <PaginationItem>;
                   <PaginationNext;
                     href={`?page=${currentPage + 1}`}
+<<<<<<< HEAD
                     onClick={(e) => {;
                       e.preventDefault();
                       setCurrentPage(Math.min(totalPages, currentPage + 1));
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     }}
+=======
+<<<<<<< HEAD
+                    onClick={e => {
+                      e.preventDefault()
+                      setCurrentPage(Math.min(totalPages, currentPage + 1)) }}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   />
                 </PaginationItem>
               </PaginationContent>
@@ -244,14 +319,36 @@ export function CountryTabs({
       </TabsContent>
     </Tabs>
   )
+<<<<<<< HEAD
   )
 }
   )
 }
 =======
+=======
+  );
+};
+  );
+};
+=======
+                    onClick={(e) => {;
+                      e.preventDefault();
+                      setCurrentPage(Math.min(totalPages, currentPage + 1));
+                    }}
+                  />;
+                </PaginationItem>;
+              </PaginationContent>;
+            </Pagination>;
+          </div>;
+        )}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       </TabsContent>;
     </Tabs>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

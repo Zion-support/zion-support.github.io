@@ -86,7 +86,7 @@ export default function ${componentName}() {
     <div>
       <h1>${componentName}</h1>
       <p>This is a valid React component.</p>
-    </div>
+    </div>;
   );
 }`;
 }

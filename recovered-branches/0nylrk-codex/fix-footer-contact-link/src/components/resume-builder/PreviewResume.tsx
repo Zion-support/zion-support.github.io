@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Resume } from "@/types/resume";
 import {
   PreviewHeader
@@ -9,11 +10,18 @@ import {
   SkillsSection
   CertificationsSection
 } from "./preview";
+=======
+import {Resume} from '@/types/resume';
+import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 interface PreviewResumeProps {
   resume: Resume;
   onBack: () => void
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { Resume } from '@/types/resume',;
 import {;
@@ -27,6 +35,10 @@ import {;
 interface PreviewResumeProps {;
   resume: Resume;
   onBack: () => void;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -49,5 +61,9 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
 =======
   )
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

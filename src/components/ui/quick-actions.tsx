@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/button'
@@ -33,9 +36,16 @@ export function QuickActions() {
   if (!isAllowed) {
     return null
   }
+<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false)
   const [isProcessing, setIsProcessing] = useState<string | null>(null)
   const executeAction = async (actionId: string, action: () => void) => {
+=======
+;
+  const [isVisible, setIsVisible] = useState(false);
+  const [isProcessing, setIsProcessing] = useState<string | null>(null);
+  const executeAction = async (actionId: string, action: () => void) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setIsProcessing(actionId);    try {
       await action()
     } catch (error) {
@@ -46,6 +56,7 @@ export function QuickActions() {
       setIsProcessing(null)
     }
   }
+<<<<<<< HEAD
   const actions: QuickAction[] = [
     // Performance Actions
     {
@@ -77,6 +88,8 @@ export function QuickActions() {
       icon: <Trash2 className='w-4 h-4' />
       category: 'maintenance'
       dangerous: true
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -116,6 +129,10 @@ export function QuickActions() {;
     }
   },
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const actions: QuickAction[] = [
     // Performance Actions
     {
@@ -125,9 +142,22 @@ export function QuickActions() {;
       icon: <Activity className="w-4 h-4" />,
       category: 'performance',
       action: () => {
+<<<<<<< HEAD
         localStorage.setItem('performance-monitoringtrue'),
         window.location.reload()
       }},
+=======
+<<<<<<< HEAD
+        localStorage.setItem('performance-monitoring', 'true')
+        window.location.reload()
+      },
+    },
+=======
+        localStorage.setItem('performance-monitoringtrue'),
+        window.location.reload()
+      }},
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
@@ -135,9 +165,22 @@ export function QuickActions() {;
       icon: <Package className="w-4 h-4" />,
       category: 'performance',
       action: () => {
+<<<<<<< HEAD
         localStorage.setItem('bundle-analyzertrue'),
         window.location.reload()
       }},
+=======
+<<<<<<< HEAD
+        localStorage.setItem('bundle-analyzer', 'true')
+        window.location.reload()
+      },
+    },
+=======
+        localStorage.setItem('bundle-analyzertrue'),
+        window.location.reload()
+      }},
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       id: 'clear-cache',
       label: 'Clear Cache',
@@ -156,8 +199,19 @@ export function QuickActions() {;
         localStorage.clear()
         sessionStorage.clear()
         window.location.reload()
+<<<<<<< HEAD
       }
     }
+=======
+      },
+    },
+=======
+        localStorage.clear(),
+        sessionStorage.clear(),
+        window.location.reload()
+      }},
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       id: 'preload-critical-resources'
       label: 'Preload Critical Resources'
@@ -167,8 +221,14 @@ export function QuickActions() {;
       action: () => {
         // Preload critical fonts
         const criticalFonts = [
+<<<<<<< HEAD
           '/fonts/inter-var.woff2'
           '/fonts/cal-sans.woff2'
+=======
+<<<<<<< HEAD
+          '/fonts/inter-var.woff2',
+          '/fonts/cal-sans.woff2',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ]
         criticalFonts.forEach(font => {
           const link = document.createElement('link')
@@ -188,6 +248,7 @@ export function QuickActions() {;
           link.href = img
           document.head.appendChild(link)
         })
+<<<<<<< HEAD
       }
     }
     {
@@ -273,6 +334,11 @@ export function QuickActions() {;
       action: () => {
         // Preload critical fonts
         const criticalFonts = [
+=======
+      },
+    },
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           '/fonts/inter-var.woff2/fonts/cal-sans.woff2'
         ],
         
@@ -299,6 +365,10 @@ export function QuickActions() {;
           document.head.appendChild(link)
         })
       }},
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       id: 'download-performance-report',
       label: 'Download Performance Report',
@@ -315,6 +385,27 @@ export function QuickActions() {;
           screen: {
             width: screen.width,
             height: screen.height,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            colorDepth: screen.colorDepth,
+          },
+        }
+        const blob = new Blob([JSON.stringify(metrics, null, 2)], {
+          type: 'application/json',
+        })
+        const url = URL.createObjectURL(blob)
+        const a = document.createElement('a')
+        a.href = url
+        a.download = `performance-report-${Date.now()}.json`
+        document.body.appendChild(a)
+        a.click()
+        document.body.removeChild(a)
+        URL.revokeObjectURL(url)
+      },
+    },
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             colorDepth: screen.colorDepth
           }
         },
@@ -332,6 +423,10 @@ export function QuickActions() {;
         document.body.removeChild(a),
         URL.revokeObjectURL(url)
       }},
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
@@ -340,8 +435,21 @@ export function QuickActions() {;
       category: 'development',
       dangerous: true,
       action: () => {
+<<<<<<< HEAD
         throw new Error('Test error for Sentry integration - this is intentional!')
       }},
+=======
+<<<<<<< HEAD
+        throw new Error(
+          'Test error for Sentry integration - this is intentional!'
+        )
+      },
+    },
+=======
+        throw new Error('Test error for Sentry integration - this is intentional!')
+      }},
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
@@ -350,6 +458,27 @@ export function QuickActions() {;
       category: 'maintenance',
       action: () => {
         window.location.reload()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      },
+    },
+  ]
+  const categorizedActions = {
+    performance: actions.filter(a => a.category === 'performance'),
+    development: actions.filter(a => a.category === 'development'),
+    maintenance: actions.filter(a => a.category === 'maintenance'),
+  }
+  const categoryColors = {
+    performance:
+      'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
+    development:
+      'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
+    maintenance:
+      'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200',
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }}],
 
   const categorizedActions = {
@@ -363,6 +492,10 @@ export function QuickActions() {;
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
@@ -380,7 +513,11 @@ export function QuickActions() {;
           className="bg-background/80 backdrop-blur-sm"
         >
           <Settings className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Quick Actions
         </Button>
       </div>
@@ -407,7 +544,11 @@ export function QuickActions() {;
               onClick={() => setIsVisible(false)}
               className="h-6 w-6 p-0"
             >
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ✕
             </Button>
           </div>
@@ -465,8 +606,11 @@ export function QuickActions() {;
     </div>
   )
 }
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
@@ -512,4 +656,8 @@ export function QuickActions() {;
     </div>;
   );
 } ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

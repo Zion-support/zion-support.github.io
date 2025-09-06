@@ -1,4 +1,19 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Card, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+import {CheckCircle, ChevronRight, FileText, MessageSquare, Video} from "lucide-react";
+import {Progress} from "@/components/ui/progress";
+import {SeverityIndicator} from "../common/SeverityIndicator";
+import {useNavigate} from "react-router-dom";
+import {toast} from "sonner";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -13,8 +28,21 @@ import { toast } from "sonner";
 =======
 import { useNavigate } from "react-router-dom",
 import { toast } from "sonner",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface Milestone {
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+interface Milestone {
+  id: string,
+  title: string,
+  dueDate: string,
+  status: "completed" | "in_progress" | "pending",
+  paymentStatus: "paid" | "pending" | "overdue",
+  amount: string
+<<<<<<< HEAD
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   id: string
   title: string
@@ -46,6 +74,10 @@ interface ProjectViewProps {
 }
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
 
+<<<<<<< HEAD
+=======
+export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const navigate = useNavigate();
 =======
 import React from "react",;
@@ -87,6 +119,7 @@ interface ProjectViewProps {;
 
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   const navigate = useNavigate(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const startProjectCall = () => {
@@ -209,6 +242,11 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
 =======
                       milestone.paymentStatus === "paid" ? "default" : 
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
   const navigate = useNavigate(),;
@@ -314,7 +352,11 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     variant={;
                       milestone.paymentStatus === "paid" ? "default" :;
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline";
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     }
                   >
                     {milestone.paymentStatus}
@@ -370,7 +412,11 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 </div>;
               </CardContent>;
             </Card>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           ))}
         </div>
       </section>

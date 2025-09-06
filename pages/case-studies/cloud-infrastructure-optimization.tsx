@@ -25,7 +25,11 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <nav className="mb-8">
             <Link href="/" className="text-white/60 hover:text-white transition-colors">
               Home
@@ -45,7 +49,11 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <header className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-blue-400/20 text-blue-400 text-sm rounded-full border border-blue-400/30 mb-6">
               Technology Industry
@@ -73,13 +81,25 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-blue-400 mb-4">E-commerce Platform</h3>
                 <p className="text-white/90 text-lg mb-4">
+<<<<<<< HEAD
                   A growing e-commerce platform serving thousands of customers daily.
+=======
+<<<<<<< HEAD
+                  A growing e-commerce platform serving thousands of customers daily. 
+=======
+                  A growing e-commerce platform serving thousands of customers daily.
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   The company faced challenges with high cloud costs, performance issues, and manual scaling requirements.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
@@ -106,7 +126,11 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -139,55 +163,101 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Solution</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-green-400 mb-4">Self-Healing, Auto-Scaling Infrastructure</h3>
                 <p className="text-white/90 text-lg mb-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
                   We built a comprehensive cloud infrastructure solution that automatically scales
 
+=======
+                  We built a comprehensive cloud infrastructure solution that automatically scales, 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   monitors, and heals itself while optimizing costs and performance.
 =======
                   We built a comprehensive cloud infrastructure solution that automatically scales,
                   monitors, and heals itself while optimizing costs and window.window.window.performance.
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-blue-400 mb-3">Auto-scaling</h4>
                     <p className="text-white/80">
+<<<<<<< HEAD
                       Intelligent scaling algorithms automatically adjust resources based on
+=======
+<<<<<<< HEAD
+                      Intelligent scaling algorithms automatically adjust resources based on 
+=======
+                      Intelligent scaling algorithms automatically adjust resources based on
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       real-time demand and performance metrics.
                     </p>
                   </div>
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-blue-400 mb-3">Load Balancing</h4>
                     <p className="text-white/80">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                      Advanced load balancing distributes traffic efficiently across multiple 
+                      instances for optimal performance.
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       Advanced load balancing distributes traffic efficiently across multiple
 <<<<<<< HEAD
                       instances for optimal performance.
 =======
                       instances for optimal window.window.window.performance.
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
                   </div>
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-blue-400 mb-3">Monitoring</h4>
                     <p className="text-white/80">
+<<<<<<< HEAD
+                      Comprehensive monitoring and alerting systems provide real-time visibility 
+                      into infrastructure health and performance.
+=======
                       Comprehensive monitoring and alerting systems provide real-time visibility
 <<<<<<< HEAD
                       into infrastructure health and performance.
 =======
                       into infrastructure health and window.window.window.performance.
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
                   </div>
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-blue-400 mb-3">Cost Optimization</h4>
                     <p className="text-white/80">
+<<<<<<< HEAD
+                      AI-powered cost optimization algorithms automatically identify and 
+=======
                       AI-powered cost optimization algorithms automatically identify and
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       implement cost-saving opportunities.
                     </p>
                   </div>
@@ -202,7 +272,11 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Results & Impact</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -260,7 +334,11 @@ export default function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -511,7 +589,11 @@ export default function CaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -548,11 +630,25 @@ export default function CaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <section className="text-center">
               <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-2xl p-8 border border-blue-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Optimize Your Cloud Infrastructure?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  This case study demonstrates the real impact of infrastructure automation. 
+                  Let&apos,s discuss how we can help you achieve similar results.
+                </p>
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                  <Link 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   This case study demonstrates the real impact of infrastructure automation.
 <<<<<<< HEAD
                   Let&apos,s discuss how we can help you achieve similar results.
@@ -562,12 +658,24 @@ export default function CaseStudyPage(req, res) {
                 </p>
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     href="/contact"
                     className="bg-gradient-to-r from-blue-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-500 hover:to-cyan-500 transition-all duration-300"
                   >
                     Get Started
                   </Link>
+<<<<<<< HEAD
                   <Link
+=======
+<<<<<<< HEAD
+                  <Link 
+=======
+                  <Link
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     href="/case-studies"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-blue-400/50 transition-all duration-300"
                   >
@@ -581,6 +689,9 @@ export default function CaseStudyPage(req, res) {
       </div>
     </>
   )
+<<<<<<< HEAD
+};
+=======
             <section className="mb-16">;
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h2>;
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">;
@@ -647,3 +758,4 @@ export default function CaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

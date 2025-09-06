@@ -7,6 +7,7 @@ import Head from 'next/head';
 
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
   Rocket
   Brain
   Atom
@@ -18,6 +19,19 @@ import {
   TrendingUp
   Eye
   Timer;
+=======
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Star,
+  TrendingUp,
+  Eye,;
+  Timer,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
@@ -29,11 +43,20 @@ import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services'
 export default function UltraFuturistic2029InnovationsPage() {
 
   const contactInfo = {
+<<<<<<< HEAD
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
   }
+=======
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',;
+  };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const all2029Services = [
     ...cuttingEdgeInnovations2029
     ...spaceColonization2029Services
@@ -87,7 +110,11 @@ export default function UltraFuturistic2029InnovationsPage() {
       {/* Navigation */}
       <UltraFuturisticNavigation2029 />
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto text-center'>
@@ -551,6 +578,7 @@ export default function UltraFuturistic2029InnovationsPage() {
 }`
 }className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold" > Call Now </a> </div> </motion.div> </div> </section> {
 <<<<<<< HEAD
+<<<<<<< HEAD
   /* Footer */
 }<UltraFuturisticFooter2029 /> </>)   )
 }
@@ -558,3 +586,37 @@ export default function UltraFuturistic2029InnovationsPage() {
   /* Footer */ 
 }<UltraFuturisticFooter2029 /> </>)
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  /* Footer */ 
+<<<<<<< HEAD
+}<UltraFuturisticFooter2029 /> </>)   )
+}
+;
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+=======
+}<UltraFuturisticFooter2029 /> </>)
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

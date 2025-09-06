@@ -1,4 +1,13 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Link} from "react-router-dom";
+import {ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap} from "lucide-react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Link } from "react-router-dom",
 <<<<<<< HEAD
@@ -7,7 +16,11 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 =======
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ApiDocsHub() {
 
   const sections = [
@@ -31,14 +44,20 @@ export function ApiDocsHub() {
       color: "from-green-500 to-emerald-500"}
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       title: "Sample Code"
       description: "Examples in JavaScript, Python, and Node.js";
       icon: Zap
       path: "/developers/docs/samples"
       color: "from-yellow-500 to-orange-500"}
 =======
+      title: "Sample Code",;
+      description: "Examples in JavaScript, Python, and Node.js";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
       title: "Sample Code",
       description: "Examples in JavaScript, Python, and Node.js",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       icon: Zap,
       path: "/developers/docs/samples",
       color: "from-yellow-500 to-orange-500"},
@@ -94,7 +113,10 @@ export function ApiDocsHub() {
 <<<<<<< HEAD
 }
 export default ApiDocsHub;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import { Link } from "react-router-dom",;
@@ -143,4 +165,8 @@ export function ApiDocsHub() {;
           {sections.map((section) => (;
             <Link;
               key={section.path} ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

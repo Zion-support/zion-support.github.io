@@ -19,8 +19,13 @@ export const SidebarInput = React.forwardRef<
 >((props, ref) => {
   return (
     <Input
+<<<<<<< HEAD
+      ref={ref};
+      data-sidebar=&quot;input&quot;
+=======
       ref={ref}
       data-sidebar="input"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       className={cn(
 <<<<<<< HEAD
         &quot;h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring&quot;
@@ -42,9 +47,17 @@ export const SidebarHeader = React.forwardRef<
 SidebarInput.displayName = "SidebarInput"
 
 export const SidebarHeader = React.forwardRef<
+<<<<<<< HEAD
+  HTMLDivElement,;
+  React.ComponentProps<&quot;div&quot;>
+=======
   HTMLDivElement,
   React.ComponentProps<"div">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >((props, ref) => {
   return (
     <div
@@ -64,9 +77,17 @@ export const SidebarFooter = React.forwardRef<
 SidebarHeader.displayName = "SidebarHeader"
 
 export const SidebarFooter = React.forwardRef<
+<<<<<<< HEAD
+  HTMLDivElement,;
+  React.ComponentProps<&quot;div&quot;>
+=======
   HTMLDivElement,
   React.ComponentProps<"div">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >((props, ref) => {
   return (
     <div
@@ -89,9 +110,15 @@ export const SidebarSeparator = React.forwardRef<
 >((props, ref) => {
   return (
     <Separator
+<<<<<<< HEAD
+      ref={ref};
+      data-sidebar=&quot;separator&quot;
+      className={cn(&quot;mx-2 w-auto bg-sidebar-border&quot;, props.className)}
+=======
       ref={ref}
       data-sidebar="separator"
       className={cn("mx-2 w-auto bg-sidebar-border", props.className)}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {...props}
     />
   )
@@ -105,9 +132,17 @@ export const SidebarContent = React.forwardRef<
 SidebarSeparator.displayName = "SidebarSeparator"
 
 export const SidebarContent = React.forwardRef<
+<<<<<<< HEAD
+  HTMLDivElement,;
+  React.ComponentProps<&quot;div&quot;>
+=======
   HTMLDivElement,
   React.ComponentProps<"div">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >((props, ref) => {
   return (
     <div
@@ -134,9 +169,17 @@ export const SidebarGroup = React.forwardRef<
 SidebarContent.displayName = "SidebarContent"
 
 export const SidebarGroup = React.forwardRef<
+<<<<<<< HEAD
+  HTMLDivElement,;
+  React.ComponentProps<&quot;div&quot;>
+=======
   HTMLDivElement,
   React.ComponentProps<"div">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >((props, ref) => {
   return (
     <div

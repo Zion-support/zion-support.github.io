@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 import { NextPage } from 'next';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -330,10 +333,24 @@ const ProductsIndex: NextPage = () => {
   );
 <<<<<<< HEAD
 };
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 =======
+=======
+
+export default ProductsIndex;
+  )
+};
+
+export default Index;
+=======
+import type { NextPage } from 'next',
+import Head from 'next/head',
+const Index: NextPage = () => {
+  return (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
@@ -373,8 +390,14 @@ export default Index;
 export default ProductsIndex;
 >>>>>>> origin/main
   )
+<<<<<<< HEAD
 }
 export default Index;
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+},
+export default Index,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,4 +1,20 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {useQuery} from "@tanstack/react-query";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {useToast} from "@/hooks/use-toast";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Skeleton} from "@/components/ui/skeleton";
+import {ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle} from "lucide-react";
+import {formatDistanceToNow} from "date-fns";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -75,6 +91,10 @@ export function TransactionHistory() {
 =======
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",
 import { formatDistanceToNow } from "date-fns",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface Transaction {
   id: string,
   user_id: string,
@@ -93,6 +113,58 @@ interface Transaction {
   },
   service?: {
     title?: string
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+}
+
+export function TransactionHistory() {;
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
+  
+  const { data: transactions, isLoading, error, refetch } = useQuery({
+    queryKey: ['transactions', user?.id, filter];
+    queryFn: async () => {
+      if (!user) return [];
+      
+      // Build the query based on filters
+      let query = supabase
+        .from('transactions')
+        .select(`
+          *;
+          provider:profiles!provider_id(display_name),
+          service:services(title)
+        `)
+        .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`);
+      
+      if (filter === 'pending') {
+        query = query.eq('statuspending')
+      } else if (filter === 'completed') {
+        query = query.eq('statuscompleted')
+      } else if (filter === 'escrow') {
+        query = query.eq('in_escrow', true)
+      }
+      
+      query = query.order('created_at', { ascending: false }),
+      
+      const { data, error } = await query;
+      
+      if (error) throw error;
+      return data as Transaction[]
+    };
+    enabled: !!user}),
+
+  const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
+    try {
+      const { data, error } = await supabase.functions.invoke('manage-transaction', {
+        body: { transactionId, action }
+      });
+      
+      if (error) throw error;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -163,6 +235,10 @@ export function TransactionHistory() {;
       }),
       
       if (error) throw error,
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast({
@@ -513,7 +589,11 @@ export function TransactionHistory() {;
                             <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>;
                           ) : (;
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           )}
                         </CardDescription>
                       </div>
@@ -534,7 +614,11 @@ export function TransactionHistory() {;
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
                       </span>
                     </div>
+<<<<<<< HEAD
                     {(transaction.completed_at |transaction.refunded_at |transaction.cancelled_at) && (
+=======
+                    {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div className="flex justify-between items-center text-sm mt-1">
                         <span className="text-zion-slate-light">
                           {transaction.completed_at ? 'Completed:' :

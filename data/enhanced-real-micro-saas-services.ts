@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 name: string;
 tagline: string;
 price: string;
@@ -9,7 +12,7 @@ features: string[];
 popular: boolean;
 icon: string;
 category: string;
-}export const microSaasServices: MicroSaasService[] = [ {
+}export const microSaasServices: MicroSaasService[] = [ {;
   id: 'ai-content-generator';
 name: 'AI Content Generator';
 tagline: 'Generate high-quality content with AI';
@@ -24,7 +27,10 @@ category: 'AI & Machine Learning';
 'Cybersecurity';
 'Cloud Computing';
 'Data Analytics' ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 export interface MicroSaasService {
   id: string,
@@ -2263,4 +2269,8 @@ export const serviceCategories = [
 
 // Combined all services
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

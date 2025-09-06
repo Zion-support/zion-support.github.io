@@ -1,3 +1,36 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { format } from 'date-fns'
+import { useAuth } from '@/hooks/useAuth'
+import { useProjects } from '@/hooks/useProjects'
+import { SEO } from '@/components/SEO'
+import { ProtectedRoute } from '@/components/ProtectedRoute'
+import { Project, ProjectStatus } from '@/types/projects';
+import { Button } from '@/components/ui/button';
+import { logErrorToProduction } from '@/utils/productionLogger'; import Link from 'next/link'
+import { format } from "date-fns"
+import { useAuth } from "@/hooks/useAuth"
+import { useProjects } from "@/hooks/useProjects"
+import { SEO } from "@/components/SEO"
+import { ProtectedRoute } from "@/components/ProtectedRoute"
+import { Project, ProjectStatus } from "@/types/projects"
+import { Button } from "@/components/ui/button"
+import {logErrorToProduction} from '@/utils/productionLogger'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from "react",
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
@@ -15,6 +48,10 @@ import {
 import { Button } from "@/components/ui/button",
 import {logErrorToProduction} from '@/utils/productionLogger',
 import {
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -23,6 +60,7 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
+<<<<<<< HEAD
   AlertDialogTrigger} from "@/components/ui/alert-dialog",
 import { Avatar } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
@@ -50,6 +88,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
   AlertDialogHeader
   AlertDialogTitle
   AlertDialogTrigger
+=======
+<<<<<<< HEAD
+  AlertDialogTrigger,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/alert-dialog'
 import { Avatar } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
@@ -82,6 +124,19 @@ function ProjectDetailsContent() {
   const [isSubmittingNote, setIsSubmittingNote] = useState(false)
   const [activeTab, setActiveTab] = useState('details')
 =======
+<<<<<<< HEAD
+=======
+  AlertDialogTrigger} from "@/components/ui/alert-dialog",
+import { Avatar } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",
+import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
+
+function ProjectDetailsContent() {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter(),
   // Get projectId from Next.js router query params
   const { projectId } = router.query as { projectId?: string },
@@ -95,12 +150,20 @@ function ProjectDetailsContent() {
   const [isSubmittingNote, setIsSubmittingNote] = useState(false),
   const [activeTab, setActiveTab] = useState("details"),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Load project data
   useEffect(() => {
     async function loadProject() {
 <<<<<<< HEAD
+<<<<<<< HEAD
       if (!projectId) return
+=======
+      if (!projectId) return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       setIsLoading(true)
       const projectData = await getProjectById(projectId)
       if (projectData) {
@@ -114,17 +177,37 @@ function ProjectDetailsContent() {
       if (projectData) {
         setProject(projectData),
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
         toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
           title: 'Project not found'
           description: 'The requested project could not be found.'
           variant: 'destructive'
         })
         router.push('/dashboard')
+=======
+          title: 'Project not found',
+          description: 'The requested project could not be found.',
+          variant: 'destructive',
+        })
+        router.push('/dashboard')
+      }
+
+      setIsLoading(false)
+    }
+
+    loadProject()
+  }, [projectId])
+  const fetchProjectNotes = async (projectId: string) => {    try {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           title: "Project not found",
           description: "The requested project could not be found.",
@@ -238,11 +321,39 @@ function ProjectDetailsContent() {;
   
   const fetchProjectNotes = async (projectId: string) => {
     try {
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       const { data, error } = await supabase
         .from("project_notes")
         .select(`
           *,
           created_by_profile:profiles!user_id(display_name, avatar_url)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        `
+        )
+        .eq('project_id', projectId)
+        .order('created_at', { ascending: false })
+      if (error) throw error
+      setNotes(data || [])
+    } catch (err: any) {
+      logErrorToProduction('Error fetching project notes:', { data: err })
+      toast({
+        title: 'Failed to load notes',
+        description:
+          err.message || 'An error occurred while loading project notes.',
+        variant: 'destructive',
+      })
+    }
+  }
+  const handleSubmitNote = async () => {
+    if (!newNote.trim() || !project || !user) return;
+    setIsSubmittingNote(true)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         `)
         .eq("project_id", projectId)
         .order("created_at", { ascending: false }),
@@ -264,15 +375,26 @@ function ProjectDetailsContent() {;
     
     setIsSubmittingNote(true),
     
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     try {
       const { data, error } = await supabase
         .from("project_notes")
         .insert({
 <<<<<<< HEAD
+<<<<<<< HEAD
           project_id: project.id
           user_id: user.id
           content: newNote
+=======
+          project_id: project.id,
+          user_id: user.id,
+<<<<<<< HEAD
+          content: newNote,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         })
         .select()
       if (error) throw error
@@ -295,7 +417,7 @@ function ProjectDetailsContent() {;
     }
   }
   const handleStatusChange = async (newStatus: ProjectStatus) => {
-    if (!project) return
+    if (!project) return;
     const success = await updateProjectStatus(project.id, newStatus)
     if (success) {
       setProject({
@@ -303,8 +425,11 @@ function ProjectDetailsContent() {;
         status: newStatus
       })
 =======
+<<<<<<< HEAD
           project_id: project.id,
           user_id: user.id,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           content: newNote})
         .select(),
       
@@ -338,13 +463,22 @@ function ProjectDetailsContent() {;
         ...project,
         status: newStatus}),
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // If offer was accepted, show a special toast
       if (newStatus === "offer_accepted") {
         toast({
 <<<<<<< HEAD
+<<<<<<< HEAD
           title: 'Offer Accepted! 🎉'
           description: 'The project is now in progress. Congratulations!'
+=======
+          title: 'Offer Accepted! 🎉',
+          description: 'The project is now in progress. Congratulations!',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         })
       }
     }
@@ -393,7 +527,11 @@ function ProjectDetailsContent() {;
     }
   },
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
     return (
       <div className="container mx-auto py-8">
@@ -425,7 +563,11 @@ function ProjectDetailsContent() {;
 =======
             <Button onClick={() => router.push("/dashboard")}>
               Return to Dashboard
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </Button>
           </CardContent>
         </Card>
@@ -434,6 +576,10 @@ function ProjectDetailsContent() {;
   }
 <<<<<<< HEAD
   // Check if user is either the client or the talent
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const isClient = user?.id === project.client_id
   const isTalent = user?.id === project.talent_id
   if (!isClient && !isTalent) {
@@ -449,6 +595,7 @@ function ProjectDetailsContent() {;
   const isActiveProject = ['offer_accepted', 'in_progress'].includes(
     project.status
   )
+<<<<<<< HEAD
 
   return (
     <>
@@ -458,6 +605,9 @@ function ProjectDetailsContent() {;
 =======
   
   // Check if user is either the client or the talent
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
   
@@ -470,6 +620,10 @@ function ProjectDetailsContent() {;
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
   
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO 
@@ -499,7 +653,11 @@ function ProjectDetailsContent() {;
 <<<<<<< HEAD
 =======
             
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Action Buttons Based on Role and Status */}
             <div className="space-x-2">
               {isTalent && isOfferPending && (
@@ -527,7 +685,11 @@ function ProjectDetailsContent() {;
 =======
                         <AlertDialogAction onClick={() => handleStatusChange("offer_accepted")}>
                           Accept Offer
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
@@ -538,14 +700,18 @@ function ProjectDetailsContent() {;
                     onClick={() => handleStatusChange('changes_requested')}
                   >
                     <MessageSquare className='mr-2 h-4 w-4' /> Request Changes
+<<<<<<< HEAD
                   </Button>
                 </>
               )}
               {(isClient |isTalent) && project.status === 'in_progress' && (
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
                   
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
                     <MessageSquare className="mr-2 h-4 w-4" /> Request Changes
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </Button>
                 </>
               )}
@@ -575,7 +741,11 @@ function ProjectDetailsContent() {;
 =======
                       <AlertDialogAction onClick={() => handleStatusChange("completed")}>
                         Mark as Completed
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
@@ -600,7 +770,12 @@ function ProjectDetailsContent() {;
                 </Button>
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
               {(isClient |isTalent) &&
+=======
+
+              {(isClient || isTalent) &&
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ['offer_sent', 'offer_accepted', 'in_progress'].includes(
                   project.status
                 ) && (
@@ -662,7 +837,11 @@ function ProjectDetailsContent() {;
               </TabsList>
               
               <TabsContent value="details">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Scope</CardTitle>
@@ -681,7 +860,11 @@ function ProjectDetailsContent() {;
 <<<<<<< HEAD
 =======
                       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div>
                         <h3 className="font-semibold mb-2">Payment Terms</h3>
                         <Badge variant="outline" className="capitalize">
@@ -691,7 +874,11 @@ function ProjectDetailsContent() {;
 <<<<<<< HEAD
 =======
                       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div>
                         <h3 className="font-semibold mb-2">Job Details</h3>
                         <div className="bg-muted/30 p-4 rounded-md">
@@ -707,7 +894,11 @@ function ProjectDetailsContent() {;
 =======
               
               <TabsContent value="timeline">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Timeline</CardTitle>
@@ -731,7 +922,11 @@ function ProjectDetailsContent() {;
                       
                       <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">
                         <Clock className="h-5 w-5 text-primary mt-0.5" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <div>
                           <h3 className="font-semibold">Project Status</h3>
                           <div className="mt-1">
@@ -748,7 +943,11 @@ function ProjectDetailsContent() {;
 =======
               
               <TabsContent value="documents">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Documents</CardTitle>
@@ -791,7 +990,11 @@ function ProjectDetailsContent() {;
 =======
               
               <TabsContent value="notes">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Notes</CardTitle>
@@ -816,7 +1019,11 @@ function ProjectDetailsContent() {;
                             <div key={note.id} className="bg-muted/30 p-3 rounded-md">
                               <div className="flex items-center gap-2 mb-2">
                                 <Avatar className="h-6 w-6">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                   {note.created_by_profile?.avatar_url ? (
                                     <img
                                       src={note.created_by_profile.avatar_url}
@@ -826,7 +1033,11 @@ function ProjectDetailsContent() {;
 =======
                                       loading="lazy"
                                     />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                   ) : (
                                     <User className="h-4 w-4" />
                                   )}
@@ -864,9 +1075,12 @@ function ProjectDetailsContent() {;
                             value={newNote}
                             onChange={e => setNewNote(e.target.value)}
                             className='min-h-[100px] mb-2'                          />
+<<<<<<< HEAD
                           <Button
                             onClick = {handleSubmitNote,}
                             disabled = {!newNote.trim() |isSubmittingNote,}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                       
                       {isOfferAccepted && (
@@ -877,6 +1091,10 @@ function ProjectDetailsContent() {;
                             onChange={(e) => setNewNote(e.target.value)}
                             className="min-h-[100px] mb-2"
                           />
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <Button
                             onClick={handleSubmitNote}
                             disabled={!newNote.trim() || isSubmittingNote}
@@ -895,7 +1113,11 @@ function ProjectDetailsContent() {;
 =======
               
               <TabsContent value="reviews">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <ProjectReviewSection project={project} />
               </TabsContent>
             </Tabs>
@@ -905,7 +1127,11 @@ function ProjectDetailsContent() {;
 =======
           
           <div className="order-1 lg:order-2 lg:col-span-1">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Card>
               <CardHeader>
                 <CardTitle>Project Participants</CardTitle>
@@ -923,7 +1149,11 @@ function ProjectDetailsContent() {;
 =======
                           loading="lazy"
                         />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       ) : (
                         <User className="h-6 w-6" />
                       )}
@@ -939,6 +1169,10 @@ function ProjectDetailsContent() {;
                       </p>
                       {isClient && (
                         <Button
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           variant='outline'
                           size='sm'
                           className='mt-2'
@@ -949,6 +1183,7 @@ function ProjectDetailsContent() {;
                           }                        >
                           <MessageSquare className='mr-1 h-3 w-3' /> Message
 =======
+<<<<<<< HEAD
                       <h3 className="font-semibold">
                         {project.talent_profile?.full_name || "Talent"}
                       </h3>
@@ -957,13 +1192,19 @@ function ProjectDetailsContent() {;
                       </p>
                       {isClient && (
                         <Button
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           variant="outline"
                           size="sm"
                           className="mt-2"
                           onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </Button>
                       )}
                     </div>
@@ -975,7 +1216,11 @@ function ProjectDetailsContent() {;
                   
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {project.talent_profile?.profile_picture_url ? (
                         <img
                           src={project.talent_profile.profile_picture_url}
@@ -985,7 +1230,11 @@ function ProjectDetailsContent() {;
 =======
                           loading="lazy"
                         />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       ) : (
                         <User className="h-6 w-6" />
                       )}
@@ -1511,7 +1760,11 @@ function ProjectDetailsContent() {;
             </Card>;
             {/* Project Status Card */}
             <Card className="mt-6">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <CardHeader>
                 <CardTitle>Project Status</CardTitle>
               </CardHeader>
@@ -1545,7 +1798,11 @@ function ProjectDetailsContent() {;
                     <span className="text-sm font-medium">Start Date:</span>
                     <span className="text-sm">
                       {format(new Date(project.start_date), "PPP")}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </span>
                   </div>
                 </div>
@@ -1553,7 +1810,11 @@ function ProjectDetailsContent() {;
 <<<<<<< HEAD
 =======
               
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Conditional Footer Based on Status */}
               {project.status === "changes_requested" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
@@ -1568,6 +1829,7 @@ function ProjectDetailsContent() {;
                     }
                     className='w-full'                  >
                     <MessageSquare className='mr-2 h-4 w-4' /> Discuss Changes
+<<<<<<< HEAD
                   </Button>
                 </CardFooter>
               )}
@@ -1575,12 +1837,18 @@ function ProjectDetailsContent() {;
                 <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
                   <p className='text-sm text-muted-foreground'>
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
                   <Button 
                     variant="outline"
                     onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
                     className="w-full"
                   >
                     <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </Button>
                 </CardFooter>
               )}
@@ -1610,6 +1878,10 @@ function ProjectDetailsContent() {;
                   </p>
                 </CardFooter>
               )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </Card>
           </div>
         </div>
@@ -1630,23 +1902,26 @@ toast ({
   setIsSubmittingNote (false)
 }
 const handleStatusChange = async (newStatus: ProjectStatus) => {
-  if (!project) return
+  if (!project) return;
 const success = await updateProjectStatus (project.id, newStatus)
 if (success) {
   setProject ({
   ...project
 status: newStatus
 })
-//If offer was accepted, show a special toast if (newStatus === "offer accepted") {
-  toast ({
-};"
+//If offer was accepted, show a special toast if (newStatus === "offer accepted") {;
+  toast ({};"
 case "offer accepted": return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;"
 case "changes requested": return <Badge variant="secondary">Changes Requested</Badge>;"
 case "in progress": return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>;"
 case "completed": return <Badge variant="default">Completed</Badge>;"
 case "canceled": return <Badge variant="destructive">Canceled</Badge>;"
 default: return <Badge variant="outline"> {
+<<<<<<< HEAD
   status
+=======
+  status 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</Badge>
 };'"
 <p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick={"
@@ -1751,6 +2026,7 @@ const ProjectDetails = () => {
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
                 Contact Us
               </Link>
+<<<<<<< HEAD
             </div>
     </>
   )
@@ -1772,6 +2048,13 @@ const ProjectDetails = () => {
                   </p>
                 </CardFooter>
               )}
+=======
+            </div>;
+    </>;
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </Card>;
           </div>;
         </div>;
@@ -1788,4 +2071,8 @@ export default function ProjectDetails() {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

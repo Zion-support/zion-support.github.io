@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {QuoteFormData} from "@/types/quotes";
+import {Label} from "@/components/ui/label";
+import {Slider} from "@/components/ui/slider";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { QuoteFormData } from "@/types/quotes",
 <<<<<<< HEAD
 import { Label } from "@/components/ui/label";
@@ -5,7 +13,11 @@ import { Slider } from "@/components/ui/slider";
 =======
 import { Label } from "@/components/ui/label",
 import { Slider } from "@/components/ui/slider",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface BudgetStepProps {
 
   formData: QuoteFormData
@@ -17,6 +29,12 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
   const handleBudgetTypeSelect = (type: "fixed" | "hourly" | "range") => {
     if (type === "range" && !formData.budget.maxAmount) {
       updateFormData({
+<<<<<<< HEAD
+        budget: {;
+          ...formData.budget;
+          type,
+          maxAmount: formData.budget.amount + 5000
+=======
         budget: {
 <<<<<<< HEAD
           ...formData.budget;
@@ -42,7 +60,11 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
           ...formData.budget,;
           type,;
           maxAmount: formData.budget.amount + 5000;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       })
     } else {
@@ -54,9 +76,16 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
       })
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
   },
+=======
+  };
+=======
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const formatCurrency = (value: number) => {
@@ -88,7 +117,11 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
               <h4 className="font-medium text-white">Fixed Budget</h4>
               <p className="text-sm text-zion-slate-light">I have a set amount</p>
             </div>
+<<<<<<< HEAD
             <div
+=======
+            <div 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "hourly"
                   ? "bg-zion-purple/20 border-zion-purple"
@@ -99,7 +132,11 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
               <h4 className="font-medium text-white">Hourly Rate</h4>
               <p className="text-sm text-zion-slate-light">Pay per hour of work</p>
             </div>
+<<<<<<< HEAD
             <div
+=======
+            <div 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "range"
                   ? "bg-zion-purple/20 border-zion-purple"
@@ -114,7 +151,11 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
 <<<<<<< HEAD
 =======
           
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {formData.budget.type === "fixed" && (
             <div className="mt-6">
               <Label className="text-zion-slate-light mb-4 block">
@@ -184,7 +225,11 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {;
                         ...formData.budget;
                         amount: newAmount;
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       }
                     })
                   }}

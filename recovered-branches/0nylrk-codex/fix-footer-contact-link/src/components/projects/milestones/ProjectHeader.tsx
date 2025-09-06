@@ -5,12 +5,20 @@ import { useNavigate  } from 'react-router-dom';
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 interface ProjectHeaderProps {
+<<<<<<< HEAD
   title: string;
 }
 export function ProjectHeader({ title }: ProjectHeaderProps) {
 
   const navigate = useNavigate();
 
+=======
+  title: string
+}
+
+export function ProjectHeader({ title }: ProjectHeaderProps) {;
+  const navigate = useNavigate();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react',;
 import { useNavigate } from 'react-router-dom',;
@@ -22,6 +30,7 @@ interface ProjectHeaderProps {;
 
 export function ProjectHeader({ title }: ProjectHeaderProps) {
   const navigate = useNavigate(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (

@@ -21,8 +21,14 @@ type DocsContent = {
 }
 type PageProps = {
   docs: DocsContent;
+<<<<<<< HEAD
 }
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
+=======
+};
+
+export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const contentPath = path.join(process.cwd(), 'data', 'docs', 'content.json');
   const raw = fs.readFileSync(contentPath, 'utf8');
   const docs = JSON.parse(raw) as DocsContent;
@@ -60,12 +66,17 @@ export default function ApiDocsPage({ docs }: PageProps) {
                 <CodeBlock key={idx} language={c.language}>{c.content}</CodeBlock>
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           )}
         </section>
       ))}
+<<<<<<< HEAD
     </DocsLayout>
 <<<<<<< HEAD
 );
@@ -73,3 +84,14 @@ export default function ApiDocsPage({ docs }: PageProps) {
   );
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+=======
+<<<<<<< HEAD
+    </DocsLayout>;
+);
+}
+=======
+    </DocsLayout>
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

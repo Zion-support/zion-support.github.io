@@ -1,4 +1,18 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {formatDistanceToNow} from "date-fns";
+import {Star, Flag, User} from "lucide-react";
+import {Review} from "@/types/reviews";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Textarea} from "@/components/ui/textarea";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { Star, Flag, User } from "lucide-react",
@@ -31,11 +45,25 @@ import {
   DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
 import { Textarea } from "@/components/ui/textarea",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ReviewCardProps {
   review: Review;
   onReport: (reviewId: string, reason: string) => Promise<boolean>
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function ReviewCard({ review, onReport }: ReviewCardProps) {;
+  const [reportReason, setReportReason] = useState("");
+  const [isReporting, setIsReporting] = useState(false);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
 <<<<<<< HEAD
   const [reportReason, setReportReason] = useState("");
@@ -58,6 +86,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
   const [reportReason, setReportReason] = useState(""),
   const [isReporting, setIsReporting] = useState(false),
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const handleReport = async () => {
     if (!reportReason.trim()) return,
@@ -134,6 +163,11 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
                 </AvatarFallback>
 =======
                   {review.reviewer_profile?.display_name ? 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
 import { Star, Flag, User } from "lucide-react",;
@@ -207,6 +241,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               ) : (;
                 <AvatarFallback>;
                   {review.reviewer_profile?.display_name ?;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     getInitials(review.reviewer_profile.display_name) : "??"}
                 </AvatarFallback>;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -230,12 +268,17 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               })}
             </div>
           </div>
+<<<<<<< HEAD
 =======
               {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
             </div>;
           </div>;
         </div>;
         <div className="flex">;
+=======
+        </div>
+        <div className="flex">
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {renderStars(review.rating)}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         </div>
@@ -244,10 +287,14 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
+<<<<<<< HEAD
       {(review.communication_rating |
         review.quality_rating |
         review.timeliness_rating |
         review.would_work_again !== undefined) && (
+=======
+      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
@@ -287,10 +334,17 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 <<<<<<< HEAD
           </div>
         </div>
+<<<<<<< HEAD
       )}
 =======
           </div>;
         </div>;
+=======
+=======
+          </div>;
+        </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       )}
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -340,5 +394,12 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 =======
   )
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

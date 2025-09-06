@@ -6,6 +6,7 @@ import React from 'react';
 import Link from 'next/link';
 
 import {
+<<<<<<< HEAD
   Brain
   Mail
   Phone
@@ -14,6 +15,16 @@ import {
   Github
   Linkedin
   Twitter;
+=======
+  Brain,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Github,
+  Linkedin,;
+  Twitter,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear()
@@ -62,17 +73,32 @@ const EnhancedFooter: React.FC = () => {
   ];
   const socialLinks = [
 <<<<<<< HEAD
+<<<<<<< HEAD
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
+=======
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       name: 'LinkedIn'
       href: 'https://linkedin.com/company/ziontechgroup'
       icon: Linkedin
     }
     {
+<<<<<<< HEAD
       name: 'Twitter'
       href: 'https://twitter.com/ziontechgroup'
       icon: Twitter
     }
+=======
+      name: 'Twitter',
+      href: 'https://twitter.com/ziontechgroup',
+      icon: Twitter,
+    },
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <footer className='bg-slate-950 border-t border-white/10'>
       <div className='max-w-7xl mx-auto px-6 py-16'>
@@ -153,7 +179,11 @@ const EnhancedFooter: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Bottom Section */}
         <div className='pt-8 border-t border-white/10'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
@@ -198,7 +228,11 @@ const EnhancedFooter: React.FC = () => {
 
                 </a>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </div>
@@ -207,7 +241,13 @@ const EnhancedFooter: React.FC = () => {
     </footer>
   );
 };export default EnhancedFooter;  )
+<<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default EnhancedFooter;
 import React from "react";
   FileText
@@ -411,8 +451,14 @@ company updates.;
       </button>
     </footer>
   )}"'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 export default EnhancedFooter;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default EnhancedFooter;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

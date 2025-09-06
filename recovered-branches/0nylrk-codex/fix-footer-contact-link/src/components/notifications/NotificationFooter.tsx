@@ -4,6 +4,7 @@ import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 interface NotificationFooterProps {
+<<<<<<< HEAD
   onClose: () => void;
 }
 
@@ -16,6 +17,13 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
     navigate("/notifications");
   }
 =======
+  onClose: () => void
+}
+
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {;
+  const navigate = useNavigate();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
@@ -25,6 +33,7 @@ interface NotificationFooterProps {;
 
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {
   const navigate = useNavigate(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const handleViewAll = () => {
     onClose(),
@@ -44,14 +53,22 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
         View all notifications
       </Button>
     </div>
+<<<<<<< HEAD
   );
 }
 
+=======
+  )
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       >;
         View all notifications;
       </Button>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react";
 import {Brain, Clock, Award, Zap} from "lucide-react";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
@@ -9,7 +12,11 @@ import React from "react",
 import { Brain, Clock, Award, Zap } from "lucide-react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const features = [
   {
     icon: <Brain className="h-10 w-10 text-zion-cyan" />
@@ -75,9 +82,12 @@ export const AppFeatures: React.FC = () => {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import { Brain, Clock, Award, Zap } from "lucide-react",;
@@ -129,6 +139,7 @@ export const AppFeatures: React.FC = () => {;
         </div>;
       </div>;
     </section>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

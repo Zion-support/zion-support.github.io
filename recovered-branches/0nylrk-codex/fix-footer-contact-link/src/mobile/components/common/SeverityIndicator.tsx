@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {cn} from "@/lib/utils";
+import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 <<<<<<< HEAD
 import { cn } from "@/lib/utils";
@@ -23,6 +31,10 @@ export function SeverityIndicator({
 import { cn } from "@/lib/utils",
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface SeverityIndicatorProps {
   severity: "safe" | "suspicious" | "dangerous",
   showIcon?: boolean,
@@ -34,8 +46,13 @@ interface SeverityIndicatorProps {
 export function SeverityIndicator({ 
   severity, 
   showIcon = true, 
+<<<<<<< HEAD
+  showText = true, ;
+  size = "md";
+=======
   showText = true, 
   size = "md",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   className 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }: SeverityIndicatorProps) {
@@ -76,7 +93,10 @@ export function SeverityIndicator({
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import { cn } from "@/lib/utils",;
@@ -121,6 +141,10 @@ export function SeverityIndicator({;
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>;
   );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

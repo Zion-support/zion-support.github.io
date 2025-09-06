@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   FaRocket
   FaBrain
   FaCloud
@@ -28,6 +29,34 @@ import {
   SiAws
   SiGooglecloud
   SiMicrosoftazure;
+=======
+  FaRocket,
+  FaBrain,
+  FaCloud,
+  FaShieldAlt,
+  FaChartLine,
+  FaCogs,
+  FaLightbulb,
+  FaGlobe,
+  FaMobile,
+  FaDatabase,
+  FaNetworkWired,
+  FaRobot,;
+  FaSearch,;
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiTailwindcss,
+  SiPrisma,
+  SiSupabase,
+  SiVercel,
+  SiDocker,
+  SiKubernetes,
+  SiAws,
+  SiGooglecloud,;
+  SiMicrosoftazure,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'react-icons/si';
 
 interface Service {
@@ -59,6 +88,7 @@ interface ServiceCategory {
   icon: React.ReactNode,
   color: string
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   color: string;  id: string
@@ -68,6 +98,12 @@ interface ServiceCategory {
 
   color: string
 }
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const serviceCategories: ServiceCategory[] = [
   {
 
@@ -518,8 +554,46 @@ const services: Service[] = [
     id: 'cloud-native-platform',
     title: 'Cloud-Native Development Platform',
     description: 'Modern cloud-native development and deployment platform',
+<<<<<<< HEAD
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+    icon: <FaCloud className='w-6 h-6' />,
+    features: [
+      'Kubernetes orchestration',
+      'Microservices architecture',
+      'CI/CD pipelines',
+      'Auto-scaling',
+      'Multi-cloud deployment',
+      'DevOps automation',
+    ],
+    pricing: {
+      starter: 199,
+      professional: 599,
+      enterprise: 1499,
+    },
+    technologies: [
+      'Kubernetes',
+      'Docker',
+      'Helm',
+      'ArgoCD',
+      'Prometheus',
+      'Grafana',
+    ],
+    benefits: [
+      'Faster deployment',
+      'Improved scalability',
+      'Better resource utilization',
+      'Enhanced reliability',
+    ],
+  },];      'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
+    ]
+  }
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];
 const EnhancedServicesShowcase2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -564,8 +638,16 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         service.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))
       )
     }
+<<<<<<< HEAD
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+    
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
@@ -631,7 +713,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Search and Filters */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -641,7 +727,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
             <div className='relative flex-1 max-w-md'>
@@ -695,7 +785,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           </div>
         </motion.div>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Category Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -710,7 +804,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                 selectedCategory === 'all'
@@ -725,7 +823,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
@@ -743,7 +845,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -754,7 +860,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 =======
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           {filteredServices.map((service, index) => (
             <motion.div
@@ -767,7 +877,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               onClick={() => handleServiceSelect(service)}
             >
               <div className='flex items-center gap-3 mb-4'>
@@ -817,7 +931,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
                   >
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {tech}
                   </span>
                 ))}
@@ -852,7 +970,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion.div
@@ -882,7 +1004,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         )}
       </div>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Service Detail Modal */}
       <AnimatePresence>
         {selectedService && (
@@ -898,7 +1024,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
             onClick={closeModal}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
@@ -909,7 +1039,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='flex items-start justify-between mb-6'>
                 <div className='flex items-center gap-4'>
@@ -982,7 +1116,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
                         {feature}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </li>
                     ))}
                   </ul>
@@ -990,7 +1128,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Benefits */}
                 <div>
                   <h3 className='text-xl font-bold text-white mb-4'>
@@ -1015,7 +1157,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Technologies */}
               <div className='mt-8'>
                 <h3 className='text-xl font-bold text-white mb-4'>
@@ -1038,7 +1184,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
                     >
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {tech}
                     </span>
                   ))}
@@ -1047,7 +1197,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Pricing */}
               <div className='mt-8'>
                 <h3 className='text-xl font-bold text-white mb-4'>
@@ -1084,7 +1238,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
                 </div>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </motion.div>
           </motion.div>
@@ -1092,7 +1250,13 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       </AnimatePresence>
     </div>
 );
+<<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default EnhancedServicesShowcase2025;  )
 }
 export default EnhancedServicesShowcase2025;
@@ -1100,4 +1264,10 @@ export default EnhancedServicesShowcase2025;
 <<<<<<< HEAD
 =======
 export default EnhancedServicesShowcase2025;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default EnhancedServicesShowcase2025;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

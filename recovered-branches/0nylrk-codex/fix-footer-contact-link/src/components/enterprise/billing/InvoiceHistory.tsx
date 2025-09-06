@@ -1,12 +1,21 @@
 
 <<<<<<< HEAD
 import React from "react";
+<<<<<<< HEAD
 import {
   Table;
   TableBody;
   TableCell;
   TableHead;
   TableHeader;
+=======
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Download, FileText, Search} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {toast} from "@/hooks/use-toast";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",
 import {
@@ -26,12 +35,17 @@ import { toast } from "@/hooks/use-toast";
 =======
 import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function InvoiceHistory() {
   // Mock invoice data
 
   const invoices = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       id: "INV-1234"
       date: "May 1, 2025";
@@ -69,9 +83,15 @@ export function InvoiceHistory() {
       status: "paid"
       period: "Dec 2024"}]
 =======
+      id: "INV-1234",;
+      date: "May 1, 2025";
+      amount: "$1,999.00";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
       id: "INV-1234",
       date: "May 1, 2025",
       amount: "$1,999.00",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       status: "paid",
       period: "May 2025"},
     {
@@ -206,7 +226,10 @@ export function InvoiceHistory() {
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import {;
@@ -349,6 +372,10 @@ export function InvoiceHistory() {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

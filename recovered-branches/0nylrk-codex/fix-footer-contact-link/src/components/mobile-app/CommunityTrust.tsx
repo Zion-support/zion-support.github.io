@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 import React from "react";
+<<<<<<< HEAD
 import { Star } from "lucide-react";
 
 =======
@@ -13,11 +14,29 @@ export const CommunityTrust: React.FC = () => {
     { value: "4.8", label: "App Store Rating" }
     { value: "50K+", label: "Downloads" }
     { value: "96%", label: "User Satisfaction" }
+=======
+import {Star} from "lucide-react";
+=======
+import React from "react",
+import { Star } from "lucide-react",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export const CommunityTrust: React.FC = () => {
+  // Stats display with social proof
+  const stats = [
+    { value: "4.8", label: "App Store Rating" },
+    { value: "50K+", label: "Downloads" },
+    { value: "96%", label: "User Satisfaction" },
+<<<<<<< HEAD
+    { value: "12M+", label: "Matches Made" };
+  ];
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     { value: "12M+", label: "Matches Made" }
 <<<<<<< HEAD
   ];
 =======
   ],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -75,7 +94,11 @@ export const CommunityTrust: React.FC = () => {;
               <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>;
               <div className="text-zion-slate-light">{stat.label}</div>;
             </div>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           ))}
         </div>
         {/* Rating display */}
@@ -106,5 +129,13 @@ export const CommunityTrust: React.FC = () => {;
 
 =======
   )
+<<<<<<< HEAD
 },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+};
+=======
+},
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

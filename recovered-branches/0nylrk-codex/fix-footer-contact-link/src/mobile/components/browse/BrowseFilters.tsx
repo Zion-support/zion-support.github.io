@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {Slider} from "@/components/ui/slider";
+import {Switch} from "@/components/ui/switch";
+import {Input} from "@/components/ui/input";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {X, Filter} from "lucide-react";
+import {Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger} from "@/components/ui/sheet";
+import {Badge} from "@/components/ui/badge";
+import {Label} from "@/components/ui/label";
+interface BrowseFiltersProps {
+  type: "jobs" | "talents"
+}
+
+export function BrowseFilters({ type }: BrowseFiltersProps) {;
+  const [activeFilters, setActiveFilters] = useState<string[]>([]);
+  
+  const addFilter = (filter: string) => {
+    if (!activeFilters.includes(filter)) {
+      setActiveFilters([...activeFilters, filter])
+    }
+  };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
@@ -49,6 +76,10 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
       setActiveFilters([...activeFilters, filter]);
     }
   },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))

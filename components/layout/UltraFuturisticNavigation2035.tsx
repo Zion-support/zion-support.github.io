@@ -5,6 +5,68 @@ import React, { useState, useEffect } from 'react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+=======
+import {
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Shield,
+  Zap,
+  Target,
+  Atom,
+  BookOpen,
+  Truck,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Users,
+  Star,
+  Sparkles,
+  Cpu,
+  Lock,
+  Cloud,
+  Settings,
+  Eye,
+  Award,
+  Clock,
+  Heart,
+  Lightbulb,
+  Search,
+  Grid,
+  List,
+  TrendingUp,
+  Shield as ShieldIcon,
+  Globe as GlobeIcon,
+  User,
+  ShoppingCart,
+  Bell,
+  HelpCircle,
+  FileText,
+  Video,
+  Headphones,
+  Code,
+  Database,
+  Network,
+  Server,
+  Monitor,
+  Smartphone,
+  Camera,
+  Gamepad2,
+  Palette,
+  Music,
+  Film,
+  BookOpenCheck,
+  Building,;
+  MessageCircle,;
+} from 'lucide-react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import {
   Menu
@@ -67,7 +129,11 @@ import {
 } from 'lucide-react';
 interface NavigationItem {
   name: string;
+<<<<<<< HEAD
   href: string;  icon?: React.ReactNode;import {
+=======
+  href: string;  icon?: React.ReactNode;import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles
@@ -87,11 +153,19 @@ interface NavigationItem {
   badge?: string;
   title?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   featured?: boolean
 }
 =======
   featured?: boolean;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  featured?: boolean;  featured?: boolean
+}
+=======
+  featured?: boolean;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 const contactInfo = {
   mobile: '+1 302 464 0950'
@@ -918,6 +992,138 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     badge: 'Enterprise',
     featured: true,
     children: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {
+        name: 'Zero Trust Security',
+        href: '/zero-trust-security-platform',
+        description: 'Next-generation security architecture',
+      },
+      {
+        name: 'Quantum Cloud Infrastructure',
+        href: '/quantum-cloud-infrastructure',
+        description: 'Quantum-enhanced cloud computing',
+      },
+      {
+        name: 'Autonomous IT Operations',
+        href: '/autonomous-it-operations-center',
+        description: 'Self-managing IT infrastructure',
+      },
+      {
+        name: 'Edge Computing Orchestration',
+        href: '/edge-computing-orchestration',
+        description: 'Distributed edge computing',
+      },
+      {
+        name: 'Blockchain Infrastructure',
+        href: '/blockchain-infrastructure-platform',
+        description: 'Enterprise blockchain solutions',
+      },
+      {
+        name: 'AI-Powered DevOps',
+        href: '/ai-powered-devops-platform',
+        description: 'Intelligent development operations',
+      },
+      {
+        name: 'Quantum Cybersecurity',
+        href: '/quantum-cybersecurity-services',
+        description: 'Next-gen quantum security',
+      },
+      {
+        name: 'AI-Powered Cybersecurity',
+        href: '/ai-powered-cybersecurity',
+        description: 'Intelligent threat detection',
+      },
+    ],
+  },
+    name: 'Industry Solutions',
+    href: '/industry-solutions',
+    icon: <Building className='w-5 h-5' />,
+    description: 'Industry-specific technology solutions',
+    badge: 'Industry',
+    children: [
+      {
+        name: 'Healthcare AI',
+        href: '/healthcare-ai-solutions',
+        description: 'AI-powered healthcare',
+      },
+      {
+        name: 'Financial Technology',
+        href: '/fintech-solutions',
+        description: 'Next-gen fintech',
+      },
+      {
+        name: 'Manufacturing AI',
+        href: '/manufacturing-ai-solutions',
+        description: 'Smart manufacturing',
+      },
+      {
+        name: 'Retail Technology',
+        href: '/innovative-business-solutions',
+        description: 'Digital retail transformation',
+      },
+      {
+        name: 'Education Technology',
+        href: '/training',
+        description: 'AI-powered learning',
+      },
+      {
+        name: 'Government Solutions',
+        href: '/enterprise-solutions-showcase',
+        description: 'Public sector innovation',
+      },
+      {
+        name: 'Energy & Utilities',
+        href: '/quantum-energy',
+        description: 'Sustainable energy tech',
+      },
+      {
+        name: 'Biotech AI Research',
+        href: '/biotech-ai',
+        description: 'AI-driven biotech',
+      },
+    ],
+  },
+  {
+    name: 'Resources',
+    href: '/resources',
+    icon: <BookOpen className='w-5 h-5' />,
+    description: 'Documentation, support, and learning resources',
+    children: [
+      {
+        name: 'Documentation',
+        href: '/docs',
+        description: 'Technical documentation',
+      },
+      {
+        name: 'API Reference',
+        href: '/api-documentation',
+        description: 'API documentation',
+      },
+      {
+        name: 'Case Studies',
+        href: '/case-studies',
+        description: 'Success stories',
+      },
+      { name: 'Blog & News', href: '/blog', description: 'Latest insights' },
+      {
+        name: 'Support Center',
+        href: '/support',
+        description: 'Help and support',
+      },
+      {
+        name: 'Training',
+        href: '/training',
+        description: 'Learning resources',
+      },
+      { name: 'Community', href: '/community', description: 'User community' },
+    ],
+  },
+];
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   };
 
@@ -966,7 +1172,12 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   Revolutionary Technology
                 </div>              </div>
             </Link>
+<<<<<<< HEAD
             {/* Desktop Navigation */}  }
+=======
+            {/* Desktop Navigation */}  };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled
@@ -1064,7 +1275,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
                   </button>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.name && (
@@ -1077,7 +1292,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         onMouseLeave={closeDropdowns}
                       >
                         <div className='p-6'>
@@ -1121,7 +1340,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 =======
                               >
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                               <Link
                                 key={child.name}
                                 href={child.href}
@@ -1152,7 +1375,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
                               </Link>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             ))}
                           </div>
                         </div>
@@ -1165,7 +1392,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Right Side Actions */}
             <div className='hidden lg:flex items-center gap-4'>
               {/* Quick Actions */}
@@ -1180,7 +1411,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
                   <Link
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     key={action.name}
                     href={action.href}
                     className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
@@ -1197,7 +1432,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Contact Info */}
               <div className='flex items-center gap-4 text-sm text-gray-400'>
                 <a
@@ -1225,7 +1464,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -1245,7 +1488,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -1291,7 +1538,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 =======
 
                               {item.badge}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             </span>
                           )}
                         </div>
@@ -1306,7 +1557,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {/* Mobile Dropdown */}
                       <AnimatePresence>
                         {activeDropdown === item.name && (
@@ -1350,7 +1605,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                               </Link>
                             ))}
                           </motion.div>
@@ -1372,7 +1631,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           key={action.name}
                           href={action.href}
                           className={`flex items-center gap-3 p-3 rounded-xl text-sm font-medium transition-all duration-200 ${
@@ -1391,7 +1654,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Mobile Contact Info */}
                   <div className='pt-4 border-t border-gray-800/50'>
                     <div className='space-y-3 text-sm text-gray-400'>
@@ -1403,7 +1670,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <span>{contactInfo.mobile}</span>
                       </a>
                       <a
@@ -1536,5 +1807,16 @@ export default UltraFuturisticNavigation2035;
 }</div> </div> </div> </div> </div> </div> </div> </motion.div>) 
 }</AnimatePresence> </div> </nav>) 
 };
+<<<<<<< HEAD
 export default UltraFuturisticNavigation2035;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+export default UltraFuturisticNavigation2035;  )
+};
+
+export default UltraFuturisticNavigation2035;
+=======
+export default UltraFuturisticNavigation2035;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

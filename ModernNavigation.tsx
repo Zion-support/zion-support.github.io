@@ -22,7 +22,7 @@ export default function ModernNavigation({ className = "" }: ModernNavigationPro
     <div className={className}>
       <h1>ModernNavigation</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD:ModernNavigation.tsx

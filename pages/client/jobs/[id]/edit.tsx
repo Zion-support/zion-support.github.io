@@ -1,10 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
+=======
+import {useRouter} from 'next/router';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import useSWR from 'swr';
 
 import {useEffect, useState} from 'react';
 const fetcher = (url: string) => fetch(url).then(r => r.json());
+<<<<<<< HEAD
 export default function EditJobPage() {
+=======
+export default function EditJobPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
@@ -12,11 +20,20 @@ import { useEffect, useState } from 'react';
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 export default function EditJobPage(req, res) {
   try {
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
   const { id } = router.query;
   const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
   const job = data?.job;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
@@ -37,6 +54,12 @@ export default function EditJobPage(req, res) {
   if (!job) return <div>Loading…</div>;
 
 =======
+<<<<<<< HEAD
+=======
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [category, setCategory] = useState('');
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   useEffect(() => {;
     if (job) {;
       setTitle(job.title || '');
@@ -60,7 +83,11 @@ export default function EditJobPage(req, res) {
   }
 }
   if (!job) return <div>Loading…</div>,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="max-w-2xl mx-auto space-y-4">
       <h1 className="text-2xl font-semibold">Edit Job</h1>
@@ -82,6 +109,11 @@ export default function EditJobPage(req, res) {
     </div>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )
   } catch (error) {
@@ -89,4 +121,8 @@ export default function EditJobPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

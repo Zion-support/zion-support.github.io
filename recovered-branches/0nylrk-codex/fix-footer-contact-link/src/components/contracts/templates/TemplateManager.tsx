@@ -1,4 +1,18 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {useContractTemplates} from "@/hooks/useContractTemplates";
+import {ContractTemplate} from "@/types/contracts";
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {TemplateList} from "./TemplateList";
+import {TemplateSaveForm} from "./TemplateSaveForm";
+import {ContractFormValues} from "@/components/contracts/components/ContractForm";
+import {useToast} from "@/hooks/use-toast";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { useContractTemplates } from "@/hooks/useContractTemplates",
 import { ContractTemplate } from "@/types/contracts",
@@ -12,7 +26,11 @@ import { useToast } from "@/hooks/use-toast";
 =======
 import { ContractFormValues } from "@/components/contracts/components/ContractForm",
 import { useToast } from "@/hooks/use-toast",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface TemplateManagerProps {
 
   isOpen: boolean
@@ -21,10 +39,21 @@ interface TemplateManagerProps {
 
   currentValues?: ContractFormValues
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function TemplateManager({;
+  isOpen;
+  onClose;
+  onSelectTemplate;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function TemplateManager({
   isOpen,
   onClose,
   onSelectTemplate,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   currentValues
 }: TemplateManagerProps) {
   const [mode, setMode] = useState<"list" | "save">("list"),
@@ -83,6 +112,11 @@ export function TemplateManager({
               <Button 
                 variant="outline" 
                 onClick={() => setMode("save")}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",;
 import { useContractTemplates } from "@/hooks/useContractTemplates",;
 import { ContractTemplate } from "@/types/contracts",;
@@ -137,12 +171,20 @@ export function TemplateManager({;
                 variant="outline";
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 onClick={() => setMode("save")}
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 disabled={!currentValues}
               >
                 Save Current as Template
               </Button>
             </div>
+<<<<<<< HEAD
             <TemplateList
+=======
+            <TemplateList 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               templates={templates}
               isLoading={isLoading}
               onSelect={handleSelectTemplate}
@@ -162,6 +204,11 @@ export function TemplateManager({;
 =======
               setMode("list"),
               setSelectedTemplate(null)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               onEdit={(template) => {;
                 setSelectedTemplate(template);
                 setMode("save");
@@ -173,7 +220,11 @@ export function TemplateManager({;
             onCancel={() => {;
               setMode("list");
               setSelectedTemplate(null);
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             }}
             onComplete={handleSaveComplete}
             editTemplate={selectedTemplate}

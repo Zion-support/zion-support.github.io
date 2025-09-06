@@ -1,4 +1,21 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {Link} from "react-router-dom";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {GradientHeading} from "@/components/GradientHeading";
+import {SEO} from "@/components/SEO";
+import {Card, CardContent, CardFooter} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
+import {BlogPost} from "@/types/blog";
+import {Search} from "lucide-react";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -18,6 +35,10 @@ const BLOG_POSTS: BlogPost[] = [
 =======
 import { BlogPost } from "@/types/blog",
 import { Search } from "lucide-react",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
   {
@@ -26,6 +47,7 @@ const BLOG_POSTS: BlogPost[] = [
     slug: "ai-trends-2025",
     excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
     id: "ai-trends-2025"
@@ -34,6 +56,8 @@ const BLOG_POSTS: BlogPost[] = [
     excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
 
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <h2>1. Multimodal AI Systems</h2>
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
 <h2>2. Neuromorphic Computing</h2>
@@ -64,6 +88,7 @@ const BLOG_POSTS: BlogPost[] = [
     slug: "optimize-ai-listings",
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.",
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
       name: "Dr. Alicia Zhang"
@@ -83,6 +108,8 @@ const BLOG_POSTS: BlogPost[] = [
     slug: "optimize-ai-listings"
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients."
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <h2>Crafting an Irresistible Service Title</h2>
 <p>Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p>
 <h2>Compelling Service Descriptions That Convert</h2>
@@ -124,9 +151,16 @@ const BLOG_POSTS: BlogPost[] = [
     title: "Green IT: Reducing Your Data Center's Carbon Footprint",
     slug: "green-it",
     excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.",
+<<<<<<< HEAD
+    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
+=======
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.window.performance.</p>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <h2>Energy-Efficient Hardware Selection</h2>
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
 <h2>Optimizing Cooling Systems</h2>
@@ -300,9 +334,15 @@ export default function Blog() {
 =======
 ],
 
+<<<<<<< HEAD
+export default function Blog() {;
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All Categories");
+=======
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState(""),
   const [selectedCategory, setSelectedCategory] = useState("All Categories"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   // Filter blog posts based on search and category
   const filteredPosts = BLOG_POSTS.filter(post => {
@@ -559,7 +599,11 @@ export default function Blog() {;
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation;
             </p>;
           </div>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (
             <div className="mb-16">
@@ -708,6 +752,7 @@ export default function Blog() {;
               </Button>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           )}
         </div>
       </div>
@@ -715,6 +760,8 @@ export default function Blog() {;
     </>
   )
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                     </p>;
                     <div className="flex items-center">;
@@ -755,6 +802,10 @@ export default function Blog() {;
                 Clear all filters
               </Button>
             </div>
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         </div>;
       </div>;

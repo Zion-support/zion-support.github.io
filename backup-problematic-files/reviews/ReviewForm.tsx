@@ -1,5 +1,8 @@
 <<<<<<< HEAD:components/reviews/ReviewForm.tsx
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 <<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
 import React, { useState } from 'react',;
@@ -59,7 +62,11 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
     } finally {;
       setSubmitting(false);
 =======
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewForm.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewForm.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
   submitting ? 'Submitting...' : 'Submit Review'
 }</button> </form>)
@@ -68,12 +75,21 @@ type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
 import StarRating from './StarRating';
 export type ReviewFormValues = {
+<<<<<<< HEAD
   projectId: string
   fromRole: 'client' | 'talent'
   fromId: string
   rating: number
   text: string
   categories?: {
+=======
+  projectId: string,
+  fromRole: 'client' | 'talent',
+  fromId: string,
+  rating: number,
+  text: string,
+  categories?: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
@@ -143,15 +159,28 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
       setMessage(err.message)
     } finally {
       setSubmitting(false)
+<<<<<<< HEAD
+=======
+=======
+        <label className='block text-sm font-medium mb-2'>Your Review</label>
+
+>>>>>>> main:components/reviews/ReviewForm.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewForm.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:components/reviews/ReviewForm.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <form onSubmit={handleSubmit} className='space-y-6'>
       <div>
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>    <form onSubmit={handleSubmit} className="space-y-6">
       <div>
         <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>
 =======
+<<<<<<< HEAD
         <label className='block text-sm font-medium mb-2'>Your Review</label>
 
 >>>>>>> main:components/reviews/ReviewForm.tsx
@@ -159,6 +188,8 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
   }
 
   return (
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD:backup-problematic-files/reviews/ReviewForm.tsx
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -166,7 +197,11 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
 =======
 
 >>>>>>> main:components/reviews/ReviewForm.tsx
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewForm.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewForm.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <StarRating value={rating} onChange={setRating} />
       </div>
       <div>
@@ -320,7 +355,11 @@ export default ReviewForm,
 
         disabled={submitting}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewForm.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewForm.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       >
         {submitting ? 'Submitting...' : 'Submit Review'}
       </button>
@@ -328,7 +367,11 @@ export default ReviewForm,
 <<<<<<< HEAD:components/reviews/ReviewForm.tsx
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewForm.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewForm.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </form>
   );
 }
@@ -337,7 +380,13 @@ export default ReviewForm;    </form>
 }
 export default ReviewForm;
 <<<<<<< HEAD:components/reviews/ReviewForm.tsx
+<<<<<<< HEAD
 
 =======
 >>>>>>> main:components/reviews/ReviewForm.tsx
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewForm.tsx
+=======
+=======
+>>>>>>> main:components/reviews/ReviewForm.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewForm.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,6 +42,7 @@ export default function TestPage() {
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
         <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>
       </div>
+<<<<<<< HEAD
     </Layout>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,6 +64,15 @@ export default function TestPage() {
   );
 }
 
+=======
+    </Layout>;
+  );
+}
+=======
+import React from 'react'
+import Head from 'next/head'
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function TestPage() {
   return (
 <<<<<<< HEAD
@@ -74,6 +88,7 @@ export default function TestPage() {
       <div className='min-h-screen bg-black text-white flex items-center justify-center'>
         <h1 className='text-4xl font-bold text-cyan-400'>Test Page Working</h1>
       </div>
+<<<<<<< HEAD
     </>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -84,6 +99,9 @@ export default function TestPage() {
   );
 =======
 =======
+=======
+    </>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 );
 >>>>>>> origin/main
 =======
@@ -95,6 +113,15 @@ export default function TestPage() {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 =======
 }

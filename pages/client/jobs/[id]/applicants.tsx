@@ -1,10 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
+=======
+import {useRouter} from 'next/router';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import useSWR from 'swr';
 import { TALENT_PROFILES  } from '../../../../data/talent';
 import Link from 'next/link';
 
 const fetcher = (url: string) => fetch(url).then(r => r.json());
+<<<<<<< HEAD
 export default function JobApplicantsPage() {
   const router = useRouter()
   const { id } = router.query;
@@ -14,6 +19,20 @@ export default function JobApplicantsPage() {
   );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
   const job = jobData?.job;
   const applications = (appsData?.applications as any[]) |[];
+=======
+
+export default function JobApplicantsPage() {
+  const router = useRouter(),;
+  const { id } = router.query;
+  const { data: appsData } = useSWR(
+    id ? `/api/applications?jobId=${id}` : null,
+    fetcher
+  );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
+
+  const job = jobData?.job;
+  const applications = (appsData?.applications as any[]) || [];
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
@@ -27,7 +46,11 @@ export default function JobApplicantsPage() {
   const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher),
   const job = jobData?.job
   const applications = (appsData?.applications as any[]) || []
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -109,6 +132,11 @@ export default function JobApplicantsPage() {_const _router = useRouter();
       </div>
     </div>
 );
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           )
         })  } catch (error) {
@@ -124,4 +152,8 @@ export default function JobApplicantsPage() {_const _router = useRouter();
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

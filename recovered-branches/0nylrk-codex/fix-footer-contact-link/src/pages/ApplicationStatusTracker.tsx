@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {ApplicationsTracker} from "@/components/jobs/applications";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Briefcase, Inbox} from "lucide-react";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {useIsMobile} from "@/hooks/use-mobile";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 import { ApplicationsTracker } from "@/components/jobs/applications",
@@ -14,6 +26,10 @@ function ApplicationStatusTrackerContent() {
 =======
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useIsMobile } from "@/hooks/use-mobile",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
   
@@ -47,6 +63,7 @@ function ApplicationStatusTrackerContent() {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export default function ApplicationStatusTracker() {
   return (
@@ -57,6 +74,8 @@ export default function ApplicationStatusTracker() {
     </ProtectedRoute>
   )
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
@@ -95,6 +114,7 @@ function ApplicationStatusTrackerContent() {;
       </div>;
     </>;
   );
+<<<<<<< HEAD
 }
 ;
 export default function ApplicationStatusTracker() {;
@@ -108,3 +128,18 @@ export default function ApplicationStatusTracker() {;
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}
+
+export default function ApplicationStatusTracker() {
+  return (
+    <ProtectedRoute>
+      <AppLayout>
+        <ApplicationStatusTrackerContent />
+      </AppLayout>
+    </ProtectedRoute>
+  )
+}
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

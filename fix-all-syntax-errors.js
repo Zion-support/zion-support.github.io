@@ -22,7 +22,7 @@ const fixAccessibility = () => {
 const fixApi = () => {
   try {let content = fs.readFileSync('pages/api.tsx', 'utf8');
     // Ensure proper closing structure
-    if (!content.includes('export default')) {
+    if (!content.includes('export default')) {;
       content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
     }
     fs.writeFileSync('pages/api.tsx', content);

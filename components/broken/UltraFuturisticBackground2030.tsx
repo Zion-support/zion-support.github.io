@@ -178,8 +178,14 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             opacity: [0.3, 0.6, 0.3],          }}
           transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
             duration: 25
             repeat: Infinity
+=======
+            duration: 25,
+            repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ease: 'linear',          }}          }}
         />
         <motion.div
@@ -189,6 +195,7 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             rotate: -360
             scale: [1, 0.9, 1];
             opacity: [0.3, 0.6, 0.3]
+<<<<<<< HEAD
           }}
           transition={{
             duration: 25
@@ -201,16 +208,34 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             repeat: Infinity,
             ease: 'linear',          }}
 
+=======
+=======
+            ease: 'linear',          }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
           transition={{
             duration: 25,
             repeat: Infinity,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            ease: 'linear',            ease: "linear"
+          }}
+        />
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
           }}
 
         />
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Floating Circles */}
         <motion.div
           className='absolute top-60 left-1/4 w-16 h-16 rounded-full border border-pink-400/40'
@@ -251,20 +276,33 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             opacity: [0.4, 0.8, 0.4]
           transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
             duration: 10
             repeat: Infinity
+=======
+            duration: 10,
+            repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
 =======
+<<<<<<< HEAD
             duration: 10,
             repeat: Infinity,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
           }}
 
         />
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Animated Lines */}
         <motion.div
           className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent'
@@ -305,6 +343,7 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             opacity: [0.3, 0.8, 0.3]
           transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
             duration: 8
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
@@ -316,6 +355,18 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
           }}
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+            duration: 8,
+            repeat: Infinity,
+<<<<<<< HEAD
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+=======
+
+          }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Gradient Overlays */}
@@ -323,7 +374,11 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Top gradient */}
         <div className='absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent' />
         {/* Bottom gradient */}
@@ -382,6 +437,7 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
               scale: [0, 1, 0]
             }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             transition={{
               duration: Math.random() * 10 + 10
               repeat: Infinity
@@ -393,10 +449,25 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
       </div>
 =======
 
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             transition={{
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               delay: Math.random() * 10,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+            }}
+          />
+        ))}
+      </div>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ease: 'easeInOut',            }}
 
             }}
@@ -405,7 +476,11 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
         ))}
       </div>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Neon Glow Effects */}
       <div className='fixed inset-0 pointer-events-none z-25'>
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl' />
@@ -414,11 +489,21 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       </div>
     </div>
   );
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      </div>
+    </div>
+  );
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraFuturisticBackground2030;      </div>
     </div>
   )
@@ -428,4 +513,12 @@ export default UltraFuturisticBackground2030;
 <<<<<<< HEAD
 =======
 export default UltraFuturisticBackground2030;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+=======
+export default UltraFuturisticBackground2030;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,7 +1,18 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+=======
+import {useState} from "react";
+import {useForm} from "react-hook-form";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {ForumCategory} from "@/types/community";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -29,8 +40,19 @@ import { ForumCategory } from "@/types/community";
 =======
 import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface PostFormValues {
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+interface PostFormValues {
+  title: string,
+  content: string,
+  categoryId: ForumCategory,
+  tags: string
+<<<<<<< HEAD
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   title: string
   content: string
@@ -40,6 +62,17 @@ interface PostFormValues {
 <<<<<<< HEAD
 }
 interface PostFormProps {
+<<<<<<< HEAD
+=======
+  initialValues?: Partial<PostFormValues>;
+  onSubmit: (values: PostFormValues) => void,
+  isEditing?: boolean
+}
+
+export const PostForm = ({;
+  initialValues;
+  onSubmit;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -83,6 +116,7 @@ interface PostFormProps {;
 export const PostForm = ({
   initialValues,
   onSubmit,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   isEditing = false
 }: PostFormProps) => {
   const form = useForm<PostFormValues>({
@@ -93,6 +127,10 @@ export const PostForm = ({
       categoryId: initialValues?.categoryId |"project-help"
       tags: initialValues?.tags |""
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSubmit = async (values: PostFormValues) => {
@@ -102,6 +140,7 @@ export const PostForm = ({
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
   }
 =======
       title: initialValues?.title || "",
@@ -109,6 +148,10 @@ export const PostForm = ({
       categoryId: initialValues?.categoryId || "project-help",
       tags: initialValues?.tags || ""
     }
+=======
+  };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const handleSubmit = async (values: PostFormValues) => {;
@@ -119,6 +162,10 @@ export const PostForm = ({
       setIsSubmitting(false);
     }
   },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -211,5 +258,13 @@ export default PostForm;
 =======
 },
 
+<<<<<<< HEAD
 export default PostForm,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+export default PostForm;
+=======
+export default PostForm,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

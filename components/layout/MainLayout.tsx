@@ -129,11 +129,13 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   return (
     <>
       <Head>
-
         <title>{title}</title>
         <meta name="description" content={description} />
+<<<<<<< HEAD
 
         {keywords && <meta name="keywords" content={keywords} />}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         {canonical && <link rel="canonical" href={canonical} />}
@@ -154,17 +156,24 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <meta name="twitter:description" content={description} />
         {image && <meta name="twitter:image" content={image} />}
       </Head>
+<<<<<<< HEAD
       
 
       <div className="min-h-screen bg-gray-50">
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Header />
         <main className="flex-1">
           {children}
         </main>
         <Footer />
       </div>
+<<<<<<< HEAD
     </>
 
+=======
+</>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 
 };

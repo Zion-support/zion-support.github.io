@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React from 'react',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Brain, BarChart3, TrendingUp, Users, Target, Zap;
@@ -8,6 +13,10 @@ import { Brain, BarChart3, TrendingUp, Users, Target, Zap;
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 =======
+<<<<<<< HEAD
+=======
+import React from 'react',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -16,7 +25,11 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AIBusinessIntelligencePage() {
 
   const features = [
@@ -180,6 +193,16 @@ const AIBusinessIntelligence: React.FC = () => {
     },
     {
       icon: Zap,
+<<<<<<< HEAD
+      title: 'Automated Reporting',
+      description:
+        'Generate comprehensive reports automatically, saving hours of manual work each week.',
+      color: 'from-yellow-500 to-orange-500',
+    },;
+  ];
+
+const AIBusinessIntelligence: React.FC = () => {
+=======
       title: "Automated Reporting",
       description: "Generate comprehensive reports automatically, saving hours of manual work each week.",
       color: "from-yellow-500 to-orange-500"
@@ -189,6 +212,7 @@ const AIBusinessIntelligence: React.FC = () => {
   }
 }
   ],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const benefits = [
     "Increase revenue by 25-40% through data-driven insights",
     "Reduce operational costs by 15-30% with process optimization",
@@ -494,7 +518,11 @@ export default function AIBusinessIntelligencePage(req, res) {
   }
 }
             className="text-center"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered
@@ -1053,7 +1081,11 @@ export default function AIBusinessIntelligencePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </ul>
                 <a
                   href="/contact"
@@ -1105,7 +1137,11 @@ export default function AIBusinessIntelligencePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -1132,6 +1168,12 @@ export default function AIBusinessIntelligencePage(req, res) {
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )
   } catch (error) {
@@ -1139,4 +1181,8 @@ export default function AIBusinessIntelligencePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -10,6 +11,18 @@ import {
   WifiOff
   Clock
   Zap
+=======
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import {
+  Loader2,
+  AlertTriangle,
+  RefreshCw,
+  Wifi,
+  WifiOff,
+  Clock,;
+  Zap;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react'; import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -22,7 +35,10 @@ interface LoadingSpinnerProps {
   className?: string;
   showText?: boolean;
   text?: string
+<<<<<<< HEAD
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState, useEffect } from 'react',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -40,11 +56,27 @@ interface LoadingSpinnerProps {;
   text?: string;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   variant = 'default',
   className,
   showText = false,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  text = 'Loading...',
+}) => {  const sizeClasses = {
+    sm: 'h-4 w-4',
+    md: 'h-6 w-6',
+    lg: 'h-8 w-8',
+    xl: 'h-12 w-12',
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   text = 'Loading...'
 }) => {
   const sizeClasses = {
@@ -55,6 +87,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
   size = 'md'
   variant = 'default'
   className
@@ -74,6 +107,22 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     warning: 'text-yellow-500'
     error: 'text-red-500'
   }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  const variantClasses = {
+    default: 'text-muted-foreground',
+    primary: 'text-primary',
+    success: 'text-green-500',
+    warning: 'text-yellow-500',
+<<<<<<< HEAD
+    error: 'text-red-500',
+  }
+=======
+    error: 'text-red-500'
+  },
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className={cn('flex items-center gap-2', className)}>
       <Loader2
@@ -88,6 +137,10 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       )}
     </div>
   )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 //Progressive loading component useEffect ( () => {
   if (currentStep !== undefined) {
@@ -118,6 +171,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
     }
   }, [activeStep, steps.length, onComplete])
 =======
+<<<<<<< HEAD
     default: 'text-muted-foreground',
     primary: 'text-primary',
     success: 'text-green-500',
@@ -131,6 +185,8 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
       {showText && <span className="text-sm text-muted-foreground">{text}</span>}
     </div>
   )
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 },
 
 // Progressive loading component
@@ -160,7 +216,11 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
     }
   }, [activeStep, steps.length, onComplete]),
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-4">
       {showProgress && (
@@ -170,7 +230,11 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
             className='bg-primary h-2 rounded-full'
 =======
             className="bg-primary h-2 rounded-full"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.3 }}
@@ -178,6 +242,10 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
         </div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className='space-y-2'>
         {steps.map((step, index) => (          <motion.div
             key = {step.id,}
@@ -195,7 +263,11 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
               'flex items-center gap-3 p-2 rounded-md',;
               index === activeStep ? 'bg-primary/10' : 'opacity-50';
             )}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: index <= activeStep ? 1 : 0.5, x: 0 }}
             transition={{ delay: index * 0.1 }}
@@ -223,6 +295,7 @@ interface SkeletonProps {
   variant?: 'text' | 'circular' | 'rectangular' | 'card'
   animation?: 'pulse' | 'wave' | 'none'
   lines?: number
+<<<<<<< HEAD
 export const Skeleton: React.FC<SkeletonProps> = ({
   className
   variant = 'rectangular'
@@ -235,6 +308,42 @@ export const Skeleton: React.FC<SkeletonProps> = ({
     circular: 'h-12 w-12 rounded-full'
     rectangular: 'h-6 w-full'
     card: 'h-48 w-full'
+=======
+=======
+      </div>;
+    </div>;
+  );
+},;
+// Enhanced skeleton loader;
+interface SkeletonProps {;
+  className?: string,;
+  variant?: 'text' | 'circular' | 'rectangular' | 'card',;
+  animation?: 'pulse' | 'wave' | 'none',;
+  lines?: number;
+}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export const Skeleton: React.FC<SkeletonProps> = ({
+  className,
+  variant = 'rectangular',
+  animation = 'pulse',
+<<<<<<< HEAD
+  lines = 1,
+}) => {
+  const baseClasses = 'bg-muted rounded'
+=======
+  lines = 1
+}) => {
+  const baseClasses = 'bg-muted rounded',
+  
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  const variantClasses = {
+    text: 'h-4 w-full',
+    circular: 'h-12 w-12 rounded-full',
+    rectangular: 'h-6 w-full',
+<<<<<<< HEAD
+    card: 'h-48 w-full',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   const animationClasses = {
     pulse: 'animate-pulse'
@@ -341,6 +450,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
   const Icon = config.icon
   const canRetry = showRetry && onRetry && retryCount < maxRetries
 =======
+<<<<<<< HEAD
       </div>;
     </div>;
   );
@@ -365,6 +475,8 @@ export const Skeleton: React.FC<SkeletonProps> = ({
     text: 'h-4 w-full',
     circular: 'h-12 w-12 rounded-full',
     rectangular: 'h-6 w-full',
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     card: 'h-48 w-full'
   },
 
@@ -494,7 +606,11 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
   const Icon = config.icon,
   const canRetry = showRetry && onRetry && retryCount < maxRetries,
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Card className={cn('border-destructive/20', className)}>
       <CardContent className="p-8 text-center">
@@ -517,7 +633,11 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
               <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-auto'>
 =======
               <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {typeof error === 'string' ? error : error.message}
               </pre>
             </details>
@@ -531,13 +651,27 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
 
           <div className="flex flex-col sm:flex-row gap-2 justify-center">
             {canRetry && (
+<<<<<<< HEAD
               <Button onClick={onRetry} variant="default">
                 <RefreshCw className="h-4 w-4 mr-2" />
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+              <Button onClick={onRetry} variant='default'>
+                <RefreshCw className='h-4 w-4 mr-2' />
+=======
+              <Button onClick={onRetry} variant="default">
+                <RefreshCw className="h-4 w-4 mr-2" />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
               </Button>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {action && (
               <Button
                 onClick={action.onClick}
@@ -547,18 +681,30 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
             
             {action && (
               <Button onClick={action.onClick} variant={canRetry ? "outline" : "default"}>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {action.label}
               </Button>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {secondaryAction && (
               <Button onClick={secondaryAction.onClick} variant='ghost'>
 =======
             
             {secondaryAction && (
               <Button onClick={secondaryAction.onClick} variant="ghost">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {secondaryAction.label}
               </Button>
             )}
@@ -577,6 +723,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
 }
 <motion.div initial= {
   {
+<<<<<<< HEAD
   scale: 0.8, opacity: 0
 export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8
@@ -598,6 +745,9 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
       {Array.from({ length: count }).map((_, i) => (
         <Card key={i} className='animate-pulse'>          <CardContent className={itemClasses[variant]}>
 =======
+  scale: 0.8, opacity: 0 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
         </motion.div>;
       </CardContent>;
     </Card>;
@@ -611,10 +761,34 @@ interface LoadingGridProps {;
   className?: string;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8,
   columns = 4,
   variant = 'card',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  className,
+}) => {  const gridClasses = {
+    card: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-${columns} gap-6`,
+    list: 'space-y-4',
+    table: 'space-y-2',
+  }
+  const itemClasses = {
+    card: 'p-6 space-y-4',
+    list: 'p-4 space-y-3',
+    table: 'p-3 space-y-2',
+  }
+  return (
+    <div className={cn(gridClasses[variant], className)}>
+      {Array.from({ length: count }).map((_, i) => (
+        <Card key={i} className='animate-pulse'>          <CardContent className={itemClasses[variant]}>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   className
 }) => {
   const gridClasses = {
@@ -634,7 +808,11 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
       {Array.from({ length: count }).map((_, i) => (
         <Card key={i} className="animate-pulse">
           <CardContent className={itemClasses[variant]}>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {variant === 'card' && (
               <>
                 <Skeleton variant="rectangular" className="h-32" />
@@ -686,6 +864,7 @@ interface PerformanceIndicatorProps {
   loadTime?: number
   itemCount?: number
   className?: string
+<<<<<<< HEAD
 export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   isLoading = false
   loadTime
@@ -697,6 +876,8 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     if (time < 300) return 'text-yellow-500'
     return 'text-red-500'
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           </CardContent>;
         </Card>;
@@ -712,10 +893,26 @@ interface PerformanceIndicatorProps {;
   className?: string;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   isLoading = false,
   loadTime,
   itemCount,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  className,
+}) => {
+  const getPerformanceColor = (time: number) => {
+    if (time < 100) return 'text-green-500'
+    if (time < 300) return 'text-yellow-500'
+    return 'text-red-500'
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   className
 }) => {
   const getPerformanceColor = (time: number) => {
@@ -724,7 +921,11 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     return 'text-red-500'
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
     return (
       <Badge variant="outline" className={cn('text-xs', className)}>
@@ -750,10 +951,20 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
       {itemCount && <span>{itemCount} items loaded</span>}
     </div>
   )
+};
+};
+};
 }
 }
 }
+<<<<<<< HEAD
 
+=======
+}
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       {itemCount && (;
         <span>{itemCount} items loaded</span>;
@@ -761,4 +972,8 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     </div>;
   );
 };
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

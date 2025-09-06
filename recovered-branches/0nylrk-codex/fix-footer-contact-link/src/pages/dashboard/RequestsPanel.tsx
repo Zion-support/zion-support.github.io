@@ -1,4 +1,22 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {useTalentQuotes} from "@/hooks/useTalentQuotes";
+import {useAuth} from "@/hooks/useAuth";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {QuoteDetails} from "@/components/quotes/QuoteDetails";
+import {RequestsHeader, QuoteRequestsList} from "@/components/quotes";
+import type { QuoteRequest } from "@/types/quotes";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+export default function RequestsPanel() {;
+  const { user } = useAuth();
+  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -30,6 +48,7 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",
 export default function RequestsPanel() {
   const { user } = useAuth(),
   const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
@@ -133,7 +152,11 @@ export default function RequestsPanel() {;
         <div className="min-h-screen bg-zion-blue px-4 py-8">;
           <div className="container mx-auto">;
             <RequestsHeader;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
@@ -182,7 +205,11 @@ export default function RequestsPanel() {;
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
         />
         <Footer />

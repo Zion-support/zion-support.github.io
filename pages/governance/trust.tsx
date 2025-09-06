@@ -41,6 +41,10 @@ export default function GovernanceTrustPage() {
               <div key={opt.title} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
                 <div className="font-medium">{opt.title}</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">{opt.desc}</div>
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             ))  } catch (error) {
     console.error("Error:", error);
@@ -56,7 +60,11 @@ export default function GovernanceTrustPage() {
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <div className='font-medium mb-1'>Core Stewards</div>
               <div className='text-sm text-gray-600 dark:text-gray-400'>
+<<<<<<< HEAD
                 Appointed via DAO ratification, accountable to publish roadmaps
+=======
+                Appointed via DAO ratification, accountable to publish roadmaps,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 risk registers, and post-mortems.
               </div>
 =======
@@ -66,7 +74,11 @@ export default function GovernanceTrustPage() {
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <div className="font-medium mb-1">Core Stewards</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">Appointed via DAO ratification, accountable to publish roadmaps, risk registers, and post-mortems.</div>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <div className="font-medium mb-1">Delegated Voting</div>
@@ -183,4 +195,8 @@ export default function GovernanceTrustPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

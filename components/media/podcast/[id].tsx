@@ -1,10 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function EpisodePage() {
+=======
+export default function EpisodePage() {;
+=======
+
+export default function EpisodePage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  const router = useRouter();
+  const { id } = router.query as { id?: string };
+  const [episode, setEpisode] = useState<any>(null);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const router = useRouter();
   const { id } = router.query as { id?: string }
@@ -54,4 +65,8 @@ export default function EpisodePage() {
 }
 =======
   );
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

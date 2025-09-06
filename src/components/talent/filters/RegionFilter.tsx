@@ -33,7 +33,11 @@ const REGION_OPTIONS = [
 ],
 
 export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -43,7 +47,11 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 =======
         className="flex w-full items-center justify-between text-white font-medium"
       >
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <span>Region</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -54,7 +62,11 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {expanded && (
         <div className="mt-4 space-y-2">
           {REGION_OPTIONS.map(region => (
@@ -68,11 +80,19 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 import { Checkbox } from "@/components/ui/checkbox"
 import { RegionFilterProps } from "@/types/filters"
 const REGION_OPTIONS = [
+<<<<<<< HEAD
   { id: "North America", label: "North America" }
   { id: "Europe", label: "Europe" }
   { id: "Asia", label: "Asia" }
   { id: "South America", label: "South America" }
   { id: "Australia", label: "Australia" }
+=======
+  { id: "North America", label: "North America" },
+  { id: "Europe", label: "Europe" },
+  { id: "Asia", label: "Asia" },
+  { id: "South America", label: "South America" },
+  { id: "Australia", label: "Australia" },
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
@@ -89,7 +109,11 @@ const REGION_OPTIONS = [;
   { id: "Asia", label: "Asia" },;
   { id: "South America", label: "South America" },;
   { id: "Australia", label: "Australia" },;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   { id: "Africa", label: "Africa" }
 ]
 
@@ -137,11 +161,19 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
   REGION OPTIONS.map (region => (<div key= {
   region.id "
 }className="flex items-center" > <Checkbox > {
+<<<<<<< HEAD
   region.label
 }</label> </div>) )
 }</div>)
 }</div>)
 }"}
+=======
+  region.label 
+}</label> </div>) ) 
+}</div>) ;
+}</div>) ;
+}"};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
@@ -155,4 +187,8 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

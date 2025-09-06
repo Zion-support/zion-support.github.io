@@ -1,11 +1,20 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading";
 import { useState } from "react";
 =======
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import {GradientHeading} from "./GradientHeading";
+import {useState} from "react";
+=======
+import { GradientHeading } from "./GradientHeading",
+import { useState } from "react",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Real company logos for trusted partners - with more reliable image URLs
 
 const trustedCompanies = [
@@ -194,8 +203,13 @@ export function TrustedBySection() {
 ],
 
 export function TrustedBySection() {
+<<<<<<< HEAD
+  // Use state to track logos that failed to load;
+  const [failedLogos, setFailedLogos] = useState<Record<string, boolean>>({});
+=======
   // Use state to track logos that failed to load
   const [failedLogos, setFailedLogos] = useState<Record<string boolean>>({}),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleImageError = (companyName: string) => {
@@ -238,6 +252,11 @@ export function TrustedBySection() {
                   src={company.logo} 
                   alt={company.alt} 
                   className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { GradientHeading } from "./GradientHeading",;
 import { useState } from "react",;
 // Real company logos for trusted partners - with more reliable image URLs;
@@ -375,7 +394,11 @@ export function TrustedBySection() {;
                   src={company.logo} ;
                   alt={company.alt} ;
                   className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert";
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   onError={() => handleImageError(company.name)}
                 />
               )}

@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Header  } from '@/components/Header';
 import { NextSeo  } from '@/components/NextSeo';
+=======
+import React, { useEffect, useState } from 'react'
+import { Header } from '@/components/Header'
+import { NextSeo } from '@/components/NextSeo'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Globe, MapPin } from 'lucide-react'
 
 import {
@@ -72,8 +78,13 @@ export default function GlobalMapPage() {
         'New franchise deployed: Zion Indonesia'
       ]
       const id = Date.now()
+<<<<<<< HEAD
       const text =
         messages[Math.floor(Math.random() * messages.length)] |
+=======
+      const text = null;
+        messages[Math.floor(Math.random() * messages.length)] ||
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         'System update in progress'
       setFeed(f => [{ id, text }, ...f].slice(0, 5))
     }, 5000)
@@ -86,7 +97,10 @@ export default function GlobalMapPage() {
     const y = ((90 - lat) / 180) * height
     return { x, y }
   }
+<<<<<<< HEAD
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
@@ -162,6 +176,10 @@ export default function GlobalMapPage() {;
   }
 
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -176,13 +194,16 @@ export default function GlobalMapPage() {;
             <Globe className='w-full h-full text-secondary' />
             {INSTANCES.map(i => {
               const { x, y } = project(i.lat, i.lng)
-              const color =
-                i.governance === 'admin'
-                  ? 'bg-red-500'
-                  : i.governance === 'hybrid'
-                    ? 'bg-yellow-500'
+              const color = null;
+                i.governance === 'admin';
+                  ? 'bg-red-500';
+                  : i.governance === 'hybrid';
+                    ? 'bg-yellow-500';
                     : 'bg-green-500'; return (
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       <main className="py-10 container mx-auto space-y-8">
         <h1 className="text-3xl font-bold">Global Instances</h1>
@@ -193,7 +214,11 @@ export default function GlobalMapPage() {;
               const { x, y } = project(i.lat, i.lng),
               const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
               return (
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <TooltipProvider key={i.id}>
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -233,7 +258,11 @@ export default function GlobalMapPage() {;
                 {topRegions.map((r) => (
                   <li key={r.id} className="flex justify-between border-b pb-1">
                     <span>{r.region}</span>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <span>{r.talent}</span>
                   </li>
                 ))}
@@ -256,6 +285,12 @@ export default function GlobalMapPage() {;
   )
 }
 }
+<<<<<<< HEAD
+=======
+
+;
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
               <h2 className="text-xl font-semibold mb-2">Live Feed</h2>
               <ul className="space-y-1">
@@ -271,4 +306,8 @@ export default function GlobalMapPage() {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

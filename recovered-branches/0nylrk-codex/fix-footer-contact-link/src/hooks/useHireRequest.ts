@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
@@ -27,6 +28,16 @@ export interface HireRequestData {
     budgetMin: number
 
 =======
+import {useState} from 'react';
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {TalentProfile} from "@/types/talent";
+export interface HireRequestData {
+  talent: {;
+    id: string;
+    full_name: string;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import { useState } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -35,6 +46,7 @@ export interface HireRequestData {
   talent: {
     id: string,
     full_name: string,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     professional_title: string,
     email?: string
   },
@@ -51,7 +63,12 @@ export interface HireRequestData {
     budgetMax: number
   }
 }
+<<<<<<< HEAD
 export function useHireRequest() {
+=======
+
+export function useHireRequest() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -96,9 +113,17 @@ export function useHireRequest() {
       setError(errorMessage);
       toast({
 <<<<<<< HEAD
+<<<<<<< HEAD
         title: "Error";
         description: errorMessage
         variant: "destructive"});
+=======
+        title: "Error",
+        description: errorMessage,
+        variant: "destructive"}),
+      
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       return { success: false, error: errorMessage }
     } finally {
       setIsSubmitting(false)
@@ -109,6 +134,7 @@ export function useHireRequest() {
     isSubmitting;
 
     error
+<<<<<<< HEAD
   }
 }
 =======
@@ -116,6 +142,9 @@ export function useHireRequest() {
         description: errorMessage,
         variant: "destructive"}),
       
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from 'react',;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -176,6 +205,10 @@ export function useHireRequest() {;
     submitHireRequest;
     isSubmitting;
     error;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;

@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {useParams, Link, useNavigate} from "react-router-dom";
+import {SEO} from "@/components/SEO";
+import {Button} from "@/components/ui/button";
+import {ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin} from "lucide-react";
+import type { BlogPost as BlogPostType } from "@/types/blog";
+import {Separator} from "@/components/ui/separator";
+import {AppLayout} from "@/layout/AppLayout";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { useParams, Link, useNavigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
@@ -25,14 +38,26 @@ export default function BlogPost() {
 =======
 import { Separator } from "@/components/ui/separator",
 import { AppLayout } from "@/layout/AppLayout",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts",
 export default function BlogPost() {
+<<<<<<< HEAD
+  const { slug } = useParams() as { slug: string },;
+  const navigate = useNavigate();
+  const [post, setPost] = useState<BlogPostType | null>(null);
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
+  const [showShareMenu, setShowShareMenu] = useState(false);
+=======
   const { slug } = useParams() as { slug: string },
   const navigate = useNavigate(),
   const [post, setPost] = useState<BlogPostType | null>(null),
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),
   const [showShareMenu, setShowShareMenu] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   useEffect(() => {
     // Find the current post by slug
@@ -89,7 +114,11 @@ export default function BlogPost() {
         return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
       default: return '#'
     }
+<<<<<<< HEAD
   }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState, useEffect } from "react",;
 import { useParams, Link, useNavigate } from "react-router-dom",;
@@ -151,6 +180,10 @@ export default function BlogPost() {;
       default: return '#';
     }
   },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
@@ -341,7 +374,11 @@ export default function BlogPost() {;
                         <span>LinkedIn</span>;
                       </a>;
                     </div>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   )}
                 </div>
               </div>
@@ -364,6 +401,13 @@ export default function BlogPost() {;
                 alt={post.title}
                 className="object-cover w-full h-full"
                 onError={(e) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  const target = e.target as HTMLImageElement;
+                  target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   const target = e.target as HTMLImageElement,
                   target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
           <div className="mb-12 max-w-5xl mx-auto">;
@@ -375,7 +419,11 @@ export default function BlogPost() {;
                 onError={(e) => {;
                   const target = e.target as HTMLImageElement;
                   target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }}
               />
             </div>
@@ -461,7 +509,11 @@ export default function BlogPost() {;
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>;
                       </div>;
                     </Link>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </div>
               </div>
@@ -506,4 +558,8 @@ export default function BlogPost() {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

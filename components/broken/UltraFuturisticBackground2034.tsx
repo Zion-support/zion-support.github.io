@@ -325,6 +325,10 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     };  }, [intensity]);
 
   }, [intensity]);
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Mouse move handler for interactive effects
@@ -403,9 +407,16 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             scale: [1, 1.1, 1]
           }}
           transition={{
+<<<<<<< HEAD
             duration: 6
             repeat: -1
             ease: 'easeInOut'
+=======
+            duration: 6,
+            repeat: -1,
+<<<<<<< HEAD
+            ease: 'easeInOut',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
         />
         <motion.div
@@ -431,6 +442,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             repeat: -1
             ease: 'linear',            ease: "linear"
 =======
+<<<<<<< HEAD
             duration: 8,
             repeat: -1,
 
@@ -438,13 +450,19 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           transition={{
             duration: 6,
             repeat: -1,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
           }}
           transition={{
             duration: 12,
             repeat: -1,
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
         />
       </div>
@@ -453,7 +471,11 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent'
           animate={{
@@ -488,6 +510,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           }}
           transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
             duration: 20
             repeat: -1
             ease: 'linear',            ease: "linear"
@@ -499,6 +522,18 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           }}
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+            duration: 20,
+            repeat: -1,
+<<<<<<< HEAD
+            ease: 'linear',            ease: "linear"
+          }}
+=======
+
+          }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Holographic matrix effect */}
@@ -520,10 +555,21 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
               scaleY: [0, 1, 0]
             }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             transition={{
               duration: 3
               delay: i * 0.1
               repeat: -1
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+            transition={{
+              duration: 3,
+              delay: i * 0.1,
+              repeat: -1,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
           />
@@ -531,6 +577,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       </div>
       {/* Cyberpunk grid */}
       <div className='absolute inset-0'>
+<<<<<<< HEAD
         <motion.div
           className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]'
           style={{
@@ -541,6 +588,9 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
               duration: 3,
               delay: i * 0.1,
               repeat: -1,
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ease: 'easeInOut',            }}
 
             }}
@@ -552,6 +602,10 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       {/* Cyberpunk grid */}
       <div className='absolute inset-0'>
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]'
           style={{
@@ -569,7 +623,13 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraFuturisticBackground2034;        <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
           style={{
@@ -577,10 +637,22 @@ export default UltraFuturisticBackground2034;        <motion.div
           }}
           animate={{
             opacity: [0.3, 0.6, 0.3]
+<<<<<<< HEAD
           }}
           transition={{
             duration: 4
             repeat: -1
+=======
+=======
+export default UltraFuturisticBackground2034;
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+          }}
+          transition={{
+            duration: 4,
+            repeat: -1,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
@@ -596,14 +668,22 @@ export default UltraFuturisticBackground2034;
 };
 
 export default UltraFuturisticBackground2034;
+<<<<<<< HEAD
 
           }}
           transition={{
             duration: 4,
             repeat: -1,
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
           }}
         />
       </div>
     </div>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

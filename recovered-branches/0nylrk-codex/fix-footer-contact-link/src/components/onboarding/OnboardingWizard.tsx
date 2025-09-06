@@ -1,14 +1,46 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+=======
+import {useState, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
+import {useAuth} from '@/hooks/useAuth';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
 import { FileText, Users, Calendar, Eye, MessageSquare  } from 'lucide-react';
 import { cn } from '@/lib/utils';
 interface WizardStep {
+<<<<<<< HEAD
+=======
+  title: string,
+  description: string,
+  icon: React.ReactNode,
+  action: {
+    text: string,
+    url: string
+  };
+  skipText?: string
+}
+
+interface OnboardingWizardProps {
+  type: 'client' | 'talent',
+  onComplete: () => void,
+  onSkip: () => void,
+  className?: string
+}
+
+export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;
+  const [currentStep, setCurrentStep] = useState(0);
+  const navigate = useNavigate();
+  const { user } = useAuth();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState, useEffect } from 'react',;
 import { useNavigate } from 'react-router-dom',;
@@ -34,6 +66,7 @@ interface OnboardingWizardProps {;
   onComplete: () => void,;
   onSkip: () => void,;
   className?: string;
+<<<<<<< HEAD
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
@@ -54,6 +87,8 @@ interface OnboardingWizardProps {
   onSkip: () => void
 
   className?: string
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
 <<<<<<< HEAD
@@ -65,6 +100,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const [currentStep, setCurrentStep] = useState(0),
   const navigate = useNavigate(),
   const { user } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Define steps based on user type
@@ -180,6 +216,10 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         url: "/talent-dashboard"
       }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const steps = type === 'client' ? clientSteps : talentSteps;
   // Navigate to the specified URL
@@ -201,12 +241,17 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       // Last step
       onSkip()
     }
+<<<<<<< HEAD
   }
 =======
         text: "Enable Matchmaking",
         url: "/talent-dashboard"
       }
     }
+=======
+  };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],;
   const steps = type === 'client' ? clientSteps : talentSteps,;
   // Navigate to the specified URL;
@@ -229,6 +274,10 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       onSkip();
     }
   },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (

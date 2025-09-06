@@ -1,4 +1,24 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from "react";
+import {useInterviews} from "@/hooks/useInterviews";
+import {Interview} from "@/types/interview";
+import {AppHeader} from "@/layout/AppHeader";
+import {Footer} from "@/components/Footer";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {InterviewCard} from "@/components/interviews/InterviewCard";
+import {Button} from "@/components/ui/button";
+import {Calendar, Clock, Video} from "lucide-react";
+import {format, isAfter, parseISO, startOfDay} from "date-fns";
+function InterviewsContent() {
+  const { interviews, isLoading, fetchInterviews } = useInterviews();
+  const [activeTab, setActiveTab] = useState("upcoming");
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useEffect, useState } from "react",
 import { useInterviews } from "@/hooks/useInterviews",
 import { Interview } from "@/types/interview",
@@ -22,6 +42,10 @@ import { format, isAfter, parseISO, startOfDay } from "date-fns",
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews(),
   const [activeTab, setActiveTab] = useState("upcoming"),
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
@@ -134,6 +158,11 @@ function InterviewsContent() {
 =======
               <InterviewCard 
                 key={interview.id} 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useEffect, useState } from "react",;
 import { useInterviews } from "@/hooks/useInterviews",;
 import { Interview } from "@/types/interview",;
@@ -206,7 +235,11 @@ function InterviewsContent() {;
             {interviews.map((interview) => (;
               <InterviewCard;
                 key={interview.id} ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 interview={interview}
                 onRefresh={async () => {
                   await fetchInterviews()
@@ -308,6 +341,17 @@ function InterviewsContent() {;
       <Footer />
     </>
   )
+<<<<<<< HEAD
+=======
+=======
+          </TabsContent>;
+        </Tabs>;
+      </main>;
+      <Footer />;
+    </>;
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export default function Interviews() {
   return (
@@ -316,6 +360,7 @@ export default function Interviews() {
     </ProtectedRoute>
   )
 }
+<<<<<<< HEAD
 =======
           </TabsContent>;
         </Tabs>;
@@ -334,3 +379,6 @@ export default function Interviews() {;
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -2,7 +2,11 @@ import Link from "next/link";
 export const metadata = {
   title: "Services | Zion Tech Group",
   description:
+<<<<<<< HEAD
     "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
+=======
+    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 export default function ServicesOverviewPage() {
   return (
@@ -19,36 +23,49 @@ export default function ServicesOverviewPage() {
           outcomes for your business.{" "}
         </p>{" "}
       </div>{" "}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        {" "}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <ServiceCard
           href="/services/micro-saas"
           title="Micro SaaS"
-          description="End-to-end product development with billing,auth,and analytics"
+          description="End-to-end product development with billing, auth, and analytics"
           bullets={[
             "Foundational architecture"
             "Billing + subscriptions"
             "Growth analytics"
           ]}
           icon="🚀"
-        />{" "}
+        />
         <ServiceCard
           href="/services/ai-services"
           title="AI Services"
-          description="LLM applications,RAG systems,and MLOps pipelines"
+          description="LLM applications, RAG systems, and MLOps pipelines"
           bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
           icon="🤖"
-        />{" "}
+        />
         <ServiceCard
           href="/services/it-services"
           title="IT Services"
-          description="Cloud migration,DevOps,and security solutions"
+          description="Cloud migration, DevOps, and security solutions"
           bullets={["Cloud migration", "DevOps + SRE", "Security"]}
           icon="⚙️"
-        />{" "}
-      </div>{" "}
+        />
+        <ServiceCard
+          href="/services/blockchain"
+          title="Blockchain"
+          description="Smart contracts, DeFi protocols, and Web3 applications"
+          bullets={["Smart contracts", "DeFi protocols", "NFT platforms"]}
+          icon="⛓️"
+        />
+        <ServiceCard
+          href="/services/data-analytics"
+          title="Data Analytics"
+          description="Business intelligence, predictive modeling, and real-time analytics"
+          bullets={["BI dashboards", "Predictive analytics", "Real-time insights"]}
+          icon="📊"
+        />
+      </div>
       <CTA />{" "}
-    </div>
+    </div>;
   );
 }
 function ServiceCard({

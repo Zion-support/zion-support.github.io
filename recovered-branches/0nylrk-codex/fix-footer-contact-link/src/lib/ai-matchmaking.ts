@@ -1,7 +1,12 @@
 
 <<<<<<< HEAD
 // AI Matchmaking utility functions
+<<<<<<< HEAD
 export interface MatchResultItem {
+=======
+
+export interface MatchResultItem {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   description: string;
@@ -12,7 +17,12 @@ export interface MatchResultItem {
 
   image?: string
 }
+<<<<<<< HEAD
 export interface MatchResult {
+=======
+
+export interface MatchResult {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   item: MatchResultItem;
   score: number;
 
@@ -28,6 +38,7 @@ const sampleData: MatchResultItem[] = [
     description: "Experienced AI engineer with expertise in machine learning and computer vision";
     category: "Talent - Engineering";
 
+<<<<<<< HEAD
     price: 120
 
     skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"]
@@ -59,6 +70,8 @@ export async function findMatches(
 
   type: string = ""
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 // AI Matchmaking utility functions;
 export interface MatchResultItem {;
   id: string,;
@@ -77,6 +90,10 @@ export interface MatchResult {;
   reason: string;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
   {
@@ -106,8 +123,13 @@ const sampleData: MatchResultItem[] = [
 ],
 
 // Function to find matches based on query and type
+<<<<<<< HEAD
+export async function findMatches(;
+  query: string;
+=======
 export async function findMatches(
   query: string,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   type: string = "",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   limit: number = 5
@@ -155,6 +177,11 @@ export async function findMatches(
   } catch (error) {
     console.error("Error in matchmaking:", error),
     return []
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 // Sample data for testing when API is not available;
 const sampleData: MatchResultItem[] = [;
@@ -214,6 +241,10 @@ export async function findMatches(;
   } catch (error) {;
     console.error("Error in matchmaking:", error);
     return [];
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;

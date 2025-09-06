@@ -1,8 +1,14 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { Resume } from "@/types/resume";
 export const useResumeProgress = (resume: Resume | null) => {
+=======
+import {useState, useEffect} from 'react';
+import {Resume} from '@/types/resume';
+export const useResumeProgress = (resume: Resume | null) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [progress, setProgress] = useState(0);
   useEffect(() => {
     // Calculate progress based on completed sections
@@ -15,6 +21,10 @@ export const useResumeProgress = (resume: Resume | null) => {
     completed += 1;
     // Work experience (1 point if at least one entry)
     if (resume.work_experience && resume.work_experience.length > 0) {
+<<<<<<< HEAD
+=======
+      completed += 1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState, useEffect } from 'react',;
 import { Resume } from '@/types/resume',;
@@ -33,6 +43,10 @@ export const useResumeProgress = (resume: Resume | null) => {;
     // Work experience (1 point if at least one entry);
     if (resume.work_experience && resume.work_experience.length > 0) {;
       completed += 1;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 ;
     // Education (1 point if at least one entry);
@@ -53,17 +67,30 @@ export const useResumeProgress = (resume: Resume | null) => {;
     if (resume.certifications && resume.certifications.length > 0) {
       completed += 1;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const progressPercentage = (completed / 5) * 100;
     setProgress(progressPercentage);
   }, [resume]);
   return progress;
 }
 
+<<<<<<< HEAD
+=======
+  return progress
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
     const progressPercentage = (completed / 5) * 100,;
     setProgress(progressPercentage);
   }, [resume]);
   return progress;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import {
   Dialog;
   DialogContent;
@@ -36,6 +37,28 @@ export interface HireConfirmationModalProps {
   isSubmitting?: boolean
 }
 export function HireConfirmationModal({
+=======
+import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {Textarea} from "@/components/ui/textarea";
+import {toast} from "@/hooks/use-toast";
+import {supabase} from "@/integrations/supabase/client";
+import {TalentProfile} from "@/types/talent";
+import {useAuth} from "@/hooks/useAuth";
+import {JobApplication} from "@/types/jobs";
+export interface HireConfirmationModalProps {
+  isOpen: boolean,
+  onClose: () => void,;
+  candidateData?: TalentProfile;
+  application?: JobApplication;
+  onConfirm: () => void,
+  isSubmitting?: boolean
+}
+
+export function HireConfirmationModal({ ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   isOpen;
 
   onClose
@@ -59,6 +82,23 @@ export function HireConfirmationModal({
         variant: 'destructive'})
       return
 =======
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react',
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle} from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { TalentProfile } from "@/types/talent",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useAuth } from "@/hooks/useAuth",
 import { JobApplication } from "@/types/jobs",
 export interface HireConfirmationModalProps {
@@ -115,7 +155,11 @@ export function HireConfirmationModal({;
         description: 'Please fill in both project name and description.',;
         variant: 'destructive'}),;
       return;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     if (!user) {
       toast({
@@ -132,6 +176,10 @@ export function HireConfirmationModal({;
       return
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setIsLoading(true);
     // Create a new project
     try {
@@ -213,7 +261,11 @@ export function HireConfirmationModal({;
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
   }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
     setIsLoading(true),;
@@ -301,7 +353,11 @@ export function HireConfirmationModal({;
       setIsLoading(false);
     }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>

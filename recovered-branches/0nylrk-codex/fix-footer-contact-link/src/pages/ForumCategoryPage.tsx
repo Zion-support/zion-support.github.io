@@ -1,6 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -18,10 +21,13 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     id: "getting-hired"
     name: "Getting Hired"
     description: "Tips, strategies, and questions about getting hired on the platform.";
+<<<<<<< HEAD
     adminOnly: false
 
     icon: "Briefcase"
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
@@ -48,6 +54,10 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     id: "getting-hired",
     name: "Getting Hired",
     description: "Tips, strategies, and questions about getting hired on the platform.",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     adminOnly: false,
     icon: "Briefcase"
   },
@@ -452,10 +462,17 @@ export default function ForumCategoryPage() {
 
 export default function ForumCategoryPage() {
   // useParams is typed as `any` in this environment due to missing type
+<<<<<<< HEAD
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+  const { categoryId } = useParams();
+  const { user } = useAuth();
+  const [searchQuery, setSearchQuery] = useState("");
+=======
   // definitions, so avoid passing a type argument to prevent TS2347.
   const { categoryId } = useParams(),
   const { user } = useAuth(),
   const [searchQuery, setSearchQuery] = useState(""),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   if (!categoryId || !categoriesInfo[categoryId]) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -840,7 +857,11 @@ export default function ForumCategoryPage() {;
             <Input;
               placeholder="Search posts in this category...";
               className="pl-10";
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />

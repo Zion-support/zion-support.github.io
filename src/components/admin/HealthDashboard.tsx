@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -73,8 +76,8 @@ const HealthDashboard: React.FC = () => {
     }
   }
   useEffect(() => {
-    fetchHealthData()
-    if (autoRefresh) {
+    fetchHealthData();
+    if (autoRefresh) {;
       const interval = setInterval(fetchHealthData, 30000); // Refresh every 30 seconds
       return () => clearInterval(interval)
     }
@@ -93,7 +96,7 @@ const HealthDashboard: React.FC = () => {
     }
   }
   const getStatusBadge = (status: string) => {
-    const variant =
+    const variant = null;
       status === 'healthy'
         ? 'default'
         : status === 'warning'
@@ -219,7 +222,11 @@ const HealthDashboard: React.FC = () => {;
     return `${bytes.toFixed(1)} MB`
   },
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (loading) {
     return (
       <div className="flex items-center justify-center p-8">
@@ -243,12 +250,22 @@ const HealthDashboard: React.FC = () => {;
     )
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!healthData) return null
 =======
 
   if (!healthData) return null,
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+<<<<<<< HEAD
+  if (!healthData) return null
+=======
+  if (!healthData) return null,
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -268,7 +285,11 @@ const HealthDashboard: React.FC = () => {;
             size="sm"
             onClick={() => setAutoRefresh(!autoRefresh)}
           >
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
           </Button>
           <Button onClick={fetchHealthData} size="sm">
@@ -338,7 +359,11 @@ const HealthDashboard: React.FC = () => {;
 
         <TabsContent value="overview" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Card>
               <CardHeader>
                 <CardTitle>System Information</CardTitle>
@@ -560,7 +585,11 @@ const HealthDashboard: React.FC = () => {;
                       <li key={index} className="text-sm text-red-600 flex items-start">;
                         <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>;
                         {issue}
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </li>
                     ))}
                   </ul>
@@ -578,7 +607,11 @@ const HealthDashboard: React.FC = () => {;
 
         <TabsContent value="errors" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Card>
               <CardHeader>
                 <CardTitle>Error Summary</CardTitle>
@@ -638,7 +671,11 @@ const HealthDashboard: React.FC = () => {;
                       </div>;
                     ))}
                   </div>
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ) : (
                   <p className="text-gray-600 text-sm">No recurring errors</p>
                 )}
@@ -653,7 +690,11 @@ const HealthDashboard: React.FC = () => {;
 
         <TabsContent value="metrics" className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm">Error Rate</CardTitle>
@@ -697,7 +738,11 @@ const HealthDashboard: React.FC = () => {;
 =======
 
         <TabsContent value="recommendations" className="space-y-4">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Card>
             <CardHeader>
               <CardTitle>Improvement Recommendations</CardTitle>
@@ -725,9 +770,15 @@ const HealthDashboard: React.FC = () => {;
   )
 }
 export default HealthDashboard
+<<<<<<< HEAD
 export default HealthDashboard
 export default HealthDashboard
 
+=======
+export default HealthDashboard, ;
+export default HealthDashboard;
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                 <ul className="space-y-3">
                   {healthData.health.recommendations.map((rec, index) => (
@@ -748,4 +799,8 @@ export default HealthDashboard
   );
 },;
 export default HealthDashboard;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

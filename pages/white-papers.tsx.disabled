@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<:pages/white-papers.tsx.backup
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -356,7 +362,11 @@ import {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 const whitePapers = [
   {
@@ -390,7 +400,11 @@ title: 'Cybersecurity Best Practices 2024',
 =======
 <<<<<<< HEAD
     title: 'Cybersecurity Best Practices 2024',
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     description: 'Latest cybersecurity trends and protection strategies for modern businesses.',
     category: 'Cybersecurity',
     downloadCount: 1500,
@@ -432,7 +446,11 @@ export default function WhitePapersPage() {
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> main
 ];
 <<<<<<< HEAD
@@ -597,7 +615,11 @@ title="White Papers - Zion Tech Group"
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 >>>>>>> main
       title="White Papers - Zion Tech Group"
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       description="Access our comprehensive collection of white papers covering AI, cloud solutions, cybersecurity, and more. Download free technical resources and insights."
       keywords="white papers, technical papers, AI research, cloud solutions, cybersecurity, business strategy, free downloads"
     >
@@ -622,6 +644,13 @@ title="White Papers - Zion Tech Group"
                   Papers
                 </span>
               </h1>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                In-depth research and insights on the latest technology trends and industry developments
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -726,6 +755,10 @@ title="White Papers - Zion Tech Group"
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> main
 =======
 ========
@@ -761,6 +794,12 @@ title="White Papers - Zion Tech Group"
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+</motion.div>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -852,6 +891,7 @@ title="White Papers - Zion Tech Group"
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
 >>>>>>> main
                 </motion.div>
+<<<<<<< HEAD
 =======
 </motion.div>
 <<<<<<< HEAD
@@ -859,6 +899,9 @@ title="White Papers - Zion Tech Group"
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </div>
@@ -873,7 +916,11 @@ title="White Papers - Zion Tech Group"
 =======
 <<<<<<< HEAD
         <section className="py-16 bg-gray-50">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Research Categories</h2>
@@ -926,7 +973,11 @@ title="White Papers - Zion Tech Group"
 
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> main
 >>>>>>> main
                 </motion.div>
@@ -937,6 +988,11 @@ title="White Papers - Zion Tech Group"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+</Link>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -973,7 +1029,11 @@ title="White Papers - Zion Tech Group"
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Featured White Papers */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -1220,6 +1280,12 @@ title="White Papers - Zion Tech Group"
         </section>
       </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+</Layout>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1280,6 +1346,7 @@ title="White Papers - Zion Tech Group"
 =======
 >>>>>>> main
 >>>>>>> main
+<<<<<<< HEAD
 =======
 </Layout>
 <<<<<<< HEAD
@@ -1287,10 +1354,20 @@ title="White Papers - Zion Tech Group"
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </motion.div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<:pages/white-papers.tsx.backup
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1321,6 +1398,7 @@ title="White Papers - Zion Tech Group"
 ========
 >>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -1340,6 +1418,9 @@ title="White Papers - Zion Tech Group"
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </MainLayout>
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 >>>>>>> main

@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 
 import React from 'react',
 import Link from 'next/link';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import Link from 'next/link'
+import { useWhitelabel } from '@/context/WhitelabelContext'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface LogoProps {
   customLogo?: string
 export function Logo({ customLogo }: LogoProps) {
@@ -11,9 +17,17 @@ export function Logo({ customLogo }: LogoProps) {
 
   const logoToUse = customLogo |(isWhitelabel ? logoUrl : null)
   // Use the white-label color if available and no specific _customColor is provided
+<<<<<<< HEAD
   // const colorToUse = _customColor |(isWhitelabel ? primaryColor : undefined)
 
 =======
+=======
+  // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined)
+=======
+import React from 'react';
+import Link from 'next/link';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from 'react',;
 import Link from 'next/link',;
@@ -30,7 +44,11 @@ export function Logo({ customLogo }: LogoProps) {
   // Use the white-label color if available and no specific _customColor is provided
   // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined),
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (logoToUse) {
     return (
       <Link href="/" className="flex items-center">
@@ -69,11 +87,19 @@ export function Logo({ customLogo }: LogoProps) {
         className='h-8'
         width={32}
         height={32}
-      />
-    </Link>
-  )
+      />;
+    </Link>;
+  );
+};
 }
+=======
+}
+<<<<<<< HEAD
 =======
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

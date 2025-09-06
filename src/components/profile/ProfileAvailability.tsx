@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { Availability } from '@/types/profile'
+import { Badge } from '@/components/ui/badge'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 <<<<<<< HEAD
 import { Availability } from "@/types/profile";
@@ -5,13 +12,20 @@ import { Badge } from "@/components/ui/badge";
 =======
 import { Availability } from "@/types/profile",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Calendar, Clock, Check } from 'lucide-react'
 import { Calendar } from 'lucide-react'
 interface ProfileAvailabilityProps {
   availability: Availability
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ProfileAvailability({
   availability
 }: ProfileAvailabilityProps) {
@@ -38,7 +52,10 @@ export function ProfileAvailability({
       default:
         return '' }
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
       <h3 className='text-xl font-bold text-white mb-4'>Availability</h3>
@@ -57,8 +74,13 @@ export function ProfileAvailability({
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Availability</h3>
       <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">
+<<<<<<< HEAD
         <Badge
           variant="outline"
+=======
+        <Badge 
+          variant="outline" 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           {getStatusText(availability.status)}
         </Badge>
@@ -74,6 +96,10 @@ export function ProfileAvailability({
       {availability.message && (
         <p className='text-zion-slate mb-4'>{availability.message}</p>
       )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {availability.availableHours &&
         availability.availableHours.length > 0 && (
           <div className='mt-4'>
@@ -141,7 +167,11 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
         <p className="text-zion-slate mb-4">{availability.message}</p>
       )}
       
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {availability.availableHours && availability.availableHours.length > 0 && (
         <div className="mt-4">
           <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>
@@ -151,7 +181,11 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
 =======
             {availability.availableHours.map((slot, index) => (
               <div key={index} className="flex items-center gap-2 text-zion-slate">
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div className="w-20 text-zion-slate-light">{slot.day}:</div>
                 <div className="flex items-center gap-1">
                   <Clock className="h-4 w-4 text-zion-cyan" />
@@ -165,20 +199,36 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
     </div>
   )
 =======
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </div>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
       )}
 <<<<<<< HEAD
     </div>
   )
 }
 =======
+=======
+      )};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>;
   );
+};
 }
+<<<<<<< HEAD
+}
+=======
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

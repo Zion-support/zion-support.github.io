@@ -1,5 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface EmergingTechService {
+=======
+export interface EmergingTechService {;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -811,6 +816,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     support:
       '24/7 communication support, dedicated security consultants, implementation specialists, and ongoing optimization.'
     compliance: [
+<<<<<<< HEAD
       'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols'
     ]
     link: 'https://ziontechgroup.com/quantum-communications'
@@ -824,19 +830,40 @@ export const emergingTechServices2025: EmergingTechService[] = [
   }
 ];
 export const getPopularEmergingTechServices = () => {
+=======
+      'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
+    ],
+    link: 'https://ziontechgroup.com/quantum-communications',
+    icon: '📡',
+    color: 'from-blue-500 to-indigo-600',
+    popular: true,
+    launchDate: '2025-04-01',
+    customers: 150,
+    rating: 4.8,
+    reviews: 89,
+  },;
+];
+
+export const getPopularEmergingTechServices = () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return emergingTechServices2025.filter(service => service.popular);
 }
 export const getEmergingTechServicesByCategory = (category: string) => {
   return emergingTechServices2025.filter(
-    service => service.category === category
+    service => service.category === category;
   );
 }
 export const getEmergingTechServicesByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
   return emergingTechServices2025.filter(service => {
     const price = parseInt(service.price.monthly.toString()) |0;
+=======
+  return emergingTechServices2025.filter(service => {;
+    const price = parseInt(service.price.monthly.toString()) || 0;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return price >= minPrice && price <= maxPrice;
   });
 };import { MicroSaasService  } from "./enhanced-real-micro-saas-services";
@@ -1288,11 +1315,16 @@ export const emergingTechServices2025: MicroSaasService[] = [;
 ]}
 export interface EmergingTechService {
     return price >= minPrice && price <= maxPrice
+<<<<<<< HEAD
   })
 }
 
 =======
 export interface EmergingTechService {;
+=======
+  });
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1781,5 +1813,9 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     const price = parseInt(service.price.monthly.toString()) || 0,;
     return price >= minPrice && price <= maxPrice;
   });
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

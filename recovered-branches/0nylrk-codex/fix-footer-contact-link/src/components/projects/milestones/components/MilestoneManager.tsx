@@ -1,6 +1,7 @@
 
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { MilestonesList  } from '../MilestonesList';
 import { PaymentSummary  } from '../PaymentSummary';
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
@@ -21,11 +22,21 @@ interface MilestoneManagerProps {
   onUploadDeliverable: (id: string, file: File) => Promise<any>
 
 =======
+import {MilestonesList} from '../MilestonesList';
+import {PaymentSummary} from '../PaymentSummary';
+import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
+import {toast} from "sonner";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import React from 'react',
 import { MilestonesList } from '../MilestonesList',
 import { PaymentSummary } from '../PaymentSummary',
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',
 import { toast } from "sonner",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface MilestoneManagerProps {
   projectId: string,
   milestones: Milestone[],
@@ -42,6 +53,25 @@ interface MilestoneManagerProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   refetch: () => Promise<void>
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function MilestoneManager({;
+  projectId;
+  milestones;
+  activities;
+  isLoading;
+  isClient;
+  isTalent;
+  paymentTerms;
+  isSubmitting;
+  onCreateMilestone;
+  onUpdateStatus;
+  onDeleteMilestone;
+  onUploadDeliverable;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function MilestoneManager({
   projectId,
   milestones,
@@ -55,6 +85,7 @@ export function MilestoneManager({
   onUpdateStatus,
   onDeleteMilestone,
   onUploadDeliverable,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   refetch
 }: MilestoneManagerProps) {
 
@@ -95,6 +126,11 @@ export function MilestoneManager({
         <MilestonesList
 =======
         <MilestonesList 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',;
 import { MilestonesList } from '../MilestonesList',;
 import { PaymentSummary } from '../PaymentSummary',;
@@ -155,7 +191,11 @@ export function MilestoneManager({;
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
       <div className="lg:col-span-2">;
         <MilestonesList;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           milestones={milestones}
           activities={activities}
           isLoading={isLoading}

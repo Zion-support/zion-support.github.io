@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+export default function ToolPage() {
+  const [currentQuestion, setCurrentQuestion] = useState(0),
+  const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
+  const [showResults, setShowResults] = useState(false),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -46,6 +56,7 @@ export default function ToolPage() {
   ]
   const handleAnswer = (questionId: string, value: number) => {
     setAnswers(prev => ({ ...prev, [questionId]: value }))
+<<<<<<< HEAD
   }
   const calculateScore = () => {
     const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0)
@@ -63,6 +74,8 @@ export default function ToolPage() {
       setShowResults(true)
     }
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -139,6 +152,10 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const resetAssessment = () => {
@@ -190,6 +207,13 @@ export default function ToolPage(req, res) {
 }
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  <button 
+                    onClick={resetAssessment}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <button
 <<<<<<< HEAD
                     onClick={resetAssessment}
@@ -199,12 +223,24 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Retake Assessment
                   </button>
+<<<<<<< HEAD
                   <Link
+=======
+<<<<<<< HEAD
+                  <Link 
+=======
+                  <Link
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     href="/contact"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
                   >
@@ -254,7 +290,11 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </div>
             <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
@@ -394,7 +434,11 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
                     />
                     <span className="text-white/90">{option}</span>
@@ -406,6 +450,14 @@ export default function ToolPage(req, res) {
 }
               </div>
               <div className="flex justify-between">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                <button 
+                  onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
+                  disabled={currentQuestion === 0}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <button
 <<<<<<< HEAD
                   onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
@@ -421,16 +473,41 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="px-6 py-3 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Previous
                 </button>
+<<<<<<< HEAD
                 <button
 <<<<<<< HEAD
                   onClick={nextQuestion}
                   disabled={!answers[currentQ.id]}
 =======
+=======
+<<<<<<< HEAD
+                <button 
+                  onClick={nextQuestion}
+                  disabled={!answers[currentQ.id]}
+                  className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'}
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </>
+  );
+};
+=======
+                <button
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   onClick={nextQuestion  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -461,4 +538,9 @@ export default function ToolPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

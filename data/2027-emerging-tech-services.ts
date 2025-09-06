@@ -1,5 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Service {
+=======
+export interface Service {;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   description: string;
@@ -496,6 +501,7 @@ export const emergingTech2027Services: Service[] = [
     roi: '800% within 18 months'
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling'
     tags: [
+<<<<<<< HEAD
       'Climate Modeling'
       'Quantum Computing'
       'Environmental'
@@ -503,6 +509,15 @@ export const emergingTech2027Services: Service[] = [
       'Research'
     ]
   }
+=======
+      'Climate Modeling',
+      'Quantum Computing',
+      'Environmental',
+      'Weather',
+      'Research',
+    ],
+  },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
 
     ];
@@ -514,10 +529,14 @@ export const emergingTech2027Services: Service[] = [
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling'
 
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']
+<<<<<<< HEAD
   }
 ];
 =======
 export interface Service {;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   description: string,;
@@ -785,6 +804,10 @@ export const emergingTech2027Services: Service[] = [;
     roi: '800% within 18 months',;
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling',;
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'];
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

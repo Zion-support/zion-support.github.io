@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
@@ -14,8 +17,12 @@ import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 ...innovative2025AIAutonomousServices ];
 //Filter services by category //Animation variants const containerVariants = {
   hidden: {
+<<<<<<< HEAD
   opacity: 0
 }
+=======
+  opacity: 0 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react';
 
@@ -30,6 +37,10 @@ const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 visible: {
@@ -214,9 +225,12 @@ const EnhancedHomepage: React.FC = () => {
               Zion Tech Group
             </motion.h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <motion.p
 =======
             
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.p 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
@@ -226,10 +240,14 @@ const EnhancedHomepage: React.FC = () => {
               Quantum Computing, and Autonomous Solutions
             </motion.p>
 <<<<<<< HEAD
+<<<<<<< HEAD
             {/* CTA Buttons */}
             <motion.div
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* CTA Buttons */}
             <motion.div 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -316,9 +334,12 @@ const EnhancedHomepage: React.FC = () => {
               Explore Our Revolutionary Services
             </motion.h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <motion.div
 =======
             
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="flex flex-wrap justify-center gap-4 mb-12"
@@ -344,10 +365,14 @@ const EnhancedHomepage: React.FC = () => {
           </div>
         </motion.section>
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Services Grid */}
         <motion.section
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Services Grid */}
         <motion.section 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -405,10 +430,14 @@ const EnhancedHomepage: React.FC = () => {
           </div>
         </motion.section>
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Featured Service Showcase */}
         <motion.section
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Featured Service Showcase */}
         <motion.section 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -424,7 +453,11 @@ const EnhancedHomepage: React.FC = () => {
             >
               Featured Revolutionary Services
             </motion.h2>
+<<<<<<< HEAD
             <motion.div
+=======
+            <motion.div 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
               variants={itemVariants}
             >
@@ -451,7 +484,11 @@ const EnhancedHomepage: React.FC = () => {
                         </span>
                       ))}
                     </div>
+<<<<<<< HEAD
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug |featuredServices[currentServiceIndex]?.id}`}>
+=======
+                    <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
@@ -491,14 +528,22 @@ const EnhancedHomepage: React.FC = () => {
             >
               Ready to Transform Your Business?
             </motion.h2>
+<<<<<<< HEAD
             <motion.p
+=======
+            <motion.p 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-xl text-gray-300 mb-8"
               variants={itemVariants}
             >
               Join the future of technology with Zion Tech Group's revolutionary solutions.
               Get started today and experience the power of AI consciousness and quantum computing.
             </motion.p>
+<<<<<<< HEAD
             <motion.div
+=======
+            <motion.div 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               variants={itemVariants}
             >
@@ -529,7 +574,11 @@ const EnhancedHomepage: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Performance Monitor */}
       <AnimatePresence>
         {showPerformanceMonitor && (

@@ -30,6 +30,9 @@ export default function IndustrySolutions() {
       </div>
     </>
   )
+<<<<<<< HEAD
+};
+=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -66,3 +69,4 @@ export default function IndustrySolutions(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

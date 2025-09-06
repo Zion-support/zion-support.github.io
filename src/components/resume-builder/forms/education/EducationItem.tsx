@@ -1,9 +1,23 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { format } from 'date-fns';
+import { Edit, Trash2 } from 'lucide-react'; import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card';
+import { Education } from '@/types/resume';
+import { EducationItemProps } from './types'; import { Edit, Trash2 } from 'lucide-react'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 <<<<<<< HEAD
 import { format  } from 'date-fns';
 =======
 import { format } from 'date-fns',
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Edit, Trash2 } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -109,7 +123,11 @@ export function EducationItem({
               aria-label="Delete education"
             >
               <Trash2 className="h-4 w-4" />
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </Button>
           </div>
         </div>
@@ -118,9 +136,15 @@ export function EducationItem({
           <p className='text-sm mt-3 line-clamp-2'>{education.description}</p>          <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
         )}
       </CardContent>
+<<<<<<< HEAD
     </Card>
   )
 }
+=======
+    </Card>;
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
         )}
@@ -129,4 +153,8 @@ export function EducationItem({
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

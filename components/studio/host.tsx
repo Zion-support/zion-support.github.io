@@ -7,8 +7,13 @@ type PersonaConfig = {
 }
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({
+<<<<<<< HEAD
     voice: 'Visionary'
     language: 'English'
+=======
+    voice: 'Visionary',
+    language: 'English',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
@@ -17,7 +22,11 @@ export default function StudioHostPage() {
     'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'
   );}
 export default function StudioHostPage() {
+<<<<<<< HEAD
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' })
+=======
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
@@ -107,6 +116,9 @@ export default function StudioHostPage() {
     <div className='space-y-8'>
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <section className='space-y-3'>
         <h2 className='text-xl font-semibold'>AI Persona</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -371,6 +383,10 @@ export default function StudioHostPage() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
             {episode.audio && (
 
@@ -378,4 +394,8 @@ export default function StudioHostPage() {
               </button>
             </div>
             {episode.audio && (
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

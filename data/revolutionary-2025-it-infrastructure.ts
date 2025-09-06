@@ -101,8 +101,12 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     roi: 'Enterprises see 4000%+ ROI through unhackable security and reduced breach risks.'
     competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne']
     marketSize: '$200B cybersecurity market',    features: [
+<<<<<<< HEAD
 
       'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration'
+=======
+      'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ];
     popular: true;
     icon: '🔒';
@@ -1533,5 +1537,9 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [;
     reviews: 52;
   }
 ];
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default revolutionary2025ITServices;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

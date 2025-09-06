@@ -1,20 +1,36 @@
 <<<<<<< HEAD:utils/email.ts
 import fs from 'fs-extra';
 import path from 'path';
+<<<<<<< HEAD
 export interface WarningEmailPayload {
+=======
+
+=======
+<<<<<<< HEAD:backup-problematic-files/utils/email.ts
+import fs from 'fs-extra',;
+import path from 'path',;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/email.ts
+export interface WarningEmailPayload {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   toUserId: string;
   toAddress?: string | null;
   subject: string;
   body: string;
 }
+<<<<<<< HEAD
 export interface EmailOptions {
+=======
+<<<<<<< HEAD:utils/email.ts
+
+export interface EmailOptions {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   to: string;
   subject: string;
   body: string;
 }
 export async function sendWarningEmail(
   payload: WarningEmailPayload
-): Promise<void> {
+): Promise<void> {;
   const logDir = path.resolve(process.cwd(), 'data/fraud');
   const logPath = path.join(logDir, 'emails.log');
   await fs.ensureDir(logDir);
@@ -22,8 +38,9 @@ export async function sendWarningEmail(
   await fs.appendFile(logPath, line, 'utf8');
 }
 export async function sendEmail(options: EmailOptions): Promise<void> {
-  // Mock implementation - in production, this would send actual emails
+  // Mock implementation - in production, this would send actual emails;
   console.log('Email would be sent:', options);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:backup-problematic-files/utils/email.ts
 import fs from 'fs-extra',;
@@ -34,6 +51,10 @@ export interface WarningEmailPayload {;
   subject: string,;
   body: string;
 }
+=======
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 export async function sendWarningEmail(payload: WarningEmailPayload): Promise<void> {;
   const logDir = path.resolve(process.cwd(), 'data/fraud'),;
@@ -51,5 +72,10 @@ export async function sendNotificationEmail(to: string, subject: string, body: s
   console.log('Sending notification email to:', to);
   // Implementation would send actual email
 >>>>>>> main:utils/email.ts
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/utils/email.ts
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/email.ts
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

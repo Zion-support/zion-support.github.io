@@ -49,10 +49,18 @@ export function WhitelabelRequestForm() {
         primary_color: values.primary_color
         theme_preset: values.theme_preset
         landing_page_copy: {
+<<<<<<< HEAD
           headline: values.headline
           subtitle: values.subtitle
           cta: values.cta}
       }
+=======
+          headline: values.headline,
+          subtitle: values.subtitle,
+          cta: values.cta};
+      };
+      
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -71,7 +79,11 @@ export function WhitelabelRequestForm() {
         title: 'Error creating tenant'
         description: error.message |'Something went wrong'})
     }
+<<<<<<< HEAD
   }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -144,7 +156,11 @@ export function WhitelabelRequestForm() {;
         description: error.message || 'Something went wrong'});
     }
   },
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <Card className="w-full max-w-2xl">

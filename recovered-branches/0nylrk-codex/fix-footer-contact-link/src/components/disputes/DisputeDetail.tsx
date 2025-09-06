@@ -1,4 +1,32 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from "react";
+import {useParams, useNavigate} from "react-router-dom";
+import {useDisputes} from "@/hooks/useDisputes";
+import {disputeReasonLabels, DisputeMessage, DisputeStatus} from "@/types/disputes";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Separator} from "@/components/ui/separator";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {format, formatDistanceToNow} from "date-fns";
+import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
+import {ShieldAlert, ArrowDown, Check, X, MessageSquare, Download} from "lucide-react";
+import {useAuth} from "@/hooks/useAuth";
+import {toast} from "sonner";
+export function DisputeDetail() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { disputeId } = useParams() as { disputeId?: string };
+  const navigate = useNavigate();
+  const { user } = useAuth();
+  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",
 import { useDisputes } from "@/hooks/useDisputes",
@@ -46,6 +74,7 @@ export function DisputeDetail() {
   const navigate = useNavigate(),
   const { user } = useAuth(),
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const [dispute, setDispute] = useState<any>(null),
   const [messages, setMessages] = useState<DisputeMessage[]>([]),
@@ -98,9 +127,13 @@ export function DisputeDetail() {
     if (success && dispute) {
       setDispute({ ...dispute, status })
     }
+<<<<<<< HEAD
   }
   const handleResolveDispute = async () => {
     if (!disputeId) return;
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
@@ -166,6 +199,10 @@ export function DisputeDetail() {;
       setDispute({ ...dispute, status });
     }
   },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const handleResolveDispute = async () => {
     if (!disputeId) return,
@@ -225,7 +262,10 @@ export function DisputeDetail() {;
         <p>Loading dispute details...</p>
       </div>
     )
+<<<<<<< HEAD
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   },;
   const handleResolveDispute = async () => {;
@@ -270,6 +310,10 @@ export function DisputeDetail() {;
         <p>Loading dispute details...</p>;
       </div>;
     );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -334,7 +378,11 @@ export function DisputeDetail() {;
           <div className="flex items-center gap-2">;
             <h1 className="text-2xl font-bold">Dispute Case</h1>;
             <Badge variant={getStatusBadgeVariant(dispute.status)}>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
@@ -662,6 +710,11 @@ export function DisputeDetail() {;
                                 getDisputeMessages(disputeId!).then(setMessages),
                                 setMessage("")
                               })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>;
                       <div className="mt-4 space-y-4">;
                         <Textarea;
@@ -677,7 +730,11 @@ export function DisputeDetail() {;
                                 getDisputeMessages(disputeId!).then(setMessages);
                                 setMessage("");
                               });
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             }
                           }}
                         >

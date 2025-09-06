@@ -1,5 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface EnterpriseService2034 {
+=======
+export interface EnterpriseService2034 {;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   description: string;
@@ -428,6 +433,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [
       'Custom hardware'
     ]
     compliance: [
+<<<<<<< HEAD
       'Data center standards'
       'Energy efficiency'
       'Security compliance'
@@ -438,6 +444,18 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     contact: '+1 302 464 0950'
     website: 'https://ziontechgroup.com/ai-autonomous-data-center'
   }
+=======
+      'Data center standards',
+      'Energy efficiency',
+      'Security compliance',
+    ],
+    security: ['AI-powered security', 'Physical security', 'Access controls'],
+    scalability: 'Unlimited data center management',
+    uptime: '99.999% data center platform availability',
+    contact: '+1 302 464 0950',
+    website: 'https://ziontechgroup.com/ai-autonomous-data-center',
+  },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Advanced AI algorithmsIoT sensorsMachine learning systemsAutomation frameworksPredictive analyticsReal-time monitoring'
 
     ];
@@ -459,10 +477,14 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     contact: '+1 302 464 0950'
 
     website: 'https://ziontechgroup.com/ai-autonomous-data-center'
+<<<<<<< HEAD
   }
 ];
 =======
 export interface EnterpriseService2034 {;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   description: string,;
@@ -700,6 +722,10 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     uptime: '99.999% data center platform availability',;
     contact: '+1 302 464 0950',;
     website: 'https://ziontechgroup.com/ai-autonomous-data-center';
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

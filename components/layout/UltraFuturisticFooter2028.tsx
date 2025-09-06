@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 import {
+<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -43,6 +44,49 @@ import {
   Shield, Users, Briefcase, BookOpen, MessageCircle
   Star, TrendingUp, Target, Layers, Cpu, Database
   Cloud, Lock, ShieldCheck, Heart, Leaf, Car
+=======
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Rocket,
+  Brain,
+  Atom,
+  Shield,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Target,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Heart,
+  Leaf,
+  Car,
+  GraduationCap,
+  Scale,
+  Building,
+  Factory,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,;
+  Code,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, 
+  Shield, Users, Briefcase, BookOpen, MessageCircle, 
+  Star, TrendingUp, Target, Layers, Cpu, Database, 
+  Cloud, Lock, ShieldCheck, Heart, Leaf, Car, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   GraduationCap, Scale, Building, Factory, Camera;
   Video, Music, Gamepad2, Sun, Moon, Wind, Droplets;
   Code
@@ -185,7 +229,7 @@ const socialLinks = [
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Video }
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code },];
 export default function UltraFuturisticFooter2028() {
-  return (
+  return (;
     <footer className='bg-black/95 backdrop-blur-xl border-t border-purple-500/30'>];
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Users }
@@ -196,6 +240,10 @@ const socialLinks = [
 
 export default function UltraFuturisticFooter2028() {
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <footer className='bg-black/95 backdrop-blur-xl border-t border-purple-500/30'>
 <<<<<<< HEAD
       {/* Main Footer Content */}
@@ -286,6 +334,7 @@ export default function UltraFuturisticFooter2028() {
                   {contactInfo.website}
 =======
 
+<<<<<<< HEAD
 ];
 
 export default function UltraFuturisticFooter2028() {
@@ -294,6 +343,11 @@ export default function UltraFuturisticFooter2028() {
                   {contactInfo.website}
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                  {contactInfo.website}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </a>
               </div>
             </div>
@@ -303,7 +357,11 @@ export default function UltraFuturisticFooter2028() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <a
                   key={social.name}
                   href={social.href}
@@ -340,7 +398,11 @@ export default function UltraFuturisticFooter2028() {
           <div className='lg:col-span-2'>
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               🚀 Our Services
             </h3>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -386,7 +448,11 @@ export default function UltraFuturisticFooter2028() {
           <div className='lg:col-span-1'>
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Quick Links
             </h3>
             {/* Company Links */}
@@ -421,7 +487,11 @@ export default function UltraFuturisticFooter2028() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Resource Links */}
             <div className='mb-6'>
               <h4 className='font-medium text-purple-300 mb-3'>Resources</h4>
@@ -430,7 +500,11 @@ export default function UltraFuturisticFooter2028() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <li key={link.name}>
                     <Link
                       href={link.href}
@@ -451,7 +525,11 @@ export default function UltraFuturisticFooter2028() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Newsletter Signup */}
             <div className='bg-purple-900/20 border border-purple-500/30 rounded-lg p-4'>
               <h4 className='font-medium text-white mb-3'>Stay Updated</h4>
@@ -459,7 +537,11 @@ export default function UltraFuturisticFooter2028() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Get the latest insights on future technology and AI innovations.
               </p>
               <div className='flex space-x-2'>
@@ -560,7 +642,7 @@ export default function UltraFuturisticFooter2028() {
         <div className='absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl'></div>
       </div>
-    </footer>
+    </footer>;
   );      <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
@@ -569,7 +651,19 @@ export default function UltraFuturisticFooter2028() {
     </footer>
 );
 }
+<<<<<<< HEAD
 =======
 
       {/* Background Effects */}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+}
+}
+}
+=======
+
+      {/* Background Effects */}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {useState, useEffect} from "react";
 import {useParams, useNavigate, Link} from "react-router-dom";
 import {format} from "date-fns";
@@ -21,6 +24,7 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewSection";
 import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
+<<<<<<< HEAD
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -42,6 +46,8 @@ function ProjectDetailsContent() {
       const projectData = await getProjectById(projectId);
       if (projectData) {
         setProject(projectData);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState, useEffect } from "react",
 import { useParams, useNavigate, Link } from "react-router-dom",
@@ -93,6 +99,10 @@ import {
   Video,
   User,
   XCircle} from "lucide-react",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -210,7 +220,11 @@ function ProjectDetailsContent() {;
           description: "The requested project could not be found.",;
           variant: "destructive"}),;
         navigate("/dashboard");
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       setIsLoading(false)
     }
@@ -1232,7 +1246,11 @@ function ProjectDetailsContent() {;
                 </div>;
               </CardContent>;
             </Card>;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
@@ -1309,6 +1327,16 @@ export default function ProjectDetails() {
       <ProjectDetailsContent />
     </ProtectedRoute>
   )
+};
+;
+=======
+            </Card>;
+          </div>;
+        </div>;
+      </main>;
+      <Footer />;
+    </>;
+  );
 }
 =======
             </Card>;
@@ -1328,4 +1356,8 @@ export default function ProjectDetails() {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

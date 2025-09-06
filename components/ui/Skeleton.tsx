@@ -1,11 +1,16 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type SkeletonProps = {
   className?: string;
 }
 =======
+export type SkeletonProps = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 export type SkeletonProps = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   className?: string;
 };
 
@@ -15,7 +20,11 @@ export default function Skeleton({ className = '' }: SkeletonProps) {
       <div className='absolute inset-0 -translate-x-full animate-[shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent' />
       <style jsx global>{`
         @keyframes shimmer {
+<<<<<<< HEAD
+          100% {;
+=======
           100% {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             transform: translateX(100%);
           }        }
       `}</style>
@@ -34,8 +43,13 @@ export default function Skeleton({ className = '' }: SkeletonProps) {
           100% { transform: translateX(100%) }
         }
       `}</style>
+<<<<<<< HEAD
     </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </div>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 import React from "react";
 interface SkeletonProps {
@@ -49,6 +63,10 @@ export const Skeleton: React.FC<SkeletonProps> = ({ "
   height
   rounded = false}) => {
   const style: React.CSSProperties = {}
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ";
   if (width) style.width = typeof width === "number" ? "${width}px" : width
 if (height) style.height = typeof height === "number" ? "${height}px" : height
@@ -79,6 +97,14 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
 }
 export default Component
 }
+<<<<<<< HEAD
 =======
   );
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+=======
+    </div>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

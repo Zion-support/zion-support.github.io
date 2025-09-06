@@ -27,7 +27,7 @@ function writeGrant(record: GrantApplication) {
     'utf8'
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     res.setHeader('Allow', 'POST');
     res.status(405).end('Method Not Allowed');
     return;  }
@@ -40,14 +40,19 @@ function writeGrant(record: GrantApplication) {
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     res.setHeader('AllowPOST');
     res.status(405).end('Method Not Allowed');
     return
   }
   const payload = req.body as VotePayload;
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!payload?.grantId |!payload?.voter |!payload?.choice) {
+=======
+  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     res.status(400).json({ error: 'Missing fields' });
     return;
   }
@@ -72,7 +77,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(200).json({ record: g })
 }
+<<<<<<< HEAD
 =======
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
     res.status(400).json({ error: 'Missing fields' });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+}
+}
+}
+}
+=======
+    res.status(400).json({ error: 'Missing fields' });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

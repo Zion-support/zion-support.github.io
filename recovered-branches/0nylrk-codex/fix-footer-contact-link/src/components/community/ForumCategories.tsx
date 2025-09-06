@@ -1,4 +1,14 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Link} from "react-router-dom";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import {useAuth} from "@/hooks/useAuth";
+import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
+import {ForumCategory, ForumCategoryInfo} from "@/types/community";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Link } from "react-router-dom",
 <<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -29,6 +39,10 @@ const categories: ForumCategoryInfo[] = [
 =======
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",
@@ -111,9 +125,15 @@ export const ForumCategories = () => {
 =======
 },
 
+<<<<<<< HEAD
+export const ForumCategories = () => {;
+  const { user } = useAuth();
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
+=======
 export const ForumCategories = () => {
   const { user } = useAuth(),
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const visibleCategories = categories.filter(
     category => !category.adminOnly || isAdmin
@@ -231,5 +251,9 @@ export const ForumCategories = () => {;
     </div>;
   );
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ForumCategories;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
