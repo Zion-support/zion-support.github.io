@@ -21,6 +21,7 @@
     ],
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
       "@/*": [
         "./*"
       ],
@@ -39,6 +40,9 @@
       "@/types/*": [
         "./types/*"
       ]
+=======
+      "@/*": ["./*"]
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
     },
     "allowSyntheticDefaultImports": true
   },

@@ -21,3 +21,7 @@ export function securityMiddleware(request) {
   }
   
   return response;
+<<<<<<< HEAD:corrupted_backup/security.js
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5:middleware/security.js
