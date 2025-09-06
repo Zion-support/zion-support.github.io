@@ -24,6 +24,7 @@ export default defineConfig({
     loader: 'tsx',
     include: /src\/.*\.[jt]sx?$/,
     exclude: [],
+    jsx: 'automatic',
   },
   build: {
     target: 'esnext',
@@ -84,9 +85,6 @@ export default defineConfig({
     esbuildOptions: {
       target: 'esnext'
     }
-  },
-  esbuild: {
-    jsx: 'automatic',
   },
   server: {
     port: 3000,
