@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+import React from 'react';
+
+export default function SolutionsPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Our Solutions
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive technology solutions tailored to your business needs.
+          </p>
+        </div>
+=======
 export const metadata = {
   title: "Solutions | Zion Tech Group",
   description: "Comprehensive AI and technology solutions designed to transform your business operations.",
@@ -70,6 +86,7 @@ export default function SolutionsPage() {
             </a>
           </div>
         </div>
+>>>>>>> 355bac566df5c1191ae52cec576115f2a20764fc
       </div>
     </div>
   );

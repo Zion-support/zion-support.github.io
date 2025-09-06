@@ -1,5 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
+import {
+  LightBulbIcon,
+  CpuChipIcon,
+  GlobeAltIcon,
+  ShieldCheckIcon,
+  ChartBarIcon,
+  UserGroupIcon,
+  ArrowRightIcon,
+  CheckCircleIcon,
+  StarIcon,
+  RocketLaunchIcon
+} from '@heroicons/react/24/outline';
 
 interface CardProps {
   title: string;
@@ -9,174 +21,234 @@ interface CardProps {
   icon?: string;
 }
 
-function Card({ title, href, description, bullets, icon }: CardProps) {
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
-      <div className="flex items-center mb-4">
-        {icon && <span className="text-2xl mr-3">{icon}</span>}
-        <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
-      </div>
-      <p className="text-gray-600 mb-4">{description}</p>
-      {bullets && (
-        <ul className="space-y-2 mb-6">
-          {bullets.map((bullet, index) => (
-            <li key={index} className="flex items-start">
-              <span className="text-green-500 mr-2">✓</span>
-              <span className="text-gray-600 text-sm">{bullet}</span>
-            </li>
-          ))}
-        </ul>
-      )}
-      <Link
-        href={href}
-        className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-      >
-        Learn More
-      </Link>
-    </div>
-  );
-}
+const stats = [
+  { label: 'Companies Served', value: '500+' },
+  { label: 'Projects Completed', value: '1,200+' },
+  { label: 'Years of Experience', value: '10+' },
+  { label: 'Countries', value: '25+' },
+];
+
+const features = [
+  {
+    name: 'AI Solutions',
+    description: 'Transform your business with cutting-edge artificial intelligence solutions including machine learning, NLP, and computer vision.',
+    href: '/services/ai-services',
+    icon: CpuChipIcon,
+    color: 'blue',
+  },
+  {
+    name: 'Micro SaaS Development',
+    description: 'Build and launch your next micro SaaS product with our full-stack development expertise and rapid deployment capabilities.',
+    href: '/services/micro-saas',
+    icon: RocketLaunchIcon,
+    color: 'green',
+  },
+  {
+    name: 'Enterprise IT',
+    description: 'Comprehensive IT services including cloud infrastructure, cybersecurity, and digital transformation solutions.',
+    href: '/services/it-services',
+    icon: ShieldCheckIcon,
+    color: 'purple',
+  },
+];
+
+const testimonials = [
+  {
+    content: "Zion Tech Group transformed our AI infrastructure completely. Their solutions increased our efficiency by 300%.",
+    author: "Sarah Johnson",
+    role: "CTO, TechCorp",
+    rating: 5,
+  },
+  {
+    content: "The micro SaaS platform they built for us has been a game-changer. Highly recommend their services.",
+    author: "Michael Chen",
+    role: "Founder, StartupXYZ",
+    rating: 5,
+  },
+  {
+    content: "Outstanding IT services and support. They helped us migrate to the cloud seamlessly.",
+    author: "Emily Rodriguez",
+    role: "IT Director, GlobalCorp",
+    rating: 5,
+  },
+];
 
 export default function HomePage() {
   return (
-    <div className="animate-fade-in">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="text-center py-12 md:py-20">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-          Build and scale with{' '}
-          <span className="text-blue-600">AI</span>,{' '}
-          <span className="text-green-600">Micro SaaS</span>{' '}
-          and{' '}
-          <span className="text-purple-600">Enterprise IT</span>
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-          We design, build and operate production-grade platforms: AI copilots, data/ML pipelines, 
-          automation, cloud infrastructure, and secure micro SaaS products. Trusted by 500+ companies worldwide.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/contact"
-            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Get Started
-          </Link>
-          <Link
-            href="/services"
-            className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-gray-400 transition-colors"
-          >
-            View Services
-          </Link>
-        </div>
-      </section>
+      <div className="relative bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800 overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+          <div className="text-center">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-8">
+              <RocketLaunchIcon className="h-4 w-4 mr-2" />
+              Trusted by 500+ companies worldwide
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Build and scale with{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                AI
+              </span>,{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+                Micro SaaS
+              </span>{' '}
+              and{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                Enterprise IT
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
+              We design, build and operate production-grade platforms: AI copilots, data/ML pipelines,
+              automation, cloud infrastructure, and secure micro SaaS products.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                href="/services"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                Explore Services
+                <ArrowRightIcon className="inline-block h-5 w-5 ml-2" />
+              </Link>
+              <Link
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-200 backdrop-blur-sm"
+              >
+                Get Started
+              </Link>
+            </div>
 
-      {/* Services Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Services
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {stats.map((stat) => (
+                <div key={stat.label} className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
+                  <div className="text-blue-200 text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Services Preview */}
+      <div className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Our Core Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprehensive technology solutions to accelerate your business growth
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We deliver enterprise-grade solutions that drive real business results across AI, micro SaaS, and IT services.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card
-              title="AI Solutions"
-              href="/services/ai-services"
-              description="Transform your business with cutting-edge artificial intelligence solutions"
-              icon="🤖"
-              bullets={[
-                "Machine Learning Models",
-                "Natural Language Processing",
-                "Computer Vision",
-                "Predictive Analytics",
-                "AI Consulting"
-              ]}
-            />
-            
-            <Card
-              title="Cybersecurity"
-              href="/services/cybersecurity"
-              description="Protect your digital assets with advanced security solutions"
-              icon="🔒"
-              bullets={[
-                "Security Assessment",
-                "Penetration Testing",
-                "Incident Response",
-                "Compliance Management",
-                "24/7 Monitoring"
-              ]}
-            />
-            
-            <Card
-              title="Cloud Infrastructure"
-              href="/services/cloud-infrastructure"
-              description="Scale your operations with robust cloud solutions"
-              icon="☁️"
-              bullets={[
-                "Cloud Migration",
-                "Infrastructure as Code",
-                "Auto-scaling",
-                "Disaster Recovery",
-                "Cost Optimization"
-              ]}
-            />
-            
-            <Card
-              title="Micro SaaS Development"
-              href="/services/micro-saas"
-              description="Build and launch your next micro SaaS product"
-              icon="🚀"
-              bullets={[
-                "MVP Development",
-                "API Integration",
-                "Payment Processing",
-                "User Management",
-                "Analytics Dashboard"
-              ]}
-            />
-            
-            <Card
-              title="Blockchain Solutions"
-              href="/services/blockchain"
-              description="Leverage blockchain technology for secure transactions"
-              icon="⛓️"
-              bullets={[
-                "Smart Contracts",
-                "DeFi Applications",
-                "NFT Marketplaces",
-                "Token Development",
-                "Blockchain Consulting"
-              ]}
-            />
-            
-            <Card
-              title="IT Services"
-              href="/services/it-services"
-              description="Comprehensive IT support and infrastructure management"
-              icon="💻"
-              bullets={[
-                "System Administration",
-                "Network Security",
-                "Data Backup",
-                "Technical Support",
-                "IT Consulting"
-              ]}
-            />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {features.map((feature) => (
+              <div key={feature.name} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className={`inline-flex p-3 rounded-xl bg-${feature.color}-100 mb-6`}>
+                  <feature.icon className={`h-8 w-8 text-${feature.color}-600`} />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.name}</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">{feature.description}</p>
+                <Link
+                  href={feature.href}
+                  className={`inline-flex items-center text-${feature.color}-600 font-semibold hover:text-${feature.color}-700 transition-colors`}
+                >
+                  Learn More
+                  <ArrowRightIcon className="h-4 w-4 ml-2" />
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Why Choose Us */}
+      <div className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We combine cutting-edge technology with deep industry expertise to deliver solutions that work.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="inline-flex p-4 rounded-full bg-blue-100 mb-6">
+                <ShieldCheckIcon className="h-8 w-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Enterprise Security</h3>
+              <p className="text-gray-600">Bank-level security with compliance certifications and audit trails.</p>
+            </div>
+            <div className="text-center">
+              <div className="inline-flex p-4 rounded-full bg-green-100 mb-6">
+                <ChartBarIcon className="h-8 w-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Architecture</h3>
+              <p className="text-gray-600">Solutions that grow with your business and handle enterprise-scale loads.</p>
+            </div>
+            <div className="text-center">
+              <div className="inline-flex p-4 rounded-full bg-purple-100 mb-6">
+                <CpuChipIcon className="h-8 w-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Custom Development</h3>
+              <p className="text-gray-600">Tailored solutions designed specifically for your unique requirements.</p>
+            </div>
+            <div className="text-center">
+              <div className="inline-flex p-4 rounded-full bg-orange-100 mb-6">
+                <UserGroupIcon className="h-8 w-8 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Dedicated Support</h3>
+              <p className="text-gray-600">24/7 enterprise support with dedicated account managers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonials */}
+      <div className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Don't just take our word for it. Here's what our clients have to say about working with us.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <StarIcon key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-6 italic">"{testimonial.content}"</p>
+                <div>
+                  <div className="font-semibold text-gray-900">{testimonial.author}</div>
+                  <div className="text-gray-500 text-sm">{testimonial.role}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-600">
+      <div className="py-20 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how we can help you achieve your technology goals
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Join hundreds of companies already using our AI-powered solutions to drive innovation and growth.
+            Let's build something amazing together.
           </p>
           <Link
             href="/contact"
@@ -185,7 +257,7 @@ export default function HomePage() {
             Get Started Today
           </Link>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

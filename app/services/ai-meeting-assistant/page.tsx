@@ -1,7 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+import TestimonialCard from '../../components/TestimonialCard';
+=======
 import FeatureCard from '../../../components/FeatureCard';
 import TestimonialCard from '../../../components/TestimonialCard';
+>>>>>>> 355bac566df5c1191ae52cec576115f2a20764fc
 
 export const metadata = {
   title: 'AI Meeting Assistant | Zion Tech Group',
