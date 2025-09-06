@@ -1,39 +1,47 @@
-
 import { useState, useEffect, useCallback } from 'react';
 
 interface UseApiOptions {
   immediate?: boolean;
-  onSuccess?: (data: unknown) => void;
-  onError?: (error: unknown) => void;
+  onSuccess?: (data: any) => void;
+  onError?: (error: Error) => void;
 }
 
-export const useApi = <T = unknown>(
-  apiFunction: (...args: unknown[]) => Promise<T>,
+interface UseApiResult<T> {
+  data: T | null;
+  loading: boolean;
+  error: Error | null;
+  execute: (...args: any[]) => Promise<void>;
+}
+
+export function useApi<T = any>(
+  apiFunction: (...args: any[]) => Promise<T>,
   options: UseApiOptions = {}
-) => {
+): UseApiResult<T> {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<unknown>(null);
+  const [error, setError] = useState<Error | null>(null);
 
-  const execute = useCallback(async (...args: unknown[]) => {
+  const execute = useCallback(async (...args: any[]) => {
     try {
       setLoading(true);
       setError(null);
       const result = await apiFunction(...args);
       setData(result);
       options.onSuccess?.(result);
-      return result} catch (err) {
-      setError(err);
-      options.onError?.(err);
-      throw err} finally {
-      setLoading(false)}
+    } catch (err) {
+      const error = err instanceof Error ? err : new Error('An error occurred');
+      setError(error);
+      options.onError?.(error);
+    } finally {
+      setLoading(false);
+    }
   }, [apiFunction, options]);
 
   useEffect(() => {
     if (options.immediate) {
-      execute()}
+      execute();
+    }
   }, [execute, options.immediate]);
 
-  return { data, loading, error, execute }};
-
-export default useApi;
+  return { data, loading, error, execute };
+}
