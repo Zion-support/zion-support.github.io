@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { MultiverseState, InstanceConfig, SyncEvent } from './types';
@@ -76,3 +77,6 @@ export function filterEventsByScope(
   return events;export function resetState(): void {
   state = { ...defaultState }
 }
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

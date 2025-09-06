@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let animationFrameId: number;
@@ -290,21 +293,38 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
             opacity: [0.1, 0.3, 0.1]
           }}
           transition={{
+<<<<<<< HEAD
             duration: 7
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
           }}
+=======
+            duration: 7,
+            repeat: Infinity,
+
+          }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         />
       </div>
       {/* Quantum Energy Particles */}
       <div className='fixed inset-0 pointer-events-none z-20'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
             className='absolute w-2 h-2 bg-cyan-400 rounded-full'
             style={{
+<<<<<<< HEAD
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
+=======
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             }}
             animate={{
               y: [0, -100, 0]
@@ -322,6 +342,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
               opacity: [0, 1, 0];
               scale: [0, 1, 0]
             }}
+<<<<<<< HEAD
             transition={{
               duration: 3 + Math.random() * 2
               repeat: Infinity
@@ -331,6 +352,21 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
           />
         ))}
       </div>
+=======
+
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+              ease: 'easeInOut',            }}
+
+            }}
+
+          />
+        ))}
+      </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Neural Network Connections */}
       <div className='fixed inset-0 pointer-events-none z-30'>
         <svg className='w-full h-full'>
@@ -369,15 +405,29 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
                 opacity: [0.1, 0.3, 0.1];
                 strokeDasharray: [0, 100, 0]
               transition={{
+<<<<<<< HEAD
                 duration: 4 + Math.random() * 2
                 repeat: Infinity
                 delay: Math.random() * 2
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
+=======
+                duration: 4 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+                ease: 'easeInOut',              }}
+
+              }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             />
           ))}
         </svg>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Content */}
       <div className='relative z-40'>{children}</div>
     </div>
@@ -388,3 +438,7 @@ export default UltraAdvancedFuturisticBackgroundV2;    </div>
 }
 export default UltraAdvancedFuturisticBackgroundV2;
 
+<<<<<<< HEAD
+=======
+export default UltraAdvancedFuturisticBackgroundV2;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -2,8 +2,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       setLoading(false)};
 ;
   return { data, loading, error, execute }};
@@ -22,6 +25,10 @@
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 };import { useState, useEffect } from 'react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface ApiState<T> {
   data: T | null;
   loading: boolean;
@@ -60,6 +67,7 @@ export function useApi<T>(url: string, options?: RequestInit) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 =======
@@ -76,6 +84,9 @@ const { useState,useEffect,useCallback } from "react"; interface UseApiOptions<T
 import React from 'react';
 >>>>>>> origin/automation-improvements-final
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 };
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
@@ -219,6 +230,7 @@ export function useApi<T>(
 }
 <<<<<<< HEAD
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -233,3 +245,5 @@ export function useApi<T>(
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

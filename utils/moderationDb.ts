@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ModerationFlag {
   id: string;
   contentId: string;
@@ -49,3 +50,13 @@ export async function updateFlagStatus(
   return flag;
 }
 
+=======
+
+  flag.status = status;
+  flag.adminNotes = adminNotes || flag.adminNotes;
+  flag.updatedAt = new Date().toISOString();
+  await upsertFlag(flag);
+  return flag;
+
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

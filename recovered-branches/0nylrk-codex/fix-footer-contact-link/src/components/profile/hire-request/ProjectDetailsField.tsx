@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import {
@@ -10,6 +11,19 @@ import {
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
+=======
+import React from "react",
+import { UseFormReturn } from "react-hook-form",
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Textarea } from "@/components/ui/textarea",
+import { FormValues } from "./useHireRequestForm",
+interface ProjectDetailsFieldProps {
+  form: UseFormReturn<FormValues>
+import React from "react",;
+import { UseFormReturn } from "react-hook-form",;
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Textarea } from "@/components/ui/textarea",;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { FormValues } from "./useHireRequestForm";
 interface ProjectDetailsFieldProps {
   form: UseFormReturn<FormValues>;

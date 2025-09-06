@@ -162,5 +162,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
   }
+<<<<<<< HEAD
   res.status(200).json(response)
 }
+=======
+
+  res.status(200).json(response)
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

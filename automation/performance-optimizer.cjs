@@ -77,6 +77,7 @@ class PerformanceOptimizer {
       }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -104,11 +105,14 @@ function findFiles(dir, exts) {
       results.push(...findFiles(p, exts));
     } else if (exts.includes(path.extname(entry).toLowerCase())) {
       results.push(p);
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
   }
   return results;
 }
 
+<<<<<<< HEAD
 function optimizeImages(publicDir, report) {
   const images = findFiles(publicDir, ['.png', '.jpg', '.jpeg']);
   if (images.length === 0) {
@@ -648,6 +652,8 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
 >>>>>>> origin/main
     }
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const report = {
       timestamp: new Date().toISOString(),
       totalOptimizations: optimizations.length,
@@ -675,6 +681,7 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
 =======
 // Run performance optimization
 const optimizer = new PerformanceOptimizer();
+<<<<<<< HEAD
 optimizer.optimizePerformance().catch(console.error);
 =======
     try {
@@ -843,3 +850,6 @@ try {
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+optimizer.optimizePerformance().catch(console.error);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

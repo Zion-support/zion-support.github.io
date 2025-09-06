@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
+=======
+import React from 'react';
+import Head from 'next/head';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
   Code
   GitBranch
   Database
@@ -16,6 +22,20 @@ import {
   TrendingUp
   Cpu
   Globe;} from 'lucide-react';import {
+=======
+  Code,
+  GitBranch,
+  Database,
+  Cloud,
+  Shield,
+  Zap,
+  Star,
+  ExternalLink,
+  CheckCircle,
+  TrendingUp,
+  Cpu,
+  Globe,;} from 'lucide-react';import { 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   Code;
   GitBranch
   Database
@@ -146,6 +166,7 @@ export default function DeveloperToolsPage() {
       description:
         'Complete API development platform for building, testing, and documenting APIs with team collaboration.'
       features: [
+<<<<<<< HEAD
         'API design & testing'
         'Team collaboration'
         'API documentation'
@@ -163,6 +184,26 @@ export default function DeveloperToolsPage() {
       category: 'API Development'
     },  ];      category: 'API Development'
     }
+=======
+        'API design & testing',
+        'Team collaboration',
+        'API documentation',
+        'Mock servers',
+        'Monitoring & analytics',
+      ],      pricing: '$12/month',
+
+      pricing: '$12/month',
+
+      marketPrice: '$12-99/month',
+      website: 'https://www.postman.com/pricing',
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',
+      textColor: 'text-orange-400',
+      gradient: 'from-orange-400 to-red-500',
+      popular: false,
+      category: 'API Development',
+    },  ];
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
   const devMarketStats = [
     {
@@ -409,11 +450,19 @@ export default function DeveloperToolsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Developer Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               Curated Developer Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -562,11 +611,19 @@ export default function DeveloperToolsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Developer Workflow */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               Complete Developer Workflow
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -626,11 +683,20 @@ export default function DeveloperToolsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Tool Categories */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+              Developer Tool Categories
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of developer tools helps you
@@ -668,10 +734,19 @@ export default function DeveloperToolsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* CTA Section */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor text-center'>
           <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+            Ready to Level Up Your Development?
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </h2>
           <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12'>
             Start with one tool or build a complete development stack. Each tool
@@ -696,6 +771,7 @@ export default function DeveloperToolsPage() {
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
               Explore AI Tools
             </Button>
+<<<<<<< HEAD
             <Button
               href='/contact'
               variant='outline'
@@ -712,3 +788,6 @@ export default function DeveloperToolsPage() {
     </>
 );
 }
+=======
+            <Button
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

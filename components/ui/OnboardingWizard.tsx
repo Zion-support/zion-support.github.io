@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',
+=======
+import React, { useEffect, useState } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
 export default function OnboardingWizard() {
@@ -24,10 +28,17 @@ export default function OnboardingWizard() {
         window.localStorage.setItem('zion_has_onboarded', '1');
       }
     } catch {}
+<<<<<<< HEAD
     setOpen(false);  }        window.localStorage.setItem('zion_has_onboarded1')
       }
     } catch {}
     setOpen(false)
+=======
+    setOpen(false);  }
+
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!open) return null;
 
   return (
@@ -143,5 +154,9 @@ export default function OnboardingWizard() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

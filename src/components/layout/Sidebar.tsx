@@ -38,7 +38,15 @@ const Sidebar = () => {
           ))}
         </nav>
       </div>
+<<<<<<< HEAD
     </aside>
   )
 }
 export default Sidebar
+=======
+    </div>
+  );
+};
+
+export default Sidebar;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

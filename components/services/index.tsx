@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 export default function ServicesIndexPage () {
+=======
+ export default function ServicesIndexPage () {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
@@ -106,7 +110,12 @@ export default function ServicesIndexPage() {
       const err = await res.json().catch(() => ({}));
       throw new Error(err?.message |'Failed to submit')
     }
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
       <Head>
@@ -124,12 +133,20 @@ export default function ServicesIndexPage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {filtered.map((service) => (
+<<<<<<< HEAD
                 <EnhancedMarketplaceCard key={service.slug |service.id} service={service} onRequestQuote={handleRequestQuote} />
+=======
+                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ))}
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
@@ -140,4 +157,7 @@ export default function ServicesIndexPage() {
   )
 }
 export default ServicesPage;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

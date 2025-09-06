@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import { useRouter  } from 'next/router';
+=======
+import {useEffect, useState} from 'react';
+import {useRouter} from 'next/router';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication } from '../../types/grants';
 export default function GrantDetailPage() {
@@ -19,7 +24,12 @@ export default function GrantDetailPage() {
       .then(d => setItem(d.record))
       .finally(() => setLoading(false));  }, [id]);
   const addUpdate = async () => {
+<<<<<<< HEAD
     if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+=======
+    if (!id || !updateContent.trim()) return;
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }, [id]);
   const addUpdate = async () => {
     if (!id |!updateContent.trim()) return;
@@ -74,6 +84,7 @@ export default function GrantDetailPage() {
           </span>
         </div>
       </div>
+<<<<<<< HEAD
       <div className='grid md:grid-cols-3 gap-6'>
         <div className='md:col-span-2 space-y-4'>
           <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
@@ -214,4 +225,8 @@ export default function GrantDetailPage() {
       </div>
     </EnhancedLayout>
 );
+=======
+    </EnhancedLayout>
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

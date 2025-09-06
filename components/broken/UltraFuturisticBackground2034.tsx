@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
 type ParticleType = 'quantum' | 'neural' | 'holographic';
@@ -313,10 +316,17 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         cancelAnimationFrame(animationRef.current);
       }
       window.removeEventListener('resize', resizeCanvas);
+<<<<<<< HEAD
     };  }, [intensity]);        cancelAnimationFrame(animationRef.current)
       }
       window.removeEventListener('resize', resizeCanvas)
     }
+=======
+    };  }, [intensity]);
+
+  }, [intensity]);
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Mouse move handler for interactive effects
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -368,6 +378,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             opacity: [0.3, 0.6, 0.3]
           }}
           transition={{
+<<<<<<< HEAD
             duration: 8
             repeat: -1
             ease: 'linear'
@@ -419,11 +430,30 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             duration: 12
             repeat: -1
             ease: 'linear',            ease: "linear"
+=======
+            duration: 8,
+            repeat: -1,
+
+          }}
+          transition={{
+            duration: 6,
+            repeat: -1,
+
+          }}
+          transition={{
+            duration: 12,
+            repeat: -1,
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           }}
         />
       </div>
       {/* Energy waves */}
       <div className='absolute inset-0'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <motion.div
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent'
           animate={{
@@ -457,10 +487,18 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             y: ['-100%100%']
           }}
           transition={{
+<<<<<<< HEAD
             duration: 20
             repeat: -1
             ease: 'linear',            ease: "linear"
           }}
+=======
+            duration: 20,
+            repeat: -1,
+
+          }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         />
       </div>
       {/* Holographic matrix effect */}
@@ -481,6 +519,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
               opacity: [0, 1, 0];
               scaleY: [0, 1, 0]
             }}
+<<<<<<< HEAD
             transition={{
               duration: 3
               delay: i * 0.1
@@ -496,6 +535,28 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]'
           style={{
             backgroundSize: '50px 50px'
+=======
+
+            transition={{
+              duration: 3,
+              delay: i * 0.1,
+              repeat: -1,
+              ease: 'easeInOut',            }}
+
+            }}
+
+          />
+        ))}
+      </div>
+
+      {/* Cyberpunk grid */}
+      <div className='absolute inset-0'>
+
+        <motion.div
+          className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]'
+          style={{
+            backgroundSize: '50px 50px',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           }}
           animate={{
             opacity: [0.3, 0.6, 0.3],          }}
@@ -507,6 +568,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 export default UltraFuturisticBackground2034;        <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
@@ -530,3 +592,18 @@ export default UltraFuturisticBackground2034;  )
 }
 export default UltraFuturisticBackground2034;
 
+=======
+};
+
+export default UltraFuturisticBackground2034;
+
+          }}
+          transition={{
+            duration: 4,
+            repeat: -1,
+
+          }}
+        />
+      </div>
+    </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -329,6 +333,7 @@ const footerVariants = {
     }
   },}
 const itemVariants = {
+<<<<<<< HEAD
   hidden: { opacity: 0, y: 20 }
   visible: { opacity: 1, y: 0 },}
 export default function UltraFuturisticFooter2032() {
@@ -467,6 +472,27 @@ export default function UltraFuturisticFooter2032() {
                   <Globe className="w-4 h-4 text-cyan-400" />
                   <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">
                     {contactInfo.website}
+=======
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },};
+
+export default function UltraFuturisticFooter2032() {
+  return (
+    <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>
+
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+
+};
+
+export default function UltraFuturisticFooter2032() {
+  return (
+
+                    {contactInfo.website}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </a>
                 </div>
               </div>
@@ -474,6 +500,10 @@ export default function UltraFuturisticFooter2032() {
             {/* Service Categories */}
             <motion.div variants={itemVariants} className='lg:col-span-2'>
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 Our Revolutionary Services
               </h3>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -508,9 +538,17 @@ export default function UltraFuturisticFooter2032() {
                 ))}
               </div>
             </motion.div>
+<<<<<<< HEAD
             {/* Quick Links & Company Info */}
             <motion.div variants={itemVariants} className='lg:col-span-1'>
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
+=======
+
+            {/* Quick Links & Company Info */}
+            <motion.div variants={itemVariants} className='lg:col-span-1'>
+              <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 Quick Access
               </h3>
               {/* Quick Links */}
@@ -545,6 +583,10 @@ export default function UltraFuturisticFooter2032() {
                   ))}
                 </ul>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Company Info */}
               <div className='mb-8'>
                 <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
@@ -552,9 +594,14 @@ export default function UltraFuturisticFooter2032() {
                     <li key={index}>
                       <Link
                         href={item.href}
+<<<<<<< HEAD
                         className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >              <div className="mb-8">
                 <h4 className="text-lg font-medium text-white mb-4">Company</h4>
                 <ul className="space-y-2">
+=======
+                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   {companyInfo.map((item, index) => (
                     <li key={index}>
                       <Link
@@ -567,6 +614,10 @@ export default function UltraFuturisticFooter2032() {
                   ))}
                 </ul>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Social Links */}
               <div>
                 <h4 className='text-lg font-medium text-white mb-4'>
@@ -581,6 +632,7 @@ export default function UltraFuturisticFooter2032() {
                     <a
                       key={index}
                       href={social.href}
+<<<<<<< HEAD
                       target='_blank'
                       rel='noopener noreferrer'
                       className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20'
@@ -590,11 +642,20 @@ export default function UltraFuturisticFooter2032() {
                       className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20"
                     >
                       <social.icon className="w-5 h-5" />
+=======
+
+                    </a>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   ))}
                 </div>
               </div>
             </motion.div>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Newsletter Signup */}
           <motion.div
             variants={itemVariants}
@@ -602,6 +663,10 @@ export default function UltraFuturisticFooter2032() {
           >
             <div className='text-center'>
               <h3 className='text-2xl font-bold text-white mb-4'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 Stay Ahead with Future Technology
               </h3>
               <p className='text-slate-300 mb-8 max-w-2xl mx-auto'>
@@ -701,5 +766,9 @@ export default function UltraFuturisticFooter2032() {
         </motion.button>
       </div>
     </footer>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

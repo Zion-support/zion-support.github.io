@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react',
 import EnhancedNavigation from './EnhancedNavigation',
 import EnhancedFooter from './EnhancedFooter',
 import i18n, { isRtl } from '../../utils/i18n';
 import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
 
+=======
+import React, { useEffect } from 'react';
+import EnhancedNavigation from './EnhancedNavigation';
+import EnhancedFooter from './EnhancedFooter';
+import i18n, { isRtl } from '../../utils/i18n';
+import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export type EnhancedLayoutProps = {
   children: React.ReactNode;}
 export type EnhancedLayoutProps = {
@@ -39,8 +47,11 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
         <EnhancedFooter />
       </footer>
     </div>
+<<<<<<< HEAD
 );
 }
 }
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }

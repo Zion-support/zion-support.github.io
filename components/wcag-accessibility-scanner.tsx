@@ -4,6 +4,10 @@ import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function WCAGScannerPage() {
 
   const service = extraServices.find(s =>
@@ -98,4 +102,9 @@ export default function WCAGScannerPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

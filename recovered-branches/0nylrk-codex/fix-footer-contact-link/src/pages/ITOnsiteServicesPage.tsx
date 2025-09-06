@@ -12,6 +12,7 @@ import { PageHero } from "@/components/services/PageSections/PageHero",
 import { CountryTabs } from "@/components/services/PageSections/CountryTabs",
 import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",
+<<<<<<< HEAD
 import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
 import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {
@@ -21,6 +22,18 @@ export default function ITOnsiteServicesPage() {
   // Check for success parameter in URL
 
   const success = searchParams.get("success");
+=======
+import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes",
+import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction",
+export default function ITOnsiteServicesPage() {
+  const [searchParams] = useSearchParams(),
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
+  const [searchQuery, setSearchQuery] = useState(""),
+  
+  // Check for success parameter in URL
+  const success = searchParams.get("success"),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Show success toast if redirected from successful payment
   useEffect(() => {
     if (success === "true") {
@@ -28,9 +41,17 @@ export default function ITOnsiteServicesPage() {
         title: "Payment Successful"
         description: "Your IT onsite service request has been received. Our team will contact you shortly."})
     }
+<<<<<<< HEAD
   }, [success]);
   // Popular countries for the featured cards
   const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
+=======
+  }, [success]),
+  
+  // Popular countries for the featured cards
+  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"],
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
     .filter(country =>
@@ -38,6 +59,7 @@ export default function ITOnsiteServicesPage() {
     )
     .sort((a, b) => {
       // First, sort by popular status
+<<<<<<< HEAD
       const aIsPopular = popularCountries.includes(a.country);
       const bIsPopular = popularCountries.includes(b.country);
       if (aIsPopular && !bIsPopular) return -1;
@@ -45,23 +67,103 @@ export default function ITOnsiteServicesPage() {
       // Then sort alphabetically
       return a.country.localeCompare(b.country)
     });
+=======
+      const aIsPopular = popularCountries.includes(a.country),
+      const bIsPopular = popularCountries.includes(b.country),
+      
+      if (aIsPopular && !bIsPopular) return -1,
+      if (!aIsPopular && bIsPopular) return 1,
+      
+      // Then sort alphabetically
+      return a.country.localeCompare(b.country)
+    }),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleCountrySelect = (country: CountryPricing) => {
     setSelectedCountry(country)
     // Scroll to the service details section
     setTimeout(() => {
       document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })
     }, 100)
+<<<<<<< HEAD
   }
 
+=======
+  },
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <AppLayout>
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from "react",;
+import { useSearchParams } from "react-router-dom",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { ITServicePricingTable } from "@/components/services/ITServicePricingTable",;
+import { GlobalServiceSection } from "@/components/GlobalServiceSection",;
+import { QuoteFormSection } from "@/components/QuoteFormSection",;
+import { TrustedBySection } from "@/components/TrustedBySection",;
+import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",;
+import { toast } from "@/hooks/use-toast",;
+import { PageHero } from "@/components/services/PageSections/PageHero",;
+import { CountryTabs } from "@/components/services/PageSections/CountryTabs",;
+import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",;
+import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",;
+import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes",;
+import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction",;
+export default function ITOnsiteServicesPage() {;
+  const [searchParams] = useSearchParams(),;
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),;
+  const [searchQuery, setSearchQuery] = useState(""),;
+  // Check for success parameter in URL;
+  const success = searchParams.get("success"),;
+  // Show success toast if redirected from successful payment;
+  useEffect(() => {;
+    if (success === "true") {;
+      toast({;
+        title: "Payment Successful",;
+        description: "Your IT onsite service request has been received. Our team will contact you shortly."});
+    }
+  }, [success]),;
+  // Popular countries for the featured cards;
+  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"],;
+  // Filter countries based on search query;
+  const filteredCountries = onsiteServicePricing;
+    .filter(country =>;
+      country.country.toLowerCase().includes(searchQuery.toLowerCase());
+    );
+    .sort((a, b) => {;
+      // First, sort by popular status;
+      const aIsPopular = popularCountries.includes(a.country),;
+      const bIsPopular = popularCountries.includes(b.country),;
+      if (aIsPopular && !bIsPopular) return -1,;
+      if (!aIsPopular && bIsPopular) return 1,;
+      // Then sort alphabetically;
+      return a.country.localeCompare(b.country);
+    }),;
+  const handleCountrySelect = (country: CountryPricing) => {;
+    setSelectedCountry(country);
+    // Scroll to the service details section;
+    setTimeout(() => {;
+      document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+  return (;
+    <AppLayout>;
+      <section className="py-16 bg-zion-blue">;
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Hero Section with Features */}
           <PageHero />
           {/* Country Selection Tabs */}
           <div className="mb-12">
+<<<<<<< HEAD
             <CountryTabs
+=======
+            <CountryTabs 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               popularCountries={popularCountries}
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
@@ -97,4 +199,9 @@ export default function ITOnsiteServicesPage() {
       <QuoteFormSection />
     </AppLayout>
   )
+<<<<<<< HEAD
 }
+=======
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

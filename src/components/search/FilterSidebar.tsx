@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 interface FilterSidebarProps {
   className?: string;
@@ -75,3 +76,22 @@ export function FilterSidebar({
   )}
 '"`
 
+=======
+import React from 'react',;
+interface FilterSidebarProps {;
+  className?: string,;
+  children?: React.ReactNode;
+}
+;
+export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
+  className,;
+  children;
+}) => {;
+  return (;
+    <div className={`filter-sidebar ${className || ''}`}>;
+      {children}
+    </div>;
+  );
+};
+export default FilterSidebar;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

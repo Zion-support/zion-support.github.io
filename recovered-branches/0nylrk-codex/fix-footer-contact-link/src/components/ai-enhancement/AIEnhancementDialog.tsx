@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import { Dialog;
   DialogContent;
@@ -7,6 +8,24 @@ import { Dialog;
 import { AIEnhancementPanel  } from './AIEnhancementPanel';
 import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 interface AIEnhancementDialogProps {
+=======
+import React from 'react',;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogHeader,;
+  DialogTitle} from '@/components/ui/dialog',;
+import { AIEnhancementPanel } from './AIEnhancementPanel',;
+import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
+interface AIEnhancementDialogProps {;
+  title: string,;
+  isOpen: boolean,;
+  onClose: () => void,;
+  onApply: (content: string) => void,;
+  defaultOptions: AIEnhancementOptions,;
+  initialContent?: string;
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   title: string
   isOpen: boolean
@@ -17,18 +36,22 @@ interface AIEnhancementDialogProps {
   initialContent?: string
 }
 export function AIEnhancementDialog({
-  title;
-  isOpen;
-  onClose;
-  onApply;
-  defaultOptions;
+  title,
+  isOpen,
+  onClose,
+  onApply,
+  defaultOptions,
   initialContent
 }: AIEnhancementDialogProps) {
 
   const handleApply = (content: string) => {
     onApply(content)
     onClose()
+<<<<<<< HEAD
   }
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Dialog open={isOpen} onOpenChange={() => onClose()}>

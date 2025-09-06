@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -344,6 +348,7 @@ const serviceCategories = [
         price: '$2,999/month'
       }
       {
+<<<<<<< HEAD
         name: 'Holographic Event Platform'
         href: '/holographic-event-platform'
         description: 'Immersive holographic experiences'
@@ -356,6 +361,23 @@ const serviceCategories = [
       { name: 'Holographic Event Platform', href: '/holographic-event-platform', description: 'Immersive holographic experiences', price: '$2,999/month' }
     ]
   }
+=======
+        name: 'Holographic Event Platform',
+        href: '/holographic-event-platform',
+        description: 'Immersive holographic experiences',
+        price: '$2,999/month',
+      },
+    ],
+  },];      { name: 'Quantum DNA Computing', href: '/quantum-dna-computing-platform', description: 'DNA-based quantum computation', price: '$35,999/month' };
+      { name: 'Space Mining Automation', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/month' };
+      { name: 'Metaverse AI Development', href: '/metaverse-ai-development-platform', description: 'Build immersive virtual worlds', price: '$2,999/month' };
+      { name: 'Holographic Event Platform', href: '/holographic-event-platform', description: 'Immersive holographic experiences', price: '$2,999/month' }
+    ]
+  }
+
+];
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -447,6 +469,10 @@ export default function UltraFuturisticNavigation2034() {
             <div className='flex items-center space-x-2'>
               <Phone className='w-4 h-4 text-cyan-400' />
               <span className='hover:text-cyan-400 transition-colors'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {contactInfo.mobile}
               </span>
             </div>
@@ -518,6 +544,10 @@ export default function UltraFuturisticNavigation2034() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               className='flex items-center space-x-3'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             >
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
@@ -548,6 +578,7 @@ export default function UltraFuturisticNavigation2034() {
               </div>
             </motion.div>
             {/* Desktop Navigation */}
+<<<<<<< HEAD
             <div className='hidden lg:flex items-center space-x-8'>
               {quickLinks.map(link => (
                 <Link
@@ -614,6 +645,14 @@ export default function UltraFuturisticNavigation2034() {
                               key={service.name}
                               href={service.href}
                               className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors"
+=======
+
+                >
+                  {link.name}
+                </Link>
+              ))}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                             >
                               {service.name}
                             </Link>
@@ -666,6 +705,10 @@ export default function UltraFuturisticNavigation2034() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -697,6 +740,7 @@ export default function UltraFuturisticNavigation2034() {
                     {link.name}
                   </Link>
                 ))}
+<<<<<<< HEAD
                 {/* Mobile Services Accordion */}
                 {serviceCategories.map(category => (
                   <div
@@ -723,6 +767,9 @@ export default function UltraFuturisticNavigation2034() {
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                         activeDropdown === category.title ? 'rotate-180' : ''
                       }`} />
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     </button>
                     <AnimatePresence>
                       {activeDropdown === category.title && (
@@ -754,6 +801,10 @@ export default function UltraFuturisticNavigation2034() {
                     </AnimatePresence>
                   </div>
                 ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <Link
                   href='/contact'
                   onClick={() => setIsOpen(false)}
@@ -769,6 +820,7 @@ export default function UltraFuturisticNavigation2034() {
           )}
         </AnimatePresence>
       </nav>
+<<<<<<< HEAD
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
@@ -776,3 +828,10 @@ export default function UltraFuturisticNavigation2034() {
     </>
   );
 }
+=======
+
+      {/* Spacer for fixed navigation */}
+      <div className='h-20'></div>
+    </>
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

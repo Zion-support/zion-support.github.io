@@ -30,7 +30,15 @@ interface Service {
   integration?: string[],
   benefits?: string[]
 }
+<<<<<<< HEAD
 interface ServiceCardProps {
+=======
+
+interface ServiceCardProps {
+  service: Service,
+  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   service: Service
   variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
@@ -140,6 +148,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
       <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm overflow-hidden">
         {/* Enhanced Background Glow */}
         <div className={`absolute inset-0 bg-gradient-to-br ${styles.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Popular Badge */}
         {service.popular && (
           <motion.div
@@ -152,6 +164,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             Popular
           </motion.div>
         )}
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Service Header */}
         <div className="text-center mb-8 relative z-10">
           <div className={`w-24 h-24 mx-auto mb-6 rounded-full ${styles.iconBg} flex items-center justify-center border ${styles.iconBorder} text-4xl backdrop-blur-sm`}>
@@ -192,6 +208,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             </motion.div>
           ))}
         </div>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Enhanced Market Information */}
         {service.marketPrice && (
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
@@ -206,6 +226,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             )}
           </div>
         )}
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Target Market & Use Cases */}
         {service.targetMarket && (
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
@@ -221,6 +245,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             )}
           </div>
         )}
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Benefits Section */}
         {service.benefits && (
           <div className="border-t border-white/10 pt-4 mb-6 relative z-10">
@@ -238,6 +266,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             </div>
           </div>
         )}
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* CTA Button */}
         <div className="relative z-10">
           <motion.button
@@ -248,6 +280,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             Get Started
           </motion.button>
         </div>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Enhanced Hover Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
@@ -257,3 +293,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 
+<<<<<<< HEAD
+=======
+export default UltraFuturisticServiceCard2026;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

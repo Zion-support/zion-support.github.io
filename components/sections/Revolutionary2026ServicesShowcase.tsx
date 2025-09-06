@@ -45,10 +45,19 @@ export default function Revolutionary2026ServicesShowcase() {
       opacity: 1
       y: 0
       transition: {
+<<<<<<< HEAD
         duration: 0.6
       }
     }
   }
+=======
+        duration: 0.6,
+      },
+    },
+
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
       {/* Enhanced Background Effects */}
@@ -60,6 +69,7 @@ export default function Revolutionary2026ServicesShowcase() {
       </div>
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}  }
 
+<<<<<<< HEAD
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Enhanced Background Effects */}
@@ -71,12 +81,22 @@ export default function Revolutionary2026ServicesShowcase() {
       </div>
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Enhanced Header */}
+=======
+      <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}
+
+        {/* Enhanced Header */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className='text-center mb-20'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>
             <Sparkles className='w-5 h-5 text-purple-400' />
@@ -156,11 +176,19 @@ export default function Revolutionary2026ServicesShowcase() {
             </div>
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* AI Autonomous Services Section */}
         <motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           viewport={{ once: true }}
           className='mb-20'
         >
@@ -283,11 +311,19 @@ export default function Revolutionary2026ServicesShowcase() {
               View All AI Autonomous Services <ArrowRight className="w-5 h-5 ml-2" />
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Quantum Space Tech Services Section */}
         <motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           viewport={{ once: true }}
           className='mb-20'
         >
@@ -412,11 +448,19 @@ export default function Revolutionary2026ServicesShowcase() {
               View All Quantum Space Services <ArrowRight className="w-5 h-5 ml-2" />
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Metaverse & Digital Reality Services Section */}
         <motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           viewport={{ once: true }}
           className='mb-20'
         >
@@ -539,6 +583,10 @@ export default function Revolutionary2026ServicesShowcase() {
               View All Metaverse Services <ArrowRight className="w-5 h-5 ml-2" />
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Call to Action Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -546,6 +594,11 @@ export default function Revolutionary2026ServicesShowcase() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className='text-center'
+<<<<<<< HEAD
+=======
+
+        >
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <div className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
             <h3 className='text-4xl font-bold text-white mb-6'>
               Ready to Experience the Future?
@@ -593,5 +646,9 @@ export default function Revolutionary2026ServicesShowcase() {
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

@@ -1,8 +1,8 @@
 import * as React from "react"
 import type { CSSProperties } from "react"
-import {TooltipProvider} from "@/components/ui/tooltip"
-import {useIsMobile} from "@/hooks/use-mobile"
-import {cn} from "@/lib/utils"
+import { TooltipProvider } from "@/components/ui/tooltip"
+import { useIsMobile } from "@/hooks/use-mobile"
+import { cn } from "@/lib/utils"
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
 
 ;
@@ -15,19 +15,27 @@ export function useSidebar(): SidebarContextType {
   if (!context) {
     throw new Error("useSidebar must be used within a SidebarProvider.")
   }
+<<<<<<< HEAD
   return context as SidebarContextType
 }
+=======
+
+  return context as SidebarContextType
+}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   defaultOpen?: boolean
   open?: boolean
   onOpenChange?: (open: boolean) => void
 }
 export const SidebarProvider = React.forwardRef<
-  HTMLDivElement;
+  HTMLDivElement,
   SidebarProviderProps
 >(
   (
     {
+<<<<<<< HEAD
       defaultOpen = true;
       open: openProp
       onOpenChange: setOpenProp
@@ -36,6 +44,16 @@ export const SidebarProvider = React.forwardRef<
       children;
       ...props
     }
+=======
+      defaultOpen = true,
+      open: openProp,
+      onOpenChange: setOpenProp,
+      className,
+      style,
+      children,
+      ...props
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     ref
   ) => {
     const isMobile = useIsMobile()
@@ -52,6 +70,7 @@ export const SidebarProvider = React.forwardRef<
         } else {
           _setOpen(openState)
         }
+<<<<<<< HEAD
         // This sets the cookie to keep the sidebar state.
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`
       }
@@ -74,6 +93,32 @@ export const SidebarProvider = React.forwardRef<
           toggleSidebar()
         }
       }
+=======
+;
+        // This sets the cookie to keep the sidebar state.;
+        document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
+      },;
+      [setOpenProp, open];
+    );
+    // Helper to toggle the sidebar.;
+    const toggleSidebar = React.useCallback(() => {;
+      return isMobile;
+        ? setOpenMobile((open) => !open);
+        : setOpen((open) => !open);
+    }, [isMobile, setOpen, setOpenMobile]);
+    // Adds a keyboard shortcut to toggle the sidebar.;
+    React.useEffect(() => {;
+      const handleKeyDown = (event: KeyboardEvent) => {;
+        if (;
+          event.key === SIDEBAR_KEYBOARD_SHORTCUT &&;
+          (event.metaKey || event.ctrlKey);
+        ) {;
+          event.preventDefault();
+          toggleSidebar();
+        }
+      }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       window.addEventListener("keydown", handleKeyDown)
       return () => window.removeEventListener("keydown", handleKeyDown)
     }, [toggleSidebar])
@@ -82,13 +127,13 @@ export const SidebarProvider = React.forwardRef<
     const state = open ? "expanded" : "collapsed" as SidebarState
     const contextValue = React.useMemo(
       (): SidebarContextType => ({
-        state;
-        open;
-        setOpen;
-        isMobile;
-        openMobile;
-        setOpenMobile;
-        toggleSidebar});
+        state,
+        open,
+        setOpen,
+        isMobile,
+        openMobile,
+        setOpenMobile,
+        toggleSidebar}),
       [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar]
     )
     return (
@@ -97,13 +142,17 @@ export const SidebarProvider = React.forwardRef<
           <div
               style={
               {
-                "--sidebar-width": "16rem";
-                "--sidebar-width-icon": "3rem";
+                "--sidebar-width": "16rem",
+                "--sidebar-width-icon": "3rem",
                 ...style} as CSSProperties
               }
             className={cn(
+<<<<<<< HEAD
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar";
 
+=======
+              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className
             )}
             ref={ref}
@@ -117,4 +166,10 @@ export const SidebarProvider = React.forwardRef<
   }
 )
 SidebarProvider.displayName = "SidebarProvider"
+<<<<<<< HEAD
 export { SidebarContext }
+=======
+
+export { SidebarContext }
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

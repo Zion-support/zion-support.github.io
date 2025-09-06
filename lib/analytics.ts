@@ -23,10 +23,18 @@ export const trackEvent = (
 export const trackPageView = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', GA_TRACKING_ID, {
+<<<<<<< HEAD
       page_path: url
     });
   }
 }
+=======
+      page_path: url,
+    });
+  }
+};
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const measurePerformance = () => {
   if (typeof window !== 'undefined' && 'performance' in window) {
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -129,6 +137,7 @@ declare global {
     dataLayer: any[];
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/main
 =======
@@ -149,3 +158,6 @@ export const trackEvent = ( eventName: 'string',properties?: Record<string,strin
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,5 +1,13 @@
+<<<<<<< HEAD
  trace: on-first-retry'
 }
+=======
+// Playwright.config utility
+export const Playwright.config = () => {
+  // Implementation here
+  return null;
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 reporter: [ ['list'], ['json', {
   outputFile: playwright-logs/test-results.json'
 }], ['html', {
@@ -39,4 +47,7 @@ reporter: [ ['list'], ['json', {
 
   //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   }
   // ]
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

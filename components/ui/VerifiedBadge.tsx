@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function VerifiedBadge({ labels }: { labels: string[] }) {
 
   if (!labels |labels.length === 0) return null;
@@ -30,4 +34,8 @@ export function VerifiedBadge({ labels }: { labels: string[] }) {
       ))}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

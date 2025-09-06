@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 }
 </header> {
@@ -5,6 +6,14 @@
 }</li>) )
 }</ul> </div>)
 
+=======
+ 
+};
+</header> {
+  items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) 
+}</li>) ) 
+}</ul> </div>) 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function InnovationDigest({ items }: Props) {
   return (
     <div className="space-y-6">
@@ -28,5 +37,10 @@ export default function InnovationDigest({ items }: Props) {
         ))}
       </ul>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

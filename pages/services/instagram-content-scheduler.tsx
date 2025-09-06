@@ -18,6 +18,11 @@ const InstagramContentScheduler: NextPage = () => {
       </main>
     </div>
   )
+<<<<<<< HEAD
 }
 export default InstagramContentScheduler;
 
+=======
+},
+export default InstagramContentScheduler,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

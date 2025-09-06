@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GptClassification, MonitoredSource } from './types';
 export async function classifyWithGPT(
   text: string
@@ -72,3 +73,6 @@ export async function analyzeWithGpt(data: any): Promise<GptResult> {
     reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
   }
 }
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

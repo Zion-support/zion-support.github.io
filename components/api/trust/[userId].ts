@@ -166,6 +166,7 @@ export default async function handler(
     }
   }
   res.setHeader('Allow', 'GET, POST');
+<<<<<<< HEAD
   return res.status(405).json({ error: 'Method not allowed' });      } catch {}
       return res.status(200).json(breakdown)
     } catch (e: any) {
@@ -176,3 +177,6 @@ export default async function handler(
 
   return res.status(405).json({ error: 'Method not allowed' })
 }
+=======
+  return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

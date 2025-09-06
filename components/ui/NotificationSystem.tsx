@@ -1,4 +1,8 @@
 import React from "react";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export interface Notification {
   id: string;
   type: "success" | "error" | "warning" | "info";
@@ -17,6 +21,7 @@ interface NotificationSystemProps {
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
   const typeStyles = {
+<<<<<<< HEAD
     success: "bg-green-50 border-green-400 text-green-800"
     error: "bg-red-50 border-red-400 text-red-800"
     warning: "bg-yellow-50 border-yellow-400 text-yellow-800"
@@ -58,6 +63,19 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
       setToasts((prev) => prev.filter((t) => t.id !== id))
     }, 3000)
   }, [])
+=======
+    success: "bg-green-50 border-green-400 text-green-800",
+    error: "bg-red-50 border-red-400 text-red-800",
+    warning: "bg-yellow-50 border-yellow-400 text-yellow-800",
+    info: "bg-blue-50 border-blue-400 text-blue-800",
+  };
+  return `${baseStyles} ${typeStyles[type]}`;
+};
+
+export default function NotificationSystem({
+  notifications,
+  onDismiss,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }: NotificationSystemProps) {
   if (notifications.length === 0) return null;
 
@@ -88,4 +106,8 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
       ))}
     </div>;
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,12 +1,25 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react'
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface Props {
   children: ReactNode
 }
 interface State {
+<<<<<<< HEAD
   hasError: boolean
   error?: Error
   errorInfo?: ErrorInfo
 }
+=======
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props)
@@ -62,9 +75,18 @@ class ErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
+<<<<<<< HEAD
       )
+=======
+      );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
     return this.props.children
   }
 }
+<<<<<<< HEAD
 export default ErrorBoundary
+=======
+
+export default ErrorBoundary;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

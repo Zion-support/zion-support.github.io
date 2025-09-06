@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.
 
@@ -14,6 +15,24 @@ interface BeforeInstallPromptEvent extends Event {
     platform: string
   }>
   prompt(): Promise<void>
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react',;
+import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.;
+import { Button } from '@/components/ui/button',;
+import { safeSessionStorage } from '@/utils/safeStorage',;
+const SHOWN_KEY = 'pwaInstallShown',;
+const DISMISS_KEY = 'pwaInstallDismissUntil',;
+const DISMISS_MS = 24 * 60 * 60 * 1000, // 24 hours;
+// Define BeforeInstallPromptEvent interface;
+interface BeforeInstallPromptEvent extends Event {;
+  readonly platforms: string[],;
+  readonly userChoice: Promise<{;
+    outcome: 'accepted' | 'dismissed',;
+    platform: string;
+  }>,;
+  prompt(): Promise<void>;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
 // Augment the WindowEventMap to include 'beforeinstallprompt'
 declare global {
@@ -106,6 +125,14 @@ export const InstallPrompt: React.FC = () => {
       </div>
     </>
   )
+<<<<<<< HEAD
 }
 export default InstallPrompt;
 
+=======
+},
+
+export default InstallPrompt,
+=======
+>>>>>>> main
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

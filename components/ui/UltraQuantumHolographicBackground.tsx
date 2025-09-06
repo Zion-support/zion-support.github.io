@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 useEffect ( () => {
   const updateDimensions = () => {
   setDimensions ({
@@ -200,10 +203,19 @@ export default function UltraQuantumHolographicBackground({
           this.vy += 0.1;
           if (this.y > dimensions.height) {
             this.y = -10;
+<<<<<<< HEAD
             this.vy = Math.random() * 2 + 1;          }            this.vy = Math.random() * 2 + 1
+=======
+            this.vy = Math.random() * 2 + 1;          }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           }
         }
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       draw() {
         if (this.life <= 0) return;
         const alpha = this.life / this.maxLife;
@@ -337,10 +349,19 @@ export default function UltraQuantumHolographicBackground({
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
+<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
+=======
+            ctx.stroke();          }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           }
         }
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Draw holographic grid
       ctx.strokeStyle = colors.secondary;
       ctx.lineWidth = 0.3;
@@ -400,6 +421,30 @@ export default function UltraQuantumHolographicBackground({
       />
       {/* Holographic Overlay Effects */}
       <div className='fixed inset-0 z-10 pointer-events-none'>
+<<<<<<< HEAD
+=======
+
+        }}
+      />
+
+      {/* Holographic Overlay Effects */}
+
+          }}
+        />
+
+        {/* Holographic Scan Lines */}
+
+          }}
+
+        />
+      </div>
+
+      {/* Content Layer */}
+      <div className='relative z-20'>{children}</div>
+
+      {/* Quantum Noise Effect */}
+      <div className='fixed inset-0 z-30 pointer-events-none opacity-5'>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <motion.div
           className='absolute inset-0'
           animate={{
@@ -519,13 +564,22 @@ export default function UltraQuantumHolographicBackground({
             ]
           }}
           transition={{
+<<<<<<< HEAD
             duration: 4
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
+=======
+            duration: 4,
+            repeat: Infinity,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
           }}
         />
       </div>
+<<<<<<< HEAD
     </div>
 );  )
 }
+=======
+    </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

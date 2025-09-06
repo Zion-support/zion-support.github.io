@@ -104,6 +104,7 @@ export default async function handler(
       topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
       referralConversions: 2
 
+<<<<<<< HEAD
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
 res.status(200).json({
@@ -151,3 +152,6 @@ res.status(200).json({
       ]
     });
   }}
+=======
+    const geoCounts: Record<string, number> = {};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import { ScrollArea  } from '@/components/ui/scroll-area';
 import Skeleton from '@/components/ui/skeleton';
@@ -8,6 +9,24 @@ import { Notification  } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Bell } from 'lucide-react'
 interface NotificationListProps {
+=======
+import React from 'react',;
+import { ScrollArea } from '@/components/ui/scroll-area',;
+import Skeleton from '@/components/ui/skeleton',;
+import { Button } from '@/components/ui/button',;
+import { NotificationItem } from './NotificationItem',;
+import { Notification } from '@/context/notifications',;
+import { EmptyState } from '@/components/ui/empty-state',;
+import { Bell } from 'lucide-react';
+interface NotificationListProps {;
+  loading: boolean,;
+  error: string | null,;
+  notifications: Notification[],;
+  onMarkAsRead: (id: string) => Promise<void>,;
+  onDismiss: (id: string) => Promise<void>,;
+  onRetry: () => void;
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   loading: boolean
   error: string | null
@@ -18,14 +37,22 @@ interface NotificationListProps {
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
+<<<<<<< HEAD
 
   loading
   error
   notifications
   onMarkAsRead
   onDismiss
+=======
+  loading,
+  error,
+  notifications,
+  onMarkAsRead,
+  onDismiss,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onRetry
-},) => {
+}) => {
   return (
     <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">
       {error ? (
@@ -35,7 +62,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
             variant="outline"
             size="sm"
             className="mt-2"
-            onClick = {onRetry,}
+            onClick={onRetry}
           >
             Try Again
           </Button>
@@ -49,7 +76,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
       ) : notifications.length === 0 ? (
         <div className="p-8">
           <EmptyState
-            icon = {<Bell className="h-8 w-8" />,}
+            icon={<Bell className="h-8 w-8" />}
             title="No Notifications"
             description="You're all caught up."
             action={{ text: 'Refresh', onClick: onRetry }}
@@ -57,8 +84,9 @@ export const NotificationList: React.FC<NotificationListProps> = ({
           />
         </div>
       ) : (
-        notifications.map((notification,) => (
+        notifications.map((notification) => (
           <NotificationItem
+<<<<<<< HEAD
             key = {notification.id,}
             notification = {notification,}
             onMarkAsRead = {onMarkAsRead,}
@@ -71,3 +99,15 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 }
 "
 
+=======
+            key={notification.id}
+            notification={notification}
+            onMarkAsRead={onMarkAsRead}
+            onDismiss={onDismiss}
+          />;
+        ));
+      )}
+    </ScrollArea>;
+  );
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

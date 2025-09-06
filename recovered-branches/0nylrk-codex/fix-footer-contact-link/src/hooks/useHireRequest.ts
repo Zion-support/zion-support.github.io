@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
@@ -25,6 +26,28 @@ export interface HireRequestData {
 
     budgetMin: number
 
+=======
+import { useState } from 'react',
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+import { TalentProfile } from "@/types/talent",
+export interface HireRequestData {
+  talent: {
+    id: string,
+    full_name: string,
+    professional_title: string,
+    email?: string
+  },
+  requester: {
+    name: string,
+    email: string,
+    id?: string
+  },
+  project: {
+    overview: string,
+    timeline: string,
+    budgetMin: number,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     budgetMax: number
   }
 }
@@ -39,10 +62,16 @@ export function useHireRequest() {
       // Call the edge function to process the hire request
       const { data: response, error } = await supabase.functions.invoke('process-hire-request', {
         body: requestData
+<<<<<<< HEAD
       });
+=======
+      }),
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (error) throw error;
       // Show success message
       toast({
+<<<<<<< HEAD
         title: "Request Submitted"
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
       return { success: true, requestId: response?.request_id }
@@ -51,8 +80,22 @@ export function useHireRequest() {
       const errorMessage = error instanceof Error
         ? error.message
         : "There was a problem submitting your request. Please try again.";
+=======
+        title: "Request Submitted",
+        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`}),
+      
+      return { success: true, requestId: response?.request_id }
+    } catch (error) {
+      console.error("Error submitting hire request:", error),
+      
+      const errorMessage = error instanceof Error 
+        ? error.message 
+        : "There was a problem submitting your request. Please try again.",
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       setError(errorMessage);
       toast({
+<<<<<<< HEAD
         title: "Error";
         description: errorMessage
         variant: "destructive"});
@@ -68,3 +111,72 @@ export function useHireRequest() {
     error
   }
 }
+=======
+        title: "Error",
+        description: errorMessage,
+        variant: "destructive"}),
+      
+import { useState } from 'react',;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+import { TalentProfile } from "@/types/talent",;
+export interface HireRequestData {;
+  talent: {;
+    id: string,;
+    full_name: string,;
+    professional_title: string,;
+    email?: string;
+  },;
+  requester: {;
+    name: string,;
+    email: string,;
+    id?: string;
+  },;
+  project: {;
+    overview: string,;
+    timeline: string,;
+    budgetMin: number,;
+    budgetMax: number;
+  }
+}
+;
+export function useHireRequest() {;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  const submitHireRequest = async (requestData: HireRequestData) => {;
+    setIsSubmitting(true),;
+    setError(null),;
+    try {;
+      // Call the edge function to process the hire request;
+      const { data: response, error } = await supabase.functions.invoke('process-hire-request', {;
+        body: requestData;
+      }),;
+      if (error) throw error,;
+      // Show success message;
+      toast({;
+        title: "Request Submitted",;
+        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`}),;
+      return { success: true, requestId: response?.request_id }
+    } catch (error) {;
+      console.error("Error submitting hire request:", error),;
+      const errorMessage = error instanceof Error;
+        ? error.message;
+        : "There was a problem submitting your request. Please try again.",;
+      setError(errorMessage),;
+      toast({;
+        title: "Error",;
+        description: errorMessage,;
+        variant: "destructive"}),;
+      return { success: false, error: errorMessage }
+    } finally {;
+      setIsSubmitting(false);
+    }
+  },;
+  return {;
+    submitHireRequest;
+    isSubmitting;
+    error;
+  }
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

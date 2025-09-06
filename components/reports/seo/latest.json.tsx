@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 export default function Placeholder() {
   return (
     <main className='min-h-screen p-8'>
@@ -22,6 +23,11 @@ export default function Placeholder() {
     </main>
   );export default function Placeholder() {
   return (
+=======
+
+export default function Placeholder() {
+  return (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <main className="min-h-screen p-8">
       <Head>
         <title>Reports • Seo • Latest.json - Placeholder</title>
@@ -30,8 +36,18 @@ export default function Placeholder() {
       <div className="max-w-3xl mx-auto">
         <h1 className="text-2xl font-semibold mb-2">Reports • Seo • Latest.json</h1>
         <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/reports/seo/latest.json</code>.</p>
-        <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></Link>
+        <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></a>
       </div>
     </main>
+<<<<<<< HEAD
   );
 }
+=======
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

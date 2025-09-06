@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -12,6 +13,11 @@
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
 import Layout from '../components/Layout';
+=======
+import React from 'react';
+import Layout from '../components/Layout';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Training() {
   return (
     <Layout
@@ -30,6 +36,7 @@ export default function Training() {
             <p className="text-gray-600">Training page is under construction.</p>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       </div>
@@ -824,6 +831,8 @@ export default function TrainingPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       </div>
     </Layout>
   ),
@@ -845,6 +854,7 @@ export default function TrainingPage() {
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   )
+<<<<<<< HEAD
 }
 export default Training;
 };export default Training;
@@ -937,3 +947,12 @@ export default Training;
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+}  )
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+};
+
+export default Training;
+};export default Training;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

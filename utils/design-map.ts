@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type UIKitKind = 'ios' | 'android' | 'web';
 export interface TokenSet {
   colors: Record<string, string>;
@@ -45,4 +46,7 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
     }
     tokens
   }
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

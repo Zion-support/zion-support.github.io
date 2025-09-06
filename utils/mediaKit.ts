@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type MediaBundle = 'general' | 'web3' | 'institutional';
 export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale';
 export interface MediaGenerationResponse {
@@ -85,3 +86,5 @@ function titleCase(s: string) {
     /\w\S*/g
     w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
   );}
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

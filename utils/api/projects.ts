@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -79,3 +80,6 @@ export function deleteMilestone(project: Project, milestoneId: string): boolean 
   project.updatedAt = new Date().toISOString();
   return true;
 }
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

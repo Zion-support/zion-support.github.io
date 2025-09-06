@@ -21,6 +21,7 @@ export default async function handler(
     return res.status(400).json({ error: 'Missing or invalid fields' });
   }
 
+<<<<<<< HEAD
   const review: TrustPeerReview = {
     userId
     reviewerId
@@ -44,3 +45,7 @@ export default async function handler(
   } catch {}
 return res.status(200).json({ ok: true, review });
 }
+=======
+  const { userId, reviewerId, type, note } = req.body || {};
+  if (!userId || !reviewerId || (type !== 'endorse' && type !== 'flag')) {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

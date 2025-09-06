@@ -76,6 +76,7 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
           {expanded ? 'Hide' : 'Details'}
         </button>
       </div>
+<<<<<<< HEAD
       <div className='mt-3'>
         <div className='flex items-center gap-2'>
           {statusSteps.map((step, idx) => (
@@ -91,10 +92,14 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
               <div
                 className={
                   'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 }
                 title={step}
               />
               {idx < statusSteps.length - 1 && (
+<<<<<<< HEAD
                 <div
                   className={
                     'h-0.5 w-8 ' +
@@ -104,6 +109,9 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
             </div>
           ))}
         </div>                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               )}
             </div>
           ))}
@@ -123,6 +131,7 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
           <div>Amount: ${milestone.amountUsd.toFixed(2)}</div>
           {milestone.attachments && milestone.attachments.length > 0 && (
             <div>
+<<<<<<< HEAD
               <div className='font-medium'>Attachments</div>
               <ul className='list-disc ml-5'>
                 {milestone.attachments.map(a => (
@@ -137,6 +146,11 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
                 {milestone.attachments.map((a) => (
                   <li key={a.id}>
                     <a className="text-blue-600 underline" href={a.url} target="_blank" rel="noreferrer">
+=======
+
+                      {a.label || a.url}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     </a>
                   </li>
                 ))}
@@ -145,6 +159,7 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
           )}
         </div>
       )}
+<<<<<<< HEAD
       <div className='mt-4 flex flex-wrap gap-2'>
         {canClientMarkInProgress && (
           <button
@@ -152,35 +167,70 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
         {canClientMarkInProgress && (
           <button
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
+=======
+
+      <div className='mt-4 flex flex-wrap gap-2'>
+        {canClientMarkInProgress && (
+          <button
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}
+
+            onClick={() => onAction('in_progress', milestone.id)}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             Mark In Progress
           </button>
         )}
         {canTalentSubmit && (
           <button
+<<<<<<< HEAD
             className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700'            onClick={() => onAction('submitted', milestone.id)}            className="px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700"
             onClick={() => onAction('submitted', milestone.id)}
+=======
+            className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700'            onClick={() => onAction('submitted', milestone.id)}
+
+            onClick={() => onAction('submitted', milestone.id)}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             Submit Work
           </button>
         )}
         {canClientApprove && (
           <button
+<<<<<<< HEAD
             className='px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700'            onClick={() => onAction('approved', milestone.id)}            className="px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700"
             onClick={() => onAction('approved', milestone.id)}
+=======
+            className='px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700'            onClick={() => onAction('approved', milestone.id)}
+
+            onClick={() => onAction('approved', milestone.id)}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             Approve
           </button>
         )}
         {canClientMarkPaid && (
           <button
+<<<<<<< HEAD
             className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'            onClick={() => onAction('paid', milestone.id)}            className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
             onClick={() => onAction('paid', milestone.id)}
+=======
+            className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'            onClick={() => onAction('paid', milestone.id)}
+
+            onClick={() => onAction('paid', milestone.id)}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             Mark as Paid
           </button>
         )}
       </div>
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

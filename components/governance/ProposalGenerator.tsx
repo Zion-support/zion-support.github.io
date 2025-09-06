@@ -71,6 +71,7 @@ export default function ProposalGenerator() {
       console.error(e);
       setStatusMessage('Failed to generate. You can edit manually and export.');
     } finally {
+<<<<<<< HEAD
       setIsGenerating(false);    }      const data = await res.json();
       setDraftMarkdown(data.markdown |'');
       setDraftJson(data.json |null);
@@ -80,8 +81,16 @@ export default function ProposalGenerator() {
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
       setIsGenerating(false)
+=======
+      setIsGenerating(false);    }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   async function handleExport() {
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
@@ -103,6 +112,7 @@ export default function ProposalGenerator() {
       setStatusMessage('Exported. Files saved.');
     } catch (e) {
       console.error(e);
+<<<<<<< HEAD
       setStatusMessage('Export failed');    }      const data = await res.json();
       setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl })
       setStatusMessage('Exported. Files saved.')
@@ -111,6 +121,14 @@ export default function ProposalGenerator() {
       setStatusMessage('Export failed')
     }
   }
+=======
+      setStatusMessage('Export failed');    }
+
+    }
+
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
@@ -146,6 +164,7 @@ export default function ProposalGenerator() {
     <div className='space-y-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         <div className='space-y-4'>
+<<<<<<< HEAD
           <div>
             <label className='block text-sm font-medium'>
               Target institution
@@ -179,6 +198,14 @@ export default function ProposalGenerator() {
               className="w-full border rounded px-3 py-2"
               value={form.type}
               onChange={(e) => handleChange('type', e.target.value as ProposalType)}
+=======
+
+    }
+  }
+
+  return (
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             >
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
@@ -242,6 +269,7 @@ export default function ProposalGenerator() {
           </div>
           <div className='flex gap-2'>
             <button
+<<<<<<< HEAD
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
               className="w-full border rounded px-3 py-2"
               value={form.regionalScope}
@@ -289,6 +317,10 @@ export default function ProposalGenerator() {
           <div className="flex gap-2">
             <button
               className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
+=======
+              className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               onClick={handleGenerate}
               disabled={isGenerating}
             >
@@ -359,6 +391,10 @@ export default function ProposalGenerator() {
                     JSON
                   </a>                </div>                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               )}
             </div>
           )}
@@ -376,5 +412,9 @@ export default function ProposalGenerator() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

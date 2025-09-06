@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useEffect, useState } from "react";
 import { connectMetaMask, getAccounts } from "../../utils/wallet";
 export type RedemptionType =
@@ -49,6 +52,10 @@ export default function UseTokensModal({
       setIsSubmitting(false);
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!isOpen) return null;
 
   return (
@@ -121,4 +128,8 @@ export default function UseTokensModal({
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

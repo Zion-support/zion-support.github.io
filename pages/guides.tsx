@@ -328,7 +328,16 @@ const categories = [
   { name: "Database", count: 1, icon: Database }
   { name: "Performance", count: 1, icon: Zap }
 ];
+<<<<<<< HEAD
 export default function GuidesPage() {
+=======
+
+interface GuidesProps {
+  className?: string;
+}
+
+const Guides: React.FC<GuidesProps> = ({ className }) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Layout>
       <Head>

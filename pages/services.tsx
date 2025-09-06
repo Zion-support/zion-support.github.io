@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -16,6 +17,8 @@
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from 'react';
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -2049,6 +2052,7 @@ export default function Services() {
         border: 'border-purple-500/40'
         ring: 'focus:ring-purple-500'
       },      green: {
+<<<<<<< HEAD
         bg: 'bg-green-600'
         hover: 'hover:bg-green-700'
         text: 'text-green-400'
@@ -2058,6 +2062,17 @@ export default function Services() {
     }
     return colors[color as keyof typeof colors] |colors.blue;  }
 >>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
+=======
+        bg: 'bg-green-600',
+        hover: 'hover:bg-green-700',
+        text: 'text-green-400',
+        border: 'border-green-500/40',
+        ring: 'focus:ring-green-500',
+      },
+    };
+    return colors[color as keyof typeof colors] || colors.blue;  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -2337,6 +2352,7 @@ export default function Services() {
     </>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -2347,3 +2363,13 @@ export default function Services() {
   )
 >>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
 }
+=======
+            </div>
+          </section>
+        </main>
+      </ErrorBoundary>
+    </>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+  )
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

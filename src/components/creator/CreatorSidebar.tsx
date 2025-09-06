@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {
 
   Bell
@@ -86,3 +87,6 @@ export function AppSidebar() {
     </Sidebar>
   )
 }
+=======
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

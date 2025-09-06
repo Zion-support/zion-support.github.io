@@ -44,8 +44,16 @@ export default function FeedbackModal({
           context: defaultContext |{}
         })
       });
+<<<<<<< HEAD
     setLoading(false);
     onClose(true);
+=======
+
+    } catch {}
+    setLoading(false);
+    onClose(true);
+  }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   }
   return (
@@ -58,6 +66,12 @@ export default function FeedbackModal({
         <div className="text-lg font-medium">Was this helpful?</div>
         <div className="flex gap-2">
           {[1,2,3,4,5].map(n => (
+<<<<<<< HEAD
+=======
+
+            <button
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
@@ -148,5 +162,9 @@ export default function FeedbackModal({
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

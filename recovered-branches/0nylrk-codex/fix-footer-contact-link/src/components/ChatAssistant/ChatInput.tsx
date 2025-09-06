@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, {
   useState
@@ -35,6 +36,45 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
       }
     }
   }
+=======
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
+import { Button } from "@/components/ui/button",
+import { Send } from "lucide-react",
+interface ChatInputProps {
+  onSend: (message: string) => void,
+  disabled?: boolean
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Send } from "lucide-react",;
+interface ChatInputProps {;
+  onSend: (message: string) => void,;
+  disabled?: boolean;
+}
+;
+export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
+  const [message, setMessage] = useState(''),;
+  const inputRef = useRef<HTMLTextAreaElement>(null),;
+  useEffect(() => {;
+    // Focus input when component mounts;
+    inputRef.current?.focus();
+  }, []),;
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
+    e.preventDefault(),;
+    if (message.trim() && !disabled) {;
+      onSend(message),;
+      setMessage('');
+    }
+  },;
+  const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {;
+    if (e.key === 'Enter' && !e.shiftKey) {;
+      e.preventDefault(),;
+      if (message.trim() && !disabled) {;
+        onSend(message);
+        setMessage('');
+      }
+    }
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
@@ -48,13 +88,18 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         rows={1}
         disabled={disabled}
       />
-      <Button
-        type="submit"
+      <Button 
+        type="submit" 
         className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
         disabled={!message.trim() |disabled}
       >
         <Send className="h-5 w-5" />
       </Button>
     </form>
+<<<<<<< HEAD
   );
 }
+=======
+  )
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

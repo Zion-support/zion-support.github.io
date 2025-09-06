@@ -6,6 +6,7 @@ import { Save } from 'lucide-react'
 import { TalentProfile } from "@/types/talent",
 import { ContractForm, ContractFormValues } from "./components/ContractForm",
 import { ContractPreview } from "./components/ContractPreview",
+<<<<<<< HEAD
 import { TemplateManager } from "./templates/TemplateManager";
 import { SmartContractBuilder } from "./SmartContractBuilder";
 interface ContractBuilderProps {
@@ -40,6 +41,12 @@ export function ContractBuilder({
       />
     )
   }
+=======
+import { TemplateManager } from "./templates/TemplateManager",
+import { SmartContractBuilder } from "./SmartContractBuilder",
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
@@ -52,25 +59,34 @@ export function ContractBuilder({
               <TabsTrigger value="form">Contract Details</TabsTrigger>
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <div className="flex gap-2">
               <Button
                 variant="outline"
                 size="sm"
-                onClick = {(,) => setTemplateManagerOpen(true),}
+                onClick={() => setTemplateManagerOpen(true)}
                 className="flex gap-1"
               >
                 <Save className="h-4 w-4" />
                 Templates
               </Button>
+<<<<<<< HEAD
+=======
+              
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               <Button
                 variant="secondary"
                 size="sm"
-                onClick = {() => setShowSmartContractBuilder(true),}
+                onClick={() => setShowSmartContractBuilder(true)}
               >
                 Smart Contract Builder
               </Button>
             </div>
           </div>
+<<<<<<< HEAD
           <TabsContent value="form" className="pt-4">
             <ContractForm
               talent = {talent,}
@@ -123,3 +139,38 @@ export function ContractBuilder({
   formValues
 }/> </DialogContent> </Dialog>)
 }"}
+=======
+          
+          <TabsContent value="form" className="pt-4">
+            <ContractForm 
+              talent={talent}
+              clientName={clientName}
+              initialValues={formValues}
+              onFormValuesChange={setFormValues}
+              onContractGenerated={handleContractGenerated}
+            />
+          </TabsContent>
+          
+          <TabsContent value="preview" className="pt-4">
+            {generatedContract && (
+              <ContractPreview 
+                contractContent={generatedContract}
+                talent={talent}
+                onClose={onClose}
+                status="ready"
+              />
+            )}
+          </TabsContent>;
+        </Tabs>;
+        <TemplateManager;
+          isOpen={templateManagerOpen}
+          onClose={() => setTemplateManagerOpen(false)}
+          onSelectTemplate={handleLoadTemplate}
+          currentValues={formValues}
+        />;
+      </DialogContent>;
+    </Dialog>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

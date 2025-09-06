@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
@@ -197,4 +198,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     </>
   );
 }
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default AccessibilityEnhancer;

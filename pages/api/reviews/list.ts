@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readReviews, readProjects } from "../../../utils/dataStore";
@@ -9,9 +10,20 @@ export default async function handler(
 ) {
   if (req.method !== "GET") {
     return res.status(405).json({ error: "Method not allowed" });
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readReviews, readProjects } from '../../../utils/dataStore';
+import type { PublicReview, ReviewsSummary } from '../../../types/reviews';
+import { TALENT_PROFILES } from '../../../data/talent';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' })
+  }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   }
   try {
+<<<<<<< HEAD
 
     const { targetType, targetId } = req.query as {
       targetType?: string;
@@ -20,17 +32,27 @@ export default async function handler(
     if (!targetType |!targetId) {
 
       return res.status(400).json({ error: "Missing targetType or targetId" });
+=======
+    const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
+    if (!targetType || !targetId) {
+      return res.status(400).json({ error: 'Missing targetType or targetId' })
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
-    if (targetType !== "talent" && targetType !== "client") {
-      return res.status(400).json({ error: "Invalid targetType" });
+    if (targetType !== 'talent' && targetType !== 'client') {
+      return res.status(400).json({ error: 'Invalid targetType' })
     }
 
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
     const filtered = all.filter((r) => {
+<<<<<<< HEAD
       if (r.removed |!r.approved) return false;
       const matchesTarget =
         r.toRole === (targetType as "talent" | "client") && r.toId === targetId;
+=======
+      if (r.removed || !r.approved) return false;
+      const matchesTarget = r.toRole === (targetType as 'talent' | 'client') && r.toId === targetId;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (!matchesTarget) return false;
       const counterpartExists = all.some(
         (x) =>
@@ -40,22 +62,27 @@ export default async function handler(
           x.approved &&
           !x.removed
       );
-      return counterpartExists;
+      return counterpartExists
     });
     // Map to public reviews (mask anonymous author)
     const publicReviews: PublicReview[] = filtered
+<<<<<<< HEAD
       .sort(
         (a, b) =>
           new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
       )
+=======
+      .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       .map((r) => {
         let authorName = r.fromId;
-        if (r.fromRole === "talent") {
+        if (r.fromRole === 'talent') {
           const t = TALENT_PROFILES.find((tp) => tp.slug === r.fromId);
-          authorName = t ? t.name : r.fromId;
+          authorName = t ? t.name : r.fromId
         }
-        if (r.anonymous) authorName = "Anonymous";
+        if (r.anonymous) authorName = 'Anonymous';
         return {
+<<<<<<< HEAD
           ...r
           authorName
         }
@@ -86,5 +113,28 @@ export default async function handler(
     return res
       .status(500)
       .json({ error: "Internal server error", details: error?.message });
+=======
+          ...r,
+          authorName}
+      });
+    const totalReviews = publicReviews.length;
+    const averageRating = totalReviews
+      ? Math.round((publicReviews.reduce((sum, r) => sum + r.rating, 0) / totalReviews) * 10) / 10
+      : 0;
+    const projects = await readProjects();
+    const totalCompletedProjects = projects.filter((p) => p.status === 'Completed' && (
+      (targetType === 'talent' && p.talentSlug === targetId) ||
+      (targetType === 'client' && p.clientId === targetId)
+    )).length;
+    const summary: ReviewsSummary = {
+      averageRating,
+    totalReviews,
+      totalCompletedProjects,
+      mostRecent: publicReviews.slice(0, 5)
+    };
+    return res.status(200).json({ summary, reviews: publicReviews })
+  } catch (error: any) {
+    return res.status(500).json({ error: 'Internal server error', details: error?.message })
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }

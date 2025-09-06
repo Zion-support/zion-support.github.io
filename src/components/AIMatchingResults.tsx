@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import { MatchResultItem } from '@/lib/ai-matchmaking'
 import { Card, CardContent } from '@/components/ui/card'
@@ -7,6 +8,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
 import Skeleton from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
+=======
+import { useState } from "react",
+import { MatchResultItem } from "@/lib/ai-matchmaking",
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
+import Skeleton from "@/components/ui/skeleton",
+import { cn } from "@/lib/utils",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface AIMatchingResultsProps {
 
   matches: MatchResultItem[]
@@ -21,6 +33,7 @@ interface AIMatchingResultsProps {
 
   serviceType?: string
 }
+<<<<<<< HEAD
 export function AIMatchingResults({
 
   matches
@@ -169,10 +182,14 @@ export function AIMatchingResults({
                                       .includes('talent')
                                       ? '/hour'
                                       : ''}
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                                   </div>
                                 </div>
                               )}
                             </div>
+<<<<<<< HEAD
                             <div className='mt-2 flex flex-wrap gap-1'>
                               <Badge variant='outline'>{match.category}</Badge>
                               {match.skills &&
@@ -194,10 +211,41 @@ export function AIMatchingResults({
               <div className='text-center py-8 text-zion-slate-light'>
                 No {tab} matches found.
               </div>
+=======
+                            
+                            <div className="mt-2 flex flex-wrap gap-1">
+                              <Badge variant="outline">
+                                {match.category}
+                              </Badge>
+                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
+                                <Badge key={i} variant="outline">
+                                  {skill}
+                                </Badge>;
+                              ))}
+                            </div>;
+                          </div>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </Card>;
+                );
+              });
+            ) : (;
+              <div className="text-center py-8 text-zion-slate-light">;
+                No {tab} matches found.;
+              </div>;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             )}
           </TabsContent>
         ))}
+<<<<<<< HEAD
       </Tabs>
     </div>
   )
 }
+=======
+      </Tabs>;
+    </div>;
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

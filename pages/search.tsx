@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 =======
 <<<<<<< HEAD
@@ -6,6 +7,8 @@ import React, { useState, useEffect } from 'react',
 =======
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useState } from 'react';
 =======
 import React, { useState, useEffect } from 'react',
@@ -191,6 +194,10 @@ export default function SearchPage() {
     const matchesFilter = selectedFilter === 'All' |result.type === selectedFilter;
     return matchesQuery && matchesCategory && matchesFilter;
   });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Layout>
       <Head>
@@ -229,6 +236,10 @@ export default function SearchPage() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Filters Section */}
         <section className="py-8 bg-white border-b">
           <div className="container mx-auto px-4">
@@ -355,6 +366,7 @@ export default function SearchPage() {
 <<<<<<< HEAD
                       </Link>
 =======
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                       </Link>
 <<<<<<< HEAD
@@ -529,6 +541,10 @@ export default function SearchPage() {
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                     </div>
+=======
+                      </Link>                    </div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </motion.div>
                 ))}
               </div>
@@ -623,6 +639,7 @@ export default function SearchPage() {
 }
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
@@ -696,3 +713,5 @@ export default function SearchPage() {
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

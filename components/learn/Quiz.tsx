@@ -41,6 +41,11 @@ export default function Quiz({ questions, onComplete }: Props) {
                   type='radio'                  name={q.id}
   function submit() {
     setSubmitted(true);
+<<<<<<< HEAD
+=======
+    onComplete(score)
+  }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
     onComplete(score)
   }
@@ -91,5 +96,10 @@ export default function Quiz({ questions, onComplete }: Props) {
   );      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
       {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

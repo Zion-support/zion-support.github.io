@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {
   FormField
   FormItem
@@ -9,6 +10,17 @@ import {
 import { Input } from "@/components/ui/input";
 
 import { UseFormReturn } from "react-hook-form";
+=======
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { UseFormReturn } from "react-hook-form",
+import { FormValues } from "./useHireRequestForm",
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { UseFormReturn } from "react-hook-form",;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;

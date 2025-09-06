@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {
   Card
@@ -24,6 +25,30 @@ export function HelpArticleList({
   if (!category) {
     return <div>Category not found</div>;
   }
+=======
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { HELP_CATEGORIES } from "./help-content",
+interface HelpArticleListProps {
+  categoryId: string,
+  onArticleSelect: (articleId: string) => void,
+  searchQuery: string
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { HELP_CATEGORIES } from "./help-content",;
+interface HelpArticleListProps {;
+  categoryId: string,;
+  onArticleSelect: (articleId: string) => void,;
+  searchQuery: string;
+}
+;
+export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
+  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
+  if (!category) {;
+    return <div>Category not found</div>;
+  }
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Filter articles based on search query
   const filteredArticles = searchQuery
     ? category.articles.filter(
@@ -31,7 +56,12 @@ export function HelpArticleList({
           article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
           article.content.toLowerCase().includes(searchQuery.toLowerCase())
       )
+<<<<<<< HEAD
     : category.articles;
+=======
+    : category.articles,
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div>
       <div className="mb-6">
@@ -71,11 +101,28 @@ export function HelpArticleList({
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric"
     month: "long"
     day: "numeric"
+<<<<<<< HEAD
   });
 }
 
+=======
+  })
+;
+function formatDate(date: string): string {;
+  return new Date(date).toLocaleDateString("en-US", {;
+    year: "numeric";
+    month: "long";
+    day: "numeric";
+  });
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
+=======
+import type { NextPage } from 'next'
+import Head from 'next/head'
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const Page: NextPage = () => {
   return (
+import type {_NextPage} from 'next';
+import Head from 'next/head';
+const Page: NextPage = () => {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <>
       <Head>
         <title>Auto Update 2025-08-24T00-54-20-891Z</title>
@@ -14,6 +23,12 @@ const Page: NextPage = () => {
       </div>
     </>
   )
+<<<<<<< HEAD
 }
 export default Page;
 
+=======
+},
+>>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231;
+export default Page
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

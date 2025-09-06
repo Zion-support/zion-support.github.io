@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Mock source map utility
 export function getSourceMapWithExistence() {
   return {
@@ -45,3 +46,6 @@ export function deployBasicTemplateForPath(
     skippedPaths.push(readmeFile);
   }
   return { createdPaths, skippedPaths }
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

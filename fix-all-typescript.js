@@ -67,8 +67,11 @@ function fixTypeScriptFiles(dir) {if (!fs.existsSync(dir)) return;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')};
       } catch (error) {;        console.log(`Error processing ${fullPath}: ${error.message}`)};
         // console.log(`Error processing ${fullPath}: ${error.message}`)};
@@ -78,6 +81,7 @@ function fixTypeScriptFiles(dir) {if (!fs.existsSync(dir)) return;
 };
   })};
 ;#!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return, const items = fs.readdirSync(dir), items.forEach(item => { const fullPath = path.join(dir,item), const stat = fs.statSync(fullPath), if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'), if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {  fs.writeFileSync(fullPath,' } catch (error) { } } })}  fixTypeScriptFiles(__dirname), ,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '' || !content.includes('export') && !content.includes('import')) { console.log(`Fixing file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} console.log('🔧 Fixing all TypeScript files...'); fixTypeScriptFiles(__dirname); console.log('✅ All TypeScript files fixed!');
@@ -93,6 +97,8 @@ function fixTypeScriptFiles(dir) {if (!fs.existsSync(dir)) return;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 #!/usr/bin/env node,
 const fs = require('fs'),
 const path = require('path'),
@@ -115,15 +121,19 @@ function fixTypeScriptFiles(dir) {,
 <<<<<<< HEAD
   })};
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
   })};
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '' || !content.includes('export') && !content.includes('import')) { console.log(`Fixing file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} console.log('🔧 Fixing all TypeScript files...'); fixTypeScriptFiles(__dirname); console.log('✅ All TypeScript files fixed!');
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '' || !content.includes('export') && !content.includes('import')) { console.log(`Fixing file: ${fullPath}`); fs.writeFileSync(fullPath,' } catch (error) { console.log(`Error processing ${fullPath}: ${error.message}`)} } })} console.log('🔧 Fixing all TypeScript files...'); fixTypeScriptFiles(__dirname); console.log('✅ All TypeScript files fixed!');
 =======
   })};
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return; const items = fs.readdirSync(dir); items.forEach(item => { const fullPath = path.join(dir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'); if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {  fs.writeFileSync(fullPath,' } catch (error) { } } })}  fixTypeScriptFiles(__dirname); 
@@ -208,3 +218,5 @@ console.log('✅ All TypeScript files fixed!');
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

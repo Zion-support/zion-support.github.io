@@ -2,7 +2,12 @@ import type { GetServerSideProps } from 'next';
 import { FormEvent, useEffect, useState } from 'react';
 import type { Vendor } from '../utils/vendor-types';
 
+<<<<<<< HEAD
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
+=======
+type Props = { vendor: Vendor | null };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function AgencyDashboardPage({ vendor }: Props) {
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
@@ -26,7 +31,11 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       )
         .split(',')
         .map(s => s.trim())
+<<<<<<< HEAD
         .filter(Boolean)
+=======
+        .filter(Boolean),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     } as Vendor;
     // For MVP, update via direct API not implemented; keep local preview only
     setActiveVendor(updated);  }
@@ -41,6 +50,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     setActiveVendor(updated)
   }
   function addPackage() {
+<<<<<<< HEAD
     if (!pkgTitle |!pkgPrice |!activeVendor) return;
     const packages = [
       ...(activeVendor.packages |[])
@@ -199,6 +209,14 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     </div>
   );
 }
+=======
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+
+          </div>
+        </form>
+      </section>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {
@@ -217,6 +235,12 @@ function Pipeline({ vendorId }: { vendorId: string }) {
       body: JSON.stringify({ itemId, status })
     });
     fetchItems();
+<<<<<<< HEAD
+=======
+
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     fetchItems();
   }, []);
@@ -258,6 +282,7 @@ function Pipeline({ vendorId }: { vendorId: string }) {
             <option value="lost">Lost</option>
         </div>
       ))}
+<<<<<<< HEAD
     </div>
   );
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
@@ -272,3 +297,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
   return { props: { vendor } }
 }
 
+=======
+    </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

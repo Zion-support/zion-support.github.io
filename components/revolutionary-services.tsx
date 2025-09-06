@@ -167,6 +167,10 @@ export default function RevolutionaryServicesPage() {
         return a.name.localeCompare(b.name);    }      default: return a.name.localeCompare(b.name)
     }
   });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -277,6 +281,12 @@ export default function RevolutionaryServicesPage() {
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length
       color: 'from-yellow-500 to-orange-600'
     }
+<<<<<<< HEAD
+=======
+
+  ];
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
@@ -294,9 +304,18 @@ export default function RevolutionaryServicesPage() {
       y: 0
       opacity: 1
       transition: {
+<<<<<<< HEAD
         duration: 0.5
       }
     }
+=======
+        duration: 0.5,
+      },
+    },
+
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
       <div className='min-h-screen'>
@@ -349,6 +368,7 @@ export default function RevolutionaryServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
+<<<<<<< HEAD
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Revolutionary
                 </span>
@@ -369,10 +389,14 @@ export default function RevolutionaryServicesPage() {
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+<<<<<<< HEAD
                 Experience the future of technology with our revolutionary micro
                 SaaS platform. Quantum AI, autonomous systems, space technology
                 and cutting-edge solutions that redefine what's possible.
@@ -386,6 +410,9 @@ export default function RevolutionaryServicesPage() {
               {/* Service Count Stats */}
               <motion.div
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -544,6 +571,10 @@ export default function RevolutionaryServicesPage() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Popular Services Showcase */}
         <section className='py-16'>
           <div className='container mx-auto px-4'>
@@ -552,6 +583,12 @@ export default function RevolutionaryServicesPage() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-12"
+<<<<<<< HEAD
+=======
+
+              initial={{ opacity: 0, y: 20 }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -598,6 +635,10 @@ export default function RevolutionaryServicesPage() {
                     variant={service.variant as any}
                     size='large'
                     className='h-full cursor-pointer'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     onClick={() => setSelectedService(service)}
                   >
                     <div className='text-center mb-6'>
@@ -639,6 +680,7 @@ export default function RevolutionaryServicesPage() {
                         </div>
                       ))}
                     </div>
+<<<<<<< HEAD
                     <div className='text-center'>
                       <Button
                         variant='primary'
@@ -674,6 +716,11 @@ export default function RevolutionaryServicesPage() {
             {/* Filters and Controls */}
             <motion.div
               className="mb-8"
+=======
+
+              initial={{ opacity: 0, y: 20 }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -757,6 +804,7 @@ export default function RevolutionaryServicesPage() {
               }
               variants={containerVariants}
               initial='hidden'
+<<<<<<< HEAD
               whileInView='visible'              viewport={{ once: true }}            <motion.div
               className={viewMode === 'grid'
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
@@ -765,6 +813,12 @@ export default function RevolutionaryServicesPage() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
+=======
+              whileInView='visible'              viewport={{ once: true }}
+
+              viewport={{ once: true }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -947,6 +1001,7 @@ export default function RevolutionaryServicesPage() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
               >
+<<<<<<< HEAD
                 <div className='text-6xl mb-4'>🔍</div>
                 <h3 className='text-2xl font-bold text-white mb-2'>
                   No Services Found
@@ -985,6 +1040,9 @@ export default function RevolutionaryServicesPage() {
           {selectedService && (
             <motion.div
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -1211,6 +1269,7 @@ export default function RevolutionaryServicesPage() {
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
               </motion.div>
             </motion.div>
           )}
@@ -1315,11 +1374,18 @@ export default function RevolutionaryServicesPage() {
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
                 </div>
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
 );  )
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components/ui/card';
 import { Textarea  } from '@/components/ui/textarea';
@@ -37,6 +38,45 @@ export function AIEnhancementPanel({
       setGeneratedContent(result)
     }
   }
+=======
+import React, { useState } from 'react',;
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
+import { Textarea } from '@/components/ui/textarea',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Sparkles, Loader2, Copy, Check } from '@/components/icons',;
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
+interface AIEnhancementPanelProps {;
+  title: string,;
+  defaultOptions: AIEnhancementOptions,;
+  onApply: (content: string) => void,;
+  onClose?: () => void,;
+  showInstructions?: boolean,;
+  initialContent?: string;
+}
+;
+export function AIEnhancementPanel({;
+  title,;
+  defaultOptions,;
+  onApply,;
+  onClose,;
+  showInstructions = true,;
+  initialContent = '';
+}: AIEnhancementPanelProps) {;
+  const [options, setOptions] = useState<AIEnhancementOptions>({;
+    ...defaultOptions,;
+    content: initialContent || defaultOptions.content}),;
+  const [generatedContent, setGeneratedContent] = useState<string>(''),;
+  const [copied, setCopied] = useState(false),;
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
+  const handleGenerate = async () => {;
+    const result = await enhanceContent(options),;
+    if (result) {;
+      setGeneratedContent(result);
+    }
+  },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
@@ -44,16 +84,30 @@ export function AIEnhancementPanel({
     setOptions({
       ...options
       [field]: e.target.value})
+<<<<<<< HEAD
   }
+=======
+  },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleApply = () => {
-    onApply(generatedContent);
+    onApply(generatedContent),
     if (onClose) onClose()
+<<<<<<< HEAD
   }
+=======
+  },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleCopy = () => {
-    navigator.clipboard.writeText(generatedContent);
-    setCopied(true);
+    navigator.clipboard.writeText(generatedContent),
+    setCopied(true),
     setTimeout(() => setCopied(false), 2000)
+<<<<<<< HEAD
   }
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -95,11 +149,20 @@ export function AIEnhancementPanel({
             />
           </div>
         )}
+<<<<<<< HEAD
         {/* Generate button */}
         <Button
           onClick={handleGenerate}
           className="w-full"
           disabled={isEnhancing |!options.content && !options.context}
+=======
+
+        {/* Generate button */}
+        <Button 
+          onClick={handleGenerate} 
+          className="w-full" 
+          disabled={isEnhancing || !options.content && !options.context}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           {isEnhancing ? (
             <>

@@ -59,6 +59,7 @@ export default function TrustPage() {
     <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
     alert('Appeal submitted');
 
+<<<<<<< HEAD
     form.reset()
   }
   return (
@@ -126,6 +127,15 @@ export default function TrustPage() {
                         <span>{c.key}</span>
                         <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
                       </li>
+=======
+  }
+
+  return (
+    <EnhancedLayout>
+
+                      </li>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     ))}
                   </ul>
                 </div>
@@ -134,6 +144,7 @@ export default function TrustPage() {
                 <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>                  <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>
               )}
+<<<<<<< HEAD
             </div>                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap">
                   <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>
@@ -192,3 +203,11 @@ export default function TrustPage() {
     </EnhancedLayout>
 );
 }
+=======
+            </div>
+
+                  <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
+                </div>
+              )}
+            </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

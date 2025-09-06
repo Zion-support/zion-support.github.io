@@ -98,6 +98,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       mp4Url: publicBase + '.mp4'
     }
     episodes[idx] = episode;
+<<<<<<< HEAD
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
       mp3Url: publicBase + '.mp3';
       wavUrl: publicBase + '.wav'
@@ -117,3 +118,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 }
+=======
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 import Link from "next/link";
@@ -16,6 +17,15 @@ export default function EmptyState({
   primaryAction
   secondaryAction
 }: EmptyStateProps) {
+=======
+import React from 'react';
+
+interface EmptyStateProps {
+  className?: string;
+}
+
+const EmptyState: React.FC<EmptyStateProps> = ({ className }) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className='w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3'>
       <div className='text-3xl opacity-70'>{icon ?? '🧭'}</div>
@@ -64,4 +74,10 @@ export default function EmptyState({ title, description, icon, primaryAction, se
       )}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default EmptyState;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

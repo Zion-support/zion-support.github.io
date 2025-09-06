@@ -242,6 +242,7 @@ export default function UltraFuturisticBackground2035() {
         <div className='absolute top-1/4 left-1/3 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse' />
         <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000' />
         <div className='absolute bottom-1/4 left-1/2 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000' />
+<<<<<<< HEAD
         {/* Animated Grid Lines */}
         <div className='absolute inset-0 opacity-10'>
           <div
@@ -264,6 +265,21 @@ export default function UltraFuturisticBackground2035() {
             backgroundSize: '50px 50px'
           }} />
         </div>
+=======
+
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+
+          }}
+        />
+
+        {/* Neon Glow Effects */}
+
+        </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Floating Particles */}
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -285,6 +301,7 @@ export default function UltraFuturisticBackground2035() {
               opacity: [0, 1, 0];
               scale: [0, 1, 0]
             }}
+<<<<<<< HEAD
             transition={{
               duration: 3 + Math.random() * 2
               repeat: Infinity
@@ -293,6 +310,20 @@ export default function UltraFuturisticBackground2035() {
             }}
           />
         ))}
+=======
+
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+              ease: 'easeInOut',            }}
+
+            }}
+
+          />
+        ))}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Energy Waves */}
         <motion.div
           className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent'
@@ -328,12 +359,24 @@ export default function UltraFuturisticBackground2035() {
             scaleX: [0, 1, 0];
             opacity: [0, 1, 0]
           transition={{
+<<<<<<< HEAD
             duration: 4
             repeat: Infinity
             delay: 2
             ease: 'easeInOut',          }}            ease: "easeInOut"
           }}
         />
+=======
+            duration: 4,
+            repeat: Infinity,
+            delay: 2,
+            ease: 'easeInOut',          }}
+
+          }}
+
+        />
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Quantum Dots */}
         {[...Array(15)].map((_, i) => (
           <motion.div
@@ -355,6 +398,7 @@ export default function UltraFuturisticBackground2035() {
               opacity: [0, 0.8, 0];
               rotate: [0, 360]
             }}
+<<<<<<< HEAD
             transition={{
               duration: 5 + Math.random() * 3
               repeat: Infinity
@@ -365,6 +409,23 @@ export default function UltraFuturisticBackground2035() {
         ))}
         {/* Neural Network Connections */}
         <svg className='absolute inset-0 w-full h-full opacity-20'>
+=======
+
+            transition={{
+              duration: 5 + Math.random() * 3,
+              repeat: Infinity,
+              delay: Math.random() * 5,
+              ease: 'easeInOut',            }}
+
+            }}
+
+          />
+        ))}
+
+        {/* Neural Network Connections */}
+        <svg className='absolute inset-0 w-full h-full opacity-20'>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <defs>
             <linearGradient
               id='neuralGradient'
@@ -386,6 +447,7 @@ export default function UltraFuturisticBackground2035() {
               r='3'
               fill='url(#neuralGradient)'
               animate={{
+<<<<<<< HEAD
                 r: [3, 6, 3]
                 opacity: [0.3, 0.8, 0.3],              }}          <defs>
             <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -416,6 +478,28 @@ export default function UltraFuturisticBackground2035() {
         </svg>
         {/* Holographic Effects */}
         <div className='absolute inset-0'>
+=======
+                r: [3, 6, 3],
+                opacity: [0.3, 0.8, 0.3],              }}
+
+              }}
+
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                delay: i * 0.5,
+                ease: 'easeInOut',              }}
+
+              }}
+
+            />
+          ))}
+        </svg>
+
+        {/* Holographic Effects */}
+        <div className='absolute inset-0'>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <motion.div
             className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full'
             animate={{
@@ -457,21 +541,38 @@ export default function UltraFuturisticBackground2035() {
               opacity: [0.1, 0.4, 0.1]
             }}
             transition={{
+<<<<<<< HEAD
               duration: 15
               repeat: Infinity
               ease: 'linear',              ease: "linear"
             }}
+=======
+              duration: 15,
+              repeat: Infinity,
+
+            }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           />
         </div>
         {/* Data Streams */}
         <div className='absolute right-0 top-0 w-32 h-full opacity-30'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={`stream-${i}`}
               className='absolute w-1 h-8 bg-gradient-to-b from-purple-400 to-transparent'
               style={{
+<<<<<<< HEAD
                 right: `${Math.random() * 32}px`
                 top: `${i * 5}%`
+=======
+                right: `${Math.random() * 32}px`,
+                top: `${i * 5}%`,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               }}
               animate={{
                 height: [8, 32, 8]
@@ -487,11 +588,20 @@ export default function UltraFuturisticBackground2035() {
                 height: [8, 32, 8];
                 opacity: [0.3, 1, 0.3]
               }}
+<<<<<<< HEAD
               transition={{
                 duration: 2 + Math.random() * 2
                 repeat: Infinity
                 delay: Math.random() * 2
                 ease: 'easeInOut',              }}                ease: "easeInOut"
+=======
+
+              transition={{
+                duration: 2 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+                ease: 'easeInOut',              }}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
               }}
             />
@@ -499,5 +609,9 @@ export default function UltraFuturisticBackground2035() {
         </div>
       </div>
     </>
+<<<<<<< HEAD
 );  )
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

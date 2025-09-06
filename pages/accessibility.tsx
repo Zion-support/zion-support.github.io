@@ -178,6 +178,7 @@ import Layout from '../components/Layout';
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 =======
@@ -187,6 +188,13 @@ import Layout from '../components/Layout';
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function AccessibilityPage() {
+=======
+interface AccessibilityProps {
+  className?: string;
+}
+
+const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <MainLayout
       title="Accessibility - Zion Tech Group"
@@ -481,4 +489,6 @@ export default function AccessibilityPage() {
       </div>
     </MainLayout>
   );
-}
+};
+
+export default Accessibility;

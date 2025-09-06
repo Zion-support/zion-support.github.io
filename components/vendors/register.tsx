@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import { FormEvent, useState } from 'react';
+=======
+import {FormEvent, useState} from 'react';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function VendorRegisterPage() {
   const [loading, setLoading] = useState(false);
 
@@ -41,6 +46,7 @@ export default function VendorRegisterPage() {
     } finally {
       setLoading(false);    }
   }
+<<<<<<< HEAD
   return (            .map(s => s.trim())
             .filter(Boolean);
           teamSize: Number(payload.teamSize |0)
@@ -53,6 +59,8 @@ export default function VendorRegisterPage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Failed to submit');
       setMessage('Application submitted. Await approval.');
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
       form.reset()
     } catch (err: any) {
@@ -62,6 +70,7 @@ export default function VendorRegisterPage() {
     }
   }
   return (
+<<<<<<< HEAD
     <div className='max-w-2xl mx-auto space-y-6'>
       <h1 className='text-2xl font-semibold'>
         Apply to become a Vendor Partner
@@ -130,3 +139,10 @@ export default function VendorRegisterPage() {
     </div>
 );
 }
+=======
+
+    }
+  }
+
+  return (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -25,6 +25,7 @@ interface UltraAdvancedServiceCardProps {
 
 interface UltraAdvancedServiceCardProps {
   service: {
+<<<<<<< HEAD
     id: string;
     name: string;
     tagline: string;
@@ -55,6 +56,8 @@ interface UltraAdvancedServiceCardProps {
       mobile: string;
       email: string;
       address: string;
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
       website: string;
     }
@@ -120,6 +123,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       }
     },  }
   const contentVariants = {
+<<<<<<< HEAD
     hidden: { opacity: 0, height: 0 }
     visible: {    if (category.includes('AI') |category.includes('Machine Learning')) return <Brain className="w-4 h-4" />;
     if (category.includes('Quantum')) return <Zap className="w-4 h-4" />;
@@ -198,10 +202,15 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       />
       {/* Main Card */}
       <div
+=======
+    hidden: { opacity: 0, height: 0 },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
           isHovered ? 'shadow-2xl' : 'shadow-lg'
         }`}
       >
+<<<<<<< HEAD
         <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>
           {/* Header */}
           <div className='flex items-start justify-between mb-4'>
@@ -238,6 +247,9 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             {service.popular && (
               <motion.div
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold"
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
@@ -245,6 +257,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               </motion.div>
             )}
           </div>
+<<<<<<< HEAD
           {/* Tagline */}
           <p className='text-gray-300 text-sm mb-4 leading-relaxed'>            {service.tagline}
           </p>
@@ -266,6 +279,20 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               <span className='text-gray-400 text-sm'>({service.reviews})</span>            </div>
           </div>
           {/* Quick Stats */}              <span className="text-gray-400 text-sm">({service.reviews})</span>
+=======
+
+          {/* Tagline */}
+          <p className='text-gray-300 text-sm mb-4 leading-relaxed'>            {service.tagline}
+          </p>
+
+          {/* Price */}
+
+            {service.tagline}
+          </p>
+
+          {/* Price */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </div>
           </div>
           {/* Quick Stats */}
@@ -291,6 +318,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               <Clock className="w-4 h-4 text-green-400" />
               <span className="text-gray-300">{service.trialDays} day trial</span>
           </div>
+<<<<<<< HEAD
           {/* Market Data */}
           <div className='bg-gray-800/50 rounded-lg p-3 mb-4'>
             <div className='flex items-center justify-between text-sm'>
@@ -312,6 +340,9 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               <span className="text-gray-400">Growth Rate:</span>
               <span className="text-blue-400 font-semibold">{service.growthRate}</span>
           </div>
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Expandable Content */}
           <AnimatePresence>
             {isExpanded && (
@@ -336,6 +367,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                   <p className="text-gray-300 text-sm leading-relaxed">
                   </p>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {/* Features */}
                 <div>
                   <h4 className='text-white font-semibold mb-2'>
@@ -348,6 +383,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                         className='flex items-center space-x-2 text-sm'
                       >
                         <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
+<<<<<<< HEAD
                         <span className='text-gray-300'>{feature}</span>                      </div>                  <h4 className="text-white font-semibold mb-2">Key Features</h4>
                   <div className="grid grid-cols-1 gap-2">
                     {service.features.slice(0, 6).map((feature, index) => (
@@ -357,10 +393,24 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                     ))}
                   </div>
                 </div>
+=======
+                        <span className='text-gray-300'>{feature}</span>                      </div>
+
+                      </div>
+
+                    ))}
+                  </div>
+                </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {/* ROI */}
                 <div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3'>
                   <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>
                   <p className='text-gray-300 text-sm'>{service.roi}</p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </div>
                 {/* Contact Info */}
                 <div className='bg-gray-800/50 rounded-lg p-3'>
@@ -406,6 +456,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               </motion.div>
             )}
           </AnimatePresence>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Action Buttons */}
           <div className='flex space-x-3 mt-6'>
             <motion.button
@@ -423,12 +477,17 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
                 isExpanded
                   ? 'border-gray-600 text-gray-400'
+<<<<<<< HEAD
                   : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'              }`}            </motion.button>
             <motion.button
               className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
                 isExpanded
                   ? 'border-gray-600 text-gray-400'
                   : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black'
+=======
+                  : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'              }`}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               }`}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -437,6 +496,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               {isExpanded ? 'Show Less' : 'Details'}
             </motion.button>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Expand/Collapse Indicator */}
           <motion.div
             className='flex justify-center mt-4'
@@ -448,6 +511,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       </div>
     </motion.div>
   );
+<<<<<<< HEAD
 }
 export default UltraAdvancedServiceCard;            className="flex justify-center mt-4"
             animate={{ rotate: isExpanded ? 180 : 0 }}
@@ -463,3 +527,13 @@ export default UltraAdvancedServiceCard;  )
 }
 export default UltraAdvancedServiceCard;
 
+=======
+};
+
+export default UltraAdvancedServiceCard;
+
+          </motion.div>
+        </div>
+      </div>
+    </motion.div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

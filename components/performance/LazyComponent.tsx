@@ -1,6 +1,11 @@
 import React from 'react'
 }
 import React, { Suspense, lazy } from 'react';
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface LazyComponentProps {
   component: ComponentType<Record<string, unknown>>;
   fallback?: ReactNode;
@@ -19,9 +24,12 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
   );
 }
 export default LazyComponent;
+<<<<<<< HEAD
 
 import React from 'react';
 };
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import React from 'react';
 }

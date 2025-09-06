@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import dynamic from 'next/dynamic',
+=======
+import dynamic from 'next/dynamic';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useEffect, useState } from 'react';
 
 import { useWallet } from '../../hooks/useWallet';
@@ -38,9 +42,17 @@ export default function TokenIntegrationsPage() {
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ region, stakeUsd: stake })
     });
+<<<<<<< HEAD
     const data = await res.json();
     setSuggestion(data);
   }
+=======
+
+    const data = await res.json();
+    setSuggestion(data);
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className='space-y-8'>
       <section className='space-y-2'>
@@ -80,6 +92,7 @@ export default function TokenIntegrationsPage() {
                 </span>
                 <span className='font-medium'>+{r.points} ZION$</span>              </div>    const data = await res.json();
 
+<<<<<<< HEAD
     setSuggestion(data)
   }
   return (
@@ -105,6 +118,10 @@ export default function TokenIntegrationsPage() {
                 <span>{r.network} — {r.reason}</span>
                 <span className="font-medium">+{r.points} ZION$</span>
               </div>
+=======
+              </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             ))}
           </div>
         )}
@@ -192,5 +209,9 @@ export default function TokenIntegrationsPage() {
         </ul>
       </section>
     </div>
+<<<<<<< HEAD
   );
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
@@ -37,11 +38,76 @@ export default async function handler(
       body
       createdAt: now
     });
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader('Allow', ['POST']);
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getDisputeById, upsertDispute } from '../../../../utils/fsdb';
+import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
+export default async function handler(req, res) {
+  try {
+  const { id } = req.query;
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
+    } catch (error) {
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    const { body } = req.body || {};
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      authorUserId: user.id,;
+      authorRole: (user.role === 'admin' ? 'admin' : (user.id === dispute.clientUserId ? 'client' : 'talent')),;
+      body,;
+      createdAt: now}),;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(201).json({ dispute });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
   res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 }
 
+=======
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  res.setHeader('Allow', 'POST');
+  return res.status(405).end('Method Not Allowed');
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

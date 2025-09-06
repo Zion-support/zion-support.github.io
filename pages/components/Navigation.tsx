@@ -399,6 +399,11 @@ const quickLinks = [
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}

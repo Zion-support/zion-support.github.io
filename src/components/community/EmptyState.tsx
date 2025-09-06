@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react'
@@ -31,6 +32,28 @@ const EmptyState: React.FC<EmptyStateProps> = ({
       </div>
       <h2 className='text-xl font-medium mb-2'>{title}</h2>
       <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>
+=======
+import React from 'react';
+import Link from 'next/link';
+import { MessageSquare } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
+interface EmptyStateProps {;
+  title: string,;
+  subtitle: string,;
+  cta: string,;
+  href: string,;
+  hasSession: boolean;
+}
+
+const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {
+  return (
+    <div className="text-center py-16">
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">
+        <MessageSquare className="h-10 w-10 text-zion-purple" />
+      </div>
+      <h2 className="text-xl font-medium mb-2">{title}</h2>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <p className="text-muted-foreground mb-6">{subtitle}</p>
       <TooltipProvider>
         <Tooltip>
@@ -44,6 +67,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
             )}
           </TooltipTrigger>
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
+<<<<<<< HEAD
         </Tooltip>
       </TooltipProvider>
     </div>
@@ -51,3 +75,11 @@ const EmptyState: React.FC<EmptyStateProps> = ({
 }
 export default EmptyState
 
+=======
+        </Tooltip>;
+      </TooltipProvider>;
+    </div>;
+  );
+},;
+export default EmptyState;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

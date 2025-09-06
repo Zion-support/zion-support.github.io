@@ -18,4 +18,8 @@ export default async function handler(
   res.setHeader('Content-Typetext/plain')
 
   res.status(200).send(transcript)
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

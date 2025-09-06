@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import Head from 'next/head',
+=======
+import Head from 'next/head';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 
 import {
@@ -19,6 +23,10 @@ import {
 } from 'lucide-react';import { motion, useScroll, useSpring } from 'framer-motion';import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { useEffect, useState } from 'react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function MainFrontIndex() {
   const { scrollYProgress } = useScroll();
   const progressX = useSpring(scrollYProgress, {
@@ -34,6 +42,7 @@ export default function MainFrontIndex() {
   const [mobileOpen, setMobileOpen] = useState(false);
   useEffect(() => {
     const onScroll = () => setShowToTop(window.scrollY > 400);
+<<<<<<< HEAD
     window.addEventListener('scroll', onScroll, { passive: true } as any);
     onScroll();
     return () => window.removeEventListener('scroll', onScroll);
@@ -224,14 +233,26 @@ export default function MainFrontIndex() {
           </div>
           <button aria-label="Open menu" onClick={() => setMobileOpen(true)} className="md:hidden rounded-md border border-white/15 bg-white/5 px-3 py-1.5 text-sm text-white/80">Menu</button>
         </nav>
+=======
+
+        </nav>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Mobile overlay menu */}
         {mobileOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+<<<<<<< HEAD
             className='fixed inset-0 z-40 bg-slate-950/80 backdrop-blur'            onClick={() => setMobileOpen(false)}            className="fixed inset-0 z-40 bg-slate-950/80 backdrop-blur"
             onClick={() => setMobileOpen(false)}
+=======
+            className='fixed inset-0 z-40 bg-slate-950/80 backdrop-blur'            onClick={() => setMobileOpen(false)}
+
+            onClick={() => setMobileOpen(false)}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             <motion.div
               initial={{ y: -20, opacity: 0 }}
@@ -239,6 +260,10 @@ export default function MainFrontIndex() {
               transition={{ duration: 0.2 }}
               className='mx-auto mt-20 w-[92%] max-w-md rounded-2xl border border-white/10 bg-white/5 p-6 text-white shadow-xl'
               onClick={e => e.stopPropagation()}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             >
               <div className='mb-4 flex items-center justify-between'>
                 <div className='text-lg font-semibold'>Navigate</div>
@@ -337,16 +362,26 @@ export default function MainFrontIndex() {
           </motion.div>
         )}
       </header>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Hero */}
       <div role='main' className='relative z-10'>        <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'      <div role="main" className="relative z-10">
+=======
+          className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'
           <div className='text-center'>
             <div className='mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md'>
@@ -564,6 +599,11 @@ export default function MainFrontIndex() {
                 <Link key={label as string} href={href as string}>
                   <a className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">{label as string}</a>
                 </Link>
+=======
+
+                </Link>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ))}
             </div>
           </div>
@@ -599,6 +639,11 @@ export default function MainFrontIndex() {
                 <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                   Open <span aria-hidden>→</span>
                 </div>
+<<<<<<< HEAD
+=======
+
+              </a>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </Link>
             <Link href='#capabilities'>
               <a className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo'>
@@ -778,6 +823,7 @@ export default function MainFrontIndex() {
             <a href="/newsroom" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">AI Changelog</div><div className="mt-1 text-sm text-white/75">Summarized updates</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>
         </section>
         {/* Floating Quick-Nav Dock */}
+<<<<<<< HEAD
         <aside className='fixed left-4 top-1/2 z-30 -translate-y-1/2 block'>
           <nav aria-label='Quick section navigation' className='space-y-2'>
             {[
@@ -828,10 +874,14 @@ export default function MainFrontIndex() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="engines"
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Autonomous Engines (Beyond GitHub Actions)
@@ -1022,10 +1072,14 @@ export default function MainFrontIndex() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="innovations"
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Autonomous Innovations
@@ -1224,20 +1278,35 @@ export default function MainFrontIndex() {
                 ) : (
                   <Link href={card.href as string}><a className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline">Open</a></Link>
                 )}
+=======
+
+                )}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </article>
             ))}
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Netlify Automations */}
         <motion.section
           id='netlify-automations'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
+<<<<<<< HEAD
           transition={{ duration: 0.5 }}          id="netlify-automations"
+=======
+          transition={{ duration: 0.5 }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -1476,10 +1545,19 @@ export default function MainFrontIndex() {
                   <p className="mt-1 text-sm text-white/75">{desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
                 </a>
+=======
+
+                </a>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </Link>
             ))}
           </div>
         </motion.section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* AUTO-GENERATED: FRONT_ADS_START */}
         <section className='mx-auto max-w-7xl px-6 pb-16'>
           <div className='relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/10 via-violet-600/10 to-cyan-600/10 p-6 backdrop-blur-xl'>
@@ -1584,6 +1662,10 @@ export default function MainFrontIndex() {
           </div>
         </section>
         {/* AUTO-GENERATED: FRONT_ADS_END */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Outcome Benefits */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -1591,6 +1673,10 @@ export default function MainFrontIndex() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Outcome‑Focused Benefits
@@ -1654,21 +1740,35 @@ export default function MainFrontIndex() {
                   <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
                   <span className="text-sm text-white/80"><span className="font-semibold text-white">{b.label}</span> — {b.desc} <span className="ml-1 text-cyan-300/90">→</span></span>
                 </a>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </Link>
             ))}
           </div>
         </motion.section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Suites */}
         <motion.section
           id='suites'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'          id="suites"
+=======
+          className='mx-auto max-w-7xl px-6 pb-14'
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -1774,6 +1874,15 @@ export default function MainFrontIndex() {
             ))}
           </div>
         </motion.section>
+=======
+
+              </article>
+
+            ))}
+          </div>
+        </motion.section>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Superpowers */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -1781,6 +1890,11 @@ export default function MainFrontIndex() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
+<<<<<<< HEAD
+=======
+
+        >
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Superpowers
           </h2>
@@ -1817,9 +1931,19 @@ export default function MainFrontIndex() {
                 <Icon className="h-6 w-6 text-cyan-300" />
                 <h3 className="mt-3 text-lg font-semibold">{title}</h3>
                 <p className="mt-1 text-sm text-white/75">{desc}</p>
+<<<<<<< HEAD
             ))}
           </div>
         </motion.section>
+=======
+
+              </article>
+
+            ))}
+          </div>
+        </motion.section>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Get Started */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -1827,6 +1951,11 @@ export default function MainFrontIndex() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
+<<<<<<< HEAD
+=======
+
+        >
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Get Started in Minutes
           </h2>
@@ -1898,11 +2027,17 @@ export default function MainFrontIndex() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'          id="features"
+=======
+          className='mx-auto max-w-7xl px-6 pb-14'
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -2160,10 +2295,19 @@ export default function MainFrontIndex() {
                   <p className="mt-2 text-sm text-white/75">{desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Learn more <Link2 className="h-3.5 w-3.5" /></div>
                 </a>
+=======
+
+                </a>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </Link>
             ))}
           </div>
         </motion.section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Outcomes */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -2171,6 +2315,11 @@ export default function MainFrontIndex() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
+<<<<<<< HEAD
+=======
+
+        >
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Outcomes
           </h2>
@@ -2200,18 +2349,29 @@ export default function MainFrontIndex() {
                     <Link key={`${item.label}-${idx}`} href={item.href}>
                       <a className='mx-3 my-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10'>
                         <span className='h-1.5 w-1.5 rounded-full bg-cyan-400' />{' '}
+<<<<<<< HEAD
                         {item.label}                      </a>                  { label: 'Experiment velocity', href: '/automation' }]
                   .flatMap((item) => [item, item])
                   .map((item, idx) => (
                     <Link key={`${item.label}-${idx}`} href={item.href}>
                       <a className="mx-3 my-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">
                         <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {item.label}
+=======
+                        {item.label}                      </a>
+
+                      </a>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     </Link>
                   ))}
               </div>
             </div>
           </div>
         </motion.section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Feature Map */}
         <motion.section
           id='feature-map'          initial={{ opacity: 0, y: 24 }}
@@ -2464,12 +2624,21 @@ export default function MainFrontIndex() {
         }
         {/* Platform Modules */}
         <motion.section
+<<<<<<< HEAD
           id='modules'          id="feature-map"
+=======
+          id='modules'
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Platform Modules
@@ -2477,6 +2646,7 @@ export default function MainFrontIndex() {
           <div className='mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>
             {[
               {
+<<<<<<< HEAD
                 Icon: Rocket
                 title: 'Autonomous Factories'
                 desc: 'Composable, domain‑specific automation factories.'
@@ -2634,6 +2804,75 @@ export default function MainFrontIndex() {
             ))}
           </div>
         </motion.section>
+=======
+                Icon: Rocket,
+                title: 'Autonomous Factories',
+                desc: 'Composable, domain‑specific automation factories.',
+                href: '/automation',
+              },
+              {
+                Icon: ShieldCheck,
+                title: 'Guardrails',
+                desc: 'Defense‑in‑depth validations and policy enforcement.',
+                href: '/site-health',
+              },
+              {
+                Icon: Gauge,
+                title: 'Observability',
+                desc: 'Dashboards, artifacts, and live CI telemetry.',
+                href: '/site-health',
+              },
+              {
+                Icon: Activity,
+                title: 'SEO Ops',
+                desc: 'Continuous audits and safe, suggested diffs.',
+                href: '/reports/seo',
+              },
+              {
+                Icon: Globe,
+                title: 'AI Intelligence',
+                desc: 'Trends radar to guide new automation ideas.',
+                href: '/reports/ai-trends',
+              },
+              {
+                Icon: Layers,
+                title: 'Workflow Composer',
+                desc: 'Chain factories into higher‑order systems.',
+                href: '/automation',
+              },
+              {
+                Icon: GitBranch,
+                title: 'Main Sync Engine',
+                desc: 'Small, reviewable edits merged continuously.',
+                href: '/automation',
+              },
+              {
+                Icon: Cpu,
+                title: 'Zero‑Ops Runtime',
+                desc: 'Cloud‑native execution with no servers to manage.',
+                href: '/automation',
+              },
+              {
+                Icon: BarChart3,
+                title: 'Impact Analytics',
+                desc: 'Track outcomes and ROI from automations.',
+                href: '/site-health',
+              },
+            ].map(({ Icon, title, desc, href }) => (
+
+          </div>
+        </motion.section>
+
+        {/* AUTO: catalog injection for automated advertising */}
+
+                </a>
+
+              </Link>
+            ))}
+          </div>
+        </motion.section>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Neural Feature Matrix */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -2641,6 +2880,10 @@ export default function MainFrontIndex() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Neural Feature Matrix
@@ -2764,6 +3007,7 @@ export default function MainFrontIndex() {
                   </a>
                 </Link>
               )
+<<<<<<< HEAD
             )}          </div>        >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Neural Feature Matrix</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A denser, at-a-glance atlas of what Zion ships autonomously. Every tile links to the live hub, report, or docs.</p>
@@ -2804,8 +3048,16 @@ export default function MainFrontIndex() {
                 </Link>
               )
             ))}
+=======
+            )}          </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </div>
         </motion.section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Extended Feature Directory */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -2813,6 +3065,10 @@ export default function MainFrontIndex() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Extended Feature Directory
@@ -2912,6 +3168,7 @@ export default function MainFrontIndex() {
                   </a>
                 </Link>
               )
+<<<<<<< HEAD
             )}          </div>        >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Extended Feature Directory</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A broader tour of autonomous capabilities. Each card links to the relevant hub, report, or live workflow.</p>
@@ -2944,8 +3201,16 @@ export default function MainFrontIndex() {
                 </Link>
               )
             ))}
+=======
+            )}          </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </div>
         </motion.section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Capability Deep Links */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -2953,6 +3218,10 @@ export default function MainFrontIndex() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Capability Deep Links
@@ -3038,6 +3307,7 @@ export default function MainFrontIndex() {
                   </a>
                 </Link>
               )
+<<<<<<< HEAD
             )}          </div>        >
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capability Deep Links</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Jump directly to the systems that deliver each capability.</p>
@@ -3071,17 +3341,31 @@ export default function MainFrontIndex() {
             ))}
           </div>
         </motion.section>
+=======
+            )}          </div>
+
+          </div>
+
+        </motion.section>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Use Cases */}
         <motion.section
           id='use-cases'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'          id="use-cases"
+=======
+          className='mx-auto max-w-7xl px-6 pb-14'
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Use Cases
@@ -3212,19 +3496,32 @@ export default function MainFrontIndex() {
                 </Link>
               )
             ))}
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </div>
         </motion.section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Capabilities */}
         <motion.section
           id='capabilities'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'          id="capabilities"
+=======
+          className='mx-auto max-w-7xl px-6 pb-14'
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -3351,10 +3648,19 @@ export default function MainFrontIndex() {
                   </div>
                   <p className="mt-1 text-sm text-white/75">{desc}</p>
                 </a>
+=======
+
+                </a>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </Link>
             ))}
           </div>
         </motion.section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Why Zion */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -3362,6 +3668,11 @@ export default function MainFrontIndex() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
+<<<<<<< HEAD
+=======
+
+        >
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Why Zion
           </h2>
@@ -3400,20 +3711,36 @@ export default function MainFrontIndex() {
                 <div className="text-2xl">{icon as string}</div>
                 <div className="mt-2 text-base font-semibold">{title as string}</div>
                 <div className="mt-1 text-sm text-white/75">{desc as string}</div>
+<<<<<<< HEAD
             ))}
           </div>
         </motion.section>
+=======
+
+              </div>
+
+            ))}
+          </div>
+        </motion.section>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Value Pillars */}
         <motion.section
           id='pillars'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'          id="pillars"
+=======
+          className='mx-auto max-w-7xl px-6 pb-14'
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -3475,21 +3802,36 @@ export default function MainFrontIndex() {
                   </div>
                   <p className="mt-1 text-sm text-white/75">{desc}</p>
                 </a>
+=======
+
+                </a>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </Link>
             ))}
           </div>
         </motion.section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Benefits */}
         <motion.section
           id='benefits'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-20'          id="benefits"
+=======
+          className='mx-auto max-w-7xl px-6 pb-20'
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-20'
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Benefits
@@ -3563,6 +3905,15 @@ export default function MainFrontIndex() {
             ))}
           </div>
         </motion.section>
+=======
+
+              </div>
+
+            ))}
+          </div>
+        </motion.section>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Benefits in Practice */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -3570,6 +3921,10 @@ export default function MainFrontIndex() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Benefits in Practice
@@ -3669,6 +4024,7 @@ export default function MainFrontIndex() {
           </div>
         </motion.section>
         {/* Tailored Value by Team */}
+<<<<<<< HEAD
         <section className='mx-auto max-w-7xl px-6 pb-16'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Tailored Value by Team
@@ -3719,10 +4075,14 @@ export default function MainFrontIndex() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="reports"
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -3829,6 +4189,9 @@ export default function MainFrontIndex() {
               </div>
               <p className="mt-1 text-sm text-white/75">Futuristic micro‑interactions and motion design system.</p>
               <div className="mt-3 text-xs text-cyan-300/90">Docs →</div>
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </a>
           </div>
         </motion.section>
@@ -3844,6 +4207,7 @@ export default function MainFrontIndex() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-16'
+<<<<<<< HEAD
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Quality Gates & Guardrails
           </h2>
@@ -3884,10 +4248,14 @@ export default function MainFrontIndex() {
         </motion.section>
         {/* Tech */}
         <motion.section
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-16'
         >
           <div className='rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-md'>
@@ -3945,10 +4313,19 @@ export default function MainFrontIndex() {
                   <div className="text-sm font-semibold text-white">{title as string}</div>
                   <div className="mt-1 text-xs text-white/70">{desc as string}</div>
                 </a>
+=======
+
+                </a>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </Link>
             ))}
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* CTA */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -4228,11 +4605,17 @@ export default function MainFrontIndex() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'          id="agents"
+=======
+          className='mx-auto max-w-7xl px-6 pb-14'
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -4312,21 +4695,36 @@ export default function MainFrontIndex() {
                   <p className="mt-1 text-sm text-white/75">{desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
                 </a>
+=======
+
+                </a>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </Link>
             ))}
           </div>
         </motion.section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Capabilities Matrix */}
         <motion.section
           id='capability-matrix'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-16'          id="capability-matrix"
+=======
+          className='mx-auto max-w-7xl px-6 pb-16'
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-16'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -4464,19 +4862,32 @@ export default function MainFrontIndex() {
                 </Link>
               )
             ))}
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </div>
         </motion.section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Benefits Directory */}
         <motion.section
           id='benefits-directory'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-16'          id="benefits-directory"
+=======
+          className='mx-auto max-w-7xl px-6 pb-16'
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-16'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -4550,11 +4961,22 @@ export default function MainFrontIndex() {
                   <p className="mt-1 text-sm text-white/75">{b.desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Explore <span aria-hidden>→</span></div>
                 </a>
+=======
+
+                </a>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </Link>
             ))}
           </div>
         </motion.section>
+<<<<<<< HEAD
         {/* AUTO-GENERATED: FRONT_ADS_START */}
+=======
+
+        {/* AUTO-GENERATED: FRONT_ADS_START */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <section id='auto-ads' className='mx-auto max-w-7xl px-6 pb-16'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Auto‑advertised Highlights
@@ -4649,22 +5071,32 @@ export default function MainFrontIndex() {
           </div>
         </section>
         {/* AUTO-GENERATED: FRONT_ADS_END */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Feature Highlights (new) */}
         <motion.section
           id='feature-highlights'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'          </div>
         </section>
  {/* AUTO-GENERATED: FRONT_ADS_END */}
         {/* Feature Highlights (new) */}
         <motion.section
           id="feature-highlights"
+=======
+          className='mx-auto max-w-7xl px-6 pb-14'
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Feature Highlights
@@ -4775,6 +5207,13 @@ export default function MainFrontIndex() {
               { title: 'SEO Audit Runner', href: '/.netlify/functions/seo-audit-runner' }
               { title: 'AI Trends Radar', href: '/.netlify/functions/ai-trends-radar-runner' }
               { title: 'Front Index Directory Builder', href: '/.netlify/functions/front-index-directory-builder' }
+=======
+
+          {/* existing reports content */}
+        </section>
+
+        {/* New Intelligent Automations */}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
               { title: 'Revenue Ideas Promoter', href: '/.netlify/functions/revenue-ideas-promoter' }].map((tool) => (
               <a key={tool.title} href={tool.href} className="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 hover:border-cyan-400/30 hover:text-white transition-colors">
@@ -4789,14 +5228,23 @@ export default function MainFrontIndex() {
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className='fixed bottom-24 right-4 z-40 rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-2 text-xs font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)]'
+<<<<<<< HEAD
           aria-label='Scroll to top'        >          className="fixed bottom-24 right-4 z-40 rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-2 text-xs font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)]"
           aria-label="Scroll to top"
+=======
+          aria-label='Scroll to top'        >
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           ↑ Top
         </button>
       )}
     </div>
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 /* AUTO-GENERATED: FRONT_ACTIONS_START */
 <section className='mx-auto max-w-7xl px-6 pb-14'>
   <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -4968,8 +5416,13 @@ export default function MainFrontIndex() {
   </div>
 </section>;
 /* AUTO-GENERATED: FRONT_ACTIONS_END */
+<<<<<<< HEAD
 }</div>
 }</div> </div> </div>) )
+=======
+}</div> 
+}</div> </div> </div>) ) 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</div> </div> </motion.section> {
   /* Showcase */
 }<motion.section > <h2 className="text-center text-2xl font-bold tracking-wide text-white/90" >Showcase: Features, Capabilities, Benefits</h2> <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70" >Jump into highlighted areas of the platform. Every card links to a deep section or dedicated page.</p> <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" > <Link href="#features" > <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-2" ><Zap className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold" >Explore Features</h3></div> <p className="mt-1 text-sm text-white/75" >Self‑improving systems, composable factories, observability and more.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Open <span aria-hidden>→</span></div> </a> </a> <Link href="#capabilities" > <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-2" ><Cpu className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold" >Browse Capabilities</h3></div> <p className="mt-1 text-sm text-white/75" >Design evolution, SEO, a11y, performance, refactors, and policy.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Open <span aria-hidden>→</span></div> </a> </a> <Link href="#benefits" > <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-2" ><Gauge className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold" >See Benefits</h3></div> <p className="mt-1 text-sm text-white/75" >Momentum, quality, safety, and measurable outcomes.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Open <span aria-hidden>→</span></div> </a> </a> <Link href="#feature-map" > <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-2" ><Globe className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold" >Feature Map</h3></div> <p className="mt-1 text-sm text-white/75" >A quick overview of what you can explore right now.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Open <span aria-hidden>→</span></div> </a> </a> <Link href="#guardrails" > <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-2" ><ShieldCheck className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold" >Guardrails</h3></div> <p className="mt-1 text-sm text-white/75" >Defense‑in‑depth checks and safety before shipping.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Open <span aria-hidden>→</span></div> </a> </a> <Link href="/automation" > <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-2" ><Rocket className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold" >Automation Hub</h3></div> <p className="mt-1 text-sm text-white/75" >Factories, agents, and live workflows in one place.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Open <span aria-hidden>→</span></div> </a> </a> </div> </motion.section> {
@@ -5120,9 +5573,17 @@ export default function MainFrontIndex() {
 }</div> </section> {
   /* AUTO-GENERATED: FRONT ADS END */
 }{
+<<<<<<< HEAD
   /* Feature Highlights (new) */
 }<motion.section </a>) )
 }</div> </motion.section> </a>) )
 }</div> </section> </div> > ↑ Top </button>)
 }</div>)
+=======
+  /* Feature Highlights (new) */ 
+}<motion.section </a>) ) 
+}</div> </motion.section> </a>) ) 
+}</div> </section> </div> > ↑ Top </button>) 
+}</div>) 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }/* AUTO-GENERATED: FRONT ACTIONS START */ </a> </div> </section> /* AUTO-GENERATED: FRONT ACTIONS END */

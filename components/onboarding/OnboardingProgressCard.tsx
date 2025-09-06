@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 
 import {CheckCircle2, Circle, PartyPopper} from 'lucide-react';
@@ -28,6 +32,7 @@ function computePercentage(steps: OnboardingStep[]): number {
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
   return Math.round((completedCount / steps.length) * 100);
+<<<<<<< HEAD
 export default function OnboardingProgressCard({
   title
   steps
@@ -52,6 +57,13 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
   const firstIncomplete = steps.find((s) => !s.completed && s.ctaHref && s.ctaLabel);
+=======
+
+};
+
+function computePercentage(steps: OnboardingStep[]): number {
+  if (!steps || steps.length === 0) return 0;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">
@@ -78,6 +90,7 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
           <span className="text-sm">All steps completed — great job!</span>
         </div>
       ) : null}
+<<<<<<< HEAD
       {/* Checklist */}
       <ul className='mt-4 space-y-2'>
         {steps.map(step => (
@@ -97,6 +110,11 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
             {!step.completed && step.ctaHref && step.ctaLabel ? (
               <Link href={step.ctaHref}>
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+=======
+
+      {/* Checklist */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   {step.ctaLabel}
                 </a>
               </Link>
@@ -104,6 +122,10 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
           </li>
         ))}
       </ul>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Primary CTA for next step */}
       {!allDone && firstIncomplete ? (
         <div className='mt-5'>
@@ -117,5 +139,9 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
         </div>
       ) : null}
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

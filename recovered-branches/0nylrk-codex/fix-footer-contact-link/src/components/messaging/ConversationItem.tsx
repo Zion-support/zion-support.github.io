@@ -1,10 +1,23 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import { format  } from 'date-fns';
 import { cn  } from '@/lib/utils';
 import { Conversation  } from '@/types/messaging';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 interface ConversationItemProps {
+=======
+import React from 'react',;
+import { format } from 'date-fns',;
+import { cn } from '@/lib/utils',;
+import { Conversation } from '@/types/messaging',;
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
+interface ConversationItemProps {;
+  conversation: Conversation,;
+  isActive: boolean,;
+  onClick: () => void;
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   conversation: Conversation
   isActive: boolean
@@ -16,9 +29,14 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
 
     <div
       className={cn(
+<<<<<<< HEAD
         "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
         isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30"
 
+=======
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover:bg-zion-blue-dark/30",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}

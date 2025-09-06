@@ -217,6 +217,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
       color: 'text-purple-400'
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <section className='py-20 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
@@ -254,22 +258,40 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             transition={{ duration: 0.8 }}
             className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6"
           >
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {title}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+<<<<<<< HEAD
             className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
           >
             {subtitle}
           </motion.p>
+=======
+            className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >
+
+          >
+
+            {subtitle}
+          </motion.p>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             {stats.map((stat, index) => (
               <div key={index} className='text-center'>
@@ -288,9 +310,17 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                 <div className="text-2xl font-bold text-white">{stat.value}</div>
                 <div className="text-sm text-gray-400">{stat.label}</div>
               </div>
+<<<<<<< HEAD
             ))}
           </motion.div>
         </div>
+=======
+
+            ))}
+          </motion.div>
+        </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Filters */}
         {showFilters && (
           <motion.div
@@ -298,6 +328,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className='mb-12'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -311,6 +345,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     onChange={e => setSelectedCategory(e.target.value)}
                     className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                   >
+<<<<<<< HEAD
                     {categories.map(category => (                      <option key={category.id} value={category.id}>          >
             <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -324,11 +359,21 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   >
                     {categories.map((category) => (
                       <option key={category.id} value={category.id}>
+=======
+                    {categories.map(category => (                      <option key={category.id} value={category.id}>
+
+                      <option key={category.id} value={category.id}>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         {category.icon} {category.name}
                       </option>
                     ))}
                   </select>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {/* Price Range Filter */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -339,6 +384,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     onChange={e => setSelectedPriceRange(e.target.value)}
                     className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                   >
+<<<<<<< HEAD
                     {priceRanges.map(range => (                      <option key={range.id} value={range.id}>                  <select
                     value={selectedPriceRange}
                     onChange={(e) => setSelectedPriceRange(e.target.value)}
@@ -346,11 +392,21 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   >
                     {priceRanges.map((range) => (
                       <option key={range.id} value={range.id}>
+=======
+                    {priceRanges.map(range => (                      <option key={range.id} value={range.id}>
+
+                      <option key={range.id} value={range.id}>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         {range.name}
                       </option>
                     ))}
                   </select>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {/* Sort Options */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -361,6 +417,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     onChange={e => setSortBy(e.target.value)}
                     className='w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                   >
+<<<<<<< HEAD
                     {sortOptions.map(option => (                      <option key={option.id} value={option.id}>                  <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
@@ -368,6 +425,12 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   >
                     {sortOptions.map((option) => (
                       <option key={option.id} value={option.id}>
+=======
+                    {sortOptions.map(option => (                      <option key={option.id} value={option.id}>
+
+                      <option key={option.id} value={option.id}>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         {option.name}
                       </option>
                     ))}
@@ -377,12 +440,21 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             </div>
           </motion.div>
         )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
+<<<<<<< HEAD
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+=======
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           <AnimatePresence>
             {filteredServices.map((service, index) => (
@@ -393,10 +465,15 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -5, scale: 1.02 }}
                 className='group'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               >
                 <div className='relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full'>
                   {/* Popular Badge */}
                   {service.popular && (
+<<<<<<< HEAD
                     <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular              >
                 <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full">
                   {/* Popular Badge */}
@@ -405,6 +482,15 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       ⭐ Most Popular
                     </div>
                   )}
+=======
+                    <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular
+
+                      ⭐ Most Popular
+
+                    </div>
+                  )}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   {/* Header */}
                   <div className='mb-6'>
                     <div className='flex items-center justify-between mb-4'>
@@ -416,11 +502,16 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                         <div className='text-sm text-gray-400'>
                           {service.period}
                         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       </div>
                     </div>
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                       {service.name}
                     </h3>
+<<<<<<< HEAD
                     <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}                      </div>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
@@ -428,12 +519,22 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     </h3>
                     <p className="text-gray-300 text-sm leading-relaxed">
                       {service.tagline}
+=======
+                    <p className='text-gray-300 text-sm leading-relaxed'>                      {service.tagline}
+
+                      {service.tagline}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     </p>
                   </div>
                   {/* Features */}
                   <div className='mb-6'>
                     <h4 className='text-sm font-semibold text-gray-300 mb-3 flex items-center'>
                       <CheckCircle className='w-4 h-4 mr-2 text-green-400' />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       Key Features
                     </h4>
                     <ul className='space-y-2'>
@@ -453,8 +554,15 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       ))}
                     </ul>
                   </div>
+<<<<<<< HEAD
                   {/* Stats */}
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
+=======
+
+                  {/* Stats */}
+                  <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     <div>
                       <div className='text-lg font-bold text-white'>
                         {service.rating}
@@ -487,6 +595,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     </div>
                   </div>
                   {/* ROI Highlight */}
+<<<<<<< HEAD
                   <div className='mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20'>
                     <div className='text-sm text-green-400 font-semibold mb-1'>
                       🚀 ROI Promise
@@ -495,6 +604,11 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     <div className="text-sm text-green-400 font-semibold mb-1">🚀 ROI Promise</div>
                     <div className="text-xs text-gray-300 leading-relaxed">
                       {service.roi}
+=======
+
+                      {service.roi}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     </div>
                   </div>
                   {/* Market Position */}
@@ -510,6 +624,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   </div>
                   {/* CTA */}
                   <div className='mt-auto'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     <Button
                       href={service.link}
                       variant='primary'
@@ -551,12 +669,21 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             ))}
           </AnimatePresence>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
           className='text-center mt-16'
+<<<<<<< HEAD
+=======
+
+        >
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <div className='bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
               Ready to Transform Your Business?
@@ -610,3 +737,7 @@ export default EnhancedServiceShowcase;  )
 }
 export default EnhancedServiceShowcase;
 
+<<<<<<< HEAD
+=======
+export default EnhancedServiceShowcase;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

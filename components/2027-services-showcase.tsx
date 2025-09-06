@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -361,6 +366,7 @@ export default function ServicesShowcase2027() {
               </div>
             </div>
             {/* CTA Buttons */}
+<<<<<<< HEAD
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
                 href='/contact'
@@ -385,12 +391,19 @@ export default function ServicesShowcase2027() {
                 className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <DollarSign className="w-5 h-5" />
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <span>View Pricing</span>
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Search and Filters */}
       <section className='px-4 sm:px-6 lg:px-8 mb-16'>
         <div className='max-w-7xl mx-auto'>
@@ -444,6 +457,10 @@ export default function ServicesShowcase2027() {
                   ))}
                 </select>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Price Range Filter */}
               <div>
                 <label className='block text-cyan-400 font-medium mb-2'>
@@ -466,6 +483,10 @@ export default function ServicesShowcase2027() {
                   ))}
                 </select>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Sort By */}
               <div>
                 <label className='block text-cyan-400 font-medium mb-2'>
@@ -521,6 +542,7 @@ export default function ServicesShowcase2027() {
                     </p>
                     {/* Price */}
                     <div className='mb-4'>
+<<<<<<< HEAD
                       <div className='text-2xl font-bold text-white'>                        {service.price}                >
                   <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20">
                     {/* Service Header */}
@@ -539,6 +561,17 @@ export default function ServicesShowcase2027() {
                       <div className='text-2xl font-bold text-white'>                    <div className="mb-4">
                       <div className="text-2xl font-bold text-white">
                         {service.price}
+=======
+                      <div className='text-2xl font-bold text-white'>                        {service.price}
+
+                      {service.description}
+                    </p>
+
+                    {/* Price */}
+
+                        {service.price}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       </div>
                     </div>
                     {/* Features */}
@@ -572,6 +605,10 @@ export default function ServicesShowcase2027() {
                         )}
                       </div>
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     {/* ROI */}
                     <div className='mb-6 text-center'>
                       <div className='text-green-400 font-semibold text-lg'>
@@ -590,12 +627,17 @@ export default function ServicesShowcase2027() {
                       </Link>
                       <Link
                         href='/contact'
+<<<<<<< HEAD
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                      >                    </div>
                     {/* Actions */}
                     <div className="flex space-x-3">
                       <Link
                         href={service.link}
                         className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm"
+=======
+                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                      >
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       >
                         Learn More
                       </Link>
@@ -607,6 +649,10 @@ export default function ServicesShowcase2027() {
                         Contact
                       </Link>
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     {/* Category Badge */}
                     <div className='mt-4'>
                       <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>                        {service.category}                    <div className="mt-4">
@@ -619,6 +665,10 @@ export default function ServicesShowcase2027() {
               ))}
             </AnimatePresence>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* No Results */}
           {sortedServices.length === 0 && (
             <motion.div
@@ -638,11 +688,17 @@ export default function ServicesShowcase2027() {
                   setSelectedCategory('all');
                   setSelectedPriceRange('all');
                 }}
+<<<<<<< HEAD
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'              >              className="text-center py-20"
             >
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-cyan-300 mb-6">Try adjusting your search criteria or browse all services.</p>
+=======
+                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'              >
+
+              <button
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 onClick={() => {
                   setSearchTerm('');
                   setSelectedCategory('all');
@@ -659,11 +715,19 @@ export default function ServicesShowcase2027() {
           )}
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Contact Section */}
       <section className='px-4 sm:px-6 lg:px-8 mb-20'>
         <div className='max-w-4xl mx-auto'>
           <div className='bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20'>
             <h2 className='text-3xl font-bold text-white mb-4'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               Ready to Transform Your Business?
             </h2>
             <p className='text-cyan-300 mb-8 text-lg'>
@@ -783,5 +847,9 @@ export default function ServicesShowcase2027() {
         </div>
       </footer>
     </UltraFuturisticMatrixBackground2027>
+<<<<<<< HEAD
 );  )
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { JSX } from 'react',
 
 export default function App(): JSX.Element {
@@ -12,6 +13,8 @@ export default function App(): JSX.Element {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './src/components/ErrorBoundary';
@@ -23,6 +26,7 @@ import AboutPage from './src/pages/About';
 import ContactPage from './src/pages/Contact';
 import ServicesPage from './src/pages/Services';
 import PricingPage from './src/pages/Pricing';
+<<<<<<< HEAD
 =======
 import React, { JSX } from 'react';
 
@@ -42,6 +46,8 @@ export default function App(): JSX.Element {
 =======
 import React, { JSX } from 'react';
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 export default function App() {
 >>>>>>> origin/main
@@ -49,8 +55,29 @@ export default function App() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   return (
+<<<<<<< HEAD
     <main>
       <h1>Hello App</h1>
     </main>
+=======
+    <ErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-gray-50">
+          <Header />
+          <Sidebar />
+          <main className="flex-1 lg:ml-80">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/pricing" element={<PricingPage />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </ErrorBoundary>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }

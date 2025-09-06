@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { Skill  } from '@/types/resume';
 import { SkillCategory } from './SkillCategory';
@@ -29,6 +30,34 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
   if (Object.keys(skillsByCategory).length === 0) {
     return null;
   }
+=======
+import { useState, useEffect } from 'react',;
+import { Skill } from '@/types/resume',;
+import { SkillCategory } from './SkillCategory',;
+interface SkillsListProps {;
+  skills: Skill[],;
+  onDeleteSkill: (id: string, category: string) => Promise<void>;
+}
+;
+export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
+  const [skillsByCategory, setSkillsByCategory] = useState<Record<string Skill[]>>({}),;
+  useEffect(() => {;
+    // Group skills by category;
+    const grouped = skills.reduce((acc, skill) => {;
+      const category = skill.category || 'Other',;
+      if (!acc[category]) {;
+        acc[category] = [];
+      }
+      acc[category].push(skill),;
+      return acc;
+    }, {} as Record<string Skill[]>),;
+    setSkillsByCategory(grouped);
+  }, [skills]);
+  if (Object.keys(skillsByCategory).length === 0) {;
+    return null;
+  }
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       <h3 className="text-md font-medium">Your Skills</h3>
@@ -41,8 +70,15 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
             onDelete={onDeleteSkill}
           />
         ))}
+<<<<<<< HEAD
       </div>
     </div>
   );
 }
 
+=======
+      </div>;
+    </div>;
+  );
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

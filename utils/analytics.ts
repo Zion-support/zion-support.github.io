@@ -2,6 +2,7 @@ export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest';
 export type TrackEventPayload = {
   name: string;
   page?: string;
+<<<<<<< HEAD
   userType?: UserType;
   properties?: Record<string, any>;
   at?: string;
@@ -16,5 +17,28 @@ export async function trackEvent(payload: TrackEventPayload) {
     });
   } catch (e) {
     // swallow
+=======
+  userType?: UserType,;
+  properties?: Record<string, any>,;
+  at?: string;
+};
+export async function trackEvent(payload: TrackEventPayload) {;
+  try {
+    await fetch('/api/analytics/events/track', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON.stringify(payload);
+      keepalive: true as any});
+  } catch (error) {
+    // swallow;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
+=======
+import React, { useState } from 'react';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export interface TreeNode {
   name: string;
   path: string;
@@ -6,9 +11,17 @@ export interface TreeNode {
   type: 'folder' | 'file';
   exists?: boolean;
   children?: TreeNode[];
+<<<<<<< HEAD
 interface TreeProps {
   nodes: TreeNode[];
   onDeploy?: (path: string) => void;
+=======
+
+interface TreeProps {
+  nodes: TreeNode[];
+  onDeploy?: (path: string) => void;
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function NodeItem({
   node
   depth
@@ -112,6 +125,7 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
             />          ))}
         </div>
       )}
+<<<<<<< HEAD
     </div>        {hasChildren ? (
           <button className="text-sm" onClick={toggle} aria-label="Toggle">
             {open ? "▾" : "▸"}
@@ -132,10 +146,15 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
         <div className="ml-4 border-l pl-2">
           {node.children!.map((child) => (
             <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />
+=======
+    </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           ))}
         </div>
       )}
     </div>
+<<<<<<< HEAD
   );
 export function Tree({ nodes, onDeploy }: TreeProps) {
   return (
@@ -183,3 +202,10 @@ export default Tree;
 }export default Tree;}
 export default Tree;
 
+=======
+
+        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
+      ))}
+    </div>
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

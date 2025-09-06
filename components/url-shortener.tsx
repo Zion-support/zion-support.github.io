@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Button from '../components/ui/Button';
 
 import {
@@ -52,7 +58,12 @@ export default function URLShortenerPage() {
       result += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     return result;
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
   }
@@ -368,6 +379,10 @@ export default function URLShortenerPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
         <section className='py-20 bg-gray-800'>
@@ -551,11 +566,20 @@ export default function URLShortenerPage() {
           </div>
         </section>
       )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Features */}
       <section className='py-20 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
+=======
+
+              Professional URL Shortening Features
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to create, manage, and track your shortened
@@ -765,5 +789,9 @@ export default function URLShortenerPage() {
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

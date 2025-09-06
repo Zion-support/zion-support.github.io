@@ -48,4 +48,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   fs.writeFileSync(statusPath, JSON.stringify(merged, null, 2));
 
   res.status(200).json({ ok: true })
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

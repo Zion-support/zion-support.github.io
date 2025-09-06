@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -200,6 +204,10 @@ const socialLinks = [
   { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube }
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const certifications = [
   'ISO 27001 Certified'
   'SOC 2 Type II Compliant'
@@ -225,6 +233,7 @@ const certifications = [
 export default function UltraFuturisticFooter2030() {
   return (
     <footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>
+<<<<<<< HEAD
       {/* Animated Background */}
       <div className='absolute inset-0'>
         <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5'></div>
@@ -341,6 +350,16 @@ export default function UltraFuturisticFooter2030() {
                   <Globe className="w-4 h-4 text-purple-400" />
                   <a href={contactInfo.website} className="hover:text-purple-400 transition-colors">
                     {contactInfo.website.replace('https://', '')}
+=======
+
+];
+
+export default function UltraFuturisticFooter2030() {
+  return (
+
+                    {contactInfo.website.replace('https://', '')}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </a>
                 </div>
               </div>
@@ -349,6 +368,10 @@ export default function UltraFuturisticFooter2030() {
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Rocket className='w-5 h-5 text-purple-400' />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <span>Our Services</span>
               </h4>
               <div className='grid grid-cols-1 gap-4'>
@@ -382,6 +405,10 @@ export default function UltraFuturisticFooter2030() {
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* Quick Links */}
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
@@ -430,10 +457,18 @@ export default function UltraFuturisticFooter2030() {
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* Social & Certifications */}
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Users className='w-5 h-5 text-green-400' />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <span>Connect & Trust</span>
               </h4>
               {/* Social Links */}
@@ -454,6 +489,7 @@ export default function UltraFuturisticFooter2030() {
                     <a
                       key={index}
                       href={social.href}
+<<<<<<< HEAD
                       target='_blank'
                       rel='noopener noreferrer'
                       className='w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40'
@@ -466,10 +502,23 @@ export default function UltraFuturisticFooter2030() {
                   ))}
                 </div>
               </div>
+=======
+
+                    </a>
+
+                  ))}
+                </div>
+              </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Certifications */}
               <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
                   <Award className='w-4 h-4' />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   <span>Certifications</span>
                 </h5>
                 <div className='grid grid-cols-1 gap-2'>
@@ -492,6 +541,10 @@ export default function UltraFuturisticFooter2030() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Bottom Bar */}
         <div className='border-t border-purple-500/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>

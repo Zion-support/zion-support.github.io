@@ -1,7 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
 export type SkeletonProps = {
   className?: string;
 }
+=======
+
+export type SkeletonProps = {
+  className?: string;
+};
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Skeleton({ className = '' }: SkeletonProps) {
     >
       <div className='absolute inset-0 -translate-x-full animate-[shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent' />
@@ -27,6 +35,7 @@ export default function Skeleton({ className = '' }: SkeletonProps) {
         }
       `}</style>
     </div>
+<<<<<<< HEAD
   );
 import React from "react";
 interface SkeletonProps {
@@ -70,3 +79,6 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
 }
 export default Component
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

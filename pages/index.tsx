@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from 'react';
@@ -51,6 +52,15 @@ import { ContactInfo, AnimationState  } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary',
 import LoadingSpinner from '../components/LoadingSpinner';
 // import PerformanceMonitor from '../components/PerformanceMonitor';
+=======
+import Link from 'next/link';
+import Head from 'next/head';
+import {useState, useEffect, Suspense} from 'react';
+import {ContactInfo, AnimationState} from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
 
@@ -76,8 +86,13 @@ export default function Home() {
           </button>
         </div>
       </div>
+<<<<<<< HEAD
     )
   }
+=======
+    ),
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <>;
       <Head>;
@@ -104,6 +119,7 @@ export default function Home() {
         <meta name="twitter:creator" content="@ziontechgroup" />;
         <script;
           type="application/ld+json";
+<<<<<<< HEAD
           dangerouslySetInnerHTML={{__html:JSON.stringify({;
               "@context":"https://schema.org";
               "@type":"Organization";
@@ -123,6 +139,30 @@ export default function Home() {
                 "contactType":"customer service";
                 "email":contact.email;
               }
+=======
+          dangerouslySetInnerHTML={{;
+            __html:JSON.stringify({;
+              "@context":"https://schema.org",;
+              "@type":"Organization",;
+              "name":"Zion Tech Group",;
+              "url":contact.site,;
+              "logo":`${contact.site}/favicon.svg`,;
+              "description":"Leading provider of micro SaaS products, AI services, and IT solutions",;
+              "address":{;
+                "@type":"PostalAddress",;
+                "streetAddress":"364 E Main St STE 1008",;
+                "addressLocality":"Middletown",;
+                "addressRegion":"DE",;
+                "postalCode":"19709",;
+                "addressCountry":"US";
+              },;
+              "contactPoint":{;
+                "@type":"ContactPoint",;
+                "telephone":contact.phone,;
+                "contactType":"customer service",;
+                "email":contact.email;
+              },;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               "sameAs":[contact.site];
             });
           }}
@@ -201,7 +241,11 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-colors">;
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">Micro SaaS Products</h3>;
                 <p className="text-slate-300 mb-6">;
+<<<<<<< HEAD
                   Innovative, focused software solutions including AI-Powered Video Clip Maker;
+=======
+                  Innovative, focused software solutions including AI-Powered Video Clip Maker, ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.;
                 </p>;
                 <ul className="text-slate-400 space-y-2 mb-6">;
@@ -218,7 +262,11 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors">;
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>;
                 <p className="text-slate-300 mb-6">;
+<<<<<<< HEAD
                   Advanced artificial intelligence solutions including autonomous AI agents;
+=======
+                  Advanced artificial intelligence solutions including autonomous AI agents, ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   financial trading systems, legal document analysis, and 40+ more AI-powered services.;
                 </p>;
                 <ul className="text-slate-400 space-y-2 mb-6">;
@@ -235,7 +283,11 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors">;
                 <h3 className="text-2xl font-bold mb-4 text-green-400">IT & Cloud Services</h3>;
                 <p className="text-slate-300 mb-6">;
+<<<<<<< HEAD
                   Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions;
+=======
+                  Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions, ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   DevSecOps automation, and 40+ more enterprise-grade services.;
                 </p>;
                 <ul className="text-slate-400 space-y-2 mb-6">;
@@ -283,6 +335,7 @@ export default function Home() {
         </Suspense>;
         {/* <PerformanceMonitor ;          showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
+<<<<<<< HEAD
           onThresholdExceeded={(metrics) => {console.warn('Performance thresholds exceeded:', metrics);
           }}
         /> */}
@@ -784,6 +837,10 @@ export default function Home() {
         {/* <PerformanceMonitor ;          showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
           onThresholdExceeded={(metrics) => {console.warn('Performance thresholds exceeded:', metrics);
+=======
+          onThresholdExceeded={(metrics) => {;
+            console.warn('Performance thresholds exceeded:', metrics);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           }}
         /> */}
       </ErrorBoundary>;
@@ -808,6 +865,7 @@ export default function HomePage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1095,6 +1153,15 @@ import {Button} from '../src/components/ui/button';
           </div>
         </section>
 >>>>>>> origin/main
+=======
+}
+          </div>
+=======
+}          </div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+        </section>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Services Section */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1107,6 +1174,7 @@ import {Button} from '../src/components/ui/button';
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Core Services
               </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
@@ -1121,12 +1189,20 @@ import {Button} from '../src/components/ui/button';
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               </p>
             </motion.div>
+=======
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive technology solutions designed to accelerate your business growth
+              </p>
+            </motion.div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
                   key={index}
                   className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1135,6 +1211,8 @@ import {Button} from '../src/components/ui/button';
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                 >
@@ -1163,6 +1241,7 @@ import {Button} from '../src/components/ui/button';
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Featured Services */}
         <section className="py-16 bg-white">
 >>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
@@ -1219,6 +1298,26 @@ import {Button} from '../src/components/ui/button';
         <section className="py-20">
 =======
             </motion.div>
+=======
+
+        {/* Featured Services */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Featured Solutions
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our most popular and effective technology solutions
+              </p>
+            </motion.div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredServices.map((service, index) => (
                 <motion.div
@@ -1239,6 +1338,7 @@ import {Button} from '../src/components/ui/button';
                   <div className="mt-4">
                     <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1270,11 +1370,14 @@ import {Button} from '../src/components/ui/button';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1291,6 +1394,12 @@ import {Button} from '../src/components/ui/button';
 >>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <<<<<<< HEAD
+=======
+
+        {/* Why Choose Us */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -1301,6 +1410,7 @@ import {Button} from '../src/components/ui/button';
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 We deliver exceptional results through innovation, expertise, and dedication
@@ -1451,6 +1561,13 @@ import {Button} from '../src/components/ui/button';
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 We deliver exceptional results through innovation, expertise, and dedication
               </p>
+=======
+                We deliver exceptional results through innovation, expertise, and dedication
+              </p>
+=======
+                We deliver exceptional results through innovation, expertise, and dedication              </p>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -1466,6 +1583,7 @@ import {Button} from '../src/components/ui/button';
                     <item.icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
+<<<<<<< HEAD
                   <p className="text-gray-600">{item.description}</p>
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -1593,6 +1711,14 @@ import {Button} from '../src/components/ui/button';
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                 </motion.div>
+=======
+<<<<<<< HEAD
+                  <p className="text-gray-600">{item.description}</p>
+                </motion.div>
+=======
+                  <p className="text-gray-600">{item.description}</p>                </motion.div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ))}
             </div>
           </div>
@@ -1753,6 +1879,7 @@ import {Button} from '../src/components/ui/button';
     </>
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 =======
@@ -1773,3 +1900,5 @@ import {Button} from '../src/components/ui/button';
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

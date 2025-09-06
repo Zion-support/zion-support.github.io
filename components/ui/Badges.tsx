@@ -46,5 +46,10 @@ export function MicroTestimonial({ quote, author }: { quote: string, author: str
       <blockquote className="italic opacity-90">“{quote}”</blockquote>
       <figcaption className="mt-2 font-medium opacity-80">— {author}</figcaption>
     </figure>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

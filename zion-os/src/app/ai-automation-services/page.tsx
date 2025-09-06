@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 import Link from "next/link";
 export const metadata = {title: "AI Automation Services - Zion Tech Group";
   description: "Transform your business with intelligent AI automation solutions. Streamline operations, reduce costs, and enhance productivity with our cutting-edge automation technology.";
   keywords: "AI automation, business process automation, intelligent automation, workflow automation, Zion Tech Group"}
 export default function AIAutomationServicesPage() {return (;
+=======
+import Link from "next/link",;
+export const metadata = {;
+  title: "AI Automation Services - Zion Tech Group",;
+  description: "Transform your business with intelligent AI automation solutions. Streamline operations, reduce costs, and enhance productivity with our cutting-edge automation technology.";
+  keywords: "AI automation, business process automation, intelligent automation, workflow automation, Zion Tech Group"};
+export default function AIAutomationServicesPage() {;
+  return (;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
         {/* Hero Section */}

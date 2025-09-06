@@ -4,6 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
+<<<<<<< HEAD
 import { toast } from "sonner";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface ExportPanelProps {
@@ -91,4 +92,9 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
     </Card>
   )
 }
+=======
+import { toast } from "sonner",
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 

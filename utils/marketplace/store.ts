@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Marketplace data store utilitiesexport interface Project {
   id: string;
   title: string;
@@ -418,4 +419,7 @@ export function createMessageData(
 }
 export function generateId(prefix: string = 'item'): string {
   return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

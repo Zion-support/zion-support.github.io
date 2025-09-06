@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
@@ -16,3 +17,5 @@ export function getServerSupabase() {
     })
   };
 }
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

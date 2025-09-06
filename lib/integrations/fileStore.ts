@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import fs from "fs";
 import path from "path";
 import { IntegrationsState } from "./types";
@@ -36,4 +39,7 @@ export function writeState(
     fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), "utf8"));
   return current;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

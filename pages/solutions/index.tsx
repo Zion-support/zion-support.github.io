@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,12 +36,15 @@ import {
 import Layout from '../../components/Layout';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 =======
 >>>>>>> origin/main
@@ -196,6 +203,10 @@ export default function SolutionsPage() {
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {solution.description}
                     </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     <ul className="space-y-2 mb-6">
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -312,3 +323,7 @@ export default function SolutionsPage() {
 }
 export default SolutionsPage;
 
+<<<<<<< HEAD
+=======
+export default SolutionsPage;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

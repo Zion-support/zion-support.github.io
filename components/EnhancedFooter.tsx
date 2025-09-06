@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 
 import {
@@ -57,6 +61,7 @@ const EnhancedFooter: React.FC = () => {
     }
   ];
   const socialLinks = [
+<<<<<<< HEAD
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
     {
       name: 'LinkedIn'
@@ -111,6 +116,10 @@ const EnhancedFooter: React.FC = () => {
               <div className='flex items-center space-x-3 text-white/70'>
                 <MapPin className='w-4 h-4' />                <span>Global Operations</span>              <div className="flex items-center space-x-3 text-white/70">
                 <MapPin className="w-4 h-4" />
+=======
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <span>Global Operations</span>
               </div>
             </div>
@@ -141,6 +150,10 @@ const EnhancedFooter: React.FC = () => {
             </div>
           ))}
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Bottom Section */}
         <div className='pt-8 border-t border-white/10'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
@@ -157,6 +170,7 @@ const EnhancedFooter: React.FC = () => {
             {/* Social Links */}
             <div className='flex items-center space-x-4'>
               {socialLinks.map(social => (
+<<<<<<< HEAD
                 <a
                   key={social.name}
                   href={social.href}
@@ -175,6 +189,16 @@ const EnhancedFooter: React.FC = () => {
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
+=======
+
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+
+            {/* Social Links */}
+
+                </a>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ))}
             </div>
           </div>
@@ -388,3 +412,7 @@ company updates.;
     </footer>
   )}"'
 
+<<<<<<< HEAD
+=======
+export default EnhancedFooter;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

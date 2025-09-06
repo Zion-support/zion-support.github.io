@@ -1,10 +1,19 @@
 
+<<<<<<< HEAD
 import React from "react";
 import { completeSitemap, dynamicPaths } from "@/config/sitemap";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { SEO } from "./SEO";
 import { AppLayout } from "@/layout/AppLayout";
+=======
+import React from 'react',
+import { completeSitemap, dynamicPaths } from '@/config/sitemap',
+import { Link } from 'react-router-dom',
+import { ChevronRight } from 'lucide-react',
+import { SEO } from './SEO',
+import { AppLayout } from '@/layout/AppLayout',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const SitemapPage: React.FC = () => {
   return (
     <AppLayout>
@@ -163,6 +172,7 @@ export const SitemapPage: React.FC = () => {
                   </div>
                 </li>
               ))}
+<<<<<<< HEAD
             </ul>
           </div>
         </div>
@@ -171,3 +181,12 @@ export const SitemapPage: React.FC = () => {
   );
 }
 
+=======
+            </ul>;
+          </div>;
+        </div>;
+      </div>;
+    </AppLayout>;
+  );
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

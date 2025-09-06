@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 </div> </div>) )
+=======
+ </div> </div>) ) 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
@@ -9,12 +13,21 @@ export async function getServerSideProps() {
   try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
+<<<<<<< HEAD
     items = json.items |[];
     generatedAt = json.generatedAt |''
 
   } catch {}
   return { props: { items, generatedAt } }
 }
+=======
+    items = json.items || [];
+    generatedAt = json.generatedAt || ''
+  } catch {}
+  return { props: { items, generatedAt } }
+}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {
   return (
     <div className="space-y-6">
@@ -35,5 +48,10 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

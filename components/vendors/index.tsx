@@ -2,7 +2,12 @@ import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
 import type { Vendor } from '../../utils/vendor-types';
 
+<<<<<<< HEAD
 type Props = { vendors: Vendor[] }
+=======
+type Props = { vendors: Vendor[] };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function VendorsPage({ vendors }: Props) {
   return (
     <div className='space-y-6'>
@@ -80,6 +85,7 @@ export default function VendorsPage({ vendors }: Props) {
         Powered by Zion • Co-brand available
       </div>
     </div>
+<<<<<<< HEAD
   );
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
 const { listVendors } = await import('../../utils/vendor-store');
@@ -87,6 +93,8 @@ const { listVendors } = await import('../../utils/vendor-store');
   return { props: { vendors } }
 };      <div className="text-center text-xs text-gray-500">Powered by Zion • Co-brand available</div>
     </div>
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
@@ -96,3 +104,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
 };  return { props: { vendors } }
 }
 
+<<<<<<< HEAD
+=======
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  const { listVendors } = await import('../../utils/vendor-store');
+  const vendors = listVendors();
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

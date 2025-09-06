@@ -53,4 +53,8 @@ export default async function handler(
   const ranked = candidates.map((k) => ({ key: k, chain: (CHAINS as any)[k] }));
 
   res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

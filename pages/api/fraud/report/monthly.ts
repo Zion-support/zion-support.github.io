@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
@@ -7,8 +8,26 @@ export default async function handler(
 ) {
   if (req.method !== "GET") {
     res.status(405).json({ error: "Method not allowed" });
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getFraudStore } from '../../../../utils/fraud/store';
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
   const month =
     (req.query.month as string) |new Date().toISOString().slice(0, 7);
   const store = getFraudStore();
@@ -16,3 +35,28 @@ export default async function handler(
   res.status(200).json(report);
 }
 
+=======
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const month = (req.query.month as string) || new Date().toISOString().slice(0, 7);
+  const store = getFraudStore();
+  const report = await store.generateMonthlyReport(month);
+  res.status(200).json(report);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

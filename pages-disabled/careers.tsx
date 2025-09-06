@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Users, Rocket, Brain, Atom, Shield, Cloud;
@@ -219,6 +223,10 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Open Positions */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -307,6 +315,10 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -340,4 +352,8 @@ export default function CareersPage() {
       <EnhancedFooter />
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

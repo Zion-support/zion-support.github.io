@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -609,16 +610,48 @@ module.exports = AutomationFactory;
 =======
 =======
     };
+=======
+
+  optimizeImages() {,
+    try {,
+      // Placeholder for image optimization,
+      return { optimized: 0, totalImages: 0, savings: "0KB" };
+    } catch (error) {,
+      return { error: error.message };
+    };
+
+  analyzeDependencies() {,
+    try {,
+      const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../package.json"), "utf8")),
+      const dependencies = Object.keys(packageJson.dependencies || {}),
+      const devDependencies = Object.keys(packageJson.devDependencies || {}),
+
+      return {,
+        totalDependencies: dependencies.length + devDependencies.length,
+        productionDependencies: dependencies.length,
+        devDependencies: devDependencies.length};
+    } catch (error) {,
+      return { error: error.message };
+    };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   };
 ,
   loadStatus() {,
     try {,
       if (fs.existsSync(this.statusFile)) {,
         const status = JSON.parse(fs.readFileSync(this.statusFile, "utf8")),
+<<<<<<< HEAD
         this.runningScripts = new Map(Object.entries(status.runningScripts || {})),
       };
     } catch (error) {,
       this.log(`Error loading status: ${error.message}`),
+=======
+        this.runningScripts = new Map(Object.entries(status.runningScripts || {}))
+      };
+    } catch (error) {,
+      this.log(`Error loading status: ${error.message}`)
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     };
       };
     };
@@ -637,16 +670,27 @@ class CodeQualityMonitor {,
       maintainability: 0,
       testCoverage: 0,
       performance: 0,
+<<<<<<< HEAD
       lastUpdated: new Date().toISOString(),
     };
     this.logFile = path.join(__dirname, "logs", "code-quality.log"),
+=======
+      lastUpdated: new Date().toISOString()
+    };
+    this.logFile = path.join(__dirname, "logs", "code-quality.log")
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   };
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = \`[\${timestamp}] \${message}\\n\`,
+<<<<<<< HEAD
     console.log(message),
     fs.appendFileSync(this.logFile, logMessage),
+=======
+    // console.log(message),
+    fs.appendFileSync(this.logFile, logMessage)
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   };
 ,
   async analyzeCodeQuality() {,
@@ -661,10 +705,17 @@ class CodeQualityMonitor {,
 ,
       this.saveMetrics(),
       this.log("Code quality analysis completed successfully"),
+<<<<<<< HEAD
       return this.metrics,
     } catch (error) {,
       this.log(\`Code quality analysis failed: \${error.message}\`, "ERROR"),
       return null,
+=======
+      return this.metrics
+    } catch (error) {,
+      this.log(\`Code quality analysis failed: \${error.message}\`, "ERROR"),
+      return null
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     };
   };
 ,
@@ -675,11 +726,19 @@ class CodeQualityMonitor {,
       files.forEach(file => {,
         const content = fs.readFileSync(file, "utf8"),
         const lines = content.split("\\n"),
+<<<<<<< HEAD
         totalComplexity += lines.length * 0.1, // Simplified complexity metric,
       }),
       return Math.min(Math.floor(totalComplexity), 100),
     } catch (error) {,
       return Math.floor(Math.random() * 10) + 1,
+=======
+        totalComplexity += lines.length * 0.1, // Simplified complexity metric
+      }),
+      return Math.min(Math.floor(totalComplexity), 100)
+    } catch (error) {,
+      return Math.floor(Math.random() * 10) + 1
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     };
   };
 ,
@@ -689,6 +748,7 @@ class CodeQualityMonitor {,
       const totalFiles = files.length,
       const avgFileSize = files.reduce((acc, file) => {,
         const stats = fs.statSync(file),
+<<<<<<< HEAD
         return acc + stats.size,
       }, 0) / totalFiles,
 ,
@@ -696,17 +756,34 @@ class CodeQualityMonitor {,
       return Math.max(50, 100 - Math.floor(avgFileSize / 1000)),
     } catch (error) {,
       return Math.floor(Math.random() * 100) + 50,
+=======
+        return acc + stats.size
+      }, 0) / totalFiles,
+,
+      // Lower file size = higher maintainability,
+      return Math.max(50, 100 - Math.floor(avgFileSize / 1000))
+    } catch (error) {,
+      return Math.floor(Math.random() * 100) + 50
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     };
   };
 ,
   calculateTestCoverage() {,
     // Placeholder for test coverage calculation,
+<<<<<<< HEAD
     return Math.floor(Math.random() * 100),
+=======
+    return Math.floor(Math.random() * 100)
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   };
 ,
   calculatePerformance() {,
     // Placeholder for performance calculation,
+<<<<<<< HEAD
     return Math.floor(Math.random() * 100) + 70,
+=======
+    return Math.floor(Math.random() * 100) + 70
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   };
 ,
   getTypeScriptFiles() {,
@@ -720,6 +797,7 @@ class CodeQualityMonitor {,
         const stat = fs.statSync(fullPath),
 ,
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
+<<<<<<< HEAD
           walkDir(fullPath),
         } else if (item.endsWith(".ts") || item.endsWith(".tsx")) {,
           files.push(fullPath),
@@ -729,18 +807,37 @@ class CodeQualityMonitor {,
 ,
     walkDir(projectRoot),
     return files,
+=======
+          walkDir(fullPath)
+        } else if (item.endsWith(".ts") || item.endsWith(".tsx")) {,
+          files.push(fullPath)
+        };
+      })
+    };
+,
+    walkDir(projectRoot),
+    return files
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   };
 ,
   saveMetrics() {,
     const metricsFile = path.join(__dirname, "logs", "code-quality-metrics.json"),
+<<<<<<< HEAD
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2)),
+=======
+    fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2))
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   };
 };
 ,
 const monitor = new CodeQualityMonitor(),
 monitor.analyzeCodeQuality().then(metrics => {,
   if (metrics) {,
+<<<<<<< HEAD
     console.log("Metrics:", metrics),
+=======
+    // console.log("Metrics:", metrics)
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   };
 }),`,
 ,
@@ -754,10 +851,17 @@ monitor.analyzeCodeQuality().then(metrics => {,
       status: "available",
       lastRun: null,
       successCount: 0,
+<<<<<<< HEAD
       errorCount: 0,
     }),
 ,
     this.log("Generated enhanced code quality monitor script"),
+=======
+      errorCount: 0
+    }),
+,
+    this.log("Generated enhanced code quality monitor script")
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   };
 ,
   generatePerformanceOptimizer() {,
@@ -769,14 +873,23 @@ const { execSync } = require("child_process"),
 class PerformanceOptimizer {,
   constructor() {,
     this.optimizations = [],
+<<<<<<< HEAD
     this.logFile = path.join(__dirname, "logs", "performance-optimizer.log"),
+=======
+    this.logFile = path.join(__dirname, "logs", "performance-optimizer.log")
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   };
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = \`[\${timestamp}] \${message}\\n\`,
+<<<<<<< HEAD
     console.log(message),
     fs.appendFileSync(this.logFile, logMessage),
+=======
+    // console.log(message),
+    fs.appendFileSync(this.logFile, logMessage)
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   };
 ,
   async optimizePerformance() {,
@@ -798,15 +911,26 @@ class PerformanceOptimizer {,
         bundleSize: bundleAnalysis,
         imageOptimization: imageOptimization,
         dependencies: dependencyAnalysis,
+<<<<<<< HEAD
         recommendations: this.generateRecommendations(),
+=======
+        recommendations: this.generateRecommendations()
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       };
 ,
       this.saveReport(report),
       this.log("Performance optimization completed"),
+<<<<<<< HEAD
       return report,
     } catch (error) {,
       this.log(\`Performance optimization failed: \${error.message}\`, "ERROR"),
       return null,
+=======
+      return report
+    } catch (error) {,
+      this.log(\`Performance optimization failed: \${error.message}\`, "ERROR"),
+      return null
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     };
   };
 ,
@@ -816,7 +940,11 @@ class PerformanceOptimizer {,
       return {,
         totalSize: "2.1MB",
         gzippedSize: "650KB",
+<<<<<<< HEAD
         recommendations: ["Consider code splitting", "Remove unused dependencies"],
+=======
+        recommendations: ["Consider code splitting", "Remove unused dependencies"]
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       };
     } catch (error) {,
       return { error: error.message };
@@ -842,7 +970,11 @@ class PerformanceOptimizer {,
         totalDependencies: dependencies.length + devDependencies.length,
         productionDependencies: dependencies.length,
         devDependencies: devDependencies.length,
+<<<<<<< HEAD
         potentialUnused: this.findUnusedDependencies(),
+=======
+        potentialUnused: this.findUnusedDependencies()
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       };
     } catch (error) {,
       return { error: error.message };
@@ -851,7 +983,11 @@ class PerformanceOptimizer {,
 ,
   findUnusedDependencies() {,
     // Placeholder for unused dependency detection,
+<<<<<<< HEAD
     return ["example-unused-package"],
+=======
+    return ["example-unused-package"]
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   };
 ,
   generateRecommendations() {,
@@ -860,20 +996,34 @@ class PerformanceOptimizer {,
       "Optimize images using WebP format",
       "Remove unused dependencies",
       "Enable gzip compression",
+<<<<<<< HEAD
       "Use React.memo for expensive components",
     ],
+=======
+
+      "Use React.memo for expensive components"
+    ]
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   };
 ,
   saveReport(report) {,
     const reportFile = path.join(__dirname, "logs", "performance-report.json"),
+<<<<<<< HEAD
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),
+=======
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   };
 };
 ,
 const optimizer = new PerformanceOptimizer(),
 optimizer.optimizePerformance().then(report => {,
   if (report) {,
+<<<<<<< HEAD
     console.log("Performance report:", report),
+=======
+    // console.log("Performance report:", report)
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   };
 }),`,
 ,
@@ -887,16 +1037,28 @@ optimizer.optimizePerformance().then(report => {,
       status: "available",
       lastRun: null,
       successCount: 0,
+<<<<<<< HEAD
       errorCount: 0,
     }),
 ,
     this.log("Generated performance optimizer script"),
+=======
+
+      errorCount: 0
+    }),
+,
+    this.log("Generated performance optimizer script")
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   };
 ,
   async runScript(scriptName, options = {}) {,
     if (!this.scripts.has(scriptName)) {,
       this.log(`Script "${scriptName}" not found`, "ERROR"),
+<<<<<<< HEAD
       return false,
+=======
+      return false
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     };
 ,
     const script = this.scripts.get(scriptName),
@@ -906,10 +1068,18 @@ optimizer.optimizePerformance().then(report => {,
       this.log(`Starting script: ${scriptName}`),
       this.runningScripts.set(scriptName, { startTime, pid: null }),
       this.saveStatus(),
+<<<<<<< HEAD
 ,
       const child = spawn("node", [script.path], {,
         stdio: "pipe",
         cwd: __dirname,
+=======
+
+,
+      const child = spawn("node", [script.path], {,
+        stdio: "pipe",
+        cwd: __dirname
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       }),
 ,
       this.runningScripts.set(scriptName, { startTime, pid: child.pid }),
@@ -919,6 +1089,7 @@ optimizer.optimizePerformance().then(report => {,
         child.on("close", (code) => {,
           const duration = Date.now() - startTime,
           this.runningScripts.delete(scriptName),
+<<<<<<< HEAD
 ,
           if (code === 0) {,
             script.successCount++,
@@ -926,11 +1097,25 @@ optimizer.optimizePerformance().then(report => {,
           } else {,
             script.errorCount++,
             this.log(`Script "${scriptName}" failed with code ${code}`, "ERROR"),
+=======
+
+,
+          if (code === 0) {,
+            script.successCount++,
+            this.log(`Script "${scriptName}" completed successfully in ${duration}ms`)
+          } else {,
+            script.errorCount++,
+            this.log(`Script "${scriptName}" failed with code ${code}`, "ERROR")
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           };
 ,
           script.lastRun = new Date().toISOString(),
           this.saveStatus(),
+<<<<<<< HEAD
           resolve(code === 0),
+=======
+          resolve(code === 0)
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         }),
 ,
         child.on("error", (error) => {,
@@ -938,15 +1123,27 @@ optimizer.optimizePerformance().then(report => {,
           this.log(`Script "${scriptName}" error: ${error.message}`, "ERROR"),
           this.runningScripts.delete(scriptName),
           this.saveStatus(),
+<<<<<<< HEAD
           resolve(false),
         }),
       }),
+=======
+
+          resolve(false)
+        })
+      })
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     } catch (error) {,
       script.errorCount++,
       this.log(`Failed to start script "${scriptName}": ${error.message}`, "ERROR"),
       this.runningScripts.delete(scriptName),
       this.saveStatus(),
+<<<<<<< HEAD
       return false,
+=======
+
+      return false
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     };
   };
 ,
@@ -957,6 +1154,7 @@ optimizer.optimizePerformance().then(report => {,
     for (const [name, script] of this.scripts) {,
       if (script.status === "available") {,
         const success = await this.runScript(name),
+<<<<<<< HEAD
         results.push({ name, success }),
 >>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
       };
@@ -977,3 +1175,7 @@ optimizer.optimizePerformance().then(report = > {if (report) {; console.log("Per
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+        results.push({ name, success })
+      };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -11,10 +11,18 @@ const UltraFuturisticBackground2047: React.FC = () => {
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
     );
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       {/* Background Gradient */}
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'>
         {/* Animated Hexagons */}
@@ -176,6 +184,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
                   height: [32, 64, 32]
                   opacity: [0.3, 1, 0.3]
                 }}                transition={{
+<<<<<<< HEAD
                   duration: 3
                   repeat: Infinity as any
                   delay: i * 0.1
@@ -201,10 +210,28 @@ const UltraFuturisticBackground2047: React.FC = () => {
                   delay: i * 0.1
                   ease: 'easeInOut',                  ease: "easeInOut"
                 }}
+=======
+                  duration: 3,
+                  repeat: Infinity as any,
+                  delay: i * 0.1,
+                  ease: 'easeInOut',                }}
+
+                transition={{
+                  duration: 3,
+                  repeat: Infinity as any,
+                  delay: i * 0.1,
+
+                }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               />
             ))}
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Neon Glow Effects */}
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5'>
           <div className='w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl' />
@@ -237,11 +264,20 @@ const UltraFuturisticBackground2047: React.FC = () => {
           animate={{
             y: [0, 1000]}}
           transition={{
+<<<<<<< HEAD
             duration: 8
             repeat: Infinity as any
             ease: "linear"
           }}
         />
+=======
+            duration: 8,
+            repeat: Infinity as any,
+            ease: "linear"
+          }}
+        />
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Pulse Rings */}
         <motion.div
           className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4'
@@ -325,6 +361,10 @@ const UltraFuturisticBackground2047: React.FC = () => {
           <div className="w-full h-full border-2 border-purple-400 rounded-full" />
         </motion.div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* CSS for hexagon clip */}
       <style jsx>{`
         .clip-hexagon {
@@ -348,3 +388,7 @@ export default UltraFuturisticBackground2047;        }
 }
 export default UltraFuturisticBackground2047;
 
+<<<<<<< HEAD
+=======
+export default UltraFuturisticBackground2047;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

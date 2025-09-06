@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
 import {
   Dialog
@@ -25,6 +28,7 @@ export function ApplyToJobModal({
             Complete your application for this position
           </DialogDescription>
         </DialogHeader>
+<<<<<<< HEAD
         <ApplyForm
           job={job}
           onClose={onClose}
@@ -32,5 +36,35 @@ export function ApplyToJobModal({
         />
       </DialogContent>
     </Dialog>
+=======
+
+import React from 'react',
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle} from '@/components/ui/dialog',
+import { ApplyForm } from './ApplyForm',
+import { ApplyToJobModalProps } from './types',
+export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess }: ApplyToJobModalProps) {
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="sm:max-w-[600px]">
+        <DialogHeader>
+          <DialogTitle>Apply to Job: {job.title}</DialogTitle>
+          <DialogDescription>
+            Complete your application for this position
+          </DialogDescription>
+        </DialogHeader>
+        
+        <ApplyForm 
+          job={job}
+          onClose={onClose}
+          onApplySuccess={onApplySuccess}
+        />;
+      </DialogContent>;
+    </Dialog>;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }

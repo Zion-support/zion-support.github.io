@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 const p = path.join(process.cwd(), 'data', 'reports', 'seo', 'weekly-seo.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -13,6 +14,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res.status(500).json({ error: 'Failed to read SEO report' });
     }
 
+=======
+const p = path.join(process.cwd(), 'datareportsseoweekly-seo.json');
+
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  try {
+    if (!fs.existsSync(p)) return res.status(200).json({});
+    res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')));
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message || 'Failed to read seo' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 if (req.method === 'POST') {
     try {

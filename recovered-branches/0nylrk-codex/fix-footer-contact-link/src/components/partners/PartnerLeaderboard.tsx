@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from "lucide-react";
 interface LeaderboardEntry {
@@ -12,6 +13,18 @@ interface LeaderboardEntry {
   referrals: number
   earnings: number
 
+=======
+import { Badge } from "@/components/ui/badge",
+import { Crown, Medal, Trophy } from "lucide-react",
+
+interface LeaderboardEntry {
+  id: string,
+  rank: number,
+  name: string,
+  avatar?: string,
+  referrals: number,
+  earnings: number,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   badges: string[]
 }
 export function PartnerLeaderboard() {
@@ -27,7 +40,11 @@ export function PartnerLeaderboard() {
       earnings: 4500
 
       badges: ["gold", "trending"]
+<<<<<<< HEAD
     }
+=======
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
 
       id: "2"
@@ -38,7 +55,11 @@ export function PartnerLeaderboard() {
       earnings: 3625
 
       badges: ["silver"]
+<<<<<<< HEAD
     }
+=======
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
 
       id: "3"
@@ -49,7 +70,11 @@ export function PartnerLeaderboard() {
       earnings: 3100
 
       badges: ["bronze"]
+<<<<<<< HEAD
     }
+=======
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
 
       id: "4"
@@ -60,6 +85,7 @@ export function PartnerLeaderboard() {
       earnings: 2450
 
       badges: []
+<<<<<<< HEAD
     }
     {
 
@@ -107,6 +133,112 @@ export function PartnerLeaderboard() {
                   className={`flex items-center justify-between p-3 rounded-md ${
                     entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :
                     entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'
+=======
+    },
+    {
+      id: "5",
+      rank: 5,
+      name: "Deep Learning Daily",
+      avatar: "",
+      referrals: 87,
+      earnings: 2175,
+      badges: ["newcomer"]
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Badge } from "@/components/ui/badge",;
+import { Crown, Medal, Trophy } from "lucide-react",;
+interface LeaderboardEntry {;
+  id: string,;
+  rank: number,;
+  name: string,;
+  avatar?: string,;
+  referrals: number,;
+  earnings: number,;
+  badges: string[];
+}
+;
+export function PartnerLeaderboard() {;
+  // Placeholder data - would come from API in real implementation;
+  const leaderboard: LeaderboardEntry[] = [;
+    {;
+      id: "1",;
+      rank: 1,;
+      name: "AI Tech Guru",;
+      avatar: "", // URL would be here;
+      referrals: 178,;
+      earnings: 4500,;
+      badges: ["gold", "trending"];
+    },;
+    {;
+      id: "2",;
+      rank: 2,;
+      name: "Machine Learning Hub",;
+      avatar: "",;
+      referrals: 145,;
+      earnings: 3625,;
+      badges: ["silver"];
+    },;
+    {;
+      id: "3",;
+      rank: 3,;
+      name: "Neural Networks Pro",;
+      avatar: "",;
+      referrals: 124,;
+      earnings: 3100,;
+      badges: ["bronze"];
+    },;
+    {;
+      id: "4",;
+      rank: 4,;
+      name: "AI Career Insights",;
+      avatar: "",;
+      referrals: 98,;
+      earnings: 2450,;
+      badges: [];
+    },;
+    {;
+      id: "5",;
+      rank: 5,;
+      name: "Deep Learning Daily",;
+      avatar: "",;
+      referrals: 87,;
+      earnings: 2175,;
+      badges: ["newcomer"];
+    }
+  ],;
+  // Function to render rank badge;
+  const renderRankBadge = (rank: number) => {;
+    switch(rank) {;
+      case 1:;
+        return <Trophy className="h-5 w-5 text-yellow-500" />,;
+      case 2:;
+        return <Medal className="h-5 w-5 text-gray-400" />,;
+      case 3:;
+        return <Medal className="h-5 w-5 text-amber-700" />;
+      default:;
+        return <span className="text-sm font-semibold">{rank}</span>;
+    }
+  };
+  return (;
+    <div className="space-y-6">;
+      <Card className="bg-zion-blue-dark border-zion-blue-light">;
+        <CardHeader>;
+          <CardTitle className="flex items-center gap-2">;
+            <Crown className="h-5 w-5 text-yellow-500" />;
+            Top Partners;
+          </CardTitle>;
+          <CardDescription>This month's top-performing partners</CardDescription>;
+        </CardHeader>;
+        <CardContent>;
+          <div className="space-y-4">;
+            {leaderboard.length > 0 ? (;
+              leaderboard.map(entry => (;
+                <div;
+                  key={entry.id} ;
+                  className={`flex items-center justify-between p-3 rounded-md ${;
+                    entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :;
+                    entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -140,6 +272,7 @@ export function PartnerLeaderboard() {
                           Trending
                         </Badge>
                       )}
+<<<<<<< HEAD
                     </div>
                   </div>
                 </div>
@@ -152,6 +285,20 @@ export function PartnerLeaderboard() {
                   Start referring to earn your spot on the leaderboard
                 </p>
               </div>
+=======
+                    </div>;
+                  </div>;
+                </div>;
+              ));
+            ) : (;
+              <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">;
+                <Trophy className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />;
+                <p className="text-zion-slate-light mb-2">Leaderboard will appear here</p>;
+                <p className="text-xs text-zion-slate-light">;
+                  Start referring to earn your spot on the leaderboard;
+                </p>;
+              </div>;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             )}
           </div>
         </CardContent>
@@ -209,4 +356,9 @@ export function PartnerLeaderboard() {
       </Card>
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

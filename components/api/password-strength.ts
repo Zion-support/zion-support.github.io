@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  password.toLowerCase () .includes (pattern) );
+=======
+password.toLowerCase () .includes (pattern) );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
 if (score < 30) strength = 'very-weak';
 else if (score < 50) strength = 'weak';
@@ -157,6 +161,7 @@ export default async function handler(
   } catch (error) {
     console.error('Password strength check error:', error);
     res.status(500).json({ error: 'Internal server error' });
+<<<<<<< HEAD
   }      suggestions.push('Make it at least 12 characters long');
       suggestions.push('Avoid personal information and common words')
     }
@@ -189,3 +194,6 @@ export default async function handler(
     res.status(500).json({ error: 'Internal server error' })
   }
 }
+=======
+  }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

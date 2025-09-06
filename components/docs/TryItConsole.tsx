@@ -68,6 +68,7 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
   return (
     <div className='space-y-2'>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+<<<<<<< HEAD
         <div>
           <label className='block text-sm mb-1'>Base URL</label>
           <input
@@ -133,3 +134,15 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
     </div>
 );
 }
+=======
+
+    }
+  }
+
+  return (
+
+        </div>
+      </div>
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+        <div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

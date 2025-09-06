@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 
 import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 type Tx = {
   id: string;
   type: 'earn' | 'burn' | 'issue' | 'revoke' | 'redeem';
@@ -172,6 +178,7 @@ export default function WalletPanel() {
           <Badges balance={balance} />
         </div>
       </div>
+<<<<<<< HEAD
       <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>
         <div className='flex gap-3 mb-4 text-sm'>
           <button
@@ -257,4 +264,13 @@ export default function WalletPanel() {
       </div>
     </div>
 );
+=======
+
+          </div>
+
+        )}
+      </div>
+    </div>
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

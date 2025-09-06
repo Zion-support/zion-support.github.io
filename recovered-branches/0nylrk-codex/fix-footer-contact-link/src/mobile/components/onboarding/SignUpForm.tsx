@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 import { useNavigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
 import { AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 export function SignUpForm() {
@@ -18,15 +19,42 @@ export function SignUpForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [signupMode, setSignupMode] = useState(true);
   const [error, setError] = useState("");
+=======
+import { AlertCircle } from "lucide-react",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+
+export function SignUpForm() {
+  const navigate = useNavigate(),
+  const { signup, login, loginWithGoogle } = useAuth(),
+  
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    name: ""}),
+  const [isLoading, setIsLoading] = useState(false),
+  const [signupMode, setSignupMode] = useState(true),
+  const [error, setError] = useState(""),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const { name, value } = e.target,
+    setFormData(prev => ({ ...prev, [name]: value })),
     setError("")
+<<<<<<< HEAD
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
     setIsLoading(true)
+=======
+  },
+  
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    setError(""),
+    setIsLoading(true),
+    
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       if (signupMode) {
         const { error } = await signup(formData.email, formData.password, {
@@ -36,17 +64,69 @@ export function SignUpForm() {
         }
         navigate("/mobile")
       } else {
+<<<<<<< HEAD
         const { error } = await login(formData.email, formData.password);
+=======
+        const { error } = await login(formData.email, formData.password),
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         if (error) {
           throw new Error(error)
         }
         navigate("/mobile")
+<<<<<<< HEAD
+=======
+import React, { useState } from "react",;
+import { Label } from "@/components/ui/label",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { useNavigate } from "react-router-dom",;
+import { useAuth } from "@/hooks/useAuth",;
+import { AlertCircle } from "lucide-react",;
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+export function SignUpForm() {;
+  const navigate = useNavigate(),;
+  const { signup, login, loginWithGoogle } = useAuth(),;
+  const [formData, setFormData] = useState({;
+    email: "",;
+    password: "",;
+    name: ""}),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [signupMode, setSignupMode] = useState(true),;
+  const [error, setError] = useState(""),;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e.target,;
+    setFormData(prev => ({ ...prev, [name]: value })),;
+    setError("");
+  },;
+  const handleSubmit = async (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    setError(""),;
+    setIsLoading(true),;
+    try {;
+      if (signupMode) {;
+        const { error } = await signup(formData.email, formData.password, {;
+          name: formData.name}),;
+        if (error) {;
+          throw new Error(error);
+        }
+;
+        navigate("/mobile");
+      } else {;
+        const { error } = await login(formData.email, formData.password),;
+        if (error) {;
+          throw new Error(error);
+        }
+;
+        navigate("/mobile");
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       }
     } catch (err: any) {
       setError(err.message)
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
   }
   const handleGoogleLogin = async () => {
     try {
@@ -56,6 +136,17 @@ export function SignUpForm() {
     }
   }
 
+=======
+  };
+  const handleGoogleLogin = async () => {;
+    try {;
+      await loginWithGoogle();
+    } catch (err: any) {;
+      setError(err.message);
+    }
+  },
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">
@@ -162,4 +253,9 @@ export function SignUpForm() {
       </p>
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AISolutionsPage() {
@@ -107,6 +111,10 @@ export default function AISolutionsPage() {
       icon: '🛍️'
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const technologies = [
     'TensorFlow'
     'PyTorch'
@@ -198,6 +206,7 @@ export default function AISolutionsPage() {
                         </li>
                       ))}
                     </ul>
+<<<<<<< HEAD
                     <Link      </Head>
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
@@ -227,6 +236,10 @@ export default function AISolutionsPage() {
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="text-sm text-white/60 flex items-center">
                           <span className="text-cyan-400 mr-2">•</span>
+=======
+                    <Link
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           {feature}
                         </li>
                       ))}
@@ -240,16 +253,28 @@ export default function AISolutionsPage() {
                     >
                       Learn More <span className="ml-1">→</span>
                     </Link>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </div>
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* Industry Use Cases */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
                 Industry Applications
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {useCases.map((useCase, index) => (
                   <div
                     key={index}
@@ -279,6 +304,10 @@ export default function AISolutionsPage() {
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* Technologies */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -286,6 +315,7 @@ export default function AISolutionsPage() {
               </h2>
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='flex flex-wrap justify-center gap-4'>
+<<<<<<< HEAD
                   {technologies.map((tech, index) => (
                     <span
                       key={index}
@@ -294,12 +324,26 @@ export default function AISolutionsPage() {
                       key={index}
                       className="px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20"
                     >
+=======
+
+                  {technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className='px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20'                    >
+
+                    >
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       {tech}
                     </span>
                   ))}
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* Success Stories */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
@@ -394,5 +438,9 @@ export default function AISolutionsPage() {
         </main>
       </div>
     </>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

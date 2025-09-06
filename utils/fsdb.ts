@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Mock file system database utility
 export function readJson<T>(filePath: string, defaultValue: T): T {
   try {
@@ -8,9 +9,16 @@ export function readJson<T>(filePath: string, defaultValue: T): T {
     }
   } catch (error) {
     console.error('Error reading file:', error);
+=======
+
+  await writeAllDisputes(all);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
-  return defaultValue;
 }
+<<<<<<< HEAD
 export function writeJson<T>(filePath: string, data: T): void {
   try {
     const fs = require('fs');
@@ -20,9 +28,20 @@ export function writeJson<T>(filePath: string, data: T): void {
       fs.mkdirSync(dir, { recursive: true });
     }
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+=======
+
+}
+;
+export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
+  const dir = getDisputeUploadDir(caseId);
+  await mkdir(dir, { recursive: true });
+  return dir;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   } catch (error) {
-    console.error('Error writing file:', error);
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 export async function createDispute(dispute: DisputeCase): Promise<void> {
   const all = await readAllDisputes();
@@ -36,4 +55,6 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
   return dir;
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

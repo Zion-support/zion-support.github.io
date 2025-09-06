@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import React from "react";
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import React from "react";
 export default function CertificatePreview({
@@ -8,7 +12,10 @@ export default function CertificatePreview({
   userId?: string;
 }) {
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="border rounded p-4">
       <div className="text-sm text-gray-600">Zion Certificate</div>
@@ -44,4 +51,8 @@ export default function CertificatePreview({
       </a>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

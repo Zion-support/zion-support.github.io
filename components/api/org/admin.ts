@@ -66,9 +66,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     data[section] = arr as any;
     writeOrgData(data);
     return res.status(200).json({ ok: true });
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   }
 return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })
   }
   return res.status(400).json({ error: 'Unknown action' });
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

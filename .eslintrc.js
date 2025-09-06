@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* eslint-env node */
 module.exports = {
 <<<<<<< HEAD
@@ -527,3 +528,39 @@ module.exports = {
 };
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+};
+;
+;
+/* eslint-env node */;
+/* eslint-disable no-undef */;
+module.exports = {;
+  env: {;
+    node: true,;
+    es2021: true;
+  },;
+  globals: {;
+    module: 'readonly',;
+    require: 'readonly',;
+    exports: 'readonly',;
+    __dirname: 'readonly',;
+    __filename: 'readonly',;
+    global: 'readonly',;
+    Buffer: 'readonly',;
+    console: 'readonly';
+  },;
+  extends: ['next/core-web-vitals'],;
+  rules: {;
+    'react-hooks/rules-of-hooks': 'errorreact-hooks/exhaustive-deps': 'warn@typescript-eslint/no-unused-vars': [;
+      'warn',;
+      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
+    ],;
+    '@typescript-eslint/no-explicit-any': 'warn@typescript-eslint/no-empty-object-type': 'warn@next/next/no-html-link-for-pages': 'warn';
+  },;
+  ignorePatterns: [;
+    'node_modules/.next/out/build/',;
+    'dist/*.config.js*.config.tsscripts/',;
+    'automation/netlify/src/apps/';
+  ];
+},;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

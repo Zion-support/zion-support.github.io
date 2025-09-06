@@ -24,9 +24,16 @@ export default function UnderDisputeBadge({
       Under Dispute
     </span>
   );  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
+<<<<<<< HEAD
   const hasActiveDispute = !!data?.disputes?.some((d: any) => d.projectId === projectId && (d.status === 'Open' |d.status === 'Under Review'))
   return { hasActiveDispute, isLoading: !data && !error }
 }
+=======
+  const hasActiveDispute = !!data?.disputes?.some((d: any) => d.projectId === projectId && (d.status === 'Open' || d.status === 'Under Review')),
+  return { hasActiveDispute, isLoading: !data && !error }
+}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function UnderDisputeBadge({ projectId }: { projectId: string }) {
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
@@ -35,5 +42,10 @@ export default function UnderDisputeBadge({ projectId }: { projectId: string }) 
     <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">
       Under Dispute
     </span>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

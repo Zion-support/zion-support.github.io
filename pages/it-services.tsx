@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import Link from 'next/link',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 
 import Link from 'next/link';
@@ -1093,6 +1097,10 @@ export default function ITServices() {
       ]
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const filteredServices =
     selectedCategory === 'all'
       ? services
@@ -1157,6 +1165,10 @@ export default function ITServices() {
               </div>
             </div>
           </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Services Grid */}
           <section className='py-16 px-4' role='main'>
             <div className='max-w-7xl mx-auto'>
@@ -1211,6 +1223,7 @@ export default function ITServices() {
                     </div>
                     <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>                      Learn More
                     </button>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -1228,11 +1241,17 @@ export default function ITServices() {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </div>
                 ))}
               </div>
             </div>
           </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Technology Stack Section */}
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
@@ -2329,4 +2348,11 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
     </>
   )
 }
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

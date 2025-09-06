@@ -172,6 +172,7 @@ import Link from 'next/link';
                     <div
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
+<<<<<<< HEAD
                       className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300'
                     >
                       <span className='font-medium'>{item.name}</span>
@@ -180,6 +181,10 @@ import Link from 'next/link';
                     >
                       <span className="font-medium">{item.name}</span>
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+=======
+
+                      {/* Dropdown Menu */}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
@@ -188,6 +193,10 @@ import Link from 'next/link';
                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
                             transition={{ duration: 0.2 }}
                             className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           >
                             <div className='grid grid-cols-1 gap-3'>
                               {item.dropdown.map(dropdownItem => {
@@ -226,8 +235,14 @@ import Link from 'next/link';
                                       </div>
                                     </div>
                                   </Link>
+<<<<<<< HEAD
                                 );                                )
                               })}
+=======
+
+                              })}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                             </div>
                           </motion.div>
                         )}
@@ -239,16 +254,30 @@ import Link from 'next/link';
                       className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'
                     >
                       <item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />
+<<<<<<< HEAD
                       <span className='font-medium'>{item.name}</span>                    </Link>                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group"
                     >
                       <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                       <span className="font-medium">{item.name}</span>
+=======
+                      <span className='font-medium'>{item.name}</span>                    </Link>
+
+                    </Link>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   )}
                 </div>
               ))}
             </div>
+<<<<<<< HEAD
             {/* CTA Button */}
             <div className='hidden lg:block'>
+=======
+
+            {/* CTA Button */}
+            <div className='hidden lg:block'>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               <motion.a
                 href='/contact'
                 whileHover={{ scale: 1.05 }}
@@ -284,6 +313,10 @@ import Link from 'next/link';
           </div>
         </div>
       </motion.nav>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -293,6 +326,10 @@ import Link from 'next/link';
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
             className='fixed inset-0 z-40 lg:hidden'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             {/* Backdrop */}
             <div
@@ -300,10 +337,18 @@ import Link from 'next/link';
               onClick={() => setIsOpen(false)}
             />          >
             {/* Backdrop */}
+<<<<<<< HEAD
             <div
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
             />
+=======
+            <div 
+              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+              onClick={() => setIsOpen(false)}
+            />
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* Mobile Menu */}
             <motion.div
               initial={{ x: '100%' }}
@@ -311,6 +356,10 @@ import Link from 'next/link';
               exit={{ x: '100%' }}
               transition={{ duration: 0.3 }}
               className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             >
               <div className='p-6'>
                 {/* Close Button */}
@@ -339,6 +388,7 @@ import Link from 'next/link';
                 {/* Mobile Menu Items */}
                 <div className='space-y-4'>
                   {navigationItems.map(item => (
+<<<<<<< HEAD
                     <div key={item.name}>
                       {item.dropdown ? (
                         <div className='space-y-2'>
@@ -385,6 +435,16 @@ import Link from 'next/link';
                                 </Link>
                               )
                             })}
+=======
+
+                  </motion.button>
+                </div>
+
+                {/* Mobile Menu Items */}
+
+                            })}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           </div>
                         </div>
                       ) : (
@@ -396,14 +456,25 @@ import Link from 'next/link';
                           <item.icon className='w-5 h-5 text-cyan-400' />
                           <span className='text-white font-medium'>
                             {item.name}
+<<<<<<< HEAD
                           </span>                        </Link>                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
                         >
                           <item.icon className="w-5 h-5 text-cyan-400" />
                           <span className="text-white font-medium">{item.name}</span>
+=======
+                          </span>                        </Link>
+
+                        </Link>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       )}
                     </div>
                   ))}
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {/* Contact Information */}
                 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
                   <h3 className='text-cyan-400 font-semibold mb-3'>
@@ -412,6 +483,10 @@ import Link from 'next/link';
                   <div className='space-y-2 text-sm'>
                     <div className='flex items-center space-x-2 text-gray-300'>
                       <Phone className='w-4 h-4 text-cyan-400' />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       <span>{contactInfo.mobile}</span>
                     </div>
                     <div className='flex items-center space-x-2 text-gray-300'>
@@ -459,3 +534,7 @@ export default Navigation;  )
 }
 export default Navigation;
 
+<<<<<<< HEAD
+=======
+export default Navigation;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

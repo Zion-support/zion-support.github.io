@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 interface NoJobsCardProps {
   onUpdateProfile?: () => void;
 }
+<<<<<<< HEAD
 export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
   return (
     <Card className="bg-muted/30 border border-dashed">
@@ -21,3 +25,15 @@ export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
     </Card>
   );
 }
+=======
+
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+interface NoJobsCardProps {
+  onUpdateProfile?: () => void
+}
+
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

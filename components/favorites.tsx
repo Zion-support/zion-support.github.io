@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head',
+=======
+import {useEffect, useMemo, useState} from 'react';
+import Head from 'next/head';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
 function useFavorites() {
@@ -9,6 +14,7 @@ function useFavorites() {
   useEffect(() => {
     try {
       const raw = localStorage.getItem(storageKey);
+<<<<<<< HEAD
       if (raw) setFavorites(JSON.parse(raw));    } catch {}
   }, []);
   const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug))
@@ -20,6 +26,8 @@ export default function FavoritesPage() {
     () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
     [favorites]
   );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div>
@@ -49,6 +57,7 @@ export default function FavoritesPage() {
             <li><Link href="/"><a className="hover:underline">Home</a></Link></li>
             <li aria-hidden="true">/</li>
             <li className="text-gray-900 dark:text-gray-100" aria-current="page">Favorites</li>
+<<<<<<< HEAD
         </nav>
       </div>
       <h1 className='text-2xl font-semibold mb-4'>Saved Talent</h1>
@@ -122,3 +131,9 @@ export default function FavoritesPage() {
     </div>
 );
 }
+=======
+
+          </ol>
+        </nav>
+      </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const particles: Array< {
@@ -187,30 +190,57 @@ export default function UltraAdvancedFuturisticBackground({
             ctx.lineWidth = 1;
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(partner.x, partner.y);
+<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
+=======
+            ctx.stroke();          }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           }
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Bounce off edges with quantum tunneling
         if (particle.x <= 0 |particle.x >= canvas.width) {
           if (enableQuantumEffects && Math.random() < 0.1) {
             // Quantum tunneling effect
             particle.x = particle.x <= 0 ? canvas.width : 0;
           } else {
+<<<<<<< HEAD
             particle.vx *= -1;          }            particle.x = particle.x <= 0 ? canvas.width : 0
           } else {
             particle.vx *= -1
+=======
+            particle.vx *= -1;          }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           }
         }
+<<<<<<< HEAD
         if (particle.y <= 0 |particle.y >= canvas.height) {
+=======
+        if (particle.y <= 0 || particle.y >= canvas.height) {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           if (enableQuantumEffects && Math.random() < 0.1) {
             // Quantum tunneling effect
             particle.y = particle.y <= 0 ? canvas.height : 0;
           } else {
+<<<<<<< HEAD
             particle.vy *= -1;          }            particle.y = particle.y <= 0 ? canvas.height : 0
           } else {
             particle.vy *= -1
+=======
+            particle.vy *= -1;          }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           }
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Wrap around edges
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
@@ -240,6 +270,7 @@ export default function UltraAdvancedFuturisticBackground({
           gradient.addColorStop(0.3, particle.color + '80');
           gradient.addColorStop(0.6, particle.color + '40');
           gradient.addColorStop(1, 'transparent');
+<<<<<<< HEAD
           ctx.fillStyle = gradient;
           ctx.fillRect(
             -particle.size * 2
@@ -265,6 +296,9 @@ export default function UltraAdvancedFuturisticBackground({
               ctx.beginPath();
               ctx.arc(0, 0, particle.size * i, 0, Math.PI * 2);
               ctx.stroke()
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             }
           }
         } else if (particle.type === 'holographic' && enableHolographic) {
@@ -348,9 +382,18 @@ export default function UltraAdvancedFuturisticBackground({
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time * 2 + i)})`;
           ctx.lineWidth = 2;
           ctx.arc(x, y, 50 + 30 * Math.sin(time + i), 0, Math.PI * 2);
+<<<<<<< HEAD
           ctx.stroke();        }          ctx.stroke()
         }
       }
+=======
+          ctx.stroke();        }
+
+        }
+
+      }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Add holographic matrix effect
       if (enableHolographic && theme === 'holographic') {
         const time = Date.now() * 0.001;
@@ -408,6 +451,10 @@ export default function UltraAdvancedFuturisticBackground({
     enableHolographic
     enableQuantumEffects
   ]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className='relative min-h-screen'>
       <canvas
@@ -415,6 +462,10 @@ export default function UltraAdvancedFuturisticBackground({
         className='fixed inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
       />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Additional futuristic overlay effects */}
       {enableHolographic && (
         <div
@@ -434,6 +485,7 @@ export default function UltraAdvancedFuturisticBackground({
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.02),transparent_70%)]' />
         </div>
       )}
+<<<<<<< HEAD
       {children}
     </div>
   );      }
@@ -464,3 +516,9 @@ export default function UltraAdvancedFuturisticBackground({
     </div>
 );
 }
+=======
+
+      {children}
+    </div>
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

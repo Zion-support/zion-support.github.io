@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 //FCP recommendations if (metrics.fcp > 2000) {
+=======
+ //FCP recommendations if (metrics.fcp > 2000) {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   recs.push ({
 }return recs;
 }, []);
@@ -44,4 +48,7 @@ if (!performanceData) {
 }
 export default EnhancedPerformanceMonitor;
 export default EnhancedPerformanceMonitor;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

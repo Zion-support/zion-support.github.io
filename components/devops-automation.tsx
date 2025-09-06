@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
+=======
+import React from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Button from '../components/ui/Button';
 
 import {
@@ -16,6 +22,7 @@ import {
 export default function DevOpsAutomationPage() {
   const features = [
     {
+<<<<<<< HEAD
       icon: <GitBranch className='w-6 h-6' />,import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
 export default function DevOpsAutomationPage() {
   const features = [
@@ -65,6 +72,14 @@ export default function DevOpsAutomationPage() {
       color: 'bg-gradient-to-br from-orange-500 to-red-600'
     },  ];      color: 'bg-gradient-to-br from-orange-500 to-red-600'
     }
+=======
+      icon: <GitBranch className='w-6 h-6' />,
+
+export default function DevOpsAutomationPage() {
+  const features = [
+    {
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
   const pricingPlans = [
     {
@@ -258,6 +273,10 @@ export default function DevOpsAutomationPage() {
     },      color: 'from-purple-500 to-indigo-600'
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -316,6 +335,7 @@ export default function DevOpsAutomationPage() {
                 Start Free Trial
               </Button>
               <Button
+<<<<<<< HEAD
                 href='#demo'
                 variant='outline'
                 size='lg'
@@ -372,15 +392,28 @@ export default function DevOpsAutomationPage() {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-400">{feature.description}</p>
                 </Card>
+=======
+
+                </Card>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Automation Examples Section */}
         <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 What You Can Automate
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -401,6 +434,7 @@ export default function DevOpsAutomationPage() {
                   <h3 className='text-xl font-semibold text-white mb-4'>
                     {example.title}
                   </h3>
+<<<<<<< HEAD
                   <p className='text-gray-400'>{example.description}</p>                </Card>                What You Can Automate
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -419,15 +453,29 @@ export default function DevOpsAutomationPage() {
                   <h3 className="text-xl font-semibold text-white mb-4">{example.title}</h3>
                   <p className="text-gray-400">{example.description}</p>
                 </Card>
+=======
+                  <p className='text-gray-400'>{example.description}</p>                </Card>
+
+                </Card>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Pricing Section */}
         <section id='pricing' className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 Simple, Transparent Pricing
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -460,6 +508,7 @@ export default function DevOpsAutomationPage() {
                       </span>
                     </div>
                   )}
+<<<<<<< HEAD
                   <div className='text-center'>
                     <h3 className='text-2xl font-bold text-white mb-2'>
                       {plan.name}
@@ -484,6 +533,11 @@ export default function DevOpsAutomationPage() {
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                           {feature}
+=======
+
+                          {feature}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         </li>
                       ))}
                     </ul>
@@ -493,10 +547,17 @@ export default function DevOpsAutomationPage() {
                       size='lg'
                       className={`w-full ${
                         plan.popular
+<<<<<<< HEAD
                           ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'                      size="lg"
                       className={`w-full ${
                         plan.popular
                           ? 'bg-blue-600 hover:bg-blue-700 text-white'
+=======
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
+
+                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       }`}
                     >
                       {plan.cta}
@@ -507,11 +568,20 @@ export default function DevOpsAutomationPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Market Comparison Section */}
         <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+<<<<<<< HEAD
+=======
+
+                How We Compare to the Competition
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
                 See why Zion DevOps is the smart choice for automation.
@@ -597,11 +667,19 @@ export default function DevOpsAutomationPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Testimonials Section */}
         <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 Trusted by DevOps Teams Worldwide
               </h2>
             </div>
@@ -626,6 +704,7 @@ export default function DevOpsAutomationPage() {
                     <p className='text-sm text-gray-400'>{testimonial.role}</p>
                     <p className='text-sm text-blue-400'>
                       {testimonial.company}
+<<<<<<< HEAD
                     </p>                  </div>                Trusted by DevOps Teams Worldwide
               </h2>
             </div>
@@ -643,15 +722,30 @@ export default function DevOpsAutomationPage() {
                     <p className="text-sm text-gray-400">{testimonial.role}</p>
                     <p className="text-sm text-blue-400">{testimonial.company}</p>
                   </div>
+=======
+                    </p>                  </div>
+
+                  </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </Card>
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-blue-600 to-cyan-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+<<<<<<< HEAD
+=======
+
+              Ready to Automate Your DevOps?
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </h2>
             <p className='text-xl text-blue-100 mb-12'>
               Join thousands of teams who trust Zion for their DevOps automation
@@ -675,6 +769,7 @@ export default function DevOpsAutomationPage() {
                 className="bg-white text-blue-600 hover:bg-gray-100"
                 Start Free Trial
               </Button>
+<<<<<<< HEAD
               <Button
                 href='/contact'
                 variant='outline'
@@ -692,3 +787,6 @@ export default function DevOpsAutomationPage() {
     </>
   );
 }
+=======
+              <Button
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

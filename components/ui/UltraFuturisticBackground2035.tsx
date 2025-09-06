@@ -365,12 +365,24 @@ const UltraFuturisticBackground2035: React.FC<
                 opacity: [0, 1, 0];
                 scaleX: [0, 1, 0]
               }}
+<<<<<<< HEAD
               transition={{
                 duration: 3
                 delay: i * 0.1
                 repeat: Infinity
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
+=======
+
+              transition={{
+                duration: 3,
+                delay: i * 0.1,
+                repeat: Infinity,
+                ease: 'easeInOut',              }}
+
+              }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             />
           ))}
         </div>
@@ -382,3 +394,7 @@ export default UltraFuturisticBackground2035;  )
 }
 export default UltraFuturisticBackground2035;
 
+<<<<<<< HEAD
+=======
+export default UltraFuturisticBackground2035;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

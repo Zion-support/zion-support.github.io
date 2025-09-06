@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 
+=======
+import React from 'react',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const EquipmentPage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
@@ -15,6 +19,12 @@ const EquipmentPage = () => {
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 export default EquipmentPage;
 
+=======
+},
+
+export default EquipmentPage,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

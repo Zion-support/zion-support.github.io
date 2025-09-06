@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import React, { useCallback, useEffect, useMemo, useState } from "react";
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {
@@ -60,6 +64,10 @@ export default function AIAssistant({
       await navigator.clipboard.writeText(output);
     } catch {}
   }, [output]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const onOpen = useCallback(() => {
     setIsOpen(true);
     setOutput("");
@@ -171,4 +179,8 @@ export default function AIAssistant({
       )}
     </>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

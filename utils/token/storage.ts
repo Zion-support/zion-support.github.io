@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export interface TokenConfig {
   tokenName: string;
   tokenSymbol: string;
@@ -41,3 +42,5 @@ function readFromDisk(): TokenStoreData | null {
 }
 export const tokenStore = new TokenStore();
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

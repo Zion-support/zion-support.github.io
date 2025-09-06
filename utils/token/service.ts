@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -41,3 +42,6 @@ export function setConfig(
   Object.assign(current, partial);
 }
 
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

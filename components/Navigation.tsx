@@ -258,6 +258,11 @@ export default function Navigation() {
     { name: "Support", href: "/support" }
     { name: "Status", href: "/status" }
   ];
+<<<<<<< HEAD
+=======
+
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       {/* Top Bar */}

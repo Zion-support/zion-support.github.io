@@ -44,4 +44,7 @@ const filters: OrgFilters = {
   const filtered = filterOrgData(data, filters);
   return res.status(200).json(filtered);  return res.status(200).json(filtered)
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from 'lucide-react'
 
 import { Checkbox } from '@/components/ui/checkbox'
@@ -17,25 +18,52 @@ export function RegionFilter({
   toggleSection
   isMobileFilterOpen
 }: RegionFilterProps) {
+=======
+
+import { ChevronDown, ChevronUp } from 'lucide-react'
+import { Checkbox } from "@/components/ui/checkbox",
+import { RegionFilterProps } from "@/types/filters",
+const REGION_OPTIONS = [
+  { id: "North America", label: "North America" },
+  { id: "Europe", label: "Europe" },
+  { id: "Asia", label: "Asia" },
+  { id: "South America", label: "South America" },
+  { id: "Australia", label: "Australia" },
+  { id: "Africa", label: "Africa" }
+],
+
+export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
-    <div className='mb-6 border-b border-zion-blue-light pb-6'>
+    <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
+<<<<<<< HEAD
         className='flex w-full items-center justify-between text-white font-medium'      >
+=======
+        className="flex w-full items-center justify-between text-white font-medium"
+      >
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <span>Region</span>
         {expanded ? (
-          <ChevronUp className='h-4 w-4 text-zion-slate-light' />
+          <ChevronUp className="h-4 w-4 text-zion-slate-light" />
         ) : (
-          <ChevronDown className='h-4 w-4 text-zion-slate-light' />
+          <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {expanded && (
-        <div className='mt-4 space-y-2'>
+        <div className="mt-4 space-y-2">
           {REGION_OPTIONS.map(region => (
-            <div key={region.id} className='flex items-center'>              <Checkbox
+            <div key={region.id} className="flex items-center">
+              <Checkbox
                 id={`region-${region.id}`}
                 checked={selectedRegions.includes(region.id)}
                 onCheckedChange={() => toggleRegion(region.id)}
+<<<<<<< HEAD
             <div key={region.id} className="flex items-center">
 import { Checkbox } from "@/components/ui/checkbox"
 import { RegionFilterProps } from "@/types/filters"
@@ -45,6 +73,23 @@ const REGION_OPTIONS = [
   { id: "Asia", label: "Asia" }
   { id: "South America", label: "South America" }
   { id: "Australia", label: "Australia" }
+=======
+                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+              />
+              <label
+                htmlFor={`region-${region.id}`}
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
+              >
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Checkbox } from "@/components/ui/checkbox",;
+import { RegionFilterProps } from "@/types/filters",;
+const REGION_OPTIONS = [;
+  { id: "North America", label: "North America" },;
+  { id: "Europe", label: "Europe" },;
+  { id: "Asia", label: "Asia" },;
+  { id: "South America", label: "South America" },;
+  { id: "Australia", label: "Australia" },;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   { id: "Africa", label: "Africa" }
 ]
 
@@ -73,6 +118,7 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
               <label
                 htmlFor={`region-${region.id}`}
+<<<<<<< HEAD
                 className='ml-2 text-sm text-zion-slate-light cursor-pointer'
               >                {region.label}                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
                htmlFor="input-
@@ -96,3 +142,17 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 }</div>)
 }</div>)
 }"}
+=======
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer";
+              >;
+                {region.label}
+              </label>;
+            </div>;
+          ))}
+        </div>;
+      )}
+    </div>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

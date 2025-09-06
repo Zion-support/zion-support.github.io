@@ -89,11 +89,18 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       }
       setText('');
 
+<<<<<<< HEAD
       await fetchNotes()
     } finally {
       setAdding(false)
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!isAdmin) {
     return (
       <div className='rounded border p-3'>
@@ -170,5 +177,9 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         )}
       </div>
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

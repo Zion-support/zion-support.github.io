@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import { ScrollArea  } from '@/components/ui/scroll-area';
 import { Skeleton  } from '@/components/ui/skeleton';
@@ -6,6 +7,22 @@ import { Button  } from '@/components/ui/button';
 import { NotificationItem  } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 interface NotificationListProps {
+=======
+import React from 'react',;
+import { ScrollArea } from '@/components/ui/scroll-area',;
+import { Skeleton } from '@/components/ui/skeleton',;
+import { Button } from '@/components/ui/button',;
+import { NotificationItem } from './NotificationItem',;
+import { Notification } from '@/context/notifications',;
+interface NotificationListProps {;
+  loading: boolean,;
+  error: string | null,;
+  notifications: Notification[],;
+  onMarkAsRead: (id: string) => Promise<void>,;
+  onDismiss: (id: string) => Promise<void>,;
+  onRetry: () => void;
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   loading: boolean
   error: string | null
@@ -16,12 +33,20 @@ interface NotificationListProps {
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
+<<<<<<< HEAD
   loading;
   error;
   notifications;
   onMarkAsRead;
 
   onDismiss
+=======
+  loading,
+  error,
+  notifications,
+  onMarkAsRead,
+  onDismiss,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onRetry
 }) => {
   return (
@@ -58,7 +83,13 @@ export const NotificationList: React.FC<NotificationListProps> = ({
           />
         ))
       )}
+<<<<<<< HEAD
     </ScrollArea>
   )
 }
 
+=======
+    </ScrollArea>;
+  );
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

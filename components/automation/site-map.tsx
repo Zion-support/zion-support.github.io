@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
+=======
+ <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
 type RouteInfo = { path: string, lastModified: string }
@@ -9,12 +13,21 @@ export async function getServerSideProps() {
   try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
+<<<<<<< HEAD
     routes = json.routes |[];
     generatedAt = json.generatedAt |''
 
   } catch {}
   return { props: { routes, generatedAt } }
 }
+=======
+    routes = json.routes || [];
+    generatedAt = json.generatedAt || ''
+  } catch {}
+  return { props: { routes, generatedAt } }
+}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
   return (
     <div className="space-y-6">
@@ -39,5 +52,10 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
         </table>
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

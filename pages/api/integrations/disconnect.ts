@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { writeState } from '[^']*';
 import { getProviderById } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -24,3 +25,46 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ ok: true });
 }
 
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { writeState } from '../../../lib/integrations/fileStore';
+import { getProviderById } from '../../../lib/integrations/registry';
+export default function handler(req, res) {
+  try {
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const now = Date.now();
+  const updated = writeState(state => {;
+    const idx = state.connections.findIndex(c => c.providerId === providerId);
+    if (idx >= 0) state.connections.splice(idx, 1);
+    state.logs.push({ id: `${now}-${providerId}-disconnect`, timestamp: now, providerId: providerId as any, level: 'info', action: 'disconnect' });
+  });
+  res.status(200).json({ ok: true });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

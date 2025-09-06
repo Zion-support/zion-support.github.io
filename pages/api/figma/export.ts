@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import JSZip from "jszip";
 import {
@@ -15,6 +16,28 @@ export default async function handler(
     const kind = (
       ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
     ) as UIKitKind;
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default async function handler(req, res) {
+  try {
+    const map = { design: 'map' };
+    const tokens = { colors: {}, typography: {} };
+    res.status(200).json({
+      map,
+      tokens,
+      message: 'Design export completed'
+    });
+  } catch (e: unknown) {
+    res.status(500).json({
+      error: e?.message || 'Export failed'
+    });
+import JSZip from 'jszip';
+import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../../utils/design-map';
+export default async function handler(req, res) {
+  try {
+    const kit = (req.query.kit as string) || 'tailwind';
+    const kind = (['tailwindchakrareact'].includes(kit) ? kit : 'tailwind') as UIKitKind;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const zip = new JSZip();
     const map = getZionDesignMap();
     const tokens = await buildTokenSet();
@@ -39,7 +62,36 @@ export default async function handler(
       `attachment; filename=zion-design-${kind}.zip`
     );
     res.status(200).send(buffer);
+<<<<<<< HEAD
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Export failed" });
+=======
+  } catch (error) {
+    res.status(500).json({ error: e?.message || 'Export failed' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }

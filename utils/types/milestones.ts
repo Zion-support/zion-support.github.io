@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
 export type ProjectParticipantRole = 'client' | 'talent';
 export type ProjectParticipants = {
@@ -44,3 +45,6 @@ export interface UpdateMilestoneRequest {
   status?: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
 }
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

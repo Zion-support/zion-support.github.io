@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
+=======
+import React from 'react';
+import Head from 'next/head';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -171,6 +176,7 @@ export default function ServicesShowcase2028() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
             className='space-y-8'
           >
             <div className='inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm'>
@@ -264,6 +270,14 @@ export default function ServicesShowcase2028() {
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400">24/7</div>
                 <div className="text-cyan-300">Support Available</div>
+=======
+
+              </Link>
+            </div>
+
+            {/* Stats */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </div>
             </div>
           </motion.div>
@@ -328,8 +342,17 @@ export default function ServicesShowcase2028() {
                         <div key={service.id} className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                           <span className="text-purple-200 text-sm">{service.name}</span>
+<<<<<<< HEAD
                       ))}
                     </div>
+=======
+
+                        </div>
+
+                      ))}
+                    </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     <Link
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
                       className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group'
@@ -346,6 +369,10 @@ export default function ServicesShowcase2028() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Featured Services */}
       <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -473,6 +500,10 @@ export default function ServicesShowcase2028() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Market Analysis */}
       <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -495,6 +526,10 @@ export default function ServicesShowcase2028() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -581,11 +616,19 @@ export default function ServicesShowcase2028() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='space-y-8'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
@@ -634,5 +677,9 @@ export default function ServicesShowcase2028() {
       </section>
       <UltraFuturisticFooter2028 />
     </>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

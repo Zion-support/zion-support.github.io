@@ -51,6 +51,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       tags: body.tags |[]
       topics: body.topics |[]
       seo: {
+<<<<<<< HEAD
         metaTitle: body.seo?.metaTitle |body.title!
         metaDescription: body.seo?.metaDescription |''
         ogImageUrl: body.seo?.ogImageUrl |body.coverImageUrl |''
@@ -66,3 +67,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 return res.status(405).end();
 }
+=======
+        metaTitle: body.seo?.metaTitle || body.title!,
+        metaDescription: body.seo?.metaDescription || '',
+        ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',
+      },
+      body: body.body || '',
+      status: body.status || 'draft',
+      metrics: { views: 0, likes: 0, shares: 0 },
+    };
+    posts.unshift(post);
+    writePosts(posts);
+    return res.status(201).json(post);
+  }
+
+  return res.status(405).end();
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

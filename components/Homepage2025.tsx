@@ -147,10 +147,19 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     initial: {}
     animate: {
       transition: {
+<<<<<<< HEAD
         staggerChildren: 0.1
       }
     }
   }
+=======
+        staggerChildren: 0.1,
+      },
+    },
+
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <UltraFuturisticBackground2026 intensity='medium' theme='quantum'>
       {showInternalNav && (
@@ -171,6 +180,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 </motion.div>
                 {/* Desktop Navigation */}
                 <div className='hidden lg:flex space-x-8'>
+<<<<<<< HEAD
                   {navigationSections.map(section => (                    <button  }
   return (
     <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
@@ -192,6 +202,12 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 <div className="hidden lg:flex space-x-8">
                   {navigationSections.map((section) => (
                     <button
+=======
+                  {navigationSections.map(section => (                    <button
+
+                    <button
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       key={section.id}
                       onClick={() => scrollToSection(section.id)}
                       className={`flex items-center space-x-2 text-sm font-medium transition-all duration-300 ${
@@ -205,6 +221,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     </button>
                   ))}
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {/* Contact Info */}
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
@@ -257,6 +277,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </button>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Mobile Navigation Menu */}
               <AnimatePresence>
                 {isMobileMenuOpen && (
@@ -267,10 +291,17 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     className='lg:hidden border-t border-white/10'
                   >
                     <div className='py-4 space-y-2'>
+<<<<<<< HEAD
                       {navigationSections.map(section => (                        <button                    className="lg:hidden border-t border-white/10"
                   >
                     <div className="py-4 space-y-2">
                       {navigationSections.map((section) => (
+=======
+                      {navigationSections.map(section => (                        <button
+
+                        <button
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           key={section.id}
                           onClick={() => scrollToSection(section.id)}
                           className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
@@ -310,6 +341,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </nav>
         </>
       )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Hero Section */}
       <section
         id='hero'
@@ -323,8 +358,13 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
+<<<<<<< HEAD
               className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'            >      <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center z-10 max-w-6xl mx-auto">
+=======
+              className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'            >
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -352,6 +392,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 Pioneering the future of technology with innovative solutions
                 that drive business transformation
               </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Enhanced CTA Section */}
               <motion.div
                 variants={itemVariants}
@@ -408,6 +452,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   </button>
                 </Link>
               </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Trust Indicators */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -446,11 +494,19 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-20'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Comprehensive Technology Solutions
@@ -464,6 +520,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             {features.map((feature, index) => (
               <motion.div
                 key={index}
+<<<<<<< HEAD
                 className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8'                initial={{ opacity: 0, y: 40 }}          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Comprehensive Technology Solutions
@@ -477,6 +534,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               <motion.div
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8"
+=======
+                className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8'                initial={{ opacity: 0, y: 40 }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -505,14 +566,25 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Enhanced Services Preview */}
       <section className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <motion.div
+<<<<<<< HEAD
             className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}      <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-16"
+=======
+            className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}
+
+            initial={{ opacity: 0, y: 40 }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -579,6 +651,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
+<<<<<<< HEAD
                 onClick={() => (window.location.href = service.link)}              Our Revolutionary 2026 Services
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -597,10 +670,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               <motion.div
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer"
+=======
+                onClick={() => (window.location.href = service.link)}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
+<<<<<<< HEAD
                 onClick={() => (window.location.href = service.link)}
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
@@ -634,6 +712,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           {/* Call to Action for Services Showcase */}
           <motion.div
             className='text-center mt-16'            initial={{ opacity: 0, y: 40 }}            className="text-center mt-16"
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -657,10 +738,17 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       <section id='contact' className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <motion.div
+<<<<<<< HEAD
             className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}      <section id="contact" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-16"
+=======
+            className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}
+
+            initial={{ opacity: 0, y: 40 }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -738,7 +826,11 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             </div>
           </div>
           <motion.div
+<<<<<<< HEAD
             className='text-center'            className="text-center"
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -823,3 +915,7 @@ export default Homepage2025;  )
 }
 export default Homepage2025;
 
+<<<<<<< HEAD
+=======
+export default Homepage2025;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import { Control } from "react-hook-form";
 import {
@@ -27,6 +28,43 @@ export function DescriptionFields({
       <FormField
         control;
                   field.onChange(e.target.value)
+=======
+import React from 'react',
+import { Control } from 'react-hook-form',
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
+import { Textarea } from "@/components/ui/textarea",
+import { JobSchemaType } from './validation',
+interface DescriptionFieldsProps {
+  control: Control<JobSchemaType>,
+  handleEditorChange: (content: string) => void,
+  editorContent: string
+import React from 'react',;
+import { Control } from 'react-hook-form',;
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",;
+import { Textarea } from "@/components/ui/textarea",;
+import { JobSchemaType } from './validation',;
+interface DescriptionFieldsProps {;
+  control: Control<JobSchemaType>,;
+  handleEditorChange: (content: string) => void,;
+  editorContent: string;
+}
+;
+export function DescriptionFields({ control, handleEditorChange, editorContent }: DescriptionFieldsProps) {;
+  return (;
+    <>;
+      <FormField;
+        control={control}
+        name="description"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Job Description</FormLabel>
+            <FormControl>
+              <Textarea 
+                value={editorContent}
+                onChange={(e) => {;
+                  handleEditorChange(e.target.value);
+                  field.onChange(e.target.value);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 }}
                 className="min-h-[200px]"
                 placeholder="Enter a detailed description of the job role"
@@ -118,7 +156,12 @@ export function DescriptionFields({
             <FormMessage />
           </FormItem>
         )}
+<<<<<<< HEAD
       />
     </>
+=======
+      />;
+    </>;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }

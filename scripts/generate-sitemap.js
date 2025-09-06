@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createWriteStream } from 'fs';
 import { join } from 'path';
 ;
@@ -50,6 +51,8 @@ const generateSitemap = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { createWriteStream } from 'fs',
 import { join } from 'path',
 =======
@@ -125,6 +128,7 @@ import fs from 'fs'; import path from 'path'; const __filename = fileURLToPath(i
 },
 
 generateSitemap(),
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 =======
@@ -317,6 +321,8 @@ if (require.main === module) {
 module.exports = { generateSitemapXML, generateSitemapTXT, pages };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 =======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { createWriteStream } from 'fs',;
 import { join } from 'path',;
 const generateSitemap = () => {;
@@ -354,6 +360,7 @@ const generateSitemap = () => {;
   console.log('Sitemap generated successfully at:', sitemapPath);
 },;
 generateSitemap();
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-4094
 =======
 <<<<<<< HEAD
@@ -385,3 +392,5 @@ generateSitemap(),
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

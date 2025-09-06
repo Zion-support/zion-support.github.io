@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { findPartnerByApiKey, signJwt } from '../../../utils/api/partnerAuth';
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { findPartnerByApiKey, signJwt } from '../../../utils/api/partnerAuth';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -36,6 +42,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { partner, apiKey: key } = match;
   const token = signJwt(
+<<<<<<< HEAD
     {
       sub: partner.id
       apiKeyId: key.id
@@ -59,3 +66,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
 }
+=======
+    {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

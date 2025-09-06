@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -24,6 +25,8 @@ import { motion } from 'framer-motion';
 =======
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -40,6 +43,9 @@ import {
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 <<<<<<< HEAD
 import React from 'react';
@@ -49,12 +55,15 @@ import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Mail, Phone, MapPin, Users } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+<<<<<<< HEAD
 =======
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 } from 'lucide-react';
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 const PrivacyPage: React.FC = () => {
   const lastUpdated = 'January 17, 2025';
@@ -275,6 +284,10 @@ export default function PrivacyPage() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Content Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
@@ -439,10 +452,13 @@ export default function PrivacyPage() {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 <p className="text-sm text-gray-600 mt-8">
 =======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <p className="text-sm text-gray-600 mt-8">
 >>>>>>> origin/automation-improvements-final
                   Last updated: January 2024
@@ -457,12 +473,16 @@ export default function PrivacyPage() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 <<<<<<< HEAD
 =======
  
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+<<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
@@ -983,3 +1003,5 @@ export default PrivacyPage;
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

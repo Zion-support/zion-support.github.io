@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import Fastify from 'fastify',
 import cors from '@fastify/cors',
+=======
+import Fastify from 'fastify';
+import cors from '@fastify/cors';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import rateLimit from '@fastify/rate-limit';
 import { createOpenAIClient, generateJobPost  } from './openai';
 import { withUser  } from './pg';
@@ -135,3 +140,11 @@ app.log.error(err);
 });  (process as any).exit(1)
 });
 
+<<<<<<< HEAD
+=======
+const port = Number(process.env.API_PORT || 4000);
+app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
+  app.log.error(err);
+  (process as any).exit(1);
+});
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

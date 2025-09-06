@@ -22,10 +22,18 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
     visible: {
       opacity: 1
       transition: {
+<<<<<<< HEAD
         staggerChildren: 0.2
         delayChildren: 0.1
       }
     },  }
+=======
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const itemVariants = {
     hidden: {
       opacity: 0
@@ -59,6 +67,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
       y: -10
       scale: 1.02
       transition: {
+<<<<<<< HEAD
         duration: 0.3
         ease: 'easeOut' as const
       }
@@ -66,12 +75,25 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
       }
     }
   }
+=======
+        duration: 0.3,
+        ease: 'easeOut' as const,
+      },
+    },  };
+
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const renderServiceCard = (service: any, index: number) => (
     <motion.div
       key={service.id}
       variants={itemVariants}
       whileHover='hover'
       className='group relative'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     >
       <motion.div
         variants={cardVariants}
@@ -93,6 +115,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             </div>
             {service.popular && (
               <div className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium'>
+<<<<<<< HEAD
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>    >
       <motion.div
         variants={cardVariants}
@@ -167,6 +190,28 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             >
               <span>Learn More</span>
               <ArrowRight className='w-4 h-4' />            </motion.button>
+=======
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
+
+                <span>Popular</span>
+
+              </div>
+            )}
+          </div>
+
+          {/* Description */}
+          <p className='text-slate-300 text-sm mb-4 leading-relaxed'>            {service.description}
+          </p>
+
+          {/* Features */}
+
+            {service.description}
+          </p>
+
+          {/* Features */}
+
+            </motion.button>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </div>
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>
@@ -213,6 +258,10 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           <div className='flex items-center justify-center space-x-2 mb-4'>
             <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
@@ -250,12 +299,20 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             Discover our cutting-edge micro SAAS solutions, AI-powered platforms, and quantum-enhanced infrastructure services designed for the future of business.
           </p>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* AI Services Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className='mb-20'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Brain className='w-6 h-6 text-cyan-400' />
@@ -285,12 +342,20 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             {innovative2026AIServices.map((service, index) => renderServiceCard(service, index))}
           </motion.div>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* IT Infrastructure Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className='mb-20'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Globe className='w-6 h-6 text-purple-400' />
@@ -320,6 +385,10 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             {innovative2026ITInfrastructureServices.map((service, index) => renderServiceCard(service, index))}
           </motion.div>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Micro SAAS Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -350,12 +419,20 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             {innovative2026MicroSaasServices.map((service, index) => renderServiceCard(service, index))}
           </motion.div>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           className='text-center mt-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -398,5 +475,9 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

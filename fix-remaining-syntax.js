@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -46,6 +47,18 @@ console.log(`Fixed ${fixedCount} files`);
 =======
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+}});
+
+;
+  };
+}),;
+console.log(`Fixed ${fixedCount} files`),;
+,;
+;};
+});
+console.log(`Fixed ${fixedCount} files`);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 ;
 <<<<<<< HEAD
   };
@@ -184,6 +197,7 @@ console.log(`Fixed ${fixedCount} files`);
 }
 
 // Run the main function
+<<<<<<< HEAD
 main().catch(console.error);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -206,3 +220,6 @@ main().catch(console.error);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+main().catch(console.error);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import { useRouter  } from 'next/router';
+=======
+import { useState } from "react",
+import { useRouter } from 'next/router',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { useResume } from "@/hooks/useResume",
 import { useAuth } from "@/hooks/useAuth",
@@ -10,8 +15,13 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import { AlertCircle, FileText, Loader2 } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
+<<<<<<< HEAD
 import { Job } from "@/types/jobs";
 import { toast } from "sonner";
+=======
+import { Job } from "@/types/jobs",
+import { toast } from "sonner",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface ApplyToJobFormProps {
 
   job: Job
@@ -19,6 +29,7 @@ interface ApplyToJobFormProps {
   onSuccess?: () => void
 }
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
+<<<<<<< HEAD
 
   const { user } = useAuth()
   const { applyToJob } = useJobApplications()
@@ -51,6 +62,46 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       )
       if (success) {
         toast.success("Your application has been submitted!")
+=======
+  const { user } = useAuth(),
+  const { applyToJob } = useJobApplications(),
+  const { resumes, isLoading: isResumesLoading } = useResume(),
+  const router = useRouter(),
+  
+  const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`),
+  const [selectedResumeId, setSelectedResumeId] = useState<string>(""),
+  const [resumeFile, setResumeFile] = useState<File | null>(null),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [error, setError] = useState<string | null>(null),
+  
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    
+    if (!user) {
+      toast.error("You must be logged in to apply"),
+      router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`),
+      return
+    }
+    
+    if (!coverLetter.trim()) {
+      setError("Please provide a cover letter"),
+      return
+    }
+    
+    setIsSubmitting(true),
+    setError(null),
+    
+    try {
+      const success = await applyToJob(
+        job.id,
+        coverLetter,
+        selectedResumeId || undefined,
+        resumeFile || undefined
+      ),
+      
+      if (success) {
+        toast.success("Your application has been submitted!"),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         if (onSuccess) {
           onSuccess()
         }
@@ -61,8 +112,13 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
   }
 
+=======
+  },
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -71,20 +127,28 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}
         </p>
       </div>
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <div className="space-y-4">
         <div>
           <Label htmlFor="coverLetter">Cover Letter</Label>
           <Textarea
             id="coverLetter"
-            value = {coverLetter,}
-            onChange = {(e,) => setCoverLetter(e.target.value),}
-            rows = {6,}
+            value={coverLetter}
+            onChange={(e) => setCoverLetter(e.target.value)}
+            rows={6}
             placeholder="Introduce yourself and explain why you are a good fit for this job..."
             className="mt-1"
           />
@@ -92,6 +156,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
             Provide a brief introduction and highlight your relevant skills and experience.
           </p>
         </div>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <div>
           <Label htmlFor="resume">Select Resume (Optional)</Label>
           {isResumesLoading ? (
@@ -101,21 +169,142 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
             </div>
           ) : resumes && resumes.length > 0 ? (
             <Select
-              value = {selectedResumeId,}
-              onValueChange = {setSelectedResumeId,}
+              value={selectedResumeId}
+              onValueChange={setSelectedResumeId}
             >
               <SelectTrigger className="mt-1">
                 <SelectValue placeholder="Select a resume" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="">No resume</SelectItem>
-                {resumes.map((resume,) => {
+                {resumes.map((resume) => {
                   if (resume.id) {
                     return (
                       <SelectItem key={resume.id} value={resume.id}>
                         {resume.basic_info.title |"Untitled Resume"}
                       </SelectItem>
                     )
+<<<<<<< HEAD
+=======
+import { useState } from "react",;
+import { useRouter } from 'next/router',;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { useResume } from "@/hooks/useResume",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Label } from "@/components/ui/label",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+import { AlertCircle, FileText, Loader2 } from 'lucide-react';
+import { formatDistanceToNow } from "date-fns",;
+import { Job } from "@/types/jobs",;
+import { toast } from "sonner",;
+interface ApplyToJobFormProps {;
+  job: Job,;
+  onSuccess?: () => void;
+}
+;
+export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
+  const { user } = useAuth(),;
+  const { applyToJob } = useJobApplications(),;
+  const { resumes, isLoading: isResumesLoading } = useResume(),;
+  const router = useRouter(),;
+  const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`),;
+  const [selectedResumeId, setSelectedResumeId] = useState<string>(""),;
+  const [resumeFile, setResumeFile] = useState<File | null>(null),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  const handleSubmit = async (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    if (!user) {;
+      toast.error("You must be logged in to apply"),;
+      router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`),;
+      return;
+    }
+;
+    if (!coverLetter.trim()) {;
+      setError("Please provide a cover letter"),;
+      return;
+    }
+;
+    setIsSubmitting(true),;
+    setError(null),;
+    try {;
+      const success = await applyToJob(;
+        job.id,;
+        coverLetter,;
+        selectedResumeId || undefined,;
+        resumeFile || undefined;
+      ),;
+      if (success) {;
+        toast.success("Your application has been submitted!"),;
+        if (onSuccess) {;
+          onSuccess();
+        }
+      }
+    } catch (err: any) {;
+      setError(err.message || "Failed to submit application");
+      toast.error("Failed to submit application");
+    } finally {;
+      setIsSubmitting(false);
+    }
+  };
+  return (;
+    <form onSubmit={handleSubmit} className="space-y-6">;
+      <div>;
+        <h3 className="text-lg font-medium mb-1">Apply to: {job.title}</h3>;
+        <p className="text-sm text-muted-foreground mb-4">;
+          Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}
+        </p>;
+      </div>;
+      {error && (;
+        <Alert variant="destructive">;
+          <AlertCircle className="h-4 w-4" />;
+          <AlertDescription>{error}</AlertDescription>;
+        </Alert>;
+      )}
+;
+      <div className="space-y-4">;
+        <div>;
+          <Label htmlFor="coverLetter">Cover Letter</Label>;
+          <Textarea;
+            id="coverLetter";
+            value={coverLetter}
+            onChange={(e) => setCoverLetter(e.target.value)}
+            rows={6}
+            placeholder="Introduce yourself and explain why you are a good fit for this job...";
+            className="mt-1";
+          />;
+          <p className="text-xs text-muted-foreground mt-1">;
+            Provide a brief introduction and highlight your relevant skills and experience.;
+          </p>;
+        </div>;
+        <div>;
+          <Label htmlFor="resume">Select Resume (Optional)</Label>;
+          {isResumesLoading ? (;
+            <div className="flex items-center gap-2 mt-2">;
+              <Loader2 className="h-4 w-4 animate-spin" />;
+              <span>Loading your resumes...</span>;
+            </div>;
+          ) : resumes && resumes.length > 0 ? (;
+            <Select;
+              value={selectedResumeId}
+              onValueChange={setSelectedResumeId}
+            >;
+              <SelectTrigger className="mt-1">;
+                <SelectValue placeholder="Select a resume" />;
+              </SelectTrigger>;
+              <SelectContent>;
+                <SelectItem value="">No resume</SelectItem>;
+                {resumes.map((resume) => {;
+                  if (resume.id) {;
+                    return (;
+                      <SelectItem key={resume.id} value={resume.id}>;
+                        {resume.basic_info.title || "Untitled Resume"}
+                      </SelectItem>;
+                    );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   }
                   return null
                 })}
@@ -131,7 +320,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
                 variant="outline"
                 size="sm"
                 type="button"
-                onClick = {(,) => router.push("/dashboard/talent/portfolio"),}
+                onClick={() => router.push("/dashboard/talent/portfolio")}
               >
                 Create Resume
               </Button>
@@ -145,17 +334,31 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
             type="file"
             accept=".pdf"
             className="mt-1"
+<<<<<<< HEAD
             onChange = {(e,) => setResumeFile(e.target.files?.[0] |null),}
           />
         </div>
       </div>
+=======
+            onChange={(e) => setResumeFile(e.target.files?.[0] || null)}
+          />
+        </div>
+      </div>
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <div className="flex justify-end gap-2">
         <Button
           type="button"
           variant="outline"
+<<<<<<< HEAD
           disabled = {isSubmitting,}
           onClick={() => {
             if (onSuccess) onSuccess()
+=======
+          disabled={isSubmitting}
+          onClick={() => {;
+            if (onSuccess) onSuccess();
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           }}
         >
           Cancel
@@ -169,6 +372,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           ) : (
             "Submit Application"
           )}
+<<<<<<< HEAD
         </Button>
       </div>
     </form>
@@ -194,3 +398,11 @@ handleSubmit
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")
 }</Button> </div> </form>)
 }"}
+=======
+        </Button>;
+      </div>;
+    </form>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

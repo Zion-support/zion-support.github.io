@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -360,6 +364,7 @@ const serviceCategories = [
         price: '$4,999/month'
       }
       {
+<<<<<<< HEAD
         name: 'Corporate Intelligence Platform'
         href: '/corporate-intelligence-platform'
         description: 'AI-powered business intelligence'
@@ -371,6 +376,22 @@ const serviceCategories = [
       { name: 'Corporate Intelligence Platform', href: '/corporate-intelligence-platform', description: 'AI-powered business intelligence', price: '$7,999/month' }
     ]
   }
+=======
+        name: 'Corporate Intelligence Platform',
+        href: '/corporate-intelligence-platform',
+        description: 'AI-powered business intelligence',
+        price: '$7,999/month',
+      },
+    ],
+  },];      { name: 'Enterprise AI Operations Center', href: '/enterprise-ai-operations-center', description: 'Centralized AI operations', price: '$15,999/month' };
+      { name: 'Business Process Automation', href: '/business-process-automation', description: 'End-to-end process automation', price: '$4,999/month' };
+      { name: 'Corporate Intelligence Platform', href: '/corporate-intelligence-platform', description: 'AI-powered business intelligence', price: '$7,999/month' }
+    ]
+  }
+
+];
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const mainNavItems = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -407,6 +428,10 @@ export default function UltraFuturisticNavigation2029() {
               href={`tel:${contactInfo.mobile}`}
               className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
             >
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
@@ -432,6 +457,7 @@ export default function UltraFuturisticNavigation2029() {
               <span>{contactInfo.address}</span>
             </div>
           </div>
+<<<<<<< HEAD
           <div className='flex items-center space-x-4'>
             <a
               href={contactInfo.website}
@@ -439,6 +465,11 @@ export default function UltraFuturisticNavigation2029() {
             >              {contactInfo.website.replace('https://', '')}          <div className="flex items-center space-x-4">
             <a href={contactInfo.website} className="hover:text-cyan-300 transition-colors">
               {contactInfo.website.replace('https://', '')}
+=======
+
+              {contactInfo.website.replace('https://', '')}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </a>
           </div>
         </div>
@@ -497,6 +528,7 @@ export default function UltraFuturisticNavigation2029() {
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {mainNavItems.map(item => (
+<<<<<<< HEAD
                 <Link
                   key={item.name}
                   href={item.href}
@@ -539,6 +571,19 @@ export default function UltraFuturisticNavigation2029() {
                 <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>
                   <div className='p-6 grid grid-cols-2 lg:grid-cols-3 gap-6'>                    {serviceCategories.map((category, index) => (                <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">
+=======
+
+              </div>
+            </motion.div>
+
+            {/* Desktop Navigation */}
+
+                </Link>
+              ))}
+
+              {/* Services Dropdown */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     {serviceCategories.map((category, index) => (
                       <motion.div
                         key={category.title}
@@ -546,6 +591,10 @@ export default function UltraFuturisticNavigation2029() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
                         className='group'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       >
                         <div
                           className={`p-4 rounded-lg bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}
@@ -605,6 +654,10 @@ export default function UltraFuturisticNavigation2029() {
                                 </div>
                                 <p className="text-xs text-gray-500 mt-1">{service.description}</p>
                               </Link>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                             ))}
                           </div>
                         </div>
@@ -613,11 +666,20 @@ export default function UltraFuturisticNavigation2029() {
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* CTA Button */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
+=======
+                className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               >
                 Get Started
               </motion.button>
@@ -626,16 +688,27 @@ export default function UltraFuturisticNavigation2029() {
             <div className='lg:hidden'>
               <button
                 onClick={toggleMenu}
+<<<<<<< HEAD
                 className='text-gray-300 hover:text-white transition-colors'              >            <div className="lg:hidden">
               <button
                 onClick={toggleMenu}
                 className="text-gray-300 hover:text-white transition-colors"
+=======
+                className='text-gray-300 hover:text-white transition-colors'              >
+
+              >
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
           </div>
         </div>
       </nav>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -644,6 +717,10 @@ export default function UltraFuturisticNavigation2029() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             className='fixed inset-0 z-50 lg:hidden'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-sm'
@@ -698,9 +775,17 @@ export default function UltraFuturisticNavigation2029() {
                     >
                       <item.icon size={20} className="text-cyan-400" />
                       <span>{item.name}</span>
+<<<<<<< HEAD
                     </Link>
                   ))}
                 </div>
+=======
+
+                    </Link>
+                  ))}
+                </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {/* Mobile Services */}
                 <div className='mt-8'>
                   <h3 className='text-lg font-semibold text-white mb-4'>
@@ -734,6 +819,7 @@ export default function UltraFuturisticNavigation2029() {
                               key={service.name}
                               href={service.href}
                               onClick={closeMenu}
+<<<<<<< HEAD
                               className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200'
                             >
                               <div className='flex items-center justify-between'>
@@ -747,6 +833,11 @@ export default function UltraFuturisticNavigation2029() {
                               <div className="flex items-center justify-between">
                                 <span className="text-sm text-gray-300">{service.name}</span>
                                 <span className="text-xs text-cyan-400 font-mono">{service.price}</span>
+=======
+
+                              </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                             </Link>
                           ))}
                         </div>
@@ -754,6 +845,10 @@ export default function UltraFuturisticNavigation2029() {
                     ))}
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {/* Mobile CTA */}
                 <div className='mt-8'>
                   <motion.button
@@ -772,6 +867,7 @@ export default function UltraFuturisticNavigation2029() {
           </motion.div>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
       {/* Spacer for fixed navigation */}
       <div className='h-20' />
     </>
@@ -779,3 +875,10 @@ export default function UltraFuturisticNavigation2029() {
     </>
   );
 }
+=======
+
+      {/* Spacer for fixed navigation */}
+      <div className='h-20' />
+    </>
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

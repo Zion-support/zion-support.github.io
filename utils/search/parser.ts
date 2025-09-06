@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Search parser utilities
 export const parseSearchQuery = (query: string) => {
   // Add search query parsing functionality here
@@ -20,4 +21,7 @@ export const searchAll = (parsed: any, access: any) => {
 export const suggestDidYouMean = (query: string) => {
   // Add did you mean functionality here
   return null;
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

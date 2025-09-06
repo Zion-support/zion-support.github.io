@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 
 }
 </pre> </div>)
 
+=======
+ 
+};
+</pre> </div>) 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function SecurityAudit({ report }: Props) {
   return (
     <div className="space-y-4">
@@ -17,5 +23,10 @@ export default function SecurityAudit({ report }: Props) {
 {JSON.stringify(report, null, 2)}
       </pre>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

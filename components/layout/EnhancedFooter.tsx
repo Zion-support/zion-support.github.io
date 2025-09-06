@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
 
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe;
@@ -11,6 +12,10 @@ import { Phone, Mail, MapPin, Globe;
  } from 'lucide-react';
 const contactInfo = null;
   ];
+=======
+const EnhancedFooter: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   const company = null;
   ];
@@ -114,6 +119,7 @@ export default function EnhancedFooter() {
 
   ];
   return (
+<<<<<<< HEAD
     <footer className;
                   return (
                     <a
@@ -145,6 +151,20 @@ export default function EnhancedFooter() {
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
               Get exclusive insights into the latest AI, quantum computing, and IT innovations. 
               Be the first to know about new services and breakthrough technologies.
+=======
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {" "}
+          {/* Company Info */}
+          <div className="space-y-4">
+            <div className="text-2xl font-bold text-blue-400 mb-4">
+              Zion Tech Group
+            </div>
+            <p className="text-gray-300 mb-6">
+              Leading technology solutions provider helping businesses transform
+              their digital presence.
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </p>
             <div className="flex space-x-4">
               <a
@@ -286,5 +306,11 @@ export default function EnhancedFooter() {
       </div>
     </footer>
   );
+<<<<<<< HEAD
 }
 export default EnhancedFooter;
+=======
+};
+
+export default EnhancedFooter;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

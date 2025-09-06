@@ -167,7 +167,16 @@ const values = [
       "We conduct business with honesty, transparency, and ethical practices."
   }
 ];
+<<<<<<< HEAD
 export default function CareersPage() {
+=======
+
+interface CareersProps {
+  className?: string;
+}
+
+const Careers: React.FC<CareersProps> = ({ className }) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <MainLayout
       title="Careers - Zion Tech Group"

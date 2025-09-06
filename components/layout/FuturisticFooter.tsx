@@ -1,5 +1,21 @@
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
+=======
+import React from 'react';
+import Link from 'next/link';
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Zap,
+  Bot,
+  Cloud,
+  Shield,
+  ArrowRight,;
+} from 'lucide-react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import {
   Mail
@@ -146,6 +162,10 @@ export default function FuturisticFooter() {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Quick Links */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -172,6 +192,10 @@ export default function FuturisticFooter() {
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Services */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -198,6 +222,10 @@ export default function FuturisticFooter() {
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Contact Info */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -301,5 +329,10 @@ export default function FuturisticFooter() {
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

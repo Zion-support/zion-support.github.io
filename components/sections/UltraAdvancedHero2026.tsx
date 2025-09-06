@@ -54,10 +54,19 @@ export default function UltraAdvancedHero2026() {
       opacity: 1
       y: 0
       transition: {
+<<<<<<< HEAD
         duration: 0.8
       }
     }
   }
+=======
+        duration: 0.8,
+      },
+    },
+
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
       {/* Enhanced Background Effects */}
@@ -88,6 +97,10 @@ export default function UltraAdvancedHero2026() {
               2026 Revolutionary Technology Solutions
             </span>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Main Heading */}
           <motion.h1
             variants={itemVariants}
@@ -99,6 +112,10 @@ export default function UltraAdvancedHero2026() {
             <br />
             <span className='text-white'>is Now</span>
           </motion.h1>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Subheading */}
           <motion.p
             variants={itemVariants}
@@ -112,6 +129,10 @@ export default function UltraAdvancedHero2026() {
             </span>{' '}
             with our revolutionary solutions.
           </motion.p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Service Statistics */}
           <motion.div
             variants={itemVariants}
@@ -213,6 +234,7 @@ export default function UltraAdvancedHero2026() {
           </motion.div>
           {/* Key Benefits */}
           <motion.div
+<<<<<<< HEAD
             variants={itemVariants}
             className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto'
           >
@@ -227,6 +249,14 @@ export default function UltraAdvancedHero2026() {
               <span className='text-gray-200 font-medium'>
                 1000% ROI Guaranteed
               </span>
+=======
+
+            </div>
+          </motion.div>
+
+          {/* Key Benefits */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </div>
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>
               <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
@@ -234,6 +264,7 @@ export default function UltraAdvancedHero2026() {
                 24/7 Autonomous Operation
               </span>            </div>
           </motion.div>
+<<<<<<< HEAD
           {/* Call to Action Buttons */}
           <motion.div            variants={itemVariants}
             className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
@@ -284,9 +315,18 @@ export default function UltraAdvancedHero2026() {
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >
               <Zap className="w-6 h-6 mr-3" />
+=======
+
+          {/* Call to Action Buttons */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               Get Started Today
             </Link>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Contact Information */}
           <motion.div
             variants={itemVariants}
@@ -356,6 +396,10 @@ export default function UltraAdvancedHero2026() {
               </div>
             </div>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Trust Indicators */}
           <motion.div
             variants={itemVariants}
@@ -489,5 +533,9 @@ export default function UltraAdvancedHero2026() {
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 );  )
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

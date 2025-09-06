@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>)
+=======
+ </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</div>) import { useEffect, useState } from 'react';
 
 export default function AutomationStatusPage() {
@@ -23,5 +27,10 @@ export default function AutomationStatusPage() {
         <div className="text-sm text-gray-500">No status available yet.</div>
       )}
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -53,9 +53,18 @@ const UltraFuturisticBackground2034: React.FC = () => {
         if (this.life <= 0) {
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
+<<<<<<< HEAD
           this.y = Math.random() * canvas.height;        }          this.y = Math.random() * canvas.height
         }
       }
+=======
+          this.y = Math.random() * canvas.height;        }
+
+        }
+
+      }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       draw() {
         if (!ctx) return;
         ctx.save();
@@ -137,7 +146,11 @@ const UltraFuturisticBackground2034: React.FC = () => {
           className='absolute inset-0'
           style={{
             backgroundImage: `
+<<<<<<< HEAD
             linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
+=======
+            linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
           `
             backgroundSize: '50px 50px'
@@ -215,6 +228,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
           scale: [1, 1.4, 1]
           opacity: [0.4, 0.7, 0.4],        }}
         transition={{
+<<<<<<< HEAD
           duration: 18
           repeat: Infinity
           ease: 'linear',        }}        className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 rounded-lg"
@@ -228,6 +242,15 @@ const UltraFuturisticBackground2034: React.FC = () => {
           ease: 'linear',          ease: "linear"
         }}
       />
+=======
+          duration: 18,
+          repeat: Infinity,
+
+        }}
+
+      />
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Energy Orbs */}
       <motion.div
         className='absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm'
@@ -258,6 +281,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
           scale: [1, 1.3, 1]
           opacity: [0.4, 0.9, 0.4],        }}
         transition={{
+<<<<<<< HEAD
           duration: 5
           repeat: Infinity
           ease: 'easeInOut'
@@ -316,6 +340,27 @@ const UltraFuturisticBackground2034: React.FC = () => {
           />
         ))}
       </div>
+=======
+          duration: 5,
+          repeat: Infinity,
+
+        }}
+      />
+
+      {/* Quantum Field Lines */}
+
+            }}
+            transition={{
+              duration: 3 + i * 0.5,
+              repeat: Infinity,
+
+            }}
+
+          />
+        ))}
+      </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Holographic Rings */}
       <motion.div
         className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-400/20 rounded-full'
@@ -346,6 +391,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
           scale: [1, 1.2, 1]
           opacity: [0.15, 0.35, 0.15],        }}
         transition={{
+<<<<<<< HEAD
           duration: 25
           repeat: Infinity
           ease: 'linear',        }}
@@ -403,18 +449,48 @@ const UltraFuturisticBackground2034: React.FC = () => {
       </div>
       {/* Data Streams */}
       <div className='absolute inset-0 overflow-hidden'>
+=======
+          duration: 25,
+          repeat: Infinity,
+
+        }}
+      />
+
+      {/* Neural Network Nodes */}
+
+            }}
+            transition={{
+              duration: 2 + Math.random() * 2,
+              repeat: Infinity,
+
+            }}
+
+          />
+        ))}
+      </div>
+
+      {/* Data Streams */}
+      <div className='absolute inset-0 overflow-hidden'>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
             className='absolute w-px h-20 bg-gradient-to-b from-transparent via-blue-400/60 to-transparent'
             style={{
+<<<<<<< HEAD
               left: `${(i + 1) * 16.66}%`
               top: '-20px'
+=======
+              left: `${(i + 1) * 16.66}%`,
+              top: '-20px',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             }}
             animate={{
               y: [0, window.innerHeight + 20]
               opacity: [0, 1, 0],            }}
             transition={{
+<<<<<<< HEAD
               duration: 8 + i * 0.5
               repeat: Infinity
               ease: 'linear'
@@ -440,6 +516,24 @@ const UltraFuturisticBackground2034: React.FC = () => {
           />
         ))}
       </div>
+=======
+              duration: 8 + i * 0.5,
+              repeat: Infinity,
+              ease: 'linear',
+              delay: i * 1.5,            }}
+
+            }}
+            transition={{
+              duration: 8 + i * 0.5,
+              repeat: Infinity,
+
+            }}
+
+          />
+        ))}
+      </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Quantum Entanglement Effect */}
       <motion.div
         className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full'
@@ -474,6 +568,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
             '0 0 10px rgba(0, 255, 255, 0.5)'
           ],        }}
         transition={{
+<<<<<<< HEAD
           duration: 2
           repeat: Infinity
           ease: 'easeInOut'
@@ -490,6 +585,15 @@ const UltraFuturisticBackground2034: React.FC = () => {
           delay: 1
         }}
       />
+=======
+          duration: 2,
+          repeat: Infinity,
+
+        }}
+
+      />
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Metaverse Portal Effect */}
       <motion.div
         className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-purple-400/30 rounded-full'
@@ -516,6 +620,7 @@ const UltraFuturisticBackground2034: React.FC = () => {
       />
       {/* AI Consciousness Waves */}
       <div className='absolute inset-0'>
+<<<<<<< HEAD
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
@@ -550,6 +655,26 @@ const UltraFuturisticBackground2034: React.FC = () => {
               delay: i * 0.8,              ease: "easeInOut"
               delay: i * 0.8
             }}
+=======
+
+        }}
+        transition={{
+          duration: 40,
+          repeat: Infinity,
+
+        }}
+      />
+
+      {/* AI Consciousness Waves */}
+
+            }}
+            transition={{
+              duration: 6 + i * 0.5,
+              repeat: Infinity,
+
+            }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           />
         ))}
       </div>
@@ -560,3 +685,7 @@ export default UltraFuturisticBackground2034;  )
 }
 export default UltraFuturisticBackground2034;
 
+<<<<<<< HEAD
+=======
+export default UltraFuturisticBackground2034;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

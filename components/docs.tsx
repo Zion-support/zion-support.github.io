@@ -2,8 +2,12 @@ import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function DocsPage() {
 
   const contact = {
@@ -69,12 +73,21 @@ export default function DocsPage() {
       color: 'text-purple-400'
     }
     {
+<<<<<<< HEAD
       title: 'Community Forum'
       description: 'Connect with other developers and users'
       icon: <ExternalLink className='w-6 h-6' />
       href: '/community'
       color: 'text-yellow-400'
     }
+=======
+      title: 'Community Forum',
+      description: 'Connect with other developers and users',
+      icon: <ExternalLink className='w-6 h-6' />,
+      href: '/community',
+      color: 'text-yellow-400',
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
   const filteredDocs = documentationItems.filter(doc => {
     const matchesSearch =
@@ -90,6 +103,7 @@ export default function DocsPage() {
     return matchesSearch && matchesCategory
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
+<<<<<<< HEAD
       case 'Beginner':
         return 'bg-green-500/20 text-green-400';
       case 'Intermediate':
@@ -110,6 +124,10 @@ export default function DocsPage() {
     });  };      day: 'numeric'
     })
   }
+=======
+
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -148,6 +166,7 @@ export default function DocsPage() {
                         className='text-cyan-400 hover:underline'
                       >
                         {l.name}
+<<<<<<< HEAD
                       </a>                    </li>      </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-10">
@@ -164,6 +183,12 @@ export default function DocsPage() {
                     <li key={l.name}>
                       <a href={l.href} className="text-cyan-400 hover:underline">{l.name}</a>
                     </li>
+=======
+                      </a>                    </li>
+
+                    </li>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   ))}
                 </ul>
               </Card>
@@ -192,6 +217,7 @@ export default function DocsPage() {
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
               {external.map((e) => (
                 <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
+<<<<<<< HEAD
             </ul>
           </Card>
           <Card className='p-6 bg-black/40 border border-gray-700/50'>
@@ -233,3 +259,9 @@ export default function DocsPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
+=======
+
+              ))}
+            </ul>
+          </Card>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

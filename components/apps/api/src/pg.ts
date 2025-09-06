@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 
 let pool: Pool | null = null;
 }return pool
+=======
+ let pool: Pool | null = null;
+}return pool 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export async function withUser<T>(
   userId: string
   fn: (client: PoolClient) => Promise<T>

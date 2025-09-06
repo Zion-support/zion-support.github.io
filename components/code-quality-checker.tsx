@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
   Code
   CheckCircle
   AlertTriangle
@@ -15,6 +22,19 @@ import {
   Clock
   TrendingUp;
 } from 'lucide-react';import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
+=======
+  Code,
+  CheckCircle,
+  AlertTriangle,
+  Zap,
+  BarChart3,
+  ArrowRight,
+  Play,
+  Shield,
+  Clock,
+  TrendingUp,;
+} from 'lucide-react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 export default function CodeQualityCheckerPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -56,6 +76,7 @@ export default function CodeQualityCheckerPage() {
   ];
   const supportedLanguages = [
     {
+<<<<<<< HEAD
       name: 'JavaScript/TypeScript'
       icon: '⚡'
       features: ['ESLint rules', 'TypeScript checks', 'React best practices']
@@ -90,6 +111,45 @@ export default function CodeQualityCheckerPage() {
     { name: 'C++', icon: '⚙️', features: ['Clang-tidyStatic analysisMemory leak detection'] }
     { name: 'Go', icon: '🟢', features: ['Golangci-lintGo vetPerformance analysis'] }
     { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
+=======
+      name: 'JavaScript/TypeScript',
+      icon: '⚡',
+      features: ['ESLint rules', 'TypeScript checks', 'React best practices'],
+    },
+    {
+      name: 'Python',
+      icon: '🐍',
+      features: ['PEP 8 compliance', 'Type hints', 'Security scanning'],
+    },
+    {
+      name: 'Java',
+      icon: '☕',
+      features: ['PMD rules', 'Checkstyle', 'SonarQube integration'],
+    },
+    {
+      name: 'C++',
+      icon: '⚙️',
+      features: ['Clang-tidy', 'Static analysis', 'Memory leak detection'],
+    },
+    {
+      name: 'Go',
+      icon: '🟢',
+      features: ['Golangci-lint', 'Go vet', 'Performance analysis'],
+    },
+    {
+      name: 'PHP',
+      icon: '🐘',
+      features: ['PHPStan', 'PHP CS Fixer', 'Security analysis'],
+    },  ];    { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rulesTypeScript checksReact best practices'] },
+    { name: 'Python', icon: '🐍', features: ['PEP 8 complianceType hintsSecurity scanning'] },
+    { name: 'Java', icon: '☕', features: ['PMD rulesCheckstyleSonarQube integration'] },
+    { name: 'C++', icon: '⚙️', features: ['Clang-tidyStatic analysisMemory leak detection'] },
+    { name: 'Go', icon: '🟢', features: ['Golangci-lintGo vetPerformance analysis'] },
+    { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
+
+  ];
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const pricing = [
     {
       name: 'Developer'
@@ -173,6 +233,7 @@ export default function CodeQualityCheckerPage() {
             severity: 'low'
           }
           {
+<<<<<<< HEAD
             type: 'error'
             message: 'Missing semicolon at end of statement'
             line: 18
@@ -184,6 +245,21 @@ export default function CodeQualityCheckerPage() {
           testCoverage: '85%'
           securityScore: '92%'
         }
+=======
+            type: 'error',
+            message: 'Missing semicolon at end of statement',
+            line: 18,
+            severity: 'high',
+          },
+        ],
+
+        metrics: {
+          complexity: 'Medium',
+          maintainability: 'Good',
+          testCoverage: '85%',
+          securityScore: '92%',
+        },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         recommendations: [
           'Use const for immutable variables to improve code clarity'
           'Break down large functions into smaller, more focused functions'
@@ -318,6 +394,7 @@ export default function CodeQualityCheckerPage() {
               View Pricing
             </Button>
             <Button
+<<<<<<< HEAD
               href='/contact'
               variant='outline'
               size='lg'
@@ -390,6 +467,11 @@ export default function CodeQualityCheckerPage() {
                     </h3>
                     <p className="text-gray-400 leading-relaxed">
                       {feature.description}
+=======
+
+                      {feature.description}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     </p>
                   </div>
                 </div>
@@ -398,11 +480,19 @@ export default function CodeQualityCheckerPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Supported Languages Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               Multi-Language Support
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -459,6 +549,10 @@ export default function CodeQualityCheckerPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Demo Analysis Results */}
       {analysisResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -567,6 +661,10 @@ export default function CodeQualityCheckerPage() {
                   ))}
                 </div>
               </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Quality Metrics */}
               <Card className='border-gradient-teal'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -578,6 +676,10 @@ export default function CodeQualityCheckerPage() {
                     <span className='text-orange-400 font-bold'>
                       {analysisResults.metrics.complexity}
                     </span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Maintainability</span>
@@ -620,6 +722,7 @@ export default function CodeQualityCheckerPage() {
                 {analysisResults.recommendations.map((rec, index) => (
                   <div key={index} className='flex items-start space-x-3'>
                     <CheckCircle className='w-5 h-5 text-teal-400 mt-1 flex-shrink-0' />
+<<<<<<< HEAD
                     <span className='text-gray-300'>{rec}</span>                  </div>            <Card className="border-gradient-teal">
               <h3 className="text-2xl font-bold mb-6 text-white">Improvement Recommendations</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -627,17 +730,31 @@ export default function CodeQualityCheckerPage() {
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-teal-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{rec}</span>
+=======
+                    <span className='text-gray-300'>{rec}</span>                  </div>
+
+                  </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 ))}
               </div>
             </Card>
           </div>
         </section>
       )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Pricing Section */}
       <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -669,6 +786,7 @@ export default function CodeQualityCheckerPage() {
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     {plan.name}
@@ -695,6 +813,11 @@ export default function CodeQualityCheckerPage() {
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-teal-400 mr-3 flex-shrink-0" />
                       {feature}
+=======
+
+                      {feature}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     </li>
                   ))}
                 </ul>
@@ -704,22 +827,38 @@ export default function CodeQualityCheckerPage() {
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
+<<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact"
                   size="lg"
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
+=======
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>
+
+                </Button>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </Card>
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
+<<<<<<< HEAD
+=======
+
+            Ready to Improve Your Code Quality?
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </h2>
           <p className='text-responsive-md text-teal-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of developers using our code quality checker to write
@@ -748,5 +887,9 @@ export default function CodeQualityCheckerPage() {
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

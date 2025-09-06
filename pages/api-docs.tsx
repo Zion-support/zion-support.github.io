@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 <<<<<<< HEAD
@@ -6,6 +7,8 @@ import React from 'react';
 =======
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { motion } from 'framer-motion';
 =======
 import React from 'react';
@@ -220,7 +223,10 @@ export default function APIDocsPage() {
 }
 import Layout from '../components/Layout';
 export default function APIDocsPage() {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function ApiDocsPage() {
   return (
     <>
@@ -265,4 +271,8 @@ export default function ApiDocsPage() {
 >>>>>>> origin/main
     </>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

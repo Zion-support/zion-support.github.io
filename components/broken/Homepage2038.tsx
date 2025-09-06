@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React from 'react',
 import Layout from './layout/Layout',
 import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038',
+=======
+import React from 'react';
+import Layout from './layout/Layout';
+import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -56,6 +62,7 @@ const Homepage2038: React.FC = () => {
   return (
     <Layout>
       {/* Main Content */}
+<<<<<<< HEAD
       <main className='relative z-10'>
         {/* Hero Section */}
         <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>
@@ -82,18 +89,29 @@ const Homepage2038: React.FC = () => {
             <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-500"></div>
           </div>
           <div className="text-center max-w-5xl mx-auto relative z-10">
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='space-y-8'              className="space-y-8"
             >
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Company Badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               >
                 <Star className='w-4 h-4' />
                 <span>Innovation Leader 2038</span>
@@ -157,6 +175,10 @@ const Homepage2038: React.FC = () => {
                   </motion.button>
                 </Link>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Trust Indicators */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -204,11 +226,19 @@ const Homepage2038: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
           <div className="max-w-7xl mx-auto relative z-10">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             >
               <motion.div
                 className='p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300'
@@ -301,11 +331,19 @@ const Homepage2038: React.FC = () => {
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-20'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
                 Revolutionary AI Services
@@ -334,7 +372,12 @@ const Homepage2038: React.FC = () => {
                 >
                   <UltraFuturisticServiceCard2038
                     service={service}
+<<<<<<< HEAD
                     variant='consciousness'                  />                    variant="consciousness"
+=======
+                    variant='consciousness'                  />
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   />
                 </motion.div>
               ))}
@@ -359,11 +402,19 @@ const Homepage2038: React.FC = () => {
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-20'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent'>
                 Innovative Micro SAAS
@@ -392,7 +443,12 @@ const Homepage2038: React.FC = () => {
                 >
                   <UltraFuturisticServiceCard2038
                     service={service}
+<<<<<<< HEAD
                     variant='automation'                  />                    variant="automation"
+=======
+                    variant='automation'                  />
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   />
                 </motion.div>
               ))}
@@ -417,11 +473,19 @@ const Homepage2038: React.FC = () => {
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-20'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'>
                 Advanced IT Infrastructure
@@ -450,7 +514,12 @@ const Homepage2038: React.FC = () => {
                 >
                   <UltraFuturisticServiceCard2038
                     service={service}
+<<<<<<< HEAD
                     variant='quantum'                  />                    variant="quantum"
+=======
+                    variant='quantum'                  />
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   />
                 </motion.div>
               ))}
@@ -475,11 +544,20 @@ const Homepage2038: React.FC = () => {
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/30">
           <div className="max-w-7xl mx-auto">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-20'
+<<<<<<< HEAD
+=======
+
+            >
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
                 Why Choose Zion Tech Group?
               </h2>
@@ -494,12 +572,49 @@ const Homepage2038: React.FC = () => {
                   icon: <Brain className='w-12 h-12' />
                   title: 'AI Consciousness Evolution'
                   description:
+<<<<<<< HEAD
                     'Leading the development of artificial consciousness and emotional intelligence'
                   color: 'from-purple-500 to-pink-500'
                 }
                 {
                   icon: <Atom className='w-12 h-12' />
                   title: 'Quantum Computing Power'
+=======
+                    'Leading the development of artificial consciousness and emotional intelligence',
+                  color: 'from-purple-500 to-pink-500',
+                },
+                {
+                  icon: <Atom className='w-12 h-12' />,
+                  title: 'Quantum Computing Power',
+                  description:
+                    'Access to the most advanced quantum computing capabilities available',
+                  color: 'from-blue-500 to-cyan-500',
+                },
+                {
+                  icon: <Shield className='w-12 h-12' />,
+                  title: 'Future-Proof Security',
+                  description:
+                    'Quantum-resistant encryption and zero-trust security frameworks',
+                  color: 'from-red-500 to-orange-500',
+                },
+                {
+                  icon: <Rocket className='w-12 h-12' />,
+                  title: 'Innovation First',
+                  description:
+                    "Constantly pushing the boundaries of what's possible in technology",
+                  color: 'from-green-500 to-emerald-500',
+                },
+                {
+                  icon: <Users className='w-12 h-12' />,
+                  title: 'Global Expertise',
+                  description:
+                    'World-class team with experience across cutting-edge technologies',
+                  color: 'from-indigo-500 to-purple-500',
+                },
+                {
+                  icon: <Award className='w-12 h-12' />,
+                  title: 'Proven Results',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   description:
                     'Access to the most advanced quantum computing capabilities available'
                   color: 'from-blue-500 to-cyan-500'
@@ -543,6 +658,10 @@ const Homepage2038: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className='text-center p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   whileHover={{ scale: 1.05 }}
                 >
                   <div
@@ -555,6 +674,7 @@ const Homepage2038: React.FC = () => {
                   </h3>
                   <p className='text-gray-300 leading-relaxed'>
                     {feature.description}
+<<<<<<< HEAD
                   </p>                </motion.div>                  whileHover={{ scale: 1.05 }}
                 >
                   <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -565,20 +685,38 @@ const Homepage2038: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
                 </motion.div>
+=======
+                  </p>                </motion.div>
+
+                </motion.div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* CTA Section */}
         <section className='py-24 px-4'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='space-y-8'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             >
               <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                 Ready to Shape the Future?
@@ -644,3 +782,7 @@ export default Homepage2038;  )
 }
 export default Homepage2038;
 
+<<<<<<< HEAD
+=======
+export default Homepage2038;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

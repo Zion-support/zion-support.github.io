@@ -85,6 +85,7 @@ export default async function handler(
     const text = completion.choices?.[0]?.message?.content ?? '';
     try {
       const json = JSON.parse(text);
+<<<<<<< HEAD
       return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' }
         { role: 'user', content: prompt }];
       temperature: 0.2});
@@ -105,3 +106,10 @@ export default async function handler(
     return fallback()
 }
 }
+=======
+      return res.status(200).json(json);
+
+    const text = completion.choices?.[0]?.message?.content ?? '';
+    try {
+      const json = JSON.parse(text);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

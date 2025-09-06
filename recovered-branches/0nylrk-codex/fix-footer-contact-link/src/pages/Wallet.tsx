@@ -1,10 +1,20 @@
 
+<<<<<<< HEAD
 import { useWallet  } from '@/hooks/useWallet';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
 import { BadgeDollarSign } from 'lucide-react';
 export default function WalletPage() {
   const { wallet, transactions, loading } = useWallet();
+=======
+import { useWallet } from '@/hooks/useWallet',
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card',
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',
+import { BadgeDollarSign } from 'lucide-react',
+export default function WalletPage() {
+  const { wallet, transactions, loading } = useWallet(),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="container max-w-4xl py-10">
       <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">
@@ -66,4 +76,9 @@ export default function WalletPage() {
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

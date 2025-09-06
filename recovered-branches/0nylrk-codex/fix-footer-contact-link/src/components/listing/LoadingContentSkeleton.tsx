@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { Skeleton } from "@/components/ui/skeleton";
@@ -13,6 +14,16 @@ export function LoadingContentSkeleton() {
         <div className="flex flex-wrap gap-2">
           {[...Array(5)].map((_, i) => (
             <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />
+=======
+import React from "react";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+
+import React from "react",
+import { Skeleton } from "@/components/ui/skeleton",
+import { Card, CardContent, CardHeader } from "@/components/ui/card",
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           ))}
         </div>
         <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />
@@ -20,8 +31,14 @@ export function LoadingContentSkeleton() {
           {[...Array(3)].map((_, i) => (
             <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />
           ))}
+<<<<<<< HEAD
         </div>
       </CardContent>
     </Card>
+=======
+        </div>;
+      </CardContent>;
+    </Card>;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }

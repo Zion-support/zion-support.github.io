@@ -1,6 +1,17 @@
+<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import Link from 'next/link',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+=======
+import {useEffect, useState} from 'react';
+import Link from 'next/link';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type {
+  GrantApplication,
+  GrantCategory,
+  GrantStatus,;
+} from '../../types/grants';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import type {
   GrantApplication
@@ -53,6 +64,7 @@ export default function GrantsPage() {
 
   return (
     <EnhancedLayout>
+<<<<<<< HEAD
       <div className='flex items-center justify-between mb-6'>
         <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>
         <div className='flex gap-2'>
@@ -163,3 +175,10 @@ export default function GrantsPage() {
     </EnhancedLayout>
 );
 }
+=======
+
+  }, [filters]);
+
+  return (
+    <EnhancedLayout>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

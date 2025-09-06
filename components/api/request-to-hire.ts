@@ -21,6 +21,10 @@ export default async function handler(
 
     return res.status(400).json({ error: 'Missing required fields' });
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   try {
 
     const timestamp = new Date().toISOString();
@@ -54,9 +58,15 @@ export default async function handler(
     // Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer)
     return res.status(200).json({ ok: true });
   } catch (err) {
+<<<<<<< HEAD
 console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' });
   }    return res.status(500).json({ error: 'Internal error' })
   }
 }
 
+=======
+    console.error('Request-to-hire failed', err);
+    return res.status(500).json({ error: 'Internal error' });
+  }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

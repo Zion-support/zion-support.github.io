@@ -2,6 +2,10 @@ import React, { useMemo, useState } from 'react';
 import { useUser } from '../../providers/UserProvider';
 import { useToast } from '../ui/ToastProvider';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function OnboardingWizard() {
   const { user, completeOnboarding, setUser } = useUser();
   const { addToast } = useToast();
@@ -19,6 +23,7 @@ export default function OnboardingWizard() {
   const steps = useMemo(() => {
     if (isClient) {
       return [
+<<<<<<< HEAD
         {
           title: 'Ready to find top IT talent?'
           content: (
@@ -214,3 +219,10 @@ export default function OnboardingWizard() {
     </div>
 );
 }
+=======
+
+        )}
+      </div>
+    </div>
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

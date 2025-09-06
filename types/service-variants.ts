@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export type ServiceVariant =;
   | 'default';
   | 'holographic';
@@ -106,6 +109,7 @@ export type ServiceVariant =;
   | 'education-futuristic';
   | 'real-estate-futuristic';
   | 'industrial-futuristic';
+<<<<<<< HEAD
   | 'neural-futuristic';
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -367,3 +371,6 @@ export type ServiceVariant =
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+  | 'neural-futuristic';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

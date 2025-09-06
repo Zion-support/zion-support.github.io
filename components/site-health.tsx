@@ -1,4 +1,8 @@
 import Head from 'next/head';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function SiteHealth() {
   return (
 
@@ -54,6 +58,7 @@ export default function SiteHealth() {
           <div className='mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md'>
             <span className='h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />
           </div>
+<<<<<<< HEAD
           <h1 className='mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl'>
             <span className='gradient-text'>Site Health</span>
           </h1>
@@ -170,3 +175,7 @@ export default function SiteHealth() {
     </div>
   );
 }
+=======
+        </nav>
+      </header>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

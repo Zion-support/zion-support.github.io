@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -27,3 +28,7 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   return true;
 }
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

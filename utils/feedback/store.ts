@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface FeedbackRecord {
   id: string;
   type: string;
@@ -18,4 +19,7 @@ export function writeAll(rows: any[]): void {
 }
 export function getAllFeedback(): FeedbackRecord[] {
   return [...feedbackData];
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

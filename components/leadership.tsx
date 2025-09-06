@@ -1,5 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function LeadershipPage() {
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
@@ -71,5 +75,10 @@ export default function LeadershipPage() {
 				<div className="mt-10 text-slate-300">Contact: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> • <a className="text-cyan-400" href="tel:+13024640950">+1 302 464 0950</a></div>
 			</div>
 		</div>
+<<<<<<< HEAD
 	)
 }
+=======
+	),
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

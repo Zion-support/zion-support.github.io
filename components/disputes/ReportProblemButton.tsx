@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import Link from "next/link";
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import Link from "next/link";
 export default function ReportProblemButton({
@@ -14,7 +18,10 @@ export default function ReportProblemButton({
     ...(entityType ? { entityType } : {})
     ...(entityId ? { entityId } : {})
   });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Link href={`/disputes/new?${query.toString()}`}>
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">
@@ -42,5 +49,9 @@ export default function ReportProblemButton({
     <Link href={`/disputes/new?${query.toString()}`}>
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>
     </Link>
+<<<<<<< HEAD
   );
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

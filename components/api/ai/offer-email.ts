@@ -39,7 +39,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     prompt
     'You are a recruiting ops specialist with excellent writing skills.'
   );
+<<<<<<< HEAD
   return res.status(200).json({ email: text });  const text = await generateText(prompt, 'You are a recruiting ops specialist with excellent writing skills.');
 
   return res.status(200).json({ email: text })
 }
+=======
+  return res.status(200).json({ email: text });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

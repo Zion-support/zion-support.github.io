@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
 // Initialize particles
@@ -140,11 +143,20 @@ export default function UltraFuturisticBackground2029() {
                   ctx.beginPath();
                   ctx.moveTo(particle.x, particle.y);
                   ctx.lineTo(partner.x, partner.y);
+<<<<<<< HEAD
                   ctx.stroke();                }                  ctx.stroke()
+=======
+                  ctx.stroke();                }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 }
               }
             }
             break;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           case 'holographic':
             // Holographic particles with rainbow effect
             const time = Date.now() * 0.001;
@@ -375,6 +387,10 @@ export default function UltraFuturisticBackground2029() {
           ease: 'easeInOut'
         }}
       />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -387,6 +403,7 @@ export default function UltraFuturisticBackground2029() {
         <motion.div
           className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
           animate={{
+<<<<<<< HEAD
             scale: [1, 1.2, 1]
             opacity: [0.1, 0.3, 0.1],          }}
           transition={{
@@ -497,6 +514,32 @@ export default function UltraFuturisticBackground2029() {
               opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.2, 1]
             }}
+=======
+            scale: [1, 1.2, 1],
+            opacity: [0.1, 0.3, 0.1],          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: 'easeInOut',
+
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+
+            }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             transition={{
               duration: 3 + i * 0.5
               repeat: Infinity
@@ -508,5 +551,9 @@ export default function UltraFuturisticBackground2029() {
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 );  )
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

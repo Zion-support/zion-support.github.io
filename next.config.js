@@ -49,8 +49,17 @@ const nextConfig = {
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   images: {
+<<<<<<< HEAD
     unoptimized: true,
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+=======
+    domains: [
+      'localhost',
+      'ziontechgroup.com',
+      'images.unsplash.com',
+      'via.placeholder.com'
+    ],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
 <<<<<<< HEAD
@@ -58,6 +67,7 @@ const nextConfig = {
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+<<<<<<< HEAD
 <<<<<<< HEAD
     minimumCacheTTL: 31536000, // 1 year
     dangerouslyAllowSVG: true,
@@ -135,10 +145,15 @@ const nextConfig = {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+    minimumCacheTTL: 31536000
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
         ignored: [
+<<<<<<< HEAD
 
           "**/node_modules/**"
           "**/.git/**"
@@ -252,3 +267,47 @@ const nextConfig = {
   }
 }
 export default nextConfig;
+=======
+          '**/node_modules/**',
+          '**/.git/**',
+          '**/pages_backup*/**',
+          '**/pages.*/**',
+          '**/pages-*/**',
+          '**/pages_disabled*/**',
+          '**/pages.disabled*/**',
+          '**/pages.broken*/**',
+          '**/pages.corrupted*/**',
+          '**/pages.old*/**',
+          '**/pages._*/**',
+          '**/pages.__*/**',
+          '**/backup-pages/**',
+          '**/src.pages.disabled/**',
+          '**/lib_backup*/**',
+          '**/src_backup*/**',
+          '**/corrupted-files-backup*/**',
+          '**/performance-reports*/**',
+          '**/log-analysis-reports*/**',
+          '**/link-reports*/**',
+          '**/lint-target*/**',
+          '**/monitoring*/**',
+          '**/pm2-automation*/**',
+          '**/automation/logs*/**',
+          '**/automation/backup*/**',
+          '**/performance-*.json',
+          '**/performance-*.js',
+          '**/performance-*.cjs',
+          '**/performance-*.sh',
+          '**/performance-*.html',
+          '**/performance-*.md',
+          '**/performance-*.txt',
+          '**/apps/**'
+        ],
+        poll: 1000,
+        aggregateTimeout: 300
+      }
+    }
+    return config
+  }
+}
+export default nextConfig
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

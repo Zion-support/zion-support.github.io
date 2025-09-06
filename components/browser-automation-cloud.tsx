@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
+=======
+import React from 'react';
+import SEO from '../components/SEO';
+import {Check, ExternalLink} from 'lucide-react';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function BrowserAutomationCloudPage() {
 
   const features = [
@@ -98,5 +105,10 @@ export default function BrowserAutomationCloudPage() {
 				</section>
 			</main>
 		</>
+<<<<<<< HEAD
 	)
 }
+=======
+	),
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

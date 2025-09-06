@@ -27,4 +27,7 @@ if (idx === -1) return res.status(404).json({ error: 'Not found' });
   writeAll(items);
   res.status(200).json({ ok: true });  res.status(200).json({ ok: true })
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

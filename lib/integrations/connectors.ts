@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
@@ -48,3 +53,23 @@ export const ats = {
   }
 }
 
+<<<<<<< HEAD
+=======
+  async createCandidate(
+    connection: ProviderConnection,
+    candidate: Record<string, any>
+  ) {
+    return executeProviderAction(connection, 'createCandidate', { candidate });
+  },
+};
+
+// Email actions
+export const email = {
+  async sendNotification(
+    connection: ProviderConnection,
+    notification: Record<string, any>
+  ) {
+    return executeProviderAction(connection, 'sendNotification', { notification });
+  },
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

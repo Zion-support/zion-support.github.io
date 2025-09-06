@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -8,6 +11,10 @@ import {
   recordRequest;
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const REDEMPTIONS_FILE = path.join(
   process.cwd()
   'data'
@@ -35,6 +42,7 @@ export default async function handler(
   if (!studentEmail |!grantCode |!courseId) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     return res.status(400).json({ error: 'Missing required fields' });
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const started = Date.now();
   const auth = await authenticateRequest(req);
@@ -73,3 +81,10 @@ redeemedAt: now
   return res.status(201).json({ id: record.id, redeemedAt: now });  return res.status(201).json({ id: record.id, redeemedAt: now })
 }
 
+=======
+
+  }
+  const { studentEmail, grantCode, courseId } = req.body || {};
+  if (!studentEmail || !grantCode || !courseId) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

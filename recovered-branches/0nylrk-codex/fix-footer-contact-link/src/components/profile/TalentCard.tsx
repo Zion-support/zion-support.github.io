@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { TalentProfile } from "@/types/talent";
 export interface TalentCardProps {
@@ -44,6 +45,61 @@ export function TalentCard({
   }
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) |[];
+=======
+import { Link } from "react-router-dom",
+import { TalentProfile } from "@/types/talent",
+export interface TalentCardProps {
+  talent: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire: (talent: TalentProfile) => void,
+  isSaved: boolean,
+  onToggleSave: (id: string, isSaved: boolean) => void,
+  isAuthenticated: boolean
+import { Button } from "@/components/ui/button",;
+import { Card } from "@/components/ui/card",;
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
+import { Link } from "react-router-dom",;
+import { TalentProfile } from "@/types/talent",;
+export interface TalentCardProps {;
+  talent: TalentProfile,;
+  onViewProfile: (id: string) => void,;
+  onRequestHire: (talent: TalentProfile) => void,;
+  isSaved: boolean,;
+  onToggleSave: (id: string, isSaved: boolean) => void,;
+  isAuthenticated: boolean;
+}
+;
+export function TalentCard({;
+  talent,;
+  onViewProfile,;
+  onRequestHire,;
+  isSaved,;
+  onToggleSave,;
+  isAuthenticated;
+}: TalentCardProps) {;
+  const handleViewProfile = () => {;
+    if (onViewProfile) {;
+      onViewProfile(talent.id);
+    }
+  },;
+  const handleRequestHire = (e: React.MouseEvent) => {;
+    e.preventDefault(),;
+    e.stopPropagation(),;
+    if (onRequestHire) {;
+      onRequestHire(talent);
+    }
+  },;
+  const handleToggleSave = (e: React.MouseEvent) => {;
+    e.preventDefault(),;
+    e.stopPropagation(),;
+    if (onToggleSave) {;
+      onToggleSave(talent.id, !isSaved);
+    }
+  },
+
+  // Extract skills - limit to 5 for display
+  const skills = talent.skills?.slice(0, 5) || [],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>
@@ -85,6 +141,10 @@ export function TalentCard({
               </Button>
             </div>
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
@@ -99,6 +159,7 @@ export function TalentCard({
                   <span>{talent.availability_type}</span>
                 </div>
               )}
+<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -132,6 +193,42 @@ export function TalentCard({
               </div>
             ) : (
               <div className="text-zion-slate-light">Rate not specified</div>
+=======
+            </div>;
+          </div>;
+        </div>;
+        {/* Skills */}
+        {skills.length > 0 && (;
+          <div className="mt-4">;
+            <div className="flex flex-wrap gap-2">;
+              {skills.map((skill, index) => (;
+                <span;
+                  key={index}
+                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light";
+                >;
+                  {skill}
+                </span>;
+              ))}
+              {(talent.skills?.length || 0) > 5 && (;
+                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
+                  +{(talent.skills?.length || 0) - 5} more;
+                </span>;
+              )}
+            </div>;
+          </div>;
+        )}
+;
+        {/* Hourly Rate & Actions */}
+        <div className="mt-5 flex items-center justify-between">;
+          <div>;
+            {talent.hourly_rate ? (;
+              <div className="text-white font-bold">;
+                ${talent.hourly_rate}
+                <span className="text-zion-slate-light font-normal">/hr</span>;
+              </div>;
+            ) : (;
+              <div className="text-zion-slate-light">Rate not specified</div>;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             )}
           </div>
           <div className="flex items-center gap-2">

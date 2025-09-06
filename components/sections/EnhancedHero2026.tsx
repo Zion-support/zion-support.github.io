@@ -40,12 +40,21 @@ export default function EnhancedHero2026({
     visible: {
       opacity: 1
       transition: {
+<<<<<<< HEAD
         staggerChildren: 0.2
       }
     },  };        staggerChildren: 0.2
       }
     }
   }
+=======
+        staggerChildren: 0.2,
+      },
+    },  };
+
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const itemVariants = {
     hidden: { y: 30, opacity: 0 }
     visible: {
@@ -83,14 +92,20 @@ export default function EnhancedHero2026({
             key={i}
             className='absolute w-2 h-2 bg-cyan-400/30 rounded-full'
             style={{
+<<<<<<< HEAD
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
+=======
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             }}
             animate={{
               y: [0, -30, 0]
               opacity: [0.3, 0.8, 0.3]
               scale: [1, 1.5, 1],            }}
             transition={{
+<<<<<<< HEAD
               duration: 3 + Math.random() * 2
               repeat: Infinity
               ease: 'easeInOut'
@@ -122,6 +137,20 @@ export default function EnhancedHero2026({
               delay: Math.random() * 2,              ease: "easeInOut"
               delay: Math.random() * 2
             }}
+=======
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: Math.random() * 2,            }}
+
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+
+            }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           />
         ))}
       </div>
@@ -164,6 +193,7 @@ export default function EnhancedHero2026({
               Transform your business with our revolutionary AI, Quantum, and IT infrastructure services.
               <span className="text-cyan-400 font-semibold"> 1000+ cutting-edge solutions</span> delivering unprecedented ROI.
           </motion.div>
+<<<<<<< HEAD
           {/* Enhanced Stats Grid */}
           <motion.div
             className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto'
@@ -234,10 +264,21 @@ export default function EnhancedHero2026({
                 </div>
                 <div className="text-xs text-gray-400 leading-tight">
                   {stat.label}
+=======
+
+          {/* Enhanced Stats Grid */}
+
+                  {stat.label}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </div>
               </motion.div>
             ))}
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Enhanced CTA Section */}
           <motion.div variants={itemVariants} className='space-y-6'>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -300,6 +341,10 @@ export default function EnhancedHero2026({
               </div>
             </div>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Contact Information */}
           <motion.div
             variants={itemVariants}
@@ -349,5 +394,9 @@ export default function EnhancedHero2026({
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 );  )
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

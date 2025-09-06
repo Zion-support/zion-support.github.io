@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -10,6 +11,8 @@
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -370,10 +373,13 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
@@ -453,4 +459,8 @@ export default function CookiesPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

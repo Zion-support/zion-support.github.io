@@ -1,5 +1,9 @@
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Placeholder() {
   return (
     <main className='min-h-screen p-8'>
@@ -31,4 +35,8 @@ export default function Placeholder() {
       </div>
     </main>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

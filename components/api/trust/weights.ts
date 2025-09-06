@@ -28,4 +28,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('AllowGET, PUT');
 
   return res.status(405).json({ error: 'Method not allowed' })
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -422,6 +426,7 @@ const serviceCategories = [
         price: '$1,999/month'
       }
       {
+<<<<<<< HEAD
         name: 'Sustainable Supply Chain'
         href: '/sustainable-supply-chain'
         description: 'Green supply chain solutions'
@@ -434,6 +439,23 @@ const serviceCategories = [
       { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
     ]
   }
+=======
+        name: 'Sustainable Supply Chain',
+        href: '/sustainable-supply-chain',
+        description: 'Green supply chain solutions',
+        price: '$3,999/month',
+      },
+    ],
+  },];      { name: 'Carbon Footprint Tracking', href: '/carbon-footprint-tracking', description: 'Monitor environmental impact', price: '$1,499/month' };
+      { name: 'Renewable Energy Management', href: '/renewable-energy-management', description: 'Optimize green energy', price: '$2,999/month' };
+      { name: 'Waste Management AI', href: '/waste-management-ai', description: 'Intelligent waste optimization', price: '$1,999/month' };
+      { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
+    ]
+  }
+
+];
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home }
   { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket }
@@ -468,6 +490,10 @@ const resourceLinks = [
   { name: '🔐 Security Center', href: '/security', icon: Shield }
   { name: '📊 Analytics', href: '/analytics', icon: BarChart3 },];  { name: '📊 Analytics', href: '/analytics', icon: BarChart3 }
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function UltraFuturisticNavigation2028() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -487,6 +513,7 @@ export default function UltraFuturisticNavigation2028() {
         service.description.toLowerCase().includes(searchQuery.toLowerCase())    )
   );
   return (
+<<<<<<< HEAD
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  }
   const handleCategoryLeave = () => {
     setActiveCategory(null)
@@ -495,6 +522,10 @@ export default function UltraFuturisticNavigation2028() {
     category.services.filter(service =>
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
       service.description.toLowerCase().includes(searchQuery.toLowerCase())
+=======
+    <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     )
   );
 
@@ -551,6 +582,10 @@ export default function UltraFuturisticNavigation2028() {
       {/* Main Navigation */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-20'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Logo */}
           <div className='flex items-center'>
             <Link href='/' className='flex items-center space-x-3 group'>
@@ -627,6 +662,7 @@ export default function UltraFuturisticNavigation2028() {
                                 </div>
                                 <span className='text-xs text-purple-400 font-medium'>
                                   {service.price}
+<<<<<<< HEAD
                                 </span>                              </div>            {/* Service Categories */}
             <div className="relative group">
               <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2">
@@ -661,6 +697,12 @@ export default function UltraFuturisticNavigation2028() {
                                 </div>
                                 <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                               </div>
+=======
+                                </span>                              </div>
+
+                              </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                             </Link>
                           ))}
                         </div>
@@ -687,6 +729,10 @@ export default function UltraFuturisticNavigation2028() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* Company Links */}
             {companyLinks.slice(1, 5).map(link => (
               <Link
@@ -705,10 +751,20 @@ export default function UltraFuturisticNavigation2028() {
                 <link.icon className="w-4 h-4" />
                 <span>{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
               </Link>
+<<<<<<< HEAD
             ))}
           </div>
           {/* Search and Actions */}
           <div className='hidden lg:flex items-center space-x-4'>
+=======
+
+            ))}
+          </div>
+
+          {/* Search and Actions */}
+          <div className='hidden lg:flex items-center space-x-4'>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* Search */}
             <div className='relative'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400' />
@@ -756,6 +812,10 @@ export default function UltraFuturisticNavigation2028() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -764,6 +824,10 @@ export default function UltraFuturisticNavigation2028() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             <div className='px-4 py-6 space-y-6'>
               {/* Mobile Search */}
@@ -820,6 +884,7 @@ export default function UltraFuturisticNavigation2028() {
                           key={service.name}
                           href={service.href}
                           onClick={closeMenu}
+<<<<<<< HEAD
                           className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
                         >
                           <h4 className='text-sm font-medium text-white'>
@@ -835,11 +900,20 @@ export default function UltraFuturisticNavigation2028() {
                           <h4 className="text-sm font-medium text-white">{service.name}</h4>
                           <p className="text-xs text-purple-300">{service.description}</p>
                           <span className="text-xs text-purple-400 font-medium">{service.price}</span>
+=======
+
+                        </Link>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       ))}
                     </div>
                   </div>
                 ))}
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Mobile Company Links */}
               <div className='space-y-4'>
                 <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>
@@ -858,6 +932,7 @@ export default function UltraFuturisticNavigation2028() {
                       key={link.name}
                       href={link.href}
                       onClick={closeMenu}
+<<<<<<< HEAD
                       className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
                     >
                       <link.icon className='w-5 h-5 text-purple-400' />
@@ -872,6 +947,18 @@ export default function UltraFuturisticNavigation2028() {
               </div>
               {/* Mobile CTA */}
               <div className='pt-4 border-t border-purple-500/30'>
+=======
+
+                    </Link>
+
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobile CTA */}
+              <div className='pt-4 border-t border-purple-500/30'>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <Link
                   href='/contact'
                   onClick={closeMenu}
@@ -887,6 +974,10 @@ export default function UltraFuturisticNavigation2028() {
           </motion.div>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Search Results Dropdown */}
       {searchQuery && filteredServices.length > 0 && (
         <div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50'>
@@ -909,6 +1000,7 @@ export default function UltraFuturisticNavigation2028() {
                     </div>
                     <span className='text-xs text-purple-400 font-medium'>
                       {service.price}
+<<<<<<< HEAD
                     </span>                  </div>                <Link
                   key={service.name}
                   href={service.href}
@@ -921,6 +1013,12 @@ export default function UltraFuturisticNavigation2028() {
                     </div>
                     <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                   </div>
+=======
+                    </span>                  </div>
+
+                  </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </Link>
               ))}
             </div>
@@ -928,5 +1026,9 @@ export default function UltraFuturisticNavigation2028() {
         </div>
       )}
     </nav>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

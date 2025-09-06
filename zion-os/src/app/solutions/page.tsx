@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 export default function SolutionsPage() {return (;
+=======
+export default function SolutionsPage() {;
+  return (;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">;

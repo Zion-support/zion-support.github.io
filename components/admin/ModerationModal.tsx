@@ -119,5 +119,9 @@ export default function ModerationModal({
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,4 +1,8 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface AccessibilityContextType {
   highContrast: boolean;
   largeText: boolean;
@@ -48,5 +52,11 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
       </div>
     </AccessibilityContext.Provider>
   );
+<<<<<<< HEAD
 }
 export default AccessibilityProvider;
+=======
+};
+
+export default AccessibilityProvider;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

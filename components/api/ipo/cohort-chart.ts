@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import type { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -7,4 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader("Content-Typeimage/svg+xml");
   res.send(svg);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

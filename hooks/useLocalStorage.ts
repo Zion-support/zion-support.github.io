@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 };
 export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {;
   const [storedValue, setStoredValue] = useState<T>(() => {;
@@ -24,6 +27,10 @@ export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {const [stor
   });
   const setValue = (valu:e:T | ((va:l:T) => T)) => {try {;
       const valueToStore = value instanceof Function ? value(storedValue) :value;import { useState, useEffect } from 'react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function useLocalStorage<T>(key: string, initialValue: T) {
 <<<<<<< HEAD
   // Get from local storage then parse stored json or return initialValue
@@ -109,6 +116,7 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
   return [storedValue, setValue] as const;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.error(`Error setting localStorage key "${key}":`, error)};
   };
   return [storedValue, setValue] as const};
@@ -183,3 +191,17 @@ export default useLocalStorage;
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+      console.error(`Error setting localStorage key "${key}":`, error)};
+  };
+  return [storedValue, setValue] as const};
+};
+};
+};
+<<<<<<< HEAD
+};
+=======
+};
+export default useLocalStorage;
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

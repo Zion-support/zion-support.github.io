@@ -199,6 +199,10 @@ export default function ComprehensiveServicesShowcase() {
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
         default: return 0
     });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData?.icon |'🚀';
@@ -214,15 +218,27 @@ export default function ComprehensiveServicesShowcase() {
   }
 
   return (
+<<<<<<< HEAD
     <section className="py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
+=======
+    <section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
+      <div className='max-w-7xl mx-auto'>        {/* Header */}
+
+        {/* Header */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
             Revolutionary Micro SAAS Services 2025
@@ -305,6 +321,10 @@ export default function ComprehensiveServicesShowcase() {
             </div>
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Search and Filters */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -312,6 +332,10 @@ export default function ComprehensiveServicesShowcase() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className='mb-12'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
             {/* Search */}
@@ -325,6 +349,7 @@ export default function ComprehensiveServicesShowcase() {
                 className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20'              />
             </div>
             {/* Sort and View Controls */}
+<<<<<<< HEAD
             <div className='flex items-center gap-4'>        >
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search */}
@@ -366,10 +391,20 @@ export default function ComprehensiveServicesShowcase() {
                   }`}
                 >
                   <Grid className="w-5 h-5" />
+=======
+            <div className='flex items-center gap-4'>
+
+              />
+            </div>
+
+            {/* Sort and View Controls */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all ${
+<<<<<<< HEAD
                     viewMode === 'list'
                       ? 'bg-blue-600 text-white'
                       : 'text-white/60 hover:text-white'
@@ -379,10 +414,19 @@ export default function ComprehensiveServicesShowcase() {
                   }`}
                 >
                   <List className="w-5 h-5" />
+=======
+
+                </button>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </div>
             </div>
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -392,10 +436,17 @@ export default function ComprehensiveServicesShowcase() {
           className='mb-12'
         >
           <div className='flex flex-wrap justify-center gap-3'>
+<<<<<<< HEAD
             {categories.map(category => (              <button          className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
+=======
+            {categories.map(category => (              <button
+
+              <button
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
@@ -410,9 +461,17 @@ export default function ComprehensiveServicesShowcase() {
                   {category.count}
                 </span>              </button>                <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>
               </button>
+<<<<<<< HEAD
             ))}
           </div>
         </motion.div>
+=======
+
+            ))}
+          </div>
+        </motion.div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Services Display */}
         {viewMode === 'grid' ? (
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -429,6 +488,7 @@ export default function ComprehensiveServicesShowcase() {
                   {/* Popular Badge */}
                   {service.popular && (
                     <div className='absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
+<<<<<<< HEAD
                       <Star className='w-3 h-3' />                      Popular                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                 >
                   {/* Popular Badge */}
@@ -437,6 +497,15 @@ export default function ComprehensiveServicesShowcase() {
                       <Star className="w-3 h-3" />
                     </div>
                   )}
+=======
+                      <Star className='w-3 h-3' />                      Popular
+
+                      Popular
+
+                    </div>
+                  )}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   {/* Service Content */}
                   <div className='p-6'>
                     <div className='flex items-start justify-between mb-4'>
@@ -448,6 +517,10 @@ export default function ComprehensiveServicesShowcase() {
                         <div className='text-xs text-white/60'>
                           {service.period}
                         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       </div>
                     </div>
                     <h3 className='text-xl font-bold text-white mb-2'>
@@ -476,8 +549,15 @@ export default function ComprehensiveServicesShowcase() {
                         </div>
                       ))}
                     </div>
+<<<<<<< HEAD
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
+=======
+
+                    {/* Stats */}
+                    <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       <div>
                         <div className='text-lg font-bold text-blue-400'>
                           {service.rating}
@@ -507,6 +587,10 @@ export default function ComprehensiveServicesShowcase() {
                         <div className="text-xs text-white/60">Trial</div>
                       </div>
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     {/* CTA */}
                     <a
                       href={service.link}
@@ -537,12 +621,17 @@ export default function ComprehensiveServicesShowcase() {
                   exit={{ opacity: 0, x: 30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 >
                   <div className='flex flex-col lg:flex-row gap-6'>
                     {/* Left Side - Icon and Basic Info */}
                     <div className='flex-shrink-0'>
                       <div className='text-6xl mb-4'>{service.icon}</div>
                       {service.popular && (
+<<<<<<< HEAD
                         <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center'>                          Popular                >
                   <div className="flex flex-col lg:flex-row gap-6">
                     {/* Left Side - Icon and Basic Info */}
@@ -557,6 +646,20 @@ export default function ComprehensiveServicesShowcase() {
                     {/* Center - Service Details */}
                     <div className='flex-1'>
                       <div className='flex items-start justify-between mb-4'>
+=======
+                        <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center'>                          Popular
+
+                          Popular
+
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Center - Service Details */}
+                    <div className='flex-1'>
+                      <div className='flex items-start justify-between mb-4'>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         <div>
                           <h3 className='text-2xl font-bold text-white mb-2'>
                             {service.name}
@@ -585,6 +688,7 @@ export default function ComprehensiveServicesShowcase() {
                         </div>
                       </div>
                       {/* Features Grid */}
+<<<<<<< HEAD
                       <div className='grid grid-cols-2 gap-2 mb-4'>
                         {service.features.slice(0, 6).map((feature, idx) => (
                           <div
@@ -599,6 +703,14 @@ export default function ComprehensiveServicesShowcase() {
                             <span className="truncate">{feature}</span>
                         ))}
                       </div>
+=======
+
+                          </div>
+
+                        ))}
+                      </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       {/* Stats Row */}
                       <div className='flex items-center gap-6 text-sm text-white/60'>
                         <div className='flex items-center gap-2'>
@@ -657,6 +769,10 @@ export default function ComprehensiveServicesShowcase() {
             </AnimatePresence>
           </div>
         )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion.div
@@ -670,12 +786,21 @@ export default function ComprehensiveServicesShowcase() {
             </h3>
             <p className='text-white/60'>
               Try adjusting your search or filter criteria
+<<<<<<< HEAD
             </p>          </motion.div>            className="text-center py-20"
           >
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
             <p className="text-white/60">Try adjusting your search or filter criteria</p>
         )}
+=======
+            </p>          </motion.div>
+
+          </motion.div>
+
+        )}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Contact CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -683,6 +808,10 @@ export default function ComprehensiveServicesShowcase() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className='mt-20 text-center'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -729,5 +858,9 @@ export default function ComprehensiveServicesShowcase() {
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

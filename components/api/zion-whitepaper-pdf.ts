@@ -56,6 +56,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     .text('Operator Prompt (for maintenance):');  doc.moveDown(0.5);
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
   const sections = getWhitepaperSections(edition as any);
+<<<<<<< HEAD
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));  doc.moveDown();
   doc.fontSize(14).fillColor('#444444').text(`Edition: ${edition.toUpperCase()}`);
   doc.moveDown();
@@ -79,3 +80,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   doc.end()
 }
+=======
+  sections.forEach(s => writeSection(doc, s.title, s.contentMd));
+
+  doc.moveDown(0.5);
+  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
+
+  const sections = getWhitepaperSections(edition as any);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

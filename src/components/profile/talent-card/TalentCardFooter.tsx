@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button",
 import { ExternalLink } from 'lucide-react'
 import { TalentProfile } from "@/types/talent",
 import { HireRequestModal } from "@/components/profile/hire-request",
+<<<<<<< HEAD
 import { useAuthStatus } from "@/hooks/talent";
 import type { UserProfile } from "@/types/auth";
 import { useRouter } from 'next/router';
@@ -13,6 +14,28 @@ interface TalentCardFooterProps {
   onViewProfile: (id: string,) => void
   onRequestHire?: (profile: TalentProfile,) => void
 
+=======
+import { useAuthStatus } from "@/hooks/talent",
+import type { UserProfile } from "@/types/auth",
+import { useRouter } from 'next/router',
+interface TalentCardFooterProps {
+  profile: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire?: (profile: TalentProfile) => void
+import React, { useState } from "react",;
+import { Star } from 'lucide-react';
+import { Button } from "@/components/ui/button",;
+import { ExternalLink } from 'lucide-react';
+import { TalentProfile } from "@/types/talent",;
+import { HireRequestModal } from "@/components/profile/hire-request",;
+import { useAuthStatus } from "@/hooks/talent",;
+import type { UserProfile } from "@/types/auth",;
+import { useRouter } from 'next/router',;
+interface TalentCardFooterProps {;
+  profile: TalentProfile,;
+  onViewProfile: (id: string) => void,;
+  onRequestHire?: (profile: TalentProfile) => void;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
 
@@ -54,7 +77,11 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     if (onViewProfile) {
       onViewProfile(profile.id |'')
     }
+<<<<<<< HEAD
   }
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <>
@@ -75,18 +102,33 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         </div>
         {/* Action Buttons */}
         <div className="flex gap-2">
+<<<<<<< HEAD
           <Button
             variant="default"
             size="sm"
             onClick = {handleRequestHire,}
+=======
+          <Button 
+            variant="default" 
+            size="sm" 
+            onClick={handleRequestHire}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Hire
           </Button>
+<<<<<<< HEAD
           <Button
             variant="outline"
             size="sm"
             onClick = {handleViewProfile,}
+=======
+          
+          <Button 
+            variant="outline" 
+            size="sm" 
+            onClick={handleViewProfile}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
             View
@@ -94,6 +136,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
       {/* Hire Request Modal */}
       <HireRequestModal
         talent = {profile,}
@@ -104,3 +147,17 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     </>
   )
 }
+=======
+      
+      {/* Hire Request Modal */}
+      <HireRequestModal;
+        talent={profile}
+        isOpen={isHireModalOpen}
+        onClose={() => setIsHireModalOpen(false)}
+        userDetails={userProfile}
+      />;
+    </>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

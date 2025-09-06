@@ -5,6 +5,7 @@ import { AppMetadataValues } from "./MetadataManager",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+<<<<<<< HEAD
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Badge } from "@/components/ui/badge";
 import { X } from 'lucide-react'
@@ -151,3 +152,9 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   )
 }
 
+=======
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+import { Badge } from "@/components/ui/badge",
+import { X } from 'lucide-react'
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

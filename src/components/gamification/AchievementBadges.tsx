@@ -1,11 +1,17 @@
 import { BadgeCheck } from 'lucide-react'
+<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+=======
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export interface Achievement {
 
   id: string
   title: string
   description: string
   achieved: boolean
+<<<<<<< HEAD
 interface AchievementBadgesProps {
   achievements: Achievement[]
   achievements: Achievement[]
@@ -14,6 +20,20 @@ export interface Achievement {
   id: string
   title: string
   description: string
+=======
+import { BadgeCheck } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+export interface Achievement {;
+  id: string,;
+  title: string;
+  description: string;
+  achieved: boolean;
+}
+;
+interface AchievementBadgesProps {;
+  achievements: Achievement[];
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   achieved: boolean
 }
@@ -26,6 +46,7 @@ export function AchievementBadges({ achievements }: AchievementBadgesProps) {
       <CardHeader>
         <CardTitle>Achievements</CardTitle>
       </CardHeader>
+<<<<<<< HEAD
       <CardContent className='space-y-3'>
         {achievements.map(a => (
           <div key={a.id} className='flex items-start gap-3'>
@@ -40,12 +61,29 @@ export function AchievementBadges({ achievements }: AchievementBadgesProps) {
               className={`h-5 w-5 mt-1 ${a.achieved ? "text-green-600" : "text-muted-foreground"}`}
             />
             <div>
+=======
+      <CardContent className="space-y-3">
+        {achievements.map((a) => (
+          <div key={a.id} className="flex items-start gap-3">
+            <BadgeCheck
+              className={`h-5 w-5 mt-1 ${a.achieved ? "text-green-600" : "text-muted-foreground"}`}
+            />
+            <div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               <p className="font-medium">{a.title}</p>
               <p className="text-sm text-muted-foreground">{a.description}</p>
             </div>
           </div>
         ))}
+<<<<<<< HEAD
       </CardContent>
     </Card>
   )
 }
+=======
+      </CardContent>;
+    </Card>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

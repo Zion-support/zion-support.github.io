@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import {Dispute, DisputeStatus} from "@/types/disputes";
@@ -9,28 +10,61 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {formatDistanceToNow} from "date-fns";
 import {ShieldAlert} from "lucide-react";
 import {Link} from "react-router-dom";
+=======
+import React, { useState } from "react",
+import { Dispute, DisputeStatus } from "@/types/disputes",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Skeleton } from "@/components/ui/skeleton",
+import { formatDistanceToNow } from "date-fns",
+import { ShieldAlert } from "lucide-react",
+import { Link } from "react-router-dom",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean
+<<<<<<< HEAD
 }
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
   const filteredDisputes = statusFilter === "all"
     ? disputes
     : disputes.filter(dispute => dispute.status === statusFilter);
+=======
+},
+
+export function DisputesList({ disputes, isLoading }: DisputesListProps) {
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all"),
+
+  const filteredDisputes = statusFilter === "all" 
+    ? disputes 
+    : disputes.filter(dispute => dispute.status === statusFilter),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
-      case "open": return "default";
+      case "open": return "default",
       case "under_review":
         return "secondary"
       case "resolved":
         return "outline", // Changed from "success" to "outline"
       case "closed":
-        return "outline";
+        return "outline",
       default:
         return "default"
     }
+<<<<<<< HEAD
   }
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   if (isLoading) {
     return (
@@ -62,6 +96,76 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
                 </TableRow>
+<<<<<<< HEAD
+=======
+import React, { useState } from "react",;
+import { Dispute, DisputeStatus } from "@/types/disputes",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow} from "@/components/ui/table",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { formatDistanceToNow } from "date-fns",;
+import { ShieldAlert } from "lucide-react",;
+import { Link } from "react-router-dom",;
+type DisputesListProps = {;
+  disputes: Dispute[],;
+  isLoading: boolean;
+},;
+export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all"),;
+  const filteredDisputes = statusFilter === "all";
+    ? disputes;
+    : disputes.filter(dispute => dispute.status === statusFilter),;
+  const getStatusBadgeVariant = (status: DisputeStatus) => {;
+    switch (status) {;
+      case "open": return "default",;
+      case "under_review":;
+        return "secondary",;
+      case "resolved":;
+        return "outline", // Changed from "success" to "outline";
+      case "closed":;
+        return "outline";
+      default:;
+        return "default";
+    }
+  };
+  if (isLoading) {;
+    return (;
+      <div className="space-y-4">;
+        <div className="flex gap-2 mb-4">;
+          {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => (;
+            <Skeleton key={status} className="h-10 w-24" />;
+          ))}
+        </div>;
+        <div className="border rounded-md">;
+          <Table>;
+            <TableHeader>;
+              <TableRow>;
+                <TableHead>Case ID</TableHead>;
+                <TableHead>Project</TableHead>;
+                <TableHead>Parties</TableHead>;
+                <TableHead>Created</TableHead>;
+                <TableHead>Status</TableHead>;
+                <TableHead className="text-right">Actions</TableHead>;
+              </TableRow>;
+            </TableHeader>;
+            <TableBody>;
+              {[...Array(5)].map((_, i) => (;
+                <TableRow key={i}>;
+                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>;
+                  <TableCell><Skeleton className="h-4 w-40" /></TableCell>;
+                  <TableCell><Skeleton className="h-4 w-32" /></TableCell>;
+                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>;
+                  <TableCell><Skeleton className="h-6 w-20" /></TableCell>;
+                  <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
+                </TableRow>;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ))}
             </TableBody>
           </Table>
@@ -69,6 +173,10 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
       </div>
     )
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (disputes.length === 0) {
     return (
       <div className="text-center py-12 border rounded-md bg-muted/20">
@@ -165,9 +273,19 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
                 </TableCell>
               </TableRow>
             ))}
+<<<<<<< HEAD
           </TableBody>
         </Table>
       </div>
     </div>
   )
 }
+=======
+          </TableBody>;
+        </Table>;
+      </div>;
+    </div>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

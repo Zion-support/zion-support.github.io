@@ -2,7 +2,12 @@ import type { GetServerSideProps } from 'next';
 import { FormEvent, useState } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
 
+<<<<<<< HEAD
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
+=======
+type Props = { vendor: Vendor | null };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function VendorProfilePage({ vendor }: Props) {
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -42,6 +47,7 @@ export default function VendorProfilePage({ vendor }: Props) {
   return (
     <div className='space-y-8'>
       <div className='flex items-center gap-4'>
+<<<<<<< HEAD
         {vendor.logoUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -146,11 +152,35 @@ export default function VendorProfilePage({ vendor }: Props) {
                   <div className="font-medium">{sp.title}</div>
                   <div className="text-sm text-gray-500">{sp.description}</div>
                 </div>
+=======
+
+    }
+  }
+
+  return (
+
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+
+      {vendor.packages && vendor.packages.length > 0 && (
+        <div>
+
+                </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </div>
             ))}
           </div>
         </div>
       )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <div>
         <h2 className='text-lg font-medium mb-2'>Request a Quote</h2>
         <form onSubmit={submitLead} className='space-y-3'>
@@ -172,9 +202,14 @@ export default function VendorProfilePage({ vendor }: Props) {
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
   const slug = String(ctx.params?.slug |'');
   const { getVendorBySlug } = await import('../../utils/vendor-store');
+<<<<<<< HEAD
   const vendor = slug ? getVendorBySlug(slug) |null : null;
   return { props: { vendor } }
 };            {loading ? 'Submitting...' : 'Send'}
@@ -193,3 +228,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   return { props: { vendor } }
 }
 
+=======
+  const vendor = slug ? getVendorBySlug(slug) || null : null;
+  return { props: { vendor } };
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -12,6 +12,7 @@ const ReleaseNotesAgent: NextPage = () => {
       <main className="space-y-4">
         <h1 className="text-2xl font-bold">AI Release Notes Agent</h1>
         <p>Summarizes the last 24 hours of commits into human-friendly release notes.</p>
+<<<<<<< HEAD
         <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</a></Link>
       </main>
     </div>
@@ -19,3 +20,11 @@ const ReleaseNotesAgent: NextPage = () => {
 }
 export default ReleaseNotesAgent;
 
+=======
+        <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
+      </main>
+    </div>
+  )
+},
+export default ReleaseNotesAgent,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

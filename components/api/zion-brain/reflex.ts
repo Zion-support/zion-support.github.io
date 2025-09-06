@@ -61,5 +61,10 @@ return res.status(405).json({ error: 'Method not allowed' });
       appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message |'unknown' } });
       return res.status(500).json({ error: 'Reflex failure' })
   }
+<<<<<<< HEAD
   return res.status(405).json({ error: 'Method not allowed' });
 }
+=======
+
+  return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

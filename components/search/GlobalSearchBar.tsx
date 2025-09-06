@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { useEffect, useMemo, useRef, useState  } from 'react';
+=======
+import { useEffect, useMemo, useRef, useState } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { useRouter } from 'next/router';
 export default function GlobalSearchBar() {
 
@@ -33,6 +37,10 @@ export default function GlobalSearchBar() {
     const id = setTimeout(run, 150);
     return () => clearTimeout(id)
   }, [query]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const onSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
     if (!query.trim()) return;
@@ -102,6 +110,7 @@ export default function GlobalSearchBar() {
                     setOpen(false);
                     router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
+<<<<<<< HEAD
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
     rec.start()
   }
@@ -134,6 +143,12 @@ export default function GlobalSearchBar() {
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
+=======
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
+
+                >
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   {s}
                 </button>
               </li>
@@ -142,5 +157,9 @@ export default function GlobalSearchBar() {
         </div>
       )}
     </form>
+<<<<<<< HEAD
 );  )
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React from 'react',
 import CodeSamples from './CodeSamples',
+=======
+import React from 'react';
+import CodeSamples from './CodeSamples';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import TryItConsole from './TryItConsole';
 import { EndpointSpec } from '../../data/api-docs/types';
 
@@ -8,6 +13,11 @@ export default function EndpointDetail({
 }: {
   endpoint: EndpointSpec;
 }) {
+<<<<<<< HEAD
+=======
+
+  return (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className='space-y-4'>
 
       <div>
@@ -43,6 +53,7 @@ export default function EndpointDetail({
         <CodeSamples samples={endpoint.samples} />
       </div>
       <div>
+<<<<<<< HEAD
         <div className='font-medium mb-2'>Try It</div>
         <TryItConsole
           method={endpoint.method}
@@ -72,6 +83,15 @@ export default function EndpointDetail({
           </ul>
         </div>
       )}
+=======
+
+            ))}
+
+          </ul>
+        </div>
+      )}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {endpoint.errors && endpoint.errors.length > 0 && (
         <div>
           <div className='font-medium mb-2'>Error Codes</div>
@@ -83,6 +103,12 @@ export default function EndpointDetail({
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
             {endpoint.errors.map((e) => (
               <li key={e.code}><strong>{e.code}</strong> ({e.httpStatus}) - {e.message}</li>
+<<<<<<< HEAD
+=======
+
+            ))}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </ul>
         </div>
       )}

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import Head from 'next/head';
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 export default function Placeholder() {
   return (
@@ -14,4 +17,8 @@ export default function Placeholder() {
       </main>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

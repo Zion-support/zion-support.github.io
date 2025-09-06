@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 {
   /* Robots Meta */
 }{
@@ -142,6 +145,10 @@ const SEO: React.FC<SEOProps> = ({
           ))}
         </>
       )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Additional Meta Tags */}
       <meta
         name='viewport'
@@ -155,6 +162,10 @@ const SEO: React.FC<SEOProps> = ({
         content='black-translucent'
       />
       <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Structured Data */}
       <script
         type='application/ld+json'
@@ -189,12 +200,28 @@ const SEO: React.FC<SEOProps> = ({
                 {
                   '@type': 'Offer'
                   itemOffered: {
+<<<<<<< HEAD
                     '@type': 'Service'
                     name: 'AI & Machine Learning Solutions'
                   }
                 }
                 {
                   '@type': 'Offer'
+=======
+                    '@type': 'Service',
+                    name: 'AI & Machine Learning Solutions',
+                  },
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Quantum Computing Services',
+                  },
+                },
+                {
+                  '@type': 'Offer',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   itemOffered: {
                     '@type': 'Service'
                     name: 'Quantum Computing Services'
@@ -214,6 +241,10 @@ const SEO: React.FC<SEOProps> = ({
       />
       {/* Canonical URL */}
       <link rel='canonical' href={fullUrl} />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
       <link
@@ -264,6 +295,7 @@ export default SEO;            __html: JSON.stringify(structuredData)
           }}
         />
       )}
+<<<<<<< HEAD
     </Head>
   );
 }
@@ -271,3 +303,6 @@ export default SEO;  )
 }
 export default SEO;
 
+=======
+    </Head>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

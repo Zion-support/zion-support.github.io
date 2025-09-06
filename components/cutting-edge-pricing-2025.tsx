@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
+=======
+import React, { useState } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
@@ -29,6 +33,7 @@ import { cuttingEdgeEnterpriseITServices2025  } from '../data/2025-cutting-edge-
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
 
 const contactInfo = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -168,6 +173,12 @@ export default function CuttingEdgePricing2025() {
   const filteredServices = selectedCategory === 'all'
     ? allServices
     : allServices.filter(service => service.category === selectedCategory);
+=======
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
@@ -185,12 +196,20 @@ export default function CuttingEdgePricing2025() {
       y: 0
       opacity: 1
       transition: {
+<<<<<<< HEAD
         duration: 0.5
       }
     },  };        duration: 0.5
       }
     }
   }
+=======
+        duration: 0.5,
+      },
+    },  };
+
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <>
@@ -251,6 +270,10 @@ export default function CuttingEdgePricing2025() {
                   Pricing 2025
                 </span>
               </motion.h1>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -264,6 +287,7 @@ export default function CuttingEdgePricing2025() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
+<<<<<<< HEAD
                 Experience revolutionary technology at competitive prices. Our
                 cutting-edge services are designed to give you a competitive
                 advantage while maintaining affordability and value.
@@ -276,6 +300,11 @@ export default function CuttingEdgePricing2025() {
               {/* Hero Stats */}
               <motion.div
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
+=======
+
+                initial={{ opacity: 0, y: 20 }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
@@ -289,6 +318,7 @@ export default function CuttingEdgePricing2025() {
                     <div className='text-2xl md:text-3xl font-bold text-white mb-1'>
                       {stat.number}
                     </div>
+<<<<<<< HEAD
                     <div className='text-sm text-white/70'>{stat.label}</div>                  </div>                  <div key={index} className="text-center">
                     <div className="flex justify-center mb-2">
                       <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
@@ -297,16 +327,30 @@ export default function CuttingEdgePricing2025() {
                     </div>
                     <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.number}</div>
                     <div className="text-sm text-white/70">{stat.label}</div>
+=======
+                    <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
+
+                  </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 ))}
               </motion.div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Pricing Tiers Section */}
         <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -357,6 +401,7 @@ export default function CuttingEdgePricing2025() {
                       </span>
                     </div>
                   )}
+<<<<<<< HEAD
                   <div
                     className={`relative p-8 rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
                       tier.popular
@@ -402,6 +447,14 @@ export default function CuttingEdgePricing2025() {
                         </li>
                       ))}
                     </ul>
+=======
+
+                        </li>
+
+                      ))}
+                    </ul>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     <a
                       href={tier.ctaLink}
                       className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
@@ -411,7 +464,12 @@ export default function CuttingEdgePricing2025() {
                       }`}
                     >
                       {tier.cta}
+<<<<<<< HEAD
                       <ArrowRight className='ml-2 w-4 h-4' />                    </a>                      <ArrowRight className="ml-2 w-4 h-4" />
+=======
+                      <ArrowRight className='ml-2 w-4 h-4' />                    </a>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     </a>
                   </div>
                 </motion.div>
@@ -419,11 +477,19 @@ export default function CuttingEdgePricing2025() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Service Categories Section */}
         <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -459,6 +525,10 @@ export default function CuttingEdgePricing2025() {
             {/* Category Filter */}
             <div className='flex flex-wrap justify-center gap-4 mb-12'>            <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 onClick={() => setSelectedCategory('all')}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === 'all'
@@ -470,6 +540,10 @@ export default function CuttingEdgePricing2025() {
               </button>
               {serviceCategories.map(category => (                <button              {serviceCategories.map((category) => (
                 <button
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   key={category.name}
                   onClick={() => setSelectedCategory(category.name)}
                   className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -482,6 +556,10 @@ export default function CuttingEdgePricing2025() {
                 </button>
               ))}
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* Services Grid */}
             <motion.div
               variants={containerVariants}
@@ -532,17 +610,31 @@ export default function CuttingEdgePricing2025() {
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
+<<<<<<< HEAD
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >                    <div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
                           className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
+=======
+                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
+
+                        >
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           {tag}
                         </span>
                       ))}
                     </div>
+<<<<<<< HEAD
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
+=======
+
+                    {/* Market Info */}
+                    <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>
                     </div>
@@ -604,15 +696,27 @@ export default function CuttingEdgePricing2025() {
                   {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ))}
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -721,5 +825,9 @@ export default function CuttingEdgePricing2025() {
         </section>
       </Layout>
     </>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

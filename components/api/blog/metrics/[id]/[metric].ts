@@ -18,4 +18,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!['viewslikesshares'].includes(metric)) return res.status(400).json({ error: 'Invalid metric' });
   const post = null;
   return res.status(200).json({ ok: true, metrics: post.metrics })
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

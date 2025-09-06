@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import {useEffect, useMemo, useState} from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import {useEffect, useMemo, useState} from 'react';
 interface Message {
@@ -58,6 +62,10 @@ export default function Assistant() {
       }
     ]);
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className='min-h-full h-full w-full flex flex-col bg-white'>
       <div className='px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2'>
@@ -120,6 +128,7 @@ export default function Assistant() {
         </button>
       </form>
     </div>
+<<<<<<< HEAD
   );      >
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
@@ -132,3 +141,6 @@ export default function Assistant() {
     </div>
 );
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

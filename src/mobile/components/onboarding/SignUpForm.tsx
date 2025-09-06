@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import { useRouter } from 'next/router'
@@ -37,6 +38,94 @@ export function SignUpForm() {
     const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/
     if (signupMode && !formData.name.trim()) {
       errors.name = 'Full name is required'
+=======
+import React, { useState } from "react",
+import { Label } from "@/components/ui/label",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { LoadingSpinner } from "@/components/ui/enhanced-loading-states",
+import { useRouter } from 'next/router',
+import Link from 'next/link',
+import { useAuth } from "@/context/auth/AuthProvider",
+import { AlertCircle } from 'lucide-react'
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter",
+import {logErrorToProduction} from '@/utils/productionLogger',
+export function SignUpForm() {
+
+  const router = useRouter(),
+  const { signUp, login, loginWithGoogle } = useAuth(),
+  
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    name: ""}),
+  const [isLoading, setIsLoading] = useState(false),
+  const [signupMode, setSignupMode] = useState(true),
+  const [error, setError] = useState(""),
+  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({}),
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false),
+  
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target,
+    setFormData(prev => ({ ...prev, [name]: value })),
+    setError(""),
+    setFieldErrors(prev => ({ ...prev, [name]: "" }))
+  },
+  
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    setError(""),
+    setFieldErrors({}),
+    setIsLoading(true),
+
+    const errors: { email?: string, password?: string, name?: string } = {},
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/,
+
+    if (signupMode && !formData.name.trim()) {
+      errors.name = 'Full name is required'
+import React, { useState } from "react",;
+import { Label } from "@/components/ui/label",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { LoadingSpinner } from "@/components/ui/enhanced-loading-states",;
+import { useRouter } from 'next/router',;
+import Link from 'next/link',;
+import { useAuth } from "@/context/auth/AuthProvider",;
+import { AlertCircle } from 'lucide-react';
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter",;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+export function SignUpForm() {;
+  const router = useRouter(),;
+  const { signUp, login, loginWithGoogle } = useAuth(),;
+  const [formData, setFormData] = useState({;
+    email: "",;
+    password: "",;
+    name: ""}),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [signupMode, setSignupMode] = useState(true),;
+  const [error, setError] = useState(""),;
+  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({}),;
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false),;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e.target,;
+    setFormData(prev => ({ ...prev, [name]: value })),;
+    setError(""),;
+    setFieldErrors(prev => ({ ...prev, [name]: "" }));
+  },;
+  const handleSubmit = async (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    setError(""),;
+    setFieldErrors({}),;
+    setIsLoading(true),;
+    const errors: { email?: string, password?: string, name?: string } = {},;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,;
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/,;
+    if (signupMode && !formData.name.trim()) {;
+      errors.name = 'Full name is required';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
     if (!formData.email.trim()) {
       errors.email = 'Email is required'
@@ -48,6 +137,7 @@ export function SignUpForm() {
     } else if (!strongPasswordRegex.test(formData.password)) {
       errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
     }
+<<<<<<< HEAD
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors)
       setIsLoading(false)
@@ -61,11 +151,30 @@ export function SignUpForm() {
         if (result?.error) {
           throw new Error(result.error as any), // Cast to any if type is AuthError
         }
+=======
+;
+    if (Object.keys(errors).length > 0) {;
+      setFieldErrors(errors),;
+      setIsLoading(false),;
+      return;
+    }
+;
+    try {;
+      setShowVerificationMessage(false), // Reset verification message;
+      if (signupMode) {;
+        const result = await signUp(formData.email, formData.password, {;
+          name: formData.name}),;
+        if (result?.error) {;
+          throw new Error(result.error as any), // Cast to any if type is AuthError;
+        }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         if (result?.emailVerificationRequired) {
           setShowVerificationMessage(true)
         } else {
           // Only navigate if email verification is not required
           router.push("/mobile")
+<<<<<<< HEAD
         }
       } else {
         const { error } = await login(formData.email, formData.password)
@@ -73,6 +182,24 @@ export function SignUpForm() {
           throw new Error(error)
         }
         router.push("/mobile")
+=======
+;
+        if (result?.emailVerificationRequired) {;
+          setShowVerificationMessage(true);
+        } else {;
+          // Only navigate if email verification is not required;
+          router.push("/mobile");
+        }
+      } else {;
+        const { error } = await login(formData.email, formData.password),;
+        if (error) {;
+          throw new Error(error);
+        }
+        
+        router.push("/mobile")
+;
+        router.push("/mobile");
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       }
     } catch (err: any) {
       logErrorToProduction('Signup/Login error:', { data: err })
@@ -80,6 +207,7 @@ export function SignUpForm() {
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
   }
   const handleGoogleLogin = async () => {
     try {
@@ -89,16 +217,31 @@ export function SignUpForm() {
     }
   }
 
+=======
+  };
+  const handleGoogleLogin = async () => {;
+    try {;
+      await loginWithGoogle();
+    } catch (err: any) {;
+      setError(err.message);
+    }
+  },
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">
         {signupMode ? "Create your account" : "Welcome back"}
       </h2>
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <div className="space-y-2">
         <Button
           variant="outline"
           className="w-full py-6 relative"
-          onClick = {handleGoogleLogin,}
+          onClick={handleGoogleLogin}
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
             <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
@@ -123,6 +266,10 @@ export function SignUpForm() {
         <span className="mx-2 text-xs text-muted-foreground">OR</span>
         <div className="flex-grow border-t border-border"></div>
       </div>
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -139,6 +286,10 @@ export function SignUpForm() {
           </AlertDescription>
         </Alert>
       )}
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <form onSubmit={handleSubmit} className="space-y-4">
         {signupMode && (
           <div className="space-y-2">
@@ -146,10 +297,17 @@ export function SignUpForm() {
             <Input
               id="name"
               name="name"
+<<<<<<< HEAD
               value = {formData.name,}
               onChange = {handleInputChange,}
               required
               aria-invalid = {!!fieldErrors.name,}
+=======
+              value={formData.name}
+              onChange={handleInputChange}
+              required;
+              aria-invalid={!!fieldErrors.name}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               placeholder="Enter your full name"
             />
             {fieldErrors.name && (
@@ -157,16 +315,27 @@ export function SignUpForm() {
             )}
           </div>
         )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>
           <Input
             id="email"
             name="email"
             type="email"
+<<<<<<< HEAD
             value = {formData.email,}
             onChange = {handleInputChange,}
             required
             aria-invalid = {!!fieldErrors.email,}
+=======
+            value={formData.email}
+            onChange={handleInputChange}
+            required;
+            aria-invalid={!!fieldErrors.email}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             placeholder="Enter your email"
           />
           {fieldErrors.email && (
@@ -179,10 +348,17 @@ export function SignUpForm() {
             id="password"
             name="password"
             type="password"
+<<<<<<< HEAD
             value = {formData.password,}
             onChange = {handleInputChange,}
             required
             aria-invalid = {!!fieldErrors.password,}
+=======
+            value={formData.password}
+            onChange={handleInputChange}
+            required;
+            aria-invalid={!!fieldErrors.password}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             placeholder="Create a password"
           />
           <PasswordStrengthMeter password={formData.password} />
@@ -190,10 +366,14 @@ export function SignUpForm() {
             <p className="text-red-500 text-sm">{fieldErrors.password}</p>
           )}
         </div>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <Button
           type="submit"
           className="w-full py-6"
-          disabled = {isLoading,}
+          disabled={isLoading}
         >
           {isLoading ? (
             <>
@@ -205,11 +385,16 @@ export function SignUpForm() {
           )}
         </Button>
       </form>
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <p className="text-center text-sm">
         {signupMode
           ? "Already have an account? "
           : "Don't have an account? "
         }
+<<<<<<< HEAD
         <Link
           href="/login"
           className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer"
@@ -250,3 +435,16 @@ if (error) {
   isLoading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Please wait... </>) : (signupMode ? "Create Account" : "Sign In") "
 }</Button> </form> <Link href="/login" className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer" > Sign In </Link> </p> </div>)
 }"}
+=======
+        <Link;
+          href="/login";
+          className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer";
+        >;
+          Sign In;
+        </Link>;
+      </p>;
+    </div>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

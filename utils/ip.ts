@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
 export function extractClientIp(req: NextApiRequest): string | null {
   const xff = (req.headers['x-forwarded-for'] as string) |'';
@@ -17,3 +18,6 @@ export function getClientIp(req: any): string {
   }
   return remoteAddress |'unknown';
 }
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

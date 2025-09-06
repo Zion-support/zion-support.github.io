@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useMemo, useState } from 'react',
+=======
+import React, { useMemo, useState } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 
 import {
@@ -81,5 +85,10 @@ export default function WhitepaperBuilderPage() {
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

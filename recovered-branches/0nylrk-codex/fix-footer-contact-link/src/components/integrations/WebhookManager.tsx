@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { PlusCircle, Save, Trash, Play } from "lucide-react",
 import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
+<<<<<<< HEAD
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 export function WebhookManager() {
@@ -23,6 +24,23 @@ export function WebhookManager() {
     deleteWebhook;
     testWebhook
   } = useWebhooks();
+=======
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { toast } from "sonner",
+export function WebhookManager() {
+  const { 
+    webhooks,
+    loading, 
+    error,
+    testResult,
+    fetchWebhooks,
+    createWebhook,
+    toggleWebhook,
+    deleteWebhook,
+    testWebhook
+  } = useWebhooks(),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [newWebhook, setNewWebhook] = useState({
 
     name: ""
@@ -31,12 +49,18 @@ export function WebhookManager() {
     eventTypes: [] as WebhookEventType[]
 
     secret: ""
+<<<<<<< HEAD
   });
+=======
+  }),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const eventOptions: { value: WebhookEventType, label: string }[] = [
     { value: "new_application", label: "New Application Received" }
     { value: "quote_received", label: "Quote Request Received" }
     { value: "milestone_approved", label: "Milestone Approved" }
     { value: "talent_hired", label: "Talent Hired" }
+<<<<<<< HEAD
   ];
   useEffect(() => {
     fetchWebhooks()
@@ -44,33 +68,66 @@ export function WebhookManager() {
 
   const handleAddEvent = () => {
     if (!newWebhook.selectedEvent) return;
+=======
+  ],
+  
+  useEffect(() => {
+    fetchWebhooks()
+  }, []),
+  
+  const handleAddEvent = () => {
+    if (!newWebhook.selectedEvent) return,
+    
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
-      toast.error("This event is already added");
+      toast.error("This event is already added"),
       return
     }
     setNewWebhook({
-      ...newWebhook;
-      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent];
+      ...newWebhook,
+      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
       selectedEvent: "" as WebhookEventType
     })
+<<<<<<< HEAD
   }
+=======
+  },
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
       ...newWebhook
       eventTypes: newWebhook.eventTypes.filter(e => e !== event)
     })
+<<<<<<< HEAD
   }
   const handleCreateWebhook = async () => {
     if (!newWebhook.name |!newWebhook.url |newWebhook.eventTypes.length === 0) {
       toast.error("Please fill in all required fields");
+=======
+  },
+  
+  const handleCreateWebhook = async () => {
+    if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
+      toast.error("Please fill in all required fields"),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return
     }
     await createWebhook(
+<<<<<<< HEAD
       newWebhook.name
       newWebhook.url
       newWebhook.eventTypes
       newWebhook.secret |undefined
     );
+=======
+      newWebhook.name, 
+      newWebhook.url, 
+      newWebhook.eventTypes, 
+      newWebhook.secret || undefined
+    ),
+    
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Reset form
     setNewWebhook({
       name: ""
@@ -79,11 +136,20 @@ export function WebhookManager() {
       eventTypes: []
       secret: ""
     })
+<<<<<<< HEAD
   }
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)
   }
 
+=======
+  },
+  
+  const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
+    await testWebhook(webhookId, eventType)
+  },
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-8">
       <Card>
@@ -106,9 +172,121 @@ export function WebhookManager() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
+<<<<<<< HEAD
               <Input
                 id="webhook-url"
                 placeholder="https://example.com/webhook"
+=======
+              <Input 
+                id="webhook-url" 
+                placeholder="https://example.com/webhook"
+import React, { useEffect, useState } from "react",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Label } from "@/components/ui/label",;
+import { ClickableBadge } from "@/components/ui/clickable-badge",;
+import { PlusCircle, Save, Trash, Play } from "lucide-react",;
+import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { toast } from "sonner",;
+export function WebhookManager() {;
+  const {;
+    webhooks,;
+    loading,;
+    error,;
+    testResult,;
+    fetchWebhooks,;
+    createWebhook,;
+    toggleWebhook,;
+    deleteWebhook,;
+    testWebhook;
+  } = useWebhooks(),;
+  const [newWebhook, setNewWebhook] = useState({;
+    name: "",;
+    url: "",;
+    selectedEvent: "" as WebhookEventType,;
+    eventTypes: [] as WebhookEventType[],;
+    secret: "";
+  }),;
+  const eventOptions: { value: WebhookEventType, label: string }[] = [;
+    { value: "new_application", label: "New Application Received" },;
+    { value: "quote_received", label: "Quote Request Received" },;
+    { value: "milestone_approved", label: "Milestone Approved" },;
+    { value: "talent_hired", label: "Talent Hired" }
+  ],;
+  useEffect(() => {;
+    fetchWebhooks();
+  }, []),;
+  const handleAddEvent = () => {;
+    if (!newWebhook.selectedEvent) return,;
+    if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {;
+      toast.error("This event is already added"),;
+      return;
+    }
+;
+    setNewWebhook({;
+      ...newWebhook,;
+      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],;
+      selectedEvent: "" as WebhookEventType;
+    });
+  },;
+  const handleRemoveEvent = (event: WebhookEventType) => {;
+    setNewWebhook({;
+      ...newWebhook,;
+      eventTypes: newWebhook.eventTypes.filter(e => e !== event);
+    });
+  },;
+  const handleCreateWebhook = async () => {;
+    if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {;
+      toast.error("Please fill in all required fields"),;
+      return;
+    }
+;
+    await createWebhook(;
+      newWebhook.name,;
+      newWebhook.url,;
+      newWebhook.eventTypes,;
+      newWebhook.secret || undefined;
+    ),;
+    // Reset form;
+    setNewWebhook({;
+      name: "",;
+      url: "",;
+      selectedEvent: "" as WebhookEventType,;
+      eventTypes: [],;
+      secret: "";
+    });
+  };
+  const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {;
+    await testWebhook(webhookId, eventType);
+  };
+  return (;
+    <div className="space-y-8">;
+      <Card>;
+        <CardHeader>;
+          <CardTitle>Create Webhook</CardTitle>;
+          <CardDescription>;
+            Define webhooks to notify external systems when events occur in Zion.;
+          </CardDescription>;
+        </CardHeader>;
+        <CardContent className="space-y-4">;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+            <div className="space-y-2">;
+              <Label htmlFor="webhook-name">Webhook Name</Label>;
+              <Input;
+                id="webhook-name";
+                placeholder="e.g., Job Postings Webhook";
+                value={newWebhook.name}
+                onChange={(e) => setNewWebhook({...newWebhook, name: e.target.value})}
+              />;
+            </div>;
+            <div className="space-y-2">;
+              <Label htmlFor="webhook-url">URL</Label>;
+              <Input;
+                id="webhook-url";
+                placeholder="https://example.com/webhook";
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 value={newWebhook.url}
                 onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value})}
               />
@@ -149,8 +327,13 @@ export function WebhookManager() {
           </div>
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
+<<<<<<< HEAD
             <Input
               id="webhook-secret"
+=======
+            <Input 
+              id="webhook-secret" 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               placeholder="A secret key to verify the webhook source"
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
@@ -192,8 +375,13 @@ export function WebhookManager() {
                         <span className="text-sm">{webhook.is_active ? 'Active' : 'Inactive'}</span>
                       </div>
                       <div className="flex-shrink-0">
+<<<<<<< HEAD
                         <Button
                           variant="outline"
+=======
+                        <Button 
+                          variant="outline" 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           size="sm"
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >
@@ -210,7 +398,11 @@ export function WebhookManager() {
                       <div className="flex flex-wrap gap-2 mt-1">
                         {webhook.event_types.map(event => (
                           <ClickableBadge key={event} variant="secondary">
+<<<<<<< HEAD
                             {eventOptions.find(e => e.value === event)?.label |event}
+=======
+                            {eventOptions.find(e => e.value === event)?.label || event}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           </ClickableBadge>
                         ))}
                       </div>
@@ -240,8 +432,13 @@ export function WebhookManager() {
                       <SelectItem value="test_event">Test (generic)</SelectItem>
                       {webhook.event_types.map(event => (
                         <SelectItem key={event} value={event}>
+<<<<<<< HEAD
                           Test {eventOptions.find(e => e.value === event)?.label |event}
                         </SelectItem>
+=======
+                          Test {eventOptions.find(e => e.value === event)?.label || event}
+                        </SelectItem>;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       ))}
                     </SelectContent>
                   </Select>
@@ -266,7 +463,11 @@ export function WebhookManager() {
                 <div>
                   <span className="font-medium">Response:</span>
                   <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">
+<<<<<<< HEAD
                     {testResult.responseBody |'<empty>'}
+=======
+                    {testResult.responseBody || '<empty>'}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </pre>
                 </div>
               </div>

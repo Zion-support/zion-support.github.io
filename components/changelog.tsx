@@ -15,6 +15,7 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
   return (
     <main className='mx-auto max-w-4xl px-4 py-12'>
       <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>
+<<<<<<< HEAD
       {generatedAt && (
         <p className='mt-2 text-sm text-gray-600'>Generated: {generatedAt}</p>
       )}
@@ -35,6 +36,18 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
           No changelog generated yet.
         </div>
       )}
+=======
+
+};
+
+export default function ChangelogPage({ content, generatedAt }: Props) {
+  return (
+
+          No changelog generated yet.
+
+        </div>
+      )}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     </main>
   );
 }
@@ -47,6 +60,7 @@ export async function getStaticProps() {
       revalidate: 300
     }
   } catch {
+<<<<<<< HEAD
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
 
@@ -54,3 +68,7 @@ export async function getStaticProps() {
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
 }
+=======
+    return { props: { content: null, generatedAt: null }, revalidate: 300 };
+  }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

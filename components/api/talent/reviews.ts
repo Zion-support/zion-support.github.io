@@ -19,6 +19,7 @@ export default async function handler(
     // In a real implementation, validate and insert review into Supabase
     return res.status(201).json({ ok: true });
   }
+<<<<<<< HEAD
 return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
@@ -26,3 +27,8 @@ return res
   }
   return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
+=======
+
+  if (req.method === 'POST') {
+    // In a real implementation, validate and insert review into Supabase
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

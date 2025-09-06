@@ -41,6 +41,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   }
 
   return (
+<<<<<<< HEAD
     <div className='flex items-center gap-3'>
       <button
         onClick={toggleMic}
@@ -68,3 +69,10 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
     </div>
 );
 }
+=======
+
+    }
+  };
+
+  return (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

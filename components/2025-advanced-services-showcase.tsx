@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
   Search
@@ -796,6 +799,7 @@ const getServiceFeatures = (service: any) => {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
           {/* Category Filters */}
           <div className='mt-6'>
             <div className='flex flex-wrap gap-3'>
@@ -804,6 +808,11 @@ const getServiceFeatures = (service: any) => {
           <div className="mt-6">
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
+=======
+
+                <button
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
@@ -819,6 +828,10 @@ const getServiceFeatures = (service: any) => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Results Summary */}
         <div className='mb-8'>
           <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>
@@ -891,6 +904,7 @@ const getServiceFeatures = (service: any) => {
                 </div>
               ) : (
                 <div className='space-y-6'>
+<<<<<<< HEAD
                   {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                           {filteredServices.map((service) => (
           <ServiceCard key={service.id} service={service} />
@@ -899,12 +913,22 @@ const getServiceFeatures = (service: any) => {
               ) : (
                 <div className="space-y-6">
                   {filteredServices.map((service) => (
+=======
+                  {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />
+
+                    <ServiceList key={service.id} service={service} />
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   ))}
                 </div>
               )}
             </AnimatePresence>
           )}
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Call to Action */}
         <div className='mt-16 text-center'>
           <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>
@@ -953,6 +977,7 @@ const getServiceFeatures = (service: any) => {
                 Call Now
               </a>
             </div>
+<<<<<<< HEAD
           </div>
           <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300">
             Get Started Today
@@ -965,3 +990,6 @@ const getServiceFeatures = (service: any) => {
     </div>
   );
 }
+=======
+          </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -49,6 +52,10 @@ const securityFeatures = [
     details: ['24/7 incident response', 'Security team on standby', 'Rapid containment', 'Post-incident analysis']
   }
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const securityStats = [
   { number: '99.9%', label: 'Uptime Guarantee' }
   { number: '24/7', label: 'Security Monitoring' }
@@ -630,6 +637,7 @@ export default function Security() {
 }  )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -663,3 +671,9 @@ export default function Security() {
 )
 }
 >>>>>>> origin/main
+=======
+  )
+}
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

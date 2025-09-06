@@ -1,8 +1,25 @@
+<<<<<<< HEAD
 
 //Enhanced animation variants for better performance const containerVariants = {
   hidden: {
   opacity: 0
 }
+=======
+import React from 'react';
+
+interface Homepage2040Props {
+  className?: string;
+}
+
+const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Homepage2040</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1, delayChildren: 0.2
@@ -85,7 +102,12 @@ const Homepage2040: React.FC = () => {
         delayChildren: 0.2
       }
     }
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -164,9 +186,15 @@ const Homepage2040: React.FC = () => {
       color: "from-purple-500 to-indigo-600"
     }
     {
+<<<<<<< HEAD
       name: "Cybersecurity"
       icon: Shield
       count: allServices.filter(s => s.category.includes('Security') |s.category.includes('Cyber')).length
+=======
+      name: "Cybersecurity",
+      icon: Shield,
+      count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cyber')).length,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       color: "from-green-500 to-emerald-600"
     }
   ];
@@ -182,7 +210,11 @@ const Homepage2040: React.FC = () => {
           {/* Enhanced Futuristic Background Elements */}
           <div className="absolute inset-0 pointer-events-none">
             {/* Animated geometric shapes */}
+<<<<<<< HEAD
             <motion.div
+=======
+            <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               variants={floatingVariants}
               animate="float"
               className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
@@ -206,16 +238,26 @@ const Homepage2040: React.FC = () => {
                   key={i}
                   className="absolute w-1 h-1 bg-cyan-400/30 rounded-full"
                   style={{
+<<<<<<< HEAD
                     left: `${Math.random() * 100}%`
                     top: `${Math.random() * 100}%`
+=======
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     animationDelay: `${Math.random() * 3}s`;
                   }}
                   animate={{
                     scale: [0, 1, 0];
                     opacity: [0, 1, 0]}}
                   transition={{
+<<<<<<< HEAD
                     duration: 3
                     repeat: Infinity
+=======
+                    duration: 3,
+                    repeat: Infinity,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     delay: Math.random() * 3
                   }}
                 />
@@ -253,8 +295,14 @@ const Homepage2040: React.FC = () => {
               >
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide
               </motion.p>
+<<<<<<< HEAD
               {/* Enhanced CTA Section */}
               <motion.div
+=======
+              
+              {/* Enhanced CTA Section */}
+              <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
               >
@@ -277,6 +325,10 @@ const Homepage2040: React.FC = () => {
                   </button>
                 </Link>
               </motion.div>
+<<<<<<< HEAD
+=======
+              
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Enhanced Trust Indicators */}
               <motion.div
                 variants={itemVariants}
@@ -333,6 +385,10 @@ const Homepage2040: React.FC = () => {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Enhanced Service Categories */}
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
@@ -383,6 +439,10 @@ const Homepage2040: React.FC = () => {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Enhanced Featured Services Section */}
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
@@ -450,8 +510,14 @@ const Homepage2040: React.FC = () => {
                           {service.price}
                         </span>
                       </div>
+<<<<<<< HEAD
                       {/* CTA Button */}
                       <Link
+=======
+
+                      {/* CTA Button */}
+                      <Link 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         href={service.link}
                         className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 group-hover:shadow-lg group-hover:shadow-cyan-400/25"
                       >
@@ -461,6 +527,10 @@ const Homepage2040: React.FC = () => {
                     </motion.div>
                   ))}
                 </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {/* View All Services Button */}
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -481,6 +551,10 @@ const Homepage2040: React.FC = () => {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
@@ -544,3 +618,7 @@ const Homepage2040: React.FC = () => {
 }
 export default Homepage2040;
 
+<<<<<<< HEAD
+=======
+export default Homepage2040;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

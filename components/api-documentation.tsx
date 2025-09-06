@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
@@ -70,5 +74,10 @@ export default function APIDocumentation() {
 				</ul>
 			</div>
 		</div>
+<<<<<<< HEAD
 	)
 }
+=======
+	),
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

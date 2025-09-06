@@ -243,6 +243,7 @@ export default async function handler(
       text,    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
+<<<<<<< HEAD
     const result: TextAnalysisResult = {
       text
         characters
@@ -303,3 +304,7 @@ export default async function handler(
     res.status(500).json({ error: 'Internal server error' })
   }
 }
+=======
+
+    const result: TextAnalysisResult = {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

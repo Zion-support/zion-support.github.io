@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const id = String(req.query.id |"");
@@ -27,4 +33,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   );
   res.status(200).send(pixel);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

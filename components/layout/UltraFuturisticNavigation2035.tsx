@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -82,8 +86,12 @@ interface NavigationItem {
   children?: NavigationItem[];
   badge?: string;
   title?: string;
+<<<<<<< HEAD
   featured?: boolean
 }
+=======
+  featured?: boolean;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 const contactInfo = {
   mobile: '+1 302 464 0950'
@@ -99,6 +107,7 @@ const navigationItems: NavigationItem[] = [
     children: [
       { name: 'Standard Pricing', href: '/pricing', description: 'Our plans' }
       {
+<<<<<<< HEAD
         name: 'Market Pricing'
         href: '/market-pricing'
         description: 'Compare market averages'
@@ -842,6 +851,77 @@ const UltraFuturisticNavigation2035: React.FC = () => {
   }
   const closeDropdowns = () => {
     setActiveDropdown(null);  }
+=======
+        name: 'Market Pricing',
+        href: '/market-pricing',
+        description: 'Compare market averages',
+      },
+    ],
+  },
+  {
+    name: 'Resources',
+    href: '/resources',
+    icon: <BookOpen className='w-5 h-5' />,
+    description: 'Guides, reports and tools',
+    children: [
+      { name: 'Blog', href: '/blog', description: 'Insights and updates' },
+      {
+        name: 'Case Studies',
+        href: '/case-studies',
+        description: 'Proven results',
+      },
+      { name: 'Developer', href: '/developer', description: 'Docs and SDKs' },
+      {
+        name: 'Services Advertising',
+        href: '/services-advertising',
+        description: 'Features, benefits and market pricing links',
+      },
+    ],
+  },
+  {
+    name: 'Contact',
+    href: '/contact',
+    icon: <Phone className='w-5 h-5' />,    description: 'Talk to our team',
+    featured: true,
+    children: [
+      { name: 'Contact Sales', href: '/contact', description: 'Get a quote' },
+      { name: 'Support', href: '/support', description: 'Help center' },
+    ],
+  },
+
+    description: 'Talk to our team',
+    featured: true,
+    children: [
+      { name: 'Contact Sales', href: '/contact', description: 'Get a quote' },
+
+    description: 'Complete portfolio of all technology services',
+    badge: 'Showcase',
+    featured: true,
+    children: [
+
+    description: 'Revolutionary AI consciousness and emotional intelligence',
+    badge: 'New',
+    featured: true,
+    children: [
+
+    description: 'Innovative business solutions for modern enterprises',
+    badge: 'Hot',
+    featured: true,
+    children: [
+
+    description: 'Quantum computing and breakthrough technologies',
+    badge: 'Hot',
+    featured: true,
+    children: [
+
+    description: 'Advanced enterprise infrastructure and security',
+    badge: 'Enterprise',
+    featured: true,
+    children: [
+
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const closeMobileMenu = () => {
     setIsOpen(false);
     closeDropdowns();    }
@@ -918,6 +998,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
               </div>
             </Link>
             {/* Desktop Navigation */}
+<<<<<<< HEAD
             <div className='hidden lg:flex items-center gap-8'>
               {navigationItems.map(item => (
                 <div key={item.name} className='relative group'>
@@ -974,6 +1055,16 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
+=======
+
+                  >
+                    {item.icon}
+                    <span>{item.name}</span>
+                    {item.badge && (
+
+                  </button>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.name && (
@@ -983,6 +1074,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         onMouseLeave={closeDropdowns}
                       >
                         <div className='p-6'>
@@ -1008,6 +1103,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20'                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
                                 }`}
                                 onClick={closeDropdowns}
+<<<<<<< HEAD
                               >                        onMouseLeave={closeDropdowns}
                       >
                         <div className="p-6">
@@ -1022,6 +1118,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                           </div>
                           <div className="space-y-2">
                             {item.children?.map((child) => (
+=======
+                              >
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                               <Link
                                 key={child.name}
                                 href={child.href}
@@ -1033,6 +1133,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                 }`}
                                 onClick={closeDropdowns}
                               >
+<<<<<<< HEAD
                                 {child.featured && (
                                   <Star className='w-4 h-4 text-cyan-400' />
                                 )}
@@ -1047,6 +1148,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                 </div>
                                 <ArrowRight className='w-4 h-4 opacity-50' />                              </Link>                                <ArrowRight className="w-4 h-4 opacity-50" />
                               </Link>
+=======
+
+                              </Link>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                             ))}
                           </div>
                         </div>
@@ -1056,14 +1162,25 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                 </div>
               ))}
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* Right Side Actions */}
             <div className='hidden lg:flex items-center gap-4'>
               {/* Quick Actions */}
               <div className='flex items-center gap-2'>
+<<<<<<< HEAD
                 {quickActions.map(action => (                  <Link            <div className="hidden lg:flex items-center gap-4">
               {/* Quick Actions */}
               <div className="flex items-center gap-2">
                 {quickActions.map((action) => (
+=======
+                {quickActions.map(action => (                  <Link
+
+                  <Link
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     key={action.name}
                     href={action.href}
                     className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
@@ -1077,6 +1194,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   </Link>
                 ))}
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Contact Info */}
               <div className='flex items-center gap-4 text-sm text-gray-400'>
                 <a
@@ -1101,6 +1222,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   <span className="hidden xl:inline">{contactInfo.email}</span>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -1117,6 +1242,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -1158,6 +1287,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                               item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400' :
                               'bg-gray-500/20 text-gray-400'
                             }`}>
+<<<<<<< HEAD
+=======
+
+                              {item.badge}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                             </span>
                           )}
                         </div>
@@ -1169,6 +1303,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                           activeDropdown === item.name ? 'rotate-180' : ''
                         }`} />
                       </button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       {/* Mobile Dropdown */}
                       <AnimatePresence>
                         {activeDropdown === item.name && (
@@ -1209,6 +1347,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                 {child.description && (
                                   <div className="text-sm opacity-75 mt-1">{child.description}</div>
                                 )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                               </Link>
                             ))}
                           </motion.div>
@@ -1216,6 +1358,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                       </AnimatePresence>
                     </div>
                   ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   {/* Mobile Quick Actions */}
                   <div className='pt-4 border-t border-gray-800/50'>
                     <div className='space-y-3'>
@@ -1223,6 +1369,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                     <div className="space-y-3">
                       {quickActions.map((action) => (
                         <Link
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           key={action.name}
                           href={action.href}
                           className={`flex items-center gap-3 p-3 rounded-xl text-sm font-medium transition-all duration-200 ${
@@ -1238,6 +1388,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                       ))}
                     </div>
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   {/* Mobile Contact Info */}
                   <div className='pt-4 border-t border-gray-800/50'>
                     <div className='space-y-3 text-sm text-gray-400'>
@@ -1246,6 +1400,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                         className='flex items-center gap-3 p-3 rounded-lg hover:text-cyan-400 hover:bg-gray-800/50 transition-all duration-200'
                       >
                         <Phone className='w-4 h-4' />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         <span>{contactInfo.mobile}</span>
                       </a>
                       <a
@@ -1362,6 +1520,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
   action.primary ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white': 'text-gray-300 hover:text-white hover:bg-gray-800/50'
 }`
 }onClick= {
+<<<<<<< HEAD
   closeMobileMenu
 }>) )
 }</div> </div> </div> </div> </div> </div> </div> </motion.div>)
@@ -1371,3 +1530,11 @@ export default UltraFuturisticNavigation2035;  )
 }
 export default UltraFuturisticNavigation2035;
 
+=======
+  closeMobileMenu 
+}>) ) 
+}</div> </div> </div> </div> </div> </div> </div> </motion.div>) 
+}</AnimatePresence> </div> </nav>) 
+};
+export default UltraFuturisticNavigation2035;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

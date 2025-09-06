@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
@@ -8,6 +9,33 @@ import Rocket from 'lucide-react/dist/esm/icons/rocket';
 import { FileText, Users, Calendar, Eye, MessageSquare  } from 'lucide-react';
 import { cn } from '@/lib/utils';
 interface WizardStep {
+=======
+import { useState, useEffect } from 'react',;
+import { useNavigate } from 'react-router-dom',;
+import { useAuth } from '@/hooks/useAuth',;
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
+import Rocket from 'lucide-react/dist/esm/icons/rocket',;
+import { FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react',;
+import { cn } from '@/lib/utils',;
+interface WizardStep {;
+  title: string,;
+  description: string,;
+  icon: React.ReactNode,;
+  action: {;
+    text: string,;
+    url: string;
+  },;
+  skipText?: string;
+}
+;
+interface OnboardingWizardProps {;
+  type: 'client' | 'talent',;
+  onComplete: () => void,;
+  onSkip: () => void,;
+  className?: string;
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   title: string
   description: string
@@ -28,10 +56,17 @@ interface OnboardingWizardProps {
   className?: string
 }
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
+<<<<<<< HEAD
   const [currentStep, setCurrentStep] = useState(0);
 
   const navigate = useNavigate();
   const { user } = useAuth();
+=======
+  const [currentStep, setCurrentStep] = useState(0),
+  const navigate = useNavigate(),
+  const { user } = useAuth(),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -41,9 +76,15 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "Post a Job"
         url: "/post-job"
+<<<<<<< HEAD
       }
       skipText: "I'll do this later"
     }
+=======
+      },
+      skipText: "I'll do this later"
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
       title: "View suggested matches"
       description: "Our AI system will find the best talent matches"
@@ -51,9 +92,15 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "View Matches"
         url: "/talent"
+<<<<<<< HEAD
       }
       skipText: "Skip for now"
     }
+=======
+      },
+      skipText: "Skip for now"
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
       title: "Contact talent"
       description: "Reach out to the talent that fits your needs"
@@ -63,18 +110,34 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         url: "/talent"
       }
     }
+<<<<<<< HEAD
   ];
   const talentSteps: WizardStep[] = [
     {
       title: "Complete your profile"
       description: "Add your skills, experience, and preferences";
       icon: <FileText className="h-6 w-6 text-zion-purple" />
+=======
+  ],
+
+  const talentSteps: WizardStep[] = [
+    {
+      title: "Complete your profile",
+      description: "Add your skills, experience, and preferences",
+      icon: <FileText className="h-6 w-6 text-zion-purple" />,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       action: {
         text: "Edit Profile"
         url: "/profile"
+<<<<<<< HEAD
       }
       skipText: "I'll do this later"
     }
+=======
+      },
+      skipText: "I'll do this later"
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
       title: "Define skills & availability"
       description: "Let clients know when you're available and what you can do"
@@ -82,9 +145,15 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "Set Availability"
         url: "/profile?tab=skills"
+<<<<<<< HEAD
       }
       skipText: "Skip for now"
     }
+=======
+      },
+      skipText: "Skip for now"
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
       title: "Preview your profile"
       description: "See how clients will view your profile"
@@ -92,14 +161,21 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "Preview Profile"
         url: `/talent/${user?.id}`
+<<<<<<< HEAD
       }
       skipText: "Skip for now"
     }
+=======
+      },
+      skipText: "Skip for now"
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
       title: "Enable AI matchmaking"
       description: "Let our AI find the perfect opportunities for you"
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />
       action: {
+<<<<<<< HEAD
         text: "Enable Matchmaking"
         url: "/talent-dashboard"
       }
@@ -126,6 +202,35 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       onSkip()
     }
   }
+=======
+        text: "Enable Matchmaking",
+        url: "/talent-dashboard"
+      }
+    }
+  ],;
+  const steps = type === 'client' ? clientSteps : talentSteps,;
+  // Navigate to the specified URL;
+  const handleAction = () => {;
+    if (currentStep < steps.length - 1) {;
+      navigate(steps[currentStep].action.url),;
+      setCurrentStep(currentStep + 1);
+    } else {;
+      // Last step;
+      navigate(steps[currentStep].action.url),;
+      onComplete();
+    }
+  },;
+  // Skip the current step;
+  const handleSkip = () => {;
+    if (currentStep < steps.length - 1) {;
+      setCurrentStep(currentStep + 1);
+    } else {;
+      // Last step;
+      onSkip();
+    }
+  },
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>
@@ -143,8 +248,12 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
               <div
                 key={index}
                 className={cn(
+<<<<<<< HEAD
                   "h-2 w-2 rounded-full mx-1";
 
+=======
+                  "h-2 w-2 rounded-full mx-1",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   index === currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep

@@ -18,14 +18,20 @@ export default function CoachWidget() {
     } finally {
       setLoading(false);    }
   }
+<<<<<<< HEAD
   return (      });
       const data = await resp.json();
       setReply(data.text |'')
+=======
+
+  return (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
     } finally {
       setLoading(false)
     }
   }
+<<<<<<< HEAD
   return (
     <div className='border rounded p-3'>
       <div className='font-medium mb-2'>ZionGPT Coach</div>
@@ -51,3 +57,7 @@ export default function CoachWidget() {
     </div>
 );
 }
+=======
+
+  return (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

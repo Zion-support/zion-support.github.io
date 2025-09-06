@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { App  } from '@slack/bolt';
+=======
+import { App } from '@slack/bolt';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 
@@ -133,11 +137,20 @@ app.command('/zion', async ({ command, ack, respond }) => {
     await respond({ response_type: 'ephemeral', text: `Error: ${err.message |'unknown'}` })
   }
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 (async () => {
   const port = Number(process.env.SLACK_PORT |3001);
   await app.start(port);
   // eslint-disable-next-line no-console
+<<<<<<< HEAD
 console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();  console.log(`⚡️ Zion Slack bot running on port ${port}`)
 })();
 
+=======
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

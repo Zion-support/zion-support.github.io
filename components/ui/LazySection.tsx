@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+ const getInitialPosition = () => {
+  switch (direction) {
+  case 'up': 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 const getInitialPosition = () => {
   switch (direction) {
@@ -66,4 +72,7 @@ export default LazySection;      case 'down':
   )
 }
 export default LazySection;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

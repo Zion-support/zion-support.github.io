@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -309,6 +313,7 @@ const serviceCategories = [
         price: '$2,999/month'
       }
       {
+<<<<<<< HEAD
         name: 'Synthetic Biology Automation Platform'
         href: '/synthetic-biology-automation-platform'
         description: 'Automate biology research'
@@ -321,6 +326,23 @@ const serviceCategories = [
       { name: 'Synthetic Biology Automation Platform', href: '/synthetic-biology-automation-platform', description: 'Automate biology research', price: '$3,999/month' }
     ]
   }
+=======
+        name: 'Synthetic Biology Automation Platform',
+        href: '/synthetic-biology-automation-platform',
+        description: 'Automate biology research',
+        price: '$3,999/month',
+      },
+    ],
+  },];      { name: 'Swarm Robotics Orchestration', href: '/swarm-robotics-orchestration', description: 'Coordinate robot swarms', price: '$449/month' },
+      { name: 'Brain-Computer Interface Platform', href: '/brain-computer-interface-platform', description: 'Direct neural interface', price: '$1,299/month' };
+      { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform', description: 'Quantum-enhanced ML', price: '$2,999/month' };
+      { name: 'Synthetic Biology Automation Platform', href: '/synthetic-biology-automation-platform', description: 'Automate biology research', price: '$3,999/month' }
+    ]
+  }
+
+];
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -461,6 +483,7 @@ export default function UltraFuturisticNavigation2032() {
             </Link>
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
+<<<<<<< HEAD
               {mainNavigation.map(item => (            {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -549,10 +572,20 @@ export default function UltraFuturisticNavigation2032() {
                             </div>
                           </div>
                           <div className="space-y-2">
+=======
+              {mainNavigation.map(item => (
+
+              </div>
+            </Link>
+
+            {/* Desktop Navigation */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                             {category.services.map((service, serviceIndex) => (
                               <Link
                                 key={serviceIndex}
                                 href={service.href}
+<<<<<<< HEAD
                                 className='block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group'
                               >
                                 <div className='flex items-center justify-between'>
@@ -567,6 +600,11 @@ export default function UltraFuturisticNavigation2032() {
                                     {service.price}
                                   </div>                                </div>                                  <div className="text-cyan-400 font-semibold text-sm">{service.price}</div>
                                 </div>
+=======
+
+                                </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                               </Link>
                             ))}
                           </div>
@@ -577,16 +615,29 @@ export default function UltraFuturisticNavigation2032() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4'>
               <Link href='/contact'>
                 <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl'>                  Get Started            <div className="hidden lg:flex items-center space-x-4">
               <Link href="/contact">
                 <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
+=======
+
+            {/* CTA Buttons */}
+            <div className='hidden lg:flex items-center space-x-4'>
+              <Link href='/contact'>
+                <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl'>                  Get Started
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   Get Started
                 </button>
               </Link>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
@@ -603,6 +654,10 @@ export default function UltraFuturisticNavigation2032() {
           </div>
         </div>
       </nav>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -612,6 +667,10 @@ export default function UltraFuturisticNavigation2032() {
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
             className='fixed inset-0 z-50 lg:hidden'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-xl'
@@ -675,10 +734,20 @@ export default function UltraFuturisticNavigation2032() {
                     >
                       <item.icon className="w-5 h-5" />
                       <span>{item.name}</span>
+<<<<<<< HEAD
                     </Link>
                   ))}
                   {/* Services Accordion */}
                   <div className='space-y-2'>
+=======
+
+                    </Link>
+                  ))}
+
+                  {/* Services Accordion */}
+                  <div className='space-y-2'>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     <button
                       onClick={() =>
                         setActiveCategory(activeCategory === 0 ? null : 0)
@@ -729,6 +798,10 @@ export default function UltraFuturisticNavigation2032() {
                       </div>
                     )}
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   {/* Company Links */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='text-sm font-medium text-gray-400 mb-3'>
@@ -753,6 +826,10 @@ export default function UltraFuturisticNavigation2032() {
                       ))}
                     </div>
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   {/* Contact Info */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='text-sm font-medium text-gray-400 mb-3'>
@@ -761,6 +838,10 @@ export default function UltraFuturisticNavigation2032() {
                     <div className='space-y-2 text-sm text-gray-400'>
                       <div className='flex items-center space-x-2'>
                         <Phone className='w-4 h-4 text-cyan-400' />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         <span>{contactInfo.mobile}</span>
                       </div>
                       <div className='flex items-center space-x-2'>
@@ -797,6 +878,7 @@ export default function UltraFuturisticNavigation2032() {
           </motion.div>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
       {/* Spacer for fixed navigation */}
       <div className='h-20' />
     </>
@@ -804,3 +886,10 @@ export default function UltraFuturisticNavigation2032() {
     </>
   );
 }
+=======
+
+      {/* Spacer for fixed navigation */}
+      <div className='h-20' />
+    </>
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

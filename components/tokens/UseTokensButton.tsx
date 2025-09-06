@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import UseTokensModal, { RedemptionType } from "./UseTokensModal";
+=======
+import React, { useState } from "react";
+import UseTokensModal, { RedemptionType } from "./UseTokensModal";
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function UseTokensButton({
   serviceId
   defaultType
@@ -43,4 +49,8 @@ export default function UseTokensButton({
       />
     </>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

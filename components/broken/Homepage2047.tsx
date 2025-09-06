@@ -231,6 +231,7 @@ const Homepage2047: React.FC = () => {
   ];
   const stats = [
     {
+<<<<<<< HEAD
       number: `${allInnovativeServices.length}+`
       label: 'Innovative Services'
       icon: Star
@@ -246,6 +247,28 @@ const Homepage2047: React.FC = () => {
     animate: { opacity: 1, y: 0 }
     transition: { duration: 0.6 },  };    transition: { duration: 0.6 }
   }
+=======
+      number: `${allInnovativeServices.length}+`,
+      label: 'Innovative Services',
+      icon: Star,
+    },
+    { number: '99.99%', label: 'Uptime Guarantee', icon: TrendingUp },
+    { number: '24/7', label: 'AI Intelligence Available', icon: Brain },
+    { number: '300+', label: 'Countries Served', icon: Globe },  ];    { number: `${allInnovativeServices.length}+`, label: "Innovative Services", icon: Star },
+    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp },
+    { number: "24/7", label: "AI Intelligence Available", icon: Brain },
+    { number: "300+", label: "Countries Served", icon: Globe }
+
+  ];
+
+  const fadeInUp = {
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 },  };
+
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const staggerContainer = {
     animate: {
       transition: {
@@ -261,8 +284,15 @@ const Homepage2047: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden">
       {/* Futuristic Background */}
       <UltraFuturisticBackground2047 />
+<<<<<<< HEAD
       {/* Navigation */}
       <UltraFuturisticNavigation2047 />
+=======
+
+      {/* Navigation */}
+      <UltraFuturisticNavigation2047 />
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Hero Section */}
       <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>
         <div className='max-w-7xl mx-auto w-full'>
@@ -325,12 +355,20 @@ const Homepage2047: React.FC = () => {
                   Discover our cutting-edge micro SAAS services, AI autonomous ecosystems, quantum computing breakthroughs, and next-generation IT infrastructure that are shaping the future of technology.
                 </p>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* CTA Buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className='flex flex-col sm:flex-row gap-4'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               >
                 <Link
                   href='/2025-innovative-services-showcase-v2'
@@ -360,14 +398,23 @@ const Homepage2047: React.FC = () => {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                 </Link>
               </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Stats */}
               <motion.div
                 variants={staggerContainer}
                 initial='initial'
                 animate='animate'
+<<<<<<< HEAD
                 className='grid grid-cols-2 md:grid-cols-4 gap-6'              >                initial="initial"
                 animate="animate"
                 className="grid grid-cols-2 md:grid-cols-4 gap-6"
+=======
+                className='grid grid-cols-2 md:grid-cols-4 gap-6'              >
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               >
                 {stats.map((stat, index) => (
                   <motion.div
@@ -378,6 +425,7 @@ const Homepage2047: React.FC = () => {
                     <div className='text-2xl font-bold text-cyan-400 mb-1'>
                       {stat.number}
                     </div>
+<<<<<<< HEAD
                     <div className='text-sm text-gray-400'>{stat.label}</div>                  </motion.div>                    className="text-center"
                   >
                     <div className="text-2xl font-bold text-cyan-400 mb-1">{stat.number}</div>
@@ -385,6 +433,16 @@ const Homepage2047: React.FC = () => {
                 ))}
               </motion.div>
             </motion.div>
+=======
+                    <div className='text-sm text-gray-400'>{stat.label}</div>                  </motion.div>
+
+                  </motion.div>
+
+                ))}
+              </motion.div>
+            </motion.div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* Right Content - Featured Service */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -396,12 +454,20 @@ const Homepage2047: React.FC = () => {
             >
               <AnimatePresence mode="wait">
                 <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   key={currentServiceIndex}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.5 }}
                   className='relative'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 >
                   <div className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm'>
                     <div className='flex items-center justify-between mb-6'>
@@ -472,12 +538,18 @@ const Homepage2047: React.FC = () => {
                         </span>
                       </div>
                     </div>
+<<<<<<< HEAD
                     <Link
                       href={featuredServices[currentServiceIndex]?.slug |'#'}
                       className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block'
                     <Link
                       href={featuredServices[currentServiceIndex]?.slug |'#'}
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block"
+=======
+
+                    >
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       Learn More
                     </Link>
                   </div>
@@ -492,11 +564,19 @@ const Homepage2047: React.FC = () => {
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary Service Categories
@@ -511,6 +591,10 @@ const Homepage2047: React.FC = () => {
               Explore our comprehensive suite of innovative solutions across AI, quantum computing, IT infrastructure, and emerging technologies
             </p>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Category Cards */}
           <motion.div
             variants={staggerContainer}
@@ -566,16 +650,28 @@ const Homepage2047: React.FC = () => {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Featured Services Grid */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Featured Innovative Services
@@ -590,6 +686,10 @@ const Homepage2047: React.FC = () => {
               Discover our most revolutionary and cutting-edge technology solutions
             </p>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Services Grid */}
           <motion.div
             variants={staggerContainer}
@@ -629,6 +729,10 @@ const Homepage2047: React.FC = () => {
               </motion.div>
             ))}
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* View All Services CTA */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -636,6 +740,10 @@ const Homepage2047: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className='text-center mt-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             <Link
               href='/2025-innovative-services-showcase-v2'
@@ -658,6 +766,10 @@ const Homepage2047: React.FC = () => {
         <div className='max-w-4xl mx-auto text-center'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -701,6 +813,10 @@ const Homepage2047: React.FC = () => {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Footer */}
       <UltraFuturisticFooter2047 />
     </div>
@@ -710,3 +826,7 @@ export default Homepage2047;  )
 }
 export default Homepage2047;
 
+<<<<<<< HEAD
+=======
+export default Homepage2047;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

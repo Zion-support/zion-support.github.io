@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function EpisodePage() {
 
   const router = useRouter();
@@ -35,6 +39,7 @@ export default function EpisodePage() {
         </pre>
       </div>
     </div>
+<<<<<<< HEAD
   );      {episode.audio?.mp3Url && (
         <audio controls className="w-full">
           <source src={episode.audio.mp3Url} type="audio/mpeg" />
@@ -47,3 +52,6 @@ export default function EpisodePage() {
     </div>
 );
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

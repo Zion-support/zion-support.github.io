@@ -38,6 +38,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json(entry)
   }
   if (method === 'POST') {
+<<<<<<< HEAD
     const { funnel, timeToHireDays, costPerHireUsd } = req.body |{}
     const updated = updateJsonFile<ReportingData>(
       FILE
@@ -75,3 +76,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 return res.status(405).json({ error: 'Method not allowed' });
 }
+=======
+    const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

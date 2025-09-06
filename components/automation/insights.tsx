@@ -1,12 +1,20 @@
+<<<<<<< HEAD
 
 return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
 }</ul> </div> </div>)
+=======
+ return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
+}</ul> </div> </div>) 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {
   talentMd
 }</pre>)
 }</section> </div>) import { useEffect, useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function AutomationInsightsPage() {
   const [intel, setIntel] = useState<any>(null);
   const [talentMd, setTalentMd] = useState<string>('');
@@ -53,5 +61,10 @@ export default function AutomationInsightsPage() {
         )}
       </section>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

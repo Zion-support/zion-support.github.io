@@ -13,4 +13,8 @@ export default async function handler(
   const rssUrl = (process.env.SITE_URL |'http: //localhost:3000') + '/podcast.xml';
 
   return res.status(200).json({ ok: true, rssUrl })
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

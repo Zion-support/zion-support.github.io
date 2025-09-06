@@ -148,5 +148,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
       )}
     </AnimatePresence>
   );
+<<<<<<< HEAD
 }
 export default Sidebar;
+=======
+};
+
+export default Sidebar;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

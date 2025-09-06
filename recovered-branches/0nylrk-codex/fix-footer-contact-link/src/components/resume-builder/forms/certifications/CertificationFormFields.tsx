@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {
   FormField
   FormItem
@@ -16,6 +17,17 @@ interface CertificationFormFieldsProps {
 export function CertificationFormFields({
   form
 }: CertificationFormFieldsProps) {
+=======
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
+import { Input } from '@/components/ui/input',;
+import { UseFormReturn } from 'react-hook-form',;
+import { CertificationFormValues } from './types';
+interface CertificationFormFieldsProps {;
+  form: UseFormReturn<CertificationFormValues>;
+}
+
+export function CertificationFormFields({ form }: CertificationFormFieldsProps) {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -60,23 +72,47 @@ export function CertificationFormFields({
             <FormItem>
               <FormLabel>Issue Date</FormLabel>
               <FormControl>
+<<<<<<< HEAD
                 <Input type="date" {...field} value={field.value |""} />
+=======
+                <Input 
+                  type="date" 
+                  {...field}
+                  value={field.value || ''}
+                />
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
+<<<<<<< HEAD
         />
         <FormField
+=======
+        />;
+        <FormField;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           control={form.control}
           name="expiration_date"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Expiration Date (Optional)</FormLabel>
               <FormControl>
+<<<<<<< HEAD
                 <Input type="date" {...field} value={field.value |""} />
               </FormControl>
               <FormMessage />
             </FormItem>
+=======
+                <Input 
+                  type="date" 
+                  {...field}
+                  value={field.value || ''}
+                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           )}
         />
       </div>

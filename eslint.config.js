@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import js from "@eslint/js";
 import globals from "globals";
@@ -12,6 +13,8 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 <<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import js from '@eslint/js';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -323,6 +326,7 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default [
   {
+<<<<<<< HEAD
     ignores: [
       "node_modules/",
       ".next/",
@@ -384,10 +388,18 @@ export default [
         beforeAll: "readonly",
         afterAll: "readonly"
       },
+=======
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
         ecmaFeatures: {
           jsx: true
         }
+<<<<<<< HEAD
       }
     },
     plugins: {
@@ -450,6 +462,8 @@ export default [
         ecmaFeatures: {
           jsx: true
         }
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       },
       globals: {
         React: 'readonly',
@@ -466,6 +480,7 @@ export default [
         performance: 'readonly',
         module: 'readonly',
         require: 'readonly',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
         jest: 'readonly',
@@ -550,11 +565,24 @@ export default [
       }
     },
     plugins: {
+=======
+        jest: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly'
+      }
+    },
+    plugins: {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks
     },
     rules: {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       '@typescript-eslint/no-unused-vars': 'warn',
@@ -639,6 +667,13 @@ export default [
     }
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+=======
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react/no-unescaped-entities': 'off',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-undef': 'off',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       'no-unused-vars': 'warn'
     }
   },
@@ -670,6 +705,7 @@ export default [
       'supabase/',
       'working-automation-suite.cjs'
     ]
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -681,3 +717,7 @@ export default [
 =======
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+  }
+];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
+<<<<<<< HEAD
 import {
   Menu
   X
@@ -53,6 +58,8 @@ import {
   FlaskConical
   Link as LinkIcon;
 import Button from '../ui/Button';
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function NeoFuturisticNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -79,6 +86,10 @@ export default function NeoFuturisticNavigation() {
     setActiveDropdown(null);
   }
   const isActive = (path: string) => router.pathname === path;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const serviceCategories = [
     {
       name: 'Quantum Computing'
@@ -369,6 +380,10 @@ export default function NeoFuturisticNavigation() {
       link: '/reports'
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Popular quick links to flagship services
   const popularServiceLinks = [
     { name: 'AI Content Generator', href: '/ai-content-generator' }
@@ -381,6 +396,10 @@ export default function NeoFuturisticNavigation() {
     { name: 'AI Sales Automation', href: '/ai-sales-automation' }
     { name: 'AI Market Research', href: '/ai-market-research' }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Newly added real services quick links
   const newServiceLinks = [
     {
@@ -682,6 +701,10 @@ export default function NeoFuturisticNavigation() {
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
                   />
                 </button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
@@ -723,6 +746,10 @@ export default function NeoFuturisticNavigation() {
                   </div>
                 )}
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Company Section */}
               <div>
                 <button
@@ -826,6 +853,10 @@ export default function NeoFuturisticNavigation() {
       )}
     </nav>
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   `w-4 h-4 transition-transform duration-300 $ {
   activeDropdown === 'services' ? 'rotate-180' : ''
 }`
@@ -879,5 +910,10 @@ export default function NeoFuturisticNavigation() {
 				</div>
 			)}
 		</nav>
+<<<<<<< HEAD
 );
 }
+=======
+	);
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

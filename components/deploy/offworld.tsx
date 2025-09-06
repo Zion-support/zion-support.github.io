@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
 import Head from 'next/head',
+=======
+import {useState} from 'react';
+import Head from 'next/head';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function OffworldDeploy() {
   const [cid, setCid] = useState<string | null>(null),
   const [status, setStatus] = useState<string>(''),
@@ -31,6 +37,7 @@ export default function OffworldDeploy() {
   }
   return (
     <div className='min-h-screen p-8'>
+<<<<<<< HEAD
       <Head>
         <title>Zion Offworld Deploy</title>
       </Head>
@@ -76,3 +83,15 @@ export default function OffworldDeploy() {
     </div>
 );
 }
+=======
+
+    }
+  }
+
+  return (
+
+        </div>
+      )}
+    </div>
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

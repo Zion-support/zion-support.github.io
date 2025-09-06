@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // Content monitoring functionality
 import { FraudFlag, FraudSeverity  } from '@/types/fraud';
 import { analyzeContent  } from './analyzeContent';
@@ -25,22 +26,77 @@ export const monitorContent = async (
     )) {
       severity = 'dangerous'
     }
+=======
+// Content monitoring functionality;
+import { FraudFlag, FraudSeverity } from '@/types/fraud',;
+import { analyzeContent } from './analyzeContent',;
+import { flagContent } from './flagContent',;
+/**;
+ * Create a monitoring system helper to easily monitor any content;
+ */;
+export const monitorContent = async (;
+  userId: string,;
+  userEmail: string | undefined,;
+  contentType: FraudFlag['content_type'],;
+  contentId: string,;
+  content: string;
+): Promise<void> => {;
+  const analysis = analyzeContent(content),;
+  if (analysis.isSuspicious) {;
+    let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',;
+    // If contains highly suspicious phrases, mark as dangerous;
+    if (analysis.reasons.some(r =>;
+      r.includes('payment') ||;
+      r.includes('external') ||;
+      r.includes('bypass');
+    )) {;
+      severity = 'dangerous';
+    }
+    
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     await flagContent(
-      userId;
-      userEmail;
-      contentType;
-      contentId;
-      content;
-      severity;
-      analysis.reasons.join();
+      userId,
+      userEmail,
+      contentType,
+      contentId,
+      content,
+      severity,
+      analysis.reasons.join(),
       undefined // IP address would be added in a real implementation
+<<<<<<< HEAD
     );
+=======
+    ),
+    
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // If this is a 'dangerous' flag, automatically hide content
     // This would be implemented in a real system with appropriate flags
     if (severity === 'dangerous') {
-      console.log('Auto-hiding dangerous content:', contentId);
+      // // // console.log('Auto-hiding dangerous content:', contentId),
       // Code to hide content would go here
+<<<<<<< HEAD
     }
   }
 }
 
+=======
+;
+    await flagContent(;
+      userId,;
+      userEmail,;
+      contentType,;
+      contentId,;
+      content,;
+      severity,;
+      analysis.reasons.join(),;
+      undefined // IP address would be added in a real implementation;
+    ),;
+    // If this is a 'dangerous' flag, automatically hide content;
+    // This would be implemented in a real system with appropriate flags;
+    if (severity === 'dangerous') {;
+      // // // console.log('Auto-hiding dangerous content:', contentId);
+      // Code to hide content would go here;
+    }
+  }
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

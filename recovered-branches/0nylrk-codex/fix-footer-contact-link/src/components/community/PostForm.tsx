@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+=======
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { 
   Card;
   CardContent;
@@ -18,8 +23,13 @@ import {
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 import { Textarea } from "@/components/ui/textarea";
 import { ForumCategory } from "@/types/community";
+=======
+import { Textarea } from "@/components/ui/textarea",
+import { ForumCategory } from "@/types/community",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface PostFormValues {
 
   title: string
@@ -27,20 +37,57 @@ interface PostFormValues {
   categoryId: ForumCategory
 
   tags: string
+<<<<<<< HEAD
 }
 interface PostFormProps {
+=======
+import { useState } from "react",;
+import { useForm } from "react-hook-form",;
+import {;
+  Card,;
+  CardContent,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle;
+} from "@/components/ui/card",;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage;
+} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { ForumCategory } from "@/types/community",;
+interface PostFormValues {;
+  title: string,;
+  content: string,;
+  categoryId: ForumCategory,;
+  tags: string;
+}
+;
+interface PostFormProps {;
+  initialValues?: Partial<PostFormValues>,;
+  onSubmit: (values: PostFormValues) => void,;
+  isEditing?: boolean;
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void
   isEditing?: boolean
 }
 export const PostForm = ({
-  initialValues;
-  onSubmit;
+  initialValues,
+  onSubmit,
   isEditing = false
 }: PostFormProps) => {
   const form = useForm<PostFormValues>({
     defaultValues: {
+<<<<<<< HEAD
       title: initialValues?.title |""
       content: initialValues?.content |""
       categoryId: initialValues?.categoryId |"project-help"
@@ -56,6 +103,24 @@ export const PostForm = ({
       setIsSubmitting(false)
     }
   }
+=======
+      title: initialValues?.title || "",
+      content: initialValues?.content || "",
+      categoryId: initialValues?.categoryId || "project-help",
+      tags: initialValues?.tags || ""
+    }
+  }),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const handleSubmit = async (values: PostFormValues) => {;
+    setIsSubmitting(true),;
+    try {;
+      await onSubmit(values);
+    } finally {;
+      setIsSubmitting(false);
+    }
+  },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card>
       <CardHeader>
@@ -139,6 +204,12 @@ export const PostForm = ({
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 }
 export default PostForm;
 
+=======
+},
+
+export default PostForm,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+=======
+ export const getStaticProps: GetStaticProps<PageProps> = async () => {
+  return {
+    props: {
+      docs: content as DocsContent,
+    },
+  };};import React, { useEffect } from 'react';
+import type { GetStaticProps } from 'next';
+import content from '../../../data/docs/content.json';
+export type Section = {
+  id: string,
+  title: string,
+  html?: string;
+  code?: { language?: string, content: string }[]
+};
+
+type DocsContent = {
+  title: string,
+  sections: Section[]
+};
+
+type PageProps = {
+  docs: DocsContent
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
@@ -24,6 +50,10 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent}}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
@@ -62,5 +92,10 @@ export default function PrintDocs({ docs }: PageProps) {
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

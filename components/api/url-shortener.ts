@@ -156,6 +156,7 @@ export async function getServerSideProps({
   // Redirect to original URL
   return {
     redirect: {
+<<<<<<< HEAD
       destination: shortUrl.originalUrl
       permanent: false
     }
@@ -165,3 +166,9 @@ export async function getServerSideProps({
     }
 }
 }
+=======
+      destination: shortUrl.originalUrl,
+      permanent: false,
+    },
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

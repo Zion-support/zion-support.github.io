@@ -14,9 +14,27 @@ const Dashboard: NextPage = () => {
         <EmptyState
           title="No jobs yet"
           description="Post your first job to get quotes from top talent."
+<<<<<<< HEAD
           icon={<span>🧰</span>}
           primaryAction={{ label: 'Post a job', href: '/jobs/post' }}
           secondaryAction={{ label: 'Explore talent', href: '/talent' }}
+=======
+          icon={<span>🧰</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          primaryAction={{ label: 'Post a job', href: '/jobs/post' }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          secondaryAction={{ label: 'Explore talent', href: '/talent' }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         />
       </section>
       <section>
@@ -24,6 +42,7 @@ const Dashboard: NextPage = () => {
         <EmptyState
           title="No messages yet"
           description="When conversations start, they’ll show up here."
+<<<<<<< HEAD
           icon={<span>💬</span>}
           primaryAction={{ label: 'Browse services', href: '/services' }}
         />
@@ -33,3 +52,21 @@ const Dashboard: NextPage = () => {
 }
 export default Dashboard;
 
+=======
+          icon={<span>💬</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          primaryAction={{ label: 'Browse services', href: '/services' }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        />;
+      </section>;
+    </div>;
+  );
+},;
+export default Dashboard;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

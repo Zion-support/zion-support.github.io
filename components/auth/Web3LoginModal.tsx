@@ -127,6 +127,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       console.error(e);
       setError(e?.message |'Phantom connection failed');
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }      if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
       onLoggedIn?.({ address: publicKey, chain: 'sol' })
       onClose()
@@ -135,6 +136,10 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       setError(e?.message |'Phantom connection failed')
     } finally {
       setLoading(false)
+=======
+      setLoading(false);    }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
@@ -179,6 +184,7 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       </div>
     </div>
   );
+<<<<<<< HEAD
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null;
   return <ModalInner {...props} />;        </div>
@@ -205,3 +211,9 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {
 
   return <ModalInner {...props} />
 }
+=======
+
+export default function Web3LoginModal(props: Web3LoginModalProps) {
+  if (!isClient) return null;
+  return <ModalInner {...props} />;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -66,6 +66,7 @@ export default function Web3LoginButton() {
     const base =
       displayName |`${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
 
+<<<<<<< HEAD
     return (
       <div className='flex items-center gap-2'>
         <span className='hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5'>
@@ -113,3 +114,9 @@ export default function Web3LoginButton() {
     </>
 );
 }
+=======
+  }
+
+  return (
+    <>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

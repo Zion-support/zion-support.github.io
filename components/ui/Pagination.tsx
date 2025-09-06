@@ -61,6 +61,7 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
         Next
       </EnhancedButton>
     </div>
+<<<<<<< HEAD
 );
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -160,3 +161,6 @@ const Pagination: React.FC<PaginationProps> = ({currentPage
 }
 export default Pagination;
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

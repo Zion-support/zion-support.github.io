@@ -1,14 +1,24 @@
+<<<<<<< HEAD
 
 return (<UltraAdvancedFuturisticBackground> <Head> <title> {
   service.name
 }- Zion Tech Group</title>) )
+=======
+ return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+  service.name 
+}- Zion Tech Group</title>) ) 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 
 import Head from 'next/head';
 import { Activity, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+=======
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function IncidentAutomationSuitePage() {
 
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'));
@@ -56,4 +66,9 @@ export default function IncidentAutomationSuitePage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

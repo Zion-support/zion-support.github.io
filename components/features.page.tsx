@@ -1,5 +1,10 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
+=======
+import {Bot, Globe2, MonitorSmartphone} from 'lucide-react';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function FeaturesPage() {
   return (
     <EnhancedLayout>
@@ -33,5 +38,9 @@ export default function FeaturesPage() {
           <p className="mt-1 text-sm opacity-80">Track deliverables and approvals anywhere.</p>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
   );
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

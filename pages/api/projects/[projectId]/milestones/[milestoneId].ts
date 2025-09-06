@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../../utils/api/auth";
@@ -16,19 +17,34 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     projectId: string;
     milestoneId: string;
   }
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { requireUser } from '../../../../../utils/api/auth';
+import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent } from '../../../../../utils/api/projects';
+import { isMilestoneStatus } from '../../../../../utils/types/milestones';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const user = requireUser(req, res);
+  if (!user) return;
+  const { projectId, milestoneId } = req.query as { projectId: string, milestoneId: string };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const project = getProject(projectId);
   if (!project) {
-    res.status(404).json({ error: "Project not found" });
+    res.status(404).json({ error: 'Project not found' });
     return;
   }
   if (!assertParticipantOrAdmin(project, user)) {
-    res.status(403).json({ error: "Forbidden" });
+    res.status(403).json({ error: 'Forbidden' });
     return;
   }
+<<<<<<< HEAD
   if (req.method === "PATCH") {
+=======
+
+  if (req.method === 'PATCH') {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const body = req.body as any;
     if (body.status && !isMilestoneStatus(body.status)) {
-      res.status(400).json({ error: "Invalid status" });
+      res.status(400).json({ error: 'Invalid status' });
       return;
     }
     // Enforce status transition rules
@@ -37,34 +53,54 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const isTalentUser = isTalent(project, user);
       const status: string = body.status;
       const allowed =
+<<<<<<< HEAD
         (status === "In Progress" && isClientUser) |
         (status === "Submitted" && isTalentUser) |
         (status === "Approved" && isClientUser) |
         (status === "Paid" && isClientUser);
       if (!allowed && user.role !== "admin") {
         res.status(403).json({ error: "Not allowed to set this status" });
+=======
+        (status === 'In Progress' && isClientUser) ||
+        (status === 'Submitted' && isTalentUser) ||
+        (status === 'Approved' && isClientUser) ||
+        (status === 'Paid' && isClientUser);
+      if (!allowed && user.role !== 'admin') {
+        res.status(403).json({ error: 'Not allowed to set this status' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         return;
       }
       // Add side-effects
-      if (status === "Submitted") {
-        body.submittedByUserId = user.userId;
+      if (status === 'Submitted') {
+        body.submittedByUserId = user.userId
       }
-      if (status === "Approved") {
-        body.approvedByUserId = user.userId;
+      if (status === 'Approved') {
+        body.approvedByUserId = user.userId
       }
-      if (status === "Paid") {
-        body.paidAt = new Date().toISOString();
+      if (status === 'Paid') {
+        body.paidAt = new Date().toISOString()
       }
     }
     const updated = updateMilestone(project, milestoneId, body);
     if (!updated) {
+<<<<<<< HEAD
       res.status(404).json({ error: "Milestone not found" });
+=======
+      res.status(404).json({ error: 'Milestone not found' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return;
     }
     res.status(200).json({ milestone: updated });
     return;
   }
+<<<<<<< HEAD
   res.setHeader("AllowPATCH");
   res.status(405).end("Method Not Allowed");
 }
 
+=======
+
+  res.setHeader('AllowPATCH');
+  res.status(405).end('Method Not Allowed')
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

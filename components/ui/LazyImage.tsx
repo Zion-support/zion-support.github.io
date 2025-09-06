@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 useEffect ( () => {
   const observer = new IntersectionObserver ( ([entry]) => {
   if (entry.isIntersecting) {
@@ -50,12 +53,21 @@ useEffect ( () => {
       {/* Placeholder */}
       <img
         src={placeholder}
+<<<<<<< HEAD
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${        alt=""
+=======
+        alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ width, height }}
       />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Actual Image */}
       {isInView && (
         <motion.img
@@ -78,6 +90,7 @@ export default LazyImage;          className="w-full h-full object-cover"
           style={{ width, height }}
         />
       )}
+<<<<<<< HEAD
     </div>
   );
 }
@@ -85,3 +98,6 @@ export default LazyImage;  )
 }
 export default LazyImage;
 
+=======
+    </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

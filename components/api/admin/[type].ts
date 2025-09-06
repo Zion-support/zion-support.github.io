@@ -16,6 +16,7 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     if (k.startsWith('f_')) filters[k.slice(2)] = rest[k];
   });
   return {
+<<<<<<< HEAD
     search
     sort
     order: (order as any) |'desc'
@@ -24,6 +25,16 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     filters
     format: (format as any) |undefined
   };    search;
+=======
+    search,
+    sort,
+    order: (order as any) || 'desc',
+    page: page ? Number(page) : 0,
+    pageSize: pageSize ? Number(pageSize) : 20,
+    filters,
+    format: (format as any) || undefined,
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
     sort;
     order: (order as any) |'desc';
@@ -47,6 +58,10 @@ function toCsv(rows: any[]): string {
     rows.map(r => headers.map(h => escape(r[h])).join(','))
   );
   return lines.join('\n');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -120,12 +135,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         for (const [k, v] of Object.entries(params.filters)) {
           filtered = filtered.filter(
             (r: any) => String((r as any)[k]) === String(v)
+<<<<<<< HEAD
           );        }        filtered = filtered.filter((r) => JSON.stringify(r).toLowerCase().includes(s))
       }
       if (params.filters) {
         for (const [k, v] of Object.entries(params.filters)) {
           filtered = filtered.filter((r: any) => String((r as any)[k]) === String(v))
       }
+=======
+          );        }
+
+        }
+
+      }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (params.sort) {
         filtered.sort((a: any, b: any) => {
           const av = (a as any)[params.sort!];
@@ -146,9 +169,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           `attachment; filename="${type}.csv"`
         );
         return res.status(200).send(toCsv(pageItems));
+<<<<<<< HEAD
       return res.status(200).json({ items: pageItems, total });
     }
   }
+=======
+
+      }
+      return res.status(200).json({ items: pageItems, total });
+    }
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
       id: string;
@@ -174,9 +206,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         updated_at: new Date().toISOString()
       }
       list[idx] = updated as any;
+<<<<<<< HEAD
       return res.status(200).json({ item: updated });    }      return res.status(200).json({ item: updated })
     }
   }
+=======
+      return res.status(200).json({ item: updated });    }
+
+    }
+
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |'';
     if (!id) return res.status(400).json({ error: 'Missing id' });
@@ -196,7 +237,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     }
   }
+<<<<<<< HEAD
 return res.status(405).json({ error: 'Method not allowed' });
 }return res.status (200) .send (toCsv (data |[]) );
 }return res.status (200) .send (toCsv (pageItems) );
 }
+=======
+
+  return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

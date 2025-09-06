@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
+=======
+import React, { useState } from 'react',
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function BlogPage() {
 	return (
+>>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 		<Layout>
 			<Head>
 				<title>Blog | Zion Tech Group</title>
@@ -16,4 +23,13 @@ export default function BlogPage() {
 			</section>
 		</Layout>
 	)
+<<<<<<< HEAD
 }
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

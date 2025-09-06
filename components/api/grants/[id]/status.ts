@@ -75,6 +75,10 @@ const payload = req.body as StatusUpdatePayload;
   existing.status = payload.status;
   existing.updatedAt = new Date().toISOString();
   writeGrant(existing);
+<<<<<<< HEAD
   res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
 }
 
+=======
+  res.status(200).json({ record: existing });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

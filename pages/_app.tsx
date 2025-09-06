@@ -4,6 +4,7 @@ import type { AppProps } from 'next/app';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import '../src/styles/globals.css';
 
@@ -48,11 +49,20 @@ export default function App({ Component, pageProps }: AppProps) {
   );
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e
 =======
+import '../src/styles/globals.css';
+
+export default function App({ Component, pageProps }: AppProps) {
+<<<<<<< HEAD
+  return <Component {...pageProps} />;
+import '../styles/globals.css';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 import '../styles/globals.css';
 
 <<<<<<< HEAD
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 }
 =======
@@ -66,3 +76,6 @@ export default function App({ Component, pageProps }: AppProps) {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

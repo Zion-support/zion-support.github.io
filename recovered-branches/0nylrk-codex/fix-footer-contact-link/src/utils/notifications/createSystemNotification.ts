@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { createNotification  } from './createNotification';
 import { SystemNotificationParams } from './types';
 /**
@@ -24,3 +25,29 @@ export async function createSystemNotification({
     actionText
   })
 }
+=======
+import { createNotification } from './createNotification',;
+import { SystemNotificationParams } from './types',;
+/**;
+ * Creates a system notification for a user;
+ */;
+export async function createSystemNotification({;
+  userId,;
+  title,;
+  message,;
+  actionUrl = null,;
+  actionText = null,;
+  sendEmail = false;
+}: SystemNotificationParams) {;
+  return createNotification({;
+    userId,;
+    title,;
+    message,;
+    type: 'system',;
+    sendEmail;
+    actionUrl;
+    actionText;
+  });
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

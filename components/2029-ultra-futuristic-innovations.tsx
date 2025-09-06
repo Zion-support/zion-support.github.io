@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
@@ -75,8 +79,15 @@ export default function UltraFuturistic2029InnovationsPage() {
         <link rel="canonical" href="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
       {/* Background */}
       <UltraFuturisticBackground2029 />
+<<<<<<< HEAD
       {/* Navigation */}
       <UltraFuturisticNavigation2029 />
+=======
+
+      {/* Navigation */}
+      <UltraFuturisticNavigation2029 />
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto text-center'>
@@ -539,6 +550,11 @@ export default function UltraFuturistic2029InnovationsPage() {
   contactInfo.mobile
 }`
 }className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold" > Call Now </a> </div> </motion.div> </div> </section> {
+<<<<<<< HEAD
   /* Footer */
 }<UltraFuturisticFooter2029 /> </>)   )
 }
+=======
+  /* Footer */ 
+}<UltraFuturisticFooter2029 /> </>)
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

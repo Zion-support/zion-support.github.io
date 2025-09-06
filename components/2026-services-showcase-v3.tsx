@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import { motion  } from 'framer-motion';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026',
@@ -12,6 +16,7 @@ export default function ServicesShowcase2026V3() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  }
 
+<<<<<<< HEAD
   return (
     <UltraQuantumHolographicBackground
       intensity="extreme"
@@ -38,11 +43,20 @@ export default function ServicesShowcase2026V3() {
       <div className='min-h-screen'>      <div className="min-h-screen">
         {/* Navigation */}
         <UltraAdvancedNavigation2026 />
+=======
+        {/* Navigation */}
+        <UltraAdvancedNavigation2026 />
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Hero Section */}
         <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto text-center'>            <motion.div        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -100,6 +114,10 @@ export default function ServicesShowcase2026V3() {
           <div className='max-w-4xl mx-auto text-center'>        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -182,5 +200,9 @@ export default function ServicesShowcase2026V3() {
         </section>
       </div>
     </UltraQuantumHolographicBackground>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

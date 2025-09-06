@@ -11,6 +11,7 @@ export const optimizeImages = () => {
   });
 };
 
+<<<<<<< HEAD
 export const preloadCriticalResources = null;
     '/css/critical.css'
   ];
@@ -22,13 +23,27 @@ export const preloadCriticalResources = null;
     link.as = resource.endsWith('.css') ? 'style' : 'font';
     document.head.appendChild(link);
   });
+=======
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...');
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 };
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
+<<<<<<< HEAD
   const loadComponent = componentName => {    return import(`./components/${componentName}`)
   }
   return { loadComponent }
 }
     link.rel = 'preload'
     link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font'
+=======
+  const loadComponent = componentName => {
+    return import(`./components/${componentName}`);
+  };
+
+  return { loadComponent };
+};
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

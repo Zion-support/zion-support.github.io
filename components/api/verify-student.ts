@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -7,6 +10,10 @@ import {
   enforceRateLimit
   recordRequest;
 } from '../../utils/api/partnerAuth';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
@@ -41,6 +48,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!auth) {
     return res.status(401).json({ error: "Unauthorized" });
   }
+<<<<<<< HEAD
   if (!(await enforceRateLimit(auth.apiKey))) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
     return res.status(429).json({ error: "Rate limit exceeded" })
@@ -66,3 +74,8 @@ await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
   return res.status(200).json({ verified });  return res.status(200).json({ verified })
 }
 
+=======
+  const { email, programTrack } = req.body || {};
+  if (!email) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

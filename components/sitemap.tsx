@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
+=======
+import React from "react";
+import Head from "next/head";
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function SitemapPage() {
 
   const links = [
@@ -89,4 +95,7 @@ export default function SitemapPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

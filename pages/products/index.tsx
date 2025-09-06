@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
+=======
+import React from 'react';
+import { NextPage } from 'next';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -361,6 +366,7 @@ import Head from 'next/head';
 
 export default Index;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 }
@@ -370,3 +376,5 @@ export default ProductsIndex;
 }
 export default Index;
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

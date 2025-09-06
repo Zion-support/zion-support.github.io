@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from "react",
+<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 interface StickyActionProps {
@@ -8,9 +9,19 @@ interface StickyActionProps {
   children: React.ReactNode
 
   showAfterScroll?: number;
+=======
+import { cn } from "@/lib/utils",
+import { motion, AnimatePresence } from "framer-motion",
+
+interface StickyActionProps {
+  className?: string,
+  children: React.ReactNode,
+  showAfterScroll?: number,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   position?: "bottom" | "top"
 }
 export function StickyAction({
+<<<<<<< HEAD
   className;
   children;
 
@@ -18,6 +29,15 @@ export function StickyAction({
   position = "bottom"
 }: StickyActionProps) {
   const [isVisible, setIsVisible] = useState(false);
+=======
+  className,
+  children,
+  showAfterScroll = 300,
+  position = "bottom"
+}: StickyActionProps) {
+  const [isVisible, setIsVisible] = useState(false),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > showAfterScroll) {
@@ -25,20 +45,37 @@ export function StickyAction({
       } else {
         setIsVisible(false)
       }
+<<<<<<< HEAD
     }
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [showAfterScroll]);
+=======
+    },
+
+    window.addEventListener("scroll", handleScroll),
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [showAfterScroll]),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const positionClasses = {
     bottom: "bottom-4"
     top: "top-20"
+<<<<<<< HEAD
   }
+=======
+  },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
+<<<<<<< HEAD
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
@@ -47,6 +84,48 @@ export function StickyAction({
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4";
             positionClasses[position];
 
+=======
+          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+import React, { useEffect, useState } from "react",;
+import { cn } from "@/lib/utils",;
+import { motion, AnimatePresence } from "framer-motion",;
+interface StickyActionProps {;
+  className?: string,;
+  children: React.ReactNode,;
+  showAfterScroll?: number,;
+  position?: "bottom" | "top";
+}
+;
+export function StickyAction({;
+  className,;
+  children,;
+  showAfterScroll = 300,;
+  position = "bottom";
+}: StickyActionProps) {;
+  const [isVisible, setIsVisible] = useState(false),;
+  useEffect(() => {;
+    const handleScroll = () => {;
+      if (window.scrollY > showAfterScroll) {;
+        setIsVisible(true);
+      } else {;
+        setIsVisible(false);
+      }
+    },;
+    window.addEventListener("scroll", handleScroll),;
+    return () => {;
+      window.removeEventListener("scroll", handleScroll);
+    }
+  }, [showAfterScroll]),;
+  const positionClasses = {;
+    bottom: "bottom-4",;
+    top: "top-20";
+  },;
+  return (;
+    <AnimatePresence>;
+      {isVisible && (;
+        <motion.div;
+          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             className
           )}
         >

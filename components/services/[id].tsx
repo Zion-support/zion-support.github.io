@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import { getServiceById  } from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail',
 import Button from '../../components/ui/Button';
+<<<<<<< HEAD
 import { ArrowLeft, ExternalLink } from 'lucide-react';
+=======
+import {ArrowLeft, ExternalLink} from 'lucide-react';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function ServiceDetailPage() {
 
   const router = useRouter();
@@ -116,12 +125,24 @@ export default function ServiceDetailPage() {
             </div>
           </div>
         </nav>
+<<<<<<< HEAD
         {/* Service Detail Content */}
         <ServiceDetail service={service} />
+=======
+
+        {/* Service Detail Content */}
+        <ServiceDetail service={service} />
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Related Services CTA */}
         <section className='py-16 bg-gray-900/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl font-bold text-white mb-6'>
+<<<<<<< HEAD
+=======
+
+              Looking for Something Else?
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </h2>
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
               Explore our complete portfolio of micro SaaS services to find the
@@ -145,6 +166,7 @@ export default function ServiceDetailPage() {
                 className="shadow-2xl shadow-blue-500/25"
                 View All Services
               </Button>
+<<<<<<< HEAD
               <Button
                 href='/contact'
                 variant='outline'
@@ -162,3 +184,6 @@ export default function ServiceDetailPage() {
     </>
   );
 }
+=======
+              <Button
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

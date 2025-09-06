@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import type { GetServerSideProps, NextPage } from 'next',
+=======
+import type { GetServerSideProps, NextPage } from 'next';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import Link from 'next/link';
 import { BlogPost  } from '@/utils/types/blog';
@@ -91,9 +95,16 @@ export default TopicPage;      </Head>
   )
 }
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
+<<<<<<< HEAD
   const topic = String(ctx.params?.topic |'');
+=======
+  const topic = String(ctx.params?.topic || '');
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
   return { props: { topic, posts } }
 }
 export default TopicPage;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

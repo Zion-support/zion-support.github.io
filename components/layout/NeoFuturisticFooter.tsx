@@ -2,6 +2,7 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -10,6 +11,17 @@ import {
   Linkedin
   ExternalLink;
 } from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
+=======
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Github,
+  Linkedin,
+  ExternalLink,;
+} from 'lucide-react';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -21,6 +33,7 @@ export default function NeoFuturisticFooter() {
 
 export default function NeoFuturisticFooter() {
   return (
+<<<<<<< HEAD
     <footer className='relative mt-20 border-t border-slate-800/60 bg-black/60 backdrop-blur-xl overflow-hidden'>
       <div className='absolute inset-0 pointer-events-none'>
         <div className='absolute -inset-x-10 -top-32 h-64 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-3xl' />
@@ -147,3 +160,10 @@ export default function NeoFuturisticFooter() {
     </footer>
   );
 }
+=======
+
+};
+
+export default function NeoFuturisticFooter() {
+  return (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

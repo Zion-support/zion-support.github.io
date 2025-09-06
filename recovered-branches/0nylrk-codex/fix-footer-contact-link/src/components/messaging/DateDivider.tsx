@@ -1,6 +1,15 @@
+<<<<<<< HEAD
+=======
+import React from "react";
+import { format } from "date-fns";
+interface DateDividerProps {
+  date: Date;
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import React from 'react';
 import { format } from 'date-fns';
+<<<<<<< HEAD
 interface DateDividerProps {
   date: Date;
 }
@@ -15,3 +24,11 @@ export function DateDivider({ date }: DateDividerProps) {
     </div>
   );
 }
+=======
+interface DateDividerProps {;
+  date: Date;
+}
+
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -45,6 +45,7 @@ export interface SEOProps {
   canonical?: string;
   ogImage?: string;
   noindex?: boolean;
+<<<<<<< HEAD
 }
 
 export interface LoadingState {
@@ -63,6 +64,65 @@ export interface SEOProps {
   url?: string;
   type?: string;
   noindex?: boolean;
+=======
+;
+;
+export interface LoadingState {;
+  isLoading: boolean, error?: string,
+;
+;
+export interface AnimationState {;
+  isLoaded: boolean, hasError: boolean,
+;
+export interface ContactInfo {,
+  phone: string,
+  email: string,
+  address: string,
+  site: string,
+};
+,
+export interface Service {,
+  title: string,
+  description: string,
+  features: string[],
+  href: string,
+  icon: string,
+  color: string,
+};
+,
+export interface ServiceCategory {,
+  title: string,
+  description: string,
+  count: number,
+  features: string[],
+  href: string,
+  color: string,
+};
+,
+export interface SEOProps {,
+  title: string,
+  description: string,
+  keywords?: string,
+  canonical?: string,
+  ogImage?: string,
+  noindex?: boolean,
+};
+,
+export interface LoadingState {,
+  isLoading: boolean,
+  error?: string,
+};
+,
+export interface AnimationState {,
+  isLoaded: boolean,
+  hasError: boolean,
+};
+}
+
+export interface SEOProps {
+  title: string, description: string,
+  keywords?: string;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   image?: string;
 }
 export interface LoadingState {
@@ -1291,6 +1351,7 @@ export interface SuccessResponse<T> {
 
 export type Response<T> = SuccessResponse<T> | ErrorResponse;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -1302,3 +1363,5 @@ export type Response<T> = SuccessResponse<T> | ErrorResponse;
 export type Response<T> = SuccessResponse<T> | ErrorResponse;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

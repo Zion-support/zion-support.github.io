@@ -54,6 +54,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       setError(e?.message |'Something went wrong');
     } finally {
       setSubmitting(false);    }
+<<<<<<< HEAD
   }
   return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
@@ -68,6 +69,9 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       setSubmitting(false)
     }
   }
+=======
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
@@ -131,5 +135,9 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
         </div>
       )}
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

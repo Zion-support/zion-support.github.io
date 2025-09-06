@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
+=======
+import React from 'react';
+import Head from 'next/head';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
   Zap
   Shield
   BarChart3
@@ -18,6 +24,22 @@ import {
   Star
   Check
   ExternalLink;} from 'lucide-react';import {
+=======
+  Zap,
+  Shield,
+  BarChart3,
+  Globe,
+  Users,
+  Lock,
+  TrendingUp,
+  Code,
+  Database,
+  Cloud,
+  ArrowRight,
+  Star,
+  Check,
+  ExternalLink,;} from 'lucide-react';import { 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   Zap;
   Shield
   BarChart3
@@ -368,6 +390,10 @@ export default function SaaSMarketplacePage() {
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {microSaasServices.length}+
               </div>
               <div className='text-gray-400 text-sm'>Curated Services</div>
@@ -421,6 +447,12 @@ export default function SaaSMarketplacePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
+<<<<<<< HEAD
+=======
+
+              <button
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -435,6 +467,10 @@ export default function SaaSMarketplacePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Services Grid */}
       <section id='services' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -443,6 +479,11 @@ export default function SaaSMarketplacePage() {
               {selectedCategory === 'All'
                 ? 'All Services'
                 : `${selectedCategory} Services`}
+<<<<<<< HEAD
+=======
+
+            </h2>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
                 ? 'Explore our curated selection of the best micro SaaS services for modern businesses.'
@@ -486,6 +527,10 @@ export default function SaaSMarketplacePage() {
                     <p className='text-gray-400 leading-relaxed mb-4'>
                       {service.description}
                     </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -532,11 +577,20 @@ export default function SaaSMarketplacePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+<<<<<<< HEAD
+=======
+
+            Need Help Choosing?
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our team of experts can help you select the perfect SaaS tools for
@@ -567,5 +621,9 @@ export default function SaaSMarketplacePage() {
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

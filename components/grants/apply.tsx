@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
+=======
+import {useState} from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
@@ -75,7 +79,12 @@ export default function ApplyGrantPage() {
     } finally {
       setLoading(false)
     }
+<<<<<<< HEAD
   }
+=======
+
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <EnhancedLayout>
@@ -193,6 +202,10 @@ export default function ApplyGrantPage() {
             onChange={e => setPitchDeckUrl(e.target.value)}
           />
         </label>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>
           <button
@@ -260,5 +273,9 @@ export default function ApplyGrantPage() {
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

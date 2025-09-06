@@ -300,6 +300,10 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
         observer.disconnect()
       }
   }, [measurePerformance]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getPerformanceScore = (): number => {
     let score = 100;
     if (metrics.firstContentfulPaint > 1800) score -= 20;
@@ -355,6 +359,7 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
           />
         </div>
         <div className='text-right mt-1'>
+<<<<<<< HEAD
           <span className='text-sm text-white/60'>{performanceScore}/100</span>        </div>        </div>
         <div className="w-full bg-white/10 rounded-full h-3">
           <motion.div
@@ -368,6 +373,14 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
           <span className="text-sm text-white/60">{performanceScore}/100</span>
         </div>
       </div>
+=======
+          <span className='text-sm text-white/60'>{performanceScore}/100</span>        </div>
+
+        </div>
+
+      </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Metrics Display */}
       {showMetrics && (
         <motion.div
@@ -375,6 +388,11 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
           className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
+<<<<<<< HEAD
+=======
+
+        >
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -422,9 +440,18 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
             <div className="text-xs text-white/60">FID</div>
         </motion.div>
       )}
+<<<<<<< HEAD
       {/* Optimization Controls */}
       <div className='space-y-3'>        <button      <div className="space-y-3">
         <button
+=======
+
+      {/* Optimization Controls */}
+      <div className='space-y-3'>        <button
+
+        <button
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
@@ -454,16 +481,28 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
             <div className='text-sm text-white/80'>{optimizationStatus}</div>          </div>          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
             <div className="text-sm text-white/80">{optimizationStatus}</div>
           </div>
+<<<<<<< HEAD
         )}
       </div>
+=======
+
+        )}
+      </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Performance Tips */}
       <div className='mt-6 pt-4 border-t border-white/10'>
         <h4 className='text-sm font-semibold text-white/80 mb-3'>
           Performance Tips
         </h4>
+<<<<<<< HEAD
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>      <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
+=======
+        <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
           <li>• Minimize CSS and JavaScript bundles</li>
@@ -473,6 +512,7 @@ if (entry.entryType === 'largest-contentful-paint') {'            console.log('L
       </div>
     </div>
   );
+<<<<<<< HEAD
 };export default PerformanceOptimizer;}
       // Preload critical resources;
       preloadImages.forEach(image => {addResourceHint(image, 'image');
@@ -588,3 +628,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 }
 export default PerformanceOptimizer;
 
+=======
+};export default PerformanceOptimizer;
+
+export default PerformanceOptimizer;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
+=======
+import React from 'react';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 <<<<<<< HEAD
 =======
@@ -308,6 +313,10 @@ export default function PricingPage() {
       avgPrice: '$2,999/month'
       savings: 'Save 45-65% vs. competitors'
     },  ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -647,6 +656,10 @@ export default function PricingPage() {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Value Propositions */}
         <div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
@@ -677,6 +690,10 @@ export default function PricingPage() {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Service Category Pricing Examples */}
         <div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
@@ -731,6 +748,10 @@ export default function PricingPage() {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Popular Services Pricing */}
         <div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
@@ -779,6 +800,10 @@ export default function PricingPage() {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* FAQ Section */}
         <div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
@@ -926,6 +951,7 @@ export default function PricingPage() {
 =======
     </UltraFuturisticBackground>
   )
+<<<<<<< HEAD
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
@@ -945,3 +971,6 @@ export default function PricingPage() {
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

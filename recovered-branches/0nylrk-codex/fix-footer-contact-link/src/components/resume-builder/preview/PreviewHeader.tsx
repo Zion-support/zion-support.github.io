@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link  } from 'lucide-react';
 import { PdfExportButton  } from '../PdfExportButton';
@@ -21,6 +22,30 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
       @media print {
         body * {
           visibility: hidden
+=======
+import { Button } from '@/components/ui/button',;
+import { ArrowLeft, FileText, Link } from 'lucide-react',;
+import { PdfExportButton } from '../PdfExportButton',;
+import { Resume } from '@/types/resume',;
+import { useState } from 'react',;
+import { useIsMobile } from '@/hooks/use-mobile',;
+interface PreviewHeaderProps {;
+  resume: Resume,;
+  onBack: () => void;
+}
+;
+export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
+  const [isPrinting, setIsPrinting] = useState(false),;
+  const isMobile = useIsMobile(),;
+  const handleBrowserPrint = () => {;
+    setIsPrinting(true),;
+    // Inject print-specific CSS only for the duration of printing;
+    const style = document.createElement('style'),;
+    style.innerHTML = `;
+      @media print {;
+        body * {;
+          visibility: hidden;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         }
         .print-section, .print-section * {
           visibility: visible
@@ -35,6 +60,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
           display: none !important
         }
       }
+<<<<<<< HEAD
     `;
     document.head.appendChild(style);
     // Trigger print dialog
@@ -45,6 +71,20 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
       setIsPrinting(false);
     }, 1000);
   }
+=======
+    `,
+    document.head.appendChild(style),
+    
+    // Trigger print dialog
+    window.print(),
+    
+    // Remove the temporary style element after printing
+    setTimeout(() => {
+      document.head.removeChild(style),
+      setIsPrinting(false)
+    }, 1000)
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div
@@ -73,5 +113,11 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
         </Button>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
+=======
+  )
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

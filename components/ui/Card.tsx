@@ -98,6 +98,7 @@ const CardFooter = React.forwardRef<
 ));
 CardFooter.displayName = "CardFooter";
 
+<<<<<<< HEAD
 import React from 'react';
 interface CardProps {
   children: React.ReactNode;
@@ -147,3 +148,6 @@ const Card: React.FC<CardProps> = ({
 export default Card;
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 
+=======
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

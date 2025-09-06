@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NextApiRequest } from 'next';
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
@@ -38,3 +39,6 @@ export function assertTalentOrClientForOffer(
   }
   return user;
 }
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

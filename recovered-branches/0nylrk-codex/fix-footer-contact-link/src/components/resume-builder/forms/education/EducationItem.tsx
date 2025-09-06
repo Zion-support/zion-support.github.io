@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { format } from "date-fns";
 import { Edit, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,6 +12,15 @@ export function EducationItem({
   onDelete
 }: EducationItemProps) {
 
+=======
+import { format } from 'date-fns',
+import { Edit, Trash2 } from 'lucide-react',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent } from '@/components/ui/card',
+import { Education } from '@/types/resume',
+import { EducationItemProps } from './types',
+export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card className="bg-muted/40">
       <CardContent className="pt-6">

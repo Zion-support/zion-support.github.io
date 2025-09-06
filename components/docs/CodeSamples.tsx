@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 interface Props {
   samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const tabs: Array<{
   key: Props['samples'][number]['language'];
   label: string;
@@ -18,6 +22,7 @@ export default function CodeSamples({ samples }: Props) {
         {tabs.map(t => (          <button
 const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
 
+<<<<<<< HEAD
   { key: 'curl', label: 'cURL' }
   { key: 'javascript', label: 'JavaScript' }
   { key: 'python', label: 'Python' }]
@@ -30,6 +35,10 @@ export default function CodeSamples({ samples }: Props) {
       <div className="flex gap-2 mb-2">
         {tabs.map((t) => (
           <button
+=======
+          <button
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             key={t.key}
             className={`px-3 py-1 rounded border ${active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
             onClick={() => setActive(t.key)}
@@ -46,5 +55,9 @@ export default function CodeSamples({ samples }: Props) {
         <code>{sampleMap[active] |''}</code>
       </pre>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

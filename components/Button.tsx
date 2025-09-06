@@ -52,7 +52,15 @@ export default function Button({
       className={classes}
       onClick={onClick}
       disabled={disabled}
+<<<<<<< HEAD
       {children}
     </button>
 );
 }
+=======
+
+    >
+      {children}
+    </button>
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

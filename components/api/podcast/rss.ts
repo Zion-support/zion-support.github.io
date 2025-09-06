@@ -18,6 +18,7 @@ const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml');
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -30,6 +31,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     .filter(e => e.audio?.mp3Url)
     .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
     .map((e) => {
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       const pubDate = new Date(e.createdAt).toUTCString();
       const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
       return `
@@ -60,7 +64,12 @@ fs.writeFileSync(RSS_PATH, xml, 'utf8');
 <channel> <title>Zion Podcast</title> <link>$ {
   siteUrl
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
+<<<<<<< HEAD
   items
 }</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
 
+=======
+  items 
+}</channel> </rss>`;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

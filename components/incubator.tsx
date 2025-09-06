@@ -1,5 +1,9 @@
 import Link from 'next/link';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function IncubatorPage() {
   return (
     <EnhancedLayout>
@@ -30,5 +34,9 @@ export default function IncubatorPage() {
           <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}><a className="px-4 py-2 border rounded">View Incubator Projects</a></Link>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
   );
 }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

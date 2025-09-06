@@ -106,6 +106,7 @@ export default function StudioHostPage() {
   return (
     <div className='space-y-8'>
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>
+<<<<<<< HEAD
       <section className='space-y-3'>
         <h2 className='text-xl font-semibold'>AI Persona</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -218,6 +219,14 @@ export default function StudioHostPage() {
           <div>
             <label className="block text-sm font-medium" htmlFor="input-Clone Style (optional)">Clone Style (optional)</label>
             <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText |''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
+=======
+
+    }
+  };
+
+  return (
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </div>
         </div>
       </section>
@@ -301,6 +310,7 @@ export default function StudioHostPage() {
               >                {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>
+<<<<<<< HEAD
             {episode.audio && (              <p>{episode.bestQuote}</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -361,3 +371,11 @@ export default function StudioHostPage() {
     </div>
   );
 }
+=======
+            {episode.audio && (
+
+                {publishing ? 'Publishing…' : 'Update RSS'}
+              </button>
+            </div>
+            {episode.audio && (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

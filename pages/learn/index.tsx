@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import CourseCard, { Course } from '../../components/learn/CourseCard';
 import FilterBar from '../../components/learn/FilterBar';
@@ -12,6 +13,18 @@ export default function LearnMarketplace() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     async function load() {
+=======
+import { useEffect, useState } from 'react';
+import CourseCard, { Course } from '../../components/learn/CourseCard';
+import FilterBar from '../../components/learn/FilterBar';
+export default function LearnMarketplace(req, res) {
+  try {
+  const [filters, setFilters] = useState({ category: '', level: '', isFree: '' });
+  const [courses, setCourses] = useState<Course[]>([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {;
+    async function load() {;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       setLoading(true);
 
       const params = new URLSearchParams();
@@ -22,23 +35,33 @@ export default function LearnMarketplace() {
       const data = await resp.json();
       setCourses(data.courses |[]);
       setLoading(false);
+<<<<<<< HEAD
     }
     load();
   }, [filters]);
 
+=======
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    load()
+  }, [filters]),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
-    <div className='space-y-6'>
-      <div className='flex items-end justify-between gap-4'>
+    <div className="space-y-6">
+      <div className="flex items-end justify-between gap-4">
         <div>
-          <h1 className='text-2xl font-semibold'>Zion Academy</h1>
-          <div className='text-gray-500 text-sm'>
-            Courses • Certifications • Career Boost
-          </div>        </div>
+          <h1 className="text-2xl font-semibold">Zion Academy</h1>
+          <div className="text-gray-500 text-sm">Courses • Certifications • Career Boost</div>
+        </div>
       </div>
       <FilterBar {...filters} onChange={setFilters} />
       {loading ? (
         <div>Loading...</div>
       ) : (
+<<<<<<< HEAD
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
           {courses.map(c => (            <CourseCard key={c.id} course={c} />
           ))}
@@ -46,3 +69,26 @@ export default function LearnMarketplace() {
       )}
     </div>
 );
+=======
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {courses.map((c) => (
+            <CourseCard key={c.id} course={c} />
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>;
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 
 }
@@ -9,14 +13,25 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     const data = JSON.parse(raw);
     return {
       props: {
+<<<<<<< HEAD
         pypi: data.ecosystems.pypi |[]
         crates: data.ecosystems.crates |[]
         github: data.ecosystems.github |{}}
+=======
+        pypi: data.ecosystems.pypi || [],
+        crates: data.ecosystems.crates || [],
+        github: data.ecosystems.github || {}},
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       revalidate: 7200}
   } catch {
     return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
   }
+<<<<<<< HEAD
 }
+=======
+};
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function TechRadar({ pypi, crates, github }: Props) {
   const langs = Object.keys(github);
 
@@ -64,5 +79,10 @@ export default function TechRadar({ pypi, crates, github }: Props) {
         </section>
       ))}
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

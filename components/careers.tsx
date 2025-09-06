@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+=======
+ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 > <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
   /* Company Culture */
 }<motion.div </div>) )
@@ -104,6 +108,10 @@ export default function Careers() {
       ]
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const companyValues = [
     {
       icon: <Brain className="w-8 h-8" />
@@ -139,9 +147,16 @@ export default function Careers() {
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
         </Head>
+<<<<<<< HEAD
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div
+=======
+
+      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -154,8 +169,14 @@ export default function Careers() {
             Be part of a team that's revolutionizing technology through AI, quantum computing, and space technology. Help us build the future.
           </p>
         </motion.div>
+<<<<<<< HEAD
         {/* Company Culture */}
         <motion.div
+=======
+
+        {/* Company Culture */}
+        <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -174,8 +195,14 @@ export default function Careers() {
             ))}
           </div>
         </motion.div>
+<<<<<<< HEAD
         {/* Benefits */}
         <motion.div
+=======
+
+        {/* Benefits */}
+        <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -193,8 +220,14 @@ export default function Careers() {
             </div>
           </div>
         </motion.div>
+<<<<<<< HEAD
         {/* Job Openings */}
         <motion.div
+=======
+
+        {/* Job Openings */}
+        <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -217,6 +250,10 @@ export default function Careers() {
               </button>
             ))}
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Job Listings */}
           <div className="space-y-6">
             {filteredJobs.map((job) => (
@@ -278,8 +315,14 @@ export default function Careers() {
             </div>
           )}
         </motion.div>
+<<<<<<< HEAD
         {/* General Application */}
         <motion.div
+=======
+
+        {/* General Application */}
+        <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -314,3 +357,7 @@ export default function Careers() {
 }
 export default CareersPage;
 
+<<<<<<< HEAD
+=======
+export default CareersPage;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

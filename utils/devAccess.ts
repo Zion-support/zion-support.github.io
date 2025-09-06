@@ -27,10 +27,18 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {
   const token = req.headers['x-dev-token'] |req.headers['x-admin-token'];
   const adminToken = process.env.ADMIN_TOKEN;
   if (token && adminToken && token === adminToken) {
+<<<<<<< HEAD
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
+=======
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
   return { isAuthenticated: false, roles: [] }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
@@ -47,4 +55,7 @@ export function requireRoles(
     return undefined;
   }
   return identity;
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

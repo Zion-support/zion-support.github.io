@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
@@ -31,6 +32,38 @@ export function PortfolioBuilder() {
       fetchProjects();
     }
   }
+=======
+import { useState, useEffect } from 'react',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { Button } from '@/components/ui/button',;
+import { FilePlus, Loader2 } from 'lucide-react',;
+import { ProjectCard } from './ProjectCard',;
+import { ProjectForm } from './ProjectForm',;
+import { PortfolioProject } from '@/types/resume',;
+import { usePortfolio } from '@/hooks/usePortfolio',;
+export function PortfolioBuilder() {;
+  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio(),;
+  const [showAddProject, setShowAddProject] = useState(false),;
+  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null),;
+  useEffect(() => {;
+    fetchProjects();
+  }, [fetchProjects]),;
+  const handleAddSuccess = () => {;
+    setShowAddProject(false),;
+    fetchProjects();
+  },;
+  const handleEditSuccess = () => {;
+    setEditingProject(null),;
+    fetchProjects();
+  },;
+  const handleDeleteProject = async (projectId: string) => {;
+    const success = await deleteProject(projectId),;
+    if (success) {;
+      fetchProjects();
+    }
+  },
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -61,6 +94,7 @@ export function PortfolioBuilder() {
         <Card>
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
+<<<<<<< HEAD
               {editingProject ? "Edit Project" : "Add New Project"}
             </h2>
             <ProjectForm
@@ -70,6 +104,16 @@ export function PortfolioBuilder() {
                 setShowAddProject(false);
                 setEditingProject(null);
 
+=======
+              {editingProject ? 'Edit Project' : 'Add New Project'}
+            </h2>;
+            <ProjectForm;
+              project={editingProject || undefined}
+              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+              onCancel={() => {;
+                setShowAddProject(false);
+                setEditingProject(null);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               }}
             />
           </CardContent>

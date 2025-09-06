@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 
 import React from "react";
 type QA = { q: string; a: string }
 type Props = { items: QA[] }
+=======
+import React from "react";
+type QA = { q: string; a: string };
+type Props = { items: QA[] };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function FAQ({ items }: Props) {
   if (!items |items.length === 0) return null;
 
@@ -23,4 +29,8 @@ export default function FAQ({ items }: Props) {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

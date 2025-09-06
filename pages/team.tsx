@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -660,4 +664,21 @@ export default function TeamPage() {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+=======
+import SEO from '../components/SEO';
+export default function TeamPage() {	return (
+		<>
+			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
+			<div className="container mx-auto px-4 py-16">
+				<h1 className="text-4xl font-bold mb-4">Our Team</h1>
+				<p className="text-gray-300 mb-8">Profiles coming soon. For inquiries, contact us.</p>
+			</div>
+		</>
+	)
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -28,6 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const list: any[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
   list.push(entry);
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
+<<<<<<< HEAD
   res.status(200).json({ ok: true });  const entry = { url, title, network, utm, ts: new Date().toISOString(), ua: req.headers['user-agent'] |'' }
   const list: any[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
   list.push(entry);
@@ -35,3 +36,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(200).json({ ok: true })
 }
+=======
+  res.status(200).json({ ok: true });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

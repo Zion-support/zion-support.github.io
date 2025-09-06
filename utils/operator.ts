@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Operator utilities
 export const operator = {
   // Add operator functionality here
@@ -5,3 +6,6 @@ export const operator = {
   getEvents: () => []
   getEventById: (id: string) => null
 }
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

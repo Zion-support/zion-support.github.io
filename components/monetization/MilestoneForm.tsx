@@ -39,6 +39,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
       setError(err?.message |'Failed to create milestone');
     } finally {
       setLoading(false);    }
+<<<<<<< HEAD
   }
   return (
     <form onSubmit={handleSubmit} className='space-y-4'>
@@ -56,6 +57,9 @@ export default function MilestoneForm({ onSubmit }: Props) {
       setLoading(false)
     }
   }
+=======
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <form onSubmit={handleSubmit} className='space-y-4'>
@@ -150,5 +154,9 @@ export default function MilestoneForm({ onSubmit }: Props) {
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>
     </form>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
@@ -243,6 +246,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
+<<<<<<< HEAD
   // Tags
   const scarceSkills = [
     'RAG'
@@ -278,3 +282,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 return res.status(200).json(response);  return res.status(200).json(response)
 }
 
+=======
+
+  // Tags
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

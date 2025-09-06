@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
+=======
+import React, { useState } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -365,6 +369,10 @@ const quickLinks = [
   { name: 'Careers', href: '/careers', icon: GraduationCap }
   { name: 'Support', href: '/support', icon: MessageCircle },];  { name: 'Support', href: '/support', icon: MessageCircle }
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function UltraFuturisticNavigation2029V2() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -385,6 +393,10 @@ export default function UltraFuturisticNavigation2029V2() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className='flex-shrink-0'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
@@ -426,6 +438,7 @@ export default function UltraFuturisticNavigation2029V2() {
                 key={item.name}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                 transition={{
                   duration: 0.5
                   delay: mainNavigation.indexOf(item) * 0.1
@@ -445,6 +458,17 @@ export default function UltraFuturisticNavigation2029V2() {
           </div>
           {/* Right side - Contact & Search */}
           <div className='hidden lg:flex items-center space-x-4'>
+=======
+
+              </motion.div>
+
+            ))}
+          </div>
+
+          {/* Right side - Contact & Search */}
+          <div className='hidden lg:flex items-center space-x-4'>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* Search */}
             <div className='relative'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
@@ -453,6 +477,7 @@ export default function UltraFuturisticNavigation2029V2() {
                 placeholder='Search services...'
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
+<<<<<<< HEAD
                 className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'              />            {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -464,6 +489,14 @@ export default function UltraFuturisticNavigation2029V2() {
                 className="pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64"
               />
             </div>
+=======
+                className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'              />
+
+              />
+
+            </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* Contact Button */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -500,6 +533,10 @@ export default function UltraFuturisticNavigation2029V2() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Mobile Navigation Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -509,6 +546,10 @@ export default function UltraFuturisticNavigation2029V2() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             <div className='px-4 py-6 space-y-4'>
               {/* Mobile Search */}
@@ -556,9 +597,17 @@ export default function UltraFuturisticNavigation2029V2() {
                   >
                     <item.icon className="w-5 h-5" />
                     <span>{item.name}</span>
+<<<<<<< HEAD
                   </Link>
                 ))}
               </div>
+=======
+
+                  </Link>
+                ))}
+              </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Quick Links */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -579,6 +628,7 @@ export default function UltraFuturisticNavigation2029V2() {
                       key={item.name}
                       href={item.href}
                       onClick={closeMenu}
+<<<<<<< HEAD
                       className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
                     >
                       <item.icon className='w-4 h-4' />
@@ -589,6 +639,15 @@ export default function UltraFuturisticNavigation2029V2() {
                   ))}
                 </div>
               </div>
+=======
+
+                    </Link>
+
+                  ))}
+                </div>
+              </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Contact Info */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -598,6 +657,10 @@ export default function UltraFuturisticNavigation2029V2() {
                   <div className='flex items-center space-x-3 text-gray-400'>
                     <Phone className='w-4 h-4' />
                     <span className='text-sm'>{contactInfo.mobile}</span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </div>
                   <div className='flex items-center space-x-3 text-gray-400'>
                     <Mail className='w-4 h-4' />
@@ -620,6 +683,10 @@ export default function UltraFuturisticNavigation2029V2() {
           </motion.div>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Service Categories Dropdown */}
       <AnimatePresence>
         {activeCategory && (
@@ -629,6 +696,10 @@ export default function UltraFuturisticNavigation2029V2() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
             className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             <div className='max-w-7xl mx-auto px-4 py-8'>
               <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
@@ -672,6 +743,7 @@ export default function UltraFuturisticNavigation2029V2() {
                         <Link
                           key={service.name}
                           href={service.href}
+<<<<<<< HEAD
                           className='block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group'
                         >
                           <div className='flex justify-between items-start'>
@@ -695,6 +767,11 @@ export default function UltraFuturisticNavigation2029V2() {
                             </div>
                             <span className="text-sm font-semibold text-cyan-400">{service.price}</span>
                           </div>
+=======
+
+                          </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         </Link>
                       ))}
                     </div>
@@ -706,5 +783,9 @@ export default function UltraFuturisticNavigation2029V2() {
         )}
       </AnimatePresence>
     </nav>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }

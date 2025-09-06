@@ -17,6 +17,9 @@ try {_; fixServicesIndex(); fixSolutions(); fixTailwindConfig(); fixViteConfig()
           {links.map((link, index) => (;
             <Link;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
     { "to":"/services/ai-seo-optimizer", "label":"AI SEO Optimizer" };
 ;
@@ -567,6 +570,7 @@ try {
   process.exit(1);,
 }
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -743,3 +747,5 @@ import react from "@vitejs/plugin-react", export default defineConfig({ plugins:
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

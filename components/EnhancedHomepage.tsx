@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
@@ -15,6 +16,22 @@ import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
   hidden: {
   opacity: 0
 }
+=======
+import React from 'react';
+
+interface EnhancedHomepageProps {
+  className?: string;
+}
+
+const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EnhancedHomepage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 visible: {
   opacity: 1, transition: {
   duration: 0.8, staggerChildren: 0.1
@@ -104,7 +121,12 @@ const EnhancedHomepage: React.FC = () => {
         staggerChildren: 0.1
       }
     }
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -131,7 +153,11 @@ const EnhancedHomepage: React.FC = () => {
     animate: {
       y: [-10, 10, -10];
       transition: {
+<<<<<<< HEAD
         duration: 3
+=======
+        duration: 3,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         ease: "easeInOut" as const
       }
     }
@@ -142,7 +168,12 @@ const EnhancedHomepage: React.FC = () => {
     if (category) {
       setColorScheme(category.scheme)
     }
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -182,15 +213,26 @@ const EnhancedHomepage: React.FC = () => {
             >
               Zion Tech Group
             </motion.h1>
+<<<<<<< HEAD
             <motion.p
+=======
+            
+            <motion.p 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
               variants={itemVariants}
             >
               Pioneering the Future of Technology with Revolutionary AI Consciousness
               Quantum Computing, and Autonomous Solutions
             </motion.p>
+<<<<<<< HEAD
             {/* CTA Buttons */}
             <motion.div
+=======
+
+            {/* CTA Buttons */}
+            <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
               variants={itemVariants}
             >
@@ -273,7 +315,12 @@ const EnhancedHomepage: React.FC = () => {
             >
               Explore Our Revolutionary Services
             </motion.h2>
+<<<<<<< HEAD
             <motion.div
+=======
+            
+            <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="flex flex-wrap justify-center gap-4 mb-12"
               variants={itemVariants}
             >
@@ -296,15 +343,25 @@ const EnhancedHomepage: React.FC = () => {
             </motion.div>
           </div>
         </motion.section>
+<<<<<<< HEAD
         {/* Services Grid */}
         <motion.section
+=======
+
+        {/* Services Grid */}
+        <motion.section 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
             <motion.div
+=======
+            <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
             >
@@ -347,8 +404,14 @@ const EnhancedHomepage: React.FC = () => {
             )}
           </div>
         </motion.section>
+<<<<<<< HEAD
         {/* Featured Service Showcase */}
         <motion.section
+=======
+
+        {/* Featured Service Showcase */}
+        <motion.section 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
@@ -463,6 +526,10 @@ const EnhancedHomepage: React.FC = () => {
           </div>
         </motion.section>
       </UltraFuturisticBackground>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Performance Monitor */}
       <AnimatePresence>
         {showPerformanceMonitor && (
@@ -473,4 +540,7 @@ const EnhancedHomepage: React.FC = () => {
   )
 }
 export default EnhancedHomepage;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

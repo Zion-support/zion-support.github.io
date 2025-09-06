@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import Fastify from 'fastify',
 import cors from '@fastify/cors',
 import rateLimit from '@fastify/rate-limit',
+=======
+import Fastify from 'fastify';
+import cors from '@fastify/cors';
+import rateLimit from '@fastify/rate-limit';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import dotenv from 'dotenv';
 import { createOpenAIClient, generateJobPost  } from './openai.js';
 import { getPool, withUser } from './pg.js';
@@ -126,6 +132,7 @@ app.get('/notifications', async (req, reply) => {
     const res = await client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
+<<<<<<< HEAD
     );
     return res.rows;
   });
@@ -144,3 +151,6 @@ app.listen({ port, host: '0.0.0.0' }).catch((err) => {
   process.exit(1)
 });
 
+=======
+    );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -99,6 +99,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       );
       res.status(201).json({ id, record });
     } catch (e: any) {
+<<<<<<< HEAD
       res.status(500).json({ error: e?.message |'Failed to create grant' });
     }
     return;
@@ -113,3 +114,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(405).end('Method Not Allowed')
 }
+=======
+      res.status(500).json({ error: e?.message || 'Failed to create grant' });
+    }
+    return;
+  }
+
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

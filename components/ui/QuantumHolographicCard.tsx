@@ -55,6 +55,12 @@ interface QuantumHolographicCardProps {
     launchDate: string;
     customers: number;
     rating: number;
+<<<<<<< HEAD
+=======
+    reviews: number;
+  };
+  className?: string;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
     reviews: number;
   }
@@ -111,12 +117,23 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
       opacity: 1
       x: 0
       transition: {
+<<<<<<< HEAD
         delay: i * 0.1
         duration: 0.5
         ease: 'easeOut' as const
       }
     })
   }
+=======
+        delay: i * 0.1,
+        duration: 0.5,
+        ease: 'easeOut' as const,
+      },
+    }),
+
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     >
       {/* Holographic glow effect */}
       <motion.div
@@ -152,6 +169,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
+<<<<<<< HEAD
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  }
   return (
     <motion.div
@@ -199,6 +217,16 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
               </motion.div>
             )}
           </div>
+=======
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
+
+                <span>Popular</span>
+
+              </motion.div>
+            )}
+          </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Price and trial */}
           <div className='flex items-center justify-between mb-4'>
             <div className='flex items-center space-x-2'>
@@ -263,6 +291,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
             </div>
           </div>
           {/* Features */}
+<<<<<<< HEAD
           <div className='mb-6'>
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>
               <Zap className='w-4 h-4 text-yellow-400' />
@@ -294,10 +323,19 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
                 >
                   <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                   <span>{feature}</span>
+=======
+
+                  <span>{feature}</span>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </motion.div>
               ))}
             </div>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Market data */}
           <div className='bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30'>
             <div className='flex items-center justify-between mb-2'>
@@ -339,6 +377,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
               </div>
             </div>
           </div>
+<<<<<<< HEAD
           {/* Contact information */}
           <div className='bg-gray-800/50 rounded-lg p-4 mb-6 border border-gray-700/50'>
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>
@@ -370,13 +409,26 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
               <div className="flex items-center space-x-2">
                 <span className="text-purple-400">📍</span>
                 <span className="text-xs">{service.contactInfo.address}</span>
+=======
+
+          {/* ROI and competitors */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </div>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* CTA Button */}
           <motion.a
             href={service.link}
             className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -419,3 +471,7 @@ export default QuantumHolographicCard;  )
 }
 export default QuantumHolographicCard;
 
+<<<<<<< HEAD
+=======
+export default QuantumHolographicCard;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

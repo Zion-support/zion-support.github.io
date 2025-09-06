@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Control } from "react-hook-form";
 
@@ -11,9 +12,25 @@ import {
 import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
 import { Card, CardContent } from "@/components/ui/card";
+=======
+import React, { useState } from "react",
+import { Control } from "react-hook-form",
+import { 
+  FormField,
+  FormItem, 
+  FormLabel, 
+  FormControl, 
+  FormMessage 
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",
+import { Card, CardContent } from "@/components/ui/card",
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface BasicInfoFieldsProps {
-  control: Control<any>;
+  control: Control<any>
 }
+<<<<<<< HEAD
 export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
   control
 }) => {
@@ -22,6 +39,18 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
   const handleSuggestionApplied = (min: number, max: number) => {
     (setMinBudget(min.toString()), setMaxBudget(max.toString()));
   }
+=======
+
+export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => {
+  const [minBudget, setMinBudget] = useState<string>(""),
+  const [maxBudget, setMaxBudget] = useState<string>(""),
+
+  const handleSuggestionApplied = (min: number, max: number) => {
+    setMinBudget(min.toString()),
+    setMaxBudget(max.toString())
+  },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4">
       <FormField
@@ -35,6 +64,45 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
             </FormControl>
             <FormMessage />
           </FormItem>
+<<<<<<< HEAD
+=======
+import React, { useState } from "react",;
+import { Control } from "react-hook-form",;
+import {;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormControl,;
+  FormMessage;
+} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",;
+import { Card, CardContent } from "@/components/ui/card",;
+interface BasicInfoFieldsProps {;
+  control: Control<any>;
+}
+;
+export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => {;
+  const [minBudget, setMinBudget] = useState<string>(""),;
+  const [maxBudget, setMaxBudget] = useState<string>(""),;
+  const handleSuggestionApplied = (min: number, max: number) => {;
+    setMinBudget(min.toString()),;
+    setMaxBudget(max.toString());
+  },;
+  return (;
+    <div className="space-y-4">;
+      <FormField;
+        control={control}
+        name="title"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Job Title</FormLabel>
+            <FormControl>
+              <Input placeholder="e.g. Senior React Developer" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         )}
       />
       <FormField
@@ -49,8 +117,13 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
             <FormMessage />
           </FormItem>
         )}
+<<<<<<< HEAD
       />
       <FormField
+=======
+      />;
+      <FormField;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         control={control}
         name="category"
         render={({ field }) => (
@@ -86,9 +159,15 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
                 <Input
                   type="number"
                   placeholder="e.g. 30"
+<<<<<<< HEAD
                   value={minBudget |rest.value}
                   onChange={(e) => {
                     setMinBudget(e.target.value);
+=======
+                  value={minBudget || rest.value}
+                  onChange={e => {;
+                    setMinBudget(e.target.value),;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     onChange(e);
                   }}
                   {...rest}
@@ -108,8 +187,13 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
                 <Input
                   type="number"
                   placeholder="e.g. 60"
+<<<<<<< HEAD
                   value={maxBudget |rest.value}
                   onChange={(e) => {
+=======
+                  value={maxBudget || rest.value}
+                  onChange={e => {;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     setMaxBudget(e.target.value);
                     onChange(e);
                   }}
@@ -121,12 +205,22 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
           )}
         />
       </div>
+<<<<<<< HEAD
       <Card>
         <CardContent className="pt-4">
           <ClientBudgetRecommender
             jobTitle={control._formValues.title |""}
             category={control._formValues.category |""}
             experienceLevel={control._formValues.experienceLevel |""}
+=======
+      
+      <Card>
+        <CardContent className="pt-4">
+          <ClientBudgetRecommender
+            jobTitle={control._formValues.title || ""}
+            category={control._formValues.category || ""}
+            experienceLevel={control._formValues.experienceLevel || ""}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             onSuggestionApplied={handleSuggestionApplied}
           />
         </CardContent>
@@ -138,16 +232,20 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
           <FormItem>
             <FormLabel>Location</FormLabel>
             <FormControl>
-              <Input
-                placeholder="e.g. Remote, San Francisco, etc."
-                {...field}
-              />
+              <Input placeholder="e.g. Remote, San Francisco, etc." {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
         )}
+<<<<<<< HEAD
       />
     </div>
   );
 }
 
+=======
+      />;
+    </div>;
+  );
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

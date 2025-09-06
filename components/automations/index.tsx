@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React from "react";
 import Link from "next/link";
 export default function AutomationsPage() {
+=======
+import React from 'react';
+import Link from 'next/link';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <main className='mx-auto max-w-5xl px-4 py-12'>
       <h1 className='text-2xl font-bold text-gray-900'>
@@ -57,4 +63,8 @@ export default function AutomationsPage() {
       </div>
     </main>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

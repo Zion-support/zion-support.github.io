@@ -107,6 +107,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     const episode = {      return res.status(500).json({ error: 'Failed to generate structured content' });
     }
     const episodes = readEpisodes();
+<<<<<<< HEAD
     const episode = {
       id
       createdAt: new Date().toISOString()
@@ -141,3 +142,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 
 }
 }
+=======
+    const episode = {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

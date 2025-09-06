@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+<<<<<<< HEAD
 
 type Holder = { address: string, amount: string }
 type Metrics = {
@@ -25,6 +26,37 @@ export default function DaoMetrics() {
   if (loading) return <div>Loading...</div>
   if (!data) return <div>Error loading data</div>
 
+=======
+type Holder = { address: string, amount: string };
+type Metrics = {
+  updatedAt: number;
+  tokenDistribution: { address: string, percent: number }[],;
+  topHolders: Holder[];
+  activeProposals: any[];
+  governanceParticipationRate: number;
+  cached?: boolean;
+},;
+export default function DaoMetrics(req, res) {
+  try {
+  const [data, setData] = useState<Metrics | null>(null);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {;
+    async function load() {;
+      setLoading(true);
+      const resp = await fetch('/api/dao/metrics');
+      const json = await resp.json();
+      setData(json);
+      setLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    load()
+  }, []),
+  if (loading) return <div>Loading...</div>,
+  if (!data) return <div>Error loading data</div>,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -47,7 +79,11 @@ export default function DaoMetrics() {
                   <div className="h-2 bg-emerald-600 rounded" style={{ width: `${Math.min(100, d.percent)}%` }} />
                 </div>
               </div>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>
         </div>
         <div className="border rounded p-4">
@@ -65,7 +101,11 @@ export default function DaoMetrics() {
                   <td className="py-1 pr-2 truncate max-w-[10rem]">{h.address}</td>
                   <td className="py-1">{h.amount}</td>
                 </tr>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </tbody>
           </table>
         </div>
@@ -77,11 +117,23 @@ export default function DaoMetrics() {
             <ul className="list-disc pl-5 text-sm">
               {data.activeProposals.map((p, i) => (
                 <li key={i}>{JSON.stringify(p)}</li>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </ul>
           ) : (
             <div className="text-sm text-gray-600">No active proposals.</div>
+<<<<<<< HEAD
           )}
+=======
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         </div>
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>
@@ -94,4 +146,8 @@ export default function DaoMetrics() {
       </section>
     </div>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

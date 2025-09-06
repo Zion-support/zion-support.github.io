@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+=======
+import React from 'react';
+import SEO from '../components/SEO';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function CaseStudiesPage() {
   return (
     <UltraFuturisticBackground intensity='high' variant='quantum'>
@@ -30,4 +37,8 @@ export default function CaseStudiesPage() {
       </div>
     </UltraFuturisticBackground>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

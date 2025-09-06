@@ -47,8 +47,18 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       className={className}
       priority={priority}
       sizes={sizes}
+<<<<<<< HEAD
 quality={quality}
       style={style}
   );
 }
 export default OptimizedImage;
+=======
+      quality={quality}
+      style={style}
+
+  );
+};
+
+export default OptimizedImage;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

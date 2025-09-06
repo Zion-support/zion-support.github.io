@@ -2,6 +2,10 @@ import Head from 'next/head';
 import { useEffect, useMemo, useState  } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Simple icons using inline SVG to avoid external assets
 
 function StarIcon({
@@ -212,6 +216,10 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
       </div>
     </div>
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
   'https://apps.apple.com/app/id0000000000';
@@ -294,6 +302,10 @@ export default function MobileLaunchPage() {
 
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <EnhancedLayout>
       <Head>
@@ -415,6 +427,7 @@ export default function MobileLaunchPage() {
           <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40" />
       </section>
       {/* Trust & Community */}
+<<<<<<< HEAD
       <section className='mt-12'>
         <div className='flex items-center gap-2'>
             <StarIcon key={i} />
@@ -489,6 +502,9 @@ export default function MobileLaunchPage() {
             type="submit"
             disabled={status === 'loading'}
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>
@@ -526,6 +542,7 @@ export default function MobileLaunchPage() {
         </div>
       </section>
     </EnhancedLayout>
+<<<<<<< HEAD
 );
 }return (<EnhancedLayout> <Head> <title>Zion Mobile App — iOS & Android</title> <meta name="description" content="Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app." /> <link rel="canonical" href="/download" /> <meta property="og:title" content="Zion Mobile App" /> <meta property="og:description" content="Hire from anywhere. AI-match instantly. Track milestones on the go." /> </Head> <SmartBanner iosUrl= {
   IOS APP URL
@@ -540,3 +557,6 @@ export default function MobileLaunchPage() {
 }</div> </div> </section> <input type="email" required > {
   status === 'loading' ? 'Submitting…' : 'Notify me'
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 ) : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest</th> <th className="text-left p-2" >Type</th> </tr> </thead> <tbody> {
   outdated.map (o => (</tr>) )
 }</tbody> </table> </div>)
@@ -11,12 +14,21 @@ export async function getServerSideProps() {
   try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
+<<<<<<< HEAD
     outdated = json.outdated |[];
     generatedAt = json.generatedAt |''
 
   } catch {}
   return { props: { outdated, generatedAt } }
 }
+=======
+    outdated = json.outdated || [];
+    generatedAt = json.generatedAt || ''
+  } catch {}
+  return { props: { outdated, generatedAt } }
+}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string }) {
   return (
     <div className="space-y-6">
@@ -49,5 +61,10 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
         </div>
       )}
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

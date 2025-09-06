@@ -35,5 +35,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return res.status(200).json(offerings)
   }
+<<<<<<< HEAD
 return res.status(405).json({ error: 'Method not allowed' });
 }
+=======
+  return res.status(405).json({ error: 'Method not allowed' });
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

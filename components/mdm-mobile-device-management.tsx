@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 
 import {
@@ -12,6 +16,10 @@ import {
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function MDMPage() {
   const service = extraServices.find(s =>
     s.link.endsWith('/mdm-mobile-device-management')
@@ -107,4 +115,9 @@ export default function MDMPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

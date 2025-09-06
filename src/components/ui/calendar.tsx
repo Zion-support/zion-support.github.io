@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
@@ -23,3 +24,12 @@ export { Calendar }
 }/>)
 }"
 
+=======
+import * as React from "react",
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { DayPicker } from "react-day-picker",
+import { cn } from "@/lib/utils",
+import { buttonVariants } from "@/components/ui/button",
+export type CalendarProps = React.ComponentProps<typeof DayPicker>,
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
