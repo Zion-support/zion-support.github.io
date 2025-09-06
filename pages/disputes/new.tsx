@@ -164,7 +164,6 @@ const reader = new FileReader();
     if (!projectId || !description || !clientUserId || !talentUserId) return alert('Please fill required fields');
     setSubmitting(true);
 import {use_router} from 'next / router';
-import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import {useCurrentUser} from '../../utils / auth';
 ;
@@ -176,7 +175,7 @@ const REASONS = [;
   'Delivery Delay',
   'Payment Issue',
   'Communication Breakdown',
-  'Other',
+  'Other'
 ] as const;
 
 

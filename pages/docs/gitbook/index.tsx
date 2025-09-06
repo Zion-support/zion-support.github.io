@@ -36,7 +36,7 @@ function list(dir: string, baseDir: string) {
 }
 ;
 export async function getStaticProps() {;
-  const base = path.join(process.cwd(), 'docs/gitbook'),;
+  const base = path.join(process.cwd(), 'docs/gitbook');
   const sections = fs.existsSync(base);
     ? list(base, base).map((entry) => ({;
         title: entry.name;

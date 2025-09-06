@@ -97,14 +97,14 @@ import ServiceLanding from '../components/sections/ServiceLanding',
           'Observability and SLOs',
           'Automated cost controls',
           'Cross - region DR and backup',
-          'Compliance and audit kits',
+          'Compliance and audit kits'
         ]}
         industries={[;
           'Financial Services',
           'Life Sciences',
           'Government',
           'Energy',
-          'Media',
+          'Media'
         ]}
         canonical='https: //ziontechgroup.com / quantum - cloud - infrastructure - platform';
       />;

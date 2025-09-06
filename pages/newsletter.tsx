@@ -33,14 +33,35 @@ import { motion  } from './framer-motion';
 import {
 
 
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Newsletter - Zion Tech Group"
+      description="Subscribe to our newsletter for the latest updates"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Newsletter</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+ursor/automate-test-improve-and-merge-code-646c
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from './components/Layout';
 import { motion } from 'framer-motion';
-import { 
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
   ArrowRight,
   Users,
   Calendar,
@@ -79,6 +100,10 @@ import {;
 
 
 
+  Clock
+} from 'lucide-react';
+origin/automation-improvements-final
+ursor/automate-test-improve-and-merge-code-646c
 
   ArrowRight
   Users
@@ -100,6 +125,7 @@ import {;
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
 const benefits = [
   {
     title: "Exclusive Content"
@@ -110,6 +136,7 @@ const benefits = [
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
 } from './lucide-react';
 ;
 const benefits = [;
@@ -118,7 +145,7 @@ const benefits = [;
     title: "Exclusive Content",
     description:;
       "Get access to exclusive white papers, case studies, and industry insights.",
-    icon: FileText,
+    icon: FileText
   },
 
   {
@@ -126,6 +153,7 @@ const benefits = [;
     title: "Webinar Invitations"
 
 
+ursor/automate-test-improve-and-merge-code-646c
     description:
       "Receive invitations to our expert-led webinars and virtual events."
     icon: Video
@@ -143,21 +171,22 @@ const benefits = [;
 
     description:;
       "Receive invitations to our expert - led webinars and virtual events.",
-    icon: Video,
+    icon: Video
   },
   {
     title: "Early Access",
     description:;
       "Be the first to know about new features, products, and services.",
-    icon: Zap,
+    icon: Zap
   },
   {
     title: "Industry Insights",
     description:;
 
 
+ursor/automate-test-improve-and-merge-code-646c
       "Stay updated with the latest trends and developments in technology.",
-    icon: TrendingUp,
+    icon: TrendingUp
   },
     title: 'Webinar Invitations',
     description: 'Receive invitations to our expert-led webinars and virtual events.',
@@ -186,6 +215,7 @@ const testimonials = [;
   {
 
 
+ursor/automate-test-improve-and-merge-code-646c
     content:
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable."
     rating: 5
@@ -227,6 +257,19 @@ export default function NewsletterPage() {
 ];
 
 
+export default function NewsletterPage() {;
+  const [email, setEmail] = useState("");
+
+
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubscribed(true);
+    setIsLoading(false);
+  }
+  return (
+ursor/automate-test-improve-and-merge-code-646c
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="container mx-auto px-4">;
@@ -244,6 +287,7 @@ export default function NewsletterPage() {
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -303,6 +347,7 @@ export default function NewsletterPage() {
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
         {/* Benefits Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -315,6 +360,7 @@ export default function NewsletterPage() {
                 Join thousands of professionals who rely on our newsletter for the latest insights and updates.
 
 
+ursor/automate-test-improve-and-merge-code-646c
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -323,24 +369,25 @@ export default function NewsletterPage() {
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
     content:;
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.",
-    rating: 5,
+    rating: 5
   },
   {
     name: "Michael Chen",
     role: "Product Manager, InnovateLab",
     content:;
       "I look forward to every newsletter. The content quality is exceptional and has helped me make better decisions.",
-    rating: 5,
+    rating: 5
   },
   {
     name: "Emily Rodriguez",
     role: "Developer, CodeCraft",
     content:;
       "The technical deep - dives and case studies have been incredibly helpful for my projects.",
-    rating: 5,
-  },
+    rating: 5
+  }
 ];
 ;
 export default /**
@@ -451,6 +498,7 @@ function NewsletterPage() {
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
                   key={benefit.title}
                   className="text - center";
                   initial={{ opacity: 0, coordinate_y: 30 }}
@@ -469,6 +517,7 @@ function NewsletterPage() {
                   </p>
 
 
+ursor/automate-test-improve-and-merge-code-646c
                 </motion.div>
               ))}
             </div>
@@ -518,6 +567,7 @@ function NewsletterPage() {
                 <div className="text-4xl font-bold text-blue-600 mb-2">10K+</div>
 
 
+ursor/automate-test-improve-and-merge-code-646c
                 <div className="text-gray-600">Subscribers</div>
               </motion.div>
               <motion.div
@@ -544,6 +594,7 @@ function NewsletterPage() {
                 <div className="text-4xl font-bold text-blue-600 mb-2">Weekly</div>
 
 
+ursor/automate-test-improve-and-merge-code-646c
                 <div className="text-gray-600">Delivery</div>
               </motion.div>
               <motion.div
@@ -588,6 +639,7 @@ function NewsletterPage() {
                 Don't just take our word for it. Here's what our community has to say.
 
 
+ursor/automate-test-improve-and-merge-code-646c
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -676,6 +728,24 @@ function NewsletterPage() {
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
 
 
+              transition={{ duration: 0 && 0.8 }}>;
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">;
+                What Our Subscribers Say;
+              </h2>;
+              <p className="text-gray-600 max-w-2xl mx-auto">;
+                Don't just take our word for it. Here's what our community has;
+                to say.;
+              </p>;
+            </motion && motion.div>;
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
+              {testimonials && testimonials.map((testimonial, index) => (;
+                <motion&& motion.div
+                  key={testimonial && testimonial.name}
+                  className="bg-gray-50 rounded-lg p-6"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+ursor/automate-test-improve-and-merge-code-646c
                     ))}
                   </div>;
                   <p className="text-gray-600 mb-4 italic">;
@@ -699,6 +769,7 @@ function NewsletterPage() {
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">;
           <div className="container mx-auto px-4">;
@@ -716,6 +787,7 @@ function NewsletterPage() {
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -839,3 +911,4 @@ function NewsletterPage() {
 }
 
 
+ursor/automate-test-improve-and-merge-code-646c

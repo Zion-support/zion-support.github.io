@@ -49,7 +49,7 @@ import React from 'react';
     'Airbus Defence ($10000-100000/month)',
     'Lockheed Martin',
     'Boeing',
-    'Northrop Grumman',
+    'Northrop Grumman'
   ];
 
     'Maxar ($5000-50000/month)Planet Labs ($1000-10000/month)Airbus Defence ($10000-100000/month)Lockheed MartinBoeingNorthrop Grumman'
@@ -362,7 +362,7 @@ import React from 'react';
 import Head from 'next / head';
 import Link from 'next / link';
 import {motion} from 'framer-motion';
-import {Satellite, ArrowRight, CheckCircle, Star, TrendingUp, Globe, Zap, Shield, Users, Rocket, Phone, Mail, MapPin, Brain, Sparkles, } from 'lucide-react';
+import {Satellite, ArrowRight, CheckCircle, Star, TrendingUp, Globe, Zap, Shield, Users, Rocket, Phone, Mail, MapPin, Brain, Sparkles } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import EnhancedNavigation2026 from '../components / layout / EnhancedNavigation2026';
 export default /**
@@ -373,7 +373,7 @@ function SpaceTechnologyAIPlatform() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
+    website: 'https://ziontechgroup.com'
   }
 ;
   const features = [;
@@ -386,7 +386,7 @@ function SpaceTechnologyAIPlatform() {
     'Predictive maintenance',
     'Mission planning tools',
     'API access',
-    'Expert consultation',
+    'Expert consultation'
   ];
 ;
   const use_cases = [;
@@ -395,7 +395,7 @@ function SpaceTechnologyAIPlatform() {
     'Earth observation',
     'Space debris monitoring',
     'Mission planning',
-    'Space research',
+    'Space research'
   ];
 ;
   const integrations = [;
@@ -405,7 +405,7 @@ function SpaceTechnologyAIPlatform() {
     'GIS systems',
     'Slack',
     'Microsoft Teams',
-    'Custom applications',
+    'Custom applications'
   ];
 ;
   const competitors = [;
@@ -424,7 +424,7 @@ export default function SpaceTechnologyAIPlatform() {
 
     'Lockheed Martin',
     'Boeing',
-    'Northrop Grumman',
+    'Northrop Grumman'
   ];
 
 

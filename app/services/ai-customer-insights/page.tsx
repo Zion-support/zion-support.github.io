@@ -5,6 +5,9 @@ export const metadata = {
 
   description: "Transform customer data into actionable insights with AI-powered analytics. Understand customer behavior, preferences, and trends.",
 
+  description:
+    "Transform customer data into actionable insights with AI-powered analytics. Understand customer behavior, preferences, and trends.",
+ursor/automate-test-improve-and-merge-code-646c
 };
 
 export default function AICustomerInsightsPage() {
@@ -19,6 +22,10 @@ export default function AICustomerInsightsPage() {
           Transform customer data into actionable insights with AI-powered analytics. 
           Understand customer behavior, preferences, and trends to drive business growth.
 
+          Transform customer data into actionable insights with AI-powered
+          analytics. Understand customer behavior, preferences, and trends to
+          drive business growth.
+ursor/automate-test-improve-and-merge-code-646c
         </p>
       </div>
 
@@ -27,6 +34,10 @@ export default function AICustomerInsightsPage() {
 
 
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            Key Features
+          </h2>
+ursor/automate-test-improve-and-merge-code-646c
           <div className="space-y-4">
             <FeatureItem
               icon="🧠"
@@ -81,6 +92,8 @@ export default function AICustomerInsightsPage() {
                 "Monthly reports"
 
 
+                "Monthly reports",
+ursor/automate-test-improve-and-merge-code-646c
               ]}
               popular={false}
             />
@@ -100,6 +113,8 @@ export default function AICustomerInsightsPage() {
                 "Custom dashboards"
 
 
+                "Custom dashboards",
+ursor/automate-test-improve-and-merge-code-646c
               ]}
               popular={true}
             />
@@ -119,6 +134,8 @@ export default function AICustomerInsightsPage() {
                 "On-premise deployment"
 
 
+                "On-premise deployment",
+ursor/automate-test-improve-and-merge-code-646c
               ]}
               popular={false}
             />
@@ -129,7 +146,9 @@ export default function AICustomerInsightsPage() {
 
 
       <div className="bg-gray-50 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">How It Works</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+          How It Works
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <StepCard
             step="1"
@@ -155,7 +174,9 @@ export default function AICustomerInsightsPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         <div className="bg-white border border-gray-200 rounded-xl p-6">
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Data Sources We Analyze</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-4">
+            Data Sources We Analyze
+          </h3>
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-blue-500 mr-2">•</span>
@@ -185,57 +206,83 @@ export default function AICustomerInsightsPage() {
         </div>
 
         <div className="bg-white border border-gray-200 rounded-xl p-6">
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Business Impact</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-4">
+            Business Impact
+          </h3>
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-green-500 mr-2">✓</span>
-              <span className="text-gray-600">Increase customer retention by 25%</span>
+              <span className="text-gray-600">
+                Increase customer retention by 25%
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-2">✓</span>
-              <span className="text-gray-600">Boost conversion rates by 40%</span>
+              <span className="text-gray-600">
+                Boost conversion rates by 40%
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-2">✓</span>
-              <span className="text-gray-600">Reduce customer acquisition costs by 30%</span>
+              <span className="text-gray-600">
+                Reduce customer acquisition costs by 30%
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-2">✓</span>
-              <span className="text-gray-600">Improve customer satisfaction scores</span>
+              <span className="text-gray-600">
+                Improve customer satisfaction scores
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-2">✓</span>
-              <span className="text-gray-600">Identify high-value customer segments</span>
+              <span className="text-gray-600">
+                Identify high-value customer segments
+              </span>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="bg-purple-50 border border-purple-200 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">AI-Powered Insights</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+          AI-Powered Insights
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="text-center">
             <div className="text-4xl mb-4">🎯</div>
-            <h3 className="font-semibold text-gray-900 mb-2">Personalization</h3>
-            <p className="text-gray-600">Hyper-personalized experiences based on individual customer behavior</p>
+            <h3 className="font-semibold text-gray-900 mb-2">
+              Personalization
+            </h3>
+            <p className="text-gray-600">
+              Hyper-personalized experiences based on individual customer
+              behavior
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">🔮</div>
             <h3 className="font-semibold text-gray-900 mb-2">Predictions</h3>
-            <p className="text-gray-600">Accurate predictions of customer actions and preferences</p>
+            <p className="text-gray-600">
+              Accurate predictions of customer actions and preferences
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">📊</div>
             <h3 className="font-semibold text-gray-900 mb-2">Real-time</h3>
-            <p className="text-gray-600">Instant insights and recommendations as customer behavior changes</p>
+            <p className="text-gray-600">
+              Instant insights and recommendations as customer behavior changes
+            </p>
           </div>
         </div>
       </div>
 
       <div className="text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Ready to Unlock Customer Insights?</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          Ready to Unlock Customer Insights?
+        </h2>
         <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-          Transform your customer data into competitive advantage with AI-powered insights and analytics.
+          Transform your customer data into competitive advantage with
+          AI-powered insights and analytics.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -264,6 +311,16 @@ export default function AICustomerInsightsPage() {
 
 function FeatureItem({ icon, title, description }: { icon: string; title: string; description: string }) {
 
+function FeatureItem({
+  icon,
+  title,
+  description
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
+ursor/automate-test-improve-and-merge-code-646c
   return (
     <div className="flex items-start space-x-4">
       <div className="text-2xl">{icon}</div>
@@ -279,6 +336,15 @@ function FeatureItem({ icon, title, description }: { icon: string; title: string
 
 
 function PricingCard({ plan, price, period, description, features, popular }: {
+function PricingCard({
+  plan,
+  price,
+  period,
+  description,
+  features,
+  popular
+}: {
+ursor/automate-test-improve-and-merge-code-646c
   plan: string;
 
   price: string;
@@ -291,6 +357,10 @@ function PricingCard({ plan, price, period, description, features, popular }: {
 
 
     <div className={`border rounded-xl p-6 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200'}`}>
+    <div
+      className={`border rounded-xl p-6 ${popular ? "border-blue-500 bg-blue-50" : "border-gray-200"}`}
+    >
+ursor/automate-test-improve-and-merge-code-646c
       {popular && (
         <div className="bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
           Most Popular
@@ -319,6 +389,16 @@ function PricingCard({ plan, price, period, description, features, popular }: {
 
 
 function StepCard({ step, title, description }: { step: string; title: string; description: string }) {
+function StepCard({
+  step,
+  title,
+  description
+}: {
+  step: string;
+  title: string;
+  description: string;
+}) {
+ursor/automate-test-improve-and-merge-code-646c
   return (
     <div className="text-center">
       <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">

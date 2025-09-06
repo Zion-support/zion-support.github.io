@@ -45,7 +45,7 @@ const MarketSignals: NextPage = () => {
 
 },
 
-export default MarketSignals,
+export default MarketSignals
 
 
 }

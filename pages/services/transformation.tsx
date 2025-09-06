@@ -19,7 +19,7 @@ import {
   Star,
   Clock,
   TrendingUp,
-  Globe,
+  Globe
 
 } from 'lucide-react';
 import EnhancedNavigation from '../../components / EnhancedNavigation';

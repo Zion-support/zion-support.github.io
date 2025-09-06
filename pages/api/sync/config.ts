@@ -59,7 +59,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (instanceId && typeof instanceId === "string") state.config.instanceId = instanceId,
 
 
-    writeState(state),
+    writeState(state)
 
     }
     if (Array.isArray(peers)) {

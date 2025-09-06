@@ -57,9 +57,6 @@ export default function EmailDmarcAnalyzerPage() {
     </Layout>
   )
 }
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
 export default function EmailDmarcAnalyzerPage(req, res) {
   try {
   return (;

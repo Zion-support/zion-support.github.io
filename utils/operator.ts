@@ -18,6 +18,29 @@ export interface SupportEvent {
 }
 
 
+// Operator utilities;
+export const operator = {
+  // Add operator functionality here;
+  log_event: (event: any) => null,
+  get_events: () => [],
+  getEventById: (id: string) => null;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+// Operator utilities
+export const operator = {
+  // Add operator functionality here
+  logEvent: (event: any) => null
+  getEvents: () => []
+  getEventById: (id: string) => null
+}
+
+  logEvent: (event: any) => null,
+  getEvents: () => [],
+  getEventById: (id: string) => null;
+};
+
+
+>>>>>>> main
   tagOperatorSession(sessionId: string, tag: string): void {
     // Simple implementation - in a real app this would update a database
     console.log(`Tagging session ${sessionId} with tag: ${tag}`);
@@ -48,3 +71,30 @@ export const logSupportEventToOperator = (event: SupportEvent) =>
 export const getOperatorSessions = () => operatorManager.getOperatorSessions();
 export const getSupportEvents = () => operatorManager.getSupportEvents();
 
+export const getOperatorSessions = () => operatorManager.getOperatorSessions();
+export const getSupportEvents = () => operatorManager.getSupportEvents();
+export const getOperatorSessions = () => operatorManager && operatorManager.getOperatorSessions();
+export async function logSupportEventToOperator(
+  event: OperatorEvent
+): Promise<void> {
+  // Placeholder for real Operator integration; could POST to external service
+  // For now, we just no-op to avoid failures
+  return Promise.resolve();
+}
+
+export async function tagOperatorSession(
+  sessionId: string,
+  tag: string
+): Promise<void> {
+  return Promise.resolve();
+}
+// Operator utilities;
+export const operator = {
+  // Add operator functionality here;
+  log_event: (event: any) => null,
+  get_events: () => [],
+  getEventById: (id: string) => null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

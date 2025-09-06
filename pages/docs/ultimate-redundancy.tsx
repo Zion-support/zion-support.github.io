@@ -34,7 +34,6 @@ export default function UltimateRedundancyRedirect() {
     </>
   )
 }
-import Head from 'next/head';
 export default function UltimateRedundancyRedirect(req, res) {
   try {
   return (;

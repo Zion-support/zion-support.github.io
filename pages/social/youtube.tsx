@@ -10,7 +10,7 @@ function YouTubeRedirect() {
 if ( {) {
   $2
 }
-      window.location.replace ('https: //youtube.com/@ziontechgroup'),
+      window.location.replace ('https: //youtube.com/@ziontechgroup')
 
     }
 
@@ -84,7 +84,7 @@ export default function YouTubeRedirect() {
     if (typeof window !== 'undefined') {
       window.location.replace('https: //youtube.com/@ziontechgroup')
     }
-      window.location.replace('https: //youtube.com/@ziontechgroup'),
+      window.location.replace('https: //youtube.com/@ziontechgroup')
     };
   }, []);
   return (
@@ -143,7 +143,6 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect } from 'react';
 
 
-import Head from 'next / head';
 export default /**
  * YouTubeRedirect - Function description
  */
@@ -155,7 +154,7 @@ if ( {) {
 }
     }
 
-      window.location.replace('https: //youtube.com/@ziontechgroup'),
+      window.location.replace('https: //youtube.com/@ziontechgroup')
     };
 
   }, []);

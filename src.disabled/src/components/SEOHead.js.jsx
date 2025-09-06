@@ -1,5 +1,13 @@
-
 import _React from 'react'; const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & Services",description = "Discover innovative AI,quantum computing,and technology solutions.Expert consulting,enterprise services,and cutting-edge platforms for modern businesses.",keywords = "AI services,quantum computing,technology consulting,enterprise solutions,cybersecurity,cloud services,digital transformation",image = "/images/zion-tech-group-og.jpg",url = ""https": ';' })
+import React from \'react\'; const SEOHead = ({ title = \"Zion Tech Group - AI-Powered Technology Solutions & Services\",description = \"Discover innovative AI,quantum computing,and technology solutions && solutions.Expert consulting,enterprise services,and cutting-edge platforms for modern businesses.\",keywords = \"AI services,quantum computing,technology consulting,enterprise solutions,cybersecurity,cloud services,digital transformation\",image = \"/images/zion-tech-group-og && og.jpg\",url = \""https\": \';\' })
+const React from "react"; const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & Services",description = "Discover innovative AI,quantum computing,and technology solutions && solutions.Expert consulting,enterprise services,and cutting-edge platforms for modern businesses.",keywords = "AI services,quantum computing,technology consulting,enterprise solutions,cybersecurity,cloud services,digital transformation",image = "/images/zion-tech-group-og && og.jpg",url = "https: ";" })'"'"
+ursor/automate-test-improve-and-merge-code-646c
 
 
 
+
+>>>>>>> main
+import React from \'react\'; const SEOHead = ({ title = \"Zion Tech Group - AI-Powered Technology Solutions & Services\",description = \"Discover innovative AI,quantum computing,and technology solutions.Expert consulting,enterprise services,and cutting-edge platforms for modern businesses.\",keywords = \"AI services,quantum computing,technology consulting,enterprise solutions,cybersecurity,cloud services,digital transformation\",image = \"/images/zion-tech-group-og.jpg\",url = \""https\": \';\' })
+const React from "react"; const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & Services",description = "Discover innovative AI,quantum computing,and technology solutions.Expert consulting,enterprise services,and cutting-edge platforms for modern businesses.",keywords = "AI services,quantum computing,technology consulting,enterprise solutions,cybersecurity,cloud services,digital transformation",image = "/images/zion-tech-group-og.jpg",url = "https: ";" })'"'"
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

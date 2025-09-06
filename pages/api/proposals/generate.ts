@@ -8,7 +8,7 @@
       target_institution,
       type,
       regional_scope,
-      budgetOrResolution,
+      budgetOrResolution
 
 
     } = req.body || {};
@@ -25,7 +25,7 @@
 
       supporting_multiverses,
       content_markdown,
-      language,
+      language
     });
 ;
     return res.status (200).json ({ meta, markdown: content_markdown });

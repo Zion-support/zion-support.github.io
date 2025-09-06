@@ -18,7 +18,7 @@ import Link from 'next / link';
         },
         {
 
-          id: 'ultimate - redundancy',
+          id: 'ultimate - redundancy'
 
       ]
     },

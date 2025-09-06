@@ -55,11 +55,8 @@ if ( {) {
     label: label as any}),
   res.status (200).json ({ items });
 }
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getFraudStore } from '../../../../utils/fraud/store';
 function ensureAdmin(req: NextApiRequest): boolean {;
   const token = req.headers['x-admin-token'];
   if (!process.env.ADMIN_TOKEN) return true, // allow if not configured;

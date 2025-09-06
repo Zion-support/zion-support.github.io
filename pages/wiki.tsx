@@ -38,7 +38,7 @@ export default function WikiPage() {
 import {
   generateZionWiki,
   buildMarkdownFromWiki,
-  buildWikitextFromWiki,
+  buildWikitextFromWiki
 
 
 

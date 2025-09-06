@@ -879,7 +879,7 @@ className="text-center mb-16"
     </div>
 
 
-),
+)
 
 
 

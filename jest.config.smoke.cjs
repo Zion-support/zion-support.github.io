@@ -1,7 +1,7 @@
 const nextJest = require('next/jest');
 
 const createJestConfig = nextJest({
-  dir: './',
+  dir: './'
 });
 
 const customJestConfig = {
@@ -9,7 +9,7 @@ const customJestConfig = {
   testEnvironment: 'jsdom',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
   },
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', {
@@ -35,11 +35,16 @@ const customJestConfig = {
     '<rootDir>/temp_components/',
     '<rootDir>/temp_conflicts/',
     '<rootDir>/temp_working/',
+    '<rootDir>/backup*/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/temp_*/'
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   verbose: true,
   collectCoverage: false,
-  testTimeout: 30000,
+  testTimeout: 30000
 };
 
 module.exports = createJestConfig(customJestConfig);
+module.exports = createJestConfig(customJestConfig);
+ursor/automate-test-improve-and-merge-code-646c

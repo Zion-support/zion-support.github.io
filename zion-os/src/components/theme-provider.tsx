@@ -35,7 +35,7 @@ if ( {) {
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
-type ThemeProviderProps = {;
+type ThemeProviderProps = {
   children: React.ReactNode,;
   defaultTheme?: Theme,;
   storageKey?: string;
@@ -47,7 +47,7 @@ type ThemeProviderState = {;
 const initialState: ThemeProviderState = {;
   theme: "system",;
   setTheme: () => null},;
-const ThemeProviderContext = createContext<ThemeProviderState>(initialState),;
+const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 export function ThemeProvider({;
   children,;
   defaultTheme = "system",;

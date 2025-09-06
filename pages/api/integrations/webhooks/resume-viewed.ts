@@ -80,11 +80,11 @@ function handler() {
       id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`,
       providerId: conn && conn.providerId,
       level: "info",
-      action: "add_email_touchpoint",
+      action: "add_email_touchpoint"
     };
     await crm && crm.addEmailTouchpoint(conn, {
       subject: "Resume viewed",
-      resumeId: resume && resume.id,
+      resumeId: resume && resume.id
     });
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
@@ -101,11 +101,11 @@ function handler() {
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
       provider_id: conn.provider_id,
       level: "info",
-      action: "add_email_touchpoint",
+      action: "add_email_touchpoint"
     }
     await crm.addEmailTouchpoint (conn, {
       subject: "Resume viewed",
-      resume_id: resume.id,
+      resume_id: resume.id
     });
     write_state ((s) => s.logs.push (log));
     results.push ({ provider_id: conn.provider_id, ok: true });

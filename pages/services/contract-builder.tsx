@@ -26,7 +26,6 @@ export default function ContractBuilderRedirect() {
 
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 export default function ContractBuilderRedirect() {
   const router = useRouter();
   useEffect(() => {
@@ -50,8 +49,6 @@ router.replace ('/automation / contract - builder');
 }
 
 }
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 export default function ContractBuilderRedirect(req, res) {
   try {
   const router = useRouter();

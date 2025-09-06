@@ -1,3 +1,5 @@
+>>>>>>> origin/main
+ursor/automate-test-improve-and-merge-code-646c
 
 
 
@@ -15,6 +17,11 @@ import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator', ()
 
 
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/main
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
 import AICodeGenerator from './AICodeGenerator;
 describe('AICodeGenerator', () => {;
   it('renders without crashing', () => {;
@@ -26,7 +33,29 @@ describe('AICodeGenerator', () => {;
   it('handles user interactions', () => {;
     render(<AICodeGenerator />);
 
-import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator', () => {; it('renders without crashing', () => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content', () => {; render(<AICodeGenerator />); }); ; it('handles user interactions'
+
+
+
+
+
+
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />); }); ; it('handles user interactions',() => {; render(<AICodeGenerator />)});});
+// Add interaction tests based on component functionality})});
+>>>>>>> main
+import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)})});
+>>>>>>> main
+>>>>>>> origin/main
+// Add interaction tests based on component functionality
+})
+});
+// Add interaction tests based on component functionality})});
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/automate-test-improve-and-merge-code-646c
 
 
 
@@ -34,11 +63,5 @@ import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator', ()
 
 
 
-
-import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
-
-
-
-import AICodeGenerator from './AICodeGenerator; ; describe('AICodeGenerator',() => {; it('renders without crashing',() => {; render(<AICodeGenerator />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AICodeGenerator />)}); ; it('handles user interactions',() => {; render(<AICodeGenerator />)}),});
-
-
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

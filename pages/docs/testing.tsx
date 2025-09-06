@@ -34,7 +34,6 @@ export default function TestingDocRedirect() {
     </>
   )
 }
-import Head from 'next/head';
 export default function TestingDocRedirect(req, res) {
   try {
   return (;

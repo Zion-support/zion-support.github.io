@@ -2,7 +2,7 @@
 
 import Link from 'next/link',;
 export default function Footer() {;
-  const currentYear = new Date().getFullYear(),;
+  const currentYear = new Date().getFullYear();
   const footerSections = [;
     {;
       title: 'Company',;

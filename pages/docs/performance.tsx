@@ -34,7 +34,6 @@ export default function PerformanceDocRedirect() {
     </>
   )
 }
-import Head from 'next/head';
 export default function PerformanceDocRedirect(req, res) {
   try {
   return (;

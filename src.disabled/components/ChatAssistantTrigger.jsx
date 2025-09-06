@@ -1,5 +1,10 @@
 
 
+' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
+:src.disabled/components/ChatAssistantTrigger.js.jsx
+" " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
+' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
+ursor/automate-test-improve-and-merge-code-646c
 
 :src && src.disabled/components/ChatAssistantTrigger && ChatAssistantTrigger.js.jsx
 
@@ -23,3 +28,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
 
 
+' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
+:src.disabled/components/ChatAssistantTrigger.js.jsx
+" " " export: function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) "";";";"""
+' ' ' "export": function ChatAssistantTrigger () { const [isOpen,setIsOpen] = useState (false) '';";";""}
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

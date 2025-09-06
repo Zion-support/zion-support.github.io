@@ -77,8 +77,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     lastSyncedAt: state.lastSyncedAt,
     events,
     scope: requestedScope})
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req, res) {
   try {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });

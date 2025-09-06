@@ -5,6 +5,14 @@ import Layout from "../components/Layout";
 const About = ({ className }) => {
   return (
     <Layout
+import React from 'react';
+:backup-problematic-files/temp_broken_files/pages/about.jsx
+>>>>>>> main:corrupted_backup/about.js
+
+const About = ({ className }) => {
+  return (
+    <Layout 
+ursor/automate-test-improve-and-merge-code-646c
       title="About Us - Zion Tech Group"
       description="Learn about Zion Tech Group's mission, vision, and team of expert technology professionals dedicated to transforming businesses through innovative solutions."
     >
@@ -19,6 +27,9 @@ const About = ({ className }) => {
               We are a leading technology solutions provider dedicated to
               transforming businesses through innovative AI, cloud architecture,
               and cutting-edge development services.
+              We are a leading technology solutions provider dedicated to transforming businesses 
+              through innovative AI, cloud architecture, and cutting-edge development services.
+ursor/automate-test-improve-and-merge-code-646c
             </p>
           </div>
 
@@ -26,6 +37,12 @@ const About = ({ className }) => {
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div className="bg-white rounded-lg shadow-lg p-8">
 
+              <div className="text-4xl mb-4"></div>
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
+:backup-problematic-files/temp_broken_files/pages/about.jsx
+              <div className="text-4xl mb-4"></div>
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
+ursor/automate-test-improve-and-merge-code-646c
               <div className="text-4xl mb-4">🎯</div>
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
                 Our Mission
@@ -40,6 +57,20 @@ const About = ({ className }) => {
             </div>
             <div className="bg-white rounded-lg shadow-lg p-8">
 
+>>>>>>> main:corrupted_backup/about.js
+              <p className="text-gray-600 text-lg">
+                To empower businesses with cutting-edge technology solutions that drive growth, 
+                efficiency, and innovation. We believe in delivering exceptional value through 
+                personalized service and world-class expertise.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="text-4xl mb-4"></div>
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
+:backup-problematic-files/temp_broken_files/pages/about.jsx
+              <div className="text-4xl mb-4"></div>
+              <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
+ursor/automate-test-improve-and-merge-code-646c
               <div className="text-4xl mb-4">🔮</div>
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
                 Our Vision
@@ -49,6 +80,12 @@ const About = ({ className }) => {
                 To be the global leader in technology transformation, helping
                 businesses harness the power of AI, cloud computing, and digital
                 innovation to create a more connected and efficient world.
+>>>>>>> main:corrupted_backup/about.js
+              <p className="text-gray-600 text-lg">
+                To be the global leader in technology transformation, helping businesses 
+                harness the power of AI, cloud computing, and digital innovation to create 
+                a more connected and efficient world.
+ursor/automate-test-improve-and-merge-code-646c
               </p>
             </div>
           </div>
@@ -76,11 +113,36 @@ const About = ({ className }) => {
               </p>
               <p className="text-lg text-gray-600">
 
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Our Story</h2>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-lg text-gray-600 mb-6">
+                Founded in 2020, Zion Tech Group emerged from a simple yet powerful vision: 
+                to bridge the gap between cutting-edge technology and real-world business needs. 
+                What started as a small team of passionate developers has grown into a comprehensive 
+                technology solutions provider serving clients across multiple industries.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                Our journey began when our founders recognized that many businesses were struggling 
+                to keep up with rapidly evolving technology. They saw an opportunity to create 
+                solutions that not only address current challenges but also prepare organizations 
+                for future growth and innovation.
+              </p>
+              <p className="text-lg text-gray-600">
+                Today, we&apos;re proud to have helped over 150+ businesses transform their digital 
+                presence, from small startups to enterprise-level organizations. Our commitment 
+                to excellence, innovation, and client success continues to drive everything we do.
+:backup-problematic-files/temp_broken_files/pages/about.jsx
+                Today, we&apos;re proud to have helped over 150+ businesses transform their digital 
+                presence, from small startups to enterprise-level organizations. Our commitment 
+                to excellence, innovation, and client success continues to drive everything we do.
+ursor/automate-test-improve-and-merge-code-646c
                 Today, we're proud to have helped over 150+ businesses transform
                 their digital presence, from small startups to enterprise-level
                 organizations. Our commitment to excellence, innovation, and
                 client success continues to drive everything we do.
 
+>>>>>>> main:corrupted_backup/about.js
+ursor/automate-test-improve-and-merge-code-646c
               </p>
             </div>
           </div>
@@ -93,6 +155,21 @@ const About = ({ className }) => {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
 
+            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Our Core Values</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+:backup-problematic-files/temp_broken_files/pages/about.jsx
+                <div className="text-4xl mb-4"></div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Innovation</h3>
+                <p className="text-gray-600">
+                  We constantly push the boundaries of what&apos;s possible, embracing new technologies 
+                  and methodologies to deliver cutting-edge solutions.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4"></div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Partnership</h3>
+ursor/automate-test-improve-and-merge-code-646c
                 <div className="text-4xl mb-4">💡</div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">
                   Innovation
@@ -104,11 +181,22 @@ const About = ({ className }) => {
                 </p>
               </div>
               <div className="text-center">
+                <p className="text-gray-600">
+                  We believe in building long-term relationships with our clients, working as 
+                  an extension of their team to achieve shared success.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4"></div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>
+ursor/automate-test-improve-and-merge-code-646c
                 <div className="text-4xl mb-4">🤝</div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">
                   Partnership
                 </h3>
 
+>>>>>>> main:corrupted_backup/about.js
+ursor/automate-test-improve-and-merge-code-646c
                 <p className="text-gray-600">
                   We believe in building long-term relationships with our
                   clients, working as an extension of their team to achieve
@@ -117,6 +205,10 @@ const About = ({ className }) => {
               </div>
               <div className="text-center">
 
+:backup-problematic-files/temp_broken_files/pages/about.jsx
+                <div className="text-4xl mb-4"></div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Excellence</h3>
+ursor/automate-test-improve-and-merge-code-646c
                 <div className="text-4xl mb-4">⭐</div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">
                   Excellence
@@ -126,6 +218,11 @@ const About = ({ className }) => {
                   We maintain the highest standards in everything we do, from
                   project planning to final delivery, ensuring exceptional
                   results every time.
+>>>>>>> main:corrupted_backup/about.js
+                <p className="text-gray-600">
+                  We maintain the highest standards in everything we do, from project planning 
+                  to final delivery, ensuring exceptional results every time.
+ursor/automate-test-improve-and-merge-code-646c
                 </p>
               </div>
             </div>
@@ -136,6 +233,8 @@ const About = ({ className }) => {
             <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
               Meet Our Team
             </h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Meet Our Team</h2>
+ursor/automate-test-improve-and-merge-code-646c
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -148,6 +247,12 @@ const About = ({ className }) => {
                 <p className="text-gray-600 text-sm">
                   Technology visionary with 15+ years of experience in software
                   development and business strategy.
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Kleber</h3>
+                <p className="text-blue-600 font-medium mb-2">Founder & CEO</p>
+                <p className="text-gray-600 text-sm">
+                  Technology visionary with 15+ years of experience in software development 
+                  and business strategy.
+ursor/automate-test-improve-and-merge-code-646c
                 </p>
               </div>
               <div className="text-center">
@@ -161,6 +266,12 @@ const About = ({ className }) => {
                 <p className="text-gray-600 text-sm">
                   AI and machine learning expert with a passion for creating
                   intelligent solutions that solve real-world problems.
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Alex</h3>
+                <p className="text-blue-600 font-medium mb-2">CTO</p>
+                <p className="text-gray-600 text-sm">
+                  AI and machine learning expert with a passion for creating intelligent 
+                  solutions that solve real-world problems.
+ursor/automate-test-improve-and-merge-code-646c
                 </p>
               </div>
               <div className="text-center">
@@ -175,6 +286,12 @@ const About = ({ className }) => {
                   Creative director focused on user experience and interface
                   design, ensuring our solutions are both powerful and
                   intuitive.
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">Sarah</h3>
+                <p className="text-blue-600 font-medium mb-2">Head of Design</p>
+                <p className="text-gray-600 text-sm">
+                  Creative director focused on user experience and interface design, 
+                  ensuring our solutions are both powerful and intuitive.
+ursor/automate-test-improve-and-merge-code-646c
                 </p>
               </div>
             </div>
@@ -191,12 +308,24 @@ const About = ({ className }) => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <a
+              Let&apos;s discuss how we can help transform your business with our technology solutions.
+:backup-problematic-files/temp_broken_files/pages/about.jsx
+              Let&apos;s discuss how we can help transform your business with our technology solutions.
+              Let's discuss how we can help transform your business with our
+              technology solutions.
+>>>>>>> main:corrupted_backup/about.js
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <a 
+ursor/automate-test-improve-and-merge-code-646c
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get in Touch
               </a>
               <a
+              <a 
+ursor/automate-test-improve-and-merge-code-646c
                 href="/services"
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
@@ -211,3 +340,5 @@ const About = ({ className }) => {
 };
 
 export default About;
+export default About;
+ursor/automate-test-improve-and-merge-code-646c

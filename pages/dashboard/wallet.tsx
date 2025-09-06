@@ -43,9 +43,6 @@ export default function WalletPage() {
     </EnhancedLayout>
 
   )
-import React from "react";
-import EnhancedLayout from "../../components/layout/EnhancedLayout";
-import dynamic from "next/dynamic";
 const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false });
 export default function WalletPage(req, res) {
   try {
@@ -80,9 +77,6 @@ function WalletPage() {
 
 
 
-import React from "react";
-import EnhancedLayout from "../../components/layout/EnhancedLayout";
-import dynamic from "next/dynamic";
 const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false });
 export default function WalletPage(req, res) {
   try {

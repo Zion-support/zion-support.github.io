@@ -70,7 +70,7 @@ import Link from 'next / link';
     {
       feature: 'Smart Testing Strategy',
       description: 'Intelligent test selection based on code changes',
-      benefit: 'Faster feedback and reduced test execution time',
+      benefit: 'Faster feedback and reduced test execution time'
 
 
 

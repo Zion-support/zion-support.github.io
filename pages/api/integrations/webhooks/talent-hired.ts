@@ -80,11 +80,11 @@ function handler() {
       id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`,
       providerId: conn && conn.providerId,
       level: "info",
-      action: "update_status",
+      action: "update_status"
     };
     await ats && ats.updateStatus(conn, {
       applicantId: talent && talent.id,
-      status: "hired",
+      status: "hired"
     });
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
@@ -101,11 +101,11 @@ function handler() {
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
       provider_id: conn.provider_id,
       level: "info",
-      action: "update_status",
+      action: "update_status"
     }
     await ats.update_status (conn, {
       applicant_id: talent.id,
-      status: "hired",
+      status: "hired"
     });
     write_state ((s) => s.logs.push (log));
     results.push ({ provider_id: conn.provider_id, ok: true });

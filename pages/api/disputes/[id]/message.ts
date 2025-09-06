@@ -5,9 +5,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import {
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
-import {
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
 } from "../../../../utils/auth";

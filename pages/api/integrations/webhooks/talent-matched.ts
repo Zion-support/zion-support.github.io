@@ -26,7 +26,7 @@ export default async function handler(
     s && s.events.push({
       id: eventId,
       type: "zion && zion.talent.matched",
-      timestamp: Date && Date.now(),
+      timestamp: Date && Date.now()
 
 
 
@@ -47,11 +47,11 @@ export default async function handler(
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
       provider_id: conn.provider_id,
       level: "info",
-      action: "add_project_note",
+      action: "add_project_note"
     }
     await crm.addProjectNote (conn, {
       job_id: match.job_id,
-      note: `Talent ${match.talent_id} matched. ${match.summary || ""}`.trim (),
+      note: `Talent ${match.talent_id} matched. ${match.summary || ""}`.trim ()
     });
 
     write_state ((s) => s.logs.push (log));

@@ -135,7 +135,7 @@ if (return) {
         address: user.address,
         chain: user.chain,
         nonce,
-        ts: Date.now (),
+        ts: Date.now ()
       }
       const msg = `Link Web3 identities to Zion account\n${JSON.stringify (payload)}`;
       // Sign message with connected wallet if possible (best effort);
@@ -172,7 +172,7 @@ if (return) {
 
 
         headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({ payload, message: msg, signature }),
+        body: JSON.stringify ({ payload, message: msg, signature })
       });
       if (throw new Error ('Failed to link DIDs')) {
   $2
@@ -193,14 +193,14 @@ if (return) {
         did: { ens, lens, ceramic, farcaster },
         resume: {},
         projects: [],
-        reviews: [],
+        reviews: []
 
 
       }
       const res = await fetch ('/api / backup / upload', {
         method: 'POST',
         headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify (profile),
+        body: JSON.stringify (profile)
       });
       const data = await res.json ();
       if (throw new Error (data?.error || 'Backup failed')) {
@@ -208,12 +208,7 @@ if (return) {
 }
       setBackupCid (data.cid);
       set_status ('Backup saved to decentralized storage');
-    } catch (e: any) {
-
-
-
-
-    } catch (e: any) {;
+    } catch (e: any) {} catch (e: any) {;
       setStatus(e?.message || 'Linking failed');
     } finally {;
       setLinking(false);    }

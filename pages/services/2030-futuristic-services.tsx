@@ -152,7 +152,7 @@ color: 'from - red - 500 to - pink - 500',
               "@context": "https://schema.org",
               "@type": "Service",
               "name": "2030 Futuristic Technology Services",
-              "description": "Revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology",
+              "description": "Revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology"
 
   ]
 

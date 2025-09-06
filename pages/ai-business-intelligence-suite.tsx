@@ -31,9 +31,6 @@ export default function AIBusinessIntelligenceSuite() {
   Target, BarChart, PieChart, Activity, Eye, Lock
 
 } from 'lucide-react',;
-import Button from '../components/ui/Button',;
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
 
 export default function AIBusinessIntelligenceSuite() {
   const contactInfo = {

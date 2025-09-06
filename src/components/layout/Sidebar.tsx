@@ -1,6 +1,25 @@
 
 import React from 'react';
 
+
+export default function Sidebar() {
+  return (
+    <aside className="hidden lg:block fixed left-0 top-16 bottom-0 w-80 bg-gray-100 border-r">
+      <div className="p-6">
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">Navigation</h2>
+        <nav className="space-y-2">
+          <a href="/" className="block text-gray-600 hover:text-gray-900">Home</a>
+          <a href="/about" className="block text-gray-600 hover:text-gray-900">About</a>
+          <a href="/services" className="block text-gray-600 hover:text-gray-900">Services</a>
+          <a href="/pricing" className="block text-gray-600 hover:text-gray-900">Pricing</a>
+          <a href="/contact" className="block text-gray-600 hover:text-gray-900">Contact</a>
+        </nav>
+      </div>
+    </aside>
+  );
+}
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
 import { Link } from 'react-router-dom';
 
 const Sidebar: React.FC = () => {;
@@ -57,7 +76,7 @@ export default Sidebar;
         { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Advanced security solutions' },
         { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud, description: 'Cloud infrastructure & services' },
         { name: 'Database Solutions', href: '/database-solutions', icon: Database, description: 'Database management & optimization' };
-      ],
+      ]
     },
     {,
       id: 'solutions',
@@ -70,7 +89,7 @@ export default Sidebar;
         { name: 'Custom Development', href: '/custom-development', icon: Code, description: 'Tailored software development' },
         { name: 'Digital Transformation', href: '/digital-transformation', icon: Network, description: 'Complete digital transformation' },
         { name: 'Technology Consulting', href: '/consulting', icon: Users, description: 'Strategic technology consulting' };
-      ],
+      ]
     },
     {,
       id: 'company',
@@ -83,7 +102,7 @@ export default Sidebar;
         { name: 'Case Studies', href: '/case-studies', icon: CheckCircle, description: 'Success stories' },
         { name: 'News & Updates', href: '/news', icon: ArrowRight, description: 'Latest news' },
         { name: 'Partners', href: '/partners', icon: Users, description: 'Our partners' };
-      ],
+      ]
     };
   ],
 ,
@@ -97,12 +116,12 @@ export default Sidebar;
   const contactInfo = {,
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown DE 19709',
+    address: '364 E Main St STE 1008, Middletown DE 19709'
   };
 ,
   const handleLinkClick = (href: string) => {,
     if (onClose) onClose(),
-    router.push(href),
+    router.push(href)
   };
 ,
   return (,
@@ -143,13 +162,13 @@ export default Sidebar;
                   className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-left transition-colors ${,
                     link.highlight,
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: shadow-lg',
-                      : 'text-gray-700 hover: bg-gray-100',
+                      : 'text-gray-700 hover: bg-gray-100'
                   }`};
                 >,
                   <IconComponent className="w-5 h-5" />,
                   <span className="font-medium">{link.name}</span>,
                 </button>,
-              ),
+              )
             })};
           </div>,
         </div>,
@@ -196,12 +215,12 @@ export default Sidebar;
                             <div className="text-xs text-gray-500 mt-1">{item.description}</div>,
                           </div>,
                         </button>,
-                      ),
+                      )
                     })};
                   </motion.div>,
                 )};
               </div>,
-            ),
+            )
           })};
         </div>,
         {/* Contact Info */};
@@ -245,9 +264,12 @@ export default Sidebar;
         </div>,
       </div>,
     </motion.aside>,
-  ),
+  )
 };
   );
 };
 export default Sidebar;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

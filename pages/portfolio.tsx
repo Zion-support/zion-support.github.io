@@ -18,7 +18,7 @@ import {
   Star,
   Users,
   Clock,
-  TrendingUp,
+  TrendingUp
 
 
 } from 'lucide-react';

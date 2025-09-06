@@ -3,39 +3,63 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
-  description: "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
+  description: "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value."
 };
 
 
 
 
+export const metadata = {
+  title:
+    "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
+  description:
+    "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
+  keywords:
+    "AI services, micro SaaS, IT services, FinTech, HealthTech, EdTech, cloud migration, DevOps, SRE, enterprise software"
+};
+
+export default function ServicesOverviewPage() {
+  return (
+    <div className="animate-fade-in">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Services</h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Transform your business with cutting-edge technology solutions. From
+          AI-powered micro SaaS to enterprise FinTech platforms, we deliver
+          measurable outcomes with 99.9% uptime, bank-grade security, and 24/7
+          expert support.
+        </p>
+      </div>
+ursor/automate-test-improve-and-merge-code-646c
+
       {/* Statistics Section */}
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <StatCard 
-            number="500+" 
-            label="Successful Projects" 
-            description="Delivered worldwide" 
+          <StatCard
+            number="500+"
+            label="Successful Projects"
+            description="Delivered worldwide"
           />
-          <StatCard 
-            number="$2B+" 
-            label="Combined Market Value" 
-            description="Generated for clients" 
+          <StatCard
+            number="$2B+"
+            label="Combined Market Value"
+            description="Generated for clients"
           />
-          <StatCard 
-            number="99.9%" 
-            label="Uptime Guarantee" 
-            description="Enterprise reliability" 
+          <StatCard
+            number="99.9%"
+            label="Uptime Guarantee"
+            description="Enterprise reliability"
           />
-          <StatCard 
-            number="300%" 
-            label="Average ROI" 
-            description="Client return on investment" 
+          <StatCard
+            number="300%"
+            label="Average ROI"
+            description="Client return on investment"
           />
         </div>
       </div>
 
       {/* Core Services Grid */}
+ursor/automate-test-improve-and-merge-code-646c
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <ServiceCard
           href="/services/micro-saas"
@@ -45,6 +69,8 @@ export const metadata = {
             "15+ specialized micro SaaS tools",
             "End-to-end development & deployment",
             "Revenue optimization & scaling"
+            "Revenue optimization & scaling",
+ursor/automate-test-improve-and-merge-code-646c
           ]}
 
           icon="🚀"
@@ -54,6 +80,7 @@ export const metadata = {
           href="/services/ai-services"
           title="AI Services"
 
+ursor/automate-test-improve-and-merge-code-646c
           description="Advanced AI solutions including LLM applications, RAG systems, and enterprise AI platforms"
           bullets={[
             "15+ AI service categories",
@@ -61,6 +88,7 @@ export const metadata = {
             "Enterprise AI integration"
           ]}
 
+ursor/automate-test-improve-and-merge-code-646c
           icon="🤖"
           pricing="From $5,000/project"
         />
@@ -68,6 +96,7 @@ export const metadata = {
           href="/services/it-services"
           title="IT Services"
 
+ursor/automate-test-improve-and-merge-code-646c
           description="Comprehensive IT solutions including cloud migration, DevOps, security, and infrastructure management"
           bullets={[
             "15+ IT service categories",
@@ -139,16 +168,24 @@ export const metadata = {
 
           pricing="From $2,500/month"
 
+            "AI automation"
+          ]}
+          icon="⚡"
+          pricing="From $2,500/month"
+ursor/automate-test-improve-and-merge-code-646c
         />
         <ServiceCard
           href="/services/data-analytics"
           title="Data Analytics"
 
+ursor/automate-test-improve-and-merge-code-646c
           description="Business intelligence, predictive analytics, and data engineering for data-driven decisions"
           bullets={[
             "BI dashboards",
             "Predictive analytics",
             "Data engineering"
+            "Data engineering",
+ursor/automate-test-improve-and-merge-code-646c
           ]}
           icon="📊"
           pricing="From $4,000/month"
@@ -316,12 +353,18 @@ export const metadata = {
       </section>
       
       {/* Why Choose Us Section */}
+
+      {/* Statistics Section */}
+ursor/automate-test-improve-and-merge-code-646c
       <section className="py-16 bg-gray-50 rounded-xl mb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Why Choose Zion Tech Group?
+            </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Proven track record of delivering exceptional results for businesses across industries.
+              Proven track record of delivering exceptional results for
+              businesses across industries.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -348,7 +391,7 @@ export const metadata = {
           </div>
         </div>
       </section>
-      
+
       <CTA />
     </div>
   );
@@ -361,6 +404,8 @@ function ServiceCard({
   bullets,
   icon,
   pricing
+  pricing,
+ursor/automate-test-improve-and-merge-code-646c
 }: {
 
   href: string;
@@ -376,6 +421,7 @@ function ServiceCard({
       className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
 
+ursor/automate-test-improve-and-merge-code-646c
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
         {title}
@@ -388,21 +434,19 @@ function ServiceCard({
           </li>
         ))}
       </ul>
-      <div className="text-lg font-semibold text-blue-600">
-        {pricing}
-      </div>
+      <div className="text-lg font-semibold text-blue-600">{pricing}</div>
     </Link>
   );
 }
 
-function StatCard({ 
-  number, 
-  label, 
-  description 
-}: { 
-  number: string; 
-  label: string; 
-  description: string; 
+function StatCard({
+  number,
+  label,
+  description
+}: {
+  number: string;
+  label: string;
+  description: string;
 }) {
   return (
     <div className="text-center">
@@ -411,6 +455,7 @@ function StatCard({
       <div className="text-sm text-gray-600">{description}</div>
     </div>
 
+ursor/automate-test-improve-and-merge-code-646c
   );
 }
 
@@ -426,6 +471,11 @@ function CTA() {
         Get a free consultation and discover how our solutions can drive 300% ROI and accelerate your growth.
       </p>
 
+        Join 500+ successful businesses that trust Zion Tech Group for their
+        technology needs. Get a free consultation and discover how our solutions
+        can drive 300% ROI and accelerate your growth.
+      </p>
+ursor/automate-test-improve-and-merge-code-646c
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="tel:+13024640950"

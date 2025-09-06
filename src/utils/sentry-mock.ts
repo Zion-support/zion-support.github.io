@@ -1,5 +1,13 @@
 
 
+// Mock implementation for Sentry to prevent Node.js module import issues during build
+// This mock provides all the necessary Sentry APIs without importing any Node.js modules
+
+const noop = () => {};
+const noopReturn = () => null;
+const noopPromise = () => Promise.resolve();
+
+ursor/automate-test-improve-and-merge-code-646c
 // Mock Sentry instance with all common methods
 const mockSentry = {
   // Core Sentry methods
@@ -8,6 +16,61 @@ const mockSentry = {
   captureMessage: noop,
   captureEvent: noop,
   addBreadcrumb: noop,
+  setContext: noop,
+  setTag: noop,
+  setUser: noop,
+  setLevel: noop,
+  withScope: (callback: (scope: any) => void) => callback({}),
+  configureScope: noop,
+  getCurrentHub: () => ({
+    getClient: () => mockSentry,
+    getScope: () => ({}),
+    pushScope: () => ({}),
+    popScope: () => true,
+    withScope: (callback: (scope: any) => void) => callback({})
+  }),
+  onLoad: noop,
+  wrap: (fn: (...args: any[]) => any) => fn,
+
+  // Server-specific methods (Node.js)
+  Handlers: {
+    requestHandler:
+      () => (_req: any, _res: any, next: (...args: any[]) => any) =>
+        next(),
+    errorHandler:
+      () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) =>
+        next(),
+    tracingHandler:
+      () => (_req: any, _res: any, next: (...args: any[]) => any) =>
+        next()
+  },
+
+  // Integrations
+  Integrations: {
+    BrowserTracing: class BrowserTracing {
+      constructor() {}
+    },
+    Replay: class Replay {
+      constructor() {}
+    },
+    Breadcrumbs: class Breadcrumbs {
+      constructor() {}
+    }
+  },
+
+  // Utilities
+  withScope: (callback: (scope: any) => void) => callback({}),
+  configureScope: noop,
+  getCurrentHub: () => ({
+    getClient: () => mockSentry,
+    getScope: () => ({}),
+    pushScope: () => ({}),
+    popScope: () => true,
+    withScope: (callback: (scope: any) => void) => callback({})
+  })
+};
+
+export default mockSentry;
   configureScope: noop,
   withScope: (callback: (...args: any[]) => any) => callback(mockScope),
   setUser: noop,
@@ -23,6 +86,11 @@ const mockSentry = {
 
   finishTransaction: noop, // Error boundary and React integration
 
+  finishTransaction: noop, // Error boundary and React integration
+  finishTransaction: noop,
+  // Error boundary and React integration
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
   ErrorBoundary: ({ children }: any) => children,
   withErrorBoundary: (component: any) => component,
   showReportDialog: noop,
@@ -43,7 +111,7 @@ const mockSentry = {
     tracingHandler:
       () => (_req: any, _res: any, next: (...args: any[]) => any) =>
 
-        next(),
+        next()
   },
 
 
@@ -57,12 +125,24 @@ const mockSentry = {
         next(),
     tracingHandler:
       () => (_req: any, _res: any, next: (...args: any[]) => any) =>
-        next(),
+        next()
   },
 
   // Next.js specific
   withSentryConfig: (config: any) => config,
 
+  
+  // Server-specific methods (Node && Node.js)
+  Handlers: {
+    requestHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next(),
+    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[],) => any) => next(),
+    tracingHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next()},
+  
+  // Next && Next.js specific
+  withSentryConfig: (config: any,) => config,
+
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}
@@ -79,7 +159,7 @@ const mockSentry = {
 
 // Mock implementation for Sentry to prevent Node.js module import issues during build;
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules;
-const noop = () => {},;
+const noop = () => {};
 const noopReturn = () => null,;
 const noopPromise = () => Promise.resolve(),;
 // Mock Sentry instance with all common methods;
@@ -142,7 +222,7 @@ const mockSentry = {;
       constructor() {}
 
 
-    },
+    }
   },
 
 
@@ -154,7 +234,11 @@ const mockSentry = {;
 
   createTransport: noopReturn,
 
+ursor/automate-test-improve-and-merge-code-646c
   SDK_VERSION: "7.0.0-mock",
+  SDK_VERSION: '7 && 7.0.0-mock',
+
+>>>>>>> main
 
 
 
@@ -201,7 +285,7 @@ const mock_sentry = {
         next (),
     tracing_handler:;
       () => (_req: any, _res: any, next: (...args: any[]) => any) =>;
-        next (),
+        next ()
   },
   // Server - specific methods (Node.js);
   Handlers: {
@@ -218,7 +302,7 @@ const mock_sentry = {
   Tracing: {
     BrowserTracing: class BrowserTracing {
       constructor () {}
-    },
+    }
   },
   // Integrations;
   Integrations: {
@@ -233,7 +317,7 @@ const mock_sentry = {
     },
     OnUnhandledRejection: class OnUnhandledRejection {
       constructor () {}
-    },
+    }
   },
   // Transport;
   makeBrowserOfflineTransport: noop_return,
@@ -244,13 +328,22 @@ const mock_sentry = {
   // Constants;
   Severity: {
 
+ursor/automate-test-improve-and-merge-code-646c
     Fatal: "fatal",
     Error: "error",
     Warning: "warning",
     Info: "info",
-    Debug: "debug",
-  },
+    Debug: "debug"
+  }
 };
+    Fatal: 'fatal',
+    Error: 'error',
+    Warning: 'warning',
+    Info: 'info',
+    Debug: 'debug'
+  }
+}
+>>>>>>> main
 
 
 export const init = mockSentry && mockSentry.init;
@@ -315,7 +408,7 @@ const mock_scope = {
   set_level: noop,
   set_fingerprint: noop,
   clear: noop,
-  addEventProcessor: noop,
+  addEventProcessor: noop
 }
 // Mock transaction;
 const mock_transaction = {
@@ -327,7 +420,7 @@ const mock_transaction = {
   set_status: noop,
   setHttpStatus: noop,
   to_context: () => ({}),
-  updateWithContext: noop,
+  updateWithContext: noop
 }
 // Mock hub;
 const mock_hub = {
@@ -345,7 +438,7 @@ const mock_hub = {
   set_context: noop,
   configure_scope: noop,
   with_scope: (callback: (...args: any[]) => any) => callback (mock_scope),
-  start_transaction: () => mock_transaction,
+  start_transaction: () => mock_transaction
 }
 // Export default mock that covers all Sentry packages;
 export default mock_sentry;

@@ -20,8 +20,8 @@ class ErrorMonitor {
         totalWarnings: 0,
         buildSuccess: false,
         typeCheckSuccess: false,
-        lintSuccess: false,
-      },
+        lintSuccess: false
+      }
     };
     this.startTime = Date.now();
     this.isRunning = false;
@@ -45,6 +45,22 @@ class ErrorMonitor {
 
 
 
+<:automation/error-monitor.js
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=
+
+>>>>>>>> main:corrupted_backup/error-monitor.js
+
+>>>>>>> main
+
+
+
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
     // Initial health check
     await this.performHealthCheck();
     // Start continuous monitoring
@@ -86,7 +102,31 @@ class ErrorMonitor {
 
 
 
-        timestamp: new Date().toISOString(),
+<:automation/error-monitor.js
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+        timestamp: new Date().toISOString()
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+        timestamp: new Date().toISOString()
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=        timestamp: new Date().toISOString()
+>>>>>>>> main:corrupted_backup/error-monitor.js
+        timestamp: new Date().toISOString()
+>>>>>>> main
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+        timestamp: new Date().toISOString()
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
+        timestamp: new Date().toISOString()
       });
     }
   }
@@ -95,7 +135,7 @@ class ErrorMonitor {
       execSync('npx tsc --noEmit --pretty false', {
         encoding: 'utf8',
         cwd: this.projectRoot,
-        stdio: ['pipe', 'pipe', 'pipe'],
+        stdio: ['pipe', 'pipe', 'pipe']
       });
       this.monitoringReport.metrics.typeCheckSuccess = true;
       console.log('✅ TypeScript check passed');
@@ -114,7 +154,7 @@ class ErrorMonitor {
       execSync('npx eslint . --format=compact --no-eslintrc', {
         encoding: 'utf8',
         cwd: this.projectRoot,
-        stdio: ['pipe', 'pipe', 'pipe'],
+        stdio: ['pipe', 'pipe', 'pipe']
       });
       this.monitoringReport.metrics.lintSuccess = true;
       console.log('✅ ESLint check passed');
@@ -144,7 +184,7 @@ class ErrorMonitor {
       this.monitoringReport.errorsDetected.push({
         type: 'build_failure',
         message: error.message,
-        timestamp: new Date().toISOString(),
+        timestamp: new Date().toISOString()
       });
       this.monitoringReport.metrics.totalErrors += 1;
       console.log('❌ Build check failed');
@@ -156,16 +196,27 @@ class ErrorMonitor {
       'tsconfig.json',
       'next.config.js',
       'src/App.tsx',
-      'src/pages/index.tsx',
+      'src/pages/index.tsx'
     ];
 
+ursor/automate-test-improve-and-merge-code-646c
 
 
      is missing`,
 
 
 
-          timestamp: new Date().toISOString(),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    for (const file of criticalFiles) {
+      const filePath = path.join(this.projectRoot, file);
+      if (!fs.existsSync(filePath)) {
+        this.monitoringReport.errorsDetected.push({
+          type: 'missing_critical_file',
+          file: file,
+          message: `Critical file ${file} is missing`,
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
+          timestamp: new Date().toISOString()
         });
         this.monitoringReport.metrics.totalErrors += 1;
       }
@@ -181,7 +232,25 @@ class ErrorMonitor {
 
 
 
-            timestamp: new Date().toISOString(),
+<:automation/error-monitor.js
+=
+>>>>>>> main
+    for (const line of lines) {
+      if (line.includes('error TS')) {
+        const match = line.match(
+          /(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/
+        );
+        if (match) {
+          errors.push({
+            type: 'typescript_error',
+            file: match[1].trim(),
+            line: parseInt(match[2]),
+            column: parseInt(match[3]),
+            message: match[4].trim(),
+            timestamp: new Date().toISOString()
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
+            timestamp: new Date().toISOString()
           });
         }
       }
@@ -194,6 +263,50 @@ class ErrorMonitor {
 
 
 
+
+>>>>>>> main
+
+
+>>>>>>>> main:corrupted_backup/error-monitor.js
+            timestamp: new Date().toISOString()
+          });
+
+    );
+        }
+      }
+    }
+
+<:automation/error-monitor.js
+
+
+
+            timestamp: new Date().toISOString()
+          });
+    );
+        }
+      }
+    }
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=
+
+>>>>>>>> main:corrupted_backup/error-monitor.js
+            timestamp: new Date().toISOString()
+>>>>>>> main
+            timestamp: new Date().toISOString()
+          });
+        }
+      }
+    }
+
+>>>>>>> main
+
+
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
     return errors;
   }
   parseESLintErrors(output) {
@@ -207,7 +320,38 @@ class ErrorMonitor {
 
 
 
-          timestamp: new Date().toISOString(),
+<:automation/error-monitor.js
+=
+>>>>>>> main
+    for (const line of lines) {
+      const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/);
+      if (match) {
+        errors.push({
+          type: 'eslint_error',
+          file: match[1].trim(),
+          line: parseInt(match[2]),
+          column: parseInt(match[3]),
+          message: match[4].trim(),
+>>>>>>>> main:corrupted_backup/error-monitor.js
+>>>>>>> main
+          timestamp: new Date().toISOString()
+        });
+      }
+    }
+>>>>>>> main
+<:automation/error-monitor.js
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    );
+      }
+    }
+=>>>>>>>> main:corrupted_backup/error-monitor.js
+>>>>>>> main
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
+          timestamp: new Date().toISOString()
         });
       }
     }
@@ -220,6 +364,22 @@ class ErrorMonitor {
 
 
 
+<:automation/error-monitor.js
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=
+
+>>>>>>>> main:corrupted_backup/error-monitor.js
+
+>>>>>>> main
+
+
+
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
     return errors;
   }
   updateHealthStatus() {
@@ -244,6 +404,56 @@ class ErrorMonitor {
 
 
 
+    console.log(`📊 Health Status: ${status.toUpperCase()}`);
+    console.log(`📈 Total Errors: ${totalErrors}`);
+    console.log(`⚠️  Total Warnings: ${totalWarnings}`);
+<:automation/error-monitor.js
+=
+>>>>>>> main
+    console.log(`📊 Health Status: ${status.toUpperCase()}`);
+    console.log(`📈 Total Errors: ${totalErrors}`);
+    console.log(`⚠️  Total Warnings: ${totalWarnings}`);
+>>>>>>>> main:corrupted_backup/error-monitor.js
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+<:automation/error-monitor.js
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+    console.log(`📊 Health Status: ${status.toUpperCase()}`);
+    console.log(`📈 Total Errors: ${totalErrors}`);
+    console.log(`⚠️  Total Warnings: ${totalWarnings}`);
+
+
+>>>>>>> main
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=>>>>>>>> main:corrupted_backup/error-monitor.js
+>>>>>>> main
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -271,6 +481,24 @@ class ErrorMonitor {
 
 
 
+<:automation/error-monitor.js
+      console.log('✅ Error fixer completed');
+
+
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=      console.log('✅ Error fixer completed');
+
+
+>>>>>>>> main:corrupted_backup/error-monitor.js
+
+      console.log('✅ Error fixer completed');
+>>>>>>> main
+
+
+      console.log('✅ Error fixer completed');
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
@@ -286,7 +514,31 @@ class ErrorMonitor {
 
 
 
-        timestamp: new Date().toISOString(),
+<:automation/error-monitor.js
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+        timestamp: new Date().toISOString()
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+        timestamp: new Date().toISOString()
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=        timestamp: new Date().toISOString()
+>>>>>>>> main:corrupted_backup/error-monitor.js
+        timestamp: new Date().toISOString()
+>>>>>>> main
+        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString()
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+        timestamp: new Date().toISOString()
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
+        timestamp: new Date().toISOString()
       });
     }
   }
@@ -320,6 +572,22 @@ class ErrorMonitor {
 
 
 
+<:automation/error-monitor.js
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=
+
+>>>>>>>> main:corrupted_backup/error-monitor.js
+
+>>>>>>> main
+
+
+
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
     fs.writeFileSync(
@@ -337,7 +605,7 @@ class ErrorMonitor {
         .map(file => ({
           name: file,
           path: path.join(reportDir, file),
-          time: fs.statSync(path.join(reportDir, file)).mtime.getTime(),
+          time: fs.statSync(path.join(reportDir, file)).mtime.getTime()
         }))
         .sort((a, b) => b.time - a.time);
       // Remove old reports (keep only the latest 10)
@@ -364,14 +632,30 @@ class ErrorMonitor {
 
 
 
+}
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
 // Run the monitor
 if (require.main === module) {
   const monitor = new ErrorMonitor();
   monitor.start().catch(console.error);
 
+}
+module.exports = ErrorMonitor;
+ursor/automate-test-improve-and-merge-code-646c
 
 
 module.exports = ErrorMonitor;
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+module.exports = ErrorMonitor;
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

@@ -188,15 +188,15 @@ function send_offer() {
       headers: {
         'Content - Type': 'application / json',
         'x - demo - user - role': 'client',
-        'x - demo - user - id': 'client - 1',
+        'x - demo - user - id': 'client - 1'
       },
       body: JSON.stringify ({
         talent_slug,
         startDateIso,
         scope_summary,
         payment_terms,
-        agreement_url,
-      }),
+        agreement_url
+      })
     });
     const json = await res.json ();
     set_loading (false);

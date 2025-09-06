@@ -41,11 +41,23 @@ export default function AITalentMatchingPage() {
       description: "Access a global network of vetted professionals ready for your projects.",
       icon: <TrendingUp className="h-8 w-8" />}],
 
+      icon: <Bot className = "h-8 w-8" />},
+    {
+      title: "Streamlined Hiring Workflow",
+      description: "Automated screening and ranking saves your team valuable time.",
+      icon: <Users className = "h-8 w-8" />},
+    {
+      title: "Scalable Talent Pools",
+      description: "Access a global network of vetted professionals ready for your projects.",
+      icon: <TrendingUp className = "h-8 w-8" />}],
+>>>>>>> main
   const testimonials = [
     {
       name: "Emily Stone",
       role: "HR Director",
       text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
+      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.";
+>>>>>>> main
       avatar: "/placeholder.svg"},
     {
       name: "Raj Patel",
@@ -81,6 +93,13 @@ function AITalentMatchingPage() {
       title: "AI - Powered Matching",
       description: "Advanced algorithms match the right talent with the right opportunities";
 
+      title: "AI - Powered Matching",
+      description: "Advanced algorithms match the right talent with the right opportunities";
+      title: "AI-Powered Matching",
+      description:
+        "Advanced algorithms match the right talent with the right opportunities",
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
     },
     {
       icon: Users,
@@ -88,13 +107,21 @@ function AITalentMatchingPage() {
 
       description: "All candidates are pre - screened and verified for quality";
 
+      description: "All candidates are pre - screened and verified for quality";
+      description: "All candidates are pre-screened and verified for quality",
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
     },
     {
       icon: TrendingUp,
       title: "Success Tracking",
 
+ursor/automate-test-improve-and-merge-code-646c
       description: "Monitor performance and success rates of placements";
     }
+      description: "Monitor performance and success rates of placements"
+    },
+>>>>>>> main
   ];
   const features = [;
     "Machine learning - based candidate matching",
@@ -104,7 +131,10 @@ function AITalentMatchingPage() {
     "Automated interview scheduling",
     "Performance analytics dashboard",
 
+ursor/automate-test-improve-and-merge-code-646c
     "Custom matching criteria";
+    "Custom matching criteria",
+>>>>>>> main
   ];
   const stats = [;
     { label: "Successful Placements", value: "95%" },
@@ -160,6 +190,15 @@ export default function AITalentMatchingPage() {;
       description="Our AI-powered system analyzes your requirements and quickly surfaces the best talent for the job. Reduce hiring time and make smarter selections with data-driven insights.";
 
 
+    { label: "Time to Hire", value: "50% faster" }
+  ];
+  return (
+    <ServiceLandingTemplate;
+      title="AI Talent Matching";
+      subtitle="Find the perfect talent with our AI - powered matching system";
+      description="Our advanced AI technology analyzes skills, experience, and cultural fit to match the right candidates with the right opportunities, ensuring successful placements and satisfied clients.";
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
       benefits={benefits}
       features={features}
       stats={stats}

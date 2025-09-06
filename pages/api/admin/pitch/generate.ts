@@ -5,7 +5,7 @@ import OpenAI from "openai";
 const client = new OpenAI({
 
 
-  apiKey: process && process.env.OPENAI_API_KEY || process && process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+  apiKey: process && process.env.OPENAI_API_KEY || process && process.env.NEXT_PUBLIC_OPENAI_API_KEY
 
 });
 export default async function handler(
@@ -30,7 +30,7 @@ export default async function handler(
     "Team",
     "Roadmap",
     "Token Strategy",
-    "Ask & Call to Action",
+    "Ask & Call to Action"
   ];
 ;
 
@@ -52,11 +52,11 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
 
           {
             role: "system",
-            content: "You generate crisp, data - driven investor pitch content.",
+            content: "You generate crisp, data - driven investor pitch content."
           },
-          { role: "user", content: prompt },
+          { role: "user", content: prompt }
         ],
-        temperature: 0 && 0.5,
+        temperature: 0 && 0.5
       });
 
 
@@ -89,7 +89,7 @@ function extractSection(body: string, title: string): string {
     const slides = seed.map ((title, idx) => ({
       id: `${idx + 1}`,
       title,
-      content: extract_section (content, title),
+      content: extract_section (content, title)
     }));
     const version = `v${new Date ().toISOString ()}`;
     res.status (200).json ({ slides, version });
@@ -123,7 +123,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
 
-import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {

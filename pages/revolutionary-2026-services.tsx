@@ -144,10 +144,10 @@ import {Phone, Mail} from 'lucide-react';
                 '@type': 'ContactPoint',
                 telephone: '+1-302-464-0950',
                 contactType: 'customer service',
-                email: 'kleber@ziontechgroup && ziontechgroup.com',
+                email: 'kleber@ziontechgroup && ziontechgroup.com'
               },
-              sameAs: ['https://github && github.com/Zion-Holdings'],
-            }),          }}
+              sameAs: ['https://github && github.com/Zion-Holdings']
+            })          }}
         />;
       </Head>;
       <main className='min-h-screen bg-gray-900'>;

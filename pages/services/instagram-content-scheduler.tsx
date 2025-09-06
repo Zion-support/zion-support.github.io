@@ -29,7 +29,7 @@ const InstagramContentScheduler: NextPage = () => {
 
 },
 
-export default InstagramContentScheduler,
+export default InstagramContentScheduler
 
 
 }

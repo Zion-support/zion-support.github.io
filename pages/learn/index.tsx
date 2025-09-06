@@ -24,7 +24,6 @@ export default function LearnMarketplace() {;
 
 
       setLoading(false);
-import {useEffect, useState} from 'react';
 import CourseCard, { Course } from '../../components / learn / CourseCard';
 import FilterBar from '../../components / learn / FilterBar';
 export default /**
@@ -34,7 +33,7 @@ function LearnMarketplace() {
   const [filters, set_filters] = useState ({
     category: '',
     level: '',
-    is_free: '',
+    is_free: ''
   });  const [courses, set_courses] = useState < Course[]>([]);
   const [loading, set_loading] = useState (true);
 ;

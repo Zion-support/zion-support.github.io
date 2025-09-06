@@ -25,12 +25,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
     // Category filter
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
-        if (selectedCategory === 'ai') {
-
-
-
-
-        }
+        if (selectedCategory === 'ai') {}
 
         return true;
       });
@@ -111,7 +106,7 @@ export default function Revolutionary2026Pricing(req, res) {
     // Price filter;
     if (selectedPriceRange !== 'all') {;
       filtered = filtered.filter(service => {;
-        const price = parseFloat(service.price.replace(/[^0-9.]/g, '')),;
+        const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
         if (selectedPriceRange === 'low') return price < 1000,;
         if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000,;
         if (selectedPriceRange === 'high') return price >= 5000 && price < 20000,;

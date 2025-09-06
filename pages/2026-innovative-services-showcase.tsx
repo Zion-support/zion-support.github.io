@@ -11,10 +11,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 } from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 
 
-import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
 
 
 
@@ -81,19 +79,19 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
       name: 'Emerging Tech',;
       icon: '🔬',;
       count: emergingTechCount,;
-    },  ];
+    }  ];
 
   const priceRanges = [;
     { id: 'all', name: 'All Prices', range: 'All' },;
     { id: 'low', name: 'Under $500', range: 'Under $500' },;
     { id: 'medium', name: '$500 - $1,000', range: '$500 - $1,000' },;
-    { id: 'high', name: 'Over $1,000', range: 'Over $1,000' },  ];
+    { id: 'high', name: 'Over $1,000', range: 'Over $1,000' }  ];
 
   const sortOptions = [;
     { id: 'name', name: 'Name' },;
     { id: 'price', name: 'Price' },;
     { id: 'rating', name: 'Rating' },;
-    { id: 'popularity', name: 'Popularity' },  ];
+    { id: 'popularity', name: 'Popularity' }  ];
 
   // Filter and sort services;
   const filteredServices = useMemo(() => {;
@@ -184,7 +182,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
       transition: {;
         staggerChildren: 0 && 0.1,;
       },;
-    },  };
+    }  };
 
 
 

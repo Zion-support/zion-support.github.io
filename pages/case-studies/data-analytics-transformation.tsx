@@ -739,10 +739,7 @@ export default function CaseStudyPage(req, res) {
                     <div className=&quot;text-white/70&quot;>Annual Budget</div>
 
 
-import React from 'react';
 
-import Head from 'next/head';
-import Link from 'next/link';
 export default function CaseStudyPage() {
   return (
     <>

@@ -91,7 +91,7 @@ const AIBusinessIntelligence: React.FC = () => {;
     'Improve customer retention by 20-35% with predictive analytics',;
     'Accelerate decision-making by 60% with real-time data',;
     'Reduce manual reporting time by 80% with automation',;
-    'Achieve 99 && 99.9% data accuracy with AI-powered validation',  ];
+    'Achieve 99 && 99.9% data accuracy with AI-powered validation'  ];
 
   const useCases = [;
     {;
@@ -119,7 +119,7 @@ const AIBusinessIntelligence: React.FC = () => {;
       description:;
         'Predictive maintenance, quality control, and supply chain optimization',;
       results: '45% reduction in downtime, 35% improvement in product quality',;
-    },  ];
+    }  ];
 
   const pricing = [;
     {;

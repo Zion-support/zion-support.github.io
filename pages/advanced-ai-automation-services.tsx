@@ -106,7 +106,7 @@ const contactInfo = {;
 
     icon: Code,
     color: 'from - emerald - 500 to - teal - 600',
-    features: ['Code Review Automation', 'AI Testing', 'DevOps Intelligence'],
+    features: ['Code Review Automation', 'AI Testing', 'DevOps Intelligence']
   },
   {
     title: 'AI Testing & Quality Assurance',
@@ -115,7 +115,7 @@ const contactInfo = {;
       string => s.category === 'AI Testing & Quality Assurance'),
     icon: TestTube,
     color: 'from - purple - 500 to - indigo - 600',
-    features: ['Test Generation', 'Performance Testing', 'Quality Assurance'],
+    features: ['Test Generation', 'Performance Testing', 'Quality Assurance']
   },
   {
     title: 'AI DevOps & Infrastructure',
@@ -127,8 +127,8 @@ const contactInfo = {;
     features: [;
       'Infrastructure Management',
       'Deployment Optimization',
-      'Performance Monitoring',
-    ],
+      'Performance Monitoring'
+    ]
   },
   {
     title: 'AI Cybersecurity',
@@ -137,7 +137,7 @@ const contactInfo = {;
       string => s.category === 'AI Cybersecurity'),
     icon: SecurityIcon,
     color: 'from - red - 500 to - pink - 600',
-    features: ['Threat Detection', 'Incident Response', 'Security Automation'],
+    features: ['Threat Detection', 'Incident Response', 'Security Automation']
   },
   {
     title: 'AI Data Management',
@@ -197,8 +197,8 @@ export default function AdvancedAIAutomationServices() {
     content:;
       'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.',
     rating: 5,
-    avatar: '👨‍🔒',
-  }, ];
+    avatar: '👨‍🔒'
+  } ];
 ;
 export default /**
  * AdvancedAIAutomationServices - Function description

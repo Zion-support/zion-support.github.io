@@ -85,7 +85,7 @@ const { targetType, targetId } = req.query as {
         if (r.anonymous) authorName = "Anonymous";
         return {
           ...r,
-          authorName,
+          authorName
         };
       });
 
@@ -110,7 +110,7 @@ const { targetType, targetId } = req.query as {
       averageRating,
       totalReviews,
       totalCompletedProjects,
-      mostRecent: publicReviews.slice(0, 5),
+      mostRecent: publicReviews.slice(0, 5)
     };
 
     return res.status(200).json({ summary, reviews: publicReviews });
@@ -149,7 +149,7 @@ if (author_name = "Anonymous") {
 
         return {
 
-          ...r,
+          ...r
 
       });
     const totalReviews = publicReviews && publicReviews.length;
@@ -175,7 +175,7 @@ if (author_name = "Anonymous") {
     const summary: ReviewsSummary = {
       average_rating,
       total_reviews,
-      totalCompletedProjects,
+      totalCompletedProjects
 
 
 

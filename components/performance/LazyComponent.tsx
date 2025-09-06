@@ -1,22 +1,23 @@
+import React, { Suspense } from 'react';
+ursor/automate-test-improve-and-merge-code-646c
 
 
 import React from 'react'
 }
 import React, { Suspense, lazy } from 'react';
+import React, { Suspense, ReactNode } from 'react';
+import LoadingSpinner from '../LoadingSpinner';
+>>>>>>> main
 
 interface LazyComponentProps {
-  component: ComponentType < Record < string, unknown>>;
+  children: ReactNode;
   fallback?: ReactNode;
-  [key: string]: unknown
 }
 
-import React from 'react';
-}
-
-const LazyComponent: React.FC < LazyComponentProps> = ({
-  component: Component,
-  fallback = <div className="animate - pulse bg - gray - 200 h - 32 rounded" />,
-  ...props;
+const LazyComponent: React.FC<LazyComponentProps> = ({ 
+  children, 
+  fallback = <LoadingSpinner /> 
+}) => {
   return (
     <Suspense fallback={fallback}>;
       <Component {...props} />;
@@ -24,6 +25,15 @@ const LazyComponent: React.FC < LazyComponentProps> = ({
 }
 ;
 export default LazyComponent;
-import React from 'react',
+import React from 'react'
 },
 
+    <Suspense fallback={fallback}>
+      {children}
+    </Suspense>
+  );
+};
+
+export default LazyComponent;
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

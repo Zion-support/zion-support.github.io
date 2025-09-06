@@ -3,11 +3,53 @@
 
 
 
+
+
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export default function ContractAI() {; return (; <Article; title=\"Contract AI Extractor\"; subtitle=\"Extract clauses,obligations,renewal windows,and risks from PDFs\"; price=\"from $349/mo\"; bullets={[; \'Zero-shot clause detection across NDAs,MSAs,SOWs,DPAs\',; \'Obligation tracking with renewal/termination reminders\',; \'Pipedrive/HubSpot sync; SOC2-ready audit logs\',; \'Deploy on VPC with optional Azure OpenAI/GCP Vertex endpoints\'; ]} links={{ \"website\": \'https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;
+module.exports = default function ContractAI() {; return (; <Article; title="Contract AI Extractor"; subtitle="Extract clauses,obligations,renewal windows,and risks from PDFs"; price="from $349/mo"; bullets={[; "Zero-shot clause detection across NDAs,MSAs,SOWs,DPAs",; "Obligation tracking with renewal/termination reminders",; "Pipedrive/HubSpot sync; SOC2-ready audit logs",; "Deploy on VPC with optional Azure OpenAI/GCP Vertex endpoints"; ]} links={{ website: "https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>Pricing: </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;"""
+
+import React from 'react';
+interface ContractaiProps {
+  // Add props here as needed
+
+
+
+export default function ContractAI() {; return (; <Article; title=\"Contract AI Extractor\"; subtitle=\"Extract clauses,obligations,renewal windows,and risks from PDFs\"; price=\"from $349/mo\"; bullets={[; \'Zero-shot clause detection across NDAs,MSAs,SOWs,DPAs\',; \'Obligation tracking with renewal/termination reminders\',; \'Pipedrive/HubSpot sync; SOC2-ready audit logs\',; \'Deploy on VPC with optional Azure OpenAI/GCP Vertex endpoints\'; ]} links={{ \"website\": \'https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;
+module.exports = default function ContractAI() {; return (; <Article; title="Contract AI Extractor"; subtitle="Extract clauses,obligations,renewal windows,and risks from PDFs"; price="from $349/mo"; bullets={[; "Zero-shot clause detection across NDAs,MSAs,SOWs,DPAs",; "Obligation tracking with renewal/termination reminders",; "Pipedrive/HubSpot sync; SOC2-ready audit logs",; "Deploy on VPC with optional Azure OpenAI/GCP Vertex endpoints"; ]} links={{ website: "https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>Pricing: </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;"""
+>>>>>>> main
+ursor/integrate-build-improve-and-re-verify-8f7d
+export default function ContractAI() {; return (; <Article; title=\"Contract AI Extractor\"; subtitle=\"Extract clauses,obligations,renewal windows,and risks from PDFs\"; price=\"from $349/mo\"; bullets={[; \'Zero-shot clause detection across NDAs,MSAs,SOWs,DPAs\',; \'Obligation tracking with renewal/termination reminders\',; \'Pipedrive/HubSpot sync; SOC2-ready audit logs\',; \'Deploy on VPC with optional Azure OpenAI/GCP Vertex endpoints\'; ]} links={{ \"website\": \'https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;
+module.exports = default function ContractAI() {; return (; <Article; title="Contract AI Extractor"; subtitle="Extract clauses,obligations,renewal windows,and risks from PDFs"; price="from $349/mo"; bullets={[; "Zero-shot clause detection across NDAs,MSAs,SOWs,DPAs",; "Obligation tracking with renewal/termination reminders",; "Pipedrive/HubSpot sync; SOC2-ready audit logs",; "Deploy on VPC with optional Azure OpenAI/GCP Vertex endpoints"; ]} links={{ website: "https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>Pricing: </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;"""
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+interface ContractaiProps {
+  // Add props here as needed
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+import * as React from 'react';
+
+interface ContractaiProps {
+  // Add props here as needed
+}
+export default function ContractAI() {; return (; <Article; title=\"Contract AI Extractor\"; subtitle=\"Extract clauses,obligations,renewal windows,and risks from PDFs\"; price=\"from $349/mo\"; bullets={[; \'Zero-shot clause detection across NDAs,MSAs,SOWs,DPAs\',; \'Obligation tracking with renewal/termination reminders\',; \'Pipedrive/HubSpot sync; SOC2-ready audit logs\',; \'Deploy on VPC with optional Azure OpenAI/GCP Vertex endpoints\'; ]} links={{ \"website\": \'https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;
+module.exports = default function ContractAI() {; return (; <Article; title="Contract AI Extractor"; subtitle="Extract clauses,obligations,renewal windows,and risks from PDFs"; price="from $349/mo"; bullets={[; "Zero-shot clause detection across NDAs,MSAs,SOWs,DPAs",; "Obligation tracking with renewal/termination reminders",; "Pipedrive/HubSpot sync; SOC2-ready audit logs",; "Deploy on VPC with optional Azure OpenAI/GCP Vertex endpoints"; ]} links={{ website: "https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>Pricing: </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;"""
+
+interface ContractaiProps {
+  // Add props here as needed
+
+ursor/automate-test-improve-and-merge-code-646c
+
+
 export default function ContractAI() {; return (; <Article; title=\"Contract AI Extractor\"; subtitle=\"Extract clauses,obligations,renewal windows,and risks from PDFs\"; price=\"from $349/mo\"; bullets={[; \'Zero-shot clause detection across NDAs,MSAs,SOWs,DPAs\',; \'Obligation tracking with renewal/termination reminders\',; \'Pipedrive/HubSpot sync; SOC2-ready audit logs\',; \'Deploy on VPC with optional Azure OpenAI/GCP Vertex endpoints\'; ]} links={{ \"website\": \'https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;
 module.exports = default function ContractAI() {; return (; <Article; title="Contract AI Extractor"; subtitle="Extract clauses,obligations,renewal windows,and risks from PDFs"; price="from $349/mo"; bullets={[; "Zero-shot clause detection across NDAs,MSAs,SOWs,DPAs",; "Obligation tracking with renewal/termination reminders",; "Pipedrive/HubSpot sync; SOC2-ready audit logs",; "Deploy on VPC with optional Azure OpenAI/GCP Vertex endpoints"; ]} links={{ website: "https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>Pricing: </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;"""
 
 
-import React from 'react';
+ursor/automate-test-improve-and-merge-code-646c
 interface ContractaiProps {
   // Add props here as needed
 
@@ -17,11 +59,8 @@ interface ContractaiProps {
 
 
 
-import React from 'react';
 
 
-import React from 'react';
-import * as React from 'react';
 
 
 
@@ -29,7 +68,9 @@ interface ContractaiProps {
   // Add props here as needed
 }
 
-export default function Contractai({ }: ContractaiProps) {
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
+export default function Contractai({}: ContractaiProps) {
   return (
     <div>
       <h1>Contractai</h1>
@@ -47,3 +88,22 @@ export default function Contractai({ }: ContractaiProps) {
 
 
 
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+}
+>>>>>>> main
+}
+}
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

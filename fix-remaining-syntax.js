@@ -43,7 +43,13 @@ console.log(`Fixed ${fixedCount} files`);
 
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node import fs from "fs" import path from "path" function listFiles(dir,exts) { const out = [] for (const entry of fs.readdirSync(dir)) { const full = path.join(dir,entry) const st = fs.statSync(full) if (st.isDirectory()) { if (entry === "node_modules" | entry.startsWith(".")) continue out.push(.listFiles(full,exts)) } else if (exts.some(ext => full.endsWith(ext))) { out.push(full) } } return out } function fixFile(filePath) { try { const before = fs.readFileSync(filePath,"utf8") let after = before after = after.replace(/,\s*;/g,",") after = after.replace(/;\s*,/g,",") after = after.replace(/;\s*\]/g,"]") after = after.replace(/;\s*\}/g,"}") if (after !== before) { fs.writeFileSync(filePath,after,"utf8") console.log(`Fixed: ${filePath}`) return true } return false } catch (e) { console.error(`Error fixing ${filePath}:`,e.message) return false } } const files = listFiles(".",[".js",".jsx",".ts",".tsx"]) let fixed = 0 for (const f of files) if (fixFile(f)) fixed++ console.log(`Fixed remaining syntax issues in ${fixed} files.`) }'"`'"`
 #!/usr/bin/env node import fs from 'fs' import path from 'path' function listFiles(dir,exts) { const out = [] for (const entry of fs.readdirSync(dir)) { const full = path.join(dir,entry) const st = fs.statSync(full) if (st.isDirectory()) { if (entry === 'node_modules' || entry.startsWith('.')) continue out.push(...listFiles(full,exts)) } else if (exts.some(ext => full.endsWith(ext))) { out.push(full) } } return out } function fixFile(filePath) { try { const before = fs.readFileSync(filePath,'utf8') let after = before after = after.replace(/,\s*;/g,',') after = after.replace(/;\s*,/g,',') after = after.replace(/;\s*\]/g,']') after = after.replace(/;\s*\}/g,'}') if (after !== before) { fs.writeFileSync(filePath,after,'utf8') _console.log(`"Fixed": ${filePath}`) return true } return false } catch (e) { _console.error(`Error fixing ${filePath}:`,e.message) return false } } const files = listFiles('.',['.js','.jsx','.ts','.tsx']) let fixed = 0 for (const f of, files) if (fixFile(f)) fixed++ _console.log(`Fixed remaining syntax issues in ${fixed} files.`) }
+#!/usr/bin/env node
 
+const fs = require('fs');
+const path = require('path');
+ursor/automate-test-improve-and-merge-code-646c
+
+console.log('🔧 Fixing remaining syntax errors...');
 
 
 
@@ -223,3 +229,57 @@ main().catch(console && console.error);
 
 
 
+const fixFile = (filePath) => {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Fix type declarations
+    content = content.replace(/type\s+(\w+)\s*=\s*{;/g, 'type $1 = {');
+    
+    // Fix function parameters
+    content = content.replace(/\(\s*([^)]+);\s*([^)]+)\s*\)/g, '($1, $2)');
+    
+    // Fix remaining merge conflict markers
+    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+    content = content.replace(/;/g, '');
+    
+    // Fix semicolons in wrong places
+    content = content.replace(/;\s*{/g, ' {');
+    content = content.replace(/;\s*}/g, ' }');
+    content = content.replace(/;\s*\)/g, ' )');
+    
+    // Fix function declarations
+    content = content.replace(/export default async function\s+(\w+)\s*\([^)]*\)\s*{;/g, 'export default async function $1($2) {');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`✅ Fixed: ${filePath}`);
+    return true;
+  } catch (error) {
+    console.log(`❌ Failed to fix: ${filePath} - ${error.message}`);
+    return false;
+  }
+};
+
+const main = () => {
+  const files = [
+    'pages/api/admin/analytics/summary.ts',
+    'pages/api/admin/moderation/flags/[id]/action.ts',
+    'pages/api/admin/moderation/flags/index.ts',
+    'pages/api/admin/notes.ts',
+    'pages/api/admin/partners/list.ts'
+  ];
+  
+  let fixed = 0;
+  files.forEach(file => {
+    if (fs.existsSync(file)) {
+      if (fixFile(file)) {
+        fixed++;
+      }
+    }
+  });
+  
+  console.log(`\n🎉 Fixed ${fixed}/${files.length} files`);
+};
+
+main();
+ursor/automate-test-improve-and-merge-code-646c

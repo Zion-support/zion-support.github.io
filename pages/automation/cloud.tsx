@@ -62,7 +62,7 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
       .then((r) => r.json())
       .then((d) => setLogs(d.logs || []))
       .catch(() => setLogs([]))
-  }, []),
+  }, [])
 
   }, []),
 
@@ -100,7 +100,6 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
 
 
 
-import { useEffect, useState } from 'react';
 
 
 
@@ -181,7 +180,6 @@ import { useEffect, useState } from 'react';
     </div>
 
   )
-import { useEffect, useState } from 'react';
 export default function CloudAutomationHub(req, res) {
   try {
   const [logs, setLogs] = useState<any[]>([]);
@@ -197,7 +195,6 @@ export default function CloudAutomationHub(req, res) {
 
 }
 
-import { useEffect, useState } from 'react',
 ;
 export default /**
  * CloudAutomationHub - Function description
@@ -228,7 +225,6 @@ function CloudAutomationHub() {
 }
 
 
-import { useEffect, useState } from 'react';
 export default function CloudAutomationHub(req, res) {
   try {
   const [logs, setLogs] = useState<any[]>([]);

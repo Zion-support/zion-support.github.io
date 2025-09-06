@@ -95,14 +95,14 @@ import ServiceLanding from '../components/sections/ServiceLanding',
           'Deception tokens and breach canaries',
           'Zero - trust policy recommendations',
           'Ransomware early detection and isolation',
-          'Compliance evidence and audit - ready reports',
+          'Compliance evidence and audit - ready reports'
         ]}
         industries={[;
           'Financial Services',
           'Healthcare',
           'SaaS',
           'Public Sector',
-          'Critical Infrastructure',
+          'Critical Infrastructure'
         ]}
         canonical='https: //ziontechgroup.com / ai - powered - cybersecurity';
       />;

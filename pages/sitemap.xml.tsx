@@ -1,3 +1,4 @@
+ursor/automate-test-improve-and-merge-code-646c
 import { GetServerSideProps } from 'next';
 
 const Sitemap = () => {
@@ -22,7 +23,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     '/docs',
     '/governance/trust',
     '/governance/global-outreach',
-    '/zion-stack/api',
+    '/zion-stack/api'
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -45,8 +46,44 @@ ${staticPages
   res.end();
 
   return {
-    props: {},
+    props: {}
   };
 };
 
 export default Sitemap;
+export default Sitemap;
+     `;
+       });
+       .join("")}
+   </urlset>;
+ `;
+}
+function SiteMap() {
+  // getServerSideProps will do the heavy lifting;
+}
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+  const sitemap = generateSiteMap();
+  res.setHeader("Content-Type", "text/xml");
+  // we send the XML to the browser
+  res.write(sitemap);
+  res.end();
+  return {
+    props: {}
+  }
+}
+export default SiteMap;
+  // We generate the XML sitemap with the posts data;
+  const sitemap = generateSiteMap ();
+;
+  res.set_header ("Content - Type", "text / xml");
+  // we send the XML to the browser;
+  res.write (sitemap);
+  res.end ();
+;
+  return {
+    props: {}
+  }
+}
+;
+export default SiteMap;
+ursor/automate-test-improve-and-merge-code-646c

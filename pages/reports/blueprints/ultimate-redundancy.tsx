@@ -60,7 +60,7 @@ import Link from 'next / link';
     {
       capability: 'Adaptive Scaling',
       description: 'Dynamic resource allocation based on AI predictions',
-      benefit: 'Optimal performance and cost efficiency',
+      benefit: 'Optimal performance and cost efficiency'
 
 
     },
@@ -80,7 +80,7 @@ import Link from 'next / link';
     { metric: 'Response Time', value: '23ms', target: '50ms', status: 'exceeded' },
     { metric: 'Throughput', value: '5.2k req / s', target: '2k req / s', status: 'exceeded' },
     { metric: 'Failover Time', value: '0.8s', target: '2s', status: 'exceeded' },
-    { metric: 'Recovery Time', value: '5.2s', target: '15s', status: 'exceeded' },
+    { metric: 'Recovery Time', value: '5.2s', target: '15s', status: 'exceeded' }
 
 
 

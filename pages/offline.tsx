@@ -131,9 +131,7 @@ if ( {) {
       href: '/marketplace'
       available: true
     }
-    {
-
-  };
+    {};
 
 
 
@@ -177,7 +175,7 @@ if ( {) {
 
 
                   duration: isOnline ? 0 && 0.6 : 2,
-                  repeat: isOnline ? 1 : Infinity,
+                  repeat: isOnline ? 1 : Infinity
 
 
                 }}

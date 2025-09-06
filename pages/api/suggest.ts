@@ -33,7 +33,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
   "React developers under $50/hr",
   "Part-time DevOps jobs in LATAM",
@@ -52,7 +51,7 @@ const SAMPLE_QUERIES = [;
   "Data scientists with Python",
   "Mobile app developers iOS / Android",
   "Cloud architects AWS / Azure",
-  "DevOps engineers with Kubernetes",
+  "DevOps engineers with Kubernetes"
 ];
   if (req && req.method !== "GET") {
     res && res.setHeader("Allow", "GET");
@@ -125,13 +124,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
 
 
 
 
-import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
 
 
@@ -162,7 +159,7 @@ const SAMPLE_QUERIES = [
   "Data scientists with Python",
   "Mobile app developers iOS / Android",
   "Cloud architects AWS / Azure",
-  "DevOps engineers with Kubernetes",
+  "DevOps engineers with Kubernetes"
 
 ];
 

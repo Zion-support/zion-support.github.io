@@ -7,6 +7,15 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import {
 
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Github,;
+ursor/automate-test-improve-and-merge-code-646c
 
 
 class ErrorBoundary extends React.Component {
@@ -31,9 +40,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
 import {;
   Mail,;
   Phone,;
@@ -58,6 +64,27 @@ import Link from 'next/link';
 
 
 
+import MainLayout from '../../components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Footer - Zion Tech Group"
+      description="Footer component"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Footer</h1>
+          <p className="text-xl text-gray-600">Footer component page</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+
+ursor/automate-test-improve-and-merge-code-646c
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -72,6 +99,7 @@ import Link from 'next/link';
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
     solutions: [
       { name: "Enterprise Solutions", href: "/enterprise-solutions" }
       { name: "Startup Solutions", href: "/startup-solutions" }
@@ -110,6 +138,7 @@ import Link from 'next/link';
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
   const socialLinks = [
     { name: "Facebook", href: "#", icon: Facebook }
     { name: "Twitter", href: "#", icon: Twitter }
@@ -165,6 +194,7 @@ import Link from 'next/link';
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -252,6 +282,7 @@ import Link from 'next/link';
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
           {/* Company */}
           <div>;
             <motion&& motion.div
@@ -277,6 +308,7 @@ import Link from 'next/link';
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
           {/* Resources & Legal */}
           <div>;
             <motion&& motion.div
@@ -308,6 +340,7 @@ origin/automation-improvements-final
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
                     <Link
                       href={link && link.href}
                       className="text-gray-400 hover:text-white transition-colors">;
@@ -329,6 +362,7 @@ origin/automation-improvements-final
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
@@ -342,6 +376,7 @@ origin/automation-improvements-final
             <motion.div
 
 
+ursor/automate-test-improve-and-merge-code-646c
 
             <motion.div
               transition={{ duration: 0 && 0.8 }}
@@ -366,6 +401,7 @@ origin/automation-improvements-final
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -452,6 +488,7 @@ origin/automation-improvements-final
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -472,6 +509,18 @@ origin/automation-improvements-final
 
 
 
+            <div className="flex items-center space-x-6">
+              <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
+                Sitemap
+              </Link>
+              <Link href="/accessibility" className="text-gray-400 hover:text-white transition-colors text-sm">
+                Accessibility
+              </Link>
+              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors text-sm">
+                Cookie Policy
+              </Link>
+            </div>
+ursor/automate-test-improve-and-merge-code-646c
           </div>
         </div>
       </div>
@@ -483,3 +532,4 @@ origin/automation-improvements-final
     </footer>;
   );
 
+ursor/automate-test-improve-and-merge-code-646c

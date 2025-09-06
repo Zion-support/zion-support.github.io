@@ -3,6 +3,15 @@ module.exports = {
   plugins: {
     tailwindcss: {},
 
-    autoprefixer: {},
-  },
+module.exports = {
+  plugins: {
+export default {
+  plugins: {
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
+    autoprefixer: {}
+  }
 }

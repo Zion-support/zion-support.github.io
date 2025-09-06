@@ -16,7 +16,7 @@
 
     res.status(200).send(pdfBuffer);
   } catch (error) {
-    try { await browser.close() } catch {  } catch (error) {
+    try { await browser.close() } catch {} catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }

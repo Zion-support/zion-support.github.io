@@ -29,7 +29,7 @@ const PriceIntelligenceService: NextPage = () => {
 
 },
 
-export default PriceIntelligenceService,
+export default PriceIntelligenceService
 
 
 }

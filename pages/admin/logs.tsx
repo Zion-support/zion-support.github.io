@@ -46,14 +46,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / ca
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
-import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue
 } from '@/components / ui / select';
-import {
   AlertTriangle,
   Info,
   AlertCircle,
@@ -67,10 +65,6 @@ import fs from 'fs';
 import path from 'path';
 
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 
 
 } from 'lucide-react';
@@ -86,7 +80,6 @@ interface LogEntry {;
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
-import { logErrorToProduction } from '@/utils/productionLogger';
 interface LogEntry {
   id: string,
   timestamp: string,
@@ -482,7 +475,7 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) =>: any {
     info: 'bg - green - 100 text - green - 800',
     warn: 'bg - yellow - 100 text - yellow - 800',
     error: 'bg - red - 100 text - red - 800',
-    critical: 'bg - red - 200 text - red - 900',
+    critical: 'bg - red - 200 text - red - 900'
   }
 ;
   return <Badge className={colors[level]}>{level.toUpperCase ()}</Badge>;

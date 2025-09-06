@@ -29,10 +29,7 @@ Do not include <html>, <body>, or scripts.`;
     let faq: Array<{ q: string; a: string }> = [];
     try {
       faq = JSON.parse(faqResp.choices?.[0]?.message?.content || "[]");
-    } catch {
-
-
-    }
+    } catch {}
     const h1 = prompt;
 
 
@@ -45,8 +42,8 @@ Do not include <html>, <body>, or scripts.`;
         bodyHtml: content,
         region: region || undefined,
         service: service || undefined,
-        faq,
-      },
+        faq
+      }
     });
   } catch (e) {
     console.error(e);

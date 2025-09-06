@@ -32,7 +32,7 @@ import Link from 'next / link';
           </li>;
         </ul>;
       </main>;
-    </div>),
+    </div>)
 }
 ;
 export default AutoIndex;
@@ -41,7 +41,7 @@ export default AutoIndex;
 
 export default AutoIndex
 
-  ),
+  )
 };
 
   )

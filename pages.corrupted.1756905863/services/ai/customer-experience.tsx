@@ -4,6 +4,14 @@
 
 
 
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
 export default function CustomerExperienceAI() {; return (; <Article; title=\"Customer Experience Analytics\"; subtitle=\"Unify NPS,chat,tickets,and product usage into actionable insights\"; price=\"from $8k\"; bullets={[; \'Multimodal sentiment across chat,calls,reviews,and tickets\',; \'Journey \"analytics\": drop-off detection and friction mapping\',; \'Auto-generated help center content and chatbot fine-tuning\',; \'ROI models that tie experience improvements to revenue\'; ]} /> );} ; function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Engagement\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <ContactFooter /> ></div> );} ; function ContactFooter() {; return (; <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: ></div> );} ;
 import React from 'react';
 interface CustomerexperienceProps {
@@ -12,7 +20,15 @@ interface CustomerexperienceProps {
 
 
 
-export default function Customerexperience({ }: CustomerexperienceProps) {
+}
+
+
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+ursor/automate-test-improve-and-merge-code-646c
+export default function Customerexperience({}: CustomerexperienceProps) {
   return (
     <div>
       <h1>Customerexperience</h1>
@@ -32,3 +48,21 @@ export default function Customerexperience({ }: CustomerexperienceProps) {
 
 
 
+}
+>>>>>>> origin/main
+
+
+
+}
+
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> main
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

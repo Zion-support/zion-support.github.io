@@ -11,7 +11,7 @@ import {
   Database,
 
   ArrowRight,
-  Check,
+  Check
 
 
 } from 'lucide-react';
@@ -23,7 +23,6 @@ function CloudPlatformPage() {
     {
 
 
-import React from 'react';
 import Head from 'next/head';
 import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react';
 
@@ -78,8 +77,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from 'react';
-import Head from 'next/head';
 import {;
   Cloud,;
   Shield,;
@@ -235,23 +232,23 @@ export default function CloudPlatformPage() {
                       <Globe className='w-4 h-4 mr-2' />                      15+ regions worldwide;
       icon: <Server className='w - 8 h - 8 text - white' />,
       title: 'Scalable Infrastructure',
-      description: 'Auto - scaling compute resources that grow with your needs',
+      description: 'Auto - scaling compute resources that grow with your needs'
     },
     {
       icon: <Database className='w - 8 h - 8 text - white' />,
       title: 'Managed Databases',
-      description: 'Fully managed databases with automated backups and scaling',
+      description: 'Fully managed databases with automated backups and scaling'
     },
     {
       icon: <Globe className='w - 8 h - 8 text - white' />,
       title: 'Global CDN',
-      description: 'Lightning - fast content delivery across the globe',
+      description: 'Lightning - fast content delivery across the globe'
     },
     {
       icon: <Shield className='w - 8 h - 8 text - white' />,
       title: 'Enterprise Security',
-      description: 'SOC 2 compliant with advanced threat protection',
-    },
+      description: 'SOC 2 compliant with advanced threat protection'
+    }
   ];
 ;
   const benefits = [;
@@ -260,7 +257,7 @@ export default function CloudPlatformPage() {
     'Real - time monitoring',
     'Automated scaling',
     'Pay - as - you - go pricing',
-    '24 / 7 expert support',  ];
+    '24 / 7 expert support'  ];
 ;
   return (
     <>;

@@ -10,7 +10,7 @@ function InstagramRedirect() {
 if ( {) {
   $2
 }
-      window.location.replace ('https: //instagram.com / ziontechgroup'),
+      window.location.replace ('https: //instagram.com / ziontechgroup')
 
     }
 
@@ -84,7 +84,7 @@ export default function InstagramRedirect() {
     if (typeof window !== 'undefined') {
       window.location.replace('https: //instagram.com/ziontechgroup')
     }
-      window.location.replace('https: //instagram.com/ziontechgroup'),
+      window.location.replace('https: //instagram.com/ziontechgroup')
     };
   }, []);
   return (
@@ -143,7 +143,6 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect } from 'react';
 
 
-import Head from 'next / head';
 export default /**
  * InstagramRedirect - Function description
  */
@@ -155,7 +154,7 @@ if ( {) {
 }
     }
 
-      window.location.replace('https: //instagram.com/ziontechgroup'),
+      window.location.replace('https: //instagram.com/ziontechgroup')
     };
 
   }, []);

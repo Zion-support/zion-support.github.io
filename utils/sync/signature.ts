@@ -1,9 +1,13 @@
 
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
 import crypto from "crypto";
 
 
 }
 
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
 export function getSyncSecret(): string | null {
   const raw = process.env.ZION_SYNC_SECRET || '';
   return raw.length > 0 ? raw : null;
@@ -33,7 +37,7 @@ export function signPayload(
   return {
     signature,
     timestamp,
-    nonce,
+    nonce
   };
 }
 
@@ -54,6 +58,22 @@ export function verifySignature(
 
 export function generateNonce(): string {
   return crypto.randomBytes(16).toString("hex");
+
+export function generateNonce(): string {
+  return crypto.randomBytes(16).toString("hex");
+// Signature utilities;
+export const signature = {
+  // Add signature functionality here;
+
+import crypto from 'crypto';
+
+
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  verify: (signature: string, message: string, address: string) => false,
+  sign: (message: string, private_key: string) => '',
+  recover: (signature: string, message: string) => '';
+>>>>>>> main
 }
 
 export function hashData(data: string): string {

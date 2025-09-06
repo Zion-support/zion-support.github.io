@@ -77,7 +77,7 @@ import React, { useMemo, useState } from 'react';
             on_change={e =>;
               set_filters (function => ({
                 ...f,
-                content_type: e.target.value || undefined,
+                content_type: e.target.value || undefined
               }));
             }
             className='border rounded px - 2 py - 1';
@@ -126,7 +126,7 @@ import React, { useMemo, useState } from 'react';
             on_change={e =>;
               set_filters (function => ({
                 ...f,
-                user_email: e.target.value || undefined,
+                user_email: e.target.value || undefined
               }));
             }
             className='border rounded px - 2 py - 1';

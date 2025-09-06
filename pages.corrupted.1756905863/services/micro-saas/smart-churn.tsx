@@ -4,6 +4,14 @@
 
 
 
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
 export default function SmartChurn() {; return (; <Article; title=\"Smart Churn Predictor\"; subtitle=\"ML-based churn scoring with prescriptive save plays\"; price=\"from $299/mo\"; bullets={[; \'Real-time churn scoring using product usage + billing + support\',; \'Sends save offers and playbooks to Intercom,Zendesk,or email\',; \'Cohort analysis and revenue-at-risk dashboards\',; \'Export to BigQuery/Snowflake; webhooks and REST API\'; ]} links={{ \"website\": \'https: /> );} ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;
 import React from 'react';
 interface SmartchurnProps {
@@ -12,7 +20,15 @@ interface SmartchurnProps {
 
 
 
-export default function Smartchurn({ }: SmartchurnProps) {
+}
+
+
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+ursor/automate-test-improve-and-merge-code-646c
+export default function Smartchurn({}: SmartchurnProps) {
   return (
     <div>
       <h1>Smartchurn</h1>
@@ -32,3 +48,21 @@ export default function Smartchurn({ }: SmartchurnProps) {
 
 
 
+}
+>>>>>>> origin/main
+
+
+
+}
+
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> main
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

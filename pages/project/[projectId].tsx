@@ -160,9 +160,6 @@ if (return, ) {
                   <li key={m.id}>
                     <span className="font-medium">{m.title}</span>
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import FeedbackModal from "../../components/ui/FeedbackModal";
 export default function ProjectPage(req, res) {
   try {
   const router = useRouter();

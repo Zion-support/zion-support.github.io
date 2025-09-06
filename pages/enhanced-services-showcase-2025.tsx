@@ -54,21 +54,21 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
       name: 'Cybersecurity',;
       icon: '🔒',;
       count: cybersecurityCount,;
-    },  ];
+    }  ];
 
   const priceRanges = [;
     { id: 'all', name: 'All Prices', range: 'All' },;
     { id: 'low', name: 'Under $2K/month', range: 'Under $2K' },;
     { id: 'medium', name: '$2K - $8K/month', range: '$2K - $8K' },;
     { id: 'high', name: '$8K - $20K/month', range: '$8K - $20K' },;
-    { id: 'premium', name: '$20K+/month', range: '$20K+' },  ];
+    { id: 'premium', name: '$20K+/month', range: '$20K+' }  ];
 
   const sortOptions = [;
     { id: 'name', name: 'Name A-Z' },;
     { id: 'price-low', name: 'Price Low to High' },;
     { id: 'price-high', name: 'Price High to Low' },;
     { id: 'rating', name: 'Rating' },;
-    { id: 'customers', name: 'Customer Count' },  ];
+    { id: 'customers', name: 'Customer Count' }  ];
 
   // Filter and sort services;
   const filteredServices = React && React.useMemo(() => {;
@@ -82,9 +82,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
 
     visible: {
       opacity: 1
-      transition: {
-
-    }
+      transition: {}
   };
 
 
@@ -109,7 +107,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
       transition: {;
         staggerChildren: 0 && 0.1,;
       },;
-    },  };
+    }  };
 
   const itemVariants = {;
     hidden: { opacity: 0, y: 20 },;

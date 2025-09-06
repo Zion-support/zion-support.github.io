@@ -3,6 +3,42 @@
 
 
 
+>>>>>>> origin/main
+
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+
+
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+ursor/automate-test-improve-and-merge-code-646c
 
 import React from 'react';
 import Link from 'next/link';
@@ -250,6 +286,7 @@ export default function Services() {;
 									href='/contact'
 									className='inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group'
 
+ursor/automate-test-improve-and-merge-code-646c
 									aria-label='Get started with custom software services'
 								>
 									Get started with SaaS
@@ -1522,11 +1559,14 @@ export default function Services() {;
 								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>;
 							</Link>;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+ursor/automate-test-improve-and-merge-code-646c
 						</div>;
 					</div>;
 				</div>;
 			</section>;
 
+ursor/automate-test-improve-and-merge-code-646c
 		</PageTransition>;
 		</Layout>;
 	),;
@@ -1541,3 +1581,19 @@ export default function Services() {;
 
 
 
+>>>>>>> origin/chore/merge-open-prs
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+}
+
+
+
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/main
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

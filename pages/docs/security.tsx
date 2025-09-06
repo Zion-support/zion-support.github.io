@@ -34,7 +34,6 @@ export default function SecurityDocRedirect() {
     </>
   )
 }
-import Head from 'next/head';
 export default function SecurityDocRedirect(req, res) {
   try {
   return (;

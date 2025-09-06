@@ -8,12 +8,12 @@ interface ModalProps {
   className?: string;
 }
 
-const Modal: React.FC<ModalProps> = ({ 
-  isOpen, 
-  onClose, 
-  title, 
-  children, 
-  className = '' 
+const Modal: React.FC<ModalProps> = ({
+  isOpen,
+  onClose,
+  title,
+  children,
+  className = '',
 }) => {
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -38,11 +38,11 @@ const Modal: React.FC<ModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       {/* Backdrop */}
-      <div 
+      <div
         className="absolute inset-0 bg-black bg-opacity-50"
         onClick={onClose}
       />
-      
+
       {/* Modal */}
       <div className={`relative bg-white rounded-lg shadow-xl max-w-md w-full mx-4 ${className}`}>
         {/* Header */}
@@ -59,7 +59,7 @@ const Modal: React.FC<ModalProps> = ({
             </button>
           </div>
         )}
-        
+
         {/* Content */}
         <div className="p-6">
           {children}

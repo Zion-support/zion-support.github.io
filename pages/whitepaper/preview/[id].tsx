@@ -39,7 +39,6 @@ export default function WhitepaperPreview() {;
   )
 }
 import {use_router} from 'next / router';
-import {useEffect, useState} from 'react';
 export default /**
  * WhitepaperPreview - Function description
  */
@@ -91,8 +90,6 @@ import { useRouter  } from 'next/router';
 import { useEffect, useState } from 'react';
 export default function WhitepaperPreview() {
 
-import {useRouter} from 'next/router';
-import {useEffect, useState} from 'react';
 export default function WhitepaperPreview() {;
 import { useRouter } from 'next/router',
 import { useEffect, useState } from 'react',
@@ -119,7 +116,6 @@ export default function WhitepaperPreview() {
     </div>
   )
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
 export default function WhitepaperPreview(req, res) {
   try {
   const router = useRouter();

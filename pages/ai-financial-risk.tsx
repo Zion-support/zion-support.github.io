@@ -103,7 +103,7 @@ import Button from '../components/ui/Button';
                     'Explainable AI',
                     'Stress testing',
                     'Model governance',
-                    'Real - time alerts',
+                    'Real - time alerts'
                   ]).map ((feat, i) => (
                   <li;
                     key={i}
@@ -156,10 +156,6 @@ import Button from '../components/ui/Button';
                 </div>              </div>;
 
   )
-import NextHead from 'next/head';
-import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
 import { innovativeAIServices } from '../data/innovative-ai-services';
 export default function AIFinancialRiskPage(req, res) {
   try {

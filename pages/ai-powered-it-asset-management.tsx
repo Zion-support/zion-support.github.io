@@ -39,7 +39,7 @@ const AIPoweredITAssetManagement = () => {
     },
     {
       icon: TrendingUp,
-      title: "Predictive Analytics",
+      title: "Predictive Analytics"
 
   ],
   const asset_types = [;

@@ -54,7 +54,6 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
       .json({ error: error?.message |"Failed to list proposals" });
       .json({ error: error?.message || "Failed to list proposals" });
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 

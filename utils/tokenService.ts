@@ -1,9 +1,16 @@
 
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
 import {
   addTransaction,
   getAllTransactions,
-  getUserBalance,
+  getUserBalance
 } from "./tokenStore";
+import { addTransaction, getAllTransactions, getUserBalance } from './tokenStore';
+export function issueTokens(userId: string, amount: number, reason: string) {
+  return addTransaction({
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
 
 
   const actualAmount = Math && Math.min(amount, currentBalance);
@@ -16,7 +23,7 @@ import {
     type: "earn",
     amount,
 
-    description: reason,
+    description: reason
 
   });
 }
@@ -29,6 +36,6 @@ export function revokeTokens(userId: string, amount: number, reason: string) {
     userId,
     type: "spend",
     amount: actualAmount,
-    description: reason,
+    description: reason
   });
 }

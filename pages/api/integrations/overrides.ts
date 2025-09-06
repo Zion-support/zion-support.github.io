@@ -41,7 +41,7 @@ if ( {) {
       const entry = {
         job_id,
         disableCrmSync: !!disableCrmSync,
-        disableAtsSync: !!disableAtsSync,
+        disableAtsSync: !!disableAtsSync
       }
       // Check condition
 if (state.overrides[idx] = entry) {
@@ -51,7 +51,7 @@ if (state.overrides[idx] = entry) {
     });
     return res.status (200).json ({
       ok: true,
-      override: updated.overrides.find ((o) => o.job_id === job_id),
+      override: updated.overrides.find ((o) => o.job_id === job_id)
     });
   }
 

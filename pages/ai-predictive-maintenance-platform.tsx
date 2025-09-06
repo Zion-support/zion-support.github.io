@@ -10,7 +10,6 @@ export default function AIPredictiveMaintenancePlatform() {
 			industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]}
 export default function AIPredictiveMaintenancePlatform() {
   return <div>AI Predictive Maintenance Platform</div>;
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding',
 
 

@@ -96,7 +96,6 @@ import React, { useState } from 'react';
               </span>{' '}
 
 
-import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -1667,7 +1666,7 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
     const categoryMatch = selectedCategory === 'All Services' || service.category.includes(selectedCategory);
     let priceMatch = true;
     if (selectedPriceRange !== 'All Prices') {;
-      const price = parseInt(service.price.replace('$', '')),;
+      const price = parseInt(service.price.replace('$', ''));
       switch (selectedPriceRange) {;
         case 'Under $300':;
           priceMatch = price < 300;

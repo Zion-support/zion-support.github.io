@@ -1,5 +1,14 @@
+import _React,{ createContext,useContext,useState } from 'react'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} "id": Date.now().toString(); content,; "timestamp": new Date(),; "isRead": 'false',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
+import React,{ createContext,useContext,useState } from \'react\'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} \"id\": Date && Date.now().toString(),; content,; \"timestamp\": new Date(),; \"isRead\": \'false\',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
+const React,{ createContext,useContext,useState } from "react"; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} id: Date && Date.now().toString(),; content,; timestamp: new Date(),; isRead: "false",; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };'"'"
+ursor/automate-test-improve-and-merge-code-646c
 
 import _React,{ createContext,useContext,useState } from 'react'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} "id": Date.now().toString(),; content,; "timestamp": new Date(),; "isRead": 'false',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
 
 
 
+>>>>>>> main
+import React,{ createContext,useContext,useState } from \'react\'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} \"id\": Date.now().toString(),; content,; \"timestamp\": new Date(),; \"isRead\": \'false\',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
+const React,{ createContext,useContext,useState } from "react"; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} id: Date.now().toString(),; content,; timestamp: new Date(),; isRead: "false",; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };'"'"
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

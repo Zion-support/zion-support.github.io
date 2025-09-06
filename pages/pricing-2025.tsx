@@ -19,7 +19,6 @@ import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micr
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
-import { 
   ArrowRight, Check, Star, Users, Zap, Shield, Globe, 
   TrendingUp, Award, Clock, CheckCircle, ExternalLink
 } from 'lucide-react',;
@@ -55,7 +54,6 @@ export default function Pricing2025() {
 import React, { useState } from 'react',
 import Head from 'next / head',
 import { motion } from 'framer-motion',
-import {
   ArrowRight, Check, Star, Users, Zap, Shield, Globe,
   TrendingUp, Award, Clock, CheckCircle, ExternalLink;
 } from 'lucide-react',
@@ -124,16 +122,10 @@ const filtered_services = innovative2025MicroSaasExpansionV3.filter (service =>;
 
 
 
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
 import {;
   ArrowRight, Check, Star, Users, Zap, Shield, Globe,;
   TrendingUp, Award, Clock, CheckCircle, ExternalLink;
 } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
 export default function Pricing2025(req, res) {
   try {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -154,7 +146,7 @@ export default function Pricing2025(req, res) {
     selectedCategory === 'all' || service.category.includes(selectedCategory);
   );
   const getAnnualPrice = (monthlyPrice: string) => {;
-    const price = parseFloat(monthlyPrice.replace('$', '')),;
+    const price = parseFloat(monthlyPrice.replace('$', ''));
     const annualPrice = price * 12 * 0.8, // 20% discount for annual;
     return `$${Math.round(annualPrice)}`;
   },;
@@ -1192,16 +1184,9 @@ export default function Pricing2025(req, res) {
       }
     }
   }
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {;
   ArrowRight, Check, Star, Users, Zap, Shield, Globe,;
   TrendingUp, Award, Clock, CheckCircle, ExternalLink;
 } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
 export default function Pricing2025(req, res) {
   try {
   const [selectedCategory, setSelectedCategory] = useState('all');

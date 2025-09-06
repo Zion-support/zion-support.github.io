@@ -131,7 +131,7 @@ import Link from 'next / link';
         { name: 'CPU Usage', value: '23%', status: 'good', trend: '-5%' },
         { name: 'Memory Usage', value: '67%', status: 'good', trend: '+3%' },
 
-        { name: 'Disk I/O', value: '45 MB/s', status: 'excellent', trend: '+18%' },
+        { name: 'Disk I/O', value: '45 MB/s', status: 'excellent', trend: '+18%' }
 
 
 

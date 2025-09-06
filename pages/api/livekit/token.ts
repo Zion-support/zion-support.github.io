@@ -13,7 +13,7 @@
     const token = await at.to_jwt ();
 ;
     return res.status (200).json ({
-      token,
+      token
 
 
 

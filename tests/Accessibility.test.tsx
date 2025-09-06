@@ -2,3 +2,11 @@ import { render, axe, toHaveNoViolations } from 'lucide-react'; import { ModeTog
 });'
 
 
+</ModeToggle>'
+</ModeToggle>'
+</ModeToggle>'
+>>>>>>> main
+</ModeToggle>'
+</ModeToggle>'
+</ModeToggle>'
+ursor/automate-test-improve-and-merge-code-646c

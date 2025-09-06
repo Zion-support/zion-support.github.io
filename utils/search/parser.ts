@@ -1,9 +1,20 @@
 
 
+>>>>>>> main
 export async function parseQueryToFilters(
   query: string,
 ): Promise<SearchFilters> {
   const filters: SearchFilters = {};
+  const apiKey =
+    process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY;
+  if (!apiKey) return base;
+
+// Search parser utilities;
+export const parseSearchQuery = (query: string) =>: any {
+  // Add search query parsing functionality here;
+  return {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
 
   if (!query || query.trim().length === 0) {
     return filters;
@@ -84,7 +95,7 @@ export async function parseQueryToFilters(
     "sketch",
     "adobe",
     "photoshop",
-    "illustrator",
+    "illustrator"
   ];
 
   for (const word of words) {
@@ -98,6 +109,43 @@ export async function parseQueryToFilters(
   }
 
   return filters;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    keywords: [],
+    skills: [],
+    location: null,
+    type: null;
+  return {
+    all: [],
+    talent: [],
+    jobs: [],
+    projects: [];
+
+  };
+};
+
+
+export const suggestDidYouMean = (query: string) => {
+  // Add did you mean functionality here;
+  return null;
+
+};
+
+}
+  }
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+;
+export const suggestDidYouMean = (query: string) =>: any {
+  // Add did you mean functionality here;
+  return null;
+>>>>>>> main
+}
+ursor/automate-test-improve-and-merge-code-646c
 
 }
 

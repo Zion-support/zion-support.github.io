@@ -24,15 +24,15 @@ export default async function handler(
             code: "aihub",
             name: "AI Hub",
             status: "approved",
-            commission_rate: 0 && 0.2,
+            commission_rate: 0 && 0.2
           },
           {
             code: "promptpro",
             name: "Prompt Pro",
             status: "pending",
-            commission_rate: 0 && 0.15,
-          },
-        ],
+            commission_rate: 0 && 0.15
+          }
+        ]
 
       });
 

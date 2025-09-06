@@ -41,7 +41,7 @@ function LiveRegion() {
 ;
 // Focus trap for modals and dialogs;
 export function useFocusTrap(enabled: boolean = true) {;
-  const containerRef = useRef<HTMLDivElement>(null),;
+  const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {;
     if (!enabled || !containerRef.current) return,;
     const container = containerRef.current,;

@@ -1,9 +1,16 @@
 
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+ursor/automate-test-improve-and-merge-code-646c
 import React from 'react';
 interface AisearchProps {
   // Add props here as needed
 }
-export default function Aisearch({ }: AisearchProps) {
+export default function Aisearch({}: AisearchProps) {
   return (
     <div>
       <h1>Aisearch</h1>
@@ -12,3 +19,11 @@ export default function Aisearch({ }: AisearchProps) {
   );
 }
 
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

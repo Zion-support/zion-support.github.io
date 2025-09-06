@@ -1,5 +1,9 @@
 import "@testing-library/jest-dom";
 
+require('@testing-library/jest-dom');
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+ursor/automate-test-improve-and-merge-code-646c
 // Mock Next.js router
 jest.mock("next/router", () => ({
   useRouter() {
@@ -17,12 +21,13 @@ jest.mock("next/router", () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
-        emit: jest.fn(),
-      },
+        emit: jest.fn()
+      }
     };
-  },
+  }
 }));
 
+ursor/automate-test-improve-and-merge-code-646c
 // Mock Next.js Image component
 jest.mock("next/image", () => {
   const React = require("react");
@@ -38,7 +43,7 @@ jest.mock("next/link", () => {
     _esModule: true,
     default: ({ children, href, ...props }) => {
       return React.createElement("a", { href, ...props }, children);
-    },
+    }
   };
 });
 
@@ -53,10 +58,12 @@ Object.defineProperty(window, "matchMedia", {
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
+    dispatchEvent: jest.fn()
+  }))
 });
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+ursor/automate-test-improve-and-merge-code-646c
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -64,6 +71,7 @@ global.IntersectionObserver = class IntersectionObserver {
   observe() {}
   unobserve() {}
 };
+
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
@@ -77,3 +85,50 @@ global.ResizeObserver = class ResizeObserver {
 beforeEach(() => {
   jest.clearAllMocks();
 });
+});
+require('@testing-library/jest-dom');
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+// Mock matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn()
+  }))
+});
+>>>>>>> main
+    "media": query,
+    "onchange": null,
+    "addListener": jest.fn(), // deprecated
+    "removeListener": jest.fn(), // deprecated
+    "addEventListener": jest.fn(),
+    "removeEventListener": jest.fn(),
+    "dispatchEvent": jest.fn()}))});
+import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn()}))});
+>>>>>>> main
+
+// Global test setup
+beforeEach(() => {
+  jest.clearAllMocks();
+});
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

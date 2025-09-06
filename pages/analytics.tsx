@@ -11,7 +11,7 @@ import {
   ArrowRight,
 
   Check,
-  Eye,
+  Eye
 
 
 } from 'lucide-react';
@@ -23,7 +23,6 @@ function AnalyticsPage() {
     {
 
 
-import React from 'react';
 import Head from 'next/head';
 import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react';
 
@@ -78,8 +77,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from 'react';
-import Head from 'next/head';
 import {;
   BarChart3,;
   TrendingUp,;

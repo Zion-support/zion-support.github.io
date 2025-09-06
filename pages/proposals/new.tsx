@@ -85,7 +85,7 @@ const NewProposal: NextPage = () => {
 }
 
 },
-export default NewProposal,
+export default NewProposal
 
 },
 

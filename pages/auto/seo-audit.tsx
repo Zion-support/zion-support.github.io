@@ -45,7 +45,7 @@ const SEOAudit: NextPage = () => {
 
 },
 
-export default SEOAudit,
+export default SEOAudit
 
 
 }

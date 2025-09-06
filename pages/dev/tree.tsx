@@ -26,7 +26,7 @@ function DevTreePage() {
   const fetch_tree = async (token?: string) => {
     try {
       const resp = await fetch ('/api / dev / source - map', {
-        headers: token ? { 'x - admin - token': token } : undefined,
+        headers: token ? { 'x - admin - token': token } : undefined
       });
       // Check condition
 if ( {) {

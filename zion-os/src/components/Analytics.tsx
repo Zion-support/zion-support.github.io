@@ -75,7 +75,7 @@ if ( {) {
 
       return () => {observer.disconnect();
           if (entry.entryType === "first-input") {;
-            const firstInputEntry = entry as FirstInputEntry,;
+            const firstInputEntry = entry as FirstInputEntry;
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
           }
         }

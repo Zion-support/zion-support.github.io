@@ -71,7 +71,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
       description:;
         'Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.',;
       color: 'from-yellow-500 to-orange-500',;
-    },  ];
+    }  ];
 
 
     },
@@ -81,7 +81,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
       icon: BarChart3,
 
       description: 'Radiology information systems',
-      color: 'from - orange - 500 to - red - 500',
+      color: 'from - orange - 500 to - red - 500'
 
     },
 
@@ -90,7 +90,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
       icon: Stethoscope,
 
       description: 'CT, MRI, X - ray, ultrasound machines',
-      color: 'from - indigo - 500 to - blue - 500',
+      color: 'from - indigo - 500 to - blue - 500'
 
     },
 
@@ -161,28 +161,28 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
 
       description:;
         'Heart disease detection, ECG analysis, cardiovascular risk assessment',
-      accuracy: '99.1%',
+      accuracy: '99.1%'
     },
     {
       icon: Brain,
       name: 'Neurology',
       description:;
         'Brain tumor detection, stroke diagnosis, neurological disorder analysis',
-      accuracy: '98.9%',
+      accuracy: '98.9%'
     },
     {
       icon: Activity,
       name: 'Pulmonology',
       description:;
         'Lung cancer screening, pneumonia detection, respiratory disease analysis',
-      accuracy: '99.3%',
+      accuracy: '99.3%'
     },
     {
       icon: Eye,
       name: 'Ophthalmology',
       description:;
         'Retinal disease detection, glaucoma screening, diabetic retinopathy',
-      accuracy: '98.7%',
+      accuracy: '98.7%'
     },
     {
       icon: Shield,
@@ -190,15 +190,15 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
       description:;
 
         'Liver disease detection, cirrhosis assessment, tumor identification',
-      accuracy: '99.0%',
+      accuracy: '99.0%'
     },
     {
       icon: Microscope,
       name: 'Nephrology',
       description:;
         'Kidney disease detection, renal function analysis, transplant assessment',
-      accuracy: '98.8%',
-    },  ];
+      accuracy: '98.8%'
+    }  ];
 ;
   return (
     <Layout>;

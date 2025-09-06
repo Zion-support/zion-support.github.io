@@ -68,7 +68,7 @@ export default function PostJobPage() {
 
 
 
-      setIsSubmitting(false),
+      setIsSubmitting(false)
 
     }
 
@@ -78,8 +78,6 @@ export default function PostJobPage() {
 
 
 
-import { useState } from 'react';
-import { useRouter } from 'next/router';
 export default function PostJobPage(req, res) {
   try {
   const router = useRouter();
@@ -146,7 +144,7 @@ export default function PostJobPage(req, res) {
     <div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
 
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
   }
   return (

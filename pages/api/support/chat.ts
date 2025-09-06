@@ -17,7 +17,7 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
   const sysMessage = {
     role: "system" as const,
     content:
-      SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : ""),
+      SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : "")
   };
 
 
@@ -53,7 +53,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const sysMessage = {
     role: "system" as const,
     content:
-      SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : ""),
+      SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : "")
   };
 
 
@@ -62,7 +62,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
-      messages: [sysMessage, ...messages],
+      messages: [sysMessage, ...messages]
 
 
   }
@@ -90,7 +90,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const sys_message = {
     role: "system" as const,
     content:;
-      SYSTEM_PROMPT + (context ? `\n_relevant help links:\n${context}` : ""),
+      SYSTEM_PROMPT + (context ? `\n_relevant help links:\n${context}` : "")
   }
 ;
   try {
@@ -100,7 +100,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
-      temperature: 0.2,
+      temperature: 0.2
     });
 
     const assistantMessage =
@@ -110,7 +110,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await logSupportEventToOperator({
       type: "chat_completion",
       sessionId: sessionId ?? "unknown",
-      payload: { intent },
+      payload: { intent }
     });
 
 
@@ -125,9 +125,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
           title: a.title,
-          href: `/help/${a.slug}`,
-        })),
-      },
+          href: `/help/${a.slug}`
+        }))
+      }
 
 
     });
@@ -135,7 +135,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json({
       assistantMessage:
-        "I could not reach the assistant right now. Please try again in a moment.",
+        "I could not reach the assistant right now. Please try again in a moment."
     });
 
 

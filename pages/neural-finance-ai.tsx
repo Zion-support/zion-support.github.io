@@ -35,7 +35,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',}
+  website: 'https://ziontechgroup.com'}
 const features = [
   {
 
@@ -60,13 +60,13 @@ const pricingPlans = [
 import Head from 'next / head';
 import Link from 'next / link';
 import {motion} from 'framer-motion';
-import {Brain, DollarSign, TrendingUp, Shield, Zap, CheckCircle, ArrowRight, Star, Users, Award, Clock, Globe, BarChart3, Target, Microscope, Phone, Mail, MapPin, ArrowUpRight, Play, BarChart, PieChart, LineChart, Activity, } from 'lucide-react';
+import {Brain, DollarSign, TrendingUp, Shield, Zap, CheckCircle, ArrowRight, Star, Users, Award, Clock, Globe, BarChart3, Target, Microscope, Phone, Mail, MapPin, ArrowUpRight, Play, BarChart, PieChart, LineChart, Activity } from 'lucide-react';
 import Layout from '../components / layout / Layout';
 const contact_info = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com', }
+  website: 'https://ziontechgroup.com' }
 ;
 const features = [;
   {
@@ -74,43 +74,43 @@ const features = [;
     description:;
       'Advanced AI algorithms analyze market sentiment with 94% accuracy using neural networks and natural language processing.',
     icon: Brain,
-    color: 'from - violet - 500 to - purple - 600',
+    color: 'from - violet - 500 to - purple - 600'
   },
   {
     title: 'AI - Powered Risk Assessment',
     description:;
       'Intelligent risk modeling using machine learning to identify and quantify potential risks in real - time.',
     icon: Shield,
-    color: 'from - blue - 500 to - cyan - 600',
+    color: 'from - blue - 500 to - cyan - 600'
   },
   {
     title: 'Predictive Market Analysis',
     description:;
       'Neural network - powered forecasting models that predict market trends with unprecedented accuracy.',
     icon: TrendingUp,
-    color: 'from - green - 500 to - emerald - 600',
+    color: 'from - green - 500 to - emerald - 600'
   },
   {
     title: 'Automated Trading Strategies',
     description:;
       'Backtest and deploy automated trading strategies with advanced risk management and execution algorithms.',
     icon: Zap,
-    color: 'from - orange - 500 to - red - 600',
+    color: 'from - orange - 500 to - red - 600'
   },
   {
     title: 'Portfolio Performance Monitoring',
     description:;
       'Real - time portfolio tracking with advanced analytics, performance metrics, and optimization suggestions.',
     icon: BarChart3,
-    color: 'from - pink - 500 to - purple - 600',
+    color: 'from - pink - 500 to - purple - 600'
   },
   {
     title: 'Multi - Asset Class Support',
     description:;
       'Comprehensive coverage of stocks, cryptocurrencies, forex, commodities, and alternative investments.',
     icon: Globe,
-    color: 'from - cyan - 500 to - blue - 600',
-  }, ];
+    color: 'from - cyan - 500 to - blue - 600'
+  } ];
 ;
 const pricing_plans = [;
   {
@@ -124,10 +124,10 @@ const pricing_plans = [;
       'Risk assessment and management',
       'Email support',
       'Up to 5 trading strategies',
-      'Basic reporting and analytics',
+      'Basic reporting and analytics'
     ],
     popular: false,
-    color: 'from - gray - 500 to - gray - 600',
+    color: 'from - gray - 500 to - gray - 600'
 
   },  {
     name: 'Professional'
@@ -163,7 +163,7 @@ const pricing_plans = [;
     ]
     popular: false
     color: 'from-purple-500 to-pink-600'
-  },];
+  }];
 const useCases = [
   {
     title: 'Algorithmic Trading Strategy Development'
@@ -204,14 +204,14 @@ const useCases = [
       'Generate comprehensive financial reports and compliance documentation automatically.'
     icon: Activity
     benefits: ['Time savings', 'Regulatory compliance', 'Accurate reporting']
-  },];
+  }];
 const integrations = [
   { name: 'Bloomberg Terminal', logo: '🔵', category: 'Market Data' }
   { name: 'Reuters Eikon', logo: '🔴', category: 'Market Data' }
   { name: 'TradingView', logo: '📊', category: 'Charting' }
   { name: 'MetaTrader', logo: '📈', category: 'Trading Platform' }
   { name: 'Interactive Brokers', logo: '🏦', category: 'Broker' }
-  { name: 'TD Ameritrade', logo: '💼', category: 'Broker' },];
+  { name: 'TD Ameritrade', logo: '💼', category: 'Broker' }];
 
                   Neural Finance AI
                 </span>
@@ -394,7 +394,7 @@ const integrations = [
                         94%;
                       </div>;
                       <div className='text-sm text-gray-400'>;
-  { name: 'TD Ameritrade', logo: '💼', category: 'Broker' }, ];
+  { name: 'TD Ameritrade', logo: '💼', category: 'Broker' } ];
 ;
 const NeuralFinanceAI: React.FC = () => {
   return (
@@ -927,7 +927,7 @@ export default NeuralFinanceAI;
 
 
 
-    </Layout>),
+    </Layout>)
 }
 ;
 export default NeuralFinanceAI;

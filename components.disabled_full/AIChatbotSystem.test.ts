@@ -2,6 +2,14 @@
 
 import AIChatbotSystem from './AIChatbotSystem;
 
+>>>>>>> origin/main
+
+
+import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />)}); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)})});
+import AIChatbotSystem from './AIChatbotSystem;';
+>>>>>>> origin/main
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
 describe('AIChatbotSystem', () => {;
   it('renders without crashing', () => {;
     render(<AIChatbotSystem />);
@@ -11,8 +19,14 @@ describe('AIChatbotSystem', () => {;
     // Add specific content checks based on component functionality});
   it('handles user interactions', () => {;
     render(<AIChatbotSystem />);
-import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />); }); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)});,});
+import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />); }); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)});});
 // Add interaction tests based on component functionality})});
+>>>>>>> main
+>>>>>>> main
+>>>>>>> origin/main
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+ursor/automate-test-improve-and-merge-code-646c
 
 
 
@@ -31,7 +45,12 @@ ursor/automate-test-improve-and-merge-code-2480
 
 
 
-import AIChatbotSystem from './AIChatbotSystem; ; describe('AIChatbotSystem',() => {; it('renders without crashing',() => {; render(<AIChatbotSystem />); ; expect(screen.getByRole('main')).toBeInTheDocument();' });'; it('displays correct content',() => {; render(<AIChatbotSystem />)}); ; it('handles user interactions',() => {; render(<AIChatbotSystem />)}),});
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+>>>>>>> main
+>>>>>>> origin/main
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

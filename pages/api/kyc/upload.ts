@@ -8,7 +8,7 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 
-const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
+const DATA_DIR = path.join(process.cwd(), 'datakyc');
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
 
@@ -23,9 +23,7 @@ const FILE = path.join(DATA_DIR, 'profiles.json');
 
 
 function load(): Record<string, KycProfile> {
-  try {
-
-  };
+  try {};
   if (!userId || !kind || !filename)
     return res && res.status(400).json({ error: 'Missing userId, kind or filename' });
 
@@ -135,7 +133,7 @@ if (
     id,
     kind,
     filename,
-    uploaded_at,
+    uploaded_at
   }
   // Replace or add;
   const withoutSameKind = (profile.documents || []).filter (
@@ -146,7 +144,7 @@ if (
     at: uploaded_at,
     by: user_id,
     action: 'document_uploaded',
-    details: { kind, filename },
+    details: { kind, filename }
   });
   db[user_id] = profile;
   save (db);

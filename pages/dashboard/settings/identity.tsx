@@ -55,11 +55,7 @@ function load() {
       else set_error (data.error || 'Not found');
 
 
-import React, { useEffect, useState } from 'react';
 
-import Head from 'next/head';
-import type { KycProfile } from '../../../utils/kyc';
-import { ProfileBadges } from '../../../components/ui/ProfileBadges';
 export default function IdentitySettingsPage() {
 
   const [userId, setUserId] = useState('demo-user')
@@ -68,10 +64,6 @@ export default function IdentitySettingsPage() {
   async function load() {
 
 
-import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
-import type { KycProfile } from '../../../utils/kyc';
-import { ProfileBadges } from '../../../components/ui/ProfileBadges';
 export default function IdentitySettingsPage(req, res) {
   try {
   const [userId, setUserId] = useState('demo-user');

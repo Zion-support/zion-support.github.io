@@ -5,9 +5,41 @@ interface IntegrationState {
 }
 let state: IntegrationState = {
 
+ursor/automate-test-improve-and-merge-code-646c
   connections: [],
   logs: [],
   overrides: [],
+  connections: [],
+  logs: [],
+  overrides: []
+}
+export function getState(): IntegrationState {
+
+export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
+
+
+  updater(state);
+  return { ...state }
+}
+export function resetState(): void {
+  state = {
+
+  connections: [],
+  logs: [],
+  overrides: [];
+  connections: []
+  logs: []
+  overrides: []
+}
+;
+export function get_state (): IntegrationState {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  return { ...state }
+}
+export function write_state (updater: (state: IntegrationState) => void): IntegrationState {
+  updater (state);
+export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
+>>>>>>> main
 };
 
 export function getState(): IntegrationState {;
@@ -17,6 +49,11 @@ export function getState(): IntegrationState {;
 export function writeState(
   updater: (state: IntegrationState) => void,
 ): IntegrationState {
+export function writeState(
+  updater: (state: IntegrationState) => void,
+): IntegrationState {
+export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
+>>>>>>> main
   updater(state);
 
 
@@ -37,11 +74,30 @@ export function get_state (): IntegrationState {
   return { ...state }
 }
 export function reset_state (): void {
-  state = {
-
+  state = {}
     connections: [],
     logs: [],
-    overrides: [],
+    overrides: [];
+    connections: []
+    logs: []
+    overrides: []
+  }
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
+    connections: [],
+    logs: [],
+    overrides: []
   };
 }
 
+}
+
+}
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

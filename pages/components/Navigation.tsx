@@ -14,6 +14,27 @@ import {
 
 
 
+import React from 'react';
+import MainLayout from '../../components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Navigation - Zion Tech Group"
+      description="Navigation component"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Navigation</h1>
+          <p className="text-xl text-gray-600">Navigation component page</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+ursor/automate-test-improve-and-merge-code-646c
   BookOpen,
   Brain,
   Building,
@@ -94,6 +115,46 @@ import {;
   Zap,;
 
 } from "lucide-react";
+  Clock,
+  DollarSign,
+  Cpu,
+  Rocket,
+  Car,
+  Sprout,
+  Wifi,
+  GraduationCap,
+  Award as Recognition,
+  Star as Rating,
+  Users as People,
+  Settings as Config,
+  BarChart3 as Analytics,
+  Shield as Security,
+  Code as Programming,
+  Zap as Lightning,
+  Globe as World,
+  Home as House,
+  Building as Office,
+  FileText as Document,
+  MessageSquare as Chat,
+  Calendar as Schedule,
+  ShoppingCart as Cart,
+  BookOpen as Book,
+  Camera as Photo,
+  Music as Audio,
+  Gamepad2 as Gaming,
+  Heart as Love,
+  Truck as Delivery,
+  Calculator as Math,
+  CreditCard as Payment,
+  Lock as Secure,
+  Eye as View,
+  Target as Goal,
+  TrendingUp as Growth,
+  Clock as Time,
+  DollarSign as Money;
+
+
+ursor/automate-test-improve-and-merge-code-646c
 
 
 } from 'lucide-react';
@@ -150,6 +211,7 @@ import {;
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
 const navigationItems = [
   {
     title: "Services"
@@ -190,21 +252,21 @@ const navigation_items = [;
         href: "/ai - services",
         icon: Brain,
         description: "30+ cutting - edge AI solutions",
-        popular: true,
+        popular: true
       },
       {
         title: "IT Services",
         href: "/it - services",
         icon: Network,
         description: "25+ comprehensive IT services",
-        popular: true,
+        popular: true
       },
       {
         title: "Micro SaaS",
         href: "/micro - saas",
         icon: Cloud,
         description: "40+ innovative micro SaaS solutions",
-        popular: true,
+        popular: true
       },
       {
         title: "Cybersecurity"
@@ -220,17 +282,18 @@ const navigation_items = [;
         href: "/cloud - solutions",
         icon: Cloud,
         description: "Scalable cloud infrastructure",
-        popular: false,
+        popular: false
       },
 
+ursor/automate-test-improve-and-merge-code-646c
       {
         title: "Data Analytics",
         href: "/data - analytics",
         icon: BarChart3,
         description: "Advanced analytics platform",
-        popular: false,
-      },
-    ],
+        popular: false
+      }
+    ]
   },
   {
     title: "Solutions",
@@ -241,27 +304,27 @@ const navigation_items = [;
         title: "Enterprise Solutions",
         href: "/solutions / enterprise",
         icon: Building,
-        description: "Comprehensive enterprise solutions",
+        description: "Comprehensive enterprise solutions"
       },
       {
         title: "Startup Solutions",
         href: "/solutions / startup",
         icon: Rocket,
-        description: "Rapid deployment for startups",
+        description: "Rapid deployment for startups"
       },
       {
         title: "Industry Solutions",
         href: "/solutions / industry",
         icon: BarChart3,
-        description: "Industry - specific solutions",
+        description: "Industry - specific solutions"
       },
       {
         title: "Custom Solutions",
         href: "/solutions / custom",
         icon: Settings,
-        description: "Tailored custom solutions",
-      },
-    ],
+        description: "Tailored custom solutions"
+      }
+    ]
   },
   {
     title: "Industries",
@@ -272,39 +335,39 @@ const navigation_items = [;
         title: "Healthcare",
         href: "/industries / healthcare",
         icon: Heart,
-        description: "Medical AI and health tech",
+        description: "Medical AI and health tech"
       },
       {
         title: "Finance",
         href: "/industries / finance",
         icon: DollarSign,
-        description: "Fintech and financial services",
+        description: "Fintech and financial services"
       },
       {
         title: "Manufacturing",
         href: "/industries / manufacturing",
         icon: Settings,
-        description: "Industrial automation",
+        description: "Industrial automation"
       },
       {
         title: "Retail",
         href: "/industries / retail",
         icon: ShoppingCart,
-        description: "E - commerce and retail tech",
+        description: "E - commerce and retail tech"
       },
       {
         title: "Education",
         href: "/industries / education",
         icon: BookOpen,
-        description: "EdTech solutions",
+        description: "EdTech solutions"
       },
       {
         title: "Real Estate",
         href: "/industries / real - estate",
         icon: Home,
-        description: "PropTech innovations",
-      },
-    ],
+        description: "PropTech innovations"
+      }
+    ]
   },
   {
 
@@ -314,6 +377,7 @@ const navigation_items = [;
     submenu: [;
 
 
+ursor/automate-test-improve-and-merge-code-646c
       {
         title: "Blog"
         href: "/blog"
@@ -326,24 +390,26 @@ const navigation_items = [;
         title: "Case Studies",
         href: "/case - studies",
         icon: BarChart3,
-        description: "Success stories and results",
+        description: "Success stories and results"
       },
 
+ursor/automate-test-improve-and-merge-code-646c
       {
         title: "White Papers",
         href: "/white - papers",
         icon: FileText,
-        description: "In - depth research reports",
+        description: "In - depth research reports"
       },
       {
 
         title: "Tutorials",
         href: "/tutorials",
         icon: BookOpen,
-        description: "Step - by - step guides",
+        description: "Step - by - step guides"
       },
 
 
+ursor/automate-test-improve-and-merge-code-646c
       {
         title: "FileTextation"
         href: "/docs"
@@ -361,6 +427,7 @@ const navigation_items = [;
     submenu: [;
 
 
+ursor/automate-test-improve-and-merge-code-646c
       {
         title: "About Us"
         href: "/about"
@@ -608,6 +675,18 @@ const navigationItems = [;
   },;
 ];
 
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+
+
+export default function Navigation() {;
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+
+
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
+ursor/automate-test-improve-and-merge-code-646c
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}
@@ -642,7 +721,7 @@ const quick_links = [;
   { title: "Support", href: "/support", icon: MessageSquare },
   { title: "Status", href: "/status", icon: BarChart3 },
   { title: "Quote", href: "/quote", icon: FileText },
-  { title: "API Docs", href: "/api - docs", icon: Code },
+  { title: "API Docs", href: "/api - docs", icon: Code }
 ];
 ;
 export default /**
@@ -681,6 +760,7 @@ function Navigation() {
               >;
 
 
+ursor/automate-test-improve-and-merge-code-646c
                 View Pricing;
               </Link>;
             </div>;
@@ -699,6 +779,7 @@ function Navigation() {
               </div>;
               <div className="text-sm text-gray-500">;
 
+ursor/automate-test-improve-and-merge-code-646c
       {/* Main Navigation */}
       <div className="container mx - auto px - 4">;
         <div className="flex justify - between items - center py - 4">;
@@ -715,6 +796,7 @@ function Navigation() {
               <div className="text - sm text - gray - 500">;
 
 
+ursor/automate-test-improve-and-merge-code-646c
                 AI & Technology Solutions;
               </div>;
             </div>;
@@ -730,6 +812,7 @@ function Navigation() {
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
                 {/* Submenu */}
                 {activeSubmenu === item && item.title && (;
                   <motion&& motion.div
@@ -785,6 +868,7 @@ function Navigation() {
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -798,6 +882,7 @@ function Navigation() {
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
         {/* Mobile Navigation */}
         {isOpen && (;
           <motion&& motion.div
@@ -988,3 +1073,4 @@ function Navigation() {
     </nav>);
 }
 
+ursor/automate-test-improve-and-merge-code-646c

@@ -1,11 +1,7 @@
 
 
 
-      const opts: CreateRoomOptions = {
-
-
-
-  }
+      const opts: CreateRoomOptions = {}
 
 }
   } catch (error) {
@@ -19,8 +15,8 @@
         max_participants: 24,
         metadata: JSON.stringify ({
           project_id,
-          created_by: preferred_name || "host",
-        }),
+          created_by: preferred_name || "host"
+        })
 
 
     }
@@ -56,12 +52,7 @@
       );
     }
     return res.status (200).json ({ room_name });
-  } catch (err: any) {
-
-
-
-
-  }
+  } catch (err: any) {}
 }
 
   } catch (error) {

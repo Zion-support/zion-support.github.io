@@ -1,5 +1,7 @@
 
 
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
 export interface Version {
   major: number;
   minor: number;
@@ -13,10 +15,11 @@ export function parseVersion(versionString: string): Version {
     major: parts[0] || 0,
     minor: parts[1] || 0,
     patch: parts[2] || 0,
-    build: parts[3],
+    build: parts[3]
   };
 }
 
+>>>>>>> main
 }
 export function nextVersionFor(
   state: MultiverseState,
@@ -39,14 +42,14 @@ export function nextVersionFor(
       return versionToString({
         major: version.major,
         minor: version.minor + 1,
-        patch: 0,
+        patch: 0
       });
     case "patch":
     default:
       return versionToString({
         major: version.major,
         minor: version.minor,
-        patch: version.patch + 1,
+        patch: version.patch + 1
       });
   }
 

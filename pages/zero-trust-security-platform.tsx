@@ -107,7 +107,6 @@ export default function ZeroTrustSecurityPlatformPage() {
 
 
 
-import React from 'react';
 import Head from 'next / head';
 import ServiceLanding from '../components / sections / ServiceLanding';
 export default /**
@@ -140,14 +139,14 @@ function ZeroTrustSecurityPlatformPage() {
           'Microsegmentation and service mesh integration',
           'Continuous authentication and authorization',
           'Visibility and audit for compliance',
-          'Rollout playbooks and migration kits',
+          'Rollout playbooks and migration kits'
         ]}
         industries={[;
           'Enterprise IT',
           'Financial Services',
           'Healthcare',
           'SaaS',
-          'Public Sector',
+          'Public Sector'
         ]}
         canonical='https: //ziontechgroup.com / zero - trust - security - platform';
       />;

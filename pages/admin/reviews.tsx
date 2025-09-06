@@ -61,7 +61,7 @@ const AdminReviewsPage: NextPage = () => {
 
 },
 
-export default AdminReviewsPage,
+export default AdminReviewsPage
 
 
 }

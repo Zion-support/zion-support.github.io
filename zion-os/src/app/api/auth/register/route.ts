@@ -27,7 +27,7 @@ const registerSchema = z.object({;
   password: z.string().min(8, "Password must be at least 8 characters")}),;
 export async function POST(request: NextRequest) {;
   try {;
-    const body = await request.json(),;
+    const body = await request.json();
     const { name, email, password } = registerSchema.parse(body),;
     // Check if user already exists;
     const existingUser = await prisma.user.findUnique({;

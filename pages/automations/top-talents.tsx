@@ -9,7 +9,7 @@ import Link from "next/link";
 
 
 
-type TalentItem = {;
+type TalentItem = {
 
   talentSlug: string;
   talentName: string;

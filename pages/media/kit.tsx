@@ -91,18 +91,17 @@ const KitPage = () => {;
     let y = 760;
 
     drawText('Zion Media Kit', 50, y, 18);
-import {useCallback, useMemo, useState} from 'react';
 import Head from 'next / head';
 import DatePicker from 'react - datepicker';
 import type {
   MediaBundle,
   MediaAsset,
-  PressReleaseType,
+  PressReleaseType
 } from '../../utils / media_kit';
 import {
   getDefaultAssets,
   buildPressRelease,
-  build_timeline,
+  build_timeline
 } from '../../utils / media_kit';
 const KitPage = () =>: any {
   const [bundle, set_bundle] = useState < MediaBundle>('general');
@@ -138,13 +137,13 @@ if ( {) {
     const pr_seed = buildPressRelease ('seed - round', {
       company_name,
       date: now_str,
-      raise_amount,
+      raise_amount
     });
     const pr_launch = buildPressRelease ('launch', { company_name, date: now_str });
     const pr_token = buildPressRelease ('token - sale', {
       company_name,
       date: now_str,
-      token_name,
+      token_name
     });    zip.file ('press - releases / seed - round.md', pr_seed);
     zip.file ('press - releases / launch.md', pr_launch);
     if (zip.file ('press - releases / token - sale.md', pr_token)) {

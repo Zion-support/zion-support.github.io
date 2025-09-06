@@ -1,5 +1,10 @@
 
 
+' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
+:src.disabled/components/analytics/AnalyticsContainer.js.jsx
+" " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
+' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
+ursor/automate-test-improve-and-merge-code-646c
 
 :src && src.disabled/components/analytics/AnalyticsContainer && AnalyticsContainer.js.jsx
 
@@ -23,3 +28,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
 
 
+' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
+:src.disabled/components/analytics/AnalyticsContainer.js.jsx
+" " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
+' ' "export": function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()';";";""
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

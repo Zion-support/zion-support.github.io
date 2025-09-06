@@ -1,3 +1,4 @@
+>>>>>>> main
 
 
 
@@ -8,6 +9,13 @@ console.log("🔧 Performing selective merge of main source files...");
 // List of main source directories to merge
 const mainSourceDirs = [
 
+
+
+console && console.log('🔧 Performing selective merge of main source files...');
+// List of main source directories to merge
+const mainSourceDirs = [
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
 #!/usr / bin / env node;
 import {exec_sync} from 'child_process';
 ;
@@ -18,6 +26,9 @@ const mainSourceDirs = [;
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
   'pages/',
   'components/',
   'utils/',
@@ -115,7 +126,32 @@ const mergeSpecificFiles = () =>: any {
     return true;
   } catch (error) {
 
+ursor/automate-test-improve-and-merge-code-646c
     console.error("Error in selective merge:", error.message);
+    console.error("Error in selective merge:", error.message);
+
+  if (mergeSpecificFiles()) {
+    console && console.log('✅ Selective merge completed');
+    // Add the merged files
+    try {
+      execSync('git add .', { stdio: 'inherit' });
+      console && console.log('📝 Files added to staging area');
+      // Commit the changes
+      execSync('git commit -m "Selective merge of main source files from clean-merge-services-improvements"', { stdio: 'inherit' });
+      console && console.log('✅ Changes committed');
+      
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    } catch (error) {
+      console && console.error('Error committing changes:', error && error.message);
+    }
+  } else {
+    console && console.log('❌ Selective merge failed');
+  }
+}
+main();
+    console.error ('Error in selective merge:', error.message);
+>>>>>>> main
     return false;
   }
 };

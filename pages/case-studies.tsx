@@ -21,7 +21,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-import React from 'react';
 
 
 
@@ -30,6 +29,42 @@ import { motion } from 'framer-motion';
 
 
 
+import MainLayout from '../components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Case Studies - Zion Tech Group"
+      description="Success stories and case studies from our clients"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Case Studies</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+
+
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  TrendingUp
+  CheckCircle
+  Users
+  Building
+  Globe
+  Award
+  Clock
+  BarChart3
+  Cloud
+  Shield
+ursor/automate-test-improve-and-merge-code-646c
   ArrowRight,
   Phone,
   Mail,
@@ -44,8 +79,6 @@ import { motion } from 'framer-motion';
   BarChart3,
   Cloud,
   Shield;
-
-
 } from 'lucide-react';
 const caseStudies = [
   {
@@ -171,6 +204,7 @@ const stats = [;
   { number: "50+", label: "Happy Clients" },;
   { number: "99 && 99.9%", label: "Success Rate" },;
 
+ursor/automate-test-improve-and-merge-code-646c
   { number: "24/7", label: "Support Available" }
 ];
 
@@ -206,6 +240,7 @@ const stats = [;
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
         {/* Stats Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -232,6 +267,7 @@ const stats = [;
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
         {/* Case Studies */}
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -325,6 +361,57 @@ export default /**
  */
 function CaseStudiesPage() {
 
+                    key={study.id}
+                    className="bg - white rounded - lg shadow - lg overflow - hidden";
+                    initial={{ opacity: 0, coordinate_y: 30 }}
+                    whileInView={{ opacity: 1, coordinate_y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.2 }}
+                    viewport={{ once: true }}
+                  >;
+                    <div className="grid grid - cols - 1 lg:grid - cols - 2">;
+                      <div className="p - 8">;
+                        <div className="flex items - center mb - 4">;
+                          <span className="bg - green - 100 text - green - 800 px - 3 py - 1 rounded - full text - sm font - semibold mr - 4">;
+                            {study.industry}
+                          {study.title}
+                        </h3>
+                        <p className="text-gray-600 mb-6">
+                          <strong>Client:</strong> {study.client}
+                        </p>
+                        <div className="space-y-4 mb-6">
+                          <div>
+                            <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
+                            <p className="text-gray-600">{study.challenge}</p>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
+                            <p className="text-gray-600">{study.solution}</p>
+                          </div>
+                        </div>
+                        <div className="mb-6">
+                          <h4 className="font-semibold text-gray-900 mb-3">Key Results:</h4>
+                          <ul className="space-y-2">
+                            {study.results.map((result, idx) => (
+                              <li key={idx} className="flex items-center text-gray-600">
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                                {result}
+                              </li>;
+                            ))}
+                          </ul>
+                        </div>
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {study.technologies.map((tech, idx) => (
+                            <span key={idx} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+                              {tech}
+                            </span>;
+                          ))}
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center text-sm text-gray-600">
+                            <Users className="w-4 h-4 mr-2" />
+                            {study.team}
+export default function CaseStudiesPage() {
+ursor/automate-test-improve-and-merge-code-646c
   return (
     <MainLayout
       title="Case Studies - Zion Tech Group"
@@ -571,6 +658,7 @@ function CaseStudiesPage() {
                   </motion.div>))}
 
 
+ursor/automate-test-improve-and-merge-code-646c
               </div>;
             </div>;
           </div>;
@@ -589,6 +677,7 @@ function CaseStudiesPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
 
 
+ursor/automate-test-improve-and-merge-code-646c
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-white text-green-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
@@ -596,14 +685,16 @@ function CaseStudiesPage() {
                 </a>;
                 <a
                   href="/services"
-
-
 import Head from 'next/head';
+ursor/automate-test-improve-and-merge-code-646c
 
 
 
 
 
+
+
+ursor/automate-test-improve-and-merge-code-646c
   return (
     <Layout>;
       <Head>;
@@ -617,7 +708,10 @@ import Head from 'next/head';
 
 
 
-import Head from 'next/head';
+
+
+
+ursor/automate-test-improve-and-merge-code-646c
 
 
 
@@ -629,6 +723,12 @@ import Head from 'next/head';
   );
  </Head> </section> </Layout>
 
+  );
+ </Head> </section> </Layout>
+export default function CaseStudiesPage() {
+import Layout from '../components/layout/Layout';
+export default function CaseStudiesPage() {
+ursor/automate-test-improve-and-merge-code-646c
 	return (
 
 		<Layout>
@@ -645,6 +745,11 @@ import Head from 'next/head';
 	)
 
 
+}
+export default function CaseStudiesPage(req, res) {
+  try {
+	return (;
+ursor/automate-test-improve-and-merge-code-646c
 
         />;
       </Head>;
@@ -677,6 +782,7 @@ import Head from 'next/head';
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - green - 600 to - teal - 600 text - white">;
           <div className="container mx - auto px - 4">;
@@ -761,3 +867,5 @@ return (
 
 
 
+
+ursor/automate-test-improve-and-merge-code-646c

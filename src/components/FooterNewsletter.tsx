@@ -1,15 +1,16 @@
 
 
+{/* Honeypot field */}
+      <input
+
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
 import React, { useState, useRef } from 'react';
-import { Input  } from '@/components/ui/input';
-import { Button  } from '@/components/ui/button';
-import { useToast  } from '@/hooks/use-toast';
-import React, { useState, useRef } from 'react'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { useToast } from '@/hooks/use-toast'
-import { Loader2 } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { useToast } from '@/hooks/use-toast';
+import { Loader2 } from 'lucide-react';
+import { logErrorToProduction } from '@/utils/productionLogger';
 export function FooterNewsletter(): React.ReactElement {
 
   const [email, setEmail] = useState('')
@@ -142,7 +143,6 @@ import React, { useState, useRef } from 'react',;
 import { Input } from '@/components/ui/input',;
 import { Button } from '@/components/ui/button',;
 import { useToast } from '@/hooks/use-toast',;
-import { Loader2 } from 'lucide-react';
 import {logErrorToProduction} from '@/utils/productionLogger',;
 export function FooterNewsletter(): React.ReactElement {;
   const [email, setEmail] = useState(''),;
@@ -150,7 +150,7 @@ export function FooterNewsletter(): React.ReactElement {;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const [emailError, setEmailError] = useState(''),;
   const { toast } = useToast(),;
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,;
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const lastSubmit = useRef(0),;
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault(),;
@@ -221,15 +221,33 @@ export function FooterNewsletter(): React.ReactElement {;
       {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
       {/* Honeypot field */}
       <input
+
+
+      {/* Honeypot field */}
+{/* Honeypot field */}
+      <input
+        type="text"
+        name="honeypot"
+        value={honeypot}
 {/* Honeypot field */}
       <input
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+ursor/integrate-build-improve-and-re-verify-9d47
         onChange={e => setHoneypot(e && e.target.value)}
 
         tabIndex={-1}
         autoComplete='off';
         style={{ display: 'none' }}
       />;
+      <Button
+        type="submit"
+        disabled={isSubmitting}
+      <Button
+        type="submit"
+        disabled={isSubmitting}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
@@ -242,6 +260,13 @@ export function FooterNewsletter(): React.ReactElement {;
         type="submit"
         disabled={isSubmitting}
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+      <Button
+        type="submit"
+        disabled={isSubmitting}
+ursor/integrate-build-improve-and-re-verify-9d47
+ursor/automate-test-improve-and-merge-code-646c
         className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'>;
 
         type="text"
@@ -254,6 +279,8 @@ export function FooterNewsletter(): React.ReactElement {;
 
 
 
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
         type='text'
         type="text"
         value={honeypot}
@@ -286,6 +313,9 @@ export function FooterNewsletter(): React.ReactElement {;
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
         autoComplete="off"
         style={{ display: 'none' }}
       />
@@ -299,15 +329,12 @@ export function FooterNewsletter(): React.ReactElement {;
           <>;
 
 
+            <Loader2 className='h-4 w-4 mr-2 animate-spin' />;
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
             Subscribing...;
           </>;
         ) : (;
-import React, { useState, useRef } from 'react',;
-import { Input } from '@/components/ui/input',;
-import { Button } from '@/components/ui/button',;
-import { useToast } from '@/hooks/use-toast',;
-import { Loader2 } from 'lucide-react';
-import {logErrorToProduction} from '@/utils/productionLogger',;
 ;
 export function FooterNewsletter():React.ReactElement {;
   const [email, setEmail] = useState(''),;
@@ -412,6 +439,9 @@ export function FooterNewsletter():React.ReactElement {;
 
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
             Subscribing...;
           </>;
         ) : (;
@@ -423,13 +453,21 @@ export function FooterNewsletter():React.ReactElement {;
   );
 } ;
 
+  );
+} ;
+  );
+} ;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  );
+} ;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
 } ;
 
-import React, { useState, useRef } from 'react';
 import { Input } from '@/components / ui / input';
 import { Button } from '@/components / ui / button';
 import { use_toast } from '@/hooks / use - toast';
-import { Loader2 } from 'lucide-react';
 import { logErrorToProduction } from '@/utils / production_logger';
 export function FooterNewsletter (): React.ReactElement {
   const [email, set_email] = useState ('');
@@ -470,7 +508,7 @@ if (return) {
       const res = await fetch ('/api / newsletter', {
         method: 'POST',
         headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({ email: trimmed_email }),
+        body: JSON.stringify ({ email: trimmed_email })
       });
       const data = await res.json ().catch (() => ({})); // Ensure data is an object even on parse error;
       // Check condition
@@ -482,7 +520,7 @@ if ( {) {
   $2
 }
           toast.success (data.message || "You're already subscribed!", {
-            id: `${uniqueToastIdBase}-already - subscribed`,
+            id: `${uniqueToastIdBase}-already - subscribed`
           });
         } else {
           toast.success (
@@ -502,7 +540,7 @@ if ( {) {
     } catch (err: any) {
       logErrorToProduction ('Newsletter subscription error:', { data: err });
       toast.error ('Unable to subscribe right now. Please try again later.', {
-        id: `${uniqueToastIdBase}-catch - error`,
+        id: `${uniqueToastIdBase}-catch - error`
       });
     } finally {
       setIsSubmitting (false);
@@ -547,6 +585,8 @@ if ( {) {
     </form>);
 }
 }
+}
+>>>>>>> main
 
 
 
@@ -565,3 +605,7 @@ return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubm
 }
 }
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+ursor/integrate-build-improve-and-re-verify-9d47
+ursor/automate-test-improve-and-merge-code-646c

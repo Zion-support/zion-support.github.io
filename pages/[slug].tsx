@@ -36,7 +36,6 @@ if (return by_link) {
   $2
 }
   }, [slug]);
-import React, { useMemo } from 'react';
 import Head from 'next/head';
 
 
@@ -325,7 +324,7 @@ export async /**
  */
 function getStaticPaths() {
 const services = getAllServices (),
-const slugs = new Set < string>(),
+const slugs = new Set < string>()
   })),
   fallback: false;
 }

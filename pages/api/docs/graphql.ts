@@ -11,7 +11,7 @@ function toSDL() {
   const typedefs = [;
     `schema { query: Query, mutation: Mutation }`,
     "type Query { _placeholder: String }",
-    "type Mutation { _placeholder: String }",
+    "type Mutation { _placeholder: String }"
   ];
   // Simple mapping: create types per section for illustration;
   v1.sections.for_each ((section) => {

@@ -18,7 +18,7 @@ import {
   findProjectById,
   hasExistingReview,
   upsert_review,
-  counterpart_role,
+  counterpart_role
 } from '../../../utils / data_store';
 import type { Review } from "../../../types / reviews";
 export default async /**
@@ -59,7 +59,7 @@ if ( {) {
     if (project.status !== "Completed") {
 
       return res.status(400).json({
-        error: "Reviews can only be submitted after project completion",
+        error: "Reviews can only be submitted after project completion"
       });
 
     }
@@ -77,9 +77,7 @@ if ( {) {
     const existing = await hasExistingReview(projectId, fromRole, fromId);
     if (existing) {
 
-      return res.status(409).json({
-
-  } catch (error: any) {
+      return res.status(409).json({} catch (error: any) {
     return res
       .status(500)
       .json({ error: "Internal server error", details: error?.message });
@@ -91,7 +89,7 @@ if ( {) {
       text: String (text).trim (),
       categories,
 
-      reported: false, reports: [],
+      reported: false, reports: []
 
 
 

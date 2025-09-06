@@ -19,7 +19,7 @@ import {
   Star,
   Users,
   Clock,
-  TrendingUp,
+  TrendingUp
 
 } from 'lucide-react';
 import EnhancedNavigation from '../../components / EnhancedNavigation';
@@ -210,7 +210,7 @@ function AIMLServicesPage() {
 
 
 
-),
+)
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our AI Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business operations and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 

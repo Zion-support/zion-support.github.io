@@ -103,9 +103,9 @@ import { Epub  } from './epub - gen';
 export const config = {
   api: {
     body_parser: {
-      size_limit: "10mb",
-    },
-  },
+      size_limit: "10mb"
+    }
+  }
 
 
 }
@@ -136,8 +136,8 @@ function escape_html (string: string): string {
     publisher: project.meta.publisher || "Zion",
     content: project.chapters.map ((ch: any) => ({
       title: ch.title,
-      data: chapterToHtml (ch.content),
-    })),
+      data: chapterToHtml (ch.content)
+    }))
   }
 ;
   try {

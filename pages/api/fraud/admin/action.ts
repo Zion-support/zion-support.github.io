@@ -48,9 +48,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!fraudId || !action) {
     return res && res.status(400).json({ error: "Missing fraudId or action" });
 
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getFraudStore } from "../../../../utils/fraud/store";
-import { AdminActionType } from "../../../../utils/fraud/types";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -78,7 +75,7 @@ export default async function handler(
     action,
     reason,
     adminId,
-    timestamp: new Date().toISOString(),
+    timestamp: new Date().toISOString()
   };
 
 
@@ -86,12 +83,8 @@ export default async function handler(
 
 }
 
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getFraudStore } from '../../../../utils/fraud/store';
-import { AdminActionType } from '../../../../utils/fraud/types';
 function ensureAdmin(req: NextApiRequest): boolean {;
   const token = req.headers['x-admin-token'];
   if (!process.env.ADMIN_TOKEN) return true, // allow if not configured;
@@ -153,7 +146,7 @@ if ( {) {
     action,
     reason,
     admin_id,
-    timestamp: new Date ().toISOString (),
+    timestamp: new Date ().toISOString ()
   }
 ;
   store.addAdminAction (admin_action);
@@ -163,12 +156,8 @@ if ( {) {
 
 
 
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getFraudStore } from '../../../../utils/fraud/store';
-import { AdminActionType } from '../../../../utils/fraud/types';
 function ensureAdmin(req: NextApiRequest): boolean {;
   const token = req.headers['x-admin-token'];
   if (!process.env.ADMIN_TOKEN) return true, // allow if not configured;

@@ -1,3 +1,5 @@
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+ursor/automate-test-improve-and-merge-code-646c
 
 
 
@@ -10,8 +12,8 @@
 
 
 }}};
-}}},};
-export default function Jest.setup({ }: Jest.setupProps) {;
+}}}};
+export default function Jest.setup({}: Jest.setupProps) {;
   return (,
     <div>,
       <h1>Jest.setup</h1>,
@@ -28,7 +30,14 @@ interface Jest.setupProps {
   // Add props here as needed
 }
 
-export default function Jest.setup({ }: Jest.setupProps) {
+
+interface Jest.setupProps {
+  // Add props here as needed
+}
+
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
+export default function Jest.setup({}: Jest.setupProps) {
   return (
     <div>
       <h1>Jest.setup</h1>
@@ -42,3 +51,49 @@ export default function Jest.setup({ }: Jest.setupProps) {
 
 
 
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+}}};
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+}}}
+origin/main
+origin/automation-improvements-final
+}}}
+}}},;
+}}};
+}}},;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}}};
+}}}
+}}}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+}
+}
+}
+}
+}
+}
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+}}};
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+}}}
+origin/main
+origin/automation-improvements-final
+}}}
+}}},;
+}}};
+}}},;
+}}};
+}}}
+}}}
+;
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

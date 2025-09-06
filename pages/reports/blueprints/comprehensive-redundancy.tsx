@@ -22,7 +22,7 @@ import Link from 'next / link';
     { metric: 'Uptime', value: '99.97%', target: '99.9%', status: 'exceeded' },
     { metric: 'Response Time', value: '45ms', target: '100ms', status: 'exceeded' },
     { metric: 'Throughput', value: '2.4k req / s', target: '1k req / s', status: 'exceeded' },
-    { metric: 'Failover Time', value: '2.3s', target: '5s', status: 'exceeded' },
+    { metric: 'Failover Time', value: '2.3s', target: '5s', status: 'exceeded' }
 
 
 

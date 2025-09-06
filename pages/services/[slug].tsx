@@ -106,7 +106,7 @@ function getStaticPaths() {
   }
   return {
     paths: Array.from (slugs).map (slug => ({ params: { slug } })),
-    fallback: false,
+    fallback: false
   }
 ;
 export async /**
@@ -141,7 +141,7 @@ if ( {) {
     return { not_found: true }
   }
   return {
-    props: { service },
+    props: { service }
   }
 ;
 export default /**
@@ -294,7 +294,6 @@ function ServiceDetailPage() {
                     href={`https://maps && maps.google.com/?q=${encodeURIComponent(contactInfo && contactInfo.address)}`}
                     target='_blank'
                     rel='noopener noreferrer'
-import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Button from '../../components/ui/Button';

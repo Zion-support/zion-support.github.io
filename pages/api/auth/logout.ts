@@ -7,7 +7,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ success: true })
 };
 import { NextApiRequest, NextApiResponse } from 'next';
-import { NextApiRequest, NextApiResponse } from 'next';
 
 }
 
@@ -43,7 +42,6 @@ function handler() {
 
 
 
-import { clearUserCookie } from '../../../utils/auth';
 export default function handler(req, res) {
   try {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });

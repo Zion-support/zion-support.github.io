@@ -15,7 +15,6 @@ import {
   getDisputeById,
   upsertDispute,;
 } from "../../../../utils/fsdb";
-import {
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
 } from "../../../../utils/auth";
@@ -61,17 +60,15 @@ export default async function handler(
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import path from './path';
-import {
   ensureDisputeUploadDir,
   getDisputeById,
-  upsert_dispute,
+  upsert_dispute
 } from '../../../../utils / fsdb';
-import {
   parseUserFromRequest,
-  ensureInvolvedOrAdmin,
+  ensureInvolvedOrAdmin
 } from '../../../../utils / auth';
 export const config = {
-  api: { body_parser: { size_limit: "20mb" } },
+  api: { body_parser: { size_limit: "20mb" } }
 }
 ;
 export default async /**
@@ -144,7 +141,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
   return res.status(405).end('Method Not Allowed');
-import type { NextApiRequest, NextApiResponse } from 'next';
 import path from 'path';
 import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb';
 import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
@@ -182,7 +178,7 @@ export default async function handler(req, res) {
     const dir = await ensureDisputeUploadDir(dispute.id);
     for (const f of files) {;
       const safeName = f.fileName.replace(/[^a-zA-Z0-9._-]/g, '_');
-      const buffer = Buffer.from(f.base64.split().pop() || f.base64, 'base64'),;
+      const buffer = Buffer.from(f.base64.split().pop() || f.base64, 'base64');
       const filePath = path.join(dir, safeName);
       await fsPromisesWrite(filePath, buffer);
       dispute.attachments.push({;

@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  MessageCircle, 
-  Settings, 
-  Info, 
-  Star, 
-  Heart, 
+import {
+  MessageCircle,
+  Settings,
+  Info,
+  Star,
+  Heart,
   Download,
   Upload,
   Camera,
   Video,
-  Music
+  Music,
 } from 'lucide-react';
 import AdvancedModal from '../components/AdvancedModal';
 import Tooltip from '../components/Tooltip';
@@ -34,7 +34,7 @@ const Components: React.FC = () => {
     <div key="3" className="bg-gradient-to-r from-green-400 to-teal-500 text-white p-8 rounded-2xl text-center">
       <h3 className="text-2xl font-bold mb-4">Cloud Solutions</h3>
       <p className="text-lg">Scale your operations with robust cloud infrastructure</p>
-    </div>
+    </div>,
   ];
 
   return (
@@ -56,7 +56,7 @@ const Components: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Advanced Modals</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {(['sm', 'md', 'lg', 'xl'] as const).map((size) => (
+              {(['sm', 'md', 'lg', 'xl'] as const).map(size => (
                 <button
                   key={size}
                   onClick={() => {
@@ -83,19 +83,19 @@ const Components: React.FC = () => {
                   Top Tooltip
                 </button>
               </Tooltip>
-              
+
               <Tooltip content="This is a bottom tooltip" position="bottom">
                 <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors">
                   Bottom Tooltip
                 </button>
               </Tooltip>
-              
+
               <Tooltip content="This is a left tooltip" position="left">
                 <button className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg transition-colors">
                   Left Tooltip
                 </button>
               </Tooltip>
-              
+
               <Tooltip content="This is a right tooltip" position="right">
                 <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg transition-colors">
                   Right Tooltip
@@ -175,7 +175,7 @@ const Components: React.FC = () => {
                 { icon: Info, label: 'Information', color: 'from-green-400 to-teal-500' },
                 { icon: Star, label: 'Favorites', color: 'from-yellow-400 to-orange-500' },
                 { icon: Heart, label: 'Likes', color: 'from-red-400 to-pink-500' },
-                { icon: Download, label: 'Downloads', color: 'from-indigo-400 to-purple-500' }
+                { icon: Download, label: 'Downloads', color: 'from-indigo-400 to-purple-500' },
               ].map((item, index) => (
                 <motion.div
                   key={index}

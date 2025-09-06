@@ -75,12 +75,9 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from 'react';
-import SEO from '../components / SEO';
-import {Check, ExternalLink} from 'lucide-react';
                 title: 'Reports & Export',
-                desc: 'Beautiful HTML / CSV exports, signed artifacts, and webhook notifications.',
-              },
+                desc: 'Beautiful HTML / CSV exports, signed artifacts, and webhook notifications.'
+              }
             ].map (function => (
               <div;
                 key={f.title}
@@ -129,9 +126,6 @@ import {Check, ExternalLink} from 'lucide-react';
             <p className='mt - 4 text - sm text - gray - 400'>;
               Market references:{' '}
 
-import React from 'react';
-import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
 export default function ApiPerformanceTestingPage(req, res) {
   try {
 	const features = [;

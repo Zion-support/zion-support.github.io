@@ -34,9 +34,6 @@ function handler() {
     session_id: string;
 
 
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readJson, writeJson } from "../../../utils/fsDb";
-import { tagOperatorSession } from "../../../utils/operator";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse

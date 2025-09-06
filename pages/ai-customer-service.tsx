@@ -49,8 +49,6 @@ export default function AICustomerService() {
     </>
   )
 }
-import React from 'react';
-import Head from 'next/head';
 export default function AICustomerService(req, res) {
   try {
   return (;

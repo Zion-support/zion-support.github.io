@@ -181,7 +181,7 @@ export function useIntersectionObserver(;
 ) {;
   const [isIntersecting, setIsIntersecting] = useState(false),;
   useEffect(() => {;
-    const element = ref.current,;
+    const element = ref.current;
     if (!element) return,;
     const observer = new IntersectionObserver(([entry]) => {;
       setIsIntersecting(entry.isIntersecting);

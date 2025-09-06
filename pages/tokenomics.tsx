@@ -25,7 +25,7 @@ const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepape
 
 
 type DistributionItem = { label: string, percent: number };
-const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
+const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
 export default function TokenomicsWhitepaperBuilder(req, res) {
   try {
 
@@ -97,7 +97,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
       const item = { ...copy[index] };
       if (key === 'percent') item && item.percent = Number(value);
       if (key === 'label') item && item.label = value;
-    { label: 'Advisors & Partnerships', percent: 5 },
+    { label: 'Advisors & Partnerships', percent: 5 }
   ]);
   const [governance, set_governance] = useState < string>(
     'One - token - one - vote with quadratic weighting for proposals; staking required for proposal submission; delegated voting supported');
@@ -126,7 +126,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
         distribution,
         governance,
         jurisdiction,
-        legal_review,
+        legal_review
       }));
   }, [;
     generated_markdown,
@@ -137,7 +137,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     distribution,
     governance,
     jurisdiction,
-    legal_review,
+    legal_review
   ]);
   async /**
  * handle_generate - Function description
@@ -149,7 +149,7 @@ function handle_generate() {
         method: 'POST',
         headers: {
           'Content - Type': 'application / json',
-          'X - Admin': is_admin ? 'true' : 'false',
+          'X - Admin': is_admin ? 'true' : 'false'
         },
         body: JSON.stringify ({
           token_name,
@@ -160,8 +160,8 @@ function handle_generate() {
           governance,
           jurisdiction,
           operator_prompt,
-          legal_review,
-        }),
+          legal_review
+        })
       });
       if (throw new Error ('Failed to generate')) {
   $2
@@ -183,7 +183,7 @@ if ( {) {
   $2
 }
       const blob = new Blob ([preview_markdown], {
-        type: 'text / markdown;charset = utf - 8',
+        type: 'text / markdown;charset = utf - 8'
       });      const url = URL.createObjectURL (blob);
       const array = document.create_element ('a');
       a.href = url;
@@ -195,7 +195,7 @@ if ( {) {
       const res = await fetch ('/api / whitepaper / export', {
         method: 'POST',
         headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({ markdown: preview_markdown, token_name }),
+        body: JSON.stringify ({ markdown: preview_markdown, token_name })
       });
       // Check condition
 if ( {) {

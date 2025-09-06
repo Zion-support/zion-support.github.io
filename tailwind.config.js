@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: [
 
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,12 +9,15 @@ module.exports = {
 
     './src/**/*.{js,ts,jsx,tsx,mdx}',
 
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './app/**/*.{js,ts,jsx,tsx}',
+ursor/automate-test-improve-and-merge-code-646c
   ],
   theme: {
     extend: {
       colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
         primary: {
 
           50: '#eff6ff',
@@ -26,7 +30,7 @@ module.exports = {
           700: '#1d4ed8',
           800: '#1e40af',
           900: '#1e3a8a',
-          950: '#172554',
+          950: '#172554'
         },
         gray: {
           50: '#f9fafb',
@@ -44,7 +48,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        mono: ['JetBrains Mono', 'Fira Code', 'monospace']
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
@@ -53,6 +57,7 @@ module.exports = {
         'slide-down': 'slideDown 0.5s ease-out',
         'slide-left': 'slideLeft 0.5s ease-out',
         'slide-right': 'slideRight 0.5s ease-out',
+ursor/automate-test-improve-and-merge-code-646c
         'scale-in': 'scaleIn 0.3s ease-out',
         'float': 'float 6s ease-in-out infinite',
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -105,3 +110,7 @@ module.exports = {
   ]
 
 };
+    require('@tailwindcss/aspect-ratio')
+  ]
+};
+ursor/automate-test-improve-and-merge-code-646c

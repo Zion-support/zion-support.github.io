@@ -88,7 +88,6 @@ export default function FrontLanding() {;
               <a className='bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon'>;
 import Head from 'next / head';
 import Link from 'next / link';
-import {motion} from 'framer-motion';
 export default /**
  * FrontLanding - Function description
  */
@@ -189,7 +188,7 @@ function FrontLanding() {
                 ['24/7', 'Autonomous'],
                 ['Main', 'Direct Sync'],
                 ['0 Ops', 'Cloud‑Native'],
-                ['Safety', 'Guardrails'],
+                ['Safety', 'Guardrails']
 
 
               ].map(([k, v]) => (                <motion.div

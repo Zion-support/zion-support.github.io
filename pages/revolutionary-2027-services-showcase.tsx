@@ -20,9 +20,7 @@ import {revolutionary2027AIServices} from '../data/revolutionary-2027-ai-service
 import {revolutionary2027ITServices} from '../data/revolutionary-2027-it-services';
 import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-micro-saas';
 
-import { motion, AnimatePresence } from 'framer-motion';
 import { Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSquare, Globe } from 'lucide-react';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services';
 import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services';
 import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
@@ -258,7 +256,7 @@ export default function Revolutionary2027ServicesShowcase() {
         case 'launch_date':;
           return (
             new Date (b.launch_date).get_time () - new Date (a.launch_date).get_time ());
-        default: return a.name.locale_compare (b.name),
+        default: return a.name.locale_compare (b.name)
       }
     });
 ;
@@ -268,7 +266,7 @@ export default function Revolutionary2027ServicesShowcase() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',  }
+    website: 'https://ziontechgroup.com'  }
 ;
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>;

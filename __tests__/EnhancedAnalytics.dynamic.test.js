@@ -1,5 +1,39 @@
 
 
+
+
+import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedAnalyticsdynamic from '../components/EnhancedAnalytics.dynamic'; describe('EnhancedAnalyticsdynamic',() => { test('renders without crashing',() => { render(<EnhancedAnalyticsdynamic />); expect(screen.getByTestId('enhancedanalytics.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedAnalyticsdynamic />)}); test('handles user interactions',() => { render(<EnhancedAnalyticsdynamic />)}); test('applies correct styling',() => { render(<EnhancedAnalyticsdynamic />)})});
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> main
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import EnhancedAnalyticsdynamic from '../components/EnhancedAnalytics.dynamic';
+describe('EnhancedAnalyticsdynamic', () => {
+  test('renders without crashing', () => {
+    render(<EnhancedAnalyticsdynamic />);
+    expect(screen.getByTestId('enhancedanalytics.dynamic')).toBeInTheDocument();
+  });
+});
+});
+  test('displays correct content', () => {
+    render(<EnhancedAnalyticsdynamic />);
+  });
+  test('handles user interactions', () => {
+    render(<EnhancedAnalyticsdynamic />);
+  });
+  test('applies correct styling', () => {
+    render(<EnhancedAnalyticsdynamic />);
+  });
+});
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedAnalyticsdynamic from "./components/EnhancedAnalytics.dynamic"; describe("EnhancedAnalyticsdynamic",() => { test("renders without crashing",() => { render(<EnhancedAnalyticsdynamic />); expect(screen.getByTestId("enhancedanalytics.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedAnalyticsdynamic />)}); test("handles user interactions",() => { render(<EnhancedAnalyticsdynamic />)}); test("applies correct styling",() => { render(<EnhancedAnalyticsdynamic />)})});''"
+
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+ursor/automate-test-improve-and-merge-code-646c
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -20,3 +54,9 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 
 
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+});
+});
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

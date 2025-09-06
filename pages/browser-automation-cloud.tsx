@@ -80,7 +80,6 @@ class ErrorBoundary extends React.Component {
 
 
 import React from 'react';
-import SEO from '../components/SEO';
 import {Check, ExternalLink} from 'lucide-react';
 
 export default function BrowserAutomationCloudPage() {;
@@ -128,7 +127,6 @@ export default function BrowserAutomationCloudPage() {;
 	);
 
 import SEO from '../components / SEO';
-import {Check, ExternalLink} from 'lucide-react';
 export default /**
  * BrowserAutomationCloudPage - Function description
  */

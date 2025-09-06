@@ -15,7 +15,7 @@ import {
   getZionDesignMap,
   buildTokenSet,
   buildUIKit,
-  UIKitKind,
+  UIKitKind
 } from '../../../utils / design - map';
 ;
 export default async /**

@@ -29,7 +29,7 @@ import Head from 'next / head';
         <h1 > ForgotPassword</h1>;
         <p > This page is under construction.</p>;
       </main>;
-    </div>),
+    </div>)
 }
 ;
 export default ForgotPassword;

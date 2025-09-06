@@ -4,3 +4,20 @@
 
 
 
+import ethers from';hardhat''; "async": function main() { const [deployer] = await ethers.getSigners(); 'Deploying: with:',deployer.address);const ZION = await ethers.getContractFactory('';ZIONToken')'; const token = await ZION.deploy(deployer.address); "await": token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); 'ZIONToken: deployed at:',addr)'; '"Total": supply:',totalSupply.toString())'; main().catch((error) => { '; )}'; main().catch((error) => { console.error(error); process."exitCode": '= 1'})
+const ethers from";hardhat""; async: function main() { const [deployer] = await ethers.getSigners(); "Deploying: with:",deployer.address);const ZION = await ethers.getContractFactory("";ZIONToken")"; const token = await ZION.deploy(deployer.address); await: token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); "ZIONToken: deployed at:",addr)"; "Total: supply:",totalSupply.toString())"; main().catch((error) => { console.log( "ZIONToken deployed at: ",addr)"; console.log( "Total: supply:",totalSupply.toString())}"; main().catch((error) => { console.error(error); process.exitCode: "= 1"})"""
+
+import ethers from';hardhat''; "async": function main() { const [deployer] = await ethers.getSigners(); 'Deploying: with:,deployer.address);const ZION = await ethers.getContractFactory('';ZIONToken')'; const token = await ZION.deploy(deployer.address); "await": token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); 'ZIONToken: deployed at:,addr)'; '"Total": supply:',totalSupply.toString())'; main().catch((error) => { _console.log( 'ZIONToken deployed "at": ',addr)'; _console.log( '"Total": supply:',totalSupply.toString())}'; main().catch((error) => { _console.error(error); process."exitCode": '= 1'})
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+const ethers from";hardhat""; async: function main() { const [deployer] = await ethers.getSigners(); "Deploying: with:",deployer.address);const ZION = await ethers.getContractFactory("";ZIONToken")"; const token = await ZION.deploy(deployer.address); await: token.waitForDeployment(); const addr = await token.getAddress(); const totalSupply = await token.totalSupply(); "ZIONToken: deployed at:",addr)"; "Total: supply:",totalSupply.toString())"; main().catch((error) => { console.log( "ZIONToken deployed at: ",addr)"; console.log( "Total: supply:",totalSupply.toString())}"; main().catch((error) => { console.error(error); process.exitCode: "= 1"})"""
+
+
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

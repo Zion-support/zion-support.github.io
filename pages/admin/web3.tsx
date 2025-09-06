@@ -84,8 +84,6 @@ export default function AdminWeb3Page() {
 
 
 
-import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
 export default function AdminWeb3Page(req, res) {
   try {
   const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([]),;

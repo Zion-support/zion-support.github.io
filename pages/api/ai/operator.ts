@@ -97,10 +97,7 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
 })
     const text = completion.choices?.[0]?.message?.content ?? ''
     return res.status(200).json({ text })
-  } catch (err: any) {
-
-
-}
+  } catch (err: any) {}
 
 
 

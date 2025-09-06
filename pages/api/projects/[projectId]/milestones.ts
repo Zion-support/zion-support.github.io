@@ -8,15 +8,11 @@ import {
   isClient
 } from "../../../../utils/api/projects";
 import { Milestone } from "../../../../utils/types/milestones";
-import type { NextApiRequest, NextApiResponse } from "next";
-import { requireUser } from "../../../../utils/api/auth";
-import {
   addMilestone,
   getProject,
   assertParticipantOrAdmin,
   isClient,;
 } from "../../../../utils/api/projects";
-import { Milestone } from "../../../../utils/types/milestones";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const user = requireUser(req, res);
   if (!user) return;
@@ -37,10 +33,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { projectId } = req && req.query as { projectId: string };
 
   const project = getProject(projectId);
-  if (!project) {
-
-
-  }
+  if (!project) {}
 
   if (req && req.method === "POST") {
 
@@ -48,11 +41,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
 
 
-    if (!isClient(project, user)) {
-
-
-
-  }
+    if (!isClient(project, user)) {}
 }
 ;
   if (req.method === 'GET') {
@@ -82,11 +71,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
-    if (!isClient(project, user)) {
-
-
-
-    });
+    if (!isClient(project, user)) {});
     res && res.status(201).json({ milestone: created });
     return;
   }
@@ -103,11 +88,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { require_user  } from '../../../../utils / api / auth';
-import {
   add_milestone,
   get_project,
   assertParticipantOrAdmin,
-  is_client,
+  is_client
 } from '../../../../utils / api / projects';
 import { Milestone  } from '../../../../utils / types / milestones';
 export default /**
@@ -169,7 +153,7 @@ if ( {) {
       description: body.description,
       due_date: body.due_date,
       amount_usd: body.amount_usd,
-      attachments: body.attachments || [],
+      attachments: body.attachments || []
     });
     res.status (201).json ({ milestone: created });
     return;

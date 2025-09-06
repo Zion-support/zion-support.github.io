@@ -44,7 +44,7 @@ export default async function handler(
         model: "gpt-4 && 4.1-mini",
         input: [
           { role: "system", content: sysPrompt },
-          { role: "user", content: userPrompt },
+          { role: "user", content: userPrompt }
 
 
   }
@@ -62,7 +62,6 @@ function fallbackMarkdown(input: any): string {
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 const client = process.env.OPENAI_API_KEY ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY }) : null;
 export default async function handler(req, res) {
@@ -72,7 +71,7 @@ export default async function handler(req, res) {
   const distLines = Array.isArray(distribution);
     ? distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join('\n');
     : '';
-  const sysPrompt = `You are a senior Web3 tokenomics analyst and legal-friendly writer. Produce a crisp, investor-and-developer-ready whitepaper in markdown with the following sections strictly in order: Executive Summary, Market Context, Utility & Usage, Rewards System, Distribution, Governance Model, Risks + Disclaimers. Keep it factual and concise, with bullets where appropriate.`,;
+  const sysPrompt = `You are a senior Web3 tokenomics analyst and legal-friendly writer. Produce a crisp, investor-and-developer-ready whitepaper in markdown with the following sections strictly in order: Executive Summary, Market Context, Utility & Usage, Rewards System, Distribution, Governance Model, Risks + Disclaimers. Keep it factual and concise, with bullets where appropriate.`;
   const userPrompt = `${operatorPrompt || ''}\n\nToken: ${tokenName}\nTotal Supply: ${tokenSupply}\nUse Cases: ${useCases}\nRewards: ${rewardsLogic}\nDistribution (percent):\n${distLines}\nGovernance: ${governance}\nJurisdiction: ${jurisdiction}\nLegal Review Toggle: ${!!legalReview}`;
   try {
     let markdown: string;

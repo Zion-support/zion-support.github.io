@@ -1,6 +1,56 @@
 import React from 'react';
 
 
+
+const HowItWorksSection = () => {
+  const steps = [
+    {
+      number: '01',
+      title: 'Consultation',
+      description: 'We start with a detailed consultation to understand your business needs and challenges.'
+    },
+    {
+      number: '02',
+      title: 'Strategy & Planning',
+      description: 'Our experts develop a customized strategy and implementation plan tailored to your goals.'
+    },
+    {
+      number: '03',
+      title: 'Implementation',
+      description: 'We implement the solution with minimal disruption to your existing operations.'
+    },
+    {
+      number: '04',
+      title: 'Support & Optimization',
+      description: 'Ongoing support and continuous optimization to ensure maximum value and performance.'
+    }
+  ];
+
+  return (
+    <section className="py-16 px-4 bg-white">
+      <div className="container mx-auto max-w-6xl">
+        <h2 className="text-4xl font-bold text-center mb-4">How It Works</h2>
+        <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+          Our proven process ensures successful implementation and maximum value from your investment.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {steps.map((step, index) => (
+            <div key={index} className="text-center relative">
+              <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                {step.number}
+              </div>
+              <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+              <p className="text-gray-600">{step.description}</p>
+              {index < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-8 left-1/2 w-full h-0.5 bg-gray-300 transform translate-x-8"></div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
 import { GradientHeading } from "./GradientHeading";
 
 import { Check, Handshake, Search, Send } from 'lucide-react'
@@ -95,7 +145,6 @@ const stats = [ "
   hidden: { opacity: 0
   scale: 0.8
 }
-import React from 'react';
 import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -107,23 +156,23 @@ const get_steps = (t: any, ) =>: any [;
   {
     title: t ('how_it_works.post'),
     description: t ('how_it_works.post_desc'),
-    icon: Send,
+    icon: Send
   },
   {
     title: t ('how_it_works.match'),
     description: t ('how_it_works.match_desc'),
-    icon: Search,
+    icon: Search
   },
   {
     title: t ('how_it_works.hire_buy'),
     description: t ('how_it_works.hire_buy_desc'),
-    icon: Handshake,
+    icon: Handshake
   },
   {
     title: t ('how_it_works.done'),
     description: t ('how_it_works.done_desc'),
-    icon: Check,
-  },
+    icon: Check
+  }
 ];
 import React, { useState } from 'react';
 export /**;
@@ -201,7 +250,6 @@ const getSteps = (t: any,) => [
 
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
-import { Check, Handshake, Search, Send } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { useTranslation } from "react-i18next",
 interface HowItWorksSectionProps {
@@ -276,9 +324,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from 'react';
-import { GradientHeading } from './GradientHeading';
-import { Check, Handshake, Search, Send } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTranslation } from 'react-i18next';
 interface HowItWorksSectionProps {;
@@ -309,7 +354,6 @@ const getSteps = (t: any,) => [;
 ];
 import React, { useState, useMemo } from 'react';
 export /**;
-import { motion, AnimatePresence  } from 'framer-motion';
 const Component = React && React.memo(function Page() {;
   {;
 ";
@@ -383,7 +427,7 @@ const stats = [ ";
 
 export function HowItWorksSection(): any ({
   className,
-  style,
+  style
 }: HowItWorksSectionProps) {
   const { t } = useTranslation()
   const steps = getSteps(t)
@@ -519,7 +563,7 @@ function HowItWorksSection() {
               <div 
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? "md: flex-row-reverse" : "",
+                  index % 2 === 0 ? "md: flex-row-reverse" : ""
                 } relative`}
               >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
@@ -550,6 +594,10 @@ function HowItWorksSection() {
 };
 
 
+export default HowItWorksSection;
+export default HowItWorksSection;
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
 export default Component;
 
 }
@@ -586,3 +634,6 @@ export default Component;
 ;
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

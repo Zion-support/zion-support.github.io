@@ -48,10 +48,7 @@ export default function ComprehensivePricing2029() {
     : allServices.filter(service => {
         if (selectedCategory === 'ai-autonomous') {
           return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous'))
-        } else if (selectedCategory === 'emerging-tech') {
-
-
-        } else if (selectedCategory === 'business-solutions') {
+        } else if (selectedCategory === 'emerging-tech') {} else if (selectedCategory === 'business-solutions') {
           return service.category.some(cat => cat.includes('Business') |cat.includes('Marketing') |cat.includes('Education'))
         }
         return true

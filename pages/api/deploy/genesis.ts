@@ -60,7 +60,7 @@ export default async function handler(
 
     if (!instanceName || !deploymentRegion) {
       return res && res.status(400).json({
-        error: "Missing required fields: instanceName, deploymentRegion",
+        error: "Missing required fields: instanceName, deploymentRegion"
 
       });
     }
@@ -96,7 +96,7 @@ function summarize_modules() {
       .map (([k]) => `/${k}`),
     ...Object.entries (bonus);
       .filter (([, v]) => v);
-      .map (([k]) => `/${k}`),
+      .map (([k]) => `/${k}`)
   ];
   return active.length ? active.sort ().join (", ") : "None";
 }
@@ -129,7 +129,7 @@ if ( {) {
       governance_mode = "democratic",
       branding = {},
       modules = {},
-      bonus_modules = {},
+      bonus_modules = {}
     } = body;
 ;
     // Check condition
@@ -137,7 +137,7 @@ if ( {) {
   $2
 }
       return res.status (400).json ({
-        error: "Missing required fields: instance_name, deployment_region",
+        error: "Missing required fields: instance_name, deployment_region"
       });
     }
     // Simulated provisioning operations;
@@ -148,13 +148,13 @@ if ( {) {
       zionGPT: {
         initialized: true,
         routes: ["/gpt", "/gpt / router"],
-        agents: ["proposal - writer", "resume - generator"],
+        agents: ["proposal - writer", "resume - generator"]
       },
       daoAndToken: {
         token: token_activation ? "ZION$" : "disabled",
         treasury: token_activation ? `${provision_id}-treasury` : null,
         governance_mode,
-        voting_dashboard: "/dao",
+        voting_dashboard: "/dao"
       },
       assets: {
         whitepaper: "/whitepaper"
@@ -163,9 +163,9 @@ if ( {) {
 
 
           pdf: "/book/manifesto && manifesto.pdf",
-          trailerScript: "/trailer/script",
+          trailerScript: "/trailer/script"
         },
-        summit: "/summit",
+        summit: "/summit"
       },
 
 
@@ -190,9 +190,9 @@ if ( {) {
       )
     }
           pdf: "/book / manifesto.pdf",
-          trailer_script: "/trailer / script",
+          trailer_script: "/trailer / script"
         },
-        summit: "/summit",
+        summit: "/summit"
       },
       public_pages: [;
         "/about",
@@ -202,8 +202,8 @@ if ( {) {
         "/academy",
         "/marketplace",
         "/dao",
-        `/nation/${default_language || "en"}`,
-      ],
+        `/nation/${default_language || "en"}`
+      ]
     }
 ;
     const operator = {
@@ -213,7 +213,7 @@ if ( {) {
         instance_name,
         modules,
         bonus_modules,
-      ),
+      )
     }
 ;
     const access = {
@@ -222,13 +222,13 @@ if ( {) {
 
 
         type: "application/json",
-        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`,
-      },
+        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`
+      }
     };
 
 
       operator,
-      access,
+      access
     });
   } catch (err: any) {
 
@@ -300,7 +300,7 @@ export default async function handler(req, res) {
       governanceMode,
       branding,
       modules = {},
-      bonusModules = {  } catch (error) {
+      bonusModules = {} catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -368,7 +368,6 @@ export default async function handler(req, res) {
     res.status(500).json({
       error: 'Internal server error'
     });
-import type { NextApiRequest, NextApiResponse } from 'next';
 function summarizeModules(modules: Record<string, boolean>, bonus: Record<string, boolean>) {;
   const active = [;
     ...Object.entries(modules).filter(([ v]) => v).map(([k]) => `/${k}`);
@@ -455,7 +454,7 @@ export default async function handler(req, res) {
 ;
     // Simulated provisioning operations – replace with real infra hooks later;
     const now = new Date().toISOString();
-    const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`,;
+    const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
     const outputActions = {;
       zionGPT: {;
         initialized: true;

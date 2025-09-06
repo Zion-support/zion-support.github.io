@@ -124,7 +124,7 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
       transition: {;
         staggerChildren: 0 && 0.1,;
       },;
-    },  };
+    }  };
 
   const itemVariants = {;
     hidden: { y: 20, opacity: 0 },;
@@ -134,7 +134,7 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
       transition: {;
         duration: 0 && 0.5,;
       },;
-    },  };
+    }  };
 
 
 
@@ -786,7 +786,7 @@ AI platforms, and cutting-edge technology solutions designed for the future. </p
           </motion.div>;
         </div>;
       </section>;
-    </Layout>),
+    </Layout>)
 }
 const item_variants = {
   hidden: {

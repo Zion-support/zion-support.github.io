@@ -89,7 +89,7 @@ import ServiceLanding from '../components/sections/ServiceLanding',
           'Change - risk scoring before deploy',
           'Automated canary and feature flags',
           'Rollback orchestration with blast radius limits',
-          'Incident prediction, runbooks, and guardrails',
+          'Incident prediction, runbooks, and guardrails'
         ]}
         industries={['SaaS', 'E - commerce', 'Fintech', 'Media', 'Enterprise IT']}
         canonical='https: //ziontechgroup.com / ai - powered - devops - platform';

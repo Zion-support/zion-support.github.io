@@ -1,9 +1,16 @@
 
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+ursor/automate-test-improve-and-merge-code-646c
 import React from 'react';
 interface TokenManagerProps {
   // Add props here as needed
 }
-export default function TokenManager({ }: TokenManagerProps) {
+export default function TokenManager({}: TokenManagerProps) {
   return (
     <div>
       <h1>TokenManager</h1>
@@ -12,3 +19,11 @@ export default function TokenManager({ }: TokenManagerProps) {
   );
 }
 
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

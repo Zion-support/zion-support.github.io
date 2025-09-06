@@ -23,25 +23,41 @@ function TalentOnboardingSteps() {
       completed: onboardingStatus.profileCompleted,
       link: "/profile",
 
-      action: "Update",
+      action: "Update"
     },
 
+      action: "Update"
+    },
+      action: "Update"
+    },
+      action: "Update"},
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
     {
       id: "skills",
       label: "Add your top skills",
       completed: onboardingStatus.skillsAdded,
       link: "/profile/skills",
 
-      action: "Add Skills",
+      action: "Add Skills"
     },
 
+      action: "Add Skills"
+    },
+      action: "Add Skills"
+    },
+      action: "Add Skills"},
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
     {
       id: "availability",
       label: "Set your availability",
       completed: onboardingStatus.availabilitySet,
       link: "/profile/availability",
 
-      action: "Set",
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
+      action: "Set"
     },
 
     {
@@ -49,9 +65,12 @@ function TalentOnboardingSteps() {
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
       link: "/talent-dashboard",
-      action: "View Matches",
-    },
+      action: "View Matches"
+    }
   ];
+      action: "Set"},
+    {
+>>>>>>> main
 
       id: "match",
       label: "Receive your first job match",

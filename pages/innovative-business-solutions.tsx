@@ -39,7 +39,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from 'react';
   Wifi, Building, Cpu as CpuIcon, TrendingUp as ChartIcon, Megaphone, HeadphonesIcon, Users as TeamIcon
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
@@ -135,8 +134,8 @@ const contactInfo = {;
     features: [;
       'Campaign Optimization',
       'Content Personalization',
-      'ROI Tracking',
-    ],
+      'ROI Tracking'
+    ]
   },
   {
     title: 'Sales Intelligence',
@@ -145,7 +144,7 @@ const contactInfo = {;
       string => s.category === 'Sales Intelligence'),
     icon: TrendingUp,
     color: 'from - green - 500 to - emerald - 600',
-    features: ['Lead Scoring', 'Sales Forecasting', 'Pipeline Optimization'],
+    features: ['Lead Scoring', 'Sales Forecasting', 'Pipeline Optimization']
   },
   {
     title: 'Customer Service',
@@ -154,7 +153,7 @@ const contactInfo = {;
       string => s.category === 'Customer Service'),
     icon: HeadphonesIcon,
     color: 'from - orange - 500 to - red - 600',
-    features: ['AI Chatbots', 'Ticket Automation', 'Sentiment Analysis'],
+    features: ['AI Chatbots', 'Ticket Automation', 'Sentiment Analysis']
   },
   {
     title: 'HR Management',
@@ -167,7 +166,7 @@ const contactInfo = {;
       "Zion Tech Group's business intelligence platform has transformed our decision - making process. We now have real - time insights that have increased our revenue by 300%.",
 
     rating: 5,
-    avatar: '👨‍💼',
+    avatar: '👨‍💼'
   },  {
     name: 'Sarah Johnson',
     role: 'Marketing Director, DigitalFlow Agency',
@@ -177,7 +176,7 @@ const contactInfo = {;
       "The AI marketing automation platform has revolutionized our campaigns. We've seen conversion rates increase by 150% while reducing costs by 40%.",
 
     rating: 5,
-    avatar: '👩‍💼',
+    avatar: '👩‍💼'
   },  {
     name: 'David Chen',
     role: 'Sales Manager, TechSales Pro',

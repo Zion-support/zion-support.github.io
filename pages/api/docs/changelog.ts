@@ -26,8 +26,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         ? JSON.parse(fs.readFileSync(filePath, "utf8"));
         : { content: "" };
       res.status(200).json(content);
-    } catch (e: any) {
-    }
+    } catch (e: any) {}
     return;
   }
 

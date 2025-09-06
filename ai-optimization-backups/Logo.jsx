@@ -1,3 +1,10 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+>>>>>>> main
+
+
+>>>>>>> origin/automation-improvements-final
+ursor/automate-test-improve-and-merge-code-646c
 
 
 
@@ -11,11 +18,26 @@
 
 
 
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
 ;,
 import _React from 'react';';,
 import { Link } from 'react-router-dom';,
 export function Logo({ customLogo, customColor }) {}
   const logoColor = customColor || '#22D3EE';',
+  return (;
+    <Link to="/" className="flex items-center space-x-3 group">";
+      <div);
+        className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"";
+        style={{}
+          background: customColor,
+            ? `linear-gradient(135deg,${customColor},${customColor}dd)`,
+            : 'linear-gradient(135deg,#22D3EE,#A855F7)'}}',
+      >;,
   return (
     <Link to="/" className="flex items-center space-x-3 group">";
       <div)
@@ -35,12 +57,38 @@ export function Logo({ customLogo, customColor }) {}
 
     </Link>;
 
-import React from 'react';
-import { Link } from 'react-router-dom';
+
+    </Link>;
+
+    </Link>;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> origin/main
+
+export function Logo({ customLogo, customColor }) {
+  const logoColor = customColor || '#22D3EE';
+
+  return (
+    <Link to="/" className="flex items-center space-x-3 group">
+      <div
+        className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"
+
+    </Link>;
+
+
+    </Link>;
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
-import React from 'react';
+
+ursor/fix-website-loading-errors-and-merge-6662
+    </Link>;
+
+    </Link>;
+ursor/automate-test-improve-and-merge-code-646c
 
 
 
@@ -53,7 +101,6 @@ import React from 'react';
 
 
 
-import React from 'react';
 
 
 
@@ -61,20 +108,50 @@ import React from 'react';
 
 
 
-import React from 'react';
+
+
+
 origin/automation-improvements-final
 
-import { Link } from 'react-router-dom';
       <divclassName="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"import React from 'react'
 import { Link } from 'react-router-dom'
 export function Logo({ customLogo, customColor }) {
   const logoColor = customColor || '#22D3EE'
 
 
+ursor/automate-test-improve-and-merge-code-646c
 export function Logo({ customLogo, customColor }) {
   const logoColor = customColor || '#22D3EE';
 
   return (
+>>>>>>> main
+export function Logo({ customLogo, customColor }) {;
+  const logoColor = customColor || '#22D3EE';
+
+      <divclassName="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"import React from 'react'
+
+export function Logo({ customLogo, customColor }) {
+  const logoColor = customColor || '#22D3EE'
+
+  
+
+
+>>>>>>> origin/automation-improvements-final
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+  
+
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+  
+  
+
+  
+ursor/automate-test-improve-and-merge-code-646c
 
 
 
@@ -105,8 +182,45 @@ export function Logo({ customLogo, customColor }) {
 
 
 
+ursor/fix-website-loading-errors-and-merge-6662
+        style={{
+          background: customColor
+            ? `linear-gradient(135deg,${customColor},${customColor}dd)`
+            : 'linear-gradient(135deg,#22D3EE,#A855F7)'
+        }}
+      >
+        <span className="text-white font-bold text-xl">Z</span>
+      </div>
+      <div className="flex flex-col">
+        <span className="text-xl font-bold" style={{ color: logoColor }}>
+          Zion
+        </span>
+        <span className="text-sm text-zinc-300 font-medium">Tech Group</span>
+      </div>
+    </Link>
+  );
+  );
+>>>>>>> main
+}
+,
+import _React from 'react'; import { Link } from 'react-router-dom'; export function Logo({ customLogo,customColor }) { const logoColor = customColor || '#22D3EE'; return ( <Link to="/" className="flex items-center space-x-3 group"> {' '} <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300" style={{ background: customColor ? `linear-gradient(135deg,${customColor},${customColor}dd)` : 'linear-gradient(135deg,#22D3EE,#A855F7)'}} > {' '} <span className="text-white font-bold text-xl">Z</span>{' '} </div>{' '} <div className="flex flex-col"> {' '} <span className="text-xl font-bold" style={{ color: logoColor }}> {' '} Zion{' '} </span>{' '} <span className="text-sm text-zinc-300 font-medium"> {' '} Tech Group{' '} </span>{' '} </div>{' '} </Link> )}'
+}
+>>>>>>> main
+>>>>>>> main
+}
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
   );
 }
+
+}
+>>>>>>> origin/main
+}
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+
+}
+ursor/automate-test-improve-and-merge-code-646c
 
         style={{ backgroundColor: logoColor }}
       >
@@ -159,3 +273,8 @@ export function Logo({ customLogo, customColor }) {
 
 
 
+
+}
+>>>>>>> origin/main
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

@@ -236,7 +236,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
       const response = await fetch('/api/resend-verification-email', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ email: proactiveResendEmail }),      });
+        body: JSON && JSON.stringify({ email: proactiveResendEmail })      });
 
 
 

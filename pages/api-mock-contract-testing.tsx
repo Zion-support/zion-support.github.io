@@ -28,7 +28,7 @@ import React from 'react';
 
 
 import Head from 'next / head';
-import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check, } from 'lucide-react';
+import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check } from 'lucide-react';
 import Layout from '../components / layout / Layout';
 import ServiceAds from '../components / sections / ServiceAds';
 export default /**
@@ -39,7 +39,7 @@ function ApiMockContractTestingPage() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',  }
+    website: 'https://ziontechgroup.com'  }
 ;
   const ad_items = [;
     {
@@ -51,30 +51,30 @@ function ApiMockContractTestingPage() {
         'OpenAPI / GraphQL import and live mock server',
         'Contract tests gated in CI (GitHub / GitLab / Bitbucket)',
         'Dynamic data generators and scenario templates',
-        'Snapshot diffs and changelog with approvals',
+        'Snapshot diffs and changelog with approvals'
       ],
       link: 'https://ziontechgroup.com / api - mock - contract - testing',
-      contact_info,
-    },
+      contact_info
+    }
   ];
 ;
   const tiers = [;
     {
       name: 'Starter',
       price: '$69 / month',
-      items: ['1 project', '5 mocks', 'OpenAPI import', 'CI status checks'],
+      items: ['1 project', '5 mocks', 'OpenAPI import', 'CI status checks']
     },
     {
       name: 'Team',
       price: '$149 / month',
-      items: ['5 projects', 'Unlimited mocks', 'Record / replay', 'Slack alerts'],
+      items: ['5 projects', 'Unlimited mocks', 'Record / replay', 'Slack alerts']
     },
     {
       name: 'Enterprise',
       price: 'Custom',
-      items: ['SAML / SSO', 'RBAC', 'Private cloud / VPC', 'Premium support'],
+      items: ['SAML / SSO', 'RBAC', 'Private cloud / VPC', 'Premium support']
 
-    },  ];
+    }  ];
 ;
   return (
 

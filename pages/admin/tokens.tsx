@@ -189,8 +189,6 @@ export default function AdminTokens() {
                 <input type=&quot;number&quot; step=&quot;0.01" className="border rounded px-2 py-1&quot; value={config.usdPerToken} onChange={(e) => setConfig({ ...config, usdPerToken: parseFloat(e.target.value || &quot;0") })} />
 
 
-import React, { useEffect, useState } from "react";
-import EnhancedLayout from "../../components/layout/EnhancedLayout";
 export default function AdminTokens() {
   const [transactions, setTransactions] = useState<any[]>([])
   const [userId, setUserId] = useState("")

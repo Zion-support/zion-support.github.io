@@ -1,8 +1,15 @@
 
 import React from\';react\' const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {\''\';
 
+const React from";react" const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {""";""
+const React from";react" const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {""";""
+ursor/automate-test-improve-and-merge-code-646c
 
 
 const React from";react" const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {""";""
 
 
+const React from";react" const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {""";""
+const React from";react" const SEOOptimizer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [report,setReport] = useState (null) const [selectedPage,setSelectedPage] = useState (null) const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) try {""";""
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

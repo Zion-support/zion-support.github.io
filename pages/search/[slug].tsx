@@ -332,7 +332,7 @@ export default function SearchResultsPage(req, res) {
                 bio: result && result.description,
                 summary: result && result.description,
                 is_verified: false,
-                availability_type: 'available',
+                availability_type: 'available'
 
               }}
               onViewProfile={(id: string) => {;

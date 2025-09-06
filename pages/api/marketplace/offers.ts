@@ -7,13 +7,12 @@ import { v4 as uuidv4  } from './uuid';
 import {
   assert_client,
   assertTalentOrClientForOffer,
-  getDemoUser,
+  getDemoUser
 } from '../../../utils / marketplace / auth';
-import {
   getOfferById,
   list_offers,
   save_offer,
-  save_project,
+  save_project
 } from '../../../utils / marketplace / store';
 import { Offer, PaymentTerms, Project  } from '../../../utils / marketplace / types';
 /**
@@ -58,7 +57,7 @@ if ( {) {
         startDateIso,
         scopeSummary,
         paymentTerms,
-        agreementUrl,
+        agreementUrl
       } = req && req.body || {};
       if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
 
@@ -82,7 +81,7 @@ if ( {) {
         startDateIso,
         scope_summary,
         payment_terms,
-        agreement_url,
+        agreement_url
       } = req.body || {}
       // Check condition
 if ( {) {
@@ -191,8 +190,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                   id: uuidv4(),
                   name: "Agreement",
                   url: existing && existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString(),
-                },
+                  uploadedAtIso: new Date().toISOString()
+                }
               ]
 
             : []
@@ -232,10 +231,7 @@ if ( {) {
 
         existing.status = "CONFIRMED";
         // Create a project upon acceptance;
-        const project: Project = {
-
-
-  }
+        const project: Project = {}
 
           id: uuidv4 (),
           title: `Project with ${existing.talent_slug}`,
@@ -254,11 +250,11 @@ if ( {) {
                   id: uuidv4 (),
                   name: "Agreement",
                   url: existing.agreement_url,
-                  uploadedAtIso: new Date ().toISOString (),
-                },
+                  uploadedAtIso: new Date ().toISOString ()
+                }
               ];
             : [],
-          notes: [],
+          notes: []
         }
         save_project (project);
         existing.project_id = project.id;
@@ -299,7 +295,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
         scope_summary,
         payment_terms,
-        agreement_url,
+        agreement_url
       } = req.body || {}
       // Check condition
 if ( {) {
@@ -370,8 +366,8 @@ if ( {) {
         return res.json({ ok: true, offer: existing, project })
       }
                   url: existing && existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString(),
-                },
+                  uploadedAtIso: new Date().toISOString()
+                }
               ]
 
             : []
@@ -411,10 +407,7 @@ if ( {) {
 
         existing.status = "CONFIRMED";
         // Create a project upon acceptance;
-        const project: Project = {
-
-
-  }
+        const project: Project = {}
 
           id: uuidv4 (),
           title: `Project with ${existing.talent_slug}`,
@@ -433,11 +426,11 @@ if ( {) {
                   id: uuidv4 (),
                   name: "Agreement",
                   url: existing.agreement_url,
-                  uploadedAtIso: new Date ().toISOString (),
-                },
+                  uploadedAtIso: new Date ().toISOString ()
+                }
               ];
             : [],
-          notes: [],
+          notes: []
         }
         save_project (project);
         existing.project_id = project.id;

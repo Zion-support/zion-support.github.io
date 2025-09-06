@@ -93,7 +93,7 @@
               'Track regressions and enforce quality gates',
               'Integrations: OpenAI, Anthropic, Groq, OpenRouter, Langfuse',
               'Export reports, share baselines, and diff results',
-              'From $199 / mo',
+              'From $199 / mo'
             ].map (function => (
               <div;
                 key={f}

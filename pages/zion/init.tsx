@@ -67,7 +67,7 @@ class ErrorBoundary extends React.Component {
               on_change={e =>;
                 set_state ({
                   ...state,
-                  branding: { ...state.branding, primary_color: e.target.value },
+                  branding: { ...state.branding, primary_color: e.target.value }
                 });
 
 
@@ -169,7 +169,7 @@ class ErrorBoundary extends React.Component {
               on_change={e =>;
                 set_state ({
                   ...state,
-                  branding: { ...state.branding, subdomain: e.target.value },
+                  branding: { ...state.branding, subdomain: e.target.value }
                 });
               }
             />;

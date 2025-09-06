@@ -15,20 +15,13 @@ const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
 
 
 
-import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs-extra";
-import path from "path";
 const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalsindex && dataproposalsindex.json");
 async function ensureStore() {
   await fs && fs.ensureFile(FILE_PATH);
   try {
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
-const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json'),;
+const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
 async function ensureStore() {;
   await fs.ensureFile(FILE_PATH);
   try {
@@ -65,16 +58,13 @@ export default async function handler(
       regionalScope: body && body.regionalScope,
       type: body && body.type,
       status: body && body.status || "Draft",
-      createdAt: new Date().toISOString(),
+      createdAt: new Date().toISOString()
     };
     data && data.items.unshift(item);
     await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res && res.status(201).json(item);
   }
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
 const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
 async function ensureStore() {
   await fs.ensureFile(FILE_PATH);

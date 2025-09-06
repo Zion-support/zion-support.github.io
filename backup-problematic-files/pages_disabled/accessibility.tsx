@@ -1,4 +1,7 @@
 
+import React from 'react';
+:backup-problematic-files/pages_disabled/accessibility.tsx
+ursor/automate-test-improve-and-merge-code-646c
 import * as React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import {
@@ -17,6 +20,8 @@ import {
   Settings
 } from 'lucide-react';
 
+>>>>>>> main:pages_disabled/accessibility.tsx
+ursor/automate-test-improve-and-merge-code-646c
 
 interface AccessibilityProps {
   className?: string;

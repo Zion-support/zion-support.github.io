@@ -20,6 +20,149 @@ class BuildMonitor {
 
 
 
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
+    this.reportFile = path.join(__dirname, 'reports', 'build-status.json');
+    this.alertThreshold = 3; // Alert after 3 consecutive failures
+    this.consecutiveFailures = 0;
+    // Ensure directories exist
+    fs.mkdirSync(path.dirname(this.logFile), { recursive: true });
+    fs.mkdirSync(path.dirname(this.reportFile), { recursive: true });
+  }
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(logMessage.trim());
+    fs.appendFileSync(this.logFile, logMessage);
+  }
+  async checkBuildHealth() {
+    const results = {
+      timestamp: new Date().toISOString(),
+      build: { status: 'unknown', duration: 0, errors: [] },
+      lint: { status: 'unknown', issues: [] },
+      typeCheck: { status: 'unknown', errors: [] },
+      dependencies: { status: 'unknown', outdated: [] }
+    };
+    try {
+      // Check build
+      this.log('Checking build status...');
+      const buildStart = Date.now();
+      try {
+        execSync('yarn build', { 
+          stdio: 'pipe', 
+          timeout: 300000, // 5 minutes timeout
+          cwd: process.cwd()
+        });
+        results.build.status = 'success';
+        results.build.duration = Date.now() - buildStart;
+        this.consecutiveFailures = 0;
+        this.log('Build check: SUCCESS');
+      } catch (error) {
+        results.build.status = 'failed';
+        results.build.duration = Date.now() - buildStart;
+        results.build.errors = this.parseErrors(error.stdout || error.message);
+        this.consecutiveFailures++;
+        this.log(`Build check: FAILED (${this.consecutiveFailures} consecutive failures)`, 'ERROR');
+      }
+      // Check linting (non-blocking)
+      try {
+        execSync('yarn lint', { stdio: 'pipe', cwd: process.cwd() });
+        results.lint.status = 'success';
+        this.log('Lint check: SUCCESS');
+      } catch (error) {
+        results.lint.status = 'failed';
+        results.lint.issues = this.parseLintIssues(error.stdout || error.message);
+        this.log('Lint check: ISSUES FOUND', 'WARN');
+      }
+      // Check TypeScript (non-blocking)
+      try {
+        execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'pipe', cwd: process.cwd() });
+        results.typeCheck.status = 'success';
+        this.log('TypeScript check: SUCCESS');
+      } catch (error) {
+        results.typeCheck.status = 'failed';
+        results.typeCheck.errors = this.parseTypeErrors(error.stdout || error.message);
+        this.log('TypeScript check: ERRORS FOUND', 'WARN');
+      }
+      // Check dependencies
+      try {
+        const outdated = execSync('yarn outdated --json', { 
+          stdio: 'pipe', 
+          cwd: process.cwd() 
+        });
+        results.dependencies.status = 'success';
+        results.dependencies.outdated = JSON.parse(outdated);
+        this.log('Dependencies check: SUCCESS');
+      } catch (error) {
+        results.dependencies.status = 'warning';
+        this.log('Dependencies check: Some packages may be outdated', 'WARN');
+      }
+    } catch (error) {
+      this.log(`Error during health check: ${error.message}`, 'ERROR');
+    }
+    return results;
+  }
+  parseErrors(output) {
+    const errors = [];
+    const lines = output.split('\n');
+    lines.forEach(line => {
+      if (line.includes('Error:') || line.includes('SyntaxError:')) {
+        errors.push(line.trim());
+      }
+    });
+    return errors;
+  }
+  parseLintIssues(output) {
+    const issues = [];
+    const lines = output.split('\n');
+    lines.forEach(line => {
+      if (line.includes('error') || line.includes('warning')) {
+        issues.push(line.trim());
+      }
+    });
+    return issues;
+  }
+  parseTypeErrors(output) {
+    const errors = [];
+    const lines = output.split('\n');
+    lines.forEach(line => {
+      if (line.includes('error TS')) {
+        errors.push(line.trim());
+      }
+    });
+    return errors;
+  }
+  async sendAlert(results) {
+    if (this.consecutiveFailures >= this.alertThreshold) {
+      this.log(`ALERT: ${this.consecutiveFailures} consecutive build failures!`, 'CRITICAL');
+      // Create alert file for other processes to pick up
+      const alertData = {
+        type: 'build_failure',
+        consecutiveFailures: this.consecutiveFailures,
+        timestamp: new Date().toISOString(),
+        lastError: results.build.errors[0] || 'Unknown error',
+        results: results
+      };
+      fs.writeFileSync(
+        path.join(__dirname, 'alerts', 'build-failure-alert.json'),
+        JSON.stringify(alertData, null, 2)
+      );
+    }
+  }
+  async generateReport(results) {
+    // Read previous report for trends
+    let previousReport = null;
+    if (fs.existsSync(this.reportFile)) {
+      try {
+        previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8'));
+      } catch (error) {
+        this.log('Could not read previous report', 'WARN');
+      }
+>>>>>>> main
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
@@ -38,6 +181,7 @@ class BuildMonitor {
       console.log(logMessage);
     }
   }
+ursor/automate-test-improve-and-merge-code-646c
 
 
 
@@ -48,6 +192,8 @@ class BuildMonitor {
 
 
 
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
   async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
@@ -67,6 +213,7 @@ class BuildMonitor {
         this.log('warn', 'No build found, triggering build...');
         await this.triggerBuild();
       }
+ursor/automate-test-improve-and-merge-code-646c
 
 
 
@@ -77,6 +224,17 @@ class BuildMonitor {
 
 
 
+      if (report.healthScore < 70) {
+        this.log('Build health is below threshold. Consider immediate action.', 'WARN');
+      }
+    } catch (error) {
+      this.log(`Error in build monitor: ${error.message}`, 'ERROR');
+    }
+>>>>>>> main
+      
+      
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
@@ -285,6 +443,14 @@ if (require.main === module) {
 
 
 
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  const monitor = new BuildMonitor();
+  monitor.run().catch(console.error);
+>>>>>>> main
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c
   const command = process.argv[2];
   switch (command) {
     case 'start':
@@ -311,6 +477,8 @@ if (require.main === module) {
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]');
   }
 }
+module.exports = BuildMonitor;
+ursor/automate-test-improve-and-merge-code-646c
 
 
 const fs = require('fs);
@@ -448,6 +616,12 @@ class BuildMonitor {
 if (require.main === module) {
   const monitor = new BuildMonitor(),
 
+ursor/automate-test-improve-and-merge-code-646c
   monitor.run().catch(console.error)}
 
 
+module.exports = BuildMonitor;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+module.exports = BuildMonitor;
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

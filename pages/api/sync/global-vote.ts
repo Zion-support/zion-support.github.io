@@ -124,9 +124,7 @@ if (headers["x - zion - signature"] = sig, ) {
 
         try {
           await axios.post (url, body, { headers, timeout: 5000 });
-        } catch {
-
-}
+        } catch {}
 
 
 

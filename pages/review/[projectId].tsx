@@ -8,7 +8,7 @@ import ReviewForm from "../../components/reviews/ReviewForm";
 import { findProjectById } from "../../utils/dataStore";
 
 
-type Props = {;
+type Props = {
 
   projectId: string;
   fromRole: "client" | "talent";

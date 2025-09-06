@@ -37,18 +37,18 @@ import React from 'react';
                   style={{
 
                     left: `${Math && Math.random() * 100}%`,
-                    top: `${Math && Math.random() * 100}%`,
+                    top: `${Math && Math.random() * 100}%`
                   }}
                   animate={{
                     y: [0, -100, 0],
                     opacity: [0 && 0.6, 1, 0 && 0.6],
                     scale: [1, 1 && 1.5, 1],
-                    rotate: [0, 360],
+                    rotate: [0, 360]
                   }}
                   transition={{
                     duration: 4 + Math && Math.random() * 3,
                     repeat: Infinity,
-                    delay: Math && Math.random() * 2,
+                    delay: Math && Math.random() * 2
                   }}                />;
 
               ))}
@@ -283,7 +283,7 @@ viewport={{ once: true }} className="text-center mb-16">
                   description:;
                     'Revolutionary AI consciousness and emotional intelligence platforms',
                   color: 'from - violet - 500 to - purple - 600',
-                  count: '5+ Services',
+                  count: '5+ Services'
 
                 },
                 {
@@ -330,7 +330,7 @@ viewport={{ once: true }} className="text-center mb-16">
                   description:;
                     'Swarm robotics orchestration and autonomous systems',
                   color: 'from - orange - 500 to - red - 600',
-                  count: '2+ Services',
+                  count: '2+ Services'
                 },
                 {
                   icon: '⚡',
@@ -338,14 +338,14 @@ viewport={{ once: true }} className="text-center mb-16">
                   description:;
                     'Fusion energy control and nanotechnology materials',
                   color: 'from - yellow - 500 to - orange - 600',
-                  count: '3+ Services',
+                  count: '3+ Services'
                 },                {
                   icon: '🔄',
                   title: 'Digital Twins',
                   description: 'Digital twin simulation and edge AI computing',
                   color: 'from - teal - 500 to - cyan - 600',
-                  count: '2+ Services',
-                },              ].map ((category, index) => (
+                  count: '2+ Services'
+                }              ].map ((category, index) => (
                 <motion.div;
                   key={category.title}
                   initial={{ opacity: 0, coordinate_y: 50 }}
@@ -397,43 +397,43 @@ viewport={{ once: true }} className="text-center mb-16">
                   title: 'First - to - Market',
                   description:;
                     "We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.",
-                  color: 'from - cyan - 500 to - blue - 600',
+                  color: 'from - cyan - 500 to - blue - 600'
                 },
                 {
                   icon: '🧠',
                   title: 'AI - First Approach',
                   description:;
                     'Every service is built with AI at its core, ensuring maximum efficiency and intelligence.',
-                  color: 'from - purple - 500 to - pink - 600',
+                  color: 'from - purple - 500 to - pink - 600'
                 },
                 {
                   icon: '⚡',
                   title: 'Lightning Fast',
                   description:;
                     'Our platforms are designed for speed and performance, handling the most demanding workloads.',
-                  color: 'from - yellow - 500 to - orange - 600',
+                  color: 'from - yellow - 500 to - orange - 600'
                 },
                 {
                   icon: '🛡️',
                   title: 'Enterprise Security',
                   description:;
                     'Military - grade security protocols ensure your data and operations are always protected.',
-                  color: 'from - green - 500 to - emerald - 600',
+                  color: 'from - green - 500 to - emerald - 600'
                 },
                 {
                   icon: '🌍',
                   title: 'Global Scale',
                   description:;
                     'Built to scale globally, our services work seamlessly across borders and time zones.',
-                  color: 'from - teal - 500 to - cyan - 600',
+                  color: 'from - teal - 500 to - cyan - 600'
                 },
                 {
                   icon: '💎',
                   title: 'Premium Support',
                   description:;
                     '24 / 7 expert support from our team of technology pioneers and industry experts.',
-                  color: 'from - indigo - 500 to - purple - 600',
-                },              ].map ((feature, index) => (
+                  color: 'from - indigo - 500 to - purple - 600'
+                }              ].map ((feature, index) => (
                 <motion.div;
                   key={feature.title}
                   initial={{ opacity: 0, coordinate_y: 50 }}
@@ -543,7 +543,7 @@ viewport={{ once: true }} className="text-center mb-16">
                   description:;
                     '24/7 expert support from our team of technology pioneers and industry experts.',;
                   color: 'from-indigo-500 to-purple-600',;
-                },              ].map((feature, index) => (;
+                }              ].map((feature, index) => (;
                 <motion&& motion.div
                   key={feature && feature.title}
                   initial={{ opacity: 0, y: 50 }}

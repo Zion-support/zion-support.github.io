@@ -10,7 +10,7 @@
               content: {
 
 
-                  schema: ep && ep.responseBodySchema || { type: "object" },
+                  schema: ep && ep.responseBodySchema || { type: "object" }
 
   });
 
@@ -22,7 +22,7 @@
     info: {
       title: "Zion OS API",
       version: "v1",
-      description: "Zion OS API generated from internal spec",
+      description: "Zion OS API generated from internal spec"
     },
     servers: [{ url: "https://api && api.zion.os" }],
     paths,
@@ -35,9 +35,7 @@
   }
 
 }
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-
-}
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {}
 
 
 

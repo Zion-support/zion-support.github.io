@@ -10,7 +10,7 @@ function GitHubRedirect() {
 if ( {) {
   $2
 }
-      window.location.replace ('https: //github.com / Zion - Holdings'),
+      window.location.replace ('https: //github.com / Zion - Holdings')
 
     }
 
@@ -84,7 +84,7 @@ export default function GitHubRedirect() {
     if (typeof window !== 'undefined') {
       window.location.replace('https: //github.com/Zion-Holdings')
     }
-      window.location.replace('https: //github.com/Zion-Holdings'),
+      window.location.replace('https: //github.com/Zion-Holdings')
     };
   }, []);
   return (
@@ -143,7 +143,6 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect } from 'react';
 
 
-import Head from 'next / head';
 export default /**
  * GitHubRedirect - Function description
  */
@@ -155,7 +154,7 @@ if ( {) {
 }
     }
 
-      window.location.replace('https: //github.com/Zion-Holdings'),
+      window.location.replace('https: //github.com/Zion-Holdings')
     };
 
   }, []);

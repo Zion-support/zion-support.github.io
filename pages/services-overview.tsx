@@ -5,6 +5,27 @@ import Link from './next / link';
 import { motion  } from './framer-motion';
 import {
 
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Services Overview - Zion Tech Group"
+      description="Overview of our services"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Services Overview</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+ursor/automate-test-improve-and-merge-code-646c
   Brain,
   Network,
   Cloud,
@@ -21,6 +42,7 @@ import {
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
   {
     title: "AI Services",
     description:;
@@ -30,10 +52,10 @@ import {
       "AI Analytics",
       "Machine Learning",
       "Natural Language Processing",
-      "Computer Vision",
+      "Computer Vision"
     ],
     link: "/ai - services",
-    color: "from - blue - 500 to - purple - 600",
+    color: "from - blue - 500 to - purple - 600"
   },
   {
     title: "IT Services",
@@ -43,10 +65,10 @@ import {
       "Cloud Migration",
       "System Integration",
       "Network Security",
-      "Data Management",
+      "Data Management"
     ],
     link: "/it - services",
-    color: "from - green - 500 to - blue - 600",
+    color: "from - green - 500 to - blue - 600"
   },
   {
     title: "Micro SAAS",
@@ -57,10 +79,10 @@ import {
       "Workflow Automation",
       "Project Management",
       "Customer Analytics",
-      "API Integration",
+      "API Integration"
     ],
     link: "/micro - saas",
-    color: "from - purple - 500 to - pink - 600",
+    color: "from - purple - 500 to - pink - 600"
   },
   {
     title: "Security",
@@ -70,10 +92,10 @@ import {
       "Threat Detection",
       "Data Encryption",
       "Access Control",
-      "Compliance Management",
+      "Compliance Management"
     ],
     link: "/security",
-    color: "from - red - 500 to - orange - 600",
+    color: "from - red - 500 to - orange - 600"
   },
   {
     title: "Automation",
@@ -83,10 +105,10 @@ import {
       "Process Automation",
       "Workflow Optimization",
       "Task Scheduling",
-      "Integration Hub",
+      "Integration Hub"
     ],
     link: "/automation",
-    color: "from - yellow - 500 to - red - 600",
+    color: "from - yellow - 500 to - red - 600"
   },
   {
     title: "Analytics",
@@ -96,22 +118,22 @@ import {
       "Business Intelligence",
       "Predictive Analytics",
       "Data Visualization",
-      "Reporting",
+      "Reporting"
     ],
     link: "/analytics",
-    color: "from - indigo - 500 to - purple - 600",
-  },
+    color: "from - indigo - 500 to - purple - 600"
+  }
 ];
 
 ;
 const stats = [;
 
 
+ursor/automate-test-improve-and-merge-code-646c
   { number: "500+", label: "Projects Completed" },
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "24 / 7", label: "Support Available" },
   { number: "50+", label: "Countries Served" },
-import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
@@ -173,6 +195,7 @@ const serviceCategories = [
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
 ];
 const benefits = [
 ;
@@ -189,10 +212,11 @@ const benefits = [;
 
     title: "Cutting - Edge Technology",
     description: "Latest technologies and innovative solutions",
-    icon: Target,
+    icon: Target
   },
 
 
+ursor/automate-test-improve-and-merge-code-646c
   {
     title: "Scalable Solutions"
     description: "Solutions that grow with your business"
@@ -202,6 +226,7 @@ const benefits = [;
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
     title: 'Expert Team',
     description: 'Experienced professionals with deep industry knowledge',
     icon: Users
@@ -225,6 +250,144 @@ const benefits = [;
 
 
 
+    title: "Proven Results"
+    description: "Track record of successful implementations"
+    icon: Award
+  }
+];
+export default function ServicesOverviewPage() {
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {;
+  Brain,;
+  Network,;
+  Cloud,;
+  Shield,;
+  Zap,;
+  Target,;
+  Users,;
+  BarChart3,;
+  ArrowRight,;
+  CheckCircle,;
+  Star,;
+  Award,;
+  Clock,;
+  Globe,;
+} from "lucide-react";
+import Layout from "../components/Layout";
+
+const serviceCategories = [;
+  {;
+    title: "AI Services",;
+    description:;
+      "Cutting-edge artificial intelligence solutions for modern businesses",;
+    icon: Brain,;
+    services: [;
+      "AI Analytics",;
+      "Machine Learning",;
+      "Natural Language Processing",;
+      "Computer Vision",;
+    ],;
+    link: "/ai-services",;
+    color: "from-blue-500 to-purple-600",;
+  },;
+  {;
+    title: "IT Services",;
+    description: "Comprehensive IT solutions and infrastructure management",;
+    icon: Network,;
+    services: [;
+      "Cloud Migration",;
+      "System Integration",;
+      "Network Security",;
+      "Data Management",;
+    ],;
+    link: "/it-services",;
+    color: "from-green-500 to-blue-600",;
+  },;
+  {;
+    title: "Micro SAAS",;
+    description:;
+      "Innovative micro software solutions for specific business needs",;
+    icon: Cloud,;
+    services: [;
+      "Workflow Automation",;
+      "Project Management",;
+      "Customer Analytics",;
+      "API Integration",;
+    ],;
+    link: "/micro-saas",;
+    color: "from-purple-500 to-pink-600",;
+  },;
+  {;
+    title: "Security",;
+    description: "Advanced cybersecurity and data protection solutions",;
+    icon: Shield,;
+    services: [;
+      "Threat Detection",;
+      "Data Encryption",;
+      "Access Control",;
+      "Compliance Management",;
+    ],;
+    link: "/security",;
+    color: "from-red-500 to-orange-600",;
+  },;
+  {;
+    title: "Automation",;
+    description: "Intelligent automation solutions to streamline operations",;
+    icon: Zap,;
+    services: [;
+      "Process Automation",;
+      "Workflow Optimization",;
+      "Task Scheduling",;
+      "Integration Hub",;
+    ],;
+    link: "/automation",;
+    color: "from-yellow-500 to-red-600",;
+  },;
+  {;
+    title: "Analytics",;
+    description: "Data-driven insights and business intelligence solutions",;
+    icon: BarChart3,;
+    services: [;
+      "Business Intelligence",;
+      "Predictive Analytics",;
+      "Data Visualization",;
+      "Reporting",;
+    ],;
+    link: "/analytics",;
+    color: "from-indigo-500 to-purple-600",;
+  },;
+];
+
+          
+
+
+
+ursor/automate-test-improve-and-merge-code-646c
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -236,6 +399,7 @@ const benefits = [;
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -244,6 +408,7 @@ const benefits = [;
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
               </p>
             </motion.div>
           </div>
@@ -321,6 +486,7 @@ function ServicesOverviewPage() {
                   animate={{ opacity: 1, coordinate_y: 0 }}
 
 
+ursor/automate-test-improve-and-merge-code-646c
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text - center";
                 >;
@@ -333,6 +499,7 @@ function ServicesOverviewPage() {
                   </div>
 
 
+ursor/automate-test-improve-and-merge-code-646c
                 </motion.div>
               ))}
             </div>
@@ -361,6 +528,7 @@ function ServicesOverviewPage() {
                 We offer a comprehensive range of technology services to meet all your business needs.
 
 
+ursor/automate-test-improve-and-merge-code-646c
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -407,6 +575,7 @@ function ServicesOverviewPage() {
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {category.title}
@@ -433,6 +602,7 @@ function ServicesOverviewPage() {
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
@@ -453,6 +623,7 @@ function ServicesOverviewPage() {
 
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
 
+ursor/automate-test-improve-and-merge-code-646c
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -504,6 +675,8 @@ function ServicesOverviewPage() {
 
 
 
+                    
+ursor/automate-test-improve-and-merge-code-646c
 
 
                     <Link
@@ -523,6 +696,7 @@ function ServicesOverviewPage() {
 
 
 
+ursor/automate-test-improve-and-merge-code-646c
         {/* Benefits Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -534,6 +708,7 @@ function ServicesOverviewPage() {
                 We deliver exceptional results through innovation, expertise
 
 
+ursor/automate-test-improve-and-merge-code-646c
                 and unwavering commitment to your success.
                 We deliver exceptional results through innovation, expertise, and unwavering commitment to your success.
               </p>
@@ -611,6 +786,7 @@ function ServicesOverviewPage() {
                   <h3 className="text-lg font-bold text-gray-900 mb-3">{benefit.title}</h3>
 
 
+ursor/automate-test-improve-and-merge-code-646c
                   <p className="text-gray-600">{benefit.description}</p>
                 </motion.div>
               ))}
@@ -660,6 +836,7 @@ function ServicesOverviewPage() {
                 Let's discuss how our comprehensive services can help you achieve your business goals.
 
 
+ursor/automate-test-improve-and-merge-code-646c
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
               transition={{ duration: 0 && 0.8 }}>;
@@ -681,6 +858,7 @@ function ServicesOverviewPage() {
                   href="/case-studies"
 
 
+ursor/automate-test-improve-and-merge-code-646c
     </Layout>;
   );
                   className="text - center";
@@ -733,3 +911,4 @@ function ServicesOverviewPage() {
     </Layout>);
 }
 
+ursor/automate-test-improve-and-merge-code-646c

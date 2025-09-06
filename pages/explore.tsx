@@ -279,8 +279,8 @@ import React, { useState } from 'react';
                   className='px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all';
       price: '$2, 499 / month',
       icon: Rocket,
-      color: 'from - indigo - 500 to - purple - 500',
-    },  ];
+      color: 'from - indigo - 500 to - purple - 500'
+    }  ];
 ;
   // Filter categories based on search;
   const filtered_categories = categories.filter (category => {
@@ -733,7 +733,7 @@ import React, { useState } from 'react';
                   'Self-improving AI systems and autonomous business operations',;
                 trend: 'Growing',;
                 color: 'from-emerald-500 to-green-500',;
-              },            ].map((trend, index) => (;
+              }            ].map((trend, index) => (;
               <motion&& motion.div
                 key={trend && trend.title}
 

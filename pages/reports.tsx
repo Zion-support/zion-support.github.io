@@ -81,7 +81,6 @@ export default function Reports(req, res) {
           <h3 className=&quot;font-semibold&quot;>Automations Catalog</h3>
           <p className=&quot;text-sm opacity-80&quot;>List of GitHub Action workflows.</p>
           <Link href=&quot;/automation-catalog.json&quot;><a className=&quot;text-blue-600&quot;>Catalog JSON →</Link></Link>
-import Link from 'next/link';
 export default function Reports() {
   return (
     <div className="space-y-6">
@@ -114,7 +113,6 @@ export default function Reports() {
     </div>
   )
 };
-import Link from 'next/link';
 export default function Reports(req, res) {
   try {
   return (;

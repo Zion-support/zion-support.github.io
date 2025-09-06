@@ -23,7 +23,7 @@ import {;
 // Import the new revolutionary services;
 import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
 import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
-const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices],;
+const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices];
 const contactInfo = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';

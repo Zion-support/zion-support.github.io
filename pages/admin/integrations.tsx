@@ -233,7 +233,7 @@ function ManualOverrideForm() {
   async function save() {
     setMessage(''),
     const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) }),
-    if (res.ok) setMessage('Saved'), else setMessage('Error'),
+    if (res.ok) setMessage('Saved'), else setMessage('Error')
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -325,7 +325,7 @@ function save() {
     const res = await fetch ('/api / integrations / overrides', {
       method: 'POST',
       headers: { 'Content - Type': 'application / json' },
-      body: JSON.stringify ({ job_id, disableCrmSync, disableAtsSync }),
+      body: JSON.stringify ({ job_id, disableCrmSync, disableAtsSync })
     });
     if (set_message ('Saved')) {
   $2

@@ -29,7 +29,7 @@ const CustomerSupportChatbot: NextPage = () => {
 
 },
 
-export default CustomerSupportChatbot,
+export default CustomerSupportChatbot
 
 
 }

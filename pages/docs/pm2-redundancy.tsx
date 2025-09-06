@@ -34,7 +34,6 @@ export default function Pm2RedundancyRedirect() {
     </>
   )
 }
-import Head from 'next/head';
 export default function Pm2RedundancyRedirect(req, res) {
   try {
   return (;

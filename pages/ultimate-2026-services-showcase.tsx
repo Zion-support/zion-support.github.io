@@ -58,8 +58,6 @@ import {;
   ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List,;
   ChevronDown, Sparkles;
 } from 'lucide-react',;
-import { ultimate2026Services } from '../data/ultimate-2026-services';
-import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
 export default function Ultimate2026ServicesShowcase(req, res) {
   try {
   const [searchTerm, setSearchTerm] = useState('');
@@ -138,7 +136,7 @@ export default function Ultimate2026ServicesShowcase(req, res) {
         break,;
       case 'price':;
         filtered.sort((a, b) => {;
-          const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, '')),;
+          const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, ''));
           const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, '')),;
           return priceA - priceB;
         }),;

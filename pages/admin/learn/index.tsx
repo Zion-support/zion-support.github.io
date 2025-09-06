@@ -18,7 +18,6 @@ export default function AdminLearn() {
 
       body: JSON.stringify(form)
 
-import { useEffect, useState } from 'react';
 export default function AdminLearn() {
   const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
   const [message, setMessage] = useState('');
@@ -55,7 +54,6 @@ export default function AdminLearn() {
 
 
 
-import { useEffect, useState } from 'react';
 export default function AdminLearn(req, res) {
   try {
   const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),;

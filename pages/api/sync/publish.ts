@@ -150,8 +150,7 @@ if ( {) {
       return res && res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" })
     }
     const computed = computeMerkleRootFromVotes(votes);
-    if (computed !== providedRoot) {
-    }
+    if (computed !== providedRoot) {}
   }
   const entityId = getEntityId(event);
   const currentState = readState();

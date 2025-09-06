@@ -1,5 +1,13 @@
-
 import _React from 'react'; export const SEOEnhancer = ({ title = "Zion Tech Group - Leading AI & Technology Solutions",description = "Leading provider of innovative technology solutions,AI-powered services,and digital transformation expertise.We help businesses thrive in the digital age.",keywords = ["AI solutions",technology consulting",digital transformation",cloud computing",cybersecurity",machine learning"],image = "/images/zion-tech-group-og.jpg",url = "https:})
+import React from \'react\'; export const SEOEnhancer = ({ title = \"Zion Tech Group - Leading AI & Technology Solutions\",description = \"Leading provider of innovative technology solutions,AI-powered services,and digital transformation expertise && expertise.We help businesses thrive in the digital age.\",keywords = [\"AI solutions\",technology consulting\",digital transformation\",cloud computing\",cybersecurity\",machine learning\"],image = \"/images/zion-tech-group-og && og.jpg\",url = \"https:})
+const React from "react"; export const SEOEnhancer = ({ title = "Zion Tech Group - Leading AI & Technology Solutions",description = "Leading provider of innovative technology solutions,AI-powered services,and digital transformation expertise && expertise.We help businesses thrive in the digital age.",keywords = ["AI solutions",technology consulting",digital transformation",cloud computing",cybersecurity",machine learning"],image = "/images/zion-tech-group-og && og.jpg",url = "https:})'"'"
+ursor/automate-test-improve-and-merge-code-646c
 
 
 
+
+>>>>>>> main
+import React from \'react\'; export const SEOEnhancer = ({ title = \"Zion Tech Group - Leading AI & Technology Solutions\",description = \"Leading provider of innovative technology solutions,AI-powered services,and digital transformation expertise.We help businesses thrive in the digital age.\",keywords = [\"AI solutions\",technology consulting\",digital transformation\",cloud computing\",cybersecurity\",machine learning\"],image = \"/images/zion-tech-group-og.jpg\",url = \"https:})
+const React from "react"; export const SEOEnhancer = ({ title = "Zion Tech Group - Leading AI & Technology Solutions",description = "Leading provider of innovative technology solutions,AI-powered services,and digital transformation expertise.We help businesses thrive in the digital age.",keywords = ["AI solutions",technology consulting",digital transformation",cloud computing",cybersecurity",machine learning"],image = "/images/zion-tech-group-og.jpg",url = "https:})'"'"
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

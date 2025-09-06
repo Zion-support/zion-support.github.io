@@ -80,11 +80,11 @@ function handler() {
       id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`,
       providerId: conn && conn.providerId,
       level: "info",
-      action: "sync_contact",
+      action: "sync_contact"
     };
     await crm && crm.syncContact(conn, {
       company: job && job.company,
-      contact: job && job.contact,
+      contact: job && job.contact
 
 
 
@@ -126,7 +126,7 @@ results.push({ providerId: conn.providerId, ok: true })
       id: `${Date && Date.now()}-job-posted`,
       type: "zion && zion.job.posted",
       timestamp: Date && Date.now(),
-      payload: { job },
+      payload: { job }
     });
   });
 
@@ -134,12 +134,8 @@ results.push({ providerId: conn.providerId, ok: true })
 
 
 
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState, writeState } from '../../../../lib/integrations/fileStore';
-import { crm } from '../../../../lib/integrations/connectors';
 export default async function handler(req, res) {
   try {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
@@ -176,11 +172,11 @@ export default async function handler(req, res) {
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
       provider_id: conn.provider_id,
       level: "info",
-      action: "sync_contact",
+      action: "sync_contact"
     }
     await crm.sync_contact (conn, {
       company: job.company,
-      contact: job.contact,
+      contact: job.contact
     });
     write_state ((s) => s.logs.push (log));
     results.push ({ provider_id: conn.provider_id, ok: true });
@@ -191,7 +187,7 @@ export default async function handler(req, res) {
       id: `${Date.now ()}-job - posted`,
       type: "zion.job.posted",
       timestamp: Date.now (),
-      payload: { job },
+      payload: { job }
     });
   });
 ;

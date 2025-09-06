@@ -146,7 +146,7 @@ const Services2024Page: React.FC = () => {;
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'customers'>('name');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
   // Combine all services;
-  const allServices = [...realMicroSaasServices2024, ...innovativeITServices2024],;
+  const allServices = [...realMicroSaasServices2024, ...innovativeITServices2024];
   // Filter and sort services;
   const filteredServices = useMemo(() => {;
     const filtered = allServices.filter(service => {;
@@ -432,56 +432,56 @@ if ( {) {
       id: 'all',
       name: 'All Services',
       icon: Sparkles,
-      count: all_services.length,
+      count: all_services.length
     },
     {
       id: 'ai',
       name: 'AI & ML',
       icon: Brain,
-      count: all_services.filter (string => s.variant.includes ('ai')).length,
+      count: all_services.filter (string => s.variant.includes ('ai')).length
     },
     {
       id: 'quantum',
       name: 'Quantum & Security',
       icon: Shield,
-      count: all_services.filter (string => s.variant.includes ('security')).length,
+      count: all_services.filter (string => s.variant.includes ('security')).length
     },
     {
       id: 'it',
       name: 'Enterprise IT',
       icon: Cpu,
-      count: all_services.filter (string => s.variant.includes ('it')).length,
+      count: all_services.filter (string => s.variant.includes ('it')).length
     },
     {
       id: 'api',
       name: 'API & Development',
       icon: Database,
-      count: all_services.filter (string => s.variant.includes ('api')).length,
+      count: all_services.filter (string => s.variant.includes ('api')).length
     },
     {
       id: 'cloud',
       name: 'Cloud & DevOps',
       icon: Cloud,
-      count: all_services.filter (string => s.variant.includes ('cloud')).length,
+      count: all_services.filter (string => s.variant.includes ('cloud')).length
     },
     {
       id: 'marketing',
       name: 'Marketing & SEO',
       icon: TrendingUp,
-      count: all_services.filter (string => s.variant.includes ('marketing')).length,
+      count: all_services.filter (string => s.variant.includes ('marketing')).length
     },
     {
       id: 'project',
       name: 'Project Management',
       icon: Users,
-      count: all_services.filter (string => s.variant.includes ('project')).length,
+      count: all_services.filter (string => s.variant.includes ('project')).length
     },
     {
       id: 'customer',
       name: 'Customer Success',
       icon: CheckCircle,
-      count: all_services.filter (string => s.variant.includes ('customer')).length,
-    },  ];
+      count: all_services.filter (string => s.variant.includes ('customer')).length
+    }  ];
 ;
   const getVariantIcon = (variant: string) =>: any {
     if () return Brain) {
@@ -697,7 +697,7 @@ if ( {) {
                           {React.create_element (
                             getVariantIcon (service.variant),
                             {
-                              class_name: `w - 6 h - 6 text - cyan - 400`,
+                              class_name: `w - 6 h - 6 text - cyan - 400`
 
                             }
                           )}

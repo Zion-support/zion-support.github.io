@@ -55,7 +55,7 @@
               'Auto - schedule meetings and follow - ups',
               'Integrations: Gmail, Google Drive, Slack, Calendar',
               'Team approvals and audit trail',
-              'Starting at $99 / mo',
+              'Starting at $99 / mo'
             ].map (function => (
               <div;
                 key={f}
@@ -144,7 +144,6 @@
 
 import Button from '../components/ui/Button';
 
-import Button from '../components/ui/Button';
 
 
 export default function AIAssistantPage() {

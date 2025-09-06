@@ -192,7 +192,7 @@ if ( {) {
 
 
 
-      client_email,
+      client_email
     } = req.body || {}
     // Check condition
 if ( {) {
@@ -218,7 +218,7 @@ if ( {) {
       client_email: String (client_email),
       status: "New",
       createdAtIso: now_iso,
-      updatedAtIso: now_iso,
+      updatedAtIso: now_iso
     }
     // Auto - assign category via AI (placeholder). In production, call OpenAI based on description / skills.;
     // Check condition

@@ -77,9 +77,9 @@ function handler() {
         all: results.all.length,
         talent: results.talent.length,
         jobs: results.jobs.length,
-        projects: results.projects.length,
+        projects: results.projects.length
       },
-      results,
+      results
     });
   } catch (e: any) {
 

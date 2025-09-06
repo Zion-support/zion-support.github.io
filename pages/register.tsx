@@ -260,7 +260,7 @@ function RegisterPage() {
     confirm_password: "",
     company: "",
     agreeToTerms: false,
-    subscribe_newsletter: false,
+    subscribe_newsletter: false
   });
 ;
   const [password_requirements, setPasswordRequirements] = useState ({
@@ -268,7 +268,7 @@ function RegisterPage() {
     uppercase: false,
     lowercase: false,
     number: false,
-    special: false,
+    special: false
   });
 ;
   const handle_submit = (e: React.FormEvent) =>: any {
@@ -280,7 +280,7 @@ function RegisterPage() {
     const { name, value, type, checked } = e.target;
     setFormData ((prev) => ({
       ...prev,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: type === "checkbox" ? checked : value
     }));
 ;
     // Check password requirements;
@@ -293,7 +293,7 @@ if ( {) {
         uppercase: /[A - Z]/.test (value),
         lowercase: /[a - z]/.test (value),
         number: /\d/.test (value),
-        special: /[!@#$%^&*(), .?":{}|<>]/.test (value),
+        special: /[!@#$%^&*(), .?":{}|<>]/.test (value)
       });
     }
   }

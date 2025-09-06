@@ -1,9 +1,13 @@
+import _React from 'react';  import '@testing-library/jest-dom'; import SEOHeaddynamic from '../components/SEOHead.dynamic'; describe('SEOHeaddynamic',() => { test('renders without crashing',() => { render(<SEOHeaddynamic />); expect(screen.getByTestId('seohead.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOHeaddynamic />)}); test('handles user interactions',() => { render(<SEOHeaddynamic />)}); test('applies correct styling',() => { render(<SEOHeaddynamic />)})});
+ursor/automate-test-improve-and-merge-code-646c
 
 
 
 
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+ursor/automate-test-improve-and-merge-code-646c
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -11,6 +15,7 @@ import SEOHeaddynamic from '../components/SEOHead && SEOHead.dynamic'
 describe('SEOHeaddynamic'
   test('renders without crashing'
 
+ursor/automate-test-improve-and-merge-code-646c
 
 import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -39,7 +44,47 @@ describe('SEOHead', () => {
 
 
 
-import _React from 'react';  import '@testing-library/jest-dom'; import SEOHeaddynamic from '../components/SEOHead.dynamic'; describe('SEOHeaddynamic',() => { test('renders without crashing',() => { render(<SEOHeaddynamic />); expect(screen.getByTestId('seohead.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOHeaddynamic />)}); test('handles user interactions',() => { render(<SEOHeaddynamic />)}); test('applies correct styling',() => { render(<SEOHeaddynamic />)})});
 
 
 
+import SEOHeaddynamic from '../components/SEOHead.dynamic'
+describe('SEOHeaddynamic'
+  test('renders without crashing'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    expect(screen.getByTestId('seohead.dynamic'
+  test('displays correct content'
+  test('handles user interactions'
+  test('applies correct styling'
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOHeaddynamic from "./components/SEOHead.dynamic"; describe('SEOHeaddynamic', () => { test("renders without crashing",() => { render(<SEOHeaddynamic />); expect(screen.getByTestId("seohead.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOHeaddynamic />)}); test("handles user interactions",() => { render(<SEOHeaddynamic />)}); test("applies correct styling"
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOHeaddynamic from "./components/SEOHead.dynamic"; describe('SEOHeaddynamic', () => { test("renders without crashing",() => { render(<SEOHeaddynamic />); expect(screen.getByTestId("seohead.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOHeaddynamic />)}); test("handles user interactions",() => { render(<SEOHeaddynamic />)}); test("applies correct styling"
+ursor/fix-syntax-push-and-merge-to-main-40de
+import { render, screen, fireEvent } from '@testing-library/react';
+import SEOHeaddynamic from '../components/SEOHead.dynamic';
+describe('SEOHeaddynamic', () => {
+  test('renders without crashing', () => {
+    render(<SEOHeaddynamic />);
+    expect(screen.getByTestId('seohead.dynamic')).toBeInTheDocument();
+  });
+  test('displays correct content', () => {
+    render(<SEOHeaddynamic />);
+  });
+  test('handles user interactions', () => {
+    render(<SEOHeaddynamic />);
+  });
+  test('applies correct styling', () => {
+    render(<SEOHeaddynamic />);
+  });
+});
+
+    expect(screen.getByTestId('seohead.dynamic'
+  test('displays correct content'
+  test('handles user interactions'
+  test('applies correct styling'
+
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOHeaddynamic from "./components/SEOHead.dynamic"; describe('SEOHeaddynamic', () => { test("renders without crashing",() => { render(<SEOHeaddynamic />); expect(screen.getByTestId("seohead.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOHeaddynamic />)}); test("handles user interactions",() => { render(<SEOHeaddynamic />)}); test("applies correct styling"
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> main
+ursor/automate-test-improve-and-merge-code-646c

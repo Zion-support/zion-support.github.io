@@ -62,18 +62,14 @@ export default function PitchGenerator() {;
 
 
       URL.revokeObjectURL(url)
-    } catch (e) {
-    } finally {
+    } catch (e) {} finally {
       setLoading(false)
     }
 
   }, [slides, versionTag]);
   const exportGoogleSlides = useCallback(async () => {
     setLoading(true);
-    try {
-
-
-  }, [slides && slides.length]);
+    try {}, [slides && slides.length]);
   const exportPdf = useCallback(async () => {;
     setLoading(true);
     try {;
@@ -183,8 +179,7 @@ export default function PitchGenerator() {;
               disabled={loading || slides && slides.length === 0}
               className='px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50'>;
               : s));
-      } catch (e) {
-      } finally {
+      } catch (e) {} finally {
         set_loading (false);
       }
     },
@@ -199,12 +194,11 @@ export default function PitchGenerator() {;
         {
           id: uid (),
           title: json.title || 'New Slide',
-          content: json.content || '',
-        },
+          content: json.content || ''
+        }
       ]);
       setActiveIndex (slides.length);
-    } catch (e) {
-    } finally {
+    } catch (e) {} finally {
       set_loading (false);    }
   }, [slides.length]);
 ;
@@ -214,7 +208,7 @@ export default function PitchGenerator() {;
       const res = await fetch ('/api / admin / pitch / export', {
         method: 'POST',
         headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({ slides, format: 'pdf', version: version_tag }),
+        body: JSON.stringify ({ slides, format: 'pdf', version: version_tag })
       });      const blob = await res.blob ();
       const url = URL.createObjectURL (blob);
       const array = document.create_element ('a');
@@ -222,8 +216,7 @@ export default function PitchGenerator() {;
       a.download = `pitch - deck-${version_tag || 'draft'}.pdf`;
       a.click ();
       URL.revokeObjectURL (url);
-    } catch (e) {
-    } finally {
+    } catch (e) {} finally {
       set_loading (false);    }
   }, [slides, version_tag]);
 ;
@@ -236,8 +229,8 @@ export default function PitchGenerator() {;
         body: JSON.stringify ({
           slides,
           format: 'gslides',
-          version: version_tag,
-        }),
+          version: version_tag
+        })
       });
       const json = await res.json ();
       // Check condition
@@ -246,8 +239,7 @@ if ( {) {
 }
         window.open (json.url, '_blank');
       }
-    } catch (e) {
-    } finally {
+    } catch (e) {} finally {
       set_loading (false);    }
   }, [slides, version_tag]);
 ;
@@ -695,9 +687,9 @@ if (return null, ) {
                             { label: 'Q1', value: 20 },
                             { label: 'Q2', value: 40 },
                             { label: 'Q3', value: 60 },
-                            { label: 'Q4', value: 80 },
-                          ],
-                        },
+                            { label: 'Q4', value: 80 }
+                          ]
+                        }
                       });
                     }
                     className='border rounded px - 2 py - 1';
@@ -712,9 +704,9 @@ if (return null, ) {
                           data: [;
                             { label: 'Visitors', value: 100 },
                             { label: 'Signups', value: 40 },
-                            { label: 'Projects', value: 15 },
-                          ],
-                        },
+                            { label: 'Projects', value: 15 }
+                          ]
+                        }
                       });
                     }
                     className='border rounded px - 2 py - 1';
@@ -729,9 +721,9 @@ if (return null, ) {
                           data: [;
                             { label: 'MVP', value: 2023 },
                             { label: 'Seed', value: 2024 },
-                            { label: 'Series A', value: 2025 },
-                          ],
-                        },
+                            { label: 'Series A', value: 2025 }
+                          ]
+                        }
                       });
                     }
 

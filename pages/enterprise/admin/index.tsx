@@ -66,7 +66,7 @@ export default function CompanyAdmin() {;
       <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
 
 
-  status: string,
+  status: string
 }
 const COMPANY_ID = 'cmp_acme';
 ;
@@ -104,7 +104,7 @@ function CompanyAdmin() {
           margin_bottom: 16,
           display: 'flex',
           align_items: 'center',
-          gap: 12,
+          gap: 12
         }}
       >;
         <h1 style={{ margin: 0 }}>Company Admin</h1>;
@@ -121,7 +121,7 @@ function CompanyAdmin() {
           marginBottom: 16,
           display: 'flex',
           alignItems: 'center',
-          gap: 12,
+          gap: 12
         }}>;
         <h1 style={{ margin: 0 }}>Company Admin</h1>;
         <div style={{ marginLeft: 'auto' }}>;
@@ -149,7 +149,7 @@ function CompanyAdmin() {
               border_radius: 8,
               border: '1px solid #e5e7eb',
               background: tab === t ? '#111827' : 'white',
-              color: tab === t ? 'white' : '#111827',
+              color: tab === t ? 'white' : '#111827'
             }}
           >;
             {t}
@@ -212,7 +212,7 @@ function CompanyAdmin() {
     const r = await fetch (`/api / enterprise / companies/${COMPANY_ID}/members`, {
       method: 'POST',
       headers: { 'Content - Type': 'application / json' },
-      body: JSON.stringify ({ name, email, role }),
+      body: JSON.stringify ({ name, email, role })
     });
 
 
@@ -249,7 +249,7 @@ function CompanyAdmin() {
     await fetch (`/api / enterprise / companies/${COMPANY_ID}/usage`, {
       method: 'PATCH',
       headers: { 'Content - Type': 'application / json' },
-      body: JSON.stringify ({ monthlyJobPosts, budgetCapUsd }),
+      body: JSON.stringify ({ monthlyJobPosts, budgetCapUsd })
     });
     set_usage ({ monthlyJobPosts, budgetCapUsd });  }
 ;
@@ -261,7 +261,7 @@ function CompanyAdmin() {
           display: 'grid',
           gridTemplateColumns: 'repeat (2, minmax (0, 1fr))',
           gap: 12,
-          max_width: 600,
+          max_width: 600
         }}
       >;
         <label>;
@@ -286,7 +286,7 @@ function CompanyAdmin() {
           margin_top: 12,
           display: 'flex',
           align_items: 'center',
-          gap: 12,
+          gap: 12
         }}
       >;
         <button on_click={save} style={{ padding: '0.5rem 0.75rem' }}>;
@@ -325,7 +325,7 @@ function BillingTab() {
               style={{
                 text_align: 'left',
                 padding: 8,
-                border_bottom: '1px solid #e5e7eb',
+                border_bottom: '1px solid #e5e7eb'
               }}
             >;
               Invoice #;
@@ -334,7 +334,7 @@ function BillingTab() {
               style={{
                 text_align: 'left',
                 padding: 8,
-                border_bottom: '1px solid #e5e7eb',
+                border_bottom: '1px solid #e5e7eb'
               }}
             >;
               Period;
@@ -343,7 +343,7 @@ function BillingTab() {
               style={{
                 text_align: 'right',
                 padding: 8,
-                border_bottom: '1px solid #e5e7eb',
+                border_bottom: '1px solid #e5e7eb'
               }}
             >;
               Amount;
@@ -352,7 +352,7 @@ function BillingTab() {
               style={{
                 text_align: 'center',
                 padding: 8,
-                border_bottom: '1px solid #e5e7eb',
+                border_bottom: '1px solid #e5e7eb'
               }}
             >;
               Status;
@@ -361,7 +361,7 @@ function BillingTab() {
               style={{
                 text_align: 'right',
                 padding: 8,
-                border_bottom: '1px solid #e5e7eb',
+                border_bottom: '1px solid #e5e7eb'
               }}
             >;
               Actions;
